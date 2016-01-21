@@ -6,7 +6,7 @@ import textwrap
 import xml.etree.ElementTree as ET
 
 def parseText(txt):
-    if not txt:
+    if txt is None:
         return ''
     return txt.encode('utf-8')
 
@@ -20,13 +20,14 @@ def parsePara(root, outFile):
     if root.text:
         text += parseText(root.text)
     for child in root.getchildren():
-        # TODO: more precise tag support
-        #if child.tag == '':
-        #    pass
-        if child.text:
-            text += '`'
-            text += parseText(child.text)
-            text += '`'
+        if child.tag == 'bold' and child.text:
+            text += '**' + parseText(child.text) + '**'
+        elif child.tag == 'emphasis' and child.text:
+            text += '*' + parseText(child.text) + '*'
+        elif child.tag == 'filename' and child.text:
+            text += '"' + parseText(child.text) + '"'
+        elif child.text:
+            text += '`' + parseText(child.text) + '`'
         text += parseText(child.tail)
     text += parseText(root.tail)
 
@@ -37,25 +38,32 @@ def parsePara(root, outFile):
         outFile.write(line.strip() + '\n')
     outFile.write('\n')
 
+def parseProgramListing(root, outFile):
+    outFile.write('\n```\n')
+    outFile.write(parseText(root.text) + '\n')
+    outFile.write('```\n\n')
+
 def parseChapter(root, outFile):
     for child in root.getchildren():
         if child.tag == 'title' and child.attrib.get('name', child.text):
             indent = 0
-            if root.tag == 'chapter' or root.tag == 'preface':
+            if root.tag == 'chapter':
+                indent = 1
+            elif root.tag == 'sect1' or root.tag == 'preface':
                 indent = 2
-            elif root.tag == 'sect1':
-                indent = 3
             elif root.tag == 'sect2':
-                indent = 4
+                indent = 3
             elif root.tag == 'sect3':
-                indent = 5
+                indent = 4
             else:
                 raise Exception('Unsupported type: ' + root.tag)
             outFile.write('#' * indent + ' ' + child.attrib.get('name', child.text) + '\n\n')
         elif child.tag == 'sect1' or child.tag == 'sect2' or child.tag == 'sect3':
-            parseChapter(child, outFile);
+            parseChapter(child, outFile)
         elif child.tag == 'para':
-            parsePara(child, outFile);
+            parsePara(child, outFile)
+        elif child.tag == 'programlisting':
+            parseProgramListing(child, outFile)
 
 def parseBook(root, outFile):
     for child in root.getchildren():

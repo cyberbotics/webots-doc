@@ -2,6 +2,7 @@
 
 import os
 import re
+import shutil
 import textwrap
 import xml.etree.ElementTree as ET
 
@@ -39,9 +40,33 @@ def parsePara(root, outFile):
     outFile.write('\n')
 
 def parseProgramListing(root, outFile):
-    outFile.write('\n```\n')
+    outFile.write('\n```')
+    lang = root.attrib.get('lang')
+    if lang is not None:
+        if 'c' in lang:
+            outFile.write(' c')
+        elif 'C' in lang:
+            outFile.write(' c++')
+        elif 'J' in lang:
+            outFile.write(' java')
+        elif 'P' in lang:
+            outFile.write(' python')
+        elif 'M' in lang:
+            outFile.write(' matlab')
+    outFile.write('\n')
     outFile.write(parseText(root.text) + '\n')
     outFile.write('```\n\n')
+
+def parseFigure(root, outFile):
+    title = ''
+    fileref = ''
+    for child in root.getchildren():
+        if child.tag == 'title':
+            title = child.text
+        elif child.tag  == 'graphic':
+            fileref = child.attrib.get('fileref')
+    if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
+        outFile.write('![%s](%s)\n**%s**\n\n' % (title, fileref, title))
 
 def parseChapter(root, outFile):
     for child in root.getchildren():
@@ -64,6 +89,8 @@ def parseChapter(root, outFile):
             parsePara(child, outFile)
         elif child.tag == 'programlisting':
             parseProgramListing(child, outFile)
+        elif child.tag == 'figure':
+            parseFigure(child, outFile)
 
 def parseBook(root, outFile):
     for child in root.getchildren():
@@ -92,9 +119,6 @@ def parseXMLFile(filePath):
     outputFilePath = directoryName + '/' + baseName.replace('.xml', '.md')
     print 'Output file: ' + outputFilePath
 
-    if not os.path.exists(directoryName):
-        os.makedirs(directoryName)
-
     with open(filePath, 'r') as file:
       content = file.read()
     # xml.etree doesn't support the ENTITY - SYSTEM tags
@@ -119,5 +143,12 @@ if __name__ == "__main__":
 
         intputFilePath = inputDirectory + directoryName + '.xml'
         print 'Input file name: ' + intputFilePath
+
+        # recreate the target directory if any
+        if os.path.exists(directoryName):
+            shutil.rmtree(directoryName)
+        os.makedirs(directoryName)
+        # copy the png images
+        shutil.copytree(webotsDirectory + 'doc/' + directoryName + '/png', directoryName + '/png')
 
         parseXMLFile(intputFilePath)

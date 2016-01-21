@@ -3,10 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Webots documentation</title>
+    <script src='https://www.cyberbotics.com/wwi/8.3/request_methods.js'></script>
+    <script src="https://www.cyberbotics.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://rawgit.com/showdownjs/showdown/1.3.0/dist/showdown.min.js"></script>
     <script>
-      alert('Hello, World!')
+      var page = getGETQueryValue("page", "guide/guide.md");
+      var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
+      var targetUrl = "https://raw.githubusercontent.com/omichel/webots-doc/" + branch + "/" + page;
+      console.log("Target Url: " + targetUrl);
+
+      $.ajax({
+        type: "GET",
+        url: targetUrl,
+        dataType: "text",
+        success: function (result) {
+          console.log("Raw content: " + result);
+          var converter = new showdown.Converter();
+          document.getElementById("view").innerHTML = converter.makeHtml(result);
+        }
+    });
     </script>
   </head>
   <body>
+    <div id="view"> </div>
   </body>
 </html>

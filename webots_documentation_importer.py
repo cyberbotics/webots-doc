@@ -5,21 +5,43 @@ import re
 import textwrap
 import xml.etree.ElementTree as ET
 
+def parseText(txt):
+    if not txt:
+        return ''
+    return txt.encode('utf-8')
+
 def parsePara(root, outFile):
+    # para included tags:
+    #     bold, command, computeroutput, email, emphasis, filename, function,
+    #     guibutton, guilabel, guimenu, guimenuitem, guisubmenu, hlink,
+    #     inlinegraphic, keycap, math, parameter, programlisting, trademark
+    #     ulink, xref
+    text = ''
     if root.text:
-        text = root.text.encode('utf-8')
-        content = text.split('\n')
-        text = ' '.join(map(lambda x: x.strip(), content)).strip()
-        content = textwrap.wrap(text, width=80)
-        for line in content:
-            outFile.write(line.strip() + '\n')
-        outFile.write('\n')
+        text += parseText(root.text)
+    for child in root.getchildren():
+        # TODO: more precise tag support
+        #if child.tag == '':
+        #    pass
+        if child.text:
+            text += '`'
+            text += parseText(child.text)
+            text += '`'
+        text += parseText(child.tail)
+    text += parseText(root.tail)
+
+    content = text.split('\n')
+    text = ' '.join(map(lambda x: x.strip(), content)).strip()
+    content = textwrap.wrap(text, width=80)
+    for line in content:
+        outFile.write(line.strip() + '\n')
+    outFile.write('\n')
 
 def parseChapter(root, outFile):
     for child in root.getchildren():
         if child.tag == 'title' and child.attrib.get('name', child.text):
-            indent = 1
-            if root.tag == 'chapter':
+            indent = 0
+            if root.tag == 'chapter' or root.tag == 'preface':
                 indent = 2
             elif root.tag == 'sect1':
                 indent = 3
@@ -27,6 +49,8 @@ def parseChapter(root, outFile):
                 indent = 4
             elif root.tag == 'sect3':
                 indent = 5
+            else:
+                raise Exception('Unsupported type: ' + root.tag)
             outFile.write('#' * indent + ' ' + child.attrib.get('name', child.text) + '\n\n')
         elif child.tag == 'sect1' or child.tag == 'sect2' or child.tag == 'sect3':
             parseChapter(child, outFile);

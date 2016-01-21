@@ -7,17 +7,31 @@
     <script src="https://www.cyberbotics.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://rawgit.com/showdownjs/showdown/1.3.0/dist/showdown.min.js"></script>
     <script>
-      var page = getGETQueryValue("page", "guide/guide.md");
+      var book = getGETQueryValue("book", "guide");
+      var page = getGETQueryValue("page", "guide.md");
       var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
-      var targetUrl = "https://raw.githubusercontent.com/omichel/webots-doc/" + branch + "/" + page;
+      var targetPath = "https://raw.githubusercontent.com/omichel/webots-doc/" + branch + "/" + book + "/";
+      var targetUrl = targetPath + page;
       console.log("Target Url: " + targetUrl);
+
+      function replaceAll(find, replace, str) {
+        while( str.indexOf(find) > -1) {
+          str = str.replace(find, replace);
+        }
+        return str;
+      }
 
       $.ajax({
         type: "GET",
         url: targetUrl,
         dataType: "text",
         success: function (result) {
+          // hack images urls
+          result = replaceAll('](png/', '](' + targetPath + 'png/', result);
+
           console.log("Raw content: " + result);
+
+          // markdown to html
           var converter = new showdown.Converter();
           document.getElementById("view").innerHTML = converter.makeHtml(result);
         }

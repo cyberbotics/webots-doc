@@ -186,13 +186,16 @@ Camera {
   SFFloat    fieldOfView      0.7854
   SFInt32    width            64
   SFInt32    height           64
+  SFString   type             "color"
   SFBool     spherical        FALSE
   SFFloat    near             0.01
+  SFFloat    maxRange         1.0
   SFBool     antiAliasing     FALSE
   SFFloat    motionBlur       0.0
-  SFFloat    noise            0.0
-  SFString   noiseMaskUrl     ""
-  SFNode     lens             NULL
+  SFFloat    colorNoise       0.0
+  SFFloat    rangeNoise       0.0
+  SFFloat    rangeResolution -1.0
+  SFNode     lensDistortion   NULL
   SFNode     focus            NULL
   SFNode     zoom             NULL
   SFString   compositor       ""
@@ -201,25 +204,47 @@ Camera {
 
 ### Description
 
-The `Camera` node is used to model a robot's on-board camera. The resulting
-image can be displayed on the 3D window. Depending on its setup, the Camera node
-can model a linear camera, a typical RGB camera or even a biological eye which
-is spherically distorted.
+The `Camera` node is used to model a robot's on-board camera or a range-finder.
+The resulted image can be displayed on the 3D window. Depending on its setup,
+the Camera node can model a linear camera, a lidar device, a Microsoft Kinect or
+even a biological eye which is spherically distorted.
 
 ### Field Summary
 
-### Camera image
+### Camera Type
 
-The camera device computes OpenGL rendered images. The pixel information can be
-obtained from the `wb_camera_get_image` function. The red, green and blue
-channels (RGB) can be extracted from the resulting image by the
-`wb_camera_image_get_*`-like functions.
+The camera type can be setup by the `type` field described above.
 
-Each time a camera is refreshed, an OpenGL rendering is performed, and the color
-information is copied into the buffer returned by the `wb_camera_get_image`
-function. The format of this buffers is BGRA (32 bits). We recommend to use the
-`wb_camera_image_get_*`-like functions to access the buffer because the internal
-format could change.
+#### Color
+
+The color camera allows to get color information from the OpenGL context of the
+camera. This information can be get by the `wb_camera_get_image` function, while
+the red, green and blue channels (RGB) can be extracted from the resulted image
+by the `wb_camera_image_get_*`-like functions.
+
+Internally when the camera is refreshed, an OpenGL context is created, and the
+color or depth information is copied into the buffer which can be get throught
+the `wb_camera_get_image` or the `wb_camera_get_range_image` functions. The
+format of these buffers are respectively BGRA (32 bits) and float (16 bits). We
+recommend to use the `wb_camera_image_get_*`-like functions to access the buffer
+because the internal format could change.
+
+#### Range-Finder
+
+The range-finder camera allows to get depth information (in meters) from the
+OpenGL context of the camera. This information is obtained through the
+`wb_camera_get_range_image` function, while depth information can be extracted
+from the returned image by using the `wb_camera_range_image_get_depth` function.
+
+Internally when the camera is refreshed, an OpenGL context is created, and the
+z-buffer is copied into a buffer of `float`. As the z-buffer contains scaled and
+logarithmic values, an algorithm linearizes the buffer to metric values between
+`near` and `maxRange`. This is the buffer which is accessible by the
+`wb_camera_get_range_image` function.
+
+Range-finder cannot see transparent objects. An object can be semi-transparent
+either if its texture has an alpha channel, or if its `Material`.`transparency`
+field is not equal to 1.
 
 ### Frustum
 
@@ -234,7 +259,9 @@ and `height` fields define the vertical angle of the frustum according to the
 above formula.
 
 Generally speaking there is no far clipping plane while this is common in other
-OpenGL programs. In Webots, a camera can see as far as needed.
+OpenGL programs. In Webots, a camera can see as far as needed. Nevertheless, a
+far clipping plane is artificially added in the case of range-finder cameras
+(i.e. the resulted values are bounded by the `maxRange` field).
 
 In the case of the spherical cameras, the frustum is quite different and
 difficult to represent. In comparison with the frustum description above, the
@@ -243,20 +270,22 @@ at the camera position, and the `fieldOfView` can be greater than Pi.
 
 ### Noise
 
-It is possible to add quickly a white noise on the cameras by using the `noise`
-field. A value of `0.0` corresponds to an image without noise. For each channel
-of the image and at each camera refresh, a gaussian noise is computed and added
-to the channel. This gaussian noise has a standard deviation corresponding to
-the noise field times the channel range. The channel range is 256 for a color
+It is possible to add quickly a white noise on the cameras by using the
+`colorNoise` and the `rangeNoise` fields (applied respectively on the color
+cameras and on the range-finder cameras). A value of `0.0` corresponds to an
+image without noise. For each channel of the image and at each camera refresh, a
+gaussian noise is computed and added to the channel. This gaussian noise has a
+standard deviation corresponding to the noise field times the channel range. The
+channel range is 256 for a color camera and `maxRange` for a range-finder
 camera.
 
 ### Spherical projection
 
 OpenGL is designed to have only planar projections. However spherical
-projections are very useful for simulating a camera pointing on a curved mirror
-or a biological eye. Therefore we implemented a camera mode rendering spherical
-projections. It can be enabled simply by switching on the corresponding
-`spherical` field described above.
+projections are very useful for simulating a lidar, a camera pointing on a
+curved mirror or a biological eye. Therefore we implemented a camera mode
+rendering spherical projections. It can be enabled simply by switching on the
+corresponding `spherical` field described above.
 
 Internally, depending on the field of view, a spherical camera is implemented by
 using between 1 to 6 OpenGL cameras oriented towards the faces of a cube (the
@@ -266,10 +295,11 @@ computing the spherical projection is applied on the result of the subcameras.
 
 So this mode is costly in terms of performance! Reducing the resolution of the
 cameras and using a `fieldOfView` which minimizes the number of activated
-cameras helps a lot to improve the performance if needed.
+cameras helps a lot to improve the performances if needed.
 
-When the camera is spherical, the image returned by the `wb_camera_get_image`
-function is a 2-dimensional array (s,t) in spherical coordinates.
+When the camera is spherical, the image returned by the `wb_camera_get_image` or
+the `wb_camera_get_range_image` functions is a 2-dimensional array (s,t) in
+spherical coordinates.
 
 Let `hFov` be the horizontal field of view, and let `theta` be the angle in
 radian between the `(0, 0, -z)` relative coordinate and the relative coordinate
@@ -297,10 +327,70 @@ to hide the image. Once the robot is selected, it is also possible to show or
 hide the overlay images from the `Camera Devices` item in `Robot` menu.
 
 It is also possible to show the camera image in an external window by double-
-clicking on it. After doing it, the overlay disappears and a new window pops up.
-Then, after closing the window, the overlay will be automatically restored.
+clicking on it. After doing it, the overlay disappears and the new window pops
+up. Then, after closing the window, the overlay will be automatically restored.
 
 ### Camera Functions
+
+## CameraFocus
+
+
+```
+CameraFocus {
+  SFFloat  focalDistance     0  # Distance to the object we are focusing on (m)
+  SFFloat  focalLength       0  # Focal length of the lens (m)
+  SFFloat  maxFocalDistance  0  # (m)
+  SFFloat  minFocalDistance  0  # (m)
+}
+```
+
+### Description
+
+The `CameraFocus` node allows the user to define a controllable focus for a
+`Camera` device. The `CameraFocus` node should be set in the `focus` field of a
+`Camera` node. The focal distance can be adjusted from the controller program
+using the `wb_camera_set_focal_distance()` function.
+
+### Field Summary
+
+## CameraLensDistortion
+
+
+```
+CameraLensDistortion {
+  SFVec2f  center                  0.5 0.5
+  SFVec2f  radialCoefficients      0 0
+  SFVec2f  tangentialCoefficients  0 0
+}
+```
+
+### Description
+
+The `CameraLensDistortion` node allows the user to simulate the camera image
+distortion due to the camera lens. A Brown's distortion model with two
+coefficients both for the radial and tangential distortions is used to simulate
+image distortion.
+
+### Field Summary
+
+## CameraZoom
+
+
+```
+CameraZoom {
+  SFFloat     maxFieldOfView 1.5 # (rad)
+  SFFloat     minFieldOfView 0.5 # (rad)
+}
+```
+
+### Description
+
+The `CameraZoom` node allows the user to define a controllable zoom for a
+`Camera` device. The `CameraZoom` node should be set in the `zoom` field of a
+`Camera` node. The zoom level can be adjusted from the controller program using
+the `wb_camera_set_fov()` function.
+
+### Field Summary
 
 ## Capsule
 
@@ -377,11 +467,11 @@ comes to get energy, it can't get more than the charger has presently
 accumulated.
 
 The appearance of the `Charger` node can be altered by its current energy. When
-the `Charger` node is full, the resulting color corresponds to its
-`emissiveColor` field, while when the `Charger` node is empty, its resulting
+the `Charger` node is full, the resulted color corresponds to its
+`emissiveColor` field, while when the `Charger` node is empty, its resulted
 color corresponds to its original one. Intermediate colors depend on the
 `gradual` field. Only the first child of the `Charger` node is affected by this
-alteration. The resulting color is applied only on the first child of the
+alteration. The resulted color is applied only on the first child of the
 `Charger` node. If the first child is a `Shape` node, the `emissiveColor` field
 of its `Material` node is altered. If the first child is a `Light` node, its
 `color` field is altered. Otherwise, if the first child is a `Group` node, a
@@ -877,8 +967,8 @@ to hide the image. Once the robot is selected, it is also possible to show or
 hide the overlay image from the `Display Devices` item in `Robot` menu.
 
 It is also possible to show the display image in an external window by double-
-clicking on it. After doing it, the overlay disappears and a new window pops up.
-Then, after closing the window, the overlay will be automatically restored.
+clicking on it. After doing it, the overlay disappears and the new window pops
+up. Then, after closing the window, the overlay will be automatically restored.
 
 ### Display Functions
 
@@ -1123,27 +1213,6 @@ real number. This ensures that all primitive geometries will remain suitable for
 ODE immersion detection. Whenever a scale coordinate is changed, the two other
 ones are automatically changed to this new value. If a scale coordinate is
 assigned a non-positive value, it is automatically changed to 1.
-
-## Focus
-
-
-```
-Focus {
-  SFFloat  focalDistance     0  # Distance to the object we are focusing on (m)
-  SFFloat  focalLength       0  # Focal length of the lens (m)
-  SFFloat  maxFocalDistance  0  # (m)
-  SFFloat  minFocalDistance  0  # (m)
-}
-```
-
-### Description
-
-The `Focus` node allows the user to define a controllable focus for a `Camera`
-device. The `Focus` node should be set in the `focus` field of a `Camera` node.
-The focal distance can be adjusted from the controller program using the
-`wb_camera_set_focal_distance()` function.
-
-### Field Summary
 
 ## Fog
 
@@ -1747,7 +1816,7 @@ LED {
 ### Description
 
 The `LED` node is used to model a light emitting diode (LED). The light produced
-by an LED can be used for debugging or informational purposes. The resulting
+by an LED can be used for debugging or informational purposes. The resulted
 color is applied only on the first child of the `LED` node. If the first child
 is a `Shape` node, the `emissiveColor` field of its `Material` node is altered.
 If the first child is a `Light` node, its `color` field is altered. Otherwise,
@@ -1758,100 +1827,6 @@ and `Group` node is altered according to the previous rules.
 ### Field Summary
 
 ### LED Functions
-
-## Lens
-
-
-```
-Lens {
-  SFVec2f  center                  0.5 0.5
-  SFVec2f  radialCoefficients      0 0
-  SFVec2f  tangentialCoefficients  0 0
-}
-```
-
-### Description
-
-The `Lens` node allows the user to simulate the camera image distortion due to
-the camera lens. A Brown's distortion model with two coefficients both for the
-radial and tangential distortions is used to simulate image distortion.
-
-### Field Summary
-
-## Lidar
-
-Derived from `Device`.
-
-
-```
-Lidar {
-  SFFloat    tiltAngle                0.0
-  SFInt32    horizontalResolution     512
-  SFFloat    fieldOfView              1.5708
-  SFFloat    verticalFieldOfView      0.2
-  SFInt32    numberOfLayers           4
-  SFFloat    minRange                 0.01
-  SFFloat    maxRange                 1.0
-  SFString   type                     "fixed"
-  SFBool     spherical                TRUE
-  SFFloat    noise                    0.0
-  SFFloat    resolution              -1.0
-  SFFloat    defaultFrequency         10
-  SFFloat    minFrequency             1
-  SFFloat    maxFrequency             25
-  SFNode     rotatingHead             NULL
-  SFString   compositor               ""
-}
-```
-
-### Description
-
-The `Lidar` node is used to model a robot's on-board lidar (laser-scanner).
-
-The lidar measures depth information (in meters) from an OpenGL rendering, like
-the `RangeFinder` node does. Whereas a `RangeFinder` node is used to simulate a
-depth camera (like for example a Kinect), the `Lidar` node is used to simulate
-laser scans. The main difference is that for the `RangeFinder` node the vertical
-field of view is imposed by the size (width and height) of the image (because of
-the constraint of square pixels) and not in the case of the `Lidar` node where
-lines of pixels (laser scan) are extracted from the depth buffer.
-
-Lidar cannot see semi-transparent objects. An object can be semi-transparent
-either if its texture has an alpha channel, or if its `Material`.`transparency`
-field is not equal to 1.
-
-By default the `Lidar` node outputs the depth values in an array, the depth
-values are order from left to right and from the top to the bottom layer (like a
-`RangeFinder` node does). Complementary the point cloud mode can be enabled
-thanks to the `wb_lidar_enable_point_cloud` function. It is then possible to
-call the `wb_lidar_get_point_cloud` to get the lidar output as a point cloud
-(array of points). Be aware that the point cloud mode is computationally
-expensive and can therefore slow-down the simulation speed.
-
-#### WbLidarPoint
-
-A point of the lidar point cloud is defined by the following structure
-
-
-``` c
-typedef struct {
-  float x;
-  float y;
-  float z;
-  int layer_id;
-  float time;
-} WbLidarPoint;
-```
-
-The X, Y and Z coordinates are relative to the `Lidar` node origin. The
-`layer_id` field specifies to which layer this point belongs to (from 0 to
-`numberOfLayers` - 1) and the `time` field specifies the exact time at which the
-point was acquired. With lidar devices, all the points are not acquired at the
-exact same time but rather sequentially.
-
-### Field Summary
-
-### Lidar Functions
 
 ## Light
 
@@ -2484,65 +2459,6 @@ nodes.
 
 ### Field Summary
 
-## RangeFinder
-
-Derived from `Device`.
-
-
-```
-RangeFinder {
-  SFFloat    fieldOfView      0.7854
-  SFInt32    width            64
-  SFInt32    height           64
-  SFBool     spherical        FALSE
-  SFFloat    minRange         0.01
-  SFFloat    maxRange         1.0
-  SFFloat    motionBlur       0.0
-  SFFloat    noise            0.0
-  SFFloat    resolution      -1.0
-  SFNode     lens             NULL
-  SFString   compositor       ""
-}
-```
-
-### Description
-
-The `RangeFinder` node is used to model a robot's on-board range-finder (depth
-camera). The resulting image can be displayed on the 3D window.
-
-The range-finder measures depth information (in meters) from an OpenGL
-rendering. Each time a range-finder is refreshed, an OpenGL rendering is
-computed, and the z-buffer is copied into a buffer of `float`. As the z-buffer
-contains scaled and logarithmic values, an algorithm linearizes the buffer to
-metric values between `minRange` and `maxRange`. This is the buffer which is
-accessible by the `wb_range_finder_get_range_image` function.
-
-Range-finder cannot see semi-transparent objects. An object can be semi-
-transparent either if its texture has an alpha channel, or if its
-`Material`.`transparency` field is not equal to 1.
-
-### Field Summary
-
-### Overlay Image
-
-![RangeFinder overlay image](png/range_finder_overlay.png)
-**RangeFinder overlay image**
-
-The range-finder image is shown by default on top of the 3D window with a yellow
-border, see . The user can move this range-finder image at the desired position
-using the mouse drag and drop and resize it by clicking on the icon at the
-bottom right corner. Additionally a close button is available on the top right
-corner to hide the image. Once the robot is selected, it is also possible to
-show or hide the overlay images from the `RangeFinder Devices` item in `Robot`
-menu.
-
-It is also possible to show the range-finder image in an external window by
-double-clicking on it. After doing it, the overlay disappears and a new window
-pops up. Then, after closing the window, the overlay will be automatically
-restored.
-
-### RangeFinder Functions
-
 ## Receiver
 
 Derived from `Device`.
@@ -3002,16 +2918,16 @@ Please note the dummy `Physics` and the 1 millimeter `Sphere` as dummy
 Shape {
   SFNode   appearance   NULL
   SFNode   geometry     NULL
-  SFBool   castShadows  TRUE
 }
 ```
 
-### Description
-
-The `Shape` node is used to create rendered objects in the world. Visible
-objects are constituted by a geometry and an appearance.
-
-### Field Summary
+The `Shape` node has two fields, `appearance` and `geometry`, which are used to
+create rendered objects in the world. The `appearance` field contains an
+`Appearance` node that specifies the visual attributes (e.g., material and
+texture) to be applied to the geometry. The `geometry` field contains a
+`Geometry` node: `Box`, `Capsule`, `Cone`, `Cylinder`, `ElevationGrid`,
+`IndexedFaceSet`, `IndexedLineSet`, `Plane` or `Sphere`. The specified
+`Geometry` node is rendered with the specified appearance nodes applied.
 
 ## SliderJoint
 
@@ -3128,8 +3044,8 @@ Solid {
 
 Direct derived nodes: `Accelerometer`, `Camera`, `Charger`, `Compass`,
 `Connector`, `Display`, `DistanceSensor`, `Emitter`, `GPS`, `Gyro`,
-`InertialUnit`, `LED`, `Lidar`, `LightSensor`, `Pen`, `RangeFinder`, `Receiver`,
-`Robot`, `Servo`, `TouchSensor`.
+`InertialUnit`, `LED`, `LightSensor`, `Pen`, `Receiver`, `Robot`, `Servo`,
+`TouchSensor`.
 
 ### Description
 
@@ -3761,23 +3677,4 @@ WorldInfo {
 ```
 
 The `WorldInfo` node provides general information on the simulated world:
-
-## Zoom
-
-
-```
-Zoom {
-   SFFloat     maxFieldOfView 1.5 # (rad)
-   SFFloat     minFieldOfView 0.5 # (rad)
- }
-```
-
-### Description
-
-The `Zoom` node allows the user to define a controllable zoom for a `Camera`
-device. The `Zoom` node should be set in the `zoom` field of a `Camera` node.
-The zoom level can be adjusted from the controller program using the
-`wb_camera_set_fov()` function.
-
-### Field Summary
 

@@ -480,8 +480,8 @@ to load it on your robot; you will find it in the default list of controller. In
 order to use it, you will have to build a ROS node that will communicates with
 the robot using the different services available. Good examples of such ROS node
 can be found inside Webots at
-"WEBOTS_MODULES_PATH/projects/languages/ros/webots_ros". In this folder you will
-find useful instructions to help you.
+"WEBOTS_MODULES_PATH/projects/languages/ros/nodes". In this folder you will find
+useful instructions to help you.
 
 #### Custom Controller
 

@@ -37,13 +37,9 @@ The following tables describe the C++ classes and their methods.
 
 
 
-
-
 ## Java API
 
 The following tables describe the Java classes and their methods.
-
-
 
 
 
@@ -100,13 +96,9 @@ The following tables describe the Python classes and their methods.
 
 
 
-
-
 ## Matlab API
 
 The following tables describe the Matlab functions.
-
-
 
 
 

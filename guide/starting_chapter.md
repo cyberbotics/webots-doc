@@ -356,33 +356,12 @@ green and blue.
 The `Show Joint axes` allows to display, or to hide, the joint axes. The joint
 axes are represented by black lines.
 
-The `Show RangeFinder frustums` allows to display, or to hide, the OpenGL
-culling frustum and the recorded image for every range-finder in the scene,
-using a yellow wire frame. The OpenGL culling frustum is a truncated pyramid
-corresponding to the field of view of a range-finder. The recorded image is
-displayed on the plane described by the frustum at a distance corresponding to
-the minimum range of the range-finder from the device center. More information
-about this concept is available in the OpenGL documentation.
-
-The `Show Lidar Rays Paths` allows to display, or to hide, the layers (the laser
-ray paths) for every lidar in the scene, using a cyan wire frame.
-
-The `Show Lidar Point Cloud` allows to display, or to hide, the point cloud for
-every lidar enabled in point cloud mode in the scene. The point cloud is
-represented by the location of the points themselves and by the rays from the
-lidar origin to the points using a gradient from blue (top layer) to red (bottom
-layer). This optional rendering is computationally expensive and can therefore
-significantly slow-down the simulation speed. Note that if the point cloud
-contains more than 2500 points, the rays from the lidar origin to the point are
-not displayed.
-
 The `Show Camera frustums` allows to display, or to hide, the OpenGL culling
-frustum and the recorded image for every camera in the scene, using a magenta
-wire frame. The OpenGL culling frustum is a truncated pyramid corresponding to
-the field of view of a camera. The back of the pyramid is not represented
-because the far plane is set to infinity. The recorded image is displayed on the
-camera's near plane. More information about this concept is available in the
-OpenGL documentation.
+frustum for every camera in the scene, using a magenta wire frame. The OpenGL
+culling frustum is a truncated pyramid corresponding to the field of view of a
+camera. The back of the pyramid is not represented because the far plane is set
+to infinity. More information about this concept is available in the OpenGL
+documentation.
 
 The `Show Distance Sensor rays` allows to display, or to hide, the rays casted
 by the distance sensor devices. These rays are drawn as red lines (which become
@@ -459,18 +438,8 @@ checking or unchecking the corresponding item. Camera overlays differ from the
 display overlays because of their magenta border. Note that if the `Hide All
 Camera Overlays` item is checked, then the camera device overlays will not be
 visible in the 3D view independently from the status of `Camera Devices` menu
-items. A `Camera Devices` menu item is disabled if the overlay's texture is
+items. A `Camera Devices` menu  item is disabled if the overlay's texture is
 shown in an external window by double-clicking on it.
-
-The `RangeFinder Devices` submenu contains the list of all the range-finder
-devices of the selected robot and lets the user show or hide single range-finder
-overlay images by checking or unchecking the corresponding item. Range-finder
-overlays differ from the camera overlays because of their yellow border. Note
-that if the `Hide All RangeFinder Overlays` item is checked, then the range-
-finder device overlays will not be visible in the 3D view independently from the
-status of `RangeFinder Devices` menu items. A `RangeFinder Devices` menu item is
-disabled if the overlay's texture is shown in an external window by double-
-clicking on it.
 
 The `Display Devices` submenu contains the list of all the display devices of
 the selected robot and lets the user show or hide single display overlay images
@@ -487,10 +456,6 @@ robot in the world:
 The `Hide All Camera Overlays` option hides all the camera devices overlays in
 the 3D view independently from the specific robot's device option set in `Camera
 Devices` submenu.
-
-The `Hide All RangeFinder Overlays` option hides all the camera devices overlays
-in the 3D view independently from the specific robot's device option set in
-`RangeFinder Devices` submenu.
 
 The `Hide All Display Overlays` option hides all the display devices overlays in
 the 3D view independently from the specific robot's device option set in
@@ -699,21 +664,20 @@ the product of the mass by the length of the 3D-vector.
 
 ### Moving and resizing Overlays
 
-By default for each Camera, Display and RangeFinder device, an overlay showing
-the recorded or displayed image is visible in the 3D view. The device type is
-indicated by the border color: magenta for Camera devices, cyan for Display
-devices and yellow for RangeFinder devices, see . This overlay can be moved to
-the desired position on the view by clicking on it and dragging the mouse. In
-order to resize the overlay the user has to click on the icon located at the
-bottom right corner and drag the mouse, during this action the original not
-scaled image size will be indicated using darker areas, as depicted in
-Additionally a close button is available on the top right corner to hide the
-overlay. Once the robot is selected, it is also possible to show or hide the
-overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder
-Devices` items in `Robot` menu.
+By default for each Camera and Display device, an overlay showing the recorded
+or displayed image is visible in the 3D view. The device type is indicated by
+the border color: magenta for Camera devices and cyan for Display devices, see .
+This overlay can be moved to the desired position on the view by clicking on it
+and dragging the mouse. In order to resize the overlay the user has to click on
+the icon located at the bottom right corner and drag the mouse, during this
+action the original not scaled image size will be indicated using darker areas,
+as depicted in Additionally a close button is available on the top right corner
+to hide the overlay. Once the robot is selected, it is also possible to show or
+hide the overlay images from the `Camera Devices` and `Display Devices` items in
+`Robot` menu.
 
-![Camera, Display and RangeFinder overlays](png/overlay.png)
-**Camera, Display and RangeFinder overlays**
+![Camera and Display overlays](png/overlay.png)
+**Camera and Display overlays**
 
 ![Camera overlay resizing](png/overlay_resize.png)
 **Camera overlay resizing**

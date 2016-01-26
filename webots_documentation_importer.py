@@ -81,7 +81,7 @@ def parseFigure(root, outFile):
     if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
         outFile.write('![%s](%s)\n**%s**\n\n' % (title, fileref, title))
 
-def parseChapter(root, outFile):
+def parseChapter(root, outFile, outputDirectoryPath):
     for child in root.getchildren():
         if child.tag == 'title' and child.attrib.get('name', child.text):
             indent = 0
@@ -96,10 +96,16 @@ def parseChapter(root, outFile):
             else:
                 raise Exception('Unsupported type: ' + root.tag)
             outFile.write('#' * indent + ' ' + child.attrib.get('name', child.text) + '\n\n')
-        elif child.tag == 'sect1' or child.tag == 'sect2' or child.tag == 'sect3':
-            if child.tag == 'sect1':
-                print 'title: ' + slugify(getTitle(child))
-            parseChapter(child, outFile)
+        elif child.tag == 'sect1':
+            fileName = outputDirectoryPath + slugify(getTitle(child)) + ".md"
+            print 'Generating ' + fileName
+            if os.path.exists(fileName):
+                raise Exception('sec1: "' + fileName + '" is existing')
+            outFile = open(fileName, 'w')
+            parseChapter(child, outFile, outputDirectoryPath)
+            outFile.close()
+        elif child.tag == 'sect2' or child.tag == 'sect3':
+            parseChapter(child, outFile, outputDirectoryPath)
         elif child.tag == 'para':
             parsePara(child, outFile)
         elif child.tag == 'programlisting':
@@ -107,25 +113,35 @@ def parseChapter(root, outFile):
         elif child.tag == 'figure':
             parseFigure(child, outFile)
 
-def parseBook(root, outFile):
+def parseBook(root, outFile, outputDirectoryPath):
     for child in root.getchildren():
         if child.tag == 'bookinfo':
             for subchild in child.getchildren():
                 if subchild.tag == 'title':
                     outFile.write('# ' + subchild.attrib.get('name', subchild.text) + '\n\n')
         elif child.tag == 'preface':
-            print 'title: ' + slugify(getTitle(child))
-            parseChapter(child, outFile)
+            fileName = outputDirectoryPath + slugify(getTitle(child)) + ".md"
+            print 'Generating ' + fileName
+            if os.path.exists(fileName):
+                raise Exception('preface: "' + fileName + '" is existing')
+            outFile = open(fileName, 'w')
+            parseChapter(child, outFile, outputDirectoryPath)
+            outFile.close()
         elif child.tag == 'chapter':
-            print 'title: ' + slugify(getTitle(child))
-            parseChapter(child, outFile)
+            fileName = outputDirectoryPath + slugify(getTitle(child)) + ".md"
+            print 'Generating ' + fileName
+            if os.path.exists(fileName):
+                raise Exception('chapter: "' + fileName + '" is existing')
+            outFile = open(fileName, 'w')
+            parseChapter(child, outFile, outputDirectoryPath)
+            outFile.close()
 
 def parseXMLFile(filePath):
     print 'Parse XML file: "' + filePath + '"'
     baseName = os.path.basename(filePath)
     inputDirectoryPath = os.path.dirname(filePath)
-    directoryName = os.path.basename(inputDirectoryPath)
-    outputFilePath = directoryName + '/' + baseName.replace('.xml', '.md')
+    outputDirectoryPath = os.path.basename(inputDirectoryPath) + '/'
+    outputFilePath = outputDirectoryPath + baseName.replace('.xml', '.md')
     print 'Output file: ' + outputFilePath
 
     with open(filePath, 'r') as file:
@@ -149,7 +165,7 @@ def parseXMLFile(filePath):
     root = ET.fromstring(content)
 
     outFile = open(outputFilePath, 'w')
-    parseBook(root, outFile)
+    parseBook(root, outFile, outputDirectoryPath)
     outFile.close()
 
 

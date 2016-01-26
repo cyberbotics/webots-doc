@@ -1,0 +1,31 @@
+## C++ API
+
+The following tables describe the C++ classes and their methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

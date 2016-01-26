@@ -1,0 +1,81 @@
+## Using the Thymio II robot
+
+![Thymio II model in Webots](png/thymio2.png)
+**Thymio II model in Webots**
+
+Thymio II is an affordable educational robot. It provides three main features: a
+large number of sensors and actuators, an educative interactivity based on light
+and touch, a programming environment featuring graphical and text programming.
+
+More information about the Thymio II is available from `its official website`.
+
+Webots contains an accurate model of the Thymio II robot (see the ). Almost all
+the Thymio II devices have been modeled and calibrated. Moreover Aseba studio
+and VPL for Thymio II can be connected on the simulated model allowing you to
+program the simulated robot using Aseba. Many Aseba examples are working
+directly with the simulated robot. Finally several objects related to the Thymio
+II are available, including a pen which can draw on any 3D object.
+
+### Thymio II model
+
+The  shows which devices are supported by the model, and their names (using the
+Webots terminology).
+
+The Thymio II distance sensor feedback is given on . The calibration was
+performed using a regular A4 white paper.
+
+![Proximity sensor response versus distance](png/thymio2_horizontal_prox_feedback.png)
+**Proximity sensor response versus distance**
+
+### Connect Aseba to the Thymio II model
+
+The default controller of the Thymio II PROTO is the `thymio2_demo` controller.
+It should be changed to `thymio2_aseba` to allow the connection to Aseba
+programming environment. However, most world files including the Thymio II robot
+are already configured to use `thymio2_aseba` as a controller for the Thymio II
+robot. Technically, `thymio2_aseba` creates a TCP/IP server on which Aseba can
+be connected, and it wraps the Aseba API with the Webots API.
+
+Here is how to proceed to connect Aseba to the Thymio II model in Webots. Make
+sure that the simulation is running (the controller has started) and that the
+controller of the Thymio II robot is `thymio2_aseba`. You can check this from
+the Webots scene tree, by opening the Thymio2 node. Aseba Studio or VPL for
+Thymio II can then be started. From the Aseba target selection dialog (see the
+.), select the `Network TCP/IP` option with the following parameters: `Host =
+localhost` and `Port = 33333`. Then just click on the `Connect` button.
+
+In case of a simulation containing several Thymio II, the TCP/IP port of the
+`thymio2_aseba` controller should be unique for each robot instance. This value
+can be modified by editing the `Thymio2::controllerArgs` field.
+
+![Aseba Studio and VPL target selection dialog](png/thymio2_aseba_target_selection.png)
+**Aseba Studio and VPL target selection dialog**
+
+The Thymio II window (see the ) can help you to raise some events easily. These
+events are mainly useful when using the VPL for Thymio II software. To open the
+Thymio II window, just double click on the 3D model of the robot.
+
+![Thymio II robot window](png/thymio2_window.png)
+**Thymio II robot window**
+
+### Thymio II Pen
+
+You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to
+the `Thymio2::bodySlot` field. This pen can draw on every 3D object. This is
+particularily useful to perform `these exercises`. An example of this is located
+there (see the ):
+"WEBOTS_MODULES_PATH/projects/robots/thymio/worlds/thymio2_pen.wbt"
+
+![Simulation of a Thymio II having a pen.](png/thymio2_pen.png)
+**Simulation of a Thymio II having a pen.**
+
+### Thymio II Ball
+
+`These exercises` can be reproduced by adding a `Thymio2Ball` node in your
+world. The ball can be slightly moved by applying a force on it (`ALT + mouse
+left click`). An example of this is located there (see the ):
+"WEBOTS_MODULES_PATH/projects/robots/thymio/worlds/thymio2_ball.wbt"
+
+![Simulation of a Thymio II above a ball.](png/thymio2_ball.png)
+**Simulation of a Thymio II above a ball.**
+

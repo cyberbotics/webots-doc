@@ -6,6 +6,19 @@ import shutil
 import textwrap
 import xml.etree.ElementTree as ET
 
+def slugify(txt):
+  output = txt.lower()
+  output = output.replace('+', 'p')
+  output = re.sub(r'[\(\):]', '', output)
+  output = re.sub(r'\W+', '-', output)
+  return output.strip(' ').strip('-')
+
+def getTitle(el):
+  titleNodes = el.findall('title')
+  if len(titleNodes) <= 0:
+      raise Exception('Cannot find title')
+  return titleNodes[0].text
+
 def parseText(txt):
     if txt is None:
         return ''
@@ -84,6 +97,8 @@ def parseChapter(root, outFile):
                 raise Exception('Unsupported type: ' + root.tag)
             outFile.write('#' * indent + ' ' + child.attrib.get('name', child.text) + '\n\n')
         elif child.tag == 'sect1' or child.tag == 'sect2' or child.tag == 'sect3':
+            if child.tag == 'sect1':
+                print 'title: ' + slugify(getTitle(child))
             parseChapter(child, outFile)
         elif child.tag == 'para':
             parsePara(child, outFile)
@@ -99,8 +114,10 @@ def parseBook(root, outFile):
                 if subchild.tag == 'title':
                     outFile.write('# ' + subchild.attrib.get('name', subchild.text) + '\n\n')
         elif child.tag == 'preface':
+            print 'title: ' + slugify(getTitle(child))
             parseChapter(child, outFile)
         elif child.tag == 'chapter':
+            print 'title: ' + slugify(getTitle(child))
             parseChapter(child, outFile)
 
 def parseXMLFile(filePath):

@@ -100,36 +100,39 @@ def parseBook(root, outFile):
                     outFile.write('# ' + subchild.attrib.get('name', subchild.text) + '\n\n')
         elif child.tag == 'preface':
             parseChapter(child, outFile)
-        elif child.tag == 'require':
-            print 'require' + child.attrib.get('tag')
-            parseXMLFile(child.attrib.get('tag'))
-
-def parseTopXmlElement(root, outFile):
-    #outFile.write((u' '*indent + u'%s: %s' % (root.tag.title(), root.attrib.get('name', root.text))).encode('utf-8'))
-    if root.tag == 'book':
-        parseBook(root, outFile)
-    elif root.tag == 'chapter':
-        parseChapter(root, outFile)
-
+        elif child.tag == 'chapter':
+            parseChapter(child, outFile)
 
 def parseXMLFile(filePath):
     print 'Parse XML file: "' + filePath + '"'
     baseName = os.path.basename(filePath)
-    directoryName = os.path.basename(os.path.dirname(filePath))
+    inputDirectoryPath = os.path.dirname(filePath)
+    directoryName = os.path.basename(inputDirectoryPath)
     outputFilePath = directoryName + '/' + baseName.replace('.xml', '.md')
     print 'Output file: ' + outputFilePath
 
     with open(filePath, 'r') as file:
       content = file.read()
-    # xml.etree doesn't support the ENTITY - SYSTEM tags
-    # => the following line are converting them to a custom <require> tag
-    content = re.sub(r'&(.*)_chapter;', r'<require tag="' + inputDirectory + r'\1_chapter.xml" />', content)
-    content = re.sub(r'&(\w*);', r'\1', content) # TODO: improve this
+
+    # deal with preprocessor instructions
+    while True:
+        mo = re.search(r'(&\w*;)', content)
+        if not mo:
+            break
+        tag = mo.group(0)[1:-1] # remove the first and last characters
+        output = ''
+        if tag.endswith('_chapter'):
+            with open(inputDirectoryPath + "/" + tag + '.xml', 'r') as includeFile:
+                output = includeFile.read()
+        else:
+            # TODO: improve this
+            output = tag
+        content = content[:mo.start()] + output + content[mo.end():]
 
     root = ET.fromstring(content)
 
     outFile = open(outputFilePath, 'w')
-    parseTopXmlElement(root, outFile)
+    parseBook(root, outFile)
     outFile.close()
 
 

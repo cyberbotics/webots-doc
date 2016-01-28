@@ -30,13 +30,10 @@ a:active, a:focus {
   color:black;
 }
 pre {
-  background:transparent;
-  border:none;
-  margin:0;
-  padding:0;
+  margin: 30px;
+  background-color: #eee;
 }
 code {
-  padding-left:0;
   background:transparent;
   color:#444;
 }

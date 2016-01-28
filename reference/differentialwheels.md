@@ -73,5 +73,18 @@ direction, rotating the wheels backwards, etc. Unlike the "physics" mode, in the
 `DifferentialWheels` robot will keep its initial elevation throughout the
 simulation.
 
+ | Physics mode | Kinematics mode
+--- | --- | --- | ---
+Motion triggered by | Wheels friction | 2d Webots kinematics
+Friction simulation | Yes, Coulomb model | No, robot slides against obstacles
+Inertia/Weight/Forces | Yes | No
+Collision detection | 3D (ODE) | 3D (ODE)
+wheelRadius field | Ignored | Used
+axleLength field | Ignored | Used
+maxAcceleration field | Ignored | Used
+maxForce field | Used | Ignored
+Sensor rays shape | 3d cone | 3d cone
+RGB sensitive | Yes | Yes
+
 ### DifferentialWheels Functions
 

@@ -17,6 +17,27 @@ E-puck was designed to fulfill the following requirements:
 
 E-puck is equipped with a large number of devices, as summarized in .
 
+Feature | Description
+--- | ---
+Size | 7.4 cm in diameter, 4.5 cm high
+Weight | 150 g
+Battery | about 3 hours with the provided 5Wh LiION rechargeable battery
+Processor | Microchip dsPIC 30F6014A @ 60MHz (about 15 MIPS)
+Motors | 2 stepper motors with 20 steps per revolution and a 50:1 reduction gear
+IR sensors | 8 infra-red sensors measuring ambient light and proximity of obstacles in a 4 cm range
+Camera | color camera with a maximum resolution of 640x480 (typical use: 52x39 or 640x1)
+Microphones | 3 omni-directional microphones for sound localization
+Accelerometer | 3D accelerometer along the X, Y and Z axis
+LEDs | 8 red LEDs on the ring and one green LED on the body
+Speaker | on-board speaker capable of playing WAV or tone sounds.
+Switch | 16 position rotating switch
+Bluetooth | Bluetooth for robot-computer and robot-robot wireless communication
+Remote Control | infra-red LED for receiving standard remote control commands
+Expansion bus | expansion bus to add new possibilities to your robot
+Programming | C programming with the GNU GCC compiler system
+Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
+      powerful simulation, remote control and cross-compilation system.
+
 ### Simulation model
 
 ![The e-puck model in Webots](png/e-puck.png)
@@ -34,11 +55,42 @@ infra-red sensors pointing to the ground in front of the robot. The  displays
 the names of the simulated devices which are to be used as an argument of the
 function `wb_robot_get_device()` (see the Robot section of `Reference Manual`).
 
+Device | Name
+--- | ---
+Differential wheels | differential wheels
+Proximity sensors | ps0 to ps7
+Light sensors | ls0 to ls7
+LEDs | led0 to led7 (e-puck ring), led8 (body) and led9 (front)
+Camera | camera
+Accelerometer | accelerometer
+Ground sensors (extension) | gs0, gs1 and gs2
+
+Main specifications | Values
+--- | ---
+Robot radius | 37 mm
+Wheel radius | 20.5 mm
+Axle length | 52 mm
+Encoder resolution | 159.23
+Speed unit | 0.00628 rad/s
+Maximum angular speed | 1000 units
+
 The e-puck dimensions and speed specifications are shown in . The functions
 `wb_differential_wheels_set_speed()`,
 `wb_differential_wheels_get_left_encoder()` and
 `wb_differential_wheels_get_right_encoder()` will allow you to set the speed of
 the robot and to use its encoders.
+
+Device | x (m) | y (m) | z (m) | Orientation (rad)
+--- | --- | --- | --- | ---
+ps0 | 0.010 | 0.033 | -0.030 | 1.27
+ps1 | 0.025 | 0.033 | -0.022 | 0.77
+ps2 | 0.031 | 0.033 | 0.00 | 0.00
+ps3 | 0.015 | 0.033 | 0.030 | 5.21
+ps4 | -0.015 | 0.033 | 0.030 | 4.21
+ps5 | -0.031 | 0.033 | 0.00 | 3.14159
+ps6 | -0.025 | 0.033 | -0.022 | 2.37
+ps7 | -0.010 | 0.033 | -0.030 | 1.87
+camera | 0.000 | 0.028 | -0.030 | 4.71239
 
 As is the case for any Differential Wheels robot set at its default position in
 Webots, the forward direction of the e-puck is given by the negative `z`-axis of

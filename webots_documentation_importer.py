@@ -72,7 +72,7 @@ class BookParser:
             return ''
         return txt.encode('utf-8')
 
-    def parsePara(self, node, outFile):
+    def parsePara(self, node, outFile, format):
         # para included tags:
         #     bold, command, computeroutput, email, emphasis, filename, function,
         #     guibutton, guilabel, guimenu, guimenuitem, guisubmenu, hlink,
@@ -93,12 +93,15 @@ class BookParser:
             text += self.parseText(child.tail)
         text += self.parseText(node.tail)
 
-        content = text.split('\n')
-        text = ' '.join(map(lambda x: x.strip(), content)).strip()
-        content = textwrap.wrap(text, width=80)
-        for line in content:
-            outFile.write(line.strip() + '\n')
-        outFile.write('\n')
+        if format:
+            content = text.split('\n')
+            text = ' '.join(map(lambda x: x.strip(), content)).strip()
+            content = textwrap.wrap(text, width=80)
+            for line in content:
+                outFile.write(line.strip() + '\n')
+            outFile.write('\n')
+        else:
+            outFile.write(text.strip())
 
     def parseProgramListing(self, node, outFile):
         outFile.write('\n```')
@@ -129,6 +132,39 @@ class BookParser:
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
             outFile.write('![%s](%s)\n**%s**\n\n' % (title, fileref, title))
 
+    def parseTable(self, node, outFile):
+        header = len(node.findall('.//thead')) == 1
+        nCols = int(node.findall('tgroup')[0].attrib.get('cols'))
+
+        if not header and nCols == 1:
+            outFile.write('```')
+
+        line = 0
+        for rowNode in node.findall('.//row'):
+            line += 1
+            firstEntry = True
+            for entryNode in rowNode.findall('entry'):
+                if firstEntry:
+                    firstEntry = False
+                else:
+                    outFile.write(' | ')
+                self.parsePara(entryNode, outFile, False)
+            outFile.write('\n')
+            if line == 1 and header:
+                firstEntry = True
+                for i in range(0, nCols):
+                    if firstEntry:
+                        firstEntry = False
+                    else:
+                        outFile.write(' | ')
+                    outFile.write('---')
+                outFile.write('\n')
+
+        if not header and nCols == 1:
+            outFile.write('```')
+
+        outFile.write('\n')
+
     def parseChapter(self, node, outFile):
         for child in node.getchildren():
             if child.tag == 'title' and child.attrib.get('name', child.text):
@@ -155,7 +191,9 @@ class BookParser:
             elif child.tag == 'sect2' or child.tag == 'sect3':
                 self.parseChapter(child, outFile)
             elif child.tag == 'para':
-                self.parsePara(child, outFile)
+                self.parsePara(child, outFile, True)
+            elif child.tag == 'table':
+                self.parseTable(child, outFile)
             elif child.tag == 'programlisting':
                 self.parseProgramListing(child, outFile)
             elif child.tag == 'figure':

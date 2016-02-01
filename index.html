@@ -8,13 +8,6 @@
     <script src="https://www.cyberbotics.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://rawgit.com/showdownjs/showdown/1.3.0/dist/showdown.min.js"></script>
     <script>
-      var book = getGETQueryValue("book", "guide");
-      var page = getGETQueryValue("page", "guide.md");
-      var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
-      var targetPath = "https://raw.githubusercontent.com/omichel/webots-doc/" + branch + "/" + book + "/";
-      var targetUrl = targetPath + page;
-      console.log("Target Url: " + targetUrl);
-
       function replaceAll(find, replace, str) {
         while( str.indexOf(find) > -1) {
           str = str.replace(find, replace);
@@ -22,21 +15,50 @@
         return str;
       }
 
+      if (typeof String.prototype.startsWith != "function") {
+          String.prototype.startsWith = function (prefix) {
+              return this.slice(0, prefix.length) == prefix;
+          }
+      }
+
+      if (typeof String.prototype.endsWith !== 'function') {
+          String.prototype.endsWith = function (suffix) {
+              return this.indexOf(suffix, this.length - suffix.length) !== -1;
+          };
+      }
+
+      var book = getGETQueryValue("book", "guide");
+      var page = getGETQueryValue("page", "guide.md");
+      var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
+      var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
+      var targetPath = ''
+      if (! url.startsWith('http')) {
+          targetPath = url + book + "/";
+      } else {
+          targetPath = url + branch + "/" + book + "/";
+      }
+      var targetUrl = targetPath + page;
+      console.log("Target Url: " + targetUrl);
+
       $.ajax({
-        type: "GET",
-        url: targetUrl,
-        dataType: "text",
-        success: function (result) {
-          // hack images urls
-          result = replaceAll('](png/', '](' + targetPath + 'png/', result);
+          type: "GET",
+          url: targetUrl,
+          dataType: "text",
+          success: function (result) {
+              // hack images urls
+              result = replaceAll('](png/', '](' + targetPath + 'png/', result);
 
-          console.log("Raw content: " + result);
+              console.log("Raw content: " + result);
 
-          // markdown to html
-          var converter = new showdown.Converter();
-          document.getElementById("view").innerHTML = converter.makeHtml(result);
-        }
-    });
+              // markdown to html
+              var converter = new showdown.Converter();
+              document.getElementById("view").innerHTML = converter.makeHtml(result);
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown) { 
+              console.log("Status: " + textStatus);
+              console.log("Error: " + errorThrown); 
+          }
+      });
     </script>
   </head>
   <body>

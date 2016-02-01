@@ -130,7 +130,7 @@ class BookParser:
             elif child.tag  == 'graphic':
                 fileref = child.attrib.get('fileref')
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
-            outFile.write('![%s](%s)\n**%s**\n\n' % (title, fileref, title))
+            outFile.write('![%s](%s)\n\n**%s**\n\n' % (title, fileref, title))
 
     def parseTable(self, node, outFile):
         header = len(node.findall('.//thead')) == 1

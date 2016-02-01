@@ -43,6 +43,7 @@ rotation with center `(0,0)` and angle theta, and `S` a scaling with scaling
 factors `S`. In matrix notation, the corresponding `TextureTransform` reads as
 
 ![Texture transformation in matrix notation](pdf/texture_transform.pdf)
+
 **Texture transformation in matrix notation**
 
 where `C` denotes the matrix inverse of `C`.

@@ -28,6 +28,7 @@ rolling object can help to appreciate its movement.
 ![
     Simulation after having setup the Light and the Appearance nodes.
    ](png/tutorial_appearance.png)
+
 **
     Simulation after having setup the Light and the Appearance nodes.
    **

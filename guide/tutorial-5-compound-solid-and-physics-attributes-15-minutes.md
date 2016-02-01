@@ -7,6 +7,7 @@ and one cylinder. The expected result is depicted in .
 ![
     Expected result at the end of the tutorial about compound solids.
    ](png/tutorial_dumbbell.png)
+
 **
     Expected result at the end of the tutorial about compound solids.
    **
@@ -29,6 +30,7 @@ subnodes required to implement the dumbbell.
     Representation of the subnodes of a compound solid made of
     several transformed geometries.
    ](pdf/tutorial_compound_solid.pdf)
+
 **
     Representation of the subnodes of a compound solid made of
     several transformed geometries.

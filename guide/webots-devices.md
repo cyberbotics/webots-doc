@@ -10,6 +10,7 @@ exemplify.
 ### battery.wbt
 
 ![battery.wbt](png/battery.png)
+
 **battery.wbt**
 
 In this example, a robot moves in a closed arena. The energy consumed by the
@@ -24,6 +25,7 @@ full.
 ### bumper.wbt
 
 ![bumper.wbt](png/bumper.png)
+
 **bumper.wbt**
 
 In this example, a robot moves in a closed arena filled with obstacles. Its
@@ -33,6 +35,7 @@ detected, the robot moves back and turns a bit.
 ### camera.wbt
 
 ![camera.wbt](png/camera.png)
+
 **camera.wbt**
 
 In this example, a robot uses a camera to detect colored objects. The robot
@@ -45,6 +48,7 @@ to detect.
 ### connector.wbt
 
 ![connector.wbt](png/connector.png)
+
 **connector.wbt**
 
 In this example, a light robot (light blue) is lifted over two heavier robots
@@ -61,6 +65,7 @@ robot's name.
 ### distance_sensor.wbt
 
 ![distance_sensor.wbt](png/distance_sensor.png)
+
 **distance_sensor.wbt**
 
 In this example, a robot has eight `DistanceSensor`s placed at regular intervals
@@ -69,6 +74,7 @@ around its body. The robot avoids obstacles using the Braitenberg technique.
 ### emitter_receiver.wbt
 
 ![emitter_receiver.wbt](png/emitter_receiver.png)
+
 **emitter_receiver.wbt**
 
 In this example, there are two robots: one is equipped with an `Emitter`, the
@@ -86,6 +92,7 @@ is interrupted. Note that the communication between "infra-red" `Emitter`s and
 ### encoders.wbt
 
 ![encoders.wbt](png/encoders.png)
+
 **encoders.wbt**
 
 This example demonstrates the usage of the wheel encoders of
@@ -97,6 +104,7 @@ random values. The robot does not pay any attention to obstacles.
 ### force_sensor.wbt
 
 ![force_sensor.wbt](png/force_sensor.png)
+
 **force_sensor.wbt**
 
 This example is nearly the same as "bumper.wbt" (see ). The only difference is
@@ -107,6 +115,7 @@ window.
 ### gps.wbt
 
 ![gps.wbt](png/gps.png)
+
 **gps.wbt**
 
 This example shows two different techniques for finding out the current position
@@ -121,6 +130,7 @@ position read by the Supervisor.
 ### led.wbt
 
 ![led.wbt](png/led.png)
+
 **led.wbt**
 
 In this example, a robot moves while randomly changing the color of three `LED`s
@@ -129,6 +139,7 @@ on the top of its body. The color choice is printed in the Console.
 ### light_sensor.wbt
 
 ![light_sensor.wbt](png/light_sensor.png)
+
 **light_sensor.wbt**
 
 In this example, the robot uses two `LightSensor`s to follow a light source. The
@@ -137,6 +148,7 @@ light source can be moved with the mouse; the robot will follow it.
 ### pen.wbt
 
 ![pen.wbt](png/pen.png)
+
 **pen.wbt**
 
 In this example, a robot uses a `Pen` device to draw on the floor. The
@@ -146,6 +158,7 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 ### range_finder.wbt
 
 ![range_finder.wbt](png/range_finder.png)
+
 **range_finder.wbt**
 
 In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.

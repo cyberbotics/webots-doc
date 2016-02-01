@@ -12,6 +12,7 @@ This section describes the user interface of the Scene Tree, gives an overview
 of the VRML97 nodes and Webots nodes.
 
 ![Scene Tree Window](png/scene_tree1.png)
+
 **Scene Tree Window**
 
 ### Field Editor
@@ -28,6 +29,7 @@ editor section:
 Additionally, when a node is selected, other actions are available as shown in :
 
 ![Webots node editor](png/field_editor.png)
+
 **Webots node editor**
 
 `Tranform to`: Allow to change the type of the selected node by chosing the

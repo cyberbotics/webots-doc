@@ -7,6 +7,7 @@ to edit source code, and finally, the *Console* that displays both compilation
 and controller outputs.
 
 ![Webots GUI](png/main_window.png)
+
 **Webots GUI**
 
 The GUI has nine menus: `File, Edit, View, Simulation, Build, Robot, Tools,
@@ -400,6 +401,7 @@ simulation is running twice as fast as the corresponding real robots would. This
 information is valid both in `Run` mode and `Fast` mode.
 
 ![Speedometer](png/speedometer.png)
+
 **Speedometer**
 
 To the left of the speedometer, the *virtual time* is displayed using following

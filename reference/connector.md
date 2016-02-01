@@ -68,6 +68,7 @@ criteria are not met, the `Connector` nodes will not work properly and may be
 unable to connect.
 
 ![Connector axis system](png/connector_axes.png)
+
 **Connector axis system**
 
 ### Connector Functions

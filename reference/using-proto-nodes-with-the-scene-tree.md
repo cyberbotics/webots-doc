@@ -20,6 +20,7 @@ directory of the "worlds" directory that contains the currently opened ".wbt"
 file. The  shows where ".proto" files are stored in a project directory.
 
 ![PROTO directory in a project directory structure](png/protos_directory_structure.png)
+
 **PROTO directory in a project directory structure**
 
 Note that inside the "protos" directory, the number of subdirectories and their
@@ -49,6 +50,7 @@ the dialog. Note that, the dialog's text pane is automatically filled with any
 comment placed at the beginning of the ".proto" file.
 
 ![Adding an instance of the TwoColorChair PROTO](png/add_proto.png)
+
 **Adding an instance of the TwoColorChair PROTO**
 
 Icons can be used to better illustrate PROTO nodes. A PROTO icon must be stored
@@ -67,5 +69,6 @@ built-in nodes (see ). PROTO fields can be manipulated exactly like built-in
 node fields.
 
 ![Scene Tree with two instances of the TwoColorChair PROTO](png/scene_tree_with_protos.png)
+
 **Scene Tree with two instances of the TwoColorChair PROTO**
 

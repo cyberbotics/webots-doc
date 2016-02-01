@@ -21,6 +21,7 @@ lower-left pixel of the image corresponds to *s=0, t=0*, and the top-right pixel
 of the image corresponds to *s=1, t=1*. These relationships are depicted below.
 
 ![Texture map coordinate system](png/image_texture.png)
+
 **Texture map coordinate system**
 
 The texture is read from the file specified by the `url` field. The file should

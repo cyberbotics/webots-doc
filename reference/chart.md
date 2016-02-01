@@ -24,5 +24,6 @@ can be used as boundingObjects, and that although `Group` and `Transform` can be
 used, not every combination of these will work correctly.
 
 ![Webots Nodes Chart](pdf/node_hierarchy.pdf)
+
 **Webots Nodes Chart**
 

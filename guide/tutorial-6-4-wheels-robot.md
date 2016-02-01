@@ -14,6 +14,7 @@ depicted in . The  shows the robot from a top view.
     The distance sensors are oriented in a different way,
     their +x-vector indicates the direction of the sensor.
    ](png/tutorial_4_wheels_robot.png)
+
 **
     3D view of the 4 wheels robot.
     Note that the coordinate system representations of the robot body
@@ -30,6 +31,7 @@ depicted in . The  shows the robot from a top view.
     The grid behind the robot has a dimension of 0.2 x 0.3 [m].
     The text labels correspond to the name of the devices.
    ](png/tutorial_4_wheels_top_schema.png)
+
 **
     Top view of the 4 wheels robot.
     The grid behind the robot has a dimension of 0.2 x 0.3 [m].
@@ -75,6 +77,7 @@ nodes hierarchy of the robot.
 ![
     High level representation of the 4 wheels robot
    ](pdf/tutorial_4_wheels_highlevel.pdf)
+
 **
     High level representation of the 4 wheels robot
    **
@@ -82,6 +85,7 @@ nodes hierarchy of the robot.
 ![
     Low level representation of the 4 wheels robot
    ](pdf/tutorial_4_wheels_lowlevel.pdf)
+
 **
     Low level representation of the 4 wheels robot
    **

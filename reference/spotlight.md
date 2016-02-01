@@ -78,5 +78,6 @@ Contrary to the VRML specifications, the `attenuation` and the
 `ambientIntensity` fields cannot be set simultaneously.
 
 ![Spot light](png/spot_light.png)
+
 **Spot light**
 

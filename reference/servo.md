@@ -57,6 +57,7 @@ In a "rotational" `Servo`, these fields have the following meaning: The
 `rotation` field specifies the orientation of the axis of rotation. See .
 
 ![Rotational servo](pdf/rotational_servo.pdf)
+
 **Rotational servo**
 
 In a "linear" `Servo`, these fields have the following meaning: The
@@ -64,6 +65,7 @@ In a "linear" `Servo`, these fields have the following meaning: The
 `rotation` field specifies the direction of the sliding axis. See .
 
 ![Linear servo](pdf/linear_servo.pdf)
+
 **Linear servo**
 
 The `position` field represents the current angle difference (in radians) or the
@@ -92,6 +94,7 @@ the servo `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
 
 ![Servo control](pdf/servo_control.pdf)
+
 **Servo control**
 
 At each simulation step, the P-controller (2) recomputes the current velocity
@@ -209,6 +212,7 @@ This damping torque/force is proportional to the effective servo velocity: `F =
 velocity computed by the physics simulator.
 
 ![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf)
+
 **Mechanical Diagram of a Servo**
 
 As you can see in (see  ), a `Servo` creates a joint between two masses `m` and
@@ -262,6 +266,7 @@ child `Servo` will have spring and damping forces (`springConstant` gt 0 and
 `dampingConstant` gt 0).
 
 ![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf)
+
 **Example of serial connection of two Servo nodes**
 
 This is equivalent to this ".wbt" code, where, as you can notice, *Servo2* is a

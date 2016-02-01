@@ -11,6 +11,7 @@ E-puck is also available for purchase from Cyberbotics Ltd.
 ### Overview of the robot
 
 ![The e-puck robot at work](png/e-puck_real.png)
+
 **The e-puck robot at work**
 
 E-puck was designed to fulfill the following requirements:
@@ -41,6 +42,7 @@ Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
 ### Simulation model
 
 ![The e-puck model in Webots](png/e-puck.png)
+
 **The e-puck model in Webots**
 
 The e-puck model in Webots is depicted in . This model includes support for the
@@ -108,6 +110,7 @@ accordance with the lookup table in ; this table is the outcome of calibration
 performed on the real robot.
 
 ![Proximity sensor response against distance](png/e-puck_distance_sensor_lookup_table.png)
+
 **Proximity sensor response against distance**
 
 The resolution of the camera was limited to 52x39 pixels, as this is the maximum
@@ -123,6 +126,7 @@ have been included in the simulation model in order to support extension
 modules.
 
 ![Sensors, LEDs and camera](png/e-puck_sensors_and_leds.png)
+
 **Sensors, LEDs and camera**
 
 Several simulation examples are located in the
@@ -145,6 +149,7 @@ Zufferey from the EPFL, who sets up a series of exercises with Webots and
 extended e-puck robots.
 
 ![An e-puck extension for line following](png/e-puck_line.png)
+
 **An e-puck extension for line following**
 
 The directory "WEBOTS_MODULES_PATH/projects/samples/curriculum" contains a rich
@@ -164,6 +169,7 @@ so that we can improve these models using your contribution.
 #### Control window
 
 ![The e-puck control window for simulation](png/e-puck_control.png)
+
 **The e-puck control window for simulation**
 
 When opening a world containing an e-puck robot, Webots displays the e-puck
@@ -219,6 +225,7 @@ The BotStudio windows appears when the e-puck's controller points on a *.bsg*
 file.
 
 ![BotStudio](png/e-puck_botstudio.png)
+
 **BotStudio**
 
 #### Bluetooth setup

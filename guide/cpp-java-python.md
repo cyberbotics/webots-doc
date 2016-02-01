@@ -15,6 +15,7 @@ SWIG. Therefore the class and method names, as well as the number of parameters
 and their types, are very similar in these three languages.
 
 ![Webots APIs Overview](pdf/api_overview.pdf)
+
 **Webots APIs Overview**
 
 The naming convention of the C++/Java/Python classes and methods directly
@@ -44,6 +45,7 @@ controllers. But it is not possible to call the `Supervisor` methods from a
 possible to call `simulationRevert()` from a `DifferentialWheels` controller.
 
 ![A small subset of Webots oriented-object APIs](pdf/oo_api.pdf)
+
 **A small subset of Webots oriented-object APIs**
 
 Generally, the user-defined controller class should have a `run()` function that

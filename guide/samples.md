@@ -11,6 +11,7 @@ demo, the world file and its corresponding controller have the same name.
 ### blimp_lis.wbt
 
 ![blimp_lis.wbt](png/blimp_lis.png)
+
 **blimp_lis.wbt**
 
 This is an example of the flying blimp robot developed at the Laboratory of
@@ -23,6 +24,7 @@ plugin* is used to add thrust and other forces to the simulation.
 ### gantry.wbt
 
 ![gantry.wbt](png/gantry.png)
+
 **gantry.wbt**
 
 In this example, a gantry robot plays "Towers of Hanoi" by stacking three
@@ -33,6 +35,7 @@ Towers problem.
 ### hexapod.wbt
 
 ![hexapod.wbt](png/hexapod.png)
+
 **hexapod.wbt**
 
 In this example, an insect-shaped robot is made of a combination of
@@ -42,6 +45,7 @@ alternating tripod gait.
 ### humanoid.wbt
 
 ![humanoid.wbt](png/humanoid.png)
+
 **humanoid.wbt**
 
 In this example, a humanoid robot performs endless gymnastic movements.
@@ -49,6 +53,7 @@ In this example, a humanoid robot performs endless gymnastic movements.
 ### moon.wbt
 
 ![moon.wbt](png/moon.png)
+
 **moon.wbt**
 
 In this example, two Koala robots (K-Team) circle on a moon-like surface. You
@@ -59,6 +64,7 @@ controller code.
 ### ghostdog.wbt
 
 ![ghostdog.wbt](png/ghostdog.png)
+
 **ghostdog.wbt**
 
 This example shows a galloping quadruped robot made of active hip joints and
@@ -72,6 +78,7 @@ could be used for controlling the knee joints.
 ### salamander.wbt
 
 ![salamander.wbt](png/salamander.png)
+
 **salamander.wbt**
 
 A salamander-shaped robot walks down a slope and reaches a pool where it starts
@@ -84,6 +91,7 @@ principle.
 ### soccer.wbt
 
 ![soccer.wbt](png/soccer_world.png)
+
 **soccer.wbt**
 
 In this example, two teams of simple `DifferentialWheels` robots play soccer. A
@@ -94,6 +102,7 @@ current score and the remaining time in the 3D view. This example shows how a
 ### sojourner.wbt
 
 ![sojourner.wbt](png/sojourner.png)
+
 **sojourner.wbt**
 
 This is a realistic model of the "Sojourner" Mars exploration robot (NASA). A
@@ -104,6 +113,7 @@ robot's motion.
 ### yamor.wbt
 
 ![yamor.wbt](png/yamor.png)
+
 **yamor.wbt**
 
 In this example, eight "Yamor" robot modules attach and detach to and from each
@@ -116,6 +126,7 @@ module behaviour is chosen according to the name of the module.
 ### stewart_platform.wbt
 
 ![stewart_platform.wbt](png/stewart_platform.png)
+
 **stewart_platform.wbt**
 
 This is an example of a *Stewart platform*. A Stewart platform is a kind of

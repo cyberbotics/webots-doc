@@ -9,6 +9,7 @@ interface and with the basic concepts of Webots.
 ![
     What you should see at the end of the tutorial.
    ](png/tutorial_e-puck.png)
+
 **
     What you should see at the end of the tutorial.
    **

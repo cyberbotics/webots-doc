@@ -51,6 +51,7 @@ optional, but the `physics` field needs the `boundingObject` to be defined.
      The simplest model of a rigid body in Webots having a graphical representation (Shape),
      a physical bound (boundingObject) and being in the dynamical environment (Physics).
     ](pdf/tutorial_solid.pdf)
+
 **
      The simplest model of a rigid body in Webots having a graphical representation (Shape),
      a physical bound (boundingObject) and being in the dynamical environment (Physics).
@@ -67,6 +68,7 @@ body as shown in the . As Geometry nodes we will use Spheres.
 ![
      Your first rigid body in Webots.
     ](png/tutorial_ball.png)
+
 **
      Your first rigid body in Webots.
     **
@@ -95,6 +97,7 @@ mechanism.
 ![
     DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".
    ](png/tutorial_def_use.png)
+
 **
     DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".
    **
@@ -102,6 +105,7 @@ mechanism.
 ![
     DEF-USE mechanism applied on the Shape node of a Solid.
    ](pdf/tutorial_def_use_shape.pdf)
+
 **
     DEF-USE mechanism applied on the Shape node of a Solid.
    **
@@ -121,6 +125,7 @@ The solution is located in the solution directory under the "obstacle.wbt".
 ![
     The simulation state at the end of this second tutorial.
    ](png/tutorial_walls.png)
+
 **
     The simulation state at the end of this second tutorial.
    **

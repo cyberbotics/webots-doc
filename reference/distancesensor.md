@@ -67,6 +67,7 @@ words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see ).
 
 ![Sonar sensor](pdf/sonar_reflection.pdf)
+
 **Sonar sensor**
 
 ### Line Following Behavior

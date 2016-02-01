@@ -139,6 +139,7 @@ of `vFov/2`).
 ### Overlay Image
 
 ![Camera overlay image](png/camera_overlay.png)
+
 **Camera overlay image**
 
 The camera image is shown by default on top of the 3D window with a magenta

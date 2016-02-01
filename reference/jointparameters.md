@@ -36,9 +36,11 @@ Position | rad (radians) | m (meters)
 ### Initial Transformation and Position
 
 ![HingeJoint](pdf/hinge_joint.pdf)
+
 **HingeJoint**
 
 ![SliderJoint](pdf/slider_joint.pdf)
+
 **SliderJoint**
 
 The `position` field is a scalar representing an angle (in radians) or a
@@ -105,6 +107,7 @@ This damping torque/force is proportional to the effective joint velocity: `F =
 velocity computed by the physics simulator.
 
 ![Mechanical Diagram of a Slider Joint](pdf/slider_joint_mechanics.pdf)
+
 **Mechanical Diagram of a Slider Joint**
 
 As you can see in (see  ), a `Joint` creates a joint between two masses `m` and

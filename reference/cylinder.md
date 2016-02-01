@@ -34,6 +34,7 @@ cylinder and so its resolution. More precisely, it corresponds to the number of
 lines used to represent the bottom or the top of the cylinder.
 
 ![The Cylinder node](png/cylinder.png)
+
 **The Cylinder node**
 
 When a texture is applied to a cylinder, it is applied differently to the sides,

@@ -44,6 +44,7 @@ Before being interpolated by the `lookupTable`, the total irradiance `E` [W/m^2]
 seen by a sensor is computed according to the equation shown in :
 
 ![Light sensor irradiance formula](pdf/light_intensity.pdf)
+
 **Light sensor irradiance formula**
 
 The `F` vector corresponds to the sensor's `colorFilter` field, `n` is the total
@@ -53,6 +54,7 @@ light `i` (TRUE=1, FALSE=0), the `C[i]` vector is the `color` field of light
 is the attenuation of light `i`, and is calculated as shown in .
 
 ![Light attenuation](pdf/light_attenuation.pdf)
+
 **Light attenuation**
 
 Variables `a` and `a` correspond to the `attenuation` field of light `i`, and
@@ -61,6 +63,7 @@ for `DirectionalLight`s. `I` is the direct irradiance contributed by light `i`,
 and is calculated as shown in .
 
 ![Direct irradiance](pdf/direct_light.pdf)
+
 **Direct irradiance**
 
 Finally, `spot[i]` is a factor used only in case of a `SpotLight`, and that
@@ -69,6 +72,7 @@ in , where the `alpha` angle corresponds to the angle between `-L` and the
 `direction` vector of the `SpotLight`.
 
 ![SpotLight factor](pdf/spot_light.pdf)
+
 **SpotLight factor**
 
 The value `I[i]` corresponds to the *intensity* field of light `i`, and `N` is
@@ -86,6 +90,7 @@ actually hit the surface and excite the device. When a light source is parallel
 to (or behind) the semiconductor surface, no photons actually reach the surface.
 
 ![The irradiance (E) depends on the angle (phi) between the ](pdf/light_sensor.pdf)
+
 **The irradiance (E) depends on the angle (phi) between the **
 
 The "occlusion" condition is true if the light source is hidden by one or more

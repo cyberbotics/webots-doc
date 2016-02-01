@@ -8,6 +8,7 @@ Pioneer 3-AT robot. ().
 #### Overview of the robot
 
 ![Pioneer 3-AT, a ready-to-use all terrain base](png/pioneer3at_real.png)
+
 **Pioneer 3-AT, a ready-to-use all terrain base**
 
 The Pioneer 3-AT robot is an all-purpose outdoor base, used for research and
@@ -30,6 +31,7 @@ Adept Mobile Robots official `webpage`.
 #### Simulation model
 
 ![The Pioneer 3-AT model in Webots](png/pioneer3at.png)
+
 **The Pioneer 3-AT model in Webots**
 
 The Pioneer 3-AT model in Webots is depicted in . This model includes support
@@ -40,6 +42,7 @@ the "pioneer3AT.wbt" file which is located in the
 Webots distribution.
 
 ![Pioneer 3-AT motor names](png/pioneer3at_wheels.png)
+
 **Pioneer 3-AT motor names**
 
 The "pioneer3at.wbt" world file is a simulation example of a simple obstacle
@@ -53,6 +56,7 @@ to manage the rotation of the wheels. The sonar sensors are numbered according
 to .
 
 ![Sonar sensors positions](png/pioneer3at_sonars.png)
+
 **Sonar sensors positions**
 
 The angle between two consecutive sensor directions is 20 degrees except for the
@@ -66,6 +70,7 @@ Pioneer 3-DX robot. ().
 #### Overview of the robot
 
 ![Pioneer 3-DX, an all-purpose base, used for research and applications](png/pioneer3dx_real.png)
+
 **Pioneer 3-DX, an all-purpose base, used for research and applications**
 
 The base Pioneer 3-DX platform is assembled with motors featuring 500-tick
@@ -94,6 +99,7 @@ Adept Mobile Robots official `webpage`.
 #### Simulation model
 
 ![The Pioneer 3-DX model in Webots](png/pioneer3dx.png)
+
 **The Pioneer 3-DX model in Webots**
 
 The Pioneer 3-DX model in Webots is depicted in . This model includes support
@@ -105,6 +111,7 @@ which is located in the
 Webots distribution.
 
 ![Pioneer 3-DX motor names](png/pioneer3dx_servos.png)
+
 **Pioneer 3-DX motor names**
 
 The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg

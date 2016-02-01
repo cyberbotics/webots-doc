@@ -15,6 +15,7 @@ If `radius` is positive, the outside faces of the sphere are displayed while if
 it is negative, the inside faces are displayed.
 
 ![Sphere node](png/sphere.png)
+
 **Sphere node**
 
 The `subdivision` field controls the number of faces of the rendered sphere.

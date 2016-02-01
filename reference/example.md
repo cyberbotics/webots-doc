@@ -137,5 +137,6 @@ used to add additional devices to a base robot without needing to copy the robot
 definition or creating a new PROTO.
 
 ![Two instances of the TwoColorChair PROTO in Webots](png/two_chairs_v7-2-0.png)
+
 **Two instances of the TwoColorChair PROTO in Webots**
 

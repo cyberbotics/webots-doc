@@ -42,6 +42,9 @@ The `near` and the `fieldOfView` fields define together the viewing frustum. Any
 The `follow` field can be used to specify the name of a robot (or other object)
 that the viewpoint needs to follow during the simulation. If the string is
 empty, or if it does not correspond to any object, then the viewpoint will
-remain fixed. The `follow` field is modified by the `View > Follow Object` menu
-item.
+remain fixed. The `follow` field is automatically updated when setting the solid
+to be followed from the `View > Follow Object` menu item. If multiple solid
+instances with the same name exist, the instance to be followed is identified by
+adding the instance number to the `follow` field value using the format
+"`ltnamegt:ltnumbergt`".
 

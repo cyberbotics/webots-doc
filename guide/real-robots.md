@@ -8,6 +8,7 @@ and the corresponding controllers are located in the
 ### aibo_ers210_rough.wbt
 
 ![aibo_ers210_rough.wbt](png/aibo_ers210_rough.png)
+
 **aibo_ers210_rough.wbt**
 
 In this example, you can see a silver Aibo ERS-210 robot walking on an uneven
@@ -17,6 +18,7 @@ a `IndexedFaceSet`.
 ### aibo_ers7.wbt
 
 ![aibo_ers7.wbt](png/aibo_ers7.png)
+
 **aibo_ers7.wbt**
 
 In this example, you can see a silver Aibo ERS-7 robot walking on a textured
@@ -26,6 +28,7 @@ bone.
 ### alice.wbt
 
 ![alice.wbt](png/alice.png)
+
 **alice.wbt**
 
 In this example, you can see an Alice robot moving inside an arena while
@@ -35,6 +38,7 @@ many others, this example uses the `braitenberg` controller.
 ### boebot.wbt
 
 ![boebot.wbt](png/boebot.png)
+
 **boebot.wbt**
 
 In this example, BoeBot moves inside an arena while avoiding the walls. When the
@@ -44,6 +48,7 @@ corresponding `LED` on.
 ### e-puck.wbt
 
 ![e-puck.wbt](png/e-puck.png)
+
 **e-puck.wbt**
 
 In this example, you can see the e-puck robot avoiding obstacles inside an arena
@@ -56,6 +61,7 @@ this controller is in the
 ### e-puck_line.wbt
 
 ![e-puck_line.wbt](png/e-puck_line.png)
+
 **e-puck_line.wbt**
 
 In this example, you can see the E-puck robot following a black line drawn on
@@ -69,6 +75,7 @@ code for this controller is in the "e-puck_line" directory.
 ### e-puck_line_demo.wbt
 
 ![e-puck_line_demo.wbt](png/e-puck_line_demo.png)
+
 **e-puck_line_demo.wbt**
 
 This example is the solution for the assignment given in the
@@ -80,6 +87,7 @@ distributed.
 ### hemisson_cross_compilation.wbt
 
 ![hemisson_cross_compilation.wbt](png/hemisson_cross_compilation.png)
+
 **hemisson_cross_compilation.wbt**
 
 In this example, a Hemisson robot moves on a white floor while avoiding the
@@ -90,6 +98,7 @@ this controller is in the "hemisson" directory.
 ### hoap2_sumo.wbt
 
 ![hoap2_sumo.wbt](png/hoap2_sumo.png)
+
 **hoap2_sumo.wbt**
 
 In this example, a Hoap2 robot from Fujitsu performs the Shiko dance (the dance
@@ -100,6 +109,7 @@ on the ground. The source code for this controller is in the "hoap2" directory.
 ### hoap2_walk.wbt
 
 ![hoap2_walk.wbt](png/hoap2_walk.png)
+
 **hoap2_walk.wbt**
 
 In this example, a Hoap2 robot from Fujitsu walks straight forward on a tatami.
@@ -110,6 +120,7 @@ this controller is in the "hoap2" directory.
 ### ipr_collaboration.wbt
 
 ![ipr_collaboration.wbt](png/ipr_collaboration.png)
+
 **ipr_collaboration.wbt**
 
 In this example, two IPR robots from Neuronics work together to put three red
@@ -122,6 +133,7 @@ for this client is in the "ipr_serial/client/ipr_collaboration.c" file.
 ### ipr_cube.wbt
 
 ![ipr_cube.wbt](png/ipr_cube.png)
+
 **ipr_cube.wbt**
 
 In this example, an IPR robots from Neuronics moves a small red cube onto a
@@ -133,6 +145,7 @@ the movements of the robot. The source code of this client is in the
 ### ipr_factory.wbt
 
 ![ipr_factory.wbt](png/ipr_factory.png)
+
 **ipr_factory.wbt**
 
 In this example, two IPR robots from Neuronics take industrial parts from a
@@ -146,6 +159,7 @@ movements of the robots. The source code for this client is in the file
 ### ipr_models.wbt
 
 ![ipr_models.wbt](png/ipr_models.png)
+
 **ipr_models.wbt**
 
 In this example, you can see all the different types of IPR model provided by
@@ -157,6 +171,7 @@ All the IPR robots use the same controller, whose source code is in the
 ### khepera.wbt
 
 ![khepera.wbt](png/khepera.png)
+
 **khepera.wbt**
 
 In this example, you can see a Khepera robot from K-Team moving inside an arena
@@ -167,6 +182,7 @@ while avoiding the walls. Like many other examples, this one uses the
 ### khepera2.wbt
 
 ![khepera2.wbt](png/khepera2.png)
+
 **khepera2.wbt**
 
 In this example, you can see a Khepera II robot from K-Team moving inside an
@@ -177,6 +193,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 ### khepera3.wbt
 
 ![khepera3.wbt](png/khepera3.png)
+
 **khepera3.wbt**
 
 In this example, you can see a Khepera III robot from K-Team moving inside an
@@ -187,6 +204,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 ### khepera_kinematic.wbt
 
 ![khepera_kinematic.wbt](png/khepera_kinematic.png)
+
 **khepera_kinematic.wbt**
 
 In this example, you can see two Khepera robots from K-Team moving inside an
@@ -198,6 +216,7 @@ use teh kinematic mode of Webots. Like many other examples, this one uses the
 ### khepera_gripper.wbt
 
 ![khepera_gripper.wbt](png/khepera_gripper.png)
+
 **khepera_gripper.wbt**
 
 In this example, you can see a Khepera robot from K-Team equipped with a
@@ -208,6 +227,7 @@ controller is in the "khepera_gripper" directory.
 ### khepera_gripper_camera.wbt
 
 ![khepera_gripper_camera.wbt](png/khepera_gripper_camera.png)
+
 **khepera_gripper_camera.wbt**
 
 In this example, you can see a Khepera robot from K-Team equipped with a gripper
@@ -219,6 +239,7 @@ source code for this controller is in the "khepera_gripper" directory.
 ### khepera_k213.wbt
 
 ![khepera_k213.wbt](png/khepera_k213.png)
+
 **khepera_k213.wbt**
 
 In this example, you can see a Khepera robot from K-Team equipped with a K213
@@ -233,6 +254,7 @@ directory.
 ### khepera_pipe.wbt
 
 ![khepera_pipe.wbt](png/khepera_pipe.png)
+
 **khepera_pipe.wbt**
 
 In this example, you can see a Khepera robot from K-Team inside an arena. The
@@ -246,6 +268,7 @@ controller and for the client program are in the "pipe" directory.
 ### khepera_tcpip.wbt
 
 ![khepera_tcpip.wbt](png/khepera_tcpip.png)
+
 **khepera_tcpip.wbt**
 
 In this example, you can see a Khepera robot from K-Team inside an arena. The
@@ -260,6 +283,7 @@ directory.
 ### koala.wbt
 
 ![koala.wbt](png/koala.png)
+
 **koala.wbt**
 
 In this example, you can see a Koala robot from K-Team moving inside an arena
@@ -270,6 +294,7 @@ while avoiding the walls. Like many other examples, this one uses the
 ### magellan.wbt
 
 ![magellan.wbt](png/magellan.png)
+
 **magellan.wbt**
 
 In this example, you can see a Magellan robot moving inside an arena while
@@ -281,6 +306,7 @@ the "others/worlds" directory. Like many other examples, this one uses the
 ### pioneer2.wbt
 
 ![pioneer2.wbt](png/pioneer2.png)
+
 **pioneer2.wbt**
 
 In this example, you can see a Pioneer 2 robot from ActivMedia Robotics moving
@@ -291,6 +317,7 @@ uses the `braitenberg` controller. The source code for this controller is in the
 ### rover.wbt
 
 ![rover.wbt](png/rover_world.png)
+
 **rover.wbt**
 
 In this example you can see the Mindstorms Rover robot from LEGO following a
@@ -305,6 +332,7 @@ directory.
 ### scout2.wbt
 
 ![scout2.wbt](png/scout2.png)
+
 **scout2.wbt**
 
 In this example, a Scout 2 robot moves inside an arena while avoiding the walls.
@@ -315,6 +343,7 @@ in the "WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
 ### shrimp.wbt
 
 ![shrimp.wbt](png/shrimp.png)
+
 **shrimp.wbt**
 
 This example contains a model of the *Shrimp* robot, which is a mobile platform
@@ -337,6 +366,7 @@ the ODE plugin is in the
 ### bioloid.wbt
 
 ![bioloid.wbt](png/bioloid.png)
+
 **bioloid.wbt**
 
 In this example, the four-legged robot model ( (a)) corresponds to a real

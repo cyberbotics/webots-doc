@@ -79,5 +79,6 @@ IndexedFaceSet {
 ```
 
 ![A simple IndexedFaceSet example](png/indexed_face_set.png)
+
 **A simple IndexedFaceSet example**
 

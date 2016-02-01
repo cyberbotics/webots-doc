@@ -10,6 +10,7 @@ according to the behaviour they exemplify.
 ### binocular.wbt
 
 ![binocular.wbt](png/binocular.png)
+
 **binocular.wbt**
 
 This example simply shows how to equip a robot with two `Camera`s for
@@ -19,6 +20,7 @@ computer vision.
 ### biped.wbt
 
 ![biped.wbt](png/biped.png)
+
 **biped.wbt**
 
 In this example, a biped robot stands up while his head rotates. After a few
@@ -29,6 +31,7 @@ motor power.
 ### force_control.wbt
 
 ![force_control.wbt](png/force_control.png)
+
 **force_control.wbt**
 
 This world shows two boxes connected by a `LinearMotor`. Here, the purpose is to
@@ -43,6 +46,7 @@ controller.
 ### inverted_pendulum.wbt
 
 ![inverted_pendulum.wbt](png/inverted_pendulum.png)
+
 **inverted_pendulum.wbt**
 
 In this example, a robot moves from left to right in order to keep an inverted
@@ -53,6 +57,7 @@ controller.
 ### physics.wbt
 
 ![physics.wbt](png/physics.png)
+
 **physics.wbt**
 
 In this example, a robot flies using a physics plugin. This plugins is an
@@ -61,6 +66,7 @@ example of:
 ### supervisor.wbt
 
 ![supervisor.wbt](png/supervisor.png)
+
 **supervisor.wbt**
 
 This shows a simple soccer game with six robots and a referee. The `Supervisor`
@@ -73,6 +79,7 @@ score, places the players to their initial position when a goal is scored, etc.
 ### texture_change.wbt
 
 ![texture_change.wbt](png/texture_change.png)
+
 **texture_change.wbt**
 
 In this example, a robot moves forward and backward in front of a large textured
@@ -82,6 +89,7 @@ switches the image displayed on the panel.
 ### town.wbt
 
 ![town.wbt](png/town.png)
+
 **town.wbt**
 
 This example shows a complex city model built with various `Transform` nodes.

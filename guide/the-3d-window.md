@@ -37,9 +37,11 @@ displayed instead of translation and rotation handles. These resize handles can
 also be enabled from the Field Editor.
 
 ![Axis-aligned handles to move solid objects](png/manipulators.png)
+
 **Axis-aligned handles to move solid objects**
 
 ![Labels displaying relative translation and rotation when moving objects with handles](png/manipulators_label.png)
+
 **Labels displaying relative translation and rotation when moving objects with handles**
 
 #### Translation using keyboard shurtcuts
@@ -81,9 +83,11 @@ hide the overlay images from the `Camera Devices` and `Display Devices` items in
 `Robot` menu.
 
 ![Camera and Display overlays](png/overlay.png)
+
 **Camera and Display overlays**
 
 ![Camera overlay resizing](png/overlay_resize.png)
+
 **Camera overlay resizing**
 
 ### Show Camera and Display images in separate window
@@ -95,5 +99,6 @@ disabled. It is possible to restore the 3D window overlay simply by closing the
 window.
 
 ![Camera and Display image window](png/rendering_device_window.png)
+
 **Camera and Display image window**
 

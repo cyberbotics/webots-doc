@@ -16,6 +16,7 @@ Propeller {
 ### Description
 
 ![Propeller](pdf/propeller.pdf)
+
 **Propeller**
 
 The `Propeller` node can be used to model a marine or an aircraft propeller.

@@ -42,6 +42,7 @@ description of the Webots GUI is provided in .
     The virtual time counter and the speedometer are displayed in the right part of the 3D view toolbar.
     The status text is displayed in the bottom left of the main window.
    ](png/tutorial_gui.png)
+
 **
     The Webots main window splits into four dockable subwindows:
     the scene tree view on the left hand side (including a panel at the bottom for editing fields values),

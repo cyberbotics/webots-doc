@@ -20,9 +20,11 @@ left edge of the image corresponds to the *t*-axis of the texture map. The
 lower-left pixel of the image corresponds to *s=0, t=0*, and the top-right pixel
 of the image corresponds to *s=1, t=1*. These relationships are depicted below.
 
+<center>
 ![Texture map coordinate system](png/image_texture.png)
 
-**Texture map coordinate system**
+####Texture map coordinate system
+</center>
 
 The texture is read from the file specified by the `url` field. The file should
 be specified with a relative path (cf. ). Absolute paths work as well, but they

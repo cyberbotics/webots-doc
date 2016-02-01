@@ -30,9 +30,11 @@ The `subdivision` field defines the number of polygons used to represent the
 cone and so its resolution. More precisely, it corresponds to the number of
 lines used to represent the bottom of the cone.
 
+<center>
 ![The Cone node](png/cone.png)
 
-**The Cone node**
+####The Cone node
+</center>
 
 When a texture is applied to the sides of the cone, the texture wraps
 counterclockwise (from above) starting at the back of the cone. The texture has

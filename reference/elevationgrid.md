@@ -31,9 +31,11 @@ or the `zDimension` is less than two, the `ElevationGrid` contains no
 quadrilaterals. The vertex locations for the quadrilaterals are defined by the
 `height` field and the `xSpacing` and `zSpacing` fields:
 
+<center>
 ![ElevationGrid node](png/elevation_grid.png)
 
-**ElevationGrid node**
+####ElevationGrid node
+</center>
 
 Thus, the vertex corresponding to the point P[i,j] on the grid is placed at:
 

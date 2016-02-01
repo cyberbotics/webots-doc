@@ -15,9 +15,11 @@ Propeller {
 
 ### Description
 
+<center>
 ![Propeller](pdf/propeller.pdf)
 
-**Propeller**
+####Propeller
+</center>
 
 The `Propeller` node can be used to model a marine or an aircraft propeller.
 When its `device` field is set with a `RotationalMotor`, the propeller turns the

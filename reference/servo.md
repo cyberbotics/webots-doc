@@ -56,17 +56,21 @@ In a "rotational" `Servo`, these fields have the following meaning: The
 `translation` field specifies the translation of the axis of rotation. The
 `rotation` field specifies the orientation of the axis of rotation. See .
 
+<center>
 ![Rotational servo](pdf/rotational_servo.pdf)
 
-**Rotational servo**
+####Rotational servo
+</center>
 
 In a "linear" `Servo`, these fields have the following meaning: The
 `translation` field specifies the translation of the sliding axis. The
 `rotation` field specifies the direction of the sliding axis. See .
 
+<center>
 ![Linear servo](pdf/linear_servo.pdf)
 
-**Linear servo**
+####Linear servo
+</center>
 
 The `position` field represents the current angle difference (in radians) or the
 current distance (in meters) with respect to the initial `translation` and
@@ -93,9 +97,11 @@ is performed by the servo P-controller (2) that computes the current velocity of
 the servo `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
 
+<center>
 ![Servo control](pdf/servo_control.pdf)
 
-**Servo control**
+####Servo control
+</center>
 
 At each simulation step, the P-controller (2) recomputes the current velocity
 *Vc* according to the following algorithm: `Vc = P * (Pt - Pc); if (abs(Vc) >
@@ -211,9 +217,11 @@ This damping torque/force is proportional to the effective servo velocity: `F =
 -Bv`, where `B` is the damping constant, and `v = dx/dt` is the effective servo
 velocity computed by the physics simulator.
 
+<center>
 ![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf)
 
-**Mechanical Diagram of a Servo**
+####Mechanical Diagram of a Servo
+</center>
 
 As you can see in (see  ), a `Servo` creates a joint between two masses `m` and
 `m`. `m` is defined by the `Physics` node in the parent of the `Servo`. The mass
@@ -265,9 +273,11 @@ example, the parent `Servo` will have a motor force (maxForce gt 0) and the
 child `Servo` will have spring and damping forces (`springConstant` gt 0 and
 `dampingConstant` gt 0).
 
+<center>
 ![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf)
 
-**Example of serial connection of two Servo nodes**
+####Example of serial connection of two Servo nodes
+</center>
 
 This is equivalent to this ".wbt" code, where, as you can notice, *Servo2* is a
 child of *Servo1*:

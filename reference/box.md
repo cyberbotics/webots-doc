@@ -17,9 +17,11 @@ The `size` field specifies the extents of the box along the *x*-, *y*-, and
 *z*-axes respectively. See . Three positive values display the outside faces
 while three negative values display the inside faces.
 
+<center>
 ![Box node](png/box.png)
 
-**Box node**
+####Box node
+</center>
 
 Textures are applied individually to each face of the box. On the front (+*z*),
 back (-*z*), right (+*x*), and left (-*x*) faces of the box, when viewed from

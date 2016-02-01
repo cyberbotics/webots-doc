@@ -38,9 +38,11 @@ represent the capsule and so its resolution. More precisely, it corresponds to
 the number of faces that compose the capsule's side. This field has no effect on
 collision detection.
 
+<center>
 ![The Capsule node](png/capsule.png)
 
-**The Capsule node**
+####The Capsule node
+</center>
 
 When a texture is mapped to a capsule, the texture map is vertically divided in
 three equally sized parts (e.g., like the German flag). The top part is mapped

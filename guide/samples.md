@@ -10,9 +10,11 @@ demo, the world file and its corresponding controller have the same name.
 
 ### blimp_lis.wbt
 
+<center>
 ![blimp_lis.wbt](png/blimp_lis.png)
 
-**blimp_lis.wbt**
+####blimp_lis.wbt
+</center>
 
 This is an example of the flying blimp robot developed at the Laboratory of
 Intelligent Systems (LIS) at EPFL. You can use your keyboard, or a joystick to
@@ -23,9 +25,11 @@ plugin* is used to add thrust and other forces to the simulation.
 
 ### gantry.wbt
 
+<center>
 ![gantry.wbt](png/gantry.png)
 
-**gantry.wbt**
+####gantry.wbt
+</center>
 
 In this example, a gantry robot plays "Towers of Hanoi" by stacking three
 colored boxes. The gantry robot is modeled using a combination of `LinearMotor`
@@ -34,9 +38,11 @@ Towers problem.
 
 ### hexapod.wbt
 
+<center>
 ![hexapod.wbt](png/hexapod.png)
 
-**hexapod.wbt**
+####hexapod.wbt
+</center>
 
 In this example, an insect-shaped robot is made of a combination of
 `LinearMotor` and `RotationalMotor` devices. The robot moves using an
@@ -44,17 +50,21 @@ alternating tripod gait.
 
 ### humanoid.wbt
 
+<center>
 ![humanoid.wbt](png/humanoid.png)
 
-**humanoid.wbt**
+####humanoid.wbt
+</center>
 
 In this example, a humanoid robot performs endless gymnastic movements.
 
 ### moon.wbt
 
+<center>
 ![moon.wbt](png/moon.png)
 
-**moon.wbt**
+####moon.wbt
+</center>
 
 In this example, two Koala robots (K-Team) circle on a moon-like surface. You
 can modify their trajectories with the arrow keys on your keyboard. The moon-
@@ -63,9 +73,11 @@ controller code.
 
 ### ghostdog.wbt
 
+<center>
 ![ghostdog.wbt](png/ghostdog.png)
 
-**ghostdog.wbt**
+####ghostdog.wbt
+</center>
 
 This example shows a galloping quadruped robot made of active hip joints and
 passive knee joints (using spring and dampers). The keyboard can be used to
@@ -77,9 +89,11 @@ could be used for controlling the knee joints.
 
 ### salamander.wbt
 
+<center>
 ![salamander.wbt](png/salamander.png)
 
-**salamander.wbt**
+####salamander.wbt
+</center>
 
 A salamander-shaped robot walks down a slope and reaches a pool where it starts
 to swim. The controller uses two different types of locomotion: it walks on the
@@ -90,9 +104,11 @@ principle.
 
 ### soccer.wbt
 
+<center>
 ![soccer.wbt](png/soccer_world.png)
 
-**soccer.wbt**
+####soccer.wbt
+</center>
 
 In this example, two teams of simple `DifferentialWheels` robots play soccer. A
 `Supervisor` is used as the referee; it counts the goals and displays the
@@ -101,9 +117,11 @@ current score and the remaining time in the 3D view. This example shows how a
 
 ### sojourner.wbt
 
+<center>
 ![sojourner.wbt](png/sojourner.png)
 
-**sojourner.wbt**
+####sojourner.wbt
+</center>
 
 This is a realistic model of the "Sojourner" Mars exploration robot (NASA). A
 large obstacle is placed in front of the robot so that it is possible to observe
@@ -112,9 +130,11 @@ robot's motion.
 
 ### yamor.wbt
 
+<center>
 ![yamor.wbt](png/yamor.png)
 
-**yamor.wbt**
+####yamor.wbt
+</center>
 
 In this example, eight "Yamor" robot modules attach and detach to and from each
 other using `Connector` devices. Connector devices are used to simulate the
@@ -125,9 +145,11 @@ module behaviour is chosen according to the name of the module.
 
 ### stewart_platform.wbt
 
+<center>
 ![stewart_platform.wbt](png/stewart_platform.png)
 
-**stewart_platform.wbt**
+####stewart_platform.wbt
+</center>
 
 This is an example of a *Stewart platform*. A Stewart platform is a kind of
 parallel manipulator that uses an octahedral assembly of linear actuators. It

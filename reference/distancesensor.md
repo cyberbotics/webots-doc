@@ -66,9 +66,11 @@ the angle of incidence is greater than 22.5 degrees (pi/8 radians). In other
 words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see ).
 
+<center>
 ![Sonar sensor](pdf/sonar_reflection.pdf)
 
-**Sonar sensor**
+####Sonar sensor
+</center>
 
 ### Line Following Behavior
 

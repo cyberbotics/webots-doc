@@ -36,13 +36,17 @@ If the Control key (Ctrl), the handles for resizing the solid object will be
 displayed instead of translation and rotation handles. These resize handles can
 also be enabled from the Field Editor.
 
+<center>
 ![Axis-aligned handles to move solid objects](png/manipulators.png)
 
-**Axis-aligned handles to move solid objects**
+####Axis-aligned handles to move solid objects
+</center>
 
+<center>
 ![Labels displaying relative translation and rotation when moving objects with handles](png/manipulators_label.png)
 
-**Labels displaying relative translation and rotation when moving objects with handles**
+####Labels displaying relative translation and rotation when moving objects with handles
+</center>
 
 #### Translation using keyboard shurtcuts
 
@@ -82,13 +86,17 @@ to hide the overlay. Once the robot is selected, it is also possible to show or
 hide the overlay images from the `Camera Devices` and `Display Devices` items in
 `Robot` menu.
 
+<center>
 ![Camera and Display overlays](png/overlay.png)
 
-**Camera and Display overlays**
+####Camera and Display overlays
+</center>
 
+<center>
 ![Camera overlay resizing](png/overlay_resize.png)
 
-**Camera overlay resizing**
+####Camera overlay resizing
+</center>
 
 ### Show Camera and Display images in separate window
 
@@ -98,7 +106,9 @@ displaying the device image is created and the overlay in the 3D window is
 disabled. It is possible to restore the 3D window overlay simply by closing the
 window.
 
+<center>
 ![Camera and Display image window](png/rendering_device_window.png)
 
-**Camera and Display image window**
+####Camera and Display image window
+</center>
 

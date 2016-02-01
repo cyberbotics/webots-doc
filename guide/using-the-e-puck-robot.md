@@ -10,9 +10,11 @@ E-puck is also available for purchase from Cyberbotics Ltd.
 
 ### Overview of the robot
 
+<center>
 ![The e-puck robot at work](png/e-puck_real.png)
 
-**The e-puck robot at work**
+####The e-puck robot at work
+</center>
 
 E-puck was designed to fulfill the following requirements:
 
@@ -41,9 +43,11 @@ Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
 
 ### Simulation model
 
+<center>
 ![The e-puck model in Webots](png/e-puck.png)
 
-**The e-puck model in Webots**
+####The e-puck model in Webots
+</center>
 
 The e-puck model in Webots is depicted in . This model includes support for the
 differential wheel motors (encoders are also simulated), the infra-red sensors
@@ -109,9 +113,11 @@ mode, so their direction coincide. Proximity sensors responses are simulated in
 accordance with the lookup table in ; this table is the outcome of calibration
 performed on the real robot.
 
+<center>
 ![Proximity sensor response against distance](png/e-puck_distance_sensor_lookup_table.png)
 
-**Proximity sensor response against distance**
+####Proximity sensor response against distance
+</center>
 
 The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 rectangular image with a 4:3 ratio which can be obtained from the remote control
@@ -125,9 +131,11 @@ specifications in it. The two PROTO fields `groundSensorSlot` and `turretSlot`
 have been included in the simulation model in order to support extension
 modules.
 
+<center>
 ![Sensors, LEDs and camera](png/e-puck_sensors_and_leds.png)
 
-**Sensors, LEDs and camera**
+####Sensors, LEDs and camera
+</center>
 
 Several simulation examples are located in the
 "WEBOTS_MODULES_PATH/projects/robots/e-puck/worlds" directory of the Webots
@@ -148,9 +156,11 @@ following behavior afterwards. This model was contributed by Jean-Christophe
 Zufferey from the EPFL, who sets up a series of exercises with Webots and
 extended e-puck robots.
 
+<center>
 ![An e-puck extension for line following](png/e-puck_line.png)
 
-**An e-puck extension for line following**
+####An e-puck extension for line following
+</center>
 
 The directory "WEBOTS_MODULES_PATH/projects/samples/curriculum" contains a rich
 collection of simulations involving the e-puck robot. You will find inside it
@@ -168,9 +178,11 @@ so that we can improve these models using your contribution.
 
 #### Control window
 
+<center>
 ![The e-puck control window for simulation](png/e-puck_control.png)
 
-**The e-puck control window for simulation**
+####The e-puck control window for simulation
+</center>
 
 When opening a world containing an e-puck robot, Webots displays the e-puck
 control window (which also appears when you double-click on the e-puck robot).
@@ -224,9 +236,11 @@ world file.
 The BotStudio windows appears when the e-puck's controller points on a *.bsg*
 file.
 
+<center>
 ![BotStudio](png/e-puck_botstudio.png)
 
-**BotStudio**
+####BotStudio
+</center>
 
 #### Bluetooth setup
 

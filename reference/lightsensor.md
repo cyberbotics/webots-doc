@@ -43,9 +43,11 @@ colors into account.
 Before being interpolated by the `lookupTable`, the total irradiance `E` [W/m^2]
 seen by a sensor is computed according to the equation shown in :
 
+<center>
 ![Light sensor irradiance formula](pdf/light_intensity.pdf)
 
-**Light sensor irradiance formula**
+####Light sensor irradiance formula
+</center>
 
 The `F` vector corresponds to the sensor's `colorFilter` field, `n` is the total
 number of lights in the simulation, `on[i]` corresponds to the `on` field of
@@ -53,27 +55,33 @@ light `i` (TRUE=1, FALSE=0), the `C[i]` vector is the `color` field of light
 `i`, and `I` is the `ambientIntensity` field of light `i`.  The value `att[i]`
 is the attenuation of light `i`, and is calculated as shown in .
 
+<center>
 ![Light attenuation](pdf/light_attenuation.pdf)
 
-**Light attenuation**
+####Light attenuation
+</center>
 
 Variables `a` and `a` correspond to the `attenuation` field of light `i`, and
 `d` is the distance between the sensor and the light. There is no attenuation
 for `DirectionalLight`s. `I` is the direct irradiance contributed by light `i`,
 and is calculated as shown in .
 
+<center>
 ![Direct irradiance](pdf/direct_light.pdf)
 
-**Direct irradiance**
+####Direct irradiance
+</center>
 
 Finally, `spot[i]` is a factor used only in case of a `SpotLight`, and that
 depends on its `cutOffAngle` and `beamWidth` fields, and is calculated as shown
 in , where the `alpha` angle corresponds to the angle between `-L` and the
 `direction` vector of the `SpotLight`.
 
+<center>
 ![SpotLight factor](pdf/spot_light.pdf)
 
-**SpotLight factor**
+####SpotLight factor
+</center>
 
 The value `I[i]` corresponds to the *intensity* field of light `i`, and `N` is
 the normal axis (*x*-axis) of the sensor (see ). In the case of a `PointLight`,
@@ -89,9 +97,11 @@ the closer the angle of incidence is to perpendicular, the more photons will
 actually hit the surface and excite the device. When a light source is parallel
 to (or behind) the semiconductor surface, no photons actually reach the surface.
 
+<center>
 ![The irradiance (E) depends on the angle (phi) between the ](pdf/light_sensor.pdf)
 
-**The irradiance (E) depends on the angle (phi) between the **
+####The irradiance (E) depends on the angle (phi) between the 
+</center>
 
 The "occlusion" condition is true if the light source is hidden by one or more
 obstacles. More precisely, "occlusion" is true if (1) the `occlusion` field of

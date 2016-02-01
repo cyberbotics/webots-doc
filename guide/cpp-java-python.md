@@ -14,9 +14,11 @@ The Java and Python APIs are automatically generated from the C++ API using
 SWIG. Therefore the class and method names, as well as the number of parameters
 and their types, are very similar in these three languages.
 
+<center>
 ![Webots APIs Overview](pdf/api_overview.pdf)
 
-**Webots APIs Overview**
+####Webots APIs Overview
+</center>
 
 The naming convention of the C++/Java/Python classes and methods directly
 matches the C API function names. For example, for this C function: `double
@@ -44,9 +46,11 @@ controllers. But it is not possible to call the `Supervisor` methods from a
 `DifferentialWheels` controller, and vice versa. For example it won't be
 possible to call `simulationRevert()` from a `DifferentialWheels` controller.
 
+<center>
 ![A small subset of Webots oriented-object APIs](pdf/oo_api.pdf)
 
-**A small subset of Webots oriented-object APIs**
+####A small subset of Webots oriented-object APIs
+</center>
 
 Generally, the user-defined controller class should have a `run()` function that
 implements the main controller loop. That loop should contains a call to the

@@ -7,9 +7,11 @@ Pioneer 3-AT robot. ().
 
 #### Overview of the robot
 
+<center>
 ![Pioneer 3-AT, a ready-to-use all terrain base](png/pioneer3at_real.png)
 
-**Pioneer 3-AT, a ready-to-use all terrain base**
+####Pioneer 3-AT, a ready-to-use all terrain base
+</center>
 
 The Pioneer 3-AT robot is an all-purpose outdoor base, used for research and
 prototyping applications involving mapping, navigation, monitoring,
@@ -30,9 +32,11 @@ Adept Mobile Robots official `webpage`.
 
 #### Simulation model
 
+<center>
 ![The Pioneer 3-AT model in Webots](png/pioneer3at.png)
 
-**The Pioneer 3-AT model in Webots**
+####The Pioneer 3-AT model in Webots
+</center>
 
 The Pioneer 3-AT model in Webots is depicted in . This model includes support
 for 4 motors and 16 sonar sensors (8 forward-facing, 8 rear-facing) for
@@ -41,9 +45,11 @@ the "pioneer3AT.wbt" file which is located in the
 "WEBOTS_MODULES_PATH/projects/robots/pioneer/pioneer3at/worlds" directory of the
 Webots distribution.
 
+<center>
 ![Pioneer 3-AT motor names](png/pioneer3at_wheels.png)
 
-**Pioneer 3-AT motor names**
+####Pioneer 3-AT motor names
+</center>
 
 The "pioneer3at.wbt" world file is a simulation example of a simple obstacle
 avoidance behavior based on the use of a SICK LIDAR (see the
@@ -55,9 +61,11 @@ The Pioneer 3-AT motors are RotationalMotor nodes named according to . The
 to manage the rotation of the wheels. The sonar sensors are numbered according
 to .
 
+<center>
 ![Sonar sensors positions](png/pioneer3at_sonars.png)
 
-**Sonar sensors positions**
+####Sonar sensors positions
+</center>
 
 The angle between two consecutive sensor directions is 20 degrees except for the
 four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
@@ -69,9 +77,11 @@ Pioneer 3-DX robot. ().
 
 #### Overview of the robot
 
+<center>
 ![Pioneer 3-DX, an all-purpose base, used for research and applications](png/pioneer3dx_real.png)
 
-**Pioneer 3-DX, an all-purpose base, used for research and applications**
+####Pioneer 3-DX, an all-purpose base, used for research and applications
+</center>
 
 The base Pioneer 3-DX platform is assembled with motors featuring 500-tick
 encoders, 19 cm wheels, tough aluminum body, 8 forward-facing ultrasonic (sonar)
@@ -98,9 +108,11 @@ Adept Mobile Robots official `webpage`.
 
 #### Simulation model
 
+<center>
 ![The Pioneer 3-DX model in Webots](png/pioneer3dx.png)
 
-**The Pioneer 3-DX model in Webots**
+####The Pioneer 3-DX model in Webots
+</center>
 
 The Pioneer 3-DX model in Webots is depicted in . This model includes support
 for two motors, the caster wheel, 7 LEDs on the control panel and 16 sonar
@@ -110,9 +122,11 @@ which is located in the
 "WEBOTS_MODULES_PATH/projects/robots/pioneer/pioneer3dx/worlds" directory of the
 Webots distribution.
 
+<center>
 ![Pioneer 3-DX motor names](png/pioneer3dx_servos.png)
 
-**Pioneer 3-DX motor names**
+####Pioneer 3-DX motor names
+</center>
 
 The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg
 avoidance algorithm based on the use of the 16 sonar sensors (see the

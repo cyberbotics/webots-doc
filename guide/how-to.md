@@ -9,9 +9,11 @@ according to the behaviour they exemplify.
 
 ### binocular.wbt
 
+<center>
 ![binocular.wbt](png/binocular.png)
 
-**binocular.wbt**
+####binocular.wbt
+</center>
 
 This example simply shows how to equip a robot with two `Camera`s for
 stereovision. The example does not actually perform stereovision or any form of
@@ -19,9 +21,11 @@ computer vision.
 
 ### biped.wbt
 
+<center>
 ![biped.wbt](png/biped.png)
 
-**biped.wbt**
+####biped.wbt
+</center>
 
 In this example, a biped robot stands up while his head rotates. After a few
 seconds, all the motors are turned off and the robot collapses. This example
@@ -30,9 +34,11 @@ motor power.
 
 ### force_control.wbt
 
+<center>
 ![force_control.wbt](png/force_control.png)
 
-**force_control.wbt**
+####force_control.wbt
+</center>
 
 This world shows two boxes connected by a `LinearMotor`. Here, the purpose is to
 demonstrate the usage of the `wb_motor_set_force()` function to control a
@@ -45,9 +51,11 @@ controller.
 
 ### inverted_pendulum.wbt
 
+<center>
 ![inverted_pendulum.wbt](png/inverted_pendulum.png)
 
-**inverted_pendulum.wbt**
+####inverted_pendulum.wbt
+</center>
 
 In this example, a robot moves from left to right in order to keep an inverted
 pendulum upright. This is known as the "Inverted Pendulum Problem", and it is
@@ -56,18 +64,22 @@ controller.
 
 ### physics.wbt
 
+<center>
 ![physics.wbt](png/physics.png)
 
-**physics.wbt**
+####physics.wbt
+</center>
 
 In this example, a robot flies using a physics plugin. This plugins is an
 example of:
 
 ### supervisor.wbt
 
+<center>
 ![supervisor.wbt](png/supervisor.png)
 
-**supervisor.wbt**
+####supervisor.wbt
+</center>
 
 This shows a simple soccer game with six robots and a referee. The `Supervisor`
 code demonstrates the usage of several `Supervisor` functions. For example, the
@@ -78,9 +90,11 @@ score, places the players to their initial position when a goal is scored, etc.
 
 ### texture_change.wbt
 
+<center>
 ![texture_change.wbt](png/texture_change.png)
 
-**texture_change.wbt**
+####texture_change.wbt
+</center>
 
 In this example, a robot moves forward and backward in front of a large textured
 panel. The robot watches the panel with its `Camera`. Meanwhile a `Supervisor`
@@ -88,9 +102,11 @@ switches the image displayed on the panel.
 
 ### town.wbt
 
+<center>
 ![town.wbt](png/town.png)
 
-**town.wbt**
+####town.wbt
+</center>
 
 This example shows a complex city model built with various `Transform` nodes.
 The model makes a intensive use of the `DEF` and `USE` VRML keywords.

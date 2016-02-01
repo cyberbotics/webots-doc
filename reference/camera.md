@@ -138,9 +138,11 @@ of `vFov/2`).
 
 ### Overlay Image
 
+<center>
 ![Camera overlay image](png/camera_overlay.png)
 
-**Camera overlay image**
+####Camera overlay image
+</center>
 
 The camera image is shown by default on top of the 3D window with a magenta
 border, see . The user can move this camera image at the desired position using

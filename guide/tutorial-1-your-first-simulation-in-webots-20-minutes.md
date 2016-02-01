@@ -6,13 +6,15 @@ predefined robot (e-puck) and a controller program that will make the robot move
 (see ). The objective of this tutorial is to familiarize yourself with the user
 interface and with the basic concepts of Webots.
 
+<center>
 ![
     What you should see at the end of the tutorial.
    ](png/tutorial_e-puck.png)
 
-**
+####
     What you should see at the end of the tutorial.
-   **
+   
+</center>
 
 ### Create a new World
 

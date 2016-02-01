@@ -55,9 +55,11 @@ setting the display's internal color to red before calling twice the
 
 ### Overlay Image
 
+<center>
 ![Display overlay image](png/display_overlay.png)
 
-**Display overlay image**
+####Display overlay image
+</center>
 
 The display image is shown by default on top of the 3D window with a cyan
 border, see . The user can move this display image at the desired position using

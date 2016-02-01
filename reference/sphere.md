@@ -14,9 +14,11 @@ system. The `radius` field specifies the radius of the sphere (see ).
 If `radius` is positive, the outside faces of the sphere are displayed while if
 it is negative, the inside faces are displayed.
 
+<center>
 ![Sphere node](png/sphere.png)
 
-**Sphere node**
+####Sphere node
+</center>
 
 The `subdivision` field controls the number of faces of the rendered sphere.
 Spheres are rendered as icosahedrons with 20 faces when the subdivision field is

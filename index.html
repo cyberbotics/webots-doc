@@ -51,7 +51,7 @@
               console.log("Raw content: " + result);
 
               // markdown to html
-              var converter = new showdown.Converter();
+              var converter = new showdown.Converter({tables: 'True'});
               document.getElementById("view").innerHTML = converter.makeHtml(result);
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) { 

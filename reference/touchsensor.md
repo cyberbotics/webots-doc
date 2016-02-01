@@ -59,13 +59,13 @@ coordinate system of the `TouchSensor`. The length of the vector reflects the
 magnitude of the force. The force vector must be read using the
 `wb_touch_sensor_get_values()` function.
 
-sensor type | "bumper" | "force" | "force-3d"
---- | --- | --- | ---
-boundingObject | required | required | required
-Physics node | not required | required | required
-lookupTable | ignored | used | used
-return value | 0 or 1 | scalar | vector
-API function | wb_touch_sensor_get_value() | wb_touch_sensor_get_value() | wb_touch_sensor_get_values()
+| sensor type | "bumper" | "force" | "force-3d" |
+| --- | --- | --- | --- |
+| boundingObject | required | required | required |
+| Physics node | not required | required | required |
+| lookupTable | ignored | used | used |
+| return value | 0 or 1 | scalar | vector |
+| API function | wb_touch_sensor_get_value() | wb_touch_sensor_get_value() | wb_touch_sensor_get_values() |
 
 #### Lookup Table
 

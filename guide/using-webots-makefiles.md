@@ -25,10 +25,10 @@ If a controller requires several C/C++ source files they need to be specified in
 the Makefile. The name of each source file must be listed, using one of these
 variables:
 
-Variable | Usage
---- | ---
-C_SOURCES | Specifies a list of .c sources files
-CXX_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files
+| Variable | Usage |
+| --- | --- |
+| C_SOURCES | Specifies a list of .c sources files |
+| CXX_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files |
 
 Every source file specified using these variables, will be added to the
 controller build. In addition dependency files will be automatically generated
@@ -49,11 +49,11 @@ then the list must contain either "my_controller.c, my_controller.cpp" or
 
 These two variables can be used to pass flags to the gcc compiler or linker.
 
-Variable | Usage
---- | ---
-CFLAGS | Specifies a list of flags that will be passed to the gcc/g++ compiler
-INCLUDE | Specifies a list of flags that will be passed to the gcc/g++ compiler
-LIBRARIES | Specifies a list of flags that will be passed to the linker
+| Variable | Usage |
+| --- | --- |
+| CFLAGS | Specifies a list of flags that will be passed to the gcc/g++ compiler |
+| INCLUDE | Specifies a list of flags that will be passed to the gcc/g++ compiler |
+| LIBRARIES | Specifies a list of flags that will be passed to the linker |
 
 #### Adding an External Library (C/C++)
 

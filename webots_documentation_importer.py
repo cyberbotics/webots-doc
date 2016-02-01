@@ -104,6 +104,9 @@ class BookParser:
                 outFile.write(line.strip() + '\n')
             outFile.write('\n')
         else:
+            text = text.replace('\n', ' ')
+            while '  ' in text:
+                text = text.replace('  ', ' ')
             outFile.write(text.strip())
 
     def parseProgramListing(self, node, outFile):
@@ -148,20 +151,22 @@ class BookParser:
             firstEntry = True
             for entryNode in rowNode.findall('entry'):
                 if firstEntry:
+                    outFile.write('| ')
                     firstEntry = False
                 else:
                     outFile.write(' | ')
                 self.parsePara(entryNode, outFile, False)
-            outFile.write('\n')
+            outFile.write(' |\n')
             if line == 1 and header:
                 firstEntry = True
                 for i in range(0, nCols):
                     if firstEntry:
+                        outFile.write('| ')
                         firstEntry = False
                     else:
                         outFile.write(' | ')
                     outFile.write('---')
-                outFile.write('\n')
+                outFile.write(' |\n')
 
         if not header and nCols == 1:
             outFile.write('```')

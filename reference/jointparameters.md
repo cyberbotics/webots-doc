@@ -29,9 +29,9 @@ the other joint parameters node, it has no anchor.
 Rotational joint units (`HingeJoint`, `Hinge2Joint`) are expressed in *radians*
 while linear joint units (`SliderJoint`) are expressed in *meters*. See :
 
- | Rotational | Linear
---- | --- | ---
-Position | rad (radians) | m (meters)
+|  | Rotational | Linear |
+| --- | --- | --- |
+| Position | rad (radians) | m (meters) |
 
 ### Initial Transformation and Position
 

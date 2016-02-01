@@ -39,12 +39,12 @@ hydraulic/pneumatic cylinder, a spring, or a damper.
 Rotational servos units are expressed in *radians* while linear servos units are
 expressed in *meters*. See :
 
- | Rotational | Linear
---- | --- | ---
-Position | rad (radians) | m (meters)
-Velocity | rad/s (radians / second) | m/s (meters / second)
-Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2)
-Torque/Force | N*m (Newtons * meters) | N (Newtons)
+|  | Rotational | Linear |
+| --- | --- | --- |
+| Position | rad (radians) | m (meters) |
+| Velocity | rad/s (radians / second) | m/s (meters / second) |
+| Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
+| Torque/Force | N*m (Newtons * meters) | N (Newtons) |
 
 ### Initial Transformation and Position
 
@@ -148,14 +148,14 @@ with `wb_servo_set_force()` is applied to the `Servo` continuously. Hence the
 `Servo` will infinitely accelerate its rotational or linear motion and
 eventually *explode* unless a functional force control algorithm is used.
 
- | position control | velocity control | force control
---- | --- | --- | --- | ---
-uses P-controller | yes | no | no
-wb_servo_set_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control
-wb_servo_set_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored
-wb_servo_set_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored
-wb_servo_set_motor_force() | specifies the available force | specifies the available force | specifies the max force
-wb_servo_set_force() | switches to force control | switches to force control | * specifies the desired force
+|  | position control | velocity control | force control |
+| --- | --- | --- | --- | --- |
+| uses P-controller | yes | no | no |
+| wb_servo_set_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
+| wb_servo_set_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
+| wb_servo_set_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
+| wb_servo_set_motor_force() | specifies the available force | specifies the available force | specifies the max force |
+| wb_servo_set_force() | switches to force control | switches to force control | * specifies the desired force |
 
 ### Servo Limits
 
@@ -238,15 +238,15 @@ parallel and can be switched on and off independently (by default only the motor
 force is on). For example, to turn off the motor force and obtain a passive
 `Servo`, you can set the `maxForce` field to zero.
 
-Force | motor force | spring force | damping force
---- | --- | --- | ---
-Turned on when: | maxForce gt 0 | springConstant gt 0 | dampingConstant gt 0
-Turned off when: | maxForce = 0 | springConstant = 0 | dampingConstant = 0
-regular motor (the default) | on | off | off
-regular spring amp damper | off | on | on
-damper (without spring) | off | off | on
-motor with friction | on | off | on
-spring without any friction | off | on | off
+| Force | motor force | spring force | damping force |
+| --- | --- | --- | --- |
+| Turned on when: | maxForce gt 0 | springConstant gt 0 | dampingConstant gt 0 |
+| Turned off when: | maxForce = 0 | springConstant = 0 | dampingConstant = 0 |
+| regular motor (the default) | on | off | off |
+| regular spring amp damper | off | on | on |
+| damper (without spring) | off | off | on |
+| motor with friction | on | off | on |
+| spring without any friction | off | on | off |
 
 To obtain a spring amp damper element, you can set `maxForce` to zero and
 `springConstant` and `dampingConstant` to non-zero values. A pure spring is

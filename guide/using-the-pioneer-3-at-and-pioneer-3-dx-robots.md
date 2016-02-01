@@ -18,14 +18,14 @@ prototyping applications involving mapping, navigation, monitoring,
 reconnaissance and other behaviors. It provides a ready-to-use set of devices
 listed in .
 
-Feature | Description
---- | ---
-Dimensions | 508 mm long, 497 mm large, 277 mm high
-Weight | 12 kg, operating playload of 12 kg on floor
-Batteries | 2-4 hours, up to 3 lead acid batteries of 7.2 Ah each, 12 V
-Microcontroller I/O | 32 digital inputs, 8 digital outputs, 8 analog inputs, 3 serial extension ports
-Skid steering drive | Turn radius: 0 cm, swing radius: 34 cm, max. traversable grade: 35%
-Speed | Max. forward/backward speed: 0.7 m/s; Rotation speed: 140 deg/s
+| Feature | Description |
+| --- | --- |
+| Dimensions | 508 mm long, 497 mm large, 277 mm high |
+| Weight | 12 kg, operating playload of 12 kg on floor |
+| Batteries | 2-4 hours, up to 3 lead acid batteries of 7.2 Ah each, 12 V |
+| Microcontroller I/O | 32 digital inputs, 8 digital outputs, 8 analog inputs, 3 serial extension ports |
+| Skid steering drive | Turn radius: 0 cm, swing radius: 34 cm, max. traversable grade: 35% |
+| Speed | Max. forward/backward speed: 0.7 m/s; Rotation speed: 140 deg/s |
 
 More information on the specifications and optional devices is available on
 Adept Mobile Robots official
@@ -95,14 +95,14 @@ applications involving mapping, teleoperation, localization, monitoring,
 reconnaissance and other behaviors. Pioneer 3-DX is provided with a ready-to-use
 set of devices listed in .
 
-Feature | Description
---- | ---
-Dimensions | 455 mm long, 381 mm large, 237 mm high
-Weight | 9 kg, operating playload of 17 kg
-Batteries | 8-10 hours, 3 lead acid batteries of 7.2 Ah each, 12 V
-Microcontroller I/O | 32 digital inputs, 8 digital outputs, 8 analog inputs, 3 serial extension ports
-Skid steering drive | Turn radius: 0 cm, swing radius: 26.7 cm, max. traversable grade: 25%
-Speed | Max. forward/backward speed: 1.2 m/s; Rotation speed: 300 deg/s
+| Feature | Description |
+| --- | --- |
+| Dimensions | 455 mm long, 381 mm large, 237 mm high |
+| Weight | 9 kg, operating playload of 17 kg |
+| Batteries | 8-10 hours, 3 lead acid batteries of 7.2 Ah each, 12 V |
+| Microcontroller I/O | 32 digital inputs, 8 digital outputs, 8 analog inputs, 3 serial extension ports |
+| Skid steering drive | Turn radius: 0 cm, swing radius: 26.7 cm, max. traversable grade: 25% |
+| Speed | Max. forward/backward speed: 1.2 m/s; Rotation speed: 300 deg/s |
 
 More information on the specifications and optional devices is available on
 Adept Mobile Robots official

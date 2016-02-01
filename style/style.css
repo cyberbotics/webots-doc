@@ -58,6 +58,9 @@ p {
   margin-left:10px;
   text-align:justify;
 }
+img {
+  max-width: 90%;
+}
 @font-face {
 	font-family:"Raleway";
 	font-style:normal;

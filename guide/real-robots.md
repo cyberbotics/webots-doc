@@ -405,13 +405,13 @@ in the "WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
 </center>
 
 This example contains a model of the *Shrimp* robot, which is a mobile platform
-for rough terrain from `Bluebotics`. It has 6 wheels and a passive structure
-which allows it to adapt to the terrain profile and climb obstacles. It can also
-turn on the spot. In this example the robot will first move on its own to the
-center of the world; then you may drive it yourself using the keyboard. To find
-out which keys will allow you to perform these operations, please read the
-explanation message printed at the beginning of the simulation in the Console
-window.
+for rough terrain from [Bluebotics](http://www.bluebotics.ch). It has 6 wheels
+and a passive structure which allows it to adapt to the terrain profile and
+climb obstacles. It can also turn on the spot. In this example the robot will
+first move on its own to the center of the world; then you may drive it yourself
+using the keyboard. To find out which keys will allow you to perform these
+operations, please read the explanation message printed at the beginning of the
+simulation in the Console window.
 
 Because of its particular structure, this model is also an example of custom ODE
 plugins for:
@@ -430,8 +430,9 @@ the ODE plugin is in the
 </center>
 
 In this example, the four-legged robot model ( (a)) corresponds to a real
-`Bioloid` robot ( (b)) developed by and commercially available from `Tribotix`.
-This dog-robot model was build from the Bioloid Comprehensive Kit.
+[Bioloid](http://www.robotis.com) robot ( (b)) developed by and commercially
+available from [Tribotix](http://www.tribotix.com). This dog-robot model was
+build from the Bioloid Comprehensive Kit.
 
 Both the visual aspect and the physical properties of the real robot have been
 modeled. The physical dimensions, friction coefficients and mass distribution
@@ -447,13 +448,14 @@ walking direction (forward or backwards) and also the heading direction (right
 or left). Keyboard actions include:
 
 The walking gait used in the controller relies on an inverse kinematics model.
-Further details are available from `BIRG web site`. The  included controller
-illustrates a trotting gait showing the best performance so far. The turning
-capabilities of the robot are based on the stride length modulation. When the
-robot is asked to turn right, the stride length of the right side and left side
-are respectively decreased and increased. During the walk, the extremity of each
-leg is describing an ellipsoid, the diameters of these ellipsoids are updated
-according to the stride length to allow the robot to turn either right or left.
+Further details are available from [BIRG web
+site](http://birg.epfl.ch/page66584.html). The  included controller illustrates
+a trotting gait showing the best performance so far. The turning capabilities of
+the robot are based on the stride length modulation. When the robot is asked to
+turn right, the stride length of the right side and left side are respectively
+decreased and increased. During the walk, the extremity of each leg is
+describing an ellipsoid, the diameters of these ellipsoids are updated according
+to the stride length to allow the robot to turn either right or left.
 
 Other keyboard actions are also provided to fine-tune the frequency and the
 stride length factor:

@@ -15,11 +15,13 @@ Webots may nevertheless work with other graphics adapters, in particular the
 Intel graphics adapters. However this is unsupported and may work or not,
 without any guarantee. Some users reported success with some Intel graphics
 cards after installing the latest version of the driver. Graphics drivers from
-Intel may be obtained from the `Intel download center web site`. Linux graphics
-drivers from Intel may be obtained from the `Intel Linux Graphics web site`. If
-some graphical bugs subsist, changing the "RTT prefered mode" from the Webots
-OpenGL Preferences from "Framebuffer Object" to "Pixelbuffer Object" or "Direct
-Copy" may fix the problems. However, this may also impact the 3D performance.
+Intel may be obtained from the [Intel download center web
+site](http://downloadcenter.intel.com). Linux graphics drivers from Intel may be
+obtained from the [Intel Linux Graphics web
+site](http://intellinuxgraphics.org). If some graphical bugs subsist, changing
+the "RTT prefered mode" from the Webots OpenGL Preferences from "Framebuffer
+Object" to "Pixelbuffer Object" or "Direct Copy" may fix the problems. However,
+this may also impact the 3D performance.
 
 ### Upgrading your graphics driver
 
@@ -50,9 +52,9 @@ lspci | grep VGA 01:00.0 VGA compatible controller: nVidia Corporation GeForce
 8500 GT (rev a1)`
 
 Then you can normally download the appropriate driver from the graphics hardware
-manufacturer's website: `http://www.nvidia.com` for an nVidia card or
-`http://www.amd.com` for a ATI graphics card. Please follow the manufacturer's
-instructions for the installation.
+manufacturer's website: [http://www.nvidia.com](http://www.nvidia.com) for an
+nVidia card or [http://www.amd.com](http://www.amd.com) for a ATI graphics card.
+Please follow the manufacturer's instructions for the installation.
 
 #### Windows
 

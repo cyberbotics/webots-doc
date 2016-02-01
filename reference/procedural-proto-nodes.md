@@ -7,15 +7,15 @@ and so on.
 
 ### Scripting language
 
-The used scripting language is `Lua`. Introducing and learning Lua is outside
-the scope of this document. Please refer to the `Lua documentation` for
-complementary information.
+The used scripting language is [Lua](http://www.lua.org). Introducing and
+learning Lua is outside the scope of this document. Please refer to the [Lua
+documentation](http://www.lua.org/docs.html) for complementary information.
 
 ### Template Engine
 
 A template engine is used to evaluate the PROTO according to the fields values
-of the PROTO, before being loaded in Webots. The template engine used is `slt2`
-(under the MIT license).
+of the PROTO, before being loaded in Webots. The template engine used is
+[slt2](https://github.com/henix/slt2) (under the MIT license).
 
 ### Programming Facts
 

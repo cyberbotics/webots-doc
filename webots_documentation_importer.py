@@ -82,14 +82,17 @@ class BookParser:
         if node.text:
             text += self.parseText(node.text)
         for child in node.getchildren():
-            if child.tag == 'bold' and child.text:
-                text += '**' + self.parseText(child.text) + '**'
-            elif child.tag == 'emphasis' and child.text:
-                text += '*' + self.parseText(child.text) + '*'
-            elif child.tag == 'filename' and child.text:
-                text += '"' + self.parseText(child.text) + '"'
-            elif child.text:
-                text += '`' + self.parseText(child.text) + '`'
+            if child.text:
+                if child.tag == 'bold':
+                    text += '**' + self.parseText(child.text) + '**'
+                elif child.tag == 'emphasis':
+                    text += '*' + self.parseText(child.text) + '*'
+                elif child.tag == 'filename':
+                    text += '"' + self.parseText(child.text) + '"'
+                elif child.tag == 'ulink':
+                    text += '[' + self.parseText(child.text) + '](' + child.attrib.get('url') + ')'
+                else:
+                    text += '`' + self.parseText(child.text) + '`'
             text += self.parseText(child.tail)
         text += self.parseText(node.tail)
 

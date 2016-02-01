@@ -68,7 +68,8 @@ corner of the 3D view. It shows the content of Camera nodes, but it will stay
 black until not explicitly used during a simulation. In order to hide it, you
 simply have to set the `pixelSize` equal to 0. Then, if you want to re-enable
 them, you have to set this field value to a positive number. Detailed
-definitions can be found in chapter 3 of the `Reference Manual`.
+definitions can be found in chapter 3 of the [Reference
+Manual](http://www.cyberbotics.com/reference/).
 
 ### Create a new Controller
 

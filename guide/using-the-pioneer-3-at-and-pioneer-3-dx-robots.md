@@ -28,7 +28,8 @@ Skid steering drive | Turn radius: 0 cm, swing radius: 34 cm, max. traversable g
 Speed | Max. forward/backward speed: 0.7 m/s; Rotation speed: 140 deg/s
 
 More information on the specifications and optional devices is available on
-Adept Mobile Robots official `webpage`.
+Adept Mobile Robots official
+[webpage](http://www.mobilerobots.com/ResearchRobots/ResearchRobots/P3AT.aspx).
 
 #### Simulation model
 
@@ -104,7 +105,8 @@ Skid steering drive | Turn radius: 0 cm, swing radius: 26.7 cm, max. traversable
 Speed | Max. forward/backward speed: 1.2 m/s; Rotation speed: 300 deg/s
 
 More information on the specifications and optional devices is available on
-Adept Mobile Robots official `webpage`.
+Adept Mobile Robots official
+[webpage](http://www.mobilerobots.com/ResearchRobots/PioneerP3DX.aspx).
 
 #### Simulation model
 

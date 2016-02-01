@@ -10,7 +10,8 @@ Thymio II is an affordable educational robot. It provides three main features: a
 large number of sensors and actuators, an educative interactivity based on light
 and touch, a programming environment featuring graphical and text programming.
 
-More information about the Thymio II is available from `its official website`.
+More information about the Thymio II is available from [its official
+website](https://aseba.wikidot.com/en:thymio).
 
 Webots contains an accurate model of the Thymio II robot (see the ). Almost all
 the Thymio II devices have been modeled and calibrated. Moreover Aseba studio
@@ -88,8 +89,9 @@ Thymio II window, just double click on the 3D model of the robot.
 
 You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to
 the `Thymio2::bodySlot` field. This pen can draw on every 3D object. This is
-particularily useful to perform `these exercises`. An example of this is located
-there (see the ):
+particularily useful to perform [these
+exercises](https://aseba.wikidot.com/en:thymiodrawing). An example of this is
+located there (see the ):
 "WEBOTS_MODULES_PATH/projects/robots/thymio/worlds/thymio2_pen.wbt"
 
 <center>
@@ -100,9 +102,10 @@ there (see the ):
 
 ### Thymio II Ball
 
-`These exercises` can be reproduced by adding a `Thymio2Ball` node in your
-world. The ball can be slightly moved by applying a force on it (`ALT + mouse
-left click`). An example of this is located there (see the ):
+[These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be
+reproduced by adding a `Thymio2Ball` node in your world. The ball can be
+slightly moved by applying a force on it (`ALT + mouse left click`). An example
+of this is located there (see the ):
 "WEBOTS_MODULES_PATH/projects/robots/thymio/worlds/thymio2_ball.wbt"
 
 <center>

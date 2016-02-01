@@ -100,7 +100,7 @@ The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file, using the X3DOM web standard, based on WebGL. This
 is especially useful for publishing Webots-created worlds on the Web. X3DOM is
 supported in recent versions of Firefox, Chrome, Internet Explorer and Safari on
-Mac OS X (see details on the `X3DOM web site`).
+Mac OS X (see details on the [X3DOM web site](http://www.x3dom.org)).
 
 The `Make HTML5 Animation...` item allows you to record a simulation as a 3D
 animation and publish it on a HTML5 web page. The result is similar to a movie

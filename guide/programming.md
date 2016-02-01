@@ -20,9 +20,10 @@ To get the position of a robot in the robot's controller code: add a `GPS` node
 to the robot, then use `wb_robot_get_device(), wb_gps_enable()` and
 `wb_gps_get_values()` functions. Note that the `GPS`'s resolution field must be
 0 (the default), otherwise the results will be noisy. You will find more info
-about the `GPS` node and functions in `Reference Manual`. Note that the `GPS`
-can also be placed on a robot's part (arm, foot, etc.) to get the world/global
-coordinates of that particular part.
+about the `GPS` node and functions in [Reference
+Manual](http://www.cyberbotics.com/reference/). Note that the `GPS` can also be
+placed on a robot's part (arm, foot, etc.) to get the world/global coordinates
+of that particular part.
 
 #### In Supervisor code:
 
@@ -35,7 +36,7 @@ is included in the Webots installation, you just need to open this world:
 In the physics plugin you can use ODE's `dBodyGetPosition()` function. Note that
 this function returns the position of the center of mass of the body: this may
 be different from the center of the `Solid`. Please find a description of ODE
-functions `here`.
+functions [here](http://ode-wiki.org/wiki/index.php?title=Manual).
 
 ### How can I get the linear/angular speed/velocity of a robot/object?
 
@@ -63,7 +64,8 @@ more information about this function in the `Reference Manual`.
 In the physics plugin you can use ODE's `dBodyGetLinearVel()` and
 `dBodyAngularVel()` functions. These functions return the linear velocity in
 meters per second, respectively the angular velocity in radians per second.
-Please find a description of ODE functions here: `here`.
+Please find a description of ODE functions here: [here](http://ode-
+wiki.org/wiki/index.php?title=Manual).
 
 ### How can I reset my robot?
 
@@ -116,7 +118,8 @@ dVector3 f; f[0] = ... f[1] = ... f[2] = ... ... // at every time step, add a
 force to the body dBodyAddForce(body, f[0], f[1], f[2]); ... }` There is more
 info on the plugin functions in the `Reference Manual` in the chapter about
 Physics Plugins. Additional information about the ODE functions can be found
-`here`. You may also want to study this example distributed with Webots:
+[here](http://ode-wiki.org/wiki/index.php?title=Manual). You may also want to
+study this example distributed with Webots:
 `WEBOTS_MODULES_PATH/projects/samples/demos/worlds/salamander.wbt` In this
 example, the physics plugin adds user computed forces to the robot body in order
 to simulate Archimedes and hydrodynamic drag forces.

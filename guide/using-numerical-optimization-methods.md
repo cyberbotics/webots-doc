@@ -166,5 +166,6 @@ Webots distribution: look for the worlds called
 "advanced_particle_swarm_optimization.wbt" and "advanced_genetic_algorithm.wbt"
 located in the "WEBOTS_MODULES_PATH/projects/samples/curriculum/worlds"
 directory. These examples are described in the *Advanced Programming Exercises*
-of `Cyberbotics' Robot Curriculum`.
+of [Cyberbotics' Robot
+Curriculum](http://en.wikibooks.org/wiki/Cyberbotics'_Robot_Curriculum).
 

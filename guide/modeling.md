@@ -52,8 +52,9 @@ the static environment: 0 dJointAttach(joint, body, 0);  // fix now: remember
 current position and rotation dJointSetFixed(joint); }  void
 webots_physics_step() { // nothing to do }  void webots_physics_cleanup() { //
 nothing to do }` You will find the description of Webots physics plugin API in
-your `Reference Manual` or on `this page`. You will find the description about
-the ODE functions on `this page`.
+your `Reference Manual` or on [this page](http://www.cyberbotics.com/reference
+/physics-plugin.php). You will find the description about the ODE functions on
+[this page](http://ode-wiki.org/wiki/index.php?title=Manual).
 
 ### Should I specify the "mass" or the "density" in the Physics nodes?
 

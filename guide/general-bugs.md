@@ -7,8 +7,9 @@ graphics card and up-to-date graphics drivers. Webots is not guaranteed to work
 with Intel GMA graphics cards: it may crash or exhibit display bugs. Upgrading
 to the latest versions of the Intel graphics driver may help resolve such
 problems (without any guarantee). Graphics drivers from Intel may be obtained
-from the `Intel download center web site`. Linux graphics drivers from Intel may
-be obtained from the `Intel Linux Graphics web site`.
+from the [Intel download center web site](http://downloadcenter.intel.com).
+Linux graphics drivers from Intel may be obtained from the [Intel Linux Graphics
+web site](http://intellinuxgraphics.org).
 
 ### Virtualization
 

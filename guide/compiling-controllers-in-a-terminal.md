@@ -30,10 +30,10 @@ $ make my_robot.o
 
 On Windows you must use the MSYS terminal to compile the controllers. MSYS is a
 UNIX-like terminal that can be used to invoke MinGW commands. It can be
-downloaded from `http://sourceforge.net`. You will also need to add the "bin"
-directory of MinGW to your *PATH* environment variable. MinGW is located in the
-"mingw" subdirectory of Webots distribution. When set correctly, the environment
-variable should be like this:
+downloaded from [http://sourceforge.net](http://sourceforge.net). You will also
+need to add the "bin" directory of MinGW to your *PATH* environment variable.
+MinGW is located in the "mingw" subdirectory of Webots distribution. When set
+correctly, the environment variable should be like this:
 
 
 ```

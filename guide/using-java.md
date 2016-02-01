@@ -19,11 +19,12 @@ the Java Development Kit (JDK) version 1.7.
 
 #### Installation Instructions
 
-The Java Development Kit (JDK) can be downloaded for free from the `Sun
-Developer Network`. Make sure you choose the most recent release and the
-Standard Edition (SE) of the JDK 7. For Windows, make also sure you have
-selected the 64 bit version since webots is incompatible with the 32 bit
-version. Then follow the installation instructions attending the package.
+The Java Development Kit (JDK) can be downloaded for free from the [Sun
+Developer Network](http://www.oracle.com/technetwork/java/javase/downloads).
+Make sure you choose the most recent release and the Standard Edition (SE) of
+the JDK 7. For Windows, make also sure you have selected the 64 bit version
+since webots is incompatible with the 32 bit version. Then follow the
+installation instructions attending the package.
 
 The `java` command is the Java Virtual Machine (JVM); it is used for executing
 Java controllers in Webots. The `javac` command is the Java compiler; it is used
@@ -76,7 +77,8 @@ the `Environment Variables` dialog.
 
 In alternative to Oracle JDK, on most popular Linux distribution is also
 possible to directly install the open-source JDK from the system package
-manager. Detailed information can be found on the `OpenJDK website`.
+manager. Detailed information can be found on the [OpenJDK
+website](http://openjdk.java.net/install/index.html).
 
 #### Troubleshooting the Java installation
 

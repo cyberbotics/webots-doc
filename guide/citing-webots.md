@@ -9,8 +9,8 @@ documents.
 
 ### Citing Cyberbotics' web site
 
-*This project uses * `Webots`*, a commercial mobile robot simulation software
-developed by Cyberbotics Ltd.*
+*This project uses * [Webots](http://www.cyberbotics.com)*, a commercial mobile
+robot simulation software developed by Cyberbotics Ltd.*
 
 *This project uses Webots (http://www.cyberbotics.com), a commercial mobile
 robot simulation software developed by Cyberbotics Ltd.*

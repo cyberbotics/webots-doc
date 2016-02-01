@@ -39,7 +39,8 @@ command line is installed on your computer, you can type in a terminal:
 $ python2.7 --version
 ```
 
-More information is available from the `Python official web site`.
+More information is available from the [Python official web
+site](http://www.python.org/).
 
 #### Windows Instructions
 

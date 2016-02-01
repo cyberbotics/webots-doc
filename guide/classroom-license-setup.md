@@ -5,8 +5,9 @@ students in a classroom. It also explains how to manage student access to Webots
 licenses for homework Webots exercices or projects. Let's assume you purchased
 20 licenses of Webots EDU and want to let some of your students use them. You
 should ensure that your classroom machines can access the Internet and in
-particular the `license server of Cyberbotics`. If it doesn't work, you may need
-to configure your local firewall to allow Webots to access this URL.
+particular the [license server of
+Cyberbotics](https://www.cyberbotics.com/license). If it doesn't work, you may
+need to configure your local firewall to allow Webots to access this URL.
 
 ### User account
 

@@ -5,14 +5,14 @@
 `MATLAB` is a numerical computing environment and an interpreted programming
 language. `MATLAB` allows easy matrix manipulation, plotting of functions and
 data, implementation of algorithms and creation of user interfaces. You can get
-more information on the official `MathWorks` web site. `MATLAB` is widely used
-in robotics in particular for its *Image Processing, Neural Networks* and
-*Genetics Algorithms* toolboxes. Webots allows to directly use `MATLAB` scripts
-as robot controller programs for your simulations. Using the `MATLAB` interface,
-it becomes easy to visualize controller or supervisor data, for example,
-processed images, sensor readings, the performance of an optimization algorithm,
-etc., while the simulation is running. In addition, it becomes possible to reuse
-your existing `MATLAB` code directly in Webots.
+more information on the official [MathWorks](http://www.mathworks.com) web site.
+`MATLAB` is widely used in robotics in particular for its *Image Processing,
+Neural Networks* and *Genetics Algorithms* toolboxes. Webots allows to directly
+use `MATLAB` scripts as robot controller programs for your simulations. Using
+the `MATLAB` interface, it becomes easy to visualize controller or supervisor
+data, for example, processed images, sensor readings, the performance of an
+optimization algorithm, etc., while the simulation is running. In addition, it
+becomes possible to reuse your existing `MATLAB` code directly in Webots.
 
 ### How to run the Examples?
 

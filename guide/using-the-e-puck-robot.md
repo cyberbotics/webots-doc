@@ -5,8 +5,9 @@ E-puck is a miniature mobile robot originally developed at the EPFL for teaching
 purposes by the designers of the successful Khepera robot. The hardware and
 software of e-puck is fully open source, providing low level access to every
 electronic device and offering unlimited extension possibilities. The official
-`e-puck web site` provides the most up-to-date information about this robot.
-E-puck is also available for purchase from Cyberbotics Ltd.
+[e-puck web site](http://www.e-puck.org) provides the most up-to-date
+information about this robot. E-puck is also available for purchase from
+Cyberbotics Ltd.
 
 ### Overview of the robot
 
@@ -59,7 +60,8 @@ robot with additional devices. In particular, the ground sensors module
 extension of the real e-puck robot is modeled in Webots to provide 3 optional
 infra-red sensors pointing to the ground in front of the robot. The  displays
 the names of the simulated devices which are to be used as an argument of the
-function `wb_robot_get_device()` (see the Robot section of `Reference Manual`).
+function `wb_robot_get_device()` (see the Robot section of [Reference
+Manual](http://www.cyberbotics.com/reference/)).
 
 Device | Name
 --- | ---
@@ -165,14 +167,16 @@ extended e-puck robots.
 The directory "WEBOTS_MODULES_PATH/projects/samples/curriculum" contains a rich
 collection of simulations involving the e-puck robot. You will find inside it
 all the worlds and controllers corresponding to the exercices of Cyberbotics
-robotics `curriculum`. Written in collaboration with professors and master
-students of EPFL, Cyberbotics curriculum is an educational document intended for
-all level of learnings in robotics. It addresses a dozen of topics ranging from
-finite state automata to particle swarm optimization, all illustated through the
-real or the simulated e-puck robot; you can browse it `here`.  The e-puck models
-of Webots distribution are open source and you are welcome to modify them. If
-you develop a useful modification and would like to share it, please let us know
-so that we can improve these models using your contribution.
+robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
+Written in collaboration with professors and master students of EPFL,
+Cyberbotics curriculum is an educational document intended for all level of
+learnings in robotics. It addresses a dozen of topics ranging from finite state
+automata to particle swarm optimization, all illustated through the real or the
+simulated e-puck robot; you can browse it
+[here](http://www.cyberbotics.com/curriculum).  The e-puck models of Webots
+distribution are open source and you are welcome to modify them. If you develop
+a useful modification and would like to share it, please let us know so that we
+can improve these models using your contribution.
 
 ### Control interface
 
@@ -249,7 +253,8 @@ This feature is available under Windows, Linux and Mac OS X. The Bluetooth
 interface must be set up according to your operating system (OS). Generally it
 is as simple as using the Bluetooth interface of your OS in order to discover
 and to pair the e-puck as a regular Bluetooth device. The complete instructions
-about pairing can be found on the `GCTronic website`.
+about pairing can be found on the [GCTronic
+website](http://www.gctronic.com/doc/index.php/E-Puck#Getting_started).
 
 On linux, the pairing has to be done manually (without using the Bluetooth
 interface of the OS). This can be done by using the `rfcomm` command. Once

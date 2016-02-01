@@ -19,7 +19,7 @@ VRML97 nodes, you can also refer to the VRML97 documentation.
 
 The exact features of VRML97 are subject to a standard managed by the
 International Standards Organization (ISO/IEC 14772-1:1997). You can find the
-complete specification of VRML97 on the `Web3D Web site`.
+complete specification of VRML97 on the [Web3D Web site](http://www.web3d.org).
 
 ### Webots specific nodes
 

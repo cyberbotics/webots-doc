@@ -2,9 +2,10 @@
 
 ### Introduction
 
-The Nao robot is a humanoid robot developed by `Aldebaran Robotics`. This
-section explains how to use Nao robot simulated in Webots together with the
-Choregraphe program of `Aldebaran Robotics`. Currently Webots supports the Nao
+The Nao robot is a humanoid robot developed by [Aldebaran Robotics](http://www
+.aldebaran-robotics.com). This section explains how to use Nao robot simulated
+in Webots together with the Choregraphe program of [Aldebaran
+Robotics](http://www.aldebaran-robotics.com). Currently Webots supports the Nao
 v3.3, v4.0 and v5.0 versions, with and without their articulated fingers
 (respectively with 25 and 21 degrees of freedom) for the first two.
 
@@ -23,9 +24,9 @@ the goal. You can find another NAOqi example in the
 The "challenge.wbt" file in this folder is a solution to the NAO Challenge
 contest (edition 2013-2014).
 
-In addition Nao robots are also used in the world files of the `Robotstadium`
-contest. These files are located in this folder:
-"WEBOTS_MODULES_PATH/projects/contests/robotstadium/worlds".
+In addition Nao robots are also used in the world files of the
+[Robotstadium](http://www.robotstadium.org) contest. These files are located in
+this folder: "WEBOTS_MODULES_PATH/projects/contests/robotstadium/worlds".
 
 ### Using Webots with Choregraphe
 

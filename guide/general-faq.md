@@ -7,7 +7,8 @@ research. Webots EDU provides a special version of Webots well suited for
 education. Webots modules are components tailored for specific uses of Webots,
 they include different models of robots, objects, environments, programming
 interfaces, libraries, etc. Users can purchase only the modules they need
-separately. The differences between Webots modules are explained `here`.
+separately. The differences between Webots modules are explained
+[here](http://www.cyberbotics.com/webots/).
 
 ### How can I report a bug in Webots?
 
@@ -15,9 +16,10 @@ If you can still start Webots, please report the bug by using Webots menu: `Help
 > Bug report...`.
 
 If Webots cannot start any more, please report the bug there:
-`http://www.cyberbotics.com/bug`. Please include a precise description of the
-problem, the sequence of actions necessary to reproduce the problem. Do also
-attach the world file and the controller programs necessary to reproduce it.
+[http://www.cyberbotics.com/bug](http://www.cyberbotics.com/bug). Please include
+a precise description of the problem, the sequence of actions necessary to
+reproduce the problem. Do also attach the world file and the controller programs
+necessary to reproduce it.
 
 Before reporting a bug, please make sure that the problem is actually caused by
 Webots and not by your controller program. For example, a crash of the

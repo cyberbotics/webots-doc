@@ -12,7 +12,7 @@ Webots comes in two different package types: `.deb` and `.tar.bz2` (tarball).
 The `.deb` package is aimed at the latest Ubuntu Linux distribution whereas the
 tarball package includes many dependency libraries and there is therefore best
 suited for installation on other Linux distributions. These packages can be
-downloaded from our `web site`.
+downloaded from our [web site](http://www.cyberbotics.com/linux).
 
 #### Using Advanced Packaging Tool (APT)
 
@@ -43,7 +43,8 @@ apt-get update
 ```
 
 Optionally, Webots can be autentified thanks to the `Cyberbotics.asc` signature
-file which can be downloaded `here`, using this command:
+file which can be downloaded [here](http://www.cyberbotics.com/linux), using
+this command:
 
 
 ```

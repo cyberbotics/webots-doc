@@ -98,9 +98,9 @@ actually hit the surface and excite the device. When a light source is parallel
 to (or behind) the semiconductor surface, no photons actually reach the surface.
 
 <center>
-![The irradiance (E) depends on the angle (phi) between the ](pdf/light_sensor.pdf)
+![The irradiance (E) depends on the angle (phi) between the](pdf/light_sensor.pdf)
 
-####The irradiance (E) depends on the angle (phi) between the 
+####The irradiance (E) depends on the angle (phi) between the
 </center>
 
 The "occlusion" condition is true if the light source is hidden by one or more

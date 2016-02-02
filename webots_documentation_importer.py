@@ -17,6 +17,9 @@ class BookParser:
     def __init__(self, webotsDirectoryPath, bookName):
         self.bookName = bookName
         self.root = None
+        
+        self.outputDirectoryPath = self.bookName + '/'
+
         # recreate the target directory if any
         if os.path.exists(bookName):
             shutil.rmtree(bookName)
@@ -49,11 +52,31 @@ class BookParser:
 
         self.root = ET.fromstring(content)
 
+    def exportToc(self):
+        if self.root is None:
+            raise Exception('Cannot export toc')
+
+        outputFilePath = self.outputDirectoryPath + 'toc.md'
+        print 'Generating toc: ' + outputFilePath
+
+        outFile = open(outputFilePath, 'w')
+
+        outFile.write('# Table of contents\n\n')
+        chapterCounter = 0
+        for chapterNode in self.root.findall('.//chapter'):
+            chapterCounter += 1
+            title = self.getTitle(chapterNode)
+            outFile.write('%d. [%s](%s)\n' % (chapterCounter, title, self.bookName + '/' + slugify(title) + '.md'))
+            sectionCounter = 0
+            for sectionNode in chapterNode.findall('.//sect1'):
+                sectionCounter += 1
+                title = self.getTitle(sectionNode)
+                outFile.write('    %d. [%s](%s)\n' % (sectionCounter, title, self.bookName + '/' + slugify(title) + '.md'))
+        outFile.close()
+
     def export(self):
         if self.root is None:
             raise Exception('Cannot export book')
-
-        self.outputDirectoryPath = self.bookName + '/'
 
         outputFilePath = self.outputDirectoryPath + self.bookName + '.md'
         print 'Generating file: ' + outputFilePath
@@ -65,7 +88,7 @@ class BookParser:
       titleNodes = el.findall('title')
       if len(titleNodes) <= 0:
           raise Exception('Cannot find title')
-      return titleNodes[0].text
+      return titleNodes[0].text.strip()
 
     def parseText(self, txt):
         if txt is None:
@@ -132,7 +155,7 @@ class BookParser:
         fileref = ''
         for child in node.getchildren():
             if child.tag == 'title':
-                title = child.text
+                title = child.text.strip()
             elif child.tag  == 'graphic':
                 fileref = child.attrib.get('fileref')
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
@@ -244,4 +267,5 @@ if __name__ == "__main__":
 
         bookParser = BookParser(webotsDirectoryPath, directoryName)
         bookParser.parseXMLFile(intputFilePath)
+        bookParser.exportToc()
         bookParser.export()

@@ -5,13 +5,9 @@ creating a solid with several bounding objects: a dumbbell made of two spheres
 and one cylinder. The expected result is depicted in .
 
 <center>
-![
-    Expected result at the end of the tutorial about compound solids.
-   ](png/tutorial_dumbbell.png)
+![Expected result at the end of the tutorial about compound solids.](png/tutorial_dumbbell.png)
 
-####
-    Expected result at the end of the tutorial about compound solids.
-   
+####Expected result at the end of the tutorial about compound solids.
 </center>
 
 ### New simulation
@@ -29,15 +25,11 @@ We want to implement a dumbbell made of a handle (Cylinder) and of two weights
 subnodes required to implement the dumbbell.
 
 <center>
-![
-    Representation of the subnodes of a compound solid made of
-    several transformed geometries.
-   ](pdf/tutorial_compound_solid.pdf)
+![Representation of the subnodes of a compound solid made of
+    several transformed geometries.](pdf/tutorial_compound_solid.pdf)
 
-####
-    Representation of the subnodes of a compound solid made of
+####Representation of the subnodes of a compound solid made of
     several transformed geometries.
-   
 </center>
 
 ### Physics Attributes

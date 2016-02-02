@@ -10,6 +10,16 @@ body {
   margin: 0px auto;
   background-color: white;
 }
+#navigation, #menu {
+  width:20%;
+  height:2em;
+  float:left;
+  background-color: white;
+}
+#menu {
+  margin-top:1em;
+  clear: left;
+}
 td {
   padding-left:4px;
   padding-right:4px;

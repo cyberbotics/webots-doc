@@ -27,6 +27,119 @@
           };
       }
 
+      function populateViewDiv(mdContent) {
+          console.log("Raw MD content:\n\n");
+          console.log(mdContent);
+
+          // markdown to html
+          var converter = new showdown.Converter({tables: "True"});
+          var html = converter.makeHtml(mdContent);
+
+          var div = document.createElement("div");
+          div.innerHTML = html;
+
+          var i;
+
+          // hack a href
+          var as = div.getElementsByTagName("a");
+          for (i = 0; i < as.length; i++) {
+              var a = as[i];
+              var href = a.getAttribute("href");
+              if (href.endsWith("md") && (href.startsWith("guide") || href.startsWith("reference"))) {
+                  var match = /^([\w-]*)\/([\w-]*).md$/.exec(href);
+                  if (match && match.length == 3) {
+                      var newBook = match[1];
+                      var newPage = match[2];
+                      var newHref = window.location.href.replace(/book=(\w+)/, "book=" + newBook).replace(/page=(\w+)/, "page=" + newPage);
+                      a.setAttribute("href", newHref);
+                  }
+              }
+          }
+
+          // hack images src
+          var imgs = div.getElementsByTagName("img");
+          for (i = 0; i < imgs.length; i++) {
+              var img = imgs[i];
+              var src = img.getAttribute("src");
+              var match = /^png\/([\w-\.]*)$/.exec(src);
+              if (match && match.length == 2) {
+                  img.setAttribute("src", targetPath + "png/" + match[1]);
+              }
+          }
+
+          var view = document.getElementById("view");
+          for (i = 0; i < div.childNodes.length; i++) {
+              child = div.childNodes[i];
+              view.appendChild(child);
+          }
+      }
+
+      function receiveTocContent(tocContent) {
+          console.log("Toc content:\n\n");
+          console.log(tocContent);
+
+          toc = [];
+          var lines = tocContent.split("\n");
+          var lastChapterID = - 1;
+          var i;
+          for (i = 0; i < lines.length; i++) {
+              var line = lines[i];
+              // examples of matching strings:
+              //     - "8. [Robots](guide/robots.md)"
+              //     - "    1. [Using the e-puck robot](guide/using-the-e-puck-robot.md)"
+              var match = /^(\s*)(\d+)\s*\.\s*\[([^\]]*)\]\s*\(([^\)]*)\)\s*$/.exec(line);
+              if (match && match.length == 5) {
+                  var spaces = match[1];
+                  var section = spaces > 0;
+                  var id = parseInt(match[2]);
+                  var title = match[3];
+                  var url = match[4];
+                  if (section) {
+                      toc[lastChapterID].sections[id - 1] = {};
+                      toc[lastChapterID].sections[id - 1].id = id;
+                      toc[lastChapterID].sections[id - 1].title = title;
+                      toc[lastChapterID].sections[id - 1].url = url;
+                  } else {
+                      if (id != lastChapterID) {
+                          toc[id - 1] = {};
+                          toc[id - 1].sections = [];
+                          lastChapterID = id;
+                      }
+                      toc[id - 1].title = title;
+                      toc[id - 1].id = id;
+                      toc[id - 1].url = url;
+                  }
+              }
+          }
+
+          printToc(toc);
+          populateNavigation(toc);
+          populateMenu(toc);
+      }
+
+      function printToc(toc) {
+          console.log("Toc structure:");
+          console.log();
+          var i, j;
+          for (i = 0; i < toc.length; i++) {
+              var chapter = toc[i];
+              console.log(chapter.id + ": " + chapter.title + " ( => " + chapter.url);
+              for (j = 0; j < chapter.sections.length; j++) {
+                  var section = chapter.sections[i];
+                  console.log("  " + chapter.id + section.id + ": " + section.title + " ( => " + section.url);
+              }
+          }
+          console.log();
+      }
+
+      function populateNavigation(toc) {
+          var navigation = document.getElementById("navigation");
+      }
+
+      function populateMenu(toc) {
+          var menu = document.getElementById("menu");
+      }
+
       var book = getGETQueryValue("book", "guide");
       var page = getGETQueryValue("page", "guide.md");
       var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
@@ -36,66 +149,42 @@
           targetPath += branch + "/";
       }
       targetPath += book + "/";
+
       var targetUrl = targetPath + page;
       console.log("Target Url: " + targetUrl);
 
+      // get the md file
       $.ajax({
           type: "GET",
           url: targetUrl,
           dataType: "text",
-          success: function (result) {
-              console.log("Raw content: " + result);
-
-              // markdown to html
-              var converter = new showdown.Converter({tables: "True"});
-              var html = converter.makeHtml(result);
-
-              var div = document.createElement("div");
-              div.innerHTML = html;
-
-              var i;
-
-              // hack a href
-              var as = div.getElementsByTagName("a");
-              for (i = 0; i < as.length; i++) {
-                  var a = as[i];
-                  var href = a.getAttribute("href");
-                  if (href.endsWith("md") && (href.startsWith("guide") || href.startsWith("reference"))) {
-                      var match = /^([\w-]*)\/([\w-]*).md$/.exec(href);
-                      if (match && match.length == 3) {
-                          var newBook = match[1];
-                          var newPage = match[2];
-                          var newHref = window.location.href.replace(/book=(\w+)/, "book=" + newBook).replace(/page=(\w+)/, "page=" + newPage);
-                          a.setAttribute("href", newHref);
-                      }
-                  }
-              }
-
-              // hack images src
-              var imgs = div.getElementsByTagName("img");
-              for (i = 0; i < imgs.length; i++) {
-                  var img = imgs[i];
-                  var src = img.getAttribute("src");
-                  var match = /^png\/([\w-\.]*)$/.exec(src);
-                  if (match && match.length == 2) {
-                      img.setAttribute("src", targetPath + "png/" + match[1]);
-                  }
-              }
-
-              var view = document.getElementById("view");
-              for (i = 0; i < div.childNodes.length; i++) {
-                  child = div.childNodes[i];
-                  view.appendChild(child);
-              }
-          },
+          success: populateViewDiv,
           error: function(XMLHttpRequest, textStatus, errorThrown) { 
               console.log("Status: " + textStatus);
               console.log("Error: " + errorThrown); 
           }
       });
+
+      var tocUrl = targetPath + "toc.md";
+      console.log("TOC Url: " + tocUrl);
+
+      // get the toc file
+      $.ajax({
+          type: "GET",
+          url: tocUrl,
+          dataType: "text",
+          success: receiveTocContent,
+          error: function(XMLHttpRequest, textStatus, errorThrown) { 
+              console.log("Status: " + textStatus);
+              console.log("Error: " + errorThrown); 
+          }
+      });
+
     </script>
   </head>
   <body>
+    <div id="navigation"> </div>
+    <div id="menu"> </div>
     <div id="view"> </div>
   </body>
 </html>

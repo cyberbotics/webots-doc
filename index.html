@@ -82,7 +82,11 @@
                   }
               }
 
-              document.getElementById("view").appendChild(div);
+              var view = document.getElementById("view");
+              for (i = 0; i < div.childNodes.length; i++) {
+                  child = div.childNodes[i];
+                  view.appendChild(child);
+              }
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) { 
               console.log("Status: " + textStatus);

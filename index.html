@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <title>Webots documentation</title>
     <link rel="stylesheet" type="text/css" href="style/style.css"/>
-    <script src='https://www.cyberbotics.com/wwi/8.3/request_methods.js'></script>
+    <script src="https://www.cyberbotics.com/wwi/8.3/request_methods.js"></script>
     <script src="https://www.cyberbotics.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://rawgit.com/showdownjs/showdown/1.3.0/dist/showdown.min.js"></script>
     <script>
       function replaceAll(find, replace, str) {
-        while( str.indexOf(find) > -1) {
-          str = str.replace(find, replace);
-        }
-        return str;
+          while (str.indexOf(find) > -1) {
+              str = str.replace(find, replace);
+          }
+          return str;
       }
 
       if (typeof String.prototype.startsWith != "function") {
@@ -21,7 +21,7 @@
           }
       }
 
-      if (typeof String.prototype.endsWith !== 'function') {
+      if (typeof String.prototype.endsWith !== "function") {
           String.prototype.endsWith = function (suffix) {
               return this.indexOf(suffix, this.length - suffix.length) !== -1;
           };
@@ -31,12 +31,11 @@
       var page = getGETQueryValue("page", "guide.md");
       var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
       var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
-      var targetPath = ''
-      if (! url.startsWith('http')) {
-          targetPath = url + book + "/";
-      } else {
-          targetPath = url + branch + "/" + book + "/";
+      var targetPath = url;
+      if (url.startsWith("http")) {
+          targetPath += branch + "/";
       }
+      targetPath += book + "/";
       var targetUrl = targetPath + page;
       console.log("Target Url: " + targetUrl);
 
@@ -45,14 +44,45 @@
           url: targetUrl,
           dataType: "text",
           success: function (result) {
-              // hack images urls
-              result = replaceAll('](png/', '](' + targetPath + 'png/', result);
-
               console.log("Raw content: " + result);
 
               // markdown to html
-              var converter = new showdown.Converter({tables: 'True'});
-              document.getElementById("view").innerHTML = converter.makeHtml(result);
+              var converter = new showdown.Converter({tables: "True"});
+              var html = converter.makeHtml(result);
+
+              var div = document.createElement("div");
+              div.innerHTML = html;
+
+              var i;
+
+              // hack a href
+              var as = div.getElementsByTagName("a");
+              for (i = 0; i < as.length; i++) {
+                  var a = as[i];
+                  var href = a.getAttribute("href");
+                  if (href.endsWith("md") && (href.startsWith("guide") || href.startsWith("reference"))) {
+                      var match = /^([\w-]*)\/([\w-]*).md$/.exec(href);
+                      if (match && match.length == 3) {
+                          var newBook = match[1];
+                          var newPage = match[2];
+                          var newHref = window.location.href.replace(/book=(\w+)/, "book=" + newBook).replace(/page=(\w+)/, "page=" + newPage);
+                          a.setAttribute("href", newHref);
+                      }
+                  }
+              }
+
+              // hack images src
+              var imgs = div.getElementsByTagName("img");
+              for (i = 0; i < imgs.length; i++) {
+                  var img = imgs[i];
+                  var src = img.getAttribute("src");
+                  var match = /^png\/([\w-\.]*)$/.exec(src);
+                  if (match && match.length == 2) {
+                      img.setAttribute("src", targetPath + "png/" + match[1]);
+                  }
+              }
+
+              document.getElementById("view").appendChild(div);
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) { 
               console.log("Status: " + textStatus);

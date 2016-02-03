@@ -64,11 +64,7 @@ function populateViewDiv(mdContent) {
 
     redirectUrls(div, this.setup.targetPath);
 
-    var view = document.getElementById("view");
-    for (i = 0; i < div.childNodes.length; i++) {
-        child = div.childNodes[i];
-        view.appendChild(child);
-    }
+    document.getElementById("view").appendChild(div);
 }
 
 function receiveTocContent(tocContent) {

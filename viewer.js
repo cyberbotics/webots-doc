@@ -30,8 +30,6 @@ function redirectUrls(node) {
             if (match && match.length == 3) {
                 var newBook = match[1];
                 var newPage = match[2];
-                console.log("newBook: " + newBook);
-                console.log("newPage: " + newPage);
                 var newHref = window.location.href.replace(/book=([\w-]+)/, "book=" + newBook).replace(/page=([\w-]+)/, "page=" + newPage);
                 a.setAttribute("href", newHref);
             }
@@ -109,42 +107,44 @@ function populateMenu(toc) {
     menu.appendChild(toc);
 }
 
-var book = getGETQueryValue("book", "guide");
-var page = getGETQueryValue("page", "guide.md");
-var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
-var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
-var targetPath = url;
-if (url.startsWith("http")) {
-    targetPath += branch + "/";
-}
-targetPath += book + "/";
-
-var targetUrl = targetPath + page;
-console.log("Target Url: " + targetUrl);
-
-// get the md file
-$.ajax({
-    type: "GET",
-    url: targetUrl,
-    dataType: "text",
-    success: populateViewDiv,
-    error: function(XMLHttpRequest, textStatus, errorThrown) { 
-        console.log("Status: " + textStatus);
-        console.log("Error: " + errorThrown); 
+document.addEventListener("DOMContentLoaded", function() {
+    var book = getGETQueryValue("book", "guide");
+    var page = getGETQueryValue("page", "guide.md");
+    var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
+    var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
+    var targetPath = url;
+    if (url.startsWith("http")) {
+        targetPath += branch + "/";
     }
-});
+    targetPath += book + "/";
 
-var tocUrl = targetPath + "toc.md";
-console.log("TOC Url: " + tocUrl);
+    var targetUrl = targetPath + page;
+    console.log("Target Url: " + targetUrl);
 
-// get the toc file
-$.ajax({
-    type: "GET",
-    url: tocUrl,
-    dataType: "text",
-    success: receiveTocContent,
-    error: function(XMLHttpRequest, textStatus, errorThrown) { 
-        console.log("Status: " + textStatus);
-        console.log("Error: " + errorThrown); 
-    }
+    // get the md file
+    $.ajax({
+        type: "GET",
+        url: targetUrl,
+        dataType: "text",
+        success: populateViewDiv,
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            console.log("Status: " + textStatus);
+            console.log("Error: " + errorThrown); 
+        }
+    });
+
+    var tocUrl = targetPath + "toc.md";
+    console.log("TOC Url: " + tocUrl);
+
+    // get the toc file
+    $.ajax({
+        type: "GET",
+        url: tocUrl,
+        dataType: "text",
+        success: receiveTocContent,
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            console.log("Status: " + textStatus);
+            console.log("Error: " + errorThrown); 
+        }
+    });
 });

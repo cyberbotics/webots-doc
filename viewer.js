@@ -17,7 +17,7 @@ if (typeof String.prototype.endsWith !== "function") {
     };
 }
 
-function redirectUrls(node) {
+function redirectUrls(node, targetPath) {
     var i;
 
     // hack a href
@@ -43,6 +43,9 @@ function redirectUrls(node) {
         var src = img.getAttribute("src");
         var match = /^png\/([\w-\.]*)$/.exec(src);
         if (match && match.length == 2) {
+            console.log('check:');
+            console.log('  targetPath: ' + targetPath);
+            console.log('  newPath: ' + targetPath + "png/" + match[1]);
             img.setAttribute("src", targetPath + "png/" + match[1]);
         }
     }
@@ -59,7 +62,7 @@ function populateViewDiv(mdContent) {
     var div = document.createElement("div");
     div.innerHTML = html;
 
-    redirectUrls(div);
+    redirectUrls(div, this.setup.targetPath);
 
     var view = document.getElementById("view");
     for (i = 0; i < div.childNodes.length; i++) {
@@ -95,11 +98,10 @@ function receiveTocContent(tocContent) {
     // find the selected item
     var as = toc.getElementsByTagName("a");
     var selected = null;
-    var page = getGETQueryValue("page", "guide.md"); // TODO: pass this as argument
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.indexOf(page) > -1) {
+        if (href.indexOf(this.setup.page) > -1) {
             selected = a.parentNode;
             selected.setAttribute("class", "selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
@@ -109,7 +111,7 @@ function receiveTocContent(tocContent) {
         }
     }
 
-    redirectUrls(toc);
+    redirectUrls(toc, this.setup.targetPath);
 
     if (toc) {
         populateMenu(toc);
@@ -218,6 +220,9 @@ document.addEventListener("DOMContentLoaded", function() {
         type: "GET",
         url: targetUrl,
         dataType: "text",
+        setup : {
+            'targetPath': targetPath
+        },
         success: populateViewDiv,
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);
@@ -234,6 +239,10 @@ document.addEventListener("DOMContentLoaded", function() {
         url: tocUrl,
         dataType: "text",
         success: receiveTocContent,
+        setup: {
+            'targetPath': targetPath,
+            'branch': branch
+        },
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown); 

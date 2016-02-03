@@ -26,6 +26,10 @@ of Webots) and by the "force_sensor.wbt" and "bumper.wbt" worlds (located in the
 
 ### Field Summary
 
+- `type`: allows the user to select the type of sensor: "bumper", "force", or "force-3d", described below.
+- `lookupTable`: similar to the one used by the `DistanceSensor` node.
+- `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure. Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change). This field is used only if the type is "force" or "force-3d" and accepts any value in the interval (0.0, inf).
+
 ### Description
 
 #### "bumper" Sensors

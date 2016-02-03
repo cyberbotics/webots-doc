@@ -20,3 +20,6 @@ apply.
 
 ### Field Summary
 
+- `device`: This field optionally specifies a `RotationalMotor`, an angular `PositionSensor` and/or a `Brake` device. If no motor is specified, the joint is passive joint.
+- `position`: see `joint's hidden position field`.
+

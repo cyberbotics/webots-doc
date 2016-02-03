@@ -27,6 +27,12 @@ axis.
 
 ### Field Summary
 
+- The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*. The *velocity* can be changed at run-time with the `wb_motor_set_velocity()` function. The value should always be positive (the default is 10).
+- The first coordinate of `controlPID` field specifies the initial value of the *P* parameter, which is the *proportional gain* of the motor PID-controller. A high *P* results in a large response to a small error, and therefore a more sensitive system. Note that by setting *P* too high, the system can become unstable. With a small *P*, more simulation steps are needed to reach the target position, but the system is more stable.The second coordinate of `controlPID` field specifies the initial value of the *I* parameter, which is the *integral gain* of the motor PID-controller. The integral term of the PID controller is defined as the product of the error integral over time by *I*. This term accelerates the movement towards target position and eliminates the residual steady-state error which occurs with a pure proportional controller. However, since the integral term represents accumulated errors from the past, it can cause the present value to overshoot the target position.The third coordinate `controlPID` field specifies the initial value of the *D* parameter, which is the *derivative gain* of the motor PID-controller. The derivative term of the PID-controller is defined as the product of the error derivative with respect to time by *D*. This term predicts system behavior and thus improves settling time and stability of the system.The value of *P, I* and *D* can be changed at run-time with the `wb_motor_set_control_pid()` function.
+- The `acceleration` field defines the default acceleration of the P-controller. A value of -1 (infinite) means that the acceleration is not limited by the P-controller. The acceleration can be changed at run-time with the `wb_motor_set_acceleration()` function.
+- The `position` field represents the current *position* of the `Motor`, in radians or meters. For a rotational motor, `position` represents the current rotation angle in radians. For a linear motor, `position` represents the magnitude of the current translation in meters.
+- The `minPosition` and `maxPosition` fields specify *soft limits* for the target position. These fields are described in more detail in the "Motor Limits" section, see below.
+
 ### Units
 
 By *motor position*, we mean joint position as defined in `JointParameters`.

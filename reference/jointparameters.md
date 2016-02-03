@@ -24,6 +24,12 @@ the other joint parameters node, it has no anchor.
 
 ### Field Summary
 
+- The `position` field represents the current *position* of the joint, in radians or meters. For an hinge, `position` represents the current rotation angle in radians. For a slider, `position` represents the magnitude of the current translation in meters.
+- The `minPosition` and `maxPosition` fields specify *soft limits* for the target position. These fields are described in more detail in the "Joint Limits" section, see below.
+- The `minStop` and `maxStop` fields specify the position of physical (or mechanical) stops. These fields are described in more detail in the "Joint Limits" section, see below.
+- The `springConstant` and `dampingConstant` fields allow the addition of spring and/or damping behavior to the joint. These fields are described in more detail in the "Springs and Dampers" section, see below.
+- The `staticFriction` field defines add a simple static friction force opposed to the joint motion.
+
 ### Units
 
 Rotational joint units (`HingeJoint`, `Hinge2Joint`) are expressed in *radians*

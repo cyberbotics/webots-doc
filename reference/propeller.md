@@ -45,3 +45,9 @@ nodes.
 
 ### Field Summary
 
+- `shaftAxis`: defines the axis along which the resultant thrust and torque will be exerted, see .
+- `centerOfThrust`: defines the point where the generated thrust applies, see .
+- `thrustConstants` and `torqueConstants`: coefficients used to define the resultant thrust and torque as functions of the motor angular velocity and the linear speed of adavance, see above formulae.
+- `device`: this field has to be set with a `RotationalMotor` in order to control the propeller.
+- `fastHelix` and `slowHelix`: if not NULL, these fields must be set with `Solid` nodes. The corresponding `Solid` nodes define the graphical representation of the propeller according to its motor's angular velocity omega: if |omega| > 24 pi rad /s, only the `Solid` defined in `fastHelix` is visible, otherwise only the `Solid` defined in `slowHelix` is visible.
+

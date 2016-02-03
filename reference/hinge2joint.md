@@ -27,3 +27,7 @@ for a car, a shoulder or a hip for a humanoid robot.
 
 ### Field Summary
 
+- `jointParameters2`: This field optionally specifies a `HingeJointParameters` node It contains, among others, the joint position, the axis position expressed in relative coordinates, the stop positions and suspension parameters. If the `jointParameters` field is left empty, default values of the HingeJointParameters node apply.
+- `device2`: This field optionally specifies a `RotationalMotor`, an angular `PositionSensor` and/or a `Brake` device attached to the second axis. If no motor is specified, this part of the joint is passive.
+- `position2`: see `joint's hidden position field`.
+

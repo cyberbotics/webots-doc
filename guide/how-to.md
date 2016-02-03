@@ -73,6 +73,13 @@ controller.
 In this example, a robot flies using a physics plugin. This plugins is an
 example of:
 
+- how to access Webots objects in the physics plugin
+- how to exchange information with the controller
+- how to add custom forces
+- how to move objects
+- how to handle collisions
+- how to draw objects using OpenGL
+
 ### supervisor.wbt
 
 <center>

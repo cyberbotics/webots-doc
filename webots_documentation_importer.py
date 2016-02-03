@@ -161,6 +161,27 @@ class BookParser:
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
             outFile.write('<center>\n![%s](%s)\n\n####%s\n</center>\n\n' % (title, fileref, title))
 
+    def parseItemizedList(self, node, outFile):
+        items = node.findall('.//listitem')
+        for item in items:
+            outFile.write('- ')
+            for child in item.getchildren():
+                if child.tag == 'para':
+                    self.parsePara(child, outFile, False)
+                elif child.tag == 'figure':
+                    # TODO
+                    pass
+                elif child.tag == 'note':
+                    # TODO
+                    pass
+                elif child.tag == 'programlisting':
+                    # TODO
+                    pass
+                else:
+                    raise Exception('Unsupported type: ' + child.tag)
+            outFile.write('\n')
+        outFile.write('\n')
+
     def parseTable(self, node, outFile):
         header = len(node.findall('.//thead')) == 1
         nCols = int(node.findall('tgroup')[0].attrib.get('cols'))
@@ -229,6 +250,8 @@ class BookParser:
                 self.parseProgramListing(child, outFile)
             elif child.tag == 'figure':
                 self.parseFigure(child, outFile)
+            elif child.tag == 'itemizedlist':
+                self.parseItemizedList(child, outFile)
 
     def parseBook(self, node, outFile):
         for child in node.getchildren():

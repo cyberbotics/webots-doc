@@ -19,6 +19,10 @@ the Control key (Ctrl) together with the Alt key.
 Dragging the mouse while pressing a mouse button moves the camera of the 3D
 window.
 
+- *Camera rotation*: In the 3D window, press the left button and drag the mouse to select an object and rotate the viewpoint about it. If no object is selected, the camera rotates about the origin of the world coordinate system.
+- *Camera translation*: In the 3D window, press the right button and drag the mouse to translate the camera with the mouse motion.
+- *Zooming / Camera rotation*: In the 3D window, press both left and right mouse buttons simultaneously (or just the middle button) and drag the mouse vertically, to zoom in and out. Dragging the mouse horizontally will rotate the camera about the viewing axis. Alternatively, the mouse wheel alone can also be used for zooming.
+
 ### Moving a solid object
 
 Currently Webots provides two different ways to move solid objects: axis-aligned
@@ -49,6 +53,9 @@ also be enabled from the Field Editor.
 </center>
 
 #### Translation using keyboard shurtcuts
+
+- *Translation*: To move an object parallel to the ground: hold down the shift key, press the left mouse button and drag.
+- *Lift*: To raise or lower and object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag. Alternatively, the mouse wheel combined with the Shift key can also be used.
 
 ### Applying a force to a solid object with physics
 

@@ -14,6 +14,10 @@ The `TextureTransform` node defines a 2D transformation that is applied to
 texture coordinates. This node affects the way textures are applied to the
 surface of a `Geometry`. The transformation consists of (in order):
 
+- a translation;
+- a rotation about the center point;
+- a non-uniform scaling operation about the center point.
+
 These parameters support changes in the size, orientation, and position of
 textures on shapes. Note that these operations appear reversed when viewed on
 the surface of a geometric node. For example, a `scale` value of (2 2) will

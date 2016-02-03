@@ -16,6 +16,9 @@ If you plan to use Webots behind an Internet firewall, you should create two new
 rules in your firewall configuration to allow connections to the following
 servers:
 
+- `https://www.cyberbotics.com (port 443)`
+- `https://webots-license.appspot.com (port 443)`
+
 ### License agreement
 
 Please read your license agreement carefully before using Webots. This license
@@ -43,6 +46,10 @@ access to your licenses.
 
 By default, Webots will download the different modules you purchased and store
 them in the local user application folder:
+
+- Windows: "C:\Users\MyName\AppData\Local\Cyberbotics\Webots\8.0".
+- Mac OS X: "/Users/MyName/Library/Application Support/Cyberbotics/Webots/8.0".
+- Linux: "/home/MyName/.local/share/Cyberbotics/Webots/8.0".
 
 You may want to change this behavior and have Webots storing its module files in
 a different folder. This is possible by setting the `WEBOTS_MODULES_PATH`

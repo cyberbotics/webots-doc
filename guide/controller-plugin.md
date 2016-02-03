@@ -75,6 +75,15 @@ documentation in the reference manual).
 
 The entry points of a robot window controller plugin are:
 
+- `bool wbw_init()`This is the first function called by libController. Its aim is to initialize the graphical user interface without showing it.
+- `void wbw_cleanup()`This is the last function called by libController. Its aim is to cleanup the library (destroy the GUI, release the memory, store the current library state, etc.)
+- `void wbw_pre_update_gui()`This function is called before `wbw_update_gui()` to inform its imminent call. Its purpose is to inform that from this moment, the pipe answering from Webots to the controller can receive data. If data is coming from the Webots pipe `wbw_update_gui()` should return as soon as possible.
+- `void wbw_update_gui()`The aim of this function is to process the GUI events until something is available on the Webots pipe.
+- `void wbw_read_sensors()`This function is called when it's time to read the sensors values from the Webots API. For example in this function the `wb_distance_sensor_get_value()` function can be called.
+- `void wbw_write_actuators()`This function is called when it's time to write the actuator commands from the Webots API. For example in this function the `wb_motor_set_position()` function can be called.
+- `void wbw_show()`This function is called when the GUI should be show. This can occur either when the user double-click on the virtual robot, either when he selects the `Robot | Show Robot Window` menu item, or either at controller startup if the *showRobotWindow* field of the `Robot` node is enabled.
+- `void *wbw_robot_window_custom_function(void *)`This function can optionally be defined to communicate and pass data from and to the controller program. It is called directly by the user from the controller when executing the `wb_robot_window_custom_function` C function or `Robot::robotWindowCustomFunction` C++ function. You can find more information in the reference manual.
+
 The internal behavior of the `wb_robot_step()` call is the key point to
 understand how the different entry points of the robot window plugin are called
 (pseudo-code):
@@ -175,11 +184,23 @@ communication (i.e. entering the IP address of the robot, etc.)
 
 There are two entry points to the remote-control library:
 
+- `bool wbr_init(WbrInterface *ri)`This function is called by libController to initialize the remote control library. It is called after the first `wb_robot_set_mode()` call. The aim of this function is to map the functions given into the `WbrInterface` structure with functions inside the remote-control library.
+- `void wbr_cleanup()`This function is called by libController to cleanup the library.
+
 The `WbrInterface` structure has several functions (mandatory) which have to be
 mapped to let the remote-control library run smoothly. Here they are:
 
+- `bool wbr_start(void *arg)`This function is called when the connection with the real robot should start. The return value of this function should inform if the connection has been a success or not. The argument matches with the argument given to `wb_robot_set_mode()` when initializing the remote-control. As the robot window library is often responsible in calling `wb_robot_set_mode()`, the structure passed between them should match.
+- `void wbr_stop()`This function is called when the connection with the real robot should stop. Typically a command stopping the real robot actuators should be sent just before stopping the connection.
+- `bool wbr_has_failed()`This function is called very often by libController to check the validity of the connection. The value returned by this function should always match with the connection validity.
+- `void wbr_stop_actuators()`This function is called to stop the actuators of the real robot. This is called when the user pressed the pause button of the simulator.
+- `int wbr_robot_step(int period)`This function is called when the controller enters in the step loop. The aim of this function is to send the actuator commands and then to read the vaues of the enabled sensors. The timing problem should be solved there. The robot should wait at least *period* milliseconds, and returns the delta time if this *period* is exceeded.
+
 As said above, all the Webots API functionalities that should work with the real
 robot have to be wrapped into the remote-control library. To achieve this:
+
+- The internal state of the libController has to be setup to match with the current state of the robot.Typically, when the value of a sensor is known the corresponding `wbr_sensor_set_value()` has to be called.
+- The commands send to the libController have to be wrapped.Typically, when the command of an actuator is setup the corresponding `wbr_actuator_set_value()` is called, and has to be sent to the real robot.
 
 The complete definition of the remote control API and of the `WbrInterface`
 structure is contained in

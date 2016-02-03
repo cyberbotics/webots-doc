@@ -33,6 +33,10 @@ not have to be) followed by a "-1" index. If the greatest index in the
 `coordIndex` field is N, the `Coordinate` node shall contain N+1 coordinates
 (indexed as 0 to N). Each face of the `IndexedFaceSet` shall have:
 
+- at least three non-coincident vertices;
+- vertices that define a planar polygon;
+- vertices that define a non-self-intersecting polygon.
+
 Otherwise, the results are undefined.
 
 When used for collision detection (boundingObject), each face of the

@@ -416,6 +416,10 @@ simulation in the Console window.
 Because of its particular structure, this model is also an example of custom ODE
 plugins for:
 
+- how to create and manage ODE joints
+- how to add custom force
+- how to create spongy tires
+
 The source code for this controller is in the
 "WEBOTS_MODULES_PATH/projects/robots/shrimp/controllers/shrimp" directory, and
 the ODE plugin is in the
@@ -443,9 +447,17 @@ The source code for the controller of the robot, as well as the model of the
 robot are located under the Webots installation directory, in the
 "WEBOTS_MODULES_PATH/projects/robots/bioloid" sub folder:
 
+- "controllers/bioloid/": controller directory.
+- "worlds/bioloid.wbt": world definition file containing a Bioloid dog robot.
+
 Using the keyboard, the user can control the quadruped robot by setting the
 walking direction (forward or backwards) and also the heading direction (right
 or left). Keyboard actions include:
+
+- Right Arrow: Turn right
+- Left Arrow: Turn left
+- B: Walk backwards
+- F: Walk forward
 
 The walking gait used in the controller relies on an inverse kinematics model.
 Further details are available from [BIRG web
@@ -459,4 +471,9 @@ to the stride length to allow the robot to turn either right or left.
 
 Other keyboard actions are also provided to fine-tune the frequency and the
 stride length factor:
+
+- Q: Increase frequency
+- W: Decrease frequency
+- S: Increase stride length factor
+- A: Decrease stride length factor
 

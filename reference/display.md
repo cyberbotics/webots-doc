@@ -25,6 +25,9 @@ the `Display`.
 
 ### Field Summary
 
+- `width`: width of the display in pixels
+- `height`: height of the display in pixels
+
 ### Coordinates system
 
 Internally, the `Display` image is stored in a 2D pixel array. The RGBA value

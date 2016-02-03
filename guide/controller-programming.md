@@ -151,6 +151,9 @@ separately, using    `wb_motor_set_position()`. Then you need to call
 
 Webots uses two different time steps:
 
+- The control step (the argument of the `wb_robot_step()` function)
+- The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
+
 The control step is the duration of an iteration of the control loop. It
 corresponds to the parameter passed to the `wb_robot_step()` function. The
 `wb_robot_step()` function advances the controller time of the specified
@@ -311,6 +314,14 @@ Environment variables in this file can contain references to other environment
 variables using this syntax : `$(MY_VARIABLE_NAME)`. They will be automatically
 replaced by the actual value already existing in the environment. The Webots
 "runtime.ini" supports 7 sections:
+
+- `[environment variables with relative paths]`This section should contain only environment variables with relative paths. Paths must be separated by the colon symbol ':' and the separator between directories is the slash symbol '/'. Variables declared in this section will be add on every platform. On Windows, colons will be replaced by semicolon and slash will be replaced by backslash according to the Windows syntax.
+- `[environment variables]`Environment variables defined in this section will also be added to the environment on every platform but they will be written directly with no syntax change. It's a good place for variables that don't contain any path.
+- `[environment variables for Windows]`Variables defined in this section will only be added to the environment if the controller is run on the Windows platform. If you want to declare paths in this section, the value should be written between double-quotes symbols ".
+- `[environment variables for Mac OS X]`Variables defined here will only be added on Mac OS X and ignored on other platforms.
+- `[environment variables for Linux]`Variables defined here will be added on all Linux platforms but not on Mac or Windows.
+- `[environment variables for Linux 32]`These variables will be added only if the Linux platform is 32 bit.
+- `[environment variables for Linux 64]`These variables will be added only if the Linux platform is 64 bit.
 
 Here is an example of a typical runtime.ini file. `       ; typical runtime.ini
 [environment variables with relative paths] WEBOTS_LIBRARY_PATH =

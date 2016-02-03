@@ -24,3 +24,5 @@ node.
 
 ### Field Summary
 
+- `position`: defines the position of the wheel on the x-y plane of the `Track` node coordinate system.`radius`: defines the radius of the wheel.`inner`: defines if the wheel is inside the track belt.
+

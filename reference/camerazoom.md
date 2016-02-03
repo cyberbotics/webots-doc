@@ -17,3 +17,5 @@ the `wb_camera_set_fov()` function.
 
 ### Field Summary
 
+- The `maxFieldOfView` and the `minFieldOfView` fields define respectively the maximum and minimum values for the field of view of the camera zoom (i.e., respectively the maxium and minimum zoom levels). Hence, they represent the minimum and maximum values that can be passed to the `wb_camera_set_fov()` function and they can be retrieved using the functions `wb_camera_get_min_fov()` and `wb_camera_get_max_fov()`.
+

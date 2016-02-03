@@ -28,6 +28,9 @@ section.
 
 ### Field Summary
 
+- `type`: defines the type of the `Slot`. Two `Slot` nodes can be connected only if their types match. It is possible to specify a gender by ending the string with a '`+`' or a '`-`'. In this case, two `Slot` nodes can be connected only if they are of opposite gender (e.g. a `Slot` with a type ending with '`+`' can only be connected to a `Slot` with the same type, except that it ends with '`-`' instead of '`+`'). The default empty type matches any type.
+- `endPoint`: The node inserted in the endPoint of a `Slot` should be another `Slot` if this `Slot` is not already connected to another `Slot` (i.e., its parent is a `Slot`). If the pair of `Slot` nodes is already connected, any node that can usually be inserted in a `children` field can be inserted in the `endPoint` field of the second `Slot`.
+
 ### Example
 
 If you want to write a proto of a robot called `MyRobot` that accepts only hands

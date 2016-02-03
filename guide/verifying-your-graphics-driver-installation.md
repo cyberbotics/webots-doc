@@ -33,23 +33,46 @@ may also solve various problems, i.e., odd graphics rendering or Webots crashes.
 
 #### Linux
 
-On Linux, use this command to check if a hardware accelerated driver is
-installed: `$ glxinfo | grep OpenGL` If the output contains the string "NVIDIA",
-"ATI", or "Intel", this indicates that a hardware driver is currently installed:
-`$ glxinfo | grep OpenGL OpenGL vendor string: NVIDIA Corporation OpenGL
-renderer string: GeForce 8500 GT/PCI/SSE2 OpenGL version string: 3.0.0 NVIDIA
-180.44 ...` If you read "Mesa", "Software Rasterizer" or "GDI Generic", this
-indicates that the hardware driver is currently not installed and that your
-computer is currently using a slow software emulation of OpenGL: `$ glxinfo |
-grep OpenGL OpenGL vendor string: Mesa project: www.mesa3d.org OpenGL renderer
-string: Mesa GLX Indirect OpenGL version string: 1.4 (1.5 Mesa 6.5.2) ...` In
-this case you should definitely install the hardware driver.
 
-On Ubuntu the driver can usually be installed automatically from the `Additional
-Drivers` tab of the `Software amp Update` window. Otherwise you can find out
-what graphics hardware is installed on your computer by using this command: `$
-lspci | grep VGA 01:00.0 VGA compatible controller: nVidia Corporation GeForce
-8500 GT (rev a1)`
+On Linux, use this command to check if a hardware accelerated driver is installed:
+
+```
+$ glxinfo | grep OpenGL
+```
+
+If the output contains the string "NVIDIA", "ATI", or "Intel", this indicates that a hardware driver is currently installed:
+
+```
+$ glxinfo | grep OpenGL
+OpenGL vendor string: NVIDIA Corporation
+OpenGL renderer string: GeForce 8500 GT/PCI/SSE2
+OpenGL version string: 3.0.0 NVIDIA 180.44
+...
+```
+
+If you read "Mesa", "Software Rasterizer" or "GDI Generic", this indicates that the hardware driver is currently not installed and that
+your computer is currently using a slow software emulation of OpenGL:
+
+```
+$ glxinfo | grep OpenGL
+OpenGL vendor string: Mesa project: www.mesa3d.org
+OpenGL renderer string: Mesa GLX Indirect
+OpenGL version string: 1.4 (1.5 Mesa 6.5.2)
+...
+```
+
+In this case you should definitely install the hardware driver.
+
+
+On Ubuntu the driver can usually be installed automatically from the `Additional Drivers`
+tab of the `Software amp Update` window.
+Otherwise you can find out what graphics hardware is installed on your computer by using this command:
+
+```
+$ lspci | grep VGA
+01:00.0 VGA compatible controller: nVidia Corporation GeForce 8500 GT (rev a1)
+```
+
 
 Then you can normally download the appropriate driver from the graphics hardware
 manufacturer's website: [http://www.nvidia.com](http://www.nvidia.com) for an

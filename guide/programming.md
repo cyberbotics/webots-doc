@@ -76,25 +76,34 @@ Please see .
 
 ### What does this mean: "Could not find controller {...} Loading void controller instead." ?
 
-This message means that Webots could neither find an executable file (e.g.
-.exe), nor an interpreted language file (e.g. .class, .py, .m) to run as
-controller program for a robot. In fact, Webots needs each controller file to be
-stored at specific location in order to be able to executed it. The requested
-location is in the "controllers" subdirectory of the current Webots project
-directory, e.g. "my_project". Inside the "controllers" directory, each
-controller project must be stored in its own directory which must be named
-precisely like the `controller` field of the Robot. Inside that directory, the
-executable/interpretable file must also be named after the `controller` field of
-the Robot (plus a possible extension). For example if the controller field of
-the robot looks like this, in the Scene Tree: `Robot { controller
-"my_controller" }` then the executable/interpretable file will be searched at
-the following paths: `my_project/controllers/my_controller/my_controller.exe
-(Windows only) my_project/controllers/my_controller/my_controller (Linux/Mac
-only) my_project/controllers/my_controller/my_controller.class
+
+This message means that Webots could neither find an executable file (e.g. .exe), nor an interpreted language file (e.g. .class, .py, .m) to run as controller program for a robot.
+In fact, Webots needs each controller file to be stored at specific location in order to be able to executed it.
+The requested location is in the "controllers" subdirectory of the current Webots project directory, e.g. "my_project".
+Inside the "controllers" directory, each controller project must be stored in its own directory which must
+be named precisely like the `controller` field of the Robot.
+Inside that directory, the executable/interpretable file must also be named after the `controller` field of the Robot (plus a possible extension).
+For example if the controller field of the robot looks like this, in the Scene Tree:
+
+```
+Robot {
+  controller "my_controller"
+}
+```
+
+then the executable/interpretable file will be searched at the following paths:
+
+```
+my_project/controllers/my_controller/my_controller.exe (Windows only)
+my_project/controllers/my_controller/my_controller (Linux/Mac only)
+my_project/controllers/my_controller/my_controller.class
 my_project/controllers/my_controller/my_controller.py
-my_project/controllers/my_controller/my_controller.m` If Webots does not find
-any file at the above specified paths, then the error message in question is
-shown. So this problem often happens when you:
+my_project/controllers/my_controller/my_controller.m
+```
+
+If Webots does not find any file at the above specified paths, then the error message in question is shown.
+So this problem often happens when you:
+
 
 - Have moved the project or source files to a location that does not correspond to the above description.
 - Use an external build system, e.g. Visual Studio, that is not configured to generate the executable file at the right location.
@@ -111,30 +120,103 @@ passed to a Webots function appears not to correspond to a known device. This
 can happen mainly for three reasons:
 
 1. The `WbDeviceTag` is 0 and thus invalid because it was not found by `wb_robot_get_device()`. Indeed, the `wb_robot_get_device()` function returns 0, if it cannot not find a device with the specified name in the robot. Note that the name specified in the argument of the `wb_robot_get_device()` function must correspond to the `name` field of the device, not to the VRML DEF name!
-2. Your controller code is mixing up two types of `WbDeviceTag`s, for example because it uses the `WbDeviceTag` of a `Camera` in a `wb_distance_sensor_*()` function. Here is an example of what is wrong: `#include ltwebots/robot.hgt #include ltwebots/camera.hgt #include ltwebots/distance_sensor.hgt #define TIME_STEP 32 int main() { wb_robot_init(); WbDeviceTag camera = wb_robot_get_device("camera"); wb_camera_enable(camera, TIME_STEP); ... double value = wb_distance_sensor_get_value(camera); // WRONG! ... }`
-3. The `WbDeviceTag` may also be invalid because it is used before initialization with `wb_robot_get_device()`, or because it is not initialized at all, or because it is corrupted by a programming error in the controller code. Here is such an example: `#include ltwebots/robot.hgt #include ltwebots/camera.hgt #include ltwebots/distance_sensor.hgt #define TIME_STEP 32 int main() { wb_robot_init(); WbDeviceTag distance_sensor, camera = wb_robot_get_device("camera"); wb_camera_enable(camera, TIME_STEP); wb_distance_sensor_enable(distance_sensor, TIME_STEP); // WRONG! ... }`
+2. 
+Your controller code is mixing up two types of `WbDeviceTag`s,
+for example because it uses the `WbDeviceTag` of a `Camera`
+in a `wb_distance_sensor_*()` function.
+Here is an example of what is wrong:
+
+```
+#include ltwebots/robot.hgt
+#include ltwebots/camera.hgt
+#include ltwebots/distance_sensor.hgt
+
+#define TIME_STEP 32
+
+int main() {
+  wb_robot_init();
+  WbDeviceTag camera = wb_robot_get_device("camera");
+  wb_camera_enable(camera, TIME_STEP);
+  ...
+  double value = wb_distance_sensor_get_value(camera);  // WRONG!
+  ...
+}
+```
+
+
+
+
+3. 
+The `WbDeviceTag` may also be invalid because it is used before initialization with `wb_robot_get_device()`,
+or because it is not initialized at all, or because it is corrupted by a programming error in the controller code.
+Here is such an example:
+
+```
+#include ltwebots/robot.hgt
+#include ltwebots/camera.hgt
+#include ltwebots/distance_sensor.hgt
+
+#define TIME_STEP 32
+
+int main() {
+  wb_robot_init();
+  WbDeviceTag distance_sensor, camera = wb_robot_get_device("camera");
+  wb_camera_enable(camera, TIME_STEP);
+  wb_distance_sensor_enable(distance_sensor, TIME_STEP);  // WRONG!
+  ...
+}
+```
+
+
+
+
 
 ### Is it possible to apply a (user specified) force to a robot?
 
-Yes. You need to use a *physics plugin* to apply user specified forces (or
-torques). Note that Webots PRO is required to create a physics plugin. Then you
-can add the physics plugin with the menu item: `Wizards` > `New Physics Plugin`.
-After having added the plugin you must compile it using Webots editor. Then you
-must associate the plugin with your simulation world. This can be done by
-editing the `WorldInfo.physics` field in the Scene Tree. Then you must modify
-the plugin code such as to add the force. Here is an example: `#include
-ltode/ode.hgt #include ltplugins/physics.hgt  dBodyID body = NULL;  void
-webots_physics_init() { // find the body on which you want to apply a force body
-= dWebotsGetBodyFromDEF("MY_ROBOT"); ... }  void webots_physics_step() { ...
-dVector3 f; f[0] = ... f[1] = ... f[2] = ... ... // at every time step, add a
-force to the body dBodyAddForce(body, f[0], f[1], f[2]); ... }` There is more
-info on the plugin functions in the `Reference Manual` in the chapter about
-Physics Plugins. Additional information about the ODE functions can be found
-[here](http://ode-wiki.org/wiki/index.php?title=Manual). You may also want to
-study this example distributed with Webots:
-`WEBOTS_MODULES_PATH/projects/samples/demos/worlds/salamander.wbt` In this
-example, the physics plugin adds user computed forces to the robot body in order
-to simulate Archimedes and hydrodynamic drag forces.
+
+Yes. You need to use a *physics plugin* to apply user specified forces (or torques).
+Note that Webots PRO is required to create a physics plugin. Then you can add the physics plugin with the menu item: `Wizards` > `New Physics Plugin`.
+After having added the plugin you must compile it using Webots editor.
+Then you must associate the plugin with your simulation world.
+This can be done by editing the `WorldInfo.physics` field in the Scene Tree.
+Then you must modify the plugin code such as to add the force.
+Here is an example:
+
+```
+#include ltode/ode.hgt
+#include ltplugins/physics.hgt
+
+dBodyID body = NULL;
+
+void webots_physics_init() {
+  // find the body on which you want to apply a force
+  body = dWebotsGetBodyFromDEF("MY_ROBOT");
+  ...
+}
+
+void webots_physics_step() {
+   ...
+   dVector3 f;
+   f[0] = ...
+   f[1] = ...
+   f[2] = ...
+   ...
+   // at every time step, add a force to the body
+   dBodyAddForce(body, f[0], f[1], f[2]);
+   ...
+}
+```
+
+There is more info on the plugin functions in the `Reference Manual` in the chapter about Physics Plugins.
+Additional information about the ODE functions can be found [here](http://ode-wiki.org/wiki/index.php?title=Manual).
+You may also want to study this example distributed with Webots:
+
+```
+WEBOTS_MODULES_PATH/projects/samples/demos/worlds/salamander.wbt
+```
+
+In this example, the physics plugin adds user computed forces to the robot body in order to simulate Archimedes and hydrodynamic drag forces.
+
 
 ### How can I draw in the 3D window?
 
@@ -168,7 +250,37 @@ specified in the `boundingObject`s. Now if you want to programmatically detect
 collision, there are several methods:
 
 1. In controller code: you can detect collision by using `TouchSensor`s placed around your robot body or where the collision is expected. You can use `TouchSensor`s of type "bumper" that return a boolean status 1 or 0, whether there is a collision or not. In fact a "bumper" `TouchSensor` will return 1 when its `boundingObject` intersects another `boundingObject` and 0 otherwise.
-2. In supervisor code (Webots PRO required): you can detect collisions by tracking the position of robots using the `wb_supervisor_field_get_*()` functions. Here is a naive example assuming that the robots are cylindrical and moving in the xz-plane. `#define ROBOT_RADIUS ... ... int are_colliding(WbFieldRef trans1, WbFieldRef trans2) { const double *p1 = wb_supervisor_field_get_sf_vec3f(trans1); const double *p2 = wb_supervisor_field_get_sf_vec3f(trans2); double dx = p2[0] - p1[0]; double dz = p2[2] - p1[2]; double dz = p2[2] - p1[2]; return sqrt(dx * dx + dz * dz) lt 2.0 * ROBOT_RADIUS; } ... // do this once only, in the initialization WbNodeRef robot1 = wb_supervisor_node_get_from_def("MY_ROBOT1"); WbNodeRef robot2 = wb_supervisor_node_get_from_def("MY_ROBOT2"); WbFieldRef trans1 = wb_supervisor_node_get_field(robot1, "translation"); WbFieldRef trans2 = wb_supervisor_node_get_field(robot2, "translation"); ... // detect collision if (are_colliding(trans1, trans2)) { ... }`
+2. 
+In supervisor code (Webots PRO required): you can detect collisions by tracking the position of robots using the `wb_supervisor_field_get_*()` functions.
+Here is a naive example assuming that the robots are cylindrical and moving in the xz-plane.
+
+```
+#define ROBOT_RADIUS ...
+...
+int are_colliding(WbFieldRef trans1, WbFieldRef trans2) {
+  const double *p1 = wb_supervisor_field_get_sf_vec3f(trans1);
+  const double *p2 = wb_supervisor_field_get_sf_vec3f(trans2);
+  double dx = p2[0] - p1[0];
+  double dz = p2[2] - p1[2];
+  double dz = p2[2] - p1[2];
+  return sqrt(dx * dx + dz * dz) lt 2.0 * ROBOT_RADIUS;
+}
+  ...
+  // do this once only, in the initialization
+  WbNodeRef robot1 = wb_supervisor_node_get_from_def("MY_ROBOT1");
+  WbNodeRef robot2 = wb_supervisor_node_get_from_def("MY_ROBOT2");
+  WbFieldRef trans1 = wb_supervisor_node_get_field(robot1, "translation");
+  WbFieldRef trans2 = wb_supervisor_node_get_field(robot2, "translation");
+  ...
+  // detect collision
+  if (are_colliding(trans1, trans2)) {
+    ...
+  }
+```
+
+
+
+
 3. In the physics plugin (Webots PRO required): you can replace or extend Webots collision detection mechanism. This is an advanced technique that requires knowledge of the [ODE (Open Dynamics Engine) API](http://ode-wiki.org/wiki/index.php?title=Manual). Your collision detection mechanism must be implemented in the `webots_physics_collide()` function. This function is described in the Physics Plugin chapter of the `Reference Manual`.
 
 ### Why does my camera window stay black?

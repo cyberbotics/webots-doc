@@ -7,14 +7,19 @@ redirect Webots graphical output to another computer.
 
 ### Using the ssh command
 
-Here is the usual way to start from computer A, a Webots instance that will run
-on computer B: `$ ssh myname@computerB.org $ export DISPLAY=:0.0 $ webots
---mode=fast --stdout --stderr myworld.wbt` The first line logs onto computer B.
-The 2nd line sets the DISPLAY variable to the display 0 (and screen 0) of
-computer B. This will indicate to all X11 applications (including Webots) that
-they needs to connect to the X-server running on the local computer: computer B
-in this case. This step is necessary because the DISPLAY variable is usually not
-set in an `ssh` session.
+
+Here is the usual way to start from computer A, a Webots instance that will run on computer B:
+
+```
+$ ssh myname@computerB.org
+$ export DISPLAY=:0.0
+$ webots --mode=fast --stdout --stderr myworld.wbt
+```
+
+The first line logs onto computer B.
+The 2nd line sets the DISPLAY variable to the display 0 (and screen 0) of computer B.
+This will indicate to all X11 applications (including Webots) that they needs to connect to the X-server running on the local computer: computer B in this case.
+This step is necessary because the DISPLAY variable is usually not set in an `ssh` session.
 
 The last line starts Webots: the *--mode=fast* option enables the *Fast*
 simulation mode, which is available only with Webots PRO. The *--mode=fast*
@@ -36,14 +41,19 @@ For security reasons, the screen of the open session on computer B can be locked
 
 ### Terminating the ssh session
 
-A little problem with the above approach is that closing the `ssh` session will
-kill the remote jobs, including Webots. Fortunately it is easy to overcome this
-problem by starting the Webots as a background job and redirecting its output to
-a file: `$ ssh myname@computerB.org $ export DISPLAY=:0.0 $ webots --mode=fast
---stdout --stderr myworld.wbt ampgt out.txt amp $ exit` The ampgt sign redirects
-into a text file the output that would otherwise appear in the `ssh` terminal.
-The amp sign starts Webots as a background job: so the user can safely exit the
-`ssh` session, while Webots keeps running.
+
+A little problem with the above approach is that closing the `ssh` session will kill the remote jobs, including Webots.
+Fortunately it is easy to overcome this problem by starting the Webots as a background job and redirecting its output to a file:
+
+```
+$ ssh myname@computerB.org
+$ export DISPLAY=:0.0
+$ webots --mode=fast --stdout --stderr myworld.wbt ampgt out.txt amp
+$ exit
+```
+
+The ampgt sign redirects into a text file the output that would otherwise appear in the `ssh` terminal.
+The amp sign starts Webots as a background job: so the user can safely exit the `ssh` session, while Webots keeps running.
 
 In this case the decision to terminate the job is usually made in the Supervisor
 code according to simulation specific criteria. The

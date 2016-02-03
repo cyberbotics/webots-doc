@@ -23,28 +23,53 @@ spotting the Cyberbotics section and click on the `Webots` icon.
 
 ### Command Line Arguments
 
-Following command line options are available when starting Webots from a
-Terminal (Linux/Mac) or a Command Prompt (Windows): `SYNOPSIS: webots [options]
-[worldfile] OPTIONS: --minimize                  minimize Webots window on
-startup --mode=ltmodegt               choose startup mode (overrides application
-preferences) argument ltmodegt must be one of: pause, realtime, run or fast
-(Webots PRO is required to use: --mode==run or --mode=fast) --help
-display this help message and exit --sysinfo                   display
-information of the system and exit --version                   display version
-information and exit --uuid                      display the UUID of the
-computer and exit --stdout                    redirect the controller stdout to
-the terminal --stderr                    redirect the controller stderr to the
-terminal --disable-modules-download  skip the check for module updates --force-
-modules-download    automatically download module updates (if any) at startup
---start-streaming-server    starts the Webots streaming server (Webots PRO is
-required) [="key[=value];..."]         parameters may be given as an option:
-port=1234 : starts the streaming server on port 1234 monitorActivity : prints a
-dot '.' on stdout every 5 seconds disableStandardStreamsRedirection : disables
-the streaming of the standard output and error streams --log-performance="ltfile
-pathgt[,ltsteps countgt]" measure the performance of Webots and log it in the
-specified ltfile pathgt file. ltsteps countgt is an optional integer value that
-specifies how many steps are analyzed. If '--sysinfo' is also set then the
-system information are printed in the log file.`
+
+Following command line options are available when starting Webots from a Terminal (Linux/Mac) or a Command Prompt (Windows):
+
+```
+SYNOPSIS: webots [options] [worldfile]
+OPTIONS:
+  --minimize                  minimize Webots window on startup
+  --mode=ltmodegt               choose startup mode (overrides
+                              application preferences)
+                              argument ltmodegt must be one of:
+                              pause, realtime, run or fast
+                              (Webots PRO is required to use:
+                              --mode==run or --mode=fast)
+  --help                      display this help message and exit
+  --sysinfo                   display information of the system and
+                              exit
+  --version                   display version information and exit
+  --uuid                      display the UUID of the computer and exit
+  --stdout                    redirect the controller stdout to the
+                              terminal
+  --stderr                    redirect the controller stderr to the
+                              terminal
+  --disable-modules-download  skip the check for module updates
+  --force-modules-download    automatically download module updates
+                              (if any) at startup
+  --start-streaming-server    starts the Webots streaming server
+                              (Webots PRO is required)
+    [="key[=value];..."]         parameters may be given as an option:
+                                   port=1234 :
+                                     starts the streaming server
+                                     on port 1234
+                                   monitorActivity :
+                                     prints a dot '.' on stdout every
+                                     5 seconds
+                                   disableStandardStreamsRedirection :
+                                     disables the streaming of the
+                                     standard output and error streams
+  --log-performance="ltfile pathgt[,ltsteps countgt]"
+                              measure the performance of Webots and
+                              log it in the specified ltfile pathgt
+                              file. ltsteps countgt is an optional
+                              integer value that specifies how many
+                              steps are analyzed. If '--sysinfo' is
+                              also set then the system information are
+                              printed in the log file.
+```
+
 
 The optional `worldfile` argument specifies the name of a .wbt file to open. If
 it is not specified, Webots attempts to open the most recently opened file.

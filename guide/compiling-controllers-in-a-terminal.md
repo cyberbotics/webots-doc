@@ -9,10 +9,22 @@ some examples:
 
 ### Mac OS X and Linux
 
-These examples assume that Webots is installed in the default directory. On
-Linux, type this: `$ export WEBOTS_HOME=/usr/local/webots` or add this line to
-your "~/.bash_profile" file. On Mac OS X, type this: `$ export
-WEBOTS_HOME=/Applications/Webots` or add this line to your "~/.profile" file.
+
+These examples assume that Webots is installed in the default directory.
+On Linux, type this:
+
+```
+$ export WEBOTS_HOME=/usr/local/webots
+```
+
+or add this line to your "~/.bash_profile" file.
+On Mac OS X, type this:
+
+```
+$ export WEBOTS_HOME=/Applications/Webots
+```
+
+or add this line to your "~/.profile" file.
 
 Once `WEBOTS_HOME` is defined, you should be able to compile in a terminal, with
 the `make` command. Like with the editor buttons, it is possible to build the

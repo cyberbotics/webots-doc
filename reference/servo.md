@@ -114,36 +114,52 @@ simulator (ODE joint motors).
 ####Servo control
 </center>
 
-At each simulation step, the P-controller (2) recomputes the current velocity
-*Vc* according to the following algorithm: `Vc = P * (Pt - Pc); if (abs(Vc) >
-Vd) Vc = sign(Vc) * Vd; if (A != -1) { a = (Vc - Vp) / ts; if (abs(a) > A) a =
-sign(a) * A; Vc = Vp + a * ts; }` where  `V` is the current servo velocity in
-rad/s or m/s, `P` is the P-control parameter specified in `controlP` field or
-set with `wb_servo_set_control_p()`, `P` is the *target position* of the servo
-set by the function `wb_servo_set_position()`, `P` is the current servo position
-as reflected by the `position` field, `V` is the desired velocity as specified
-by the `maxVelocity` field (default) or set with `wb_servo_set_velocity()`, `a`
-is the acceleration required to reach *Vc* in one time step, `V` is the motor
-velocity of the previous time step, `t` is the duration of the simulation time
-step as specified by the `basicTimeStep` field of the `WorldInfo` node
-(converted in seconds), and `A` is the acceleration of the servo motor as
-specified by the `acceleration` field (default) or set with
-`wb_servo_set_acceleration()`.
+
+At each simulation step, the P-controller (2) recomputes the current velocity *Vc* according to the following algorithm:
+
+```
+Vc = P * (Pt - Pc);
+if (abs(Vc) > Vd)
+  Vc = sign(Vc) * Vd;
+if (A != -1) {
+  a = (Vc - Vp) / ts;
+  if (abs(a) > A)
+    a = sign(a) * A;
+  Vc = Vp + a * ts;
+}
+```
+
+where  `V` is the current servo velocity in rad/s or m/s,
+`P` is the P-control parameter specified in `controlP` field or set with `wb_servo_set_control_p()`,
+`P` is the *target position* of the servo set by the function `wb_servo_set_position()`,
+`P` is the current servo position as reflected by the `position` field,
+`V` is the desired velocity as specified by the `maxVelocity` field (default) or set with `wb_servo_set_velocity()`,
+`a` is the acceleration required to reach *Vc* in one time step,
+`V` is the motor velocity of the previous time step,
+`t` is the duration of the simulation time step as specified by the `basicTimeStep` field of the `WorldInfo` node (converted in seconds), and
+`A` is the acceleration of the servo motor as specified by the `acceleration` field (default) or set with `wb_servo_set_acceleration()`.
+
 
 ### Velocity Control
 
-The servos can also be used with *velocity control* instead of *position
-control*. This is obtained with two function calls: first the
-`wb_servo_set_position()` function must be called with `INFINITY` as a position
-parameter, then the desired velocity, which may be positive or negative, must be
-specified by calling the `wb_servo_set_velocity()` function. This will initiate
-a continuous servo motion at the desired speed, while taking into account the
-specified acceleration and motor force. Example: `wb_servo_set_position(servo,
-INFINITY); wb_servo_set_velocity(servo, 6.28);  // 1 rotation per second`
+
+The servos can also be used with *velocity control* instead of *position control*.
+This is obtained with two function calls: first the `wb_servo_set_position()` function must be called with `INFINITY` as a position parameter,
+then the desired velocity, which may be positive or negative, must be specified by calling the `wb_servo_set_velocity()` function.
+This will initiate a continuous servo motion at the desired speed, while taking into account
+the specified acceleration and motor force. Example:
+
+```
+wb_servo_set_position(servo, INFINITY);
+wb_servo_set_velocity(servo, 6.28);  // 1 rotation per second
+```
+
 `INFINITY` is a C macro corresponding to the IEEE 754 floating point standard.
-It is implemented in the C99 specifications as well as in C++. In Java, this
-value is defined as `Double.POSITIVE_INFINITY`. In Python, you should use
-`float('inf')`. Finally, in Matlab you should use the `inf` constant.
+It is implemented in the C99 specifications as well as in C++.
+In Java, this value is defined as `Double.POSITIVE_INFINITY`.
+In Python, you should use `float('inf')`.
+Finally, in Matlab you should use the `inf` constant.
+
 
 ### Force Control
 

@@ -102,6 +102,7 @@ class BookParser:
         #     inlinegraphic, keycap, math, parameter, programlisting, trademark
         #     ulink, xref
         text = ''
+        containsProgram = False
         if node.text:
             text += self.parseText(node.text)
         for child in node.getchildren():
@@ -114,12 +115,28 @@ class BookParser:
                     text += '"' + self.parseText(child.text) + '"'
                 elif child.tag == 'ulink':
                     text += '[' + self.parseText(child.text) + '](' + child.attrib.get('url') + ')'
+                elif child.tag == 'programlisting':
+                    text += self.parseProgramListing(child, None)
+                    text = re.sub(r"(\s)*$", "\n", text)
+                    containsProgram = True
                 else:
                     text += '`' + self.parseText(child.text) + '`'
             text += self.parseText(child.tail)
         text += self.parseText(node.tail)
 
-        if format:
+        if containsProgram:
+            content = text.split('\n')
+            inProgram = False
+            for line in content:
+                if '```' in line:
+                    inProgram = not inProgram
+                
+                if inProgram:
+                    line = re.sub(r"(\s)*$", "", line)
+                    outFile.write(line + '\n')
+                else:
+                    outFile.write(line.strip() + '\n')
+        elif format:
             content = text.split('\n')
             text = ' '.join(map(lambda x: x.strip(), content)).strip()
             content = textwrap.wrap(text, width=80)
@@ -133,22 +150,27 @@ class BookParser:
             outFile.write(text.strip())
 
     def parseProgramListing(self, node, outFile):
-        outFile.write('\n```')
+        output = '\n```'
         lang = node.attrib.get('lang')
         if lang is not None:
             if 'c' in lang:
-                outFile.write(' c')
+                output += ' c'
             elif 'C' in lang:
-                outFile.write(' c++')
+                output += ' c++'
             elif 'J' in lang:
-                outFile.write(' java')
+                output += ' java'
             elif 'P' in lang:
-                outFile.write(' python')
+                output += ' python'
             elif 'M' in lang:
-                outFile.write(' matlab')
-        outFile.write('\n')
-        outFile.write(self.parseText(node.text) + '\n')
-        outFile.write('```\n\n')
+                output += ' matlab'
+        output += '\n'
+        output += self.parseText(node.text) + '\n'
+        output += '```\n\n'
+
+        if outFile:
+            outFile.write(output)
+        else:
+            return output
 
     def parseFigure(self, node, outFile):
         title = ''

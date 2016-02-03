@@ -45,33 +45,62 @@ the sensor/actuator noise the following field values must be reset:
 
 ### How can I create a passive joint?
 
-First of all, any joint, passive or active, must be created by adding a
-`Joint`-derived node (depending on the constraint type requested) in the Scene
-Tree. A `Joint` is passive if its device is null (or at least not a
-`Motor`-derived node. Alternatively, it is also possible to make a `Motor`
-become passive during the simulation; this can be done like this:
-`wb_motor_set_motor_force(motor, 0.0);` The effect is similar to turning off the
-power of a real motor.
+
+First of all, any joint, passive or active, must be created by adding a `Joint`-derived node (depending on the constraint type requested) in the Scene Tree.
+A `Joint` is passive if its device is null (or at least not a
+`Motor`-derived node.
+Alternatively, it is also possible to make a `Motor` become passive during the simulation; this can be done like this:
+
+```
+wb_motor_set_motor_force(motor, 0.0);
+```
+
+The effect is similar to turning off the power of a real motor.
+
 
 ### Is it possible fix/immobilize one part of a robot?
 
-To immobilize one part of the robot, you need to fix the part to the static
-environment. This must be done with a *physics plugin* (Webots PRO required).
+
+To immobilize one part of the robot, you need to fix the part to the static environment.
+This must be done with a *physics plugin* (Webots PRO required).
 You can add a physics plugin with the menu item: `Wizards > New Physics Plugin`.
-In the plugin code, you must simply add an ODE *fixed joint* between the
-*dBodyID* of the robot part and the static environment. This can be implemented
-like this: `#include ltode/ode.hgt #include ltplugins/physics.hgt  void
-webots_physics_init() {  // get body of the robot part dBodyID body =
-dWebotsGetBodyFromDEF("MY_ROBOT_PART");  // get the matching world dWorldID
-world = dBodyGetWorld(body);  // the joint group ID is 0 to allocate the joint
-normally dJointID joint = dJointCreateFixed(world, 0);  // attach robot part to
-the static environment: 0 dJointAttach(joint, body, 0);  // fix now: remember
-current position and rotation dJointSetFixed(joint); }  void
-webots_physics_step() { // nothing to do }  void webots_physics_cleanup() { //
-nothing to do }` You will find the description of Webots physics plugin API in
-your `Reference Manual` or on [this page](http://www.cyberbotics.com/reference
-/physics-plugin.php). You will find the description about the ODE functions on
-[this page](http://ode-wiki.org/wiki/index.php?title=Manual).
+In the plugin code, you must simply add an ODE *fixed joint* between the *dBodyID* of the robot part and the static environment.
+This can be implemented like this:
+
+```
+#include ltode/ode.hgt
+#include ltplugins/physics.hgt
+
+void webots_physics_init() {
+
+  // get body of the robot part
+  dBodyID body = dWebotsGetBodyFromDEF("MY_ROBOT_PART");
+
+  // get the matching world
+  dWorldID world = dBodyGetWorld(body);
+
+  // the joint group ID is 0 to allocate the joint normally
+  dJointID joint = dJointCreateFixed(world, 0);
+
+  // attach robot part to the static environment: 0
+  dJointAttach(joint, body, 0);
+
+  // fix now: remember current position and rotation
+  dJointSetFixed(joint);
+}
+
+void webots_physics_step() {
+  // nothing to do
+}
+
+void webots_physics_cleanup() {
+  // nothing to do
+}
+```
+
+You will find the description of Webots physics plugin API in your `Reference Manual` or on [this page](http://www.cyberbotics.com/reference/physics-plugin.php).
+You will find the description about the ODE functions on [this page](http://ode-wiki.org/wiki/index.php?title=Manual).
+
 
 ### Should I specify the "mass" or the "density" in the Physics nodes?
 

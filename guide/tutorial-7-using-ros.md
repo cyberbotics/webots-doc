@@ -6,13 +6,16 @@ located in "WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick".
 
 ### Creating a Webots project that contains a ROS package
 
-The "joystick" controller is a Webots controller written in C++ and implemented
-as a ROS node. It subscribes to the *joy/joy* topic of the "joy_node" (see ROS
-"joy" package) in order to listen to the joystick state. The relevant line in
-"webots_joystick_node.cpp" is: `ros::Subscriber sub=nh.subscribe("joy", 10,
-joy_callback);` which prompts ten times per second the callback function
-*joycall_back* to transform the joystick sensed values into a robot motion
-command.
+
+The "joystick" controller is a Webots controller written in C++ and implemented as a ROS node. It subscribes to the *joy/joy*
+topic of the "joy_node" (see ROS "joy" package) in order to listen to the joystick state. The relevant line in "webots_joystick_node.cpp" is:
+
+```
+ros::Subscriber sub=nh.subscribe("joy", 10, joy_callback);
+```
+which prompts ten times per second
+the callback function *joycall_back* to transform the joystick sensed values into a robot motion command.
+
 
 We now describe the actions to setup the controller directory
 "WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick" both on ROS

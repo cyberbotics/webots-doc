@@ -20,14 +20,17 @@ dBodyID dWebotsGetBodyFromDEF(const char *DEF);
 
 where DEF is the DEF name of the requested `Solid` node.
 
-It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
-can be used when looking for a specific node path in the node hierarchy. For
-example: `dBodyID head_pitch_body =
-dWebotsGetBodyFromDEF("BLUE_PLAYER_1.HeadYaw.HeadPitch");` means that we are
-searching for a `Solid` node named "HeadPitch" inside a node named "HeadYaw",
-inside a node named "BLUE_PLAYER_1". Note that each dot (.) can be substituted
-by any number of named or unnamed nodes, so in other words it is not necessary
-to fully specify the path.
+
+It is possible to use dots (.) as scoping operator in the DEF parameter.
+Dots can be used when looking for a specific node path in the node hierarchy.
+For example:
+
+```
+dBodyID head_pitch_body = dWebotsGetBodyFromDEF("BLUE_PLAYER_1.HeadYaw.HeadPitch");
+```
+
+means that we are searching for a `Solid` node named "HeadPitch" inside a node named "HeadYaw", inside a node named "BLUE_PLAYER_1".
+Note that each dot (.) can be substituted by any number of named or unnamed nodes, so in other words it is not necessary to fully specify the path.
 
 This function returns NULL if there is no `Solid` (or derived) node with the
 specified DEF name. It will also return NULL if the `physics` field of the

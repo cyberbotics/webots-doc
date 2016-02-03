@@ -11,8 +11,14 @@ entering and after leaving the controller code.
 If the `MATLAB` code uses graphics, it is necessary to call the `drawnow`
 command somewhere in the control loop in order to flush the graphics.
 
-Here is a simple `MATLAB` controller example: `% uncomment the next two lines to
-use the `
+
+Here is a simple `MATLAB` controller example:
+
+```
+% uncomment the next two lines to use the
+```
+
+
 
 ### Using the 
 

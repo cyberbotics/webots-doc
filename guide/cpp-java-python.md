@@ -73,37 +73,127 @@ etc. The various devices instances can be obtained with dedicated methods of the
 
 ### C++ Example
 
-`#include ltwebots/Robot.hppgt #include ltwebots/LED.hppgt #include
-ltwebots/DistanceSensor.hppgt  using namespace webots;  #define TIME_STEP 32
-class MyRobot : public Robot { private: LED *led; DistanceSensor
-*distanceSensor;  public: MyRobot() : Robot() { led = getLED("ledName");
-distanceSensor = getDistanceSensor("distanceSensorName");
-distanceSensor->enable(TIME_STEP); }  virtual ~MyRobot() { // Enter here exit
-cleanup code }  void run() { // Main control loop while (step(TIME_STEP) != -1)
-{ // Read the sensors double val = distanceSensor->getValue();  // Process
-sensor data here  // Enter here functions to send actuator commands led->set(1);
-} } };  int main(int argc, char **argv) { MyRobot *robot = new MyRobot();
-robot->run(); delete robot; return 0; }`
+
+
+``` c
+#include ltwebots/Robot.hppgt
+#include ltwebots/LED.hppgt
+#include ltwebots/DistanceSensor.hppgt
+
+using namespace webots;
+
+#define TIME_STEP 32
+
+class MyRobot : public Robot {
+  private:
+    LED *led;
+    DistanceSensor *distanceSensor;
+
+  public:
+    MyRobot() : Robot() {
+      led = getLED("ledName");
+      distanceSensor = getDistanceSensor("distanceSensorName");
+      distanceSensor->enable(TIME_STEP);
+    }
+
+    virtual ~MyRobot() {
+      // Enter here exit cleanup code
+    }
+
+    void run() {
+      // Main control loop
+      while (step(TIME_STEP) != -1) {
+        // Read the sensors
+        double val = distanceSensor->getValue();
+
+        // Process sensor data here
+
+        // Enter here functions to send actuator commands
+        led->set(1);
+      }
+    }
+};
+
+int main(int argc, char **argv) {
+  MyRobot *robot = new MyRobot();
+  robot->run();
+  delete robot;
+  return 0;
+}
+```
+
+
 
 ### Java Example
 
-`import com.cyberbotics.webots.controller.*;  public class MyRobot extends Robot
-{ private LED led; private DistanceSensor distanceSensor; private static final
-int TIME_STEP = 32;  // milliseconds  public MyRobot() { super(); led =
-getLED("my_led"); distanceSensor = getDistanceSensor("my_distance_sensor");
-distanceSensor.enable(TIME_STEP); }  public void run() { // main control loop
-while (step(TIME_STEP) != -1) { // Read the sensors, like: double val =
-distanceSensor.getValue();  // Process sensor data here  // Enter here functions
-to send actuator commands, like: led.set(1); }  // Enter here exit cleanup code
-}  public static void main(String[] args) { MyRobot robot = new MyRobot();
-robot.run(); } }`
+
+
+```
+import com.cyberbotics.webots.controller.*;
+
+public class MyRobot extends Robot {
+  private LED led;
+  private DistanceSensor distanceSensor;
+  private static final int TIME_STEP = 32;  // milliseconds
+
+  public MyRobot() {
+    super();
+    led = getLED("my_led");
+    distanceSensor = getDistanceSensor("my_distance_sensor");
+    distanceSensor.enable(TIME_STEP);
+  }
+
+  public void run() {
+    // main control loop
+    while (step(TIME_STEP) != -1) {
+      // Read the sensors, like:
+      double val = distanceSensor.getValue();
+
+      // Process sensor data here
+
+      // Enter here functions to send actuator commands, like:
+      led.set(1);
+    }
+
+    // Enter here exit cleanup code
+  }
+
+  public static void main(String[] args) {
+    MyRobot robot = new MyRobot();
+    robot.run();
+  }
+}
+```
+
+
 
 ### Python Example
 
-`from controller import *  class MyRobot (Robot): def run(self): led =
-self.getLed('ledName') distanceSensor =
-self.getDistanceSensor('distanceSensorName') distanceSensor.enable(32)  while
-(self.step(32) != -1): # Read the sensors, like: val = distanceSensor.getValue()
-# Process sensor data here  # Enter here functions to send actuator commands,
-like: led.set(1)  # Enter here exit cleanup code  robot = MyRobot() robot.run()`
+
+
+```
+from controller import *
+
+class MyRobot (Robot):
+  def run(self):
+    led = self.getLed('ledName')
+    distanceSensor = self.getDistanceSensor('distanceSensorName')
+    distanceSensor.enable(32)
+
+    while (self.step(32) != -1):
+      # Read the sensors, like:
+      val = distanceSensor.getValue()
+
+      # Process sensor data here
+
+      # Enter here functions to send actuator commands, like:
+      led.set(1)
+
+    # Enter here exit cleanup code
+
+robot = MyRobot()
+robot.run()
+```
+
+
 

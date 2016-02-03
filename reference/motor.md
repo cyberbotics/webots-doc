@@ -83,37 +83,60 @@ simulator (ODE joint motors).
 ####Motor control
 </center>
 
-At each simulation step, the PID-controller (2) recomputes the current velocity
-*Vc* according to following algorithm: `error = Pt - Pc; error_integral += error
-* ts; error_derivative = (previous_error - error) / ts; Vc = P * error + D *
-error_derivative + I * error_integral ; if (abs(Vc) > Vd) Vc = sign(Vc) * Vd; if
-(A != -1) { a = (Vc - Vp) / ts; if (abs(a) > A) a = sign(a) * A; Vc = Vp + a *
-ts; }` where  `V` is the current motor velocity in rad/s or m/s, `P, I` and `D`
-are the PID-control gains specified in the `controlPID` field, or set with
-`wb_motor_set_control_pid()`, `P` is the *target position* of the motor set by
-the function `wb_motor_set_position()`, `P` is the current motor position as
-reflected by the `position` field, `V` is the desired velocity as specified by
-the `maxVelocity` field (default) or set with `wb_motor_set_velocity()`, `a` is
-the acceleration required to reach *Vc* in one time step, `V` is the motor
-velocity of the previous time step, `t` is the duration of the simulation time
-step as specified by the `basicTimeStep` field of the `WorldInfo` node
-(converted in seconds), and `A` is the acceleration of the motor as specified by
-the `acceleration` field (default) or set with `wb_motor_set_acceleration()`.
+
+At each simulation step, the PID-controller (2) recomputes the current velocity *Vc* according to following algorithm:
+
+```
+error = Pt - Pc;
+error_integral += error * ts;
+error_derivative = (previous_error - error) / ts;
+Vc = P * error + D * error_derivative + I * error_integral ;
+if (abs(Vc) > Vd)
+  Vc = sign(Vc) * Vd;
+if (A != -1) {
+  a = (Vc - Vp) / ts;
+  if (abs(a) > A)
+    a = sign(a) * A;
+  Vc = Vp + a * ts;
+}
+```
+
+where  `V` is the current motor velocity in rad/s or m/s,
+`P, I` and `D` are the PID-control gains specified in the `controlPID` field,
+or set with `wb_motor_set_control_pid()`,
+`P` is the *target position* of the motor set by the function `wb_motor_set_position()`,
+`P` is the current motor position as reflected by the `position` field,
+`V` is the desired velocity as specified by the `maxVelocity`
+field (default) or set with `wb_motor_set_velocity()`,
+`a` is the acceleration required to reach *Vc* in one time step,
+`V` is the motor velocity of the previous time step,
+`t` is the duration of the simulation time step as specified by the
+`basicTimeStep` field of the `WorldInfo` node (converted in seconds), and
+`A` is the acceleration of the motor as specified by the `acceleration`
+field (default) or set with `wb_motor_set_acceleration()`.
+
 
 ### Velocity Control
 
-The motors can also be used with *velocity control* instead of *position
-control*. This is obtained with two function calls: first the
-`wb_motor_set_position()` function must be called with `INFINITY` as a position
-parameter, then the desired velocity, which may be positive or negative, must be
-specified by calling the `wb_motor_set_velocity()` function. This will initiate
-a continuous motor motion at the desired speed, while taking into account the
-specified acceleration and motor force. Example: `wb_motor_set_position(motor,
-INFINITY); wb_motor_set_velocity(motor, 6.28);  // 1 rotation per second`
+
+The motors can also be used with *velocity control* instead of *position control*.
+This is obtained with two function calls: first the `wb_motor_set_position()` function
+must be called with `INFINITY` as a position parameter,
+then the desired velocity, which may be positive or negative, must be specified by calling the `wb_motor_set_velocity()` function.
+This will initiate a continuous motor motion at the desired speed, while taking into account
+the specified acceleration and motor force. Example:
+
+```
+wb_motor_set_position(motor, INFINITY);
+wb_motor_set_velocity(motor, 6.28);  // 1 rotation per second
+```
+
 `INFINITY` is a C macro corresponding to the IEEE 754 floating point standard.
-It is implemented in the C99 specifications as well as in C++. In Java, this
-value is defined as `Double.POSITIVE_INFINITY`. In Python, you should use
-`float('inf')`. Finally, in Matlab you should use the `inf` constant.
+It is implemented in the C99 specifications as well as in C++.
+In Java, this value is defined as `Double.POSITIVE_INFINITY`.
+In Python, you should use `float('inf')`.
+Finally, in Matlab you should use the `inf` constant.
+
 
 ### Force and Torque Control
 

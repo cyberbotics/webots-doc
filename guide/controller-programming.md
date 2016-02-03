@@ -5,13 +5,28 @@ C++/Java/Python/Matlab.
 
 ### Hello World Example
 
-The tradition in computer science is to start with a "Hello World!" example. So
-here is a "Hello World!" example for a Webots controller: `#include
-ltwebots/robot.hgt #include ltstdio.hgt  int main() { wb_robot_init();  while
-(1) { printf("Hello World!\n"); wb_robot_step(32); }  return 0; }` This code
-repeatedly prints `"Hello World!"` to the standard output stream which is
-redirected to Webots console. The standard output and error streams are
-automatically redirected to Webots console for all Webots supported languages.
+
+The tradition in computer science is to start with a "Hello World!" example.
+So here is a "Hello World!" example for a Webots controller:
+
+``` c
+#include ltwebots/robot.hgt
+#include ltstdio.hgt
+
+int main() {
+  wb_robot_init();
+
+  while (1) {
+    printf("Hello World!\n");
+    wb_robot_step(32);
+  }
+
+  return 0;
+}
+```
+
+This code repeatedly prints `"Hello World!"` to the standard output stream which is redirected to Webots console.
+The standard output and error streams are automatically redirected to Webots console for all Webots supported languages.
 
 Webots C API (Application Programming Interface) is provided by regular C header
 files. These header files must be included using statements like `#include
@@ -41,21 +56,37 @@ long as the simulation runs.
 
 ### Reading Sensors
 
-Now that we have seen how to print a message to the console, we shall see how to
-read the sensors of a robot. The next example does continuously update and print
-the value returned by a `DistanceSensor`: `#include ltwebots/robot.hgt #include
-ltwebots/distance_sensor.hgt #include ltstdio.hgt  #define TIME_STEP 32  int
-main() { wb_robot_init();  WbDeviceTag ds =
-wb_robot_get_device("my_distance_sensor"); wb_distance_sensor_enable(ds,
-TIME_STEP);  while (1) { wb_robot_step(TIME_STEP); double dist =
-wb_distance_sensor_get_value(ds); printf("sensor value is %f\n", dist); }
-return 0; }` As you can notice, prior to using a device, it is necessary to get
-the corresponding device tag (`WbDeviceTag`); this is done using the
-`wb_robot_get_device()` function. The `WbDeviceTag` is an opaque type that is
-used to identify a device in the controller code. Note that the string passed to
-this function, *"my_distance_sensor"* in this example, refers to a device name
-specified in the robot description (".wbt" or ".proto" file). If the robot has
-no device with the specified name, this function returns 0.
+
+Now that we have seen how to print a message to the console, we shall see how to read the sensors of a robot.
+The next example does continuously update and print the value returned by a `DistanceSensor`:
+
+``` c
+#include ltwebots/robot.hgt
+#include ltwebots/distance_sensor.hgt
+#include ltstdio.hgt
+
+#define TIME_STEP 32
+
+int main() {
+  wb_robot_init();
+
+  WbDeviceTag ds = wb_robot_get_device("my_distance_sensor");
+  wb_distance_sensor_enable(ds, TIME_STEP);
+
+  while (1) {
+    wb_robot_step(TIME_STEP);
+    double dist = wb_distance_sensor_get_value(ds);
+    printf("sensor value is %f\n", dist);
+  }
+
+  return 0;
+}
+```
+
+As you can notice, prior to using a device, it is necessary to get the corresponding device tag (`WbDeviceTag`); this is done using the `wb_robot_get_device()` function.
+The `WbDeviceTag` is an opaque type that is used to identify a device in the controller code.
+Note that the string passed to this function, *"my_distance_sensor"* in this example, refers to a device name specified in the robot description (".wbt" or ".proto" file).
+If the robot has no device with the specified name, this function returns 0.
 
 Each sensor must be enabled before it can be used. If a sensor is not enabled it
 returns undefined values. Enabling a sensor is achieved using the corresponding
@@ -79,26 +110,55 @@ possible to disable a device at any time using the corresponding
 The sensor value is updated during the call to `wb_robot_step()`. The call to
 `wb_distance_sensor_get_value()` retrieves the latest value.
 
-Note that some device return vector values instead of scalar values, for example
-these functions: `const double *wb_gps_get_values(WbDeviceTag tag); const double
-*wb_accelerometer_get_values(WbDeviceTag tag); const double
-*wb_gyro_get_values(WbDeviceTag tag); ` Each function returns a pointer to three
-double values. The pointer is the address of an array allocated by the function
-internally. These arrays should never be explicitly deleted by the controller
-code. They will be automatically deleted when necessary. The array contains
-exactly three double values. Hence accessing the array beyond index 2 is illegal
-and may crash the controller. Finally, note that the array elements should not
-be modified, for this reason the pointer is declared as *const*. Here are
-correct examples of code using these functions: `const double *pos =
-wb_gps_get_values(gps);  // OK, to read the values they should never be
-explicitly deleted by the controller code. printf("MY_ROBOT is at position: %g
-%g %g\n", pos[0], pos[1], pos[2]);  // OK, to copy the values double x, y, z; x
-= pos[0]; y = pos[1]; z = pos[2];  // OK, another way to copy the values double
-a[3] = { pos[0], pos[1], pos[2] };  // OK, yet another way to copy these values
-double b[3]; memcpy(b, pos, sizeof(b));` And here are incorrect examples: `const
-double *pos = wb_gps_get_values(gps);  pos[0] = 3.5;      // ERROR: assignment
-of read-only location double a = pos[3]; // ERROR: index out of range delete []
-pos;     // ERROR: illegal free free(pos);         // ERROR: illegal free`
+
+Note that some device return vector values instead of scalar values, for example these functions:
+
+``` c
+const double *wb_gps_get_values(WbDeviceTag tag);
+const double *wb_accelerometer_get_values(WbDeviceTag tag);
+const double *wb_gyro_get_values(WbDeviceTag tag);
+
+```
+
+Each function returns a pointer to three double values.
+The pointer is the address of an array allocated by the function internally.
+These arrays should never be explicitly deleted by the controller code. They will be automatically deleted when necessary.
+The array contains exactly three double values. Hence accessing the array beyond index 2 is illegal and may crash the controller.
+Finally, note that the array elements should not be modified, for this reason the pointer is declared as *const*.
+Here are correct examples of code using these functions:
+
+``` c
+const double *pos = wb_gps_get_values(gps);
+
+// OK, to read the values they should never be explicitly deleted by the controller code.
+printf("MY_ROBOT is at position: %g %g %g\n", pos[0], pos[1], pos[2]);
+
+// OK, to copy the values
+double x, y, z;
+x = pos[0];
+y = pos[1];
+z = pos[2];
+
+// OK, another way to copy the values
+double a[3] = { pos[0], pos[1], pos[2] };
+
+// OK, yet another way to copy these values
+double b[3];
+memcpy(b, pos, sizeof(b));
+```
+
+And here are incorrect examples:
+
+``` c
+const double *pos = wb_gps_get_values(gps);
+
+pos[0] = 3.5;      // ERROR: assignment of read-only location
+double a = pos[3]; // ERROR: index out of range
+delete [] pos;     // ERROR: illegal free
+free(pos);         // ERROR: illegal free
+```
+
+
 
 ### Using Actuators
 
@@ -110,31 +170,44 @@ returned by the `wb_robot_get_device()` function. However, unlike sensors,
 actuators don't need to be expressly enabled; they actually don't have
 `wb_*_enable()` functions.
 
-To control a motion, it is generally useful to decompose that motion in discrete
-steps that correspond to the control step. As before, an infinite loop is used
-here: at each iteration a new target position is computed according to a sine
-equation. The `wb_motor_set_position()` function stores a new position request
-for the corresponding rotational motor. Note that `wb_motor_set_position()`
-stores the new position, but it does not immediately actuate the motor. The
-effective actuation starts on the next line, in the call to `wb_robot_step()`.
-The `wb_robot_step()` function sends the actuation command to the
-`RotationalMotor` but it does not wait for the `RotationalMotor` to complete the
-motion (i.e. reach the specified target position); it just simulates the motor's
-motion for the specified number of milliseconds. `#include ltwebots/robot.hgt
-#include ltwebots/motor.hgt #include ltmath.hgt  #define TIME_STEP 32  int
-main() { wb_robot_init();  WbDeviceTag motor = wb_robot_get_device("my_motor");
-double F = 2.0;   // frequency 2 Hz double t = 0.0;   // elapsed simulation time
-while (1) { double pos = sin(t * 2.0 * M_PI * F); wb_motor_set_position(motor,
-pos); wb_robot_step(TIME_STEP); t += (double)TIME_STEP / 1000.0; }  return 0; }`
-When `wb_robot_step()` returns, the motor has moved by a certain (linear or
-rotational) amount which depends on the target position, the duration of the
-control step (specified with `wb_robot_step()`), the velocity, acceleration,
-force, and other parameters specified in the ".wbt" description of the `Motor`.
-For example, if a very small control step or a low motor velocity is specified,
-the motor will not have moved much when `wb_robot_step()` returns. In this case
-several control steps are required for the `RotationalMotor` to reach the target
-position. If a longer duration or a higher velocity is specified, then the motor
-may have fully completed the motion when `wb_robot_step()` returns.
+
+To control a motion, it is generally useful to decompose that motion in discrete steps that correspond to the control step.
+As before, an infinite loop is used here: at each iteration a new target position is computed according to a sine equation.
+The `wb_motor_set_position()` function stores a new position request for the corresponding rotational motor.
+Note that `wb_motor_set_position()` stores the new position, but
+it does not immediately actuate the motor. The effective actuation starts on the next line, in the call to `wb_robot_step()`.
+The `wb_robot_step()` function sends the actuation command to the `RotationalMotor` but it does not wait for the `RotationalMotor` to complete the motion (i.e. reach the specified target position); it just simulates the motor's motion for the specified number of milliseconds.
+
+``` c
+#include ltwebots/robot.hgt
+#include ltwebots/motor.hgt
+#include ltmath.hgt
+
+#define TIME_STEP 32
+
+int main() {
+  wb_robot_init();
+
+  WbDeviceTag motor = wb_robot_get_device("my_motor");
+
+  double F = 2.0;   // frequency 2 Hz
+  double t = 0.0;   // elapsed simulation time
+
+  while (1) {
+    double pos = sin(t * 2.0 * M_PI * F);
+    wb_motor_set_position(motor, pos);
+    wb_robot_step(TIME_STEP);
+    t += (double)TIME_STEP / 1000.0;
+  }
+
+  return 0;
+}
+```
+
+When `wb_robot_step()` returns, the motor has moved by a certain (linear or rotational) amount which depends on the target position, the duration of the control step (specified with `wb_robot_step()`), the velocity, acceleration, force, and other parameters specified in the ".wbt" description of the `Motor`.
+For example, if a very small control step or a low motor velocity is specified, the motor will not have moved much when `wb_robot_step()` returns.
+In this case several control steps are required for the `RotationalMotor` to reach the target position.
+If a longer duration or a higher velocity is specified, then the motor may have fully completed the motion when `wb_robot_step()` returns.
 
 Note that `wb_motor_set_position()` only specifies the *desired* target
 position. Just like with real robots, it is possible (in physics-based
@@ -190,42 +263,103 @@ exchanges sensors and actuators data with the Webots process during the calls to
 immediately send the data to Webots. Instead it stores the data locally and the
 data are effectively sent when `wb_robot_step()` is called.
 
-For that reason the following code snippet is a bad example. Clearly, the value
-specified with the first call to `wb_motor_set_position()` will be overwritten
-by the second call: `wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
-wb_motor_set_position(my_leg, 0.56); wb_robot_step(40);`
 
-Similarly this code does not make much sense either: `while (1) { double d1 =
-wb_distance_sensor_get_value(ds1); double d2 =
-wb_distance_sensor_get_value(ds1); if (d2 lt d1)   // WRONG: d2 will always
-equal d1 here avoidCollision(); wb_robot_step(40); }` since there was no call to
-`wb_robot_step()` between the two sensor readings, the values returned by the
-sensor cannot have changed in the meantime. A working version would look like
-this: `while (1) { double d1 = wb_distance_sensor_get_value(ds1);
-wb_robot_step(40); double d2 = wb_distance_sensor_get_value(ds1); if (d2 lt d1)
-avoidCollision(); wb_robot_step(40); }` However the generally recommended
-approach is to have a single `wb_robot_step()` call in the main control loop,
-and to use it to update all the sensors and actuators simultaneously, like this:
-`while (1) { readSensors(); actuateMotors(); wb_robot_step(TIME_STEP); }` Note
-that it may also be judicious to move `wb_robot_step()` to the beginning of the
-loop, in order to make sure that the sensors already have valid values prior to
-entering the `readSensors()` function. Otherwise the sensors will have undefined
-values during the first iteration of the loop, hence: `while (1) {
-wb_robot_step(TIME_STEP); readSensors(); actuateMotors(); }` Here is a complete
-example of using sensors and actuators together. The robot used here is a
-`DifferentialWheels` using differential steering. It uses two proximity sensors
-(`DistanceSensor`) to detect obstacles. `#include ltwebots/robot.hgt #include
-ltwebots/differential_wheels.hgt #include ltwebots/distance_sensor.hgt  #define
-TIME_STEP 32  int main() { wb_robot_init();  WbDeviceTag left_sensor =
-wb_robot_get_device("left_sensor"); WbDeviceTag right_sensor =
-wb_robot_get_device("right_sensor"); wb_distance_sensor_enable(left_sensor,
-TIME_STEP); wb_distance_sensor_enable(right_sensor, TIME_STEP);  while (1) {
-wb_robot_step(TIME_STEP);  // read sensors double left_dist =
-wb_distance_sensor_get_value(left_sensor); double right_dist =
-wb_distance_sensor_get_value(right_sensor);  // compute behavior double left =
-compute_left_speed(left_dist, right_dist); double right =
-compute_right_speed(left_dist, right_dist);  // actuate wheel motors
-wb_differential_wheels_set_speed(left, right); }  return 0; }`
+For that reason the following code snippet is a bad example.
+Clearly, the value specified with the first call to `wb_motor_set_position()` will be overwritten by the second call:
+
+``` c
+wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
+wb_motor_set_position(my_leg, 0.56);
+wb_robot_step(40);
+```
+
+
+
+Similarly this code does not make much sense either:
+
+``` c
+while (1) {
+  double d1 = wb_distance_sensor_get_value(ds1);
+  double d2 = wb_distance_sensor_get_value(ds1);
+  if (d2 lt d1)   // WRONG: d2 will always equal d1 here
+    avoidCollision();
+  wb_robot_step(40);
+}
+```
+
+since there was no call to `wb_robot_step()` between the two sensor readings, the values returned by the sensor cannot have changed in the meantime.
+A working version would look like this:
+
+``` c
+while (1) {
+  double d1 = wb_distance_sensor_get_value(ds1);
+  wb_robot_step(40);
+  double d2 = wb_distance_sensor_get_value(ds1);
+  if (d2 lt d1)
+    avoidCollision();
+  wb_robot_step(40);
+}
+```
+
+However the generally recommended approach is to have a single `wb_robot_step()` call in the main control loop, and to use it to update all the sensors and actuators simultaneously, like this:
+
+``` c
+while (1) {
+  readSensors();
+  actuateMotors();
+  wb_robot_step(TIME_STEP);
+}
+```
+
+Note that it may also be judicious to move `wb_robot_step()` to the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors()` function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence:
+
+``` c
+while (1) {
+  wb_robot_step(TIME_STEP);
+  readSensors();
+  actuateMotors();
+}
+```
+
+Here is a complete example of using sensors and actuators together.
+The robot used here is a `DifferentialWheels` using differential steering.
+It uses two proximity sensors (`DistanceSensor`) to detect obstacles.
+
+``` c
+#include ltwebots/robot.hgt
+#include ltwebots/differential_wheels.hgt
+#include ltwebots/distance_sensor.hgt
+
+#define TIME_STEP 32
+
+int main() {
+  wb_robot_init();
+
+  WbDeviceTag left_sensor = wb_robot_get_device("left_sensor");
+  WbDeviceTag right_sensor = wb_robot_get_device("right_sensor");
+  wb_distance_sensor_enable(left_sensor, TIME_STEP);
+  wb_distance_sensor_enable(right_sensor, TIME_STEP);
+
+  while (1) {
+    wb_robot_step(TIME_STEP);
+
+    // read sensors
+    double left_dist = wb_distance_sensor_get_value(left_sensor);
+    double right_dist = wb_distance_sensor_get_value(right_sensor);
+
+    // compute behavior
+    double left = compute_left_speed(left_dist, right_dist);
+    double right = compute_right_speed(left_dist, right_dist);
+
+    // actuate wheel motors
+    wb_differential_wheels_set_speed(left, right);
+  }
+
+  return 0;
+}
+```
+
+
 
 ### Using Controller Arguments
 
@@ -235,46 +369,113 @@ the `Robot, Supervisor` or `DifferentialWheels` node, and they are passed as
 parameters of the `main()` function. For example, this can be used to specify
 parameters that vary for each robot's controller.
 
-For example if we have: `Robot { ... controllerArgs "one two three" ... }` and
-if the controller name is *"demo"*, then this sample controller code: `#include
-ltwebots/robot.hgt #include ltstdio.hgt  int main(int argc, const char *argv[])
-{ wb_robot_init();  int i; for (i = 0; i lt argc; i++) printf("argv[%i]=%s\n",
-i, argv[i]);  return 0; }` will print: `argv[0]=demo argv[1]=one argv[2]=two
-argv[3]=three `
+
+For example if we have:
+
+```
+Robot {
+  ...
+  controllerArgs "one two three"
+  ...
+}
+```
+and if the controller name is *"demo"*, then this sample controller code:
+
+``` c
+#include ltwebots/robot.hgt
+#include ltstdio.hgt
+
+int main(int argc, const char *argv[]) {
+  wb_robot_init();
+
+  int i;
+  for (i = 0; i lt argc; i++)
+    printf("argv[%i]=%s\n", i, argv[i]);
+
+  return 0;
+}
+```
+
+will print:
+
+```
+argv[0]=demo
+argv[1]=one
+argv[2]=two
+argv[3]=three
+
+```
+
+
 
 ### Controller Termination
 
-Usually a controller process runs in an endless loop: it is terminated (killed)
-by Webots when the user reverts (reloads) the simulation or quits Webots. The
-controller cannot prevent its own termination but it can be notified shortly
-before this happens. The `wb_robot_step()` function returns -1 when the process
-is going to be terminated by Webots. Then the controller has 1 second (clock
-time) to save important data, close files, etc. before it is effectively killed
-by Webots. Here is an example that shows how to detect the upcoming termination:
-`#include ltwebots/robot.hgt #include ltwebots/distance_sensor.hgt #include
-ltstdio.hgt  #define TIME_STEP 32  int main() { wb_robot_init();  WbDeviceTag ds
-= wb_robot_get_device("my_distance_sensor"); wb_distance_sensor_enable(ds,
-TIME_STEP);  while (wb_robot_step(TIME_STEP) != -1) { double dist =
-wb_distance_sensor_get_value(); printf("sensor value is %f\n", dist); }  //
-Webots triggered termination detected!  saveExperimentData();
-wb_robot_cleanup();  return 0; }` In some cases, it is up to the controller to
-make the decision of terminating the simulation. For example in the case of
-search and optimization algorithms: the search may terminate when a solution is
-found or after a fixed number of iterations (or generations).
 
-In this case the controller should just save the experiment results and quit by
-returning from the `main()` function or by calling the `exit()` function. This
-will terminate the controller process and freeze the simulation at the current
-simulation step. The physics simulation and every robot involved in the
-simulation will stop. `// freeze the whole simulation if (finished) {
-saveExperimentData(); exit(0); }`
+Usually a controller process runs in an endless loop: it is terminated (killed) by Webots when the user reverts (reloads) the simulation or quits Webots.
+The controller cannot prevent its own termination but it can be notified shortly before this happens.
+The `wb_robot_step()` function returns -1 when the process is going to be terminated by Webots.
+Then the controller has 1 second (clock time) to save important data, close files, etc. before it is effectively killed by Webots.
+Here is an example that shows how to detect the upcoming termination:
 
-If only one robot controller needs to terminate but the simulation should
-continue with the other robots, then the terminating robot should call
-`wb_robot_cleanup()` right before quitting: `// terminate only this robot
-controller if (finished) { saveExperimentsData(); wb_robot_cleanup(); exit(0);
-}` Note that the exit status as well as the value returned by the `main()`
-function are ignored by Webots.
+``` c
+#include ltwebots/robot.hgt
+#include ltwebots/distance_sensor.hgt
+#include ltstdio.hgt
+
+#define TIME_STEP 32
+
+int main() {
+  wb_robot_init();
+
+  WbDeviceTag ds = wb_robot_get_device("my_distance_sensor");
+  wb_distance_sensor_enable(ds, TIME_STEP);
+
+  while (wb_robot_step(TIME_STEP) != -1) {
+    double dist = wb_distance_sensor_get_value();
+    printf("sensor value is %f\n", dist);
+  }
+
+  // Webots triggered termination detected!
+
+  saveExperimentData();
+
+  wb_robot_cleanup();
+
+  return 0;
+}
+```
+
+In some cases, it is up to the controller to make the decision of terminating the simulation.
+For example in the case of search and optimization algorithms: the search may terminate when a solution is found or after a fixed number of iterations (or generations).
+
+
+In this case the controller should just save the experiment results and quit by returning from the `main()` function or by calling the `exit()` function.
+This will terminate the controller process and freeze the simulation at the current simulation step.
+The physics simulation and every robot involved in the simulation will stop.
+
+``` c
+// freeze the whole simulation
+if (finished) {
+  saveExperimentData();
+  exit(0);
+}
+```
+
+
+
+If only one robot controller needs to terminate but the simulation should continue with the other robots, then the terminating robot should call `wb_robot_cleanup()` right before quitting:
+
+``` c
+// terminate only this robot controller
+if (finished) {
+  saveExperimentsData();
+  wb_robot_cleanup();
+  exit(0);
+}
+```
+
+Note that the exit status as well as the value returned by the `main()` function are ignored by Webots.
+
 
 ### Shared libraries
 
@@ -323,13 +524,29 @@ replaced by the actual value already existing in the environment. The Webots
 - `[environment variables for Linux 32]`These variables will be added only if the Linux platform is 32 bit.
 - `[environment variables for Linux 64]`These variables will be added only if the Linux platform is 64 bit.
 
-Here is an example of a typical runtime.ini file. `       ; typical runtime.ini
-[environment variables with relative paths] WEBOTS_LIBRARY_PATH =
-lib:$(WEBOTS_LIBRARY_PATH):../../library  [environment variables] ROS_MASTER_URI
-= http://localhost:11311  [environment variables for Windows]
-NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"  [environment
-variables for Mac OS X] NAOQI_LIBRARY_FOLDER = lib  [environment variables for
-Linux] NAOQI_LIBRARY_FOLDER = lib`
+
+Here is an example of a typical runtime.ini file.
+
+``` c
+       ; typical runtime.ini
+
+       [environment variables with relative paths]
+       WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
+
+       [environment variables]
+       ROS_MASTER_URI = http://localhost:11311
+
+       [environment variables for Windows]
+       NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
+
+       [environment variables for Mac OS X]
+       NAOQI_LIBRARY_FOLDER = lib
+
+       [environment variables for Linux]
+       NAOQI_LIBRARY_FOLDER = lib
+```
+
+
 
 ### Languages settings
 

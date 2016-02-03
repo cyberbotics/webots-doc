@@ -144,6 +144,12 @@ Ctrl-Alt-Delete): In the Task Manager select the `Processes` tab, then select
 each `hal.exe` and `naoqi-bin.exe` line and push the "End Process" button for
 each one.
 
-On Linux, you can use the `killall` or the `pkill` commands, e.g.: `$ killall
-hal naoqi-bin`
+
+On Linux, you can use the `killall` or the `pkill` commands, e.g.:
+
+```
+$ killall hal naoqi-bin
+```
+
+
 

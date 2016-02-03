@@ -58,6 +58,14 @@ Please follow the manufacturer's instructions for the installation.
 
 #### Windows
 
+1. Right-click on `My Computer`.
+2. Select `Properties`.
+3. Click on the `Device Manager` tab.
+4. Click on the plus sign to the left of `Display adapters`. The name of the driver appears. Make a note of it.
+5. Go to the web site of your card manufacturer: [http://www.nvidia.com](http://www.nvidia.com) for an nVidia card or [http://www.amd.com](http://www.amd.com) for a ATI graphics card.
+6. Download the driver corresponding to your graphics card.
+7. Follow the instructions from the manufacturer to install the driver.
+
 ### Hardware acceleration tips
 
 #### Linux

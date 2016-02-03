@@ -44,6 +44,10 @@ simulations:
 
 A Webots simulation is composed of following items:
 
+1. A Webots *world* file (.wbt) that defines one or several robots and their environment. The .wbt file does sometimes depend on external PROTO files (.proto) and textures.
+2. One or several controller programs for the above robots (in C/C++/Java/Python/Matlab).
+3. An optional physics plugin that can be used to modify Webots regular physics behavior (in C/C++).
+
 ### What is a world?
 
 A world, in Webots, is a 3D description of the properties of robots and of their

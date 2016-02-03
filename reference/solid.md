@@ -72,6 +72,17 @@ field.
 Various combinations of primitives can be used in a `boundingObject`: it can
 contain either:
 
+1. A `Box` node,
+2. A `Capsule` node,
+3. A `Cylinder` node,
+4. An `ElevationGrid` node,
+5. An `IndexedFaceSet` node,
+6. A `Plane` node,
+7. A `Sphere` node,
+8. A `Shape` node with one of the above nodes in its `geometry` field,
+9. A `Transform` node with one of the above nodes in its `children` field, or
+10. A `Group` node with several `children`, each being one of the above.
+
 The `boundingObject`, together with the `Physics` node, are used to compute the
 inertia matrix of the `Solid`. Such a computation assumes a uniform mass
 distribution in the primitives composing the `boundingObject`. Note that the

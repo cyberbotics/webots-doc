@@ -163,10 +163,15 @@ class BookParser:
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
             outFile.write('<center>\n![%s](%s)\n\n####%s\n</center>\n\n' % (title, fileref, title))
 
-    def parseItemizedList(self, node, outFile):
+    def parseList(self, node, outFile, ordered):
         items = node.findall('.//listitem')
+        counter = 0
         for item in items:
-            outFile.write('- ')
+            counter = counter + 1
+            if ordered:
+                outFile.write('%d. ' % (counter,))
+            else:
+                outFile.write('- ')
             for child in item.getchildren():
                 if child.tag == 'para':
                     self.parsePara(child, outFile, False)
@@ -250,11 +255,11 @@ class BookParser:
             elif child.tag == 'figure':
                 self.parseFigure(child, outFile)
             elif child.tag == 'itemizedlist':
-                self.parseItemizedList(child, outFile)
+                self.parseList(child, outFile, False)
+            elif child.tag == 'orderedlist':
+                self.parseList(child, outFile, True)
             elif child.tag == 'title':
                 pass # ok: dealt in another way
-            elif child.tag == 'orderedlist':
-                pass # TODO
             elif child.tag == 'procedure':
                 pass # TODO
             elif child.tag == 'note':

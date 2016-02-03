@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function() {
         success: receiveTocContent,
         setup: {
             'targetPath': targetPath,
-            'branch': branch
+            'page': page
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);

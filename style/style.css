@@ -23,7 +23,7 @@ body {
 #menu > ul > li > ul > li {
   white-space: nowrap;
 }
-li.unselected {
+li {
   font-weight: normal;
 }
 li.selected {

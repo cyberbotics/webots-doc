@@ -104,8 +104,6 @@ function receiveTocContent(tocContent) {
                 a.parentNode.parentNode.parentNode.setAttribute("class", "selected");
             }
             break;
-        } else {
-          a.parentNode.setAttribute("class", "unselected");
         }
     }
 

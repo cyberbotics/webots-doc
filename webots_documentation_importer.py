@@ -164,7 +164,7 @@ class BookParser:
             outFile.write('<center>\n![%s](%s)\n\n####%s\n</center>\n\n' % (title, fileref, title))
 
     def parseList(self, node, outFile, ordered):
-        items = node.findall('.//listitem')
+        items = node.findall('./listitem')
         counter = 0
         for item in items:
             counter = counter + 1

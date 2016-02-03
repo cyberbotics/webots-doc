@@ -158,6 +158,8 @@ class BookParser:
                 title = child.text.strip()
             elif child.tag  == 'graphic':
                 fileref = child.attrib.get('fileref')
+            else:
+                raise Exception('Unsupported type: ' + child.tag)
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
             outFile.write('<center>\n![%s](%s)\n\n####%s\n</center>\n\n' % (title, fileref, title))
 
@@ -169,14 +171,11 @@ class BookParser:
                 if child.tag == 'para':
                     self.parsePara(child, outFile, False)
                 elif child.tag == 'figure':
-                    # TODO
-                    pass
+                    pass # TODO
                 elif child.tag == 'note':
-                    # TODO
-                    pass
+                    pass # TODO
                 elif child.tag == 'programlisting':
-                    # TODO
-                    pass
+                    pass # TODO
                 else:
                     raise Exception('Unsupported type: ' + child.tag)
             outFile.write('\n')
@@ -252,6 +251,29 @@ class BookParser:
                 self.parseFigure(child, outFile)
             elif child.tag == 'itemizedlist':
                 self.parseItemizedList(child, outFile)
+            elif child.tag == 'title':
+                pass # ok: dealt in another way
+            elif child.tag == 'orderedlist':
+                pass # TODO
+            elif child.tag == 'procedure':
+                pass # TODO
+            elif child.tag == 'note':
+                pass # TODO
+            elif child.tag == 'handson':
+                pass # TODO
+            elif child.tag == 'theory':
+                pass # TODO
+            elif child.tag == 'refentry':
+                pass # TODO
+            elif child.tag == 'code':
+                pass # TODO
+            elif child.tag == 'clearPage':
+                pass # TODO
+            elif child.tag == 'keywords':
+                pass # TODO
+            else:
+                raise Exception('Unsupported type: ' + child.tag)
+
 
     def parseBook(self, node, outFile):
         for child in node.getchildren():
@@ -275,6 +297,8 @@ class BookParser:
                 outFile = open(fileName, 'w')
                 self.parseChapter(child, outFile)
                 outFile.close()
+            else:
+                raise Exception('Unsupported type: ' + child.tag)
 
 
 if __name__ == "__main__":

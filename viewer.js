@@ -70,7 +70,7 @@ function populateViewDiv(mdContent) {
 
 function receiveTocContent(tocContent) {
     // convert the orderedlist to an unordered one: easier to deal with in jQuery menu
-    tocContent = tocContent.replace(/\n( *)\d+\. /g, '\n$1- ');
+    tocContent = tocContent.replace(/\n( *)\d+\. /g, "\n$1- ");
 
     console.log("Toc content:\n\n");
     console.log(tocContent);
@@ -94,14 +94,16 @@ function receiveTocContent(tocContent) {
 
     // find the selected item
     var as = toc.getElementsByTagName("a");
+    var selected = null;
     var page = getGETQueryValue("page", "guide.md"); // TODO: pass this as argument
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
         if (href.indexOf(page) > -1) {
-            a.parentNode.setAttribute("class", "selected");
-            if (a.parentNode.parentNode.parentNode.tagName.toLowerCase() == "li") {
-                a.parentNode.parentNode.parentNode.setAttribute("class", "selected");
+            selected = a.parentNode;
+            selected.setAttribute("class", "selected");
+            if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
+                selected.parentNode.parentNode.setAttribute("class", "selected");
             }
             break;
         }
@@ -110,15 +112,85 @@ function receiveTocContent(tocContent) {
     redirectUrls(toc);
 
     if (toc) {
-        populateNavigation(toc);
         populateMenu(toc);
+        populateNavigation(toc, selected);
     } else {
         console.error("Cannot extract TOC.");
     }
 }
 
-function populateNavigation(toc) {
-    var navigation = document.getElementById("navigation");
+function populateNavigation(toc, selected) {
+    if (!selected) {
+        return;
+    }
+
+    var next = document.getElementById("next");
+    if (next) {
+        var nextElement = null;
+
+        var nextLiSibling = selected.nextSibling;
+        while (nextLiSibling) {
+            if (nextLiSibling.tagName && nextLiSibling.tagName.toLowerCase() == "li") {
+                break;
+            }
+            nextLiSibling = nextLiSibling.nextSibling;
+        }
+        if (nextLiSibling) {
+            var as = nextLiSibling.getElementsByTagName("a");
+            if (as.length > 0)
+              nextElement = as[0];
+        }
+
+        if (nextElement) {
+            next.setAttribute("href", nextElement.getAttribute("href"));
+        } else {
+            next.setAttribute("class", "disabled");
+        }
+    }
+
+    var previous = document.getElementById("previous");
+    if (previous) {
+        var previousElement = null;
+
+        var previousLiSibling = selected.previousSibling;
+        while (previousLiSibling) {
+            if (previousLiSibling.tagName && previousLiSibling.tagName.toLowerCase() == "li") {
+                break;
+            }
+            previousLiSibling = previousLiSibling.previousSibling;
+        }
+        if (previousLiSibling) {
+            var as = previousLiSibling.getElementsByTagName("a");
+            if (as.length > 0)
+              previousElement = as[0];
+        }
+
+        if (previousElement) {
+            previous.setAttribute("href", previousElement.getAttribute("href"));
+        } else {
+            previous.setAttribute("class", "disabled");
+        }
+    }
+
+    var up = document.getElementById("up");
+    if (up) {
+        var upElement = null;
+        var parentLi = null;
+        if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
+            parentLi = selected.parentNode.parentNode;
+        }
+        if (parentLi) {
+            var as = parentLi.getElementsByTagName("a");
+            if (as.length > 0)
+              upElement = as[0];
+        }
+
+        if (upElement) {
+            up.setAttribute("href", upElement.getAttribute("href"));
+        } else {
+            up.setAttribute("class", "disabled");
+        }
+    }
 }
 
 function populateMenu(toc) {

@@ -12,9 +12,13 @@ body {
 }
 #navigation, #menu {
   width:20%;
-  height:2em;
   float:left;
   background-color: white;
+}
+#navigation {
+  text-align: center;
+  height:20px;
+  text-size: 14px;
 }
 #menu {
   margin-top:1em;
@@ -32,6 +36,10 @@ li.selected {
 td {
   padding-left:4px;
   padding-right:4px;
+}
+a.disabled {
+  pointer-events: none;
+  color: #ddd;
 }
 a {
   color:#888;

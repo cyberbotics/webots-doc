@@ -20,6 +20,15 @@ body {
   margin-top:1em;
   clear: left;
 }
+#menu > ul > li > ul > li {
+  white-space: nowrap;
+}
+li.unselected {
+  font-weight: normal;
+}
+li.selected {
+  font-weight: bold;
+}
 td {
   padding-left:4px;
   padding-right:4px;

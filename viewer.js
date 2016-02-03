@@ -69,10 +69,14 @@ function populateViewDiv(mdContent) {
 }
 
 function receiveTocContent(tocContent) {
+    // convert the orderedlist to an unordered one: easier to deal with in jQuery menu
+    tocContent = tocContent.replace(/\n( *)\d+\. /g, '\n$1- ');
+
     console.log("Toc content:\n\n");
     console.log(tocContent);
 
     var toc = null;
+
 
     var converter = new showdown.Converter();
     var html = converter.makeHtml(tocContent);
@@ -82,9 +86,26 @@ function receiveTocContent(tocContent) {
     var i;
     for (i = 0; i < div.childNodes.length; i++) {
         var child = div.childNodes[i];
-        if (child && child.tagName && child.tagName.length > 0 && child.tagName.toLowerCase() == "ol") {
+        if (child && child.tagName && child.tagName.length > 0 && child.tagName.toLowerCase() == "ul") {
             toc = child;
             break;
+        }
+    }
+
+    // find the selected item
+    var as = toc.getElementsByTagName("a");
+    var page = getGETQueryValue("page", "guide.md"); // TODO: pass this as argument
+    for (i = 0; i < as.length; i++) {
+        var a = as[i];
+        var href = a.getAttribute("href");
+        if (href.indexOf(page) > -1) {
+            a.parentNode.setAttribute("class", "selected");
+            if (a.parentNode.parentNode.parentNode.tagName.toLowerCase() == "li") {
+                a.parentNode.parentNode.parentNode.setAttribute("class", "selected");
+            }
+            break;
+        } else {
+          a.parentNode.setAttribute("class", "unselected");
         }
     }
 
@@ -105,6 +126,7 @@ function populateNavigation(toc) {
 function populateMenu(toc) {
     var menu = document.getElementById("menu");
     menu.appendChild(toc);
+    $(toc).menu();
 }
 
 document.addEventListener("DOMContentLoaded", function() {

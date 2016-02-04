@@ -190,7 +190,7 @@ class BookParser:
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
             if fileref.endswith('.pdf'):
                 fileref += '.png'
-            outFile.write('<center>\n![%s](%s)\n\n####%s\n</center>\n\n' % (title, fileref, title))
+            outFile.write('\n%%figure "%s"\n![%s](%s)\n%%end\n\n' % (title, title, fileref))
 
     def parseList(self, node, outFile, ordered):
         items = node.findall('./listitem')

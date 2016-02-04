@@ -16,7 +16,7 @@ Propeller {
 ### Description
 
 <center>
-![Propeller](pdf/propeller.pdf)
+![Propeller](pdf/propeller.pdf.png)
 
 ####Propeller
 </center>

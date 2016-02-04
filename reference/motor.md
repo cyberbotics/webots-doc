@@ -51,13 +51,13 @@ The `minPosition` and `maxPosition` are defined with respect to joint's zero
 position (see description of the `position` field in `JointParameters`).
 
 <center>
-![Linear Motor](pdf/linear_motor.pdf)
+![Linear Motor](pdf/linear_motor.pdf.png)
 
 ####Linear Motor
 </center>
 
 <center>
-![Rotational Motor](pdf/rotational_motor.pdf)
+![Rotational Motor](pdf/rotational_motor.pdf.png)
 
 ####Rotational Motor
 </center>
@@ -78,7 +78,7 @@ the motor `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
 
 <center>
-![Motor control](pdf/motor_control.pdf)
+![Motor control](pdf/motor_control.pdf.png)
 
 ####Motor control
 </center>

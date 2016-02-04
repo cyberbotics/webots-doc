@@ -51,6 +51,14 @@ This can be better understood in  below.
 
 
 
+
+<center>
+![Sensor response versus obstacle distance](pdf/infrared.pdf.png)
+
+####Sensor response versus obstacle distance
+</center>
+
+
 A different graph is produced when the trend of the desired response value and the trend of the desired noise standard deviation have opposite sign.
 This is the case in the following example, where the response value increases with the input values but the noise decreases:
 
@@ -64,10 +72,42 @@ The resulting range of measured values is shown in .
 
 
 
+
+<center>
+![Sensor response versus obstacle distance with opposite response-noise increase](pdf/khepera_sonar_lut.pdf.png)
+
+####Sensor response versus obstacle distance with opposite response-noise increase
+</center>
+
+
 - `type`: one of "generic" (the default), "infra-red", "sonar" or "laser". Sensors of type "infra-red" are sensitive to the objects' colors; light and red (RGB) obstacles have a higher response than dark and non-red obstacles (see below for more details).Sensors of type "sonar" and "laser" return the distance to the nearest object while "generic" and "infa-red" computes the average distance of all rays. Note however that sensors of type "sonar" will return the sonar range for each ray whose angle of incidence is greater than pi/8 radians (see below for more details).Sensors of type "laser" can have only one ray and they have the particularity to draw a red spot at the point where this ray hits an obstacle. This red spot is visible on the camera images. If the red spot disappears due to depth fighting, then it could help increasing the `lineScale` value in `WorldInfo` node that is used for computing its position offset.
 - `numberOfRays`: number of rays cast by the sensor. The number of rays must be equal to, or greater than 1 for "infra-red" and "sonar" sensors. `numberOfRays` must be exactly 1 for "laser" sensors. If this number is larger than 1, then several rays are used and the sensor measurement value is computed from the weighted average of the individual rays' responses. By using multiple rays, a more accurate model of the physical infra-red or ultrasound sensor can be obtained. The sensor rays are distributed inside 3D-cones whose opening angles can be tuned through the `aperture` field. See for the ray distributions from one to ten rays. The spacial distribution of the rays is as much as possible uniform and has a left/right symmetry. There is no upper limit on the number of rays; however, Webots' performance drops as the number of rays increases.
+
+<center>
+![Predefined configurations for 1 through 10 sensor rays](pdf/ray_orbits.pdf.png)
+
+####Predefined configurations for 1 through 10 sensor rays
+</center>
+
+
 - `aperture`: sensor aperture angle or laser beam radius. For the "infra-red" and "sonar" sensor types, this field controls the opening angle (in radians) of the cone of rays when multiple rays are used. For the "laser" sensor type, this field specifies (in meters) the radius of the red spot drawn where the laser beam hits an obstacle.
+
+<center>
+![Weight distribution formulas](pdf/weight_formula.pdf.png)
+
+####Weight distribution formulas
+</center>
+
+
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for "generic" and "infra-red" sensors). When averaging the sensor's response, the individual weight of each sensor ray is computed according to a Gaussian distribution as described in . where `w` is the weight of the *i*th ray, `t` is the angle between the *i*th ray and the sensor axis, *a* is the aperture angle of the sensor, *g* is the Gaussian width, and *n* is the number of rays. As depicted in , rays in the center of the sensor cone are given a greater weight than rays in the periphery. A wider or narrower distribution can be obtained by tuning the `gaussianWidth` field. An approximation of a flat distribution is obtained if a sufficiently large number is chosen for the `gaussianWidth`. This field is ignored for the "sonar" and "laser" DistanceSensor types.
+
+<center>
+![Example distribution for 10 rays using a Gaussian width of 0.5](pdf/weight_distribution.pdf.png)
+
+####Example distribution for 10 rays using a Gaussian width of 0.5
+</center>
+
+
 - `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure. Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change). This field accepts any value in the interval (0.0, inf).
 
 ### DistanceSensor types
@@ -107,7 +147,7 @@ words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see ).
 
 <center>
-![Sonar sensor](pdf/sonar_reflection.pdf)
+![Sonar sensor](pdf/sonar_reflection.pdf.png)
 
 ####Sonar sensor
 </center>

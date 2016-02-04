@@ -59,7 +59,7 @@ as the one used to build the controllers):
 `WEBOTS_HOME/resources/Makefile.include`
 
 <center>
-![Controller plugin overview](pdf/controller_plugin.pdf)
+![Controller plugin overview](pdf/controller_plugin.pdf.png)
 
 ####Controller plugin overview
 </center>

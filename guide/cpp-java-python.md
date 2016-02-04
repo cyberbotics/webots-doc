@@ -15,7 +15,7 @@ SWIG. Therefore the class and method names, as well as the number of parameters
 and their types, are very similar in these three languages.
 
 <center>
-![Webots APIs Overview](pdf/api_overview.pdf)
+![Webots APIs Overview](pdf/api_overview.pdf.png)
 
 ####Webots APIs Overview
 </center>
@@ -47,7 +47,7 @@ controllers. But it is not possible to call the `Supervisor` methods from a
 possible to call `simulationRevert()` from a `DifferentialWheels` controller.
 
 <center>
-![A small subset of Webots oriented-object APIs](pdf/oo_api.pdf)
+![A small subset of Webots oriented-object APIs](pdf/oo_api.pdf.png)
 
 ####A small subset of Webots oriented-object APIs
 </center>

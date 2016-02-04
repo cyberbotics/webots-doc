@@ -33,6 +33,14 @@ robot to itself.
 - `range`: radius of the emission sphere (in meters). A receiver can only receive a message if it is located within the emission sphere. A value of -1 (the default) for `range` is considered to be an infinite range.
 - `maxRange`: defines the maximum value allowed for `range`. This field defines the maximum value that can be set using `wb_emitter_set_range()`. A value of -1 (the default) for `maxRange` is considered to be infinite.
 - `aperture` opening angle of the emission cone (in radians); for "infra-red" only. The cone's apex is located at the origin ([0 0 0]) of the emitter's coordinate system and the cone's axis coincides with the *z*-axis of the emitter coordinate system. An "infra-red" emitter can only send data to receivers currently located within its emission cone. An `aperture` of -1 (the default) is considered to be infinite, meaning that the emitted signals are omni-directional. For "radio" and "serial" emitters, this field is ignored. See for an illustration of `range` and `aperture`.
+
+<center>
+![Illustration of aperture and range for "infra-red" Emitter/Receiver](pdf/emitter_receiver.pdf.png)
+
+####Illustration of aperture and range for "infra-red" Emitter/Receiver
+</center>
+
+
 - `channel`: transmission channel. This is an identification number for an "infra-red" emitter or a frequency for a "radio" emitter. Normally a receiver must use the same channel as an emitter to receive the emitted data. However, the special channel -1 allows broadcasting messages on all channels. Channel 0 (the default) is reserved for communicating with a physics plugin. For inter-robot communication, please use positive channel numbers.
 - `baudRate`: the baud rate is the communication speed expressed in number of bits per second. A `baudRate` of -1 (the default) is regarded as infinite and causes the data to be transmitted immediately (within one control step) from emitter to receiver.
 - `byteSize`: the byte size is the number of bits required to transmit one byte of information. This is usually 8 (the default), but can be more if control bits are used.

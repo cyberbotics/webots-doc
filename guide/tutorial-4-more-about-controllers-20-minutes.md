@@ -55,7 +55,7 @@ the wheel. The values are clamped between -1000 and 1000.
 </center>
 
 <center>
-![UML state machine of a simple feedback loop](pdf/tutorial_feedback_loop.pdf)
+![UML state machine of a simple feedback loop](pdf/tutorial_feedback_loop.pdf.png)
 
 ####UML state machine of a simple feedback loop
 </center>

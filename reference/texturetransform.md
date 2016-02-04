@@ -47,7 +47,7 @@ rotation with center `(0,0)` and angle theta, and `S` a scaling with scaling
 factors `S`. In matrix notation, the corresponding `TextureTransform` reads as
 
 <center>
-![Texture transformation in matrix notation](pdf/texture_transform.pdf)
+![Texture transformation in matrix notation](pdf/texture_transform.pdf.png)
 
 ####Texture transformation in matrix notation
 </center>

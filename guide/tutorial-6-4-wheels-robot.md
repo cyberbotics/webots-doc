@@ -71,13 +71,13 @@ In our case, the body box is obviously the better choice. The  depicts the solid
 nodes hierarchy of the robot.
 
 <center>
-![High level representation of the 4 wheels robot](pdf/tutorial_4_wheels_highlevel.pdf)
+![High level representation of the 4 wheels robot](pdf/tutorial_4_wheels_highlevel.pdf.png)
 
 ####High level representation of the 4 wheels robot
 </center>
 
 <center>
-![Low level representation of the 4 wheels robot](pdf/tutorial_4_wheels_lowlevel.pdf)
+![Low level representation of the 4 wheels robot](pdf/tutorial_4_wheels_lowlevel.pdf.png)
 
 ####Low level representation of the 4 wheels robot
 </center>

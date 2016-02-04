@@ -42,13 +42,13 @@ while linear joint units (`SliderJoint`) are expressed in *meters*. See :
 ### Initial Transformation and Position
 
 <center>
-![HingeJoint](pdf/hinge_joint.pdf)
+![HingeJoint](pdf/hinge_joint.pdf.png)
 
 ####HingeJoint
 </center>
 
 <center>
-![SliderJoint](pdf/slider_joint.pdf)
+![SliderJoint](pdf/slider_joint.pdf.png)
 
 ####SliderJoint
 </center>
@@ -117,7 +117,7 @@ This damping torque/force is proportional to the effective joint velocity: `F =
 velocity computed by the physics simulator.
 
 <center>
-![Mechanical Diagram of a Slider Joint](pdf/slider_joint_mechanics.pdf)
+![Mechanical Diagram of a Slider Joint](pdf/slider_joint_mechanics.pdf.png)
 
 ####Mechanical Diagram of a Slider Joint
 </center>

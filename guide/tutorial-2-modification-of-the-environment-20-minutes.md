@@ -49,7 +49,7 @@ optional, but the `physics` field needs the `boundingObject` to be defined.
 
 <center>
 ![The simplest model of a rigid body in Webots having a graphical representation (Shape),
-     a physical bound (boundingObject) and being in the dynamical environment (Physics).](pdf/tutorial_solid.pdf)
+     a physical bound (boundingObject) and being in the dynamical environment (Physics).](pdf/tutorial_solid.pdf.png)
 
 ####The simplest model of a rigid body in Webots having a graphical representation (Shape),
      a physical bound (boundingObject) and being in the dynamical environment (Physics).
@@ -97,7 +97,7 @@ mechanism.
 </center>
 
 <center>
-![DEF-USE mechanism applied on the Shape node of a Solid.](pdf/tutorial_def_use_shape.pdf)
+![DEF-USE mechanism applied on the Shape node of a Solid.](pdf/tutorial_def_use_shape.pdf.png)
 
 ####DEF-USE mechanism applied on the Shape node of a Solid.
 </center>

@@ -49,7 +49,7 @@ Before being interpolated by the `lookupTable`, the total irradiance `E` [W/m^2]
 seen by a sensor is computed according to the equation shown in :
 
 <center>
-![Light sensor irradiance formula](pdf/light_intensity.pdf)
+![Light sensor irradiance formula](pdf/light_intensity.pdf.png)
 
 ####Light sensor irradiance formula
 </center>
@@ -61,7 +61,7 @@ light `i` (TRUE=1, FALSE=0), the `C[i]` vector is the `color` field of light
 is the attenuation of light `i`, and is calculated as shown in .
 
 <center>
-![Light attenuation](pdf/light_attenuation.pdf)
+![Light attenuation](pdf/light_attenuation.pdf.png)
 
 ####Light attenuation
 </center>
@@ -72,7 +72,7 @@ for `DirectionalLight`s. `I` is the direct irradiance contributed by light `i`,
 and is calculated as shown in .
 
 <center>
-![Direct irradiance](pdf/direct_light.pdf)
+![Direct irradiance](pdf/direct_light.pdf.png)
 
 ####Direct irradiance
 </center>
@@ -83,7 +83,7 @@ in , where the `alpha` angle corresponds to the angle between `-L` and the
 `direction` vector of the `SpotLight`.
 
 <center>
-![SpotLight factor](pdf/spot_light.pdf)
+![SpotLight factor](pdf/spot_light.pdf.png)
 
 ####SpotLight factor
 </center>
@@ -103,7 +103,7 @@ actually hit the surface and excite the device. When a light source is parallel
 to (or behind) the semiconductor surface, no photons actually reach the surface.
 
 <center>
-![The irradiance (E) depends on the angle (phi) between the](pdf/light_sensor.pdf)
+![The irradiance (E) depends on the angle (phi) between the](pdf/light_sensor.pdf.png)
 
 ####The irradiance (E) depends on the angle (phi) between the
 </center>

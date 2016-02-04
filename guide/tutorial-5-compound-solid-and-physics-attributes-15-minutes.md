@@ -26,7 +26,7 @@ subnodes required to implement the dumbbell.
 
 <center>
 ![Representation of the subnodes of a compound solid made of
-    several transformed geometries.](pdf/tutorial_compound_solid.pdf)
+    several transformed geometries.](pdf/tutorial_compound_solid.pdf.png)
 
 ####Representation of the subnodes of a compound solid made of
     several transformed geometries.

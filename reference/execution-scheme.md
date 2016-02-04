@@ -5,7 +5,7 @@ callback functions. In addition, the principal interactions of Webots with the
 ODE functions are indicated.
 
 <center>
-![Physics Plugin Execution Scheme](pdf/physics_execution_scheme.pdf)
+![Physics Plugin Execution Scheme](pdf/physics_execution_scheme.pdf.png)
 
 ####Physics Plugin Execution Scheme
 </center>

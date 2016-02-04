@@ -68,7 +68,7 @@ In a "rotational" `Servo`, these fields have the following meaning: The
 `rotation` field specifies the orientation of the axis of rotation. See .
 
 <center>
-![Rotational servo](pdf/rotational_servo.pdf)
+![Rotational servo](pdf/rotational_servo.pdf.png)
 
 ####Rotational servo
 </center>
@@ -78,7 +78,7 @@ In a "linear" `Servo`, these fields have the following meaning: The
 `rotation` field specifies the direction of the sliding axis. See .
 
 <center>
-![Linear servo](pdf/linear_servo.pdf)
+![Linear servo](pdf/linear_servo.pdf.png)
 
 ####Linear servo
 </center>
@@ -109,7 +109,7 @@ the servo `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
 
 <center>
-![Servo control](pdf/servo_control.pdf)
+![Servo control](pdf/servo_control.pdf.png)
 
 ####Servo control
 </center>
@@ -245,7 +245,7 @@ This damping torque/force is proportional to the effective servo velocity: `F =
 velocity computed by the physics simulator.
 
 <center>
-![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf)
+![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf.png)
 
 ####Mechanical Diagram of a Servo
 </center>
@@ -301,7 +301,7 @@ child `Servo` will have spring and damping forces (`springConstant` gt 0 and
 `dampingConstant` gt 0).
 
 <center>
-![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf)
+![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf.png)
 
 ####Example of serial connection of two Servo nodes
 </center>

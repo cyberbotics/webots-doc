@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import glob
 import os
 import re
 import shutil
@@ -26,6 +27,10 @@ class BookParser:
         os.makedirs(bookName)
         # copy the png images
         shutil.copytree(webotsDirectoryPath + 'doc/' + bookName + '/png', bookName + '/png')
+        shutil.copytree(webotsDirectoryPath + 'doc/' + bookName + '/pdf', bookName + '/pdf')
+        for fl in glob.glob(bookName + '/pdf/*.pdf'):
+            os.remove(fl)
+
 
     def parseXMLFile(self, filePath):
         print 'Parse XML file: "' + filePath + '"'
@@ -183,6 +188,8 @@ class BookParser:
             else:
                 raise Exception('Unsupported type: ' + child.tag)
         if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
+            if fileref.endswith('.pdf'):
+                fileref += '.png'
             outFile.write('<center>\n![%s](%s)\n\n####%s\n</center>\n\n' % (title, fileref, title))
 
     def parseList(self, node, outFile, ordered):
@@ -198,7 +205,8 @@ class BookParser:
                 if child.tag == 'para':
                     self.parsePara(child, outFile, False)
                 elif child.tag == 'figure':
-                    pass # TODO
+                    outFile.write('\n\n')
+                    self.parseFigure(child, outFile)
                 elif child.tag == 'note':
                     pass # TODO
                 elif child.tag == 'programlisting':

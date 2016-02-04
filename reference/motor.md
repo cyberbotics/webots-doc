@@ -50,17 +50,15 @@ expressed in *meters*. See :
 The `minPosition` and `maxPosition` are defined with respect to joint's zero
 position (see description of the `position` field in `JointParameters`).
 
-<center>
+
+%figure "Linear Motor"
 ![Linear Motor](pdf/linear_motor.pdf.png)
+%end
 
-####Linear Motor
-</center>
 
-<center>
+%figure "Rotational Motor"
 ![Rotational Motor](pdf/rotational_motor.pdf.png)
-
-####Rotational Motor
-</center>
+%end
 
 ### Position Control
 
@@ -77,11 +75,10 @@ is performed by the motor P-controller (2) that computes the current velocity of
 the motor `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
 
-<center>
-![Motor control](pdf/motor_control.pdf.png)
 
-####Motor control
-</center>
+%figure "Motor control"
+![Motor control](pdf/motor_control.pdf.png)
+%end
 
 
 At each simulation step, the PID-controller (2) recomputes the current velocity *Vc* according to following algorithm:

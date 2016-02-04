@@ -68,11 +68,10 @@ computationally inexpensive way of simulating docking mechanisms.
 - `rotationTolerance`: the tolerated angle difference with respect to each of the allowed docking rotations (see ).
 - `numberOfRotations`: specifies how many different docking rotations are allowed in a full 360 degree rotation around the `Connector`'s *z*-axis. For example, modular robots' connectors are often 1-, 2- or 4-way dockable depending on mechanical and electrical interfaces. As illustrated in , if `numberOfRotations` is 4 then there will be 4 different docking positions (one every 90 degrees). If you don't wish to check the rotational alignment criterion this field should be set to zero.
 
-<center>
-![Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)](pdf/connector_alignment.pdf.png)
 
-####Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)
-</center>
+%figure "Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)"
+![Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)](pdf/connector_alignment.pdf.png)
+%end
 
 
 - `snap`: when TRUE: the two connectors do automatically snap (align, adjust, etc.) when they become docked. The alignment is threefold: 1) the two bodies are rotated such that their z-axes become parallel (but pointed in opposite directions), 2) the two bodies are rotated such that their y-axes match one of the possible rotational docking position, 3) the two bodies are shifted towards each other such that the origin of their coordinate system match. Note that when the `numberOfRotations` field is 0, step 2 is omitted, and therefore the rotational alignment remains free. As a result of steps 1 and 3, the connector surfaces always become superimposed.
@@ -94,11 +93,10 @@ the superposition of the origin of the coordinate systems. If these design
 criteria are not met, the `Connector` nodes will not work properly and may be
 unable to connect.
 
-<center>
-![Connector axis system](png/connector_axes.png)
 
-####Connector axis system
-</center>
+%figure "Connector axis system"
+![Connector axis system](png/connector_axes.png)
+%end
 
 ### Connector Functions
 

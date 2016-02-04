@@ -23,9 +23,8 @@ to detect collisions between `Solid` objects. Note that not all geometry nodes
 can be used as boundingObjects, and that although `Group` and `Transform` can be
 used, not every combination of these will work correctly.
 
-<center>
-![Webots Nodes Chart](pdf/node_hierarchy.pdf.png)
 
-####Webots Nodes Chart
-</center>
+%figure "Webots Nodes Chart"
+![Webots Nodes Chart](pdf/node_hierarchy.pdf.png)
+%end
 

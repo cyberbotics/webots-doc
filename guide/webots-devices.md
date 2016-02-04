@@ -9,11 +9,10 @@ exemplify.
 
 ### battery.wbt
 
-<center>
-![battery.wbt](png/battery.png)
 
-####battery.wbt
-</center>
+%figure "battery.wbt"
+![battery.wbt](png/battery.png)
+%end
 
 In this example, a robot moves in a closed arena. The energy consumed by the
 wheel motors slowly discharges the robot's battery. When the battery level
@@ -26,11 +25,10 @@ full.
 
 ### bumper.wbt
 
-<center>
-![bumper.wbt](png/bumper.png)
 
-####bumper.wbt
-</center>
+%figure "bumper.wbt"
+![bumper.wbt](png/bumper.png)
+%end
 
 In this example, a robot moves in a closed arena filled with obstacles. Its
 "bumper" `TouchSensor` is used to detect collisions. Each time a collision is
@@ -38,11 +36,10 @@ detected, the robot moves back and turns a bit.
 
 ### camera.wbt
 
-<center>
-![camera.wbt](png/camera.png)
 
-####camera.wbt
-</center>
+%figure "camera.wbt"
+![camera.wbt](png/camera.png)
+%end
 
 In this example, a robot uses a camera to detect colored objects. The robot
 analyses the RGB color level of each pixel of the camera images. It turns and
@@ -53,11 +50,10 @@ to detect.
 
 ### connector.wbt
 
-<center>
-![connector.wbt](png/connector.png)
 
-####connector.wbt
-</center>
+%figure "connector.wbt"
+![connector.wbt](png/connector.png)
+%end
 
 In this example, a light robot (light blue) is lifted over two heavier robots
 (dark blue). All three robots are equipped with a `Connector` placed at the tip
@@ -72,22 +68,20 @@ robot's name.
 
 ### distance_sensor.wbt
 
-<center>
-![distance_sensor.wbt](png/distance_sensor.png)
 
-####distance_sensor.wbt
-</center>
+%figure "distance_sensor.wbt"
+![distance_sensor.wbt](png/distance_sensor.png)
+%end
 
 In this example, a robot has eight `DistanceSensor`s placed at regular intervals
 around its body. The robot avoids obstacles using the Braitenberg technique.
 
 ### emitter_receiver.wbt
 
-<center>
-![emitter_receiver.wbt](png/emitter_receiver.png)
 
-####emitter_receiver.wbt
-</center>
+%figure "emitter_receiver.wbt"
+![emitter_receiver.wbt](png/emitter_receiver.png)
+%end
 
 In this example, there are two robots: one is equipped with an `Emitter`, the
 other one with a `Receiver`. Both robots move among the obstacles while the
@@ -103,11 +97,10 @@ is interrupted. Note that the communication between "infra-red" `Emitter`s and
 
 ### encoders.wbt
 
-<center>
-![encoders.wbt](png/encoders.png)
 
-####encoders.wbt
-</center>
+%figure "encoders.wbt"
+![encoders.wbt](png/encoders.png)
+%end
 
 This example demonstrates the usage of the wheel encoders of
 `DifferentialWheels` robots. The controller randomly chooses target encoder
@@ -117,11 +110,10 @@ random values. The robot does not pay any attention to obstacles.
 
 ### force_sensor.wbt
 
-<center>
-![force_sensor.wbt](png/force_sensor.png)
 
-####force_sensor.wbt
-</center>
+%figure "force_sensor.wbt"
+![force_sensor.wbt](png/force_sensor.png)
+%end
 
 This example is nearly the same as "bumper.wbt" (see ). The only difference is
 that this robot uses a "force" `TouchSensor` instead of a "bumper". So this
@@ -130,11 +122,10 @@ window.
 
 ### gps.wbt
 
-<center>
-![gps.wbt](png/gps.png)
 
-####gps.wbt
-</center>
+%figure "gps.wbt"
+![gps.wbt](png/gps.png)
+%end
 
 This example shows two different techniques for finding out the current position
 of a robot. The first technique consists in using an on-board `GPS` device. The
@@ -147,33 +138,30 @@ position read by the Supervisor.
 
 ### led.wbt
 
-<center>
-![led.wbt](png/led.png)
 
-####led.wbt
-</center>
+%figure "led.wbt"
+![led.wbt](png/led.png)
+%end
 
 In this example, a robot moves while randomly changing the color of three `LED`s
 on the top of its body. The color choice is printed in the Console.
 
 ### light_sensor.wbt
 
-<center>
-![light_sensor.wbt](png/light_sensor.png)
 
-####light_sensor.wbt
-</center>
+%figure "light_sensor.wbt"
+![light_sensor.wbt](png/light_sensor.png)
+%end
 
 In this example, the robot uses two `LightSensor`s to follow a light source. The
 light source can be moved with the mouse; the robot will follow it.
 
 ### pen.wbt
 
-<center>
-![pen.wbt](png/pen.png)
 
-####pen.wbt
-</center>
+%figure "pen.wbt"
+![pen.wbt](png/pen.png)
+%end
 
 In this example, a robot uses a `Pen` device to draw on the floor. The
 controller randomly chooses the ink color. The ink on the floor fades slowly.
@@ -181,11 +169,10 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 ### range_finder.wbt
 
-<center>
-![range_finder.wbt](png/range_finder.png)
 
-####range_finder.wbt
-</center>
+%figure "range_finder.wbt"
+![range_finder.wbt](png/range_finder.png)
+%end
 
 In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.
 The "range-finder" measures the distance to objects, so the robot knows if there

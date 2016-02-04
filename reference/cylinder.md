@@ -33,11 +33,10 @@ The `subdivision` field defines the number of polygons used to represent the
 cylinder and so its resolution. More precisely, it corresponds to the number of
 lines used to represent the bottom or the top of the cylinder.
 
-<center>
-![The Cylinder node](png/cylinder.png)
 
-####The Cylinder node
-</center>
+%figure "The Cylinder node"
+![The Cylinder node](png/cylinder.png)
+%end
 
 When a texture is applied to a cylinder, it is applied differently to the sides,
 top, and bottom. On the sides, the texture wraps counterclockwise (from above)

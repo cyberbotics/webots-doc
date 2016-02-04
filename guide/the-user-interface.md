@@ -6,11 +6,10 @@ hierarchical representation of the current world, the *Text editor* that allows
 to edit source code, and finally, the *Console* that displays both compilation
 and controller outputs.
 
-<center>
-![Webots GUI](png/main_window.png)
 
-####Webots GUI
-</center>
+%figure "Webots GUI"
+![Webots GUI](png/main_window.png)
+%end
 
 The GUI has nine menus: `File, Edit, View, Simulation, Build, Robot, Tools,
 Wizards` and `Help`.
@@ -402,11 +401,10 @@ time. If the value of the speedometer is 2, it means that your computer
 simulation is running twice as fast as the corresponding real robots would. This
 information is valid both in `Run` mode and `Fast` mode.
 
-<center>
-![Speedometer](png/speedometer.png)
 
-####Speedometer
-</center>
+%figure "Speedometer"
+![Speedometer](png/speedometer.png)
+%end
 
 To the left of the speedometer, the *virtual time* is displayed using following
 format:

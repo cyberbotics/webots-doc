@@ -34,11 +34,10 @@ quadrilaterals. The vertex locations for the quadrilaterals are defined by the
 - The `height` field is an `xDimension` by `zDimension` array of scalar values representing the height above the grid for each vertex.
 - The `xSpacing` and `zSpacing` fields indicate the distance between vertices in the *x* and *z* directions respectively, and shall be greater than zero.
 
-<center>
-![ElevationGrid node](png/elevation_grid.png)
 
-####ElevationGrid node
-</center>
+%figure "ElevationGrid node"
+![ElevationGrid node](png/elevation_grid.png)
+%end
 
 Thus, the vertex corresponding to the point P[i,j] on the grid is placed at:
 

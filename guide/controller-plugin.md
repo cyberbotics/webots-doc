@@ -58,11 +58,10 @@ Each distributed shared library is built thanks to the main Makefile (the same
 as the one used to build the controllers):
 `WEBOTS_HOME/resources/Makefile.include`
 
-<center>
-![Controller plugin overview](pdf/controller_plugin.pdf.png)
 
-####Controller plugin overview
-</center>
+%figure "Controller plugin overview"
+![Controller plugin overview](pdf/controller_plugin.pdf.png)
+%end
 
 ### Robot Window Plugin
 
@@ -162,11 +161,10 @@ of poses and motor states: modified items are displayed using bold font,
 disabled states are written in gray, and items with values outside the valid
 motor position range are written in red.
 
-<center>
-![Motion editor view](png/motion_editor.png)
 
-####Motion editor view
-</center>
+%figure "Motion editor view"
+![Motion editor view](png/motion_editor.png)
+%end
 
 ### Remote-control Plugin
 

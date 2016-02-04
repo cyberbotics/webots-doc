@@ -15,11 +15,10 @@ Propeller {
 
 ### Description
 
-<center>
-![Propeller](pdf/propeller.pdf.png)
 
-####Propeller
-</center>
+%figure "Propeller"
+![Propeller](pdf/propeller.pdf.png)
+%end
 
 
 The `Propeller` node can be used to model a marine or an aircraft propeller. When its `device` field is set with

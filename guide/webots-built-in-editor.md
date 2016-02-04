@@ -6,11 +6,10 @@ it makes the compilation straightforward. The editor features syntax
 highlighting for Webots supported language (C/C++, Java, Python and `MATLAB`)
 and auto-completion for Webots C API.
 
-<center>
-![Webots Text Editor](png/text_editor.png)
 
-####Webots Text Editor
-</center>
+%figure "Webots Text Editor"
+![Webots Text Editor](png/text_editor.png)
+%end
 
 ### Compiling with the Source Code Editor
 

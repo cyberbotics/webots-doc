@@ -46,11 +46,10 @@ intermediate transformations described above. Let `C` be the translation mapping
 rotation with center `(0,0)` and angle theta, and `S` a scaling with scaling
 factors `S`. In matrix notation, the corresponding `TextureTransform` reads as
 
-<center>
-![Texture transformation in matrix notation](pdf/texture_transform.pdf.png)
 
-####Texture transformation in matrix notation
-</center>
+%figure "Texture transformation in matrix notation"
+![Texture transformation in matrix notation](pdf/texture_transform.pdf.png)
+%end
 
 where `C` denotes the matrix inverse of `C`.
 

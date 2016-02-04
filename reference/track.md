@@ -94,11 +94,10 @@ children [
    
 ```
 
-<center>
-![Convex track's belt shape example](png/track_belt_convex.png)
 
-####Convex track's belt shape example
-</center>
+%figure "Convex track's belt shape example"
+![Convex track's belt shape example](png/track_belt_convex.png)
+%end
 
 Then for a concave track belt shape like the one shown in the following
 `TrackWheel` nodes have to be defined:
@@ -125,9 +124,8 @@ children [
    
 ```
 
-<center>
-![Concave track's belt shape example](png/track_belt_concave.png)
 
-####Concave track's belt shape example
-</center>
+%figure "Concave track's belt shape example"
+![Concave track's belt shape example](png/track_belt_concave.png)
+%end
 

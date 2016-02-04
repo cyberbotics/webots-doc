@@ -19,11 +19,10 @@ project directory. By definition, the current project directory is the parent
 directory of the "worlds" directory that contains the currently opened ".wbt"
 file. The  shows where ".proto" files are stored in a project directory.
 
-<center>
-![PROTO directory in a project directory structure](png/protos_directory_structure.png)
 
-####PROTO directory in a project directory structure
-</center>
+%figure "PROTO directory in a project directory structure"
+![PROTO directory in a project directory structure](png/protos_directory_structure.png)
+%end
 
 Note that inside the "protos" directory, the number of subdirectories and their
 names is free. The user can assign directory names for practical classification
@@ -51,11 +50,10 @@ example, a PROTO whose base type is `Material` cannot be inserted in a
 the dialog. Note that, the dialog's text pane is automatically filled with any
 comment placed at the beginning of the ".proto" file.
 
-<center>
-![Adding an instance of the TwoColorChair PROTO](png/add_proto.png)
 
-####Adding an instance of the TwoColorChair PROTO
-</center>
+%figure "Adding an instance of the TwoColorChair PROTO"
+![Adding an instance of the TwoColorChair PROTO](png/add_proto.png)
+%end
 
 Icons can be used to better illustrate PROTO nodes. A PROTO icon must be stored
 in a 128 x 128 pixels ".png" file. The file name must correspond to that of the
@@ -72,9 +70,8 @@ the `Scene Tree`, PROTO instances are represented with a different color than
 built-in nodes (see ). PROTO fields can be manipulated exactly like built-in
 node fields.
 
-<center>
-![Scene Tree with two instances of the TwoColorChair PROTO](png/scene_tree_with_protos.png)
 
-####Scene Tree with two instances of the TwoColorChair PROTO
-</center>
+%figure "Scene Tree with two instances of the TwoColorChair PROTO"
+![Scene Tree with two instances of the TwoColorChair PROTO](png/scene_tree_with_protos.png)
+%end
 

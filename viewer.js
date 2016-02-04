@@ -41,12 +41,12 @@ function redirectUrls(node, targetPath) {
     for (i = 0; i < imgs.length; i++) {
         var img = imgs[i];
         var src = img.getAttribute("src");
-        var match = /^png\/([\w-\.]*)$/.exec(src);
-        if (match && match.length == 2) {
+        var match = /^(\w*)\/([\w-\.]*)$/.exec(src);
+        if (match && match.length == 3) {
             console.log('check:');
             console.log('  targetPath: ' + targetPath);
-            console.log('  newPath: ' + targetPath + "png/" + match[1]);
-            img.setAttribute("src", targetPath + "png/" + match[1]);
+            console.log('  newPath: ' + targetPath + match[1] + "/" + match[2]);
+            img.setAttribute("src", targetPath + match[1] + "/" + match[2]);
         }
     }
 }

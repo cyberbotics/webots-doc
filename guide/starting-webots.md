@@ -109,9 +109,11 @@ option can be given to change the default parameters of the streaming server.
 This option is a string containing a list of parameter keys and their values
 separated by semicolons. The supported options are described in .
 
+%figure "Streaming server options"
 | Key | Value example | Description |
 | --- | --- | --- |
 | port | 1234 | The port on which the streaming server is open |
+%%end
 
 For example, the following command will start Webots with the streaming server
 enabled on the TCP port '1234': `webots --start-streaming-server="port:1234"`

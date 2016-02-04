@@ -30,6 +30,7 @@ of the PROTO, before being loaded in Webots. The template engine used is
 - The LUA_PATH environment variable can be modified (before running Webots) to include external Lua modules.
 - Lua standard output and error streams are redirected on the Webots console (written respectively in regular and in red colors). This allows developers to use the Lua regular functions to write on these streams.
 
+%figure "VRML type to Lua type conversion"
 | VRML type | Lua type |
 | --- | --- |
 | SFBool | boolean |
@@ -42,7 +43,9 @@ of the PROTO, before being loaded in Webots. The template engine used is
 | SFColor | dictionary (keys = "r", "g" and "b") |
 | SFNode | dictionary (keys = "node_name", "fields"[, "super"]) |
 | MF* | array (indexes = multiple value positions) |
+%%end
 
+%figure "Content of the context dictionary"
 | Key | Value |
 | --- | --- |
 | world | absolute path to the current world file (including file name and extension) |
@@ -51,6 +54,7 @@ of the PROTO, before being loaded in Webots. The template engine used is
 | webots_version | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
 | webots_home | absolute path to the Webots installation directory |
 | webots_modules_path | absolute path to the Webots modules directory |
+%%end
 
 ### Example
 

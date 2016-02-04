@@ -24,6 +24,7 @@ II are available, including a pen which can draw on any 3D object.
 The  shows which devices are supported by the model, and their names (using the
 Webots terminology).
 
+%figure "Thymio II devices"
 | Device | Support | Webots name |
 | --- | --- | --- |
 | Motors | Full support | motor.[left-right] |
@@ -36,6 +37,7 @@ Webots terminology).
 | Speaker | Not supported | N/A |
 | Temperature sensor | Not supported | N/A |
 | RC device | Not supported | N/A |
+%%end
 
 The Thymio II distance sensor feedback is given on . The calibration was
 performed using a regular A4 white paper.

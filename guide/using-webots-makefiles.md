@@ -25,10 +25,12 @@ If a controller requires several C/C++ source files they need to be specified in
 the Makefile. The name of each source file must be listed, using one of these
 variables:
 
+%figure "Webots Makefile Variables"
 | Variable | Usage |
 | --- | --- |
 | C_SOURCES | Specifies a list of .c sources files |
 | CXX_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files |
+%%end
 
 Every source file specified using these variables, will be added to the
 controller build. In addition dependency files will be automatically generated
@@ -56,11 +58,13 @@ e.g. if the controller directory is "my_controller" then the list must contain e
 
 These two variables can be used to pass flags to the gcc compiler or linker.
 
+%figure "Webots Makefile Variables"
 | Variable | Usage |
 | --- | --- |
 | CFLAGS | Specifies a list of flags that will be passed to the gcc/g++ compiler |
 | INCLUDE | Specifies a list of flags that will be passed to the gcc/g++ compiler |
 | LIBRARIES | Specifies a list of flags that will be passed to the linker |
+%%end
 
 #### Adding an External Library (C/C++)
 

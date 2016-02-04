@@ -113,6 +113,7 @@ Two different methods are used for calculating the distance from an object.
 *Average* method computes the average of the distances measured by all the rays,
 whereas *Nearest* method uses the shortest distance measured by any of the rays.
 
+%figure "Summary of DistanceSensor types"
 | type (field) | "generic" | "infra-red" | "sonar" | "laser" |
 | --- | --- | --- | --- | --- |
 | numberOfRays (field) | gt 0 | gt 0 | gt 0 | 1 |
@@ -120,6 +121,7 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 | gaussianWidth (field) | Used | Used | Ignored | Ignored |
 | Sensitive to red objects | No | Yes | No | No |
 | Draws a red spot | No | No | No | Yes |
+%%end
 
 ### Infra-Red Sensors
 

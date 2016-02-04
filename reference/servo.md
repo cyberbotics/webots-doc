@@ -50,12 +50,14 @@ hydraulic/pneumatic cylinder, a spring, or a damper.
 Rotational servos units are expressed in *radians* while linear servos units are
 expressed in *meters*. See :
 
+%figure "Servo Units"
 |  | Rotational | Linear |
 | --- | --- | --- |
 | Position | rad (radians) | m (meters) |
 | Velocity | rad/s (radians / second) | m/s (meters / second) |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
 | Torque/Force | N*m (Newtons * meters) | N (Newtons) |
+%%end
 
 ### Initial Transformation and Position
 
@@ -172,6 +174,7 @@ with `wb_servo_set_force()` is applied to the `Servo` continuously. Hence the
 `Servo` will infinitely accelerate its rotational or linear motion and
 eventually *explode* unless a functional force control algorithm is used.
 
+%figure "Servo Control Summary"
 |  | position control | velocity control | force control |
 | --- | --- | --- | --- | --- |
 | uses P-controller | yes | no | no |
@@ -180,6 +183,7 @@ eventually *explode* unless a functional force control algorithm is used.
 | wb_servo_set_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
 | wb_servo_set_motor_force() | specifies the available force | specifies the available force | specifies the max force |
 | wb_servo_set_force() | switches to force control | switches to force control | * specifies the desired force |
+%%end
 
 ### Servo Limits
 
@@ -261,6 +265,7 @@ parallel and can be switched on and off independently (by default only the motor
 force is on). For example, to turn off the motor force and obtain a passive
 `Servo`, you can set the `maxForce` field to zero.
 
+%figure "Servo Forces"
 | Force | motor force | spring force | damping force |
 | --- | --- | --- | --- |
 | Turned on when: | maxForce gt 0 | springConstant gt 0 | dampingConstant gt 0 |
@@ -270,6 +275,7 @@ force is on). For example, to turn off the motor force and obtain a passive
 | damper (without spring) | off | off | on |
 | motor with friction | on | off | on |
 | spring without any friction | off | on | off |
+%%end
 
 To obtain a spring amp damper element, you can set `maxForce` to zero and
 `springConstant` and `dampingConstant` to non-zero values. A pure spring is

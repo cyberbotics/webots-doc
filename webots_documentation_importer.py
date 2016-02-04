@@ -92,7 +92,7 @@ class BookParser:
     def getTitle(self, el):
       titleNodes = el.findall('title')
       if len(titleNodes) <= 0:
-          raise Exception('Cannot find title')
+          return ''
       return titleNodes[0].text.strip()
 
     def parseText(self, txt):
@@ -217,8 +217,12 @@ class BookParser:
         outFile.write('\n')
 
     def parseTable(self, node, outFile):
+        title = self.getTitle(node)
         header = len(node.findall('.//thead')) == 1
         nCols = int(node.findall('tgroup')[0].attrib.get('cols'))
+
+        if len(title) > 0:
+            outFile.write('%%figure "%s"\n' % (title))
 
         if not header and nCols == 1:
             outFile.write('```')
@@ -248,6 +252,9 @@ class BookParser:
 
         if not header and nCols == 1:
             outFile.write('```')
+
+        if len(title) > 0:
+            outFile.write('%%end\n')
 
         outFile.write('\n')
 

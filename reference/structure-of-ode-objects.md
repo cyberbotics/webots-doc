@@ -3,6 +3,7 @@
 This table shows how common ".wbt" constructs are mapped to ODE objects. This
 information shall be useful for implementing physics plugins.
 
+%figure "Mapping between common Webots constructs and ODE objects."
 | Webots construct | ODE construct |
 | --- | --- |
 | Solid { physics Physics {...} } | dBodyID |
@@ -20,4 +21,5 @@ information shall be useful for implementing physics plugins.
 | HingeJoint { } | dJointID (dJointTypeHinge) |
 | Hinge2Joint { } | dJointID (dJointTypeHinge2) |
 | SliderJoint { } | dJointID (dJointTypeSlider) |
+%%end
 

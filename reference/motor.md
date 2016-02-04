@@ -39,11 +39,13 @@ By *motor position*, we mean joint position as defined in `JointParameters`.
 Rotational motors units are expressed in *radians* while linear motors units are
 expressed in *meters*. See :
 
+%figure "Motor Units"
 |  | Rotational | Linear |
 | --- | --- | --- |
 | Position | rad (radians) | m (meters) |
 | Velocity | rad/s (radians / second) | m/s (meters / second) |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
+%%end
 
 ### Initial Transformation and Position
 
@@ -152,6 +154,7 @@ control*. Some care must be taken when using *force control*. Indeed the force
 eventually *explode* unless a functional force control (resp. torque control)
 algorithm is used.
 
+%figure "Motor Control Summary"
 |  | position control | velocity control | force or torque control |
 | --- | --- | --- | --- | --- |
 | uses PID-controller | yes | no | no |
@@ -160,6 +163,7 @@ algorithm is used.
 | wb_motor_set_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
 | wb_motor_set_available_force() (resp. wb_motor_set_available_torque()) | specifies the available force (resp. torque) | specifies the available force (resp. torque) | specifies the max force (resp. max torque) |
 | wb_motor_set_force() (resp. wb_motor_set_torque()) | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
+%%end
 
 ### Motor Limits
 

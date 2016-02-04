@@ -27,6 +27,7 @@ E-puck was designed to fulfill the following requirements:
 
 E-puck is equipped with a large number of devices, as summarized in .
 
+%figure "e-puck features"
 | Feature | Description |
 | --- | --- |
 | Size | 7.4 cm in diameter, 4.5 cm high |
@@ -46,6 +47,7 @@ E-puck is equipped with a large number of devices, as summarized in .
 | Expansion bus | expansion bus to add new possibilities to your robot |
 | Programming | C programming with the GNU GCC compiler system |
 | Simulation | Webots EDU or PRO facilitates the programming of e-puck with a powerful simulation, remote control and cross-compilation system. |
+%%end
 
 ### Simulation model
 
@@ -67,6 +69,7 @@ the names of the simulated devices which are to be used as an argument of the
 function `wb_robot_get_device()` (see the Robot section of [Reference
 Manual](http://www.cyberbotics.com/reference/)).
 
+%figure "Devices names"
 | Device | Name |
 | --- | --- |
 | Differential wheels | differential wheels |
@@ -76,7 +79,9 @@ Manual](http://www.cyberbotics.com/reference/)).
 | Camera | camera |
 | Accelerometer | accelerometer |
 | Ground sensors (extension) | gs0, gs1 and gs2 |
+%%end
 
+%figure "e-puck specifications"
 | Main specifications | Values |
 | --- | --- |
 | Robot radius | 37 mm |
@@ -85,6 +90,7 @@ Manual](http://www.cyberbotics.com/reference/)).
 | Encoder resolution | 159.23 |
 | Speed unit | 0.00628 rad/s |
 | Maximum angular speed | 1000 units |
+%%end
 
 The e-puck dimensions and speed specifications are shown in . The functions
 `wb_differential_wheels_set_speed()`,
@@ -92,6 +98,7 @@ The e-puck dimensions and speed specifications are shown in . The functions
 `wb_differential_wheels_get_right_encoder()` will allow you to set the speed of
 the robot and to use its encoders.
 
+%figure "Devices orientations"
 | Device | x (m) | y (m) | z (m) | Orientation (rad) |
 | --- | --- | --- | --- | --- |
 | ps0 | 0.010 | 0.033 | -0.030 | 1.27 |
@@ -103,6 +110,7 @@ the robot and to use its encoders.
 | ps6 | -0.025 | 0.033 | -0.022 | 2.37 |
 | ps7 | -0.010 | 0.033 | -0.030 | 1.87 |
 | camera | 0.000 | 0.028 | -0.030 | 4.71239 |
+%%end
 
 As is the case for any Differential Wheels robot set at its default position in
 Webots, the forward direction of the e-puck is given by the negative `z`-axis of

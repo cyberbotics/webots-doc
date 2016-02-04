@@ -89,7 +89,15 @@ p {
   text-align:justify;
 }
 img {
+  max-width: 100%;
+}
+figure {
   max-width: 80%;
+  text-align: center;
+}
+figcaption {
+  font-style: italic;
+  background-color: #ddd;
 }
 table {
   max-width:80%; 

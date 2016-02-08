@@ -31,11 +31,9 @@ objects.
 ### Field Summary
 
 - 
-
 %figure "Sensor response versus obstacle distance"
 ![Sensor response versus obstacle distance](pdf/infrared.pdf.png)
 %end
-
 
 
 
@@ -100,7 +98,6 @@ one to ten rays. The spacial distribution of the rays is as much as possible
 uniform and has a left/right symmetry. There is no upper limit on the number of
 rays; however, Webots' performance drops as the number of rays increases.
 
-
 %figure "Predefined configurations for 1 through 10 sensor rays"
 ![Predefined configurations for 1 through 10 sensor rays](pdf/ray_orbits.pdf.png)
 %end
@@ -111,7 +108,6 @@ rays; however, Webots' performance drops as the number of rays increases.
 cone of rays when multiple rays are used. For the "laser" sensor type, this
 field specifies (in meters) the radius of the red spot drawn where the laser
 beam hits an obstacle.
-
 
 %figure "Weight distribution formulas"
 ![Weight distribution formulas](pdf/weight_formula.pdf.png)
@@ -129,7 +125,6 @@ than rays in the periphery. A wider or narrower distribution can be obtained by
 tuning the `gaussianWidth` field. An approximation of a flat distribution is
 obtained if a sufficiently large number is chosen for the `gaussianWidth`. This
 field is ignored for the "sonar" and "laser" DistanceSensor types.
-
 
 %figure "Example distribution for 10 rays using a Gaussian width of 0.5"
 ![Example distribution for 10 rays using a Gaussian width of 0.5](pdf/weight_distribution.pdf.png)

@@ -51,7 +51,6 @@ the corresponding angle element will not be computed and it will return *NaN*
 `wb_inertial_unit_get_values()[2]` returns *NaN*. The default is that all three
 axes are enabled (TRUE).
 
-
 %figure "Roll, pitch and yaw angles in Webots' Inertial Unit"
 ![Roll, pitch and yaw angles in Webots' Inertial Unit](png/roll_pitch_yaw.png)
 %end

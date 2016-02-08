@@ -220,7 +220,6 @@ class BookParser:
                 if child.tag == 'para':
                     self.parsePara(child, outFile)
                 elif child.tag == 'figure':
-                    outFile.write('\n')
                     self.parseFigure(child, outFile)
                 elif child.tag == 'programlisting':
                     self.parseProgramListing(child, outFile)

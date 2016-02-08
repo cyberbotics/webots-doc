@@ -112,7 +112,6 @@ is 4 then there will be 4 different docking positions (one every 90 degrees). If
 you don't wish to check the rotational alignment criterion this field should be
 set to zero.
 
-
 %figure "Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)"
 ![Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)](pdf/connector_alignment.pdf.png)
 %end

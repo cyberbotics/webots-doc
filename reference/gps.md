@@ -34,7 +34,6 @@ second ago). Internally the correlation factor corresponding to the sensor time
 step is computed and the current noise is estimated using a Gauss-Markov process
 as described in .
 
-
 %figure "Gauss-Markov process"
 ![Gauss-Markov process](pdf/gauss_markov.pdf.png)
 %end

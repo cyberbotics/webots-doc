@@ -8,8 +8,8 @@ Propeller {
   field SFVec2f thrustConstants 1 0   # Ns^2/rad : (-inf, inf), Ns^2/(m*rad) : (-inf, inf)
   field SFVec2f torqueConstants 1 0   # Nms^2/rad : (-inf, inf), Ns^2/rad : (-inf, inf)
   field SFNode device NULL            # RotationalMotor
-  field SFNode fastHelix NULL         # Solid node containing a graphical representation for rotation speed gt 24 pi rad/s (720 rpm)
-  field SFNode slowHelix NULL         # Solid node containing a graphical representation for rotation speed lt= 24 pi rad/s
+  field SFNode fastHelix NULL         # Solid node containing a graphical representation for rotation speed > 24 π rad/s (720 rpm)
+  field SFNode slowHelix NULL         # Solid node containing a graphical representation for rotation speed <= 24 π rad/s
 }
 ```
 
@@ -64,6 +64,6 @@ the propeller.
 - `fastHelix` and `slowHelix`: if not NULL, these fields must be set with `Solid`
 nodes. The corresponding `Solid` nodes define the graphical representation of
 the propeller according to its motor's angular velocity omega: if |omega| > 24
-pi rad /s, only the `Solid` defined in `fastHelix` is visible, otherwise only
+π rad /s, only the `Solid` defined in `fastHelix` is visible, otherwise only
 the `Solid` defined in `slowHelix` is visible.
 

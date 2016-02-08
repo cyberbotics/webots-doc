@@ -94,7 +94,7 @@ PROTO SimpleStairs [
   # template statements can be used from here
   %{
     -- a template statement can be written on several lines
-    if fields.nSteps.value lt 1 then
+    if fields.nSteps.value < 1 then
       print('nSteps should be strictly positive')
     end
 

@@ -66,8 +66,8 @@ OpenGL version string: 1.4 (1.5 Mesa 6.5.2)
 In this case you should definitely install the hardware driver.
 
 On Ubuntu the driver can usually be installed automatically from the `Additional
-Drivers` tab of the `Software amp Update` window. Otherwise you can find out
-what graphics hardware is installed on your computer by using this command:
+Drivers` tab of the `Software & Update` window. Otherwise you can find out what
+graphics hardware is installed on your computer by using this command:
 
 ```
 $ lspci | grep VGA

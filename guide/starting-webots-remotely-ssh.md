@@ -50,13 +50,13 @@ a file:
 ```
 $ ssh myname@computerB.org
 $ export DISPLAY=:0.0
-$ webots --mode=fast --stdout --stderr myworld.wbt ampgt out.txt amp
+$ webots --mode=fast --stdout --stderr myworld.wbt &> out.txt &
 $ exit
 ```
 
-The ampgt sign redirects into a text file the output that would otherwise appear
-in the `ssh` terminal. The amp sign starts Webots as a background job: so the
-user can safely exit the `ssh` session, while Webots keeps running.
+The &> sign redirects into a text file the output that would otherwise appear in
+the `ssh` terminal. The & sign starts Webots as a background job: so the user
+can safely exit the `ssh` session, while Webots keeps running.
 
 In this case the decision to terminate the job is usually made in the Supervisor
 code according to simulation specific criteria. The

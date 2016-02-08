@@ -26,5 +26,5 @@ node). Note that Webots ignores collision between planes, so planes can safely
 cut each other. Note that a `Plane` node is in fact not really a plane: it's a
 half-space. Anything that is moving inside the half-space will be ejected out of
 it. This means that planes are only planes from the perspective of one side. If
-you want your plane to be reversed, rotate it by pi using a `Transform` node.
+you want your plane to be reversed, rotate it by π using a `Transform` node.
 

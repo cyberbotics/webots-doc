@@ -9,8 +9,8 @@ The tradition in computer science is to start with a "Hello World!" example. So
 here is a "Hello World!" example for a Webots controller:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltstdio.hgt
+#include <webots/robot.h>
+#include <stdio.h>
 
 int main() {
   wb_robot_init();
@@ -30,9 +30,9 @@ automatically redirected to Webots console for all Webots supported languages.
 
 Webots C API (Application Programming Interface) is provided by regular C header
 files. These header files must be included using statements like `#include
-ltwebots/xyz.hgt` where `xyz` represents the name of a Webots node in lowercase.
+<webots/xyz.h>` where `xyz` represents the name of a Webots node in lowercase.
 Like with any regular C code it is also possible to include the standard C
-headers, e.g. `#include ltstdio.hgt`. A call to the initialization function
+headers, e.g. `#include <stdio.h>`. A call to the initialization function
 `wb_robot_init()` is required before any other C API function call. This
 function initializes the communication between the controller and Webots. Note
 that  `wb_robot_init()` exists only in the C API, it does not have any
@@ -61,9 +61,9 @@ read the sensors of a robot. The next example does continuously update and print
 the value returned by a `DistanceSensor`:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/distance_sensor.hgt
-#include ltstdio.hgt
+#include <webots/robot.h>
+#include <webots/distance_sensor.h>
+#include <stdio.h>
 
 #define TIME_STEP 32
 
@@ -187,9 +187,9 @@ motion (i.e. reach the specified target position); it just simulates the motor's
 motion for the specified number of milliseconds.
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/motor.hgt
-#include ltmath.hgt
+#include <webots/robot.h>
+#include <webots/motor.h>
+#include <math.h>
 
 #define TIME_STEP 32
 
@@ -294,7 +294,7 @@ Similarly this code does not make much sense either:
 while (1) {
   double d1 = wb_distance_sensor_get_value(ds1);
   double d2 = wb_distance_sensor_get_value(ds1);
-  if (d2 lt d1)   // WRONG: d2 will always equal d1 here
+  if (d2 < d1)   // WRONG: d2 will always equal d1 here
     avoidCollision();
   wb_robot_step(40);
 }
@@ -309,7 +309,7 @@ while (1) {
   double d1 = wb_distance_sensor_get_value(ds1);
   wb_robot_step(40);
   double d2 = wb_distance_sensor_get_value(ds1);
-  if (d2 lt d1)
+  if (d2 < d1)
     avoidCollision();
   wb_robot_step(40);
 }
@@ -345,9 +345,9 @@ used here is a `DifferentialWheels` using differential steering. It uses two
 proximity sensors (`DistanceSensor`) to detect obstacles.
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/differential_wheels.hgt
-#include ltwebots/distance_sensor.hgt
+#include <webots/robot.h>
+#include <webots/differential_wheels.h>
+#include <webots/distance_sensor.h>
 
 #define TIME_STEP 32
 
@@ -401,14 +401,14 @@ Robot {
 and if the controller name is *"demo"*, then this sample controller code:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltstdio.hgt
+#include <webots/robot.h>
+#include <stdio.h>
 
 int main(int argc, const char *argv[]) {
   wb_robot_init();
 
   int i;
-  for (i = 0; i lt argc; i++)
+  for (i = 0; i < argc; i++)
     printf("argv[%i]=%s\n", i, argv[i]);
 
   return 0;
@@ -437,9 +437,9 @@ time) to save important data, close files, etc. before it is effectively killed
 by Webots. Here is an example that shows how to detect the upcoming termination:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/distance_sensor.hgt
-#include ltstdio.hgt
+#include <webots/robot.h>
+#include <webots/distance_sensor.h>
+#include <stdio.h>
 
 #define TIME_STEP 32
 

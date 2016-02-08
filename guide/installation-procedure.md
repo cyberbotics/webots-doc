@@ -69,14 +69,14 @@ tarball:
 
 
 ```
-tar xjf webots-webots_major_version.webots_minor_version.webots_bugfix_version-i386.tar.bz2
+tar xjf webots-8.3.2-i386.tar.bz2
 ```
 
 or
 
 
 ```
-tar xjf webots-webots_major_version.webots_minor_version.webots_bugfix_version-x86-64.tar.bz2
+tar xjf webots-8.3.2-x86-64.tar.bz2
 ```
 
 and
@@ -108,7 +108,7 @@ with the `root` privileges. For 32-bit systems:
 
 
 ```
-dpkg -i webots_webots_major_version.webots_minor_version.webots_bugfix_version_i386.deb
+dpkg -i webots_8.3.2_i386.deb
 apt-get -f install
 ```
 
@@ -116,14 +116,14 @@ or
 
 
 ```
-gdebi webots_webots_major_version.webots_minor_version.webots_bugfix_version_i386.deb
+gdebi webots_8.3.2_i386.deb
 ```
 
 For 64-bit systems:
 
 
 ```
-dpkg -i webots_webots_major_version.webots_minor_version.webots_bugfix_version_amd64.deb
+dpkg -i webots_8.3.2_amd64.deb
 apt-get -f install
 ```
 
@@ -131,16 +131,13 @@ or
 
 
 ```
-gdebi webots_webots_major_version.webots_minor_version.webots_bugfix_version_amd64.deb
+gdebi webots_8.3.2_amd64.deb
 ```
 
 ### Windows
 
 It is possible to install Webots silently from an administrator DOS console, by
-typing "webots-
-webots\_major\_version.webots\_minor\_version.webots\_bugfix\_version\_setup.exe
-/SILENT" or "webots-
-webots\_major\_version.webots\_minor\_version.webots\_bugfix\_version\_setup.exe
+typing "webots-8.3.2\_setup.exe /SILENT" or "webots-8.3.2\_setup.exe
 /VERYSILENT"
 
 If you observe 3D rendering anomalies or Webots crashes, it is strongly

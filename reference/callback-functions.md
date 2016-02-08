@@ -20,26 +20,26 @@ using POSIX mutexes as exemplified here:
 static pthread_mutex_t mutex;
 
 void webots_physics_init() {
-  pthread_mutex_init(ampmutex, NULL);
+  pthread_mutex_init(&mutex, NULL);
   ...
 }
 
 int webots_physics_collide(dGeomID g1, dGeomID g2) {
 ...
     dJointGroupID contact_joint_group = dWebotsGetContactJointGroup();
-    pthread_mutex_lock(ampmutex);
+    pthread_mutex_lock(&mutex);
     dJointAttach(dJointCreateContact(world,
                                      contact_joint_group,
-                                     ampcontact[i]),
+                                     &contact[i]),
                                      robot_body,
                                      NULL);
-    pthread_mutex_unlock(ampmutex);
+    pthread_mutex_unlock(&mutex);
 ...
 }
 
 void webots_physics_cleanup() {
   ...
-  pthread_mutex_destroy(ampmutex);
+  pthread_mutex_destroy(&mutex);
 }
 ```
 
@@ -151,7 +151,7 @@ implementation example:
 
 ```
 void webots_physics_draw(int pass, const char *view) {
-  if (pass == 1 ampamp view == NULL) {
+  if (pass == 1 && view == NULL) {
     /* This code is reached only during the second pass of the 3D view */
 
     /* modify OpenGL context */

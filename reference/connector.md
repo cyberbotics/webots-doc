@@ -205,8 +205,8 @@ type_compatible  := both connectors are "symmetric" OR one connector
                     is "active" AND the other one is "passive"
 model_compatible := both models strings are equal
 in_position      := near_enough AND axis_aligned AND rotation_aligned
-near_enough      := the distance between the connectors lt tolerance
-axis_aligned     := the angle between the z-axes lt tolerance
+near_enough      := the distance between the connectors < tolerance
+axis_aligned     := the angle between the z-axes < tolerance
 rotation_aligned := the n-ways rotational angle is within tolerance
 ```
 

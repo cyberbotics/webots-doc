@@ -24,7 +24,7 @@ follows: *att = 1/(attenuation[0] + attenuation[1] * r + attenuation[2] * r^2)*,
 where *r* is the distance from the light to the surface being illuminated. The
 default is no attenuation. When `PointLight` nodes are used together with
 `LightSensor`, it is recommended to change the default attenuation to a more
-realistic [*0 0 4*pi*] in order to more accurately model physical reality.
+realistic [*0 0 4*π*] in order to more accurately model physical reality.
 Indeed, if a point source radiates light uniformly in all directions and there
 is no absorption, then the irradiance drops off in proportion to the square of
 the distance from the surface.

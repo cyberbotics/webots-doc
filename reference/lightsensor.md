@@ -114,15 +114,15 @@ The value `I[i]` corresponds to the *intensity* field of light `i`, and `N` is
 the normal axis (*x*-axis) of the sensor (see ). In the case of a `PointLight`,
 `L` is the sensor-to-light-source vector. In the case of a `DirectionalLight`,
 `L` corresponds to the negative of the light's `direction` field. The *
-operation is a modified dot product: if dot lt 0, then 0, otherwise, dot
-product. Hence, each light source contributes to the irradiance of a sensor
-according to the cosine of the angle between the `N` and the `L` vectors, as
-shown in the figure. The contribution is zero if the light source is located
-behind the sensor. This is derived from the physical fact that a photo-sensitive
-device is usually built as a surface of semiconductor material and therefore,
-the closer the angle of incidence is to perpendicular, the more photons will
-actually hit the surface and excite the device. When a light source is parallel
-to (or behind) the semiconductor surface, no photons actually reach the surface.
+operation is a modified dot product: if dot < 0, then 0, otherwise, dot product.
+Hence, each light source contributes to the irradiance of a sensor according to
+the cosine of the angle between the `N` and the `L` vectors, as shown in the
+figure. The contribution is zero if the light source is located behind the
+sensor. This is derived from the physical fact that a photo-sensitive device is
+usually built as a surface of semiconductor material and therefore, the closer
+the angle of incidence is to perpendicular, the more photons will actually hit
+the surface and excite the device. When a light source is parallel to (or
+behind) the semiconductor surface, no photons actually reach the surface.
 
 
 %figure "The irradiance (E) depends on the angle (phi) between the"

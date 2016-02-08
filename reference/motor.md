@@ -209,7 +209,7 @@ hold it up.
 Finally, note that when both soft (`minPosition` and `maxPosition`) and hard
 limits (`minStop` and `maxStop`, see `JointParameters`) are activated, the range
 of the soft limits must be included in the range of the hard limits, such that
-`minStop lt= minValue` and `maxStopgt= maxValue`. Moreover a simulation
+`minStop <= minValue` and `maxStop>= maxValue`. Moreover a simulation
 instability can appear if `position` is exactly equal to one of the bounds
 defined by the `minStop` and `maxStop` fields at the simulation startup.
 Warnings are displayed if theses rules are not respected.
@@ -228,12 +228,11 @@ is not blocked by obstacles, external forces or the motor's own spring force,
 etc. It is also possible to wait until the `Motor` reaches the target position
 (synchronous) like this:
 
-The `INFINITY` (*#include ltmath.hgt*) value can be used as the second argument
-to the `wb_motor_set_position()` function in order to enable an endless
-rotational (or linear) motion. The current values for velocity, acceleration and
-motor torque/force are taken into account. So for example,
-`wb_motor_set_velocity()` can be used for controlling the velocity of the
-endless rotation:
+The `INFINITY` (*#include <math.h>*) value can be used as the second argument to
+the `wb_motor_set_position()` function in order to enable an endless rotational
+(or linear) motion. The current values for velocity, acceleration and motor
+torque/force are taken into account. So for example, `wb_motor_set_velocity()`
+can be used for controlling the velocity of the endless rotation:
 
 The `wb_motor_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_motor_set_position()`

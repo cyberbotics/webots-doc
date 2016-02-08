@@ -82,7 +82,7 @@ obstacles have a higher response than dark and non-red obstacles (see below for
 more details). Sensors of type "sonar" and "laser" return the distance to the
 nearest object while "generic" and "infa-red" computes the average distance of
 all rays. Note however that sensors of type "sonar" will return the sonar range
-for each ray whose angle of incidence is greater than pi/8 radians (see below
+for each ray whose angle of incidence is greater than π/8 radians (see below
 for more details). Sensors of type "laser" can have only one ray and they have
 the particularity to draw a red spot at the point where this ray hits an
 obstacle. This red spot is visible on the camera images. If the red spot
@@ -153,7 +153,7 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 %figure "Summary of DistanceSensor types"
 | type (field) | "generic" | "infra-red" | "sonar" | "laser" |
 | --- | --- | --- | --- | --- |
-| numberOfRays (field) | gt 0 | gt 0 | gt 0 | 1 |
+| numberOfRays (field) | > 0 | > 0 | > 0 | 1 |
 | Distance calculation | Average | Average | Nearest | Nearest |
 | gaussianWidth (field) | Used | Used | Ignored | Ignored |
 | Sensitive to red objects | No | Yes | No | No |
@@ -176,7 +176,7 @@ lookup table is used to compute the output value.
 
 In the case of a "sonar" sensor, the return value will be the last value entered
 in the lookup table, i.e. the value corresponding to sonar sensor's range, if
-the angle of incidence is greater than 22.5 degrees (pi/8 radians). In other
+the angle of incidence is greater than 22.5 degrees (π/8 radians). In other
 words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see ).
 

@@ -240,14 +240,14 @@ The `minStop` and `maxStop` fields define the *hard limits* of the servo. Hard
 limits represent physical (or mechanical) bounds that cannot be overrun by any
 force. Hard limits can be used, for example, to simulate both end caps of a
 hydraulic or pneumatic piston or to restrict the range of rotation of a hinge.
-The value of `minStop` must be in the range [-pi, 0] and `maxStop` must be in
-the range [0, pi]. When both `minStop` and `maxStop` are zero (the default), the
+The value of `minStop` must be in the range [-π, 0] and `maxStop` must be in
+the range [0, π]. When both `minStop` and `maxStop` are zero (the default), the
 hard limits are deactivated. The servo hard limits use ODE joint stops (for more
 information see the ODE documentation on `dParamLoStop` and `dParamHiStop`).
 
 Finally, note that when both soft and hard limits are activated, the range of
 the soft limits must be included in the range of the hard limits, such that
-`minStop lt= minValue` and `maxStopgt= maxValue`.
+`minStop <= minValue` and `maxStop>= maxValue`.
 
 ### Springs and Dampers
 
@@ -297,16 +297,16 @@ force is on). For example, to turn off the motor force and obtain a passive
 %figure "Servo Forces"
 | Force | motor force | spring force | damping force |
 | --- | --- | --- | --- |
-| Turned on when: | maxForce gt 0 | springConstant gt 0 | dampingConstant gt 0 |
+| Turned on when: | maxForce > 0 | springConstant > 0 | dampingConstant > 0 |
 | Turned off when: | maxForce = 0 | springConstant = 0 | dampingConstant = 0 |
 | regular motor (the default) | on | off | off |
-| regular spring amp damper | off | on | on |
+| regular spring & damper | off | on | on |
 | damper (without spring) | off | off | on |
 | motor with friction | on | off | on |
 | spring without any friction | off | on | off |
 %%end
 
-To obtain a spring amp damper element, you can set `maxForce` to zero and
+To obtain a spring & damper element, you can set `maxForce` to zero and
 `springConstant` and `dampingConstant` to non-zero values. A pure spring is
 obtained when both `maxForce` and `dampingConstant` but not `springConstant` are
 set to zero. However in this case the spring may oscillate forever because
@@ -327,9 +327,9 @@ have such elements mounted serially. With Webot, serially mounted elements must
 be modeled by having `Servo` nodes used as children of other `Servo` nodes. For
 example if you wish to have a system where a motor controls the resting position
 of a spring, then you will need two `Servo` nodes, as depicted in . In this
-example, the parent `Servo` will have a motor force (maxForce gt 0) and the
-child `Servo` will have spring and damping forces (`springConstant` gt 0 and
-`dampingConstant` gt 0).
+example, the parent `Servo` will have a motor force (maxForce > 0) and the child
+`Servo` will have spring and damping forces (`springConstant` > 0 and
+`dampingConstant` > 0).
 
 
 %figure "Example of serial connection of two Servo nodes"
@@ -438,12 +438,11 @@ obstacles, external forces or the servo's own spring force, etc. It is also
 possible to wait until the `Servo` reaches the target position (synchronous)
 like this:
 
-The `INFINITY` (*#include ltmath.hgt*) value can be used as the second argument
-to the `wb_servo_set_position()` function in order to enable an endless
-rotational (or linear) motion. The current values for velocity, acceleration and
-motor torque/force are taken into account. So for example,
-`wb_servo_set_velocity()` can be used for controlling the velocity of the
-endless rotation:
+The `INFINITY` (*#include <math.h>*) value can be used as the second argument to
+the `wb_servo_set_position()` function in order to enable an endless rotational
+(or linear) motion. The current values for velocity, acceleration and motor
+torque/force are taken into account. So for example, `wb_servo_set_velocity()`
+can be used for controlling the velocity of the endless rotation:
 
 The `wb_servo_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_servo_set_position()`

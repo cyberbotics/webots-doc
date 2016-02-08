@@ -47,9 +47,9 @@ code finds a `WbNodeRef` that corresponds to the robot node and then a
 iteration it reads and prints the field's values.
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/supervisor.hgt
-#include ltstdio.hgt
+#include <webots/robot.h>
+#include <webots/supervisor.h>
+#include <stdio.h>
 
 int main() {
   wb_robot_init();
@@ -108,10 +108,10 @@ hence the base node of this robot in the Scene Tree must be a `Supervisor` and
 not a Robot.
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/supervisor.hgt
-#include ltstdio.hgt
-#include ltmath.hgt
+#include <webots/robot.h>
+#include <webots/supervisor.h>
+#include <stdio.h>
+#include <math.h>
 
 #define TIME_STEP 32
 
@@ -123,10 +123,10 @@ int main() {
   WbFieldRef trans_field = wb_supervisor_node_get_field(robot_node, "translation");
 
   double a, b, t;
-  for (a = 0.0; a lt 5.0; a += 0.2) {
-    for (b = 0.0; b lt 10.0; b += 0.3) {
+  for (a = 0.0; a < 5.0; a += 0.2) {
+    for (b = 0.0; b < 10.0; b += 0.3) {
       // evaluate robot during 60 seconds (simulation time)
-      for (t = 0.0; t lt 60.0; t += TIME_STEP / 1000.0) {
+      for (t = 0.0; t < 60.0; t += TIME_STEP / 1000.0) {
         actuateMotors(a, b, t);
         wb_robot_step(TIME_STEP);
       }

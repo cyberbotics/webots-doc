@@ -49,7 +49,7 @@ P[i,j].x = xSpacing * i
 P[i,j].y = height[ i + j * xDimension]
 P[i,j].z = zSpacing * j
 
-where 0 lt= i lt xDimension and 0 lt= j lt zDimension,
+where 0 <= i < xDimension and 0 <= j < zDimension,
 and P[0,0] is height[0] units above/below the origin of the local
 coordinate system
 ```

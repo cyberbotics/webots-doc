@@ -25,7 +25,7 @@ One (and only one) instance of each of the `WorldInfo, ViewPoint` and
 WorldInfo {
   info [
     "Description"
-    "Author: first name last name lte-mailgt"
+    "Author: first name last name <e-mail>"
     "Date: DD MMM YYYY"
   ]
 }

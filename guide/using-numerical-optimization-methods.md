@@ -26,20 +26,20 @@ systematical optimization of two parameters *a* and *b* using only one
 controller:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/supervisor.hgt
+#include <webots/robot.h>
+#include <webots/supervisor.h>
 
 #define TIME_STEP 5
 
 int main() {
   wb_robot_init();
   double a, b, time;
-  for (a = 0.5; a lt 10.0; a += 0.1) {
-    for (b = 0.1; b lt 5.0; b += 0.5) {
+  for (a = 0.5; a < 10.0; a += 0.1) {
+    for (b = 0.1; b < 5.0; b += 0.5) {
       resetRobot();  // move robot to initial position
 
       // run robot simulation for 30 seconds
-      for (time = 0.0; time lt 30.0; time += TIME_STEP / 1000.0) {
+      for (time = 0.0; time < 30.0; time += TIME_STEP / 1000.0) {
         actuateMotors(a, b, time);
         wb_robot_step(TIME_STEP);
       }
@@ -142,8 +142,8 @@ optimization algorithm. The optimization state should be saved before calling
 controller restarts. Here is a pseudo-code example:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/supervisor.hgt
+#include <webots/robot.h>
+#include <webots/supervisor.h>
 
 void run_robot(const double params[]) {
   read_sensors(params);
@@ -156,7 +156,7 @@ void evaluate_next_robot() {
   ...
   // run robot for 30 seconds
   double time;
-  for (time = 0.0; time lt 30.0; time += TIME_STEP / 1000.0) {
+  for (time = 0.0; time < 30.0; time += TIME_STEP / 1000.0) {
     run_robot(params);
     wb_robot_step(TIME_STEP);
   }
@@ -227,8 +227,8 @@ Here is a possible (pseudo-code) implementation for the robot evaluation
 controller:
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/supervisor.hgt
+#include <webots/robot.h>
+#include <webots/supervisor.h>
 
 #define TIME_STEP 10
 
@@ -240,7 +240,7 @@ int main() {
   genotype_read("genotype.txt", genotype);
   ...
   // run evaluation for 30 seconds
-  for (double time = 0.0; time lt 30.0; time += TIME_STEP / 1000.0) {
+  for (double time = 0.0; time < 30.0; time += TIME_STEP / 1000.0) {
     read_sensors(genotype);
     actuate_motors(time, genotype);
     wb_robot_step(TIME_STEP);

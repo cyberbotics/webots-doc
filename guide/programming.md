@@ -139,9 +139,9 @@ because it uses the `WbDeviceTag` of a `Camera` in a `wb_distance_sensor_*()`
 function. Here is an example of what is wrong:
 
 ```
-#include ltwebots/robot.hgt
-#include ltwebots/camera.hgt
-#include ltwebots/distance_sensor.hgt
+#include <webots/robot.h>
+#include <webots/camera.h>
+#include <webots/distance_sensor.h>
 
 #define TIME_STEP 32
 
@@ -162,9 +162,9 @@ because it is corrupted by a programming error in the controller code. Here is
 such an example:
 
 ```
-#include ltwebots/robot.hgt
-#include ltwebots/camera.hgt
-#include ltwebots/distance_sensor.hgt
+#include <webots/robot.h>
+#include <webots/camera.h>
+#include <webots/distance_sensor.h>
 
 #define TIME_STEP 32
 
@@ -190,8 +190,8 @@ editing the `WorldInfo.physics` field in the Scene Tree. Then you must modify
 the plugin code such as to add the force. Here is an example:
 
 ```
-#include ltode/ode.hgt
-#include ltplugins/physics.hgt
+#include <ode/ode.h>
+#include <plugins/physics.h>
 
 dBodyID body = NULL;
 
@@ -288,7 +288,7 @@ int are_colliding(WbFieldRef trans1, WbFieldRef trans2) {
   double dx = p2[0] - p1[0];
   double dz = p2[2] - p1[2];
   double dz = p2[2] - p1[2];
-  return sqrt(dx * dx + dz * dz) lt 2.0 * ROBOT_RADIUS;
+  return sqrt(dx * dx + dz * dz) < 2.0 * ROBOT_RADIUS;
 }
   ...
   // do this once only, in the initialization

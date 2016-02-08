@@ -10,7 +10,7 @@ PROTO definitions must be created or modified manually in ".proto" files.
 In order to make a PROTO available to Webots, the complete PROTO definition must
 be placed in a ".proto" file. Each ".proto" file can contain the definition for
 only one PROTO, and each file must be saved under the name
-lt*PROTOName*gt".proto", where *PROTOName* is the name of the PROTO as specified
+<*PROTOName*>".proto", where *PROTOName* is the name of the PROTO as specified
 after the PROTO keyword (case-sensitive). For example the above `TwoColorChair`
 PROTO must be saved in a file name "TwoColorChair.proto".
 

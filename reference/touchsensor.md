@@ -50,8 +50,8 @@ The `Physics` node of a "bumper" sensor is not required.
 
 A "force" `TouchSensor` computes the (scalar) amount of force currently exerted
 on the sensor's body along the *z*-axis. The sensor uses this equation:
-`r=|f|*cos(alpha)`, where *r* is the return value, `f` is the cumulative force
-currently exerted on the sensor's body, and `alpha` is the angle between `f` and
+`r=|f|*cos(α)`, where *r* is the return value, `f` is the cumulative force
+currently exerted on the sensor's body, and `α` is the angle between `f` and
 the sensor's *z*-axis. So the "force" sensor returns the projection of the force
 on its *z*-axis; a force perpendicular to the *z*-axis yields zero. For this
 reason, a "force" sensor must be oriented such that its positive *z*-axis points

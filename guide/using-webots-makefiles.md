@@ -96,7 +96,7 @@ INCLUDE = -I"C:\Users\YourName\XYZLib\include"
 LIBRARIES = -L"C:\Users\YourName\XYZLib\lib" -lXYZLib
 ```
 
-The first line tells gcc where to look for the *#includeltXYZLib.hgt* file. The
+The first line tells gcc where to look for the *#include<XYZLib.h>* file. The
 second line tells gcc to link the executable controller with the "XYZLib.dll"
 and where that ".dll" can be found. Note that this would be similar on Linux and
 Mac OS X, you would just need to use UNIX-compatible paths instead. If more
@@ -107,10 +107,10 @@ external libraries are required, it is always possible to use additional `-I,
 #### Using Webots C API in a C++ Controller
 
 Normally, C++ controllers use Webots C++ API. The C++ API is a set of C++
-classes provided by C++ header files, e.g. `#include ltwebots/Robot.hppgt`. If
-you prefer, C++ controllers can use Webots C API instead. The C API is a set of
-C functions starting with the `wb` prefix and provided by C header files, e.g.
-`#include ltwebots/robot.hgt`. To use the C API in a C++ controller you need to
+classes provided by C++ header files, e.g. `#include <webots/Robot.hpp>`. If you
+prefer, C++ controllers can use Webots C API instead. The C API is a set of C
+functions starting with the `wb` prefix and provided by C header files, e.g.
+`#include <webots/robot.h>`. To use the C API in a C++ controller you need to
 add this line in your controller Makefile:
 
 ```

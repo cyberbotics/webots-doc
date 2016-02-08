@@ -26,7 +26,7 @@ by a factor of 2 (texture coordinates are twice as large and thus cause the
 texture to repeat). A `translation` of (0.5 0.0) translates the texture
 coordinates +0.5 units along the *s* axis, with the net effect of translating
 the texture -0.5 along the *s* axis on the geometry's surface. A `rotation` of
-pi/2 of the texture coordinates results in a -pi/2 rotation of the texture on
+π/2 of the texture coordinates results in a -π/2 rotation of the texture on
 the geometric node.
 
 The `center` field specifies a translation offset in texture coordinate space
@@ -43,7 +43,7 @@ Given a point **T** with texture coordinates `(s,t)` and a `TextureTransform`
 node, **T** is transformed into the point **T'**`=(s',t')` by the three
 intermediate transformations described above. Let `C` be the translation mapping
 `(0,0)` to the point `(C`, `T` be the translation of vector `(T`, `R` the
-rotation with center `(0,0)` and angle theta, and `S` a scaling with scaling
+rotation with center `(0,0)` and angle θ , and `S` a scaling with scaling
 factors `S`. In matrix notation, the corresponding `TextureTransform` reads as
 
 

@@ -74,9 +74,9 @@ etc. The various devices instances can be obtained with dedicated methods of the
 
 
 ``` c
-#include ltwebots/Robot.hppgt
-#include ltwebots/LED.hppgt
-#include ltwebots/DistanceSensor.hppgt
+#include <webots/Robot.hpp>
+#include <webots/LED.hpp>
+#include <webots/DistanceSensor.hpp>
 
 using namespace webots;
 

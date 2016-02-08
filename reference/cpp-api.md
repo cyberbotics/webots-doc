@@ -2,7 +2,7 @@
 
 The following tables describe the C++ classes and their methods.
 
-```| #include ltwebots/Accelerometer.hppgt |
+```| #include <webots/Accelerometer.hpp> |
 | class `Accelerometer` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -12,7 +12,7 @@ The following tables describe the C++ classes and their methods.
 ```
 
 
-```| #include ltwebots/Brake.hppgt |
+```| #include <webots/Brake.hpp> |
 | class `Brake` : public `Device` { |
 | void `setDampingConstant`(double dampingConstant) const; |
 | int `getType`() const; |
@@ -20,7 +20,7 @@ The following tables describe the C++ classes and their methods.
 ```
 
 
-```| #include ltwebots/Camera.hppgt |
+```| #include <webots/Camera.hpp> |
 | class `Camera` : public `Device` { |
 | enum {COLOR, RANGE\_FINDER, BOTH}; |
 | virtual void `enable`(int ms); |
@@ -52,12 +52,12 @@ The following tables describe the C++ classes and their methods.
 | const float *`getRangeImage`() const; |
 | static float `rangeImageGetDepth`(const float *image, |
 | int width, int x, int y); |
-| int `saveImage`(const std::string ampfilename, int quality) const; |
+| int `saveImage`(const std::string &filename, int quality) const; |
 | }; |
 ```
 
 
-```| #include ltwebots/Compass.hppgt |
+```| #include <webots/Compass.hpp> |
 | class `Compass` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -67,7 +67,7 @@ The following tables describe the C++ classes and their methods.
 ```
 
 
-```| #include ltwebots/Connector.hppgt |
+```| #include <webots/Connector.hpp> |
 | class `Connector` : public `Device` { |
 | virtual void `enablePresence`(int ms); |
 | virtual void `disablePresence`(); |
@@ -78,16 +78,16 @@ The following tables describe the C++ classes and their methods.
 ```
 
 
-```| #include ltwebots/Device.hppgt |
+```| #include <webots/Device.hpp> |
 | class `Device` { |
-| const std::string amp`getModel`() const; |
-| const std::string amp`getName`() const; |
+| const std::string &`getModel`() const; |
+| const std::string &`getName`() const; |
 | int `getNodeType`() const; |
 | }; |
 ```
 
 
-```| #include ltwebots/DifferentialWheels.hppgt |
+```| #include <webots/DifferentialWheels.hpp> |
 | class `DifferentialWheels` : public `Robot` { |
 | `DifferentialWheels`(); |
 | virtual `~DifferentialWheels`(); |
@@ -106,7 +106,7 @@ The following tables describe the C++ classes and their methods.
 ```
 
 
-```| #include ltwebots/Display.hppgt |
+```| #include <webots/Display.hpp> |
 | class `Display` : public `Device` { |
 | enum {RGB, RGBA, ARGB, BGRA}; |
 | int `getWidth`() const; |
@@ -119,22 +119,22 @@ The following tables describe the C++ classes and their methods.
 | virtual void `drawRectangle`(int x, int y, int width, int height); |
 | virtual void `drawOval`(int cx, int cy, int a, int b); |
 | virtual void `drawPolygon`(const int *x, const int *y, int size); |
-| virtual void `drawText`(const std::string amptxt, int x, int y); |
+| virtual void `drawText`(const std::string &txt, int x, int y); |
 | virtual void `fillRectangle`(int x, int y, int width, int height); |
 | virtual void `fillOval`(int cx, int cy, int a, int b); |
 | virtual void `fillPolygon`(const int *x, const int *y, int size); |
 | `ImageRef` *`imageCopy`(int x, int y, int width, int height) const; |
 | virtual void `imagePaste`(`ImageRef` *ir, int x, int y); |
-| `ImageRef` *`imageLoad`(const std::string ampfilename) const; |
+| `ImageRef` *`imageLoad`(const std::string &filename) const; |
 | `ImageRef` *`imageNew`(int width, int height, const void *data, int format)
 const; |
-| void `imageSave`(`ImageRef` *ir, const std::string ampfilename) const; |
+| void `imageSave`(`ImageRef` *ir, const std::string &filename) const; |
 | void `imageDelete`(`ImageRef` *ir) const; |
 | }; |
 ```
 
 
-```| #include ltwebots/DistanceSensor.hppgt |
+```| #include <webots/DistanceSensor.hpp> |
 | class `DistanceSensor` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -144,7 +144,7 @@ const; |
 ```
 
 
-```| #include ltwebots/Emitter.hppgt |
+```| #include <webots/Emitter.hpp> |
 | class `Emitter` : public `Device` { |
 | enum {CHANNEL\_BROADCAST}; |
 | virtual int `send`(const void *data, int size); |
@@ -157,7 +157,7 @@ const; |
 ```
 
 
-```| #include ltwebots/Field.hppgt |
+```| #include <webots/Field.hpp> |
 | class Field { |
 | enum { SF\_BOOL, SF\_INT32, SF\_FLOAT, SF\_VEC2F, SF\_VEC3F, SF\_ROTATION,
 SF\_COLOR, SF\_STRING, SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F,
@@ -190,7 +190,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | void `setSFVec3f`(const double values[3]); |
 | void `setSFRotation`(const double values[4]); |
 | void `setSFColor`(const double values[3]); |
-| void `setSFString`(const std::string ampvalue); |
+| void `setSFString`(const std::string &value); |
 | void `setMFBool`(int index, bool value); |
 | void `setMFInt32`(int index, int value); |
 | void `setMFFloat`(int index, double value); |
@@ -198,15 +198,15 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | void `setMFVec3f`(int index, const double values[3]); |
 | void `setMFRotation`(int index, const double values[4]); |
 | void `setMFColor`(int index, const double values[3]); |
-| void `setMFString`(int index, const std::string ampvalue); |
-| void `importMFNode`(int position, const std::string ampfilename); |
-| void `importMFNodeFromString`(int position, const std::string ampnodeString); |
+| void `setMFString`(int index, const std::string &value); |
+| void `importMFNode`(int position, const std::string &filename); |
+| void `importMFNodeFromString`(int position, const std::string &nodeString); |
 | void `removeMFNode`(int position); |
 | }; |
 ```
 
 
-```| #include ltwebots/GPS.hppgt |
+```| #include <webots/GPS.hpp> |
 | class `GPS` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -216,7 +216,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Gyro.hppgt |
+```| #include <webots/Gyro.hpp> |
 | class `Gyro` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -226,13 +226,13 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/ImageRef.hppgt |
+```| #include <webots/ImageRef.hpp> |
 | class ImageRef { |
 | }; |
 ```
 
 
-```| #include ltwebots/InertialUnit.hppgt |
+```| #include <webots/InertialUnit.hpp> |
 | class `InertialUnit` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -242,7 +242,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/LED.hppgt |
+```| #include <webots/LED.hpp> |
 | class `LED` : public `Device` { |
 | virtual void `set`(int value); |
 | int `get`() const; |
@@ -250,7 +250,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/LightSensor.hppgt |
+```| #include <webots/LightSensor.hpp> |
 | class `LightSensor` : public `Device` { |
 | virtual void `enable`(int ms); |
 | virtual void `disable`(); |
@@ -260,9 +260,9 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/utils/Motion.hppgt |
+```| #include <webots/utils/Motion.hpp> |
 | class `Motion` { |
-| `Motion`(const std::string ampfileName); |
+| `Motion`(const std::string &fileName); |
 | virtual `~Motion`(); |
 | bool `isValid`() const; |
 | virtual void `play`(); |
@@ -277,7 +277,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Motor.hppgt |
+```| #include <webots/Motor.hpp> |
 | class `Motor` : public `Device` { |
 | enum {ROTATIONAL, LINEAR}; |
 | virtual void `setPosition`(double position); |
@@ -311,7 +311,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Node.hppgt |
+```| #include <webots/Node.hpp> |
 | class Node { |
 | enum { NO\_NODE, APPEARANCE, BACKGROUND, BOX, COLOR, CONE, |
 | COORDINATE, CYLINDER, DIRECTIONAL\_LIGHT, ELEVATION\_GRID, |
@@ -331,7 +331,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | std::string `getTypeName`() const; |
 | std::string `getBaseTypeName`() const; |
 | Node *`getParentNode`() const; |
-| `Field` *`getField`(const std::string ampfieldName) const; |
+| `Field` *`getField`(const std::string &fieldName) const; |
 | const double *`getPosition`() const; |
 | const double *`getOrientation`() const; |
 | const double *`getCenterOfMass`() const; |
@@ -345,7 +345,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Pen.hppgt |
+```| #include <webots/Pen.hpp> |
 | class `Pen` : public `Device` { |
 | virtual void `write`(bool write); |
 | virtual void `setInkColor`(int color, double density); |
@@ -353,7 +353,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/PositionSensor.hppgt |
+```| #include <webots/PositionSensor.hpp> |
 | class `PositionSensor` : public `Device` { |
 | enum {ANGULAR, LINEAR}; |
 | virtual void `enable`(int ms); |
@@ -365,7 +365,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Receiver.hppgt |
+```| #include <webots/Receiver.hpp> |
 | class `Receiver` : public `Device` { |
 | enum {CHANNEL\_BROADCAST}; |
 | virtual void `enable`(int ms); |
@@ -383,7 +383,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Robot.hppgt |
+```| #include <webots/Robot.hpp> |
 | class `Robot` { |
 | enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, |
 | MODE\_REMOTE\_CONTROL}; |
@@ -398,25 +398,25 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | `Robot`(); |
 | virtual `~Robot`(); |
 | virtual int `step`(int ms); |
-| `Accelerometer` *`getAccelerometer`(const std::string ampname); |
-| `Brake` *`getBrake`(const std::string ampname); |
-| `Camera` *`getCamera`(const std::string ampname); |
-| `Compass` *`getCompass`(const std::string ampname); |
-| `Connector` *`getConnector`(const std::string ampname); |
-| `Display` *`getDisplay`(const std::string ampname); |
-| `DistanceSensor` *`getDistanceSensor`(const std::string ampname); |
-| `Emitter` *`getEmitter`(const std::string ampname); |
-| `GPS` *`getGPS`(const std::string ampname); |
-| `Gyro` *`getGyro`(const std::string ampname); |
-| `InertialUnit` *`getInertialUnit`(const std::string ampname); |
-| `LED` *`getLED`(const std::string ampname); |
-| `LightSensor` *`getLightSensor`(const std::string ampname); |
-| `Motor` *`getMotor`(const std::string ampname); |
-| `Pen` *`getPen`(const std::string ampname); |
-| `PositionSensor` *`getPositionSensor`(const std::string ampname); |
-| `Receiver` *`getReceiver`(const std::string ampname); |
-| `Servo` *`getServo`(const std::string ampname); |
-| `TouchSensor` *`getTouchSensor`(const std::string ampname); |
+| `Accelerometer` *`getAccelerometer`(const std::string &name); |
+| `Brake` *`getBrake`(const std::string &name); |
+| `Camera` *`getCamera`(const std::string &name); |
+| `Compass` *`getCompass`(const std::string &name); |
+| `Connector` *`getConnector`(const std::string &name); |
+| `Display` *`getDisplay`(const std::string &name); |
+| `DistanceSensor` *`getDistanceSensor`(const std::string &name); |
+| `Emitter` *`getEmitter`(const std::string &name); |
+| `GPS` *`getGPS`(const std::string &name); |
+| `Gyro` *`getGyro`(const std::string &name); |
+| `InertialUnit` *`getInertialUnit`(const std::string &name); |
+| `LED` *`getLED`(const std::string &name); |
+| `LightSensor` *`getLightSensor`(const std::string &name); |
+| `Motor` *`getMotor`(const std::string &name); |
+| `Pen` *`getPen`(const std::string &name); |
+| `PositionSensor` *`getPositionSensor`(const std::string &name); |
+| `Receiver` *`getReceiver`(const std::string &name); |
+| `Servo` *`getServo`(const std::string &name); |
+| `TouchSensor` *`getTouchSensor`(const std::string &name); |
 | int `getNumberOfDevices`(); |
 | `Device` *`getDeviceByIndex`(int index); |
 | virtual void `batterySensorEnable`(int ms); |
@@ -427,7 +427,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | int `getMode`() const; |
 | std::string `getModel`() const; |
 | std::string `getData`() const; |
-| void `setData`(const std::string ampdata); |
+| void `setData`(const std::string &data); |
 | std::string `getName`() const; |
 | std::string `getControllerName`() const; |
 | std::string `getControllerArguments`() const; |
@@ -444,7 +444,7 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Servo.hppgt |
+```| #include <webots/Servo.hpp> |
 | class `Servo` : public `Device` { |
 | enum {ROTATIONAL, LINEAR}; |
 | virtual void `setPosition`(double position); |
@@ -469,38 +469,38 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 ```
 
 
-```| #include ltwebots/Supervisor.hppgt |
+```| #include <webots/Supervisor.hpp> |
 | class `Supervisor` : public `Robot` { |
 | enum {MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR,
 MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR}; |
 | `Supervisor`(); |
 | virtual `~Supervisor`(); |
-| void `exportImage`(const std::string ampfile, int quality) const; |
+| void `exportImage`(const std::string &file, int quality) const; |
 | `Node` *`getRoot`(); |
 | `Node` *`getSelf`(); |
-| `Node` *`getFromDef`(const std::string ampname); |
+| `Node` *`getFromDef`(const std::string &name); |
 | `Node` *`getFromId`(int id); |
-| virtual void `setLabel`(int id, const std::string amplabel, double xpos, double
+| virtual void `setLabel`(int id, const std::string &label, double xpos, double
 ypos, |
 | double size, int color, double transparency); |
 | virtual void `simulationQuit`(int status); |
 | virtual void `simulationRevert`(); |
 | virtual void `simulationResetPhysics`(); |
-| virtual void `loadWorld`(const std::string ampfile); |
+| virtual void `loadWorld`(const std::string &file); |
 | virtual void `saveWorld`(); |
-| virtual void `saveWorld`(const std::string ampfile); |
-| virtual void `movieStartRecording`(const std::string ampfile, int width, int
+| virtual void `saveWorld`(const std::string &file); |
+| virtual void `movieStartRecording`(const std::string &file, int width, int
 height, int codec, int quality, |
 | int acceleration, bool caption) const; |
 | virtual void `movieStopRecording`(); |
 | int `movieGetStatus`() const; |
-| virtual bool `animationStartRecording`(const std::string ampfile); |
+| virtual bool `animationStartRecording`(const std::string &file); |
 | virtual bool `animationStopRecording`(); |
 | }; |
 ```
 
 
-```| #include ltwebots/TouchSensor.hppgt |
+```| #include <webots/TouchSensor.hpp> |
 | class `TouchSensor` : public `Device` { |
 | enum {BUMPER, FORCE, FORCE3D}; |
 | virtual void `enable`(int ms); |

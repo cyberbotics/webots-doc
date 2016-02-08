@@ -63,7 +63,7 @@ the use of this field.
 - The `bounce` field is the coefficient of restitution (COR) between 0 and 1. The
 coefficient of restitution (COR), or *bounciness* of an object is a fractional
 value representing the ratio of speeds after and before an impact. An object
-with a COR of 1 collides elastically, while an object with a COR lt 1 collides
+with a COR of 1 collides elastically, while an object with a COR < 1 collides
 inelastically. For a COR = 0, the object effectively "stops" at the surface with
 which it collides, not bouncing at all. COR = (relative speed after collision) /
 (relative speed before collision).

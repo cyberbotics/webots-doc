@@ -189,11 +189,11 @@ follows:
 
 - if `dt` = 0, then the asynchronous behavior was equivalent to the synchronous
 behavior.
-- if 0 lt= `dt` lt= `ms`, then the actuator values were set at `controller_time` +
+- if 0 <= `dt` <= `ms`, then the actuator values were set at `controller_time` +
 `dt`, and the sensor values were measured at `controller_time` + `ms`, as
 requested. It means that the step actually lasted the requested number of
 milliseconds, but the actuator commands could not be executed on time.
-- if `dt` gt `ms`, then the actuators values were set at `controller_time` + `dt`,
+- if `dt` > `ms`, then the actuators values were set at `controller_time` + `dt`,
 and the sensor values were also measured at `controller_time` + `dt`. It means
 that the requested step duration could not be respected.
 
@@ -266,7 +266,7 @@ the device API allowing to retrieve some information from a WbDeviceTag.
 ``` c
 int n_devices = wb_robot_get_number_of_devices();
 int i;
-for(i=0; iltn_devices; i++) {
+for(i=0; i<n_devices; i++) {
   WbDeviceTag tag = wb_robot_get_device_by_index(i);
 
   const char *name = wb_device_get_name(tag);

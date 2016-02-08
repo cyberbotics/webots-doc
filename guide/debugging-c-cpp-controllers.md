@@ -28,13 +28,13 @@ $ ps -e
 13298 pts/1    00:00:00 soccer_player
 13299 pts/1    00:00:00 soccer_player
 13300 pts/1    00:00:00 soccer_player
-13301 pts/1    00:00:00 soccer_supervisor ltdefunctgt
+13301 pts/1    00:00:00 soccer_supervisor <defunct>
 ...
 ```
 
 On Mac OS X, use rather `ps -x` and on Windows use the *Task Manager* for this.
 If one of your robot controllers is missing in the list (or appearing as
-*ltdefunctgt*) this confirms that it has crashed and therefore blocked the
+*<defunct>*) this confirms that it has crashed and therefore blocked the
 simulation. In this example the "soccer\_supervisor" has crashed. Note that the
 crash of a controller is almost certainly caused by an error in the controller
 code, because an error in Webots would have caused Webots to crash. Fortunately,

@@ -74,9 +74,9 @@ Here is the complete code of the controller detailed in the previous subsection.
 
 
 ``` c
-#include ltwebots/robot.hgt
-#include ltwebots/differential_wheels.hgt
-#include ltwebots/distance_sensor.hgt
+#include <webots/robot.h>
+#include <webots/differential_wheels.h>
+#include <webots/distance_sensor.h>
 
 // time in [ms] of a simulation step
 #define TIME_STEP 64
@@ -96,7 +96,7 @@ int main(int argc, char **argv)
   };
 
   // initialize devices
-  for (i=0; ilt8 ; i++) {
+  for (i=0; i<8 ; i++) {
     ps[i] = wb_robot_get_device(ps_names[i]);
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
@@ -110,18 +110,18 @@ int main(int argc, char **argv)
 
     // read sensors outputs
     double ps_values[8];
-    for (i=0; ilt8 ; i++)
+    for (i=0; i<8 ; i++)
       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
 
     // detect obstacles
     bool left_obstacle =
-      ps_values[0] gt 100.0 ||
-      ps_values[1] gt 100.0 ||
-      ps_values[2] gt 100.0;
+      ps_values[0] > 100.0 ||
+      ps_values[1] > 100.0 ||
+      ps_values[2] > 100.0;
     bool right_obstacle =
-      ps_values[5] gt 100.0 ||
-      ps_values[6] gt 100.0 ||
-      ps_values[7] gt 100.0;
+      ps_values[5] > 100.0 ||
+      ps_values[6] > 100.0 ||
+      ps_values[7] > 100.0;
 
     // init speeds
     double left_speed  = 500;

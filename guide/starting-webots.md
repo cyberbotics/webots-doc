@@ -15,8 +15,7 @@ the Webots icon.
 ### Windows
 
 On Windows 10 and Windows 7, open the `Start` menu, go to the `Program Files >
-Cyberbotics` menu and click on the `Webots
-webots_major_version.webots_minor_version.webots_bugfix_version` menu item.
+Cyberbotics` menu and click on the `Webots 8.3.2` menu item.
 
 On Windows 8, open the `Start` screen, scroll to the screen's right until
 spotting the Cyberbotics section and click on the `Webots` icon.
@@ -30,9 +29,9 @@ Terminal (Linux/Mac) or a Command Prompt (Windows):
 SYNOPSIS: webots [options] [worldfile]
 OPTIONS:
   --minimize                  minimize Webots window on startup
-  --mode=ltmodegt               choose startup mode (overrides
+  --mode=<mode>               choose startup mode (overrides
                               application preferences)
-                              argument ltmodegt must be one of:
+                              argument <mode> must be one of:
                               pause, realtime, run or fast
                               (Webots PRO is required to use:
                               --mode==run or --mode=fast)
@@ -60,10 +59,10 @@ OPTIONS:
                                    disableStandardStreamsRedirection :
                                      disables the streaming of the
                                      standard output and error streams
-  --log-performance="ltfile pathgt[,ltsteps countgt]"
+  --log-performance="<file path>[,<steps count>]"
                               measure the performance of Webots and
-                              log it in the specified ltfile pathgt
-                              file. ltsteps countgt is an optional
+                              log it in the specified <file path>
+                              file. <steps count> is an optional
                               integer value that specifies how many
                               steps are analyzed. If '--sysinfo' is
                               also set then the system information are
@@ -81,7 +80,7 @@ can be used to avoid cluttering the screen with windows when automatically
 launching Webots from scripts. Note that Webots PRO does automatically enable
 the `Fast` mode when `--minimize` is specified.
 
-The `--mode=ltmodegt` option can be used to start Webots in the specified
+The `--mode=<mode>` option can be used to start Webots in the specified
 execution mode. The four possible execution modes are: `pause`, `realtime`,
 `run` and `fast`; they correspond to the simulation control buttons of Webots'
 graphical user interface. This option overrides, but does not modify, the

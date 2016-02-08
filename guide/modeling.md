@@ -99,8 +99,8 @@ In the plugin code, you must simply add an ODE *fixed joint* between the
 like this:
 
 ```
-#include ltode/ode.hgt
-#include ltplugins/physics.hgt
+#include <ode/ode.h>
+#include <plugins/physics.h>
 
 void webots_physics_init() {
 

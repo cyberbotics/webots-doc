@@ -46,5 +46,5 @@ remain fixed. The `follow` field is automatically updated when setting the solid
 to be followed from the `View > Follow Object` menu item. If multiple solid
 instances with the same name exist, the instance to be followed is identified by
 adding the instance number to the `follow` field value using the format
-"`ltnamegt:ltnumbergt`".
+"`<name>:<number>`".
 

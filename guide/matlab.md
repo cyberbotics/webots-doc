@@ -35,15 +35,15 @@ keyboard;
 ```
 
 The `desktop` command brings up the `MATLAB` desktop. The `keyboard` stops the
-execution of the controller and gives control to the keyboard (`Kgtgt` prompt).
+execution of the controller and gives control to the keyboard (`K>>` prompt).
 Then `MATLAB` opens your controller m-file in its editor and indicates that the
 execution is stopped at the `keyboard` command. After that, the controller
 m-file can be debugged interactively, i.e., it is possible to continue the
 execution step-by-step, set break points, watch variable, etc. While debugging,
 the current values of the controller variables are shown in the `MATLAB`
 workspace. It is possible to *continue* the execution of the controller by
-typing `return` at the `Kgtgt` prompt. Finally the execution of the controller
-can be terminated with `Ctrl-C` key combination.
+typing `return` at the `K>>` prompt. Finally the execution of the controller can
+be terminated with `Ctrl-C` key combination.
 
 Once the controller is terminated, the connection with Webots remains active.
 Therefore it becomes possible to issue Webots commands directly at the `MATLAB`
@@ -52,19 +52,19 @@ etc.:
 
 
 ```
-gtgt wb_differential_wheels_set_speed(600, 600);
-gtgt wb_robot_step(1000);
-gtgt wb_gps_get_values(gps)
+>> wb_differential_wheels_set_speed(600, 600);
+>> wb_robot_step(1000);
+>> wb_gps_get_values(gps)
 
 ans =
 
     0.0001    0.0030   -0.6425
-gtgt |
+>> |
 ```
 
 It is possible to use additional `keyboard` statements in various places in your
 ".m" controller. So each time `MATLAB` will run into a `keyboard` statement, it
-will return control to the `Kgtgt` prompt where you will be able to debug
+will return control to the `K>>` prompt where you will be able to debug
 interactively.
 
 At this point, it is also possible to restart the controller by calling its

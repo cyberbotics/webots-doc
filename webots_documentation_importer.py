@@ -42,17 +42,13 @@ class BookParser:
 
         # deal with preprocessor instructions
         while True:
-            mo = re.search(r'(&\w*;)', content)
+            mo = re.search(r'&(\w*_chapter);', content)
             if not mo:
                 break
-            tag = mo.group(0)[1:-1] # remove the first and last characters
+            tag = mo.group(1)
             output = ''
-            if tag.endswith('_chapter'):
-                with open(inputDirectoryPath + "/" + tag + '.xml', 'r') as includeFile:
-                    output = includeFile.read()
-            else:
-                # TODO: improve this
-                output = tag
+            with open(inputDirectoryPath + "/" + tag + '.xml', 'r') as includeFile:
+                output = includeFile.read()
             content = content[:mo.start()] + output + content[mo.end():]
 
         self.root = ET.fromstring(content)
@@ -99,6 +95,11 @@ class BookParser:
         if txt is None:
             return ''
         output = txt.encode('utf-8')
+
+        m = re.search(r'\&\w*;', output)
+        if (m):
+          print m.group(0)
+
         if protect:
             output = output.replace('_', '\\_')
         if removeTrailingSpaces:

@@ -310,8 +310,61 @@ Webots can be defined by the status `status` parameter. Some typical values for
 this are the `EXIT_SUCCESS` or `EXIT_FAILURE` macros defined into the "stdlib.h"
 file. Here is a C example:
 
+
+``` c
+#include <webots/robot.h>
+#include <webots/supervisor.h>
+#include <stdlib.h>
+
+#define TIME_STEP 32
+
+int main(int argc, char *argv[]) {
+  wb_robot_init();
+  ...
+  while (! finished) {
+    // your controller code here
+    ...
+    wb_robot_step(TIME_STEP);
+  }
+  saveExperimentsData();
+  wb_supervisor_simulation_quit(EXIT_SUCCESS); // ask Webots to terminate
+  wb_robot_cleanup(); // cleanup resources
+  return 0;
+}
+```
+
 In object-oriented languages, there is no `wb_robot_cleanup()` function, in this
 case the controller should call its destructor. Here is a C++ example:
+
+
+``` c
+#include <webots/Robot.hpp>
+#include <webots/Supervisor.hpp>
+#include <cstdlib>
+
+using namespace webots;
+
+class MySupervisor : public Supervisor {
+public:
+  MySupervisor() { ... }
+  virtual ~MySupervisor() { ... }
+  void run() {
+    ...
+    while (! finished) {
+      // your controller code here
+      ...
+      step(TIME_STEP);
+    }
+    simulationQuit(EXIT_SUCCESS);  // ask Webots to terminate
+  }
+
+int main(int argc, char *argv[]) {
+  MySupervisor *controller = new MySupervisor();
+  controller->run();
+  delete controller; // cleanup resources
+  return 0;
+}
+```
 
 #### Description
 
@@ -497,6 +550,24 @@ The `wb_supervisor_field_import_mf_node_from_string()` function is very similar
 to the `wb_supervisor_field_import_mf_node` function, except that the node is
 constructed from the `node_string` string. For example, if you want to create a
 new robot with a specific controller:
+
+
+``` c
+#include <webots/robot.h>
+    include <webots/supervisor.h>
+
+    #define TIME_STEP 32
+
+    int main(int argc, char **argv) {
+      wb_robot_init();
+
+      WbNodeRef root_node = wb_supervisor_node_get_root();
+      WbFieldRef root_children_field = wb_supervisor_node_get_field(root_node, "children");
+      wb_supervisor_field_import_mf_node_from_string(root_children_field, 4, "DEF MY_ROBOT Robot { controller \"my_controller\" }");
+
+      ...
+    }
+```
 
 The `wb_supervisor_field_remove_mf_node()` function removes a Webots node from
 an MF\_NODE (like if the node was manually removed from the scene tree).

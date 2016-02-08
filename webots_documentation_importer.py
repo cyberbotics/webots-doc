@@ -51,6 +51,12 @@ class BookParser:
                 output = includeFile.read()
             content = content[:mo.start()] + output + content[mo.end():]
 
+        # dealt with `procedure` and `step` nodes
+        content = content.replace('<procedure>', '<orderedlist>') \
+                         .replace('</procedure>', '</orderedlist>') \
+                         .replace('<step>', '<listitem>') \
+                         .replace('</step>', '</listitem>')
+
         self.root = ET.fromstring(content)
 
     def exportToc(self):
@@ -224,7 +230,7 @@ class BookParser:
                 elif child.tag == 'programlisting':
                     self.parseProgramListing(child, outFile)
                 elif child.tag == 'note':
-                    pass # TODO
+                    self.parseIconPara(child)
                 else:
                     raise Exception('Unsupported type: ' + child.tag)
                 outFile.write('\n')
@@ -272,6 +278,10 @@ class BookParser:
 
         outFile.write('\n')
 
+    def parseIconPara(self, node):
+        # TODO
+        pass
+
     def parseChapter(self, node, outFile):
         for child in node.getchildren():
             if child.tag == 'title' and child.attrib.get('name', child.text):
@@ -313,15 +323,18 @@ class BookParser:
             elif child.tag == 'title':
                 pass # ok: dealt in another way
             elif child.tag == 'procedure':
-                pass # TODO
+                raise Exception('Should be converted into an ordered item list in the script preprocessor: ' + child.tag)
             elif child.tag == 'note':
-                pass # TODO
+                self.parseIconPara(child)
             elif child.tag == 'handson':
-                pass # TODO
+                self.parseIconPara(child)
             elif child.tag == 'theory':
-                pass # TODO
+                self.parseIconPara(child)
             elif child.tag == 'code':
-                pass # TODO
+                subchildren = child.findall('./programlisting')
+                if len(subchildren) != 1 and len(child.getchildren()) != 1:
+                    raise Exception('Unexpected number of children for the <code> tag')
+                self.parseProgramListing(subchildren[0], outFile)
             elif child.tag == 'clearPage':
                 pass # TODO
             elif child.tag == 'keywords':

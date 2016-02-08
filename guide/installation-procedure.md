@@ -4,6 +4,10 @@ Usually, you will need to be "administrator" to install Webots. Once installed,
 Webots can be used by a regular, unprivileged user. To install Webots, please
 follow this procedure:
 
+1. Uninstall completely any old version of Webots that may have been installed on
+your computer previously.
+2. Install Webots for your operating system as explained below.
+
 ### Linux
 
 Webots will run on most recent Linux distributions running glibc2.11.1 or
@@ -136,6 +140,11 @@ gdebi webots_8.3.2_amd64.deb
 
 ### Windows
 
+1. Download the "webots-8.3.2\_setup.exe" installation file from our [web
+site](http://www.cyberbotics.com/windows).
+2. Double click on this file.
+3. Follow the installation instructions.
+
 It is possible to install Webots silently from an administrator DOS console, by
 typing "webots-8.3.2\_setup.exe /SILENT" or "webots-8.3.2\_setup.exe
 /VERYSILENT"
@@ -144,4 +153,11 @@ If you observe 3D rendering anomalies or Webots crashes, it is strongly
 recommend to upgrade your graphics driver.
 
 ### Mac OS X
+
+1. Download the "webots-8.3.2.dmg" installation file from our [web
+site](http://www.cyberbotics.com/macosx).
+2. Double click on this file. This will mount on the desktop a volume named
+"Webots" containing the "Webots" folder.
+3. Move this folder to your "/Applications" folder or wherever you would like to
+install Webots.
 

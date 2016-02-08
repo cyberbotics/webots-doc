@@ -58,6 +58,22 @@ measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the `Compass` device. Here is the internal algorithm
 of `wb_compass_get_values()` in pseudo-code:
 
+
+```
+float[3] wb_compass_get_values() {
+  float[3] n = getGlobalNorthDirection();
+  n = rotateToCompassOrientation3D(n);
+  n = normalizeVector3D(n);
+  n[0] = applyLookupTable(n[0]);
+  n[1] = applyLookupTable(n[1]);
+  n[2] = applyLookupTable(n[2]);
+  if (xAxis == FALSE) n[0] = 0.0;
+  if (yAxis == FALSE) n[1] = 0.0;
+  if (zAxis == FALSE) n[2] = 0.0;
+  return n;
+}
+```
+
 If the lookupTable is empty and all three xAxis, yAxis and zAxis fields are TRUE
 then the length of the returned vector is 1.0.
 
@@ -69,4 +85,16 @@ field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned
 with the x-axis. Now if the `Compass` node is in *upright* position, meaning
 that its y-axis is aligned with the global y-axis, then the bearing angle in
 degrees can be computed as follows:
+
+
+``` c
+double get_bearing_in_degrees() {
+const double *north = wb_compass_get_values(tag);
+double rad = atan2(north[0], north[2]);
+double bearing = (rad - 1.5708) / M_PI * 180.0;
+if (bearing < 0.0)
+  bearing = bearing + 360.0;
+return bearing;
+}
+```
 

@@ -228,11 +228,35 @@ is not blocked by obstacles, external forces or the motor's own spring force,
 etc. It is also possible to wait until the `Motor` reaches the target position
 (synchronous) like this:
 
+
+``` c
+void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, double target, int delay) {
+  const double DELTA = 0.001;  // max tolerated difference
+  wb_motor_set_position(tag_motor, target);
+  wb_position_sensor_enable(tag_sensor, TIME_STEP);
+  double effective;  // effective position
+  do {
+    wb_robot_step(TIME_STEP);
+    delay -= TIME_STEP;
+    effective = wb_position_sensor_get_value(tag_sensor);
+  }
+  while (fabs(target - effective) > DELTA && delay > 0);
+  wb_position_sensor_disable(tag_sensor);
+}
+```
+
 The `INFINITY` (*#include <math.h>*) value can be used as the second argument to
 the `wb_motor_set_position()` function in order to enable an endless rotational
 (or linear) motion. The current values for velocity, acceleration and motor
 torque/force are taken into account. So for example, `wb_motor_set_velocity()`
 can be used for controlling the velocity of the endless rotation:
+
+
+``` c
+// velocity control
+wb_motor_set_position(tag, INFINITY);
+wb_motor_set_velocity(tag, desired_speed);  // rad/s
+```
 
 The `wb_motor_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_motor_set_position()`

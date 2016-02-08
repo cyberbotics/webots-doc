@@ -314,6 +314,18 @@ works in a similar way but returns the grey level of the specified pixel by
 averaging the three RGB components. In the C version, these four macros return
 an `unsigned char` in the range [0..255]. Here is a C usage example:
 
+
+``` c
+const unsigned char *image = wb_camera_get_image(camera);
+for (int x = 0; x < image_width; x++)
+  for (int y = 0; y < image_height; y++) {
+    int r = wb_camera_image_get_red(image, image_width, x, y);
+    int g = wb_camera_image_get_green(image, image_width, x, y);
+    int b = wb_camera_image_get_blue(image, image_width, x, y);
+    printf("red=%d, green=%d, blue=%d", r, g, b);
+  }
+```
+
 #### Description
 
 The `wb_camera_get_range_image()` macro allows the user to read the contents of

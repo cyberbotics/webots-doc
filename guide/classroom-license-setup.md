@@ -24,6 +24,25 @@ be your own personal e-mail address. Let's call this e-mail address
 student to use simultaneously several instances of your 20 licenses, possibly
 all of them, thus preventing other students to use them.
 
+1. Log in to your Webots user account using your license administration
+credentials, e.g., the user account which was used to activate your Webots
+licenses.
+2. Create a new user pack from the administration page and call it "Students".
+3. Grant access to all your 20 Webots EDU license (tick boxes).
+4. Set the concurrency value to 20 to allow the single user account to use all the
+licenses simultaneously.
+5. Type `webots@my.university.edu` in the "users:" text area.
+6. If the account doesn't already exists, `webots@my.university.edu` will receive
+an e-mail asking to create a user account at [Cyberbotics' web
+site](https://www.cyberbotics.com).
+7. Create this account (if needed), log in and visit the Profile page of this
+account. Copy the "Alternate password for Webots 8". This password allows
+students to use Webots, but not to log in this user account. It looks like
+`J6ebgAGRgFtkf8QHiWoHXIUnI98=`.
+8. Give this e-mail address and alternate password to your students to allow them
+to log in Webots using your licenses (but they won't be able to log in the web
+page).
+
 #### Multiple user accounts
 
 The multiple user accounts license requires that you have the list of e-mail
@@ -32,6 +51,21 @@ licenses. You will be able to limit the number of simultaneous instances of
 Webots used per student to 1, so that a single student cannot use multiple
 licenses simultaneously. Hence a single student cannot prevent the others from
 using Webots.
+
+1. Log in to your Webots user account using your license administration
+credentials, e.g., the user account which was used to activate your Webots
+licenses.
+2. Create a new user pack from the administration page and call it "Students".
+3. Grant access to all your 20 Webots EDU license (tick boxes).
+4. Set the concurrency value to 1 to prevent a single user to use multiple
+instances of Webots at the same time.
+5. Type (or copy/paste) the list of student e-mail addresses in the "users:" text
+area.
+6. Press the apply button. The e-mail addresses which are not already registered on
+Cyberbotics' web site will receive an invitation e-mail explaining how to
+register a Webots account and use the newly granted Webots licenses. For
+existing accounts, no e-mail is sent and it is your responsibility to inform the
+students about their modified license rights.
 
 ### Classrom
 

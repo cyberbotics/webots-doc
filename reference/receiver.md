@@ -94,6 +94,18 @@ useful data from the head packet, before calling `wb_receiver_next_packet()`. It
 is illegal to call `wb_receiver_next_packet()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0). Here is a usage example:
 
+
+``` c
+while (wb_receiver_get_queue_length(tag) > 0) {
+  const char *message = wb_receiver_get_data(tag);
+  const double *dir = wb_receiver_get_emitter_direction(tag);
+  double signal = wb_receiver_get_signal_strength(tag);
+  printf("received: %s (signal=%g, dir=[%g %g %g])\n",
+         message, signal, dir[0], dir[1], dir[2]);
+  wb_receiver_next_packet(tag);
+}
+```
+
 This example assumes that the data (*message*) was sent in the form of a null-
 terminated string. The Emitter/Receiver API does not put any restriction on the
 type of data that can be transmitted. Any user chosen format is suitable, as

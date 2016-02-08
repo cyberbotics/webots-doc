@@ -93,7 +93,20 @@ transmitted. Any user chosen format is suitable, as long as the emitter and
 receiver codes agree. The following example shows how to send a null-terminated
 ascii string using the C API:
 
+
+``` c
+char message[128];
+sprintf(message, "hello%d", i);
+wb_emitter_send(tag, message, strlen(message) + 1);
+```
+
 And here an example on how to send binary data with the C API:
+
+
+``` c
+double array[5] = { 3.0, x, y, -1/z, -5.5 };
+wb_emitter_send(tag, array, 5 * sizeof(double));
+```
 
 #### Description
 

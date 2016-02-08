@@ -222,6 +222,44 @@ results.
 
 #### Simple C controller Example
 
+
+``` c
+#include <webots/robot.h>
+
+#define TIME_STEP 32
+
+static WbDeviceTag my_sensor, my_led;
+
+int main() {
+  /* initialize the webots controller library */
+  wb_robot_init();
+
+  // get device tags
+  my_sensor = wb_robot_get_device("my_distance_sensor");
+  my_led = wb_robot_get_device("my_led");
+
+  /* enable sensors to read data from them */
+  wb_distance_sensor_enable(my_sensor, TIME_STEP);
+
+  /* main control loop: perform simulation steps of 32 milliseconds */
+  /* and leave the loop when the simulation is over */
+  while (wb_robot_step(TIME_STEP) != -1) {
+
+    /* Read and process sensor data */
+    double val = wb_distance_sensor_get_value(my_sensor);
+
+    /* Send actuator commands */
+    wb_led_set(my_led, 1);
+  }
+
+  /* Add here your own exit cleanup code */
+
+  wb_robot_cleanup();
+
+  return 0;
+}
+```
+
 #### Description
 
 This function returns a unique identifier for a device corresponding to a
@@ -470,5 +508,28 @@ No particular format on the argument is imposed but any user chosen format is
 suitable as long as the controller and robot window codes agree. The following
 example shows how to send and receive data from the robot window plugin:
 
+
+``` c
+char message[128];
+sprintf(message, "hello");
+int *count = (int *)wb_robot_window_custom_function(message);
+if (count != NULL)
+  printf("Robot window plugin received %d \"hello\" messages\n", count[0]);
+```
+
 And here is the corresponding robot window function definition:
+
+
+``` c
+void *wbw_robot_window_custom_function(void *arg) {
+  static int *count = NULL;
+  if (count == NULL)  {
+    count = new int[1];
+    count[0] = 0;
+  }
+  if (strcmp((const char *)arg, "hello") == 0)
+    count[0]++;
+  return count;
+}
+```
 

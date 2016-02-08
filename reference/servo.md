@@ -438,11 +438,35 @@ obstacles, external forces or the servo's own spring force, etc. It is also
 possible to wait until the `Servo` reaches the target position (synchronous)
 like this:
 
+
+``` c
+void servo_set_position_sync(WbDeviceTag tag, double target, int delay) {
+  const double DELTA = 0.001;  // max tolerated difference
+  wb_servo_set_position(tag, target);
+  wb_servo_enable_position(tag, TIME_STEP);
+  double effective;  // effective position
+  do {
+    wb_robot_step(TIME_STEP);
+    delay -= TIME_STEP;
+    effective = wb_servo_get_position(tag);
+  }
+  while (fabs(target - effective) > DELTA && delay > 0);
+  wb_servo_disable_position(tag);
+}
+```
+
 The `INFINITY` (*#include <math.h>*) value can be used as the second argument to
 the `wb_servo_set_position()` function in order to enable an endless rotational
 (or linear) motion. The current values for velocity, acceleration and motor
 torque/force are taken into account. So for example, `wb_servo_set_velocity()`
 can be used for controlling the velocity of the endless rotation:
+
+
+``` c
+// velocity control
+wb_servo_set_position(tag, INFINITY);
+wb_servo_set_velocity(tag, desired_speed);  // rad/s
+```
 
 The `wb_servo_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_servo_set_position()`

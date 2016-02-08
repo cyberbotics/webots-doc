@@ -15,6 +15,15 @@ playback.
 The `wbu_motion_delete()` function frees all the memory associated with the
 `WbMotionRef`. This `WbMotionRef` can no longer be used afterwards.
 
+
+``` c++
+Motion *walk = new Motion(filename);
+if (! walk->isValid()) {
+  cerr << "could not load file: " << filename << endl;
+  delete walk;
+}
+```
+
 #### See also
 
 `wbu_motion_play`
@@ -26,6 +35,18 @@ function registers the motion to the playback system, but the effective playback
 happens in the background and is activated as a side effect of calling the
 `wb_robot_step()` function. If you want to play a file and wait for its
 termination you can do it with this simple function:
+
+
+``` c
+void my_motion_play_sync(WbMotionRef motion)
+{
+  wbu_motion_play(motion);
+  do {
+    wb_robot_step(TIME_STEP);
+  }
+  while (! wbu_motion_is_over(motion));
+}
+```
 
 Several motion files can be played simultaneously by the same robot, however if
 two motion files have common joints, the behavior is undefined.

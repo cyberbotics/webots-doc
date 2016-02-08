@@ -173,3 +173,121 @@ up. Then, after closing the window, the overlay will be automatically restored.
 
 ### Camera Functions
 
+#### Description
+
+`wb_camera_enable()` allows the user to enable a camera update each `ms`
+milliseconds.
+
+`wb_camera_disable()` turns the camera off, saving computation time.
+
+The `wb_camera_get_sampling_period()` function returns the period given into the
+`wb_camera_enable()` function, or 0 if the device is disabled.
+
+#### Description
+
+These functions allow the controller to get and set the value for the field of
+view (fov) of a camera. The original value for this field of view is defined in
+the `Camera` node, as `fieldOfView`. Note that changing the field of view using
+`wb_camera_set_fov()` is possible only if the camera device has a `CameraZoom`
+node defined in its `zoom` field. The minimum and maximum values for the field
+of view are defined in this `CameraZoom` node, if the zoom is not defined, then
+the functions `wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will
+return the camera's field of view.
+
+#### Description
+
+These functions allow the controller to get and set the focusing parameters.
+Note that if the camera device has no `CameraFocus` node defined in its `focus`
+field, it is not possible to call `wb_camera_set_focal_distance()` and the other
+functions will return 0.
+
+#### Description
+
+These functions return the width and height of a camera image as defined in the
+corresponding `Camera` node.
+
+#### Description
+
+This function returns the near parameter of a camera device as defined in the
+corresponding `Camera` node.
+
+#### Description
+
+This function returns the type of the camera as defined by the `type` field of
+the corresponding `Camera` node. The constants defined in "camera.h" are
+summarized in :
+
+%figure "Return values for the"
+| Camera.type | return value |
+| --- | --- |
+| "color" | WB\_CAMERA\_COLOR |
+| "range-finder" | WB\_CAMERA\_RANGE\_FINDER |
+%%end
+
+#### Description
+
+The `wb_camera_get_image()` function reads the last image grabbed by the camera.
+The image is coded as a sequence of three bytes representing the red, green and
+blue levels of a pixel. Pixels are stored in horizontal lines ranging from the
+top left hand side of the image down to bottom right hand side. The memory chunk
+returned by this function must not be freed, as it is handled by the camera
+itself. The size in bytes of this memory chunk can be computed as follows:
+
+`byte_size` = `camera_width` * `camera_height` * 4
+
+Internal pixel format of the buffer is BGRA (32 bits). Attempting to read
+outside the bounds of this chunk will cause an error.
+
+The `wb_camera_image_get_red(), wb_camera_image_get_green()` and
+`wb_camera_image_get_blue()` macros can be used for directly accessing the pixel
+RGB levels from the pixel coordinates. The `wb_camera_image_get_grey()` macro
+works in a similar way but returns the grey level of the specified pixel by
+averaging the three RGB components. In the C version, these four macros return
+an `unsigned char` in the range [0..255]. Here is a C usage example:
+
+#### Description
+
+The `wb_camera_get_range_image()` macro allows the user to read the contents of
+the last range image grabbed by a range-finder camera. The range image is
+computed using the depth buffer produced by the OpenGL rendering. Each pixel
+corresponds to the distance expressed in meter from the object to the plane
+defined by the equation `z = 0` within the coordinates system of the camera. The
+bounds of the range image is determined by the near clipping plane (defined by
+the `near` field) and the far clipping plane (see the `maxRange` field). The
+range image is coded as an array of single precision floating point values
+corresponding to the range value of each pixel of the image. The precision of
+the range-finder values decreases when the objects are located farther from the
+near clipping plane. Pixels are stored in scan lines running from left to right
+and from top to bottom. The memory chunk returned by this function shall not be
+freed, as it is managed by the camera internally. The size in bytes of the range
+image can be computed as follows:
+
+`size` = `camera_width` * `camera_height` * sizeof(float)
+
+Attempting to read outside the bounds of this memory chunk will cause an error.
+
+The `wb_camera_range_image_get_depth()` macro is a convenient way to access a
+range value, directly from its pixel coordinates. The `camera_width` parameter
+can be obtained from the `wb_camera_get_width()` function. The `x` and `y`
+parameters are the coordinates of the pixel in the image.
+
+The `wb_camera_get_max_range()` function returns the value of the `maxRange`
+field.
+
+#### Description
+
+The `wb_camera_save_image()` function allows the user to save a `tag` image
+which was previously obtained with the `wb_camera_get_image()` function. The
+image is saved in a file in either PNG or JPEG format. The image format is
+specified by the `filename` parameter. If `filename` is terminated by `.png`,
+the image format is PNG. If `filename` is terminated by `.jpg` or `.jpeg`, the
+image format is JPEG. Other image formats are not supported. The `quality`
+parameter is useful only for JPEG images. It defines the JPEG quality of the
+saved image. The `quality` parameter should be in the range 1 (worst quality) to
+100 (best quality). Low quality JPEG files will use less disk space. For PNG
+images, the `quality` parameter is ignored.
+
+The return value of the `wb_camera_save_image()` is 0 in case of success. It is
+-1 in case of failure (unable to open the specified file or unrecognized image
+file extension).
+

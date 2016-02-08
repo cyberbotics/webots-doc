@@ -52,3 +52,28 @@ directory of Webots).
 
 ### Pen Functions
 
+#### Description
+
+`wb_pen_write()` allows the user to switch a pen device on or off to disable or
+enable writing. If the `write` parameter is *true*, the specified `tag` device
+will write; if `write` is *false*, it won't.
+
+#### Description
+
+`wb_pen_set_ink_color()` changes the current ink color of the specified `tag`
+device. The `color` is a 32 bit integer value which defines the new color of the
+ink in the 0xRRGGBB hexadecimal format (i.e., 0x000000 is black, 0xFF0000 is
+red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is grey
+0xFFFFFF is white, etc.). The `density` parameter defines the ink density, with
+0 meaning transparent ink and 1 meaning completely opaque ink.
+
+#### Example
+
+
+```
+wb_pen_set_ink_color(pen,0xF01010,0.9);
+```
+
+The above statement will change the ink color of the indicated pen to some red
+color.
+

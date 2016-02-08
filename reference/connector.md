@@ -100,3 +100,64 @@ unable to connect.
 
 ### Connector Functions
 
+#### Description
+
+The `wb_connector_enable_presence()` function starts querying the `Connector`'s
+*presence* (see definition below) state each `ms` milliseconds. The
+`wb_connector_disable_presence()` function stops querying the `Connector`'s
+*presence*. The `wb_connector_get_presence()` function returns the current
+*presence* state of this connector, it returns:
+
+- 1: in case of the *presence* of a peer connector
+- 0: in case of the absence of a peer connector
+- -1: not applicable (if this connector is of "passive" type)
+
+The *presence* state is defined as the correct positioning of a compatible peer
+`Connector`.
+
+Two connectors are in position if they are axis-aligned, rotation-aligned and
+near enough. To be axis-aligned, the angle between the *z*-axes of the two
+connectors must be smaller than the `axisTolerance` field. To be rotation-
+aligned, the angle between the *y*-axis of both `Connectors` must be within
+`distanceTolerance` of one of the possible `numberOfRotations` subdivisions of
+360 degrees. Two `Connectors` are near enough if the distance between them
+(measured between the origins of the coordinate systems) is smaller than
+`distanceTolerance`.
+
+Two `Connectors` are compatible if both types are "symmetric" or if one is
+"active" and the other is "passive". A further requirement for the compatibility
+is that the `model` fields of the connectors must be identical. The conditions
+for detecting presence can be summarized this way:
+
+
+```
+presence         := in_position AND compatible
+compatible       := type_compatible AND model_compatible
+type_compatible  := both connectors are "symmetric" OR one connector
+                    is "active" AND the other one is "passive"
+model_compatible := both models strings are equal
+in_position      := near_enough AND axis_aligned AND rotation_aligned
+near_enough      := the distance between the connectors lt tolerance
+axis_aligned     := the angle between the z-axes lt tolerance
+rotation_aligned := the n-ways rotational angle is within tolerance
+```
+
+
+#### Description
+
+The `wb_connector_lock()` and `wb_connector_unlock()` functions can be used to
+set or unset the `Connector`'s locking state (`isLocked` field) and eventually
+create or destroy the physical connection between two `Connector` nodes.
+
+If `wb_connector_lock()` is invoked while a peer connector is *present* (see the
+definition of *presence* above), a physical link will be created between the two
+connectors. If both the `isLocked` and `autoLock` fields are TRUE, then the
+physical link will be created automatically as soon as the peer's *presence* is
+detected. If `wb_connector_lock()` succeeds in creating the link, the two
+connected bodies will keep a constant distance and orientation with respect to
+each other from this moment on.
+
+If `wb_connector_unlock()` is invoked while there is a physical link between two
+`Connectors`, the link will be destroyed, unless `unilateralUnlock` is FALSE and
+the peer connector is still in the `isLocked` state.
+

@@ -271,7 +271,7 @@ class BookParser:
                     indent = 2
                 elif node.tag == 'sect2':
                     indent = 3
-                elif node.tag == 'sect3':
+                elif node.tag == 'sect3' or node.tag == 'refsect1':
                     indent = 4
                 else:
                     raise Exception('Unsupported type: ' + node.tag)
@@ -284,7 +284,7 @@ class BookParser:
                 outFile = open(fileName, 'w')
                 self.parseChapter(child, outFile)
                 outFile.close()
-            elif child.tag == 'sect2' or child.tag == 'sect3':
+            elif child.tag == 'sect2' or child.tag == 'sect3' or child.tag == 'refentry' or child.tag == 'refsect1':
                 self.parseChapter(child, outFile)
             elif child.tag == 'para':
                 self.parsePara(child, outFile, True)
@@ -308,13 +308,17 @@ class BookParser:
                 pass # TODO
             elif child.tag == 'theory':
                 pass # TODO
-            elif child.tag == 'refentry':
-                pass # TODO
             elif child.tag == 'code':
                 pass # TODO
             elif child.tag == 'clearPage':
                 pass # TODO
             elif child.tag == 'keywords':
+                pass # TODO
+            elif child.tag == 'refnamediv':
+                pass # TODO
+            elif child.tag == 'refsynopsisdiv':
+                pass # TODO
+            elif child.tag == 'refmeta':
                 pass # TODO
             else:
                 raise Exception('Unsupported type: ' + child.tag)

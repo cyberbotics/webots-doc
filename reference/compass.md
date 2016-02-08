@@ -28,3 +28,30 @@ in the `WorldInfo` node.
 
 ### Compass Functions
 
+#### Description
+
+The `wb_compass_enable()` function turns on the `Compass` measurement each `ms`
+milliseconds.
+
+The `wb_compass_disable()` function turns off the `Compass` device.
+
+The `wb_compass_get_sampling_period()` function returns the period given into
+the `wb_compass_enable()` function, or 0 if the device is disabled.
+
+The `wb_compass_get_values()` function returns the current `Compass`
+measurement. The returned vector indicates the direction of the *virtual north*
+in the coordinate system of the `Compass` device. Here is the internal algorithm
+of `wb_compass_get_values()` in pseudo-code:
+
+If the lookupTable is empty and all three xAxis, yAxis and zAxis fields are TRUE
+then the length of the returned vector is 1.0.
+
+The values are returned as a 3D-vector, therefore only the indices 0, 1, and 2
+are valid for accessing the vector. Let's look at one example. In Webots global
+coordinates system, the *xz*-plane represents the horizontal floor and the
+*y*-axis indicates the elevation. The default value of the `northDirection`
+field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned
+with the x-axis. Now if the `Compass` node is in *upright* position, meaning
+that its y-axis is aligned with the global y-axis, then the bearing angle in
+degrees can be computed as follows:
+

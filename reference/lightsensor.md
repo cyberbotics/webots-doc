@@ -119,3 +119,17 @@ specified.
 
 ### LightSensor Functions
 
+#### Description
+
+`wb_light_sensor_enable()` enables a light sensor measurement each `ms`
+milliseconds.
+
+`wb_light_sensor_disable()` turns off the light sensor to save CPU time.
+
+The `wb_light_sensor_get_sampling_period()` function returns the period given
+into the `wb_light_sensor_enable()` function, or 0 if the device is disabled.
+
+`wb_light_sensor_get_value()` returns the most recent value measured by the
+specified light sensor. The returned value is the result of interpolating the
+irradiance *E* as described above with the sensor's `lookupTable`.
+

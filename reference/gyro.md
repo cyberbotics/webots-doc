@@ -26,3 +26,20 @@ The `Gyro` node is used to model 1, 2 and 3-axis angular velocity sensors
 
 ### Gyro Functions
 
+#### Description
+
+The `wb_gyro_enable()` function turns on the angular velocity measurement each
+`ms` milliseconds.
+
+The `wb_gyro_disable()` function turns off the `Gyro` device.
+
+The `wb_gyro_get_sampling_period()` function returns the period given into the
+`wb_gyro_enable()` function, or 0 if the device is disabled.
+
+The `wb_gyro_get_values()` function returns the current measurement of the
+`Gyro` device. The values are returned as a 3D-vector therefore only the indices
+0, 1, and 2 are valid for accessing the vector. Each vector element represents
+the angular velocity about one of the axes of the `Gyro` node, expressed in
+radians per second [rad/s]. The first element corresponds to the angular
+velocity about the *x*-axis, the second element to the *y*-axis, etc.
+

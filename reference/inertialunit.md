@@ -48,3 +48,37 @@ cross-product (see `WorldInfo` to customize this frame).
 
 ### InertialUnit Functions
 
+#### Description
+
+The `wb_inertial_unit_enable()` function turns on the angle measurement each
+`ms` milliseconds.
+
+The `wb_inertial_unit_disable()` function turns off the `InertialUnit` device.
+
+The `wb_inertial_unit_get_sampling_period()` function returns the period given
+into the `wb_inertial_unit_enable()` function, or 0 if the device is disabled.
+
+The `wb_inertial_unit_get_roll_pitch_yaw()` function returns the current *roll*,
+*pitch* and *yaw* angles of the `InertialUnit`. The values are returned as an
+array of 3 components therefore only the indices 0, 1, and 2 are valid for
+accessing the returned array. Note that the indices 0, 1 and 2 return the
+*roll*, *pitch* and *yaw* angles respectively.
+
+The *roll* angle indicates the unit's rotation angle about its *x*-axis, in the
+interval [-pi,pi]. The *roll* angle is zero when the `InertialUnit` is
+horizontal, i.e., when its *y*-axis has the opposite direction of the gravity
+(`WorldInfo` defines the `gravity` vector).
+
+The *pitch* angle indicates the unit's rotation angle about is *z*-axis, in the
+interval [-pi/2,pi/2]. The *pitch* angle is zero when the `InertialUnit` is
+horizontal, i.e., when its *y*-axis has the opposite direction of the gravity.
+If the `InertialUnit` is placed on the `Robot` with a standard orientation, then
+the *pitch* angle is negative when the `Robot` is going down, and positive when
+the robot is going up.
+
+The *yaw* angle indicates the unit orientation, in the interval [-pi,pi], with
+respect to `WorldInfo`.`northDirection`. The *yaw* angle is zero when the
+`InertialUnit`'s *x*-axis is aligned with the north direction, it is pi/2 when
+the unit is heading east, and -pi/2 when the unit is oriented towards the west.
+The *yaw* angle can be used as a compass.
+

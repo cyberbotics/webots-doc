@@ -397,3 +397,150 @@ Please note the dummy `Physics` and the 1 millimeter `Sphere` as dummy
 
 ### Servo Functions
 
+#### Description
+
+The `wb_servo_set_position()` function specifies a new target position that the
+P-controller will attempt to reach using the current velocity, acceleration and
+motor torque/force parameters. This function returns immediately (asynchronous)
+while the actual motion is carried out in the background by Webots. The target
+position will be reached only if the physics simulation allows it, that means,
+if the specified motor force is sufficient and the motion is not blocked by
+obstacles, external forces or the servo's own spring force, etc. It is also
+possible to wait until the `Servo` reaches the target position (synchronous)
+like this:
+
+The `INFINITY` (*#include ltmath.hgt*) value can be used as the second argument
+to the `wb_servo_set_position()` function in order to enable an endless
+rotational (or linear) motion. The current values for velocity, acceleration and
+motor torque/force are taken into account. So for example,
+`wb_servo_set_velocity()` can be used for controlling the velocity of the
+endless rotation:
+
+The `wb_servo_get_target_position()` function allows to get the target position.
+This value matches with the argument given to the last `wb_servo_set_position()`
+function call.
+
+The `wb_servo_set_velocity()` function specifies the velocity that servo should
+reach while moving to the target position. In other words, this means that the
+servo will accelerate (using the specified acceleration, see below) until the
+target velocity is reached. The velocity argument passed to this function cannot
+exceed the limit specified in the `maxVelocity` field.
+
+The `wb_servo_set_acceleration()` function specifies the acceleration that the
+P-controller should use when trying to reach the specified velocity. Note that
+an infinite acceleration is obtained by passing -1 as the `acc` argument to this
+function.
+
+The `wb_servo_set_motor_force()` function specifies the max torque/force that
+will be available to the motor to carry out the requested motion. The motor
+torque/force specified with this function cannot exceed the value specified in
+the `maxForce` field.
+
+The `wb_servo_set_control_p()` function changes the value of the `P` parameter
+in the P-controller. `P` is a parameter used to compute the current servo
+velocity `V` from the current position `P` and target position `P`, such that
+`V`. With a small `P`, a long time is needed to reach the target position, while
+too large a `P` can make the system unstable. The default value of `P` is
+specified by the `controlP` field of the corresponding `Servo` node.
+
+The `wb_servo_get_[min|max]_position()` functions allow to get the values of
+respectively the `minPosition` and the `maxPosition` fields.
+
+#### Description
+
+The `wb_servo_enable_position()` function activates position measurements for
+the specified servo. A new position measurement will be performed each `ms`
+milliseconds; the result must be obtained with the `wb_servo_get_position()`
+function. The returned value corresponds to the most recent measurement of the
+servo position. The `wb_servo_get_position()` function measures the *effective
+position* of the servo which, under the effect of external forces, is usually
+different from the *target position* specified with `wb_servo_set_position()`.
+For a rotational servo, the returned value is expressed in radians, for a linear
+servo, the value is expressed in meters. The returned value is valid only if the
+corresponding measurement was previously enabled with
+`wb_servo_enable_position()`.
+
+The `wb_servo_disable_position()` function deactivates position measurements for
+the specified servo. After a call to `wb_servo_disable_position()`,
+`wb_servo_get_position()` will return undefined values.
+
+The `wb_servo_get_position_sampling_period()` function returns the period given
+into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
+
+#### Description
+
+The `wb_servo_enable_motor_force_feedback()` function activates torque/force
+feedback measurements for the specified servo. A new measurement will be
+performed each `ms` milliseconds; the result must be retrieved with the
+`wb_servo_get_motor_force_feedback()` function.
+
+The `wb_servo_get_motor_force_feedback()` function returns the most recent motor
+force measurement. This function measures the amount of motor force that is
+currently being used by the servo in order to achieve the desired motion or hold
+the current position. For a "rotational" servo, the returned value is a torque
+[N*m]; for a "linear" servo, the value is a force [N]. The returned value is an
+approximation computed by the physics engine, and therefore it may be
+inaccurate. The returned value normally does not exceed the available motor
+force specified with `wb_servo_set_motor_force()` (the default being the value
+of the `maxForce` field). Note that this function measures the *current motor
+force* exclusively, all other external or internal forces that may apply to the
+servo are ignored. In particular, `wb_servo_get_motor_force_feedback()` does not
+measure:
+
+- The spring and damping forces that apply when the `springConstant` or `dampingConstant` fields are non-zero.
+- The force specified with the `wb_servo_set_force()` function.
+- The *constraint forces* that restrict the servo motion to one degree of freedom (DOF). In other words, the forces applied outside of the servo DOF are ignored. Only the forces applied in the DOF are considered. For example, in a "linear" servo, a force applied at a right angle to the sliding axis is completely ignored. In a "rotational" servo, only the torque applied around the rotation axis is considered.
+
+Note that this function applies only to *physics-based* simulation. Therefore,
+the `physics` and `boundingObject` fields of the `Servo` node must be defined
+for this function to work properly.
+
+If `wb_servo_get_motor_force_feedback()` was not previously enabled, the return
+value is undefined.
+
+The `wb_servo_get_motor_force_feedback_sampling_period()` function returns the
+period given into the `wb_servo_enable_motor_force_feedback()` function, or 0 if
+the device is disabled.
+
+#### Description
+
+As an alternative to the P-controller, the `wb_servo_set_force()` function
+allows the user to directly specify the amount of torque/force that must be
+applied by a servo. This function bypasses the P-controller and ODE joint
+motors; it adds the force to the physics simulation directly. This allows the
+user to design a custom controller, for example a PID controller. Note that when
+`wb_servo_set_force()` is invoked, this automatically resets the force
+previously added by the P-controller.
+
+In a "rotational" servo, the *force* parameter specifies the amount of torque
+that will be applied around the servo rotation axis. In a "linear" servo, the
+parameter specifies the amount of force [N] that will be applied along the
+sliding axis. A positive *torque/force* will move the bodies in the positive
+direction, which corresponds to the direction of the servo when the `position`
+field increases. When invoking `wb_servo_set_force()`, the specified *force*
+parameter cannot exceed the current *motor force* of the servo (specified with
+`wb_servo_set_motor_force()` and defaulting to the value of the `maxForce`
+field).
+
+Note that this function applies only to *physics-based* simulation. Therefore,
+the `physics` and `boundingObject` fields of the `Servo` node must be defined
+for this function to work properly.
+
+It is also possible, for example, to use this function to implement springs or
+dampers with controllable properties. The example in
+"projects/samples/howto/worlds/force\_control.wbt" demonstrates the usage of
+`wb_servo_set_force()` for creating a simple spring and damper system.
+
+#### Description
+
+This function allows to retrieve the servo type defined by the `type` field. If
+the value of the `type` field is "linear", this function returns
+WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
+
+%figure "Return values for the"
+| Servo.type | return value |
+| --- | --- |
+| "rotational" | WB\_SERVO\_ROTATIONAL |
+| "linear" | WB\_SERVO\_LINEAR |
+%%end
+

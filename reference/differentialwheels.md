@@ -101,3 +101,63 @@ simulation.
 
 ### DifferentialWheels Functions
 
+#### Description
+
+The `wb_differential_wheels_set_speed` function allows the user to specify a
+speed for the `DifferentialWheels` robot. This speed will be sent to the motors
+of the robot at the beginning of the next simulation step. The speed unit is
+defined by the `speedUnit` field of the `DifferentialWheels` node. The default
+value is 1 radians per seconds. Hence a speed value of 2 will make the wheel
+rotate at a speed of 2 radians per seconds. The linear speed of the robot can
+then be computed from the angular speed of each wheel, the wheel radius and the
+noise added. Both the wheel radius and the noise are documented in the
+`DifferentialWheels` node.
+
+The `wb_differential_wheels_get_left_speed` and
+`wb_differential_wheels_get_right_speed` functions allow to retrieve the last
+speed commands given as an argument of the `wb_differential_wheels_set_speed`
+function.
+
+#### Description
+
+These functions allow the user to enable or disable the incremental wheel
+encoders for both wheels of the `DifferentialWheels` robot. Incremental encoders
+are counters that increment each time a wheel turns. The amount added to an
+incremental encoder is computed from the angle the wheel rotated and from the
+`encoderResolution` parameter of the `DifferentialWheels` node. Hence, if the
+`encoderResolution` is 100 and the wheel made a whole revolution, the
+corresponding encoder will have its value incremented by about 628. Please note
+that in a kinematic simulation (with no `Physics` node set) when a
+`DifferentialWheels` robot encounters an obstacle while trying to move forward,
+the wheels of the robot do not slip, hence the encoder values are not increased.
+This is very useful to detect that the robot has hit an obstacle. On the
+contrary, in a physics simulation (when the `DifferentialWheels` node and its
+children contain appropriate `Physics` nodes), the wheels may slip depending on
+their friction parameters and the force of the motors (`maxForce` field of the
+`DifferentialWheels` node). If a wheel slips, then its encoder values are
+modified according to its actual rotation, even though the robot doesn't move.
+
+The `wb_differential_wheels_get_encoders_sampling_period()` function returns the
+period given into the `wb_differential_wheels_enable_encoders()` function, or 0
+if the device is disabled.
+
+#### Description
+
+These functions are used to read or set the values of the left and right
+encoders. The encoders must be enabled with
+`wb_differential_wheels_enable_encoders()`, so that the functions can read valid
+data. Additionally, the `encoderNoise` of the corresponding `DifferentialWheels`
+node should be positive. Setting the encoders' values will not make the wheels
+rotate to reach the specified value; instead, it will simply reset the encoders
+with the specified value.
+
+#### Description
+
+The `wb_differential_wheels_get_max_speed` function allows the user to get the
+value of the `maxSpeed` field of the `DifferentialWheels` node.
+
+#### Description
+
+The `wb_differential_wheels_get_speed_unit` function allows the user to get the
+value of the `speedUnit` field of the `DifferentialWheels` node.
+

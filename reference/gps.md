@@ -33,3 +33,18 @@ obtain information about its absolute position from the controller program.
 
 ### GPS Functions
 
+#### Description
+
+`wb_gps_enable()` allows the user to enable a GPS measurement each `ms`
+milliseconds.
+
+`wb_gps_disable()` turns the GPS off, saving computation time.
+
+The `wb_gps_get_sampling_period()` function returns the period given into the
+`wb_gps_enable()` function, or 0 if the device is disabled.
+
+The `wb_gps_get_values()` function returns the current `GPS` measurement. The
+values are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are
+valid for accessing the vector. The returned vector indicates the absolute
+position of the `GPS` device.
+

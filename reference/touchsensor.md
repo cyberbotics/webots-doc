@@ -130,3 +130,37 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 ### TouchSensor Functions
 
+#### Description
+
+`wb_touch_sensor_enable()` allows the user to enable a touch sensor measurement
+every `ms` milliseconds.
+
+`wb_touch_sensor_disable()` turns the touch sensor off, saving computation time.
+
+`wb_touch_sensor_get_value()` returns the last value measured by a "bumper" or
+"force" `TouchSensor`. This function can be used with a sensor of type "bumper"
+or "force". For a "force" sensor, the value may be altered by an optional lookup
+table. For a "bumper" sensor, the value can be 0.0 or 1.0.
+
+The `wb_touch_sensor_get_sampling_period()` function returns the period given
+into the `wb_touch_sensor_enable()` function, or 0 if the device is disabled.
+
+`wb_touch_sensor_get_values()` returns the last force vector measured by a
+"force-3d" `TouchSensor`. This function can be used with a sensor of type
+"force-3d" exclusively.
+
+#### Description
+
+This function allows to retrieve the touch sensor type defined by the `type`
+field. If the value of the `type` field is "force" then this function returns
+WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
+WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
+
+%figure "Return values for the"
+| TouchSensor.type | return value |
+| --- | --- |
+| "bumper" | WB\_TOUCH\_SENSOR\_BUMPER |
+| "force" | WB\_TOUCH\_SENSOR\_FORCE |
+| "force-3d" | WB\_TOUCH\_SENSOR\_FORCE3D |
+%%end
+

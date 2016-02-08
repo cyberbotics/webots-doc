@@ -28,3 +28,30 @@ and `Group` node is altered according to the previous rules.
 
 ### LED Functions
 
+#### Description
+
+`wb_led_set()` switches an LED on or off, possibly changing its color. If the
+`value` parameter is 0, the LED is turned off. Otherwise, it is turned on.
+
+In the case of a non-gradual LED (`gradual` field set to FALSE), if the `value`
+parameter is 1, the LED is turned on using the first color specified in the
+`color` field of the corresponding `LED` node. If the `value` parameter is 2,
+the LED is turned on using the second color specified in the `color` field of
+the `LED` node, and so on. The `value` parameter should not be greater than the
+size of the `color` field of the corresponding `LED` node.
+
+In the case of a monochromatic LED (`gradual` field set to TRUE and `color`
+field containing exactly one color), the `value` parameter indicates the
+intensity of the LED in the range 0 (off) to 255 (maximum intensity).
+
+In the case of an RGB LED (`gradual` field set to TRUE and `color` field
+containing an empty list), the `value` parameter indicates the RGB color of the
+LED in the range 0 (off or black) to 0xffffff (white). The format is R8G8B8: The
+most significant 8 bits (left hand side) indicate the red level (between 0x00
+and 0xff). Bits 8 to 15 indicate the green level and the least significant 8
+bits (right hand side) indicate the blue level. For example, 0xff0000 is red,
+0x00ff00 is green, 0x0000ff is blue, 0xffff00 is yellow, etc.
+
+The `wb_led_get` function returns the value given as an argument of the last
+`wb_led_set` function call.
+

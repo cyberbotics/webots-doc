@@ -158,3 +158,19 @@ must be placed in a `Plane`.
 
 ### DistanceSensor Functions
 
+#### Description
+
+`wb_distance_sensor_enable()` allows the user to enable a distance sensor
+measurement each `ms` milliseconds.
+
+`wb_distance_sensor_disable()` turns the distance sensor off, saving computation
+time.
+
+The `wb_distance_sensor_get_sampling_period()` function returns the period given
+into the `wb_distance_sensor_enable()` function, or 0 if the device is disabled.
+
+`wb_distance_sensor_get_value()` returns the last value measured by the
+specified distance sensor. This value is computed by the simulator according to
+the lookup table of the `DistanceSensor` node. Hence, the range of the return
+value is defined by this lookup table.
+

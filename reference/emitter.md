@@ -47,5 +47,52 @@ robot to itself.
 
 ### Emitter Functions
 
+#### Description
+
+The `wb_emitter_send()` function adds to the emitters's queue a packet of `size`
+bytes located at the address indicated by `data`. The enqueued data packets will
+then be sent to potential receivers (and removed from the emitter's queue) at
+the rate specified by the `baudRate` field of the `Emitter` node. Note that a
+packet will not be sent to its emitter robot. This function returns 1 if the
+message was placed in the sending queue, 0 if the sending queue was full. The
+queue is considered to be *full* when the sum of bytes of all the currently
+enqueued packets exceeds the buffer size specified by the `bufferSize` field.
+Note that a packet must have at least 1 byte.
+
+The Emitter/Receiver API does not impose any particular format on the data being
+transmitted. Any user chosen format is suitable, as long as the emitter and
+receiver codes agree. The following example shows how to send a null-terminated
+ascii string using the C API:
+
 And here an example on how to send binary data with the C API:
+
+#### Description
+
+The `wb_emitter_set_channel()` function allows the controller to change the
+transmission channel. This modifies the `channel` field of the corresponding
+`Emitter` node. Normally, an emitter can send data only to receivers that use
+the same channel. However, the special WB\_CHANNEL\_BROADCAST value can be used
+for broadcasting to all channels. By switching the channel number an emitter can
+selectively send data to different receivers. The `wb_emitter_get_channel()`
+function returns the current channel number of the emitter.
+
+#### Description
+
+The `wb_emitter_set_range()` function allows the controller to change the
+transmission range at run-time. Data packets can only reach receivers located
+within the emitter's range. This function modifies the `range` field of the
+corresponding `Emitter` node. If the specified `range` argument is larger than
+the `maxRange` field of the `Emitter` node then the current range will be set to
+`maxRange`. The `wb_emitter_get_range()` function returns the current emitter's
+range. For both the `wb_emitter_set_range()` and `emitter_get_range()`
+functions, a value of -1 indicates an infinite range.
+
+#### Description
+
+The `wb_emitter_get_buffer_size()` function returns the size (in bytes) of the
+transmission buffer. This corresponds to the value specified by the `bufferSize`
+field of the `Emitter` node. The buffer size indicates the maximum number of
+data bytes that the emitter's queue can hold in total, if the size is -1, the
+number of data bytes is not limited. When the buffer is full, calls to
+`wb_emitter_send()` will fail and return 0.
 

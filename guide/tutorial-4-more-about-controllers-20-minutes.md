@@ -153,11 +153,17 @@ Here is a quick summary of the key points you need to understand before going
 on:
 
 - The controller entry point is the `main()` function like any standard C program.
-- No Webots function should be called before the call of the `wb_robot_init()` function.
-- The last function to call before leaving the main function is the `wb_robot_cleanup()` function.
-- A device is referenced by the `name` field of its device node. The reference of the node can be retrieved thanks to the `wb_robot_get_device()` function.
-- Each controller program is executed as a child process of the Webots process. A controller process does not share any memory with Webots (except the cameras images) and it can run on another CPU (or CPU core) than Webots.
-- The controller code is linked with the "libController" dynamic library. This library handles the communication between your controller and Webots.
+- No Webots function should be called before the call of the `wb_robot_init()`
+function.
+- The last function to call before leaving the main function is the
+`wb_robot_cleanup()` function.
+- A device is referenced by the `name` field of its device node. The reference of
+the node can be retrieved thanks to the `wb_robot_get_device()` function.
+- Each controller program is executed as a child process of the Webots process. A
+controller process does not share any memory with Webots (except the cameras
+images) and it can run on another CPU (or CPU core) than Webots.
+- The controller code is linked with the "libController" dynamic library. This
+library handles the communication between your controller and Webots.
 
 The  explains in more detail controller programming. We invite you to read
 carefully this section before going on.

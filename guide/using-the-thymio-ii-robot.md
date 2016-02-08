@@ -29,7 +29,8 @@ Webots terminology).
 | --- | --- | --- |
 | Motors | Full support | motor.[left-right] |
 | RGB LEDs | Full support | leds.top, leds.bottom.[right-left] |
-| LEDs | Full support | leds.buttons.led[0-3], leds.circle.led[0-7], leds.prox.h.led[0-7], leds.prox.v.led[0-1], leds.sound, leds.rc, leds.temperature.[red-blue] |
+| LEDs | Full support | leds.buttons.led[0-3], leds.circle.led[0-7], leds.prox.h.led[0-7],
+leds.prox.v.led[0-1], leds.sound, leds.rc, leds.temperature.[red-blue] |
 | IR sensors | Full support | prox.horizontal.[0-6], prox.ground.[0-1] |
 | Accelerometer | Full support | acc |
 | Buttons | Full support | button.[forward-backward-left-right-center] |

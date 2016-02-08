@@ -27,11 +27,40 @@ axis.
 
 ### Field Summary
 
-- The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*. The *velocity* can be changed at run-time with the `wb_motor_set_velocity()` function. The value should always be positive (the default is 10).
-- The first coordinate of `controlPID` field specifies the initial value of the *P* parameter, which is the *proportional gain* of the motor PID-controller. A high *P* results in a large response to a small error, and therefore a more sensitive system. Note that by setting *P* too high, the system can become unstable. With a small *P*, more simulation steps are needed to reach the target position, but the system is more stable.The second coordinate of `controlPID` field specifies the initial value of the *I* parameter, which is the *integral gain* of the motor PID-controller. The integral term of the PID controller is defined as the product of the error integral over time by *I*. This term accelerates the movement towards target position and eliminates the residual steady-state error which occurs with a pure proportional controller. However, since the integral term represents accumulated errors from the past, it can cause the present value to overshoot the target position.The third coordinate `controlPID` field specifies the initial value of the *D* parameter, which is the *derivative gain* of the motor PID-controller. The derivative term of the PID-controller is defined as the product of the error derivative with respect to time by *D*. This term predicts system behavior and thus improves settling time and stability of the system.The value of *P, I* and *D* can be changed at run-time with the `wb_motor_set_control_pid()` function.
-- The `acceleration` field defines the default acceleration of the P-controller. A value of -1 (infinite) means that the acceleration is not limited by the P-controller. The acceleration can be changed at run-time with the `wb_motor_set_acceleration()` function.
-- The `position` field represents the current *position* of the `Motor`, in radians or meters. For a rotational motor, `position` represents the current rotation angle in radians. For a linear motor, `position` represents the magnitude of the current translation in meters.
-- The `minPosition` and `maxPosition` fields specify *soft limits* for the target position. These fields are described in more detail in the "Motor Limits" section, see below.
+- The `maxVelocity` field specifies both the upper limit and the default value for
+the motor *velocity*. The *velocity* can be changed at run-time with the
+`wb_motor_set_velocity()` function. The value should always be positive (the
+default is 10).
+- The first coordinate of `controlPID` field specifies the initial value of the
+*P* parameter, which is the *proportional gain* of the motor PID-controller. A
+high *P* results in a large response to a small error, and therefore a more
+sensitive system. Note that by setting *P* too high, the system can become
+unstable. With a small *P*, more simulation steps are needed to reach the target
+position, but the system is more stable. The second coordinate of `controlPID`
+field specifies the initial value of the *I* parameter, which is the *integral
+gain* of the motor PID-controller. The integral term of the PID controller is
+defined as the product of the error integral over time by *I*. This term
+accelerates the movement towards target position and eliminates the residual
+steady-state error which occurs with a pure proportional controller. However,
+since the integral term represents accumulated errors from the past, it can
+cause the present value to overshoot the target position. The third coordinate
+`controlPID` field specifies the initial value of the *D* parameter, which is
+the *derivative gain* of the motor PID-controller. The derivative term of the
+PID-controller is defined as the product of the error derivative with respect to
+time by *D*. This term predicts system behavior and thus improves settling time
+and stability of the system. The value of *P, I* and *D* can be changed at run-
+time with the `wb_motor_set_control_pid()` function.
+- The `acceleration` field defines the default acceleration of the P-controller. A
+value of -1 (infinite) means that the acceleration is not limited by the
+P-controller. The acceleration can be changed at run-time with the
+`wb_motor_set_acceleration()` function.
+- The `position` field represents the current *position* of the `Motor`, in
+radians or meters. For a rotational motor, `position` represents the current
+rotation angle in radians. For a linear motor, `position` represents the
+magnitude of the current translation in meters.
+- The `minPosition` and `maxPosition` fields specify *soft limits* for the target
+position. These fields are described in more detail in the "Motor Limits"
+section, see below.
 
 ### Units
 
@@ -82,12 +111,12 @@ simulator (ODE joint motors).
 ![Motor control](pdf/motor_control.pdf.png)
 %end
 
-
-At each simulation step, the PID-controller (2) recomputes the current velocity *Vc* according to following algorithm:
+At each simulation step, the PID-controller (2) recomputes the current velocity
+*Vc* according to following algorithm:
 
 ```
-error = Pt - Pc;
-error_integral += error * ts;
+error = Pt - Pc; 
+error_integral += error * ts; 
 error_derivative = (previous_error - error) / ts;
 Vc = P * error + D * error_derivative + I * error_integral ;
 if (abs(Vc) > Vd)
@@ -100,30 +129,27 @@ if (A != -1) {
 }
 ```
 
-where  `V` is the current motor velocity in rad/s or m/s,
-`P, I` and `D` are the PID-control gains specified in the `controlPID` field,
-or set with `wb_motor_set_control_pid()`,
-`P` is the *target position* of the motor set by the function `wb_motor_set_position()`,
-`P` is the current motor position as reflected by the `position` field,
-`V` is the desired velocity as specified by the `maxVelocity`
-field (default) or set with `wb_motor_set_velocity()`,
-`a` is the acceleration required to reach *Vc* in one time step,
-`V` is the motor velocity of the previous time step,
-`t` is the duration of the simulation time step as specified by the
-`basicTimeStep` field of the `WorldInfo` node (converted in seconds), and
-`A` is the acceleration of the motor as specified by the `acceleration`
-field (default) or set with `wb_motor_set_acceleration()`.
-
+where  `V` is the current motor velocity in rad/s or m/s, `P, I` and `D` are the
+PID-control gains specified in the `controlPID` field, or set with
+`wb_motor_set_control_pid()`, `P` is the *target position* of the motor set by
+the function `wb_motor_set_position()`, `P` is the current motor position as
+reflected by the `position` field, `V` is the desired velocity as specified by
+the `maxVelocity` field (default) or set with `wb_motor_set_velocity()`, `a` is
+the acceleration required to reach *Vc* in one time step, `V` is the motor
+velocity of the previous time step, `t` is the duration of the simulation time
+step as specified by the `basicTimeStep` field of the `WorldInfo` node
+(converted in seconds), and `A` is the acceleration of the motor as specified by
+the `acceleration` field (default) or set with `wb_motor_set_acceleration()`.
 
 ### Velocity Control
 
-
-The motors can also be used with *velocity control* instead of *position control*.
-This is obtained with two function calls: first the `wb_motor_set_position()` function
-must be called with `INFINITY` as a position parameter,
-then the desired velocity, which may be positive or negative, must be specified by calling the `wb_motor_set_velocity()` function.
-This will initiate a continuous motor motion at the desired speed, while taking into account
-the specified acceleration and motor force. Example:
+The motors can also be used with *velocity control* instead of *position
+control*. This is obtained with two function calls: first the
+`wb_motor_set_position()` function must be called with `INFINITY` as a position
+parameter, then the desired velocity, which may be positive or negative, must be
+specified by calling the `wb_motor_set_velocity()` function. This will initiate
+a continuous motor motion at the desired speed, while taking into account the
+specified acceleration and motor force. Example:
 
 ```
 wb_motor_set_position(motor, INFINITY);
@@ -131,11 +157,9 @@ wb_motor_set_velocity(motor, 6.28);  // 1 rotation per second
 ```
 
 `INFINITY` is a C macro corresponding to the IEEE 754 floating point standard.
-It is implemented in the C99 specifications as well as in C++.
-In Java, this value is defined as `Double.POSITIVE_INFINITY`.
-In Python, you should use `float('inf')`.
-Finally, in Matlab you should use the `inf` constant.
-
+It is implemented in the C99 specifications as well as in C++. In Java, this
+value is defined as `Double.POSITIVE_INFINITY`. In Python, you should use
+`float('inf')`. Finally, in Matlab you should use the `inf` constant.
 
 ### Force and Torque Control
 
@@ -281,9 +305,16 @@ torques) that may apply to the motor are ignored. In particular,
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`) does
 not measure:
 
-- The spring and damping forces that apply when the `springConstant` or `dampingConstant` fields are non-zero.
-- The force specified with the `wb_motor_set_force()` (resp. `wb_motor_set_torque()`) function.
-- The *constraint forces or torques* that restrict the motor motion to one degree of freedom (DOF). In other words, the forces or torques applied outside of the motor DOF are ignored. Only the forces or torques applied in the DOF are considered. For example, in a "linear" motor, a force applied at a right angle to the sliding axis is completely ignored. In a "rotational" motor, only the torque applied around the rotation axis is considered.
+- The spring and damping forces that apply when the `springConstant` or
+`dampingConstant` fields are non-zero.
+- The force specified with the `wb_motor_set_force()` (resp.
+`wb_motor_set_torque()`) function.
+- The *constraint forces or torques* that restrict the motor motion to one degree
+of freedom (DOF). In other words, the forces or torques applied outside of the
+motor DOF are ignored. Only the forces or torques applied in the DOF are
+considered. For example, in a "linear" motor, a force applied at a right angle
+to the sliding axis is completely ignored. In a "rotational" motor, only the
+torque applied around the rotation axis is considered.
 
 Note that these functions applies only to *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of related `Solid` nodes

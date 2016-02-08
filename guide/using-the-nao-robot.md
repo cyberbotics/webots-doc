@@ -70,7 +70,14 @@ Webots.
 
 You can switch between the Nao model thanks to the following Nao PROTO fields:
 
-- *version* corresponds to the real Nao version. The supported versions are "3.3", "4.0" and "5.0". The main difference between these models is the different calibration of the physics. The field of view of the cameras is slightly different, too. Please refer directly to the Nao.proto file to see the complete difference. Note that each version having a different weight repartition in their body, the best contact properties in the simulated world aren't always the same. They are currently optimized for the version 5.0 of Nao in the default Nao worlds and may not perform as well with previous versions of Nao.
+- *version* corresponds to the real Nao version. The supported versions are "3.3",
+"4.0" and "5.0". The main difference between these models is the different
+calibration of the physics. The field of view of the cameras is slightly
+different, too. Please refer directly to the Nao.proto file to see the complete
+difference. Note that each version having a different weight repartition in
+their body, the best contact properties in the simulated world aren't always the
+same. They are currently optimized for the version 5.0 of Nao in the default Nao
+worlds and may not perform as well with previous versions of Nao.
 - 
 
 ### Using motion boxes
@@ -127,11 +134,15 @@ possible to prevent the simulation speed from going below 1.0x, by keeping the
 CPU and GPU load as low as possible. There are several ways to do that, here are
 the most effective ones:
 
-- Switch off the simulation of the Nao cameras with the "-nocam" option, as mentioned above
+- Switch off the simulation of the Nao cameras with the "-nocam" option, as
+mentioned above
 - Increase the value of `WorldInfo.displayRefesh` in the Scene Tree
-- Switch off the rendering of the shadows: change to FALSE the `castShadows` field of each light source in the Scene Tree
-- Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI components
-- Remove unnecessary objects from the simulation, in particular objects with physics
+- Switch off the rendering of the shadows: change to FALSE the `castShadows` field
+of each light source in the Scene Tree
+- Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI
+components
+- Remove unnecessary objects from the simulation, in particular objects with
+physics
 
 ### Known Problems
 
@@ -143,7 +154,6 @@ On Windows, use the Task Manager (the Task Manager can be started by pressing
 Ctrl-Alt-Delete): In the Task Manager select the `Processes` tab, then select
 each `hal.exe` and `naoqi-bin.exe` line and push the "End Process" button for
 each one.
-
 
 On Linux, you can use the `killall` or the `pkill` commands, e.g.:
 

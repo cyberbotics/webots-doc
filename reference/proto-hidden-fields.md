@@ -16,13 +16,15 @@ a PROTO are saved and can be subsequently restored when reloading your world
 file. Like the other hidden fields, velocities are saved in the field scope of
 every top-level PROTO.
 
-
-Each hidden field appends an index to its name which encodes the location of the `Solid` to which it belongs inside the tree
-hierarchy rooted at the the PROTO node. This index corresponds is the depth-first pre-order traversal
-index of the `Solid` in this tree. If a hidden field corresponds to the `position` of `Joint`, an additional index
-is appended to its name, namely the index of the `Joint` in the list of `Joint`
-nodes originating from the `Solid` sorted by means of pre-order traversal.
-As an example, we display below an excerpt of "projects/robots/pioneer/pioneer3at/worlds/pioneer3at.wbt" when saved after one simulation step.
+Each hidden field appends an index to its name which encodes the location of the
+`Solid` to which it belongs inside the tree hierarchy rooted at the the PROTO
+node. This index corresponds is the depth-first pre-order traversal index of the
+`Solid` in this tree. If a hidden field corresponds to the `position` of
+`Joint`, an additional index is appended to its name, namely the index of the
+`Joint` in the list of `Joint` nodes originating from the `Solid` sorted by
+means of pre-order traversal. As an example, we display below an excerpt of
+"projects/robots/pioneer/pioneer3at/worlds/pioneer3at.wbt" when saved after one
+simulation step.
 
 ```
 
@@ -58,15 +60,15 @@ As an example, we display below an excerpt of "projects/robots/pioneer/pioneer3a
             pixelSize 0
           }
         ]
-
+     
 ```
 
-The names of the first six hidden fields all contain 0 as primary index, which is the index of the
-`Pioneer3at` PROTO itself. The additional secondary indices for the four hidden
-`position` fields correspond to the four `HingeJoint`
-nodes used for the wheels and numbered by means of pre-order traversal. There is no hidden field associated the
-`Solid` node with index 1, namely the `SickLms291` PROTO,
-since its relative position and orientation are kept fixed during simulation. The indices ranging from 2 to 5 correspond
-to the four `Solid` wheels of the `Pioneer3at`.
-
+The names of the first six hidden fields all contain 0 as primary index, which
+is the index of the `Pioneer3at` PROTO itself. The additional secondary indices
+for the four hidden `position` fields correspond to the four `HingeJoint` nodes
+used for the wheels and numbered by means of pre-order traversal. There is no
+hidden field associated the `Solid` node with index 1, namely the `SickLms291`
+PROTO, since its relative position and orientation are kept fixed during
+simulation. The indices ranging from 2 to 5 correspond to the four `Solid`
+wheels of the `Pioneer3at`.
 

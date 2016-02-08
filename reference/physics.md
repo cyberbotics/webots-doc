@@ -26,11 +26,48 @@ behavior.
 
 ### Field Summary
 
-- The `density` field can be used to define the density of the containing `Solid`. The value of the `density` field should be a positive number number or -1. A -1 value indicates that the dentity is not known, in this case the `mass` field (see below) must be specified. If the `density` is specified (different from -1) then the total mass of the `Solid` is calculated by multiplying the specified density with the total volume of the geometrical primitives composing the `boundingObject`. Note that Webots ignores if the geometrical primitives intersect or not, the volume of each primitive is simply added to the total volume and finally multiplied by the density.
-- The `mass` field can be used to specify the total mass of the containing `Solid`. The value of the `mass` field should be a positive number or -1. A -1 value indicates that the total mass is not known, in this case the `density` field (see above) must be specified. If the mass is known, e.g., indicated in the specifications of the robot, then it is more accurate to specify the mass rather than the density.
-- The `centerOfMass` field defines the position of the center of mass of the solid. It is expressed in meters in the relative coordinate system of the `Solid` node. If `centerOfMass` field is different from [0 0 0], then the center of mass is depicted as a dark red/green/blue cross in Webots 3D-window.
-- The `inertiaMatrix` field can be used to manually specify the inertia matrix of the `Solid`. This field can either be empty (the default) or contain exactly 2 vectors. If this field is empty, Webots will compute the inertia matrix automatically according to the position and orientation of the geometrical primitives in `boundingObject`.If this field contains 2 vectors, these values specify the inertia matrix of the `Solid`. If the inertia matrix is specified then the `mass` field must also be specified. The first vector [I11, I22, I33] represents the *principals moments of inertia* and the second vector [I12, I13, I23] represents the *products of inertia*. Together these values form a 3x3 inertia matrix:The Ixx values are expressed in kg*m^2. The principals moments of inertia must be positive. The inertia matrix is defined with respect to the `centerOfMass` of the `Solid`. Internally, these 6 values are passed unchanged to the `dMassSetParameters()` ODE function.
-- The `damping` field allows to specify a `Damping` node that defines the velocity damping parameters to be applied to the `Solid`.
+- The `density` field can be used to define the density of the containing `Solid`.
+The value of the `density` field should be a positive number number or -1. A -1
+value indicates that the dentity is not known, in this case the `mass` field
+(see below) must be specified. If the `density` is specified (different from -1)
+then the total mass of the `Solid` is calculated by multiplying the specified
+density with the total volume of the geometrical primitives composing the
+`boundingObject`. Note that Webots ignores if the geometrical primitives
+intersect or not, the volume of each primitive is simply added to the total
+volume and finally multiplied by the density.
+- The `mass` field can be used to specify the total mass of the containing
+`Solid`. The value of the `mass` field should be a positive number or -1. A -1
+value indicates that the total mass is not known, in this case the `density`
+field (see above) must be specified. If the mass is known, e.g., indicated in
+the specifications of the robot, then it is more accurate to specify the mass
+rather than the density.
+- The `centerOfMass` field defines the position of the center of mass of the
+solid. It is expressed in meters in the relative coordinate system of the
+`Solid` node. If `centerOfMass` field is different from [0 0 0], then the center
+of mass is depicted as a dark red/green/blue cross in Webots 3D-window.
+- 
+```
+[ I11 I12 I13 ]
+[ I12 I22 I23 ]
+[ I13 I23 I33 ]
+```
+
+
+The `inertiaMatrix` field can be used to manually specify the inertia matrix of
+the `Solid`. This field can either be empty (the default) or contain exactly 2
+vectors. If this field is empty, Webots will compute the inertia matrix
+automatically according to the position and orientation of the geometrical
+primitives in `boundingObject`. If this field contains 2 vectors, these values
+specify the inertia matrix of the `Solid`. If the inertia matrix is specified
+then the `mass` field must also be specified. The first vector [I11, I22, I33]
+represents the *principals moments of inertia* and the second vector [I12, I13,
+I23] represents the *products of inertia*. Together these values form a 3x3
+inertia matrix: The Ixx values are expressed in kg*m^2. The principals moments
+of inertia must be positive. The inertia matrix is defined with respect to the
+`centerOfMass` of the `Solid`. Internally, these 6 values are passed unchanged
+to the `dMassSetParameters()` ODE function.
+- The `damping` field allows to specify a `Damping` node that defines the velocity
+damping parameters to be applied to the `Solid`.
 
 ### How to use Physics nodes?
 
@@ -97,12 +134,13 @@ addition top nodes (`Robot`, `DifferentialWheels` or `Supervisor`) do usually
 have `Physics` because this is required to allow any of their children to use
 the *physics* simulation.
 
-
-Note that each `Physics` node adds a significant complexity to the world: as a consequence the simulation speed decreases.
-Therefore the number of `Physics` nodes should be kept as low as possible.
-Fortunately, even with a complex wheeled or articulated robot some of the `physics` fields can remain empty (NULL).
-This is better explained with an example. Let's assume that you want to design an articulated robot with two legs.
-Your robot model may look like this (very simplified):
+Note that each `Physics` node adds a significant complexity to the world: as a
+consequence the simulation speed decreases. Therefore the number of `Physics`
+nodes should be kept as low as possible. Fortunately, even with a complex
+wheeled or articulated robot some of the `physics` fields can remain empty
+(NULL). This is better explained with an example. Let's assume that you want to
+design an articulated robot with two legs. Your robot model may look like this
+(very simplified):
 
 ```
 Robot {
@@ -128,17 +166,20 @@ Robot {
 }
 ```
 
-The legs need `Physics` nodes because the forces generated by their contact with the floor will allow the robot to move.
-If you would leave the legs without `Physics`, then no contact forces would be generated and therefore the robot would not move.
-Now, according to rule (1), because the legs have `Physics` nodes, their parent (the `Robot` node) must also have a `Physics` node.
-If the `Physics` node of the `Robot` was missing, the simulation would not work, the legs would fall off, etc.
+The legs need `Physics` nodes because the forces generated by their contact with
+the floor will allow the robot to move. If you would leave the legs without
+`Physics`, then no contact forces would be generated and therefore the robot
+would not move. Now, according to rule (1), because the legs have `Physics`
+nodes, their parent (the `Robot` node) must also have a `Physics` node. If the
+`Physics` node of the `Robot` was missing, the simulation would not work, the
+legs would fall off, etc.
 
-
-Now suppose you would like to add a `Camera` to this robot.
-Let's also assume that the physical properties of this camera are not relevant for this simulation, say, because the mass of the camera is
-quite small and because we want to ignore potential collisions of the camera with other objects.
-In this case, you should leave the `physics` field of the camera empty.
-So the model with the camera would look like this:
+Now suppose you would like to add a `Camera` to this robot. Let's also assume
+that the physical properties of this camera are not relevant for this
+simulation, say, because the mass of the camera is quite small and because we
+want to ignore potential collisions of the camera with other objects. In this
+case, you should leave the `physics` field of the camera empty. So the model
+with the camera would look like this:
 
 ```
 Robot {
@@ -168,10 +209,11 @@ Robot {
 }
 ```
 
-Now suppose that the camera needs to be motorized, e.g., it should rotate horizontally.
-Then the camera must simply be placed in the `endPoint` field of `HingeJoint` node that controls its horizontal position.
-This time again, the physical properties of the camera motor are apparently unimportant.
-If we assume that the mass of the camera motor is small and that its inertia is not relevant,
+Now suppose that the camera needs to be motorized, e.g., it should rotate
+horizontally. Then the camera must simply be placed in the `endPoint` field of
+`HingeJoint` node that controls its horizontal position. This time again, the
+physical properties of the camera motor are apparently unimportant. If we assume
+that the mass of the camera motor is small and that its inertia is not relevant,
 then the camera `Physics` node can also be omitted:
 
 ```
@@ -211,6 +253,7 @@ Robot {
 
 
 #### Devices
+
 
 
 Most device nodes work without `Physics` node. But a `Physics` node can

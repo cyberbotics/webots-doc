@@ -45,11 +45,11 @@ that this is similar to calling `matlab` from a terminal (or *Command Prompt* on
 Windows), therefore, if `MATLAB` can be started from a terminal then it can also
 be started from Webots.
 
-
-On Windows, the `MATLAB` installer will normally add `MATLAB`'s bin directories to your *Path* environment variable,
-so usually Webots will be able to locate `MATLAB` after a standard installation.
-However, in case it does not work, please make sure that your *Path* contains this directory
-(or something slightly different, according to your `MATLAB` version):
+On Windows, the `MATLAB` installer will normally add `MATLAB`'s bin directories
+to your *Path* environment variable, so usually Webots will be able to locate
+`MATLAB` after a standard installation. However, in case it does not work,
+please make sure that your *Path* contains this directory (or something slightly
+different, according to your `MATLAB` version):
 
 ```
 Path=C:\Program Files\MATLAB\R2009b\bin
@@ -57,15 +57,18 @@ Path=C:\Program Files\MATLAB\R2009b\bin
 
 
 
-On Linux, the `MATLAB` installer does normally suggest to add a symlink to the "matlab" startup script in the "/usr/local/bin" directory.
-This is a good option to make "matlab" globally accessible.
-Otherwise you can create the link at anytime afterwards with this shell command (please change according to your actual `MATLAB` installation directory and version):
+On Linux, the `MATLAB` installer does normally suggest to add a symlink to the
+"matlab" startup script in the "/usr/local/bin" directory. This is a good option
+to make "matlab" globally accessible. Otherwise you can create the link at
+anytime afterwards with this shell command (please change according to your
+actual `MATLAB` installation directory and version):
 
 ```
 $ sudo ln -s /usr/local/MATLAB/R2014a/bin/matlab /usr/local/bin/matlab
 ```
 
-Similarly, on Mac OS X, if Webots is unable to find the "matlab" startup script then you should add a symlink in "/usr/bin":
+Similarly, on Mac OS X, if Webots is unable to find the "matlab" startup script
+then you should add a symlink in "/usr/bin":
 
 ```
 $ sudo ln -s /Applications/MATLAB_R2014a.app/bin/matlab /usr/bin/matlab
@@ -102,9 +105,9 @@ documentation this will be the case on 64-bit systems, and hence we advice
 64-bit Webots users (on Linux) to make sure that these packages are installed on
 their systems.
 
-
-On some Mac OS X systems the `MATLAB` interface will work only if you install the Xcode development environment, because `gcc` is required.
-An error message like this one, is a symptom of the above described problem:
+On some Mac OS X systems the `MATLAB` interface will work only if you install
+the Xcode development environment, because `gcc` is required. An error message
+like this one, is a symptom of the above described problem:
 
 ```
 error using ==> calllib

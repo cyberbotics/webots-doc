@@ -16,5 +16,8 @@ that both `Solid` and `Joint` must be descendants of a common upper `Solid`.
 
 ### Field Summary
 
-- `solidName`: This field specifies either the static environment or the name of an existing `Solid` node to be linked with the `Joint`'s closest upper `Solid` node. Referring to the `Joint` closest upper `Solid` node or to a `Solid` node which has no common upper `Solid` with the `Joint` is prohibited.
+- `solidName`: This field specifies either the static environment or the name of
+an existing `Solid` node to be linked with the `Joint`'s closest upper `Solid`
+node. Referring to the `Joint` closest upper `Solid` node or to a `Solid` node
+which has no common upper `Solid` with the `Joint` is prohibited.
 

@@ -33,14 +33,15 @@ may also solve various problems, i.e., odd graphics rendering or Webots crashes.
 
 #### Linux
 
-
-On Linux, use this command to check if a hardware accelerated driver is installed:
+On Linux, use this command to check if a hardware accelerated driver is
+installed:
 
 ```
 $ glxinfo | grep OpenGL
 ```
 
-If the output contains the string "NVIDIA", "ATI", or "Intel", this indicates that a hardware driver is currently installed:
+If the output contains the string "NVIDIA", "ATI", or "Intel", this indicates
+that a hardware driver is currently installed:
 
 ```
 $ glxinfo | grep OpenGL
@@ -50,8 +51,9 @@ OpenGL version string: 3.0.0 NVIDIA 180.44
 ...
 ```
 
-If you read "Mesa", "Software Rasterizer" or "GDI Generic", this indicates that the hardware driver is currently not installed and that
-your computer is currently using a slow software emulation of OpenGL:
+If you read "Mesa", "Software Rasterizer" or "GDI Generic", this indicates that
+the hardware driver is currently not installed and that your computer is
+currently using a slow software emulation of OpenGL:
 
 ```
 $ glxinfo | grep OpenGL
@@ -63,15 +65,15 @@ OpenGL version string: 1.4 (1.5 Mesa 6.5.2)
 
 In this case you should definitely install the hardware driver.
 
-
-On Ubuntu the driver can usually be installed automatically from the `Additional Drivers`
-tab of the `Software amp Update` window.
-Otherwise you can find out what graphics hardware is installed on your computer by using this command:
+On Ubuntu the driver can usually be installed automatically from the `Additional
+Drivers` tab of the `Software amp Update` window. Otherwise you can find out
+what graphics hardware is installed on your computer by using this command:
 
 ```
 $ lspci | grep VGA
 01:00.0 VGA compatible controller: nVidia Corporation GeForce 8500 GT (rev a1)
 ```
+
 
 
 Then you can normally download the appropriate driver from the graphics hardware
@@ -84,8 +86,11 @@ Please follow the manufacturer's instructions for the installation.
 1. Right-click on `My Computer`.
 2. Select `Properties`.
 3. Click on the `Device Manager` tab.
-4. Click on the plus sign to the left of `Display adapters`. The name of the driver appears. Make a note of it.
-5. Go to the web site of your card manufacturer: [http://www.nvidia.com](http://www.nvidia.com) for an nVidia card or [http://www.amd.com](http://www.amd.com) for a ATI graphics card.
+4. Click on the plus sign to the left of `Display adapters`. The name of the driver
+appears. Make a note of it.
+5. Go to the web site of your card manufacturer:
+[http://www.nvidia.com](http://www.nvidia.com) for an nVidia card or
+[http://www.amd.com](http://www.amd.com) for a ATI graphics card.
 6. Download the driver corresponding to your graphics card.
 7. Follow the instructions from the manufacturer to install the driver.
 

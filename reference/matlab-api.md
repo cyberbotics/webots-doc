@@ -10,10 +10,12 @@ The following tables describe the Matlab functions.
 | [x y z] = `wb_accelerometer_get_values`(tag) |
 
 
+
 | % `Brake` : |
 | --- |
 | `wb_brake_set_damping_constant`(tag, dampingConstant) |
 | type = `wb_brake_get_type`(tag) |
+
 
 
 | % `Camera` : |
@@ -42,12 +44,14 @@ The following tables describe the Matlab functions.
 | `wb_camera_save_image`(tag, 'filename', quality) |
 
 
+
 | % `Compass` : |
 | --- |
 | `wb_compass_enable`(tag, ms) |
 | `wb_compass_disable`(tag) |
 | period = `wb_compass_get_sampling_period`(tag) |
 | [x y z] = `wb_compass_get_values`(tag) |
+
 
 
 | % `Connector` : |
@@ -59,11 +63,13 @@ The following tables describe the Matlab functions.
 | `wb_connector_unlock`(tag) |
 
 
+
 | % `Device` : |
 | --- |
 | model = `wb_device_get_model`(tag) |
 | name = `wb_device_get_name`(tag) |
 | type = `wb_device_get_node_type`(tag) |
+
 
 
 | % `DifferentialWheels` : |
@@ -79,6 +85,7 @@ The following tables describe the Matlab functions.
 | `wb_differential_wheels_set_encoders`(left, right) |
 | max = `wb_differential_wheels_get_max_speed`() |
 | unit = `wb_differential_wheels_get_speed_unit`() |
+
 
 
 | % `Display` : |
@@ -109,12 +116,14 @@ The following tables describe the Matlab functions.
 | `wb_display_image_delete`(tag, image) |
 
 
+
 | % `DistanceSensor` : |
 | --- |
 | `wb_distance_sensor_enable`(tag, ms) |
 | `wb_distance_sensor_disable`(tag) |
 | period = `wb_distance_sensor_get_sampling_period`(tag) |
 | value = `wb_distance_sensor_get_value`(tag) |
+
 
 
 | % `Emitter` : |
@@ -128,12 +137,14 @@ The following tables describe the Matlab functions.
 | size = `wb_emitter_get_buffer_size`(tag) |
 
 
+
 | % `GPS` : |
 | --- |
 | `wb_gps_enable`(tag, ms) |
 | `wb_gps_disable`(tag) |
 | period = `wb_gps_get_sampling_period`(tag) |
 | [x y z] = `wb_gps_get_values`(tag) |
+
 
 
 | % `Gyro` : |
@@ -144,6 +155,7 @@ The following tables describe the Matlab functions.
 | [x y z] = `wb_gyro_get_values`(tag) |
 
 
+
 | % `InertialUnit` : |
 | --- |
 | `wb_inertial_unit_enable`(tag, ms) |
@@ -152,10 +164,12 @@ The following tables describe the Matlab functions.
 | [roll pitch yaw] = `wb_inertial_unit_get_roll_pitch_yaw`(tag) |
 
 
+
 | % `LED` : |
 | --- |
 | `wb_led_set`(tag, state) |
 | state = `wb_led_get`(tag) |
+
 
 
 | % `LightSensor` : |
@@ -164,6 +178,7 @@ The following tables describe the Matlab functions.
 | `wb_light_sensor_disable`(tag) |
 | period = `wb_light_sensor_get_sampling_period`(tag) |
 | value = `wb_light_sensor_get_value`(tag) |
+
 
 
 | % `Motion` : |
@@ -178,6 +193,7 @@ The following tables describe the Matlab functions.
 | duration = `wbu_motion_get_duration`(motion) |
 | time = `wbu_motion_get_time`(motion) |
 | `wbu_motion_set_time`(motion, time) |
+
 
 
 | % `Motor` : |
@@ -212,16 +228,17 @@ The following tables describe the Matlab functions.
 | type = `wb_motor_get_type`(tag) |
 
 
+
 | Node: |
 | --- |
 | WB\_NODE\_NO\_NODE, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, |
 | WB\_NODE\_BOX, WB\_NODE\_COLOR, WB\_NODE\_CONE, |
-| WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, |
+| WB\_NODE\_COORDINATE,  WB\_NODE\_CYLINDER, |
 | WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_ELEVATION\_GRID, |
 | WB\_NODE\_EXTRUSION, WB\_NODE\_FOG, WB\_NODE\_GROUP, |
 | WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_INDEXED\_FACE\_SET, |
 | WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_MATERIAL, |
-| WB\_NODE\_POINT\_LIGHT, WB\_NODE\_SHAPE, WB\_NODE\_SPHERE, |
+| WB\_NODE\_POINT\_LIGHT,  WB\_NODE\_SHAPE, WB\_NODE\_SPHERE, |
 | WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SWITCH, |
 | WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, |
 | WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO, |
@@ -239,10 +256,12 @@ The following tables describe the Matlab functions.
 | WB\_NODE\_TOUCH\_SENSOR |
 
 
+
 | % `Pen` : |
 | --- |
 | `wb_pen_write`(tag, write) |
 | `wb_pen_set_ink_color`(tag, [r g b], density) |
+
 
 
 | % `PositionSensor` : |
@@ -253,6 +272,7 @@ The following tables describe the Matlab functions.
 | period = `wb_position_sensor_get_sampling_period`(tag) |
 | value = `wb_position_sensor_get_value`(tag) |
 | type = `wb_position_sensor_get_type`(tag) |
+
 
 
 | % `Receiver` : |
@@ -269,6 +289,7 @@ The following tables describe the Matlab functions.
 | [x y z] = `wb_receiver_get_emitter_direction`(tag) |
 | `wb_receiver_set_channel`(tag, channel) |
 | channel = `wb_receiver_get_channel`(tag) |
+
 
 
 | % `Robot` : |
@@ -320,6 +341,7 @@ The following tables describe the Matlab functions.
 | type = `wb_robot_get_type`() |
 
 
+
 | % `Servo` : |
 | --- |
 | WB\_SERVO\_ROTATIONAL, WB\_SERVO\_LINEAR |
@@ -343,13 +365,16 @@ The following tables describe the Matlab functions.
 | type = `wb_servo_get_type`(tag) |
 
 
+
 | % `Supervisor` : |
 | --- |
 | WB\_SF\_BOOL, WB\_SF\_INT32, WB\_SF\_FLOAT, WB\_SF\_VEC2F, |
 | WB\_SF\_VEC3F, WB\_SF\_ROTATION, WB\_SF\_COLOR, WB\_SF\_STRING, |
 | WB\_SF\_NODE, WB\_MF, WB\_MF\_INT32, WB\_MF\_FLOAT, B\_MF\_VEC2F, |
 | WB\_MF\_VEC3F, WB\_MF\_COLOR, WB\_MF\_STRING, WB\_MF\_NODE |
-| WB\_SUPERVISOR\_MOVIE\_READY, WB\_SUPERVISOR\_MOVIE\_RECORDING, WB\_SUPERVISOR\_MOVIE\_SAVING, WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR, WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR |
+| WB\_SUPERVISOR\_MOVIE\_READY, WB\_SUPERVISOR\_MOVIE\_RECORDING,
+WB\_SUPERVISOR\_MOVIE\_SAVING, WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR,
+WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR |
 | `wb_supervisor_export_image`('filename', quality) |
 | node = `wb_supervisor_node_get_root`() |
 | node = `wb_supervisor_node_get_self`() |
@@ -409,7 +434,8 @@ The following tables describe the Matlab functions.
 | `wb_supervisor_field_set_mf_color`(field, index, [r g b]) |
 | `wb_supervisor_field_set_mf_string`(field, index, 'value') |
 | `wb_supervisor_field_import_mf_node`(field, position, 'filename') |
-| `wb_supervisor_field_import_mf_node_from_string`(field, position, 'node\_string') |
+| `wb_supervisor_field_import_mf_node_from_string`(field, position,
+'node\_string') |
 | `wb_supervisor_field_remove_mf_node`(field, position) |
 | type = `wb_supervisor_node_get_type`(node) |
 | name = `wb_supervisor_node_get_type_name`(node) |
@@ -426,6 +452,7 @@ The following tables describe the Matlab functions.
 | `wb_supervisor_node_reset_physics`(node) |
 
 
+
 | % `TouchSensor` : |
 | --- |
 | WB\_TOUCH\_SENSOR\_BUMPER, WB\_TOUCH\_SENSOR\_FORCE, |
@@ -436,5 +463,6 @@ The following tables describe the Matlab functions.
 | value = `wb_touch_sensor_get_value`(tag) |
 | [x y z] = `wb_touch_sensor_get_values`(tag) |
 | type = `wb_touch_sensor_get_type`(tag) |
+
 
 

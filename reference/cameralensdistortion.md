@@ -18,7 +18,12 @@ image distortion.
 
 ### Field Summary
 
-- The `center` field defines the distortion center. Its value should be between 0 and 1.
-- The `radialCoefficients` field defines the first and second coefficients of the radial distortion of the Brown's distortion model.
-- The `tangentialCoefficients` field defines the first and second coefficients of the tangential distortion of the Brown's distortion model. The value of the tangential coefficients are typically smaller than the value of the radial coefficients for standard cameras.
+- The `center` field defines the distortion center. Its value should be between 0
+and 1.
+- The `radialCoefficients` field defines the first and second coefficients of the
+radial distortion of the Brown's distortion model.
+- The `tangentialCoefficients` field defines the first and second coefficients of
+the tangential distortion of the Brown's distortion model. The value of the
+tangential coefficients are typically smaller than the value of the radial
+coefficients for standard cameras.
 

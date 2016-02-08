@@ -33,22 +33,91 @@ even a biological eye which is spherically distorted.
 
 ### Field Summary
 
-- `fieldOfView`: horizontal field of view angle of the camera. The value ranges from *0* to pi radians. Since camera pixels are squares, the vertical field of view can be computed from the `width`, `height` and horizontal `fieldOfView`:*vertical FOV = fieldOfView * height / width*
+- `fieldOfView`: horizontal field of view angle of the camera. The value ranges
+from *0* to pi radians. Since camera pixels are squares, the vertical field of
+view can be computed from the `width`, `height` and horizontal `fieldOfView`:
+*vertical FOV = fieldOfView * height / width*
 - `width`: width of the image in pixels
 - `height`: height of the image in pixels
-- `type`: type of the camera: "color" or "range-finder". The camera types are described precisely in the corresponding subsection below.
-- `spherical`: switch between a planar or a spherical projection. A spherical projection can be used for example to simulate a biological eye or a lidar device. More information on spherical projection in the corresponding subsection below.
-- The `near` field defines the distance from the camera to the near clipping plane. This plane is parallel to the camera retina (i.e. projection plane). The near field determines the precision of the OpenGL depth buffer. A too small value produces depth fighting between overlaid polygons, resulting in random polygon overlaps. More information on frustums in the corresponding subsection below.
-- The `maxRange` field is used only when the camera is a range-finder. In this case, `maxRange` defines the distance between the camera and the far clipping plane. The far clipping plane is not set to infinity. This field defines the maximum range that a range-finder can achieve and so the maximum possible value of the range image (in meter).
-- The `antiAliasing` field switches on or off (the default) anti-aliasing effect on the camera images. Anti-aliasing is a technique that assigns pixel colors based on the fraction of the pixel's area that's covered by the primitives being rendered. Anti-aliasing makes graphics more smooth and pleasing to the eye by reducing aliasing artifacts. Aliasing artifacts can appear as jagged edges (or moiré patterns, strobing, etc.). Anti-aliasing will not be applied if it is not supported by the hardware.
-- If the `motionBlur` field is greater than 0.0, the image is blurred by the motion of the camera or objects in the field of view. It means the image returned is a mix between the current view and the previous images returned by the camera. The value of this field represents the response time of the camera pixels in milliseconds, which is the amount of time a pixel takes to reach 99.5% of a new color value (the value of 99.5% was chosen since above this threshold it is not possible any more to detect color changes with a color component resolution of 8 bits). Of course smaller the time step is, better the effect is. Note that this feature is computationally expensive and can considerably reduce the simulation speed. Furthermore, it is useless to set a value smaller than the camera time step as it would not have any visible effect.
-- If the `colorNoise` field is greater than 0.0, this adds a gaussian noise to each RGB channel of a color image. This field is useless in case of range-finder cameras. A value of 0.0 corresponds to remove the noise and thus saving computation time. A value of 1.0 corresponds to a gaussian noise having a standard derivation of 255 in the channel representation. More information on noise in the corresponding subsection below.
-- If the `rangeNoise` field is greater than 0.0, this adds a gaussian noise to each depth value of a range-finder image. This field is useless in case of color cameras. A value of 0.0 corresponds to remove the noise and thus saving computation time. A value of 1.0 corresponds to a gaussian noise having a standard derivation of `maxRange` meters. More information on noise in the corresponding subsection below.
-- `rangeResolution`: This field allows to define the depth resolution of the camera, the resolution is the smallest change that it is able to measure. Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change). This field is used only when type is "range-finder" and accepts any value in the interval (0.0, inf).
-- The `lensDistortion` field may contain a `CameraLensDistortion` node to specify the image distortion due to the camera lens.
-- The `focus` field may contain a `CameraFocus` node to provide the camera device with a controllable focusing system. If this field is set to NULL, then no focus is available on the camera device.
-- The `zoom` field may contain a `CameraZoom` node to provide the camera device with a controllable zoom system. If this field is set to NULL, then no zoom is available on the camera device.
-- The `compositor` field specifies the name of a compositor to apply on the camera image. A compositor can be used to apply a shader in order to alter the original image returned by the camera, it runs on the graphic card and can therefore be very fast. Compositor is a technique provided by Ogre3d, you should respect the syntax defined by Ogre3d. Have a look at the [Ogre3d documentation](http://www.ogre3d.org/docs/manual/manual_29.html) for more information about compositors. Such a compositor can for example be used to simulate camera imperfections (e.g., lens distorion) or to run image processing directly on the graphic card (e.g., edge detection). Note that the compositor is applied at the end (i.e., after the addition of noise, etc.). The compositor resource files (compositor, material, shader, texture, etc.) should be located in a directory called `compositors` close to the world file. If the camera is contained in a PROTO file then the compositor files should be located in a directory called `compositors` close to the PROTO file. The internal compositor resource files of Webots can be used in any compositor, they are located in "WEBOTS\_HOME/resources/ogre". Compositors can be added/removed at any time, even while the simulation is running. However, the compositor resource files are loaded at the same time as the world file. Therefore any modification to the compositor files will need a revert of the simulation to be taken into account.
+- `type`: type of the camera: "color" or "range-finder". The camera types are
+described precisely in the corresponding subsection below.
+- `spherical`: switch between a planar or a spherical projection. A spherical
+projection can be used for example to simulate a biological eye or a lidar
+device. More information on spherical projection in the corresponding subsection
+below.
+- The `near` field defines the distance from the camera to the near clipping
+plane. This plane is parallel to the camera retina (i.e. projection plane). The
+near field determines the precision of the OpenGL depth buffer. A too small
+value produces depth fighting between overlaid polygons, resulting in random
+polygon overlaps. More information on frustums in the corresponding subsection
+below.
+- The `maxRange` field is used only when the camera is a range-finder. In this
+case,  `maxRange` defines the distance between the camera and the far clipping
+plane. The far clipping plane is not set to infinity. This field defines the
+maximum range that a range-finder can achieve and so the maximum possible value
+of the range image (in meter).
+- The `antiAliasing` field switches on or off (the default) anti-aliasing effect
+on the camera images. Anti-aliasing is a technique that assigns pixel colors
+based on the fraction of the pixel's area that's covered by the primitives being
+rendered. Anti-aliasing makes graphics more smooth and pleasing to the eye by
+reducing aliasing artifacts. Aliasing artifacts can appear as jagged edges (or
+moiré patterns, strobing, etc.). Anti-aliasing will not be applied if it is not
+supported by the hardware.
+- If the `motionBlur` field is greater than 0.0, the image is blurred by the
+motion of the camera or objects in the field of view. It means the image
+returned is a mix between the current view and the previous images returned by
+the camera. The value of this field represents the response time of the camera
+pixels in milliseconds, which is the amount of time a pixel takes to reach 99.5%
+of a new color value (the value of 99.5% was chosen since above this threshold
+it is not possible any more to detect color changes with a color component
+resolution of 8 bits). Of course smaller the time step is, better the effect is.
+Note that this feature is computationally expensive and can considerably reduce
+the simulation speed. Furthermore, it is useless to set a value smaller than the
+camera time step as it would not have any visible effect.
+- If the `colorNoise` field is greater than 0.0, this adds a gaussian noise to
+each RGB channel of a color image. This field is useless in case of range-finder
+cameras. A value of 0.0 corresponds to remove the noise and thus saving
+computation time. A value of 1.0 corresponds to a gaussian noise having a
+standard derivation of 255 in the channel representation. More information on
+noise in the corresponding subsection below.
+- If the `rangeNoise` field is greater than 0.0, this adds a gaussian noise to
+each depth value of a range-finder image. This field is useless in case of color
+cameras. A value of 0.0 corresponds to remove the noise and thus saving
+computation time. A value of 1.0 corresponds to a gaussian noise having a
+standard derivation of `maxRange` meters. More information on noise in the
+corresponding subsection below.
+- `rangeResolution`: This field allows to define the depth resolution of the
+camera, the resolution is the smallest change that it is able to measure.
+Setting this field to -1 (default) means that the sensor has an 'infinite'
+resolution (it can measure any infinitesimal change). This field is used only
+when type is "range-finder" and accepts any value in the interval (0.0, inf).
+- The `lensDistortion` field may contain a `CameraLensDistortion` node to specify
+the image distortion due to the camera lens.
+- The `focus` field may contain a `CameraFocus` node to provide the camera device
+with a controllable focusing system. If this field is set to NULL, then no focus
+is available on the camera device.
+- The `zoom` field may contain a `CameraZoom` node to provide the camera device
+with a controllable zoom system. If this field is set to NULL, then no zoom is
+available on the camera device.
+- The `compositor` field specifies the name of a compositor to apply on the camera
+image. A compositor can be used to apply a shader in order to alter the original
+image returned by the camera, it runs on the graphic card and can therefore be
+very fast. Compositor is a technique provided by Ogre3d, you should respect the
+syntax defined by Ogre3d. Have a look at the [Ogre3d
+documentation](http://www.ogre3d.org/docs/manual/manual_29.html) for more
+information about compositors. Such a compositor can for example be used to
+simulate camera imperfections (e.g., lens distorion) or to run image processing
+directly on the graphic card (e.g., edge detection). Note that the compositor is
+applied at the end (i.e., after the addition of noise, etc.). The compositor
+resource files (compositor, material, shader, texture, etc.) should be located
+in a directory called `compositors` close to the world file. If the camera is
+contained in a PROTO file then the compositor files should be located in a
+directory called `compositors` close to the PROTO file. The internal compositor
+resource files of Webots can be used in any compositor, they are located in
+"WEBOTS\_HOME/resources/ogre". Compositors can be added/removed at any time,
+even while the simulation is running. However, the compositor resource files are
+loaded at the same time as the world file. Therefore any modification to the
+compositor files will need a revert of the simulation to be taken into account.
 
 ### Camera Type
 

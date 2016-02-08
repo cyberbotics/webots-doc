@@ -26,9 +26,14 @@ directory of Webots) and by the "force\_sensor.wbt" and "bumper.wbt" worlds
 
 ### Field Summary
 
-- `type`: allows the user to select the type of sensor: "bumper", "force", or "force-3d", described below.
+- `type`: allows the user to select the type of sensor: "bumper", "force", or
+"force-3d", described below.
 - `lookupTable`: similar to the one used by the `DistanceSensor` node.
-- `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure. Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change). This field is used only if the type is "force" or "force-3d" and accepts any value in the interval (0.0, inf).
+- `resolution`: This field allows to define the resolution of the sensor, the
+resolution is the smallest change that it is able to measure. Setting this field
+to -1 (default) means that the sensor has an 'infinite' resolution (it can
+measure any infinitesimal change). This field is used only if the type is
+"force" or "force-3d" and accepts any value in the interval (0.0, inf).
 
 ### Description
 
@@ -75,23 +80,25 @@ magnitude of the force. The force vector must be read using the
 
 #### Lookup Table
 
-
-A "force" and "force-3d" sensors can optionally specify a `lookupTable` to simulate the possible non-linearity (and saturation) of the real device.
-The `lookupTable` allows the user to map the simulated force measured in Newtons (N) to an output value that will be returned by the `wb_touch_sensor_get_value()` function.
-The value returned by the force sensor is first computed by the ODE physics engine, then interpolated using
-the `lookupTable`, and finally noise is added (if specified in the lookupTable).
-Each line of the `lookupTable` contains
-three numbers: (1) an input force in Newtons, (2) the corresponding
-output value, and (3) a noise level between 0.0 and 1.0 (see `DistanceSensor` for more info).
-Note that the default `lookupTable` of the `TouchSensor` node is:
+A "force" and "force-3d" sensors can optionally specify a `lookupTable` to
+simulate the possible non-linearity (and saturation) of the real device. The
+`lookupTable` allows the user to map the simulated force measured in Newtons (N)
+to an output value that will be returned by the `wb_touch_sensor_get_value()`
+function. The value returned by the force sensor is first computed by the ODE
+physics engine, then interpolated using the `lookupTable`, and finally noise is
+added (if specified in the lookupTable). Each line of the `lookupTable` contains
+three numbers: (1) an input force in Newtons, (2) the corresponding output
+value, and (3) a noise level between 0.0 and 1.0 (see `DistanceSensor` for more
+info). Note that the default `lookupTable` of the `TouchSensor` node is:
 
 ```
 [   0     0 0
  5000 50000 0 ]
 ```
-and hence it maps forces between 0 and 5000 Newtons to output values between 0 and 50000, the output unit being 0.1 Newton.
-You should empty the `lookupTable` to have Newtons as output units.
 
+and hence it maps forces between 0 and 5000 Newtons to output values between 0
+and 50000, the output unit being 0.1 Newton. You should empty the `lookupTable`
+to have Newtons as output units.
 
 #### Collision detection
 

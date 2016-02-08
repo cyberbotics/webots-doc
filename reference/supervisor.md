@@ -47,17 +47,16 @@ to functions which require a `WbNodeRef` parameter. If the requested node does
 not exist in the current world file, the function returns NULL, otherwise, it
 returns a non-NULL handle.
 
-
-It is possible to use dots (.) as scoping operator in the DEF parameter.
-Dots can be used when looking for a specific node path in the node hierarchy.
-For example:
+It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
+can be used when looking for a specific node path in the node hierarchy. For
+example:
 
 ```
 WbNodeRef node = wb_supervisor_node_get_from_def("ROBOT.JOINT.SOLID");
 ```
 
-means that we are searching for a node named "SOLID" inside a node named "JOINT", inside a node named "ROBOT".
-
+means that we are searching for a node named "SOLID" inside a node named
+"JOINT", inside a node named "ROBOT".
 
 Similarily, the `wb_supervisor_node_get_from_id()` function retrieves a handle
 to a node, but from its unique identifier (the `id` parameter). The function
@@ -129,10 +128,12 @@ expressed in the global (world) coordinate system. The `node` argument must be a
 warning message and return 3 `NaN` (Not a Number) values. This function returns
 a vector containing exactly 3 values.
 
-
-The `wb_supervisor_node_get_orientation()` function returns a matrix that represents the rotation of the node in the global (world) coordinate system.
-The `node` argument must be a `Transform` node (or a derived node), otherwise the function will print a warning message and return 9 `NaN` (Not a Number) values.
-This function returns a matrix containing exactly 9 values that shall be interpreted as a 3 x 3 orthogonal rotation matrix:
+The `wb_supervisor_node_get_orientation()` function returns a matrix that
+represents the rotation of the node in the global (world) coordinate system. The
+`node` argument must be a `Transform` node (or a derived node), otherwise the
+function will print a warning message and return 9 `NaN` (Not a Number) values.
+This function returns a matrix containing exactly 9 values that shall be
+interpreted as a 3 x 3 orthogonal rotation matrix:
 
 ```
 [ R[0] R[1] R[2] ]
@@ -140,24 +141,27 @@ This function returns a matrix containing exactly 9 values that shall be interpr
 [ R[6] R[7] R[8] ]
 ```
 
-Each column of the matrix represents where each of the three main axes (*x*, *y* and *z*) is pointing in the node's coordinate system.
-The columns (and the rows) of the matrix are pairwise orthogonal unit vectors (i.e., they form an orthonormal basis).
-Because the matrix is orthogonal, its transpose is also its inverse.
-So by transposing the matrix you can get the inverse rotation.
-Please find more info [here](http://en.wikipedia.org/wiki/Rotation_representation).
+Each column of the matrix represents where each of the three main axes (*x*, *y*
+and *z*) is pointing in the node's coordinate system. The columns (and the rows)
+of the matrix are pairwise orthogonal unit vectors (i.e., they form an
+orthonormal basis). Because the matrix is orthogonal, its transpose is also its
+inverse. So by transposing the matrix you can get the inverse rotation. Please
+find more info [here](http://en.wikipedia.org/wiki/Rotation_representation).
 
-
-By multiplying the rotation matrix on the right with a vector and then adding the position vector you can express the coordinates of a point in the global (world) coordinate system knowing its coordinates in a local (node) coordinate system.
-For example:
+By multiplying the rotation matrix on the right with a vector and then adding
+the position vector you can express the coordinates of a point in the global
+(world) coordinate system knowing its coordinates in a local (node) coordinate
+system. For example:
 
 ```
 p' = R * p + T
 ```
 
-where *p* is a point whose coordinates are given with respect to the local coordinate system of a node,
-*R* the the rotation matrix returned by `wb_supervisor_node_get_orientation(node)`,
-*T* is the position returned by `wb_supervisor_node_get_position(node)`
-and *p'* represents the same point but this time with coordinates expressed in the global (world) coordinate system.
+where *p* is a point whose coordinates are given with respect to the local
+coordinate system of a node, *R* the the rotation matrix returned by
+`wb_supervisor_node_get_orientation(node)`, *T* is the position returned by
+`wb_supervisor_node_get_position(node)` and *p'* represents the same point but
+this time with coordinates expressed in the global (world) coordinate system.
 
 The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
 use these functions to do this.
@@ -263,9 +267,35 @@ correspond to semi-transparent levels.
 
 #### Example
 
-- will display the label "hello world" in red at the upper left corner of the 3D window.
-- will display the label "hello Webots" in semi-transparent green, just below.
-- will change the label "hello world" defined earlier into "hello universe", using a yellow color for the new text.
+- 
+```
+
+wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0);
+      
+```
+
+
+will display the label "hello world" in red at the upper left corner of the 3D
+window.
+- 
+```
+
+wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5);
+      
+```
+
+
+will display the label "hello Webots" in semi-transparent green, just below.
+- 
+```
+
+supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0);
+      
+```
+
+
+will change the label "hello world" defined earlier into "hello universe", using
+a yellow color for the new text.
 
 #### Description
 

@@ -103,14 +103,26 @@ class BookParser:
             output = output.replace('_', '\\_')
         return output
 
-    def parsePara(self, node, outFile, format):
+    def formatText(self, text):
+        text.strip()
+        content = text.split('\n')
+        text = ' '.join(map(lambda x: x.strip(), content)).strip()
+        content = textwrap.wrap(text, width=80)
+        output = ''
+        for i in range(0, len(content)):
+            line = content[i]
+            output += line.strip()
+            if i != len(content) - 1:
+                output += '\n'
+        return output
+
+    def parsePara(self, node, outFile):
         # para included tags:
         #     bold, command, computeroutput, email, emphasis, filename, function,
         #     guibutton, guilabel, guimenu, guimenuitem, guisubmenu, hlink,
         #     inlinegraphic, keycap, math, parameter, programlisting, trademark
         #     ulink, xref
         text = ''
-        containsProgram = False
         if node.text:
             text += self.parseText(node.text, True)
         for child in node.getchildren():
@@ -126,38 +138,16 @@ class BookParser:
                 elif child.tag == 'ulink':
                     text += '[' + self.parseText(child.text, True) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'programlisting':
-                    text += self.parseProgramListing(child, None)
-                    text = re.sub(r"(\s)*$", "\n", text)
-                    containsProgram = True
+                    outFile.write(self.formatText(text) + '\n')
+                    text = ''
+                    self.parseProgramListing(child, outFile)
                 else:
                     text += '`' + self.parseText(child.text, False) + '`'
             text += self.parseText(child.tail, True)
         text += self.parseText(node.tail, True)
 
-        if containsProgram:
-            content = text.split('\n')
-            inProgram = False
-            for line in content:
-                if '```' in line:
-                    inProgram = not inProgram
-                
-                if inProgram:
-                    line = re.sub(r"(\s)*$", "", line)
-                    outFile.write(line + '\n')
-                else:
-                    outFile.write(line.strip() + '\n')
-        elif format:
-            content = text.split('\n')
-            text = ' '.join(map(lambda x: x.strip(), content)).strip()
-            content = textwrap.wrap(text, width=80)
-            for line in content:
-                outFile.write(line.strip() + '\n')
-            outFile.write('\n')
-        else:
-            text = text.replace('\n', ' ')
-            while '  ' in text:
-                text = text.replace('  ', ' ')
-            outFile.write(text.strip())
+        outFile.write(self.formatText(text))
+
 
     def parseProgramListing(self, node, outFile):
         output = '\n```'
@@ -177,10 +167,7 @@ class BookParser:
         output += self.parseText(node.text, False) + '\n'
         output += '```\n\n'
 
-        if outFile:
-            outFile.write(output)
-        else:
-            return output
+        outFile.write(output)
 
     def parseFigure(self, node, outFile):
         title = ''
@@ -206,19 +193,37 @@ class BookParser:
                 outFile.write('%d. ' % (counter,))
             else:
                 outFile.write('- ')
+
+            if len(item.findall('./para')) > 1:
+                # merge paras first
+                text = ''
+                children_to_remove = []
+                for child in item.getchildren():
+                    if child.tag == 'para':
+                        text += ET.tostring(child).strip()
+                        children_to_remove.append(child)
+                text = text.replace('</para><para>', ' ').replace('<para>', '').replace('</para>', '')
+                text = re.sub(r'\s+', ' ', text)
+                text = '<para>' + text.strip() + '</para>'
+                #print 'result: ' + text
+                para = ET.fromstring(text)
+                item.append(para)
+                for child in children_to_remove:
+                    item.remove(child)
+
             for child in item.getchildren():
                 if child.tag == 'para':
-                    self.parsePara(child, outFile, False)
+                    self.parsePara(child, outFile)
                 elif child.tag == 'figure':
-                    outFile.write('\n\n')
+                    outFile.write('\n')
                     self.parseFigure(child, outFile)
-                elif child.tag == 'note':
-                    pass # TODO
                 elif child.tag == 'programlisting':
+                    self.parseProgramListing(child, outFile)
+                elif child.tag == 'note':
                     pass # TODO
                 else:
                     raise Exception('Unsupported type: ' + child.tag)
-            outFile.write('\n')
+                outFile.write('\n')
         outFile.write('\n')
 
     def parseTable(self, node, outFile):
@@ -242,7 +247,7 @@ class BookParser:
                     firstEntry = False
                 else:
                     outFile.write(' | ')
-                self.parsePara(entryNode, outFile, False)
+                self.parsePara(entryNode, outFile)
             outFile.write(' |\n')
             if line == 1 and header:
                 firstEntry = True
@@ -289,7 +294,8 @@ class BookParser:
             elif child.tag == 'sect2' or child.tag == 'sect3' or child.tag == 'refentry' or child.tag == 'refsect1':
                 self.parseChapter(child, outFile)
             elif child.tag == 'para':
-                self.parsePara(child, outFile, True)
+                self.parsePara(child, outFile)
+                outFile.write('\n\n')
             elif child.tag == 'table':
                 self.parseTable(child, outFile)
             elif child.tag == 'programlisting':

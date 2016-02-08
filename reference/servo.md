@@ -34,16 +34,45 @@ hydraulic/pneumatic cylinder, a spring, or a damper.
 
 ### Field Summary
 
-- The `type` field is a string which specifies the `Servo` type, and may be either "rotational" (default) or "linear".
-- The `maxVelocity` field specifies both the upper limit and the default value for the servo *velocity*. The *velocity* can be changed at run-time with the `wb_servo_set_velocity()` function. The value should always be positive (the default is 10).
-- The `maxForce` field specifies both the upper limit and the default value for the servo *motor force*. The *motor force* is the torque/force that is available to the motor to perform the requested motions. The `wb_servo_set_motor_force()` function can be used to change the *motor force* at run-time. The value of `maxForce` should always be zero or positive (the default is 10). A small `maxForce` value may result in a servo being unable to move to the target position because of its weight or other external forces.
-- The `controlP` field specifies the initial value of the *P* parameter, which is the *proportional gain* of the servo P-controller. A high *P* results in a large response to a small error, and therefore a more sensitive system. Note that by setting *P* too high, the system can become unstable. With a small *P*, more simulation steps are needed to reach the target position, but the system is more stable. The value of *P* can be changed at run-time with the `wb_servo_set_control_p()` function.
-- The `acceleration` field defines the default acceleration of the P-controller. A value of -1 (infinite) means that the acceleration is not limited by the P-controller. The acceleration can be changed at run-time with the `wb_servo_set_acceleration()` function.
-- The `position` field represents the current *position* of the `Servo`, in radians or meters. For a "rotational" servo, `position` represents the current rotation angle in radians. For a "linear" servo, `position` represents the magnitude of the current translation in meters.
-- The `minPosition` and `maxPosition` fields specify *soft limits* for the target position. These fields are described in more detail in the "Servo Limits" section, see below.
-- The `minStop` and `maxStop` fields specify the position of physical (or mechanical) stops. These fields are described in more detail in the "Servo Limits" section, see below.
-- The `springConstant` and `dampingConstant` fields allow the addition of spring and/or damping behavior to the `Servo`. These fields are described in more detail in the "Springs and Dampers" section, see below.
-- The `staticFriction` allows to add a friction opposed to the `Servo` movement. This field is described in more detail in the "Friction" section, see below.
+- The `type` field is a string which specifies the `Servo` type, and may be either
+"rotational" (default) or "linear".
+- The `maxVelocity` field specifies both the upper limit and the default value for
+the servo *velocity*. The *velocity* can be changed at run-time with the
+`wb_servo_set_velocity()` function. The value should always be positive (the
+default is 10).
+- The `maxForce` field specifies both the upper limit and the default value for
+the servo *motor force*. The *motor force* is the torque/force that is available
+to the motor to perform the requested motions. The `wb_servo_set_motor_force()`
+function can be used to change the *motor force* at run-time. The value of
+`maxForce` should always be zero or positive (the default is 10). A small
+`maxForce` value may result in a servo being unable to move to the target
+position because of its weight or other external forces.
+- The `controlP` field specifies the initial value of the *P* parameter, which is
+the *proportional gain* of the servo P-controller. A high *P* results in a large
+response to a small error, and therefore a more sensitive system. Note that by
+setting *P* too high, the system can become unstable. With a small *P*, more
+simulation steps are needed to reach the target position, but the system is more
+stable. The value of *P* can be changed at run-time with the
+`wb_servo_set_control_p()` function.
+- The `acceleration` field defines the default acceleration of the P-controller. A
+value of -1 (infinite) means that the acceleration is not limited by the
+P-controller. The acceleration can be changed at run-time with the
+`wb_servo_set_acceleration()` function.
+- The `position` field represents the current *position* of the `Servo`, in
+radians or meters. For a "rotational" servo, `position` represents the current
+rotation angle in radians. For a "linear" servo, `position` represents the
+magnitude of the current translation in meters.
+- The `minPosition` and `maxPosition` fields specify *soft limits* for the target
+position. These fields are described in more detail in the "Servo Limits"
+section, see below.
+- The `minStop` and `maxStop` fields specify the position of physical (or
+mechanical) stops. These fields are described in more detail in the "Servo
+Limits" section, see below.
+- The `springConstant` and `dampingConstant` fields allow the addition of spring
+and/or damping behavior to the `Servo`. These fields are described in more
+detail in the "Springs and Dampers" section, see below.
+- The `staticFriction` allows to add a friction opposed to the `Servo` movement.
+This field is described in more detail in the "Friction" section, see below.
 
 ### Units
 
@@ -113,8 +142,8 @@ simulator (ODE joint motors).
 ![Servo control](pdf/servo_control.pdf.png)
 %end
 
-
-At each simulation step, the P-controller (2) recomputes the current velocity *Vc* according to the following algorithm:
+At each simulation step, the P-controller (2) recomputes the current velocity
+*Vc* according to the following algorithm:
 
 ```
 Vc = P * (Pt - Pc);
@@ -128,25 +157,27 @@ if (A != -1) {
 }
 ```
 
-where  `V` is the current servo velocity in rad/s or m/s,
-`P` is the P-control parameter specified in `controlP` field or set with `wb_servo_set_control_p()`,
-`P` is the *target position* of the servo set by the function `wb_servo_set_position()`,
-`P` is the current servo position as reflected by the `position` field,
-`V` is the desired velocity as specified by the `maxVelocity` field (default) or set with `wb_servo_set_velocity()`,
-`a` is the acceleration required to reach *Vc* in one time step,
-`V` is the motor velocity of the previous time step,
-`t` is the duration of the simulation time step as specified by the `basicTimeStep` field of the `WorldInfo` node (converted in seconds), and
-`A` is the acceleration of the servo motor as specified by the `acceleration` field (default) or set with `wb_servo_set_acceleration()`.
-
+where  `V` is the current servo velocity in rad/s or m/s, `P` is the P-control
+parameter specified in `controlP` field or set with `wb_servo_set_control_p()`,
+`P` is the *target position* of the servo set by the function
+`wb_servo_set_position()`, `P` is the current servo position as reflected by the
+`position` field, `V` is the desired velocity as specified by the `maxVelocity`
+field (default) or set with `wb_servo_set_velocity()`, `a` is the acceleration
+required to reach *Vc* in one time step, `V` is the motor velocity of the
+previous time step, `t` is the duration of the simulation time step as specified
+by the `basicTimeStep` field of the `WorldInfo` node (converted in seconds), and
+`A` is the acceleration of the servo motor as specified by the `acceleration`
+field (default) or set with `wb_servo_set_acceleration()`.
 
 ### Velocity Control
 
-
-The servos can also be used with *velocity control* instead of *position control*.
-This is obtained with two function calls: first the `wb_servo_set_position()` function must be called with `INFINITY` as a position parameter,
-then the desired velocity, which may be positive or negative, must be specified by calling the `wb_servo_set_velocity()` function.
-This will initiate a continuous servo motion at the desired speed, while taking into account
-the specified acceleration and motor force. Example:
+The servos can also be used with *velocity control* instead of *position
+control*. This is obtained with two function calls: first the
+`wb_servo_set_position()` function must be called with `INFINITY` as a position
+parameter, then the desired velocity, which may be positive or negative, must be
+specified by calling the `wb_servo_set_velocity()` function. This will initiate
+a continuous servo motion at the desired speed, while taking into account the
+specified acceleration and motor force. Example:
 
 ```
 wb_servo_set_position(servo, INFINITY);
@@ -154,11 +185,9 @@ wb_servo_set_velocity(servo, 6.28);  // 1 rotation per second
 ```
 
 `INFINITY` is a C macro corresponding to the IEEE 754 floating point standard.
-It is implemented in the C99 specifications as well as in C++.
-In Java, this value is defined as `Double.POSITIVE_INFINITY`.
-In Python, you should use `float('inf')`.
-Finally, in Matlab you should use the `inf` constant.
-
+It is implemented in the C99 specifications as well as in C++. In Java, this
+value is defined as `Double.POSITIVE_INFINITY`. In Python, you should use
+`float('inf')`. Finally, in Matlab you should use the `inf` constant.
 
 ### Force Control
 
@@ -487,9 +516,15 @@ force* exclusively, all other external or internal forces that may apply to the
 servo are ignored. In particular, `wb_servo_get_motor_force_feedback()` does not
 measure:
 
-- The spring and damping forces that apply when the `springConstant` or `dampingConstant` fields are non-zero.
+- The spring and damping forces that apply when the `springConstant` or
+`dampingConstant` fields are non-zero.
 - The force specified with the `wb_servo_set_force()` function.
-- The *constraint forces* that restrict the servo motion to one degree of freedom (DOF). In other words, the forces applied outside of the servo DOF are ignored. Only the forces applied in the DOF are considered. For example, in a "linear" servo, a force applied at a right angle to the sliding axis is completely ignored. In a "rotational" servo, only the torque applied around the rotation axis is considered.
+- The *constraint forces* that restrict the servo motion to one degree of freedom
+(DOF). In other words, the forces applied outside of the servo DOF are ignored.
+Only the forces applied in the DOF are considered. For example, in a "linear"
+servo, a force applied at a right angle to the sliding axis is completely
+ignored. In a "rotational" servo, only the torque applied around the rotation
+axis is considered.
 
 Note that this function applies only to *physics-based* simulation. Therefore,
 the `physics` and `boundingObject` fields of the `Servo` node must be defined

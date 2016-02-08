@@ -23,8 +23,8 @@ spotting the Cyberbotics section and click on the `Webots` icon.
 
 ### Command Line Arguments
 
-
-Following command line options are available when starting Webots from a Terminal (Linux/Mac) or a Command Prompt (Windows):
+Following command line options are available when starting Webots from a
+Terminal (Linux/Mac) or a Command Prompt (Windows):
 
 ```
 SYNOPSIS: webots [options] [worldfile]
@@ -41,9 +41,9 @@ OPTIONS:
                               exit
   --version                   display version information and exit
   --uuid                      display the UUID of the computer and exit
-  --stdout                    redirect the controller stdout to the
+  --stdout                    redirect the controller stdout to the 
                               terminal
-  --stderr                    redirect the controller stderr to the
+  --stderr                    redirect the controller stderr to the 
                               terminal
   --disable-modules-download  skip the check for module updates
   --force-modules-download    automatically download module updates
@@ -69,6 +69,7 @@ OPTIONS:
                               also set then the system information are
                               printed in the log file.
 ```
+
 
 
 The optional `worldfile` argument specifies the name of a .wbt file to open. If

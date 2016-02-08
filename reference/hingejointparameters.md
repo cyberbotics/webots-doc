@@ -23,9 +23,15 @@ damping constants etc.) related to this rotation axis.
 
 ### Field Summary
 
-- `anchor`: This field specifies the anchor position, i.e. a point through which the hinge axis passes. Together with the `axis` field inherited from the `JointParameters` node, the `anchor` field determines the hinge rotation axis in a unique way. It is expressed in relative coordinates with respect to the the closest upper `Solid`'s frame.
-- `suspensionSpringConstant`: This field specifies the suspension spring constant along the suspension axis.
-- `suspensionDampingConstant`: This field specifies the suspension damping constant along the suspension axis.
+- `anchor`: This field specifies the anchor position, i.e. a point through which
+the hinge axis passes. Together with the `axis` field inherited from the
+`JointParameters` node, the `anchor` field determines the hinge rotation axis in
+a unique way. It is expressed in relative coordinates with respect to the the
+closest upper `Solid`'s frame.
+- `suspensionSpringConstant`: This field specifies the suspension spring constant
+along the suspension axis.
+- `suspensionDampingConstant`: This field specifies the suspension damping
+constant along the suspension axis.
 - `suspensionAxis`: This field specifies the direction of the suspension axis.
 
 The `suspensionSpringConstant` and `suspensionDampingConstant` fields can be

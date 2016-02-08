@@ -40,10 +40,11 @@ robot can find its position using a GPS, but when it is necessary to keep track
 of several robots simultaneously and in a centralized way, it is much simpler to
 use a `Supervisor`.
 
-
-The following `Supervisor` code shows how to keep track of a single robot, but this can easily be transposed to an arbitrary number of robots.
-This example code finds a `WbNodeRef` that corresponds to the robot node and then a `WbFieldRef` that corresponds to the robot's `translation` field.
-At each iteration it reads and prints the field's values.
+The following `Supervisor` code shows how to keep track of a single robot, but
+this can easily be transposed to an arbitrary number of robots. This example
+code finds a `WbNodeRef` that corresponds to the robot node and then a
+`WbFieldRef` that corresponds to the robot's `translation` field. At each
+iteration it reads and prints the field's values.
 
 ``` c
 #include ltwebots/robot.hgt
@@ -68,8 +69,10 @@ int main() {
 }
 ```
 
-Note that a `Supervisor` controller must include the `supervisor.h` header file in addition to the `robot.h` header file.
-Otherwise the `Supervisor` works like a regular `Robot` controller and everything that was explained in the "Controller Programming" section does also apply to "Supervisor Programming".
+Note that a `Supervisor` controller must include the `supervisor.h` header file
+in addition to the `robot.h` header file. Otherwise the `Supervisor` works like
+a regular `Robot` controller and everything that was explained in the
+"Controller Programming" section does also apply to "Supervisor Programming".
 
 As illustrated by the example, it is better to get the `WbNodeRef`s and
 `WbFieldRef`s only once, at the beginning of the simulation (keeping the
@@ -95,12 +98,14 @@ seek to optimize the locomotion of a robot: it should walk as far as possible.
 Suppose that the robot's locomotion depends on two parameters (a and b), hence
 we have a two-dimensional search space.
 
-
-In the code, the evaluation of the a and b parameters is carried out in the the `while` loop.
-The `actuateMotors()` function here is assumed to call `wb_motor_set_postion()` for each motor involved in the locomotion.
-After each evaluation the distance travelled by the robot is measured and logged.
-Then the robot is moved (translation) back to its initial position (0, 0.5, 0) for the next evaluation.
-To move the robot we need the `wb_supervisor_*()` functions and hence the base node of this robot in the Scene Tree must be a `Supervisor` and not a Robot.
+In the code, the evaluation of the a and b parameters is carried out in the the
+`while` loop. The `actuateMotors()` function here is assumed to call
+`wb_motor_set_postion()` for each motor involved in the locomotion. After each
+evaluation the distance travelled by the robot is measured and logged. Then the
+robot is moved (translation) back to its initial position (0, 0.5, 0) for the
+next evaluation. To move the robot we need the `wb_supervisor_*()` functions and
+hence the base node of this robot in the Scene Tree must be a `Supervisor` and
+not a Robot.
 
 ``` c
 #include ltwebots/robot.hgt
@@ -141,8 +146,10 @@ int main() {
 }
 ```
 
-As in the previous example, the `trans_field` variable is a `WbFieldRef` that identifies the `translation` field of the robot.
-In this example the `trans_field` is used both for getting (`wb_supervisor_field_get_sf_vec3f()`) and for setting (`wb_supervisor_field_set_sf_vec3f`) the field's value.
+As in the previous example, the `trans_field` variable is a `WbFieldRef` that
+identifies the `translation` field of the robot. In this example the
+`trans_field` is used both for getting (`wb_supervisor_field_get_sf_vec3f()`)
+and for setting (`wb_supervisor_field_set_sf_vec3f`) the field's value.
 
 Please note that the program structure is composed of three nested `for` loops.
 The two outer loops change the values of the a and b parameters. The innermost

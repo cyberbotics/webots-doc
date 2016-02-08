@@ -9,10 +9,18 @@ The root directory of a project contains at least a directory called "worlds"
 containing a single world file. But several other directories are often
 required:
 
-- "controllers": this directory contains the controllers available in each world files of the current project. The link between the world files and this directory is done through the *controller* field of the *Robot* node (explained in the reference manual). More information about this directory in the following subsections.
-- "protos": this directory contains the PROTO files available for all the world files of the current project.
-- "plugins": this directory contains the plugins available in the current project. The link between the world files and this directory is done through the *physics* field of the *WordInfo* node (explained in the reference manual).
-- "worlds": this directory contains the world files, the project files (see below) and the textures (typically in a subdirectory called "textures").
+- "controllers": this directory contains the controllers available in each world
+files of the current project. The link between the world files and this
+directory is done through the *controller* field of the *Robot* node (explained
+in the reference manual). More information about this directory in the following
+subsections.
+- "protos": this directory contains the PROTO files available for all the world
+files of the current project.
+- "plugins": this directory contains the plugins available in the current project.
+The link between the world files and this directory is done through the
+*physics* field of the *WordInfo* node (explained in the reference manual).
+- "worlds": this directory contains the world files, the project files (see below)
+and the textures (typically in a subdirectory called "textures").
 
 ### The Project Files
 

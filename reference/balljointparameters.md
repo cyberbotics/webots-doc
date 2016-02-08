@@ -18,6 +18,12 @@ the jointParameters field of `BallJoint` only.
 
 ### Field Summary
 
-- `anchor`: This field specifies the anchor position expressed in relative coordinates with respect to the center of the closest upper `Solid`'s frame.
-- `springConstant` and `dampingConstant`: These fields specify the uniform amount of rotational spring and damping effect around each of the the frame axis of the `BallJoint`'s closest upper `Solid` (see `Joint`'s `"Springs and Dampers"` section for more information on these constants). This is can be useful to simulate a retraction force that pulls the `BallJoint` solid `endPoint` back towards its initial orientation.
+- `anchor`: This field specifies the anchor position expressed in relative
+coordinates with respect to the center of the closest upper `Solid`'s frame.
+- `springConstant` and `dampingConstant`: These fields specify the uniform amount
+of rotational spring and damping effect around each of the the frame axis of the
+`BallJoint`'s closest upper `Solid` (see `Joint`'s `"Springs and Dampers"`
+section for more information on these constants). This is can be useful to
+simulate a retraction force that pulls the `BallJoint` solid `endPoint` back
+towards its initial orientation.
 

@@ -5,9 +5,8 @@ C++/Java/Python/Matlab.
 
 ### Hello World Example
 
-
-The tradition in computer science is to start with a "Hello World!" example.
-So here is a "Hello World!" example for a Webots controller:
+The tradition in computer science is to start with a "Hello World!" example. So
+here is a "Hello World!" example for a Webots controller:
 
 ``` c
 #include ltwebots/robot.hgt
@@ -25,8 +24,9 @@ int main() {
 }
 ```
 
-This code repeatedly prints `"Hello World!"` to the standard output stream which is redirected to Webots console.
-The standard output and error streams are automatically redirected to Webots console for all Webots supported languages.
+This code repeatedly prints `"Hello World!"` to the standard output stream which
+is redirected to Webots console. The standard output and error streams are
+automatically redirected to Webots console for all Webots supported languages.
 
 Webots C API (Application Programming Interface) is provided by regular C header
 files. These header files must be included using statements like `#include
@@ -56,9 +56,9 @@ long as the simulation runs.
 
 ### Reading Sensors
 
-
-Now that we have seen how to print a message to the console, we shall see how to read the sensors of a robot.
-The next example does continuously update and print the value returned by a `DistanceSensor`:
+Now that we have seen how to print a message to the console, we shall see how to
+read the sensors of a robot. The next example does continuously update and print
+the value returned by a `DistanceSensor`:
 
 ``` c
 #include ltwebots/robot.hgt
@@ -83,10 +83,13 @@ int main() {
 }
 ```
 
-As you can notice, prior to using a device, it is necessary to get the corresponding device tag (`WbDeviceTag`); this is done using the `wb_robot_get_device()` function.
-The `WbDeviceTag` is an opaque type that is used to identify a device in the controller code.
-Note that the string passed to this function, *"my\_distance\_sensor"* in this example, refers to a device name specified in the robot description (".wbt" or ".proto" file).
-If the robot has no device with the specified name, this function returns 0.
+As you can notice, prior to using a device, it is necessary to get the
+corresponding device tag (`WbDeviceTag`); this is done using the
+`wb_robot_get_device()` function. The `WbDeviceTag` is an opaque type that is
+used to identify a device in the controller code. Note that the string passed to
+this function, *"my\_distance\_sensor"* in this example, refers to a device name
+specified in the robot description (".wbt" or ".proto" file). If the robot has
+no device with the specified name, this function returns 0.
 
 Each sensor must be enabled before it can be used. If a sensor is not enabled it
 returns undefined values. Enabling a sensor is achieved using the corresponding
@@ -110,22 +113,24 @@ possible to disable a device at any time using the corresponding
 The sensor value is updated during the call to `wb_robot_step()`. The call to
 `wb_distance_sensor_get_value()` retrieves the latest value.
 
-
-Note that some device return vector values instead of scalar values, for example these functions:
+Note that some device return vector values instead of scalar values, for example
+these functions:
 
 ``` c
 const double *wb_gps_get_values(WbDeviceTag tag);
 const double *wb_accelerometer_get_values(WbDeviceTag tag);
 const double *wb_gyro_get_values(WbDeviceTag tag);
-
+    
 ```
 
-Each function returns a pointer to three double values.
-The pointer is the address of an array allocated by the function internally.
-These arrays should never be explicitly deleted by the controller code. They will be automatically deleted when necessary.
-The array contains exactly three double values. Hence accessing the array beyond index 2 is illegal and may crash the controller.
-Finally, note that the array elements should not be modified, for this reason the pointer is declared as *const*.
-Here are correct examples of code using these functions:
+Each function returns a pointer to three double values. The pointer is the
+address of an array allocated by the function internally. These arrays should
+never be explicitly deleted by the controller code. They will be automatically
+deleted when necessary. The array contains exactly three double values. Hence
+accessing the array beyond index 2 is illegal and may crash the controller.
+Finally, note that the array elements should not be modified, for this reason
+the pointer is declared as *const*. Here are correct examples of code using
+these functions:
 
 ``` c
 const double *pos = wb_gps_get_values(gps);
@@ -170,13 +175,17 @@ returned by the `wb_robot_get_device()` function. However, unlike sensors,
 actuators don't need to be expressly enabled; they actually don't have
 `wb_*_enable()` functions.
 
-
-To control a motion, it is generally useful to decompose that motion in discrete steps that correspond to the control step.
-As before, an infinite loop is used here: at each iteration a new target position is computed according to a sine equation.
-The `wb_motor_set_position()` function stores a new position request for the corresponding rotational motor.
-Note that `wb_motor_set_position()` stores the new position, but
-it does not immediately actuate the motor. The effective actuation starts on the next line, in the call to `wb_robot_step()`.
-The `wb_robot_step()` function sends the actuation command to the `RotationalMotor` but it does not wait for the `RotationalMotor` to complete the motion (i.e. reach the specified target position); it just simulates the motor's motion for the specified number of milliseconds.
+To control a motion, it is generally useful to decompose that motion in discrete
+steps that correspond to the control step. As before, an infinite loop is used
+here: at each iteration a new target position is computed according to a sine
+equation. The `wb_motor_set_position()` function stores a new position request
+for the corresponding rotational motor. Note that `wb_motor_set_position()`
+stores the new position, but it does not immediately actuate the motor. The
+effective actuation starts on the next line, in the call to `wb_robot_step()`.
+The `wb_robot_step()` function sends the actuation command to the
+`RotationalMotor` but it does not wait for the `RotationalMotor` to complete the
+motion (i.e. reach the specified target position); it just simulates the motor's
+motion for the specified number of milliseconds.
 
 ``` c
 #include ltwebots/robot.hgt
@@ -204,10 +213,15 @@ int main() {
 }
 ```
 
-When `wb_robot_step()` returns, the motor has moved by a certain (linear or rotational) amount which depends on the target position, the duration of the control step (specified with `wb_robot_step()`), the velocity, acceleration, force, and other parameters specified in the ".wbt" description of the `Motor`.
-For example, if a very small control step or a low motor velocity is specified, the motor will not have moved much when `wb_robot_step()` returns.
-In this case several control steps are required for the `RotationalMotor` to reach the target position.
-If a longer duration or a higher velocity is specified, then the motor may have fully completed the motion when `wb_robot_step()` returns.
+When `wb_robot_step()` returns, the motor has moved by a certain (linear or
+rotational) amount which depends on the target position, the duration of the
+control step (specified with `wb_robot_step()`), the velocity, acceleration,
+force, and other parameters specified in the ".wbt" description of the `Motor`.
+For example, if a very small control step or a low motor velocity is specified,
+the motor will not have moved much when `wb_robot_step()` returns. In this case
+several control steps are required for the `RotationalMotor` to reach the target
+position. If a longer duration or a higher velocity is specified, then the motor
+may have fully completed the motion when `wb_robot_step()` returns.
 
 Note that `wb_motor_set_position()` only specifies the *desired* target
 position. Just like with real robots, it is possible (in physics-based
@@ -263,12 +277,12 @@ exchanges sensors and actuators data with the Webots process during the calls to
 immediately send the data to Webots. Instead it stores the data locally and the
 data are effectively sent when `wb_robot_step()` is called.
 
-
-For that reason the following code snippet is a bad example.
-Clearly, the value specified with the first call to `wb_motor_set_position()` will be overwritten by the second call:
+For that reason the following code snippet is a bad example. Clearly, the value
+specified with the first call to `wb_motor_set_position()` will be overwritten
+by the second call:
 
 ``` c
-wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
+wb_motor_set_position(my_leg, 0.34);  // BAD: ignored 
 wb_motor_set_position(my_leg, 0.56);
 wb_robot_step(40);
 ```
@@ -287,8 +301,9 @@ while (1) {
 }
 ```
 
-since there was no call to `wb_robot_step()` between the two sensor readings, the values returned by the sensor cannot have changed in the meantime.
-A working version would look like this:
+since there was no call to `wb_robot_step()` between the two sensor readings,
+the values returned by the sensor cannot have changed in the meantime. A working
+version would look like this:
 
 ``` c
 while (1) {
@@ -301,7 +316,9 @@ while (1) {
 }
 ```
 
-However the generally recommended approach is to have a single `wb_robot_step()` call in the main control loop, and to use it to update all the sensors and actuators simultaneously, like this:
+However the generally recommended approach is to have a single `wb_robot_step()`
+call in the main control loop, and to use it to update all the sensors and
+actuators simultaneously, like this:
 
 ``` c
 while (1) {
@@ -311,7 +328,10 @@ while (1) {
 }
 ```
 
-Note that it may also be judicious to move `wb_robot_step()` to the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors()` function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence:
+Note that it may also be judicious to move `wb_robot_step()` to the beginning of
+the loop, in order to make sure that the sensors already have valid values prior
+to entering the `readSensors()` function. Otherwise the sensors will have
+undefined values during the first iteration of the loop, hence:
 
 ``` c
 while (1) {
@@ -321,9 +341,9 @@ while (1) {
 }
 ```
 
-Here is a complete example of using sensors and actuators together.
-The robot used here is a `DifferentialWheels` using differential steering.
-It uses two proximity sensors (`DistanceSensor`) to detect obstacles.
+Here is a complete example of using sensors and actuators together. The robot
+used here is a `DifferentialWheels` using differential steering. It uses two
+proximity sensors (`DistanceSensor`) to detect obstacles.
 
 ``` c
 #include ltwebots/robot.hgt
@@ -342,15 +362,15 @@ int main() {
 
   while (1) {
     wb_robot_step(TIME_STEP);
-
+    
     // read sensors
     double left_dist = wb_distance_sensor_get_value(left_sensor);
     double right_dist = wb_distance_sensor_get_value(right_sensor);
-
+    
     // compute behavior
     double left = compute_left_speed(left_dist, right_dist);
     double right = compute_right_speed(left_dist, right_dist);
-
+    
     // actuate wheel motors
     wb_differential_wheels_set_speed(left, right);
   }
@@ -369,7 +389,6 @@ the `Robot, Supervisor` or `DifferentialWheels` node, and they are passed as
 parameters of the `main()` function. For example, this can be used to specify
 parameters that vary for each robot's controller.
 
-
 For example if we have:
 
 ```
@@ -379,6 +398,7 @@ Robot {
   ...
 }
 ```
+
 and if the controller name is *"demo"*, then this sample controller code:
 
 ``` c
@@ -410,12 +430,13 @@ argv[3]=three
 
 ### Controller Termination
 
-
-Usually a controller process runs in an endless loop: it is terminated (killed) by Webots when the user reverts (reloads) the simulation or quits Webots.
-The controller cannot prevent its own termination but it can be notified shortly before this happens.
-The `wb_robot_step()` function returns -1 when the process is going to be terminated by Webots.
-Then the controller has 1 second (clock time) to save important data, close files, etc. before it is effectively killed by Webots.
-Here is an example that shows how to detect the upcoming termination:
+Usually a controller process runs in an endless loop: it is terminated (killed)
+by Webots when the user reverts (reloads) the simulation or quits Webots. The
+controller cannot prevent its own termination but it can be notified shortly
+before this happens. The `wb_robot_step()` function returns -1 when the process
+is going to be terminated by Webots. Then the controller has 1 second (clock
+time) to save important data, close files, etc. before it is effectively killed
+by Webots. Here is an example that shows how to detect the upcoming termination:
 
 ``` c
 #include ltwebots/robot.hgt
@@ -445,13 +466,16 @@ int main() {
 }
 ```
 
-In some cases, it is up to the controller to make the decision of terminating the simulation.
-For example in the case of search and optimization algorithms: the search may terminate when a solution is found or after a fixed number of iterations (or generations).
+In some cases, it is up to the controller to make the decision of terminating
+the simulation. For example in the case of search and optimization algorithms:
+the search may terminate when a solution is found or after a fixed number of
+iterations (or generations).
 
-
-In this case the controller should just save the experiment results and quit by returning from the `main()` function or by calling the `exit()` function.
-This will terminate the controller process and freeze the simulation at the current simulation step.
-The physics simulation and every robot involved in the simulation will stop.
+In this case the controller should just save the experiment results and quit by
+returning from the `main()` function or by calling the `exit()` function. This
+will terminate the controller process and freeze the simulation at the current
+simulation step. The physics simulation and every robot involved in the
+simulation will stop.
 
 ``` c
 // freeze the whole simulation
@@ -463,7 +487,9 @@ if (finished) {
 
 
 
-If only one robot controller needs to terminate but the simulation should continue with the other robots, then the terminating robot should call `wb_robot_cleanup()` right before quitting:
+If only one robot controller needs to terminate but the simulation should
+continue with the other robots, then the terminating robot should call
+`wb_robot_cleanup()` right before quitting:
 
 ``` c
 // terminate only this robot controller
@@ -474,8 +500,8 @@ if (finished) {
 }
 ```
 
-Note that the exit status as well as the value returned by the `main()` function are ignored by Webots.
-
+Note that the exit status as well as the value returned by the `main()` function
+are ignored by Webots.
 
 ### Shared libraries
 
@@ -516,14 +542,28 @@ variables using this syntax : `$(MY_VARIABLE_NAME)`. They will be automatically
 replaced by the actual value already existing in the environment. The Webots
 "runtime.ini" supports 7 sections:
 
-- `[environment variables with relative paths]`This section should contain only environment variables with relative paths. Paths must be separated by the colon symbol ':' and the separator between directories is the slash symbol '/'. Variables declared in this section will be add on every platform. On Windows, colons will be replaced by semicolon and slash will be replaced by backslash according to the Windows syntax.
-- `[environment variables]`Environment variables defined in this section will also be added to the environment on every platform but they will be written directly with no syntax change. It's a good place for variables that don't contain any path.
-- `[environment variables for Windows]`Variables defined in this section will only be added to the environment if the controller is run on the Windows platform. If you want to declare paths in this section, the value should be written between double-quotes symbols ".
-- `[environment variables for Mac OS X]`Variables defined here will only be added on Mac OS X and ignored on other platforms.
-- `[environment variables for Linux]`Variables defined here will be added on all Linux platforms but not on Mac or Windows.
-- `[environment variables for Linux 32]`These variables will be added only if the Linux platform is 32 bit.
-- `[environment variables for Linux 64]`These variables will be added only if the Linux platform is 64 bit.
-
+- `[environment variables with relative paths]` This section should contain only
+environment variables with relative paths. Paths must be separated by the colon
+symbol ':' and the separator between directories is the slash symbol '/'.
+Variables declared in this section will be add on every platform. On Windows,
+colons will be replaced by semicolon and slash will be replaced by backslash
+according to the Windows syntax.
+- `[environment variables]` Environment variables defined in this section will
+also be added to the environment on every platform but they will be written
+directly with no syntax change. It's a good place for variables that don't
+contain any path.
+- `[environment variables for Windows]` Variables defined in this section will
+only be added to the environment if the controller is run on the Windows
+platform. If you want to declare paths in this section, the value should be
+written between double-quotes symbols ".
+- `[environment variables for Mac OS X]` Variables defined here will only be added
+on Mac OS X and ignored on other platforms.
+- `[environment variables for Linux]` Variables defined here will be added on all
+Linux platforms but not on Mac or Windows.
+- `[environment variables for Linux 32]` These variables will be added only if the
+Linux platform is 32 bit.
+- `[environment variables for Linux 64]` These variables will be added only if the
+Linux platform is 64 bit.
 
 Here is an example of a typical runtime.ini file.
 
@@ -532,16 +572,16 @@ Here is an example of a typical runtime.ini file.
 
        [environment variables with relative paths]
        WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
-
+       
        [environment variables]
        ROS_MASTER_URI = http://localhost:11311
-
+       
        [environment variables for Windows]
        NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
-
+       
        [environment variables for Mac OS X]
        NAOQI_LIBRARY_FOLDER = lib
-
+       
        [environment variables for Linux]
        NAOQI_LIBRARY_FOLDER = lib
 ```

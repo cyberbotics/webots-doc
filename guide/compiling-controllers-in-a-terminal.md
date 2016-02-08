@@ -9,16 +9,14 @@ some examples:
 
 ### Mac OS X and Linux
 
-
-These examples assume that Webots is installed in the default directory.
-On Linux, type this:
+These examples assume that Webots is installed in the default directory. On
+Linux, type this:
 
 ```
 $ export WEBOTS_HOME=/usr/local/webots
 ```
 
-or add this line to your "~/.bash\_profile" file.
-On Mac OS X, type this:
+or add this line to your "~/.bash\_profile" file. On Mac OS X, type this:
 
 ```
 $ export WEBOTS_HOME=/Applications/Webots

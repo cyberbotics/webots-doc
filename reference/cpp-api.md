@@ -11,12 +11,14 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Brake.hppgt |
 | class `Brake` : public `Device` { |
 | void `setDampingConstant`(double dampingConstant) const; |
 | int `getType`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Camera.hppgt |
 | class `Camera` : public `Device` { |
@@ -54,6 +56,7 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Compass.hppgt |
 | class `Compass` : public `Device` { |
 | virtual void `enable`(int ms); |
@@ -62,6 +65,7 @@ The following tables describe the C++ classes and their methods.
 | const double *`getValues`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Connector.hppgt |
 | class `Connector` : public `Device` { |
@@ -73,6 +77,7 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Device.hppgt |
 | class `Device` { |
 | const std::string amp`getModel`() const; |
@@ -80,6 +85,7 @@ The following tables describe the C++ classes and their methods.
 | int `getNodeType`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/DifferentialWheels.hppgt |
 | class `DifferentialWheels` : public `Robot` { |
@@ -98,6 +104,7 @@ The following tables describe the C++ classes and their methods.
 | double `getSpeedUnit`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Display.hppgt |
 | class `Display` : public `Device` { |
@@ -119,11 +126,13 @@ The following tables describe the C++ classes and their methods.
 | `ImageRef` *`imageCopy`(int x, int y, int width, int height) const; |
 | virtual void `imagePaste`(`ImageRef` *ir, int x, int y); |
 | `ImageRef` *`imageLoad`(const std::string ampfilename) const; |
-| `ImageRef` *`imageNew`(int width, int height, const void *data, int format) const; |
+| `ImageRef` *`imageNew`(int width, int height, const void *data, int format)
+const; |
 | void `imageSave`(`ImageRef` *ir, const std::string ampfilename) const; |
 | void `imageDelete`(`ImageRef` *ir) const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/DistanceSensor.hppgt |
 | class `DistanceSensor` : public `Device` { |
@@ -133,6 +142,7 @@ The following tables describe the C++ classes and their methods.
 | double `getValue`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Emitter.hppgt |
 | class `Emitter` : public `Device` { |
@@ -146,9 +156,12 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Field.hppgt |
 | class Field { |
-| enum { SF\_BOOL, SF\_INT32, SF\_FLOAT, SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING, SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, MF\_COLOR, MF\_STRING, MF\_NODE }; |
+| enum { SF\_BOOL, SF\_INT32, SF\_FLOAT, SF\_VEC2F, SF\_VEC3F, SF\_ROTATION,
+SF\_COLOR, SF\_STRING, SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F,
+MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | int `getType`() const; |
 | std::string `getTypeName`() const; |
 | int `getCount`() const; |
@@ -192,6 +205,7 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/GPS.hppgt |
 | class `GPS` : public `Device` { |
 | virtual void `enable`(int ms); |
@@ -200,6 +214,7 @@ The following tables describe the C++ classes and their methods.
 | const double *`getValues`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Gyro.hppgt |
 | class `Gyro` : public `Device` { |
@@ -210,10 +225,12 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/ImageRef.hppgt |
 | class ImageRef { |
 | }; |
 ```
+
 
 ```| #include ltwebots/InertialUnit.hppgt |
 | class `InertialUnit` : public `Device` { |
@@ -224,12 +241,14 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/LED.hppgt |
 | class `LED` : public `Device` { |
 | virtual void `set`(int value); |
 | int `get`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/LightSensor.hppgt |
 | class `LightSensor` : public `Device` { |
@@ -239,6 +258,7 @@ The following tables describe the C++ classes and their methods.
 | double `getValue`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/utils/Motion.hppgt |
 | class `Motion` { |
@@ -255,6 +275,7 @@ The following tables describe the C++ classes and their methods.
 | virtual void `setTime`(int time); |
 | }; |
 ```
+
 
 ```| #include ltwebots/Motor.hppgt |
 | class `Motor` : public `Device` { |
@@ -289,6 +310,7 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Node.hppgt |
 | class Node { |
 | enum { NO\_NODE, APPEARANCE, BACKGROUND, BOX, COLOR, CONE, |
@@ -322,12 +344,14 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Pen.hppgt |
 | class `Pen` : public `Device` { |
 | virtual void `write`(bool write); |
 | virtual void `setInkColor`(int color, double density); |
 | }; |
 ```
+
 
 ```| #include ltwebots/PositionSensor.hppgt |
 | class `PositionSensor` : public `Device` { |
@@ -339,6 +363,7 @@ The following tables describe the C++ classes and their methods.
 | int `getType`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Receiver.hppgt |
 | class `Receiver` : public `Device` { |
@@ -356,6 +381,7 @@ The following tables describe the C++ classes and their methods.
 | int `getChannel`() const; |
 | }; |
 ```
+
 
 ```| #include ltwebots/Robot.hppgt |
 | class `Robot` { |
@@ -417,6 +443,7 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Servo.hppgt |
 | class `Servo` : public `Device` { |
 | enum {ROTATIONAL, LINEAR}; |
@@ -441,9 +468,11 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
+
 ```| #include ltwebots/Supervisor.hppgt |
 | class `Supervisor` : public `Robot` { |
-| enum {MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR}; |
+| enum {MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR,
+MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR}; |
 | `Supervisor`(); |
 | virtual `~Supervisor`(); |
 | void `exportImage`(const std::string ampfile, int quality) const; |
@@ -451,7 +480,8 @@ The following tables describe the C++ classes and their methods.
 | `Node` *`getSelf`(); |
 | `Node` *`getFromDef`(const std::string ampname); |
 | `Node` *`getFromId`(int id); |
-| virtual void `setLabel`(int id, const std::string amplabel, double xpos, double ypos, |
+| virtual void `setLabel`(int id, const std::string amplabel, double xpos, double
+ypos, |
 | double size, int color, double transparency); |
 | virtual void `simulationQuit`(int status); |
 | virtual void `simulationRevert`(); |
@@ -459,7 +489,8 @@ The following tables describe the C++ classes and their methods.
 | virtual void `loadWorld`(const std::string ampfile); |
 | virtual void `saveWorld`(); |
 | virtual void `saveWorld`(const std::string ampfile); |
-| virtual void `movieStartRecording`(const std::string ampfile, int width, int height, int codec, int quality, |
+| virtual void `movieStartRecording`(const std::string ampfile, int width, int
+height, int codec, int quality, |
 | int acceleration, bool caption) const; |
 | virtual void `movieStopRecording`(); |
 | int `movieGetStatus`() const; |
@@ -467,6 +498,7 @@ The following tables describe the C++ classes and their methods.
 | virtual bool `animationStopRecording`(); |
 | }; |
 ```
+
 
 ```| #include ltwebots/TouchSensor.hppgt |
 | class `TouchSensor` : public `Device` { |
@@ -479,4 +511,5 @@ The following tables describe the C++ classes and their methods.
 | int `getType`() const; |
 | }; |
 ```
+
 

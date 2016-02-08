@@ -31,14 +31,14 @@ The distance sensors are modeled by 8 DistanceSensor nodes in the hierarchy of
 the robot. These nodes are referenced by their `name` fields (from "ps0" to
 "ps7"). We will explain later how these nodes are defined. For now, simply note
 that a DistanceSensor node can be accessed through the related module of the
-Webots API (through the "webots/distance_sensor.h" include file). The values
+Webots API (through the "webots/distance\_sensor.h" include file). The values
 returned by the distance sensors are scaled between 0 and 4096 (piecewise
 linearly to the distance), while 4096 means that a big amount of light is
 measured (an obstacle is close) and 0 means that no light is measured (no
 obstacle).
 
 In the same way, the e-puck root node is a DifferentialWheel node and can be
-access by the "webots/differential_wheel.h" include file. The speed is given in
+access by the "webots/differential\_wheel.h" include file. The speed is given in
 a number of ticks/seconds where 1000 ticks correspond to a complete rotation of
 the wheel. The values are clamped between -1000 and 1000.
 

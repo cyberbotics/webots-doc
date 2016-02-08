@@ -158,11 +158,11 @@ algorithm is used.
 |  | position control | velocity control | force or torque control |
 | --- | --- | --- | --- | --- |
 | uses PID-controller | yes | no | no |
-| wb_motor_set_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
-| wb_motor_set_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
-| wb_motor_set_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
-| wb_motor_set_available_force() (resp. wb_motor_set_available_torque()) | specifies the available force (resp. torque) | specifies the available force (resp. torque) | specifies the max force (resp. max torque) |
-| wb_motor_set_force() (resp. wb_motor_set_torque()) | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
+| wb\_motor\_set\_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
+| wb\_motor\_set\_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
+| wb\_motor\_set\_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
+| wb\_motor\_set\_available\_force() (resp. wb\_motor\_set\_available\_torque()) | specifies the available force (resp. torque) | specifies the available force (resp. torque) | specifies the max force (resp. max torque) |
+| wb\_motor\_set\_force() (resp. wb\_motor\_set\_torque()) | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
 %%end
 
 ### Motor Limits

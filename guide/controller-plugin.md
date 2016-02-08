@@ -104,7 +104,7 @@ samples are based on it, we recommend to choose also this framework to create
 your GUI. The `Makefile.include` mentioned above allows you to efficiently link
 with the Qt framework embedded in Webots.
 
-The Webots pipe handle (integer id) is available in the WEBOTS_PIPE_IN
+The Webots pipe handle (integer id) is available in the WEBOTS\_PIPE\_IN
 environment variable.
 
 The Qt utility library helps you to initialize Qt correctly (pipe, window

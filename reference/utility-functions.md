@@ -29,7 +29,7 @@ For example:
 dBodyID head_pitch_body = dWebotsGetBodyFromDEF("BLUE_PLAYER_1.HeadYaw.HeadPitch");
 ```
 
-means that we are searching for a `Solid` node named "HeadPitch" inside a node named "HeadYaw", inside a node named "BLUE_PLAYER_1".
+means that we are searching for a `Solid` node named "HeadPitch" inside a node named "HeadYaw", inside a node named "BLUE\_PLAYER\_1".
 Note that each dot (.) can be substituted by any number of named or unnamed nodes, so in other words it is not necessary to fully specify the path.
 
 This function returns NULL if there is no `Solid` (or derived) node with the

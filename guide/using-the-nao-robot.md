@@ -11,22 +11,22 @@ v3.3, v4.0 and v5.0 versions, with and without their articulated fingers
 
 The Webots installation includes several world files with Nao robots. You will
 find some in this folder:
-"WEBOTS_MODULES_PATH/projects/robots/aldebaran/worlds". The "nao.wbt" and
-"nao_indoors.wbt" are meant to be used with Choregraphe (see below). The
-"nao_demo.wbt" is a demonstration of a very simple controller that uses Webots C
-API instead of Choregraphe. The "nao_matlab.wbt" world is an example of
-programming Webots using the Matlab API. The "nao_robocup.wbt" world is an
+"WEBOTS\_MODULES\_PATH/projects/robots/aldebaran/worlds". The "nao.wbt" and
+"nao\_indoors.wbt" are meant to be used with Choregraphe (see below). The
+"nao\_demo.wbt" is a demonstration of a very simple controller that uses Webots
+C API instead of Choregraphe. The "nao\_matlab.wbt" world is an example of
+programming Webots using the Matlab API. The "nao\_robocup.wbt" world is an
 example of how to use the NAOqi API inside Webots. It is the same API that is
 used in Choregraphe, meaning that you can program Nao inside Webots without
 using Choregraphe if you want to. In this world, Nao tries to shoot the ball in
 the goal. You can find another NAOqi example in the
-"WEBOTS_MODULES_PATH/projects/contests/nao_challenge/2013-2014/worlds" folder.
-The "challenge.wbt" file in this folder is a solution to the NAO Challenge
-contest (edition 2013-2014).
+"WEBOTS\_MODULES\_PATH/projects/contests/nao\_challenge/2013-2014/worlds"
+folder. The "challenge.wbt" file in this folder is a solution to the NAO
+Challenge contest (edition 2013-2014).
 
 In addition Nao robots are also used in the world files of the
 [Robotstadium](http://www.robotstadium.org) contest. These files are located in
-this folder: "WEBOTS_MODULES_PATH/projects/contests/robotstadium/worlds".
+this folder: "WEBOTS\_MODULES\_PATH/projects/contests/robotstadium/worlds".
 
 ### Using Webots with Choregraphe
 
@@ -36,9 +36,9 @@ containing naoqisim, otherwise Choregraphe won't be able to send instructions to
 the robot in Webots.
 
 Start Webots and open this world file:
-"WEBOTS_MODULES_PATH/projects/robots/aldebaran/worlds/nao.wbt" You should see a
-red Nao in an empty environment. If the simulation is paused, then please start
-it by pushing the `Real-time` button in Webots.
+"WEBOTS\_MODULES\_PATH/projects/robots/aldebaran/worlds/nao.wbt" You should see
+a red Nao in an empty environment. If the simulation is paused, then please
+start it by pushing the `Real-time` button in Webots.
 
 The camera images in Webots (small purple viewports) should reflect what the
 robot sees.

@@ -95,10 +95,13 @@ class BookParser:
           return ''
       return titleNodes[0].text.strip()
 
-    def parseText(self, txt):
+    def parseText(self, txt, protect):
         if txt is None:
             return ''
-        return txt.encode('utf-8')
+        output = txt.encode('utf-8')
+        if protect:
+            output = output.replace('_', '\\_')
+        return output
 
     def parsePara(self, node, outFile, format):
         # para included tags:
@@ -109,25 +112,25 @@ class BookParser:
         text = ''
         containsProgram = False
         if node.text:
-            text += self.parseText(node.text)
+            text += self.parseText(node.text, True)
         for child in node.getchildren():
             if child.text:
                 if child.tag == 'bold':
-                    text += '**' + self.parseText(child.text) + '**'
+                    text += '**' + self.parseText(child.text, True) + '**'
                 elif child.tag == 'emphasis':
-                    text += '*' + self.parseText(child.text) + '*'
+                    text += '*' + self.parseText(child.text, True) + '*'
                 elif child.tag == 'filename':
-                    text += '"' + self.parseText(child.text) + '"'
+                    text += '"' + self.parseText(child.text, True) + '"'
                 elif child.tag == 'ulink':
-                    text += '[' + self.parseText(child.text) + '](' + child.attrib.get('url') + ')'
+                    text += '[' + self.parseText(child.text, True) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'programlisting':
                     text += self.parseProgramListing(child, None)
                     text = re.sub(r"(\s)*$", "\n", text)
                     containsProgram = True
                 else:
-                    text += '`' + self.parseText(child.text) + '`'
-            text += self.parseText(child.tail)
-        text += self.parseText(node.tail)
+                    text += '`' + self.parseText(child.text, False) + '`'
+            text += self.parseText(child.tail, True)
+        text += self.parseText(node.tail, True)
 
         if containsProgram:
             content = text.split('\n')
@@ -169,7 +172,7 @@ class BookParser:
             elif 'M' in lang:
                 output += ' matlab'
         output += '\n'
-        output += self.parseText(node.text) + '\n'
+        output += self.parseText(node.text, False) + '\n'
         output += '```\n\n'
 
         if outFile:

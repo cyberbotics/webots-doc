@@ -34,7 +34,7 @@ The last section will provide you with some hints to address problems that are
 not covered in this chapter.
 
 The solutions of the tutorials are located into the
-"WEBOTS_MODULES_PATH/projects/samples/tutorials" subdirectory of the Webots
+"WEBOTS\_MODULES\_PATH/projects/samples/tutorials" subdirectory of the Webots
 installation directory.
 
 We hope you will enjoy your first steps with Webots. Meanwhile, we would really

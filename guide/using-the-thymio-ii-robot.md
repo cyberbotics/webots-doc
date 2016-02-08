@@ -89,7 +89,7 @@ the `Thymio2::bodySlot` field. This pen can draw on every 3D object. This is
 particularily useful to perform [these
 exercises](https://aseba.wikidot.com/en:thymiodrawing). An example of this is
 located there (see the ):
-"WEBOTS_MODULES_PATH/projects/robots/thymio/worlds/thymio2_pen.wbt"
+"WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_pen.wbt"
 
 
 %figure "Simulation of a Thymio II having a pen."
@@ -102,7 +102,7 @@ located there (see the ):
 reproduced by adding a `Thymio2Ball` node in your world. The ball can be
 slightly moved by applying a force on it (`ALT + mouse left click`). An example
 of this is located there (see the ):
-"WEBOTS_MODULES_PATH/projects/robots/thymio/worlds/thymio2_ball.wbt"
+"WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_ball.wbt"
 
 
 %figure "Simulation of a Thymio II above a ball."

@@ -15,7 +15,7 @@ When using C/C++ or Java, the presence of a Makefile in the controller directory
 is necessary. If the Makefile is missing Webots will automatically propose to
 create one. This Makefile can be modified with a text editor; its purpose is to
 define project specific variables and to include the global "Makefile.include"
-file. The global "Makefile.include" file is stored in "WEBOTS_HOME/resources/"
+file. The global "Makefile.include" file is stored in "WEBOTS\_HOME/resources/"
 directory; it contains the effective build rules and may vary with the Webots
 version. Note that Webots Makefiles are platform and language independent.
 
@@ -28,8 +28,8 @@ variables:
 %figure "Webots Makefile Variables"
 | Variable | Usage |
 | --- | --- |
-| C_SOURCES | Specifies a list of .c sources files |
-| CXX_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files |
+| C\_SOURCES | Specifies a list of .c sources files |
+| CXX\_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files |
 %%end
 
 Every source file specified using these variables, will be added to the
@@ -51,7 +51,7 @@ CXX_SOURCES = my_controller.cpp my_second_file.cpp my_third_file.cc
 ```
 
 Important: the build rules require that one of the source files in the list must correspond to the controller name (i.e. controller directory name),
-e.g. if the controller directory is "my_controller" then the list must contain either "my_controller.c, my_controller.cpp" or "my_controller.cc" accordingly.
+e.g. if the controller directory is "my\_controller" then the list must contain either "my\_controller.c, my\_controller.cpp" or "my\_controller.cc" accordingly.
 
 
 ### Using the Compiler and Linker Flags (C/C++)

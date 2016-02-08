@@ -20,7 +20,7 @@ The following tables describe the Java classes and their methods.
 
 ```| import com.cyberbotics.webots.controller.Camera; |
 | public class `Camera` extends `Device` { |
-| public final static int COLOR, RANGE_FINDER, BOTH; |
+| public final static int COLOR, RANGE\_FINDER, BOTH; |
 | public void `enable`(int ms); |
 | public void `disable`(); |
 | public int `getSamplingPeriod`(); |
@@ -136,7 +136,7 @@ The following tables describe the Java classes and their methods.
 
 ```| import com.cyberbotics.webots.controller.Emitter; |
 | public class `Emitter` extends `Device` { |
-| public final static int CHANNEL_BROADCAST; |
+| public final static int CHANNEL\_BROADCAST; |
 | public int `send`(byte[] data); |
 | public int `getChannel`(); |
 | public void `setChannel`(int channel); |
@@ -148,10 +148,10 @@ The following tables describe the Java classes and their methods.
 
 ```| import com.cyberbotics.webots.controller.Field; |
 | public class Field { |
-| public final static int SF_BOOL, SF_INT32, SF_FLOAT, |
-| SF_VEC2F, SF_VEC3F, SF_ROTATION, SF_COLOR, SF_STRING, |
-| SF_NODE, MF, MF_INT32, MF_FLOAT, MF_VEC2F, MF_VEC3F, |
-| MF_COLOR, MF_STRING, MF_NODE; |
+| public final static int SF\_BOOL, SF\_INT32, SF\_FLOAT, |
+| SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING, |
+| SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, |
+| MF\_COLOR, MF\_STRING, MF\_NODE; |
 | public int `getType`(); |
 | public String `getTypeName`(); |
 | public int `getCount`(); |
@@ -264,8 +264,8 @@ The following tables describe the Java classes and their methods.
 | public void `setPosition`(double position); |
 | public void `setVelocity`(double vel); |
 | public void `setAcceleration`(double force); |
-| public void `setAvailableForce`(double motor_force); |
-| public void `setAvailableTorque`(double motor_torque); |
+| public void `setAvailableForce`(double motor\_force); |
+| public void `setAvailableTorque`(double motor\_torque); |
 | public void `setControlPID`(double p, double i, double d); |
 | public double `getTargetPosition`(); |
 | public double `getMinPosition`(); |
@@ -292,18 +292,18 @@ The following tables describe the Java classes and their methods.
 ```
 ```| import com.cyberbotics.webots.controller.Node; |
 | public class Node { |
-| public final static int NO_NODE, APPEARANCE, BACKGROUND, |
-| BOX, COLOR, CONE, COORDINATE, CYLINDER, DIRECTIONAL_LIGHT, |
-| ELEVATION_GRID, EXTRUSION, FOG, GROUP, IMAGE_TEXTURE, |
-| INDEXED_FACE_SET, INDEXED_LINE_SET, MATERIAL, POINT_LIGHT, |
-| SHAPE, SPHERE, SPOT_LIGHT, SWITCH, TEXTURE_COORDINATE, |
-| TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT, WORLD_INFO, |
-| CAPSULE, PLANE, ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS, SOLID, |
-| PHYSICS, CAMER_ZOOM, CHARGER, DAMPING, |
-| CONTACT_PROPERTIES, ACCELEROMETER, BRAKE, CAMERA, COMPASS, |
-| CONNECTOR, DISPLAY, DISTANCE_SENSOR, EMITTER, GPS, GYRO, LED, |
-| LIGHT_SENSOR, MICROPHONE, MOTOR, PEN, POSITION_SENSOR, RADIO, |
-| RECEIVER, SERVO, SPEAKER, TOUCH_SENSOR; |
+| public final static int NO\_NODE, APPEARANCE, BACKGROUND, |
+| BOX, COLOR, CONE, COORDINATE, CYLINDER, DIRECTIONAL\_LIGHT, |
+| ELEVATION\_GRID, EXTRUSION, FOG, GROUP, IMAGE\_TEXTURE, |
+| INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, MATERIAL, POINT\_LIGHT, |
+| SHAPE, SPHERE, SPOT\_LIGHT, SWITCH, TEXTURE\_COORDINATE, |
+| TEXTURE\_TRANSFORM, TRANSFORM, VIEWPOINT, WORLD\_INFO, |
+| CAPSULE, PLANE, ROBOT, SUPERVISOR, DIFFERENTIAL\_WHEELS, SOLID, |
+| PHYSICS, CAMER\_ZOOM, CHARGER, DAMPING, |
+| CONTACT\_PROPERTIES, ACCELEROMETER, BRAKE, CAMERA, COMPASS, |
+| CONNECTOR, DISPLAY, DISTANCE\_SENSOR, EMITTER, GPS, GYRO, LED, |
+| LIGHT\_SENSOR, MICROPHONE, MOTOR, PEN, POSITION\_SENSOR, RADIO, |
+| RECEIVER, SERVO, SPEAKER, TOUCH\_SENSOR; |
 | public void `remove`(); |
 | public int `getId`(); |
 | public int `getType`(); |
@@ -343,7 +343,7 @@ The following tables describe the Java classes and their methods.
 
 ```| import com.cyberbotics.webots.controller.Receiver; |
 | public class `Receiver` extends `Device` { |
-| public final static int CHANNEL_BROADCAST; |
+| public final static int CHANNEL\_BROADCAST; |
 | public void `enable`(int ms); |
 | public void `disable`(); |
 | public int `getSamplingPeriod`(); |
@@ -360,16 +360,16 @@ The following tables describe the Java classes and their methods.
 
 ```| import com.cyberbotics.webots.controller.Robot; |
 | public class `Robot` { |
-| public final static int MODE_SIMULATION, |
-| MODE_CROSS_COMPILATION, MODE_REMOTE_CONTROL; |
-| public final static int KEYBOARD_END, KEYBOARD_HOME, |
-| KEYBOARD_LEFT, KEYBOARD_UP, KEYBOARD_RIGHT, |
-| KEYBOARD_DOWN, KEYBOARD_PAGEUP, KEYBOARD_PAGEDOWN, |
-| KEYBOARD_NUMPAD_HOME, KEYBOARD_NUMPAD_LEFT, |
-| KEYBOARD_NUMPAD_UP, KEYBOARD_NUMPAD_RIGHT, |
-| KEYBOARD_NUMPAD_DOWN, KEYBOARD_NUMPAD_END, |
-| KEYBOARD_KEY, KEYBOARD_SHIFT, |
-| KEYBOARD_CONTROL, KEYBOARD_ALT; |
+| public final static int MODE\_SIMULATION, |
+| MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL; |
+| public final static int KEYBOARD\_END, KEYBOARD\_HOME, |
+| KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT, |
+| KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN, |
+| KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT, |
+| KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT, |
+| KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END, |
+| KEYBOARD\_KEY, KEYBOARD\_SHIFT, |
+| KEYBOARD\_CONTROL, KEYBOARD\_ALT; |
 | public `Robot`(); |
 | protected void `finalize`(); |
 | public int `step`(int ms); |
@@ -424,7 +424,7 @@ The following tables describe the Java classes and their methods.
 | public double `getTargetPosition`(); |
 | public void `setVelocity`(double vel); |
 | public void `setAcceleration`(double force); |
-| public void `setMotorForce`(double motor_force); |
+| public void `setMotorForce`(double motor\_force); |
 | public void `setControlP`(double p); |
 | public double `getMinPosition`(); |
 | public double `getMaxPosition`(); |
@@ -443,7 +443,7 @@ The following tables describe the Java classes and their methods.
 
 ```| import com.cyberbotics.webots.controller.Supervisor; |
 | public class `Supervisor` extends `Robot` { |
-| public final static int MOVIE_READY, MOVIE_RECORDING, MOVIE_SAVING, MOVIE_WRITE_ERROR, MOVIE_ENCODING_ERROR, MOVIE_SIMULATION_ERROR |
+| public final static int MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR |
 | public `Supervisor`(); |
 | protected void `finalize`(); |
 | public void `exportImage`(String file, int quality); |

@@ -18,14 +18,14 @@ becomes possible to reuse your existing `MATLAB` code directly in Webots.
 
 If `MATLAB` is already installed, you can directly launch one of the `MATLAB`
 examples. For doing that, start Webots and open the world file
-"WEBOTS_MODULES_PATH/projects/languages/matlab/worlds/e-puck_matlab.wbt" or the
-world file
-"WEBOTS_MODULES_PATH/projects/robots/aldebaran/worlds/nao2_matlab.wbt" in your
-Webots installation directory. Webots automatically starts `MATLAB` when it
+"WEBOTS\_MODULES\_PATH/projects/languages/matlab/worlds/e-puck\_matlab.wbt" or
+the world file
+"WEBOTS\_MODULES\_PATH/projects/robots/aldebaran/worlds/nao2\_matlab.wbt" in
+your Webots installation directory. Webots automatically starts `MATLAB` when it
 detects an m-file in a controller directory. Note that the m-file must be named
 after its directory in order to be identified as a controller file by Webots.
-So, for example, if the directory is named "my_controller", then the controller
-m-file must be named "my_controller/my_controller.m".
+So, for example, if the directory is named "my\_controller", then the controller
+m-file must be named "my\_controller/my\_controller.m".
 
 No special initialization code is necessary in the controller m-file. In fact
 Webots calls an intermediate "launcher.m" file that sets up the Webots

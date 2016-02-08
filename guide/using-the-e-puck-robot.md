@@ -137,7 +137,7 @@ rectangular image with a 4:3 ratio which can be obtained from the remote control
 interface with the real robot.
 
 The standard model of the e-puck is provided in the "E-puck.proto" PROTO file
-which is located in the "WEBOTS_MODULES_PATH/projects/robots/e-puck/protos"
+which is located in the "WEBOTS\_MODULES\_PATH/projects/robots/e-puck/protos"
 directory of the Webots distribution (see also "E-puckDistanceSensor.proto"
 PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete
 specifications in it. The two PROTO fields `groundSensorSlot` and `turretSlot`
@@ -150,8 +150,8 @@ modules.
 %end
 
 Several simulation examples are located in the
-"WEBOTS_MODULES_PATH/projects/robots/e-puck/worlds" directory of the Webots
-distribution. The "e-puck_line.wbt" world (see ) especially examplifies the use
+"WEBOTS\_MODULES\_PATH/projects/robots/e-puck/worlds" directory of the Webots
+distribution. The "e-puck\_line.wbt" world (see ) especially examplifies the use
 of ground sensors. Ground sensors can be added to a real e-puck robot by
 inserting a special extension card with three sensors just below the camera of
 the robot. These sensors are actually simple infra-red sensors which allow the
@@ -159,23 +159,23 @@ e-puck robot to see the color level of the ground at three locations in a line
 across its front. The `groundSensorSlot` field of the standard E-puck PROTO is
 expressly provided for equipping the simulated e-puck robot with the ground
 sensors extension modeled in the `E-puckGroundSensors` PROTO. This is
-particularly useful for implementing line following behaviors. The "e-puck_line"
-controller program contains the source code for a simple line following system
-which, as an exercise, can be improved upon to obtain the behavior demonstrated
-in the "e-puck_line_demo.wbt" demo, in which the e-puck robot is able to follow
-the line drawn on the floor, but also to avoid obstacles and return to the line
-following behavior afterwards. This model was contributed by Jean-Christophe
-Zufferey from the EPFL, who sets up a series of exercises with Webots and
-extended e-puck robots.
+particularly useful for implementing line following behaviors. The
+"e-puck\_line" controller program contains the source code for a simple line
+following system which, as an exercise, can be improved upon to obtain the
+behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck
+robot is able to follow the line drawn on the floor, but also to avoid obstacles
+and return to the line following behavior afterwards. This model was contributed
+by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises
+with Webots and extended e-puck robots.
 
 
 %figure "An e-puck extension for line following"
 ![An e-puck extension for line following](png/e-puck_line.png)
 %end
 
-The directory "WEBOTS_MODULES_PATH/projects/samples/curriculum" contains a rich
-collection of simulations involving the e-puck robot. You will find inside it
-all the worlds and controllers corresponding to the exercices of Cyberbotics
+The directory "WEBOTS\_MODULES\_PATH/projects/samples/curriculum" contains a
+rich collection of simulations involving the e-puck robot. You will find inside
+it all the worlds and controllers corresponding to the exercices of Cyberbotics
 robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
 Written in collaboration with professors and master students of EPFL,
 Cyberbotics curriculum is an educational document intended for all level of
@@ -208,7 +208,7 @@ present), the ground sensor values (if present) and the accelerometer values are
 displayed in the corresponding boxes on the right side of the window.
 
 This e-puck control window appears because the `robotWindow` field of the
-`DifferentialWheel` node in the world file was set to "e-puck_window". Changing
+`DifferentialWheel` node in the world file was set to "e-puck\_window". Changing
 this `robotWindow` to an empty string will disable this control window.
 
 #### BotStudio
@@ -242,7 +242,7 @@ respectively at the left and at the right of the e-puck field of view. A
 condition can be set on this value for getting a line follower behavior.
 
 BotStudio is depicted in the . An example of BotStudio can be found by opening
-the "WEBOTS_MODULES_PATH/projects/robots/e-puck/world/e-puck_botstudio.wbt"
+the "WEBOTS\_MODULES\_PATH/projects/robots/e-puck/world/e-puck\_botstudio.wbt"
 world file.
 
 The BotStudio windows appears when the e-puck's controller points on a *.bsg*
@@ -310,8 +310,8 @@ The remote control has two requirements: the Bluetooth must be correctly set up
 For setting up Bluetooth, please refer to the official e-puck website. For
 uploading the last firmware on your robot, switch on your robot, press the
 `Upload to e-puck robot...` button on the control window and finally select the
-select the COM port which corresponds to your robot and the "WEBOTS_MODULES_PATH
-/projects/robots/e-puck/transfer/firmware/firmware-x.x.x.hex" file located in
+select the COM port which corresponds to your robot and the "WEBOTS\_MODULES\_PA
+TH/projects/robots/e-puck/transfer/firmware/firmware-x.x.x.hex" file located in
 your Webots directory (*x.x.x* has to be replaced by the current firmware's
 version).
 
@@ -340,8 +340,8 @@ on the e-puck robot.
 
 
 An example of cross-compilation is given in the
-"WEBOTS_MODULES_PATH/projects/robots/e-puck/controllers/e-puck_cross-compilation
-" subdirectory of your Webots directory.
+"WEBOTS\_MODULES\_PATH/projects/robots/e-puck/controllers/e-puck\_cross-
+compilation " subdirectory of your Webots directory.
 
 #### Cross-compilation issues on Linux 64 bit
 

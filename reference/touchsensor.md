@@ -19,10 +19,10 @@ collisions and returns a boolean status. The "force" type measures the force
 exerted on the sensor's body on one axis (*z*-axis). The "force-3d" type
 measures the 3d force vector exerted by external object on the sensor's body.
 
-Examples of using the `TouchSensor` are provided by the "hoap2_sumo.wbt" and
-"hoap2_walk.wbt" worlds (located in the "projects/robots/hoap2/worlds" directory
-of Webots) and by the "force_sensor.wbt" and "bumper.wbt" worlds (located in the
-"projects/samples/devices/worlds" directory of Webots).
+Examples of using the `TouchSensor` are provided by the "hoap2\_sumo.wbt" and
+"hoap2\_walk.wbt" worlds (located in the "projects/robots/hoap2/worlds"
+directory of Webots) and by the "force\_sensor.wbt" and "bumper.wbt" worlds
+(located in the "projects/samples/devices/worlds" directory of Webots).
 
 ### Field Summary
 
@@ -70,7 +70,7 @@ magnitude of the force. The force vector must be read using the
 | Physics node | not required | required | required |
 | lookupTable | ignored | used | used |
 | return value | 0 or 1 | scalar | vector |
-| API function | wb_touch_sensor_get_value() | wb_touch_sensor_get_value() | wb_touch_sensor_get_values() |
+| API function | wb\_touch\_sensor\_get\_value() | wb\_touch\_sensor\_get\_value() | wb\_touch\_sensor\_get\_values() |
 %%end
 
 #### Lookup Table

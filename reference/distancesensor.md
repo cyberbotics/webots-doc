@@ -128,7 +128,7 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 In the case of an "infra-red" sensor, the value returned by the lookup table is
 modified by a reflection factor depending on the color properties of the object
 hit by the sensor ray. The reflection factor is computed as follows: *f = 0.2 +
-0.8 * red_level* where *red_level* is the level of red color of the object hit
+0.8 * red\_level* where *red\_level* is the level of red color of the object hit
 by the sensor ray. This level is evaluated combining the `diffuseColor` and
 `transparency` values of the object, the pixel value of the image texture and
 the paint color applied on the object with the `Pen` device. Then, the distance

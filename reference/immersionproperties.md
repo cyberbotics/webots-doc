@@ -69,7 +69,7 @@ viscous_resistance_force = - immersion_ratio * fluid_viscosity * v_force * rel_l
 viscous_resistance_torque = - immersion_ratio * fluid_viscosity * v_torque * angular_velocity
 ```
 
-where v_force (resp. v_torque) denotes the viscous resistance force (resp. torque) coefficient and immersion_ratio is obtained
+where v\_force (resp. v\_torque) denotes the viscous resistance force (resp. torque) coefficient and immersion\_ratio is obtained
 by dividing the immersed area by the full area.
 
 

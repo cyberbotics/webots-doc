@@ -20,10 +20,10 @@ Now a simulation is running.
 
 ### Create a new Project
 
-The freshly created "my_webots_projects" directory will contain all your Webots
-projects. Your first Webots project will be the tutorials of this chapter. So
-let's create now a project named "tutorials" which will contain all the
-simulations of this chapter.
+The freshly created "my\_webots\_projects" directory will contain all your
+Webots projects. Your first Webots project will be the tutorials of this
+chapter. So let's create now a project named "tutorials" which will contain all
+the simulations of this chapter.
 
 ### The Webots Graphical User Interface (GUI)
 

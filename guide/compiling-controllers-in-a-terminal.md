@@ -17,7 +17,7 @@ On Linux, type this:
 $ export WEBOTS_HOME=/usr/local/webots
 ```
 
-or add this line to your "~/.bash_profile" file.
+or add this line to your "~/.bash\_profile" file.
 On Mac OS X, type this:
 
 ```

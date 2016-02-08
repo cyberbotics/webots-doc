@@ -24,10 +24,10 @@ WorldInfo {
 ```
 
 specifies that the plugin binary file is expected to be at the location
-"my_project/plugins/physics/my_physics/my_physics[.dll|.dylib|.so]" (actual
+"my\_project/plugins/physics/my\_physics/my\_physics[.dll|.dylib|.so]" (actual
 extension depending on the platform) and that the plugin source file should be
-located in "my_project/plugins/physics/my_physics/my_physics[.c|.cpp]". If
+located in "my\_project/plugins/physics/my\_physics/my\_physics[.c|.cpp]". If
 Webots does not find the file there, it will also look in the
-"WEBOTS_HOME/resources/projects/plugins" and
-"WEBOTS_MODULES_PATH/projects/default/plugins" directories.
+"WEBOTS\_HOME/resources/projects/plugins" and
+"WEBOTS\_MODULES\_PATH/projects/default/plugins" directories.
 

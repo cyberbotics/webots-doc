@@ -8,8 +8,8 @@ languages of software packages, such as `Lisp`, `LabView`, etc. Such an
 interface can be implemented through a TCP/IP protocol that you can define
 yourself. Webots comes with an example of interfacing a simulated Khepera robot
 via TCP/IP to any third party program able to read from and write to a TCP/IP
-connection. This example world is called "khepera_tcpip.wbt", and can be found
-in the "WEBOTS_MODULES_PATH/projects/robots/khepera/khepera1/worlds" directory
+connection. This example world is called "khepera\_tcpip.wbt", and can be found
+in the "WEBOTS\_MODULES\_PATH/projects/robots/khepera/khepera1/worlds" directory
 of Webots. The simulated Khepera robot is controlled by the "tcpip" controller
 which is in the "controllers" directory of the same project. This small C
 controller comes with full source code in "tcpip.c", so that you can modify it
@@ -34,7 +34,7 @@ party software by simply implementing your library based on the given remote
 control library. Switching to the remote control mode will redirect the
 input/output to the real robot through the Inter-Process Communication (IPC). An
 example of remote control is implemented for the e-puck robot in the file
-"WEBOTS_MODULES_PATH/projects/robots/e-puck/worlds/e-puck.wbt" directory of
+"WEBOTS\_MODULES\_PATH/projects/robots/e-puck/worlds/e-puck.wbt" directory of
 Webots.
 
 The third advantage is that you can spread your controller programs over a
@@ -60,6 +60,6 @@ device, the protocol must send the images to the controller via TCP/IP, which
 might be network intensive. Hence it is recommended to have a high speed
 network, or use small resolution camera images, or compress the image data
 before sending it to the controller. This overhead is negligible if you use a
-low resolution camera such as the Khepera K213 (see example
-"WEBOTS_MODULES_PATH/projects/robots/khepera/khepera1/worlds/khepera_k213.wbt").
+low resolution camera such as the Khepera K213 (see example "WEBOTS\_MODULES\_PA
+TH/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
 

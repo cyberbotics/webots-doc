@@ -7,13 +7,13 @@ In this directory, you will find the following world files :
 
 - box.wbt
 - cone.wbt
-- convex_polygon.wbt
+- convex\_polygon.wbt
 - cylinder.wbt
-- high_resolution_indexedfaceset.wbt
-- non_convex_polygon.wbt
-- physics_primitives.wbt
+- high\_resolution\_indexedfaceset.wbt
+- non\_convex\_polygon.wbt
+- physics\_primitives.wbt
 - polyhedra.wbt
 - sphere.wbt
-- textured_shapes.wbt
-- webots_box.wbt
+- textured\_shapes.wbt
+- webots\_box.wbt
 

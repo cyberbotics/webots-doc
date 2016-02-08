@@ -63,8 +63,9 @@ apt-get install webots
 This section explains how to install Webots from the tarball package (having the
 `.tar.bz2` extension). This package can be installed without the `root`
 privileges. It can be uncompressed anywhere using the `tar` `xjf` command line.
-Once uncompressed, it is recommended to set the WEBOTS_HOME environment variable
-to point to the webots directory obtained from the uncompression of the tarball:
+Once uncompressed, it is recommended to set the WEBOTS\_HOME environment
+variable to point to the webots directory obtained from the uncompression of the
+tarball:
 
 
 ```
@@ -137,9 +138,9 @@ gdebi webots_webots_major_version.webots_minor_version.webots_bugfix_version_amd
 
 It is possible to install Webots silently from an administrator DOS console, by
 typing "webots-
-webots_major_version.webots_minor_version.webots_bugfix_version_setup.exe
+webots\_major\_version.webots\_minor\_version.webots\_bugfix\_version\_setup.exe
 /SILENT" or "webots-
-webots_major_version.webots_minor_version.webots_bugfix_version_setup.exe
+webots\_major\_version.webots\_minor\_version.webots\_bugfix\_version\_setup.exe
 /VERYSILENT"
 
 If you observe 3D rendering anomalies or Webots crashes, it is strongly

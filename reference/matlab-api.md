@@ -18,8 +18,8 @@ The following tables describe the Matlab functions.
 
 | % `Camera` : |
 | --- |
-| WB_CAMERA_COLOR |
-| WB_CAMERA_RANGE_FINDER |
+| WB\_CAMERA\_COLOR |
+| WB\_CAMERA\_RANGE\_FINDER |
 | `wb_camera_enable`(tag, ms) |
 | `wb_camera_disable`(tag) |
 | period = `wb_camera_get_sampling_period`(tag) |
@@ -31,14 +31,14 @@ The following tables describe the Matlab functions.
 | fov = `wb_camera_get_focal_distance`(tag) |
 | fov = `wb_camera_get_max_focal_distance`(tag) |
 | fov = `wb_camera_get_min_focal_distance`(tag) |
-| `wb_camera_set_focal_distance`(tag, focal_distance) |
+| `wb_camera_set_focal_distance`(tag, focal\_distance) |
 | width = `wb_camera_get_width`(tag) |
 | height = `wb_camera_get_height`(tag) |
 | near = `wb_camera_get_near`(tag) |
 | type = `wb_camera_get_type`(tag) |
 | image = `wb_camera_get_image`(tag) |
 | image = `wb_camera_get_range_image`(tag) |
-| max_range = `wb_camera_get_max_range`(tag) |
+| max\_range = `wb_camera_get_max_range`(tag) |
 | `wb_camera_save_image`(tag, 'filename', quality) |
 
 
@@ -119,7 +119,7 @@ The following tables describe the Matlab functions.
 
 | % `Emitter` : |
 | --- |
-| WB_CHANNEL_BROADCAST |
+| WB\_CHANNEL\_BROADCAST |
 | `wb_emitter_send`(tag, data) |
 | `wb_emitter_set_channel`(tag, channel) |
 | channel = `wb_emitter_get_channel`(tag) |
@@ -182,7 +182,7 @@ The following tables describe the Matlab functions.
 
 | % `Motor` : |
 | --- |
-| WB_MOTOR_ROTATIONAL, WB_MOTOR_LINEAR |
+| WB\_MOTOR\_ROTATIONAL, WB\_MOTOR\_LINEAR |
 | `wb_motor_set_position`(tag, position) |
 | `wb_motor_set_velocity`(tag, vel) |
 | `wb_motor_set_acceleration`(tag, acc) |
@@ -214,29 +214,29 @@ The following tables describe the Matlab functions.
 
 | Node: |
 | --- |
-| WB_NODE_NO_NODE, WB_NODE_APPEARANCE, WB_NODE_BACKGROUND, |
-| WB_NODE_BOX, WB_NODE_COLOR, WB_NODE_CONE, |
-| WB_NODE_COORDINATE, WB_NODE_CYLINDER, |
-| WB_NODE_DIRECTIONAL_LIGHT, WB_NODE_ELEVATION_GRID, |
-| WB_NODE_EXTRUSION, WB_NODE_FOG, WB_NODE_GROUP, |
-| WB_NODE_IMAGE_TEXTURE, WB_NODE_INDEXED_FACE_SET, |
-| WB_NODE_INDEXED_LINE_SET, WB_NODE_MATERIAL, |
-| WB_NODE_POINT_LIGHT, WB_NODE_SHAPE, WB_NODE_SPHERE, |
-| WB_NODE_SPOT_LIGHT, WB_NODE_SWITCH, |
-| WB_NODE_TEXTURE_COORDINATE, WB_NODE_TEXTURE_TRANSFORM, |
-| WB_NODE_TRANSFORM, WB_NODE_VIEWPOINT, WB_NODE_WORLD_INFO, |
-| WB_NODE_CAPSULE, WB_NODE_PLANE, WB_NODE_ROBOT, |
-| WB_NODE_SUPERVISOR, WB_NODE_DIFFERENTIAL_WHEELS, |
-| WB_NODE_SOLID, WB_NODE_PHYSICS, WB_NODE_CAMERA_ZOOM, |
-| WB_NODE_CHARGER, WB_NODE_DAMPING, |
-| WB_NODE_CONTACT_PROPERTIES, WB_NODE_ACCELEROMETER, WB_NODE_BRAKE, |
-| WB_NODE_CAMERA, WB_NODE_COMPASS, WB_NODE_CONNECTOR, |
-| WB_NODE_DISPLAY, WB_NODE_DISTANCE_SENSOR, WB_NODE_EMITTER, |
-| WB_NODE_GPS, WB_NODE_GYRO, WB_NODE_LED, |
-| WB_NODE_LIGHT_SENSOR, WB_NODE_MICROPHONE, WB_NODE_MOTOR, |
-| WB_NODE_PEN, WB_NODE_POSITION_SENSOR, WB_NODE_RADIO, |
-| WB_NODE_RECEIVER, WB_NODE_SERVO, WB_NODE_SPEAKER, |
-| WB_NODE_TOUCH_SENSOR |
+| WB\_NODE\_NO\_NODE, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, |
+| WB\_NODE\_BOX, WB\_NODE\_COLOR, WB\_NODE\_CONE, |
+| WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, |
+| WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_ELEVATION\_GRID, |
+| WB\_NODE\_EXTRUSION, WB\_NODE\_FOG, WB\_NODE\_GROUP, |
+| WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_INDEXED\_FACE\_SET, |
+| WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_MATERIAL, |
+| WB\_NODE\_POINT\_LIGHT, WB\_NODE\_SHAPE, WB\_NODE\_SPHERE, |
+| WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SWITCH, |
+| WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, |
+| WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO, |
+| WB\_NODE\_CAPSULE, WB\_NODE\_PLANE, WB\_NODE\_ROBOT, |
+| WB\_NODE\_SUPERVISOR, WB\_NODE\_DIFFERENTIAL\_WHEELS, |
+| WB\_NODE\_SOLID, WB\_NODE\_PHYSICS, WB\_NODE\_CAMERA\_ZOOM, |
+| WB\_NODE\_CHARGER, WB\_NODE\_DAMPING, |
+| WB\_NODE\_CONTACT\_PROPERTIES, WB\_NODE\_ACCELEROMETER, WB\_NODE\_BRAKE, |
+| WB\_NODE\_CAMERA, WB\_NODE\_COMPASS, WB\_NODE\_CONNECTOR, |
+| WB\_NODE\_DISPLAY, WB\_NODE\_DISTANCE\_SENSOR, WB\_NODE\_EMITTER, |
+| WB\_NODE\_GPS, WB\_NODE\_GYRO, WB\_NODE\_LED, |
+| WB\_NODE\_LIGHT\_SENSOR, WB\_NODE\_MICROPHONE, WB\_NODE\_MOTOR, |
+| WB\_NODE\_PEN, WB\_NODE\_POSITION\_SENSOR, WB\_NODE\_RADIO, |
+| WB\_NODE\_RECEIVER, WB\_NODE\_SERVO, WB\_NODE\_SPEAKER, |
+| WB\_NODE\_TOUCH\_SENSOR |
 
 
 | % `Pen` : |
@@ -247,7 +247,7 @@ The following tables describe the Matlab functions.
 
 | % `PositionSensor` : |
 | --- |
-| WB_ANGULAR, WB_LINEAR |
+| WB\_ANGULAR, WB\_LINEAR |
 | `wb_position_sensor_enable`(tag, ms) |
 | `wb_position_sensor_disable`(tag) |
 | period = `wb_position_sensor_get_sampling_period`(tag) |
@@ -257,7 +257,7 @@ The following tables describe the Matlab functions.
 
 | % `Receiver` : |
 | --- |
-| WB_CHANNEL_BROADCAST |
+| WB\_CHANNEL\_BROADCAST |
 | `wb_receiver_enable`(tag, ms) |
 | `wb_receiver_disable`(tag) |
 | period = `wb_receiver_get_sampling_period`(tag) |
@@ -273,27 +273,27 @@ The following tables describe the Matlab functions.
 
 | % `Robot` : |
 | --- |
-| WB_MODE_SIMULATION, |
-| WB_MODE_CROSS_COMPILATION, |
-| WB_MODE_REMOTE_CONTROL |
-| WB_ROBOT_KEYBOARD_END |
-| WB_ROBOT_KEYBOARD_HOME |
-| WB_ROBOT_KEYBOARD_LEFT |
-| WB_ROBOT_KEYBOARD_UP |
-| WB_ROBOT_KEYBOARD_RIGHT |
-| WB_ROBOT_KEYBOARD_DOWN |
-| WB_ROBOT_KEYBOARD_PAGEUP |
-| WB_ROBOT_KEYBOARD_PAGEDOWN |
-| WB_ROBOT_KEYBOARD_NUMPAD_HOME |
-| WB_ROBOT_KEYBOARD_NUMPAD_LEFT |
-| WB_ROBOT_KEYBOARD_NUMPAD_UP |
-| WB_ROBOT_KEYBOARD_NUMPAD_RIGHT |
-| WB_ROBOT_KEYBOARD_NUMPAD_DOWN |
-| WB_ROBOT_KEYBOARD_NUMPAD_END |
-| WB_ROBOT_KEYBOARD_KEY |
-| WB_ROBOT_KEYBOARD_SHIFT |
-| WB_ROBOT_KEYBOARD_CONTROL |
-| WB_ROBOT_KEYBOARD_ALT |
+| WB\_MODE\_SIMULATION, |
+| WB\_MODE\_CROSS\_COMPILATION, |
+| WB\_MODE\_REMOTE\_CONTROL |
+| WB\_ROBOT\_KEYBOARD\_END |
+| WB\_ROBOT\_KEYBOARD\_HOME |
+| WB\_ROBOT\_KEYBOARD\_LEFT |
+| WB\_ROBOT\_KEYBOARD\_UP |
+| WB\_ROBOT\_KEYBOARD\_RIGHT |
+| WB\_ROBOT\_KEYBOARD\_DOWN |
+| WB\_ROBOT\_KEYBOARD\_PAGEUP |
+| WB\_ROBOT\_KEYBOARD\_PAGEDOWN |
+| WB\_ROBOT\_KEYBOARD\_NUMPAD\_HOME |
+| WB\_ROBOT\_KEYBOARD\_NUMPAD\_LEFT |
+| WB\_ROBOT\_KEYBOARD\_NUMPAD\_UP |
+| WB\_ROBOT\_KEYBOARD\_NUMPAD\_RIGHT |
+| WB\_ROBOT\_KEYBOARD\_NUMPAD\_DOWN |
+| WB\_ROBOT\_KEYBOARD\_NUMPAD\_END |
+| WB\_ROBOT\_KEYBOARD\_KEY |
+| WB\_ROBOT\_KEYBOARD\_SHIFT |
+| WB\_ROBOT\_KEYBOARD\_CONTROL |
+| WB\_ROBOT\_KEYBOARD\_ALT |
 | `wb_robot_step`(ms) |
 | tag = `wb_robot_get_device`('name') |
 | size = `wb_robot_get_number_of_devices`() |
@@ -322,7 +322,7 @@ The following tables describe the Matlab functions.
 
 | % `Servo` : |
 | --- |
-| WB_SERVO_ROTATIONAL, WB_SERVO_LINEAR |
+| WB\_SERVO\_ROTATIONAL, WB\_SERVO\_LINEAR |
 | `wb_servo_set_position`(tag, position) |
 | target = `wb_servo_get_target_position`(tag) |
 | `wb_servo_set_velocity`(tag, vel) |
@@ -345,11 +345,11 @@ The following tables describe the Matlab functions.
 
 | % `Supervisor` : |
 | --- |
-| WB_SF_BOOL, WB_SF_INT32, WB_SF_FLOAT, WB_SF_VEC2F, |
-| WB_SF_VEC3F, WB_SF_ROTATION, WB_SF_COLOR, WB_SF_STRING, |
-| WB_SF_NODE, WB_MF, WB_MF_INT32, WB_MF_FLOAT, B_MF_VEC2F, |
-| WB_MF_VEC3F, WB_MF_COLOR, WB_MF_STRING, WB_MF_NODE |
-| WB_SUPERVISOR_MOVIE_READY, WB_SUPERVISOR_MOVIE_RECORDING, WB_SUPERVISOR_MOVIE_SAVING, WB_SUPERVISOR_MOVIE_WRITE_ERROR, WB_SUPERVISOR_MOVIE_ENCODING_ERROR, WB_SUPERVISOR_MOVIE_SIMULATION_ERROR |
+| WB\_SF\_BOOL, WB\_SF\_INT32, WB\_SF\_FLOAT, WB\_SF\_VEC2F, |
+| WB\_SF\_VEC3F, WB\_SF\_ROTATION, WB\_SF\_COLOR, WB\_SF\_STRING, |
+| WB\_SF\_NODE, WB\_MF, WB\_MF\_INT32, WB\_MF\_FLOAT, B\_MF\_VEC2F, |
+| WB\_MF\_VEC3F, WB\_MF\_COLOR, WB\_MF\_STRING, WB\_MF\_NODE |
+| WB\_SUPERVISOR\_MOVIE\_READY, WB\_SUPERVISOR\_MOVIE\_RECORDING, WB\_SUPERVISOR\_MOVIE\_SAVING, WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR, WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR |
 | `wb_supervisor_export_image`('filename', quality) |
 | node = `wb_supervisor_node_get_root`() |
 | node = `wb_supervisor_node_get_self`() |
@@ -409,17 +409,17 @@ The following tables describe the Matlab functions.
 | `wb_supervisor_field_set_mf_color`(field, index, [r g b]) |
 | `wb_supervisor_field_set_mf_string`(field, index, 'value') |
 | `wb_supervisor_field_import_mf_node`(field, position, 'filename') |
-| `wb_supervisor_field_import_mf_node_from_string`(field, position, 'node_string') |
+| `wb_supervisor_field_import_mf_node_from_string`(field, position, 'node\_string') |
 | `wb_supervisor_field_remove_mf_node`(field, position) |
 | type = `wb_supervisor_node_get_type`(node) |
 | name = `wb_supervisor_node_get_type_name`(node) |
 | name = `wb_supervisor_node_get_base_type_name`(node) |
-| field = `wb_supervisor_node_get_field`(node, 'field_name') |
+| field = `wb_supervisor_node_get_field`(node, 'field\_name') |
 | position = `wb_supervisor_node_get_position`(node) |
 | orientation = `wb_supervisor_node_get_orientation`(node) |
 | com = `wb_supervisor_node_get_center_of_mass`(node) |
-| contact_point = `wb_supervisor_node_get_contact_point`(node, index) |
-| number_of_contacts = `wb_supervisor_node_get_number_of_contact_points`(index) |
+| contact\_point = `wb_supervisor_node_get_contact_point`(node, index) |
+| number\_of\_contacts = `wb_supervisor_node_get_number_of_contact_points`(index) |
 | balance = `wb_supervisor_node_get_static_balance`(node) |
 | velocity = `wb_supervisor_node_get_velocity`(node) |
 | `wb_supervisor_node_set_velocity`(node, velocity) |
@@ -428,8 +428,8 @@ The following tables describe the Matlab functions.
 
 | % `TouchSensor` : |
 | --- |
-| WB_TOUCH_SENSOR_BUMPER, WB_TOUCH_SENSOR_FORCE, |
-| WB_TOUCH_SENSOR_FORCE3D |
+| WB\_TOUCH\_SENSOR\_BUMPER, WB\_TOUCH\_SENSOR\_FORCE, |
+| WB\_TOUCH\_SENSOR\_FORCE3D |
 | `wb_touch_sensor_enable`(tag, ms) |
 | `wb_touch_sensor_disable`(tag) |
 | period = `wb_touch_sensor_get_sampling_period`(tag) |

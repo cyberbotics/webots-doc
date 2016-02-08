@@ -75,7 +75,7 @@ robot can be programmed respectively in C, C++, Java or Python. It is not
 possible for a processor that can be programmed only in assembler or another
 specific language. Webots includes the source code of such a cross-compilation
 system for the e-puck and the Hemisson robot. Samples are located in the
-"WEBOTS_MODULES_PATH/projects/robots" directory.
+"WEBOTS\_MODULES\_PATH/projects/robots" directory.
 
 #### Developing a custom library
 

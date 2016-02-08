@@ -42,7 +42,7 @@ $ gdb ./webots-bin
 
 Note that the above path corresponds to a default Webots installation on Linux:
 the actual path might be different depending on your specific system or
-installation. The LD_LIBRARY_PATH environment variable indicates where to find
+installation. The LD\_LIBRARY\_PATH environment variable indicates where to find
 the shared libraries that will be required by Webots.
 
 When Webots window appears, run the simulation until it crashes, or make it

@@ -178,11 +178,11 @@ eventually *explode* unless a functional force control algorithm is used.
 |  | position control | velocity control | force control |
 | --- | --- | --- | --- | --- |
 | uses P-controller | yes | no | no |
-| wb_servo_set_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
-| wb_servo_set_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
-| wb_servo_set_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
-| wb_servo_set_motor_force() | specifies the available force | specifies the available force | specifies the max force |
-| wb_servo_set_force() | switches to force control | switches to force control | * specifies the desired force |
+| wb\_servo\_set\_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
+| wb\_servo\_set\_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
+| wb\_servo\_set\_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
+| wb\_servo\_set\_motor\_force() | specifies the available force | specifies the available force | specifies the max force |
+| wb\_servo\_set\_force() | switches to force control | switches to force control | * specifies the desired force |
 %%end
 
 ### Servo Limits

@@ -85,7 +85,7 @@ int main() {
 
 As you can notice, prior to using a device, it is necessary to get the corresponding device tag (`WbDeviceTag`); this is done using the `wb_robot_get_device()` function.
 The `WbDeviceTag` is an opaque type that is used to identify a device in the controller code.
-Note that the string passed to this function, *"my_distance_sensor"* in this example, refers to a device name specified in the robot description (".wbt" or ".proto" file).
+Note that the string passed to this function, *"my\_distance\_sensor"* in this example, refers to a device name specified in the robot description (".wbt" or ".proto" file).
 If the robot has no device with the specified name, this function returns 0.
 
 Each sensor must be enabled before it can be used. If a sensor is not enabled it
@@ -483,7 +483,7 @@ Creating shared libraries can be very useful to share code between controllers
 and/or plugins. There are several ways to do so, but we recommend to place them
 into a subdirectory of the `libraries` directory of your project. Indeed the
 environment variables of the controllers are modified to include these paths
-into your [[DY]LD_LIBRARY_]PATH environment variable (depending on the OS).
+into your [[DY]LD\_LIBRARY\_]PATH environment variable (depending on the OS).
 Moreover the main Makefile (`WEBOTS_HOME/resources/Makefile.include`) used to
 compile Webots controllers is able to create shared libraries and to link easily
 with the Controller libraries, ODE or the Qt framework.
@@ -494,7 +494,7 @@ A good example of this is the Qt utility library located there:
 If for some reason shared libraries cannot be in the `libraries` directory, the
 `WEBOTS_LIBRARY_PATH` environment variable will be very helpful. The paths it
 contains will be added at the beginning of the library search
-path([[DY]LD_LIBRARY_]PATH) when starting the controller.
+path([[DY]LD\_LIBRARY\_]PATH) when starting the controller.
 
 ### Environment variables
 

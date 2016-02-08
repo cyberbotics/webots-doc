@@ -23,11 +23,11 @@ of the PROTO, before being loaded in Webots. The template engine used is
 - A template statement is encapsulated inside the "%{" and the "}%" tokens and can be written on several lines.
 - Adding an "=" just after the opening token ("%{=") allows to evaluate a statement.
 - The fields are accessible into a global Lua dictionary named "fields". The dictionary keys matches the PROTO's fields names. Each entry of this dictionary is a sub-dictionary with two keys named "value" and "defaultValue", the first one contains the current state of the field and the second one contains its the default state. The conversion between the VRML types and the Lua types is detailed in .
-- As shown in , the conversion of a VRML node is a Lua dictionary. This dictionary contains the following keys: "node_name" containing the VRML node name, "fields" which is a dictionary containing the Lua representation of the VRML node fields, and "super" which can contains the super PROTO node (the node above in the hierarchy) if existing. This dictionary is equal to `nil` if the VRML node is not defined (`NULL`). For example, in the SimpleStairs example below, the `fields.appearance.node_name` key contains the `'Appearance'` string.
+- As shown in , the conversion of a VRML node is a Lua dictionary. This dictionary contains the following keys: "node\_name" containing the VRML node name, "fields" which is a dictionary containing the Lua representation of the VRML node fields, and "super" which can contains the super PROTO node (the node above in the hierarchy) if existing. This dictionary is equal to `nil` if the VRML node is not defined (`NULL`). For example, in the SimpleStairs example below, the `fields.appearance.node_name` key contains the `'Appearance'` string.
 - The `context` dictionary provides contextual information about the PROTO. Table shows the available information and its corresponding keys.
 - The VRML comment ("#") prevails over the Lua statements.
 - The following Lua modules are availble directly: base, table, io, os, string, math, debug, package.
-- The LUA_PATH environment variable can be modified (before running Webots) to include external Lua modules.
+- The LUA\_PATH environment variable can be modified (before running Webots) to include external Lua modules.
 - Lua standard output and error streams are redirected on the Webots console (written respectively in regular and in red colors). This allows developers to use the Lua regular functions to write on these streams.
 
 %figure "VRML type to Lua type conversion"
@@ -41,7 +41,7 @@ of the PROTO, before being loaded in Webots. The template engine used is
 | SFVec3f | dictionary (keys = "x", "y" and "z") |
 | SFRotation | dictionary (keys = "x", "y", "z" and "a") |
 | SFColor | dictionary (keys = "r", "g" and "b") |
-| SFNode | dictionary (keys = "node_name", "fields"[, "super"]) |
+| SFNode | dictionary (keys = "node\_name", "fields"[, "super"]) |
 | MF* | array (indexes = multiple value positions) |
 %%end
 
@@ -50,10 +50,10 @@ of the PROTO, before being loaded in Webots. The template engine used is
 | --- | --- |
 | world | absolute path to the current world file (including file name and extension) |
 | proto | absolute path to the current PROTO file (including file name and extension) |
-| project_path | absolute path to the current project directory |
-| webots_version | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
-| webots_home | absolute path to the Webots installation directory |
-| webots_modules_path | absolute path to the Webots modules directory |
+| project\_path | absolute path to the current project directory |
+| webots\_version | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
+| webots\_home | absolute path to the Webots installation directory |
+| webots\_modules\_path | absolute path to the Webots modules directory |
 %%end
 
 ### Example

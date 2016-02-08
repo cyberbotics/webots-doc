@@ -32,7 +32,7 @@ of that particular part.
 
 A simulation example that shows both the `GPS` and the `Supervisor` techniques
 is included in the Webots installation, you just need to open this world:
-"WEBOTS_MODULES_PATH/projects/samples/devices/worlds/gps.wbt".
+"WEBOTS\_MODULES\_PATH/projects/samples/devices/worlds/gps.wbt".
 
 #### In physics plugin code:
 
@@ -79,7 +79,7 @@ Please see .
 
 This message means that Webots could neither find an executable file (e.g. .exe), nor an interpreted language file (e.g. .class, .py, .m) to run as controller program for a robot.
 In fact, Webots needs each controller file to be stored at specific location in order to be able to executed it.
-The requested location is in the "controllers" subdirectory of the current Webots project directory, e.g. "my_project".
+The requested location is in the "controllers" subdirectory of the current Webots project directory, e.g. "my\_project".
 Inside the "controllers" directory, each controller project must be stored in its own directory which must
 be named precisely like the `controller` field of the Robot.
 Inside that directory, the executable/interpretable file must also be named after the `controller` field of the Robot (plus a possible extension).

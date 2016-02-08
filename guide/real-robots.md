@@ -1,9 +1,9 @@
 ## Real Robots
 
 This section discusses worlds containing models of real robots. The world files
-for these examples are located in the "robots/(robot_name)/worlds" directory,
+for these examples are located in the "robots/(robot\_name)/worlds" directory,
 and the corresponding controllers are located in the
-"robots/(robot_name)/controllers" directory.
+"robots/(robot\_name)/controllers" directory.
 
 ### aibo_ers210_rough.wbt
 
@@ -61,7 +61,7 @@ by using the Braitenberg technique. The odometry of the e-puck is computed at
 each simulation steps. The accelerometer values and an estimation the coverage
 distance and the orientation of the e-puck are displayed. The source code for
 this controller is in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### e-puck_line.wbt
 
@@ -75,8 +75,8 @@ the ground. In the middle of this line there is an obstacle which the robot is
 unable to avoid. This example has been developed as a practical assignment on
 behavior-based robotics. When completed, the controller should allow the E-puck
 robot to avoid this obstacle and recover its path afterwards. A solution for
-this assignment is shown in the world e-puck_line_demo.wbt (see ). The source
-code for this controller is in the "e-puck_line" directory.
+this assignment is shown in the world e-puck\_line\_demo.wbt (see ). The source
+code for this controller is in the "e-puck\_line" directory.
 
 ### e-puck_line_demo.wbt
 
@@ -136,10 +136,10 @@ this controller is in the "hoap2" directory.
 
 In this example, two IPR robots from Neuronics work together to put three red
 cubes into a basket which is on the opposite side of the world. All the IPR
-robots use the same controller, whose source code is in the "ipr_serial"
+robots use the same controller, whose source code is in the "ipr\_serial"
 directory. This particular example uses, in addition to this controller, a
 client program which coordinates the movements of the robots. The source code
-for this client is in the "ipr_serial/client/ipr_collaboration.c" file.
+for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
 
 ### ipr_cube.wbt
 
@@ -150,9 +150,9 @@ for this client is in the "ipr_serial/client/ipr_collaboration.c" file.
 
 In this example, an IPR robots from Neuronics moves a small red cube onto a
 bigger one. All the IPR robots use the same controller, whose source code is in
-the "ipr_serial" directory. This example also uses a client program which drives
-the movements of the robot. The source code of this client is in the
-"ipr_serial/client/ipr_cube.c" file.
+the "ipr\_serial" directory. This example also uses a client program which
+drives the movements of the robot. The source code of this client is in the
+"ipr\_serial/client/ipr\_cube.c" file.
 
 ### ipr_factory.wbt
 
@@ -164,10 +164,10 @@ the movements of the robot. The source code of this client is in the
 In this example, two IPR robots from Neuronics take industrial parts from a
 conveyor belt and place them into slots. One of the robots detects the objects
 using an infrared sensor on the conveyor belt, while the other one waits. All
-the IPR robots use the same controller, whose source code is in the "ipr_serial"
-directory. This example also uses a client program which coordinates the
-movements of the robots. The source code for this client is in the file
-"ipr_serial/client/ipr_factory.c".
+the IPR robots use the same controller, whose source code is in the
+"ipr\_serial" directory. This example also uses a client program which
+coordinates the movements of the robots. The source code for this client is in
+the file "ipr\_serial/client/ipr\_factory.c".
 
 ### ipr_models.wbt
 
@@ -180,7 +180,7 @@ In this example, you can see all the different types of IPR model provided by
 Webots : HD6M180, HD6Ms180, HD6M90 and HD6Ms90. This world is intended to be the
 example from which you can copy the models of IPR robots into your own worlds.
 All the IPR robots use the same controller, whose source code is in the
-"ipr_serial" directory.
+"ipr\_serial" directory.
 
 ### khepera.wbt
 
@@ -192,7 +192,7 @@ All the IPR robots use the same controller, whose source code is in the
 In this example, you can see a Khepera robot from K-Team moving inside an arena
 while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is located in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### khepera2.wbt
 
@@ -204,7 +204,7 @@ while avoiding the walls. Like many other examples, this one uses the
 In this example, you can see a Khepera II robot from K-Team moving inside an
 arena while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### khepera3.wbt
 
@@ -216,7 +216,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 In this example, you can see a Khepera III robot from K-Team moving inside an
 arena while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### khepera_kinematic.wbt
 
@@ -229,7 +229,7 @@ In this example, you can see two Khepera robots from K-Team moving inside an
 arena while avoiding each other and the walls. It is a good example of how to
 use teh kinematic mode of Webots. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### khepera_gripper.wbt
 
@@ -241,7 +241,7 @@ use teh kinematic mode of Webots. Like many other examples, this one uses the
 In this example, you can see a Khepera robot from K-Team equipped with a
 gripper. The robot uses its gripper to grab a stick, move a bit with it and drop
 it on the ground. This behavior is repeated endlessly. The source code for this
-controller is in the "khepera_gripper" directory.
+controller is in the "khepera\_gripper" directory.
 
 ### khepera_gripper_camera.wbt
 
@@ -254,7 +254,7 @@ In this example, you can see a Khepera robot from K-Team equipped with a gripper
 and a `Camera` device. The robot uses its gripper to grab a stick, move a bit
 with it and drop it on the floor. This behavior is repeated endlessly. In this
 world, the robot does not analyse the images it takes with its camera. The
-source code for this controller is in the "khepera_gripper" directory.
+source code for this controller is in the "khepera\_gripper" directory.
 
 ### khepera_k213.wbt
 
@@ -269,7 +269,7 @@ Using this device, the robot is able to translate the information contained in
 the image into text and print this result in the Console window. When you load
 this world, the robot will not begin to move immediately. It will give you
 enough time to read the explanations printed in the Console window concerning
-this world. The source code for this controller is in the "khepera_k213"
+this world. The source code for this controller is in the "khepera\_k213"
 directory.
 
 ### khepera_pipe.wbt
@@ -313,7 +313,7 @@ directory.
 In this example, you can see a Koala robot from K-Team moving inside an arena
 while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is located in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### magellan.wbt
 
@@ -326,7 +326,7 @@ In this example, you can see a Magellan robot moving inside an arena while
 avoiding the walls. As this robot is no longer produced, its world file is in
 the "others/worlds" directory. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is located in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### pioneer2.wbt
 
@@ -338,7 +338,7 @@ the "others/worlds" directory. Like many other examples, this one uses the
 In this example, you can see a Pioneer 2 robot from ActivMedia Robotics moving
 inside an arena while avoiding the walls. Like many other examples, this one
 uses the `braitenberg` controller. The source code for this controller is in the
-"WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### rover.wbt
 
@@ -366,7 +366,8 @@ directory.
 In this example, a Scout 2 robot moves inside an arena while avoiding the walls.
 Its world file is in the "others/worlds" directory. Like many other examples,
 this one uses the braitenberg controller. The source code for this controller is
-in the "WEBOTS_MODULES_PATH/projects/default/controllers/braitenberg" directory.
+in the "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg"
+directory.
 
 ### shrimp.wbt
 
@@ -392,9 +393,9 @@ plugins for:
 - how to create spongy tires
 
 The source code for this controller is in the
-"WEBOTS_MODULES_PATH/projects/robots/shrimp/controllers/shrimp" directory, and
+"WEBOTS\_MODULES\_PATH/projects/robots/shrimp/controllers/shrimp" directory, and
 the ODE plugin is in the
-"WEBOTS_MODULES_PATH/projects/robots/shrimp/plugins/physics/shrimp" directory.
+"WEBOTS\_MODULES\_PATH/projects/robots/shrimp/plugins/physics/shrimp" directory.
 
 ### bioloid.wbt
 
@@ -415,7 +416,7 @@ robot.
 
 The source code for the controller of the robot, as well as the model of the
 robot are located under the Webots installation directory, in the
-"WEBOTS_MODULES_PATH/projects/robots/bioloid" sub folder:
+"WEBOTS\_MODULES\_PATH/projects/robots/bioloid" sub folder:
 
 - "controllers/bioloid/": controller directory.
 - "worlds/bioloid.wbt": world definition file containing a Bioloid dog robot.

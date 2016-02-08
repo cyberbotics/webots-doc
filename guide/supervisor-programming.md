@@ -74,8 +74,8 @@ Otherwise the `Supervisor` works like a regular `Robot` controller and everythin
 As illustrated by the example, it is better to get the `WbNodeRef`s and
 `WbFieldRef`s only once, at the beginning of the simulation (keeping the
 invariants out of the loop). The call to `wb_supervisor_node_get_from_def()`
-searches for an object named "MY_ROBOT" in the Scene Tree. Note that the name in
-question is the DEF name of the object, not the name field which is used to
+searches for an object named "MY\_ROBOT" in the Scene Tree. Note that the name
+in question is the DEF name of the object, not the name field which is used to
 identify devices. The function returns a `WbNodeRef` which is an opaque and
 unique reference to the corresponding Scene Tree node. Then the call to
 `wb_supervisor_node_get_field()` finds a `WbFieldRef` in the specified node. The

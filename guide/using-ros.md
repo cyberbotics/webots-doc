@@ -47,16 +47,16 @@ third-party packages.
 During simulation there can be multiple instances of robots or devices and other
 Webots applications connected to the ROS network. Therefore the controller uses
 a specific syntax to declare its services or topics on the network:
-"[robot_unique_name]/[device_name]/[service/topic_name]"
+"[robot\_unique\_name]/[device\_name]/[service/topic\_name]"
 
-"[robot_unique_name]": in order to avoid any misunderstanding between different
-instances of the same robot, the name of the robot is followed by the ID of the
-process and the IP address of the computer.
+"[robot\_unique\_name]": in order to avoid any misunderstanding between
+different instances of the same robot, the name of the robot is followed by the
+ID of the process and the IP address of the computer.
 
-"[device_name]": since the same function can refer to different devices, this
+"[device\_name]": since the same function can refer to different devices, this
 field show you which device it refers to.
 
-"[service/topic_name]": this field is equal or really close to the Webots
+"[service/topic\_name]": this field is equal or really close to the Webots
 function it corresponds. For topics, it is followed by the sampling period. For
 services, it is also the name of the corresponding srv file.
 
@@ -67,8 +67,8 @@ to load it on your robot; you will find it in the default list of controller. In
 order to use it, you will have to build a ROS node that will communicates with
 the robot using the different services available. Good examples of such ROS node
 can be found inside Webots at
-"WEBOTS_MODULES_PATH/projects/languages/ros/nodes". In this folder you will find
-useful instructions to help you.
+"WEBOTS\_MODULES\_PATH/projects/languages/ros/nodes". In this folder you will
+find useful instructions to help you.
 
 #### Custom Controller
 
@@ -79,7 +79,7 @@ own custom controller and ROS node.
 
 It is possible to implement such a ROS node in C++ using the "roscpp" library.
 However, in this case, you need to setup a build configuration to handle both
-the "catkin_make" from ROS and the "Makefile" from Webots to have the resulting
+the "catkin\_make" from ROS and the "Makefile" from Webots to have the resulting
 binary linked both against the Webots "libController" and the "roscpp" library.
 An example of such an implementation is included in the Webots distribution (see
 below).
@@ -92,10 +92,10 @@ supervisor controller.
 
 A sample C++ ROS node running as a Webots controller is provided in the Webots
 distribution for Linux. It is located in the Webots
-"WEBOTS_MODULES_PATH/projects/languages/ros/custom" folder and contains a world
-file named "joystick.wbt" and a controller named "joystick" which allows the
-user to drive a simulated robot using a joystick through the ROS joy node. This
-controller is a very simple example of a ROS node running as a Webots
+"WEBOTS\_MODULES\_PATH/projects/languages/ros/custom" folder and contains a
+world file named "joystick.wbt" and a controller named "joystick" which allows
+the user to drive a simulated robot using a joystick through the ROS joy node.
+This controller is a very simple example of a ROS node running as a Webots
 controller. It could be used as a starting point to develop more complex
 interfaces between Webots and ROS. The controller directory includes all the
 "Makefile" machinery to call the build tools used by ROS and Webots to produce

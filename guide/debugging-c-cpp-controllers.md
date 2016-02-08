@@ -35,11 +35,11 @@ $ ps -e
 On Mac OS X, use rather `ps -x` and on Windows use the *Task Manager* for this.
 If one of your robot controllers is missing in the list (or appearing as
 *ltdefunctgt*) this confirms that it has crashed and therefore blocked the
-simulation. In this example the "soccer_supervisor" has crashed. Note that the
+simulation. In this example the "soccer\_supervisor" has crashed. Note that the
 crash of a controller is almost certainly caused by an error in the controller
 code, because an error in Webots would have caused Webots to crash. Fortunately,
 the GNU debugger (`gdb`) can usually help finding the reason of the crash. The
-following example assumes that there is a problem with the "soccer_supervisor"
+following example assumes that there is a problem with the "soccer\_supervisor"
 controller and indicates how to proceed with the debugging.
 
 ### Using the GNU debugger with a controller
@@ -66,7 +66,7 @@ $ make
 Note that, the *-g* flag should now appear in the compilation line. Once you
 have recompiled the controller, hit the `Pause` and `Revert` buttons. This
 pauses the simulation and reloads the freshly compiled versions of the
-controller. Now find the process ID (PID) of the "soccer_supervisor" process,
+controller. Now find the process ID (PID) of the "soccer\_supervisor" process,
 using `ps -e` (Linux) or `ps -x` (Mac OS X), or using the *Task Manager*
 (Windows). The PID is in the left-most column of output of `ps` as shown above.
 Then open a terminal and start the debugger by typing:
@@ -81,8 +81,8 @@ $ gdb
 Continuing.
 ```
 
-Where PID stands for the PID of the "soccer_supervisor" process. The `attach`
-command will attach the debugger to the "soccer_supervisor" process and
+Where PID stands for the PID of the "soccer\_supervisor" process. The `attach`
+command will attach the debugger to the "soccer\_supervisor" process and
 interrupt its execution. Then the `cont` command will instruct the debugger to
 resume the execution of the process. (On Windows you will need to install the
 "gdb.exe" file separately and use an MSYS console to achieve this.)
@@ -119,10 +119,10 @@ By examining carefully the call stack you can locate the source of the error. In
 this example we will assume that the `sprintf()` function is OK, because it is
 in a system library. Therefore it seems that the problem is caused by an illegal
 use of the `sprintf()` function in the `run()` function. The line 106 of the
-source file "soccer_supervisor.c" must be examined closely. While the controller
-is still in memory you can query the values of some variables in order to
-understand what happened. For example, you can use the `frame` and `print`
-commands:
+source file "soccer\_supervisor.c" must be examined closely. While the
+controller is still in memory you can query the values of some variables in
+order to understand what happened. For example, you can use the `frame` and
+`print` commands:
 
 
 ```
@@ -137,7 +137,7 @@ $1 = 0x0
 The `frame` command instructs the debugger to select the specified stack frame,
 and the `print` command prints the current value of an expression. In this
 simple example we clearly see that the problem is caused by a NULL (0x0)
-*time_string* argument passed to the `sprintf()` function. The next steps are
+*time\_string* argument passed to the `sprintf()` function. The next steps are
 to: fix the problem, recompile the controller and revert the simulation to give
 it another try. Once it works correctly you can remove the *-g* flag from the
 Makefile.

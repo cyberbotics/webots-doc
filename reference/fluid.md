@@ -36,8 +36,8 @@ Note that in the `Fluid` node, the `scale` field inherited from the `Transform`
 must always remain uniform, i.e., of the form `x x x` where `x` is any positive
 real number. This ensures that all primitive geometries will remain suitable for
 ODE immersion detection. Whenever a scale coordinate is changed, the two other
-ones are automatically changed to this new value. If a scale coordinate is
-assigned a non-positive value, it is automatically changed to 1.
+ones are automatically changed to this new value. If a non-positive value is
+assigned to a scale coordinate, the value is automatically changed to 1.
 
 - `name`: name of the fluid. This is the name used in a `ImmersionProperties` to refer to a given `Fluid`.
 - `model`: generic name of the fluid, e.g., "sea".

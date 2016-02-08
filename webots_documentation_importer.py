@@ -117,6 +117,8 @@ class BookParser:
             if child.text:
                 if child.tag == 'bold':
                     text += '**' + self.parseText(child.text, True) + '**'
+                elif child.tag == 'email':
+                    text += '[' + self.parseText(child.text, True) + '](mailto:' + self.parseText(child.text, True) + ')'
                 elif child.tag == 'emphasis':
                     text += '*' + self.parseText(child.text, True) + '*'
                 elif child.tag == 'filename':

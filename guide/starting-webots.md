@@ -41,9 +41,9 @@ OPTIONS:
                               exit
   --version                   display version information and exit
   --uuid                      display the UUID of the computer and exit
-  --stdout                    redirect the controller stdout to the 
+  --stdout                    redirect the controller stdout to the
                               terminal
-  --stderr                    redirect the controller stderr to the 
+  --stderr                    redirect the controller stderr to the
                               terminal
   --disable-modules-download  skip the check for module updates
   --force-modules-download    automatically download module updates

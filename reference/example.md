@@ -22,8 +22,8 @@ PROTO TwoColorChair [
   field SFVec3f    translation       0 0.91 0
   field SFRotation rotation          0 1 0 0
   field SFColor    legColor          1 1 0
-  field SFColor    seatColor         1 0.65 0 
-  field SFNode     seatGeometry      NULL 
+  field SFColor    seatColor         1 0.65 0
+  field SFNode     seatGeometry      NULL
   field MFNode     seatExtensionSlot []       ]
 {
   Solid {
@@ -125,7 +125,6 @@ TwoColorChair {
     }
   ]
 }
-
 ```
 
 The "TwoChairs.wbt" file once loaded by Webots appears as shown in .

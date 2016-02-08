@@ -12,7 +12,6 @@ HingeJointParameters {
   field SFFloat suspensionDampingConstant 0     # linear damping constant along the suspension axis (Ns/m)
   field SFVec3f suspensionAxis            1 0 0 # direction of the suspension axis
 }
-
 ```
 
 ### Description

@@ -14,7 +14,6 @@ functions:
 
 void dJointSetHingeSuspensionAxis (dJointID, dReal x, dReal y, dReal z);
 void dJointGetHingeSuspensionAxis (dJointID, dVector3 result);
-    
 ```
 
 Furthermore, the `dJointSetHingeParam()` and `dJointGetHingeParam()` functions
@@ -32,6 +31,5 @@ two functions:
 
 void dJointSetHinge2SuspensionAxis (dJointID, dReal x, dReal y, dReal z);
 void dJointGetHinge2SuspensionAxis (dJointID, dVector3 result);
-    
 ```
 

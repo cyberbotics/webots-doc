@@ -45,6 +45,5 @@ controllers/simple_controller/
 controllers/simple_controller/Makefile
 controllers/simple_controller/simple_controller.c
 controllers/simple_controller/simple_controller[.exe]
-    
 ```
 

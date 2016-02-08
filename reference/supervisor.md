@@ -271,7 +271,6 @@ correspond to semi-transparent levels.
 ```
 
 wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0);
-      
 ```
 
 
@@ -281,7 +280,6 @@ window.
 ```
 
 wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5);
-      
 ```
 
 
@@ -290,7 +288,6 @@ will display the label "hello Webots" in semi-transparent green, just below.
 ```
 
 supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0);
-      
 ```
 
 

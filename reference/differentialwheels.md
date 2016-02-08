@@ -9,7 +9,7 @@ DifferentialWheels {
   SFFloat   axleLength          0.1    # (0,inf)
   SFFloat   wheelRadius         0.01   # (0,inf)
   SFFloat   maxSpeed            10     # (0,inf)
-  SFFloat   maxAcceleration     10     
+  SFFloat   maxAcceleration     10
   SFFloat   speedUnit           1
   SFFloat   slipNoise           0.1    # [0,inf)
   SFFloat   encoderNoise        -1

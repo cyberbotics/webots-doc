@@ -37,7 +37,6 @@ ots\_joystick/src/webots\_joystick\_node.cpp" and the ROS launcher file
         execlp("roslaunch","roslaunch","joy.launch",NULL);
         return 0;
       }
-    
 ```
 
 We will be done once we will have provided Webots with an executable file in

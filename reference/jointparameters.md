@@ -8,10 +8,9 @@ JointParameters {
   field SFFloat minStop         0 # low stop position (m or rad)
   field SFFloat maxStop         0 # high stop position (m or rad)
   field SFFloat springConstant  0 # spring constant (N/m or Nm)
-  field SFFloat dampingConstant 0 # damping constant (Ns/m or Nms) 
+  field SFFloat dampingConstant 0 # damping constant (Ns/m or Nms)
   field SFFloat staticFriction  0 # friction constant (Ns/m or Nms)
 }
-
 ```
 
 ### Description

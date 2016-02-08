@@ -83,15 +83,15 @@ use a `TextureTransform` node to reverse the texture coordinate, like this:
 
 
 ```
-Shape { 
-  appearance Appearance { 
+Shape {
+  appearance Appearance {
     textureTransform TextureTransform {
       scale 1 -1
-    } 
-  } 
+    }
+  }
   geometry ElevationGrid {
     ...
-  } 
+  }
 }
 ```
 

@@ -14,7 +14,7 @@ command somewhere in the control loop in order to flush the graphics.
 Here is a simple `MATLAB` controller example:
 
 ```
-% uncomment the next two lines to use the 
+% uncomment the next two lines to use the
 ```
 
 

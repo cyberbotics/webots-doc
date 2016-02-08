@@ -147,7 +147,6 @@ closed. Here is an example :
   const int px[] = {10,20,10, 0};
   const int py[] = {0, 10,20,10};
   wb_display_draw_polygon(display,px,py,4); // draw a diamond
-        
 ```
 
 `wb_display_draw_text()` draws an ASCII text from the (`x`,`y`) coordinate. The

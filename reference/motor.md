@@ -115,8 +115,8 @@ At each simulation step, the PID-controller (2) recomputes the current velocity
 *Vc* according to following algorithm:
 
 ```
-error = Pt - Pc; 
-error_integral += error * ts; 
+error = Pt - Pc;
+error_integral += error * ts;
 error_derivative = (previous_error - error) / ts;
 Vc = P * error + D * error_derivative + I * error_integral ;
 if (abs(Vc) > Vd)

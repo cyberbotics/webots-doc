@@ -120,7 +120,6 @@ these functions:
 const double *wb_gps_get_values(WbDeviceTag tag);
 const double *wb_accelerometer_get_values(WbDeviceTag tag);
 const double *wb_gyro_get_values(WbDeviceTag tag);
-    
 ```
 
 Each function returns a pointer to three double values. The pointer is the
@@ -282,7 +281,7 @@ specified with the first call to `wb_motor_set_position()` will be overwritten
 by the second call:
 
 ``` c
-wb_motor_set_position(my_leg, 0.34);  // BAD: ignored 
+wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
 wb_motor_set_position(my_leg, 0.56);
 wb_robot_step(40);
 ```
@@ -362,15 +361,15 @@ int main() {
 
   while (1) {
     wb_robot_step(TIME_STEP);
-    
+
     // read sensors
     double left_dist = wb_distance_sensor_get_value(left_sensor);
     double right_dist = wb_distance_sensor_get_value(right_sensor);
-    
+
     // compute behavior
     double left = compute_left_speed(left_dist, right_dist);
     double right = compute_right_speed(left_dist, right_dist);
-    
+
     // actuate wheel motors
     wb_differential_wheels_set_speed(left, right);
   }
@@ -423,7 +422,6 @@ argv[0]=demo
 argv[1]=one
 argv[2]=two
 argv[3]=three
-
 ```
 
 
@@ -572,16 +570,16 @@ Here is an example of a typical runtime.ini file.
 
        [environment variables with relative paths]
        WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
-       
+
        [environment variables]
        ROS_MASTER_URI = http://localhost:11311
-       
+
        [environment variables for Windows]
        NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
-       
+
        [environment variables for Mac OS X]
        NAOQI_LIBRARY_FOLDER = lib
-       
+
        [environment variables for Linux]
        NAOQI_LIBRARY_FOLDER = lib
 ```

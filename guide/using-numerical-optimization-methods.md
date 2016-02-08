@@ -28,7 +28,7 @@ controller:
 ``` c
 #include ltwebots/robot.hgt
 #include ltwebots/supervisor.hgt
-      
+
 #define TIME_STEP 5
 
 int main() {
@@ -43,17 +43,16 @@ int main() {
         actuateMotors(a, b, time);
         wb_robot_step(TIME_STEP);
       }
-      
+
       // compute and print fitness
       double fitness = computeFitness();
       printf("with parameters: %g %g, fitness was: %g\n", a, b, fitness);
     }
   }
-  
+
   wb_robot_cleanup();
   return 0;
-}  
-
+}
 ```
 
 In this example the robot runs for 30 simulated seconds and then the fitness is
@@ -162,9 +161,9 @@ void evaluate_next_robot() {
     wb_robot_step(TIME_STEP);
   }
   ...
-  // compute and store fitness  
+  // compute and store fitness
   double fitness = compute_fitness();
-  optimizer_set_fitness(fitness);  
+  optimizer_set_fitness(fitness);
   ...
   // save complete optimization state to a file
   optimizer_save_state("my_state_file.txt");

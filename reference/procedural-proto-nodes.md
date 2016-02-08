@@ -97,10 +97,10 @@ PROTO SimpleStairs [
     if fields.nSteps.value lt 1 then
       print('nSteps should be strictly positive')
     end
-    
+
     -- print the path to this proto
     print(context.proto)
-    
+
     if fields.stepSize.value ~= fields.stepSize.defaultValue then
       print('The step size used is not the default one')
     end
@@ -140,6 +140,5 @@ PROTO SimpleStairs [
   }
   # template statements can be used up to there
 }
-     
 ```
 

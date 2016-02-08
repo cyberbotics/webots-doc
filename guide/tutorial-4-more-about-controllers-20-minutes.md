@@ -94,25 +94,25 @@ int main(int argc, char **argv)
     "ps0", "ps1", "ps2", "ps3",
     "ps4", "ps5", "ps6", "ps7"
   };
-  
+
   // initialize devices
   for (i=0; ilt8 ; i++) {
     ps[i] = wb_robot_get_device(ps_names[i]);
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
-  
+
   // feedback loop
-  while (1) { 
+  while (1) {
     // step simulation
     int delay = wb_robot_step(TIME_STEP);
     if (delay == -1) // exit event from webots
       break;
-      
+
     // read sensors outputs
     double ps_values[8];
     for (i=0; ilt8 ; i++)
       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
-    
+
     // detect obstacles
     bool left_obstacle =
       ps_values[0] gt 100.0 ||
@@ -126,7 +126,7 @@ int main(int argc, char **argv)
     // init speeds
     double left_speed  = 500;
     double right_speed = 500;
-    
+
     // modify speeds according to obstacles
     if (left_obstacle) {
       left_speed  -= 500;
@@ -136,11 +136,11 @@ int main(int argc, char **argv)
       left_speed  += 500;
       right_speed -= 500;
     }
-    
+
     // write actuators inputs
     wb_differential_wheels_set_speed(left_speed, right_speed);
   }
-  
+
   // cleanup the Webots API
   wb_robot_cleanup();
   return 0; //EXIT_SUCCESS

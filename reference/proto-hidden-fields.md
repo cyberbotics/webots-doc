@@ -60,7 +60,6 @@ simulation step.
             pixelSize 0
           }
         ]
-     
 ```
 
 The names of the first six hidden fields all contain 0 as primary index, which

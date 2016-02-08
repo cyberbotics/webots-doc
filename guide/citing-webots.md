@@ -56,6 +56,5 @@ Robotics Systems. Here is the BibTex entry:
   URL     = {http://www.ars-journal.com/International-Journal-of-
              Advanced-Robotic-Systems/Volume-1/39-42.pdf}
 }
- 
 ```
 

@@ -14,7 +14,7 @@ Solid {
   SFNode     physics          NULL
   SFBool     locked           FALSE
   SFFloat    translationStep  0.01        # m
-  SFFloat    rotationStep     0.261799387 # pi/12 rad 
+  SFFloat    rotationStep     0.261799387 # pi/12 rad
   # hidden fields
   hiddenField SFVec3f linearVelocity 0 0 0 # initial linear velocity
   hiddenField SFVec3f angularVelocity 0 0 0 # initial angular velocity

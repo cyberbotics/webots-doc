@@ -95,12 +95,16 @@ class BookParser:
           return ''
       return titleNodes[0].text.strip()
 
-    def parseText(self, txt, protect):
+    def parseText(self, txt, protect, removeTrailingSpaces):
         if txt is None:
             return ''
         output = txt.encode('utf-8')
         if protect:
             output = output.replace('_', '\\_')
+        if removeTrailingSpaces:
+            output = re.sub(r'[ \t]*\n', '\n', output)
+            output = re.sub(r'[ \t]*$', '', output)
+            output = re.sub(r'\n*$', '', output)
         return output
 
     def formatText(self, text):
@@ -124,27 +128,27 @@ class BookParser:
         #     ulink, xref
         text = ''
         if node.text:
-            text += self.parseText(node.text, True)
+            text += self.parseText(node.text, True, False)
         for child in node.getchildren():
             if child.text:
                 if child.tag == 'bold':
-                    text += '**' + self.parseText(child.text, True) + '**'
+                    text += '**' + self.parseText(child.text, True, False) + '**'
                 elif child.tag == 'email':
-                    text += '[' + self.parseText(child.text, True) + '](mailto:' + self.parseText(child.text, True) + ')'
+                    text += '[' + self.parseText(child.text, True, False) + '](mailto:' + self.parseText(child.text, True, False) + ')'
                 elif child.tag == 'emphasis':
-                    text += '*' + self.parseText(child.text, True) + '*'
+                    text += '*' + self.parseText(child.text, True, False) + '*'
                 elif child.tag == 'filename':
-                    text += '"' + self.parseText(child.text, True) + '"'
+                    text += '"' + self.parseText(child.text, True, False) + '"'
                 elif child.tag == 'ulink':
-                    text += '[' + self.parseText(child.text, True) + '](' + child.attrib.get('url') + ')'
+                    text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'programlisting':
                     outFile.write(self.formatText(text) + '\n')
                     text = ''
                     self.parseProgramListing(child, outFile)
                 else:
-                    text += '`' + self.parseText(child.text, False) + '`'
-            text += self.parseText(child.tail, True)
-        text += self.parseText(node.tail, True)
+                    text += '`' + self.parseText(child.text, False, False) + '`'
+            text += self.parseText(child.tail, True, False)
+        text += self.parseText(node.tail, True, False)
 
         outFile.write(self.formatText(text))
 
@@ -164,7 +168,7 @@ class BookParser:
             elif 'M' in lang:
                 output += ' matlab'
         output += '\n'
-        output += self.parseText(node.text, False) + '\n'
+        output += self.parseText(node.text, False, True) + '\n'
         output += '```\n\n'
 
         outFile.write(output)

@@ -4,7 +4,7 @@ Derived from `Light`.
 
 
 ```
-SpotLight { 
+SpotLight {
   SFFloat ambientIntensity  0        # [0,1]
   SFVec3f attenuation       1 0 0    # [0,inf)
   SFFloat beamWidth         1.570796 # [0,pi/2)
@@ -57,7 +57,6 @@ function:
           intensity(angle) is the light intensity at an arbitrary
               angle from the direction vector,
           and angle ranges from 0.0 at central axis to cutOffAngle.
-  
 ```
 
 If `beamWidth` > `cutOffAngle`, then `beamWidth` is assumed to be equal to

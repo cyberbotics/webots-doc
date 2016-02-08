@@ -291,7 +291,6 @@ sudo chmod 666 /dev/rfcomm1
 export WEBOTS_COM1=/dev/rfcomm1
 # Launch Webots
 webots
-   
 ```
 
 #### Bluetooth remote control

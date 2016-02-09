@@ -47,6 +47,11 @@ not be possible to reopen the file.
 The `Revert World` menu item (and button) reloads the current world from the
 saved version and restarts the simulation from the beginning.
 
+> **note**: When opening (or reverting) a world, if the world takes more than 2 seconds to
+load a window will pop up and show the progression. Using this window it is
+possible to cancel the loading of the world, in that case, the empty world will
+be opened instead.
+
 The `New Text File` menu item (and button) opens an empty text file in the text
 editor.
 
@@ -99,6 +104,12 @@ interactive 3D ".html" file, using the X3DOM web standard, based on WebGL. This
 is especially useful for publishing Webots-created worlds on the Web. X3DOM is
 supported in recent versions of Firefox, Chrome, Internet Explorer and Safari on
 Mac OS X (see details on the [X3DOM web site](http://www.x3dom.org)).
+
+> **note**: With the Chrome browser, in order to be able to open HTML/X3DOM files locally,
+e.g., not from the Web, you may need to allow Chrome to open local files
+referred to by the HTML/X3DOM file, e.g., textures. This can be achieved by
+passing the `--allow-file-access-from-files` option at Chrome startup. Otherwise
+textures won't show up in the 3D models.
 
 The `Make HTML5 Animation...` item allows you to record a simulation as a 3D
 animation and publish it on a HTML5 web page. The result is similar to a movie

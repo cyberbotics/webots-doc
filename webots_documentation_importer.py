@@ -304,7 +304,7 @@ class BookParser:
                 elif child.tag == 'programlisting':
                     self.parseProgramListing(child, outFile, 8)
                 elif child.tag == 'note':
-                    self.parseIconPara(child, 4)
+                    self.parseIconPara(child, outFile, 4)
                 else:
                     raise Exception('Unsupported type: ' + child.tag)
                 outFile.write('\n')
@@ -360,9 +360,26 @@ class BookParser:
 
         outFile.write('\n')
 
-    def parseIconPara(self, node, indent=0):
-        # TODO
-        pass
+    def parseIconPara(self, node, outFile, indent=0):
+        outFile.write('> **' + node.tag + '**: ')
+
+        firstParaChild = True
+        for child in node.getchildren():
+            if child.tag == 'para':
+                if firstParaChild:
+                    self.parsePara(child, outFile, indent, True)
+                    firstParaChild = False
+                else:
+                    self.parsePara(child, outFile, indent + 4, True)
+            elif child.tag == 'figure':
+                self.parseFigure(child, outFile)
+            elif child.tag == 'programlisting':
+                self.parseProgramListing(child, outFile, indent + 8)
+            else:
+                raise Exception('Unsupported type: ' + child.tag)
+            outFile.write('\n\n')
+        outFile.write('\n')
+            
 
     def parseChapter(self, node, outFile):
         for child in node.getchildren():
@@ -411,11 +428,11 @@ class BookParser:
             elif child.tag == 'procedure':
                 raise Exception('Should be converted into an ordered item list in the script preprocessor: ' + child.tag)
             elif child.tag == 'note':
-                self.parseIconPara(child)
+                self.parseIconPara(child, outFile)
             elif child.tag == 'handson':
-                self.parseIconPara(child)
+                self.parseIconPara(child, outFile)
             elif child.tag == 'theory':
-                self.parseIconPara(child)
+                self.parseIconPara(child, outFile)
             elif child.tag == 'code':
                 subchildren = child.findall('./programlisting')
                 if len(subchildren) != 1 and len(child.getchildren()) != 1:

@@ -23,3 +23,9 @@ information shall be useful for implementing physics plugins.
 | SliderJoint { } | dJointID (dJointTypeSlider) |
 %%end
 
+> **note**: Although a physics plugin grants you access to the dGeomIDs created and managed
+by Webots, you should never attempt to set a user-defined data pointer by means
+of dGeomSetData() for these dGeomIDs as Webots stores its own data pointer in
+them. Using dGeomSetData() on a dGeomID defined by Webots will almost surely
+result into a Webots crash.
+

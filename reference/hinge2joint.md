@@ -24,6 +24,9 @@ and (default) zero suspension.
 Typically, `Hinge2Joint` can be used to model a steering wheel with suspension
 for a car, a shoulder or a hip for a humanoid robot.
 
+> **note**: A `Hinge2Joint` will connect only `Solid`s having a `Physics` node. In other
+words, this joint cannot be statically based.
+
 ### Field Summary
 
 - `jointParameters2`: This field optionally specifies a `HingeJointParameters`

@@ -113,6 +113,8 @@ long as emitters and receivers agree.
 ![Receiver's packet queue](pdf/receiver_queue.pdf.png)
 %end
 
+> **note**: Webots' Emitter/Receiver API guarantees that:
+
 - Packets will be received in the same order they were sent
 - Packets will be transmitted atomically (no byte-wise fragmentation)
 
@@ -145,6 +147,56 @@ equal to the *size* argument of the corresponding `emitter_send_packet()` call.
 It is illegal to call `wb_receiver_get_data_size()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0).
 
+> **note**: The `getData()` function returns a string. Similarly to the `sendPacket()`
+function of the `Emitter` device, using the functions of the struct module is
+recommended for sending primitive data types. Here is an example for getting the
+data:
+
+        import struct
+        #...
+        message=receiver.getData()
+        dataList=struct.unpack("chd",message)
+
+> **note**: The Matlab `wb_receiver_get_data()` function returns a MATLAB *libpointer*. The
+receiving code is responsible for extracting the data from the *libpointer*
+using MATLAB's `setdatatype()` and `get()` functions. Here is an example on how
+to send and receive a 2x3 MATLAB matrix.
+
+        % sending robot
+        emitter = wb_robot_get_device('emitter');
+
+        A = [1, 2, 3; 4, 5, 6];
+        wb_emitter_send(emitter, A);
+
+        % receiving robot
+        receiver = wb_robot_get_device('receiver');
+        wb_receiver_enable(receiver, TIME_STEP);
+
+        while wb_receiver_get_queue_length(receiver) > 0
+          pointer = wb_receiver_get_data(receiver);
+          setdatatype(pointer, 'doublePtr', 2, 3);
+          A = get(pointer, 'Value');
+          wb_receiver_next_packet(receiver);
+        end
+
+    The MATLAB `wb_receiver_get_data()` function can also take a second argument
+    that specifies the type of the expected data. In this case the function does not
+    return a *libpointer* but an object of the specified type, and it is not
+    necessary to call `setdatatype()` and `get()`. For example
+    `wb_receiver_get_data()` can be used like this:
+
+        % receiving robot
+        receiver = wb_robot_get_device('receiver');
+        wb_receiver_enable(receiver, TIME_STEP);
+
+        while wb_receiver_get_queue_length(receiver) > 0
+          A = wb_receiver_get_data(receiver, 'double');
+          wb_receiver_next_packet(receiver);
+        end
+
+    The available types are 'uint8', 'double' and 'string'. More sophisticated data
+    typed must be accessed explicitly using `setdatatype()` and `get()`.
+
 #### Description
 
 The `wb_receiver_get_signal_strength()` function operates on the head packet in
@@ -168,6 +220,8 @@ is located to the right. The returned vector is valid only until the next call
 to `wb_receiver_next_packet()`. It is illegal to call this function if the
 receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
+> **note**: `getEmitterDirection()` returns the vector as a list containing three floats.
+
 #### Description
 
 The `wb_receiver_set_channel()` function allows a receiver to change its
@@ -178,4 +232,7 @@ value can be used to listen simultaneously to all channels.
 
 The `wb_receiver_get_channel()` function returns the current channel number of
 the receiver.
+
+> **note**: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
+static integer of the `Receiver` class (Receiver::CHANNEL\_BROADCAST).
 

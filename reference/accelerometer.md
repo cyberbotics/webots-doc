@@ -67,3 +67,11 @@ field in the `WorldInfo` node. To obtain the acceleration due to motion alone,
 this offset must be subtracted. The device's output will be zero during free
 fall when no offset is substracted.
 
+> **note**: The returned vector is a pointer to the internal values managed by the
+`Accelerometer` node, therefore it is illegal to free this pointer. Furthermore,
+note that the pointed values are only valid until the next call to
+`wb_robot_step()` or `Robot::step()`. If these values are needed for a longer
+period they must be copied.
+
+> **note**: `getValues()` returns the 3D-vector as a list containing three floats.
+

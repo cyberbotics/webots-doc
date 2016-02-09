@@ -78,6 +78,11 @@ are used.
 total number of bytes in the packets enqueued in the emitter cannot exceed this
 number. A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
 
+> **note**: `Emitter` nodes can also be used to communicate with the physics plugin (see ).
+In this case the channel must be set to 0 (the default). In addition it is
+highly recommended to choose -1 for the baudRate, in order to enable the fastest
+possible communication; the `type, range` and `aperture` will be ignored.
+
 ### Emitter Functions
 
 #### Description
@@ -110,6 +115,29 @@ double array[5] = { 3.0, x, y, -1/z, -5.5 };
 wb_emitter_send(tag, array, 5 * sizeof(double));
 ```
 
+> **note**: The `send()` function sends a string. For sending primitive data types into this
+string, the *struct* module can be used. This module performs conversions
+between Python values and C structs represented as Python strings. Here is an
+example:
+
+        import struct
+        #...
+        message = struct.pack("chd","a",45,120.08)
+        emitter.send(message)
+
+> **note**: The Java `send()` method does not have a `size` argument because the size is
+implicitly passed with the `data` argument. Here is an example of sending a Java
+string in a way that is compatible with a C string, so that it can be received
+in a C/C++ controller.
+
+        String request = "You are number " + num + "\0";
+        try {
+          emitter.send(request.getBytes("US-ASCII"));
+        }
+        catch (java.io.UnsupportedEncodingException e) {
+          System.out.println(e);
+        }
+
 #### Description
 
 The `wb_emitter_set_channel()` function allows the controller to change the
@@ -119,6 +147,9 @@ the same channel. However, the special WB\_CHANNEL\_BROADCAST value can be used
 for broadcasting to all channels. By switching the channel number an emitter can
 selectively send data to different receivers. The `wb_emitter_get_channel()`
 function returns the current channel number of the emitter.
+
+> **note**: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
+static integer of the `Emitter` class (Emitter::CHANNEL\_BROADCAST).
 
 #### Description
 

@@ -137,6 +137,25 @@ derived nodes). Therefore, even if it has a visible geometric structure, a
 `Solid` node cannot produce any occlusion if its `boundingObject` is not
 specified.
 
+> **note**: The default value of the `attenuation` field of `PointLight`s and `SpotLight`s
+is *1 0 0*. These values correspond to the VRML default, and are not appropriate
+for modeling the attenuation of a real lights. If a point or spot light radiates
+uniformly in all directions and there is no absorption, then the irradiance
+drops off in proportion to the square of the distance from the object.
+Therefore, for realistic modeling, the `attenuation` field of a light source
+should be changed to *0 0 4*π*. If, in addition, the `intensity` field of the
+light is set to the radiant power [W] of a real point source (e.g., a light
+bulb), then the computed sensor irradiance *E* will approximate real world
+values in [W/m^2]. Finally, if the sensor's `lookupTable` is filled with correct
+calibration data, a fairly good approximation of the real world should be
+achieved.
+
+> **note**: If the calibration data for the `lookupTable` was obtained in lux (lx) or lumens
+per square meter (lm/m^2) instead of W/m^2, it makes sense to substitute the
+radiometry terms and units in this document with their photometry equivalents:
+*irradiance* becomes *illuminance*, *radiant power* becomes *luminous power* and
+*W* becomes *lm (lumen)*, etc.
+
 ### LightSensor Functions
 
 #### Description

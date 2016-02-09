@@ -30,6 +30,15 @@ first matching `ContactProperties` are applied to the contact. If no matching
 node is found, default values are used. The default values are the same as those
 indicated above.
 
+> **note**: In older Webots versions, contact properties used to be specified in `Physics`
+nodes. For compatibility reasons, contact properties specified like this are
+still functional in Webots, but they trigger deprecation warnings. To remove
+these warning you need to switch to the new scheme described in this page. This
+can be done in three steps: 1. Add `ContactProperties` nodes in `WorldInfo`, 2.
+Define the `contactMaterial` fields of `Solid` nodes, 3. Reset the values of
+`coulombFriction, bounce, bounceVelocity` and `forceDependentSlip` in the
+`Physics` nodes.
+
 ### Field Summary
 
 - The `material1` and `material2` fields specify the two *contact materials* to
@@ -105,4 +114,8 @@ concept.
 
 - The `softCFM` field defines the soft *Constraint Force Mixing* used by ODE to
 manage local contacts joints. `WorldInfo` for a description of the CFM concept.
+
+> **note**: The youBot robot is a good example of asymmetric coulombFriction and
+forceDependentSlip, it is located in
+WEBOTS\_HOME/projects/robot/youbot/worlds/youbot.wbt.
 

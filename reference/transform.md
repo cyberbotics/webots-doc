@@ -64,3 +64,8 @@ In the case of a `Cylinder`, *x y z* will be reset to *x z x*. If some value
 changes within one of the previous constrained scale fields, the two others are
 actuated using the new value and the corresponding constraint rule.
 
+> **note**: If a `Transform` is named using the `DEF` keyword and later referenced inside a
+`boundingObject` with a USE statement, the constraint corresponding to its first
+`Geometry` descendant applies to the `scale` fields of the defining `Transform`
+and of all its further references.
+

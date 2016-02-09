@@ -21,6 +21,11 @@ Damping does not add any force in the simulation, it directly affects the
 velocity of the body. The damping effect is applied after all forces have been
 applied to the bodies. Damping can be used to reduce simulation instability.
 
+> **note**: When several rigidly linked `Solid`s are merged (see `Physics`'s `solid merging`
+section) damping values of the aggregate body are averaged over the volumes of
+all `Solid` components. The volume of a `Solid` is the sum of the volumes of the
+geometries found in its `boundingObject`; overlaps are not handled.
+
 The `linear` field indicates the amount of damping that must be applied to the
 body's linear motion. The `angular` field indicates the amount of damping that
 must be applied to the body's angular motion. The linear damping can be used,

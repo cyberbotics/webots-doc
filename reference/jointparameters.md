@@ -12,6 +12,9 @@ JointParameters {
 }
 ```
 
+> **note**: The default value of the axis field may change in a derived class. For instance,
+the axis default value of an `HingeJointParameters` is `1 0 0`.
+
 ### Description
 
 The `JointParameters` node is a concrete base node used to specify various joint

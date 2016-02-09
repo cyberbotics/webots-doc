@@ -8,6 +8,11 @@ follow this procedure:
 your computer previously.
 2. Install Webots for your operating system as explained below.
 
+> **note**: After installation, the most important Webots features will be available, but
+some third party tools (such as Java, Python, or *MATLAB*^(TM)) may be necessary
+for running or compiling specific projects. The  covers the set up of these
+tools.
+
 ### Linux
 
 Webots will run on most recent Linux distributions running glibc2.11.1 or
@@ -17,6 +22,17 @@ The `.deb` package is aimed at the latest Ubuntu Linux distribution whereas the
 tarball package includes many dependency libraries and there is therefore best
 suited for installation on other Linux distributions. These packages can be
 downloaded from our [web site](http://www.cyberbotics.com/linux).
+
+> **note**: Some of the following commands requires the `root` privileges. You can get these
+privileges by preceding all the commands by the `sudo` command.
+
+> **note**: Webots will run much faster if you install an accelerated OpenGL drivers. If you
+have a nVidia or ATI graphics card, it is highly recommended that you install
+the Linux graphics drivers from these manufacturers to take the full advantage
+of the OpenGL hardware acceleration with Webots. Please find instructions here .
+
+> **note**: Webots needs the *avconv* program to create MPEG-4 movies, that can be installed
+with *libav-tools* and *libavcodec-extra-54* packages.
 
 #### Using Advanced Packaging Tool (APT)
 
@@ -56,6 +72,9 @@ Then proceed to the installation of Webots using:
 ```
 apt-get install webots
 ```
+
+> **note**: This procedure can also be done using any APT front-end tool such as the
+Synaptic Package Manager. But only a command line procedure is documented here.
 
 #### From the tarball package
 

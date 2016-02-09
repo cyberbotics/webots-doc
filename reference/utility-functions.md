@@ -138,6 +138,32 @@ the received data. If `size` is non-NULL, it is set to the number of bytes of
 data available in the returned buffer. If multiple messages are sent to the
 physics plugin at the same time step, then they will be concatenated.
 
+> **note**: Pay attention when managing multiple concatenated string messages, because every
+message will terminate with the null character `\0` preventing the correct copy
+and display of the returned data. The following example shows how to split
+concatenated string messages:
+
+        int dataSize;
+        char *data = (char *)dWebotsReceive(&dataSize);
+        if (dataSize > 0) {
+          char *msg = new char[dataSize];
+          int count = 1, i = 0, j = 0;
+          for ( ; i < dataSize; ++i) {
+            char c = data[i];
+            if (c == '\0') {
+              msg[j] = c;
+              // process message
+              dWebotsConsolePrintf("Received message %d: %s\n", count, msg);
+              // reset for next string
+              ++count;
+              j = 0;
+            } else {
+              msg[j] = c;
+              ++j;
+            }
+          }
+        }
+
 ### dWebotsGetTime()
 
 This function returns the current simulation time in milliseconds [ms] as a

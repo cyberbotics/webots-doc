@@ -30,6 +30,11 @@ vertically, to zoom in and out. Dragging the mouse horizontally will rotate the
 camera about the viewing axis. Alternatively, the mouse wheel alone can also be
 used for zooming.
 
+> **note**: If you are a Mac user with a single button mouse, hold the Alt key and press the
+mouse button to translate the camera according to the mouse motion. Hold the
+control key (Ctrl) down and press the mouse button to zoom / rotate the camera
+with the mouse motion.
+
 ### Moving a solid object
 
 Currently Webots provides two different ways to move solid objects: axis-aligned
@@ -63,6 +68,12 @@ key, press the left mouse button and drag.
 and right mouse buttons (or the middle button) and drag. Alternatively, the
 mouse wheel combined with the Shift key can also be used.
 
+> **note**: If you are a Mac user with a single button mouse, hold the Shift key and the
+Control key (Ctrl) down and press the mouse button to rotate the selected object
+according to mouse motion. Hold the Shift key and the Command key (key with
+Apple symbol) down and press the mouse button to lift the selected object
+according to mouse motion.
+
 ### Applying a force to a solid object with physics
 
 To apply a force to an object, place the mouse pointer where the force will
@@ -84,6 +95,10 @@ center of mass and whose end is located in the plane parallel to the view which
 passes through this center. The object is prompted to turn around the vector
 direction, the intensity of the applied torque being directly proportional to
 the product of the mass by the length of the 3D-vector.
+
+> **note**: In pause mode, you can simultaneously add a force and a torque to the same
+selected solid. Camera rotation can be useful when checking wether your force /
+torque vector has the desired direction.
 
 ### Moving and resizing Overlays
 

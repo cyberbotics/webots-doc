@@ -70,6 +70,21 @@ can be found inside Webots at
 "WEBOTS\_MODULES\_PATH/projects/languages/ros/nodes". In this folder you will
 find useful instructions to help you.
 
+> **note**: If you wants to access the controller from another machine and the roscore isn't
+running on the same machine as Webots, you will need to edit the
+ROS\_MASTER\_URI variable. This can be done by editing your environment
+variables, adding the address in the controller arguments in Webots or with a
+runtime.ini file in the controller directory. You must also be able to connect
+to each of the computer in ssh in both ways. As ROS uses the hostname to find
+other computer/devices on the network, you must had other computers' hostname
+and the associated IP address to the known hosts of each computer. You can find
+this list in a file named *hosts*. On Linux distribution, you can find it
+directly at /etc/hosts; on Mac OS X, it is located at /private/etc/hosts; on
+Windows, it is located at C:\Windows\System32\drivers\etc\hosts. On Windows and
+Mac OS X, this a hidden path and you will need to search directly for this path.
+The hosts file is usually protected and you will need administrator or root
+right to edit it.
+
 #### Custom Controller
 
 The standard controller has been developed in order to work on every robot and
@@ -101,4 +116,10 @@ interfaces between Webots and ROS. The controller directory includes all the
 "Makefile" machinery to call the build tools used by ROS and Webots to produce
 the controller binary. The "ros" folder also includes a "README.txt" file with
 detailed installation and usage instructions.
+
+> **note**: Following the instructions "README.md" is necessary to make the joystick example
+work on your Linux system.
+
+    In the `Tutorials` chapter, you will find a section explaining how to rebuild
+    from scratch the joystick example.
 

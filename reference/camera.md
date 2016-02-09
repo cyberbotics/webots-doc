@@ -152,6 +152,10 @@ format of these buffers are respectively BGRA (32 bits) and float (16 bits). We
 recommend to use the `wb_camera_image_get_*`-like functions to access the buffer
 because the internal format could change.
 
+> **note**: The Matlab API uses a language-specific representation of color images
+consisting of a 3D array of RGB triplets. Please look at the `Matlab example` in
+the `wb_camera_get_image` function's description.
+
 #### Range-Finder
 
 The range-finder camera allows to get depth information (in meters) from the
@@ -307,6 +311,9 @@ summarized in :
 | "range-finder" | WB\_CAMERA\_RANGE\_FINDER |
 %%end
 
+> **note**: In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
+integers of the `Camera` class (for example, Camera::COLOR).
+
 #### Description
 
 The `wb_camera_get_image()` function reads the last image grabbed by the camera.
@@ -339,6 +346,75 @@ for (int x = 0; x < image_width; x++)
   }
 ```
 
+> **note**: `Camera.getImage()` returns an array of int (`int[]`). The length of this array
+corresponds to the number of pixels in the image, that is the width multiplied
+by the height of the image. Each `int` element of the array represents one pixel
+coded in BGRA (32 bits). For example red is `0x0000ff00`, green is `0x00ff0000`,
+etc. The `Camera.pixelGetRed(), Camera.pixelGetGreen()` and
+`Camera.pixelGetBlue()` functions can be used to decode a pixel value for the
+red, green and blue components. The `Camera.pixelGetGrey()` function works in a
+similar way, but returns the grey level of the pixel by averaging the three RGB
+components. Each of these four functions take an `int` pixel argument and return
+an `int` color/grey component in the range [0..255]. Here is an example:
+
+        int[] image = camera.getImage();
+        for (int i=0; i < image.length; i++) {
+          int pixel = image[i];
+          int r = Camera.pixelGetRed(pixel);
+          int g = Camera.pixelGetGreen(pixel);
+          int b = Camera.pixelGetBlue(pixel);
+          System.out.println("red=" + r + " green=" + g + " blue=" + b);
+        }
+
+> **note**: `getImage()` returns a `string`. This `string` is closely related to the `const
+char *` of the C API. `imageGet*`-like functions can be used to get the channels
+of the camera Here is an example:
+
+        #...
+        cameraData = camera.getImage()
+
+        # get the grey component of the pixel (5,10)
+        grey = Camera.imageGetGrey(cameraData, camera.getWidth(), 5, 10)
+
+    Another way to use the camera in Python is to get the image by `getImageArray()`
+    which returns a `list<list<list<int>>>`. This three dimensional list can be
+    directly used for accessing to the pixels. Here is an example:
+
+        image = camera.getImageArray()
+        # display the components of each pixel
+        for x in range(0,camera.getWidth()):
+          for y in range(0,camera.getHeight()):
+            red   = image[x][y][0]
+            green = image[x][y][1]
+            blue  = image[x][y][2]
+            grey  = (red + green + blue) / 3
+            print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
+
+> **note**: `wb_camera_get_image()` returns a 3-dimensional array of `uint(8)`. The first
+two dimensions of the array are the width and the height of camera's image, the
+third being the RGB code: 1 for red, 2 for blue and 3 for green.
+`wb_camera_get_range_image()` returns a 2-dimensional array of
+`float('single')`. The dimensions of the array are the width and the length of
+camera's image and the float values are the metric distance values deduced from
+the OpenGL z-buffer.
+
+        camera = wb_robot_get_device('camera');
+        wb_camera_enable(camera,TIME_STEP);
+        half_width = floor(wb_camera_get_width(camera) / 2);
+        half_height = floor(wb_camera_get_height(camera) / 2);
+        % color camera image
+        image = wb_camera_get_image(camera);
+        red_middle_point = image(half_width,half_heigth,1);% red color component of the pixel lying in the middle of the image
+        green_middle_line = sum(image(half_width,:,2));% sum of the green color over the vertical middle line of the image
+        blue_overall = sum(sum(image(:,:,3));% sum of the blue color over all the pixels in the image
+        fprintf('red_middle_point = %d, green_middle_line = %d, blue_overall = %d\n', red_middle_point, green_middle_line, blue_overall);
+        % range-finder camera image
+        image = wb_camera_get_range_image(camera);
+        imagesc(image,[0 1]);
+        colormap(gray);
+        drawnow;
+        distance = min(min(image))% distance to the closest point seen by the camera
+
 #### Description
 
 The `wb_camera_get_range_image()` macro allows the user to read the contents of
@@ -367,6 +443,11 @@ parameters are the coordinates of the pixel in the image.
 
 The `wb_camera_get_max_range()` function returns the value of the `maxRange`
 field.
+
+> **note**: The Camera class has two methods for getting the camera image. The
+`getRangeImage()` returns a one-dimensional list of floats, while the
+`getRangeImageArray()` returns a two-dimensional list of floats. Their content
+are identical but their handling is of course different.
 
 #### Description
 

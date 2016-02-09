@@ -15,3 +15,11 @@ it in the ".wbt" or ".proto" file.
 USE defName
 ```
 
+> **note**: Although it is permitted to name any node using the DEF keyword, USE statements
+are not allowed for `Solid`, `Joint`, `JointParameters`, and
+`BallJointParameters` nodes and their derived nodes. Indeed, the ability for
+identical solids or joints to occupy the same position is useless, if not
+hazardous, in a physics simulation. To safely duplicate one of these nodes, you
+can design a `PROTO` model for this node and then add different PROTO instances
+to your world.
+

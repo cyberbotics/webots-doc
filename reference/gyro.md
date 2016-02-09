@@ -55,3 +55,11 @@ the angular velocity about one of the axes of the `Gyro` node, expressed in
 radians per second [rad/s]. The first element corresponds to the angular
 velocity about the *x*-axis, the second element to the *y*-axis, etc.
 
+> **note**: The returned vector is a pointer to the internal values managed by the `Gyro`
+node, therefore it is illegal to free this pointer. Furthermore, note that the
+pointed values are only valid until the next call to `wb_robot_step()` or
+`Robot::step()`. If these values are needed for a longer period they must be
+copied.
+
+> **note**: `getValues()` returns the vector as a list containing three floats.
+

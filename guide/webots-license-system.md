@@ -10,6 +10,12 @@ Internet, you can transfer your Internet license from the server to your local
 computer for a limited duration. After the expiration of this duration, your
 license will be automatically transferred back to the license server.
 
+> **note**: Cyberbotics license servers are located in Switzerland on a highly reliable
+network featuring a 99.9% up-time. However, if for some reason our servers would
+fail, a security system will allow you to run Webots even in case of server
+failure, by connecting automatically to an alternate server located in the Cloud
+(hosted on Google App Engine).
+
 ### Firewall configuration (optional)
 
 If you plan to use Webots behind an Internet firewall, you should create two new
@@ -18,6 +24,9 @@ servers:
 
 - `https://www.cyberbotics.com (port 443)`
 - `https://webots-license.appspot.com (port 443)`
+
+> **note**: If you are using a proxy to access the Internet, Webots will retrieve your
+system proxy configuration automatically.
 
 ### License agreement
 
@@ -33,6 +42,13 @@ corresponds to a user account on Cyberbotics's web site.
 When Webots is started for the first time, a login dialog invites you to
 register a user account on Cyberbotics's web site (if not already done) and to
 enter the corresponding license information to log in your Webots session.
+
+> **note**: The `Synchronization` field of the Webots login dialog defines how frequently
+Webots checks the license server. Setting this field to a small value will cause
+more networking activity, but will allow you to release the license quickly
+after a crash. This will allow you in turn to restart Webots quicker on another
+machine. For example, if you select 5 minutes, you may have to wait for up to 5
+minutes if you crashed Webots on a machine and want to restart it on another.
 
 ### License administration
 

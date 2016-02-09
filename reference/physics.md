@@ -23,6 +23,12 @@ A `Physics` node can be placed in a `Solid` node (or any node derived from
 a `Solid` defines whether the `Solid` will have a *physics* or a *kinematic*
 behavior.
 
+> **note**: In older Webots versions, `coulombFriction, bounce, bounceVelocity` and
+`forceDependentSlip` fields used to be specified in `Physics` nodes. Now these
+values must be specified in `ContactProperties` nodes. For compatibility
+reasons, these fields are still present in the `Physics` but they should no
+longer be used.
+
 ### Field Summary
 
 - The `density` field can be used to define the density of the containing `Solid`.
@@ -111,6 +117,19 @@ robotic hand or gripper is crucial for the simulation of such devices. Therefore
 the mechanical body parts of robots (eg., legs, wheels, arms, hands, etc) need
 in general to have `Physics` nodes.
 
+> **note**: It is possible to set the `physics` field of a `Robot` or a top `Solid` to
+`NULL` in order to pin its base to the static environment. This can be useful
+for the simulation of a robot arm whose base segment is anchored in a fixed
+place. More generally, you can define a larger *static base* rooted at a given
+top `Solid`. Indeed you can define a subtree starting from this top `Solid` and
+whose all `Solid` nodes have no `Physics` nodes.
+
+> **note**: The `DifferentialWheels` robot is a special case: it can move even if it does
+not have `Physics` nodes. That's because Webots uses a special *kinematics*
+algorithm for `DifferentialWheels` robots without `Physics`. However, if the
+`Physics` nodes are present then Webots uses the regular *physics* simulation
+algorithms.
+
 #### Implicit solid merging and joints
 
 By `Solid` *child* of a given `Solid` node, we mean either a node directly
@@ -126,6 +145,10 @@ process is recursive and stops at the highest ancestor which have a joint
 pointing to an upper `Solid` or just before the highest ancestor without
 `Physics` node. This way modelling a rigid assembly of `Solid`s won't hurt
 physics simulation speed even if it aggregates numerous components.
+
+> **note**: When solid merging applies, only the highest ancestor of the rigid assembly has
+a body (a non null `dBodyID` in ODE terms) which holds the physical properties
+of the assembly. This may impact the way you design a `physics plugin`s.
 
 When designing the robot tree structure, there is one important rule to remember
 about the `Physics` nodes: *If a Solid node has a parent and a child with a
@@ -260,4 +283,13 @@ device. So it is usually recommended to leave the `physics` field of a device
 empty, unless it represents a significant mass or volume in the simulated robot.
 This is true for these devices: `Accelerometer`, `Camera`, `Compass`,
 `DistanceSensor`, `Emitter`, `GPS`, `LED`, `LightSensor`, `Pen`, and `Receiver`.
+
+> **note**: The `InertialUnit` and `Connector` nodes work differently. Indeed, they require
+the presence of a `Physics` node in their parent node to be functional. It is
+also possible to specify a `Physics` node of the device but this adds an extra
+body to the simulation.
+
+    The `TouchSensor` is also a special case: it needs a `Physics` node when it is
+    used as "force" sensor; it does not necessarily need a `Physics` node when it is
+    only used as "bumper" sensor.
 

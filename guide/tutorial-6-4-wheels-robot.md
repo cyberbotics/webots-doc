@@ -4,7 +4,6 @@ The aim of this tutorial is to create your first robot from scratch. This robot
 will be made of a body, four wheels, and two distance sensors. The result is
 depicted in . The  shows the robot from a top view.
 
-
 %figure "3D view of the 4 wheels robot.
     Note that the coordinate system representations of the robot body
     and of its wheels are oriented the same way.
@@ -22,7 +21,6 @@ depicted in . The  shows the robot from a top view.
     The distance sensors are oriented in a different way,
     their +x-vector indicates the direction of the sensor.](png/tutorial_4_wheels_robot.png)
 %end
-
 
 %figure "Top view of the 4 wheels robot.
     The grid behind the robot has a dimension of 0.2 x 0.3 [m].
@@ -68,11 +66,9 @@ computation of the joint parameters.
 In our case, the body box is obviously the better choice. The  depicts the solid
 nodes hierarchy of the robot.
 
-
 %figure "High level representation of the 4 wheels robot"
 ![High level representation of the 4 wheels robot](pdf/tutorial_4_wheels_highlevel.pdf.png)
 %end
-
 
 %figure "Low level representation of the 4 wheels robot"
 ![Low level representation of the 4 wheels robot](pdf/tutorial_4_wheels_lowlevel.pdf.png)

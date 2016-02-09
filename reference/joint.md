@@ -1,6 +1,5 @@
 ## Joint
 
-
 ```
 Joint {
   field SFNode jointParameters NULL # a joint parameters node
@@ -27,13 +26,17 @@ one of its derived classes. These nodes contain common joint parameters such as
 position, stops, anchor or axis if existing. This field must be filled with an
 `HingeJointParameters` node for an `HingeJoint` or an `Hinge2Joint`, with a
 `JointParameters` node for a `SliderJoint` (anchor-less) and with a
-`BallJointParameters` node for a `BallJoint`. For an `Hinge2Joint`, the
-`jointParameters` field is related to the first rotation axis while an
-additional field called `jointParameters2` refers to the second rotation axis.
-3D-vector parameters (e.g `axis, anchor`) are always expressed in relative
-coordinates with respect to the closest upper `Solid`'s frame using the meter as
-unit. If the `jointParameters` field is not specified, parameters are set with
-the default values defined in the corresponding parameter node.
+`BallJointParameters` node for a `BallJoint`.
+
+    For an `Hinge2Joint`, the `jointParameters` field is related to the first
+    rotation axis while an additional field called `jointParameters2` refers to the
+    second rotation axis.
+
+    3D-vector parameters (e.g `axis, anchor`) are always expressed in relative
+    coordinates with respect to the closest upper `Solid`'s frame using the meter as
+    unit. If the  `jointParameters` field is not specified, parameters are set with
+    the default values defined in the corresponding parameter node.
+
 - `endPoint`: this field specifies which `Solid` will be subjected to the joint
 constraints. It must be either a `Solid` child, or a reference to an existing
 `Solid`, i.e. a `SolidReference`. Alternatively, a `Slot` node can be inserted

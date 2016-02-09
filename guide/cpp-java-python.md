@@ -14,7 +14,6 @@ The Java and Python APIs are automatically generated from the C++ API using
 SWIG. Therefore the class and method names, as well as the number of parameters
 and their types, are very similar in these three languages.
 
-
 %figure "Webots APIs Overview"
 ![Webots APIs Overview](pdf/api_overview.pdf.png)
 %end
@@ -45,7 +44,6 @@ controllers. But it is not possible to call the `Supervisor` methods from a
 `DifferentialWheels` controller, and vice versa. For example it won't be
 possible to call `simulationRevert()` from a `DifferentialWheels` controller.
 
-
 %figure "A small subset of Webots oriented-object APIs"
 ![A small subset of Webots oriented-object APIs](pdf/oo_api.pdf.png)
 %end
@@ -70,8 +68,6 @@ etc. The various devices instances can be obtained with dedicated methods of the
 `WbDeviceTag` in C++/Java/Python.
 
 ### C++ Example
-
-
 
 ``` c
 #include <webots/Robot.hpp>
@@ -120,11 +116,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-
-
 ### Java Example
-
-
 
 ```
 import com.cyberbotics.webots.controller.*;
@@ -163,11 +155,7 @@ public class MyRobot extends Robot {
 }
 ```
 
-
-
 ### Python Example
-
-
 
 ```
 from controller import *
@@ -192,6 +180,4 @@ class MyRobot (Robot):
 robot = MyRobot()
 robot.run()
 ```
-
-
 

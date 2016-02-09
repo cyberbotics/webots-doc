@@ -31,7 +31,6 @@ The Webots main window is shown in . Make sure you understand well how the
 Webots main window is divided into subwindows before continuing. A more detailed
 description of the Webots GUI is provided in .
 
-
 %figure "The Webots main window splits into four dockable subwindows:
     the scene tree view on the left hand side (including a panel at the bottom for editing fields values),
     the 3D view in the center,

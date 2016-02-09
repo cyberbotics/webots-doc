@@ -1,6 +1,5 @@
 ## Physics
 
-
 ```
 Physics {
   SFFloat     density             1000      # (kg/m^3) -1 or > 0
@@ -35,37 +34,40 @@ density with the total volume of the geometrical primitives composing the
 `boundingObject`. Note that Webots ignores if the geometrical primitives
 intersect or not, the volume of each primitive is simply added to the total
 volume and finally multiplied by the density.
+
 - The `mass` field can be used to specify the total mass of the containing
 `Solid`. The value of the `mass` field should be a positive number or -1. A -1
 value indicates that the total mass is not known, in this case the `density`
 field (see above) must be specified. If the mass is known, e.g., indicated in
 the specifications of the robot, then it is more accurate to specify the mass
 rather than the density.
+
 - The `centerOfMass` field defines the position of the center of mass of the
 solid. It is expressed in meters in the relative coordinate system of the
 `Solid` node. If `centerOfMass` field is different from [0 0 0], then the center
 of mass is depicted as a dark red/green/blue cross in Webots 3D-window.
-- 
-```
-[ I11 I12 I13 ]
-[ I12 I22 I23 ]
-[ I13 I23 I33 ]
-```
 
-
-The `inertiaMatrix` field can be used to manually specify the inertia matrix of
+- The `inertiaMatrix` field can be used to manually specify the inertia matrix of
 the `Solid`. This field can either be empty (the default) or contain exactly 2
 vectors. If this field is empty, Webots will compute the inertia matrix
 automatically according to the position and orientation of the geometrical
-primitives in `boundingObject`. If this field contains 2 vectors, these values
-specify the inertia matrix of the `Solid`. If the inertia matrix is specified
-then the `mass` field must also be specified. The first vector [I11, I22, I33]
-represents the *principals moments of inertia* and the second vector [I12, I13,
-I23] represents the *products of inertia*. Together these values form a 3x3
-inertia matrix: The Ixx values are expressed in kg*m^2. The principals moments
-of inertia must be positive. The inertia matrix is defined with respect to the
-`centerOfMass` of the `Solid`. Internally, these 6 values are passed unchanged
-to the `dMassSetParameters()` ODE function.
+primitives in `boundingObject`.
+
+    If this field contains 2 vectors, these values specify the inertia matrix of the
+    `Solid`. If the inertia matrix is specified then the `mass` field must also be
+    specified. The first vector [I11, I22, I33] represents the *principals moments
+    of inertia* and the second vector [I12, I13, I23] represents the *products of
+    inertia*. Together these values form a 3x3 inertia matrix:
+
+        [ I11 I12 I13 ]
+        [ I12 I22 I23 ]
+        [ I13 I23 I33 ]
+
+    The Ixx values are expressed in kg*m^2. The principals moments of inertia must
+    be positive. The inertia matrix is defined with respect to the `centerOfMass` of
+    the `Solid`. Internally, these 6 values are passed unchanged to the
+    `dMassSetParameters()` ODE function.
+
 - The `damping` field allows to specify a `Damping` node that defines the velocity
 damping parameters to be applied to the `Solid`.
 
@@ -250,11 +252,7 @@ Robot {
 }
 ```
 
-
-
 #### Devices
-
-
 
 Most device nodes work without `Physics` node. But a `Physics` node can
 optionally be used if one wishes to simulate the weight and inertia of the

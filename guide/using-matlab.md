@@ -1,6 +1,6 @@
 ## Using MATLAB
 
-### Introduction to 
+### Introduction to
 
 `MATLAB` is a numerical computing environment and an interpreted programming
 language. `MATLAB` allows easy matrix manipulation, plotting of functions and
@@ -55,8 +55,6 @@ different, according to your `MATLAB` version):
 Path=C:\Program Files\MATLAB\R2009b\bin
 ```
 
-
-
 On Linux, the `MATLAB` installer does normally suggest to add a symlink to the
 "matlab" startup script in the "/usr/local/bin" directory. This is a good option
 to make "matlab" globally accessible. Otherwise you can create the link at
@@ -73,8 +71,6 @@ then you should add a symlink in "/usr/bin":
 ```
 $ sudo ln -s /Applications/MATLAB_R2014a.app/bin/matlab /usr/bin/matlab
 ```
-
-
 
 ### Display information to Webots console
 
@@ -116,6 +112,4 @@ Method was not found.
 error in ==> launcher at 66
 calllib('libController','wb_robot_init');
 ```
-
-
 

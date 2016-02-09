@@ -1,6 +1,5 @@
 ## TextureCoordinate
 
-
 ```
 TextureCoordinate {
   MFVec2f   point   []   # (-inf,inf)

@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Display {
   SFInt32    width          64
@@ -58,7 +57,6 @@ setting the display's internal color to red before calling twice the
 
 ### Overlay Image
 
-
 %figure "Display overlay image"
 ![Display overlay image](png/display_overlay.png)
 %end
@@ -110,7 +108,6 @@ no effect over the old one and 1 means that the new pixel replaces entirely the
 old one. Only the color channel is affected by the `opacity` according to the
 formula.
 
-
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel
             from the old color channels (Co) of the background pixel and from the opacity."
 ![Blending formula used to compute the new the color channels (Cn) of a pixel
@@ -140,7 +137,6 @@ function draws a circle.
 vertices. The list of vertices must be defined into `px` and `py`. If the first
 pixel coordinates are not identical to the last ones, the loop is automatically
 closed. Here is an example :
-
 
 ```
 

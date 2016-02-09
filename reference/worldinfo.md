@@ -1,6 +1,5 @@
 ## WorldInfo
 
-
 ```
 WorldInfo {
   SFString   title                          ""

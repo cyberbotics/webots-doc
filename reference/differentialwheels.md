@@ -2,7 +2,6 @@
 
 Derived from `Robot`.
 
-
 ```
 DifferentialWheels {
   SFFloat   motorConsumption    0      # [0,inf)

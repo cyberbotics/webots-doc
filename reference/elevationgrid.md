@@ -1,6 +1,5 @@
 ## ElevationGrid
 
-
 ```
 ElevationGrid {
   SFNode    color            NULL
@@ -36,13 +35,11 @@ representing the height above the grid for each vertex.
 - The `xSpacing` and `zSpacing` fields indicate the distance between vertices in
 the *x* and *z* directions respectively, and shall be greater than zero.
 
-
 %figure "ElevationGrid node"
 ![ElevationGrid node](png/elevation_grid.png)
 %end
 
 Thus, the vertex corresponding to the point P[i,j] on the grid is placed at:
-
 
 ```
 P[i,j].x = xSpacing * i
@@ -80,7 +77,6 @@ through very thin `ElevationGrid`s.
 The default texture mapping produces a texture that is upside down when viewed
 from the positive *y*-axis. To orient the texture with a more intuitive mapping,
 use a `TextureTransform` node to reverse the texture coordinate, like this:
-
 
 ```
 Shape {

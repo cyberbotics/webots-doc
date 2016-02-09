@@ -74,8 +74,6 @@ $ lspci | grep VGA
 01:00.0 VGA compatible controller: nVidia Corporation GeForce 8500 GT (rev a1)
 ```
 
-
-
 Then you can normally download the appropriate driver from the graphics hardware
 manufacturer's website: [http://www.nvidia.com](http://www.nvidia.com) for an
 nVidia card or [http://www.amd.com](http://www.amd.com) for a ATI graphics card.

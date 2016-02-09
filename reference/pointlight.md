@@ -2,7 +2,6 @@
 
 Derived from `Light`.
 
-
 ```
 PointLight {
   SFVec3f   attenuation   1 0 0    # [0,inf)

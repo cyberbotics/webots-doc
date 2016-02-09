@@ -6,7 +6,6 @@ hierarchical representation of the current world, the *Text editor* that allows
 to edit source code, and finally, the *Console* that displays both compilation
 and controller outputs.
 
-
 %figure "Webots GUI"
 ![Webots GUI](png/main_window.png)
 %end
@@ -400,7 +399,6 @@ compared to real time. In other words, it represents the speed of the virtual
 time. If the value of the speedometer is 2, it means that your computer
 simulation is running twice as fast as the corresponding real robots would. This
 information is valid both in `Run` mode and `Fast` mode.
-
 
 %figure "Speedometer"
 ![Speedometer](png/speedometer.png)

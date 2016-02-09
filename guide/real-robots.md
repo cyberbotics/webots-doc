@@ -7,7 +7,6 @@ and the corresponding controllers are located in the
 
 ### aibo_ers210_rough.wbt
 
-
 %figure "aibo_ers210_rough.wbt"
 ![aibo_ers210_rough.wbt](png/aibo_ers210_rough.png)
 %end
@@ -17,7 +16,6 @@ floor while a ball rolls and falls off. The uneven floor is principally made of
 a `IndexedFaceSet`.
 
 ### aibo_ers7.wbt
-
 
 %figure "aibo_ers7.wbt"
 ![aibo_ers7.wbt](png/aibo_ers7.png)
@@ -29,7 +27,6 @@ bone.
 
 ### alice.wbt
 
-
 %figure "alice.wbt"
 ![alice.wbt](png/alice.png)
 %end
@@ -40,7 +37,6 @@ many others, this example uses the `braitenberg` controller.
 
 ### boebot.wbt
 
-
 %figure "boebot.wbt"
 ![boebot.wbt](png/boebot.png)
 %end
@@ -50,7 +46,6 @@ robot detects an obstacle with one of its `DistanceSensor`s, it turns the
 corresponding `LED` on.
 
 ### e-puck.wbt
-
 
 %figure "e-puck.wbt"
 ![e-puck.wbt](png/e-puck.png)
@@ -64,7 +59,6 @@ this controller is in the
 "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### e-puck_line.wbt
-
 
 %figure "e-puck_line.wbt"
 ![e-puck_line.wbt](png/e-puck_line.png)
@@ -80,7 +74,6 @@ code for this controller is in the "e-puck\_line" directory.
 
 ### e-puck_line_demo.wbt
 
-
 %figure "e-puck_line_demo.wbt"
 ![e-puck_line_demo.wbt](png/e-puck_line_demo.png)
 %end
@@ -93,7 +86,6 @@ distributed.
 
 ### hemisson_cross_compilation.wbt
 
-
 %figure "hemisson_cross_compilation.wbt"
 ![hemisson_cross_compilation.wbt](png/hemisson_cross_compilation.png)
 %end
@@ -104,7 +96,6 @@ is a cross-compilation example for the real Hemisson robot. The source code for
 this controller is in the "hemisson" directory.
 
 ### hoap2_sumo.wbt
-
 
 %figure "hoap2_sumo.wbt"
 ![hoap2_sumo.wbt](png/hoap2_sumo.png)
@@ -117,7 +108,6 @@ on the ground. The source code for this controller is in the "hoap2" directory.
 
 ### hoap2_walk.wbt
 
-
 %figure "hoap2_walk.wbt"
 ![hoap2_walk.wbt](png/hoap2_walk.png)
 %end
@@ -128,7 +118,6 @@ and logs the pressure exerted by its body on the ground. The source code for
 this controller is in the "hoap2" directory.
 
 ### ipr_collaboration.wbt
-
 
 %figure "ipr_collaboration.wbt"
 ![ipr_collaboration.wbt](png/ipr_collaboration.png)
@@ -143,7 +132,6 @@ for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
 
 ### ipr_cube.wbt
 
-
 %figure "ipr_cube.wbt"
 ![ipr_cube.wbt](png/ipr_cube.png)
 %end
@@ -155,7 +143,6 @@ drives the movements of the robot. The source code of this client is in the
 "ipr\_serial/client/ipr\_cube.c" file.
 
 ### ipr_factory.wbt
-
 
 %figure "ipr_factory.wbt"
 ![ipr_factory.wbt](png/ipr_factory.png)
@@ -171,7 +158,6 @@ the file "ipr\_serial/client/ipr\_factory.c".
 
 ### ipr_models.wbt
 
-
 %figure "ipr_models.wbt"
 ![ipr_models.wbt](png/ipr_models.png)
 %end
@@ -184,7 +170,6 @@ All the IPR robots use the same controller, whose source code is in the
 
 ### khepera.wbt
 
-
 %figure "khepera.wbt"
 ![khepera.wbt](png/khepera.png)
 %end
@@ -195,7 +180,6 @@ while avoiding the walls. Like many other examples, this one uses the
 "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### khepera2.wbt
-
 
 %figure "khepera2.wbt"
 ![khepera2.wbt](png/khepera2.png)
@@ -208,7 +192,6 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 ### khepera3.wbt
 
-
 %figure "khepera3.wbt"
 ![khepera3.wbt](png/khepera3.png)
 %end
@@ -219,7 +202,6 @@ arena while avoiding the walls. Like many other examples, this one uses the
 "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### khepera_kinematic.wbt
-
 
 %figure "khepera_kinematic.wbt"
 ![khepera_kinematic.wbt](png/khepera_kinematic.png)
@@ -233,7 +215,6 @@ use teh kinematic mode of Webots. Like many other examples, this one uses the
 
 ### khepera_gripper.wbt
 
-
 %figure "khepera_gripper.wbt"
 ![khepera_gripper.wbt](png/khepera_gripper.png)
 %end
@@ -244,7 +225,6 @@ it on the ground. This behavior is repeated endlessly. The source code for this
 controller is in the "khepera\_gripper" directory.
 
 ### khepera_gripper_camera.wbt
-
 
 %figure "khepera_gripper_camera.wbt"
 ![khepera_gripper_camera.wbt](png/khepera_gripper_camera.png)
@@ -257,7 +237,6 @@ world, the robot does not analyse the images it takes with its camera. The
 source code for this controller is in the "khepera\_gripper" directory.
 
 ### khepera_k213.wbt
-
 
 %figure "khepera_k213.wbt"
 ![khepera_k213.wbt](png/khepera_k213.png)
@@ -274,7 +253,6 @@ directory.
 
 ### khepera_pipe.wbt
 
-
 %figure "khepera_pipe.wbt"
 ![khepera_pipe.wbt](png/khepera_pipe.png)
 %end
@@ -288,7 +266,6 @@ it move straight forward until it detects an obstacle. This client program
 controller and for the client program are in the "pipe" directory.
 
 ### khepera_tcpip.wbt
-
 
 %figure "khepera_tcpip.wbt"
 ![khepera_tcpip.wbt](png/khepera_tcpip.png)
@@ -305,7 +282,6 @@ directory.
 
 ### koala.wbt
 
-
 %figure "koala.wbt"
 ![koala.wbt](png/koala.png)
 %end
@@ -316,7 +292,6 @@ while avoiding the walls. Like many other examples, this one uses the
 "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### magellan.wbt
-
 
 %figure "magellan.wbt"
 ![magellan.wbt](png/magellan.png)
@@ -330,7 +305,6 @@ the "others/worlds" directory. Like many other examples, this one uses the
 
 ### pioneer2.wbt
 
-
 %figure "pioneer2.wbt"
 ![pioneer2.wbt](png/pioneer2.png)
 %end
@@ -341,7 +315,6 @@ uses the `braitenberg` controller. The source code for this controller is in the
 "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
 
 ### rover.wbt
-
 
 %figure "rover.wbt"
 ![rover.wbt](png/rover_world.png)
@@ -358,7 +331,6 @@ directory.
 
 ### scout2.wbt
 
-
 %figure "scout2.wbt"
 ![scout2.wbt](png/scout2.png)
 %end
@@ -370,7 +342,6 @@ in the "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg"
 directory.
 
 ### shrimp.wbt
-
 
 %figure "shrimp.wbt"
 ![shrimp.wbt](png/shrimp.png)
@@ -398,7 +369,6 @@ the ODE plugin is in the
 "WEBOTS\_MODULES\_PATH/projects/robots/shrimp/plugins/physics/shrimp" directory.
 
 ### bioloid.wbt
-
 
 %figure "bioloid.wbt"
 ![bioloid.wbt](png/bioloid.png)

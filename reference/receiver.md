@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Receiver {
   SFString  type                "radio"  # or "serial" or "infra-red"
@@ -94,7 +93,6 @@ useful data from the head packet, before calling `wb_receiver_next_packet()`. It
 is illegal to call `wb_receiver_next_packet()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0). Here is a usage example:
 
-
 ``` c
 while (wb_receiver_get_queue_length(tag) > 0) {
   const char *message = wb_receiver_get_data(tag);
@@ -110,7 +108,6 @@ This example assumes that the data (*message*) was sent in the form of a null-
 terminated string. The Emitter/Receiver API does not put any restriction on the
 type of data that can be transmitted. Any user chosen format is suitable, as
 long as emitters and receivers agree.
-
 
 %figure "Receiver's packet queue"
 ![Receiver's packet queue](pdf/receiver_queue.pdf.png)

@@ -1,6 +1,5 @@
 ## Light
 
-
 ```
 Light {
   SFFloat   ambientIntensity   0        # [0,1]

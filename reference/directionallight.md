@@ -2,7 +2,6 @@
 
 Derived from `Light`.
 
-
 ```
 DirectionalLight {
   SFVec3f   direction   0 0 -1   # (-inf,inf)

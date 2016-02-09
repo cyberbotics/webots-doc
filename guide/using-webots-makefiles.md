@@ -117,8 +117,6 @@ add this line in your controller Makefile:
 USE_C_API = true
 ```
 
-
-
 #### Adding Debug Information
 
 If you need to debug your controller, you need to recompile it with the `debug`

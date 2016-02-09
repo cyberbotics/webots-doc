@@ -2,7 +2,6 @@
 
 Derived from `Group`.
 
-
 ```
 Transform {
   SFVec3f      translation   0 0 0     # 3D vector
@@ -22,6 +21,7 @@ children that is relative to the coordinate systems of its parent.
 
 - The `translation` field defines the translation from the parent coordinate
 system to the children's coordinate system.
+
 - The `rotation` field defines an arbitrary rotation of the children's coordinate
 system with respect to the parent coordinate system. This field contains four
 floating point values: *rx, ry, rz* and α. The first three numbers, *rx ry rz*,
@@ -30,26 +30,22 @@ rotation must be carried out. The fourth value, α, specifies the rotation angle
 around the axis in radians. When α is zero, no rotation is carried out. All the
 values of the rotation field can be positive or negative. Note however that the
 length of the 3D vector *rx ry rz* must be normalized (i.e. its length is 1.0),
-otherwise the outcome of the simulation is undefined. For example, a rotation of
-π/2 radians around the *z*-axis is represented like this:
+otherwise the outcome of the simulation is undefined.
 
-```
-rotation 0 0 1 1.5708
-```
+    For example, a rotation of π/2 radians around the *z*-axis is represented like
+    this:
 
-A rotation of π radians around an axis located exactly between the *x* and
-*y*-axis is represented like this:
+        rotation 0 0 1 1.5708
 
-```
-rotation 0.7071 0.7071 0 3.1416
-```
+    A rotation of π radians around an axis located exactly between the *x* and
+    *y*-axis is represented like this:
 
-And finally, note that these two rotations are identical:
+        rotation 0.7071 0.7071 0 3.1416
 
-```
-rotation 0 1 0 -1.5708 rotation 0 -1 0 1.5708
-```
+    And finally, note that these two rotations are identical:
 
+        rotation 0 1 0 -1.5708
+        rotation 0 -1 0 1.5708
 
 - The `scale` field specifies a possibly non-uniform scale. Only positive values
 are permitted; non-positive values scale are automatically reset to 1. Graphical

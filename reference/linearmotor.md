@@ -2,7 +2,6 @@
 
 Derived from `Motor`.
 
-
 ```
 LinearMotor {
   field SFString name       "linear motor" # used by wb_robot_get_device()

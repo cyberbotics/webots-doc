@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Gyro {
   MFVec3f    lookupTable    []    # interpolation

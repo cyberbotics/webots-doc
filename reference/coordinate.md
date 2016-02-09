@@ -1,6 +1,5 @@
 ## Coordinate
 
-
 ```
 Coordinate {
   MFVec3f   point   []   # (-inf,inf)

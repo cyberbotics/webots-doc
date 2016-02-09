@@ -2,7 +2,6 @@
 
 Abstract node, derived from `Solid`.
 
-
 ```
 Device {
 }

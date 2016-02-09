@@ -6,6 +6,8 @@ import re
 import shutil
 import textwrap
 import xml.etree.ElementTree as ET
+import pdb # break with pdb.set_trace()
+
 
 def slugify(txt):
   output = txt.lower()
@@ -13,6 +15,17 @@ def slugify(txt):
   output = re.sub(r'[\(\):]', '', output)
   output = re.sub(r'\W+', '-', output)
   return output.strip(' ').strip('-')
+
+def simplifySpaces(filename):
+    with open(filename, 'r') as file:
+        content = file.read()
+
+    content = re.sub(r'[ \t]*\n', '\n', content)
+    content = re.sub(r'\n\n\n*', '\n\n', content)
+
+    outFile = open(filename, 'w')
+    outFile.write(content)
+    outFile.close()
 
 class BookParser:
     def __init__(self, webotsDirectoryPath, bookName):
@@ -38,7 +51,7 @@ class BookParser:
         inputDirectoryPath = os.path.dirname(filePath)
 
         with open(filePath, 'r') as file:
-          content = file.read()
+            content = file.read()
 
         # deal with preprocessor instructions
         while True:
@@ -47,7 +60,7 @@ class BookParser:
                 break
             tag = mo.group(1)
             output = ''
-            with open(inputDirectoryPath + "/" + tag + '.xml', 'r') as includeFile:
+            with open(inputDirectoryPath + '/' + tag + '.xml', 'r') as includeFile:
                 output = includeFile.read()
             content = content[:mo.start()] + output + content[mo.end():]
 
@@ -80,6 +93,7 @@ class BookParser:
                 title = self.getTitle(sectionNode)
                 outFile.write('    %d. [%s](%s)\n' % (sectionCounter, title, self.bookName + '/' + slugify(title) + '.md'))
         outFile.close()
+        simplifySpaces(outputFilePath)
 
     def export(self):
         if self.root is None:
@@ -90,6 +104,7 @@ class BookParser:
         outFile = open(outputFilePath, 'w')
         self.parseBook(self.root, outFile)
         outFile.close()
+        simplifySpaces(outputFilePath)
 
     def getTitle(self, el):
       titleNodes = el.findall('title')
@@ -103,7 +118,7 @@ class BookParser:
         output = txt.encode('utf-8')
 
         m = re.search(r'\&\w*;', output)
-        if (m):
+        if m:
           print m.group(0)
 
         if protect:
@@ -127,7 +142,7 @@ class BookParser:
                 output += '\n'
         return output
 
-    def parsePara(self, node, outFile):
+    def parsePara(self, node, outFile, indent=0, inList=False):
         # para included tags:
         #     bold, command, computeroutput, email, emphasis, filename, function,
         #     guibutton, guilabel, guimenu, guimenuitem, guisubmenu, hlink,
@@ -149,34 +164,66 @@ class BookParser:
                 elif child.tag == 'ulink':
                     text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'programlisting':
-                    outFile.write(self.formatText(text) + '\n')
+                    # flush text
+                    text = self.formatText(text)
+                    content = text.split('\n')
+                    for i in range(0, len(content)):
+                        line = content[i]
+                        if len(line.strip()) > 0:
+                            outFile.write(' ' * indent + line)
+                        outFile.write('\n')
+                    outFile.write('\n')
                     text = ''
-                    self.parseProgramListing(child, outFile)
+                    if inList and indent == 0:
+                        indent += 4
+                    if indent > 0:
+                        self.parseProgramListing(child, outFile, indent + 4)
+                    else:
+                        self.parseProgramListing(child, outFile)
+                    outFile.write('\n\n')
                 else:
                     text += '`' + self.parseText(child.text, False, False) + '`'
             text += self.parseText(child.tail, True, False)
         text += self.parseText(node.tail, True, False)
+        text = self.formatText(text)
 
-        outFile.write(self.formatText(text))
+        content = text.split('\n')
+        for i in range(0, len(content)):
+            line = content[i]
+            if len(line.strip()) > 0:
+                outFile.write(' ' * indent + line)
+            if i != len(content) - 1:
+                outFile.write('\n')
 
 
-    def parseProgramListing(self, node, outFile):
-        output = '\n```'
-        lang = node.attrib.get('lang')
-        if lang is not None:
-            if 'c' in lang:
-                output += ' c'
-            elif 'C' in lang:
-                output += ' c++'
-            elif 'J' in lang:
-                output += ' java'
-            elif 'P' in lang:
-                output += ' python'
-            elif 'M' in lang:
-                output += ' matlab'
-        output += '\n'
-        output += self.parseText(node.text, False, True) + '\n'
-        output += '```\n\n'
+    def parseProgramListing(self, node, outFile, indent=0):
+        output = '\n'
+        if indent == 0:
+            output += '```'
+            lang = node.attrib.get('lang')
+            if lang is not None:
+                if 'c' in lang:
+                    output += ' c'
+                elif 'C' in lang:
+                    output += ' c++'
+                elif 'J' in lang:
+                    output += ' java'
+                elif 'P' in lang:
+                    output += ' python'
+                elif 'M' in lang:
+                    output += ' matlab'
+            output += '\n'
+
+        text = self.parseText(node.text, False, True)
+        content = text.split('\n')
+        for i in range(0, len(content)):
+            line = content[i]
+            output += ' ' * indent + line
+            if i != len(content) - 1:
+                output += '\n'
+
+        if indent == 0:
+            output += '\n```\n\n'
 
         outFile.write(output)
 
@@ -197,6 +244,7 @@ class BookParser:
 
     def parseList(self, node, outFile, ordered):
         items = node.findall('./listitem')
+        supplementaryCarriageReturnBetweenItems = len(node.findall('./listitem')) != len(node.findall('./listitem/')) 
         counter = 0
         for item in items:
             counter = counter + 1
@@ -205,35 +253,25 @@ class BookParser:
             else:
                 outFile.write('- ')
 
-            if len(item.findall('./para')) > 1:
-                # merge paras first
-                text = ''
-                children_to_remove = []
-                for child in item.getchildren():
-                    if child.tag == 'para':
-                        text += ET.tostring(child).strip()
-                        children_to_remove.append(child)
-                text = text.replace('</para><para>', ' ').replace('<para>', '').replace('</para>', '')
-                text = re.sub(r'\s+', ' ', text)
-                text = '<para>' + text.strip() + '</para>'
-                #print 'result: ' + text
-                para = ET.fromstring(text)
-                item.append(para)
-                for child in children_to_remove:
-                    item.remove(child)
-
+            firstParaChild = True
             for child in item.getchildren():
                 if child.tag == 'para':
-                    self.parsePara(child, outFile)
+                    if firstParaChild:
+                        self.parsePara(child, outFile, 0, True)
+                        firstParaChild = False
+                    else:
+                        self.parsePara(child, outFile, 4, True)
                 elif child.tag == 'figure':
                     self.parseFigure(child, outFile)
                 elif child.tag == 'programlisting':
-                    self.parseProgramListing(child, outFile)
+                    self.parseProgramListing(child, outFile, 8)
                 elif child.tag == 'note':
-                    self.parseIconPara(child)
+                    self.parseIconPara(child, 4)
                 else:
                     raise Exception('Unsupported type: ' + child.tag)
                 outFile.write('\n')
+                if supplementaryCarriageReturnBetweenItems:
+                    outFile.write('\n')
         outFile.write('\n')
 
     def parseTable(self, node, outFile):
@@ -278,7 +316,7 @@ class BookParser:
 
         outFile.write('\n')
 
-    def parseIconPara(self, node):
+    def parseIconPara(self, node, indent=0):
         # TODO
         pass
 
@@ -298,13 +336,14 @@ class BookParser:
                     raise Exception('Unsupported type: ' + node.tag)
                 outFile.write('#' * indent + ' ' + child.attrib.get('name', child.text) + '\n\n')
             elif child.tag == 'sect1':
-                fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + ".md"
+                fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName
                 if os.path.exists(fileName):
                     raise Exception('sec1: "' + fileName + '" is existing')
                 outFile = open(fileName, 'w')
                 self.parseChapter(child, outFile)
                 outFile.close()
+                simplifySpaces(fileName)
             elif child.tag == 'sect2' or child.tag == 'sect3' or child.tag == 'refentry' or child.tag == 'refsect1':
                 self.parseChapter(child, outFile)
             elif child.tag == 'para':
@@ -356,26 +395,28 @@ class BookParser:
                     if subchild.tag == 'title':
                         outFile.write('# ' + subchild.attrib.get('name', subchild.text) + '\n\n')
             elif child.tag == 'preface':
-                fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + ".md"
+                fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName
                 if os.path.exists(fileName):
                     raise Exception('preface: "' + fileName + '" is existing')
                 outFile = open(fileName, 'w')
                 self.parseChapter(child, outFile)
                 outFile.close()
+                simplifySpaces(fileName)
             elif child.tag == 'chapter':
-                fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + ".md"
+                fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName
                 if os.path.exists(fileName):
                     raise Exception('chapter: "' + fileName + '" is existing')
                 outFile = open(fileName, 'w')
                 self.parseChapter(child, outFile)
                 outFile.close()
+                simplifySpaces(fileName)
             else:
                 raise Exception('Unsupported type: ' + child.tag)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     webotsDirectoryPath = '../webots/'
     documentationInputDirectoriesPaths = [webotsDirectoryPath + 'src/doc/guide/', webotsDirectoryPath + 'src/doc/reference/']
 

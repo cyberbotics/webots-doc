@@ -255,8 +255,6 @@ int main() {
 }
 ```
 
-
-
 You will find complete examples of simulations using optimization techniques in
 Webots distribution: look for the worlds called
 "advanced\_particle\_swarm\_optimization.wbt" and

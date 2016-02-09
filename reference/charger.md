@@ -2,7 +2,6 @@
 
 Derived from `Solid`.
 
-
 ```
 Charger {
   MFFloat   battery        []
@@ -40,6 +39,7 @@ The fields specific to the `Charger` node are:
 
 - `battery`: this field should contain three values, namely the present energy of
 the charger (*J*), its maximum energy (*J*) and its charging speed (*W=J/s*).
+
 - `radius`: radius of the charging area in meters. The charging area is a disk
 centered on the origin of the charger coordinate system. The robot can recharge
 itself if its origin is in the charging area (see ).
@@ -48,9 +48,9 @@ itself if its origin is in the charging area (see ).
 ![The sensitive area of a charger](pdf/charger.pdf.png)
 %end
 
-
 - `emissiveColor`: color of the first child node (see above) when the charger is
 full.
+
 - `gradual`: defines the behavior of the indicator. If set to TRUE, the indicator
 displays a progressive transition between its original color and the
 `emissiveColor` specified in the `Charger` node, corresponding to the present

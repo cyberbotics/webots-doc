@@ -78,7 +78,6 @@ used (dictionary keys: major, minor and maintenance) |
 
 ### Example
 
-
 ```
 
 #VRML_SIM V8.1.0 utf8

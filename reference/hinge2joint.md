@@ -2,7 +2,6 @@
 
 Derived from `HingeJoint`.
 
-
 ```
 Hinge2Joint {
   field SFNode jointParameters2 NULL # JointParameters for second axis

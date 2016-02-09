@@ -1,6 +1,5 @@
 ## ContactProperties
 
-
 ```
 ContactProperties {
   SFString   material1           "default"
@@ -37,6 +36,7 @@ indicated above.
 which this `ContactProperties` node must be applied. The values in this fields
 should match the `contactMaterial` fields of `Solid` nodes in the simulation.
 The values in `material1` and `material2` are exchangeable.
+
 - The `coulombFriction` are the Coulomb friction coefficients. They must be in the
 range 0 to infinity (use -1 for infinity). 0 results in a frictionless contact,
 and infinity results in a contact that never slips. This field can held one to
@@ -53,6 +53,7 @@ support asymmetric friction. If another primitive is used, only the first value
 will be used for symetric friction.
 WEBOTS\_HOME/projects/sample/howto/worlds/asymmetric\_friction1.wbt contains an
 example of fully asymmetric friction.
+
 - The `frictionRotation` allows the user to rotate the friction directions used in
 case of asymmetric `coulombFriction` and/or asymmetric `forceDependentSlip`. By
 default, the directions are the same than the ones used for texture mapping
@@ -60,6 +61,7 @@ default, the directions are the same than the ones used for texture mapping
 the rotation field of the corresponding TextureTransform node).
 WEBOTS\_HOME/projects/sample/howto/worlds/asymmetric\_friction2.wbt illustrates
 the use of this field.
+
 - The `bounce` field is the coefficient of restitution (COR) between 0 and 1. The
 coefficient of restitution (COR), or *bounciness* of an object is a fractional
 value representing the ratio of speeds after and before an impact. An object
@@ -67,9 +69,11 @@ with a COR of 1 collides elastically, while an object with a COR < 1 collides
 inelastically. For a COR = 0, the object effectively "stops" at the surface with
 which it collides, not bouncing at all. COR = (relative speed after collision) /
 (relative speed before collision).
+
 - The `bounceVelocity` field represents the minimum incoming velocity necessary
 for bouncing. Solid objects with velocities below this threshold will have a
 `bounce` value set to 0.
+
 - The `forceDependentSlip` field defines the *force dependent slip* (FDS) for
 friction, as explained in the ODE documentation: "FDS is an effect that causes
 the contacting surfaces to side past each other with a velocity that is
@@ -81,21 +85,24 @@ coefficient is set to a positive value k then the surfaces will slide past each
 other, building up to a steady velocity of k*f relative to each other. Note that
 this is quite different from normal frictional effects: the force does not cause
 a constant acceleration of the surfaces relative to each other - it causes a
-brief acceleration to achieve the steady velocity." This field can held one to
-four values. If it has only one value, this coefficient is applied to both
-directions (force dependent slip is disabled if the value is 0). With two
-values, force dependent slip is fully asymmetric using the same coefficients for
-both solids (if one value is 0, force dependent slip is disabled in the
-corresponding direction). With three values, the first solid (corresponding to
-`material1`) uses asymmetric coefficients (first two values) and the other solid
-(corresponding to `material2`) uses a symmetric coefficient (last value).
-Finally, with four values, both solids use asymmetric coefficients, first two
-for the first solid and last two for the second solid. The friction directions
-and the supported geometric primitives are the same as the ones documented with
-the `coulombFriction` field.
+brief acceleration to achieve the steady velocity."
+
+    This field can held one to four values. If it has only one value, this
+    coefficient is applied to both directions (force dependent slip is disabled if
+    the value is 0). With two values, force dependent slip is fully asymmetric using
+    the same coefficients for both solids (if one value is 0, force dependent slip
+    is disabled in the corresponding direction). With three values, the first solid
+    (corresponding to `material1`) uses asymmetric coefficients (first two values)
+    and the other solid (corresponding to `material2`) uses a symmetric coefficient
+    (last value). Finally, with four values, both solids use asymmetric
+    coefficients, first two for the first solid and last two for the second solid.
+    The friction directions and the supported geometric primitives are the same as
+    the ones documented with the `coulombFriction` field.
+
 - The `softERP` field defines the *Error Reduction Parameter* used by ODE to
 manage local contact joints. See `WorldInfo` for a description of the ERP
 concept.
+
 - The `softCFM` field defines the soft *Constraint Force Mixing* used by ODE to
 manage local contacts joints. `WorldInfo` for a description of the CFM concept.
 

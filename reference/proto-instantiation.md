@@ -4,7 +4,6 @@ Each PROTO instance can be considered to be a complete copy of the PROTO, with
 its interface fields and body nodes. PROTO are instantiated using the standard
 node syntax, for example:
 
-
 ```
 Bicycle {
   position   0 0.5 0

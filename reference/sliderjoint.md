@@ -2,7 +2,6 @@
 
 Derived from `Joint`.
 
-
 ```
 SliderJoint {
   field       MFNode  device   [ ]        # linear motor or linear position sensor

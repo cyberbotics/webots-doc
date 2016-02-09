@@ -19,7 +19,6 @@ The BibTex reference entry may look odd, as it is very different from a standard
 paper citation and we want the specified fields to appear in the normal plain
 citation mode of LaTeX.
 
-
 ```
 @MISC{Webots,
   AUTHOR = {Webots},
@@ -41,7 +40,6 @@ Software.*
 
 A reference paper was published in the International Journal of Advanced
 Robotics Systems. Here is the BibTex entry:
-
 
 ```
 

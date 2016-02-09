@@ -1,6 +1,5 @@
 ## Shape
 
-
 ```
 Shape {
   SFNode   appearance   NULL

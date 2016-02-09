@@ -1,6 +1,5 @@
 ## Box
 
-
 ```
 Box {
   SFVec3f   size   2 2 2   # (-inf,inf)
@@ -16,7 +15,6 @@ default, the box measures 2 meters in each dimension, from -1 to +1.
 The `size` field specifies the extents of the box along the *x*-, *y*-, and
 *z*-axes respectively. See . Three positive values display the outside faces
 while three negative values display the inside faces.
-
 
 %figure "Box node"
 ![Box node](png/box.png)

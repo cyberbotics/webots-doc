@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Servo {
   SFString   type             "rotational"
@@ -98,7 +97,6 @@ In a "rotational" `Servo`, these fields have the following meaning: The
 `translation` field specifies the translation of the axis of rotation. The
 `rotation` field specifies the orientation of the axis of rotation. See .
 
-
 %figure "Rotational servo"
 ![Rotational servo](pdf/rotational_servo.pdf.png)
 %end
@@ -106,7 +104,6 @@ In a "rotational" `Servo`, these fields have the following meaning: The
 In a "linear" `Servo`, these fields have the following meaning: The
 `translation` field specifies the translation of the sliding axis. The
 `rotation` field specifies the direction of the sliding axis. See .
-
 
 %figure "Linear servo"
 ![Linear servo](pdf/linear_servo.pdf.png)
@@ -136,7 +133,6 @@ position, velocity, acceleration and motor force must be used. The second stage
 is performed by the servo P-controller (2) that computes the current velocity of
 the servo `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
-
 
 %figure "Servo control"
 ![Servo control](pdf/servo_control.pdf.png)
@@ -274,7 +270,6 @@ This damping torque/force is proportional to the effective servo velocity: `F =
 -Bv`, where `B` is the damping constant, and `v = dx/dt` is the effective servo
 velocity computed by the physics simulator.
 
-
 %figure "Mechanical Diagram of a Servo"
 ![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf.png)
 %end
@@ -331,14 +326,12 @@ example, the parent `Servo` will have a motor force (maxForce > 0) and the child
 `Servo` will have spring and damping forces (`springConstant` > 0 and
 `dampingConstant` > 0).
 
-
 %figure "Example of serial connection of two Servo nodes"
 ![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf.png)
 %end
 
 This is equivalent to this ".wbt" code, where, as you can notice, *Servo2* is a
 child of *Servo1*:
-
 
 ```
 DEF Servo1 Servo {
@@ -395,7 +388,6 @@ rotation axes: *pan* and *tilt*. Now let's assume that these axes cross each
 other but we don't know anything about the shape and the mass of the body that
 links the two axes. Then this can be modeled like this:
 
-
 ```
 DEF PAN Servo {
   ...
@@ -438,7 +430,6 @@ obstacles, external forces or the servo's own spring force, etc. It is also
 possible to wait until the `Servo` reaches the target position (synchronous)
 like this:
 
-
 ``` c
 void servo_set_position_sync(WbDeviceTag tag, double target, int delay) {
   const double DELTA = 0.001;  // max tolerated difference
@@ -460,7 +451,6 @@ the `wb_servo_set_position()` function in order to enable an endless rotational
 (or linear) motion. The current values for velocity, acceleration and motor
 torque/force are taken into account. So for example, `wb_servo_set_velocity()`
 can be used for controlling the velocity of the endless rotation:
-
 
 ``` c
 // velocity control

@@ -1,6 +1,5 @@
 ## Color
 
-
 ```
 Color {
   MFColor   color   []   # [0,1]

@@ -1,6 +1,5 @@
 ## Cylinder
 
-
 ```
 Cylinder {
   SFBool    bottom        TRUE
@@ -32,7 +31,6 @@ regardless of their associated `SFBool` field.
 The `subdivision` field defines the number of polygons used to represent the
 cylinder and so its resolution. More precisely, it corresponds to the number of
 lines used to represent the bottom or the top of the cylinder.
-
 
 %figure "The Cylinder node"
 ![The Cylinder node](png/cylinder.png)

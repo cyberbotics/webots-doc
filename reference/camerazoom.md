@@ -1,6 +1,5 @@
 ## CameraZoom
 
-
 ```
 CameraZoom {
   SFFloat     maxFieldOfView 1.5 # (rad)

@@ -26,13 +26,11 @@ updates. This installation requires the `root` privileges.
 First of all, you may want to configure your apt package manager by adding this
 line:
 
-
 ```
 deb http://www.cyberbotics.com/debian/ binary-i386/
 ```
 
 or
-
 
 ```
 deb http://www.cyberbotics.com/debian/ binary-amd64/
@@ -40,7 +38,6 @@ deb http://www.cyberbotics.com/debian/ binary-amd64/
 
 in the "/etc/apt/sources.list" configuration file. Then update the APT packages
 by using
-
 
 ```
 apt-get update
@@ -50,13 +47,11 @@ Optionally, Webots can be autentified thanks to the `Cyberbotics.asc` signature
 file which can be downloaded [here](http://www.cyberbotics.com/linux), using
 this command:
 
-
 ```
 apt-key add /path/to/Cyberbotics.asc
 ```
 
 Then proceed to the installation of Webots using:
-
 
 ```
 apt-get install webots
@@ -71,20 +66,17 @@ Once uncompressed, it is recommended to set the WEBOTS\_HOME environment
 variable to point to the webots directory obtained from the uncompression of the
 tarball:
 
-
 ```
 tar xjf webots-8.3.2-i386.tar.bz2
 ```
 
 or
 
-
 ```
 tar xjf webots-8.3.2-x86-64.tar.bz2
 ```
 
 and
-
 
 ```
 export WEBOTS_HOME=/home/username/webots
@@ -110,7 +102,6 @@ like `Upgrade` or `Reinstall`.
 Alternatively, the DEB package can also be installed using `dpkg` or `gdebi`
 with the `root` privileges. For 32-bit systems:
 
-
 ```
 dpkg -i webots_8.3.2_i386.deb
 apt-get -f install
@@ -118,13 +109,11 @@ apt-get -f install
 
 or
 
-
 ```
 gdebi webots_8.3.2_i386.deb
 ```
 
 For 64-bit systems:
-
 
 ```
 dpkg -i webots_8.3.2_amd64.deb
@@ -132,7 +121,6 @@ apt-get -f install
 ```
 
 or
-
 
 ```
 gdebi webots_8.3.2_amd64.deb

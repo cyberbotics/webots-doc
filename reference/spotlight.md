@@ -2,7 +2,6 @@
 
 Derived from `Light`.
 
-
 ```
 SpotLight {
   SFFloat ambientIntensity  0        # [0,1]
@@ -47,7 +46,6 @@ solid angle (`beamWidth`) to the outer solid angle (`cutOffAngle`). The drop off
 function from the inner angle to the outer angle is a cosine raised to a power
 function:
 
-
 ```
 
     intensity(angle) = intensity * (cosine(angle) ** exponent)
@@ -75,7 +73,6 @@ Attenuation values must be >= 0.0.
 
 Contrary to the VRML specifications, the `attenuation` and the
 `ambientIntensity` fields cannot be set simultaneously.
-
 
 %figure "Spot light"
 ![Spot light](png/spot_light.png)

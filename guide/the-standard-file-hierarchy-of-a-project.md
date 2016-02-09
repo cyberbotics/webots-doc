@@ -37,7 +37,6 @@ directory. A controller is referenced by the name of the directory. Here is an
 example of the controllers directory having one simple controller written in C
 which can be edited and executed.
 
-
 ```
 
 controllers/

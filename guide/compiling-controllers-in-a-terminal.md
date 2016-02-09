@@ -28,7 +28,6 @@ Once `WEBOTS_HOME` is defined, you should be able to compile in a terminal, with
 the `make` command. Like with the editor buttons, it is possible to build the
 whole project, or only a single binary file, e.g.:
 
-
 ```
 $ make
 $ make clean
@@ -45,7 +44,6 @@ need to add the "bin" directory of MinGW to your *PATH* environment variable.
 MinGW is located in the "mingw" subdirectory of Webots distribution. When set
 correctly, the environment variable should be like this:
 
-
 ```
 WEBOTS_HOME=C:\Program Files\Webots
 PATH=C:\program Files\Webots\mingw\bin;C:\...
@@ -54,7 +52,6 @@ PATH=C:\program Files\Webots\mingw\bin;C:\...
 Once MSYS is installed and the environment variables are defined, you should be
 able to compile controllers by invoking `mingw32-make` in the MSYS terminal,
 e.g.:
-
 
 ```
 $ mingw32-make

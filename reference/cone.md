@@ -1,6 +1,5 @@
 ## Cone
 
-
 ```
 Cone {
   SFFloat   bottomRadius   1   # (-inf,inf)
@@ -29,7 +28,6 @@ specifies that this part does not exist.
 The `subdivision` field defines the number of polygons used to represent the
 cone and so its resolution. More precisely, it corresponds to the number of
 lines used to represent the bottom of the cone.
-
 
 %figure "The Cone node"
 ![The Cone node](png/cone.png)

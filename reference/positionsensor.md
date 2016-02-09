@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 PositionSensor {
   SFFloat resolution  -1

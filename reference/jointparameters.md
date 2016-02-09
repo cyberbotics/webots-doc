@@ -1,6 +1,5 @@
 ## JointParameters
 
-
 ```
 JointParameters {
   field SFFloat position        0 # current position (m or rad)
@@ -52,11 +51,9 @@ while linear joint units (`SliderJoint`) are expressed in *meters*. See :
 
 ### Initial Transformation and Position
 
-
 %figure "HingeJoint"
 ![HingeJoint](pdf/hinge_joint.pdf.png)
 %end
-
 
 %figure "SliderJoint"
 ![SliderJoint](pdf/slider_joint.pdf.png)
@@ -124,7 +121,6 @@ to the joint in addition to the other forces (i.e., motor force, spring force).
 This damping torque/force is proportional to the effective joint velocity: `F =
 -Bv`, where `B` is the damping constant, and `v = dx/dt` is the effective joint
 velocity computed by the physics simulator.
-
 
 %figure "Mechanical Diagram of a Slider Joint"
 ![Mechanical Diagram of a Slider Joint](pdf/slider_joint_mechanics.pdf.png)

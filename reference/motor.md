@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Motor {
   SFFloat maxVelocity  10 # (m/s or rad/s): (0,inf)
@@ -31,33 +30,42 @@ axis.
 the motor *velocity*. The *velocity* can be changed at run-time with the
 `wb_motor_set_velocity()` function. The value should always be positive (the
 default is 10).
+
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
 high *P* results in a large response to a small error, and therefore a more
 sensitive system. Note that by setting *P* too high, the system can become
 unstable. With a small *P*, more simulation steps are needed to reach the target
-position, but the system is more stable. The second coordinate of `controlPID`
-field specifies the initial value of the *I* parameter, which is the *integral
-gain* of the motor PID-controller. The integral term of the PID controller is
-defined as the product of the error integral over time by *I*. This term
-accelerates the movement towards target position and eliminates the residual
-steady-state error which occurs with a pure proportional controller. However,
-since the integral term represents accumulated errors from the past, it can
-cause the present value to overshoot the target position. The third coordinate
-`controlPID` field specifies the initial value of the *D* parameter, which is
-the *derivative gain* of the motor PID-controller. The derivative term of the
-PID-controller is defined as the product of the error derivative with respect to
-time by *D*. This term predicts system behavior and thus improves settling time
-and stability of the system. The value of *P, I* and *D* can be changed at run-
-time with the `wb_motor_set_control_pid()` function.
+position, but the system is more stable.
+
+    The second coordinate of `controlPID` field specifies the initial value of the
+    *I* parameter, which is the *integral gain* of the motor PID-controller. The
+    integral term of the PID controller is defined as the product of the error
+    integral over time by *I*. This term accelerates the movement towards target
+    position and eliminates the residual steady-state error which occurs with a pure
+    proportional controller. However, since the integral term represents accumulated
+    errors from the past, it can cause the present value to overshoot the target
+    position.
+
+    The third coordinate `controlPID` field specifies the initial value of the *D*
+    parameter, which is the *derivative gain* of the motor PID-controller. The
+    derivative term of the PID-controller is defined as the product of the error
+    derivative with respect to time by *D*. This term predicts system behavior and
+    thus improves settling time and stability of the system.
+
+    The value of *P, I* and *D* can be changed at run-time with the
+    `wb_motor_set_control_pid()` function.
+
 - The `acceleration` field defines the default acceleration of the P-controller. A
 value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
+
 - The `position` field represents the current *position* of the `Motor`, in
 radians or meters. For a rotational motor, `position` represents the current
 rotation angle in radians. For a linear motor, `position` represents the
 magnitude of the current translation in meters.
+
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Motor Limits"
 section, see below.
@@ -81,11 +89,9 @@ expressed in *meters*. See :
 The `minPosition` and `maxPosition` are defined with respect to joint's zero
 position (see description of the `position` field in `JointParameters`).
 
-
 %figure "Linear Motor"
 ![Linear Motor](pdf/linear_motor.pdf.png)
 %end
-
 
 %figure "Rotational Motor"
 ![Rotational Motor](pdf/rotational_motor.pdf.png)
@@ -105,7 +111,6 @@ position, velocity, acceleration and motor force must be used. The second stage
 is performed by the motor P-controller (2) that computes the current velocity of
 the motor `V`. Finally, the third stage (3) is carried out by the physics
 simulator (ODE joint motors).
-
 
 %figure "Motor control"
 ![Motor control](pdf/motor_control.pdf.png)
@@ -228,7 +233,6 @@ is not blocked by obstacles, external forces or the motor's own spring force,
 etc. It is also possible to wait until the `Motor` reaches the target position
 (synchronous) like this:
 
-
 ``` c
 void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, double target, int delay) {
   const double DELTA = 0.001;  // max tolerated difference
@@ -250,7 +254,6 @@ the `wb_motor_set_position()` function in order to enable an endless rotational
 (or linear) motion. The current values for velocity, acceleration and motor
 torque/force are taken into account. So for example, `wb_motor_set_velocity()`
 can be used for controlling the velocity of the endless rotation:
-
 
 ``` c
 // velocity control

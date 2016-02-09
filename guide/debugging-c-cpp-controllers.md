@@ -17,7 +17,6 @@ responsive, this usually indicates the crash of a controller. This can easily be
 confirmed by listing the active processes at this moment: For example on Linux,
 type:
 
-
 ```
 $ ps -e
 ...
@@ -48,14 +47,12 @@ The first step is to recompile the controller code with the *-g* flag, in order
 to add debugging information to the executable file. This can be achieved by
 adding this line to the controller's Makefile:
 
-
 ```
 CFLAGS = -g
 ```
 
 Then you must recompile the controller, either by using the `Clean` and `Build`
 buttons of the Webots text editor or directly in a terminal:
-
 
 ```
 $ make clean
@@ -70,7 +67,6 @@ controller. Now find the process ID (PID) of the "soccer\_supervisor" process,
 using `ps -e` (Linux) or `ps -x` (Mac OS X), or using the *Task Manager*
 (Windows). The PID is in the left-most column of output of `ps` as shown above.
 Then open a terminal and start the debugger by typing:
-
 
 ```
 $ gdb
@@ -92,7 +88,6 @@ controller crashes again. The controller's execution can be interrupted at any
 time (Ctrl-C), in order to query variables, set up break points, etc. When the
 crash occurs, `gdb` prints a diagnostic message similar to this:
 
-
 ```
 Program received signal SIGSEGV, Segmentation fault.
 [Switching to Thread -1208314144 (LWP 16448)]
@@ -101,7 +96,6 @@ Program received signal SIGSEGV, Segmentation fault.
 
 This indicates the location of the problem. You can examine the call stack more
 precisely by using the `where` command of `gdb`. For example type:
-
 
 ```
 (gdb) where
@@ -123,7 +117,6 @@ source file "soccer\_supervisor.c" must be examined closely. While the
 controller is still in memory you can query the values of some variables in
 order to understand what happened. For example, you can use the `frame` and
 `print` commands:
-
 
 ```
 (gdb) frame 6

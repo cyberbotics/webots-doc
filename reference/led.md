@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 LED {
   MFColor   color   [ 1 0 0 ]  # [0,1]

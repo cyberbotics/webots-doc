@@ -9,7 +9,6 @@ according to the behaviour they exemplify.
 
 ### binocular.wbt
 
-
 %figure "binocular.wbt"
 ![binocular.wbt](png/binocular.png)
 %end
@@ -19,7 +18,6 @@ stereovision. The example does not actually perform stereovision or any form of
 computer vision.
 
 ### biped.wbt
-
 
 %figure "biped.wbt"
 ![biped.wbt](png/biped.png)
@@ -31,7 +29,6 @@ illustrates how to build a simple articulated robot and also how to turn off
 motor power.
 
 ### force_control.wbt
-
 
 %figure "force_control.wbt"
 ![force_control.wbt](png/force_control.png)
@@ -48,7 +45,6 @@ controller.
 
 ### inverted_pendulum.wbt
 
-
 %figure "inverted_pendulum.wbt"
 ![inverted_pendulum.wbt](png/inverted_pendulum.png)
 %end
@@ -59,7 +55,6 @@ solved in our example by using a PID (Proportional Integral Differential)
 controller.
 
 ### physics.wbt
-
 
 %figure "physics.wbt"
 ![physics.wbt](png/physics.png)
@@ -77,7 +72,6 @@ example of:
 
 ### supervisor.wbt
 
-
 %figure "supervisor.wbt"
 ![supervisor.wbt](png/supervisor.png)
 %end
@@ -91,7 +85,6 @@ score, places the players to their initial position when a goal is scored, etc.
 
 ### texture_change.wbt
 
-
 %figure "texture_change.wbt"
 ![texture_change.wbt](png/texture_change.png)
 %end
@@ -101,7 +94,6 @@ panel. The robot watches the panel with its `Camera`. Meanwhile a `Supervisor`
 switches the image displayed on the panel.
 
 ### town.wbt
-
 
 %figure "town.wbt"
 ![town.wbt](png/town.png)

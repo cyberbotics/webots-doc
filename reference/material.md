@@ -1,6 +1,5 @@
 ## Material
 
-
 ```
 Material {
   SFFloat   ambientIntensity   0.2          # [0,1]

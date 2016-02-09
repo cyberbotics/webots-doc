@@ -1,6 +1,5 @@
 ## Appearance
 
-
 ```
 Appearance {
   SFNode   material           NULL

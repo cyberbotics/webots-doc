@@ -7,11 +7,9 @@ a single ".wbt" or ".proto" file. If multiple nodes are given the same DEF name,
 each USE statement refers to the closest node with the given DEF name preceding
 it in the ".wbt" or ".proto" file.
 
-
 ```
 [DEF defName] nodeName { nodeBody }
 ```
-
 
 ```
 USE defName

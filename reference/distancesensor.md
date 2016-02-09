@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 DistanceSensor {
   MFVec3f    lookupTable     [ 0 0 0, 0.1 1000 0 ]
@@ -30,19 +29,7 @@ objects.
 
 ### Field Summary
 
-- 
-%figure "Sensor response versus obstacle distance"
-![Sensor response versus obstacle distance](pdf/infrared.pdf.png)
-%end
-
-
-
-%figure "Sensor response versus obstacle distance with opposite response-noise increase"
-![Sensor response versus obstacle distance with opposite response-noise increase](pdf/khepera_sonar_lut.pdf.png)
-%end
-
-
-`lookupTable`: a table used for specifying the desired response curve and noise
+- `lookupTable`: a table used for specifying the desired response curve and noise
 of the device. This table indicates how the ray intersection distances measured
 by Webots must be mapped to response values returned by the function
 `wb_distance_sensor_get_value()`. The first column of the table specifies the
@@ -52,40 +39,60 @@ noise. The noise on the return value is computed according to a gaussian random
 number distribution whose range is calculated as a percent of the response value
 (two times the standard deviation is often referred to as the signal quality).
 Note that the input values of a lookup table must always be positive and sorted
-in increasing order. Let us consider a first example:
+in increasing order.
 
-```
-lookupTable [ 0 1000 0, 0.1 1000 0.1, 0.2 400 0.1, 0.3 50 0.1, 0.37 30 0 ]
-```
+    Let us consider a first example:
 
-The above lookup table means that for a distance of 0 meters, the sensor will
-return a value of 1000 without noise (0); for a distance of 0.1 meter, the
-sensor will return 1000 with a noise of standard deviation of 10 percent (100);
-for a distance value of 0.2 meters, the sensor will return 400 with a standard
-deviation of 10 percent (40), etc. Distance values not directly specified in the
-lookup table will be linearly interpolated. This can be better understood in
-below. A different graph is produced when the trend of the desired response
-value and the trend of the desired noise standard deviation have opposite sign.
-This is the case in the following example, where the response value increases
-with the input values but the noise decreases:
+        lookupTable [ 0     1000  0,
+                      0.1   1000  0.1,
+                      0.2    400  0.1,
+                      0.3     50  0.1,
+                      0.37    30  0   ]
 
-```
-lookupTable [ 0 1023 0, 0.02 1023 0.05, 4 0 0.4 ]
-```
+    The above lookup table means that for a distance of 0 meters, the sensor will
+    return a value of 1000 without noise (0); for a distance of 0.1 meter, the
+    sensor will return 1000 with a noise of standard deviation of 10 percent (100);
+    for a distance value of 0.2 meters, the sensor will return 400 with a standard
+    deviation of 10 percent (40), etc. Distance values not directly specified in the
+    lookup table will be linearly interpolated. This can be better understood in
+    below.
 
-The resulting range of measured values is shown in .
+%figure "Sensor response versus obstacle distance"
+![Sensor response versus obstacle distance](pdf/infrared.pdf.png)
+%end
+
+    A different graph is produced when the trend of the desired response value and
+    the trend of the desired noise standard deviation have opposite sign. This is
+    the case in the following example, where the response value increases with the
+    input values but the noise decreases:
+
+        lookupTable [ 0     1023  0,
+                      0.02  1023  0.05,
+                      4        0  0.4  ]
+
+    The resulting range of measured values is shown in .
+
+%figure "Sensor response versus obstacle distance with opposite response-noise increase"
+![Sensor response versus obstacle distance with opposite response-noise increase](pdf/khepera_sonar_lut.pdf.png)
+%end
+
 - `type`: one of "generic" (the default), "infra-red", "sonar" or "laser". Sensors
 of type "infra-red" are sensitive to the objects' colors; light and red (RGB)
 obstacles have a higher response than dark and non-red obstacles (see below for
-more details). Sensors of type "sonar" and "laser" return the distance to the
-nearest object while "generic" and "infa-red" computes the average distance of
-all rays. Note however that sensors of type "sonar" will return the sonar range
-for each ray whose angle of incidence is greater than π/8 radians (see below
-for more details). Sensors of type "laser" can have only one ray and they have
-the particularity to draw a red spot at the point where this ray hits an
-obstacle. This red spot is visible on the camera images. If the red spot
-disappears due to depth fighting, then it could help increasing the `lineScale`
-value in `WorldInfo` node that is used for computing its position offset.
+more details).
+
+    Sensors of type "sonar" and "laser" return the distance to the nearest object
+    while "generic" and "infa-red" computes the average distance of all rays. Note
+    however that sensors of type "sonar" will return the sonar range for each ray
+    whose angle of incidence is greater than π/8 radians (see below for more
+    details).
+
+    Sensors of type "laser" can have only one ray and they have the particularity to
+    draw a red spot at the point where this ray hits an obstacle. This red spot is
+    visible on the camera images. If the red spot disappears due to depth fighting,
+    then it could help increasing the `lineScale` value in `WorldInfo` node that is
+    used for computing its position offset.
+
 - `numberOfRays`: number of rays cast by the sensor. The number of rays must be
 equal to, or greater than 1 for "infra-red" and "sonar" sensors. `numberOfRays`
 must be exactly 1 for "laser" sensors. If this number is larger than 1, then
@@ -102,7 +109,6 @@ rays; however, Webots' performance drops as the number of rays increases.
 ![Predefined configurations for 1 through 10 sensor rays](pdf/ray_orbits.pdf.png)
 %end
 
-
 - `aperture`: sensor aperture angle or laser beam radius. For the "infra-red" and
 "sonar" sensor types, this field controls the opening angle (in radians) of the
 cone of rays when multiple rays are used. For the "laser" sensor type, this
@@ -112,7 +118,6 @@ beam hits an obstacle.
 %figure "Weight distribution formulas"
 ![Weight distribution formulas](pdf/weight_formula.pdf.png)
 %end
-
 
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for
 "generic" and "infra-red" sensors). When averaging the sensor's response, the
@@ -129,7 +134,6 @@ field is ignored for the "sonar" and "laser" DistanceSensor types.
 %figure "Example distribution for 10 rays using a Gaussian width of 0.5"
 ![Example distribution for 10 rays using a Gaussian width of 0.5](pdf/weight_distribution.pdf.png)
 %end
-
 
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
@@ -174,7 +178,6 @@ in the lookup table, i.e. the value corresponding to sonar sensor's range, if
 the angle of incidence is greater than 22.5 degrees (π/8 radians). In other
 words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see ).
-
 
 %figure "Sonar sensor"
 ![Sonar sensor](pdf/sonar_reflection.pdf.png)

@@ -38,7 +38,6 @@ On Mac the JDK installer should do this automatically.
 On Linux, you can set the *PATH* by adding this line to your "~/.bashrc" or
 equivalent file.
 
-
 ```
 $ export PATH=/usr/lib/jvm/java-XXXXXX/bin:$PATH
 ```
@@ -58,7 +57,6 @@ In the dialog, in the `User variables for ...` section, look for a variable
 named *PATH*. Add the "bin" path of the installed SDK to the right end of *PATH*
 variables. If the *PATH* variable does not exist you should create it. A typical
 value for *PATH* is:
-
 
 ```
 C:\Program Files\Java\jdk-XXXXXXX\bin
@@ -118,13 +116,11 @@ define (or modify) this environment variable before running Webots (see the
 previous section in order to know how to set an environment variable). Under
 windows, the CLASSPATH seems like this,
 
-
 ```
 $ set CLASSPATH=C:\Program Files\java\jdk\bin;relative\mylib.jar
 ```
 
 while under Linux and Mac OS X, it seems like this:
-
 
 ```
 $ export CLASSPATH=/usr/lib/jvm/java/bin:relative/mylib.jar

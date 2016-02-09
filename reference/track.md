@@ -2,7 +2,6 @@
 
 Derived from `Solid`.
 
-
 ```
 Track {
   MFNode     device            []
@@ -62,7 +61,6 @@ the belt. By convention the wheels are all aligned along the z-axis of the
 having the smallest x-axis value. The following code fragment shows the belt
 path definition for the convex track example shown in :
 
-
 ```
 children [
   TrackWheel {
@@ -93,14 +91,12 @@ children [
 ]
 ```
 
-
 %figure "Convex track's belt shape example"
 ![Convex track's belt shape example](png/track_belt_convex.png)
 %end
 
 Then for a concave track belt shape like the one shown in the following
 `TrackWheel` nodes have to be defined:
-
 
 ```
 children [
@@ -121,7 +117,6 @@ children [
   }
 ]
 ```
-
 
 %figure "Concave track's belt shape example"
 ![Concave track's belt shape example](png/track_belt_concave.png)

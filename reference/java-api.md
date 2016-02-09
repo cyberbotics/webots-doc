@@ -11,14 +11,12 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.Brake; |
 | public class `Brake` extends `Device` { |
 | public void `setDampingConstant`(double dampingConstant); |
 | public int `getType`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Camera; |
 | public class `Camera` extends `Device` { |
@@ -56,7 +54,6 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.Compass; |
 | public class `Compass` extends `Device` { |
 | public void `enable`(int ms); |
@@ -65,7 +62,6 @@ The following tables describe the Java classes and their methods.
 | public double[] `getValues`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Connector; |
 | public class `Connector` extends `Device` { |
@@ -77,7 +73,6 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.Device; |
 | public class `Device` { |
 | public String `getModel`(); |
@@ -85,7 +80,6 @@ The following tables describe the Java classes and their methods.
 | public int `getNodeType`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.DifferentialWheels; |
 | public class `DifferentialWheels` extends `Robot` { |
@@ -104,7 +98,6 @@ The following tables describe the Java classes and their methods.
 | public double `getSpeedUnit`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Display; |
 | public class `Display` extends `Device` { |
@@ -132,7 +125,6 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.DistanceSensor; |
 | public class `DistanceSensor` extends `Device` { |
 | public void `enable`(int ms); |
@@ -141,7 +133,6 @@ The following tables describe the Java classes and their methods.
 | public double `getValue`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Emitter; |
 | public class `Emitter` extends `Device` { |
@@ -154,7 +145,6 @@ The following tables describe the Java classes and their methods.
 | public int `getBufferSize`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Field; |
 | public class Field { |
@@ -205,7 +195,6 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.GPS; |
 | public class `GPS` extends `Device` { |
 | public void `enable`(int ms); |
@@ -214,7 +203,6 @@ The following tables describe the Java classes and their methods.
 | public double[] `getValues`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Gyro; |
 | public class `Gyro` extends `Device` { |
@@ -225,12 +213,10 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.ImageRef; |
 | public class ImageRef { |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.InertialUnit; |
 | public class `InertialUnit` extends `Device` { |
@@ -247,7 +233,6 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.LightSensor; |
 | public class `LightSensor` extends `Device` { |
 | public void `enable`(int ms); |
@@ -256,7 +241,6 @@ The following tables describe the Java classes and their methods.
 | public double `getValue`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Motion; |
 | public class `Motion` { |
@@ -273,7 +257,6 @@ The following tables describe the Java classes and their methods.
 | public void `setTime`(int time); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Motor; |
 | public class `Motor` extends `Device` { |
@@ -340,14 +323,12 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.Pen; |
 | public class `Pen` extends `Device` { |
 | public void `write`(bool write); |
 | public void `setInkColor`(int color, double density); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.PositionSensor; |
 | public class `PositionSensor` extends `Device` { |
@@ -359,7 +340,6 @@ The following tables describe the Java classes and their methods.
 | public int `getType`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Receiver; |
 | public class `Receiver` extends `Device` { |
@@ -377,7 +357,6 @@ The following tables describe the Java classes and their methods.
 | public int `getChannel`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Robot; |
 | public class `Robot` { |
@@ -438,7 +417,6 @@ The following tables describe the Java classes and their methods.
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.Servo; |
 | public class `Servo` extends `Device` { |
 | public final static int ROTATIONAL, LINEAR; |
@@ -462,7 +440,6 @@ The following tables describe the Java classes and their methods.
 | public int `getType`(); |
 | } |
 ```
-
 
 ```| import com.cyberbotics.webots.controller.Supervisor; |
 | public class `Supervisor` extends `Robot` { |
@@ -493,7 +470,6 @@ int quality, |
 | } |
 ```
 
-
 ```| import com.cyberbotics.webots.controller.TouchSensor; |
 | public class `TouchSensor` extends `Device` { |
 | public final static int BUMPER, FORCE, FORCE3D; |
@@ -505,5 +481,4 @@ int quality, |
 | public int `getType`(); |
 | } |
 ```
-
 

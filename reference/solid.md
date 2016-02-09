@@ -2,7 +2,6 @@
 
 Derived from `Transform`.
 
-
 ```
 Solid {
   SFString   name               "solid"

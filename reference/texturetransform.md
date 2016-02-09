@@ -1,6 +1,5 @@
 ## TextureTransform
 
-
 ```
 TextureTransform {
   SFVec2f   center        0 0   # (-inf,inf)
@@ -45,7 +44,6 @@ intermediate transformations described above. Let `C` be the translation mapping
 `(0,0)` to the point `(C`, `T` be the translation of vector `(T`, `R` the
 rotation with center `(0,0)` and angle θ , and `S` a scaling with scaling
 factors `S`. In matrix notation, the corresponding `TextureTransform` reads as
-
 
 %figure "Texture transformation in matrix notation"
 ![Texture transformation in matrix notation](pdf/texture_transform.pdf.png)

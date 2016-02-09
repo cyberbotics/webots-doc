@@ -1,6 +1,5 @@
 ## ImageTexture
 
-
 ```
 ImageTexture {
   MFString   url       []
@@ -19,7 +18,6 @@ bottom edge of the image corresponds to the *s*-axis of the texture map, and
 left edge of the image corresponds to the *t*-axis of the texture map. The
 lower-left pixel of the image corresponds to *s=0, t=0*, and the top-right pixel
 of the image corresponds to *s=1, t=1*. These relationships are depicted below.
-
 
 %figure "Texture map coordinate system"
 ![Texture map coordinate system](png/image_texture.png)
@@ -67,7 +65,6 @@ the initialization time because of the generation of the mipmaps.
 
 The texture path is searched from the corresponding `url` element according to
 the following rule:
-
 
 ```
 

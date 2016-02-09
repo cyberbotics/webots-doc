@@ -1,6 +1,5 @@
 ## IndexedLineSet
 
-
 ```
 IndexedLineSet {
   SFNode    coord        NULL

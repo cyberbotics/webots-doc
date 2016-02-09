@@ -6,14 +6,12 @@ The PROTO definition defines exactly what the PROTO does in terms of the built-
 in nodes or of the instances of other PROTO nodes. Here is the syntax for a
 PROTO definition:
 
-
 ```
 PROTO protoName [ protoInterface ] { protoBody }
 ```
 
 The interface is a sequence of field declarations which specify the types, names
 and default values for the PROTO's fields. A field declaration has this syntax:
-
 
 ```
 field fieldType fieldName defaultValue
@@ -26,7 +24,6 @@ freely chosen name for this field and `defaultValue` is a literal default value
 that depends on `fieldType`.
 
 Here is an example of PROTO definition:
-
 
 ```
 PROTO MyProto [
@@ -59,7 +56,6 @@ followed by the keyword IS followed by the name of one of the fields of the
 PROTO interface:
 
 For example:
-
 
 ```
 PROTO Bicycle [

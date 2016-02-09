@@ -1,6 +1,5 @@
 ## Fog
 
-
 ```
 Fog {
   SFColor    color             1 1 1    # [0,1]

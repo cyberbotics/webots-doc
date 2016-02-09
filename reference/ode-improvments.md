@@ -9,7 +9,6 @@ functions were modified.
 It is possible to set and get the suspension axis thanks to the following two
 functions:
 
-
 ```
 
 void dJointSetHingeSuspensionAxis (dJointID, dReal x, dReal y, dReal z);
@@ -25,7 +24,6 @@ By default in ODE, the suspension is along one of the axes of the joint, in the
 ODE version of Webots, the suspension has been improved in order to use any
 arbitrary axis. It is possible to set and get this axis thanks to the following
 two functions:
-
 
 ```
 

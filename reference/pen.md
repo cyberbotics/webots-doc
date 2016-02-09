@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Pen {
   SFColor   inkColor     0 0 0   # [0,1]
@@ -76,7 +75,6 @@ red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is grey
 0 meaning transparent ink and 1 meaning completely opaque ink.
 
 #### Example
-
 
 ```
 wb_pen_set_ink_color(pen,0xF01010,0.9);

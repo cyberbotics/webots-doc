@@ -7,7 +7,6 @@ Pioneer 3-AT robot. ().
 
 #### Overview of the robot
 
-
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 ![Pioneer 3-AT, a ready-to-use all terrain base](png/pioneer3at_real.png)
 %end
@@ -34,7 +33,6 @@ Adept Mobile Robots official
 
 #### Simulation model
 
-
 %figure "The Pioneer 3-AT model in Webots"
 ![The Pioneer 3-AT model in Webots](png/pioneer3at.png)
 %end
@@ -45,7 +43,6 @@ proximity measurements. The standard model of the Pioneer 3-AT is provided in
 the "pioneer3AT.wbt" file which is located in the
 "WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3at/worlds" directory of
 the Webots distribution.
-
 
 %figure "Pioneer 3-AT motor names"
 ![Pioneer 3-AT motor names](png/pioneer3at_wheels.png)
@@ -62,7 +59,6 @@ The Pioneer 3-AT motors are RotationalMotor nodes named according to . The
 to manage the rotation of the wheels. The sonar sensors are numbered according
 to .
 
-
 %figure "Sonar sensors positions"
 ![Sonar sensors positions](png/pioneer3at_sonars.png)
 %end
@@ -76,7 +72,6 @@ In this section, you will learn how to use Webots simulation model of the
 Pioneer 3-DX robot. ().
 
 #### Overview of the robot
-
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 ![Pioneer 3-DX, an all-purpose base, used for research and applications](png/pioneer3dx_real.png)
@@ -110,7 +105,6 @@ Adept Mobile Robots official
 
 #### Simulation model
 
-
 %figure "The Pioneer 3-DX model in Webots"
 ![The Pioneer 3-DX model in Webots](png/pioneer3dx.png)
 %end
@@ -122,7 +116,6 @@ standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file
 which is located in the
 "WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3dx/worlds" directory of
 the Webots distribution.
-
 
 %figure "Pioneer 3-DX motor names"
 ![Pioneer 3-DX motor names](png/pioneer3dx_servos.png)

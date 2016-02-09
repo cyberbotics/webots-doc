@@ -17,9 +17,7 @@ Here is a simple `MATLAB` controller example:
 % uncomment the next two lines to use the
 ```
 
-
-
-### Using the 
+### Using the
 
 In order to avoid cluttering the desktop with too many windows, Webots starts
 `MATLAB` with the *-nodesktop* option. The *-nodesktop* option starts `MATLAB`
@@ -27,7 +25,6 @@ without user interface and therefore it keeps the memory usage low which is
 useful in particular for multi-robot experiments. If you would like to use the
 `MATLAB` desktop to interact with your controller you just need to add these two
 `MATLAB` commands somewhere at the beginning of your controller m-file:
-
 
 ```
 desktop;
@@ -49,7 +46,6 @@ Once the controller is terminated, the connection with Webots remains active.
 Therefore it becomes possible to issue Webots commands directly at the `MATLAB`
 prompt, for example you can interactively issue commands to query the sensors,
 etc.:
-
 
 ```
 >> wb_differential_wheels_set_speed(600, 600);

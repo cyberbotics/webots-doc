@@ -10,13 +10,11 @@ The following tables describe the Python classes and their methods.
 | def `getValues`(self) |
 ```
 
-
 ```| from controller import Brake |
 | class `Brake` (`Device`) : |
 | def `setDampingConstant`(self, dampingConstant) |
 | def `getType`(self) |
 ```
-
 
 ```| from controller import Camera |
 | class `Camera` (`Device`) : |
@@ -55,7 +53,6 @@ The following tables describe the Python classes and their methods.
 | def `saveImage`(self, filename, quality) |
 ```
 
-
 ```| from controller import Compass |
 | class `Compass` (`Device`) : |
 | def `enable`(self, ms) |
@@ -63,7 +60,6 @@ The following tables describe the Python classes and their methods.
 | def `getSamplingPeriod`(self) |
 | def `getValues`(self) |
 ```
-
 
 ```| from controller import Connector |
 | class `Connector` (`Device`) : |
@@ -74,14 +70,12 @@ The following tables describe the Python classes and their methods.
 | def `unlock`(self) |
 ```
 
-
 ```| from controller import `Device` |
 | class Device : |
 | def `getModel`(self) |
 | def `getName`(self) |
 | def `getNodeType`(self) |
 ```
-
 
 ```| from controller import DifferentialWheels |
 | class `DifferentialWheels` (`Robot`) : |
@@ -99,7 +93,6 @@ The following tables describe the Python classes and their methods.
 | def `getMaxSpeed`(self) |
 | def `getSpeedUnit`(self) |
 ```
-
 
 ```| from controller import Display |
 | class `Display` (`Device`) : |
@@ -126,7 +119,6 @@ The following tables describe the Python classes and their methods.
 | def `imageDelete`(self, ir) |
 ```
 
-
 ```| from controller import DistanceSensor |
 | class `DistanceSensor` (`Device`) : |
 | def `enable`(self, ms) |
@@ -134,7 +126,6 @@ The following tables describe the Python classes and their methods.
 | def `getSamplingPeriod`(self) |
 | def `getValue`(self) |
 ```
-
 
 ```| from controller import Emitter |
 | class `Emitter` (`Device`) : |
@@ -146,7 +137,6 @@ The following tables describe the Python classes and their methods.
 | def `setRange`(self, range) |
 | def `getBufferSize`(self) |
 ```
-
 
 ```| from controller import Field |
 | class Field : |
@@ -196,7 +186,6 @@ The following tables describe the Python classes and their methods.
 | def `removeMFNode`(self, position) |
 ```
 
-
 ```| from controller import GPS |
 | class `GPS` (`Device`) : |
 | def `enable`(self, ms) |
@@ -204,7 +193,6 @@ The following tables describe the Python classes and their methods.
 | def `getSamplingPeriod`(self) |
 | def `getValues`(self) |
 ```
-
 
 ```| from controller import Gyro |
 | class `Gyro` (`Device`) : |
@@ -214,11 +202,9 @@ The following tables describe the Python classes and their methods.
 | def `getValues`(self) |
 ```
 
-
 ```| from controller import ImageRef |
 | class ImageRef : |
 ```
-
 
 ```| from controller import InertialUnit |
 | class `InertialUnit` (`Device`) : |
@@ -233,7 +219,6 @@ The following tables describe the Python classes and their methods.
 | def `get`(self) |
 ```
 
-
 ```| from controller import LightSensor |
 | class `LightSensor` (`Device`) : |
 | def `enable`(self, ms) |
@@ -241,7 +226,6 @@ The following tables describe the Python classes and their methods.
 | def `getSamplingPeriod`(self) |
 | def `getValue`(self) |
 ```
-
 
 ```| from controller import Motion |
 | class `Motion` : |
@@ -257,7 +241,6 @@ The following tables describe the Python classes and their methods.
 | def `getTime`(self) |
 | def `setTime`(self, time) |
 ```
-
 
 ```| from controller import Motor |
 | class `Motor` (`Device`) : |
@@ -291,7 +274,6 @@ The following tables describe the Python classes and their methods.
 | def `getType`(self) |
 ```
 
-
 ```| from controller import Node |
 | class Node : |
 | NO\_NODE, APPEARANCE, BACKGROUND, BOX, COLOR, CONE, |
@@ -324,13 +306,11 @@ The following tables describe the Python classes and their methods.
 | def `resetPhysics`(self) |
 ```
 
-
 ```| from controller import Pen |
 | class `Pen` (`Device`) : |
 | def `write`(self, write) |
 | def `setInkColor`(self, color, density) |
 ```
-
 
 ```| from controller import PositionSensor |
 | class `PositionSensor` (`Device`) : |
@@ -341,7 +321,6 @@ The following tables describe the Python classes and their methods.
 | def `getValue`(self) |
 | def `getType`(self) |
 ```
-
 
 ```| from controller import Receiver |
 | class `Receiver` (`Device`) : |
@@ -358,7 +337,6 @@ The following tables describe the Python classes and their methods.
 | def `setChannel`(self, channel) |
 | def `getChannel`(self) |
 ```
-
 
 ```| from controller import Robot |
 | class `Robot` : |
@@ -417,7 +395,6 @@ The following tables describe the Python classes and their methods.
 | def `getType`(self) |
 ```
 
-
 ```| from controller import Servo |
 | class `Servo` (`Device`) : |
 | ROTATIONAL, LINEAR |
@@ -440,7 +417,6 @@ The following tables describe the Python classes and their methods.
 | def `setForce`(self, force) |
 | def `getType`(self) |
 ```
-
 
 ```| from controller import Supervisor |
 | class `Supervisor` (`Robot`) : |
@@ -468,7 +444,6 @@ acceleration, caption) |
 | def `animationStopRecording`(self) |
 ```
 
-
 ```| from controller import TouchSensor |
 | class `TouchSensor` (`Device`) : |
 | BUMPER, FORCE, FORCE3D |
@@ -479,5 +454,4 @@ acceleration, caption) |
 | def `getValues`(self) |
 | def `getType`(self) |
 ```
-
 

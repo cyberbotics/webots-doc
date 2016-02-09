@@ -14,7 +14,6 @@ and binary files without extension. The extension will be added by Webots
 depending on the platform: it will be ".so" (Linux), ".dll" (Windows) or
 ".dylib" (Mac OS X) for the binary file. For example, this `WorldInfo` node:
 
-
 ```
 WorldInfo {
   ...

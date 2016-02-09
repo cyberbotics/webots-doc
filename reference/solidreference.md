@@ -1,6 +1,5 @@
 ## SolidReference
 
-
 ```
 SolidReference {
   field  SFString  solidName  "" # name of an existing solid or <static environment>

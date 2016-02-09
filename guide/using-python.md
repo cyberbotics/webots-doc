@@ -26,14 +26,12 @@ Most of the Linux distribution have Python 2.7 already installed. Mac OS X also
 has Python installed by default. To check the current version of Python
 installed on your system, you can type in a terminal:
 
-
 ```
 $ python --version
 ```
 
 Webots will start Python using the `python2.7` command line. To check if this
 command line is installed on your computer, you can type in a terminal:
-
 
 ```
 $ python2.7 --version

@@ -1,6 +1,5 @@
 ## Propeller
 
-
 ```
 Propeller {
   field SFVec3f shaftAxis       1 0 0 # (m)
@@ -14,7 +13,6 @@ Propeller {
 ```
 
 ### Description
-
 
 %figure "Propeller"
 ![Propeller](pdf/propeller.pdf.png)

@@ -2,7 +2,6 @@
 
 Derived from `Motor`.
 
-
 ```
 RotationalMotor {
   field SFString name         "rotational motor" # for wb_robot_get_device()

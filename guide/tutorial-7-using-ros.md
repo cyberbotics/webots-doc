@@ -29,7 +29,6 @@ ots\_joystick/src/webots\_joystick\_node.cpp" and the ROS launcher file
 "joy.launch" is used in "webots\_joystick\_node.cpp" to launch the ROS node
 "joy\_node" as child process:
 
-
 ```
   // launch the joy ROS node
       int roslaunch=fork();

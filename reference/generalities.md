@@ -3,7 +3,6 @@
 Webots world files must use the ".wbt" file name extension. The first line of a
 ".wbt" file uses this header:
 
-
 ```
 #VRML_SIM V6.0 utf8
 ```
@@ -17,7 +16,6 @@ associated with this world.
 
 One (and only one) instance of each of the `WorldInfo, ViewPoint` and
 `Background` nodes must be present in every ".wbt" file. For example:
-
 
 ```
 #VRML_SIM V6.0 utf8

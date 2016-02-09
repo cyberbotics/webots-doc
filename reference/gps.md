@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 GPS {
   SFString   type              "satellite"
@@ -21,8 +20,10 @@ obtain information about its absolute position from the controller program.
 
 - `type`: This field defines the type of GPS technology used like "satellite" or
 "laser" (currently ignored).
+
 - `accuracy`: This field defines the precision of the GPS, that is the standard
 deviation (expressed in meter) of the gaussian noise added to the position.
+
 - `noiseCorrelation`: If a more accurate gps noise model than the simple gaussian
 noise is required, this field can be used to define the noise correlation level.
 The noise model is then approximated by a gaussian-correlated phenomena, which
@@ -37,7 +38,6 @@ as described in .
 %figure "Gauss-Markov process"
 ![Gauss-Markov process](pdf/gauss_markov.pdf.png)
 %end
-
 
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field

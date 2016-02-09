@@ -11,7 +11,6 @@ Cyberbotics Ltd.
 
 ### Overview of the robot
 
-
 %figure "The e-puck robot at work"
 ![The e-puck robot at work](png/e-puck_real.png)
 %end
@@ -57,7 +56,6 @@ simulation, remote control and cross-compilation system. |
 %%end
 
 ### Simulation model
-
 
 %figure "The e-puck model in Webots"
 ![The e-puck model in Webots](png/e-puck.png)
@@ -134,7 +132,6 @@ mode, so their direction coincide. Proximity sensors responses are simulated in
 accordance with the lookup table in ; this table is the outcome of calibration
 performed on the real robot.
 
-
 %figure "Proximity sensor response against distance"
 ![Proximity sensor response against distance](png/e-puck_distance_sensor_lookup_table.png)
 %end
@@ -150,7 +147,6 @@ PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete
 specifications in it. The two PROTO fields `groundSensorSlot` and `turretSlot`
 have been included in the simulation model in order to support extension
 modules.
-
 
 %figure "Sensors, LEDs and camera"
 ![Sensors, LEDs and camera](png/e-puck_sensors_and_leds.png)
@@ -175,7 +171,6 @@ and return to the line following behavior afterwards. This model was contributed
 by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises
 with Webots and extended e-puck robots.
 
-
 %figure "An e-puck extension for line following"
 ![An e-puck extension for line following](png/e-puck_line.png)
 %end
@@ -197,7 +192,6 @@ can improve these models using your contribution.
 ### Control interface
 
 #### Control window
-
 
 %figure "The e-puck control window for simulation"
 ![The e-puck control window for simulation](png/e-puck_control.png)
@@ -255,7 +249,6 @@ world file.
 The BotStudio windows appears when the e-puck's controller points on a *.bsg*
 file.
 
-
 %figure "BotStudio"
 ![BotStudio](png/e-puck_botstudio.png)
 %end
@@ -275,7 +268,6 @@ interface of the OS). This can be done by using the `rfcomm` command. Once
 generated, the rfcomm file has to be given to Webots through an environment
 variable. It may also occur that the rfcomm file doesn't have the read rights. A
 typical pairing can be done using the following commands:
-
 
 ```
 
@@ -359,6 +351,4 @@ terminal:
 ```
 sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386
 ```
-
-
 

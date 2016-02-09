@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 TouchSensor {
   SFString   type          "bumper"

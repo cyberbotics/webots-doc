@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 InertialUnit {
   MFVec3f    lookupTable    []    # interpolation
@@ -41,6 +40,7 @@ changing the units to degrees for example. With the lookup table it is also
 possible to define the min and max output values and to add noise to the output
 values. By default the lookup table is empty and therefore the returned angle
 values are expressed in radians and no noise is added.
+
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation
 should be enabled or disabled for the specified axis. The `xAxis` field defines
 whether the *roll* angle should be computed. The `yAxis` field defines whether
@@ -54,7 +54,6 @@ axes are enabled (TRUE).
 %figure "Roll, pitch and yaw angles in Webots' Inertial Unit"
 ![Roll, pitch and yaw angles in Webots' Inertial Unit](png/roll_pitch_yaw.png)
 %end
-
 
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field

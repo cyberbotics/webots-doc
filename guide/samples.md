@@ -10,7 +10,6 @@ demo, the world file and its corresponding controller have the same name.
 
 ### blimp_lis.wbt
 
-
 %figure "blimp_lis.wbt"
 ![blimp_lis.wbt](png/blimp_lis.png)
 %end
@@ -24,7 +23,6 @@ plugin* is used to add thrust and other forces to the simulation.
 
 ### gantry.wbt
 
-
 %figure "gantry.wbt"
 ![gantry.wbt](png/gantry.png)
 %end
@@ -36,7 +34,6 @@ Towers problem.
 
 ### hexapod.wbt
 
-
 %figure "hexapod.wbt"
 ![hexapod.wbt](png/hexapod.png)
 %end
@@ -47,7 +44,6 @@ alternating tripod gait.
 
 ### humanoid.wbt
 
-
 %figure "humanoid.wbt"
 ![humanoid.wbt](png/humanoid.png)
 %end
@@ -55,7 +51,6 @@ alternating tripod gait.
 In this example, a humanoid robot performs endless gymnastic movements.
 
 ### moon.wbt
-
 
 %figure "moon.wbt"
 ![moon.wbt](png/moon.png)
@@ -67,7 +62,6 @@ like scenery is made of `IndexedFaceSet` nodes. Both robots use the same
 controller code.
 
 ### ghostdog.wbt
-
 
 %figure "ghostdog.wbt"
 ![ghostdog.wbt](png/ghostdog.png)
@@ -83,7 +77,6 @@ could be used for controlling the knee joints.
 
 ### salamander.wbt
 
-
 %figure "salamander.wbt"
 ![salamander.wbt](png/salamander.png)
 %end
@@ -97,7 +90,6 @@ principle.
 
 ### soccer.wbt
 
-
 %figure "soccer.wbt"
 ![soccer.wbt](png/soccer_world.png)
 %end
@@ -109,7 +101,6 @@ current score and the remaining time in the 3D view. This example shows how a
 
 ### sojourner.wbt
 
-
 %figure "sojourner.wbt"
 ![sojourner.wbt](png/sojourner.png)
 %end
@@ -120,7 +111,6 @@ how the robot manages to climb over it. The keyboard can be used to control the
 robot's motion.
 
 ### yamor.wbt
-
 
 %figure "yamor.wbt"
 ![yamor.wbt](png/yamor.png)
@@ -134,7 +124,6 @@ mode of locomotion. All modules use the same controller code, but their actual
 module behaviour is chosen according to the name of the module.
 
 ### stewart_platform.wbt
-
 
 %figure "stewart_platform.wbt"
 ![stewart_platform.wbt](png/stewart_platform.png)

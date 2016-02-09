@@ -19,7 +19,6 @@ project directory. By definition, the current project directory is the parent
 directory of the "worlds" directory that contains the currently opened ".wbt"
 file. The  shows where ".proto" files are stored in a project directory.
 
-
 %figure "PROTO directory in a project directory structure"
 ![PROTO directory in a project directory structure](png/protos_directory_structure.png)
 %end
@@ -50,7 +49,6 @@ example, a PROTO whose base type is `Material` cannot be inserted in a
 the dialog. Note that, the dialog's text pane is automatically filled with any
 comment placed at the beginning of the ".proto" file.
 
-
 %figure "Adding an instance of the TwoColorChair PROTO"
 ![Adding an instance of the TwoColorChair PROTO](png/add_proto.png)
 %end
@@ -69,7 +67,6 @@ If you hit the `Add` button, the PROTO instance is added to the `Scene Tree`. In
 the `Scene Tree`, PROTO instances are represented with a different color than
 built-in nodes (see ). PROTO fields can be manipulated exactly like built-in
 node fields.
-
 
 %figure "Scene Tree with two instances of the TwoColorChair PROTO"
 ![Scene Tree with two instances of the TwoColorChair PROTO](png/scene_tree_with_protos.png)

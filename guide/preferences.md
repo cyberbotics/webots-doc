@@ -37,16 +37,20 @@ depending on the GPU OpenGL abilities.
 - The `RTT preferred mode` option allows you to modify the method used to create
 the Camera device images. The methods are sorted from the most efficient one to
 the less efficient one.
+
 - The `Disable shadows` option allows you to disable completely the shadows in the
 3D view and in the Camera rendering, whatever the values of the
-*Light.castShadows* fields. The global performances can be improved by disabling
-this feature, but on the other hand the rendering is more difficult to
-understand, and less pretty.
+*Light.castShadows* fields.
+
+    The global performances can be improved by disabling this feature, but on the
+    other hand the rendering is more difficult to understand, and less pretty.
+
 - The `Disable shader` option allows you to use the regular OpenGL shading model,
 instead of a custom shading. This custom shading model computes the light
 effects on the 3D objects per pixel instead of per vertex, resulting in a much
 smoother rendering. It may be interesting to disbale this feature on old GPU if
 the shaders are not well supported.
+
 - The `Disable camera anti-aliasing` option allows you to bypass all the
 *Camera.antialiasing* fields and to disable this feature. We observed that some
 hardware doesn't support the OpenGL feature about anti-aliasing when rendering

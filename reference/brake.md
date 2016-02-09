@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Brake {
 }

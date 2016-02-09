@@ -2,7 +2,6 @@
 
 Derived from `Robot`.
 
-
 ```
 Supervisor {
   # no additional fields
@@ -267,29 +266,22 @@ correspond to semi-transparent levels.
 
 #### Example
 
-- 
-```
+-
 
-wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0);
-```
-
+        wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0);
 
 will display the label "hello world" in red at the upper left corner of the 3D
 window.
-- 
-```
 
-wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5);
-```
+-
 
+        wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5);
 
 will display the label "hello Webots" in semi-transparent green, just below.
-- 
-```
 
-supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0);
-```
+-
 
+        supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0);
 
 will change the label "hello world" defined earlier into "hello universe", using
 a yellow color for the new text.
@@ -309,7 +301,6 @@ for the effective termination of the simulator. After the call to
 Webots can be defined by the status `status` parameter. Some typical values for
 this are the `EXIT_SUCCESS` or `EXIT_FAILURE` macros defined into the "stdlib.h"
 file. Here is a C example:
-
 
 ``` c
 #include <webots/robot.h>
@@ -335,7 +326,6 @@ int main(int argc, char *argv[]) {
 
 In object-oriented languages, there is no `wb_robot_cleanup()` function, in this
 case the controller should call its destructor. Here is a C++ example:
-
 
 ``` c
 #include <webots/Robot.hpp>
@@ -550,7 +540,6 @@ The `wb_supervisor_field_import_mf_node_from_string()` function is very similar
 to the `wb_supervisor_field_import_mf_node` function, except that the node is
 constructed from the `node_string` string. For example, if you want to create a
 new robot with a specific controller:
-
 
 ``` c
 #include <webots/robot.h>

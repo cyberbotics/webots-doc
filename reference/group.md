@@ -1,6 +1,5 @@
 ## Group
 
-
 ```
 Group {
   MFNode   children   []

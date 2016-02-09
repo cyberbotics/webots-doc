@@ -1,6 +1,5 @@
 ## Using the Thymio II robot
 
-
 %figure "Thymio II model in Webots"
 ![Thymio II model in Webots](png/thymio2.png)
 %end
@@ -43,7 +42,6 @@ leds.prox.v.led[0-1], leds.sound, leds.rc, leds.temperature.[red-blue] |
 The Thymio II distance sensor feedback is given on . The calibration was
 performed using a regular A4 white paper.
 
-
 %figure "Proximity sensor response versus distance"
 ![Proximity sensor response versus distance](png/thymio2_horizontal_prox_feedback.png)
 %end
@@ -69,7 +67,6 @@ In case of a simulation containing several Thymio II, the TCP/IP port of the
 `thymio2_aseba` controller should be unique for each robot instance. This value
 can be modified by editing the `Thymio2::controllerArgs` field.
 
-
 %figure "Aseba Studio and VPL target selection dialog"
 ![Aseba Studio and VPL target selection dialog](png/thymio2_aseba_target_selection.png)
 %end
@@ -77,7 +74,6 @@ can be modified by editing the `Thymio2::controllerArgs` field.
 The Thymio II window (see the ) can help you to raise some events easily. These
 events are mainly useful when using the VPL for Thymio II software. To open the
 Thymio II window, just double click on the 3D model of the robot.
-
 
 %figure "Thymio II robot window"
 ![Thymio II robot window](png/thymio2_window.png)
@@ -92,7 +88,6 @@ exercises](https://aseba.wikidot.com/en:thymiodrawing). An example of this is
 located there (see the ):
 "WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_pen.wbt"
 
-
 %figure "Simulation of a Thymio II having a pen."
 ![Simulation of a Thymio II having a pen.](png/thymio2_pen.png)
 %end
@@ -104,7 +99,6 @@ reproduced by adding a `Thymio2Ball` node in your world. The ball can be
 slightly moved by applying a force on it (`ALT + mouse left click`). An example
 of this is located there (see the ):
 "WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_ball.wbt"
-
 
 %figure "Simulation of a Thymio II above a ball."
 ![Simulation of a Thymio II above a ball.](png/thymio2_ball.png)

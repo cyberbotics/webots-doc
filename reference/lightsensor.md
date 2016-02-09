@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 LightSensor {
   MFVec3f     lookupTable   [ 0 0 0, 1 1000 0 ]
@@ -74,7 +73,6 @@ measure any infinitesimal change). This field accepts any value in the interval
 Before being interpolated by the `lookupTable`, the total irradiance `E` [W/m^2]
 seen by a sensor is computed according to the equation shown in :
 
-
 %figure "Light sensor irradiance formula"
 ![Light sensor irradiance formula](pdf/light_intensity.pdf.png)
 %end
@@ -85,7 +83,6 @@ light `i` (TRUE=1, FALSE=0), the `C[i]` vector is the `color` field of light
 `i`, and `I` is the `ambientIntensity` field of light `i`.  The value `att[i]`
 is the attenuation of light `i`, and is calculated as shown in .
 
-
 %figure "Light attenuation"
 ![Light attenuation](pdf/light_attenuation.pdf.png)
 %end
@@ -95,7 +92,6 @@ Variables `a` and `a` correspond to the `attenuation` field of light `i`, and
 for `DirectionalLight`s. `I` is the direct irradiance contributed by light `i`,
 and is calculated as shown in .
 
-
 %figure "Direct irradiance"
 ![Direct irradiance](pdf/direct_light.pdf.png)
 %end
@@ -104,7 +100,6 @@ Finally, `spot[i]` is a factor used only in case of a `SpotLight`, and that
 depends on its `cutOffAngle` and `beamWidth` fields, and is calculated as shown
 in , where the `alpha` angle corresponds to the angle between `-L` and the
 `direction` vector of the `SpotLight`.
-
 
 %figure "SpotLight factor"
 ![SpotLight factor](pdf/spot_light.pdf.png)
@@ -123,7 +118,6 @@ usually built as a surface of semiconductor material and therefore, the closer
 the angle of incidence is to perpendicular, the more photons will actually hit
 the surface and excite the device. When a light source is parallel to (or
 behind) the semiconductor surface, no photons actually reach the surface.
-
 
 %figure "The irradiance (E) depends on the angle (phi) between the"
 ![The irradiance (E) depends on the angle (phi) between the](pdf/light_sensor.pdf.png)

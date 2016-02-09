@@ -14,14 +14,12 @@ recompile the physics plugin with the *-g* flag, in order to add debugging
 information to the compiled plugin. This can be achieved by adding this line to
 the plugin's "Makefile":
 
-
 ```
 CFLAGS=-g
 ```
 
 Then you must rebuild the plugin using Webots Text Editor or using these
 commands in a terminal:
-
 
 ```
 $ make clean
@@ -31,7 +29,6 @@ $ make
 Make sure that the *-g* flag appears in the compilation line. Once you have
 rebuilt the plugin, you can quit Webots, and restart it using `gdb` in a
 terminal, like this:
-
 
 ```
 $ cd /usr/local/webots
@@ -49,7 +46,6 @@ When Webots window appears, run the simulation until it crashes, or make it
 crash by some manipulations if necessary. If the plugin crahes due to a
 segmentation fault, `gdb` should print an error message similar to this:
 
-
 ```
 Program received signal SIGSEGV, Segmentation fault.
 [Switching to Thread -1208154400 (LWP 30524)]
@@ -64,7 +60,6 @@ occurred. If the indicated file name corresponds to one of the plugin source
 files, then the error is located in the plugin code. You can examine the call
 stack more precisely by using the `where` or the `bt` command of `gdb`. For
 example:
-
 
 ```
 (gdb) where

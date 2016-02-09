@@ -2,7 +2,6 @@
 
 Derived from `JointParameters`.
 
-
 ```
 HingeJointParameters {
   field SFVec3f anchor                    0 0 0 # for the rotation axis (m)

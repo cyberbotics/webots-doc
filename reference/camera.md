@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Camera {
   SFFloat    fieldOfView      0.7854
@@ -36,26 +35,34 @@ even a biological eye which is spherically distorted.
 - `fieldOfView`: horizontal field of view angle of the camera. The value ranges
 from *0* to π radians. Since camera pixels are squares, the vertical field of
 view can be computed from the `width`, `height` and horizontal `fieldOfView`:
-*vertical FOV = fieldOfView * height / width*
+
+    *vertical FOV = fieldOfView * height / width*
+
 - `width`: width of the image in pixels
+
 - `height`: height of the image in pixels
+
 - `type`: type of the camera: "color" or "range-finder". The camera types are
 described precisely in the corresponding subsection below.
+
 - `spherical`: switch between a planar or a spherical projection. A spherical
 projection can be used for example to simulate a biological eye or a lidar
 device. More information on spherical projection in the corresponding subsection
 below.
+
 - The `near` field defines the distance from the camera to the near clipping
 plane. This plane is parallel to the camera retina (i.e. projection plane). The
 near field determines the precision of the OpenGL depth buffer. A too small
 value produces depth fighting between overlaid polygons, resulting in random
 polygon overlaps. More information on frustums in the corresponding subsection
 below.
+
 - The `maxRange` field is used only when the camera is a range-finder. In this
 case,  `maxRange` defines the distance between the camera and the far clipping
 plane. The far clipping plane is not set to infinity. This field defines the
 maximum range that a range-finder can achieve and so the maximum possible value
 of the range image (in meter).
+
 - The `antiAliasing` field switches on or off (the default) anti-aliasing effect
 on the camera images. Anti-aliasing is a technique that assigns pixel colors
 based on the fraction of the pixel's area that's covered by the primitives being
@@ -63,6 +70,7 @@ rendered. Anti-aliasing makes graphics more smooth and pleasing to the eye by
 reducing aliasing artifacts. Aliasing artifacts can appear as jagged edges (or
 moiré patterns, strobing, etc.). Anti-aliasing will not be applied if it is not
 supported by the hardware.
+
 - If the `motionBlur` field is greater than 0.0, the image is blurred by the
 motion of the camera or objects in the field of view. It means the image
 returned is a mix between the current view and the previous images returned by
@@ -74,31 +82,38 @@ resolution of 8 bits). Of course smaller the time step is, better the effect is.
 Note that this feature is computationally expensive and can considerably reduce
 the simulation speed. Furthermore, it is useless to set a value smaller than the
 camera time step as it would not have any visible effect.
+
 - If the `colorNoise` field is greater than 0.0, this adds a gaussian noise to
 each RGB channel of a color image. This field is useless in case of range-finder
 cameras. A value of 0.0 corresponds to remove the noise and thus saving
 computation time. A value of 1.0 corresponds to a gaussian noise having a
 standard derivation of 255 in the channel representation. More information on
 noise in the corresponding subsection below.
+
 - If the `rangeNoise` field is greater than 0.0, this adds a gaussian noise to
 each depth value of a range-finder image. This field is useless in case of color
 cameras. A value of 0.0 corresponds to remove the noise and thus saving
 computation time. A value of 1.0 corresponds to a gaussian noise having a
 standard derivation of `maxRange` meters. More information on noise in the
 corresponding subsection below.
+
 - `rangeResolution`: This field allows to define the depth resolution of the
 camera, the resolution is the smallest change that it is able to measure.
 Setting this field to -1 (default) means that the sensor has an 'infinite'
 resolution (it can measure any infinitesimal change). This field is used only
 when type is "range-finder" and accepts any value in the interval (0.0, inf).
+
 - The `lensDistortion` field may contain a `CameraLensDistortion` node to specify
 the image distortion due to the camera lens.
+
 - The `focus` field may contain a `CameraFocus` node to provide the camera device
 with a controllable focusing system. If this field is set to NULL, then no focus
 is available on the camera device.
+
 - The `zoom` field may contain a `CameraZoom` node to provide the camera device
 with a controllable zoom system. If this field is set to NULL, then no zoom is
 available on the camera device.
+
 - The `compositor` field specifies the name of a compositor to apply on the camera
 image. A compositor can be used to apply a shader in order to alter the original
 image returned by the camera, it runs on the graphic card and can therefore be
@@ -224,7 +239,6 @@ of `vFov/2`).
 
 ### Overlay Image
 
-
 %figure "Camera overlay image"
 ![Camera overlay image](png/camera_overlay.png)
 %end
@@ -313,7 +327,6 @@ RGB levels from the pixel coordinates. The `wb_camera_image_get_grey()` macro
 works in a similar way but returns the grey level of the specified pixel by
 averaging the three RGB components. In the C version, these four macros return
 an `unsigned char` in the range [0..255]. Here is a C usage example:
-
 
 ``` c
 const unsigned char *image = wb_camera_get_image(camera);

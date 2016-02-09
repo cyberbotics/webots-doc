@@ -1,6 +1,5 @@
 ## CameraFocus
 
-
 ```
 CameraFocus {
   SFFloat  focalDistance     0  # Distance to the object we are focusing on (m)

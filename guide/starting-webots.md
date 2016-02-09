@@ -69,8 +69,6 @@ OPTIONS:
                               printed in the log file.
 ```
 
-
-
 The optional `worldfile` argument specifies the name of a .wbt file to open. If
 it is not specified, Webots attempts to open the most recently opened file.
 

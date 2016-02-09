@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Compass {
   MFVec3f    lookupTable    []    # interpolation
@@ -58,7 +57,6 @@ measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the `Compass` device. Here is the internal algorithm
 of `wb_compass_get_values()` in pseudo-code:
 
-
 ```
 float[3] wb_compass_get_values() {
   float[3] n = getGlobalNorthDirection();
@@ -85,7 +83,6 @@ field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned
 with the x-axis. Now if the `Compass` node is in *upright* position, meaning
 that its y-axis is aligned with the global y-axis, then the bearing angle in
 degrees can be computed as follows:
-
 
 ``` c
 double get_bearing_in_degrees() {

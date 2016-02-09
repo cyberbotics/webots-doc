@@ -11,7 +11,6 @@ composed of a list of nodes, each containing fields. Fields can contain values
 This section describes the user interface of the Scene Tree, gives an overview
 of the VRML97 nodes and Webots nodes.
 
-
 %figure "Scene Tree Window"
 ![Scene Tree Window](png/scene_tree1.png)
 %end
@@ -28,7 +27,6 @@ editor section:
 `Help`: Context sensitive help for the currently selected node.
 
 Additionally, when a node is selected, other actions are available as shown in :
-
 
 %figure "Webots node editor"
 ![Webots node editor](png/field_editor.png)

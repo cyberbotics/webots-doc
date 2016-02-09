@@ -13,7 +13,6 @@ object can then be used with all the available ODE `dBody*()` functions (see ODE
 documentation). For example it is possible to add a force to the body with
 `dBodyAddForce()`, etc. The prototype of this function is:
 
-
 ```
 dBodyID dWebotsGetBodyFromDEF(const char *DEF);
 ```
@@ -51,7 +50,6 @@ shape such as a sphere, a cylinder, a box, etc., or a coordinate system
 transformation. The dGeomID returned by Webots corresponds to the boundingObject
 of the `Solid`. The dGeomID object can then be used with all the available ODE
 `dGeom*()` functions (see ODE documentation). The prototype of this function is:
-
 
 ```
 dGeomID dWebotsGetGeomFromDEF(const char *DEF);
@@ -126,7 +124,6 @@ the physics plugin, a robot has to contain an `Emitter` node set to `channel` 0
 are sent to the physics plugin using the standard `Emitter` API functions. They
 are received by the physics plugin through the `dWebotsReceive()` function.
 
-
 ```
 void dWebotsSend(int channel,const void *buffer,int size);
 void *dWebotsReceive(int *size);
@@ -147,7 +144,6 @@ This function returns the current simulation time in milliseconds [ms] as a
 double precision floating point value. This corresponds to the time displayed in
 the bottom right corner of the main Webots window.
 
-
 ```
 double dWebotsGetTime(void);
 ```
@@ -160,7 +156,6 @@ string may contain format characters defining conversion specifiers, and
 optional extra arguments should match these conversion specifiers. A prefix and
 a '\n' (new line) character will automatically be added to each line. A '\f'
 (form feed) character can optionally be used for clearing up the console.
-
 
 ```
 void dWebotsConsolePrintf(const char *format, ...);

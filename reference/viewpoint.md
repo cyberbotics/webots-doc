@@ -1,6 +1,5 @@
 ## Viewpoint
 
-
 ```
 Viewpoint {
   SFFloat      fieldOfView    0.785398  # (0,pi)

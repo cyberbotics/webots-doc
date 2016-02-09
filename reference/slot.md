@@ -1,6 +1,5 @@
 ## Slot
 
-
 ```
 Slot {
   field     SFString type      ""
@@ -46,7 +45,6 @@ If you want to write a proto of a robot called `MyRobot` that accepts only hands
 in its field `handExtension`, you have to set the field `handExtension` to be
 the `endPoint` of a `Slot`.
 
-
 ```
 PROTO MyRobot [
   field SFNode handExtension NULL
@@ -64,7 +62,6 @@ Robot {
 
 Then any PROTO of a hand needs to use the `Slot` as base node and the `type` of
 this `Slot` should match the one in `MyRobot`.
-
 
 ```
 PROTO RobotHand [

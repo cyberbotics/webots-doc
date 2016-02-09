@@ -2,7 +2,6 @@
 
 Derived from `Joint`.
 
-
 ```
 HingeJoint {
   field       MFNode  device   [ ] # RotationalMotor, PositionSensor and Brake

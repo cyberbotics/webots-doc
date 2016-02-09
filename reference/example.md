@@ -14,7 +14,6 @@ orientation of the PROTO instances.
 
 "TwoColorChair.proto":
 
-
 ```
 # A two-color chair
 
@@ -87,7 +86,6 @@ default must be specified.
 
 "TwoChairs.wbt":
 
-
 ```
 #VRML_SIM V6.0 utf8
 
@@ -134,7 +132,6 @@ interface allows to reuse the same model for slightly different objects or
 robots. Extenstion slots like `seatExtensionSlot` field could, for example, be
 used to add additional devices to a base robot without needing to copy the robot
 definition or creating a new PROTO.
-
 
 %figure "Two instances of the TwoColorChair PROTO in Webots"
 ![Two instances of the TwoColorChair PROTO in Webots](png/two_chairs_v7-2-0.png)

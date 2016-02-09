@@ -2,7 +2,6 @@
 
 Derived from `Device`.
 
-
 ```
 Accelerometer {
   MFVec3f    lookupTable    []    # interpolation

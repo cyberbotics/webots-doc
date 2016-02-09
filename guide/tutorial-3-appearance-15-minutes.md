@@ -25,7 +25,6 @@ The aim of this subsection is to color the walls with blue.
 The aim of this subsection is to apply a texture on the ball. A texture on a
 rolling object can help to appreciate its movement.
 
-
 %figure "Simulation after having setup the Light and the Appearance nodes."
 ![Simulation after having setup the Light and the Appearance nodes.](png/tutorial_appearance.png)
 %end

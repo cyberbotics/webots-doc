@@ -4,7 +4,6 @@ The aim of this chapter is to explore in more detail the physics simulation by
 creating a solid with several bounding objects: a dumbbell made of two spheres
 and one cylinder. The expected result is depicted in .
 
-
 %figure "Expected result at the end of the tutorial about compound solids."
 ![Expected result at the end of the tutorial about compound solids.](png/tutorial_dumbbell.png)
 %end
@@ -22,7 +21,6 @@ and orientation. Group nodes can also be used to group several subnodes.
 We want to implement a dumbbell made of a handle (Cylinder) and of two weights
 (Sphere) located at each end of the handle. The  depicts the Solid nodes and its
 subnodes required to implement the dumbbell.
-
 
 %figure "Representation of the subnodes of a compound solid made of
     several transformed geometries."

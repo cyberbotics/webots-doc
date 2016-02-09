@@ -1,6 +1,5 @@
 ## Sphere
 
-
 ```
 Sphere {
   SFFloat   radius        1   # (-inf,inf)
@@ -13,7 +12,6 @@ system. The `radius` field specifies the radius of the sphere (see ).
 
 If `radius` is positive, the outside faces of the sphere are displayed while if
 it is negative, the inside faces are displayed.
-
 
 %figure "Sphere node"
 ![Sphere node](png/sphere.png)

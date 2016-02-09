@@ -1,6 +1,5 @@
 ## Capsule
 
-
 ```
 Capsule {
   SFBool    bottom        TRUE
@@ -37,7 +36,6 @@ The `subdivision` field defines the number of triangles that must be used to
 represent the capsule and so its resolution. More precisely, it corresponds to
 the number of faces that compose the capsule's side. This field has no effect on
 collision detection.
-
 
 %figure "The Capsule node"
 ![The Capsule node](png/capsule.png)

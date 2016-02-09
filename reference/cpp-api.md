@@ -11,14 +11,12 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
-
 ```| #include <webots/Brake.hpp> |
 | class `Brake` : public `Device` { |
 | void `setDampingConstant`(double dampingConstant) const; |
 | int `getType`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Camera.hpp> |
 | class `Camera` : public `Device` { |
@@ -56,7 +54,6 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
-
 ```| #include <webots/Compass.hpp> |
 | class `Compass` : public `Device` { |
 | virtual void `enable`(int ms); |
@@ -65,7 +62,6 @@ The following tables describe the C++ classes and their methods.
 | const double *`getValues`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Connector.hpp> |
 | class `Connector` : public `Device` { |
@@ -77,7 +73,6 @@ The following tables describe the C++ classes and their methods.
 | }; |
 ```
 
-
 ```| #include <webots/Device.hpp> |
 | class `Device` { |
 | const std::string &`getModel`() const; |
@@ -85,7 +80,6 @@ The following tables describe the C++ classes and their methods.
 | int `getNodeType`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/DifferentialWheels.hpp> |
 | class `DifferentialWheels` : public `Robot` { |
@@ -104,7 +98,6 @@ The following tables describe the C++ classes and their methods.
 | double `getSpeedUnit`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Display.hpp> |
 | class `Display` : public `Device` { |
@@ -133,7 +126,6 @@ const; |
 | }; |
 ```
 
-
 ```| #include <webots/DistanceSensor.hpp> |
 | class `DistanceSensor` : public `Device` { |
 | virtual void `enable`(int ms); |
@@ -142,7 +134,6 @@ const; |
 | double `getValue`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Emitter.hpp> |
 | class `Emitter` : public `Device` { |
@@ -155,7 +146,6 @@ const; |
 | int `getBufferSize`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Field.hpp> |
 | class Field { |
@@ -205,7 +195,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | }; |
 ```
 
-
 ```| #include <webots/GPS.hpp> |
 | class `GPS` : public `Device` { |
 | virtual void `enable`(int ms); |
@@ -214,7 +203,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | const double *`getValues`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Gyro.hpp> |
 | class `Gyro` : public `Device` { |
@@ -225,12 +213,10 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | }; |
 ```
 
-
 ```| #include <webots/ImageRef.hpp> |
 | class ImageRef { |
 | }; |
 ```
-
 
 ```| #include <webots/InertialUnit.hpp> |
 | class `InertialUnit` : public `Device` { |
@@ -241,14 +227,12 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | }; |
 ```
 
-
 ```| #include <webots/LED.hpp> |
 | class `LED` : public `Device` { |
 | virtual void `set`(int value); |
 | int `get`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/LightSensor.hpp> |
 | class `LightSensor` : public `Device` { |
@@ -258,7 +242,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | double `getValue`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/utils/Motion.hpp> |
 | class `Motion` { |
@@ -275,7 +258,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | virtual void `setTime`(int time); |
 | }; |
 ```
-
 
 ```| #include <webots/Motor.hpp> |
 | class `Motor` : public `Device` { |
@@ -310,7 +292,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | }; |
 ```
 
-
 ```| #include <webots/Node.hpp> |
 | class Node { |
 | enum { NO\_NODE, APPEARANCE, BACKGROUND, BOX, COLOR, CONE, |
@@ -344,14 +325,12 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | }; |
 ```
 
-
 ```| #include <webots/Pen.hpp> |
 | class `Pen` : public `Device` { |
 | virtual void `write`(bool write); |
 | virtual void `setInkColor`(int color, double density); |
 | }; |
 ```
-
 
 ```| #include <webots/PositionSensor.hpp> |
 | class `PositionSensor` : public `Device` { |
@@ -363,7 +342,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | int `getType`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Receiver.hpp> |
 | class `Receiver` : public `Device` { |
@@ -381,7 +359,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | int `getChannel`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Robot.hpp> |
 | class `Robot` { |
@@ -443,7 +420,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | }; |
 ```
 
-
 ```| #include <webots/Servo.hpp> |
 | class `Servo` : public `Device` { |
 | enum {ROTATIONAL, LINEAR}; |
@@ -467,7 +443,6 @@ MF\_COLOR, MF\_STRING, MF\_NODE }; |
 | int `getType`() const; |
 | }; |
 ```
-
 
 ```| #include <webots/Supervisor.hpp> |
 | class `Supervisor` : public `Robot` { |
@@ -499,7 +474,6 @@ height, int codec, int quality, |
 | }; |
 ```
 
-
 ```| #include <webots/TouchSensor.hpp> |
 | class `TouchSensor` : public `Device` { |
 | enum {BUMPER, FORCE, FORCE3D}; |
@@ -511,5 +485,4 @@ height, int codec, int quality, |
 | int `getType`() const; |
 | }; |
 ```
-
 

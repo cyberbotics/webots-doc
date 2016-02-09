@@ -47,7 +47,6 @@ necessarily identical. Finally the `physics` field defines if the object belongs
 to the dynamical or to the statical environment. All these subnodes are
 optional, but the `physics` field needs the `boundingObject` to be defined.
 
-
 %figure "The simplest model of a rigid body in Webots having a graphical representation (Shape),
      a physical bound (boundingObject) and being in the dynamical environment (Physics)."
 ![The simplest model of a rigid body in Webots having a graphical representation (Shape),
@@ -61,7 +60,6 @@ can be substituted by a Sphere, a Box, a Cylinder, etc.
 
 We will now add a ball to the simulation. That ball will be modeled as a rigid
 body as shown in the . As Geometry nodes we will use Spheres.
-
 
 %figure "Your first rigid body in Webots."
 ![Your first rigid body in Webots.](png/tutorial_ball.png)
@@ -88,11 +86,9 @@ The two Sphere definitions that we have used earlier to define the ball, are
 redundant. We will now merge these two Spheres into only once using the DEF-USE
 mechanism.
 
-
 %figure "DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY"."
 ![DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".](png/tutorial_def_use.png)
 %end
-
 
 %figure "DEF-USE mechanism applied on the Shape node of a Solid."
 ![DEF-USE mechanism applied on the Shape node of a Solid.](pdf/tutorial_def_use_shape.pdf.png)
@@ -109,7 +105,6 @@ best Geometry primitive to implement the walls is the Box node. Only one Shape
 has to be defined for all the walls. The expected result is shown in .
 
 The solution is located in the solution directory under the "obstacle.wbt".
-
 
 %figure "The simulation state at the end of this second tutorial."
 ![The simulation state at the end of this second tutorial.](png/tutorial_walls.png)

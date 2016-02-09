@@ -1,6 +1,5 @@
 ## IndexedFaceSet
 
-
 ```
 IndexedFaceSet {
   SFNode    coord           NULL
@@ -68,7 +67,6 @@ or equal to 0.0.
 
 ### Example
 
-
 ```
 IndexedFaceSet {
   coord Coordinate {
@@ -81,7 +79,6 @@ IndexedFaceSet {
                0 3 2  1 ] # face E, bottom
 }
 ```
-
 
 %figure "A simple IndexedFaceSet example"
 ![A simple IndexedFaceSet example](png/indexed_face_set.png)

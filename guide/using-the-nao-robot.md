@@ -78,7 +78,7 @@ difference. Note that each version having a different weight repartition in
 their body, the best contact properties in the simulated world aren't always the
 same. They are currently optimized for the version 5.0 of Nao in the default Nao
 worlds and may not perform as well with previous versions of Nao.
-- 
+-
 
 ### Using motion boxes
 
@@ -175,6 +175,4 @@ On Linux, you can use the `killall` or the `pkill` commands, e.g.:
 ```
 $ killall hal naoqi-bin
 ```
-
-
 

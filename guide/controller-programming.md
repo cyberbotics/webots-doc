@@ -162,8 +162,6 @@ delete [] pos;     // ERROR: illegal free
 free(pos);         // ERROR: illegal free
 ```
 
-
-
 ### Using Actuators
 
 The example below shows how to make a rotational motor oscillate with a 2 Hz
@@ -286,8 +284,6 @@ wb_motor_set_position(my_leg, 0.56);
 wb_robot_step(40);
 ```
 
-
-
 Similarly this code does not make much sense either:
 
 ``` c
@@ -378,8 +374,6 @@ int main() {
 }
 ```
 
-
-
 ### Using Controller Arguments
 
 In the ".wbt" file, it is possible to specify arguments that are passed to a
@@ -423,8 +417,6 @@ argv[1]=one
 argv[2]=two
 argv[3]=three
 ```
-
-
 
 ### Controller Termination
 
@@ -483,8 +475,6 @@ if (finished) {
 }
 ```
 
-
-
 If only one robot controller needs to terminate but the simulation should
 continue with the other robots, then the terminating robot should call
 `wb_robot_cleanup()` right before quitting:
@@ -540,28 +530,43 @@ variables using this syntax : `$(MY_VARIABLE_NAME)`. They will be automatically
 replaced by the actual value already existing in the environment. The Webots
 "runtime.ini" supports 7 sections:
 
-- `[environment variables with relative paths]` This section should contain only
-environment variables with relative paths. Paths must be separated by the colon
-symbol ':' and the separator between directories is the slash symbol '/'.
-Variables declared in this section will be add on every platform. On Windows,
-colons will be replaced by semicolon and slash will be replaced by backslash
-according to the Windows syntax.
-- `[environment variables]` Environment variables defined in this section will
-also be added to the environment on every platform but they will be written
-directly with no syntax change. It's a good place for variables that don't
-contain any path.
-- `[environment variables for Windows]` Variables defined in this section will
-only be added to the environment if the controller is run on the Windows
-platform. If you want to declare paths in this section, the value should be
-written between double-quotes symbols ".
-- `[environment variables for Mac OS X]` Variables defined here will only be added
-on Mac OS X and ignored on other platforms.
-- `[environment variables for Linux]` Variables defined here will be added on all
-Linux platforms but not on Mac or Windows.
-- `[environment variables for Linux 32]` These variables will be added only if the
-Linux platform is 32 bit.
-- `[environment variables for Linux 64]` These variables will be added only if the
-Linux platform is 64 bit.
+- `[environment variables with relative paths]`
+
+    This section should contain only environment variables with relative paths.
+    Paths must be separated by the colon symbol ':' and the separator between
+    directories is the slash symbol '/'. Variables declared in this section will be
+    add on every platform. On Windows, colons will be replaced by semicolon and
+    slash will be replaced by backslash according to the Windows syntax.
+
+- `[environment variables]`
+
+    Environment variables defined in this section will also be added to the
+    environment on every platform but they will be written directly with no syntax
+    change. It's a good place for variables that don't contain any path.
+
+- `[environment variables for Windows]`
+
+    Variables defined in this section will only be added to the environment if the
+    controller is run on the Windows platform. If you want to declare paths in this
+    section, the value should be written between double-quotes symbols ".
+
+- `[environment variables for Mac OS X]`
+
+    Variables defined here will only be added on Mac OS X and ignored on other
+    platforms.
+
+- `[environment variables for Linux]`
+
+    Variables defined here will be added on all Linux platforms but not on Mac or
+    Windows.
+
+- `[environment variables for Linux 32]`
+
+    These variables will be added only if the Linux platform is 32 bit.
+
+- `[environment variables for Linux 64]`
+
+    These variables will be added only if the Linux platform is 64 bit.
 
 Here is an example of a typical runtime.ini file.
 
@@ -584,8 +589,6 @@ Here is an example of a typical runtime.ini file.
        NAOQI_LIBRARY_FOLDER = lib
 ```
 
-
-
 ### Languages settings
 
 The "runtime.ini" file may also contain language specific sections, named
@@ -594,7 +597,6 @@ namely `COMMAND` and `OPTIONS`. The `COMMAND` key allows you to define a
 specific version of the language interpreter whereas the `OPTIONS` key allows
 you to specific options that will be passed immediately to the language
 interpreter. For example:
-
 
 ``` c
        ; runtime.ini for a Python controller on Mac OS X
@@ -608,7 +610,6 @@ In the above example, the resulting command issued by Webots will be:
 `/opt/local/bin/python2.7 -m package.name.given my_controller.py` possibly
 followed by the value of the `controllerArgs` field of the corresponding `Robot`
 node.
-
 
 ``` c
        ; runtime.ini for a Java controller on Windows

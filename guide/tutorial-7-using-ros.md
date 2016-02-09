@@ -60,15 +60,15 @@ which we will run most of the build process through the `catkin_make` command.
 "my\_ros/worlds". You can perform these actions by opening a terminal and
 typing:
 
-        $ mkdir -p ~/my_ros/worlds
-        $ mkdir -p ~/my_ros/controllers/joystick
-        $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/worlds/joystick.wbt ~/my_ros/worlds/
+>     $ mkdir -p ~/my_ros/worlds
+>     $ mkdir -p ~/my_ros/controllers/joystick
+>     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/worlds/joystick.wbt ~/my_ros/worlds/
 
-    Copy the file
-    "WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick/joy.launch"
-    into "my\_ros/controllers/joystick":
+> Copy the file
+"WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick/joy.launch"
+into "my\_ros/controllers/joystick":
 
-        $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/joy.launch ~/my_ros/controllers/joystick
+>     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/joy.launch ~/my_ros/controllers/joystick
 
 > **note**: We will use catkin, the official ROS build system (see ROS tutorials for catkin
 basics).
@@ -76,21 +76,21 @@ basics).
 > **handson**: Create and init a catkin workspace. You can perform these actions through a
 terminal by typing:
 
-        $ cd ~/my_ros/controllers/joystick
-        $ mkdir -p catkin_ws/src
-        $ cd catkin_ws/src
-        $ catkin_init_workspace
+>     $ cd ~/my_ros/controllers/joystick
+>     $ mkdir -p catkin_ws/src
+>     $ cd catkin_ws/src
+>     $ catkin_init_workspace
 
 > **handson**: Install the joy package.
 
-        $ sudo apt-get install ros-groovy-joystick-drivers
-        $ rosdep install joy
+>     $ sudo apt-get install ros-groovy-joystick-drivers
+>     $ rosdep install joy
 
 > **handson**: Create a ROS package named "webots\_joystick" specifying dependency on "roscpp"
 and "joy".
 
-        $ cd ~/my_ros/controllers/joystick/catkin_ws/src
-        $ catkin_create_pkg webots_joystick roscpp joy
+>     $ cd ~/my_ros/controllers/joystick/catkin_ws/src
+>     $ catkin_create_pkg webots_joystick roscpp joy
 
 > **note**: Calling `catkin_create_pkg` must have created the directory "webots\_joystick"
 with the subdirectories "webots\_joystick/src" and "webots\_joystick/include"
@@ -109,7 +109,7 @@ navigate and get information about the created package then you need to call
         $ catkin_make
         $ source devel/setup.bash
 
-    Now the output of the command `rospack find webots_joystick` should be
+> Now the output of the command `rospack find webots_joystick` should be
 
         ~/my_ros/controllers/joystick/catkin_ws/src/webots_joystick
 
@@ -121,32 +121,32 @@ navigate and get information about the created package then you need to call
 
 > **handson**: Copy the original ".cpp" controller file into your package resource directory.
 
-        $ cd ~/my_ros/controllers/joystick/catkin_ws/src/webots_joystick/src
-        $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/catkin_ws/src/webots_joystick/src/webots_joystick_node.cpp .
+>     $ cd ~/my_ros/controllers/joystick/catkin_ws/src/webots_joystick/src
+>     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/catkin_ws/src/webots_joystick/src/webots_joystick_node.cpp .
 
 > **handson**: In the file "webots\_joystick/CMakeLists.txt" uncomment the line
 
-        #add_executable(webots_joystick_node src/webots_joystick_node.cpp)
+>     #add_executable(webots_joystick_node src/webots_joystick_node.cpp)
 
-    and append the following lines
+> and append the following lines
 
-        set(WEBOTS_HOME $ENV{WEBOTS_HOME})
-        add_definitions(-I${WEBOTS_HOME}/include/controller/cpp -I${WEBOTS_HOME}/include -Wall -I${WEBOTS_HOME}/include/controller/c -DLINUX)
-        find_library(CPP_CONTROLLER_LIBRARY CppController ${WEBOTS_HOME}/lib)
-        find_library(C_CONTROLLER_LIBRARY Controller ${WEBOTS_HOME}/lib)
-        target_link_libraries(webots_joystick_node ${catkin_LIBRARIES} ${C_CONTROLLER_LIBRARY} ${CPP_CONTROLLER_LIBRARY})
+>     set(WEBOTS_HOME $ENV{WEBOTS_HOME})
+>     add_definitions(-I${WEBOTS_HOME}/include/controller/cpp -I${WEBOTS_HOME}/include -Wall -I${WEBOTS_HOME}/include/controller/c -DLINUX)
+>     find_library(CPP_CONTROLLER_LIBRARY CppController ${WEBOTS_HOME}/lib)
+>     find_library(C_CONTROLLER_LIBRARY Controller ${WEBOTS_HOME}/lib)
+>     target_link_libraries(webots_joystick_node ${catkin_LIBRARIES} ${C_CONTROLLER_LIBRARY} ${CPP_CONTROLLER_LIBRARY})
 
-    These lines tell catkin where to find the Webots controller libraries and to
-    link the "webots\_joystick\_node" against them. (The comments indicate where to
-    paste these lines appropriately; the distributed CMakeLists.txt file shows you
-    the right places.)
+> These lines tell catkin where to find the Webots controller libraries and to
+link the "webots\_joystick\_node" against them. (The comments indicate where to
+paste these lines appropriately; the distributed CMakeLists.txt file shows you
+the right places.)
 
 > **handson**: Build the webots\_joystick package. Then copy the resulting ROS node executable
 at the root of "controllers/joystick" and rename it appropriately.
 
-        $ cd ~/my_ros/controllers/joystick/catkin_ws
-        $ catkin_make
-        $ cp devel/lib/webots_joystick/webots_joystick_node ~/my_ros/controllers/joystick/joystick
+>     $ cd ~/my_ros/controllers/joystick/catkin_ws
+>     $ catkin_make
+>     $ cp devel/lib/webots_joystick/webots_joystick_node ~/my_ros/controllers/joystick/joystick
 
 > **note**: Calling `catkin_make` created the directories "catkin\_ws/build" and
 "catkin\_ws/devel". You should source "catkin\_ws/devel/setup.bash" if you want

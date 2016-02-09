@@ -73,7 +73,7 @@ representing the solid center.
 components are a unit vector that defines the rotation axis. The fourth
 component defines the rotation angle about the axis (in [rad]).
 
-    The rotation occurs in the sense prescribed by the right-hand rule.
+> The rotation occurs in the sense prescribed by the right-hand rule.
 
 > **handson**: Modify the rotation of the Solid node of the dumbbell in order to move the
 handle's axis (*y*-axis) parallel to the ground. A unit axis of *(1, 0, 0)* and
@@ -107,10 +107,10 @@ uneven terrain.
 ContactProperties nodes can be used to specify the desired behavior of the
 contacts (e.g. the friction between the two solids).
 
-    Each solid belongs to a material category referenced by their `contactMaterial`
-    field (*"default"* by default). The WorldInfo node has a `contactProperties`
-    field that stores a list of ContactProperties nodes. These nodes allow to define
-    the contact properties between two categories of Solids.
+> Each solid belongs to a material category referenced by their `contactMaterial`
+field (*"default"* by default). The WorldInfo node has a `contactProperties`
+field that stores a list of ContactProperties nodes. These nodes allow to define
+the contact properties between two categories of Solids.
 
 We want now to modify the friction model between the dumbbell and the other
 solids of the environment.

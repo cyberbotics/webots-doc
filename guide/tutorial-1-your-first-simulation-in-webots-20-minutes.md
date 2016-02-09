@@ -127,14 +127,14 @@ before going on.
 > **note**: You can change the robot's position in the 3D view using the translation and
 rotation handles (see ).
 
-    Alternatively, the following keyboard shortcuts are available:
+> Alternatively, the following keyboard shortcuts are available:
 
-    * SHIFT + left-clicking + drag* to move the robot parallel to the floor;
+> * SHIFT + left-clicking + drag* to move the robot parallel to the floor;
 
-    *SHIFT + mouse-wheel* to move the robot up or down.
+> *SHIFT + mouse-wheel* to move the robot up or down.
 
-    Finally, it is possible to add a force to the robot: *CTRL + ALT + left-clicking
-    + drag*.
+> Finally, it is possible to add a force to the robot: *CTRL + ALT + left-clicking
++ drag*.
 
 > **note**: Starting the simulation by pressing the `Run` button will make Webots running
 the simulation as fast as possible. In order to obtain a real-time simulation
@@ -200,27 +200,27 @@ controller is linked, save the world.
 <webots/differential_wheels.h>`), and by applying a differential wheels command
 (`wb_differential_wheels_set_speed(100, 100)`) :
 
-        #include <webots/robot.h>
-
-        // Added a new include file
-        #include <webots/differential_wheels.h>
-
-        #define TIME_STEP 64
-
-        int main(int argc, char **argv)
-        {
-          wb_robot_init();
-
-          // set up the speeds
-          wb_differential_wheels_set_speed(100, 100);
-
-          do {
-          } while (wb_robot_step(TIME_STEP) != -1);
-
-          wb_robot_cleanup();
-
-          return 0;
-        }
+>     #include <webots/robot.h>
+>
+>     // Added a new include file
+>     #include <webots/differential_wheels.h>
+>
+>     #define TIME_STEP 64
+>
+>     int main(int argc, char **argv)
+>     {
+>       wb_robot_init();
+>
+>       // set up the speeds
+>       wb_differential_wheels_set_speed(100, 100);
+>
+>       do {
+>       } while (wb_robot_step(TIME_STEP) != -1);
+>
+>       wb_robot_cleanup();
+>
+>       return 0;
+>     }
 
 > **handson**: Save the modified source code (`File > Save Text File`), and compile it (`Build
 > Build`). Fix any compilation error if necessary. When Webots proposes to

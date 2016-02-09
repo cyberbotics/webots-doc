@@ -120,23 +120,23 @@ string, the *struct* module can be used. This module performs conversions
 between Python values and C structs represented as Python strings. Here is an
 example:
 
-        import struct
-        #...
-        message = struct.pack("chd","a",45,120.08)
-        emitter.send(message)
+>     import struct
+>     #...
+>     message = struct.pack("chd","a",45,120.08)
+>     emitter.send(message)
 
 > **note**: The Java `send()` method does not have a `size` argument because the size is
 implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received
 in a C/C++ controller.
 
-        String request = "You are number " + num + "\0";
-        try {
-          emitter.send(request.getBytes("US-ASCII"));
-        }
-        catch (java.io.UnsupportedEncodingException e) {
-          System.out.println(e);
-        }
+>     String request = "You are number " + num + "\0";
+>     try {
+>       emitter.send(request.getBytes("US-ASCII"));
+>     }
+>     catch (java.io.UnsupportedEncodingException e) {
+>       System.out.println(e);
+>     }
 
 #### Description
 

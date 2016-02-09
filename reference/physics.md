@@ -289,7 +289,7 @@ the presence of a `Physics` node in their parent node to be functional. It is
 also possible to specify a `Physics` node of the device but this adds an extra
 body to the simulation.
 
-    The `TouchSensor` is also a special case: it needs a `Physics` node when it is
-    used as "force" sensor; it does not necessarily need a `Physics` node when it is
-    only used as "bumper" sensor.
+> The `TouchSensor` is also a special case: it needs a `Physics` node when it is
+used as "force" sensor; it does not necessarily need a `Physics` node when it is
+only used as "bumper" sensor.
 

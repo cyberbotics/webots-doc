@@ -143,26 +143,26 @@ message will terminate with the null character `\0` preventing the correct copy
 and display of the returned data. The following example shows how to split
 concatenated string messages:
 
-        int dataSize;
-        char *data = (char *)dWebotsReceive(&dataSize);
-        if (dataSize > 0) {
-          char *msg = new char[dataSize];
-          int count = 1, i = 0, j = 0;
-          for ( ; i < dataSize; ++i) {
-            char c = data[i];
-            if (c == '\0') {
-              msg[j] = c;
-              // process message
-              dWebotsConsolePrintf("Received message %d: %s\n", count, msg);
-              // reset for next string
-              ++count;
-              j = 0;
-            } else {
-              msg[j] = c;
-              ++j;
-            }
-          }
-        }
+>     int dataSize;
+>     char *data = (char *)dWebotsReceive(&dataSize);
+>     if (dataSize > 0) {
+>       char *msg = new char[dataSize];
+>       int count = 1, i = 0, j = 0;
+>       for ( ; i < dataSize; ++i) {
+>         char c = data[i];
+>         if (c == '\0') {
+>           msg[j] = c;
+>           // process message
+>           dWebotsConsolePrintf("Received message %d: %s\n", count, msg);
+>           // reset for next string
+>           ++count;
+>           j = 0;
+>         } else {
+>           msg[j] = c;
+>           ++j;
+>         }
+>       }
+>     }
 
 ### dWebotsGetTime()
 

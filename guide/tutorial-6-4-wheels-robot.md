@@ -38,12 +38,12 @@ either a solid node or a joint node.
 parent and its child. The direct parent and child of a joint node are both solid
 nodes.
 
-    The nodes derived from Joint allow to create different kind of constraints
-    between the linked solid nodes. The most used in robotics is the HingeJoint
-    allowing to model amongst others rotational motors including wheels.
+> The nodes derived from Joint allow to create different kind of constraints
+between the linked solid nodes. The most used in robotics is the HingeJoint
+allowing to model amongst others rotational motors including wheels.
 
-    A joint node can be monitored or actuated by adding respectively a
-    PositionSensor node, or a motor node to its *device* field.
+> A joint node can be monitored or actuated by adding respectively a
+PositionSensor node, or a motor node to its *device* field.
 
 Having these rules in mind, we can start to design the node hierarchy used to
 model the robot. The first step is to determine which part of the robot should
@@ -140,38 +140,38 @@ new. The following note explain how to proceed.
 > **note**: To program the rotational motors, the first step is to include the API module
 corresponding to the RotationalMotor node:
 
-        #include <webots/motor.h>
+>     #include <webots/motor.h>
 
-    Then to get the references of the RotationalMotor nodes:
+> Then to get the references of the RotationalMotor nodes:
 
-        // initialize motors
-        WbDeviceTag wheels[4];
-        char wheels_names[4][8] = {
-          "wheel1", "wheel2", "wheel3", "wheel4"
-        };
-        for (i=0; i<4 ; i++)
-          wheels[i] = wb_robot_get_device(wheels_names[i]);
+>     // initialize motors
+>     WbDeviceTag wheels[4];
+>     char wheels_names[4][8] = {
+>       "wheel1", "wheel2", "wheel3", "wheel4"
+>     };
+>     for (i=0; i<4 ; i++)
+>       wheels[i] = wb_robot_get_device(wheels_names[i]);
 
-    A motor can be actuated by setting its position, its velocity, its acceleration
-    or its force (cf. `Reference Manual`). Here we are interested in setting its
-    velocity. This can be achieve by setting its position at infinity, and by
-    bounding its velocity:
+> A motor can be actuated by setting its position, its velocity, its acceleration
+or its force (cf. `Reference Manual`). Here we are interested in setting its
+velocity. This can be achieve by setting its position at infinity, and by
+bounding its velocity:
 
-        double speed = -1.5; // [rad/s]
-        wb_motor_set_position(wheels[0], INFINITY);
-        wb_motor_set_velocity(wheels[0], speed);
+>     double speed = -1.5; // [rad/s]
+>     wb_motor_set_position(wheels[0], INFINITY);
+>     wb_motor_set_velocity(wheels[0], speed);
 
 > **handson**: Implement a controller called "4\_wheels\_collision\_avoidance" moving the robot
 and avoiding obstacles by detecting them by the distance sensors.
 
-    Note that the `lookupTable` field of the DistanceSensor nodes indicates which
-    values are returned by the sensor (cf. `Reference Manual`).
+> Note that the `lookupTable` field of the DistanceSensor nodes indicates which
+values are returned by the sensor (cf. `Reference Manual`).
 
-    Don't forget to set the `controller` field of the Robot node to indicate your
-    new controller.
+> Don't forget to set the `controller` field of the Robot node to indicate your
+new controller.
 
-    As usual a possible solution of this exercise is located in the tutorials
-    directory.
+> As usual a possible solution of this exercise is located in the tutorials
+directory.
 
 ### Conclusion
 

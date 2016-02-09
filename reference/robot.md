@@ -470,16 +470,16 @@ key stroke.
 > **note**: The keyboard predefined values are final integers located in the Robot class.
 For example, *Ctrl+B* can be tested like this:
 
-        int key=robot.keyboardGetKey()
-        if (key==Robot.KEYBOARD_CONTROL+'B')
-          System.out.Println("Ctrl+B is pressed");
+>     int key=robot.keyboardGetKey()
+>     if (key==Robot.KEYBOARD_CONTROL+'B')
+>       System.out.Println("Ctrl+B is pressed");
 
 > **note**: The keyboard predefined values are integers located into the Robot class. For
 example, *Ctrl+B* can be tested like this:
 
-        key=robot.keyboardGetKey()
-        if (key==Robot.KEYBOARD_CONTROL+ord('B')):
-          print 'Ctrl+B is pressed'
+>     key=robot.keyboardGetKey()
+>     if (key==Robot.KEYBOARD_CONTROL+ord('B')):
+>       print 'Ctrl+B is pressed'
 
 #### Description
 

@@ -75,10 +75,10 @@ attraction state, or that a suction pump was activated, etc. But the actual
 physical link exists only if `wb_connector_lock()` was called when a compatible
 peer was present (or if the `Connector` was auto-locked).
 
-> **note**:     If `Connectors` nodes are locked and correctly aligned (and compatible) in the
-    .wbt file then the simulation will start with these connectors already attached
-    by a physical link. You can take advantage of this feature to start your
-    simulation with the desired mechanical configuration.
+    > **note**: If `Connectors` nodes are locked and correctly aligned (and compatible) in the
+.wbt file then the simulation will start with these connectors already attached
+by a physical link. You can take advantage of this feature to start your
+simulation with the desired mechanical configuration.
 
 - `autoLock`: specifies if auto-locking is enabled or disabled. Auto-locking
 allows a connector to automatically lock when a compatible peer becomes present.

@@ -232,7 +232,7 @@ class BookParser:
                     outFile.write('\n')
 
 
-    def parseProgramListing(self, node, outFile, indent=0):
+    def parseProgramListing(self, node, outFile, indent=0, prefix=''):
         output = '\n'
         if indent == 0:
             output += '```'
@@ -254,7 +254,7 @@ class BookParser:
         content = text.split('\n')
         for i in range(0, len(content)):
             line = content[i]
-            output += ' ' * indent + line
+            output += prefix + ' ' * indent + line
             if i != len(content) - 1:
                 output += '\n'
 
@@ -361,20 +361,20 @@ class BookParser:
         outFile.write('\n')
 
     def parseIconPara(self, node, outFile, indent=0):
-        outFile.write('> **' + node.tag + '**: ')
+        outFile.write(' ' * indent + '> **' + node.tag + '**: ')
 
-        firstParaChild = True
+        firstItem = True
         for child in node.getchildren():
             if child.tag == 'para':
-                if firstParaChild:
-                    self.parsePara(child, outFile, indent, True)
-                    firstParaChild = False
+                if firstItem:
+                    firstItem = False
                 else:
-                    self.parsePara(child, outFile, indent + 4, True)
-            elif child.tag == 'figure':
-                self.parseFigure(child, outFile)
+                    outFile.write(' ' * indent + '> ' )
+                self.parsePara(child, outFile, 0, True)
             elif child.tag == 'programlisting':
-                self.parseProgramListing(child, outFile, indent + 8)
+                if firstItem:
+                    raise Exception('programlisting as first child is not supported')
+                self.parseProgramListing(child, outFile, 4, prefix='> ')
             else:
                 raise Exception('Unsupported type: ' + child.tag)
             outFile.write('\n\n')

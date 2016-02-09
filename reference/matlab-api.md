@@ -275,8 +275,8 @@ The following tables describe the Matlab functions.
 | WB\_ROBOT\_KEYBOARD\_ALT |
 | `wb_robot_step`(ms) |
 | tag = `wb_robot_get_device`('name') |
-| size = `wb_robot_get_number_of_devices`() |
-| tag = `wb_robot_get_device_by_index`(index) |
+| &nbsp;&nbsp; size = `wb_robot_get_number_of_devices`() |
+| &nbsp;&nbsp; tag = `wb_robot_get_device_by_index`(index) |
 | `wb_robot_battery_sensor_enable`(ms) |
 | `wb_robot_battery_sensor_disable`() |
 | period = `wb_robot_battery_sensor_get_sampling_period`() |
@@ -284,8 +284,8 @@ The following tables describe the Matlab functions.
 | step = `wb_robot_get_basic_time_step`() |
 | mode = `wb_robot_get_mode`() |
 | model = `wb_robot_get_model`() |
-| data = `getData`() |
-| `setData`('data') |
+| &nbsp;&nbsp; data = `getData`() |
+| &nbsp;&nbsp; `setData`('data') |
 | name = `wb_robot_get_name`() |
 | name = `wb_robot_get_controller_name`() |
 | name = `wb_robot_get_controller_arguments`() |

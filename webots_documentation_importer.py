@@ -167,7 +167,7 @@ class BookParser:
                 output += '\n'
         return output
 
-    def parsePara(self, node, outFile, indent=0, inList=False):
+    def parsePara(self, node, outFile, indent=0, inList=False, mergeCarriageReturns=False):
         # para included tags:
         #     bold, command, computeroutput, email, emphasis, filename, function,
         #     guibutton, guilabel, guimenu, guimenuitem, guisubmenu, hlink,
@@ -186,10 +186,10 @@ class BookParser:
                     text += '*' + self.parseText(child.text, True, False) + '*'
                 elif child.tag == 'filename':
                     text += '"' + self.parseText(child.text, True, False) + '"'
-                elif child.tag == 'ulink':
-                    text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'trademark':
                     text += '*' + self.parseText(child.text, True, False) + '*^(TM)'
+                elif child.tag == 'ulink':
+                    text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'programlisting':
                     # flush text
                     text = self.formatText(text)
@@ -210,17 +210,26 @@ class BookParser:
                     outFile.write('\n\n')
                 else:
                     text += '`' + self.parseText(child.text, False, False) + '`'
+            else: # not a text tag
+                if child.tag == 'space':
+                    text += '&nbsp;'
             text += self.parseText(child.tail, True, False)
         text += self.parseText(node.tail, True, False)
-        text = self.formatText(text)
 
-        content = text.split('\n')
-        for i in range(0, len(content)):
-            line = content[i]
-            if len(line.strip()) > 0:
-                outFile.write(' ' * indent + line)
-            if i != len(content) - 1:
-                outFile.write('\n')
+        if mergeCarriageReturns:
+            text = re.sub(r'\n', ' ', text)
+            text = re.sub(r'[ \t]+', ' ', text)
+            outFile.write(text)
+        else:
+            text = self.formatText(text)
+
+            content = text.split('\n')
+            for i in range(0, len(content)):
+                line = content[i]
+                if len(line.strip()) > 0:
+                    outFile.write(' ' * indent + line)
+                if i != len(content) - 1:
+                    outFile.write('\n')
 
 
     def parseProgramListing(self, node, outFile, indent=0):
@@ -311,8 +320,17 @@ class BookParser:
         if len(title) > 0:
             outFile.write('%%figure "%s"\n' % (title))
 
-        if not header and nCols == 1:
-            outFile.write('```')
+        if not header:
+            outFile.write('| ' * (1 + nCols) + '\n')
+            firstEntry = True
+            for i in range(0, nCols):
+                if firstEntry:
+                    outFile.write('| ')
+                    firstEntry = False
+                else:
+                    outFile.write(' | ')
+                outFile.write('---')
+            outFile.write(' |\n')
 
         line = 0
         for rowNode in node.findall('.//row'):
@@ -324,7 +342,7 @@ class BookParser:
                     firstEntry = False
                 else:
                     outFile.write(' | ')
-                self.parsePara(entryNode, outFile)
+                self.parsePara(entryNode, outFile, mergeCarriageReturns=(not header))
             outFile.write(' |\n')
             if line == 1 and header:
                 firstEntry = True
@@ -336,9 +354,6 @@ class BookParser:
                         outFile.write(' | ')
                     outFile.write('---')
                 outFile.write(' |\n')
-
-        if not header and nCols == 1:
-            outFile.write('```')
 
         if len(title) > 0:
             outFile.write('%%end\n')

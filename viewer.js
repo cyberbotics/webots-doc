@@ -56,7 +56,7 @@ function populateViewDiv(mdContent) {
     console.log(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ['wbFigure']});
+    var converter = new showdown.Converter({tables: "True", extensions: ['wbFigure', 'wbSuperscript']});
     var html = converter.makeHtml(mdContent);
 
     var div = document.createElement("div");

@@ -21,3 +21,17 @@ showdown.extension("wbFigure", function() {
         }
     ]
 });
+
+showdown.extension("wbSuperscript", function() {
+    'use strict';
+
+    return [
+        {
+            type: "html",
+            regex: /\^\s*\(([^]+?)\)/gi,
+            replace: function (match, content) {
+                return "<sup>" + content + "</sup>";
+            }
+        }
+    ]
+});

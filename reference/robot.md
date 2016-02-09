@@ -363,7 +363,7 @@ directly to the `wbr_start` function (more information in the user guide).
 
 The integers can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the"
+%figure "Helper enumeration to interpret the integer argument and return value of the `wb_robot_[gs]et_mode()` functions"
 | Mode | Purpose |
 | --- | --- |
 | WB\_MODE\_SIMULATION | simulation mode |

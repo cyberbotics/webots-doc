@@ -80,19 +80,19 @@ Webots project.
 
 A controller is a computer program that controls a robot specified in a world
 file. Controllers can be written in any of the programming languages supported
-by Webots: C, C++, Java, Python or `MATLAB`. When a simulation starts, Webots
-launches the specified controllers, each as a separate process, and it
+by Webots: C, C++, Java, Python or *MATLAB*^(TM). When a simulation starts,
+Webots launches the specified controllers, each as a separate process, and it
 associates the controller processes with the simulated robots. Note that several
 robots can use the same controller code, however a distinct process will be
 launched for each robot.
 
 Some programming languages need to be compiled (C and C++) other languages need
-to be interpreted (Python and `MATLAB`) and some need to be both compiled and
-interpreted (Java). For example, C and C++ controllers are compiled to platform-
-dependent binary executables (for example ".exe" under Windows). Python and
-`MATLAB` controllers are interpreted by the corresponding run-time systems
-(which must be installed). Java controller need to be compiled to byte code
-(".class" files or ".jar") and then interpreted by a Java Virtual Machine.
+to be interpreted (Python and *MATLAB*^(TM)) and some need to be both compiled
+and interpreted (Java). For example, C and C++ controllers are compiled to
+platform-dependent binary executables (for example ".exe" under Windows). Python
+and *MATLAB*^(TM) controllers are interpreted by the corresponding run-time
+systems (which must be installed). Java controller need to be compiled to byte
+code (".class" files or ".jar") and then interpreted by a Java Virtual Machine.
 
 The source files and binary files of each controller are stored together in a
 controller directory. A controller directory is placed in the "controllers"

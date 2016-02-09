@@ -42,14 +42,8 @@ access by the "webots/differential\_wheel.h" include file. The speed is given in
 a number of ticks/seconds where 1000 ticks correspond to a complete rotation of
 the wheel. The values are clamped between -1000 and 1000.
 
-%figure "Top view of the e-puck model.
-    The green arrow indicates the front of the robot.
-    The red lines represent the directions of the infrared distance sensors.
-    The string labels corresponds to the distance sensor names."
-![Top view of the e-puck model.
-    The green arrow indicates the front of the robot.
-    The red lines represent the directions of the infrared distance sensors.
-    The string labels corresponds to the distance sensor names.](png/tutorial_e-puck_top_view.png)
+%figure "Top view of the e-puck model. The green arrow indicates the front of the robot. The red lines represent the directions of the infrared distance sensors. The string labels corresponds to the distance sensor names."
+![Top view of the e-puck model. The green arrow indicates the front of the robot. The red lines represent the directions of the infrared distance sensors. The string labels corresponds to the distance sensor names.](png/tutorial_e-puck_top_view.png)
 %end
 
 %figure "UML state machine of a simple feedback loop"

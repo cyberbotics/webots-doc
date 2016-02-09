@@ -423,7 +423,7 @@ movie creation. This function is particularly useful to check if the encoding
 process is finished and the file has been created by waiting until the returned
 value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 
-%figure "Return values of the"
+%figure "Return values of the `wb_supervisor_movie_get_status()` function"
 | value | status |
 | --- | --- |
 | WB\_SUPERVISOR\_MOVIE\_RECORDING | recording the movie |

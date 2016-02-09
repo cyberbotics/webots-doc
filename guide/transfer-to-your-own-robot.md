@@ -4,9 +4,9 @@ In mobile robot simulation, it is often useful to transfer the results onto real
 mobile robots. Webots was designed with this transfer capability in mind. The
 simulation is as realistic as possible, and the programming interface can be
 ported or interfaced to existing, real robots. Webots already comprises transfer
-systems for a number of existing robots including `e-puck`, `DARwIn-OP`,
-`Khepera` and `Hemisson`. This section explains how to develop your own transfer
-system to your own mobile robot.
+systems for a number of existing robots including *e-puck*^(TM), *DARwIn-
+OP*^(TM), *Khepera*^(TM) and *Hemisson*^(TM). This section explains how to
+develop your own transfer system to your own mobile robot.
 
 Since the simulation is only an approximation of the physics of the real robot,
 some tuning is always necessary when developing a transfer mechanism for a real
@@ -93,10 +93,10 @@ should be uploaded onto the real robot for local execution.
 #### Examples
 
 Webots support cross-compilation for several existing commercial robots. For the
-`e-puck` robot, this system is fully integrated in Webots and needs no
-modification in the code. For the `Hemisson` robot, this system needs a few
-include files to replace the Webots API include files. For the `Khepera` robot,
-a specific C library is used in addition to specific include files.
+*e-puck*^(TM) robot, this system is fully integrated in Webots and needs no
+modification in the code. For the *Hemisson*^(TM) robot, this system needs a few
+include files to replace the Webots API include files. For the *Khepera*^(TM)
+robot, a specific C library is used in addition to specific include files.
 
 ### Interpreted language
 
@@ -107,5 +107,5 @@ since you can directly transfer the code of your program that will be
 interpreted to the real robot. The most difficult part may be to develop a
 language interpreter in C or Java to be used by your Webots controller for
 controlling the simulated robot. Such an interpreted language system was
-developed for the `Hemisson` robot with the `BotStudio` system.
+developed for the *Hemisson*^(TM) robot with the *BotStudio*^(TM) system.
 

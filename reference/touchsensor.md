@@ -162,7 +162,7 @@ field. If the value of the `type` field is "force" then this function returns
 WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
 WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 
-%figure "Return values for the"
+%figure "Return values for the `wb_touch_sensor_get_type()` function"
 | TouchSensor.type | return value |
 | --- | --- |
 | "bumper" | WB\_TOUCH\_SENSOR\_BUMPER |

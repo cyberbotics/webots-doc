@@ -108,10 +108,8 @@ no effect over the old one and 1 means that the new pixel replaces entirely the
 old one. Only the color channel is affected by the `opacity` according to the
 formula.
 
-%figure "Blending formula used to compute the new the color channels (Cn) of a pixel
-            from the old color channels (Co) of the background pixel and from the opacity."
-![Blending formula used to compute the new the color channels (Cn) of a pixel
-            from the old color channels (Co) of the background pixel and from the opacity.](pdf/display_opacity.pdf.png)
+%figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
+![Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity.](pdf/display_opacity.pdf.png)
 %end
 
 #### Description

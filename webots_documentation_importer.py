@@ -12,7 +12,8 @@ import pdb # break with pdb.set_trace()
 def slugify(txt):
   output = txt.lower()
   output = output.replace('+', 'p')
-  output = re.sub(r'[\(\):]', '', output)
+  output = re.sub(r'[\(\):`]', '', output)
+  output = re.sub(r'\^\(TM\)', '', output)
   output = re.sub(r'\W+', '-', output)
   return output.strip(' ').strip('-')
 
@@ -106,11 +107,35 @@ class BookParser:
         outFile.close()
         simplifySpaces(outputFilePath)
 
-    def getTitle(self, el):
-      titleNodes = el.findall('title')
-      if len(titleNodes) <= 0:
-          return ''
-      return titleNodes[0].text.strip()
+    def getTitle(self, node):
+        title = None
+        if node.tag == 'title':
+            title = node
+        else:
+            titleNodes = node.findall('title')
+            if len(titleNodes) <= 0:
+                return ''
+            title = titleNodes[0]
+
+        text = ''
+        if title.text:
+            text += title.text
+        for child in title.getchildren():
+            if child.text:
+                if child.tag == 'trademark':
+                    text += '*' + child.text + '*^(TM)'
+                elif child.tag == 'function' or child.tag == 'math':
+                    text += '`' + child.text + '`'
+                else:
+                    raise Exception('Unsupported type: ' + child.tag)
+            if child.tail:
+                text += child.tail
+        text += title.tail
+        text = text.strip()
+        text = re.sub(r'\n', '', text)
+        text = re.sub(r'  *', ' ', text)
+
+        return text
 
     def parseText(self, txt, protect, removeTrailingSpaces):
         if txt is None:
@@ -163,6 +188,8 @@ class BookParser:
                     text += '"' + self.parseText(child.text, True, False) + '"'
                 elif child.tag == 'ulink':
                     text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
+                elif child.tag == 'trademark':
+                    text += '*' + self.parseText(child.text, True, False) + '*^(TM)'
                 elif child.tag == 'programlisting':
                     # flush text
                     text = self.formatText(text)
@@ -228,16 +255,18 @@ class BookParser:
         outFile.write(output)
 
     def parseFigure(self, node, outFile):
-        title = ''
+        title = self.getTitle(node)
+        if len(title) == 0:
+            raise Exception('figure title not found')
         fileref = ''
         for child in node.getchildren():
             if child.tag == 'title':
-                title = child.text.strip()
+                pass
             elif child.tag  == 'graphic':
                 fileref = child.attrib.get('fileref')
             else:
                 raise Exception('Unsupported type: ' + child.tag)
-        if title is not None and len(title) > 0 and fileref is not None and len(fileref) > 0:
+        if fileref is not None and len(fileref) > 0:
             if fileref.endswith('.pdf'):
                 fileref += '.png'
             outFile.write('\n%%figure "%s"\n![%s](%s)\n%%end\n\n' % (title, title, fileref))
@@ -322,7 +351,10 @@ class BookParser:
 
     def parseChapter(self, node, outFile):
         for child in node.getchildren():
-            if child.tag == 'title' and child.attrib.get('name', child.text):
+            if child.tag == 'title':
+                title = self.getTitle(child)
+                if len(title) == 0:
+                    raise Exception('Invalid title')
                 indent = 0
                 if node.tag == 'chapter':
                     indent = 1
@@ -334,7 +366,7 @@ class BookParser:
                     indent = 4
                 else:
                     raise Exception('Unsupported type: ' + node.tag)
-                outFile.write('#' * indent + ' ' + child.attrib.get('name', child.text) + '\n\n')
+                outFile.write('#' * indent + ' ' + title + '\n\n')
             elif child.tag == 'sect1':
                 fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName

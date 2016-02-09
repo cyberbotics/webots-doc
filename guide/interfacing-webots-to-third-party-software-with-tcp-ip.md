@@ -3,9 +3,9 @@
 ### Overview
 
 Webots offers programming APIs for following languages: C/C++, Java, Python and
-`MATLAB`. It is also possible to interface Webots with other programming
-languages of software packages, such as `Lisp`, `LabView`, etc. Such an
-interface can be implemented through a TCP/IP protocol that you can define
+*MATLAB*^(TM). It is also possible to interface Webots with other programming
+languages of software packages, such as *Lisp*^(TM), *LabView*^(TM), etc. Such
+an interface can be implemented through a TCP/IP protocol that you can define
 yourself. Webots comes with an example of interfacing a simulated Khepera robot
 via TCP/IP to any third party program able to read from and write to a TCP/IP
 connection. This example world is called "khepera\_tcpip.wbt", and can be found
@@ -15,8 +15,8 @@ which is in the "controllers" directory of the same project. This small C
 controller comes with full source code in "tcpip.c", so that you can modify it
 to suit your needs. A client example is provided in "client.c". This client may
 be used as a model to write a similar client using the programming language of
-your third party software. This has already been implemented in `Lisp` and
-`MATLAB` by some Webots users.
+your third party software. This has already been implemented in *Lisp*^(TM) and
+*MATLAB*^(TM) by some Webots users.
 
 ### Main advantages
 

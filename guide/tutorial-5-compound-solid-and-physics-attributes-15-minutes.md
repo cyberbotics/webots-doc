@@ -22,10 +22,8 @@ We want to implement a dumbbell made of a handle (Cylinder) and of two weights
 (Sphere) located at each end of the handle. The  depicts the Solid nodes and its
 subnodes required to implement the dumbbell.
 
-%figure "Representation of the subnodes of a compound solid made of
-    several transformed geometries."
-![Representation of the subnodes of a compound solid made of
-    several transformed geometries.](pdf/tutorial_compound_solid.pdf.png)
+%figure "Representation of the subnodes of a compound solid made of several transformed geometries."
+![Representation of the subnodes of a compound solid made of several transformed geometries.](pdf/tutorial_compound_solid.pdf.png)
 %end
 
 ### Physics Attributes

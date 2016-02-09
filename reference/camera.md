@@ -300,7 +300,7 @@ This function returns the type of the camera as defined by the `type` field of
 the corresponding `Camera` node. The constants defined in "camera.h" are
 summarized in :
 
-%figure "Return values for the"
+%figure "Return values for the `wb_camera_get_type()` function"
 | Camera.type | return value |
 | --- | --- |
 | "color" | WB\_CAMERA\_COLOR |

@@ -4,30 +4,12 @@ The aim of this tutorial is to create your first robot from scratch. This robot
 will be made of a body, four wheels, and two distance sensors. The result is
 depicted in . The  shows the robot from a top view.
 
-%figure "3D view of the 4 wheels robot.
-    Note that the coordinate system representations of the robot body
-    and of its wheels are oriented the same way.
-    Their +x-vector (in red) defines the left of the robot,
-    their +y-vector (in green) defines the top of the robot, and
-    their +z-vector (in blue) defines the front of the robot.
-    The distance sensors are oriented in a different way,
-    their +x-vector indicates the direction of the sensor."
-![3D view of the 4 wheels robot.
-    Note that the coordinate system representations of the robot body
-    and of its wheels are oriented the same way.
-    Their +x-vector (in red) defines the left of the robot,
-    their +y-vector (in green) defines the top of the robot, and
-    their +z-vector (in blue) defines the front of the robot.
-    The distance sensors are oriented in a different way,
-    their +x-vector indicates the direction of the sensor.](png/tutorial_4_wheels_robot.png)
+%figure "3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor."
+![3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor.](png/tutorial_4_wheels_robot.png)
 %end
 
-%figure "Top view of the 4 wheels robot.
-    The grid behind the robot has a dimension of 0.2 x 0.3 [m].
-    The text labels correspond to the name of the devices."
-![Top view of the 4 wheels robot.
-    The grid behind the robot has a dimension of 0.2 x 0.3 [m].
-    The text labels correspond to the name of the devices.](png/tutorial_4_wheels_top_schema.png)
+%figure "Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 [m]. The text labels correspond to the name of the devices."
+![Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 [m]. The text labels correspond to the name of the devices.](png/tutorial_4_wheels_top_schema.png)
 %end
 
 ### New simulation

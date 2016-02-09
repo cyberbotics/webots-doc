@@ -585,7 +585,7 @@ This function allows to retrieve the servo type defined by the `type` field. If
 the value of the `type` field is "linear", this function returns
 WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 
-%figure "Return values for the"
+%figure "Return values for the `wb_servo_get_type()` function"
 | Servo.type | return value |
 | --- | --- |
 | "rotational" | WB\_SERVO\_ROTATIONAL |

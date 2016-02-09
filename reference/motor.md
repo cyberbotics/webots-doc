@@ -392,7 +392,7 @@ This function allows to retrieve the motor type defined by the `type` field. If
 the value of the `type` field is "linear", this function returns WB\_LINEAR, and
 otherwise it returns WB\_ANGULAR.
 
-%figure "Return values for the"
+%figure "Return values for the `wb_motor_get_type()` function"
 | Motor.type | return value |
 | --- | --- |
 | "rotational" | WB\_ANGULAR |

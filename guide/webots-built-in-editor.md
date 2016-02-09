@@ -3,8 +3,8 @@
 Webots source code editor is a multi-tab text editor specially adapted for
 developing Webots controllers. It is usually recommended to use this editor as
 it makes the compilation straightforward. The editor features syntax
-highlighting for Webots supported language (C/C++, Java, Python and `MATLAB`)
-and auto-completion for Webots C API.
+highlighting for Webots supported language (C/C++, Java, Python and
+*MATLAB*^(TM)) and auto-completion for Webots C API.
 
 %figure "Webots Text Editor"
 ![Webots Text Editor](png/text_editor.png)

@@ -43,11 +43,16 @@ class Reference:
         self.kind = kind
 
     def __str__(self):
-         return '%s: "%s#%s" (%s)' % (self.refId, self.filename, self.anchor, self.kind)
+        if len(self.anchor) > 0: 
+            return '%s: "%s#%s" (%s)' % (self.refId, self.filename, self.anchor, self.kind)
+        else:
+            return '%s: "%s" (%s)' % (self.refId, self.filename, self.kind)
 
 
 class ReferenceManager:
-    refs = []
+    def __init__(self):
+        self.refs = []
+
     def addReference(self, ref):
         if ref.__class__.__name__ == 'Reference':
             if self.getReferenceById(ref.refId) is not None:
@@ -115,8 +120,7 @@ class BookParser:
                          .replace('</step>', '</listitem>')
 
         self.root = ET.fromstring(content)
-
-        print self.referenceManager
+        self.parents = dict((c, p) for p in self.root.getiterator() for c in p)
 
     def exportToc(self):
         if self.root is None:
@@ -140,6 +144,36 @@ class BookParser:
                 outFile.write('    %d. [%s](%s)\n' % (sectionCounter, title, self.bookName + '/' + slugify(title) + '.md'))
         outFile.close()
         simplifySpaces(outputFilePath)
+
+    def parseReferences(self):
+        for idNode in self.root.findall('.//*[@id]'):
+            if idNode.tag == 'refentry':
+                continue # TODO: is this correct?!
+            refId = idNode.attrib.get('id')
+            anchor = slugify(self.getTitle(idNode))
+
+            filename = ''
+            node = idNode
+            while node is not None and node.tag != 'chapter' and node.tag != 'sect1':
+                if node in self.parents:
+                    node = self.parents[node]
+                else:
+                    node = None
+                    break
+            if node is not None:
+                filename = self.outputDirectoryPath + slugify(self.getTitle(node)) + '.md'
+
+            kind = ''
+            if idNode.tag == 'sect1' or idNode.tag == 'sect2' or idNode.tag == 'sect3' or idNode.tag == 'preface':
+                kind = 'section'
+            else:
+                kind = idNode.tag
+
+            ref = Reference(refId, filename, anchor, kind)
+            self.referenceManager.addReference(ref)
+
+        print self.referenceManager
+
 
     def export(self):
         if self.root is None:
@@ -275,7 +309,6 @@ class BookParser:
                     outFile.write(' ' * indent + line)
                 if i != len(content) - 1:
                     outFile.write('\n')
-
 
     def parseProgramListing(self, node, outFile, indent=0, prefix=''):
         output = '\n'
@@ -424,14 +457,8 @@ class BookParser:
                 raise Exception('Unsupported type: ' + child.tag)
             outFile.write('\n\n')
         outFile.write('\n')
-            
 
     def parseChapter(self, node, outFile):
-        refId = node.attrib.get('id')
-        if refId and node.tag != 'preface':
-            kind = 'chapter' if node.tag == 'chapter' else 'section'
-            ref = Reference(refId, outFile.name, slugify(self.getTitle(node)), kind)
-            self.referenceManager.addReference(ref)
         for child in node.getchildren():
             if child.tag == 'title':
                 title = self.getTitle(child)
@@ -544,4 +571,5 @@ if __name__ == '__main__':
         bookParser = BookParser(webotsDirectoryPath, directoryName)
         bookParser.parseXMLFile(intputFilePath)
         bookParser.exportToc()
+        bookParser.parseReferences()
         bookParser.export()

@@ -1,6 +1,6 @@
 ## Display
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 Display {
@@ -11,16 +11,19 @@ Display {
 
 ### Description
 
-The `Display` node allows to handle a 2D pixel array using simple API functions,
-and render it into a 2D overlay on the 3D view, into a 2D texture of any `Shape`
-node, or both. It can model an embedded screen or it can display any graphical
-information such as graphs, text, robot trajectory, filtered camera images and
-so on.
+The [Display](reference/display.md#display) node allows to handle a 2D pixel
+array using simple API functions, and render it into a 2D overlay on the 3D
+view, into a 2D texture of any [Shape](reference/shape.md#shape) node, or both.
+It can model an embedded screen or it can display any graphical information such
+as graphs, text, robot trajectory, filtered camera images and so on.
 
-If the first child of the `Display` node is or contains (recursive search if the
-first node is a `Group`) a `Shape` node having a `ImageTexture`, then the
-internal texture of the(se) `ImageTexture` node(s) is replaced by the texture of
-the `Display`.
+If the first child of the [Display](reference/display.md#display) node is or
+contains (recursive search if the first node is a
+[Group](reference/group.md#group)) a [Shape](reference/shape.md#shape) node
+having a [ImageTexture](reference/imagetexture.md#imagetexture), then the
+internal texture of the(se)
+[ImageTexture](reference/imagetexture.md#imagetexture) node(s) is replaced by
+the texture of the [Display](reference/display.md#display).
 
 ### Field Summary
 
@@ -29,31 +32,32 @@ the `Display`.
 
 ### Coordinates system
 
-Internally, the `Display` image is stored in a 2D pixel array. The RGBA value
-(4x8 bits) of a pixel is dislayed in the status bar (the bar at the bottom of
-the console window) when the mouse hovers over the pixel in the `Display`. The
-2D array has a fixed size defined by the `width` and `height` fields. The (0,0)
-coordinate corresponds to the top left pixel, while the (`width`-1,`height`-1)
-coordinate corresponds to the bottom right pixel.
+Internally, the [Display](reference/display.md#display) image is stored in a 2D
+pixel array. The RGBA value (4x8 bits) of a pixel is dislayed in the status bar
+(the bar at the bottom of the console window) when the mouse hovers over the
+pixel in the [Display](reference/display.md#display). The 2D array has a fixed
+size defined by the `width` and `height` fields. The (0,0) coordinate
+corresponds to the top left pixel, while the (`width`-1,`height`-1) coordinate
+corresponds to the bottom right pixel.
 
 ### Command stack
 
-Each function call of the `Display` device API (except for
-`wb_display_get_width()` and `wb_display_get_height()`) is storing a specific
-command into an internal stack. This command stack is sent to Webots during the
-next call of the `wb_robot_step()` function, using a FIFO scheme (First In,
-First Out), so that commands are executed in the same order as the corresponding
-function calls.
+Each function call of the [Display](reference/display.md#display) device API
+(except for `wb_display_get_width()` and `wb_display_get_height()`) is storing a
+specific command into an internal stack. This command stack is sent to Webots
+during the next call of the `wb_robot_step()` function, using a FIFO scheme
+(First In, First Out), so that commands are executed in the same order as the
+corresponding function calls.
 
 ### Context
 
-The `Display` device has among other things two kinds of functions; the
-contextual ones which allow to set the current state of the display, and the
-drawing ones which allow to draw specific primitives. The behavior of the
-drawing functions depends on the display context. For example, in order to draw
-two red lines, the `wb_display_set_color` contextual function must be called for
-setting the display's internal color to red before calling twice the
-`wb_display_draw_line` drawing function to draw the two lines.
+The [Display](reference/display.md#display) device has among other things two
+kinds of functions; the contextual ones which allow to set the current state of
+the display, and the drawing ones which allow to draw specific primitives. The
+behavior of the drawing functions depends on the display context. For example,
+in order to draw two red lines, the `wb_display_set_color` contextual function
+must be called for setting the display's internal color to red before calling
+twice the `wb_display_draw_line` drawing function to draw the two lines.
 
 ### Overlay Image
 
@@ -82,7 +86,7 @@ fields.
 #### Description
 
 These three functions define the context in which the subsequent drawing
-commands (see `draw primitive functions`) will be applied.
+commands (see [draw primitive functions](reference/display.md)) will be applied.
 
 `wb_display_set_color()` defines the color for the subsequent drawing commands.
 It is expressed as a 3 bytes RGB integer, the most significant byte (leftmost
@@ -121,7 +125,7 @@ the magenta color.
 
 These functions order the execution of a drawing primitive on the display. They
 depend on the context of the display as defined by the contextual functions (see
-`set context functions`).
+[set context functions](reference/display.md)).
 
 `wb_display_draw_pixel()` draws a pixel at the (`x`,`y`) coordinate.
 
@@ -170,11 +174,12 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 #### Description
 
-In addition to the main display image, each `Display` node also contains a list
-of clipboard images used for various image manipulations. This list is initially
-empty. The functions described below use a reference (corresponding to the
-`WbImageRef` data type) to refer to a specific image. Clipboard images can be
-created either with `wb_display_image_new()`, or `wb_display_image_load()`, or
+In addition to the main display image, each
+[Display](reference/display.md#display) node also contains a list of clipboard
+images used for various image manipulations. This list is initially empty. The
+functions described below use a reference (corresponding to the `WbImageRef`
+data type) to refer to a specific image. Clipboard images can be created either
+with `wb_display_image_new()`, or `wb_display_image_load()`, or
 `wb_display_image_copy()`. They should be deleted with the
 `wb_display_image_delete()` function.when they are no more used. Finally, note
 that both the main display image and the clipboard images have an alpha channel.

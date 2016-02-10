@@ -22,7 +22,8 @@ WorldInfo {
 }
 ```
 
-The `WorldInfo` node provides general information on the simulated world:
+The [WorldInfo](reference/worldinfo.md#worldinfo) node provides general
+information on the simulated world:
 
 - The `title` field should briefly describe the purpose of the world.
 - The `info` field should give additional information, like the author who created
@@ -32,12 +33,13 @@ Several character strings can be used.
 simulation. The gravity is set by default to the gravity found on earth. You
 should change it if you want to simulate rover robots on Mars, for example. The
 gravity vector defines the orientation of the ground plane used by
-`InertialUnit`s.
+[InertialUnit](reference/inertialunit.md#inertialunit)s.
 - The `ERP` field defines the *Error Reduction Parameter* use by ODE to manage
 contacts joints. This applies by default to all contact joints, except those
-whose contact properties are defined in a `ContactProperties` node. The ERP
-specifies what proportion of the contact joint error will be fixed during the
-next simulation step. If ERP=0 then no correcting force is applied and the
+whose contact properties are defined in a
+[ContactProperties](reference/contactproperties.md#contactproperties) node. The
+ERP specifies what proportion of the contact joint error will be fixed during
+the next simulation step. If ERP=0 then no correcting force is applied and the
 bodies will eventually drift apart as the simulation proceeds. If ERP=1 then the
 simulation will attempt to fix all joint error during the next time step.
 However, setting ERP=1 is not recommended, as the joint error will not be
@@ -45,17 +47,19 @@ completely fixed due to various internal approximations. A value of ERP=0.1 to
 0.8 is recommended (0.2 is the default).
 - The `CFM` field defines the *Constraint Force Mixing* use by ODE to manage
 contacts joints. This applies by default to all contact joints, except those
-whose contact properties are defined in a `ContactProperties` node. Along with
-the ERP, the CFM controls the spongyness and springyness of the contact joint.
-If a simulation includes heavy masses, then decreasing the CFM value for
-contacts will prevent heavy objects from penetrating the ground. If CFM is set
-to zero, the constraint will be hard. If CFM is set to a positive value, it will
-be possible to violate the constraint by *pushing on it* (for example, for
-contact constraints by forcing the two contacting objects together). In other
-words the constraint will be soft, and the softness will increase as CFM
-increases. What is actually happening here is that the constraint is allowed to
-be violated by an amount proportional to CFM times the restoring force that is
-needed to enforce the constraint (see ODE documentation for more details).
+whose contact properties are defined in a
+[ContactProperties](reference/contactproperties.md#contactproperties) node.
+Along with the ERP, the CFM controls the spongyness and springyness of the
+contact joint. If a simulation includes heavy masses, then decreasing the CFM
+value for contacts will prevent heavy objects from penetrating the ground. If
+CFM is set to zero, the constraint will be hard. If CFM is set to a positive
+value, it will be possible to violate the constraint by *pushing on it* (for
+example, for contact constraints by forcing the two contacting objects
+together). In other words the constraint will be soft, and the softness will
+increase as CFM increases. What is actually happening here is that the
+constraint is allowed to be violated by an amount proportional to CFM times the
+restoring force that is needed to enforce the constraint (see ODE documentation
+for more details).
 - The `physics` field refers to a physics plugin which allows the user to program
 custom physics effects using the ODE API. See   for a description on how to set
 up a physics plugin. This is especially useful for modeling hydrodynamic forces,
@@ -98,23 +102,25 @@ velocity magnitude must be less than this threshold for it to be considered
 idle. This field is only useful if `physicsDisableTime` is bigger or equal to
 zero. This field matchs directly with the `dBodySetAutoDisableAngularThreshold`
 ODE function.
-- The `defaultDamping` field allows to specifiy a `Damping` node that defines the
-default damping parameters that must be applied to each `Solid` in the
+- The `defaultDamping` field allows to specifiy a
+[Damping](reference/damping.md#damping) node that defines the default damping
+parameters that must be applied to each [Solid](reference/solid.md#solid) in the
 simulation.
 - If the `inkEvaporation` field is set to a non-null value, the colors of the
 ground textures will slowly turn to white. This is useful on a white-textured
-ground in conjunction with a `Pen` device, in order to have the track drawn by
-the `Pen` device disappear progressively. The `inkEvaporation` field should be a
-positive floating point value defining the speed of evaporation. This
-evaporation process is a computationally expensive task, hence the ground
-textures are updated only every `WorldInfo.basicTimeStep` *
-`WorldInfo.displayRefresh` milliseconds (even in fast mode). Also, it is
-recommended to use ground textures with low resolution to speed up this process.
-As with the pen device, the modified ground textures can be seen only through
-infra-red distance sensors, and not through cameras (as the ground textures are
-not updated on the controller side).
+ground in conjunction with a [Pen](reference/pen.md#pen) device, in order to
+have the track drawn by the [Pen](reference/pen.md#pen) device disappear
+progressively. The `inkEvaporation` field should be a positive floating point
+value defining the speed of evaporation. This evaporation process is a
+computationally expensive task, hence the ground textures are updated only every
+`WorldInfo.basicTimeStep` * `WorldInfo.displayRefresh` milliseconds (even in
+fast mode). Also, it is recommended to use ground textures with low resolution
+to speed up this process. As with the pen device, the modified ground textures
+can be seen only through infra-red distance sensors, and not through cameras (as
+the ground textures are not updated on the controller side).
 - The `northDirection` field is used to indicate the direction of the *virtual
-north* and is used by `Compass` and `InertialUnit` nodes.
+north* and is used by [Compass](reference/compass.md#compass) and
+[InertialUnit](reference/inertialunit.md#inertialunit) nodes.
 - The `lineScale` field allows the user to control the size of the optionally
 rendered arbitrary-sized lines or objects such as the connector and the hinge
 axes, the local coordinate systems and centers of mass of solid nodes, the rays
@@ -124,6 +130,7 @@ offsets used for drawing bounding objects and the laser beam. Increasing the
 spot of a laser beam and the detected object. The value of this field is somehow
 arbitrary, but setting this value equal to the average size of a robot
 (expressed in meter) is likely to be a good initial choice.
-- The `contactProperties` field allows to specifiy a number of `ContactProperties`
-nodes that define the behavior when `Solid` nodes collide.
+- The `contactProperties` field allows to specifiy a number of
+[ContactProperties](reference/contactproperties.md#contactproperties) nodes that
+define the behavior when [Solid](reference/solid.md#solid) nodes collide.
 

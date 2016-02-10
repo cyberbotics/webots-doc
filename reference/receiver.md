@@ -1,6 +1,6 @@
 ## Receiver
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 Receiver {
@@ -17,11 +17,13 @@ Receiver {
 
 ### Description
 
-The `Receiver` node is used to model radio, serial or infra-red receivers. A
-`Receiver` node must be added to the children of a robot or supervisor. Please
-note that a `Receiver` can receive data but it cannot send it. In order to
-achieve bidirectional communication, a robot needs to have both an `Emitter` and
-a `Receiver` on board.
+The [Receiver](reference/receiver.md#receiver) node is used to model radio,
+serial or infra-red receivers. A [Receiver](reference/receiver.md#receiver) node
+must be added to the children of a robot or supervisor. Please note that a
+[Receiver](reference/receiver.md#receiver) can receive data but it cannot send
+it. In order to achieve bidirectional communication, a robot needs to have both
+an [Emitter](reference/emitter.md#emitter) and a
+[Receiver](reference/receiver.md#receiver) on board.
 
 ### Field Summary
 
@@ -74,8 +76,9 @@ noise is not dependent on the distance between emitter-receiver.
 Data reception is activated in the background of the controller's loop at a rate
 of once every `ms` milliseconds. Incoming data packet are appended to the tail
 of the reception queue (see ). Incoming data packets will be discarded if the
-receiver's buffer size (specified in the `Receiver` node) is exceeded. To avoid
-buffer overflow, the data packets should be read at a high enough rate by the
+receiver's buffer size (specified in the
+[Receiver](reference/receiver.md#receiver) node) is exceeded. To avoid buffer
+overflow, the data packets should be read at a high enough rate by the
 controller program. The function `wb_receiver_disable()` stops the background
 listening.
 
@@ -120,16 +123,18 @@ long as emitters and receivers agree.
 
 However, the Emitter/Receiver API does not guarantee a specific schedule for the
 transmission. Sometimes several packets may be bundled and received together.
-For example, imagine a simple setup where two robots have an `Emitter` and a
-`Receiver` on board. If both robots use the same controller time step and each
-one sends a packet at every time step, then the Receivers will receive, on
-average, one data packet at each step, but they may sometimes get zero packets,
-and sometimes two! Therefore it is recommend to write code that is tolerant to
-variations in the transmission timing and that can deal with the eventuality of
-receiving several or no packets at all during a particular time step. The
-`wb_receiver_get_queue_length()` function should be used to check how many
-packets are actually present in the `Receiver`'s queue. Making assumptions based
-on timing will result in code that is not robust.
+For example, imagine a simple setup where two robots have an
+[Emitter](reference/emitter.md#emitter) and a
+[Receiver](reference/receiver.md#receiver) on board. If both robots use the same
+controller time step and each one sends a packet at every time step, then the
+Receivers will receive, on average, one data packet at each step, but they may
+sometimes get zero packets, and sometimes two! Therefore it is recommend to
+write code that is tolerant to variations in the transmission timing and that
+can deal with the eventuality of receiving several or no packets at all during a
+particular time step. The `wb_receiver_get_queue_length()` function should be
+used to check how many packets are actually present in the
+[Receiver](reference/receiver.md#receiver)'s queue. Making assumptions based on
+timing will result in code that is not robust.
 
 #### Description
 
@@ -137,9 +142,10 @@ The `wb_receiver_get_data()` function returns the data of the packet at the head
 of the reception queue (see ). The returned data pointer is only valid until the
 next call to the function `wb_receiver_next_packet()`. It is illegal to call
 `wb_receiver_get_data()` when the queue is empty
-(`wb_receiver_get_queue_length()` == 0). The `Receiver` node knows nothing about
-that structure of the data being sent but its byte size. The emitting and
-receiving code is responsible to agree on a specific format.
+(`wb_receiver_get_queue_length()` == 0). The
+[Receiver](reference/receiver.md#receiver) node knows nothing about that
+structure of the data being sent but its byte size. The emitting and receiving
+code is responsible to agree on a specific format.
 
 The `wb_receiver_get_data_size()` function returns the number of data bytes
 present in the head packet of the reception queue. The *data size* is always
@@ -148,9 +154,9 @@ It is illegal to call `wb_receiver_get_data_size()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0).
 
 > **note**: The `getData()` function returns a string. Similarly to the `sendPacket()`
-function of the `Emitter` device, using the functions of the struct module is
-recommended for sending primitive data types. Here is an example for getting the
-data:
+function of the [Emitter](reference/emitter.md#emitter) device, using the
+functions of the struct module is recommended for sending primitive data types.
+Here is an example for getting the data:
 
 >     import struct
 >     #...
@@ -226,13 +232,15 @@ receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 The `wb_receiver_set_channel()` function allows a receiver to change its
 reception channel. It modifies the `channel` field of the corresponding
-`Receiver` node. Normally, a receiver can only receive data packets from
-emitters that use the same channel. However, the special WB\_CHANNEL\_BROADCAST
-value can be used to listen simultaneously to all channels.
+[Receiver](reference/receiver.md#receiver) node. Normally, a receiver can only
+receive data packets from emitters that use the same channel. However, the
+special WB\_CHANNEL\_BROADCAST value can be used to listen simultaneously to all
+channels.
 
 The `wb_receiver_get_channel()` function returns the current channel number of
 the receiver.
 
 > **note**: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
-static integer of the `Receiver` class (Receiver::CHANNEL\_BROADCAST).
+static integer of the [Receiver](reference/receiver.md#receiver) class
+(Receiver::CHANNEL\_BROADCAST).
 

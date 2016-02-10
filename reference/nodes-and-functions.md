@@ -5,8 +5,9 @@
 Webots nodes listed in this reference are described using standard VRML syntax.
 Principally, Webots uses a subset of the VRML97 nodes and fields, but it also
 defines additional nodes and fields specific to robotic definitions. For
-example, the Webots `WorldInfo` and `Sphere` nodes have additional fields with
-respect to VRML97.
+example, the Webots [WorldInfo](reference/worldinfo.md#worldinfo) and
+[Sphere](reference/sphere.md#sphere) nodes have additional fields with respect
+to VRML97.
 
 ### Functions
 

@@ -1,6 +1,6 @@
 ## Emitter
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 Emitter {
@@ -17,14 +17,17 @@ Emitter {
 
 ### Description
 
-The `Emitter` node is used to model radio, serial or infra-red emitters. An
-`Emitter` node must be added to the children of a robot or a supervisor. Please
-note that an emitter can send data but it cannot receive data. In order to
-simulate a unidirectional communication between two robots, one robot must have
-an `Emitter` while the other robot must have a `Receiver`. To simulate a
-bidirectional communication between two robots, each robot needs to have both an
-`Emitter` and a `Receiver`. Note that messages are never transmitted from one
-robot to itself.
+The [Emitter](reference/emitter.md#emitter) node is used to model radio, serial
+or infra-red emitters. An [Emitter](reference/emitter.md#emitter) node must be
+added to the children of a robot or a supervisor. Please note that an emitter
+can send data but it cannot receive data. In order to simulate a unidirectional
+communication between two robots, one robot must have an
+[Emitter](reference/emitter.md#emitter) while the other robot must have a
+[Receiver](reference/receiver.md#receiver). To simulate a bidirectional
+communication between two robots, each robot needs to have both an
+[Emitter](reference/emitter.md#emitter) and a
+[Receiver](reference/receiver.md#receiver). Note that messages are never
+transmitted from one robot to itself.
 
 ### Field Summary
 
@@ -78,10 +81,11 @@ are used.
 total number of bytes in the packets enqueued in the emitter cannot exceed this
 number. A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
 
-> **note**: `Emitter` nodes can also be used to communicate with the physics plugin (see ).
-In this case the channel must be set to 0 (the default). In addition it is
-highly recommended to choose -1 for the baudRate, in order to enable the fastest
-possible communication; the `type, range` and `aperture` will be ignored.
+> **note**: [Emitter](reference/emitter.md#emitter) nodes can also be used to communicate
+with the physics plugin (see ). In this case the channel must be set to 0 (the
+default). In addition it is highly recommended to choose -1 for the baudRate, in
+order to enable the fastest possible communication; the `type, range` and
+`aperture` will be ignored.
 
 ### Emitter Functions
 
@@ -90,12 +94,13 @@ possible communication; the `type, range` and `aperture` will be ignored.
 The `wb_emitter_send()` function adds to the emitters's queue a packet of `size`
 bytes located at the address indicated by `data`. The enqueued data packets will
 then be sent to potential receivers (and removed from the emitter's queue) at
-the rate specified by the `baudRate` field of the `Emitter` node. Note that a
-packet will not be sent to its emitter robot. This function returns 1 if the
-message was placed in the sending queue, 0 if the sending queue was full. The
-queue is considered to be *full* when the sum of bytes of all the currently
-enqueued packets exceeds the buffer size specified by the `bufferSize` field.
-Note that a packet must have at least 1 byte.
+the rate specified by the `baudRate` field of the
+[Emitter](reference/emitter.md#emitter) node. Note that a packet will not be
+sent to its emitter robot. This function returns 1 if the message was placed in
+the sending queue, 0 if the sending queue was full. The queue is considered to
+be *full* when the sum of bytes of all the currently enqueued packets exceeds
+the buffer size specified by the `bufferSize` field. Note that a packet must
+have at least 1 byte.
 
 The Emitter/Receiver API does not impose any particular format on the data being
 transmitted. Any user chosen format is suitable, as long as the emitter and
@@ -142,32 +147,35 @@ in a C/C++ controller.
 
 The `wb_emitter_set_channel()` function allows the controller to change the
 transmission channel. This modifies the `channel` field of the corresponding
-`Emitter` node. Normally, an emitter can send data only to receivers that use
-the same channel. However, the special WB\_CHANNEL\_BROADCAST value can be used
-for broadcasting to all channels. By switching the channel number an emitter can
-selectively send data to different receivers. The `wb_emitter_get_channel()`
-function returns the current channel number of the emitter.
+[Emitter](reference/emitter.md#emitter) node. Normally, an emitter can send data
+only to receivers that use the same channel. However, the special
+WB\_CHANNEL\_BROADCAST value can be used for broadcasting to all channels. By
+switching the channel number an emitter can selectively send data to different
+receivers. The `wb_emitter_get_channel()` function returns the current channel
+number of the emitter.
 
 > **note**: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
-static integer of the `Emitter` class (Emitter::CHANNEL\_BROADCAST).
+static integer of the [Emitter](reference/emitter.md#emitter) class
+(Emitter::CHANNEL\_BROADCAST).
 
 #### Description
 
 The `wb_emitter_set_range()` function allows the controller to change the
 transmission range at run-time. Data packets can only reach receivers located
 within the emitter's range. This function modifies the `range` field of the
-corresponding `Emitter` node. If the specified `range` argument is larger than
-the `maxRange` field of the `Emitter` node then the current range will be set to
-`maxRange`. The `wb_emitter_get_range()` function returns the current emitter's
-range. For both the `wb_emitter_set_range()` and `emitter_get_range()`
+corresponding [Emitter](reference/emitter.md#emitter) node. If the specified
+`range` argument is larger than the `maxRange` field of the
+[Emitter](reference/emitter.md#emitter) node then the current range will be set
+to `maxRange`. The `wb_emitter_get_range()` function returns the current
+emitter's range. For both the `wb_emitter_set_range()` and `emitter_get_range()`
 functions, a value of -1 indicates an infinite range.
 
 #### Description
 
 The `wb_emitter_get_buffer_size()` function returns the size (in bytes) of the
 transmission buffer. This corresponds to the value specified by the `bufferSize`
-field of the `Emitter` node. The buffer size indicates the maximum number of
-data bytes that the emitter's queue can hold in total, if the size is -1, the
-number of data bytes is not limited. When the buffer is full, calls to
-`wb_emitter_send()` will fail and return 0.
+field of the [Emitter](reference/emitter.md#emitter) node. The buffer size
+indicates the maximum number of data bytes that the emitter's queue can hold in
+total, if the size is -1, the number of data bytes is not limited. When the
+buffer is full, calls to `wb_emitter_send()` will fail and return 0.
 

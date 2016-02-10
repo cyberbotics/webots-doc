@@ -8,15 +8,22 @@ SolidReference {
 
 ### Description
 
-A `SolidReference` can be used inside the `endPoint` field of a `Joint` node to
-refer either to an existing `Solid` or to the static environment. Mechanical
-loops can be closed this way. The only constraint when referring to a `Solid` is
-that both `Solid` and `Joint` must be descendants of a common upper `Solid`.
+A [SolidReference](reference/solidreference.md#solidreference) can be used
+inside the `endPoint` field of a [Joint](reference/joint.md#joint) node to refer
+either to an existing [Solid](reference/solid.md#solid) or to the static
+environment. Mechanical loops can be closed this way. The only constraint when
+referring to a [Solid](reference/solid.md#solid) is that both
+[Solid](reference/solid.md#solid) and [Joint](reference/joint.md#joint) must be
+descendants of a common upper [Solid](reference/solid.md#solid).
 
 ### Field Summary
 
 - `solidName`: This field specifies either the static environment or the name of
-an existing `Solid` node to be linked with the `Joint`'s closest upper `Solid`
-node. Referring to the `Joint` closest upper `Solid` node or to a `Solid` node
-which has no common upper `Solid` with the `Joint` is prohibited.
+an existing [Solid](reference/solid.md#solid) node to be linked with the
+[Joint](reference/joint.md#joint)'s closest upper
+[Solid](reference/solid.md#solid) node. Referring to the
+[Joint](reference/joint.md#joint) closest upper
+[Solid](reference/solid.md#solid) node or to a [Solid](reference/solid.md#solid)
+node which has no common upper [Solid](reference/solid.md#solid) with the
+[Joint](reference/joint.md#joint) is prohibited.
 

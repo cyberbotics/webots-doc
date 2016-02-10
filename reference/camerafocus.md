@@ -11,10 +11,12 @@ CameraFocus {
 
 ### Description
 
-The `CameraFocus` node allows the user to define a controllable focus for a
-`Camera` device. The `CameraFocus` node should be set in the `focus` field of a
-`Camera` node. The focal distance can be adjusted from the controller program
-using the `wb_camera_set_focal_distance()` function.
+The [CameraFocus](reference/camerafocus.md#camerafocus) node allows the user to
+define a controllable focus for a [Camera](reference/camera.md#camera) device.
+The [CameraFocus](reference/camerafocus.md#camerafocus) node should be set in
+the `focus` field of a [Camera](reference/camera.md#camera) node. The focal
+distance can be adjusted from the controller program using the
+`wb_camera_set_focal_distance()` function.
 
 ### Field Summary
 

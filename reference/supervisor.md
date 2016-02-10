@@ -1,6 +1,6 @@
 ## Supervisor
 
-Derived from `Robot`.
+Derived from [Robot](reference/robot.md#robot).
 
 ```
 Supervisor {
@@ -10,26 +10,32 @@ Supervisor {
 
 ### Description
 
-A `Supervisor` is a special kind of `Robot` which is specially designed to
-control the simulation. A `Supervisor` has access to extra functions that are
-not available to a regular `Robot`. If a `Supervisor` contains devices then the
-`Supervisor` controller can use them. Webots PRO is required to use the
-`Supervisor` node.
+A [Supervisor](reference/supervisor.md#supervisor) is a special kind of
+[Robot](reference/robot.md#robot) which is specially designed to control the
+simulation. A [Supervisor](reference/supervisor.md#supervisor) has access to
+extra functions that are not available to a regular
+[Robot](reference/robot.md#robot). If a
+[Supervisor](reference/supervisor.md#supervisor) contains devices then the
+[Supervisor](reference/supervisor.md#supervisor) controller can use them. Webots
+PRO is required to use the [Supervisor](reference/supervisor.md#supervisor)
+node.
 
-> **note**: Note that in some special cases the `Supervisor` functions might return wrong
+> **note**: Note that in some special cases the
+[Supervisor](reference/supervisor.md#supervisor) functions might return wrong
 values and it might not be possible to retrieve fields and nodes. This occurs
 when closing a world and quitting its controllers, i.e. reverting the current
 world, opening a new world, or closing Webots. In this case the output will be a
 NULL pointer or a default value. For functions returning a string, an empty
 string is returned instead of a NULL pointer.
 
-> **note**: It is a good practice to check for a NULL pointer after calling a `Supervisor`
-function.
+> **note**: It is a good practice to check for a NULL pointer after calling a
+[Supervisor](reference/supervisor.md#supervisor) function.
 
 ### Supervisor Functions
 
-As for a regular `Robot` controller, the `wb_robot_init()`, `wb_robot_step()`,
-etc. functions must be used in a `Supervisor` controller.
+As for a regular [Robot](reference/robot.md#robot) controller, the
+`wb_robot_init()`, `wb_robot_step()`, etc. functions must be used in a
+[Supervisor](reference/supervisor.md#supervisor) controller.
 
 #### Description
 
@@ -46,7 +52,8 @@ unfinished (and hence corrupted) file for webcam applications.
 
 The "projects/samples/howto/worlds/supervisor.wbt" world provides an example on
 how to use the `wb_supervisor_export_image()` function. In this example, the
-`Supervisor` controller takes a snapshot image each time a goal is scored.
+[Supervisor](reference/supervisor.md#supervisor) controller takes a snapshot
+image each time a goal is scored.
 
 #### Description
 
@@ -82,17 +89,17 @@ The `wb_supervisor_node_get_parent_node()` function retrieves the reference to
 the direct parent node of the node given in parameter.
 
 The `wb_supervisor_node_get_root()` function returns a handle to the root node
-which is actually a `Group` node containing all the nodes visible at the top
-level in the scene tree window of Webots. Like any `Group` node, the root node
-has a MFNode field called "children" which can be parsed to read each node in
-the scene tree. An example of such a usage is provided in the "supervisor.wbt"
-sample worlds (located in the "projects/samples/devices/worlds" directory of
-Webots.
+which is actually a [Group](reference/group.md#group) node containing all the
+nodes visible at the top level in the scene tree window of Webots. Like any
+[Group](reference/group.md#group) node, the root node has a MFNode field called
+"children" which can be parsed to read each node in the scene tree. An example
+of such a usage is provided in the "supervisor.wbt" sample worlds (located in
+the "projects/samples/devices/worlds" directory of Webots.
 
 The `wb_supervisor_node_get_self()` function returns a handle to the
-`Supervisor` node itself on which the controller is run. This is a utility
-function that simplifies the task of retrieving the base node without having to
-define a DEF name for it.
+[Supervisor](reference/supervisor.md#supervisor) node itself on which the
+controller is run. This is a utility function that simplifies the task of
+retrieving the base node without having to define a DEF name for it.
 
 #### Description
 
@@ -137,16 +144,16 @@ returns a handler to a field.
 
 The `wb_supervisor_node_get_position()` function returns the position of a node
 expressed in the global (world) coordinate system. The `node` argument must be a
-`Transform` node (or a derived node), otherwise the function will print a
-warning message and return 3 `NaN` (Not a Number) values. This function returns
-a vector containing exactly 3 values.
+[Transform](reference/transform.md#transform) node (or a derived node),
+otherwise the function will print a warning message and return 3 `NaN` (Not a
+Number) values. This function returns a vector containing exactly 3 values.
 
 The `wb_supervisor_node_get_orientation()` function returns a matrix that
 represents the rotation of the node in the global (world) coordinate system. The
-`node` argument must be a `Transform` node (or a derived node), otherwise the
-function will print a warning message and return 9 `NaN` (Not a Number) values.
-This function returns a matrix containing exactly 9 values that shall be
-interpreted as a 3 x 3 orthogonal rotation matrix:
+`node` argument must be a [Transform](reference/transform.md#transform) node (or
+a derived node), otherwise the function will print a warning message and return
+9 `NaN` (Not a Number) values. This function returns a matrix containing exactly
+9 values that shall be interpreted as a 3 x 3 orthogonal rotation matrix:
 
 ```
 [ R[0] R[1] R[2] ]
@@ -186,11 +193,11 @@ deallocated at the next time step.
 
 The `wb_supervisor_node_get_center_of_mass()` function returns the position of
 the center of mass of a Solid node expressed in the global (world) coordinate
-system. The `node` argument must be a `Solid` node (or a derived node),
-otherwise the function will print a warning message and return 3 `NaN` (Not a
-Number) values. This function returns a vector containing exactly 3 values. If
-the `node` argument has a `NULL` `physics` node, the return value is always the
-zero vector.
+system. The `node` argument must be a [Solid](reference/solid.md#solid) node (or
+a derived node), otherwise the function will print a warning message and return
+3 `NaN` (Not a Number) values. This function returns a vector containing exactly
+3 values. If the `node` argument has a `NULL` `physics` node, the return value
+is always the zero vector.
 
 The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
@@ -207,9 +214,9 @@ coordinate system. If the index is less than the number of contact points, then
 the x (resp. y, z) coordinate of the `index`th contact point is the element
 number `0` (resp. `1, 2`) in the returned array. Otherwise the function returns
 a `NaN` (Not a Number) value for each of these numbers. The `node` argument must
-be a `Solid` node (or a derived node), which moreover has no `Solid` parent,
-otherwise the function will print a warning message and return `NaN` values on
-the first 3 array components.
+be a [Solid](reference/solid.md#solid) node (or a derived node), which moreover
+has no `Solid` parent, otherwise the function will print a warning message and
+return `NaN` values on the first 3 array components.
 
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
@@ -221,8 +228,9 @@ deallocated at the next time step.
 
 The `wb_supervisor_node_get_number_of_contact_points()` function returns the
 number of contact points of the given `Solid`. The `node` argument must be a
-`Solid` node (or a derived node), which moreover has no `Solid` parent,
-otherwise the function will print a warning message and return `-1`.
+[Solid](reference/solid.md#solid) node (or a derived node), which moreover has
+no `Solid` parent, otherwise the function will print a warning message and
+return `-1`.
 
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
@@ -231,39 +239,41 @@ shows how to use this function.
 
 The `wb_supervisor_node_get_static_balance()` function returns the boolean value
 of the static balance test based on the support polygon of a solid. The `node`
-argument must be a `Solid` node (or a derived node), which moreover has no
-`Solid` parent. Otherwise the function will print a warning message and return
-`false`. The support polygon of a solid is the convex hull of the solid's
-contact points projected onto a plane that is orthognal to the gravity
-direction. The test consists in checking whether the projection of the center of
-mass onto this plane lies inside or outside the support polygon.
+argument must be a [Solid](reference/solid.md#solid) node (or a derived node),
+which moreover has no `Solid` parent. Otherwise the function will print a
+warning message and return `false`. The support polygon of a solid is the convex
+hull of the solid's contact points projected onto a plane that is orthognal to
+the gravity direction. The test consists in checking whether the projection of
+the center of mass onto this plane lies inside or outside the support polygon.
 
 #### Description
 
 The `wb_supervisor_node_get_velocity()` function returns the velocity (both
-linear and angular) of a node. The `node` argument must be a `Solid` node (or a
-derived node), otherwise the function will print a warning message and return 6
-`NaN` (Not a Number) values. This function returns a vector containing exactly 6
-values. The first three are respectively the linear velocities in the x, y and z
-direction. The last three are respectively the angular velocities around the x,
-y and z axes.
+linear and angular) of a node. The `node` argument must be a
+[Solid](reference/solid.md#solid) node (or a derived node), otherwise the
+function will print a warning message and return 6 `NaN` (Not a Number) values.
+This function returns a vector containing exactly 6 values. The first three are
+respectively the linear velocities in the x, y and z direction. The last three
+are respectively the angular velocities around the x, y and z axes.
 
 The `wb_supervisor_node_set_velocity()` function set the velocity (both linear
-and angular) of a node. The `node` argument must be a `Solid` node (or a derived
-node), otherwise the function will print a warning message and have no effect.
-The `velocity` argument must be a vector containing exactly 6 values. The first
-three are respectively the linear velocities in the x, y and z direction. The
-last three are respectively the angular velocities around the x, y and z axes.
+and angular) of a node. The `node` argument must be a
+[Solid](reference/solid.md#solid) node (or a derived node), otherwise the
+function will print a warning message and have no effect. The `velocity`
+argument must be a vector containing exactly 6 values. The first three are
+respectively the linear velocities in the x, y and z direction. The last three
+are respectively the angular velocities around the x, y and z axes.
 
 #### Description
 
 The `wb_supervisor_node_reset_physics()` function stops the inertia of the given
-solid. If the specified node is physics-enables, i.e. it contains a `Physics`
-node, then the linear and angular velocities of the corresonding body are reset
-to 0, hence the inertia is also zeroed. The `node` argument must be a `Solid`
-node (or a derived node). This function could be useful for resetting the
-physics of a solid after changing its translation or rotation. To stop the
-inertia of all available solids please refer to .
+solid. If the specified node is physics-enables, i.e. it contains a
+[Physics](reference/physics.md#physics) node, then the linear and angular
+velocities of the corresonding body are reset to 0, hence the inertia is also
+zeroed. The `node` argument must be a [Solid](reference/solid.md#solid) node (or
+a derived node). This function could be useful for resetting the physics of a
+solid after changing its translation or rotation. To stop the inertia of all
+available solids please refer to .
 
 #### Description
 
@@ -417,13 +427,14 @@ argument. In this case, a simple save operation is performed.
 
 The `wb_supervisor_simulation_reset_physics()` function sends a request to the
 simulator process, asking it to stop the movement of all physics-enabled solids
-in the world. It means that for any `Solid` node containing a `Physics` node,
-the linear and angular velocities of the corresponding body are reset to 0,
-hence the inertia is also zeroed. This is actually implemented by calling the
-ODE `dBodySetLinearVel()` and `dBodySetAngularVel()` functions for all bodies
-with a zero velocity parameter. This function is especially useful for resetting
-a robot to its initial position and inertia. To stop the inertia of a single
-`Solid` node please refer to .
+in the world. It means that for any [Solid](reference/solid.md#solid) node
+containing a [Physics](reference/physics.md#physics) node, the linear and
+angular velocities of the corresponding body are reset to 0, hence the inertia
+is also zeroed. This is actually implemented by calling the ODE
+`dBodySetLinearVel()` and `dBodySetAngularVel()` functions for all bodies with a
+zero velocity parameter. This function is especially useful for resetting a
+robot to its initial position and inertia. To stop the inertia of a single
+[Solid](reference/solid.md#solid) node please refer to .
 
 Furthermore, this function resets the seed of the random number generator used
 in Webots, so that noise-based simulations can be be reproduced identically

@@ -1,6 +1,6 @@
 ## GPS
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 GPS {
@@ -13,8 +13,9 @@ GPS {
 
 ### Description
 
-The `GPS` node is used to model a Global Positioning Sensor (GPS) which can
-obtain information about its absolute position from the controller program.
+The [GPS](reference/gps.md#gps) node is used to model a Global Positioning
+Sensor (GPS) which can obtain information about its absolute position from the
+controller program.
 
 ### Field Summary
 
@@ -57,16 +58,17 @@ milliseconds.
 The `wb_gps_get_sampling_period()` function returns the period given into the
 `wb_gps_enable()` function, or 0 if the device is disabled.
 
-The `wb_gps_get_values()` function returns the current `GPS` measurement. The
-values are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are
-valid for accessing the vector. The returned vector indicates the absolute
-position of the `GPS` device.
+The `wb_gps_get_values()` function returns the current
+[GPS](reference/gps.md#gps) measurement. The values are returned as a 3D-vector,
+therefore only the indices 0, 1, and 2 are valid for accessing the vector. The
+returned vector indicates the absolute position of the
+[GPS](reference/gps.md#gps) device.
 
-> **note**: The returned vector is a pointer to the internal values managed by the `GPS`
-node, therefore it is illegal to free this pointer. Furthermore, note that the
-pointed values are only valid until the next call to `wb_robot_step()` or
-`Robot::step()`. If these values are needed for a longer period they must be
-copied.
+> **note**: The returned vector is a pointer to the internal values managed by the
+[GPS](reference/gps.md#gps) node, therefore it is illegal to free this pointer.
+Furthermore, note that the pointed values are only valid until the next call to
+`wb_robot_step()` or `Robot::step()`. If these values are needed for a longer
+period they must be copied.
 
 > **note**: `getValues()` returns the 3D-vector as a list containing three floats.
 

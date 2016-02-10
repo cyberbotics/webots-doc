@@ -1,6 +1,6 @@
 ## Pen
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 Pen {
@@ -14,35 +14,40 @@ Pen {
 
 ### Description
 
-The `Pen` node models a pen attached to a mobile robot, typically used to show
-the trajectory of the robot. The paint direction of the `Pen` device coincides
-with the *-y*-axis of the node. So, it can be adjusted by modifying the rotation
-and translation fields of the `Solid` node. By setting the `maxDistance` field
-is possible to define the range of the `Pen` and paint only on objects close to
-the device. For example with a small value of `maxDistance` you can simulate the
-real behaviour of a pen or pencil that writes only on physical contact. If
-`maxDistance` is set to 0 (default value), the range will be unlimited.
+The [Pen](reference/pen.md#pen) node models a pen attached to a mobile robot,
+typically used to show the trajectory of the robot. The paint direction of the
+[Pen](reference/solid.md#solid) device coincides with the *-y*-axis of the node.
+So, it can be adjusted by modifying the rotation and translation fields of the
+[Solid](reference/solid.md#solid) node. By setting the `maxDistance` field is
+possible to define the range of the [Pen](reference/pen.md#pen) and paint only
+on objects close to the device. For example with a small value of `maxDistance`
+you can simulate the real behaviour of a pen or pencil that writes only on
+physical contact. If `maxDistance` is set to 0 (default value), the range will
+be unlimited.
 
-In order to be paintable, an object should be made up of a `Solid` node
-containing a `Shape` with a valid `Geometry`. Even if a `ImageTexture` is
-already defined, the painture is applied over the texture without modifying it.
+In order to be paintable, an object should be made up of a
+[Solid](reference/solid.md#solid) node containing a
+[Shape](reference/shape.md#shape) with a valid `Geometry`. Even if a
+[ImageTexture](reference/imagetexture.md#imagetexture) is already defined, the
+painture is applied over the texture without modifying it.
 
 The precision of the painting action mainly depends on the `subdivision` field
 of the `Geometry` node. A high `subdivision` value increases the number of
 polygons used to represent the geometry and thus allows a more precise texture
 mapping, but it will also slow down the rendering of the scene. On the other
 hand, with a poor texture mapping, the painted area could be shown at a
-different position than the expected one. In case of `IndexedFaceSet`, the
-precision can be improved by defining a texture mapping and setting the
-`texCoord` and `texCoordIndex` fields. In fact, if no texture mapping or an
-invalid one is given, the system will use a default general mapping.
+different position than the expected one. In case of
+[IndexedFaceSet](reference/indexedfaceset.md#indexedfaceset), the precision can
+be improved by defining a texture mapping and setting the `texCoord` and
+`texCoordIndex` fields. In fact, if no texture mapping or an invalid one is
+given, the system will use a default general mapping.
 
 An example of a textured floor used with a robot equipped with a pen is given in
 the "pen.wbt" example world (located in the "projects/samples/devices/worlds"
 directory of Webots).
 
-> **note**: The `inkEvaporation` field of the `WorldInfo` node controls how fast the ink
-evaporates (disappears).
+> **note**: The `inkEvaporation` field of the [WorldInfo](reference/worldinfo.md#worldinfo)
+node controls how fast the ink evaporates (disappears).
 
 > **note**: The drawings performed by a pen can be seen by infra-red distance sensors.
 Hence, it is possible to implement a robotics experiment where a robot draws a
@@ -58,9 +63,10 @@ the range [0,1]. This field can also be changed from the pen API, using the
 `wb_pen_set_ink_color()` function.
 - `leadSize`: define the width of the "tip" of the pen. This allows the robot to
 write a wider or narrower track.
-- `maxDistance`: define the maximal distance between the `Pen` device and a
-paintable object and allows to simulate write-on-contact behaviors. A value
-smaller or equal 0 represents an unlimited painting range.
+- `maxDistance`: define the maximal distance between the
+[Pen](reference/pen.md#pen) device and a paintable object and allows to simulate
+write-on-contact behaviors. A value smaller or equal 0 represents an unlimited
+painting range.
 - `write`: this boolean field allows the robot to enable or disable writing with
 the pen. It is also switchable from the pen API, using the `wb_pen_write()`
 function.

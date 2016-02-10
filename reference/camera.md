@@ -1,6 +1,6 @@
 ## Camera
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 Camera {
@@ -25,10 +25,11 @@ Camera {
 
 ### Description
 
-The `Camera` node is used to model a robot's on-board camera or a range-finder.
-The resulted image can be displayed on the 3D window. Depending on its setup,
-the Camera node can model a linear camera, a lidar device, a Microsoft Kinect or
-even a biological eye which is spherically distorted.
+The [Camera](reference/camera.md#camera) node is used to model a robot's on-
+board camera or a range-finder. The resulted image can be displayed on the 3D
+window. Depending on its setup, the Camera node can model a linear camera, a
+lidar device, a Microsoft Kinect or even a biological eye which is spherically
+distorted.
 
 ### Field Summary
 
@@ -103,16 +104,18 @@ Setting this field to -1 (default) means that the sensor has an 'infinite'
 resolution (it can measure any infinitesimal change). This field is used only
 when type is "range-finder" and accepts any value in the interval (0.0, inf).
 
-- The `lensDistortion` field may contain a `CameraLensDistortion` node to specify
-the image distortion due to the camera lens.
+- The `lensDistortion` field may contain a
+[CameraLensDistortion](reference/cameralensdistortion.md#cameralensdistortion)
+node to specify the image distortion due to the camera lens.
 
-- The `focus` field may contain a `CameraFocus` node to provide the camera device
-with a controllable focusing system. If this field is set to NULL, then no focus
-is available on the camera device.
+- The `focus` field may contain a
+[CameraFocus](reference/camerafocus.md#camerafocus) node to provide the camera
+device with a controllable focusing system. If this field is set to NULL, then
+no focus is available on the camera device.
 
-- The `zoom` field may contain a `CameraZoom` node to provide the camera device
-with a controllable zoom system. If this field is set to NULL, then no zoom is
-available on the camera device.
+- The `zoom` field may contain a [CameraZoom](reference/camerazoom.md#camerazoom)
+node to provide the camera device with a controllable zoom system. If this field
+is set to NULL, then no zoom is available on the camera device.
 
 - The `compositor` field specifies the name of a compositor to apply on the camera
 image. A compositor can be used to apply a shader in order to alter the original
@@ -153,8 +156,9 @@ recommend to use the `wb_camera_image_get_*`-like functions to access the buffer
 because the internal format could change.
 
 > **note**: The Matlab API uses a language-specific representation of color images
-consisting of a 3D array of RGB triplets. Please look at the `Matlab example` in
-the `wb_camera_get_image` function's description.
+consisting of a 3D array of RGB triplets. Please look at the [Matlab
+example](reference/camera.md) in the `wb_camera_get_image` function's
+description.
 
 #### Range-Finder
 
@@ -170,8 +174,9 @@ logarithmic values, an algorithm linearizes the buffer to metric values between
 `wb_camera_get_range_image` function.
 
 Range-finder cannot see transparent objects. An object can be semi-transparent
-either if its texture has an alpha channel, or if its `Material`.`transparency`
-field is not equal to 1.
+either if its texture has an alpha channel, or if its
+[Material](reference/material.md#material).`transparency` field is not equal to
+1.
 
 ### Frustum
 
@@ -274,35 +279,37 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
-the `Camera` node, as `fieldOfView`. Note that changing the field of view using
-`wb_camera_set_fov()` is possible only if the camera device has a `CameraZoom`
-node defined in its `zoom` field. The minimum and maximum values for the field
-of view are defined in this `CameraZoom` node, if the zoom is not defined, then
-the functions `wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will
-return the camera's field of view.
+the [Camera](reference/camera.md#camera) node, as `fieldOfView`. Note that
+changing the field of view using `wb_camera_set_fov()` is possible only if the
+camera device has a [CameraZoom](reference/camerazoom.md#camerazoom) node
+defined in its `zoom` field. The minimum and maximum values for the field of
+view are defined in this [CameraZoom](reference/camerazoom.md#camerazoom) node,
+if the zoom is not defined, then the functions `wb_camera_get_min_fov()` and
+`wb_camera_get_max_fov()` will return the camera's field of view.
 
 #### Description
 
 These functions allow the controller to get and set the focusing parameters.
-Note that if the camera device has no `CameraFocus` node defined in its `focus`
+Note that if the camera device has no
+[CameraFocus](reference/camerafocus.md#camerafocus) node defined in its `focus`
 field, it is not possible to call `wb_camera_set_focal_distance()` and the other
 functions will return 0.
 
 #### Description
 
 These functions return the width and height of a camera image as defined in the
-corresponding `Camera` node.
+corresponding [Camera](reference/camera.md#camera) node.
 
 #### Description
 
 This function returns the near parameter of a camera device as defined in the
-corresponding `Camera` node.
+corresponding [Camera](reference/camera.md#camera) node.
 
 #### Description
 
 This function returns the type of the camera as defined by the `type` field of
-the corresponding `Camera` node. The constants defined in "camera.h" are
-summarized in :
+the corresponding [Camera](reference/camera.md#camera) node. The constants
+defined in "camera.h" are summarized in :
 
 %figure "Return values for the `wb_camera_get_type()` function"
 | Camera.type | return value |
@@ -312,7 +319,8 @@ summarized in :
 %%end
 
 > **note**: In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
-integers of the `Camera` class (for example, Camera::COLOR).
+integers of the [Camera](reference/camera.md#camera) class (for example,
+Camera::COLOR).
 
 #### Description
 

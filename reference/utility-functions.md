@@ -6,18 +6,20 @@ your callback functions.
 
 ### dWebotsGetBodyFromDEF()
 
-This function looks for a `Solid` node with the specified name and returns the
-corresponding dBodyID. The returned dBodyID is an ODE object that represent a
-rigid body with properties such as mass, velocity, inertia, etc. The dBodyID
-object can then be used with all the available ODE `dBody*()` functions (see ODE
-documentation). For example it is possible to add a force to the body with
-`dBodyAddForce()`, etc. The prototype of this function is:
+This function looks for a [Solid](reference/solid.md#solid) node with the
+specified name and returns the corresponding dBodyID. The returned dBodyID is an
+ODE object that represent a rigid body with properties such as mass, velocity,
+inertia, etc. The dBodyID object can then be used with all the available ODE
+`dBody*()` functions (see ODE documentation). For example it is possible to add
+a force to the body with `dBodyAddForce()`, etc. The prototype of this function
+is:
 
 ```
 dBodyID dWebotsGetBodyFromDEF(const char *DEF);
 ```
 
-where DEF is the DEF name of the requested `Solid` node.
+where DEF is the DEF name of the requested [Solid](reference/solid.md#solid)
+node.
 
 It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
@@ -27,44 +29,50 @@ example:
 dBodyID head_pitch_body = dWebotsGetBodyFromDEF("BLUE_PLAYER_1.HeadYaw.HeadPitch");
 ```
 
-means that we are searching for a `Solid` node named "HeadPitch" inside a node
-named "HeadYaw", inside a node named "BLUE\_PLAYER\_1". Note that each dot (.)
-can be substituted by any number of named or unnamed nodes, so in other words it
-is not necessary to fully specify the path.
+means that we are searching for a [Solid](reference/solid.md#solid) node named
+"HeadPitch" inside a node named "HeadYaw", inside a node named
+"BLUE\_PLAYER\_1". Note that each dot (.) can be substituted by any number of
+named or unnamed nodes, so in other words it is not necessary to fully specify
+the path.
 
-This function returns NULL if there is no `Solid` (or derived) node with the
-specified DEF name. It will also return NULL if the `physics` field of the
-`Solid` node is undefined (NULL) or if the `Solid` have been *merged* with an
+This function returns NULL if there is no [Solid](reference/solid.md#solid) (or
+derived) node with the specified DEF name. It will also return NULL if the
+`physics` field of the [Solid](reference/solid.md#solid) node is undefined
+(NULL) or if the [Solid](reference/solid.md#solid) have been *merged* with an
 ancestor. Solid merging happens between rigidly linked solids with non NULL
-`physics` fields, see `Physics`'s "Implicit solid merging and joints" for more
-details. This function searches the Scene Tree recursively, therefore it is
-recommended to store the result rather than calling it at each step. It is
-highly recommended to test for NULL returned values, because passing a NULL
-dBodyID to an ODE function is illegal and will crash the plugin and Webots.
+`physics` fields, see [Physics](reference/physics.md#physics)'s "Implicit solid
+merging and joints" for more details. This function searches the Scene Tree
+recursively, therefore it is recommended to store the result rather than calling
+it at each step. It is highly recommended to test for NULL returned values,
+because passing a NULL dBodyID to an ODE function is illegal and will crash the
+plugin and Webots.
 
 ### dWebotsGetGeomFromDEF()
 
-This function looks for a `Solid` node with the specified name and returns the
-corresponding dGeomID. A dGeomID is an ODE object that represents a geometrical
-shape such as a sphere, a cylinder, a box, etc., or a coordinate system
-transformation. The dGeomID returned by Webots corresponds to the boundingObject
-of the `Solid`. The dGeomID object can then be used with all the available ODE
-`dGeom*()` functions (see ODE documentation). The prototype of this function is:
+This function looks for a [Solid](reference/solid.md#solid) node with the
+specified name and returns the corresponding dGeomID. A dGeomID is an ODE object
+that represents a geometrical shape such as a sphere, a cylinder, a box, etc.,
+or a coordinate system transformation. The dGeomID returned by Webots
+corresponds to the boundingObject of the [Solid](reference/solid.md#solid). The
+dGeomID object can then be used with all the available ODE `dGeom*()` functions
+(see ODE documentation). The prototype of this function is:
 
 ```
 dGeomID dWebotsGetGeomFromDEF(const char *DEF);
 ```
 
-where DEF is the DEF name of the requested `Solid` node.
+where DEF is the DEF name of the requested [Solid](reference/solid.md#solid)
+node.
 
 It is possible to use dots (.) as scoping operator in the DEF parameter, see
-above. This function returns NULL if there is no `Solid` (or derived) node with
-the specified DEF name. It will also return NULL if the `boundingObject` field
-of the `Solid` node is undefined (NULL). This function searches the Scene Tree
-recursively therefore it is recommended to store the result rather than calling
-it at each step. It is highly recommended to test for NULL returned values,
-because passing a NULL dGeomID to an ODE function is illegal and will crash the
-plugin and Webots.
+above. This function returns NULL if there is no
+[Solid](reference/solid.md#solid) (or derived) node with the specified DEF name.
+It will also return NULL if the `boundingObject` field of the
+[Solid](reference/solid.md#solid) node is undefined (NULL). This function
+searches the Scene Tree recursively therefore it is recommended to store the
+result rather than calling it at each step. It is highly recommended to test for
+NULL returned values, because passing a NULL dGeomID to an ODE function is
+illegal and will crash the plugin and Webots.
 
 Using the returned dGeomID, it is also possible to obtain the corresponding
 dBodyID object using ODE's `dGeomGetBody()` function. This is an alternative to
@@ -113,15 +121,17 @@ controller.
 The physics plugin API provides the `dWebotsSend()` function to send messages to
 robot controllers and the `dWebotsReceive()` function to receive messages from
 robot controllers. In order to receive messages from the physics plugin, a robot
-has to contain a `Receiver` node set to an appropriate channel (see Reference
-Manual) and with a `baudRate` set to -1 (for infinite communication speed).
-Messages are sent from the physics plugin using the `dWebotsSend()` function,
-and received through the receiver API as if they were sent by an `Emitter` node
-with an infinite range and baud rate. Similarly, in order to send messages to
-the physics plugin, a robot has to contain an `Emitter` node set to `channel` 0
-(as the physics plugin only receives data sent on this channel). The `range` and
-`baudRate` fields of the `Emitter` node should be set to -1 (infinite). Messages
-are sent to the physics plugin using the standard `Emitter` API functions. They
+has to contain a [Receiver](reference/receiver.md#receiver) node set to an
+appropriate channel (see Reference Manual) and with a `baudRate` set to -1 (for
+infinite communication speed). Messages are sent from the physics plugin using
+the `dWebotsSend()` function, and received through the receiver API as if they
+were sent by an [Emitter](reference/emitter.md#emitter) node with an infinite
+range and baud rate. Similarly, in order to send messages to the physics plugin,
+a robot has to contain an [Emitter](reference/emitter.md#emitter) node set to
+`channel` 0 (as the physics plugin only receives data sent on this channel). The
+`range` and `baudRate` fields of the [Emitter](reference/emitter.md#emitter)
+node should be set to -1 (infinite). Messages are sent to the physics plugin
+using the standard [Emitter](reference/emitter.md#emitter) API functions. They
 are received by the physics plugin through the `dWebotsReceive()` function.
 
 ```

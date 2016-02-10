@@ -12,9 +12,10 @@ Background {
 }
 ```
 
-The `Background` node defines the background used for rendering the 3D world.
-The `skyColor` field defines the red, green and blue components of this color.
-Only the three first float values of the `skyColor` field are used.
+The [Background](reference/background.md#background) node defines the background
+used for rendering the 3D world. The `skyColor` field defines the red, green and
+blue components of this color. Only the three first float values of the
+`skyColor` field are used.
 
 The `backUrl`, `bottomUrl`, `frontUrl`, `leftUrl`, `rightUrl`, and `topUrl`
 fields specify a set of images that define a background panorama, between the

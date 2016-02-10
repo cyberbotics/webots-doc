@@ -13,10 +13,11 @@ Material {
 
 ### Description
 
-The `Material` node specifies surface material properties for associated
-geometry nodes and is used by the VRML97 lighting equations during rendering.
-The fields in the `Material` node determine how light reflects off an object to
-create color.
+The [Material](reference/material.md#material) node specifies surface material
+properties for associated geometry nodes and is used by the VRML97 lighting
+equations during rendering. The fields in the
+[Material](reference/material.md#material) node determine how light reflects off
+an object to create color.
 
 ### Field Summary
 
@@ -41,9 +42,10 @@ smaller highlights.
 with 0.0 (the default) the object will appear completely opaque, and with 1.0 it
 will appear completely transparent. A transparent object doesn't cast or receive
 shadows. Webots performs dynamic alpha sorting according to the distance between
-the center of the objects (the local position of the parent `Transform`) and the
-viewpoint. Some occlusion issues can occur if two transparent objects intersect
-each other, or if the coordinate center of a transparent object is located
-outside the effectively rendered polygons, or if the sizes of nearby transparent
-objects differ significantly.
+the center of the objects (the local position of the parent
+[Transform](reference/transform.md#transform)) and the viewpoint. Some occlusion
+issues can occur if two transparent objects intersect each other, or if the
+coordinate center of a transparent object is located outside the effectively
+rendered polygons, or if the sizes of nearby transparent objects differ
+significantly.
 

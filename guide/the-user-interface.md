@@ -258,7 +258,8 @@ etc.).
 ### Build Menu
 
 The `Build` menu provides the functionality to compile (or cross-compile)
-controller code. The build menu is described in more details `here`.
+controller code. The build menu is described in more details [here](guide
+/webots-built-in-editor.md#webots-built-in-editor).
 
 ### Robot Menu
 
@@ -334,7 +335,8 @@ computer or only for a limited duration depending on the configuration defined
 by your local license administrator. Please ask your local license administrator
 in case of problem.
 
-The `Preferences` item pops up a window described in `this section`.
+The `Preferences` item pops up a window described in [this
+section](guide/preferences.md#preferences).
 
 ### Wizards Menu
 
@@ -398,7 +400,7 @@ you choose a node type from a list. The new node is created with default values
 that can be modified afterwards. You can only insert a node suitable for the
 corresponding field. The dialog also gives the possibility to load a previously
 exported node by clicking on the `Import...` button. Further information about
-how to export a node are available `here`.
+how to export a node are available [here](guide/the-scene-tree.md#field-editor).
 
 `Delete`: Deletes the selected object.
 

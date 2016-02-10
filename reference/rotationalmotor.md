@@ -1,6 +1,6 @@
 ## RotationalMotor
 
-Derived from `Motor`.
+Derived from [Motor](reference/motor.md#motor).
 
 ```
 RotationalMotor {
@@ -11,8 +11,10 @@ RotationalMotor {
 
 ### Description
 
-A `RotationalMotor` node can be used to power either a `HingeJoint` or a
-`Hinge2Joint` to produce a rotational motion around the choosen axis.
+A [RotationalMotor](reference/rotationalmotor.md#rotationalmotor) node can be
+used to power either a [HingeJoint](reference/hingejoint.md#hingejoint) or a
+[Hinge2Joint](reference/hinge2joint.md#hinge2joint) to produce a rotational
+motion around the choosen axis.
 
 ### Field Summary
 

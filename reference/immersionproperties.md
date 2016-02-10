@@ -13,18 +13,19 @@ ImmersionProperties {
 
 ### Description
 
-An `ImmersionProperties` node is used inside the `immersionProperties` field of
-a `Solid` node to specify its dynamical interactions with one or more `Fluid`
-nodes.
+An [ImmersionProperties](reference/immersionproperties.md#immersionproperties)
+node is used inside the `immersionProperties` field of a
+[Solid](reference/solid.md#solid) node to specify its dynamical interactions
+with one or more [Fluid](reference/fluid.md#fluid) nodes.
 
 ### ImmersionProperties Fields
 
 - `fluidName`: name of the fluid with which the dynamical interaction is enabled.
 The string value must coincide with the `name` field value of an existing
-`Fluid` node.
+[Fluid](reference/fluid.md#fluid) node.
 
 - `referenceArea`: this field defines the reference area(s) used to compute the
-drag force and drag torque of the submerging `Fluid`.
+drag force and drag torque of the submerging [Fluid](reference/fluid.md#fluid).
 
     If the `referenceArea` is set to "xyz-projected area", the `x`-coordinate of the
     drag force vector with respect to the the solid frame is given by:
@@ -45,9 +46,9 @@ drag force and drag torque of the submerging `Fluid`.
     expressed within the solid frame. Analogous formulas hold for `y` and `z`
     coordinates.
 
-    If the `referenceArea` value is "immersed area" then the `Solid`
-    `boundingObject`'s immersed area is used for drag force and drag torque
-    computations:
+    If the `referenceArea` value is "immersed area" then the
+    [Solid](reference/solid.md#solid) `boundingObject`'s immersed area is used for
+    drag force and drag torque computations:
 
         drag_force = - c_x * fluid_density * linear_velocity^2 * immersed_area,
         drag_torque = - t_x * fluid_density * angular_velocity^2 * immersed_area
@@ -77,7 +78,10 @@ exerted by the fluid on the solid according the following formulas
     drags when the immersed solids are subject to large external forces or torques.
 
 > **note**: The "xyz-projected area" computation mode is implemented only for
-boundingObjects that contain fully or partially immersed `Box` nodes, fully
-immersed `Cylinder`, `Capsule` and `Sphere` nodes. The "immersed area"
-computation mode is implemented for every Geometry node.
+boundingObjects that contain fully or partially immersed
+[Box](reference/box.md#box) nodes, fully immersed
+[Cylinder](reference/cylinder.md#cylinder),
+[Capsule](reference/capsule.md#capsule) and [Sphere](reference/sphere.md#sphere)
+nodes. The "immersed area" computation mode is implemented for every Geometry
+node.
 

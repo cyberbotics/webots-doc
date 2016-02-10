@@ -9,10 +9,12 @@ CameraZoom {
 
 ### Description
 
-The `CameraZoom` node allows the user to define a controllable zoom for a
-`Camera` device. The `CameraZoom` node should be set in the `zoom` field of a
-`Camera` node. The zoom level can be adjusted from the controller program using
-the `wb_camera_set_fov()` function.
+The [CameraZoom](reference/camerazoom.md#camerazoom) node allows the user to
+define a controllable zoom for a [Camera](reference/camera.md#camera) device.
+The [CameraZoom](reference/camerazoom.md#camerazoom) node should be set in the
+`zoom` field of a [Camera](reference/camera.md#camera) node. The zoom level can
+be adjusted from the controller program using the `wb_camera_set_fov()`
+function.
 
 ### Field Summary
 

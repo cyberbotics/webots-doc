@@ -33,7 +33,8 @@ this function's description in the `Reference Manual`.
 2. To get the 3D position of any `Transform` (or derived) node placed at the root
 of the Scene Tree (the nodes visible when the Scene Tree is completely
 collapsed), you can use the `wb_supervisor_field_get_sf_vec3f()` function. Here
-is an `example`.
+is an [example](guide/supervisor-programming.md#tracking-the-position-of-
+robots).
 
 A simulation example that shows both the `GPS` and the `Supervisor` techniques
 is included in the Webots installation, you just need to open this world:

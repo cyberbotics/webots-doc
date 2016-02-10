@@ -1,6 +1,6 @@
 ## Device
 
-Abstract node, derived from `Solid`.
+Abstract node, derived from [Solid](reference/solid.md#solid).
 
 ```
 Device {
@@ -33,7 +33,8 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 #### Description
 
 `wb_device_get_node_type()` convert the WbDeviceTag given as parameter (`tag`)
-to its corresponding WbNodeType (cf. the `Supervisor` API)
+to its corresponding WbNodeType (cf. the
+[Supervisor](reference/supervisor.md#supervisor) API)
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
 

@@ -22,8 +22,8 @@ The link between the world files and this directory is done through the
 - "worlds": this directory contains the world files, the project files (see below)
 and the textures (typically in a subdirectory called "textures").
 
-> **note**: Note that the directories can be created by using the wizard `New Project
-Directory` described in .
+> **note**: Note that the directories can be created by using the wizard [New Project
+Directory](guide/the-user-interface.md) described in .
 
 ### The Project Files
 
@@ -51,6 +51,6 @@ controllers/simple_controller/simple_controller[.exe]
 
 > **note**: The main executable name must be identical to the directory name.
 
-> **note**: You can create all the files needed by a new controller using the wizard `New
-Robot Controller` described in .
+> **note**: You can create all the files needed by a new controller using the wizard [New
+Robot Controller](guide/the-user-interface.md) described in .
 

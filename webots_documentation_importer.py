@@ -42,6 +42,12 @@ class Reference:
         self.anchor = anchor
         self.kind = kind
 
+    def getUrl(self):
+        if len(self.anchor) > 0: 
+            return '%s#%s' % (self.filename, self.anchor)
+        else:
+            return self.filename
+        
     def __str__(self):
         if len(self.anchor) > 0: 
             return '%s: "%s#%s" (%s)' % (self.refId, self.filename, self.anchor, self.kind)
@@ -147,8 +153,6 @@ class BookParser:
 
     def parseReferences(self):
         for idNode in self.root.findall('.//*[@id]'):
-            if idNode.tag == 'refentry':
-                continue # TODO: is this correct?!
             refId = idNode.attrib.get('id')
             anchor = slugify(self.getTitle(idNode))
 
@@ -269,6 +273,14 @@ class BookParser:
                     text += '*' + self.parseText(child.text, True, False) + '*^(TM)'
                 elif child.tag == 'ulink':
                     text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
+                elif child.tag == 'xref':
+                    linkend = child.attrib.get('linkend')
+                    if linkend is None:
+                        raise Exception('xref without linkend attribute')
+                    ref = self.referenceManager.getReferenceById(linkend)
+                    if ref is None:
+                        raise Exception('reference to "' + linkend + '" is undefined')
+                    text += '[%s](%s)' % (self.parseText(child.text, True, False), ref.getUrl())
                 elif child.tag == 'programlisting':
                     # flush text
                     text = self.formatText(text)

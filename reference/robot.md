@@ -1,6 +1,6 @@
 ## Robot
 
-Derived from `Solid`.
+Derived from [Solid](reference/solid.md#solid).
 
 ```
 Robot {
@@ -17,15 +17,20 @@ Robot {
 }
 ```
 
-Direct derived nodes: `DifferentialWheels`, `Supervisor`.
+Direct derived nodes:
+[DifferentialWheels](reference/differentialwheels.md#differentialwheels),
+[Supervisor](reference/supervisor.md#supervisor).
 
 ### Description
 
-The `Robot` node can be used as basis for building a robot, e.g., an articulated
-robot, a humanoid robot, a wheeled robot... If you want to build a two-wheels
-robot with differential-drive you should also consider the `DifferentialWheels`
-node. If you would like to build a robot with supervisor capabilities use the
-`Supervisor` node instead (Webots PRO license required).
+The [Robot](reference/robot.md#robot) node can be used as basis for building a
+robot, e.g., an articulated robot, a humanoid robot, a wheeled robot... If you
+want to build a two-wheels robot with differential-drive you should also
+consider the
+[DifferentialWheels](reference/differentialwheels.md#differentialwheels) node.
+If you would like to build a robot with supervisor capabilities use the
+[Supervisor](reference/supervisor.md#supervisor) node instead (Webots PRO
+license required).
 
 ### Field Summary
 
@@ -70,19 +75,20 @@ robot in Watts.
 
 - `selfCollision`: setting this field to TRUE will enable the detection of
 collisions within the robot and apply the corresponding contact forces, so that
-the robot limbs cannot cross each other (provided that they have a `Physics`
-node). This is useful for complex articulated robots for which the controller
-doesn't prevent inner collisions. Enabling self collision is, however, likely to
-decrease the simulation speed, as more collisions will be generated during the
-simulation. Note that only collisions between non-consecutive solids will be
-detected. For consecutive solids, e.g., two solids attached to each other with a
-joint, no collision detection is performed, even if the self collision is
-enabled. The reason is that this type of collision detection is usually not
-wanted by the user, because a very accurate design of the bounding objects of
-the solids would be required. To prevent two consecutive solid nodes from
-penetrating each other, the `minStop` and `maxStop` fields of the corresponding
-joint node should be adjusted accordingly. Here is an example of a robot leg
-with self collision enabled:
+the robot limbs cannot cross each other (provided that they have a
+[Physics](reference/physics.md#physics) node). This is useful for complex
+articulated robots for which the controller doesn't prevent inner collisions.
+Enabling self collision is, however, likely to decrease the simulation speed, as
+more collisions will be generated during the simulation. Note that only
+collisions between non-consecutive solids will be detected. For consecutive
+solids, e.g., two solids attached to each other with a joint, no collision
+detection is performed, even if the self collision is enabled. The reason is
+that this type of collision detection is usually not wanted by the user, because
+a very accurate design of the bounding objects of the solids would be required.
+To prevent two consecutive solid nodes from penetrating each other, the
+`minStop` and `maxStop` fields of the corresponding joint node should be
+adjusted accordingly. Here is an example of a robot leg with self collision
+enabled:
 
         Thigh (solid)
           |
@@ -162,10 +168,10 @@ The asynchronous mode is currently used only for the robot competitions, because
 in this case it is necessary to limit the CPU time allocated to each
 participating controller. Note that it is also possible to combine synchronous
 and asynchronous controllers, e.g., for the robot competitions generally the
-`Supervisor` controller is synchronous while the contestants controllers are
-asynchronous. Asynchronous controllers may also be recommended for networked
-simulations involving several robots distributed over a computer network with an
-unpredictable delay (like the Internet).
+[Supervisor](reference/supervisor.md#supervisor) controller is synchronous while
+the contestants controllers are asynchronous. Asynchronous controllers may also
+be recommended for networked simulations involving several robots distributed
+over a computer network with an unpredictable delay (like the Internet).
 
 ### Robot Functions
 
@@ -226,10 +232,10 @@ from the simulation which can continue normally with the execution of the other
 controllers (if any). If a C controller exits without calling
 `wb_robot_cleanup()`, then its termination will not be signalled to Webots. In
 this case the simulation will remain blocked (sleeping) on the current step (but
-only if this `Robot`'s `synchronization` field is TRUE). Note that the call to
-the `wb_robot_cleanup()` function must be the last API function call in a C
-controller. Any subsequent Webots API function call will give unpredictable
-results.
+only if this [Robot](reference/robot.md#robot)'s `synchronization` field is
+TRUE). Note that the call to the `wb_robot_cleanup()` function must be the last
+API function call in a C controller. Any subsequent Webots API function call
+will give unpredictable results.
 
 #### Simple C controller Example
 
@@ -273,11 +279,12 @@ int main() {
 #### Description
 
 This function returns a unique identifier for a device corresponding to a
-specified `name`. For example, if a robot contains a `DistanceSensor` node whose
-`name` field is "ds1", the function will return the unique identifier of that
-device. This `WbDeviceTag` identifier will be used subsequently for enabling,
-sending commands to, or reading data from this device. If the specified device
-is not found, the function returns 0.
+specified `name`. For example, if a robot contains a
+[DistanceSensor](reference/distancesensor.md#distancesensor) node whose `name`
+field is "ds1", the function will return the unique identifier of that device.
+This `WbDeviceTag` identifier will be used subsequently for enabling, sending
+commands to, or reading data from this device. If the specified device is not
+found, the function returns 0.
 
 #### See also
 
@@ -287,10 +294,12 @@ is not found, the function returns 0.
 
 These functions return a reference to an object corresponding to a specified
 `name`. Depending on the called function, this object can be an instance of a
-`Device` subclass. For example, if a robot contains a `DistanceSensor` node
-whose `name` field is "ds1", the function `getDistanceSensor` will return a
-reference to a `DistanceSensor` object. If the specified device is not found,
-the function returns `NULL` in C++, `null` in Java or the `none` in Python.
+`Device` subclass. For example, if a robot contains a
+[DistanceSensor](reference/distancesensor.md#distancesensor) node whose `name`
+field is "ds1", the function `getDistanceSensor` will return a reference to a
+[DistanceSensor](reference/distancesensor.md#distancesensor) object. If the
+specified device is not found, the function returns `NULL` in C++, `null` in
+Java or the `none` in Python.
 
 #### See also
 
@@ -348,8 +357,8 @@ disabled.
 
 #### Description
 
-This function returns the value of the `basicTimeStep` field of the `WorldInfo`
-node.
+This function returns the value of the `basicTimeStep` field of the
+[WorldInfo](reference/worldinfo.md#worldinfo) node.
 
 #### Description
 

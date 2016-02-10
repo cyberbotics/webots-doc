@@ -1,6 +1,6 @@
 ## Gyro
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 Gyro {
@@ -14,8 +14,9 @@ Gyro {
 
 ### Description
 
-The `Gyro` node is used to model 1, 2 and 3-axis angular velocity sensors
-(gyroscope). The angular velocity is measured in radians per second [rad/s].
+The [Gyro](reference/gyro.md#gyro) node is used to model 1, 2 and 3-axis angular
+velocity sensors (gyroscope). The angular velocity is measured in radians per
+second [rad/s].
 
 ### Field Summary
 
@@ -43,23 +44,25 @@ measure any infinitesimal change). This field accepts any value in the interval
 The `wb_gyro_enable()` function turns on the angular velocity measurement each
 `ms` milliseconds.
 
-The `wb_gyro_disable()` function turns off the `Gyro` device.
+The `wb_gyro_disable()` function turns off the [Gyro](reference/gyro.md#gyro)
+device.
 
 The `wb_gyro_get_sampling_period()` function returns the period given into the
 `wb_gyro_enable()` function, or 0 if the device is disabled.
 
 The `wb_gyro_get_values()` function returns the current measurement of the
-`Gyro` device. The values are returned as a 3D-vector therefore only the indices
-0, 1, and 2 are valid for accessing the vector. Each vector element represents
-the angular velocity about one of the axes of the `Gyro` node, expressed in
-radians per second [rad/s]. The first element corresponds to the angular
-velocity about the *x*-axis, the second element to the *y*-axis, etc.
+[Gyro](reference/gyro.md#gyro) device. The values are returned as a 3D-vector
+therefore only the indices 0, 1, and 2 are valid for accessing the vector. Each
+vector element represents the angular velocity about one of the axes of the
+[Gyro](reference/gyro.md#gyro) node, expressed in radians per second [rad/s].
+The first element corresponds to the angular velocity about the *x*-axis, the
+second element to the *y*-axis, etc.
 
-> **note**: The returned vector is a pointer to the internal values managed by the `Gyro`
-node, therefore it is illegal to free this pointer. Furthermore, note that the
-pointed values are only valid until the next call to `wb_robot_step()` or
-`Robot::step()`. If these values are needed for a longer period they must be
-copied.
+> **note**: The returned vector is a pointer to the internal values managed by the
+[Gyro](reference/gyro.md#gyro) node, therefore it is illegal to free this
+pointer. Furthermore, note that the pointed values are only valid until the next
+call to `wb_robot_step()` or `Robot::step()`. If these values are needed for a
+longer period they must be copied.
 
 > **note**: `getValues()` returns the vector as a list containing three floats.
 

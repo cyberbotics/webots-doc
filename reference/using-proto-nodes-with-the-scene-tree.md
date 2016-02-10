@@ -44,10 +44,11 @@ visible in the `Add a node` dialog that can be invoked from the `Scene Tree`. In
 the dialog, the PROTO nodes are organized using the same directory hierarchy
 found in the project's and Webots's "protos" folders. However this dialog shows
 a PROTO only if its *base type* is suitable for the chosen insertion point. For
-example, a PROTO whose base type is `Material` cannot be inserted in a
-`boundingObject` field. In  you can see how the `TwoColorChair` PROTO appears in
-the dialog. Note that, the dialog's text pane is automatically filled with any
-comment placed at the beginning of the ".proto" file.
+example, a PROTO whose base type is [Material](reference/material.md#material)
+cannot be inserted in a `boundingObject` field. In  you can see how the
+`TwoColorChair` PROTO appears in the dialog. Note that, the dialog's text pane
+is automatically filled with any comment placed at the beginning of the ".proto"
+file.
 
 %figure "Adding an instance of the TwoColorChair PROTO"
 ![Adding an instance of the TwoColorChair PROTO](png/add_proto.png)

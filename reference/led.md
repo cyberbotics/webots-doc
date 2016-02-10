@@ -1,6 +1,6 @@
 ## LED
 
-Derived from `Device`.
+Derived from [Device](reference/device.md#device).
 
 ```
 LED {
@@ -11,14 +11,18 @@ LED {
 
 ### Description
 
-The `LED` node is used to model a light emitting diode (LED). The light produced
-by an LED can be used for debugging or informational purposes. The resulted
-color is applied only on the first child of the `LED` node. If the first child
-is a `Shape` node, the `emissiveColor` field of its `Material` node is altered.
-If the first child is a `Light` node, its `color` field is altered. Otherwise,
-if the first child is a `Group` node, a recursive search is applied on this node
-in order to find which color field must be modified, so every `Light`, `Shape`
-and `Group` node is altered according to the previous rules.
+The [LED](reference/led.md#led) node is used to model a light emitting diode
+(LED). The light produced by an LED can be used for debugging or informational
+purposes. The resulted color is applied only on the first child of the
+[LED](reference/led.md#led) node. If the first child is a
+[Shape](reference/shape.md#shape) node, the `emissiveColor` field of its
+[Material](reference/material.md#material) node is altered. If the first child
+is a [Light](reference/light.md#light) node, its `color` field is altered.
+Otherwise, if the first child is a [Group](reference/group.md#group) node, a
+recursive search is applied on this node in order to find which color field must
+be modified, so every [Light](reference/light.md#light),
+[Shape](reference/shape.md#shape) and [Group](reference/group.md#group) node is
+altered according to the previous rules.
 
 ### Field Summary
 
@@ -45,10 +49,11 @@ between 0 (off) and 255 (maximum intensity).
 
 In the case of a non-gradual LED (`gradual` field set to FALSE), if the `value`
 parameter is 1, the LED is turned on using the first color specified in the
-`color` field of the corresponding `LED` node. If the `value` parameter is 2,
-the LED is turned on using the second color specified in the `color` field of
-the `LED` node, and so on. The `value` parameter should not be greater than the
-size of the `color` field of the corresponding `LED` node.
+`color` field of the corresponding [LED](reference/led.md#led) node. If the
+`value` parameter is 2, the LED is turned on using the second color specified in
+the `color` field of the [LED](reference/led.md#led) node, and so on. The
+`value` parameter should not be greater than the size of the `color` field of
+the corresponding [LED](reference/led.md#led) node.
 
 In the case of a monochromatic LED (`gradual` field set to TRUE and `color`
 field containing exactly one color), the `value` parameter indicates the

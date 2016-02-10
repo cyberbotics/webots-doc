@@ -531,6 +531,9 @@ class BookParser:
             elif child.tag == 'refsect1':
                 self.parseChapter(child, outFile)
 
+    def parseKeywords(self, node, outFile):
+        outFile.write('**Keywords**: ' + self.readRawText(node).strip() + '\n')
+
     def parseChapter(self, node, outFile):
         for child in node.getchildren():
             if child.tag == 'title':
@@ -589,9 +592,9 @@ class BookParser:
                     raise Exception('Unexpected number of children for the <code> tag')
                 self.parseProgramListing(subchildren[0], outFile)
             elif child.tag == 'clearPage':
-                pass # TODO
+                pass # no sense in the new implementation
             elif child.tag == 'keywords':
-                pass # TODO
+                self.parseKeywords(child, outFile)
             elif child.tag == 'refentry':
                 self.parseRefEntry(child, outFile)
             else:

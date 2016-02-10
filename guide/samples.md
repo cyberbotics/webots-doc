@@ -10,6 +10,8 @@ demo, the world file and its corresponding controller have the same name.
 
 ### blimp_lis.wbt
 
+**Keywords**: Flying robot, physics plugin, keyboard, joystick
+
 %figure "blimp_lis.wbt"
 ![blimp_lis.wbt](png/blimp_lis.png)
 %end
@@ -23,6 +25,8 @@ plugin* is used to add thrust and other forces to the simulation.
 
 ### gantry.wbt
 
+**Keywords**: Gantry robot, gripper, Hanoi towers, linear motors, recursive algorithm
+
 %figure "gantry.wbt"
 ![gantry.wbt](png/gantry.png)
 %end
@@ -34,6 +38,8 @@ Towers problem.
 
 ### hexapod.wbt
 
+**Keywords**: Legged robot, alternating tripod gait, linear motor
+
 %figure "hexapod.wbt"
 ![hexapod.wbt](png/hexapod.png)
 %end
@@ -44,6 +50,8 @@ alternating tripod gait.
 
 ### humanoid.wbt
 
+**Keywords**: Humanoid, QRIO robot
+
 %figure "humanoid.wbt"
 ![humanoid.wbt](png/humanoid.png)
 %end
@@ -51,6 +59,8 @@ alternating tripod gait.
 In this example, a humanoid robot performs endless gymnastic movements.
 
 ### moon.wbt
+
+**Keywords**: DifferentialWheels, Koala, keyboard, texture
 
 %figure "moon.wbt"
 ![moon.wbt](png/moon.png)
@@ -62,6 +72,8 @@ like scenery is made of `IndexedFaceSet` nodes. Both robots use the same
 controller code.
 
 ### ghostdog.wbt
+
+**Keywords**: Quadruped, legged robot, dog robot, passive joint, spring and damper
 
 %figure "ghostdog.wbt"
 ![ghostdog.wbt](png/ghostdog.png)
@@ -77,6 +89,8 @@ could be used for controlling the knee joints.
 
 ### salamander.wbt
 
+**Keywords**: Salamander robot, swimming robot, amphibious robot, legged robot, physics plugin, buoyancy
+
 %figure "salamander.wbt"
 ![salamander.wbt](png/salamander.png)
 %end
@@ -90,6 +104,8 @@ principle.
 
 ### soccer.wbt
 
+**Keywords**: Soccer, Supervisor, DifferentialWheels, label
+
 %figure "soccer.wbt"
 ![soccer.wbt](png/soccer_world.png)
 %end
@@ -101,6 +117,8 @@ current score and the remaining time in the 3D view. This example shows how a
 
 ### sojourner.wbt
 
+**Keywords**: Sojourner, Passive joint, planetary exploration robot, keyboard, IndexedFaceSet
+
 %figure "sojourner.wbt"
 ![sojourner.wbt](png/sojourner.png)
 %end
@@ -111,6 +129,8 @@ how the robot manages to climb over it. The keyboard can be used to control the
 robot's motion.
 
 ### yamor.wbt
+
+**Keywords**: Connector, modular robots, self-reconfiguring robot
 
 %figure "yamor.wbt"
 ![yamor.wbt](png/yamor.png)
@@ -124,6 +144,8 @@ mode of locomotion. All modules use the same controller code, but their actual
 module behaviour is chosen according to the name of the module.
 
 ### stewart_platform.wbt
+
+**Keywords**: Stewart platform, linear motion, physics plugin, ball joint, universal joint
 
 %figure "stewart_platform.wbt"
 ![stewart_platform.wbt](png/stewart_platform.png)

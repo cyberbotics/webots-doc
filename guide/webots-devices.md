@@ -9,6 +9,8 @@ they exemplify.
 
 ### battery.wbt
 
+**Keywords**: Battery, Charger, DifferentialWheels
+
 %figure "battery.wbt"
 ![battery.wbt](png/battery.png)
 %end
@@ -24,6 +26,8 @@ full.
 
 ### bumper.wbt
 
+**Keywords**: TouchSensor, bumper, DifferentialWheels
+
 %figure "bumper.wbt"
 ![bumper.wbt](png/bumper.png)
 %end
@@ -33,6 +37,8 @@ In this example, a robot moves in a closed arena filled with obstacles. Its
 detected, the robot moves back and turns a bit.
 
 ### camera.wbt
+
+**Keywords**: Camera, image processing, DifferentialWheels
 
 %figure "camera.wbt"
 ![camera.wbt](png/camera.png)
@@ -46,6 +52,8 @@ robot to different parts of the arena (using the mouse) to see what it is able
 to detect.
 
 ### connector.wbt
+
+**Keywords**: Connector, RotationalMotor, IndexedLineSet, USE, DEF, DifferentialWheels
 
 %figure "connector.wbt"
 ![connector.wbt](png/connector.png)
@@ -64,6 +72,8 @@ robot's name.
 
 ### distance_sensor.wbt
 
+**Keywords**: DistanceSensor, Braitenberg, DifferentialWheels
+
 %figure "distance_sensor.wbt"
 ![distance_sensor.wbt](png/distance_sensor.png)
 %end
@@ -72,6 +82,8 @@ In this example, a robot has eight `DistanceSensor`s placed at regular intervals
 around its body. The robot avoids obstacles using the Braitenberg technique.
 
 ### emitter_receiver.wbt
+
+**Keywords**: DifferentialWheels, Emitter, Receiver, infra-red transmission, USE, DEF
 
 %figure "emitter_receiver.wbt"
 ![emitter_receiver.wbt](png/emitter_receiver.png)
@@ -91,6 +103,8 @@ is interrupted. Note that the communication between "infra-red" `Emitter`s and
 
 ### encoders.wbt
 
+**Keywords**: DifferentialWheels, encoders
+
 %figure "encoders.wbt"
 ![encoders.wbt](png/encoders.png)
 %end
@@ -103,6 +117,8 @@ random values. The robot does not pay any attention to obstacles.
 
 ### force_sensor.wbt
 
+**Keywords**: Force, TouchSensor, DifferentialWheels
+
 %figure "force_sensor.wbt"
 ![force_sensor.wbt](png/force_sensor.png)
 %end
@@ -113,6 +129,8 @@ robot can measure the force of each collision, which is printed in the Console
 window.
 
 ### gps.wbt
+
+**Keywords**: GPS, Supervisor, DifferentialWheels, keyboard
 
 %figure "gps.wbt"
 ![gps.wbt](png/gps.png)
@@ -129,6 +147,8 @@ position read by the Supervisor.
 
 ### led.wbt
 
+**Keywords**: LED, DifferentialWheels
+
 %figure "led.wbt"
 ![led.wbt](png/led.png)
 %end
@@ -137,6 +157,8 @@ In this example, a robot moves while randomly changing the color of three `LED`s
 on the top of its body. The color choice is printed in the Console.
 
 ### light_sensor.wbt
+
+**Keywords**: LightSensor, PointLight, lamp, light following
 
 %figure "light_sensor.wbt"
 ![light_sensor.wbt](png/light_sensor.png)
@@ -147,6 +169,8 @@ light source can be moved with the mouse; the robot will follow it.
 
 ### pen.wbt
 
+**Keywords**: Pen, keyboard
+
 %figure "pen.wbt"
 ![pen.wbt](png/pen.png)
 %end
@@ -156,6 +180,8 @@ controller randomly chooses the ink color. The ink on the floor fades slowly.
 Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 ### range_finder.wbt
+
+**Keywords**: Range-finder, Camera, DifferentialWheels
 
 %figure "range_finder.wbt"
 ![range_finder.wbt](png/range_finder.png)

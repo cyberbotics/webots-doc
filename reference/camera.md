@@ -265,6 +265,18 @@ up. Then, after closing the window, the overlay will be automatically restored.
 
 ### Camera Functions
 
+#### Name
+
+**wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
+
+``` c
+#include <webots/camera.h>
+
+void wb_camera_enable(WbDeviceTag tag, int ms)
+void wb_camera_disable(WbDeviceTag tag)
+int wb_camera_get_sampling_period(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_camera_enable()` allows the user to enable a camera update each `ms`
@@ -274,6 +286,19 @@ milliseconds.
 
 The `wb_camera_get_sampling_period()` function returns the period given into the
 `wb_camera_enable()` function, or 0 if the device is disabled.
+
+#### Name
+
+**wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
+
+``` c
+#include <webots/camera.h>
+
+double wb_camera_get_fov(WbDeviceTag tag)
+double wb_camera_get_min_fov(WbDeviceTag tag)
+double wb_camera_get_max_fov(WbDeviceTag tag)
+void wb_camera_set_fov(WbDeviceTag tag, double fov)
+```
 
 #### Description
 
@@ -287,6 +312,20 @@ view are defined in this [CameraZoom](reference/camerazoom.md#camerazoom) node,
 if the zoom is not defined, then the functions `wb_camera_get_min_fov()` and
 `wb_camera_get_max_fov()` will return the camera's field of view.
 
+#### Name
+
+**wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
+
+``` c
+#include <webots/camera.h>
+
+double wb_camera_get_focal_length(WbDeviceTag tag)
+double wb_camera_get_focal_distance(WbDeviceTag tag)
+double wb_camera_get_max_focal_distance(WbDeviceTag tag)
+double wb_camera_get_min_focal_distance(WbDeviceTag tag)
+void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
+```
+
 #### Description
 
 These functions allow the controller to get and set the focusing parameters.
@@ -295,15 +334,46 @@ Note that if the camera device has no
 field, it is not possible to call `wb_camera_set_focal_distance()` and the other
 functions will return 0.
 
+#### Name
+
+**wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
+
+``` c
+#include <webots/camera.h>
+
+int wb_camera_get_width(WbDeviceTag tag)
+int wb_camera_get_height(WbDeviceTag tag)
+```
+
 #### Description
 
 These functions return the width and height of a camera image as defined in the
 corresponding [Camera](reference/camera.md#camera) node.
 
+#### Name
+
+**wb\_camera\_get\_near** - *get the near parameter of the camera device*
+
+``` c
+#include <webots/camera.h>
+
+double wb_camera_get_near(WbDeviceTag tag)
+```
+
 #### Description
 
 This function returns the near parameter of a camera device as defined in the
 corresponding [Camera](reference/camera.md#camera) node.
+
+#### Name
+
+**wb\_camera\_get\_type** - *get the type of the camera*
+
+``` c
+#include <webots/camera.h>
+
+int wb_camera_get_type()
+```
 
 #### Description
 
@@ -321,6 +391,20 @@ defined in "camera.h" are summarized in :
 > **note**: In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
 integers of the [Camera](reference/camera.md#camera) class (for example,
 Camera::COLOR).
+
+#### Name
+
+**wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
+
+``` c
+#include <webots/camera.h>
+
+const unsigned char *wb_camera_get_image(WbDeviceTag tag)
+unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int x, int y)
+unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y)
+unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y)
+unsigned char wb_camera_image_get_grey(const unsigned char *image, int width, int x, int y)
+```
 
 #### Description
 
@@ -423,6 +507,18 @@ the OpenGL z-buffer.
 >     drawnow;
 >     distance = min(min(image))% distance to the closest point seen by the camera
 
+#### Name
+
+**wb\_camera\_get\_range\_image**, **wb\_camera\_range\_image\_get\_depth**, **wb\_camera\_get\_max\_range** - *get the range image and range data from a range-finder camera*
+
+``` c
+#include <webots/camera.h>
+
+const float *wb_camera_get_range_image(WbDeviceTag tag)
+float wb_camera_range_image_get_depth(const float *range_image, int width, int x, int y)
+double wb_camera_get_max_range(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_camera_get_range_image()` macro allows the user to read the contents of
@@ -456,6 +552,16 @@ field.
 `getRangeImage()` returns a one-dimensional list of floats, while the
 `getRangeImageArray()` returns a two-dimensional list of floats. Their content
 are identical but their handling is of course different.
+
+#### Name
+
+**wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
+
+``` c
+#include <webots/camera.h>
+
+int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality)
+```
 
 #### Description
 

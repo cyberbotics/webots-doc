@@ -14,6 +14,16 @@ sensor).
 
 ### Device Functions
 
+#### Name
+
+**wb\_device\_get\_model** - *returns the model string of the corresponding device*
+
+``` c
+#include <webots/device.h>
+
+const char *wb_device_get_model(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_device_get_model()` returns the model string of the device corresponding to
@@ -23,12 +33,32 @@ This function returns NULL if the WbDeviceTag does not match a valid device, or
 returns an empty string if the device is not a solid device (i.e. does not have
 a `model` field)
 
+#### Name
+
+**wb\_device\_get\_name** - *convert WbDeviceTag to its corresponding device name*
+
+``` c
+#include <webots/device.h>
+
+const char *wb_device_get_name(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_device_get_name()` convert the WbDeviceTag given as parameter (`tag`) to its
 corresponding name.
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
+
+#### Name
+
+**wb\_device\_get\_node\_type** - *convert WbDeviceTag to its corresponding WbNodeType*
+
+``` c
+#include <webots/device.h>
+
+WbNodeType wb_device_get_node_type(WbDeviceTag tag)
+```
 
 #### Description
 

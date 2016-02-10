@@ -39,6 +39,19 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### Gyro Functions
 
+#### Name
+
+**wb\_gyro\_enable**, **wb\_gyro\_disable**, **wb\_gyro\_get\_sampling\_period**, **wb\_gyro\_get\_values** - *enable, disable and read the output values of the gyro device*
+
+``` c
+#include <webots/gyro.h>
+
+void wb_gyro_enable(WbDeviceTag tag, int ms)
+void wb_gyro_disable(WbDeviceTag tag)
+int wb_gyro_get_sampling_period(WbDeviceTag tag)
+const double *wb_gyro_get_values(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_gyro_enable()` function turns on the angular velocity measurement each

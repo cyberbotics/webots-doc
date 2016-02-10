@@ -48,6 +48,19 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### GPS Functions
 
+#### Name
+
+**wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values** - *enable, disable and read the GPS measurements*
+
+``` c
+#include <webots/gps.h>
+
+void wb_gps_enable(WbDeviceTag tag, int ms)
+void wb_gps_disable(WbDeviceTag tag)
+int wb_gps_get_sampling_period(WbDeviceTag tag)
+const double *wb_gps_get_values(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_gps_enable()` allows the user to enable a GPS measurement each `ms`

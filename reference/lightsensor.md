@@ -173,6 +173,19 @@ radiometry terms and units in this document with their photometry equivalents:
 
 ### LightSensor Functions
 
+#### Name
+
+**wb\_light\_sensor\_enable**, **wb\_light\_sensor\_disable**, **wb\_light\_sensor\_get\_sampling\_period**, **wb\_light\_sensor\_get\_value** - *enable, disable and read light sensor measurement*
+
+``` c
+#include <webots/light_sensor.h>
+
+void wb_light_sensor_enable(WbDeviceTag tag, int ms)
+void wb_light_sensor_disable(WbDeviceTag tag)
+int wb_light_sensor_get_sampling_period(WbDeviceTag tag)
+double wb_light_sensor_get_value(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_light_sensor_enable()` enables a light sensor measurement each `ms`

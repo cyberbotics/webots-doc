@@ -233,6 +233,31 @@ Warnings are displayed if theses rules are not respected.
 
 ### Motor Functions
 
+#### Name
+
+**wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
+
+``` c
+#include <webots/motor.h>
+
+void wb_motor_set_position(WbDeviceTag tag, double position)
+void wb_motor_set_velocity(WbDeviceTag tag, double velocity)
+void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration)
+void wb_motor_set_available_force(WbDeviceTag tag, double force)
+void wb_motor_set_available_torque(WbDeviceTag tag, double torque)
+void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d)
+double wb_motor_get_target_position(WbDeviceTag tag)
+double wb_motor_get_min_position(WbDeviceTag tag)
+double wb_motor_get_max_position(WbDeviceTag tag)
+double wb_motor_get_velocity(WbDeviceTag tag)
+double wb_motor_get_max_velocity(WbDeviceTag tag)
+double wb_motor_get_acceleration(WbDeviceTag tag)
+double wb_motor_get_available_force(WbDeviceTag tag)
+double wb_motor_get_max_force(WbDeviceTag tag)
+double wb_motor_get_available_torque(WbDeviceTag tag)
+double wb_motor_get_max_torque(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_motor_set_position()` function specifies a new target position that the
@@ -326,6 +351,23 @@ corresponding [Motor](reference/motor.md#motor) node.
 The `wb_motor_get_[min|max]_position()` functions allow to get the values of
 respectively the `minPosition` and the `maxPosition` fields.
 
+#### Name
+
+**wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
+
+``` c
+#include <webots/motor.h>
+
+void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms)
+void wb_motor_disable_force_feedback(WbDeviceTag tag)
+int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag)
+double wb_motor_get_force_feedback(WbDeviceTag tag)
+void wb_motor_enable_torque_feedback(WbDeviceTag tag, int ms)
+void wb_motor_disable_torque_feedback(WbDeviceTag tag)
+int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag)
+double wb_motor_get_torque_feedback(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_motor_enable_force_feedback()` (resp.
@@ -376,6 +418,17 @@ The `wb_motor_get_force_feedback_sampling_period()` (resp.
 given in the `wb_motor_enable_force_feedback()` (resp.
 `wb_motor_enable_force_feedback()`) function, or 0 if the device is disabled.
 
+#### Name
+
+**wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
+
+``` c
+#include <webots/motor.h>
+
+void wb_motor_set_force(WbDeviceTag tag, double force)
+void wb_motor_set_torque(WbDeviceTag tag, double torque)
+```
+
 #### Description
 
 As an alternative to the PID-controller, the `wb_motor_set_force()` (resp.
@@ -407,6 +460,16 @@ It is also possible, for example, to use this function to implement springs or
 dampers with controllable properties. The example in
 "projects/samples/howto/worlds/force\_control.wbt" demonstrates the usage of
 `wb_motor_set_force()` for creating a simple spring and damper system.
+
+#### Name
+
+**wb\_motor\_get\_type** - *get the motor type*
+
+``` c
+#include <webots/motor.h>
+
+int wb_motor_get_type(WbDeviceTag tag)
+```
 
 #### Description
 

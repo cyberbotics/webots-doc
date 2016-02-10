@@ -70,6 +70,18 @@ noise is not dependent on the distance between emitter-receiver.
 
 ### Receiver Functions
 
+#### Name
+
+**wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
+
+``` c
+#include <webots/receiver.h>
+
+void wb_receiver_enable(WbDeviceTag tag, int ms)
+void wb_receiver_disable(WbDeviceTag tag)
+int wb_receiver_get_sampling_period(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_receiver_enable()` starts the receiver listening for incoming data packets.
@@ -84,6 +96,17 @@ listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
+
+#### Name
+
+**wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
+
+``` c
+#include <webots/receiver.h>
+
+int wb_receiver_get_queue_length(WbDeviceTag tag)
+void wb_receiver_next_packet(WbDeviceTag tag)
+```
 
 #### Description
 
@@ -135,6 +158,17 @@ particular time step. The `wb_receiver_get_queue_length()` function should be
 used to check how many packets are actually present in the
 [Receiver](reference/receiver.md#receiver)'s queue. Making assumptions based on
 timing will result in code that is not robust.
+
+#### Name
+
+**wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
+
+``` c
+#include <webots/receiver.h>
+
+const void *wb_receiver_get_data(WbDeviceTag tag)
+int wb_receiver_get_data_size(WbDeviceTag tag)
+```
 
 #### Description
 
@@ -203,6 +237,17 @@ necessary to call `setdatatype()` and `get()`. For example
 > The available types are 'uint8', 'double' and 'string'. More sophisticated data
 typed must be accessed explicitly using `setdatatype()` and `get()`.
 
+#### Name
+
+**wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
+
+``` c
+#include <webots/receiver.h>
+
+double wb_receiver_get_signal_strength(WbDeviceTag tag)
+const double *wb_receiver_get_emitter_direction(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_receiver_get_signal_strength()` function operates on the head packet in
@@ -227,6 +272,17 @@ to `wb_receiver_next_packet()`. It is illegal to call this function if the
 receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 > **note**: `getEmitterDirection()` returns the vector as a list containing three floats.
+
+#### Name
+
+**wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
+
+``` c
+#include <webots/receiver.h>
+
+void wb_receiver_set_channel(WbDeviceTag tag, int channel)
+int wb_receiver_get_channel(WbDeviceTag tag)
+```
 
 #### Description
 

@@ -37,6 +37,17 @@ As for a regular [Robot](reference/robot.md#robot) controller, the
 `wb_robot_init()`, `wb_robot_step()`, etc. functions must be used in a
 [Supervisor](reference/supervisor.md#supervisor) controller.
 
+#### Name
+
+**wb\_supervisor\_export\_image** - *save the current 3D image of the simulator into a JPEG file, suitable for
+    building a webcam system*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_export_image(const char *filename, int quality)
+```
+
 #### Description
 
 The `wb_supervisor_export_image()` function saves the current image of Webots
@@ -54,6 +65,21 @@ The "projects/samples/howto/worlds/supervisor.wbt" world provides an example on
 how to use the `wb_supervisor_export_image()` function. In this example, the
 [Supervisor](reference/supervisor.md#supervisor) controller takes a snapshot
 image each time a goal is scored.
+
+#### Name
+
+**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
+
+``` c
+#include <webots/supervisor.h>
+
+WbNodeRef wb_supervisor_node_get_from_def(const char *def)
+WbNodeRef wb_supervisor_node_get_from_id(int id)
+int wb_supervisor_node_get_id(WbNodeRef node)
+WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node)
+WbNodeRef wb_supervisor_node_get_root()
+WbNodeRef wb_supervisor_node_get_self()
+```
 
 #### Description
 
@@ -101,6 +127,18 @@ The `wb_supervisor_node_get_self()` function returns a handle to the
 controller is run. This is a utility function that simplifies the task of
 retrieving the base node without having to define a DEF name for it.
 
+#### Name
+
+**wb\_supervisor\_node\_get\_type**, **wb\_supervisor\_node\_get\_type\_name**, **wb\_supervisor\_node\_get\_base\_type\_name** - *get information on a specified node*
+
+``` c
+#include <webots/supervisor.h>
+
+WbNodeType wb_supervisor_node_get_type(WbNodeRef node)
+const char *wb_supervisor_node_get_type_name(WbNodeRef node)
+const char *wb_supervisor_node_get_base_type_name(WbNodeRef node)
+```
+
 #### Description
 
 The `wb_supervisor_node_get_type()` function returns a symbolic value
@@ -127,10 +165,30 @@ NULL.
 integers of the `Node` class (for example, Node::DIFFERENTIAL\_WHEELS). These
 integers can be directly compared with the output of the `Node::getType()`
 
+#### Name
+
+**wb\_supervisor\_node\_remove** - *Remove a specified node*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_remove(WbNodeRef node)
+```
+
 #### Description
 
 The `wb_supervisor_node_remove()` function removes the node specified as an
 argument from the Webots scene tree.
+
+#### Name
+
+**wb\_supervisor\_node\_get\_field** - *get a field reference from a node*
+
+``` c
+#include <webots/supervisor.h>
+
+WbFieldRef wb_supervisor_node_get_field(WbNodeRef node, const char *field_name)
+```
 
 #### Description
 
@@ -139,6 +197,17 @@ field. The field is specified by its name in `field_name` and the `node` it
 belongs to. It can be a single field (SF) or a multiple field (MF). If no such
 field name exist for the specified node, the return value is NULL. Otherwise, it
 returns a handler to a field.
+
+#### Name
+
+**wb\_supervisor\_node\_get\_position**, **wb\_supervisor\_node\_get\_orientation** - *get the global (world) position/orientation of a node*
+
+``` c
+#include <webots/supervisor.h>
+
+const double *wb_supervisor_node_get_position(WbNodeRef node)
+const double *wb_supervisor_node_get_orientation(WbNodeRef node)
+```
 
 #### Description
 
@@ -189,6 +258,16 @@ use these functions to do this.
 > **note**: The returned pointers are valid during one time step only as memory will be
 deallocated at the next time step.
 
+#### Name
+
+**wb\_supervisor\_node\_get\_center\_of\_mass** - *get the global position of a solid's center of mass*
+
+``` c
+#include <webots/supervisor.h>
+
+const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node)
+```
+
 #### Description
 
 The `wb_supervisor_node_get_center_of_mass()` function returns the position of
@@ -203,6 +282,16 @@ The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
 > **note**: The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
+
+#### Name
+
+**wb\_supervisor\_node\_get\_contact\_point** - *get the contact point with given index in the contact point list of the given solid.*
+
+``` c
+#include <webots/supervisor.h>
+
+const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index)
+```
 
 #### Description
 
@@ -224,6 +313,16 @@ shows how to use this function.
 > **note**: The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
+#### Name
+
+**wb\_supervisor\_node\_get\_number\_of\_contact\_points** - *get the number of contact points of the given solid*
+
+``` c
+#include <webots/supervisor.h>
+
+const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node)
+```
+
 #### Description
 
 The `wb_supervisor_node_get_number_of_contact_points()` function returns the
@@ -235,6 +334,16 @@ return `-1`.
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
 
+#### Name
+
+**wb\_supervisor\_node\_get\_static\_balance** - *return the boolean value of the static balance test based on the support polygon of a solid*
+
+``` c
+#include <webots/supervisor.h>
+
+bool wb_supervisor_node_get_static_balance(WbNodeRef node)
+```
+
 #### Description
 
 The `wb_supervisor_node_get_static_balance()` function returns the boolean value
@@ -245,6 +354,17 @@ warning message and return `false`. The support polygon of a solid is the convex
 hull of the solid's contact points projected onto a plane that is orthognal to
 the gravity direction. The test consists in checking whether the projection of
 the center of mass onto this plane lies inside or outside the support polygon.
+
+#### Name
+
+**wb\_supervisor\_node\_get\_velocity**, **wb\_supervisor\_node\_set\_velocity** - *get/set the angular and linear velocities of a Solid node.*
+
+``` c
+#include <webots/supervisor.h>
+
+const double *wb_supervisor_node_get_velocity(WbNodeRef node)
+void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6])
+```
 
 #### Description
 
@@ -264,6 +384,16 @@ argument must be a vector containing exactly 6 values. The first three are
 respectively the linear velocities in the x, y and z direction. The last three
 are respectively the angular velocities around the x, y and z axes.
 
+#### Name
+
+**wb\_supervisor\_node\_reset\_physics** - *stops the inertia of the given solid*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_reset_physics(WbNodeRef node)
+```
+
 #### Description
 
 The `wb_supervisor_node_reset_physics()` function stops the inertia of the given
@@ -274,6 +404,16 @@ zeroed. The `node` argument must be a [Solid](reference/solid.md#solid) node (or
 a derived node). This function could be useful for resetting the physics of a
 solid after changing its translation or rotation. To stop the inertia of all
 available solids please refer to .
+
+#### Name
+
+**wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency)
+```
 
 #### Description
 
@@ -323,6 +463,16 @@ a yellow color for the new text.
 be a vector containing the three RGB components: `[RED GREEN BLUE]`. Each
 component must be a value between 0.0 and 1.0. For example the vector `[1 0 1]`
 represents the magenta color.
+
+#### Name
+
+**wb\_supervisor\_simulation\_quit** - *terminate the simulator and controller processes*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_simulation_quit(int status)
+```
 
 #### Description
 
@@ -394,6 +544,16 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+#### Name
+
+**wb\_supervisor\_simulation\_revert** - *reload the current world*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_simulation_revert()
+```
+
 #### Description
 
 The `wb_supervisor_simulator_revert()` function sends a request to the simulator
@@ -402,6 +562,17 @@ reloading the current world, the supervisor process and all the robot processes
 are terminated and restarted. You may wish to save some data in a file from your
 supervisor program in order to reload it when the supervisor controller
 restarts.
+
+#### Name
+
+**wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_load_world(const char *filename)
+bool wb_supervisor_save_world(const char *filename)
+```
 
 #### Description
 
@@ -423,6 +594,16 @@ overwrite silently existing files, so that the corresponding data may be lost.
 > **note**: In the other APIs, the `Robot.saveWorld()` function can be called without
 argument. In this case, a simple save operation is performed.
 
+#### Name
+
+**wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_simulation_reset_physics()
+```
+
 #### Description
 
 The `wb_supervisor_simulation_reset_physics()` function sends a request to the
@@ -439,6 +620,18 @@ robot to its initial position and inertia. To stop the inertia of a single
 Furthermore, this function resets the seed of the random number generator used
 in Webots, so that noise-based simulations can be be reproduced identically
 after calling this function.
+
+#### Name
+
+**wb\_supervisor\_movie\_start\_recording**, **wb\_supervisor\_movie\_stop\_recording**, **wb\_supervisor\_movie\_get\_status** - *export the current simulation into a movie file*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_movie_start_recording(const char *filename, int width, int height, int codec, int quality, int acceleration, bool caption)
+void wb_supervisor_movie_stop_recording()
+int wb_supervisor_movie_get_status()
+```
 
 #### Description
 
@@ -476,6 +669,17 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 | WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR | simulation not started, no movie recorded |
 %%end
 
+#### Name
+
+**wb\_supervisor\_animation\_start\_recording**, **wb\_supervisor\_animation\_stop\_recording** - *export the current simulation into an animation file*
+
+``` c
+#include <webots/supervisor.h>
+
+bool wb_supervisor_animation_start_recording(const char *filename)
+bool wb_supervisor_animation_stop_recording()
+```
+
 #### Description
 
 The `wb_supervisor_animation_start_recording()` function starts saving the
@@ -491,6 +695,18 @@ animation.
 Both `wb_supervisor_animation_start_recording()` and
 `wb_supervisor_animation_stop_recording()` functions are returning a boolean
 indicating their success.
+
+#### Name
+
+**wb\_supervisor\_field\_get\_type**, **wb\_supervisor\_field\_get\_type\_name**, **wb\_supervisor\_field\_get\_count** - *get a handler and more information on a field in a node*
+
+``` c
+#include <webots/supervisor.h>
+
+WbFieldType wb_supervisor_field_get_type(WbFieldRef field)
+const char *wb_supervisor_field_get_type_name(WbFieldRef field)
+int wb_supervisor_field_get_count(WbFieldRef field)
+```
 
 #### Description
 
@@ -516,6 +732,33 @@ function can also be used to test if a field is MF (like `WB_MF_INT32`) or SF
 integers of the `Field` class (for example, Field::SF\_BOOL). These integers can
 be directly compared with the output of the `Field::getType()`
 
+#### Name
+
+**wb\_supervisor\_field\_get\_sf\_bool**, **wb\_supervisor\_field\_get\_sf\_int32**, **wb\_supervisor\_field\_get\_sf\_float**, **wb\_supervisor\_field\_get\_sf\_vec2f**, **wb\_supervisor\_field\_get\_sf\_vec3f**, **wb\_supervisor\_field\_get\_sf\_rotation**, **wb\_supervisor\_field\_get\_sf\_color**, **wb\_supervisor\_field\_get\_sf\_string**, **wb\_supervisor\_field\_get\_sf\_node**, **wb\_supervisor\_field\_get\_mf\_bool**, **wb\_supervisor\_field\_get\_mf\_int32**, **wb\_supervisor\_field\_get\_mf\_float**, **wb\_supervisor\_field\_get\_mf\_vec2f**, **wb\_supervisor\_field\_get\_mf\_vec3f**, **wb\_supervisor\_field\_get\_mf\_rotation**, **wb\_supervisor\_field\_get\_mf\_color**, **wb\_supervisor\_field\_get\_mf\_string**, **wb\_supervisor\_field\_get\_mf\_node** - *get the value of a field*
+
+``` c
+#include <webots/supervisor.h>
+
+bool wb_supervisor_field_get_sf_bool(WbFieldRef field)
+int wb_supervisor_field_get_sf_int32(WbFieldRef field)
+double wb_supervisor_field_get_sf_float(WbFieldRef field)
+const double *wb_supervisor_field_get_sf_vec2f(WbFieldRef sf_field)
+const double *wb_supervisor_field_get_sf_vec3f(WbFieldRef field)
+const double *wb_supervisor_field_get_sf_rotation(WbFieldRef field)
+const double *wb_supervisor_field_get_sf_color(WbFieldRef field)
+const char *wb_supervisor_field_get_sf_string(WbFieldRef field)
+WbNodeRef wb_supervisor_field_get_sf_node(WbFieldRef field)
+bool wb_supervisor_field_get_mf_bool(WbFieldRef field, int index)
+int wb_supervisor_field_get_mf_in32(WbFieldRef field, int index)
+double wb_supervisor_field_get_mf_float(WbFieldRef field, int index)
+const double *wb_supervisor_field_get_mf_vec2f(WbFieldRef field, int index)
+const double *wb_supervisor_field_get_mf_vec3f(WbFieldRef field, int index)
+const double *wb_supervisor_field_get_mf_rotation(WbFieldRef field, int index)
+const double *wb_supervisor_field_get_mf_color(WbFieldRef field, int index)
+const char *wb_supervisor_field_get_mf_string(WbFieldRef field, int index)
+WbNodeRef wb_supervisor_field_get_mf_node(WbFieldRef field, int index)
+```
+
 #### Description
 
 The `wb_supervisor_field_get_sf_*()` functions retrieve the value of a specified
@@ -533,6 +776,31 @@ in the multiple field (MF). The type of the field has to match the name of the
 function used and the index should be comprised between 0 and the total number
 of item minus one, otherwise the return value is undefined (and a warning
 message is displayed).
+
+#### Name
+
+**wb\_supervisor\_field\_set\_sf\_bool**, **wb\_supervisor\_field\_set\_sf\_int32**, **wb\_supervisor\_field\_set\_sf\_float**, **wb\_supervisor\_field\_set\_sf\_vec2f**, **wb\_supervisor\_field\_set\_sf\_vec3f**, **wb\_supervisor\_field\_set\_sf\_rotation**, **wb\_supervisor\_field\_set\_sf\_color**, **wb\_supervisor\_field\_set\_sf\_string**, **wb\_supervisor\_field\_set\_mf\_bool**, **wb\_supervisor\_field\_set\_mf\_int32**, **wb\_supervisor\_field\_set\_mf\_float**, **wb\_supervisor\_field\_set\_mf\_vec2f**, **wb\_supervisor\_field\_set\_mf\_vec3f**, **wb\_supervisor\_field\_set\_mf\_rotation**, **wb\_supervisor\_field\_set\_mf\_color**, **wb\_supervisor\_field\_set\_mf\_string** - *set the value of a field*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_field_set_sf_bool(WbFieldRef field, bool value)
+void wb_supervisor_field_set_sf_int32(WbFieldRef field, int value)
+void wb_supervisor_field_set_sf_float(WbFieldRef field, double value)
+void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values[2])
+void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values[3])
+void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values[4])
+void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values[3])
+void wb_supervisor_field_set_sf_string(WbFieldRef field, const char *value)
+void wb_supervisor_field_set_mf_bool(WbFieldRef field, int index, bool value)
+void wb_supervisor_field_set_mf_int32(WbFieldRef field, int index, int value)
+void wb_supervisor_field_set_mf_float(WbFieldRef field, int index, double value)
+void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values[2])
+void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values[3])
+void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values[4])
+void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values[3])
+void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value)
+```
 
 #### Description
 
@@ -561,6 +829,18 @@ directory, shows how to change a texture from the supervisor while the
 simulation is running. The "soccer.wbt" world, located in the
 "projects/samples/demos/worlds" directory, provides a simple example for getting
 and setting fields with the above described functions.
+
+#### Name
+
+**wb\_supervisor\_field\_import\_mf\_node**, **wb\_supervisor\_field\_import\_mf\_node\_from\_string**, **wb\_supervisor\_field\_remove\_mf\_node** - *import/remove a node into/from an MF\_NODE field (typically a "children" field)*
+
+``` c
+#include <webots/supervisor.h>
+
+void wb_supervisor_field_import_mf_node(WbFieldRef field, int position, const char *filename)
+void wb_supervisor_field_import_mf_node_from_string(WbFieldRef field, int position, const char *node_string)
+void wb_supervisor_field_remove_mf_node(WbFieldRef field, int position)
+```
 
 #### Description
 

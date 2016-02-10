@@ -78,10 +78,33 @@ up. Then, after closing the window, the overlay will be automatically restored.
 
 ### Display Functions
 
+#### Name
+
+**wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
+
+``` c
+#include <webots/display.h>
+
+int wb_display_get_width(WbDeviceTag tag)
+int wb_display_get_height(WbDeviceTag tag)
+```
+
 #### Description
 
 These functions return respectively the values of the `width` and `height`
 fields.
+
+#### Name
+
+**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
+
+``` c
+#include <webots/display.h>
+
+void wb_display_set_color(WbDeviceTag tag, int color)
+void wb_display_set_alpha(WbDeviceTag tag, double alpha)
+void wb_display_set_opacity(WbDeviceTag tag, double opacity)
+```
 
 #### Description
 
@@ -120,6 +143,24 @@ formula.
 vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents
 the magenta color.
+
+#### Name
+
+**wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
+
+``` c
+#include <webots/display.h>
+
+void wb_display_draw_pixel(WbDeviceTag tag, int x, int y)
+void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2)
+void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height)
+void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
+void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
+void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y)
+void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height)
+void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
+void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
+```
 
 #### Description
 
@@ -171,6 +212,21 @@ filled instead of outlined.
 > **note**: The Java, Python and Matlab equivalent of `wb_display_draw_polygon()` and
 `wb_display_fill_polygon()` don't have a `size` argument because in these
 languages the size is determined directly from the `x` and `y` arguments.
+
+#### Name
+
+**wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
+
+``` c
+#include <webots/display.h>
+
+WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format)
+WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename)
+WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height)
+void wb_display_image_paste(WbDeviceTag tag, WbImageRef ir, int x, int y)
+void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename)
+void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir)
+```
 
 #### Description
 

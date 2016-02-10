@@ -448,6 +448,23 @@ millimeter [Sphere](reference/sphere.md#sphere) as dummy `boundingObject`.
 
 ### Servo Functions
 
+#### Name
+
+**wb\_servo\_set\_position**, **wb\_servo\_set\_velocity**, **wb\_servo\_set\_acceleration**, **wb\_servo\_set\_motor\_force**, **wb\_servo\_set\_control\_p**, **wb\_servo\_get\_min\_position**, **wb\_servo\_get\_max\_position** - *change the parameters of the P-controller*
+
+``` c
+#include <webots/servo.h>
+
+void wb_servo_set_position(WbDeviceTag tag, double position)
+double wb_servo_get_target_position(WbDeviceTag tag)
+void wb_servo_set_velocity(WbDeviceTag tag, double velocity)
+void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration)
+void wb_servo_set_motor_force(WbDeviceTag tag, double force)
+void wb_servo_set_control_p(WbDeviceTag tag, double p)
+double wb_servo_get_min_position(WbDeviceTag tag)
+double wb_servo_get_max_position(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_servo_set_position()` function specifies a new target position that the
@@ -527,6 +544,19 @@ specified by the `controlP` field of the corresponding
 The `wb_servo_get_[min|max]_position()` functions allow to get the values of
 respectively the `minPosition` and the `maxPosition` fields.
 
+#### Name
+
+**wb\_servo\_enable\_position**, **wb\_servo\_disable\_position**, **wb\_servo\_get\_position\_sampling\_period**, **wb\_servo\_get\_position** - *get the effective position of a servo*
+
+``` c
+#include <webots/servo.h>
+
+void wb_servo_enable_position(WbDeviceTag tag, int ms)
+void wb_servo_disable_position(WbDeviceTag tag)
+int wb_servo_get_position_sampling_period(WbDeviceTag tag)
+double wb_servo_get_position(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_servo_enable_position()` function activates position measurements for
@@ -547,6 +577,19 @@ the specified servo. After a call to `wb_servo_disable_position()`,
 
 The `wb_servo_get_position_sampling_period()` function returns the period given
 into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
+
+#### Name
+
+**wb\_servo\_enable\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback\_sampling\_period**, **wb\_servo\_disable\_motor\_force\_feedback** - *get the motor force currently used by a servo*
+
+``` c
+#include <webots/servo.h>
+
+void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms)
+void wb_servo_disable_motor_force_feedback(WbDeviceTag tag)
+int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag)
+double wb_servo_get_motor_force_feedback(WbDeviceTag tag)
+```
 
 #### Description
 
@@ -590,6 +633,16 @@ The `wb_servo_get_motor_force_feedback_sampling_period()` function returns the
 period given into the `wb_servo_enable_motor_force_feedback()` function, or 0 if
 the device is disabled.
 
+#### Name
+
+**wb\_servo\_set\_force** - *direct force control*
+
+``` c
+#include <webots/servo.h>
+
+void wb_servo_set_force(WbDeviceTag tag, double force)
+```
+
 #### Description
 
 As an alternative to the P-controller, the `wb_servo_set_force()` function
@@ -619,6 +672,16 @@ It is also possible, for example, to use this function to implement springs or
 dampers with controllable properties. The example in
 "projects/samples/howto/worlds/force\_control.wbt" demonstrates the usage of
 `wb_servo_set_force()` for creating a simple spring and damper system.
+
+#### Name
+
+**wb\_servo\_get\_type** - *get the servo type*
+
+``` c
+#include <webots/servo.h>
+
+int wb_servo_get_type(WbDeviceTag tag)
+```
 
 #### Description
 

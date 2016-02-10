@@ -152,6 +152,20 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 ### TouchSensor Functions
 
+#### Name
+
+**wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
+
+``` c
+#include <webots/touch_sensor.h>
+
+void wb_touch_sensor_enable(WbDeviceTag tag, int ms)
+void wb_touch_sensor_disable(WbDeviceTag tag)
+int wb_touch_sensor_get_sampling_period(WbDeviceTag tag)
+double wb_touch_sensor_get_value(WbDeviceTag tag)
+const double *wb_touch_sensor_get_values(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_touch_sensor_enable()` allows the user to enable a touch sensor measurement
@@ -171,6 +185,16 @@ into the `wb_touch_sensor_enable()` function, or 0 if the device is disabled.
 `wb_touch_sensor_get_values()` returns the last force vector measured by a
 "force-3d" [TouchSensor](reference/touchsensor.md#touchsensor). This function
 can be used with a sensor of type "force-3d" exclusively.
+
+#### Name
+
+**wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
+
+``` c
+#include <webots/touch_sensor.h>
+
+int wb_touch_sensor_get_type(WbDeviceTag tag)
+```
 
 #### Description
 

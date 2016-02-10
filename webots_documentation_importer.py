@@ -470,6 +470,67 @@ class BookParser:
             outFile.write('\n\n')
         outFile.write('\n')
 
+    def readRawText(self, node):
+        text = ''
+        if node.text:
+            text += node.text;
+        for child in node.getchildren():
+            text += self.readRawText(child)
+        if node.tail:
+            text += node.tail
+        return text
+
+    def parseFuncPrototype(self, node, outFile):
+        firstParamDef = True
+        funcdefCounter = 0
+        for child in node.getchildren():
+            if child.tag == 'funcdef':
+                funcdefCounter += 1
+                outFile.write(self.readRawText(child).strip() + '(')
+            elif child.tag == 'paramdef':
+                if firstParamDef:
+                    firstParamDef = False
+                else:
+                    outFile.write(', ')
+                outFile.write(self.readRawText(child).strip())
+            else:
+                raise Exception('Unsupported node ' + child.tag)
+        outFile.write(')\n')
+        if funcdefCounter != 1:
+            raise Exception('Bad number of funcded nodes: ' + funcdefCounter)
+
+    def parseRefEntry(self, node, outFile):
+        for child in node.getchildren():
+            if child.tag == 'refnamediv':
+                indent = 4
+                outFile.write('#' * indent + ' Name\n\n')
+                firstRefName = True
+                for subchild in node.findall('.//refname'):
+                    if firstRefName:
+                        firstRefName = False
+                    else:
+                        outFile.write(', ')
+                    outFile.write('**' + self.parseText(subchild.text, True, False).strip() + '**')
+                for subchild in node.findall('.//refpurpose'):
+                    outFile.write(' - *' + self.parseText(subchild.text, True, False).strip() + '*\n\n')
+            elif child.tag == 'refsynopsisdiv':
+                funcsynopsis = child.findall('./funcsynopsis')
+                if len(funcsynopsis) != 1:
+                    raise Exception("1 funcsynopsis expected")
+                funcsynopsis = funcsynopsis[0]
+
+                outFile.write('``` c\n')
+                for subchild in funcsynopsis.getchildren():
+                    if subchild.tag == 'funcsynopsisinfo':
+                        outFile.write(subchild.text.strip() + '\n\n')
+                    elif subchild.tag == 'funcprototype':
+                        self.parseFuncPrototype(subchild, outFile)
+                    else:
+                        raise Exception('Unsupported node ' + subchild.tag)
+                outFile.write('```\n\n')
+            elif child.tag == 'refsect1':
+                self.parseChapter(child, outFile)
+
     def parseChapter(self, node, outFile):
         for child in node.getchildren():
             if child.tag == 'title':
@@ -497,7 +558,7 @@ class BookParser:
                 self.parseChapter(child, outFile)
                 outFile.close()
                 simplifySpaces(fileName)
-            elif child.tag == 'sect2' or child.tag == 'sect3' or child.tag == 'refentry' or child.tag == 'refsect1':
+            elif child.tag == 'sect2' or child.tag == 'sect3' or child.tag == 'refsect1':
                 self.parseChapter(child, outFile)
             elif child.tag == 'para':
                 self.parsePara(child, outFile)
@@ -531,12 +592,8 @@ class BookParser:
                 pass # TODO
             elif child.tag == 'keywords':
                 pass # TODO
-            elif child.tag == 'refnamediv':
-                pass # TODO
-            elif child.tag == 'refsynopsisdiv':
-                pass # TODO
-            elif child.tag == 'refmeta':
-                pass # TODO
+            elif child.tag == 'refentry':
+                self.parseRefEntry(child, outFile)
             else:
                 raise Exception('Unsupported type: ' + child.tag)
 

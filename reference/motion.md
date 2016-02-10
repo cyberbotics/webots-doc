@@ -1,5 +1,16 @@
 ## Motion
 
+#### Name
+
+**wbu\_motion\_new**, **wbu\_motion\_delete** - *obtaining and releasing a motion file handle*
+
+``` c
+#include <webots/utils/motion.h>
+
+WbMotionRef wbu_motion_new(const char *filename)
+void wbu_motion_delete(WbMotionRef motion)
+```
+
 #### Description
 
 The `wbu_motion_new()` function allows to read a motion file specified by the
@@ -32,6 +43,19 @@ if (! walk->isValid()) {
 #### See also
 
 [wbu\_motion\_play](reference/motion.md)
+
+#### Name
+
+**wbu\_motion\_play**, **wbu\_motion\_stop**, **wbu\_motion\_set\_loop**, **wbu\_motion\_set\_reverse** - *Controlling motion files playback*
+
+``` c
+#include <webots/utils/motion.h>
+
+void wbu_motion_play(WbMotionRef motion)
+void wbu_motion_stop(WbMotionRefmotion)
+void wbu_motion_set_loop(WbMotionRef motion, bool loop)
+void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse)
+```
 
 #### Description
 
@@ -81,6 +105,19 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 #### See also
 
 [wbu\_motion\_new](reference/motion.md)
+
+#### Name
+
+**wbu\_motion\_is\_over**, **wbu\_motion\_get\_duration**, **wbu\_motion\_get\_time**, **wbu\_motion\_set\_time** - *controlling the playback position*
+
+``` c
+#include <webots/utils/motion.h>
+
+bool wbu_motion_is_over(WbMotionRef motion)
+int wbu_motion_get_duration(WbMotionRefmotion)
+int wbu_motion_get_time(WbMotionRef motion, bool loop)
+void wbu_motion_set_time(WbMotionRefmotion, int ms)
+```
 
 #### Description
 

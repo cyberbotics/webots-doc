@@ -19,6 +19,17 @@ a [HingeJoint](reference/hingejoint.md#hingejoint), a
 
 ### Brake Functions
 
+#### Name
+
+**wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
+
+``` c
+#include <webots/brake.h>
+
+void wb_brake_set_damping_constant(WbDeviceTag tag, double damping_constant)
+int wb_brake_get_type(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_brake_set_damping_constant()` sets the value of the dampingConstant

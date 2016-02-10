@@ -78,7 +78,12 @@ difference. Note that each version having a different weight repartition in
 their body, the best contact properties in the simulated world aren't always the
 same. They are currently optimized for the version 5.0 of Nao in the default Nao
 worlds and may not perform as well with previous versions of Nao.
--
+- *degreeOfFreedom* corresponds to the degree of freedom of the real Nao. For
+versions 3.3 and 4.0 of Nao, the supported degreeOfFreedom values are 25 and 21.
+This corresponds to a model respectively with and without articulated fingers.
+We recommend to use articulated fingers only if necessary because of their big
+resource consumption. Version 5.0 does not exist without articulated fingers, so
+the only possible value is 25 in this case.
 
 ### Using motion boxes
 

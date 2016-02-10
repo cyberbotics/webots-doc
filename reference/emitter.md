@@ -89,6 +89,16 @@ order to enable the fastest possible communication; the `type, range` and
 
 ### Emitter Functions
 
+#### Name
+
+**wb\_emitter\_send** - *send a data packet to potential receivers*
+
+``` c
+#include <webots/emitter.h>
+
+int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
+```
+
 #### Description
 
 The `wb_emitter_send()` function adds to the emitters's queue a packet of `size`
@@ -143,6 +153,17 @@ in a C/C++ controller.
 >       System.out.println(e);
 >     }
 
+#### Name
+
+**wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
+
+``` c
+#include <webots/emitter.h>
+
+void wb_emitter_set_channel(WbDeviceTag tag, int channel)
+int wb_emitter_get_channel(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_emitter_set_channel()` function allows the controller to change the
@@ -158,6 +179,17 @@ number of the emitter.
 static integer of the [Emitter](reference/emitter.md#emitter) class
 (Emitter::CHANNEL\_BROADCAST).
 
+#### Name
+
+**wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
+
+``` c
+#include <webots/emitter.h>
+
+void wb_emitter_set_range(WbDeviceTag tag, double range)
+double wb_emitter_get_range(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_emitter_set_range()` function allows the controller to change the
@@ -169,6 +201,16 @@ corresponding [Emitter](reference/emitter.md#emitter) node. If the specified
 to `maxRange`. The `wb_emitter_get_range()` function returns the current
 emitter's range. For both the `wb_emitter_set_range()` and `emitter_get_range()`
 functions, a value of -1 indicates an infinite range.
+
+#### Name
+
+**wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
+
+``` c
+#include <webots/emitter.h>
+
+int wb_emitter_get_buffer_size(WbDeviceTag tag)
+```
 
 #### Description
 

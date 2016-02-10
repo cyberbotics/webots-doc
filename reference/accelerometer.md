@@ -45,6 +45,19 @@ value in the interval (0.0, inf).
 
 ### Accelerometer Functions
 
+#### Name
+
+**wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
+
+``` c
+#include <webots/accelerometer.h>
+
+void wb_accelerometer_enable(WbDeviceTag tag, int ms)
+void wb_accelerometer_disable(WbDeviceTag tag)
+int wb_accelerometer_get_sampling_period(WbDeviceTag tag)
+const double *wb_accelerometer_get_values(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_accelerometer_enable()` function allows the user to enable the

@@ -200,6 +200,19 @@ must be placed in a [Plane](reference/plane.md#plane).
 
 ### DistanceSensor Functions
 
+#### Name
+
+**wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
+
+``` c
+#include <webots/distance_sensor.h>
+
+void wb_distance_sensor_enable(WbDeviceTag tag, int ms)
+void wb_distance_sensor_disable(WbDeviceTag tag)
+int wb_distance_sensor_get_sampling_period(WbDeviceTag tag)
+double wb_distance_sensor_get_value(WbDeviceTag tag)
+```
+
 #### Description
 
 `wb_distance_sensor_enable()` allows the user to enable a distance sensor

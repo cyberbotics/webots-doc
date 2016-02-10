@@ -44,6 +44,19 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### Compass Functions
 
+#### Name
+
+**wb\_compass\_enable**, **wb\_compass\_disable**, **wb\_compass\_get\_sampling\_period**, **wb\_compass\_get\_values** - *enable, disable and read the output values of the compass device*
+
+``` c
+#include <webots/compass.h>
+
+void wb_compass_enable(WbDeviceTag tag, int ms)
+void wb_compass_disable(WbDeviceTag tag)
+const double *wb_compass_get_values(WbDeviceTag tag)
+int wb_compass_get_sampling_period(WbDeviceTag tag)
+```
+
 #### Description
 
 The `wb_compass_enable()` function turns on the

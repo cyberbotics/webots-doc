@@ -28,12 +28,55 @@ def simplifySpaces(filename):
     outFile.write(content)
     outFile.close()
 
+class Reference:
+    refId = ''
+    filename = ''
+    anchor=''
+    kind=''
+
+    def __init__(self, refId, filename='', anchor='', kind=''):
+        if not refId or len(refId) <= 0:
+            raise Exception('Invalid reference refId')
+        self.refId = refId
+        self.filename = filename
+        self.anchor = anchor
+        self.kind = kind
+
+    def __str__(self):
+         return '%s: "%s#%s" (%s)' % (self.refId, self.filename, self.anchor, self.kind)
+
+
+class ReferenceManager:
+    refs = []
+    def addReference(self, ref):
+        if ref.__class__.__name__ == 'Reference':
+            if self.getReferenceById(ref.refId) is not None:
+                raise Exception('Duplicated refIds: ' + ref.refId)
+            self.refs.append(ref)
+        else:
+            raise Exception('ReferenceManager accepts only References')
+
+    def getReferenceById(self, refId):
+        for ref in self.refs:
+            if ref.refId == refId:
+                return ref
+        return None
+
+    def __str__(self):
+        text = 'References:\n'
+        for ref in self.refs:
+            text += ' - %s\n' % (ref)
+        return text
+
+
 class BookParser:
     def __init__(self, webotsDirectoryPath, bookName):
         self.bookName = bookName
         self.root = None
         
         self.outputDirectoryPath = self.bookName + '/'
+
+        self.referenceManager = ReferenceManager()
 
         # recreate the target directory if any
         if os.path.exists(bookName):
@@ -72,6 +115,8 @@ class BookParser:
                          .replace('</step>', '</listitem>')
 
         self.root = ET.fromstring(content)
+
+        print self.referenceManager
 
     def exportToc(self):
         if self.root is None:
@@ -382,6 +427,11 @@ class BookParser:
             
 
     def parseChapter(self, node, outFile):
+        refId = node.attrib.get('id')
+        if refId and node.tag != 'preface':
+            kind = 'chapter' if node.tag == 'chapter' else 'section'
+            ref = Reference(refId, outFile.name, slugify(self.getTitle(node)), kind)
+            self.referenceManager.addReference(ref)
         for child in node.getchildren():
             if child.tag == 'title':
                 title = self.getTitle(child)

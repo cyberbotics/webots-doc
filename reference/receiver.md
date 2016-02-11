@@ -74,6 +74,8 @@ noise is not dependent on the distance between emitter-receiver.
 
 **wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/receiver.h>
 
@@ -97,9 +99,13 @@ listening.
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
+---
+
 #### Name
 
 **wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -159,9 +165,13 @@ used to check how many packets are actually present in the
 [Receiver](reference/receiver.md#receiver)'s queue. Making assumptions based on
 timing will result in code that is not robust.
 
+---
+
 #### Name
 
 **wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -237,9 +247,13 @@ necessary to call `setdatatype()` and `get()`. For example
 > The available types are 'uint8', 'double' and 'string'. More sophisticated data
 typed must be accessed explicitly using `setdatatype()` and `get()`.
 
+---
+
 #### Name
 
 **wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -273,9 +287,13 @@ receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 > **note**: `getEmitterDirection()` returns the vector as a list containing three floats.
 
+---
+
 #### Name
 
 **wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>

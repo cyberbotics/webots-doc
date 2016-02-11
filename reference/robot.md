@@ -179,6 +179,8 @@ over a computer network with an unpredictable delay (like the Internet).
 
 **wb\_robot\_step**, **wb\_robot\_init**, **wb\_robot\_cleanup** - *controller step, initialization and cleanup functions*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/robot.h>
 
@@ -288,9 +290,13 @@ int main() {
 }
 ```
 
+---
+
 #### Name
 
 **wb\_robot\_get\_device** - *get a unique identifier to a device*
+
+{[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -312,9 +318,13 @@ found, the function returns 0.
 
 .
 
+---
+
 #### Name
 
 **Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getTouchSensor** - *get the instance of a robot's device*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}
 
 ``` c
 #include <webots/Robot.hpp>
@@ -353,9 +363,13 @@ Java or the `none` in Python.
 
 .
 
+---
+
 #### Name
 
 **wb\_robot\_get\_device\_by\_index** - *get the devices by introspection*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -397,9 +411,13 @@ for(i=0; i<n_devices; i++) {
 }
 ```
 
+---
+
 #### Name
 
 **wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -427,9 +445,13 @@ The `wb_robot_get_battery_sampling_period()` function returns the period given
 into the `wb_robot_battery_sensor_enable()` function, or 0 if the device is
 disabled.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_basic\_time\_step** - *returns the value of the basicTimeStep field of the WorldInfo node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -442,9 +464,13 @@ double wb_robot_get_basic_time_step()
 This function returns the value of the `basicTimeStep` field of the
 [WorldInfo](reference/worldinfo.md#worldinfo) node.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_mode** - *get operating mode, simulation vs. real robot*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -473,9 +499,13 @@ The integers can be compared to the following enumeration items:
 | WB\_MODE\_REMOTE\_CONTROL | remote control mode |
 %%end
 
+---
+
 #### Name
 
 **wb\_robot\_get\_name** - *return the name defined in the robot node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -499,9 +529,13 @@ names are "b3" for the blue goal keeper and "y3" for the yellow goal keeper,
 whereas the other players are named "b1", "b2", "y1" and "y2"). This sample
 world is located in the "projects/samples/demos/worlds" directory of Webots.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_model** - *return the model defined in the robot node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -517,11 +551,15 @@ world file. The string returned should not be deallocated, as it was allocated
 by the "libController" shared library and will be deallocated when the
 controller terminates.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_data**, **wb\_robot\_set\_data** - *return the data defined in the robot node*
 
  - *set the data defined in the robot node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -538,9 +576,13 @@ field of the robot node.
 The `wb_robot_set_data` function set the string contained in the `data` field of
 the robot node.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_type** - *return the type of the robot node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/nodes.h>
@@ -554,9 +596,13 @@ WbNodeType wb_robot_get_type()
 This function returns the type of the current mode (WB\_NODE\_ROBOT,
 WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
+---
+
 #### Name
 
 **wb\_robot\_get\_project\_path** - *return the full path of the current project*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -572,9 +618,13 @@ others) of the current simulation world. It doesn't include the final directory
 separator char (slash or anti-slash). The returned pointer is a UTF-8 encoded
 char string. It should not be deallocated.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_world\_path** - *return the full path of the current opened world file*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -588,9 +638,13 @@ This function returns the full path of the current opened world. The returned
 pointer is a UTF-8 encoded char string which does include the final ".wbt". It
 should not be deallocated.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_controller\_name**, **wb\_robot\_get\_controller\_arguments** - *return the content of the Robot::controller and Robot::controllerArgs fields*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -604,9 +658,13 @@ const char *wb_robot_get_controller_arguments()
 These functions return the content of respectively the Robot::controller and the
 Robot::controllerArgs fields.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_synchronization** - *return the value of the synchronization field of the Robot node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -619,9 +677,13 @@ bool wb_robot_get_synchronization()
 This function returns the boolean value corresponding to the synchronization
 field of the Robot node.
 
+---
+
 #### Name
 
 **wb\_robot\_get\_time** - *return the current simulation time in seconds*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -635,9 +697,13 @@ This function returns the current simulation time in seconds. This correspond to
 the simulation time displayed in the speedometer located in the main toolbar. It
 does not matter whether the controller is synchronized or not.
 
+---
+
 #### Name
 
 **wb\_robot\_keyboard\_enable**, **wb\_robot\_keyboard\_disable**, **wb\_robot\_keyboard\_get\_key** - *keyboard reading function*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/robot.h>
@@ -690,6 +756,8 @@ example, *Ctrl+B* can be tested like this:
 >     if (key==Robot.KEYBOARD_CONTROL+ord('B')):
 >       print 'Ctrl+B is pressed'
 
+---
+
 #### Name
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
@@ -713,6 +781,8 @@ below) to ensure that such data is not accessed by a different thread.
 #### See also
 
 .
+
+---
 
 #### Name
 
@@ -752,6 +822,8 @@ other threads to lock it.
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.
+
+---
 
 #### Name
 

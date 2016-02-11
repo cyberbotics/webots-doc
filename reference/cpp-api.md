@@ -4,7 +4,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Accelerometer.hpp>  |
+| #include `<`webots/Accelerometer.hpp`>`  |
 |  class [Accelerometer](reference/accelerometer.md#accelerometer) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/accelerometer.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/accelerometer.md)();  |
@@ -14,7 +14,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Brake.hpp>  |
+| #include `<`webots/Brake.hpp`>`  |
 |  class [Brake](reference/brake.md#brake) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; void [setDampingConstant](reference/brake.md)(double dampingConstant) const;  |
 |  &nbsp;&nbsp; int [getType](reference/brake.md)() const;  |
@@ -22,7 +22,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Camera.hpp>  |
+| #include `<`webots/Camera.hpp`>`  |
 |  class [Camera](reference/camera.md#camera) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {COLOR, RANGE\_FINDER, BOTH};  |
 |  &nbsp;&nbsp; virtual void [enable](reference/camera.md)(int ms);  |
@@ -59,7 +59,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Compass.hpp>  |
+| #include `<`webots/Compass.hpp`>`  |
 |  class [Compass](reference/compass.md#compass) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/compass.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/compass.md)();  |
@@ -69,7 +69,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Connector.hpp>  |
+| #include `<`webots/Connector.hpp`>`  |
 |  class [Connector](reference/connector.md#connector) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enablePresence](reference/connector.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disablePresence](reference/connector.md)();  |
@@ -80,7 +80,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Device.hpp>  |
+| #include `<`webots/Device.hpp`>`  |
 |  class [Device](reference/device.md#device) {  |
 |  &nbsp;&nbsp; const std::string &[getModel](reference/device.md)() const;  |
 |  &nbsp;&nbsp; const std::string &[getName](reference/device.md)() const;  |
@@ -89,7 +89,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/DifferentialWheels.hpp>  |
+| #include `<`webots/DifferentialWheels.hpp`>`  |
 |  class [DifferentialWheels](reference/differentialwheels.md#differentialwheels) : public [Robot](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; [DifferentialWheels](reference/robot.md)();  |
 |  &nbsp;&nbsp; virtual [~DifferentialWheels](reference/robot.md)();  |
@@ -108,7 +108,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Display.hpp>  |
+| #include `<`webots/Display.hpp`>`  |
 |  class [Display](reference/display.md#display) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {RGB, RGBA, ARGB, BGRA};  |
 |  &nbsp;&nbsp; int [getWidth](reference/display.md)() const;  |
@@ -135,7 +135,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/DistanceSensor.hpp>  |
+| #include `<`webots/DistanceSensor.hpp`>`  |
 |  class [DistanceSensor](reference/distancesensor.md#distancesensor) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/distancesensor.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/distancesensor.md)();  |
@@ -145,7 +145,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Emitter.hpp>  |
+| #include `<`webots/Emitter.hpp`>`  |
 |  class [Emitter](reference/emitter.md#emitter) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {CHANNEL\_BROADCAST};  |
 |  &nbsp;&nbsp; virtual int [send](reference/emitter.md)(const void *data, int size);  |
@@ -158,7 +158,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Field.hpp>  |
+| #include `<`webots/Field.hpp`>`  |
 |  class Field {  |
 |  &nbsp;&nbsp; enum { SF\_BOOL, SF\_INT32, SF\_FLOAT, SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING, SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, MF\_COLOR, MF\_STRING, MF\_NODE };  |
 |  &nbsp;&nbsp; int [getType](reference/supervisor.md)() const;  |
@@ -205,7 +205,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/GPS.hpp>  |
+| #include `<`webots/GPS.hpp`>`  |
 |  class [GPS](reference/gps.md#gps) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/gps.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/gps.md)();  |
@@ -215,7 +215,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Gyro.hpp>  |
+| #include `<`webots/Gyro.hpp`>`  |
 |  class [Gyro](reference/gyro.md#gyro) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/gyro.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/gyro.md)();  |
@@ -225,13 +225,13 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/ImageRef.hpp>  |
+| #include `<`webots/ImageRef.hpp`>`  |
 |  class ImageRef {  |
 | };  |
 
 | |
 | --- |
-| #include <webots/InertialUnit.hpp>  |
+| #include `<`webots/InertialUnit.hpp`>`  |
 |  class [InertialUnit](reference/inertialunit.md#inertialunit) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/inertialunit.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/inertialunit.md)();  |
@@ -241,7 +241,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/LED.hpp>  |
+| #include `<`webots/LED.hpp`>`  |
 |  class [LED](reference/led.md#led) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [set](reference/led.md)(int value);  |
 |  &nbsp;&nbsp; int [get](reference/led.md)() const;  |
@@ -249,7 +249,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/LightSensor.hpp>  |
+| #include `<`webots/LightSensor.hpp`>`  |
 |  class [LightSensor](reference/lightsensor.md#lightsensor) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [enable](reference/lightsensor.md)(int ms);  |
 |  &nbsp;&nbsp; virtual void [disable](reference/lightsensor.md)();  |
@@ -259,7 +259,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/utils/Motion.hpp>  |
+| #include `<`webots/utils/Motion.hpp`>`  |
 |  class [Motion](reference/motion.md#motion) {  |
 |  &nbsp;&nbsp; [Motion](reference/motion.md)(const std::string &fileName);  |
 |  &nbsp;&nbsp; virtual [~Motion](reference/motion.md)();  |
@@ -276,7 +276,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Motor.hpp>  |
+| #include `<`webots/Motor.hpp`>`  |
 |  class [Motor](reference/motor.md#motor) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {ROTATIONAL, LINEAR};  |
 |  &nbsp;&nbsp; virtual void [setPosition](reference/motor.md)(double position);  |
@@ -310,7 +310,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Node.hpp>  |
+| #include `<`webots/Node.hpp`>`  |
 |  class Node {  |
 |  &nbsp;&nbsp; enum { NO\_NODE, APPEARANCE, BACKGROUND, BOX, COLOR, CONE,  |
 |  &nbsp;&nbsp; COORDINATE, CYLINDER, DIRECTIONAL\_LIGHT, ELEVATION\_GRID,  |
@@ -344,7 +344,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Pen.hpp>  |
+| #include `<`webots/Pen.hpp`>`  |
 |  class [Pen](reference/pen.md#pen) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; virtual void [write](reference/pen.md)(bool write);  |
 |  &nbsp;&nbsp; virtual void [setInkColor](reference/pen.md)(int color, double density);  |
@@ -352,7 +352,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/PositionSensor.hpp>  |
+| #include `<`webots/PositionSensor.hpp`>`  |
 |  class [PositionSensor](reference/positionsensor.md#positionsensor) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {ANGULAR, LINEAR};  |
 |  &nbsp;&nbsp; virtual void [enable](reference/positionsensor.md)(int ms);  |
@@ -364,7 +364,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Receiver.hpp>  |
+| #include `<`webots/Receiver.hpp`>`  |
 |  class [Receiver](reference/receiver.md#receiver) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {CHANNEL\_BROADCAST};  |
 |  &nbsp;&nbsp; virtual void [enable](reference/receiver.md)(int ms);  |
@@ -382,7 +382,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Robot.hpp>  |
+| #include `<`webots/Robot.hpp`>`  |
 |  class [Robot](reference/robot.md#robot) {  |
 |  &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,  |
 |  &nbsp;&nbsp; MODE\_REMOTE\_CONTROL};  |
@@ -443,7 +443,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Servo.hpp>  |
+| #include `<`webots/Servo.hpp`>`  |
 |  class [Servo](reference/servo.md#servo) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {ROTATIONAL, LINEAR};  |
 |  &nbsp;&nbsp; virtual void [setPosition](reference/servo.md)(double position);  |
@@ -468,7 +468,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/Supervisor.hpp>  |
+| #include `<`webots/Supervisor.hpp`>`  |
 |  class [Supervisor](reference/supervisor.md#supervisor) : public [Robot](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR};  |
 |  &nbsp;&nbsp; [Supervisor](reference/robot.md)();  |
@@ -496,7 +496,7 @@ The following tables describe the C++ classes and their methods.
 
 | |
 | --- |
-| #include <webots/TouchSensor.hpp>  |
+| #include `<`webots/TouchSensor.hpp`>`  |
 |  class [TouchSensor](reference/touchsensor.md#touchsensor) : public [Device](reference/cpp-api.md) {  |
 |  &nbsp;&nbsp; enum {BUMPER, FORCE, FORCE3D};  |
 |  &nbsp;&nbsp; virtual void [enable](reference/touchsensor.md)(int ms);  |

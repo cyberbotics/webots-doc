@@ -18,6 +18,8 @@ sensor).
 
 **wb\_device\_get\_model** - *returns the model string of the corresponding device*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/device.h>
 
@@ -33,9 +35,13 @@ This function returns NULL if the WbDeviceTag does not match a valid device, or
 returns an empty string if the device is not a solid device (i.e. does not have
 a `model` field)
 
+---
+
 #### Name
 
 **wb\_device\_get\_name** - *convert WbDeviceTag to its corresponding device name*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/device.h>
@@ -50,9 +56,13 @@ corresponding name.
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
 
+---
+
 #### Name
 
 **wb\_device\_get\_node\_type** - *convert WbDeviceTag to its corresponding WbNodeType*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/device.h>

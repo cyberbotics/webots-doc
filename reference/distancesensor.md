@@ -204,6 +204,8 @@ must be placed in a [Plane](reference/plane.md#plane).
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/distance_sensor.h>
 

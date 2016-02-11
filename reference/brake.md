@@ -23,6 +23,8 @@ a [HingeJoint](reference/hingejoint.md#hingejoint), a
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/brake.h>
 

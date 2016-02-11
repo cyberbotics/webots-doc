@@ -143,6 +143,8 @@ will keep its initial elevation throughout the simulation.
 
 **wb\_differential\_wheels\_set\_speed** - *control the speed of the robot*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/differential_wheels.h>
 
@@ -171,9 +173,13 @@ The `wb_differential_wheels_get_left_speed` and
 speed commands given as an argument of the `wb_differential_wheels_set_speed`
 function.
 
+---
+
 #### Name
 
 **wb\_differential\_wheels\_enable\_encoders**, **wb\_differential\_wheels\_disable\_encoders**, **wb\_differential\_wheels\_get\_encoders\_sampling\_period** - *enable or disable the incremental encoders of the robot wheels*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -213,9 +219,13 @@ The `wb_differential_wheels_get_encoders_sampling_period()` function returns the
 period given into the `wb_differential_wheels_enable_encoders()` function, or 0
 if the device is disabled.
 
+---
+
 #### Name
 
 **wb\_differential\_wheels\_get\_left\_encoder**, **wb\_differential\_wheels\_get\_right\_encoder**, **wb\_differential\_wheels\_set\_encoders** - *read or set the encoders of the robot wheels*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -236,9 +246,13 @@ should be positive. Setting the encoders' values will not make the wheels rotate
 to reach the specified value; instead, it will simply reset the encoders with
 the specified value.
 
+---
+
 #### Name
 
 **wb\_differential\_wheels\_get\_max\_speed** - *get the value of the maxSpeed field*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -252,9 +266,13 @@ The `wb_differential_wheels_get_max_speed` function allows the user to get the
 value of the `maxSpeed` field of the
 [DifferentialWheels](reference/differentialwheels.md#differentialwheels) node.
 
+---
+
 #### Name
 
 **wb\_differential\_wheels\_get\_speed\_unit** - *get the value of the speedUnit field*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>

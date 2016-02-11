@@ -156,6 +156,8 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 **wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/touch_sensor.h>
 
@@ -186,9 +188,13 @@ into the `wb_touch_sensor_enable()` function, or 0 if the device is disabled.
 "force-3d" [TouchSensor](reference/touchsensor.md#touchsensor). This function
 can be used with a sensor of type "force-3d" exclusively.
 
+---
+
 #### Name
 
 **wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/touch_sensor.h>

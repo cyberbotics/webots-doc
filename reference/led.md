@@ -46,6 +46,8 @@ between 0 (off) and 255 (maximum intensity).
 
 **wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/led.h>
 

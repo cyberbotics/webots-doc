@@ -82,6 +82,8 @@ up. Then, after closing the window, the overlay will be automatically restored.
 
 **wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/display.h>
 
@@ -94,9 +96,13 @@ int wb_display_get_height(WbDeviceTag tag)
 These functions return respectively the values of the `width` and `height`
 fields.
 
+---
+
 #### Name
 
 **wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/display.h>
@@ -144,9 +150,13 @@ vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents
 the magenta color.
 
+---
+
 #### Name
 
 **wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/display.h>
@@ -213,9 +223,13 @@ filled instead of outlined.
 `wb_display_fill_polygon()` don't have a `size` argument because in these
 languages the size is determined directly from the `x` and `y` arguments.
 
+---
+
 #### Name
 
 **wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/display.h>

@@ -49,6 +49,8 @@ value in the interval (0.0, inf).
 
 **wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/accelerometer.h>
 

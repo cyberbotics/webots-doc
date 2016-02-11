@@ -220,7 +220,7 @@ class BookParser:
 
         return text
 
-    def parseText(self, txt, protect, removeTrailingSpaces):
+    def parseText(self, txt, protectUnderScores, protectAngleBracket, removeTrailingSpaces):
         if txt is None:
             return ''
         output = txt.encode('utf-8')
@@ -229,8 +229,13 @@ class BookParser:
         if m:
           print m.group(0)
 
-        if protect:
+        if protectUnderScores:
             output = output.replace('_', '\\_')
+
+        if protectAngleBracket:
+            output = output.replace('<', '`<`')
+            output = output.replace('>', '`>`')
+
         if removeTrailingSpaces:
             output = re.sub(r'[ \t]*\n', '\n', output)
             output = re.sub(r'[ \t]*$', '', output)
@@ -258,21 +263,21 @@ class BookParser:
         #     ulink, xref
         text = ''
         if node.text:
-            text += self.parseText(node.text, True, False)
+            text += self.parseText(node.text, True, mergeCarriageReturns, False)
         for child in node.getchildren():
             if child.text:
                 if child.tag == 'bold':
-                    text += '**' + self.parseText(child.text, True, False) + '**'
+                    text += '**' + self.parseText(child.text, True, False, False) + '**'
                 elif child.tag == 'email':
-                    text += '[' + self.parseText(child.text, True, False) + '](mailto:' + self.parseText(child.text, True, False) + ')'
+                    text += '[' + self.parseText(child.text, True, False, False) + '](mailto:' + self.parseText(child.text, True, False, False) + ')'
                 elif child.tag == 'emphasis':
-                    text += '*' + self.parseText(child.text, True, False) + '*'
+                    text += '*' + self.parseText(child.text, True, False, False) + '*'
                 elif child.tag == 'filename':
-                    text += '"' + self.parseText(child.text, True, False) + '"'
+                    text += '"' + self.parseText(child.text, True, False, False) + '"'
                 elif child.tag == 'trademark':
-                    text += '*' + self.parseText(child.text, True, False) + '*^(TM)'
+                    text += '*' + self.parseText(child.text, True, False, False) + '*^(TM)'
                 elif child.tag == 'ulink':
-                    text += '[' + self.parseText(child.text, True, False) + '](' + child.attrib.get('url') + ')'
+                    text += '[' + self.parseText(child.text, True, False, False) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'xref':
                     linkend = child.attrib.get('linkend')
                     if linkend is None:
@@ -280,7 +285,7 @@ class BookParser:
                     ref = self.referenceManager.getReferenceById(linkend)
                     if ref is None:
                         raise Exception('reference to "' + linkend + '" is undefined')
-                    text += '[%s](%s)' % (self.parseText(child.text, True, False), ref.getUrl())
+                    text += '[%s](%s)' % (self.parseText(child.text, True, False, False), ref.getUrl())
                 elif child.tag == 'programlisting':
                     # flush text
                     text = self.formatText(text)
@@ -300,12 +305,12 @@ class BookParser:
                         self.parseProgramListing(child, outFile)
                     outFile.write('\n\n')
                 else:
-                    text += '`' + self.parseText(child.text, False, False) + '`'
+                    text += '`' + self.parseText(child.text, False, False, False) + '`'
             else: # not a text tag
                 if child.tag == 'space':
                     text += '&nbsp;'
-            text += self.parseText(child.tail, True, False)
-        text += self.parseText(node.tail, True, False)
+            text += self.parseText(child.tail, True, mergeCarriageReturns, False)
+        text += self.parseText(node.tail, True, mergeCarriageReturns, False)
 
         if mergeCarriageReturns:
             text = re.sub(r'\n', ' ', text)
@@ -340,7 +345,7 @@ class BookParser:
                     output += ' matlab'
             output += '\n'
 
-        text = self.parseText(node.text, False, True)
+        text = self.parseText(node.text, False, False, True)
         content = text.split('\n')
         for i in range(0, len(content)):
             line = content[i]
@@ -500,6 +505,13 @@ class BookParser:
             raise Exception('Bad number of funcded nodes: ' + funcdefCounter)
 
     def parseRefEntry(self, node, outFile):
+        languageTags = [
+            ('cpp_id', 'C++'),
+            ('java_id', 'Java'),
+            ('python_id', 'Python'),
+            ('matlab_id', 'Matlab'),
+            ('ros_id', 'ROS')
+        ]
         for child in node.getchildren():
             if child.tag == 'refnamediv':
                 indent = 4
@@ -510,10 +522,25 @@ class BookParser:
                         firstRefName = False
                     else:
                         outFile.write(', ')
-                    outFile.write('**' + self.parseText(subchild.text, True, False).strip() + '**')
+                    outFile.write('**' + self.parseText(subchild.text, True, False, False).strip() + '**')
                 for subchild in node.findall('.//refpurpose'):
-                    outFile.write(' - *' + self.parseText(subchild.text, True, False).strip() + '*\n\n')
+                    outFile.write(' - *' + self.parseText(subchild.text, True, False, False).strip() + '*\n\n')
             elif child.tag == 'refsynopsisdiv':
+                firstTag = True
+                for (tag, tagName) in languageTags:
+                    tagValue = child.attrib.get(tag)
+                    if tagValue and len(tagValue) > 0:
+                        ref = self.referenceManager.getReferenceById(tagValue)
+                        if ref:
+                            # print tagValue, ref
+                            if firstTag:
+                                firstTag = False
+                            else:
+                                outFile.write(', ')
+                            outFile.write('{[%s](%s)}' % (tagName, ref.getUrl()))
+                if not firstTag:
+                    outFile.write('\n\n')
+
                 funcsynopsis = child.findall('./funcsynopsis')
                 if len(funcsynopsis) != 1:
                     raise Exception("1 funcsynopsis expected")
@@ -535,6 +562,7 @@ class BookParser:
         outFile.write('**Keywords**: ' + self.readRawText(node).strip() + '\n')
 
     def parseChapter(self, node, outFile):
+        firstRefEntry = True
         for child in node.getchildren():
             if child.tag == 'title':
                 title = self.getTitle(child)
@@ -596,6 +624,10 @@ class BookParser:
             elif child.tag == 'keywords':
                 self.parseKeywords(child, outFile)
             elif child.tag == 'refentry':
+                if firstRefEntry:
+                    firstRefEntry = False
+                else:
+                    outFile.write('---\n\n')
                 self.parseRefEntry(child, outFile)
             else:
                 raise Exception('Unsupported type: ' + child.tag)

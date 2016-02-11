@@ -93,6 +93,8 @@ order to enable the fastest possible communication; the `type, range` and
 
 **wb\_emitter\_send** - *send a data packet to potential receivers*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/emitter.h>
 
@@ -153,9 +155,13 @@ in a C/C++ controller.
 >       System.out.println(e);
 >     }
 
+---
+
 #### Name
 
 **wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/emitter.h>
@@ -179,9 +185,13 @@ number of the emitter.
 static integer of the [Emitter](reference/emitter.md#emitter) class
 (Emitter::CHANNEL\_BROADCAST).
 
+---
+
 #### Name
 
 **wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/emitter.h>
@@ -202,9 +212,13 @@ to `maxRange`. The `wb_emitter_get_range()` function returns the current
 emitter's range. For both the `wb_emitter_set_range()` and `emitter_get_range()`
 functions, a value of -1 indicates an infinite range.
 
+---
+
 #### Name
 
 **wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/emitter.h>

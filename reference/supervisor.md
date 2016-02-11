@@ -42,6 +42,8 @@ As for a regular [Robot](reference/robot.md#robot) controller, the
 **wb\_supervisor\_export\_image** - *save the current 3D image of the simulator into a JPEG file, suitable for
     building a webcam system*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/supervisor.h>
 
@@ -66,9 +68,13 @@ how to use the `wb_supervisor_export_image()` function. In this example, the
 [Supervisor](reference/supervisor.md#supervisor) controller takes a snapshot
 image each time a goal is scored.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -127,9 +133,13 @@ The `wb_supervisor_node_get_self()` function returns a handle to the
 controller is run. This is a utility function that simplifies the task of
 retrieving the base node without having to define a DEF name for it.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_type**, **wb\_supervisor\_node\_get\_type\_name**, **wb\_supervisor\_node\_get\_base\_type\_name** - *get information on a specified node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -165,9 +175,13 @@ NULL.
 integers of the `Node` class (for example, Node::DIFFERENTIAL\_WHEELS). These
 integers can be directly compared with the output of the `Node::getType()`
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_remove** - *Remove a specified node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -180,9 +194,13 @@ void wb_supervisor_node_remove(WbNodeRef node)
 The `wb_supervisor_node_remove()` function removes the node specified as an
 argument from the Webots scene tree.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_field** - *get a field reference from a node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -198,9 +216,13 @@ belongs to. It can be a single field (SF) or a multiple field (MF). If no such
 field name exist for the specified node, the return value is NULL. Otherwise, it
 returns a handler to a field.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_position**, **wb\_supervisor\_node\_get\_orientation** - *get the global (world) position/orientation of a node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -258,9 +280,13 @@ use these functions to do this.
 > **note**: The returned pointers are valid during one time step only as memory will be
 deallocated at the next time step.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_center\_of\_mass** - *get the global position of a solid's center of mass*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -283,9 +309,13 @@ The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 > **note**: The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_contact\_point** - *get the contact point with given index in the contact point list of the given solid.*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -313,9 +343,13 @@ shows how to use this function.
 > **note**: The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_number\_of\_contact\_points** - *get the number of contact points of the given solid*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -334,9 +368,13 @@ return `-1`.
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_static\_balance** - *return the boolean value of the static balance test based on the support polygon of a solid*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -355,9 +393,13 @@ hull of the solid's contact points projected onto a plane that is orthognal to
 the gravity direction. The test consists in checking whether the projection of
 the center of mass onto this plane lies inside or outside the support polygon.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_get\_velocity**, **wb\_supervisor\_node\_set\_velocity** - *get/set the angular and linear velocities of a Solid node.*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -384,9 +426,13 @@ argument must be a vector containing exactly 6 values. The first three are
 respectively the linear velocities in the x, y and z direction. The last three
 are respectively the angular velocities around the x, y and z axes.
 
+---
+
 #### Name
 
 **wb\_supervisor\_node\_reset\_physics** - *stops the inertia of the given solid*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -405,9 +451,13 @@ a derived node). This function could be useful for resetting the physics of a
 solid after changing its translation or rotation. To stop the inertia of all
 available solids please refer to .
 
+---
+
 #### Name
 
 **wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -464,9 +514,13 @@ be a vector containing the three RGB components: `[RED GREEN BLUE]`. Each
 component must be a value between 0.0 and 1.0. For example the vector `[1 0 1]`
 represents the magenta color.
 
+---
+
 #### Name
 
 **wb\_supervisor\_simulation\_quit** - *terminate the simulator and controller processes*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -544,9 +598,13 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+---
+
 #### Name
 
 **wb\_supervisor\_simulation\_revert** - *reload the current world*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -563,9 +621,13 @@ are terminated and restarted. You may wish to save some data in a file from your
 supervisor program in order to reload it when the supervisor controller
 restarts.
 
+---
+
 #### Name
 
 **wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -594,9 +656,13 @@ overwrite silently existing files, so that the corresponding data may be lost.
 > **note**: In the other APIs, the `Robot.saveWorld()` function can be called without
 argument. In this case, a simple save operation is performed.
 
+---
+
 #### Name
 
 **wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -621,9 +687,13 @@ Furthermore, this function resets the seed of the random number generator used
 in Webots, so that noise-based simulations can be be reproduced identically
 after calling this function.
 
+---
+
 #### Name
 
 **wb\_supervisor\_movie\_start\_recording**, **wb\_supervisor\_movie\_stop\_recording**, **wb\_supervisor\_movie\_get\_status** - *export the current simulation into a movie file*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -669,9 +739,13 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 | WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR | simulation not started, no movie recorded |
 %%end
 
+---
+
 #### Name
 
 **wb\_supervisor\_animation\_start\_recording**, **wb\_supervisor\_animation\_stop\_recording** - *export the current simulation into an animation file*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -696,9 +770,13 @@ Both `wb_supervisor_animation_start_recording()` and
 `wb_supervisor_animation_stop_recording()` functions are returning a boolean
 indicating their success.
 
+---
+
 #### Name
 
 **wb\_supervisor\_field\_get\_type**, **wb\_supervisor\_field\_get\_type\_name**, **wb\_supervisor\_field\_get\_count** - *get a handler and more information on a field in a node*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -732,9 +810,13 @@ function can also be used to test if a field is MF (like `WB_MF_INT32`) or SF
 integers of the `Field` class (for example, Field::SF\_BOOL). These integers can
 be directly compared with the output of the `Field::getType()`
 
+---
+
 #### Name
 
 **wb\_supervisor\_field\_get\_sf\_bool**, **wb\_supervisor\_field\_get\_sf\_int32**, **wb\_supervisor\_field\_get\_sf\_float**, **wb\_supervisor\_field\_get\_sf\_vec2f**, **wb\_supervisor\_field\_get\_sf\_vec3f**, **wb\_supervisor\_field\_get\_sf\_rotation**, **wb\_supervisor\_field\_get\_sf\_color**, **wb\_supervisor\_field\_get\_sf\_string**, **wb\_supervisor\_field\_get\_sf\_node**, **wb\_supervisor\_field\_get\_mf\_bool**, **wb\_supervisor\_field\_get\_mf\_int32**, **wb\_supervisor\_field\_get\_mf\_float**, **wb\_supervisor\_field\_get\_mf\_vec2f**, **wb\_supervisor\_field\_get\_mf\_vec3f**, **wb\_supervisor\_field\_get\_mf\_rotation**, **wb\_supervisor\_field\_get\_mf\_color**, **wb\_supervisor\_field\_get\_mf\_string**, **wb\_supervisor\_field\_get\_mf\_node** - *get the value of a field*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -777,9 +859,13 @@ function used and the index should be comprised between 0 and the total number
 of item minus one, otherwise the return value is undefined (and a warning
 message is displayed).
 
+---
+
 #### Name
 
 **wb\_supervisor\_field\_set\_sf\_bool**, **wb\_supervisor\_field\_set\_sf\_int32**, **wb\_supervisor\_field\_set\_sf\_float**, **wb\_supervisor\_field\_set\_sf\_vec2f**, **wb\_supervisor\_field\_set\_sf\_vec3f**, **wb\_supervisor\_field\_set\_sf\_rotation**, **wb\_supervisor\_field\_set\_sf\_color**, **wb\_supervisor\_field\_set\_sf\_string**, **wb\_supervisor\_field\_set\_mf\_bool**, **wb\_supervisor\_field\_set\_mf\_int32**, **wb\_supervisor\_field\_set\_mf\_float**, **wb\_supervisor\_field\_set\_mf\_vec2f**, **wb\_supervisor\_field\_set\_mf\_vec3f**, **wb\_supervisor\_field\_set\_mf\_rotation**, **wb\_supervisor\_field\_set\_mf\_color**, **wb\_supervisor\_field\_set\_mf\_string** - *set the value of a field*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -830,9 +916,13 @@ simulation is running. The "soccer.wbt" world, located in the
 "projects/samples/demos/worlds" directory, provides a simple example for getting
 and setting fields with the above described functions.
 
+---
+
 #### Name
 
 **wb\_supervisor\_field\_import\_mf\_node**, **wb\_supervisor\_field\_import\_mf\_node\_from\_string**, **wb\_supervisor\_field\_remove\_mf\_node** - *import/remove a node into/from an MF\_NODE field (typically a "children" field)*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/supervisor.h>

@@ -269,6 +269,8 @@ up. Then, after closing the window, the overlay will be automatically restored.
 
 **wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/camera.h>
 
@@ -287,9 +289,13 @@ milliseconds.
 The `wb_camera_get_sampling_period()` function returns the period given into the
 `wb_camera_enable()` function, or 0 if the device is disabled.
 
+---
+
 #### Name
 
 **wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -312,9 +318,13 @@ view are defined in this [CameraZoom](reference/camerazoom.md#camerazoom) node,
 if the zoom is not defined, then the functions `wb_camera_get_min_fov()` and
 `wb_camera_get_max_fov()` will return the camera's field of view.
 
+---
+
 #### Name
 
 **wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -334,9 +344,13 @@ Note that if the camera device has no
 field, it is not possible to call `wb_camera_set_focal_distance()` and the other
 functions will return 0.
 
+---
+
 #### Name
 
 **wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -350,9 +364,13 @@ int wb_camera_get_height(WbDeviceTag tag)
 These functions return the width and height of a camera image as defined in the
 corresponding [Camera](reference/camera.md#camera) node.
 
+---
+
 #### Name
 
 **wb\_camera\_get\_near** - *get the near parameter of the camera device*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -365,9 +383,13 @@ double wb_camera_get_near(WbDeviceTag tag)
 This function returns the near parameter of a camera device as defined in the
 corresponding [Camera](reference/camera.md#camera) node.
 
+---
+
 #### Name
 
 **wb\_camera\_get\_type** - *get the type of the camera*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -392,9 +414,13 @@ defined in "camera.h" are summarized in :
 integers of the [Camera](reference/camera.md#camera) class (for example,
 Camera::COLOR).
 
+---
+
 #### Name
 
 **wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -507,9 +533,13 @@ the OpenGL z-buffer.
 >     drawnow;
 >     distance = min(min(image))% distance to the closest point seen by the camera
 
+---
+
 #### Name
 
 **wb\_camera\_get\_range\_image**, **wb\_camera\_range\_image\_get\_depth**, **wb\_camera\_get\_max\_range** - *get the range image and range data from a range-finder camera*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -553,9 +583,13 @@ field.
 `getRangeImageArray()` returns a two-dimensional list of floats. Their content
 are identical but their handling is of course different.
 
+---
+
 #### Name
 
 **wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/camera.h>

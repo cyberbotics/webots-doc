@@ -200,6 +200,8 @@ node to the [Connector](reference/connector.md#connector) itself.
 
 **wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/connector.h>
 
@@ -250,9 +252,13 @@ axis_aligned     := the angle between the z-axes < tolerance
 rotation_aligned := the n-ways rotational angle is within tolerance
 ```
 
+---
+
 #### Name
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/connector.h>

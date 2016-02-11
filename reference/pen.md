@@ -77,6 +77,8 @@ function.
 
 **wb\_pen\_write** - *enable or disable pen writing*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/pen.h>
 
@@ -89,9 +91,13 @@ void wb_pen_write(WbDeviceTag tag, bool write)
 enable writing. If the `write` parameter is *true*, the specified `tag` device
 will write; if `write` is *false*, it won't.
 
+---
+
 #### Name
 
 **wb\_pen\_set\_ink\_color** - *change the color of a pen's ink*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/pen.h>

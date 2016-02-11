@@ -452,6 +452,8 @@ millimeter [Sphere](reference/sphere.md#sphere) as dummy `boundingObject`.
 
 **wb\_servo\_set\_position**, **wb\_servo\_set\_velocity**, **wb\_servo\_set\_acceleration**, **wb\_servo\_set\_motor\_force**, **wb\_servo\_set\_control\_p**, **wb\_servo\_get\_min\_position**, **wb\_servo\_get\_max\_position** - *change the parameters of the P-controller*
 
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+
 ``` c
 #include <webots/servo.h>
 
@@ -544,9 +546,13 @@ specified by the `controlP` field of the corresponding
 The `wb_servo_get_[min|max]_position()` functions allow to get the values of
 respectively the `minPosition` and the `maxPosition` fields.
 
+---
+
 #### Name
 
 **wb\_servo\_enable\_position**, **wb\_servo\_disable\_position**, **wb\_servo\_get\_position\_sampling\_period**, **wb\_servo\_get\_position** - *get the effective position of a servo*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -578,9 +584,13 @@ the specified servo. After a call to `wb_servo_disable_position()`,
 The `wb_servo_get_position_sampling_period()` function returns the period given
 into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
+---
+
 #### Name
 
 **wb\_servo\_enable\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback\_sampling\_period**, **wb\_servo\_disable\_motor\_force\_feedback** - *get the motor force currently used by a servo*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -633,9 +643,13 @@ The `wb_servo_get_motor_force_feedback_sampling_period()` function returns the
 period given into the `wb_servo_enable_motor_force_feedback()` function, or 0 if
 the device is disabled.
 
+---
+
 #### Name
 
 **wb\_servo\_set\_force** - *direct force control*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -673,9 +687,13 @@ dampers with controllable properties. The example in
 "projects/samples/howto/worlds/force\_control.wbt" demonstrates the usage of
 `wb_servo_set_force()` for creating a simple spring and damper system.
 
+---
+
 #### Name
 
 **wb\_servo\_get\_type** - *get the servo type*
+
+{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>

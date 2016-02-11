@@ -458,7 +458,22 @@ class BookParser:
         outFile.write('\n')
 
     def parseIconPara(self, node, outFile, indent=0):
-        outFile.write(' ' * indent + '> **' + node.tag + '**: ')
+        outFile.write(' ' * indent + '> **' + node.tag + '**')
+
+        languageTags = {'c': 'C', 'C': 'C++', 'J': 'Java', 'm': 'Matlab', 'M': 'Matlab', 'P': 'Python', 'R': 'Ros'}
+        lang = node.attrib.get('lang')
+        if lang:
+            outFile.write(' [')
+            firstLang = True
+            for l in lang:
+                if firstLang:
+                    firstLang = False
+                else:
+                    outFile.write(', ')
+                outFile.write(languageTags[l])
+                
+            outFile.write(']')
+        outFile.write(': ')
 
         firstItem = True
         for child in node.getchildren():

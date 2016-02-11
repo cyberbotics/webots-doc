@@ -132,7 +132,7 @@ double array[5] = { 3.0, x, y, -1/z, -5.5 };
 wb_emitter_send(tag, array, 5 * sizeof(double));
 ```
 
-> **note**: The `send()` function sends a string. For sending primitive data types into this
+> **note** [Python]: The `send()` function sends a string. For sending primitive data types into this
 string, the *struct* module can be used. This module performs conversions
 between Python values and C structs represented as Python strings. Here is an
 example:
@@ -142,7 +142,7 @@ example:
 >     message = struct.pack("chd","a",45,120.08)
 >     emitter.send(message)
 
-> **note**: The Java `send()` method does not have a `size` argument because the size is
+> **note** [Java]: The Java `send()` method does not have a `size` argument because the size is
 implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received
 in a C/C++ controller.
@@ -181,7 +181,7 @@ switching the channel number an emitter can selectively send data to different
 receivers. The `wb_emitter_get_channel()` function returns the current channel
 number of the emitter.
 
-> **note**: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
+> **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
 static integer of the [Emitter](reference/emitter.md#emitter) class
 (Emitter::CHANNEL\_BROADCAST).
 

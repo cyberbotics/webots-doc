@@ -507,13 +507,13 @@ wb_servo_set_position(tag, INFINITY);
 wb_servo_set_velocity(tag, desired_speed);  // rad/s
 ```
 
-> **note**: In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
+> **note** [C++]: In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
 
-> **note**: In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
+> **note** [Java]: In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
 
-> **note**: In Python use `float('+inf')` instead of INFINITY
+> **note** [Python]: In Python use `float('+inf')` instead of INFINITY
 
-> **note**: In MATLAB use `inf` instead of INFINITY
+> **note** [Matlab]: In MATLAB use `inf` instead of INFINITY
 
 The `wb_servo_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_servo_set_position()`

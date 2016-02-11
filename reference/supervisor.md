@@ -28,7 +28,7 @@ world, opening a new world, or closing Webots. In this case the output will be a
 NULL pointer or a default value. For functions returning a string, an empty
 string is returned instead of a NULL pointer.
 
-> **note**: It is a good practice to check for a NULL pointer after calling a
+> **note** [C++, Java, Python]: It is a good practice to check for a NULL pointer after calling a
 [Supervisor](reference/supervisor.md#supervisor) function.
 
 ### Supervisor Functions
@@ -171,7 +171,7 @@ corresponding to the base type name of the node, like "DifferentialWheels",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
 NULL.
 
-> **note**: In the oriented-object APIs, the WB\_NODE\_* constants are available as static
+> **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_NODE\_* constants are available as static
 integers of the `Node` class (for example, Node::DIFFERENTIAL\_WHEELS). These
 integers can be directly compared with the output of the `Node::getType()`
 
@@ -509,7 +509,7 @@ will display the label "hello Webots" in semi-transparent green, just below.
 will change the label "hello world" defined earlier into "hello universe", using
 a yellow color for the new text.
 
-> **note**: In the Matlab version of `wb_supervisor_set_label()` the `color` argument must
+> **note** [Matlab]: In the Matlab version of `wb_supervisor_set_label()` the `color` argument must
 be a vector containing the three RGB components: `[RED GREEN BLUE]`. Each
 component must be a value between 0.0 and 1.0. For example the vector `[1 0 1]`
 represents the magenta color.
@@ -653,7 +653,7 @@ path is used instead (e.g., a simple save operation). The boolean return value
 indicates the success of the save operation. Be aware that this function can
 overwrite silently existing files, so that the corresponding data may be lost.
 
-> **note**: In the other APIs, the `Robot.saveWorld()` function can be called without
+> **note** [C++, Java, Python, Matlab]: In the other APIs, the `Robot.saveWorld()` function can be called without
 argument. In this case, a simple save operation is performed.
 
 ---
@@ -806,7 +806,7 @@ NULL is passed as an argument to this function, it returns -1. Hence, this
 function can also be used to test if a field is MF (like `WB_MF_INT32`) or SF
 (like `WB_SF_BOOL`).
 
-> **note**: In the oriented-object APIs, the WB\_*F\_* constants are available as static
+> **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_*F\_* constants are available as static
 integers of the `Field` class (for example, Field::SF\_BOOL). These integers can
 be directly compared with the output of the `Field::getType()`
 

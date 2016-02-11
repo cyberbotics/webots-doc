@@ -130,11 +130,11 @@ with the north direction, it is π/2 when the unit is heading east, and -π/2
 when the unit is oriented towards the west. The *yaw* angle can be used as a
 compass.
 
-> **note**: The returned vector is a pointer to internal values managed by the Webots,
+> **note** [C, C++]: The returned vector is a pointer to internal values managed by the Webots,
 therefore it is illegal to free this pointer. Furthermore, note that the pointed
 values are only valid until the next call to `wb_robot_step()` or
 `Robot::step()`. If these values are needed for a longer period they must be
 copied.
 
-> **note**: `getRollPitchYaw()` returns the angles as a list containing three floats.
+> **note** [Python]: `getRollPitchYaw()` returns the angles as a list containing three floats.
 

@@ -79,11 +79,11 @@ therefore only the indices 0, 1, and 2 are valid for accessing the vector. The
 returned vector indicates the absolute position of the
 [GPS](reference/gps.md#gps) device.
 
-> **note**: The returned vector is a pointer to the internal values managed by the
+> **note** [C, C++]: The returned vector is a pointer to the internal values managed by the
 [GPS](reference/gps.md#gps) node, therefore it is illegal to free this pointer.
 Furthermore, note that the pointed values are only valid until the next call to
 `wb_robot_step()` or `Robot::step()`. If these values are needed for a longer
 period they must be copied.
 
-> **note**: `getValues()` returns the 3D-vector as a list containing three floats.
+> **note** [Python]: `getValues()` returns the 3D-vector as a list containing three floats.
 

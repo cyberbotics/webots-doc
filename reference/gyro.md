@@ -79,5 +79,7 @@ pointer. Furthermore, note that the pointed values are only valid until the next
 call to `wb_robot_step()` or `Robot::step()`. If these values are needed for a
 longer period they must be copied.
 
+<!-- -->
+
 > **note** [Python]: `getValues()` returns the vector as a list containing three floats.
 

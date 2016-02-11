@@ -50,16 +50,24 @@ the volume of the bounding objects, and the product gives the total mass of the
 solid. A density of 1000 [kg/m^3] corresponds to the density of water (default
 value).
 
+<!-- -->
+
 > **handson**: Set the mass of the dumbbell to *2* [kg]. The density is not used and should be
 set to *-1*.
+
+<!-- -->
 
 > **theory**: By default, the **center of mass** of a Solid node is set at its origin (defined
 by the translation field of the solid). The center of mass can be modified using
 the `centerOfMass` field of the Physics node. The center of mass is specified
 relatively to the origin of the Solid.
 
+<!-- -->
+
 > **handson**: Let's say that one of the weights is heavier than the other one. Move the center
 of mass of the dumbbell of *0.01* [m] along the *y*-axis.
+
+<!-- -->
 
 > **note**: Note that when the solid is selected, the center of mass is represented in the
 3D view by a coordinate system which is darker than the coordinate system
@@ -74,6 +82,8 @@ components are a unit vector that defines the rotation axis. The fourth
 component defines the rotation angle about the axis (in [rad]).
 
 > The rotation occurs in the sense prescribed by the right-hand rule.
+
+<!-- -->
 
 > **handson**: Modify the rotation of the Solid node of the dumbbell in order to move the
 handle's axis (*y*-axis) parallel to the ground. A unit axis of *(1, 0, 0)* and

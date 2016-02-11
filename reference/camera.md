@@ -484,6 +484,8 @@ an `int` color/grey component in the range [0..255]. Here is an example:
 >       System.out.println("red=" + r + " green=" + g + " blue=" + b);
 >     }
 
+<!-- -->
+
 > **note** [Python]: `getImage()` returns a `string`. This `string` is closely related to the `const
 char *` of the C API. `imageGet*`-like functions can be used to get the channels
 of the camera Here is an example:
@@ -507,6 +509,8 @@ directly used for accessing to the pixels. Here is an example:
 >         blue  = image[x][y][2]
 >         grey  = (red + green + blue) / 3
 >         print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
+
+<!-- -->
 
 > **note** [Matlab]: `wb_camera_get_image()` returns a 3-dimensional array of `uint(8)`. The first
 two dimensions of the array are the width and the height of camera's image, the

@@ -49,6 +49,8 @@ directory of Webots).
 > **note**: The `inkEvaporation` field of the [WorldInfo](reference/worldinfo.md#worldinfo)
 node controls how fast the ink evaporates (disappears).
 
+<!-- -->
+
 > **note**: The drawings performed by a pen can be seen by infra-red distance sensors.
 Hence, it is possible to implement a robotics experiment where a robot draws a
 line on the floor with a pen and a second robot performs a line following

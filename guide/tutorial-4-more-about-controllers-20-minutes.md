@@ -21,6 +21,8 @@ the chapter, links to further robotics algorithmics are given.
 
 > **handson**: Save the previous world as "collision\_avoidance.wbt".
 
+<!-- -->
+
 > **handson**: Create a new C controller called "e-puck\_avoid\_collision" using the wizard.
 Modify the `controller` field of the E-puck node in order to link it to the new
 controller.
@@ -82,6 +84,8 @@ in order to be able to use the corresponding API (documented in chapter 3 of the
 >     #include <webots/differential_wheels.h>
 >     #include <webots/distance_sensor.h>
 
+<!-- -->
+
 > **handson**: Just after the include statements add a macro that defines the duration of each
 physics step. This macro will be used as argument to the `wb_robot_step()`
 function, and it will also be used to enable the devices. This duration is
@@ -90,10 +94,14 @@ specified in milliseconds and it must be a multiple of the value in the
 
 >     #define TIME_STEP 64
 
+<!-- -->
+
 > **theory**: The function called `main()` is where the controller program starts execution.
 The arguments passed to main() are given by the `controllerArgs` field of the
 Robot node. The Webots API has to be initialized using the `wb_robot_init()`
 function and it has to be cleaned up using the `wb_robot_cleanup()` function.
+
+<!-- -->
 
 > **handson**: Write the prototype of the `main()` function as follows:
 
@@ -118,6 +126,8 @@ function and it has to be cleaned up using the `wb_robot_cleanup()` function.
 >       return 0; //EXIT_SUCCESS
 >     }
 
+<!-- -->
+
 > **theory**: A robot device is referenced by a `WbDeviceTag`. The `WbDeviceTag` is retrieved
 by the `wb_robot_get_device()` function. Then it is used as first argument in
 every function call concerning this device.
@@ -125,6 +135,8 @@ every function call concerning this device.
 > A sensor such as the DistanceSensor has to be enabled before use. The second
 argument of the enable function defines at which rate the sensor will be
 refreshed.
+
+<!-- -->
 
 > **handson**: Just after the comment *"// initialize devices"*, get and enable the distance
 sensors as follows:
@@ -142,6 +154,8 @@ sensors as follows:
 >       wb_distance_sensor_enable(ps[i], TIME_STEP);
 >     }
 
+<!-- -->
+
 > **handson**: In the main loop, just after the comment *"// read sensors outputs"*, read the
 distance sensor values as follows:
 
@@ -149,6 +163,8 @@ distance sensor values as follows:
 >     double ps_values[8];
 >     for (i=0; i<8 ; i++)
 >       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
+
+<!-- -->
 
 > **handson**: In the main loop, just after the comment *"// process behavior"*, detect if a
 collision occurs (i.e. the value returned by a distance sensor is bigger than a
@@ -163,6 +179,8 @@ threshold) as follows:
 >       ps_values[5] > 100.0 ||
 >       ps_values[6] > 100.0 ||
 >       ps_values[7] > 100.0;
+
+<!-- -->
 
 > **handson**: Finally, use the information about the obstacle to actuate the wheels as
 follows:
@@ -183,6 +201,8 @@ follows:
 >     }
 >     // write actuators inputs
 >     wb_differential_wheels_set_speed(left_speed, right_speed);
+
+<!-- -->
 
 > **handson**: Compile your code by selecting the `Build > Build` menu item. Compilation errors
 are displayed in red in the console. If there are any, fix them and retry to

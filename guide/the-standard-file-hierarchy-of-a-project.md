@@ -51,6 +51,8 @@ controllers/simple_controller/simple_controller[.exe]
 
 > **note**: The main executable name must be identical to the directory name.
 
+<!-- -->
+
 > **note**: You can create all the files needed by a new controller using the wizard [New
 Robot Controller](guide/the-user-interface.md) described in .
 

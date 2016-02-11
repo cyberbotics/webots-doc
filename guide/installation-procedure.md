@@ -26,10 +26,14 @@ downloaded from our [web site](http://www.cyberbotics.com/linux).
 > **note**: Some of the following commands requires the `root` privileges. You can get these
 privileges by preceding all the commands by the `sudo` command.
 
+<!-- -->
+
 > **note**: Webots will run much faster if you install an accelerated OpenGL drivers. If you
 have a nVidia or ATI graphics card, it is highly recommended that you install
 the Linux graphics drivers from these manufacturers to take the full advantage
 of the OpenGL hardware acceleration with Webots. Please find instructions here .
+
+<!-- -->
 
 > **note**: Webots needs the *avconv* program to create MPEG-4 movies, that can be installed
 with *libav-tools* and *libavcodec-extra-54* packages.

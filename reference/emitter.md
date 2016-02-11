@@ -142,6 +142,8 @@ example:
 >     message = struct.pack("chd","a",45,120.08)
 >     emitter.send(message)
 
+<!-- -->
+
 > **note** [Java]: The Java `send()` method does not have a `size` argument because the size is
 implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received

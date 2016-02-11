@@ -742,12 +742,16 @@ readings.
 Robot class. For example, `Robot.KEYBOARD_CONTROL` corresponds to the *Control*
 key stroke.
 
+<!-- -->
+
 > **note** [Java]: The keyboard predefined values are final integers located in the Robot class.
 For example, *Ctrl+B* can be tested like this:
 
 >     int key=robot.keyboardGetKey()
 >     if (key==Robot.KEYBOARD_CONTROL+'B')
 >       System.out.Println("Ctrl+B is pressed");
+
+<!-- -->
 
 > **note** [Python]: The keyboard predefined values are integers located into the Robot class. For
 example, *Ctrl+B* can be tested like this:

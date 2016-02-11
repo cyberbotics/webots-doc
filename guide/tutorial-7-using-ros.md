@@ -70,8 +70,12 @@ into "my\_ros/controllers/joystick":
 
 >     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/joy.launch ~/my_ros/controllers/joystick
 
+<!-- -->
+
 > **note**: We will use catkin, the official ROS build system (see ROS tutorials for catkin
 basics).
+
+<!-- -->
 
 > **handson**: Create and init a catkin workspace. You can perform these actions through a
 terminal by typing:
@@ -81,16 +85,22 @@ terminal by typing:
 >     $ cd catkin_ws/src
 >     $ catkin_init_workspace
 
+<!-- -->
+
 > **handson**: Install the joy package.
 
 >     $ sudo apt-get install ros-groovy-joystick-drivers
 >     $ rosdep install joy
+
+<!-- -->
 
 > **handson**: Create a ROS package named "webots\_joystick" specifying dependency on "roscpp"
 and "joy".
 
 >     $ cd ~/my_ros/controllers/joystick/catkin_ws/src
 >     $ catkin_create_pkg webots_joystick roscpp joy
+
+<!-- -->
 
 > **note**: Calling `catkin_create_pkg` must have created the directory "webots\_joystick"
 with the subdirectories "webots\_joystick/src" and "webots\_joystick/include"
@@ -99,6 +109,8 @@ plus two files: "webots\_joystick/CMakeLists.txt" and
 to build the ROS package, the latter is a description of the package where you
 can specify the package dependencies, the version number, the author name, the
 maintainer name, etc.
+
+<!-- -->
 
 > **note**: If you want to use the ROS command line tools (`roscd, rosls, rospack, ...`) to
 navigate and get information about the created package then you need to call
@@ -119,10 +131,14 @@ navigate and get information about the created package then you need to call
         joy
         roscpp
 
+<!-- -->
+
 > **handson**: Copy the original ".cpp" controller file into your package resource directory.
 
 >     $ cd ~/my_ros/controllers/joystick/catkin_ws/src/webots_joystick/src
 >     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/catkin_ws/src/webots_joystick/src/webots_joystick_node.cpp .
+
+<!-- -->
 
 > **handson**: In the file "webots\_joystick/CMakeLists.txt" uncomment the line
 
@@ -141,6 +157,8 @@ link the "webots\_joystick\_node" against them. (The comments indicate where to
 paste these lines appropriately; the distributed CMakeLists.txt file shows you
 the right places.)
 
+<!-- -->
+
 > **handson**: Build the webots\_joystick package. Then copy the resulting ROS node executable
 at the root of "controllers/joystick" and rename it appropriately.
 
@@ -148,15 +166,21 @@ at the root of "controllers/joystick" and rename it appropriately.
 >     $ catkin_make
 >     $ cp devel/lib/webots_joystick/webots_joystick_node ~/my_ros/controllers/joystick/joystick
 
+<!-- -->
+
 > **note**: Calling `catkin_make` created the directories "catkin\_ws/build" and
 "catkin\_ws/devel". You should source "catkin\_ws/devel/setup.bash" if you want
 to use ROS built-in commands to manage the "webots\_joystick" package.
+
+<!-- -->
 
 > **handson**: Have a look at the file
 "WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick/Makefile".
 This file allows you to (re)compile the "joystick" controller from Webots build
 editor (edit the source file in Webots build editor and hit the build button).
 You may take inspiration from it when building other Webots-ROS projects.
+
+<!-- -->
 
 > **note**: In case you need to configure your joystick, please refer to the ROS joy
 tutorials.

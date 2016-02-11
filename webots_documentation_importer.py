@@ -580,6 +580,7 @@ class BookParser:
 
     def parseChapter(self, node, outFile):
         firstRefEntry = True
+        previousChildTag = 'Ni'
         for child in node.getchildren():
             if child.tag == 'title':
                 title = self.getTitle(child)
@@ -625,11 +626,10 @@ class BookParser:
                 pass # ok: dealt in another way
             elif child.tag == 'procedure':
                 raise Exception('Should be converted into an ordered item list in the script preprocessor: ' + child.tag)
-            elif child.tag == 'note':
-                self.parseIconPara(child, outFile)
-            elif child.tag == 'handson':
-                self.parseIconPara(child, outFile)
-            elif child.tag == 'theory':
+            elif child.tag == 'note' or child.tag == 'handson' or child.tag == 'theory':
+                if previousChildTag == 'note' or previousChildTag == 'handson' or previousChildTag == 'theory':
+                    # cf: http://stackoverflow.com/questions/12979577/how-can-i-write-two-separate-blockquotes-in-sequence-using-markdown
+                    outFile.write('<!-- -->\n\n')
                 self.parseIconPara(child, outFile)
             elif child.tag == 'code':
                 subchildren = child.findall('./programlisting')
@@ -648,6 +648,7 @@ class BookParser:
                 self.parseRefEntry(child, outFile)
             else:
                 raise Exception('Unsupported type: ' + child.tag)
+            previousChildTag = child.tag
 
 
     def parseBook(self, node, outFile):

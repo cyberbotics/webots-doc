@@ -30,6 +30,8 @@ Webots is currently open and runs an arbitrary simulation.
 The simulation is paused if the virtual time counter on the 3D view toolbar is
 stable.
 
+<!-- -->
+
 > **handson**: Create a new world by selecting the `File > New World` menu item.
 
 A new world is now open. For now, the 3D window displays a black screen. This is
@@ -66,6 +68,8 @@ It's a good time to improve the scene light.
 > **handson**: Modify the following fields of the `DirectionalLight` node: `ambientIntensity`
 to 1, `direction` to [-0.33 -1 -0.5] and `castShadows` to TRUE.
 
+<!-- -->
+
 > **note**: In the scene tree, the fields are displayed in blue if they differ from their
 default values.
 
@@ -75,10 +79,16 @@ Now your environment should look like the one depicted in the .
 menu item. Using the dialog box save the world into the
 "my\_webots\_projects/tutorials/worlds/my\_first\_simulation.wbt" file location.
 
+<!-- -->
+
 > **handson**: Revert the simulation by selecting the `File > Revert World` menu item.
+
+<!-- -->
 
 > **note**: You can change the viewpoint of the 3D view by using the mouse buttons (left
 button, right button and the wheel).
+
+<!-- -->
 
 > **theory**: Webots nodes stored in world files are organized in a tree structure called the
 **scene tree**. The scene tree can be viewed in two subwindows of the main
@@ -86,6 +96,8 @@ window: the 3D view (at the center of the main window) is the 3D representation
 of the scene tree and the scene tree view (on the left) is the hierarchical
 representation of the scene tree. The scene tree view is where the nodes and the
 fields can be modified.
+
+<!-- -->
 
 > **handson**: In the 3D view, click on the floor to selected it. When it is selected the floor
 is surrounded by white lines and the corresponding node is selected in the scene
@@ -120,9 +132,13 @@ to add the E-puck node, click on the `Add` button at the top of the scene tree
 view. In the open dialog box, and choose `PROTO (Webots) > robots > e-puck >
 E-puck (DifferentialWheels)`. Then save the simulation.
 
+<!-- -->
+
 > **note**: Now if you run the simulation, the robot moves: that's because the robot uses a
 default controller with that behavior. Please pause and revert the simulation
 before going on.
+
+<!-- -->
 
 > **note**: You can change the robot's position in the 3D view using the translation and
 rotation handles (see ).
@@ -135,6 +151,8 @@ rotation handles (see ).
 
 > Finally, it is possible to add a force to the robot: *CTRL + ALT + left-clicking
 + drag*.
+
+<!-- -->
 
 > **note**: Starting the simulation by pressing the `Run` button will make Webots running
 the simulation as fast as possible. In order to obtain a real-time simulation
@@ -174,12 +192,18 @@ field of a robot specifies which controller is currently linked with to it.
 Please take notice that a controller can be used by several robots, but a robot
 cans use only one controller at a time.
 
+<!-- -->
+
 > **note**: Each robot controller is executed in a separate child process spawned by Webots.
 Controllers don't share the same address space, and they can run in different
 processor cores.
 
+<!-- -->
+
 > **note**: Other languages than C are available but may require a setup. Please refer to
 the language chapter to setup the other languages (see ).
+
+<!-- -->
 
 > **handson**: Create a new C controller called *e-puck\_go\_forward* using the `Wizards > New
 Robot Controller...` menu. This will create a new "e-puck\_go\_forward"
@@ -195,6 +219,8 @@ done in the scene tree view by selecting the `controller` field of the E-puck
 node, then use the field editor at the bottom of the scene tree view: push the
 `Select...` button and then select *e-puck\_go\_forward* in the list. Once the
 controller is linked, save the world.
+
+<!-- -->
 
 > **handson**: Modify the program by inserting an include statement (`#include
 <webots/differential_wheels.h>`), and by applying a differential wheels command
@@ -221,6 +247,8 @@ controller is linked, save the world.
 >
 >       return 0;
 >     }
+
+<!-- -->
 
 > **handson**: Save the modified source code (`File > Save Text File`), and compile it (`Build
 > Build`). Fix any compilation error if necessary. When Webots proposes to

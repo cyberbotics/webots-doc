@@ -509,9 +509,15 @@ wb_servo_set_velocity(tag, desired_speed);  // rad/s
 
 > **note** [C++]: In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
 
+<!-- -->
+
 > **note** [Java]: In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
 
+<!-- -->
+
 > **note** [Python]: In Python use `float('+inf')` instead of INFINITY
+
+<!-- -->
 
 > **note** [Matlab]: In MATLAB use `inf` instead of INFINITY
 

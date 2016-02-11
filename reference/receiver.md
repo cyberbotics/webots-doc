@@ -207,6 +207,8 @@ Here is an example for getting the data:
 >     message=receiver.getData()
 >     dataList=struct.unpack("chd",message)
 
+<!-- -->
+
 > **note** [Matlab]: The Matlab `wb_receiver_get_data()` function returns a MATLAB *libpointer*. The
 receiving code is responsible for extracting the data from the *libpointer*
 using MATLAB's `setdatatype()` and `get()` functions. Here is an example on how

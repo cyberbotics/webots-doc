@@ -34,6 +34,8 @@ the walls later in this this tutorial.
 > **handson**: To remove the `RectangleArena`, select it in the scene tree view and press the
 `Delete` button located in the toolbar.
 
+<!-- -->
+
 > **handson**: In order to add a different floor PROTO, select the `DirectionalLight` node and
 click on the `Add` button. In the open dialog box, and choose `PROTO (Webots) >
 objects > floors > Floor (Solid)`.
@@ -145,6 +147,8 @@ Enter *"BALL\_GEOMETRY"*. Select the boundingObject field (containing the second
 Sphere node), and delete it by using the `Reset to default` button. Then click
 on the `Add` button, and select the `USE > BALL_GEOMETRY` in the dialog box. The
 result is shown in .
+
+<!-- -->
 
 > **note**: Now, changing the `radius` field of the first Sphere node does also modify the
 `boundingObject`.

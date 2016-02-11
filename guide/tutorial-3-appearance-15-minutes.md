@@ -23,6 +23,8 @@ SpotLight simulates a conical light (ex: a flashlight). Each type of light node
 can cast shadows. You can find their complete documentation in the `Reference
 Manual`.
 
+<!-- -->
+
 > **note**: Lights are costly in term of performance. Minimizing the number of lights
 increases the rendering speed. A maximum of 8 lights is allowed if the shaders
 are disabled in the Webots preferences. A PointLight is more efficient than a
@@ -45,6 +47,8 @@ The aim of this subsection is to color the walls with blue.
 the object. Among other things, this node is responsible for the color and
 texture of objects.
 
+<!-- -->
+
 > **handson**: In the Shape node representing graphically the first wall, add an Appearance
 node to the `appearance` field. Then add a Material node to the `material` field
 of the freshly created Appearance node. Set its `diffuseColor` field to blue
@@ -63,13 +67,19 @@ the `url` field using the `Add` button. Then set the value of the newly added
 "WEBOTS\_MODULES\_PATH/projects/default/worlds/textures/bricks.png" using the
 file selection dialog.
 
+<!-- -->
+
 > **note**: The texture URLs must be defined either relative to the "worlds" directory of
 your project directory or relative to the default project directory
 "WEBOTS\_MODULES\_PATH/projects/default/worlds". In the default project
 directory you will find textures that are available for every world.
 
+<!-- -->
+
 > **note**: Open the "bricks.png" texture in an image viewer while you observe how it is
 mapped onto the Sphere node in Webots.
+
+<!-- -->
 
 > **theory**: Textures are mapped onto Geometry nodes according to predefined **UV mapping**
 functions described in the `Reference Manual`. A UV mapping function maps a 2D

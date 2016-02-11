@@ -28,6 +28,8 @@ world, opening a new world, or closing Webots. In this case the output will be a
 NULL pointer or a default value. For functions returning a string, an empty
 string is returned instead of a NULL pointer.
 
+<!-- -->
+
 > **note** [C++, Java, Python]: It is a good practice to check for a NULL pointer after calling a
 [Supervisor](reference/supervisor.md#supervisor) function.
 

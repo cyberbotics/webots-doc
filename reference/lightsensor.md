@@ -165,6 +165,8 @@ sensor irradiance *E* will approximate real world values in [W/m^2]. Finally, if
 the sensor's `lookupTable` is filled with correct calibration data, a fairly
 good approximation of the real world should be achieved.
 
+<!-- -->
+
 > **note**: If the calibration data for the `lookupTable` was obtained in lux (lx) or lumens
 per square meter (lm/m^2) instead of W/m^2, it makes sense to substitute the
 radiometry terms and units in this document with their photometry equivalents:

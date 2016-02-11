@@ -142,6 +142,8 @@ Indeed you can define a subtree starting from this top
 [Solid](reference/solid.md#solid) nodes have no
 [Physics](reference/physics.md#physics) nodes.
 
+<!-- -->
+
 > **note**: The [DifferentialWheels](reference/differentialwheels.md#differentialwheels)
 robot is a special case: it can move even if it does not have
 [Physics](reference/physics.md#physics) nodes. That's because Webots uses a

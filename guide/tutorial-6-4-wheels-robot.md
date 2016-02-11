@@ -16,6 +16,8 @@ depicted in . The  shows the robot from a top view.
 
 > **handson**: Save the world of the previous tutorial as "4\_wheels\_robot.wbt".
 
+<!-- -->
+
 > **handson**: Remove the nodes defining the e-puck, the ball, the dumbbell and the contact
 properties. The ground, the walls and the lighting are kept.
 
@@ -33,6 +35,8 @@ perfectly.
 The root node of this tree should be a robot node. The solid are linked together
 by joint nodes. A device node should be the direct child of either a robot node,
 either a solid node or a joint node.
+
+<!-- -->
 
 > **theory**: A joint node is used to add one (or two) degree(s) of freedom (DOF), between its
 parent and its child. The direct parent and child of a joint node are both solid
@@ -71,6 +75,8 @@ nodes hierarchy of the robot.
 
 > **handson**: At the end of the scene tree, add a Robot node having four HingeJoints having a
 Solid child. Please refer to .
+
+<!-- -->
 
 > **handson**: Add a Shape node containing a Box geometry to the Robot node. Set the color of
 the Shape to red. Use the Shape to define also the `boundingObject` field of the
@@ -112,6 +118,8 @@ Don't forget the Physics nodes. Rotate the Transform node by an Euler axis and
 angle of *(0, 0, 1, Pi/2)* in order to inverse the *x*-axis and the *y*-axis.
 The Cylinder should have a `radius` of *0.04* and a `height` of *0.02*. Set the
 color of the wheels to green.
+
+<!-- -->
 
 > **handson**: In order to be able to actuate the wheels, add a RotationalMotor to each
 HingeJoint, and set their `name` fields from *"wheel1"* to *"wheel4"*. These
@@ -160,6 +168,8 @@ bounding its velocity:
 >     double speed = -1.5; // [rad/s]
 >     wb_motor_set_position(wheels[0], INFINITY);
 >     wb_motor_set_velocity(wheels[0], speed);
+
+<!-- -->
 
 > **handson**: Implement a controller called "4\_wheels\_collision\_avoidance" moving the robot
 and avoiding obstacles by detecting them by the distance sensors.

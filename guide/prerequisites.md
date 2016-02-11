@@ -44,14 +44,20 @@ included in the "WEBOTS\_MODULES\_PATH/projects/samples/tutorials" subdirectory
 of Webots. Don't look at it now! Hopefully, your own "tutorials" directory
 should be pretty similar to that one at the end.
 
+<!-- -->
+
 > **theory**: A **project** is a directory containing all the files related to a set of
 simulations. It is the highest container in Webots. Two simulations should
 reside in the same project if they share some content (robots, source code, 3D
 shapes, etc.).
 
+<!-- -->
+
 > **handson**: In Webots, open the wizard by selecting the `Wizards > New Project Directory...`
 menu item. From this wizard, follow the instructions to create a new project
 named "tutorials" in the "my\_webots\_projects" directory created before.
+
+<!-- -->
 
 > **note**: From your desktop, open the project directory and observe its subdirectories. We
 will soon explain the purpose of each directory.

@@ -71,8 +71,8 @@ performed and that fluid will have no effect on immersed objects. A
 by a [Fluid](reference/fluid.md#fluid) only if its `boundingObject` collides
 with the [Fluid](reference/fluid.md#fluid)'s `boundingObject`. The intersection
 volume volume with an individual primitive geometry is approximated by the
-intersection volume of this geometry with a tangent plane of equation `y = c, c
-> 0` in the geometry coordinate system. This volume is used to generates
+intersection volume of this geometry with a tangent plane of equation *y = c, c
+> 0* in the geometry coordinate system. This volume is used to generates
 Archimedes'thrust.
 
     This field is subject to the same restrictions as a

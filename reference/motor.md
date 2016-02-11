@@ -114,8 +114,8 @@ In Webots, position control is carried out in three stages, as depicted in . The
 first stage is performed by the user-specified controller (1) that decides which
 position, velocity, acceleration and motor force must be used. The second stage
 is performed by the motor P-controller (2) that computes the current velocity of
-the motor `V`. Finally, the third stage (3) is carried out by the physics
-simulator (ODE joint motors).
+the motor *V<sub>c</sub>*. Finally, the third stage (3) is carried out by the
+physics simulator (ODE joint motors).
 
 %figure "Motor control"
 ![Motor control](pdf/motor_control.pdf.png)
@@ -139,20 +139,21 @@ if (A != -1) {
 }
 ```
 
-where  `V` is the current motor velocity in rad/s or m/s, `P, I` and `D` are the
-PID-control gains specified in the `controlPID` field, or set with
-`wb_motor_set_control_pid()`, `P` is the *target position* of the motor set by
-the function `wb_motor_set_position()`, `P` is the current motor position as
-reflected by the `position` field, `V` is the desired velocity as specified by
-the `maxVelocity` field (default) or set with `wb_motor_set_velocity()`, `a` is
-the acceleration required to reach *Vc* in one time step, `V` is the motor
-velocity of the previous time step, `t` is the duration of the simulation time
-step as specified by the `basicTimeStep` field of the
+where  *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and
+*D* are the PID-control gains specified in the `controlPID` field, or set with
+`wb_motor_set_control_pid()`, *P<sub>t</sub>* is the *target position* of the
+motor set by the function `wb_motor_set_position()`, *P<sub>c</sub>* is the
+current motor position as reflected by the `position` field, *V<sub>d</sub>* is
+the desired velocity as specified by the `maxVelocity` field (default) or set
+with `wb_motor_set_velocity()`, *a* is the acceleration required to reach *Vc*
+in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
+step, *t<sub>s</sub>* is the duration of the simulation time step as specified
+by the `basicTimeStep` field of the
 [WorldInfo](reference/worldinfo.md#worldinfo) node (converted in seconds), and
-`A` is the acceleration of the motor as specified by the `acceleration` field
+*A* is the acceleration of the motor as specified by the `acceleration` field
 (default) or set with `wb_motor_set_acceleration()`.
 
-> **note**: `error_integral` and `previous_error` are both reset to `0` after every call of
+> **note**: *error_integral* and *previous_error* are both reset to *0* after every call of
 `wb_motor_set_control_pid()`.
 
 ### Velocity Control
@@ -348,12 +349,13 @@ explicitly set using `wb_motor_set_[force|torque]()`, then
 `wb_motor_get_available_[force|torque]()` and
 `wb_motor_get_max_[force|torque]()` functions return the same value.
 
-The `wb_motor_set_control_pid()` function changes the values of the gains `P, I`
-and `D` in the PID-controller. These parameters are used to compute the current
-motor velocity `V` from the current position `P` and target position `P`, such
-that `V` where `error = P`. With a small `P`, a long time is needed to reach the
-target position, while too large a `P` can make the system unstable. The default
-value of `P, I` and `D` are specified by the `controlPID` field of the
+The `wb_motor_set_control_pid()` function changes the values of the gains *P, I*
+and *D* in the PID-controller. These parameters are used to compute the current
+motor velocity *V<sub>c</sub>* from the current position *P<sub>c</sub>* and
+target position *P<sub>t</sub>*, such that *V<sub>c</sub>* where *error =
+P<sub>t</sub><sub>c</sub>*. With a small *P*, a long time is needed to reach the
+target position, while too large a *P* can make the system unstable. The default
+value of *P, I* and *D* are specified by the `controlPID` field of the
 corresponding [Motor](reference/motor.md#motor) node.
 
 The `wb_motor_get_[min|max]_position()` functions allow to get the values of
@@ -497,7 +499,7 @@ This function allows to retrieve the motor type defined by the `type` field. If
 the value of the `type` field is "linear", this function returns WB\_LINEAR, and
 otherwise it returns WB\_ANGULAR.
 
-%figure "Return values for the `wb_motor_get_type()` function"
+%figure "Return values for the *wb_motor_get_type()* function"
 | Motor.type | return value |
 | --- | --- |
 | "rotational" | WB\_ANGULAR |

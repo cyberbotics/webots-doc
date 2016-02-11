@@ -124,14 +124,15 @@ beam hits an obstacle.
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for
 "generic" and "infra-red" sensors). When averaging the sensor's response, the
 individual weight of each sensor ray is computed according to a Gaussian
-distribution as described in . where `w` is the weight of the *i*th ray, `t` is
-the angle between the *i*th ray and the sensor axis, *a* is the aperture angle
-of the sensor, *g* is the Gaussian width, and *n* is the number of rays. As
-depicted in  , rays in the center of the sensor cone are given a greater weight
-than rays in the periphery. A wider or narrower distribution can be obtained by
-tuning the `gaussianWidth` field. An approximation of a flat distribution is
-obtained if a sufficiently large number is chosen for the `gaussianWidth`. This
-field is ignored for the "sonar" and "laser" DistanceSensor types.
+distribution as described in . where *w<sub>i</sub>* is the weight of the *i*th
+ray, *t<sub>i</sub>* is the angle between the *i*th ray and the sensor axis, *a*
+is the aperture angle of the sensor, *g* is the Gaussian width, and *n* is the
+number of rays. As depicted in  , rays in the center of the sensor cone are
+given a greater weight than rays in the periphery. A wider or narrower
+distribution can be obtained by tuning the `gaussianWidth` field. An
+approximation of a flat distribution is obtained if a sufficiently large number
+is chosen for the `gaussianWidth`. This field is ignored for the "sonar" and
+"laser" DistanceSensor types.
 
 %figure "Example distribution for 10 rays using a Gaussian width of 0.5"
 ![Example distribution for 10 rays using a Gaussian width of 0.5](pdf/weight_distribution.pdf.png)

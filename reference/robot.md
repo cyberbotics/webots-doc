@@ -491,7 +491,7 @@ directly to the `wbr_start` function (more information in the user guide).
 
 The integers can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the `wb_robot_[gs]et_mode()` functions"
+%figure "Helper enumeration to interpret the integer argument and return value of the *wb_robot_[gs]et_mode()* functions"
 | Mode | Purpose |
 | --- | --- |
 | WB\_MODE\_SIMULATION | simulation mode |
@@ -769,7 +769,7 @@ example, *Ctrl+B* can be tested like this:
 ``` c
 #include <webots/robot.h>
 
-void wb_robot_task_new(void (*task)(void *), void *param)
+void wb_robot_task_new(void (*task, void *param)
 ```
 
 #### Description
@@ -836,7 +836,7 @@ multi-threaded programming techniques for further information.
 ``` c
 #include <webots/robot_window.h>
 
-void *wb_robot_window_custom_function(void *arg);)
+void *wb_robot_window_custom_function(void *arg)
 ```
 
 #### Description

@@ -112,12 +112,12 @@ included in the range of the hard limits, such that `minStop <= minValue` and
 ### Springs and Dampers
 
 The `springConstant` field specifies the value of the spring constant (or spring
-stiffness), usually denoted as `K`. The `springConstant` must be positive or
+stiffness), usually denoted as *K*. The `springConstant` must be positive or
 zero. If the `springConstant` is zero (the default), no spring torque/force will
 be applied to the joint. If the `springConstant` is greater than zero, then a
 spring force will be computed and applied to the joint in addition to the other
 forces (i.e., motor force, damping force). The spring force is calculated
-according to Hooke's law: `F = -Kx`, where `K` is the `springConstant` and `x`
+according to Hooke's law: *F = -Kx*, where *K* is the `springConstant` and *x*
 is the current joint position as represented by the `position` field. Therefore,
 the spring force is computed so as to be proportional to the current joint
 position, and to move the joint back to its initial position. When designing a
@@ -133,8 +133,8 @@ The value of `dampingConstant` must be positive or zero. If `dampingConstant` is
 zero (the default), no damping torque/force will be added to the joint. If
 `dampingConstant` is greater than zero, a damping torque/force will be applied
 to the joint in addition to the other forces (i.e., motor force, spring force).
-This damping torque/force is proportional to the effective joint velocity: `F =
--Bv`, where `B` is the damping constant, and `v = dx/dt` is the effective joint
+This damping torque/force is proportional to the effective joint velocity: *F =
+-Bv*, where *B* is the damping constant, and *v = dx/dt* is the effective joint
 velocity computed by the physics simulator.
 
 %figure "Mechanical Diagram of a Slider Joint"
@@ -142,15 +142,16 @@ velocity computed by the physics simulator.
 %end
 
 As you can see in (see  ), a [Joint](reference/joint.md#joint) creates a joint
-between two masses `m` and `m`. The mass `m` is defined by the
-[Physics](reference/physics.md#physics) node in the closest upper
-[Solid](reference/solid.md#solid) of the [Joint](reference/joint.md#joint). The
-mass `m` is defined by the [Physics](reference/physics.md#physics) node of the
+between two masses *m<sub>0</sub>* and *m<sub>1</sub>*. The mass *m<sub>0</sub>*
+is defined by the [Physics](reference/physics.md#physics) node in the closest
+upper [Solid](reference/solid.md#solid) of the
+[Joint](reference/joint.md#joint). The mass *m<sub>1</sub>* is defined by the
+[Physics](reference/physics.md#physics) node of the
 [Solid](reference/solid.md#solid) placed into the `endPoint` of the
-[Joint](reference/joint.md#joint). The value `x` corresponds to the anchor
-position of the [Joint](reference/joint.md#joint) defined in the `anchor` field
-of a [JointParameters](reference/jointparameters.md#jointparameters) node. The
-position `x` corresponds to the current position of the
+[Joint](reference/joint.md#joint). The value *x<sub>0</sub>* corresponds to the
+anchor position of the [Joint](reference/joint.md#joint) defined in the `anchor`
+field of a [JointParameters](reference/jointparameters.md#jointparameters) node.
+The position *x* corresponds to the current position of the
 [Joint](reference/joint.md#joint) defined in the `position` field of a
 [JointParameters](reference/jointparameters.md#jointparameters) node.
 

@@ -403,7 +403,7 @@ This function returns the type of the camera as defined by the `type` field of
 the corresponding [Camera](reference/camera.md#camera) node. The constants
 defined in "camera.h" are summarized in :
 
-%figure "Return values for the `wb_camera_get_type()` function"
+%figure "Return values for the *wb_camera_get_type()* function"
 | Camera.type | return value |
 | --- | --- |
 | "color" | WB\_CAMERA\_COLOR |
@@ -559,7 +559,7 @@ The `wb_camera_get_range_image()` macro allows the user to read the contents of
 the last range image grabbed by a range-finder camera. The range image is
 computed using the depth buffer produced by the OpenGL rendering. Each pixel
 corresponds to the distance expressed in meter from the object to the plane
-defined by the equation `z = 0` within the coordinates system of the camera. The
+defined by the equation *z = 0* within the coordinates system of the camera. The
 bounds of the range image is determined by the near clipping plane (defined by
 the `near` field) and the far clipping plane (see the `maxRange` field). The
 range image is coded as an array of single precision floating point values

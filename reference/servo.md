@@ -149,8 +149,8 @@ In Webots, position control is carried out in three stages, as depicted in . The
 first stage is performed by the user-specified controller (1) that decides which
 position, velocity, acceleration and motor force must be used. The second stage
 is performed by the servo P-controller (2) that computes the current velocity of
-the servo `V`. Finally, the third stage (3) is carried out by the physics
-simulator (ODE joint motors).
+the servo *V<sub>c</sub>*. Finally, the third stage (3) is carried out by the
+physics simulator (ODE joint motors).
 
 %figure "Servo control"
 ![Servo control](pdf/servo_control.pdf.png)
@@ -171,17 +171,18 @@ if (A != -1) {
 }
 ```
 
-where  `V` is the current servo velocity in rad/s or m/s, `P` is the P-control
-parameter specified in `controlP` field or set with `wb_servo_set_control_p()`,
-`P` is the *target position* of the servo set by the function
-`wb_servo_set_position()`, `P` is the current servo position as reflected by the
-`position` field, `V` is the desired velocity as specified by the `maxVelocity`
-field (default) or set with `wb_servo_set_velocity()`, `a` is the acceleration
-required to reach *Vc* in one time step, `V` is the motor velocity of the
-previous time step, `t` is the duration of the simulation time step as specified
+where  *V<sub>c</sub>* is the current servo velocity in rad/s or m/s, *P* is the
+P-control parameter specified in `controlP` field or set with
+`wb_servo_set_control_p()`, *P<sub>t</sub>* is the *target position* of the
+servo set by the function `wb_servo_set_position()`, *P<sub>c</sub>* is the
+current servo position as reflected by the `position` field, *V<sub>d</sub>* is
+the desired velocity as specified by the `maxVelocity` field (default) or set
+with `wb_servo_set_velocity()`, *a* is the acceleration required to reach *Vc*
+in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
+step, *t<sub>s</sub>* is the duration of the simulation time step as specified
 by the `basicTimeStep` field of the
 [WorldInfo](reference/worldinfo.md#worldinfo) node (converted in seconds), and
-`A` is the acceleration of the servo motor as specified by the `acceleration`
+*A* is the acceleration of the servo motor as specified by the `acceleration`
 field (default) or set with `wb_servo_set_acceleration()`.
 
 ### Velocity Control
@@ -269,12 +270,12 @@ the soft limits must be included in the range of the hard limits, such that
 ### Springs and Dampers
 
 The `springConstant` field specifies the value of the spring constant (or spring
-stiffness), usually denoted as `K`. The `springConstant` must be positive or
+stiffness), usually denoted as *K*. The `springConstant` must be positive or
 zero. If the `springConstant` is zero (the default), no spring torque/force will
 be applied to the servo. If the `springConstant` is greater than zero, then a
 spring force will be computed and applied to the servo in addition to the other
 forces (i.e., motor force, damping force). The spring force is calculated
-according to Hooke's law: `F = -Kx`, where `K` is the `springConstant` and `x`
+according to Hooke's law: *F = -Kx*, where *K* is the `springConstant` and *x*
 is the current servo position as represented by the `position` field. Therefore,
 the spring force is computed so as to be proportional to the current servo
 position, and to move the servo back to its initial position. When designing a
@@ -287,8 +288,8 @@ The value of `dampingConstant` must be positive or zero. If `dampingConstant` is
 zero (the default), no damping torque/force will be added to the servo. If
 `dampingConstant` is greater than zero, a damping torque/force will be applied
 to the servo in addition to the other forces (i.e., motor force, spring force).
-This damping torque/force is proportional to the effective servo velocity: `F =
--Bv`, where `B` is the damping constant, and `v = dx/dt` is the effective servo
+This damping torque/force is proportional to the effective servo velocity: *F =
+-Bv*, where *B* is the damping constant, and *v = dx/dt* is the effective servo
 velocity computed by the physics simulator.
 
 %figure "Mechanical Diagram of a Servo"
@@ -296,13 +297,13 @@ velocity computed by the physics simulator.
 %end
 
 As you can see in (see  ), a [Servo](reference/servo.md#servo) creates a joint
-between two masses `m` and `m`. `m` is defined by the
-[Physics](reference/physics.md#physics) node in the parent of the
-[Servo](reference/servo.md#servo). The mass `m` is defined by the
+between two masses *m<sub>0</sub>* and *m<sub>1</sub>*. *m<sub>0</sub>* is
+defined by the [Physics](reference/physics.md#physics) node in the parent of the
+[Servo](reference/servo.md#servo). The mass *m<sub>1</sub>* is defined by the
 [Physics](reference/physics.md#physics) node of the
-[Servo](reference/servo.md#servo). The value `x` corresponds to the initial
-translation of the [Servo](reference/servo.md#servo) defined by the
-`translation` field. The position `x` corresponds to the current position of the
+[Servo](reference/servo.md#servo). The value *x<sub>0</sub>* corresponds to the
+initial translation of the [Servo](reference/servo.md#servo) defined by the
+`translation` field. The position *x* corresponds to the current position of the
 [Servo](reference/servo.md#servo) defined by the `position` field.
 
 ### Servo Forces
@@ -390,8 +391,8 @@ DEF Servo1 Servo {
 ```
 
 Note that it is necessary to specify the [Physics](reference/physics.md#physics)
-and the `boundingObject` of *Servo1*. This adds the extra body `m` in the
-simulation, between the motor and the spring and damper.
+and the `boundingObject` of *Servo1*. This adds the extra body *m<sub>1</sub>*
+in the simulation, between the motor and the spring and damper.
 
 ### Simulating Overlayed Joint Axes
 
@@ -541,13 +542,14 @@ will be available to the motor to carry out the requested motion. The motor
 torque/force specified with this function cannot exceed the value specified in
 the `maxForce` field.
 
-The `wb_servo_set_control_p()` function changes the value of the `P` parameter
-in the P-controller. `P` is a parameter used to compute the current servo
-velocity `V` from the current position `P` and target position `P`, such that
-`V`. With a small `P`, a long time is needed to reach the target position, while
-too large a `P` can make the system unstable. The default value of `P` is
-specified by the `controlP` field of the corresponding
-[Servo](reference/servo.md#servo) node.
+The `wb_servo_set_control_p()` function changes the value of the *P* parameter
+in the P-controller. *P* is a parameter used to compute the current servo
+velocity *V<sub>c</sub>* from the current position *P<sub>c</sub>* and target
+position *P<sub>t</sub>*, such that *V<sub>c</sub><sub>t</sub><sub>c</sub>*.
+With a small *P*, a long time is needed to reach the target position, while too
+large a *P* can make the system unstable. The default value of *P* is specified
+by the `controlP` field of the corresponding [Servo](reference/servo.md#servo)
+node.
 
 The `wb_servo_get_[min|max]_position()` functions allow to get the values of
 respectively the `minPosition` and the `maxPosition` fields.
@@ -713,7 +715,7 @@ This function allows to retrieve the servo type defined by the `type` field. If
 the value of the `type` field is "linear", this function returns
 WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 
-%figure "Return values for the `wb_servo_get_type()` function"
+%figure "Return values for the *wb_servo_get_type()* function"
 | Servo.type | return value |
 | --- | --- |
 | "rotational" | WB\_SERVO\_ROTATIONAL |

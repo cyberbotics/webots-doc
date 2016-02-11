@@ -27,23 +27,23 @@ The string value must coincide with the `name` field value of an existing
 - `referenceArea`: this field defines the reference area(s) used to compute the
 drag force and drag torque of the submerging [Fluid](reference/fluid.md#fluid).
 
-    If the `referenceArea` is set to "xyz-projected area", the `x`-coordinate of the
+    If the `referenceArea` is set to "xyz-projected area", the *x*-coordinate of the
     drag force vector with respect to the the solid frame is given by:
 
         drag_force_x = - c_x * fluid_density * (rel_linear_velocity_x)^2 * sign(rel_linear_velocity_x) * A_x
 
-    where `c_x` is the `x`-coordinate of the `dragForceCoefficients` vector,
-    `linear_velocity_x ` the `x`-coordinate of the linear velocity of the solid with
+    where `c_x` is the *x*-coordinate of the `dragForceCoefficients` vector,
+    `linear_velocity_x ` the *x*-coordinate of the linear velocity of the solid with
     respect to the fluid expressed within the solid frame and `A_x` is the projected
-    immersed area onto the plane `x = 0`. Analogous formulas hold for `y` and `z`
-    coordinates.  The `x`-coordinate of the drag torque vector with respect to the
+    immersed area onto the plane *x = 0*. Analogous formulas hold for *y* and *z*
+    coordinates.  The *x*-coordinate of the drag torque vector with respect to the
     the solid frame is given by:
 
         drag_torque_x = - t_x * fluid_density * (rel_angular_velocity_x)^2 * sign(rel_angular_velocity_y) * (A_y + A_z)
 
-    where `t_x` is the `x`-coordinate of the `dragTorqueCoefficients` vector,
-    `angular_velocity_x` the `x`-coordinate of the angular velocity of the solid
-    expressed within the solid frame. Analogous formulas hold for `y` and `z`
+    where `t_x` is the *x*-coordinate of the `dragTorqueCoefficients` vector,
+    `angular_velocity_x` the *x*-coordinate of the angular velocity of the solid
+    expressed within the solid frame. Analogous formulas hold for *y* and *z*
     coordinates.
 
     If the `referenceArea` value is "immersed area" then the
@@ -54,7 +54,7 @@ drag force and drag torque of the submerging [Fluid](reference/fluid.md#fluid).
         drag_torque = - t_x * fluid_density * angular_velocity^2 * immersed_area
 
     all vectors being expressed in world coordinates. Note that in this case the
-    drag coefficients along the `y` and `z` axes are ignored.
+    drag coefficients along the *y* and *z* axes are ignored.
 
 - `dragForceCoefficients` and `dragTorqueCoefficients`: dimensionless non-negative
 coefficients used to compute the drag force and the drag torque exerted by the

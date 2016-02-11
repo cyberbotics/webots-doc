@@ -64,12 +64,12 @@ contain the colon character '`:`'.
 [Solid](reference/solid.md#solid) nodes intersect, the `contactMaterial` is used
 to define which
 [ContactProperties](reference/contactproperties.md#contactproperties) must be
-applied at the contact points. .
+applied at the contact points.
 - `immersionProperties`: list of [
 immersionProperties](reference/immersionproperties.md#immersionproperties)
 nodes. It is used to specify dynamic interactions of the
 [Solid](reference/solid.md#solid) node with one or more
-[Fluid](reference/fluid.md#fluid) nodes. .
+[Fluid](reference/fluid.md#fluid) nodes.
 - `boundingObject`: the bounding object specifies the geometrical primitives used
 for collision detection. If the `boundingObject` field is NULL, then no
 collision detection is performed and that object can pass through any other

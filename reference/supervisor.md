@@ -332,8 +332,8 @@ with given index in the contact point list of the given `Solid`. The function
 `wb_supervisor_node_get_number_of_contact_points()` allows you to retrieve the
 length of this list. Contact points are expressed in the global (world)
 coordinate system. If the index is less than the number of contact points, then
-the x (resp. y, z) coordinate of the `index`th contact point is the element
-number `0` (resp. `1, 2`) in the returned array. Otherwise the function returns
+the x (resp. y, z) coordinate of the *index*th contact point is the element
+number *0* (resp. *1, 2*) in the returned array. Otherwise the function returns
 a `NaN` (Not a Number) value for each of these numbers. The `node` argument must
 be a [Solid](reference/solid.md#solid) node (or a derived node), which moreover
 has no `Solid` parent, otherwise the function will print a warning message and
@@ -730,7 +730,7 @@ movie creation. This function is particularly useful to check if the encoding
 process is finished and the file has been created by waiting until the returned
 value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 
-%figure "Return values of the `wb_supervisor_movie_get_status()` function"
+%figure "Return values of the *wb_supervisor_movie_get_status()* function"
 | value | status |
 | --- | --- |
 | WB\_SUPERVISOR\_MOVIE\_RECORDING | recording the movie |
@@ -875,18 +875,18 @@ message is displayed).
 void wb_supervisor_field_set_sf_bool(WbFieldRef field, bool value)
 void wb_supervisor_field_set_sf_int32(WbFieldRef field, int value)
 void wb_supervisor_field_set_sf_float(WbFieldRef field, double value)
-void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values[2])
-void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values[3])
-void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values[4])
-void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values[3])
+void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values)
+void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values)
+void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values)
+void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values)
 void wb_supervisor_field_set_sf_string(WbFieldRef field, const char *value)
 void wb_supervisor_field_set_mf_bool(WbFieldRef field, int index, bool value)
 void wb_supervisor_field_set_mf_int32(WbFieldRef field, int index, int value)
 void wb_supervisor_field_set_mf_float(WbFieldRef field, int index, double value)
-void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values[2])
-void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values[3])
-void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values[4])
-void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values[3])
+void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values)
+void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values)
+void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values)
+void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values)
 void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value)
 ```
 

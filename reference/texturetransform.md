@@ -39,19 +39,20 @@ counterclockwise about the center, thereby rotating the appearance of the
 texture clockwise. The `translation` field specifies a translation of the
 texture coordinates.
 
-Given a point **T** with texture coordinates `(s,t)` and a
+Given a point **T** with texture coordinates *(s,t)* and a
 [TextureTransform](reference/texturetransform.md#texturetransform) node, **T**
-is transformed into the point **T'**`=(s',t')` by the three intermediate
-transformations described above. Let `C` be the translation mapping `(0,0)` to
-the point `(C`, `T` be the translation of vector `(T`, `R` the rotation with
-center `(0,0)` and angle θ , and `S` a scaling with scaling factors `S`. In
-matrix notation, the corresponding `TextureTransform` reads as
+is transformed into the point **T'***=(s',t')* by the three intermediate
+transformations described above. Let *C* be the translation mapping *(0,0)* to
+the point *(C<sub>s</sub><sub>t</sub>*, *T* be the translation of vector
+*(T<sub>s</sub><sub>t</sub>*, *R* the rotation with center *(0,0)* and angle θ
+, and *S* a scaling with scaling factors *S<sub>s</sub><sub>t</sub>*. In matrix
+notation, the corresponding `TextureTransform` reads as
 
 %figure "Texture transformation in matrix notation"
 ![Texture transformation in matrix notation](pdf/texture_transform.pdf.png)
 %end
 
-where `C` denotes the matrix inverse of `C`.
+where *C<sup>-1</sup>* denotes the matrix inverse of *C*.
 
 Note that [TextureTransform](reference/texturetransform.md#texturetransform)
 nodes cannot combine or accumulate.

@@ -208,12 +208,11 @@ class BookParser:
                 if child.tag == 'trademark':
                     text += '*' + child.text + '*^(TM)'
                 elif child.tag == 'function' or child.tag == 'math':
-                    text += '`' + child.text + '`'
+                    text += self.parseMath(child)
                 else:
                     raise Exception('Unsupported type: ' + child.tag)
             if child.tail:
                 text += child.tail
-        text += title.tail
         text = text.strip()
         text = re.sub(r'\n', '', text)
         text = re.sub(r'  *', ' ', text)
@@ -274,6 +273,8 @@ class BookParser:
                     text += '*' + self.parseText(child.text, True, False, False) + '*'
                 elif child.tag == 'filename':
                     text += '"' + self.parseText(child.text, True, False, False) + '"'
+                elif child.tag == 'math':
+                    text += self.parseMath(child)
                 elif child.tag == 'trademark':
                     text += '*' + self.parseText(child.text, True, False, False) + '*^(TM)'
                 elif child.tag == 'ulink':
@@ -310,7 +311,6 @@ class BookParser:
                 if child.tag == 'space':
                     text += '&nbsp;'
             text += self.parseText(child.tail, True, mergeCarriageReturns, False)
-        text += self.parseText(node.tail, True, mergeCarriageReturns, False)
 
         if mergeCarriageReturns:
             text = re.sub(r'\n', ' ', text)
@@ -328,6 +328,12 @@ class BookParser:
                     outFile.write('\n')
         else:
             outFile.write(text.strip())
+
+    def parseMath(self, node):
+        text = '*' + self.readRawText(node, True).strip().encode('utf-8') + '*'
+        text = re.sub(r'\n', ' ', text)
+        text = re.sub(r'[ \t]+', ' ', text)
+        return text
 
     def parseProgramListing(self, node, outFile, indent=0, prefix=''):
         output = '\n'
@@ -492,14 +498,16 @@ class BookParser:
             outFile.write('\n\n')
         outFile.write('\n')
 
-    def readRawText(self, node):
+    def readRawText(self, node, keepTags=False):
         text = ''
         if node.text:
             text += node.text;
         for child in node.getchildren():
+            if keepTags:
+                text += '<' + child.tag + '>'
             text += self.readRawText(child)
-        if node.tail:
-            text += node.tail
+            if keepTags:
+                text += '</' + child.tag + '>'
         return text
 
     def parseFuncPrototype(self, node, outFile):

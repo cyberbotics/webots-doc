@@ -56,9 +56,9 @@ required.
 
 A "force" [TouchSensor](reference/touchsensor.md#touchsensor) computes the
 (scalar) amount of force currently exerted on the sensor's body along the
-*z*-axis. The sensor uses this equation: `r=|f|*cos(α)`, where *r* is the
-return value, `f` is the cumulative force currently exerted on the sensor's
-body, and `α` is the angle between `f` and the sensor's *z*-axis. So the
+*z*-axis. The sensor uses this equation: *r=|f|*cos(α)*, where *r* is the
+return value, *f* is the cumulative force currently exerted on the sensor's
+body, and *α* is the angle between *f* and the sensor's *z*-axis. So the
 "force" sensor returns the projection of the force on its *z*-axis; a force
 perpendicular to the *z*-axis yields zero. For this reason, a "force" sensor
 must be oriented such that its positive *z*-axis points outside of the robot, in
@@ -209,7 +209,7 @@ field. If the value of the `type` field is "force" then this function returns
 WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
 WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 
-%figure "Return values for the `wb_touch_sensor_get_type()` function"
+%figure "Return values for the *wb_touch_sensor_get_type()* function"
 | TouchSensor.type | return value |
 | --- | --- |
 | "bumper" | WB\_TOUCH\_SENSOR\_BUMPER |

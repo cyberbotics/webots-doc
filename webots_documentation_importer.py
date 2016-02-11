@@ -255,7 +255,7 @@ class BookParser:
                 output += '\n'
         return output
 
-    def parsePara(self, node, outFile, indent=0, inList=False, mergeCarriageReturns=False):
+    def parsePara(self, node, outFile, indent=0, inList=False, mergeCarriageReturns=False, format=True):
         # para included tags:
         #     bold, command, computeroutput, email, emphasis, filename, function,
         #     guibutton, guilabel, guimenu, guimenuitem, guisubmenu, hlink,
@@ -315,8 +315,8 @@ class BookParser:
         if mergeCarriageReturns:
             text = re.sub(r'\n', ' ', text)
             text = re.sub(r'[ \t]+', ' ', text)
-            outFile.write(text)
-        else:
+
+        if format:
             text = self.formatText(text)
 
             content = text.split('\n')
@@ -326,6 +326,8 @@ class BookParser:
                     outFile.write(' ' * indent + line)
                 if i != len(content) - 1:
                     outFile.write('\n')
+        else:
+            outFile.write(text.strip())
 
     def parseProgramListing(self, node, outFile, indent=0, prefix=''):
         output = '\n'
@@ -437,7 +439,7 @@ class BookParser:
                     firstEntry = False
                 else:
                     outFile.write(' | ')
-                self.parsePara(entryNode, outFile, mergeCarriageReturns=(not header))
+                self.parsePara(entryNode, outFile, mergeCarriageReturns=(not header), format=False)
             outFile.write(' |\n')
             if line == 1 and header:
                 firstEntry = True

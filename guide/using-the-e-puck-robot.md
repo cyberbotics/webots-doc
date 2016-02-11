@@ -39,8 +39,7 @@ E-puck is equipped with a large number of devices, as summarized in .
 | Battery | about 3 hours with the provided 5Wh LiION rechargeable battery |
 | Processor | Microchip dsPIC 30F6014A @ 60MHz (about 15 MIPS) |
 | Motors | 2 stepper motors with 20 steps per revolution and a 50:1 reduction gear |
-| IR sensors | 8 infra-red sensors measuring ambient light and proximity of obstacles in a 4 cm
-range |
+| IR sensors | 8 infra-red sensors measuring ambient light and proximity of obstacles in a 4 cm range |
 | Camera | color camera with a maximum resolution of 640x480 (typical use: 52x39 or 640x1) |
 | Microphones | 3 omni-directional microphones for sound localization |
 | Accelerometer | 3D accelerometer along the X, Y and Z axis |
@@ -51,8 +50,8 @@ range |
 | Remote Control | infra-red LED for receiving standard remote control commands |
 | Expansion bus | expansion bus to add new possibilities to your robot |
 | Programming | C programming with the GNU GCC compiler system |
-| Simulation | Webots EDU or PRO facilitates the programming of e-puck with a powerful
-simulation, remote control and cross-compilation system. |
+| Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
+      powerful simulation, remote control and cross-compilation system. |
 %%end
 
 ### Simulation model

@@ -6,8 +6,7 @@ The following tables describe the Matlab functions.
 | --- |
 | [wb\_accelerometer\_enable](reference/accelerometer.md)(tag, ms) |
 | [wb\_accelerometer\_disable](reference/accelerometer.md)(tag) |
-| period =
-[wb\_accelerometer\_get\_sampling\_period](reference/accelerometer.md)(tag) |
+| period = [wb\_accelerometer\_get\_sampling\_period](reference/accelerometer.md)(tag) |
 | [x y z] = [wb\_accelerometer\_get\_values](reference/accelerometer.md)(tag) |
 
 | % [Brake](reference/brake.md#brake) : |
@@ -63,27 +62,17 @@ The following tables describe the Matlab functions.
 
 | % [DifferentialWheels](reference/differentialwheels.md#differentialwheels) : |
 | --- |
-| [wb\_differential\_wheels\_set\_speed](reference/differentialwheels.md)(left,
-right) |
-| left =
-[wb\_differential\_wheels\_get\_left\_speed](reference/differentialwheels.md)() |
-| right =
-[wb\_differential\_wheels\_get\_right\_speed](reference/differentialwheels.md)() |
-| [wb\_differential\_wheels\_enable\_encoders](reference/differentialwheels.md)(ms
-) |
+| [wb\_differential\_wheels\_set\_speed](reference/differentialwheels.md)(left, right) |
+| left = [wb\_differential\_wheels\_get\_left\_speed](reference/differentialwheels.md)() |
+| right = [wb\_differential\_wheels\_get\_right\_speed](reference/differentialwheels.md)() |
+| [wb\_differential\_wheels\_enable\_encoders](reference/differentialwheels.md)(ms) |
 | [wb\_differential\_wheels\_disable\_encoders](reference/differentialwheels.md)() |
-| period = [wb\_differential\_wheels\_get\_encoders\_sampling\_period](reference/d
-ifferentialwheels.md)() |
-| left = [wb\_differential\_wheels\_get\_left\_encoder](reference/differentialwhee
-ls.md)() |
-| right = [wb\_differential\_wheels\_get\_right\_encoder](reference/differentialwh
-eels.md)() |
-| [wb\_differential\_wheels\_set\_encoders](reference/differentialwheels.md)(left,
-right) |
-| max =
-[wb\_differential\_wheels\_get\_max\_speed](reference/differentialwheels.md)() |
-| unit =
-[wb\_differential\_wheels\_get\_speed\_unit](reference/differentialwheels.md)() |
+| period = [wb\_differential\_wheels\_get\_encoders\_sampling\_period](reference/differentialwheels.md)() |
+| left = [wb\_differential\_wheels\_get\_left\_encoder](reference/differentialwheels.md)() |
+| right = [wb\_differential\_wheels\_get\_right\_encoder](reference/differentialwheels.md)() |
+| [wb\_differential\_wheels\_set\_encoders](reference/differentialwheels.md)(left, right) |
+| max = [wb\_differential\_wheels\_get\_max\_speed](reference/differentialwheels.md)() |
+| unit = [wb\_differential\_wheels\_get\_speed\_unit](reference/differentialwheels.md)() |
 
 | % [Display](reference/display.md#display) : |
 | --- |
@@ -100,19 +89,15 @@ right) |
 | [wb\_display\_draw\_line](reference/display.md)(tag, x1, y1, x2, y2) |
 | [wb\_display\_draw\_rectangle](reference/display.md)(tag, x, y, width, height) |
 | [wb\_display\_draw\_oval](reference/display.md)(tag, cx, cy, a, b) |
-| [wb\_display\_draw\_polygon](reference/display.md)(tag, [x1 x2 ... xn], [y1 y2
-... yn]) |
+| [wb\_display\_draw\_polygon](reference/display.md)(tag, [x1 x2 ... xn], [y1 y2 ... yn]) |
 | [wb\_display\_draw\_text](reference/display.md)(tag, 'txt', x, y) |
 | [wb\_display\_fill\_rectangle](reference/display.md)(tag, x, y, width, height) |
 | [wb\_display\_fill\_oval](reference/display.md)(tag, cx, cy, a, b) |
-| [wb\_display\_fill\_polygon](reference/display.md)(tag, [x1 x2 ... xn], [y1 y2
-... yn]) |
-| image = [wb\_display\_image\_copy](reference/display.md)(tag, x, y, width,
-height) |
+| [wb\_display\_fill\_polygon](reference/display.md)(tag, [x1 x2 ... xn], [y1 y2 ... yn]) |
+| image = [wb\_display\_image\_copy](reference/display.md)(tag, x, y, width, height) |
 | [wb\_display\_image\_paste](reference/display.md)(tag, image, x, y) |
 | image = [wb\_display\_image\_load](reference/display.md)(tag, 'filename') |
-| image = [wb\_display\_image\_new](reference/display.md)(tag, width, height, data
-,format) |
+| image = [wb\_display\_image\_new](reference/display.md)(tag, width, height, data ,format) |
 | [wb\_display\_image\_save](reference/display.md)(tag, image, 'filename') |
 | [wb\_display\_image\_delete](reference/display.md)(tag, image) |
 
@@ -120,8 +105,7 @@ height) |
 | --- |
 | [wb\_distance\_sensor\_enable](reference/distancesensor.md)(tag, ms) |
 | [wb\_distance\_sensor\_disable](reference/distancesensor.md)(tag) |
-| period =
-[wb\_distance\_sensor\_get\_sampling\_period](reference/distancesensor.md)(tag) |
+| period = [wb\_distance\_sensor\_get\_sampling\_period](reference/distancesensor.md)(tag) |
 | value = [wb\_distance\_sensor\_get\_value](reference/distancesensor.md)(tag) |
 
 | % [Emitter](reference/emitter.md#emitter) : |
@@ -152,10 +136,8 @@ height) |
 | --- |
 | [wb\_inertial\_unit\_enable](reference/inertialunit.md)(tag, ms) |
 | [wb\_inertial\_unit\_disable](reference/inertialunit.md)(tag) |
-| period =
-[wb\_inertial\_unit\_get\_sampling\_period](reference/inertialunit.md)(tag) |
-| [roll pitch yaw] =
-[wb\_inertial\_unit\_get\_roll\_pitch\_yaw](reference/inertialunit.md)(tag) |
+| period = [wb\_inertial\_unit\_get\_sampling\_period](reference/inertialunit.md)(tag) |
+| [roll pitch yaw] = [wb\_inertial\_unit\_get\_roll\_pitch\_yaw](reference/inertialunit.md)(tag) |
 
 | % [LED](reference/led.md#led) : |
 | --- |
@@ -166,8 +148,7 @@ height) |
 | --- |
 | [wb\_light\_sensor\_enable](reference/lightsensor.md)(tag, ms) |
 | [wb\_light\_sensor\_disable](reference/lightsensor.md)(tag) |
-| period =
-[wb\_light\_sensor\_get\_sampling\_period](reference/lightsensor.md)(tag) |
+| period = [wb\_light\_sensor\_get\_sampling\_period](reference/lightsensor.md)(tag) |
 | value = [wb\_light\_sensor\_get\_value](reference/lightsensor.md)(tag) |
 
 | % [Motion](reference/motion.md#motion) : |
@@ -204,14 +185,12 @@ height) |
 | torque = [wb\_motor\_get\_max\_torque](reference/motor.md)(tag) |
 | [wb\_motor\_enable\_force\_feedback](reference/motor.md)(tag, ms) |
 | [wb\_motor\_disable\_force\_feedback](reference/motor.md)(tag) |
-| period =
-[wb\_motor\_get\_force\_feedback\_sampling\_period](reference/motor.md)(tag) |
+| period = [wb\_motor\_get\_force\_feedback\_sampling\_period](reference/motor.md)(tag) |
 | force = [wb\_motor\_get\_force\_feedback](reference/motor.md)(tag) |
 | [wb\_motor\_set\_force](reference/motor.md)(tag, force) |
 | [wb\_motor\_enable\_torque\_feedback](reference/motor.md)(tag, ms) |
 | [wb\_motor\_disable\_torque\_feedback](reference/motor.md)(tag) |
-| period =
-[wb\_motor\_get\_torque\_feedback\_sampling\_period](reference/motor.md)(tag) |
+| period = [wb\_motor\_get\_torque\_feedback\_sampling\_period](reference/motor.md)(tag) |
 | force = [wb\_motor\_get\_torque\_feedback](reference/motor.md)(tag) |
 | [wb\_motor\_set\_torque](reference/motor.md)(tag, torque) |
 | type = [wb\_motor\_get\_type](reference/motor.md)(tag) |
@@ -252,8 +231,7 @@ height) |
 | WB\_ANGULAR, WB\_LINEAR |
 | [wb\_position\_sensor\_enable](reference/positionsensor.md)(tag, ms) |
 | [wb\_position\_sensor\_disable](reference/positionsensor.md)(tag) |
-| period =
-[wb\_position\_sensor\_get\_sampling\_period](reference/positionsensor.md)(tag) |
+| period = [wb\_position\_sensor\_get\_sampling\_period](reference/positionsensor.md)(tag) |
 | value = [wb\_position\_sensor\_get\_value](reference/positionsensor.md)(tag) |
 | type = [wb\_position\_sensor\_get\_type](reference/positionsensor.md)(tag) |
 
@@ -297,19 +275,17 @@ height) |
 | WB\_ROBOT\_KEYBOARD\_ALT |
 | [wb\_robot\_step](reference/robot.md)(ms) |
 | tag = [wb\_robot\_get\_device](reference/robot.md)('name') |
-| &nbsp;&nbsp; size = [wb\_robot\_get\_number\_of\_devices](reference/robot.md)() |
-| &nbsp;&nbsp; tag =
-[wb\_robot\_get\_device\_by\_index](reference/robot.md)(index) |
+| size = [wb\_robot\_get\_number\_of\_devices](reference/robot.md)() |
+| tag = [wb\_robot\_get\_device\_by\_index](reference/robot.md)(index) |
 | [wb\_robot\_battery\_sensor\_enable](reference/robot.md)(ms) |
 | [wb\_robot\_battery\_sensor\_disable](reference/robot.md)() |
-| period =
-[wb\_robot\_battery\_sensor\_get\_sampling\_period](reference/robot.md)() |
+| period = [wb\_robot\_battery\_sensor\_get\_sampling\_period](reference/robot.md)() |
 | value = [wb\_robot\_battery\_sensor\_get\_value](reference/robot.md)() |
 | step = [wb\_robot\_get\_basic\_time\_step](reference/robot.md)() |
 | mode = [wb\_robot\_get\_mode](reference/robot.md)() |
 | model = [wb\_robot\_get\_model](reference/robot.md)() |
-| &nbsp;&nbsp; data = [getData](reference/robot.md)() |
-| &nbsp;&nbsp; [setData](reference/robot.md)('data') |
+| data = [getData](reference/robot.md)() |
+| [setData](reference/robot.md)('data') |
 | name = [wb\_robot\_get\_name](reference/robot.md)() |
 | name = [wb\_robot\_get\_controller\_name](reference/robot.md)() |
 | name = [wb\_robot\_get\_controller\_arguments](reference/robot.md)() |
@@ -339,8 +315,7 @@ height) |
 | position = [wb\_servo\_get\_position](reference/servo.md)(tag) |
 | [wb\_servo\_enable\_motor\_force\_feedback](reference/servo.md)(tag, ms) |
 | [wb\_servo\_disable\_motor\_force\_feedback](reference/servo.md)(tag) |
-| period = [wb\_servo\_get\_motor\_force\_feedback\_sampling\_period](reference/se
-rvo.md)(tag) |
+| period = [wb\_servo\_get\_motor\_force\_feedback\_sampling\_period](reference/servo.md)(tag) |
 | force = [wb\_servo\_get\_motor\_force\_feedback](reference/servo.md)(tag) |
 | [wb\_servo\_set\_force](reference/servo.md)(tag, force) |
 | type = [wb\_servo\_get\_type](reference/servo.md)(tag) |
@@ -351,9 +326,7 @@ rvo.md)(tag) |
 | WB\_SF\_VEC3F, WB\_SF\_ROTATION, WB\_SF\_COLOR, WB\_SF\_STRING, |
 | WB\_SF\_NODE, WB\_MF, WB\_MF\_INT32, WB\_MF\_FLOAT, B\_MF\_VEC2F, |
 | WB\_MF\_VEC3F, WB\_MF\_COLOR, WB\_MF\_STRING, WB\_MF\_NODE |
-| WB\_SUPERVISOR\_MOVIE\_READY, WB\_SUPERVISOR\_MOVIE\_RECORDING,
-WB\_SUPERVISOR\_MOVIE\_SAVING, WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR,
-WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR |
+| WB\_SUPERVISOR\_MOVIE\_READY, WB\_SUPERVISOR\_MOVIE\_RECORDING, WB\_SUPERVISOR\_MOVIE\_SAVING, WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR, WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR |
 | [wb\_supervisor\_export\_image](reference/supervisor.md)('filename', quality) |
 | node = [wb\_supervisor\_node\_get\_root](reference/supervisor.md)() |
 | node = [wb\_supervisor\_node\_get\_self](reference/supervisor.md)() |
@@ -362,23 +335,19 @@ WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR
 | id = [wb\_supervisor\_node\_get\_id](reference/supervisor.md)(node) |
 | node = [wb\_supervisor\_node\_get\_parent\_node](reference/supervisor.md)(node) |
 | [wb\_supervisor\_node\_remove](reference/supervisor.md)(node) |
-| [wb\_supervisor\_set\_label](reference/supervisor.md)(id, 'text', x, y, size, [r
-g b], transparency) |
+| [wb\_supervisor\_set\_label](reference/supervisor.md)(id, 'text', x, y, size, [r g b], transparency) |
 | [wb\_supervisor\_simulation\_quit](reference/supervisor.md)(status) |
 | [wb\_supervisor\_simulation\_revert](reference/supervisor.md)() |
 | [wb\_supervisor\_simulation\_reset\_physics](reference/supervisor.md)() |
 | [wb\_supervisor\_load\_world](reference/supervisor.md)('filename') |
 | [wb\_supervisor\_save\_world](reference/supervisor.md)() |
 | [wb\_supervisor\_save\_world](reference/supervisor.md)('filename') |
-| [wb\_supervisor\_movie\_start\_recording](reference/supervisor.md)('filename',
-width, height, codec, quality, |
+| [wb\_supervisor\_movie\_start\_recording](reference/supervisor.md)('filename', width, height, codec, quality, |
 | acceleration, caption) |
 | [wb\_supervisor\_movie\_stop\_recording](reference/supervisor.md)() |
 | status = [wb\_supervisor\_movie\_get\_status](reference/supervisor.md)() |
-| success = [wb\_supervisor\_animation\_start\_recording](reference/supervisor.md)
-('filename') |
-| success =
-[wb\_supervisor\_animation\_stop\_recording](reference/supervisor.md)() |
+| success = [wb\_supervisor\_animation\_start\_recording](reference/supervisor.md)('filename') |
+| success = [wb\_supervisor\_animation\_stop\_recording](reference/supervisor.md)() |
 | type = [wb\_supervisor\_field\_get\_type](reference/supervisor.md)(field) |
 | name = [wb\_supervisor\_field\_get\_type\_name](reference/supervisor.md)(field) |
 | count = [wb\_supervisor\_field\_get\_count](reference/supervisor.md)(field) |
@@ -386,83 +355,49 @@ width, height, codec, quality, |
 | i = [wb\_supervisor\_field\_get\_sf\_int32](reference/supervisor.md)(field) |
 | f = [wb\_supervisor\_field\_get\_sf\_float](reference/supervisor.md)(field) |
 | [x y] = [wb\_supervisor\_field\_get\_sf\_vec2f](reference/supervisor.md)(field) |
-| [x y z] =
-[wb\_supervisor\_field\_get\_sf\_vec3f](reference/supervisor.md)(field) |
-| [x y z alpha] =
-[wb\_supervisor\_field\_get\_sf\_rotation](reference/supervisor.md)(field) |
-| [r g b] =
-[wb\_supervisor\_field\_get\_sf\_color](reference/supervisor.md)(field) |
+| [x y z] = [wb\_supervisor\_field\_get\_sf\_vec3f](reference/supervisor.md)(field) |
+| [x y z alpha] = [wb\_supervisor\_field\_get\_sf\_rotation](reference/supervisor.md)(field) |
+| [r g b] = [wb\_supervisor\_field\_get\_sf\_color](reference/supervisor.md)(field) |
 | s = [wb\_supervisor\_field\_get\_sf\_string](reference/supervisor.md)(field) |
 | node = [wb\_supervisor\_field\_get\_sf\_node](reference/supervisor.md)(field) |
-| b = [wb\_supervisor\_field\_get\_mf\_bool](reference/supervisor.md)(field,
-index) |
-| i = [wb\_supervisor\_field\_get\_mf\_int32](reference/supervisor.md)(field,
-index) |
-| f = [wb\_supervisor\_field\_get\_mf\_float](reference/supervisor.md)(field,
-index) |
-| [x y] = [wb\_supervisor\_field\_get\_mf\_vec2f](reference/supervisor.md)(field,
-index) |
-| [x y z] =
-[wb\_supervisor\_field\_get\_mf\_vec3f](reference/supervisor.md)(field, index) |
-| [x y z a] =
-[wb\_supervisor\_field\_get\_mf\_rotation](reference/supervisor.md)(field,
-index) |
-| [r g b] =
-[wb\_supervisor\_field\_get\_mf\_color](reference/supervisor.md)(field, index) |
-| s = [wb\_supervisor\_field\_get\_mf\_string](reference/supervisor.md)(field,
-index) |
-| node = [wb\_supervisor\_field\_get\_mf\_node](reference/supervisor.md)(field,
-index) |
+| b = [wb\_supervisor\_field\_get\_mf\_bool](reference/supervisor.md)(field, index) |
+| i = [wb\_supervisor\_field\_get\_mf\_int32](reference/supervisor.md)(field, index) |
+| f = [wb\_supervisor\_field\_get\_mf\_float](reference/supervisor.md)(field, index) |
+| [x y] = [wb\_supervisor\_field\_get\_mf\_vec2f](reference/supervisor.md)(field, index) |
+| [x y z] = [wb\_supervisor\_field\_get\_mf\_vec3f](reference/supervisor.md)(field, index) |
+| [x y z a] = [wb\_supervisor\_field\_get\_mf\_rotation](reference/supervisor.md)(field, index) |
+| [r g b] = [wb\_supervisor\_field\_get\_mf\_color](reference/supervisor.md)(field, index) |
+| s = [wb\_supervisor\_field\_get\_mf\_string](reference/supervisor.md)(field, index) |
+| node = [wb\_supervisor\_field\_get\_mf\_node](reference/supervisor.md)(field, index) |
 | [wb\_supervisor\_field\_set\_sf\_bool](reference/supervisor.md)(field, value) |
 | [wb\_supervisor\_field\_set\_sf\_int32](reference/supervisor.md)(field, value) |
 | [wb\_supervisor\_field\_set\_sf\_float](reference/supervisor.md)(field, value) |
 | [wb\_supervisor\_field\_set\_sf\_vec2f](reference/supervisor.md)(field, [x y]) |
 | [wb\_supervisor\_field\_set\_sf\_vec3f](reference/supervisor.md)(field, [x y z]) |
-| [wb\_supervisor\_field\_set\_sf\_rotation](reference/supervisor.md)(field, [x y
-z alpha]) |
+| [wb\_supervisor\_field\_set\_sf\_rotation](reference/supervisor.md)(field, [x y z alpha]) |
 | [wb\_supervisor\_field\_set\_sf\_color](reference/supervisor.md)(field, [r g b]) |
-| [wb\_supervisor\_field\_set\_sf\_string](reference/supervisor.md)(field,
-'value') |
-| [wb\_supervisor\_field\_set\_mf\_bool](reference/supervisor.md)(field, index,
-value) |
-| [wb\_supervisor\_field\_set\_mf\_int32](reference/supervisor.md)(field, index,
-value) |
-| [wb\_supervisor\_field\_set\_mf\_float](reference/supervisor.md)(field, index,
-value) |
-| [wb\_supervisor\_field\_set\_mf\_vec2f](reference/supervisor.md)(field, index,
-[x y]) |
-| [wb\_supervisor\_field\_set\_mf\_vec3f](reference/supervisor.md)(field, index,
-[x y z]) |
-| [wb\_supervisor\_field\_set\_mf\_rotation](reference/supervisor.md)(field,
-index, [x y z a]) |
-| [wb\_supervisor\_field\_set\_mf\_color](reference/supervisor.md)(field, index,
-[r g b]) |
-| [wb\_supervisor\_field\_set\_mf\_string](reference/supervisor.md)(field, index,
-'value') |
-| [wb\_supervisor\_field\_import\_mf\_node](reference/supervisor.md)(field,
-position, 'filename') |
-| [wb\_supervisor\_field\_import\_mf\_node\_from\_string](reference/supervisor.md)
-(field, position, 'node\_string') |
-| [wb\_supervisor\_field\_remove\_mf\_node](reference/supervisor.md)(field,
-position) |
+| [wb\_supervisor\_field\_set\_sf\_string](reference/supervisor.md)(field, 'value') |
+| [wb\_supervisor\_field\_set\_mf\_bool](reference/supervisor.md)(field, index, value) |
+| [wb\_supervisor\_field\_set\_mf\_int32](reference/supervisor.md)(field, index, value) |
+| [wb\_supervisor\_field\_set\_mf\_float](reference/supervisor.md)(field, index, value) |
+| [wb\_supervisor\_field\_set\_mf\_vec2f](reference/supervisor.md)(field, index, [x y]) |
+| [wb\_supervisor\_field\_set\_mf\_vec3f](reference/supervisor.md)(field, index, [x y z]) |
+| [wb\_supervisor\_field\_set\_mf\_rotation](reference/supervisor.md)(field, index, [x y z a]) |
+| [wb\_supervisor\_field\_set\_mf\_color](reference/supervisor.md)(field, index, [r g b]) |
+| [wb\_supervisor\_field\_set\_mf\_string](reference/supervisor.md)(field, index, 'value') |
+| [wb\_supervisor\_field\_import\_mf\_node](reference/supervisor.md)(field, position, 'filename') |
+| [wb\_supervisor\_field\_import\_mf\_node\_from\_string](reference/supervisor.md)(field, position, 'node\_string') |
+| [wb\_supervisor\_field\_remove\_mf\_node](reference/supervisor.md)(field, position) |
 | type = [wb\_supervisor\_node\_get\_type](reference/supervisor.md)(node) |
 | name = [wb\_supervisor\_node\_get\_type\_name](reference/supervisor.md)(node) |
-| name =
-[wb\_supervisor\_node\_get\_base\_type\_name](reference/supervisor.md)(node) |
-| field = [wb\_supervisor\_node\_get\_field](reference/supervisor.md)(node,
-'field\_name') |
+| name = [wb\_supervisor\_node\_get\_base\_type\_name](reference/supervisor.md)(node) |
+| field = [wb\_supervisor\_node\_get\_field](reference/supervisor.md)(node, 'field\_name') |
 | position = [wb\_supervisor\_node\_get\_position](reference/supervisor.md)(node) |
-| orientation =
-[wb\_supervisor\_node\_get\_orientation](reference/supervisor.md)(node) |
-| com =
-[wb\_supervisor\_node\_get\_center\_of\_mass](reference/supervisor.md)(node) |
-| contact\_point =
-[wb\_supervisor\_node\_get\_contact\_point](reference/supervisor.md)(node,
-index) |
-| number\_of\_contacts = [wb\_supervisor\_node\_get\_number\_of\_contact\_points](
-reference/supervisor.md)(index) |
-| balance =
-[wb\_supervisor\_node\_get\_static\_balance](reference/supervisor.md)(node) |
+| orientation = [wb\_supervisor\_node\_get\_orientation](reference/supervisor.md)(node) |
+| com = [wb\_supervisor\_node\_get\_center\_of\_mass](reference/supervisor.md)(node) |
+| contact\_point = [wb\_supervisor\_node\_get\_contact\_point](reference/supervisor.md)(node, index) |
+| number\_of\_contacts = [wb\_supervisor\_node\_get\_number\_of\_contact\_points](reference/supervisor.md)(index) |
+| balance = [wb\_supervisor\_node\_get\_static\_balance](reference/supervisor.md)(node) |
 | velocity = [wb\_supervisor\_node\_get\_velocity](reference/supervisor.md)(node) |
 | [wb\_supervisor\_node\_set\_velocity](reference/supervisor.md)(node, velocity) |
 | [wb\_supervisor\_node\_reset\_physics](reference/supervisor.md)(node) |
@@ -473,8 +408,7 @@ reference/supervisor.md)(index) |
 | WB\_TOUCH\_SENSOR\_FORCE3D |
 | [wb\_touch\_sensor\_enable](reference/touchsensor.md)(tag, ms) |
 | [wb\_touch\_sensor\_disable](reference/touchsensor.md)(tag) |
-| period =
-[wb\_touch\_sensor\_get\_sampling\_period](reference/touchsensor.md)(tag) |
+| period = [wb\_touch\_sensor\_get\_sampling\_period](reference/touchsensor.md)(tag) |
 | value = [wb\_touch\_sensor\_get\_value](reference/touchsensor.md)(tag) |
 | [x y z] = [wb\_touch\_sensor\_get\_values](reference/touchsensor.md)(tag) |
 | type = [wb\_touch\_sensor\_get\_type](reference/touchsensor.md)(tag) |

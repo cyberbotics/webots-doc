@@ -9,3 +9,5 @@ The motions files have a user-readable format. They can be edited using the
 motion editor. More information on how to use the motion editor can be find into
 the user guide.
 
+## Sections
+- [Motion](reference/motion.md)

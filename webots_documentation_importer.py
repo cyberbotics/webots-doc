@@ -623,9 +623,9 @@ class BookParser:
                 print 'Generating ' + fileName
                 if os.path.exists(fileName):
                     raise Exception('sec1: "' + fileName + '" is existing')
-                outFile = open(fileName, 'w')
-                self.parseChapter(child, outFile)
-                outFile.close()
+                newOutFile = open(fileName, 'w')
+                self.parseChapter(child, newOutFile)
+                newOutFile.close()
                 simplifySpaces(fileName)
             elif child.tag == 'sect2' or child.tag == 'sect3' or child.tag == 'refsect1':
                 self.parseChapter(child, outFile)
@@ -669,6 +669,14 @@ class BookParser:
             else:
                 raise Exception('Unsupported type: ' + child.tag)
             previousChildTag = child.tag
+
+        if node.tag == 'chapter':
+            outFile.write('## Sections\n')
+            for child in node.getchildren():
+                if child.tag == 'sect1':
+                    title = self.getTitle(child)
+                    fileName = self.outputDirectoryPath + slugify(title) + '.md'
+                    outFile.write('- [%s](%s)\n' % (title, fileName))
 
 
     def parseBook(self, node, outFile):

@@ -7,3 +7,8 @@ directly in the group. Other useful sources of information about Webots include:
 [Cyberbotics' Robot
 Curriculum](http://en.wikibooks.org/wiki/Cyberbotics'_Robot_Curriculum).
 
+## Sections
+- [General FAQ](guide/general-faq.md)
+- [Programming](guide/programming.md)
+- [Modeling](guide/modeling.md)
+- [Speed/Performance](guide/speed-performance.md)

@@ -8,3 +8,11 @@ every programming language will yield exactly the same simulation results. Hence
 the concepts explained here with C examples also apply to
 C++/Java/Python/Matlab.
 
+## Sections
+- [Controller Programming](guide/controller-programming.md)
+- [Supervisor Programming](guide/supervisor-programming.md)
+- [Using Numerical Optimization Methods](guide/using-numerical-optimization-methods.md)
+- [C++/Java/Python](guide/cpp-java-python.md)
+- [Matlab](guide/matlab.md)
+- [Controller Plugin](guide/controller-plugin.md)
+- [Webots Plugin](guide/webots-plugin.md)

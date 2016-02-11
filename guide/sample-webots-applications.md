@@ -8,3 +8,9 @@ and can be directly opened from Webots using the `Open Sample World` item in
 directory. This chapter provides each example a with short abstract only. More
 detailed explanations can be found in the source code.
 
+## Sections
+- [Samples](guide/samples.md)
+- [Webots Devices](guide/webots-devices.md)
+- [How To](guide/how-to.md)
+- [Geometries](guide/geometries.md)
+- [Real Robots](guide/real-robots.md)

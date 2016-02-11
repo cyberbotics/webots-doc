@@ -310,6 +310,18 @@ class BookParser:
             else: # not a text tag
                 if child.tag == 'space':
                     text += '&nbsp;'
+                elif child.tag == 'inlinegraphic':
+                    text += '![](' + child.attrib.get('fileref')
+                    if child.attrib.get('width'):
+                        text += ' ='
+                        if child.attrib.get('width'):
+                            text += child.attrib.get('width')
+                        text += 'x'
+                        if child.attrib.get('height'):
+                            text += child.attrib.get('height')
+                        else:
+                            text += child.attrib.get('width')
+                    text += ')'
             text += self.parseText(child.tail, True, mergeCarriageReturns, False)
 
         if mergeCarriageReturns:

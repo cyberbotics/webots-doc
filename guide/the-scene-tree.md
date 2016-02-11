@@ -22,9 +22,10 @@ can be edited at the bottom of the Scene Tree. All changes will be immediately
 reflected in the 3D window. The following buttons are available int the field
 editor section:
 
-`Reset`: Resets a field to its default value.
+![](png/reset-button.png =26x26) `Reset`: Resets a field to its default value.
 
-`Help`: Context sensitive help for the currently selected node.
+![](png/help-button.png =26x26) `Help`: Context sensitive help for the currently
+selected node.
 
 Additionally, when a node is selected, other actions are available as shown in :
 

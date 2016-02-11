@@ -26,14 +26,15 @@ In the following, the possible compilation actions are listed. Some of them are
 only accessible in the `Build` menu, whereas `Build` and `Clean` actions have a
 shortcut in the Text Editor toolbar.
 
-Builds the whole project by invoking `make` in the selected file's directory.
-With C/C++, the `Build` button compiles and links the whole project into an
-executable file. C/C++ source file dependencies are automatically generated and
-updated when necessary. With Java, the `Build` button compiles the whole project
-into bytecode (.class files).
+![](png/build-button.png =26x26) Builds the whole project by invoking `make` in
+the selected file's directory. With C/C++, the `Build` button compiles and links
+the whole project into an executable file. C/C++ source file dependencies are
+automatically generated and updated when necessary. With Java, the `Build`
+button compiles the whole project into bytecode (.class files).
 
-The `Clean` button invokes `make clean` to delete the intermediate compilation
-files in the current file's directory. The source files remain untouched.
+![](png/clean-button.png =26x26) The `Clean` button invokes `make clean` to
+delete the intermediate compilation files in the current file's directory. The
+source files remain untouched.
 
 The `Make JAR file` menu item rebuilds the whole project and packs all the
 .class in a ".jar". This is a convenience function that can be used to pack a

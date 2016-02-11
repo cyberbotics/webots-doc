@@ -22,8 +22,8 @@ The `New World` menu item (and button) opens a new world in the simulation
 window containing only an `ElevationGrid`, displayed as a chessboard of 10 x 10
 squares on a surface of 1 m x 1 m.
 
-The `Open World...` menu item (and button) opens a file selection dialog that
-allows you to choose a ".wbt" file to load.
+![](png/open-button.png =26x26) The `Open World...` menu item (and button) opens
+a file selection dialog that allows you to choose a ".wbt" file to load.
 
 The `Open Recent World` menu item gives the possibility of reopening a ".wbt"
 file that was opened recently by choosing it from the list displayed in the
@@ -33,40 +33,43 @@ The `Open Sample World` menu item opens a dialog listing all the available
 sample worlds where it is possible to search for a specific ".wbt" file to load
 by entering the file name or part of it in the search field.
 
-The `Save World` menu item (and button) saves the current world using the
-current filename (the filename that appears at the top of the main window). On
-each `Save` the content of the ".wbt" file is overwritten and no backup copies
-are created by Webots, therefore you should use this button carefully and
-eventually do safety copies manually.
+![](png/save-button.png =26x26) The `Save World` menu item (and button) saves
+the current world using the current filename (the filename that appears at the
+top of the main window). On each `Save` the content of the ".wbt" file is
+overwritten and no backup copies are created by Webots, therefore you should use
+this button carefully and eventually do safety copies manually.
 
 The `Save World As...` menu item (and button) saves the current world with a new
 filename entered by the user. Note that a ".wbt" file should always be saved in
 a Webots project directory, and in the "worlds" subdirectory, otherwise it will
 not be possible to reopen the file.
 
-The `Revert World` menu item (and button) reloads the current world from the
-saved version and restarts the simulation from the beginning.
+![](png/revert-button.png =26x26) The `Revert World` menu item (and button)
+reloads the current world from the saved version and restarts the simulation
+from the beginning.
 
 > **note**: When opening (or reverting) a world, if the world takes more than 2 seconds to
 load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
 be opened instead.
 
-The `New Text File` menu item (and button) opens an empty text file in the text
-editor.
+![](png/new-button.png =26x26) The `New Text File` menu item (and button) opens
+an empty text file in the text editor.
 
-The `Open Text File...` menu item (and button) opens a file selection dialog
-that allows you to choose a text file (for example a ".java" file) to load.
+![](png/open-button.png =26x26) The `Open Text File...` menu item (and button)
+opens a file selection dialog that allows you to choose a text file (for example
+a ".java" file) to load.
 
-The `Save Text File` menu item (and button) saves the current text file.
+![](png/save-button.png =26x26) The `Save Text File` menu item (and button)
+saves the current text file.
 
-The `Save Text File As...` menu item (and button) saves the current text file
-with a new filename entered by the user.
+![](png/save_as-button.png =26x26) The `Save Text File As...` menu item (and
+button) saves the current text file with a new filename entered by the user.
 
 The `Save All Text Files` menu item saves all the opened and unsaved text files.
 
-The `Revert Text File` menu item (and button) reloads the text file from the
-saved version.
+![](png/revert-button.png =26x26) The `Revert Text File` menu item (and button)
+reloads the text file from the saved version.
 
 The `Print Preview...` menu item opens a window allowing you to manage the page
 layout in order to print files from the text editor.
@@ -89,15 +92,16 @@ The `Export VRML 2.0...` item allows you to save the currently loaded world as a
 ".wrl" file, conforming to the VRML97 standard. Such a file can, in turn, be
 opened with any VRML97 viewer and most 3D modeling software.
 
-The `Take Screenshot...` item allows you to take a screenshot of the current
-view in Webots. It opens a file dialog to save the current view as a PNG or JPG
-image.
+![](png/screenshot-button.png =26x26) The `Take Screenshot...` item allows you
+to take a screenshot of the current view in Webots. It opens a file dialog to
+save the current view as a PNG or JPG image.
 
-The `Make Movie...` item allows you to create MPEG movies (Linux and Mac OS X)
-or AVI movies (Windows). Once the movie recording is started, this item is
-changed in `Stop Movie...`. During the recording, it is possible to the change
-the running mode and pause the simulation. However, frames are only captured
-during Webots steps and not when the simulation is paused.
+![](png/movie-button.png =26x26) The `Make Movie...` item allows you to create
+MPEG movies (Linux and Mac OS X) or AVI movies (Windows). Once the movie
+recording is started, this item is changed in `Stop Movie...`. During the
+recording, it is possible to the change the running mode and pause the
+simulation. However, frames are only captured during Webots steps and not when
+the simulation is paused.
 
 The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file, using the X3DOM web standard, based on WebGL. This
@@ -111,13 +115,14 @@ referred to by the HTML/X3DOM file, e.g., textures. This can be achieved by
 passing the `--allow-file-access-from-files` option at Chrome startup. Otherwise
 textures won't show up in the 3D models.
 
-The `Make HTML5 Animation...` item allows you to record a simulation as a 3D
-animation and publish it on a HTML5 web page. The result is similar to a movie
-with playback controls, except that you can change the viewpoint at any time.
-Several files are generated: an X3D file containing the 3D scene, a JSON file
-containing the animation data and a HTML5 file displaying the result using X3DOM
-and jQuery. Once the animation recording is started, this item is changed to
-`Stop HTML5 Animation...` and can be used to stop the animation recording.
+![](png/animation-button.png =26x26) The `Make HTML5 Animation...` item allows
+you to record a simulation as a 3D animation and publish it on a HTML5 web page.
+The result is similar to a movie with playback controls, except that you can
+change the viewpoint at any time. Several files are generated: an X3D file
+containing the 3D scene, a JSON file containing the animation data and a HTML5
+file displaying the result using X3DOM and jQuery. Once the animation recording
+is started, this item is changed to `Stop HTML5 Animation...` and can be used to
+stop the animation recording.
 
 The `Quit Webots` terminates the current simulation and closes Webots.
 
@@ -234,26 +239,27 @@ modifying the visible and selected fields in the scene tree.
 
 The `Simulation` menu is used to control the execution of the simulation.
 
-The `Pause` menu item (and button) pauses the simulation.
+![](png/pause-button.png =26x26) The `Pause` menu item (and button) pauses the
+simulation.
 
-The `Step` menu item (and button) executes one basic time step of simulation.
-The duration of this step is defined in the `basicTimeStep` field of the
-`WorldInfo` node, and can be adjusted in the scene tree window to suit your
-needs.
+![](png/step-button.png =26x26) The `Step` menu item (and button) executes one
+basic time step of simulation. The duration of this step is defined in the
+`basicTimeStep` field of the `WorldInfo` node, and can be adjusted in the scene
+tree window to suit your needs.
 
-The `Real-time` menu item (and button) runs the simulation at real-time until it
-is interrupted by `Pause` or `Step`. In run mode, the 3D display of the scene is
-refreshed every *n* basic time steps, where *n* is defined in the
-`displayRefresh` field of the `WorldInfo` node.
+![](png/realtime-button.png =26x26) The `Real-time` menu item (and button) runs
+the simulation at real-time until it is interrupted by `Pause` or `Step`. In run
+mode, the 3D display of the scene is refreshed every *n* basic time steps, where
+*n* is defined in the `displayRefresh` field of the `WorldInfo` node.
 
-The `Run` menu item (and button) is like `Real-time`, except that it runs as
-fast as possible (Webots PRO only).
+![](png/run-button.png =26x26) The `Run` menu item (and button) is like `Real-
+time`, except that it runs as fast as possible (Webots PRO only).
 
-The `Fast` menu item (and button) is like `Run`, except that no graphical
-rendering is performed (Webots PRO only). As the graphical rendering is disabled
-(black screen) this allows for a faster simulation and therefore this is well
-suited for cpu-intensive simulations (genetic algorithms, vision, learning,
-etc.).
+![](png/fast-button.png =26x26) The `Fast` menu item (and button) is like `Run`,
+except that no graphical rendering is performed (Webots PRO only). As the
+graphical rendering is disabled (black screen) this allows for a faster
+simulation and therefore this is well suited for cpu-intensive simulations
+(genetic algorithms, vision, learning, etc.).
 
 ### Build Menu
 
@@ -382,27 +388,28 @@ subsection ), other than shortcuts to items of the `File`, `Simulation` and
 `View` menus. Edit actions always apply on the selected object, that is
 highlighted both in the 3D window and in the Scene Tree.
 
-`Hide/Show Scene Tree`: shows or hides the Scene Tree and resizes the 3D window
-consequently.
+![](png/show_scene_tree-button.png =26x26) `Hide/Show Scene Tree`: shows or
+hides the Scene Tree and resizes the 3D window consequently.
 
-`Cut`: Cuts the selected object.
+![](png/cut-button.png =26x26) `Cut`: Cuts the selected object.
 
-`Copy`: Copies the selected object.
+![](png/copy-button.png =26x26) `Copy`: Copies the selected object.
 
-`Paste`: Pastes the copied or cut object.
+![](png/paste-button.png =26x26) `Paste`: Pastes the copied or cut object.
 
 Note that the first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
 `Background`) cannot be cut, copied or pasted. One single instance of each of
 these nodes must be present in every Webots world, and in that precise order.
 
-`Add`: Adds a node or an object. For nodes, this triggers a dialog that will let
-you choose a node type from a list. The new node is created with default values
-that can be modified afterwards. You can only insert a node suitable for the
-corresponding field. The dialog also gives the possibility to load a previously
-exported node by clicking on the `Import...` button. Further information about
-how to export a node are available [here](guide/the-scene-tree.md#field-editor).
+![](png/add-button.png =26x26) `Add`: Adds a node or an object. For nodes, this
+triggers a dialog that will let you choose a node type from a list. The new node
+is created with default values that can be modified afterwards. You can only
+insert a node suitable for the corresponding field. The dialog also gives the
+possibility to load a previously exported node by clicking on the `Import...`
+button. Further information about how to export a node are available
+[here](guide/the-scene-tree.md#field-editor).
 
-`Delete`: Deletes the selected object.
+![](png/delete-button.png =26x26) `Delete`: Deletes the selected object.
 
 ### Speedometer and Virtual Time
 

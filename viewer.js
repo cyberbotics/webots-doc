@@ -34,8 +34,14 @@ function redirectUrls(node, targetPath) {
                 var newPage = match[1];
                 // TODO: do something with the anchor :-)
                 //var anchor = match[2]; // could be undefined
-                var newHref = window.location.href.replace(/page=([\w-]+)/, "page=" + newPage);
-                a.setAttribute("href", newHref);
+                var currentUrl = window.location.href;
+                var newUrl = currentUrl;
+                if (currentUrl.indexOf("page=") > -1) {
+                    newUrl = currentUrl.replace(/page=([\w-]+)/, "page=" + newPage);
+                } else {
+                    newUrl = currentUrl + '&page=' + newPage + '.md';
+                }
+                a.setAttribute("href", newUrl);
             }
         }
     }

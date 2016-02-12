@@ -128,11 +128,17 @@ function receiveMenuContent(menuContent) {
 }
 
 function populateNavigation(menu, selected) {
+    var next = document.getElementById("next");
+    var previous = document.getElementById("previous");
+    var up = document.getElementById("up");
+
     if (!selected) {
+        next.setAttribute("class", "disabled");
+        previous.setAttribute("class", "disabled");
+        up.setAttribute("class", "disabled");
         return;
     }
 
-    var next = document.getElementById("next");
     if (next) {
         var nextElement = null;
 
@@ -156,7 +162,6 @@ function populateNavigation(menu, selected) {
         }
     }
 
-    var previous = document.getElementById("previous");
     if (previous) {
         var previousElement = null;
 
@@ -180,7 +185,6 @@ function populateNavigation(menu, selected) {
         }
     }
 
-    var up = document.getElementById("up");
     if (up) {
         var upElement = null;
         var parentLi = null;
@@ -207,6 +211,21 @@ function populateMenu(menu) {
     $(menu).menu();
 }
 
+function getMDFile(target, setup) {
+    $.ajax({
+        type: "GET",
+        url: target,
+        dataType: "text",
+        setup : setup,
+        success: populateViewDiv,
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            console.log("Status: " + textStatus);
+            console.log("Error: " + errorThrown);
+            getMDFile(setup.targetPath + setup.book + ".md", setup); // get the main page instead
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     var book = getGETQueryValue("book", "guide");
     var page = getGETQueryValue("page", "guide.md");
@@ -222,19 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Target Url: " + targetUrl);
 
     // get the md file
-    $.ajax({
-        type: "GET",
-        url: targetUrl,
-        dataType: "text",
-        setup : {
-            'targetPath': targetPath
-        },
-        success: populateViewDiv,
-        error: function(XMLHttpRequest, textStatus, errorThrown) { 
-            console.log("Status: " + textStatus);
-            console.log("Error: " + errorThrown); 
-        }
-    });
+    getMDFile(targetUrl, { 'targetPath': targetPath, 'book': book });
 
     var menuUrl = targetPath + "menu.md";
     console.log("Menu Url: " + menuUrl);

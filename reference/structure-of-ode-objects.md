@@ -23,7 +23,7 @@ information shall be useful for implementing physics plugins.
 | Hinge2Joint { } | dJointID (dJointTypeHinge2) |
 | SliderJoint { } | dJointID (dJointTypeSlider) |
 
-%%end
+%end
 
 > **note**: Although a physics plugin grants you access to the dGeomIDs created and managed
 by Webots, you should never attempt to set a user-defined data pointer by means

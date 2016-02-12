@@ -41,7 +41,7 @@ Webots terminology).
 | Temperature sensor | Not supported | N/A |
 | RC device | Not supported | N/A |
 
-%%end
+%end
 
 The Thymio II distance sensor feedback is given on . The calibration was
 performed using a regular A4 white paper.

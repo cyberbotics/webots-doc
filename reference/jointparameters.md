@@ -57,7 +57,7 @@ linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
 | --- | --- | --- |
 | Position | rad (radians) | m (meters) |
 
-%%end
+%end
 
 ### Initial Transformation and Position
 

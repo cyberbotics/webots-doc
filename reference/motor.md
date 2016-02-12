@@ -88,7 +88,7 @@ See :
 | Velocity | rad/s (radians / second) | m/s (meters / second) |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
 
-%%end
+%end
 
 ### Initial Transformation and Position
 
@@ -211,7 +211,7 @@ torque control) algorithm is used.
 | wb\_motor\_set\_available\_force() (resp. wb\_motor\_set\_available\_torque()) | specifies the available force (resp. torque) | specifies the available force (resp. torque) | specifies the max force (resp. max torque) |
 | wb\_motor\_set\_force() (resp. wb\_motor\_set\_torque()) | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
 
-%%end
+%end
 
 ### Motor Limits
 
@@ -512,5 +512,5 @@ otherwise it returns WB\_ANGULAR.
 | "rotational" | WB\_ANGULAR |
 | "linear" | WB\_LINEAR |
 
-%%end
+%end
 

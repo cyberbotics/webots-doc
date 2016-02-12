@@ -29,7 +29,7 @@ listed in .
 | Skid steering drive | Turn radius: 0 cm, swing radius: 34 cm, max. traversable grade: 35% |
 | Speed | Max. forward/backward speed: 0.7 m/s; Rotation speed: 140 deg/s |
 
-%%end
+%end
 
 More information on the specifications and optional devices is available on
 Adept Mobile Robots official
@@ -111,7 +111,7 @@ set of devices listed in .
 | Skid steering drive | Turn radius: 0 cm, swing radius: 26.7 cm, max. traversable grade: 25% |
 | Speed | Max. forward/backward speed: 1.2 m/s; Rotation speed: 300 deg/s |
 
-%%end
+%end
 
 More information on the specifications and optional devices is available on
 Adept Mobile Robots official

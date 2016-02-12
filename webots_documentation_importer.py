@@ -476,7 +476,7 @@ class BookParser:
                 outFile.write(' |\n')
 
         if len(title) > 0:
-            outFile.write('\n%%end\n\n')
+            outFile.write('\n%end\n\n')
 
         outFile.write('\n')
 

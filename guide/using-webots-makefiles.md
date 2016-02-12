@@ -32,7 +32,7 @@ variables:
 | C\_SOURCES | Specifies a list of .c sources files |
 | CXX\_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files |
 
-%%end
+%end
 
 Every source file specified using these variables, will be added to the
 controller build. In addition dependency files will be automatically generated
@@ -70,7 +70,7 @@ These two variables can be used to pass flags to the gcc compiler or linker.
 | INCLUDE | Specifies a list of flags that will be passed to the gcc/g++ compiler |
 | LIBRARIES | Specifies a list of flags that will be passed to the linker |
 
-%%end
+%end
 
 #### Adding an External Library (C/C++)
 

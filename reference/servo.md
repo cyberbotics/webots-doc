@@ -97,7 +97,7 @@ expressed in *meters*. See :
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
 | Torque/Force | N*m (Newtons * meters) | N (Newtons) |
 
-%%end
+%end
 
 ### Initial Transformation and Position
 
@@ -234,7 +234,7 @@ control algorithm is used.
 | wb\_servo\_set\_motor\_force() | specifies the available force | specifies the available force | specifies the max force |
 | wb\_servo\_set\_force() | switches to force control | switches to force control | * specifies the desired force |
 
-%%end
+%end
 
 ### Servo Limits
 
@@ -331,7 +331,7 @@ a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 | motor with friction | on | off | on |
 | spring without any friction | off | on | off |
 
-%%end
+%end
 
 To obtain a spring & damper element, you can set `maxForce` to zero and
 `springConstant` and `dampingConstant` to non-zero values. A pure spring is
@@ -725,5 +725,5 @@ WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 | "rotational" | WB\_SERVO\_ROTATIONAL |
 | "linear" | WB\_SERVO\_LINEAR |
 
-%%end
+%end
 

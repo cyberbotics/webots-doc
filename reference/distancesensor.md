@@ -172,7 +172,7 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 | Sensitive to red objects | No | Yes | No | No |
 | Draws a red spot | No | No | No | Yes |
 
-%%end
+%end
 
 ### Infra-Red Sensors
 

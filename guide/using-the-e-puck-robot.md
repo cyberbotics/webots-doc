@@ -56,7 +56,7 @@ E-puck is equipped with a large number of devices, as summarized in .
 | Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
       powerful simulation, remote control and cross-compilation system. |
 
-%%end
+%end
 
 ### Simulation model
 
@@ -91,7 +91,7 @@ Manual](http://www.cyberbotics.com/reference/)).
 | Accelerometer | accelerometer |
 | Ground sensors (extension) | gs0, gs1 and gs2 |
 
-%%end
+%end
 
 %figure "e-puck specifications"
 
@@ -104,7 +104,7 @@ Manual](http://www.cyberbotics.com/reference/)).
 | Speed unit | 0.00628 rad/s |
 | Maximum angular speed | 1000 units |
 
-%%end
+%end
 
 The e-puck dimensions and speed specifications are shown in . The functions
 `wb_differential_wheels_set_speed()`,
@@ -126,7 +126,7 @@ the robot and to use its encoders.
 | ps7 | -0.010 | 0.033 | -0.030 | 1.87 |
 | camera | 0.000 | 0.028 | -0.030 | 4.71239 |
 
-%%end
+%end
 
 As is the case for any Differential Wheels robot set at its default position in
 Webots, the forward direction of the e-puck is given by the negative *z*-axis of

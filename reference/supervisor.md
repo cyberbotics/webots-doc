@@ -737,7 +737,7 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 | WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR | problem encoding and generating the movie file |
 | WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR | simulation not started, no movie recorded |
 
-%%end
+%end
 
 ---
 

@@ -497,7 +497,7 @@ The integers can be compared to the following enumeration items:
 | WB\_MODE\_CROSS\_COMPILATION | cross compilation mode |
 | WB\_MODE\_REMOTE\_CONTROL | remote control mode |
 
-%%end
+%end
 
 ---
 

@@ -64,7 +64,7 @@ use the Lua regular functions to write on these streams.
 | SFNode | dictionary (keys = "node\_name", "fields"[, "super"]) |
 | MF* | array (indexes = multiple value positions) |
 
-%%end
+%end
 
 %figure "Content of the context dictionary"
 
@@ -77,7 +77,7 @@ use the Lua regular functions to write on these streams.
 | webots\_home | absolute path to the Webots installation directory |
 | webots\_modules\_path | absolute path to the Webots modules directory |
 
-%%end
+%end
 
 ### Example
 

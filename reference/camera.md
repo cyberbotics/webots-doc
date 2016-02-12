@@ -409,7 +409,7 @@ the corresponding [Camera](camera.md#camera) node. The constants defined in
 | "color" | WB\_CAMERA\_COLOR |
 | "range-finder" | WB\_CAMERA\_RANGE\_FINDER |
 
-%%end
+%end
 
 > **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
 integers of the [Camera](camera.md#camera) class (for example, Camera::COLOR).

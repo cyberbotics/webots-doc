@@ -51,7 +51,7 @@ EDU and Webots MOD.
 | Floating licenses | yes | yes | yes |
 | One year Premier Service included | yes | yes | yes |
 
-%%end
+%end
 
 (1): refer to specific module description.
 

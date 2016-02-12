@@ -84,7 +84,7 @@ magnitude of the force. The force vector must be read using the
 | return value | 0 or 1 | scalar | vector |
 | API function | wb\_touch\_sensor\_get\_value() | wb\_touch\_sensor\_get\_value() | wb\_touch\_sensor\_get\_values() |
 
-%%end
+%end
 
 #### Lookup Table
 
@@ -214,5 +214,5 @@ WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 | "force" | WB\_TOUCH\_SENSOR\_FORCE |
 | "force-3d" | WB\_TOUCH\_SENSOR\_FORCE3D |
 
-%%end
+%end
 

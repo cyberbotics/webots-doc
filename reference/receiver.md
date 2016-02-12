@@ -140,7 +140,9 @@ type of data that can be transmitted. Any user chosen format is suitable, as
 long as emitters and receivers agree.
 
 %figure "Receiver's packet queue"
+
 ![Receiver's packet queue](pdf/receiver_queue.pdf.png)
+
 %end
 
 > **note**: Webots' Emitter/Receiver API guarantees that:

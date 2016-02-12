@@ -79,7 +79,9 @@ to the dynamical or to the statical environment. All these subnodes are
 optional, but the `physics` field needs the `boundingObject` to be defined.
 
 %figure "The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics)."
+
 ![The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics).](pdf/tutorial_solid.pdf.png)
+
 %end
 
 The Geometry box (in ) stands for any kind of geometrical primitive. In fact it
@@ -99,7 +101,9 @@ Finally add a Physics node to the `physics` field of the Solid. By modifying the
 *{0, 0.1, -0.2}* for example). Save the simulation. The result is depicted in .
 
 %figure "Your first rigid body in Webots."
+
 ![Your first rigid body in Webots.](png/tutorial_ball.png)
+
 %end
 
 > **note**: When the simulation is started, the ball hits the floor. You can move the ball
@@ -154,11 +158,15 @@ result is shown in .
 `boundingObject`.
 
 %figure "DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY"."
+
 ![DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".](png/tutorial_def_use.png)
+
 %end
 
 %figure "DEF-USE mechanism applied on the Shape node of a Solid."
+
 ![DEF-USE mechanism applied on the Shape node of a Solid.](pdf/tutorial_def_use_shape.pdf.png)
+
 %end
 
 ### Add Walls
@@ -182,7 +190,9 @@ has to be defined for all the walls. The expected result is shown in .
 The solution is located in the solution directory under the "obstacle.wbt".
 
 %figure "The simulation state at the end of this second tutorial."
+
 ![The simulation state at the end of this second tutorial.](png/tutorial_walls.png)
+
 %end
 
 ### Efficiency

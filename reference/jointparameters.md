@@ -52,19 +52,25 @@ linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
 *meters*. See :
 
 %figure "Joint Units"
+
 |  | Rotational | Linear |
 | --- | --- | --- |
 | Position | rad (radians) | m (meters) |
+
 %%end
 
 ### Initial Transformation and Position
 
 %figure "HingeJoint"
+
 ![HingeJoint](pdf/hinge_joint.pdf.png)
+
 %end
 
 %figure "SliderJoint"
+
 ![SliderJoint](pdf/slider_joint.pdf.png)
+
 %end
 
 The `position` field is a scalar representing an angle (in radians) or a
@@ -133,7 +139,9 @@ This damping torque/force is proportional to the effective joint velocity: *F =
 velocity computed by the physics simulator.
 
 %figure "Mechanical Diagram of a Slider Joint"
+
 ![Mechanical Diagram of a Slider Joint](pdf/slider_joint_mechanics.pdf.png)
+
 %end
 
 As you can see in (see  ), a [Joint](joint.md#joint) creates a joint between two

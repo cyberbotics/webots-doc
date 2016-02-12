@@ -21,7 +21,9 @@ the top-right pixel of the image corresponds to *s=1, t=1*. These relationships
 are depicted below.
 
 %figure "Texture map coordinate system"
+
 ![Texture map coordinate system](png/image_texture.png)
+
 %end
 
 The texture is read from the file specified by the `url` field. The file should

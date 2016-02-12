@@ -13,7 +13,9 @@ demo, the world file and its corresponding controller have the same name.
 **Keywords**: Flying robot, physics plugin, keyboard, joystick
 
 %figure "blimp_lis.wbt"
+
 ![blimp_lis.wbt](png/blimp_lis.png)
+
 %end
 
 This is an example of the flying blimp robot developed at the Laboratory of
@@ -28,7 +30,9 @@ plugin* is used to add thrust and other forces to the simulation.
 **Keywords**: Gantry robot, gripper, Hanoi towers, linear motors, recursive algorithm
 
 %figure "gantry.wbt"
+
 ![gantry.wbt](png/gantry.png)
+
 %end
 
 In this example, a gantry robot plays "Towers of Hanoi" by stacking three
@@ -41,7 +45,9 @@ Towers problem.
 **Keywords**: Legged robot, alternating tripod gait, linear motor
 
 %figure "hexapod.wbt"
+
 ![hexapod.wbt](png/hexapod.png)
+
 %end
 
 In this example, an insect-shaped robot is made of a combination of
@@ -53,7 +59,9 @@ alternating tripod gait.
 **Keywords**: Humanoid, QRIO robot
 
 %figure "humanoid.wbt"
+
 ![humanoid.wbt](png/humanoid.png)
+
 %end
 
 In this example, a humanoid robot performs endless gymnastic movements.
@@ -63,7 +71,9 @@ In this example, a humanoid robot performs endless gymnastic movements.
 **Keywords**: DifferentialWheels, Koala, keyboard, texture
 
 %figure "moon.wbt"
+
 ![moon.wbt](png/moon.png)
+
 %end
 
 In this example, two Koala robots (K-Team) circle on a moon-like surface. You
@@ -76,7 +86,9 @@ controller code.
 **Keywords**: Quadruped, legged robot, dog robot, passive joint, spring and damper
 
 %figure "ghostdog.wbt"
+
 ![ghostdog.wbt](png/ghostdog.png)
+
 %end
 
 This example shows a galloping quadruped robot made of active hip joints and
@@ -92,7 +104,9 @@ could be used for controlling the knee joints.
 **Keywords**: Salamander robot, swimming robot, amphibious robot, legged robot, physics plugin, buoyancy
 
 %figure "salamander.wbt"
+
 ![salamander.wbt](png/salamander.png)
+
 %end
 
 A salamander-shaped robot walks down a slope and reaches a pool where it starts
@@ -107,7 +121,9 @@ principle.
 **Keywords**: Soccer, Supervisor, DifferentialWheels, label
 
 %figure "soccer.wbt"
+
 ![soccer.wbt](png/soccer_world.png)
+
 %end
 
 In this example, two teams of simple `DifferentialWheels` robots play soccer. A
@@ -120,7 +136,9 @@ current score and the remaining time in the 3D view. This example shows how a
 **Keywords**: Sojourner, Passive joint, planetary exploration robot, keyboard, IndexedFaceSet
 
 %figure "sojourner.wbt"
+
 ![sojourner.wbt](png/sojourner.png)
+
 %end
 
 This is a realistic model of the "Sojourner" Mars exploration robot (NASA). A
@@ -133,7 +151,9 @@ robot's motion.
 **Keywords**: Connector, modular robots, self-reconfiguring robot
 
 %figure "yamor.wbt"
+
 ![yamor.wbt](png/yamor.png)
+
 %end
 
 In this example, eight "Yamor" robot modules attach and detach to and from each
@@ -148,7 +168,9 @@ module behaviour is chosen according to the name of the module.
 **Keywords**: Stewart platform, linear motion, physics plugin, ball joint, universal joint
 
 %figure "stewart_platform.wbt"
+
 ![stewart_platform.wbt](png/stewart_platform.png)
+
 %end
 
 This is an example of a *Stewart platform*. A Stewart platform is a kind of

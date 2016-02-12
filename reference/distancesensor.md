@@ -59,7 +59,9 @@ in increasing order.
     below.
 
 %figure "Sensor response versus obstacle distance"
+
 ![Sensor response versus obstacle distance](pdf/infrared.pdf.png)
+
 %end
 
     A different graph is produced when the trend of the desired response value and
@@ -74,7 +76,9 @@ in increasing order.
     The resulting range of measured values is shown in .
 
 %figure "Sensor response versus obstacle distance with opposite response-noise increase"
+
 ![Sensor response versus obstacle distance with opposite response-noise increase](pdf/khepera_sonar_lut.pdf.png)
+
 %end
 
 - `type`: one of "generic" (the default), "infra-red", "sonar" or "laser". Sensors
@@ -108,7 +112,9 @@ uniform and has a left/right symmetry. There is no upper limit on the number of
 rays; however, Webots' performance drops as the number of rays increases.
 
 %figure "Predefined configurations for 1 through 10 sensor rays"
+
 ![Predefined configurations for 1 through 10 sensor rays](pdf/ray_orbits.pdf.png)
+
 %end
 
 - `aperture`: sensor aperture angle or laser beam radius. For the "infra-red" and
@@ -118,7 +124,9 @@ field specifies (in meters) the radius of the red spot drawn where the laser
 beam hits an obstacle.
 
 %figure "Weight distribution formulas"
+
 ![Weight distribution formulas](pdf/weight_formula.pdf.png)
+
 %end
 
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for
@@ -135,7 +143,9 @@ is chosen for the `gaussianWidth`. This field is ignored for the "sonar" and
 "laser" DistanceSensor types.
 
 %figure "Example distribution for 10 rays using a Gaussian width of 0.5"
+
 ![Example distribution for 10 rays using a Gaussian width of 0.5](pdf/weight_distribution.pdf.png)
+
 %end
 
 - `resolution`: This field allows to define the resolution of the sensor, the
@@ -153,6 +163,7 @@ Two different methods are used for calculating the distance from an object.
 whereas *Nearest* method uses the shortest distance measured by any of the rays.
 
 %figure "Summary of DistanceSensor types"
+
 | type (field) | "generic" | "infra-red" | "sonar" | "laser" |
 | --- | --- | --- | --- | --- |
 | numberOfRays (field) | > 0 | > 0 | > 0 | 1 |
@@ -160,6 +171,7 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 | gaussianWidth (field) | Used | Used | Ignored | Ignored |
 | Sensitive to red objects | No | Yes | No | No |
 | Draws a red spot | No | No | No | Yes |
+
 %%end
 
 ### Infra-Red Sensors
@@ -187,7 +199,9 @@ words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see ).
 
 %figure "Sonar sensor"
+
 ![Sonar sensor](pdf/sonar_reflection.pdf.png)
+
 %end
 
 ### Line Following Behavior

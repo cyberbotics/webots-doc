@@ -61,7 +61,9 @@ twice the `wb_display_draw_line` drawing function to draw the two lines.
 ### Overlay Image
 
 %figure "Display overlay image"
+
 ![Display overlay image](png/display_overlay.png)
+
 %end
 
 The display image is shown by default on top of the 3D window with a cyan
@@ -142,7 +144,9 @@ old one. Only the color channel is affected by the `opacity` according to the
 formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
+
 ![Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity.](pdf/display_opacity.pdf.png)
+
 %end
 
 > **note** [Matlab]: In the Matlab version of `wb_display_set_color()` the `color` argument must be a

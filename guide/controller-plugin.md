@@ -59,7 +59,9 @@ as the one used to build the controllers):
 `WEBOTS_HOME/resources/Makefile.include`
 
 %figure "Controller plugin overview"
+
 ![Controller plugin overview](pdf/controller_plugin.pdf.png)
+
 %end
 
 ### Robot Window Plugin
@@ -200,7 +202,9 @@ disabled states are written in gray, and items with values outside the valid
 motor position range are written in red.
 
 %figure "Motion editor view"
+
 ![Motion editor view](png/motion_editor.png)
+
 %end
 
 ### Remote-control Plugin

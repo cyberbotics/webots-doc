@@ -28,6 +28,8 @@ boundingObjects, and that although [Group](group.md#group) and
 will work correctly.
 
 %figure "Webots Nodes Chart"
+
 ![Webots Nodes Chart](pdf/node_hierarchy.pdf.png)
+
 %end
 

@@ -37,7 +37,9 @@ step is computed and the current noise is estimated using a Gauss-Markov process
 as described in .
 
 %figure "Gauss-Markov process"
+
 ![Gauss-Markov process](pdf/gauss_markov.pdf.png)
+
 %end
 
 - `resolution`: This field allows to define the resolution of the sensor, the

@@ -97,7 +97,9 @@ children [
 ```
 
 %figure "Convex track's belt shape example"
+
 ![Convex track's belt shape example](png/track_belt_convex.png)
+
 %end
 
 Then for a concave track belt shape like the one shown in the following
@@ -124,6 +126,8 @@ children [
 ```
 
 %figure "Concave track's belt shape example"
+
 ![Concave track's belt shape example](png/track_belt_concave.png)
+
 %end
 

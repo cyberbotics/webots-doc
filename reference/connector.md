@@ -131,7 +131,9 @@ if `numberOfRotations` is 4 then there will be 4 different docking positions
 criterion this field should be set to zero.
 
 %figure "Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)"
+
 ![Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)](pdf/connector_alignment.pdf.png)
+
 %end
 
 - `snap`: when TRUE: the two connectors do automatically snap (align, adjust,
@@ -181,7 +183,9 @@ If these design criteria are not met, the [Connector](connector.md#connector)
 nodes will not work properly and may be unable to connect.
 
 %figure "Connector axis system"
+
 ![Connector axis system](png/connector_axes.png)
+
 %end
 
 > **note**: To be functional, a [Connector](connector.md#connector) node requires the

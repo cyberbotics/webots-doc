@@ -8,7 +8,9 @@ Pioneer 3-AT robot. ().
 #### Overview of the robot
 
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
+
 ![Pioneer 3-AT, a ready-to-use all terrain base](png/pioneer3at_real.png)
+
 %end
 
 The Pioneer 3-AT robot is an all-purpose outdoor base, used for research and
@@ -17,6 +19,7 @@ reconnaissance and other behaviors. It provides a ready-to-use set of devices
 listed in .
 
 %figure "Pioneer 3-AT features"
+
 | Feature | Description |
 | --- | --- |
 | Dimensions | 508 mm long, 497 mm large, 277 mm high |
@@ -25,6 +28,7 @@ listed in .
 | Microcontroller I/O | 32 digital inputs, 8 digital outputs, 8 analog inputs, 3 serial extension ports |
 | Skid steering drive | Turn radius: 0 cm, swing radius: 34 cm, max. traversable grade: 35% |
 | Speed | Max. forward/backward speed: 0.7 m/s; Rotation speed: 140 deg/s |
+
 %%end
 
 More information on the specifications and optional devices is available on
@@ -34,7 +38,9 @@ Adept Mobile Robots official
 #### Simulation model
 
 %figure "The Pioneer 3-AT model in Webots"
+
 ![The Pioneer 3-AT model in Webots](png/pioneer3at.png)
+
 %end
 
 The Pioneer 3-AT model in Webots is depicted in . This model includes support
@@ -45,7 +51,9 @@ the "pioneer3AT.wbt" file which is located in the
 the Webots distribution.
 
 %figure "Pioneer 3-AT motor names"
+
 ![Pioneer 3-AT motor names](png/pioneer3at_wheels.png)
+
 %end
 
 The "pioneer3at.wbt" world file is a simulation example of a simple obstacle
@@ -60,7 +68,9 @@ to manage the rotation of the wheels. The sonar sensors are numbered according
 to .
 
 %figure "Sonar sensors positions"
+
 ![Sonar sensors positions](png/pioneer3at_sonars.png)
+
 %end
 
 The angle between two consecutive sensor directions is 20 degrees except for the
@@ -74,7 +84,9 @@ Pioneer 3-DX robot. ().
 #### Overview of the robot
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
+
 ![Pioneer 3-DX, an all-purpose base, used for research and applications](png/pioneer3dx_real.png)
+
 %end
 
 The base Pioneer 3-DX platform is assembled with motors featuring 500-tick
@@ -89,6 +101,7 @@ reconnaissance and other behaviors. Pioneer 3-DX is provided with a ready-to-use
 set of devices listed in .
 
 %figure "Pioneer 3-AT features"
+
 | Feature | Description |
 | --- | --- |
 | Dimensions | 455 mm long, 381 mm large, 237 mm high |
@@ -97,6 +110,7 @@ set of devices listed in .
 | Microcontroller I/O | 32 digital inputs, 8 digital outputs, 8 analog inputs, 3 serial extension ports |
 | Skid steering drive | Turn radius: 0 cm, swing radius: 26.7 cm, max. traversable grade: 25% |
 | Speed | Max. forward/backward speed: 1.2 m/s; Rotation speed: 300 deg/s |
+
 %%end
 
 More information on the specifications and optional devices is available on
@@ -106,7 +120,9 @@ Adept Mobile Robots official
 #### Simulation model
 
 %figure "The Pioneer 3-DX model in Webots"
+
 ![The Pioneer 3-DX model in Webots](png/pioneer3dx.png)
+
 %end
 
 The Pioneer 3-DX model in Webots is depicted in . This model includes support
@@ -118,7 +134,9 @@ which is located in the
 the Webots distribution.
 
 %figure "Pioneer 3-DX motor names"
+
 ![Pioneer 3-DX motor names](png/pioneer3dx_servos.png)
+
 %end
 
 The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg

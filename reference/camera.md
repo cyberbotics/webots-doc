@@ -247,7 +247,9 @@ of `vFov/2`).
 ### Overlay Image
 
 %figure "Camera overlay image"
+
 ![Camera overlay image](png/camera_overlay.png)
+
 %end
 
 The camera image is shown by default on top of the 3D window with a magenta
@@ -401,10 +403,12 @@ the corresponding [Camera](camera.md#camera) node. The constants defined in
 "camera.h" are summarized in :
 
 %figure "Return values for the *wb_camera_get_type()* function"
+
 | Camera.type | return value |
 | --- | --- |
 | "color" | WB\_CAMERA\_COLOR |
 | "range-finder" | WB\_CAMERA\_RANGE\_FINDER |
+
 %%end
 
 > **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static

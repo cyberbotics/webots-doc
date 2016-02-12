@@ -48,7 +48,9 @@ centered on the origin of the charger coordinate system. The robot can recharge
 itself if its origin is in the charging area (see ).
 
 %figure "The sensitive area of a charger"
+
 ![The sensitive area of a charger](pdf/charger.pdf.png)
+
 %end
 
 - `emissiveColor`: color of the first child node (see above) when the charger is

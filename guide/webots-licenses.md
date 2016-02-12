@@ -38,6 +38,7 @@ The following table summarizes the main differences between Webots PRO, Webots
 EDU and Webots MOD.
 
 %figure "Webots licenses summary"
+
 | Webots feature | PRO | EDU | MOD |
 | --- | --- | --- | --- | --- |
 | Supervisor capability | yes | no | no |
@@ -49,6 +50,7 @@ EDU and Webots MOD.
 | Multi-platform: Windows, Mac & Linux | yes | yes | yes |
 | Floating licenses | yes | yes | yes |
 | One year Premier Service included | yes | yes | yes |
+
 %%end
 
 (1): refer to specific module description.

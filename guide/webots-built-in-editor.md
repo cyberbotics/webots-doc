@@ -7,7 +7,9 @@ highlighting for Webots supported language (C/C++, Java, Python and
 *MATLAB*<sup>TM</sup>) and auto-completion for Webots C API.
 
 %figure "Webots Text Editor"
+
 ![Webots Text Editor](png/text_editor.png)
+
 %end
 
 ### Compiling with the Source Code Editor

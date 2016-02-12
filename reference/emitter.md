@@ -56,7 +56,9 @@ directional. For "radio" and "serial" emitters, this field is ignored.  See  for
 an illustration of `range` and `aperture`.
 
 %figure "Illustration of aperture and range for "infra-red" Emitter/Receiver"
+
 ![Illustration of aperture and range for "infra-red" Emitter/Receiver](pdf/emitter_receiver.pdf.png)
+
 %end
 
 - `channel`: transmission channel. This is an identification number for an "infra-

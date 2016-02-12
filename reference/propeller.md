@@ -15,7 +15,9 @@ Propeller {
 ### Description
 
 %figure "Propeller"
+
 ![Propeller](pdf/propeller.pdf.png)
+
 %end
 
 The [Propeller](propeller.md#propeller) node can be used to model a marine or an

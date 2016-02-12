@@ -75,6 +75,7 @@ magnitude of the force. The force vector must be read using the
 `wb_touch_sensor_get_values()` function.
 
 %figure "TouchSensor types"
+
 | sensor type | "bumper" | "force" | "force-3d" |
 | --- | --- | --- | --- |
 | boundingObject | required | required | required |
@@ -82,6 +83,7 @@ magnitude of the force. The force vector must be read using the
 | lookupTable | ignored | used | used |
 | return value | 0 or 1 | scalar | vector |
 | API function | wb\_touch\_sensor\_get\_value() | wb\_touch\_sensor\_get\_value() | wb\_touch\_sensor\_get\_values() |
+
 %%end
 
 #### Lookup Table
@@ -205,10 +207,12 @@ WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
 WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 
 %figure "Return values for the *wb_touch_sensor_get_type()* function"
+
 | TouchSensor.type | return value |
 | --- | --- |
 | "bumper" | WB\_TOUCH\_SENSOR\_BUMPER |
 | "force" | WB\_TOUCH\_SENSOR\_FORCE |
 | "force-3d" | WB\_TOUCH\_SENSOR\_FORCE3D |
+
 %%end
 

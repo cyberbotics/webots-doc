@@ -39,7 +39,9 @@ the number of faces that compose the capsule's side. This field has no effect on
 collision detection.
 
 %figure "The Capsule node"
+
 ![The Capsule node](png/capsule.png)
+
 %end
 
 When a texture is mapped to a capsule, the texture map is vertically divided in

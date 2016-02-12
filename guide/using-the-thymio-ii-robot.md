@@ -1,7 +1,9 @@
 ## Using the Thymio II robot
 
 %figure "Thymio II model in Webots"
+
 ![Thymio II model in Webots](png/thymio2.png)
+
 %end
 
 Thymio II is an affordable educational robot. It provides three main features: a
@@ -24,6 +26,7 @@ The  shows which devices are supported by the model, and their names (using the
 Webots terminology).
 
 %figure "Thymio II devices"
+
 | Device | Support | Webots name |
 | --- | --- | --- |
 | Motors | Full support | motor.[left-right] |
@@ -37,13 +40,16 @@ Webots terminology).
 | Speaker | Not supported | N/A |
 | Temperature sensor | Not supported | N/A |
 | RC device | Not supported | N/A |
+
 %%end
 
 The Thymio II distance sensor feedback is given on . The calibration was
 performed using a regular A4 white paper.
 
 %figure "Proximity sensor response versus distance"
+
 ![Proximity sensor response versus distance](png/thymio2_horizontal_prox_feedback.png)
+
 %end
 
 ### Connect Aseba to the Thymio II model
@@ -68,7 +74,9 @@ In case of a simulation containing several Thymio II, the TCP/IP port of the
 can be modified by editing the `Thymio2::controllerArgs` field.
 
 %figure "Aseba Studio and VPL target selection dialog"
+
 ![Aseba Studio and VPL target selection dialog](png/thymio2_aseba_target_selection.png)
+
 %end
 
 The Thymio II window (see the ) can help you to raise some events easily. These
@@ -76,7 +84,9 @@ events are mainly useful when using the VPL for Thymio II software. To open the
 Thymio II window, just double click on the 3D model of the robot.
 
 %figure "Thymio II robot window"
+
 ![Thymio II robot window](png/thymio2_window.png)
+
 %end
 
 ### Thymio II Pen
@@ -89,7 +99,9 @@ located there (see the ):
 "WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_pen.wbt"
 
 %figure "Simulation of a Thymio II having a pen."
+
 ![Simulation of a Thymio II having a pen.](png/thymio2_pen.png)
+
 %end
 
 ### Thymio II Ball
@@ -101,6 +113,8 @@ of this is located there (see the ):
 "WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_ball.wbt"
 
 %figure "Simulation of a Thymio II above a ball."
+
 ![Simulation of a Thymio II above a ball.](png/thymio2_ball.png)
+
 %end
 

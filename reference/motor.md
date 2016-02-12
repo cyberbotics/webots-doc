@@ -81,11 +81,13 @@ are expressed in *radians* while linear motors units are expressed in *meters*.
 See :
 
 %figure "Motor Units"
+
 |  | Rotational | Linear |
 | --- | --- | --- |
 | Position | rad (radians) | m (meters) |
 | Velocity | rad/s (radians / second) | m/s (meters / second) |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
+
 %%end
 
 ### Initial Transformation and Position
@@ -95,11 +97,15 @@ position (see description of the `position` field in
 [JointParameters](jointparameters.md#jointparameters)).
 
 %figure "Linear Motor"
+
 ![Linear Motor](pdf/linear_motor.pdf.png)
+
 %end
 
 %figure "Rotational Motor"
+
 ![Rotational Motor](pdf/rotational_motor.pdf.png)
+
 %end
 
 ### Position Control
@@ -118,7 +124,9 @@ the motor *V<sub>c</sub>*. Finally, the third stage (3) is carried out by the
 physics simulator (ODE joint motors).
 
 %figure "Motor control"
+
 ![Motor control](pdf/motor_control.pdf.png)
+
 %end
 
 At each simulation step, the PID-controller (2) recomputes the current velocity
@@ -193,6 +201,7 @@ linear motion and eventually *explode* unless a functional force control (resp.
 torque control) algorithm is used.
 
 %figure "Motor Control Summary"
+
 |  | position control | velocity control | force or torque control |
 | --- | --- | --- | --- | --- |
 | uses PID-controller | yes | no | no |
@@ -201,6 +210,7 @@ torque control) algorithm is used.
 | wb\_motor\_set\_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
 | wb\_motor\_set\_available\_force() (resp. wb\_motor\_set\_available\_torque()) | specifies the available force (resp. torque) | specifies the available force (resp. torque) | specifies the max force (resp. max torque) |
 | wb\_motor\_set\_force() (resp. wb\_motor\_set\_torque()) | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
+
 %%end
 
 ### Motor Limits
@@ -496,9 +506,11 @@ the value of the `type` field is "linear", this function returns WB\_LINEAR, and
 otherwise it returns WB\_ANGULAR.
 
 %figure "Return values for the *wb_motor_get_type()* function"
+
 | Motor.type | return value |
 | --- | --- |
 | "rotational" | WB\_ANGULAR |
 | "linear" | WB\_LINEAR |
+
 %%end
 

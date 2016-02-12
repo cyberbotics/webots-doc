@@ -49,7 +49,9 @@ the point *(C<sub>s</sub><sub>t</sub>*, *T* be the translation of vector
 notation, the corresponding `TextureTransform` reads as
 
 %figure "Texture transformation in matrix notation"
+
 ![Texture transformation in matrix notation](pdf/texture_transform.pdf.png)
+
 %end
 
 where *C<sup>-1</sup>* denotes the matrix inverse of *C*.

@@ -398,7 +398,7 @@ class BookParser:
         if fileref is not None and len(fileref) > 0:
             if fileref.endswith('.pdf'):
                 fileref += '.png'
-            outFile.write('\n%%figure "%s"\n![%s](%s)\n%%end\n\n' % (title, title, fileref))
+            outFile.write('\n%%figure "%s"\n\n![%s](%s)\n\n%%end\n\n' % (title, title, fileref))
 
     def parseList(self, node, outFile, ordered):
         items = node.findall('./listitem')
@@ -438,7 +438,7 @@ class BookParser:
         nCols = int(node.findall('tgroup')[0].attrib.get('cols'))
 
         if len(title) > 0:
-            outFile.write('%%figure "%s"\n' % (title))
+            outFile.write('%%figure "%s"\n\n' % (title))
 
         if not header:
             outFile.write('| ' * (1 + nCols) + '\n')
@@ -476,7 +476,7 @@ class BookParser:
                 outFile.write(' |\n')
 
         if len(title) > 0:
-            outFile.write('%%end\n')
+            outFile.write('\n%%end\n\n')
 
         outFile.write('\n')
 

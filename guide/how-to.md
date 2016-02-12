@@ -12,7 +12,9 @@ according to the behaviour they exemplify.
 **Keywords**: Stereovision, Stereoscopy, Camera
 
 %figure "binocular.wbt"
+
 ![binocular.wbt](png/binocular.png)
+
 %end
 
 This example simply shows how to equip a robot with two `Camera`s for
@@ -24,7 +26,9 @@ computer vision.
 **Keywords**: Humanoid robot, biped robot, power off, passive joint
 
 %figure "biped.wbt"
+
 ![biped.wbt](png/biped.png)
+
 %end
 
 In this example, a biped robot stands up while his head rotates. After a few
@@ -37,7 +41,9 @@ motor power.
 **Keywords**: Force control, linear motor, spring and damper
 
 %figure "force_control.wbt"
+
 ![force_control.wbt](png/force_control.png)
+
 %end
 
 This world shows two boxes connected by a `LinearMotor`. Here, the purpose is to
@@ -54,7 +60,9 @@ controller.
 **Keywords**: Inverted pendulum, PID, LinearMotor
 
 %figure "inverted_pendulum.wbt"
+
 ![inverted_pendulum.wbt](png/inverted_pendulum.png)
+
 %end
 
 In this example, a robot moves from left to right in order to keep an inverted
@@ -67,7 +75,9 @@ controller.
 **Keywords**: Physics plugin, OpenGL drawing, flying robot, Emitter, Receiver
 
 %figure "physics.wbt"
+
 ![physics.wbt](png/physics.png)
+
 %end
 
 In this example, a robot flies using a physics plugin. This plugins is an
@@ -86,7 +96,9 @@ example of:
     restart simulation, screenshot, change controller
 
 %figure "supervisor.wbt"
+
 ![supervisor.wbt](png/supervisor.png)
+
 %end
 
 This shows a simple soccer game with six robots and a referee. The `Supervisor`
@@ -101,7 +113,9 @@ score, places the players to their initial position when a goal is scored, etc.
 **Keywords**: Supervisor, texture, wb_supervisor_field_set_*(), Camera
 
 %figure "texture_change.wbt"
+
 ![texture_change.wbt](png/texture_change.png)
+
 %end
 
 In this example, a robot moves forward and backward in front of a large textured
@@ -113,7 +127,9 @@ switches the image displayed on the panel.
 **Keywords**: Transform, USE, DEF
 
 %figure "town.wbt"
+
 ![town.wbt](png/town.png)
+
 %end
 
 This example shows a complex city model built with various `Transform` nodes.

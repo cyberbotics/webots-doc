@@ -61,7 +61,9 @@ the corresponding angle element will not be computed and it will return *NaN*
 axes are enabled (TRUE).
 
 %figure "Roll, pitch and yaw angles in Webots' Inertial Unit"
+
 ![Roll, pitch and yaw angles in Webots' Inertial Unit](png/roll_pitch_yaw.png)
+
 %end
 
 - `resolution`: This field allows to define the resolution of the sensor, the

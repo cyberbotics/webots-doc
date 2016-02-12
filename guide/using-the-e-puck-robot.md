@@ -12,7 +12,9 @@ Cyberbotics Ltd.
 ### Overview of the robot
 
 %figure "The e-puck robot at work"
+
 ![The e-puck robot at work](png/e-puck_real.png)
+
 %end
 
 E-puck was designed to fulfill the following requirements:
@@ -32,6 +34,7 @@ simple to repair.
 E-puck is equipped with a large number of devices, as summarized in .
 
 %figure "e-puck features"
+
 | Feature | Description |
 | --- | --- |
 | Size | 7.4 cm in diameter, 4.5 cm high |
@@ -52,12 +55,15 @@ E-puck is equipped with a large number of devices, as summarized in .
 | Programming | C programming with the GNU GCC compiler system |
 | Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
       powerful simulation, remote control and cross-compilation system. |
+
 %%end
 
 ### Simulation model
 
 %figure "The e-puck model in Webots"
+
 ![The e-puck model in Webots](png/e-puck.png)
+
 %end
 
 The e-puck model in Webots is depicted in . This model includes support for the
@@ -74,6 +80,7 @@ function `wb_robot_get_device()` (see the Robot section of [Reference
 Manual](http://www.cyberbotics.com/reference/)).
 
 %figure "Devices names"
+
 | Device | Name |
 | --- | --- |
 | Differential wheels | differential wheels |
@@ -83,9 +90,11 @@ Manual](http://www.cyberbotics.com/reference/)).
 | Camera | camera |
 | Accelerometer | accelerometer |
 | Ground sensors (extension) | gs0, gs1 and gs2 |
+
 %%end
 
 %figure "e-puck specifications"
+
 | Main specifications | Values |
 | --- | --- |
 | Robot radius | 37 mm |
@@ -94,6 +103,7 @@ Manual](http://www.cyberbotics.com/reference/)).
 | Encoder resolution | 159.23 |
 | Speed unit | 0.00628 rad/s |
 | Maximum angular speed | 1000 units |
+
 %%end
 
 The e-puck dimensions and speed specifications are shown in . The functions
@@ -103,6 +113,7 @@ The e-puck dimensions and speed specifications are shown in . The functions
 the robot and to use its encoders.
 
 %figure "Devices orientations"
+
 | Device | x (m) | y (m) | z (m) | Orientation (rad) |
 | --- | --- | --- | --- | --- |
 | ps0 | 0.010 | 0.033 | -0.030 | 1.27 |
@@ -114,6 +125,7 @@ the robot and to use its encoders.
 | ps6 | -0.025 | 0.033 | -0.022 | 2.37 |
 | ps7 | -0.010 | 0.033 | -0.030 | 1.87 |
 | camera | 0.000 | 0.028 | -0.030 | 4.71239 |
+
 %%end
 
 As is the case for any Differential Wheels robot set at its default position in
@@ -132,7 +144,9 @@ accordance with the lookup table in ; this table is the outcome of calibration
 performed on the real robot.
 
 %figure "Proximity sensor response against distance"
+
 ![Proximity sensor response against distance](png/e-puck_distance_sensor_lookup_table.png)
+
 %end
 
 The resolution of the camera was limited to 52x39 pixels, as this is the maximum
@@ -148,7 +162,9 @@ have been included in the simulation model in order to support extension
 modules.
 
 %figure "Sensors, LEDs and camera"
+
 ![Sensors, LEDs and camera](png/e-puck_sensors_and_leds.png)
+
 %end
 
 Several simulation examples are located in the
@@ -171,7 +187,9 @@ by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises
 with Webots and extended e-puck robots.
 
 %figure "An e-puck extension for line following"
+
 ![An e-puck extension for line following](png/e-puck_line.png)
+
 %end
 
 The directory "WEBOTS\_MODULES\_PATH/projects/samples/curriculum" contains a
@@ -193,7 +211,9 @@ can improve these models using your contribution.
 #### Control window
 
 %figure "The e-puck control window for simulation"
+
 ![The e-puck control window for simulation](png/e-puck_control.png)
+
 %end
 
 When opening a world containing an e-puck robot, Webots displays the e-puck
@@ -249,7 +269,9 @@ The BotStudio windows appears when the e-puck's controller points on a *.bsg*
 file.
 
 %figure "BotStudio"
+
 ![BotStudio](png/e-puck_botstudio.png)
+
 %end
 
 #### Bluetooth setup

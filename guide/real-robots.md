@@ -10,7 +10,9 @@ and the corresponding controllers are located in the
 **Keywords**: Aibo, Legged robot, uneven ground, IndexedFaceSet, texture
 
 %figure "aibo_ers210_rough.wbt"
+
 ![aibo_ers210_rough.wbt](png/aibo_ers210_rough.png)
+
 %end
 
 In this example, you can see a silver Aibo ERS-210 robot walking on an uneven
@@ -22,7 +24,9 @@ a `IndexedFaceSet`.
 **Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone
 
 %figure "aibo_ers7.wbt"
+
 ![aibo_ers7.wbt](png/aibo_ers7.png)
+
 %end
 
 In this example, you can see a silver Aibo ERS-7 robot walking on a textured
@@ -34,7 +38,9 @@ bone.
 **Keywords**: Alice, Braitenberg, DistanceSensor
 
 %figure "alice.wbt"
+
 ![alice.wbt](png/alice.png)
+
 %end
 
 In this example, you can see an Alice robot moving inside an arena while
@@ -46,7 +52,9 @@ many others, this example uses the `braitenberg` controller.
 **Keywords**: BoeBot, DistanceSensor, LED
 
 %figure "boebot.wbt"
+
 ![boebot.wbt](png/boebot.png)
+
 %end
 
 In this example, BoeBot moves inside an arena while avoiding the walls. When the
@@ -58,7 +66,9 @@ corresponding `LED` on.
 **Keywords**: DifferentialWheels, texture, Braitenberg,  Accelerometer, Odometry, E-puck
 
 %figure "e-puck.wbt"
+
 ![e-puck.wbt](png/e-puck.png)
+
 %end
 
 In this example, you can see the e-puck robot avoiding obstacles inside an arena
@@ -74,7 +84,9 @@ this controller is in the
     robotics, E-puck
 
 %figure "e-puck_line.wbt"
+
 ![e-puck_line.wbt](png/e-puck_line.png)
+
 %end
 
 In this example, you can see the E-puck robot following a black line drawn on
@@ -91,7 +103,9 @@ code for this controller is in the "e-puck\_line" directory.
     robotics, E-puck
 
 %figure "e-puck_line_demo.wbt"
+
 ![e-puck_line_demo.wbt](png/e-puck_line_demo.png)
+
 %end
 
 This example is the solution for the assignment given in the
@@ -105,7 +119,9 @@ distributed.
 **Keywords**: DifferentialWheels, Pen, cross-compilation, texture, Hemisson
 
 %figure "hemisson_cross_compilation.wbt"
+
 ![hemisson_cross_compilation.wbt](png/hemisson_cross_compilation.png)
+
 %end
 
 In this example, a Hemisson robot moves on a white floor while avoiding the
@@ -119,7 +135,9 @@ this controller is in the "hemisson" directory.
     active joint, force, TouchSensor
 
 %figure "hoap2_sumo.wbt"
+
 ![hoap2_sumo.wbt](png/hoap2_sumo.png)
+
 %end
 
 In this example, a Hoap2 robot from Fujitsu performs the Shiko dance (the dance
@@ -133,7 +151,9 @@ on the ground. The source code for this controller is in the "hoap2" directory.
     active joint, force, TouchSensor
 
 %figure "hoap2_walk.wbt"
+
 ![hoap2_walk.wbt](png/hoap2_walk.png)
+
 %end
 
 In this example, a Hoap2 robot from Fujitsu walks straight forward on a tatami.
@@ -147,7 +167,9 @@ this controller is in the "hoap2" directory.
     IndexedFaceSet, RotationalMotor, active joint
 
 %figure "ipr_collaboration.wbt"
+
 ![ipr_collaboration.wbt](png/ipr_collaboration.png)
+
 %end
 
 In this example, two IPR robots from Neuronics work together to put three red
@@ -163,7 +185,9 @@ for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
     IndexedFaceSet, RotationalMotor, active joint
 
 %figure "ipr_cube.wbt"
+
 ![ipr_cube.wbt](png/ipr_cube.png)
+
 %end
 
 In this example, an IPR robots from Neuronics moves a small red cube onto a
@@ -178,7 +202,9 @@ drives the movements of the robot. The source code of this client is in the
     client program, IPR, IndexedFaceSet, RotationalMotor, active joint
 
 %figure "ipr_factory.wbt"
+
 ![ipr_factory.wbt](png/ipr_factory.png)
+
 %end
 
 In this example, two IPR robots from Neuronics take industrial parts from a
@@ -194,7 +220,9 @@ the file "ipr\_serial/client/ipr\_factory.c".
 **Keywords**: Robot node, robotic arm, TCP/IP, IPR, IndexedFaceSet, RotationalMotor, active joint
 
 %figure "ipr_models.wbt"
+
 ![ipr_models.wbt](png/ipr_models.png)
+
 %end
 
 In this example, you can see all the different types of IPR model provided by
@@ -208,7 +236,9 @@ All the IPR robots use the same controller, whose source code is in the
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera
 
 %figure "khepera.wbt"
+
 ![khepera.wbt](png/khepera.png)
+
 %end
 
 In this example, you can see a Khepera robot from K-Team moving inside an arena
@@ -221,7 +251,9 @@ while avoiding the walls. Like many other examples, this one uses the
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera II
 
 %figure "khepera2.wbt"
+
 ![khepera2.wbt](png/khepera2.png)
+
 %end
 
 In this example, you can see a Khepera II robot from K-Team moving inside an
@@ -234,7 +266,9 @@ arena while avoiding the walls. Like many other examples, this one uses the
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera III
 
 %figure "khepera3.wbt"
+
 ![khepera3.wbt](png/khepera3.png)
+
 %end
 
 In this example, you can see a Khepera III robot from K-Team moving inside an
@@ -247,7 +281,9 @@ arena while avoiding the walls. Like many other examples, this one uses the
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Kinematic, Khepera
 
 %figure "khepera_kinematic.wbt"
+
 ![khepera_kinematic.wbt](png/khepera_kinematic.png)
+
 %end
 
 In this example, you can see two Khepera robots from K-Team moving inside an
@@ -261,7 +297,9 @@ use teh kinematic mode of Webots. Like many other examples, this one uses the
 **Keywords**: DifferentialWheels, Gripper, Khepera
 
 %figure "khepera_gripper.wbt"
+
 ![khepera_gripper.wbt](png/khepera_gripper.png)
+
 %end
 
 In this example, you can see a Khepera robot from K-Team equipped with a
@@ -274,7 +312,9 @@ controller is in the "khepera\_gripper" directory.
 **Keywords**: DifferentialWheels, Gripper, Camera, Khepera
 
 %figure "khepera_gripper_camera.wbt"
+
 ![khepera_gripper_camera.wbt](png/khepera_gripper_camera.png)
+
 %end
 
 In this example, you can see a Khepera robot from K-Team equipped with a gripper
@@ -288,7 +328,9 @@ source code for this controller is in the "khepera\_gripper" directory.
 **Keywords**: DifferentialWheels, DistanceSensor, K213, linear Camera, Khepera
 
 %figure "khepera_k213.wbt"
+
 ![khepera_k213.wbt](png/khepera_k213.png)
+
 %end
 
 In this example, you can see a Khepera robot from K-Team equipped with a K213
@@ -305,7 +347,9 @@ directory.
 **Keywords**: DifferentialWheels, UNIX pipe, client program, Khepera
 
 %figure "khepera_pipe.wbt"
+
 ![khepera_pipe.wbt](png/khepera_pipe.png)
+
 %end
 
 In this example, you can see a Khepera robot from K-Team inside an arena. The
@@ -323,7 +367,9 @@ controller and for the client program are in the "pipe" directory.
 **Keywords**: DifferentialWheels, TCP/IP, client program, Khepera
 
 %figure "khepera_tcpip.wbt"
+
 ![khepera_tcpip.wbt](png/khepera_tcpip.png)
+
 %end
 
 In this example, you can see a Khepera robot from K-Team inside an arena. The
@@ -340,7 +386,9 @@ directory.
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Koala
 
 %figure "koala.wbt"
+
 ![koala.wbt](png/koala.png)
+
 %end
 
 In this example, you can see a Koala robot from K-Team moving inside an arena
@@ -353,7 +401,9 @@ while avoiding the walls. Like many other examples, this one uses the
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Magellan
 
 %figure "magellan.wbt"
+
 ![magellan.wbt](png/magellan.png)
+
 %end
 
 In this example, you can see a Magellan robot moving inside an arena while
@@ -367,7 +417,9 @@ the "others/worlds" directory. Like many other examples, this one uses the
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Pioneer 2
 
 %figure "pioneer2.wbt"
+
 ![pioneer2.wbt](png/pioneer2.png)
+
 %end
 
 In this example, you can see a Pioneer 2 robot from ActivMedia Robotics moving
@@ -380,7 +432,9 @@ uses the `braitenberg` controller. The source code for this controller is in the
 **Keywords**: DifferentialWheels, bumper, TouchSensor, line following, Rover, Java
 
 %figure "rover.wbt"
+
 ![rover.wbt](png/rover_world.png)
+
 %end
 
 In this example you can see the Mindstorms Rover robot from LEGO following a
@@ -397,7 +451,9 @@ directory.
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Scout 2
 
 %figure "scout2.wbt"
+
 ![scout2.wbt](png/scout2.png)
+
 %end
 
 In this example, a Scout 2 robot moves inside an arena while avoiding the walls.
@@ -412,7 +468,9 @@ directory.
     sponginess, Shrimp, LinearMotor
 
 %figure "shrimp.wbt"
+
 ![shrimp.wbt](png/shrimp.png)
+
 %end
 
 This example contains a model of the *Shrimp* robot, which is a mobile platform
@@ -441,7 +499,9 @@ the ODE plugin is in the
 **Keywords**: Robot node, legged robot, RotationalMotor, Bioloid, Camera, DistanceSensor, keyboard, modular robots, walking
 
 %figure "bioloid.wbt"
+
 ![bioloid.wbt](png/bioloid.png)
+
 %end
 
 In this example, the four-legged robot model ( (a)) corresponds to a real

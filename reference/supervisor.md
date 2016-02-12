@@ -727,6 +727,7 @@ process is finished and the file has been created by waiting until the returned
 value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 
 %figure "Return values of the *wb_supervisor_movie_get_status()* function"
+
 | value | status |
 | --- | --- |
 | WB\_SUPERVISOR\_MOVIE\_RECORDING | recording the movie |
@@ -735,6 +736,7 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 | WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR | problem saving the movie frames or the encoding script |
 | WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR | problem encoding and generating the movie file |
 | WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR | simulation not started, no movie recorded |
+
 %%end
 
 ---

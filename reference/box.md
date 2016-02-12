@@ -17,7 +17,9 @@ The `size` field specifies the extents of the box along the *x*-, *y*-, and
 while three negative values display the inside faces.
 
 %figure "Box node"
+
 ![Box node](png/box.png)
+
 %end
 
 Textures are applied individually to each face of the box. On the front (+*z*),

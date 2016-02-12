@@ -86,7 +86,9 @@ functions described in the `Reference Manual`. A UV mapping function maps a 2D
 image representation to a 3D model.
 
 %figure "Simulation after having setup the Light and the Appearance nodes."
+
 ![Simulation after having setup the Light and the Appearance nodes.](png/tutorial_appearance.png)
+
 %end
 
 ### Rendering Options

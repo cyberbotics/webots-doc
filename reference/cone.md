@@ -30,7 +30,9 @@ cone and so its resolution. More precisely, it corresponds to the number of
 lines used to represent the bottom of the cone.
 
 %figure "The Cone node"
+
 ![The Cone node](png/cone.png)
+
 %end
 
 When a texture is applied to the sides of the cone, the texture wraps

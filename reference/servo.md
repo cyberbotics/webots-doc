@@ -89,12 +89,14 @@ Rotational servos units are expressed in *radians* while linear servos units are
 expressed in *meters*. See :
 
 %figure "Servo Units"
+
 |  | Rotational | Linear |
 | --- | --- | --- |
 | Position | rad (radians) | m (meters) |
 | Velocity | rad/s (radians / second) | m/s (meters / second) |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
 | Torque/Force | N*m (Newtons * meters) | N (Newtons) |
+
 %%end
 
 ### Initial Transformation and Position
@@ -110,7 +112,9 @@ rotation. The `rotation` field specifies the orientation of the axis of
 rotation. See .
 
 %figure "Rotational servo"
+
 ![Rotational servo](pdf/rotational_servo.pdf.png)
+
 %end
 
 In a "linear" [Servo](servo.md#servo), these fields have the following meaning:
@@ -118,7 +122,9 @@ The `translation` field specifies the translation of the sliding axis. The
 `rotation` field specifies the direction of the sliding axis. See .
 
 %figure "Linear servo"
+
 ![Linear servo](pdf/linear_servo.pdf.png)
+
 %end
 
 The `position` field represents the current angle difference (in radians) or the
@@ -148,7 +154,9 @@ the servo *V<sub>c</sub>*. Finally, the third stage (3) is carried out by the
 physics simulator (ODE joint motors).
 
 %figure "Servo control"
+
 ![Servo control](pdf/servo_control.pdf.png)
+
 %end
 
 At each simulation step, the P-controller (2) recomputes the current velocity
@@ -216,6 +224,7 @@ rotational or linear motion and eventually *explode* unless a functional force
 control algorithm is used.
 
 %figure "Servo Control Summary"
+
 |  | position control | velocity control | force control |
 | --- | --- | --- | --- | --- |
 | uses P-controller | yes | no | no |
@@ -224,6 +233,7 @@ control algorithm is used.
 | wb\_servo\_set\_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
 | wb\_servo\_set\_motor\_force() | specifies the available force | specifies the available force | specifies the max force |
 | wb\_servo\_set\_force() | switches to force control | switches to force control | * specifies the desired force |
+
 %%end
 
 ### Servo Limits
@@ -287,7 +297,9 @@ This damping torque/force is proportional to the effective servo velocity: *F =
 velocity computed by the physics simulator.
 
 %figure "Mechanical Diagram of a Servo"
+
 ![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf.png)
+
 %end
 
 As you can see in (see  ), a [Servo](servo.md#servo) creates a joint between two
@@ -308,6 +320,7 @@ only the motor force is on). For example, to turn off the motor force and obtain
 a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 
 %figure "Servo Forces"
+
 | Force | motor force | spring force | damping force |
 | --- | --- | --- | --- |
 | Turned on when: | maxForce > 0 | springConstant > 0 | dampingConstant > 0 |
@@ -317,6 +330,7 @@ a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 | damper (without spring) | off | off | on |
 | motor with friction | on | off | on |
 | spring without any friction | off | on | off |
+
 %%end
 
 To obtain a spring & damper element, you can set `maxForce` to zero and
@@ -347,7 +361,9 @@ child [Servo](servo.md#servo) will have spring and damping forces
 (`springConstant` > 0 and `dampingConstant` > 0).
 
 %figure "Example of serial connection of two Servo nodes"
+
 ![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf.png)
+
 %end
 
 This is equivalent to this ".wbt" code, where, as you can notice, *Servo2* is a
@@ -703,9 +719,11 @@ the value of the `type` field is "linear", this function returns
 WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 
 %figure "Return values for the *wb_servo_get_type()* function"
+
 | Servo.type | return value |
 | --- | --- |
 | "rotational" | WB\_SERVO\_ROTATIONAL |
 | "linear" | WB\_SERVO\_LINEAR |
+
 %%end
 

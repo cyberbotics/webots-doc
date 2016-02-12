@@ -38,7 +38,9 @@ representing the height above the grid for each vertex.
 the *x* and *z* directions respectively, and shall be greater than zero.
 
 %figure "ElevationGrid node"
+
 ![ElevationGrid node](png/elevation_grid.png)
+
 %end
 
 Thus, the vertex corresponding to the point P[i,j] on the grid is placed at:

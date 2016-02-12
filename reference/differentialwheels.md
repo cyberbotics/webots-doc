@@ -122,6 +122,7 @@ forces are not simulated therefore a
 its initial elevation throughout the simulation.
 
 %figure "DifferentialWheels simulation modes"
+
 |  | Physics mode | Kinematics mode |
 | --- | --- | --- | --- |
 | Motion triggered by | Wheels friction | 2d Webots kinematics |
@@ -134,6 +135,7 @@ its initial elevation throughout the simulation.
 | maxForce field | Used | Ignored |
 | Sensor rays shape | 3d cone | 3d cone |
 | RGB sensitive | Yes | Yes |
+
 %%end
 
 ### DifferentialWheels Functions

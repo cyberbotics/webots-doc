@@ -5,7 +5,9 @@ creating a solid with several bounding objects: a dumbbell made of two spheres
 and one cylinder. The expected result is depicted in .
 
 %figure "Expected result at the end of the tutorial about compound solids."
+
 ![Expected result at the end of the tutorial about compound solids.](png/tutorial_dumbbell.png)
+
 %end
 
 ### New simulation
@@ -33,7 +35,9 @@ weights can be moved at the handle extremities thanks to the `translation` field
 of their Transform nodes.
 
 %figure "Representation of the subnodes of a compound solid made of several transformed geometries."
+
 ![Representation of the subnodes of a compound solid made of several transformed geometries.](pdf/tutorial_compound_solid.pdf.png)
+
 %end
 
 ### Physics Attributes

@@ -81,18 +81,14 @@ function populateViewDiv(mdContent) {
     });
 }
 
-function receiveTocContent(tocContent) {
-    // convert the orderedlist to an unordered one: easier to deal with in jQuery menu
-    tocContent = tocContent.replace(/\n( *)\d+\. /g, "\n$1- ");
+function receiveMenuContent(menuContent) {
+    console.log("Menu content:\n\n");
+    console.log(menuContent);
 
-    console.log("Toc content:\n\n");
-    console.log(tocContent);
-
-    var toc = null;
-
+    var menu = null;
 
     var converter = new showdown.Converter();
-    var html = converter.makeHtml(tocContent);
+    var html = converter.makeHtml(menuContent);
     var div = document.createElement("div");
     div.innerHTML = html;
 
@@ -100,13 +96,13 @@ function receiveTocContent(tocContent) {
     for (i = 0; i < div.childNodes.length; i++) {
         var child = div.childNodes[i];
         if (child && child.tagName && child.tagName.length > 0 && child.tagName.toLowerCase() == "ul") {
-            toc = child;
+            menu = child;
             break;
         }
     }
 
     // find the selected item
-    var as = toc.getElementsByTagName("a");
+    var as = menu.getElementsByTagName("a");
     var selected = null;
     for (i = 0; i < as.length; i++) {
         var a = as[i];
@@ -121,17 +117,17 @@ function receiveTocContent(tocContent) {
         }
     }
 
-    redirectUrls(toc, this.setup.targetPath);
+    redirectUrls(menu, this.setup.targetPath);
 
-    if (toc) {
-        populateMenu(toc);
-        populateNavigation(toc, selected);
+    if (menu) {
+        populateMenu(menu);
+        populateNavigation(menu, selected);
     } else {
-        console.error("Cannot extract TOC.");
+        console.error("Cannot extract Menu.");
     }
 }
 
-function populateNavigation(toc, selected) {
+function populateNavigation(menu, selected) {
     if (!selected) {
         return;
     }
@@ -205,10 +201,10 @@ function populateNavigation(toc, selected) {
     }
 }
 
-function populateMenu(toc) {
-    var menu = document.getElementById("menu");
-    menu.appendChild(toc);
-    $(toc).menu();
+function populateMenu(menu) {
+    var menuDiv = document.getElementById("menu");
+    menuDiv.appendChild(menu);
+    $(menu).menu();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -240,15 +236,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    var tocUrl = targetPath + "toc.md";
-    console.log("TOC Url: " + tocUrl);
+    var menuUrl = targetPath + "menu.md";
+    console.log("Menu Url: " + menuUrl);
 
-    // get the toc file
+    // get the menu file
     $.ajax({
         type: "GET",
-        url: tocUrl,
+        url: menuUrl,
         dataType: "text",
-        success: receiveTocContent,
+        success: receiveMenuContent,
         setup: {
             'targetPath': targetPath,
             'page': page

@@ -25,14 +25,13 @@ function redirectUrls(node, targetPath) {
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if ((href.endsWith("md") || href.indexOf(".md#") > -1) && (href.startsWith("guide") || href.startsWith("reference"))) {
-            var match = /^([\w-]+)\/([\w-]+).md(#[\w-]+)?$/.exec(href);
-            if (match && match.length >= 3) {
-                var newBook = match[1];
-                var newPage = match[2];
+        if (href.endsWith("md") || href.indexOf(".md#") > -1) {
+            var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
+            if (match && match.length >= 2) {
+                var newPage = match[1];
                 // TODO: do something with the anchor :-)
-                //var anchor = match[3]; // could be undefined
-                var newHref = window.location.href.replace(/book=([\w-]+)/, "book=" + newBook).replace(/page=([\w-]+)/, "page=" + newPage);
+                //var anchor = match[2]; // could be undefined
+                var newHref = window.location.href.replace(/page=([\w-]+)/, "page=" + newPage);
                 a.setAttribute("href", newHref);
             }
         }

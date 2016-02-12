@@ -134,26 +134,25 @@ class BookParser:
         self.root = ET.fromstring(content)
         self.parents = dict((c, p) for p in self.root.getiterator() for c in p)
 
-    def exportToc(self):
+    def exportMenu(self):
         if self.root is None:
-            raise Exception('Cannot export toc')
+            raise Exception('Cannot export menu')
 
-        outputFilePath = self.outputDirectoryPath + 'toc.md'
-        print 'Generating toc: ' + outputFilePath
+        outputFilePath = self.outputDirectoryPath + 'menu.md'
+        print 'Generating menu: ' + outputFilePath
 
         outFile = open(outputFilePath, 'w')
 
-        outFile.write('# Table of contents\n\n')
         chapterCounter = 0
         for chapterNode in self.root.findall('.//preface') + self.root.findall('.//chapter'):
             chapterCounter += 1
             title = self.getTitle(chapterNode)
-            outFile.write('%d. [%s](%s)\n' % (chapterCounter, title, slugify(title) + '.md'))
+            outFile.write('- [%s](%s)\n' % (title, slugify(title) + '.md'))
             sectionCounter = 0
             for sectionNode in chapterNode.findall('.//sect1'):
                 sectionCounter += 1
                 title = self.getTitle(sectionNode)
-                outFile.write('    %d. [%s](%s)\n' % (sectionCounter, title, slugify(title) + '.md'))
+                outFile.write('    - [%s](%s)\n' % (title, slugify(title) + '.md'))
         outFile.close()
         simplifySpaces(outputFilePath)
 
@@ -752,6 +751,6 @@ if __name__ == '__main__':
 
         bookParser = BookParser(webotsDirectoryPath, directoryName)
         bookParser.parseXMLFile(intputFilePath)
-        bookParser.exportToc()
+        bookParser.exportMenu()
         bookParser.parseReferences()
         bookParser.export()

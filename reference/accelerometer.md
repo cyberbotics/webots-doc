@@ -1,6 +1,6 @@
 ## Accelerometer
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 Accelerometer {
@@ -14,12 +14,11 @@ Accelerometer {
 
 ### Description
 
-The [Accelerometer](reference/accelerometer.md#accelerometer) node can be used
-to model accelerometer devices such as those commonly found in mobile
-electronics, robots and game input devices. The
-[Accelerometer](reference/accelerometer.md#accelerometer) node measures
-acceleration and gravity induced reaction forces over 1, 2 or 3 axes. It can be
-used for example to detect fall, the up/down direction, etc.
+The [Accelerometer](accelerometer.md#accelerometer) node can be used to model
+accelerometer devices such as those commonly found in mobile electronics, robots
+and game input devices. The [Accelerometer](accelerometer.md#accelerometer) node
+measures acceleration and gravity induced reaction forces over 1, 2 or 3 axes.
+It can be used for example to detect fall, the up/down direction, etc.
 
 ### Field Summary
 
@@ -49,7 +48,7 @@ value in the interval (0.0, inf).
 
 **wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/accelerometer.h>
@@ -72,25 +71,24 @@ The `wb_accelerometer_get_sampling_period()` function returns the period given
 into the `wb_accelerometer_enable()` function, or 0 if the device is disabled.
 
 The `wb_accelerometer_get_values()` function returns the current values measured
-by the [Accelerometer](reference/accelerometer.md#accelerometer). These values
-are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are valid
-for accessing the vector. Each element of the vector represents the acceleration
+by the [Accelerometer](accelerometer.md#accelerometer). These values are
+returned as a 3D-vector, therefore only the indices 0, 1, and 2 are valid for
+accessing the vector. Each element of the vector represents the acceleration
 along the corresponding axis of the
-[Accelerometer](reference/accelerometer.md#accelerometer) node, expressed in
-meters per second squared [m/s^2]. The first element corresponds to the x-axis,
-the second element to the y-axis, etc. An
-[Accelerometer](reference/accelerometer.md#accelerometer) at rest with earth's
-gravity will indicate 1 g (9.81 m/s^2) along the vertical axis. Note that the
-gravity can be specified in the `gravity` field in the
-[WorldInfo](reference/worldinfo.md#worldinfo) node. To obtain the acceleration
-due to motion alone, this offset must be subtracted. The device's output will be
-zero during free fall when no offset is substracted.
+[Accelerometer](accelerometer.md#accelerometer) node, expressed in meters per
+second squared [m/s^2]. The first element corresponds to the x-axis, the second
+element to the y-axis, etc. An [Accelerometer](accelerometer.md#accelerometer)
+at rest with earth's gravity will indicate 1 g (9.81 m/s^2) along the vertical
+axis. Note that the gravity can be specified in the `gravity` field in the
+[WorldInfo](worldinfo.md#worldinfo) node. To obtain the acceleration due to
+motion alone, this offset must be subtracted. The device's output will be zero
+during free fall when no offset is substracted.
 
 > **note** [C, C++]: The returned vector is a pointer to the internal values managed by the
-[Accelerometer](reference/accelerometer.md#accelerometer) node, therefore it is
-illegal to free this pointer. Furthermore, note that the pointed values are only
-valid until the next call to `wb_robot_step()` or `Robot::step()`. If these
-values are needed for a longer period they must be copied.
+[Accelerometer](accelerometer.md#accelerometer) node, therefore it is illegal to
+free this pointer. Furthermore, note that the pointed values are only valid
+until the next call to `wb_robot_step()` or `Robot::step()`. If these values are
+needed for a longer period they must be copied.
 
 <!-- -->
 

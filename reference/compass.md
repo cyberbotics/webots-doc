@@ -1,6 +1,6 @@
 ## Compass
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 Compass {
@@ -14,12 +14,11 @@ Compass {
 
 ### Description
 
-A [Compass](reference/compass.md#compass) node can be used to model a 1, 2 or
-3-axis digital compass (magnetic sensor). The
-[Compass](reference/compass.md#compass) node returns a vector that indicates the
-direction of the *virtual north*. The *virtual north* is specified by the
-`northDirection` field in the [WorldInfo](reference/worldinfo.md#worldinfo)
-node.
+A [Compass](compass.md#compass) node can be used to model a 1, 2 or 3-axis
+digital compass (magnetic sensor). The [Compass](compass.md#compass) node
+returns a vector that indicates the direction of the *virtual north*. The
+*virtual north* is specified by the `northDirection` field in the
+[WorldInfo](worldinfo.md#worldinfo) node.
 
 ### Field Summary
 
@@ -48,7 +47,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 **wb\_compass\_enable**, **wb\_compass\_disable**, **wb\_compass\_get\_sampling\_period**, **wb\_compass\_get\_values** - *enable, disable and read the output values of the compass device*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/compass.h>
@@ -61,20 +60,20 @@ int wb_compass_get_sampling_period(WbDeviceTag tag)
 
 #### Description
 
-The `wb_compass_enable()` function turns on the
-[Compass](reference/compass.md#compass) measurement each `ms` milliseconds.
+The `wb_compass_enable()` function turns on the [Compass](compass.md#compass)
+measurement each `ms` milliseconds.
 
-The `wb_compass_disable()` function turns off the
-[Compass](reference/compass.md#compass) device.
+The `wb_compass_disable()` function turns off the [Compass](compass.md#compass)
+device.
 
 The `wb_compass_get_sampling_period()` function returns the period given into
 the `wb_compass_enable()` function, or 0 if the device is disabled.
 
 The `wb_compass_get_values()` function returns the current
-[Compass](reference/compass.md#compass) measurement. The returned vector
-indicates the direction of the *virtual north* in the coordinate system of the
-[Compass](reference/compass.md#compass) device. Here is the internal algorithm
-of `wb_compass_get_values()` in pseudo-code:
+[Compass](compass.md#compass) measurement. The returned vector indicates the
+direction of the *virtual north* in the coordinate system of the
+[Compass](compass.md#compass) device. Here is the internal algorithm of
+`wb_compass_get_values()` in pseudo-code:
 
 ```
 float[3] wb_compass_get_values() {
@@ -99,9 +98,9 @@ are valid for accessing the vector. Let's look at one example. In Webots global
 coordinates system, the *xz*-plane represents the horizontal floor and the
 *y*-axis indicates the elevation. The default value of the `northDirection`
 field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned
-with the x-axis. Now if the [Compass](reference/compass.md#compass) node is in
-*upright* position, meaning that its y-axis is aligned with the global y-axis,
-then the bearing angle in degrees can be computed as follows:
+with the x-axis. Now if the [Compass](compass.md#compass) node is in *upright*
+position, meaning that its y-axis is aligned with the global y-axis, then the
+bearing angle in degrees can be computed as follows:
 
 ``` c
 double get_bearing_in_degrees() {
@@ -115,10 +114,10 @@ return bearing;
 ```
 
 > **note** [C, C++]: The returned vector is a pointer to the internal values managed by the
-[Compass](reference/compass.md#compass) node, therefore it is illegal to free
-this pointer. Furthermore, note that the pointed values are only valid until the
-next call to `wb_robot_step()` or `Robot::step()`. If these values are needed
-for a longer period they must be copied.
+[Compass](compass.md#compass) node, therefore it is illegal to free this
+pointer. Furthermore, note that the pointed values are only valid until the next
+call to `wb_robot_step()` or `Robot::step()`. If these values are needed for a
+longer period they must be copied.
 
 <!-- -->
 

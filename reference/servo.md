@@ -1,15 +1,14 @@
 ## Servo
 
-> **note**: As of Webots 7.2.0, the [Servo](reference/servo.md#servo) node is deprecated and
-should not be used in any new simulation models. It is kept for backwards
-compatibility only. The functionality of the [Servo](reference/servo.md#servo)
-node is replaced by the one provided by the
-[HingeJoint](reference/hingejoint.md#hingejoint),
-[RotationalMotor](reference/rotationalmotor.md#rotationalmotor) and
-[LinearMotor](reference/linearmotor.md#linearmotor) nodes. Therefore, you should
-use these nodes instead of the [Servo](reference/servo.md#servo) node.
+> **note**: As of Webots 7.2.0, the [Servo](servo.md#servo) node is deprecated and should
+not be used in any new simulation models. It is kept for backwards compatibility
+only. The functionality of the [Servo](servo.md#servo) node is replaced by the
+one provided by the [HingeJoint](hingejoint.md#hingejoint),
+[RotationalMotor](rotationalmotor.md#rotationalmotor) and
+[LinearMotor](linearmotor.md#linearmotor) nodes. Therefore, you should use these
+nodes instead of the [Servo](servo.md#servo) node.
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 Servo {
@@ -31,22 +30,20 @@ Servo {
 
 ### Description
 
-A [Servo](reference/servo.md#servo) node is used to add a joint (1 degree of
-freedom (DOF)) in a mechanical simulation. The joint can be active or passive;
-it is placed between the parent and children nodes (".wbt" hierarchy) of the
-[Servo](reference/servo.md#servo) and therefore it allows the children to move
-with respect to the parent. The [Servo](reference/servo.md#servo) can be of type
-"rotational" or "linear". A "rotational" [Servo](reference/servo.md#servo) is
-used to simulate a rotating motion, like an electric motor or a hinge. A
-"linear" [Servo](reference/servo.md#servo) is used to simulate a sliding motion,
-like a linear motor, a piston, a hydraulic/pneumatic cylinder, a spring, or a
-damper.
+A [Servo](servo.md#servo) node is used to add a joint (1 degree of freedom
+(DOF)) in a mechanical simulation. The joint can be active or passive; it is
+placed between the parent and children nodes (".wbt" hierarchy) of the
+[Servo](servo.md#servo) and therefore it allows the children to move with
+respect to the parent. The [Servo](servo.md#servo) can be of type "rotational"
+or "linear". A "rotational" [Servo](servo.md#servo) is used to simulate a
+rotating motion, like an electric motor or a hinge. A "linear"
+[Servo](servo.md#servo) is used to simulate a sliding motion, like a linear
+motor, a piston, a hydraulic/pneumatic cylinder, a spring, or a damper.
 
 ### Field Summary
 
-- The `type` field is a string which specifies the
-[Servo](reference/servo.md#servo) type, and may be either "rotational" (default)
-or "linear".
+- The `type` field is a string which specifies the [Servo](servo.md#servo) type,
+and may be either "rotational" (default) or "linear".
 - The `maxVelocity` field specifies both the upper limit and the default value for
 the servo *velocity*. The *velocity* can be changed at run-time with the
 `wb_servo_set_velocity()` function. The value should always be positive (the
@@ -70,10 +67,9 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_servo_set_acceleration()` function.
 - The `position` field represents the current *position* of the
-[Servo](reference/servo.md#servo), in radians or meters. For a "rotational"
-servo, `position` represents the current rotation angle in radians. For a
-"linear" servo, `position` represents the magnitude of the current translation
-in meters.
+[Servo](servo.md#servo), in radians or meters. For a "rotational" servo,
+`position` represents the current rotation angle in radians. For a "linear"
+servo, `position` represents the magnitude of the current translation in meters.
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Servo Limits"
 section, see below.
@@ -81,11 +77,11 @@ section, see below.
 mechanical) stops. These fields are described in more detail in the "Servo
 Limits" section, see below.
 - The `springConstant` and `dampingConstant` fields allow the addition of spring
-and/or damping behavior to the [Servo](reference/servo.md#servo). These fields
-are described in more detail in the "Springs and Dampers" section, see below.
+and/or damping behavior to the [Servo](servo.md#servo). These fields are
+described in more detail in the "Springs and Dampers" section, see below.
 - The `staticFriction` allows to add a friction opposed to the
-[Servo](reference/servo.md#servo) movement. This field is described in more
-detail in the "Friction" section, see below.
+[Servo](servo.md#servo) movement. This field is described in more detail in the
+"Friction" section, see below.
 
 ### Units
 
@@ -103,23 +99,23 @@ expressed in *meters*. See :
 
 ### Initial Transformation and Position
 
-The [Servo](reference/servo.md#servo) node inherits the `translation` and
-`rotation` fields from the [Transform](reference/transform.md#transform) node.
-These two fields represent the initial coordinate system transformation between
-the [Servo](reference/servo.md#servo) parent and children.
+The [Servo](servo.md#servo) node inherits the `translation` and `rotation`
+fields from the [Transform](transform.md#transform) node. These two fields
+represent the initial coordinate system transformation between the
+[Servo](servo.md#servo) parent and children.
 
-In a "rotational" [Servo](reference/servo.md#servo), these fields have the
-following meaning: The `translation` field specifies the translation of the axis
-of rotation. The `rotation` field specifies the orientation of the axis of
+In a "rotational" [Servo](servo.md#servo), these fields have the following
+meaning: The `translation` field specifies the translation of the axis of
+rotation. The `rotation` field specifies the orientation of the axis of
 rotation. See .
 
 %figure "Rotational servo"
 ![Rotational servo](pdf/rotational_servo.pdf.png)
 %end
 
-In a "linear" [Servo](reference/servo.md#servo), these fields have the following
-meaning: The `translation` field specifies the translation of the sliding axis.
-The `rotation` field specifies the direction of the sliding axis. See .
+In a "linear" [Servo](servo.md#servo), these fields have the following meaning:
+The `translation` field specifies the translation of the sliding axis. The
+`rotation` field specifies the direction of the sliding axis. See .
 
 %figure "Linear servo"
 ![Linear servo](pdf/linear_servo.pdf.png)
@@ -127,20 +123,19 @@ The `rotation` field specifies the direction of the sliding axis. See .
 
 The `position` field represents the current angle difference (in radians) or the
 current distance (in meters) with respect to the initial `translation` and
-`rotation` of the [Servo](reference/servo.md#servo). If `position` field is zero
-then the [Servo](reference/servo.md#servo) is at its initial `translation` and
-`rotation`. For example if we have a "rotational"
-[Servo](reference/servo.md#servo) and the value of the `position` field is
-1.5708, this means that this [Servo](reference/servo.md#servo) is 90 degrees
-from its initial rotation. The values passed to the `wb_servo_set_position()`
-function are specified with respect to the position zero. The values of the
-`minPosition`, `maxPosition`, `minStop` and `maxStop` fields are also defined
-with respect to the position zero.
+`rotation` of the [Servo](servo.md#servo). If `position` field is zero then the
+[Servo](servo.md#servo) is at its initial `translation` and `rotation`. For
+example if we have a "rotational" [Servo](servo.md#servo) and the value of the
+`position` field is 1.5708, this means that this [Servo](servo.md#servo) is 90
+degrees from its initial rotation. The values passed to the
+`wb_servo_set_position()` function are specified with respect to the position
+zero. The values of the `minPosition`, `maxPosition`, `minStop` and `maxStop`
+fields are also defined with respect to the position zero.
 
 ### Position Control
 
-The standard way of operating a [Servo](reference/servo.md#servo) is to control
-the position directly (*position control*). The user specifies a target position
+The standard way of operating a [Servo](servo.md#servo) is to control the
+position directly (*position control*). The user specifies a target position
 using the `wb_servo_set_position()` function, then the P-controller takes into
 account the desired velocity, acceleration and motor force in order to move the
 servo to the target position. See .
@@ -180,10 +175,10 @@ the desired velocity as specified by the `maxVelocity` field (default) or set
 with `wb_servo_set_velocity()`, *a* is the acceleration required to reach *Vc*
 in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
 step, *t<sub>s</sub>* is the duration of the simulation time step as specified
-by the `basicTimeStep` field of the
-[WorldInfo](reference/worldinfo.md#worldinfo) node (converted in seconds), and
-*A* is the acceleration of the servo motor as specified by the `acceleration`
-field (default) or set with `wb_servo_set_acceleration()`.
+by the `basicTimeStep` field of the [WorldInfo](worldinfo.md#worldinfo) node
+(converted in seconds), and *A* is the acceleration of the servo motor as
+specified by the `acceleration` field (default) or set with
+`wb_servo_set_acceleration()`.
 
 ### Velocity Control
 
@@ -210,16 +205,15 @@ value is defined as `Double.POSITIVE_INFINITY`. In Python, you should use
 The position/velocity control described above are performed by the Webots
 P-controller and ODE's joint motor implementation (see ODE documentation). As an
 alternative, Webots does also allow the user to directly specify the amount of
-torque/force that must be applied by a [Servo](reference/servo.md#servo). This
-is achieved with the `wb_servo_set_force()` function which specifies the desired
-amount of torque/forces and switches off the P-controller and motor force. A
-subsequent call to `wb_servo_set_position()` restores the original *position
-control*. Some care must be taken when using *force control*. Indeed the
-torque/force specified with `wb_servo_set_force()` is applied to the
-[Servo](reference/servo.md#servo) continuously. Hence the
-[Servo](reference/servo.md#servo) will infinitely accelerate its rotational or
-linear motion and eventually *explode* unless a functional force control
-algorithm is used.
+torque/force that must be applied by a [Servo](servo.md#servo). This is achieved
+with the `wb_servo_set_force()` function which specifies the desired amount of
+torque/forces and switches off the P-controller and motor force. A subsequent
+call to `wb_servo_set_position()` restores the original *position control*. Some
+care must be taken when using *force control*. Indeed the torque/force specified
+with `wb_servo_set_force()` is applied to the [Servo](servo.md#servo)
+continuously. Hence the [Servo](servo.md#servo) will infinitely accelerate its
+rotational or linear motion and eventually *explode* unless a functional force
+control algorithm is used.
 
 %figure "Servo Control Summary"
 |  | position control | velocity control | force control |
@@ -296,24 +290,22 @@ velocity computed by the physics simulator.
 ![Mechanical Diagram of a Servo](pdf/servo_mechanics.pdf.png)
 %end
 
-As you can see in (see  ), a [Servo](reference/servo.md#servo) creates a joint
-between two masses *m<sub>0</sub>* and *m<sub>1</sub>*. *m<sub>0</sub>* is
-defined by the [Physics](reference/physics.md#physics) node in the parent of the
-[Servo](reference/servo.md#servo). The mass *m<sub>1</sub>* is defined by the
-[Physics](reference/physics.md#physics) node of the
-[Servo](reference/servo.md#servo). The value *x<sub>0</sub>* corresponds to the
-initial translation of the [Servo](reference/servo.md#servo) defined by the
-`translation` field. The position *x* corresponds to the current position of the
-[Servo](reference/servo.md#servo) defined by the `position` field.
+As you can see in (see  ), a [Servo](servo.md#servo) creates a joint between two
+masses *m<sub>0</sub>* and *m<sub>1</sub>*. *m<sub>0</sub>* is defined by the
+[Physics](physics.md#physics) node in the parent of the [Servo](servo.md#servo).
+The mass *m<sub>1</sub>* is defined by the [Physics](physics.md#physics) node of
+the [Servo](servo.md#servo). The value *x<sub>0</sub>* corresponds to the
+initial translation of the [Servo](servo.md#servo) defined by the `translation`
+field. The position *x* corresponds to the current position of the
+[Servo](servo.md#servo) defined by the `position` field.
 
 ### Servo Forces
 
-Altogether, three different forces can be applied to a
-[Servo](reference/servo.md#servo): the motor force, the spring force and the
-damping force. These three forces are applied in parallel and can be switched on
-and off independently (by default only the motor force is on). For example, to
-turn off the motor force and obtain a passive [Servo](reference/servo.md#servo),
-you can set the `maxForce` field to zero.
+Altogether, three different forces can be applied to a [Servo](servo.md#servo):
+the motor force, the spring force and the damping force. These three forces are
+applied in parallel and can be switched on and off independently (by default
+only the motor force is on). For example, to turn off the motor force and obtain
+a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 
 %figure "Servo Forces"
 | Force | motor force | spring force | damping force |
@@ -336,24 +328,23 @@ some damping to every spring.
 
 ### Friction
 
-The friction applied on the [Servo](reference/servo.md#servo) to slow down its
-velocity is computed as the maximum between the `maxForce` and the
-`staticFriction` values. The static friction is particularily useful to add a
-friction for a passive [Servo](reference/servo.md#servo).
+The friction applied on the [Servo](servo.md#servo) to slow down its velocity is
+computed as the maximum between the `maxForce` and the `staticFriction` values.
+The static friction is particularily useful to add a friction for a passive
+[Servo](servo.md#servo).
 
 ### Serial Servos
 
-Each instance of a [Servo](reference/servo.md#servo) simulates a mechanical
-system with optional motor, spring and damping elements, mounted in parallel.
-Sometimes it is necessary to have such elements mounted serially. With Webot,
-serially mounted elements must be modeled by having
-[Servo](reference/servo.md#servo) nodes used as children of other
-[Servo](reference/servo.md#servo) nodes. For example if you wish to have a
-system where a motor controls the resting position of a spring, then you will
-need two [Servo](reference/servo.md#servo) nodes, as depicted in . In this
-example, the parent [Servo](reference/servo.md#servo) will have a motor force
-(maxForce > 0) and the child [Servo](reference/servo.md#servo) will have spring
-and damping forces (`springConstant` > 0 and `dampingConstant` > 0).
+Each instance of a [Servo](servo.md#servo) simulates a mechanical system with
+optional motor, spring and damping elements, mounted in parallel. Sometimes it
+is necessary to have such elements mounted serially. With Webot, serially
+mounted elements must be modeled by having [Servo](servo.md#servo) nodes used as
+children of other [Servo](servo.md#servo) nodes. For example if you wish to have
+a system where a motor controls the resting position of a spring, then you will
+need two [Servo](servo.md#servo) nodes, as depicted in . In this example, the
+parent [Servo](servo.md#servo) will have a motor force (maxForce > 0) and the
+child [Servo](servo.md#servo) will have spring and damping forces
+(`springConstant` > 0 and `dampingConstant` > 0).
 
 %figure "Example of serial connection of two Servo nodes"
 ![Example of serial connection of two Servo nodes](pdf/servo_serial.pdf.png)
@@ -390,28 +381,27 @@ DEF Servo1 Servo {
 }
 ```
 
-Note that it is necessary to specify the [Physics](reference/physics.md#physics)
-and the `boundingObject` of *Servo1*. This adds the extra body *m<sub>1</sub>*
-in the simulation, between the motor and the spring and damper.
+Note that it is necessary to specify the [Physics](physics.md#physics) and the
+`boundingObject` of *Servo1*. This adds the extra body *m<sub>1</sub>* in the
+simulation, between the motor and the spring and damper.
 
 ### Simulating Overlayed Joint Axes
 
 Sometimes it is necessary to simulate a joint with two or three independent but
 overlayed rotation axes (e.g., a shoulder joint with a *pitch* axis and a *roll*
 axis). As usually with Webots, each axis must be implemented as a separate
-[Servo](reference/servo.md#servo) node. So for two axes you need two
-[Servo](reference/servo.md#servo) nodes, for three axes you need three
-[Servo](reference/servo.md#servo) nodes, etc.
+[Servo](servo.md#servo) node. So for two axes you need two
+[Servo](servo.md#servo) nodes, for three axes you need three
+[Servo](servo.md#servo) nodes, etc.
 
 With overlayed axes (or very close axes) the mass and the shape of the body
 located between these axes is often unknown or negligible. However, Webots
 requires all the intermediate `boundingObject` and `physics` fields to be
 defined. So the trick is to use dummy values for these fields. Usually the dummy
-`boundingObject` can be specified as a [Sphere](reference/sphere.md#sphere) with
-a radius of 1 millimeter. A [Sphere](reference/sphere.md#sphere) is the
-preferred choice because this is the cheapest shape for the collision detection.
-And the `physics` field can use a [Physics](reference/physics.md#physics) node
-with default values.
+`boundingObject` can be specified as a [Sphere](sphere.md#sphere) with a radius
+of 1 millimeter. A [Sphere](sphere.md#sphere) is the preferred choice because
+this is the cheapest shape for the collision detection. And the `physics` field
+can use a [Physics](physics.md#physics) node with default values.
 
 This is better explained with an example. Let's assume that we want to build a
 pan/tilt robot head. For this we need two independent (and perpendicular)
@@ -444,8 +434,8 @@ DEF PAN Servo {
 }
 ```
 
-Please note the dummy [Physics](reference/physics.md#physics) and the 1
-millimeter [Sphere](reference/sphere.md#sphere) as dummy `boundingObject`.
+Please note the dummy [Physics](physics.md#physics) and the 1 millimeter
+[Sphere](sphere.md#sphere) as dummy `boundingObject`.
 
 ### Servo Functions
 
@@ -453,7 +443,7 @@ millimeter [Sphere](reference/sphere.md#sphere) as dummy `boundingObject`.
 
 **wb\_servo\_set\_position**, **wb\_servo\_set\_velocity**, **wb\_servo\_set\_acceleration**, **wb\_servo\_set\_motor\_force**, **wb\_servo\_set\_control\_p**, **wb\_servo\_get\_min\_position**, **wb\_servo\_get\_max\_position** - *change the parameters of the P-controller*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -477,8 +467,8 @@ while the actual motion is carried out in the background by Webots. The target
 position will be reached only if the physics simulation allows it, that means,
 if the specified motor force is sufficient and the motion is not blocked by
 obstacles, external forces or the servo's own spring force, etc. It is also
-possible to wait until the [Servo](reference/servo.md#servo) reaches the target
-position (synchronous) like this:
+possible to wait until the [Servo](servo.md#servo) reaches the target position
+(synchronous) like this:
 
 ``` c
 void servo_set_position_sync(WbDeviceTag tag, double target, int delay) {
@@ -548,8 +538,7 @@ velocity *V<sub>c</sub>* from the current position *P<sub>c</sub>* and target
 position *P<sub>t</sub>*, such that *V<sub>c</sub><sub>t</sub><sub>c</sub>*.
 With a small *P*, a long time is needed to reach the target position, while too
 large a *P* can make the system unstable. The default value of *P* is specified
-by the `controlP` field of the corresponding [Servo](reference/servo.md#servo)
-node.
+by the `controlP` field of the corresponding [Servo](servo.md#servo) node.
 
 The `wb_servo_get_[min|max]_position()` functions allow to get the values of
 respectively the `minPosition` and the `maxPosition` fields.
@@ -560,7 +549,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 **wb\_servo\_enable\_position**, **wb\_servo\_disable\_position**, **wb\_servo\_get\_position\_sampling\_period**, **wb\_servo\_get\_position** - *get the effective position of a servo*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -598,7 +587,7 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
 **wb\_servo\_enable\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback\_sampling\_period**, **wb\_servo\_disable\_motor\_force\_feedback** - *get the motor force currently used by a servo*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -640,9 +629,8 @@ ignored. In a "rotational" servo, only the torque applied around the rotation
 axis is considered.
 
 Note that this function applies only to *physics-based* simulation. Therefore,
-the `physics` and `boundingObject` fields of the
-[Servo](reference/servo.md#servo) node must be defined for this function to work
-properly.
+the `physics` and `boundingObject` fields of the [Servo](servo.md#servo) node
+must be defined for this function to work properly.
 
 If `wb_servo_get_motor_force_feedback()` was not previously enabled, the return
 value is undefined.
@@ -657,7 +645,7 @@ the device is disabled.
 
 **wb\_servo\_set\_force** - *direct force control*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>
@@ -686,9 +674,8 @@ parameter cannot exceed the current *motor force* of the servo (specified with
 field).
 
 Note that this function applies only to *physics-based* simulation. Therefore,
-the `physics` and `boundingObject` fields of the
-[Servo](reference/servo.md#servo) node must be defined for this function to work
-properly.
+the `physics` and `boundingObject` fields of the [Servo](servo.md#servo) node
+must be defined for this function to work properly.
 
 It is also possible, for example, to use this function to implement springs or
 dampers with controllable properties. The example in
@@ -701,7 +688,7 @@ dampers with controllable properties. The example in
 
 **wb\_servo\_get\_type** - *get the servo type*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/servo.h>

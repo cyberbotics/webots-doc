@@ -10,8 +10,8 @@ CameraLensDistortion {
 
 ### Description
 
-The [CameraLensDistortion](reference/camerazoom.md#camerazoom) node allows the
-user to simulate the camera image distortion due to the camera lens. A Brown's
+The [CameraLensDistortion](camerazoom.md#camerazoom) node allows the user to
+simulate the camera image distortion due to the camera lens. A Brown's
 distortion model with two coefficients both for the radial and tangential
 distortions is used to simulate image distortion.
 

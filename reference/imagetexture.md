@@ -11,14 +11,14 @@ ImageTexture {
 
 ### Description
 
-The [ImageTexture](reference/imagetexture.md#imagetexture) node defines a
-texture map by specifying an image file and general parameters for mapping to
-geometry. Texture maps are defined in a 2D coordinate system *(s,t)* that ranges
-from 0.0 to 1.0 in both directions. The bottom edge of the image corresponds to
-the *s*-axis of the texture map, and left edge of the image corresponds to the
-*t*-axis of the texture map. The lower-left pixel of the image corresponds to
-*s=0, t=0*, and the top-right pixel of the image corresponds to *s=1, t=1*.
-These relationships are depicted below.
+The [ImageTexture](imagetexture.md#imagetexture) node defines a texture map by
+specifying an image file and general parameters for mapping to geometry. Texture
+maps are defined in a 2D coordinate system *(s,t)* that ranges from 0.0 to 1.0
+in both directions. The bottom edge of the image corresponds to the *s*-axis of
+the texture map, and left edge of the image corresponds to the *t*-axis of the
+texture map. The lower-left pixel of the image corresponds to *s=0, t=0*, and
+the top-right pixel of the image corresponds to *s=1, t=1*. These relationships
+are depicted below.
 
 %figure "Texture map coordinate system"
 ![Texture map coordinate system](png/image_texture.png)
@@ -38,8 +38,8 @@ texture becomes semi-transparent. This is useful to render for example a scissor
 cut texture. Semi-transparent objects are sorted according to their center (the
 local position of the parent Transform) and are rendered in the same rendering
 queue as the objects having a transparent material (see the `transparency` field
-of the [Material](reference/material.md#material) node). Semi-transparent
-objects cannot receive and cannot cast shadows.
+of the [Material](material.md#material) node). Semi-transparent objects cannot
+receive and cannot cast shadows.
 
 If the image contains an alpha channel no texture filtering is performed,
 otherwise both a trilinear interpolation and an anisotropic texture filtering is

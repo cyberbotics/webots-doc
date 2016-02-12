@@ -1,6 +1,6 @@
 ## Brake
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 Brake {
@@ -9,13 +9,11 @@ Brake {
 
 ### Description
 
-A [Brake](reference/brake.md#brake) node can be used in a mechanical simulation
-in order to change the friction of a joint. The
-[Brake](reference/brake.md#brake) node can be inserted in the `device` field of
-a [HingeJoint](reference/hingejoint.md#hingejoint), a
-[Hinge2Joint](reference/hinge2joint.md#hinge2joint), a
-[SliderJoint](reference/sliderjoint.md#sliderjoint), or a
-[Track](reference/track.md#track).
+A [Brake](brake.md#brake) node can be used in a mechanical simulation in order
+to change the friction of a joint. The [Brake](brake.md#brake) node can be
+inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
+[Hinge2Joint](hinge2joint.md#hinge2joint), a
+[SliderJoint](sliderjoint.md#sliderjoint), or a [Track](track.md#track).
 
 ### Brake Functions
 
@@ -23,7 +21,7 @@ a [HingeJoint](reference/hingejoint.md#hingejoint), a
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/brake.h>
@@ -36,15 +34,14 @@ int wb_brake_get_type(WbDeviceTag tag)
 
 `wb_brake_set_damping_constant()` sets the value of the dampingConstant
 coefficient (Ns/m or Nms) of the joint. If any dampingConstant is already set
-using [JointParameters](reference/jointparameters.md#jointparameters) the
-resulting dampingConstant coefficient is the sum of the one in the
-[JointParameters](reference/jointparameters.md#jointparameters) and the one set
-using the `wb_brake_set_damping_constant()` function.
+using [JointParameters](jointparameters.md#jointparameters) the resulting
+dampingConstant coefficient is the sum of the one in the
+[JointParameters](jointparameters.md#jointparameters) and the one set using the
+`wb_brake_set_damping_constant()` function.
 
 `wb_brake_get_type()` returns the type of the brake. It will return `WB_ANGULAR`
-if the sensor is associated with a
-[HingeJoint](reference/hingejoint.md#hingejoint) or a
-[Hinge2Joint](reference/hinge2joint.md#hinge2joint) node, and `WB_LINEAR` if it
-is associated with a [SliderJoint](reference/sliderjoint.md#sliderjoint) or a
-[Track](reference/track.md#track) node.
+if the sensor is associated with a [HingeJoint](hingejoint.md#hingejoint) or a
+[Hinge2Joint](hinge2joint.md#hinge2joint) node, and `WB_LINEAR` if it is
+associated with a [SliderJoint](sliderjoint.md#sliderjoint) or a
+[Track](track.md#track) node.
 

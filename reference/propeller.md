@@ -18,12 +18,12 @@ Propeller {
 ![Propeller](pdf/propeller.pdf.png)
 %end
 
-The [Propeller](reference/propeller.md#propeller) node can be used to model a
-marine or an aircraft propeller. When its `device` field is set with a
-[RotationalMotor](reference/rotationalmotor.md#rotationalmotor), the propeller
-turns the motor angular velocity into a thrust and a (resistant) torque. The
-resultant thrust is the product of a real number T by the unit length shaft axis
-vector defined in the `shaftAxis` field, with T given by the formula
+The [Propeller](propeller.md#propeller) node can be used to model a marine or an
+aircraft propeller. When its `device` field is set with a
+[RotationalMotor](rotationalmotor.md#rotationalmotor), the propeller turns the
+motor angular velocity into a thrust and a (resistant) torque. The resultant
+thrust is the product of a real number T by the unit length shaft axis vector
+defined in the `shaftAxis` field, with T given by the formula
 
 ```
 T = t1 * |omega| * omega - t2 * |omega| * V
@@ -48,7 +48,7 @@ W. Prouty.
 
 The example "propeller.wbt" located in the "projects/samples/devices/worlds"
 directory of Webots shows three different helicopters modeled with
-[Propeller](reference/propeller.md#propeller) nodes.
+[Propeller](propeller.md#propeller) nodes.
 
 ### Field Summary
 
@@ -59,13 +59,12 @@ be exerted, see .
 resultant thrust and torque as functions of the motor angular velocity and the
 linear speed of adavance, see above formulae.
 - `device`: this field has to be set with a
-[RotationalMotor](reference/rotationalmotor.md#rotationalmotor) in order to
-control the propeller.
+[RotationalMotor](rotationalmotor.md#rotationalmotor) in order to control the
+propeller.
 - `fastHelix` and `slowHelix`: if not NULL, these fields must be set with
-[Solid](reference/solid.md#solid) nodes. The corresponding
-[Solid](reference/solid.md#solid) nodes define the graphical representation of
-the propeller according to its motor's angular velocity omega: if |omega| > 24
-π rad /s, only the [Solid](reference/solid.md#solid) defined in `fastHelix` is
-visible, otherwise only the [Solid](reference/solid.md#solid) defined in
-`slowHelix` is visible.
+[Solid](solid.md#solid) nodes. The corresponding [Solid](solid.md#solid) nodes
+define the graphical representation of the propeller according to its motor's
+angular velocity omega: if |omega| > 24 π rad /s, only the
+[Solid](solid.md#solid) defined in `fastHelix` is visible, otherwise only the
+[Solid](solid.md#solid) defined in `slowHelix` is visible.
 

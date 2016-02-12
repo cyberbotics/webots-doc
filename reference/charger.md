@@ -1,6 +1,6 @@
 ## Charger
 
-Derived from [Solid](reference/solid.md#solid).
+Derived from [Solid](solid.md#solid).
 
 ```
 Charger {
@@ -13,35 +13,32 @@ Charger {
 
 ### Description
 
-The [Charger](reference/charger.md#charger) node is used to model a special kind
-of battery charger for the robots. A robot has to get close to a charger in
-order to recharge itself. A charger is not like a standard battery charger
-connected to a constant power supply. Instead, it is a battery itself: it
-accumulates energy with time. It could be compared to a solar power panel
-charging a battery. When the robot comes to get energy, it can't get more than
-the charger has presently accumulated.
+The [Charger](charger.md#charger) node is used to model a special kind of
+battery charger for the robots. A robot has to get close to a charger in order
+to recharge itself. A charger is not like a standard battery charger connected
+to a constant power supply. Instead, it is a battery itself: it accumulates
+energy with time. It could be compared to a solar power panel charging a
+battery. When the robot comes to get energy, it can't get more than the charger
+has presently accumulated.
 
-The appearance of the [Charger](reference/charger.md#charger) node can be
-altered by its current energy. When the [Charger](reference/charger.md#charger)
-node is full, the resulted color corresponds to its `emissiveColor` field, while
-when the [Charger](reference/charger.md#charger) node is empty, its resulted
-color corresponds to its original one. Intermediate colors depend on the
-`gradual` field. Only the first child of the
-[Charger](reference/charger.md#charger) node is affected by this alteration. The
-resulted color is applied only on the first child of the
-[Charger](reference/charger.md#charger) node. If the first child is a
-[Shape](reference/shape.md#shape) node, the `emissiveColor` field of its
-[Material](reference/material.md#material) node is altered. If the first child
-is a [Light](reference/light.md#light) node, its `color` field is altered.
-Otherwise, if the first child is a [Group](reference/group.md#group) node, a
-recursive search is applied on this node and every
-[Light](reference/light.md#light), [Shape](reference/shape.md#shape) and
-[Group](reference/group.md#group) nodes are altered according to the two
-previous rules.
+The appearance of the [Charger](charger.md#charger) node can be altered by its
+current energy. When the [Charger](charger.md#charger) node is full, the
+resulted color corresponds to its `emissiveColor` field, while when the
+[Charger](charger.md#charger) node is empty, its resulted color corresponds to
+its original one. Intermediate colors depend on the `gradual` field. Only the
+first child of the [Charger](charger.md#charger) node is affected by this
+alteration. The resulted color is applied only on the first child of the
+[Charger](charger.md#charger) node. If the first child is a
+[Shape](shape.md#shape) node, the `emissiveColor` field of its
+[Material](material.md#material) node is altered. If the first child is a
+[Light](light.md#light) node, its `color` field is altered. Otherwise, if the
+first child is a [Group](group.md#group) node, a recursive search is applied on
+this node and every [Light](light.md#light), [Shape](shape.md#shape) and
+[Group](group.md#group) nodes are altered according to the two previous rules.
 
 ### Field Summary
 
-The fields specific to the [Charger](reference/charger.md#charger) node are:
+The fields specific to the [Charger](charger.md#charger) node are:
 
 - `battery`: this field should contain three values, namely the present energy of
 the charger (*J*), its maximum energy (*J*) and its charging speed (*W=J/s*).
@@ -59,7 +56,7 @@ full.
 
 - `gradual`: defines the behavior of the indicator. If set to TRUE, the indicator
 displays a progressive transition between its original color and the
-`emissiveColor` specified in the [Charger](reference/charger.md#charger) node,
+`emissiveColor` specified in the [Charger](charger.md#charger) node,
 corresponding to the present level of charge. If set to FALSE, the indicator
 remains its original color until the charger is fully charged (i.e., the present
 energy level equals the maximum energy level). Then, it switches to the

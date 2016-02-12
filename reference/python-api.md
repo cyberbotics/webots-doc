@@ -5,148 +5,148 @@ The following tables describe the Python classes and their methods.
 | |
 | --- |
 | from controller import Accelerometer |
-| class [Accelerometer](reference/accelerometer.md#accelerometer) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/accelerometer.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/accelerometer.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/accelerometer.md#description)(self) |
-| &nbsp;&nbsp; def [getValues](reference/accelerometer.md#description)(self) |
+| class [Accelerometer](accelerometer.md#accelerometer) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](accelerometer.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](accelerometer.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](accelerometer.md#description)(self) |
+| &nbsp;&nbsp; def [getValues](accelerometer.md#description)(self) |
 
 | |
 | --- |
 | from controller import Brake |
-| class [Brake](reference/brake.md#brake) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [setDampingConstant](reference/brake.md#description)(self, dampingConstant) |
-| &nbsp;&nbsp; def [getType](reference/brake.md#description)(self) |
+| class [Brake](brake.md#brake) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [setDampingConstant](brake.md#description)(self, dampingConstant) |
+| &nbsp;&nbsp; def [getType](brake.md#description)(self) |
 
 | |
 | --- |
 | from controller import Camera |
-| class [Camera](reference/camera.md#camera) ([Device](reference/python-api.md)) : |
+| class [Camera](camera.md#camera) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; COLOR, RANGE\_FINDER, BOTH |
-| &nbsp;&nbsp; def [enable](reference/camera.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getFov](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getMinFov](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxFov](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [setFov](reference/camera.md#description)(self, fov) |
-| &nbsp;&nbsp; def [getFocalLength](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getFocalDistance](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxFocalDistance](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getMinFocalDistance](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [setFocalDistance](reference/camera.md#description)(self, focalDistance) |
-| &nbsp;&nbsp; def [getWidth](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getHeight](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getNear](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxRange](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getType](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getImage](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getImageArray](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [imageGetRed](reference/camera.md#description)(image, width, x, y) |
+| &nbsp;&nbsp; def [enable](camera.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getFov](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getMinFov](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxFov](camera.md#description)(self) |
+| &nbsp;&nbsp; def [setFov](camera.md#description)(self, fov) |
+| &nbsp;&nbsp; def [getFocalLength](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getFocalDistance](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxFocalDistance](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getMinFocalDistance](camera.md#description)(self) |
+| &nbsp;&nbsp; def [setFocalDistance](camera.md#description)(self, focalDistance) |
+| &nbsp;&nbsp; def [getWidth](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getHeight](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getNear](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxRange](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getType](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getImage](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getImageArray](camera.md#description)(self) |
+| &nbsp;&nbsp; def [imageGetRed](camera.md#description)(image, width, x, y) |
 | &nbsp;&nbsp; imageGetRed = staticmethod(imageGetRed) |
-| &nbsp;&nbsp; def [imageGetGreen](reference/camera.md#description)(image, width, x, y) |
+| &nbsp;&nbsp; def [imageGetGreen](camera.md#description)(image, width, x, y) |
 | &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen) |
-| &nbsp;&nbsp; def [imageGetBlue](reference/camera.md#description)(image, width, x, y) |
+| &nbsp;&nbsp; def [imageGetBlue](camera.md#description)(image, width, x, y) |
 | &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue) |
-| &nbsp;&nbsp; def [imageGetGrey](reference/camera.md#description)(image, width, x, y) |
+| &nbsp;&nbsp; def [imageGetGrey](camera.md#description)(image, width, x, y) |
 | &nbsp;&nbsp; imageGetGrey = staticmethod(imageGetGrey) |
-| &nbsp;&nbsp; def [getRangeImage](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [getRangeImageArray](reference/camera.md#description)(self) |
-| &nbsp;&nbsp; def [rangeImageGetDepth](reference/camera.md#description)(image, width, x, y) |
+| &nbsp;&nbsp; def [getRangeImage](camera.md#description)(self) |
+| &nbsp;&nbsp; def [getRangeImageArray](camera.md#description)(self) |
+| &nbsp;&nbsp; def [rangeImageGetDepth](camera.md#description)(image, width, x, y) |
 | &nbsp;&nbsp; rangeImageGetDepth = staticmethod(rangeImageGetDepth) |
-| &nbsp;&nbsp; def [saveImage](reference/camera.md#description)(self, filename, quality) |
+| &nbsp;&nbsp; def [saveImage](camera.md#description)(self, filename, quality) |
 
 | |
 | --- |
 | from controller import Compass |
-| class [Compass](reference/compass.md#compass) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/compass.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/compass.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/compass.md#description)(self) |
-| &nbsp;&nbsp; def [getValues](reference/compass.md#description)(self) |
+| class [Compass](compass.md#compass) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](compass.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](compass.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](compass.md#description)(self) |
+| &nbsp;&nbsp; def [getValues](compass.md#description)(self) |
 
 | |
 | --- |
 | from controller import Connector |
-| class [Connector](reference/connector.md#connector) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enablePresence](reference/connector.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disablePresence](reference/connector.md#description)(self) |
-| &nbsp;&nbsp; def [getPresence](reference/connector.md#description)(self) |
-| &nbsp;&nbsp; def [lock](reference/connector.md#description)(self) |
-| &nbsp;&nbsp; def [unlock](reference/connector.md#description)(self) |
+| class [Connector](connector.md#connector) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enablePresence](connector.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disablePresence](connector.md#description)(self) |
+| &nbsp;&nbsp; def [getPresence](connector.md#description)(self) |
+| &nbsp;&nbsp; def [lock](connector.md#description)(self) |
+| &nbsp;&nbsp; def [unlock](connector.md#description)(self) |
 
 | |
 | --- |
-| from controller import [Device](reference/device.md#device) |
+| from controller import [Device](device.md#device) |
 | class Device : |
-| &nbsp;&nbsp; def [getModel](reference/device.md#description)(self) |
-| &nbsp;&nbsp; def [getName](reference/device.md#description)(self) |
-| &nbsp;&nbsp; def [getNodeType](reference/device.md#description)(self) |
+| &nbsp;&nbsp; def [getModel](device.md#description)(self) |
+| &nbsp;&nbsp; def [getName](device.md#description)(self) |
+| &nbsp;&nbsp; def [getNodeType](device.md#description)(self) |
 
 | |
 | --- |
 | from controller import DifferentialWheels |
-| class [DifferentialWheels](reference/differentialwheels.md#differentialwheels) ([Robot](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [\_\_init\_\_](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [\_\_del\_\_](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [setSpeed](reference/differentialwheels.md#description)(self, left, right) |
-| &nbsp;&nbsp; def [getLeftSpeed](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [getRightSpeed](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [enableEncoders](reference/differentialwheels.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disableEncoders](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [getEncodersSamplingPeriod](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [getLeftEncoder](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [getRightEncoder](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [setEncoders](reference/differentialwheels.md#description)(self, left, right) |
-| &nbsp;&nbsp; def [getMaxSpeed](reference/differentialwheels.md#description)(self) |
-| &nbsp;&nbsp; def [getSpeedUnit](reference/differentialwheels.md#description)(self) |
+| class [DifferentialWheels](differentialwheels.md#differentialwheels) ([Robot](python-api.md)) : |
+| &nbsp;&nbsp; def [\_\_init\_\_](robot.md#description)(self) |
+| &nbsp;&nbsp; def [\_\_del\_\_](robot.md#description)(self) |
+| &nbsp;&nbsp; def [setSpeed](differentialwheels.md#description)(self, left, right) |
+| &nbsp;&nbsp; def [getLeftSpeed](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [getRightSpeed](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [enableEncoders](differentialwheels.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disableEncoders](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [getEncodersSamplingPeriod](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [getLeftEncoder](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [getRightEncoder](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [setEncoders](differentialwheels.md#description)(self, left, right) |
+| &nbsp;&nbsp; def [getMaxSpeed](differentialwheels.md#description)(self) |
+| &nbsp;&nbsp; def [getSpeedUnit](differentialwheels.md#description)(self) |
 
 | |
 | --- |
 | from controller import Display |
-| class [Display](reference/display.md#display) ([Device](reference/python-api.md)) : |
+| class [Display](display.md#display) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; RGB, RGBA, ARGB, BGRA |
-| &nbsp;&nbsp; def [getWidth](reference/display.md#description)(self) |
-| &nbsp;&nbsp; def [getHeight](reference/display.md#description)(self) |
-| &nbsp;&nbsp; def [setColor](reference/display.md#description)(self, color) |
-| &nbsp;&nbsp; def [setAlpha](reference/display.md#description)(self, alpha) |
-| &nbsp;&nbsp; def [setOpacity](reference/display.md#description)(self, opacity) |
-| &nbsp;&nbsp; def [drawPixel](reference/display.md#description)(self, x1, y1) |
-| &nbsp;&nbsp; def [drawLine](reference/display.md#description)(self, x1, y1, x2, y2) |
-| &nbsp;&nbsp; def [drawRectangle](reference/display.md#description)(self, x, y, width, height) |
-| &nbsp;&nbsp; def [drawOval](reference/display.md#description)(self, cx, cy, a, b) |
-| &nbsp;&nbsp; def [drawPolygon](reference/display.md#description)(self, x, y) |
-| &nbsp;&nbsp; def [drawText](reference/display.md#description)(self, txt, x, y) |
-| &nbsp;&nbsp; def [fillRectangle](reference/display.md#description)(self, x, y, width, height) |
-| &nbsp;&nbsp; def [fillOval](reference/display.md#description)(self, cx, cy, a, b) |
-| &nbsp;&nbsp; def [fillPolygon](reference/display.md#description)(self, x, y) |
-| &nbsp;&nbsp; def [imageCopy](reference/display.md#description)(self, x, y, width, height) |
-| &nbsp;&nbsp; def [imagePaste](reference/display.md#description)(self, ir, x, y) |
-| &nbsp;&nbsp; def [imageLoad](reference/display.md#description)(self, filename) |
-| &nbsp;&nbsp; def [imageNew](reference/display.md#description)(self, data, format) |
-| &nbsp;&nbsp; def [imageSave](reference/display.md#description)(self, ir, filename) |
-| &nbsp;&nbsp; def [imageDelete](reference/display.md#description)(self, ir) |
+| &nbsp;&nbsp; def [getWidth](display.md#description)(self) |
+| &nbsp;&nbsp; def [getHeight](display.md#description)(self) |
+| &nbsp;&nbsp; def [setColor](display.md#description)(self, color) |
+| &nbsp;&nbsp; def [setAlpha](display.md#description)(self, alpha) |
+| &nbsp;&nbsp; def [setOpacity](display.md#description)(self, opacity) |
+| &nbsp;&nbsp; def [drawPixel](display.md#description)(self, x1, y1) |
+| &nbsp;&nbsp; def [drawLine](display.md#description)(self, x1, y1, x2, y2) |
+| &nbsp;&nbsp; def [drawRectangle](display.md#description)(self, x, y, width, height) |
+| &nbsp;&nbsp; def [drawOval](display.md#description)(self, cx, cy, a, b) |
+| &nbsp;&nbsp; def [drawPolygon](display.md#description)(self, x, y) |
+| &nbsp;&nbsp; def [drawText](display.md#description)(self, txt, x, y) |
+| &nbsp;&nbsp; def [fillRectangle](display.md#description)(self, x, y, width, height) |
+| &nbsp;&nbsp; def [fillOval](display.md#description)(self, cx, cy, a, b) |
+| &nbsp;&nbsp; def [fillPolygon](display.md#description)(self, x, y) |
+| &nbsp;&nbsp; def [imageCopy](display.md#description)(self, x, y, width, height) |
+| &nbsp;&nbsp; def [imagePaste](display.md#description)(self, ir, x, y) |
+| &nbsp;&nbsp; def [imageLoad](display.md#description)(self, filename) |
+| &nbsp;&nbsp; def [imageNew](display.md#description)(self, data, format) |
+| &nbsp;&nbsp; def [imageSave](display.md#description)(self, ir, filename) |
+| &nbsp;&nbsp; def [imageDelete](display.md#description)(self, ir) |
 
 | |
 | --- |
 | from controller import DistanceSensor |
-| class [DistanceSensor](reference/distancesensor.md#distancesensor) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/distancesensor.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/distancesensor.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/distancesensor.md#description)(self) |
-| &nbsp;&nbsp; def [getValue](reference/distancesensor.md#description)(self) |
+| class [DistanceSensor](distancesensor.md#distancesensor) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](distancesensor.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](distancesensor.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#description)(self) |
+| &nbsp;&nbsp; def [getValue](distancesensor.md#description)(self) |
 
 | |
 | --- |
 | from controller import Emitter |
-| class [Emitter](reference/emitter.md#emitter) ([Device](reference/python-api.md)) : |
+| class [Emitter](emitter.md#emitter) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; CHANNEL\_BROADCAST |
-| &nbsp;&nbsp; def [send](reference/emitter.md#description)(self, data) |
-| &nbsp;&nbsp; def [getChannel](reference/emitter.md#description)(self) |
-| &nbsp;&nbsp; def [setChannel](reference/emitter.md#description)(self, channel) |
-| &nbsp;&nbsp; def [getRange](reference/emitter.md#description)(self) |
-| &nbsp;&nbsp; def [setRange](reference/emitter.md#description)(self, range) |
-| &nbsp;&nbsp; def [getBufferSize](reference/emitter.md#description)(self) |
+| &nbsp;&nbsp; def [send](emitter.md#description)(self, data) |
+| &nbsp;&nbsp; def [getChannel](emitter.md#description)(self) |
+| &nbsp;&nbsp; def [setChannel](emitter.md#description)(self, channel) |
+| &nbsp;&nbsp; def [getRange](emitter.md#description)(self) |
+| &nbsp;&nbsp; def [setRange](emitter.md#description)(self, range) |
+| &nbsp;&nbsp; def [getBufferSize](emitter.md#description)(self) |
 
 | |
 | --- |
@@ -156,64 +156,64 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; SF\_ROTATION, SF\_COLOR, SF\_STRING, SF\_NODE, MF, |
 | &nbsp;&nbsp; MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, MF\_COLOR, |
 | &nbsp;&nbsp; MF\_STRING, MF\_NODE |
-| &nbsp;&nbsp; def [getType](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getTypeName](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getCount](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFBool](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFInt32](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFFloat](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFVec2f](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFVec3f](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFRotation](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFColor](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFString](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSFNode](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getMFBool](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFInt32](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFFloat](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFVec2f](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFVec3f](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFRotation](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFColor](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFString](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getMFNode](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [setSFBool](reference/supervisor.md#description)(self, value) |
-| &nbsp;&nbsp; def [setSFInt32](reference/supervisor.md#description)(self, value) |
-| &nbsp;&nbsp; def [setSFFloat](reference/supervisor.md#description)(self, value) |
-| &nbsp;&nbsp; def [setSFVec2f](reference/supervisor.md#description)(self, values) |
-| &nbsp;&nbsp; def [setSFVec3f](reference/supervisor.md#description)(self, values) |
-| &nbsp;&nbsp; def [setSFRotation](reference/supervisor.md#description)(self, values) |
-| &nbsp;&nbsp; def [setSFColor](reference/supervisor.md#description)(self, values) |
-| &nbsp;&nbsp; def [setSFString](reference/supervisor.md#description)(self, value) |
-| &nbsp;&nbsp; def [setMFBool](reference/supervisor.md#description)(self, index, value) |
-| &nbsp;&nbsp; def [setMFInt32](reference/supervisor.md#description)(self, index, value) |
-| &nbsp;&nbsp; def [setMFFloat](reference/supervisor.md#description)(self, index, value) |
-| &nbsp;&nbsp; def [setMFVec2f](reference/supervisor.md#description)(self, index, values) |
-| &nbsp;&nbsp; def [setMFVec3f](reference/supervisor.md#description)(self, index, values) |
-| &nbsp;&nbsp; def [setMFRotation](reference/supervisor.md#description)(self, index, values) |
-| &nbsp;&nbsp; def [setMFColor](reference/supervisor.md#description)(self, index, values) |
-| &nbsp;&nbsp; def [setMFString](reference/supervisor.md#description)(self, index, value) |
-| &nbsp;&nbsp; def [importMFNode](reference/supervisor.md#description)(self, position, filename) |
-| &nbsp;&nbsp; def [importMFNodeFromString](reference/supervisor.md#description)(self, position, nodeString) |
-| &nbsp;&nbsp; def [removeMFNode](reference/supervisor.md#description)(self, position) |
+| &nbsp;&nbsp; def [getType](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getTypeName](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getCount](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFBool](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFInt32](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFFloat](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFVec2f](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFVec3f](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFRotation](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFColor](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFString](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSFNode](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getMFBool](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFInt32](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFFloat](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFVec2f](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFVec3f](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFRotation](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFColor](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFString](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getMFNode](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [setSFBool](supervisor.md#description)(self, value) |
+| &nbsp;&nbsp; def [setSFInt32](supervisor.md#description)(self, value) |
+| &nbsp;&nbsp; def [setSFFloat](supervisor.md#description)(self, value) |
+| &nbsp;&nbsp; def [setSFVec2f](supervisor.md#description)(self, values) |
+| &nbsp;&nbsp; def [setSFVec3f](supervisor.md#description)(self, values) |
+| &nbsp;&nbsp; def [setSFRotation](supervisor.md#description)(self, values) |
+| &nbsp;&nbsp; def [setSFColor](supervisor.md#description)(self, values) |
+| &nbsp;&nbsp; def [setSFString](supervisor.md#description)(self, value) |
+| &nbsp;&nbsp; def [setMFBool](supervisor.md#description)(self, index, value) |
+| &nbsp;&nbsp; def [setMFInt32](supervisor.md#description)(self, index, value) |
+| &nbsp;&nbsp; def [setMFFloat](supervisor.md#description)(self, index, value) |
+| &nbsp;&nbsp; def [setMFVec2f](supervisor.md#description)(self, index, values) |
+| &nbsp;&nbsp; def [setMFVec3f](supervisor.md#description)(self, index, values) |
+| &nbsp;&nbsp; def [setMFRotation](supervisor.md#description)(self, index, values) |
+| &nbsp;&nbsp; def [setMFColor](supervisor.md#description)(self, index, values) |
+| &nbsp;&nbsp; def [setMFString](supervisor.md#description)(self, index, value) |
+| &nbsp;&nbsp; def [importMFNode](supervisor.md#description)(self, position, filename) |
+| &nbsp;&nbsp; def [importMFNodeFromString](supervisor.md#description)(self, position, nodeString) |
+| &nbsp;&nbsp; def [removeMFNode](supervisor.md#description)(self, position) |
 
 | |
 | --- |
 | from controller import GPS |
-| class [GPS](reference/gps.md#gps) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/gps.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/gps.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/gps.md#description)(self) |
-| &nbsp;&nbsp; def [getValues](reference/gps.md#description)(self) |
+| class [GPS](gps.md#gps) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](gps.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](gps.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](gps.md#description)(self) |
+| &nbsp;&nbsp; def [getValues](gps.md#description)(self) |
 
 | |
 | --- |
 | from controller import Gyro |
-| class [Gyro](reference/gyro.md#gyro) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/gyro.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/gyro.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/gyro.md#description)(self) |
-| &nbsp;&nbsp; def [getValues](reference/gyro.md#description)(self) |
+| class [Gyro](gyro.md#gyro) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](gyro.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](gyro.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](gyro.md#description)(self) |
+| &nbsp;&nbsp; def [getValues](gyro.md#description)(self) |
 
 | |
 | --- |
@@ -223,76 +223,76 @@ The following tables describe the Python classes and their methods.
 | |
 | --- |
 | from controller import InertialUnit |
-| class [InertialUnit](reference/inertialunit.md#inertialunit) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/inertialunit.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/inertialunit.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/inertialunit.md#description)(self) |
-| &nbsp;&nbsp; def [getRollPitchYaw](reference/inertialunit.md#description)(self) |
+| class [InertialUnit](inertialunit.md#inertialunit) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](inertialunit.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](inertialunit.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](inertialunit.md#description)(self) |
+| &nbsp;&nbsp; def [getRollPitchYaw](inertialunit.md#description)(self) |
 
 | |
 | --- |
 | from controller import LED |
-| class [LED](reference/led.md#led) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [set](reference/led.md#description)(self, state) |
-| &nbsp;&nbsp; def [get](reference/led.md#description)(self) |
+| class [LED](led.md#led) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [set](led.md#description)(self, state) |
+| &nbsp;&nbsp; def [get](led.md#description)(self) |
 
 | |
 | --- |
 | from controller import LightSensor |
-| class [LightSensor](reference/lightsensor.md#lightsensor) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [enable](reference/lightsensor.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/lightsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/lightsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getValue](reference/lightsensor.md#description)(self) |
+| class [LightSensor](lightsensor.md#lightsensor) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [enable](lightsensor.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](lightsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](lightsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getValue](lightsensor.md#description)(self) |
 
 | |
 | --- |
 | from controller import Motion |
-| class [Motion](reference/motion.md#motion) : |
-| &nbsp;&nbsp; def [\_\_init\_\_](reference/motion.md#description)(self, fileName) |
-| &nbsp;&nbsp; def [\_\_del\_\_](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [isValid](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [play](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [stop](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [setLoop](reference/motion.md#description)(self, loop) |
-| &nbsp;&nbsp; def [setReverse](reference/motion.md#description)(self, reverse) |
-| &nbsp;&nbsp; def [isOver](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [getDuration](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [getTime](reference/motion.md#description)(self) |
-| &nbsp;&nbsp; def [setTime](reference/motion.md#description)(self, time) |
+| class [Motion](motion.md#motion) : |
+| &nbsp;&nbsp; def [\_\_init\_\_](motion.md#description)(self, fileName) |
+| &nbsp;&nbsp; def [\_\_del\_\_](motion.md#description)(self) |
+| &nbsp;&nbsp; def [isValid](motion.md#description)(self) |
+| &nbsp;&nbsp; def [play](motion.md#description)(self) |
+| &nbsp;&nbsp; def [stop](motion.md#description)(self) |
+| &nbsp;&nbsp; def [setLoop](motion.md#description)(self, loop) |
+| &nbsp;&nbsp; def [setReverse](motion.md#description)(self, reverse) |
+| &nbsp;&nbsp; def [isOver](motion.md#description)(self) |
+| &nbsp;&nbsp; def [getDuration](motion.md#description)(self) |
+| &nbsp;&nbsp; def [getTime](motion.md#description)(self) |
+| &nbsp;&nbsp; def [setTime](motion.md#description)(self, time) |
 
 | |
 | --- |
 | from controller import Motor |
-| class [Motor](reference/motor.md#motor) ([Device](reference/python-api.md)) : |
+| class [Motor](motor.md#motor) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; ROTATIONAL, LINEAR |
-| &nbsp;&nbsp; def [setPosition](reference/motor.md#description)(self, position) |
-| &nbsp;&nbsp; def [setVelocity](reference/motor.md#description)(self, vel) |
-| &nbsp;&nbsp; def [setAcceleration](reference/motor.md#description)(self, force) |
-| &nbsp;&nbsp; def [setAvailableForce](reference/motor.md#description)(self, motor\_force) |
-| &nbsp;&nbsp; def [setAvailableTorque](reference/motor.md#description)(self, motor\_torque) |
-| &nbsp;&nbsp; def [setControlPID](reference/motor.md#description)(self, p, i, d) |
-| &nbsp;&nbsp; def [getTargetPosition](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getMinPosition](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxPosition](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getVelocity](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxVelocity](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getAcceleration](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getAvailableForce](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxForce](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getAvailableTorque](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; double [getMaxTorque](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [enableForceFeedback](reference/motor.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disableForceFeedback](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getForceFeedbackSamplingPeriod](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getForceFeedback](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [setForce](reference/motor.md#description)(self, torque) |
-| &nbsp;&nbsp; def [enableTorqueFeedback](reference/motor.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disableTorqueFeedback](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getTorqueFeedbackSamplingPeriod](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [getTorqueFeedback](reference/motor.md#description)(self) |
-| &nbsp;&nbsp; def [setTorque](reference/motor.md#description)(self, torque) |
-| &nbsp;&nbsp; def [getType](reference/motor.md#description)(self) |
+| &nbsp;&nbsp; def [setPosition](motor.md#description)(self, position) |
+| &nbsp;&nbsp; def [setVelocity](motor.md#description)(self, vel) |
+| &nbsp;&nbsp; def [setAcceleration](motor.md#description)(self, force) |
+| &nbsp;&nbsp; def [setAvailableForce](motor.md#description)(self, motor\_force) |
+| &nbsp;&nbsp; def [setAvailableTorque](motor.md#description)(self, motor\_torque) |
+| &nbsp;&nbsp; def [setControlPID](motor.md#description)(self, p, i, d) |
+| &nbsp;&nbsp; def [getTargetPosition](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getMinPosition](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxPosition](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getVelocity](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxVelocity](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getAcceleration](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getAvailableForce](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxForce](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getAvailableTorque](motor.md#description)(self) |
+| &nbsp;&nbsp; double [getMaxTorque](motor.md#description)(self) |
+| &nbsp;&nbsp; def [enableForceFeedback](motor.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disableForceFeedback](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getForceFeedbackSamplingPeriod](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getForceFeedback](motor.md#description)(self) |
+| &nbsp;&nbsp; def [setForce](motor.md#description)(self, torque) |
+| &nbsp;&nbsp; def [enableTorqueFeedback](motor.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disableTorqueFeedback](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getTorqueFeedbackSamplingPeriod](motor.md#description)(self) |
+| &nbsp;&nbsp; def [getTorqueFeedback](motor.md#description)(self) |
+| &nbsp;&nbsp; def [setTorque](motor.md#description)(self, torque) |
+| &nbsp;&nbsp; def [getType](motor.md#description)(self) |
 
 | |
 | --- |
@@ -310,62 +310,62 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; EMITTER, GPS, GYRO, LED, LIGHT\_SENSOR, MICROPHONE, MOTOR, PEN, |
 | &nbsp;&nbsp; POSITION\_SENSOR, RADIO, RECEIVER, SERVO, SPEAKER, |
 | &nbsp;&nbsp; TOUCH\_SENSOR |
-| &nbsp;&nbsp; def [remove](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getType](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getId](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getTypeName](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getBaseTypeName](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getField](reference/supervisor.md#description)(self, fieldName) |
-| &nbsp;&nbsp; def [getParentNode](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getPosition](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getOrientation](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getCenterOfMass](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getContactPoint](reference/supervisor.md#description)(self, index) |
-| &nbsp;&nbsp; def [getNumberOfContactPoints](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getStaticBalance](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getVelocity](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [setVelocity](reference/supervisor.md#description)(self, velocity) |
-| &nbsp;&nbsp; def [resetPhysics](reference/supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [remove](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getType](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getId](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getTypeName](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getBaseTypeName](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getField](supervisor.md#description)(self, fieldName) |
+| &nbsp;&nbsp; def [getParentNode](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getPosition](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getOrientation](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getCenterOfMass](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getContactPoint](supervisor.md#description)(self, index) |
+| &nbsp;&nbsp; def [getNumberOfContactPoints](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getStaticBalance](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getVelocity](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [setVelocity](supervisor.md#description)(self, velocity) |
+| &nbsp;&nbsp; def [resetPhysics](supervisor.md#description)(self) |
 
 | |
 | --- |
 | from controller import Pen |
-| class [Pen](reference/pen.md#pen) ([Device](reference/python-api.md)) : |
-| &nbsp;&nbsp; def [write](reference/pen.md#description)(self, write) |
-| &nbsp;&nbsp; def [setInkColor](reference/pen.md#description)(self, color, density) |
+| class [Pen](pen.md#pen) ([Device](python-api.md)) : |
+| &nbsp;&nbsp; def [write](pen.md#description)(self, write) |
+| &nbsp;&nbsp; def [setInkColor](pen.md#description)(self, color, density) |
 
 | |
 | --- |
 | from controller import PositionSensor |
-| class [PositionSensor](reference/positionsensor.md#positionsensor) ([Device](reference/python-api.md)) : |
+| class [PositionSensor](positionsensor.md#positionsensor) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; ANGULAR, LINEAR |
-| &nbsp;&nbsp; def [enable](reference/positionsensor.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/positionsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/positionsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getValue](reference/positionsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getType](reference/positionsensor.md#description)(self) |
+| &nbsp;&nbsp; def [enable](positionsensor.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](positionsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](positionsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getValue](positionsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getType](positionsensor.md#description)(self) |
 
 | |
 | --- |
 | from controller import Receiver |
-| class [Receiver](reference/receiver.md#receiver) ([Device](reference/python-api.md)) : |
+| class [Receiver](receiver.md#receiver) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; CHANNEL\_BROADCAST |
-| &nbsp;&nbsp; def [enable](reference/receiver.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [getQueueLength](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [nextPacket](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [getData](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [getDataSize](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [getSignalStrength](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [getEmitterDirection](reference/receiver.md#description)(self) |
-| &nbsp;&nbsp; def [setChannel](reference/receiver.md#description)(self, channel) |
-| &nbsp;&nbsp; def [getChannel](reference/receiver.md#description)(self) |
+| &nbsp;&nbsp; def [enable](receiver.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [getQueueLength](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [nextPacket](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [getData](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [getDataSize](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [getSignalStrength](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [getEmitterDirection](receiver.md#description)(self) |
+| &nbsp;&nbsp; def [setChannel](receiver.md#description)(self, channel) |
+| &nbsp;&nbsp; def [getChannel](receiver.md#description)(self) |
 
 | |
 | --- |
 | from controller import Robot |
-| class [Robot](reference/robot.md#robot) : |
+| class [Robot](robot.md#robot) : |
 | &nbsp;&nbsp; MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, |
 | &nbsp;&nbsp; MODE\_REMOTE\_CONTROL |
 | &nbsp;&nbsp; KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, KEYBOARD\_UP, |
@@ -375,109 +375,109 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; KEYBOARD\_NUMPAD\_RIGHT, KEYBOARD\_NUMPAD\_DOWN, |
 | &nbsp;&nbsp; KEYBOARD\_NUMPAD\_END, KEYBOARD\_KEY, KEYBOARD\_SHIFT, |
 | &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT |
-| &nbsp;&nbsp; def [\_\_init\_\_](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [\_\_del\_\_](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [step](reference/robot.md#description)(self, ms) |
-| &nbsp;&nbsp; def [getAccelerometer](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getBrake](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getCamera](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getCompass](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getConnector](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getDisplay](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getDistanceSensor](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getEmitter](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getGPS](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getGyro](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getInertialUnit](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getLED](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getLightSensor](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getMotor](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getPen](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getPositionSensor](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getReceiver](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getServo](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getTouchSensor](reference/robot.md#description)(self, name) |
-| &nbsp;&nbsp; def [getNumberOfDevices](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getDeviceByIndex](reference/robot.md#description)(self, index) |
-| &nbsp;&nbsp; def [batterySensorEnable](reference/robot.md#description)(self, ms) |
-| &nbsp;&nbsp; def [batterySensorDisable](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [batterySensorGetSamplingPeriod](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [batterySensorGetValue](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getBasicTimeStep](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getMode](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getModel](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getData](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [setData](reference/robot.md#description)(self, data) |
-| &nbsp;&nbsp; def [getName](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getControllerName](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getControllerArguments](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getProjectPath](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getSynchronization](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getTime](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getWorldPath](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [keyboardEnable](reference/robot.md#description)(self, ms) |
-| &nbsp;&nbsp; def [keyboardDisable](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [keyboardGetKey](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [getType](reference/robot.md#description)(self) |
+| &nbsp;&nbsp; def [\_\_init\_\_](robot.md#description)(self) |
+| &nbsp;&nbsp; def [\_\_del\_\_](robot.md#description)(self) |
+| &nbsp;&nbsp; def [step](robot.md#description)(self, ms) |
+| &nbsp;&nbsp; def [getAccelerometer](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getBrake](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getCamera](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getCompass](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getConnector](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getDisplay](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getDistanceSensor](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getEmitter](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getGPS](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getGyro](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getInertialUnit](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getLED](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getLightSensor](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getMotor](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getPen](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getPositionSensor](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getReceiver](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getServo](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getTouchSensor](robot.md#description)(self, name) |
+| &nbsp;&nbsp; def [getNumberOfDevices](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getDeviceByIndex](robot.md#description)(self, index) |
+| &nbsp;&nbsp; def [batterySensorEnable](robot.md#description)(self, ms) |
+| &nbsp;&nbsp; def [batterySensorDisable](robot.md#description)(self) |
+| &nbsp;&nbsp; def [batterySensorGetSamplingPeriod](robot.md#description)(self) |
+| &nbsp;&nbsp; def [batterySensorGetValue](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getBasicTimeStep](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getMode](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getModel](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getData](robot.md#description)(self) |
+| &nbsp;&nbsp; def [setData](robot.md#description)(self, data) |
+| &nbsp;&nbsp; def [getName](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getControllerName](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getControllerArguments](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getProjectPath](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getSynchronization](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getTime](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getWorldPath](robot.md#description)(self) |
+| &nbsp;&nbsp; def [keyboardEnable](robot.md#description)(self, ms) |
+| &nbsp;&nbsp; def [keyboardDisable](robot.md#description)(self) |
+| &nbsp;&nbsp; def [keyboardGetKey](robot.md#description)(self) |
+| &nbsp;&nbsp; def [getType](robot.md#description)(self) |
 
 | |
 | --- |
 | from controller import Servo |
-| class [Servo](reference/servo.md#servo) ([Device](reference/python-api.md)) : |
+| class [Servo](servo.md#servo) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; ROTATIONAL, LINEAR |
-| &nbsp;&nbsp; def [setPosition](reference/servo.md#description)(self, position) |
-| &nbsp;&nbsp; def [getTargetPosition](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [setVelocity](reference/servo.md#description)(self, vel) |
-| &nbsp;&nbsp; def [setAcceleration](reference/servo.md#description)(self, force) |
-| &nbsp;&nbsp; def [setMotorForce](reference/servo.md#description)(self, motor\_force) |
-| &nbsp;&nbsp; def [setControlP](reference/servo.md#description)(self, p) |
-| &nbsp;&nbsp; def [getMinPosition](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [getMaxPosition](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [enablePosition](reference/servo.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disablePosition](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [getPositionSamplingPeriod](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [getPosition](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [enableMotorForceFeedback](reference/servo.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disableMotorForceFeedback](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [getMotorForceFeedbackSamplingPeriod](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [getMotorForceFeedback](reference/servo.md#description)(self) |
-| &nbsp;&nbsp; def [setForce](reference/servo.md#description)(self, force) |
-| &nbsp;&nbsp; def [getType](reference/servo.md#description)(self) |
+| &nbsp;&nbsp; def [setPosition](servo.md#description)(self, position) |
+| &nbsp;&nbsp; def [getTargetPosition](servo.md#description)(self) |
+| &nbsp;&nbsp; def [setVelocity](servo.md#description)(self, vel) |
+| &nbsp;&nbsp; def [setAcceleration](servo.md#description)(self, force) |
+| &nbsp;&nbsp; def [setMotorForce](servo.md#description)(self, motor\_force) |
+| &nbsp;&nbsp; def [setControlP](servo.md#description)(self, p) |
+| &nbsp;&nbsp; def [getMinPosition](servo.md#description)(self) |
+| &nbsp;&nbsp; def [getMaxPosition](servo.md#description)(self) |
+| &nbsp;&nbsp; def [enablePosition](servo.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disablePosition](servo.md#description)(self) |
+| &nbsp;&nbsp; def [getPositionSamplingPeriod](servo.md#description)(self) |
+| &nbsp;&nbsp; def [getPosition](servo.md#description)(self) |
+| &nbsp;&nbsp; def [enableMotorForceFeedback](servo.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disableMotorForceFeedback](servo.md#description)(self) |
+| &nbsp;&nbsp; def [getMotorForceFeedbackSamplingPeriod](servo.md#description)(self) |
+| &nbsp;&nbsp; def [getMotorForceFeedback](servo.md#description)(self) |
+| &nbsp;&nbsp; def [setForce](servo.md#description)(self, force) |
+| &nbsp;&nbsp; def [getType](servo.md#description)(self) |
 
 | |
 | --- |
 | from controller import Supervisor |
-| class [Supervisor](reference/supervisor.md#supervisor) ([Robot](reference/python-api.md)) : |
+| class [Supervisor](supervisor.md#supervisor) ([Robot](python-api.md)) : |
 | &nbsp;&nbsp; MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR |
-| &nbsp;&nbsp; def [\_\_init\_\_](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [\_\_del\_\_](reference/robot.md#description)(self) |
-| &nbsp;&nbsp; def [exportImage](reference/supervisor.md#description)(self, file, quality) |
-| &nbsp;&nbsp; def [getRoot](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getSelf](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [getFromDef](reference/supervisor.md#description)(self, name) |
-| &nbsp;&nbsp; def [getFromId](reference/supervisor.md#description)(self, id) |
-| &nbsp;&nbsp; def [setLabel](reference/supervisor.md#description)(self, id, label, xpos, ypos, size, color, transparency) |
-| &nbsp;&nbsp; def [simulationQuit](reference/supervisor.md#description)(self, status) |
-| &nbsp;&nbsp; def [simulationRevert](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [simulationResetPhysics](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [loadWorld](reference/supervisor.md#description)(self, file) |
-| &nbsp;&nbsp; def [saveWorld](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [saveWorld](reference/supervisor.md#description)(self, file) |
-| &nbsp;&nbsp; def [movieStartRecording](reference/supervisor.md#description)(self, file, width, height, codec, quality, acceleration, caption) |
-| &nbsp;&nbsp; def [movieStopRecording](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [movieGetStatus](reference/supervisor.md#description)(self) |
-| &nbsp;&nbsp; def [animationStartRecording](reference/supervisor.md#description)(self, file) |
-| &nbsp;&nbsp; def [animationStopRecording](reference/supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [\_\_init\_\_](robot.md#description)(self) |
+| &nbsp;&nbsp; def [\_\_del\_\_](robot.md#description)(self) |
+| &nbsp;&nbsp; def [exportImage](supervisor.md#description)(self, file, quality) |
+| &nbsp;&nbsp; def [getRoot](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getSelf](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [getFromDef](supervisor.md#description)(self, name) |
+| &nbsp;&nbsp; def [getFromId](supervisor.md#description)(self, id) |
+| &nbsp;&nbsp; def [setLabel](supervisor.md#description)(self, id, label, xpos, ypos, size, color, transparency) |
+| &nbsp;&nbsp; def [simulationQuit](supervisor.md#description)(self, status) |
+| &nbsp;&nbsp; def [simulationRevert](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [simulationResetPhysics](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [loadWorld](supervisor.md#description)(self, file) |
+| &nbsp;&nbsp; def [saveWorld](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [saveWorld](supervisor.md#description)(self, file) |
+| &nbsp;&nbsp; def [movieStartRecording](supervisor.md#description)(self, file, width, height, codec, quality, acceleration, caption) |
+| &nbsp;&nbsp; def [movieStopRecording](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [movieGetStatus](supervisor.md#description)(self) |
+| &nbsp;&nbsp; def [animationStartRecording](supervisor.md#description)(self, file) |
+| &nbsp;&nbsp; def [animationStopRecording](supervisor.md#description)(self) |
 
 | |
 | --- |
 | from controller import TouchSensor |
-| class [TouchSensor](reference/touchsensor.md#touchsensor) ([Device](reference/python-api.md)) : |
+| class [TouchSensor](touchsensor.md#touchsensor) ([Device](python-api.md)) : |
 | &nbsp;&nbsp; BUMPER, FORCE, FORCE3D |
-| &nbsp;&nbsp; def [enable](reference/touchsensor.md#description)(self, ms) |
-| &nbsp;&nbsp; def [disable](reference/touchsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getSamplingPeriod](reference/touchsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getValue](reference/touchsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getValues](reference/touchsensor.md#description)(self) |
-| &nbsp;&nbsp; def [getType](reference/touchsensor.md#description)(self) |
+| &nbsp;&nbsp; def [enable](touchsensor.md#description)(self, ms) |
+| &nbsp;&nbsp; def [disable](touchsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getSamplingPeriod](touchsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getValue](touchsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getValues](touchsensor.md#description)(self) |
+| &nbsp;&nbsp; def [getType](touchsensor.md#description)(self) |
 

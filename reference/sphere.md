@@ -7,9 +7,9 @@ Sphere {
 }
 ```
 
-The [Sphere](reference/sphere.md#sphere) node specifies a sphere centered at
-(0,0,0) in the local coordinate system. The `radius` field specifies the radius
-of the sphere (see ).
+The [Sphere](sphere.md#sphere) node specifies a sphere centered at (0,0,0) in
+the local coordinate system. The `radius` field specifies the radius of the
+sphere (see ).
 
 If `radius` is positive, the outside faces of the sphere are displayed while if
 it is negative, the inside faces are displayed.
@@ -30,6 +30,6 @@ a black and white soccer ball.
 When a texture is applied to a sphere, the texture covers the entire surface,
 wrapping counterclockwise from the back of the sphere. The texture has a seam at
 the back where the *yz*-plane intersects the sphere.
-[TextureTransform](reference/texturetransform.md#texturetransform) affects the
-texture coordinates of the Sphere.
+[TextureTransform](texturetransform.md#texturetransform) affects the texture
+coordinates of the Sphere.
 

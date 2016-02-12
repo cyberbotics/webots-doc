@@ -9,50 +9,46 @@ Slot {
 
 ### Description
 
-[Slot](reference/slot.md#slot) nodes always works with pairs, only a second
-[Slot](reference/slot.md#slot) can be added in the `endPoint` field of a
-[Slot](reference/slot.md#slot) before to be able to add any node in the
-`endPoint` field of the second [Slot](reference/slot.md#slot). Furthermore, the
-second [Slot](reference/slot.md#slot) can be added only if it has the same
-`type` as the first one.  The [Slot](reference/slot.md#slot) node is
-particularly usefull with PROTOs, it allows the user to constrain the type of
-nodes that can be added in an extension field of the PROTO. Imagine for example
-that you have an armed robot in which you can plug different kinds of hands. In
-order to do so you will put the hand as an extension field of your robot, you
-will then be able to add all the different PROTOs of hand that you have made.
-But nothing prevent you to add a PROTO of table in the hand extension field. The
-[Slot](reference/slot.md#slot) is made for preventing this kind of problems. By
-encapsulating your extension field in a [Slot](reference/slot.md#slot) and using
-the [Slot](reference/slot.md#slot) node as base node for all your hands PROTOs
-and defining the same `type` for the field [Slot](reference/slot.md#slot) and
-the PROTO [Slot](reference/slot.md#slot), only hands can be inserted in the
-extension field. This is illustrated in the [example](reference/slot.md#example)
-section.
+[Slot](slot.md#slot) nodes always works with pairs, only a second
+[Slot](slot.md#slot) can be added in the `endPoint` field of a
+[Slot](slot.md#slot) before to be able to add any node in the `endPoint` field
+of the second [Slot](slot.md#slot). Furthermore, the second [Slot](slot.md#slot)
+can be added only if it has the same `type` as the first one.  The
+[Slot](slot.md#slot) node is particularly usefull with PROTOs, it allows the
+user to constrain the type of nodes that can be added in an extension field of
+the PROTO. Imagine for example that you have an armed robot in which you can
+plug different kinds of hands. In order to do so you will put the hand as an
+extension field of your robot, you will then be able to add all the different
+PROTOs of hand that you have made. But nothing prevent you to add a PROTO of
+table in the hand extension field. The [Slot](slot.md#slot) is made for
+preventing this kind of problems. By encapsulating your extension field in a
+[Slot](slot.md#slot) and using the [Slot](slot.md#slot) node as base node for
+all your hands PROTOs and defining the same `type` for the field
+[Slot](slot.md#slot) and the PROTO [Slot](slot.md#slot), only hands can be
+inserted in the extension field. This is illustrated in the
+[example](slot.md#example) section.
 
 ### Field Summary
 
-- `type`: defines the type of the [Slot](reference/slot.md#slot). Two
-[Slot](reference/slot.md#slot) nodes can be connected only if their types match.
-It is possible to specify a gender by ending the string with a '`+`' or a '`-`'.
-In this case, two [Slot](reference/slot.md#slot) nodes can be connected only if
-they are of opposite gender (e.g. a [Slot](reference/slot.md#slot) with a type
-ending with '`+`' can only be connected to a [Slot](reference/slot.md#slot) with
-the same type, except that it ends with '`-`' instead of '`+`'). The default
-empty type matches any type.
-- `endPoint`: The node inserted in the endPoint of a
-[Slot](reference/slot.md#slot) should be another [Slot](reference/slot.md#slot)
-if this [Slot](reference/slot.md#slot) is not already connected to another
-[Slot](reference/slot.md#slot) (i.e., its parent is a
-[Slot](reference/slot.md#slot)). If the pair of [Slot](reference/slot.md#slot)
-nodes is already connected, any node that can usually be inserted in a
-`children` field can be inserted in the `endPoint` field of the second
-[Slot](reference/slot.md#slot).
+- `type`: defines the type of the [Slot](slot.md#slot). Two [Slot](slot.md#slot)
+nodes can be connected only if their types match. It is possible to specify a
+gender by ending the string with a '`+`' or a '`-`'. In this case, two
+[Slot](slot.md#slot) nodes can be connected only if they are of opposite gender
+(e.g. a [Slot](slot.md#slot) with a type ending with '`+`' can only be connected
+to a [Slot](slot.md#slot) with the same type, except that it ends with '`-`'
+instead of '`+`'). The default empty type matches any type.
+- `endPoint`: The node inserted in the endPoint of a [Slot](slot.md#slot) should
+be another [Slot](slot.md#slot) if this [Slot](slot.md#slot) is not already
+connected to another [Slot](slot.md#slot) (i.e., its parent is a
+[Slot](slot.md#slot)). If the pair of [Slot](slot.md#slot) nodes is already
+connected, any node that can usually be inserted in a `children` field can be
+inserted in the `endPoint` field of the second [Slot](slot.md#slot).
 
 ### Example
 
 If you want to write a proto of a robot called `MyRobot` that accepts only hands
 in its field `handExtension`, you have to set the field `handExtension` to be
-the `endPoint` of a [Slot](reference/slot.md#slot).
+the `endPoint` of a [Slot](slot.md#slot).
 
 ```
 PROTO MyRobot [
@@ -69,9 +65,8 @@ Robot {
 }
 ```
 
-Then any PROTO of a hand needs to use the [Slot](reference/slot.md#slot) as base
-node and the `type` of this [Slot](reference/slot.md#slot) should match the one
-in `MyRobot`.
+Then any PROTO of a hand needs to use the [Slot](slot.md#slot) as base node and
+the `type` of this [Slot](slot.md#slot) should match the one in `MyRobot`.
 
 ```
 PROTO RobotHand [

@@ -5,155 +5,155 @@ The following tables describe the C++ classes and their methods.
 | |
 | --- |
 | #include `<`webots/Accelerometer.hpp`>` |
-| class [Accelerometer](reference/accelerometer.md#accelerometer) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/accelerometer.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/accelerometer.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/accelerometer.md#description)(); |
-| &nbsp;&nbsp; const double *[getValues](reference/accelerometer.md#description)() const; |
+| class [Accelerometer](accelerometer.md#accelerometer) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](accelerometer.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](accelerometer.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](accelerometer.md#description)(); |
+| &nbsp;&nbsp; const double *[getValues](accelerometer.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Brake.hpp`>` |
-| class [Brake](reference/brake.md#brake) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; void [setDampingConstant](reference/brake.md#description)(double dampingConstant) const; |
-| &nbsp;&nbsp; int [getType](reference/brake.md#description)() const; |
+| class [Brake](brake.md#brake) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; void [setDampingConstant](brake.md#description)(double dampingConstant) const; |
+| &nbsp;&nbsp; int [getType](brake.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Camera.hpp`>` |
-| class [Camera](reference/camera.md#camera) : public [Device](reference/cpp-api.md) { |
+| class [Camera](camera.md#camera) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {COLOR, RANGE\_FINDER, BOTH}; |
-| &nbsp;&nbsp; virtual void [enable](reference/camera.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/camera.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/camera.md#description)(); |
-| &nbsp;&nbsp; double [getFov](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getMinFov](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxFov](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setFov](reference/camera.md#description)(double fov); |
-| &nbsp;&nbsp; double [getFocalLength](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getFocalDistance](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxFocalDistance](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getMinFocalDistance](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setFocalDistance](reference/camera.md#description)(double focalDistance); |
-| &nbsp;&nbsp; int [getWidth](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; int [getHeight](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getNear](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxRange](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; int [getType](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; const unsigned char *[getImage](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; static unsigned char [imageGetRed](reference/camera.md#description)(const unsigned char *image, |
+| &nbsp;&nbsp; virtual void [enable](camera.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](camera.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](camera.md#description)(); |
+| &nbsp;&nbsp; double [getFov](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getMinFov](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxFov](camera.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setFov](camera.md#description)(double fov); |
+| &nbsp;&nbsp; double [getFocalLength](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getFocalDistance](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxFocalDistance](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getMinFocalDistance](camera.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setFocalDistance](camera.md#description)(double focalDistance); |
+| &nbsp;&nbsp; int [getWidth](camera.md#description)() const; |
+| &nbsp;&nbsp; int [getHeight](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getNear](camera.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxRange](camera.md#description)() const; |
+| &nbsp;&nbsp; int [getType](camera.md#description)() const; |
+| &nbsp;&nbsp; const unsigned char *[getImage](camera.md#description)() const; |
+| &nbsp;&nbsp; static unsigned char [imageGetRed](camera.md#description)(const unsigned char *image, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y); |
-| &nbsp;&nbsp; static unsigned char [imageGetGreen](reference/camera.md#description)(const unsigned char *image, |
+| &nbsp;&nbsp; static unsigned char [imageGetGreen](camera.md#description)(const unsigned char *image, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y); |
-| &nbsp;&nbsp; static unsigned char [imageGetBlue](reference/camera.md#description)(const unsigned char *image, |
+| &nbsp;&nbsp; static unsigned char [imageGetBlue](camera.md#description)(const unsigned char *image, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y); |
-| &nbsp;&nbsp; static unsigned char [imageGetGrey](reference/camera.md#description)(const unsigned char *image, |
+| &nbsp;&nbsp; static unsigned char [imageGetGrey](camera.md#description)(const unsigned char *image, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y); |
-| &nbsp;&nbsp; const float *[getRangeImage](reference/camera.md#description)() const; |
-| &nbsp;&nbsp; static float [rangeImageGetDepth](reference/camera.md#description)(const float *image, |
+| &nbsp;&nbsp; const float *[getRangeImage](camera.md#description)() const; |
+| &nbsp;&nbsp; static float [rangeImageGetDepth](camera.md#description)(const float *image, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y); |
-| &nbsp;&nbsp; int [saveImage](reference/camera.md#description)(const std::string &filename, int quality) const; |
+| &nbsp;&nbsp; int [saveImage](camera.md#description)(const std::string &filename, int quality) const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Compass.hpp`>` |
-| class [Compass](reference/compass.md#compass) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/compass.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/compass.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/compass.md#description)(); |
-| &nbsp;&nbsp; const double *[getValues](reference/compass.md#description)() const; |
+| class [Compass](compass.md#compass) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](compass.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](compass.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](compass.md#description)(); |
+| &nbsp;&nbsp; const double *[getValues](compass.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Connector.hpp`>` |
-| class [Connector](reference/connector.md#connector) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enablePresence](reference/connector.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disablePresence](reference/connector.md#description)(); |
-| &nbsp;&nbsp; int [getPresence](reference/connector.md#description)() const; |
-| &nbsp;&nbsp; virtual void [lock](reference/connector.md#description)(); |
-| &nbsp;&nbsp; virtual void [unlock](reference/connector.md#description)(); |
+| class [Connector](connector.md#connector) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enablePresence](connector.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disablePresence](connector.md#description)(); |
+| &nbsp;&nbsp; int [getPresence](connector.md#description)() const; |
+| &nbsp;&nbsp; virtual void [lock](connector.md#description)(); |
+| &nbsp;&nbsp; virtual void [unlock](connector.md#description)(); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Device.hpp`>` |
-| class [Device](reference/device.md#device) { |
-| &nbsp;&nbsp; const std::string &[getModel](reference/device.md#description)() const; |
-| &nbsp;&nbsp; const std::string &[getName](reference/device.md#description)() const; |
-| &nbsp;&nbsp; int [getNodeType](reference/device.md#description)() const; |
+| class [Device](device.md#device) { |
+| &nbsp;&nbsp; const std::string &[getModel](device.md#description)() const; |
+| &nbsp;&nbsp; const std::string &[getName](device.md#description)() const; |
+| &nbsp;&nbsp; int [getNodeType](device.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/DifferentialWheels.hpp`>` |
-| class [DifferentialWheels](reference/differentialwheels.md#differentialwheels) : public [Robot](reference/cpp-api.md) { |
-| &nbsp;&nbsp; [DifferentialWheels](reference/robot.md#description)(); |
-| &nbsp;&nbsp; virtual [~DifferentialWheels](reference/robot.md#description)(); |
-| &nbsp;&nbsp; virtual void [setSpeed](reference/differentialwheels.md#description)(double left, double right); |
-| &nbsp;&nbsp; double [getLeftSpeed](reference/differentialwheels.md#description)() const; |
-| &nbsp;&nbsp; double [getRightSpeed](reference/differentialwheels.md#description)() const; |
-| &nbsp;&nbsp; virtual void [enableEncoders](reference/differentialwheels.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disableEncoders](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; int [getEncodersSamplingPeriod](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; double [getLeftEncoder](reference/differentialwheels.md#description)() const; |
-| &nbsp;&nbsp; double [getRightEncoder](reference/differentialwheels.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setEncoders](reference/differentialwheels.md#description)(double left, double right); |
-| &nbsp;&nbsp; double [getMaxSpeed](reference/differentialwheels.md#description)() const; |
-| &nbsp;&nbsp; double [getSpeedUnit](reference/differentialwheels.md#description)() const; |
+| class [DifferentialWheels](differentialwheels.md#differentialwheels) : public [Robot](cpp-api.md) { |
+| &nbsp;&nbsp; [DifferentialWheels](robot.md#description)(); |
+| &nbsp;&nbsp; virtual [~DifferentialWheels](robot.md#description)(); |
+| &nbsp;&nbsp; virtual void [setSpeed](differentialwheels.md#description)(double left, double right); |
+| &nbsp;&nbsp; double [getLeftSpeed](differentialwheels.md#description)() const; |
+| &nbsp;&nbsp; double [getRightSpeed](differentialwheels.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enableEncoders](differentialwheels.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disableEncoders](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; int [getEncodersSamplingPeriod](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; double [getLeftEncoder](differentialwheels.md#description)() const; |
+| &nbsp;&nbsp; double [getRightEncoder](differentialwheels.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setEncoders](differentialwheels.md#description)(double left, double right); |
+| &nbsp;&nbsp; double [getMaxSpeed](differentialwheels.md#description)() const; |
+| &nbsp;&nbsp; double [getSpeedUnit](differentialwheels.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Display.hpp`>` |
-| class [Display](reference/display.md#display) : public [Device](reference/cpp-api.md) { |
+| class [Display](display.md#display) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {RGB, RGBA, ARGB, BGRA}; |
-| &nbsp;&nbsp; int [getWidth](reference/display.md#description)() const; |
-| &nbsp;&nbsp; int [getHeight](reference/display.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setColor](reference/display.md#description)(int color); |
-| &nbsp;&nbsp; virtual void [setAlpha](reference/display.md#description)(double alpha); |
-| &nbsp;&nbsp; virtual void [setOpacity](reference/display.md#description)(double opacity); |
-| &nbsp;&nbsp; virtual void [drawPixel](reference/display.md#description)(int x1, int y1); |
-| &nbsp;&nbsp; virtual void [drawLine](reference/display.md#description)(int x1, int y1, int x2, int y2); |
-| &nbsp;&nbsp; virtual void [drawRectangle](reference/display.md#description)(int x, int y, int width, int height); |
-| &nbsp;&nbsp; virtual void [drawOval](reference/display.md#description)(int cx, int cy, int a, int b); |
-| &nbsp;&nbsp; virtual void [drawPolygon](reference/display.md#description)(const int *x, const int *y, int size); |
-| &nbsp;&nbsp; virtual void [drawText](reference/display.md#description)(const std::string &txt, int x, int y); |
-| &nbsp;&nbsp; virtual void [fillRectangle](reference/display.md#description)(int x, int y, int width, int height); |
-| &nbsp;&nbsp; virtual void [fillOval](reference/display.md#description)(int cx, int cy, int a, int b); |
-| &nbsp;&nbsp; virtual void [fillPolygon](reference/display.md#description)(const int *x, const int *y, int size); |
-| &nbsp;&nbsp; [ImageRef](reference/cpp-api.md) *[imageCopy](reference/display.md#description)(int x, int y, int width, int height) const; |
-| &nbsp;&nbsp; virtual void [imagePaste](reference/display.md#description)([ImageRef](reference/cpp-api.md) *ir, int x, int y); |
-| &nbsp;&nbsp; [ImageRef](reference/cpp-api.md) *[imageLoad](reference/display.md#description)(const std::string &filename) const; |
-| &nbsp;&nbsp; [ImageRef](reference/cpp-api.md) *[imageNew](reference/display.md#description)(int width, int height, const void *data, int format) const; |
-| &nbsp;&nbsp; void [imageSave](reference/display.md#description)([ImageRef](reference/cpp-api.md) *ir, const std::string &filename) const; |
-| &nbsp;&nbsp; void [imageDelete](reference/display.md#description)([ImageRef](reference/cpp-api.md) *ir) const; |
+| &nbsp;&nbsp; int [getWidth](display.md#description)() const; |
+| &nbsp;&nbsp; int [getHeight](display.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setColor](display.md#description)(int color); |
+| &nbsp;&nbsp; virtual void [setAlpha](display.md#description)(double alpha); |
+| &nbsp;&nbsp; virtual void [setOpacity](display.md#description)(double opacity); |
+| &nbsp;&nbsp; virtual void [drawPixel](display.md#description)(int x1, int y1); |
+| &nbsp;&nbsp; virtual void [drawLine](display.md#description)(int x1, int y1, int x2, int y2); |
+| &nbsp;&nbsp; virtual void [drawRectangle](display.md#description)(int x, int y, int width, int height); |
+| &nbsp;&nbsp; virtual void [drawOval](display.md#description)(int cx, int cy, int a, int b); |
+| &nbsp;&nbsp; virtual void [drawPolygon](display.md#description)(const int *x, const int *y, int size); |
+| &nbsp;&nbsp; virtual void [drawText](display.md#description)(const std::string &txt, int x, int y); |
+| &nbsp;&nbsp; virtual void [fillRectangle](display.md#description)(int x, int y, int width, int height); |
+| &nbsp;&nbsp; virtual void [fillOval](display.md#description)(int cx, int cy, int a, int b); |
+| &nbsp;&nbsp; virtual void [fillPolygon](display.md#description)(const int *x, const int *y, int size); |
+| &nbsp;&nbsp; [ImageRef](cpp-api.md) *[imageCopy](display.md#description)(int x, int y, int width, int height) const; |
+| &nbsp;&nbsp; virtual void [imagePaste](display.md#description)([ImageRef](cpp-api.md) *ir, int x, int y); |
+| &nbsp;&nbsp; [ImageRef](cpp-api.md) *[imageLoad](display.md#description)(const std::string &filename) const; |
+| &nbsp;&nbsp; [ImageRef](cpp-api.md) *[imageNew](display.md#description)(int width, int height, const void *data, int format) const; |
+| &nbsp;&nbsp; void [imageSave](display.md#description)([ImageRef](cpp-api.md) *ir, const std::string &filename) const; |
+| &nbsp;&nbsp; void [imageDelete](display.md#description)([ImageRef](cpp-api.md) *ir) const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/DistanceSensor.hpp`>` |
-| class [DistanceSensor](reference/distancesensor.md#distancesensor) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/distancesensor.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/distancesensor.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/distancesensor.md#description)(); |
-| &nbsp;&nbsp; double [getValue](reference/distancesensor.md#description)() const; |
+| class [DistanceSensor](distancesensor.md#distancesensor) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](distancesensor.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](distancesensor.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](distancesensor.md#description)(); |
+| &nbsp;&nbsp; double [getValue](distancesensor.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Emitter.hpp`>` |
-| class [Emitter](reference/emitter.md#emitter) : public [Device](reference/cpp-api.md) { |
+| class [Emitter](emitter.md#emitter) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {CHANNEL\_BROADCAST}; |
-| &nbsp;&nbsp; virtual int [send](reference/emitter.md#description)(const void *data, int size); |
-| &nbsp;&nbsp; int [getChannel](reference/emitter.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setChannel](reference/emitter.md#description)(int channel); |
-| &nbsp;&nbsp; double [getRange](reference/emitter.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setRange](reference/emitter.md#description)(double range); |
-| &nbsp;&nbsp; int [getBufferSize](reference/emitter.md#description)() const; |
+| &nbsp;&nbsp; virtual int [send](emitter.md#description)(const void *data, int size); |
+| &nbsp;&nbsp; int [getChannel](emitter.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setChannel](emitter.md#description)(int channel); |
+| &nbsp;&nbsp; double [getRange](emitter.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setRange](emitter.md#description)(double range); |
+| &nbsp;&nbsp; int [getBufferSize](emitter.md#description)() const; |
 | }; |
 
 | |
@@ -161,66 +161,66 @@ The following tables describe the C++ classes and their methods.
 | #include `<`webots/Field.hpp`>` |
 | class Field { |
 | &nbsp;&nbsp; enum { SF\_BOOL, SF\_INT32, SF\_FLOAT, SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING, SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, MF\_COLOR, MF\_STRING, MF\_NODE }; |
-| &nbsp;&nbsp; int [getType](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; std::string [getTypeName](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; int [getCount](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; bool [getSFBool](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; int [getSFInt32](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; double [getSFFloat](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getSFVec2f](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getSFVec3f](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getSFRotation](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getSFColor](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; std::string [getSFString](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; [Node](reference/cpp-api.md) *[getSFNode](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; bool [getMFBool](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; int [getMFInt32](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; double [getMFFloat](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; const double *[getMFVec2f](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; const double *[getMFVec3f](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; const double *[getMFRotation](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; const double *[getMFColor](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; std::string [getMFString](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; [Node](reference/cpp-api.md) *[getMFNode](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; void [setSFBool](reference/supervisor.md#description)(bool value); |
-| &nbsp;&nbsp; void [setSFInt32](reference/supervisor.md#description)(int value); |
-| &nbsp;&nbsp; void [setSFFloat](reference/supervisor.md#description)(double value); |
-| &nbsp;&nbsp; void [setSFVec2f](reference/supervisor.md#description)(const double values[2]); |
-| &nbsp;&nbsp; void [setSFVec3f](reference/supervisor.md#description)(const double values[3]); |
-| &nbsp;&nbsp; void [setSFRotation](reference/supervisor.md#description)(const double values[4]); |
-| &nbsp;&nbsp; void [setSFColor](reference/supervisor.md#description)(const double values[3]); |
-| &nbsp;&nbsp; void [setSFString](reference/supervisor.md#description)(const std::string &value); |
-| &nbsp;&nbsp; void [setMFBool](reference/supervisor.md#description)(int index, bool value); |
-| &nbsp;&nbsp; void [setMFInt32](reference/supervisor.md#description)(int index, int value); |
-| &nbsp;&nbsp; void [setMFFloat](reference/supervisor.md#description)(int index, double value); |
-| &nbsp;&nbsp; void [setMFVec2f](reference/supervisor.md#description)(int index, const double values[2]); |
-| &nbsp;&nbsp; void [setMFVec3f](reference/supervisor.md#description)(int index, const double values[3]); |
-| &nbsp;&nbsp; void [setMFRotation](reference/supervisor.md#description)(int index, const double values[4]); |
-| &nbsp;&nbsp; void [setMFColor](reference/supervisor.md#description)(int index, const double values[3]); |
-| &nbsp;&nbsp; void [setMFString](reference/supervisor.md#description)(int index, const std::string &value); |
-| &nbsp;&nbsp; void [importMFNode](reference/supervisor.md#description)(int position, const std::string &filename); |
-| &nbsp;&nbsp; void [importMFNodeFromString](reference/supervisor.md#description)(int position, const std::string &nodeString); |
-| &nbsp;&nbsp; void [removeMFNode](reference/supervisor.md#description)(int position); |
+| &nbsp;&nbsp; int [getType](supervisor.md#description)() const; |
+| &nbsp;&nbsp; std::string [getTypeName](supervisor.md#description)() const; |
+| &nbsp;&nbsp; int [getCount](supervisor.md#description)() const; |
+| &nbsp;&nbsp; bool [getSFBool](supervisor.md#description)() const; |
+| &nbsp;&nbsp; int [getSFInt32](supervisor.md#description)() const; |
+| &nbsp;&nbsp; double [getSFFloat](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getSFVec2f](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getSFVec3f](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getSFRotation](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getSFColor](supervisor.md#description)() const; |
+| &nbsp;&nbsp; std::string [getSFString](supervisor.md#description)() const; |
+| &nbsp;&nbsp; [Node](cpp-api.md) *[getSFNode](supervisor.md#description)() const; |
+| &nbsp;&nbsp; bool [getMFBool](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; int [getMFInt32](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; double [getMFFloat](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; const double *[getMFVec2f](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; const double *[getMFVec3f](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; const double *[getMFRotation](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; const double *[getMFColor](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; std::string [getMFString](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; [Node](cpp-api.md) *[getMFNode](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; void [setSFBool](supervisor.md#description)(bool value); |
+| &nbsp;&nbsp; void [setSFInt32](supervisor.md#description)(int value); |
+| &nbsp;&nbsp; void [setSFFloat](supervisor.md#description)(double value); |
+| &nbsp;&nbsp; void [setSFVec2f](supervisor.md#description)(const double values[2]); |
+| &nbsp;&nbsp; void [setSFVec3f](supervisor.md#description)(const double values[3]); |
+| &nbsp;&nbsp; void [setSFRotation](supervisor.md#description)(const double values[4]); |
+| &nbsp;&nbsp; void [setSFColor](supervisor.md#description)(const double values[3]); |
+| &nbsp;&nbsp; void [setSFString](supervisor.md#description)(const std::string &value); |
+| &nbsp;&nbsp; void [setMFBool](supervisor.md#description)(int index, bool value); |
+| &nbsp;&nbsp; void [setMFInt32](supervisor.md#description)(int index, int value); |
+| &nbsp;&nbsp; void [setMFFloat](supervisor.md#description)(int index, double value); |
+| &nbsp;&nbsp; void [setMFVec2f](supervisor.md#description)(int index, const double values[2]); |
+| &nbsp;&nbsp; void [setMFVec3f](supervisor.md#description)(int index, const double values[3]); |
+| &nbsp;&nbsp; void [setMFRotation](supervisor.md#description)(int index, const double values[4]); |
+| &nbsp;&nbsp; void [setMFColor](supervisor.md#description)(int index, const double values[3]); |
+| &nbsp;&nbsp; void [setMFString](supervisor.md#description)(int index, const std::string &value); |
+| &nbsp;&nbsp; void [importMFNode](supervisor.md#description)(int position, const std::string &filename); |
+| &nbsp;&nbsp; void [importMFNodeFromString](supervisor.md#description)(int position, const std::string &nodeString); |
+| &nbsp;&nbsp; void [removeMFNode](supervisor.md#description)(int position); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/GPS.hpp`>` |
-| class [GPS](reference/gps.md#gps) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/gps.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/gps.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/gps.md#description)(); |
-| &nbsp;&nbsp; const double *[getValues](reference/gps.md#description)() const; |
+| class [GPS](gps.md#gps) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](gps.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](gps.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](gps.md#description)(); |
+| &nbsp;&nbsp; const double *[getValues](gps.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Gyro.hpp`>` |
-| class [Gyro](reference/gyro.md#gyro) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/gyro.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/gyro.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/gyro.md#description)(); |
-| &nbsp;&nbsp; const double *[getValues](reference/gyro.md#description)() const; |
+| class [Gyro](gyro.md#gyro) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](gyro.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](gyro.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](gyro.md#description)(); |
+| &nbsp;&nbsp; const double *[getValues](gyro.md#description)() const; |
 | }; |
 
 | |
@@ -232,80 +232,80 @@ The following tables describe the C++ classes and their methods.
 | |
 | --- |
 | #include `<`webots/InertialUnit.hpp`>` |
-| class [InertialUnit](reference/inertialunit.md#inertialunit) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/inertialunit.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/inertialunit.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/inertialunit.md#description)(); |
-| &nbsp;&nbsp; const double *[getRollPitchYaw](reference/inertialunit.md#description)() const; |
+| class [InertialUnit](inertialunit.md#inertialunit) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](inertialunit.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](inertialunit.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](inertialunit.md#description)(); |
+| &nbsp;&nbsp; const double *[getRollPitchYaw](inertialunit.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/LED.hpp`>` |
-| class [LED](reference/led.md#led) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [set](reference/led.md#description)(int value); |
-| &nbsp;&nbsp; int [get](reference/led.md#description)() const; |
+| class [LED](led.md#led) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [set](led.md#description)(int value); |
+| &nbsp;&nbsp; int [get](led.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/LightSensor.hpp`>` |
-| class [LightSensor](reference/lightsensor.md#lightsensor) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [enable](reference/lightsensor.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/lightsensor.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/lightsensor.md#description)(); |
-| &nbsp;&nbsp; double [getValue](reference/lightsensor.md#description)() const; |
+| class [LightSensor](lightsensor.md#lightsensor) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [enable](lightsensor.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](lightsensor.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](lightsensor.md#description)(); |
+| &nbsp;&nbsp; double [getValue](lightsensor.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/utils/Motion.hpp`>` |
-| class [Motion](reference/motion.md#motion) { |
-| &nbsp;&nbsp; [Motion](reference/motion.md#description)(const std::string &fileName); |
-| &nbsp;&nbsp; virtual [~Motion](reference/motion.md#description)(); |
-| &nbsp;&nbsp; bool [isValid](reference/motion.md#description)() const; |
-| &nbsp;&nbsp; virtual void [play](reference/motion.md#description)(); |
-| &nbsp;&nbsp; virtual void [stop](reference/motion.md#description)(); |
-| &nbsp;&nbsp; virtual void [setLoop](reference/motion.md#description)(bool loop); |
-| &nbsp;&nbsp; virtual void [setReverse](reference/motion.md#description)(bool reverse); |
-| &nbsp;&nbsp; bool [isOver](reference/motion.md#description)() const; |
-| &nbsp;&nbsp; int [getDuration](reference/motion.md#description)() const; |
-| &nbsp;&nbsp; int [getTime](reference/motion.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setTime](reference/motion.md#description)(int time); |
+| class [Motion](motion.md#motion) { |
+| &nbsp;&nbsp; [Motion](motion.md#description)(const std::string &fileName); |
+| &nbsp;&nbsp; virtual [~Motion](motion.md#description)(); |
+| &nbsp;&nbsp; bool [isValid](motion.md#description)() const; |
+| &nbsp;&nbsp; virtual void [play](motion.md#description)(); |
+| &nbsp;&nbsp; virtual void [stop](motion.md#description)(); |
+| &nbsp;&nbsp; virtual void [setLoop](motion.md#description)(bool loop); |
+| &nbsp;&nbsp; virtual void [setReverse](motion.md#description)(bool reverse); |
+| &nbsp;&nbsp; bool [isOver](motion.md#description)() const; |
+| &nbsp;&nbsp; int [getDuration](motion.md#description)() const; |
+| &nbsp;&nbsp; int [getTime](motion.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setTime](motion.md#description)(int time); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Motor.hpp`>` |
-| class [Motor](reference/motor.md#motor) : public [Device](reference/cpp-api.md) { |
+| class [Motor](motor.md#motor) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {ROTATIONAL, LINEAR}; |
-| &nbsp;&nbsp; virtual void [setPosition](reference/motor.md#description)(double position); |
-| &nbsp;&nbsp; virtual void [setVelocity](reference/motor.md#description)(double vel); |
-| &nbsp;&nbsp; virtual void [setAcceleration](reference/motor.md#description)(double force); |
-| &nbsp;&nbsp; virtual void [setAvailableForce](reference/motor.md#description)(double motor\_force); |
-| &nbsp;&nbsp; virtual void [setAvailableTorque](reference/motor.md#description)(double motor\_torque); |
-| &nbsp;&nbsp; virtual void [setControlPID](reference/motor.md#description)(double p, double i, double d); |
-| &nbsp;&nbsp; double [getTargetPosition](reference/motor.md#description)(double position) const; |
-| &nbsp;&nbsp; double [getMinPosition](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxPosition](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getVelocity](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxVelocity](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getAcceleration](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getAvailableForce](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxForce](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getAvailableTorque](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxTorque](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; virtual void [enableForceFeedback](reference/motor.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disableForceFeedback](reference/motor.md#description)(); |
-| &nbsp;&nbsp; int [getForceFeedbackSamplingPeriod](reference/motor.md#description)(); |
-| &nbsp;&nbsp; double [getForceFeedback](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setForce](reference/motor.md#description)(double force); |
-| &nbsp;&nbsp; virtual void [enableTorqueFeedback](reference/motor.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disableTorqueFeedback](reference/motor.md#description)(); |
-| &nbsp;&nbsp; int [getTorqueFeedbackSamplingPeriod](reference/motor.md#description)(); |
-| &nbsp;&nbsp; double [getTorqueFeedback](reference/motor.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setTorque](reference/motor.md#description)(double torque); |
-| &nbsp;&nbsp; int [getType](reference/motor.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setPosition](motor.md#description)(double position); |
+| &nbsp;&nbsp; virtual void [setVelocity](motor.md#description)(double vel); |
+| &nbsp;&nbsp; virtual void [setAcceleration](motor.md#description)(double force); |
+| &nbsp;&nbsp; virtual void [setAvailableForce](motor.md#description)(double motor\_force); |
+| &nbsp;&nbsp; virtual void [setAvailableTorque](motor.md#description)(double motor\_torque); |
+| &nbsp;&nbsp; virtual void [setControlPID](motor.md#description)(double p, double i, double d); |
+| &nbsp;&nbsp; double [getTargetPosition](motor.md#description)(double position) const; |
+| &nbsp;&nbsp; double [getMinPosition](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxPosition](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getVelocity](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxVelocity](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getAcceleration](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getAvailableForce](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxForce](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getAvailableTorque](motor.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxTorque](motor.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enableForceFeedback](motor.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disableForceFeedback](motor.md#description)(); |
+| &nbsp;&nbsp; int [getForceFeedbackSamplingPeriod](motor.md#description)(); |
+| &nbsp;&nbsp; double [getForceFeedback](motor.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setForce](motor.md#description)(double force); |
+| &nbsp;&nbsp; virtual void [enableTorqueFeedback](motor.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disableTorqueFeedback](motor.md#description)(); |
+| &nbsp;&nbsp; int [getTorqueFeedbackSamplingPeriod](motor.md#description)(); |
+| &nbsp;&nbsp; double [getTorqueFeedback](motor.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setTorque](motor.md#description)(double torque); |
+| &nbsp;&nbsp; int [getType](motor.md#description)() const; |
 | }; |
 
 | |
@@ -324,66 +324,66 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; EMITTER, GPS,GYRO, LED, LIGHT\_SENSOR, MICROPHONE, MOTOR, PEN, |
 | &nbsp;&nbsp; POSITION\_SENSOR, RADIO, RECEIVER, SERVO, SPEAKER, |
 | &nbsp;&nbsp; TOUCH\_SENSOR }; |
-| &nbsp;&nbsp; virtual void [remove](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; int [getId](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; int [getType](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; std::string [getTypeName](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; std::string [getBaseTypeName](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; Node *[getParentNode](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; [Field](reference/cpp-api.md) *[getField](reference/supervisor.md#description)(const std::string &fieldName) const; |
-| &nbsp;&nbsp; const double *[getPosition](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getOrientation](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getCenterOfMass](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getContactPoint](reference/supervisor.md#description)(int index) const; |
-| &nbsp;&nbsp; int [getNumberOfContactPoints](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; bool [getStaticBalance](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; const double * [getVelocity](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; void [setVelocity](reference/supervisor.md#description)(const double velocity[6]); |
-| &nbsp;&nbsp; void [resetPhysics](reference/supervisor.md#description)(); |
+| &nbsp;&nbsp; virtual void [remove](supervisor.md#description)(); |
+| &nbsp;&nbsp; int [getId](supervisor.md#description)() const; |
+| &nbsp;&nbsp; int [getType](supervisor.md#description)() const; |
+| &nbsp;&nbsp; std::string [getTypeName](supervisor.md#description)() const; |
+| &nbsp;&nbsp; std::string [getBaseTypeName](supervisor.md#description)() const; |
+| &nbsp;&nbsp; Node *[getParentNode](supervisor.md#description)() const; |
+| &nbsp;&nbsp; [Field](cpp-api.md) *[getField](supervisor.md#description)(const std::string &fieldName) const; |
+| &nbsp;&nbsp; const double *[getPosition](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getOrientation](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getCenterOfMass](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getContactPoint](supervisor.md#description)(int index) const; |
+| &nbsp;&nbsp; int [getNumberOfContactPoints](supervisor.md#description)() const; |
+| &nbsp;&nbsp; bool [getStaticBalance](supervisor.md#description)() const; |
+| &nbsp;&nbsp; const double * [getVelocity](supervisor.md#description)() const; |
+| &nbsp;&nbsp; void [setVelocity](supervisor.md#description)(const double velocity[6]); |
+| &nbsp;&nbsp; void [resetPhysics](supervisor.md#description)(); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Pen.hpp`>` |
-| class [Pen](reference/pen.md#pen) : public [Device](reference/cpp-api.md) { |
-| &nbsp;&nbsp; virtual void [write](reference/pen.md#description)(bool write); |
-| &nbsp;&nbsp; virtual void [setInkColor](reference/pen.md#description)(int color, double density); |
+| class [Pen](pen.md#pen) : public [Device](cpp-api.md) { |
+| &nbsp;&nbsp; virtual void [write](pen.md#description)(bool write); |
+| &nbsp;&nbsp; virtual void [setInkColor](pen.md#description)(int color, double density); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/PositionSensor.hpp`>` |
-| class [PositionSensor](reference/positionsensor.md#positionsensor) : public [Device](reference/cpp-api.md) { |
+| class [PositionSensor](positionsensor.md#positionsensor) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {ANGULAR, LINEAR}; |
-| &nbsp;&nbsp; virtual void [enable](reference/positionsensor.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/positionsensor.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/positionsensor.md#description)(); |
-| &nbsp;&nbsp; double [getValue](reference/positionsensor.md#description)() const; |
-| &nbsp;&nbsp; int [getType](reference/positionsensor.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enable](positionsensor.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](positionsensor.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](positionsensor.md#description)(); |
+| &nbsp;&nbsp; double [getValue](positionsensor.md#description)() const; |
+| &nbsp;&nbsp; int [getType](positionsensor.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Receiver.hpp`>` |
-| class [Receiver](reference/receiver.md#receiver) : public [Device](reference/cpp-api.md) { |
+| class [Receiver](receiver.md#receiver) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {CHANNEL\_BROADCAST}; |
-| &nbsp;&nbsp; virtual void [enable](reference/receiver.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; int [getQueueLength](reference/receiver.md#description)() const; |
-| &nbsp;&nbsp; virtual void [nextPacket](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; const void *[getData](reference/receiver.md#description)() const; |
-| &nbsp;&nbsp; int [getDataSize](reference/receiver.md#description)() const; |
-| &nbsp;&nbsp; double [getSignalStrength](reference/receiver.md#description)() const; |
-| &nbsp;&nbsp; const double *[getEmitterDirection](reference/receiver.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setChannel](reference/receiver.md#description)(int channel); |
-| &nbsp;&nbsp; int [getChannel](reference/receiver.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enable](receiver.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](receiver.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](receiver.md#description)(); |
+| &nbsp;&nbsp; int [getQueueLength](receiver.md#description)() const; |
+| &nbsp;&nbsp; virtual void [nextPacket](receiver.md#description)(); |
+| &nbsp;&nbsp; const void *[getData](receiver.md#description)() const; |
+| &nbsp;&nbsp; int [getDataSize](receiver.md#description)() const; |
+| &nbsp;&nbsp; double [getSignalStrength](receiver.md#description)() const; |
+| &nbsp;&nbsp; const double *[getEmitterDirection](receiver.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setChannel](receiver.md#description)(int channel); |
+| &nbsp;&nbsp; int [getChannel](receiver.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Robot.hpp`>` |
-| class [Robot](reference/robot.md#robot) { |
+| class [Robot](robot.md#robot) { |
 | &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, |
 | &nbsp;&nbsp; MODE\_REMOTE\_CONTROL}; |
 | &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, |
@@ -394,116 +394,116 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END, |
 | &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL, |
 | &nbsp;&nbsp; KEYBOARD\_ALT}; |
-| &nbsp;&nbsp; [Robot](reference/robot.md#description)(); |
-| &nbsp;&nbsp; virtual [~Robot](reference/robot.md#description)(); |
-| &nbsp;&nbsp; virtual int [step](reference/robot.md#description)(int ms); |
-| &nbsp;&nbsp; [Accelerometer](reference/cpp-api.md) *[getAccelerometer](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Brake](reference/cpp-api.md) *[getBrake](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Camera](reference/cpp-api.md) *[getCamera](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Compass](reference/cpp-api.md) *[getCompass](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Connector](reference/cpp-api.md) *[getConnector](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Display](reference/cpp-api.md) *[getDisplay](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [DistanceSensor](reference/cpp-api.md) *[getDistanceSensor](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Emitter](reference/cpp-api.md) *[getEmitter](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [GPS](reference/cpp-api.md) *[getGPS](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Gyro](reference/cpp-api.md) *[getGyro](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [InertialUnit](reference/cpp-api.md) *[getInertialUnit](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [LED](reference/cpp-api.md) *[getLED](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [LightSensor](reference/cpp-api.md) *[getLightSensor](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Motor](reference/cpp-api.md) *[getMotor](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Pen](reference/cpp-api.md) *[getPen](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [PositionSensor](reference/cpp-api.md) *[getPositionSensor](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Receiver](reference/cpp-api.md) *[getReceiver](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Servo](reference/cpp-api.md) *[getServo](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [TouchSensor](reference/cpp-api.md) *[getTouchSensor](reference/robot.md#description)(const std::string &name); |
-| &nbsp;&nbsp; int [getNumberOfDevices](reference/robot.md#description)(); |
-| &nbsp;&nbsp; [Device](reference/cpp-api.md) *[getDeviceByIndex](reference/robot.md#description)(int index); |
-| &nbsp;&nbsp; virtual void [batterySensorEnable](reference/robot.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [batterySensorDisable](reference/robot.md#description)(); |
-| &nbsp;&nbsp; int [batterySensorGetSamplingPeriod](reference/robot.md#description)(); |
-| &nbsp;&nbsp; double [batterySensorGetValue](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; double [getBasicTimeStep](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; int [getMode](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; std::string [getModel](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; std::string [getData](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; void [setData](reference/robot.md#description)(const std::string &data); |
-| &nbsp;&nbsp; std::string [getName](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; std::string [getControllerName](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; std::string [getControllerArguments](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; std::string [getProjectPath](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; bool [getSynchronization](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; double [getTime](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; std::string [getWorldPath](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; virtual void [keyboardEnable](reference/robot.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [keyboardDisable](reference/robot.md#description)(); |
-| &nbsp;&nbsp; int [keyboardGetKey](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; int [getType](reference/robot.md#description)() const; |
-| &nbsp;&nbsp; void *[robotWindowCustomFunction](reference/robot.md#description)(void *arg); |
+| &nbsp;&nbsp; [Robot](robot.md#description)(); |
+| &nbsp;&nbsp; virtual [~Robot](robot.md#description)(); |
+| &nbsp;&nbsp; virtual int [step](robot.md#description)(int ms); |
+| &nbsp;&nbsp; [Accelerometer](cpp-api.md) *[getAccelerometer](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Brake](cpp-api.md) *[getBrake](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Camera](cpp-api.md) *[getCamera](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Compass](cpp-api.md) *[getCompass](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Connector](cpp-api.md) *[getConnector](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Display](cpp-api.md) *[getDisplay](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [DistanceSensor](cpp-api.md) *[getDistanceSensor](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Emitter](cpp-api.md) *[getEmitter](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [GPS](cpp-api.md) *[getGPS](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Gyro](cpp-api.md) *[getGyro](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [InertialUnit](cpp-api.md) *[getInertialUnit](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [LED](cpp-api.md) *[getLED](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [LightSensor](cpp-api.md) *[getLightSensor](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Motor](cpp-api.md) *[getMotor](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Pen](cpp-api.md) *[getPen](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [PositionSensor](cpp-api.md) *[getPositionSensor](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Receiver](cpp-api.md) *[getReceiver](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Servo](cpp-api.md) *[getServo](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [TouchSensor](cpp-api.md) *[getTouchSensor](robot.md#description)(const std::string &name); |
+| &nbsp;&nbsp; int [getNumberOfDevices](robot.md#description)(); |
+| &nbsp;&nbsp; [Device](cpp-api.md) *[getDeviceByIndex](robot.md#description)(int index); |
+| &nbsp;&nbsp; virtual void [batterySensorEnable](robot.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [batterySensorDisable](robot.md#description)(); |
+| &nbsp;&nbsp; int [batterySensorGetSamplingPeriod](robot.md#description)(); |
+| &nbsp;&nbsp; double [batterySensorGetValue](robot.md#description)() const; |
+| &nbsp;&nbsp; double [getBasicTimeStep](robot.md#description)() const; |
+| &nbsp;&nbsp; int [getMode](robot.md#description)() const; |
+| &nbsp;&nbsp; std::string [getModel](robot.md#description)() const; |
+| &nbsp;&nbsp; std::string [getData](robot.md#description)() const; |
+| &nbsp;&nbsp; void [setData](robot.md#description)(const std::string &data); |
+| &nbsp;&nbsp; std::string [getName](robot.md#description)() const; |
+| &nbsp;&nbsp; std::string [getControllerName](robot.md#description)() const; |
+| &nbsp;&nbsp; std::string [getControllerArguments](robot.md#description)() const; |
+| &nbsp;&nbsp; std::string [getProjectPath](robot.md#description)() const; |
+| &nbsp;&nbsp; bool [getSynchronization](robot.md#description)() const; |
+| &nbsp;&nbsp; double [getTime](robot.md#description)() const; |
+| &nbsp;&nbsp; std::string [getWorldPath](robot.md#description)() const; |
+| &nbsp;&nbsp; virtual void [keyboardEnable](robot.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [keyboardDisable](robot.md#description)(); |
+| &nbsp;&nbsp; int [keyboardGetKey](robot.md#description)() const; |
+| &nbsp;&nbsp; int [getType](robot.md#description)() const; |
+| &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#description)(void *arg); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Servo.hpp`>` |
-| class [Servo](reference/servo.md#servo) : public [Device](reference/cpp-api.md) { |
+| class [Servo](servo.md#servo) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {ROTATIONAL, LINEAR}; |
-| &nbsp;&nbsp; virtual void [setPosition](reference/servo.md#description)(double position); |
-| &nbsp;&nbsp; virtual void [setVelocity](reference/servo.md#description)(double vel); |
-| &nbsp;&nbsp; virtual void [setAcceleration](reference/servo.md#description)(double force); |
-| &nbsp;&nbsp; virtual void [setMotorForce](reference/servo.md#description)(double motor\_force); |
-| &nbsp;&nbsp; virtual void [setControlP](reference/servo.md#description)(double p); |
-| &nbsp;&nbsp; double [getTargetPosition](reference/servo.md#description)(double position) const; |
-| &nbsp;&nbsp; double [getMinPosition](reference/servo.md#description)() const; |
-| &nbsp;&nbsp; double [getMaxPosition](reference/servo.md#description)() const; |
-| &nbsp;&nbsp; virtual void [enablePosition](reference/servo.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disablePosition](reference/servo.md#description)(); |
-| &nbsp;&nbsp; int [getPositionSamplingPeriod](reference/servo.md#description)(); |
-| &nbsp;&nbsp; double [getPosition](reference/servo.md#description)() const; |
-| &nbsp;&nbsp; virtual void [enableMotorForceFeedback](reference/servo.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disableMotorForceFeedback](reference/servo.md#description)(); |
-| &nbsp;&nbsp; int [getMotorForceFeedbackSamplingPeriod](reference/servo.md#description)(); |
-| &nbsp;&nbsp; double [getMotorForceFeedback](reference/servo.md#description)() const; |
-| &nbsp;&nbsp; virtual void [setForce](reference/servo.md#description)(double force); |
-| &nbsp;&nbsp; int [getType](reference/servo.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setPosition](servo.md#description)(double position); |
+| &nbsp;&nbsp; virtual void [setVelocity](servo.md#description)(double vel); |
+| &nbsp;&nbsp; virtual void [setAcceleration](servo.md#description)(double force); |
+| &nbsp;&nbsp; virtual void [setMotorForce](servo.md#description)(double motor\_force); |
+| &nbsp;&nbsp; virtual void [setControlP](servo.md#description)(double p); |
+| &nbsp;&nbsp; double [getTargetPosition](servo.md#description)(double position) const; |
+| &nbsp;&nbsp; double [getMinPosition](servo.md#description)() const; |
+| &nbsp;&nbsp; double [getMaxPosition](servo.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enablePosition](servo.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disablePosition](servo.md#description)(); |
+| &nbsp;&nbsp; int [getPositionSamplingPeriod](servo.md#description)(); |
+| &nbsp;&nbsp; double [getPosition](servo.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enableMotorForceFeedback](servo.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disableMotorForceFeedback](servo.md#description)(); |
+| &nbsp;&nbsp; int [getMotorForceFeedbackSamplingPeriod](servo.md#description)(); |
+| &nbsp;&nbsp; double [getMotorForceFeedback](servo.md#description)() const; |
+| &nbsp;&nbsp; virtual void [setForce](servo.md#description)(double force); |
+| &nbsp;&nbsp; int [getType](servo.md#description)() const; |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/Supervisor.hpp`>` |
-| class [Supervisor](reference/supervisor.md#supervisor) : public [Robot](reference/cpp-api.md) { |
+| class [Supervisor](supervisor.md#supervisor) : public [Robot](cpp-api.md) { |
 | &nbsp;&nbsp; enum {MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR}; |
-| &nbsp;&nbsp; [Supervisor](reference/robot.md#description)(); |
-| &nbsp;&nbsp; virtual [~Supervisor](reference/robot.md#description)(); |
-| &nbsp;&nbsp; void [exportImage](reference/supervisor.md#description)(const std::string &file, int quality) const; |
-| &nbsp;&nbsp; [Node](reference/cpp-api.md) *[getRoot](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; [Node](reference/cpp-api.md) *[getSelf](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; [Node](reference/cpp-api.md) *[getFromDef](reference/supervisor.md#description)(const std::string &name); |
-| &nbsp;&nbsp; [Node](reference/cpp-api.md) *[getFromId](reference/supervisor.md#description)(int id); |
-| &nbsp;&nbsp; virtual void [setLabel](reference/supervisor.md#description)(int id, const std::string &label, double xpos, double ypos, |
+| &nbsp;&nbsp; [Supervisor](robot.md#description)(); |
+| &nbsp;&nbsp; virtual [~Supervisor](robot.md#description)(); |
+| &nbsp;&nbsp; void [exportImage](supervisor.md#description)(const std::string &file, int quality) const; |
+| &nbsp;&nbsp; [Node](cpp-api.md) *[getRoot](supervisor.md#description)(); |
+| &nbsp;&nbsp; [Node](cpp-api.md) *[getSelf](supervisor.md#description)(); |
+| &nbsp;&nbsp; [Node](cpp-api.md) *[getFromDef](supervisor.md#description)(const std::string &name); |
+| &nbsp;&nbsp; [Node](cpp-api.md) *[getFromId](supervisor.md#description)(int id); |
+| &nbsp;&nbsp; virtual void [setLabel](supervisor.md#description)(int id, const std::string &label, double xpos, double ypos, |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency); |
-| &nbsp;&nbsp; virtual void [simulationQuit](reference/supervisor.md#description)(int status); |
-| &nbsp;&nbsp; virtual void [simulationRevert](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; virtual void [simulationResetPhysics](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; virtual void [loadWorld](reference/supervisor.md#description)(const std::string &file); |
-| &nbsp;&nbsp; virtual void [saveWorld](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; virtual void [saveWorld](reference/supervisor.md#description)(const std::string &file); |
-| &nbsp;&nbsp; virtual void [movieStartRecording](reference/supervisor.md#description)(const std::string &file, int width, int height, int codec, int quality, |
+| &nbsp;&nbsp; virtual void [simulationQuit](supervisor.md#description)(int status); |
+| &nbsp;&nbsp; virtual void [simulationRevert](supervisor.md#description)(); |
+| &nbsp;&nbsp; virtual void [simulationResetPhysics](supervisor.md#description)(); |
+| &nbsp;&nbsp; virtual void [loadWorld](supervisor.md#description)(const std::string &file); |
+| &nbsp;&nbsp; virtual void [saveWorld](supervisor.md#description)(); |
+| &nbsp;&nbsp; virtual void [saveWorld](supervisor.md#description)(const std::string &file); |
+| &nbsp;&nbsp; virtual void [movieStartRecording](supervisor.md#description)(const std::string &file, int width, int height, int codec, int quality, |
 | &nbsp;&nbsp; int acceleration, bool caption) const; |
-| &nbsp;&nbsp; virtual void [movieStopRecording](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; int [movieGetStatus](reference/supervisor.md#description)() const; |
-| &nbsp;&nbsp; virtual bool [animationStartRecording](reference/supervisor.md#description)(const std::string &file); |
-| &nbsp;&nbsp; virtual bool [animationStopRecording](reference/supervisor.md#description)(); |
+| &nbsp;&nbsp; virtual void [movieStopRecording](supervisor.md#description)(); |
+| &nbsp;&nbsp; int [movieGetStatus](supervisor.md#description)() const; |
+| &nbsp;&nbsp; virtual bool [animationStartRecording](supervisor.md#description)(const std::string &file); |
+| &nbsp;&nbsp; virtual bool [animationStopRecording](supervisor.md#description)(); |
 | }; |
 
 | |
 | --- |
 | #include `<`webots/TouchSensor.hpp`>` |
-| class [TouchSensor](reference/touchsensor.md#touchsensor) : public [Device](reference/cpp-api.md) { |
+| class [TouchSensor](touchsensor.md#touchsensor) : public [Device](cpp-api.md) { |
 | &nbsp;&nbsp; enum {BUMPER, FORCE, FORCE3D}; |
-| &nbsp;&nbsp; virtual void [enable](reference/touchsensor.md#description)(int ms); |
-| &nbsp;&nbsp; virtual void [disable](reference/touchsensor.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/touchsensor.md#description)(); |
-| &nbsp;&nbsp; double [getValue](reference/touchsensor.md#description)() const; |
-| &nbsp;&nbsp; const double *[getValues](reference/touchsensor.md#description)() const; |
-| &nbsp;&nbsp; int [getType](reference/touchsensor.md#description)() const; |
+| &nbsp;&nbsp; virtual void [enable](touchsensor.md#description)(int ms); |
+| &nbsp;&nbsp; virtual void [disable](touchsensor.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](touchsensor.md#description)(); |
+| &nbsp;&nbsp; double [getValue](touchsensor.md#description)() const; |
+| &nbsp;&nbsp; const double *[getValues](touchsensor.md#description)() const; |
+| &nbsp;&nbsp; int [getType](touchsensor.md#description)() const; |
 | }; |
 

@@ -5,155 +5,155 @@ The following tables describe the Java classes and their methods.
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Accelerometer; |
-| public class [Accelerometer](reference/accelerometer.md#accelerometer) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/accelerometer.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/accelerometer.md#description)(); |
-| &nbsp;&nbsp; int [getSamplingPeriod](reference/accelerometer.md#description)(); |
-| &nbsp;&nbsp; public double[] [getValues](reference/accelerometer.md#description)(); |
+| public class [Accelerometer](accelerometer.md#accelerometer) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](accelerometer.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](accelerometer.md#description)(); |
+| &nbsp;&nbsp; int [getSamplingPeriod](accelerometer.md#description)(); |
+| &nbsp;&nbsp; public double[] [getValues](accelerometer.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Brake; |
-| public class [Brake](reference/brake.md#brake) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [setDampingConstant](reference/brake.md#description)(double dampingConstant); |
-| &nbsp;&nbsp; public int [getType](reference/brake.md#description)(); |
+| public class [Brake](brake.md#brake) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [setDampingConstant](brake.md#description)(double dampingConstant); |
+| &nbsp;&nbsp; public int [getType](brake.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Camera; |
-| public class [Camera](reference/camera.md#camera) extends [Device](reference/java-api.md) { |
+| public class [Camera](camera.md#camera) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int COLOR, RANGE\_FINDER, BOTH; |
-| &nbsp;&nbsp; public void [enable](reference/camera.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getFov](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getMinFov](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxFov](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public void [setFov](reference/camera.md#description)(double fov); |
-| &nbsp;&nbsp; public double [getFocalLength](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getFocalDistance](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxFocalDistance](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getMinFocalDistance](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public void [setFocalDistance](reference/camera.md#description)(double focalDistance); |
-| &nbsp;&nbsp; public int [getWidth](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public int [getHeight](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getNear](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxRange](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public int [getType](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public int[] [getImage](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public static int [imageGetRed](reference/camera.md#description)(int[] image, int width, int x, int y); |
-| &nbsp;&nbsp; public static int [imageGetGreen](reference/camera.md#description)(int[] image, int width, int x, int y); |
-| &nbsp;&nbsp; public static int [imageGetBlue](reference/camera.md#description)(int[] image, int width, int x, int y); |
-| &nbsp;&nbsp; public static int [imageGetGrey](reference/camera.md#description)(int[] image, int width, int x, int y); |
-| &nbsp;&nbsp; public static int [pixelGetRed](reference/camera.md#description)(int pixel); |
-| &nbsp;&nbsp; public static int [pixelGetGreen](reference/camera.md#description)(int pixel); |
-| &nbsp;&nbsp; public static int [pixelGetBlue](reference/camera.md#description)(int pixel); |
-| &nbsp;&nbsp; public static int [pixelGetGrey](reference/camera.md#description)(int pixel); |
-| &nbsp;&nbsp; public float[] [getRangeImage](reference/camera.md#description)(); |
-| &nbsp;&nbsp; public static float [rangeImageGetDepth](reference/camera.md#description)(float[] image, |
+| &nbsp;&nbsp; public void [enable](camera.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](camera.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getFov](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getMinFov](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxFov](camera.md#description)(); |
+| &nbsp;&nbsp; public void [setFov](camera.md#description)(double fov); |
+| &nbsp;&nbsp; public double [getFocalLength](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getFocalDistance](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxFocalDistance](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getMinFocalDistance](camera.md#description)(); |
+| &nbsp;&nbsp; public void [setFocalDistance](camera.md#description)(double focalDistance); |
+| &nbsp;&nbsp; public int [getWidth](camera.md#description)(); |
+| &nbsp;&nbsp; public int [getHeight](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getNear](camera.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxRange](camera.md#description)(); |
+| &nbsp;&nbsp; public int [getType](camera.md#description)(); |
+| &nbsp;&nbsp; public int[] [getImage](camera.md#description)(); |
+| &nbsp;&nbsp; public static int [imageGetRed](camera.md#description)(int[] image, int width, int x, int y); |
+| &nbsp;&nbsp; public static int [imageGetGreen](camera.md#description)(int[] image, int width, int x, int y); |
+| &nbsp;&nbsp; public static int [imageGetBlue](camera.md#description)(int[] image, int width, int x, int y); |
+| &nbsp;&nbsp; public static int [imageGetGrey](camera.md#description)(int[] image, int width, int x, int y); |
+| &nbsp;&nbsp; public static int [pixelGetRed](camera.md#description)(int pixel); |
+| &nbsp;&nbsp; public static int [pixelGetGreen](camera.md#description)(int pixel); |
+| &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#description)(int pixel); |
+| &nbsp;&nbsp; public static int [pixelGetGrey](camera.md#description)(int pixel); |
+| &nbsp;&nbsp; public float[] [getRangeImage](camera.md#description)(); |
+| &nbsp;&nbsp; public static float [rangeImageGetDepth](camera.md#description)(float[] image, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y); |
-| &nbsp;&nbsp; public int [saveImage](reference/camera.md#description)(String filename, int quality); |
+| &nbsp;&nbsp; public int [saveImage](camera.md#description)(String filename, int quality); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Compass; |
-| public class [Compass](reference/compass.md#compass) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/compass.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/compass.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/compass.md#description)(); |
-| &nbsp;&nbsp; public double[] [getValues](reference/compass.md#description)(); |
+| public class [Compass](compass.md#compass) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](compass.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](compass.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](compass.md#description)(); |
+| &nbsp;&nbsp; public double[] [getValues](compass.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Connector; |
-| public class [Connector](reference/connector.md#connector) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enablePresence](reference/connector.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disablePresence](reference/connector.md#description)(); |
-| &nbsp;&nbsp; public int [getPresence](reference/connector.md#description)(); |
-| &nbsp;&nbsp; public void [lock](reference/connector.md#description)(); |
-| &nbsp;&nbsp; public void [unlock](reference/connector.md#description)(); |
+| public class [Connector](connector.md#connector) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enablePresence](connector.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disablePresence](connector.md#description)(); |
+| &nbsp;&nbsp; public int [getPresence](connector.md#description)(); |
+| &nbsp;&nbsp; public void [lock](connector.md#description)(); |
+| &nbsp;&nbsp; public void [unlock](connector.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Device; |
-| public class [Device](reference/device.md#device) { |
-| &nbsp;&nbsp; public String [getModel](reference/device.md#description)(); |
-| &nbsp;&nbsp; public String [getName](reference/device.md#description)(); |
-| &nbsp;&nbsp; public int [getNodeType](reference/device.md#description)(); |
+| public class [Device](device.md#device) { |
+| &nbsp;&nbsp; public String [getModel](device.md#description)(); |
+| &nbsp;&nbsp; public String [getName](device.md#description)(); |
+| &nbsp;&nbsp; public int [getNodeType](device.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.DifferentialWheels; |
-| public class [DifferentialWheels](reference/differentialwheels.md#differentialwheels) extends [Robot](reference/java-api.md) { |
-| &nbsp;&nbsp; public [DifferentialWheels](reference/robot.md#description)(); |
-| &nbsp;&nbsp; protected void [finalize](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public void [setSpeed](reference/differentialwheels.md#description)(double left, double right); |
-| &nbsp;&nbsp; public double [getLeftSpeed](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public double [getRightSpeed](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public void [enableEncoders](reference/differentialwheels.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disableEncoders](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public int [getEncodersSamplingPeriod](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public double [getLeftEncoder](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public double [getRightEncoder](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public void [setEncoders](reference/differentialwheels.md#description)(double left, double right); |
-| &nbsp;&nbsp; public double [getMaxSpeed](reference/differentialwheels.md#description)(); |
-| &nbsp;&nbsp; public double [getSpeedUnit](reference/differentialwheels.md#description)(); |
+| public class [DifferentialWheels](differentialwheels.md#differentialwheels) extends [Robot](java-api.md) { |
+| &nbsp;&nbsp; public [DifferentialWheels](robot.md#description)(); |
+| &nbsp;&nbsp; protected void [finalize](robot.md#description)(); |
+| &nbsp;&nbsp; public void [setSpeed](differentialwheels.md#description)(double left, double right); |
+| &nbsp;&nbsp; public double [getLeftSpeed](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public double [getRightSpeed](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public void [enableEncoders](differentialwheels.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disableEncoders](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public int [getEncodersSamplingPeriod](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public double [getLeftEncoder](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public double [getRightEncoder](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public void [setEncoders](differentialwheels.md#description)(double left, double right); |
+| &nbsp;&nbsp; public double [getMaxSpeed](differentialwheels.md#description)(); |
+| &nbsp;&nbsp; public double [getSpeedUnit](differentialwheels.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Display; |
-| public class [Display](reference/display.md#display) extends [Device](reference/java-api.md) { |
+| public class [Display](display.md#display) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int RGB, RGBA, ARGB, BGRA; |
-| &nbsp;&nbsp; public int [getWidth](reference/display.md#description)(); |
-| &nbsp;&nbsp; public int [getHeight](reference/display.md#description)(); |
-| &nbsp;&nbsp; public void [setColor](reference/display.md#description)(int color); |
-| &nbsp;&nbsp; public void [setAlpha](reference/display.md#description)(double alpha); |
-| &nbsp;&nbsp; public void [setOpacity](reference/display.md#description)(double opacity); |
-| &nbsp;&nbsp; public void [drawPixel](reference/display.md#description)(int x1, int y1); |
-| &nbsp;&nbsp; public void [drawLine](reference/display.md#description)(int x1, int y1, int x2, int y2); |
-| &nbsp;&nbsp; public void [drawRectangle](reference/display.md#description)(int x, int y, int width, int height); |
-| &nbsp;&nbsp; public void [drawOval](reference/display.md#description)(int cx, int cy, int a, int b); |
-| &nbsp;&nbsp; public void [drawPolygon](reference/display.md#description)(int[] x, int[] y); |
-| &nbsp;&nbsp; public void [drawText](reference/display.md#description)(String txt, int x, int y); |
-| &nbsp;&nbsp; public void [fillRectangle](reference/display.md#description)(int x, int y, int width, int height); |
-| &nbsp;&nbsp; public void [fillOval](reference/display.md#description)(int cx, int cy, int a, int b); |
-| &nbsp;&nbsp; public void [fillPolygon](reference/display.md#description)(int[] x, int[] y); |
-| &nbsp;&nbsp; public [ImageRef](reference/java-api.md) [imageCopy](reference/display.md#description)(int x, int y, int width, int height); |
-| &nbsp;&nbsp; public void [imagePaste](reference/display.md#description)([ImageRef](reference/java-api.md) ir, int x, int y); |
-| &nbsp;&nbsp; public [ImageRef](reference/java-api.md) [imageLoad](reference/display.md#description)(String filename); |
-| &nbsp;&nbsp; public [ImageRef](reference/java-api.md) [imageNew](reference/display.md#description)(int width, int height, int[] data, int format); |
-| &nbsp;&nbsp; public void [imageSave](reference/display.md#description)([ImageRef](reference/java-api.md) ir, String filename); |
-| &nbsp;&nbsp; public void [imageDelete](reference/display.md#description)([ImageRef](reference/java-api.md) ir); |
+| &nbsp;&nbsp; public int [getWidth](display.md#description)(); |
+| &nbsp;&nbsp; public int [getHeight](display.md#description)(); |
+| &nbsp;&nbsp; public void [setColor](display.md#description)(int color); |
+| &nbsp;&nbsp; public void [setAlpha](display.md#description)(double alpha); |
+| &nbsp;&nbsp; public void [setOpacity](display.md#description)(double opacity); |
+| &nbsp;&nbsp; public void [drawPixel](display.md#description)(int x1, int y1); |
+| &nbsp;&nbsp; public void [drawLine](display.md#description)(int x1, int y1, int x2, int y2); |
+| &nbsp;&nbsp; public void [drawRectangle](display.md#description)(int x, int y, int width, int height); |
+| &nbsp;&nbsp; public void [drawOval](display.md#description)(int cx, int cy, int a, int b); |
+| &nbsp;&nbsp; public void [drawPolygon](display.md#description)(int[] x, int[] y); |
+| &nbsp;&nbsp; public void [drawText](display.md#description)(String txt, int x, int y); |
+| &nbsp;&nbsp; public void [fillRectangle](display.md#description)(int x, int y, int width, int height); |
+| &nbsp;&nbsp; public void [fillOval](display.md#description)(int cx, int cy, int a, int b); |
+| &nbsp;&nbsp; public void [fillPolygon](display.md#description)(int[] x, int[] y); |
+| &nbsp;&nbsp; public [ImageRef](java-api.md) [imageCopy](display.md#description)(int x, int y, int width, int height); |
+| &nbsp;&nbsp; public void [imagePaste](display.md#description)([ImageRef](java-api.md) ir, int x, int y); |
+| &nbsp;&nbsp; public [ImageRef](java-api.md) [imageLoad](display.md#description)(String filename); |
+| &nbsp;&nbsp; public [ImageRef](java-api.md) [imageNew](display.md#description)(int width, int height, int[] data, int format); |
+| &nbsp;&nbsp; public void [imageSave](display.md#description)([ImageRef](java-api.md) ir, String filename); |
+| &nbsp;&nbsp; public void [imageDelete](display.md#description)([ImageRef](java-api.md) ir); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.DistanceSensor; |
-| public class [DistanceSensor](reference/distancesensor.md#distancesensor) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/distancesensor.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/distancesensor.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/distancesensor.md#description)(); |
-| &nbsp;&nbsp; public double [getValue](reference/distancesensor.md#description)(); |
+| public class [DistanceSensor](distancesensor.md#distancesensor) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](distancesensor.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](distancesensor.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](distancesensor.md#description)(); |
+| &nbsp;&nbsp; public double [getValue](distancesensor.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Emitter; |
-| public class [Emitter](reference/emitter.md#emitter) extends [Device](reference/java-api.md) { |
+| public class [Emitter](emitter.md#emitter) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int CHANNEL\_BROADCAST; |
-| &nbsp;&nbsp; public int [send](reference/emitter.md#description)(byte[] data); |
-| &nbsp;&nbsp; public int [getChannel](reference/emitter.md#description)(); |
-| &nbsp;&nbsp; public void [setChannel](reference/emitter.md#description)(int channel); |
-| &nbsp;&nbsp; public double [getRange](reference/emitter.md#description)(); |
-| &nbsp;&nbsp; public void [setRange](reference/emitter.md#description)(double range); |
-| &nbsp;&nbsp; public int [getBufferSize](reference/emitter.md#description)(); |
+| &nbsp;&nbsp; public int [send](emitter.md#description)(byte[] data); |
+| &nbsp;&nbsp; public int [getChannel](emitter.md#description)(); |
+| &nbsp;&nbsp; public void [setChannel](emitter.md#description)(int channel); |
+| &nbsp;&nbsp; public double [getRange](emitter.md#description)(); |
+| &nbsp;&nbsp; public void [setRange](emitter.md#description)(double range); |
+| &nbsp;&nbsp; public int [getBufferSize](emitter.md#description)(); |
 | } |
 
 | |
@@ -164,66 +164,66 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING, |
 | &nbsp;&nbsp; SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, |
 | &nbsp;&nbsp; MF\_COLOR, MF\_STRING, MF\_NODE; |
-| &nbsp;&nbsp; public int [getType](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public String [getTypeName](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public int [getCount](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public bool [getSFBool](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public int [getSFInt32](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double [getSFFloat](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getSFVec2f](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getSFVec3f](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getSFRotation](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getSFColor](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public String [getSFString](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public [Node](reference/java-api.md) [getSFNode](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public bool [getMFBool](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public int [getMFInt32](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public double [getMFFloat](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public double[] [getMFVec2f](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public double[] [getMFVec3f](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public double[] [getMFColor](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public double[] [getMFRotation](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public String [getMFString](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public [Node](reference/java-api.md) [getMFNode](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public void [setSFBool](reference/supervisor.md#description)(bool value); |
-| &nbsp;&nbsp; public void [setSFInt32](reference/supervisor.md#description)(int value); |
-| &nbsp;&nbsp; public void [setSFFloat](reference/supervisor.md#description)(double value); |
-| &nbsp;&nbsp; public void [setSFVec2f](reference/supervisor.md#description)(double values[2]); |
-| &nbsp;&nbsp; public void [setSFVec3f](reference/supervisor.md#description)(double values[3]); |
-| &nbsp;&nbsp; public void [setSFRotation](reference/supervisor.md#description)(double values[4]); |
-| &nbsp;&nbsp; public void [setSFColor](reference/supervisor.md#description)(double values[3]); |
-| &nbsp;&nbsp; public void [setSFString](reference/supervisor.md#description)(String value); |
-| &nbsp;&nbsp; public void [setMFBool](reference/supervisor.md#description)(int index, bool value); |
-| &nbsp;&nbsp; public void [setMFInt32](reference/supervisor.md#description)(int index, int value); |
-| &nbsp;&nbsp; public void [setMFFloat](reference/supervisor.md#description)(int index, double value); |
-| &nbsp;&nbsp; public void [setMFVec2f](reference/supervisor.md#description)(int index, double values[2]); |
-| &nbsp;&nbsp; public void [setMFVec3f](reference/supervisor.md#description)(int index, double values[3]); |
-| &nbsp;&nbsp; public void [setMFRotation](reference/supervisor.md#description)(int index, double values[4]); |
-| &nbsp;&nbsp; public void [setMFColor](reference/supervisor.md#description)(int index, double values[3]); |
-| &nbsp;&nbsp; public void [setMFString](reference/supervisor.md#description)(int index, String value); |
-| &nbsp;&nbsp; public void [importMFNode](reference/supervisor.md#description)(int position, String filename); |
-| &nbsp;&nbsp; public void [importMFNodeFromString](reference/supervisor.md#description)(int position, String nodeString); |
-| &nbsp;&nbsp; public void [removeMFNode](reference/supervisor.md#description)(int position); |
+| &nbsp;&nbsp; public int [getType](supervisor.md#description)(); |
+| &nbsp;&nbsp; public String [getTypeName](supervisor.md#description)(); |
+| &nbsp;&nbsp; public int [getCount](supervisor.md#description)(); |
+| &nbsp;&nbsp; public bool [getSFBool](supervisor.md#description)(); |
+| &nbsp;&nbsp; public int [getSFInt32](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double [getSFFloat](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getSFVec2f](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getSFVec3f](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getSFRotation](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getSFColor](supervisor.md#description)(); |
+| &nbsp;&nbsp; public String [getSFString](supervisor.md#description)(); |
+| &nbsp;&nbsp; public [Node](java-api.md) [getSFNode](supervisor.md#description)(); |
+| &nbsp;&nbsp; public bool [getMFBool](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public int [getMFInt32](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public double [getMFFloat](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public double[] [getMFVec2f](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public double[] [getMFVec3f](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public double[] [getMFColor](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public double[] [getMFRotation](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public String [getMFString](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public [Node](java-api.md) [getMFNode](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public void [setSFBool](supervisor.md#description)(bool value); |
+| &nbsp;&nbsp; public void [setSFInt32](supervisor.md#description)(int value); |
+| &nbsp;&nbsp; public void [setSFFloat](supervisor.md#description)(double value); |
+| &nbsp;&nbsp; public void [setSFVec2f](supervisor.md#description)(double values[2]); |
+| &nbsp;&nbsp; public void [setSFVec3f](supervisor.md#description)(double values[3]); |
+| &nbsp;&nbsp; public void [setSFRotation](supervisor.md#description)(double values[4]); |
+| &nbsp;&nbsp; public void [setSFColor](supervisor.md#description)(double values[3]); |
+| &nbsp;&nbsp; public void [setSFString](supervisor.md#description)(String value); |
+| &nbsp;&nbsp; public void [setMFBool](supervisor.md#description)(int index, bool value); |
+| &nbsp;&nbsp; public void [setMFInt32](supervisor.md#description)(int index, int value); |
+| &nbsp;&nbsp; public void [setMFFloat](supervisor.md#description)(int index, double value); |
+| &nbsp;&nbsp; public void [setMFVec2f](supervisor.md#description)(int index, double values[2]); |
+| &nbsp;&nbsp; public void [setMFVec3f](supervisor.md#description)(int index, double values[3]); |
+| &nbsp;&nbsp; public void [setMFRotation](supervisor.md#description)(int index, double values[4]); |
+| &nbsp;&nbsp; public void [setMFColor](supervisor.md#description)(int index, double values[3]); |
+| &nbsp;&nbsp; public void [setMFString](supervisor.md#description)(int index, String value); |
+| &nbsp;&nbsp; public void [importMFNode](supervisor.md#description)(int position, String filename); |
+| &nbsp;&nbsp; public void [importMFNodeFromString](supervisor.md#description)(int position, String nodeString); |
+| &nbsp;&nbsp; public void [removeMFNode](supervisor.md#description)(int position); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.GPS; |
-| public class [GPS](reference/gps.md#gps) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/gps.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/gps.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/gps.md#description)(); |
-| &nbsp;&nbsp; public double[] [getValues](reference/gps.md#description)(); |
+| public class [GPS](gps.md#gps) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](gps.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](gps.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](gps.md#description)(); |
+| &nbsp;&nbsp; public double[] [getValues](gps.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Gyro; |
-| public class [Gyro](reference/gyro.md#gyro) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/gyro.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/gyro.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/gyro.md#description)(); |
-| &nbsp;&nbsp; public double[] [getValues](reference/gyro.md#description)(); |
+| public class [Gyro](gyro.md#gyro) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](gyro.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](gyro.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](gyro.md#description)(); |
+| &nbsp;&nbsp; public double[] [getValues](gyro.md#description)(); |
 | } |
 
 | |
@@ -235,80 +235,80 @@ The following tables describe the Java classes and their methods.
 | |
 | --- |
 | import com.cyberbotics.webots.controller.InertialUnit; |
-| public class [InertialUnit](reference/inertialunit.md#inertialunit) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/inertialunit.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/inertialunit.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/inertialunit.md#description)(); |
-| &nbsp;&nbsp; public double[] [getRollPitchYaw](reference/inertialunit.md#description)(); |
+| public class [InertialUnit](inertialunit.md#inertialunit) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](inertialunit.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](inertialunit.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](inertialunit.md#description)(); |
+| &nbsp;&nbsp; public double[] [getRollPitchYaw](inertialunit.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.LED; |
-| public class [LED](reference/led.md#led) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [set](reference/led.md#description)(int state); |
-| &nbsp;&nbsp; public int [get](reference/led.md#description)(); |
+| public class [LED](led.md#led) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [set](led.md#description)(int state); |
+| &nbsp;&nbsp; public int [get](led.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.LightSensor; |
-| public class [LightSensor](reference/lightsensor.md#lightsensor) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [enable](reference/lightsensor.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/lightsensor.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/lightsensor.md#description)(); |
-| &nbsp;&nbsp; public double [getValue](reference/lightsensor.md#description)(); |
+| public class [LightSensor](lightsensor.md#lightsensor) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [enable](lightsensor.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](lightsensor.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](lightsensor.md#description)(); |
+| &nbsp;&nbsp; public double [getValue](lightsensor.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Motion; |
-| public class [Motion](reference/motion.md#motion) { |
-| &nbsp;&nbsp; public [Motion](reference/motion.md#description)(String fileName); |
-| &nbsp;&nbsp; protected void [finalize](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public bool [isValid](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public void [play](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public void [stop](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public void [setLoop](reference/motion.md#description)(bool loop); |
-| &nbsp;&nbsp; public void [setReverse](reference/motion.md#description)(bool reverse); |
-| &nbsp;&nbsp; public bool [isOver](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public int [getDuration](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public int [getTime](reference/motion.md#description)(); |
-| &nbsp;&nbsp; public void [setTime](reference/motion.md#description)(int time); |
+| public class [Motion](motion.md#motion) { |
+| &nbsp;&nbsp; public [Motion](motion.md#description)(String fileName); |
+| &nbsp;&nbsp; protected void [finalize](motion.md#description)(); |
+| &nbsp;&nbsp; public bool [isValid](motion.md#description)(); |
+| &nbsp;&nbsp; public void [play](motion.md#description)(); |
+| &nbsp;&nbsp; public void [stop](motion.md#description)(); |
+| &nbsp;&nbsp; public void [setLoop](motion.md#description)(bool loop); |
+| &nbsp;&nbsp; public void [setReverse](motion.md#description)(bool reverse); |
+| &nbsp;&nbsp; public bool [isOver](motion.md#description)(); |
+| &nbsp;&nbsp; public int [getDuration](motion.md#description)(); |
+| &nbsp;&nbsp; public int [getTime](motion.md#description)(); |
+| &nbsp;&nbsp; public void [setTime](motion.md#description)(int time); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Motor; |
-| public class [Motor](reference/motor.md#motor) extends [Device](reference/java-api.md) { |
+| public class [Motor](motor.md#motor) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int ROTATIONAL, LINEAR; |
-| &nbsp;&nbsp; public void [setPosition](reference/motor.md#description)(double position); |
-| &nbsp;&nbsp; public void [setVelocity](reference/motor.md#description)(double vel); |
-| &nbsp;&nbsp; public void [setAcceleration](reference/motor.md#description)(double force); |
-| &nbsp;&nbsp; public void [setAvailableForce](reference/motor.md#description)(double motor\_force); |
-| &nbsp;&nbsp; public void [setAvailableTorque](reference/motor.md#description)(double motor\_torque); |
-| &nbsp;&nbsp; public void [setControlPID](reference/motor.md#description)(double p, double i, double d); |
-| &nbsp;&nbsp; public double [getTargetPosition](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getMinPosition](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxPosition](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getVelocity](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxVelocity](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getAcceleration](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getAvailableForce](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxForce](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getAvailableTorque](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxTorque](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public void [enableForceFeedback](reference/motor.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disableForceFeedback](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public int [getForceFeedbackSamplingPeriod](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getForceFeedback](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public void [setForce](reference/motor.md#description)(double force); |
-| &nbsp;&nbsp; public void [enableTorqueFeedback](reference/motor.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disableTorqueFeedback](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public int [getTorqueFeedbackSamplingPeriod](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public double [getTorqueFeedback](reference/motor.md#description)(); |
-| &nbsp;&nbsp; public void [setTorque](reference/motor.md#description)(double torque); |
-| &nbsp;&nbsp; public int [getType](reference/motor.md#description)(); |
+| &nbsp;&nbsp; public void [setPosition](motor.md#description)(double position); |
+| &nbsp;&nbsp; public void [setVelocity](motor.md#description)(double vel); |
+| &nbsp;&nbsp; public void [setAcceleration](motor.md#description)(double force); |
+| &nbsp;&nbsp; public void [setAvailableForce](motor.md#description)(double motor\_force); |
+| &nbsp;&nbsp; public void [setAvailableTorque](motor.md#description)(double motor\_torque); |
+| &nbsp;&nbsp; public void [setControlPID](motor.md#description)(double p, double i, double d); |
+| &nbsp;&nbsp; public double [getTargetPosition](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getMinPosition](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxPosition](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getVelocity](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxVelocity](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getAcceleration](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getAvailableForce](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxForce](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getAvailableTorque](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxTorque](motor.md#description)(); |
+| &nbsp;&nbsp; public void [enableForceFeedback](motor.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disableForceFeedback](motor.md#description)(); |
+| &nbsp;&nbsp; public int [getForceFeedbackSamplingPeriod](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getForceFeedback](motor.md#description)(); |
+| &nbsp;&nbsp; public void [setForce](motor.md#description)(double force); |
+| &nbsp;&nbsp; public void [enableTorqueFeedback](motor.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disableTorqueFeedback](motor.md#description)(); |
+| &nbsp;&nbsp; public int [getTorqueFeedbackSamplingPeriod](motor.md#description)(); |
+| &nbsp;&nbsp; public double [getTorqueFeedback](motor.md#description)(); |
+| &nbsp;&nbsp; public void [setTorque](motor.md#description)(double torque); |
+| &nbsp;&nbsp; public int [getType](motor.md#description)(); |
 | } |
 
 | |
@@ -327,66 +327,66 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; CONNECTOR, DISPLAY, DISTANCE\_SENSOR, EMITTER, GPS, GYRO, LED, |
 | &nbsp;&nbsp; LIGHT\_SENSOR, MICROPHONE, MOTOR, PEN, POSITION\_SENSOR, RADIO, |
 | &nbsp;&nbsp; RECEIVER, SERVO, SPEAKER, TOUCH\_SENSOR; |
-| &nbsp;&nbsp; public void [remove](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public int [getId](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public int [getType](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public String [getTypeName](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public String [getBaseTypeName](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public [Field](reference/java-api.md) [getField](reference/supervisor.md#description)(String fieldName); |
-| &nbsp;&nbsp; public Node [getParentNode](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getPosition](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getOrientation](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getCenterOfMass](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getContactPoint](reference/supervisor.md#description)(int index); |
-| &nbsp;&nbsp; public int [getNumberOfContactPoints](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public bool [getStaticBalance](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getVelocity](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public void [setVelocity](reference/supervisor.md#description)(double velocity[6]); |
-| &nbsp;&nbsp; public void [resetPhysics](reference/supervisor.md#description)(); |
+| &nbsp;&nbsp; public void [remove](supervisor.md#description)(); |
+| &nbsp;&nbsp; public int [getId](supervisor.md#description)(); |
+| &nbsp;&nbsp; public int [getType](supervisor.md#description)(); |
+| &nbsp;&nbsp; public String [getTypeName](supervisor.md#description)(); |
+| &nbsp;&nbsp; public String [getBaseTypeName](supervisor.md#description)(); |
+| &nbsp;&nbsp; public [Field](java-api.md) [getField](supervisor.md#description)(String fieldName); |
+| &nbsp;&nbsp; public Node [getParentNode](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getPosition](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getOrientation](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getCenterOfMass](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getContactPoint](supervisor.md#description)(int index); |
+| &nbsp;&nbsp; public int [getNumberOfContactPoints](supervisor.md#description)(); |
+| &nbsp;&nbsp; public bool [getStaticBalance](supervisor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getVelocity](supervisor.md#description)(); |
+| &nbsp;&nbsp; public void [setVelocity](supervisor.md#description)(double velocity[6]); |
+| &nbsp;&nbsp; public void [resetPhysics](supervisor.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Pen; |
-| public class [Pen](reference/pen.md#pen) extends [Device](reference/java-api.md) { |
-| &nbsp;&nbsp; public void [write](reference/pen.md#description)(bool write); |
-| &nbsp;&nbsp; public void [setInkColor](reference/pen.md#description)(int color, double density); |
+| public class [Pen](pen.md#pen) extends [Device](java-api.md) { |
+| &nbsp;&nbsp; public void [write](pen.md#description)(bool write); |
+| &nbsp;&nbsp; public void [setInkColor](pen.md#description)(int color, double density); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.PositionSensor; |
-| public class [PositionSensor](reference/positionsensor.md#positionsensor) extends [Device](reference/java-api.md) { |
+| public class [PositionSensor](positionsensor.md#positionsensor) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int ANGULAR, LINEAR; |
-| &nbsp;&nbsp; public void [enable](reference/positionsensor.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/positionsensor.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/positionsensor.md#description)(); |
-| &nbsp;&nbsp; public double [getValue](reference/positionsensor.md#description)(); |
-| &nbsp;&nbsp; public int [getType](reference/positionsensor.md#description)(); |
+| &nbsp;&nbsp; public void [enable](positionsensor.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](positionsensor.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](positionsensor.md#description)(); |
+| &nbsp;&nbsp; public double [getValue](positionsensor.md#description)(); |
+| &nbsp;&nbsp; public int [getType](positionsensor.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Receiver; |
-| public class [Receiver](reference/receiver.md#receiver) extends [Device](reference/java-api.md) { |
+| public class [Receiver](receiver.md#receiver) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int CHANNEL\_BROADCAST; |
-| &nbsp;&nbsp; public void [enable](reference/receiver.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public int [getQueueLength](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public void [nextPacket](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public byte[] [getData](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public int [getDataSize](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public double [getSignalStrength](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public double[] [getEmitterDirection](reference/receiver.md#description)(); |
-| &nbsp;&nbsp; public void [setChannel](reference/receiver.md#description)(int channel); |
-| &nbsp;&nbsp; public int [getChannel](reference/receiver.md#description)(); |
+| &nbsp;&nbsp; public void [enable](receiver.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](receiver.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](receiver.md#description)(); |
+| &nbsp;&nbsp; public int [getQueueLength](receiver.md#description)(); |
+| &nbsp;&nbsp; public void [nextPacket](receiver.md#description)(); |
+| &nbsp;&nbsp; public byte[] [getData](receiver.md#description)(); |
+| &nbsp;&nbsp; public int [getDataSize](receiver.md#description)(); |
+| &nbsp;&nbsp; public double [getSignalStrength](receiver.md#description)(); |
+| &nbsp;&nbsp; public double[] [getEmitterDirection](receiver.md#description)(); |
+| &nbsp;&nbsp; public void [setChannel](receiver.md#description)(int channel); |
+| &nbsp;&nbsp; public int [getChannel](receiver.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Robot; |
-| public class [Robot](reference/robot.md#robot) { |
+| public class [Robot](robot.md#robot) { |
 | &nbsp;&nbsp; public final static int MODE\_SIMULATION, |
 | &nbsp;&nbsp; MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL; |
 | &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME, |
@@ -397,115 +397,115 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END, |
 | &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, |
 | &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT; |
-| &nbsp;&nbsp; public [Robot](reference/robot.md#description)(); |
-| &nbsp;&nbsp; protected void [finalize](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public int [step](reference/robot.md#description)(int ms); |
-| &nbsp;&nbsp; public [Accelerometer](reference/java-api.md) [getAccelerometer](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Brake](reference/java-api.md) [getBrake](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Camera](reference/java-api.md) [getCamera](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Compass](reference/java-api.md) [getCompass](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Connector](reference/java-api.md) [getConnector](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Display](reference/java-api.md) [getDisplay](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [DistanceSensor](reference/java-api.md) [getDistanceSensor](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Emitter](reference/java-api.md) [getEmitter](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [GPS](reference/java-api.md) [getGPS](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Gyro](reference/java-api.md) [getGyro](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [InertialUnit](reference/java-api.md) [getInertialUnit](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [LED](reference/java-api.md) [getLED](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [LightSensor](reference/java-api.md) [getLightSensor](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Motor](reference/java-api.md) [getMotor](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Pen](reference/java-api.md) [getPen](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [PositionSensor](reference/java-api.md) [getPositionSensor](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Receiver](reference/java-api.md) [getReceiver](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [Servo](reference/java-api.md) [getServo](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public [TouchSensor](reference/java-api.md) [getTouchSensor](reference/robot.md#description)(String name); |
-| &nbsp;&nbsp; public int [getNumberOfDevices](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public [Device](reference/java-api.md) [getDeviceByIndex](reference/robot.md#description)(int index); |
-| &nbsp;&nbsp; public void [batterySensorEnable](reference/robot.md#description)(int ms); |
-| &nbsp;&nbsp; public void [batterySensorDisable](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public int [batterySensorGetSamplingPeriod](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public double [batterySensorGetValue](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public double [getBasicTimeStep](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public int [getMode](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public String [getModel](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public String [getData](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public [setData](reference/robot.md#description)(String data); |
-| &nbsp;&nbsp; public String [getName](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public String [getControllerName](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public String [getControllerArguments](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public String [getProjectPath](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public bool [getSynchronization](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public double [getTime](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public String [getWorldPath](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public void [keyboardEnable](reference/robot.md#description)(int ms); |
-| &nbsp;&nbsp; public void [keyboardDisable](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public int [keyboardGetKey](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public int [getType](reference/robot.md#description)(); |
+| &nbsp;&nbsp; public [Robot](robot.md#description)(); |
+| &nbsp;&nbsp; protected void [finalize](robot.md#description)(); |
+| &nbsp;&nbsp; public int [step](robot.md#description)(int ms); |
+| &nbsp;&nbsp; public [Accelerometer](java-api.md) [getAccelerometer](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Brake](java-api.md) [getBrake](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Camera](java-api.md) [getCamera](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Compass](java-api.md) [getCompass](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Connector](java-api.md) [getConnector](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Display](java-api.md) [getDisplay](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [DistanceSensor](java-api.md) [getDistanceSensor](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Emitter](java-api.md) [getEmitter](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [GPS](java-api.md) [getGPS](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Gyro](java-api.md) [getGyro](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [InertialUnit](java-api.md) [getInertialUnit](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [LED](java-api.md) [getLED](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [LightSensor](java-api.md) [getLightSensor](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Motor](java-api.md) [getMotor](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Pen](java-api.md) [getPen](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [PositionSensor](java-api.md) [getPositionSensor](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Receiver](java-api.md) [getReceiver](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [Servo](java-api.md) [getServo](robot.md#description)(String name); |
+| &nbsp;&nbsp; public [TouchSensor](java-api.md) [getTouchSensor](robot.md#description)(String name); |
+| &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#description)(); |
+| &nbsp;&nbsp; public [Device](java-api.md) [getDeviceByIndex](robot.md#description)(int index); |
+| &nbsp;&nbsp; public void [batterySensorEnable](robot.md#description)(int ms); |
+| &nbsp;&nbsp; public void [batterySensorDisable](robot.md#description)(); |
+| &nbsp;&nbsp; public int [batterySensorGetSamplingPeriod](robot.md#description)(); |
+| &nbsp;&nbsp; public double [batterySensorGetValue](robot.md#description)(); |
+| &nbsp;&nbsp; public double [getBasicTimeStep](robot.md#description)(); |
+| &nbsp;&nbsp; public int [getMode](robot.md#description)(); |
+| &nbsp;&nbsp; public String [getModel](robot.md#description)(); |
+| &nbsp;&nbsp; public String [getData](robot.md#description)(); |
+| &nbsp;&nbsp; public [setData](robot.md#description)(String data); |
+| &nbsp;&nbsp; public String [getName](robot.md#description)(); |
+| &nbsp;&nbsp; public String [getControllerName](robot.md#description)(); |
+| &nbsp;&nbsp; public String [getControllerArguments](robot.md#description)(); |
+| &nbsp;&nbsp; public String [getProjectPath](robot.md#description)(); |
+| &nbsp;&nbsp; public bool [getSynchronization](robot.md#description)(); |
+| &nbsp;&nbsp; public double [getTime](robot.md#description)(); |
+| &nbsp;&nbsp; public String [getWorldPath](robot.md#description)(); |
+| &nbsp;&nbsp; public void [keyboardEnable](robot.md#description)(int ms); |
+| &nbsp;&nbsp; public void [keyboardDisable](robot.md#description)(); |
+| &nbsp;&nbsp; public int [keyboardGetKey](robot.md#description)(); |
+| &nbsp;&nbsp; public int [getType](robot.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Servo; |
-| public class [Servo](reference/servo.md#servo) extends [Device](reference/java-api.md) { |
+| public class [Servo](servo.md#servo) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int ROTATIONAL, LINEAR; |
-| &nbsp;&nbsp; public void [setPosition](reference/servo.md#description)(double position); |
-| &nbsp;&nbsp; public double [getTargetPosition](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public void [setVelocity](reference/servo.md#description)(double vel); |
-| &nbsp;&nbsp; public void [setAcceleration](reference/servo.md#description)(double force); |
-| &nbsp;&nbsp; public void [setMotorForce](reference/servo.md#description)(double motor\_force); |
-| &nbsp;&nbsp; public void [setControlP](reference/servo.md#description)(double p); |
-| &nbsp;&nbsp; public double [getMinPosition](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public double [getMaxPosition](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public void [enablePosition](reference/servo.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disablePosition](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public int [getPositionSamplingPeriod](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public double [getPosition](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public void [enableMotorForceFeedback](reference/servo.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disableMotorForceFeedback](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public int [getMotorForceFeedbackSamplingPeriod](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public double [getMotorForceFeedback](reference/servo.md#description)(); |
-| &nbsp;&nbsp; public void [setForce](reference/servo.md#description)(double force); |
-| &nbsp;&nbsp; public int [getType](reference/servo.md#description)(); |
+| &nbsp;&nbsp; public void [setPosition](servo.md#description)(double position); |
+| &nbsp;&nbsp; public double [getTargetPosition](servo.md#description)(); |
+| &nbsp;&nbsp; public void [setVelocity](servo.md#description)(double vel); |
+| &nbsp;&nbsp; public void [setAcceleration](servo.md#description)(double force); |
+| &nbsp;&nbsp; public void [setMotorForce](servo.md#description)(double motor\_force); |
+| &nbsp;&nbsp; public void [setControlP](servo.md#description)(double p); |
+| &nbsp;&nbsp; public double [getMinPosition](servo.md#description)(); |
+| &nbsp;&nbsp; public double [getMaxPosition](servo.md#description)(); |
+| &nbsp;&nbsp; public void [enablePosition](servo.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disablePosition](servo.md#description)(); |
+| &nbsp;&nbsp; public int [getPositionSamplingPeriod](servo.md#description)(); |
+| &nbsp;&nbsp; public double [getPosition](servo.md#description)(); |
+| &nbsp;&nbsp; public void [enableMotorForceFeedback](servo.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disableMotorForceFeedback](servo.md#description)(); |
+| &nbsp;&nbsp; public int [getMotorForceFeedbackSamplingPeriod](servo.md#description)(); |
+| &nbsp;&nbsp; public double [getMotorForceFeedback](servo.md#description)(); |
+| &nbsp;&nbsp; public void [setForce](servo.md#description)(double force); |
+| &nbsp;&nbsp; public int [getType](servo.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.Supervisor; |
-| public class [Supervisor](reference/supervisor.md#supervisor) extends [Robot](reference/java-api.md) { |
+| public class [Supervisor](supervisor.md#supervisor) extends [Robot](java-api.md) { |
 | &nbsp;&nbsp; public final static int MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR |
-| &nbsp;&nbsp; public [Supervisor](reference/robot.md#description)(); |
-| &nbsp;&nbsp; protected void [finalize](reference/robot.md#description)(); |
-| &nbsp;&nbsp; public void [exportImage](reference/supervisor.md#description)(String file, int quality); |
-| &nbsp;&nbsp; public [Node](reference/java-api.md) [getRoot](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public [Node](reference/java-api.md) [getSelf](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public [Node](reference/java-api.md) [getFromDef](reference/supervisor.md#description)(String name); |
-| &nbsp;&nbsp; public [Node](reference/java-api.md) [getFromId](reference/supervisor.md#description)(int id); |
-| &nbsp;&nbsp; public void [setLabel](reference/supervisor.md#description)(int id, String label, double xpos, double ypos, |
+| &nbsp;&nbsp; public [Supervisor](robot.md#description)(); |
+| &nbsp;&nbsp; protected void [finalize](robot.md#description)(); |
+| &nbsp;&nbsp; public void [exportImage](supervisor.md#description)(String file, int quality); |
+| &nbsp;&nbsp; public [Node](java-api.md) [getRoot](supervisor.md#description)(); |
+| &nbsp;&nbsp; public [Node](java-api.md) [getSelf](supervisor.md#description)(); |
+| &nbsp;&nbsp; public [Node](java-api.md) [getFromDef](supervisor.md#description)(String name); |
+| &nbsp;&nbsp; public [Node](java-api.md) [getFromId](supervisor.md#description)(int id); |
+| &nbsp;&nbsp; public void [setLabel](supervisor.md#description)(int id, String label, double xpos, double ypos, |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency); |
-| &nbsp;&nbsp; public void [simulationQuit](reference/supervisor.md#description)(int status); |
-| &nbsp;&nbsp; public void [simulationRevert](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public void [simulationResetPhysics](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public void [loadWorld](reference/supervisor.md#description)(String file); |
-| &nbsp;&nbsp; public void [saveWorld](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public void [saveWorld](reference/supervisor.md#description)(String file); |
-| &nbsp;&nbsp; public void [movieStartRecording](reference/supervisor.md#description)(String file, int width, int height, int codec, int quality, |
+| &nbsp;&nbsp; public void [simulationQuit](supervisor.md#description)(int status); |
+| &nbsp;&nbsp; public void [simulationRevert](supervisor.md#description)(); |
+| &nbsp;&nbsp; public void [simulationResetPhysics](supervisor.md#description)(); |
+| &nbsp;&nbsp; public void [loadWorld](supervisor.md#description)(String file); |
+| &nbsp;&nbsp; public void [saveWorld](supervisor.md#description)(); |
+| &nbsp;&nbsp; public void [saveWorld](supervisor.md#description)(String file); |
+| &nbsp;&nbsp; public void [movieStartRecording](supervisor.md#description)(String file, int width, int height, int codec, int quality, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int acceleration, boolean caption); |
-| &nbsp;&nbsp; public void [movieStopRecording](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public int [movieGetStatus](reference/supervisor.md#description)(); |
-| &nbsp;&nbsp; public bool [animationStartRecording](reference/supervisor.md#description)(String file); |
-| &nbsp;&nbsp; public bool [animationStopRecording](reference/supervisor.md#description)(); |
+| &nbsp;&nbsp; public void [movieStopRecording](supervisor.md#description)(); |
+| &nbsp;&nbsp; public int [movieGetStatus](supervisor.md#description)(); |
+| &nbsp;&nbsp; public bool [animationStartRecording](supervisor.md#description)(String file); |
+| &nbsp;&nbsp; public bool [animationStopRecording](supervisor.md#description)(); |
 | } |
 
 | |
 | --- |
 | import com.cyberbotics.webots.controller.TouchSensor; |
-| public class [TouchSensor](reference/touchsensor.md#touchsensor) extends [Device](reference/java-api.md) { |
+| public class [TouchSensor](touchsensor.md#touchsensor) extends [Device](java-api.md) { |
 | &nbsp;&nbsp; public final static int BUMPER, FORCE, FORCE3D; |
-| &nbsp;&nbsp; public void [enable](reference/touchsensor.md#description)(int ms); |
-| &nbsp;&nbsp; public void [disable](reference/touchsensor.md#description)(); |
-| &nbsp;&nbsp; public int [getSamplingPeriod](reference/touchsensor.md#description)(); |
-| &nbsp;&nbsp; public double [getValue](reference/touchsensor.md#description)(); |
-| &nbsp;&nbsp; public double[] [getValues](reference/touchsensor.md#description)(); |
-| &nbsp;&nbsp; public int [getType](reference/touchsensor.md#description)(); |
+| &nbsp;&nbsp; public void [enable](touchsensor.md#description)(int ms); |
+| &nbsp;&nbsp; public void [disable](touchsensor.md#description)(); |
+| &nbsp;&nbsp; public int [getSamplingPeriod](touchsensor.md#description)(); |
+| &nbsp;&nbsp; public double [getValue](touchsensor.md#description)(); |
+| &nbsp;&nbsp; public double[] [getValues](touchsensor.md#description)(); |
+| &nbsp;&nbsp; public int [getType](touchsensor.md#description)(); |
 | } |
 

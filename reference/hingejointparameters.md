@@ -1,6 +1,6 @@
 ## HingeJointParameters
 
-Derived from [JointParameters](reference/jointparameters.md#jointparameters).
+Derived from [JointParameters](jointparameters.md#jointparameters).
 
 ```
 HingeJointParameters {
@@ -15,9 +15,8 @@ HingeJointParameters {
 
 ### Description
 
-The
-[HingeJointParameters](reference/hingejointparameters.md#hingejointparameters)
-node can be used to specify the hinge rotation axis and various joint parameters
+The [HingeJointParameters](hingejointparameters.md#hingejointparameters) node
+can be used to specify the hinge rotation axis and various joint parameters
 (e.g., angular position, stop angles, spring and damping constants etc.) related
 to this rotation axis.
 
@@ -25,10 +24,10 @@ to this rotation axis.
 
 - `anchor`: This field specifies the anchor position, i.e. a point through which
 the hinge axis passes. Together with the `axis` field inherited from the
-[JointParameters](reference/jointparameters.md#jointparameters) node, the
-`anchor` field determines the hinge rotation axis in a unique way. It is
-expressed in relative coordinates with respect to the the closest upper
-[Solid](reference/solid.md#solid)'s frame.
+[JointParameters](jointparameters.md#jointparameters) node, the `anchor` field
+determines the hinge rotation axis in a unique way. It is expressed in relative
+coordinates with respect to the the closest upper [Solid](solid.md#solid)'s
+frame.
 - `suspensionSpringConstant`: This field specifies the suspension spring constant
 along the suspension axis.
 - `suspensionDampingConstant`: This field specifies the suspension damping
@@ -38,6 +37,6 @@ constant along the suspension axis.
 The `suspensionSpringConstant` and `suspensionDampingConstant` fields can be
 used to add a linear spring and/or damping behavior *along* the axis defined in
 `suspensionAxis`. These fields are described in more detail in
-[JointParameters](reference/jointparameters.md#jointparameters)'s Springs and
-Dampers" section.
+[JointParameters](jointparameters.md#jointparameters)'s Springs and Dampers"
+section.
 

@@ -4,7 +4,7 @@
 
 **wbu\_motion\_new**, **wbu\_motion\_delete** - *obtaining and releasing a motion file handle*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/utils/motion.h>
@@ -44,7 +44,7 @@ if (! walk->isValid()) {
 
 #### See also
 
-[wbu\_motion\_play](reference/motion.md#description)
+[wbu\_motion\_play](motion.md#description)
 
 ---
 
@@ -52,7 +52,7 @@ if (! walk->isValid()) {
 
 **wbu\_motion\_play**, **wbu\_motion\_stop**, **wbu\_motion\_set\_loop**, **wbu\_motion\_set\_reverse** - *Controlling motion files playback*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/utils/motion.h>
@@ -110,7 +110,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 #### See also
 
-[wbu\_motion\_new](reference/motion.md#description)
+[wbu\_motion\_new](motion.md#description)
 
 ---
 
@@ -118,7 +118,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 **wbu\_motion\_is\_over**, **wbu\_motion\_get\_duration**, **wbu\_motion\_get\_time**, **wbu\_motion\_set\_time** - *controlling the playback position*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/utils/motion.h>
@@ -133,13 +133,13 @@ void wbu_motion_set_time(WbMotionRefmotion, int ms)
 
 The `wbu_motion_is_over()` function returns `true` when the playback position
 has reached the end of the motion file. That is when the last pose has been sent
-to the [Motor](reference/motor.md#motor) nodes using the
-`wb_motor_set_position()` function. But this does not mean that the motors have
-yet reached the specified positions; they may be slow or blocked by obstacles,
-robots, walls, the floor, etc. If the motion is in *loop mode*, this function
-returns always `false`. Note that `wbu_motion_is_over()` depends on the *reverse
-mode*. `wbu_motion_is_over()` returns `true` when *reverse mode* is `true` and
-the playback position is at the beginning of the file or when *reverse mode* is
+to the [Motor](motor.md#motor) nodes using the `wb_motor_set_position()`
+function. But this does not mean that the motors have yet reached the specified
+positions; they may be slow or blocked by obstacles, robots, walls, the floor,
+etc. If the motion is in *loop mode*, this function returns always `false`. Note
+that `wbu_motion_is_over()` depends on the *reverse mode*.
+`wbu_motion_is_over()` returns `true` when *reverse mode* is `true` and the
+playback position is at the beginning of the file or when *reverse mode* is
 `false` and the playback position is at the end of the file.
 
 The `wbu_motion_get_duration()` function returns the total duration of the
@@ -156,5 +156,5 @@ can be changed whether the motion is playing or stopped. The minimum value is 0
 
 #### See also
 
-[wbu\_motion\_play](reference/motion.md#description)
+[wbu\_motion\_play](motion.md#description)
 

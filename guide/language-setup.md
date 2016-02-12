@@ -5,12 +5,12 @@ Webots controllers can be written in C/C++, Java, Python or
 development kits for the programming language of your choice.
 
 ## Sections
-- [Introduction](guide/introduction.md)
-- [Controller Start-up](guide/controller-start-up.md)
-- [Using C](guide/using-c.md)
-- [Using C++](guide/using-cpp.md)
-- [Using Java](guide/using-java.md)
-- [Using Python](guide/using-python.md)
-- [Using MATLAB](guide/using-matlab.md)
-- [Using ROS](guide/using-ros.md)
-- [Interfacing Webots to third party software with TCP/IP](guide/interfacing-webots-to-third-party-software-with-tcp-ip.md)
+- [Introduction](introduction.md)
+- [Controller Start-up](controller-start-up.md)
+- [Using C](using-c.md)
+- [Using C++](using-cpp.md)
+- [Using Java](using-java.md)
+- [Using Python](using-python.md)
+- [Using MATLAB](using-matlab.md)
+- [Using ROS](using-ros.md)
+- [Interfacing Webots to third party software with TCP/IP](interfacing-webots-to-third-party-software-with-tcp-ip.md)

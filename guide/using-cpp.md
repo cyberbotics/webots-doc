@@ -14,7 +14,7 @@ controller can be found in the .
 ### C++ Compiler Installation
 
 Please refer to the instructions for the C Compiler installation
-[here](guide/using-c.md#c-cpp-compiler-installation).
+[here](using-c.md#c-cpp-compiler-installation).
 
 ### Source Code of the C++ API
 

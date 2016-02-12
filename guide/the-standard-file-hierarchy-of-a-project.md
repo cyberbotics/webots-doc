@@ -23,7 +23,7 @@ The link between the world files and this directory is done through the
 and the textures (typically in a subdirectory called "textures").
 
 > **note**: Note that the directories can be created by using the wizard [New Project
-Directory](guide/the-user-interface.md) described in .
+Directory](the-user-interface.md) described in .
 
 ### The Project Files
 
@@ -54,5 +54,5 @@ controllers/simple_controller/simple_controller[.exe]
 <!-- -->
 
 > **note**: You can create all the files needed by a new controller using the wizard [New
-Robot Controller](guide/the-user-interface.md) described in .
+Robot Controller](the-user-interface.md) described in .
 

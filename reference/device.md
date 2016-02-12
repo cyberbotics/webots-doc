@@ -1,6 +1,6 @@
 ## Device
 
-Abstract node, derived from [Solid](reference/solid.md#solid).
+Abstract node, derived from [Solid](solid.md#solid).
 
 ```
 Device {
@@ -18,7 +18,7 @@ sensor).
 
 **wb\_device\_get\_model** - *returns the model string of the corresponding device*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/device.h>
@@ -41,7 +41,7 @@ a `model` field)
 
 **wb\_device\_get\_name** - *convert WbDeviceTag to its corresponding device name*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/device.h>
@@ -62,7 +62,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 **wb\_device\_get\_node\_type** - *convert WbDeviceTag to its corresponding WbNodeType*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/device.h>
@@ -73,8 +73,8 @@ WbNodeType wb_device_get_node_type(WbDeviceTag tag)
 #### Description
 
 `wb_device_get_node_type()` convert the WbDeviceTag given as parameter (`tag`)
-to its corresponding WbNodeType (cf. the
-[Supervisor](reference/supervisor.md#supervisor) API)
+to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md#supervisor)
+API)
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
 

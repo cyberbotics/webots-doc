@@ -148,12 +148,12 @@ class BookParser:
         for chapterNode in self.root.findall('.//preface') + self.root.findall('.//chapter'):
             chapterCounter += 1
             title = self.getTitle(chapterNode)
-            outFile.write('%d. [%s](%s)\n' % (chapterCounter, title, self.bookName + '/' + slugify(title) + '.md'))
+            outFile.write('%d. [%s](%s)\n' % (chapterCounter, title, slugify(title) + '.md'))
             sectionCounter = 0
             for sectionNode in chapterNode.findall('.//sect1'):
                 sectionCounter += 1
                 title = self.getTitle(sectionNode)
-                outFile.write('    %d. [%s](%s)\n' % (sectionCounter, title, self.bookName + '/' + slugify(title) + '.md'))
+                outFile.write('    %d. [%s](%s)\n' % (sectionCounter, title, slugify(title) + '.md'))
         outFile.close()
         simplifySpaces(outputFilePath)
 
@@ -171,7 +171,7 @@ class BookParser:
                     node = None
                     break
             if node is not None:
-                filename = self.outputDirectoryPath + slugify(self.getTitle(node)) + '.md'
+                filename = slugify(self.getTitle(node)) + '.md'
 
             kind = ''
             if idNode.tag == 'sect1' or idNode.tag == 'sect2' or idNode.tag == 'sect3' or idNode.tag == 'preface':
@@ -681,7 +681,7 @@ class BookParser:
             for child in node.getchildren():
                 if child.tag == 'sect1':
                     title = self.getTitle(child)
-                    fileName = self.outputDirectoryPath + slugify(title) + '.md'
+                    fileName = slugify(title) + '.md'
                     outFile.write('- [%s](%s)\n' % (title, fileName))
 
 

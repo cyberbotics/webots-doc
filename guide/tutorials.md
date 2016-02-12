@@ -41,12 +41,12 @@ We hope you will enjoy your first steps with Webots. Meanwhile, we would really
 appreciate to receive your feedback regarding this chapter.
 
 ## Sections
-- [Prerequisites](guide/prerequisites.md)
-- [Tutorial 1: Your first Simulation in Webots (20 minutes)](guide/tutorial-1-your-first-simulation-in-webots-20-minutes.md)
-- [Tutorial 2: Modification of the Environment (20 minutes)](guide/tutorial-2-modification-of-the-environment-20-minutes.md)
-- [Tutorial 3: Appearance (15 minutes)](guide/tutorial-3-appearance-15-minutes.md)
-- [Tutorial 4: More about Controllers (20 minutes)](guide/tutorial-4-more-about-controllers-20-minutes.md)
-- [Tutorial 5: Compound Solid and Physics Attributes (15 minutes)](guide/tutorial-5-compound-solid-and-physics-attributes-15-minutes.md)
-- [Tutorial 6: 4-Wheels Robot](guide/tutorial-6-4-wheels-robot.md)
-- [Tutorial 7: Using ROS](guide/tutorial-7-using-ros.md)
-- [Going Further](guide/going-further.md)
+- [Prerequisites](prerequisites.md)
+- [Tutorial 1: Your first Simulation in Webots (20 minutes)](tutorial-1-your-first-simulation-in-webots-20-minutes.md)
+- [Tutorial 2: Modification of the Environment (20 minutes)](tutorial-2-modification-of-the-environment-20-minutes.md)
+- [Tutorial 3: Appearance (15 minutes)](tutorial-3-appearance-15-minutes.md)
+- [Tutorial 4: More about Controllers (20 minutes)](tutorial-4-more-about-controllers-20-minutes.md)
+- [Tutorial 5: Compound Solid and Physics Attributes (15 minutes)](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md)
+- [Tutorial 6: 4-Wheels Robot](tutorial-6-4-wheels-robot.md)
+- [Tutorial 7: Using ROS](tutorial-7-using-ros.md)
+- [Going Further](going-further.md)

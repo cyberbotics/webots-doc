@@ -1,6 +1,6 @@
 ## Motor
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 Motor {
@@ -14,18 +14,18 @@ Motor {
 
 ### Description
 
-A [Motor](reference/motor.md#motor) node is an abstract node (not instantiated)
-whose derived classes can be used in a mechanical simulation to power a joint
-hence producing a motion along, or around, one of its axes.
+A [Motor](motor.md#motor) node is an abstract node (not instantiated) whose
+derived classes can be used in a mechanical simulation to power a joint hence
+producing a motion along, or around, one of its axes.
 
-A [RotationalMotor](reference/rotationalmotor.md#rotationalmotor) can power a
-[HingeJoint](reference/hingejoint.md#hingejoint) (resp. a
-[Hinge2Joint](reference/hinge2joint.md#hinge2joint)) when set inside the
-`device` (resp. `device` or `device2`) field of these nodes. It produces then a
-rotational motion around the choosen axis. Likewise, a
-[LinearMotor](reference/linearmotor.md#linearmotor) can power a
-[SliderJoint](reference/hingejoint.md#hingejoint), producing a sliding motion
-along its axis.
+A [RotationalMotor](rotationalmotor.md#rotationalmotor) can power a
+[HingeJoint](hingejoint.md#hingejoint) (resp. a
+[Hinge2Joint](hinge2joint.md#hinge2joint)) when set inside the `device` (resp.
+`device` or `device2`) field of these nodes. It produces then a rotational
+motion around the choosen axis. Likewise, a
+[LinearMotor](linearmotor.md#linearmotor) can power a
+[SliderJoint](hingejoint.md#hingejoint), producing a sliding motion along its
+axis.
 
 ### Field Summary
 
@@ -65,7 +65,7 @@ P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
 - The `position` field represents the current *position* of the
-[Motor](reference/motor.md#motor), in radians or meters. For a rotational motor,
+[Motor](motor.md#motor), in radians or meters. For a rotational motor,
 `position` represents the current rotation angle in radians. For a linear motor,
 `position` represents the magnitude of the current translation in meters.
 
@@ -76,9 +76,9 @@ section, see below.
 ### Units
 
 By *motor position*, we mean joint position as defined in
-[JointParameters](reference/jointparameters.md#jointparameters). Rotational
-motors units are expressed in *radians* while linear motors units are expressed
-in *meters*. See :
+[JointParameters](jointparameters.md#jointparameters). Rotational motors units
+are expressed in *radians* while linear motors units are expressed in *meters*.
+See :
 
 %figure "Motor Units"
 |  | Rotational | Linear |
@@ -92,7 +92,7 @@ in *meters*. See :
 
 The `minPosition` and `maxPosition` are defined with respect to joint's zero
 position (see description of the `position` field in
-[JointParameters](reference/jointparameters.md#jointparameters)).
+[JointParameters](jointparameters.md#jointparameters)).
 
 %figure "Linear Motor"
 ![Linear Motor](pdf/linear_motor.pdf.png)
@@ -104,8 +104,8 @@ position (see description of the `position` field in
 
 ### Position Control
 
-The standard way of operating a [Motor](reference/motor.md#motor) is to control
-the position directly (*position control*). The user specifies a target position
+The standard way of operating a [Motor](motor.md#motor) is to control the
+position directly (*position control*). The user specifies a target position
 using the `wb_motor_set_position()` function, then the P-controller takes into
 account the desired velocity, acceleration and motor force in order to move the
 motor to the target position. See .
@@ -148,10 +148,9 @@ the desired velocity as specified by the `maxVelocity` field (default) or set
 with `wb_motor_set_velocity()`, *a* is the acceleration required to reach *Vc*
 in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
 step, *t<sub>s</sub>* is the duration of the simulation time step as specified
-by the `basicTimeStep` field of the
-[WorldInfo](reference/worldinfo.md#worldinfo) node (converted in seconds), and
-*A* is the acceleration of the motor as specified by the `acceleration` field
-(default) or set with `wb_motor_set_acceleration()`.
+by the `basicTimeStep` field of the [WorldInfo](worldinfo.md#worldinfo) node
+(converted in seconds), and *A* is the acceleration of the motor as specified by
+the `acceleration` field (default) or set with `wb_motor_set_acceleration()`.
 
 > **note**: *error_integral* and *previous_error* are both reset to *0* after every call of
 `wb_motor_set_control_pid()`.
@@ -182,15 +181,14 @@ The position (resp. velocity) control described above are performed by the
 Webots PID-controller and ODE's joint motor implementation (see ODE
 documentation). As an alternative, Webots does also allow the user to directly
 specify the amount of force (resp. torque) that must be applied by a
-[Motor](reference/motor.md#motor). This is achieved with the
-`wb_motor_set_force()` (resp. `wb_motor_set_torque()`) function which specifies
-the desired amount of forces (resp. torques) and switches off the PID-controller
-and motor force (resp. motor torque). A subsequent call to
-`wb_motor_set_position()` restores the original *position control*. Some care
-must be taken when using *force control*. Indeed the force (resp. torque)
-specified with `wb_motor_set_force()` (resp. `wb_motor_set_torque()`) is applied
-to the [Motor](reference/motor.md#motor) continuously. Hence the
-[Motor](reference/motor.md#motor) will infinitely accelerate its rotational or
+[Motor](motor.md#motor). This is achieved with the `wb_motor_set_force()` (resp.
+`wb_motor_set_torque()`) function which specifies the desired amount of forces
+(resp. torques) and switches off the PID-controller and motor force (resp. motor
+torque). A subsequent call to `wb_motor_set_position()` restores the original
+*position control*. Some care must be taken when using *force control*. Indeed
+the force (resp. torque) specified with `wb_motor_set_force()` (resp.
+`wb_motor_set_torque()`) is applied to the [Motor](motor.md#motor) continuously.
+Hence the [Motor](motor.md#motor) will infinitely accelerate its rotational or
 linear motion and eventually *explode* unless a functional force control (resp.
 torque control) algorithm is used.
 
@@ -209,25 +207,24 @@ torque control) algorithm is used.
 
 The `minPosition` and `maxPosition` fields define the *soft limits* of the
 motor. Motor zero position and joint zero position coincide (see description of
-the `position` field in
-[JointParameters](reference/jointparameters.md#jointparameters)). Soft limits
-specify the *software* boundaries beyond which the PID-controller will not
-attempt to move. If the controller calls `wb_motor_set_position()` with a target
-position that exceeds the soft limits, the desired target position will be
-clipped in order to fit into the soft limit range. Valid limits values depends
-on the motor position, i.e. `minPosition` must always be less than or equal to
-the motor position and `maxPosition` must always be greater than or equal to the
-motor position. When both `minPosition` and `maxPosition` are zero (the
-default), the soft limits are deactivated. Note that the soft limits can be
+the `position` field in [JointParameters](jointparameters.md#jointparameters)).
+Soft limits specify the *software* boundaries beyond which the PID-controller
+will not attempt to move. If the controller calls `wb_motor_set_position()` with
+a target position that exceeds the soft limits, the desired target position will
+be clipped in order to fit into the soft limit range. Valid limits values
+depends on the motor position, i.e. `minPosition` must always be less than or
+equal to the motor position and `maxPosition` must always be greater than or
+equal to the motor position. When both `minPosition` and `maxPosition` are zero
+(the default), the soft limits are deactivated. Note that the soft limits can be
 overstepped when an external force which exceeds the motor force is applied to
 the motor. For example, it is possible that the weight of a robot exceeds the
 motor force that is required to hold it up.
 
 Finally, note that when both soft (`minPosition` and `maxPosition`) and hard
 limits (`minStop` and `maxStop`, see
-[JointParameters](reference/jointparameters.md#jointparameters)) are activated,
-the range of the soft limits must be included in the range of the hard limits,
-such that `minStop <= minValue` and `maxStop>= maxValue`. Moreover a simulation
+[JointParameters](jointparameters.md#jointparameters)) are activated, the range
+of the soft limits must be included in the range of the hard limits, such that
+`minStop <= minValue` and `maxStop>= maxValue`. Moreover a simulation
 instability can appear if `position` is exactly equal to one of the bounds
 defined by the `minStop` and `maxStop` fields at the simulation startup.
 Warnings are displayed if theses rules are not respected.
@@ -238,7 +235,7 @@ Warnings are displayed if theses rules are not respected.
 
 **wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -270,8 +267,8 @@ and motor torque/force parameters. This function returns immediately
 Webots. The target position will be reached only if the physics simulation
 allows it, that means, if the specified motor force is sufficient and the motion
 is not blocked by obstacles, external forces or the motor's own spring force,
-etc. It is also possible to wait until the [Motor](reference/motor.md#motor)
-reaches the target position (synchronous) like this:
+etc. It is also possible to wait until the [Motor](motor.md#motor) reaches the
+target position (synchronous) like this:
 
 ``` c
 void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, double target, int delay) {
@@ -356,7 +353,7 @@ target position *P<sub>t</sub>*, such that *V<sub>c</sub>* where *error =
 P<sub>t</sub><sub>c</sub>*. With a small *P*, a long time is needed to reach the
 target position, while too large a *P* can make the system unstable. The default
 value of *P, I* and *D* are specified by the `controlPID` field of the
-corresponding [Motor](reference/motor.md#motor) node.
+corresponding [Motor](motor.md#motor) node.
 
 The `wb_motor_get_[min|max]_position()` functions allow to get the values of
 respectively the `minPosition` and the `maxPosition` fields.
@@ -367,7 +364,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 **wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -420,9 +417,9 @@ torque applied around the rotation axis is considered.
 
 Note that these functions applies only to *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of related
-[Solid](reference/solid.md#solid) nodes must be defined for these functions to
-work properly. Moreover they don't work for [Motor](reference/motor.md#motor)
-nodes used to power a [Track](reference/track.md#track) node.
+[Solid](solid.md#solid) nodes must be defined for these functions to work
+properly. Moreover they don't work for [Motor](motor.md#motor) nodes used to
+power a [Track](track.md#track) node.
 
 If `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`) was
 not previously enabled, the return value is undefined.
@@ -438,7 +435,7 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 **wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -470,9 +467,8 @@ cannot exceed the current motor force (resp. torque) of the motor specified with
 value of the `maxForce` (resp. `maxTorque`) field.
 
 Note that this function applies only to *physics-based* simulation. Therefore,
-the `physics` and `boundingObject` fields of the
-[Motor](reference/motor.md#motor) node must be defined for this function to work
-properly.
+the `physics` and `boundingObject` fields of the [Motor](motor.md#motor) node
+must be defined for this function to work properly.
 
 It is also possible, for example, to use this function to implement springs or
 dampers with controllable properties. The example in
@@ -485,7 +481,7 @@ dampers with controllable properties. The example in
 
 **wb\_motor\_get\_type** - *get the motor type*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/motor.h>

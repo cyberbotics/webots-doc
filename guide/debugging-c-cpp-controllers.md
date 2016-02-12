@@ -6,8 +6,8 @@ In the Webots environment, the Webots application and each robot C/C++
 controller are executed in distinct operating system processes. For example,
 when the "soccer.wbt" world is executed, there is a total of eight processes in
 memory; one for Webots, six for the six player robots, and one for the
-supervisor. To debug a C/C++ controller with Visual C++, please see
-[here.](guide/using-visual-cpp-with-webots.md#using-visual-cpp-with-webots)
+supervisor. To debug a C/C++ controller with Visual C++, please see [here
+.](using-visual-cpp-with-webots.md#using-visual-cpp-with-webots)
 
 When a controller process performs an illegal instruction, it is terminated by
 the operating system while the Webots process and the other controller processes

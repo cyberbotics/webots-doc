@@ -41,12 +41,12 @@ PROTO MyProto [
 ```
 
 The type of the root node in the body of the PROTO definition (a
-[Solid](reference/solid.md#solid) node in this example) is called the *base
-type* of the PROTO. The base type determines where instantiations of the PROTO
-can be placed in the scene tree. For example, if the base type of a PROTO is
-[Material](reference/material.md#material), then instantiations of the PROTO can
-be used wherever a [Material](reference/material.md#material) mode can be used.
-A PROTO whose base node is another PROTO is called *derived PROTO*.
+[Solid](solid.md#solid) node in this example) is called the *base type* of the
+PROTO. The base type determines where instantiations of the PROTO can be placed
+in the scene tree. For example, if the base type of a PROTO is
+[Material](material.md#material), then instantiations of the PROTO can be used
+wherever a [Material](material.md#material) mode can be used. A PROTO whose base
+node is another PROTO is called *derived PROTO*.
 
 ### IS Statements
 

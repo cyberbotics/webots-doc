@@ -13,12 +13,12 @@ Cylinder {
 
 ### Description
 
-The [Cylinder](reference/cylinder.md#cylinder) node specifies a cylinder
-centered at (0,0,0) in the local coordinate system and with a central axis
-oriented along the local *y*-axis. By default, the cylinder spans -1 to +1 in
-all three dimensions. The `radius` field specifies the radius of the cylinder
-and the `height` field specifies the height of the cylinder along the central
-axis. See .
+The [Cylinder](cylinder.md#cylinder) node specifies a cylinder centered at
+(0,0,0) in the local coordinate system and with a central axis oriented along
+the local *y*-axis. By default, the cylinder spans -1 to +1 in all three
+dimensions. The `radius` field specifies the radius of the cylinder and the
+`height` field specifies the height of the cylinder along the central axis. See
+.
 
 If both `height` and `radius` are positive, the outside faces of the cylinder
 are displayed while if they are negative, the inside faces are displayed.
@@ -45,6 +45,6 @@ out of the unit texture squares centered at (0, +/- `height`, 0) with dimensions
 2*`radius`  by 2*`radius`. The top texture appears right side up when the top of
 the cylinder is tilted toward the +*z* axis, and the bottom texture appears
 right side up when the top of the cylinder is tilted toward the -*z* axis.
-[TextureTransform](reference/texturetransform.md#texturetransform) affects the
-texture coordinates of the Cylinder.
+[TextureTransform](texturetransform.md#texturetransform) affects the texture
+coordinates of the Cylinder.
 

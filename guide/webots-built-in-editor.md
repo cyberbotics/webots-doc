@@ -20,7 +20,7 @@ corresponding source line in the editor.
 
 Note that, for compiling source code it is necessary to have the appropriate
 development tools installed. You will find information on the development tools
-[here](guide/language-setup.md#language-setup).
+[here](language-setup.md#language-setup).
 
 In the following, the possible compilation actions are listed. Some of them are
 only accessible in the `Build` menu, whereas `Build` and `Clean` actions have a

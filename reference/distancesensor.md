@@ -1,6 +1,6 @@
 ## DistanceSensor
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 DistanceSensor {
@@ -15,18 +15,18 @@ DistanceSensor {
 
 ### Description
 
-The [DistanceSensor](reference/distancesensor.md#distancesensor) node can be
-used to model a generic sensor, an infra-red sensor, a sonar sensor, or a laser
-range-finder. This device simulation is performed by detecting the collisions
-between one or several sensor rays and objects in the environment. In case of
-generic, sonar and laser type the collision occurs with the bounding objects of
-[Solid](reference/solid.md#solid) nodes, whereas infra-red rays collision
-detection uses the [Solid](reference/solid.md#solid) nodes themselves.
+The [DistanceSensor](distancesensor.md#distancesensor) node can be used to model
+a generic sensor, an infra-red sensor, a sonar sensor, or a laser range-finder.
+This device simulation is performed by detecting the collisions between one or
+several sensor rays and objects in the environment. In case of generic, sonar
+and laser type the collision occurs with the bounding objects of
+[Solid](solid.md#solid) nodes, whereas infra-red rays collision detection uses
+the [Solid](solid.md#solid) nodes themselves.
 
-The rays of the [DistanceSensor](reference/distancesensor.md#distancesensor)
-nodes can be displayed by checking the menu `View > Optional Rendering > Show
-Distance Sensor Rays`. The red/green transition on the rays indicates the points
-of intersection with the bounding objects.
+The rays of the [DistanceSensor](distancesensor.md#distancesensor) nodes can be
+displayed by checking the menu `View > Optional Rendering > Show Distance Sensor
+Rays`. The red/green transition on the rays indicates the points of intersection
+with the bounding objects.
 
 ### Field Summary
 
@@ -92,8 +92,8 @@ more details).
     draw a red spot at the point where this ray hits an obstacle. This red spot is
     visible on the camera images. If the red spot disappears due to depth fighting,
     then it could help increasing the `lineScale` value in
-    [WorldInfo](reference/worldinfo.md#worldinfo) node that is used for computing
-    its position offset.
+    [WorldInfo](worldinfo.md#worldinfo) node that is used for computing its position
+    offset.
 
 - `numberOfRays`: number of rays cast by the sensor. The number of rays must be
 equal to, or greater than 1 for "infra-red" and "sonar" sensors. `numberOfRays`
@@ -170,9 +170,9 @@ hit by the sensor ray. The reflection factor is computed as follows: *f = 0.2 +
 0.8 * red\_level* where *red\_level* is the level of red color of the object hit
 by the sensor ray. This level is evaluated combining the `diffuseColor` and
 `transparency` values of the object, the pixel value of the image texture and
-the paint color applied on the object with the [Pen](reference/pen.md#pen)
-device. Then, the distance value computed by the simulator is divided by the
-reflection factor before the lookup table is used to compute the output value.
+the paint color applied on the object with the [Pen](pen.md#pen) device. Then,
+the distance value computed by the simulator is divided by the reflection factor
+before the lookup table is used to compute the output value.
 
 > **note**: Unlike other distance sensor rays, "infra-red" rays can detect solid parts of
 the robot itself. It is thus important to ensure that no solid geometries
@@ -192,12 +192,11 @@ never return and thus are lost for distance computation (see ).
 
 ### Line Following Behavior
 
-Some support for [DistanceSensor](reference/distancesensor.md#distancesensor)
-nodes used for reading the red color level of a textured floor is implemented.
-This is useful to simulate line following behaviors. This feature is
-demonstrated in the "rover.wbt" example (see in the
-"projects/robots/mindstorms/worlds" directory of Webots). The ground texture
-must be placed in a [Plane](reference/plane.md#plane).
+Some support for [DistanceSensor](distancesensor.md#distancesensor) nodes used
+for reading the red color level of a textured floor is implemented. This is
+useful to simulate line following behaviors. This feature is demonstrated in the
+"rover.wbt" example (see in the "projects/robots/mindstorms/worlds" directory of
+Webots). The ground texture must be placed in a [Plane](plane.md#plane).
 
 ### DistanceSensor Functions
 
@@ -205,7 +204,7 @@ must be placed in a [Plane](reference/plane.md#plane).
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/distance_sensor.h>
@@ -229,7 +228,6 @@ into the `wb_distance_sensor_enable()` function, or 0 if the device is disabled.
 
 `wb_distance_sensor_get_value()` returns the last value measured by the
 specified distance sensor. This value is computed by the simulator according to
-the lookup table of the
-[DistanceSensor](reference/distancesensor.md#distancesensor) node. Hence, the
-range of the return value is defined by this lookup table.
+the lookup table of the [DistanceSensor](distancesensor.md#distancesensor) node.
+Hence, the range of the return value is defined by this lookup table.
 

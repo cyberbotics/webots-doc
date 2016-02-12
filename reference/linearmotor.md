@@ -1,6 +1,6 @@
 ## LinearMotor
 
-Derived from [Motor](reference/motor.md#motor).
+Derived from [Motor](motor.md#motor).
 
 ```
 LinearMotor {
@@ -11,9 +11,8 @@ LinearMotor {
 
 ### Description
 
-A [LinearMotor](reference/linearmotor.md#linearmotor) node can be used to power
-a [SliderJoint](reference/sliderjoint.md#sliderjoint) and a
-[Track](reference/track.md#track).
+A [LinearMotor](linearmotor.md#linearmotor) node can be used to power a
+[SliderJoint](sliderjoint.md#sliderjoint) and a [Track](track.md#track).
 
 ### Field Summary
 

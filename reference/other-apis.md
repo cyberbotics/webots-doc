@@ -7,7 +7,7 @@ the  of this document which describes the C functions. Generally speaking, each
 C function has one and only one counterpart for in a specific language.
 
 ## Sections
-- [C++ API](reference/cpp-api.md)
-- [Java API](reference/java-api.md)
-- [Python API](reference/python-api.md)
-- [Matlab API](reference/matlab-api.md)
+- [C++ API](cpp-api.md)
+- [Java API](java-api.md)
+- [Python API](python-api.md)
+- [Matlab API](matlab-api.md)

@@ -1,6 +1,6 @@
 ## Receiver
 
-Derived from [Device](reference/device.md#device).
+Derived from [Device](device.md#device).
 
 ```
 Receiver {
@@ -17,13 +17,12 @@ Receiver {
 
 ### Description
 
-The [Receiver](reference/receiver.md#receiver) node is used to model radio,
-serial or infra-red receivers. A [Receiver](reference/receiver.md#receiver) node
-must be added to the children of a robot or supervisor. Please note that a
-[Receiver](reference/receiver.md#receiver) can receive data but it cannot send
-it. In order to achieve bidirectional communication, a robot needs to have both
-an [Emitter](reference/emitter.md#emitter) and a
-[Receiver](reference/receiver.md#receiver) on board.
+The [Receiver](receiver.md#receiver) node is used to model radio, serial or
+infra-red receivers. A [Receiver](receiver.md#receiver) node must be added to
+the children of a robot or supervisor. Please note that a
+[Receiver](receiver.md#receiver) can receive data but it cannot send it. In
+order to achieve bidirectional communication, a robot needs to have both an
+[Emitter](emitter.md#emitter) and a [Receiver](receiver.md#receiver) on board.
 
 ### Field Summary
 
@@ -74,7 +73,7 @@ noise is not dependent on the distance between emitter-receiver.
 
 **wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -90,11 +89,10 @@ int wb_receiver_get_sampling_period(WbDeviceTag tag)
 Data reception is activated in the background of the controller's loop at a rate
 of once every `ms` milliseconds. Incoming data packet are appended to the tail
 of the reception queue (see ). Incoming data packets will be discarded if the
-receiver's buffer size (specified in the
-[Receiver](reference/receiver.md#receiver) node) is exceeded. To avoid buffer
-overflow, the data packets should be read at a high enough rate by the
-controller program. The function `wb_receiver_disable()` stops the background
-listening.
+receiver's buffer size (specified in the [Receiver](receiver.md#receiver) node)
+is exceeded. To avoid buffer overflow, the data packets should be read at a high
+enough rate by the controller program. The function `wb_receiver_disable()`
+stops the background listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
@@ -105,7 +103,7 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
 **wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -153,17 +151,16 @@ long as emitters and receivers agree.
 However, the Emitter/Receiver API does not guarantee a specific schedule for the
 transmission. Sometimes several packets may be bundled and received together.
 For example, imagine a simple setup where two robots have an
-[Emitter](reference/emitter.md#emitter) and a
-[Receiver](reference/receiver.md#receiver) on board. If both robots use the same
-controller time step and each one sends a packet at every time step, then the
-Receivers will receive, on average, one data packet at each step, but they may
-sometimes get zero packets, and sometimes two! Therefore it is recommend to
-write code that is tolerant to variations in the transmission timing and that
-can deal with the eventuality of receiving several or no packets at all during a
-particular time step. The `wb_receiver_get_queue_length()` function should be
-used to check how many packets are actually present in the
-[Receiver](reference/receiver.md#receiver)'s queue. Making assumptions based on
-timing will result in code that is not robust.
+[Emitter](emitter.md#emitter) and a [Receiver](receiver.md#receiver) on board.
+If both robots use the same controller time step and each one sends a packet at
+every time step, then the Receivers will receive, on average, one data packet at
+each step, but they may sometimes get zero packets, and sometimes two! Therefore
+it is recommend to write code that is tolerant to variations in the transmission
+timing and that can deal with the eventuality of receiving several or no packets
+at all during a particular time step. The `wb_receiver_get_queue_length()`
+function should be used to check how many packets are actually present in the
+[Receiver](receiver.md#receiver)'s queue. Making assumptions based on timing
+will result in code that is not robust.
 
 ---
 
@@ -171,7 +168,7 @@ timing will result in code that is not robust.
 
 **wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -186,10 +183,10 @@ The `wb_receiver_get_data()` function returns the data of the packet at the head
 of the reception queue (see ). The returned data pointer is only valid until the
 next call to the function `wb_receiver_next_packet()`. It is illegal to call
 `wb_receiver_get_data()` when the queue is empty
-(`wb_receiver_get_queue_length()` == 0). The
-[Receiver](reference/receiver.md#receiver) node knows nothing about that
-structure of the data being sent but its byte size. The emitting and receiving
-code is responsible to agree on a specific format.
+(`wb_receiver_get_queue_length()` == 0). The [Receiver](receiver.md#receiver)
+node knows nothing about that structure of the data being sent but its byte
+size. The emitting and receiving code is responsible to agree on a specific
+format.
 
 The `wb_receiver_get_data_size()` function returns the number of data bytes
 present in the head packet of the reception queue. The *data size* is always
@@ -198,9 +195,9 @@ It is illegal to call `wb_receiver_get_data_size()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0).
 
 > **note** [Python]: The `getData()` function returns a string. Similarly to the `sendPacket()`
-function of the [Emitter](reference/emitter.md#emitter) device, using the
-functions of the struct module is recommended for sending primitive data types.
-Here is an example for getting the data:
+function of the [Emitter](emitter.md#emitter) device, using the functions of the
+struct module is recommended for sending primitive data types. Here is an
+example for getting the data:
 
 >     import struct
 >     #...
@@ -255,7 +252,7 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 
 **wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -295,7 +292,7 @@ receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 **wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
 
-{[C++](reference/cpp-api.md)}, {[Java](reference/java-api.md)}, {[Python](reference/python-api.md)}, {[Matlab](reference/matlab-api.md)}
+{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
 
 ``` c
 #include <webots/receiver.h>
@@ -308,15 +305,15 @@ int wb_receiver_get_channel(WbDeviceTag tag)
 
 The `wb_receiver_set_channel()` function allows a receiver to change its
 reception channel. It modifies the `channel` field of the corresponding
-[Receiver](reference/receiver.md#receiver) node. Normally, a receiver can only
-receive data packets from emitters that use the same channel. However, the
-special WB\_CHANNEL\_BROADCAST value can be used to listen simultaneously to all
+[Receiver](receiver.md#receiver) node. Normally, a receiver can only receive
+data packets from emitters that use the same channel. However, the special
+WB\_CHANNEL\_BROADCAST value can be used to listen simultaneously to all
 channels.
 
 The `wb_receiver_get_channel()` function returns the current channel number of
 the receiver.
 
 > **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
-static integer of the [Receiver](reference/receiver.md#receiver) class
+static integer of the [Receiver](receiver.md#receiver) class
 (Receiver::CHANNEL\_BROADCAST).
 

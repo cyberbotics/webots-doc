@@ -5,10 +5,10 @@ The PROTO interface defines the fields for the PROTO. Once defined, PROTO nodes
 may be instantiated in the scene tree exactly like built-in nodes.
 
 ## Sections
-- [PROTO Definition](reference/proto-definition.md)
-- [PROTO Instantiation](reference/proto-instantiation.md)
-- [Example](reference/example.md)
-- [Procedural PROTO nodes](reference/procedural-proto-nodes.md)
-- [Using PROTO nodes with the Scene Tree](reference/using-proto-nodes-with-the-scene-tree.md)
-- [PROTO Scoping Rules](reference/proto-scoping-rules.md)
-- [PROTO hidden fields](reference/proto-hidden-fields.md)
+- [PROTO Definition](proto-definition.md)
+- [PROTO Instantiation](proto-instantiation.md)
+- [Example](example.md)
+- [Procedural PROTO nodes](procedural-proto-nodes.md)
+- [Using PROTO nodes with the Scene Tree](using-proto-nodes-with-the-scene-tree.md)
+- [PROTO Scoping Rules](proto-scoping-rules.md)
+- [PROTO hidden fields](proto-hidden-fields.md)

@@ -358,8 +358,8 @@ current project directory.
 
 The `New Robot Controller...` menu item allows you to create a new controller
 program. You will first be prompted to choose between a C, C++, Java, Python or
-*MATLAB*^(TM) controller. Then, Webots will ask you to enter the name of your
-controller and finally it will create all the necessary files (including a
+*MATLAB*<sup>TM</sup> controller. Then, Webots will ask you to enter the name of
+your controller and finally it will create all the necessary files (including a
 template source code file) in your current project directory.
 
 The `New Physics Plugin...` menu item will let you create a new physics plugin

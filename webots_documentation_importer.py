@@ -8,14 +8,15 @@ import textwrap
 import xml.etree.ElementTree as ET
 import pdb # break with pdb.set_trace()
 
-#def remove_tags(text):
-#    return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+
+def remove_tags(text):
+    return re.sub(r'<[^>]+>', '', text)
 
 def slugify(txt):
   output = txt.lower()
+  output = remove_tags(output)
   output = output.replace('+', 'p')
   output = re.sub(r'[\(\):`]', '', output)
-  output = re.sub(r'\^\(TM\)', '', output)
   output = re.sub(r'\W+', '-', output)
   return output.strip(' ').strip('-')
 
@@ -121,6 +122,9 @@ class BookParser:
                 output = includeFile.read()
             content = content[:mo.start()] + output + content[mo.end():]
 
+        content = re.sub(r'&webots_(\w*)_version;', r'{{ webots.version.\1 }}', content)
+        content = re.sub(r'&webots_kros_(\w*)_version;', r'{{ kros.version.\1 }}', content)
+
         # dealt with `procedure` and `step` nodes
         content = content.replace('<procedure>', '<orderedlist>') \
                          .replace('</procedure>', '</orderedlist>') \
@@ -208,7 +212,7 @@ class BookParser:
         for child in title.getchildren():
             if child.text:
                 if child.tag == 'trademark':
-                    text += '*' + child.text + '*^(TM)'
+                    text += '*' + child.text + '*<sup>TM</sup>'
                 elif child.tag == 'function' or child.tag == 'math':
                     text += self.parseMath(child)
                 else:
@@ -278,7 +282,7 @@ class BookParser:
                 elif child.tag == 'math':
                     text += self.parseMath(child)
                 elif child.tag == 'trademark':
-                    text += '*' + self.parseText(child.text, True, False, False) + '*^(TM)'
+                    text += '*' + self.parseText(child.text, True, False, False) + '*<sup>TM</sup>'
                 elif child.tag == 'ulink':
                     text += '[' + self.parseText(child.text, True, False, False) + '](' + child.attrib.get('url') + ')'
                 elif child.tag == 'xref':

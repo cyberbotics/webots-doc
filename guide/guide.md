@@ -1,6 +1,6 @@
 # Webots User Guide
 
-Release 8.3.2
+Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
 
 %figure
 ![ImageData](png/1234web.png)
@@ -11,7 +11,7 @@ PSE C - EPFL
 1015 Lausanne
 Switzerland
 
-This user guide refers to Webots version 8.3.2
+This user guide refers to Webots version {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
 
 Copyright &copy; {{ date.year }}: Cyberbotics Ltd.
 
@@ -34,30 +34,33 @@ any kind in connection with the use and exploitation of this software.
 
 ## Trademark information
 
-*Aibo*^(TM) is a registered trademark of SONY Corp.
+*Aibo*<sup>TM</sup> is a registered trademark of SONY Corp.
 
-*Radeon*^(TM) is a registered trademark of ATI Technologies Inc.
+*Radeon*<sup>TM</sup> is a registered trademark of ATI Technologies Inc.
 
-*GeForce*^(TM) is a registered trademark of nVidia, Corp.
+*GeForce*<sup>TM</sup> is a registered trademark of nVidia, Corp.
 
-*Java*^(TM) is a registered trademark of Sun MicroSystems, Inc.
+*Java*<sup>TM</sup> is a registered trademark of Sun MicroSystems, Inc.
 
-*Khepera*^(TM) and *Koala*^(TM) are registered trademarks of K-Team S.A.
+*Khepera*<sup>TM</sup> and *Koala*<sup>TM</sup> are registered trademarks of
+K-Team S.A.
 
-*Linux*^(TM) is a registered trademark of Linus Torvalds.
+*Linux*<sup>TM</sup> is a registered trademark of Linus Torvalds.
 
-*Mac OS X*^(TM) is a registered trademark of Apple Inc.
+*Mac OS X*<sup>TM</sup> is a registered trademark of Apple Inc.
 
-*Mindstorms*^(TM) and *LEGO*^(TM) are registered trademarks of the LEGO group.
+*Mindstorms*<sup>TM</sup> and *LEGO*<sup>TM</sup> are registered trademarks of
+the LEGO group.
 
-*IPR*^(TM) is a registered trademark of Neuronics AG.
+*IPR*<sup>TM</sup> is a registered trademark of Neuronics AG.
 
-*Ubuntu*^(TM) is a registered trademark of Canonical Ltd.
+*Ubuntu*<sup>TM</sup> is a registered trademark of Canonical Ltd.
 
-*Visual C++*^(TM), *Windows*^(TM), *Windows NT*^(TM), *Windows 2000*^(TM),
-*Windows XP*^(TM), *Windows Vista*^(TM), *Windows 7*^(TM) and *Windows 8*^(TM)
-are registered trademarks of Microsoft Corp.
+*Visual C++*<sup>TM</sup>, *Windows*<sup>TM</sup>, *Windows NT*<sup>TM</sup>,
+*Windows 2000*<sup>TM</sup>, *Windows XP*<sup>TM</sup>, *Windows
+Vista*<sup>TM</sup>, *Windows 7*<sup>TM</sup> and *Windows 8*<sup>TM</sup> are
+registered trademarks of Microsoft Corp.
 
-*UNIX*^(TM) is a registered trademark licensed exclusively by X/Open Company,
-Ltd.
+*UNIX*<sup>TM</sup> is a registered trademark licensed exclusively by X/Open
+Company, Ltd.
 

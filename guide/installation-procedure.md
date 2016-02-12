@@ -9,9 +9,9 @@ your computer previously.
 2. Install Webots for your operating system as explained below.
 
 > **note**: After installation, the most important Webots features will be available, but
-some third party tools (such as Java, Python, or *MATLAB*^(TM)) may be necessary
-for running or compiling specific projects. The  covers the set up of these
-tools.
+some third party tools (such as Java, Python, or *MATLAB*<sup>TM</sup>) may be
+necessary for running or compiling specific projects. The  covers the set up of
+these tools.
 
 ### Linux
 
@@ -90,13 +90,13 @@ variable to point to the webots directory obtained from the uncompression of the
 tarball:
 
 ```
-tar xjf webots-8.3.2-i386.tar.bz2
+tar xjf webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}-i386.tar.bz2
 ```
 
 or
 
 ```
-tar xjf webots-8.3.2-x86-64.tar.bz2
+tar xjf webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}-x86-64.tar.bz2
 ```
 
 and
@@ -126,38 +126,41 @@ Alternatively, the DEB package can also be installed using `dpkg` or `gdebi`
 with the `root` privileges. For 32-bit systems:
 
 ```
-dpkg -i webots_8.3.2_i386.deb
+dpkg -i webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_i386.deb
 apt-get -f install
 ```
 
 or
 
 ```
-gdebi webots_8.3.2_i386.deb
+gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_i386.deb
 ```
 
 For 64-bit systems:
 
 ```
-dpkg -i webots_8.3.2_amd64.deb
+dpkg -i webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 apt-get -f install
 ```
 
 or
 
 ```
-gdebi webots_8.3.2_amd64.deb
+gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
 ### Windows
 
-1. Download the "webots-8.3.2\_setup.exe" installation file from our [web
+1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
+webots.version.bugfix }}\_setup.exe" installation file from our [web
 site](http://www.cyberbotics.com/windows).
 2. Double click on this file.
 3. Follow the installation instructions.
 
 It is possible to install Webots silently from an administrator DOS console, by
-typing "webots-8.3.2\_setup.exe /SILENT" or "webots-8.3.2\_setup.exe
+typing "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
+webots.version.bugfix }}\_setup.exe /SILENT" or "webots-{{ webots.version.major
+}}.{{ webots.version.minor }}.{{ webots.version.bugfix }}\_setup.exe
 /VERYSILENT"
 
 If you observe 3D rendering anomalies or Webots crashes, it is strongly
@@ -165,7 +168,8 @@ recommend to upgrade your graphics driver.
 
 ### Mac OS X
 
-1. Download the "webots-8.3.2.dmg" installation file from our [web
+1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
+webots.version.bugfix }}.dmg" installation file from our [web
 site](http://www.cyberbotics.com/macosx).
 2. Double click on this file. This will mount on the desktop a volume named
 "Webots" containing the "Webots" folder.

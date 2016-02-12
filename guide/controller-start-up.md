@@ -20,7 +20,7 @@ Webots looks for these files in the specified order, in the
 3. xyz\_controller.jar (a Java .jar file)
 4. xyz\_controller.bsg (a Webots/BotStudio file)
 5. xyz\_controller.py (a Python script)
-6. xyz\_controller.m (a *MATLAB*^(TM) script)
+6. xyz\_controller.m (a *MATLAB*<sup>TM</sup> script)
 
 The first file that is found will be executed by Webots using the required
 language interpreter (java, python, matlab). So the priority is defined by the

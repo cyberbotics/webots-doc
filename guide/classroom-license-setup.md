@@ -103,9 +103,11 @@ accounts used by the students. On Windows, the Webots preferences are stored in
 the registry under the "HKEY\_CURRENT\_USER/SOFTWARE/Cyberbotics" key (so you
 need to use a tool that copies registry keys across user accounts). On Mac OS X,
 the Webots preferences are stored in a file under the user home directory at
-"~/Library/Preferences/com.cyberbotics.Webots 8.3.2.plist". On Linux, the Webots
+"~/Library/Preferences/com.cyberbotics.Webots {{ webots.version.major }}.{{
+webots.version.minor }}.{{ webots.version.bugfix }}.plist". On Linux, the Webots
 preferences are stored in a file under the user home directory at
-"~/.config/Cyberbotics/Webots 8.3.2.conf".
+"~/.config/Cyberbotics/Webots {{ webots.version.major }}.{{ webots.version.minor
+}}.{{ webots.version.bugfix }}.conf".
 
 ### Homework
 

@@ -1,68 +1,73 @@
 ## Using MATLAB
 
-### Introduction to *MATLAB*^(TM)
+### Introduction to *MATLAB*<sup>TM</sup>
 
-*MATLAB*^(TM) is a numerical computing environment and an interpreted
-programming language. *MATLAB*^(TM) allows easy matrix manipulation, plotting of
-functions and data, implementation of algorithms and creation of user
-interfaces. You can get more information on the official
-[MathWorks](http://www.mathworks.com) web site. *MATLAB*^(TM) is widely used in
-robotics in particular for its *Image Processing, Neural Networks* and *Genetics
-Algorithms* toolboxes. Webots allows to directly use *MATLAB*^(TM) scripts as
-robot controller programs for your simulations. Using the *MATLAB*^(TM)
-interface, it becomes easy to visualize controller or supervisor data, for
-example, processed images, sensor readings, the performance of an optimization
-algorithm, etc., while the simulation is running. In addition, it becomes
-possible to reuse your existing *MATLAB*^(TM) code directly in Webots.
+*MATLAB*<sup>TM</sup> is a numerical computing environment and an interpreted
+programming language. *MATLAB*<sup>TM</sup> allows easy matrix manipulation,
+plotting of functions and data, implementation of algorithms and creation of
+user interfaces. You can get more information on the official
+[MathWorks](http://www.mathworks.com) web site. *MATLAB*<sup>TM</sup> is widely
+used in robotics in particular for its *Image Processing, Neural Networks* and
+*Genetics Algorithms* toolboxes. Webots allows to directly use
+*MATLAB*<sup>TM</sup> scripts as robot controller programs for your simulations.
+Using the *MATLAB*<sup>TM</sup> interface, it becomes easy to visualize
+controller or supervisor data, for example, processed images, sensor readings,
+the performance of an optimization algorithm, etc., while the simulation is
+running. In addition, it becomes possible to reuse your existing
+*MATLAB*<sup>TM</sup> code directly in Webots.
 
 ### How to run the Examples?
 
-If *MATLAB*^(TM) is already installed, you can directly launch one of the
-*MATLAB*^(TM) examples. For doing that, start Webots and open the world file
+If *MATLAB*<sup>TM</sup> is already installed, you can directly launch one of
+the *MATLAB*<sup>TM</sup> examples. For doing that, start Webots and open the
+world file
 "WEBOTS\_MODULES\_PATH/projects/languages/matlab/worlds/e-puck\_matlab.wbt" or
 the world file
 "WEBOTS\_MODULES\_PATH/projects/robots/aldebaran/worlds/nao2\_matlab.wbt" in
-your Webots installation directory. Webots automatically starts *MATLAB*^(TM)
-when it detects an m-file in a controller directory. Note that the m-file must
-be named after its directory in order to be identified as a controller file by
-Webots. So, for example, if the directory is named "my\_controller", then the
-controller m-file must be named "my\_controller/my\_controller.m".
+your Webots installation directory. Webots automatically starts
+*MATLAB*<sup>TM</sup> when it detects an m-file in a controller directory. Note
+that the m-file must be named after its directory in order to be identified as a
+controller file by Webots. So, for example, if the directory is named
+"my\_controller", then the controller m-file must be named
+"my\_controller/my\_controller.m".
 
 No special initialization code is necessary in the controller m-file. In fact
 Webots calls an intermediate "launcher.m" file that sets up the Webots
 controller environment and then calls the controller m-file. In particular the
 "launcher.m" file loads the library for communicating with Webots and adds the
-path to API m-files. The *MATLAB*^(TM) API m-files are located in the
+path to API m-files. The *MATLAB*<sup>TM</sup> API m-files are located in the
 "lib/matlab" directory of Webots distribution. These are readable source files;
 please report any problem, or possible improvement about these files.
 
-### *MATLAB*^(TM) Installation
+### *MATLAB*<sup>TM</sup> Installation
 
-In order to use *MATLAB*^(TM) controllers in Webots, the *MATLAB*^(TM) software
-must be installed (*The MathWorks*^(TM) license required).
+In order to use *MATLAB*<sup>TM</sup> controllers in Webots, the
+*MATLAB*<sup>TM</sup> software must be installed (*The MathWorks*<sup>TM</sup>
+license required).
 
 Webots must be able to access the "matlab" executable (usually a script) in
 order to run controller m-files. Webots looks for the *matlab* executable in
 every directory of your *PATH* (or *Path* on Windows) environment variable. Note
 that this is similar to calling `matlab` from a terminal (or *Command Prompt* on
-Windows), therefore, if *MATLAB*^(TM) can be started from a terminal then it can
-also be started from Webots.
+Windows), therefore, if *MATLAB*<sup>TM</sup> can be started from a terminal
+then it can also be started from Webots.
 
-On Windows, the *MATLAB*^(TM) installer will normally add *MATLAB*^(TM)'s bin
-directories to your *Path* environment variable, so usually Webots will be able
-to locate *MATLAB*^(TM) after a standard installation. However, in case it does
-not work, please make sure that your *Path* contains this directory (or
-something slightly different, according to your *MATLAB*^(TM) version):
+On Windows, the *MATLAB*<sup>TM</sup> installer will normally add
+*MATLAB*<sup>TM</sup>'s bin directories to your *Path* environment variable, so
+usually Webots will be able to locate *MATLAB*<sup>TM</sup> after a standard
+installation. However, in case it does not work, please make sure that your
+*Path* contains this directory (or something slightly different, according to
+your *MATLAB*<sup>TM</sup> version):
 
 ```
 Path=C:\Program Files\MATLAB\R2009b\bin
 ```
 
-On Linux, the *MATLAB*^(TM) installer does normally suggest to add a symlink to
-the "matlab" startup script in the "/usr/local/bin" directory. This is a good
-option to make "matlab" globally accessible. Otherwise you can create the link
-at anytime afterwards with this shell command (please change according to your
-actual *MATLAB*^(TM) installation directory and version):
+On Linux, the *MATLAB*<sup>TM</sup> installer does normally suggest to add a
+symlink to the "matlab" startup script in the "/usr/local/bin" directory. This
+is a good option to make "matlab" globally accessible. Otherwise you can create
+the link at anytime afterwards with this shell command (please change according
+to your actual *MATLAB*<sup>TM</sup> installation directory and version):
 
 ```
 $ sudo ln -s /usr/local/MATLAB/R2014a/bin/matlab /usr/local/bin/matlab
@@ -94,19 +99,19 @@ In order to create a cross-platform controller, it is recommended to use the
 We recommend to use the latest Matlab version on an up-to-date operating system.
 
 Note that 64-bit versions of Webots are not compatible with 32-bit versions of
-*MATLAB*^(TM). Webots comes only in 64-bit flavour and therefore it can only
-inter-operate with a 64 bit version of *MATLAB*^(TM).
+*MATLAB*<sup>TM</sup>. Webots comes only in 64-bit flavour and therefore it can
+only inter-operate with a 64 bit version of *MATLAB*<sup>TM</sup>.
 
-On some platform the *MATLAB*^(TM) interface needs `perl` and `gcc` to be
-installed separately. These tools are required because *MATLAB*^(TM)'s
-`loadlibrary()` function will need to recompile Webots header files on the fly.
-According to *MATLAB*^(TM)'s documentation this will be the case on 64-bit
-systems, and hence we advice 64-bit Webots users (on Linux) to make sure that
-these packages are installed on their systems.
+On some platform the *MATLAB*<sup>TM</sup> interface needs `perl` and `gcc` to
+be installed separately. These tools are required because
+*MATLAB*<sup>TM</sup>'s `loadlibrary()` function will need to recompile Webots
+header files on the fly. According to *MATLAB*<sup>TM</sup>'s documentation this
+will be the case on 64-bit systems, and hence we advice 64-bit Webots users (on
+Linux) to make sure that these packages are installed on their systems.
 
-On some Mac OS X systems the *MATLAB*^(TM) interface will work only if you
-install the Xcode development environment, because `gcc` is required. An error
-message like this one, is a symptom of the above described problem:
+On some Mac OS X systems the *MATLAB*<sup>TM</sup> interface will work only if
+you install the Xcode development environment, because `gcc` is required. An
+error message like this one, is a symptom of the above described problem:
 
 ```
 error using ==> calllib

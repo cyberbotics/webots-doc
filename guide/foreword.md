@@ -8,8 +8,9 @@ This user guide will get you started using Webots. However, the reader is
 expected to have a minimal knowledge in mobile robotics, in C, C++, Java, Python
 or MATLAB programming, and in VRML97 (Virtual Reality Modeling Language).
 
-Webots 8 features a new layout of the user interface with many facilities
-integrated, such as a source code editor, motion editor, etc.
+Webots {{ webots.version.major }} features a new layout of the user interface
+with many facilities integrated, such as a source code editor, motion editor,
+etc.
 
-We hope that you will enjoy working with Webots 8.
+We hope that you will enjoy working with Webots {{ webots.version.major }}.
 

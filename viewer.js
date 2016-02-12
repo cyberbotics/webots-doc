@@ -25,7 +25,10 @@ function redirectUrls(node, targetPath) {
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.endsWith("md") || href.indexOf(".md#") > -1) {
+        if (href.startsWith("www") || href.startsWith("http")) {
+            // open external links in a new window
+            a.setAttribute("target", "_blank");
+        } else if (href.endsWith("md") || href.indexOf(".md#") > -1) {
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
                 var newPage = match[1];

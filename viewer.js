@@ -25,11 +25,13 @@ function redirectUrls(node, targetPath) {
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.endsWith("md") && (href.startsWith("guide") || href.startsWith("reference"))) {
-            var match = /^([\w-]+)\/([\w-]+).md$/.exec(href);
-            if (match && match.length == 3) {
+        if ((href.endsWith("md") || href.indexOf(".md#") > -1) && (href.startsWith("guide") || href.startsWith("reference"))) {
+            var match = /^([\w-]+)\/([\w-]+).md(#[\w-]+)?$/.exec(href);
+            if (match && match.length >= 3) {
                 var newBook = match[1];
                 var newPage = match[2];
+                // TODO: do something with the anchor :-)
+                //var anchor = match[3]; // could be undefined
                 var newHref = window.location.href.replace(/book=([\w-]+)/, "book=" + newBook).replace(/page=([\w-]+)/, "page=" + newPage);
                 a.setAttribute("href", newHref);
             }
@@ -56,7 +58,7 @@ function populateViewDiv(mdContent) {
     console.log(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ['wbFigure', 'wbSuperscript']});
+    var converter = new showdown.Converter({tables: "True", extensions: ['wbFigure', 'wbVariables']});
     var html = converter.makeHtml(mdContent);
 
     var div = document.createElement("div");

@@ -157,8 +157,8 @@ because the internal format could change.
 
 > **note** [Matlab]: The Matlab API uses a language-specific representation of color images
 consisting of a 3D array of RGB triplets. Please look at the [Matlab
-example](reference/camera.md) in the `wb_camera_get_image` function's
-description.
+example](reference/camera.md#description) in the `wb_camera_get_image`
+function's description.
 
 #### Range-Finder
 

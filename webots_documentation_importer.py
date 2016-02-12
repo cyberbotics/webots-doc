@@ -8,6 +8,8 @@ import textwrap
 import xml.etree.ElementTree as ET
 import pdb # break with pdb.set_trace()
 
+#def remove_tags(text):
+#    return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
 
 def slugify(txt):
   output = txt.lower()
@@ -139,7 +141,7 @@ class BookParser:
 
         outFile.write('# Table of contents\n\n')
         chapterCounter = 0
-        for chapterNode in self.root.findall('.//chapter'):
+        for chapterNode in self.root.findall('.//preface') + self.root.findall('.//chapter'):
             chapterCounter += 1
             title = self.getTitle(chapterNode)
             outFile.write('%d. [%s](%s)\n' % (chapterCounter, title, self.bookName + '/' + slugify(title) + '.md'))
@@ -195,7 +197,7 @@ class BookParser:
         if node.tag == 'title':
             title = node
         else:
-            titleNodes = node.findall('title')
+            titleNodes = node.findall('.//title')
             if len(titleNodes) <= 0:
                 return ''
             title = titleNodes[0]
@@ -609,7 +611,7 @@ class BookParser:
                 indent = 0
                 if node.tag == 'chapter':
                     indent = 1
-                elif node.tag == 'sect1' or node.tag == 'preface':
+                elif node.tag == 'sect1' or node.tag == 'preface' or node.tag == 'legalnotice':
                     indent = 2
                 elif node.tag == 'sect2':
                     indent = 3
@@ -679,29 +681,55 @@ class BookParser:
                     outFile.write('- [%s](%s)\n' % (title, fileName))
 
 
+    def parseBookInfo(self, node, outFile):
+        for child in node.getchildren():
+            if child.tag == 'edition':
+                outFile.write('Release ' + child.text + '\n\n')
+            elif child.tag == 'title':
+                pass
+            elif child.tag == 'mediaobject':
+                imagedata = child.findall('.//imagedata')[0]
+                fileref = imagedata.attrib.get('fileref')
+                fileref = fileref.replace('1234.png', '1234web.png') # hack the path
+                outFile.write('%%figure\n![%s](%s)\n%%end\n\n' % ('ImageData', fileref))
+            elif child.tag == 'author':
+                pass # no more sense in my opinion
+            elif child.tag == 'publisher':
+                text = self.readRawText(child).strip()
+                text = re.sub(r'\n *', '\n', text)
+                outFile.write(text + '\n\n')
+            elif child.tag == 'releaseinfo':
+                outFile.write(self.readRawText(child).strip() + '\n\n')
+            elif child.tag == 'copyright':
+                outFile.write('Copyright &copy; {{ date.year }}: ')
+                outFile.write(self.readRawText(child).strip() + '\n\n')
+            elif child.tag == 'legalnotice':
+                self.parseChapter(child, outFile)
+            else: # TODO: uncomment this
+                raise Exception('Unsupported node: ' + child.tag)
+
     def parseBook(self, node, outFile):
+        outFile.write('# ' + self.getTitle(node) + '\n\n')
         for child in node.getchildren():
             if child.tag == 'bookinfo':
-                for subchild in child.getchildren():
-                    if subchild.tag == 'title':
-                        outFile.write('# ' + subchild.attrib.get('name', subchild.text) + '\n\n')
+                self.parseBookInfo(child, outFile)
             elif child.tag == 'preface':
                 fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName
                 if os.path.exists(fileName):
                     raise Exception('preface: "' + fileName + '" is existing')
-                outFile = open(fileName, 'w')
-                self.parseChapter(child, outFile)
-                outFile.close()
+                newOutFile = open(fileName, 'w')
+                self.parseChapter(child, newOutFile)
+                newOutFile.close()
                 simplifySpaces(fileName)
             elif child.tag == 'chapter':
                 fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName
                 if os.path.exists(fileName):
                     raise Exception('chapter: "' + fileName + '" is existing')
-                outFile = open(fileName, 'w')
-                self.parseChapter(child, outFile)
-                outFile.close()
+                newOutFile = open(fileName, 'w')
+                self.parseChapter(child, newOutFile)
+                newOutFile.close()
                 simplifySpaces(fileName)
             else:
                 raise Exception('Unsupported type: ' + child.tag)

@@ -44,7 +44,7 @@ if (! walk->isValid()) {
 
 #### See also
 
-[wbu\_motion\_play](reference/motion.md)
+[wbu\_motion\_play](reference/motion.md#description)
 
 ---
 
@@ -110,7 +110,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 #### See also
 
-[wbu\_motion\_new](reference/motion.md)
+[wbu\_motion\_new](reference/motion.md#description)
 
 ---
 
@@ -156,5 +156,5 @@ can be changed whether the motion is playing or stopped. The minimum value is 0
 
 #### See also
 
-[wbu\_motion\_play](reference/motion.md)
+[wbu\_motion\_play](reference/motion.md#description)
 

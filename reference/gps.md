@@ -50,11 +50,11 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### GPS Functions
 
-#### Name
+#### <a name="wb_gps_get_values"/>Name
 
 **wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values** - *enable, disable and read the GPS measurements*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}
 
 ``` c
 #include <webots/gps.h>

@@ -1,10 +1,10 @@
 ## Motion
 
-#### Name
+#### <a name="wbu_motion_new"/>Name
 
 **wbu\_motion\_new**, **wbu\_motion\_delete** - *obtaining and releasing a motion file handle*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
 ``` c
 #include <webots/utils/motion.h>
@@ -44,15 +44,15 @@ if (! walk->isValid()) {
 
 #### See also
 
-[wbu\_motion\_play](motion.md#description)
+[wbu\_motion\_play](motion.md#wbu_motion_play)
 
 ---
 
-#### Name
+#### <a name="wbu_motion_play"/>Name
 
 **wbu\_motion\_play**, **wbu\_motion\_stop**, **wbu\_motion\_set\_loop**, **wbu\_motion\_set\_reverse** - *Controlling motion files playback*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
 ``` c
 #include <webots/utils/motion.h>
@@ -110,15 +110,15 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 #### See also
 
-[wbu\_motion\_new](motion.md#description)
+[wbu\_motion\_new](motion.md#wbu_motion_new)
 
 ---
 
-#### Name
+#### <a name="wbu_motion_is_over"/>Name
 
 **wbu\_motion\_is\_over**, **wbu\_motion\_get\_duration**, **wbu\_motion\_get\_time**, **wbu\_motion\_set\_time** - *controlling the playback position*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
 ``` c
 #include <webots/utils/motion.h>
@@ -156,5 +156,5 @@ can be changed whether the motion is playing or stopped. The minimum value is 0
 
 #### See also
 
-[wbu\_motion\_play](motion.md#description)
+[wbu\_motion\_play](motion.md#wbu_motion_play)
 

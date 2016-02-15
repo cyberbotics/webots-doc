@@ -71,11 +71,11 @@ noise is not dependent on the distance between emitter-receiver.
 
 ### Receiver Functions
 
-#### Name
+#### <a name="wb_receiver_enable"/>Name
 
 **wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}
 
 ``` c
 #include <webots/receiver.h>
@@ -102,11 +102,11 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
 ---
 
-#### Name
+#### <a name="wb_receiver_get_queue_length"/>Name
 
 **wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}
 
 ``` c
 #include <webots/receiver.h>
@@ -170,11 +170,11 @@ will result in code that is not robust.
 
 ---
 
-#### Name
+#### <a name="wb_receiver_get_data"/>Name
 
 **wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}
 
 ``` c
 #include <webots/receiver.h>
@@ -254,11 +254,11 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 
 ---
 
-#### Name
+#### <a name="wb_receiver_get_signal_strength"/>Name
 
 **wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}
 
 ``` c
 #include <webots/receiver.h>
@@ -295,11 +295,11 @@ receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 ---
 
-#### Name
+#### <a name="wb_receiver_set_channel"/>Name
 
 **wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}
 
 ``` c
 #include <webots/receiver.h>

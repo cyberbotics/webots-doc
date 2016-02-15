@@ -44,11 +44,11 @@ value in the interval (0.0, inf).
 
 ### Accelerometer Functions
 
-#### Name
+#### <a name="wb_accelerometer_get_values"/>Name
 
 **wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_accelerometer)}, {[Java](java-api.md#java_accelerometer)}, {[Python](python-api.md#python_accelerometer)}, {[Matlab](matlab-api.md#matlab_accelerometer)}
 
 ``` c
 #include <webots/accelerometer.h>

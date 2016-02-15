@@ -17,11 +17,11 @@ inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
 
 ### Brake Functions
 
-#### Name
+#### <a name="wb_brake_set_damping_constant"/>Name
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_brake)}, {[Java](java-api.md#java_brake)}, {[Python](python-api.md#python_brake)}, {[Matlab](matlab-api.md#matlab_brake)}
 
 ``` c
 #include <webots/brake.h>

@@ -198,11 +198,11 @@ not necessary to add a [Physics](physics.md#physics) node to the
 
 ### Connector Functions
 
-#### Name
+#### <a name="wb_connector_get_presence"/>Name
 
 **wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}
 
 ``` c
 #include <webots/connector.h>
@@ -256,11 +256,11 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 ---
 
-#### Name
+#### <a name="wb_connector_lock"/>Name
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}
 
 ``` c
 #include <webots/connector.h>

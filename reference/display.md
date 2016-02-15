@@ -81,11 +81,11 @@ restored.
 
 ### Display Functions
 
-#### Name
+#### <a name="wb_display_get_width"/>Name
 
 **wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -101,11 +101,11 @@ fields.
 
 ---
 
-#### Name
+#### <a name="wb_display_set_context"/>Name
 
 **wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -118,8 +118,8 @@ void wb_display_set_opacity(WbDeviceTag tag, double opacity)
 #### Description
 
 These three functions define the context in which the subsequent drawing
-commands (see [draw primitive functions](display.md#description)) will be
-applied.
+commands (see [draw primitive functions](display.md#wb_display_draw_primitive))
+will be applied.
 
 `wb_display_set_color()` defines the color for the subsequent drawing commands.
 It is expressed as a 3 bytes RGB integer, the most significant byte (leftmost
@@ -159,11 +159,11 @@ the magenta color.
 
 ---
 
-#### Name
+#### <a name="wb_display_draw_primitive"/>Name
 
 **wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -183,7 +183,7 @@ void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int si
 
 These functions order the execution of a drawing primitive on the display. They
 depend on the context of the display as defined by the contextual functions (see
-[set context functions](display.md#description)).
+[set context functions](display.md#wb_display_set_context)).
 
 `wb_display_draw_pixel()` draws a pixel at the (`x`,`y`) coordinate.
 
@@ -232,11 +232,11 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 ---
 
-#### Name
+#### <a name="wb_display_image_functions"/>Name
 
 **wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
 
 ``` c
 #include <webots/display.h>

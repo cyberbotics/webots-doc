@@ -170,7 +170,12 @@ class BookParser:
     def parseReferences(self):
         for idNode in self.root.findall('.//*[@id]'):
             refId = idNode.attrib.get('id')
-            anchor = slugify(self.getTitle(idNode))
+            anchor = ''
+            if idNode.tag == 'refentry' or \
+              (idNode.tag == 'table' and self.parents[idNode].tag == 'sect1'):
+                anchor = slugify(refId)
+            else:
+                anchor = slugify(self.getTitle(idNode))
 
             filename = ''
             node = idNode
@@ -459,6 +464,12 @@ class BookParser:
         if len(title) > 0:
             outFile.write('%%figure "%s"\n\n' % (title))
 
+        # exception: display the anchor
+        if nCols == 1 and node.attrib.get('id') and \
+           (node.attrib.get('id').startswith('cpp_') or node.attrib.get('id').startswith('java_') or \
+            node.attrib.get('id').startswith('python_') or node.attrib.get('id').startswith('matlab_')):
+            outFile.write('<a name="%s"/>\n\n' % (node.attrib.get('id')))
+
         if not header:
             outFile.write('| ' * (1 + nCols) + '\n')
             firstEntry = True
@@ -576,7 +587,10 @@ class BookParser:
         for child in node.getchildren():
             if child.tag == 'refnamediv':
                 indent = 4
-                outFile.write('#' * indent + ' Name\n\n')
+                anchorRef = ''
+                if node.attrib.get('id'):
+                    anchorRef = '<a name="' + slugify(node.attrib.get('id')) + '"/>'
+                outFile.write('#' * indent + ' ' + anchorRef + 'Name\n\n')
                 firstRefName = True
                 for subchild in node.findall('.//refname'):
                     if firstRefName:

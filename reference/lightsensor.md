@@ -188,11 +188,11 @@ radiometry terms and units in this document with their photometry equivalents:
 
 ### LightSensor Functions
 
-#### Name
+#### <a name="wb_light_sensor_get_value"/>Name
 
 **wb\_light\_sensor\_enable**, **wb\_light\_sensor\_disable**, **wb\_light\_sensor\_get\_sampling\_period**, **wb\_light\_sensor\_get\_value** - *enable, disable and read light sensor measurement*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_light_sensor)}, {[Java](java-api.md#java_light_sensor)}, {[Python](python-api.md#python_light_sensor)}, {[Matlab](matlab-api.md#matlab_light_sensor)}
 
 ``` c
 #include <webots/light_sensor.h>

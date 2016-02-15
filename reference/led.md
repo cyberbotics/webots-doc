@@ -40,11 +40,11 @@ between 0 (off) and 255 (maximum intensity).
 
 ### LED Functions
 
-#### Name
+#### <a name="wb_led_set"/>Name
 
 **wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_led)}, {[Java](java-api.md#java_led)}, {[Python](python-api.md#python_led)}, {[Matlab](matlab-api.md#matlab_led)}
 
 ``` c
 #include <webots/led.h>

@@ -91,11 +91,11 @@ possible communication; the `type, range` and `aperture` will be ignored.
 
 ### Emitter Functions
 
-#### Name
+#### <a name="wb_emitter_send"/>Name
 
 **wb\_emitter\_send** - *send a data packet to potential receivers*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
 
 ``` c
 #include <webots/emitter.h>
@@ -160,11 +160,11 @@ in a C/C++ controller.
 
 ---
 
-#### Name
+#### <a name="wb_emitter_set_channel"/>Name
 
 **wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
 
 ``` c
 #include <webots/emitter.h>
@@ -190,11 +190,11 @@ static integer of the [Emitter](emitter.md#emitter) class
 
 ---
 
-#### Name
+#### <a name="wb_emitter_set_range"/>Name
 
 **wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
 
 ``` c
 #include <webots/emitter.h>
@@ -217,11 +217,11 @@ functions, a value of -1 indicates an infinite range.
 
 ---
 
-#### Name
+#### <a name="wb_emitter_get_buffer_size"/>Name
 
 **wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
 
 ``` c
 #include <webots/emitter.h>

@@ -74,11 +74,11 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### InertialUnit Functions
 
-#### Name
+#### <a name="wb_inertial_unit_get_roll_pitch_yaw"/>Name
 
 **wb\_inertial\_unit\_enable**, **wb\_inertial\_unit\_disable**, **wb\_inertial\_unit\_get\_sampling\_period**, **wb\_inertial\_unit\_get\_roll\_pitch\_yaw** - *enable, disable and read the output values of the inertial unit*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_inertial_unit)}, {[Java](java-api.md#java_inertial_unit)}, {[Python](python-api.md#python_inertial_unit)}, {[Matlab](matlab-api.md#matlab_inertial_unit)}
 
 ``` c
 #include <webots/inertial_unit.h>

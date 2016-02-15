@@ -149,11 +149,11 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 ### TouchSensor Functions
 
-#### Name
+#### <a name="wb_touch_sensor_get_values"/>Name
 
 **wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_touch_sensor)}
 
 ``` c
 #include <webots/touch_sensor.h>
@@ -187,11 +187,11 @@ with a sensor of type "force-3d" exclusively.
 
 ---
 
-#### Name
+#### <a name="wb_touch_sensor_get_type"/>Name
 
 **wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
 ``` c
 #include <webots/touch_sensor.h>

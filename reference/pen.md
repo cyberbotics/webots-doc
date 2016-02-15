@@ -72,11 +72,11 @@ function.
 
 ### Pen Functions
 
-#### Name
+#### <a name="wb_pen_write"/>Name
 
 **wb\_pen\_write** - *enable or disable pen writing*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}
 
 ``` c
 #include <webots/pen.h>
@@ -92,11 +92,11 @@ will write; if `write` is *false*, it won't.
 
 ---
 
-#### Name
+#### <a name="wb_pen_set_ink_color"/>Name
 
 **wb\_pen\_set\_ink\_color** - *change the color of a pen's ink*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}
 
 ``` c
 #include <webots/pen.h>

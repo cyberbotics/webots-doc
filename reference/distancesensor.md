@@ -220,11 +220,11 @@ Webots). The ground texture must be placed in a [Plane](plane.md#plane).
 
 ### DistanceSensor Functions
 
-#### Name
+#### <a name="wb_distance_sensor_get_value"/>Name
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}
 
 ``` c
 #include <webots/distance_sensor.h>

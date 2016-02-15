@@ -28,11 +28,11 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### PositionSensor Functions
 
-#### Name
+#### <a name="wb_position_sensor_get_value"/>Name
 
 **wb\_position\_sensor\_enable**, **wb\_position\_sensor\_disable**, **wb\_position\_sensor\_get\_sampling\_period**, **wb\_position\_sensor\_get\_value**, **wb\_position\_sensor\_get\_type** - *enable, disable and read position sensor measurement*
 
-{[C++](cpp-api.md)}, {[Java](java-api.md)}, {[Python](python-api.md)}, {[Matlab](matlab-api.md)}
+{[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}
 
 ``` c
 #include <webots/position_sensor.h>

@@ -25,6 +25,9 @@ function redirectUrls(node, targetPath) {
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
+        if (! href) {
+            continue;
+        }
         if (href.startsWith("www") || href.startsWith("http")) {
             // open external links in a new window
             a.setAttribute("target", "_blank");
@@ -64,9 +67,9 @@ function applyAnchor() {
     if (match && match.length == 2) {
         var anchorId = match[1];
         console.log("anchorId: " + anchorId);
-        var anchor = document.getElementById(anchorId);
-        if (anchor) {
-            anchor.scrollIntoView(true);
+        var anchors = document.getElementsByName(anchorId);
+        if (anchors.length > 0) {
+            anchors[0].scrollIntoView(true);
         }
     }
 }
@@ -78,8 +81,9 @@ function populateViewDiv(mdContent) {
     // markdown to html
     var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbFigure", "wbAnchors"]});
     var html = converter.makeHtml(mdContent);
-    console.log("HTML content: \n\n")
-    console.log(html);
+
+    // console.log("HTML content: \n\n")
+    // console.log(html);
 
     var div = document.createElement("div");
     div.innerHTML = html;
@@ -96,8 +100,8 @@ function populateViewDiv(mdContent) {
 }
 
 function receiveMenuContent(menuContent) {
-    console.log("Menu content:\n\n");
-    console.log(menuContent);
+    // console.log("Menu content:\n\n");
+    // console.log(menuContent);
 
     var menu = null;
 

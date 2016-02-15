@@ -71,7 +71,7 @@ showdown.extension("wbFigure", function() {
             filter: function(text, converter, options) {
                 text = text.replace(/%figure\s+"([^]+?)"([^]+?)%end/gi, function(match, title, content) {
                     var foo = converter.makeHtml(content);
-                    return "<figure id=\"" + wbSlugify(title) + "\">" + foo + "<figcaption>" + title + "</figcaption></figure>";
+                    return "<figure name=\"" + wbSlugify(title) + "\">" + foo + "<figcaption>" + title + "</figcaption></figure>";
                 });
                 return text;
             }
@@ -111,7 +111,12 @@ showdown.extension("wbAnchors", function() {
                     console.error("wbAnchors: level mismatch");
                     return "";
                 }
-                return "<h" + level1 + " id=\"" + wbSlugify(content) + "\">" + content + "</h" + level1 + ">";
+
+                var tmpDiv = document.createElement("DIV");
+                tmpDiv.innerHTML = content;
+                var rawContent = tmpDiv.textContent || tmpDiv.innerText || "";
+
+                return "<h" + level1 + " name=\"" + wbSlugify(rawContent) + "\">" + content + "</h" + level1 + ">";
             }
         }
     ];

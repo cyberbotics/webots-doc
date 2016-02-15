@@ -32,14 +32,14 @@ function redirectUrls(node, targetPath) {
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
                 var newPage = match[1];
-                // TODO: do something with the anchor :-)
-                //var anchor = match[2]; // could be undefined
+                var anchor = match[2]; // could be undefined
+                var anchorString = (anchor && anchor.length > 0) ? anchor : "";
                 var currentUrl = window.location.href;
                 var newUrl = currentUrl;
                 if (currentUrl.indexOf("page=") > -1) {
-                    newUrl = currentUrl.replace(/page=([\w-]+)/, "page=" + newPage);
+                    newUrl = currentUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + newPage + ".md" + anchorString);
                 } else {
-                    newUrl = currentUrl + '&page=' + newPage + '.md';
+                    newUrl = currentUrl + "&page=" + newPage + ".md" + anchorString;
                 }
                 a.setAttribute("href", newUrl);
             }
@@ -63,8 +63,10 @@ function populateViewDiv(mdContent) {
     console.log(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ['wbFigure', 'wbVariables']});
+    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbFigure", "wbAnchors"]});
     var html = converter.makeHtml(mdContent);
+    console.log("HTML content: \n\n")
+    console.log(html);
 
     var div = document.createElement("div");
     div.innerHTML = html;
@@ -73,7 +75,7 @@ function populateViewDiv(mdContent) {
 
     document.getElementById("view").appendChild(div);
 
-    $('pre code').each(function(i, block) {
+    $("pre code").each(function(i, block) {
         hljs.highlightBlock(block);
     });
 }
@@ -241,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Target Url: " + targetUrl);
 
     // get the md file
-    getMDFile(targetUrl, { 'targetPath': targetPath, 'book': book });
+    getMDFile(targetUrl, { "targetPath": targetPath, "book": book });
 
     var menuUrl = targetPath + "menu.md";
     console.log("Menu Url: " + menuUrl);
@@ -253,8 +255,8 @@ document.addEventListener("DOMContentLoaded", function() {
         dataType: "text",
         success: receiveMenuContent,
         setup: {
-            'targetPath': targetPath,
-            'page': page
+            "targetPath": targetPath,
+            "page": page
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);

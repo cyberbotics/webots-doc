@@ -64,7 +64,10 @@ function applyAnchor() {
     if (match && match.length == 2) {
         var anchorId = match[1];
         console.log("anchorId: " + anchorId);
-        $('#' + anchorId)[0].scrollIntoView(true);
+        var anchor = document.getElementById(anchorId);
+        if (anchor) {
+            anchor.scrollIntoView(true);
+        }
     }
 }
 

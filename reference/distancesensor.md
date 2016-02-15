@@ -171,7 +171,7 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 
 | type (field) | "generic" | "infra-red" | "sonar" | "laser" |
 | --- | --- | --- | --- | --- |
-| numberOfRays (field) | > 0 | > 0 | > 0 | 1 |
+| numberOfRays (field) | `>` 0 | `>` 0 | `>` 0 | 1 |
 | Distance calculation | Average | Average | Nearest | Nearest |
 | gaussianWidth (field) | Used | Used | Ignored | Ignored |
 | Sensitive to red objects | No | Yes | No | No |

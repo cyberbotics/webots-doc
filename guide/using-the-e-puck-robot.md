@@ -54,8 +54,7 @@ table](using-the-e-puck-robot.md#e-puck-features).
 | Remote Control | infra-red LED for receiving standard remote control commands |
 | Expansion bus | expansion bus to add new possibilities to your robot |
 | Programming | C programming with the GNU GCC compiler system |
-| Simulation | Webots EDU or PRO facilitates the programming of e-puck with a
-      powerful simulation, remote control and cross-compilation system. |
+| Simulation | Webots EDU or PRO facilitates the programming of e-puck with a powerful simulation, remote control and cross-compilation system. |
 
 %end
 

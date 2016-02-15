@@ -481,7 +481,7 @@ class BookParser:
                     firstEntry = False
                 else:
                     outFile.write(' | ')
-                self.parsePara(entryNode, outFile, mergeCarriageReturns=(not header), format=False)
+                self.parsePara(entryNode, outFile, mergeCarriageReturns=True, format=False)
             outFile.write(' |\n')
             if line == 1 and header:
                 firstEntry = True

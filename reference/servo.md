@@ -326,7 +326,7 @@ a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 
 | Force | motor force | spring force | damping force |
 | --- | --- | --- | --- |
-| Turned on when: | maxForce > 0 | springConstant > 0 | dampingConstant > 0 |
+| Turned on when: | maxForce `>` 0 | springConstant `>` 0 | dampingConstant `>` 0 |
 | Turned off when: | maxForce = 0 | springConstant = 0 | dampingConstant = 0 |
 | regular motor (the default) | on | off | off |
 | regular spring & damper | off | on | on |

@@ -24,9 +24,9 @@ coordinates with respect to the center of the closest upper
 - `springConstant` and `dampingConstant`: These fields specify the uniform amount
 of rotational spring and damping effect around each of the the frame axis of the
 [BallJoint](balljoint.md#balljoint)'s closest upper [Solid](solid.md#solid) (see
-[Joint](joint.md#joint)'s ["Springs and Dampers"](jointparameters.md#springs-
-and-dampers) section for more information on these constants). This is can be
-useful to simulate a retraction force that pulls the
-[BallJoint](balljoint.md#balljoint) solid `endPoint` back towards its initial
-orientation.
+[Joint](joint.md#joint)'s ["Springs and
+Dampers"](jointparameters.md#springs-and-dampers) section for more information
+on these constants). This is can be useful to simulate a retraction force that
+pulls the [BallJoint](balljoint.md#balljoint) solid `endPoint` back towards its
+initial orientation.
 

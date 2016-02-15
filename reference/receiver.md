@@ -38,8 +38,10 @@ implementation difference between the "radio" and "serial" types.
 only. The receiver can only receive messages from emitters currently located
 within its reception cone. The cone's apex is located at the origin ([0 0 0]) of
 the receiver's coordinate system and the cone's axis coincides with the *z*-axis
-of the receiver coordinate system (see  in ). An `aperture` of -1 (the default)
-is considered to be infinite, meaning that a signal can be received from any
+of the receiver coordinate system (see [this
+figure](emitter.md#illustration-of-aperture-and-range-for-infra-red-emitter-receiver)
+in [this section](emitter.md#emitter)). An `aperture` of -1 (the default) is
+considered to be infinite, meaning that a signal can be received from any
 direction. For "radio" receivers, the `aperture` field is ignored.
 - `channel`: reception channel. The value is an identification number for an
 "infra-red" receiver or a frequency for a "radio" receiver. Normally, both
@@ -88,11 +90,12 @@ int wb_receiver_get_sampling_period(WbDeviceTag tag)
 `wb_receiver_enable()` starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate
 of once every `ms` milliseconds. Incoming data packet are appended to the tail
-of the reception queue (see ). Incoming data packets will be discarded if the
-receiver's buffer size (specified in the [Receiver](receiver.md#receiver) node)
-is exceeded. To avoid buffer overflow, the data packets should be read at a high
-enough rate by the controller program. The function `wb_receiver_disable()`
-stops the background listening.
+of the reception queue (see [this figure](receiver.md#receiver-s-packet-queue)).
+Incoming data packets will be discarded if the receiver's buffer size (specified
+in the [Receiver](receiver.md#receiver) node) is exceeded. To avoid buffer
+overflow, the data packets should be read at a high enough rate by the
+controller program. The function `wb_receiver_disable()` stops the background
+listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
@@ -115,7 +118,8 @@ void wb_receiver_next_packet(WbDeviceTag tag)
 #### Description
 
 The `wb_receiver_get_queue_length()` function returns the number of data packets
-currently present in the receiver's queue (see ).
+currently present in the receiver's queue (see [this
+figure](receiver.md#receiver-s-packet-queue)).
 
 The `wb_receiver_next_packet()` function deletes the head packet. The next
 packet in the queue, if any, becomes the new head packet. The user must copy
@@ -134,9 +138,9 @@ while (wb_receiver_get_queue_length(tag) > 0) {
 }
 ```
 
-This example assumes that the data (*message*) was sent in the form of a null-
-terminated string. The Emitter/Receiver API does not put any restriction on the
-type of data that can be transmitted. Any user chosen format is suitable, as
+This example assumes that the data (*message*) was sent in the form of a
+null-terminated string. The Emitter/Receiver API does not put any restriction on
+the type of data that can be transmitted. Any user chosen format is suitable, as
 long as emitters and receivers agree.
 
 %figure "Receiver's packet queue"
@@ -182,13 +186,13 @@ int wb_receiver_get_data_size(WbDeviceTag tag)
 #### Description
 
 The `wb_receiver_get_data()` function returns the data of the packet at the head
-of the reception queue (see ). The returned data pointer is only valid until the
-next call to the function `wb_receiver_next_packet()`. It is illegal to call
-`wb_receiver_get_data()` when the queue is empty
-(`wb_receiver_get_queue_length()` == 0). The [Receiver](receiver.md#receiver)
-node knows nothing about that structure of the data being sent but its byte
-size. The emitting and receiving code is responsible to agree on a specific
-format.
+of the reception queue (see [this figure](receiver.md#receiver-s-packet-queue)).
+The returned data pointer is only valid until the next call to the function
+`wb_receiver_next_packet()`. It is illegal to call `wb_receiver_get_data()` when
+the queue is empty (`wb_receiver_get_queue_length()` == 0). The
+[Receiver](receiver.md#receiver) node knows nothing about that structure of the
+data being sent but its byte size. The emitting and receiving code is
+responsible to agree on a specific format.
 
 The `wb_receiver_get_data_size()` function returns the number of data bytes
 present in the head packet of the reception queue. The *data size* is always
@@ -266,12 +270,13 @@ const double *wb_receiver_get_emitter_direction(WbDeviceTag tag)
 #### Description
 
 The `wb_receiver_get_signal_strength()` function operates on the head packet in
-the receiver's queue (see ). It returns the simulated signal strength at the
-time the packet was transmitted. This signal strength is equal to the inverse of
-the distance between the emitter and the receiver squared. In other words, *s =
-1 / r^2*, where *s* is the signal strength and *r* is the distance between
-emitter and receiver. It is illegal to call this function if the receiver's
-queue is empty (`wb_receiver_get_queue_length()` == 0).
+the receiver's queue (see [this figure](receiver.md#receiver-s-packet-queue)).
+It returns the simulated signal strength at the time the packet was transmitted.
+This signal strength is equal to the inverse of the distance between the emitter
+and the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
+strength and *r* is the distance between emitter and receiver. It is illegal to
+call this function if the receiver's queue is empty
+(`wb_receiver_get_queue_length()` == 0).
 
 The function `wb_receiver_get_emitter_direction()` also operates on the head
 packet in the receiver's queue. It returns a normalized (length=1) vector that

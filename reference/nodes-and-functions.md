@@ -13,6 +13,7 @@ example, the Webots [WorldInfo](worldinfo.md#worldinfo) and
 This manual covers all the functions of the controller API, necessary to program
 robots. The C prototypes of these functions are described under the *SYNOPSIS*
 tag. The prototypes for the other languages are available through hyperlinks or
-directly in . The language-related particularities mentioned under the label
-called *C++ Note, Java Note, Python Note, Matlab Note*, etc.
+directly in [this chapter](other-apis.md#other-apis). The language-related
+particularities mentioned under the label called *C++ Note, Java Note, Python
+Note, Matlab Note*, etc.
 

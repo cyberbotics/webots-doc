@@ -45,12 +45,23 @@ class Reference:
         self.anchor = anchor
         self.kind = kind
 
+    def getKind(self, preceedingText):
+        processedText = preceedingText.strip().lower()
+        if len(processedText) > 0:
+            lastWord = processedText.rsplit(None, 1)[-1]
+            if lastWord.startswith('th'):
+                return self.kind
+            else:
+                return 'this ' + self.kind
+        else:
+            return self.kind
+
     def getUrl(self):
         if len(self.anchor) > 0: 
             return '%s#%s' % (self.filename, self.anchor)
         else:
             return self.filename
-        
+
     def __str__(self):
         if len(self.anchor) > 0: 
             return '%s: "%s#%s" (%s)' % (self.refId, self.filename, self.anchor, self.kind)
@@ -173,7 +184,7 @@ class BookParser:
                 filename = slugify(self.getTitle(node)) + '.md'
 
             kind = ''
-            if idNode.tag == 'sect1' or idNode.tag == 'sect2' or idNode.tag == 'sect3' or idNode.tag == 'preface':
+            if idNode.tag == 'sect1' or idNode.tag == 'sect2' or idNode.tag == 'sect3' or idNode.tag == 'preface' or idNode.tag == 'refentry':
                 kind = 'section'
             else:
                 kind = idNode.tag
@@ -250,7 +261,7 @@ class BookParser:
         text.strip()
         content = text.split('\n')
         text = ' '.join(map(lambda x: x.strip(), content)).strip()
-        content = textwrap.wrap(text, width=80)
+        content = textwrap.wrap(text, width=80, break_long_words=False, break_on_hyphens=False)
         output = ''
         for i in range(0, len(content)):
             line = content[i]
@@ -327,6 +338,14 @@ class BookParser:
                         else:
                             text += child.attrib.get('width')
                     text += ')'
+                elif child.tag == 'xref':
+                    linkend = child.attrib.get('linkend')
+                    if linkend is None:
+                        raise Exception('xref without linkend attribute')
+                    ref = self.referenceManager.getReferenceById(linkend)
+                    if ref is None:
+                        raise Exception('reference to "' + linkend + '" is undefined')
+                    text += '[%s](%s)' % (ref.getKind(text), ref.getUrl())
             text += self.parseText(child.tail, True, mergeCarriageReturns, False)
 
         if mergeCarriageReturns:

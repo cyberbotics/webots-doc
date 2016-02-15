@@ -13,8 +13,8 @@ at (0,0,0) in the local coordinate system and aligned with the local coordinate
 axes. By default, the box measures 2 meters in each dimension, from -1 to +1.
 
 The `size` field specifies the extents of the box along the *x*-, *y*-, and
-*z*-axes respectively. See . Three positive values display the outside faces
-while three negative values display the inside faces.
+*z*-axes respectively. See [this figure](box.md#box-node). Three positive values
+display the outside faces while three negative values display the inside faces.
 
 %figure "Box node"
 

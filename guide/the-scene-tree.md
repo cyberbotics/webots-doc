@@ -29,7 +29,8 @@ editor section:
 ![](png/help-button.png =26x26) `Help`: Context sensitive help for the currently
 selected node.
 
-Additionally, when a node is selected, other actions are available as shown in :
+Additionally, when a node is selected, other actions are available as shown in
+[this figure](the-scene-tree.md#webots-node-editor):
 
 %figure "Webots node editor"
 

@@ -3,7 +3,8 @@
 The Webots licenses comes in three different flavors, including Webots PRO,
 Webots EDU and Webots MOD. They differ by the features and price. These
 different versions are described in this section. The features available in the
-different versions are summarized in .
+different versions are summarized in [this
+table](webots-licenses.md#webots-licenses-summary).
 
 ### Webots PRO
 

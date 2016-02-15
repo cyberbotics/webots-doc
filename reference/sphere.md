@@ -9,7 +9,7 @@ Sphere {
 
 The [Sphere](sphere.md#sphere) node specifies a sphere centered at (0,0,0) in
 the local coordinate system. The `radius` field specifies the radius of the
-sphere (see ).
+sphere (see [this figure](sphere.md#sphere-node)).
 
 If `radius` is positive, the outside faces of the sphere are displayed while if
 it is negative, the inside faces are displayed.

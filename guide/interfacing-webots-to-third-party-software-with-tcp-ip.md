@@ -61,6 +61,6 @@ device, the protocol must send the images to the controller via TCP/IP, which
 might be network intensive. Hence it is recommended to have a high speed
 network, or use small resolution camera images, or compress the image data
 before sending it to the controller. This overhead is negligible if you use a
-low resolution camera such as the Khepera K213 (see example "WEBOTS\_MODULES\_PA
-TH/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
+low resolution camera such as the Khepera K213 (see example
+"WEBOTS\_MODULES\_PATH/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
 

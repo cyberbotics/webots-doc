@@ -45,7 +45,8 @@ the charger (*J*), its maximum energy (*J*) and its charging speed (*W=J/s*).
 
 - `radius`: radius of the charging area in meters. The charging area is a disk
 centered on the origin of the charger coordinate system. The robot can recharge
-itself if its origin is in the charging area (see ).
+itself if its origin is in the charging area (see [this
+figure](charger.md#the-sensitive-area-of-a-charger)).
 
 %figure "The sensitive area of a charger"
 

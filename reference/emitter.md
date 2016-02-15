@@ -17,8 +17,8 @@ Emitter {
 
 ### Description
 
-The [Emitter](emitter.md#emitter) node is used to model radio, serial or infra-
-red emitters. An [Emitter](emitter.md#emitter) node must be added to the
+The [Emitter](emitter.md#emitter) node is used to model radio, serial or
+infra-red emitters. An [Emitter](emitter.md#emitter) node must be added to the
 children of a robot or a supervisor. Please note that an emitter can send data
 but it cannot receive data. In order to simulate a unidirectional communication
 between two robots, one robot must have an [Emitter](emitter.md#emitter) while
@@ -51,9 +51,11 @@ only. The cone's apex is located at the origin ([0 0 0]) of the emitter's
 coordinate system and the cone's axis coincides with the *z*-axis of the emitter
 coordinate system. An "infra-red" emitter can only send data to receivers
 currently located within its emission cone. An `aperture` of -1 (the default) is
-considered to be infinite, meaning that the emitted signals are omni-
-directional. For "radio" and "serial" emitters, this field is ignored.  See  for
-an illustration of `range` and `aperture`.
+considered to be infinite, meaning that the emitted signals are
+omni-directional. For "radio" and "serial" emitters, this field is ignored.  See
+[this
+figure](emitter.md#illustration-of-aperture-and-range-for-infra-red-emitter-receiver)
+for an illustration of `range` and `aperture`.
 
 %figure "Illustration of aperture and range for "infra-red" Emitter/Receiver"
 
@@ -61,12 +63,12 @@ an illustration of `range` and `aperture`.
 
 %end
 
-- `channel`: transmission channel. This is an identification number for an "infra-
-red" emitter or a frequency for a "radio" emitter. Normally a receiver must use
-the same channel as an emitter to receive the emitted data. However, the special
-channel -1 allows broadcasting messages on all channels. Channel 0 (the default)
-is reserved for communicating with a physics plugin. For inter-robot
-communication, please use positive channel numbers.
+- `channel`: transmission channel. This is an identification number for an
+"infra-red" emitter or a frequency for a "radio" emitter. Normally a receiver
+must use the same channel as an emitter to receive the emitted data. However,
+the special channel -1 allows broadcasting messages on all channels. Channel 0
+(the default) is reserved for communicating with a physics plugin. For
+inter-robot communication, please use positive channel numbers.
 
 - `baudRate`: the baud rate is the communication speed expressed in number of bits
 per second. A `baudRate` of -1 (the default) is regarded as infinite and causes
@@ -82,10 +84,10 @@ total number of bytes in the packets enqueued in the emitter cannot exceed this
 number. A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
 
 > **note**: [Emitter](emitter.md#emitter) nodes can also be used to communicate with the
-physics plugin (see ). In this case the channel must be set to 0 (the default).
-In addition it is highly recommended to choose -1 for the baudRate, in order to
-enable the fastest possible communication; the `type, range` and `aperture` will
-be ignored.
+physics plugin (see [this chapter](physics-plugin.md#physics-plugin)). In this
+case the channel must be set to 0 (the default). In addition it is highly
+recommended to choose -1 for the baudRate, in order to enable the fastest
+possible communication; the `type, range` and `aperture` will be ignored.
 
 ### Emitter Functions
 

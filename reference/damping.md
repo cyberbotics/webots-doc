@@ -23,11 +23,12 @@ The damping effect is applied after all forces have been applied to the bodies.
 Damping can be used to reduce simulation instability.
 
 > **note**: When several rigidly linked [Solid](solid.md#solid)s are merged (see
-[Physics](physics.md#physics)'s [solid merging](physics.md#implicit-solid-
-merging-and-joints) section) damping values of the aggregate body are averaged
-over the volumes of all [Solid](solid.md#solid) components. The volume of a
-[Solid](solid.md#solid) is the sum of the volumes of the geometries found in its
-`boundingObject`; overlaps are not handled.
+[Physics](physics.md#physics)'s [solid
+merging](physics.md#implicit-solid-merging-and-joints) section) damping values
+of the aggregate body are averaged over the volumes of all
+[Solid](solid.md#solid) components. The volume of a [Solid](solid.md#solid) is
+the sum of the volumes of the geometries found in its `boundingObject`; overlaps
+are not handled.
 
 The `linear` field indicates the amount of damping that must be applied to the
 body's linear motion. The `angular` field indicates the amount of damping that

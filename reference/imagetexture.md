@@ -27,13 +27,14 @@ are depicted below.
 %end
 
 The texture is read from the file specified by the `url` field. The file should
-be specified with a relative path (cf. ). Absolute paths work as well, but they
-are not recommended because they are not portable across different systems.
-Ideally, the texture file should lie next to the world file, possibly inside a
-"textures" subfolder. Supported image formats include both JPEG and PNG. The
-rendering of the PNG alpha transparency is supported. It is slightly more
-efficient to use textures with power of 2 resolution (e.g. 8x8, 2048x64, etc.).
-Otherwise an internal upscaling is performed.
+be specified with a relative path (cf. [this
+section](imagetexture.md#search-rule-of-the-texture-path)). Absolute paths work
+as well, but they are not recommended because they are not portable across
+different systems. Ideally, the texture file should lie next to the world file,
+possibly inside a "textures" subfolder. Supported image formats include both
+JPEG and PNG. The rendering of the PNG alpha transparency is supported. It is
+slightly more efficient to use textures with power of 2 resolution (e.g. 8x8,
+2048x64, etc.). Otherwise an internal upscaling is performed.
 
 A PNG image may contain an alpha channel. If such an alpha channel exists, the
 texture becomes semi-transparent. This is useful to render for example a scissor

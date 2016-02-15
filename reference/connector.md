@@ -120,12 +120,15 @@ the origins of the coordinate systems of the connectors.
 parallel (within tolerance), but pointed in opposite directions.
 
 - `rotationTolerance`: the tolerated angle difference with respect to each of the
-allowed docking rotations (see ).
+allowed docking rotations (see [this
+figure](connector.md#example-of-rotational-alignment-numberofrotations-4-and-rotationaltolerance-22-5-deg)).
 
 - `numberOfRotations`: specifies how many different docking rotations are allowed
 in a full 360 degree rotation around the [Connector](connector.md#connector)'s
 *z*-axis. For example, modular robots' connectors are often 1-, 2- or 4-way
-dockable depending on mechanical and electrical interfaces. As illustrated in ,
+dockable depending on mechanical and electrical interfaces. As illustrated in
+[this
+figure](connector.md#example-of-rotational-alignment-numberofrotations-4-and-rotationaltolerance-22-5-deg),
 if `numberOfRotations` is 4 then there will be 4 different docking positions
 (one every 90 degrees). If you don't wish to check the rotational alignment
 criterion this field should be set to zero.
@@ -227,12 +230,12 @@ The *presence* state is defined as the correct positioning of a compatible peer
 
 Two connectors are in position if they are axis-aligned, rotation-aligned and
 near enough. To be axis-aligned, the angle between the *z*-axes of the two
-connectors must be smaller than the `axisTolerance` field. To be rotation-
-aligned, the angle between the *y*-axis of both `Connectors` must be within
-`distanceTolerance` of one of the possible `numberOfRotations` subdivisions of
-360 degrees. Two `Connectors` are near enough if the distance between them
-(measured between the origins of the coordinate systems) is smaller than
-`distanceTolerance`.
+connectors must be smaller than the `axisTolerance` field. To be
+rotation-aligned, the angle between the *y*-axis of both `Connectors` must be
+within `distanceTolerance` of one of the possible `numberOfRotations`
+subdivisions of 360 degrees. Two `Connectors` are near enough if the distance
+between them (measured between the origins of the coordinate systems) is smaller
+than `distanceTolerance`.
 
 Two `Connectors` are compatible if both types are "symmetric" or if one is
 "active" and the other is "passive". A further requirement for the compatibility

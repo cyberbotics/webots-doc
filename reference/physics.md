@@ -54,8 +54,8 @@ specify the mass rather than the density.
 - The `centerOfMass` field defines the position of the center of mass of the
 solid. It is expressed in meters in the relative coordinate system of the
 [Solid](solid.md#solid) node. If `centerOfMass` field is different from [0 0 0],
-then the center of mass is depicted as a dark red/green/blue cross in Webots 3D-
-window.
+then the center of mass is depicted as a dark red/green/blue cross in Webots
+3D-window.
 
 - The `inertiaMatrix` field can be used to manually specify the inertia matrix of
 the [Solid](solid.md#solid). This field can either be empty (the default) or
@@ -165,8 +165,8 @@ aggregates numerous components.
 
 > **note**: When solid merging applies, only the highest ancestor of the rigid assembly has
 a body (a non null `dBodyID` in ODE terms) which holds the physical properties
-of the assembly. This may impact the way you design a [physics plugin](physics-
-plugin.md#physics-plugin)s.
+of the assembly. This may impact the way you design a [physics
+plugin](physics-plugin.md#physics-plugin)s.
 
 When designing the robot tree structure, there is one important rule to remember
 about the [Physics](physics.md#physics) nodes: *If a Solid node has a parent and

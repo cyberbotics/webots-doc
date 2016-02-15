@@ -25,6 +25,6 @@ field. This field can be filled with a
 [PositionSensor](positionsensor.md#positionsensor) and/or a
 [Brake](brake.md#brake) device. If no motor is specified, the joint is passive
 joint.
-- `position`: see [joint's hidden position field](joint.md#joint-s-hidden-
-position-fields).
+- `position`: see [joint's hidden position
+field](joint.md#joint-s-hidden-position-fields).
 

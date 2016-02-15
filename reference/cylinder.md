@@ -18,7 +18,7 @@ The [Cylinder](cylinder.md#cylinder) node specifies a cylinder centered at
 the local *y*-axis. By default, the cylinder spans -1 to +1 in all three
 dimensions. The `radius` field specifies the radius of the cylinder and the
 `height` field specifies the height of the cylinder along the central axis. See
-.
+[this figure](cylinder.md#the-cylinder-node).
 
 If both `height` and `radius` are positive, the outside faces of the cylinder
 are displayed while if they are negative, the inside faces are displayed.

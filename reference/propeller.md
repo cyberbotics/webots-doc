@@ -55,8 +55,9 @@ directory of Webots shows three different helicopters modeled with
 ### Field Summary
 
 - `shaftAxis`: defines the axis along which the resultant thrust and torque will
-be exerted, see .
-- `centerOfThrust`: defines the point where the generated thrust applies, see .
+be exerted, see [this figure](propeller.md#propeller).
+- `centerOfThrust`: defines the point where the generated thrust applies, see
+[this figure](propeller.md#propeller).
 - `thrustConstants` and `torqueConstants`: coefficients used to define the
 resultant thrust and torque as functions of the motor angular velocity and the
 linear speed of adavance, see above formulae.

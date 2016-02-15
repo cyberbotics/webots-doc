@@ -86,7 +86,7 @@ described in more detail in the "Springs and Dampers" section, see below.
 ### Units
 
 Rotational servos units are expressed in *radians* while linear servos units are
-expressed in *meters*. See :
+expressed in *meters*. See [this table](servo.md#servo-units):
 
 %figure "Servo Units"
 
@@ -109,7 +109,7 @@ represent the initial coordinate system transformation between the
 In a "rotational" [Servo](servo.md#servo), these fields have the following
 meaning: The `translation` field specifies the translation of the axis of
 rotation. The `rotation` field specifies the orientation of the axis of
-rotation. See .
+rotation. See [this figure](servo.md#rotational-servo).
 
 %figure "Rotational servo"
 
@@ -119,7 +119,8 @@ rotation. See .
 
 In a "linear" [Servo](servo.md#servo), these fields have the following meaning:
 The `translation` field specifies the translation of the sliding axis. The
-`rotation` field specifies the direction of the sliding axis. See .
+`rotation` field specifies the direction of the sliding axis. See [this
+figure](servo.md#linear-servo).
 
 %figure "Linear servo"
 
@@ -144,14 +145,15 @@ The standard way of operating a [Servo](servo.md#servo) is to control the
 position directly (*position control*). The user specifies a target position
 using the `wb_servo_set_position()` function, then the P-controller takes into
 account the desired velocity, acceleration and motor force in order to move the
-servo to the target position. See .
+servo to the target position. See [this table](servo.md#servo-control-summary).
 
-In Webots, position control is carried out in three stages, as depicted in . The
-first stage is performed by the user-specified controller (1) that decides which
-position, velocity, acceleration and motor force must be used. The second stage
-is performed by the servo P-controller (2) that computes the current velocity of
-the servo *V<sub>c</sub>*. Finally, the third stage (3) is carried out by the
-physics simulator (ODE joint motors).
+In Webots, position control is carried out in three stages, as depicted in [this
+figure](servo.md#servo-control). The first stage is performed by the
+user-specified controller (1) that decides which position, velocity,
+acceleration and motor force must be used. The second stage is performed by the
+servo P-controller (2) that computes the current velocity of the servo
+*V<sub>c</sub>*. Finally, the third stage (3) is carried out by the physics
+simulator (ODE joint motors).
 
 %figure "Servo control"
 
@@ -302,13 +304,14 @@ velocity computed by the physics simulator.
 
 %end
 
-As you can see in (see  ), a [Servo](servo.md#servo) creates a joint between two
-masses *m<sub>0</sub>* and *m<sub>1</sub>*. *m<sub>0</sub>* is defined by the
-[Physics](physics.md#physics) node in the parent of the [Servo](servo.md#servo).
-The mass *m<sub>1</sub>* is defined by the [Physics](physics.md#physics) node of
-the [Servo](servo.md#servo). The value *x<sub>0</sub>* corresponds to the
-initial translation of the [Servo](servo.md#servo) defined by the `translation`
-field. The position *x* corresponds to the current position of the
+As you can see in (see  [this figure](servo.md#mechanical-diagram-of-a-servo)),
+a [Servo](servo.md#servo) creates a joint between two masses *m<sub>0</sub>* and
+*m<sub>1</sub>*. *m<sub>0</sub>* is defined by the [Physics](physics.md#physics)
+node in the parent of the [Servo](servo.md#servo). The mass *m<sub>1</sub>* is
+defined by the [Physics](physics.md#physics) node of the
+[Servo](servo.md#servo). The value *x<sub>0</sub>* corresponds to the initial
+translation of the [Servo](servo.md#servo) defined by the `translation` field.
+The position *x* corresponds to the current position of the
 [Servo](servo.md#servo) defined by the `position` field.
 
 ### Servo Forces
@@ -355,9 +358,10 @@ is necessary to have such elements mounted serially. With Webot, serially
 mounted elements must be modeled by having [Servo](servo.md#servo) nodes used as
 children of other [Servo](servo.md#servo) nodes. For example if you wish to have
 a system where a motor controls the resting position of a spring, then you will
-need two [Servo](servo.md#servo) nodes, as depicted in . In this example, the
-parent [Servo](servo.md#servo) will have a motor force (maxForce > 0) and the
-child [Servo](servo.md#servo) will have spring and damping forces
+need two [Servo](servo.md#servo) nodes, as depicted in [this
+figure](servo.md#example-of-serial-connection-of-two-servo-nodes). In this
+example, the parent [Servo](servo.md#servo) will have a motor force (maxForce >
+0) and the child [Servo](servo.md#servo) will have spring and damping forces
 (`springConstant` > 0 and `dampingConstant` > 0).
 
 %figure "Example of serial connection of two Servo nodes"

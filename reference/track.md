@@ -64,7 +64,7 @@ it is inside or outside the belt. By convention the wheels are all aligned along
 the z-axis of the [Track](track.md#track) node and have to be defined in
 clockwise order starting from the one having the smallest x-axis value. The
 following code fragment shows the belt path definition for the convex track
-example shown in :
+example shown in [this figure](track.md#convex-track-s-belt-shape-example):
 
 ```
 children [
@@ -102,7 +102,8 @@ children [
 
 %end
 
-Then for a concave track belt shape like the one shown in the following
+Then for a concave track belt shape like the one shown in [this
+figure](track.md#concave-track-s-belt-shape-example) the following
 [TrackWheel](trackwheel.md#trackwheel) nodes have to be defined:
 
 ```

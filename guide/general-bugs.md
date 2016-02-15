@@ -21,11 +21,12 @@ in such environments.
 ### Collision detection
 
 Although collision detection works well generally well, `Cylinder-Cylinder`,
-`Cylinder-Capsule`, `IndexedFaceSet-IndexedFaceSet` and `IndexedFaceSet-
-Cylinder` collision detection may occasionaly yield wrong contact points.
-Sometimes the contact points may be slightly off the shape, therefore causing
-unrealistic reaction forces to be applied to the objects. Other times there are
-too few contact points, therefore causing vibration or instabilities.
+`Cylinder-Capsule`, `IndexedFaceSet-IndexedFaceSet` and
+`IndexedFaceSet-Cylinder` collision detection may occasionaly yield wrong
+contact points. Sometimes the contact points may be slightly off the shape,
+therefore causing unrealistic reaction forces to be applied to the objects.
+Other times there are too few contact points, therefore causing vibration or
+instabilities.
 
 ### Orientation dependent friction
 

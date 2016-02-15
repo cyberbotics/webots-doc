@@ -26,11 +26,12 @@ software. This manual is provided on an `as-is` basis. Neither the copyright
 holder nor any applicable licensor will be liable for any incidental or
 consequential damages.
 
-The Webots software was initially developed at the Laboratoire de Micro-
-Informatique (LAMI) of the Swiss Federal Institute of Technology, Lausanne,
-Switzerland (EPFL). The EPFL makes no warranties of any kind on this software.
-In no event shall the EPFL be liable for incidental or consequential damages of
-any kind in connection with the use and exploitation of this software.
+The Webots software was initially developed at the Laboratoire de
+Micro-Informatique (LAMI) of the Swiss Federal Institute of Technology,
+Lausanne, Switzerland (EPFL). The EPFL makes no warranties of any kind on this
+software. In no event shall the EPFL be liable for incidental or consequential
+damages of any kind in connection with the use and exploitation of this
+software.
 
 ## Trademark information
 

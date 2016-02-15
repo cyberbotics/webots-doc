@@ -60,8 +60,9 @@ is actually happening here is that the constraint is allowed to be violated by
 an amount proportional to CFM times the restoring force that is needed to
 enforce the constraint (see ODE documentation for more details).
 - The `physics` field refers to a physics plugin which allows the user to program
-custom physics effects using the ODE API. See   for a description on how to set
-up a physics plugin. This is especially useful for modeling hydrodynamic forces,
+custom physics effects using the ODE API. See [this
+chapter](physics-plugin.md#physics-plugin)  for a description on how to set up a
+physics plugin. This is especially useful for modeling hydrodynamic forces,
 wind, non-uniform friction, etc.
 - The `basicTimeStep` field defines the duration of the simulation step executed
 by Webots. It is a floating point value expressed in milliseconds. The minimum

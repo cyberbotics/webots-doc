@@ -8,10 +8,10 @@ values, since Webots save for you hidden PROTO fields which are bound to change
 over simulation time. Namely the `translation` and `rotation` fields of
 [Solid](solid.md#solid) nodes as well as the `position` fields of
 [Joint](joint.md#joint) nodes are saved as hidden PROTO fields in the field
-scope of every top-level PROTO. In case of [solid merging](physics.md#implicit-
-solid-merging-and-joints), note that hidden `translation` and `rotation` fields
-are saved only for the [Solid](solid.md#solid) placed at the top of the solid
-assembly.
+scope of every top-level PROTO. In case of [solid
+merging](physics.md#implicit-solid-merging-and-joints), note that hidden
+`translation` and `rotation` fields are saved only for the
+[Solid](solid.md#solid) placed at the top of the solid assembly.
 
 As in the case of non-PROTO objects, initial velocities of physical subparts of
 a PROTO are saved and can be subsequently restored when reloading your world

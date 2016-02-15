@@ -39,12 +39,14 @@ must extend the `DifferentialWheels` class. If in the Scene Tree a robot is of
 type `Supervisor`, then the C++/Java/Python controller class must be derived
 from the `Supervisor` class, etc.
 
-As you can see in , both `DifferentialWheels` and `Supervisor` are subclasses of
-the `Robot` class. Hence it is possible to call the `Robot`'s methods, such as,
-e.g., `step()` or `getLED()`, from the `DifferentialWheels` and `Supervisor`
-controllers. But it is not possible to call the `Supervisor` methods from a
-`DifferentialWheels` controller, and vice versa. For example it won't be
-possible to call `simulationRevert()` from a `DifferentialWheels` controller.
+As you can see in [this
+figure](cpp-java-python.md#a-small-subset-of-webots-oriented-object-apis), both
+`DifferentialWheels` and `Supervisor` are subclasses of the `Robot` class. Hence
+it is possible to call the `Robot`'s methods, such as, e.g., `step()` or
+`getLED()`, from the `DifferentialWheels` and `Supervisor` controllers. But it
+is not possible to call the `Supervisor` methods from a `DifferentialWheels`
+controller, and vice versa. For example it won't be possible to call
+`simulationRevert()` from a `DifferentialWheels` controller.
 
 %figure "A small subset of Webots oriented-object APIs"
 

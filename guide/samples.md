@@ -77,8 +77,8 @@ In this example, a humanoid robot performs endless gymnastic movements.
 %end
 
 In this example, two Koala robots (K-Team) circle on a moon-like surface. You
-can modify their trajectories with the arrow keys on your keyboard. The moon-
-like scenery is made of `IndexedFaceSet` nodes. Both robots use the same
+can modify their trajectories with the arrow keys on your keyboard. The
+moon-like scenery is made of `IndexedFaceSet` nodes. Both robots use the same
 controller code.
 
 ### ghostdog.wbt

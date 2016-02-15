@@ -106,9 +106,9 @@ that a collision occurred by changing the color of the corresponding
 boundingObject Geometry in the 3D view.
 
 Since Webots 7.2.0, a multi-threaded version of ODE is used. Therefore, this
-function may be called from different threads. You should ensure it is re-
-entrant and that every ODE function call modifying the ODE world is protected by
-mutexes as explained earlier.
+function may be called from different threads. You should ensure it is
+re-entrant and that every ODE function call modifying the ODE world is protected
+by mutexes as explained earlier.
 
 ### void webots_physics_step()
 

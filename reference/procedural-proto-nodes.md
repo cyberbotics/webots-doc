@@ -30,16 +30,20 @@ dictionary keys matches the PROTO's fields names. Each entry of this dictionary
 is a sub-dictionary with two keys named "value" and "defaultValue", the first
 one contains the current state of the field and the second one contains its the
 default state. The conversion between the VRML types and the Lua types is
-detailed in .
-- As shown in , the conversion of a VRML node is a Lua dictionary. This dictionary
-contains the following keys: "node\_name" containing the VRML node name,
-"fields" which is a dictionary containing the Lua representation of the VRML
-node fields, and "super" which can contains the super PROTO node (the node above
-in the hierarchy) if existing. This dictionary is equal to `nil` if the VRML
-node is not defined (`NULL`). For example, in the SimpleStairs example below,
-the `fields.appearance.node_name` key contains the `'Appearance'` string.
+detailed in [this
+table](procedural-proto-nodes.md#vrml-type-to-lua-type-conversion).
+- As shown in [this
+table](procedural-proto-nodes.md#vrml-type-to-lua-type-conversion), the
+conversion of a VRML node is a Lua dictionary. This dictionary contains the
+following keys: "node\_name" containing the VRML node name, "fields" which is a
+dictionary containing the Lua representation of the VRML node fields, and
+"super" which can contains the super PROTO node (the node above in the
+hierarchy) if existing. This dictionary is equal to `nil` if the VRML node is
+not defined (`NULL`). For example, in the SimpleStairs example below, the
+`fields.appearance.node_name` key contains the `'Appearance'` string.
 - The `context` dictionary provides contextual information about the PROTO. Table
-shows the available information and its corresponding keys.
+[this table](procedural-proto-nodes.md#content-of-the-context-dictionary) shows
+the available information and its corresponding keys.
 - The VRML comment ("#") prevails over the Lua statements.
 - The following Lua modules are availble directly: base, table, io, os, string,
 math, debug, package.

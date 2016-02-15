@@ -21,10 +21,10 @@ determine how light reflects off an object to create color.
 ### Field Summary
 
 - The `ambientIntensity` field specifies how much ambient light from the various
-light sources in the world this surface shall reflect. Ambient light is omni-
-directional and depends only on the number of light sources, not their positions
-with respect to the surface. Ambient color is calculated as `ambientIntensity` x
-`diffuseColor`.
+light sources in the world this surface shall reflect. Ambient light is
+omni-directional and depends only on the number of light sources, not their
+positions with respect to the surface. Ambient color is calculated as
+`ambientIntensity` x `diffuseColor`.
 - The `diffuseColor` field reflects all VRML97 light sources depending on the
 angle of the surface with respect to the light source. The more directly the
 surface faces the light, the more diffuse light reflects.

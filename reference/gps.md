@@ -34,7 +34,7 @@ the current noise, 0 means no influence (i.e. no correlation) and 1 means that
 the noise will be constant (noise fully correlated with the noise from one
 second ago). Internally the correlation factor corresponding to the sensor time
 step is computed and the current noise is estimated using a Gauss-Markov process
-as described in .
+as described in [this figure](gps.md#gauss-markov-process).
 
 %figure "Gauss-Markov process"
 

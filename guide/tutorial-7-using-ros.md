@@ -28,8 +28,9 @@ We now describe the actions to setup the controller directory
 and Webots side (as provided in your Webots distribution). We are to recreate
 the corresponding project based on its bare bones: the world file
 "WEBOTS\_MODULES\_PATH/projects/languages/ros/worlds/joystick.wbt", the source
-file "WEBOTS\_MODULES\_PATH/projects/languages/ros/controller/catkin\_ws/src/web
-ots\_joystick/src/webots\_joystick\_node.cpp" and the ROS launcher file
+file
+"WEBOTS\_MODULES\_PATH/projects/languages/ros/controller/catkin\_ws/src/webots\_joystick/src/webots\_joystick\_node.cpp"
+and the ROS launcher file
 "WEBOTS\_MODULES\_PATH/projects/languages/ros/controller/joy.launch". Note that
 "joy.launch" is used in "webots\_joystick\_node.cpp" to launch the ROS node
 "joy\_node" as child process:

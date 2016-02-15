@@ -124,8 +124,7 @@ file will be used as absolute path:
 
     $(PROJECT)/plugins/robot\_windows/$(VALUE)/$(PREFIX)$(VALUE)$(EXT)
 
-    $(WEBOTS)/resources/$(...)/plugins/robot\_windows/$(VALUE)/$(PREFIX)$(VALUE)$(EX
-    T)
+    $(WEBOTS)/resources/$(...)/plugins/robot\_windows/$(VALUE)/$(PREFIX)$(VALUE)$(EXT)
 
 - `remoteControl`: defines the path of the remote-control controller plugin used
 to remote control the real robot. The search algorithm is identical to the one
@@ -314,7 +313,7 @@ found, the function returns 0.
 
 #### See also
 
-.
+[section](robot.md#description).
 
 ---
 
@@ -359,7 +358,7 @@ device is not found, the function returns `NULL` in C++, `null` in Java or the
 
 #### See also
 
-.
+[section](robot.md#description).
 
 ---
 
@@ -784,7 +783,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 #### See also
 
-.
+[section](robot.md#description).
 
 ---
 
@@ -805,9 +804,9 @@ void wb_robot_mutex_unlock(WBMutexRef mutex)
 
 The `wb_robot_mutex_new()` function creates a new mutex and returns a reference
 to that mutex to be used with other mutex functions. A newly created mutex is
-always initially unlocked. Mutexes (mutual excluders) are useful with multi-
-threaded controllers to protect some resources (typically variables or memory
-chunks) from being used simultaneously by different threads.
+always initially unlocked. Mutexes (mutual excluders) are useful with
+multi-threaded controllers to protect some resources (typically variables or
+memory chunks) from being used simultaneously by different threads.
 
 The `wb_robot_mutex_delete()` function deletes the specified `mutex`. This
 function should be used when a mutex is no longer in use.
@@ -822,7 +821,7 @@ other threads to lock it.
 
 #### See also
 
-.
+[section](robot.md#description).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

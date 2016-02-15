@@ -10,7 +10,8 @@ classes having about 200 public functions located in the package called
 node of the scene tree (such as Robot, LED, etc.) or either utility classes
 (such as Motion, ImageRef, etc.). A complete description of these functions can
 be found in the reference guide while the instructions about the common way to
-program a Java controller can be found in the .
+program a Java controller can be found in the
+[chapter](programming-fundamentals.md#programming-fundamentals).
 
 ### Java and Java Compiler Installation
 

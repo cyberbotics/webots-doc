@@ -2,7 +2,8 @@
 
 The aim of this chapter is to explore in more detail the physics simulation by
 creating a solid with several bounding objects: a dumbbell made of two spheres
-and one cylinder. The expected result is depicted in .
+and one cylinder. The expected result is depicted in [this
+figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#expected-result-at-the-end-of-the-tutorial-about-compound-solids).
 
 %figure "Expected result at the end of the tutorial about compound solids."
 
@@ -24,15 +25,17 @@ node can be placed in a Transform node in order to change its relative position
 and orientation. Group nodes can also be used to group several subnodes.
 
 We want to implement a dumbbell made of a handle (Cylinder) and of two weights
-(Sphere) located at each end of the handle. The  depicts the Solid nodes and its
-subnodes required to implement the dumbbell.
+(Sphere) located at each end of the handle. The
+[figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries)
+depicts the Solid nodes and its subnodes required to implement the dumbbell.
 
-> **handson**: Create the dumbbell by following the . Create the handle first without placing
-it in a Transform node (so the handle axis will have the same direction as the
-*y*-axis of the solid). The handle should have a length of 0.1 m and a radius of
-0.01 m. The weights should have a radius of 0.03 m and a subdivision of 2. The
-weights can be moved at the handle extremities thanks to the `translation` field
-of their Transform nodes.
+> **handson**: Create the dumbbell by following the
+[figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries).
+Create the handle first without placing it in a Transform node (so the handle
+axis will have the same direction as the *y*-axis of the solid). The handle
+should have a length of 0.1 m and a radius of 0.01 m. The weights should have a
+radius of 0.03 m and a subdivision of 2. The weights can be moved at the handle
+extremities thanks to the `translation` field of their Transform nodes.
 
 %figure "Representation of the subnodes of a compound solid made of several transformed geometries."
 
@@ -148,9 +151,9 @@ Webots.
 It's more difficult to explain the behavior of the `ERP` and `CFM` fields. These
 values are directly used by the physics engine to determine how the constraints
 are solved. The default values are well defined  for a regular use of Webots. We
-recommend to read the `Reference Manual` and the documentation of [ODE](http
-://ode-wiki.org/wiki/index.php?title=Manual) (physics engine used in Webots) to
-understand completely their purpose.
+recommend to read the `Reference Manual` and the documentation of
+[ODE](http://ode-wiki.org/wiki/index.php?title=Manual) (physics engine used in
+Webots) to understand completely their purpose.
 
 ### Minor physics Parameters
 

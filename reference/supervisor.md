@@ -447,7 +447,7 @@ the corresonding body are reset to 0, hence the inertia is also zeroed. The
 `node` argument must be a [Solid](solid.md#solid) node (or a derived node). This
 function could be useful for resetting the physics of a solid after changing its
 translation or rotation. To stop the inertia of all available solids please
-refer to .
+refer to [this section](supervisor.md#description).
 
 ---
 
@@ -679,7 +679,7 @@ actually implemented by calling the ODE `dBodySetLinearVel()` and
 `dBodySetAngularVel()` functions for all bodies with a zero velocity parameter.
 This function is especially useful for resetting a robot to its initial position
 and inertia. To stop the inertia of a single [Solid](solid.md#solid) node please
-refer to .
+refer to [this section](supervisor.md#description).
 
 Furthermore, this function resets the seed of the random number generator used
 in Webots, so that noise-based simulations can be be reproduced identically
@@ -906,7 +906,7 @@ number of item minus one, otherwise the value of the field remains unchanged
 > **note**: Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when
 changing its translation or rotation using `wb_supervisor_field_set_sf_vec2f`
 and `wb_supervisor_field_set_sf_rotation` functions. If needed, the user has to
-explicitly call function.
+explicitly call [this section](supervisor.md#description) function.
 
 #### Examples
 

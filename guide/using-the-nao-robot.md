@@ -2,12 +2,13 @@
 
 ### Introduction
 
-The Nao robot is a humanoid robot developed by [Aldebaran Robotics](http://www
-.aldebaran-robotics.com). This section explains how to use Nao robot simulated
-in Webots together with the Choregraphe program of [Aldebaran
-Robotics](http://www.aldebaran-robotics.com). Currently Webots supports the Nao
-v3.3, v4.0 and v5.0 versions, with and without their articulated fingers
-(respectively with 25 and 21 degrees of freedom) for the first two.
+The Nao robot is a humanoid robot developed by [Aldebaran
+Robotics](http://www.aldebaran-robotics.com). This section explains how to use
+Nao robot simulated in Webots together with the Choregraphe program of
+[Aldebaran Robotics](http://www.aldebaran-robotics.com). Currently Webots
+supports the Nao v3.3, v4.0 and v5.0 versions, with and without their
+articulated fingers (respectively with 25 and 21 degrees of freedom) for the
+first two.
 
 The Webots installation includes several world files with Nao robots. You will
 find some in this folder:

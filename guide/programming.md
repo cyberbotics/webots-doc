@@ -72,12 +72,13 @@ more information about this function in the `Reference Manual`.
 In the physics plugin you can use ODE's `dBodyGetLinearVel()` and
 `dBodyAngularVel()` functions. These functions return the linear velocity in
 meters per second, respectively the angular velocity in radians per second.
-Please find a description of ODE functions here: [here](http://ode-
-wiki.org/wiki/index.php?title=Manual).
+Please find a description of ODE functions here:
+[here](http://ode-wiki.org/wiki/index.php?title=Manual).
 
 ### How can I reset my robot?
 
-Please see .
+Please see [this
+section](using-numerical-optimization-methods.md#resetting-the-robot).
 
 ### What does this mean: "Could not find controller {...} Loading void controller instead." ?
 
@@ -296,10 +297,10 @@ xz-plane.
 
 3. In the physics plugin (Webots PRO required): you can replace or extend Webots
 collision detection mechanism. This is an advanced technique that requires
-knowledge of the [ODE (Open Dynamics Engine) API](http://ode-
-wiki.org/wiki/index.php?title=Manual). Your collision detection mechanism must
-be implemented in the `webots_physics_collide()` function. This function is
-described in the Physics Plugin chapter of the `Reference Manual`.
+knowledge of the [ODE (Open Dynamics Engine)
+API](http://ode-wiki.org/wiki/index.php?title=Manual). Your collision detection
+mechanism must be implemented in the `webots_physics_collide()` function. This
+function is described in the Physics Plugin chapter of the `Reference Manual`.
 
 ### Why does my camera window stay black?
 

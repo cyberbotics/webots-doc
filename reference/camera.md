@@ -253,15 +253,17 @@ of `vFov/2`).
 %end
 
 The camera image is shown by default on top of the 3D window with a magenta
-border, see . The user can move this camera image at the desired position using
-the mouse drag and drop and resize it by clicking on the icon at the bottom
-right corner. Additionally a close button is available on the top right corner
-to hide the image. Once the robot is selected, it is also possible to show or
-hide the overlay images from the `Camera Devices` item in `Robot` menu.
+border, see [this figure](camera.md#camera-overlay-image). The user can move
+this camera image at the desired position using the mouse drag and drop and
+resize it by clicking on the icon at the bottom right corner. Additionally a
+close button is available on the top right corner to hide the image. Once the
+robot is selected, it is also possible to show or hide the overlay images from
+the `Camera Devices` item in `Robot` menu.
 
-It is also possible to show the camera image in an external window by double-
-clicking on it. After doing it, the overlay disappears and the new window pops
-up. Then, after closing the window, the overlay will be automatically restored.
+It is also possible to show the camera image in an external window by
+double-clicking on it. After doing it, the overlay disappears and the new window
+pops up. Then, after closing the window, the overlay will be automatically
+restored.
 
 ### Camera Functions
 
@@ -400,7 +402,8 @@ int wb_camera_get_type()
 
 This function returns the type of the camera as defined by the `type` field of
 the corresponding [Camera](camera.md#camera) node. The constants defined in
-"camera.h" are summarized in :
+"camera.h" are summarized in [this
+table](camera.md#return-values-for-the-wb_camera_get_type-function):
 
 %figure "Return values for the *wb_camera_get_type()* function"
 

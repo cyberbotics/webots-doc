@@ -47,8 +47,8 @@ file. Note that a specific Makefile is required in the controller's directory
 for performing this operation. For an e-puck robot, this Makefile must be named
 "Makefile.e-puck".
 
-The `Cross-compilation clean` menu item allows you to clean the cross-
-compilation files. Note that a specific Makefile is required in the controller's
-directory for performing this operation. For an e-puck robot, this Makefile must
-be named "Makefile.e-puck".
+The `Cross-compilation clean` menu item allows you to clean the
+cross-compilation files. Note that a specific Makefile is required in the
+controller's directory for performing this operation. For an e-puck robot, this
+Makefile must be named "Makefile.e-puck".
 

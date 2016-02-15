@@ -87,11 +87,12 @@ value to -1.
 the Scene Tree, are used by Webots when saving a world file to store the initial
 linear and angular velocities of a [Solid](solid.md#solid) with a non-NULL
 [Physics](physics.md#physics) node. If the [Solid](solid.md#solid) node is
-merged into a solid assembly (see [implicit solid merging](physics.md#implicit-
-solid-merging-and-joints)), then these fields will be effective only for the
-[Solid](solid.md#solid) at the top of the assembly. Hidden velocity fields allow
-you to save and restore the dynamics of your simulation or to define initial
-velocities for every physical objects in the scene.
+merged into a solid assembly (see [implicit solid
+merging](physics.md#implicit-solid-merging-and-joints)), then these fields will
+be effective only for the [Solid](solid.md#solid) at the top of the assembly.
+Hidden velocity fields allow you to save and restore the dynamics of your
+simulation or to define initial velocities for every physical objects in the
+scene.
 
 ### How to use the boundingObject field?
 
@@ -105,11 +106,11 @@ robot is composed of many complex shapes, e.g.,
 [IndexedFaceSet](indexedfaceset.md#indexedfaceset)s, placed in the `children`
 field of the [Solid](solid.md#solid) nodes. However this graphical
 representation is usually too complex to be used directly for detecting
-collisions. If there are too many faces the simulation becomes slow and error-
-prone. For that reason, it is useful to be able to approximate the graphical
-representation by simpler primitives, e.g., one or more [Box](box.md#box) or
-[Capsule](capsule.md#capsule)s, etc. This is the purpose of the `boundingObject`
-field.
+collisions. If there are too many faces the simulation becomes slow and
+error-prone. For that reason, it is useful to be able to approximate the
+graphical representation by simpler primitives, e.g., one or more
+[Box](box.md#box) or [Capsule](capsule.md#capsule)s, etc. This is the purpose of
+the `boundingObject` field.
 
 Various combinations of primitives can be used in a `boundingObject`: it can
 contain either:

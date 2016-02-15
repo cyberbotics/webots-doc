@@ -1,8 +1,8 @@
 ## Controller Plugin
 
 The controller functionality can be extended with user-implemented plugins. The
-purpose of a controller plugin is to facilitate the programming of robot-
-specific robot windows and remote-control wrappers.
+purpose of a controller plugin is to facilitate the programming of
+robot-specific robot windows and remote-control wrappers.
 
 Programming controller plugins rather than programming directly in the
 controller is more convenient because it increases considerably the modularity
@@ -16,12 +16,13 @@ controller library (libController) at startup. A controller plugin is a shared
 library loaded dynamically (at runtime) by libController after a specific event
 depending on its type.
 
-The  shows an overview of the controller plugin system. In this figure, the
-dashed arrows shows how the shared libraries are loaded, and the large dash
-lines represents an Inter-Process Communication (IPC). The IPC between
-libController and Webots is a pipe (On Windows this is a named pipe, and
-otherwise a local domain socket). The IPC between libRemoteControl and the real
-robot is defined by the user (TCP/IP, Serial, etc.).
+The [figure](controller-plugin.md#controller-plugin-overview) shows an overview
+of the controller plugin system. In this figure, the dashed arrows shows how the
+shared libraries are loaded, and the large dash lines represents an
+Inter-Process Communication (IPC). The IPC between libController and Webots is a
+pipe (On Windows this is a named pipe, and otherwise a local domain socket). The
+IPC between libRemoteControl and the real robot is defined by the user (TCP/IP,
+Serial, etc.).
 
 The system has been designed as follow. Every entities (the controller, the
 remote control library and the robot window library) should only call the
@@ -189,12 +190,12 @@ The motion is stored in a motion file in a user-readable format. The controller
 API allows to play easily the motion files on your robot. You can get the
 complete motion API in the reference manual.
 
-The motion editor (cf. the ) is a GUI helping to create motions which can be
-played by a robot. It is implemented in the Qt utils library, and is embedded
-inside the generic robot window plugin. This implies that the motion editor is
-accessible only if the robot is linked (cf. the Robot::robotWindow field) with
-either the generic window, or on a window using the Qt utils library's
-corresponding widget.
+The motion editor (cf. the [figure](controller-plugin.md#motion-editor-view)) is
+a GUI helping to create motions which can be played by a robot. It is
+implemented in the Qt utils library, and is embedded inside the generic robot
+window plugin. This implies that the motion editor is accessible only if the
+robot is linked (cf. the Robot::robotWindow field) with either the generic
+window, or on a window using the Qt utils library's corresponding widget.
 
 In the motion editor different fonts and colors are used to identify the status
 of poses and motor states: modified items are displayed using bold font,
@@ -292,13 +293,12 @@ structure is contained in
 For example, if you want to be able to use the distance sensor of the real
 robot, you have to wrap the `wbr_set_refresh_rate()` function (to set the
 internal state of the remote control library to read this distance sensor only
-when required), and to call `wbr_distance_sensor_set_value()` into the remote-
-control library when the distance sensor is refreshed (typically into the
+when required), and to call `wbr_distance_sensor_set_value()` into the
+remote-control library when the distance sensor is refreshed (typically into the
 `wbr_robot_step()` function).
 
 A complete sample (communicating with the e-puck robot using bluetooth) can be
 found in this directory:
 
-`WEBOTS_MODULES_PATH/projects/robots/e-puck/plugins/remote_controls/e-puck_bluet
-ooth`
+`WEBOTS_MODULES_PATH/projects/robots/e-puck/plugins/remote_controls/e-puck_bluetooth`
 

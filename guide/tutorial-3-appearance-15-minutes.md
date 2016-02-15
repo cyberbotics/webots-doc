@@ -6,7 +6,8 @@ when these nodes are used adequately. A good graphics quality does not only
 enhance the user's experience, it is also essential for simulations where robots
 perceive their environment (camera image processing, line following, etc.).
 
-The result at the end of this tutorial is shown in .
+The result at the end of this tutorial is shown in [this
+figure](tutorial-3-appearance-15-minutes.md#simulation-after-having-setup-the-light-and-the-appearance-nodes).
 
 ### New simulation
 
@@ -104,6 +105,7 @@ In this tutorial, you have learnt how to set up a good looking environment using
 the Appearance node and the light nodes.
 
 You can go further on this topic by reading the detailed description of these
-nodes in the `Reference Manual`. The  will give you a method to efficiently
-setup these nodes.
+nodes in the `Reference Manual`. The
+[section](modeling.md#how-to-get-a-realisitc-and-efficient-rendering) will give
+you a method to efficiently setup these nodes.
 

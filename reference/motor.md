@@ -78,7 +78,7 @@ section, see below.
 By *motor position*, we mean joint position as defined in
 [JointParameters](jointparameters.md#jointparameters). Rotational motors units
 are expressed in *radians* while linear motors units are expressed in *meters*.
-See :
+See [this table](motor.md#motor-units):
 
 %figure "Motor Units"
 
@@ -114,14 +114,15 @@ The standard way of operating a [Motor](motor.md#motor) is to control the
 position directly (*position control*). The user specifies a target position
 using the `wb_motor_set_position()` function, then the P-controller takes into
 account the desired velocity, acceleration and motor force in order to move the
-motor to the target position. See .
+motor to the target position. See [this table](motor.md#motor-control-summary).
 
-In Webots, position control is carried out in three stages, as depicted in . The
-first stage is performed by the user-specified controller (1) that decides which
-position, velocity, acceleration and motor force must be used. The second stage
-is performed by the motor P-controller (2) that computes the current velocity of
-the motor *V<sub>c</sub>*. Finally, the third stage (3) is carried out by the
-physics simulator (ODE joint motors).
+In Webots, position control is carried out in three stages, as depicted in [this
+figure](motor.md#motor-control). The first stage is performed by the
+user-specified controller (1) that decides which position, velocity,
+acceleration and motor force must be used. The second stage is performed by the
+motor P-controller (2) that computes the current velocity of the motor
+*V<sub>c</sub>*. Finally, the third stage (3) is carried out by the physics
+simulator (ODE joint motors).
 
 %figure "Motor control"
 

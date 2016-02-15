@@ -49,7 +49,7 @@ the joint motion.
 Rotational joint units ([HingeJoint](hingejoint.md#hingejoint),
 [Hinge2Joint](hinge2joint.md#hinge2joint)) are expressed in *radians* while
 linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
-*meters*. See :
+*meters*. See [this table](jointparameters.md#joint-units):
 
 %figure "Joint Units"
 
@@ -144,16 +144,17 @@ velocity computed by the physics simulator.
 
 %end
 
-As you can see in (see  ), a [Joint](joint.md#joint) creates a joint between two
-masses *m<sub>0</sub>* and *m<sub>1</sub>*. The mass *m<sub>0</sub>* is defined
-by the [Physics](physics.md#physics) node in the closest upper
-[Solid](solid.md#solid) of the [Joint](joint.md#joint). The mass *m<sub>1</sub>*
-is defined by the [Physics](physics.md#physics) node of the
-[Solid](solid.md#solid) placed into the `endPoint` of the
-[Joint](joint.md#joint). The value *x<sub>0</sub>* corresponds to the anchor
-position of the [Joint](joint.md#joint) defined in the `anchor` field of a
-[JointParameters](jointparameters.md#jointparameters) node. The position *x*
-corresponds to the current position of the [Joint](joint.md#joint) defined in
-the `position` field of a [JointParameters](jointparameters.md#jointparameters)
-node.
+As you can see in (see  [this
+figure](jointparameters.md#mechanical-diagram-of-a-slider-joint)), a
+[Joint](joint.md#joint) creates a joint between two masses *m<sub>0</sub>* and
+*m<sub>1</sub>*. The mass *m<sub>0</sub>* is defined by the
+[Physics](physics.md#physics) node in the closest upper [Solid](solid.md#solid)
+of the [Joint](joint.md#joint). The mass *m<sub>1</sub>* is defined by the
+[Physics](physics.md#physics) node of the [Solid](solid.md#solid) placed into
+the `endPoint` of the [Joint](joint.md#joint). The value *x<sub>0</sub>*
+corresponds to the anchor position of the [Joint](joint.md#joint) defined in the
+`anchor` field of a [JointParameters](jointparameters.md#jointparameters) node.
+The position *x* corresponds to the current position of the
+[Joint](joint.md#joint) defined in the `position` field of a
+[JointParameters](jointparameters.md#jointparameters) node.
 

@@ -70,13 +70,15 @@ rigid body.
 
 To define a rigid body, you will have to create a Solid node. Inside this node
 you will find different subnodes corresponding to the characteristics of the
-rigid body. The  depicts a rigid body and its subnodes. The graphical
-representation of the Solid is defined by the Shape nodes populating its
-`children` list. The collision bounds are defined by its `boundingObject` field.
-The graphical representation and the collision shape are often but not
-necessarily identical. Finally the `physics` field defines if the object belongs
-to the dynamical or to the statical environment. All these subnodes are
-optional, but the `physics` field needs the `boundingObject` to be defined.
+rigid body. The
+[figure](tutorial-2-modification-of-the-environment-20-minutes.md#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics)
+depicts a rigid body and its subnodes. The graphical representation of the Solid
+is defined by the Shape nodes populating its `children` list. The collision
+bounds are defined by its `boundingObject` field. The graphical representation
+and the collision shape are often but not necessarily identical. Finally the
+`physics` field defines if the object belongs to the dynamical or to the
+statical environment. All these subnodes are optional, but the `physics` field
+needs the `boundingObject` to be defined.
 
 %figure "The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics)."
 
@@ -84,13 +86,17 @@ optional, but the `physics` field needs the `boundingObject` to be defined.
 
 %end
 
-The Geometry box (in ) stands for any kind of geometrical primitive. In fact it
-can be substituted by a Sphere, a Box, a Cylinder, etc.
+The Geometry box (in [this
+figure](tutorial-2-modification-of-the-environment-20-minutes.md#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics))
+stands for any kind of geometrical primitive. In fact it can be substituted by a
+Sphere, a Box, a Cylinder, etc.
 
 ### Create a Ball
 
 We will now add a ball to the simulation. That ball will be modeled as a rigid
-body as shown in the . As Geometry nodes we will use Spheres.
+body as shown in the
+[figure](tutorial-2-modification-of-the-environment-20-minutes.md#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics).
+As Geometry nodes we will use Spheres.
 
 > **handson**: In the scene tree view, select the last node and add a Solid node using the
 `Add` button. Similarly select the `children` field of the Solid node, and add a
@@ -98,7 +104,9 @@ Shape node to it. Add a Sphere node as the `geometry` field of the just created
 Shape node. Add another Sphere node to the `boundingObject` field of the Solid.
 Finally add a Physics node to the `physics` field of the Solid. By modifying the
 `translation` field of the Solid node, place the ball in front of the robot (at
-*{0, 0.1, -0.2}* for example). Save the simulation. The result is depicted in .
+*{0, 0.1, -0.2}* for example). Save the simulation. The result is depicted in
+[this
+figure](tutorial-2-modification-of-the-environment-20-minutes.md#your-first-rigid-body-in-webots).
 
 %figure "Your first rigid body in Webots."
 
@@ -150,7 +158,8 @@ The field editor of the scene tree view allows you to enter the DEF string.
 Enter *"BALL\_GEOMETRY"*. Select the boundingObject field (containing the second
 Sphere node), and delete it by using the `Reset to default` button. Then click
 on the `Add` button, and select the `USE > BALL_GEOMETRY` in the dialog box. The
-result is shown in .
+result is shown in [this
+figure](tutorial-2-modification-of-the-environment-20-minutes.md#def-use-mechanism-on-the-sphere-node-called-ball_geometry).
 
 <!-- -->
 
@@ -172,10 +181,11 @@ result is shown in .
 ### Add Walls
 
 > **theory**: For convenience, the `boundingObject` field accepts also the Shape node (rather
-than the Sphere node directly). It would be also possible to use the same DEF-
-USE mechanism at the Shape level as shown in . For now the best advantage is to
-use this Shape also directly for graphical purposes. Later this will turn out to
-be very useful for some sensors.
+than the Sphere node directly). It would be also possible to use the same
+DEF-USE mechanism at the Shape level as shown in [this
+figure](tutorial-2-modification-of-the-environment-20-minutes.md#def-use-mechanism-applied-on-the-shape-node-of-a-solid).
+For now the best advantage is to use this Shape also directly for graphical
+purposes. Later this will turn out to be very useful for some sensors.
 
 In order to verify your progression, implement by yourself four walls to
 surround the environment. The walls have to be defined statically to the
@@ -183,7 +193,8 @@ environment, and use as much as possible the DEF-USE mechanism at the Shape
 level rather than at the Geometry level. Indeed it's more convenient to add an
 intermediate Shape node in the `boundingObject` field of the Solid node. The
 best Geometry primitive to implement the walls is the Box node. Only one Shape
-has to be defined for all the walls. The expected result is shown in .
+has to be defined for all the walls. The expected result is shown in [this
+figure](tutorial-2-modification-of-the-environment-20-minutes.md#the-simulation-state-at-the-end-of-this-second-tutorial).
 
 > **handson**: Add four walls without physics and using only one definition of the Shape node.
 

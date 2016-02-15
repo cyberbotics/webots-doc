@@ -106,7 +106,8 @@ exclusive.
 The `--start-streaming-server` option starts the Webots streaming server. An
 option can be given to change the default parameters of the streaming server.
 This option is a string containing a list of parameter keys and their values
-separated by semicolons. The supported options are described in .
+separated by semicolons. The supported options are described in [this
+table](starting-webots.md#streaming-server-options).
 
 %figure "Streaming server options"
 

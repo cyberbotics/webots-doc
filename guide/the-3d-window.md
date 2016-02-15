@@ -43,10 +43,13 @@ handles and keyboard shortcuts.
 #### Axis-aligned handles
 
 When a solid object is selected, some arrow-shaped handles appear in the 3D
-window (see ). These handles can be used to translate and rotate the object
-along the corresponding axis. For moving the object you can simply click on the
-handle and drag it to the desired position. A label will show the currect
-relative translation or rotation during the movement, as shown in .
+window (see [this
+figure](the-3d-window.md#axis-aligned-handles-to-move-solid-objects)). These
+handles can be used to translate and rotate the object along the corresponding
+axis. For moving the object you can simply click on the handle and drag it to
+the desired position. A label will show the currect relative translation or
+rotation during the movement, as shown in [this
+figure](the-3d-window.md#labels-displaying-relative-translation-and-rotation-when-moving-objects-with-handles).
 
 If the Control key (Ctrl), the handles for resizing the solid object will be
 displayed instead of translation and rotation handles. These resize handles can
@@ -108,15 +111,16 @@ torque vector has the desired direction.
 
 By default for each Camera and Display device, an overlay showing the recorded
 or displayed image is visible in the 3D view. The device type is indicated by
-the border color: magenta for Camera devices and cyan for Display devices, see .
-This overlay can be moved to the desired position on the view by clicking on it
-and dragging the mouse. In order to resize the overlay the user has to click on
-the icon located at the bottom right corner and drag the mouse, during this
-action the original not scaled image size will be indicated using darker areas,
-as depicted in Additionally a close button is available on the top right corner
-to hide the overlay. Once the robot is selected, it is also possible to show or
-hide the overlay images from the `Camera Devices` and `Display Devices` items in
-`Robot` menu.
+the border color: magenta for Camera devices and cyan for Display devices, see
+[this figure](the-3d-window.md#camera-and-display-overlays). This overlay can be
+moved to the desired position on the view by clicking on it and dragging the
+mouse. In order to resize the overlay the user has to click on the icon located
+at the bottom right corner and drag the mouse, during this action the original
+not scaled image size will be indicated using darker areas, as depicted in [this
+figure](the-3d-window.md#camera-overlay-resizing) Additionally a close button is
+available on the top right corner to hide the overlay. Once the robot is
+selected, it is also possible to show or hide the overlay images from the
+`Camera Devices` and `Display Devices` items in `Robot` menu.
 
 %figure "Camera and Display overlays"
 
@@ -132,11 +136,11 @@ hide the overlay images from the `Camera Devices` and `Display Devices` items in
 
 ### Show Camera and Display images in separate window
 
-Overlay images can also be displayed outside the 3D window, see . When double-
-clicking with the left mouse button on the overlay, a new external window
-displaying the device image is created and the overlay in the 3D window is
-disabled. It is possible to restore the 3D window overlay simply by closing the
-window.
+Overlay images can also be displayed outside the 3D window, see [this
+figure](the-3d-window.md#camera-and-display-image-window). When double-clicking
+with the left mouse button on the overlay, a new external window displaying the
+device image is created and the overlay in the 3D window is disabled. It is
+possible to restore the 3D window overlay simply by closing the window.
 
 %figure "Camera and Display image window"
 

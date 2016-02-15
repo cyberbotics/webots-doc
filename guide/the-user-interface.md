@@ -254,8 +254,8 @@ the simulation at real-time until it is interrupted by `Pause` or `Step`. In run
 mode, the 3D display of the scene is refreshed every *n* basic time steps, where
 *n* is defined in the `displayRefresh` field of the `WorldInfo` node.
 
-![](png/run-button.png =26x26) The `Run` menu item (and button) is like `Real-
-time`, except that it runs as fast as possible (Webots PRO only).
+![](png/run-button.png =26x26) The `Run` menu item (and button) is like
+`Real-time`, except that it runs as fast as possible (Webots PRO only).
 
 ![](png/fast-button.png =26x26) The `Fast` menu item (and button) is like `Run`,
 except that no graphical rendering is performed (Webots PRO only). As the
@@ -266,8 +266,8 @@ simulation and therefore this is well suited for cpu-intensive simulations
 ### Build Menu
 
 The `Build` menu provides the functionality to compile (or cross-compile)
-controller code. The build menu is described in more details [here](webots-
-built-in-editor.md#webots-built-in-editor).
+controller code. The build menu is described in more details
+[here](webots-built-in-editor.md#webots-built-in-editor).
 
 ### Robot Menu
 
@@ -386,9 +386,10 @@ of HTML pages, PDF documents, etc.
 ### Main toolbar
 
 The main toolbar contains items for editing the world and the speedometer (see
-subsection ), other than shortcuts to items of the `File`, `Simulation` and
-`View` menus. Edit actions always apply on the selected object, that is
-highlighted both in the 3D window and in the Scene Tree.
+subsection [this section](the-user-interface.md#speedometer-and-virtual-time)),
+other than shortcuts to items of the `File`, `Simulation` and `View` menus. Edit
+actions always apply on the selected object, that is highlighted both in the 3D
+window and in the Scene Tree.
 
 ![](png/show_scene_tree-button.png =26x26) `Hide/Show Scene Tree`: shows or
 hides the Scene Tree and resizes the 3D window consequently.
@@ -408,19 +409,20 @@ triggers a dialog that will let you choose a node type from a list. The new node
 is created with default values that can be modified afterwards. You can only
 insert a node suitable for the corresponding field. The dialog also gives the
 possibility to load a previously exported node by clicking on the `Import...`
-button. Further information about how to export a node are available [here](the-
-scene-tree.md#field-editor).
+button. Further information about how to export a node are available
+[here](the-scene-tree.md#field-editor).
 
 ![](png/delete-button.png =26x26) `Delete`: Deletes the selected object.
 
 ### Speedometer and Virtual Time
 
-A speedometer (see ) indicates the speed of the simulation on your computer. It
-is displayed on the main toolbar, and indicates how fast the simulation runs
-compared to real time. In other words, it represents the speed of the virtual
-time. If the value of the speedometer is 2, it means that your computer
-simulation is running twice as fast as the corresponding real robots would. This
-information is valid both in `Run` mode and `Fast` mode.
+A speedometer (see [this figure](the-user-interface.md#speedometer)) indicates
+the speed of the simulation on your computer. It is displayed on the main
+toolbar, and indicates how fast the simulation runs compared to real time. In
+other words, it represents the speed of the virtual time. If the value of the
+speedometer is 2, it means that your computer simulation is running twice as
+fast as the corresponding real robots would. This information is valid both in
+`Run` mode and `Fast` mode.
 
 %figure "Speedometer"
 
@@ -435,8 +437,8 @@ format:
 
 where *H* is the number of hours (may be several digits), *MM* is the number of
 minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds
-(see ). If the speedometer value is greater than one, the virtual time is
-progressing faster than real time.
+(see [this figure](the-user-interface.md#speedometer)). If the speedometer value
+is greater than one, the virtual time is progressing faster than real time.
 
 The basic time step for simulation can be set in the `basicTimeStep` field of
 the `WorldInfo` node in the scene tree window. It is expressed in virtual time

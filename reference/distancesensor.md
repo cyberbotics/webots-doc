@@ -56,7 +56,7 @@ in increasing order.
     for a distance value of 0.2 meters, the sensor will return 400 with a standard
     deviation of 10 percent (40), etc. Distance values not directly specified in the
     lookup table will be linearly interpolated. This can be better understood in
-    below.
+    [this figure](distancesensor.md#sensor-response-versus-obstacle-distance) below.
 
 %figure "Sensor response versus obstacle distance"
 
@@ -73,7 +73,8 @@ in increasing order.
                       0.02  1023  0.05,
                       4        0  0.4  ]
 
-    The resulting range of measured values is shown in .
+    The resulting range of measured values is shown in [this
+    figure](distancesensor.md#sensor-response-versus-obstacle-distance-with-opposite-response-noise-increase).
 
 %figure "Sensor response versus obstacle distance with opposite response-noise increase"
 
@@ -106,10 +107,12 @@ several rays are used and the sensor measurement value is computed from the
 weighted average of the individual rays' responses. By using multiple rays, a
 more accurate model of the physical infra-red or ultrasound sensor can be
 obtained. The sensor rays are distributed inside 3D-cones whose opening angles
-can be tuned through the `aperture` field. See  for the ray distributions from
-one to ten rays. The spacial distribution of the rays is as much as possible
-uniform and has a left/right symmetry. There is no upper limit on the number of
-rays; however, Webots' performance drops as the number of rays increases.
+can be tuned through the `aperture` field. See [this
+figure](distancesensor.md#predefined-configurations-for-1-through-10-sensor-rays)
+for the ray distributions from one to ten rays. The spacial distribution of the
+rays is as much as possible uniform and has a left/right symmetry. There is no
+upper limit on the number of rays; however, Webots' performance drops as the
+number of rays increases.
 
 %figure "Predefined configurations for 1 through 10 sensor rays"
 
@@ -132,15 +135,17 @@ beam hits an obstacle.
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for
 "generic" and "infra-red" sensors). When averaging the sensor's response, the
 individual weight of each sensor ray is computed according to a Gaussian
-distribution as described in . where *w<sub>i</sub>* is the weight of the *i*th
-ray, *t<sub>i</sub>* is the angle between the *i*th ray and the sensor axis, *a*
-is the aperture angle of the sensor, *g* is the Gaussian width, and *n* is the
-number of rays. As depicted in  , rays in the center of the sensor cone are
-given a greater weight than rays in the periphery. A wider or narrower
-distribution can be obtained by tuning the `gaussianWidth` field. An
-approximation of a flat distribution is obtained if a sufficiently large number
-is chosen for the `gaussianWidth`. This field is ignored for the "sonar" and
-"laser" DistanceSensor types.
+distribution as described in [this
+figure](distancesensor.md#weight-distribution-formulas). where *w<sub>i</sub>*
+is the weight of the *i*th ray, *t<sub>i</sub>* is the angle between the *i*th
+ray and the sensor axis, *a* is the aperture angle of the sensor, *g* is the
+Gaussian width, and *n* is the number of rays. As depicted in  [this
+figure](distancesensor.md#example-distribution-for-10-rays-using-a-gaussian-width-of-0-5),
+rays in the center of the sensor cone are given a greater weight than rays in
+the periphery. A wider or narrower distribution can be obtained by tuning the
+`gaussianWidth` field. An approximation of a flat distribution is obtained if a
+sufficiently large number is chosen for the `gaussianWidth`. This field is
+ignored for the "sonar" and "laser" DistanceSensor types.
 
 %figure "Example distribution for 10 rays using a Gaussian width of 0.5"
 
@@ -196,7 +201,8 @@ In the case of a "sonar" sensor, the return value will be the last value entered
 in the lookup table, i.e. the value corresponding to sonar sensor's range, if
 the angle of incidence is greater than 22.5 degrees (π/8 radians). In other
 words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
-never return and thus are lost for distance computation (see ).
+never return and thus are lost for distance computation (see [this
+figure](distancesensor.md#sonar-sensor)).
 
 %figure "Sonar sensor"
 

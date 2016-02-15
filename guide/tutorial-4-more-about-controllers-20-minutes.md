@@ -33,7 +33,8 @@ Controller programming requires some information related to the e-puck model.
 For doing the collision avoidance algorithm, we need to read the values of its 8
 infra-red distance sensors located around its turret, and we need to actuate its
 two wheels. The way that the distance sensors are distributed around the turret
-and the e-puck direction are depicted in .
+and the e-puck direction are depicted in [this
+figure](tutorial-4-more-about-controllers-20-minutes.md#top-view-of-the-e-puck-model-the-green-arrow-indicates-the-front-of-the-robot-the-red-lines-represent-the-directions-of-the-infrared-distance-sensors-the-string-labels-corresponds-to-the-distance-sensor-names).
 
 The distance sensors are modeled by 8 DistanceSensor nodes in the hierarchy of
 the robot. These nodes are referenced by their `name` fields (from "ps0" to
@@ -75,7 +76,8 @@ We would like to program a very simple collision avoidance behavior. You will
 program the robot to go forwards until an obstacle is detected by the front
 distance sensors, and then to turn towards the obstacle-free direction. For
 doing that, we will use the simple feedback loop depicted in the UML state
-machine in .
+machine in [this
+figure](tutorial-4-more-about-controllers-20-minutes.md#uml-state-machine-of-a-simple-feedback-loop).
 
 The complete code of this controller is given in the next subsection.
 
@@ -308,6 +310,7 @@ images) and it can run on another CPU (or CPU core) than Webots.
 - The controller code is linked with the "libController" dynamic library. This
 library handles the communication between your controller and Webots.
 
-The  explains in more detail controller programming. We invite you to read
-carefully this section before going on.
+The [section](controller-programming.md#controller-programming) explains in more
+detail controller programming. We invite you to read carefully this section
+before going on.
 

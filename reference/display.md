@@ -67,15 +67,17 @@ twice the `wb_display_draw_line` drawing function to draw the two lines.
 %end
 
 The display image is shown by default on top of the 3D window with a cyan
-border, see . The user can move this display image at the desired position using
-the mouse drag and drop and resize it by clicking on the icon at the bottom
-right corner. Additionally a close button is available on the top right corner
-to hide the image. Once the robot is selected, it is also possible to show or
-hide the overlay image from the `Display Devices` item in `Robot` menu.
+border, see [this figure](display.md#display-overlay-image). The user can move
+this display image at the desired position using the mouse drag and drop and
+resize it by clicking on the icon at the bottom right corner. Additionally a
+close button is available on the top right corner to hide the image. Once the
+robot is selected, it is also possible to show or hide the overlay image from
+the `Display Devices` item in `Robot` menu.
 
-It is also possible to show the display image in an external window by double-
-clicking on it. After doing it, the overlay disappears and the new window pops
-up. Then, after closing the window, the overlay will be automatically restored.
+It is also possible to show the display image in an external window by
+double-clicking on it. After doing it, the overlay disappears and the new window
+pops up. Then, after closing the window, the overlay will be automatically
+restored.
 
 ### Display Functions
 
@@ -141,6 +143,7 @@ replace the old ones for the following drawing instructions. It is expressed as
 a floating point value between 0.0 and 1.0; while 0 means that the new pixel has
 no effect over the old one and 1 means that the new pixel replaces entirely the
 old one. Only the color channel is affected by the `opacity` according to the
+[figure](display.md#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
 formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
@@ -282,8 +285,10 @@ sub-image is defined by its top left coordinate (`x`,`y`) and its dimensions
 parameter to the main display image. The (`x`,`y`) coordinates define the top
 left point of the pasted image. The resulting pixels displayed in the main
 display image are computed using a blending operation (similar to the one
-depicted in the  formula but involving the alpha channels of the old and new
-pixels instead of the opacity).
+depicted in the
+[figure](display.md#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
+formula but involving the alpha channels of the old and new pixels instead of
+the opacity).
 
 `wb_display_image_save()` saves a clipboard image referred to by the `ir`
 parameter to a file. The file name is defined by the `filename` parameter

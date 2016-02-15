@@ -1,6 +1,4 @@
 showdown.extension("wbFigure", function() {
-    'use strict';
-
     return [
         { // figure with legend to HTML
             type: "lang",
@@ -34,8 +32,6 @@ showdown.extension("wbFigure", function() {
 });
 
 showdown.extension("wbVariables", function() {
-    'use strict';
-
     // static variables to maintain
     // TODO: could be computed
     var vars = {

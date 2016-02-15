@@ -78,6 +78,19 @@ function populateViewDiv(mdContent) {
     console.log("Raw MD content:\n\n");
     console.log(mdContent);
 
+    // set page title
+    var hashtagIndex = mdContent.indexOf("#");
+    if (hashtagIndex >= 0) {
+        while (hashtagIndex + 1 < mdContent.length && mdContent[hashtagIndex + 1] == "#") {
+            hashtagIndex += 1;
+        }
+        var hashtagCarriageReturn = mdContent.indexOf("\n", hashtagIndex);
+        if (hashtagCarriageReturn >= 0) {
+            var title = mdContent.substring(hashtagIndex + 1, hashtagCarriageReturn).trim();
+            document.title = "Webots documentation: " + title;
+        }
+    }
+
     // markdown to html
     var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbFigure", "wbAnchors"]});
     var html = converter.makeHtml(mdContent);

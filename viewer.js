@@ -53,9 +53,6 @@ function redirectUrls(node, targetPath) {
         var src = img.getAttribute("src");
         var match = /^(\w*)\/([\w-\.]*)$/.exec(src);
         if (match && match.length == 3) {
-            console.log('check:');
-            console.log('  targetPath: ' + targetPath);
-            console.log('  newPath: ' + targetPath + match[1] + "/" + match[2]);
             img.setAttribute("src", targetPath + match[1] + "/" + match[2]);
         }
     }

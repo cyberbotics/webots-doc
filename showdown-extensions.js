@@ -30,7 +30,7 @@ showdown.extension("wbFigure", function() {
                 return "<figure><img" + content;
             }
         }
-    ]
+    ];
 });
 
 showdown.extension("wbVariables", function() {
@@ -55,7 +55,7 @@ showdown.extension("wbVariables", function() {
         { // replace '{{ var }}' by the vars dictionnary above
             type: "html",
             //regex: /\^\s*\(([^]+?)\)/gi,
-            regex: /{{([^]+?)}}/gi,
+            regex: /\{\{([^]+?)\}\}/gi,
             replace: function (match, content) {
                 var key = content.replace(/\s/g, ""); // remove spaces
                 try {
@@ -72,5 +72,5 @@ showdown.extension("wbVariables", function() {
                 }
             }
         }
-    ]
+    ];
 });

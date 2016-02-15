@@ -8,7 +8,7 @@ function replaceAll(find, replace, str) {
 if (typeof String.prototype.startsWith != "function") {
     String.prototype.startsWith = function (prefix) {
         return this.slice(0, prefix.length) == prefix;
-    }
+    };
 }
 
 if (typeof String.prototype.endsWith !== "function") {
@@ -151,8 +151,9 @@ function populateNavigation(menu, selected) {
         }
         if (nextLiSibling) {
             var as = nextLiSibling.getElementsByTagName("a");
-            if (as.length > 0)
-              nextElement = as[0];
+            if (as.length > 0) {
+                nextElement = as[0];
+            }
         }
 
         if (nextElement) {
@@ -174,8 +175,9 @@ function populateNavigation(menu, selected) {
         }
         if (previousLiSibling) {
             var as = previousLiSibling.getElementsByTagName("a");
-            if (as.length > 0)
-              previousElement = as[0];
+            if (as.length > 0) {
+                previousElement = as[0];
+            }
         }
 
         if (previousElement) {
@@ -193,8 +195,9 @@ function populateNavigation(menu, selected) {
         }
         if (parentLi) {
             var as = parentLi.getElementsByTagName("a");
-            if (as.length > 0)
-              upElement = as[0];
+            if (as.length > 0) {
+                upElement = as[0];
+            }
         }
 
         if (upElement) {
@@ -230,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var book = getGETQueryValue("book", "guide");
     var page = getGETQueryValue("page", "guide.md");
     var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
-    var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
+    var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/");
     var targetPath = url;
     if (url.startsWith("http")) {
         targetPath += branch + "/";

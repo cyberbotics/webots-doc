@@ -58,6 +58,16 @@ function redirectUrls(node, targetPath) {
     }
 }
 
+function applyAnchor() {
+    var currentUrl = window.location.href;
+    var match = /#([\w-]+)/.exec(currentUrl);
+    if (match && match.length == 2) {
+        var anchorId = match[1];
+        console.log("anchorId: " + anchorId);
+        $('#' + anchorId)[0].scrollIntoView(true);
+    }
+}
+
 function populateViewDiv(mdContent) {
     console.log("Raw MD content:\n\n");
     console.log(mdContent);
@@ -74,6 +84,8 @@ function populateViewDiv(mdContent) {
     redirectUrls(div, this.setup.targetPath);
 
     document.getElementById("view").appendChild(div);
+
+    applyAnchor();
 
     $("pre code").each(function(i, block) {
         hljs.highlightBlock(block);

@@ -27,6 +27,9 @@ body {
 #menu > ul > li > ul > li {
   white-space: nowrap;
 }
+blockquote {
+  border-left: 8px solid #ccc;
+}
 li {
   font-weight: normal;
 }

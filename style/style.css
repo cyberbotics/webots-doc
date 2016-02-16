@@ -111,6 +111,7 @@ h6:hover .anchor-link {
 p {
   color: #444;
   margin-left:10px;
+  margin-right:10px;
   text-align:justify;
 }
 img {
@@ -119,6 +120,7 @@ img {
 figure {
   max-width: 80%;
   text-align: center;
+  margin:20px auto 20px auto;
 }
 figcaption {
   font-style: italic;

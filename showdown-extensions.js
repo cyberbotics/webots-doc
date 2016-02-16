@@ -13,6 +13,8 @@ function wbSlugify(obj) {
         toLowerCase().
         replace(/[\s\.]/g, '-').
         replace(/[-]+/g, '-').
+        replace(/^-*/, '').
+        replace(/-*$/, '').
         replace('+', 'p').
         replace(/[^\w-]+/g, '');
 }

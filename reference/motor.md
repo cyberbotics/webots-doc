@@ -82,10 +82,10 @@ See [this table](motor.md#motor-units):
 
 %figure "Motor Units"
 
-|  | Rotational | Linear |
-| --- | --- | --- |
-| Position | rad (radians) | m (meters) |
-| Velocity | rad/s (radians / second) | m/s (meters / second) |
+|              | Rotational                   | Linear                    |
+| ------------ | ---------------------------- | ------------------------- |
+| Position     | rad (radians)                | m (meters)                |
+| Velocity     | rad/s (radians / second)     | m/s (meters / second)     |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
 
 %end
@@ -203,14 +203,14 @@ torque control) algorithm is used.
 
 %figure "Motor Control Summary"
 
-|  | position control | velocity control | force or torque control |
-| --- | --- | --- | --- | --- |
-| uses PID-controller | yes | no | no |
-| wb\_motor\_set\_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
-| wb\_motor\_set\_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
-| wb\_motor\_set\_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
-| wb\_motor\_set\_available\_force() (resp. wb\_motor\_set\_available\_torque()) | specifies the available force (resp. torque) | specifies the available force (resp. torque) | specifies the max force (resp. max torque) |
-| wb\_motor\_set\_force() (resp. wb\_motor\_set\_torque()) | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
+|                                                                                | position control                                 | velocity control                                 | force or torque control                      |
+| ------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | -------------------------------------------- |
+| uses PID-controller                                                            | yes                                              | no                                               | no                                           |
+| wb\_motor\_set\_position()                                                     | * specifies the desired position                 | should be set to INFINITY                        | switches to position/velocity control        |
+| wb\_motor\_set\_velocity()                                                     | specifies the max velocity                       | * specifies the desired velocity                 | is ignored                                   |
+| wb\_motor\_set\_acceleration()                                                 | specifies the max acceleration                   | specifies the max acceleration                   | is ignored                                   |
+| wb\_motor\_set\_available\_force() (resp. wb\_motor\_set\_available\_torque()) | specifies the available force (resp. torque)     | specifies the available force (resp. torque)     | specifies the max force (resp. max torque)   |
+| wb\_motor\_set\_force() (resp. wb\_motor\_set\_torque())                       | switches to force control (resp. torque control) | switches to force control (resp. torque control) | * specifies the desired force (resp. torque) |
 
 %end
 
@@ -508,10 +508,10 @@ otherwise it returns WB\_ANGULAR.
 
 %figure "Return values for the *wb_motor_get_type()* function"
 
-| Motor.type | return value |
-| --- | --- |
-| "rotational" | WB\_ANGULAR |
-| "linear" | WB\_LINEAR |
+| Motor.type   | return value |
+| ------------ | ------------ |
+| "rotational" | WB\_ANGULAR  |
+| "linear"     | WB\_LINEAR   |
 
 %end
 

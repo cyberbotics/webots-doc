@@ -111,9 +111,9 @@ table](starting-webots.md#streaming-server-options).
 
 %figure "Streaming server options"
 
-| Key | Value example | Description |
-| --- | --- | --- |
-| port | 1234 | The port on which the streaming server is open |
+| Key  | Value example | Description                                    |
+| ---- | ------------- | ---------------------------------------------- |
+| port | 1234          | The port on which the streaming server is open |
 
 %end
 

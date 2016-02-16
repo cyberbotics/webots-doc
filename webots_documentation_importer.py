@@ -4,6 +4,7 @@ import glob
 import os
 import re
 import shutil
+import tempfile
 import textwrap
 import xml.etree.ElementTree as ET
 import pdb # break with pdb.set_trace()
@@ -466,6 +467,18 @@ class BookParser:
         if len(title) > 0:
             outFile.write('%%figure "%s"\n\n' % (title))
 
+        maxWidths = [0] * nCols
+        for rowNode in node.findall('.//row'):
+            colNumber = 0
+            for entryNode in rowNode.findall('entry'):
+                f = tempfile.TemporaryFile()
+                self.parsePara(entryNode, f, mergeCarriageReturns=True, format=False)
+                width = f.tell()
+                f.close()
+                if width > maxWidths[colNumber]:
+                    maxWidths[colNumber] = width
+                colNumber += 1
+
         # exception: display the anchor
         if nCols == 1 and node.attrib.get('id') and \
            (node.attrib.get('id').startswith('cpp_') or node.attrib.get('id').startswith('java_') or \
@@ -473,7 +486,9 @@ class BookParser:
             outFile.write('<a name="%s"/>\n\n' % (node.attrib.get('id')))
 
         if not header:
-            outFile.write('| ' * (1 + nCols) + '\n')
+            for i in range(0, nCols):
+                outFile.write('| ' + ' ' * maxWidths[i])
+            outFile.write(' |\n')
             firstEntry = True
             for i in range(0, nCols):
                 if firstEntry:
@@ -481,20 +496,25 @@ class BookParser:
                     firstEntry = False
                 else:
                     outFile.write(' | ')
-                outFile.write('---')
+                outFile.write('-' * maxWidths[i])
             outFile.write(' |\n')
 
         line = 0
         for rowNode in node.findall('.//row'):
             line += 1
             firstEntry = True
+            colNumber = 0
             for entryNode in rowNode.findall('entry'):
                 if firstEntry:
                     outFile.write('| ')
                     firstEntry = False
                 else:
                     outFile.write(' | ')
+                pos = outFile.tell()
                 self.parsePara(entryNode, outFile, mergeCarriageReturns=True, format=False)
+                width = outFile.tell() - pos
+                outFile.write(' ' * (maxWidths[colNumber] - width))
+                colNumber += 1
             outFile.write(' |\n')
             if line == 1 and header:
                 firstEntry = True
@@ -504,7 +524,7 @@ class BookParser:
                         firstEntry = False
                     else:
                         outFile.write(' | ')
-                    outFile.write('---')
+                    outFile.write('-' * maxWidths[i])
                 outFile.write(' |\n')
 
         if len(title) > 0:

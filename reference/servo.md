@@ -90,12 +90,12 @@ expressed in *meters*. See [this table](servo.md#servo-units):
 
 %figure "Servo Units"
 
-|  | Rotational | Linear |
-| --- | --- | --- |
-| Position | rad (radians) | m (meters) |
-| Velocity | rad/s (radians / second) | m/s (meters / second) |
+|              | Rotational                   | Linear                    |
+| ------------ | ---------------------------- | ------------------------- |
+| Position     | rad (radians)                | m (meters)                |
+| Velocity     | rad/s (radians / second)     | m/s (meters / second)     |
 | Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
-| Torque/Force | N*m (Newtons * meters) | N (Newtons) |
+| Torque/Force | N*m (Newtons * meters)       | N (Newtons)               |
 
 %end
 
@@ -227,14 +227,14 @@ control algorithm is used.
 
 %figure "Servo Control Summary"
 
-|  | position control | velocity control | force control |
-| --- | --- | --- | --- | --- |
-| uses P-controller | yes | no | no |
-| wb\_servo\_set\_position() | * specifies the desired position | should be set to INFINITY | switches to position/velocity control |
-| wb\_servo\_set\_velocity() | specifies the max velocity | * specifies the desired velocity | is ignored |
-| wb\_servo\_set\_acceleration() | specifies the max acceleration | specifies the max acceleration | is ignored |
-| wb\_servo\_set\_motor\_force() | specifies the available force | specifies the available force | specifies the max force |
-| wb\_servo\_set\_force() | switches to force control | switches to force control | * specifies the desired force |
+|                                | position control                 | velocity control                 | force control                         |
+| ------------------------------ | -------------------------------- | -------------------------------- | ------------------------------------- |
+| uses P-controller              | yes                              | no                               | no                                    |
+| wb\_servo\_set\_position()     | * specifies the desired position | should be set to INFINITY        | switches to position/velocity control |
+| wb\_servo\_set\_velocity()     | specifies the max velocity       | * specifies the desired velocity | is ignored                            |
+| wb\_servo\_set\_acceleration() | specifies the max acceleration   | specifies the max acceleration   | is ignored                            |
+| wb\_servo\_set\_motor\_force() | specifies the available force    | specifies the available force    | specifies the max force               |
+| wb\_servo\_set\_force()        | switches to force control        | switches to force control        | * specifies the desired force         |
 
 %end
 
@@ -324,15 +324,15 @@ a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 
 %figure "Servo Forces"
 
-| Force | motor force | spring force | damping force |
-| --- | --- | --- | --- |
-| Turned on when: | maxForce `>` 0 | springConstant `>` 0 | dampingConstant `>` 0 |
-| Turned off when: | maxForce = 0 | springConstant = 0 | dampingConstant = 0 |
-| regular motor (the default) | on | off | off |
-| regular spring & damper | off | on | on |
-| damper (without spring) | off | off | on |
-| motor with friction | on | off | on |
-| spring without any friction | off | on | off |
+| Force                       | motor force    | spring force         | damping force         |
+| --------------------------- | -------------- | -------------------- | --------------------- |
+| Turned on when:             | maxForce `>` 0 | springConstant `>` 0 | dampingConstant `>` 0 |
+| Turned off when:            | maxForce = 0   | springConstant = 0   | dampingConstant = 0   |
+| regular motor (the default) | on             | off                  | off                   |
+| regular spring & damper     | off            | on                   | on                    |
+| damper (without spring)     | off            | off                  | on                    |
+| motor with friction         | on             | off                  | on                    |
+| spring without any friction | off            | on                   | off                   |
 
 %end
 
@@ -724,10 +724,10 @@ WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 
 %figure "Return values for the *wb_servo_get_type()* function"
 
-| Servo.type | return value |
-| --- | --- |
+| Servo.type   | return value          |
+| ------------ | --------------------- |
 | "rotational" | WB\_SERVO\_ROTATIONAL |
-| "linear" | WB\_SERVO\_LINEAR |
+| "linear"     | WB\_SERVO\_LINEAR     |
 
 %end
 

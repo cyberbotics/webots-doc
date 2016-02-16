@@ -728,14 +728,14 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 
 %figure "Return values of the *wb_supervisor_movie_get_status()* function"
 
-| value | status |
-| --- | --- |
-| WB\_SUPERVISOR\_MOVIE\_RECORDING | recording the movie |
-| WB\_SUPERVISOR\_MOVIE\_SAVING | encoding and creating the movie file |
-| WB\_SUPERVISOR\_MOVIE\_READY | ready to start movie creation, movie creation completed |
-| WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR | problem saving the movie frames or the encoding script |
-| WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR | problem encoding and generating the movie file |
-| WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR | simulation not started, no movie recorded |
+| value                                    | status                                                  |
+| ---------------------------------------- | ------------------------------------------------------- |
+| WB\_SUPERVISOR\_MOVIE\_RECORDING         | recording the movie                                     |
+| WB\_SUPERVISOR\_MOVIE\_SAVING            | encoding and creating the movie file                    |
+| WB\_SUPERVISOR\_MOVIE\_READY             | ready to start movie creation, movie creation completed |
+| WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR      | problem saving the movie frames or the encoding script  |
+| WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR   | problem encoding and generating the movie file          |
+| WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR | simulation not started, no movie recorded               |
 
 %end
 

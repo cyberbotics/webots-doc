@@ -27,9 +27,9 @@ variables:
 
 %figure "Webots Makefile Variables"
 
-| Variable | Usage |
-| --- | --- |
-| C\_SOURCES | Specifies a list of .c sources files |
+| Variable     | Usage                                                |
+| ------------ | ---------------------------------------------------- |
+| C\_SOURCES   | Specifies a list of .c sources files                 |
 | CXX\_SOURCES | Specifies a list of .cpp, *.cc or *.c++ source files |
 
 %end
@@ -64,11 +64,11 @@ These two variables can be used to pass flags to the gcc compiler or linker.
 
 %figure "Webots Makefile Variables"
 
-| Variable | Usage |
-| --- | --- |
-| CFLAGS | Specifies a list of flags that will be passed to the gcc/g++ compiler |
-| INCLUDE | Specifies a list of flags that will be passed to the gcc/g++ compiler |
-| LIBRARIES | Specifies a list of flags that will be passed to the linker |
+| Variable  | Usage                                                                 |
+| --------- | --------------------------------------------------------------------- |
+| CFLAGS    | Specifies a list of flags that will be passed to the gcc/g++ compiler |
+| INCLUDE   | Specifies a list of flags that will be passed to the gcc/g++ compiler |
+| LIBRARIES | Specifies a list of flags that will be passed to the linker           |
 
 %end
 

@@ -407,9 +407,9 @@ table](camera.md#return-values-for-the-wb_camera_get_type-function):
 
 %figure "Return values for the *wb_camera_get_type()* function"
 
-| Camera.type | return value |
-| --- | --- |
-| "color" | WB\_CAMERA\_COLOR |
+| Camera.type    | return value              |
+| -------------- | ------------------------- |
+| "color"        | WB\_CAMERA\_COLOR         |
 | "range-finder" | WB\_CAMERA\_RANGE\_FINDER |
 
 %end

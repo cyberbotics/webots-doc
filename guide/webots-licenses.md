@@ -40,17 +40,17 @@ EDU and Webots MOD.
 
 %figure "Webots licenses summary"
 
-| Webots feature | PRO | EDU | MOD |
-| --- | --- | --- | --- | --- |
-| Supervisor capability | yes | no | no |
-| Physics plug-in programming | yes | no | no |
-| Fast simulation mode | yes | no | no |
-| Robot and environment modelling | yes | yes | no |
-| Robot programming | yes | yes | yes/no (1) |
-| Transfer to real robots | yes | yes | yes/no (1) |
-| Multi-platform: Windows, Mac & Linux | yes | yes | yes |
-| Floating licenses | yes | yes | yes |
-| One year Premier Service included | yes | yes | yes |
+| Webots feature                       | PRO | EDU | MOD        |
+| ------------------------------------ | --- | --- | ---------- |
+| Supervisor capability                | yes | no  | no         |
+| Physics plug-in programming          | yes | no  | no         |
+| Fast simulation mode                 | yes | no  | no         |
+| Robot and environment modelling      | yes | yes | no         |
+| Robot programming                    | yes | yes | yes/no (1) |
+| Transfer to real robots              | yes | yes | yes/no (1) |
+| Multi-platform: Windows, Mac & Linux | yes | yes | yes        |
+| Floating licenses                    | yes | yes | yes        |
+| One year Premier Service included    | yes | yes | yes        |
 
 %end
 

@@ -53,8 +53,8 @@ linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
 
 %figure "Joint Units"
 
-|  | Rotational | Linear |
-| --- | --- | --- |
+|          | Rotational    | Linear     |
+| -------- | ------------- | ---------- |
 | Position | rad (radians) | m (meters) |
 
 %end

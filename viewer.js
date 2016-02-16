@@ -103,34 +103,53 @@ function populateViewDiv(mdContent) {
 
     redirectUrls(div, this.setup.targetPath);
 
-    document.getElementById("view").appendChild(div);
+    var view = document.getElementById("view");
+    view.appendChild(div);
 
     applyAnchor();
-    applyAnchorIcons();
-
-    $("pre code").each(function(i, block) {
-        hljs.highlightBlock(block);
-    });
+    applyAnchorIcons(view);
+    highlightCode(view);
 }
 
-function applyAnchorIcons() {
-    $(function() {
-        return $("figcaption, h1, h2, h3, h4, h5, h6").each(function(i, el) {
-            var $el, icon, id;
-            $el = $(el);
-            name = null;
-            if ($el.prop("tagName").toLowerCase() == "figcaption" && $el.parent().prop("tagName").toLowerCase() == "figure") {
-                name = $el.parent().attr('name');
-            } else {
-                name = $el.attr('name');
-            }
-            icon = '<span class="anchor-link-image"></span>';
-            if (name) {
-                $el.addClass("anchor-header");
-                return $el.prepend($("<a/>").addClass("anchor-link").attr("href", "#" + name).html(icon));
-            }
-        });
-    });
+function highlightCode(view) {
+    var pres = view.getElementsByTagName("pre"); 
+    for (var i = 0; i < pres.length; i++) {
+        var pre = pres[i];
+        var codes = pre.getElementsByTagName("code"); 
+        for (var i = 0; i < codes.length; i++) {
+            var code = codes[i];
+            hljs.highlightBlock(code);
+        }
+    }
+}
+
+function applyAnchorIcons(view) {
+    var elements = [];
+    var tags = ["figcaption", "h1", "h2", "h3", "h4", "h5", "h6"];
+    for (var i = 0; i < tags.length; i++) {
+        var array = Array.prototype.slice.call(view.getElementsByTagName(tags[i]));
+        elements = elements.concat(array);
+    }
+    for (var i = 0; i < elements.length; i++) {
+        var el = elements[i];
+        var icon, id;
+        var name = null;
+        if (el.parentNode && el.tagName.toLowerCase() == "figcaption" && el.parentNode.tagName.toLowerCase() == "figure") {
+            name = el.parentNode.getAttribute("name");
+        } else {
+            name = el.getAttribute("name");
+        }
+        if (name) {
+            el.setAttribute("class", "anchor-header");
+            var span = document.createElement("span");
+            span.setAttribute("class", "anchor-link-image");
+            var a = document.createElement("a");
+            a.setAttribute("href", "#" + name);
+            a.setAttribute("class", "anchor-link");
+            a.appendChild(span);
+            el.insertBefore(a, el.firstChild);
+        }
+    }
 }
 
 function receiveMenuContent(menuContent) {

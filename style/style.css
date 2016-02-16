@@ -83,6 +83,30 @@ h3 {
 h4 {
   font-size: 14px;
 }
+.anchor-link-image {
+  padding-left: 20px;
+  background:url(../icons/anchor.png) left center no-repeat;
+  background-size: 20px;
+}
+.anchor-link {
+  opacity: 0;
+
+  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+.anchor-header {
+  position: relative;
+  left: -20px;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  opacity: 1;
+}
 p {
   color: #444;
   margin-left:10px;

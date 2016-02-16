@@ -106,9 +106,25 @@ function populateViewDiv(mdContent) {
     document.getElementById("view").appendChild(div);
 
     applyAnchor();
+    applyAnchorIcons();
 
     $("pre code").each(function(i, block) {
         hljs.highlightBlock(block);
+    });
+}
+
+function applyAnchorIcons() {
+    $(function() {
+        return $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+            var $el, icon, id;
+            $el = $(el);
+            name = $el.attr('name');
+            icon = '<span class="anchor-link-image"></span>';
+            if (name) {
+                $el.addClass("anchor-header");
+                return $el.prepend($("<a/>").addClass("anchor-link").attr("href", "#" + name).html(icon));
+            }
+        });
     });
 }
 

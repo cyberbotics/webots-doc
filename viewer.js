@@ -115,10 +115,15 @@ function populateViewDiv(mdContent) {
 
 function applyAnchorIcons() {
     $(function() {
-        return $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+        return $("figcaption, h1, h2, h3, h4, h5, h6").each(function(i, el) {
             var $el, icon, id;
             $el = $(el);
-            name = $el.attr('name');
+            name = null;
+            if ($el.prop("tagName").toLowerCase() == "figcaption" && $el.parent().prop("tagName").toLowerCase() == "figure") {
+                name = $el.parent().attr('name');
+            } else {
+                name = $el.attr('name');
+            }
             icon = '<span class="anchor-link-image"></span>';
             if (name) {
                 $el.addClass("anchor-header");

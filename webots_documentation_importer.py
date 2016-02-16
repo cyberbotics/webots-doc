@@ -18,6 +18,8 @@ def slugify(txt):
   output = output.replace('+', 'p')
   output = re.sub(r'[\(\):`]', '', output)
   output = re.sub(r'\W+', '-', output)
+  output = re.sub(r'^-*', '', output)
+  output = re.sub(r'-*$', '', output)
   return output.strip(' ').strip('-')
 
 def simplifySpaces(filename):

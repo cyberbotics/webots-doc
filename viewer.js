@@ -116,8 +116,8 @@ function highlightCode(view) {
     for (var i = 0; i < pres.length; i++) {
         var pre = pres[i];
         var codes = pre.getElementsByTagName("code"); 
-        for (var i = 0; i < codes.length; i++) {
-            var code = codes[i];
+        for (var j = 0; j < codes.length; j++) {
+            var code = codes[j];
             hljs.highlightBlock(code);
         }
     }

@@ -166,7 +166,7 @@ figure](tutorial-2-modification-of-the-environment-20-minutes.md#def-use-mechani
 > **note**: Now, changing the `radius` field of the first Sphere node does also modify the
 `boundingObject`.
 
-%figure "DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY"."
+%figure "DEF-USE mechanism on the Sphere node called BALL_GEOMETRY."
 
 ![DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".](png/tutorial_def_use.png)
 

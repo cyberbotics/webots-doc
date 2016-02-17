@@ -57,7 +57,7 @@ omni-directional. For "radio" and "serial" emitters, this field is ignored.  See
 figure](emitter.md#illustration-of-aperture-and-range-for-infra-red-emitter-receiver)
 for an illustration of `range` and `aperture`.
 
-%figure "Illustration of aperture and range for "infra-red" Emitter/Receiver"
+%figure "Illustration of aperture and range for infra-red Emitter/Receiver"
 
 ![Illustration of aperture and range for "infra-red" Emitter/Receiver](pdf/emitter_receiver.pdf.png)
 

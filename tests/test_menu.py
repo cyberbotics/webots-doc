@@ -7,9 +7,8 @@ import unittest
 class TestMenu(unittest.TestCase):
     """Unit test of the menus."""
 
-    def __init__(self, *args, **kwargs):
-        """Constructor."""
-        super(TestMenu, self).__init__(*args, **kwargs)
+    def setUp(self):
+        """Setup."""
         # path to the main project
         self.project_path = os.path.abspath(os.path.join(
             os.path.dirname(os.path.realpath(__file__)), os.pardir))
@@ -24,7 +23,7 @@ class TestMenu(unittest.TestCase):
 
     def test_menu_files_are_existing(self):
         """The menu.md files are existing in each book."""
-        self.assertTrue(len(self.menus) > 0, msg='No menu found')
+        self.assertGreater(len(self.menus), 0, msg='No menu found')
         for menu in self.menus:
             self.assertTrue(
                 os.path.isfile(menu),
@@ -36,7 +35,7 @@ class TestMenu(unittest.TestCase):
         for menu in self.menus:
             with open(menu) as f:
                 content = f.readlines()
-            self.assertTrue(len(content) > 0, msg='Menu file is empty')
+            self.assertGreater(len(content), 0, msg='Menu file is empty')
             match_counter = 0
             for line_number in range(0, len(content)):
                 line = content[line_number].strip()
@@ -44,7 +43,7 @@ class TestMenu(unittest.TestCase):
                     continue
                 else:
                     match = re.match(r'^- \[(.*)\]\((.*)\)$', line)
-                    self.assertTrue(
+                    self.assertIsNotNone(
                         match, msg='Line %d of "%s" does not match \
                         the expected pattern' % (line_number, menu)
                     )
@@ -63,8 +62,8 @@ class TestMenu(unittest.TestCase):
                         os.path.isfile(target_file),
                         msg='' % ()
                     )
-            self.assertTrue(
-                match_counter > 0,
+            self.assertGreater(
+                match_counter, 0,
                 msg='Menu "%s" do not contain valid references' % (menu)
             )
 
@@ -80,8 +79,8 @@ class TestMenu(unittest.TestCase):
                 if (file_path.endswith(".md") and
                         file_path != (book_name + '.md') and
                         file_path != "menu.md"):
-                    self.assertTrue(
-                        file_path in menu_content,
+                    self.assertIn(
+                        file_path, menu_content,
                         msg='"%s" not referenced in "%s"' %
                         (file_path, menu)
                     )

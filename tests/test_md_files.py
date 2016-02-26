@@ -7,10 +7,6 @@ from books import Books
 class TestMDFiles(unittest.TestCase):
     """Unit test of the MD files."""
 
-    def setUp(self):
-        """Setup."""
-        pass
-
     def test_md_files_are_existing(self):
         """Test that the MD files are existing."""
         books = Books()

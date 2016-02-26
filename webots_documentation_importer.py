@@ -17,14 +17,14 @@ def remove_tags(text):
     return re.sub(r'<[^>]+>', '', text)
 
 def slugify(txt):
-  output = txt.lower()
-  output = remove_tags(output)
-  output = output.replace('+', 'p')
-  output = re.sub(r'[\(\):`]', '', output)
-  output = re.sub(r'\W+', '-', output)
-  output = re.sub(r'^-*', '', output)
-  output = re.sub(r'-*$', '', output)
-  return output.strip(' ').strip('-')
+    output = txt.lower()
+    output = remove_tags(output)
+    output = output.replace('+', 'p')
+    output = re.sub(r'[\(\):`]', '', output)
+    output = re.sub(r'\W+', '-', output)
+    output = re.sub(r'^-*', '', output)
+    output = re.sub(r'-*$', '', output)
+    return output.strip(' ').strip('-')
 
 def simplifySpaces(filename):
     with open(filename, 'r') as file:
@@ -248,8 +248,10 @@ class BookParser:
             if idNode.tag == 'refentry' or \
               (idNode.tag == 'table' and self.parents[idNode].tag == 'sect1'):
                 anchor = slugify(refId)
+                anchor = anchor.replace('-m-', 'meters')
             else:
                 anchor = slugify(self.getTitle(idNode))
+                anchor = anchor.replace('-m-', '-meters-')
 
             filename = ''
             node = idNode

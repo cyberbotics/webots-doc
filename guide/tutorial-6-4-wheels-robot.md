@@ -5,7 +5,7 @@ will be made of a body, four wheels, and two distance sensors. The result is
 depicted in [this
 figure](tutorial-6-4-wheels-robot.md#3d-view-of-the-4-wheels-robot-note-that-the-coordinate-system-representations-of-the-robot-body-and-of-its-wheels-are-oriented-the-same-way-their-px-vector-in-red-defines-the-left-of-the-robot-their-py-vector-in-green-defines-the-top-of-the-robot-and-their-pz-vector-in-blue-defines-the-front-of-the-robot-the-distance-sensors-are-oriented-in-a-different-way-their-px-vector-indicates-the-direction-of-the-sensor).
 The
-[figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-m-the-text-labels-correspond-to-the-name-of-the-devices)
+[figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)
 shows the robot from a top view.
 
 %figure "3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor."
@@ -150,14 +150,14 @@ robot. This can be done by adding two DistanceSensor nodes as direct children of
 the Robot node. Note that the distance sensor acquires its data along the
 +*x*-axis. So rotating the distance sensors in order to point their *x*-axis
 outside the robot is necessary (see the
-[figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-m-the-text-labels-correspond-to-the-name-of-the-devices)).
+[figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)).
 
 > **handson**: Add the two distance sensors as explained above. The distance sensors are at an
 angle to 0.3 [rad] with the robot front vector. Set their `type` field to
 "sonar". Set their graphical and physical shape to a cube (not transformed)
 having a edge of *0.01* [m]. Set their color to blue. Set their `name` field
 according to the labels of [this
-figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-m-the-text-labels-correspond-to-the-name-of-the-devices).
+figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices).
 
 ### Controller
 

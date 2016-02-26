@@ -16,7 +16,12 @@ class TestMDFiles(unittest.TestCase):
         books = Books()
         self.assertGreater(len(books.books), 0, msg='No books found')
         for book in books.books:
-            for md_filename in books.get_md_files(book):
+            md_filenames = books.get_md_files(book)
+            self.assertGreater(
+                len(md_filenames), 0,
+                msg='No MD files found in book "%s"' % book
+            )
+            for md_filename in md_filenames:
                 self.assertTrue(
                     os.path.isfile(md_filename),
                     msg='MD file "%s" is not existing' % (md_filename)

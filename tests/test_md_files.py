@@ -1,7 +1,8 @@
 """Test module of the MD files."""
 import unittest
-import os
 from books import Books
+
+import os
 
 
 class TestMDFiles(unittest.TestCase):

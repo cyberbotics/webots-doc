@@ -1,8 +1,9 @@
 """Test module of the menu.md files."""
-import os
-import re
 import unittest
 from books import Books
+
+import os
+import re
 
 
 class TestMenus(unittest.TestCase):

@@ -100,6 +100,23 @@ showdown.extension("wbFigure", function() {
 });
 
 
+// This extension is dealing with some API content
+showdown.extension("wbAPI", function() {
+    return [
+        { // figure with legend to HTML
+            type: "lang",
+            filter: function(text, converter, options) {
+                text = text.replace(/%api\s+"([^]+?)"([^]+?)%end/gi, function(match, anchor, content) {
+                    var foo = converter.makeHtml(content);
+                    return "<div name=\"" + anchor + "\" class=\"api\">" + foo + "</div>";
+                });
+                return text;
+            }
+        }
+    ];
+});
+
+
 // This extension is defining an id with a custom slug on the headers and on the figures
 // Note: showdown is already generating the ids with a slug function, but only for
 // headers, and without hyphens.

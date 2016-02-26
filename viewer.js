@@ -92,7 +92,7 @@ function populateViewDiv(mdContent) {
     }
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbFigure", "wbAnchors"]});
+    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors"]});
     var html = converter.makeHtml(mdContent);
 
     // console.log("HTML content: \n\n")

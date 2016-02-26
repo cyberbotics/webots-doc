@@ -11,10 +11,10 @@ class TestMenus(unittest.TestCase):
 
     def setUp(self):
         """Setup."""
-        books = Books()
         self.menus = []
-        for book in books.books_paths:
-            self.menus.append(os.path.join(book, 'menu.md'))
+        books = Books()
+        for book in books.books:
+            self.menus.append(os.path.join(book.path, 'menu.md'))
 
     def test_menu_files_are_existing(self):
         """The menu.md files are existing in each book."""

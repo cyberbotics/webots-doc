@@ -2,8 +2,38 @@
 import os
 
 
-class Books:
+class Book:
     """Helper class to retrieve the book paths."""
+
+    def __init__(self, path, name):
+        """Constructor. Initialize the properties."""
+        self._path = path
+        self._name = name
+        self._md_paths = []
+        for filename in os.listdir(path):
+            if not filename.endswith('.md'):
+                continue
+            md_path = os.path.join(path, filename)
+            self._md_paths.append(md_path)
+
+    @property
+    def path(self):
+        """Hold the path property."""
+        return self._path
+
+    @property
+    def name(self):
+        """Hold the name property."""
+        return self._name
+
+    @property
+    def md_paths(self):
+        """Hold the MD paths."""
+        return self._md_paths
+
+
+class Books:
+    """Helper class to creat/retrieve the books."""
 
     def __init__(self):
         """Constructor. Initialize the properties."""
@@ -11,14 +41,13 @@ class Books:
             os.path.dirname(os.path.realpath(__file__)), os.pardir))
         # discover the project path
         self._books = []
-        self._books_paths = []
         for item in os.listdir(self._project_path):
             path = os.path.join(self._project_path, item)
             if (os.path.isdir(path) and
                     not item.startswith('.') and
                     not item == 'tests'):
-                self._books.append(item)
-                self._books_paths.append(path)
+                book = Book(path, item)
+                self._books.append(book)
 
     @property
     def project_path(self):
@@ -29,19 +58,3 @@ class Books:
     def books(self):
         """Hold the book names."""
         return self._books
-
-    @property
-    def books_paths(self):
-        """Hold the paths to books."""
-        return self._books_paths
-
-    def get_md_files(self, book):
-        """Retrieve all the MD files of a given book."""
-        paths = []
-        book_path = os.path.join(self._project_path, book)
-        for filename in os.listdir(book_path):
-            if not filename.endswith('.md'):
-                continue
-            path = os.path.join(book_path, filename)
-            paths.append(path)
-        return paths

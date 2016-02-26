@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+"""
+Note: This script will be removed once the entire Webots doc will be imported.
+"""
 
 import glob
 import os
@@ -115,6 +118,74 @@ class BookParser:
         shutil.copytree(webotsDirectoryPath + 'doc/' + bookName + '/pdf', bookName + '/pdf')
         for fl in glob.glob(bookName + '/pdf/*.pdf'):
             os.remove(fl)
+
+        # hack: removed unreferenced images:
+        filesToRemove = []
+        if bookName == 'guide':
+            filesToRemove = [
+                'pdf/mybot-dimension.pdf.png',
+                'pdf/mybot-lookuptable.pdf.png',
+                'pdf/mybot-world.pdf.png',
+                'pdf/mybot.pdf.png',
+                'pdf/pioneer2-body.pdf.png',
+                'pdf/pioneer2-position.pdf.png',
+                'pdf/pioneer2-rear.pdf.png',
+                'pdf/pioneer2-sonars.pdf.png',
+                'pdf/pioneer2-supports.pdf.png',
+                'pdf/pioneer2-top-plate.pdf.png',
+                'pdf/pioneer2-wheels.pdf.png',
+                'pdf/tutorial_ackermann_vehicle.pdf.png',
+                'png/botstudio_line.png',
+                'png/botstudio_maze.png',
+                'png/botstudio_obstacle.png',
+                'png/botstudio_pen.png',
+                'png/bounding1.png',
+                'png/code.png',
+                'png/e-puck_control_simulation.png',
+                'png/e-puck_simulation.png',
+                'png/file.png',
+                'png/find-button.png',
+                'png/hands-on.png',
+                'png/mybot-camera.png',
+                'png/mybot-mybot.png',
+                'png/mybot-robot1.png',
+                'png/mybot-sensors.png',
+                'png/mybot-texture1.png',
+                'png/mybot-wall.png',
+                'png/mybot-wheel.png',
+                'png/next.png',
+                'png/note.png',
+                'png/pioneer2-other.png',
+                'png/pioneer2-parts.png',
+                'png/pioneer2-walls.png',
+                'png/previous.png',
+                'png/replace-button.png',
+                'png/s.png',
+                'png/theory.png',
+                'png/up.png',
+                'png/warning.png'
+            ]
+        elif bookName == 'reference':
+            filesToRemove = [
+                'pdf/fast2d_class_diagram.pdf.png',
+                'pdf/fast2d_execution_scheme.pdf.png',
+                'pdf/hypergate.pdf.png',
+                'pdf/oo_api.pdf.png',
+                'png/code.png',
+                'png/file.png',
+                'png/hands-on.png',
+                'png/next.png',
+                'png/note.png',
+                'png/previous.png',
+                'png/s.png',
+                'png/sonar.png',
+                'png/theory.png',
+                'png/two_chairs.png',
+                'png/up.png',
+                'png/warning.png'
+            ]
+        for filename in filesToRemove:
+            os.remove(os.path.join(bookName, filename))
 
 
     def parseXMLFile(self, filePath):

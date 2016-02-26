@@ -34,3 +34,14 @@ class Books:
     def books_paths(self):
         """Hold the paths to books."""
         return self._books_paths
+
+    def get_md_files(self, book):
+        """Retrieve all the MD files of a given book."""
+        paths = []
+        for book_path in self._books_paths:
+            for filename in os.listdir(book_path):
+                if not filename.endswith('.md'):
+                    continue
+                path = os.path.join(book_path, filename)
+                paths.append(path)
+        return paths

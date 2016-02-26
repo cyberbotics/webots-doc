@@ -2,6 +2,7 @@
 import unittest
 from books import Books
 
+import fnmatch
 import os
 import re
 
@@ -24,3 +25,31 @@ class TestImages(unittest.TestCase):
                         os.path.isfile(image_path),
                         msg='%s: "%s" not found' % (md_path, image_path)
                     )
+
+    def test_all_images_are_used(self):
+        """Test that all the image files are referenced somewhere."""
+        books = Books()
+        for book in books.books:
+            # search for all images
+            images_paths = []  # ['png/sonar.png', 'png/sphere.png', ...]
+            for root, dirnames, filenames in os.walk(book.path):
+                for filename in fnmatch.filter(filenames, '*.png'):
+                    image_path = os.path.join(root, filename)
+                    image_path = image_path[(len(book.path) + 1):]
+                    images_paths.append(image_path)
+            self.assertGreater(
+                len(images_paths), 0,
+                msg='No image found in book "%s"' % (book.name)
+            )
+
+            # check the image reference can be found in at least one MD file
+            for image_path in images_paths:
+                found = False
+                for md_path in book.md_paths:
+                    if image_path in open(md_path).read():
+                        found = True
+                        break
+                self.assertTrue(
+                    found, msg='Image "%s" not referenced in any MD file.' %
+                    (image_path)
+                )

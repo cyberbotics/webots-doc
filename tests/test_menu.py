@@ -2,6 +2,7 @@
 import os
 import re
 import unittest
+from books import Books
 
 
 class TestMenu(unittest.TestCase):
@@ -9,17 +10,10 @@ class TestMenu(unittest.TestCase):
 
     def setUp(self):
         """Setup."""
-        # path to the main project
-        self.project_path = os.path.abspath(os.path.join(
-            os.path.dirname(os.path.realpath(__file__)), os.pardir))
-        # discover the menu.md files
+        books = Books()
         self.menus = []
-        for item in os.listdir(self.project_path):
-            path = os.path.join(self.project_path, item)
-            if (os.path.isdir(path) and
-                    not item.startswith('.') and
-                    not item == 'tests'):
-                self.menus.append(os.path.join(path, 'menu.md'))
+        for book in books.books_paths:
+            self.menus.append(os.path.join(book, 'menu.md'))
 
     def test_menu_files_are_existing(self):
         """The menu.md files are existing in each book."""

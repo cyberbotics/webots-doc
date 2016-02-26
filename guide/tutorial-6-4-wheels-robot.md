@@ -14,9 +14,9 @@ shows the robot from a top view.
 
 %end
 
-%figure "Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 [m]. The text labels correspond to the name of the devices."
+%figure "Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 meters. The text labels correspond to the name of the devices."
 
-![Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 [m]. The text labels correspond to the name of the devices.](png/tutorial_4_wheels_top_schema.png)
+![Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 meters. The text labels correspond to the name of the devices.](png/tutorial_4_wheels_top_schema.png)
 
 %end
 

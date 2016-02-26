@@ -496,6 +496,7 @@ class BookParser:
         if fileref is not None and len(fileref) > 0:
             if fileref.endswith('.pdf'):
                 fileref += '.png'
+            title = title.replace('[m]', 'meters')
             outFile.write('\n%%figure "%s"\n\n![%s](%s)\n\n%%end\n\n' % (title.replace('"', ''), title, fileref))
 
     def parseList(self, node, outFile, ordered):

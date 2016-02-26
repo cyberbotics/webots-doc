@@ -2,7 +2,7 @@
 
 The following tables describe the C++ classes and their methods.
 
-<a name="cpp_accelerometer"/>
+%api "cpp_accelerometer"
 
 |                                                                                                  |
 | ------------------------------------------------------------------------------------------------ |
@@ -14,7 +14,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getValues](accelerometer.md#wb_accelerometer_get_values)() const;    |
 | };                                                                                               |
 
-<a name="cpp_brake"/>
+%end
+
+%api "cpp_brake"
 
 |                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +26,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getType](brake.md#wb_brake_set_damping_constant)() const;                                   |
 | };                                                                                                            |
 
-<a name="cpp_camera"/>
+%end
+
+%api "cpp_camera"
 
 |                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------- |
@@ -63,7 +67,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [saveImage](camera.md#wb_camera_save_image)(const std::string &filename, int quality) const; |
 | };                                                                                                            |
 
-<a name="cpp_compass"/>
+%end
+
+%api "cpp_compass"
 
 |                                                                                   |
 | --------------------------------------------------------------------------------- |
@@ -75,7 +81,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getValues](compass.md#wb_compass_get_values)() const; |
 | };                                                                                |
 
-<a name="cpp_connector"/>
+%end
+
+%api "cpp_connector"
 
 |                                                                                             |
 | ------------------------------------------------------------------------------------------- |
@@ -88,7 +96,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [unlock](connector.md#wb_connector_lock)();                       |
 | };                                                                                          |
 
-<a name="cpp_device"/>
+%end
+
+%api "cpp_device"
 
 |                                                                                    |
 | ---------------------------------------------------------------------------------- |
@@ -99,7 +109,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getNodeType](device.md#wb_device_get_node_type)() const;         |
 | };                                                                                 |
 
-<a name="cpp_differential_wheels"/>
+%end
+
+%api "cpp_differential_wheels"
 
 |                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -120,7 +132,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getSpeedUnit](differentialwheels.md#wb_differential_wheels_get_speed_unit)() const;                           |
 | };                                                                                                                                 |
 
-<a name="cpp_display"/>
+%end
+
+%api "cpp_display"
 
 |                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -149,7 +163,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; void [imageDelete](display.md#wb_display_image_functions)([ImageRef](cpp-api.md#cpp_image_ref) *ir) const;                                          |
 | };                                                                                                                                                               |
 
-<a name="cpp_distance_sensor"/>
+%end
+
+%api "cpp_distance_sensor"
 
 |                                                                                                     |
 | --------------------------------------------------------------------------------------------------- |
@@ -161,7 +177,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getValue](distancesensor.md#wb_distance_sensor_get_value)() const;             |
 | };                                                                                                  |
 
-<a name="cpp_emitter"/>
+%end
+
+%api "cpp_emitter"
 
 |                                                                                          |
 | ---------------------------------------------------------------------------------------- |
@@ -176,7 +194,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getBufferSize](emitter.md#wb_emitter_get_buffer_size)() const;         |
 | };                                                                                       |
 
-<a name="cpp_field"/>
+%end
+
+%api "cpp_field"
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -225,7 +245,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; void [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(int position);                                                                                                           |
 | };                                                                                                                                                                                                          |
 
-<a name="cpp_gps"/>
+%end
+
+%api "cpp_gps"
 
 |                                                                           |
 | ------------------------------------------------------------------------- |
@@ -237,7 +259,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getValues](gps.md#wb_gps_get_values)() const; |
 | };                                                                        |
 
-<a name="cpp_gyro"/>
+%end
+
+%api "cpp_gyro"
 
 |                                                                             |
 | --------------------------------------------------------------------------- |
@@ -249,7 +273,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getValues](gyro.md#wb_gyro_get_values)() const; |
 | };                                                                          |
 
-<a name="cpp_image_ref"/>
+%end
+
+%api "cpp_image_ref"
 
 |                                    |
 | ---------------------------------- |
@@ -257,7 +283,9 @@ The following tables describe the C++ classes and their methods.
 | class ImageRef {                   |
 | };                                 |
 
-<a name="cpp_inertial_unit"/>
+%end
+
+%api "cpp_inertial_unit"
 
 |                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------- |
@@ -269,7 +297,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getRollPitchYaw](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)() const; |
 | };                                                                                                         |
 
-<a name="cpp_led"/>
+%end
+
+%api "cpp_led"
 
 |                                                                    |
 | ------------------------------------------------------------------ |
@@ -279,7 +309,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [get](led.md#wb_led_set)() const;                 |
 | };                                                                 |
 
-<a name="cpp_light_sensor"/>
+%end
+
+%api "cpp_light_sensor"
 
 |                                                                                            |
 | ------------------------------------------------------------------------------------------ |
@@ -291,7 +323,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getValue](lightsensor.md#wb_light_sensor_get_value)() const;          |
 | };                                                                                         |
 
-<a name="cpp_motion"/>
+%end
+
+%api "cpp_motion"
 
 |                                                                                  |
 | -------------------------------------------------------------------------------- |
@@ -310,7 +344,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setTime](motion.md#wbu_motion_is_over)(int time);     |
 | };                                                                               |
 
-<a name="cpp_motor"/>
+%end
+
+%api "cpp_motor"
 
 |                                                                                                          |
 | -------------------------------------------------------------------------------------------------------- |
@@ -346,7 +382,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getType](motor.md#wb_motor_get_type)() const;                                          |
 | };                                                                                                       |
 
-<a name="cpp_node"/>
+%end
+
+%api "cpp_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -371,7 +409,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; void [resetPhysics](supervisor.md#wb_supervisor_node_reset_physics)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | };                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-<a name="cpp_pen"/>
+%end
+
+%api "cpp_pen"
 
 |                                                                                                  |
 | ------------------------------------------------------------------------------------------------ |
@@ -381,7 +421,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setInkColor](pen.md#wb_pen_set_ink_color)(int color, double density); |
 | };                                                                                               |
 
-<a name="cpp_position_sensor"/>
+%end
+
+%api "cpp_position_sensor"
 
 |                                                                                                     |
 | --------------------------------------------------------------------------------------------------- |
@@ -395,7 +437,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getType](positionsensor.md#wb_position_sensor_get_value)() const;                 |
 | };                                                                                                  |
 
-<a name="cpp_receiver"/>
+%end
+
+%api "cpp_receiver"
 
 |                                                                                                        |
 | ------------------------------------------------------------------------------------------------------ |
@@ -415,7 +459,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getChannel](receiver.md#wb_receiver_set_channel)() const;                            |
 | };                                                                                                     |
 
-<a name="cpp_robot"/>
+%end
+
+%api "cpp_robot"
 
 |                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -478,7 +524,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                  |
 | };                                                                                                                                    |
 
-<a name="cpp_servo"/>
+%end
+
+%api "cpp_servo"
 
 |                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------ |
@@ -505,7 +553,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getType](servo.md#wb_servo_get_type)() const;                                              |
 | };                                                                                                           |
 
-<a name="cpp_supervisor"/>
+%end
+
+%api "cpp_supervisor"
 
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -535,7 +585,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual bool [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)();                                                               |
 | };                                                                                                                                                                         |
 
-<a name="cpp_touch_sensor"/>
+%end
+
+%api "cpp_touch_sensor"
 
 |                                                                                            |
 | ------------------------------------------------------------------------------------------ |
@@ -549,4 +601,6 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getValues](touchsensor.md#wb_touch_sensor_get_values)() const; |
 | &nbsp;&nbsp; int [getType](touchsensor.md#wb_touch_sensor_get_type)() const;               |
 | };                                                                                         |
+
+%end
 

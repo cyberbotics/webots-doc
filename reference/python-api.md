@@ -2,7 +2,7 @@
 
 The following tables describe the Python classes and their methods.
 
-<a name="python_accelerometer"/>
+%api "python_accelerometer"
 
 |                                                                                                 |
 | ----------------------------------------------------------------------------------------------- |
@@ -13,7 +13,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](accelerometer.md#wb_accelerometer_get_values)(self)        |
 | &nbsp;&nbsp; def [getValues](accelerometer.md#wb_accelerometer_get_values)(self)                |
 
-<a name="python_brake"/>
+%end
+
+%api "python_brake"
 
 |                                                                                                      |
 | ---------------------------------------------------------------------------------------------------- |
@@ -22,7 +24,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setDampingConstant](brake.md#wb_brake_set_damping_constant)(self, dampingConstant) |
 | &nbsp;&nbsp; def [getType](brake.md#wb_brake_set_damping_constant)(self)                             |
 
-<a name="python_camera"/>
+%end
+
+%api "python_camera"
 
 |                                                                                                |
 | ---------------------------------------------------------------------------------------------- |
@@ -62,7 +66,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; rangeImageGetDepth = staticmethod(rangeImageGetDepth)                             |
 | &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)          |
 
-<a name="python_compass"/>
+%end
+
+%api "python_compass"
 
 |                                                                               |
 | ----------------------------------------------------------------------------- |
@@ -73,7 +79,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](compass.md#wb_compass_get_values)(self)  |
 | &nbsp;&nbsp; def [getValues](compass.md#wb_compass_get_values)(self)          |
 
-<a name="python_connector"/>
+%end
+
+%api "python_connector"
 
 |                                                                                     |
 | ----------------------------------------------------------------------------------- |
@@ -85,7 +93,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [lock](connector.md#wb_connector_lock)(self)                       |
 | &nbsp;&nbsp; def [unlock](connector.md#wb_connector_lock)(self)                     |
 
-<a name="python_device"/>
+%end
+
+%api "python_device"
 
 |                                                                         |
 | ----------------------------------------------------------------------- |
@@ -95,7 +105,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getName](device.md#wb_device_get_name)(self)          |
 | &nbsp;&nbsp; def [getNodeType](device.md#wb_device_get_node_type)(self) |
 
-<a name="python_differential_wheels"/>
+%end
+
+%api "python_differential_wheels"
 
 |                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------- |
@@ -115,7 +127,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getMaxSpeed](differentialwheels.md#wb_differential_wheels_get_max_speed)(self)                 |
 | &nbsp;&nbsp; def [getSpeedUnit](differentialwheels.md#wb_differential_wheels_get_speed_unit)(self)               |
 
-<a name="python_display"/>
+%end
+
+%api "python_display"
 
 |                                                                                                   |
 | ------------------------------------------------------------------------------------------------- |
@@ -143,7 +157,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [imageSave](display.md#wb_display_image_functions)(self, ir, filename)           |
 | &nbsp;&nbsp; def [imageDelete](display.md#wb_display_image_functions)(self, ir)                   |
 
-<a name="python_distance_sensor"/>
+%end
+
+%api "python_distance_sensor"
 
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
@@ -154,7 +170,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)(self)         |
 | &nbsp;&nbsp; def [getValue](distancesensor.md#wb_distance_sensor_get_value)(self)                  |
 
-<a name="python_emitter"/>
+%end
+
+%api "python_emitter"
 
 |                                                                                 |
 | ------------------------------------------------------------------------------- |
@@ -168,7 +186,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setRange](emitter.md#wb_emitter_set_range)(self, range)       |
 | &nbsp;&nbsp; def [getBufferSize](emitter.md#wb_emitter_get_buffer_size)(self)   |
 
-<a name="python_field"/>
+%end
+
+%api "python_field"
 
 |                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------- |
@@ -219,7 +239,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [importMFNodeFromString](supervisor.md#wb_supervisor_field_import_mf_node)(self, position, nodeString) |
 | &nbsp;&nbsp; def [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(self, position)                       |
 
-<a name="python_gps"/>
+%end
+
+%api "python_gps"
 
 |                                                                      |
 | -------------------------------------------------------------------- |
@@ -230,7 +252,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](gps.md#wb_gps_get_values)(self) |
 | &nbsp;&nbsp; def [getValues](gps.md#wb_gps_get_values)(self)         |
 
-<a name="python_gyro"/>
+%end
+
+%api "python_gyro"
 
 |                                                                        |
 | ---------------------------------------------------------------------- |
@@ -241,14 +265,18 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](gyro.md#wb_gyro_get_values)(self) |
 | &nbsp;&nbsp; def [getValues](gyro.md#wb_gyro_get_values)(self)         |
 
-<a name="python_image_ref"/>
+%end
+
+%api "python_image_ref"
 
 |                                 |
 | ------------------------------- |
 | from controller import ImageRef |
 | class ImageRef :                |
 
-<a name="python_inertial_unit"/>
+%end
+
+%api "python_inertial_unit"
 
 |                                                                                                 |
 | ----------------------------------------------------------------------------------------------- |
@@ -259,7 +287,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(self) |
 | &nbsp;&nbsp; def [getRollPitchYaw](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(self)   |
 
-<a name="python_led"/>
+%end
+
+%api "python_led"
 
 |                                                                   |
 | ----------------------------------------------------------------- |
@@ -268,7 +298,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [set](led.md#wb_led_set)(self, state)            |
 | &nbsp;&nbsp; def [get](led.md#wb_led_set)(self)                   |
 
-<a name="python_light_sensor"/>
+%end
+
+%api "python_light_sensor"
 
 |                                                                                           |
 | ----------------------------------------------------------------------------------------- |
@@ -279,7 +311,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](lightsensor.md#wb_light_sensor_get_value)(self)      |
 | &nbsp;&nbsp; def [getValue](lightsensor.md#wb_light_sensor_get_value)(self)               |
 
-<a name="python_motion"/>
+%end
+
+%api "python_motion"
 
 |                                                                           |
 | ------------------------------------------------------------------------- |
@@ -297,7 +331,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getTime](motion.md#wbu_motion_is_over)(self)            |
 | &nbsp;&nbsp; def [setTime](motion.md#wbu_motion_is_over)(self, time)      |
 
-<a name="python_motor"/>
+%end
+
+%api "python_motor"
 
 |                                                                                                   |
 | ------------------------------------------------------------------------------------------------- |
@@ -332,7 +368,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setTorque](motor.md#wb_motor_set_force)(self, torque)                           |
 | &nbsp;&nbsp; def [getType](motor.md#wb_motor_get_type)(self)                                      |
 
-<a name="python_node"/>
+%end
+
+%api "python_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -356,7 +394,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setVelocity](supervisor.md#wb_supervisor_node_get_velocity)(self, velocity)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | &nbsp;&nbsp; def [resetPhysics](supervisor.md#wb_supervisor_node_reset_physics)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-<a name="python_pen"/>
+%end
+
+%api "python_pen"
 
 |                                                                                   |
 | --------------------------------------------------------------------------------- |
@@ -365,7 +405,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [write](pen.md#wb_pen_write)(self, write)                        |
 | &nbsp;&nbsp; def [setInkColor](pen.md#wb_pen_set_ink_color)(self, color, density) |
 
-<a name="python_position_sensor"/>
+%end
+
+%api "python_position_sensor"
 
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
@@ -378,7 +420,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getValue](positionsensor.md#wb_position_sensor_get_value)(self)                  |
 | &nbsp;&nbsp; def [getType](positionsensor.md#wb_position_sensor_get_value)(self)                   |
 
-<a name="python_receiver"/>
+%end
+
+%api "python_receiver"
 
 |                                                                                           |
 | ----------------------------------------------------------------------------------------- |
@@ -397,7 +441,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setChannel](receiver.md#wb_receiver_set_channel)(self, channel)         |
 | &nbsp;&nbsp; def [getChannel](receiver.md#wb_receiver_set_channel)(self)                  |
 
-<a name="python_robot"/>
+%end
+
+%api "python_robot"
 
 |                                                                                                  |
 | ------------------------------------------------------------------------------------------------ |
@@ -457,7 +503,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [keyboardGetKey](robot.md#wb_robot_keyboard_enable)(self)                       |
 | &nbsp;&nbsp; def [getType](robot.md#wb_robot_get_type)(self)                                     |
 
-<a name="python_servo"/>
+%end
+
+%api "python_servo"
 
 |                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------- |
@@ -483,7 +531,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setForce](servo.md#wb_servo_set_force)(self, force)                                       |
 | &nbsp;&nbsp; def [getType](servo.md#wb_servo_get_type)(self)                                                |
 
-<a name="python_supervisor"/>
+%end
+
+%api "python_supervisor"
 
 |                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -510,7 +560,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(self, file)                                               |
 | &nbsp;&nbsp; def [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)(self)                                                      |
 
-<a name="python_touch_sensor"/>
+%end
+
+%api "python_touch_sensor"
 
 |                                                                                           |
 | ----------------------------------------------------------------------------------------- |
@@ -523,4 +575,6 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getValue](touchsensor.md#wb_touch_sensor_get_values)(self)              |
 | &nbsp;&nbsp; def [getValues](touchsensor.md#wb_touch_sensor_get_values)(self)             |
 | &nbsp;&nbsp; def [getType](touchsensor.md#wb_touch_sensor_get_type)(self)                 |
+
+%end
 

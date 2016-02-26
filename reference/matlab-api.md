@@ -2,7 +2,7 @@
 
 The following tables describe the Matlab functions.
 
-<a name="matlab_accelerometer"/>
+%api "matlab_accelerometer"
 
 | % [Accelerometer](accelerometer.md#accelerometer) :                                                    |
 | ------------------------------------------------------------------------------------------------------ |
@@ -11,14 +11,18 @@ The following tables describe the Matlab functions.
 | period = [wb\_accelerometer\_get\_sampling\_period](accelerometer.md#wb_accelerometer_get_values)(tag) |
 | [x y z] = [wb\_accelerometer\_get\_values](accelerometer.md#wb_accelerometer_get_values)(tag)          |
 
-<a name="matlab_brake"/>
+%end
+
+%api "matlab_brake"
 
 | % [Brake](brake.md#brake) :                                                                       |
 | ------------------------------------------------------------------------------------------------- |
 | [wb\_brake\_set\_damping\_constant](brake.md#wb_brake_set_damping_constant)(tag, dampingConstant) |
 | type = [wb\_brake\_get\_type](brake.md#wb_brake_set_damping_constant)(tag)                        |
 
-<a name="matlab_camera"/>
+%end
+
+%api "matlab_camera"
 
 | % [Camera](camera.md#camera) :                                                                 |
 | ---------------------------------------------------------------------------------------------- |
@@ -45,7 +49,9 @@ The following tables describe the Matlab functions.
 | max\_range = [wb\_camera\_get\_max\_range](camera.md#wb_camera_get_range_image)(tag)           |
 | [wb\_camera\_save\_image](camera.md#wb_camera_save_image)(tag, 'filename', quality)            |
 
-<a name="matlab_compass"/>
+%end
+
+%api "matlab_compass"
 
 | % [Compass](compass.md#compass) :                                                    |
 | ------------------------------------------------------------------------------------ |
@@ -54,7 +60,9 @@ The following tables describe the Matlab functions.
 | period = [wb\_compass\_get\_sampling\_period](compass.md#wb_compass_get_values)(tag) |
 | [x y z] = [wb\_compass\_get\_values](compass.md#wb_compass_get_values)(tag)          |
 
-<a name="matlab_connector"/>
+%end
+
+%api "matlab_connector"
 
 | % [Connector](connector.md#connector) :                                                |
 | -------------------------------------------------------------------------------------- |
@@ -64,7 +72,9 @@ The following tables describe the Matlab functions.
 | [wb\_connector\_lock](connector.md#wb_connector_lock)(tag)                             |
 | [wb\_connector\_unlock](connector.md#wb_connector_lock)(tag)                           |
 
-<a name="matlab_device"/>
+%end
+
+%api "matlab_device"
 
 | % [Device](device.md#device) :                                               |
 | ---------------------------------------------------------------------------- |
@@ -72,7 +82,9 @@ The following tables describe the Matlab functions.
 | name = [wb\_device\_get\_name](device.md#wb_device_get_name)(tag)            |
 | type = [wb\_device\_get\_node\_type](device.md#wb_device_get_node_type)(tag) |
 
-<a name="matlab_differential_wheels"/>
+%end
+
+%api "matlab_differential_wheels"
 
 | % [DifferentialWheels](differentialwheels.md#differentialwheels) :                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -88,7 +100,9 @@ The following tables describe the Matlab functions.
 | max = [wb\_differential\_wheels\_get\_max\_speed](differentialwheels.md#wb_differential_wheels_get_max_speed)()                      |
 | unit = [wb\_differential\_wheels\_get\_speed\_unit](differentialwheels.md#wb_differential_wheels_get_speed_unit)()                   |
 
-<a name="matlab_display"/>
+%end
+
+%api "matlab_display"
 
 | % [Display](display.md#display) :                                                                          |
 | ---------------------------------------------------------------------------------------------------------- |
@@ -117,7 +131,9 @@ The following tables describe the Matlab functions.
 | [wb\_display\_image\_save](display.md#wb_display_image_functions)(tag, image, 'filename')                  |
 | [wb\_display\_image\_delete](display.md#wb_display_image_functions)(tag, image)                            |
 
-<a name="matlab_distance_sensor"/>
+%end
+
+%api "matlab_distance_sensor"
 
 | % [DistanceSensor](distancesensor.md#distancesensor) :                                                      |
 | ----------------------------------------------------------------------------------------------------------- |
@@ -126,7 +142,9 @@ The following tables describe the Matlab functions.
 | period = [wb\_distance\_sensor\_get\_sampling\_period](distancesensor.md#wb_distance_sensor_get_value)(tag) |
 | value = [wb\_distance\_sensor\_get\_value](distancesensor.md#wb_distance_sensor_get_value)(tag)             |
 
-<a name="matlab_emitter"/>
+%end
+
+%api "matlab_emitter"
 
 | % [Emitter](emitter.md#emitter) :                                                   |
 | ----------------------------------------------------------------------------------- |
@@ -138,7 +156,9 @@ The following tables describe the Matlab functions.
 | [wb\_emitter\_set\_range](emitter.md#wb_emitter_set_range)(tag, range)              |
 | size = [wb\_emitter\_get\_buffer\_size](emitter.md#wb_emitter_get_buffer_size)(tag) |
 
-<a name="matlab_gps"/>
+%end
+
+%api "matlab_gps"
 
 | % [GPS](gps.md#gps) :                                                    |
 | ------------------------------------------------------------------------ |
@@ -147,7 +167,9 @@ The following tables describe the Matlab functions.
 | period = [wb\_gps\_get\_sampling\_period](gps.md#wb_gps_get_values)(tag) |
 | [x y z] = [wb\_gps\_get\_values](gps.md#wb_gps_get_values)(tag)          |
 
-<a name="matlab_gyro"/>
+%end
+
+%api "matlab_gyro"
 
 | % [Gyro](gyro.md#gyro) :                                                    |
 | --------------------------------------------------------------------------- |
@@ -156,7 +178,9 @@ The following tables describe the Matlab functions.
 | period = [wb\_gyro\_get\_sampling\_period](gyro.md#wb_gyro_get_values)(tag) |
 | [x y z] = [wb\_gyro\_get\_values](gyro.md#wb_gyro_get_values)(tag)          |
 
-<a name="matlab_inertial_unit"/>
+%end
+
+%api "matlab_inertial_unit"
 
 | % [InertialUnit](inertialunit.md#inertialunit) :                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------ |
@@ -165,14 +189,18 @@ The following tables describe the Matlab functions.
 | period = [wb\_inertial\_unit\_get\_sampling\_period](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag)           |
 | [roll pitch yaw] = [wb\_inertial\_unit\_get\_roll\_pitch\_yaw](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag) |
 
-<a name="matlab_led"/>
+%end
+
+%api "matlab_led"
 
 | % [LED](led.md#led) :                          |
 | ---------------------------------------------- |
 | [wb\_led\_set](led.md#wb_led_set)(tag, state)  |
 | state = [wb\_led\_get](led.md#wb_led_set)(tag) |
 
-<a name="matlab_light_sensor"/>
+%end
+
+%api "matlab_light_sensor"
 
 | % [LightSensor](lightsensor.md#lightsensor) :                                                      |
 | -------------------------------------------------------------------------------------------------- |
@@ -181,7 +209,9 @@ The following tables describe the Matlab functions.
 | period = [wb\_light\_sensor\_get\_sampling\_period](lightsensor.md#wb_light_sensor_get_value)(tag) |
 | value = [wb\_light\_sensor\_get\_value](lightsensor.md#wb_light_sensor_get_value)(tag)             |
 
-<a name="matlab_motion"/>
+%end
+
+%api "matlab_motion"
 
 | % [Motion](motion.md#motion) :                                                |
 | ----------------------------------------------------------------------------- |
@@ -196,7 +226,9 @@ The following tables describe the Matlab functions.
 | time = [wbu\_motion\_get\_time](motion.md#wbu_motion_is_over)(motion)         |
 | [wbu\_motion\_set\_time](motion.md#wbu_motion_is_over)(motion, time)          |
 
-<a name="matlab_motor"/>
+%end
+
+%api "matlab_motor"
 
 | % [Motor](motor.md#motor) :                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- |
@@ -229,20 +261,26 @@ The following tables describe the Matlab functions.
 | [wb\_motor\_set\_torque](motor.md#wb_motor_set_force)(tag, torque)                                          |
 | type = [wb\_motor\_get\_type](motor.md#wb_motor_get_type)(tag)                                              |
 
-<a name="matlab_node"/>
+%end
+
+%api "matlab_node"
 
 | Node:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | WB\_NODE\_NO\_NODE, WB\_NODE\_ACCELEROMETER, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, WB\_NODE\_BALL\_JOINT, WB\_NODE\_BALL\_JOINT\_PARAMETERS, WB\_NODE\_BOX, WB\_NODE\_BRAKE, WB\_NODE\_CAMERA, WB\_NODE\_CAMERA\_FOCUS, WB\_NODE\_CAMERA\_LENS\_DISTORTION, WB\_NODE\_CAMERA\_ZOOM, WB\_NODE\_CAPSULE, WB\_NODE\_CHARGER, WB\_NODE\_COLOR, WB\_NODE\_COMPASS, WB\_NODE\_CONE, WB\_NODE\_CONNECTOR, WB\_NODE\_CONTACT\_PROPERTIES, WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, WB\_NODE\_DAMPING, WB\_NODE\_DIFFERENTIAL\_WHEELS, WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_DISPLAY, WB\_NODE\_DISTANCE\_SENSOR, WB\_NODE\_ELEVATION\_GRID, WB\_NODE\_EMITTER, WB\_NODE\_EXTRUSION, WB\_NODE\_FLUID, WB\_NODE\_FOG, WB\_NODE\_GPS, WB\_NODE\_GROUP, WB\_NODE\_GYRO, WB\_NODE\_HINGE\_2\_JOINT, WB\_NODE\_HINGE\_2\_JOINT\_PARAMETERS, WB\_NODE\_HINGE\_JOINT, WB\_NODE\_HINGE\_JOINT\_PARAMETERS, WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_IMMERSION\_PROPERTIES, WB\_NODE\_INDEXED\_FACE\_SET, WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_INERTIAL\_UNIT, WB\_NODE\_JOINT\_PARAMETERS, WB\_NODE\_LED, WB\_NODE\_LIGHT\_SENSOR, WB\_NODE\_LINEAR\_MOTOR, WB\_NODE\_MATERIAL, WB\_NODE\_MICROPHONE, WB\_NODE\_PEN, WB\_NODE\_PHYSICS, WB\_NODE\_PLANE, WB\_NODE\_POINT\_LIGHT, WB\_NODE\_POSITION\_SENSOR, WB\_NODE\_PROPELLER, WB\_NODE\_RADIO, WB\_NODE\_RECEIVER, WB\_NODE\_ROBOT, WB\_NODE\_ROTATIONAL\_MOTOR, WB\_NODE\_SERVO, WB\_NODE\_SHAPE, WB\_NODE\_SLIDER\_JOINT, WB\_NODE\_SLOT, WB\_NODE\_SOLID, WB\_NODE\_SOLID\_REFERENCE, WB\_NODE\_SPEAKER, WB\_NODE\_SPHERE, WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SUPERVISOR, WB\_NODE\_SWITCH, WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, WB\_NODE\_TOUCH\_SENSOR, WB\_NODE\_TRACK, WB\_NODE\_TRACK\_WHEEL, WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO |
 
-<a name="matlab_pen"/>
+%end
+
+%api "matlab_pen"
 
 | % [Pen](pen.md#pen) :                                                          |
 | ------------------------------------------------------------------------------ |
 | [wb\_pen\_write](pen.md#wb_pen_write)(tag, write)                              |
 | [wb\_pen\_set\_ink\_color](pen.md#wb_pen_set_ink_color)(tag, [r g b], density) |
 
-<a name="matlab_position_sensor"/>
+%end
+
+%api "matlab_position_sensor"
 
 | % [PositionSensor](positionsensor.md#positionsensor) :                                                      |
 | ----------------------------------------------------------------------------------------------------------- |
@@ -253,7 +291,9 @@ The following tables describe the Matlab functions.
 | value = [wb\_position\_sensor\_get\_value](positionsensor.md#wb_position_sensor_get_value)(tag)             |
 | type = [wb\_position\_sensor\_get\_type](positionsensor.md#wb_position_sensor_get_value)(tag)               |
 
-<a name="matlab_receiver"/>
+%end
+
+%api "matlab_receiver"
 
 | % [Receiver](receiver.md#receiver) :                                                                |
 | --------------------------------------------------------------------------------------------------- |
@@ -270,7 +310,9 @@ The following tables describe the Matlab functions.
 | [wb\_receiver\_set\_channel](receiver.md#wb_receiver_set_channel)(tag, channel)                     |
 | channel = [wb\_receiver\_get\_channel](receiver.md#wb_receiver_set_channel)(tag)                    |
 
-<a name="matlab_robot"/>
+%end
+
+%api "matlab_robot"
 
 | % [Robot](robot.md#robot) :                                                                             |
 | ------------------------------------------------------------------------------------------------------- |
@@ -320,7 +362,9 @@ The following tables describe the Matlab functions.
 | key = [wb\_robot\_keyboard\_get\_key](robot.md#wb_robot_keyboard_enable)()                              |
 | type = [wb\_robot\_get\_type](robot.md#wb_robot_get_type)()                                             |
 
-<a name="matlab_servo"/>
+%end
+
+%api "matlab_servo"
 
 | % [Servo](servo.md#servo) :                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- |
@@ -344,7 +388,9 @@ The following tables describe the Matlab functions.
 | [wb\_servo\_set\_force](servo.md#wb_servo_set_force)(tag, force)                                                        |
 | type = [wb\_servo\_get\_type](servo.md#wb_servo_get_type)(tag)                                                          |
 
-<a name="matlab_supervisor"/>
+%end
+
+%api "matlab_supervisor"
 
 | % [Supervisor](supervisor.md#supervisor) :                                                                                                                                                                           |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -428,7 +474,9 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                                                                 |
 | [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                                                                         |
 
-<a name="matlab_touch_sensor"/>
+%end
+
+%api "matlab_touch_sensor"
 
 | % [TouchSensor](touchsensor.md#touchsensor) :                                                       |
 | --------------------------------------------------------------------------------------------------- |
@@ -440,4 +488,6 @@ The following tables describe the Matlab functions.
 | value = [wb\_touch\_sensor\_get\_value](touchsensor.md#wb_touch_sensor_get_values)(tag)             |
 | [x y z] = [wb\_touch\_sensor\_get\_values](touchsensor.md#wb_touch_sensor_get_values)(tag)          |
 | type = [wb\_touch\_sensor\_get\_type](touchsensor.md#wb_touch_sensor_get_type)(tag)                 |
+
+%end
 

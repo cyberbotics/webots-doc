@@ -467,6 +467,16 @@ class BookParser:
         if len(title) > 0:
             outFile.write('%%figure "%s"\n\n' % (title))
 
+        api = False
+        if nCols == 1 and node.attrib.get('id') and (
+                node.attrib.get('id').startswith('cpp_') or
+                node.attrib.get('id').startswith('java_') or
+                node.attrib.get('id').startswith('python_') or
+                node.attrib.get('id').startswith('matlab_') or
+                node.attrib.get('id').startswith('ros_')):
+            api = True
+            outFile.write('%%api "%s"\n\n' % (node.attrib.get('id')))
+
         maxWidths = [0] * nCols
         for rowNode in node.findall('.//row'):
             colNumber = 0
@@ -478,12 +488,6 @@ class BookParser:
                 if width > maxWidths[colNumber]:
                     maxWidths[colNumber] = width
                 colNumber += 1
-
-        # exception: display the anchor
-        if nCols == 1 and node.attrib.get('id') and \
-           (node.attrib.get('id').startswith('cpp_') or node.attrib.get('id').startswith('java_') or \
-            node.attrib.get('id').startswith('python_') or node.attrib.get('id').startswith('matlab_')):
-            outFile.write('<a name="%s"/>\n\n' % (node.attrib.get('id')))
 
         if not header:
             for i in range(0, nCols):
@@ -528,6 +532,9 @@ class BookParser:
                 outFile.write(' |\n')
 
         if len(title) > 0:
+            outFile.write('\n%end\n\n')
+
+        if api:
             outFile.write('\n%end\n\n')
 
         outFile.write('\n')

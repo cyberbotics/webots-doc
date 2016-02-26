@@ -2,7 +2,7 @@
 
 The following tables describe the Java classes and their methods.
 
-<a name="java_accelerometer"/>
+%api "java_accelerometer"
 
 |                                                                                                          |
 | -------------------------------------------------------------------------------------------------------- |
@@ -14,7 +14,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getValues](accelerometer.md#wb_accelerometer_get_values)();                |
 | }                                                                                                        |
 
-<a name="java_brake"/>
+%end
+
+%api "java_brake"
 
 |                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +26,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](brake.md#wb_brake_set_damping_constant)();                                   |
 | }                                                                                                              |
 
-<a name="java_camera"/>
+%end
+
+%api "java_camera"
 
 |                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- |
@@ -63,7 +67,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
 | }                                                                                                                    |
 
-<a name="java_compass"/>
+%end
+
+%api "java_compass"
 
 |                                                                                        |
 | -------------------------------------------------------------------------------------- |
@@ -75,7 +81,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getValues](compass.md#wb_compass_get_values)();          |
 | }                                                                                      |
 
-<a name="java_connector"/>
+%end
+
+%api "java_connector"
 
 |                                                                                              |
 | -------------------------------------------------------------------------------------------- |
@@ -88,7 +96,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [unlock](connector.md#wb_connector_lock)();                         |
 | }                                                                                            |
 
-<a name="java_device"/>
+%end
+
+%api "java_device"
 
 |                                                                             |
 | --------------------------------------------------------------------------- |
@@ -99,7 +109,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getNodeType](device.md#wb_device_get_node_type)(); |
 | }                                                                           |
 
-<a name="java_differential_wheels"/>
+%end
+
+%api "java_differential_wheels"
 
 |                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -120,7 +132,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getSpeedUnit](differentialwheels.md#wb_differential_wheels_get_speed_unit)();                         |
 | }                                                                                                                                 |
 
-<a name="java_display"/>
+%end
+
+%api "java_display"
 
 |                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -149,7 +163,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [imageDelete](display.md#wb_display_image_functions)([ImageRef](java-api.md#java_image_ref) ir);                                    |
 | }                                                                                                                                                            |
 
-<a name="java_distance_sensor"/>
+%end
+
+%api "java_distance_sensor"
 
 |                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------- |
@@ -161,7 +177,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getValue](distancesensor.md#wb_distance_sensor_get_value)();                    |
 | }                                                                                                           |
 
-<a name="java_emitter"/>
+%end
+
+%api "java_emitter"
 
 |                                                                                        |
 | -------------------------------------------------------------------------------------- |
@@ -176,7 +194,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getBufferSize](emitter.md#wb_emitter_get_buffer_size)();      |
 | }                                                                                      |
 
-<a name="java_field"/>
+%end
+
+%api "java_field"
 
 |                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -228,7 +248,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(int position);                              |
 | }                                                                                                                                     |
 
-<a name="java_gps"/>
+%end
+
+%api "java_gps"
 
 |                                                                            |
 | -------------------------------------------------------------------------- |
@@ -240,7 +262,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getValues](gps.md#wb_gps_get_values)();      |
 | }                                                                          |
 
-<a name="java_gyro"/>
+%end
+
+%api "java_gyro"
 
 |                                                                               |
 | ----------------------------------------------------------------------------- |
@@ -252,7 +276,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getValues](gyro.md#wb_gyro_get_values)();       |
 | }                                                                             |
 
-<a name="java_image_ref"/>
+%end
+
+%api "java_image_ref"
 
 |                                                    |
 | -------------------------------------------------- |
@@ -260,7 +286,9 @@ The following tables describe the Java classes and their methods.
 | public class ImageRef {                            |
 | }                                                  |
 
-<a name="java_inertial_unit"/>
+%end
+
+%api "java_inertial_unit"
 
 |                                                                                                        |
 | ------------------------------------------------------------------------------------------------------ |
@@ -272,7 +300,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getRollPitchYaw](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(); |
 | }                                                                                                      |
 
-<a name="java_led"/>
+%end
+
+%api "java_led"
 
 |                                                                            |
 | -------------------------------------------------------------------------- |
@@ -282,7 +312,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [get](led.md#wb_led_set)();                        |
 | }                                                                          |
 
-<a name="java_light_sensor"/>
+%end
+
+%api "java_light_sensor"
 
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
@@ -294,7 +326,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getValue](lightsensor.md#wb_light_sensor_get_value)();                 |
 | }                                                                                                  |
 
-<a name="java_motion"/>
+%end
+
+%api "java_motion"
 
 |                                                                                 |
 | ------------------------------------------------------------------------------- |
@@ -313,7 +347,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setTime](motion.md#wbu_motion_is_over)(int time);     |
 | }                                                                               |
 
-<a name="java_motor"/>
+%end
+
+%api "java_motor"
 
 |                                                                                                         |
 | ------------------------------------------------------------------------------------------------------- |
@@ -349,7 +385,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](motor.md#wb_motor_get_type)();                                        |
 | }                                                                                                       |
 
-<a name="java_node"/>
+%end
+
+%api "java_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -374,7 +412,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [resetPhysics](supervisor.md#wb_supervisor_node_reset_physics)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-<a name="java_pen"/>
+%end
+
+%api "java_pen"
 
 |                                                                                                 |
 | ----------------------------------------------------------------------------------------------- |
@@ -384,7 +424,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setInkColor](pen.md#wb_pen_set_ink_color)(int color, double density); |
 | }                                                                                               |
 
-<a name="java_position_sensor"/>
+%end
+
+%api "java_position_sensor"
 
 |                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------- |
@@ -398,7 +440,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](positionsensor.md#wb_position_sensor_get_value)();                        |
 | }                                                                                                           |
 
-<a name="java_receiver"/>
+%end
+
+%api "java_receiver"
 
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
@@ -418,7 +462,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getChannel](receiver.md#wb_receiver_set_channel)();                       |
 | }                                                                                                  |
 
-<a name="java_robot"/>
+%end
+
+%api "java_robot"
 
 |                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -480,7 +526,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](robot.md#wb_robot_get_type)();                                                                  |
 | }                                                                                                                                 |
 
-<a name="java_servo"/>
+%end
+
+%api "java_servo"
 
 |                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------- |
@@ -507,7 +555,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](servo.md#wb_servo_get_type)();                                                |
 | }                                                                                                               |
 
-<a name="java_supervisor"/>
+%end
+
+%api "java_supervisor"
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -537,7 +587,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public bool [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)();                                                   |
 | }                                                                                                                                                             |
 
-<a name="java_touch_sensor"/>
+%end
+
+%api "java_touch_sensor"
 
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
@@ -551,4 +603,6 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getValues](touchsensor.md#wb_touch_sensor_get_values)();             |
 | &nbsp;&nbsp; public int [getType](touchsensor.md#wb_touch_sensor_get_type)();                      |
 | }                                                                                                  |
+
+%end
 

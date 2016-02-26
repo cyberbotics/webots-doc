@@ -55,7 +55,8 @@ class TestMenus(unittest.TestCase):
                     )
                     self.assertTrue(
                         os.path.isfile(target_file),
-                        msg='' % ()
+                        msg='Invalid reference "%s" in menu "%s"' %
+                        (target_file, menu)
                     )
             self.assertGreater(
                 match_counter, 0,

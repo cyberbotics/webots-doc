@@ -153,6 +153,10 @@ table td {
   border-color: #ddd;
   background-color: transparent;
 }
+.api > table {
+  font-family: monospace;
+  width: 80%;
+}
 @font-face {
 	font-family:"Raleway";
 	font-style:normal;

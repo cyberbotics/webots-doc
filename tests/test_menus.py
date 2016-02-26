@@ -5,7 +5,7 @@ import unittest
 from books import Books
 
 
-class TestMenu(unittest.TestCase):
+class TestMenus(unittest.TestCase):
     """Unit test of the menus."""
 
     def setUp(self):

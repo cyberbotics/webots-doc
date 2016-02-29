@@ -37,8 +37,11 @@ class TestReferences(unittest.TestCase):
                                     line.strip()):
                                 anchors.append(m.group(1))
                         if line.startswith('#'):
-                            title = re.sub(r'^#*', '', line)
-                            anchors.append(slugify(title))
+                            m = re.match(r'^#* .*$', line)
+                            if m:
+                                print line
+                                title = re.sub(r'^#*', '', line)
+                                anchors.append(slugify(title))
                         elif line.startswith('%figure'):
                             title = line.replace('%figure', '')
                             anchors.append(slugify(title))
@@ -46,6 +49,22 @@ class TestReferences(unittest.TestCase):
                             title = line.replace('%api', '')
                             anchors.append(slugify(title))
                 self.anchors[md_path] = anchors
+
+    def test_anchors_are_unique(self):
+        """Test that the anchors are unique."""
+        books = Books()
+        for book in books.books:
+            for md_path in book.md_paths:
+                anchors = self.anchors[md_path]
+                s = set()
+                for a in anchors:
+                    if a in s:
+                        self.assertTrue(
+                            False,
+                            msg='%s: Anchors "%s" are not unique'
+                                % (md_path, a)
+                        )
+                    s.add(a)
 
     def test_references_are_valid(self):
         """Test that the MD files are pointing on valid URLs."""

@@ -39,7 +39,6 @@ class TestReferences(unittest.TestCase):
                         if line.startswith('#'):
                             m = re.match(r'^#* .*$', line)
                             if m:
-                                print line
                                 title = re.sub(r'^#*', '', line)
                                 anchors.append(slugify(title))
                         elif line.startswith('%figure'):

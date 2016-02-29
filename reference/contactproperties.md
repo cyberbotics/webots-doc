@@ -36,7 +36,8 @@ values of the first matching
 contact. If no matching node is found, default values are used. The default
 values are the same as those indicated above.
 
-> **note**: In older Webots versions, contact properties used to be specified in
+> **note**:
+In older Webots versions, contact properties used to be specified in
 [Physics](physics.md#physics) nodes. For compatibility reasons, contact
 properties specified like this are still functional in Webots, but they trigger
 deprecation warnings. To remove these warning you need to switch to the new
@@ -125,7 +126,8 @@ description of the ERP concept.
 manage local contacts joints. [WorldInfo](worldinfo.md#worldinfo) for a
 description of the CFM concept.
 
-> **note**: The youBot robot is a good example of asymmetric coulombFriction and
+> **note**:
+The youBot robot is a good example of asymmetric coulombFriction and
 forceDependentSlip, it is located in
 WEBOTS\_HOME/projects/robot/youbot/worlds/youbot.wbt.
 

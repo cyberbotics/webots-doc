@@ -22,11 +22,13 @@ shows the robot from a top view.
 
 ### New simulation
 
-> **handson**: Save the world of the previous tutorial as "4\_wheels\_robot.wbt".
+> **handson**:
+Save the world of the previous tutorial as "4\_wheels\_robot.wbt".
 
 <!-- -->
 
-> **handson**: Remove the nodes defining the e-puck, the ball, the dumbbell and the contact
+> **handson**:
+Remove the nodes defining the e-puck, the ball, the dumbbell and the contact
 properties. The ground, the walls and the lighting are kept.
 
 ### Separating the Robot in Solid Nodes
@@ -39,14 +41,16 @@ nodes. You can get more information about the node hierarchy in the `Reference
 Manual`. Note that the solid nodes and device nodes is close but don't match
 perfectly.
 
-> **theory**: The main structure of a robot model is a tree of solid nodes linked together.
+> **theory**:
+The main structure of a robot model is a tree of solid nodes linked together.
 The root node of this tree should be a robot node. The solid are linked together
 by joint nodes. A device node should be the direct child of either a robot node,
 either a solid node or a joint node.
 
 <!-- -->
 
-> **theory**: A joint node is used to add one (or two) degree(s) of freedom (DOF), between its
+> **theory**:
+A joint node is used to add one (or two) degree(s) of freedom (DOF), between its
 parent and its child. The direct parent and child of a joint node are both solid
 nodes.
 
@@ -82,13 +86,15 @@ In our case, the body box is obviously the better choice. The
 [figure](tutorial-6-4-wheels-robot.md#high-level-representation-of-the-4-wheels-robot)
 depicts the solid nodes hierarchy of the robot.
 
-> **handson**: At the end of the scene tree, add a Robot node having four HingeJoints having a
+> **handson**:
+At the end of the scene tree, add a Robot node having four HingeJoints having a
 Solid child. Please refer to [this
 figure](tutorial-6-4-wheels-robot.md#high-level-representation-of-the-4-wheels-robot).
 
 <!-- -->
 
-> **handson**: Add a Shape node containing a Box geometry to the Robot node. Set the color of
+> **handson**:
+Add a Shape node containing a Box geometry to the Robot node. Set the color of
 the Shape to red. Use the Shape to define also the `boundingObject` field of the
 Robot node. The dimension of the box is *(0.1, 0.05, 0.2)*. Add a Physics node
 to the Robot. The
@@ -122,14 +128,16 @@ define the rotation origin (relatively to the body). Finally the
 HingeJointParameters axis should define the rotation axis. In our case it's
 along the x-axis (so *(1, 0, 0)*).
 
-> **handson**: Add a HingeJointParameters node, and enter the field values as described above.
+> **handson**:
+Add a HingeJointParameters node, and enter the field values as described above.
 Some signs have obviously to be updated for other wheels.
 
 We want now to implement the cylinder shape of the wheels. As the Cylinder node
 is defined along the *y*-axis, a Transform node should encapsulate the Shape to
 rotate the Cylinder along the along the *x*-axis.
 
-> **handson**: Complete the missing nodes to get the same structure as the one depicted in
+> **handson**:
+Complete the missing nodes to get the same structure as the one depicted in
 [this
 figure](tutorial-6-4-wheels-robot.md#low-level-representation-of-the-4-wheels-robot).
 Don't forget the Physics nodes. Rotate the Transform node by an Euler axis and
@@ -139,7 +147,8 @@ color of the wheels to green.
 
 <!-- -->
 
-> **handson**: In order to be able to actuate the wheels, add a RotationalMotor to each
+> **handson**:
+In order to be able to actuate the wheels, add a RotationalMotor to each
 HingeJoint, and set their `name` fields from *"wheel1"* to *"wheel4"*. These
 labels will be used to reference the wheels from the controller.
 
@@ -152,7 +161,8 @@ the Robot node. Note that the distance sensor acquires its data along the
 outside the robot is necessary (see the
 [figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)).
 
-> **handson**: Add the two distance sensors as explained above. The distance sensors are at an
+> **handson**:
+Add the two distance sensors as explained above. The distance sensors are at an
 angle to 0.3 [rad] with the robot front vector. Set their `type` field to
 "sonar". Set their graphical and physical shape to a cube (not transformed)
 having a edge of *0.01* [m]. Set their color to blue. Set their `name` field
@@ -165,7 +175,8 @@ In the previous tutorials, you learnt how to setup a feedback loop and how to
 read the distance sensor values. However actuating the RotationalMotor nodes is
 new. The following note explain how to proceed.
 
-> **note**: To program the rotational motors, the first step is to include the API module
+> **note**:
+To program the rotational motors, the first step is to include the API module
 corresponding to the RotationalMotor node:
 
 >     #include <webots/motor.h>
@@ -191,7 +202,8 @@ bounding its velocity:
 
 <!-- -->
 
-> **handson**: Implement a controller called "4\_wheels\_collision\_avoidance" moving the robot
+> **handson**:
+Implement a controller called "4\_wheels\_collision\_avoidance" moving the robot
 and avoiding obstacles by detecting them by the distance sensors.
 
 > Note that the `lookupTable` field of the DistanceSensor nodes indicates which

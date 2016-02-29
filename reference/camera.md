@@ -154,7 +154,8 @@ format of these buffers are respectively BGRA (32 bits) and float (16 bits). We
 recommend to use the `wb_camera_image_get_*`-like functions to access the buffer
 because the internal format could change.
 
-> **note** [Matlab]: The Matlab API uses a language-specific representation of color images
+> **note** [Matlab]:
+The Matlab API uses a language-specific representation of color images
 consisting of a 3D array of RGB triplets. Please look at the [Matlab
 example](camera.md#wb_camera_get_image) in the `wb_camera_get_image` function's
 description.
@@ -414,7 +415,8 @@ table](camera.md#return-values-for-the-wb_camera_get_type-function):
 
 %end
 
-> **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
+> **note** [C++, Java, Python]:
+In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
 integers of the [Camera](camera.md#camera) class (for example, Camera::COLOR).
 
 ---
@@ -467,7 +469,8 @@ for (int x = 0; x < image_width; x++)
   }
 ```
 
-> **note** [Java]: `Camera.getImage()` returns an array of int (`int[]`). The length of this array
+> **note** [Java]:
+`Camera.getImage()` returns an array of int (`int[]`). The length of this array
 corresponds to the number of pixels in the image, that is the width multiplied
 by the height of the image. Each `int` element of the array represents one pixel
 coded in BGRA (32 bits). For example red is `0x0000ff00`, green is `0x00ff0000`,
@@ -489,7 +492,8 @@ an `int` color/grey component in the range [0..255]. Here is an example:
 
 <!-- -->
 
-> **note** [Python]: `getImage()` returns a `string`. This `string` is closely related to the `const
+> **note** [Python]:
+`getImage()` returns a `string`. This `string` is closely related to the `const
 char *` of the C API. `imageGet*`-like functions can be used to get the channels
 of the camera Here is an example:
 
@@ -515,7 +519,8 @@ directly used for accessing to the pixels. Here is an example:
 
 <!-- -->
 
-> **note** [Matlab]: `wb_camera_get_image()` returns a 3-dimensional array of `uint(8)`. The first
+> **note** [Matlab]:
+`wb_camera_get_image()` returns a 3-dimensional array of `uint(8)`. The first
 two dimensions of the array are the width and the height of camera's image, the
 third being the RGB code: 1 for red, 2 for blue and 3 for green.
 `wb_camera_get_range_image()` returns a 2-dimensional array of
@@ -585,7 +590,8 @@ parameters are the coordinates of the pixel in the image.
 The `wb_camera_get_max_range()` function returns the value of the `maxRange`
 field.
 
-> **note** [Python]: The Camera class has two methods for getting the camera image. The
+> **note** [Python]:
+The Camera class has two methods for getting the camera image. The
 `getRangeImage()` returns a one-dimensional list of floats, while the
 `getRangeImageArray()` returns a two-dimensional list of floats. Their content
 are identical but their handling is of course different.

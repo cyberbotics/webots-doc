@@ -38,7 +38,8 @@ of the unit vector giving the north direction, the opposite of the normalized
 gravity vector and their cross-product (see [WorldInfo](worldinfo.md#worldinfo)
 to customize this frame).
 
-> **note**: In a gimbal lock situation, i.e., when the pitch is -π/2 or π/2, the roll and
+> **note**:
+In a gimbal lock situation, i.e., when the pitch is -π/2 or π/2, the roll and
 the yaw are set to NaN (Not a Number).
 
 ### Field Summary
@@ -128,7 +129,8 @@ aligned with the north direction, it is π/2 when the unit is heading east, and
 -π/2 when the unit is oriented towards the west. The *yaw* angle can be used as
 a compass.
 
-> **note** [C, C++]: The returned vector is a pointer to internal values managed by the Webots,
+> **note** [C, C++]:
+The returned vector is a pointer to internal values managed by the Webots,
 therefore it is illegal to free this pointer. Furthermore, note that the pointed
 values are only valid until the next call to `wb_robot_step()` or
 `Robot::step()`. If these values are needed for a longer period they must be
@@ -136,5 +138,6 @@ copied.
 
 <!-- -->
 
-> **note** [Python]: `getRollPitchYaw()` returns the angles as a list containing three floats.
+> **note** [Python]:
+`getRollPitchYaw()` returns the angles as a list containing three floats.
 

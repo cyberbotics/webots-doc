@@ -1,6 +1,7 @@
 ## Servo
 
-> **note**: As of Webots 7.2.0, the [Servo](servo.md#servo) node is deprecated and should
+> **note**:
+As of Webots 7.2.0, the [Servo](servo.md#servo) node is deprecated and should
 not be used in any new simulation models. It is kept for backwards compatibility
 only. The functionality of the [Servo](servo.md#servo) node is replaced by the
 one provided by the [HingeJoint](hingejoint.md#hingejoint),
@@ -518,19 +519,23 @@ wb_servo_set_position(tag, INFINITY);
 wb_servo_set_velocity(tag, desired_speed);  // rad/s
 ```
 
-> **note** [C++]: In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
+> **note** [C++]:
+In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
 
 <!-- -->
 
-> **note** [Java]: In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
+> **note** [Java]:
+In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
 
 <!-- -->
 
-> **note** [Python]: In Python use `float('+inf')` instead of INFINITY
+> **note** [Python]:
+In Python use `float('+inf')` instead of INFINITY
 
 <!-- -->
 
-> **note** [Matlab]: In MATLAB use `inf` instead of INFINITY
+> **note** [Matlab]:
+In MATLAB use `inf` instead of INFINITY
 
 The `wb_servo_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_servo_set_position()`

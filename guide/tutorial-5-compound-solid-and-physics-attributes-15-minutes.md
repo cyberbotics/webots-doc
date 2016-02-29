@@ -13,7 +13,8 @@ figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#expected-
 
 ### New simulation
 
-> **handson**: Start from the results of the previous tutorial and create a new simulation
+> **handson**:
+Start from the results of the previous tutorial and create a new simulation
 called "compound\_solid.wbt" by using the menu `File > Save World As...`.
 
 ### Compound Solid
@@ -29,7 +30,8 @@ We want to implement a dumbbell made of a handle (Cylinder) and of two weights
 [figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries)
 depicts the Solid nodes and its subnodes required to implement the dumbbell.
 
-> **handson**: Create the dumbbell by following the
+> **handson**:
+Create the dumbbell by following the
 [figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries).
 Create the handle first without placing it in a Transform node (so the handle
 axis will have the same direction as the *y*-axis of the solid). The handle
@@ -49,7 +51,8 @@ The aim of this subsection is to learn how to set some simple physics properties
 for a Solid node. The Physics node contains fields related to the physics of the
 current rigid body (Solid).
 
-> **theory**: The **mass** of a Solid node is given by its `density` or `mass` field. Only one
+> **theory**:
+The **mass** of a Solid node is given by its `density` or `mass` field. Only one
 of these two fields can be specified at a time (the other should be set to
 *-1*). When the `mass` is specified, it defines the total mass of the solid (in
 [kg]). When the `density` is specified, its value (in [kg/m3]) is multiplied by
@@ -59,30 +62,35 @@ value).
 
 <!-- -->
 
-> **handson**: Set the mass of the dumbbell to *2* [kg]. The density is not used and should be
+> **handson**:
+Set the mass of the dumbbell to *2* [kg]. The density is not used and should be
 set to *-1*.
 
 <!-- -->
 
-> **theory**: By default, the **center of mass** of a Solid node is set at its origin (defined
+> **theory**:
+By default, the **center of mass** of a Solid node is set at its origin (defined
 by the translation field of the solid). The center of mass can be modified using
 the `centerOfMass` field of the Physics node. The center of mass is specified
 relatively to the origin of the Solid.
 
 <!-- -->
 
-> **handson**: Let's say that one of the weights is heavier than the other one. Move the center
+> **handson**:
+Let's say that one of the weights is heavier than the other one. Move the center
 of mass of the dumbbell of *0.01* [m] along the *y*-axis.
 
 <!-- -->
 
-> **note**: Note that when the solid is selected, the center of mass is represented in the
+> **note**:
+Note that when the solid is selected, the center of mass is represented in the
 3D view by a coordinate system which is darker than the coordinate system
 representing the solid center.
 
 ### The Rotation Field
 
-> **theory**: The `rotation` field of the Transform node determines the rotation of this node
+> **theory**:
+The `rotation` field of the Transform node determines the rotation of this node
 (and of its children) using the **Euler axis and angle** representation. A
 **Euler axis and angle** rotation is defined by four components. The first three
 components are a unit vector that defines the rotation axis. The fourth
@@ -92,7 +100,8 @@ component defines the rotation angle about the axis (in [rad]).
 
 <!-- -->
 
-> **handson**: Modify the rotation of the Solid node of the dumbbell in order to move the
+> **handson**:
+Modify the rotation of the Solid node of the dumbbell in order to move the
 handle's axis (*y*-axis) parallel to the ground. A unit axis of *(1, 0, 0)* and
 an angle of *π/2* is a possible solution.
 
@@ -120,7 +129,8 @@ uneven terrain.
 
 ### Contacts
 
-> **theory**: When two solids collide, **contacts** are created at the collision points.
+> **theory**:
+When two solids collide, **contacts** are created at the collision points.
 ContactProperties nodes can be used to specify the desired behavior of the
 contacts (e.g. the friction between the two solids).
 
@@ -132,7 +142,8 @@ the contact properties between two categories of Solids.
 We want now to modify the friction model between the dumbbell and the other
 solids of the environment.
 
-> **handson**: Set the `contactMaterial` field of the dumbbell to *"dumbbell"*. In the
+> **handson**:
+Set the `contactMaterial` field of the dumbbell to *"dumbbell"*. In the
 WorldInfo node, add a ContactProperties node between the *"default"* and
 *"dumbbell"* categories. Try to set the `coulombFriction` field to *0* and
 remark that the dumbbell slides (instead of rotating) on the floor because no
@@ -162,7 +173,8 @@ of Webots. A complete description of these parameters can be found in the
 `Reference Manual`. Remark simply that the Physics, WorldInfo and
 ContactProperties nodes contains other fields.
 
-> **handson**: Search in the `Reference Manual` how to add a linear damping on all the objects,
+> **handson**:
+Search in the `Reference Manual` how to add a linear damping on all the objects,
 how to unset the auto-disable feature and how to use the inertia matrix.
 
 ### Conclusion

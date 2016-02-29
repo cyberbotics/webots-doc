@@ -77,7 +77,8 @@ exerted by the fluid on the solid according the following formulas
     linear nature it may offer a better numerical stability than the above quadratic
     drags when the immersed solids are subject to large external forces or torques.
 
-> **note**: The "xyz-projected area" computation mode is implemented only for
+> **note**:
+The "xyz-projected area" computation mode is implemented only for
 boundingObjects that contain fully or partially immersed [Box](box.md#box)
 nodes, fully immersed [Cylinder](cylinder.md#cylinder),
 [Capsule](capsule.md#capsule) and [Sphere](sphere.md#sphere) nodes. The

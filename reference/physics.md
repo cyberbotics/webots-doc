@@ -25,7 +25,8 @@ of a [Physics](physics.md#physics) node in the `physics` field of a
 [Solid](solid.md#solid) defines whether the [Solid](solid.md#solid) will have a
 *physics* or a *kinematic* behavior.
 
-> **note**: In older Webots versions, `coulombFriction, bounce, bounceVelocity` and
+> **note**:
+In older Webots versions, `coulombFriction, bounce, bounceVelocity` and
 `forceDependentSlip` fields used to be specified in
 [Physics](physics.md#physics) nodes. Now these values must be specified in
 [ContactProperties](contactproperties.md#contactproperties) nodes. For
@@ -126,7 +127,8 @@ simulation of such devices. Therefore the mechanical body parts of robots (eg.,
 legs, wheels, arms, hands, etc) need in general to have
 [Physics](physics.md#physics) nodes.
 
-> **note**: It is possible to set the `physics` field of a [Robot](robot.md#robot) or a top
+> **note**:
+It is possible to set the `physics` field of a [Robot](robot.md#robot) or a top
 [Solid](solid.md#solid) to `NULL` in order to pin its base to the static
 environment. This can be useful for the simulation of a robot arm whose base
 segment is anchored in a fixed place. More generally, you can define a larger
@@ -136,7 +138,8 @@ define a subtree starting from this top [Solid](solid.md#solid) and whose all
 
 <!-- -->
 
-> **note**: The [DifferentialWheels](differentialwheels.md#differentialwheels) robot is a
+> **note**:
+The [DifferentialWheels](differentialwheels.md#differentialwheels) robot is a
 special case: it can move even if it does not have [Physics](physics.md#physics)
 nodes. That's because Webots uses a special *kinematics* algorithm for
 [DifferentialWheels](differentialwheels.md#differentialwheels) robots without
@@ -163,7 +166,8 @@ without [Physics](physics.md#physics) node. This way modelling a rigid assembly
 of [Solid](solid.md#solid)s won't hurt physics simulation speed even if it
 aggregates numerous components.
 
-> **note**: When solid merging applies, only the highest ancestor of the rigid assembly has
+> **note**:
+When solid merging applies, only the highest ancestor of the rigid assembly has
 a body (a non null `dBodyID` in ODE terms) which holds the physical properties
 of the assembly. This may impact the way you design a [physics
 plugin](physics-plugin.md#physics-plugin)s.
@@ -311,7 +315,8 @@ mass or volume in the simulated robot. This is true for these devices:
 [LightSensor](lightsensor.md#lightsensor), [Pen](pen.md#pen), and
 [Receiver](receiver.md#receiver).
 
-> **note**: The [InertialUnit](inertialunit.md#inertialunit) and
+> **note**:
+The [InertialUnit](inertialunit.md#inertialunit) and
 [Connector](connector.md#connector) nodes work differently. Indeed, they require
 the presence of a [Physics](physics.md#physics) node in their parent node to be
 functional. It is also possible to specify a [Physics](physics.md#physics) node

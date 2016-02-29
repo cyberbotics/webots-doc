@@ -22,7 +22,8 @@ add any force in the simulation, it directly affects the velocity of the body.
 The damping effect is applied after all forces have been applied to the bodies.
 Damping can be used to reduce simulation instability.
 
-> **note**: When several rigidly linked [Solid](solid.md#solid)s are merged (see
+> **note**:
+When several rigidly linked [Solid](solid.md#solid)s are merged (see
 [Physics](physics.md#physics)'s [solid
 merging](physics.md#implicit-solid-merging-and-joints) section) damping values
 of the aggregate body are averaged over the volumes of all

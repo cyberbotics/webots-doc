@@ -142,7 +142,8 @@ the received data. If `size` is non-NULL, it is set to the number of bytes of
 data available in the returned buffer. If multiple messages are sent to the
 physics plugin at the same time step, then they will be concatenated.
 
-> **note**: Pay attention when managing multiple concatenated string messages, because every
+> **note**:
+Pay attention when managing multiple concatenated string messages, because every
 message will terminate with the null character `\0` preventing the correct copy
 and display of the returned data. The following example shows how to split
 concatenated string messages:

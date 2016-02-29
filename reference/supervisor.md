@@ -18,7 +18,8 @@ not available to a regular [Robot](robot.md#robot). If a
 [Supervisor](supervisor.md#supervisor) controller can use them. Webots PRO is
 required to use the [Supervisor](supervisor.md#supervisor) node.
 
-> **note**: Note that in some special cases the [Supervisor](supervisor.md#supervisor)
+> **note**:
+Note that in some special cases the [Supervisor](supervisor.md#supervisor)
 functions might return wrong values and it might not be possible to retrieve
 fields and nodes. This occurs when closing a world and quitting its controllers,
 i.e. reverting the current world, opening a new world, or closing Webots. In
@@ -27,7 +28,8 @@ returning a string, an empty string is returned instead of a NULL pointer.
 
 <!-- -->
 
-> **note** [C++, Java, Python]: It is a good practice to check for a NULL pointer after calling a
+> **note** [C++, Java, Python]:
+It is a good practice to check for a NULL pointer after calling a
 [Supervisor](supervisor.md#supervisor) function.
 
 ### Supervisor Functions
@@ -170,7 +172,8 @@ corresponding to the base type name of the node, like "DifferentialWheels",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
 NULL.
 
-> **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_NODE\_* constants are available as static
+> **note** [C++, Java, Python]:
+In the oriented-object APIs, the WB\_NODE\_* constants are available as static
 integers of the `Node` class (for example, Node::DIFFERENTIAL\_WHEELS). These
 integers can be directly compared with the output of the `Node::getType()`
 
@@ -276,7 +279,8 @@ this time with coordinates expressed in the global (world) coordinate system.
 The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
 use these functions to do this.
 
-> **note**: The returned pointers are valid during one time step only as memory will be
+> **note**:
+The returned pointers are valid during one time step only as memory will be
 deallocated at the next time step.
 
 ---
@@ -305,7 +309,8 @@ always the zero vector.
 
 The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
-> **note**: The returned pointer is valid during one time step only as memory will be
+> **note**:
+The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
 ---
@@ -339,7 +344,8 @@ be a [Solid](solid.md#solid) node (or a derived node), which moreover has no
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
 
-> **note**: The returned pointer is valid during one time step only as memory will be
+> **note**:
+The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
 ---
@@ -507,7 +513,8 @@ will display the label "hello Webots" in semi-transparent green, just below.
 will change the label "hello world" defined earlier into "hello universe", using
 a yellow color for the new text.
 
-> **note** [Matlab]: In the Matlab version of `wb_supervisor_set_label()` the `color` argument must
+> **note** [Matlab]:
+In the Matlab version of `wb_supervisor_set_label()` the `color` argument must
 be a vector containing the three RGB components: `[RED GREEN BLUE]`. Each
 component must be a value between 0.0 and 1.0. For example the vector `[1 0 1]`
 represents the magenta color.
@@ -651,7 +658,8 @@ path is used instead (e.g., a simple save operation). The boolean return value
 indicates the success of the save operation. Be aware that this function can
 overwrite silently existing files, so that the corresponding data may be lost.
 
-> **note** [C++, Java, Python, Matlab]: In the other APIs, the `Robot.saveWorld()` function can be called without
+> **note** [C++, Java, Python, Matlab]:
+In the other APIs, the `Robot.saveWorld()` function can be called without
 argument. In this case, a simple save operation is performed.
 
 ---
@@ -806,7 +814,8 @@ NULL is passed as an argument to this function, it returns -1. Hence, this
 function can also be used to test if a field is MF (like `WB_MF_INT32`) or SF
 (like `WB_SF_BOOL`).
 
-> **note** [C++, Java, Python]: In the oriented-object APIs, the WB\_*F\_* constants are available as static
+> **note** [C++, Java, Python]:
+In the oriented-object APIs, the WB\_*F\_* constants are available as static
 integers of the `Field` class (for example, Field::SF\_BOOL). These integers can
 be directly compared with the output of the `Field::getType()`
 
@@ -903,7 +912,8 @@ of the function used and the index should be comprised between 0 and the total
 number of item minus one, otherwise the value of the field remains unchanged
 (and a warning message is displayed).
 
-> **note**: Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when
+> **note**:
+Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when
 changing its translation or rotation using `wb_supervisor_field_set_sf_vec2f`
 and `wb_supervisor_field_set_sf_rotation` functions. If needed, the user has to
 explicitly call [this section](supervisor.md#wb_supervisor_node_reset_physics)
@@ -983,7 +993,8 @@ new robot with a specific controller:
 The `wb_supervisor_field_remove_mf_node()` function removes a Webots node from
 an MF\_NODE (like if the node was manually removed from the scene tree).
 
-> **note**: Note that these functions are still limited in the actual Webots version. For
+> **note**:
+Note that these functions are still limited in the actual Webots version. For
 example, a device imported into a Robot node doesn't reset the Robot, so the
 device cannot be get by using the `wb_robot_get_device()` function.
 

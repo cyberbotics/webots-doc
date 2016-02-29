@@ -161,7 +161,8 @@ by the `basicTimeStep` field of the [WorldInfo](worldinfo.md#worldinfo) node
 (converted in seconds), and *A* is the acceleration of the motor as specified by
 the `acceleration` field (default) or set with `wb_motor_set_acceleration()`.
 
-> **note**: *error_integral* and *previous_error* are both reset to *0* after every call of
+> **note**:
+*error_integral* and *previous_error* are both reset to *0* after every call of
 `wb_motor_set_control_pid()`.
 
 ### Velocity Control
@@ -309,19 +310,23 @@ wb_motor_set_position(tag, INFINITY);
 wb_motor_set_velocity(tag, desired_speed);  // rad/s
 ```
 
-> **note** [C++]: In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
+> **note** [C++]:
+In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
 
 <!-- -->
 
-> **note** [Java]: In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
+> **note** [Java]:
+In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
 
 <!-- -->
 
-> **note** [Python]: In Python use `float('+inf')` instead of INFINITY
+> **note** [Python]:
+In Python use `float('+inf')` instead of INFINITY
 
 <!-- -->
 
-> **note** [Matlab]: In MATLAB use `inf` instead of INFINITY
+> **note** [Matlab]:
+In MATLAB use `inf` instead of INFINITY
 
 The `wb_motor_get_target_position()` function allows to get the target position.
 This value matches with the argument given to the last `wb_motor_set_position()`

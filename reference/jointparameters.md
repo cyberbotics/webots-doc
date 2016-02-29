@@ -12,7 +12,8 @@ JointParameters {
 }
 ```
 
-> **note**: The default value of the axis field may change in a derived class. For instance,
+> **note**:
+The default value of the axis field may change in a derived class. For instance,
 the axis default value of an
 [HingeJointParameters](hingejointparameters.md#hingejointparameters) is `1 0 0`.
 

@@ -19,11 +19,13 @@ the chapter, links to further robotics algorithmics are given.
 
 ### New World and new Controller
 
-> **handson**: Save the previous world as "collision\_avoidance.wbt".
+> **handson**:
+Save the previous world as "collision\_avoidance.wbt".
 
 <!-- -->
 
-> **handson**: Create a new C controller called "e-puck\_avoid\_collision" using the wizard.
+> **handson**:
+Create a new C controller called "e-puck\_avoid\_collision" using the wizard.
 Modify the `controller` field of the E-puck node in order to link it to the new
 controller.
 
@@ -51,7 +53,8 @@ access by the "webots/differential\_wheel.h" include file. The speed is given in
 a number of ticks/seconds where 1000 ticks correspond to a complete rotation of
 the wheel. The values are clamped between -1000 and 1000.
 
-> **theory**: The **controller API** is the programming interface that gives you access to the
+> **theory**:
+The **controller API** is the programming interface that gives you access to the
 simulated sensors and actuators of the robot. For example, including the
 "webots/distance\_sensor.h" file allows to use the `wb_distance_sensor_*()`
 functions and with these functions you can query the values of the
@@ -81,7 +84,8 @@ figure](tutorial-4-more-about-controllers-20-minutes.md#uml-state-machine-of-a-s
 
 The complete code of this controller is given in the next subsection.
 
-> **handson**: At the beginning of the controller file, add the include directives
+> **handson**:
+At the beginning of the controller file, add the include directives
 corresponding to the Robot, the DifferentialWheels and the DistanceSensor nodes
 in order to be able to use the corresponding API (documented in chapter 3 of the
 `Reference Manual`):
@@ -92,7 +96,8 @@ in order to be able to use the corresponding API (documented in chapter 3 of the
 
 <!-- -->
 
-> **handson**: Just after the include statements add a macro that defines the duration of each
+> **handson**:
+Just after the include statements add a macro that defines the duration of each
 physics step. This macro will be used as argument to the `wb_robot_step()`
 function, and it will also be used to enable the devices. This duration is
 specified in milliseconds and it must be a multiple of the value in the
@@ -102,14 +107,16 @@ specified in milliseconds and it must be a multiple of the value in the
 
 <!-- -->
 
-> **theory**: The function called `main()` is where the controller program starts execution.
+> **theory**:
+The function called `main()` is where the controller program starts execution.
 The arguments passed to main() are given by the `controllerArgs` field of the
 Robot node. The Webots API has to be initialized using the `wb_robot_init()`
 function and it has to be cleaned up using the `wb_robot_cleanup()` function.
 
 <!-- -->
 
-> **handson**: Write the prototype of the `main()` function as follows:
+> **handson**:
+Write the prototype of the `main()` function as follows:
 
 >     // entry point of the controller
 >     int main(int argc, char **argv)
@@ -134,7 +141,8 @@ function and it has to be cleaned up using the `wb_robot_cleanup()` function.
 
 <!-- -->
 
-> **theory**: A robot device is referenced by a `WbDeviceTag`. The `WbDeviceTag` is retrieved
+> **theory**:
+A robot device is referenced by a `WbDeviceTag`. The `WbDeviceTag` is retrieved
 by the `wb_robot_get_device()` function. Then it is used as first argument in
 every function call concerning this device.
 
@@ -144,7 +152,8 @@ refreshed.
 
 <!-- -->
 
-> **handson**: Just after the comment *"// initialize devices"*, get and enable the distance
+> **handson**:
+Just after the comment *"// initialize devices"*, get and enable the distance
 sensors as follows:
 
 >     // initialize devices
@@ -162,7 +171,8 @@ sensors as follows:
 
 <!-- -->
 
-> **handson**: In the main loop, just after the comment *"// read sensors outputs"*, read the
+> **handson**:
+In the main loop, just after the comment *"// read sensors outputs"*, read the
 distance sensor values as follows:
 
 >     // read sensors outputs
@@ -172,7 +182,8 @@ distance sensor values as follows:
 
 <!-- -->
 
-> **handson**: In the main loop, just after the comment *"// process behavior"*, detect if a
+> **handson**:
+In the main loop, just after the comment *"// process behavior"*, detect if a
 collision occurs (i.e. the value returned by a distance sensor is bigger than a
 threshold) as follows:
 
@@ -188,7 +199,8 @@ threshold) as follows:
 
 <!-- -->
 
-> **handson**: Finally, use the information about the obstacle to actuate the wheels as
+> **handson**:
+Finally, use the information about the obstacle to actuate the wheels as
 follows:
 
 >     // init speeds
@@ -210,7 +222,8 @@ follows:
 
 <!-- -->
 
-> **handson**: Compile your code by selecting the `Build > Build` menu item. Compilation errors
+> **handson**:
+Compile your code by selecting the `Build > Build` menu item. Compilation errors
 are displayed in red in the console. If there are any, fix them and retry to
 compile. Revert the simulation.
 

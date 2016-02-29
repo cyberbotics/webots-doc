@@ -737,13 +737,15 @@ can be called up to 7 times to detect up to 7 simultaneous keys pressed. The
 `wb_robot_keyboard_disable()` function should be used to stop the keyboard
 readings.
 
-> **note** [C++]: The keyboard predefined values are located into a (static) enumeration of the
+> **note** [C++]:
+The keyboard predefined values are located into a (static) enumeration of the
 Robot class. For example, `Robot.KEYBOARD_CONTROL` corresponds to the *Control*
 key stroke.
 
 <!-- -->
 
-> **note** [Java]: The keyboard predefined values are final integers located in the Robot class.
+> **note** [Java]:
+The keyboard predefined values are final integers located in the Robot class.
 For example, *Ctrl+B* can be tested like this:
 
 >     int key=robot.keyboardGetKey()
@@ -752,7 +754,8 @@ For example, *Ctrl+B* can be tested like this:
 
 <!-- -->
 
-> **note** [Python]: The keyboard predefined values are integers located into the Robot class. For
+> **note** [Python]:
+The keyboard predefined values are integers located into the Robot class. For
 example, *Ctrl+B* can be tested like this:
 
 >     key=robot.keyboardGetKey()
@@ -875,7 +878,8 @@ void *wbw_robot_window_custom_function(void *arg) {
 }
 ```
 
-> **note** [Java, Python, Matlab]: Given that the robot window can only be implemented for C/C++ controllers,
+> **note** [Java, Python, Matlab]:
+Given that the robot window can only be implemented for C/C++ controllers,
 `wb_robot_window_custom_function` is not available in Java, Phyton or Matlab
 API.
 

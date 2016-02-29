@@ -634,7 +634,7 @@ class BookParser:
                 outFile.write(languageTags[l])
                 
             outFile.write(']')
-        outFile.write(': ')
+        outFile.write(':\n')
 
         firstItem = True
         for child in node.getchildren():

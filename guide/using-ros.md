@@ -70,7 +70,8 @@ can be found inside Webots at
 "WEBOTS\_MODULES\_PATH/projects/languages/ros/nodes". In this folder you will
 find useful instructions to help you.
 
-> **note**: If you wants to access the controller from another machine and the roscore isn't
+> **note**:
+If you wants to access the controller from another machine and the roscore isn't
 running on the same machine as Webots, you will need to edit the
 ROS\_MASTER\_URI variable. This can be done by editing your environment
 variables, adding the address in the controller arguments in Webots or with a
@@ -117,7 +118,8 @@ interfaces between Webots and ROS. The controller directory includes all the
 the controller binary. The "ros" folder also includes a "README.txt" file with
 detailed installation and usage instructions.
 
-> **note**: Following the instructions "README.md" is necessary to make the joystick example
+> **note**:
+Following the instructions "README.md" is necessary to make the joystick example
 work on your Linux system.
 
 > In the [Tutorials](tutorials.md#tutorials) chapter, you will find a section

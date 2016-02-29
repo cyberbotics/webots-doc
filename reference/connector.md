@@ -81,7 +81,8 @@ was activated, etc. But the actual physical link exists only if
 `wb_connector_lock()` was called when a compatible peer was present (or if the
 [Connector](connector.md#connector) was auto-locked).
 
-    > **note**: If `Connectors` nodes are locked and correctly aligned (and compatible) in the
+    > **note**:
+If `Connectors` nodes are locked and correctly aligned (and compatible) in the
 .wbt file then the simulation will start with these connectors already attached
 by a physical link. You can take advantage of this feature to start your
 simulation with the desired mechanical configuration.
@@ -191,7 +192,8 @@ nodes will not work properly and may be unable to connect.
 
 %end
 
-> **note**: To be functional, a [Connector](connector.md#connector) node requires the
+> **note**:
+To be functional, a [Connector](connector.md#connector) node requires the
 presence of a [Physics](physics.md#physics) node in its parent node. But it is
 not necessary to add a [Physics](physics.md#physics) node to the
 [Connector](connector.md#connector) itself.

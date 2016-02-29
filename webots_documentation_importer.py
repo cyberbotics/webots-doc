@@ -119,10 +119,14 @@ class BookParser:
             shutil.rmtree(bookName)
         os.makedirs(bookName)
         # copy the png images
-        shutil.copytree(webotsDirectoryPath + 'doc/' + bookName + '/png', bookName + '/png')
-        shutil.copytree(webotsDirectoryPath + 'doc/' + bookName + '/pdf', bookName + '/pdf')
-        for fl in glob.glob(bookName + '/pdf/*.pdf'):
-            os.remove(fl)
+        pngDir = webotsDirectoryPath + 'doc/' + bookName + '/png'
+        if os.path.isdir(bookName):
+            shutil.copytree(pngDir, bookName + '/png')
+        pdfDir = webotsDirectoryPath + 'doc/' + bookName + '/pdf'
+        if os.path.isdir(pdfDir):
+            shutil.copytree(pdfDir, bookName + '/pdf')
+            for fl in glob.glob(bookName + '/pdf/*.pdf'):
+                os.remove(fl)
 
         # hack: removed unreferenced images:
         filesToRemove = []
@@ -188,6 +192,25 @@ class BookParser:
                 'png/two_chairs.png',
                 'png/up.png',
                 'png/warning.png'
+            ]
+        elif bookName == 'automobile':
+            filesToRemove = [
+                'png/caution_sign.png',
+                'png/code.png',
+                'png/highway.png',
+                'png/note.png',
+                'png/order_sign.png',
+                'png/osm_input.png',
+                'png/speed_sign.png',
+                'png/tree1.png',
+                'png/tree2.png',
+                'png/winter1.png'
+            ]
+        elif bookName == 'darwin-op':
+            filesToRemove = [
+              'png/code.png',
+              'png/HSV.png',
+              'png/note.png'
             ]
         for filename in filesToRemove:
             os.remove(os.path.join(bookName, filename))
@@ -842,6 +865,7 @@ class BookParser:
                 imagedata = child.findall('.//imagedata')[0]
                 fileref = imagedata.attrib.get('fileref')
                 fileref = fileref.replace('1234.png', '1234web.png') # hack the path
+                fileref = fileref.replace('title.png', 'titleweb.png') # hack the path
                 outFile.write('%%figure\n![%s](%s)\n%%end\n\n' % ('ImageData', fileref))
             elif child.tag == 'author':
                 pass # no more sense in my opinion
@@ -888,7 +912,12 @@ class BookParser:
 
 if __name__ == '__main__':
     webotsDirectoryPath = '../webots/'
-    documentationInputDirectoriesPaths = [webotsDirectoryPath + 'src/doc/guide/', webotsDirectoryPath + 'src/doc/reference/']
+    documentationInputDirectoriesPaths = [
+        # webotsDirectoryPath + 'src/doc/guide/',
+        # webotsDirectoryPath + 'src/doc/reference/',
+        webotsDirectoryPath + 'src/doc/automobile/',
+        webotsDirectoryPath + 'src/doc/darwin-op/'
+    ]
 
     for inputDirectoryPath in documentationInputDirectoriesPaths:
         directoryName = os.path.basename(os.path.dirname(inputDirectoryPath)) # guide or reference

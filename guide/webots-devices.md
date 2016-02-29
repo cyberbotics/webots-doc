@@ -11,9 +11,9 @@ they exemplify.
 
 **Keywords**: Battery, Charger, DifferentialWheels
 
-%figure "battery.wbt"
+%figure "battery"
 
-![battery.wbt](png/battery.png)
+![battery](png/battery.png)
 
 %end
 
@@ -30,9 +30,9 @@ full.
 
 **Keywords**: TouchSensor, bumper, DifferentialWheels
 
-%figure "bumper.wbt"
+%figure "bumper"
 
-![bumper.wbt](png/bumper.png)
+![bumper](png/bumper.png)
 
 %end
 
@@ -44,9 +44,9 @@ detected, the robot moves back and turns a bit.
 
 **Keywords**: Camera, image processing, DifferentialWheels
 
-%figure "camera.wbt"
+%figure "camera"
 
-![camera.wbt](png/camera.png)
+![camera](png/camera.png)
 
 %end
 
@@ -61,9 +61,9 @@ to detect.
 
 **Keywords**: Connector, RotationalMotor, IndexedLineSet, USE, DEF, DifferentialWheels
 
-%figure "connector.wbt"
+%figure "connector"
 
-![connector.wbt](png/connector.png)
+![connector](png/connector.png)
 
 %end
 
@@ -82,9 +82,9 @@ robot's name.
 
 **Keywords**: DistanceSensor, Braitenberg, DifferentialWheels
 
-%figure "distance_sensor.wbt"
+%figure "distance_sensor"
 
-![distance_sensor.wbt](png/distance_sensor.png)
+![distance_sensor](png/distance_sensor.png)
 
 %end
 
@@ -95,9 +95,9 @@ around its body. The robot avoids obstacles using the Braitenberg technique.
 
 **Keywords**: DifferentialWheels, Emitter, Receiver, infra-red transmission, USE, DEF
 
-%figure "emitter_receiver.wbt"
+%figure "emitter_receiver"
 
-![emitter_receiver.wbt](png/emitter_receiver.png)
+![emitter_receiver](png/emitter_receiver.png)
 
 %end
 
@@ -117,9 +117,9 @@ is interrupted. Note that the communication between "infra-red" `Emitter`s and
 
 **Keywords**: DifferentialWheels, encoders
 
-%figure "encoders.wbt"
+%figure "encoders"
 
-![encoders.wbt](png/encoders.png)
+![encoders](png/encoders.png)
 
 %end
 
@@ -133,9 +133,9 @@ random values. The robot does not pay any attention to obstacles.
 
 **Keywords**: Force, TouchSensor, DifferentialWheels
 
-%figure "force_sensor.wbt"
+%figure "force_sensor"
 
-![force_sensor.wbt](png/force_sensor.png)
+![force_sensor](png/force_sensor.png)
 
 %end
 
@@ -148,9 +148,9 @@ the force of each collision, which is printed in the Console window.
 
 **Keywords**: GPS, Supervisor, DifferentialWheels, keyboard
 
-%figure "gps.wbt"
+%figure "gps"
 
-![gps.wbt](png/gps.png)
+![gps](png/gps.png)
 
 %end
 
@@ -167,9 +167,9 @@ position read by the Supervisor.
 
 **Keywords**: LED, DifferentialWheels
 
-%figure "led.wbt"
+%figure "led"
 
-![led.wbt](png/led.png)
+![led](png/led.png)
 
 %end
 
@@ -180,9 +180,9 @@ on the top of its body. The color choice is printed in the Console.
 
 **Keywords**: LightSensor, PointLight, lamp, light following
 
-%figure "light_sensor.wbt"
+%figure "light_sensor"
 
-![light_sensor.wbt](png/light_sensor.png)
+![light_sensor](png/light_sensor.png)
 
 %end
 
@@ -193,9 +193,9 @@ light source can be moved with the mouse; the robot will follow it.
 
 **Keywords**: Pen, keyboard
 
-%figure "pen.wbt"
+%figure "pen"
 
-![pen.wbt](png/pen.png)
+![pen](png/pen.png)
 
 %end
 
@@ -207,9 +207,9 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 **Keywords**: Range-finder, Camera, DifferentialWheels
 
-%figure "range_finder.wbt"
+%figure "range_finder"
 
-![range_finder.wbt](png/range_finder.png)
+![range_finder](png/range_finder.png)
 
 %end
 

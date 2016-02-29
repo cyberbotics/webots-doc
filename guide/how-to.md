@@ -11,9 +11,9 @@ according to the behaviour they exemplify.
 
 **Keywords**: Stereovision, Stereoscopy, Camera
 
-%figure "binocular.wbt"
+%figure "binocular"
 
-![binocular.wbt](png/binocular.png)
+![binocular](png/binocular.png)
 
 %end
 
@@ -25,9 +25,9 @@ computer vision.
 
 **Keywords**: Humanoid robot, biped robot, power off, passive joint
 
-%figure "biped.wbt"
+%figure "biped"
 
-![biped.wbt](png/biped.png)
+![biped](png/biped.png)
 
 %end
 
@@ -40,9 +40,9 @@ motor power.
 
 **Keywords**: Force control, linear motor, spring and damper
 
-%figure "force_control.wbt"
+%figure "force_control"
 
-![force_control.wbt](png/force_control.png)
+![force_control](png/force_control.png)
 
 %end
 
@@ -59,9 +59,9 @@ controller.
 
 **Keywords**: Inverted pendulum, PID, LinearMotor
 
-%figure "inverted_pendulum.wbt"
+%figure "inverted_pendulum"
 
-![inverted_pendulum.wbt](png/inverted_pendulum.png)
+![inverted_pendulum](png/inverted_pendulum.png)
 
 %end
 
@@ -74,9 +74,9 @@ controller.
 
 **Keywords**: Physics plugin, OpenGL drawing, flying robot, Emitter, Receiver
 
-%figure "physics.wbt"
+%figure "physics"
 
-![physics.wbt](png/physics.png)
+![physics](png/physics.png)
 
 %end
 
@@ -95,9 +95,9 @@ example of:
 **Keywords**: Supervisor, DifferentialWheels, soccer, label, import node,
     restart simulation, screenshot, change controller
 
-%figure "supervisor.wbt"
+%figure "supervisor"
 
-![supervisor.wbt](png/supervisor.png)
+![supervisor](png/supervisor.png)
 
 %end
 
@@ -112,9 +112,9 @@ score, places the players to their initial position when a goal is scored, etc.
 
 **Keywords**: Supervisor, texture, wb_supervisor_field_set_*(), Camera
 
-%figure "texture_change.wbt"
+%figure "texture_change"
 
-![texture_change.wbt](png/texture_change.png)
+![texture_change](png/texture_change.png)
 
 %end
 
@@ -126,9 +126,9 @@ switches the image displayed on the panel.
 
 **Keywords**: Transform, USE, DEF
 
-%figure "town.wbt"
+%figure "town"
 
-![town.wbt](png/town.png)
+![town](png/town.png)
 
 %end
 

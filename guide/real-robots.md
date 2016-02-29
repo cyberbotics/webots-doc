@@ -9,9 +9,9 @@ and the corresponding controllers are located in the
 
 **Keywords**: Aibo, Legged robot, uneven ground, IndexedFaceSet, texture
 
-%figure "aibo_ers210_rough.wbt"
+%figure "aibo_ers210_rough"
 
-![aibo_ers210_rough.wbt](png/aibo_ers210_rough.png)
+![aibo_ers210_rough](png/aibo_ers210_rough.png)
 
 %end
 
@@ -23,9 +23,9 @@ a `IndexedFaceSet`.
 
 **Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone
 
-%figure "aibo_ers7.wbt"
+%figure "aibo_ers7"
 
-![aibo_ers7.wbt](png/aibo_ers7.png)
+![aibo_ers7](png/aibo_ers7.png)
 
 %end
 
@@ -37,9 +37,9 @@ bone.
 
 **Keywords**: Alice, Braitenberg, DistanceSensor
 
-%figure "alice.wbt"
+%figure "alice"
 
-![alice.wbt](png/alice.png)
+![alice](png/alice.png)
 
 %end
 
@@ -51,9 +51,9 @@ many others, this example uses the `braitenberg` controller.
 
 **Keywords**: BoeBot, DistanceSensor, LED
 
-%figure "boebot.wbt"
+%figure "boebot"
 
-![boebot.wbt](png/boebot.png)
+![boebot](png/boebot.png)
 
 %end
 
@@ -65,9 +65,9 @@ corresponding `LED` on.
 
 **Keywords**: DifferentialWheels, texture, Braitenberg,  Accelerometer, Odometry, E-puck
 
-%figure "e-puck.wbt"
+%figure "e-puck"
 
-![e-puck.wbt](png/e-puck.png)
+![e-puck](png/e-puck.png)
 
 %end
 
@@ -83,9 +83,9 @@ this controller is in the
 **Keywords**: DifferentialWheels, line following, texture, behavior-based
     robotics, E-puck
 
-%figure "e-puck_line.wbt"
+%figure "e-puck_line"
 
-![e-puck_line.wbt](png/e-puck_line.png)
+![e-puck_line](png/e-puck_line.png)
 
 %end
 
@@ -103,9 +103,9 @@ controller is in the "e-puck\_line" directory.
 **Keywords**: DifferentialWheels, line following, texture, behavior-based
     robotics, E-puck
 
-%figure "e-puck_line_demo.wbt"
+%figure "e-puck_line_demo"
 
-![e-puck_line_demo.wbt](png/e-puck_line_demo.png)
+![e-puck_line_demo](png/e-puck_line_demo.png)
 
 %end
 
@@ -120,9 +120,9 @@ is not distributed.
 
 **Keywords**: DifferentialWheels, Pen, cross-compilation, texture, Hemisson
 
-%figure "hemisson_cross_compilation.wbt"
+%figure "hemisson_cross_compilation"
 
-![hemisson_cross_compilation.wbt](png/hemisson_cross_compilation.png)
+![hemisson_cross_compilation](png/hemisson_cross_compilation.png)
 
 %end
 
@@ -136,9 +136,9 @@ this controller is in the "hemisson" directory.
 **Keywords**: Robot node, humanoid, texture, dancing, Hoap 2, IndexedFaceSet, RotationalMotor,
     active joint, force, TouchSensor
 
-%figure "hoap2_sumo.wbt"
+%figure "hoap2_sumo"
 
-![hoap2_sumo.wbt](png/hoap2_sumo.png)
+![hoap2_sumo](png/hoap2_sumo.png)
 
 %end
 
@@ -152,9 +152,9 @@ on the ground. The source code for this controller is in the "hoap2" directory.
 **Keywords**: Robot node, humanoid, texture, walking, Hoap 2, IndexedFaceSet, RotationalMotor,
     active joint, force, TouchSensor
 
-%figure "hoap2_walk.wbt"
+%figure "hoap2_walk"
 
-![hoap2_walk.wbt](png/hoap2_walk.png)
+![hoap2_walk](png/hoap2_walk.png)
 
 %end
 
@@ -168,9 +168,9 @@ this controller is in the "hoap2" directory.
 **Keywords**: Robot node, robotic arm, collaboration, TCP/IP, client program, IPR,
     IndexedFaceSet, RotationalMotor, active joint
 
-%figure "ipr_collaboration.wbt"
+%figure "ipr_collaboration"
 
-![ipr_collaboration.wbt](png/ipr_collaboration.png)
+![ipr_collaboration](png/ipr_collaboration.png)
 
 %end
 
@@ -186,9 +186,9 @@ for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
 **Keywords**: Robot node, robotic arm, TCP/IP, client program, IPR,
     IndexedFaceSet, RotationalMotor, active joint
 
-%figure "ipr_cube.wbt"
+%figure "ipr_cube"
 
-![ipr_cube.wbt](png/ipr_cube.png)
+![ipr_cube](png/ipr_cube.png)
 
 %end
 
@@ -203,9 +203,9 @@ drives the movements of the robot. The source code of this client is in the
 **Keywords**: Robot node, Supervisor, conveyor belt, robotic arm, TCP/IP,
     client program, IPR, IndexedFaceSet, RotationalMotor, active joint
 
-%figure "ipr_factory.wbt"
+%figure "ipr_factory"
 
-![ipr_factory.wbt](png/ipr_factory.png)
+![ipr_factory](png/ipr_factory.png)
 
 %end
 
@@ -221,9 +221,9 @@ the file "ipr\_serial/client/ipr\_factory.c".
 
 **Keywords**: Robot node, robotic arm, TCP/IP, IPR, IndexedFaceSet, RotationalMotor, active joint
 
-%figure "ipr_models.wbt"
+%figure "ipr_models"
 
-![ipr_models.wbt](png/ipr_models.png)
+![ipr_models](png/ipr_models.png)
 
 %end
 
@@ -237,9 +237,9 @@ All the IPR robots use the same controller, whose source code is in the
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera
 
-%figure "khepera.wbt"
+%figure "khepera"
 
-![khepera.wbt](png/khepera.png)
+![khepera](png/khepera.png)
 
 %end
 
@@ -252,9 +252,9 @@ while avoiding the walls. Like many other examples, this one uses the
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera II
 
-%figure "khepera2.wbt"
+%figure "khepera2"
 
-![khepera2.wbt](png/khepera2.png)
+![khepera2](png/khepera2.png)
 
 %end
 
@@ -267,9 +267,9 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera III
 
-%figure "khepera3.wbt"
+%figure "khepera3"
 
-![khepera3.wbt](png/khepera3.png)
+![khepera3](png/khepera3.png)
 
 %end
 
@@ -282,9 +282,9 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Kinematic, Khepera
 
-%figure "khepera_kinematic.wbt"
+%figure "khepera_kinematic"
 
-![khepera_kinematic.wbt](png/khepera_kinematic.png)
+![khepera_kinematic](png/khepera_kinematic.png)
 
 %end
 
@@ -298,9 +298,9 @@ use teh kinematic mode of Webots. Like many other examples, this one uses the
 
 **Keywords**: DifferentialWheels, Gripper, Khepera
 
-%figure "khepera_gripper.wbt"
+%figure "khepera_gripper"
 
-![khepera_gripper.wbt](png/khepera_gripper.png)
+![khepera_gripper](png/khepera_gripper.png)
 
 %end
 
@@ -313,9 +313,9 @@ controller is in the "khepera\_gripper" directory.
 
 **Keywords**: DifferentialWheels, Gripper, Camera, Khepera
 
-%figure "khepera_gripper_camera.wbt"
+%figure "khepera_gripper_camera"
 
-![khepera_gripper_camera.wbt](png/khepera_gripper_camera.png)
+![khepera_gripper_camera](png/khepera_gripper_camera.png)
 
 %end
 
@@ -329,9 +329,9 @@ source code for this controller is in the "khepera\_gripper" directory.
 
 **Keywords**: DifferentialWheels, DistanceSensor, K213, linear Camera, Khepera
 
-%figure "khepera_k213.wbt"
+%figure "khepera_k213"
 
-![khepera_k213.wbt](png/khepera_k213.png)
+![khepera_k213](png/khepera_k213.png)
 
 %end
 
@@ -348,9 +348,9 @@ directory.
 
 **Keywords**: DifferentialWheels, UNIX pipe, client program, Khepera
 
-%figure "khepera_pipe.wbt"
+%figure "khepera_pipe"
 
-![khepera_pipe.wbt](png/khepera_pipe.png)
+![khepera_pipe](png/khepera_pipe.png)
 
 %end
 
@@ -368,9 +368,9 @@ controller and for the client program are in the "pipe" directory.
 
 **Keywords**: DifferentialWheels, TCP/IP, client program, Khepera
 
-%figure "khepera_tcpip.wbt"
+%figure "khepera_tcpip"
 
-![khepera_tcpip.wbt](png/khepera_tcpip.png)
+![khepera_tcpip](png/khepera_tcpip.png)
 
 %end
 
@@ -387,9 +387,9 @@ directory.
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Koala
 
-%figure "koala.wbt"
+%figure "koala"
 
-![koala.wbt](png/koala.png)
+![koala](png/koala.png)
 
 %end
 
@@ -402,9 +402,9 @@ while avoiding the walls. Like many other examples, this one uses the
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Magellan
 
-%figure "magellan.wbt"
+%figure "magellan"
 
-![magellan.wbt](png/magellan.png)
+![magellan](png/magellan.png)
 
 %end
 
@@ -418,9 +418,9 @@ the "others/worlds" directory. Like many other examples, this one uses the
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Pioneer 2
 
-%figure "pioneer2.wbt"
+%figure "pioneer2"
 
-![pioneer2.wbt](png/pioneer2.png)
+![pioneer2](png/pioneer2.png)
 
 %end
 
@@ -433,9 +433,9 @@ uses the `braitenberg` controller. The source code for this controller is in the
 
 **Keywords**: DifferentialWheels, bumper, TouchSensor, line following, Rover, Java
 
-%figure "rover.wbt"
+%figure "rover"
 
-![rover.wbt](png/rover_world.png)
+![rover](png/rover_world.png)
 
 %end
 
@@ -452,9 +452,9 @@ directory.
 
 **Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Scout 2
 
-%figure "scout2.wbt"
+%figure "scout2"
 
-![scout2.wbt](png/scout2.png)
+![scout2](png/scout2.png)
 
 %end
 
@@ -469,9 +469,9 @@ directory.
 **Keywords**: Robot node, custom ODE plugin, keyboard, passive joint, uneven ground
     sponginess, Shrimp, LinearMotor
 
-%figure "shrimp.wbt"
+%figure "shrimp"
 
-![shrimp.wbt](png/shrimp.png)
+![shrimp](png/shrimp.png)
 
 %end
 
@@ -500,18 +500,18 @@ the ODE plugin is in the
 
 **Keywords**: Robot node, legged robot, RotationalMotor, Bioloid, Camera, DistanceSensor, keyboard, modular robots, walking
 
-%figure "bioloid.wbt"
+%figure "bioloid"
 
-![bioloid.wbt](png/bioloid.png)
+![bioloid](png/bioloid.png)
 
 %end
 
 In this example, the four-legged robot model ([this
-figure](real-robots.md#bioloid-wbt) (a)) corresponds to a real
-[Bioloid](http://www.robotis.com) robot ([this
-figure](real-robots.md#bioloid-wbt) (b)) developed by and commercially available
-from [Tribotix](http://www.tribotix.com). This dog-robot model was build from
-the Bioloid Comprehensive Kit.
+figure](real-robots.md#bioloid) (a)) corresponds to a real
+[Bioloid](http://www.robotis.com) robot ([this figure](real-robots.md#bioloid)
+(b)) developed by and commercially available from
+[Tribotix](http://www.tribotix.com). This dog-robot model was build from the
+Bioloid Comprehensive Kit.
 
 Both the visual aspect and the physical properties of the real robot have been
 modeled. The physical dimensions, friction coefficients and mass distribution

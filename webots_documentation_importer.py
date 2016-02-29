@@ -248,9 +248,12 @@ class BookParser:
             if idNode.tag == 'refentry' or \
               (idNode.tag == 'table' and self.parents[idNode].tag == 'sect1'):
                 anchor = slugify(refId)
-                anchor = anchor.replace('-m-', 'meters')
             else:
-                anchor = slugify(self.getTitle(idNode))
+                title = self.getTitle(idNode)
+                if idNode.tag == 'figure' and title.endswith('.wbt'):
+                    title = title[:-4]
+                    print title
+                anchor = slugify(title)
                 anchor = anchor.replace('-m-', '-meters-')
 
             filename = ''
@@ -487,6 +490,8 @@ class BookParser:
         title = self.getTitle(node)
         if len(title) == 0:
             raise Exception('figure title not found')
+        if title.endswith('.wbt'):
+            title = title[:-4]
         fileref = ''
         for child in node.getchildren():
             if child.tag == 'title':

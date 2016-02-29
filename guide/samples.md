@@ -12,9 +12,9 @@ demo, the world file and its corresponding controller have the same name.
 
 **Keywords**: Flying robot, physics plugin, keyboard, joystick
 
-%figure "blimp_lis.wbt"
+%figure "blimp_lis"
 
-![blimp_lis.wbt](png/blimp_lis.png)
+![blimp_lis](png/blimp_lis.png)
 
 %end
 
@@ -29,9 +29,9 @@ plugin* is used to add thrust and other forces to the simulation.
 
 **Keywords**: Gantry robot, gripper, Hanoi towers, linear motors, recursive algorithm
 
-%figure "gantry.wbt"
+%figure "gantry"
 
-![gantry.wbt](png/gantry.png)
+![gantry](png/gantry.png)
 
 %end
 
@@ -44,9 +44,9 @@ Towers problem.
 
 **Keywords**: Legged robot, alternating tripod gait, linear motor
 
-%figure "hexapod.wbt"
+%figure "hexapod"
 
-![hexapod.wbt](png/hexapod.png)
+![hexapod](png/hexapod.png)
 
 %end
 
@@ -58,9 +58,9 @@ alternating tripod gait.
 
 **Keywords**: Humanoid, QRIO robot
 
-%figure "humanoid.wbt"
+%figure "humanoid"
 
-![humanoid.wbt](png/humanoid.png)
+![humanoid](png/humanoid.png)
 
 %end
 
@@ -70,9 +70,9 @@ In this example, a humanoid robot performs endless gymnastic movements.
 
 **Keywords**: DifferentialWheels, Koala, keyboard, texture
 
-%figure "moon.wbt"
+%figure "moon"
 
-![moon.wbt](png/moon.png)
+![moon](png/moon.png)
 
 %end
 
@@ -85,9 +85,9 @@ controller code.
 
 **Keywords**: Quadruped, legged robot, dog robot, passive joint, spring and damper
 
-%figure "ghostdog.wbt"
+%figure "ghostdog"
 
-![ghostdog.wbt](png/ghostdog.png)
+![ghostdog](png/ghostdog.png)
 
 %end
 
@@ -103,9 +103,9 @@ could be used for controlling the knee joints.
 
 **Keywords**: Salamander robot, swimming robot, amphibious robot, legged robot, physics plugin, buoyancy
 
-%figure "salamander.wbt"
+%figure "salamander"
 
-![salamander.wbt](png/salamander.png)
+![salamander](png/salamander.png)
 
 %end
 
@@ -120,9 +120,9 @@ principle.
 
 **Keywords**: Soccer, Supervisor, DifferentialWheels, label
 
-%figure "soccer.wbt"
+%figure "soccer"
 
-![soccer.wbt](png/soccer_world.png)
+![soccer](png/soccer_world.png)
 
 %end
 
@@ -135,9 +135,9 @@ current score and the remaining time in the 3D view. This example shows how a
 
 **Keywords**: Sojourner, Passive joint, planetary exploration robot, keyboard, IndexedFaceSet
 
-%figure "sojourner.wbt"
+%figure "sojourner"
 
-![sojourner.wbt](png/sojourner.png)
+![sojourner](png/sojourner.png)
 
 %end
 
@@ -150,9 +150,9 @@ robot's motion.
 
 **Keywords**: Connector, modular robots, self-reconfiguring robot
 
-%figure "yamor.wbt"
+%figure "yamor"
 
-![yamor.wbt](png/yamor.png)
+![yamor](png/yamor.png)
 
 %end
 
@@ -167,9 +167,9 @@ module behaviour is chosen according to the name of the module.
 
 **Keywords**: Stewart platform, linear motion, physics plugin, ball joint, universal joint
 
-%figure "stewart_platform.wbt"
+%figure "stewart_platform"
 
-![stewart_platform.wbt](png/stewart_platform.png)
+![stewart_platform](png/stewart_platform.png)
 
 %end
 

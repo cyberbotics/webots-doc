@@ -4,7 +4,7 @@
 
 In this section, you will learn how to use Webots simulation model of the
 Pioneer 3-AT robot. ([this
-figure](#pioneer-3-at-a-ready-to-use-all-terrain-base)).
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-at-a-ready-to-use-all-terrain-base)).
 
 #### Pioneer 3-AT overview
 
@@ -17,7 +17,8 @@ figure](#pioneer-3-at-a-ready-to-use-all-terrain-base)).
 The Pioneer 3-AT robot is an all-purpose outdoor base, used for research and
 prototyping applications involving mapping, navigation, monitoring,
 reconnaissance and other behaviors. It provides a ready-to-use set of devices
-listed in [this table](#pioneer-3-at-features).
+listed in [this
+table](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-at-features).
 
 %figure "Pioneer 3-AT features"
 
@@ -45,10 +46,10 @@ Adept Mobile Robots official
 %end
 
 The Pioneer 3-AT model in Webots is depicted in [this
-figure](#the-pioneer-3-at-model-in-webots). This model includes support for 4
-motors and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity
-measurements. The standard model of the Pioneer 3-AT is provided in the
-"pioneer3AT.wbt" file which is located in the
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#the-pioneer-3-at-model-in-webots).
+This model includes support for 4 motors and 16 sonar sensors (8 forward-facing,
+8 rear-facing) for proximity measurements. The standard model of the Pioneer
+3-AT is provided in the "pioneer3AT.wbt" file which is located in the
 "WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3at/worlds" directory of
 the Webots distribution.
 
@@ -65,10 +66,11 @@ avoidance behavior based on the use of a SICK LIDAR (see the
 directory).
 
 The Pioneer 3-AT motors are RotationalMotor nodes named according to [this
-figure](#pioneer-3-at-motor-names). The `wb_set_motor_position()` and
-`wb_set_motor_velocity()` functions allow the user to manage the rotation of the
-wheels. The sonar sensors are numbered according to [this
-figure](#sonar-sensors-positions).
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-at-motor-names).
+The `wb_set_motor_position()` and `wb_set_motor_velocity()` functions allow the
+user to manage the rotation of the wheels. The sonar sensors are numbered
+according to [this
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#sonar-sensors-positions).
 
 %figure "Sonar sensors positions"
 
@@ -83,7 +85,7 @@ four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
 
 In this section, you will learn how to use Webots simulation model of the
 Pioneer 3-DX robot. ([this
-figure](#pioneer-3-dx-an-all-purpose-base-used-for-research-and-applications)).
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-dx-an-all-purpose-base-used-for-research-and-applications)).
 
 #### Pioneer 3-DX overview
 
@@ -102,7 +104,8 @@ speeds of 1.6 meters per second and carry a payload of up to 23 kg.
 The Pioneer 3-DX robot is an all-purpose base, used for research and
 applications involving mapping, teleoperation, localization, monitoring,
 reconnaissance and other behaviors. Pioneer 3-DX is provided with a ready-to-use
-set of devices listed in [this table](#pioneer-3-dx-features).
+set of devices listed in [this
+table](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-dx-features).
 
 %figure "Pioneer 3-DX features"
 
@@ -130,12 +133,13 @@ Adept Mobile Robots official
 %end
 
 The Pioneer 3-DX model in Webots is depicted in [this
-figure](#the-pioneer-3-dx-model-in-webots). This model includes support for two
-motors, the caster wheel, 7 LEDs on the control panel and 16 sonar sensors (8
-forward-facing, 8 rear-facing) for proximity measurements. The standard model of
-the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in
-the "WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3dx/worlds" directory
-of the Webots distribution.
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#the-pioneer-3-dx-model-in-webots).
+This model includes support for two motors, the caster wheel, 7 LEDs on the
+control panel and 16 sonar sensors (8 forward-facing, 8 rear-facing) for
+proximity measurements. The standard model of the Pioneer 3-DX is provided in
+the "pioneer3dx.wbt" file which is located in the
+"WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3dx/worlds" directory of
+the Webots distribution.
 
 %figure "Pioneer 3-DX motor names"
 
@@ -153,10 +157,11 @@ Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller
 file).
 
 The Pioneer 3-DX motors are RotationalMotor nodes named according to [this
-figure](#pioneer-3-dx-motor-names). The `wb_set_motor_position()` and
-`wb_set_motor_velocity()` functions allow the user to manage the rotation of the
-wheels. The sonar sensors are numbered according to [this
-figure](#sonar-sensors-positions).
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-dx-motor-names).
+The `wb_set_motor_position()` and `wb_set_motor_velocity()` functions allow the
+user to manage the rotation of the wheels. The sonar sensors are numbered
+according to [this
+figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#sonar-sensors-positions).
 
 The angle between two consecutive sensor directions is 20 degrees except for the
 four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.

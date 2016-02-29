@@ -3,7 +3,8 @@
 ### Why is Webots slow on my computer?
 
 You should verify your graphics driver installation. Please find instructions
-here [this section](#verifying-your-graphics-driver-installation).
+here [this
+section](verifying-your-graphics-driver-installation.md#verifying-your-graphics-driver-installation).
 
 If you are using a laptop computer, please check the power options and make sure
 you are using the high performance power plan.

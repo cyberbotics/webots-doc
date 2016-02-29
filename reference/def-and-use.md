@@ -21,6 +21,6 @@ are not allowed for `Solid`, `Joint`, `JointParameters`, and
 `BallJointParameters` nodes and their derived nodes. Indeed, the ability for
 identical solids or joints to occupy the same position is useless, if not
 hazardous, in a physics simulation. To safely duplicate one of these nodes, you
-can design a [PROTO](#proto) model for this node and then add different PROTO
-instances to your world.
+can design a [PROTO](proto.md#proto) model for this node and then add different
+PROTO instances to your world.
 

@@ -1,6 +1,6 @@
 ## HingeJoint
 
-Derived from [Joint](#joint).
+Derived from [Joint](joint.md#joint).
 
 ```
 HingeJoint {
@@ -11,17 +11,21 @@ HingeJoint {
 
 ### Description
 
-The [HingeJoint](#hingejoint) node can be used to model a hinge, i.e. a joint
-allowing only a rotational motion around a given axis (1 degree of freedom). It
-inherits [Joint](#joint)'s `jointParameters` field. This field can be filled
-with a [HingeJointParameters](#hingejointparameters) only. If empty,
-[HingeJointParameters](#hingejointparameters) default values apply.
+The [HingeJoint](hingejoint.md#hingejoint) node can be used to model a hinge,
+i.e. a joint allowing only a rotational motion around a given axis (1 degree of
+freedom). It inherits [Joint](joint.md#joint)'s `jointParameters` field. This
+field can be filled with a
+[HingeJointParameters](hingejointparameters.md#hingejointparameters) only. If
+empty,  [HingeJointParameters](hingejointparameters.md#hingejointparameters)
+default values apply.
 
 ### Field Summary
 
-- `device`: This field optionally specifies a [RotationalMotor](#rotationalmotor),
-an angular [PositionSensor](#positionsensor) and/or a [Brake](#brake) device. If
-no motor is specified, the joint is passive joint.
+- `device`: This field optionally specifies a
+[RotationalMotor](rotationalmotor.md#rotationalmotor), an angular
+[PositionSensor](positionsensor.md#positionsensor) and/or a
+[Brake](brake.md#brake) device. If no motor is specified, the joint is passive
+joint.
 - `position`: see [joint's hidden position
-field](#joint-s-hidden-position-fields).
+field](joint.md#joint-s-hidden-position-fields).
 

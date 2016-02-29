@@ -1,6 +1,6 @@
 ## Fluid
 
-Derived from [Transform](#transform).
+Derived from [Transform](transform.md#transform).
 
 ```
 Fluid {
@@ -18,30 +18,32 @@ Fluid {
 
 ### Description
 
-A [Fluid](#fluid) node represents a possibly unbounded fluid volume with
-physical properties such as density and stream velocity. A [Solid](#solid) node
-which is partially or fully immersed in some [Fluid](#fluid)'s `boundingObject`
-will be subject to the static force (Archimedes'thrust) and the dynamic force
-(drag force) exerted by the [Fluid](#fluid) provided it has a
-[Physics](#physics) node, a `boundingObject` and that its field
-`immersionProperties` contains an [ImmersionProperties](#immersionproperties)
-node referring to the given [Fluid](#fluid).
+A [Fluid](fluid.md#fluid) node represents a possibly unbounded fluid volume with
+physical properties such as density and stream velocity. A
+[Solid](solid.md#solid) node which is partially or fully immersed in some
+[Fluid](fluid.md#fluid)'s `boundingObject` will be subject to the static force
+(Archimedes'thrust) and the dynamic force (drag force) exerted by the
+[Fluid](fluid.md#fluid) provided it has a [Physics](physics.md#physics) node, a
+`boundingObject` and that its field `immersionProperties` contains an
+[ImmersionProperties](immersionproperties.md#immersionproperties) node referring
+to the given [Fluid](fluid.md#fluid).
 
-In the 3D window, [Fluid](#fluid) nodes can be manipulated (dragged, lifted,
-rotated, etc) using the mouse.
+In the 3D window, [Fluid](fluid.md#fluid) nodes can be manipulated (dragged,
+lifted, rotated, etc) using the mouse.
 
 ### Fluid Fields
 
-Note that in the [Fluid](#fluid) node, the `scale` field inherited from the
-[Transform](#transform) must always remain uniform, i.e., of the form `x x x`
-where `x` is any positive real number. This ensures that all primitive
-geometries will remain suitable for ODE immersion detection. Whenever a scale
-coordinate is changed, the two other ones are automatically changed to this new
-value. If a non-positive value is assigned to a scale coordinate, the value is
-automatically changed to 1.
+Note that in the [Fluid](fluid.md#fluid) node, the `scale` field inherited from
+the [Transform](transform.md#transform) must always remain uniform, i.e., of the
+form `x x x` where `x` is any positive real number. This ensures that all
+primitive geometries will remain suitable for ODE immersion detection. Whenever
+a scale coordinate is changed, the two other ones are automatically changed to
+this new value. If a non-positive value is assigned to a scale coordinate, the
+value is automatically changed to 1.
 
 - `name`: name of the fluid. This is the name used in a
-[ImmersionProperties](#immersionproperties) to refer to a given [Fluid](#fluid).
+[ImmersionProperties](immersionproperties.md#immersionproperties) to refer to a
+given [Fluid](fluid.md#fluid).
 
 - `model`: generic name of the fluid, e.g., "sea".
 
@@ -50,27 +52,28 @@ automatically changed to 1.
 - `density`: density of the fluid expressed in kg/m^3; it defaults to water
 density. The fluid density is taken into account for the computations of
 Archimedes' thrust, drag forces and drag torques, see
-[ImmersionProperties](#immersionproperties).
+[ImmersionProperties](immersionproperties.md#immersionproperties).
 
 - `viscosity`: dynamic viscosity of the fluid expressed in kg/(ms). It defaults to
 viscosity of water at 20 degrees Celsius.
 
 - `streamVelocity`: fluid linear velocity, the flow being assumed laminar. The
 fluid linear velocity is taken into account for the drag and viscous resistance
-computations, see [ImmersionProperties](#immersionproperties).
+computations, see
+[ImmersionProperties](immersionproperties.md#immersionproperties).
 
 - `boundingObject`: the bounding object specifies the geometrical primitives and
-their [Transform](#transform) offset used for immersion detection. If the
-`boundingObject` field is NULL, then no immersion detection is performed and
-that fluid will have no effect on immersed objects. A [Solid](#solid) will
-undergo static or dynamic forces exerted by a [Fluid](#fluid) only if its
-`boundingObject` collides with the [Fluid](#fluid)'s `boundingObject`. The
-intersection volume volume with an individual primitive geometry is approximated
-by the intersection volume of this geometry with a tangent plane of equation *y
-= c, c > 0* in the geometry coordinate system. This volume is used to generates
-Archimedes'thrust.
+their [Transform](transform.md#transform) offset used for immersion detection.
+If the `boundingObject` field is NULL, then no immersion detection is performed
+and that fluid will have no effect on immersed objects. A
+[Solid](solid.md#solid) will undergo static or dynamic forces exerted by a
+[Fluid](fluid.md#fluid) only if its `boundingObject` collides with the
+[Fluid](fluid.md#fluid)'s `boundingObject`. The intersection volume volume with
+an individual primitive geometry is approximated by the intersection volume of
+this geometry with a tangent plane of equation *y = c, c > 0* in the geometry
+coordinate system. This volume is used to generates Archimedes'thrust.
 
-    This field is subject to the same restrictions as a [Solid](#solid)'s
+    This field is subject to the same restrictions as a [Solid](solid.md#solid)'s
     `boundingObject`.
 
 - `locked`: if `TRUE`, the fluid object cannot be moved using the mouse. This is

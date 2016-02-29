@@ -9,10 +9,10 @@ TextureTransform {
 }
 ```
 
-The [TextureTransform](#texturetransform) node defines a 2D transformation that
-is applied to texture coordinates. This node affects the way textures are
-applied to the surface of a `Geometry`. The transformation consists of (in
-order):
+The [TextureTransform](texturetransform.md#texturetransform) node defines a 2D
+transformation that is applied to texture coordinates. This node affects the way
+textures are applied to the surface of a `Geometry`. The transformation consists
+of (in order):
 
 - a translation;
 - a rotation about the center point;
@@ -40,10 +40,10 @@ texture clockwise. The `translation` field specifies a translation of the
 texture coordinates.
 
 Given a point **T** with texture coordinates *(s,t)* and a
-[TextureTransform](#texturetransform) node, **T** is transformed into the point
-**T'***=(s',t')* by the three intermediate transformations described above. Let
-*C* be the translation mapping *(0,0)* to the point
-*(C<sub>s</sub><sub>t</sub>*, *T* be the translation of vector
+[TextureTransform](texturetransform.md#texturetransform) node, **T** is
+transformed into the point **T'***=(s',t')* by the three intermediate
+transformations described above. Let *C* be the translation mapping *(0,0)* to
+the point *(C<sub>s</sub><sub>t</sub>*, *T* be the translation of vector
 *(T<sub>s</sub><sub>t</sub>*, *R* the rotation with center *(0,0)* and angle θ
 , and *S* a scaling with scaling factors *S<sub>s</sub><sub>t</sub>*. In matrix
 notation, the corresponding `TextureTransform` reads as
@@ -56,6 +56,6 @@ notation, the corresponding `TextureTransform` reads as
 
 where *C<sup>-1</sup>* denotes the matrix inverse of *C*.
 
-Note that [TextureTransform](#texturetransform) nodes cannot combine or
-accumulate.
+Note that [TextureTransform](texturetransform.md#texturetransform) nodes cannot
+combine or accumulate.
 

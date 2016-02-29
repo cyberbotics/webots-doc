@@ -140,9 +140,9 @@ random values. The robot does not pay any attention to obstacles.
 %end
 
 This example is nearly the same as "bumper.wbt" (see [this
-section](#bumper-wbt)). The only difference is that this robot uses a "force"
-`TouchSensor` instead of a "bumper". So this robot can measure the force of each
-collision, which is printed in the Console window.
+section](webots-devices.md#bumper-wbt)). The only difference is that this robot
+uses a "force" `TouchSensor` instead of a "bumper". So this robot can measure
+the force of each collision, which is printed in the Console window.
 
 ### gps.wbt
 

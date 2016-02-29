@@ -63,7 +63,7 @@ class Reference:
             return self.kind
 
     def getUrl(self, currentMDFile):
-        fn = self.filename if self.filename == currentMDFile else ''
+        fn = self.filename  # if self.filename == currentMDFile else ''
         if len(self.anchor) > 0:
             return '%s#%s' % (fn, self.anchor)
         else:

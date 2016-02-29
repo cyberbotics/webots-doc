@@ -122,6 +122,6 @@ detailed installation and usage instructions.
 Following the instructions "README.md" is necessary to make the joystick example
 work on your Linux system.
 
-> In the [Tutorials](#tutorials) chapter, you will find a section explaining how
-to rebuild from scratch the joystick example.
+> In the [Tutorials](tutorials.md#tutorials) chapter, you will find a section
+explaining how to rebuild from scratch the joystick example.
 

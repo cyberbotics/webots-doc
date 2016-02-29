@@ -38,7 +38,7 @@ Webots already provides some facilities to implement a remote control library
 and in particular it is possible to develop it as a controller plugin. Once set
 in the corresponding field of the Robot node, this remote control plugin will be
 executed automatically when running the controller. Implementation details are
-described in [this section](#remote-control-plugin).
+described in [this section](controller-plugin.md#remote-control-plugin).
 
 #### Special functions
 
@@ -56,12 +56,12 @@ order to leave the controller cleanly.
 
 Once linked with your own remote control plugin, you can control your real robot
 by running the simulation in Webots. It might be useful to also add a robot
-window plugin (see [this section](#robot-window-plugin)) to graphically display
-specific sensor values, motor commands or a stop button.
+window plugin (see [this section](controller-plugin.md#robot-window-plugin)) to
+graphically display specific sensor values, motor commands or a stop button.
 
 Such a remote control system is designed to be implemented in C/C++ as explained
-in [this section](#controller-plugin); however, it can also be implemented other
-programming languages creating a wrapper.
+in [this section](controller-plugin.md#controller-plugin); however, it can also
+be implemented other programming languages creating a wrapper.
 
 ### Cross-compilation
 

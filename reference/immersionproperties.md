@@ -13,18 +13,19 @@ ImmersionProperties {
 
 ### Description
 
-An [ImmersionProperties](#immersionproperties) node is used inside the
-`immersionProperties` field of a [Solid](#solid) node to specify its dynamical
-interactions with one or more [Fluid](#fluid) nodes.
+An [ImmersionProperties](immersionproperties.md#immersionproperties) node is
+used inside the `immersionProperties` field of a [Solid](solid.md#solid) node to
+specify its dynamical interactions with one or more [Fluid](fluid.md#fluid)
+nodes.
 
 ### ImmersionProperties Fields
 
 - `fluidName`: name of the fluid with which the dynamical interaction is enabled.
 The string value must coincide with the `name` field value of an existing
-[Fluid](#fluid) node.
+[Fluid](fluid.md#fluid) node.
 
 - `referenceArea`: this field defines the reference area(s) used to compute the
-drag force and drag torque of the submerging [Fluid](#fluid).
+drag force and drag torque of the submerging [Fluid](fluid.md#fluid).
 
     If the `referenceArea` is set to "xyz-projected area", the *x*-coordinate of the
     drag force vector with respect to the the solid frame is given by:
@@ -45,7 +46,7 @@ drag force and drag torque of the submerging [Fluid](#fluid).
     expressed within the solid frame. Analogous formulas hold for *y* and *z*
     coordinates.
 
-    If the `referenceArea` value is "immersed area" then the [Solid](#solid)
+    If the `referenceArea` value is "immersed area" then the [Solid](solid.md#solid)
     `boundingObject`'s immersed area is used for drag force and drag torque
     computations:
 
@@ -78,8 +79,8 @@ exerted by the fluid on the solid according the following formulas
 
 > **note**:
 The "xyz-projected area" computation mode is implemented only for
-boundingObjects that contain fully or partially immersed [Box](#box) nodes,
-fully immersed [Cylinder](#cylinder), [Capsule](#capsule) and [Sphere](#sphere)
-nodes. The "immersed area" computation mode is implemented for every Geometry
-node.
+boundingObjects that contain fully or partially immersed [Box](box.md#box)
+nodes, fully immersed [Cylinder](cylinder.md#cylinder),
+[Capsule](capsule.md#capsule) and [Sphere](sphere.md#sphere) nodes. The
+"immersed area" computation mode is implemented for every Geometry node.
 

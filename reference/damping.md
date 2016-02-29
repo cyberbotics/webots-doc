@@ -9,26 +9,27 @@ Damping {
 
 ### Description
 
-A [Damping](#damping) node can be used to slow down a body (a [Solid](#solid)
-node with [Physics](#physics)). The speed of each body is reduced by the
-specified amount (between 0.0 and 1.0) every second. A value of 0.0 means "no
-slowing down" and value of 1.0 means a "complete stop", a value of 0.1 means
-that the speed should be decreased by 10 percent every second. Note that the
-behavior of this value on the solid speeds is nonlinear: a linear damping of
-0.99 is far to affect the solids speeds as a linear damping of 1.0. A damped
-body will possibly come to rest and become disabled depending on the values
-specified in [WorldInfo](#worldinfo). Damping does not add any force in the
-simulation, it directly affects the velocity of the body. The damping effect is
-applied after all forces have been applied to the bodies. Damping can be used to
-reduce simulation instability.
+A [Damping](damping.md#damping) node can be used to slow down a body (a
+[Solid](solid.md#solid) node with [Physics](physics.md#physics)). The speed of
+each body is reduced by the specified amount (between 0.0 and 1.0) every second.
+A value of 0.0 means "no slowing down" and value of 1.0 means a "complete stop",
+a value of 0.1 means that the speed should be decreased by 10 percent every
+second. Note that the behavior of this value on the solid speeds is nonlinear: a
+linear damping of 0.99 is far to affect the solids speeds as a linear damping of
+1.0. A damped body will possibly come to rest and become disabled depending on
+the values specified in [WorldInfo](worldinfo.md#worldinfo). Damping does not
+add any force in the simulation, it directly affects the velocity of the body.
+The damping effect is applied after all forces have been applied to the bodies.
+Damping can be used to reduce simulation instability.
 
 > **note**:
-When several rigidly linked [Solid](#solid)s are merged (see
-[Physics](#physics)'s [solid merging](#implicit-solid-merging-and-joints)
-section) damping values of the aggregate body are averaged over the volumes of
-all [Solid](#solid) components. The volume of a [Solid](#solid) is the sum of
-the volumes of the geometries found in its `boundingObject`; overlaps are not
-handled.
+When several rigidly linked [Solid](solid.md#solid)s are merged (see
+[Physics](physics.md#physics)'s [solid
+merging](physics.md#implicit-solid-merging-and-joints) section) damping values
+of the aggregate body are averaged over the volumes of all
+[Solid](solid.md#solid) components. The volume of a [Solid](solid.md#solid) is
+the sum of the volumes of the geometries found in its `boundingObject`; overlaps
+are not handled.
 
 The `linear` field indicates the amount of damping that must be applied to the
 body's linear motion. The `angular` field indicates the amount of damping that
@@ -37,14 +38,15 @@ e.g., to slow down a vehicule by simulating air or water friction. The angular
 damping can be used, e.g., to slow down the rotation of a rolling ball or the
 spin of a coin. Note that the damping is applied regardless of the shape of the
 object, so damping cannot be used to model complex fluid dynamics (use
-[ImmersionProperties](#immersionproperties) and [Fluid](#fluid) nodes instead).
+[ImmersionProperties](immersionproperties.md#immersionproperties) and
+[Fluid](fluid.md#fluid) nodes instead).
 
-A [Damping](#damping) node can be specified in the `defaultDamping` field of the
-[WorldInfo](#worldinfo) node; in this case it defines the default damping
-parameters that must be applied to every body in the simulation. A
-[Damping](#damping) node can be specified in the `damping` field of a
-[Physics](#physics) node; in this case it defines the damping parameters that
-must be applied to the [Solid](#solid) that contains the [Physics](#physics)
-node. The damping specified in a [Physics](#physics) node overrides the default
-damping.
+A [Damping](damping.md#damping) node can be specified in the `defaultDamping`
+field of the [WorldInfo](worldinfo.md#worldinfo) node; in this case it defines
+the default damping parameters that must be applied to every body in the
+simulation. A [Damping](damping.md#damping) node can be specified in the
+`damping` field of a [Physics](physics.md#physics) node; in this case it defines
+the damping parameters that must be applied to the [Solid](solid.md#solid) that
+contains the [Physics](physics.md#physics) node. The damping specified in a
+[Physics](physics.md#physics) node overrides the default damping.
 

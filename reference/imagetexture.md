@@ -11,11 +11,11 @@ ImageTexture {
 
 ### Description
 
-The [ImageTexture](#imagetexture) node defines a texture map by specifying an
-image file and general parameters for mapping to geometry. Texture maps are
-defined in a 2D coordinate system *(s,t)* that ranges from 0.0 to 1.0 in both
-directions. The bottom edge of the image corresponds to the *s*-axis of the
-texture map, and left edge of the image corresponds to the *t*-axis of the
+The [ImageTexture](imagetexture.md#imagetexture) node defines a texture map by
+specifying an image file and general parameters for mapping to geometry. Texture
+maps are defined in a 2D coordinate system *(s,t)* that ranges from 0.0 to 1.0
+in both directions. The bottom edge of the image corresponds to the *s*-axis of
+the texture map, and left edge of the image corresponds to the *t*-axis of the
 texture map. The lower-left pixel of the image corresponds to *s=0, t=0*, and
 the top-right pixel of the image corresponds to *s=1, t=1*. These relationships
 are depicted below.
@@ -28,21 +28,21 @@ are depicted below.
 
 The texture is read from the file specified by the `url` field. The file should
 be specified with a relative path (cf. [this
-section](#search-rule-of-the-texture-path)). Absolute paths work as well, but
-they are not recommended because they are not portable across different systems.
-Ideally, the texture file should lie next to the world file, possibly inside a
-"textures" subfolder. Supported image formats include both JPEG and PNG. The
-rendering of the PNG alpha transparency is supported. It is slightly more
-efficient to use textures with power of 2 resolution (e.g. 8x8, 2048x64, etc.).
-Otherwise an internal upscaling is performed.
+section](imagetexture.md#search-rule-of-the-texture-path)). Absolute paths work
+as well, but they are not recommended because they are not portable across
+different systems. Ideally, the texture file should lie next to the world file,
+possibly inside a "textures" subfolder. Supported image formats include both
+JPEG and PNG. The rendering of the PNG alpha transparency is supported. It is
+slightly more efficient to use textures with power of 2 resolution (e.g. 8x8,
+2048x64, etc.). Otherwise an internal upscaling is performed.
 
 A PNG image may contain an alpha channel. If such an alpha channel exists, the
 texture becomes semi-transparent. This is useful to render for example a scissor
 cut texture. Semi-transparent objects are sorted according to their center (the
 local position of the parent Transform) and are rendered in the same rendering
 queue as the objects having a transparent material (see the `transparency` field
-of the [Material](#material) node). Semi-transparent objects cannot receive and
-cannot cast shadows.
+of the [Material](material.md#material) node). Semi-transparent objects cannot
+receive and cannot cast shadows.
 
 If the image contains an alpha channel no texture filtering is performed,
 otherwise both a trilinear interpolation and an anisotropic texture filtering is

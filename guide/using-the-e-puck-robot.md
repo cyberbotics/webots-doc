@@ -1,11 +1,11 @@
 ## Using the e-puck robot
 
 In this section, you will learn how to use Webots with the e-puck robot ([this
-figure](#the-e-puck-robot-at-work)). E-puck is a miniature mobile robot
-originally developed at the EPFL for teaching purposes by the designers of the
-successful Khepera robot. The hardware and software of e-puck is fully open
-source, providing low level access to every electronic device and offering
-unlimited extension possibilities. The official [e-puck web
+figure](using-the-e-puck-robot.md#the-e-puck-robot-at-work)). E-puck is a
+miniature mobile robot originally developed at the EPFL for teaching purposes by
+the designers of the successful Khepera robot. The hardware and software of
+e-puck is fully open source, providing low level access to every electronic
+device and offering unlimited extension possibilities. The official [e-puck web
 site](http://www.e-puck.org) provides the most up-to-date information about this
 robot. E-puck is also available for purchase from Cyberbotics Ltd.
 
@@ -32,7 +32,7 @@ simple to repair.
 - *Affordable*: the price tag of e-puck is friendly to university budgets.
 
 E-puck is equipped with a large number of devices, as summarized in [this
-table](#e-puck-features).
+table](using-the-e-puck-robot.md#e-puck-features).
 
 %figure "e-puck features"
 
@@ -67,18 +67,19 @@ table](#e-puck-features).
 %end
 
 The e-puck model in Webots is depicted in [this
-figure](#the-e-puck-model-in-webots). This model includes support for the
-differential wheel motors (encoders are also simulated), the infra-red sensors
-for proximity and light measurements, the accelerometer, the camera, the 8
-surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet
-simulated in the current model. Besides standard e-puck devices, the model also
-provides two slots that can be used to extend the functionality and to equip the
-robot with additional devices. In particular, the ground sensors module
-extension of the real e-puck robot is modeled in Webots to provide 3 optional
-infra-red sensors pointing to the ground in front of the robot. The
-[table](#devices-names) displays the names of the simulated devices which are to
-be used as an argument of the function `wb_robot_get_device()` (see the Robot
-section of [Reference Manual](http://www.cyberbotics.com/reference/)).
+figure](using-the-e-puck-robot.md#the-e-puck-model-in-webots). This model
+includes support for the differential wheel motors (encoders are also
+simulated), the infra-red sensors for proximity and light measurements, the
+accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the
+other e-puck devices are not yet simulated in the current model. Besides
+standard e-puck devices, the model also provides two slots that can be used to
+extend the functionality and to equip the robot with additional devices. In
+particular, the ground sensors module extension of the real e-puck robot is
+modeled in Webots to provide 3 optional infra-red sensors pointing to the ground
+in front of the robot. The [table](using-the-e-puck-robot.md#devices-names)
+displays the names of the simulated devices which are to be used as an argument
+of the function `wb_robot_get_device()` (see the Robot section of [Reference
+Manual](http://www.cyberbotics.com/reference/)).
 
 %figure "Devices names"
 
@@ -108,7 +109,7 @@ section of [Reference Manual](http://www.cyberbotics.com/reference/)).
 %end
 
 The e-puck dimensions and speed specifications are shown in [this
-table](#e-puck-specifications). The functions
+table](using-the-e-puck-robot.md#e-puck-specifications). The functions
 `wb_differential_wheels_set_speed()`,
 `wb_differential_wheels_get_left_encoder()` and
 `wb_differential_wheels_get_right_encoder()` will allow you to set the speed of
@@ -137,15 +138,17 @@ looking to; in keeping with the VRML standard, the direction vector of the
 camera is pointing in the opposite direction, namely the direction of the
 positive *z*-axis. The axle's direction is given by the positive *x*-axis.
 Proximity sensors, light sensors and LEDs are numbered clockwise; their location
-and orientation are shown in [this table](#e-puck-specifications) and [this
-table](#devices-orientations). The last column of [this
-table](#devices-orientations) lists the angles between the negative *x*-axis and
-the direction of the devices, the plane *zOx* being oriented counter-clockwise.
-Note that the proximity sensors and the light sensors are actually the same
-devices of the real robot used in a different mode, so their direction coincide.
-Proximity sensors responses are simulated in accordance with the lookup table in
-[this figure](#proximity-sensor-response-against-distance); this table is the
-outcome of calibration performed on the real robot.
+and orientation are shown in [this
+table](using-the-e-puck-robot.md#e-puck-specifications) and [this
+table](using-the-e-puck-robot.md#devices-orientations). The last column of [this
+table](using-the-e-puck-robot.md#devices-orientations) lists the angles between
+the negative *x*-axis and the direction of the devices, the plane *zOx* being
+oriented counter-clockwise. Note that the proximity sensors and the light
+sensors are actually the same devices of the real robot used in a different
+mode, so their direction coincide. Proximity sensors responses are simulated in
+accordance with the lookup table in [this
+figure](using-the-e-puck-robot.md#proximity-sensor-response-against-distance);
+this table is the outcome of calibration performed on the real robot.
 
 %figure "Proximity sensor response against distance"
 
@@ -174,16 +177,16 @@ modules.
 Several simulation examples are located in the
 "WEBOTS\_MODULES\_PATH/projects/robots/e-puck/worlds" directory of the Webots
 distribution. The "e-puck\_line.wbt" world (see [this
-figure](#an-e-puck-extension-for-line-following)) especially examplifies the use
-of ground sensors. Ground sensors can be added to a real e-puck robot by
-inserting a special extension card with three sensors just below the camera of
-the robot. These sensors are actually simple infra-red sensors which allow the
-e-puck robot to see the color level of the ground at three locations in a line
-across its front. The `groundSensorSlot` field of the standard E-puck PROTO is
-expressly provided for equipping the simulated e-puck robot with the ground
-sensors extension modeled in the `E-puckGroundSensors` PROTO. This is
-particularly useful for implementing line following behaviors. The
-"e-puck\_line" controller program contains the source code for a simple line
+figure](using-the-e-puck-robot.md#an-e-puck-extension-for-line-following))
+especially examplifies the use of ground sensors. Ground sensors can be added to
+a real e-puck robot by inserting a special extension card with three sensors
+just below the camera of the robot. These sensors are actually simple infra-red
+sensors which allow the e-puck robot to see the color level of the ground at
+three locations in a line across its front. The `groundSensorSlot` field of the
+standard E-puck PROTO is expressly provided for equipping the simulated e-puck
+robot with the ground sensors extension modeled in the `E-puckGroundSensors`
+PROTO. This is particularly useful for implementing line following behaviors.
+The "e-puck\_line" controller program contains the source code for a simple line
 following system which, as an exercise, can be improved upon to obtain the
 behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck
 robot is able to follow the line drawn on the floor, but also to avoid obstacles
@@ -224,15 +227,15 @@ can improve these models using your contribution.
 When opening a world containing an e-puck robot, Webots displays the e-puck
 control window (which also appears when you double-click on the e-puck robot).
 This window is depicted in [this
-figure](#the-e-puck-control-window-for-simulation). It allows visualizing the
-devices of the robot. The distance measurements are displayed in red, outside
-the body of the robot. The light measurements are displayed in yellow, above the
-distance measurements. The 10 LEDs are displayed in black when off and red (or
-green) when on. The motor speeds are displayed in blue, and the motor position
-is displayed in the Encoder box in the bottom right hand corner of the window.
-The camera image (if present), the ground sensor values (if present) and the
-accelerometer values are displayed in the corresponding boxes on the right side
-of the window.
+figure](using-the-e-puck-robot.md#the-e-puck-control-window-for-simulation). It
+allows visualizing the devices of the robot. The distance measurements are
+displayed in red, outside the body of the robot. The light measurements are
+displayed in yellow, above the distance measurements. The 10 LEDs are displayed
+in black when off and red (or green) when on. The motor speeds are displayed in
+blue, and the motor position is displayed in the Encoder box in the bottom right
+hand corner of the window. The camera image (if present), the ground sensor
+values (if present) and the accelerometer values are displayed in the
+corresponding boxes on the right side of the window.
 
 This e-puck control window appears because the `robotWindow` field of the
 `DifferentialWheel` node in the world file was set to "e-puck\_window". Changing
@@ -268,8 +271,9 @@ returns a integer between -10 and 10 indicating if a black line is perceived
 respectively at the left and at the right of the e-puck field of view. A
 condition can be set on this value for getting a line follower behavior.
 
-BotStudio is depicted in the [figure](#botstudio-window). An example of
-BotStudio can be found by opening the
+BotStudio is depicted in the
+[figure](using-the-e-puck-robot.md#botstudio-window). An example of BotStudio
+can be found by opening the
 "WEBOTS\_MODULES\_PATH/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world
 file.
 

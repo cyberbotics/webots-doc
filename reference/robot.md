@@ -1,6 +1,6 @@
 ## Robot
 
-Derived from [Solid](#solid).
+Derived from [Solid](solid.md#solid).
 
 ```
 Robot {
@@ -17,17 +17,19 @@ Robot {
 }
 ```
 
-Direct derived nodes: [DifferentialWheels](#differentialwheels),
-[Supervisor](#supervisor).
+Direct derived nodes:
+[DifferentialWheels](differentialwheels.md#differentialwheels),
+[Supervisor](supervisor.md#supervisor).
 
 ### Description
 
-The [Robot](#robot) node can be used as basis for building a robot, e.g., an
-articulated robot, a humanoid robot, a wheeled robot... If you want to build a
-two-wheels robot with differential-drive you should also consider the
-[DifferentialWheels](#differentialwheels) node. If you would like to build a
-robot with supervisor capabilities use the [Supervisor](#supervisor) node
-instead (Webots PRO license required).
+The [Robot](robot.md#robot) node can be used as basis for building a robot,
+e.g., an articulated robot, a humanoid robot, a wheeled robot... If you want to
+build a two-wheels robot with differential-drive you should also consider the
+[DifferentialWheels](differentialwheels.md#differentialwheels) node. If you
+would like to build a robot with supervisor capabilities use the
+[Supervisor](supervisor.md#supervisor) node instead (Webots PRO license
+required).
 
 ### Field Summary
 
@@ -73,18 +75,18 @@ robot in Watts.
 - `selfCollision`: setting this field to TRUE will enable the detection of
 collisions within the robot and apply the corresponding contact forces, so that
 the robot limbs cannot cross each other (provided that they have a
-[Physics](#physics) node). This is useful for complex articulated robots for
-which the controller doesn't prevent inner collisions. Enabling self collision
-is, however, likely to decrease the simulation speed, as more collisions will be
-generated during the simulation. Note that only collisions between
-non-consecutive solids will be detected. For consecutive solids, e.g., two
-solids attached to each other with a joint, no collision detection is performed,
-even if the self collision is enabled. The reason is that this type of collision
-detection is usually not wanted by the user, because a very accurate design of
-the bounding objects of the solids would be required. To prevent two consecutive
-solid nodes from penetrating each other, the `minStop` and `maxStop` fields of
-the corresponding joint node should be adjusted accordingly. Here is an example
-of a robot leg with self collision enabled:
+[Physics](physics.md#physics) node). This is useful for complex articulated
+robots for which the controller doesn't prevent inner collisions. Enabling self
+collision is, however, likely to decrease the simulation speed, as more
+collisions will be generated during the simulation. Note that only collisions
+between non-consecutive solids will be detected. For consecutive solids, e.g.,
+two solids attached to each other with a joint, no collision detection is
+performed, even if the self collision is enabled. The reason is that this type
+of collision detection is usually not wanted by the user, because a very
+accurate design of the bounding objects of the solids would be required. To
+prevent two consecutive solid nodes from penetrating each other, the `minStop`
+and `maxStop` fields of the corresponding joint node should be adjusted
+accordingly. Here is an example of a robot leg with self collision enabled:
 
         Thigh (solid)
           |
@@ -163,10 +165,10 @@ The asynchronous mode is currently used only for the robot competitions, because
 in this case it is necessary to limit the CPU time allocated to each
 participating controller. Note that it is also possible to combine synchronous
 and asynchronous controllers, e.g., for the robot competitions generally the
-[Supervisor](#supervisor) controller is synchronous while the contestants
-controllers are asynchronous. Asynchronous controllers may also be recommended
-for networked simulations involving several robots distributed over a computer
-network with an unpredictable delay (like the Internet).
+[Supervisor](supervisor.md#supervisor) controller is synchronous while the
+contestants controllers are asynchronous. Asynchronous controllers may also be
+recommended for networked simulations involving several robots distributed over
+a computer network with an unpredictable delay (like the Internet).
 
 ### Robot Functions
 
@@ -174,7 +176,7 @@ network with an unpredictable delay (like the Internet).
 
 **wb\_robot\_step**, **wb\_robot\_init**, **wb\_robot\_cleanup** - *controller step, initialization and cleanup functions*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -241,10 +243,10 @@ from the simulation which can continue normally with the execution of the other
 controllers (if any). If a C controller exits without calling
 `wb_robot_cleanup()`, then its termination will not be signalled to Webots. In
 this case the simulation will remain blocked (sleeping) on the current step (but
-only if this [Robot](#robot)'s `synchronization` field is TRUE). Note that the
-call to the `wb_robot_cleanup()` function must be the last API function call in
-a C controller. Any subsequent Webots API function call will give unpredictable
-results.
+only if this [Robot](robot.md#robot)'s `synchronization` field is TRUE). Note
+that the call to the `wb_robot_cleanup()` function must be the last API function
+call in a C controller. Any subsequent Webots API function call will give
+unpredictable results.
 
 **Simple C controller Example**
 
@@ -291,7 +293,7 @@ int main() {
 
 **wb\_robot\_get\_device** - *get a unique identifier to a device*
 
-{[Matlab](#matlab_robot)}
+{[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -303,14 +305,15 @@ WbDeviceTag wb_robot_get_device(const char *name)
 
 This function returns a unique identifier for a device corresponding to a
 specified `name`. For example, if a robot contains a
-[DistanceSensor](#distancesensor) node whose `name` field is "ds1", the function
-will return the unique identifier of that device. This `WbDeviceTag` identifier
-will be used subsequently for enabling, sending commands to, or reading data
-from this device. If the specified device is not found, the function returns 0.
+[DistanceSensor](distancesensor.md#distancesensor) node whose `name` field is
+"ds1", the function will return the unique identifier of that device. This
+`WbDeviceTag` identifier will be used subsequently for enabling, sending
+commands to, or reading data from this device. If the specified device is not
+found, the function returns 0.
 
 **See also**
 
-[section](#wb_robot_step).
+[section](robot.md#wb_robot_step).
 
 ---
 
@@ -318,7 +321,7 @@ from this device. If the specified device is not found, the function returns 0.
 
 **Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
 ``` c
 #include <webots/Robot.hpp>
@@ -347,14 +350,15 @@ TouchSensor *Robot::getTouchSensor(const std::string &name)
 These functions return a reference to an object corresponding to a specified
 `name`. Depending on the called function, this object can be an instance of a
 `Device` subclass. For example, if a robot contains a
-[DistanceSensor](#distancesensor) node whose `name` field is "ds1", the function
-`getDistanceSensor` will return a reference to a
-[DistanceSensor](#distancesensor) object. If the specified device is not found,
-the function returns `NULL` in C++, `null` in Java or the `none` in Python.
+[DistanceSensor](distancesensor.md#distancesensor) node whose `name` field is
+"ds1", the function `getDistanceSensor` will return a reference to a
+[DistanceSensor](distancesensor.md#distancesensor) object. If the specified
+device is not found, the function returns `NULL` in C++, `null` in Java or the
+`none` in Python.
 
 **See also**
 
-[section](#wb_robot_step).
+[section](robot.md#wb_robot_step).
 
 ---
 
@@ -362,7 +366,7 @@ the function returns `NULL` in C++, `null` in Java or the `none` in Python.
 
 **wb\_robot\_get\_device\_by\_index** - *get the devices by introspection*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -410,7 +414,7 @@ for(i=0; i<n_devices; i++) {
 
 **wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -444,7 +448,7 @@ disabled.
 
 **wb\_robot\_get\_basic\_time\_step** - *returns the value of the basicTimeStep field of the WorldInfo node*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -455,7 +459,7 @@ double wb_robot_get_basic_time_step()
 **Description**
 
 This function returns the value of the `basicTimeStep` field of the
-[WorldInfo](#worldinfo) node.
+[WorldInfo](worldinfo.md#worldinfo) node.
 
 ---
 
@@ -463,7 +467,7 @@ This function returns the value of the `basicTimeStep` field of the
 
 **wb\_robot\_get\_mode** - *get operating mode, simulation vs. real robot*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -500,7 +504,7 @@ The integers can be compared to the following enumeration items:
 
 **wb\_robot\_get\_name** - *return the name defined in the robot node*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -530,7 +534,7 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 
 **wb\_robot\_get\_model** - *return the model defined in the robot node*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -554,7 +558,7 @@ controller terminates.
 
  - *set the data defined in the robot node*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -577,7 +581,7 @@ the robot node.
 
 **wb\_robot\_get\_type** - *return the type of the robot node*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/nodes.h>
@@ -597,7 +601,7 @@ WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
 **wb\_robot\_get\_project\_path** - *return the full path of the current project*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -619,7 +623,7 @@ char string. It should not be deallocated.
 
 **wb\_robot\_get\_world\_path** - *return the full path of the current opened world file*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -639,7 +643,7 @@ should not be deallocated.
 
 **wb\_robot\_get\_controller\_name**, **wb\_robot\_get\_controller\_arguments** - *return the content of the Robot::controller and Robot::controllerArgs fields*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -659,7 +663,7 @@ Robot::controllerArgs fields.
 
 **wb\_robot\_get\_synchronization** - *return the value of the synchronization field of the Robot node*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -678,7 +682,7 @@ field of the Robot node.
 
 **wb\_robot\_get\_time** - *return the current simulation time in seconds*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -698,7 +702,7 @@ does not matter whether the controller is synchronized or not.
 
 **wb\_robot\_keyboard\_enable**, **wb\_robot\_keyboard\_disable**, **wb\_robot\_keyboard\_get\_key** - *keyboard reading function*
 
-{[C++](#cpp_robot)}, {[Java](#java_robot)}, {[Python](#python_robot)}, {[Matlab](#matlab_robot)}
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}
 
 ``` c
 #include <webots/robot.h>
@@ -782,7 +786,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[section](#wb_robot_mutex_new).
+[section](robot.md#wb_robot_mutex_new).
 
 ---
 
@@ -820,7 +824,7 @@ other threads to lock it.
 
 **See also**
 
-[section](#wb_robot_task_new).
+[section](robot.md#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

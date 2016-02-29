@@ -14,17 +14,17 @@ More information about the Thymio II is available from [its official
 website](https://aseba.wikidot.com/en:thymio).
 
 Webots contains an accurate model of the Thymio II robot (see the
-[figure](#thymio-ii-model-in-webots)). Almost all the Thymio II devices have
-been modeled and calibrated. Moreover Aseba studio and VPL for Thymio II can be
-connected on the simulated model allowing you to program the simulated robot
-using Aseba. Many Aseba examples are working directly with the simulated robot.
-Finally several objects related to the Thymio II are available, including a pen
-which can draw on any 3D object.
+[figure](using-the-thymio-ii-robot.md#thymio-ii-model-in-webots)). Almost all
+the Thymio II devices have been modeled and calibrated. Moreover Aseba studio
+and VPL for Thymio II can be connected on the simulated model allowing you to
+program the simulated robot using Aseba. Many Aseba examples are working
+directly with the simulated robot. Finally several objects related to the Thymio
+II are available, including a pen which can draw on any 3D object.
 
 ### Thymio II model
 
-The [table](#thymio-ii-devices) shows which devices are supported by the model,
-and their names (using the Webots terminology).
+The [table](using-the-thymio-ii-robot.md#thymio-ii-devices) shows which devices
+are supported by the model, and their names (using the Webots terminology).
 
 %figure "Thymio II devices"
 
@@ -44,8 +44,8 @@ and their names (using the Webots terminology).
 %end
 
 The Thymio II distance sensor feedback is given on [this
-figure](#proximity-sensor-response-versus-distance). The calibration was
-performed using a regular A4 white paper.
+figure](using-the-thymio-ii-robot.md#proximity-sensor-response-versus-distance).
+The calibration was performed using a regular A4 white paper.
 
 %figure "Proximity sensor response versus distance"
 
@@ -67,9 +67,9 @@ sure that the simulation is running (the controller has started) and that the
 controller of the Thymio II robot is `thymio2_aseba`. You can check this from
 the Webots scene tree, by opening the Thymio2 node. Aseba Studio or VPL for
 Thymio II can then be started. From the Aseba target selection dialog (see the
-[figure](#aseba-studio-and-vpl-target-selection-dialog).), select the `Network
-TCP/IP` option with the following parameters: `Host = localhost` and `Port =
-33333`. Then just click on the `Connect` button.
+[figure](using-the-thymio-ii-robot.md#aseba-studio-and-vpl-target-selection-dialog).),
+select the `Network TCP/IP` option with the following parameters: `Host =
+localhost` and `Port = 33333`. Then just click on the `Connect` button.
 
 In case of a simulation containing several Thymio II, the TCP/IP port of the
 `thymio2_aseba` controller should be unique for each robot instance. This value
@@ -81,7 +81,8 @@ can be modified by editing the `Thymio2::controllerArgs` field.
 
 %end
 
-The Thymio II window (see the [figure](#thymio-ii-robot-window)) can help you to
+The Thymio II window (see the
+[figure](using-the-thymio-ii-robot.md#thymio-ii-robot-window)) can help you to
 raise some events easily. These events are mainly useful when using the VPL for
 Thymio II software. To open the Thymio II window, just double click on the 3D
 model of the robot.
@@ -98,7 +99,8 @@ You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to
 the `Thymio2::bodySlot` field. This pen can draw on every 3D object. This is
 particularily useful to perform [these
 exercises](https://aseba.wikidot.com/en:thymiodrawing). An example of this is
-located there (see the [figure](#simulation-of-a-thymio-ii-having-a-pen)):
+located there (see the
+[figure](using-the-thymio-ii-robot.md#simulation-of-a-thymio-ii-having-a-pen)):
 "WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_pen.wbt"
 
 %figure "Simulation of a Thymio II having a pen."
@@ -113,7 +115,7 @@ located there (see the [figure](#simulation-of-a-thymio-ii-having-a-pen)):
 reproduced by adding a `Thymio2Ball` node in your world. The ball can be
 slightly moved by applying a force on it (`ALT + mouse left click`). An example
 of this is located there (see the
-[figure](#simulation-of-a-thymio-ii-above-a-ball)):
+[figure](using-the-thymio-ii-robot.md#simulation-of-a-thymio-ii-above-a-ball)):
 "WEBOTS\_MODULES\_PATH/projects/robots/thymio/worlds/thymio2\_ball.wbt"
 
 %figure "Simulation of a Thymio II above a ball."

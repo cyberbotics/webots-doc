@@ -9,12 +9,13 @@ public functions. The classes are either representations of a node of the scene
 tree (such as Robot, LED, etc.) or either utility classes (such as Motion,
 ImageRef, etc.). A complete description of these functions can be found in the
 reference guide while the instructions about the common way to program a C++
-controller can be found in the [chapter](#programming-fundamentals).
+controller can be found in the
+[chapter](programming-fundamentals.md#programming-fundamentals).
 
 ### C++ Compiler Installation
 
 Please refer to the instructions for the C Compiler installation
-[here](#c-cpp-compiler-installation).
+[here](using-c.md#c-cpp-compiler-installation).
 
 ### Source Code of the C++ API
 

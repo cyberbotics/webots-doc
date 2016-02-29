@@ -1,6 +1,6 @@
 ## LED
 
-Derived from [Device](#device).
+Derived from [Device](device.md#device).
 
 ```
 LED {
@@ -11,16 +11,16 @@ LED {
 
 ### Description
 
-The [LED](#led) node is used to model a light emitting diode (LED). The light
-produced by an LED can be used for debugging or informational purposes. The
-resulted color is applied only on the first child of the [LED](#led) node. If
-the first child is a [Shape](#shape) node, the `emissiveColor` field of its
-[Material](#material) node is altered. If the first child is a [Light](#light)
-node, its `color` field is altered. Otherwise, if the first child is a
-[Group](#group) node, a recursive search is applied on this node in order to
-find which color field must be modified, so every [Light](#light),
-[Shape](#shape) and [Group](#group) node is altered according to the previous
-rules.
+The [LED](led.md#led) node is used to model a light emitting diode (LED). The
+light produced by an LED can be used for debugging or informational purposes.
+The resulted color is applied only on the first child of the [LED](led.md#led)
+node. If the first child is a [Shape](shape.md#shape) node, the `emissiveColor`
+field of its [Material](material.md#material) node is altered. If the first
+child is a [Light](light.md#light) node, its `color` field is altered.
+Otherwise, if the first child is a [Group](group.md#group) node, a recursive
+search is applied on this node in order to find which color field must be
+modified, so every [Light](light.md#light), [Shape](shape.md#shape) and
+[Group](group.md#group) node is altered according to the previous rules.
 
 ### Field Summary
 
@@ -44,7 +44,7 @@ between 0 (off) and 255 (maximum intensity).
 
 **wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
 
-{[C++](#cpp_led)}, {[Java](#java_led)}, {[Python](#python_led)}, {[Matlab](#matlab_led)}
+{[C++](cpp-api.md#cpp_led)}, {[Java](java-api.md#java_led)}, {[Python](python-api.md#python_led)}, {[Matlab](matlab-api.md#matlab_led)}
 
 ``` c
 #include <webots/led.h>
@@ -60,10 +60,11 @@ int wb_led_get(WbDeviceTag tag)
 
 In the case of a non-gradual LED (`gradual` field set to FALSE), if the `value`
 parameter is 1, the LED is turned on using the first color specified in the
-`color` field of the corresponding [LED](#led) node. If the `value` parameter is
-2, the LED is turned on using the second color specified in the `color` field of
-the [LED](#led) node, and so on. The `value` parameter should not be greater
-than the size of the `color` field of the corresponding [LED](#led) node.
+`color` field of the corresponding [LED](led.md#led) node. If the `value`
+parameter is 2, the LED is turned on using the second color specified in the
+`color` field of the [LED](led.md#led) node, and so on. The `value` parameter
+should not be greater than the size of the `color` field of the corresponding
+[LED](led.md#led) node.
 
 In the case of a monochromatic LED (`gradual` field set to TRUE and `color`
 field containing exactly one color), the `value` parameter indicates the

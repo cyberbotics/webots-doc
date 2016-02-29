@@ -7,21 +7,19 @@ IndexedLineSet {
 }
 ```
 
-The [IndexedLineSet](indexedlineset.md#indexedlineset) node represents a 3D
-geometry formed by constructing polylines from 3D vertices specified in the
-`coord` field. [IndexedLineSet](indexedlineset.md#indexedlineset) uses the
-indices in its `coordIndex` field to specify the polylines by connecting
-vertices from the `coord` field. An index of "-1" indicates that the current
-polyline has ended and the next one begins. The last polyline may be (but does
-not have to be) followed by a "-1".
-[IndexedLineSet](indexedlineset.md#indexedlineset) is specified in the local
-coordinate system and is affected by the transformations of its ancestors.
+The [IndexedLineSet](#indexedlineset) node represents a 3D geometry formed by
+constructing polylines from 3D vertices specified in the `coord` field.
+[IndexedLineSet](#indexedlineset) uses the indices in its `coordIndex` field to
+specify the polylines by connecting vertices from the `coord` field. An index of
+"-1" indicates that the current polyline has ended and the next one begins. The
+last polyline may be (but does not have to be) followed by a "-1".
+[IndexedLineSet](#indexedlineset) is specified in the local coordinate system
+and is affected by the transformations of its ancestors.
 
 The `coord` field specifies the 3D vertices of the line set and contains a
 [Coordinate](coordinate.md#coordinate) node.
 
-[IndexedLineSet](indexedlineset.md#indexedlineset)s are not lit, are not
-texture-mapped and they do not cast or receive shadows.
-[IndexedLineSet](indexedlineset.md#indexedlineset)s cannot be use for collision
-detection (boundingObject).
+[IndexedLineSet](#indexedlineset)s are not lit, are not texture-mapped and they
+do not cast or receive shadows. [IndexedLineSet](#indexedlineset)s cannot be use
+for collision detection (boundingObject).
 

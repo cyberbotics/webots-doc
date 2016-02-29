@@ -95,8 +95,8 @@ unable to avoid. This example has been developed as a practical assignment on
 behavior-based robotics. When completed, the controller should allow the E-puck
 robot to avoid this obstacle and recover its path afterwards. A solution for
 this assignment is shown in the world e-puck\_line\_demo.wbt (see [this
-section](real-robots.md#e-puck_line_demo-wbt)). The source code for this
-controller is in the "e-puck\_line" directory.
+section](#e-puck_line_demo-wbt)). The source code for this controller is in the
+"e-puck\_line" directory.
 
 ### e-puck_line_demo.wbt
 
@@ -110,11 +110,10 @@ controller is in the "e-puck\_line" directory.
 %end
 
 This example is the solution for the assignment given in the
-`e-puck_line_demo.wbt` example (see [this
-section](real-robots.md#e-puck_line-wbt)). In this case, you can see that the
-robot avoids the obstacle, then recovers its path along the line. As the
-controller used in this world is the solution to the assignment, the source code
-is not distributed.
+`e-puck_line_demo.wbt` example (see [this section](#e-puck_line-wbt)). In this
+case, you can see that the robot avoids the obstacle, then recovers its path
+along the line. As the controller used in this world is the solution to the
+assignment, the source code is not distributed.
 
 ### hemisson_cross_compilation.wbt
 
@@ -507,10 +506,9 @@ the ODE plugin is in the
 
 %end
 
-In this example, the four-legged robot model ([this
-figure](real-robots.md#bioloid) (a)) corresponds to a real
-[Bioloid](http://www.robotis.com) robot ([this figure](real-robots.md#bioloid)
-(b)) developed by and commercially available from
+In this example, the four-legged robot model ([this figure](#bioloid) (a))
+corresponds to a real [Bioloid](http://www.robotis.com) robot ([this
+figure](#bioloid) (b)) developed by and commercially available from
 [Tribotix](http://www.tribotix.com). This dog-robot model was build from the
 Bioloid Comprehensive Kit.
 

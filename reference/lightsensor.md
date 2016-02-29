@@ -13,13 +13,12 @@ LightSensor {
 
 ### Description
 
-[LightSensor](lightsensor.md#lightsensor) nodes are used to model
-photo-transistors, photo-diodes or any type of device that measures the
-irradiance of light in a given direction. *Irradiance* represents the radiant
-power incident on a surface in Watts per square meter (W/m^2), and is sometimes
-called *intensity*. The simulated irradiance is computed by adding the
-irradiance contributed by every light source
-([DirectionalLight](directionallight.md#directionallight),
+[LightSensor](#lightsensor) nodes are used to model photo-transistors,
+photo-diodes or any type of device that measures the irradiance of light in a
+given direction. *Irradiance* represents the radiant power incident on a surface
+in Watts per square meter (W/m^2), and is sometimes called *intensity*. The
+simulated irradiance is computed by adding the irradiance contributed by every
+light source ([DirectionalLight](directionallight.md#directionallight),
 [SpotLight](spotlight.md#spotlight) and [PointLight](pointlight.md#pointlight))
 in the world. Then the total irradiance is multiplied by a color filter and fed
 into a lookup table that returns the corresponding user-defined value.
@@ -77,7 +76,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 Before being interpolated by the `lookupTable`, the total irradiance *E* [W/m^2]
 seen by a sensor is computed according to the equation shown in [this
-figure](lightsensor.md#light-sensor-irradiance-formula):
+figure](#light-sensor-irradiance-formula):
 
 %figure "Light sensor irradiance formula"
 
@@ -90,7 +89,7 @@ number of lights in the simulation, *on[i]* corresponds to the `on` field of
 light *i* (TRUE=1, FALSE=0), the *C[i]* vector is the `color` field of light
 *i*, and *I<sub>a</sub>* is the `ambientIntensity` field of light *i*.  The
 value *att[i]* is the attenuation of light *i*, and is calculated as shown in
-[this figure](lightsensor.md#light-attenuation).
+[this figure](#light-attenuation).
 
 %figure "Light attenuation"
 
@@ -103,7 +102,7 @@ Variables *a<sub>1</sub><sub>2</sub>* and *a<sub>3</sub>* correspond to the
 the light. There is no attenuation for
 [DirectionalLight](directionallight.md#directionallight)s. *I<sub>d</sub>* is
 the direct irradiance contributed by light *i*, and is calculated as shown in
-[this figure](lightsensor.md#direct-irradiance).
+[this figure](#direct-irradiance).
 
 %figure "Direct irradiance"
 
@@ -114,8 +113,8 @@ the direct irradiance contributed by light *i*, and is calculated as shown in
 Finally, *spot[i]* is a factor used only in case of a
 [SpotLight](spotlight.md#spotlight), and that depends on its `cutOffAngle` and
 `beamWidth` fields, and is calculated as shown in [this
-figure](lightsensor.md#spotlight-factor), where the *alpha* angle corresponds to
-the angle between *-L* and the `direction` vector of the
+figure](#spotlight-factor), where the *alpha* angle corresponds to the angle
+between *-L* and the `direction` vector of the
 [SpotLight](spotlight.md#spotlight).
 
 %figure "SpotLight factor"
@@ -126,7 +125,7 @@ the angle between *-L* and the `direction` vector of the
 
 The value *I[i]* corresponds to the *intensity* field of light *i*, and *N* is
 the normal axis (*x*-axis) of the sensor (see [this
-figure](lightsensor.md#the-irradiance-e-depends-on-the-angle-phi-between-the-n-and-l-vectors)).
+figure](#the-irradiance-e-depends-on-the-angle-phi-between-the-n-and-l-vectors)).
 In the case of a [PointLight](pointlight.md#pointlight), *L* is the
 sensor-to-light-source vector. In the case of a
 [DirectionalLight](directionallight.md#directionallight), *L* corresponds to the
@@ -158,7 +157,7 @@ indicated by the `direction` field of this
 [DirectionalLight](directionallight.md#directionallight).
 
 Like any other type of collision detection in Webots, the
-[LightSensor](lightsensor.md#lightsensor) occlusion detection is based on the
+[LightSensor](#lightsensor) occlusion detection is based on the
 `boundingObjects` of [Solid](solid.md#solid) nodes (or derived nodes).
 Therefore, even if it has a visible geometric structure, a
 [Solid](solid.md#solid) node cannot produce any occlusion if its

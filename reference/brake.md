@@ -9,9 +9,9 @@ Brake {
 
 ### Description
 
-A [Brake](brake.md#brake) node can be used in a mechanical simulation in order
-to change the friction of a joint. The [Brake](brake.md#brake) node can be
-inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
+A [Brake](#brake) node can be used in a mechanical simulation in order to change
+the friction of a joint. The [Brake](#brake) node can be inserted in the
+`device` field of a [HingeJoint](hingejoint.md#hingejoint), a
 [Hinge2Joint](hinge2joint.md#hinge2joint), a
 [SliderJoint](sliderjoint.md#sliderjoint), or a [Track](track.md#track).
 

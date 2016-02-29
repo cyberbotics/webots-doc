@@ -22,8 +22,8 @@ WorldInfo {
 }
 ```
 
-The [WorldInfo](worldinfo.md#worldinfo) node provides general information on the
-simulated world:
+The [WorldInfo](#worldinfo) node provides general information on the simulated
+world:
 
 - The `title` field should briefly describe the purpose of the world.
 - The `info` field should give additional information, like the author who created

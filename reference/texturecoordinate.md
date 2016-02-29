@@ -6,8 +6,8 @@ TextureCoordinate {
 }
 ```
 
-The [TextureCoordinate](texturecoordinate.md#texturecoordinate) node specifies a
-set of 2D texture coordinates used by vertex-based `Geometry` nodes (e.g.,
+The [TextureCoordinate](#texturecoordinate) node specifies a set of 2D texture
+coordinates used by vertex-based `Geometry` nodes (e.g.,
 [IndexedFaceSet](indexedfaceset.md#indexedfaceset)) to map textures to vertices.
 Textures are two-dimensional color functions that, given a coordinate pair
 *(s,t)*, return a color value *color(s,t)*. Texture map values

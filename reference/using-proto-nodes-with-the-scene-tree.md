@@ -17,9 +17,8 @@ PROTO must be saved in a file name "TwoColorChair.proto".
 The ".proto" file should be placed in the "protos" subdirectory of the current
 project directory. By definition, the current project directory is the parent
 directory of the "worlds" directory that contains the currently opened ".wbt"
-file. The
-[figure](using-proto-nodes-with-the-scene-tree.md#proto-directory-in-a-project-directory-structure)
-shows where ".proto" files are stored in a project directory.
+file. The [figure](#proto-directory-in-a-project-directory-structure) shows
+where ".proto" files are stored in a project directory.
 
 %figure "PROTO directory in a project directory structure"
 
@@ -50,10 +49,10 @@ found in the project's and Webots's "protos" folders. However this dialog shows
 a PROTO only if its *base type* is suitable for the chosen insertion point. For
 example, a PROTO whose base type is [Material](material.md#material) cannot be
 inserted in a `boundingObject` field. In [this
-figure](using-proto-nodes-with-the-scene-tree.md#adding-an-instance-of-the-twocolorchair-proto)
-you can see how the `TwoColorChair` PROTO appears in the dialog. Note that, the
-dialog's text pane is automatically filled with any comment placed at the
-beginning of the ".proto" file.
+figure](#adding-an-instance-of-the-twocolorchair-proto) you can see how the
+`TwoColorChair` PROTO appears in the dialog. Note that, the dialog's text pane
+is automatically filled with any comment placed at the beginning of the ".proto"
+file.
 
 %figure "Adding an instance of the TwoColorChair PROTO"
 
@@ -65,18 +64,18 @@ Icons can be used to better illustrate PROTO nodes. A PROTO icon must be stored
 in a 128 x 128 pixels ".png" file. The file name must correspond to that of the
 PROTO plus the ".png" extension and it must be stored in the "icons"
 subdirectory of the "protos" directory (see [this
-figure](using-proto-nodes-with-the-scene-tree.md#proto-directory-in-a-project-directory-structure)).
-Note that it is possible to create the ".png" files directly with Webots's menu
-`File > Take Screenshot...`. Then the image should be cropped or resized to 128
-x 128 pixels using an image editor.
+figure](#proto-directory-in-a-project-directory-structure)). Note that it is
+possible to create the ".png" files directly with Webots's menu `File > Take
+Screenshot...`. Then the image should be cropped or resized to 128 x 128 pixels
+using an image editor.
 
 ### Using PROTO Instances
 
 If you hit the `Add` button, the PROTO instance is added to the `Scene Tree`. In
 the `Scene Tree`, PROTO instances are represented with a different color than
 built-in nodes (see [this
-figure](using-proto-nodes-with-the-scene-tree.md#scene-tree-with-two-instances-of-the-twocolorchair-proto)).
-PROTO fields can be manipulated exactly like built-in node fields.
+figure](#scene-tree-with-two-instances-of-the-twocolorchair-proto)). PROTO
+fields can be manipulated exactly like built-in node fields.
 
 %figure "Scene Tree with two instances of the TwoColorChair PROTO"
 

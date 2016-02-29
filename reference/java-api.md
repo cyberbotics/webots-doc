@@ -7,7 +7,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                          |
 | -------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Accelerometer;                                                  |
-| public class [Accelerometer](accelerometer.md#accelerometer) extends [Device](java-api.md#java_device) { |
+| public class [Accelerometer](accelerometer.md#accelerometer) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enable](accelerometer.md#wb_accelerometer_get_values)(int ms);                 |
 | &nbsp;&nbsp; public void [disable](accelerometer.md#wb_accelerometer_get_values)();                      |
 | &nbsp;&nbsp; int [getSamplingPeriod](accelerometer.md#wb_accelerometer_get_values)();                    |
@@ -21,7 +21,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Brake;                                                                |
-| public class [Brake](brake.md#brake) extends [Device](java-api.md#java_device) {                               |
+| public class [Brake](brake.md#brake) extends [Device](#java_device) {                                          |
 | &nbsp;&nbsp; public void [setDampingConstant](brake.md#wb_brake_set_damping_constant)(double dampingConstant); |
 | &nbsp;&nbsp; public int [getType](brake.md#wb_brake_set_damping_constant)();                                   |
 | }                                                                                                              |
@@ -33,7 +33,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Camera;                                                                     |
-| public class [Camera](camera.md#camera) extends [Device](java-api.md#java_device) {                                  |
+| public class [Camera](camera.md#camera) extends [Device](#java_device) {                                             |
 | &nbsp;&nbsp; public final static int COLOR, RANGE\_FINDER, BOTH;                                                     |
 | &nbsp;&nbsp; public void [enable](camera.md#wb_camera_enable)(int ms);                                               |
 | &nbsp;&nbsp; public void [disable](camera.md#wb_camera_enable)();                                                    |
@@ -74,7 +74,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                        |
 | -------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Compass;                                      |
-| public class [Compass](compass.md#compass) extends [Device](java-api.md#java_device) { |
+| public class [Compass](compass.md#compass) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enable](compass.md#wb_compass_get_values)(int ms);           |
 | &nbsp;&nbsp; public void [disable](compass.md#wb_compass_get_values)();                |
 | &nbsp;&nbsp; public int [getSamplingPeriod](compass.md#wb_compass_get_values)();       |
@@ -88,7 +88,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                              |
 | -------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Connector;                                          |
-| public class [Connector](connector.md#connector) extends [Device](java-api.md#java_device) { |
+| public class [Connector](connector.md#connector) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enablePresence](connector.md#wb_connector_get_presence)(int ms);   |
 | &nbsp;&nbsp; public void [disablePresence](connector.md#wb_connector_get_presence)();        |
 | &nbsp;&nbsp; public int [getPresence](connector.md#wb_connector_get_presence)();             |
@@ -116,7 +116,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.DifferentialWheels;                                                                      |
-| public class [DifferentialWheels](differentialwheels.md#differentialwheels) extends [Robot](java-api.md#java_robot) {             |
+| public class [DifferentialWheels](differentialwheels.md#differentialwheels) extends [Robot](#java_robot) {                        |
 | &nbsp;&nbsp; public [DifferentialWheels](robot.md#wb_robot_step)();                                                               |
 | &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                 |
 | &nbsp;&nbsp; public void [setSpeed](differentialwheels.md#wb_differential_wheels_set_speed)(double left, double right);           |
@@ -139,7 +139,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | import com.cyberbotics.webots.controller.Display;                                                                                                            |
-| public class [Display](display.md#display) extends [Device](java-api.md#java_device) {                                                                       |
+| public class [Display](display.md#display) extends [Device](#java_device) {                                                                                  |
 | &nbsp;&nbsp; public final static int RGB, RGBA, ARGB, BGRA;                                                                                                  |
 | &nbsp;&nbsp; public int [getWidth](display.md#wb_display_get_width)();                                                                                       |
 | &nbsp;&nbsp; public int [getHeight](display.md#wb_display_get_width)();                                                                                      |
@@ -155,12 +155,12 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [fillRectangle](display.md#wb_display_draw_primitive)(int x, int y, int width, int height);                                         |
 | &nbsp;&nbsp; public void [fillOval](display.md#wb_display_draw_primitive)(int cx, int cy, int a, int b);                                                     |
 | &nbsp;&nbsp; public void [fillPolygon](display.md#wb_display_draw_primitive)(int[] x, int[] y);                                                              |
-| &nbsp;&nbsp; public [ImageRef](java-api.md#java_image_ref) [imageCopy](display.md#wb_display_image_functions)(int x, int y, int width, int height);          |
-| &nbsp;&nbsp; public void [imagePaste](display.md#wb_display_image_functions)([ImageRef](java-api.md#java_image_ref) ir, int x, int y);                       |
-| &nbsp;&nbsp; public [ImageRef](java-api.md#java_image_ref) [imageLoad](display.md#wb_display_image_functions)(String filename);                              |
-| &nbsp;&nbsp; public [ImageRef](java-api.md#java_image_ref) [imageNew](display.md#wb_display_image_functions)(int width, int height, int[] data, int format); |
-| &nbsp;&nbsp; public void [imageSave](display.md#wb_display_image_functions)([ImageRef](java-api.md#java_image_ref) ir, String filename);                     |
-| &nbsp;&nbsp; public void [imageDelete](display.md#wb_display_image_functions)([ImageRef](java-api.md#java_image_ref) ir);                                    |
+| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageCopy](display.md#wb_display_image_functions)(int x, int y, int width, int height);                     |
+| &nbsp;&nbsp; public void [imagePaste](display.md#wb_display_image_functions)([ImageRef](#java_image_ref) ir, int x, int y);                                  |
+| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageLoad](display.md#wb_display_image_functions)(String filename);                                         |
+| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageNew](display.md#wb_display_image_functions)(int width, int height, int[] data, int format);            |
+| &nbsp;&nbsp; public void [imageSave](display.md#wb_display_image_functions)([ImageRef](#java_image_ref) ir, String filename);                                |
+| &nbsp;&nbsp; public void [imageDelete](display.md#wb_display_image_functions)([ImageRef](#java_image_ref) ir);                                               |
 | }                                                                                                                                                            |
 
 %end
@@ -170,7 +170,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.DistanceSensor;                                                    |
-| public class [DistanceSensor](distancesensor.md#distancesensor) extends [Device](java-api.md#java_device) { |
+| public class [DistanceSensor](distancesensor.md#distancesensor) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enable](distancesensor.md#wb_distance_sensor_get_value)(int ms);                  |
 | &nbsp;&nbsp; public void [disable](distancesensor.md#wb_distance_sensor_get_value)();                       |
 | &nbsp;&nbsp; public int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();              |
@@ -184,7 +184,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                        |
 | -------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Emitter;                                      |
-| public class [Emitter](emitter.md#emitter) extends [Device](java-api.md#java_device) { |
+| public class [Emitter](emitter.md#emitter) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public final static int CHANNEL\_BROADCAST;                               |
 | &nbsp;&nbsp; public int [send](emitter.md#wb_emitter_send)(byte[] data);               |
 | &nbsp;&nbsp; public int [getChannel](emitter.md#wb_emitter_set_channel)();             |
@@ -217,7 +217,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getSFRotation](supervisor.md#wb_supervisor_field_get_sf_bool)();                                        |
 | &nbsp;&nbsp; public double[] [getSFColor](supervisor.md#wb_supervisor_field_get_sf_bool)();                                           |
 | &nbsp;&nbsp; public String [getSFString](supervisor.md#wb_supervisor_field_get_sf_bool)();                                            |
-| &nbsp;&nbsp; public [Node](java-api.md#java_node) [getSFNode](supervisor.md#wb_supervisor_field_get_sf_bool)();                       |
+| &nbsp;&nbsp; public [Node](#java_node) [getSFNode](supervisor.md#wb_supervisor_field_get_sf_bool)();                                  |
 | &nbsp;&nbsp; public bool [getMFBool](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                       |
 | &nbsp;&nbsp; public int [getMFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                       |
 | &nbsp;&nbsp; public double [getMFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                    |
@@ -226,7 +226,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getMFColor](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                  |
 | &nbsp;&nbsp; public double[] [getMFRotation](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                               |
 | &nbsp;&nbsp; public String [getMFString](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                   |
-| &nbsp;&nbsp; public [Node](java-api.md#java_node) [getMFNode](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);              |
+| &nbsp;&nbsp; public [Node](#java_node) [getMFNode](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                         |
 | &nbsp;&nbsp; public void [setSFBool](supervisor.md#wb_supervisor_field_set_sf_bool)(bool value);                                      |
 | &nbsp;&nbsp; public void [setSFInt32](supervisor.md#wb_supervisor_field_set_sf_bool)(int value);                                      |
 | &nbsp;&nbsp; public void [setSFFloat](supervisor.md#wb_supervisor_field_set_sf_bool)(double value);                                   |
@@ -255,7 +255,7 @@ The following tables describe the Java classes and their methods.
 |                                                                            |
 | -------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.GPS;                              |
-| public class [GPS](gps.md#gps) extends [Device](java-api.md#java_device) { |
+| public class [GPS](gps.md#gps) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enable](gps.md#wb_gps_get_values)(int ms);       |
 | &nbsp;&nbsp; public void [disable](gps.md#wb_gps_get_values)();            |
 | &nbsp;&nbsp; public int [getSamplingPeriod](gps.md#wb_gps_get_values)();   |
@@ -269,7 +269,7 @@ The following tables describe the Java classes and their methods.
 |                                                                               |
 | ----------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Gyro;                                |
-| public class [Gyro](gyro.md#gyro) extends [Device](java-api.md#java_device) { |
+| public class [Gyro](gyro.md#gyro) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enable](gyro.md#wb_gyro_get_values)(int ms);        |
 | &nbsp;&nbsp; public void [disable](gyro.md#wb_gyro_get_values)();             |
 | &nbsp;&nbsp; public int [getSamplingPeriod](gyro.md#wb_gyro_get_values)();    |
@@ -293,7 +293,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                        |
 | ------------------------------------------------------------------------------------------------------ |
 | import com.cyberbotics.webots.controller.InertialUnit;                                                 |
-| public class [InertialUnit](inertialunit.md#inertialunit) extends [Device](java-api.md#java_device) {  |
+| public class [InertialUnit](inertialunit.md#inertialunit) extends [Device](#java_device) {             |
 | &nbsp;&nbsp; public void [enable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(int ms);        |
 | &nbsp;&nbsp; public void [disable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)();             |
 | &nbsp;&nbsp; public int [getSamplingPeriod](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)();    |
@@ -307,7 +307,7 @@ The following tables describe the Java classes and their methods.
 |                                                                            |
 | -------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.LED;                              |
-| public class [LED](led.md#led) extends [Device](java-api.md#java_device) { |
+| public class [LED](led.md#led) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [set](led.md#wb_led_set)(int state);              |
 | &nbsp;&nbsp; public int [get](led.md#wb_led_set)();                        |
 | }                                                                          |
@@ -319,7 +319,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.LightSensor;                                              |
-| public class [LightSensor](lightsensor.md#lightsensor) extends [Device](java-api.md#java_device) { |
+| public class [LightSensor](lightsensor.md#lightsensor) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public void [enable](lightsensor.md#wb_light_sensor_get_value)(int ms);               |
 | &nbsp;&nbsp; public void [disable](lightsensor.md#wb_light_sensor_get_value)();                    |
 | &nbsp;&nbsp; public int [getSamplingPeriod](lightsensor.md#wb_light_sensor_get_value)();           |
@@ -354,7 +354,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                         |
 | ------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Motor;                                                         |
-| public class [Motor](motor.md#motor) extends [Device](java-api.md#java_device) {                        |
+| public class [Motor](motor.md#motor) extends [Device](#java_device) {                                   |
 | &nbsp;&nbsp; public final static int ROTATIONAL, LINEAR;                                                |
 | &nbsp;&nbsp; public void [setPosition](motor.md#wb_motor_set_position)(double position);                |
 | &nbsp;&nbsp; public void [setVelocity](motor.md#wb_motor_set_position)(double vel);                     |
@@ -399,7 +399,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](supervisor.md#wb_supervisor_node_get_type)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | &nbsp;&nbsp; public String [getTypeName](supervisor.md#wb_supervisor_node_get_type)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | &nbsp;&nbsp; public String [getBaseTypeName](supervisor.md#wb_supervisor_node_get_type)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| &nbsp;&nbsp; public [Field](java-api.md#java_field) [getField](supervisor.md#wb_supervisor_node_get_field)(String fieldName);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| &nbsp;&nbsp; public [Field](#java_field) [getField](supervisor.md#wb_supervisor_node_get_field)(String fieldName);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | &nbsp;&nbsp; public Node [getParentNode](supervisor.md#wb_supervisor_node_get_from_def)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | &nbsp;&nbsp; public double[] [getPosition](supervisor.md#wb_supervisor_node_get_position)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | &nbsp;&nbsp; public double[] [getOrientation](supervisor.md#wb_supervisor_node_get_position)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -419,7 +419,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                 |
 | ----------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Pen;                                                   |
-| public class [Pen](pen.md#pen) extends [Device](java-api.md#java_device) {                      |
+| public class [Pen](pen.md#pen) extends [Device](#java_device) {                                 |
 | &nbsp;&nbsp; public void [write](pen.md#wb_pen_write)(bool write);                              |
 | &nbsp;&nbsp; public void [setInkColor](pen.md#wb_pen_set_ink_color)(int color, double density); |
 | }                                                                                               |
@@ -431,7 +431,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.PositionSensor;                                                    |
-| public class [PositionSensor](positionsensor.md#positionsensor) extends [Device](java-api.md#java_device) { |
+| public class [PositionSensor](positionsensor.md#positionsensor) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public final static int ANGULAR, LINEAR;                                                       |
 | &nbsp;&nbsp; public void [enable](positionsensor.md#wb_position_sensor_get_value)(int ms);                  |
 | &nbsp;&nbsp; public void [disable](positionsensor.md#wb_position_sensor_get_value)();                       |
@@ -447,7 +447,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Receiver;                                                 |
-| public class [Receiver](receiver.md#receiver) extends [Device](java-api.md#java_device) {          |
+| public class [Receiver](receiver.md#receiver) extends [Device](#java_device) {                     |
 | &nbsp;&nbsp; public final static int CHANNEL\_BROADCAST;                                           |
 | &nbsp;&nbsp; public void [enable](receiver.md#wb_receiver_enable)(int ms);                         |
 | &nbsp;&nbsp; public void [disable](receiver.md#wb_receiver_enable)();                              |
@@ -483,27 +483,27 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [Robot](robot.md#wb_robot_step)();                                                                            |
 | &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                 |
 | &nbsp;&nbsp; public int [step](robot.md#wb_robot_step)(int ms);                                                                   |
-| &nbsp;&nbsp; public [Accelerometer](java-api.md#java_accelerometer) [getAccelerometer](robot.md#robotgetdevice)(String name);     |
-| &nbsp;&nbsp; public [Brake](java-api.md#java_brake) [getBrake](robot.md#robotgetdevice)(String name);                             |
-| &nbsp;&nbsp; public [Camera](java-api.md#java_camera) [getCamera](robot.md#robotgetdevice)(String name);                          |
-| &nbsp;&nbsp; public [Compass](java-api.md#java_compass) [getCompass](robot.md#robotgetdevice)(String name);                       |
-| &nbsp;&nbsp; public [Connector](java-api.md#java_connector) [getConnector](robot.md#robotgetdevice)(String name);                 |
-| &nbsp;&nbsp; public [Display](java-api.md#java_display) [getDisplay](robot.md#robotgetdevice)(String name);                       |
-| &nbsp;&nbsp; public [DistanceSensor](java-api.md#java_distance_sensor) [getDistanceSensor](robot.md#robotgetdevice)(String name); |
-| &nbsp;&nbsp; public [Emitter](java-api.md#java_emitter) [getEmitter](robot.md#robotgetdevice)(String name);                       |
-| &nbsp;&nbsp; public [GPS](java-api.md#java_gps) [getGPS](robot.md#robotgetdevice)(String name);                                   |
-| &nbsp;&nbsp; public [Gyro](java-api.md#java_gyro) [getGyro](robot.md#robotgetdevice)(String name);                                |
-| &nbsp;&nbsp; public [InertialUnit](java-api.md#java_inertial_unit) [getInertialUnit](robot.md#robotgetdevice)(String name);       |
-| &nbsp;&nbsp; public [LED](java-api.md#java_led) [getLED](robot.md#robotgetdevice)(String name);                                   |
-| &nbsp;&nbsp; public [LightSensor](java-api.md#java_light_sensor) [getLightSensor](robot.md#robotgetdevice)(String name);          |
-| &nbsp;&nbsp; public [Motor](java-api.md#java_motor) [getMotor](robot.md#robotgetdevice)(String name);                             |
-| &nbsp;&nbsp; public [Pen](java-api.md#java_pen) [getPen](robot.md#robotgetdevice)(String name);                                   |
-| &nbsp;&nbsp; public [PositionSensor](java-api.md#java_position_sensor) [getPositionSensor](robot.md#robotgetdevice)(String name); |
-| &nbsp;&nbsp; public [Receiver](java-api.md#java_receiver) [getReceiver](robot.md#robotgetdevice)(String name);                    |
-| &nbsp;&nbsp; public [Servo](java-api.md#java_servo) [getServo](robot.md#robotgetdevice)(String name);                             |
-| &nbsp;&nbsp; public [TouchSensor](java-api.md#java_touch_sensor) [getTouchSensor](robot.md#robotgetdevice)(String name);          |
+| &nbsp;&nbsp; public [Accelerometer](#java_accelerometer) [getAccelerometer](robot.md#robotgetdevice)(String name);                |
+| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](robot.md#robotgetdevice)(String name);                                        |
+| &nbsp;&nbsp; public [Camera](#java_camera) [getCamera](robot.md#robotgetdevice)(String name);                                     |
+| &nbsp;&nbsp; public [Compass](#java_compass) [getCompass](robot.md#robotgetdevice)(String name);                                  |
+| &nbsp;&nbsp; public [Connector](#java_connector) [getConnector](robot.md#robotgetdevice)(String name);                            |
+| &nbsp;&nbsp; public [Display](#java_display) [getDisplay](robot.md#robotgetdevice)(String name);                                  |
+| &nbsp;&nbsp; public [DistanceSensor](#java_distance_sensor) [getDistanceSensor](robot.md#robotgetdevice)(String name);            |
+| &nbsp;&nbsp; public [Emitter](#java_emitter) [getEmitter](robot.md#robotgetdevice)(String name);                                  |
+| &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#robotgetdevice)(String name);                                              |
+| &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#robotgetdevice)(String name);                                           |
+| &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#robotgetdevice)(String name);                  |
+| &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#robotgetdevice)(String name);                                              |
+| &nbsp;&nbsp; public [LightSensor](#java_light_sensor) [getLightSensor](robot.md#robotgetdevice)(String name);                     |
+| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](robot.md#robotgetdevice)(String name);                                        |
+| &nbsp;&nbsp; public [Pen](#java_pen) [getPen](robot.md#robotgetdevice)(String name);                                              |
+| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](robot.md#robotgetdevice)(String name);            |
+| &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#robotgetdevice)(String name);                               |
+| &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#robotgetdevice)(String name);                                        |
+| &nbsp;&nbsp; public [TouchSensor](#java_touch_sensor) [getTouchSensor](robot.md#robotgetdevice)(String name);                     |
 | &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                            |
-| &nbsp;&nbsp; public [Device](java-api.md#java_device) [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);       |
+| &nbsp;&nbsp; public [Device](#java_device) [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                  |
 | &nbsp;&nbsp; public void [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(int ms);                                  |
 | &nbsp;&nbsp; public void [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)();                                       |
 | &nbsp;&nbsp; public int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                              |
@@ -533,7 +533,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Servo;                                                                 |
-| public class [Servo](servo.md#servo) extends [Device](java-api.md#java_device) {                                |
+| public class [Servo](servo.md#servo) extends [Device](#java_device) {                                           |
 | &nbsp;&nbsp; public final static int ROTATIONAL, LINEAR;                                                        |
 | &nbsp;&nbsp; public void [setPosition](servo.md#wb_servo_set_position)(double position);                        |
 | &nbsp;&nbsp; public double [getTargetPosition](servo.md#wb_servo_set_position)();                               |
@@ -562,15 +562,15 @@ The following tables describe the Java classes and their methods.
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Supervisor;                                                                                                          |
-| public class [Supervisor](supervisor.md#supervisor) extends [Robot](java-api.md#java_robot) {                                                                 |
+| public class [Supervisor](supervisor.md#supervisor) extends [Robot](#java_robot) {                                                                            |
 | &nbsp;&nbsp; public final static int MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR     |
 | &nbsp;&nbsp; public [Supervisor](robot.md#wb_robot_step)();                                                                                                   |
 | &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                                             |
 | &nbsp;&nbsp; public void [exportImage](supervisor.md#wb_supervisor_export_image)(String file, int quality);                                                   |
-| &nbsp;&nbsp; public [Node](java-api.md#java_node) [getRoot](supervisor.md#wb_supervisor_node_get_from_def)();                                                 |
-| &nbsp;&nbsp; public [Node](java-api.md#java_node) [getSelf](supervisor.md#wb_supervisor_node_get_from_def)();                                                 |
-| &nbsp;&nbsp; public [Node](java-api.md#java_node) [getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(String name);                                   |
-| &nbsp;&nbsp; public [Node](java-api.md#java_node) [getFromId](supervisor.md#wb_supervisor_node_get_from_def)(int id);                                         |
+| &nbsp;&nbsp; public [Node](#java_node) [getRoot](supervisor.md#wb_supervisor_node_get_from_def)();                                                            |
+| &nbsp;&nbsp; public [Node](#java_node) [getSelf](supervisor.md#wb_supervisor_node_get_from_def)();                                                            |
+| &nbsp;&nbsp; public [Node](#java_node) [getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(String name);                                              |
+| &nbsp;&nbsp; public [Node](#java_node) [getFromId](supervisor.md#wb_supervisor_node_get_from_def)(int id);                                                    |
 | &nbsp;&nbsp; public void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, String label, double xpos, double ypos,                                    |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency);                                                                                        |
 | &nbsp;&nbsp; public void [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(int status);                                                           |
@@ -594,7 +594,7 @@ The following tables describe the Java classes and their methods.
 |                                                                                                    |
 | -------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.TouchSensor;                                              |
-| public class [TouchSensor](touchsensor.md#touchsensor) extends [Device](java-api.md#java_device) { |
+| public class [TouchSensor](touchsensor.md#touchsensor) extends [Device](#java_device) {            |
 | &nbsp;&nbsp; public final static int BUMPER, FORCE, FORCE3D;                                       |
 | &nbsp;&nbsp; public void [enable](touchsensor.md#wb_touch_sensor_get_values)(int ms);              |
 | &nbsp;&nbsp; public void [disable](touchsensor.md#wb_touch_sensor_get_values)();                   |

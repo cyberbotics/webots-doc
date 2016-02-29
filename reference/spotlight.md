@@ -20,11 +20,11 @@ SpotLight {
 
 ### Description
 
-The [SpotLight](spotlight.md#spotlight) node defines a light source that emits
-light from a specific point along a specific direction vector and constrained
-within a solid angle. Spotlights may illuminate `Geometry` nodes that respond to
-light sources and intersect the solid angle. Spotlights are specified in their
-local coordinate system and are affected by parent transformations.
+The [SpotLight](#spotlight) node defines a light source that emits light from a
+specific point along a specific direction vector and constrained within a solid
+angle. Spotlights may illuminate `Geometry` nodes that respond to light sources
+and intersect the solid angle. Spotlights are specified in their local
+coordinate system and are affected by parent transformations.
 
 The `location` field specifies a translation offset of the center point of the
 light source from the light's local coordinate system origin. This point is the

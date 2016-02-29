@@ -7,7 +7,7 @@ enhance the user's experience, it is also essential for simulations where robots
 perceive their environment (camera image processing, line following, etc.).
 
 The result at the end of this tutorial is shown in [this
-figure](tutorial-3-appearance-15-minutes.md#simulation-after-having-setup-the-light-and-the-appearance-nodes).
+figure](#simulation-after-having-setup-the-light-and-the-appearance-nodes).
 
 ### New simulation
 

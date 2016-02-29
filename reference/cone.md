@@ -10,13 +10,13 @@ Cone {
 }
 ```
 
-The [Cone](cone.md#cone) node specifies a cone which is centered in the local
+The [Cone](#cone) node specifies a cone which is centered in the local
 coordinate system and whose central axis is aligned with the local *y*-axis. The
 `bottomRadius` field specifies the radius of the cone's base, and the `height`
 field specifies the height of the cone from the center of the base to the apex.
 By default, the cone has a radius of 1 meter at the bottom and a height of 2
 meters, with its apex at y = height/2 and its bottom at y = -height/2.  See
-[this figure](cone.md#the-cone-node).
+[this figure](#the-cone-node).
 
 If both `bottomRadius` and `height` are positive, the outside faces of the cone
 are displayed while if they are negative, the inside faces are displayed.
@@ -46,6 +46,6 @@ side up when the top of the cone is rotated towards the -Z axis.
 [TextureTransform](texturetransform.md#texturetransform) affects the texture
 coordinates of the Cone.
 
-[Cone](cone.md#cone) geometries cannot be used as primitives for collision
-detection in bounding objects.
+[Cone](#cone) geometries cannot be used as primitives for collision detection in
+bounding objects.
 

@@ -21,22 +21,21 @@ Connector {
 
 ### Description
 
-[Connector](connector.md#connector) nodes are used to simulate mechanical
-docking systems, or any other type of device, that can dynamically create a
-physical link (or *connection*) with another device of the same type.
+[Connector](#connector) nodes are used to simulate mechanical docking systems,
+or any other type of device, that can dynamically create a physical link (or
+*connection*) with another device of the same type.
 
-[Connector](connector.md#connector) nodes can only connect to other
-[Connector](connector.md#connector) nodes. At any time, each connection involves
-exactly two [Connector](connector.md#connector) nodes (peer to peer). The
-physical connection between two [Connector](connector.md#connector) nodes can be
-created and destroyed at run time by the robot's controller. The primary idea of
-[Connector](connector.md#connector) nodes is to enable the dynamic
-reconfiguration of modular robots, but more generally,
-[Connector](connector.md#connector) nodes can be used in any situation where
-robots need to be attached to other robots.
+[Connector](#connector) nodes can only connect to other [Connector](#connector)
+nodes. At any time, each connection involves exactly two [Connector](#connector)
+nodes (peer to peer). The physical connection between two
+[Connector](#connector) nodes can be created and destroyed at run time by the
+robot's controller. The primary idea of [Connector](#connector) nodes is to
+enable the dynamic reconfiguration of modular robots, but more generally,
+[Connector](#connector) nodes can be used in any situation where robots need to
+be attached to other robots.
 
-[Connector](connector.md#connector) nodes were designed to simulate various
-types of docking hardware:
+[Connector](#connector) nodes were designed to simulate various types of docking
+hardware:
 
 - Mechanical links held in place by a latch
 - Gripping mechanisms
@@ -53,33 +52,32 @@ electrically) equivalent. In such cases both connectors are active.
 different. In asymmetric systems there is usually one active and one passive
 connector.
 
-The detection of the presence of a peer [Connector](connector.md#connector) is
-based on simple distance and angle measurements, and therefore the
-[Connector](connector.md#connector) nodes are a computationally inexpensive way
-of simulating docking mechanisms.
+The detection of the presence of a peer [Connector](#connector) is based on
+simple distance and angle measurements, and therefore the
+[Connector](#connector) nodes are a computationally inexpensive way of
+simulating docking mechanisms.
 
 ### Field Summary
 
-- `model`: specifies the [Connector](connector.md#connector)'s model. Two
-[Connector](connector.md#connector) nodes can connect only if their model
-strings are identical.
+- `model`: specifies the [Connector](#connector)'s model. Two
+[Connector](#connector) nodes can connect only if their model strings are
+identical.
 
 - `type`: specifies the connector's type, this must be one of: "symmetric",
 "active", or "passive". A "symmetric" connector can only lock to (and unlock
 from) another "symmetric" connector. An "active" connector can only lock to (and
 unlock from) a "passive" connector. A "passive" connector cannot lock or unlock.
 
-- `isLocked`: represents the locking state of the
-[Connector](connector.md#connector). The locking state can be changed through
-the API functions `wb_connector_lock()` and `wb_connector_unlock()`. The
-*locking state* means the current state of the locking hardware, it does not
-indicates whether or not an actual physical link exists between two connectors.
-For example, according to the hardware type, `isLocked` can mean that a
-mechanical latch or a gripper is closed, that electro-magnets are activated,
-that permanent magnets were moved to an attraction state, or that a suction pump
-was activated, etc. But the actual physical link exists only if
-`wb_connector_lock()` was called when a compatible peer was present (or if the
-[Connector](connector.md#connector) was auto-locked).
+- `isLocked`: represents the locking state of the [Connector](#connector). The
+locking state can be changed through the API functions `wb_connector_lock()` and
+`wb_connector_unlock()`. The *locking state* means the current state of the
+locking hardware, it does not indicates whether or not an actual physical link
+exists between two connectors. For example, according to the hardware type,
+`isLocked` can mean that a mechanical latch or a gripper is closed, that
+electro-magnets are activated, that permanent magnets were moved to an
+attraction state, or that a suction pump was activated, etc. But the actual
+physical link exists only if `wb_connector_lock()` was called when a compatible
+peer was present (or if the [Connector](#connector) was auto-locked).
 
     > **note**:
 If `Connectors` nodes are locked and correctly aligned (and compatible) in the
@@ -116,20 +114,19 @@ which still allows them to lock successfully. The distance is measured between
 the origins of the coordinate systems of the connectors.
 
 - `axisTolerance`: the maximum angle [in radians] between the *z*-axes of two
-`Connectors` at which they may successfully lock. Two
-[Connector](connector.md#connector) nodes can lock when their *z*-axes are
-parallel (within tolerance), but pointed in opposite directions.
+`Connectors` at which they may successfully lock. Two [Connector](#connector)
+nodes can lock when their *z*-axes are parallel (within tolerance), but pointed
+in opposite directions.
 
 - `rotationTolerance`: the tolerated angle difference with respect to each of the
 allowed docking rotations (see [this
-figure](connector.md#example-of-rotational-alignment-numberofrotations-4-and-rotationaltolerance-22-5-deg)).
+figure](#example-of-rotational-alignment-numberofrotations-4-and-rotationaltolerance-22-5-deg)).
 
 - `numberOfRotations`: specifies how many different docking rotations are allowed
-in a full 360 degree rotation around the [Connector](connector.md#connector)'s
-*z*-axis. For example, modular robots' connectors are often 1-, 2- or 4-way
-dockable depending on mechanical and electrical interfaces. As illustrated in
-[this
-figure](connector.md#example-of-rotational-alignment-numberofrotations-4-and-rotationaltolerance-22-5-deg),
+in a full 360 degree rotation around the [Connector](#connector)'s *z*-axis. For
+example, modular robots' connectors are often 1-, 2- or 4-way dockable depending
+on mechanical and electrical interfaces. As illustrated in [this
+figure](#example-of-rotational-alignment-numberofrotations-4-and-rotationaltolerance-22-5-deg),
 if `numberOfRotations` is 4 then there will be 4 different docking positions
 (one every 90 degrees). If you don't wish to check the rotational alignment
 criterion this field should be set to zero.
@@ -172,19 +169,19 @@ is applied.
 
 ### Connector Axis System
 
-A [Connector](connector.md#connector)'s axis system is displayed by Webots when
-the corresponding robot is selected or when *Display Axes* is checked in Webots
+A [Connector](#connector)'s axis system is displayed by Webots when the
+corresponding robot is selected or when *Display Axes* is checked in Webots
 *Preferences*. The *z*-axis is drawn as a 5 cm blue line, the y-axis (a
 potential docking rotation) is drawn as a 5 cm red line, and each additional
 potential docking rotation is displayed as a 4 cm black line. The bounding
-objects and graphical objects of a [Connector](connector.md#connector) should
-normally be designed such that the docking surface corresponds exactly to
-*xy*-plane of the local coordinate system. Furthermore, the
-[Connector](connector.md#connector)'s z-axis should be perpendicular to the
-docking surface and point outward from the robot body. Finally, the bounding
-objects should allow the superposition of the origin of the coordinate systems.
-If these design criteria are not met, the [Connector](connector.md#connector)
-nodes will not work properly and may be unable to connect.
+objects and graphical objects of a [Connector](#connector) should normally be
+designed such that the docking surface corresponds exactly to *xy*-plane of the
+local coordinate system. Furthermore, the [Connector](#connector)'s z-axis
+should be perpendicular to the docking surface and point outward from the robot
+body. Finally, the bounding objects should allow the superposition of the origin
+of the coordinate systems. If these design criteria are not met, the
+[Connector](#connector) nodes will not work properly and may be unable to
+connect.
 
 %figure "Connector axis"
 
@@ -193,10 +190,10 @@ nodes will not work properly and may be unable to connect.
 %end
 
 > **note**:
-To be functional, a [Connector](connector.md#connector) node requires the
-presence of a [Physics](physics.md#physics) node in its parent node. But it is
-not necessary to add a [Physics](physics.md#physics) node to the
-[Connector](connector.md#connector) itself.
+To be functional, a [Connector](#connector) node requires the presence of a
+[Physics](physics.md#physics) node in its parent node. But it is not necessary
+to add a [Physics](physics.md#physics) node to the [Connector](#connector)
+itself.
 
 ### Connector Functions
 
@@ -217,18 +214,17 @@ int wb_connector_get_presence(WbDeviceTag tag)
 **Description**
 
 The `wb_connector_enable_presence()` function starts querying the
-[Connector](connector.md#connector)'s *presence* (see definition below) state
-each `ms` milliseconds. The `wb_connector_disable_presence()` function stops
-querying the [Connector](connector.md#connector)'s *presence*. The
-`wb_connector_get_presence()` function returns the current *presence* state of
-this connector, it returns:
+[Connector](#connector)'s *presence* (see definition below) state each `ms`
+milliseconds. The `wb_connector_disable_presence()` function stops querying the
+[Connector](#connector)'s *presence*. The `wb_connector_get_presence()` function
+returns the current *presence* state of this connector, it returns:
 
 - 1: in case of the *presence* of a peer connector
 - 0: in case of the absence of a peer connector
 - -1: not applicable (if this connector is of "passive" type)
 
 The *presence* state is defined as the correct positioning of a compatible peer
-[Connector](connector.md#connector).
+[Connector](#connector).
 
 Two connectors are in position if they are axis-aligned, rotation-aligned and
 near enough. To be axis-aligned, the angle between the *z*-axes of the two
@@ -274,9 +270,9 @@ void wb_connector_unlock(WbDeviceTag tag)
 **Description**
 
 The `wb_connector_lock()` and `wb_connector_unlock()` functions can be used to
-set or unset the [Connector](connector.md#connector)'s locking state (`isLocked`
-field) and eventually create or destroy the physical connection between two
-[Connector](connector.md#connector) nodes.
+set or unset the [Connector](#connector)'s locking state (`isLocked` field) and
+eventually create or destroy the physical connection between two
+[Connector](#connector) nodes.
 
 If `wb_connector_lock()` is invoked while a peer connector is *present* (see the
 definition of *presence* above), a physical link will be created between the two

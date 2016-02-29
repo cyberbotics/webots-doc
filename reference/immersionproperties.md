@@ -13,10 +13,9 @@ ImmersionProperties {
 
 ### Description
 
-An [ImmersionProperties](immersionproperties.md#immersionproperties) node is
-used inside the `immersionProperties` field of a [Solid](solid.md#solid) node to
-specify its dynamical interactions with one or more [Fluid](fluid.md#fluid)
-nodes.
+An [ImmersionProperties](#immersionproperties) node is used inside the
+`immersionProperties` field of a [Solid](solid.md#solid) node to specify its
+dynamical interactions with one or more [Fluid](fluid.md#fluid) nodes.
 
 ### ImmersionProperties Fields
 

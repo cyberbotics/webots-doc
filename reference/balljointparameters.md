@@ -10,10 +10,10 @@ BallJointParameters {
 
 ### Description
 
-The [BallJointJointParameters](balljointparameters.md#balljointparameters) node
-can be used to specify the parameters of a ball joint. It contains the anchor
-position, i.e. the coordinates of the point where bodies under a ball joint
-constraints are kept attached. It can be used in the jointParameters field of
+The [BallJointJointParameters](#balljointparameters) node can be used to specify
+the parameters of a ball joint. It contains the anchor position, i.e. the
+coordinates of the point where bodies under a ball joint constraints are kept
+attached. It can be used in the jointParameters field of
 [BallJoint](balljoint.md#balljoint) only.
 
 ### Field Summary

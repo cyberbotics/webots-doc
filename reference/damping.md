@@ -9,7 +9,7 @@ Damping {
 
 ### Description
 
-A [Damping](damping.md#damping) node can be used to slow down a body (a
+A [Damping](#damping) node can be used to slow down a body (a
 [Solid](solid.md#solid) node with [Physics](physics.md#physics)). The speed of
 each body is reduced by the specified amount (between 0.0 and 1.0) every second.
 A value of 0.0 means "no slowing down" and value of 1.0 means a "complete stop",
@@ -41,12 +41,12 @@ object, so damping cannot be used to model complex fluid dynamics (use
 [ImmersionProperties](immersionproperties.md#immersionproperties) and
 [Fluid](fluid.md#fluid) nodes instead).
 
-A [Damping](damping.md#damping) node can be specified in the `defaultDamping`
-field of the [WorldInfo](worldinfo.md#worldinfo) node; in this case it defines
-the default damping parameters that must be applied to every body in the
-simulation. A [Damping](damping.md#damping) node can be specified in the
-`damping` field of a [Physics](physics.md#physics) node; in this case it defines
-the damping parameters that must be applied to the [Solid](solid.md#solid) that
-contains the [Physics](physics.md#physics) node. The damping specified in a
+A [Damping](#damping) node can be specified in the `defaultDamping` field of the
+[WorldInfo](worldinfo.md#worldinfo) node; in this case it defines the default
+damping parameters that must be applied to every body in the simulation. A
+[Damping](#damping) node can be specified in the `damping` field of a
+[Physics](physics.md#physics) node; in this case it defines the damping
+parameters that must be applied to the [Solid](solid.md#solid) that contains the
+[Physics](physics.md#physics) node. The damping specified in a
 [Physics](physics.md#physics) node overrides the default damping.
 

@@ -14,11 +14,10 @@ Compass {
 
 ### Description
 
-A [Compass](compass.md#compass) node can be used to model a 1, 2 or 3-axis
-digital compass (magnetic sensor). The [Compass](compass.md#compass) node
-returns a vector that indicates the direction of the *virtual north*. The
-*virtual north* is specified by the `northDirection` field in the
-[WorldInfo](worldinfo.md#worldinfo) node.
+A [Compass](#compass) node can be used to model a 1, 2 or 3-axis digital compass
+(magnetic sensor). The [Compass](#compass) node returns a vector that indicates
+the direction of the *virtual north*. The *virtual north* is specified by the
+`northDirection` field in the [WorldInfo](worldinfo.md#worldinfo) node.
 
 ### Field Summary
 
@@ -60,20 +59,18 @@ int wb_compass_get_sampling_period(WbDeviceTag tag)
 
 **Description**
 
-The `wb_compass_enable()` function turns on the [Compass](compass.md#compass)
-measurement each `ms` milliseconds.
+The `wb_compass_enable()` function turns on the [Compass](#compass) measurement
+each `ms` milliseconds.
 
-The `wb_compass_disable()` function turns off the [Compass](compass.md#compass)
-device.
+The `wb_compass_disable()` function turns off the [Compass](#compass) device.
 
 The `wb_compass_get_sampling_period()` function returns the period given into
 the `wb_compass_enable()` function, or 0 if the device is disabled.
 
-The `wb_compass_get_values()` function returns the current
-[Compass](compass.md#compass) measurement. The returned vector indicates the
-direction of the *virtual north* in the coordinate system of the
-[Compass](compass.md#compass) device. Here is the internal algorithm of
-`wb_compass_get_values()` in pseudo-code:
+The `wb_compass_get_values()` function returns the current [Compass](#compass)
+measurement. The returned vector indicates the direction of the *virtual north*
+in the coordinate system of the [Compass](#compass) device. Here is the internal
+algorithm of `wb_compass_get_values()` in pseudo-code:
 
 ```
 float[3] wb_compass_get_values() {
@@ -98,9 +95,9 @@ are valid for accessing the vector. Let's look at one example. In Webots global
 coordinates system, the *xz*-plane represents the horizontal floor and the
 *y*-axis indicates the elevation. The default value of the `northDirection`
 field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned
-with the x-axis. Now if the [Compass](compass.md#compass) node is in *upright*
-position, meaning that its y-axis is aligned with the global y-axis, then the
-bearing angle in degrees can be computed as follows:
+with the x-axis. Now if the [Compass](#compass) node is in *upright* position,
+meaning that its y-axis is aligned with the global y-axis, then the bearing
+angle in degrees can be computed as follows:
 
 ``` c
 double get_bearing_in_degrees() {
@@ -115,10 +112,10 @@ return bearing;
 
 > **note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the
-[Compass](compass.md#compass) node, therefore it is illegal to free this
-pointer. Furthermore, note that the pointed values are only valid until the next
-call to `wb_robot_step()` or `Robot::step()`. If these values are needed for a
-longer period they must be copied.
+[Compass](#compass) node, therefore it is illegal to free this pointer.
+Furthermore, note that the pointed values are only valid until the next call to
+`wb_robot_step()` or `Robot::step()`. If these values are needed for a longer
+period they must be copied.
 
 <!-- -->
 

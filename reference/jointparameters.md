@@ -19,13 +19,12 @@ the axis default value of an
 
 ### Description
 
-The [JointParameters](jointparameters.md#jointparameters) node is a concrete
-base node used to specify various joint parameters related to an axis along
-which, or around which, the motion is allowed. As an instantiated node it can be
-used within the jointParameters field of
-[SliderJoint](sliderjoint.md#sliderjoint) or within the jointParameters2 field
-of [Hinge2Joint](hinge2joint.md#hinge2joint). Unlike the other joint parameters
-node, it has no anchor.
+The [JointParameters](#jointparameters) node is a concrete base node used to
+specify various joint parameters related to an axis along which, or around
+which, the motion is allowed. As an instantiated node it can be used within the
+jointParameters field of [SliderJoint](sliderjoint.md#sliderjoint) or within the
+jointParameters2 field of [Hinge2Joint](hinge2joint.md#hinge2joint). Unlike the
+other joint parameters node, it has no anchor.
 
 ### Field Summary
 
@@ -50,7 +49,7 @@ the joint motion.
 Rotational joint units ([HingeJoint](hingejoint.md#hingejoint),
 [Hinge2Joint](hinge2joint.md#hinge2joint)) are expressed in *radians* while
 linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
-*meters*. See [this table](jointparameters.md#joint-units):
+*meters*. See [this table](#joint-units):
 
 %figure "Joint Units"
 
@@ -145,8 +144,7 @@ velocity computed by the physics simulator.
 
 %end
 
-As you can see in (see  [this
-figure](jointparameters.md#mechanical-diagram-of-a-slider-joint)), a
+As you can see in (see  [this figure](#mechanical-diagram-of-a-slider-joint)), a
 [Joint](joint.md#joint) creates a joint between two masses *m<sub>0</sub>* and
 *m<sub>1</sub>*. The mass *m<sub>0</sub>* is defined by the
 [Physics](physics.md#physics) node in the closest upper [Solid](solid.md#solid)
@@ -154,8 +152,7 @@ of the [Joint](joint.md#joint). The mass *m<sub>1</sub>* is defined by the
 [Physics](physics.md#physics) node of the [Solid](solid.md#solid) placed into
 the `endPoint` of the [Joint](joint.md#joint). The value *x<sub>0</sub>*
 corresponds to the anchor position of the [Joint](joint.md#joint) defined in the
-`anchor` field of a [JointParameters](jointparameters.md#jointparameters) node.
-The position *x* corresponds to the current position of the
-[Joint](joint.md#joint) defined in the `position` field of a
-[JointParameters](jointparameters.md#jointparameters) node.
+`anchor` field of a [JointParameters](#jointparameters) node. The position *x*
+corresponds to the current position of the [Joint](joint.md#joint) defined in
+the `position` field of a [JointParameters](#jointparameters) node.
 

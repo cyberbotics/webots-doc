@@ -11,12 +11,12 @@ Track {
 }
 ```
 
-The [Track](track.md#track) node defines a track object that could be used to
-model tracks for conveyor belts or tank robots.
+The [Track](#track) node defines a track object that could be used to model
+tracks for conveyor belts or tank robots.
 
 Note that this works only in *physics-based* simulation. Therefore, the
-`physics` and `boundingObject` fields of the [Track](track.md#track) node and
-related [Solid](solid.md#solid) nodes must be defined to work properly.
+`physics` and `boundingObject` fields of the [Track](#track) node and related
+[Solid](solid.md#solid) nodes must be defined to work properly.
 
 The `device` field optionally specifies a
 [LinearMotor](linearmotor.md#linearmotor), a linear
@@ -28,7 +28,7 @@ control can be used but force feedback functions are not available.
 The track system doesn't have any default wheel, but it is possible to insert a
 [TrackWheel](trackwheel.md#trackwheel) node in the `children` field to define an
 object that will automatically rotate based on its `radius` value and the
-[Track](track.md#track) motor speed.
+[Track](#track) motor speed.
 
 Other than the motion, it is also possible to define an animation to show
 graphically the movement of the track. Two different types of animation are
@@ -40,8 +40,8 @@ The texture animation is the simplest option and consists in scrolling the
 texture object in the direction defined in the `textureAnimation` field. This
 scroll value is combined with the belt velocity in order to update the position
 of texture at each time step. If the value is *[0 0]* the texture will not move.
-Only the first child of the [Track](track.md#track) is taken into consideration
-for texture animation, and it has to be a [Shape](shape.md#shape), a
+Only the first child of the [Track](#track) is taken into consideration for
+texture animation, and it has to be a [Shape](shape.md#shape), a
 [Group](group.md#group) node or a [Group](group.md#group) descendant having a
 [Shape](shape.md#shape) node as its first child.
 
@@ -61,10 +61,10 @@ The belt path along which the animated geometries will move is shaped to the
 [TrackWheel](trackwheel.md#trackwheel) nodes contained in the `children` field.
 Each wheel contains the information about its center position, its radius and if
 it is inside or outside the belt. By convention the wheels are all aligned along
-the z-axis of the [Track](track.md#track) node and have to be defined in
-clockwise order starting from the one having the smallest x-axis value. The
-following code fragment shows the belt path definition for the convex track
-example shown in [this figure](track.md#convex-track-s-belt-shape-example):
+the z-axis of the [Track](#track) node and have to be defined in clockwise order
+starting from the one having the smallest x-axis value. The following code
+fragment shows the belt path definition for the convex track example shown in
+[this figure](#convex-track-s-belt-shape-example):
 
 ```
 children [
@@ -103,7 +103,7 @@ children [
 %end
 
 Then for a concave track belt shape like the one shown in [this
-figure](track.md#concave-track-s-belt-shape-example) the following
+figure](#concave-track-s-belt-shape-example) the following
 [TrackWheel](trackwheel.md#trackwheel) nodes have to be defined:
 
 ```

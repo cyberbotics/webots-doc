@@ -15,10 +15,9 @@ HingeJointParameters {
 
 ### Description
 
-The [HingeJointParameters](hingejointparameters.md#hingejointparameters) node
-can be used to specify the hinge rotation axis and various joint parameters
-(e.g., angular position, stop angles, spring and damping constants etc.) related
-to this rotation axis.
+The [HingeJointParameters](#hingejointparameters) node can be used to specify
+the hinge rotation axis and various joint parameters (e.g., angular position,
+stop angles, spring and damping constants etc.) related to this rotation axis.
 
 ### Field Summary
 

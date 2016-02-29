@@ -10,11 +10,10 @@ DirectionalLight {
 
 ### Description
 
-The [DirectionalLight](directionallight.md#directionallight) node defines a
-directional light source that illuminates along rays parallel to a given
-3-dimensional vector. Unlike [PointLight](pointlight.md#pointlight), rays cast
-by [DirectionalLight](directionallight.md#directionallight) nodes do not
-attenuate with distance.
+The [DirectionalLight](#directionallight) node defines a directional light
+source that illuminates along rays parallel to a given 3-dimensional vector.
+Unlike [PointLight](pointlight.md#pointlight), rays cast by
+[DirectionalLight](#directionallight) nodes do not attenuate with distance.
 
 ### Field Summary
 

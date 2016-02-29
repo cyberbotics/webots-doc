@@ -23,9 +23,9 @@ Direct derived nodes:
 
 ### Description
 
-The [Robot](robot.md#robot) node can be used as basis for building a robot,
-e.g., an articulated robot, a humanoid robot, a wheeled robot... If you want to
-build a two-wheels robot with differential-drive you should also consider the
+The [Robot](#robot) node can be used as basis for building a robot, e.g., an
+articulated robot, a humanoid robot, a wheeled robot... If you want to build a
+two-wheels robot with differential-drive you should also consider the
 [DifferentialWheels](differentialwheels.md#differentialwheels) node. If you
 would like to build a robot with supervisor capabilities use the
 [Supervisor](supervisor.md#supervisor) node instead (Webots PRO license
@@ -243,10 +243,10 @@ from the simulation which can continue normally with the execution of the other
 controllers (if any). If a C controller exits without calling
 `wb_robot_cleanup()`, then its termination will not be signalled to Webots. In
 this case the simulation will remain blocked (sleeping) on the current step (but
-only if this [Robot](robot.md#robot)'s `synchronization` field is TRUE). Note
-that the call to the `wb_robot_cleanup()` function must be the last API function
-call in a C controller. Any subsequent Webots API function call will give
-unpredictable results.
+only if this [Robot](#robot)'s `synchronization` field is TRUE). Note that the
+call to the `wb_robot_cleanup()` function must be the last API function call in
+a C controller. Any subsequent Webots API function call will give unpredictable
+results.
 
 **Simple C controller Example**
 
@@ -313,7 +313,7 @@ found, the function returns 0.
 
 **See also**
 
-[section](robot.md#wb_robot_step).
+[section](#wb_robot_step).
 
 ---
 
@@ -358,7 +358,7 @@ device is not found, the function returns `NULL` in C++, `null` in Java or the
 
 **See also**
 
-[section](robot.md#wb_robot_step).
+[section](#wb_robot_step).
 
 ---
 
@@ -786,7 +786,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[section](robot.md#wb_robot_mutex_new).
+[section](#wb_robot_mutex_new).
 
 ---
 
@@ -824,7 +824,7 @@ other threads to lock it.
 
 **See also**
 
-[section](robot.md#wb_robot_task_new).
+[section](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

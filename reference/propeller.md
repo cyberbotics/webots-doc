@@ -20,8 +20,8 @@ Propeller {
 
 %end
 
-The [Propeller](propeller.md#propeller) node can be used to model a marine or an
-aircraft propeller. When its `device` field is set with a
+The [Propeller](#propeller) node can be used to model a marine or an aircraft
+propeller. When its `device` field is set with a
 [RotationalMotor](rotationalmotor.md#rotationalmotor), the propeller turns the
 motor angular velocity into a thrust and a (resistant) torque. The resultant
 thrust is the product of a real number T by the unit length shaft axis vector
@@ -50,14 +50,14 @@ W. Prouty.
 
 The example "propeller.wbt" located in the "projects/samples/devices/worlds"
 directory of Webots shows three different helicopters modeled with
-[Propeller](propeller.md#propeller) nodes.
+[Propeller](#propeller) nodes.
 
 ### Field Summary
 
 - `shaftAxis`: defines the axis along which the resultant thrust and torque will
-be exerted, see [this figure](propeller.md#propeller-shaft-axis).
+be exerted, see [this figure](#propeller-shaft-axis).
 - `centerOfThrust`: defines the point where the generated thrust applies, see
-[this figure](propeller.md#propeller-shaft-axis).
+[this figure](#propeller-shaft-axis).
 - `thrustConstants` and `torqueConstants`: coefficients used to define the
 resultant thrust and torque as functions of the motor angular velocity and the
 linear speed of adavance, see above formulae.

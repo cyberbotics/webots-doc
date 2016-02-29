@@ -15,18 +15,18 @@ DistanceSensor {
 
 ### Description
 
-The [DistanceSensor](distancesensor.md#distancesensor) node can be used to model
-a generic sensor, an infra-red sensor, a sonar sensor, or a laser range-finder.
-This device simulation is performed by detecting the collisions between one or
+The [DistanceSensor](#distancesensor) node can be used to model a generic
+sensor, an infra-red sensor, a sonar sensor, or a laser range-finder. This
+device simulation is performed by detecting the collisions between one or
 several sensor rays and objects in the environment. In case of generic, sonar
 and laser type the collision occurs with the bounding objects of
 [Solid](solid.md#solid) nodes, whereas infra-red rays collision detection uses
 the [Solid](solid.md#solid) nodes themselves.
 
-The rays of the [DistanceSensor](distancesensor.md#distancesensor) nodes can be
-displayed by checking the menu `View > Optional Rendering > Show Distance Sensor
-Rays`. The red/green transition on the rays indicates the points of intersection
-with the bounding objects.
+The rays of the [DistanceSensor](#distancesensor) nodes can be displayed by
+checking the menu `View > Optional Rendering > Show Distance Sensor Rays`. The
+red/green transition on the rays indicates the points of intersection with the
+bounding objects.
 
 ### Field Summary
 
@@ -56,7 +56,7 @@ in increasing order.
     for a distance value of 0.2 meters, the sensor will return 400 with a standard
     deviation of 10 percent (40), etc. Distance values not directly specified in the
     lookup table will be linearly interpolated. This can be better understood in
-    [this figure](distancesensor.md#sensor-response-versus-obstacle-distance) below.
+    [this figure](#sensor-response-versus-obstacle-distance) below.
 
 %figure "Sensor response versus obstacle distance"
 
@@ -74,7 +74,7 @@ in increasing order.
                       4        0  0.4  ]
 
     The resulting range of measured values is shown in [this
-    figure](distancesensor.md#sensor-response-versus-obstacle-distance-with-opposite-response-noise-increase).
+    figure](#sensor-response-versus-obstacle-distance-with-opposite-response-noise-increase).
 
 %figure "Sensor response versus obstacle distance with opposite response-noise increase"
 
@@ -108,11 +108,11 @@ weighted average of the individual rays' responses. By using multiple rays, a
 more accurate model of the physical infra-red or ultrasound sensor can be
 obtained. The sensor rays are distributed inside 3D-cones whose opening angles
 can be tuned through the `aperture` field. See [this
-figure](distancesensor.md#predefined-configurations-for-1-through-10-sensor-rays)
-for the ray distributions from one to ten rays. The spacial distribution of the
-rays is as much as possible uniform and has a left/right symmetry. There is no
-upper limit on the number of rays; however, Webots' performance drops as the
-number of rays increases.
+figure](#predefined-configurations-for-1-through-10-sensor-rays) for the ray
+distributions from one to ten rays. The spacial distribution of the rays is as
+much as possible uniform and has a left/right symmetry. There is no upper limit
+on the number of rays; however, Webots' performance drops as the number of rays
+increases.
 
 %figure "Predefined configurations for 1 through 10 sensor rays"
 
@@ -135,12 +135,11 @@ beam hits an obstacle.
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for
 "generic" and "infra-red" sensors). When averaging the sensor's response, the
 individual weight of each sensor ray is computed according to a Gaussian
-distribution as described in [this
-figure](distancesensor.md#weight-distribution-formulas). where *w<sub>i</sub>*
-is the weight of the *i*th ray, *t<sub>i</sub>* is the angle between the *i*th
-ray and the sensor axis, *a* is the aperture angle of the sensor, *g* is the
-Gaussian width, and *n* is the number of rays. As depicted in  [this
-figure](distancesensor.md#example-distribution-for-10-rays-using-a-gaussian-width-of-0-5),
+distribution as described in [this figure](#weight-distribution-formulas). where
+*w<sub>i</sub>* is the weight of the *i*th ray, *t<sub>i</sub>* is the angle
+between the *i*th ray and the sensor axis, *a* is the aperture angle of the
+sensor, *g* is the Gaussian width, and *n* is the number of rays. As depicted in
+[this figure](#example-distribution-for-10-rays-using-a-gaussian-width-of-0-5),
 rays in the center of the sensor cone are given a greater weight than rays in
 the periphery. A wider or narrower distribution can be obtained by tuning the
 `gaussianWidth` field. An approximation of a flat distribution is obtained if a
@@ -203,7 +202,7 @@ in the lookup table, i.e. the value corresponding to sonar sensor's range, if
 the angle of incidence is greater than 22.5 degrees (π/8 radians). In other
 words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see [this
-figure](distancesensor.md#sonar-sensor)).
+figure](#sonar-sensor)).
 
 %figure "Sonar sensor"
 
@@ -213,11 +212,11 @@ figure](distancesensor.md#sonar-sensor)).
 
 ### Line Following Behavior
 
-Some support for [DistanceSensor](distancesensor.md#distancesensor) nodes used
-for reading the red color level of a textured floor is implemented. This is
-useful to simulate line following behaviors. This feature is demonstrated in the
-"rover.wbt" example (see in the "projects/robots/mindstorms/worlds" directory of
-Webots). The ground texture must be placed in a [Plane](plane.md#plane).
+Some support for [DistanceSensor](#distancesensor) nodes used for reading the
+red color level of a textured floor is implemented. This is useful to simulate
+line following behaviors. This feature is demonstrated in the "rover.wbt"
+example (see in the "projects/robots/mindstorms/worlds" directory of Webots).
+The ground texture must be placed in a [Plane](plane.md#plane).
 
 ### DistanceSensor Functions
 
@@ -249,6 +248,6 @@ into the `wb_distance_sensor_enable()` function, or 0 if the device is disabled.
 
 `wb_distance_sensor_get_value()` returns the last value measured by the
 specified distance sensor. This value is computed by the simulator according to
-the lookup table of the [DistanceSensor](distancesensor.md#distancesensor) node.
-Hence, the range of the return value is defined by this lookup table.
+the lookup table of the [DistanceSensor](#distancesensor) node. Hence, the range
+of the return value is defined by this lookup table.
 

@@ -17,12 +17,12 @@ Receiver {
 
 ### Description
 
-The [Receiver](receiver.md#receiver) node is used to model radio, serial or
-infra-red receivers. A [Receiver](receiver.md#receiver) node must be added to
-the children of a robot or supervisor. Please note that a
-[Receiver](receiver.md#receiver) can receive data but it cannot send it. In
-order to achieve bidirectional communication, a robot needs to have both an
-[Emitter](emitter.md#emitter) and a [Receiver](receiver.md#receiver) on board.
+The [Receiver](#receiver) node is used to model radio, serial or infra-red
+receivers. A [Receiver](#receiver) node must be added to the children of a robot
+or supervisor. Please note that a [Receiver](#receiver) can receive data but it
+cannot send it. In order to achieve bidirectional communication, a robot needs
+to have both an [Emitter](emitter.md#emitter) and a [Receiver](#receiver) on
+board.
 
 ### Field Summary
 
@@ -90,12 +90,11 @@ int wb_receiver_get_sampling_period(WbDeviceTag tag)
 `wb_receiver_enable()` starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate
 of once every `ms` milliseconds. Incoming data packet are appended to the tail
-of the reception queue (see [this figure](receiver.md#receiver-s-packet-queue)).
-Incoming data packets will be discarded if the receiver's buffer size (specified
-in the [Receiver](receiver.md#receiver) node) is exceeded. To avoid buffer
-overflow, the data packets should be read at a high enough rate by the
-controller program. The function `wb_receiver_disable()` stops the background
-listening.
+of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
+data packets will be discarded if the receiver's buffer size (specified in the
+[Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
+packets should be read at a high enough rate by the controller program. The
+function `wb_receiver_disable()` stops the background listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
@@ -119,7 +118,7 @@ void wb_receiver_next_packet(WbDeviceTag tag)
 
 The `wb_receiver_get_queue_length()` function returns the number of data packets
 currently present in the receiver's queue (see [this
-figure](receiver.md#receiver-s-packet-queue)).
+figure](#receiver-s-packet-queue)).
 
 The `wb_receiver_next_packet()` function deletes the head packet. The next
 packet in the queue, if any, becomes the new head packet. The user must copy
@@ -158,16 +157,16 @@ Webots' Emitter/Receiver API guarantees that:
 However, the Emitter/Receiver API does not guarantee a specific schedule for the
 transmission. Sometimes several packets may be bundled and received together.
 For example, imagine a simple setup where two robots have an
-[Emitter](emitter.md#emitter) and a [Receiver](receiver.md#receiver) on board.
-If both robots use the same controller time step and each one sends a packet at
-every time step, then the Receivers will receive, on average, one data packet at
-each step, but they may sometimes get zero packets, and sometimes two! Therefore
-it is recommend to write code that is tolerant to variations in the transmission
+[Emitter](emitter.md#emitter) and a [Receiver](#receiver) on board. If both
+robots use the same controller time step and each one sends a packet at every
+time step, then the Receivers will receive, on average, one data packet at each
+step, but they may sometimes get zero packets, and sometimes two! Therefore it
+is recommend to write code that is tolerant to variations in the transmission
 timing and that can deal with the eventuality of receiving several or no packets
 at all during a particular time step. The `wb_receiver_get_queue_length()`
 function should be used to check how many packets are actually present in the
-[Receiver](receiver.md#receiver)'s queue. Making assumptions based on timing
-will result in code that is not robust.
+[Receiver](#receiver)'s queue. Making assumptions based on timing will result in
+code that is not robust.
 
 ---
 
@@ -187,13 +186,13 @@ int wb_receiver_get_data_size(WbDeviceTag tag)
 **Description**
 
 The `wb_receiver_get_data()` function returns the data of the packet at the head
-of the reception queue (see [this figure](receiver.md#receiver-s-packet-queue)).
-The returned data pointer is only valid until the next call to the function
+of the reception queue (see [this figure](#receiver-s-packet-queue)). The
+returned data pointer is only valid until the next call to the function
 `wb_receiver_next_packet()`. It is illegal to call `wb_receiver_get_data()` when
 the queue is empty (`wb_receiver_get_queue_length()` == 0). The
-[Receiver](receiver.md#receiver) node knows nothing about that structure of the
-data being sent but its byte size. The emitting and receiving code is
-responsible to agree on a specific format.
+[Receiver](#receiver) node knows nothing about that structure of the data being
+sent but its byte size. The emitting and receiving code is responsible to agree
+on a specific format.
 
 The `wb_receiver_get_data_size()` function returns the number of data bytes
 present in the head packet of the reception queue. The *data size* is always
@@ -273,10 +272,10 @@ const double *wb_receiver_get_emitter_direction(WbDeviceTag tag)
 **Description**
 
 The `wb_receiver_get_signal_strength()` function operates on the head packet in
-the receiver's queue (see [this figure](receiver.md#receiver-s-packet-queue)).
-It returns the simulated signal strength at the time the packet was transmitted.
-This signal strength is equal to the inverse of the distance between the emitter
-and the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
+the receiver's queue (see [this figure](#receiver-s-packet-queue)). It returns
+the simulated signal strength at the time the packet was transmitted. This
+signal strength is equal to the inverse of the distance between the emitter and
+the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
 strength and *r* is the distance between emitter and receiver. It is illegal to
 call this function if the receiver's queue is empty
 (`wb_receiver_get_queue_length()` == 0).
@@ -316,8 +315,8 @@ int wb_receiver_get_channel(WbDeviceTag tag)
 
 The `wb_receiver_set_channel()` function allows a receiver to change its
 reception channel. It modifies the `channel` field of the corresponding
-[Receiver](receiver.md#receiver) node. Normally, a receiver can only receive
-data packets from emitters that use the same channel. However, the special
+[Receiver](#receiver) node. Normally, a receiver can only receive data packets
+from emitters that use the same channel. However, the special
 WB\_CHANNEL\_BROADCAST value can be used to listen simultaneously to all
 channels.
 
@@ -326,6 +325,6 @@ the receiver.
 
 > **note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
-static integer of the [Receiver](receiver.md#receiver) class
+static integer of the [Receiver](#receiver) class
 (Receiver::CHANNEL\_BROADCAST).
 

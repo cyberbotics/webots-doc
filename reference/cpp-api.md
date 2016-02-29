@@ -7,7 +7,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                  |
 | ------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Accelerometer.hpp`>`                                                          |
-| class [Accelerometer](accelerometer.md#accelerometer) : public [Device](cpp-api.md#cpp_device) { |
+| class [Accelerometer](accelerometer.md#accelerometer) : public [Device](#cpp_device) {           |
 | &nbsp;&nbsp; virtual void [enable](accelerometer.md#wb_accelerometer_get_values)(int ms);        |
 | &nbsp;&nbsp; virtual void [disable](accelerometer.md#wb_accelerometer_get_values)();             |
 | &nbsp;&nbsp; int [getSamplingPeriod](accelerometer.md#wb_accelerometer_get_values)();            |
@@ -21,7 +21,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Brake.hpp`>`                                                                               |
-| class [Brake](brake.md#brake) : public [Device](cpp-api.md#cpp_device) {                                      |
+| class [Brake](brake.md#brake) : public [Device](#cpp_device) {                                                |
 | &nbsp;&nbsp; void [setDampingConstant](brake.md#wb_brake_set_damping_constant)(double dampingConstant) const; |
 | &nbsp;&nbsp; int [getType](brake.md#wb_brake_set_damping_constant)() const;                                   |
 | };                                                                                                            |
@@ -33,7 +33,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Camera.hpp`>`                                                                              |
-| class [Camera](camera.md#camera) : public [Device](cpp-api.md#cpp_device) {                                   |
+| class [Camera](camera.md#camera) : public [Device](#cpp_device) {                                             |
 | &nbsp;&nbsp; enum {COLOR, RANGE\_FINDER, BOTH};                                                               |
 | &nbsp;&nbsp; virtual void [enable](camera.md#wb_camera_enable)(int ms);                                       |
 | &nbsp;&nbsp; virtual void [disable](camera.md#wb_camera_enable)();                                            |
@@ -74,7 +74,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                   |
 | --------------------------------------------------------------------------------- |
 | #include `<`webots/Compass.hpp`>`                                                 |
-| class [Compass](compass.md#compass) : public [Device](cpp-api.md#cpp_device) {    |
+| class [Compass](compass.md#compass) : public [Device](#cpp_device) {              |
 | &nbsp;&nbsp; virtual void [enable](compass.md#wb_compass_get_values)(int ms);     |
 | &nbsp;&nbsp; virtual void [disable](compass.md#wb_compass_get_values)();          |
 | &nbsp;&nbsp; int [getSamplingPeriod](compass.md#wb_compass_get_values)();         |
@@ -88,7 +88,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                             |
 | ------------------------------------------------------------------------------------------- |
 | #include `<`webots/Connector.hpp`>`                                                         |
-| class [Connector](connector.md#connector) : public [Device](cpp-api.md#cpp_device) {        |
+| class [Connector](connector.md#connector) : public [Device](#cpp_device) {                  |
 | &nbsp;&nbsp; virtual void [enablePresence](connector.md#wb_connector_get_presence)(int ms); |
 | &nbsp;&nbsp; virtual void [disablePresence](connector.md#wb_connector_get_presence)();      |
 | &nbsp;&nbsp; int [getPresence](connector.md#wb_connector_get_presence)() const;             |
@@ -116,7 +116,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/DifferentialWheels.hpp`>`                                                                                       |
-| class [DifferentialWheels](differentialwheels.md#differentialwheels) : public [Robot](cpp-api.md#cpp_robot) {                      |
+| class [DifferentialWheels](differentialwheels.md#differentialwheels) : public [Robot](#cpp_robot) {                                |
 | &nbsp;&nbsp; [DifferentialWheels](robot.md#wb_robot_step)();                                                                       |
 | &nbsp;&nbsp; virtual [~DifferentialWheels](robot.md#wb_robot_step)();                                                              |
 | &nbsp;&nbsp; virtual void [setSpeed](differentialwheels.md#wb_differential_wheels_set_speed)(double left, double right);           |
@@ -139,7 +139,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Display.hpp`>`                                                                                                                                |
-| class [Display](display.md#display) : public [Device](cpp-api.md#cpp_device) {                                                                                   |
+| class [Display](display.md#display) : public [Device](#cpp_device) {                                                                                             |
 | &nbsp;&nbsp; enum {RGB, RGBA, ARGB, BGRA};                                                                                                                       |
 | &nbsp;&nbsp; int [getWidth](display.md#wb_display_get_width)() const;                                                                                            |
 | &nbsp;&nbsp; int [getHeight](display.md#wb_display_get_width)() const;                                                                                           |
@@ -155,12 +155,12 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [fillRectangle](display.md#wb_display_draw_primitive)(int x, int y, int width, int height);                                            |
 | &nbsp;&nbsp; virtual void [fillOval](display.md#wb_display_draw_primitive)(int cx, int cy, int a, int b);                                                        |
 | &nbsp;&nbsp; virtual void [fillPolygon](display.md#wb_display_draw_primitive)(const int *x, const int *y, int size);                                             |
-| &nbsp;&nbsp; [ImageRef](cpp-api.md#cpp_image_ref) *[imageCopy](display.md#wb_display_image_functions)(int x, int y, int width, int height) const;                |
-| &nbsp;&nbsp; virtual void [imagePaste](display.md#wb_display_image_functions)([ImageRef](cpp-api.md#cpp_image_ref) *ir, int x, int y);                           |
-| &nbsp;&nbsp; [ImageRef](cpp-api.md#cpp_image_ref) *[imageLoad](display.md#wb_display_image_functions)(const std::string &filename) const;                        |
-| &nbsp;&nbsp; [ImageRef](cpp-api.md#cpp_image_ref) *[imageNew](display.md#wb_display_image_functions)(int width, int height, const void *data, int format) const; |
-| &nbsp;&nbsp; void [imageSave](display.md#wb_display_image_functions)([ImageRef](cpp-api.md#cpp_image_ref) *ir, const std::string &filename) const;               |
-| &nbsp;&nbsp; void [imageDelete](display.md#wb_display_image_functions)([ImageRef](cpp-api.md#cpp_image_ref) *ir) const;                                          |
+| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageCopy](display.md#wb_display_image_functions)(int x, int y, int width, int height) const;                          |
+| &nbsp;&nbsp; virtual void [imagePaste](display.md#wb_display_image_functions)([ImageRef](#cpp_image_ref) *ir, int x, int y);                                     |
+| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageLoad](display.md#wb_display_image_functions)(const std::string &filename) const;                                  |
+| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageNew](display.md#wb_display_image_functions)(int width, int height, const void *data, int format) const;           |
+| &nbsp;&nbsp; void [imageSave](display.md#wb_display_image_functions)([ImageRef](#cpp_image_ref) *ir, const std::string &filename) const;                         |
+| &nbsp;&nbsp; void [imageDelete](display.md#wb_display_image_functions)([ImageRef](#cpp_image_ref) *ir) const;                                                    |
 | };                                                                                                                                                               |
 
 %end
@@ -170,7 +170,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                     |
 | --------------------------------------------------------------------------------------------------- |
 | #include `<`webots/DistanceSensor.hpp`>`                                                            |
-| class [DistanceSensor](distancesensor.md#distancesensor) : public [Device](cpp-api.md#cpp_device) { |
+| class [DistanceSensor](distancesensor.md#distancesensor) : public [Device](#cpp_device) {           |
 | &nbsp;&nbsp; virtual void [enable](distancesensor.md#wb_distance_sensor_get_value)(int ms);         |
 | &nbsp;&nbsp; virtual void [disable](distancesensor.md#wb_distance_sensor_get_value)();              |
 | &nbsp;&nbsp; int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();             |
@@ -184,7 +184,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                          |
 | ---------------------------------------------------------------------------------------- |
 | #include `<`webots/Emitter.hpp`>`                                                        |
-| class [Emitter](emitter.md#emitter) : public [Device](cpp-api.md#cpp_device) {           |
+| class [Emitter](emitter.md#emitter) : public [Device](#cpp_device) {                     |
 | &nbsp;&nbsp; enum {CHANNEL\_BROADCAST};                                                  |
 | &nbsp;&nbsp; virtual int [send](emitter.md#wb_emitter_send)(const void *data, int size); |
 | &nbsp;&nbsp; int [getChannel](emitter.md#wb_emitter_set_channel)() const;                |
@@ -214,7 +214,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getSFRotation](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                          |
 | &nbsp;&nbsp; const double *[getSFColor](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                             |
 | &nbsp;&nbsp; std::string [getSFString](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                              |
-| &nbsp;&nbsp; [Node](cpp-api.md#cpp_node) *[getSFNode](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                               |
+| &nbsp;&nbsp; [Node](#cpp_node) *[getSFNode](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                         |
 | &nbsp;&nbsp; bool [getMFBool](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                              |
 | &nbsp;&nbsp; int [getMFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                              |
 | &nbsp;&nbsp; double [getMFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                           |
@@ -223,7 +223,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const double *[getMFRotation](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                 |
 | &nbsp;&nbsp; const double *[getMFColor](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                    |
 | &nbsp;&nbsp; std::string [getMFString](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                     |
-| &nbsp;&nbsp; [Node](cpp-api.md#cpp_node) *[getMFNode](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                      |
+| &nbsp;&nbsp; [Node](#cpp_node) *[getMFNode](supervisor.md#wb_supervisor_field_get_sf_bool)(int index) const;                                                                                                |
 | &nbsp;&nbsp; void [setSFBool](supervisor.md#wb_supervisor_field_set_sf_bool)(bool value);                                                                                                                   |
 | &nbsp;&nbsp; void [setSFInt32](supervisor.md#wb_supervisor_field_set_sf_bool)(int value);                                                                                                                   |
 | &nbsp;&nbsp; void [setSFFloat](supervisor.md#wb_supervisor_field_set_sf_bool)(double value);                                                                                                                |
@@ -252,7 +252,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                           |
 | ------------------------------------------------------------------------- |
 | #include `<`webots/GPS.hpp`>`                                             |
-| class [GPS](gps.md#gps) : public [Device](cpp-api.md#cpp_device) {        |
+| class [GPS](gps.md#gps) : public [Device](#cpp_device) {                  |
 | &nbsp;&nbsp; virtual void [enable](gps.md#wb_gps_get_values)(int ms);     |
 | &nbsp;&nbsp; virtual void [disable](gps.md#wb_gps_get_values)();          |
 | &nbsp;&nbsp; int [getSamplingPeriod](gps.md#wb_gps_get_values)();         |
@@ -266,7 +266,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                             |
 | --------------------------------------------------------------------------- |
 | #include `<`webots/Gyro.hpp`>`                                              |
-| class [Gyro](gyro.md#gyro) : public [Device](cpp-api.md#cpp_device) {       |
+| class [Gyro](gyro.md#gyro) : public [Device](#cpp_device) {                 |
 | &nbsp;&nbsp; virtual void [enable](gyro.md#wb_gyro_get_values)(int ms);     |
 | &nbsp;&nbsp; virtual void [disable](gyro.md#wb_gyro_get_values)();          |
 | &nbsp;&nbsp; int [getSamplingPeriod](gyro.md#wb_gyro_get_values)();         |
@@ -290,7 +290,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/InertialUnit.hpp`>`                                                                     |
-| class [InertialUnit](inertialunit.md#inertialunit) : public [Device](cpp-api.md#cpp_device) {              |
+| class [InertialUnit](inertialunit.md#inertialunit) : public [Device](#cpp_device) {                        |
 | &nbsp;&nbsp; virtual void [enable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(int ms);           |
 | &nbsp;&nbsp; virtual void [disable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)();                |
 | &nbsp;&nbsp; int [getSamplingPeriod](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)();               |
@@ -304,7 +304,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                    |
 | ------------------------------------------------------------------ |
 | #include `<`webots/LED.hpp`>`                                      |
-| class [LED](led.md#led) : public [Device](cpp-api.md#cpp_device) { |
+| class [LED](led.md#led) : public [Device](#cpp_device) {           |
 | &nbsp;&nbsp; virtual void [set](led.md#wb_led_set)(int value);     |
 | &nbsp;&nbsp; int [get](led.md#wb_led_set)() const;                 |
 | };                                                                 |
@@ -316,7 +316,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                            |
 | ------------------------------------------------------------------------------------------ |
 | #include `<`webots/LightSensor.hpp`>`                                                      |
-| class [LightSensor](lightsensor.md#lightsensor) : public [Device](cpp-api.md#cpp_device) { |
+| class [LightSensor](lightsensor.md#lightsensor) : public [Device](#cpp_device) {           |
 | &nbsp;&nbsp; virtual void [enable](lightsensor.md#wb_light_sensor_get_value)(int ms);      |
 | &nbsp;&nbsp; virtual void [disable](lightsensor.md#wb_light_sensor_get_value)();           |
 | &nbsp;&nbsp; int [getSamplingPeriod](lightsensor.md#wb_light_sensor_get_value)();          |
@@ -351,7 +351,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                          |
 | -------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Motor.hpp`>`                                                                          |
-| class [Motor](motor.md#motor) : public [Device](cpp-api.md#cpp_device) {                                 |
+| class [Motor](motor.md#motor) : public [Device](#cpp_device) {                                           |
 | &nbsp;&nbsp; enum {ROTATIONAL, LINEAR};                                                                  |
 | &nbsp;&nbsp; virtual void [setPosition](motor.md#wb_motor_set_position)(double position);                |
 | &nbsp;&nbsp; virtual void [setVelocity](motor.md#wb_motor_set_position)(double vel);                     |
@@ -397,7 +397,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; std::string [getTypeName](supervisor.md#wb_supervisor_node_get_type)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | &nbsp;&nbsp; std::string [getBaseTypeName](supervisor.md#wb_supervisor_node_get_type)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | &nbsp;&nbsp; Node *[getParentNode](supervisor.md#wb_supervisor_node_get_from_def)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| &nbsp;&nbsp; [Field](cpp-api.md#cpp_field) *[getField](supervisor.md#wb_supervisor_node_get_field)(const std::string &fieldName) const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| &nbsp;&nbsp; [Field](#cpp_field) *[getField](supervisor.md#wb_supervisor_node_get_field)(const std::string &fieldName) const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | &nbsp;&nbsp; const double *[getPosition](supervisor.md#wb_supervisor_node_get_position)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | &nbsp;&nbsp; const double *[getOrientation](supervisor.md#wb_supervisor_node_get_position)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | &nbsp;&nbsp; const double *[getCenterOfMass](supervisor.md#wb_supervisor_node_get_center_of_mass)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -416,7 +416,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                  |
 | ------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Pen.hpp`>`                                                                    |
-| class [Pen](pen.md#pen) : public [Device](cpp-api.md#cpp_device) {                               |
+| class [Pen](pen.md#pen) : public [Device](#cpp_device) {                                         |
 | &nbsp;&nbsp; virtual void [write](pen.md#wb_pen_write)(bool write);                              |
 | &nbsp;&nbsp; virtual void [setInkColor](pen.md#wb_pen_set_ink_color)(int color, double density); |
 | };                                                                                               |
@@ -428,7 +428,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                     |
 | --------------------------------------------------------------------------------------------------- |
 | #include `<`webots/PositionSensor.hpp`>`                                                            |
-| class [PositionSensor](positionsensor.md#positionsensor) : public [Device](cpp-api.md#cpp_device) { |
+| class [PositionSensor](positionsensor.md#positionsensor) : public [Device](#cpp_device) {           |
 | &nbsp;&nbsp; enum {ANGULAR, LINEAR};                                                                |
 | &nbsp;&nbsp; virtual void [enable](positionsensor.md#wb_position_sensor_get_value)(int ms);         |
 | &nbsp;&nbsp; virtual void [disable](positionsensor.md#wb_position_sensor_get_value)();              |
@@ -444,7 +444,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                        |
 | ------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Receiver.hpp`>`                                                                     |
-| class [Receiver](receiver.md#receiver) : public [Device](cpp-api.md#cpp_device) {                      |
+| class [Receiver](receiver.md#receiver) : public [Device](#cpp_device) {                                |
 | &nbsp;&nbsp; enum {CHANNEL\_BROADCAST};                                                                |
 | &nbsp;&nbsp; virtual void [enable](receiver.md#wb_receiver_enable)(int ms);                            |
 | &nbsp;&nbsp; virtual void [disable](receiver.md#wb_receiver_enable)();                                 |
@@ -480,27 +480,27 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [Robot](robot.md#wb_robot_step)();                                                                                       |
 | &nbsp;&nbsp; virtual [~Robot](robot.md#wb_robot_step)();                                                                              |
 | &nbsp;&nbsp; virtual int [step](robot.md#wb_robot_step)(int ms);                                                                      |
-| &nbsp;&nbsp; [Accelerometer](cpp-api.md#cpp_accelerometer) *[getAccelerometer](robot.md#robotgetdevice)(const std::string &name);     |
-| &nbsp;&nbsp; [Brake](cpp-api.md#cpp_brake) *[getBrake](robot.md#robotgetdevice)(const std::string &name);                             |
-| &nbsp;&nbsp; [Camera](cpp-api.md#cpp_camera) *[getCamera](robot.md#robotgetdevice)(const std::string &name);                          |
-| &nbsp;&nbsp; [Compass](cpp-api.md#cpp_compass) *[getCompass](robot.md#robotgetdevice)(const std::string &name);                       |
-| &nbsp;&nbsp; [Connector](cpp-api.md#cpp_connector) *[getConnector](robot.md#robotgetdevice)(const std::string &name);                 |
-| &nbsp;&nbsp; [Display](cpp-api.md#cpp_display) *[getDisplay](robot.md#robotgetdevice)(const std::string &name);                       |
-| &nbsp;&nbsp; [DistanceSensor](cpp-api.md#cpp_distance_sensor) *[getDistanceSensor](robot.md#robotgetdevice)(const std::string &name); |
-| &nbsp;&nbsp; [Emitter](cpp-api.md#cpp_emitter) *[getEmitter](robot.md#robotgetdevice)(const std::string &name);                       |
-| &nbsp;&nbsp; [GPS](cpp-api.md#cpp_gps) *[getGPS](robot.md#robotgetdevice)(const std::string &name);                                   |
-| &nbsp;&nbsp; [Gyro](cpp-api.md#cpp_gyro) *[getGyro](robot.md#robotgetdevice)(const std::string &name);                                |
-| &nbsp;&nbsp; [InertialUnit](cpp-api.md#cpp_inertial_unit) *[getInertialUnit](robot.md#robotgetdevice)(const std::string &name);       |
-| &nbsp;&nbsp; [LED](cpp-api.md#cpp_led) *[getLED](robot.md#robotgetdevice)(const std::string &name);                                   |
-| &nbsp;&nbsp; [LightSensor](cpp-api.md#cpp_light_sensor) *[getLightSensor](robot.md#robotgetdevice)(const std::string &name);          |
-| &nbsp;&nbsp; [Motor](cpp-api.md#cpp_motor) *[getMotor](robot.md#robotgetdevice)(const std::string &name);                             |
-| &nbsp;&nbsp; [Pen](cpp-api.md#cpp_pen) *[getPen](robot.md#robotgetdevice)(const std::string &name);                                   |
-| &nbsp;&nbsp; [PositionSensor](cpp-api.md#cpp_position_sensor) *[getPositionSensor](robot.md#robotgetdevice)(const std::string &name); |
-| &nbsp;&nbsp; [Receiver](cpp-api.md#cpp_receiver) *[getReceiver](robot.md#robotgetdevice)(const std::string &name);                    |
-| &nbsp;&nbsp; [Servo](cpp-api.md#cpp_servo) *[getServo](robot.md#robotgetdevice)(const std::string &name);                             |
-| &nbsp;&nbsp; [TouchSensor](cpp-api.md#cpp_touch_sensor) *[getTouchSensor](robot.md#robotgetdevice)(const std::string &name);          |
+| &nbsp;&nbsp; [Accelerometer](#cpp_accelerometer) *[getAccelerometer](robot.md#robotgetdevice)(const std::string &name);               |
+| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](robot.md#robotgetdevice)(const std::string &name);                                       |
+| &nbsp;&nbsp; [Camera](#cpp_camera) *[getCamera](robot.md#robotgetdevice)(const std::string &name);                                    |
+| &nbsp;&nbsp; [Compass](#cpp_compass) *[getCompass](robot.md#robotgetdevice)(const std::string &name);                                 |
+| &nbsp;&nbsp; [Connector](#cpp_connector) *[getConnector](robot.md#robotgetdevice)(const std::string &name);                           |
+| &nbsp;&nbsp; [Display](#cpp_display) *[getDisplay](robot.md#robotgetdevice)(const std::string &name);                                 |
+| &nbsp;&nbsp; [DistanceSensor](#cpp_distance_sensor) *[getDistanceSensor](robot.md#robotgetdevice)(const std::string &name);           |
+| &nbsp;&nbsp; [Emitter](#cpp_emitter) *[getEmitter](robot.md#robotgetdevice)(const std::string &name);                                 |
+| &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#robotgetdevice)(const std::string &name);                                             |
+| &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#robotgetdevice)(const std::string &name);                                          |
+| &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#robotgetdevice)(const std::string &name);                 |
+| &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#robotgetdevice)(const std::string &name);                                             |
+| &nbsp;&nbsp; [LightSensor](#cpp_light_sensor) *[getLightSensor](robot.md#robotgetdevice)(const std::string &name);                    |
+| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](robot.md#robotgetdevice)(const std::string &name);                                       |
+| &nbsp;&nbsp; [Pen](#cpp_pen) *[getPen](robot.md#robotgetdevice)(const std::string &name);                                             |
+| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#robotgetdevice)(const std::string &name);           |
+| &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#robotgetdevice)(const std::string &name);                              |
+| &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#robotgetdevice)(const std::string &name);                                       |
+| &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#robotgetdevice)(const std::string &name);                    |
 | &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                       |
-| &nbsp;&nbsp; [Device](cpp-api.md#cpp_device) *[getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                   |
+| &nbsp;&nbsp; [Device](#cpp_device) *[getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                             |
 | &nbsp;&nbsp; virtual void [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(int ms);                                     |
 | &nbsp;&nbsp; virtual void [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)();                                          |
 | &nbsp;&nbsp; int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                                         |
@@ -531,7 +531,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Servo.hpp`>`                                                                              |
-| class [Servo](servo.md#servo) : public [Device](cpp-api.md#cpp_device) {                                     |
+| class [Servo](servo.md#servo) : public [Device](#cpp_device) {                                               |
 | &nbsp;&nbsp; enum {ROTATIONAL, LINEAR};                                                                      |
 | &nbsp;&nbsp; virtual void [setPosition](servo.md#wb_servo_set_position)(double position);                    |
 | &nbsp;&nbsp; virtual void [setVelocity](servo.md#wb_servo_set_position)(double vel);                         |
@@ -560,15 +560,15 @@ The following tables describe the C++ classes and their methods.
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Supervisor.hpp`>`                                                                                                                                       |
-| class [Supervisor](supervisor.md#supervisor) : public [Robot](cpp-api.md#cpp_robot) {                                                                                      |
+| class [Supervisor](supervisor.md#supervisor) : public [Robot](#cpp_robot) {                                                                                                |
 | &nbsp;&nbsp; enum {MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR};                                  |
 | &nbsp;&nbsp; [Supervisor](robot.md#wb_robot_step)();                                                                                                                       |
 | &nbsp;&nbsp; virtual [~Supervisor](robot.md#wb_robot_step)();                                                                                                              |
 | &nbsp;&nbsp; void [exportImage](supervisor.md#wb_supervisor_export_image)(const std::string &file, int quality) const;                                                     |
-| &nbsp;&nbsp; [Node](cpp-api.md#cpp_node) *[getRoot](supervisor.md#wb_supervisor_node_get_from_def)();                                                                      |
-| &nbsp;&nbsp; [Node](cpp-api.md#cpp_node) *[getSelf](supervisor.md#wb_supervisor_node_get_from_def)();                                                                      |
-| &nbsp;&nbsp; [Node](cpp-api.md#cpp_node) *[getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(const std::string &name);                                            |
-| &nbsp;&nbsp; [Node](cpp-api.md#cpp_node) *[getFromId](supervisor.md#wb_supervisor_node_get_from_def)(int id);                                                              |
+| &nbsp;&nbsp; [Node](#cpp_node) *[getRoot](supervisor.md#wb_supervisor_node_get_from_def)();                                                                                |
+| &nbsp;&nbsp; [Node](#cpp_node) *[getSelf](supervisor.md#wb_supervisor_node_get_from_def)();                                                                                |
+| &nbsp;&nbsp; [Node](#cpp_node) *[getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(const std::string &name);                                                      |
+| &nbsp;&nbsp; [Node](#cpp_node) *[getFromId](supervisor.md#wb_supervisor_node_get_from_def)(int id);                                                                        |
 | &nbsp;&nbsp; virtual void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, const std::string &label, double xpos, double ypos,                                    |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency);                                                                                                     |
 | &nbsp;&nbsp; virtual void [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(int status);                                                                       |
@@ -592,7 +592,7 @@ The following tables describe the C++ classes and their methods.
 |                                                                                            |
 | ------------------------------------------------------------------------------------------ |
 | #include `<`webots/TouchSensor.hpp`>`                                                      |
-| class [TouchSensor](touchsensor.md#touchsensor) : public [Device](cpp-api.md#cpp_device) { |
+| class [TouchSensor](touchsensor.md#touchsensor) : public [Device](#cpp_device) {           |
 | &nbsp;&nbsp; enum {BUMPER, FORCE, FORCE3D};                                                |
 | &nbsp;&nbsp; virtual void [enable](touchsensor.md#wb_touch_sensor_get_values)(int ms);     |
 | &nbsp;&nbsp; virtual void [disable](touchsensor.md#wb_touch_sensor_get_values)();          |

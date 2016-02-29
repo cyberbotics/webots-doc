@@ -43,10 +43,11 @@ class Reference:
     anchor=''
     kind=''
 
-    def __init__(self, refId, filename='', anchor='', kind=''):
+    def __init__(self, refId, bookName='', filename='', anchor='', kind=''):
         if not refId or len(refId) <= 0:
             raise Exception('Invalid reference refId')
         self.refId = refId
+        self.bookName = bookName
         self.filename = filename
         self.anchor = anchor
         self.kind = kind
@@ -63,7 +64,10 @@ class Reference:
             return self.kind
 
     def getUrl(self, currentMDFile):
-        fn = self.filename  # if self.filename == currentMDFile else ''
+        currentMDFile
+        fn = self.filename
+        if self.bookName + os.sep + self.filename == currentMDFile:
+            fn = ''
         if len(self.anchor) > 0:
             return '%s#%s' % (fn, self.anchor)
         else:
@@ -274,7 +278,7 @@ class BookParser:
             else:
                 kind = idNode.tag
 
-            ref = Reference(refId, filename, anchor, kind)
+            ref = Reference(refId, self.bookName, filename, anchor, kind)
             self.referenceManager.addReference(ref)
 
         print self.referenceManager

@@ -126,7 +126,7 @@ TwoColorChair {
 ```
 
 The "TwoChairs.wbt" file once loaded by Webots appears as shown in [this
-figure](example.md#two-instances-of-the-twocolorchair-proto-in-webots).
+figure](#two-instances-of-the-twocolorchair-proto-in-webots).
 
 As you can observe in this example, defining MFNode fields in the PROTO
 interface allows to reuse the same model for slightly different objects or

@@ -14,12 +14,12 @@ Pen {
 
 ### Description
 
-The [Pen](pen.md#pen) node models a pen attached to a mobile robot, typically
-used to show the trajectory of the robot. The paint direction of the
+The [Pen](#pen) node models a pen attached to a mobile robot, typically used to
+show the trajectory of the robot. The paint direction of the
 [Pen](solid.md#solid) device coincides with the *-y*-axis of the node. So, it
 can be adjusted by modifying the rotation and translation fields of the
 [Solid](solid.md#solid) node. By setting the `maxDistance` field is possible to
-define the range of the [Pen](pen.md#pen) and paint only on objects close to the
+define the range of the [Pen](#pen) and paint only on objects close to the
 device. For example with a small value of `maxDistance` you can simulate the
 real behaviour of a pen or pencil that writes only on physical contact. If
 `maxDistance` is set to 0 (default value), the range will be unlimited.
@@ -65,9 +65,9 @@ the range [0,1]. This field can also be changed from the pen API, using the
 `wb_pen_set_ink_color()` function.
 - `leadSize`: define the width of the "tip" of the pen. This allows the robot to
 write a wider or narrower track.
-- `maxDistance`: define the maximal distance between the [Pen](pen.md#pen) device
-and a paintable object and allows to simulate write-on-contact behaviors. A
-value smaller or equal 0 represents an unlimited painting range.
+- `maxDistance`: define the maximal distance between the [Pen](#pen) device and a
+paintable object and allows to simulate write-on-contact behaviors. A value
+smaller or equal 0 represents an unlimited painting range.
 - `write`: this boolean field allows the robot to enable or disable writing with
 the pen. It is also switchable from the pen API, using the `wb_pen_write()`
 function.

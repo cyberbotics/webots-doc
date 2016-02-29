@@ -10,33 +10,32 @@ Supervisor {
 
 ### Description
 
-A [Supervisor](supervisor.md#supervisor) is a special kind of
-[Robot](robot.md#robot) which is specially designed to control the simulation. A
-[Supervisor](supervisor.md#supervisor) has access to extra functions that are
-not available to a regular [Robot](robot.md#robot). If a
-[Supervisor](supervisor.md#supervisor) contains devices then the
-[Supervisor](supervisor.md#supervisor) controller can use them. Webots PRO is
-required to use the [Supervisor](supervisor.md#supervisor) node.
+A [Supervisor](#supervisor) is a special kind of [Robot](robot.md#robot) which
+is specially designed to control the simulation. A [Supervisor](#supervisor) has
+access to extra functions that are not available to a regular
+[Robot](robot.md#robot). If a [Supervisor](#supervisor) contains devices then
+the [Supervisor](#supervisor) controller can use them. Webots PRO is required to
+use the [Supervisor](#supervisor) node.
 
 > **note**:
-Note that in some special cases the [Supervisor](supervisor.md#supervisor)
-functions might return wrong values and it might not be possible to retrieve
-fields and nodes. This occurs when closing a world and quitting its controllers,
-i.e. reverting the current world, opening a new world, or closing Webots. In
-this case the output will be a NULL pointer or a default value. For functions
-returning a string, an empty string is returned instead of a NULL pointer.
+Note that in some special cases the [Supervisor](#supervisor) functions might
+return wrong values and it might not be possible to retrieve fields and nodes.
+This occurs when closing a world and quitting its controllers, i.e. reverting
+the current world, opening a new world, or closing Webots. In this case the
+output will be a NULL pointer or a default value. For functions returning a
+string, an empty string is returned instead of a NULL pointer.
 
 <!-- -->
 
 > **note** [C++, Java, Python]:
 It is a good practice to check for a NULL pointer after calling a
-[Supervisor](supervisor.md#supervisor) function.
+[Supervisor](#supervisor) function.
 
 ### Supervisor Functions
 
 As for a regular [Robot](robot.md#robot) controller, the `wb_robot_init()`,
-`wb_robot_step()`, etc. functions must be used in a
-[Supervisor](supervisor.md#supervisor) controller.
+`wb_robot_step()`, etc. functions must be used in a [Supervisor](#supervisor)
+controller.
 
 **Name** <a name="wb_supervisor_export_image"/>
 
@@ -66,8 +65,8 @@ unfinished (and hence corrupted) file for webcam applications.
 
 The "projects/samples/howto/worlds/supervisor.wbt" world provides an example on
 how to use the `wb_supervisor_export_image()` function. In this example, the
-[Supervisor](supervisor.md#supervisor) controller takes a snapshot image each
-time a goal is scored.
+[Supervisor](#supervisor) controller takes a snapshot image each time a goal is
+scored.
 
 ---
 
@@ -130,9 +129,9 @@ usage is provided in the "supervisor.wbt" sample worlds (located in the
 "projects/samples/devices/worlds" directory of Webots.
 
 The `wb_supervisor_node_get_self()` function returns a handle to the
-[Supervisor](supervisor.md#supervisor) node itself on which the controller is
-run. This is a utility function that simplifies the task of retrieving the base
-node without having to define a DEF name for it.
+[Supervisor](#supervisor) node itself on which the controller is run. This is a
+utility function that simplifies the task of retrieving the base node without
+having to define a DEF name for it.
 
 ---
 
@@ -453,7 +452,7 @@ the corresonding body are reset to 0, hence the inertia is also zeroed. The
 `node` argument must be a [Solid](solid.md#solid) node (or a derived node). This
 function could be useful for resetting the physics of a solid after changing its
 translation or rotation. To stop the inertia of all available solids please
-refer to [this section](supervisor.md#wb_supervisor_simulation_reset_physics).
+refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 ---
 
@@ -687,7 +686,7 @@ actually implemented by calling the ODE `dBodySetLinearVel()` and
 `dBodySetAngularVel()` functions for all bodies with a zero velocity parameter.
 This function is especially useful for resetting a robot to its initial position
 and inertia. To stop the inertia of a single [Solid](solid.md#solid) node please
-refer to [this section](supervisor.md#wb_supervisor_node_reset_physics).
+refer to [this section](#wb_supervisor_node_reset_physics).
 
 Furthermore, this function resets the seed of the random number generator used
 in Webots, so that noise-based simulations can be be reproduced identically
@@ -916,8 +915,7 @@ number of item minus one, otherwise the value of the field remains unchanged
 Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when
 changing its translation or rotation using `wb_supervisor_field_set_sf_vec2f`
 and `wb_supervisor_field_set_sf_rotation` functions. If needed, the user has to
-explicitly call [this section](supervisor.md#wb_supervisor_node_reset_physics)
-function.
+explicitly call [this section](#wb_supervisor_node_reset_physics) function.
 
 **Examples**
 

@@ -14,9 +14,9 @@ Direct derived nodes: [Solid](solid.md#solid).
 
 ### Description
 
-The [Transform](transform.md#transform) node is a grouping node that defines a
-coordinate system for its children that is relative to the coordinate systems of
-its parent.
+The [Transform](#transform) node is a grouping node that defines a coordinate
+system for its children that is relative to the coordinate systems of its
+parent.
 
 ### Field Summary
 

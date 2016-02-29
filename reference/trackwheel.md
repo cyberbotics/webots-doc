@@ -12,16 +12,15 @@ TrackWheel {
 
 ### Description
 
-The [TrackWheel](trackwheel.md#trackwheel) node defines a wheel of a track
-system defined by a [Track](track.md#track) node. The shape defined inside the
-`children` field of the [TrackWheel](trackwheel.md#trackwheel) node is
-automatically rotated along the z-axis based on the speed of the parent
-[Track](track.md#track) node. Additionally this node it is used by the parent
-[Track](track.md#track) node to compute the track belt path used for geometries
-animation.
+The [TrackWheel](#trackwheel) node defines a wheel of a track system defined by
+a [Track](track.md#track) node. The shape defined inside the `children` field of
+the [TrackWheel](#trackwheel) node is automatically rotated along the z-axis
+based on the speed of the parent [Track](track.md#track) node. Additionally this
+node it is used by the parent [Track](track.md#track) node to compute the track
+belt path used for geometries animation.
 
-[TrackWheel](trackwheel.md#trackwheel) node can only be inserted in the
-`children` field of a [Track](track.md#track) node.
+[TrackWheel](#trackwheel) node can only be inserted in the `children` field of a
+[Track](track.md#track) node.
 
 ### Field Summary
 

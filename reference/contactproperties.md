@@ -16,25 +16,23 @@ ContactProperties {
 
 ### Description
 
-[ContactProperties](contactproperties.md#contactproperties) nodes define the
-contact properties to use in case of contact between [Solid](solid.md#solid)
-nodes (or any node derived from [Solid](solid.md#solid)).
-[ContactProperties](contactproperties.md#contactproperties) nodes are placed in
-the `contactProperties` field of the [WorldInfo](worldinfo.md#worldinfo) node.
-Each [ContactProperties](contactproperties.md#contactproperties) node specifies
-the name of two *materials* for which these
-[ContactProperties](contactproperties.md#contactproperties) are valid.
+[ContactProperties](#contactproperties) nodes define the contact properties to
+use in case of contact between [Solid](solid.md#solid) nodes (or any node
+derived from [Solid](solid.md#solid)). [ContactProperties](#contactproperties)
+nodes are placed in the `contactProperties` field of the
+[WorldInfo](worldinfo.md#worldinfo) node. Each
+[ContactProperties](#contactproperties) node specifies the name of two
+*materials* for which these [ContactProperties](#contactproperties) are valid.
 
 When two [Solid](solid.md#solid) nodes collide, a matching
-[ContactProperties](contactproperties.md#contactproperties) node is searched in
-the [WorldInfo](worldinfo.md#worldinfo).`contactProperties` field. A
-[ContactProperties](contactproperties.md#contactproperties) node will match if
-its `material1` and `material2` fields correspond (in any order) to the the
-`contactMaterial` fields of the two colliding [Solid](solid.md#solid)s. The
-values of the first matching
-[ContactProperties](contactproperties.md#contactproperties) are applied to the
-contact. If no matching node is found, default values are used. The default
-values are the same as those indicated above.
+[ContactProperties](#contactproperties) node is searched in the
+[WorldInfo](worldinfo.md#worldinfo).`contactProperties` field. A
+[ContactProperties](#contactproperties) node will match if its `material1` and
+`material2` fields correspond (in any order) to the the `contactMaterial` fields
+of the two colliding [Solid](solid.md#solid)s. The values of the first matching
+[ContactProperties](#contactproperties) are applied to the contact. If no
+matching node is found, default values are used. The default values are the same
+as those indicated above.
 
 > **note**:
 In older Webots versions, contact properties used to be specified in
@@ -42,7 +40,7 @@ In older Webots versions, contact properties used to be specified in
 properties specified like this are still functional in Webots, but they trigger
 deprecation warnings. To remove these warning you need to switch to the new
 scheme described in this page. This can be done in three steps: 1. Add
-[ContactProperties](contactproperties.md#contactproperties) nodes in
+[ContactProperties](#contactproperties) nodes in
 [WorldInfo](worldinfo.md#worldinfo), 2. Define the `contactMaterial` fields of
 [Solid](solid.md#solid) nodes, 3. Reset the values of `coulombFriction, bounce,
 bounceVelocity` and `forceDependentSlip` in the [Physics](physics.md#physics)
@@ -51,10 +49,10 @@ nodes.
 ### Field Summary
 
 - The `material1` and `material2` fields specify the two *contact materials* to
-which this [ContactProperties](contactproperties.md#contactproperties) node must
-be applied. The values in this fields should match the `contactMaterial` fields
-of [Solid](solid.md#solid) nodes in the simulation. The values in `material1`
-and `material2` are exchangeable.
+which this [ContactProperties](#contactproperties) node must be applied. The
+values in this fields should match the `contactMaterial` fields of
+[Solid](solid.md#solid) nodes in the simulation. The values in `material1` and
+`material2` are exchangeable.
 
 - The `coulombFriction` are the Coulomb friction coefficients. They must be in the
 range 0 to infinity (use -1 for infinity). 0 results in a frictionless contact,

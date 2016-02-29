@@ -10,9 +10,9 @@ PositionSensor {
 
 ### Description
 
-A [PositionSensor](positionsensor.md#positionsensor) node can be used in a
-mechanical simulation to monitor a joint position. The position sensor can be
-inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
+A [PositionSensor](#positionsensor) node can be used in a mechanical simulation
+to monitor a joint position. The position sensor can be inserted in the `device`
+field of a [HingeJoint](hingejoint.md#hingejoint), a
 [Hinge2Joint](hinge2joint.md#hinge2joint), a
 [SliderJoint](sliderjoint.md#sliderjoint), or a [Track](track.md#track).
 Depending on the [Joint](joint.md#joint) type, it will measure the angular

@@ -3,10 +3,9 @@
 In this first tutorial, you will create your first simulation. This simulation
 will contain a simple environment (a light and an arena with floor and walls), a
 predefined robot (e-puck) and a controller program that will make the robot move
-(see [this
-figure](tutorial-1-your-first-simulation-in-webots-20-minutes.md#what-you-should-see-at-the-end-of-the-tutorial)).
-The objective of this tutorial is to familiarize yourself with the user
-interface and with the basic concepts of Webots.
+(see [this figure](#what-you-should-see-at-the-end-of-the-tutorial)). The
+objective of this tutorial is to familiarize yourself with the user interface
+and with the basic concepts of Webots.
 
 %figure "What you should see at the end of the tutorial."
 

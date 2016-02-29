@@ -25,11 +25,10 @@ Camera {
 
 ### Description
 
-The [Camera](camera.md#camera) node is used to model a robot's on-board camera
-or a range-finder. The resulted image can be displayed on the 3D window.
-Depending on its setup, the Camera node can model a linear camera, a lidar
-device, a Microsoft Kinect or even a biological eye which is spherically
-distorted.
+The [Camera](#camera) node is used to model a robot's on-board camera or a
+range-finder. The resulted image can be displayed on the 3D window. Depending on
+its setup, the Camera node can model a linear camera, a lidar device, a
+Microsoft Kinect or even a biological eye which is spherically distorted.
 
 ### Field Summary
 
@@ -157,7 +156,7 @@ because the internal format could change.
 > **note** [Matlab]:
 The Matlab API uses a language-specific representation of color images
 consisting of a 3D array of RGB triplets. Please look at the [Matlab
-example](camera.md#wb_camera_get_image) in the `wb_camera_get_image` function's
+example](#wb_camera_get_image) in the `wb_camera_get_image` function's
 description.
 
 #### Range-Finder
@@ -254,12 +253,12 @@ of `vFov/2`).
 %end
 
 The camera image is shown by default on top of the 3D window with a magenta
-border, see [this figure](camera.md#camera-overlay-image). The user can move
-this camera image at the desired position using the mouse drag and drop and
-resize it by clicking on the icon at the bottom right corner. Additionally a
-close button is available on the top right corner to hide the image. Once the
-robot is selected, it is also possible to show or hide the overlay images from
-the `Camera Devices` item in `Robot` menu.
+border, see [this figure](#camera-overlay-image). The user can move this camera
+image at the desired position using the mouse drag and drop and resize it by
+clicking on the icon at the bottom right corner. Additionally a close button is
+available on the top right corner to hide the image. Once the robot is selected,
+it is also possible to show or hide the overlay images from the `Camera Devices`
+item in `Robot` menu.
 
 It is also possible to show the camera image in an external window by
 double-clicking on it. After doing it, the overlay disappears and the new window
@@ -313,10 +312,10 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov)
 
 These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
-the [Camera](camera.md#camera) node, as `fieldOfView`. Note that changing the
-field of view using `wb_camera_set_fov()` is possible only if the camera device
-has a [CameraZoom](camerazoom.md#camerazoom) node defined in its `zoom` field.
-The minimum and maximum values for the field of view are defined in this
+the [Camera](#camera) node, as `fieldOfView`. Note that changing the field of
+view using `wb_camera_set_fov()` is possible only if the camera device has a
+[CameraZoom](camerazoom.md#camerazoom) node defined in its `zoom` field. The
+minimum and maximum values for the field of view are defined in this
 [CameraZoom](camerazoom.md#camerazoom) node, if the zoom is not defined, then
 the functions `wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will
 return the camera's field of view.
@@ -364,7 +363,7 @@ int wb_camera_get_height(WbDeviceTag tag)
 **Description**
 
 These functions return the width and height of a camera image as defined in the
-corresponding [Camera](camera.md#camera) node.
+corresponding [Camera](#camera) node.
 
 ---
 
@@ -383,7 +382,7 @@ double wb_camera_get_near(WbDeviceTag tag)
 **Description**
 
 This function returns the near parameter of a camera device as defined in the
-corresponding [Camera](camera.md#camera) node.
+corresponding [Camera](#camera) node.
 
 ---
 
@@ -402,9 +401,9 @@ int wb_camera_get_type()
 **Description**
 
 This function returns the type of the camera as defined by the `type` field of
-the corresponding [Camera](camera.md#camera) node. The constants defined in
-"camera.h" are summarized in [this
-table](camera.md#return-values-for-the-wb_camera_get_type-function):
+the corresponding [Camera](#camera) node. The constants defined in "camera.h"
+are summarized in [this
+table](#return-values-for-the-wb_camera_get_type-function):
 
 %figure "Return values for the *wb_camera_get_type()* function"
 
@@ -417,7 +416,7 @@ table](camera.md#return-values-for-the-wb_camera_get_type-function):
 
 > **note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
-integers of the [Camera](camera.md#camera) class (for example, Camera::COLOR).
+integers of the [Camera](#camera) class (for example, Camera::COLOR).
 
 ---
 

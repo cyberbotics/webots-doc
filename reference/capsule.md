@@ -13,11 +13,10 @@ Capsule {
 
 ### Description
 
-A [Capsule](capsule.md#capsule) node is like a [Cylinder](cylinder.md#cylinder)
-node except it has half-sphere caps at its ends. The capsule's height, not
-counting the caps, is given by the `height` field. The radius of the caps, and
-of the cylinder itself, is given by the `radius` field. Capsules are aligned
-along the local y-axis.
+A [Capsule](#capsule) node is like a [Cylinder](#cylinder) node except it has
+half-sphere caps at its ends. The capsule's height, not counting the caps, is
+given by the `height` field. The radius of the caps, and of the cylinder itself,
+is given by the `radius` field. Capsules are aligned along the local y-axis.
 
 The capsule can be used either as a graphical or collision detection primitive
 (when placed in a `boundingObject`). The capsule is a particularly fast and

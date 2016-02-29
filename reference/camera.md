@@ -1,6 +1,6 @@
 ## Camera
 
-Derived from [Device](device.md#device).
+Derived from [Device](#device).
 
 ```
 Camera {
@@ -25,11 +25,10 @@ Camera {
 
 ### Description
 
-The [Camera](camera.md#camera) node is used to model a robot's on-board camera
-or a range-finder. The resulted image can be displayed on the 3D window.
-Depending on its setup, the Camera node can model a linear camera, a lidar
-device, a Microsoft Kinect or even a biological eye which is spherically
-distorted.
+The [Camera](#camera) node is used to model a robot's on-board camera or a
+range-finder. The resulted image can be displayed on the 3D window. Depending on
+its setup, the Camera node can model a linear camera, a lidar device, a
+Microsoft Kinect or even a biological eye which is spherically distorted.
 
 ### Field Summary
 
@@ -105,16 +104,16 @@ resolution (it can measure any infinitesimal change). This field is used only
 when type is "range-finder" and accepts any value in the interval (0.0, inf).
 
 - The `lensDistortion` field may contain a
-[CameraLensDistortion](cameralensdistortion.md#cameralensdistortion) node to
-specify the image distortion due to the camera lens.
+[CameraLensDistortion](#cameralensdistortion) node to specify the image
+distortion due to the camera lens.
 
-- The `focus` field may contain a [CameraFocus](camerafocus.md#camerafocus) node
-to provide the camera device with a controllable focusing system. If this field
-is set to NULL, then no focus is available on the camera device.
+- The `focus` field may contain a [CameraFocus](#camerafocus) node to provide the
+camera device with a controllable focusing system. If this field is set to NULL,
+then no focus is available on the camera device.
 
-- The `zoom` field may contain a [CameraZoom](camerazoom.md#camerazoom) node to
-provide the camera device with a controllable zoom system. If this field is set
-to NULL, then no zoom is available on the camera device.
+- The `zoom` field may contain a [CameraZoom](#camerazoom) node to provide the
+camera device with a controllable zoom system. If this field is set to NULL,
+then no zoom is available on the camera device.
 
 - The `compositor` field specifies the name of a compositor to apply on the camera
 image. A compositor can be used to apply a shader in order to alter the original
@@ -157,7 +156,7 @@ because the internal format could change.
 > **note** [Matlab]:
 The Matlab API uses a language-specific representation of color images
 consisting of a 3D array of RGB triplets. Please look at the [Matlab
-example](camera.md#wb_camera_get_image) in the `wb_camera_get_image` function's
+example](#wb_camera_get_image) in the `wb_camera_get_image` function's
 description.
 
 #### Range-Finder
@@ -175,7 +174,7 @@ logarithmic values, an algorithm linearizes the buffer to metric values between
 
 Range-finder cannot see transparent objects. An object can be semi-transparent
 either if its texture has an alpha channel, or if its
-[Material](material.md#material).`transparency` field is not equal to 1.
+[Material](#material).`transparency` field is not equal to 1.
 
 ### Frustum
 
@@ -254,12 +253,12 @@ of `vFov/2`).
 %end
 
 The camera image is shown by default on top of the 3D window with a magenta
-border, see [this figure](camera.md#camera-overlay-image). The user can move
-this camera image at the desired position using the mouse drag and drop and
-resize it by clicking on the icon at the bottom right corner. Additionally a
-close button is available on the top right corner to hide the image. Once the
-robot is selected, it is also possible to show or hide the overlay images from
-the `Camera Devices` item in `Robot` menu.
+border, see [this figure](#camera-overlay-image). The user can move this camera
+image at the desired position using the mouse drag and drop and resize it by
+clicking on the icon at the bottom right corner. Additionally a close button is
+available on the top right corner to hide the image. Once the robot is selected,
+it is also possible to show or hide the overlay images from the `Camera Devices`
+item in `Robot` menu.
 
 It is also possible to show the camera image in an external window by
 double-clicking on it. After doing it, the overlay disappears and the new window
@@ -272,7 +271,7 @@ restored.
 
 **wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -298,7 +297,7 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 **wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -313,13 +312,13 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov)
 
 These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
-the [Camera](camera.md#camera) node, as `fieldOfView`. Note that changing the
-field of view using `wb_camera_set_fov()` is possible only if the camera device
-has a [CameraZoom](camerazoom.md#camerazoom) node defined in its `zoom` field.
-The minimum and maximum values for the field of view are defined in this
-[CameraZoom](camerazoom.md#camerazoom) node, if the zoom is not defined, then
-the functions `wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will
-return the camera's field of view.
+the [Camera](#camera) node, as `fieldOfView`. Note that changing the field of
+view using `wb_camera_set_fov()` is possible only if the camera device has a
+[CameraZoom](#camerazoom) node defined in its `zoom` field. The minimum and
+maximum values for the field of view are defined in this
+[CameraZoom](#camerazoom) node, if the zoom is not defined, then the functions
+`wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will return the camera's
+field of view.
 
 ---
 
@@ -327,7 +326,7 @@ return the camera's field of view.
 
 **wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -342,8 +341,8 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
 **Description**
 
 These functions allow the controller to get and set the focusing parameters.
-Note that if the camera device has no [CameraFocus](camerafocus.md#camerafocus)
-node defined in its `focus` field, it is not possible to call
+Note that if the camera device has no [CameraFocus](#camerafocus) node defined
+in its `focus` field, it is not possible to call
 `wb_camera_set_focal_distance()` and the other functions will return 0.
 
 ---
@@ -352,7 +351,7 @@ node defined in its `focus` field, it is not possible to call
 
 **wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -364,7 +363,7 @@ int wb_camera_get_height(WbDeviceTag tag)
 **Description**
 
 These functions return the width and height of a camera image as defined in the
-corresponding [Camera](camera.md#camera) node.
+corresponding [Camera](#camera) node.
 
 ---
 
@@ -372,7 +371,7 @@ corresponding [Camera](camera.md#camera) node.
 
 **wb\_camera\_get\_near** - *get the near parameter of the camera device*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -383,7 +382,7 @@ double wb_camera_get_near(WbDeviceTag tag)
 **Description**
 
 This function returns the near parameter of a camera device as defined in the
-corresponding [Camera](camera.md#camera) node.
+corresponding [Camera](#camera) node.
 
 ---
 
@@ -391,7 +390,7 @@ corresponding [Camera](camera.md#camera) node.
 
 **wb\_camera\_get\_type** - *get the type of the camera*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -402,9 +401,9 @@ int wb_camera_get_type()
 **Description**
 
 This function returns the type of the camera as defined by the `type` field of
-the corresponding [Camera](camera.md#camera) node. The constants defined in
-"camera.h" are summarized in [this
-table](camera.md#return-values-for-the-wb_camera_get_type-function):
+the corresponding [Camera](#camera) node. The constants defined in "camera.h"
+are summarized in [this
+table](#return-values-for-the-wb_camera_get_type-function):
 
 %figure "Return values for the *wb_camera_get_type()* function"
 
@@ -417,7 +416,7 @@ table](camera.md#return-values-for-the-wb_camera_get_type-function):
 
 > **note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
-integers of the [Camera](camera.md#camera) class (for example, Camera::COLOR).
+integers of the [Camera](#camera) class (for example, Camera::COLOR).
 
 ---
 
@@ -425,7 +424,7 @@ integers of the [Camera](camera.md#camera) class (for example, Camera::COLOR).
 
 **wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -551,7 +550,7 @@ the OpenGL z-buffer.
 
 **wb\_camera\_get\_range\_image**, **wb\_camera\_range\_image\_get\_depth**, **wb\_camera\_get\_max\_range** - *get the range image and range data from a range-finder camera*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>
@@ -602,7 +601,7 @@ are identical but their handling is of course different.
 
 **wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](#cpp_camera)}, {[Java](#java_camera)}, {[Python](#python_camera)}, {[Matlab](#matlab_camera)}
 
 ``` c
 #include <webots/camera.h>

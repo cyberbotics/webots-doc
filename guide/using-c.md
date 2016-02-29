@@ -20,7 +20,7 @@ The advantage of using the MinGW compiler will be the better portability of your
 controller code. If you develop your code with MinGW it will be straightforward
 to recompile it on the other Webots supported platforms: Mac OS X and Linux.
 However, if you prefer using the Visual C++ compiler you will find instructions
-[there](using-visual-cpp-with-webots.md#using-visual-cpp-with-webots).
+[there](#using-visual-cpp-with-webots).
 
 #### Mac OS X Instructions
 

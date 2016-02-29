@@ -14,18 +14,17 @@ JointParameters {
 
 > **note**:
 The default value of the axis field may change in a derived class. For instance,
-the axis default value of an
-[HingeJointParameters](hingejointparameters.md#hingejointparameters) is `1 0 0`.
+the axis default value of an [HingeJointParameters](#hingejointparameters) is `1
+0 0`.
 
 ### Description
 
-The [JointParameters](jointparameters.md#jointparameters) node is a concrete
-base node used to specify various joint parameters related to an axis along
-which, or around which, the motion is allowed. As an instantiated node it can be
-used within the jointParameters field of
-[SliderJoint](sliderjoint.md#sliderjoint) or within the jointParameters2 field
-of [Hinge2Joint](hinge2joint.md#hinge2joint). Unlike the other joint parameters
-node, it has no anchor.
+The [JointParameters](#jointparameters) node is a concrete base node used to
+specify various joint parameters related to an axis along which, or around
+which, the motion is allowed. As an instantiated node it can be used within the
+jointParameters field of [SliderJoint](#sliderjoint) or within the
+jointParameters2 field of [Hinge2Joint](#hinge2joint). Unlike the other joint
+parameters node, it has no anchor.
 
 ### Field Summary
 
@@ -47,10 +46,10 @@ the joint motion.
 
 ### Units
 
-Rotational joint units ([HingeJoint](hingejoint.md#hingejoint),
-[Hinge2Joint](hinge2joint.md#hinge2joint)) are expressed in *radians* while
-linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
-*meters*. See [this table](jointparameters.md#joint-units):
+Rotational joint units ([HingeJoint](#hingejoint), [Hinge2Joint](#hinge2joint))
+are expressed in *radians* while linear joint units
+([SliderJoint](#sliderjoint)) are expressed in *meters*. See [this
+table](#joint-units):
 
 %figure "Joint Units"
 
@@ -76,22 +75,21 @@ linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
 
 The `position` field is a scalar representing an angle (in radians) or a
 distance (in meters) computed with respect to the initial `translation` and
-`rotation` of the [Joint](joint.md#joint)'s [Solid](solid.md#solid) child. If
-its value is zero, then the [Joint](joint.md#joint)'s child is *by definition*
-set with its initial `translation` and `rotation`. For a joint with one or two
-rotational degrees of freedom (e.g., [HingeJoint](hingejoint.md#hingejoint),
-[Hinge2Joint](hinge2joint.md#hinge2joint)), the `position` field value is the
-rotation angle around one the joint axes that was applied to the
-[Joint](joint.md#joint)'s child initially in zero position. For a slider joint,
-`position` is the translation length along the sliding axis that was applied to
-the [Joint](joint.md#joint)'s child initially in zero position.
+`rotation` of the [Joint](#joint)'s [Solid](#solid) child. If its value is zero,
+then the [Joint](#joint)'s child is *by definition* set with its initial
+`translation` and `rotation`. For a joint with one or two rotational degrees of
+freedom (e.g., [HingeJoint](#hingejoint), [Hinge2Joint](#hinge2joint)), the
+`position` field value is the rotation angle around one the joint axes that was
+applied to the [Joint](#joint)'s child initially in zero position. For a slider
+joint, `position` is the translation length along the sliding axis that was
+applied to the [Joint](#joint)'s child initially in zero position.
 
-For example if we have a [HingeJoint](hingejoint.md#hingejoint) and a `position`
-field value of 1.5708, this means that this [HingeJoint](joint.md#joint) is 90
-degrees from its initial rotation with respect to the hinge rotation axis. The
-values passed to the `wb_motor_set_position()` function are specified with
-respect to the zero position. The values of the `minStop` and `maxStop` fields
-are also defined with respect to the zero position.
+For example if we have a [HingeJoint](#hingejoint) and a `position` field value
+of 1.5708, this means that this [HingeJoint](#joint) is 90 degrees from its
+initial rotation with respect to the hinge rotation axis. The values passed to
+the `wb_motor_set_position()` function are specified with respect to the zero
+position. The values of the `minStop` and `maxStop` fields are also defined with
+respect to the zero position.
 
 ### Joint Limits
 
@@ -107,7 +105,7 @@ stops (for more information see the ODE documentation on `dParamLoStop` and
 `dParamHiStop`).
 
 Finally, note that when both soft (`minPosition` and `maxPosition`, see the
-[Motor](motor.md#motor)'s "Motor Limits" section) and hard limits (`minStop` and
+[Motor](#motor)'s "Motor Limits" section) and hard limits (`minStop` and
 `maxStop`) are activated, the range of the soft limits must be included in the
 range of the hard limits, such that `minStop <= minValue` and `maxStop>=
 maxValue`.
@@ -126,9 +124,9 @@ the spring force is computed so as to be proportional to the current joint
 position, and to move the joint back to its initial position. When designing a
 robot model that uses springs, it is important to remember that the spring's
 resting position for each joint will correspond to the initial position of the
-joint. The only expection arise when the closest upper [Solid](solid.md#solid)
-of the [Joint](joint.md#joint) is passive, i.e. the `physics` field is not
-defined. In this case the spring force direction is inverted.
+joint. The only expection arise when the closest upper [Solid](#solid) of the
+[Joint](#joint) is passive, i.e. the `physics` field is not defined. In this
+case the spring force direction is inverted.
 
 The `dampingConstant` field specifies the value of the joint damping constant.
 The value of `dampingConstant` must be positive or zero. If `dampingConstant` is
@@ -145,17 +143,14 @@ velocity computed by the physics simulator.
 
 %end
 
-As you can see in (see  [this
-figure](jointparameters.md#mechanical-diagram-of-a-slider-joint)), a
-[Joint](joint.md#joint) creates a joint between two masses *m<sub>0</sub>* and
-*m<sub>1</sub>*. The mass *m<sub>0</sub>* is defined by the
-[Physics](physics.md#physics) node in the closest upper [Solid](solid.md#solid)
-of the [Joint](joint.md#joint). The mass *m<sub>1</sub>* is defined by the
-[Physics](physics.md#physics) node of the [Solid](solid.md#solid) placed into
-the `endPoint` of the [Joint](joint.md#joint). The value *x<sub>0</sub>*
-corresponds to the anchor position of the [Joint](joint.md#joint) defined in the
-`anchor` field of a [JointParameters](jointparameters.md#jointparameters) node.
-The position *x* corresponds to the current position of the
-[Joint](joint.md#joint) defined in the `position` field of a
-[JointParameters](jointparameters.md#jointparameters) node.
+As you can see in (see  [this figure](#mechanical-diagram-of-a-slider-joint)), a
+[Joint](#joint) creates a joint between two masses *m<sub>0</sub>* and
+*m<sub>1</sub>*. The mass *m<sub>0</sub>* is defined by the [Physics](#physics)
+node in the closest upper [Solid](#solid) of the [Joint](#joint). The mass
+*m<sub>1</sub>* is defined by the [Physics](#physics) node of the
+[Solid](#solid) placed into the `endPoint` of the [Joint](#joint). The value
+*x<sub>0</sub>* corresponds to the anchor position of the [Joint](#joint)
+defined in the `anchor` field of a [JointParameters](#jointparameters) node. The
+position *x* corresponds to the current position of the [Joint](#joint) defined
+in the `position` field of a [JointParameters](#jointparameters) node.
 

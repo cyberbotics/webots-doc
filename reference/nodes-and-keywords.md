@@ -13,8 +13,7 @@ DirectionalLight, ElevationGrid, Fog, Group, ImageTexture, IndexedFaceSet,
 IndexedLineSet, Material, PointLight, Shape, Sphere, SpotLight,
 TextureCoordinate, TextureTransform, Transform, Viewpoint` and `WorldInfo`.
 
-Please refer to [this
-chapter](nodes-and-api-functions.md#nodes-and-api-functions) for a detailed
+Please refer to [this chapter](#nodes-and-api-functions) for a detailed
 description of Webots nodes and fields. It specifies which fields are actually
 used. For a comprehensive description of the VRML97 nodes, you can also refer to
 the VRML97 documentation.
@@ -38,8 +37,7 @@ LightSensor, LinearMotor, Pen, Physics, Plane, PositionSensor, Receiver, Robot,
 RotationalMotor, Servo, SliderJoint, Solid, SolidReference, Supervisor` and
 `TouchSensor`.
 
-Please refer to [this
-chapter](nodes-and-api-functions.md#nodes-and-api-functions) for a detailed
+Please refer to [this chapter](#nodes-and-api-functions) for a detailed
 description of Webots nodes and fields.
 
 ### Reserved keywords

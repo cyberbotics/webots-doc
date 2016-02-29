@@ -11,18 +11,16 @@ Viewpoint {
 }
 ```
 
-The [Viewpoint](viewpoint.md#viewpoint) node defines a specific location in the
-local coordinate system from which the user may view the scene.
+The [Viewpoint](#viewpoint) node defines a specific location in the local
+coordinate system from which the user may view the scene.
 
-The `position` and `orientation` fields of the
-[Viewpoint](viewpoint.md#viewpoint) node specify absolute locations in the
-coordinate system. In the default position and orientation, the viewer is on the
-*z*-axis, looking down the *-z*-axis toward the origin with *+x* to the right
-and *+y* straight up.
+The `position` and `orientation` fields of the [Viewpoint](#viewpoint) node
+specify absolute locations in the coordinate system. In the default position and
+orientation, the viewer is on the *z*-axis, looking down the *-z*-axis toward
+the origin with *+x* to the right and *+y* straight up.
 
 Navigating in the 3D view by dragging the mouse pointer dynamically changes the
-`position` and the `orientation` fields of the
-[Viewpoint](viewpoint.md#viewpoint) node.
+`position` and the `orientation` fields of the [Viewpoint](#viewpoint) node.
 
 The `fieldOfView` field specifies the viewing angle in radians. A small field of
 view roughly corresponds to a telephoto lens; a large field of view roughly

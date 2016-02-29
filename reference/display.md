@@ -1,6 +1,6 @@
 ## Display
 
-Derived from [Device](device.md#device).
+Derived from [Device](#device).
 
 ```
 Display {
@@ -11,18 +11,17 @@ Display {
 
 ### Description
 
-The [Display](display.md#display) node allows to handle a 2D pixel array using
-simple API functions, and render it into a 2D overlay on the 3D view, into a 2D
-texture of any [Shape](shape.md#shape) node, or both. It can model an embedded
-screen or it can display any graphical information such as graphs, text, robot
-trajectory, filtered camera images and so on.
+The [Display](#display) node allows to handle a 2D pixel array using simple API
+functions, and render it into a 2D overlay on the 3D view, into a 2D texture of
+any [Shape](#shape) node, or both. It can model an embedded screen or it can
+display any graphical information such as graphs, text, robot trajectory,
+filtered camera images and so on.
 
-If the first child of the [Display](display.md#display) node is or contains
-(recursive search if the first node is a [Group](group.md#group)) a
-[Shape](shape.md#shape) node having a
-[ImageTexture](imagetexture.md#imagetexture), then the internal texture of
-the(se) [ImageTexture](imagetexture.md#imagetexture) node(s) is replaced by the
-texture of the [Display](display.md#display).
+If the first child of the [Display](#display) node is or contains (recursive
+search if the first node is a [Group](#group)) a [Shape](#shape) node having a
+[ImageTexture](#imagetexture), then the internal texture of the(se)
+[ImageTexture](#imagetexture) node(s) is replaced by the texture of the
+[Display](#display).
 
 ### Field Summary
 
@@ -31,17 +30,16 @@ texture of the [Display](display.md#display).
 
 ### Coordinates system
 
-Internally, the [Display](display.md#display) image is stored in a 2D pixel
-array. The RGBA value (4x8 bits) of a pixel is dislayed in the status bar (the
-bar at the bottom of the console window) when the mouse hovers over the pixel in
-the [Display](display.md#display). The 2D array has a fixed size defined by the
-`width` and `height` fields. The (0,0) coordinate corresponds to the top left
-pixel, while the (`width`-1,`height`-1) coordinate corresponds to the bottom
-right pixel.
+Internally, the [Display](#display) image is stored in a 2D pixel array. The
+RGBA value (4x8 bits) of a pixel is dislayed in the status bar (the bar at the
+bottom of the console window) when the mouse hovers over the pixel in the
+[Display](#display). The 2D array has a fixed size defined by the `width` and
+`height` fields. The (0,0) coordinate corresponds to the top left pixel, while
+the (`width`-1,`height`-1) coordinate corresponds to the bottom right pixel.
 
 ### Command stack
 
-Each function call of the [Display](display.md#display) device API (except for
+Each function call of the [Display](#display) device API (except for
 `wb_display_get_width()` and `wb_display_get_height()`) is storing a specific
 command into an internal stack. This command stack is sent to Webots during the
 next call of the `wb_robot_step()` function, using a FIFO scheme (First In,
@@ -50,13 +48,13 @@ function calls.
 
 ### Context
 
-The [Display](display.md#display) device has among other things two kinds of
-functions; the contextual ones which allow to set the current state of the
-display, and the drawing ones which allow to draw specific primitives. The
-behavior of the drawing functions depends on the display context. For example,
-in order to draw two red lines, the `wb_display_set_color` contextual function
-must be called for setting the display's internal color to red before calling
-twice the `wb_display_draw_line` drawing function to draw the two lines.
+The [Display](#display) device has among other things two kinds of functions;
+the contextual ones which allow to set the current state of the display, and the
+drawing ones which allow to draw specific primitives. The behavior of the
+drawing functions depends on the display context. For example, in order to draw
+two red lines, the `wb_display_set_color` contextual function must be called for
+setting the display's internal color to red before calling twice the
+`wb_display_draw_line` drawing function to draw the two lines.
 
 ### Overlay Image
 
@@ -67,12 +65,12 @@ twice the `wb_display_draw_line` drawing function to draw the two lines.
 %end
 
 The display image is shown by default on top of the 3D window with a cyan
-border, see [this figure](display.md#display-overlay-image). The user can move
-this display image at the desired position using the mouse drag and drop and
-resize it by clicking on the icon at the bottom right corner. Additionally a
-close button is available on the top right corner to hide the image. Once the
-robot is selected, it is also possible to show or hide the overlay image from
-the `Display Devices` item in `Robot` menu.
+border, see [this figure](#display-overlay-image). The user can move this
+display image at the desired position using the mouse drag and drop and resize
+it by clicking on the icon at the bottom right corner. Additionally a close
+button is available on the top right corner to hide the image. Once the robot is
+selected, it is also possible to show or hide the overlay image from the
+`Display Devices` item in `Robot` menu.
 
 It is also possible to show the display image in an external window by
 double-clicking on it. After doing it, the overlay disappears and the new window
@@ -85,7 +83,7 @@ restored.
 
 **wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
+{[C++](#cpp_display)}, {[Java](#java_display)}, {[Python](#python_display)}, {[Matlab](#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -105,7 +103,7 @@ fields.
 
 **wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
+{[C++](#cpp_display)}, {[Java](#java_display)}, {[Python](#python_display)}, {[Matlab](#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -118,8 +116,8 @@ void wb_display_set_opacity(WbDeviceTag tag, double opacity)
 **Description**
 
 These three functions define the context in which the subsequent drawing
-commands (see [draw primitive functions](display.md#wb_display_draw_primitive))
-will be applied.
+commands (see [draw primitive functions](#wb_display_draw_primitive)) will be
+applied.
 
 `wb_display_set_color()` defines the color for the subsequent drawing commands.
 It is expressed as a 3 bytes RGB integer, the most significant byte (leftmost
@@ -143,7 +141,7 @@ replace the old ones for the following drawing instructions. It is expressed as
 a floating point value between 0.0 and 1.0; while 0 means that the new pixel has
 no effect over the old one and 1 means that the new pixel replaces entirely the
 old one. Only the color channel is affected by the `opacity` according to the
-[figure](display.md#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
+[figure](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
 formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
@@ -164,7 +162,7 @@ the magenta color.
 
 **wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
+{[C++](#cpp_display)}, {[Java](#java_display)}, {[Python](#python_display)}, {[Matlab](#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -184,7 +182,7 @@ void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int si
 
 These functions order the execution of a drawing primitive on the display. They
 depend on the context of the display as defined by the contextual functions (see
-[set context functions](display.md#wb_display_set_context)).
+[set context functions](#wb_display_set_context)).
 
 `wb_display_draw_pixel()` draws a pixel at the (`x`,`y`) coordinate.
 
@@ -238,7 +236,7 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 **wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}
+{[C++](#cpp_display)}, {[Java](#java_display)}, {[Python](#python_display)}, {[Matlab](#matlab_display)}
 
 ``` c
 #include <webots/display.h>
@@ -253,9 +251,9 @@ void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir)
 
 **Description**
 
-In addition to the main display image, each [Display](display.md#display) node
-also contains a list of clipboard images used for various image manipulations.
-This list is initially empty. The functions described below use a reference
+In addition to the main display image, each [Display](#display) node also
+contains a list of clipboard images used for various image manipulations. This
+list is initially empty. The functions described below use a reference
 (corresponding to the `WbImageRef` data type) to refer to a specific image.
 Clipboard images can be created either with `wb_display_image_new()`, or
 `wb_display_image_load()`, or `wb_display_image_copy()`. They should be deleted
@@ -288,7 +286,7 @@ parameter to the main display image. The (`x`,`y`) coordinates define the top
 left point of the pasted image. The resulting pixels displayed in the main
 display image are computed using a blending operation (similar to the one
 depicted in the
-[figure](display.md#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
+[figure](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
 formula but involving the alpha channels of the old and new pixels instead of
 the opacity).
 

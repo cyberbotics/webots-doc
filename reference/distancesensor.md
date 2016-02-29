@@ -1,6 +1,6 @@
 ## DistanceSensor
 
-Derived from [Device](device.md#device).
+Derived from [Device](#device).
 
 ```
 DistanceSensor {
@@ -15,18 +15,18 @@ DistanceSensor {
 
 ### Description
 
-The [DistanceSensor](distancesensor.md#distancesensor) node can be used to model
-a generic sensor, an infra-red sensor, a sonar sensor, or a laser range-finder.
-This device simulation is performed by detecting the collisions between one or
+The [DistanceSensor](#distancesensor) node can be used to model a generic
+sensor, an infra-red sensor, a sonar sensor, or a laser range-finder. This
+device simulation is performed by detecting the collisions between one or
 several sensor rays and objects in the environment. In case of generic, sonar
-and laser type the collision occurs with the bounding objects of
-[Solid](solid.md#solid) nodes, whereas infra-red rays collision detection uses
-the [Solid](solid.md#solid) nodes themselves.
+and laser type the collision occurs with the bounding objects of [Solid](#solid)
+nodes, whereas infra-red rays collision detection uses the [Solid](#solid) nodes
+themselves.
 
-The rays of the [DistanceSensor](distancesensor.md#distancesensor) nodes can be
-displayed by checking the menu `View > Optional Rendering > Show Distance Sensor
-Rays`. The red/green transition on the rays indicates the points of intersection
-with the bounding objects.
+The rays of the [DistanceSensor](#distancesensor) nodes can be displayed by
+checking the menu `View > Optional Rendering > Show Distance Sensor Rays`. The
+red/green transition on the rays indicates the points of intersection with the
+bounding objects.
 
 ### Field Summary
 
@@ -56,7 +56,7 @@ in increasing order.
     for a distance value of 0.2 meters, the sensor will return 400 with a standard
     deviation of 10 percent (40), etc. Distance values not directly specified in the
     lookup table will be linearly interpolated. This can be better understood in
-    [this figure](distancesensor.md#sensor-response-versus-obstacle-distance) below.
+    [this figure](#sensor-response-versus-obstacle-distance) below.
 
 %figure "Sensor response versus obstacle distance"
 
@@ -74,7 +74,7 @@ in increasing order.
                       4        0  0.4  ]
 
     The resulting range of measured values is shown in [this
-    figure](distancesensor.md#sensor-response-versus-obstacle-distance-with-opposite-response-noise-increase).
+    figure](#sensor-response-versus-obstacle-distance-with-opposite-response-noise-increase).
 
 %figure "Sensor response versus obstacle distance with opposite response-noise increase"
 
@@ -96,9 +96,8 @@ more details).
     Sensors of type "laser" can have only one ray and they have the particularity to
     draw a red spot at the point where this ray hits an obstacle. This red spot is
     visible on the camera images. If the red spot disappears due to depth fighting,
-    then it could help increasing the `lineScale` value in
-    [WorldInfo](worldinfo.md#worldinfo) node that is used for computing its position
-    offset.
+    then it could help increasing the `lineScale` value in [WorldInfo](#worldinfo)
+    node that is used for computing its position offset.
 
 - `numberOfRays`: number of rays cast by the sensor. The number of rays must be
 equal to, or greater than 1 for "infra-red" and "sonar" sensors. `numberOfRays`
@@ -108,11 +107,11 @@ weighted average of the individual rays' responses. By using multiple rays, a
 more accurate model of the physical infra-red or ultrasound sensor can be
 obtained. The sensor rays are distributed inside 3D-cones whose opening angles
 can be tuned through the `aperture` field. See [this
-figure](distancesensor.md#predefined-configurations-for-1-through-10-sensor-rays)
-for the ray distributions from one to ten rays. The spacial distribution of the
-rays is as much as possible uniform and has a left/right symmetry. There is no
-upper limit on the number of rays; however, Webots' performance drops as the
-number of rays increases.
+figure](#predefined-configurations-for-1-through-10-sensor-rays) for the ray
+distributions from one to ten rays. The spacial distribution of the rays is as
+much as possible uniform and has a left/right symmetry. There is no upper limit
+on the number of rays; however, Webots' performance drops as the number of rays
+increases.
 
 %figure "Predefined configurations for 1 through 10 sensor rays"
 
@@ -135,12 +134,11 @@ beam hits an obstacle.
 - `gaussianWidth`: width of the Gaussian distribution of sensor ray weights (for
 "generic" and "infra-red" sensors). When averaging the sensor's response, the
 individual weight of each sensor ray is computed according to a Gaussian
-distribution as described in [this
-figure](distancesensor.md#weight-distribution-formulas). where *w<sub>i</sub>*
-is the weight of the *i*th ray, *t<sub>i</sub>* is the angle between the *i*th
-ray and the sensor axis, *a* is the aperture angle of the sensor, *g* is the
-Gaussian width, and *n* is the number of rays. As depicted in  [this
-figure](distancesensor.md#example-distribution-for-10-rays-using-a-gaussian-width-of-0-5),
+distribution as described in [this figure](#weight-distribution-formulas). where
+*w<sub>i</sub>* is the weight of the *i*th ray, *t<sub>i</sub>* is the angle
+between the *i*th ray and the sensor axis, *a* is the aperture angle of the
+sensor, *g* is the Gaussian width, and *n* is the number of rays. As depicted in
+[this figure](#example-distribution-for-10-rays-using-a-gaussian-width-of-0-5),
 rays in the center of the sensor cone are given a greater weight than rays in
 the periphery. A wider or narrower distribution can be obtained by tuning the
 `gaussianWidth` field. An approximation of a flat distribution is obtained if a
@@ -187,8 +185,8 @@ hit by the sensor ray. The reflection factor is computed as follows: *f = 0.2 +
 0.8 * red\_level* where *red\_level* is the level of red color of the object hit
 by the sensor ray. This level is evaluated combining the `diffuseColor` and
 `transparency` values of the object, the pixel value of the image texture and
-the paint color applied on the object with the [Pen](pen.md#pen) device. Then,
-the distance value computed by the simulator is divided by the reflection factor
+the paint color applied on the object with the [Pen](#pen) device. Then, the
+distance value computed by the simulator is divided by the reflection factor
 before the lookup table is used to compute the output value.
 
 > **note**:
@@ -203,7 +201,7 @@ in the lookup table, i.e. the value corresponding to sonar sensor's range, if
 the angle of incidence is greater than 22.5 degrees (π/8 radians). In other
 words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
 never return and thus are lost for distance computation (see [this
-figure](distancesensor.md#sonar-sensor)).
+figure](#sonar-sensor)).
 
 %figure "Sonar sensor"
 
@@ -213,11 +211,11 @@ figure](distancesensor.md#sonar-sensor)).
 
 ### Line Following Behavior
 
-Some support for [DistanceSensor](distancesensor.md#distancesensor) nodes used
-for reading the red color level of a textured floor is implemented. This is
-useful to simulate line following behaviors. This feature is demonstrated in the
-"rover.wbt" example (see in the "projects/robots/mindstorms/worlds" directory of
-Webots). The ground texture must be placed in a [Plane](plane.md#plane).
+Some support for [DistanceSensor](#distancesensor) nodes used for reading the
+red color level of a textured floor is implemented. This is useful to simulate
+line following behaviors. This feature is demonstrated in the "rover.wbt"
+example (see in the "projects/robots/mindstorms/worlds" directory of Webots).
+The ground texture must be placed in a [Plane](#plane).
 
 ### DistanceSensor Functions
 
@@ -225,7 +223,7 @@ Webots). The ground texture must be placed in a [Plane](plane.md#plane).
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}
+{[C++](#cpp_distance_sensor)}, {[Java](#java_distance_sensor)}, {[Python](#python_distance_sensor)}, {[Matlab](#matlab_distance_sensor)}
 
 ``` c
 #include <webots/distance_sensor.h>
@@ -249,6 +247,6 @@ into the `wb_distance_sensor_enable()` function, or 0 if the device is disabled.
 
 `wb_distance_sensor_get_value()` returns the last value measured by the
 specified distance sensor. This value is computed by the simulator according to
-the lookup table of the [DistanceSensor](distancesensor.md#distancesensor) node.
-Hence, the range of the return value is defined by this lookup table.
+the lookup table of the [DistanceSensor](#distancesensor) node. Hence, the range
+of the return value is defined by this lookup table.
 

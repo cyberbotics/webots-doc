@@ -8,12 +8,12 @@ Box {
 
 ### Description
 
-The [Box](box.md#box) node specifies a rectangular parallelepiped box centered
-at (0,0,0) in the local coordinate system and aligned with the local coordinate
+The [Box](#box) node specifies a rectangular parallelepiped box centered at
+(0,0,0) in the local coordinate system and aligned with the local coordinate
 axes. By default, the box measures 2 meters in each dimension, from -1 to +1.
 
 The `size` field specifies the extents of the box along the *x*-, *y*-, and
-*z*-axes respectively. See [this figure](box.md#box-node). Three positive values
+*z*-axes respectively. See [this figure](#box-node). Three positive values
 display the outside faces while three negative values display the inside faces.
 
 %figure "Box node"
@@ -32,7 +32,6 @@ onto the face with the same orientation as if the image were displayed normally
 in 2D. On the bottom face of the box (-*y*), when viewed from below looking up
 the *y*-axis toward the origin with the +Z-axis as the view up direction, the
 texture is mapped onto the face with the same orientation as if the image were
-displayed normally in 2D.
-[TextureTransform](texturetransform.md#texturetransform) affects the texture
-coordinates of the Box.
+displayed normally in 2D. [TextureTransform](#texturetransform) affects the
+texture coordinates of the Box.
 

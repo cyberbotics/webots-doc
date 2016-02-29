@@ -1,6 +1,6 @@
 ## Supervisor
 
-Derived from [Robot](robot.md#robot).
+Derived from [Robot](#robot).
 
 ```
 Supervisor {
@@ -10,40 +10,39 @@ Supervisor {
 
 ### Description
 
-A [Supervisor](supervisor.md#supervisor) is a special kind of
-[Robot](robot.md#robot) which is specially designed to control the simulation. A
-[Supervisor](supervisor.md#supervisor) has access to extra functions that are
-not available to a regular [Robot](robot.md#robot). If a
-[Supervisor](supervisor.md#supervisor) contains devices then the
-[Supervisor](supervisor.md#supervisor) controller can use them. Webots PRO is
-required to use the [Supervisor](supervisor.md#supervisor) node.
+A [Supervisor](#supervisor) is a special kind of [Robot](#robot) which is
+specially designed to control the simulation. A [Supervisor](#supervisor) has
+access to extra functions that are not available to a regular [Robot](#robot).
+If a [Supervisor](#supervisor) contains devices then the
+[Supervisor](#supervisor) controller can use them. Webots PRO is required to use
+the [Supervisor](#supervisor) node.
 
 > **note**:
-Note that in some special cases the [Supervisor](supervisor.md#supervisor)
-functions might return wrong values and it might not be possible to retrieve
-fields and nodes. This occurs when closing a world and quitting its controllers,
-i.e. reverting the current world, opening a new world, or closing Webots. In
-this case the output will be a NULL pointer or a default value. For functions
-returning a string, an empty string is returned instead of a NULL pointer.
+Note that in some special cases the [Supervisor](#supervisor) functions might
+return wrong values and it might not be possible to retrieve fields and nodes.
+This occurs when closing a world and quitting its controllers, i.e. reverting
+the current world, opening a new world, or closing Webots. In this case the
+output will be a NULL pointer or a default value. For functions returning a
+string, an empty string is returned instead of a NULL pointer.
 
 <!-- -->
 
 > **note** [C++, Java, Python]:
 It is a good practice to check for a NULL pointer after calling a
-[Supervisor](supervisor.md#supervisor) function.
+[Supervisor](#supervisor) function.
 
 ### Supervisor Functions
 
-As for a regular [Robot](robot.md#robot) controller, the `wb_robot_init()`,
-`wb_robot_step()`, etc. functions must be used in a
-[Supervisor](supervisor.md#supervisor) controller.
+As for a regular [Robot](#robot) controller, the `wb_robot_init()`,
+`wb_robot_step()`, etc. functions must be used in a [Supervisor](#supervisor)
+controller.
 
 **Name** <a name="wb_supervisor_export_image"/>
 
 **wb\_supervisor\_export\_image** - *save the current 3D image of the simulator into a JPEG file, suitable for
     building a webcam system*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -66,8 +65,8 @@ unfinished (and hence corrupted) file for webcam applications.
 
 The "projects/samples/howto/worlds/supervisor.wbt" world provides an example on
 how to use the `wb_supervisor_export_image()` function. In this example, the
-[Supervisor](supervisor.md#supervisor) controller takes a snapshot image each
-time a goal is scored.
+[Supervisor](#supervisor) controller takes a snapshot image each time a goal is
+scored.
 
 ---
 
@@ -75,7 +74,7 @@ time a goal is scored.
 
 **wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -122,17 +121,17 @@ The `wb_supervisor_node_get_parent_node()` function retrieves the reference to
 the direct parent node of the node given in parameter.
 
 The `wb_supervisor_node_get_root()` function returns a handle to the root node
-which is actually a [Group](group.md#group) node containing all the nodes
-visible at the top level in the scene tree window of Webots. Like any
-[Group](group.md#group) node, the root node has a MFNode field called "children"
-which can be parsed to read each node in the scene tree. An example of such a
-usage is provided in the "supervisor.wbt" sample worlds (located in the
-"projects/samples/devices/worlds" directory of Webots.
+which is actually a [Group](#group) node containing all the nodes visible at the
+top level in the scene tree window of Webots. Like any [Group](#group) node, the
+root node has a MFNode field called "children" which can be parsed to read each
+node in the scene tree. An example of such a usage is provided in the
+"supervisor.wbt" sample worlds (located in the "projects/samples/devices/worlds"
+directory of Webots.
 
 The `wb_supervisor_node_get_self()` function returns a handle to the
-[Supervisor](supervisor.md#supervisor) node itself on which the controller is
-run. This is a utility function that simplifies the task of retrieving the base
-node without having to define a DEF name for it.
+[Supervisor](#supervisor) node itself on which the controller is run. This is a
+utility function that simplifies the task of retrieving the base node without
+having to define a DEF name for it.
 
 ---
 
@@ -140,7 +139,7 @@ node without having to define a DEF name for it.
 
 **wb\_supervisor\_node\_get\_type**, **wb\_supervisor\_node\_get\_type\_name**, **wb\_supervisor\_node\_get\_base\_type\_name** - *get information on a specified node*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -183,7 +182,7 @@ integers can be directly compared with the output of the `Node::getType()`
 
 **wb\_supervisor\_node\_remove** - *Remove a specified node*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -202,7 +201,7 @@ argument from the Webots scene tree.
 
 **wb\_supervisor\_node\_get\_field** - *get a field reference from a node*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -224,7 +223,7 @@ returns a handler to a field.
 
 **wb\_supervisor\_node\_get\_position**, **wb\_supervisor\_node\_get\_orientation** - *get the global (world) position/orientation of a node*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -237,16 +236,16 @@ const double *wb_supervisor_node_get_orientation(WbNodeRef node)
 
 The `wb_supervisor_node_get_position()` function returns the position of a node
 expressed in the global (world) coordinate system. The `node` argument must be a
-[Transform](transform.md#transform) node (or a derived node), otherwise the
-function will print a warning message and return 3 `NaN` (Not a Number) values.
-This function returns a vector containing exactly 3 values.
+[Transform](#transform) node (or a derived node), otherwise the function will
+print a warning message and return 3 `NaN` (Not a Number) values. This function
+returns a vector containing exactly 3 values.
 
 The `wb_supervisor_node_get_orientation()` function returns a matrix that
 represents the rotation of the node in the global (world) coordinate system. The
-`node` argument must be a [Transform](transform.md#transform) node (or a derived
-node), otherwise the function will print a warning message and return 9 `NaN`
-(Not a Number) values. This function returns a matrix containing exactly 9
-values that shall be interpreted as a 3 x 3 orthogonal rotation matrix:
+`node` argument must be a [Transform](#transform) node (or a derived node),
+otherwise the function will print a warning message and return 9 `NaN` (Not a
+Number) values. This function returns a matrix containing exactly 9 values that
+shall be interpreted as a 3 x 3 orthogonal rotation matrix:
 
 ```
 [ R[0] R[1] R[2] ]
@@ -289,7 +288,7 @@ deallocated at the next time step.
 
 **wb\_supervisor\_node\_get\_center\_of\_mass** - *get the global position of a solid's center of mass*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -301,11 +300,11 @@ const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node)
 
 The `wb_supervisor_node_get_center_of_mass()` function returns the position of
 the center of mass of a Solid node expressed in the global (world) coordinate
-system. The `node` argument must be a [Solid](solid.md#solid) node (or a derived
-node), otherwise the function will print a warning message and return 3 `NaN`
-(Not a Number) values. This function returns a vector containing exactly 3
-values. If the `node` argument has a `NULL` `physics` node, the return value is
-always the zero vector.
+system. The `node` argument must be a [Solid](#solid) node (or a derived node),
+otherwise the function will print a warning message and return 3 `NaN` (Not a
+Number) values. This function returns a vector containing exactly 3 values. If
+the `node` argument has a `NULL` `physics` node, the return value is always the
+zero vector.
 
 The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
@@ -319,7 +318,7 @@ deallocated at the next time step.
 
 **wb\_supervisor\_node\_get\_contact\_point** - *get the contact point with given index in the contact point list of the given solid.*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -337,9 +336,9 @@ coordinate system. If the index is less than the number of contact points, then
 the x (resp. y, z) coordinate of the *index*th contact point is the element
 number *0* (resp. *1, 2*) in the returned array. Otherwise the function returns
 a `NaN` (Not a Number) value for each of these numbers. The `node` argument must
-be a [Solid](solid.md#solid) node (or a derived node), which moreover has no
-`Solid` parent, otherwise the function will print a warning message and return
-`NaN` values on the first 3 array components.
+be a [Solid](#solid) node (or a derived node), which moreover has no `Solid`
+parent, otherwise the function will print a warning message and return `NaN`
+values on the first 3 array components.
 
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
@@ -354,7 +353,7 @@ deallocated at the next time step.
 
 **wb\_supervisor\_node\_get\_number\_of\_contact\_points** - *get the number of contact points of the given solid*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -366,8 +365,8 @@ const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node)
 
 The `wb_supervisor_node_get_number_of_contact_points()` function returns the
 number of contact points of the given `Solid`. The `node` argument must be a
-[Solid](solid.md#solid) node (or a derived node), which moreover has no `Solid`
-parent, otherwise the function will print a warning message and return `-1`.
+[Solid](#solid) node (or a derived node), which moreover has no `Solid` parent,
+otherwise the function will print a warning message and return `-1`.
 
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
@@ -378,7 +377,7 @@ shows how to use this function.
 
 **wb\_supervisor\_node\_get\_static\_balance** - *return the boolean value of the static balance test based on the support polygon of a solid*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -390,12 +389,12 @@ bool wb_supervisor_node_get_static_balance(WbNodeRef node)
 
 The `wb_supervisor_node_get_static_balance()` function returns the boolean value
 of the static balance test based on the support polygon of a solid. The `node`
-argument must be a [Solid](solid.md#solid) node (or a derived node), which
-moreover has no `Solid` parent. Otherwise the function will print a warning
-message and return `false`. The support polygon of a solid is the convex hull of
-the solid's contact points projected onto a plane that is orthognal to the
-gravity direction. The test consists in checking whether the projection of the
-center of mass onto this plane lies inside or outside the support polygon.
+argument must be a [Solid](#solid) node (or a derived node), which moreover has
+no `Solid` parent. Otherwise the function will print a warning message and
+return `false`. The support polygon of a solid is the convex hull of the solid's
+contact points projected onto a plane that is orthognal to the gravity
+direction. The test consists in checking whether the projection of the center of
+mass onto this plane lies inside or outside the support polygon.
 
 ---
 
@@ -403,7 +402,7 @@ center of mass onto this plane lies inside or outside the support polygon.
 
 **wb\_supervisor\_node\_get\_velocity**, **wb\_supervisor\_node\_set\_velocity** - *get/set the angular and linear velocities of a Solid node.*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -415,20 +414,20 @@ void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6])
 **Description**
 
 The `wb_supervisor_node_get_velocity()` function returns the velocity (both
-linear and angular) of a node. The `node` argument must be a
-[Solid](solid.md#solid) node (or a derived node), otherwise the function will
-print a warning message and return 6 `NaN` (Not a Number) values. This function
-returns a vector containing exactly 6 values. The first three are respectively
-the linear velocities in the x, y and z direction. The last three are
-respectively the angular velocities around the x, y and z axes.
+linear and angular) of a node. The `node` argument must be a [Solid](#solid)
+node (or a derived node), otherwise the function will print a warning message
+and return 6 `NaN` (Not a Number) values. This function returns a vector
+containing exactly 6 values. The first three are respectively the linear
+velocities in the x, y and z direction. The last three are respectively the
+angular velocities around the x, y and z axes.
 
 The `wb_supervisor_node_set_velocity()` function set the velocity (both linear
-and angular) of a node. The `node` argument must be a [Solid](solid.md#solid)
-node (or a derived node), otherwise the function will print a warning message
-and have no effect. The `velocity` argument must be a vector containing exactly
-6 values. The first three are respectively the linear velocities in the x, y and
-z direction. The last three are respectively the angular velocities around the
-x, y and z axes.
+and angular) of a node. The `node` argument must be a [Solid](#solid) node (or a
+derived node), otherwise the function will print a warning message and have no
+effect. The `velocity` argument must be a vector containing exactly 6 values.
+The first three are respectively the linear velocities in the x, y and z
+direction. The last three are respectively the angular velocities around the x,
+y and z axes.
 
 ---
 
@@ -436,7 +435,7 @@ x, y and z axes.
 
 **wb\_supervisor\_node\_reset\_physics** - *stops the inertia of the given solid*
 
-{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_node)}, {[Java](#java_node)}, {[Python](#python_node)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -448,12 +447,12 @@ void wb_supervisor_node_reset_physics(WbNodeRef node)
 
 The `wb_supervisor_node_reset_physics()` function stops the inertia of the given
 solid. If the specified node is physics-enables, i.e. it contains a
-[Physics](physics.md#physics) node, then the linear and angular velocities of
-the corresonding body are reset to 0, hence the inertia is also zeroed. The
-`node` argument must be a [Solid](solid.md#solid) node (or a derived node). This
-function could be useful for resetting the physics of a solid after changing its
-translation or rotation. To stop the inertia of all available solids please
-refer to [this section](supervisor.md#wb_supervisor_simulation_reset_physics).
+[Physics](#physics) node, then the linear and angular velocities of the
+corresonding body are reset to 0, hence the inertia is also zeroed. The `node`
+argument must be a [Solid](#solid) node (or a derived node). This function could
+be useful for resetting the physics of a solid after changing its translation or
+rotation. To stop the inertia of all available solids please refer to [this
+section](#wb_supervisor_simulation_reset_physics).
 
 ---
 
@@ -461,7 +460,7 @@ refer to [this section](supervisor.md#wb_supervisor_simulation_reset_physics).
 
 **wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -525,7 +524,7 @@ represents the magenta color.
 
 **wb\_supervisor\_simulation\_quit** - *terminate the simulator and controller processes*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -609,7 +608,7 @@ int main(int argc, char *argv[]) {
 
 **wb\_supervisor\_simulation\_revert** - *reload the current world*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -632,7 +631,7 @@ restarts.
 
 **wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -668,7 +667,7 @@ argument. In this case, a simple save operation is performed.
 
 **wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -680,14 +679,14 @@ void wb_supervisor_simulation_reset_physics()
 
 The `wb_supervisor_simulation_reset_physics()` function sends a request to the
 simulator process, asking it to stop the movement of all physics-enabled solids
-in the world. It means that for any [Solid](solid.md#solid) node containing a
-[Physics](physics.md#physics) node, the linear and angular velocities of the
-corresponding body are reset to 0, hence the inertia is also zeroed. This is
-actually implemented by calling the ODE `dBodySetLinearVel()` and
-`dBodySetAngularVel()` functions for all bodies with a zero velocity parameter.
-This function is especially useful for resetting a robot to its initial position
-and inertia. To stop the inertia of a single [Solid](solid.md#solid) node please
-refer to [this section](supervisor.md#wb_supervisor_node_reset_physics).
+in the world. It means that for any [Solid](#solid) node containing a
+[Physics](#physics) node, the linear and angular velocities of the corresponding
+body are reset to 0, hence the inertia is also zeroed. This is actually
+implemented by calling the ODE `dBodySetLinearVel()` and `dBodySetAngularVel()`
+functions for all bodies with a zero velocity parameter. This function is
+especially useful for resetting a robot to its initial position and inertia. To
+stop the inertia of a single [Solid](#solid) node please refer to [this
+section](#wb_supervisor_node_reset_physics).
 
 Furthermore, this function resets the seed of the random number generator used
 in Webots, so that noise-based simulations can be be reproduced identically
@@ -699,7 +698,7 @@ after calling this function.
 
 **wb\_supervisor\_movie\_start\_recording**, **wb\_supervisor\_movie\_stop\_recording**, **wb\_supervisor\_movie\_get\_status** - *export the current simulation into a movie file*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -753,7 +752,7 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 
 **wb\_supervisor\_animation\_start\_recording**, **wb\_supervisor\_animation\_stop\_recording** - *export the current simulation into an animation file*
 
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_supervisor)}, {[Java](#java_supervisor)}, {[Python](#python_supervisor)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -784,7 +783,7 @@ indicating their success.
 
 **wb\_supervisor\_field\_get\_type**, **wb\_supervisor\_field\_get\_type\_name**, **wb\_supervisor\_field\_get\_count** - *get a handler and more information on a field in a node*
 
-{[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_field)}, {[Java](#java_field)}, {[Python](#python_field)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -825,7 +824,7 @@ be directly compared with the output of the `Field::getType()`
 
 **wb\_supervisor\_field\_get\_sf\_bool**, **wb\_supervisor\_field\_get\_sf\_int32**, **wb\_supervisor\_field\_get\_sf\_float**, **wb\_supervisor\_field\_get\_sf\_vec2f**, **wb\_supervisor\_field\_get\_sf\_vec3f**, **wb\_supervisor\_field\_get\_sf\_rotation**, **wb\_supervisor\_field\_get\_sf\_color**, **wb\_supervisor\_field\_get\_sf\_string**, **wb\_supervisor\_field\_get\_sf\_node**, **wb\_supervisor\_field\_get\_mf\_bool**, **wb\_supervisor\_field\_get\_mf\_int32**, **wb\_supervisor\_field\_get\_mf\_float**, **wb\_supervisor\_field\_get\_mf\_vec2f**, **wb\_supervisor\_field\_get\_mf\_vec3f**, **wb\_supervisor\_field\_get\_mf\_rotation**, **wb\_supervisor\_field\_get\_mf\_color**, **wb\_supervisor\_field\_get\_mf\_string**, **wb\_supervisor\_field\_get\_mf\_node** - *get the value of a field*
 
-{[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_field)}, {[Java](#java_field)}, {[Python](#python_field)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -874,7 +873,7 @@ message is displayed).
 
 **wb\_supervisor\_field\_set\_sf\_bool**, **wb\_supervisor\_field\_set\_sf\_int32**, **wb\_supervisor\_field\_set\_sf\_float**, **wb\_supervisor\_field\_set\_sf\_vec2f**, **wb\_supervisor\_field\_set\_sf\_vec3f**, **wb\_supervisor\_field\_set\_sf\_rotation**, **wb\_supervisor\_field\_set\_sf\_color**, **wb\_supervisor\_field\_set\_sf\_string**, **wb\_supervisor\_field\_set\_mf\_bool**, **wb\_supervisor\_field\_set\_mf\_int32**, **wb\_supervisor\_field\_set\_mf\_float**, **wb\_supervisor\_field\_set\_mf\_vec2f**, **wb\_supervisor\_field\_set\_mf\_vec3f**, **wb\_supervisor\_field\_set\_mf\_rotation**, **wb\_supervisor\_field\_set\_mf\_color**, **wb\_supervisor\_field\_set\_mf\_string** - *set the value of a field*
 
-{[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_field)}, {[Java](#java_field)}, {[Python](#python_field)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>
@@ -916,8 +915,7 @@ number of item minus one, otherwise the value of the field remains unchanged
 Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when
 changing its translation or rotation using `wb_supervisor_field_set_sf_vec2f`
 and `wb_supervisor_field_set_sf_rotation` functions. If needed, the user has to
-explicitly call [this section](supervisor.md#wb_supervisor_node_reset_physics)
-function.
+explicitly call [this section](#wb_supervisor_node_reset_physics) function.
 
 **Examples**
 
@@ -933,7 +931,7 @@ and setting fields with the above described functions.
 
 **wb\_supervisor\_field\_import\_mf\_node**, **wb\_supervisor\_field\_import\_mf\_node\_from\_string**, **wb\_supervisor\_field\_remove\_mf\_node** - *import/remove a node into/from an MF\_NODE field (typically a "children" field)*
 
-{[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}
+{[C++](#cpp_field)}, {[Java](#java_field)}, {[Python](#python_field)}, {[Matlab](#matlab_supervisor)}
 
 ``` c
 #include <webots/supervisor.h>

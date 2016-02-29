@@ -16,13 +16,13 @@ controller library (libController) at startup. A controller plugin is a shared
 library loaded dynamically (at runtime) by libController after a specific event
 depending on its type.
 
-The [figure](controller-plugin.md#controller-plugin-overview) shows an overview
-of the controller plugin system. In this figure, the dashed arrows shows how the
-shared libraries are loaded, and the large dash lines represents an
-Inter-Process Communication (IPC). The IPC between libController and Webots is a
-pipe (On Windows this is a named pipe, and otherwise a local domain socket). The
-IPC between libRemoteControl and the real robot is defined by the user (TCP/IP,
-Serial, etc.).
+The [figure](#controller-plugin-overview) shows an overview of the controller
+plugin system. In this figure, the dashed arrows shows how the shared libraries
+are loaded, and the large dash lines represents an Inter-Process Communication
+(IPC). The IPC between libController and Webots is a pipe (On Windows this is a
+named pipe, and otherwise a local domain socket). The IPC between
+libRemoteControl and the real robot is defined by the user (TCP/IP, Serial,
+etc.).
 
 The system has been designed as follow. Every entities (the controller, the
 remote control library and the robot window library) should only call the
@@ -190,12 +190,12 @@ The motion is stored in a motion file in a user-readable format. The controller
 API allows to play easily the motion files on your robot. You can get the
 complete motion API in the reference manual.
 
-The motion editor (cf. the [figure](controller-plugin.md#motion-editor-view)) is
-a GUI helping to create motions which can be played by a robot. It is
-implemented in the Qt utils library, and is embedded inside the generic robot
-window plugin. This implies that the motion editor is accessible only if the
-robot is linked (cf. the Robot::robotWindow field) with either the generic
-window, or on a window using the Qt utils library's corresponding widget.
+The motion editor (cf. the [figure](#motion-editor-view)) is a GUI helping to
+create motions which can be played by a robot. It is implemented in the Qt utils
+library, and is embedded inside the generic robot window plugin. This implies
+that the motion editor is accessible only if the robot is linked (cf. the
+Robot::robotWindow field) with either the generic window, or on a window using
+the Qt utils library's corresponding widget.
 
 In the motion editor different fonts and colors are used to identify the status
 of poses and motor states: modified items are displayed using bold font,

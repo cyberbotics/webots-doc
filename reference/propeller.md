@@ -20,12 +20,12 @@ Propeller {
 
 %end
 
-The [Propeller](propeller.md#propeller) node can be used to model a marine or an
-aircraft propeller. When its `device` field is set with a
-[RotationalMotor](rotationalmotor.md#rotationalmotor), the propeller turns the
-motor angular velocity into a thrust and a (resistant) torque. The resultant
-thrust is the product of a real number T by the unit length shaft axis vector
-defined in the `shaftAxis` field, with T given by the formula
+The [Propeller](#propeller) node can be used to model a marine or an aircraft
+propeller. When its `device` field is set with a
+[RotationalMotor](#rotationalmotor), the propeller turns the motor angular
+velocity into a thrust and a (resistant) torque. The resultant thrust is the
+product of a real number T by the unit length shaft axis vector defined in the
+`shaftAxis` field, with T given by the formula
 
 ```
 T = t1 * |omega| * omega - t2 * |omega| * V
@@ -50,24 +50,23 @@ W. Prouty.
 
 The example "propeller.wbt" located in the "projects/samples/devices/worlds"
 directory of Webots shows three different helicopters modeled with
-[Propeller](propeller.md#propeller) nodes.
+[Propeller](#propeller) nodes.
 
 ### Field Summary
 
 - `shaftAxis`: defines the axis along which the resultant thrust and torque will
-be exerted, see [this figure](propeller.md#propeller-schema).
+be exerted, see [this figure](#propeller-schema).
 - `centerOfThrust`: defines the point where the generated thrust applies, see
-[this figure](propeller.md#propeller-schema).
+[this figure](#propeller-schema).
 - `thrustConstants` and `torqueConstants`: coefficients used to define the
 resultant thrust and torque as functions of the motor angular velocity and the
 linear speed of adavance, see above formulae.
-- `device`: this field has to be set with a
-[RotationalMotor](rotationalmotor.md#rotationalmotor) in order to control the
-propeller.
+- `device`: this field has to be set with a [RotationalMotor](#rotationalmotor) in
+order to control the propeller.
 - `fastHelix` and `slowHelix`: if not NULL, these fields must be set with
-[Solid](solid.md#solid) nodes. The corresponding [Solid](solid.md#solid) nodes
-define the graphical representation of the propeller according to its motor's
-angular velocity omega: if |omega| > 24 π rad /s, only the
-[Solid](solid.md#solid) defined in `fastHelix` is visible, otherwise only the
-[Solid](solid.md#solid) defined in `slowHelix` is visible.
+[Solid](#solid) nodes. The corresponding [Solid](#solid) nodes define the
+graphical representation of the propeller according to its motor's angular
+velocity omega: if |omega| > 24 π rad /s, only the [Solid](#solid) defined in
+`fastHelix` is visible, otherwise only the [Solid](#solid) defined in
+`slowHelix` is visible.
 

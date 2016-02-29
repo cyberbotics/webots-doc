@@ -3,9 +3,9 @@
 The aim of this tutorial is to create your first robot from scratch. This robot
 will be made of a body, four wheels, and two distance sensors. The result is
 depicted in [this
-figure](tutorial-6-4-wheels-robot.md#3d-view-of-the-4-wheels-robot-note-that-the-coordinate-system-representations-of-the-robot-body-and-of-its-wheels-are-oriented-the-same-way-their-px-vector-in-red-defines-the-left-of-the-robot-their-py-vector-in-green-defines-the-top-of-the-robot-and-their-pz-vector-in-blue-defines-the-front-of-the-robot-the-distance-sensors-are-oriented-in-a-different-way-their-px-vector-indicates-the-direction-of-the-sensor).
+figure](#3d-view-of-the-4-wheels-robot-note-that-the-coordinate-system-representations-of-the-robot-body-and-of-its-wheels-are-oriented-the-same-way-their-px-vector-in-red-defines-the-left-of-the-robot-their-py-vector-in-green-defines-the-top-of-the-robot-and-their-pz-vector-in-blue-defines-the-front-of-the-robot-the-distance-sensors-are-oriented-in-a-different-way-their-px-vector-indicates-the-direction-of-the-sensor).
 The
-[figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)
+[figure](#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)
 shows the robot from a top view.
 
 %figure "3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor."
@@ -83,13 +83,13 @@ be typically the robot chest, because the robot symmetry facilitates the
 computation of the joint parameters.
 
 In our case, the body box is obviously the better choice. The
-[figure](tutorial-6-4-wheels-robot.md#high-level-representation-of-the-4-wheels-robot)
-depicts the solid nodes hierarchy of the robot.
+[figure](#high-level-representation-of-the-4-wheels-robot) depicts the solid
+nodes hierarchy of the robot.
 
 > **handson**:
 At the end of the scene tree, add a Robot node having four HingeJoints having a
 Solid child. Please refer to [this
-figure](tutorial-6-4-wheels-robot.md#high-level-representation-of-the-4-wheels-robot).
+figure](#high-level-representation-of-the-4-wheels-robot).
 
 <!-- -->
 
@@ -97,8 +97,7 @@ figure](tutorial-6-4-wheels-robot.md#high-level-representation-of-the-4-wheels-r
 Add a Shape node containing a Box geometry to the Robot node. Set the color of
 the Shape to red. Use the Shape to define also the `boundingObject` field of the
 Robot node. The dimension of the box is *(0.1, 0.05, 0.2)*. Add a Physics node
-to the Robot. The
-[figure](tutorial-6-4-wheels-robot.md#low-level-representation-of-the-4-wheels-robot)
+to the Robot. The [figure](#low-level-representation-of-the-4-wheels-robot)
 represents all the nodes defining the robot. So far only the direct children
 nodes of the root Robot node are implemented.
 
@@ -138,12 +137,11 @@ rotate the Cylinder along the along the *x*-axis.
 
 > **handson**:
 Complete the missing nodes to get the same structure as the one depicted in
-[this
-figure](tutorial-6-4-wheels-robot.md#low-level-representation-of-the-4-wheels-robot).
-Don't forget the Physics nodes. Rotate the Transform node by an Euler axis and
-angle of *(0, 0, 1, Pi/2)* in order to inverse the *x*-axis and the *y*-axis.
-The Cylinder should have a `radius` of *0.04* and a `height` of *0.02*. Set the
-color of the wheels to green.
+[this figure](#low-level-representation-of-the-4-wheels-robot). Don't forget the
+Physics nodes. Rotate the Transform node by an Euler axis and angle of *(0, 0,
+1, Pi/2)* in order to inverse the *x*-axis and the *y*-axis. The Cylinder should
+have a `radius` of *0.04* and a `height` of *0.02*. Set the color of the wheels
+to green.
 
 <!-- -->
 
@@ -159,7 +157,7 @@ robot. This can be done by adding two DistanceSensor nodes as direct children of
 the Robot node. Note that the distance sensor acquires its data along the
 +*x*-axis. So rotating the distance sensors in order to point their *x*-axis
 outside the robot is necessary (see the
-[figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)).
+[figure](#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices)).
 
 > **handson**:
 Add the two distance sensors as explained above. The distance sensors are at an
@@ -167,7 +165,7 @@ angle to 0.3 [rad] with the robot front vector. Set their `type` field to
 "sonar". Set their graphical and physical shape to a cube (not transformed)
 having a edge of *0.01* [m]. Set their color to blue. Set their `name` field
 according to the labels of [this
-figure](tutorial-6-4-wheels-robot.md#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices).
+figure](#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices).
 
 ### Controller
 

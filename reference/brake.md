@@ -1,6 +1,6 @@
 ## Brake
 
-Derived from [Device](device.md#device).
+Derived from [Device](#device).
 
 ```
 Brake {
@@ -9,11 +9,10 @@ Brake {
 
 ### Description
 
-A [Brake](brake.md#brake) node can be used in a mechanical simulation in order
-to change the friction of a joint. The [Brake](brake.md#brake) node can be
-inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
-[Hinge2Joint](hinge2joint.md#hinge2joint), a
-[SliderJoint](sliderjoint.md#sliderjoint), or a [Track](track.md#track).
+A [Brake](#brake) node can be used in a mechanical simulation in order to change
+the friction of a joint. The [Brake](#brake) node can be inserted in the
+`device` field of a [HingeJoint](#hingejoint), a [Hinge2Joint](#hinge2joint), a
+[SliderJoint](#sliderjoint), or a [Track](#track).
 
 ### Brake Functions
 
@@ -21,7 +20,7 @@ inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 
-{[C++](cpp-api.md#cpp_brake)}, {[Java](java-api.md#java_brake)}, {[Python](python-api.md#python_brake)}, {[Matlab](matlab-api.md#matlab_brake)}
+{[C++](#cpp_brake)}, {[Java](#java_brake)}, {[Python](#python_brake)}, {[Matlab](#matlab_brake)}
 
 ``` c
 #include <webots/brake.h>
@@ -34,14 +33,12 @@ int wb_brake_get_type(WbDeviceTag tag)
 
 `wb_brake_set_damping_constant()` sets the value of the dampingConstant
 coefficient (Ns/m or Nms) of the joint. If any dampingConstant is already set
-using [JointParameters](jointparameters.md#jointparameters) the resulting
-dampingConstant coefficient is the sum of the one in the
-[JointParameters](jointparameters.md#jointparameters) and the one set using the
-`wb_brake_set_damping_constant()` function.
+using [JointParameters](#jointparameters) the resulting dampingConstant
+coefficient is the sum of the one in the [JointParameters](#jointparameters) and
+the one set using the `wb_brake_set_damping_constant()` function.
 
 `wb_brake_get_type()` returns the type of the brake. It will return `WB_ANGULAR`
-if the sensor is associated with a [HingeJoint](hingejoint.md#hingejoint) or a
-[Hinge2Joint](hinge2joint.md#hinge2joint) node, and `WB_LINEAR` if it is
-associated with a [SliderJoint](sliderjoint.md#sliderjoint) or a
-[Track](track.md#track) node.
+if the sensor is associated with a [HingeJoint](#hingejoint) or a
+[Hinge2Joint](#hinge2joint) node, and `WB_LINEAR` if it is associated with a
+[SliderJoint](#sliderjoint) or a [Track](#track) node.
 

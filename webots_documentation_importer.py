@@ -62,9 +62,10 @@ class Reference:
         else:
             return self.kind
 
-    def getUrl(self):
-        if len(self.anchor) > 0: 
-            return '%s#%s' % (self.filename, self.anchor)
+    def getUrl(self, currentMDFile):
+        fn = self.filename if self.filename == currentMDFile else ''
+        if len(self.anchor) > 0:
+            return '%s#%s' % (fn, self.anchor)
         else:
             return self.filename
 
@@ -386,7 +387,7 @@ class BookParser:
                     ref = self.referenceManager.getReferenceById(linkend)
                     if ref is None:
                         raise Exception('reference to "' + linkend + '" is undefined')
-                    text += '[%s](%s)' % (self.parseText(child.text, True, False, False), ref.getUrl())
+                    text += '[%s](%s)' % (self.parseText(child.text, True, False, False), ref.getUrl(outFile.name))
                 elif child.tag == 'programlisting':
                     # flush text
                     text = self.formatText(text)
@@ -429,7 +430,7 @@ class BookParser:
                     ref = self.referenceManager.getReferenceById(linkend)
                     if ref is None:
                         raise Exception('reference to "' + linkend + '" is undefined')
-                    text += '[%s](%s)' % (ref.getKind(text), ref.getUrl())
+                    text += '[%s](%s)' % (ref.getKind(text), ref.getUrl(outFile.name))
             text += self.parseText(child.tail, True, mergeCarriageReturns, False)
 
         if mergeCarriageReturns:
@@ -719,7 +720,7 @@ class BookParser:
                                 firstTag = False
                             else:
                                 outFile.write(', ')
-                            outFile.write('{[%s](%s)}' % (tagName, ref.getUrl()))
+                            outFile.write('{[%s](%s)}' % (tagName, ref.getUrl(outFile.name)))
                 if not firstTag:
                     outFile.write('\n\n')
 

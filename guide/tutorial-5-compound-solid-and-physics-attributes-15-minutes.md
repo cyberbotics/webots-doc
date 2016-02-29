@@ -3,7 +3,7 @@
 The aim of this chapter is to explore in more detail the physics simulation by
 creating a solid with several bounding objects: a dumbbell made of two spheres
 and one cylinder. The expected result is depicted in [this
-figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#expected-result-at-the-end-of-the-tutorial-about-compound-solids).
+figure](#expected-result-at-the-end-of-the-tutorial-about-compound-solids).
 
 %figure "Expected result at the end of the tutorial about compound solids."
 
@@ -27,12 +27,12 @@ and orientation. Group nodes can also be used to group several subnodes.
 
 We want to implement a dumbbell made of a handle (Cylinder) and of two weights
 (Sphere) located at each end of the handle. The
-[figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries)
+[figure](#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries)
 depicts the Solid nodes and its subnodes required to implement the dumbbell.
 
 > **handson**:
 Create the dumbbell by following the
-[figure](tutorial-5-compound-solid-and-physics-attributes-15-minutes.md#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries).
+[figure](#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries).
 Create the handle first without placing it in a Transform node (so the handle
 axis will have the same direction as the *y*-axis of the solid). The handle
 should have a length of 0.1 m and a radius of 0.01 m. The weights should have a

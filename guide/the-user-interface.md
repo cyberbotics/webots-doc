@@ -269,7 +269,7 @@ simulation and therefore this is well suited for cpu-intensive simulations
 
 The `Build` menu provides the functionality to compile (or cross-compile)
 controller code. The build menu is described in more details
-[here](webots-built-in-editor.md#webots-built-in-editor).
+[here](#webots-built-in-editor).
 
 ### Robot Menu
 
@@ -346,7 +346,7 @@ by your local license administrator. Please ask your local license administrator
 in case of problem.
 
 The `Preferences` item pops up a window described in [this
-section](preferences.md#preferences).
+section](#preferences).
 
 ### Wizards Menu
 
@@ -388,10 +388,10 @@ of HTML pages, PDF documents, etc.
 ### Main toolbar
 
 The main toolbar contains items for editing the world and the speedometer (see
-subsection [this section](the-user-interface.md#speedometer-and-virtual-time)),
-other than shortcuts to items of the `File`, `Simulation` and `View` menus. Edit
-actions always apply on the selected object, that is highlighted both in the 3D
-window and in the Scene Tree.
+subsection [this section](#speedometer-and-virtual-time)), other than shortcuts
+to items of the `File`, `Simulation` and `View` menus. Edit actions always apply
+on the selected object, that is highlighted both in the 3D window and in the
+Scene Tree.
 
 ![](png/show_scene_tree-button.png =26x26) `Hide/Show Scene Tree`: shows or
 hides the Scene Tree and resizes the 3D window consequently.
@@ -412,19 +412,19 @@ is created with default values that can be modified afterwards. You can only
 insert a node suitable for the corresponding field. The dialog also gives the
 possibility to load a previously exported node by clicking on the `Import...`
 button. Further information about how to export a node are available
-[here](the-scene-tree.md#field-editor).
+[here](#field-editor).
 
 ![](png/delete-button.png =26x26) `Delete`: Deletes the selected object.
 
 ### Speedometer and Virtual Time
 
-A speedometer (see [this figure](the-user-interface.md#speedometer)) indicates
-the speed of the simulation on your computer. It is displayed on the main
-toolbar, and indicates how fast the simulation runs compared to real time. In
-other words, it represents the speed of the virtual time. If the value of the
-speedometer is 2, it means that your computer simulation is running twice as
-fast as the corresponding real robots would. This information is valid both in
-`Run` mode and `Fast` mode.
+A speedometer (see [this figure](#speedometer)) indicates the speed of the
+simulation on your computer. It is displayed on the main toolbar, and indicates
+how fast the simulation runs compared to real time. In other words, it
+represents the speed of the virtual time. If the value of the speedometer is 2,
+it means that your computer simulation is running twice as fast as the
+corresponding real robots would. This information is valid both in `Run` mode
+and `Fast` mode.
 
 %figure "Speedometer"
 
@@ -439,8 +439,8 @@ format:
 
 where *H* is the number of hours (may be several digits), *MM* is the number of
 minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds
-(see [this figure](the-user-interface.md#speedometer)). If the speedometer value
-is greater than one, the virtual time is progressing faster than real time.
+(see [this figure](#speedometer)). If the speedometer value is greater than one,
+the virtual time is progressing faster than real time.
 
 The basic time step for simulation can be set in the `basicTimeStep` field of
 the `WorldInfo` node in the scene tree window. It is expressed in virtual time

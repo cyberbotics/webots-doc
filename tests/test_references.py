@@ -88,22 +88,34 @@ class TestReferences(unittest.TestCase):
                         )
                         continue
                     # 3. link to another MD file
-                    ref = ref.split('#')
-                    link = ref[0]
-                    self.assertGreater(len(ref), 0, msg='Invalid reference')
-                    self.assertTrue(
-                        link.endswith('.md'),
-                        msg='Invalid reference "%s" in %s:\n-> "%s"' %
-                            (ref, md_path, m.group(0))
-                    )
-                    file_path = os.path.join(book.path, link)
-                    self.assertTrue(
-                        os.path.isfile(file_path),
-                        msg='%s: "%s" not found' % (md_path, file_path)
-                    )
+                    link = ''
+                    anchor = ''
+                    if ref.startswith('#'):
+                        ref = ref.split('#')
+                        anchor = ref[0]
+                    else:
+                        ref = ref.split('#')
+                        link = ref[0]
+                        if len(ref) > 1:
+                            anchor = ref[1]
+                    if link != '':
+                        self.assertTrue(
+                            link.endswith('.md'),
+                            msg='Invalid reference "%s" in %s:\n-> "%s"' %
+                                (ref, md_path, m.group(0))
+                        )
+                        file_path = os.path.join(book.path, link)
+                        self.assertTrue(
+                            os.path.isfile(file_path),
+                            msg='%s: "%s" not found' % (md_path, file_path)
+                        )
                     # 4. Anchor
-                    if len(ref) > 1:
-                        anchor = ref[1]
+                    if anchor != '':
+                        file_path = ''
+                        if link == '':
+                            file_path = os.path.join(book.path, md_path)
+                        else:
+                            file_path = os.path.join(book.path, link)
                         found = anchor in self.anchors[file_path]
                         self.assertTrue(
                             found, msg='%s: %s#%s not found' %

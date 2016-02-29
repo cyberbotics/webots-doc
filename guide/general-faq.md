@@ -35,8 +35,8 @@ shows as *<defunct>* when using `ps -e` (Linux/Mac).
 
 Yes. However, you will need to create your own project with all the necessary
 options. You will find more detailed instructions on how to do that in [this
-section](using-visual-cpp-with-webots.md#using-visual-cpp-with-webots). To
-create the import libraries (the "*.lib" files in Visual C++) from the "*.dll"
-files of the lib directory of Webots, please follow the instructions provided
-with the documentation of your compiler.
+section](#using-visual-cpp-with-webots). To create the import libraries (the
+"*.lib" files in Visual C++) from the "*.dll" files of the lib directory of
+Webots, please follow the instructions provided with the documentation of your
+compiler.
 

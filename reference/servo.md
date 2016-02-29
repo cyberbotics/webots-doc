@@ -318,7 +318,7 @@ applied in parallel and can be switched on and off independently (by default
 only the motor force is on). For example, to turn off the motor force and obtain
 a passive [Servo](#servo), you can set the `maxForce` field to zero.
 
-%figure "Servo Forces Table"
+%figure "Servo forces summary"
 
 | Force                       | motor force    | spring force         | damping force         |
 | --------------------------- | -------------- | -------------------- | --------------------- |

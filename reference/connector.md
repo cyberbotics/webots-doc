@@ -183,9 +183,9 @@ of the coordinate systems. If these design criteria are not met, the
 [Connector](#connector) nodes will not work properly and may be unable to
 connect.
 
-%figure "Connector axis system schema"
+%figure "Connector axis"
 
-![Connector axis system schema](png/connector_axes.png)
+![Connector axis](png/connector_axes.png)
 
 %end
 

@@ -14,9 +14,9 @@ Propeller {
 
 ### Description
 
-%figure "Propeller schema"
+%figure "Propeller shaft axis"
 
-![Propeller schema](pdf/propeller.pdf.png)
+![Propeller shaft axis](pdf/propeller.pdf.png)
 
 %end
 
@@ -55,9 +55,9 @@ directory of Webots shows three different helicopters modeled with
 ### Field Summary
 
 - `shaftAxis`: defines the axis along which the resultant thrust and torque will
-be exerted, see [this figure](#propeller-schema).
+be exerted, see [this figure](#propeller-shaft-axis).
 - `centerOfThrust`: defines the point where the generated thrust applies, see
-[this figure](#propeller-schema).
+[this figure](#propeller-shaft-axis).
 - `thrustConstants` and `torqueConstants`: coefficients used to define the
 resultant thrust and torque as functions of the motor angular velocity and the
 linear speed of adavance, see above formulae.

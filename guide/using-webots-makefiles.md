@@ -25,7 +25,7 @@ If a controller requires several C/C++ source files they need to be specified in
 the Makefile. The name of each source file must be listed, using one of these
 variables:
 
-%figure "Webots Makefile Variables"
+%figure "Webots Makefile Sources Variables"
 
 | Variable     | Usage                                                |
 | ------------ | ---------------------------------------------------- |
@@ -62,7 +62,7 @@ controller directory is "my\_controller" then the list must contain either
 
 These two variables can be used to pass flags to the gcc compiler or linker.
 
-%figure "Webots Makefile Variables"
+%figure "Webots Makefile Compiler Variables"
 
 | Variable  | Usage                                                                 |
 | --------- | --------------------------------------------------------------------- |

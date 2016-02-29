@@ -17,7 +17,7 @@ inserted in the `device` field of a [HingeJoint](hingejoint.md#hingejoint), a
 
 ### Brake Functions
 
-#### <a name="wb_brake_set_damping_constant"/>Name
+**Name** <a name="wb_brake_set_damping_constant"/>
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 
@@ -30,7 +30,7 @@ void wb_brake_set_damping_constant(WbDeviceTag tag, double damping_constant)
 int wb_brake_get_type(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_brake_set_damping_constant()` sets the value of the dampingConstant
 coefficient (Ns/m or Nms) of the joint. If any dampingConstant is already set

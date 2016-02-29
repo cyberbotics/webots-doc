@@ -6,7 +6,7 @@ In this section, you will learn how to use Webots simulation model of the
 Pioneer 3-AT robot. ([this
 figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-at-a-ready-to-use-all-terrain-base)).
 
-#### Overview of the robot
+#### Pioneer 3-AT overview
 
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 
@@ -37,7 +37,7 @@ More information on the specifications and optional devices is available on
 Adept Mobile Robots official
 [webpage](http://www.mobilerobots.com/ResearchRobots/ResearchRobots/P3AT.aspx).
 
-#### Simulation model
+#### Pioneer 3-AT model
 
 %figure "The Pioneer 3-AT model in Webots"
 
@@ -87,7 +87,7 @@ In this section, you will learn how to use Webots simulation model of the
 Pioneer 3-DX robot. ([this
 figure](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-dx-an-all-purpose-base-used-for-research-and-applications)).
 
-#### Overview of the robot
+#### Pioneer 3-DX overview
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 
@@ -105,9 +105,9 @@ The Pioneer 3-DX robot is an all-purpose base, used for research and
 applications involving mapping, teleoperation, localization, monitoring,
 reconnaissance and other behaviors. Pioneer 3-DX is provided with a ready-to-use
 set of devices listed in [this
-table](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-at-features).
+table](using-the-pioneer-3-at-and-pioneer-3-dx-robots.md#pioneer-3-dx-features).
 
-%figure "Pioneer 3-AT features"
+%figure "Pioneer 3-DX features"
 
 | Feature             | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
@@ -124,7 +124,7 @@ More information on the specifications and optional devices is available on
 Adept Mobile Robots official
 [webpage](http://www.mobilerobots.com/ResearchRobots/PioneerP3DX.aspx).
 
-#### Simulation model
+#### Pioneer 3-DX model
 
 %figure "The Pioneer 3-DX model in Webots"
 

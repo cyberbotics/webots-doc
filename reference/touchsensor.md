@@ -37,7 +37,7 @@ to -1 (default) means that the sensor has an 'infinite' resolution (it can
 measure any infinitesimal change). This field is used only if the type is
 "force" or "force-3d" and accepts any value in the interval (0.0, inf).
 
-### Description
+### Types
 
 #### "bumper" Sensors
 
@@ -86,7 +86,7 @@ magnitude of the force. The force vector must be read using the
 
 %end
 
-#### Lookup Table
+### Lookup Table
 
 A "force" and "force-3d" sensors can optionally specify a `lookupTable` to
 simulate the possible non-linearity (and saturation) of the real device. The
@@ -102,14 +102,14 @@ default `lookupTable` of the [TouchSensor](touchsensor.md#touchsensor) node is:
 
 ```
 [   0     0 0
- 5000 50000 0 ]
+5000 50000 0 ]
 ```
 
 and hence it maps forces between 0 and 5000 Newtons to output values between 0
 and 50000, the output unit being 0.1 Newton. You should empty the `lookupTable`
 to have Newtons as output units.
 
-#### Collision detection
+### Collision detection
 
 [TouchSensor](touchsensor.md#touchsensor)s detect collisions based on the 3D
 geometry of its `boundingObject`. So the `boundingObject` must be specified for
@@ -129,7 +129,7 @@ other `boundingObject` of the robot) makes the actual contact with the floor.
 Therefore, it is necessary that the sensor's `boundingObject` extend below any
 other `boundingObject` of the robot (e.g., foot, ankle, etc.).
 
-#### Coordinate System
+### Coordinate System
 
 It is easy to check the orientation of the coordinate system of a
 [TouchSensor](touchsensor.md#touchsensor): if you select the
@@ -141,7 +141,7 @@ coordinate system (the color coding is: *x/y/z* = red/green/blue). For a "force"
 sensor, the blue (*z*) component should point in the direction where the
 collision is expected.
 
-#### Accuracy
+### Accuracy
 
 The force measured by the ODE physics engine is only a rough approximation of a
 real physical force. This approximation usually improves as the `basicTimeStep`
@@ -149,7 +149,7 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 ### TouchSensor Functions
 
-#### <a name="wb_touch_sensor_get_values"/>Name
+**Name** <a name="wb_touch_sensor_get_values"/>
 
 **wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
 
@@ -165,7 +165,7 @@ double wb_touch_sensor_get_value(WbDeviceTag tag)
 const double *wb_touch_sensor_get_values(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_touch_sensor_enable()` allows the user to enable a touch sensor measurement
 every `ms` milliseconds.
@@ -187,7 +187,7 @@ with a sensor of type "force-3d" exclusively.
 
 ---
 
-#### <a name="wb_touch_sensor_get_type"/>Name
+**Name** <a name="wb_touch_sensor_get_type"/>
 
 **wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
 
@@ -199,7 +199,7 @@ with a sensor of type "force-3d" exclusively.
 int wb_touch_sensor_get_type(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 This function allows to retrieve the touch sensor type defined by the `type`
 field. If the value of the `type` field is "force" then this function returns

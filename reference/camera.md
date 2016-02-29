@@ -267,7 +267,7 @@ restored.
 
 ### Camera Functions
 
-#### <a name="wb_camera_enable"/>Name
+**Name** <a name="wb_camera_enable"/>
 
 **wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
 
@@ -281,7 +281,7 @@ void wb_camera_disable(WbDeviceTag tag)
 int wb_camera_get_sampling_period(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_camera_enable()` allows the user to enable a camera update each `ms`
 milliseconds.
@@ -293,7 +293,7 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 ---
 
-#### <a name="wb_camera_get_fov"/>Name
+**Name** <a name="wb_camera_get_fov"/>
 
 **wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
 
@@ -308,7 +308,7 @@ double wb_camera_get_max_fov(WbDeviceTag tag)
 void wb_camera_set_fov(WbDeviceTag tag, double fov)
 ```
 
-#### Description
+**Description**
 
 These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
@@ -322,7 +322,7 @@ return the camera's field of view.
 
 ---
 
-#### <a name="wb_camera_get_focal_length"/>Name
+**Name** <a name="wb_camera_get_focal_length"/>
 
 **wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
 
@@ -338,7 +338,7 @@ double wb_camera_get_min_focal_distance(WbDeviceTag tag)
 void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
 ```
 
-#### Description
+**Description**
 
 These functions allow the controller to get and set the focusing parameters.
 Note that if the camera device has no [CameraFocus](camerafocus.md#camerafocus)
@@ -347,7 +347,7 @@ node defined in its `focus` field, it is not possible to call
 
 ---
 
-#### <a name="wb_camera_get_width"/>Name
+**Name** <a name="wb_camera_get_width"/>
 
 **wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
 
@@ -360,14 +360,14 @@ int wb_camera_get_width(WbDeviceTag tag)
 int wb_camera_get_height(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 These functions return the width and height of a camera image as defined in the
 corresponding [Camera](camera.md#camera) node.
 
 ---
 
-#### <a name="wb_camera_get_near"/>Name
+**Name** <a name="wb_camera_get_near"/>
 
 **wb\_camera\_get\_near** - *get the near parameter of the camera device*
 
@@ -379,14 +379,14 @@ corresponding [Camera](camera.md#camera) node.
 double wb_camera_get_near(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 This function returns the near parameter of a camera device as defined in the
 corresponding [Camera](camera.md#camera) node.
 
 ---
 
-#### <a name="wb_camera_get_type"/>Name
+**Name** <a name="wb_camera_get_type"/>
 
 **wb\_camera\_get\_type** - *get the type of the camera*
 
@@ -398,7 +398,7 @@ corresponding [Camera](camera.md#camera) node.
 int wb_camera_get_type()
 ```
 
-#### Description
+**Description**
 
 This function returns the type of the camera as defined by the `type` field of
 the corresponding [Camera](camera.md#camera) node. The constants defined in
@@ -419,7 +419,7 @@ integers of the [Camera](camera.md#camera) class (for example, Camera::COLOR).
 
 ---
 
-#### <a name="wb_camera_get_image"/>Name
+**Name** <a name="wb_camera_get_image"/>
 
 **wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
 
@@ -435,7 +435,7 @@ unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, in
 unsigned char wb_camera_image_get_grey(const unsigned char *image, int width, int x, int y)
 ```
 
-#### Description
+**Description**
 
 The `wb_camera_get_image()` function reads the last image grabbed by the camera.
 The image is coded as a sequence of three bytes representing the red, green and
@@ -542,7 +542,7 @@ the OpenGL z-buffer.
 
 ---
 
-#### <a name="wb_camera_get_range_image"/>Name
+**Name** <a name="wb_camera_get_range_image"/>
 
 **wb\_camera\_get\_range\_image**, **wb\_camera\_range\_image\_get\_depth**, **wb\_camera\_get\_max\_range** - *get the range image and range data from a range-finder camera*
 
@@ -556,7 +556,7 @@ float wb_camera_range_image_get_depth(const float *range_image, int width, int x
 double wb_camera_get_max_range(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_camera_get_range_image()` macro allows the user to read the contents of
 the last range image grabbed by a range-finder camera. The range image is
@@ -592,7 +592,7 @@ are identical but their handling is of course different.
 
 ---
 
-#### <a name="wb_camera_save_image"/>Name
+**Name** <a name="wb_camera_save_image"/>
 
 **wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
 
@@ -604,7 +604,7 @@ are identical but their handling is of course different.
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality)
 ```
 
-#### Description
+**Description**
 
 The `wb_camera_save_image()` function allows the user to save a `tag` image
 which was previously obtained with the `wb_camera_get_image()` function. The

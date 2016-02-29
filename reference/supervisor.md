@@ -36,7 +36,7 @@ As for a regular [Robot](robot.md#robot) controller, the `wb_robot_init()`,
 `wb_robot_step()`, etc. functions must be used in a
 [Supervisor](supervisor.md#supervisor) controller.
 
-#### <a name="wb_supervisor_export_image"/>Name
+**Name** <a name="wb_supervisor_export_image"/>
 
 **wb\_supervisor\_export\_image** - *save the current 3D image of the simulator into a JPEG file, suitable for
     building a webcam system*
@@ -49,7 +49,7 @@ As for a regular [Robot](robot.md#robot) controller, the `wb_robot_init()`,
 void wb_supervisor_export_image(const char *filename, int quality)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_export_image()` function saves the current image of Webots
 main window into a JPEG file as specified by the `filename` parameter. If the
@@ -60,7 +60,7 @@ specify a valid (absolute or relative) file name, e.g., "snapshot.jpg" or
 and then renamed to the requested `filename`. This avoids having a temporary
 unfinished (and hence corrupted) file for webcam applications.
 
-#### Example
+**Example**
 
 The "projects/samples/howto/worlds/supervisor.wbt" world provides an example on
 how to use the `wb_supervisor_export_image()` function. In this example, the
@@ -69,7 +69,7 @@ time a goal is scored.
 
 ---
 
-#### <a name="wb_supervisor_node_get_from_def"/>Name
+**Name** <a name="wb_supervisor_node_get_from_def"/>
 
 **wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
 
@@ -86,7 +86,7 @@ WbNodeRef wb_supervisor_node_get_root()
 WbNodeRef wb_supervisor_node_get_self()
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_from_def()` function retrieves a handle to a node in
 the world from its DEF name. The return value can be used for subsequent calls
@@ -134,7 +134,7 @@ node without having to define a DEF name for it.
 
 ---
 
-#### <a name="wb_supervisor_node_get_type"/>Name
+**Name** <a name="wb_supervisor_node_get_type"/>
 
 **wb\_supervisor\_node\_get\_type**, **wb\_supervisor\_node\_get\_type\_name**, **wb\_supervisor\_node\_get\_base\_type\_name** - *get information on a specified node*
 
@@ -148,7 +148,7 @@ const char *wb_supervisor_node_get_type_name(WbNodeRef node)
 const char *wb_supervisor_node_get_base_type_name(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_type()` function returns a symbolic value
 corresponding the type of the node specified as an argument. If the argument is
@@ -176,7 +176,7 @@ integers can be directly compared with the output of the `Node::getType()`
 
 ---
 
-#### <a name="wb_supervisor_node_remove"/>Name
+**Name** <a name="wb_supervisor_node_remove"/>
 
 **wb\_supervisor\_node\_remove** - *Remove a specified node*
 
@@ -188,14 +188,14 @@ integers can be directly compared with the output of the `Node::getType()`
 void wb_supervisor_node_remove(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_remove()` function removes the node specified as an
 argument from the Webots scene tree.
 
 ---
 
-#### <a name="wb_supervisor_node_get_field"/>Name
+**Name** <a name="wb_supervisor_node_get_field"/>
 
 **wb\_supervisor\_node\_get\_field** - *get a field reference from a node*
 
@@ -207,7 +207,7 @@ argument from the Webots scene tree.
 WbFieldRef wb_supervisor_node_get_field(WbNodeRef node, const char *field_name)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_field()` function retrieves a handler to a node
 field. The field is specified by its name in `field_name` and the `node` it
@@ -217,7 +217,7 @@ returns a handler to a field.
 
 ---
 
-#### <a name="wb_supervisor_node_get_position"/>Name
+**Name** <a name="wb_supervisor_node_get_position"/>
 
 **wb\_supervisor\_node\_get\_position**, **wb\_supervisor\_node\_get\_orientation** - *get the global (world) position/orientation of a node*
 
@@ -230,7 +230,7 @@ const double *wb_supervisor_node_get_position(WbNodeRef node)
 const double *wb_supervisor_node_get_orientation(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_position()` function returns the position of a node
 expressed in the global (world) coordinate system. The `node` argument must be a
@@ -281,7 +281,7 @@ deallocated at the next time step.
 
 ---
 
-#### <a name="wb_supervisor_node_get_center_of_mass"/>Name
+**Name** <a name="wb_supervisor_node_get_center_of_mass"/>
 
 **wb\_supervisor\_node\_get\_center\_of\_mass** - *get the global position of a solid's center of mass*
 
@@ -293,7 +293,7 @@ deallocated at the next time step.
 const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_center_of_mass()` function returns the position of
 the center of mass of a Solid node expressed in the global (world) coordinate
@@ -310,7 +310,7 @@ deallocated at the next time step.
 
 ---
 
-#### <a name="wb_supervisor_node_get_contact_point"/>Name
+**Name** <a name="wb_supervisor_node_get_contact_point"/>
 
 **wb\_supervisor\_node\_get\_contact\_point** - *get the contact point with given index in the contact point list of the given solid.*
 
@@ -322,7 +322,7 @@ deallocated at the next time step.
 const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_contact_point()` function returns the contact point
 with given index in the contact point list of the given `Solid`. The function
@@ -344,7 +344,7 @@ deallocated at the next time step.
 
 ---
 
-#### <a name="wb_supervisor_node_get_number_of_contact_points"/>Name
+**Name** <a name="wb_supervisor_node_get_number_of_contact_points"/>
 
 **wb\_supervisor\_node\_get\_number\_of\_contact\_points** - *get the number of contact points of the given solid*
 
@@ -356,7 +356,7 @@ deallocated at the next time step.
 const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_number_of_contact_points()` function returns the
 number of contact points of the given `Solid`. The `node` argument must be a
@@ -368,7 +368,7 @@ shows how to use this function.
 
 ---
 
-#### <a name="wb_supervisor_node_get_static_balance"/>Name
+**Name** <a name="wb_supervisor_node_get_static_balance"/>
 
 **wb\_supervisor\_node\_get\_static\_balance** - *return the boolean value of the static balance test based on the support polygon of a solid*
 
@@ -380,7 +380,7 @@ shows how to use this function.
 bool wb_supervisor_node_get_static_balance(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_static_balance()` function returns the boolean value
 of the static balance test based on the support polygon of a solid. The `node`
@@ -393,7 +393,7 @@ center of mass onto this plane lies inside or outside the support polygon.
 
 ---
 
-#### <a name="wb_supervisor_node_get_velocity"/>Name
+**Name** <a name="wb_supervisor_node_get_velocity"/>
 
 **wb\_supervisor\_node\_get\_velocity**, **wb\_supervisor\_node\_set\_velocity** - *get/set the angular and linear velocities of a Solid node.*
 
@@ -406,7 +406,7 @@ const double *wb_supervisor_node_get_velocity(WbNodeRef node)
 void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6])
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_get_velocity()` function returns the velocity (both
 linear and angular) of a node. The `node` argument must be a
@@ -426,7 +426,7 @@ x, y and z axes.
 
 ---
 
-#### <a name="wb_supervisor_node_reset_physics"/>Name
+**Name** <a name="wb_supervisor_node_reset_physics"/>
 
 **wb\_supervisor\_node\_reset\_physics** - *stops the inertia of the given solid*
 
@@ -438,7 +438,7 @@ x, y and z axes.
 void wb_supervisor_node_reset_physics(WbNodeRef node)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_node_reset_physics()` function stops the inertia of the given
 solid. If the specified node is physics-enables, i.e. it contains a
@@ -451,7 +451,7 @@ refer to [this section](supervisor.md#wb_supervisor_simulation_reset_physics).
 
 ---
 
-#### <a name="wb_supervisor_set_label"/>Name
+**Name** <a name="wb_supervisor_set_label"/>
 
 **wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
 
@@ -463,7 +463,7 @@ refer to [this section](supervisor.md#wb_supervisor_simulation_reset_physics).
 void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_set_label()` function displays a text label overlaying the 3D
 scene in Webots' main window. The `id` parameter is an identifier for the label;
@@ -485,7 +485,7 @@ transparency level of 0 means no transparency, while a transparency level of 1
 means total transparency (the text will be invisible). Intermediate values
 correspond to semi-transparent levels.
 
-#### Example
+**Example**
 
 -
 
@@ -514,7 +514,7 @@ represents the magenta color.
 
 ---
 
-#### <a name="wb_supervisor_simulation_quit"/>Name
+**Name** <a name="wb_supervisor_simulation_quit"/>
 
 **wb\_supervisor\_simulation\_quit** - *terminate the simulator and controller processes*
 
@@ -526,7 +526,7 @@ represents the magenta color.
 void wb_supervisor_simulation_quit(int status)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_simulator_quit()` function quits Webots, as if one was using
 the menu `File > Quit Webots`. This function makes it easier to invoke a Webots
@@ -598,7 +598,7 @@ int main(int argc, char *argv[]) {
 
 ---
 
-#### <a name="wb_supervisor_simulation_revert"/>Name
+**Name** <a name="wb_supervisor_simulation_revert"/>
 
 **wb\_supervisor\_simulation\_revert** - *reload the current world*
 
@@ -610,7 +610,7 @@ int main(int argc, char *argv[]) {
 void wb_supervisor_simulation_revert()
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_simulator_revert()` function sends a request to the simulator
 process, asking it to reload the current world immediately. As a result of
@@ -621,7 +621,7 @@ restarts.
 
 ---
 
-#### <a name="wb_supervisor_load_world"/>Name
+**Name** <a name="wb_supervisor_load_world"/>
 
 **wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
 
@@ -634,7 +634,7 @@ void wb_supervisor_load_world(const char *filename)
 bool wb_supervisor_save_world(const char *filename)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_load_world()` function sends a request to the simulator
 process, asking it to stop the current simulation and load the world given in
@@ -656,7 +656,7 @@ argument. In this case, a simple save operation is performed.
 
 ---
 
-#### <a name="wb_supervisor_simulation_reset_physics"/>Name
+**Name** <a name="wb_supervisor_simulation_reset_physics"/>
 
 **wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
 
@@ -668,7 +668,7 @@ argument. In this case, a simple save operation is performed.
 void wb_supervisor_simulation_reset_physics()
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_simulation_reset_physics()` function sends a request to the
 simulator process, asking it to stop the movement of all physics-enabled solids
@@ -687,7 +687,7 @@ after calling this function.
 
 ---
 
-#### <a name="wb_supervisor_movie_start_recording"/>Name
+**Name** <a name="wb_supervisor_movie_start_recording"/>
 
 **wb\_supervisor\_movie\_start\_recording**, **wb\_supervisor\_movie\_stop\_recording**, **wb\_supervisor\_movie\_get\_status** - *export the current simulation into a movie file*
 
@@ -701,7 +701,7 @@ void wb_supervisor_movie_stop_recording()
 int wb_supervisor_movie_get_status()
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_movie_start_recording()` function starts saving the current
 simulation into a movie file. The movie creation process will complete after the
@@ -741,7 +741,7 @@ value is equal to WB\_SUPERVISOR\_MOVIE\_READY.
 
 ---
 
-#### <a name="wb_supervisor_animation_start_recording"/>Name
+**Name** <a name="wb_supervisor_animation_start_recording"/>
 
 **wb\_supervisor\_animation\_start\_recording**, **wb\_supervisor\_animation\_stop\_recording** - *export the current simulation into an animation file*
 
@@ -754,7 +754,7 @@ bool wb_supervisor_animation_start_recording(const char *filename)
 bool wb_supervisor_animation_stop_recording()
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_animation_start_recording()` function starts saving the
 current simulation into an animation file. The animation creation process will
@@ -772,7 +772,7 @@ indicating their success.
 
 ---
 
-#### <a name="wb_supervisor_field_get"/>Name
+**Name** <a name="wb_supervisor_field_get"/>
 
 **wb\_supervisor\_field\_get\_type**, **wb\_supervisor\_field\_get\_type\_name**, **wb\_supervisor\_field\_get\_count** - *get a handler and more information on a field in a node*
 
@@ -786,7 +786,7 @@ const char *wb_supervisor_field_get_type_name(WbFieldRef field)
 int wb_supervisor_field_get_count(WbFieldRef field)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_field_get_type()` returns the data type of a field found
 previously from the `wb_supervisor_node_get_field()` function, as a symbolic
@@ -812,7 +812,7 @@ be directly compared with the output of the `Field::getType()`
 
 ---
 
-#### <a name="wb_supervisor_field_get_sf_bool"/>Name
+**Name** <a name="wb_supervisor_field_get_sf_bool"/>
 
 **wb\_supervisor\_field\_get\_sf\_bool**, **wb\_supervisor\_field\_get\_sf\_int32**, **wb\_supervisor\_field\_get\_sf\_float**, **wb\_supervisor\_field\_get\_sf\_vec2f**, **wb\_supervisor\_field\_get\_sf\_vec3f**, **wb\_supervisor\_field\_get\_sf\_rotation**, **wb\_supervisor\_field\_get\_sf\_color**, **wb\_supervisor\_field\_get\_sf\_string**, **wb\_supervisor\_field\_get\_sf\_node**, **wb\_supervisor\_field\_get\_mf\_bool**, **wb\_supervisor\_field\_get\_mf\_int32**, **wb\_supervisor\_field\_get\_mf\_float**, **wb\_supervisor\_field\_get\_mf\_vec2f**, **wb\_supervisor\_field\_get\_mf\_vec3f**, **wb\_supervisor\_field\_get\_mf\_rotation**, **wb\_supervisor\_field\_get\_mf\_color**, **wb\_supervisor\_field\_get\_mf\_string**, **wb\_supervisor\_field\_get\_mf\_node** - *get the value of a field*
 
@@ -841,7 +841,7 @@ const char *wb_supervisor_field_get_mf_string(WbFieldRef field, int index)
 WbNodeRef wb_supervisor_field_get_mf_node(WbFieldRef field, int index)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_field_get_sf_*()` functions retrieve the value of a specified
 single `field` (SF). The type of the field has to match the name of the function
@@ -861,7 +861,7 @@ message is displayed).
 
 ---
 
-#### <a name="wb_supervisor_field_set_sf_bool"/>Name
+**Name** <a name="wb_supervisor_field_set_sf_bool"/>
 
 **wb\_supervisor\_field\_set\_sf\_bool**, **wb\_supervisor\_field\_set\_sf\_int32**, **wb\_supervisor\_field\_set\_sf\_float**, **wb\_supervisor\_field\_set\_sf\_vec2f**, **wb\_supervisor\_field\_set\_sf\_vec3f**, **wb\_supervisor\_field\_set\_sf\_rotation**, **wb\_supervisor\_field\_set\_sf\_color**, **wb\_supervisor\_field\_set\_sf\_string**, **wb\_supervisor\_field\_set\_mf\_bool**, **wb\_supervisor\_field\_set\_mf\_int32**, **wb\_supervisor\_field\_set\_mf\_float**, **wb\_supervisor\_field\_set\_mf\_vec2f**, **wb\_supervisor\_field\_set\_mf\_vec3f**, **wb\_supervisor\_field\_set\_mf\_rotation**, **wb\_supervisor\_field\_set\_mf\_color**, **wb\_supervisor\_field\_set\_mf\_string** - *set the value of a field*
 
@@ -888,7 +888,7 @@ void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double 
 void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_field_set_sf_*()` functions assign a value to a specified
 single `field` (SF). The type of the field has to match with the name of the
@@ -909,7 +909,7 @@ and `wb_supervisor_field_set_sf_rotation` functions. If needed, the user has to
 explicitly call [this section](supervisor.md#wb_supervisor_node_reset_physics)
 function.
 
-#### Examples
+**Examples**
 
 The "texture\_change.wbt" world, located in the "projects/samples/howto/worlds"
 directory, shows how to change a texture from the supervisor while the
@@ -919,7 +919,7 @@ and setting fields with the above described functions.
 
 ---
 
-#### <a name="wb_supervisor_field_import_mf_node"/>Name
+**Name** <a name="wb_supervisor_field_import_mf_node"/>
 
 **wb\_supervisor\_field\_import\_mf\_node**, **wb\_supervisor\_field\_import\_mf\_node\_from\_string**, **wb\_supervisor\_field\_remove\_mf\_node** - *import/remove a node into/from an MF\_NODE field (typically a "children" field)*
 
@@ -933,7 +933,7 @@ void wb_supervisor_field_import_mf_node_from_string(WbFieldRef field, int positi
 void wb_supervisor_field_remove_mf_node(WbFieldRef field, int position)
 ```
 
-#### Description
+**Description**
 
 The `wb_supervisor_field_import_mf_node()` function imports a Webots node into
 an MF\_NODE. This node should be defined in a `.wbo` file referenced by the

@@ -16,7 +16,7 @@ behavior of the real robot.
 
 ### Remote control
 
-#### Overview
+#### Remote control overview
 
 Often, the easiest way to transfer your control program to a real robot is to
 develop a remote control system. In this case, your control program runs on the
@@ -65,7 +65,7 @@ be implemented other programming languages creating a wrapper.
 
 ### Cross-compilation
 
-#### Overview
+#### Cross-compilation overview
 
 Developing a cross-compilation system will allow you to recompile your Webots
 controller for the embedded processor of your own real robot. Hence, the source

@@ -50,7 +50,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### GPS Functions
 
-#### <a name="wb_gps_get_values"/>Name
+**Name** <a name="wb_gps_get_values"/>
 
 **wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values** - *enable, disable and read the GPS measurements*
 
@@ -65,7 +65,7 @@ int wb_gps_get_sampling_period(WbDeviceTag tag)
 const double *wb_gps_get_values(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_gps_enable()` allows the user to enable a GPS measurement each `ms`
 milliseconds.

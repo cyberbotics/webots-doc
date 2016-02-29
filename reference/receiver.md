@@ -71,7 +71,7 @@ noise is not dependent on the distance between emitter-receiver.
 
 ### Receiver Functions
 
-#### <a name="wb_receiver_enable"/>Name
+**Name** <a name="wb_receiver_enable"/>
 
 **wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
 
@@ -85,7 +85,7 @@ void wb_receiver_disable(WbDeviceTag tag)
 int wb_receiver_get_sampling_period(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_receiver_enable()` starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate
@@ -102,7 +102,7 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
 ---
 
-#### <a name="wb_receiver_get_queue_length"/>Name
+**Name** <a name="wb_receiver_get_queue_length"/>
 
 **wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
 
@@ -115,7 +115,7 @@ int wb_receiver_get_queue_length(WbDeviceTag tag)
 void wb_receiver_next_packet(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_receiver_get_queue_length()` function returns the number of data packets
 currently present in the receiver's queue (see [this
@@ -170,7 +170,7 @@ will result in code that is not robust.
 
 ---
 
-#### <a name="wb_receiver_get_data"/>Name
+**Name** <a name="wb_receiver_get_data"/>
 
 **wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
 
@@ -183,7 +183,7 @@ const void *wb_receiver_get_data(WbDeviceTag tag)
 int wb_receiver_get_data_size(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_receiver_get_data()` function returns the data of the packet at the head
 of the reception queue (see [this figure](receiver.md#receiver-s-packet-queue)).
@@ -254,7 +254,7 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 
 ---
 
-#### <a name="wb_receiver_get_signal_strength"/>Name
+**Name** <a name="wb_receiver_get_signal_strength"/>
 
 **wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
 
@@ -267,7 +267,7 @@ double wb_receiver_get_signal_strength(WbDeviceTag tag)
 const double *wb_receiver_get_emitter_direction(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_receiver_get_signal_strength()` function operates on the head packet in
 the receiver's queue (see [this figure](receiver.md#receiver-s-packet-queue)).
@@ -295,7 +295,7 @@ receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 ---
 
-#### <a name="wb_receiver_set_channel"/>Name
+**Name** <a name="wb_receiver_set_channel"/>
 
 **wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
 
@@ -308,7 +308,7 @@ void wb_receiver_set_channel(WbDeviceTag tag, int channel)
 int wb_receiver_get_channel(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_receiver_set_channel()` function allows a receiver to change its
 reception channel. It modifies the `channel` field of the corresponding

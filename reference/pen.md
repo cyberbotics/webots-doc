@@ -72,7 +72,7 @@ function.
 
 ### Pen Functions
 
-#### <a name="wb_pen_write"/>Name
+**Name** <a name="wb_pen_write"/>
 
 **wb\_pen\_write** - *enable or disable pen writing*
 
@@ -84,7 +84,7 @@ function.
 void wb_pen_write(WbDeviceTag tag, bool write)
 ```
 
-#### Description
+**Description**
 
 `wb_pen_write()` allows the user to switch a pen device on or off to disable or
 enable writing. If the `write` parameter is *true*, the specified `tag` device
@@ -92,7 +92,7 @@ will write; if `write` is *false*, it won't.
 
 ---
 
-#### <a name="wb_pen_set_ink_color"/>Name
+**Name** <a name="wb_pen_set_ink_color"/>
 
 **wb\_pen\_set\_ink\_color** - *change the color of a pen's ink*
 
@@ -104,7 +104,7 @@ will write; if `write` is *false*, it won't.
 void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density)
 ```
 
-#### Description
+**Description**
 
 `wb_pen_set_ink_color()` changes the current ink color of the specified `tag`
 device. The `color` is a 32 bit integer value which defines the new color of the
@@ -113,7 +113,7 @@ red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is grey
 0xFFFFFF is white, etc.). The `density` parameter defines the ink density, with
 0 meaning transparent ink and 1 meaning completely opaque ink.
 
-#### Example
+**Example**
 
 ```
 wb_pen_set_ink_color(pen,0xF01010,0.9);

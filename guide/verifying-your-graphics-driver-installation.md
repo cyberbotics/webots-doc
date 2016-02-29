@@ -31,7 +31,7 @@ the *Software Update*, so Mac users are not concerned by this section. Note that
 Webots can run up to 10x slower without appropriate driver. Updating your driver
 may also solve various problems, i.e., odd graphics rendering or Webots crashes.
 
-#### Linux
+#### Upgrading the GPU driver on Linux
 
 On Linux, use this command to check if a hardware accelerated driver is
 installed:
@@ -79,7 +79,7 @@ manufacturer's website: [http://www.nvidia.com](http://www.nvidia.com) for an
 nVidia card or [http://www.amd.com](http://www.amd.com) for a ATI graphics card.
 Please follow the manufacturer's instructions for the installation.
 
-#### Windows
+#### Upgrading the GPU driver on Windows
 
 1. Right-click on `My Computer`.
 2. Select `Properties`.
@@ -94,7 +94,7 @@ appears. Make a note of it.
 
 ### Hardware acceleration tips
 
-#### Linux
+#### Linux: disable desktop effects
 
 Depending on the graphics hardware, there may be a huge performance drop of the
 rendering system (up to 10x) when *compiz* desktop effects are on. Also these

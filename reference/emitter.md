@@ -91,7 +91,7 @@ possible communication; the `type, range` and `aperture` will be ignored.
 
 ### Emitter Functions
 
-#### <a name="wb_emitter_send"/>Name
+**Name** <a name="wb_emitter_send"/>
 
 **wb\_emitter\_send** - *send a data packet to potential receivers*
 
@@ -103,7 +103,7 @@ possible communication; the `type, range` and `aperture` will be ignored.
 int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
 ```
 
-#### Description
+**Description**
 
 The `wb_emitter_send()` function adds to the emitters's queue a packet of `size`
 bytes located at the address indicated by `data`. The enqueued data packets will
@@ -160,7 +160,7 @@ in a C/C++ controller.
 
 ---
 
-#### <a name="wb_emitter_set_channel"/>Name
+**Name** <a name="wb_emitter_set_channel"/>
 
 **wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
 
@@ -173,7 +173,7 @@ void wb_emitter_set_channel(WbDeviceTag tag, int channel)
 int wb_emitter_get_channel(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_emitter_set_channel()` function allows the controller to change the
 transmission channel. This modifies the `channel` field of the corresponding
@@ -190,7 +190,7 @@ static integer of the [Emitter](emitter.md#emitter) class
 
 ---
 
-#### <a name="wb_emitter_set_range"/>Name
+**Name** <a name="wb_emitter_set_range"/>
 
 **wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
 
@@ -203,7 +203,7 @@ void wb_emitter_set_range(WbDeviceTag tag, double range)
 double wb_emitter_get_range(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_emitter_set_range()` function allows the controller to change the
 transmission range at run-time. Data packets can only reach receivers located
@@ -217,7 +217,7 @@ functions, a value of -1 indicates an infinite range.
 
 ---
 
-#### <a name="wb_emitter_get_buffer_size"/>Name
+**Name** <a name="wb_emitter_get_buffer_size"/>
 
 **wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
 
@@ -229,7 +229,7 @@ functions, a value of -1 indicates an infinite range.
 int wb_emitter_get_buffer_size(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_emitter_get_buffer_size()` function returns the size (in bytes) of the
 transmission buffer. This corresponds to the value specified by the `bufferSize`

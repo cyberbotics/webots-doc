@@ -242,7 +242,7 @@ Warnings are displayed if theses rules are not respected.
 
 ### Motor Functions
 
-#### <a name="wb_motor_set_position"/>Name
+**Name** <a name="wb_motor_set_position"/>
 
 **wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
 
@@ -269,7 +269,7 @@ double wb_motor_get_available_torque(WbDeviceTag tag)
 double wb_motor_get_max_torque(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_motor_set_position()` function specifies a new target position that the
 PID-controller will attempt to reach using the current velocity, acceleration
@@ -371,7 +371,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 ---
 
-#### <a name="wb_motor_enable_force_feedback"/>Name
+**Name** <a name="wb_motor_enable_force_feedback"/>
 
 **wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
 
@@ -390,7 +390,7 @@ int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag)
 double wb_motor_get_torque_feedback(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_motor_enable_force_feedback()` (resp.
 `wb_motor_enable_torque_feedback()`) function activates force (resp. torque)
@@ -442,7 +442,7 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 ---
 
-#### <a name="wb_motor_set_force"/>Name
+**Name** <a name="wb_motor_set_force"/>
 
 **wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
 
@@ -455,7 +455,7 @@ void wb_motor_set_force(WbDeviceTag tag, double force)
 void wb_motor_set_torque(WbDeviceTag tag, double torque)
 ```
 
-#### Description
+**Description**
 
 As an alternative to the PID-controller, the `wb_motor_set_force()` (resp.
 `wb_motor_set_torque()`) function allows the user to directly specify the amount
@@ -488,7 +488,7 @@ dampers with controllable properties. The example in
 
 ---
 
-#### <a name="wb_motor_get_type"/>Name
+**Name** <a name="wb_motor_get_type"/>
 
 **wb\_motor\_get\_type** - *get the motor type*
 
@@ -500,7 +500,7 @@ dampers with controllable properties. The example in
 int wb_motor_get_type(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 This function allows to retrieve the motor type defined by the `type` field. If
 the value of the `type` field is "linear", this function returns WB\_LINEAR, and

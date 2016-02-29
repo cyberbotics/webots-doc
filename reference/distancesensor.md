@@ -220,7 +220,7 @@ Webots). The ground texture must be placed in a [Plane](plane.md#plane).
 
 ### DistanceSensor Functions
 
-#### <a name="wb_distance_sensor_get_value"/>Name
+**Name** <a name="wb_distance_sensor_get_value"/>
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
@@ -235,7 +235,7 @@ int wb_distance_sensor_get_sampling_period(WbDeviceTag tag)
 double wb_distance_sensor_get_value(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_distance_sensor_enable()` allows the user to enable a distance sensor
 measurement each `ms` milliseconds.

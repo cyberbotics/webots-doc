@@ -28,7 +28,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### PositionSensor Functions
 
-#### <a name="wb_position_sensor_get_value"/>Name
+**Name** <a name="wb_position_sensor_get_value"/>
 
 **wb\_position\_sensor\_enable**, **wb\_position\_sensor\_disable**, **wb\_position\_sensor\_get\_sampling\_period**, **wb\_position\_sensor\_get\_value**, **wb\_position\_sensor\_get\_type** - *enable, disable and read position sensor measurement*
 
@@ -44,7 +44,7 @@ double wb_position_sensor_get_value(WbDeviceTag tag)
 int wb_position_sensor_get_type(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_position_sensor_enable()` enables a measurement of the joint position each
 `ms` milliseconds.

@@ -14,7 +14,7 @@ a GPS and therefore have no mean of precisely determining their position. You
 will find more info about *odometry* and *SLAM* techniques in  `Cyberbotics'
 Robot Curriculum`.
 
-#### In controller code:
+#### Get position in controller code:
 
 To get the position of a robot in the robot's controller code: add a `GPS` node
 to the robot, then use `wb_robot_get_device(), wb_gps_enable()` and
@@ -25,7 +25,7 @@ Manual](http://www.cyberbotics.com/reference/). Note that the `GPS` can also be
 placed on a robot's part (arm, foot, etc.) to get the world/global coordinates
 of that particular part.
 
-#### In Supervisor code:
+#### Get position in Supervisor code:
 
 1. To get the 3D position of any `Transform` (or derived) node in the `Supervisor`
 code: you can use the `wb_supervisor_node_get_position()` function. Please check
@@ -39,7 +39,7 @@ A simulation example that shows both the `GPS` and the `Supervisor` techniques
 is included in the Webots installation, you just need to open this world:
 "WEBOTS\_MODULES\_PATH/projects/samples/devices/worlds/gps.wbt".
 
-#### In physics plugin code:
+#### Get position in physics plugin code:
 
 In the physics plugin you can use ODE's `dBodyGetPosition()` function. Note that
 this function returns the position of the center of mass of the body: this may
@@ -53,7 +53,7 @@ Webots provides several functions to get the 3D position of a robot or an object
 the velocity. There are also some functions (see below) that can be used to get
 the velocity directly:
 
-#### In controller code:
+#### Get velocity in controller code:
 
 To get the angular velocity of a robot (or robot part) in the robot's controller
 code: add a `Gyro` node to the robot (or robot part), then use
@@ -61,13 +61,13 @@ code: add a `Gyro` node to the robot (or robot part), then use
 You will find more information about the `Gyro` node and functions in the
 `Reference Manual`.
 
-#### Using a Supervisor:
+#### Get velocity in Supervisor:
 
 Using the `wb_supervisor_node_get_velocity()` function it is possible to
 retrieve both the linear and angular velocity of any `Solid` node. You will find
 more information about this function in the `Reference Manual`.
 
-#### In physics plugin code:
+#### Get velocity in physics plugin code:
 
 In the physics plugin you can use ODE's `dBodyGetLinearVel()` and
 `dBodyAngularVel()` functions. These functions return the linear velocity in

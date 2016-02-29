@@ -172,7 +172,7 @@ a computer network with an unpredictable delay (like the Internet).
 
 ### Robot Functions
 
-#### <a name="wb_robot_step"/>Name
+**Name** <a name="wb_robot_step"/>
 
 **wb\_robot\_step**, **wb\_robot\_init**, **wb\_robot\_cleanup** - *controller step, initialization and cleanup functions*
 
@@ -186,7 +186,7 @@ void wb_robot_init()
 void wb_robot_cleanup()
 ```
 
-#### Description
+**Description**
 
 The `wb_robot_step()` function is crucial and must be used in every controller.
 This function synchronizes the sensor and actuator data between Webots and the
@@ -248,7 +248,7 @@ that the call to the `wb_robot_cleanup()` function must be the last API function
 call in a C controller. Any subsequent Webots API function call will give
 unpredictable results.
 
-#### Simple C controller Example
+**Simple C controller Example**
 
 ``` c
 #include <webots/robot.h>
@@ -289,7 +289,7 @@ int main() {
 
 ---
 
-#### <a name="wb_robot_get_device"/>Name
+**Name** <a name="wb_robot_get_device"/>
 
 **wb\_robot\_get\_device** - *get a unique identifier to a device*
 
@@ -301,7 +301,7 @@ int main() {
 WbDeviceTag wb_robot_get_device(const char *name)
 ```
 
-#### Description
+**Description**
 
 This function returns a unique identifier for a device corresponding to a
 specified `name`. For example, if a robot contains a
@@ -311,13 +311,13 @@ specified `name`. For example, if a robot contains a
 commands to, or reading data from this device. If the specified device is not
 found, the function returns 0.
 
-#### See also
+**See also**
 
 [section](robot.md#wb_robot_step).
 
 ---
 
-#### <a name="robotgetdevice"/>Name
+**Name** <a name="robotgetdevice"/>
 
 **Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
@@ -345,7 +345,7 @@ Servo *Robot::getServo(const std::string &name)
 TouchSensor *Robot::getTouchSensor(const std::string &name)
 ```
 
-#### Description
+**Description**
 
 These functions return a reference to an object corresponding to a specified
 `name`. Depending on the called function, this object can be an instance of a
@@ -356,13 +356,13 @@ These functions return a reference to an object corresponding to a specified
 device is not found, the function returns `NULL` in C++, `null` in Java or the
 `none` in Python.
 
-#### See also
+**See also**
 
 [section](robot.md#wb_robot_step).
 
 ---
 
-#### <a name="wb_robot_get_device_by_index"/>Name
+**Name** <a name="wb_robot_get_device_by_index"/>
 
 **wb\_robot\_get\_device\_by\_index** - *get the devices by introspection*
 
@@ -375,7 +375,7 @@ WbDeviceTag wb_robot_get_device_by_index(int index)
 int wb_robot_get_number_of_devices()
 ```
 
-#### Description
+**Description**
 
 These functions allows to get the robot devices by introspection. Indeed they
 allow to get the devices from an internal flat list storing the devices. The
@@ -410,7 +410,7 @@ for(i=0; i<n_devices; i++) {
 
 ---
 
-#### <a name="wb_robot_battery_sensor_enable"/>Name
+**Name** <a name="wb_robot_battery_sensor_enable"/>
 
 **wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
 
@@ -425,7 +425,7 @@ double wb_robot_battery_sensor_get_value()
 int wb_robot_get_battery_sampling_period(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 These functions allow you to measure the present energy level of the robot
 battery. First, it is necessary to enable battery sensor measurements by calling
@@ -444,7 +444,7 @@ disabled.
 
 ---
 
-#### <a name="wb_robot_get_basic_time_step"/>Name
+**Name** <a name="wb_robot_get_basic_time_step"/>
 
 **wb\_robot\_get\_basic\_time\_step** - *returns the value of the basicTimeStep field of the WorldInfo node*
 
@@ -456,14 +456,14 @@ disabled.
 double wb_robot_get_basic_time_step()
 ```
 
-#### Description
+**Description**
 
 This function returns the value of the `basicTimeStep` field of the
 [WorldInfo](worldinfo.md#worldinfo) node.
 
 ---
 
-#### <a name="wb_robot_get_mode"/>Name
+**Name** <a name="wb_robot_get_mode"/>
 
 **wb\_robot\_get\_mode** - *get operating mode, simulation vs. real robot*
 
@@ -476,7 +476,7 @@ int wb_robot_get_mode()
 void wb_robot_set_mode(int mode, void *arg)
 ```
 
-#### Description
+**Description**
 
 The `wb_robot_get_mode` function returns an integer value indicating the current
 operating mode for the controller.
@@ -500,7 +500,7 @@ The integers can be compared to the following enumeration items:
 
 ---
 
-#### <a name="wb_robot_get_name"/>Name
+**Name** <a name="wb_robot_get_name"/>
 
 **wb\_robot\_get\_name** - *return the name defined in the robot node*
 
@@ -512,7 +512,7 @@ The integers can be compared to the following enumeration items:
 const char *wb_robot_get_name()
 ```
 
-#### Description
+**Description**
 
 This function returns the name as it is defined in the name field of the robot
 node (Robot, DifferentialWheels, Supervisor, etc.) in the current world file.
@@ -530,7 +530,7 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 
 ---
 
-#### <a name="wb_robot_get_model"/>Name
+**Name** <a name="wb_robot_get_model"/>
 
 **wb\_robot\_get\_model** - *return the model defined in the robot node*
 
@@ -542,7 +542,7 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 const char *wb_robot_get_model()
 ```
 
-#### Description
+**Description**
 
 This function returns the model string as it is defined in the model field of
 the robot node (Robot, DifferentialWheels, Supervisor, etc.) in the current
@@ -552,7 +552,7 @@ controller terminates.
 
 ---
 
-#### <a name="wb_robot_get_data"/>Name
+**Name** <a name="wb_robot_get_data"/>
 
 **wb\_robot\_get\_data**, **wb\_robot\_set\_data** - *return the data defined in the robot node*
 
@@ -567,7 +567,7 @@ const char * wb_robot_get_data()
 void wb_robot_set_data(const char *data)
 ```
 
-#### Description
+**Description**
 
 The `wb_robot_get_data` function returns the string contained in the `data`
 field of the robot node.
@@ -577,7 +577,7 @@ the robot node.
 
 ---
 
-#### <a name="wb_robot_get_type"/>Name
+**Name** <a name="wb_robot_get_type"/>
 
 **wb\_robot\_get\_type** - *return the type of the robot node*
 
@@ -590,14 +590,14 @@ the robot node.
 WbNodeType wb_robot_get_type()
 ```
 
-#### Description
+**Description**
 
 This function returns the type of the current mode (WB\_NODE\_ROBOT,
 WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
 ---
 
-#### <a name="wb_robot_get_project_path"/>Name
+**Name** <a name="wb_robot_get_project_path"/>
 
 **wb\_robot\_get\_project\_path** - *return the full path of the current project*
 
@@ -609,7 +609,7 @@ WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 const char *wb_robot_get_project_path()
 ```
 
-#### Description
+**Description**
 
 This function returns the full path of the current project, that is the
 directory which contains the worlds and controllers subdirectories (among
@@ -619,7 +619,7 @@ char string. It should not be deallocated.
 
 ---
 
-#### <a name="wb_robot_get_world_path"/>Name
+**Name** <a name="wb_robot_get_world_path"/>
 
 **wb\_robot\_get\_world\_path** - *return the full path of the current opened world file*
 
@@ -631,7 +631,7 @@ char string. It should not be deallocated.
 const char *wb_robot_get_world_path()
 ```
 
-#### Description
+**Description**
 
 This function returns the full path of the current opened world. The returned
 pointer is a UTF-8 encoded char string which does include the final ".wbt". It
@@ -639,7 +639,7 @@ should not be deallocated.
 
 ---
 
-#### <a name="wb_robot_get_controller_name"/>Name
+**Name** <a name="wb_robot_get_controller_name"/>
 
 **wb\_robot\_get\_controller\_name**, **wb\_robot\_get\_controller\_arguments** - *return the content of the Robot::controller and Robot::controllerArgs fields*
 
@@ -652,14 +652,14 @@ const char *wb_robot_get_controller_name()
 const char *wb_robot_get_controller_arguments()
 ```
 
-#### Description
+**Description**
 
 These functions return the content of respectively the Robot::controller and the
 Robot::controllerArgs fields.
 
 ---
 
-#### <a name="wb_robot_get_synchronization"/>Name
+**Name** <a name="wb_robot_get_synchronization"/>
 
 **wb\_robot\_get\_synchronization** - *return the value of the synchronization field of the Robot node*
 
@@ -671,14 +671,14 @@ Robot::controllerArgs fields.
 bool wb_robot_get_synchronization()
 ```
 
-#### Description
+**Description**
 
 This function returns the boolean value corresponding to the synchronization
 field of the Robot node.
 
 ---
 
-#### <a name="wb_robot_get_time"/>Name
+**Name** <a name="wb_robot_get_time"/>
 
 **wb\_robot\_get\_time** - *return the current simulation time in seconds*
 
@@ -690,7 +690,7 @@ field of the Robot node.
 double wb_robot_get_time()
 ```
 
-#### Description
+**Description**
 
 This function returns the current simulation time in seconds. This correspond to
 the simulation time displayed in the speedometer located in the main toolbar. It
@@ -698,7 +698,7 @@ does not matter whether the controller is synchronized or not.
 
 ---
 
-#### <a name="wb_robot_keyboard_enable"/>Name
+**Name** <a name="wb_robot_keyboard_enable"/>
 
 **wb\_robot\_keyboard\_enable**, **wb\_robot\_keyboard\_disable**, **wb\_robot\_keyboard\_get\_key** - *keyboard reading function*
 
@@ -712,7 +712,7 @@ void wb_robot_keyboard_disable()
 int wb_robot_keyboard_get_key()
 ```
 
-#### Description
+**Description**
 
 These functions allow you to read a key pressed on the computer keyboard from a
 controller program while the main window of Webots is selected and the
@@ -761,7 +761,7 @@ example, *Ctrl+B* can be tested like this:
 
 ---
 
-#### <a name="wb_robot_task_new"/>Name
+**Name** <a name="wb_robot_task_new"/>
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
 
@@ -771,7 +771,7 @@ example, *Ctrl+B* can be tested like this:
 void wb_robot_task_new(void (*task, void *param)
 ```
 
-#### Description
+**Description**
 
 This function creates and starts a new thread of execution for the robot
 controller. The `task` function is immediately called using the `param`
@@ -781,13 +781,13 @@ pointers to data structures which are not protected outside the function against
 asynchronous access from a different thread. Hence you should use mutexes (see
 below) to ensure that such data is not accessed by a different thread.
 
-#### See also
+**See also**
 
 [section](robot.md#wb_robot_mutex_new).
 
 ---
 
-#### <a name="wb_robot_mutex_new"/>Name
+**Name** <a name="wb_robot_mutex_new"/>
 
 **wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
 
@@ -800,7 +800,7 @@ void wb_robot_mutex_lock(WbMutexRef mutex)
 void wb_robot_mutex_unlock(WBMutexRef mutex)
 ```
 
-#### Description
+**Description**
 
 The `wb_robot_mutex_new()` function creates a new mutex and returns a reference
 to that mutex to be used with other mutex functions. A newly created mutex is
@@ -819,7 +819,7 @@ after it has locked the specified `mutex`.
 The `wb_robot_mutex_unlock()` function unlocks the specified `mutex`, allowing
 other threads to lock it.
 
-#### See also
+**See also**
 
 [section](robot.md#wb_robot_task_new).
 
@@ -828,7 +828,7 @@ multi-threaded programming techniques for further information.
 
 ---
 
-#### <a name="wb_robot_window_custom_function"/>Name
+**Name** <a name="wb_robot_window_custom_function"/>
 
 **wb\_robot\_window\_custom\_function** - *communication with the robot window*
 
@@ -838,7 +838,7 @@ multi-threaded programming techniques for further information.
 void *wb_robot_window_custom_function(void *arg)
 ```
 
-#### Description
+**Description**
 
 The `wb_robot_window_custom_function` function allows a robot controller to
 communicate with the robot window plugin. When this function is called, the

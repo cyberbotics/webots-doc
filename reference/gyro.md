@@ -39,7 +39,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### Gyro Functions
 
-#### <a name="wb_gyro_get_values"/>Name
+**Name** <a name="wb_gyro_get_values"/>
 
 **wb\_gyro\_enable**, **wb\_gyro\_disable**, **wb\_gyro\_get\_sampling\_period**, **wb\_gyro\_get\_values** - *enable, disable and read the output values of the gyro device*
 
@@ -54,7 +54,7 @@ int wb_gyro_get_sampling_period(WbDeviceTag tag)
 const double *wb_gyro_get_values(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_gyro_enable()` function turns on the angular velocity measurement each
 `ms` milliseconds.

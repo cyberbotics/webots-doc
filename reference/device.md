@@ -14,7 +14,7 @@ sensor).
 
 ### Device Functions
 
-#### <a name="wb_device_get_model"/>Name
+**Name** <a name="wb_device_get_model"/>
 
 **wb\_device\_get\_model** - *returns the model string of the corresponding device*
 
@@ -26,7 +26,7 @@ sensor).
 const char *wb_device_get_model(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_device_get_model()` returns the model string of the device corresponding to
 the WbDeviceTag given as parameter (`tag`).
@@ -37,7 +37,7 @@ a `model` field)
 
 ---
 
-#### <a name="wb_device_get_name"/>Name
+**Name** <a name="wb_device_get_name"/>
 
 **wb\_device\_get\_name** - *convert WbDeviceTag to its corresponding device name*
 
@@ -49,7 +49,7 @@ a `model` field)
 const char *wb_device_get_name(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_device_get_name()` convert the WbDeviceTag given as parameter (`tag`) to its
 corresponding name.
@@ -58,7 +58,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 ---
 
-#### <a name="wb_device_get_node_type"/>Name
+**Name** <a name="wb_device_get_node_type"/>
 
 **wb\_device\_get\_node\_type** - *convert WbDeviceTag to its corresponding WbNodeType*
 
@@ -70,7 +70,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 WbNodeType wb_device_get_node_type(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_device_get_node_type()` convert the WbDeviceTag given as parameter (`tag`)
 to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md#supervisor)

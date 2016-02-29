@@ -241,7 +241,7 @@ This e-puck control window appears because the `robotWindow` field of the
 `DifferentialWheel` node in the world file was set to "e-puck\_window". Changing
 this `robotWindow` to an empty string will disable this control window.
 
-#### BotStudio
+#### BotStudio overview
 
 BotStudio is a user interface for programming graphically the e-puck thanks to a
 finite state automaton. Behaviors such as wall follower, collision avoider or
@@ -271,17 +271,18 @@ returns a integer between -10 and 10 indicating if a black line is perceived
 respectively at the left and at the right of the e-puck field of view. A
 condition can be set on this value for getting a line follower behavior.
 
-BotStudio is depicted in the [figure](using-the-e-puck-robot.md#botstudio). An
-example of BotStudio can be found by opening the
+BotStudio is depicted in the
+[figure](using-the-e-puck-robot.md#botstudio-window). An example of BotStudio
+can be found by opening the
 "WEBOTS\_MODULES\_PATH/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world
 file.
 
 The BotStudio windows appears when the e-puck's controller points on a *.bsg*
 file.
 
-%figure "BotStudio"
+%figure "BotStudio window"
 
-![BotStudio](png/e-puck_botstudio.png)
+![BotStudio window](png/e-puck_botstudio.png)
 
 %end
 

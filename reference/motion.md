@@ -1,6 +1,6 @@
 ## Motion
 
-#### <a name="wbu_motion_new"/>Name
+**Name** <a name="wbu_motion_new"/>
 
 **wbu\_motion\_new**, **wbu\_motion\_delete** - *obtaining and releasing a motion file handle*
 
@@ -13,7 +13,7 @@ WbMotionRef wbu_motion_new(const char *filename)
 void wbu_motion_delete(WbMotionRef motion)
 ```
 
-#### Description
+**Description**
 
 The `wbu_motion_new()` function allows to read a motion file specified by the
 `filename` parameter. The `filename` can be specified either with an absolute
@@ -42,13 +42,13 @@ if (! walk->isValid()) {
 }
 ```
 
-#### See also
+**See also**
 
 [wbu\_motion\_play](motion.md#wbu_motion_play)
 
 ---
 
-#### <a name="wbu_motion_play"/>Name
+**Name** <a name="wbu_motion_play"/>
 
 **wbu\_motion\_play**, **wbu\_motion\_stop**, **wbu\_motion\_set\_loop**, **wbu\_motion\_set\_reverse** - *Controlling motion files playback*
 
@@ -63,7 +63,7 @@ void wbu_motion_set_loop(WbMotionRef motion, bool loop)
 void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse)
 ```
 
-#### Description
+**Description**
 
 The `wbu_motion_play()` starts the playback of the specified motion. This
 function registers the motion to the playback system, but the effective playback
@@ -108,13 +108,13 @@ position.
 
 By default, the *loop mode* and *reverse mode* of motions are `false`.
 
-#### See also
+**See also**
 
 [wbu\_motion\_new](motion.md#wbu_motion_new)
 
 ---
 
-#### <a name="wbu_motion_is_over"/>Name
+**Name** <a name="wbu_motion_is_over"/>
 
 **wbu\_motion\_is\_over**, **wbu\_motion\_get\_duration**, **wbu\_motion\_get\_time**, **wbu\_motion\_set\_time** - *controlling the playback position*
 
@@ -129,7 +129,7 @@ int wbu_motion_get_time(WbMotionRef motion, bool loop)
 void wbu_motion_set_time(WbMotionRefmotion, int ms)
 ```
 
-#### Description
+**Description**
 
 The `wbu_motion_is_over()` function returns `true` when the playback position
 has reached the end of the motion file. That is when the last pose has been sent
@@ -154,7 +154,7 @@ can be changed whether the motion is playing or stopped. The minimum value is 0
 (beginning of the motion), and the maximum value is the value returned by the
 `wbu_motion_get_duration()` function (end of the motion).
 
-#### See also
+**See also**
 
 [wbu\_motion\_play](motion.md#wbu_motion_play)
 

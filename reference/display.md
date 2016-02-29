@@ -81,7 +81,7 @@ restored.
 
 ### Display Functions
 
-#### <a name="wb_display_get_width"/>Name
+**Name** <a name="wb_display_get_width"/>
 
 **wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
 
@@ -94,14 +94,14 @@ int wb_display_get_width(WbDeviceTag tag)
 int wb_display_get_height(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 These functions return respectively the values of the `width` and `height`
 fields.
 
 ---
 
-#### <a name="wb_display_set_context"/>Name
+**Name** <a name="wb_display_set_context"/>
 
 **wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
 
@@ -115,7 +115,7 @@ void wb_display_set_alpha(WbDeviceTag tag, double alpha)
 void wb_display_set_opacity(WbDeviceTag tag, double opacity)
 ```
 
-#### Description
+**Description**
 
 These three functions define the context in which the subsequent drawing
 commands (see [draw primitive functions](display.md#wb_display_draw_primitive))
@@ -159,7 +159,7 @@ the magenta color.
 
 ---
 
-#### <a name="wb_display_draw_primitive"/>Name
+**Name** <a name="wb_display_draw_primitive"/>
 
 **wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
 
@@ -179,7 +179,7 @@ void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
 void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
 ```
 
-#### Description
+**Description**
 
 These functions order the execution of a drawing primitive on the display. They
 depend on the context of the display as defined by the contextual functions (see
@@ -232,7 +232,7 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 ---
 
-#### <a name="wb_display_image_functions"/>Name
+**Name** <a name="wb_display_image_functions"/>
 
 **wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
 
@@ -249,7 +249,7 @@ void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename)
 void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir)
 ```
 
-#### Description
+**Description**
 
 In addition to the main display image, each [Display](display.md#display) node
 also contains a list of clipboard images used for various image manipulations.

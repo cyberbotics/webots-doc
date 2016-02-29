@@ -44,7 +44,7 @@ value in the interval (0.0, inf).
 
 ### Accelerometer Functions
 
-#### <a name="wb_accelerometer_get_values"/>Name
+**Name** <a name="wb_accelerometer_get_values"/>
 
 **wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
 
@@ -59,7 +59,7 @@ int wb_accelerometer_get_sampling_period(WbDeviceTag tag)
 const double *wb_accelerometer_get_values(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_accelerometer_enable()` function allows the user to enable the
 acceleration measurement each `ms` milliseconds.

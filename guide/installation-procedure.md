@@ -13,7 +13,7 @@ some third party tools (such as Java, Python, or *MATLAB*<sup>TM</sup>) may be
 necessary for running or compiling specific projects. The
 [chapter](language-setup.md#language-setup) covers the set up of these tools.
 
-### Linux
+### Installation on linux
 
 Webots will run on most recent Linux distributions running glibc2.11.1 or
 earlier. This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc.
@@ -151,7 +151,7 @@ or
 gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
-### Windows
+### Installation on Windows
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
 webots.version.bugfix }}\_setup.exe" installation file from our [web
@@ -168,7 +168,7 @@ webots.version.bugfix }}\_setup.exe /SILENT" or "webots-{{ webots.version.major
 If you observe 3D rendering anomalies or Webots crashes, it is strongly
 recommend to upgrade your graphics driver.
 
-### Mac OS X
+### installation on Mac OS X
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
 webots.version.bugfix }}.dmg" installation file from our [web

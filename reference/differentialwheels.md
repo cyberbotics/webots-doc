@@ -140,7 +140,7 @@ its initial elevation throughout the simulation.
 
 ### DifferentialWheels Functions
 
-#### <a name="wb_differential_wheels_set_speed"/>Name
+**Name** <a name="wb_differential_wheels_set_speed"/>
 
 **wb\_differential\_wheels\_set\_speed** - *control the speed of the robot*
 
@@ -154,7 +154,7 @@ double wb_differential_wheels_get_left_speed()
 double wb_differential_wheels_get_right_speed()
 ```
 
-#### Description
+**Description**
 
 The `wb_differential_wheels_set_speed` function allows the user to specify a
 speed for the [DifferentialWheels](differentialwheels.md#differentialwheels)
@@ -174,7 +174,7 @@ function.
 
 ---
 
-#### <a name="wb_differential_wheels_enable_encoders"/>Name
+**Name** <a name="wb_differential_wheels_enable_encoders"/>
 
 **wb\_differential\_wheels\_enable\_encoders**, **wb\_differential\_wheels\_disable\_encoders**, **wb\_differential\_wheels\_get\_encoders\_sampling\_period** - *enable or disable the incremental encoders of the robot wheels*
 
@@ -188,7 +188,7 @@ void wb_differential_wheels_disable_encoders()
 int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 These functions allow the user to enable or disable the incremental wheel
 encoders for both wheels of the
@@ -219,7 +219,7 @@ if the device is disabled.
 
 ---
 
-#### <a name="wb_differential_wheels_get_left_encoder"/>Name
+**Name** <a name="wb_differential_wheels_get_left_encoder"/>
 
 **wb\_differential\_wheels\_get\_left\_encoder**, **wb\_differential\_wheels\_get\_right\_encoder**, **wb\_differential\_wheels\_set\_encoders** - *read or set the encoders of the robot wheels*
 
@@ -233,7 +233,7 @@ double wb_differential_wheels_get_right_encoder()
 void wb_differential_wheels_set_encoders(double left, double right)
 ```
 
-#### Description
+**Description**
 
 These functions are used to read or set the values of the left and right
 encoders. The encoders must be enabled with
@@ -246,7 +246,7 @@ specified value.
 
 ---
 
-#### <a name="wb_differential_wheels_get_max_speed"/>Name
+**Name** <a name="wb_differential_wheels_get_max_speed"/>
 
 **wb\_differential\_wheels\_get\_max\_speed** - *get the value of the maxSpeed field*
 
@@ -258,7 +258,7 @@ specified value.
 double wb_differential_wheels_get_max_speed()
 ```
 
-#### Description
+**Description**
 
 The `wb_differential_wheels_get_max_speed` function allows the user to get the
 value of the `maxSpeed` field of the
@@ -266,7 +266,7 @@ value of the `maxSpeed` field of the
 
 ---
 
-#### <a name="wb_differential_wheels_get_speed_unit"/>Name
+**Name** <a name="wb_differential_wheels_get_speed_unit"/>
 
 **wb\_differential\_wheels\_get\_speed\_unit** - *get the value of the speedUnit field*
 
@@ -278,7 +278,7 @@ value of the `maxSpeed` field of the
 double wb_differential_wheels_get_speed_unit()
 ```
 
-#### Description
+**Description**
 
 The `wb_differential_wheels_get_speed_unit` function allows the user to get the
 value of the `speedUnit` field of the

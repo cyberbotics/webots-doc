@@ -322,7 +322,7 @@ applied in parallel and can be switched on and off independently (by default
 only the motor force is on). For example, to turn off the motor force and obtain
 a passive [Servo](servo.md#servo), you can set the `maxForce` field to zero.
 
-%figure "Servo Forces"
+%figure "Servo Forces Table"
 
 | Force                       | motor force    | spring force         | damping force         |
 | --------------------------- | -------------- | -------------------- | --------------------- |
@@ -459,7 +459,7 @@ Please note the dummy [Physics](physics.md#physics) and the 1 millimeter
 
 ### Servo Functions
 
-#### <a name="wb_servo_set_position"/>Name
+**Name** <a name="wb_servo_set_position"/>
 
 **wb\_servo\_set\_position**, **wb\_servo\_set\_velocity**, **wb\_servo\_set\_acceleration**, **wb\_servo\_set\_motor\_force**, **wb\_servo\_set\_control\_p**, **wb\_servo\_get\_min\_position**, **wb\_servo\_get\_max\_position** - *change the parameters of the P-controller*
 
@@ -478,7 +478,7 @@ double wb_servo_get_min_position(WbDeviceTag tag)
 double wb_servo_get_max_position(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_servo_set_position()` function specifies a new target position that the
 P-controller will attempt to reach using the current velocity, acceleration and
@@ -565,7 +565,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 ---
 
-#### <a name="wb_servo_enable_position"/>Name
+**Name** <a name="wb_servo_enable_position"/>
 
 **wb\_servo\_enable\_position**, **wb\_servo\_disable\_position**, **wb\_servo\_get\_position\_sampling\_period**, **wb\_servo\_get\_position** - *get the effective position of a servo*
 
@@ -580,7 +580,7 @@ int wb_servo_get_position_sampling_period(WbDeviceTag tag)
 double wb_servo_get_position(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_servo_enable_position()` function activates position measurements for
 the specified servo. A new position measurement will be performed each `ms`
@@ -603,7 +603,7 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
 ---
 
-#### <a name="wb_servo_enable_motor_force_feedback"/>Name
+**Name** <a name="wb_servo_enable_motor_force_feedback"/>
 
 **wb\_servo\_enable\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback\_sampling\_period**, **wb\_servo\_disable\_motor\_force\_feedback** - *get the motor force currently used by a servo*
 
@@ -618,7 +618,7 @@ int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag)
 double wb_servo_get_motor_force_feedback(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_servo_enable_motor_force_feedback()` function activates torque/force
 feedback measurements for the specified servo. A new measurement will be
@@ -661,7 +661,7 @@ the device is disabled.
 
 ---
 
-#### <a name="wb_servo_set_force"/>Name
+**Name** <a name="wb_servo_set_force"/>
 
 **wb\_servo\_set\_force** - *direct force control*
 
@@ -673,7 +673,7 @@ the device is disabled.
 void wb_servo_set_force(WbDeviceTag tag, double force)
 ```
 
-#### Description
+**Description**
 
 As an alternative to the P-controller, the `wb_servo_set_force()` function
 allows the user to directly specify the amount of torque/force that must be
@@ -704,7 +704,7 @@ dampers with controllable properties. The example in
 
 ---
 
-#### <a name="wb_servo_get_type"/>Name
+**Name** <a name="wb_servo_get_type"/>
 
 **wb\_servo\_get\_type** - *get the servo type*
 
@@ -716,7 +716,7 @@ dampers with controllable properties. The example in
 int wb_servo_get_type(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 This function allows to retrieve the servo type defined by the `type` field. If
 the value of the `type` field is "linear", this function returns

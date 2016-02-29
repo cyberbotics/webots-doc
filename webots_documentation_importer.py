@@ -694,11 +694,10 @@ class BookParser:
         ]
         for child in node.getchildren():
             if child.tag == 'refnamediv':
-                indent = 4
                 anchorRef = ''
                 if node.attrib.get('id'):
                     anchorRef = '<a name="' + slugify(node.attrib.get('id')) + '"/>'
-                outFile.write('#' * indent + ' ' + anchorRef + 'Name\n\n')
+                outFile.write('**Name** ' + anchorRef + '\n\n')
                 firstRefName = True
                 for subchild in node.findall('.//refname'):
                     if firstRefName:
@@ -752,18 +751,21 @@ class BookParser:
                 title = self.getTitle(child)
                 if len(title) == 0:
                     raise Exception('Invalid title')
-                indent = 0
-                if node.tag == 'chapter':
-                    indent = 1
-                elif node.tag == 'sect1' or node.tag == 'preface' or node.tag == 'legalnotice':
-                    indent = 2
-                elif node.tag == 'sect2':
-                    indent = 3
-                elif node.tag == 'sect3' or node.tag == 'refsect1':
-                    indent = 4
+                if node.tag == 'refsect1':
+                    outFile.write('**' + title + '**\n\n')
                 else:
-                    raise Exception('Unsupported type: ' + node.tag)
-                outFile.write('#' * indent + ' ' + title + '\n\n')
+                    indent = 0
+                    if node.tag == 'chapter':
+                        indent = 1
+                    elif node.tag == 'sect1' or node.tag == 'preface' or node.tag == 'legalnotice':
+                        indent = 2
+                    elif node.tag == 'sect2':
+                        indent = 3
+                    elif node.tag == 'sect3':
+                        indent = 4
+                    else:
+                        raise Exception('Unsupported type: ' + node.tag)
+                    outFile.write('#' * indent + ' ' + title + '\n\n')
             elif child.tag == 'sect1':
                 fileName = self.outputDirectoryPath + slugify(self.getTitle(child)) + '.md'
                 print 'Generating ' + fileName

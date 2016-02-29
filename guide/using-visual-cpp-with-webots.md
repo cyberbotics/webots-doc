@@ -87,7 +87,7 @@ enter following configuration:
         Linker > Input > Additional Dependencies:
           Controller.lib
         Linker > General > Additional Library Directories:
-          C:\Program Files\Webots\lib
+          C:\Program Files\Webots\msys64\mingw64\lib\
 
 5. If you want to use the C API, you should skip step 5 and go directly to step 6.
 If you want to use the C++ API follow these instructions:

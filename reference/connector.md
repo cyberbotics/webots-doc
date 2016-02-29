@@ -185,9 +185,9 @@ objects should allow the superposition of the origin of the coordinate systems.
 If these design criteria are not met, the [Connector](connector.md#connector)
 nodes will not work properly and may be unable to connect.
 
-%figure "Connector axis system"
+%figure "Connector axis system schema"
 
-![Connector axis system](png/connector_axes.png)
+![Connector axis system schema](png/connector_axes.png)
 
 %end
 
@@ -198,7 +198,7 @@ not necessary to add a [Physics](physics.md#physics) node to the
 
 ### Connector Functions
 
-#### <a name="wb_connector_get_presence"/>Name
+**Name** <a name="wb_connector_get_presence"/>
 
 **wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
@@ -212,7 +212,7 @@ void wb_connector_disable_presence(WbDeviceTag tag)
 int wb_connector_get_presence(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_connector_enable_presence()` function starts querying the
 [Connector](connector.md#connector)'s *presence* (see definition below) state
@@ -256,7 +256,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 ---
 
-#### <a name="wb_connector_lock"/>Name
+**Name** <a name="wb_connector_lock"/>
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
 
@@ -269,7 +269,7 @@ void wb_connector_lock(WbDeviceTag tag)
 void wb_connector_unlock(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 The `wb_connector_lock()` and `wb_connector_unlock()` functions can be used to
 set or unset the [Connector](connector.md#connector)'s locking state (`isLocked`

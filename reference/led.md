@@ -40,7 +40,7 @@ between 0 (off) and 255 (maximum intensity).
 
 ### LED Functions
 
-#### <a name="wb_led_set"/>Name
+**Name** <a name="wb_led_set"/>
 
 **wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
 
@@ -53,7 +53,7 @@ void wb_led_set(WbDeviceTag tag, int value)
 int wb_led_get(WbDeviceTag tag)
 ```
 
-#### Description
+**Description**
 
 `wb_led_set()` switches an LED on or off, possibly changing its color. If the
 `value` parameter is 0, the LED is turned off. Otherwise, it is turned on.

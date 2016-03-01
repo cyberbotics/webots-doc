@@ -74,11 +74,7 @@ function applyAnchor() {
     }
 }
 
-function populateViewDiv(mdContent) {
-    console.log("Raw MD content:\n\n");
-    console.log(mdContent);
-
-    // set page title
+function applyToTitle(mdContent) {
     var hashtagIndex = mdContent.indexOf("#");
     if (hashtagIndex >= 0) {
         while (hashtagIndex + 1 < mdContent.length && mdContent[hashtagIndex + 1] == "#") {
@@ -90,6 +86,13 @@ function populateViewDiv(mdContent) {
             document.title = "Webots documentation: " + title;
         }
     }
+}
+
+function populateViewDiv(mdContent) {
+    console.log("Raw MD content:\n\n");
+    console.log(mdContent);
+
+    applyToTitle(mdContent);
 
     // markdown to html
     var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors"]});
@@ -325,6 +328,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var page = getGETQueryValue("page", "guide.md");
     var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
     var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/");
+
     var targetPath = url;
     if (url.startsWith("http")) {
         targetPath += branch + "/";

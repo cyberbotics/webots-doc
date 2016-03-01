@@ -144,7 +144,7 @@ long as emitters and receivers agree.
 
 %figure "Receiver's packet queue"
 
-![Receiver's packet queue](pdf/receiver_queue.pdf.png)
+![Receiver's packet queue](images/receiver_queue.png)
 
 %end
 

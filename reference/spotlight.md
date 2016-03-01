@@ -76,7 +76,7 @@ Contrary to the VRML specifications, the `attenuation` and the
 
 %figure "Spot light"
 
-![Spot light](png/spot_light.png)
+![Spot light](images/spot_light.png)
 
 %end
 

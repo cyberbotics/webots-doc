@@ -40,7 +40,7 @@ collision detection.
 
 %figure "The Capsule node"
 
-![The Capsule node](png/capsule.png)
+![The Capsule node](images/capsule.png)
 
 %end
 

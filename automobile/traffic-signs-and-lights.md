@@ -12,7 +12,7 @@ elements can be mounted.
 
 %figure "a traffic light"
 
-![a traffic light](png/traffic_light.png)
+![a traffic light](images/traffic_light.png)
 
 %end
 
@@ -30,7 +30,7 @@ some part of the road in nightly environments.
 
 %figure "The StreetLight PROTO"
 
-![The StreetLight PROTO](png/street_light.png)
+![The StreetLight PROTO](images/street_light.png)
 
 %end
 
@@ -38,7 +38,7 @@ some part of the road in nightly environments.
 
 %figure "Various traffic sign and traffic light"
 
-![Various traffic sign and traffic light](png/yield_sign.png)
+![Various traffic sign and traffic light](images/yield_sign.png)
 
 %end
 

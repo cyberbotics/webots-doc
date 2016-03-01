@@ -31,7 +31,7 @@ class TestImages(unittest.TestCase):
         books = Books()
         for book in books.books:
             # search for all images
-            images_paths = []  # ['png/sonar.png', 'png/sphere.png', ...]
+            images_paths = []  # ['image/sonar.png', 'image/sphere.png', ...]
             for root, dirnames, filenames in os.walk(book.path):
                 for filename in fnmatch.filter(filenames, '*.png'):
                     image_path = os.path.join(root, filename)

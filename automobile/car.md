@@ -94,7 +94,7 @@ Citroen and the Prius from Toyota.
 
 %figure "Models of cars created using the Car PROTO"
 
-![Models of cars created using the Car PROTO](png/cars.png)
+![Models of cars created using the Car PROTO](images/cars.png)
 
 %end
 

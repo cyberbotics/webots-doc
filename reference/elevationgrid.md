@@ -37,7 +37,7 @@ the *x* and *z* directions respectively, and shall be greater than zero.
 
 %figure "ElevationGrid node"
 
-![ElevationGrid node](png/elevation_grid.png)
+![ElevationGrid node](images/elevation_grid.png)
 
 %end
 

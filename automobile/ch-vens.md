@@ -2,7 +2,7 @@
 
 %figure "The CH Vens world"
 
-![The CH Vens world](png/vens.png)
+![The CH Vens world](images/vens.png)
 
 %end
 

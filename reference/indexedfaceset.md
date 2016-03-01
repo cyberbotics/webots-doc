@@ -87,7 +87,7 @@ IndexedFaceSet {
 
 %figure "A simple IndexedFaceSet example"
 
-![A simple IndexedFaceSet example](png/indexed_face_set.png)
+![A simple IndexedFaceSet example](images/indexed_face_set.png)
 
 %end
 

@@ -6,7 +6,7 @@ tab](#transfer-tab-of-the-robot-window)).
 
 %figure "Transfer tab of the robot window"
 
-![Transfer tab of the robot window](png/window_cross.png)
+![Transfer tab of the robot window](images/window_cross.png)
 
 %end
 

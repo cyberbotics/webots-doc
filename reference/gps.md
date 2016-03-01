@@ -37,7 +37,7 @@ as described in [this figure](#gauss-markov-process).
 
 %figure "Gauss-Markov process"
 
-![Gauss-Markov process](pdf/gauss_markov.pdf.png)
+![Gauss-Markov process](images/gauss_markov.png)
 
 %end
 

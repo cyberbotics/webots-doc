@@ -6,7 +6,7 @@ in real time. Here again four different types of graph can be plot.
 
 %figure "Gyro tab of the robot-window"
 
-![Gyro tab of the robot-window](png/window_gyro.png)
+![Gyro tab of the robot-window](images/window_gyro.png)
 
 %end
 

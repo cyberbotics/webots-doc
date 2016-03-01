@@ -52,7 +52,7 @@ configuration:
 
 %figure "Position of the servos"
 
-![Position of the servos](png/DARwIn-OP_Actuator.png)
+![Position of the servos](images/DARwIn-OP_Actuator.png)
 
 %end
 
@@ -68,7 +68,7 @@ significantly slow down the simulation speed.
 
 %figure "Scene tree of the DARwIn-OP"
 
-![Scene tree of the DARwIn-OP](png/selfCollision.png)
+![Scene tree of the DARwIn-OP](images/selfCollision.png)
 
 %end
 

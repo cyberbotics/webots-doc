@@ -5,7 +5,7 @@ keyboard, and also the use of the accelerometer.
 
 %figure "Walk example"
 
-![Walk example](png/example_walk.png)
+![Walk example](images/example_walk.png)
 
 %end
 

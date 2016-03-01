@@ -61,7 +61,7 @@ as the one used to build the controllers):
 
 %figure "Controller plugin overview"
 
-![Controller plugin overview](pdf/controller_plugin.pdf.png)
+![Controller plugin overview](images/controller_plugin.png)
 
 %end
 
@@ -204,7 +204,7 @@ motor position range are written in red.
 
 %figure "Motion editor view"
 
-![Motion editor view](png/motion_editor.png)
+![Motion editor view](images/motion_editor.png)
 
 %end
 

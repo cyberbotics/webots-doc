@@ -60,7 +60,7 @@ setting the display's internal color to red before calling twice the
 
 %figure "Display overlay image"
 
-![Display overlay image](png/display_overlay.png)
+![Display overlay image](images/display_overlay.png)
 
 %end
 
@@ -146,7 +146,7 @@ formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
 
-![Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity.](pdf/display_opacity.pdf.png)
+![Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity.](images/display_opacity.png)
 
 %end
 

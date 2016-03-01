@@ -2,7 +2,7 @@
 
 %figure "The autonomous_vehicle world"
 
-![The autonomous_vehicle world](png/autonomous_vehicle.png)
+![The autonomous_vehicle world](images/autonomous_vehicle.png)
 
 %end
 

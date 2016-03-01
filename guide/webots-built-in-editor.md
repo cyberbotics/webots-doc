@@ -8,7 +8,7 @@ highlighting for Webots supported language (C/C++, Java, Python and
 
 %figure "Webots Text Editor"
 
-![Webots Text Editor](png/text_editor.png)
+![Webots Text Editor](images/text_editor.png)
 
 %end
 
@@ -28,13 +28,13 @@ In the following, the possible compilation actions are listed. Some of them are
 only accessible in the `Build` menu, whereas `Build` and `Clean` actions have a
 shortcut in the Text Editor toolbar.
 
-![](png/build-button.png =26x26) Builds the whole project by invoking `make` in
-the selected file's directory. With C/C++, the `Build` button compiles and links
-the whole project into an executable file. C/C++ source file dependencies are
-automatically generated and updated when necessary. With Java, the `Build`
+![](images/build-button.png =26x26) Builds the whole project by invoking `make`
+in the selected file's directory. With C/C++, the `Build` button compiles and
+links the whole project into an executable file. C/C++ source file dependencies
+are automatically generated and updated when necessary. With Java, the `Build`
 button compiles the whole project into bytecode (.class files).
 
-![](png/clean-button.png =26x26) The `Clean` button invokes `make clean` to
+![](images/clean-button.png =26x26) The `Clean` button invokes `make clean` to
 delete the intermediate compilation files in the current file's directory. The
 source files remain untouched.
 

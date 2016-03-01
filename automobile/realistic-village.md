@@ -2,7 +2,7 @@
 
 %figure "The Realistic Village world"
 
-![The Realistic Village world](png/village_realistic.png)
+![The Realistic Village world](images/village_realistic.png)
 
 %end
 

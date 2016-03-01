@@ -54,7 +54,7 @@ parts, etc.
 
 %figure "Left: the OSM file created in JOSM. Right: the resulting world open in Webots after conversion"
 
-![Left: the OSM file created in JOSM. Right: the resulting world open in Webots after conversion](png/osm_output.png)
+![Left: the OSM file created in JOSM. Right: the resulting world open in Webots after conversion](images/osm_output.png)
 
 %end
 
@@ -71,7 +71,7 @@ window](robot-window.md#robot-window).
 
 %figure "The OpenStreetMap importer graphical user interface"
 
-![The OpenStreetMap importer graphical user interface](png/osm_gui.png)
+![The OpenStreetMap importer graphical user interface](images/osm_gui.png)
 
 %end
 

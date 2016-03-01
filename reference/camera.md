@@ -248,7 +248,7 @@ of `vFov/2`).
 
 %figure "Camera overlay image"
 
-![Camera overlay image](png/camera_overlay.png)
+![Camera overlay image](images/camera_overlay.png)
 
 %end
 

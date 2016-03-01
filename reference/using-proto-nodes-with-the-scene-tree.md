@@ -22,7 +22,7 @@ where ".proto" files are stored in a project directory.
 
 %figure "PROTO directory in a project directory structure"
 
-![PROTO directory in a project directory structure](png/protos_directory_structure.png)
+![PROTO directory in a project directory structure](images/protos_directory_structure.png)
 
 %end
 
@@ -56,7 +56,7 @@ file.
 
 %figure "Adding an instance of the TwoColorChair PROTO"
 
-![Adding an instance of the TwoColorChair PROTO](png/add_proto.png)
+![Adding an instance of the TwoColorChair PROTO](images/add_proto.png)
 
 %end
 
@@ -79,7 +79,7 @@ fields can be manipulated exactly like built-in node fields.
 
 %figure "Scene Tree with two instances of the TwoColorChair PROTO"
 
-![Scene Tree with two instances of the TwoColorChair PROTO](png/scene_tree_with_protos.png)
+![Scene Tree with two instances of the TwoColorChair PROTO](images/scene_tree_with_protos.png)
 
 %end
 

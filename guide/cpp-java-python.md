@@ -16,7 +16,7 @@ and their types, are very similar in these three languages.
 
 %figure "Webots APIs Overview"
 
-![Webots APIs Overview](pdf/api_overview.pdf.png)
+![Webots APIs Overview](images/api_overview.png)
 
 %end
 
@@ -49,7 +49,7 @@ controller, and vice versa. For example it won't be possible to call
 
 %figure "A small subset of Webots oriented-object APIs"
 
-![A small subset of Webots oriented-object APIs](pdf/oo_api.pdf.png)
+![A small subset of Webots oriented-object APIs](images/oo_api.png)
 
 %end
 

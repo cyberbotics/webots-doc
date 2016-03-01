@@ -22,7 +22,7 @@ are depicted below.
 
 %figure "Texture map coordinate system"
 
-![Texture map coordinate system](png/image_texture.png)
+![Texture map coordinate system](images/image_texture.png)
 
 %end
 

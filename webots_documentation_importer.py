@@ -215,6 +215,17 @@ class BookParser:
         for filename in filesToRemove:
             os.remove(os.path.join(bookName, filename))
 
+        if os.path.exists(bookName + '/pdf'):
+            for pdf_filename in glob.glob(bookName + '/pdf/*.png'):
+                target_filename = pdf_filename.replace('/pdf/', '/png/').replace('.pdf.png', '.png')
+                if target_filename == 'reference/png/spot_light.png':
+                    target_filename = 'reference/png/spot_light_formula.png'
+                if os.path.exists(target_filename):
+                    raise Exception('%s is existing.' % (target_filename))
+                # print 'cp %s %s' % (pdf_filename, target_filename)
+                shutil.move(pdf_filename, target_filename)
+            shutil.rmtree(bookName + '/pdf')
+        os.rename(bookName + '/png', bookName + '/images')
 
     def parseXMLFile(self, filePath):
         print 'Parse XML file: "' + filePath + '"'
@@ -280,7 +291,6 @@ class BookParser:
                 title = self.getTitle(idNode)
                 if idNode.tag == 'figure' and title.endswith('.wbt'):
                     title = title[:-4]
-                    print title
                 anchor = slugify(title)
                 anchor = anchor.replace('-m-', '-meters-')
 
@@ -304,7 +314,7 @@ class BookParser:
             ref = Reference(refId, self.bookName, filename, anchor, kind)
             self.referenceManager.addReference(ref)
 
-        print self.referenceManager
+        # print self.referenceManager
 
 
     def export(self):
@@ -439,7 +449,11 @@ class BookParser:
                 if child.tag == 'space':
                     text += '&nbsp;'
                 elif child.tag == 'inlinegraphic':
-                    text += '![](' + child.attrib.get('fileref')
+                    fileref = child.attrib.get('fileref')
+                    fileref = re.sub(r'^png/', 'images/', fileref)
+                    fileref = re.sub(r'^pdf/', 'images/', fileref)
+                    fileref = re.sub(r'\.pdf\.png$', '.png', fileref)
+                    text += '![](' + fileref
                     if child.attrib.get('width'):
                         text += ' ='
                         if child.attrib.get('width'):
@@ -529,8 +543,12 @@ class BookParser:
             else:
                 raise Exception('Unsupported type: ' + child.tag)
         if fileref is not None and len(fileref) > 0:
+            fileref = fileref.replace('spot_light.pdf', 'spot_light_formula.pdf')
             if fileref.endswith('.pdf'):
                 fileref += '.png'
+            fileref = re.sub(r'^png/', 'images/', fileref)
+            fileref = re.sub(r'^pdf/', 'images/', fileref)
+            fileref = re.sub(r'\.pdf\.png$', '.png', fileref)
             title = title.replace('[m]', 'meters')
             outFile.write('\n%%figure "%s"\n\n![%s](%s)\n\n%%end\n\n' % (title.replace('"', ''), title, fileref))
 
@@ -864,8 +882,12 @@ class BookParser:
             elif child.tag == 'mediaobject':
                 imagedata = child.findall('.//imagedata')[0]
                 fileref = imagedata.attrib.get('fileref')
-                fileref = fileref.replace('1234.png', '1234web.png') # hack the path
-                fileref = fileref.replace('title.png', 'titleweb.png') # hack the path
+                # hack the path
+                fileref = fileref.replace('1234.png', '1234web.png')
+                fileref = fileref.replace('title.png', 'titleweb.png')
+                fileref = re.sub(r'^png/', 'images/', fileref)
+                fileref = re.sub(r'^pdf/', 'images/', fileref)
+                fileref = re.sub(r'\.pdf\.png$', '.png', fileref)
                 outFile.write('%%figure\n![%s](%s)\n%%end\n\n' % ('ImageData', fileref))
             elif child.tag == 'author':
                 pass # no more sense in my opinion
@@ -913,8 +935,8 @@ class BookParser:
 if __name__ == '__main__':
     webotsDirectoryPath = '../webots/'
     documentationInputDirectoriesPaths = [
-        # webotsDirectoryPath + 'src/doc/guide/',
-        # webotsDirectoryPath + 'src/doc/reference/',
+        webotsDirectoryPath + 'src/doc/guide/',
+        webotsDirectoryPath + 'src/doc/reference/',
         webotsDirectoryPath + 'src/doc/automobile/',
         webotsDirectoryPath + 'src/doc/darwin-op/'
     ]

@@ -5,7 +5,7 @@ of the RGB LEDs.
 
 %figure "Visual tracking example"
 
-![Visual tracking example](png/example_visualTracking.png)
+![Visual tracking example](images/example_visualTracking.png)
 
 %end
 

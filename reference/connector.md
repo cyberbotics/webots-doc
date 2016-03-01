@@ -133,7 +133,7 @@ criterion this field should be set to zero.
 
 %figure "Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)"
 
-![Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)](pdf/connector_alignment.pdf.png)
+![Example of rotational alignment (numberOfRotations=4 and rotationalTolerance=22.5 deg)](images/connector_alignment.png)
 
 %end
 
@@ -185,7 +185,7 @@ connect.
 
 %figure "Connector axis"
 
-![Connector axis](png/connector_axes.png)
+![Connector axis](images/connector_axes.png)
 
 %end
 

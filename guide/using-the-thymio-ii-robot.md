@@ -2,7 +2,7 @@
 
 %figure "Thymio II model in Webots"
 
-![Thymio II model in Webots](png/thymio2.png)
+![Thymio II model in Webots](images/thymio2.png)
 
 %end
 
@@ -49,7 +49,7 @@ performed using a regular A4 white paper.
 
 %figure "Proximity sensor response versus distance"
 
-![Proximity sensor response versus distance](png/thymio2_horizontal_prox_feedback.png)
+![Proximity sensor response versus distance](images/thymio2_horizontal_prox_feedback.png)
 
 %end
 
@@ -77,7 +77,7 @@ can be modified by editing the `Thymio2::controllerArgs` field.
 
 %figure "Aseba Studio and VPL target selection dialog"
 
-![Aseba Studio and VPL target selection dialog](png/thymio2_aseba_target_selection.png)
+![Aseba Studio and VPL target selection dialog](images/thymio2_aseba_target_selection.png)
 
 %end
 
@@ -88,7 +88,7 @@ model of the robot.
 
 %figure "Thymio II robot window"
 
-![Thymio II robot window](png/thymio2_window.png)
+![Thymio II robot window](images/thymio2_window.png)
 
 %end
 
@@ -103,7 +103,7 @@ located there (see the [figure](#simulation-of-a-thymio-ii-having-a-pen)):
 
 %figure "Simulation of a Thymio II having a pen."
 
-![Simulation of a Thymio II having a pen.](png/thymio2_pen.png)
+![Simulation of a Thymio II having a pen.](images/thymio2_pen.png)
 
 %end
 
@@ -118,7 +118,7 @@ of this is located there (see the
 
 %figure "Simulation of a Thymio II above a ball."
 
-![Simulation of a Thymio II above a ball.](png/thymio2_ball.png)
+![Simulation of a Thymio II above a ball.](images/thymio2_ball.png)
 
 %end
 

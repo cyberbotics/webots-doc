@@ -13,7 +13,7 @@ robot. E-puck is also available for purchase from Cyberbotics Ltd.
 
 %figure "The e-puck robot at work"
 
-![The e-puck robot at work](png/e-puck_real.png)
+![The e-puck robot at work](images/e-puck_real.png)
 
 %end
 
@@ -62,7 +62,7 @@ table](#e-puck-features).
 
 %figure "The e-puck model in Webots"
 
-![The e-puck model in Webots](png/e-puck.png)
+![The e-puck model in Webots](images/e-puck.png)
 
 %end
 
@@ -149,7 +149,7 @@ outcome of calibration performed on the real robot.
 
 %figure "Proximity sensor response against distance"
 
-![Proximity sensor response against distance](png/e-puck_distance_sensor_lookup_table.png)
+![Proximity sensor response against distance](images/e-puck_distance_sensor_lookup_table.png)
 
 %end
 
@@ -167,7 +167,7 @@ modules.
 
 %figure "Sensors, LEDs and camera"
 
-![Sensors, LEDs and camera](png/e-puck_sensors_and_leds.png)
+![Sensors, LEDs and camera](images/e-puck_sensors_and_leds.png)
 
 %end
 
@@ -193,7 +193,7 @@ with Webots and extended e-puck robots.
 
 %figure "An e-puck extension for line following"
 
-![An e-puck extension for line following](png/e-puck_line.png)
+![An e-puck extension for line following](images/e-puck_line.png)
 
 %end
 
@@ -217,7 +217,7 @@ can improve these models using your contribution.
 
 %figure "The e-puck control window for simulation"
 
-![The e-puck control window for simulation](png/e-puck_control.png)
+![The e-puck control window for simulation](images/e-puck_control.png)
 
 %end
 
@@ -278,7 +278,7 @@ file.
 
 %figure "BotStudio window"
 
-![BotStudio window](png/e-puck_botstudio.png)
+![BotStudio window](images/e-puck_botstudio.png)
 
 %end
 

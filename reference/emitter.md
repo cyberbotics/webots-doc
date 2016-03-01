@@ -59,7 +59,7 @@ an illustration of `range` and `aperture`.
 
 %figure "Illustration of aperture and range for infra-red Emitter/Receiver"
 
-![Illustration of aperture and range for "infra-red" Emitter/Receiver](pdf/emitter_receiver.pdf.png)
+![Illustration of aperture and range for "infra-red" Emitter/Receiver](images/emitter_receiver.png)
 
 %end
 

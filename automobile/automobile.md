@@ -3,7 +3,7 @@
 Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
 
 %figure
-![ImageData](png/titleweb.png)
+![ImageData](images/titleweb.png)
 %end
 
 Cyberbotics Ltd.

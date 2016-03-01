@@ -16,7 +16,7 @@ it is negative, the inside faces are displayed.
 
 %figure "Sphere node"
 
-![Sphere node](png/sphere.png)
+![Sphere node](images/sphere.png)
 
 %end
 

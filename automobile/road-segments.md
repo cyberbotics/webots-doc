@@ -10,7 +10,7 @@ purpose.
 
 %figure "Generic segment of road"
 
-![Generic segment of road](png/road.png)
+![Generic segment of road](images/road.png)
 
 %end
 
@@ -90,7 +90,7 @@ create a straight road.
 
 %figure "Straight segment of road"
 
-![Straight segment of road](png/straight.png)
+![Straight segment of road](images/straight.png)
 
 %end
 
@@ -143,7 +143,7 @@ a regularly curved road.
 
 %figure "Curved segment of road"
 
-![Curved segment of road](png/Curved.png)
+![Curved segment of road](images/Curved.png)
 
 %end
 
@@ -193,7 +193,7 @@ garage input ramp.
 
 %figure "Helicoidal segment of road"
 
-![Helicoidal segment of road](png/Helocoidal.png)
+![Helicoidal segment of road](images/Helocoidal.png)
 
 %end
 
@@ -242,7 +242,7 @@ The `Roundabout` PROTO represents a roundabout intersection.
 
 %figure "Roundabout intersection"
 
-![Roundabout intersection](png/roudabout.png)
+![Roundabout intersection](images/roudabout.png)
 
 %end
 
@@ -307,7 +307,7 @@ The `RoadIntersection` PROTO represents a perpendicular intersection.
 
 %figure "Perpendicular intersection"
 
-![Perpendicular intersection](png/Intersection.png)
+![Perpendicular intersection](images/Intersection.png)
 
 %end
 
@@ -343,7 +343,7 @@ The `LaneSeparation` PROTO represents a road spliting into two.
 
 %figure "Lane separation"
 
-![Lane separation](png/LaneSeparation.png)
+![Lane separation](images/LaneSeparation.png)
 
 %end
 
@@ -394,7 +394,7 @@ road.
 
 %figure "Addition of one lane"
 
-![Addition of one lane](png/AddLane.png)
+![Addition of one lane](images/AddLane.png)
 
 %end
 
@@ -442,7 +442,7 @@ several lanes to the road.
 
 %figure "Addition of several lanes"
 
-![Addition of several lanes](png/AddLanes.png)
+![Addition of several lanes](images/AddLanes.png)
 
 %end
 

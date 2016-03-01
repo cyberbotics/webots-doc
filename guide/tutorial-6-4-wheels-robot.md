@@ -10,13 +10,13 @@ shows the robot from a top view.
 
 %figure "3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor."
 
-![3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor.](png/tutorial_4_wheels_robot.png)
+![3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor.](images/tutorial_4_wheels_robot.png)
 
 %end
 
 %figure "Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 meters. The text labels correspond to the name of the devices."
 
-![Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 meters. The text labels correspond to the name of the devices.](png/tutorial_4_wheels_top_schema.png)
+![Top view of the 4 wheels robot. The grid behind the robot has a dimension of 0.2 x 0.3 meters. The text labels correspond to the name of the devices.](images/tutorial_4_wheels_top_schema.png)
 
 %end
 
@@ -103,13 +103,13 @@ nodes of the root Robot node are implemented.
 
 %figure "High level representation of the 4 wheels robot"
 
-![High level representation of the 4 wheels robot](pdf/tutorial_4_wheels_highlevel.pdf.png)
+![High level representation of the 4 wheels robot](images/tutorial_4_wheels_highlevel.png)
 
 %end
 
 %figure "Low level representation of the 4 wheels robot"
 
-![Low level representation of the 4 wheels robot](pdf/tutorial_4_wheels_lowlevel.pdf.png)
+![Low level representation of the 4 wheels robot](images/tutorial_4_wheels_lowlevel.png)
 
 %end
 

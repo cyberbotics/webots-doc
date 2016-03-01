@@ -2,7 +2,7 @@
 
 %figure "The CH Morges world"
 
-![The CH Morges world](png/morges.png)
+![The CH Morges world](images/morges.png)
 
 %end
 

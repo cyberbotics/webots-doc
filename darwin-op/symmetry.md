@@ -4,7 +4,7 @@ This example is very basic and explains the use of the servos.
 
 %figure "Symmetry example"
 
-![Symmetry example](png/example_symmetry.png)
+![Symmetry example](images/example_symmetry.png)
 
 %end
 

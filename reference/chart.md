@@ -29,7 +29,7 @@ will work correctly.
 
 %figure "Webots Nodes Chart"
 
-![Webots Nodes Chart](pdf/node_hierarchy.pdf.png)
+![Webots Nodes Chart](images/node_hierarchy.png)
 
 %end
 

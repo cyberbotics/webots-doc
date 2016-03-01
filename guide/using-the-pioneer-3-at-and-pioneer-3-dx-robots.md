@@ -10,7 +10,7 @@ figure](#pioneer-3-at-a-ready-to-use-all-terrain-base)).
 
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 
-![Pioneer 3-AT, a ready-to-use all terrain base](png/pioneer3at_real.png)
+![Pioneer 3-AT, a ready-to-use all terrain base](images/pioneer3at_real.png)
 
 %end
 
@@ -40,7 +40,7 @@ Adept Mobile Robots official
 
 %figure "The Pioneer 3-AT model in Webots"
 
-![The Pioneer 3-AT model in Webots](png/pioneer3at.png)
+![The Pioneer 3-AT model in Webots](images/pioneer3at.png)
 
 %end
 
@@ -54,7 +54,7 @@ the Webots distribution.
 
 %figure "Pioneer 3-AT motor names"
 
-![Pioneer 3-AT motor names](png/pioneer3at_wheels.png)
+![Pioneer 3-AT motor names](images/pioneer3at_wheels.png)
 
 %end
 
@@ -72,7 +72,7 @@ figure](#sonar-sensors-positions).
 
 %figure "Sonar sensors positions"
 
-![Sonar sensors positions](png/pioneer3at_sonars.png)
+![Sonar sensors positions](images/pioneer3at_sonars.png)
 
 %end
 
@@ -89,7 +89,7 @@ figure](#pioneer-3-dx-an-all-purpose-base-used-for-research-and-applications)).
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 
-![Pioneer 3-DX, an all-purpose base, used for research and applications](png/pioneer3dx_real.png)
+![Pioneer 3-DX, an all-purpose base, used for research and applications](images/pioneer3dx_real.png)
 
 %end
 
@@ -125,7 +125,7 @@ Adept Mobile Robots official
 
 %figure "The Pioneer 3-DX model in Webots"
 
-![The Pioneer 3-DX model in Webots](png/pioneer3dx.png)
+![The Pioneer 3-DX model in Webots](images/pioneer3dx.png)
 
 %end
 
@@ -139,7 +139,7 @@ of the Webots distribution.
 
 %figure "Pioneer 3-DX motor names"
 
-![Pioneer 3-DX motor names](png/pioneer3dx_servos.png)
+![Pioneer 3-DX motor names](images/pioneer3dx_servos.png)
 
 %end
 

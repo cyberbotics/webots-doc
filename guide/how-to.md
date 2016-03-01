@@ -13,7 +13,7 @@ according to the behaviour they exemplify.
 
 %figure "binocular"
 
-![binocular](png/binocular.png)
+![binocular](images/binocular.png)
 
 %end
 
@@ -27,7 +27,7 @@ computer vision.
 
 %figure "biped"
 
-![biped](png/biped.png)
+![biped](images/biped.png)
 
 %end
 
@@ -42,7 +42,7 @@ motor power.
 
 %figure "force_control"
 
-![force_control](png/force_control.png)
+![force_control](images/force_control.png)
 
 %end
 
@@ -61,7 +61,7 @@ controller.
 
 %figure "inverted_pendulum"
 
-![inverted_pendulum](png/inverted_pendulum.png)
+![inverted_pendulum](images/inverted_pendulum.png)
 
 %end
 
@@ -76,7 +76,7 @@ controller.
 
 %figure "physics"
 
-![physics](png/physics.png)
+![physics](images/physics.png)
 
 %end
 
@@ -97,7 +97,7 @@ example of:
 
 %figure "supervisor"
 
-![supervisor](png/supervisor.png)
+![supervisor](images/supervisor.png)
 
 %end
 
@@ -114,7 +114,7 @@ score, places the players to their initial position when a goal is scored, etc.
 
 %figure "texture_change"
 
-![texture_change](png/texture_change.png)
+![texture_change](images/texture_change.png)
 
 %end
 
@@ -128,7 +128,7 @@ switches the image displayed on the panel.
 
 %figure "town"
 
-![town](png/town.png)
+![town](images/town.png)
 
 %end
 

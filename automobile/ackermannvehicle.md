@@ -77,7 +77,7 @@ the shapes of the wheel axes.
 
 %figure "Result of the SimpleVehicle PROTO which inherits from the AckermannVehicle PROTO"
 
-![Result of the SimpleVehicle PROTO which inherits from the AckermannVehicle PROTO](png/simpleVehicle.png)
+![Result of the SimpleVehicle PROTO which inherits from the AckermannVehicle PROTO](images/simpleVehicle.png)
 
 %end
 

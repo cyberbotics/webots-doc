@@ -10,7 +10,7 @@ Then press the following button:
 
 %figure "remote-control button"
 
-![remote-control button](png/remote.png)
+![remote-control button](images/remote.png)
 
 %end
 
@@ -28,7 +28,7 @@ control (it has the same aspect from the one of the
 
 %figure "This small window asks you to wait until remote-control has started"
 
-![This small window asks you to wait until remote-control has started](png/waitWindow.png)
+![This small window asks you to wait until remote-control has started](images/waitWindow.png)
 
 %end
 

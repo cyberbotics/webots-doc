@@ -13,7 +13,7 @@ time. The corresponding colors are the following:
 
 %figure "Accelerometer tab of the robot-window"
 
-![Accelerometer tab of the robot-window](png/window_accel.png)
+![Accelerometer tab of the robot-window](images/window_accel.png)
 
 %end
 

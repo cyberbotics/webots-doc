@@ -98,13 +98,13 @@ position (see description of the `position` field in
 
 %figure "Linear Motor"
 
-![Linear Motor](pdf/linear_motor.pdf.png)
+![Linear Motor](images/linear_motor.png)
 
 %end
 
 %figure "Rotational Motor"
 
-![Rotational Motor](pdf/rotational_motor.pdf.png)
+![Rotational Motor](images/rotational_motor.png)
 
 %end
 
@@ -125,7 +125,7 @@ third stage (3) is carried out by the physics simulator (ODE joint motors).
 
 %figure "Motor control"
 
-![Motor control](pdf/motor_control.pdf.png)
+![Motor control](images/motor_control.png)
 
 %end
 

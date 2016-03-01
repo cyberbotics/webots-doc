@@ -13,7 +13,7 @@ they exemplify.
 
 %figure "battery"
 
-![battery](png/battery.png)
+![battery](images/battery.png)
 
 %end
 
@@ -32,7 +32,7 @@ full.
 
 %figure "bumper"
 
-![bumper](png/bumper.png)
+![bumper](images/bumper.png)
 
 %end
 
@@ -46,7 +46,7 @@ detected, the robot moves back and turns a bit.
 
 %figure "camera"
 
-![camera](png/camera.png)
+![camera](images/camera.png)
 
 %end
 
@@ -63,7 +63,7 @@ to detect.
 
 %figure "connector"
 
-![connector](png/connector.png)
+![connector](images/connector.png)
 
 %end
 
@@ -84,7 +84,7 @@ robot's name.
 
 %figure "distance_sensor"
 
-![distance_sensor](png/distance_sensor.png)
+![distance_sensor](images/distance_sensor.png)
 
 %end
 
@@ -97,7 +97,7 @@ around its body. The robot avoids obstacles using the Braitenberg technique.
 
 %figure "emitter_receiver"
 
-![emitter_receiver](png/emitter_receiver.png)
+![emitter_receiver](images/emitter_receiver.png)
 
 %end
 
@@ -119,7 +119,7 @@ is interrupted. Note that the communication between "infra-red" `Emitter`s and
 
 %figure "encoders"
 
-![encoders](png/encoders.png)
+![encoders](images/encoders.png)
 
 %end
 
@@ -135,7 +135,7 @@ random values. The robot does not pay any attention to obstacles.
 
 %figure "force_sensor"
 
-![force_sensor](png/force_sensor.png)
+![force_sensor](images/force_sensor.png)
 
 %end
 
@@ -150,7 +150,7 @@ collision, which is printed in the Console window.
 
 %figure "gps"
 
-![gps](png/gps.png)
+![gps](images/gps.png)
 
 %end
 
@@ -169,7 +169,7 @@ position read by the Supervisor.
 
 %figure "led"
 
-![led](png/led.png)
+![led](images/led.png)
 
 %end
 
@@ -182,7 +182,7 @@ on the top of its body. The color choice is printed in the Console.
 
 %figure "light_sensor"
 
-![light_sensor](png/light_sensor.png)
+![light_sensor](images/light_sensor.png)
 
 %end
 
@@ -195,7 +195,7 @@ light source can be moved with the mouse; the robot will follow it.
 
 %figure "pen"
 
-![pen](png/pen.png)
+![pen](images/pen.png)
 
 %end
 
@@ -209,7 +209,7 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 %figure "range_finder"
 
-![range_finder](png/range_finder.png)
+![range_finder](images/range_finder.png)
 
 %end
 

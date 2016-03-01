@@ -89,7 +89,7 @@ needs the `boundingObject` to be defined.
 
 %figure "The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics)."
 
-![The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics).](pdf/tutorial_solid.pdf.png)
+![The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics).](images/tutorial_solid.png)
 
 %end
 
@@ -117,7 +117,7 @@ Finally add a Physics node to the `physics` field of the Solid. By modifying the
 
 %figure "Your first rigid body in Webots."
 
-![Your first rigid body in Webots.](png/tutorial_ball.png)
+![Your first rigid body in Webots.](images/tutorial_ball.png)
 
 %end
 
@@ -180,13 +180,13 @@ Now, changing the `radius` field of the first Sphere node does also modify the
 
 %figure "DEF-USE mechanism on the Sphere node called BALL_GEOMETRY."
 
-![DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".](png/tutorial_def_use.png)
+![DEF-USE mechanism on the Sphere node called "BALL_GEOMETRY".](images/tutorial_def_use.png)
 
 %end
 
 %figure "DEF-USE mechanism applied on the Shape node of a Solid."
 
-![DEF-USE mechanism applied on the Shape node of a Solid.](pdf/tutorial_def_use_shape.pdf.png)
+![DEF-USE mechanism applied on the Shape node of a Solid.](images/tutorial_def_use_shape.png)
 
 %end
 
@@ -216,7 +216,7 @@ The solution is located in the solution directory under the "obstacle.wbt".
 
 %figure "The simulation state at the end of this second tutorial."
 
-![The simulation state at the end of this second tutorial.](png/tutorial_walls.png)
+![The simulation state at the end of this second tutorial.](images/tutorial_walls.png)
 
 %end
 

@@ -5,7 +5,7 @@ the sensors.
 
 %figure "Soccer example"
 
-![Soccer example](png/example_sample.png)
+![Soccer example](images/example_sample.png)
 
 %end
 

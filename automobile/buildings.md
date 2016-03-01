@@ -22,7 +22,7 @@ buildings.
 
 %figure "An example of GenericBuilding with the default parameters"
 
-![An example of GenericBuilding with the default parameters](png/building.png)
+![An example of GenericBuilding with the default parameters](images/building.png)
 
 %end
 

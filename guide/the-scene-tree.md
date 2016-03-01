@@ -13,7 +13,7 @@ of the VRML97 nodes and Webots nodes.
 
 %figure "Scene Tree Window"
 
-![Scene Tree Window](png/scene_tree1.png)
+![Scene Tree Window](images/scene_tree1.png)
 
 %end
 
@@ -24,17 +24,18 @@ can be edited at the bottom of the Scene Tree. All changes will be immediately
 reflected in the 3D window. The following buttons are available int the field
 editor section:
 
-![](png/reset-button.png =26x26) `Reset`: Resets a field to its default value.
+![](images/reset-button.png =26x26) `Reset`: Resets a field to its default
+value.
 
-![](png/help-button.png =26x26) `Help`: Context sensitive help for the currently
-selected node.
+![](images/help-button.png =26x26) `Help`: Context sensitive help for the
+currently selected node.
 
 Additionally, when a node is selected, other actions are available as shown in
 [this figure](#webots-node-editor):
 
 %figure "Webots node editor"
 
-![Webots node editor](png/field_editor.png)
+![Webots node editor](images/field_editor.png)
 
 %end
 

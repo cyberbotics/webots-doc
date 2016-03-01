@@ -20,7 +20,7 @@ if (typeof String.prototype.endsWith !== "function") {
 function redirectUrls(node, targetPath) {
     var i;
 
-    // hack a href
+    // redirect a's href
     var as = node.getElementsByTagName("a");
     for (i = 0; i < as.length; i++) {
         var a = as[i];
@@ -49,7 +49,7 @@ function redirectUrls(node, targetPath) {
         }
     }
 
-    // hack images src
+    // redirect img's src
     var imgs = node.getElementsByTagName("img");
     for (i = 0; i < imgs.length; i++) {
         var img = imgs[i];

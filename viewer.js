@@ -286,6 +286,7 @@ function populateMenu(menu) {
 }
 
 function getMDFile(target, setup) {
+    console.log("Get MD file: " + target);
     $.ajax({
         type: "GET",
         url: target,
@@ -295,7 +296,26 @@ function getMDFile(target, setup) {
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
-            getMDFile(setup.targetPath + setup.book + ".md", setup); // get the main page instead
+            var mainPage = setup.targetPath + setup.book + ".md";
+            // get the main page instead
+            if (target != mainPage) {
+                getMDFile(mainPage, setup);
+            }
+        }
+    });
+}
+
+function getMenuFile(target, setup) {
+    console.log("Get menu file: " + target);
+    $.ajax({
+        type: "GET",
+        url: target,
+        dataType: "text",
+        success: receiveMenuContent,
+        setup: setup,
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Status: " + textStatus);
+            console.log("Error: " + errorThrown);
         }
     });
 }
@@ -312,27 +332,8 @@ document.addEventListener("DOMContentLoaded", function() {
     targetPath += book + "/";
 
     var targetUrl = targetPath + page;
-    console.log("Target Url: " + targetUrl);
-
-    // get the md file
     getMDFile(targetUrl, { "targetPath": targetPath, "book": book });
 
     var menuUrl = targetPath + "menu.md";
-    console.log("Menu Url: " + menuUrl);
-
-    // get the menu file
-    $.ajax({
-        type: "GET",
-        url: menuUrl,
-        dataType: "text",
-        success: receiveMenuContent,
-        setup: {
-            "targetPath": targetPath,
-            "page": page
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) { 
-            console.log("Status: " + textStatus);
-            console.log("Error: " + errorThrown); 
-        }
-    });
+    getMenuFile(menuUrl, {"targetPath": targetPath, "page": page});
 });

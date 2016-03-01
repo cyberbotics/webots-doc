@@ -14,4 +14,3 @@ website](http://support.robotis.com/ko/product/darwin-op.htm).
 DARwIn-OP being open source you can also find all the source files of the
 project on [sourceforge](http://sourceforge.net/projects/darwinop).
 
-## Sections

@@ -846,7 +846,7 @@ class BookParser:
                 raise Exception('Unsupported type: ' + child.tag)
             previousChildTag = child.tag
 
-        if node.tag == 'chapter':
+        if node.tag == 'chapter' and len(node.findall('./sect1')):
             outFile.write('## Sections\n')
             for child in node.getchildren():
                 if child.tag == 'sect1':

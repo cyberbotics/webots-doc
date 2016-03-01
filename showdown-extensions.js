@@ -91,7 +91,7 @@ showdown.extension("wbFigure", function() {
         },
         { // remove <p> tags inside the <figure> tag
             type: "html",
-            regex: /<figure([^]*)><p><img([^]+?)<\/p>/gi,
+            regex: /<figure([^>]*)><p><img([^]+?)<\/p>/gi,
             replace: function (match, arguments, content) {
                 return "<figure" + arguments + "><img" + content;
             }

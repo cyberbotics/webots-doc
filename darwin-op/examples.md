@@ -35,7 +35,7 @@ current project.
 compilation files of the current project.
 
 You can find more information about the user interface in the corresponding
-chapter of the [User Guide](www.cyberbotics.com/guide).
+chapter of the [User Guide](http://www.cyberbotics.com/guide).
 
 ## Sections
 - [Symmetry](symmetry.md)

@@ -4,9 +4,9 @@ In order to ease the creation of new environments for automobile simulations, a
 script has been created to convert maps from OpenStreetMap into Webots worlds.
 
 You can download a map of any part of the world from
-[www.openstreetmap.org/export ](www.openstreetmap.org/export ) (do not use more
-than a few kilometers square if you want to be able to run your simulation in
-real-time). And then convert it using the script.
+[www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use
+more than a few kilometers square if you want to be able to run your simulation
+in real-time). And then convert it using the script.
 
 The script is written in python, a typical usage is:
 

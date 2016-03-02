@@ -10,7 +10,7 @@ Editor` tool.
 
 > **note**:
 More informations about this tool provided by ROBOTIS is available on Robotis
-[website](www.support.robotis.com/ko/product/darwin-op/development/tools/action_editor.htm).
+[website](http://www.support.robotis.com/ko/product/darwin-op/development/tools/action_editor.htm).
 
 **Name**
 

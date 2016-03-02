@@ -76,7 +76,11 @@ class TestReferences(unittest.TestCase):
                     # remove parameters
                     ref = m.group(2)
                     # 1. external link
-                    if ref.startswith('www') or ref.startswith('http'):
+                    self.assertFalse(
+                        ref.startswith('www'),
+                        msg='URL should not start with "www": "%s"' % (ref)
+                    )
+                    if ref.startswith('http'):
                         continue
                     # 2. mailto
                     if ref.startswith('mailto:'):

@@ -47,6 +47,6 @@ out of the unit texture squares centered at (0, +/- `height`, 0) with dimensions
 2*`radius`  by 2*`radius`. The top texture appears right side up when the top of
 the cylinder is tilted toward the +*z* axis, and the bottom texture appears
 right side up when the top of the cylinder is tilted toward the -*z* axis.
-[TextureTransform](texturetransform.md#texturetransform) affects the texture
-coordinates of the Cylinder.
+[TextureTransform](texturetransform.md) affects the texture coordinates of the
+Cylinder.
 

@@ -12,7 +12,7 @@ your computer previously.
 After installation, the most important Webots features will be available, but
 some third party tools (such as Java, Python, or *MATLAB*<sup>TM</sup>) may be
 necessary for running or compiling specific projects. The
-[chapter](language-setup.md#language-setup) covers the set up of these tools.
+[chapter](language-setup.md) covers the set up of these tools.
 
 ### Installation on linux
 
@@ -35,8 +35,7 @@ Webots will run much faster if you install an accelerated OpenGL drivers. If you
 have a nVidia or ATI graphics card, it is highly recommended that you install
 the Linux graphics drivers from these manufacturers to take the full advantage
 of the OpenGL hardware acceleration with Webots. Please find instructions here
-[this
-section](verifying-your-graphics-driver-installation.md#verifying-your-graphics-driver-installation).
+[this section](verifying-your-graphics-driver-installation.md).
 
 <!-- -->
 

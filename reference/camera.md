@@ -1,6 +1,6 @@
 ## Camera
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Camera {
@@ -104,16 +104,16 @@ resolution (it can measure any infinitesimal change). This field is used only
 when type is "range-finder" and accepts any value in the interval (0.0, inf).
 
 - The `lensDistortion` field may contain a
-[CameraLensDistortion](cameralensdistortion.md#cameralensdistortion) node to
-specify the image distortion due to the camera lens.
+[CameraLensDistortion](cameralensdistortion.md) node to specify the image
+distortion due to the camera lens.
 
-- The `focus` field may contain a [CameraFocus](camerafocus.md#camerafocus) node
-to provide the camera device with a controllable focusing system. If this field
-is set to NULL, then no focus is available on the camera device.
+- The `focus` field may contain a [CameraFocus](camerafocus.md) node to provide
+the camera device with a controllable focusing system. If this field is set to
+NULL, then no focus is available on the camera device.
 
-- The `zoom` field may contain a [CameraZoom](camerazoom.md#camerazoom) node to
-provide the camera device with a controllable zoom system. If this field is set
-to NULL, then no zoom is available on the camera device.
+- The `zoom` field may contain a [CameraZoom](camerazoom.md) node to provide the
+camera device with a controllable zoom system. If this field is set to NULL,
+then no zoom is available on the camera device.
 
 - The `compositor` field specifies the name of a compositor to apply on the camera
 image. A compositor can be used to apply a shader in order to alter the original
@@ -174,7 +174,7 @@ logarithmic values, an algorithm linearizes the buffer to metric values between
 
 Range-finder cannot see transparent objects. An object can be semi-transparent
 either if its texture has an alpha channel, or if its
-[Material](material.md#material).`transparency` field is not equal to 1.
+[Material](material.md).`transparency` field is not equal to 1.
 
 ### Frustum
 
@@ -314,11 +314,11 @@ These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
 the [Camera](#camera) node, as `fieldOfView`. Note that changing the field of
 view using `wb_camera_set_fov()` is possible only if the camera device has a
-[CameraZoom](camerazoom.md#camerazoom) node defined in its `zoom` field. The
-minimum and maximum values for the field of view are defined in this
-[CameraZoom](camerazoom.md#camerazoom) node, if the zoom is not defined, then
-the functions `wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will
-return the camera's field of view.
+[CameraZoom](camerazoom.md) node defined in its `zoom` field. The minimum and
+maximum values for the field of view are defined in this
+[CameraZoom](camerazoom.md) node, if the zoom is not defined, then the functions
+`wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will return the camera's
+field of view.
 
 ---
 
@@ -341,8 +341,8 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
 **Description**
 
 These functions allow the controller to get and set the focusing parameters.
-Note that if the camera device has no [CameraFocus](camerafocus.md#camerafocus)
-node defined in its `focus` field, it is not possible to call
+Note that if the camera device has no [CameraFocus](camerafocus.md) node defined
+in its `focus` field, it is not possible to call
 `wb_camera_set_focal_distance()` and the other functions will return 0.
 
 ---

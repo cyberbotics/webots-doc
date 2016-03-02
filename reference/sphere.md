@@ -32,6 +32,6 @@ a black and white soccer ball.
 When a texture is applied to a sphere, the texture covers the entire surface,
 wrapping counterclockwise from the back of the sphere. The texture has a seam at
 the back where the *yz*-plane intersects the sphere.
-[TextureTransform](texturetransform.md#texturetransform) affects the texture
-coordinates of the Sphere.
+[TextureTransform](texturetransform.md) affects the texture coordinates of the
+Sphere.
 

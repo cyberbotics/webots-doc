@@ -1,6 +1,6 @@
 ## Emitter
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Emitter {
@@ -22,10 +22,10 @@ emitters. An [Emitter](#emitter) node must be added to the children of a robot
 or a supervisor. Please note that an emitter can send data but it cannot receive
 data. In order to simulate a unidirectional communication between two robots,
 one robot must have an [Emitter](#emitter) while the other robot must have a
-[Receiver](receiver.md#receiver). To simulate a bidirectional communication
-between two robots, each robot needs to have both an [Emitter](#emitter) and a
-[Receiver](receiver.md#receiver). Note that messages are never transmitted from
-one robot to itself.
+[Receiver](receiver.md). To simulate a bidirectional communication between two
+robots, each robot needs to have both an [Emitter](#emitter) and a
+[Receiver](receiver.md). Note that messages are never transmitted from one robot
+to itself.
 
 ### Field Summary
 
@@ -85,10 +85,10 @@ number. A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
 
 > **note**:
 [Emitter](#emitter) nodes can also be used to communicate with the physics
-plugin (see [this chapter](physics-plugin.md#physics-plugin)). In this case the
-channel must be set to 0 (the default). In addition it is highly recommended to
-choose -1 for the baudRate, in order to enable the fastest possible
-communication; the `type, range` and `aperture` will be ignored.
+plugin (see [this chapter](physics-plugin.md)). In this case the channel must be
+set to 0 (the default). In addition it is highly recommended to choose -1 for
+the baudRate, in order to enable the fastest possible communication; the `type,
+range` and `aperture` will be ignored.
 
 ### Emitter Functions
 

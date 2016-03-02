@@ -1,6 +1,6 @@
 ## Connector
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Connector {
@@ -191,9 +191,8 @@ connect.
 
 > **note**:
 To be functional, a [Connector](#connector) node requires the presence of a
-[Physics](physics.md#physics) node in its parent node. But it is not necessary
-to add a [Physics](physics.md#physics) node to the [Connector](#connector)
-itself.
+[Physics](physics.md) node in its parent node. But it is not necessary to add a
+[Physics](physics.md) node to the [Connector](#connector) itself.
 
 ### Connector Functions
 

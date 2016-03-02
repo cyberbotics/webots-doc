@@ -134,14 +134,14 @@ void wbu_motion_set_time(WbMotionRefmotion, int ms)
 
 The `wbu_motion_is_over()` function returns `true` when the playback position
 has reached the end of the motion file. That is when the last pose has been sent
-to the [Motor](motor.md#motor) nodes using the `wb_motor_set_position()`
-function. But this does not mean that the motors have yet reached the specified
-positions; they may be slow or blocked by obstacles, robots, walls, the floor,
-etc. If the motion is in *loop mode*, this function returns always `false`. Note
-that `wbu_motion_is_over()` depends on the *reverse mode*.
-`wbu_motion_is_over()` returns `true` when *reverse mode* is `true` and the
-playback position is at the beginning of the file or when *reverse mode* is
-`false` and the playback position is at the end of the file.
+to the [Motor](motor.md) nodes using the `wb_motor_set_position()` function. But
+this does not mean that the motors have yet reached the specified positions;
+they may be slow or blocked by obstacles, robots, walls, the floor, etc. If the
+motion is in *loop mode*, this function returns always `false`. Note that
+`wbu_motion_is_over()` depends on the *reverse mode*. `wbu_motion_is_over()`
+returns `true` when *reverse mode* is `true` and the playback position is at the
+beginning of the file or when *reverse mode* is `false` and the playback
+position is at the end of the file.
 
 The `wbu_motion_get_duration()` function returns the total duration of the
 motion file in milliseconds.

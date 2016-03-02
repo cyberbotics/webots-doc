@@ -1,10 +1,9 @@
 ## Car
 
-The `Car` PROTO inherits from the
-[AckermannVehicle](ackermannvehicle.md#ackermannvehicle) PROTO and extends it.
-It should be used with the [driver](driver-library.md#driver-library) library in
-order to add a model of the engine, transmission, lights, gearbox and brake. The
-joint devices are automatically filled in with the appropriate devices in
+The `Car` PROTO inherits from the [AckermannVehicle](ackermannvehicle.md) PROTO
+and extends it. It should be used with the [driver](driver-library.md) library
+in order to add a model of the engine, transmission, lights, gearbox and brake.
+The joint devices are automatically filled in with the appropriate devices in
 function of the transmission type set in the parameters.
 
 ```
@@ -37,7 +36,7 @@ models](driver-library.md#engine-models) for more information.
 on the wheels joint.
 - `time0To100`: Defines the time to accelerate from 0 to 100 km/h in seconds, this
 value is used to compute the wheels acceleration when controlling the car in
-cruising speed thanks to the [driver](driver-library.md#driver-library)
+cruising speed thanks to the [driver](driver-library.md)
 - `engineMaxTorque`: Defines the maximum torque of the motor in `Nm` used to
 compute the electric engine torque.
 - `engineMaxPower`: Defines the maximum power of the motor in `W` used to compute

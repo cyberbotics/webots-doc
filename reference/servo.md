@@ -4,12 +4,11 @@
 As of Webots 7.2.0, the [Servo](#servo) node is deprecated and should not be
 used in any new simulation models. It is kept for backwards compatibility only.
 The functionality of the [Servo](#servo) node is replaced by the one provided by
-the [HingeJoint](hingejoint.md#hingejoint),
-[RotationalMotor](rotationalmotor.md#rotationalmotor) and
-[LinearMotor](linearmotor.md#linearmotor) nodes. Therefore, you should use these
-nodes instead of the [Servo](#servo) node.
+the [HingeJoint](hingejoint.md), [RotationalMotor](rotationalmotor.md) and
+[LinearMotor](linearmotor.md) nodes. Therefore, you should use these nodes
+instead of the [Servo](#servo) node.
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Servo {
@@ -102,8 +101,8 @@ expressed in *meters*. See [this table](#servo-units):
 ### Initial Transformation and Position
 
 The [Servo](#servo) node inherits the `translation` and `rotation` fields from
-the [Transform](transform.md#transform) node. These two fields represent the
-initial coordinate system transformation between the [Servo](#servo) parent and
+the [Transform](transform.md) node. These two fields represent the initial
+coordinate system transformation between the [Servo](#servo) parent and
 children.
 
 In a "rotational" [Servo](#servo), these fields have the following meaning: The
@@ -184,10 +183,9 @@ the desired velocity as specified by the `maxVelocity` field (default) or set
 with `wb_servo_set_velocity()`, *a* is the acceleration required to reach *Vc*
 in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
 step, *t<sub>s</sub>* is the duration of the simulation time step as specified
-by the `basicTimeStep` field of the [WorldInfo](worldinfo.md#worldinfo) node
-(converted in seconds), and *A* is the acceleration of the servo motor as
-specified by the `acceleration` field (default) or set with
-`wb_servo_set_acceleration()`.
+by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in
+seconds), and *A* is the acceleration of the servo motor as specified by the
+`acceleration` field (default) or set with `wb_servo_set_acceleration()`.
 
 ### Velocity Control
 
@@ -305,12 +303,12 @@ velocity computed by the physics simulator.
 
 As you can see in (see  [this figure](#mechanical-diagram-of-a-servo)), a
 [Servo](#servo) creates a joint between two masses *m<sub>0</sub>* and
-*m<sub>1</sub>*. *m<sub>0</sub>* is defined by the [Physics](physics.md#physics)
-node in the parent of the [Servo](#servo). The mass *m<sub>1</sub>* is defined
-by the [Physics](physics.md#physics) node of the [Servo](#servo). The value
-*x<sub>0</sub>* corresponds to the initial translation of the [Servo](#servo)
-defined by the `translation` field. The position *x* corresponds to the current
-position of the [Servo](#servo) defined by the `position` field.
+*m<sub>1</sub>*. *m<sub>0</sub>* is defined by the [Physics](physics.md) node in
+the parent of the [Servo](#servo). The mass *m<sub>1</sub>* is defined by the
+[Physics](physics.md) node of the [Servo](#servo). The value *x<sub>0</sub>*
+corresponds to the initial translation of the [Servo](#servo) defined by the
+`translation` field. The position *x* corresponds to the current position of the
+[Servo](#servo) defined by the `position` field.
 
 ### Servo Forces
 
@@ -399,7 +397,7 @@ DEF Servo1 Servo {
 }
 ```
 
-Note that it is necessary to specify the [Physics](physics.md#physics) and the
+Note that it is necessary to specify the [Physics](physics.md) and the
 `boundingObject` of *Servo1*. This adds the extra body *m<sub>1</sub>* in the
 simulation, between the motor and the spring and damper.
 
@@ -415,10 +413,10 @@ With overlayed axes (or very close axes) the mass and the shape of the body
 located between these axes is often unknown or negligible. However, Webots
 requires all the intermediate `boundingObject` and `physics` fields to be
 defined. So the trick is to use dummy values for these fields. Usually the dummy
-`boundingObject` can be specified as a [Sphere](sphere.md#sphere) with a radius
-of 1 millimeter. A [Sphere](sphere.md#sphere) is the preferred choice because
-this is the cheapest shape for the collision detection. And the `physics` field
-can use a [Physics](physics.md#physics) node with default values.
+`boundingObject` can be specified as a [Sphere](sphere.md) with a radius of 1
+millimeter. A [Sphere](sphere.md) is the preferred choice because this is the
+cheapest shape for the collision detection. And the `physics` field can use a
+[Physics](physics.md) node with default values.
 
 This is better explained with an example. Let's assume that we want to build a
 pan/tilt robot head. For this we need two independent (and perpendicular)
@@ -451,8 +449,8 @@ DEF PAN Servo {
 }
 ```
 
-Please note the dummy [Physics](physics.md#physics) and the 1 millimeter
-[Sphere](sphere.md#sphere) as dummy `boundingObject`.
+Please note the dummy [Physics](physics.md) and the 1 millimeter
+[Sphere](sphere.md) as dummy `boundingObject`.
 
 ### Servo Functions
 

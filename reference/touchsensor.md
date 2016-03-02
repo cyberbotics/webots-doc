@@ -1,6 +1,6 @@
 ## TouchSensor
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 TouchSensor {
@@ -30,7 +30,7 @@ Examples of using the [TouchSensor](#touchsensor) are provided by the
 - `type`: allows the user to select the type of sensor: "bumper", "force", or
 "force-3d", described below.
 - `lookupTable`: similar to the one used by the
-[DistanceSensor](distancesensor.md#distancesensor) node.
+[DistanceSensor](distancesensor.md) node.
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
 to -1 (default) means that the sensor has an 'infinite' resolution (it can
@@ -45,9 +45,9 @@ A "bumper" [TouchSensor](#touchsensor) returns a boolean value that indicates
 whether or not there is a collision with another object. More precisely, it
 returns 1.0 if a collision is detected and 0.0 otherwise. A collision is
 detected when the `boundingObject` of the [TouchSensor](#touchsensor) intersects
-the `boundingObject` of any other [Solid](solid.md#solid) object. The
-`lookupTable` field of a "bumper" sensor is ignored. The
-[Physics](physics.md#physics) node of a "bumper" sensor is not required.
+the `boundingObject` of any other [Solid](solid.md) object. The `lookupTable`
+field of a "bumper" sensor is ignored. The [Physics](physics.md) node of a
+"bumper" sensor is not required.
 
 #### "force" Sensors
 
@@ -94,8 +94,8 @@ physics engine, then interpolated using the `lookupTable`, and finally noise is
 added (if specified in the lookupTable). Each line of the `lookupTable` contains
 three numbers: (1) an input force in Newtons, (2) the corresponding output
 value, and (3) a noise level between 0.0 and 1.0 (see
-[DistanceSensor](distancesensor.md#distancesensor) for more info). Note that the
-default `lookupTable` of the [TouchSensor](#touchsensor) node is:
+[DistanceSensor](distancesensor.md) for more info). Note that the default
+`lookupTable` of the [TouchSensor](#touchsensor) node is:
 
 ```
 [   0     0 0
@@ -140,7 +140,7 @@ the direction where the collision is expected.
 
 The force measured by the ODE physics engine is only a rough approximation of a
 real physical force. This approximation usually improves as the `basicTimeStep`
-([WorldInfo](worldinfo.md#worldinfo) node) decreases.
+([WorldInfo](worldinfo.md) node) decreases.
 
 ### TouchSensor Functions
 

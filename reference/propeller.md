@@ -22,10 +22,10 @@ Propeller {
 
 The [Propeller](#propeller) node can be used to model a marine or an aircraft
 propeller. When its `device` field is set with a
-[RotationalMotor](rotationalmotor.md#rotationalmotor), the propeller turns the
-motor angular velocity into a thrust and a (resistant) torque. The resultant
-thrust is the product of a real number T by the unit length shaft axis vector
-defined in the `shaftAxis` field, with T given by the formula
+[RotationalMotor](rotationalmotor.md), the propeller turns the motor angular
+velocity into a thrust and a (resistant) torque. The resultant thrust is the
+product of a real number T by the unit length shaft axis vector defined in the
+`shaftAxis` field, with T given by the formula
 
 ```
 T = t1 * |omega| * omega - t2 * |omega| * V
@@ -61,13 +61,12 @@ be exerted, see [this figure](#propeller-shaft-axis).
 - `thrustConstants` and `torqueConstants`: coefficients used to define the
 resultant thrust and torque as functions of the motor angular velocity and the
 linear speed of adavance, see above formulae.
-- `device`: this field has to be set with a
-[RotationalMotor](rotationalmotor.md#rotationalmotor) in order to control the
-propeller.
+- `device`: this field has to be set with a [RotationalMotor](rotationalmotor.md)
+in order to control the propeller.
 - `fastHelix` and `slowHelix`: if not NULL, these fields must be set with
-[Solid](solid.md#solid) nodes. The corresponding [Solid](solid.md#solid) nodes
-define the graphical representation of the propeller according to its motor's
-angular velocity omega: if |omega| > 24 π rad /s, only the
-[Solid](solid.md#solid) defined in `fastHelix` is visible, otherwise only the
-[Solid](solid.md#solid) defined in `slowHelix` is visible.
+[Solid](solid.md) nodes. The corresponding [Solid](solid.md) nodes define the
+graphical representation of the propeller according to its motor's angular
+velocity omega: if |omega| > 24 π rad /s, only the [Solid](solid.md) defined in
+`fastHelix` is visible, otherwise only the [Solid](solid.md) defined in
+`slowHelix` is visible.
 

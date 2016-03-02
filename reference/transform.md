@@ -1,6 +1,6 @@
 ## Transform
 
-Derived from [Group](group.md#group).
+Derived from [Group](group.md).
 
 ```
 Transform {
@@ -10,7 +10,7 @@ Transform {
 }
 ```
 
-Direct derived nodes: [Solid](solid.md#solid).
+Direct derived nodes: [Solid](solid.md).
 
 ### Description
 
@@ -54,22 +54,21 @@ objects support any positive non-uniform scale whereas physical objects are
 subjected to restrictions. This is so because scaled geometries must remain
 admissible for the physics engine collision detection. Restrictions for
 `Geometries` placed inside `boundingObjects` are as follows:
-[Sphere](sphere.md#sphere)s and [Capsule](capsule.md#capsule)s only support
-uniform scale; the scale coordinates x and z of a `Transform` with a
-[Cylinder](cylinder.md#cylinder) descendant must be the same. For the remaining
-`Geometries`, the scale is not restricted. The `scale` fields of a
-[Solid](solid.md#solid) node and its derived nodes must be uniform, i.e., of the
-form *x x x* so as to comply with the physics engine. For such nodes a positive
-`scale` field initially set to *x y z* is automatically reset to *x x x*. The
-same holds for a `Transform` placed inside a `boundingObject` and with a
-`Sphere` or a `Capsule` descendant. In the case of a `Cylinder`, *x y z* will be
-reset to *x z x*. If some value changes within one of the previous constrained
-scale fields, the two others are actuated using the new value and the
-corresponding constraint rule.
+[Sphere](sphere.md)s and [Capsule](capsule.md)s only support uniform scale; the
+scale coordinates x and z of a `Transform` with a [Cylinder](cylinder.md)
+descendant must be the same. For the remaining `Geometries`, the scale is not
+restricted. The `scale` fields of a [Solid](solid.md) node and its derived nodes
+must be uniform, i.e., of the form *x x x* so as to comply with the physics
+engine. For such nodes a positive `scale` field initially set to *x y z* is
+automatically reset to *x x x*. The same holds for a `Transform` placed inside a
+`boundingObject` and with a `Sphere` or a `Capsule` descendant. In the case of a
+`Cylinder`, *x y z* will be reset to *x z x*. If some value changes within one
+of the previous constrained scale fields, the two others are actuated using the
+new value and the corresponding constraint rule.
 
 > **note**:
-If a `Transform` is named using the [DEF](def-and-use.md#def-and-use) keyword
-and later referenced inside a `boundingObject` with a USE statement, the
-constraint corresponding to its first `Geometry` descendant applies to the
-`scale` fields of the defining `Transform` and of all its further references.
+If a `Transform` is named using the [DEF](def-and-use.md) keyword and later
+referenced inside a `boundingObject` with a USE statement, the constraint
+corresponding to its first `Geometry` descendant applies to the `scale` fields
+of the defining `Transform` and of all its further references.
 

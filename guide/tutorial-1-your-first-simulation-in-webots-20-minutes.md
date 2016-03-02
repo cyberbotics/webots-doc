@@ -229,7 +229,7 @@ processor cores.
 > **note**:
 Other languages than C are available but may require a setup. Please refer to
 the language chapter to setup the other languages (see [this
-chapter](language-setup.md#language-setup)).
+chapter](language-setup.md)).
 
 <!-- -->
 

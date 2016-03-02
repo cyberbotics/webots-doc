@@ -1,6 +1,6 @@
 ## InertialUnit
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 InertialUnit {
@@ -17,24 +17,22 @@ InertialUnit {
 The [InertialUnit](#inertialunit) node simulates an *Inertial Measurement Unit*
 (IMU). The [InertialUnit](#inertialunit) computes and returns its *roll*,
 *pitch* and *yaw* angles with respect to a global coordinate system defined in
-the [WorldInfo](worldinfo.md#worldinfo) node. If you would like to measure an
-acceleration or an angular velocity, please use the
-[Accelerometer](accelerometer.md#accelerometer) or [Gyro](gyro.md#gyro) node
-instead. The [InertialUnit](#inertialunit) node must be placed on the
-[Robot](robot.md#robot) so that its *x*-axis points in the direction of the
-[Robot](robot.md#robot)'s forward motion (longitudinal axis). The positive
-*z*-axis must point towards the [Robot](robot.md#robot)'s right side, e.g.,
-right arm, right wing (lateral axis). The positive *y*-axis must point to the
-[Robot](robot.md#robot)'s up/top direction. If the [InertialUnit](#inertialunit)
-has this orientation, then the *roll*, *pitch* and *yaw* angles correspond to
-the usual automotive, aeronautics or spatial meaning.  More precisely, the
+the [WorldInfo](worldinfo.md) node. If you would like to measure an acceleration
+or an angular velocity, please use the [Accelerometer](accelerometer.md) or
+[Gyro](gyro.md) node instead. The [InertialUnit](#inertialunit) node must be
+placed on the [Robot](robot.md) so that its *x*-axis points in the direction of
+the [Robot](robot.md)'s forward motion (longitudinal axis). The positive
+*z*-axis must point towards the [Robot](robot.md)'s right side, e.g., right arm,
+right wing (lateral axis). The positive *y*-axis must point to the
+[Robot](robot.md)'s up/top direction. If the [InertialUnit](#inertialunit) has
+this orientation, then the *roll*, *pitch* and *yaw* angles correspond to the
+usual automotive, aeronautics or spatial meaning.  More precisely, the
 [InertialUnit](#inertialunit) measures the Tait-Bryan angles along *x*-axis
 (roll), *z*-axis (pitch) and *y*-axis (yaw). This convention is commonly
 referred to as the *x-z-y* extrinsic sequence; it corresponds to the composition
 of elemental rotations denoted by YZX. The reference frame is made of the unit
 vector giving the north direction, the opposite of the normalized gravity vector
-and their cross-product (see [WorldInfo](worldinfo.md#worldinfo) to customize
-this frame).
+and their cross-product (see [WorldInfo](worldinfo.md) to customize this frame).
 
 > **note**:
 In a gimbal lock situation, i.e., when the pitch is -π/2 or π/2, the roll and
@@ -108,22 +106,22 @@ the *roll*, *pitch* and *yaw* angles respectively.
 The *roll* angle indicates the unit's rotation angle about its *x*-axis, in the
 interval [-π,π]. The *roll* angle is zero when the
 [InertialUnit](#inertialunit) is horizontal, i.e., when its *y*-axis has the
-opposite direction of the gravity ([WorldInfo](worldinfo.md#worldinfo) defines
-the `gravity` vector).
+opposite direction of the gravity ([WorldInfo](worldinfo.md) defines the
+`gravity` vector).
 
 The *pitch* angle indicates the unit's rotation angle about is *z*-axis, in the
 interval [-π/2,π/2]. The *pitch* angle is zero when the
 [InertialUnit](#inertialunit) is horizontal, i.e., when its *y*-axis has the
 opposite direction of the gravity. If the [InertialUnit](#inertialunit) is
-placed on the [Robot](robot.md#robot) with a standard orientation, then the
-*pitch* angle is negative when the [Robot](robot.md#robot) is going down, and
-positive when the robot is going up.
+placed on the [Robot](robot.md) with a standard orientation, then the *pitch*
+angle is negative when the [Robot](robot.md) is going down, and positive when
+the robot is going up.
 
 The *yaw* angle indicates the unit orientation, in the interval [-π,π], with
-respect to [WorldInfo](worldinfo.md#worldinfo).`northDirection`. The *yaw* angle
-is zero when the [InertialUnit](#inertialunit)'s *x*-axis is aligned with the
-north direction, it is π/2 when the unit is heading east, and -π/2 when the
-unit is oriented towards the west. The *yaw* angle can be used as a compass.
+respect to [WorldInfo](worldinfo.md).`northDirection`. The *yaw* angle is zero
+when the [InertialUnit](#inertialunit)'s *x*-axis is aligned with the north
+direction, it is π/2 when the unit is heading east, and -π/2 when the unit is
+oriented towards the west. The *yaw* angle can be used as a compass.
 
 > **note** [C, C++]:
 The returned vector is a pointer to internal values managed by the Webots,

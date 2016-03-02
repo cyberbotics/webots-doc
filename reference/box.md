@@ -32,7 +32,6 @@ onto the face with the same orientation as if the image were displayed normally
 in 2D. On the bottom face of the box (-*y*), when viewed from below looking up
 the *y*-axis toward the origin with the +Z-axis as the view up direction, the
 texture is mapped onto the face with the same orientation as if the image were
-displayed normally in 2D.
-[TextureTransform](texturetransform.md#texturetransform) affects the texture
-coordinates of the Box.
+displayed normally in 2D. [TextureTransform](texturetransform.md) affects the
+texture coordinates of the Box.
 

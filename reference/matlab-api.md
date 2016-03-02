@@ -4,7 +4,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_accelerometer"
 
-| % [Accelerometer](accelerometer.md#accelerometer) :                                                    |
+| % [Accelerometer](accelerometer.md) :                                                                  |
 | ------------------------------------------------------------------------------------------------------ |
 | [wb\_accelerometer\_enable](accelerometer.md#wb_accelerometer_get_values)(tag, ms)                     |
 | [wb\_accelerometer\_disable](accelerometer.md#wb_accelerometer_get_values)(tag)                        |
@@ -15,7 +15,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_brake"
 
-| % [Brake](brake.md#brake) :                                                                       |
+| % [Brake](brake.md) :                                                                             |
 | ------------------------------------------------------------------------------------------------- |
 | [wb\_brake\_set\_damping\_constant](brake.md#wb_brake_set_damping_constant)(tag, dampingConstant) |
 | type = [wb\_brake\_get\_type](brake.md#wb_brake_set_damping_constant)(tag)                        |
@@ -24,7 +24,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_camera"
 
-| % [Camera](camera.md#camera) :                                                                 |
+| % [Camera](camera.md) :                                                                        |
 | ---------------------------------------------------------------------------------------------- |
 | WB\_CAMERA\_COLOR                                                                              |
 | WB\_CAMERA\_RANGE\_FINDER                                                                      |
@@ -53,7 +53,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_compass"
 
-| % [Compass](compass.md#compass) :                                                    |
+| % [Compass](compass.md) :                                                            |
 | ------------------------------------------------------------------------------------ |
 | [wb\_compass\_enable](compass.md#wb_compass_get_values)(tag, ms)                     |
 | [wb\_compass\_disable](compass.md#wb_compass_get_values)(tag)                        |
@@ -64,7 +64,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_connector"
 
-| % [Connector](connector.md#connector) :                                                |
+| % [Connector](connector.md) :                                                          |
 | -------------------------------------------------------------------------------------- |
 | [wb\_connector\_enable\_presence](connector.md#wb_connector_get_presence)(tag, ms)     |
 | [wb\_connector\_disable\_presence](connector.md#wb_connector_get_presence)(tag)        |
@@ -76,7 +76,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_device"
 
-| % [Device](device.md#device) :                                               |
+| % [Device](device.md) :                                                      |
 | ---------------------------------------------------------------------------- |
 | model = [wb\_device\_get\_model](device.md#wb_device_get_model)(tag)         |
 | name = [wb\_device\_get\_name](device.md#wb_device_get_name)(tag)            |
@@ -86,7 +86,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_differential_wheels"
 
-| % [DifferentialWheels](differentialwheels.md#differentialwheels) :                                                                   |
+| % [DifferentialWheels](differentialwheels.md) :                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [wb\_differential\_wheels\_set\_speed](differentialwheels.md#wb_differential_wheels_set_speed)(left, right)                          |
 | left = [wb\_differential\_wheels\_get\_left\_speed](differentialwheels.md#wb_differential_wheels_set_speed)()                        |
@@ -104,7 +104,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_display"
 
-| % [Display](display.md#display) :                                                                          |
+| % [Display](display.md) :                                                                                  |
 | ---------------------------------------------------------------------------------------------------------- |
 | RGB                                                                                                        |
 | RGBA                                                                                                       |
@@ -135,7 +135,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_distance_sensor"
 
-| % [DistanceSensor](distancesensor.md#distancesensor) :                                                      |
+| % [DistanceSensor](distancesensor.md) :                                                                     |
 | ----------------------------------------------------------------------------------------------------------- |
 | [wb\_distance\_sensor\_enable](distancesensor.md#wb_distance_sensor_get_value)(tag, ms)                     |
 | [wb\_distance\_sensor\_disable](distancesensor.md#wb_distance_sensor_get_value)(tag)                        |
@@ -146,7 +146,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_emitter"
 
-| % [Emitter](emitter.md#emitter) :                                                   |
+| % [Emitter](emitter.md) :                                                           |
 | ----------------------------------------------------------------------------------- |
 | WB\_CHANNEL\_BROADCAST                                                              |
 | [wb\_emitter\_send](emitter.md#wb_emitter_send)(tag, data)                          |
@@ -160,7 +160,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_gps"
 
-| % [GPS](gps.md#gps) :                                                    |
+| % [GPS](gps.md) :                                                        |
 | ------------------------------------------------------------------------ |
 | [wb\_gps\_enable](gps.md#wb_gps_get_values)(tag, ms)                     |
 | [wb\_gps\_disable](gps.md#wb_gps_get_values)(tag)                        |
@@ -171,7 +171,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_gyro"
 
-| % [Gyro](gyro.md#gyro) :                                                    |
+| % [Gyro](gyro.md) :                                                         |
 | --------------------------------------------------------------------------- |
 | [wb\_gyro\_enable](gyro.md#wb_gyro_get_values)(tag, ms)                     |
 | [wb\_gyro\_disable](gyro.md#wb_gyro_get_values)(tag)                        |
@@ -182,7 +182,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_inertial_unit"
 
-| % [InertialUnit](inertialunit.md#inertialunit) :                                                                         |
+| % [InertialUnit](inertialunit.md) :                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------ |
 | [wb\_inertial\_unit\_enable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag, ms)                               |
 | [wb\_inertial\_unit\_disable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag)                                  |
@@ -193,7 +193,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_led"
 
-| % [LED](led.md#led) :                          |
+| % [LED](led.md) :                              |
 | ---------------------------------------------- |
 | [wb\_led\_set](led.md#wb_led_set)(tag, state)  |
 | state = [wb\_led\_get](led.md#wb_led_set)(tag) |
@@ -202,7 +202,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_light_sensor"
 
-| % [LightSensor](lightsensor.md#lightsensor) :                                                      |
+| % [LightSensor](lightsensor.md) :                                                                  |
 | -------------------------------------------------------------------------------------------------- |
 | [wb\_light\_sensor\_enable](lightsensor.md#wb_light_sensor_get_value)(tag, ms)                     |
 | [wb\_light\_sensor\_disable](lightsensor.md#wb_light_sensor_get_value)(tag)                        |
@@ -213,7 +213,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_motion"
 
-| % [Motion](motion.md#motion) :                                                |
+| % [Motion](motion.md) :                                                       |
 | ----------------------------------------------------------------------------- |
 | motion = [wbu\_motion\_new](motion.md#wbu_motion_new)('filename')             |
 | [wbu\_motion\_delete](motion.md#wbu_motion_new)(motion)                       |
@@ -230,7 +230,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_motor"
 
-| % [Motor](motor.md#motor) :                                                                                 |
+| % [Motor](motor.md) :                                                                                       |
 | ----------------------------------------------------------------------------------------------------------- |
 | WB\_MOTOR\_ROTATIONAL, WB\_MOTOR\_LINEAR                                                                    |
 | [wb\_motor\_set\_position](motor.md#wb_motor_set_position)(tag, position)                                   |
@@ -273,7 +273,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_pen"
 
-| % [Pen](pen.md#pen) :                                                          |
+| % [Pen](pen.md) :                                                              |
 | ------------------------------------------------------------------------------ |
 | [wb\_pen\_write](pen.md#wb_pen_write)(tag, write)                              |
 | [wb\_pen\_set\_ink\_color](pen.md#wb_pen_set_ink_color)(tag, [r g b], density) |
@@ -282,7 +282,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_position_sensor"
 
-| % [PositionSensor](positionsensor.md#positionsensor) :                                                      |
+| % [PositionSensor](positionsensor.md) :                                                                     |
 | ----------------------------------------------------------------------------------------------------------- |
 | WB\_ANGULAR, WB\_LINEAR                                                                                     |
 | [wb\_position\_sensor\_enable](positionsensor.md#wb_position_sensor_get_value)(tag, ms)                     |
@@ -295,7 +295,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_receiver"
 
-| % [Receiver](receiver.md#receiver) :                                                                |
+| % [Receiver](receiver.md) :                                                                         |
 | --------------------------------------------------------------------------------------------------- |
 | WB\_CHANNEL\_BROADCAST                                                                              |
 | [wb\_receiver\_enable](receiver.md#wb_receiver_enable)(tag, ms)                                     |
@@ -314,7 +314,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_robot"
 
-| % [Robot](robot.md#robot) :                                                                             |
+| % [Robot](robot.md) :                                                                                   |
 | ------------------------------------------------------------------------------------------------------- |
 | WB\_MODE\_SIMULATION,                                                                                   |
 | WB\_MODE\_CROSS\_COMPILATION,                                                                           |
@@ -366,7 +366,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_servo"
 
-| % [Servo](servo.md#servo) :                                                                                             |
+| % [Servo](servo.md) :                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------- |
 | WB\_SERVO\_ROTATIONAL, WB\_SERVO\_LINEAR                                                                                |
 | [wb\_servo\_set\_position](servo.md#wb_servo_set_position)(tag, position)                                               |
@@ -392,7 +392,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_supervisor"
 
-| % [Supervisor](supervisor.md#supervisor) :                                                                                                                                                                           |
+| % [Supervisor](supervisor.md) :                                                                                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | WB\_SF\_BOOL, WB\_SF\_INT32, WB\_SF\_FLOAT, WB\_SF\_VEC2F,                                                                                                                                                           |
 | WB\_SF\_VEC3F, WB\_SF\_ROTATION, WB\_SF\_COLOR, WB\_SF\_STRING,                                                                                                                                                      |
@@ -478,7 +478,7 @@ The following tables describe the Matlab functions.
 
 %api "matlab_touch_sensor"
 
-| % [TouchSensor](touchsensor.md#touchsensor) :                                                       |
+| % [TouchSensor](touchsensor.md) :                                                                   |
 | --------------------------------------------------------------------------------------------------- |
 | WB\_TOUCH\_SENSOR\_BUMPER, WB\_TOUCH\_SENSOR\_FORCE,                                                |
 | WB\_TOUCH\_SENSOR\_FORCE3D                                                                          |

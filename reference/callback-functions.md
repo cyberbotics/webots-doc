@@ -76,11 +76,10 @@ need deterministic behavior you should initialize srand() with the current time:
 `rand()`, for example to add noise to sensor measurements. In order to have
 reproducible simulations, it is also required that all controllers run in
 *synchronous* mode. That means that the `synchronization` field of every
-[Robot](robot.md#robot),
-[DifferentialWheels](differentialwheels.md#differentialwheels) or
-[Supervisor](supervisor.md#supervisor) must be set to TRUE. Finally, note that
-ODE uses its own random number generator that you might also want to
-reinitialize separately via the `dRandSetSeed()` function.
+[Robot](robot.md), [DifferentialWheels](differentialwheels.md) or
+[Supervisor](supervisor.md) must be set to TRUE. Finally, note that ODE uses its
+own random number generator that you might also want to reinitialize separately
+via the `dRandSetSeed()` function.
 
 ### int webots_physics_collide(dGeomID, dGeomID)
 
@@ -97,13 +96,13 @@ between the colliding objects and then you can create contact joints using ODE's
 `dJointCreateContact()` function. Normally the contact joints should be created
 within the contact joint group given by the `dWebotsGetContactJointGroup()`
 function. Note that this contact joint group is automatically emptied after each
-simulation step, see [here](execution-scheme.md#execution-scheme). Then the
-contact joints should be attached to the corresponding bodies in order to
-prevent them from inter-penetrating. Finally, the `webots_physics_collide()`
-function should return either 1 or 2 to inform Webots that this collision was
-handled. If the value 2 is returned, Webots will moreover notify graphically
-that a collision occurred by changing the color of the corresponding
-boundingObject Geometry in the 3D view.
+simulation step, see [here](execution-scheme.md). Then the contact joints should
+be attached to the corresponding bodies in order to prevent them from
+inter-penetrating. Finally, the `webots_physics_collide()` function should
+return either 1 or 2 to inform Webots that this collision was handled. If the
+value 2 is returned, Webots will moreover notify graphically that a collision
+occurred by changing the color of the corresponding boundingObject Geometry in
+the 3D view.
 
 Since Webots 7.2.0, a multi-threaded version of ODE is used. Therefore, this
 function may be called from different threads. You should ensure it is

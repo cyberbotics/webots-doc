@@ -322,7 +322,6 @@ images) and it can run on another CPU (or CPU core) than Webots.
 - The controller code is linked with the "libController" dynamic library. This
 library handles the communication between your controller and Webots.
 
-The [section](controller-programming.md#controller-programming) explains in more
-detail controller programming. We invite you to read carefully this section
-before going on.
+The [section](controller-programming.md) explains in more detail controller
+programming. We invite you to read carefully this section before going on.
 

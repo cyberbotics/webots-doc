@@ -1,6 +1,6 @@
 ## DistanceSensor
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 DistanceSensor {
@@ -20,8 +20,8 @@ sensor, an infra-red sensor, a sonar sensor, or a laser range-finder. This
 device simulation is performed by detecting the collisions between one or
 several sensor rays and objects in the environment. In case of generic, sonar
 and laser type the collision occurs with the bounding objects of
-[Solid](solid.md#solid) nodes, whereas infra-red rays collision detection uses
-the [Solid](solid.md#solid) nodes themselves.
+[Solid](solid.md) nodes, whereas infra-red rays collision detection uses the
+[Solid](solid.md) nodes themselves.
 
 The rays of the [DistanceSensor](#distancesensor) nodes can be displayed by
 checking the menu `View > Optional Rendering > Show Distance Sensor Rays`. The
@@ -96,9 +96,8 @@ more details).
     Sensors of type "laser" can have only one ray and they have the particularity to
     draw a red spot at the point where this ray hits an obstacle. This red spot is
     visible on the camera images. If the red spot disappears due to depth fighting,
-    then it could help increasing the `lineScale` value in
-    [WorldInfo](worldinfo.md#worldinfo) node that is used for computing its position
-    offset.
+    then it could help increasing the `lineScale` value in [WorldInfo](worldinfo.md)
+    node that is used for computing its position offset.
 
 - `numberOfRays`: number of rays cast by the sensor. The number of rays must be
 equal to, or greater than 1 for "infra-red" and "sonar" sensors. `numberOfRays`
@@ -186,8 +185,8 @@ hit by the sensor ray. The reflection factor is computed as follows: *f = 0.2 +
 0.8 * red\_level* where *red\_level* is the level of red color of the object hit
 by the sensor ray. This level is evaluated combining the `diffuseColor` and
 `transparency` values of the object, the pixel value of the image texture and
-the paint color applied on the object with the [Pen](pen.md#pen) device. Then,
-the distance value computed by the simulator is divided by the reflection factor
+the paint color applied on the object with the [Pen](pen.md) device. Then, the
+distance value computed by the simulator is divided by the reflection factor
 before the lookup table is used to compute the output value.
 
 > **note**:
@@ -216,7 +215,7 @@ Some support for [DistanceSensor](#distancesensor) nodes used for reading the
 red color level of a textured floor is implemented. This is useful to simulate
 line following behaviors. This feature is demonstrated in the "rover.wbt"
 example (see in the "projects/robots/mindstorms/worlds" directory of Webots).
-The ground texture must be placed in a [Plane](plane.md#plane).
+The ground texture must be placed in a [Plane](plane.md).
 
 ### DistanceSensor Functions
 

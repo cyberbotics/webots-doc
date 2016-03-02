@@ -3,14 +3,14 @@
 A complete example of PROTO definition and instantiation is provided here. The
 PROTO is called `TwoColorChair`; it defines a simple chair with four legs and a
 seating part. For simplicity, this PROTO does not have bounding objects nor
-[Physics](physics.md#physics) nodes. A more complete example of this PROTO named
+[Physics](physics.md) nodes. A more complete example of this PROTO named
 `SimpleChair` is provided in Webots distribution.
 
 The `TwoColorChair` PROTO allows to specify two colors: one for the legs and one
 for the seating surface of the chair. The interface also defines a `translation`
 field and a `rotation` field that are associated with the equally named fields
-of the PROTO's [Solid](solid.md#solid) base node. This allows to store the
-position and orientation of the PROTO instances.
+of the PROTO's [Solid](solid.md) base node. This allows to store the position
+and orientation of the PROTO instances.
 
 "TwoColorChair.proto":
 

@@ -41,8 +41,7 @@ You can use several arguments with this script:
 
 In addition to these arguments, a configuration file can be used to define how
 to handle most of the OpenStreetMap entities. A typical configuration file can
-be seen in
-[appendix](a-typical-openstreetmap-importer-configuration-file.md#a-typical-openstreetmap-importer-configuration-file).
+be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
 
 ### Map edition and creation
 
@@ -68,7 +67,7 @@ a map fully created in JOSM and then exported and opened in Webots.
 
 To ease the use of this tool, a graphical interace has been created. This
 grapical interface can be easily started from the last tab of the [robot
-window](robot-window.md#robot-window).
+window](robot-window.md).
 
 %figure "The OpenStreetMap importer graphical user interface"
 

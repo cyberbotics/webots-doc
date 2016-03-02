@@ -1,11 +1,10 @@
 ## Car library
 
 The [car](#car-library) library is supposed to be used together with the
-[driver](driver-library.md#driver-library) library. It provides additional
-information and functions to which a normal human driver of a car does not have
-access (e.g., changing the blinking period of the indicator or getting the value
-of the wheels encoders). All the functions included in this library are
-explained below.
+[driver](driver-library.md) library. It provides additional information and
+functions to which a normal human driver of a car does not have access (e.g.,
+changing the blinking period of the indicator or getting the value of the wheels
+encoders). All the functions included in this library are explained below.
 
 <a name="wbu_car_init">**Name**</a>
 
@@ -23,9 +22,9 @@ void wbu_car_cleanup()
 These two functions are respectively used to initialize and properly close the
 [car](#car-library) library (the first one should be called at the very
 beginning of the controller program and the second one at the very end). If you
-use the [driver](driver-library.md#driver-library) library it is not needed to
-call these functions since they are already called from the corresponding
-functions of the [driver](driver-library.md#driver-library) library.
+use the [driver](driver-library.md) library it is not needed to call these
+functions since they are already called from the corresponding functions of the
+[driver](driver-library.md) library.
 
 ---
 

@@ -69,7 +69,10 @@ class Reference:
         if self.bookName + os.sep + self.filename == currentMDFile:
             fn = ''
         if len(self.anchor) > 0:
-            return '%s#%s' % (fn, self.anchor)
+            if fn.replace('.md', '') == self.anchor:
+                return fn
+            else:
+                return '%s#%s' % (fn, self.anchor)
         else:
             return self.filename
 

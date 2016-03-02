@@ -14,5 +14,5 @@ the car (e.g. speed, steering angles, wheels encoders, etc.). After those
 specific tabs about car, you can found the usual tabs about sensors/actuators
 added in the sensors slots of the car. Finally, the last tab allows to launch a
 small graphical interface for the [OpenStreetMap
-importer](openstreetmap-importer.md#openstreetmap-importer) tools.
+importer](openstreetmap-importer.md) tools.
 

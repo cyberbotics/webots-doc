@@ -1,6 +1,6 @@
 ## Display
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Display {
@@ -13,15 +13,15 @@ Display {
 
 The [Display](#display) node allows to handle a 2D pixel array using simple API
 functions, and render it into a 2D overlay on the 3D view, into a 2D texture of
-any [Shape](shape.md#shape) node, or both. It can model an embedded screen or it
-can display any graphical information such as graphs, text, robot trajectory,
+any [Shape](shape.md) node, or both. It can model an embedded screen or it can
+display any graphical information such as graphs, text, robot trajectory,
 filtered camera images and so on.
 
 If the first child of the [Display](#display) node is or contains (recursive
-search if the first node is a [Group](group.md#group)) a [Shape](shape.md#shape)
-node having a [ImageTexture](imagetexture.md#imagetexture), then the internal
-texture of the(se) [ImageTexture](imagetexture.md#imagetexture) node(s) is
-replaced by the texture of the [Display](#display).
+search if the first node is a [Group](group.md)) a [Shape](shape.md) node having
+a [ImageTexture](imagetexture.md), then the internal texture of the(se)
+[ImageTexture](imagetexture.md) node(s) is replaced by the texture of the
+[Display](#display).
 
 ### Field Summary
 

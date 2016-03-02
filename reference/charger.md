@@ -1,6 +1,6 @@
 ## Charger
 
-Derived from [Solid](solid.md#solid).
+Derived from [Solid](solid.md).
 
 ```
 Charger {
@@ -28,12 +28,12 @@ node is empty, its resulted color corresponds to its original one. Intermediate
 colors depend on the `gradual` field. Only the first child of the
 [Charger](#charger) node is affected by this alteration. The resulted color is
 applied only on the first child of the [Charger](#charger) node. If the first
-child is a [Shape](shape.md#shape) node, the `emissiveColor` field of its
-[Material](material.md#material) node is altered. If the first child is a
-[Light](light.md#light) node, its `color` field is altered. Otherwise, if the
-first child is a [Group](group.md#group) node, a recursive search is applied on
-this node and every [Light](light.md#light), [Shape](shape.md#shape) and
-[Group](group.md#group) nodes are altered according to the two previous rules.
+child is a [Shape](shape.md) node, the `emissiveColor` field of its
+[Material](material.md) node is altered. If the first child is a
+[Light](light.md) node, its `color` field is altered. Otherwise, if the first
+child is a [Group](group.md) node, a recursive search is applied on this node
+and every [Light](light.md), [Shape](shape.md) and [Group](group.md) nodes are
+altered according to the two previous rules.
 
 ### Field Summary
 

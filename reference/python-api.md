@@ -4,14 +4,14 @@ The following tables describe the Python classes and their methods.
 
 %api "python_accelerometer"
 
-|                                                                                                 |
-| ----------------------------------------------------------------------------------------------- |
-| from controller import Accelerometer                                                            |
-| class [Accelerometer](accelerometer.md#accelerometer) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; def [enable](accelerometer.md#wb_accelerometer_get_values)(self, ms)               |
-| &nbsp;&nbsp; def [disable](accelerometer.md#wb_accelerometer_get_values)(self)                  |
-| &nbsp;&nbsp; def [getSamplingPeriod](accelerometer.md#wb_accelerometer_get_values)(self)        |
-| &nbsp;&nbsp; def [getValues](accelerometer.md#wb_accelerometer_get_values)(self)                |
+|                                                                                          |
+| ---------------------------------------------------------------------------------------- |
+| from controller import Accelerometer                                                     |
+| class [Accelerometer](accelerometer.md) ([Device](#python_device)) :                     |
+| &nbsp;&nbsp; def [enable](accelerometer.md#wb_accelerometer_get_values)(self, ms)        |
+| &nbsp;&nbsp; def [disable](accelerometer.md#wb_accelerometer_get_values)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](accelerometer.md#wb_accelerometer_get_values)(self) |
+| &nbsp;&nbsp; def [getValues](accelerometer.md#wb_accelerometer_get_values)(self)         |
 
 %end
 
@@ -20,7 +20,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                      |
 | ---------------------------------------------------------------------------------------------------- |
 | from controller import Brake                                                                         |
-| class [Brake](brake.md#brake) ([Device](#python_device)) :                                           |
+| class [Brake](brake.md) ([Device](#python_device)) :                                                 |
 | &nbsp;&nbsp; def [setDampingConstant](brake.md#wb_brake_set_damping_constant)(self, dampingConstant) |
 | &nbsp;&nbsp; def [getType](brake.md#wb_brake_set_damping_constant)(self)                             |
 
@@ -31,7 +31,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                |
 | ---------------------------------------------------------------------------------------------- |
 | from controller import Camera                                                                  |
-| class [Camera](camera.md#camera) ([Device](#python_device)) :                                  |
+| class [Camera](camera.md) ([Device](#python_device)) :                                         |
 | &nbsp;&nbsp; COLOR, RANGE\_FINDER, BOTH                                                        |
 | &nbsp;&nbsp; def [enable](camera.md#wb_camera_enable)(self, ms)                                |
 | &nbsp;&nbsp; def [disable](camera.md#wb_camera_enable)(self)                                   |
@@ -70,14 +70,14 @@ The following tables describe the Python classes and their methods.
 
 %api "python_compass"
 
-|                                                                               |
-| ----------------------------------------------------------------------------- |
-| from controller import Compass                                                |
-| class [Compass](compass.md#compass) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; def [enable](compass.md#wb_compass_get_values)(self, ms)         |
-| &nbsp;&nbsp; def [disable](compass.md#wb_compass_get_values)(self)            |
-| &nbsp;&nbsp; def [getSamplingPeriod](compass.md#wb_compass_get_values)(self)  |
-| &nbsp;&nbsp; def [getValues](compass.md#wb_compass_get_values)(self)          |
+|                                                                              |
+| ---------------------------------------------------------------------------- |
+| from controller import Compass                                               |
+| class [Compass](compass.md) ([Device](#python_device)) :                     |
+| &nbsp;&nbsp; def [enable](compass.md#wb_compass_get_values)(self, ms)        |
+| &nbsp;&nbsp; def [disable](compass.md#wb_compass_get_values)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](compass.md#wb_compass_get_values)(self) |
+| &nbsp;&nbsp; def [getValues](compass.md#wb_compass_get_values)(self)         |
 
 %end
 
@@ -86,7 +86,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                     |
 | ----------------------------------------------------------------------------------- |
 | from controller import Connector                                                    |
-| class [Connector](connector.md#connector) ([Device](#python_device)) :              |
+| class [Connector](connector.md) ([Device](#python_device)) :                        |
 | &nbsp;&nbsp; def [enablePresence](connector.md#wb_connector_get_presence)(self, ms) |
 | &nbsp;&nbsp; def [disablePresence](connector.md#wb_connector_get_presence)(self)    |
 | &nbsp;&nbsp; def [getPresence](connector.md#wb_connector_get_presence)(self)        |
@@ -99,7 +99,7 @@ The following tables describe the Python classes and their methods.
 
 |                                                                         |
 | ----------------------------------------------------------------------- |
-| from controller import [Device](device.md#device)                       |
+| from controller import [Device](device.md)                              |
 | class Device :                                                          |
 | &nbsp;&nbsp; def [getModel](device.md#wb_device_get_model)(self)        |
 | &nbsp;&nbsp; def [getName](device.md#wb_device_get_name)(self)          |
@@ -112,7 +112,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------- |
 | from controller import DifferentialWheels                                                                        |
-| class [DifferentialWheels](differentialwheels.md#differentialwheels) ([Robot](#python_robot)) :                  |
+| class [DifferentialWheels](differentialwheels.md) ([Robot](#python_robot)) :                                     |
 | &nbsp;&nbsp; def [\_\_init\_\_](robot.md#wb_robot_step)(self)                                                    |
 | &nbsp;&nbsp; def [\_\_del\_\_](robot.md#wb_robot_step)(self)                                                     |
 | &nbsp;&nbsp; def [setSpeed](differentialwheels.md#wb_differential_wheels_set_speed)(self, left, right)           |
@@ -134,7 +134,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                   |
 | ------------------------------------------------------------------------------------------------- |
 | from controller import Display                                                                    |
-| class [Display](display.md#display) ([Device](#python_device)) :                                  |
+| class [Display](display.md) ([Device](#python_device)) :                                          |
 | &nbsp;&nbsp; RGB, RGBA, ARGB, BGRA                                                                |
 | &nbsp;&nbsp; def [getWidth](display.md#wb_display_get_width)(self)                                |
 | &nbsp;&nbsp; def [getHeight](display.md#wb_display_get_width)(self)                               |
@@ -161,14 +161,14 @@ The following tables describe the Python classes and their methods.
 
 %api "python_distance_sensor"
 
-|                                                                                                    |
-| -------------------------------------------------------------------------------------------------- |
-| from controller import DistanceSensor                                                              |
-| class [DistanceSensor](distancesensor.md#distancesensor) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; def [enable](distancesensor.md#wb_distance_sensor_get_value)(self, ms)                |
-| &nbsp;&nbsp; def [disable](distancesensor.md#wb_distance_sensor_get_value)(self)                   |
-| &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)(self)         |
-| &nbsp;&nbsp; def [getValue](distancesensor.md#wb_distance_sensor_get_value)(self)                  |
+|                                                                                            |
+| ------------------------------------------------------------------------------------------ |
+| from controller import DistanceSensor                                                      |
+| class [DistanceSensor](distancesensor.md) ([Device](#python_device)) :                     |
+| &nbsp;&nbsp; def [enable](distancesensor.md#wb_distance_sensor_get_value)(self, ms)        |
+| &nbsp;&nbsp; def [disable](distancesensor.md#wb_distance_sensor_get_value)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)(self) |
+| &nbsp;&nbsp; def [getValue](distancesensor.md#wb_distance_sensor_get_value)(self)          |
 
 %end
 
@@ -177,7 +177,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                 |
 | ------------------------------------------------------------------------------- |
 | from controller import Emitter                                                  |
-| class [Emitter](emitter.md#emitter) ([Device](#python_device)) :                |
+| class [Emitter](emitter.md) ([Device](#python_device)) :                        |
 | &nbsp;&nbsp; CHANNEL\_BROADCAST                                                 |
 | &nbsp;&nbsp; def [send](emitter.md#wb_emitter_send)(self, data)                 |
 | &nbsp;&nbsp; def [getChannel](emitter.md#wb_emitter_set_channel)(self)          |
@@ -246,7 +246,7 @@ The following tables describe the Python classes and their methods.
 |                                                                      |
 | -------------------------------------------------------------------- |
 | from controller import GPS                                           |
-| class [GPS](gps.md#gps) ([Device](#python_device)) :                 |
+| class [GPS](gps.md) ([Device](#python_device)) :                     |
 | &nbsp;&nbsp; def [enable](gps.md#wb_gps_get_values)(self, ms)        |
 | &nbsp;&nbsp; def [disable](gps.md#wb_gps_get_values)(self)           |
 | &nbsp;&nbsp; def [getSamplingPeriod](gps.md#wb_gps_get_values)(self) |
@@ -259,7 +259,7 @@ The following tables describe the Python classes and their methods.
 |                                                                        |
 | ---------------------------------------------------------------------- |
 | from controller import Gyro                                            |
-| class [Gyro](gyro.md#gyro) ([Device](#python_device)) :                |
+| class [Gyro](gyro.md) ([Device](#python_device)) :                     |
 | &nbsp;&nbsp; def [enable](gyro.md#wb_gyro_get_values)(self, ms)        |
 | &nbsp;&nbsp; def [disable](gyro.md#wb_gyro_get_values)(self)           |
 | &nbsp;&nbsp; def [getSamplingPeriod](gyro.md#wb_gyro_get_values)(self) |
@@ -281,7 +281,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                 |
 | ----------------------------------------------------------------------------------------------- |
 | from controller import InertialUnit                                                             |
-| class [InertialUnit](inertialunit.md#inertialunit) ([Device](#python_device)) :                 |
+| class [InertialUnit](inertialunit.md) ([Device](#python_device)) :                              |
 | &nbsp;&nbsp; def [enable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(self, ms)        |
 | &nbsp;&nbsp; def [disable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(self)           |
 | &nbsp;&nbsp; def [getSamplingPeriod](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(self) |
@@ -291,25 +291,25 @@ The following tables describe the Python classes and their methods.
 
 %api "python_led"
 
-|                                                                   |
-| ----------------------------------------------------------------- |
-| from controller import LED                                        |
-| class [LED](led.md#led) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; def [set](led.md#wb_led_set)(self, state)            |
-| &nbsp;&nbsp; def [get](led.md#wb_led_set)(self)                   |
+|                                                               |
+| ------------------------------------------------------------- |
+| from controller import LED                                    |
+| class [LED](led.md) ([Device](#python_device)) :              |
+| &nbsp;&nbsp; def [set](led.md#wb_led_set)(self, state)        |
+| &nbsp;&nbsp; def [get](led.md#wb_led_set)(self)               |
 
 %end
 
 %api "python_light_sensor"
 
-|                                                                                           |
-| ----------------------------------------------------------------------------------------- |
-| from controller import LightSensor                                                        |
-| class [LightSensor](lightsensor.md#lightsensor) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; def [enable](lightsensor.md#wb_light_sensor_get_value)(self, ms)             |
-| &nbsp;&nbsp; def [disable](lightsensor.md#wb_light_sensor_get_value)(self)                |
-| &nbsp;&nbsp; def [getSamplingPeriod](lightsensor.md#wb_light_sensor_get_value)(self)      |
-| &nbsp;&nbsp; def [getValue](lightsensor.md#wb_light_sensor_get_value)(self)               |
+|                                                                                      |
+| ------------------------------------------------------------------------------------ |
+| from controller import LightSensor                                                   |
+| class [LightSensor](lightsensor.md) ([Device](#python_device)) :                     |
+| &nbsp;&nbsp; def [enable](lightsensor.md#wb_light_sensor_get_value)(self, ms)        |
+| &nbsp;&nbsp; def [disable](lightsensor.md#wb_light_sensor_get_value)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](lightsensor.md#wb_light_sensor_get_value)(self) |
+| &nbsp;&nbsp; def [getValue](lightsensor.md#wb_light_sensor_get_value)(self)          |
 
 %end
 
@@ -318,7 +318,7 @@ The following tables describe the Python classes and their methods.
 |                                                                           |
 | ------------------------------------------------------------------------- |
 | from controller import Motion                                             |
-| class [Motion](motion.md#motion) :                                        |
+| class [Motion](motion.md) :                                               |
 | &nbsp;&nbsp; def [\_\_init\_\_](motion.md#wbu_motion_new)(self, fileName) |
 | &nbsp;&nbsp; def [\_\_del\_\_](motion.md#wbu_motion_new)(self)            |
 | &nbsp;&nbsp; def [isValid](motion.md#wbu_motion_new)(self)                |
@@ -338,7 +338,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                   |
 | ------------------------------------------------------------------------------------------------- |
 | from controller import Motor                                                                      |
-| class [Motor](motor.md#motor) ([Device](#python_device)) :                                        |
+| class [Motor](motor.md) ([Device](#python_device)) :                                              |
 | &nbsp;&nbsp; ROTATIONAL, LINEAR                                                                   |
 | &nbsp;&nbsp; def [setPosition](motor.md#wb_motor_set_position)(self, position)                    |
 | &nbsp;&nbsp; def [setVelocity](motor.md#wb_motor_set_position)(self, vel)                         |
@@ -401,7 +401,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                   |
 | --------------------------------------------------------------------------------- |
 | from controller import Pen                                                        |
-| class [Pen](pen.md#pen) ([Device](#python_device)) :                              |
+| class [Pen](pen.md) ([Device](#python_device)) :                                  |
 | &nbsp;&nbsp; def [write](pen.md#wb_pen_write)(self, write)                        |
 | &nbsp;&nbsp; def [setInkColor](pen.md#wb_pen_set_ink_color)(self, color, density) |
 
@@ -409,16 +409,16 @@ The following tables describe the Python classes and their methods.
 
 %api "python_position_sensor"
 
-|                                                                                                    |
-| -------------------------------------------------------------------------------------------------- |
-| from controller import PositionSensor                                                              |
-| class [PositionSensor](positionsensor.md#positionsensor) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; ANGULAR, LINEAR                                                                       |
-| &nbsp;&nbsp; def [enable](positionsensor.md#wb_position_sensor_get_value)(self, ms)                |
-| &nbsp;&nbsp; def [disable](positionsensor.md#wb_position_sensor_get_value)(self)                   |
-| &nbsp;&nbsp; def [getSamplingPeriod](positionsensor.md#wb_position_sensor_get_value)(self)         |
-| &nbsp;&nbsp; def [getValue](positionsensor.md#wb_position_sensor_get_value)(self)                  |
-| &nbsp;&nbsp; def [getType](positionsensor.md#wb_position_sensor_get_value)(self)                   |
+|                                                                                            |
+| ------------------------------------------------------------------------------------------ |
+| from controller import PositionSensor                                                      |
+| class [PositionSensor](positionsensor.md) ([Device](#python_device)) :                     |
+| &nbsp;&nbsp; ANGULAR, LINEAR                                                               |
+| &nbsp;&nbsp; def [enable](positionsensor.md#wb_position_sensor_get_value)(self, ms)        |
+| &nbsp;&nbsp; def [disable](positionsensor.md#wb_position_sensor_get_value)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](positionsensor.md#wb_position_sensor_get_value)(self) |
+| &nbsp;&nbsp; def [getValue](positionsensor.md#wb_position_sensor_get_value)(self)          |
+| &nbsp;&nbsp; def [getType](positionsensor.md#wb_position_sensor_get_value)(self)           |
 
 %end
 
@@ -427,7 +427,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                           |
 | ----------------------------------------------------------------------------------------- |
 | from controller import Receiver                                                           |
-| class [Receiver](receiver.md#receiver) ([Device](#python_device)) :                       |
+| class [Receiver](receiver.md) ([Device](#python_device)) :                                |
 | &nbsp;&nbsp; CHANNEL\_BROADCAST                                                           |
 | &nbsp;&nbsp; def [enable](receiver.md#wb_receiver_enable)(self, ms)                       |
 | &nbsp;&nbsp; def [disable](receiver.md#wb_receiver_enable)(self)                          |
@@ -448,7 +448,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                  |
 | ------------------------------------------------------------------------------------------------ |
 | from controller import Robot                                                                     |
-| class [Robot](robot.md#robot) :                                                                  |
+| class [Robot](robot.md) :                                                                        |
 | &nbsp;&nbsp; MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                         |
 | &nbsp;&nbsp; MODE\_REMOTE\_CONTROL                                                               |
 | &nbsp;&nbsp; KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, KEYBOARD\_UP,                        |
@@ -510,7 +510,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------- |
 | from controller import Servo                                                                                |
-| class [Servo](servo.md#servo) ([Device](#python_device)) :                                                  |
+| class [Servo](servo.md) ([Device](#python_device)) :                                                        |
 | &nbsp;&nbsp; ROTATIONAL, LINEAR                                                                             |
 | &nbsp;&nbsp; def [setPosition](servo.md#wb_servo_set_position)(self, position)                              |
 | &nbsp;&nbsp; def [getTargetPosition](servo.md#wb_servo_set_position)(self)                                  |
@@ -538,7 +538,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | from controller import Supervisor                                                                                                                           |
-| class [Supervisor](supervisor.md#supervisor) ([Robot](#python_robot)) :                                                                                     |
+| class [Supervisor](supervisor.md) ([Robot](#python_robot)) :                                                                                                |
 | &nbsp;&nbsp; MOVIE\_READY, MOVIE\_RECORDING, MOVIE\_SAVING, MOVIE\_WRITE\_ERROR, MOVIE\_ENCODING\_ERROR, MOVIE\_SIMULATION\_ERROR                           |
 | &nbsp;&nbsp; def [\_\_init\_\_](robot.md#wb_robot_step)(self)                                                                                               |
 | &nbsp;&nbsp; def [\_\_del\_\_](robot.md#wb_robot_step)(self)                                                                                                |
@@ -564,17 +564,17 @@ The following tables describe the Python classes and their methods.
 
 %api "python_touch_sensor"
 
-|                                                                                           |
-| ----------------------------------------------------------------------------------------- |
-| from controller import TouchSensor                                                        |
-| class [TouchSensor](touchsensor.md#touchsensor) ([Device](#python_device)) :              |
-| &nbsp;&nbsp; BUMPER, FORCE, FORCE3D                                                       |
-| &nbsp;&nbsp; def [enable](touchsensor.md#wb_touch_sensor_get_values)(self, ms)            |
-| &nbsp;&nbsp; def [disable](touchsensor.md#wb_touch_sensor_get_values)(self)               |
-| &nbsp;&nbsp; def [getSamplingPeriod](touchsensor.md#wb_touch_sensor_get_values)(self)     |
-| &nbsp;&nbsp; def [getValue](touchsensor.md#wb_touch_sensor_get_values)(self)              |
-| &nbsp;&nbsp; def [getValues](touchsensor.md#wb_touch_sensor_get_values)(self)             |
-| &nbsp;&nbsp; def [getType](touchsensor.md#wb_touch_sensor_get_type)(self)                 |
+|                                                                                       |
+| ------------------------------------------------------------------------------------- |
+| from controller import TouchSensor                                                    |
+| class [TouchSensor](touchsensor.md) ([Device](#python_device)) :                      |
+| &nbsp;&nbsp; BUMPER, FORCE, FORCE3D                                                   |
+| &nbsp;&nbsp; def [enable](touchsensor.md#wb_touch_sensor_get_values)(self, ms)        |
+| &nbsp;&nbsp; def [disable](touchsensor.md#wb_touch_sensor_get_values)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](touchsensor.md#wb_touch_sensor_get_values)(self) |
+| &nbsp;&nbsp; def [getValue](touchsensor.md#wb_touch_sensor_get_values)(self)          |
+| &nbsp;&nbsp; def [getValues](touchsensor.md#wb_touch_sensor_get_values)(self)         |
+| &nbsp;&nbsp; def [getType](touchsensor.md#wb_touch_sensor_get_type)(self)             |
 
 %end
 

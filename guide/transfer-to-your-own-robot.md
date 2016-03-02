@@ -60,8 +60,8 @@ window plugin (see [this section](controller-plugin.md#robot-window-plugin)) to
 graphically display specific sensor values, motor commands or a stop button.
 
 Such a remote control system is designed to be implemented in C/C++ as explained
-in [this section](controller-plugin.md#controller-plugin); however, it can also
-be implemented other programming languages creating a wrapper.
+in [this section](controller-plugin.md); however, it can also be implemented
+other programming languages creating a wrapper.
 
 ### Cross-compilation
 

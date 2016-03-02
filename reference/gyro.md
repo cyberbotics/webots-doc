@@ -1,6 +1,6 @@
 ## Gyro
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Gyro {

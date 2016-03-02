@@ -1,6 +1,6 @@
 ## Accelerometer
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Accelerometer {
@@ -79,9 +79,9 @@ meters per second squared [m/s^2]. The first element corresponds to the x-axis,
 the second element to the y-axis, etc. An [Accelerometer](#accelerometer) at
 rest with earth's gravity will indicate 1 g (9.81 m/s^2) along the vertical
 axis. Note that the gravity can be specified in the `gravity` field in the
-[WorldInfo](worldinfo.md#worldinfo) node. To obtain the acceleration due to
-motion alone, this offset must be subtracted. The device's output will be zero
-during free fall when no offset is substracted.
+[WorldInfo](worldinfo.md) node. To obtain the acceleration due to motion alone,
+this offset must be subtracted. The device's output will be zero during free
+fall when no offset is substracted.
 
 > **note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the

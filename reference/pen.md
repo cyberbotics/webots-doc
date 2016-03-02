@@ -1,6 +1,6 @@
 ## Pen
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Pen {
@@ -15,19 +15,19 @@ Pen {
 ### Description
 
 The [Pen](#pen) node models a pen attached to a mobile robot, typically used to
-show the trajectory of the robot. The paint direction of the
-[Pen](solid.md#solid) device coincides with the *-y*-axis of the node. So, it
-can be adjusted by modifying the rotation and translation fields of the
-[Solid](solid.md#solid) node. By setting the `maxDistance` field is possible to
-define the range of the [Pen](#pen) and paint only on objects close to the
-device. For example with a small value of `maxDistance` you can simulate the
-real behaviour of a pen or pencil that writes only on physical contact. If
-`maxDistance` is set to 0 (default value), the range will be unlimited.
+show the trajectory of the robot. The paint direction of the [Pen](solid.md)
+device coincides with the *-y*-axis of the node. So, it can be adjusted by
+modifying the rotation and translation fields of the [Solid](solid.md) node. By
+setting the `maxDistance` field is possible to define the range of the
+[Pen](#pen) and paint only on objects close to the device. For example with a
+small value of `maxDistance` you can simulate the real behaviour of a pen or
+pencil that writes only on physical contact. If `maxDistance` is set to 0
+(default value), the range will be unlimited.
 
-In order to be paintable, an object should be made up of a
-[Solid](solid.md#solid) node containing a [Shape](shape.md#shape) with a valid
-`Geometry`. Even if a [ImageTexture](imagetexture.md#imagetexture) is already
-defined, the painture is applied over the texture without modifying it.
+In order to be paintable, an object should be made up of a [Solid](solid.md)
+node containing a [Shape](shape.md) with a valid `Geometry`. Even if a
+[ImageTexture](imagetexture.md) is already defined, the painture is applied over
+the texture without modifying it.
 
 The precision of the painting action mainly depends on the `subdivision` field
 of the `Geometry` node. A high `subdivision` value increases the number of
@@ -35,18 +35,18 @@ polygons used to represent the geometry and thus allows a more precise texture
 mapping, but it will also slow down the rendering of the scene. On the other
 hand, with a poor texture mapping, the painted area could be shown at a
 different position than the expected one. In case of
-[IndexedFaceSet](indexedfaceset.md#indexedfaceset), the precision can be
-improved by defining a texture mapping and setting the `texCoord` and
-`texCoordIndex` fields. In fact, if no texture mapping or an invalid one is
-given, the system will use a default general mapping.
+[IndexedFaceSet](indexedfaceset.md), the precision can be improved by defining a
+texture mapping and setting the `texCoord` and `texCoordIndex` fields. In fact,
+if no texture mapping or an invalid one is given, the system will use a default
+general mapping.
 
 An example of a textured floor used with a robot equipped with a pen is given in
 the "pen.wbt" example world (located in the "projects/samples/devices/worlds"
 directory of Webots).
 
 > **note**:
-The `inkEvaporation` field of the [WorldInfo](worldinfo.md#worldinfo) node
-controls how fast the ink evaporates (disappears).
+The `inkEvaporation` field of the [WorldInfo](worldinfo.md) node controls how
+fast the ink evaporates (disappears).
 
 <!-- -->
 

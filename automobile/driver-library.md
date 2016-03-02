@@ -46,7 +46,7 @@ according to the Ackermann geometry (left and right wheels are not steered with
 the exact same angle). The angle is set in radians, a positive angle steers
 right and a negative angle steers left. The formulas used in order to compute
 the right and left angles are the following (`trackFront` and `wheelbase` are
-the parameters of the [Car](car.md#car) PROTO):
+the parameters of the [Car](car.md) PROTO):
 
 ```
 angle_right = atan(1 / cot(steering_angle) - trackFront / (2 * wheelbase))
@@ -78,7 +78,7 @@ function (in kilometers per hour). When the control in cruising speed is
 activated, the speed is directly applied to the wheel without any engine model
 simulation, therefore any call to functions like `wbu_driver_get_rpm()` will
 raise an error. The acceleration of the car is computed using the `time0To100`
-field of the [Car](car.md#car) PROTO.
+field of the [Car](car.md) PROTO.
 
 The second function simply returns the target cruising speed (argument of the
 last call to the previous function).
@@ -144,10 +144,10 @@ double wbu_driver_get_brake()
 This function brakes the car by increasing the `dampingConstant` coefficient of
 the rotational joints of each of the four wheels. The argument should be between
 0.0 and 1.0, 0 means that no damping constant is added on the joints (no
-breaking), 1 means that the parameter `brakeCoefficient` of the
-[Car](car.md#car) PROTO is applied on the `dampingConstant` of each joint (the
-value will be linearly interpolated between 0 and `brakeCoefficient` for any
-arguments between 0 and 1).
+breaking), 1 means that the parameter `brakeCoefficient` of the [Car](car.md)
+PROTO is applied on the `dampingConstant` of each joint (the value will be
+linearly interpolated between 0 and `brakeCoefficient` for any arguments between
+0 and 1).
 
 The second function simply returns the state of the brake (argument of the last
 call to the previous function).
@@ -246,7 +246,7 @@ int wbu_driver_get_gear_number()
 The first function sets the engaged gear. An argument of `-1` is used in order
 to engage the reverse gear, an argument of `0` is used in order to disengaged
 the gearbox. Any other arguments than `0` and `-1` should be between 1 and the
-number of coefficients set in the `gearRatio` parameter of the [Car](car.md#car)
+number of coefficients set in the `gearRatio` parameter of the [Car](car.md)
 PROTO.
 
 The second function returns the currently engaged gear.
@@ -300,7 +300,7 @@ output_torque = c * rpm^2 + b * rpm + a
 ```
 
 > **note**:
-if the rpm is below the `engineMinRPM` parameter of the [Car](car.md#car) PROTO,
+if the rpm is below the `engineMinRPM` parameter of the [Car](car.md) PROTO,
 `engineMinRPM` is used instead of the real rpm, but if the rpm is above the
 `engineMaxRPM` parameter, then the output torque is 0.
 

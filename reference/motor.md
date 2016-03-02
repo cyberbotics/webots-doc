@@ -1,6 +1,6 @@
 ## Motor
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Motor {
@@ -18,14 +18,11 @@ A [Motor](#motor) node is an abstract node (not instantiated) whose derived
 classes can be used in a mechanical simulation to power a joint hence producing
 a motion along, or around, one of its axes.
 
-A [RotationalMotor](rotationalmotor.md#rotationalmotor) can power a
-[HingeJoint](hingejoint.md#hingejoint) (resp. a
-[Hinge2Joint](hinge2joint.md#hinge2joint)) when set inside the `device` (resp.
+A [RotationalMotor](rotationalmotor.md) can power a [HingeJoint](hingejoint.md)
+(resp. a [Hinge2Joint](hinge2joint.md)) when set inside the `device` (resp.
 `device` or `device2`) field of these nodes. It produces then a rotational
-motion around the choosen axis. Likewise, a
-[LinearMotor](linearmotor.md#linearmotor) can power a
-[SliderJoint](hingejoint.md#hingejoint), producing a sliding motion along its
-axis.
+motion around the choosen axis. Likewise, a [LinearMotor](linearmotor.md) can
+power a [SliderJoint](hingejoint.md), producing a sliding motion along its axis.
 
 ### Field Summary
 
@@ -76,9 +73,9 @@ section, see below.
 ### Units
 
 By *motor position*, we mean joint position as defined in
-[JointParameters](jointparameters.md#jointparameters). Rotational motors units
-are expressed in *radians* while linear motors units are expressed in *meters*.
-See [this table](#motor-units):
+[JointParameters](jointparameters.md). Rotational motors units are expressed in
+*radians* while linear motors units are expressed in *meters*. See [this
+table](#motor-units):
 
 %figure "Motor Units"
 
@@ -94,7 +91,7 @@ See [this table](#motor-units):
 
 The `minPosition` and `maxPosition` are defined with respect to joint's zero
 position (see description of the `position` field in
-[JointParameters](jointparameters.md#jointparameters)).
+[JointParameters](jointparameters.md)).
 
 %figure "Linear Motor"
 
@@ -156,9 +153,9 @@ the desired velocity as specified by the `maxVelocity` field (default) or set
 with `wb_motor_set_velocity()`, *a* is the acceleration required to reach *Vc*
 in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
 step, *t<sub>s</sub>* is the duration of the simulation time step as specified
-by the `basicTimeStep` field of the [WorldInfo](worldinfo.md#worldinfo) node
-(converted in seconds), and *A* is the acceleration of the motor as specified by
-the `acceleration` field (default) or set with `wb_motor_set_acceleration()`.
+by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in
+seconds), and *A* is the acceleration of the motor as specified by the
+`acceleration` field (default) or set with `wb_motor_set_acceleration()`.
 
 > **note**:
 *error_integral* and *previous_error* are both reset to *0* after every call of
@@ -218,26 +215,25 @@ control) algorithm is used.
 
 The `minPosition` and `maxPosition` fields define the *soft limits* of the
 motor. Motor zero position and joint zero position coincide (see description of
-the `position` field in [JointParameters](jointparameters.md#jointparameters)).
-Soft limits specify the *software* boundaries beyond which the PID-controller
-will not attempt to move. If the controller calls `wb_motor_set_position()` with
-a target position that exceeds the soft limits, the desired target position will
-be clipped in order to fit into the soft limit range. Valid limits values
-depends on the motor position, i.e. `minPosition` must always be less than or
-equal to the motor position and `maxPosition` must always be greater than or
-equal to the motor position. When both `minPosition` and `maxPosition` are zero
-(the default), the soft limits are deactivated. Note that the soft limits can be
+the `position` field in [JointParameters](jointparameters.md)). Soft limits
+specify the *software* boundaries beyond which the PID-controller will not
+attempt to move. If the controller calls `wb_motor_set_position()` with a target
+position that exceeds the soft limits, the desired target position will be
+clipped in order to fit into the soft limit range. Valid limits values depends
+on the motor position, i.e. `minPosition` must always be less than or equal to
+the motor position and `maxPosition` must always be greater than or equal to the
+motor position. When both `minPosition` and `maxPosition` are zero (the
+default), the soft limits are deactivated. Note that the soft limits can be
 overstepped when an external force which exceeds the motor force is applied to
 the motor. For example, it is possible that the weight of a robot exceeds the
 motor force that is required to hold it up.
 
 Finally, note that when both soft (`minPosition` and `maxPosition`) and hard
-limits (`minStop` and `maxStop`, see
-[JointParameters](jointparameters.md#jointparameters)) are activated, the range
-of the soft limits must be included in the range of the hard limits, such that
-`minStop <= minValue` and `maxStop>= maxValue`. Moreover a simulation
-instability can appear if `position` is exactly equal to one of the bounds
-defined by the `minStop` and `maxStop` fields at the simulation startup.
+limits (`minStop` and `maxStop`, see [JointParameters](jointparameters.md)) are
+activated, the range of the soft limits must be included in the range of the
+hard limits, such that `minStop <= minValue` and `maxStop>= maxValue`. Moreover
+a simulation instability can appear if `position` is exactly equal to one of the
+bounds defined by the `minStop` and `maxStop` fields at the simulation startup.
 Warnings are displayed if theses rules are not respected.
 
 ### Motor Functions
@@ -432,9 +428,9 @@ torque applied around the rotation axis is considered.
 
 Note that these functions applies only to *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of related
-[Solid](solid.md#solid) nodes must be defined for these functions to work
-properly. Moreover they don't work for [Motor](#motor) nodes used to power a
-[Track](track.md#track) node.
+[Solid](solid.md) nodes must be defined for these functions to work properly.
+Moreover they don't work for [Motor](#motor) nodes used to power a
+[Track](track.md) node.
 
 If `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`) was
 not previously enabled, the return value is undefined.

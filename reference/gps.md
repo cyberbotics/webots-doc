@@ -1,6 +1,6 @@
 ## GPS
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 GPS {

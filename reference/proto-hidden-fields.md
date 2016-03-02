@@ -6,12 +6,11 @@ accessible through PROTO fields, but which may change during simulation, from
 being saved and subsequently restored. Still, this is not true for all field
 values, since Webots save for you hidden PROTO fields which are bound to change
 over simulation time. Namely the `translation` and `rotation` fields of
-[Solid](solid.md#solid) nodes as well as the `position` fields of
-[Joint](joint.md#joint) nodes are saved as hidden PROTO fields in the field
-scope of every top-level PROTO. In case of [solid
-merging](physics.md#implicit-solid-merging-and-joints), note that hidden
-`translation` and `rotation` fields are saved only for the
-[Solid](solid.md#solid) placed at the top of the solid assembly.
+[Solid](solid.md) nodes as well as the `position` fields of [Joint](joint.md)
+nodes are saved as hidden PROTO fields in the field scope of every top-level
+PROTO. In case of [solid merging](physics.md#implicit-solid-merging-and-joints),
+note that hidden `translation` and `rotation` fields are saved only for the
+[Solid](solid.md) placed at the top of the solid assembly.
 
 As in the case of non-PROTO objects, initial velocities of physical subparts of
 a PROTO are saved and can be subsequently restored when reloading your world
@@ -19,14 +18,13 @@ file. Like the other hidden fields, velocities are saved in the field scope of
 every top-level PROTO.
 
 Each hidden field appends an index to its name which encodes the location of the
-[Solid](solid.md#solid) to which it belongs inside the tree hierarchy rooted at
-the the PROTO node. This index corresponds is the depth-first pre-order
-traversal index of the [Solid](solid.md#solid) in this tree. If a hidden field
-corresponds to the `position` of [Joint](joint.md#joint), an additional index is
-appended to its name, namely the index of the [Joint](joint.md#joint) in the
-list of [Joint](joint.md#joint) nodes originating from the
-[Solid](solid.md#solid) sorted by means of pre-order traversal. As an example,
-we display below an excerpt of
+[Solid](solid.md) to which it belongs inside the tree hierarchy rooted at the
+the PROTO node. This index corresponds is the depth-first pre-order traversal
+index of the [Solid](solid.md) in this tree. If a hidden field corresponds to
+the `position` of [Joint](joint.md), an additional index is appended to its
+name, namely the index of the [Joint](joint.md) in the list of [Joint](joint.md)
+nodes originating from the [Solid](solid.md) sorted by means of pre-order
+traversal. As an example, we display below an excerpt of
 "projects/robots/pioneer/pioneer3at/worlds/pioneer3at.wbt" when saved after one
 simulation step.
 
@@ -69,10 +67,9 @@ simulation step.
 The names of the first six hidden fields all contain 0 as primary index, which
 is the index of the `Pioneer3at` PROTO itself. The additional secondary indices
 for the four hidden `position` fields correspond to the four
-[HingeJoint](hingejoint.md#hingejoint) nodes used for the wheels and numbered by
-means of pre-order traversal. There is no hidden field associated the
-[Solid](solid.md#solid) node with index 1, namely the `SickLms291` PROTO, since
-its relative position and orientation are kept fixed during simulation. The
-indices ranging from 2 to 5 correspond to the four [Solid](solid.md#solid)
-wheels of the `Pioneer3at`.
+[HingeJoint](hingejoint.md) nodes used for the wheels and numbered by means of
+pre-order traversal. There is no hidden field associated the [Solid](solid.md)
+node with index 1, namely the `SickLms291` PROTO, since its relative position
+and orientation are kept fixed during simulation. The indices ranging from 2 to
+5 correspond to the four [Solid](solid.md) wheels of the `Pioneer3at`.
 

@@ -42,8 +42,8 @@ with 0.0 (the default) the object will appear completely opaque, and with 1.0 it
 will appear completely transparent. A transparent object doesn't cast or receive
 shadows. Webots performs dynamic alpha sorting according to the distance between
 the center of the objects (the local position of the parent
-[Transform](transform.md#transform)) and the viewpoint. Some occlusion issues
-can occur if two transparent objects intersect each other, or if the coordinate
-center of a transparent object is located outside the effectively rendered
-polygons, or if the sizes of nearby transparent objects differ significantly.
+[Transform](transform.md)) and the viewpoint. Some occlusion issues can occur if
+two transparent objects intersect each other, or if the coordinate center of a
+transparent object is located outside the effectively rendered polygons, or if
+the sizes of nearby transparent objects differ significantly.
 

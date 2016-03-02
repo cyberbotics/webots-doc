@@ -24,16 +24,16 @@ programs after a triangle mesh conversion.
 
 ### Field Summary
 
-The `coord` field contains a [Coordinate](coordinate.md#coordinate) node that
-defines the 3D vertices referenced by the `coordIndex` field.
+The `coord` field contains a [Coordinate](coordinate.md) node that defines the
+3D vertices referenced by the `coordIndex` field.
 [IndexedFaceSet](#indexedfaceset) uses the indices in its `coordIndex` field to
 specify the polygonal faces by indexing into the coordinates in the
-[Coordinate](coordinate.md#coordinate) node. An index of "-1" indicates that the
-current face has ended and the next one begins. The last face may be (but does
-not have to be) followed by a "-1" index. If the greatest index in the
-`coordIndex` field is N, the [Coordinate](coordinate.md#coordinate) node shall
-contain N+1 coordinates (indexed as 0 to N). Each face of the
-[IndexedFaceSet](#indexedfaceset) shall have:
+[Coordinate](coordinate.md) node. An index of "-1" indicates that the current
+face has ended and the next one begins. The last face may be (but does not have
+to be) followed by a "-1" index. If the greatest index in the `coordIndex` field
+is N, the [Coordinate](coordinate.md) node shall contain N+1 coordinates
+(indexed as 0 to N). Each face of the [IndexedFaceSet](#indexedfaceset) shall
+have:
 
 - at least three non-coincident vertices;
 - vertices that define a planar polygon;
@@ -46,19 +46,19 @@ When used for collision detection (boundingObject), each face of the
 defining a triangle mesh (or trimesh).
 
 If the `texCoord` field is not NULL, then it must contain a
-[TextureCoordinate](texturecoordinate.md#texturecoordinate) node. The texture
-coordinates in that node are applied to the vertices of the
-[IndexedFaceSet](#indexedfaceset) as follows:
+[TextureCoordinate](texturecoordinate.md) node. The texture coordinates in that
+node are applied to the vertices of the [IndexedFaceSet](#indexedfaceset) as
+follows:
 
 If the `texCoordIndex` field is not empty, then it is used to choose texture
 coordinates for each vertex of the [IndexedFaceSet](#indexedfaceset) in exactly
 the same manner that the `coordIndex` field is used to choose coordinates for
-each vertex from the [Coordinate](coordinate.md#coordinate) node. The
-`texCoordIndex` field must contain at least as many indices as the `coordIndex`
-field, and must contain end-of-face markers (-1) in exactly the same places as
-the `coordIndex` field. If the greatest index in the `texCoordIndex` field is N,
-then there must be N+1 texture coordinates in the
-[TextureCoordinate](texturecoordinate.md#texturecoordinate) node.
+each vertex from the [Coordinate](coordinate.md) node. The `texCoordIndex` field
+must contain at least as many indices as the `coordIndex` field, and must
+contain end-of-face markers (-1) in exactly the same places as the `coordIndex`
+field. If the greatest index in the `texCoordIndex` field is N, then there must
+be N+1 texture coordinates in the [TextureCoordinate](texturecoordinate.md)
+node.
 
 The `creaseAngle` field, affects how default normals are generated. For example,
 when an [IndexedFaceSet](#indexedfaceset) has to generate default normals, it

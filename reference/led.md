@@ -1,6 +1,6 @@
 ## LED
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 LED {
@@ -14,13 +14,13 @@ LED {
 The [LED](#led) node is used to model a light emitting diode (LED). The light
 produced by an LED can be used for debugging or informational purposes. The
 resulted color is applied only on the first child of the [LED](#led) node. If
-the first child is a [Shape](shape.md#shape) node, the `emissiveColor` field of
-its [Material](material.md#material) node is altered. If the first child is a
-[Light](light.md#light) node, its `color` field is altered. Otherwise, if the
-first child is a [Group](group.md#group) node, a recursive search is applied on
-this node in order to find which color field must be modified, so every
-[Light](light.md#light), [Shape](shape.md#shape) and [Group](group.md#group)
-node is altered according to the previous rules.
+the first child is a [Shape](shape.md) node, the `emissiveColor` field of its
+[Material](material.md) node is altered. If the first child is a
+[Light](light.md) node, its `color` field is altered. Otherwise, if the first
+child is a [Group](group.md) node, a recursive search is applied on this node in
+order to find which color field must be modified, so every [Light](light.md),
+[Shape](shape.md) and [Group](group.md) node is altered according to the
+previous rules.
 
 ### Field Summary
 

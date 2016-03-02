@@ -12,7 +12,7 @@ The `Driver` class provides the following methods:
 |                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Driver.hpp`>`                                                                             |
-| class [Driver](driver-library.md#driver-library) {                                                           |
+| class [Driver](driver-library.md) {                                                                          |
 | &nbsp;&nbsp; enum {INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEF};                                        |
 | &nbsp;&nbsp; enum {SPEED, TORQUE };                                                                          |
 | &nbsp;&nbsp; virtual int [step](driver-library.md#wbu_driver_step)();                                        |
@@ -50,7 +50,7 @@ methods:
 |                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Car.hpp`>`                                                                                            |
-| class [Car](car-library.md#car-library) : public [Driver](#cppdriver) {                                                  |
+| class [Car](car-library.md) : public [Driver](#cppdriver) {                                                              |
 | &nbsp;&nbsp; enum { TRACTION, PROPULSION=1, FOUR\_BY\_FOUR=2};                                                           |
 | &nbsp;&nbsp; enum { COMBUTSION\_ENGINE, ELECTRIC\_ENGINE, PARALLEL\_HYBRID\_ENGINE, POWER\_SPLIT\_HYBRID\_ENGINE };      |
 | &nbsp;&nbsp; enum { WHEEL\_FRONT\_RIGHT, WHEEL\_FRONT\_LEFT, WHEEL\_REAR\_RIGHT, WHEEL\_REAR\_LEFT, WHEEL\_NB };         |

@@ -270,7 +270,7 @@ simulation and therefore this is well suited for cpu-intensive simulations
 
 The `Build` menu provides the functionality to compile (or cross-compile)
 controller code. The build menu is described in more details
-[here](webots-built-in-editor.md#webots-built-in-editor).
+[here](webots-built-in-editor.md).
 
 ### Robot Menu
 
@@ -347,7 +347,7 @@ by your local license administrator. Please ask your local license administrator
 in case of problem.
 
 The `Preferences` item pops up a window described in [this
-section](preferences.md#preferences).
+section](preferences.md).
 
 ### Wizards Menu
 

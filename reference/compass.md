@@ -1,6 +1,6 @@
 ## Compass
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Compass {
@@ -17,7 +17,7 @@ Compass {
 A [Compass](#compass) node can be used to model a 1, 2 or 3-axis digital compass
 (magnetic sensor). The [Compass](#compass) node returns a vector that indicates
 the direction of the *virtual north*. The *virtual north* is specified by the
-`northDirection` field in the [WorldInfo](worldinfo.md#worldinfo) node.
+`northDirection` field in the [WorldInfo](worldinfo.md) node.
 
 ### Field Summary
 

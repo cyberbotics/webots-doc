@@ -1,6 +1,6 @@
 ## BallJoint
 
-Derived from [Joint](joint.md#joint).
+Derived from [Joint](joint.md).
 
 ```
 BallJoint {
@@ -15,9 +15,7 @@ rotation around its anchor (3 degrees of freedom). It supports spring and
 damping parameters which can be used to simulate the elastic deformation of
 ropes and flexible beams.
 
-It inherits [Joint](joint.md#joint)'s `jointParameters` field. This field can be
-filled with a [BallJointParameters](balljointparameters.md#balljointparameters)
-node only. If empty,
-[BallJointParameters](balljointparameters.md#balljointparameters) default values
-apply.
+It inherits [Joint](joint.md)'s `jointParameters` field. This field can be
+filled with a [BallJointParameters](balljointparameters.md) node only. If empty,
+[BallJointParameters](balljointparameters.md) default values apply.
 

@@ -10,8 +10,7 @@ classes having about 200 public functions located in the module called
 (such as Robot, LED, etc.) or either utility classes (such as Motion, ImageRef,
 etc.). A complete description of these functions can be found in the reference
 guide while the instructions about the common way to program a Python controller
-can be found in [this
-chapter](programming-fundamentals.md#programming-fundamentals).
+can be found in [this chapter](programming-fundamentals.md).
 
 ### Python Installation
 

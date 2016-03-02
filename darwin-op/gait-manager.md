@@ -8,8 +8,7 @@ But in order to make this manager easy to use, only a subset of the parameters
 can be set. The other parameters are set to default values that are known to
 works fine. It is however possible to change them if needed, by changing the
 default values that are stored in a "*.ini" configuration file. In the
-[appendix](walking-parameters.md#walking-parameters), all the parameters of the
-gait are explained.
+[appendix](walking-parameters.md), all the parameters of the gait are explained.
 
 **Name**
 

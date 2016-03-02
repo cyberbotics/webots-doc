@@ -1,6 +1,6 @@
 ## HingeJointParameters
 
-Derived from [JointParameters](jointparameters.md#jointparameters).
+Derived from [JointParameters](jointparameters.md).
 
 ```
 HingeJointParameters {
@@ -23,10 +23,9 @@ stop angles, spring and damping constants etc.) related to this rotation axis.
 
 - `anchor`: This field specifies the anchor position, i.e. a point through which
 the hinge axis passes. Together with the `axis` field inherited from the
-[JointParameters](jointparameters.md#jointparameters) node, the `anchor` field
-determines the hinge rotation axis in a unique way. It is expressed in relative
-coordinates with respect to the the closest upper [Solid](solid.md#solid)'s
-frame.
+[JointParameters](jointparameters.md) node, the `anchor` field determines the
+hinge rotation axis in a unique way. It is expressed in relative coordinates
+with respect to the the closest upper [Solid](solid.md)'s frame.
 - `suspensionSpringConstant`: This field specifies the suspension spring constant
 along the suspension axis.
 - `suspensionDampingConstant`: This field specifies the suspension damping
@@ -36,6 +35,5 @@ constant along the suspension axis.
 The `suspensionSpringConstant` and `suspensionDampingConstant` fields can be
 used to add a linear spring and/or damping behavior *along* the axis defined in
 `suspensionAxis`. These fields are described in more detail in
-[JointParameters](jointparameters.md#jointparameters)'s Springs and Dampers"
-section.
+[JointParameters](jointparameters.md)'s Springs and Dampers" section.
 

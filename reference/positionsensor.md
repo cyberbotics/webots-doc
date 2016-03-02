@@ -1,6 +1,6 @@
 ## PositionSensor
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 PositionSensor {
@@ -12,11 +12,10 @@ PositionSensor {
 
 A [PositionSensor](#positionsensor) node can be used in a mechanical simulation
 to monitor a joint position. The position sensor can be inserted in the `device`
-field of a [HingeJoint](hingejoint.md#hingejoint), a
-[Hinge2Joint](hinge2joint.md#hinge2joint), a
-[SliderJoint](sliderjoint.md#sliderjoint), or a [Track](track.md#track).
-Depending on the [Joint](joint.md#joint) type, it will measure the angular
-position in radians or the linear position in meters.
+field of a [HingeJoint](hingejoint.md), a [Hinge2Joint](hinge2joint.md), a
+[SliderJoint](sliderjoint.md), or a [Track](track.md). Depending on the
+[Joint](joint.md) type, it will measure the angular position in radians or the
+linear position in meters.
 
 ### Field Summary
 
@@ -60,8 +59,7 @@ radians (angular position sensor) or in meters (linear position sensor).
 
 `wb_position_sensor_get_type()` returns the type of the position sensor. It will
 return `WB_ANGULAR` if the sensor is associated with a
-[HingeJoint](hingejoint.md#hingejoint) or a
-[Hinge2Joint](hinge2joint.md#hinge2joint) node, and `WB_LINEAR` if it is
-associated with a [SliderJoint](sliderjoint.md#sliderjoint) or a
-[Track](track.md#track) node.
+[HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and
+`WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a
+[Track](track.md) node.
 

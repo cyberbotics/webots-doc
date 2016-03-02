@@ -1,6 +1,6 @@
 ## Receiver
 
-Derived from [Device](device.md#device).
+Derived from [Device](device.md).
 
 ```
 Receiver {
@@ -21,8 +21,7 @@ The [Receiver](#receiver) node is used to model radio, serial or infra-red
 receivers. A [Receiver](#receiver) node must be added to the children of a robot
 or supervisor. Please note that a [Receiver](#receiver) can receive data but it
 cannot send it. In order to achieve bidirectional communication, a robot needs
-to have both an [Emitter](emitter.md#emitter) and a [Receiver](#receiver) on
-board.
+to have both an [Emitter](emitter.md) and a [Receiver](#receiver) on board.
 
 ### Field Summary
 
@@ -40,9 +39,9 @@ within its reception cone. The cone's apex is located at the origin ([0 0 0]) of
 the receiver's coordinate system and the cone's axis coincides with the *z*-axis
 of the receiver coordinate system (see [this
 figure](emitter.md#illustration-of-aperture-and-range-for-infra-red-emitter-receiver)
-in [this section](emitter.md#emitter)). An `aperture` of -1 (the default) is
-considered to be infinite, meaning that a signal can be received from any
-direction. For "radio" receivers, the `aperture` field is ignored.
+in [this section](emitter.md)). An `aperture` of -1 (the default) is considered
+to be infinite, meaning that a signal can be received from any direction. For
+"radio" receivers, the `aperture` field is ignored.
 - `channel`: reception channel. The value is an identification number for an
 "infra-red" receiver or a frequency for a "radio" receiver. Normally, both
 emitter and receiver must use the same channel in order to be able to
@@ -157,11 +156,11 @@ Webots' Emitter/Receiver API guarantees that:
 However, the Emitter/Receiver API does not guarantee a specific schedule for the
 transmission. Sometimes several packets may be bundled and received together.
 For example, imagine a simple setup where two robots have an
-[Emitter](emitter.md#emitter) and a [Receiver](#receiver) on board. If both
-robots use the same controller time step and each one sends a packet at every
-time step, then the Receivers will receive, on average, one data packet at each
-step, but they may sometimes get zero packets, and sometimes two! Therefore it
-is recommend to write code that is tolerant to variations in the transmission
+[Emitter](emitter.md) and a [Receiver](#receiver) on board. If both robots use
+the same controller time step and each one sends a packet at every time step,
+then the Receivers will receive, on average, one data packet at each step, but
+they may sometimes get zero packets, and sometimes two! Therefore it is
+recommend to write code that is tolerant to variations in the transmission
 timing and that can deal with the eventuality of receiving several or no packets
 at all during a particular time step. The `wb_receiver_get_queue_length()`
 function should be used to check how many packets are actually present in the
@@ -202,9 +201,9 @@ It is illegal to call `wb_receiver_get_data_size()` when the queue is empty
 
 > **note** [Python]:
 The `getData()` function returns a string. Similarly to the `sendPacket()`
-function of the [Emitter](emitter.md#emitter) device, using the functions of the
-struct module is recommended for sending primitive data types. Here is an
-example for getting the data:
+function of the [Emitter](emitter.md) device, using the functions of the struct
+module is recommended for sending primitive data types. Here is an example for
+getting the data:
 
 >     import struct
 >     #...

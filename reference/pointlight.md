@@ -1,6 +1,6 @@
 ## PointLight
 
-Derived from [Light](light.md#light).
+Derived from [Light](light.md).
 
 ```
 PointLight {
@@ -22,12 +22,11 @@ specified by three `attenuation` coefficients. The final attenuation factor is
 calculated as follows: *att = 1/(attenuation[0] + attenuation[1] * r +
 attenuation[2] * r^2)*, where *r* is the distance from the light to the surface
 being illuminated. The default is no attenuation. When [PointLight](#pointlight)
-nodes are used together with [LightSensor](lightsensor.md#lightsensor), it is
-recommended to change the default attenuation to a more realistic [*0 0 4*π*]
-in order to more accurately model physical reality. Indeed, if a point source
-radiates light uniformly in all directions and there is no absorption, then the
-irradiance drops off in proportion to the square of the distance from the
-surface.
+nodes are used together with [LightSensor](lightsensor.md), it is recommended to
+change the default attenuation to a more realistic [*0 0 4*π*] in order to more
+accurately model physical reality. Indeed, if a point source radiates light
+uniformly in all directions and there is no absorption, then the irradiance
+drops off in proportion to the square of the distance from the surface.
 
 Contrary to the VRML specifications, the `attenuation` and the
 `ambientIntensity` fields cannot be set simultaneously.

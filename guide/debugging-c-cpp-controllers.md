@@ -7,7 +7,7 @@ controller are executed in distinct operating system processes. For example,
 when the "soccer.wbt" world is executed, there is a total of eight processes in
 memory; one for Webots, six for the six player robots, and one for the
 supervisor. To debug a C/C++ controller with Visual C++, please see
-[here.](using-visual-cpp-with-webots.md#using-visual-cpp-with-webots)
+[here.](using-visual-cpp-with-webots.md)
 
 When a controller process performs an illegal instruction, it is terminated by
 the operating system while the Webots process and the other controller processes

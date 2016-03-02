@@ -51,8 +51,7 @@ folder, you can freely use them this way:
 mSpeaker->playFile("/darwin/Data/mp3/Introduction.mp3"); // this file is already on the robot, no need to send it.
 ```
 
-The [appendix](audio-files.md#audio-files) references all the audio files
-available.
+The [appendix](audio-files.md) references all the audio files available.
 
 You can also use this two text to speech functions of `Speaker` class:
 
@@ -73,7 +72,6 @@ speakFile(const char* filename, const char* voice, int speed)
 
 In the first one you need to specify the path as an argument to the file
 containing the text and in the second one you can directly specify the text. You
-can also specify the voice you want to use
-([appendix](available-voices.md#available-voices) lists all the voices) and the
-speed in words per minute.
+can also specify the voice you want to use ([appendix](available-voices.md)
+lists all the voices) and the speed in words per minute.
 

@@ -2,8 +2,7 @@
 
 This manager implement the `DARwInOPMotionManager` class and allows you to play
 a predefined motion stored in the "motion\_4096.bin" file. The main motions and
-their corresponding ids are listed in
-[appendix](motions-files.md#motions-files).
+their corresponding ids are listed in [appendix](motions-files.md).
 
 It is also possible to add custom motions to this file by using the `Action
 Editor` tool.

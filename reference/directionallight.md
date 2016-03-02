@@ -1,6 +1,6 @@
 ## DirectionalLight
 
-Derived from [Light](light.md#light).
+Derived from [Light](light.md).
 
 ```
 DirectionalLight {
@@ -12,7 +12,7 @@ DirectionalLight {
 
 The [DirectionalLight](#directionallight) node defines a directional light
 source that illuminates along rays parallel to a given 3-dimensional vector.
-Unlike [PointLight](pointlight.md#pointlight), rays cast by
+Unlike [PointLight](pointlight.md), rays cast by
 [DirectionalLight](#directionallight) nodes do not attenuate with distance.
 
 ### Field Summary
@@ -21,5 +21,5 @@ Unlike [PointLight](pointlight.md#pointlight), rays cast by
 emanating from the light source in the global coordinate system. Light is
 emitted along parallel rays from an infinite distance away. The `direction`
 field is taken into account when computing the quantity of light received by a
-[LightSensor](lightsensor.md#lightsensor).
+[LightSensor](lightsensor.md).
 

@@ -1,6 +1,6 @@
 ## SpotLight
 
-Derived from [Light](light.md#light).
+Derived from [Light](light.md).
 
 ```
 SpotLight {

@@ -1,6 +1,6 @@
 ## Robot
 
-Derived from [Solid](solid.md#solid).
+Derived from [Solid](solid.md).
 
 ```
 Robot {
@@ -17,19 +17,17 @@ Robot {
 }
 ```
 
-Direct derived nodes:
-[DifferentialWheels](differentialwheels.md#differentialwheels),
-[Supervisor](supervisor.md#supervisor).
+Direct derived nodes: [DifferentialWheels](differentialwheels.md),
+[Supervisor](supervisor.md).
 
 ### Description
 
 The [Robot](#robot) node can be used as basis for building a robot, e.g., an
 articulated robot, a humanoid robot, a wheeled robot... If you want to build a
 two-wheels robot with differential-drive you should also consider the
-[DifferentialWheels](differentialwheels.md#differentialwheels) node. If you
-would like to build a robot with supervisor capabilities use the
-[Supervisor](supervisor.md#supervisor) node instead (Webots PRO license
-required).
+[DifferentialWheels](differentialwheels.md) node. If you would like to build a
+robot with supervisor capabilities use the [Supervisor](supervisor.md) node
+instead (Webots PRO license required).
 
 ### Field Summary
 
@@ -75,18 +73,18 @@ robot in Watts.
 - `selfCollision`: setting this field to TRUE will enable the detection of
 collisions within the robot and apply the corresponding contact forces, so that
 the robot limbs cannot cross each other (provided that they have a
-[Physics](physics.md#physics) node). This is useful for complex articulated
-robots for which the controller doesn't prevent inner collisions. Enabling self
-collision is, however, likely to decrease the simulation speed, as more
-collisions will be generated during the simulation. Note that only collisions
-between non-consecutive solids will be detected. For consecutive solids, e.g.,
-two solids attached to each other with a joint, no collision detection is
-performed, even if the self collision is enabled. The reason is that this type
-of collision detection is usually not wanted by the user, because a very
-accurate design of the bounding objects of the solids would be required. To
-prevent two consecutive solid nodes from penetrating each other, the `minStop`
-and `maxStop` fields of the corresponding joint node should be adjusted
-accordingly. Here is an example of a robot leg with self collision enabled:
+[Physics](physics.md) node). This is useful for complex articulated robots for
+which the controller doesn't prevent inner collisions. Enabling self collision
+is, however, likely to decrease the simulation speed, as more collisions will be
+generated during the simulation. Note that only collisions between
+non-consecutive solids will be detected. For consecutive solids, e.g., two
+solids attached to each other with a joint, no collision detection is performed,
+even if the self collision is enabled. The reason is that this type of collision
+detection is usually not wanted by the user, because a very accurate design of
+the bounding objects of the solids would be required. To prevent two consecutive
+solid nodes from penetrating each other, the `minStop` and `maxStop` fields of
+the corresponding joint node should be adjusted accordingly. Here is an example
+of a robot leg with self collision enabled:
 
         Thigh (solid)
           |
@@ -165,10 +163,10 @@ The asynchronous mode is currently used only for the robot competitions, because
 in this case it is necessary to limit the CPU time allocated to each
 participating controller. Note that it is also possible to combine synchronous
 and asynchronous controllers, e.g., for the robot competitions generally the
-[Supervisor](supervisor.md#supervisor) controller is synchronous while the
-contestants controllers are asynchronous. Asynchronous controllers may also be
-recommended for networked simulations involving several robots distributed over
-a computer network with an unpredictable delay (like the Internet).
+[Supervisor](supervisor.md) controller is synchronous while the contestants
+controllers are asynchronous. Asynchronous controllers may also be recommended
+for networked simulations involving several robots distributed over a computer
+network with an unpredictable delay (like the Internet).
 
 ### Robot Functions
 
@@ -305,11 +303,11 @@ WbDeviceTag wb_robot_get_device(const char *name)
 
 This function returns a unique identifier for a device corresponding to a
 specified `name`. For example, if a robot contains a
-[DistanceSensor](distancesensor.md#distancesensor) node whose `name` field is
-"ds1", the function will return the unique identifier of that device. This
-`WbDeviceTag` identifier will be used subsequently for enabling, sending
-commands to, or reading data from this device. If the specified device is not
-found, the function returns 0.
+[DistanceSensor](distancesensor.md) node whose `name` field is "ds1", the
+function will return the unique identifier of that device. This `WbDeviceTag`
+identifier will be used subsequently for enabling, sending commands to, or
+reading data from this device. If the specified device is not found, the
+function returns 0.
 
 **See also**
 
@@ -350,11 +348,11 @@ TouchSensor *Robot::getTouchSensor(const std::string &name)
 These functions return a reference to an object corresponding to a specified
 `name`. Depending on the called function, this object can be an instance of a
 `Device` subclass. For example, if a robot contains a
-[DistanceSensor](distancesensor.md#distancesensor) node whose `name` field is
-"ds1", the function `getDistanceSensor` will return a reference to a
-[DistanceSensor](distancesensor.md#distancesensor) object. If the specified
-device is not found, the function returns `NULL` in C++, `null` in Java or the
-`none` in Python.
+[DistanceSensor](distancesensor.md) node whose `name` field is "ds1", the
+function `getDistanceSensor` will return a reference to a
+[DistanceSensor](distancesensor.md) object. If the specified device is not
+found, the function returns `NULL` in C++, `null` in Java or the `none` in
+Python.
 
 **See also**
 
@@ -459,7 +457,7 @@ double wb_robot_get_basic_time_step()
 **Description**
 
 This function returns the value of the `basicTimeStep` field of the
-[WorldInfo](worldinfo.md#worldinfo) node.
+[WorldInfo](worldinfo.md) node.
 
 ---
 

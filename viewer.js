@@ -107,7 +107,10 @@ function populateViewDiv(mdContent) {
     redirectUrls(div, this.setup.targetPath);
 
     var view = document.getElementById("view");
-    view.appendChild(div);
+
+    div = $(div);
+    div.hide();
+    div.appendTo(view).show(400);
 
     applyAnchor();
     applyAnchorIcons(view);

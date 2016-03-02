@@ -63,13 +63,13 @@ Chapter 3 of the `Reference Manual` together with the description of each node.
 
 %figure "Top view of the e-puck model. The green arrow indicates the front of the robot. The red lines represent the directions of the infrared distance sensors. The string labels corresponds to the distance sensor names."
 
-![Top view of the e-puck model. The green arrow indicates the front of the robot. The red lines represent the directions of the infrared distance sensors. The string labels corresponds to the distance sensor names.](images/tutorial_e-puck_top_view.png)
+![tutorial_e-puck_top_view.png](images/tutorial_e-puck_top_view.png)
 
 %end
 
 %figure "UML state machine of a simple feedback loop"
 
-![UML state machine of a simple feedback loop](images/tutorial_feedback_loop.png)
+![tutorial_feedback_loop.png](images/tutorial_feedback_loop.png)
 
 %end
 

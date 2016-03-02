@@ -32,7 +32,7 @@ lines used to represent the bottom of the cone.
 
 %figure "The Cone node"
 
-![The Cone node](images/cone.png)
+![cone.png](images/cone.png)
 
 %end
 

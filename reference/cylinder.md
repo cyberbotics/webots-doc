@@ -35,7 +35,7 @@ lines used to represent the bottom or the top of the cylinder.
 
 %figure "The Cylinder node"
 
-![The Cylinder node](images/cylinder.png)
+![cylinder.png](images/cylinder.png)
 
 %end
 

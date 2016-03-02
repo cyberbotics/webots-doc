@@ -57,13 +57,13 @@ also be enabled from the Field Editor.
 
 %figure "Axis-aligned handles to move solid objects"
 
-![Axis-aligned handles to move solid objects](images/manipulators.png)
+![manipulators.png](images/manipulators.png)
 
 %end
 
 %figure "Labels displaying relative translation and rotation when moving objects with handles"
 
-![Labels displaying relative translation and rotation when moving objects with handles](images/manipulators_label.png)
+![manipulators_label.png](images/manipulators_label.png)
 
 %end
 
@@ -126,13 +126,13 @@ possible to show or hide the overlay images from the `Camera Devices` and
 
 %figure "Camera and Display overlays"
 
-![Camera and Display overlays](images/overlay.png)
+![overlay.png](images/overlay.png)
 
 %end
 
 %figure "Camera overlay resizing"
 
-![Camera overlay resizing](images/overlay_resize.png)
+![overlay_resize.png](images/overlay_resize.png)
 
 %end
 
@@ -146,7 +146,7 @@ restore the 3D window overlay simply by closing the window.
 
 %figure "Camera and Display image window"
 
-![Camera and Display image window](images/rendering_device_window.png)
+![rendering_device_window.png](images/rendering_device_window.png)
 
 %end
 

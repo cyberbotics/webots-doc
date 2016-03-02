@@ -6,7 +6,7 @@ ODE functions are indicated.
 
 %figure "Physics Plugin Execution Scheme"
 
-![Physics Plugin Execution Scheme](images/physics_execution_scheme.png)
+![physics_execution_scheme.png](images/physics_execution_scheme.png)
 
 %end
 

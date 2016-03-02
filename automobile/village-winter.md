@@ -2,7 +2,8 @@
 
 %figure "The Village winter world"
 
-![The Village winter world](images/winter2.png)
+![winter1.png](images/winter1.png)
+![winter2.png](images/winter2.png)
 
 %end
 

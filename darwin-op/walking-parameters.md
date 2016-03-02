@@ -7,7 +7,7 @@ file (.ini) to tune the gait.
 
 %figure "Walking: x offset parameter"
 
-![Walking: x offset parameter](images/x_offset.png)
+![x_offset.png](images/x_offset.png)
 
 %end
 
@@ -15,7 +15,7 @@ file (.ini) to tune the gait.
 
 %figure "Walking: y offset parameter"
 
-![Walking: y offset parameter](images/y_offset.png)
+![y_offset.png](images/y_offset.png)
 
 %end
 
@@ -23,7 +23,7 @@ file (.ini) to tune the gait.
 
 %figure "Walking: z offset parameter"
 
-![Walking: z offset parameter](images/z_offset.png)
+![z_offset.png](images/z_offset.png)
 
 %end
 
@@ -31,7 +31,7 @@ file (.ini) to tune the gait.
 
 %figure "Walking: roll offset parameter"
 
-![Walking: roll offset parameter](images/roll_offset.png)
+![roll_offset.png](images/roll_offset.png)
 
 %end
 
@@ -39,7 +39,7 @@ file (.ini) to tune the gait.
 
 %figure "Walking: pitch offset parameter"
 
-![Walking: pitch offset parameter](images/pitch_offset.png)
+![pitch_offset.png](images/pitch_offset.png)
 
 %end
 
@@ -47,7 +47,7 @@ file (.ini) to tune the gait.
 
 %figure "Walking: yaw offset parameter"
 
-![Walking: yaw offset parameter](images/yaw_offset.png)
+![yaw_offset.png](images/yaw_offset.png)
 
 %end
 
@@ -56,7 +56,7 @@ the motor correspondig to 2.85 degree.
 
 %figure "Walking: hip pitch offset parameter"
 
-![Walking: hip pitch offset parameter](images/hip_pitch_offset.png)
+![hip_pitch_offset.png](images/hip_pitch_offset.png)
 
 %end
 
@@ -65,7 +65,7 @@ the motor correspondig to 2.85 degree.
 
 %figure "Walking: period time parameter"
 
-![Walking: period time parameter](images/period_time.png)
+![period_time.png](images/period_time.png)
 
 %end
 
@@ -74,7 +74,7 @@ only one foot (either left or right) is on the ground.
 
 %figure "Walking: dsp ratio parameter"
 
-![Walking: dsp ratio parameter](images/dsp_ratio.png)
+![dsp_ratio.png](images/dsp_ratio.png)
 
 %end
 
@@ -83,7 +83,7 @@ between DARwIn-OP's left and right foot during walk. Unit is in millimeter.
 
 %figure "Walking: step forward back ratio parameter"
 
-![Walking: step forward back ratio parameter](images/step_forward_back_ratio.png)
+![step_forward_back_ratio.png](images/step_forward_back_ratio.png)
 
 %end
 
@@ -92,7 +92,7 @@ millimeter.
 
 %figure "Walking: foot height parameter"
 
-![Walking: foot height parameter](images/foot_height.png)
+![foot_height.png](images/foot_height.png)
 
 %end
 
@@ -101,7 +101,7 @@ walking. Unit is in millimeter.
 
 %figure "Walking: swing right left parameter"
 
-![Walking: swing right left parameter](images/swing_right_left.png)
+![swing_right_left.png](images/swing_right_left.png)
 
 %end
 
@@ -110,7 +110,7 @@ Unit is in millimeter.
 
 %figure "Walking: swing top down parameter"
 
-![Walking: swing top down parameter](images/swing_top_down.png)
+![swing_top_down.png](images/swing_top_down.png)
 
 %end
 
@@ -119,7 +119,7 @@ unit of the motor correspondig to 2.85 degree.
 
 %figure "Walking: pelvis offset parameter"
 
-![Walking: pelvis offset parameter](images/pelvis_offset.png)
+![pelvis_offset.png](images/pelvis_offset.png)
 
 %end
 

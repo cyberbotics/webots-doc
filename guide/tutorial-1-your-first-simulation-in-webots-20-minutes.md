@@ -9,7 +9,7 @@ and with the basic concepts of Webots.
 
 %figure "What you should see at the end of the tutorial."
 
-![What you should see at the end of the tutorial.](images/tutorial_e-puck.png)
+![tutorial_e-puck.png](images/tutorial_e-puck.png)
 
 %end
 

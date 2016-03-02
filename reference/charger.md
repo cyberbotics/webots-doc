@@ -49,7 +49,7 @@ figure](#the-sensitive-area-of-a-charger)).
 
 %figure "The sensitive area of a charger"
 
-![The sensitive area of a charger](images/charger.png)
+![charger.png](images/charger.png)
 
 %end
 

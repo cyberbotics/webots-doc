@@ -10,7 +10,7 @@ value of the servo by using the slider beside the graph.
 
 %figure "Servo tab of the robot-window"
 
-![Servo tab of the robot-window](images/window_servos.png)
+![window_servos.png](images/window_servos.png)
 
 %end
 

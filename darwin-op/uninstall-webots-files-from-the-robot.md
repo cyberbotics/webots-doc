@@ -5,7 +5,7 @@ all the files installed on the DARwIn-OP by Webots by pressing this button:
 
 %figure "Uninstall button"
 
-![Uninstall button](images/uninstall.png)
+![uninstall.png](images/uninstall.png)
 
 %end
 

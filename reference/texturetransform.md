@@ -50,7 +50,7 @@ notation, the corresponding `TextureTransform` reads as
 
 %figure "Texture transformation in matrix notation"
 
-![Texture transformation in matrix notation](images/texture_transform.png)
+![texture_transform.png](images/texture_transform.png)
 
 %end
 

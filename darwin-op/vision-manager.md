@@ -32,7 +32,8 @@ HSV colorspace.
 
 %figure "SV colorspace"
 
-![SV colorspace](images/HV.png)
+![HSV.png](images/HSV.png)
+![HV.png](images/HV.png)
 
 %end
 

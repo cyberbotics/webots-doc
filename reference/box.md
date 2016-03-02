@@ -18,7 +18,7 @@ display the outside faces while three negative values display the inside faces.
 
 %figure "Box node"
 
-![Box node](images/box.png)
+![box.png](images/box.png)
 
 %end
 

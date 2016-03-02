@@ -12,7 +12,7 @@ will show up on the real robot screen (if any connected).
 
 %figure "Small window used to capture the keyboard inputs in cross-compilation"
 
-![Small window used to capture the keyboard inputs in cross-compilation](images/keyboardWindow.png)
+![keyboardWindow.png](images/keyboardWindow.png)
 
 %end
 

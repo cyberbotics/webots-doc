@@ -195,21 +195,13 @@ class BookParser:
             ]
         elif bookName == 'automobile':
             filesToRemove = [
-                'png/caution_sign.png',
                 'png/code.png',
                 'png/highway.png',
-                'png/note.png',
-                'png/order_sign.png',
-                'png/osm_input.png',
-                'png/speed_sign.png',
-                'png/tree1.png',
-                'png/tree2.png',
-                'png/winter1.png'
+                'png/note.png'
             ]
         elif bookName == 'darwin-op':
             filesToRemove = [
               'png/code.png',
-              'png/HSV.png',
               'png/note.png'
             ]
         for filename in filesToRemove:
@@ -534,23 +526,29 @@ class BookParser:
             raise Exception('figure title not found')
         if title.endswith('.wbt'):
             title = title[:-4]
+        images = []
         fileref = ''
         for child in node.getchildren():
             if child.tag == 'title':
                 pass
             elif child.tag  == 'graphic':
                 fileref = child.attrib.get('fileref')
+                if fileref is not None and len(fileref) > 0:
+                    fileref = fileref.replace('spot_light.pdf', 'spot_light_formula.pdf')
+                    if fileref.endswith('.pdf'):
+                        fileref += '.png'
+                    fileref = re.sub(r'^png/', 'images/', fileref)
+                    fileref = re.sub(r'^pdf/', 'images/', fileref)
+                    fileref = re.sub(r'\.pdf\.png$', '.png', fileref)
+                    images.append('![%s](%s)' % (os.path.basename(fileref), fileref))
             else:
                 raise Exception('Unsupported type: ' + child.tag)
-        if fileref is not None and len(fileref) > 0:
-            fileref = fileref.replace('spot_light.pdf', 'spot_light_formula.pdf')
-            if fileref.endswith('.pdf'):
-                fileref += '.png'
-            fileref = re.sub(r'^png/', 'images/', fileref)
-            fileref = re.sub(r'^pdf/', 'images/', fileref)
-            fileref = re.sub(r'\.pdf\.png$', '.png', fileref)
+        if len(images) > 0:
             title = title.replace('[m]', 'meters')
-            outFile.write('\n%%figure "%s"\n\n![%s](%s)\n\n%%end\n\n' % (title.replace('"', ''), title, fileref))
+            outFile.write('\n%%figure "%s"\n\n' % (title.replace('"', '')))
+            for image in images:
+                outFile.write(image + '\n')
+            outFile.write('\n%end\n\n')
 
     def parseList(self, node, outFile, ordered):
         items = node.findall('./listitem')

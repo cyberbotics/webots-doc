@@ -2,7 +2,7 @@
 
 %figure "The Village world"
 
-![The Village world](images/village.png)
+![village.png](images/village.png)
 
 %end
 

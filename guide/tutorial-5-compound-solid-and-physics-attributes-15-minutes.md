@@ -7,7 +7,7 @@ figure](#expected-result-at-the-end-of-the-tutorial-about-compound-solids).
 
 %figure "Expected result at the end of the tutorial about compound solids."
 
-![Expected result at the end of the tutorial about compound solids.](images/tutorial_dumbbell.png)
+![tutorial_dumbbell.png](images/tutorial_dumbbell.png)
 
 %end
 
@@ -41,7 +41,7 @@ extremities thanks to the `translation` field of their Transform nodes.
 
 %figure "Representation of the subnodes of a compound solid made of several transformed geometries."
 
-![Representation of the subnodes of a compound solid made of several transformed geometries.](images/tutorial_compound_solid.png)
+![tutorial_compound_solid.png](images/tutorial_compound_solid.png)
 
 %end
 

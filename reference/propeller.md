@@ -16,7 +16,7 @@ Propeller {
 
 %figure "Propeller shaft axis"
 
-![Propeller shaft axis](images/propeller.png)
+![propeller.png](images/propeller.png)
 
 %end
 

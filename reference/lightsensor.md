@@ -80,7 +80,7 @@ figure](#light-sensor-irradiance-formula):
 
 %figure "Light sensor irradiance formula"
 
-![Light sensor irradiance formula](images/light_intensity.png)
+![light_intensity.png](images/light_intensity.png)
 
 %end
 
@@ -93,7 +93,7 @@ value *att[i]* is the attenuation of light *i*, and is calculated as shown in
 
 %figure "Light attenuation"
 
-![Light attenuation](images/light_attenuation.png)
+![light_attenuation.png](images/light_attenuation.png)
 
 %end
 
@@ -106,7 +106,7 @@ the direct irradiance contributed by light *i*, and is calculated as shown in
 
 %figure "Direct irradiance"
 
-![Direct irradiance](images/direct_light.png)
+![direct_light.png](images/direct_light.png)
 
 %end
 
@@ -119,7 +119,7 @@ between *-L* and the `direction` vector of the
 
 %figure "SpotLight factor"
 
-![SpotLight factor](images/spot_light_formula.png)
+![spot_light_formula.png](images/spot_light_formula.png)
 
 %end
 
@@ -142,7 +142,7 @@ surface, no photons actually reach the surface.
 
 %figure "The irradiance (E) depends on the angle (phi) between the *N* and *L* vectors"
 
-![The irradiance (E) depends on the angle (phi) between the *N* and *L* vectors](images/light_sensor.png)
+![light_sensor.png](images/light_sensor.png)
 
 %end
 

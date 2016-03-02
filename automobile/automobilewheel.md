@@ -8,7 +8,7 @@ PROTO featuring the corresponding `automobileWheel` slots.
 
 %figure "An AutomobileWheel PROTO with the default field value"
 
-![An AutomobileWheel PROTO with the default field value](images/automobileWheel.png)
+![automobileWheel.png](images/automobileWheel.png)
 
 %end
 
@@ -64,7 +64,7 @@ Some sample instances of wheels are provided (see for example
 
 %figure "Example of modeling of a BMW X5 wheel using the AutomobileWheel PROTO"
 
-![Example of modeling of a BMW X5 wheel using the AutomobileWheel PROTO](images/BmwX5Wheel.png)
+![BmwX5Wheel.png](images/BmwX5Wheel.png)
 
 %end
 

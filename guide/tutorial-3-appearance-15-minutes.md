@@ -98,7 +98,7 @@ image representation to a 3D model.
 
 %figure "Simulation after having setup the Light and the Appearance nodes."
 
-![Simulation after having setup the Light and the Appearance nodes.](images/tutorial_appearance.png)
+![tutorial_appearance.png](images/tutorial_appearance.png)
 
 %end
 

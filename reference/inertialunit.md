@@ -61,7 +61,7 @@ axes are enabled (TRUE).
 
 %figure "Roll, pitch and yaw angles in Webots' Inertial Unit"
 
-![Roll, pitch and yaw angles in Webots' Inertial Unit](images/roll_pitch_yaw.png)
+![roll_pitch_yaw.png](images/roll_pitch_yaw.png)
 
 %end
 

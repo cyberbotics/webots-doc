@@ -113,7 +113,7 @@ figure](#rotational-servo).
 
 %figure "Rotational servo"
 
-![Rotational servo](images/rotational_servo.png)
+![rotational_servo.png](images/rotational_servo.png)
 
 %end
 
@@ -124,7 +124,7 @@ figure](#linear-servo).
 
 %figure "Linear servo"
 
-![Linear servo](images/linear_servo.png)
+![linear_servo.png](images/linear_servo.png)
 
 %end
 
@@ -156,7 +156,7 @@ third stage (3) is carried out by the physics simulator (ODE joint motors).
 
 %figure "Servo control"
 
-![Servo control](images/servo_control.png)
+![servo_control.png](images/servo_control.png)
 
 %end
 
@@ -299,7 +299,7 @@ velocity computed by the physics simulator.
 
 %figure "Mechanical Diagram of a Servo"
 
-![Mechanical Diagram of a Servo](images/servo_mechanics.png)
+![servo_mechanics.png](images/servo_mechanics.png)
 
 %end
 
@@ -364,7 +364,7 @@ parent [Servo](#servo) will have a motor force (maxForce > 0) and the child
 
 %figure "Example of serial connection of two Servo nodes"
 
-![Example of serial connection of two Servo nodes](images/servo_serial.png)
+![servo_serial.png](images/servo_serial.png)
 
 %end
 

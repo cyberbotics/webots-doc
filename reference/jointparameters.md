@@ -63,13 +63,13 @@ linear joint units ([SliderJoint](sliderjoint.md#sliderjoint)) are expressed in
 
 %figure "HingeJoint"
 
-![HingeJoint](images/hinge_joint.png)
+![hinge_joint.png](images/hinge_joint.png)
 
 %end
 
 %figure "SliderJoint"
 
-![SliderJoint](images/slider_joint.png)
+![slider_joint.png](images/slider_joint.png)
 
 %end
 
@@ -140,7 +140,7 @@ velocity computed by the physics simulator.
 
 %figure "Mechanical Diagram of a Slider Joint"
 
-![Mechanical Diagram of a Slider Joint](images/slider_joint_mechanics.png)
+![slider_joint_mechanics.png](images/slider_joint_mechanics.png)
 
 %end
 

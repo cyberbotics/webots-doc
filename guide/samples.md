@@ -14,7 +14,7 @@ demo, the world file and its corresponding controller have the same name.
 
 %figure "blimp_lis"
 
-![blimp_lis](images/blimp_lis.png)
+![blimp_lis.png](images/blimp_lis.png)
 
 %end
 
@@ -31,7 +31,7 @@ plugin* is used to add thrust and other forces to the simulation.
 
 %figure "gantry"
 
-![gantry](images/gantry.png)
+![gantry.png](images/gantry.png)
 
 %end
 
@@ -46,7 +46,7 @@ Towers problem.
 
 %figure "hexapod"
 
-![hexapod](images/hexapod.png)
+![hexapod.png](images/hexapod.png)
 
 %end
 
@@ -60,7 +60,7 @@ alternating tripod gait.
 
 %figure "humanoid"
 
-![humanoid](images/humanoid.png)
+![humanoid.png](images/humanoid.png)
 
 %end
 
@@ -72,7 +72,7 @@ In this example, a humanoid robot performs endless gymnastic movements.
 
 %figure "moon"
 
-![moon](images/moon.png)
+![moon.png](images/moon.png)
 
 %end
 
@@ -87,7 +87,7 @@ controller code.
 
 %figure "ghostdog"
 
-![ghostdog](images/ghostdog.png)
+![ghostdog.png](images/ghostdog.png)
 
 %end
 
@@ -105,7 +105,7 @@ could be used for controlling the knee joints.
 
 %figure "salamander"
 
-![salamander](images/salamander.png)
+![salamander.png](images/salamander.png)
 
 %end
 
@@ -122,7 +122,7 @@ principle.
 
 %figure "soccer"
 
-![soccer](images/soccer_world.png)
+![soccer_world.png](images/soccer_world.png)
 
 %end
 
@@ -137,7 +137,7 @@ current score and the remaining time in the 3D view. This example shows how a
 
 %figure "sojourner"
 
-![sojourner](images/sojourner.png)
+![sojourner.png](images/sojourner.png)
 
 %end
 
@@ -152,7 +152,7 @@ robot's motion.
 
 %figure "yamor"
 
-![yamor](images/yamor.png)
+![yamor.png](images/yamor.png)
 
 %end
 
@@ -169,7 +169,7 @@ module behaviour is chosen according to the name of the module.
 
 %figure "stewart_platform"
 
-![stewart_platform](images/stewart_platform.png)
+![stewart_platform.png](images/stewart_platform.png)
 
 %end
 

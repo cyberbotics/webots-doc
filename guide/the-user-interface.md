@@ -8,7 +8,7 @@ and controller outputs.
 
 %figure "Webots GUI"
 
-![Webots GUI](images/main_window.png)
+![main_window.png](images/main_window.png)
 
 %end
 
@@ -429,7 +429,7 @@ and `Fast` mode.
 
 %figure "Speedometer"
 
-![Speedometer](images/speedometer.png)
+![speedometer.png](images/speedometer.png)
 
 %end
 

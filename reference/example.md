@@ -136,7 +136,7 @@ definition or creating a new PROTO.
 
 %figure "Two instances of the TwoColorChair PROTO in Webots"
 
-![Two instances of the TwoColorChair PROTO in Webots](images/two_chairs_v7-2-0.png)
+![two_chairs_v7-2-0.png](images/two_chairs_v7-2-0.png)
 
 %end
 

@@ -8,7 +8,7 @@ highlighting for Webots supported language (C/C++, Java, Python and
 
 %figure "Webots Text Editor"
 
-![Webots Text Editor](images/text_editor.png)
+![text_editor.png](images/text_editor.png)
 
 %end
 

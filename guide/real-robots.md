@@ -11,7 +11,7 @@ and the corresponding controllers are located in the
 
 %figure "aibo_ers210_rough"
 
-![aibo_ers210_rough](images/aibo_ers210_rough.png)
+![aibo_ers210_rough.png](images/aibo_ers210_rough.png)
 
 %end
 
@@ -25,7 +25,7 @@ a `IndexedFaceSet`.
 
 %figure "aibo_ers7"
 
-![aibo_ers7](images/aibo_ers7.png)
+![aibo_ers7.png](images/aibo_ers7.png)
 
 %end
 
@@ -39,7 +39,7 @@ bone.
 
 %figure "alice"
 
-![alice](images/alice.png)
+![alice.png](images/alice.png)
 
 %end
 
@@ -53,7 +53,7 @@ many others, this example uses the `braitenberg` controller.
 
 %figure "boebot"
 
-![boebot](images/boebot.png)
+![boebot.png](images/boebot.png)
 
 %end
 
@@ -67,7 +67,7 @@ corresponding `LED` on.
 
 %figure "e-puck"
 
-![e-puck](images/e-puck.png)
+![e-puck.png](images/e-puck.png)
 
 %end
 
@@ -85,7 +85,7 @@ this controller is in the
 
 %figure "e-puck_line"
 
-![e-puck_line](images/e-puck_line.png)
+![e-puck_line.png](images/e-puck_line.png)
 
 %end
 
@@ -105,7 +105,7 @@ section](#e-puck_line_demo-wbt)). The source code for this controller is in the
 
 %figure "e-puck_line_demo"
 
-![e-puck_line_demo](images/e-puck_line_demo.png)
+![e-puck_line_demo.png](images/e-puck_line_demo.png)
 
 %end
 
@@ -121,7 +121,7 @@ assignment, the source code is not distributed.
 
 %figure "hemisson_cross_compilation"
 
-![hemisson_cross_compilation](images/hemisson_cross_compilation.png)
+![hemisson_cross_compilation.png](images/hemisson_cross_compilation.png)
 
 %end
 
@@ -137,7 +137,7 @@ this controller is in the "hemisson" directory.
 
 %figure "hoap2_sumo"
 
-![hoap2_sumo](images/hoap2_sumo.png)
+![hoap2_sumo.png](images/hoap2_sumo.png)
 
 %end
 
@@ -153,7 +153,7 @@ on the ground. The source code for this controller is in the "hoap2" directory.
 
 %figure "hoap2_walk"
 
-![hoap2_walk](images/hoap2_walk.png)
+![hoap2_walk.png](images/hoap2_walk.png)
 
 %end
 
@@ -169,7 +169,7 @@ this controller is in the "hoap2" directory.
 
 %figure "ipr_collaboration"
 
-![ipr_collaboration](images/ipr_collaboration.png)
+![ipr_collaboration.png](images/ipr_collaboration.png)
 
 %end
 
@@ -187,7 +187,7 @@ for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
 
 %figure "ipr_cube"
 
-![ipr_cube](images/ipr_cube.png)
+![ipr_cube.png](images/ipr_cube.png)
 
 %end
 
@@ -204,7 +204,7 @@ drives the movements of the robot. The source code of this client is in the
 
 %figure "ipr_factory"
 
-![ipr_factory](images/ipr_factory.png)
+![ipr_factory.png](images/ipr_factory.png)
 
 %end
 
@@ -222,7 +222,7 @@ the file "ipr\_serial/client/ipr\_factory.c".
 
 %figure "ipr_models"
 
-![ipr_models](images/ipr_models.png)
+![ipr_models.png](images/ipr_models.png)
 
 %end
 
@@ -238,7 +238,7 @@ All the IPR robots use the same controller, whose source code is in the
 
 %figure "khepera"
 
-![khepera](images/khepera.png)
+![khepera.png](images/khepera.png)
 
 %end
 
@@ -253,7 +253,7 @@ while avoiding the walls. Like many other examples, this one uses the
 
 %figure "khepera2"
 
-![khepera2](images/khepera2.png)
+![khepera2.png](images/khepera2.png)
 
 %end
 
@@ -268,7 +268,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 %figure "khepera3"
 
-![khepera3](images/khepera3.png)
+![khepera3.png](images/khepera3.png)
 
 %end
 
@@ -283,7 +283,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 %figure "khepera_kinematic"
 
-![khepera_kinematic](images/khepera_kinematic.png)
+![khepera_kinematic.png](images/khepera_kinematic.png)
 
 %end
 
@@ -299,7 +299,7 @@ use teh kinematic mode of Webots. Like many other examples, this one uses the
 
 %figure "khepera_gripper"
 
-![khepera_gripper](images/khepera_gripper.png)
+![khepera_gripper.png](images/khepera_gripper.png)
 
 %end
 
@@ -314,7 +314,7 @@ controller is in the "khepera\_gripper" directory.
 
 %figure "khepera_gripper_camera"
 
-![khepera_gripper_camera](images/khepera_gripper_camera.png)
+![khepera_gripper_camera.png](images/khepera_gripper_camera.png)
 
 %end
 
@@ -330,7 +330,7 @@ source code for this controller is in the "khepera\_gripper" directory.
 
 %figure "khepera_k213"
 
-![khepera_k213](images/khepera_k213.png)
+![khepera_k213.png](images/khepera_k213.png)
 
 %end
 
@@ -349,7 +349,7 @@ directory.
 
 %figure "khepera_pipe"
 
-![khepera_pipe](images/khepera_pipe.png)
+![khepera_pipe.png](images/khepera_pipe.png)
 
 %end
 
@@ -370,7 +370,7 @@ As this example is based on standard UNIX pipes, it does not work under Windows.
 
 %figure "khepera_tcpip"
 
-![khepera_tcpip](images/khepera_tcpip.png)
+![khepera_tcpip.png](images/khepera_tcpip.png)
 
 %end
 
@@ -389,7 +389,7 @@ directory.
 
 %figure "koala"
 
-![koala](images/koala.png)
+![koala.png](images/koala.png)
 
 %end
 
@@ -404,7 +404,7 @@ while avoiding the walls. Like many other examples, this one uses the
 
 %figure "magellan"
 
-![magellan](images/magellan.png)
+![magellan.png](images/magellan.png)
 
 %end
 
@@ -420,7 +420,7 @@ the "others/worlds" directory. Like many other examples, this one uses the
 
 %figure "pioneer2"
 
-![pioneer2](images/pioneer2.png)
+![pioneer2.png](images/pioneer2.png)
 
 %end
 
@@ -435,7 +435,7 @@ uses the `braitenberg` controller. The source code for this controller is in the
 
 %figure "rover"
 
-![rover](images/rover_world.png)
+![rover_world.png](images/rover_world.png)
 
 %end
 
@@ -454,7 +454,7 @@ directory.
 
 %figure "scout2"
 
-![scout2](images/scout2.png)
+![scout2.png](images/scout2.png)
 
 %end
 
@@ -471,7 +471,7 @@ directory.
 
 %figure "shrimp"
 
-![shrimp](images/shrimp.png)
+![shrimp.png](images/shrimp.png)
 
 %end
 
@@ -502,7 +502,7 @@ the ODE plugin is in the
 
 %figure "bioloid"
 
-![bioloid](images/bioloid.png)
+![bioloid.png](images/bioloid.png)
 
 %end
 

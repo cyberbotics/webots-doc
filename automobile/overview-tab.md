@@ -5,7 +5,7 @@ first tab gives a quick overview about the car state.
 
 %figure "The Overview tab of the car robot-window"
 
-![The Overview tab of the car robot-window](images/overview_tab.png)
+![overview_tab.png](images/overview_tab.png)
 
 %end
 

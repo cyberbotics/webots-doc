@@ -13,7 +13,7 @@ of the VRML97 nodes and Webots nodes.
 
 %figure "Scene Tree Window"
 
-![Scene Tree Window](images/scene_tree1.png)
+![scene_tree1.png](images/scene_tree1.png)
 
 %end
 
@@ -35,7 +35,7 @@ Additionally, when a node is selected, other actions are available as shown in
 
 %figure "Webots node editor"
 
-![Webots node editor](images/field_editor.png)
+![field_editor.png](images/field_editor.png)
 
 %end
 

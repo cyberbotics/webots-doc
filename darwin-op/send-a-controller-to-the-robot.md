@@ -4,7 +4,7 @@ To test your controller on the real robot press the following button:
 
 %figure "Send icon"
 
-![Send icon](images/send.png)
+![send.png](images/send.png)
 
 %end
 
@@ -29,7 +29,7 @@ the controller will be initialized (head and eyes LED in red) and then started
 
 %figure "Start position of the robot. The robot is sit down (same start position as in simulation)"
 
-![Start position of the robot. The robot is sit down (same start position as in simulation)](images/start_position.png)
+![start_position.png](images/start_position.png)
 
 %end
 
@@ -40,7 +40,7 @@ To stop the controller press the following button:
 
 %figure "Stop button"
 
-![Stop button](images/stop.png)
+![stop.png](images/stop.png)
 
 %end
 

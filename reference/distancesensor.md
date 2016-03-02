@@ -60,7 +60,7 @@ in increasing order.
 
 %figure "Sensor response versus obstacle distance"
 
-![Sensor response versus obstacle distance](images/infrared.png)
+![infrared.png](images/infrared.png)
 
 %end
 
@@ -78,7 +78,7 @@ in increasing order.
 
 %figure "Sensor response versus obstacle distance with opposite response-noise increase"
 
-![Sensor response versus obstacle distance with opposite response-noise increase](images/khepera_sonar_lut.png)
+![khepera_sonar_lut.png](images/khepera_sonar_lut.png)
 
 %end
 
@@ -116,7 +116,7 @@ increases.
 
 %figure "Predefined configurations for 1 through 10 sensor rays"
 
-![Predefined configurations for 1 through 10 sensor rays](images/ray_orbits.png)
+![ray_orbits.png](images/ray_orbits.png)
 
 %end
 
@@ -128,7 +128,7 @@ beam hits an obstacle.
 
 %figure "Weight distribution formulas"
 
-![Weight distribution formulas](images/weight_formula.png)
+![weight_formula.png](images/weight_formula.png)
 
 %end
 
@@ -148,7 +148,7 @@ ignored for the "sonar" and "laser" DistanceSensor types.
 
 %figure "Example distribution for 10 rays using a Gaussian width of 0.5"
 
-![Example distribution for 10 rays using a Gaussian width of 0.5](images/weight_distribution.png)
+![weight_distribution.png](images/weight_distribution.png)
 
 %end
 
@@ -206,7 +206,7 @@ figure](#sonar-sensor)).
 
 %figure "Sonar sensor"
 
-![Sonar sensor](images/sonar_reflection.png)
+![sonar_reflection.png](images/sonar_reflection.png)
 
 %end
 

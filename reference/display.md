@@ -79,7 +79,7 @@ restored.
 
 ### Display Functions
 
-**Name** <a name="wb_display_get_width"/>
+<a name="wb_display_get_width">**Name**</a>
 
 **wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
 
@@ -99,7 +99,7 @@ fields.
 
 ---
 
-**Name** <a name="wb_display_set_context"/>
+<a name="wb_display_set_context">**Name**</a>
 
 **wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
 
@@ -158,7 +158,7 @@ the magenta color.
 
 ---
 
-**Name** <a name="wb_display_draw_primitive"/>
+<a name="wb_display_draw_primitive">**Name**</a>
 
 **wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
 
@@ -232,7 +232,7 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 ---
 
-**Name** <a name="wb_display_image_functions"/>
+<a name="wb_display_image_functions">**Name**</a>
 
 **wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
 

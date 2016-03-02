@@ -7,7 +7,7 @@ access (e.g., changing the blinking period of the indicator or getting the value
 of the wheels encoders). All the functions included in this library are
 explained below.
 
-**Name** <a name="wbu_car_init"/>
+<a name="wbu_car_init">**Name**</a>
 
 **wbu\_car\_init**, **wbu\_car\_cleanup** - *Initialise and clean*
 
@@ -29,7 +29,7 @@ functions of the [driver](driver-library.md#driver-library) library.
 
 ---
 
-**Name** <a name="wbu_car_get_type"/>
+<a name="wbu_car_get_type">**Name**</a>
 
 **wbu\_car\_get\_type**, **wbu\_car\_get\_engine\_type** - *Get the car and engine type*
 
@@ -68,7 +68,7 @@ of the car.
 
 ---
 
-**Name** <a name="wbu_car_set_indicator_period"/>
+<a name="wbu_car_set_indicator_period">**Name**</a>
 
 **wbu\_car\_set\_indicator\_period**, **wbu\_car\_get\_indicator\_period** - *Set and get the indicator period*
 
@@ -88,7 +88,7 @@ The second function returns the current blinking period of the indicators.
 
 ---
 
-**Name** <a name="wbu_car_get_backwards_lights"/>
+<a name="wbu_car_get_backwards_lights">**Name**</a>
 
 **wbu\_car\_get\_backwards\_lights**, **wbu\_car\_get\_brake\_lights** - *Get the state of the backwards/brake lights*
 
@@ -107,7 +107,7 @@ appropriated).
 
 ---
 
-**Name** <a name="wbu_car_get_track_front"/>
+<a name="wbu_car_get_track_front">**Name**</a>
 
 **wbu\_car\_get\_track\_front**, **wbu\_car\_get\_track\_rear**, **wbu\_car\_get\_wheelbase**, **wbu\_car\_get\_front\_wheel\_radius**, **wbu\_car\_get\_rear\_wheel\_radius** - *Get car caracteristics*
 
@@ -127,7 +127,7 @@ All these functions provide important physical characteristics of the car.
 
 ---
 
-**Name** <a name="wbu_car_get_wheel_encoder"/>
+<a name="wbu_car_get_wheel_encoder">**Name**</a>
 
 **wbu\_car\_get\_wheel\_encoder**, **wbu\_car\_get\_wheel\_speed** - *Get the wheels speed/encoder*
 
@@ -159,7 +159,7 @@ enum.
 
 ---
 
-**Name** <a name="wbu_car_get_right_steering_angle"/>
+<a name="wbu_car_get_right_steering_angle">**Name**</a>
 
 **wbu\_car\_get\_right\_steering\_angle**, **wbu\_car\_get\_left\_steering\_angle** - *Get the right/left steering angle*
 
@@ -178,7 +178,7 @@ different).
 
 ---
 
-**Name** <a name="wbu_car_enable_limited_slip_differential"/>
+<a name="wbu_car_enable_limited_slip_differential">**Name**</a>
 
 **wbu\_car\_enable\_limited\_slip\_differential** - *Enable/disable the limited slip differential mechanism*
 

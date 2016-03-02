@@ -220,7 +220,7 @@ The ground texture must be placed in a [Plane](plane.md#plane).
 
 ### DistanceSensor Functions
 
-**Name** <a name="wb_distance_sensor_get_value"/>
+<a name="wb_distance_sensor_get_value">**Name**</a>
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 

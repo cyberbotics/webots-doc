@@ -74,7 +74,7 @@ function.
 
 ### Pen Functions
 
-**Name** <a name="wb_pen_write"/>
+<a name="wb_pen_write">**Name**</a>
 
 **wb\_pen\_write** - *enable or disable pen writing*
 
@@ -94,7 +94,7 @@ will write; if `write` is *false*, it won't.
 
 ---
 
-**Name** <a name="wb_pen_set_ink_color"/>
+<a name="wb_pen_set_ink_color">**Name**</a>
 
 **wb\_pen\_set\_ink\_color** - *change the color of a pen's ink*
 

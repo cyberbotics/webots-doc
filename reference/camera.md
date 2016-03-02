@@ -267,7 +267,7 @@ restored.
 
 ### Camera Functions
 
-**Name** <a name="wb_camera_enable"/>
+<a name="wb_camera_enable">**Name**</a>
 
 **wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
 
@@ -293,7 +293,7 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 ---
 
-**Name** <a name="wb_camera_get_fov"/>
+<a name="wb_camera_get_fov">**Name**</a>
 
 **wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
 
@@ -322,7 +322,7 @@ return the camera's field of view.
 
 ---
 
-**Name** <a name="wb_camera_get_focal_length"/>
+<a name="wb_camera_get_focal_length">**Name**</a>
 
 **wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
 
@@ -347,7 +347,7 @@ node defined in its `focus` field, it is not possible to call
 
 ---
 
-**Name** <a name="wb_camera_get_width"/>
+<a name="wb_camera_get_width">**Name**</a>
 
 **wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
 
@@ -367,7 +367,7 @@ corresponding [Camera](#camera) node.
 
 ---
 
-**Name** <a name="wb_camera_get_near"/>
+<a name="wb_camera_get_near">**Name**</a>
 
 **wb\_camera\_get\_near** - *get the near parameter of the camera device*
 
@@ -386,7 +386,7 @@ corresponding [Camera](#camera) node.
 
 ---
 
-**Name** <a name="wb_camera_get_type"/>
+<a name="wb_camera_get_type">**Name**</a>
 
 **wb\_camera\_get\_type** - *get the type of the camera*
 
@@ -420,7 +420,7 @@ integers of the [Camera](#camera) class (for example, Camera::COLOR).
 
 ---
 
-**Name** <a name="wb_camera_get_image"/>
+<a name="wb_camera_get_image">**Name**</a>
 
 **wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
 
@@ -546,7 +546,7 @@ the OpenGL z-buffer.
 
 ---
 
-**Name** <a name="wb_camera_get_range_image"/>
+<a name="wb_camera_get_range_image">**Name**</a>
 
 **wb\_camera\_get\_range\_image**, **wb\_camera\_range\_image\_get\_depth**, **wb\_camera\_get\_max\_range** - *get the range image and range data from a range-finder camera*
 
@@ -597,7 +597,7 @@ are identical but their handling is of course different.
 
 ---
 
-**Name** <a name="wb_camera_save_image"/>
+<a name="wb_camera_save_image">**Name**</a>
 
 **wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
 

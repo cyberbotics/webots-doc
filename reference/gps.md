@@ -49,7 +49,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### GPS Functions
 
-**Name** <a name="wb_gps_get_values"/>
+<a name="wb_gps_get_values">**Name**</a>
 
 **wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values** - *enable, disable and read the GPS measurements*
 

@@ -456,7 +456,7 @@ Please note the dummy [Physics](physics.md#physics) and the 1 millimeter
 
 ### Servo Functions
 
-**Name** <a name="wb_servo_set_position"/>
+<a name="wb_servo_set_position">**Name**</a>
 
 **wb\_servo\_set\_position**, **wb\_servo\_set\_velocity**, **wb\_servo\_set\_acceleration**, **wb\_servo\_set\_motor\_force**, **wb\_servo\_set\_control\_p**, **wb\_servo\_get\_min\_position**, **wb\_servo\_get\_max\_position** - *change the parameters of the P-controller*
 
@@ -566,7 +566,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 ---
 
-**Name** <a name="wb_servo_enable_position"/>
+<a name="wb_servo_enable_position">**Name**</a>
 
 **wb\_servo\_enable\_position**, **wb\_servo\_disable\_position**, **wb\_servo\_get\_position\_sampling\_period**, **wb\_servo\_get\_position** - *get the effective position of a servo*
 
@@ -604,7 +604,7 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
 ---
 
-**Name** <a name="wb_servo_enable_motor_force_feedback"/>
+<a name="wb_servo_enable_motor_force_feedback">**Name**</a>
 
 **wb\_servo\_enable\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback**, **wb\_servo\_get\_motor\_force\_feedback\_sampling\_period**, **wb\_servo\_disable\_motor\_force\_feedback** - *get the motor force currently used by a servo*
 
@@ -662,7 +662,7 @@ the device is disabled.
 
 ---
 
-**Name** <a name="wb_servo_set_force"/>
+<a name="wb_servo_set_force">**Name**</a>
 
 **wb\_servo\_set\_force** - *direct force control*
 
@@ -705,7 +705,7 @@ dampers with controllable properties. The example in
 
 ---
 
-**Name** <a name="wb_servo_get_type"/>
+<a name="wb_servo_get_type">**Name**</a>
 
 **wb\_servo\_get\_type** - *get the servo type*
 

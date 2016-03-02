@@ -40,7 +40,7 @@ between 0 (off) and 255 (maximum intensity).
 
 ### LED Functions
 
-**Name** <a name="wb_led_set"/>
+<a name="wb_led_set">**Name**</a>
 
 **wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
 

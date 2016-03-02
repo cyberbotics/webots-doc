@@ -4,7 +4,7 @@ The [driver](#driver-library) library provides all the usual functionality
 available to a human driving his own car. All the functions included in this
 library are explained below.
 
-**Name** <a name="wbu_driver_step"/>
+<a name="wbu_driver_step">**Name**</a>
 
 **wbu\_driver\_init**, **wbu\_driver\_cleanup**, **wbu\_driver\_step** - *Initialise, clean and run a driver step*
 
@@ -28,7 +28,7 @@ used.
 
 ---
 
-**Name** <a name="wbu_driver_set_steering_angle"/>
+<a name="wbu_driver_set_steering_angle">**Name**</a>
 
 **wbu\_driver\_set\_steering\_angle**, **wbu\_driver\_get\_steering\_angle** - *Set and get the stearing angle*
 
@@ -58,7 +58,7 @@ to the previous function).
 
 ---
 
-**Name** <a name="wbu_driver_set_cruising_speed"/>
+<a name="wbu_driver_set_cruising_speed">**Name**</a>
 
 **wbu\_driver\_set\_cruising\_speed**, **wbu\_driver\_get\_target\_cruising\_speed** - *Set and get the target cruising speed*
 
@@ -85,7 +85,7 @@ last call to the previous function).
 
 ---
 
-**Name** <a name="wbu_driver_get_current_speed"/>
+<a name="wbu_driver_get_current_speed">**Name**</a>
 
 **wbu\_driver\_get\_current\_speed** - *Get the current speed*
 
@@ -103,7 +103,7 @@ and their respective radius.
 
 ---
 
-**Name** <a name="wbu_driver_set_throttle"/>
+<a name="wbu_driver_set_throttle">**Name**</a>
 
 **wbu\_driver\_set\_throttle**, **wbu\_driver\_get\_throttle** - *Set and get the throttle*
 
@@ -128,7 +128,7 @@ last call to the previous function).
 
 ---
 
-**Name** <a name="wbu_driver_set_brake"/>
+<a name="wbu_driver_set_brake">**Name**</a>
 
 **wbu\_driver\_set\_brake**, **wbu\_driver\_get\_brake** - *Set and get the brake*
 
@@ -154,7 +154,7 @@ call to the previous function).
 
 ---
 
-**Name** <a name="wbu_driver_set_indicator"/>
+<a name="wbu_driver_set_indicator">**Name**</a>
 
 **wbu\_driver\_set\_indicator**, **wbu\_driver\_set\_indicator\_warning** - *Set the indicator state*
 
@@ -186,7 +186,7 @@ side of the car) or off.
 
 ---
 
-**Name** <a name="wbu_driver_set_dipped_beams"/>
+<a name="wbu_driver_set_dipped_beams">**Name**</a>
 
 **wbu\_driver\_set\_dipped\_beams**, **wbu\_driver\_set\_antifog\_lights**, **wbu\_driver\_get\_dipped\_beams**, **wbu\_driver\_get\_antifog\_lights** - *Set and get the lights*
 
@@ -209,7 +209,7 @@ lights.
 
 ---
 
-**Name** <a name="wbu_driver_get_rpm"/>
+<a name="wbu_driver_get_rpm">**Name**</a>
 
 **wbu\_driver\_get\_rpm** - *Get the motor rpm*
 
@@ -229,7 +229,7 @@ because there is no engine model when control in cruising speed is enabled.
 
 ---
 
-**Name** <a name="wbu_driver_set_gear"/>
+<a name="wbu_driver_set_gear">**Name**</a>
 
 **wbu\_driver\_set\_gear**, **wbu\_driver\_get\_gear**, **wbu\_driver\_get\_gear\_number** - *Get and set the gear*
 
@@ -256,7 +256,7 @@ reverse gear).
 
 ---
 
-**Name** <a name="wbu_driver_get_control_mode"/>
+<a name="wbu_driver_get_control_mode">**Name**</a>
 
 **wbu\_driver\_get\_control\_mode** - *Get the control mode*
 

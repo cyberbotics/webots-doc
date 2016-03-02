@@ -42,7 +42,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### Compass Functions
 
-**Name** <a name="wb_compass_get_values"/>
+<a name="wb_compass_get_values">**Name**</a>
 
 **wb\_compass\_enable**, **wb\_compass\_disable**, **wb\_compass\_get\_sampling\_period**, **wb\_compass\_get\_values** - *enable, disable and read the output values of the compass device*
 

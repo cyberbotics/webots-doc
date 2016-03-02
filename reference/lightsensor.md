@@ -189,7 +189,7 @@ radiometry terms and units in this document with their photometry equivalents:
 
 ### LightSensor Functions
 
-**Name** <a name="wb_light_sensor_get_value"/>
+<a name="wb_light_sensor_get_value">**Name**</a>
 
 **wb\_light\_sensor\_enable**, **wb\_light\_sensor\_disable**, **wb\_light\_sensor\_get\_sampling\_period**, **wb\_light\_sensor\_get\_value** - *enable, disable and read light sensor measurement*
 

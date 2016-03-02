@@ -67,7 +67,7 @@ register a Webots account and use the newly granted Webots licenses. For
 existing accounts, no e-mail is sent and it is your responsibility to inform the
 students about their modified license rights.
 
-### Classrom
+### Classroom
 
 #### Setup
 

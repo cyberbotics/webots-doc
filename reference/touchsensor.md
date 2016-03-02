@@ -144,7 +144,7 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 ### TouchSensor Functions
 
-**Name** <a name="wb_touch_sensor_get_values"/>
+<a name="wb_touch_sensor_get_values">**Name**</a>
 
 **wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
 
@@ -181,7 +181,7 @@ of type "force-3d" exclusively.
 
 ---
 
-**Name** <a name="wb_touch_sensor_get_type"/>
+<a name="wb_touch_sensor_get_type">**Name**</a>
 
 **wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
 

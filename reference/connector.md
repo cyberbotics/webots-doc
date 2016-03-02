@@ -197,7 +197,7 @@ itself.
 
 ### Connector Functions
 
-**Name** <a name="wb_connector_get_presence"/>
+<a name="wb_connector_get_presence">**Name**</a>
 
 **wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
@@ -254,7 +254,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 ---
 
-**Name** <a name="wb_connector_lock"/>
+<a name="wb_connector_lock">**Name**</a>
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
 

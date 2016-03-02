@@ -28,7 +28,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### PositionSensor Functions
 
-**Name** <a name="wb_position_sensor_get_value"/>
+<a name="wb_position_sensor_get_value">**Name**</a>
 
 **wb\_position\_sensor\_enable**, **wb\_position\_sensor\_disable**, **wb\_position\_sensor\_get\_sampling\_period**, **wb\_position\_sensor\_get\_value**, **wb\_position\_sensor\_get\_type** - *enable, disable and read position sensor measurement*
 

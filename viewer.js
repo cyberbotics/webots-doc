@@ -115,6 +115,8 @@ function populateViewDiv(mdContent) {
 }
 
 function highlightCode(view) {
+    hljs.configure({languages: ['c', 'cpp', 'java', 'python', 'matlab', 'bash', 'nohighlight']});
+
     var pres = view.getElementsByTagName("pre"); 
     for (var i = 0; i < pres.length; i++) {
         var pre = pres[i];

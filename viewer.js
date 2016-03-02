@@ -111,8 +111,8 @@ function populateViewDiv(mdContent) {
     div = $(div);
     div.hide();
     div.appendTo(view).show(400);
+    setTimeout(applyAnchor, 400);
 
-    applyAnchor();
     applyAnchorIcons(view);
     highlightCode(view);
 }

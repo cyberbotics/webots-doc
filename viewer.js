@@ -28,12 +28,9 @@ function redirectUrls(node, targetPath) {
         if (! href) {
             continue;
         }
-        if (href.startsWith("www") || href.startsWith("http")) {
+        if (href.startsWith("http")) {
             // open external links in a new window
             a.setAttribute("target", "_blank");
-            if (href.startsWith("www")) {
-                a.setAttribute("href", "http://" + a.getAttribute("href"));
-            }
         } else if (href.endsWith("md") || href.indexOf(".md#") > -1) {
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {

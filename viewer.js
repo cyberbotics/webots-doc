@@ -220,7 +220,18 @@ function receiveMenuContent(menuContent) {
         }
     }
 
-    // find the selected item
+    if (!menu) {
+        console.error("Cannot extract Menu.");
+        return;
+    }
+
+    selected = getSelected(menu);
+    redirectUrls(menu);
+    populateMenu(menu);
+    populateNavigation(selected);
+}
+
+function getSelected(menu) {
     var as = menu.getElementsByTagName("a");
     var selected = null;
     for (i = 0; i < as.length; i++) {
@@ -232,21 +243,12 @@ function receiveMenuContent(menuContent) {
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
                 selected.parentNode.parentNode.setAttribute("class", "selected");
             }
-            break;
+            return selected;
         }
-    }
-
-    redirectUrls(menu);
-
-    if (menu) {
-        populateMenu(menu);
-        populateNavigation(menu, selected);
-    } else {
-        console.error("Cannot extract Menu.");
     }
 }
 
-function populateNavigation(menu, selected) {
+function populateNavigation(selected) {
     var next = document.getElementById("next");
     var previous = document.getElementById("previous");
     var up = document.getElementById("up");

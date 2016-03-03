@@ -17,11 +17,31 @@ if (typeof String.prototype.endsWith !== "function") {
     };
 }
 
-function redirectUrls(node, targetPath) {
+function decomposePage(page) {
+    var match = /([\w-]+).md(#[\w-]+)?$/.exec(page);
+    if (match && match.length >= 2) {
+        var page = match[1] + ".md";
+        var anchor = match[2] ? match[2].substring(1) : "";
+        return [page, anchor];
+    }
+    return ["", ""];
+}
+
+function computeTargetPath() {
+    var targetPath = window.setup["url"];
+    if (targetPath.startsWith("http")) {
+        targetPath += window.setup["branch"] + "/";
+    }
+    targetPath += window.setup["book"] + "/";
+    return targetPath;
+}
+
+function redirectUrls(node) {
     var i;
 
     // redirect a's href
     var as = node.getElementsByTagName("a");
+    var targetPath = computeTargetPath();
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
@@ -32,6 +52,15 @@ function redirectUrls(node, targetPath) {
             // open external links in a new window
             a.setAttribute("target", "_blank");
         } else if (href.endsWith("md") || href.indexOf(".md#") > -1) {
+            a.addEventListener("click", 
+                function (event) {
+                    console.log(event);
+                    aClick(event);
+                    event.preventDefault();
+                    return false;
+                },
+                false
+            );
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
                 var newPage = match[1];
@@ -48,9 +77,23 @@ function redirectUrls(node, targetPath) {
             }
         }
     }
+}
 
+function aClick(event) {
+    var el = event.target;
+    var decomposition = decomposePage(el.getAttribute('href'));
+    var link = decomposition[0];
+    var anchor = decomposition[1];
+    console.log('link = ' + link);
+    console.log('anchor = ' + anchor);
+    window.setup["anchor"] = anchor;
+    getMDFile(computeTargetPath() + link);
+}
+
+function redirectImages(node) {
     // redirect img's src
     var imgs = node.getElementsByTagName("img");
+    var targetPath = computeTargetPath();
     for (i = 0; i < imgs.length; i++) {
         var img = imgs[i];
         var src = img.getAttribute("src");
@@ -62,15 +105,13 @@ function redirectUrls(node, targetPath) {
 }
 
 function applyAnchor() {
-    var currentUrl = window.location.href;
-    var match = /#([\w-]+)/.exec(currentUrl);
-    if (match && match.length == 2) {
-        var anchorId = match[1];
-        console.log("anchorId: " + anchorId);
-        var anchors = document.getElementsByName(anchorId);
-        if (anchors.length > 0) {
-            anchors[0].scrollIntoView(true);
-        }
+    console.log("Anchor: " + window.setup["anchor"]);
+    var anchors = document.getElementsByName(window.setup["anchor"]);
+    if (anchors.length > 0) {
+        // anchors[0].scrollIntoView(true);
+        $("html, body").animate({
+            scrollTop: $(anchors[0]).offset().top
+        }, 400);
     }
 }
 
@@ -89,6 +130,11 @@ function applyToTitle(mdContent) {
 }
 
 function populateViewDiv(mdContent) {
+    var view = document.getElementById("view");
+    while (view.firstChild) {
+        view.removeChild(view.firstChild);
+    }
+
     console.log("Raw MD content:\n\n");
     console.log(mdContent);
 
@@ -104,9 +150,8 @@ function populateViewDiv(mdContent) {
     var div = document.createElement("div");
     div.innerHTML = html;
 
-    redirectUrls(div, this.setup.targetPath);
-
-    var view = document.getElementById("view");
+    redirectImages(div);
+    redirectUrls(div);
 
     div = $(div);
     div.hide();
@@ -186,7 +231,7 @@ function receiveMenuContent(menuContent) {
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.indexOf(this.setup.page) > -1) {
+        if (href.indexOf(window.setup["page"]) > -1) {
             selected = a.parentNode;
             selected.setAttribute("class", "selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
@@ -196,7 +241,7 @@ function receiveMenuContent(menuContent) {
         }
     }
 
-    redirectUrls(menu, this.setup.targetPath);
+    redirectUrls(menu);
 
     if (menu) {
         populateMenu(menu);
@@ -293,34 +338,32 @@ function populateMenu(menu) {
     $(menu).menu();
 }
 
-function getMDFile(target, setup) {
+function getMDFile(target) {
     console.log("Get MD file: " + target);
     $.ajax({
         type: "GET",
         url: target,
         dataType: "text",
-        setup : setup,
         success: populateViewDiv,
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
-            var mainPage = setup.targetPath + setup.book + ".md";
+            var mainPage = computeTargetPath() + window.setup["book"] + ".md";
             // get the main page instead
             if (target != mainPage) {
-                getMDFile(mainPage, setup);
+                getMDFile(mainPage);
             }
         }
     });
 }
 
-function getMenuFile(target, setup) {
+function getMenuFile(target) {
     console.log("Get menu file: " + target);
     $.ajax({
         type: "GET",
         url: target,
         dataType: "text",
         success: receiveMenuContent,
-        setup: setup,
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
@@ -328,21 +371,30 @@ function getMenuFile(target, setup) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var book = getGETQueryValue("book", "guide");
-    var page = getGETQueryValue("page", "guide.md");
-    var branch = getGETQueryValue("branch", "feature-webots-doc-importer");
-    var url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/");
-
-    var targetPath = url;
-    if (url.startsWith("http")) {
-        targetPath += branch + "/";
+function extractAnchor() {
+    var currentUrl = window.location.href;
+    var match = /#([\w-]+)/.exec(currentUrl);
+    if (match && match.length == 2) {
+        return match[1];
     }
-    targetPath += book + "/";
+    return '';
+}
 
-    var targetUrl = targetPath + page;
-    getMDFile(targetUrl, { "targetPath": targetPath, "book": book });
+document.addEventListener("DOMContentLoaded", function() {
+    var page = getGETQueryValue("page", "guide.md");
+    window.setup = {
+        "book":   getGETQueryValue("book", "guide"),
+        "page":   getGETQueryValue("page", "guide.md"),
+        "anchor": extractAnchor(),
+        "branch": getGETQueryValue("branch", "feature-webots-doc-importer"),
+        "url":    getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
+    }
+    console.log("Setup: " + JSON.stringify(window.setup));
 
+    var targetPath = computeTargetPath();
+    var targetUrl = targetPath + window.setup["page"];
     var menuUrl = targetPath + "menu.md";
-    getMenuFile(menuUrl, {"targetPath": targetPath, "page": page});
+
+    getMDFile(targetUrl);
+    getMenuFile(menuUrl);
 });

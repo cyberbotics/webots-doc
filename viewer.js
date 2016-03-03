@@ -45,14 +45,7 @@ function redirectUrls(node) {
             // open external links in a new window
             a.setAttribute("target", "_blank");
         } else if (href.endsWith("md") || href.indexOf(".md#") > -1) {
-            a.addEventListener("click", 
-                function (event) {
-                    console.log(event);
-                    aClick(event);
-                    event.preventDefault();
-                },
-                false
-            );
+            addOnTheFlyEvent(a);
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
                 var newPage = match[1];
@@ -69,6 +62,17 @@ function redirectUrls(node) {
             }
         }
     }
+}
+
+function addOnTheFlyEvent(el) {
+    el.addEventListener("click",
+        function (event) {
+            console.log(event);
+            aClick(event);
+            event.preventDefault();
+        },
+        false
+    );
 }
 
 function aClick(event) {
@@ -273,6 +277,7 @@ function populateNavigation(menu, selected) {
 
         if (nextElement) {
             next.setAttribute("href", nextElement.getAttribute("href"));
+            addOnTheFlyEvent(next);
         } else {
             next.setAttribute("class", "disabled");
         }
@@ -297,6 +302,7 @@ function populateNavigation(menu, selected) {
 
         if (previousElement) {
             previous.setAttribute("href", previousElement.getAttribute("href"));
+            addOnTheFlyEvent(previous);
         } else {
             previous.setAttribute("class", "disabled");
         }
@@ -317,6 +323,7 @@ function populateNavigation(menu, selected) {
 
         if (upElement) {
             up.setAttribute("href", upElement.getAttribute("href"));
+            addOnTheFlyEvent(up);
         } else {
             up.setAttribute("class", "disabled");
         }

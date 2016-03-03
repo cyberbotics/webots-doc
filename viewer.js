@@ -1,10 +1,3 @@
-function replaceAll(find, replace, str) {
-    while (str.indexOf(find) > -1) {
-        str = str.replace(find, replace);
-    }
-    return str;
-}
-
 if (typeof String.prototype.startsWith != "function") {
     String.prototype.startsWith = function (prefix) {
         return this.slice(0, prefix.length) == prefix;

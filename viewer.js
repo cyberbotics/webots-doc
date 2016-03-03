@@ -13,19 +13,19 @@ if (typeof String.prototype.endsWith !== "function") {
 function decomposePage(page) {
     var match = /([\w-]+).md(#[\w-]+)?$/.exec(page);
     if (match && match.length >= 2) {
-        var page = match[1] + ".md";
+        var mdFile = match[1] + ".md";
         var anchor = match[2] ? match[2].substring(1) : "";
-        return [page, anchor];
+        return [mdFile, anchor];
     }
     return ["", ""];
 }
 
 function computeTargetPath() {
-    var targetPath = window.setup["url"];
+    var targetPath = window.setup.url;
     if (targetPath.startsWith("http")) {
-        targetPath += window.setup["branch"] + "/";
+        targetPath += window.setup.branch + "/";
     }
-    targetPath += window.setup["book"] + "/";
+    targetPath += window.setup.book + "/";
     return targetPath;
 }
 
@@ -78,10 +78,10 @@ function addOnTheFlyEvent(el) {
 function aClick(event) {
     var el = event.target;
     var decomposition = decomposePage(el.getAttribute('href'));
-    window.setup["page"] = decomposition[0];
-    window.setup["anchor"] = decomposition[1];
-    console.log('page = ' + window.setup["page"]);
-    console.log('anchor = ' + window.setup["anchor"]);
+    window.setup.page = decomposition[0];
+    window.setup.anchor = decomposition[1];
+    console.log('page = ' + window.setup.page);
+    console.log('anchor = ' + window.setup.anchor);
     getMDFile();
 }
 
@@ -100,8 +100,8 @@ function redirectImages(node) {
 }
 
 function applyAnchor() {
-    console.log("Anchor: " + window.setup["anchor"]);
-    var anchors = document.getElementsByName(window.setup["anchor"]);
+    console.log("Anchor: " + window.setup.anchor);
+    var anchors = document.getElementsByName(window.setup.anchor);
     if (anchors.length > 0) {
         // anchors[0].scrollIntoView(true);
         $("html, body").animate({
@@ -160,10 +160,10 @@ function populateViewDiv(mdContent) {
 function highlightCode(view) {
     hljs.configure({languages: ['c', 'cpp', 'java', 'python', 'matlab', 'bash', 'nohighlight']});
 
-    var pres = view.getElementsByTagName("pre"); 
+    var pres = view.getElementsByTagName("pre");
     for (var i = 0; i < pres.length; i++) {
         var pre = pres[i];
-        var codes = pre.getElementsByTagName("code"); 
+        var codes = pre.getElementsByTagName("code");
         for (var j = 0; j < codes.length; j++) {
             var code = codes[j];
             hljs.highlightBlock(code);
@@ -226,7 +226,7 @@ function receiveMenuContent(menuContent) {
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.indexOf(window.setup["page"]) > -1) {
+        if (href.indexOf(window.setup.page) > -1) {
             selected = a.parentNode;
             selected.setAttribute("class", "selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
@@ -338,20 +338,20 @@ function populateMenu(menu) {
 
 function getMDFile() {
     var targetPath = computeTargetPath();
-    var target = targetPath + window.setup["page"];
+    var target = targetPath + window.setup.page;
     console.log("Get MD file: " + target);
     $.ajax({
         type: "GET",
         url: target,
         dataType: "text",
         success: populateViewDiv,
-        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
-            var mainPage = window.setup["book"] + ".md";
+            var mainPage = window.setup.book + ".md";
             // get the main page instead
-            if (window.setup["page"] != mainPage) {
-                window.setup["page"] = mainPage;
+            if (window.setup.page != mainPage) {
+                window.setup.page = mainPage;
                 getMDFile();
             }
         }

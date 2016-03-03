@@ -57,7 +57,6 @@ function redirectUrls(node) {
                     console.log(event);
                     aClick(event);
                     event.preventDefault();
-                    return false;
                 },
                 false
             );
@@ -82,12 +81,11 @@ function redirectUrls(node) {
 function aClick(event) {
     var el = event.target;
     var decomposition = decomposePage(el.getAttribute('href'));
-    var link = decomposition[0];
-    var anchor = decomposition[1];
-    console.log('link = ' + link);
-    console.log('anchor = ' + anchor);
-    window.setup["anchor"] = anchor;
-    getMDFile(computeTargetPath() + link);
+    window.setup["page"] = decomposition[0];
+    window.setup["anchor"] = decomposition[1];
+    console.log('page = ' + window.setup["page"]);
+    console.log('anchor = ' + window.setup["anchor"]);
+    getMDFile();
 }
 
 function redirectImages(node) {
@@ -338,7 +336,9 @@ function populateMenu(menu) {
     $(menu).menu();
 }
 
-function getMDFile(target) {
+function getMDFile() {
+    var targetPath = computeTargetPath();
+    var target = targetPath + window.setup["page"];
     console.log("Get MD file: " + target);
     $.ajax({
         type: "GET",
@@ -348,16 +348,18 @@ function getMDFile(target) {
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
-            var mainPage = computeTargetPath() + window.setup["book"] + ".md";
+            var mainPage = window.setup["book"] + ".md";
             // get the main page instead
-            if (target != mainPage) {
-                getMDFile(mainPage);
+            if (window.setup["page"] != mainPage) {
+                window.setup["page"] = mainPage;
+                getMDFile();
             }
         }
     });
 }
 
-function getMenuFile(target) {
+function getMenuFile() {
+    var target = computeTargetPath() + "menu.md";
     console.log("Get menu file: " + target);
     $.ajax({
         type: "GET",
@@ -391,10 +393,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     console.log("Setup: " + JSON.stringify(window.setup));
 
-    var targetPath = computeTargetPath();
-    var targetUrl = targetPath + window.setup["page"];
-    var menuUrl = targetPath + "menu.md";
-
-    getMDFile(targetUrl);
-    getMenuFile(menuUrl);
+    getMDFile();
+    getMenuFile();
 });

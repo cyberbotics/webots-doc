@@ -21,7 +21,7 @@ the friction of a joint. The [Brake](#brake) node can be inserted in the
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 
-{[C++](cpp-api.md#cpp_brake)}, {[Java](java-api.md#java_brake)}, {[Python](python-api.md#python_brake)}, {[Matlab](matlab-api.md#matlab_brake)}
+{[C++](cpp-api.md#cpp_brake)}, {[Java](java-api.md#java_brake)}, {[Python](python-api.md#python_brake)}, {[Matlab](matlab-api.md#matlab_brake)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/brake.h>

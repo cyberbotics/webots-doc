@@ -37,7 +37,7 @@ is an [example](supervisor-programming.md#tracking-the-position-of-robots).
 
 A simulation example that shows both the `GPS` and the `Supervisor` techniques
 is included in the Webots installation, you just need to open this world:
-"WEBOTS\_MODULES\_PATH/projects/samples/devices/worlds/gps.wbt".
+"WEBOTS\_HOME/projects/samples/devices/worlds/gps.wbt".
 
 #### Get position in physics plugin code:
 
@@ -214,7 +214,7 @@ can be found [here](http://ode-wiki.org/wiki/index.php?title=Manual). You may
 also want to study this example distributed with Webots:
 
 ```
-WEBOTS_MODULES_PATH/projects/samples/demos/worlds/salamander.wbt
+WEBOTS_HOME/projects/samples/demos/worlds/salamander.wbt
 ```
 
 In this example, the physics plugin adds user computed forces to the robot body

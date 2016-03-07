@@ -61,23 +61,6 @@ account on Cyberbotics' web site and go to the `Administration` page under the
 purchase more licenses, to create groups of users and to grant customized user
 access to your licenses.
 
-### Module download folder
-
-By default, Webots will download the different modules you purchased and store
-them in the local user application folder:
-
-- Windows: "C:\Users\MyName\AppData\Local\Cyberbotics\Webots\8.0"
-- Mac OS X: "/Users/MyName/Library/Application Support/Cyberbotics/Webots/8.0"
-- Linux: "/home/MyName/.local/share/Cyberbotics/Webots/8.0"
-
-You may want to change this behavior and have Webots storing its module files in
-a different folder. This is possible by setting the `WEBOTS_MODULES_PATH`
-environment variable to point to a folder where the modules files will be
-downloaded and stored. It can be useful to do so if you want to avoid that each
-user has its own copy of the module files. In such a case, it is recommended for
-the users to start Webots with the `--disable-modules-download` option to avoid
-overwritting files in this folder.
-
 If you need further information about license issues, please send an e-mail to:
 
 [license@cyberbotics.com](mailto:license@cyberbotics.com)

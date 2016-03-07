@@ -1,11 +1,10 @@
 ## Webots Devices
 
 This section provides a simple example for each Webots device. The world files
-are located in the "WEBOTS\_MODULES\_PATH/projects/samples/devices/worlds"
-directory, and their controllers in the
-"WEBOTS\_MODULES\_PATH/projects/samples/devices/controllers" directory. The
-world files and the corresponding controller are named according to the device
-they exemplify.
+are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and
+their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers"
+directory. The world files and the corresponding controller are named according
+to the device they exemplify.
 
 ### battery.wbt
 

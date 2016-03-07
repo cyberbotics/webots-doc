@@ -26,9 +26,8 @@ version of Webots EDU is available upon request.
 Webots MOD is a special license mode in which the simulation software comes free
 of charge and the users pay only for the modules they need. Various modules are
 available for purchase at different price tags. They include special robot
-models (e.g., NAO, DARwIn-OP, e-puck, Thymio 2, etc.), object models (e.g.,
-cardboard box, wooden box, etc.), environment models (e.g., robot soccer field),
-programming libraries, programming languages (e.g., C/C++, Matlab, Python),
+models (e.g., NAO, DARwIn-OP, e-puck, Thymio 2, etc.) which can be programmed
+using different programming languages (e.g., C/C++, Matlab, Python) or
 interfaces to third parties software or hardware, etc. They are all described on
 Cyberbotics web site.
 

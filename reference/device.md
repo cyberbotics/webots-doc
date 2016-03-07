@@ -18,7 +18,7 @@ sensor).
 
 **wb\_device\_get\_model** - *returns the model string of the corresponding device*
 
-{[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}
+{[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/device.h>
@@ -41,7 +41,7 @@ a `model` field)
 
 **wb\_device\_get\_name** - *convert WbDeviceTag to its corresponding device name*
 
-{[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}
+{[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/device.h>
@@ -62,7 +62,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 **wb\_device\_get\_node\_type** - *convert WbDeviceTag to its corresponding WbNodeType*
 
-{[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}
+{[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/device.h>

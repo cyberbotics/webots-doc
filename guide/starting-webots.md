@@ -45,9 +45,6 @@ OPTIONS:
                               terminal
   --stderr                    redirect the controller stderr to the
                               terminal
-  --disable-modules-download  skip the check for module updates
-  --force-modules-download    automatically download module updates
-                              (if any) at startup
   --start-streaming-server    starts the Webots streaming server
                               (Webots PRO is required)
     [="key[=value];..."]         parameters may be given as an option:
@@ -68,6 +65,10 @@ OPTIONS:
                               steps are analyzed. If '--sysinfo' is
                               also set then the system information are
                               printed in the log file.
+  --ogre-log                  redirect the uncritical Ogre log messages
+                              to the Webots console (or to the standard
+                              output stream if the --stdout option
+                              is enabled).
 ```
 
 The optional `worldfile` argument specifies the name of a .wbt file to open. If
@@ -80,7 +81,7 @@ launching Webots from scripts. Note that Webots PRO does automatically enable
 the `Fast` mode when `--minimize` is specified.
 
 The `--mode=<mode>` option can be used to start Webots in the specified
-execution mode. The four possible execution modes are: `pause`, `realtime`,
+simulation mode. The four possible simulation modes are: `pause`, `realtime`,
 `run` and `fast`; they correspond to the simulation control buttons of Webots'
 graphical user interface. This option overrides, but does not modify, the
 startup mode saved in Webots' preferences. For example, type `webots
@@ -97,17 +98,18 @@ to redirect the controllers output to a file or to pipe it to a shell command.
 redirects the *stderr* stream. Note that the *stderr* stream may also contain
 Webots error or warning messages.
 
-The `--disable-modules-download` option disables the download of new modules and
-therefore prevents the `Webots Update Manager` window from poping up. The
-`--force-modules-download` will instead force the automatic download of new
-modules (if available) without asking the user. Both options are mutually
-exclusive.
-
 The `--start-streaming-server` option starts the Webots streaming server. An
 option can be given to change the default parameters of the streaming server.
 This option is a string containing a list of parameter keys and their values
 separated by semicolons. The supported options are described in [this
 table](#streaming-server-options).
+
+The `--ogre-log` option redirects the uncritical Ogre log messages to the Webots
+console. The critical Ogre log messages are redirected there in any case. If the
+`--stdout` option is enabled then the uncritical Ogre log messages are
+redirected to the *stdout* stream of the Webots executable instead. Similarily,
+the `--stderr` option is redirecting the Ogre critical messages to the *stderr*
+stream.
 
 %figure "Streaming server options"
 

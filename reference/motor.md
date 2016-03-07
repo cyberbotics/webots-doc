@@ -242,7 +242,7 @@ Warnings are displayed if theses rules are not respected.
 
 **wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}
+{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -323,9 +323,9 @@ In Python use `float('+inf')` instead of INFINITY
 > **note** [Matlab]:
 In MATLAB use `inf` instead of INFINITY
 
-The `wb_motor_get_target_position()` function allows to get the target position.
-This value matches with the argument given to the last `wb_motor_set_position()`
-function call.
+The `wb_motor_get_target_position()` function allows the user to get the target
+position. This value matches with the argument given to the last
+`wb_motor_set_position()` function call.
 
 The `wb_motor_set_velocity()` function specifies the velocity that motor should
 reach while moving to the target position. In other words, this means that the
@@ -375,7 +375,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 **wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}
+{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -446,7 +446,7 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 **wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}
+{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -492,7 +492,7 @@ dampers with controllable properties. The example in
 
 **wb\_motor\_get\_type** - *get the motor type*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}
+{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/motor.h>
@@ -502,9 +502,9 @@ int wb_motor_get_type(WbDeviceTag tag)
 
 **Description**
 
-This function allows to retrieve the motor type defined by the `type` field. If
-the value of the `type` field is "linear", this function returns WB\_LINEAR, and
-otherwise it returns WB\_ANGULAR.
+This function allows the user to retrieve the motor type defined by the `type`
+field. If the value of the `type` field is "linear", this function returns
+WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
 
 %figure "Return values for the *wb_motor_get_type()* function"
 

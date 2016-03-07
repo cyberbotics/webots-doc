@@ -70,14 +70,13 @@ use the Lua regular functions to write on these streams.
 
 %figure "Content of the context dictionary"
 
-| Key                   | Value                                                                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| world                 | absolute path to the current world file (including file name and extension)                                                          |
-| proto                 | absolute path to the current PROTO file (including file name and extension)                                                          |
-| project\_path         | absolute path to the current project directory                                                                                       |
-| webots\_version       | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
-| webots\_home          | absolute path to the Webots installation directory                                                                                   |
-| webots\_modules\_path | absolute path to the Webots modules directory                                                                                        |
+| Key             | Value                                                                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| world           | absolute path to the current world file (including file name and extension)                                                          |
+| proto           | absolute path to the current PROTO file (including file name and extension)                                                          |
+| project\_path   | absolute path to the current project directory                                                                                       |
+| webots\_version | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
+| webots\_home    | absolute path to the Webots installation directory                                                                                   |
 
 %end
 

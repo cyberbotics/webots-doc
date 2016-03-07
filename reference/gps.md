@@ -8,6 +8,8 @@ GPS {
   SFFloat    accuracy          0
   SFFloat    noiseCorrelation  0
   SFFloat    resolution       -1
+  SFFloat    speedNoise        0
+  SFFloat    speedResolution   1
 }
 ```
 
@@ -47,13 +49,22 @@ to -1 (default) means that the sensor has an 'infinite' resolution (it can
 measure any infinitesimal change). This field accepts any value in the interval
 (0.0, inf).
 
+- `speedNoise`: This field defines the the standard deviation (expressed in meter)
+of the gaussian noise added to the speed measurements of the GPS.
+
+- `speedResolution`: This field defines the resolution of the speed measurements,
+the resolution is the smallest speed change that the GPS is able to measure.
+Setting this field to -1 (default) means that the sensor has an 'infinite'
+resolution (it can measure any infinitesimal change). This field accepts any
+value in the interval (0.0, inf).
+
 ### GPS Functions
 
 <a name="wb_gps_get_values">**Name**</a>
 
-**wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values** - *enable, disable and read the GPS measurements*
+**wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values**, **wb\_gps\_get\_speed** - *enable, disable and read the GPS measurements*
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}
+{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/gps.h>
@@ -62,6 +73,7 @@ void wb_gps_enable(WbDeviceTag tag, int ms)
 void wb_gps_disable(WbDeviceTag tag)
 int wb_gps_get_sampling_period(WbDeviceTag tag)
 const double *wb_gps_get_values(WbDeviceTag tag)
+const double wb_gps_get_speed(WbDeviceTag tag)
 ```
 
 **Description**
@@ -77,7 +89,15 @@ The `wb_gps_get_sampling_period()` function returns the period given into the
 The `wb_gps_get_values()` function returns the current [GPS](#gps) measurement.
 The values are returned as a 3D-vector, therefore only the indices 0, 1, and 2
 are valid for accessing the vector. The returned vector indicates the absolute
-position of the [GPS](#gps) device.
+position of the [GPS](#gps) device. This position can either be expressed in the
+cartesian coordinate system of Webots or using latitude-longitude-altitude,
+depending on the value of the `gpsCoordinateSystem` field of the
+[WorldInfo](worldinfo.md) node. The `gpsReference` field of the
+[WorldInfo](worldinfo.md) node can be used to define the reference point of the
+GPS.
+
+The `wb_gps_get_speed()` function returns the current [GPS](#gps) speed in
+meters per second.
 
 > **note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the
@@ -90,4 +110,53 @@ period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the 3D-vector as a list containing three floats.
+
+---
+
+<a name="wb_gps_get_coordinate_system">**Name**</a>
+
+**wb\_gps\_get\_coordinate\_system** - *get the gps coordinate system*
+
+{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+
+``` c
+#include <webots/gps.h>
+
+int wb_gps_get_coordinate_system(WbDeviceTag tag)
+```
+
+**Description**
+
+This function allows the user to retrieve the coordinate system type defined by
+the `gpsCoordinateSystem` field of the [WorldInfo](worldinfo.md) node. If the
+value of the `gpsCoordinateSystem` field is "local" then this function returns
+WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
+
+---
+
+<a name="wb_gps_convert_to_degrees_minutes_seconds">**Name**</a>
+
+**wb\_gps\_convert\_to\_degrees\_minutes\_seconds** - *convert decimal degrees to degrees minutes seconds*
+
+{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+
+``` c
+#include <webots/gps.h>
+
+const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees)
+```
+
+**Description**
+
+This function converts a decimal degrees coordinate into a string representing
+the coordinate in the degrees minutes seconds format.
+
+> **note**:
+Your system should support UTF-8 otherwise you may get strange characters
+instead of the degree, minute and second symbols.
+
+<!-- -->
+
+> **note** [C]:
+The returned string should be deallocated by the user.
 

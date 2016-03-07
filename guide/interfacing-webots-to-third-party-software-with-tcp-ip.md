@@ -10,14 +10,14 @@ TCP/IP protocol that you can define yourself. Webots comes with an example of
 interfacing a simulated Khepera robot via TCP/IP to any third party program able
 to read from and write to a TCP/IP connection. This example world is called
 "khepera\_tcpip.wbt", and can be found in the
-"WEBOTS\_MODULES\_PATH/projects/robots/khepera/khepera1/worlds" directory of
-Webots. The simulated Khepera robot is controlled by the "tcpip" controller
-which is in the "controllers" directory of the same project. This small C
-controller comes with full source code in "tcpip.c", so that you can modify it
-to suit your needs. A client example is provided in "client.c". This client may
-be used as a model to write a similar client using the programming language of
-your third party software. This has already been implemented in
-*Lisp*<sup>TM</sup> and *MATLAB*<sup>TM</sup> by some Webots users.
+"WEBOTS\_HOME/projects/robots/khepera/khepera1/worlds" directory of Webots. The
+simulated Khepera robot is controlled by the "tcpip" controller which is in the
+"controllers" directory of the same project. This small C controller comes with
+full source code in "tcpip.c", so that you can modify it to suit your needs. A
+client example is provided in "client.c". This client may be used as a model to
+write a similar client using the programming language of your third party
+software. This has already been implemented in *Lisp*<sup>TM</sup> and
+*MATLAB*<sup>TM</sup> by some Webots users.
 
 ### Main advantages
 
@@ -35,8 +35,7 @@ party software by simply implementing your library based on the given remote
 control library. Switching to the remote control mode will redirect the
 input/output to the real robot through the Inter-Process Communication (IPC). An
 example of remote control is implemented for the e-puck robot in the file
-"WEBOTS\_MODULES\_PATH/projects/robots/e-puck/worlds/e-puck.wbt" directory of
-Webots.
+"WEBOTS\_HOME/projects/robots/e-puck/worlds/e-puck.wbt" directory of Webots.
 
 The third advantage is that you can spread your controller programs over a
 network of computers. This is especially useful if the controller programs
@@ -62,5 +61,5 @@ might be network intensive. Hence it is recommended to have a high speed
 network, or use small resolution camera images, or compress the image data
 before sending it to the controller. This overhead is negligible if you use a
 low resolution camera such as the Khepera K213 (see example
-"WEBOTS\_MODULES\_PATH/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
+"WEBOTS\_HOME/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
 

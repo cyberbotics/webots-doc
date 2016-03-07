@@ -1,7 +1,7 @@
-## CameraFocus
+## Focus
 
 ```
-CameraFocus {
+Focus {
   SFFloat  focalDistance     0  # Distance to the object we are focusing on (m)
   SFFloat  focalLength       0  # Focal length of the lens (m)
   SFFloat  maxFocalDistance  0  # (m)
@@ -11,11 +11,10 @@ CameraFocus {
 
 ### Description
 
-The [CameraFocus](#camerafocus) node allows the user to define a controllable
-focus for a [Camera](camera.md) device. The [CameraFocus](#camerafocus) node
-should be set in the `focus` field of a [Camera](camera.md) node. The focal
-distance can be adjusted from the controller program using the
-`wb_camera_set_focal_distance()` function.
+The [Focus](#focus) node allows the user to define a controllable focus for a
+[Camera](camera.md) device. The [Focus](#focus) node should be set in the
+`focus` field of a [Camera](camera.md) node. The focal distance can be adjusted
+from the controller program using the `wb_camera_set_focal_distance()` function.
 
 ### Field Summary
 

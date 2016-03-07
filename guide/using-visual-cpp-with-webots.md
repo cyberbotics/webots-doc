@@ -12,8 +12,8 @@ C or C++ controllers. The C++ API is composed of ".hpp" files that contain C++
 classes and methods that can be used in C++ controllers only.
 
 Two Visual C++ projects examples are included in Webots distribution:
-"WEBOTS\_MODULES\_PATH\projects\robots\khr-2hv\controllers\khr2\khr2.vcproj" and
-"WEBOTS\_MODULES\_PATH\projects\robots\khr-2hv\plugins\physics\khr2\physics.vcproj".
+"WEBOTS\_HOME\projects\robots\khr-2hv\controllers\khr2\khr2.vcproj" and
+"WEBOTS\_HOME\projects\robots\khr-2hv\plugins\physics\khr2\physics.vcproj".
 However in principle any C or C++ controller from Webots distribution can be
 turned into a Visual C++ project.
 

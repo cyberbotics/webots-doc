@@ -66,25 +66,44 @@ The controller is pre-compiled and you shouldn't edit it. All you have to do is
 to load it on your robot; you will find it in the default list of controller. In
 order to use it, you will have to build a ROS node that will communicates with
 the robot using the different services available. Good examples of such ROS node
-can be found inside Webots at
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/nodes". In this folder you will
-find useful instructions to help you.
+can be found inside Webots at "WEBOTS\_HOME/projects/languages/ros/webots\_ros".
+In this folder you will find useful instructions to help you.
 
 > **note**:
-If you wants to access the controller from another machine and the roscore isn't
+If you want to access the controller from another machine and the roscore isn't
 running on the same machine as Webots, you will need to edit the
 ROS\_MASTER\_URI variable. This can be done by editing your environment
-variables, adding the address in the controller arguments in Webots or with a
-runtime.ini file in the controller directory. You must also be able to connect
-to each of the computer in ssh in both ways. As ROS uses the hostname to find
-other computer/devices on the network, you must had other computers' hostname
-and the associated IP address to the known hosts of each computer. You can find
-this list in a file named *hosts*. On Linux distribution, you can find it
-directly at /etc/hosts; on Mac OS X, it is located at /private/etc/hosts; on
-Windows, it is located at C:\Windows\System32\drivers\etc\hosts. On Windows and
-Mac OS X, this a hidden path and you will need to search directly for this path.
-The hosts file is usually protected and you will need administrator or root
-right to edit it.
+variables, setting '--ROS\_MASTER\_URI=address' in the controller arguments or
+with a runtime.ini file in the controller directory. You must also be able to
+connect to each of the computer in ssh in both ways. As ROS uses the hostname to
+find other computers on the network, you must add other computers' hostname and
+the associated IP address to the known hosts of each computer. You can find this
+list in a file named *hosts*. On Linux distribution, you can find it directly at
+/etc/hosts; on Mac OS X, it is located at /private/etc/hosts; on Windows, it is
+located at C:\Windows\System32\drivers\etc\hosts. On Windows and Mac OS X, this
+a hidden path and you will need to search directly for this path. The hosts file
+is usually protected and you will need administrator or root privileges to edit
+it.
+
+<!-- -->
+
+> **note**:
+If you want to have a predefined [robot\_unique\_name] you can do it by adding
+'--name=predefined\_name' in the controller arguments. Note that you are then
+responsible for avoiding any name clashes between the different robot
+controllers.
+
+<!-- -->
+
+> **note**:
+By default the ROS controller is not blocking the simulation even if no ROS node
+is connected to it. In order to synchronize the simulation with the ROS node,
+the '--synchronize' argument can be used, so that the simulation will not run as
+long as the robot time\_step service is not called.
+
+> Furthermode, adding the '--clock' argument will make the ROS controller publish
+Webots time using the `clock` topic (which you may use as the ROS time if the
+ROS parameter `use_sim_time` is set to true).
 
 #### Custom Controller
 
@@ -108,10 +127,10 @@ supervisor controller.
 
 A sample C++ ROS node running as a Webots controller is provided in the Webots
 distribution for Linux. It is located in the Webots
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/custom" folder and contains a
-world file named "joystick.wbt" and a controller named "joystick" which allows
-the user to drive a simulated robot using a joystick through the ROS joy node.
-This controller is a very simple example of a ROS node running as a Webots
+"WEBOTS\_HOME/projects/languages/ros/custom" folder and contains a world file
+named "joystick.wbt" and a controller named "joystick" which allows the user to
+drive a simulated robot using a joystick through the ROS joy node. This
+controller is a very simple example of a ROS node running as a Webots
 controller. It could be used as a starting point to develop more complex
 interfaces between Webots and ROS. The controller directory includes all the
 "Makefile" machinery to call the build tools used by ROS and Webots to produce

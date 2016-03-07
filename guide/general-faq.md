@@ -1,13 +1,12 @@
 ## General FAQ
 
-### What are the differences between Webots PRO, Webots EDU and other Webots modules?
+### What are the differences between Webots PRO, Webots EDU and Webots MOD?
 
 Webots PRO provides a fully featured version of Webots intended for robotics
 research. Webots EDU provides a special version of Webots well suited for
-education. Webots modules are components tailored for specific uses of Webots,
-they include different models of robots, objects, environments, programming
-interfaces, libraries, etc. Users can purchase only the modules they need
-separately. The differences between Webots modules are explained
+education. Webots MOD provides components tailored for specific uses of Webots,
+they include different models of robots with different programming interfaces.
+The differences between Webots PRO, EDU and MOD are explained
 [here](http://www.cyberbotics.com/webots/).
 
 ### How can I report a bug in Webots?

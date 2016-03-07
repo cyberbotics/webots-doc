@@ -198,15 +198,16 @@ To be functional, a [Connector](#connector) node requires the presence of a
 
 <a name="wb_connector_get_presence">**Name**</a>
 
-**wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
+**wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence\_sampling\_period**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
-{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}
+{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/connector.h>
 
 void wb_connector_enable_presence(WbDeviceTag tag, int ms)
 void wb_connector_disable_presence(WbDeviceTag tag)
+int wb_connector_get_presence_sampling_period(WbDeviceTag tag)
 int wb_connector_get_presence(WbDeviceTag tag)
 ```
 
@@ -215,8 +216,11 @@ int wb_connector_get_presence(WbDeviceTag tag)
 The `wb_connector_enable_presence()` function starts querying the
 [Connector](#connector)'s *presence* (see definition below) state each `ms`
 milliseconds. The `wb_connector_disable_presence()` function stops querying the
-[Connector](#connector)'s *presence*. The `wb_connector_get_presence()` function
-returns the current *presence* state of this connector, it returns:
+[Connector](#connector)'s *presence*. The
+`wb_connector_get_presence_sampling_period()` function returns the period at
+which the [Connector](#connector)'s *presence* is queried. The
+`wb_connector_get_presence()` function returns the current *presence* state of
+this connector, it returns:
 
 - 1: in case of the *presence* of a peer connector
 - 0: in case of the absence of a peer connector
@@ -257,7 +261,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
 
-{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}
+{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/connector.h>

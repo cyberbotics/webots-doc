@@ -29,5 +29,5 @@ extension depending on the platform) and that the plugin source file should be
 located in "my\_project/plugins/physics/my\_physics/my\_physics[.c|.cpp]". If
 Webots does not find the file there, it will also look in the
 "WEBOTS\_HOME/resources/projects/plugins" and
-"WEBOTS\_MODULES\_PATH/projects/default/plugins" directories.
+"WEBOTS\_HOME/projects/default/plugins" directories.
 

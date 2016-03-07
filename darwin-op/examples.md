@@ -3,7 +3,7 @@
 In this part we will see all the examples provided with Webots for the DARwIn-OP
 model. We will describe how they work, how to use them and what can be done with
 them. All the examples can be found in
-"WEBOTS\_MODULES\_PATH/projects/robots/darwin-op/worlds".
+"WEBOTS\_HOME/projects/robots/darwin-op/worlds".
 
 The following buttons are the main ones used to control the simulation (they all
 are situated on top of the 3D view):

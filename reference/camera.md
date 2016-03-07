@@ -7,16 +7,13 @@ Camera {
   SFFloat    fieldOfView      0.7854
   SFInt32    width            64
   SFInt32    height           64
-  SFString   type             "color"
   SFBool     spherical        FALSE
   SFFloat    near             0.01
-  SFFloat    maxRange         1.0
   SFBool     antiAliasing     FALSE
   SFFloat    motionBlur       0.0
-  SFFloat    colorNoise       0.0
-  SFFloat    rangeNoise       0.0
-  SFFloat    rangeResolution -1.0
-  SFNode     lensDistortion   NULL
+  SFFloat    noise            0.0
+  SFString   noiseMaskUrl     ""
+  SFNode     lens             NULL
   SFNode     focus            NULL
   SFNode     zoom             NULL
   SFString   compositor       ""
@@ -25,10 +22,10 @@ Camera {
 
 ### Description
 
-The [Camera](#camera) node is used to model a robot's on-board camera or a
-range-finder. The resulted image can be displayed on the 3D window. Depending on
-its setup, the Camera node can model a linear camera, a lidar device, a
-Microsoft Kinect or even a biological eye which is spherically distorted.
+The [Camera](#camera) node is used to model a robot's on-board camera. The
+resulting image can be displayed on the 3D window. Depending on its setup, the
+Camera node can model a linear camera, a typical RGB camera or even a biological
+eye which is spherically distorted.
 
 ### Field Summary
 
@@ -42,13 +39,9 @@ view can be computed from the `width`, `height` and horizontal `fieldOfView`:
 
 - `height`: height of the image in pixels
 
-- `type`: type of the camera: "color" or "range-finder". The camera types are
-described precisely in the corresponding subsection below.
-
 - `spherical`: switch between a planar or a spherical projection. A spherical
-projection can be used for example to simulate a biological eye or a lidar
-device. More information on spherical projection in the corresponding subsection
-below.
+projection can be used for example to simulate a biological eye. More
+information on spherical projection in the corresponding subsection below.
 
 - The `near` field defines the distance from the camera to the near clipping
 plane. This plane is parallel to the camera retina (i.e. projection plane). The
@@ -56,12 +49,6 @@ near field determines the precision of the OpenGL depth buffer. A too small
 value produces depth fighting between overlaid polygons, resulting in random
 polygon overlaps. More information on frustums in the corresponding subsection
 below.
-
-- The `maxRange` field is used only when the camera is a range-finder. In this
-case,  `maxRange` defines the distance between the camera and the far clipping
-plane. The far clipping plane is not set to infinity. This field defines the
-maximum range that a range-finder can achieve and so the maximum possible value
-of the range image (in meter).
 
 - The `antiAliasing` field switches on or off (the default) anti-aliasing effect
 on the camera images. Anti-aliasing is a technique that assigns pixel colors
@@ -83,37 +70,38 @@ Note that this feature is computationally expensive and can considerably reduce
 the simulation speed. Furthermore, it is useless to set a value smaller than the
 camera time step as it would not have any visible effect.
 
-- If the `colorNoise` field is greater than 0.0, this adds a gaussian noise to
-each RGB channel of a color image. This field is useless in case of range-finder
-cameras. A value of 0.0 corresponds to remove the noise and thus saving
-computation time. A value of 1.0 corresponds to a gaussian noise having a
-standard derivation of 255 in the channel representation. More information on
-noise in the corresponding subsection below.
+- If the `noise` field is greater than 0.0, this adds a gaussian noise to each RGB
+channel of a color image. A value of 0.0 corresponds to remove the noise and
+thus saving computation time. A value of 1.0 corresponds to a gaussian noise
+having a standard derivation of 255 in the channel representation. More
+information on noise in the corresponding subsection below.
 
-- If the `rangeNoise` field is greater than 0.0, this adds a gaussian noise to
-each depth value of a range-finder image. This field is useless in case of color
-cameras. A value of 0.0 corresponds to remove the noise and thus saving
-computation time. A value of 1.0 corresponds to a gaussian noise having a
-standard derivation of `maxRange` meters. More information on noise in the
-corresponding subsection below.
+- The `noiseMaskUrl` field specifies the file path of a user-defined noise mask,
+usually a transparent PNG image The file should be specified with a relative
+path (cf. [this section](imagetexture.md#search-rule-of-the-texture-path)).
+Absolute paths work as well, but they are not recommended because they are not
+portable across different systems. Ideally, the texture file should lie next to
+the world file, possibly inside a "textures" subfolder. It is suggested to use
+textures with power of 2 resolution (e.g. 8x8, 2048x64, etc.) and bigger than
+the camera resolution to avoid internal scaling that could cause the loss of
+pixel precision. The mask is randomly translated during the simulation in order
+to produce a flickering noise effect. Thus the bigger the noise texture the
+better the randomness quality, because the probabily to see the same patterns
+will decrease. Using a noise mask instead of the default gaussian noise reduces
+the computation overhead and thus improves the simulation speed. If both types
+of noise are enabled, the noise mask is applied before the gaussian noise. This
+feature is not available for spherical cameras.
 
-- `rangeResolution`: This field allows to define the depth resolution of the
-camera, the resolution is the smallest change that it is able to measure.
-Setting this field to -1 (default) means that the sensor has an 'infinite'
-resolution (it can measure any infinitesimal change). This field is used only
-when type is "range-finder" and accepts any value in the interval (0.0, inf).
-
-- The `lensDistortion` field may contain a
-[CameraLensDistortion](cameralensdistortion.md) node to specify the image
+- The `lens` field may contain a [Lens](lens.md) node to specify the image
 distortion due to the camera lens.
 
-- The `focus` field may contain a [CameraFocus](camerafocus.md) node to provide
-the camera device with a controllable focusing system. If this field is set to
-NULL, then no focus is available on the camera device.
+- The `focus` field may contain a [Focus](focus.md) node to provide the camera
+device with a controllable focusing system. If this field is set to NULL, then
+no focus is available on the camera device.
 
-- The `zoom` field may contain a [CameraZoom](camerazoom.md) node to provide the
-camera device with a controllable zoom system. If this field is set to NULL,
-then no zoom is available on the camera device.
+- The `zoom` field may contain a [Zoom](zoom.md) node to provide the camera device
+with a controllable zoom system. If this field is set to NULL, then no zoom is
+available on the camera device.
 
 - The `compositor` field specifies the name of a compositor to apply on the camera
 image. A compositor can be used to apply a shader in order to alter the original
@@ -135,46 +123,24 @@ even while the simulation is running. However, the compositor resource files are
 loaded at the same time as the world file. Therefore any modification to the
 compositor files will need a revert of the simulation to be taken into account.
 
-### Camera Type
+### Camera image
 
-The camera type can be setup by the `type` field described above.
+The camera device computes OpenGL rendered images. The pixel information can be
+obtained from the `wb_camera_get_image` function. The red, green and blue
+channels (RGB) can be extracted from the resulting image by the
+`wb_camera_image_get_*`-like functions.
 
-#### Color
-
-The color camera allows to get color information from the OpenGL context of the
-camera. This information can be get by the `wb_camera_get_image` function, while
-the red, green and blue channels (RGB) can be extracted from the resulted image
-by the `wb_camera_image_get_*`-like functions.
-
-Internally when the camera is refreshed, an OpenGL context is created, and the
-color or depth information is copied into the buffer which can be get throught
-the `wb_camera_get_image` or the `wb_camera_get_range_image` functions. The
-format of these buffers are respectively BGRA (32 bits) and float (16 bits). We
-recommend to use the `wb_camera_image_get_*`-like functions to access the buffer
-because the internal format could change.
+Each time a camera is refreshed, an OpenGL rendering is performed, and the color
+information is copied into the buffer returned by the `wb_camera_get_image`
+function. The format of this buffers is BGRA (32 bits). We recommend to use the
+`wb_camera_image_get_*`-like functions to access the buffer because the internal
+format could change.
 
 > **note** [Matlab]:
 The Matlab API uses a language-specific representation of color images
 consisting of a 3D array of RGB triplets. Please look at the [Matlab
 example](#wb_camera_get_image) in the `wb_camera_get_image` function's
 description.
-
-#### Range-Finder
-
-The range-finder camera allows to get depth information (in meters) from the
-OpenGL context of the camera. This information is obtained through the
-`wb_camera_get_range_image` function, while depth information can be extracted
-from the returned image by using the `wb_camera_range_image_get_depth` function.
-
-Internally when the camera is refreshed, an OpenGL context is created, and the
-z-buffer is copied into a buffer of `float`. As the z-buffer contains scaled and
-logarithmic values, an algorithm linearizes the buffer to metric values between
-`near` and `maxRange`. This is the buffer which is accessible by the
-`wb_camera_get_range_image` function.
-
-Range-finder cannot see transparent objects. An object can be semi-transparent
-either if its texture has an alpha channel, or if its
-[Material](material.md).`transparency` field is not equal to 1.
 
 ### Frustum
 
@@ -189,9 +155,7 @@ and `height` fields define the vertical angle of the frustum according to the
 above formula.
 
 Generally speaking there is no far clipping plane while this is common in other
-OpenGL programs. In Webots, a camera can see as far as needed. Nevertheless, a
-far clipping plane is artificially added in the case of range-finder cameras
-(i.e. the resulted values are bounded by the `maxRange` field).
+OpenGL programs. In Webots, a camera can see as far as needed.
 
 In the case of the spherical cameras, the frustum is quite different and
 difficult to represent. In comparison with the frustum description above, the
@@ -200,22 +164,20 @@ at the camera position, and the `fieldOfView` can be greater than Pi.
 
 ### Noise
 
-It is possible to add quickly a white noise on the cameras by using the
-`colorNoise` and the `rangeNoise` fields (applied respectively on the color
-cameras and on the range-finder cameras). A value of `0.0` corresponds to an
-image without noise. For each channel of the image and at each camera refresh, a
-gaussian noise is computed and added to the channel. This gaussian noise has a
-standard deviation corresponding to the noise field times the channel range. The
-channel range is 256 for a color camera and `maxRange` for a range-finder
+It is possible to add quickly a white noise on the cameras by using the `noise`
+field. A value of `0.0` corresponds to an image without noise. For each channel
+of the image and at each camera refresh, a gaussian noise is computed and added
+to the channel. This gaussian noise has a standard deviation corresponding to
+the noise field times the channel range. The channel range is 256 for a color
 camera.
 
 ### Spherical projection
 
 OpenGL is designed to have only planar projections. However spherical
-projections are very useful for simulating a lidar, a camera pointing on a
-curved mirror or a biological eye. Therefore we implemented a camera mode
-rendering spherical projections. It can be enabled simply by switching on the
-corresponding `spherical` field described above.
+projections are very useful for simulating a camera pointing on a curved mirror
+or a biological eye. Therefore we implemented a camera mode rendering spherical
+projections. It can be enabled simply by switching on the corresponding
+`spherical` field described above.
 
 Internally, depending on the field of view, a spherical camera is implemented by
 using between 1 to 6 OpenGL cameras oriented towards the faces of a cube (the
@@ -225,11 +187,10 @@ computing the spherical projection is applied on the result of the subcameras.
 
 So this mode is costly in terms of performance! Reducing the resolution of the
 cameras and using a `fieldOfView` which minimizes the number of activated
-cameras helps a lot to improve the performances if needed.
+cameras helps a lot to improve the performance if needed.
 
-When the camera is spherical, the image returned by the `wb_camera_get_image` or
-the `wb_camera_get_range_image` functions is a 2-dimensional array (s,t) in
-spherical coordinates.
+When the camera is spherical, the image returned by the `wb_camera_get_image`
+function is a 2-dimensional array (s,t) in spherical coordinates.
 
 Let `hFov` be the horizontal field of view, and let `theta` be the angle in
 radian between the `(0, 0, -z)` relative coordinate and the relative coordinate
@@ -261,7 +222,7 @@ it is also possible to show or hide the overlay images from the `Camera Devices`
 item in `Robot` menu.
 
 It is also possible to show the camera image in an external window by
-double-clicking on it. After doing it, the overlay disappears and the new window
+double-clicking on it. After doing it, the overlay disappears and a new window
 pops up. Then, after closing the window, the overlay will be automatically
 restored.
 
@@ -271,7 +232,7 @@ restored.
 
 **wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -297,7 +258,7 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 **wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -314,11 +275,10 @@ These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
 the [Camera](#camera) node, as `fieldOfView`. Note that changing the field of
 view using `wb_camera_set_fov()` is possible only if the camera device has a
-[CameraZoom](camerazoom.md) node defined in its `zoom` field. The minimum and
-maximum values for the field of view are defined in this
-[CameraZoom](camerazoom.md) node, if the zoom is not defined, then the functions
-`wb_camera_get_min_fov()` and `wb_camera_get_max_fov()` will return the camera's
-field of view.
+[Zoom](zoom.md) node defined in its `zoom` field. The minimum and maximum values
+for the field of view are defined in this [Zoom](zoom.md) node, if the zoom is
+not defined, then the functions `wb_camera_get_min_fov()` and
+`wb_camera_get_max_fov()` will return the camera's field of view.
 
 ---
 
@@ -326,7 +286,7 @@ field of view.
 
 **wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -341,9 +301,9 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
 **Description**
 
 These functions allow the controller to get and set the focusing parameters.
-Note that if the camera device has no [CameraFocus](camerafocus.md) node defined
-in its `focus` field, it is not possible to call
-`wb_camera_set_focal_distance()` and the other functions will return 0.
+Note that if the camera device has no [Focus](focus.md) node defined in its
+`focus` field, it is not possible to call `wb_camera_set_focal_distance()` and
+the other functions will return 0.
 
 ---
 
@@ -351,7 +311,7 @@ in its `focus` field, it is not possible to call
 
 **wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -371,7 +331,7 @@ corresponding [Camera](#camera) node.
 
 **wb\_camera\_get\_near** - *get the near parameter of the camera device*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -386,45 +346,11 @@ corresponding [Camera](#camera) node.
 
 ---
 
-<a name="wb_camera_get_type">**Name**</a>
-
-**wb\_camera\_get\_type** - *get the type of the camera*
-
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
-
-``` c
-#include <webots/camera.h>
-
-int wb_camera_get_type()
-```
-
-**Description**
-
-This function returns the type of the camera as defined by the `type` field of
-the corresponding [Camera](#camera) node. The constants defined in "camera.h"
-are summarized in [this
-table](#return-values-for-the-wb_camera_get_type-function):
-
-%figure "Return values for the *wb_camera_get_type()* function"
-
-| Camera.type    | return value              |
-| -------------- | ------------------------- |
-| "color"        | WB\_CAMERA\_COLOR         |
-| "range-finder" | WB\_CAMERA\_RANGE\_FINDER |
-
-%end
-
-> **note** [C++, Java, Python]:
-In the oriented-object APIs, the WB\_CAMERA\_* constants are available as static
-integers of the [Camera](#camera) class (for example, Camera::COLOR).
-
----
-
 <a name="wb_camera_get_image">**Name**</a>
 
 **wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>
@@ -546,62 +472,11 @@ the OpenGL z-buffer.
 
 ---
 
-<a name="wb_camera_get_range_image">**Name**</a>
-
-**wb\_camera\_get\_range\_image**, **wb\_camera\_range\_image\_get\_depth**, **wb\_camera\_get\_max\_range** - *get the range image and range data from a range-finder camera*
-
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
-
-``` c
-#include <webots/camera.h>
-
-const float *wb_camera_get_range_image(WbDeviceTag tag)
-float wb_camera_range_image_get_depth(const float *range_image, int width, int x, int y)
-double wb_camera_get_max_range(WbDeviceTag tag)
-```
-
-**Description**
-
-The `wb_camera_get_range_image()` macro allows the user to read the contents of
-the last range image grabbed by a range-finder camera. The range image is
-computed using the depth buffer produced by the OpenGL rendering. Each pixel
-corresponds to the distance expressed in meter from the object to the plane
-defined by the equation *z = 0* within the coordinates system of the camera. The
-bounds of the range image is determined by the near clipping plane (defined by
-the `near` field) and the far clipping plane (see the `maxRange` field). The
-range image is coded as an array of single precision floating point values
-corresponding to the range value of each pixel of the image. The precision of
-the range-finder values decreases when the objects are located farther from the
-near clipping plane. Pixels are stored in scan lines running from left to right
-and from top to bottom. The memory chunk returned by this function shall not be
-freed, as it is managed by the camera internally. The size in bytes of the range
-image can be computed as follows:
-
-`size` = `camera_width` * `camera_height` * sizeof(float)
-
-Attempting to read outside the bounds of this memory chunk will cause an error.
-
-The `wb_camera_range_image_get_depth()` macro is a convenient way to access a
-range value, directly from its pixel coordinates. The `camera_width` parameter
-can be obtained from the `wb_camera_get_width()` function. The `x` and `y`
-parameters are the coordinates of the pixel in the image.
-
-The `wb_camera_get_max_range()` function returns the value of the `maxRange`
-field.
-
-> **note** [Python]:
-The Camera class has two methods for getting the camera image. The
-`getRangeImage()` returns a one-dimensional list of floats, while the
-`getRangeImageArray()` returns a two-dimensional list of floats. Their content
-are identical but their handling is of course different.
-
----
-
 <a name="wb_camera_save_image">**Name**</a>
 
 **wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/camera.h>

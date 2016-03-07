@@ -13,7 +13,7 @@ LED {
 
 The [LED](#led) node is used to model a light emitting diode (LED). The light
 produced by an LED can be used for debugging or informational purposes. The
-resulted color is applied only on the first child of the [LED](#led) node. If
+resulting color is applied only on the first child of the [LED](#led) node. If
 the first child is a [Shape](shape.md) node, the `emissiveColor` field of its
 [Material](material.md) node is altered. If the first child is a
 [Light](light.md) node, its `color` field is altered. Otherwise, if the first
@@ -44,7 +44,7 @@ between 0 (off) and 255 (maximum intensity).
 
 **wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
 
-{[C++](cpp-api.md#cpp_led)}, {[Java](java-api.md#java_led)}, {[Python](python-api.md#python_led)}, {[Matlab](matlab-api.md#matlab_led)}
+{[C++](cpp-api.md#cpp_led)}, {[Java](java-api.md#java_led)}, {[Python](python-api.md#python_led)}, {[Matlab](matlab-api.md#matlab_led)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/led.h>

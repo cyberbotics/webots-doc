@@ -12,3 +12,4 @@ for in a specific language.
 - [Java API](java-api.md)
 - [Python API](python-api.md)
 - [Matlab API](matlab-api.md)
+- [ROS API](ros-api.md)

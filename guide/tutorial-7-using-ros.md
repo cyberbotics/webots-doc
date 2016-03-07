@@ -1,210 +1,133 @@
 ## Tutorial 7: Using ROS
 
-This tutorial explains how to implement a Webots controller as a ROS node. This
-process is exemplified by describing how we built the "joystick" controller
-located in "WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick".
+This tutorial explains how to use the nodes from the `webots_ros` package
+provided with Webots.
 
-> **note**:
-We assume that you installed ROS groovy on your computer as explained in the
-online ROS installation tutorial. As the ROS joy package is currently defined on
-Linux only, you won't be able to compile this controller example on other
-platforms.
+These examples were tested with ROS `jade`, `indigo`, `hydro` and `groovy`
+distributions on Linux. There is no warranty they will work if you use a
+different platform or an ancient distribution of ROS.
 
-### Creating a Webots project that contains a ROS package
+### Installing ROS
 
-The "joystick" controller is a Webots controller written in C++ and implemented
-as a ROS node. It subscribes to the *joy/joy* topic of the "joy\_node" (see ROS
-"joy" package) in order to listen to the joystick state. The relevant line in
-"webots\_joystick\_node.cpp" is:
+In order to use these nodes, you will first need to install the ROS framework.
+To install the last version of ROS on Ubuntu use the following commands:
 
 ```
-ros::Subscriber sub=nh.subscribe("joy", 10, joy_callback);
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 0xB01FA116
+sudo apt-get update
+sudo apt-get install ros-jade-desktop-full
+sudo apt-get install ros-jade-sensor-msgs
+sudo rosdep init
+rosdep update
 ```
 
-which prompts ten times per second the callback function *joycall\_back* to
-transform the joystick sensed values into a robot motion command.
+For more information or to install it on another platform please reading
+[http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation).
+Unless you need older version for some other application, you should choose the
+latest distribution (Jade Turtle).
 
-We now describe the actions to setup the controller directory
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick" both on ROS
-and Webots side (as provided in your Webots distribution). We are to recreate
-the corresponding project based on its bare bones: the world file
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/worlds/joystick.wbt", the source
-file
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controller/catkin\_ws/src/webots\_joystick/src/webots\_joystick\_node.cpp"
-and the ROS launcher file
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controller/joy.launch". Note that
-"joy.launch" is used in "webots\_joystick\_node.cpp" to launch the ROS node
-"joy\_node" as child process:
+> **note**:
+If you never used the ROS framework before, it is strongly recommended to follow
+some tutorials at:
+[http://wiki.ros.org/ROS/Tutorials](http://wiki.ros.org/ROS/Tutorials). These
+tutorials will also help you setting up your ROS environment and initializing
+your catkin workspace.
+
+### webots_ros package installation
+
+If you haven't created any catkin workspace yet, you can create one with the
+following commands:
 
 ```
-  // launch the joy ROS node
-      int roslaunch=fork();
-      if (roslaunch==0) { // child process
-        execlp("roslaunch","roslaunch","joy.launch",NULL);
-        return 0;
-      }
+mkdir -p catkin_ws/src
+cd catkin_ws/src
+catkin_init_workspace
 ```
 
-We will be done once we will have provided Webots with an executable file in
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick" whose name
-matches the controller directory name, i.e. "joystick" (which is also the name
-specified in "joystick.wbt"). As we want this executable to be a ROS a node, we
-will create and build a ROS package called "webots\_joystick" and copy the
-resulting executable in
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick".
+Once your workspace is set, you have to copy the `webots_ros` folder located in
+"projects/languages/ros" in the `src` folder of your catkin workspace. You will
+also need to copy the list of the services and messages definitions of the
+`webots_ros` package. Simply copy the `srv` and `msg` folders located in
+"projects/default/controllers/ros/include" into the "webots\_ros" folder of your
+catkin workspace.
 
-Prior to package construction, we create and setup a *catkin* workspace from
-which we will run most of the build process through the `catkin_make` command.
+The `webots_ros` package already contains a "CmakeList.txt" with build
+instructions for the package. All you have to do, in order to build the package,
+is to run:
 
-> **handson**:
-Create a project directory called "my\_ros", with subdirectories "worlds" and
-"controllers/joystick". Copy
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/worlds/joystick.wbt" into
-"my\_ros/worlds". You can perform these actions by opening a terminal and
-typing:
+```
+cd catkin_ws
+catkin_make
+```
 
->     $ mkdir -p ~/my_ros/worlds
->     $ mkdir -p ~/my_ros/controllers/joystick
->     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/worlds/joystick.wbt ~/my_ros/worlds/
+### Running the nodes
 
-> Copy the file
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick/joy.launch"
-into "my\_ros/controllers/joystick":
+Now that you have built the package, you can run the example you want. You will
+first have to launch the master node with the following command:
 
->     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/joy.launch ~/my_ros/controllers/joystick
+```
+roscore
+```
+
+You can then start Webots and open the world of the example you want to run (the
+example worlds are located in "projects/languages/ros/worlds"). When you start
+the simulation the controller should connect to the master and the simulation
+should start, waiting for instructions.
+
+If the controller can't connect to the master node, it probably means the master
+node doesn't use the standard `ROS_MASTER_URI`. You can check in the terminal in
+which the master node was started what `ROS_MASTER_URI` is used and you can then
+add the correct address in the controller arguments, in the environment
+variables or in a runtime.ini file in the controller directory.
+
+You can then start the ROS node corresponding to this example in a new terminal
+using the following command:
+
+```
+rosrun webots_ros [node_name]
+```
+
+For example, if you opened the world
+"projects/languages/ros/worlds/panoramic\_view\_recorder.wbt" you will have to
+start the `panoramic_view_recorder` node with the following command:
+
+```
+rosrun webots_ros panoramic_view_recorder
+```
+
+> **note**:
+The seed of the Webots random number generator is initialized at the beginning
+of the simulation and not when the ROS nodes connect. Webots has to be running
+so that the ROS nodes can connect. However, we cannot guarantee how long it will
+run before the ROS nodes connect. Therefore, the sensor measurements and motor
+commands will slightly differ from one run to another, due to the noise being
+slightly different at the time of the connection of the ROS nodes. This may have
+consequences on the behavior of the robots, thus making such simulations non
+fully reproducible. You can use the '--synchronize' argument in order to make
+sure that Webots will not run before the ROS node connects. This is useful to
+make ROS-based simulation reproducible.
 
 <!-- -->
 
 > **note**:
-We will use catkin, the official ROS build system (see ROS tutorials for catkin
-basics).
+If you want to use different computers for the ROS master, the Webots simulation
+and/or the nodes, you must be able to connect to each of them with SSH in both
+ways. The hostname and IP addresses of these computers should be listed in the
+known hosts list of each computer and the `ROS_MASTER_URI` variable should be
+adjusted accordingly.
 
-<!-- -->
+### Creating new nodes
 
-> **handson**:
-Create and init a catkin workspace. You can perform these actions through a
-terminal by typing:
+These examples only show a few possibilities for interfacing ROS and Webots, but
+you can build your own nodes to connect with Webots.
 
->     $ cd ~/my_ros/controllers/joystick
->     $ mkdir -p catkin_ws/src
->     $ cd catkin_ws/src
->     $ catkin_init_workspace
+The `robot_information_parser` node is the most basic one and is a good base to
+start building your own node. The `complete_test` node doesn't show any
+particular application but contains an almost exhaustive list of the Webots API
+functions.
 
-<!-- -->
-
-> **handson**:
-Install the joy package.
-
->     $ sudo apt-get install ros-groovy-joystick-drivers
->     $ rosdep install joy
-
-<!-- -->
-
-> **handson**:
-Create a ROS package named "webots\_joystick" specifying dependency on "roscpp"
-and "joy".
-
->     $ cd ~/my_ros/controllers/joystick/catkin_ws/src
->     $ catkin_create_pkg webots_joystick roscpp joy
-
-<!-- -->
-
-> **note**:
-Calling `catkin_create_pkg` must have created the directory "webots\_joystick"
-with the subdirectories "webots\_joystick/src" and "webots\_joystick/include"
-plus two files: "webots\_joystick/CMakeLists.txt" and
-"webots\_joystick/package.xml". The former is a CMake file that tells catkin how
-to build the ROS package, the latter is a description of the package where you
-can specify the package dependencies, the version number, the author name, the
-maintainer name, etc.
-
-<!-- -->
-
-> **note**:
-If you want to use the ROS command line tools (`roscd, rosls, rospack, ...`) to
-navigate and get information about the created package then you need to call
-`catkin_make` at the root of the catkin workspace and source the file
-"devel/setup.bash":
-
-        $ cd ~/my_ros/controllers/joystick/catkin_ws
-        $ catkin_make
-        $ source devel/setup.bash
-
-> Now the output of the command `rospack find webots_joystick` should be
-
-        ~/my_ros/controllers/joystick/catkin_ws/src/webots_joystick
-
-    The information on package first level dependencies which are displayed after
-    the `rospack depends1 webots_joystick` command should read as
-
-        joy
-        roscpp
-
-<!-- -->
-
-> **handson**:
-Copy the original ".cpp" controller file into your package resource directory.
-
->     $ cd ~/my_ros/controllers/joystick/catkin_ws/src/webots_joystick/src
->     $ cp $WEBOTS_MODULES_PATH/projects/languages/ros/controllers/joystick/catkin_ws/src/webots_joystick/src/webots_joystick_node.cpp .
-
-<!-- -->
-
-> **handson**:
-In the file "webots\_joystick/CMakeLists.txt" uncomment the line
-
->     #add_executable(webots_joystick_node src/webots_joystick_node.cpp)
-
-> and append the following lines
-
->     set(WEBOTS_HOME $ENV{WEBOTS_HOME})
->     add_definitions(-I${WEBOTS_HOME}/include/controller/cpp -I${WEBOTS_HOME}/include -Wall -I${WEBOTS_HOME}/include/controller/c -DLINUX)
->     find_library(CPP_CONTROLLER_LIBRARY CppController ${WEBOTS_HOME}/lib)
->     find_library(C_CONTROLLER_LIBRARY Controller ${WEBOTS_HOME}/lib)
->     target_link_libraries(webots_joystick_node ${catkin_LIBRARIES} ${C_CONTROLLER_LIBRARY} ${CPP_CONTROLLER_LIBRARY})
-
-> These lines tell catkin where to find the Webots controller libraries and to
-link the "webots\_joystick\_node" against them. (The comments indicate where to
-paste these lines appropriately; the distributed CMakeLists.txt file shows you
-the right places.)
-
-<!-- -->
-
-> **handson**:
-Build the webots\_joystick package. Then copy the resulting ROS node executable
-at the root of "controllers/joystick" and rename it appropriately.
-
->     $ cd ~/my_ros/controllers/joystick/catkin_ws
->     $ catkin_make
->     $ cp devel/lib/webots_joystick/webots_joystick_node ~/my_ros/controllers/joystick/joystick
-
-<!-- -->
-
-> **note**:
-Calling `catkin_make` created the directories "catkin\_ws/build" and
-"catkin\_ws/devel". You should source "catkin\_ws/devel/setup.bash" if you want
-to use ROS built-in commands to manage the "webots\_joystick" package.
-
-<!-- -->
-
-> **handson**:
-Have a look at the file
-"WEBOTS\_MODULES\_PATH/projects/languages/ros/controllers/joystick/Makefile".
-This file allows you to (re)compile the "joystick" controller from Webots build
-editor (edit the source file in Webots build editor and hit the build button).
-You may take inspiration from it when building other Webots-ROS projects.
-
-<!-- -->
-
-> **note**:
-In case you need to configure your joystick, please refer to the ROS joy
-tutorials.
-
-### Conclusion
-
-You should be able to run the "joystick" you just built as the original one
-(open "~/my\_ros/worlds/joystick.wbt" and hit the play button). You hence
-achieved a fully functional Webots controller implemented as a ROS node.
-Exploring further Webots C/C++ and Python APIs will allow you to integrate
-larger ROS frameworks.
+All the functions from the Webots API have their corresponding services or
+topics. You can find in the `Reference Manual` the definitions of all the
+services and topics associated with each device.
 

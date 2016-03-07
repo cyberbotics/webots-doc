@@ -148,7 +148,7 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 **wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
 
-{[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_touch_sensor)}
+{[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_touch_sensor)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/touch_sensor.h>
@@ -185,7 +185,7 @@ of type "force-3d" exclusively.
 
 **wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
 
-{[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
+{[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_servo)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/touch_sensor.h>
@@ -195,9 +195,9 @@ int wb_touch_sensor_get_type(WbDeviceTag tag)
 
 **Description**
 
-This function allows to retrieve the touch sensor type defined by the `type`
-field. If the value of the `type` field is "force" then this function returns
-WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
+This function allows the user to retrieve the touch sensor type defined by the
+`type` field. If the value of the `type` field is "force" then this function
+returns WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
 WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 
 %figure "Return values for the *wb_touch_sensor_get_type()* function"

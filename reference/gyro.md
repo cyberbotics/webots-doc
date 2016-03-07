@@ -42,7 +42,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 **wb\_gyro\_enable**, **wb\_gyro\_disable**, **wb\_gyro\_get\_sampling\_period**, **wb\_gyro\_get\_values** - *enable, disable and read the output values of the gyro device*
 
-{[C++](cpp-api.md#cpp_gyro)}, {[Java](java-api.md#java_gyro)}, {[Python](python-api.md#python_gyro)}, {[Matlab](matlab-api.md#matlab_gyro)}
+{[C++](cpp-api.md#cpp_gyro)}, {[Java](java-api.md#java_gyro)}, {[Python](python-api.md#python_gyro)}, {[Matlab](matlab-api.md#matlab_gyro)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/gyro.h>

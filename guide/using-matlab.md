@@ -20,11 +20,9 @@ running. In addition, it becomes possible to reuse your existing
 
 If *MATLAB*<sup>TM</sup> is already installed, you can directly launch one of
 the *MATLAB*<sup>TM</sup> examples. For doing that, start Webots and open the
-world file
-"WEBOTS\_MODULES\_PATH/projects/languages/matlab/worlds/e-puck\_matlab.wbt" or
-the world file
-"WEBOTS\_MODULES\_PATH/projects/robots/aldebaran/worlds/nao2\_matlab.wbt" in
-your Webots installation directory. Webots automatically starts
+world file "WEBOTS\_HOME/projects/languages/matlab/worlds/e-puck\_matlab.wbt" or
+the world file "WEBOTS\_HOME/projects/robots/aldebaran/worlds/nao2\_matlab.wbt"
+in your Webots installation directory. Webots automatically starts
 *MATLAB*<sup>TM</sup> when it detects an m-file in a controller directory. Note
 that the m-file must be named after its directory in order to be identified as a
 controller file by Webots. So, for example, if the directory is named

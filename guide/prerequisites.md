@@ -46,9 +46,9 @@ the simulations of this chapter.
 
 > **note**:
 As mentioned earlier in this chapter, the solutions of the tutorials are
-included in the "WEBOTS\_MODULES\_PATH/projects/samples/tutorials" subdirectory
-of Webots. Don't look at it now! Hopefully, your own "tutorials" directory
-should be pretty similar to that one at the end.
+included in the "WEBOTS\_HOME/projects/samples/tutorials" subdirectory of
+Webots. Don't look at it now! Hopefully, your own "tutorials" directory should
+be pretty similar to that one at the end.
 
 <!-- -->
 

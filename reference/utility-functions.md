@@ -32,16 +32,21 @@ inside a node named "HeadYaw", inside a node named "BLUE\_PLAYER\_1". Note that
 each dot (.) can be substituted by any number of named or unnamed nodes, so in
 other words it is not necessary to fully specify the path.
 
-This function returns NULL if there is no [Solid](solid.md) (or derived) node
-with the specified DEF name. It will also return NULL if the `physics` field of
-the [Solid](solid.md) node is undefined (NULL) or if the [Solid](solid.md) have
-been *merged* with an ancestor. Solid merging happens between rigidly linked
-solids with non NULL `physics` fields, see [Physics](physics.md)'s "Implicit
-solid merging and joints" for more details. This function searches the Scene
-Tree recursively, therefore it is recommended to store the result rather than
-calling it at each step. It is highly recommended to test for NULL returned
-values, because passing a NULL dBodyID to an ODE function is illegal and will
-crash the plugin and Webots.
+This function searches the Scene Tree recursively, therefore it is recommended
+to store the result rather than calling it at each step. It is highly
+recommended to test for NULL returned values, because passing a NULL dBodyID to
+an ODE function is illegal and will crash the plugin and Webots. This function
+returns NULL if there is no [Solid](solid.md) (or derived) node with the
+specified DEF name or if the `physics` field of the [Solid](solid.md) node is
+undefined (NULL).
+
+If the [Solid](solid.md) has been *merged* with a descendant or ancestor
+[Solid](solid.md) node, then the returned body won't match exactly the physics
+properties of the requested [Solid](solid.md) but the body will have the physics
+properties resulting from all the merged nodes. Solid merging happens between
+rigidly linked solids with non NULL `physics` fields, see Physics [ Implicit
+solid merging and joints](physics.md#implicit-solid-merging-and-joints) section
+for more details.
 
 ### dWebotsGetGeomFromDEF()
 
@@ -129,7 +134,7 @@ are received by the physics plugin through the `dWebotsReceive()` function.
 
 ```
 void dWebotsSend(int channel,const void *buffer,int size);
-void *dWebotsReceive(int *size);
+const void *dWebotsReceive(int *size);
 ```
 
 The `dWebotsSend()` function sends `size` bytes of data contained in `buffer`
@@ -148,7 +153,7 @@ and display of the returned data. The following example shows how to split
 concatenated string messages:
 
 >     int dataSize;
->     char *data = (char *)dWebotsReceive(&dataSize);
+>     const char *data = (const char *)dWebotsReceive(&dataSize);
 >     if (dataSize > 0) {
 >       char *msg = new char[dataSize];
 >       int count = 1, i = 0, j = 0;

@@ -76,7 +76,7 @@ by using the Braitenberg technique. The odometry of the e-puck is computed at
 each simulation steps. The accelerometer values and an estimation the coverage
 distance and the orientation of the e-puck are displayed. The source code for
 this controller is in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### e-puck_line.wbt
 
@@ -245,7 +245,7 @@ All the IPR robots use the same controller, whose source code is in the
 In this example, you can see a Khepera robot from K-Team moving inside an arena
 while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is located in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### khepera2.wbt
 
@@ -260,7 +260,7 @@ while avoiding the walls. Like many other examples, this one uses the
 In this example, you can see a Khepera II robot from K-Team moving inside an
 arena while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### khepera3.wbt
 
@@ -275,7 +275,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 In this example, you can see a Khepera III robot from K-Team moving inside an
 arena while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### khepera_kinematic.wbt
 
@@ -291,7 +291,7 @@ In this example, you can see two Khepera robots from K-Team moving inside an
 arena while avoiding each other and the walls. It is a good example of how to
 use teh kinematic mode of Webots. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### khepera_gripper.wbt
 
@@ -396,7 +396,7 @@ directory.
 In this example, you can see a Koala robot from K-Team moving inside an arena
 while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is located in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### magellan.wbt
 
@@ -412,7 +412,7 @@ In this example, you can see a Magellan robot moving inside an arena while
 avoiding the walls. As this robot is no longer produced, its world file is in
 the "others/worlds" directory. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is located in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### pioneer2.wbt
 
@@ -427,7 +427,7 @@ the "others/worlds" directory. Like many other examples, this one uses the
 In this example, you can see a Pioneer 2 robot from ActivMedia Robotics moving
 inside an arena while avoiding the walls. Like many other examples, this one
 uses the `braitenberg` controller. The source code for this controller is in the
-"WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg" directory.
+"WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### rover.wbt
 
@@ -461,8 +461,7 @@ directory.
 In this example, a Scout 2 robot moves inside an arena while avoiding the walls.
 Its world file is in the "others/worlds" directory. Like many other examples,
 this one uses the braitenberg controller. The source code for this controller is
-in the "WEBOTS\_MODULES\_PATH/projects/default/controllers/braitenberg"
-directory.
+in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 ### shrimp.wbt
 
@@ -492,9 +491,9 @@ plugins for:
 - how to create spongy tires
 
 The source code for this controller is in the
-"WEBOTS\_MODULES\_PATH/projects/robots/shrimp/controllers/shrimp" directory, and
-the ODE plugin is in the
-"WEBOTS\_MODULES\_PATH/projects/robots/shrimp/plugins/physics/shrimp" directory.
+"WEBOTS\_HOME/projects/robots/shrimp/controllers/shrimp" directory, and the ODE
+plugin is in the "WEBOTS\_HOME/projects/robots/shrimp/plugins/physics/shrimp"
+directory.
 
 ### bioloid.wbt
 
@@ -519,7 +518,7 @@ robot.
 
 The source code for the controller of the robot, as well as the model of the
 robot are located under the Webots installation directory, in the
-"WEBOTS\_MODULES\_PATH/projects/robots/bioloid" sub folder:
+"WEBOTS\_HOME/projects/robots/bioloid" sub folder:
 
 - "controllers/bioloid/": controller directory.
 - "worlds/bioloid.wbt": world definition file containing a Bioloid dog robot.

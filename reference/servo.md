@@ -531,9 +531,9 @@ In Python use `float('+inf')` instead of INFINITY
 > **note** [Matlab]:
 In MATLAB use `inf` instead of INFINITY
 
-The `wb_servo_get_target_position()` function allows to get the target position.
-This value matches with the argument given to the last `wb_servo_set_position()`
-function call.
+The `wb_servo_get_target_position()` function allows the user to get the target
+position. This value matches with the argument given to the last
+`wb_servo_set_position()` function call.
 
 The `wb_servo_set_velocity()` function specifies the velocity that servo should
 reach while moving to the target position. In other words, this means that the
@@ -717,8 +717,8 @@ int wb_servo_get_type(WbDeviceTag tag)
 
 **Description**
 
-This function allows to retrieve the servo type defined by the `type` field. If
-the value of the `type` field is "linear", this function returns
+This function allows the user to retrieve the servo type defined by the `type`
+field. If the value of the `type` field is "linear", this function returns
 WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 
 %figure "Return values for the *wb_servo_get_type()* function"

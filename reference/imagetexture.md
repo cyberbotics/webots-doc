@@ -73,7 +73,7 @@ the following rule:
 ```
 
 i = current_url_index
-generic_textures_path = "$WEBOTS_MODULES_PATH/projects/default/worlds"
+generic_textures_path = "$WEBOTS_HOME/projects/default/worlds"
 if is_absolute(url[i]) then
   if is_existing(url[i])
     return url[i]

@@ -1,16 +1,25 @@
 ## Buildings
 
+%figure "One of the available buildings"
+
+![bungalow_style_house.png](images/bungalow_style_house.png)
+
+%end
+
 The following PROTOs of buildings are available to add in your worlds:
 
 - Auditorium
 - BigGlassTower
 - BuildingUnderConstruction
+- BungalowStyleHouse
 - CommercialBuilding
 - CyberboticsTower
 - HollowBuilding
 - Hotel
+- ModernHouse
 - Museum
 - ResidentialBuilding
+- SimpleTwoFloorsHouse
 - TheThreeTowers
 - UBuilding
 
@@ -55,4 +64,19 @@ roof` and `pyramidal roof`.
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
 roof).
 - `enableBoundingObject`: Defines if the building should have a bounding object.
+
+### Other city objects
+
+In addition to buildings, other PROTO nodes are available representing objects
+normally found in a city environment:
+
+- BusStop
+- Fence
+- Fountain
+
+%figure "The BusStop PROTO"
+
+![bus_stop.png](images/bus_stop.png)
+
+%end
 

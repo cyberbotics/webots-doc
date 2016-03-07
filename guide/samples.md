@@ -3,10 +3,10 @@
 This section provides a list of interesting worlds that broadly illustrate
 Webots capabilities. Several of these examples have stemmed from research or
 teaching projects. You will find the corresponding ".wbt" files in the
-"WEBOTS\_MODULES\_PATH/projects/samples/demos/worlds" directory, and their
-controller source code in the
-"WEBOTS\_MODULES\_PATH/projects/samples/demos/controllers" directory. For each
-demo, the world file and its corresponding controller have the same name.
+"WEBOTS\_HOME/projects/samples/demos/worlds" directory, and their controller
+source code in the "WEBOTS\_HOME/projects/samples/demos/controllers" directory.
+For each demo, the world file and its corresponding controller have the same
+name.
 
 ### blimp_lis.wbt
 

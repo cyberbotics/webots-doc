@@ -202,12 +202,33 @@ green and blue.
 The `Show Joint axes` allows to display, or to hide, the joint axes. The joint
 axes are represented by black lines.
 
+The `Show RangeFinder frustums` allows to display, or to hide, the OpenGL
+culling frustum and the recorded image for every range-finder in the scene,
+using a yellow wire frame. The OpenGL culling frustum is a truncated pyramid
+corresponding to the field of view of a range-finder. The recorded image is
+displayed on the plane described by the frustum at a distance corresponding to
+the minimum range of the range-finder from the device center. More information
+about this concept is available in the OpenGL documentation.
+
+The `Show Lidar Rays Paths` allows to display, or to hide, the layers (the laser
+ray paths) for every lidar in the scene, using a cyan wire frame.
+
+The `Show Lidar Point Cloud` allows to display, or to hide, the point cloud for
+every lidar enabled in point cloud mode in the scene. The point cloud is
+represented by the location of the points themselves and by the rays from the
+lidar origin to the points using a gradient from blue (top layer) to red (bottom
+layer). This optional rendering is computationally expensive and can therefore
+significantly slow-down the simulation speed. Note that if the point cloud
+contains more than 2500 points, the rays from the lidar origin to the point are
+not displayed.
+
 The `Show Camera frustums` allows to display, or to hide, the OpenGL culling
-frustum for every camera in the scene, using a magenta wire frame. The OpenGL
-culling frustum is a truncated pyramid corresponding to the field of view of a
-camera. The back of the pyramid is not represented because the far plane is set
-to infinity. More information about this concept is available in the OpenGL
-documentation.
+frustum and the recorded image for every camera in the scene, using a magenta
+wire frame. The OpenGL culling frustum is a truncated pyramid corresponding to
+the field of view of a camera. The back of the pyramid is not represented
+because the far plane is set to infinity. The recorded image is displayed on the
+camera's near plane. More information about this concept is available in the
+OpenGL documentation.
 
 The `Show Distance Sensor rays` allows to display, or to hide, the rays casted
 by the distance sensor devices. These rays are drawn as red lines (which become
@@ -241,7 +262,7 @@ modifying the visible and selected fields in the scene tree.
 
 ### Simulation Menu
 
-The `Simulation` menu is used to control the execution of the simulation.
+The `Simulation` menu is used to control the simulation mode.
 
 ![](images/pause-button.png =26x26) The `Pause` menu item (and button) pauses
 the simulation.
@@ -287,8 +308,18 @@ checking or unchecking the corresponding item. Camera overlays differ from the
 display overlays because of their magenta border. Note that if the `Hide All
 Camera Overlays` item is checked, then the camera device overlays will not be
 visible in the 3D view independently from the status of `Camera Devices` menu
-items. A `Camera Devices` menu  item is disabled if the overlay's texture is
+items. A `Camera Devices` menu item is disabled if the overlay's texture is
 shown in an external window by double-clicking on it.
+
+The `RangeFinder Devices` submenu contains the list of all the range-finder
+devices of the selected robot and lets the user show or hide single range-finder
+overlay images by checking or unchecking the corresponding item. Range-finder
+overlays differ from the camera overlays because of their yellow border. Note
+that if the `Hide All RangeFinder Overlays` item is checked, then the
+range-finder device overlays will not be visible in the 3D view independently
+from the status of `RangeFinder Devices` menu items. A `RangeFinder Devices`
+menu item is disabled if the overlay's texture is shown in an external window by
+double-clicking on it.
 
 The `Display Devices` submenu contains the list of all the display devices of
 the selected robot and lets the user show or hide single display overlay images
@@ -305,6 +336,10 @@ robot in the world:
 The `Hide All Camera Overlays` option hides all the camera devices overlays in
 the 3D view independently from the specific robot's device option set in `Camera
 Devices` submenu.
+
+The `Hide All RangeFinder Overlays` option hides all the camera devices overlays
+in the 3D view independently from the specific robot's device option set in
+`RangeFinder Devices` submenu.
 
 The `Hide All Display Overlays` option hides all the display devices overlays in
 the 3D view independently from the specific robot's device option set in
@@ -338,13 +373,12 @@ The `Edit Physics Plugin` menu item opens the source code of the physics plugin
 in the text editor.
 
 The `License Manager...` item opens the `Webots License Manager` window that
-allows you to see which license modules are in use and optionally to transfer
-some license modules to your local computer for off-line use. Please note that
-the transfer of license modules may be limited by your local license
-administrator: It may not be possible to transfer some modules to your local
-computer or only for a limited duration depending on the configuration defined
-by your local license administrator. Please ask your local license administrator
-in case of problem.
+allows you to see which licenses are in use and optionally to transfer some
+license to your local computer for off-line use. Please note that the transfer
+of license may be limited by your local license administrator: It may not be
+possible to transfer some license to your local computer or only for a limited
+duration depending on the configuration defined by your local license
+administrator. Please ask your local license administrator in case of problem.
 
 The `Preferences` item pops up a window described in [this
 section](preferences.md).

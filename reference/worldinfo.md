@@ -17,6 +17,8 @@ WorldInfo {
   SFNode     defaultDamping                 NULL     # default damping parameters
   SFFloat    inkEvaporation                 0        # make ground textures evaporate
   SFVec3f    northDirection                 1 0 0    # for compass and InertialUnit
+  SFString   gpsCoordinateSystem            "local"  # should either be 'local' or 'WGS84'
+  SFVec3f    gpsReference                   0 0 0    # defines the offset for each coordinate [m]
   SFFloat    lineScale                      0.1      # control the length of every arbitrary-sized lines
   MFNode     contactProperties              []       # see ContactProperties node
 }
@@ -119,6 +121,20 @@ not updated on the controller side).
 - The `northDirection` field is used to indicate the direction of the *virtual
 north* and is used by [Compass](compass.md) and [InertialUnit](inertialunit.md)
 nodes.
+- The `gpsCoordinateSystem` field is used to indicate in which coordinate system
+are expressed the coordinates returned by the GPS devices. If the value is
+`WGS84` the World Geodetic System `WGS84` and an Universal Transverse Mercatoris
+projection are used to compute the latitude, altitude and longitude from the
+cartesian coordinates of the device, otherwise, if the value is `local` the
+cartesian coordinates of the device are directly returned as is.
+- The `gpsReference` field is used to specify the GPS reference point. The value
+should be set in meters for each coordinates if the `gpsCoordinateSystem` is
+`local`, and in decimal degree and meters for respectively the latitude,
+longitude and height if the `gpsCoordinateSystem` is `WGS84`. The reference
+vector is simply added to the position of the GPS device in case of `local`
+coordinates. In case of `WGS84` coordinates, the the latitude, longitude and
+altitude should correspond to the latitude, longitude and altitude of the center
+of the cartesian coordinate system of Webots.
 - The `lineScale` field allows the user to control the size of the optionally
 rendered arbitrary-sized lines or objects such as the connector and the hinge
 axes, the local coordinate systems and centers of mass of solid nodes, the rays

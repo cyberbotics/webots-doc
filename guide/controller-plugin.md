@@ -162,9 +162,9 @@ located there:
 
 Other samples can be found:
 
-`WEBOTS_MODULES_PATH/projects/robots/e-puck/plugins/robot_windows/botstudio`
+`WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/botstudio`
 
-`WEBOTS_MODULES_PATH/projects/robots/e-puck/plugins/robot_windows/e-puck_window`
+`WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/e-puck_window`
 
 ### Qt utility library
 
@@ -300,5 +300,5 @@ remote-control library when the distance sensor is refreshed (typically into the
 A complete sample (communicating with the e-puck robot using bluetooth) can be
 found in this directory:
 
-`WEBOTS_MODULES_PATH/projects/robots/e-puck/plugins/remote_controls/e-puck_bluetooth`
+`WEBOTS_HOME/projects/robots/e-puck/plugins/remote_controls/e-puck_bluetooth`
 

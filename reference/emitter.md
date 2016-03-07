@@ -96,7 +96,7 @@ range` and `aperture` will be ignored.
 
 **wb\_emitter\_send** - *send a data packet to potential receivers*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/emitter.h>
@@ -167,7 +167,7 @@ in a C/C++ controller.
 
 **wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/emitter.h>
@@ -197,7 +197,7 @@ static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 
 **wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/emitter.h>
@@ -223,7 +223,7 @@ returns the current emitter's range. For both the `wb_emitter_set_range()` and
 
 **wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}
+{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/emitter.h>

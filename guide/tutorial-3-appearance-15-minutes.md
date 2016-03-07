@@ -71,17 +71,16 @@ rolling object can help to appreciate its movement.
 Similarly add an Appearance node to the ball. Instead of a Material node, add an
 ImageTexture node to the `texture` field of the Appearance node. Add an item to
 the `url` field using the `Add` button. Then set the value of the newly added
-`url` item to
-"WEBOTS\_MODULES\_PATH/projects/default/worlds/textures/bricks.png" using the
-file selection dialog.
+`url` item to "WEBOTS\_HOME/projects/default/worlds/textures/bricks.png" using
+the file selection dialog.
 
 <!-- -->
 
 > **note**:
 The texture URLs must be defined either relative to the "worlds" directory of
 your project directory or relative to the default project directory
-"WEBOTS\_MODULES\_PATH/projects/default/worlds". In the default project
-directory you will find textures that are available for every world.
+"WEBOTS\_HOME/projects/default/worlds". In the default project directory you
+will find textures that are available for every world.
 
 <!-- -->
 

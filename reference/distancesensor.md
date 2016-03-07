@@ -223,7 +223,7 @@ The ground texture must be placed in a [Plane](plane.md).
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}
+{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/distance_sensor.h>
@@ -249,4 +249,65 @@ into the `wb_distance_sensor_enable()` function, or 0 if the device is disabled.
 specified distance sensor. This value is computed by the simulator according to
 the lookup table of the [DistanceSensor](#distancesensor) node. Hence, the range
 of the return value is defined by this lookup table.
+
+---
+
+<a name="wb_distance_sensor_get_max_range">**Name**</a>
+
+**wb\_distance\_sensor\_get\_max\_range**, **wb\_distance\_sensor\_get\_min\_range**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum range, minimum range and aperture*
+
+{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+
+``` c
+#include <webots/distance_sensor.h>
+
+double wb_distance_sensor_get_max_range(WbDeviceTag tag)
+double wb_distance_sensor_get_min_range(WbDeviceTag tag)
+double wb_distance_sensor_get_aperture(WbDeviceTag tag)
+```
+
+**Description**
+
+`wb_distance_sensor_get_max_range()` returns the maximum range of the distance
+sensor in meter.
+
+`wb_distance_sensor_get_min_range()` returns the minimum range of the distance
+sensor in meter.
+
+The `wb_distance_sensor_get_aperture()` returns the aperture of the distance
+sensor in radians.
+
+---
+
+<a name="wb_distance_sensor_get_type">**Name**</a>
+
+**wb\_distance\_sensor\_get\_type** - *Return the sensor type*
+
+{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+
+``` c
+#include <webots/distance_sensor.h>
+
+int wb_distance_sensor_get_type(WbDeviceTag tag)
+```
+
+**Description**
+
+This function allows the user to retrieve the distance sensor type defined by
+the `type` field. If the value of the `type` field is "laser" then this function
+returns WB\_DISTANCE\_SENSOR\_LASER, if it is "infra-red" then it returns
+WB\_DISTANCE\_SENSOR\_INFRA\_RED, if it is "sonar" then it returns
+WB\_DISTANCE\_SENSOR\_SONAR and otherwise it returns
+WB\_DISTANCE\_SENSOR\_GENERIC.
+
+%figure "Return values for the *wb_distance_sensor_get_type()* function"
+
+| DistanceSensor.type | return value                     |
+| ------------------- | -------------------------------- |
+| "generic"           | WB\_DISTANCE\_SENSOR\_GENERIC    |
+| "infra-red"         | WB\_DISTANCE\_SENSOR\_INFRA\_RED |
+| "sonar"             | WB\_DISTANCE\_SENSOR\_SONAR      |
+| "laser"             | WB\_DISTANCE\_SENSOR\_LASER      |
+
+%end
 

@@ -22,11 +22,11 @@ comes to get energy, it can't get more than the charger has presently
 accumulated.
 
 The appearance of the [Charger](#charger) node can be altered by its current
-energy. When the [Charger](#charger) node is full, the resulted color
+energy. When the [Charger](#charger) node is full, the resulting color
 corresponds to its `emissiveColor` field, while when the [Charger](#charger)
-node is empty, its resulted color corresponds to its original one. Intermediate
+node is empty, its resulting color corresponds to its original one. Intermediate
 colors depend on the `gradual` field. Only the first child of the
-[Charger](#charger) node is affected by this alteration. The resulted color is
+[Charger](#charger) node is affected by this alteration. The resulting color is
 applied only on the first child of the [Charger](#charger) node. If the first
 child is a [Shape](shape.md) node, the `emissiveColor` field of its
 [Material](material.md) node is altered. If the first child is a

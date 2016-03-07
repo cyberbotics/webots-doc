@@ -49,8 +49,8 @@ figure](#the-pioneer-3-at-model-in-webots). This model includes support for 4
 motors and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity
 measurements. The standard model of the Pioneer 3-AT is provided in the
 "pioneer3AT.wbt" file which is located in the
-"WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3at/worlds" directory of
-the Webots distribution.
+"WEBOTS\_HOME/projects/robots/pioneer/pioneer3at/worlds" directory of the Webots
+distribution.
 
 %figure "Pioneer 3-AT motor names"
 
@@ -61,8 +61,7 @@ the Webots distribution.
 The "pioneer3at.wbt" world file is a simulation example of a simple obstacle
 avoidance behavior based on the use of a SICK LIDAR (see the
 "obstacle\_avoidance\_with\_lidar.c" controller file in the
-"WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3at/controller"
-directory).
+"WEBOTS\_HOME/projects/robots/pioneer/pioneer3at/controller" directory).
 
 The Pioneer 3-AT motors are RotationalMotor nodes named according to [this
 figure](#pioneer-3-at-motor-names). The `wb_set_motor_position()` and
@@ -134,8 +133,8 @@ figure](#the-pioneer-3-dx-model-in-webots). This model includes support for two
 motors, the caster wheel, 7 LEDs on the control panel and 16 sonar sensors (8
 forward-facing, 8 rear-facing) for proximity measurements. The standard model of
 the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in
-the "WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3dx/worlds" directory
-of the Webots distribution.
+the "WEBOTS\_HOME/projects/robots/pioneer/pioneer3dx/worlds" directory of the
+Webots distribution.
 
 %figure "Pioneer 3-DX motor names"
 
@@ -146,11 +145,10 @@ of the Webots distribution.
 The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg
 avoidance algorithm based on the use of the 16 sonar sensors (see the
 "braitenberg.c" controller file in the
-"WEBOTS\_MODULES\_PATH/projects/robots/pioneer/pioneer3dx/controller"
-directory). The "pioneer3dx\_with\_kinect.wbt" world file in the same directory
-is a simple simulation example of an obstacle avoidance behaviour based on a
-Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller
-file).
+"WEBOTS\_HOME/projects/robots/pioneer/pioneer3dx/controller" directory). The
+"pioneer3dx\_with\_kinect.wbt" world file in the same directory is a simple
+simulation example of an obstacle avoidance behaviour based on a Microsoft
+kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
 
 The Pioneer 3-DX motors are RotationalMotor nodes named according to [this
 figure](#pioneer-3-dx-motor-names). The `wb_set_motor_position()` and

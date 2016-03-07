@@ -2,10 +2,10 @@
 
 This section gives various examples of complexe behaviours and/or
 functionalities. The world files are located in the
-"WEBOTS\_MODULES\_PATH/projects/samples/howto/world" directory, and their
-controllers in the "WEBOTS\_MODULES\_PATH/projects/samples/howto/controllers"
-directory. For each, the world file and its corresponding controller are named
-according to the behaviour they exemplify.
+"WEBOTS\_HOME/projects/samples/howto/world" directory, and their controllers in
+the "WEBOTS\_HOME/projects/samples/howto/controllers" directory. For each, the
+world file and its corresponding controller are named according to the behaviour
+they exemplify.
 
 ### binocular.wbt
 

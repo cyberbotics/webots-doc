@@ -140,7 +140,7 @@ initial elevation throughout the simulation.
 
 **wb\_differential\_wheels\_set\_speed** - *control the speed of the robot*
 
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}
+{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -174,7 +174,7 @@ function.
 
 **wb\_differential\_wheels\_enable\_encoders**, **wb\_differential\_wheels\_disable\_encoders**, **wb\_differential\_wheels\_get\_encoders\_sampling\_period** - *enable or disable the incremental encoders of the robot wheels*
 
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}
+{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -216,7 +216,7 @@ if the device is disabled.
 
 **wb\_differential\_wheels\_get\_left\_encoder**, **wb\_differential\_wheels\_get\_right\_encoder**, **wb\_differential\_wheels\_set\_encoders** - *read or set the encoders of the robot wheels*
 
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}
+{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -242,7 +242,7 @@ instead, it will simply reset the encoders with the specified value.
 
 **wb\_differential\_wheels\_get\_max\_speed** - *get the value of the maxSpeed field*
 
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}
+{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>
@@ -262,7 +262,7 @@ node.
 
 **wb\_differential\_wheels\_get\_speed\_unit** - *get the value of the speedUnit field*
 
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}
+{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/differential_wheels.h>

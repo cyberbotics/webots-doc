@@ -1,18 +1,18 @@
-## CameraZoom
+## Zoom
 
 ```
-CameraZoom {
-  SFFloat     maxFieldOfView 1.5 # (rad)
-  SFFloat     minFieldOfView 0.5 # (rad)
-}
+Zoom {
+   SFFloat     maxFieldOfView 1.5 # (rad)
+   SFFloat     minFieldOfView 0.5 # (rad)
+ }
 ```
 
 ### Description
 
-The [CameraZoom](#camerazoom) node allows the user to define a controllable zoom
-for a [Camera](camera.md) device. The [CameraZoom](#camerazoom) node should be
-set in the `zoom` field of a [Camera](camera.md) node. The zoom level can be
-adjusted from the controller program using the `wb_camera_set_fov()` function.
+The [Zoom](#zoom) node allows the user to define a controllable zoom for a
+[Camera](camera.md) device. The [Zoom](#zoom) node should be set in the `zoom`
+field of a [Camera](camera.md) node. The zoom level can be adjusted from the
+controller program using the `wb_camera_set_fov()` function.
 
 ### Field Summary
 

@@ -26,8 +26,6 @@ The following tables describe the Matlab functions.
 
 | % [Camera](camera.md) :                                                                        |
 | ---------------------------------------------------------------------------------------------- |
-| WB\_CAMERA\_COLOR                                                                              |
-| WB\_CAMERA\_RANGE\_FINDER                                                                      |
 | [wb\_camera\_enable](camera.md#wb_camera_enable)(tag, ms)                                      |
 | [wb\_camera\_disable](camera.md#wb_camera_enable)(tag)                                         |
 | period = [wb\_camera\_get\_sampling\_period](camera.md#wb_camera_enable)(tag)                  |
@@ -43,10 +41,7 @@ The following tables describe the Matlab functions.
 | width = [wb\_camera\_get\_width](camera.md#wb_camera_get_width)(tag)                           |
 | height = [wb\_camera\_get\_height](camera.md#wb_camera_get_width)(tag)                         |
 | near = [wb\_camera\_get\_near](camera.md#wb_camera_get_near)(tag)                              |
-| type = [wb\_camera\_get\_type](camera.md#wb_camera_get_type)(tag)                              |
 | image = [wb\_camera\_get\_image](camera.md#wb_camera_get_image)(tag)                           |
-| image = [wb\_camera\_get\_range\_image](camera.md#wb_camera_get_range_image)(tag)              |
-| max\_range = [wb\_camera\_get\_max\_range](camera.md#wb_camera_get_range_image)(tag)           |
 | [wb\_camera\_save\_image](camera.md#wb_camera_save_image)(tag, 'filename', quality)            |
 
 %end
@@ -64,13 +59,14 @@ The following tables describe the Matlab functions.
 
 %api "matlab_connector"
 
-| % [Connector](connector.md) :                                                          |
-| -------------------------------------------------------------------------------------- |
-| [wb\_connector\_enable\_presence](connector.md#wb_connector_get_presence)(tag, ms)     |
-| [wb\_connector\_disable\_presence](connector.md#wb_connector_get_presence)(tag)        |
-| presence = [wb\_connector\_get\_presence](connector.md#wb_connector_get_presence)(tag) |
-| [wb\_connector\_lock](connector.md#wb_connector_lock)(tag)                             |
-| [wb\_connector\_unlock](connector.md#wb_connector_lock)(tag)                           |
+| % [Connector](connector.md) :                                                                          |
+| ------------------------------------------------------------------------------------------------------ |
+| [wb\_connector\_enable\_presence](connector.md#wb_connector_get_presence)(tag, ms)                     |
+| [wb\_connector\_disable\_presence](connector.md#wb_connector_get_presence)(tag)                        |
+| period = [wb\_connector\_get\_presence\_sampling\_period](connector.md#wb_connector_get_presence)(tag) |
+| presence = [wb\_connector\_get\_presence](connector.md#wb_connector_get_presence)(tag)                 |
+| [wb\_connector\_lock](connector.md#wb_connector_lock)(tag)                                             |
+| [wb\_connector\_unlock](connector.md#wb_connector_lock)(tag)                                           |
 
 %end
 
@@ -135,12 +131,18 @@ The following tables describe the Matlab functions.
 
 %api "matlab_distance_sensor"
 
-| % [DistanceSensor](distancesensor.md) :                                                                     |
-| ----------------------------------------------------------------------------------------------------------- |
-| [wb\_distance\_sensor\_enable](distancesensor.md#wb_distance_sensor_get_value)(tag, ms)                     |
-| [wb\_distance\_sensor\_disable](distancesensor.md#wb_distance_sensor_get_value)(tag)                        |
-| period = [wb\_distance\_sensor\_get\_sampling\_period](distancesensor.md#wb_distance_sensor_get_value)(tag) |
-| value = [wb\_distance\_sensor\_get\_value](distancesensor.md#wb_distance_sensor_get_value)(tag)             |
+| % [DistanceSensor](distancesensor.md) :                                                                       |
+| ------------------------------------------------------------------------------------------------------------- |
+| WB\_DISTANCE\_SENSOR\_GENERIC, WB\_DISTANCE\_SENSOR\_INFRA\_RED,                                              |
+| WB\_DISTANCE\_SENSOR\_SONAR, WB\_DISTANCE\_SENSOR\_LASER                                                      |
+| [wb\_distance\_sensor\_enable](distancesensor.md#wb_distance_sensor_get_value)(tag, ms)                       |
+| [wb\_distance\_sensor\_disable](distancesensor.md#wb_distance_sensor_get_value)(tag)                          |
+| period = [wb\_distance\_sensor\_get\_sampling\_period](distancesensor.md#wb_distance_sensor_get_value)(tag)   |
+| value = [wb\_distance\_sensor\_get\_value](distancesensor.md#wb_distance_sensor_get_value)(tag)               |
+| max\_range = [wb\_distance\_sensor\_get\_max\_range](distancesensor.md#wb_distance_sensor_get_max_range)(tag) |
+| min\_range = [wb\_distance\_sensor\_get\_min\_range](distancesensor.md#wb_distance_sensor_get_max_range)(tag) |
+| aperture = [wb\_distance\_sensor\_get\_aperture](distancesensor.md#wb_distance_sensor_get_max_range)(tag)     |
+| type = [wb\_distance\_sensor\_get\_type](distancesensor.md#wb_distance_sensor_get_value)(tag)                 |
 
 %end
 
@@ -160,12 +162,16 @@ The following tables describe the Matlab functions.
 
 %api "matlab_gps"
 
-| % [GPS](gps.md) :                                                        |
-| ------------------------------------------------------------------------ |
-| [wb\_gps\_enable](gps.md#wb_gps_get_values)(tag, ms)                     |
-| [wb\_gps\_disable](gps.md#wb_gps_get_values)(tag)                        |
-| period = [wb\_gps\_get\_sampling\_period](gps.md#wb_gps_get_values)(tag) |
-| [x y z] = [wb\_gps\_get\_values](gps.md#wb_gps_get_values)(tag)          |
+| % [GPS](gps.md) :                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| WB\_GPS\_LOCAL\_COORDINATE, WB\_GPS\_WGS84\_COORDINATE,                                                                                 |
+| [wb\_gps\_enable](gps.md#wb_gps_get_values)(tag, ms)                                                                                    |
+| [wb\_gps\_disable](gps.md#wb_gps_get_values)(tag)                                                                                       |
+| period = [wb\_gps\_get\_sampling\_period](gps.md#wb_gps_get_values)(tag)                                                                |
+| [x y z] = [wb\_gps\_get\_values](gps.md#wb_gps_get_values)(tag)                                                                         |
+| speed = [wb\_gps\_get\_speed](gps.md#wb_gps_get_values)(tag)                                                                            |
+| coordinate\_system = [wb\_gps\_get\_coordinate\_system](gps.md#wb_gps_get_coordinate_system)(tag)                                       |
+| coordinate = [wb\_gps\_convert\_to\_degrees\_minutes\_seconds](gps.md#wb_gps_convert_to_degrees_minutes_seconds)(tag, decimal\_degrees) |
 
 %end
 
@@ -197,6 +203,30 @@ The following tables describe the Matlab functions.
 | ---------------------------------------------- |
 | [wb\_led\_set](led.md#wb_led_set)(tag, state)  |
 | state = [wb\_led\_get](led.md#wb_led_set)(tag) |
+
+%end
+
+%api "matlab_lidar"
+
+| % [Lidar](lidar.md) :                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------- |
+| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, ms);                                                              |
+| &nbsp;&nbsp; [wb\_lidar\_enable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                        |
+| &nbsp;&nbsp; [wb\_lidar\_disable](lidar.md#wb_lidar_enable)(tag);                                                                 |
+| &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                       |
+| &nbsp;&nbsp; period = [wb\_lidar\_get\_sampling\_period](lidar.md#wb_lidar_enable)(tag);                                          |
+| &nbsp;&nbsp; state = [wb\_lidar\_is\_point\_cloud\_enabled](lidar.md#wb_lidar_enable)(tag);                                       |
+| &nbsp;&nbsp; number\_of\_points = [wb\_lidar\_get\_number\_of\_points](lidar.md#wb_lidar_get_point_cloud)(tag);                   |
+| &nbsp;&nbsp; frequency = [wb\_lidar\_get\_frequency](lidar.md#wb_lidar_get_frequency)(tag);                                       |
+| &nbsp;&nbsp; [wb\_lidar\_set\_frequency](lidar.md#wb_lidar_get_frequency)(tag, frequency);                                        |
+| &nbsp;&nbsp; horizontal\_resolution = [wb\_lidar\_get\_horizontal\_resolution](lidar.md#wb_lidar_get_horizontal_resolution)(tag); |
+| &nbsp;&nbsp; number\_of\_layers = [wb\_lidar\_get\_number\_of\_layers](lidar.md#wb_lidar_get_horizontal_resolution)(tag);         |
+| &nbsp;&nbsp; min\_frequency = [wb\_lidar\_get\_min\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag);                         |
+| &nbsp;&nbsp; max\_frequency = [wb\_lidar\_get\_max\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag);                         |
+| &nbsp;&nbsp; fov = [wb\_lidar\_get\_fov](lidar.md#wb_lidar_get_fov)(tag);                                                         |
+| &nbsp;&nbsp; vertical\_fov = [wb\_lidar\_get\_vertical\_fov](lidar.md#wb_lidar_get_fov)(tag);                                     |
+| &nbsp;&nbsp; min\_range = [wb\_lidar\_get\_min\_range](lidar.md#wb_lidar_get_min_range)(tag);                                     |
+| &nbsp;&nbsp; max\_range = [wb\_lidar\_get\_max\_range](lidar.md#wb_lidar_get_min_range)(tag);                                     |
 
 %end
 
@@ -265,9 +295,9 @@ The following tables describe the Matlab functions.
 
 %api "matlab_node"
 
-| Node:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WB\_NODE\_NO\_NODE, WB\_NODE\_ACCELEROMETER, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, WB\_NODE\_BALL\_JOINT, WB\_NODE\_BALL\_JOINT\_PARAMETERS, WB\_NODE\_BOX, WB\_NODE\_BRAKE, WB\_NODE\_CAMERA, WB\_NODE\_CAMERA\_FOCUS, WB\_NODE\_CAMERA\_LENS\_DISTORTION, WB\_NODE\_CAMERA\_ZOOM, WB\_NODE\_CAPSULE, WB\_NODE\_CHARGER, WB\_NODE\_COLOR, WB\_NODE\_COMPASS, WB\_NODE\_CONE, WB\_NODE\_CONNECTOR, WB\_NODE\_CONTACT\_PROPERTIES, WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, WB\_NODE\_DAMPING, WB\_NODE\_DIFFERENTIAL\_WHEELS, WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_DISPLAY, WB\_NODE\_DISTANCE\_SENSOR, WB\_NODE\_ELEVATION\_GRID, WB\_NODE\_EMITTER, WB\_NODE\_EXTRUSION, WB\_NODE\_FLUID, WB\_NODE\_FOG, WB\_NODE\_GPS, WB\_NODE\_GROUP, WB\_NODE\_GYRO, WB\_NODE\_HINGE\_2\_JOINT, WB\_NODE\_HINGE\_2\_JOINT\_PARAMETERS, WB\_NODE\_HINGE\_JOINT, WB\_NODE\_HINGE\_JOINT\_PARAMETERS, WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_IMMERSION\_PROPERTIES, WB\_NODE\_INDEXED\_FACE\_SET, WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_INERTIAL\_UNIT, WB\_NODE\_JOINT\_PARAMETERS, WB\_NODE\_LED, WB\_NODE\_LIGHT\_SENSOR, WB\_NODE\_LINEAR\_MOTOR, WB\_NODE\_MATERIAL, WB\_NODE\_MICROPHONE, WB\_NODE\_PEN, WB\_NODE\_PHYSICS, WB\_NODE\_PLANE, WB\_NODE\_POINT\_LIGHT, WB\_NODE\_POSITION\_SENSOR, WB\_NODE\_PROPELLER, WB\_NODE\_RADIO, WB\_NODE\_RECEIVER, WB\_NODE\_ROBOT, WB\_NODE\_ROTATIONAL\_MOTOR, WB\_NODE\_SERVO, WB\_NODE\_SHAPE, WB\_NODE\_SLIDER\_JOINT, WB\_NODE\_SLOT, WB\_NODE\_SOLID, WB\_NODE\_SOLID\_REFERENCE, WB\_NODE\_SPEAKER, WB\_NODE\_SPHERE, WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SUPERVISOR, WB\_NODE\_SWITCH, WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, WB\_NODE\_TOUCH\_SENSOR, WB\_NODE\_TRACK, WB\_NODE\_TRACK\_WHEEL, WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO |
+| Node:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WB\_NODE\_NO\_NODE, WB\_NODE\_ACCELEROMETER, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, WB\_NODE\_BALL\_JOINT, WB\_NODE\_BALL\_JOINT\_PARAMETERS, WB\_NODE\_BOX, WB\_NODE\_BRAKE, WB\_NODE\_CAMERA, WB\_NODE\_CAPSULE, WB\_NODE\_CHARGER, WB\_NODE\_COLOR, WB\_NODE\_COMPASS, WB\_NODE\_CONE, WB\_NODE\_CONNECTOR, WB\_NODE\_CONTACT\_PROPERTIES, WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, WB\_NODE\_DAMPING, WB\_NODE\_DIFFERENTIAL\_WHEELS, WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_DISPLAY, WB\_NODE\_DISTANCE\_SENSOR, WB\_NODE\_ELEVATION\_GRID, WB\_NODE\_EMITTER, WB\_NODE\_EXTRUSION, WB\_NODE\_FLUID, WB\_NODE\_FOCUS, WB\_NODE\_FOG, WB\_NODE\_GPS, WB\_NODE\_GROUP, WB\_NODE\_GYRO, WB\_NODE\_HINGE\_2\_JOINT, WB\_NODE\_HINGE\_2\_JOINT\_PARAMETERS, WB\_NODE\_HINGE\_JOINT, WB\_NODE\_HINGE\_JOINT\_PARAMETERS, WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_IMMERSION\_PROPERTIES, WB\_NODE\_INDEXED\_FACE\_SET, WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_INERTIAL\_UNIT, WB\_NODE\_JOINT\_PARAMETERS, WB\_NODE\_LED, WB\_NODE\_LIDAR, WB\_NODE\_LIGHT\_SENSOR, WB\_NODE\_LINEAR\_MOTOR, WB\_NODE\_LENS\_DISTORTION, WB\_NODE\_MATERIAL, WB\_NODE\_MICROPHONE, WB\_NODE\_PEN, WB\_NODE\_PHYSICS, WB\_NODE\_PLANE, WB\_NODE\_POINT\_LIGHT, WB\_NODE\_POSITION\_SENSOR, WB\_NODE\_PROPELLER, WB\_NODE\_RADIO, WB\_NODE\_RANGE\_FINDER, WB\_NODE\_RECEIVER, WB\_NODE\_ROBOT, WB\_NODE\_ROTATIONAL\_MOTOR, WB\_NODE\_SERVO, WB\_NODE\_SHAPE, WB\_NODE\_SLIDER\_JOINT, WB\_NODE\_SLOT, WB\_NODE\_SOLID, WB\_NODE\_SOLID\_REFERENCE, WB\_NODE\_SPEAKER, WB\_NODE\_SPHERE, WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SUPERVISOR, WB\_NODE\_SWITCH, WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, WB\_NODE\_TOUCH\_SENSOR, WB\_NODE\_TRACK, WB\_NODE\_TRACK\_WHEEL, WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO, WB\_NODE\_ZOOM |
 
 %end
 
@@ -290,6 +320,23 @@ The following tables describe the Matlab functions.
 | period = [wb\_position\_sensor\_get\_sampling\_period](positionsensor.md#wb_position_sensor_get_value)(tag) |
 | value = [wb\_position\_sensor\_get\_value](positionsensor.md#wb_position_sensor_get_value)(tag)             |
 | type = [wb\_position\_sensor\_get\_type](positionsensor.md#wb_position_sensor_get_value)(tag)               |
+
+%end
+
+%api "matlab_range_finder"
+
+| % [RangeFinder](rangefinder.md) :                                                                     |
+| ----------------------------------------------------------------------------------------------------- |
+| [wb\_range\_finder\_enable](rangefinder.md#wb_range_finder_enable)(tag, ms)                           |
+| [wb\_range\_finder\_disable](rangefinder.md#wb_range_finder_enable)(tag)                              |
+| period = [wb\_range\_finder\_get\_sampling\_period](rangefinder.md#wb_range_finder_enable)(tag)       |
+| fov = [wb\_range\_finder\_get\_fov](rangefinder.md#wb_range_finder_get_fov)(tag)                      |
+| width = [wb\_range\_finder\_get\_width](rangefinder.md#wb_range_finder_get_width)(tag)                |
+| height = [wb\_range\_finder\_get\_height](rangefinder.md#wb_range_finder_get_width)(tag)              |
+| near = [wb\_range\_finder\_get\_min\_range](rangefinder.md#wb_range_finder_get_min_range)(tag)        |
+| max\_range = [wb\_range\_finder\_get\_max\_range](rangefinder.md#wb_range_finder_get_min_range)(tag)  |
+| image = [wb\_range\_finder\_get\_range\_image](rangefinder.md#wb_range_finder_get_range_image)(tag)   |
+| [wb\_range\_finder\_save\_image](rangefinder.md#wb_range_finder_save_image)(tag, 'filename', quality) |
 
 %end
 
@@ -392,87 +439,90 @@ The following tables describe the Matlab functions.
 
 %api "matlab_supervisor"
 
-| % [Supervisor](supervisor.md) :                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WB\_SF\_BOOL, WB\_SF\_INT32, WB\_SF\_FLOAT, WB\_SF\_VEC2F,                                                                                                                                                           |
-| WB\_SF\_VEC3F, WB\_SF\_ROTATION, WB\_SF\_COLOR, WB\_SF\_STRING,                                                                                                                                                      |
-| WB\_SF\_NODE, WB\_MF, WB\_MF\_INT32, WB\_MF\_FLOAT, B\_MF\_VEC2F,                                                                                                                                                    |
-| WB\_MF\_VEC3F, WB\_MF\_COLOR, WB\_MF\_STRING, WB\_MF\_NODE                                                                                                                                                           |
-| WB\_SUPERVISOR\_MOVIE\_READY, WB\_SUPERVISOR\_MOVIE\_RECORDING, WB\_SUPERVISOR\_MOVIE\_SAVING, WB\_SUPERVISOR\_MOVIE\_WRITE\_ERROR, WB\_SUPERVISOR\_MOVIE\_ENCODING\_ERROR, WB\_SUPERVISOR\_MOVIE\_SIMULATION\_ERROR |
-| [wb\_supervisor\_export\_image](supervisor.md#wb_supervisor_export_image)('filename', quality)                                                                                                                       |
-| node = [wb\_supervisor\_node\_get\_root](supervisor.md#wb_supervisor_node_get_from_def)()                                                                                                                            |
-| node = [wb\_supervisor\_node\_get\_self](supervisor.md#wb_supervisor_node_get_from_def)()                                                                                                                            |
-| node = [wb\_supervisor\_node\_get\_from\_def](supervisor.md#wb_supervisor_node_get_from_def)('def')                                                                                                                  |
-| node = [wb\_supervisor\_node\_get\_from\_id](supervisor.md#wb_supervisor_node_get_from_def)('id')                                                                                                                    |
-| id = [wb\_supervisor\_node\_get\_id](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                                                            |
-| node = [wb\_supervisor\_node\_get\_parent\_node](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                                                |
-| [wb\_supervisor\_node\_remove](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                                                                  |
-| [wb\_supervisor\_set\_label](supervisor.md#wb_supervisor_set_label)(id, 'text', x, y, size, [r g b], transparency)                                                                                                   |
-| [wb\_supervisor\_simulation\_quit](supervisor.md#wb_supervisor_simulation_quit)(status)                                                                                                                              |
-| [wb\_supervisor\_simulation\_revert](supervisor.md#wb_supervisor_simulation_revert)()                                                                                                                                |
-| [wb\_supervisor\_simulation\_reset\_physics](supervisor.md#wb_supervisor_simulation_reset_physics)()                                                                                                                 |
-| [wb\_supervisor\_load\_world](supervisor.md#wb_supervisor_load_world)('filename')                                                                                                                                    |
-| [wb\_supervisor\_save\_world](supervisor.md#wb_supervisor_load_world)()                                                                                                                                              |
-| [wb\_supervisor\_save\_world](supervisor.md#wb_supervisor_load_world)('filename')                                                                                                                                    |
-| [wb\_supervisor\_movie\_start\_recording](supervisor.md#wb_supervisor_movie_start_recording)('filename', width, height, codec, quality,                                                                              |
-| acceleration, caption)                                                                                                                                                                                               |
-| [wb\_supervisor\_movie\_stop\_recording](supervisor.md#wb_supervisor_movie_start_recording)()                                                                                                                        |
-| status = [wb\_supervisor\_movie\_get\_status](supervisor.md#wb_supervisor_movie_start_recording)()                                                                                                                   |
-| success = [wb\_supervisor\_animation\_start\_recording](supervisor.md#wb_supervisor_animation_start_recording)('filename')                                                                                           |
-| success = [wb\_supervisor\_animation\_stop\_recording](supervisor.md#wb_supervisor_animation_start_recording)()                                                                                                      |
-| type = [wb\_supervisor\_field\_get\_type](supervisor.md#wb_supervisor_field_get)(field)                                                                                                                              |
-| name = [wb\_supervisor\_field\_get\_type\_name](supervisor.md#wb_supervisor_field_get)(field)                                                                                                                        |
-| count = [wb\_supervisor\_field\_get\_count](supervisor.md#wb_supervisor_field_get)(field)                                                                                                                            |
-| b = [wb\_supervisor\_field\_get\_sf\_bool](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                                     |
-| i = [wb\_supervisor\_field\_get\_sf\_int32](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                                    |
-| f = [wb\_supervisor\_field\_get\_sf\_float](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                                    |
-| [x y] = [wb\_supervisor\_field\_get\_sf\_vec2f](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                                |
-| [x y z] = [wb\_supervisor\_field\_get\_sf\_vec3f](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                              |
-| [x y z alpha] = [wb\_supervisor\_field\_get\_sf\_rotation](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                     |
-| [r g b] = [wb\_supervisor\_field\_get\_sf\_color](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                              |
-| s = [wb\_supervisor\_field\_get\_sf\_string](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                                   |
-| node = [wb\_supervisor\_field\_get\_sf\_node](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                                                                  |
-| b = [wb\_supervisor\_field\_get\_mf\_bool](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                              |
-| i = [wb\_supervisor\_field\_get\_mf\_int32](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                             |
-| f = [wb\_supervisor\_field\_get\_mf\_float](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                             |
-| [x y] = [wb\_supervisor\_field\_get\_mf\_vec2f](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                         |
-| [x y z] = [wb\_supervisor\_field\_get\_mf\_vec3f](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                       |
-| [x y z a] = [wb\_supervisor\_field\_get\_mf\_rotation](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                  |
-| [r g b] = [wb\_supervisor\_field\_get\_mf\_color](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                       |
-| s = [wb\_supervisor\_field\_get\_mf\_string](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                            |
-| node = [wb\_supervisor\_field\_get\_mf\_node](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                                                                           |
-| [wb\_supervisor\_field\_set\_sf\_bool](supervisor.md#wb_supervisor_field_set_sf_bool)(field, value)                                                                                                                  |
-| [wb\_supervisor\_field\_set\_sf\_int32](supervisor.md#wb_supervisor_field_set_sf_bool)(field, value)                                                                                                                 |
-| [wb\_supervisor\_field\_set\_sf\_float](supervisor.md#wb_supervisor_field_set_sf_bool)(field, value)                                                                                                                 |
-| [wb\_supervisor\_field\_set\_sf\_vec2f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [x y])                                                                                                                 |
-| [wb\_supervisor\_field\_set\_sf\_vec3f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [x y z])                                                                                                               |
-| [wb\_supervisor\_field\_set\_sf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [x y z alpha])                                                                                                      |
-| [wb\_supervisor\_field\_set\_sf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [r g b])                                                                                                               |
-| [wb\_supervisor\_field\_set\_sf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, 'value')                                                                                                              |
-| [wb\_supervisor\_field\_set\_mf\_bool](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, value)                                                                                                           |
-| [wb\_supervisor\_field\_set\_mf\_int32](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, value)                                                                                                          |
-| [wb\_supervisor\_field\_set\_mf\_float](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, value)                                                                                                          |
-| [wb\_supervisor\_field\_set\_mf\_vec2f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y])                                                                                                          |
-| [wb\_supervisor\_field\_set\_mf\_vec3f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z])                                                                                                        |
-| [wb\_supervisor\_field\_set\_mf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z a])                                                                                                   |
-| [wb\_supervisor\_field\_set\_mf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [r g b])                                                                                                        |
-| [wb\_supervisor\_field\_set\_mf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, 'value')                                                                                                       |
-| [wb\_supervisor\_field\_import\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'filename')                                                                                             |
-| [wb\_supervisor\_field\_import\_mf\_node\_from\_string](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'node\_string')                                                                           |
-| [wb\_supervisor\_field\_remove\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position)                                                                                                         |
-| type = [wb\_supervisor\_node\_get\_type](supervisor.md#wb_supervisor_node_get_type)(node)                                                                                                                            |
-| name = [wb\_supervisor\_node\_get\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                                                                      |
-| name = [wb\_supervisor\_node\_get\_base\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                                                                |
-| field = [wb\_supervisor\_node\_get\_field](supervisor.md#wb_supervisor_node_get_field)(node, 'field\_name')                                                                                                          |
-| position = [wb\_supervisor\_node\_get\_position](supervisor.md#wb_supervisor_node_get_position)(node)                                                                                                                |
-| orientation = [wb\_supervisor\_node\_get\_orientation](supervisor.md#wb_supervisor_node_get_position)(node)                                                                                                          |
-| com = [wb\_supervisor\_node\_get\_center\_of\_mass](supervisor.md#wb_supervisor_node_get_center_of_mass)(node)                                                                                                       |
-| contact\_point = [wb\_supervisor\_node\_get\_contact\_point](supervisor.md#wb_supervisor_node_get_contact_point)(node, index)                                                                                        |
-| number\_of\_contacts = [wb\_supervisor\_node\_get\_number\_of\_contact\_points](supervisor.md#wb_supervisor_node_get_number_of_contact_points)(index)                                                                |
-| balance = [wb\_supervisor\_node\_get\_static\_balance](supervisor.md#wb_supervisor_node_get_static_balance)(node)                                                                                                    |
-| velocity = [wb\_supervisor\_node\_get\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node)                                                                                                                |
-| [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                                                                 |
-| [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                                                                         |
+| % [Supervisor](supervisor.md) :                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WB\_SF\_BOOL, WB\_SF\_INT32, WB\_SF\_FLOAT, WB\_SF\_VEC2F,                                                                                                           |
+| WB\_SF\_VEC3F, WB\_SF\_ROTATION, WB\_SF\_COLOR, WB\_SF\_STRING,                                                                                                      |
+| WB\_SF\_NODE, WB\_MF, WB\_MF\_INT32, WB\_MF\_FLOAT, B\_MF\_VEC2F,                                                                                                    |
+| WB\_MF\_VEC3F, WB\_MF\_COLOR, WB\_MF\_STRING, WB\_MF\_NODE                                                                                                           |
+| WB\_SUPERVISOR\_SIMULATION\_MODE\_PAUSE, WB\_SUPERVISOR\_SIMULATION\_MODE\_REAL\_TIME, WB\_SUPERVISOR\_SIMULATION\_MODE\_RUN, WB\_SUPERVISOR\_SIMULATION\_MODE\_FAST |
+| [wb\_supervisor\_export\_image](supervisor.md#wb_supervisor_export_image)('filename', quality)                                                                       |
+| node = [wb\_supervisor\_node\_get\_root](supervisor.md#wb_supervisor_node_get_from_def)()                                                                            |
+| node = [wb\_supervisor\_node\_get\_self](supervisor.md#wb_supervisor_node_get_from_def)()                                                                            |
+| node = [wb\_supervisor\_node\_get\_from\_def](supervisor.md#wb_supervisor_node_get_from_def)('def')                                                                  |
+| node = [wb\_supervisor\_node\_get\_from\_id](supervisor.md#wb_supervisor_node_get_from_def)('id')                                                                    |
+| id = [wb\_supervisor\_node\_get\_id](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                            |
+| node = [wb\_supervisor\_node\_get\_parent\_node](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                |
+| [wb\_supervisor\_node\_remove](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                  |
+| [wb\_supervisor\_set\_label](supervisor.md#wb_supervisor_set_label)(id, 'text', x, y, size, [r g b], transparency)                                                   |
+| [wb\_supervisor\_simulation\_quit](supervisor.md#wb_supervisor_simulation_quit)(status)                                                                              |
+| [wb\_supervisor\_simulation\_revert](supervisor.md#wb_supervisor_simulation_revert)()                                                                                |
+| [wb\_supervisor\_simulation\_reset\_physics](supervisor.md#wb_supervisor_simulation_reset_physics)()                                                                 |
+| mode = [wb\_supervisor\_simulation\_get\_mode](supervisor.md#wb_supervisor_simulation_set_mode)()                                                                    |
+| [wb\_supervisor\_simulation\_set\_mode](supervisor.md#wb_supervisor_simulation_set_mode)(mode)                                                                       |
+| [wb\_supervisor\_load\_world](supervisor.md#wb_supervisor_load_world)('filename')                                                                                    |
+| [wb\_supervisor\_save\_world](supervisor.md#wb_supervisor_load_world)()                                                                                              |
+| [wb\_supervisor\_save\_world](supervisor.md#wb_supervisor_load_world)('filename')                                                                                    |
+| [wb\_supervisor\_movie\_start\_recording](supervisor.md#wb_supervisor_movie_start_recording)('filename', width, height, codec, quality,                              |
+| acceleration, caption)                                                                                                                                               |
+| [wb\_supervisor\_movie\_stop\_recording](supervisor.md#wb_supervisor_movie_start_recording)()                                                                        |
+| status = [wb\_supervisor\_movie\_is\_ready](supervisor.md#wb_supervisor_movie_start_recording)()                                                                     |
+| status = [wb\_supervisor\_movie\_failed](supervisor.md#wb_supervisor_movie_start_recording)()                                                                        |
+| success = [wb\_supervisor\_animation\_start\_recording](supervisor.md#wb_supervisor_animation_start_recording)('filename')                                           |
+| success = [wb\_supervisor\_animation\_stop\_recording](supervisor.md#wb_supervisor_animation_start_recording)()                                                      |
+| type = [wb\_supervisor\_field\_get\_type](supervisor.md#wb_supervisor_field_get)(field)                                                                              |
+| name = [wb\_supervisor\_field\_get\_type\_name](supervisor.md#wb_supervisor_field_get)(field)                                                                        |
+| count = [wb\_supervisor\_field\_get\_count](supervisor.md#wb_supervisor_field_get)(field)                                                                            |
+| b = [wb\_supervisor\_field\_get\_sf\_bool](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                     |
+| i = [wb\_supervisor\_field\_get\_sf\_int32](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                    |
+| f = [wb\_supervisor\_field\_get\_sf\_float](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                    |
+| [x y] = [wb\_supervisor\_field\_get\_sf\_vec2f](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                |
+| [x y z] = [wb\_supervisor\_field\_get\_sf\_vec3f](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                              |
+| [x y z alpha] = [wb\_supervisor\_field\_get\_sf\_rotation](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                     |
+| [r g b] = [wb\_supervisor\_field\_get\_sf\_color](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                              |
+| s = [wb\_supervisor\_field\_get\_sf\_string](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                   |
+| node = [wb\_supervisor\_field\_get\_sf\_node](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                  |
+| b = [wb\_supervisor\_field\_get\_mf\_bool](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                              |
+| i = [wb\_supervisor\_field\_get\_mf\_int32](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                             |
+| f = [wb\_supervisor\_field\_get\_mf\_float](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                             |
+| [x y] = [wb\_supervisor\_field\_get\_mf\_vec2f](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                         |
+| [x y z] = [wb\_supervisor\_field\_get\_mf\_vec3f](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                       |
+| [x y z a] = [wb\_supervisor\_field\_get\_mf\_rotation](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                  |
+| [r g b] = [wb\_supervisor\_field\_get\_mf\_color](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                       |
+| s = [wb\_supervisor\_field\_get\_mf\_string](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                            |
+| node = [wb\_supervisor\_field\_get\_mf\_node](supervisor.md#wb_supervisor_field_get_sf_bool)(field, index)                                                           |
+| [wb\_supervisor\_field\_set\_sf\_bool](supervisor.md#wb_supervisor_field_set_sf_bool)(field, value)                                                                  |
+| [wb\_supervisor\_field\_set\_sf\_int32](supervisor.md#wb_supervisor_field_set_sf_bool)(field, value)                                                                 |
+| [wb\_supervisor\_field\_set\_sf\_float](supervisor.md#wb_supervisor_field_set_sf_bool)(field, value)                                                                 |
+| [wb\_supervisor\_field\_set\_sf\_vec2f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [x y])                                                                 |
+| [wb\_supervisor\_field\_set\_sf\_vec3f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [x y z])                                                               |
+| [wb\_supervisor\_field\_set\_sf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [x y z alpha])                                                      |
+| [wb\_supervisor\_field\_set\_sf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, [r g b])                                                               |
+| [wb\_supervisor\_field\_set\_sf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, 'value')                                                              |
+| [wb\_supervisor\_field\_set\_mf\_bool](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, value)                                                           |
+| [wb\_supervisor\_field\_set\_mf\_int32](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, value)                                                          |
+| [wb\_supervisor\_field\_set\_mf\_float](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, value)                                                          |
+| [wb\_supervisor\_field\_set\_mf\_vec2f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y])                                                          |
+| [wb\_supervisor\_field\_set\_mf\_vec3f](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z])                                                        |
+| [wb\_supervisor\_field\_set\_mf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z a])                                                   |
+| [wb\_supervisor\_field\_set\_mf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [r g b])                                                        |
+| [wb\_supervisor\_field\_set\_mf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, 'value')                                                       |
+| [wb\_supervisor\_field\_import\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'filename')                                             |
+| [wb\_supervisor\_field\_import\_mf\_node\_from\_string](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'node\_string')                           |
+| [wb\_supervisor\_field\_remove\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position)                                                         |
+| type = [wb\_supervisor\_node\_get\_type](supervisor.md#wb_supervisor_node_get_type)(node)                                                                            |
+| name = [wb\_supervisor\_node\_get\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                      |
+| name = [wb\_supervisor\_node\_get\_base\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                |
+| field = [wb\_supervisor\_node\_get\_field](supervisor.md#wb_supervisor_node_get_field)(node, 'field\_name')                                                          |
+| position = [wb\_supervisor\_node\_get\_position](supervisor.md#wb_supervisor_node_get_position)(node)                                                                |
+| orientation = [wb\_supervisor\_node\_get\_orientation](supervisor.md#wb_supervisor_node_get_position)(node)                                                          |
+| com = [wb\_supervisor\_node\_get\_center\_of\_mass](supervisor.md#wb_supervisor_node_get_center_of_mass)(node)                                                       |
+| contact\_point = [wb\_supervisor\_node\_get\_contact\_point](supervisor.md#wb_supervisor_node_get_contact_point)(node, index)                                        |
+| number\_of\_contacts = [wb\_supervisor\_node\_get\_number\_of\_contact\_points](supervisor.md#wb_supervisor_node_get_number_of_contact_points)(index)                |
+| balance = [wb\_supervisor\_node\_get\_static\_balance](supervisor.md#wb_supervisor_node_get_static_balance)(node)                                                    |
+| velocity = [wb\_supervisor\_node\_get\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node)                                                                |
+| [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                 |
+| [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                         |
 
 %end
 

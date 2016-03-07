@@ -65,14 +65,18 @@ function redirectUrls(node) {
 }
 
 function addOnTheFlyEvent(el) {
+    if (el.classList.contains("on-the-fly")) {
+        return;
+    }
+
     el.addEventListener("click",
         function (event) {
-            console.log(event);
             aClick(event);
             event.preventDefault();
         },
         false
     );
+    el.classList.add("on-the-fly");
 }
 
 function aClick(event) {
@@ -155,6 +159,8 @@ function populateViewDiv(mdContent) {
 
     applyAnchorIcons(view);
     highlightCode(view);
+
+    updateSelection();
 }
 
 function highlightCode(view) {
@@ -188,12 +194,12 @@ function applyAnchorIcons(view) {
             name = el.getAttribute("name");
         }
         if (name) {
-            el.setAttribute("class", "anchor-header");
+            el.classList.add("anchor-header");
             var span = document.createElement("span");
-            span.setAttribute("class", "anchor-link-image");
+            span.classList.add("anchor-link-image");
             var a = document.createElement("a");
             a.setAttribute("href", "#" + name);
-            a.setAttribute("class", "anchor-link");
+            a.classList.add("anchor-link");
             a.appendChild(span);
             el.insertBefore(a, el.firstChild);
         }
@@ -225,23 +231,43 @@ function receiveMenuContent(menuContent) {
         return;
     }
 
-    selected = getSelected(menu);
-    redirectUrls(menu);
     populateMenu(menu);
+    redirectUrls(menu);
+
+    updateSelection();
+}
+
+function updateSelection() {
+    var selected = changeMenuSelection();
     populateNavigation(selected);
 }
 
-function getSelected(menu) {
+function getSelected() {
+    var menu = document.getElementById("menu");
+    var selecteds = menu.getElementsByClassName("selected");
+    if (selecteds.length > 0) {
+        return selecteds[selecteds.length - 1];
+    }
+    return null;
+}
+
+function changeMenuSelection() {
+    var menu = document.getElementById("menu");
+    var selecteds = menu.getElementsByClassName("selected");
+    for (i = 0; i < selecteds.length; i++) {
+        var selected = selecteds[i];
+        selected.classList.remove("selected");
+    }
+
     var as = menu.getElementsByTagName("a");
-    var selected = null;
     for (i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
         if (href.indexOf(window.setup.page) > -1) {
-            selected = a.parentNode;
-            selected.setAttribute("class", "selected");
+            var selected = a.parentNode;
+            selected.classList.add("selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
-                selected.parentNode.parentNode.setAttribute("class", "selected");
+                selected.parentNode.parentNode.classList.add("selected");
             }
             return selected;
         }
@@ -254,9 +280,9 @@ function populateNavigation(selected) {
     var up = document.getElementById("up");
 
     if (!selected) {
-        next.setAttribute("class", "disabled");
-        previous.setAttribute("class", "disabled");
-        up.setAttribute("class", "disabled");
+        next.classList.add("disabled");
+        previous.classList.add("disabled");
+        up.classList.add("disabled");
         return;
     }
 
@@ -278,10 +304,11 @@ function populateNavigation(selected) {
         }
 
         if (nextElement) {
+            next.classList.remove("disabled");
             next.setAttribute("href", nextElement.getAttribute("href"));
             addOnTheFlyEvent(next);
         } else {
-            next.setAttribute("class", "disabled");
+            next.classList.add("disabled");
         }
     }
 
@@ -303,10 +330,11 @@ function populateNavigation(selected) {
         }
 
         if (previousElement) {
+            previous.classList.remove("disabled");
             previous.setAttribute("href", previousElement.getAttribute("href"));
             addOnTheFlyEvent(previous);
         } else {
-            previous.setAttribute("class", "disabled");
+            previous.classList.add("disabled");
         }
     }
 
@@ -324,10 +352,11 @@ function populateNavigation(selected) {
         }
 
         if (upElement) {
+            up.classList.remove("disabled");
             up.setAttribute("href", upElement.getAttribute("href"));
             addOnTheFlyEvent(up);
         } else {
-            up.setAttribute("class", "disabled");
+            up.classList.add("disabled");
         }
     }
 }

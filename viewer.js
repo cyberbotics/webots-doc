@@ -30,12 +30,10 @@ function computeTargetPath() {
 }
 
 function redirectUrls(node) {
-    var i;
-
     // redirect a's href
     var as = node.getElementsByTagName("a");
     var targetPath = computeTargetPath();
-    for (i = 0; i < as.length; i++) {
+    for (var i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
         if (! href) {
@@ -93,7 +91,7 @@ function redirectImages(node) {
     // redirect img's src
     var imgs = node.getElementsByTagName("img");
     var targetPath = computeTargetPath();
-    for (i = 0; i < imgs.length; i++) {
+    for (var i = 0; i < imgs.length; i++) {
         var img = imgs[i];
         var src = img.getAttribute("src");
         var match = /^(\w*)\/([\w-\.]*)$/.exec(src);
@@ -217,8 +215,7 @@ function receiveMenuContent(menuContent) {
     var div = document.createElement("div");
     div.innerHTML = html;
 
-    var i;
-    for (i = 0; i < div.childNodes.length; i++) {
+    for (var i = 0; i < div.childNodes.length; i++) {
         var child = div.childNodes[i];
         if (child && child.tagName && child.tagName.length > 0 && child.tagName.toLowerCase() == "ul") {
             menu = child;
@@ -253,14 +250,14 @@ function getSelected() {
 
 function changeMenuSelection() {
     var menu = document.getElementById("menu");
-    var selecteds = menu.getElementsByClassName("selected");
-    for (i = 0; i < selecteds.length; i++) {
+    var selecteds = [].slice.call(menu.getElementsByClassName("selected"));
+    for (var i = 0; i < selecteds.length; i++) {
         var selected = selecteds[i];
         selected.classList.remove("selected");
     }
 
     var as = menu.getElementsByTagName("a");
-    for (i = 0; i < as.length; i++) {
+    for (var i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
         if (href.indexOf(window.setup.page) > -1) {

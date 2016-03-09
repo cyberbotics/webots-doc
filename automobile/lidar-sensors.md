@@ -76,7 +76,7 @@ a field of view of 360 degrees, it returns 3600 points per layer per scan.
 The model of the `Velodyne VLP 16` contains a spherical projection and a
 gaussian noise with a standard deviation of 0.03 meter.
 
-%figure "Velodyne VLP 16 figure"
+%figure "Velodyne VLP 16 model"
 
 ![velodyne_vpl_16.png](images/velodyne_vpl_16.png)
 
@@ -145,3 +145,4 @@ VelodyneHDL-32E {
 
 The `fastModel` field can be used to simplify the model of the sensor by
 removing the noise in order to speed up the simulation.
+

@@ -31,7 +31,8 @@ if __name__ == '__main__':
             if m:
                 line = re.sub(reg, r'"dependencies/\1"', line)
                 relative_path = m.group(1)
-                target_path = script_directory + 'dependencies' + os.sep + m.group(1)
+                target_path = script_directory + 'dependencies' + \
+                    os.sep + m.group(1)
                 target_directory = os.path.dirname(target_path)
                 if not os.path.exists(target_directory):
                     os.makedirs(target_directory)

@@ -21,9 +21,9 @@ function decomposePage(page) {
 }
 
 function computeTargetPath() {
-    var targetPath = window.setup.url;
-    if (targetPath.startsWith("http")) {
-        targetPath += window.setup.branch + "/";
+    var targetPath = "";
+    if (window.setup.url.startsWith("http")) {
+        targetPath = window.setup.url + window.setup.branch + "/";
     }
     targetPath += window.setup.book + "/";
     return targetPath;
@@ -418,13 +418,17 @@ function extractAnchor() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var page = getGETQueryValue("page", "guide.md");
+    var url = "";
+    if (window.location.href.indexOf("url=") > -1) {
+        url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/gh-pages/");
+    }
+
     window.setup = {
         "book":   getGETQueryValue("book", "guide"),
         "page":   getGETQueryValue("page", "guide.md"),
         "anchor": extractAnchor(),
         "branch": getGETQueryValue("branch", "gh-pages"),
-        "url":    getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
+        "url":    url
     }
     console.log("Setup: " + JSON.stringify(window.setup));
 

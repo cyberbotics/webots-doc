@@ -105,10 +105,7 @@ function applyAnchor() {
     console.log("Anchor: " + window.setup.anchor);
     var anchors = document.getElementsByName(window.setup.anchor);
     if (anchors.length > 0) {
-        // anchors[0].scrollIntoView(true);
-        $("html, body").animate({
-            scrollTop: $(anchors[0]).offset().top
-        }, 400);
+        anchors[0].scrollIntoView(true);
     }
 }
 
@@ -150,10 +147,8 @@ function populateViewDiv(mdContent) {
     redirectImages(div);
     redirectUrls(div);
 
-    div = $(div);
-    div.hide();
-    div.appendTo(view).show(400);
-    setTimeout(applyAnchor, 400);
+    view.appendChild(div);
+    applyAnchor();
 
     applyAnchorIcons(view);
     highlightCode(view);

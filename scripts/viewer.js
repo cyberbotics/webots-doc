@@ -365,8 +365,7 @@ function populateMenu(menu) {
 }
 
 function getMDFile() {
-    var targetPath = computeTargetPath();
-    var target = targetPath + window.setup.page;
+    var target = computeTargetPath() + window.setup.page;
     console.log("Get MD file: " + target);
     $.ajax({
         type: "GET",

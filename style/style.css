@@ -1,0 +1,165 @@
+html,
+body {
+  font-family:Tahoma,Arial,sans-serif;
+  font-size:14px;
+  background-color: #bbbbbb;
+}
+#view {
+  width:50%;
+  padding: 20px;
+  margin: 0px auto;
+  background-color: white;
+}
+#navigation, #menu {
+  width:20%;
+  float:left;
+  background-color: white;
+}
+#navigation {
+  text-align: center;
+  height:20px;
+  text-size: 14px;
+}
+#menu {
+  margin-top:1em;
+  clear: left;
+}
+#menu > ul > li > ul > li {
+  white-space: nowrap;
+}
+blockquote {
+  border-left: 6px solid #ccc;
+}
+li {
+  font-weight: normal;
+}
+li.selected {
+  font-weight: bold;
+}
+td {
+  padding-left:4px;
+  padding-right:4px;
+}
+a.disabled {
+  pointer-events: none;
+  color: #ddd;
+}
+a {
+  color:#888;
+  text-decoration:none;
+  outline:0;
+}
+a:hover {
+  color:black;
+  text-decoration:none;
+  outline:0;
+}
+a:active, a:focus {
+  outline:0;
+  text-decoration:none;
+  color:black;
+}
+pre {
+  margin: 30px;
+  background-color: #eee;
+}
+code {
+  background:transparent;
+  color:#444;
+}
+h1, h2, h3 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  color: #888;
+}
+h1 {
+  font-size: 46px;
+  padding-bottom:16px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 26px;
+}
+h4 {
+  font-size: 14px;
+}
+.anchor-link-image {
+  padding-left: 20px;
+  background:url(../icons/anchor.png) left center no-repeat;
+  background-size: 20px;
+}
+.anchor-link {
+  opacity: 0;
+
+  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+.anchor-header {
+  position: relative;
+  left: -20px;
+}
+figcaption:hover .anchor-link,
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  opacity: 1;
+}
+p {
+  color: #444;
+  margin-left:10px;
+  margin-right:10px;
+  text-align:justify;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  max-width: 80%;
+  text-align: center;
+  margin:20px auto 20px auto;
+}
+figcaption {
+  font-style: italic;
+}
+table {
+  max-width:80%; 
+  margin:20px auto 20px auto;
+  text-align:left;
+  color: #333;
+  border-width: 1px;
+  border-color: #aaa;
+  border-collapse: collapse;
+}
+table th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  background-color: #ddd;
+}
+table tr:hover td {
+  background-color: #def;
+}
+table td {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  background-color: transparent;
+}
+.api > table {
+  font-family: monospace;
+  width: 80%;
+}
+@font-face {
+	font-family:"Raleway";
+	font-style:normal;
+	font-weight:100;
+	src:local("Raleway Thin"),local("Raleway-Thin"),url("Raleway-Thin.woff") format("woff")
+}

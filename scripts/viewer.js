@@ -69,7 +69,7 @@ function addOnTheFlyEvent(el) {
 
     el.addEventListener("click",
         function (event) {
-            aClick(event);
+            aClick(event.target);
             event.preventDefault();
         },
         false
@@ -77,8 +77,7 @@ function addOnTheFlyEvent(el) {
     el.classList.add("on-the-fly");
 }
 
-function aClick(event) {
-    var el = event.target;
+function aClick(el) {
     var decomposition = decomposePage(el.getAttribute('href'));
     window.setup.page = decomposition[0];
     window.setup.anchor = decomposition[1];
@@ -354,6 +353,20 @@ function populateNavigation(selected) {
 }
 
 function populateMenu(menu) {
+    // make in order that the <li> tags above the <a> are also clickable
+    var lis = menu.getElementsByTagName("li");
+    for (var i = 0; i < lis.length; i++) {
+        var li = lis[i];
+        li.addEventListener("click",
+            function (event) {
+                var as = event.target.getElementsByTagName("a");
+                if (as.length > 0) {
+                    aClick(as[0]);
+                }
+            }
+        );
+    }
+
     var menuDiv = document.getElementById("menu");
     menuDiv.appendChild(menu);
     $(menu).menu();

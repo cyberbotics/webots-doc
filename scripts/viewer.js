@@ -49,7 +49,7 @@ function redirectUrls(node) {
                 var newPage = match[1];
                 var anchor = match[2]; // could be undefined
                 var anchorString = (anchor && anchor.length > 0) ? anchor : "";
-                var currentUrl = window.location.href;
+                var currentUrl = location.href;
                 var newUrl = currentUrl;
                 if (currentUrl.indexOf("page=") > -1) {
                     newUrl = currentUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + newPage + ".md" + anchorString);
@@ -84,6 +84,7 @@ function aClick(el) {
     console.log('page = ' + window.setup.page);
     console.log('anchor = ' + window.setup.anchor);
     getMDFile();
+    forgeURL();
 }
 
 function redirectImages(node) {
@@ -153,6 +154,24 @@ function populateViewDiv(mdContent) {
     highlightCode(view);
 
     updateSelection();
+}
+
+function forgeURL() {
+    var url = location.href;
+
+    var pageString = "&page=" + window.setup.page;
+    if (url.indexOf("&page=") > -1) {
+        url = url.replace(/&page=[^&]*.md/, pageString);
+    } else {
+        url += pageString;
+    }
+
+    if (history.pushState) {
+        try {
+            history.pushState(null, null, url);
+        } catch (err) {
+        }
+    }
 }
 
 function highlightCode(view) {
@@ -409,7 +428,7 @@ function getMenuFile() {
 }
 
 function extractAnchor() {
-    var currentUrl = window.location.href;
+    var currentUrl = location.href;
     var match = /#([\w-]+)/.exec(currentUrl);
     if (match && match.length == 2) {
         return match[1];
@@ -419,7 +438,7 @@ function extractAnchor() {
 
 document.addEventListener("DOMContentLoaded", function() {
     var url = "";
-    if (window.location.href.indexOf("url=") > -1) {
+    if (location.href.indexOf("url=") > -1) {
         url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/gh-pages/");
     }
 

@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "book":   getGETQueryValue("book", "guide"),
         "page":   getGETQueryValue("page", "guide.md"),
         "anchor": extractAnchor(),
-        "branch": getGETQueryValue("branch", "feature-webots-doc-importer"),
+        "branch": getGETQueryValue("branch", "gh-pages"),
         "url":    getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
     }
     console.log("Setup: " + JSON.stringify(window.setup));

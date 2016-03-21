@@ -2,12 +2,13 @@ html,
 body {
   font-family:Tahoma,Arial,sans-serif;
   font-size:14px;
-  background-color: #bbbbbb;
+  background-color: #ddd;
 }
 #view {
-  width:50%;
-  padding: 20px;
-  margin: 0px auto;
+  width:72%;
+  float:left;
+  padding: 0px 2%;
+  margin: 0px 2%;
   background-color: white;
 }
 #navigation, #menu {

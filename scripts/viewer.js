@@ -21,9 +21,9 @@ function decomposePage(page) {
 }
 
 function computeTargetPath() {
-    var targetPath = window.setup.url;
-    if (targetPath.startsWith("http")) {
-        targetPath += window.setup.branch + "/";
+    var targetPath = "";
+    if (window.setup.url.startsWith("http")) {
+        targetPath = window.setup.url + window.setup.branch + "/";
     }
     targetPath += window.setup.book + "/";
     return targetPath;
@@ -49,7 +49,7 @@ function redirectUrls(node) {
                 var newPage = match[1];
                 var anchor = match[2]; // could be undefined
                 var anchorString = (anchor && anchor.length > 0) ? anchor : "";
-                var currentUrl = window.location.href;
+                var currentUrl = location.href;
                 var newUrl = currentUrl;
                 if (currentUrl.indexOf("page=") > -1) {
                     newUrl = currentUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + newPage + ".md" + anchorString);
@@ -69,7 +69,7 @@ function addOnTheFlyEvent(el) {
 
     el.addEventListener("click",
         function (event) {
-            aClick(event);
+            aClick(event.target);
             event.preventDefault();
         },
         false
@@ -77,14 +77,14 @@ function addOnTheFlyEvent(el) {
     el.classList.add("on-the-fly");
 }
 
-function aClick(event) {
-    var el = event.target;
+function aClick(el) {
     var decomposition = decomposePage(el.getAttribute('href'));
     window.setup.page = decomposition[0];
     window.setup.anchor = decomposition[1];
     console.log('page = ' + window.setup.page);
     console.log('anchor = ' + window.setup.anchor);
     getMDFile();
+    forgeURL();
 }
 
 function redirectImages(node) {
@@ -105,10 +105,7 @@ function applyAnchor() {
     console.log("Anchor: " + window.setup.anchor);
     var anchors = document.getElementsByName(window.setup.anchor);
     if (anchors.length > 0) {
-        // anchors[0].scrollIntoView(true);
-        $("html, body").animate({
-            scrollTop: $(anchors[0]).offset().top
-        }, 400);
+        anchors[0].scrollIntoView(true);
     }
 }
 
@@ -150,15 +147,31 @@ function populateViewDiv(mdContent) {
     redirectImages(div);
     redirectUrls(div);
 
-    div = $(div);
-    div.hide();
-    div.appendTo(view).show(400);
-    setTimeout(applyAnchor, 400);
+    view.appendChild(div);
+    applyAnchor();
 
     applyAnchorIcons(view);
     highlightCode(view);
 
     updateSelection();
+}
+
+function forgeURL() {
+    var url = location.href;
+
+    var pageString = "&page=" + window.setup.page;
+    if (url.indexOf("&page=") > -1) {
+        url = url.replace(/&page=[^&]*.md/, pageString);
+    } else {
+        url += pageString;
+    }
+
+    if (history.pushState) {
+        try {
+            history.pushState(null, null, url);
+        } catch (err) {
+        }
+    }
 }
 
 function highlightCode(view) {
@@ -359,6 +372,20 @@ function populateNavigation(selected) {
 }
 
 function populateMenu(menu) {
+    // make in order that the <li> tags above the <a> are also clickable
+    var lis = menu.getElementsByTagName("li");
+    for (var i = 0; i < lis.length; i++) {
+        var li = lis[i];
+        li.addEventListener("click",
+            function (event) {
+                var as = event.target.getElementsByTagName("a");
+                if (as.length > 0) {
+                    aClick(as[0]);
+                }
+            }
+        );
+    }
+
     var menuDiv = document.getElementById("menu");
     menuDiv.appendChild(menu);
     $(menu).menu();
@@ -401,7 +428,7 @@ function getMenuFile() {
 }
 
 function extractAnchor() {
-    var currentUrl = window.location.href;
+    var currentUrl = location.href;
     var match = /#([\w-]+)/.exec(currentUrl);
     if (match && match.length == 2) {
         return match[1];
@@ -410,13 +437,17 @@ function extractAnchor() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var page = getGETQueryValue("page", "guide.md");
+    var url = "";
+    if (location.href.indexOf("url=") > -1) {
+        url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/gh-pages/");
+    }
+
     window.setup = {
         "book":   getGETQueryValue("book", "guide"),
         "page":   getGETQueryValue("page", "guide.md"),
         "anchor": extractAnchor(),
         "branch": getGETQueryValue("branch", "gh-pages"),
-        "url":    getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/")
+        "url":    url
     }
     console.log("Setup: " + JSON.stringify(window.setup));
 

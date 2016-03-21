@@ -19,7 +19,7 @@ and is affected by the transformations of its ancestors.
 The `coord` field specifies the 3D vertices of the line set and contains a
 [Coordinate](coordinate.md) node.
 
-[IndexedLineSet](#indexedlineset)s are not lit, are not texture-mapped and they
-do not cast or receive shadows. [IndexedLineSet](#indexedlineset)s cannot be use
-for collision detection (boundingObject).
+[IndexedLineSet](#indexedlineset) nodes are not lit, are not texture-mapped and
+they do not cast or receive shadows. [IndexedLineSet](#indexedlineset) nodes
+cannot be used for collision detection (boundingObject).
 

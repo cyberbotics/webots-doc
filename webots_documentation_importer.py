@@ -895,13 +895,15 @@ class BookParser:
             elif child.tag == 'author':
                 pass # no more sense in my opinion
             elif child.tag == 'publisher':
-                text = self.readRawText(child).strip()
-                text = re.sub(r'\n *', '\n', text)
-                outFile.write(text + '\n\n')
+                pass
+                # text = self.readRawText(child).strip()
+                # text = re.sub(r'\n *', '\n', text)
+                # outFile.write(text + '\n\n')
             elif child.tag == 'releaseinfo':
-                outFile.write(self.readRawText(child).strip() + '\n\n')
+                pass
+                # outFile.write(self.readRawText(child).strip() + '\n\n')
             elif child.tag == 'copyright':
-                outFile.write('Copyright &copy; {{ date.year }}: ')
+                outFile.write('Copyright &copy; {{ date.year }} ')
                 outFile.write(self.readRawText(child).strip() + '\n\n')
             elif child.tag == 'legalnotice':
                 self.parseChapter(child, outFile)

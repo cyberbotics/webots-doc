@@ -6,14 +6,7 @@ Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.
 ![ImageData](images/1234web.png)
 %end
 
-Cyberbotics Ltd.
-PSE C - EPFL
-1015 Lausanne
-Switzerland
-
-This user guide refers to Webots version {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
-
-Copyright &copy; {{ date.year }}: Cyberbotics Ltd.
+Copyright &copy; {{ date.year }} Cyberbotics Ltd.
 
 Permission to use, copy and distribute this documentation for any purpose and
 without fee is hereby granted in perpetuity, provided that no modifications are

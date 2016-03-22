@@ -388,7 +388,16 @@ function populateMenu(menu) {
 
     var menuDiv = document.getElementById("menu");
     menuDiv.appendChild(menu);
-    $(menu).menu();
+
+    menu.setAttribute("id", "accordion");
+    $('#accordion > li > a').click(function(){
+      if ($(this).attr('class') != 'active'){
+        $('#accordion li ul').slideUp();
+        $(this).next().slideToggle();
+        $('#accordion li a').removeClass('active');
+        $(this).addClass('active');
+      }
+    });
 }
 
 function getMDFile() {

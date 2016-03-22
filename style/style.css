@@ -28,6 +28,34 @@ body {
 #menu > ul > li > ul > li {
   white-space: nowrap;
 }
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+#accordion {
+    margin: 0;
+    padding: 0;
+}
+#accordion li a, #accordion li ul li a {
+    padding: 0.5em;
+}
+#accordion li a {
+    display: block;
+    background: #ccc;
+    border-top: 1px solid #eee;
+    color: #000;
+}
+#accordion li a:hover, #accordion li a.active {
+    background: #999;
+    color: #fff;
+}
+#accordion li ul {
+    display: none;
+}
+#accordion li ul li a {
+    background: #ececec;
+    border-color: #ccc;
+}
 blockquote {
   border-left: 6px solid #ccc;
 }

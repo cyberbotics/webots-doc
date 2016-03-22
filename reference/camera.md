@@ -228,7 +228,7 @@ restored.
 
 ### Camera Functions
 
-<a name="wb_camera_enable">**Name**</a>
+**Name**
 
 **wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
 
@@ -254,7 +254,7 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 ---
 
-<a name="wb_camera_get_fov">**Name**</a>
+**Name**
 
 **wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
 
@@ -282,7 +282,7 @@ not defined, then the functions `wb_camera_get_min_fov()` and
 
 ---
 
-<a name="wb_camera_get_focal_length">**Name**</a>
+**Name**
 
 **wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
 
@@ -307,7 +307,7 @@ the other functions will return 0.
 
 ---
 
-<a name="wb_camera_get_width">**Name**</a>
+**Name**
 
 **wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
 
@@ -327,7 +327,7 @@ corresponding [Camera](#camera) node.
 
 ---
 
-<a name="wb_camera_get_near">**Name**</a>
+**Name**
 
 **wb\_camera\_get\_near** - *get the near parameter of the camera device*
 
@@ -346,7 +346,7 @@ corresponding [Camera](#camera) node.
 
 ---
 
-<a name="wb_camera_get_image">**Name**</a>
+**Name**
 
 **wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
 
@@ -472,7 +472,7 @@ the OpenGL z-buffer.
 
 ---
 
-<a name="wb_camera_save_image">**Name**</a>
+**Name**
 
 **wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
 

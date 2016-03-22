@@ -60,7 +60,7 @@ value in the interval (0.0, inf).
 
 ### GPS Functions
 
-<a name="wb_gps_get_values">**Name**</a>
+**Name**
 
 **wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values**, **wb\_gps\_get\_speed** - *enable, disable and read the GPS measurements*
 
@@ -113,7 +113,7 @@ period they must be copied.
 
 ---
 
-<a name="wb_gps_get_coordinate_system">**Name**</a>
+**Name**
 
 **wb\_gps\_get\_coordinate\_system** - *get the gps coordinate system*
 
@@ -134,7 +134,7 @@ WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 
 ---
 
-<a name="wb_gps_convert_to_degrees_minutes_seconds">**Name**</a>
+**Name**
 
 **wb\_gps\_convert\_to\_degrees\_minutes\_seconds** - *convert decimal degrees to degrees minutes seconds*
 

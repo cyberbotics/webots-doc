@@ -743,10 +743,11 @@ class BookParser:
             if child.tag == 'refnamediv':
                 anchorRefPrefix = ''
                 anchorRefSuffix = ''
-                if node.attrib.get('id'):
-                    anchorRefPrefix = '<a name="' + slugify(node.attrib.get('id')) + '">'
-                    anchorRefSuffix = '</a>'
-                outFile.write(anchorRefPrefix + '**Name**' + anchorRefSuffix + '\n\n')
+                # if node.attrib.get('id'):
+                #    anchorRefPrefix = '<a name="' + slugify(node.attrib.get('id')) + '">'
+                #    anchorRefSuffix = '</a>'
+                outFile.write(anchorRefPrefix + '**Name**' + '\n\n')
+                # outFile.write(anchorRefPrefix + '**Name**' + anchorRefSuffix + '\n\n')
                 firstRefName = True
                 for subchild in node.findall('.//refname'):
                     if firstRefName:

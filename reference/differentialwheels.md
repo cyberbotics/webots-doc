@@ -136,7 +136,7 @@ initial elevation throughout the simulation.
 
 ### DifferentialWheels Functions
 
-<a name="wb_differential_wheels_set_speed">**Name**</a>
+**Name**
 
 **wb\_differential\_wheels\_set\_speed** - *control the speed of the robot*
 
@@ -170,7 +170,7 @@ function.
 
 ---
 
-<a name="wb_differential_wheels_enable_encoders">**Name**</a>
+**Name**
 
 **wb\_differential\_wheels\_enable\_encoders**, **wb\_differential\_wheels\_disable\_encoders**, **wb\_differential\_wheels\_get\_encoders\_sampling\_period** - *enable or disable the incremental encoders of the robot wheels*
 
@@ -212,7 +212,7 @@ if the device is disabled.
 
 ---
 
-<a name="wb_differential_wheels_get_left_encoder">**Name**</a>
+**Name**
 
 **wb\_differential\_wheels\_get\_left\_encoder**, **wb\_differential\_wheels\_get\_right\_encoder**, **wb\_differential\_wheels\_set\_encoders** - *read or set the encoders of the robot wheels*
 
@@ -238,7 +238,7 @@ instead, it will simply reset the encoders with the specified value.
 
 ---
 
-<a name="wb_differential_wheels_get_max_speed">**Name**</a>
+**Name**
 
 **wb\_differential\_wheels\_get\_max\_speed** - *get the value of the maxSpeed field*
 
@@ -258,7 +258,7 @@ node.
 
 ---
 
-<a name="wb_differential_wheels_get_speed_unit">**Name**</a>
+**Name**
 
 **wb\_differential\_wheels\_get\_speed\_unit** - *get the value of the speedUnit field*
 

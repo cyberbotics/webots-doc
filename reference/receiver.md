@@ -70,7 +70,7 @@ noise is not dependent on the distance between emitter-receiver.
 
 ### Receiver Functions
 
-<a name="wb_receiver_enable">**Name**</a>
+**Name**
 
 **wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
 
@@ -100,7 +100,7 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
 ---
 
-<a name="wb_receiver_get_queue_length">**Name**</a>
+**Name**
 
 **wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
 
@@ -169,7 +169,7 @@ code that is not robust.
 
 ---
 
-<a name="wb_receiver_get_data">**Name**</a>
+**Name**
 
 **wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
 
@@ -255,7 +255,7 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 
 ---
 
-<a name="wb_receiver_get_signal_strength">**Name**</a>
+**Name**
 
 **wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
 
@@ -297,7 +297,7 @@ receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 ---
 
-<a name="wb_receiver_set_channel">**Name**</a>
+**Name**
 
 **wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
 

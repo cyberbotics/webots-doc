@@ -170,7 +170,7 @@ network with an unpredictable delay (like the Internet).
 
 ### Robot Functions
 
-<a name="wb_robot_step">**Name**</a>
+**Name**
 
 **wb\_robot\_step**, **wb\_robot\_init**, **wb\_robot\_cleanup** - *controller step, initialization and cleanup functions*
 
@@ -287,7 +287,7 @@ int main() {
 
 ---
 
-<a name="wb_robot_get_device">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_device** - *get a unique identifier to a device*
 
@@ -315,7 +315,7 @@ function returns 0.
 
 ---
 
-<a name="robotgetdevice">**Name**</a>
+**Name**
 
 **Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
@@ -361,7 +361,7 @@ Python.
 
 ---
 
-<a name="wb_robot_get_device_by_index">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_device\_by\_index** - *get the devices by introspection*
 
@@ -409,7 +409,7 @@ for(i=0; i<n_devices; i++) {
 
 ---
 
-<a name="wb_robot_battery_sensor_enable">**Name**</a>
+**Name**
 
 **wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
 
@@ -443,7 +443,7 @@ disabled.
 
 ---
 
-<a name="wb_robot_get_basic_time_step">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_basic\_time\_step** - *returns the value of the basicTimeStep field of the WorldInfo node*
 
@@ -462,7 +462,7 @@ This function returns the value of the `basicTimeStep` field of the
 
 ---
 
-<a name="wb_robot_get_mode">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_mode** - *get operating mode, simulation vs. real robot*
 
@@ -500,7 +500,7 @@ The integers can be compared to the following enumeration items:
 
 ---
 
-<a name="wb_robot_get_name">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_name** - *return the name defined in the robot node*
 
@@ -530,7 +530,7 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 
 ---
 
-<a name="wb_robot_get_model">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_model** - *return the model defined in the robot node*
 
@@ -552,7 +552,7 @@ controller terminates.
 
 ---
 
-<a name="wb_robot_get_data">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_data**, **wb\_robot\_set\_data** - *return the data defined in the robot node*
 
@@ -577,7 +577,7 @@ the robot node.
 
 ---
 
-<a name="wb_robot_get_type">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_type** - *return the type of the robot node*
 
@@ -597,7 +597,7 @@ WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
 ---
 
-<a name="wb_robot_get_project_path">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_project\_path** - *return the full path of the current project*
 
@@ -619,7 +619,7 @@ char string. It should not be deallocated.
 
 ---
 
-<a name="wb_robot_get_world_path">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_world\_path** - *return the full path of the current opened world file*
 
@@ -639,7 +639,7 @@ should not be deallocated.
 
 ---
 
-<a name="wb_robot_get_controller_name">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_controller\_name**, **wb\_robot\_get\_controller\_arguments** - *return the content of the Robot::controller and Robot::controllerArgs fields*
 
@@ -659,7 +659,7 @@ Robot::controllerArgs fields.
 
 ---
 
-<a name="wb_robot_get_synchronization">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_synchronization** - *return the value of the synchronization field of the Robot node*
 
@@ -678,7 +678,7 @@ field of the Robot node.
 
 ---
 
-<a name="wb_robot_get_time">**Name**</a>
+**Name**
 
 **wb\_robot\_get\_time** - *return the current simulation time in seconds*
 
@@ -698,7 +698,7 @@ does not matter whether the controller is synchronized or not.
 
 ---
 
-<a name="wb_robot_keyboard_enable">**Name**</a>
+**Name**
 
 **wb\_robot\_keyboard\_enable**, **wb\_robot\_keyboard\_disable**, **wb\_robot\_keyboard\_get\_key** - *keyboard reading function*
 
@@ -764,7 +764,7 @@ example, *Ctrl+B* can be tested like this:
 
 ---
 
-<a name="wb_robot_task_new">**Name**</a>
+**Name**
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
 
@@ -790,7 +790,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 ---
 
-<a name="wb_robot_mutex_new">**Name**</a>
+**Name**
 
 **wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
 
@@ -831,7 +831,7 @@ multi-threaded programming techniques for further information.
 
 ---
 
-<a name="wb_robot_window_custom_function">**Name**</a>
+**Name**
 
 **wb\_robot\_window\_custom\_function** - *communication with the robot window*
 

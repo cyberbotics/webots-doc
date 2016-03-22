@@ -37,7 +37,7 @@ As for a regular [Robot](robot.md) controller, the `wb_robot_init()`,
 `wb_robot_step()`, etc. functions must be used in a [Supervisor](#supervisor)
 controller.
 
-<a name="wb_supervisor_export_image">**Name**</a>
+**Name**
 
 **wb\_supervisor\_export\_image** - *save the current 3D image of the simulator into a JPEG file, suitable for
     building a webcam system*
@@ -70,7 +70,7 @@ scored.
 
 ---
 
-<a name="wb_supervisor_node_get_from_def">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
 
@@ -135,7 +135,7 @@ having to define a DEF name for it.
 
 ---
 
-<a name="wb_supervisor_node_get_type">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_type**, **wb\_supervisor\_node\_get\_type\_name**, **wb\_supervisor\_node\_get\_base\_type\_name** - *get information on a specified node*
 
@@ -178,7 +178,7 @@ integers can be directly compared with the output of the `Node::getType()`
 
 ---
 
-<a name="wb_supervisor_node_remove">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_remove** - *Remove a specified node*
 
@@ -197,7 +197,7 @@ argument from the Webots scene tree.
 
 ---
 
-<a name="wb_supervisor_node_get_field">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_field** - *get a field reference from a node*
 
@@ -223,7 +223,7 @@ if the field corresponding to the field name is an hidden field.
 
 ---
 
-<a name="wb_supervisor_node_get_position">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_position**, **wb\_supervisor\_node\_get\_orientation** - *get the global (world) position/orientation of a node*
 
@@ -288,7 +288,7 @@ deallocated at the next time step.
 
 ---
 
-<a name="wb_supervisor_node_get_center_of_mass">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_center\_of\_mass** - *get the global position of a solid's center of mass*
 
@@ -318,7 +318,7 @@ deallocated at the next time step.
 
 ---
 
-<a name="wb_supervisor_node_get_contact_point">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_contact\_point** - *get the contact point with given index in the contact point list of the given solid.*
 
@@ -353,7 +353,7 @@ deallocated at the next time step.
 
 ---
 
-<a name="wb_supervisor_node_get_number_of_contact_points">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_number\_of\_contact\_points** - *get the number of contact points of the given solid*
 
@@ -377,7 +377,7 @@ shows how to use this function.
 
 ---
 
-<a name="wb_supervisor_node_get_static_balance">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_static\_balance** - *return the boolean value of the static balance test based on the support polygon of a solid*
 
@@ -402,7 +402,7 @@ mass onto this plane lies inside or outside the support polygon.
 
 ---
 
-<a name="wb_supervisor_node_get_velocity">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_get\_velocity**, **wb\_supervisor\_node\_set\_velocity** - *get/set the angular and linear velocities of a Solid node.*
 
@@ -435,7 +435,7 @@ y and z axes.
 
 ---
 
-<a name="wb_supervisor_node_reset_physics">**Name**</a>
+**Name**
 
 **wb\_supervisor\_node\_reset\_physics** - *stops the inertia of the given solid*
 
@@ -460,7 +460,7 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 ---
 
-<a name="wb_supervisor_set_label">**Name**</a>
+**Name**
 
 **wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
 
@@ -524,7 +524,7 @@ represents the magenta color.
 
 ---
 
-<a name="wb_supervisor_simulation_quit">**Name**</a>
+**Name**
 
 **wb\_supervisor\_simulation\_quit** - *terminate the simulator and controller processes*
 
@@ -608,7 +608,7 @@ int main(int argc, char *argv[]) {
 
 ---
 
-<a name="wb_supervisor_simulation_revert">**Name**</a>
+**Name**
 
 **wb\_supervisor\_simulation\_revert** - *reload the current world*
 
@@ -631,7 +631,7 @@ restarts.
 
 ---
 
-<a name="wb_supervisor_simulation_set_mode">**Name**</a>
+**Name**
 
 **wb\_supervisor\_simulation\_get\_mode**, **wb\_supervisor\_simulation\_set\_mode** - *get and set the simulation mode*
 
@@ -679,7 +679,7 @@ clicking on the corresponding buttons in the user interface.
 
 ---
 
-<a name="wb_supervisor_load_world">**Name**</a>
+**Name**
 
 **wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
 
@@ -715,7 +715,7 @@ argument. In this case, a simple save operation is performed.
 
 ---
 
-<a name="wb_supervisor_simulation_reset_physics">**Name**</a>
+**Name**
 
 **wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
 
@@ -746,7 +746,7 @@ after calling this function.
 
 ---
 
-<a name="wb_supervisor_movie_start_recording">**Name**</a>
+**Name**
 
 **wb\_supervisor\_movie\_start\_recording**, **wb\_supervisor\_movie\_stop\_recording**, **wb\_supervisor\_movie\_is\_ready**, **wb\_supervisor\_movie\_failed** - *export the current simulation into a movie file*
 
@@ -794,7 +794,7 @@ reset to `FALSE`.
 
 ---
 
-<a name="wb_supervisor_animation_start_recording">**Name**</a>
+**Name**
 
 **wb\_supervisor\_animation\_start\_recording**, **wb\_supervisor\_animation\_stop\_recording** - *export the current simulation into an animation file*
 
@@ -825,7 +825,7 @@ indicating their success.
 
 ---
 
-<a name="wb_supervisor_field_get">**Name**</a>
+**Name**
 
 **wb\_supervisor\_field\_get\_type**, **wb\_supervisor\_field\_get\_type\_name**, **wb\_supervisor\_field\_get\_count** - *get a handler and more information on a field in a node*
 
@@ -866,7 +866,7 @@ be directly compared with the output of the `Field::getType()`
 
 ---
 
-<a name="wb_supervisor_field_get_sf_bool">**Name**</a>
+**Name**
 
 **wb\_supervisor\_field\_get\_sf\_bool**, **wb\_supervisor\_field\_get\_sf\_int32**, **wb\_supervisor\_field\_get\_sf\_float**, **wb\_supervisor\_field\_get\_sf\_vec2f**, **wb\_supervisor\_field\_get\_sf\_vec3f**, **wb\_supervisor\_field\_get\_sf\_rotation**, **wb\_supervisor\_field\_get\_sf\_color**, **wb\_supervisor\_field\_get\_sf\_string**, **wb\_supervisor\_field\_get\_sf\_node**, **wb\_supervisor\_field\_get\_mf\_bool**, **wb\_supervisor\_field\_get\_mf\_int32**, **wb\_supervisor\_field\_get\_mf\_float**, **wb\_supervisor\_field\_get\_mf\_vec2f**, **wb\_supervisor\_field\_get\_mf\_vec3f**, **wb\_supervisor\_field\_get\_mf\_rotation**, **wb\_supervisor\_field\_get\_mf\_color**, **wb\_supervisor\_field\_get\_mf\_string**, **wb\_supervisor\_field\_get\_mf\_node** - *get the value of a field*
 
@@ -915,7 +915,7 @@ message is displayed).
 
 ---
 
-<a name="wb_supervisor_field_set_sf_bool">**Name**</a>
+**Name**
 
 **wb\_supervisor\_field\_set\_sf\_bool**, **wb\_supervisor\_field\_set\_sf\_int32**, **wb\_supervisor\_field\_set\_sf\_float**, **wb\_supervisor\_field\_set\_sf\_vec2f**, **wb\_supervisor\_field\_set\_sf\_vec3f**, **wb\_supervisor\_field\_set\_sf\_rotation**, **wb\_supervisor\_field\_set\_sf\_color**, **wb\_supervisor\_field\_set\_sf\_string**, **wb\_supervisor\_field\_set\_mf\_bool**, **wb\_supervisor\_field\_set\_mf\_int32**, **wb\_supervisor\_field\_set\_mf\_float**, **wb\_supervisor\_field\_set\_mf\_vec2f**, **wb\_supervisor\_field\_set\_mf\_vec3f**, **wb\_supervisor\_field\_set\_mf\_rotation**, **wb\_supervisor\_field\_set\_mf\_color**, **wb\_supervisor\_field\_set\_mf\_string** - *set the value of a field*
 
@@ -973,7 +973,7 @@ and setting fields with the above described functions.
 
 ---
 
-<a name="wb_supervisor_field_import_mf_node">**Name**</a>
+**Name**
 
 **wb\_supervisor\_field\_import\_mf\_node**, **wb\_supervisor\_field\_import\_mf\_node\_from\_string**, **wb\_supervisor\_field\_remove\_mf\_node** - *import/remove a node into/from an MF\_NODE field (typically a "children" field)*
 

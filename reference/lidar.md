@@ -129,7 +129,7 @@ simulate the lidar:
 
 ### Lidar Functions
 
-<a name="wb_lidar_enable">**Name**</a>
+**Name**
 
 **wb\_lidar\_enable**, **wb\_lidar\_disable**, **wb\_lidar\_get\_sampling\_period** - *enable and disable lidar updates*
 
@@ -155,7 +155,7 @@ The `wb_lidar_get_sampling_period()` function returns the period given into the
 
 ---
 
-<a name="wb_lidar_enable_point_cloud">**Name**</a>
+**Name**
 
 **wb\_lidar\_enable\_point\_cloud**, **wb\_lidar\_disable\_point\_cloud**, **wb\_lidar\_is\_point\_cloud\_enabled** - *enable and disable lidar point cloud mode*
 
@@ -183,7 +183,7 @@ update is enabled or false otherwise.
 
 ---
 
-<a name="wb_lidar_get_range_image">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_range\_image**, **wb\_lidar\_get\_layer\_range\_image** - *get the range image and range image associate with a specific layer*
 
@@ -225,7 +225,7 @@ are identical but their handling is of course different.
 
 ---
 
-<a name="wb_lidar_get_point_cloud">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_point\_cloud**, **wb\_lidar\_get\_layer\_point\_cloud**, **wb\_lidar\_get\_number\_of\_points** - *get the points array, points array associate with a specific layer and total number of point*
 
@@ -259,7 +259,7 @@ number of points associated to).
 
 ---
 
-<a name="wb_lidar_get_frequency">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_frequency**, **wb\_lidar\_set\_frequency** - *set and get the rotating frequency*
 
@@ -283,7 +283,7 @@ range [minFrequency; maxFrequency].
 
 ---
 
-<a name="wb_lidar_get_horizontal_resolution">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_horizontal\_resolution**, **wb\_lidar\_get\_number\_of\_layers** - *get the horizontal resolution and layer number*
 
@@ -305,7 +305,7 @@ The `wb_lidar_get_number_of_layers()` returns the number of layers of the lidar.
 
 ---
 
-<a name="wb_lidar_get_min_frequency">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_min\_frequency**, **wb\_lidar\_get\_max\_frequency** - *get the minimum and maximum rotating frequency*
 
@@ -326,7 +326,7 @@ head of the lidar (in case of rotating lidar).
 
 ---
 
-<a name="wb_lidar_get_fov">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_fov**, **wb\_lidar\_get\_vertical\_fov** - *get the horizontal and vertical field of view of the lidar*
 
@@ -348,7 +348,7 @@ lidar.
 
 ---
 
-<a name="wb_lidar_get_min_range">**Name**</a>
+**Name**
 
 **wb\_lidar\_get\_min\_range**, **wb\_lidar\_get\_max\_range** - *get the minimum and maximum range*
 

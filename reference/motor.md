@@ -238,7 +238,7 @@ Warnings are displayed if theses rules are not respected.
 
 ### Motor Functions
 
-<a name="wb_motor_set_position">**Name**</a>
+**Name**
 
 **wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
 
@@ -371,7 +371,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 ---
 
-<a name="wb_motor_enable_force_feedback">**Name**</a>
+**Name**
 
 **wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
 
@@ -442,7 +442,7 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 ---
 
-<a name="wb_motor_set_force">**Name**</a>
+**Name**
 
 **wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
 
@@ -488,7 +488,7 @@ dampers with controllable properties. The example in
 
 ---
 
-<a name="wb_motor_get_type">**Name**</a>
+**Name**
 
 **wb\_motor\_get\_type** - *get the motor type*
 

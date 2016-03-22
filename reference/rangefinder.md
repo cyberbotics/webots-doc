@@ -113,7 +113,7 @@ restored.
 
 ### RangeFinder Functions
 
-<a name="wb_range_finder_enable">**Name**</a>
+**Name**
 
 **wb\_range\_finder\_enable**, **wb\_range\_finder\_disable**, **wb\_range\_finder\_get\_sampling\_period** - *enable and disable range-finder updates*
 
@@ -139,7 +139,7 @@ into the `wb_range_finder_enable()` function, or 0 if the device is disabled.
 
 ---
 
-<a name="wb_range_finder_get_fov">**Name**</a>
+**Name**
 
 **wb\_range\_finder\_get\_fov** - *get field of view for a range-finder*
 
@@ -158,7 +158,7 @@ of a range-finder.
 
 ---
 
-<a name="wb_range_finder_get_width">**Name**</a>
+**Name**
 
 **wb\_range\_finder\_get\_width**, **wb\_range\_finder\_get\_height** - *get the size of the range-finder image*
 
@@ -178,7 +178,7 @@ in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
-<a name="wb_range_finder_get_min_range">**Name**</a>
+**Name**
 
 **wb\_range\_finder\_get\_min\_range**, **wb\_range\_finder\_get\_max\_range** - *get the minimum and maximum range of the range-finder device*
 
@@ -198,7 +198,7 @@ device as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
-<a name="wb_range_finder_get_range_image">**Name**</a>
+**Name**
 
 **wb\_range\_finder\_get\_range\_image**, **wb\_range\_finder\_image\_get\_depth** - *get the range image and range data from a range-finder*
 
@@ -245,7 +245,7 @@ are identical but their handling is of course different.
 
 ---
 
-<a name="wb_range_finder_save_image">**Name**</a>
+**Name**
 
 **wb\_range\_finder\_save\_image** - *save a range-finder image in either PNG or JPEG format*
 

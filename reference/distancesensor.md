@@ -219,7 +219,7 @@ The ground texture must be placed in a [Plane](plane.md).
 
 ### DistanceSensor Functions
 
-<a name="wb_distance_sensor_get_value">**Name**</a>
+**Name**
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
@@ -252,7 +252,7 @@ of the return value is defined by this lookup table.
 
 ---
 
-<a name="wb_distance_sensor_get_max_range">**Name**</a>
+**Name**
 
 **wb\_distance\_sensor\_get\_max\_range**, **wb\_distance\_sensor\_get\_min\_range**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum range, minimum range and aperture*
 
@@ -279,7 +279,7 @@ sensor in radians.
 
 ---
 
-<a name="wb_distance_sensor_get_type">**Name**</a>
+**Name**
 
 **wb\_distance\_sensor\_get\_type** - *Return the sensor type*
 

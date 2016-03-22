@@ -92,7 +92,7 @@ range` and `aperture` will be ignored.
 
 ### Emitter Functions
 
-<a name="wb_emitter_send">**Name**</a>
+**Name**
 
 **wb\_emitter\_send** - *send a data packet to potential receivers*
 
@@ -163,7 +163,7 @@ in a C/C++ controller.
 
 ---
 
-<a name="wb_emitter_set_channel">**Name**</a>
+**Name**
 
 **wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
 
@@ -193,7 +193,7 @@ static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 
 ---
 
-<a name="wb_emitter_set_range">**Name**</a>
+**Name**
 
 **wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
 
@@ -219,7 +219,7 @@ returns the current emitter's range. For both the `wb_emitter_set_range()` and
 
 ---
 
-<a name="wb_emitter_get_buffer_size">**Name**</a>
+**Name**
 
 **wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
 

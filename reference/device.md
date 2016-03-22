@@ -14,7 +14,7 @@ sensor).
 
 ### Device Functions
 
-<a name="wb_device_get_model">**Name**</a>
+**Name**
 
 **wb\_device\_get\_model** - *returns the model string of the corresponding device*
 
@@ -37,7 +37,7 @@ a `model` field)
 
 ---
 
-<a name="wb_device_get_name">**Name**</a>
+**Name**
 
 **wb\_device\_get\_name** - *convert WbDeviceTag to its corresponding device name*
 
@@ -58,7 +58,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 ---
 
-<a name="wb_device_get_node_type">**Name**</a>
+**Name**
 
 **wb\_device\_get\_node\_type** - *convert WbDeviceTag to its corresponding WbNodeType*
 

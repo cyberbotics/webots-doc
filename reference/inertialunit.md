@@ -71,7 +71,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 ### InertialUnit Functions
 
-<a name="wb_inertial_unit_get_roll_pitch_yaw">**Name**</a>
+**Name**
 
 **wb\_inertial\_unit\_enable**, **wb\_inertial\_unit\_disable**, **wb\_inertial\_unit\_get\_sampling\_period**, **wb\_inertial\_unit\_get\_roll\_pitch\_yaw** - *enable, disable and read the output values of the inertial unit*
 

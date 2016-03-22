@@ -103,12 +103,22 @@ showdown.extension("wbFigure", function() {
 // This extension is dealing with some API content
 showdown.extension("wbAPI", function() {
     return [
-        { // figure with legend to HTML
+        { // api tag to HTML
             type: "lang",
             filter: function(text, converter, options) {
                 text = text.replace(/%api\s+"([^]+?)"([^]+?)%end/gi, function(match, anchor, content) {
                     var foo = converter.makeHtml(content);
                     return "<div name=\"" + anchor + "\" class=\"api\">" + foo + "</div>";
+                });
+                return text;
+            }
+        },
+        { // "\*\*wb.*\*\*" to anchor
+            type: "lang",
+            filter: function(text, converter, options) {
+                text = text.replace(/\*\*(wb\\_[^\*]+?)\*\*/gi, function(match, content) {
+                    var protectedContent = content.replace(/\\_/g, "_");
+                    return "<strong name=\"" + protectedContent + "\">" + content + "</strong>";
                 });
                 return text;
             }

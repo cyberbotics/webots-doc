@@ -196,7 +196,7 @@ To be functional, a [Connector](#connector) node requires the presence of a
 
 ### Connector Functions
 
-<a name="wb_connector_get_presence">**Name**</a>
+**Name**
 
 **wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence\_sampling\_period**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
@@ -257,7 +257,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 ---
 
-<a name="wb_connector_lock">**Name**</a>
+**Name**
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
 

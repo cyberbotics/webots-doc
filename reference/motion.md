@@ -1,6 +1,6 @@
 ## Motion
 
-<a name="wbu_motion_new">**Name**</a>
+**Name**
 
 **wbu\_motion\_new**, **wbu\_motion\_delete** - *obtaining and releasing a motion file handle*
 
@@ -49,7 +49,7 @@ if (! walk->isValid()) {
 
 ---
 
-<a name="wbu_motion_play">**Name**</a>
+**Name**
 
 **wbu\_motion\_play**, **wbu\_motion\_stop**, **wbu\_motion\_set\_loop**, **wbu\_motion\_set\_reverse** - *Controlling motion files playback*
 
@@ -115,7 +115,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 ---
 
-<a name="wbu_motion_is_over">**Name**</a>
+**Name**
 
 **wbu\_motion\_is\_over**, **wbu\_motion\_get\_duration**, **wbu\_motion\_get\_time**, **wbu\_motion\_set\_time** - *controlling the playback position*
 

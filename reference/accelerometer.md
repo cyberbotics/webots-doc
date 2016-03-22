@@ -44,7 +44,7 @@ value in the interval (0.0, inf).
 
 ### Accelerometer Functions
 
-<a name="wb_accelerometer_get_values">**Name**</a>
+**Name**
 
 **wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
 

@@ -17,7 +17,7 @@ the friction of a joint. The [Brake](#brake) node can be inserted in the
 
 ### Brake Functions
 
-<a name="wb_brake_set_damping_constant">**Name**</a>
+**Name**
 
 **wb\_brake\_set\_damping\_constant**, **wb\_brake\_get\_type** - *set the damping constant coefficient of the joint and get the type of brake*
 

@@ -321,32 +321,47 @@ The following tables describe the Java classes and their methods.
 
 %api "java_lidar"
 
-|                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------ |
-| import com.cyberbotics.webots.controller.Lidar;                                                                                |
-| public class [Lidar](lidar.md) extends [Device](#java_device) {                                                                |
-| &nbsp;&nbsp; public void [enable](lidar.md#wb_lidar_enable)(int ms);                                                           |
-| &nbsp;&nbsp; public void [enablePointCloud](lidar.md#wb_lidar_enable_point_cloud)();                                           |
-| &nbsp;&nbsp; public void [disable](lidar.md#wb_lidar_enable)();                                                                |
-| &nbsp;&nbsp; public void [disablePointCloud](lidar.md#wb_lidar_enable_point_cloud)();                                          |
-| &nbsp;&nbsp; public int [getSamplingPeriod](lidar.md#wb_lidar_enable)();                                                       |
-| &nbsp;&nbsp; public boolean [isPointCloudEnabled](lidar.md#wb_lidar_enable_point_cloud)();                                     |
-| &nbsp;&nbsp; public float[] [getRangeImage](lidar.md#wb_lidar_get_range_image)();                                              |
-| &nbsp;&nbsp; public float[] [getLayerRangeImage](lidar.md#wb_lidar_get_range_image)(int layer);                                |
-| &nbsp;&nbsp; const [WbLidarPoint](lidar.md#wblidarpoint) *[getPointCloud](lidar.md#wb_lidar_get_point_cloud)();                |
-| &nbsp;&nbsp; const [WbLidarPoint](lidar.md#wblidarpoint) * [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer); |
-| &nbsp;&nbsp; public int [getNumberOfPoints](lidar.md#wb_lidar_get_point_cloud)();                                              |
-| &nbsp;&nbsp; public double [getFrequency](lidar.md#wb_lidar_get_frequency)();                                                  |
-| &nbsp;&nbsp; public void [setFrequency](lidar.md#wb_lidar_get_frequency)(double frequency);                                    |
-| &nbsp;&nbsp; public int [getHorizontalResolution](lidar.md#wb_lidar_get_horizontal_resolution)();                              |
-| &nbsp;&nbsp; public int [getNumberOfLayers](lidar.md#wb_lidar_get_horizontal_resolution)();                                    |
-| &nbsp;&nbsp; public double [getMinFrequency](lidar.md#wb_lidar_get_min_frequency)();                                           |
-| &nbsp;&nbsp; public double [getMaxFrequency](lidar.md#wb_lidar_get_min_frequency)();                                           |
-| &nbsp;&nbsp; public double [getFov](lidar.md#wb_lidar_get_fov)();                                                              |
-| &nbsp;&nbsp; public double [getVerticalFov](lidar.md#wb_lidar_get_fov)();                                                      |
-| &nbsp;&nbsp; public double [getMinRange](lidar.md#wb_lidar_get_min_range)();                                                   |
-| &nbsp;&nbsp; public double [getMaxRange](lidar.md#wb_lidar_get_min_range)();                                                   |
-| }                                                                                                                              |
+|                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Lidar;                                                                                 |
+| public class [Lidar](lidar.md) extends [Device](#java_device) {                                                                 |
+| &nbsp;&nbsp; public void [enable](lidar.md#wb_lidar_enable)(int ms);                                                            |
+| &nbsp;&nbsp; public void [enablePointCloud](lidar.md#wb_lidar_enable_point_cloud)();                                            |
+| &nbsp;&nbsp; public void [disable](lidar.md#wb_lidar_enable)();                                                                 |
+| &nbsp;&nbsp; public void [disablePointCloud](lidar.md#wb_lidar_enable_point_cloud)();                                           |
+| &nbsp;&nbsp; public int [getSamplingPeriod](lidar.md#wb_lidar_enable)();                                                        |
+| &nbsp;&nbsp; public boolean [isPointCloudEnabled](lidar.md#wb_lidar_enable_point_cloud)();                                      |
+| &nbsp;&nbsp; public float[] [getRangeImage](lidar.md#wb_lidar_get_range_image)();                                               |
+| &nbsp;&nbsp; public float[] [getLayerRangeImage](lidar.md#wb_lidar_get_range_image)(int layer);                                 |
+| &nbsp;&nbsp; public [WbLidarPoint](lidar.md#wblidarpoint)[] [getPointCloud](lidar.md#wb_lidar_get_point_cloud)();               |
+| &nbsp;&nbsp; public [WbLidarPoint](lidar.md#wblidarpoint)[] [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer); |
+| &nbsp;&nbsp; public int [getNumberOfPoints](lidar.md#wb_lidar_get_point_cloud)();                                               |
+| &nbsp;&nbsp; public double [getFrequency](lidar.md#wb_lidar_get_frequency)();                                                   |
+| &nbsp;&nbsp; public void [setFrequency](lidar.md#wb_lidar_get_frequency)(double frequency);                                     |
+| &nbsp;&nbsp; public int [getHorizontalResolution](lidar.md#wb_lidar_get_horizontal_resolution)();                               |
+| &nbsp;&nbsp; public int [getNumberOfLayers](lidar.md#wb_lidar_get_horizontal_resolution)();                                     |
+| &nbsp;&nbsp; public double [getMinFrequency](lidar.md#wb_lidar_get_min_frequency)();                                            |
+| &nbsp;&nbsp; public double [getMaxFrequency](lidar.md#wb_lidar_get_min_frequency)();                                            |
+| &nbsp;&nbsp; public double [getFov](lidar.md#wb_lidar_get_fov)();                                                               |
+| &nbsp;&nbsp; public double [getVerticalFov](lidar.md#wb_lidar_get_fov)();                                                       |
+| &nbsp;&nbsp; public double [getMinRange](lidar.md#wb_lidar_get_min_range)();                                                    |
+| &nbsp;&nbsp; public double [getMaxRange](lidar.md#wb_lidar_get_min_range)();                                                    |
+| }                                                                                                                               |
+
+%end
+
+%api "java_lidar_point"
+
+|                                                                   |
+| ----------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.WbLidarPoint;            |
+| public class [WbLidarPoint](lidar.md#wblidarpoint) {              |
+| &nbsp;&nbsp; public double [getX](lidar.md#wblidarpoint)();       |
+| &nbsp;&nbsp; public double [getY](lidar.md#wblidarpoint)();       |
+| &nbsp;&nbsp; public double [getZ](lidar.md#wblidarpoint)();       |
+| &nbsp;&nbsp; public double [getLayerId](lidar.md#wblidarpoint)(); |
+| &nbsp;&nbsp; public double [getTime](lidar.md#wblidarpoint)();    |
+| }                                                                 |
 
 %end
 

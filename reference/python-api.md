@@ -309,7 +309,7 @@ The following tables describe the Python classes and their methods.
 |                                                                                                |
 | ---------------------------------------------------------------------------------------------- |
 | from controller import Lidar                                                                   |
-| class [Lidar](led.md) ([Device](#python_device)) :                                             |
+| class [Lidar](lidar.md) ([Device](#python_device)) :                                           |
 | &nbsp;&nbsp; def [enable](lidar.md#wb_lidar_enable)(self, ms);                                 |
 | &nbsp;&nbsp; def [enablePointCloud](lidar.md#wb_lidar_enable_point_cloud)(self);               |
 | &nbsp;&nbsp; def [disable](lidar.md#wb_lidar_enable)(self);                                    |
@@ -331,6 +331,20 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getVerticalFov](lidar.md#wb_lidar_get_fov)(self);                            |
 | &nbsp;&nbsp; def [getMinRange](lidar.md#wb_lidar_get_min_range)(self);                         |
 | &nbsp;&nbsp; def [getMaxRange](lidar.md#wb_lidar_get_min_range)(self);                         |
+
+%end
+
+%api "python_lidar_point"
+
+|                                                      |
+| ---------------------------------------------------- |
+| from controller import WbLidarPoint                  |
+| class [WbLidarPoint](lidar.md#wblidarpoint) :        |
+| &nbsp;&nbsp; [self.x](lidar.md#wblidarpoint)         |
+| &nbsp;&nbsp; [self.y](lidar.md#wblidarpoint)         |
+| &nbsp;&nbsp; [self.z](lidar.md#wblidarpoint)         |
+| &nbsp;&nbsp; [self.layer\_id](lidar.md#wblidarpoint) |
+| &nbsp;&nbsp; [self.time](lidar.md#wblidarpoint)      |
 
 %end
 

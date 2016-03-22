@@ -216,6 +216,10 @@ The following tables describe the Matlab functions.
 | &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                       |
 | &nbsp;&nbsp; period = [wb\_lidar\_get\_sampling\_period](lidar.md#wb_lidar_enable)(tag);                                          |
 | &nbsp;&nbsp; state = [wb\_lidar\_is\_point\_cloud\_enabled](lidar.md#wb_lidar_enable)(tag);                                       |
+| &nbsp;&nbsp; range = [wb\_lidar\_get\_range\_image](lidar.md#wb_lidar_get_range_image)(tag);                                      |
+| &nbsp;&nbsp; range = [wb\_lidar\_get\_layer\_range\_image](lidar.md#wb_lidar_get_range_image)(tag, layer);                        |
+| &nbsp;&nbsp; points = [wb\_lidar\_get\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag);                                     |
+| &nbsp;&nbsp; points = [wb\_lidar\_get\_layer\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag, layer);                       |
 | &nbsp;&nbsp; number\_of\_points = [wb\_lidar\_get\_number\_of\_points](lidar.md#wb_lidar_get_point_cloud)(tag);                   |
 | &nbsp;&nbsp; frequency = [wb\_lidar\_get\_frequency](lidar.md#wb_lidar_get_frequency)(tag);                                       |
 | &nbsp;&nbsp; [wb\_lidar\_set\_frequency](lidar.md#wb_lidar_get_frequency)(tag, frequency);                                        |

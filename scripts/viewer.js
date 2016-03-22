@@ -129,8 +129,8 @@ function populateViewDiv(mdContent) {
         view.removeChild(view.firstChild);
     }
 
-    console.log("Raw MD content:\n\n");
-    console.log(mdContent);
+    // console.log("Raw MD content:\n\n");
+    // console.log(mdContent);
 
     applyToTitle(mdContent);
 
@@ -278,6 +278,12 @@ function changeMenuSelection() {
             selected.classList.add("selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
                 selected.parentNode.parentNode.classList.add("selected");
+                var firstChild = selected.parentNode.parentNode.firstChild;
+                if (firstChild.tagName.toLowerCase() == 'a') {
+                    showAccodionItem(firstChild);
+                }
+            } else {
+                showAccodionItem(a);
             }
             return selected;
         }
@@ -390,14 +396,18 @@ function populateMenu(menu) {
     menuDiv.appendChild(menu);
 
     menu.setAttribute("id", "accordion");
-    $('#accordion > li > a').click(function(){
-      if ($(this).attr('class') != 'active'){
-        $('#accordion li ul').slideUp();
-        $(this).next().slideToggle();
-        $('#accordion li a').removeClass('active');
-        $(this).addClass('active');
-      }
+    $('#accordion > li > a').click(function() {
+        showAccodionItem(this);
     });
+}
+
+function showAccodionItem(item) {
+    if (! $(item).hasClass('active')) {
+        $('#accordion li ul').slideUp();
+        $(item).next().slideToggle();
+        $('#accordion li a').removeClass('active');
+        $(item).addClass('active');
+    }
 }
 
 function getMDFile() {

@@ -59,7 +59,7 @@ with open(script_directory + 'index.html', 'r') as file:
 reg = r'"https://www\.cyberbotics\.com/([^"]*)"'
 content = re.sub(reg, r'"dependencies/\1"', content)
 
-with open(script_directory + 'local.html', 'w') as file:
+with open(script_directory + 'local_index.html', 'w') as file:
     file.write(content)
 
 for dependency in dependencies:

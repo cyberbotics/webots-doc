@@ -65,5 +65,6 @@ with open(script_directory + 'local_index.html', 'w') as file:
 for dependency in dependencies:
     download(
         'https://www.cyberbotics.com/' + dependency,
-        'dependencies/' + dependency
+        script_directory + 'dependencies' + os.sep + dependency.replace(
+            "/", os.sep)
     )

@@ -126,31 +126,31 @@ The following tables describe the Python classes and their methods.
 
 %api "python_display"
 
-|                                                                                                   |
-| ------------------------------------------------------------------------------------------------- |
-| from controller import Display                                                                    |
-| class [Display](display.md) ([Device](#python_device)) :                                          |
-| &nbsp;&nbsp; RGB, RGBA, ARGB, BGRA                                                                |
-| &nbsp;&nbsp; def [getWidth](display.md#wb_display_get_width)(self)                                |
-| &nbsp;&nbsp; def [getHeight](display.md#wb_display_get_width)(self)                               |
-| &nbsp;&nbsp; def [setColor](display.md#wb_display_set_context)(self, color)                       |
-| &nbsp;&nbsp; def [setAlpha](display.md#wb_display_set_context)(self, alpha)                       |
-| &nbsp;&nbsp; def [setOpacity](display.md#wb_display_set_context)(self, opacity)                   |
-| &nbsp;&nbsp; def [drawPixel](display.md#wb_display_draw_primitive)(self, x1, y1)                  |
-| &nbsp;&nbsp; def [drawLine](display.md#wb_display_draw_primitive)(self, x1, y1, x2, y2)           |
-| &nbsp;&nbsp; def [drawRectangle](display.md#wb_display_draw_primitive)(self, x, y, width, height) |
-| &nbsp;&nbsp; def [drawOval](display.md#wb_display_draw_primitive)(self, cx, cy, a, b)             |
-| &nbsp;&nbsp; def [drawPolygon](display.md#wb_display_draw_primitive)(self, x, y)                  |
-| &nbsp;&nbsp; def [drawText](display.md#wb_display_draw_primitive)(self, txt, x, y)                |
-| &nbsp;&nbsp; def [fillRectangle](display.md#wb_display_draw_primitive)(self, x, y, width, height) |
-| &nbsp;&nbsp; def [fillOval](display.md#wb_display_draw_primitive)(self, cx, cy, a, b)             |
-| &nbsp;&nbsp; def [fillPolygon](display.md#wb_display_draw_primitive)(self, x, y)                  |
-| &nbsp;&nbsp; def [imageCopy](display.md#wb_display_image_functions)(self, x, y, width, height)    |
-| &nbsp;&nbsp; def [imagePaste](display.md#wb_display_image_functions)(self, ir, x, y)              |
-| &nbsp;&nbsp; def [imageLoad](display.md#wb_display_image_functions)(self, filename)               |
-| &nbsp;&nbsp; def [imageNew](display.md#wb_display_image_functions)(self, data, format)            |
-| &nbsp;&nbsp; def [imageSave](display.md#wb_display_image_functions)(self, ir, filename)           |
-| &nbsp;&nbsp; def [imageDelete](display.md#wb_display_image_functions)(self, ir)                   |
+|                                                                                               |
+| --------------------------------------------------------------------------------------------- |
+| from controller import Display                                                                |
+| class [Display](display.md) ([Device](#python_device)) :                                      |
+| &nbsp;&nbsp; RGB, RGBA, ARGB, BGRA                                                            |
+| &nbsp;&nbsp; def [getWidth](display.md#wb_display_get_width)(self)                            |
+| &nbsp;&nbsp; def [getHeight](display.md#wb_display_get_width)(self)                           |
+| &nbsp;&nbsp; def [setColor](display.md#wb_display_set_color)(self, color)                     |
+| &nbsp;&nbsp; def [setAlpha](display.md#wb_display_set_color)(self, alpha)                     |
+| &nbsp;&nbsp; def [setOpacity](display.md#wb_display_set_color)(self, opacity)                 |
+| &nbsp;&nbsp; def [drawPixel](display.md#wb_display_draw_pixel)(self, x1, y1)                  |
+| &nbsp;&nbsp; def [drawLine](display.md#wb_display_draw_pixel)(self, x1, y1, x2, y2)           |
+| &nbsp;&nbsp; def [drawRectangle](display.md#wb_display_draw_pixel)(self, x, y, width, height) |
+| &nbsp;&nbsp; def [drawOval](display.md#wb_display_draw_pixel)(self, cx, cy, a, b)             |
+| &nbsp;&nbsp; def [drawPolygon](display.md#wb_display_draw_pixel)(self, x, y)                  |
+| &nbsp;&nbsp; def [drawText](display.md#wb_display_draw_pixel)(self, txt, x, y)                |
+| &nbsp;&nbsp; def [fillRectangle](display.md#wb_display_draw_pixel)(self, x, y, width, height) |
+| &nbsp;&nbsp; def [fillOval](display.md#wb_display_draw_pixel)(self, cx, cy, a, b)             |
+| &nbsp;&nbsp; def [fillPolygon](display.md#wb_display_draw_pixel)(self, x, y)                  |
+| &nbsp;&nbsp; def [imageCopy](display.md#wb_display_image_new)(self, x, y, width, height)      |
+| &nbsp;&nbsp; def [imagePaste](display.md#wb_display_image_new)(self, ir, x, y)                |
+| &nbsp;&nbsp; def [imageLoad](display.md#wb_display_image_new)(self, filename)                 |
+| &nbsp;&nbsp; def [imageNew](display.md#wb_display_image_new)(self, data, format)              |
+| &nbsp;&nbsp; def [imageSave](display.md#wb_display_image_new)(self, ir, filename)             |
+| &nbsp;&nbsp; def [imageDelete](display.md#wb_display_image_new)(self, ir)                     |
 
 %end
 
@@ -198,9 +198,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; SF\_ROTATION, SF\_COLOR, SF\_STRING, SF\_NODE, MF,                                                         |
 | &nbsp;&nbsp; MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, MF\_COLOR,                                                     |
 | &nbsp;&nbsp; MF\_STRING, MF\_NODE                                                                                       |
-| &nbsp;&nbsp; def [getType](supervisor.md#wb_supervisor_field_get)(self)                                                 |
-| &nbsp;&nbsp; def [getTypeName](supervisor.md#wb_supervisor_field_get)(self)                                             |
-| &nbsp;&nbsp; def [getCount](supervisor.md#wb_supervisor_field_get)(self)                                                |
+| &nbsp;&nbsp; def [getType](supervisor.md#wb_supervisor_field_get_type)(self)                                            |
+| &nbsp;&nbsp; def [getTypeName](supervisor.md#wb_supervisor_field_get_type)(self)                                        |
+| &nbsp;&nbsp; def [getCount](supervisor.md#wb_supervisor_field_get_type)(self)                                           |
 | &nbsp;&nbsp; def [getSFBool](supervisor.md#wb_supervisor_field_get_sf_bool)(self)                                       |
 | &nbsp;&nbsp; def [getSFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)(self)                                      |
 | &nbsp;&nbsp; def [getSFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)(self)                                      |
@@ -531,26 +531,26 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [\_\_init\_\_](robot.md#wb_robot_step)(self)                                    |
 | &nbsp;&nbsp; def [\_\_del\_\_](robot.md#wb_robot_step)(self)                                     |
 | &nbsp;&nbsp; def [step](robot.md#wb_robot_step)(self, ms)                                        |
-| &nbsp;&nbsp; def [getAccelerometer](robot.md#robotgetdevice)(self, name)                         |
-| &nbsp;&nbsp; def [getBrake](robot.md#robotgetdevice)(self, name)                                 |
-| &nbsp;&nbsp; def [getCamera](robot.md#robotgetdevice)(self, name)                                |
-| &nbsp;&nbsp; def [getCompass](robot.md#robotgetdevice)(self, name)                               |
-| &nbsp;&nbsp; def [getConnector](robot.md#robotgetdevice)(self, name)                             |
-| &nbsp;&nbsp; def [getDisplay](robot.md#robotgetdevice)(self, name)                               |
-| &nbsp;&nbsp; def [getDistanceSensor](robot.md#robotgetdevice)(self, name)                        |
-| &nbsp;&nbsp; def [getEmitter](robot.md#robotgetdevice)(self, name)                               |
-| &nbsp;&nbsp; def [getGPS](robot.md#robotgetdevice)(self, name)                                   |
-| &nbsp;&nbsp; def [getGyro](robot.md#robotgetdevice)(self, name)                                  |
-| &nbsp;&nbsp; def [getInertialUnit](robot.md#robotgetdevice)(self, name)                          |
-| &nbsp;&nbsp; def [getLED](robot.md#robotgetdevice)(self, name)                                   |
-| &nbsp;&nbsp; def [getLightSensor](robot.md#robotgetdevice)(self, name)                           |
-| &nbsp;&nbsp; def [getMotor](robot.md#robotgetdevice)(self, name)                                 |
-| &nbsp;&nbsp; def [getPen](robot.md#robotgetdevice)(self, name)                                   |
-| &nbsp;&nbsp; def [getPositionSensor](robot.md#robotgetdevice)(self, name)                        |
-| &nbsp;&nbsp; def [getRangeFinder](robot.md#robotgetdevice)(self, name)                           |
-| &nbsp;&nbsp; def [getReceiver](robot.md#robotgetdevice)(self, name)                              |
-| &nbsp;&nbsp; def [getServo](robot.md#robotgetdevice)(self, name)                                 |
-| &nbsp;&nbsp; def [getTouchSensor](robot.md#robotgetdevice)(self, name)                           |
+| &nbsp;&nbsp; def [getAccelerometer](robot.md#wb_robot_get_device)(self, name)                    |
+| &nbsp;&nbsp; def [getBrake](robot.md#wb_robot_get_device)(self, name)                            |
+| &nbsp;&nbsp; def [getCamera](robot.md#wb_robot_get_device)(self, name)                           |
+| &nbsp;&nbsp; def [getCompass](robot.md#wb_robot_get_device)(self, name)                          |
+| &nbsp;&nbsp; def [getConnector](robot.md#wb_robot_get_device)(self, name)                        |
+| &nbsp;&nbsp; def [getDisplay](robot.md#wb_robot_get_device)(self, name)                          |
+| &nbsp;&nbsp; def [getDistanceSensor](robot.md#wb_robot_get_device)(self, name)                   |
+| &nbsp;&nbsp; def [getEmitter](robot.md#wb_robot_get_device)(self, name)                          |
+| &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                              |
+| &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                             |
+| &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                     |
+| &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                              |
+| &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                      |
+| &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                            |
+| &nbsp;&nbsp; def [getPen](robot.md#wb_robot_get_device)(self, name)                              |
+| &nbsp;&nbsp; def [getPositionSensor](robot.md#wb_robot_get_device)(self, name)                   |
+| &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                      |
+| &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                         |
+| &nbsp;&nbsp; def [getServo](robot.md#wb_robot_get_device)(self, name)                            |
+| &nbsp;&nbsp; def [getTouchSensor](robot.md#wb_robot_get_device)(self, name)                      |
 | &nbsp;&nbsp; def [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)(self)               |
 | &nbsp;&nbsp; def [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(self, index)          |
 | &nbsp;&nbsp; def [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(self, ms)        |

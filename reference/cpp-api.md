@@ -132,32 +132,32 @@ The following tables describe the C++ classes and their methods.
 
 %api "cpp_display"
 
-|                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Display.hpp`>`                                                                                                                                |
-| class [Display](display.md) : public [Device](#cpp_device) {                                                                                                     |
-| &nbsp;&nbsp; enum {RGB, RGBA, ARGB, BGRA};                                                                                                                       |
-| &nbsp;&nbsp; int [getWidth](display.md#wb_display_get_width)() const;                                                                                            |
-| &nbsp;&nbsp; int [getHeight](display.md#wb_display_get_width)() const;                                                                                           |
-| &nbsp;&nbsp; virtual void [setColor](display.md#wb_display_set_context)(int color);                                                                              |
-| &nbsp;&nbsp; virtual void [setAlpha](display.md#wb_display_set_context)(double alpha);                                                                           |
-| &nbsp;&nbsp; virtual void [setOpacity](display.md#wb_display_set_context)(double opacity);                                                                       |
-| &nbsp;&nbsp; virtual void [drawPixel](display.md#wb_display_draw_primitive)(int x1, int y1);                                                                     |
-| &nbsp;&nbsp; virtual void [drawLine](display.md#wb_display_draw_primitive)(int x1, int y1, int x2, int y2);                                                      |
-| &nbsp;&nbsp; virtual void [drawRectangle](display.md#wb_display_draw_primitive)(int x, int y, int width, int height);                                            |
-| &nbsp;&nbsp; virtual void [drawOval](display.md#wb_display_draw_primitive)(int cx, int cy, int a, int b);                                                        |
-| &nbsp;&nbsp; virtual void [drawPolygon](display.md#wb_display_draw_primitive)(const int *x, const int *y, int size);                                             |
-| &nbsp;&nbsp; virtual void [drawText](display.md#wb_display_draw_primitive)(const std::string &txt, int x, int y);                                                |
-| &nbsp;&nbsp; virtual void [fillRectangle](display.md#wb_display_draw_primitive)(int x, int y, int width, int height);                                            |
-| &nbsp;&nbsp; virtual void [fillOval](display.md#wb_display_draw_primitive)(int cx, int cy, int a, int b);                                                        |
-| &nbsp;&nbsp; virtual void [fillPolygon](display.md#wb_display_draw_primitive)(const int *x, const int *y, int size);                                             |
-| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageCopy](display.md#wb_display_image_functions)(int x, int y, int width, int height) const;                          |
-| &nbsp;&nbsp; virtual void [imagePaste](display.md#wb_display_image_functions)([ImageRef](#cpp_image_ref) *ir, int x, int y);                                     |
-| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageLoad](display.md#wb_display_image_functions)(const std::string &filename) const;                                  |
-| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageNew](display.md#wb_display_image_functions)(int width, int height, const void *data, int format) const;           |
-| &nbsp;&nbsp; void [imageSave](display.md#wb_display_image_functions)([ImageRef](#cpp_image_ref) *ir, const std::string &filename) const;                         |
-| &nbsp;&nbsp; void [imageDelete](display.md#wb_display_image_functions)([ImageRef](#cpp_image_ref) *ir) const;                                                    |
-| };                                                                                                                                                               |
+|                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Display.hpp`>`                                                                                                                          |
+| class [Display](display.md) : public [Device](#cpp_device) {                                                                                               |
+| &nbsp;&nbsp; enum {RGB, RGBA, ARGB, BGRA};                                                                                                                 |
+| &nbsp;&nbsp; int [getWidth](display.md#wb_display_get_width)() const;                                                                                      |
+| &nbsp;&nbsp; int [getHeight](display.md#wb_display_get_width)() const;                                                                                     |
+| &nbsp;&nbsp; virtual void [setColor](display.md#wb_display_set_color)(int color);                                                                          |
+| &nbsp;&nbsp; virtual void [setAlpha](display.md#wb_display_set_color)(double alpha);                                                                       |
+| &nbsp;&nbsp; virtual void [setOpacity](display.md#wb_display_set_color)(double opacity);                                                                   |
+| &nbsp;&nbsp; virtual void [drawPixel](display.md#wb_display_draw_pixel)(int x1, int y1);                                                                   |
+| &nbsp;&nbsp; virtual void [drawLine](display.md#wb_display_draw_pixel)(int x1, int y1, int x2, int y2);                                                    |
+| &nbsp;&nbsp; virtual void [drawRectangle](display.md#wb_display_draw_pixel)(int x, int y, int width, int height);                                          |
+| &nbsp;&nbsp; virtual void [drawOval](display.md#wb_display_draw_pixel)(int cx, int cy, int a, int b);                                                      |
+| &nbsp;&nbsp; virtual void [drawPolygon](display.md#wb_display_draw_pixel)(const int *x, const int *y, int size);                                           |
+| &nbsp;&nbsp; virtual void [drawText](display.md#wb_display_draw_pixel)(const std::string &txt, int x, int y);                                              |
+| &nbsp;&nbsp; virtual void [fillRectangle](display.md#wb_display_draw_pixel)(int x, int y, int width, int height);                                          |
+| &nbsp;&nbsp; virtual void [fillOval](display.md#wb_display_draw_pixel)(int cx, int cy, int a, int b);                                                      |
+| &nbsp;&nbsp; virtual void [fillPolygon](display.md#wb_display_draw_pixel)(const int *x, const int *y, int size);                                           |
+| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageCopy](display.md#wb_display_image_new)(int x, int y, int width, int height) const;                          |
+| &nbsp;&nbsp; virtual void [imagePaste](display.md#wb_display_image_new)([ImageRef](#cpp_image_ref) *ir, int x, int y);                                     |
+| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageLoad](display.md#wb_display_image_new)(const std::string &filename) const;                                  |
+| &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageNew](display.md#wb_display_image_new)(int width, int height, const void *data, int format) const;           |
+| &nbsp;&nbsp; void [imageSave](display.md#wb_display_image_new)([ImageRef](#cpp_image_ref) *ir, const std::string &filename) const;                         |
+| &nbsp;&nbsp; void [imageDelete](display.md#wb_display_image_new)([ImageRef](#cpp_image_ref) *ir) const;                                                    |
+| };                                                                                                                                                         |
 
 %end
 
@@ -204,9 +204,9 @@ The following tables describe the C++ classes and their methods.
 | #include `<`webots/Field.hpp`>`                                                                                                                                                                             |
 | class Field {                                                                                                                                                                                               |
 | &nbsp;&nbsp; enum { SF\_BOOL, SF\_INT32, SF\_FLOAT, SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING, SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F, MF\_COLOR, MF\_STRING, MF\_NODE }; |
-| &nbsp;&nbsp; int [getType](supervisor.md#wb_supervisor_field_get)() const;                                                                                                                                  |
-| &nbsp;&nbsp; std::string [getTypeName](supervisor.md#wb_supervisor_field_get)() const;                                                                                                                      |
-| &nbsp;&nbsp; int [getCount](supervisor.md#wb_supervisor_field_get)() const;                                                                                                                                 |
+| &nbsp;&nbsp; int [getType](supervisor.md#wb_supervisor_field_get_type)() const;                                                                                                                             |
+| &nbsp;&nbsp; std::string [getTypeName](supervisor.md#wb_supervisor_field_get_type)() const;                                                                                                                 |
+| &nbsp;&nbsp; int [getCount](supervisor.md#wb_supervisor_field_get_type)() const;                                                                                                                            |
 | &nbsp;&nbsp; bool [getSFBool](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                                       |
 | &nbsp;&nbsp; int [getSFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                                       |
 | &nbsp;&nbsp; double [getSFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)() const;                                                                                                                    |
@@ -521,68 +521,68 @@ The following tables describe the C++ classes and their methods.
 
 %api "cpp_robot"
 
-|                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Robot.hpp`>`                                                                                                       |
-| class [Robot](robot.md) {                                                                                                             |
-| &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                                                        |
-| &nbsp;&nbsp; MODE\_REMOTE\_CONTROL};                                                                                                  |
-| &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT,                                                                     |
-| &nbsp;&nbsp; KEYBOARD\_UP, KEYBOARD\_RIGHT, KEYBOARD\_DOWN,                                                                           |
-| &nbsp;&nbsp; KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                                                                    |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                                                                          |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                                                                           |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                                                                           |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                                                                       |
-| &nbsp;&nbsp; KEYBOARD\_ALT};                                                                                                          |
-| &nbsp;&nbsp; [Robot](robot.md#wb_robot_step)();                                                                                       |
-| &nbsp;&nbsp; virtual [~Robot](robot.md#wb_robot_step)();                                                                              |
-| &nbsp;&nbsp; virtual int [step](robot.md#wb_robot_step)(int ms);                                                                      |
-| &nbsp;&nbsp; [Accelerometer](#cpp_accelerometer) *[getAccelerometer](robot.md#robotgetdevice)(const std::string &name);               |
-| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](robot.md#robotgetdevice)(const std::string &name);                                       |
-| &nbsp;&nbsp; [Camera](#cpp_camera) *[getCamera](robot.md#robotgetdevice)(const std::string &name);                                    |
-| &nbsp;&nbsp; [Compass](#cpp_compass) *[getCompass](robot.md#robotgetdevice)(const std::string &name);                                 |
-| &nbsp;&nbsp; [Connector](#cpp_connector) *[getConnector](robot.md#robotgetdevice)(const std::string &name);                           |
-| &nbsp;&nbsp; [Display](#cpp_display) *[getDisplay](robot.md#robotgetdevice)(const std::string &name);                                 |
-| &nbsp;&nbsp; [DistanceSensor](#cpp_distance_sensor) *[getDistanceSensor](robot.md#robotgetdevice)(const std::string &name);           |
-| &nbsp;&nbsp; [Emitter](#cpp_emitter) *[getEmitter](robot.md#robotgetdevice)(const std::string &name);                                 |
-| &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#robotgetdevice)(const std::string &name);                                             |
-| &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#robotgetdevice)(const std::string &name);                                          |
-| &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#robotgetdevice)(const std::string &name);                 |
-| &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#robotgetdevice)(const std::string &name);                                             |
-| &nbsp;&nbsp; [Lidar](#cpp_lidar) *[getLidar](robot.md#robotgetdevice)(const std::string &name);                                       |
-| &nbsp;&nbsp; [LightSensor](#cpp_light_sensor) *[getLightSensor](robot.md#robotgetdevice)(const std::string &name);                    |
-| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](robot.md#robotgetdevice)(const std::string &name);                                       |
-| &nbsp;&nbsp; [Pen](#cpp_pen) *[getPen](robot.md#robotgetdevice)(const std::string &name);                                             |
-| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#robotgetdevice)(const std::string &name);           |
-| &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#robotgetdevice)(const std::string &name);                    |
-| &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#robotgetdevice)(const std::string &name);                              |
-| &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#robotgetdevice)(const std::string &name);                                       |
-| &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#robotgetdevice)(const std::string &name);                    |
-| &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                       |
-| &nbsp;&nbsp; [Device](#cpp_device) *[getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                             |
-| &nbsp;&nbsp; virtual void [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(int ms);                                     |
-| &nbsp;&nbsp; virtual void [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)();                                          |
-| &nbsp;&nbsp; int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                                         |
-| &nbsp;&nbsp; double [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)() const;                                         |
-| &nbsp;&nbsp; double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)() const;                                                |
-| &nbsp;&nbsp; int [getMode](robot.md#wb_robot_get_mode)() const;                                                                       |
-| &nbsp;&nbsp; std::string [getModel](robot.md#wb_robot_get_model)() const;                                                             |
-| &nbsp;&nbsp; std::string [getData](robot.md#wb_robot_get_data)() const;                                                               |
-| &nbsp;&nbsp; void [setData](robot.md#wb_robot_get_data)(const std::string &data);                                                     |
-| &nbsp;&nbsp; std::string [getName](robot.md#wb_robot_get_name)() const;                                                               |
-| &nbsp;&nbsp; std::string [getControllerName](robot.md#wb_robot_get_controller_name)() const;                                          |
-| &nbsp;&nbsp; std::string [getControllerArguments](robot.md#wb_robot_get_controller_name)() const;                                     |
-| &nbsp;&nbsp; std::string [getProjectPath](robot.md#wb_robot_get_project_path)() const;                                                |
-| &nbsp;&nbsp; bool [getSynchronization](robot.md#wb_robot_get_synchronization)() const;                                                |
-| &nbsp;&nbsp; double [getTime](robot.md#wb_robot_get_time)() const;                                                                    |
-| &nbsp;&nbsp; std::string [getWorldPath](robot.md#wb_robot_get_world_path)() const;                                                    |
-| &nbsp;&nbsp; virtual void [keyboardEnable](robot.md#wb_robot_keyboard_enable)(int ms);                                                |
-| &nbsp;&nbsp; virtual void [keyboardDisable](robot.md#wb_robot_keyboard_enable)();                                                     |
-| &nbsp;&nbsp; int [keyboardGetKey](robot.md#wb_robot_keyboard_enable)() const;                                                         |
-| &nbsp;&nbsp; int [getType](robot.md#wb_robot_get_type)() const;                                                                       |
-| &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                  |
-| };                                                                                                                                    |
+|                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Robot.hpp`>`                                                                                                            |
+| class [Robot](robot.md) {                                                                                                                  |
+| &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                                                             |
+| &nbsp;&nbsp; MODE\_REMOTE\_CONTROL};                                                                                                       |
+| &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT,                                                                          |
+| &nbsp;&nbsp; KEYBOARD\_UP, KEYBOARD\_RIGHT, KEYBOARD\_DOWN,                                                                                |
+| &nbsp;&nbsp; KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                                                                         |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                                                                               |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                                                                                |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                                                                                |
+| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                                                                            |
+| &nbsp;&nbsp; KEYBOARD\_ALT};                                                                                                               |
+| &nbsp;&nbsp; [Robot](robot.md#wb_robot_step)();                                                                                            |
+| &nbsp;&nbsp; virtual [~Robot](robot.md#wb_robot_step)();                                                                                   |
+| &nbsp;&nbsp; virtual int [step](robot.md#wb_robot_step)(int ms);                                                                           |
+| &nbsp;&nbsp; [Accelerometer](#cpp_accelerometer) *[getAccelerometer](robot.md#wb_robot_get_device)(const std::string &name);               |
+| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](robot.md#wb_robot_get_device)(const std::string &name);                                       |
+| &nbsp;&nbsp; [Camera](#cpp_camera) *[getCamera](robot.md#wb_robot_get_device)(const std::string &name);                                    |
+| &nbsp;&nbsp; [Compass](#cpp_compass) *[getCompass](robot.md#wb_robot_get_device)(const std::string &name);                                 |
+| &nbsp;&nbsp; [Connector](#cpp_connector) *[getConnector](robot.md#wb_robot_get_device)(const std::string &name);                           |
+| &nbsp;&nbsp; [Display](#cpp_display) *[getDisplay](robot.md#wb_robot_get_device)(const std::string &name);                                 |
+| &nbsp;&nbsp; [DistanceSensor](#cpp_distance_sensor) *[getDistanceSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
+| &nbsp;&nbsp; [Emitter](#cpp_emitter) *[getEmitter](robot.md#wb_robot_get_device)(const std::string &name);                                 |
+| &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#wb_robot_get_device)(const std::string &name);                                             |
+| &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#wb_robot_get_device)(const std::string &name);                                          |
+| &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#wb_robot_get_device)(const std::string &name);                 |
+| &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#wb_robot_get_device)(const std::string &name);                                             |
+| &nbsp;&nbsp; [Lidar](#cpp_lidar) *[getLidar](robot.md#wb_robot_get_device)(const std::string &name);                                       |
+| &nbsp;&nbsp; [LightSensor](#cpp_light_sensor) *[getLightSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
+| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](robot.md#wb_robot_get_device)(const std::string &name);                                       |
+| &nbsp;&nbsp; [Pen](#cpp_pen) *[getPen](robot.md#wb_robot_get_device)(const std::string &name);                                             |
+| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
+| &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#wb_robot_get_device)(const std::string &name);                    |
+| &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#wb_robot_get_device)(const std::string &name);                              |
+| &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#wb_robot_get_device)(const std::string &name);                                       |
+| &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
+| &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                            |
+| &nbsp;&nbsp; [Device](#cpp_device) *[getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                                  |
+| &nbsp;&nbsp; virtual void [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(int ms);                                          |
+| &nbsp;&nbsp; virtual void [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)();                                               |
+| &nbsp;&nbsp; int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                                              |
+| &nbsp;&nbsp; double [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)() const;                                              |
+| &nbsp;&nbsp; double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)() const;                                                     |
+| &nbsp;&nbsp; int [getMode](robot.md#wb_robot_get_mode)() const;                                                                            |
+| &nbsp;&nbsp; std::string [getModel](robot.md#wb_robot_get_model)() const;                                                                  |
+| &nbsp;&nbsp; std::string [getData](robot.md#wb_robot_get_data)() const;                                                                    |
+| &nbsp;&nbsp; void [setData](robot.md#wb_robot_get_data)(const std::string &data);                                                          |
+| &nbsp;&nbsp; std::string [getName](robot.md#wb_robot_get_name)() const;                                                                    |
+| &nbsp;&nbsp; std::string [getControllerName](robot.md#wb_robot_get_controller_name)() const;                                               |
+| &nbsp;&nbsp; std::string [getControllerArguments](robot.md#wb_robot_get_controller_name)() const;                                          |
+| &nbsp;&nbsp; std::string [getProjectPath](robot.md#wb_robot_get_project_path)() const;                                                     |
+| &nbsp;&nbsp; bool [getSynchronization](robot.md#wb_robot_get_synchronization)() const;                                                     |
+| &nbsp;&nbsp; double [getTime](robot.md#wb_robot_get_time)() const;                                                                         |
+| &nbsp;&nbsp; std::string [getWorldPath](robot.md#wb_robot_get_world_path)() const;                                                         |
+| &nbsp;&nbsp; virtual void [keyboardEnable](robot.md#wb_robot_keyboard_enable)(int ms);                                                     |
+| &nbsp;&nbsp; virtual void [keyboardDisable](robot.md#wb_robot_keyboard_enable)();                                                          |
+| &nbsp;&nbsp; int [keyboardGetKey](robot.md#wb_robot_keyboard_enable)() const;                                                              |
+| &nbsp;&nbsp; int [getType](robot.md#wb_robot_get_type)() const;                                                                            |
+| &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                       |
+| };                                                                                                                                         |
 
 %end
 

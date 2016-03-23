@@ -132,32 +132,32 @@ The following tables describe the Java classes and their methods.
 
 %api "java_display"
 
-|                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| import com.cyberbotics.webots.controller.Display;                                                                                                            |
-| public class [Display](display.md) extends [Device](#java_device) {                                                                                          |
-| &nbsp;&nbsp; public final static int RGB, RGBA, ARGB, BGRA;                                                                                                  |
-| &nbsp;&nbsp; public int [getWidth](display.md#wb_display_get_width)();                                                                                       |
-| &nbsp;&nbsp; public int [getHeight](display.md#wb_display_get_width)();                                                                                      |
-| &nbsp;&nbsp; public void [setColor](display.md#wb_display_set_context)(int color);                                                                           |
-| &nbsp;&nbsp; public void [setAlpha](display.md#wb_display_set_context)(double alpha);                                                                        |
-| &nbsp;&nbsp; public void [setOpacity](display.md#wb_display_set_context)(double opacity);                                                                    |
-| &nbsp;&nbsp; public void [drawPixel](display.md#wb_display_draw_primitive)(int x1, int y1);                                                                  |
-| &nbsp;&nbsp; public void [drawLine](display.md#wb_display_draw_primitive)(int x1, int y1, int x2, int y2);                                                   |
-| &nbsp;&nbsp; public void [drawRectangle](display.md#wb_display_draw_primitive)(int x, int y, int width, int height);                                         |
-| &nbsp;&nbsp; public void [drawOval](display.md#wb_display_draw_primitive)(int cx, int cy, int a, int b);                                                     |
-| &nbsp;&nbsp; public void [drawPolygon](display.md#wb_display_draw_primitive)(int[] x, int[] y);                                                              |
-| &nbsp;&nbsp; public void [drawText](display.md#wb_display_draw_primitive)(String txt, int x, int y);                                                         |
-| &nbsp;&nbsp; public void [fillRectangle](display.md#wb_display_draw_primitive)(int x, int y, int width, int height);                                         |
-| &nbsp;&nbsp; public void [fillOval](display.md#wb_display_draw_primitive)(int cx, int cy, int a, int b);                                                     |
-| &nbsp;&nbsp; public void [fillPolygon](display.md#wb_display_draw_primitive)(int[] x, int[] y);                                                              |
-| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageCopy](display.md#wb_display_image_functions)(int x, int y, int width, int height);                     |
-| &nbsp;&nbsp; public void [imagePaste](display.md#wb_display_image_functions)([ImageRef](#java_image_ref) ir, int x, int y);                                  |
-| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageLoad](display.md#wb_display_image_functions)(String filename);                                         |
-| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageNew](display.md#wb_display_image_functions)(int width, int height, int[] data, int format);            |
-| &nbsp;&nbsp; public void [imageSave](display.md#wb_display_image_functions)([ImageRef](#java_image_ref) ir, String filename);                                |
-| &nbsp;&nbsp; public void [imageDelete](display.md#wb_display_image_functions)([ImageRef](#java_image_ref) ir);                                               |
-| }                                                                                                                                                            |
+|                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| import com.cyberbotics.webots.controller.Display;                                                                                                      |
+| public class [Display](display.md) extends [Device](#java_device) {                                                                                    |
+| &nbsp;&nbsp; public final static int RGB, RGBA, ARGB, BGRA;                                                                                            |
+| &nbsp;&nbsp; public int [getWidth](display.md#wb_display_get_width)();                                                                                 |
+| &nbsp;&nbsp; public int [getHeight](display.md#wb_display_get_width)();                                                                                |
+| &nbsp;&nbsp; public void [setColor](display.md#wb_display_set_color)(int color);                                                                       |
+| &nbsp;&nbsp; public void [setAlpha](display.md#wb_display_set_color)(double alpha);                                                                    |
+| &nbsp;&nbsp; public void [setOpacity](display.md#wb_display_set_color)(double opacity);                                                                |
+| &nbsp;&nbsp; public void [drawPixel](display.md#wb_display_draw_pixel)(int x1, int y1);                                                                |
+| &nbsp;&nbsp; public void [drawLine](display.md#wb_display_draw_pixel)(int x1, int y1, int x2, int y2);                                                 |
+| &nbsp;&nbsp; public void [drawRectangle](display.md#wb_display_draw_pixel)(int x, int y, int width, int height);                                       |
+| &nbsp;&nbsp; public void [drawOval](display.md#wb_display_draw_pixel)(int cx, int cy, int a, int b);                                                   |
+| &nbsp;&nbsp; public void [drawPolygon](display.md#wb_display_draw_pixel)(int[] x, int[] y);                                                            |
+| &nbsp;&nbsp; public void [drawText](display.md#wb_display_draw_pixel)(String txt, int x, int y);                                                       |
+| &nbsp;&nbsp; public void [fillRectangle](display.md#wb_display_draw_pixel)(int x, int y, int width, int height);                                       |
+| &nbsp;&nbsp; public void [fillOval](display.md#wb_display_draw_pixel)(int cx, int cy, int a, int b);                                                   |
+| &nbsp;&nbsp; public void [fillPolygon](display.md#wb_display_draw_pixel)(int[] x, int[] y);                                                            |
+| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageCopy](display.md#wb_display_image_new)(int x, int y, int width, int height);                     |
+| &nbsp;&nbsp; public void [imagePaste](display.md#wb_display_image_new)([ImageRef](#java_image_ref) ir, int x, int y);                                  |
+| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageLoad](display.md#wb_display_image_new)(String filename);                                         |
+| &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageNew](display.md#wb_display_image_new)(int width, int height, int[] data, int format);            |
+| &nbsp;&nbsp; public void [imageSave](display.md#wb_display_image_new)([ImageRef](#java_image_ref) ir, String filename);                                |
+| &nbsp;&nbsp; public void [imageDelete](display.md#wb_display_image_new)([ImageRef](#java_image_ref) ir);                                               |
+| }                                                                                                                                                      |
 
 %end
 
@@ -207,9 +207,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; SF\_VEC2F, SF\_VEC3F, SF\_ROTATION, SF\_COLOR, SF\_STRING,                                                               |
 | &nbsp;&nbsp; SF\_NODE, MF, MF\_INT32, MF\_FLOAT, MF\_VEC2F, MF\_VEC3F,                                                                |
 | &nbsp;&nbsp; MF\_COLOR, MF\_STRING, MF\_NODE;                                                                                         |
-| &nbsp;&nbsp; public int [getType](supervisor.md#wb_supervisor_field_get)();                                                           |
-| &nbsp;&nbsp; public String [getTypeName](supervisor.md#wb_supervisor_field_get)();                                                    |
-| &nbsp;&nbsp; public int [getCount](supervisor.md#wb_supervisor_field_get)();                                                          |
+| &nbsp;&nbsp; public int [getType](supervisor.md#wb_supervisor_field_get_type)();                                                      |
+| &nbsp;&nbsp; public String [getTypeName](supervisor.md#wb_supervisor_field_get_type)();                                               |
+| &nbsp;&nbsp; public int [getCount](supervisor.md#wb_supervisor_field_get_type)();                                                     |
 | &nbsp;&nbsp; public bool [getSFBool](supervisor.md#wb_supervisor_field_get_sf_bool)();                                                |
 | &nbsp;&nbsp; public int [getSFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)();                                                |
 | &nbsp;&nbsp; public double [getSFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)();                                             |
@@ -537,67 +537,67 @@ The following tables describe the Java classes and their methods.
 
 %api "java_robot"
 
-|                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Robot;                                                                                   |
-| public class [Robot](robot.md) {                                                                                                  |
-| &nbsp;&nbsp; public final static int MODE\_SIMULATION,                                                                            |
-| &nbsp;&nbsp; MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL;                                                                     |
-| &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME,                                                               |
-| &nbsp;&nbsp; KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT,                                                                       |
-| &nbsp;&nbsp; KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                                                |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                                                                      |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                                                                       |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                                                                       |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT,                                                                                      |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT;                                                                                    |
-| &nbsp;&nbsp; public [Robot](robot.md#wb_robot_step)();                                                                            |
-| &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                 |
-| &nbsp;&nbsp; public int [step](robot.md#wb_robot_step)(int ms);                                                                   |
-| &nbsp;&nbsp; public [Accelerometer](#java_accelerometer) [getAccelerometer](robot.md#robotgetdevice)(String name);                |
-| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](robot.md#robotgetdevice)(String name);                                        |
-| &nbsp;&nbsp; public [Camera](#java_camera) [getCamera](robot.md#robotgetdevice)(String name);                                     |
-| &nbsp;&nbsp; public [Compass](#java_compass) [getCompass](robot.md#robotgetdevice)(String name);                                  |
-| &nbsp;&nbsp; public [Connector](#java_connector) [getConnector](robot.md#robotgetdevice)(String name);                            |
-| &nbsp;&nbsp; public [Display](#java_display) [getDisplay](robot.md#robotgetdevice)(String name);                                  |
-| &nbsp;&nbsp; public [DistanceSensor](#java_distance_sensor) [getDistanceSensor](robot.md#robotgetdevice)(String name);            |
-| &nbsp;&nbsp; public [Emitter](#java_emitter) [getEmitter](robot.md#robotgetdevice)(String name);                                  |
-| &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#robotgetdevice)(String name);                                              |
-| &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#robotgetdevice)(String name);                                           |
-| &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#robotgetdevice)(String name);                  |
-| &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#robotgetdevice)(String name);                                              |
-| &nbsp;&nbsp; public [Lidar](#java_lidar) [getLidar](robot.md#robotgetdevice)(String name);                                        |
-| &nbsp;&nbsp; public [LightSensor](#java_light_sensor) [getLightSensor](robot.md#robotgetdevice)(String name);                     |
-| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](robot.md#robotgetdevice)(String name);                                        |
-| &nbsp;&nbsp; public [Pen](#java_pen) [getPen](robot.md#robotgetdevice)(String name);                                              |
-| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](robot.md#robotgetdevice)(String name);            |
-| &nbsp;&nbsp; public [RangeFinder](#java_range_finder) [getRangeFinder](robot.md#robotgetdevice)(String name);                     |
-| &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#robotgetdevice)(String name);                               |
-| &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#robotgetdevice)(String name);                                        |
-| &nbsp;&nbsp; public [TouchSensor](#java_touch_sensor) [getTouchSensor](robot.md#robotgetdevice)(String name);                     |
-| &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                            |
-| &nbsp;&nbsp; public [Device](#java_device) [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                  |
-| &nbsp;&nbsp; public void [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(int ms);                                  |
-| &nbsp;&nbsp; public void [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)();                                       |
-| &nbsp;&nbsp; public int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                              |
-| &nbsp;&nbsp; public double [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)();                                    |
-| &nbsp;&nbsp; public double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)();                                           |
-| &nbsp;&nbsp; public int [getMode](robot.md#wb_robot_get_mode)();                                                                  |
-| &nbsp;&nbsp; public String [getModel](robot.md#wb_robot_get_model)();                                                             |
-| &nbsp;&nbsp; public String [getData](robot.md#wb_robot_get_data)();                                                               |
-| &nbsp;&nbsp; public [setData](robot.md#wb_robot_get_data)(String data);                                                           |
-| &nbsp;&nbsp; public String [getName](robot.md#wb_robot_get_name)();                                                               |
-| &nbsp;&nbsp; public String [getControllerName](robot.md#wb_robot_get_controller_name)();                                          |
-| &nbsp;&nbsp; public String [getControllerArguments](robot.md#wb_robot_get_controller_name)();                                     |
-| &nbsp;&nbsp; public String [getProjectPath](robot.md#wb_robot_get_project_path)();                                                |
-| &nbsp;&nbsp; public bool [getSynchronization](robot.md#wb_robot_get_synchronization)();                                           |
-| &nbsp;&nbsp; public double [getTime](robot.md#wb_robot_get_time)();                                                               |
-| &nbsp;&nbsp; public String [getWorldPath](robot.md#wb_robot_get_world_path)();                                                    |
-| &nbsp;&nbsp; public void [keyboardEnable](robot.md#wb_robot_keyboard_enable)(int ms);                                             |
-| &nbsp;&nbsp; public void [keyboardDisable](robot.md#wb_robot_keyboard_enable)();                                                  |
-| &nbsp;&nbsp; public int [keyboardGetKey](robot.md#wb_robot_keyboard_enable)();                                                    |
-| &nbsp;&nbsp; public int [getType](robot.md#wb_robot_get_type)();                                                                  |
-| }                                                                                                                                 |
+|                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Robot;                                                                                        |
+| public class [Robot](robot.md) {                                                                                                       |
+| &nbsp;&nbsp; public final static int MODE\_SIMULATION,                                                                                 |
+| &nbsp;&nbsp; MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL;                                                                          |
+| &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME,                                                                    |
+| &nbsp;&nbsp; KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT,                                                                            |
+| &nbsp;&nbsp; KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                                                     |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                                                                           |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                                                                            |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                                                                            |
+| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT,                                                                                           |
+| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT;                                                                                         |
+| &nbsp;&nbsp; public [Robot](robot.md#wb_robot_step)();                                                                                 |
+| &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                      |
+| &nbsp;&nbsp; public int [step](robot.md#wb_robot_step)(int ms);                                                                        |
+| &nbsp;&nbsp; public [Accelerometer](#java_accelerometer) [getAccelerometer](robot.md#wb_robot_get_device)(String name);                |
+| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [Camera](#java_camera) [getCamera](robot.md#wb_robot_get_device)(String name);                                     |
+| &nbsp;&nbsp; public [Compass](#java_compass) [getCompass](robot.md#wb_robot_get_device)(String name);                                  |
+| &nbsp;&nbsp; public [Connector](#java_connector) [getConnector](robot.md#wb_robot_get_device)(String name);                            |
+| &nbsp;&nbsp; public [Display](#java_display) [getDisplay](robot.md#wb_robot_get_device)(String name);                                  |
+| &nbsp;&nbsp; public [DistanceSensor](#java_distance_sensor) [getDistanceSensor](robot.md#wb_robot_get_device)(String name);            |
+| &nbsp;&nbsp; public [Emitter](#java_emitter) [getEmitter](robot.md#wb_robot_get_device)(String name);                                  |
+| &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#wb_robot_get_device)(String name);                                              |
+| &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#wb_robot_get_device)(String name);                                           |
+| &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#wb_robot_get_device)(String name);                  |
+| &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#wb_robot_get_device)(String name);                                              |
+| &nbsp;&nbsp; public [Lidar](#java_lidar) [getLidar](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [LightSensor](#java_light_sensor) [getLightSensor](robot.md#wb_robot_get_device)(String name);                     |
+| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [Pen](#java_pen) [getPen](robot.md#wb_robot_get_device)(String name);                                              |
+| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](robot.md#wb_robot_get_device)(String name);            |
+| &nbsp;&nbsp; public [RangeFinder](#java_range_finder) [getRangeFinder](robot.md#wb_robot_get_device)(String name);                     |
+| &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#wb_robot_get_device)(String name);                               |
+| &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [TouchSensor](#java_touch_sensor) [getTouchSensor](robot.md#wb_robot_get_device)(String name);                     |
+| &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                 |
+| &nbsp;&nbsp; public [Device](#java_device) [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                       |
+| &nbsp;&nbsp; public void [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(int ms);                                       |
+| &nbsp;&nbsp; public void [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)();                                            |
+| &nbsp;&nbsp; public int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                                   |
+| &nbsp;&nbsp; public double [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)();                                         |
+| &nbsp;&nbsp; public double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)();                                                |
+| &nbsp;&nbsp; public int [getMode](robot.md#wb_robot_get_mode)();                                                                       |
+| &nbsp;&nbsp; public String [getModel](robot.md#wb_robot_get_model)();                                                                  |
+| &nbsp;&nbsp; public String [getData](robot.md#wb_robot_get_data)();                                                                    |
+| &nbsp;&nbsp; public [setData](robot.md#wb_robot_get_data)(String data);                                                                |
+| &nbsp;&nbsp; public String [getName](robot.md#wb_robot_get_name)();                                                                    |
+| &nbsp;&nbsp; public String [getControllerName](robot.md#wb_robot_get_controller_name)();                                               |
+| &nbsp;&nbsp; public String [getControllerArguments](robot.md#wb_robot_get_controller_name)();                                          |
+| &nbsp;&nbsp; public String [getProjectPath](robot.md#wb_robot_get_project_path)();                                                     |
+| &nbsp;&nbsp; public bool [getSynchronization](robot.md#wb_robot_get_synchronization)();                                                |
+| &nbsp;&nbsp; public double [getTime](robot.md#wb_robot_get_time)();                                                                    |
+| &nbsp;&nbsp; public String [getWorldPath](robot.md#wb_robot_get_world_path)();                                                         |
+| &nbsp;&nbsp; public void [keyboardEnable](robot.md#wb_robot_keyboard_enable)(int ms);                                                  |
+| &nbsp;&nbsp; public void [keyboardDisable](robot.md#wb_robot_keyboard_enable)();                                                       |
+| &nbsp;&nbsp; public int [keyboardGetKey](robot.md#wb_robot_keyboard_enable)();                                                         |
+| &nbsp;&nbsp; public int [getType](robot.md#wb_robot_get_type)();                                                                       |
+| }                                                                                                                                      |
 
 %end
 

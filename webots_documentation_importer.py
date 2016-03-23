@@ -306,6 +306,18 @@ class BookParser:
             else:
                 kind = idNode.tag
 
+            # anchor exceptions
+            if anchor == 'wb_display_set_context':
+                anchor = 'wb_display_set_color'
+            elif anchor == 'wb_display_draw_primitive':
+                anchor = 'wb_display_draw_pixel'
+            elif anchor == 'wb_display_image_functions':
+                anchor = 'wb_display_image_new'
+            elif anchor == 'wb_supervisor_field_get':
+                anchor = 'wb_supervisor_field_get_type'
+            elif anchor == 'robotgetdevice':
+                anchor = 'wb_robot_get_device'
+
             ref = Reference(refId, self.bookName, filename, anchor, kind)
             self.referenceManager.addReference(ref)
 

@@ -116,7 +116,7 @@ void wb_display_set_opacity(WbDeviceTag tag, double opacity)
 **Description**
 
 These three functions define the context in which the subsequent drawing
-commands (see [draw primitive functions](#wb_display_draw_primitive)) will be
+commands (see [draw primitive functions](#wb_display_draw_pixel)) will be
 applied.
 
 `wb_display_set_color()` defines the color for the subsequent drawing commands.
@@ -182,7 +182,7 @@ void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int si
 
 These functions order the execution of a drawing primitive on the display. They
 depend on the context of the display as defined by the contextual functions (see
-[set context functions](#wb_display_set_context)).
+[set context functions](#wb_display_set_color)).
 
 `wb_display_draw_pixel()` draws a pixel at the (`x`,`y`) coordinate.
 

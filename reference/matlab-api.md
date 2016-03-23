@@ -100,32 +100,32 @@ The following tables describe the Matlab functions.
 
 %api "matlab_display"
 
-| % [Display](display.md) :                                                                                  |
-| ---------------------------------------------------------------------------------------------------------- |
-| RGB                                                                                                        |
-| RGBA                                                                                                       |
-| ARGB                                                                                                       |
-| BGRA                                                                                                       |
-| width = [wb\_display\_get\_width](display.md#wb_display_get_width)(tag)                                    |
-| height = [wb\_display\_get\_height](display.md#wb_display_get_width)(tag)                                  |
-| [wb\_display\_set\_color](display.md#wb_display_set_context)(tag, [r g b])                                 |
-| [wb\_display\_set\_alpha](display.md#wb_display_set_context)(tag, alpha)                                   |
-| [wb\_display\_set\_opacity](display.md#wb_display_set_context)(tag, opacity)                               |
-| [wb\_display\_draw\_pixel](display.md#wb_display_draw_primitive)(tag, x, y)                                |
-| [wb\_display\_draw\_line](display.md#wb_display_draw_primitive)(tag, x1, y1, x2, y2)                       |
-| [wb\_display\_draw\_rectangle](display.md#wb_display_draw_primitive)(tag, x, y, width, height)             |
-| [wb\_display\_draw\_oval](display.md#wb_display_draw_primitive)(tag, cx, cy, a, b)                         |
-| [wb\_display\_draw\_polygon](display.md#wb_display_draw_primitive)(tag, [x1 x2 ... xn], [y1 y2 ... yn])    |
-| [wb\_display\_draw\_text](display.md#wb_display_draw_primitive)(tag, 'txt', x, y)                          |
-| [wb\_display\_fill\_rectangle](display.md#wb_display_draw_primitive)(tag, x, y, width, height)             |
-| [wb\_display\_fill\_oval](display.md#wb_display_draw_primitive)(tag, cx, cy, a, b)                         |
-| [wb\_display\_fill\_polygon](display.md#wb_display_draw_primitive)(tag, [x1 x2 ... xn], [y1 y2 ... yn])    |
-| image = [wb\_display\_image\_copy](display.md#wb_display_image_functions)(tag, x, y, width, height)        |
-| [wb\_display\_image\_paste](display.md#wb_display_image_functions)(tag, image, x, y)                       |
-| image = [wb\_display\_image\_load](display.md#wb_display_image_functions)(tag, 'filename')                 |
-| image = [wb\_display\_image\_new](display.md#wb_display_image_functions)(tag, width, height, data ,format) |
-| [wb\_display\_image\_save](display.md#wb_display_image_functions)(tag, image, 'filename')                  |
-| [wb\_display\_image\_delete](display.md#wb_display_image_functions)(tag, image)                            |
+| % [Display](display.md) :                                                                            |
+| ---------------------------------------------------------------------------------------------------- |
+| RGB                                                                                                  |
+| RGBA                                                                                                 |
+| ARGB                                                                                                 |
+| BGRA                                                                                                 |
+| width = [wb\_display\_get\_width](display.md#wb_display_get_width)(tag)                              |
+| height = [wb\_display\_get\_height](display.md#wb_display_get_width)(tag)                            |
+| [wb\_display\_set\_color](display.md#wb_display_set_color)(tag, [r g b])                             |
+| [wb\_display\_set\_alpha](display.md#wb_display_set_color)(tag, alpha)                               |
+| [wb\_display\_set\_opacity](display.md#wb_display_set_color)(tag, opacity)                           |
+| [wb\_display\_draw\_pixel](display.md#wb_display_draw_pixel)(tag, x, y)                              |
+| [wb\_display\_draw\_line](display.md#wb_display_draw_pixel)(tag, x1, y1, x2, y2)                     |
+| [wb\_display\_draw\_rectangle](display.md#wb_display_draw_pixel)(tag, x, y, width, height)           |
+| [wb\_display\_draw\_oval](display.md#wb_display_draw_pixel)(tag, cx, cy, a, b)                       |
+| [wb\_display\_draw\_polygon](display.md#wb_display_draw_pixel)(tag, [x1 x2 ... xn], [y1 y2 ... yn])  |
+| [wb\_display\_draw\_text](display.md#wb_display_draw_pixel)(tag, 'txt', x, y)                        |
+| [wb\_display\_fill\_rectangle](display.md#wb_display_draw_pixel)(tag, x, y, width, height)           |
+| [wb\_display\_fill\_oval](display.md#wb_display_draw_pixel)(tag, cx, cy, a, b)                       |
+| [wb\_display\_fill\_polygon](display.md#wb_display_draw_pixel)(tag, [x1 x2 ... xn], [y1 y2 ... yn])  |
+| image = [wb\_display\_image\_copy](display.md#wb_display_image_new)(tag, x, y, width, height)        |
+| [wb\_display\_image\_paste](display.md#wb_display_image_new)(tag, image, x, y)                       |
+| image = [wb\_display\_image\_load](display.md#wb_display_image_new)(tag, 'filename')                 |
+| image = [wb\_display\_image\_new](display.md#wb_display_image_new)(tag, width, height, data ,format) |
+| [wb\_display\_image\_save](display.md#wb_display_image_new)(tag, image, 'filename')                  |
+| [wb\_display\_image\_delete](display.md#wb_display_image_new)(tag, image)                            |
 
 %end
 
@@ -474,9 +474,9 @@ The following tables describe the Matlab functions.
 | status = [wb\_supervisor\_movie\_failed](supervisor.md#wb_supervisor_movie_start_recording)()                                                                        |
 | success = [wb\_supervisor\_animation\_start\_recording](supervisor.md#wb_supervisor_animation_start_recording)('filename')                                           |
 | success = [wb\_supervisor\_animation\_stop\_recording](supervisor.md#wb_supervisor_animation_start_recording)()                                                      |
-| type = [wb\_supervisor\_field\_get\_type](supervisor.md#wb_supervisor_field_get)(field)                                                                              |
-| name = [wb\_supervisor\_field\_get\_type\_name](supervisor.md#wb_supervisor_field_get)(field)                                                                        |
-| count = [wb\_supervisor\_field\_get\_count](supervisor.md#wb_supervisor_field_get)(field)                                                                            |
+| type = [wb\_supervisor\_field\_get\_type](supervisor.md#wb_supervisor_field_get_type)(field)                                                                         |
+| name = [wb\_supervisor\_field\_get\_type\_name](supervisor.md#wb_supervisor_field_get_type)(field)                                                                   |
+| count = [wb\_supervisor\_field\_get\_count](supervisor.md#wb_supervisor_field_get_type)(field)                                                                       |
 | b = [wb\_supervisor\_field\_get\_sf\_bool](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                     |
 | i = [wb\_supervisor\_field\_get\_sf\_int32](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                    |
 | f = [wb\_supervisor\_field\_get\_sf\_float](supervisor.md#wb_supervisor_field_get_sf_bool)(field)                                                                    |

@@ -42,7 +42,7 @@ body {
     border-top: 1px solid #eee;
     color: #000;
 }
-#accordion li a:hover, #accordion li a.active {
+#accordion li a:hover {
     background: #999;
     color: #fff;
 }

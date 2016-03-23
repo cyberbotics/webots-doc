@@ -68,14 +68,14 @@ the link at anytime afterwards with this shell command (please change according
 to your actual *MATLAB*<sup>TM</sup> installation directory and version):
 
 ```
-$ sudo ln -s /usr/local/MATLAB/R2014a/bin/matlab /usr/local/bin/matlab
+$ sudo ln -s /usr/local/MATLAB/R2016a/bin/matlab /usr/local/bin/matlab
 ```
 
 Similarly, on Mac OS X, if Webots is unable to find the "matlab" startup script
 then you should add a symlink in "/usr/bin":
 
 ```
-$ sudo ln -s /Applications/MATLAB_R2014a.app/bin/matlab /usr/bin/matlab
+$ sudo ln -s /Applications/MATLAB_R2016a.app/bin/matlab /usr/bin/matlab
 ```
 
 ### Display information to Webots console

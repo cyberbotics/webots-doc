@@ -273,7 +273,7 @@ function changeMenuSelection() {
     for (var i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.indexOf(window.setup.page) > -1) {
+        if (href.indexOf("page=" + window.setup.page) > -1) {
             var selected = a.parentNode;
             selected.classList.add("selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {

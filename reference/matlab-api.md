@@ -329,18 +329,19 @@ The following tables describe the Matlab functions.
 
 %api "matlab_range_finder"
 
-| % [RangeFinder](rangefinder.md) :                                                                     |
-| ----------------------------------------------------------------------------------------------------- |
-| [wb\_range\_finder\_enable](rangefinder.md#wb_range_finder_enable)(tag, ms)                           |
-| [wb\_range\_finder\_disable](rangefinder.md#wb_range_finder_enable)(tag)                              |
-| period = [wb\_range\_finder\_get\_sampling\_period](rangefinder.md#wb_range_finder_enable)(tag)       |
-| fov = [wb\_range\_finder\_get\_fov](rangefinder.md#wb_range_finder_get_fov)(tag)                      |
-| width = [wb\_range\_finder\_get\_width](rangefinder.md#wb_range_finder_get_width)(tag)                |
-| height = [wb\_range\_finder\_get\_height](rangefinder.md#wb_range_finder_get_width)(tag)              |
-| near = [wb\_range\_finder\_get\_min\_range](rangefinder.md#wb_range_finder_get_min_range)(tag)        |
-| max\_range = [wb\_range\_finder\_get\_max\_range](rangefinder.md#wb_range_finder_get_min_range)(tag)  |
-| image = [wb\_range\_finder\_get\_range\_image](rangefinder.md#wb_range_finder_get_range_image)(tag)   |
-| [wb\_range\_finder\_save\_image](rangefinder.md#wb_range_finder_save_image)(tag, 'filename', quality) |
+| % [RangeFinder](rangefinder.md) :                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------ |
+| [wb\_range\_finder\_enable](rangefinder.md#wb_range_finder_enable)(tag, ms)                                        |
+| [wb\_range\_finder\_disable](rangefinder.md#wb_range_finder_enable)(tag)                                           |
+| period = [wb\_range\_finder\_get\_sampling\_period](rangefinder.md#wb_range_finder_enable)(tag)                    |
+| fov = [wb\_range\_finder\_get\_fov](rangefinder.md#wb_range_finder_get_fov)(tag)                                   |
+| width = [wb\_range\_finder\_get\_width](rangefinder.md#wb_range_finder_get_width)(tag)                             |
+| height = [wb\_range\_finder\_get\_height](rangefinder.md#wb_range_finder_get_width)(tag)                           |
+| near = [wb\_range\_finder\_get\_min\_range](rangefinder.md#wb_range_finder_get_min_range)(tag)                     |
+| max\_range = [wb\_range\_finder\_get\_max\_range](rangefinder.md#wb_range_finder_get_min_range)(tag)               |
+| image = [wb\_range\_finder\_get\_range\_image](rangefinder.md#wb_range_finder_get_range_image)(tag)                |
+| depth = [wb\_range\_finder\_image\_get\_depth](rangefinder.md#wb_range_finder_get_range_image)(image, width, x, y) |
+| [wb\_range\_finder\_save\_image](rangefinder.md#wb_range_finder_save_image)(tag, 'filename', quality)              |
 
 %end
 

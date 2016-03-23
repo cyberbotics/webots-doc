@@ -64,9 +64,11 @@ catkin_make
 ### Running the nodes
 
 Now that you have built the package, you can run the example you want. You will
-first have to launch the master node with the following command:
+first have to launch the master node with the following commands from the catkin
+workspace:
 
 ```
+source devel/setup.bash
 roscore
 ```
 
@@ -82,9 +84,10 @@ add the correct address in the controller arguments, in the environment
 variables or in a runtime.ini file in the controller directory.
 
 You can then start the ROS node corresponding to this example in a new terminal
-using the following command:
+using the following commands from the catkin workspace:
 
 ```
+source devel/setup.bash
 rosrun webots_ros [node_name]
 ```
 

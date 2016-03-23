@@ -47,6 +47,10 @@ class TestReferences(unittest.TestCase):
                         elif line.startswith('%api'):
                             title = line.replace('%api', '')
                             anchors.append(slugify(title))
+                        elif "**wb" in line:
+                            for m in re.finditer(r'\*\*(wb[^\*]*)\*\*', line):
+                                anchor = m.group(1).replace('\\_', '_')
+                                anchors.append(anchor)
                 self.anchors[md_path] = anchors
 
     def test_anchors_are_unique(self):

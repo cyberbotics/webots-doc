@@ -294,6 +294,15 @@ function populateNavigation(selected) {
     var next = document.getElementById("next");
     var previous = document.getElementById("previous");
     var up = document.getElementById("up");
+    var toc = document.getElementById("toc");
+
+    var newUrl = location.href;
+    if (newUrl.indexOf("page=") > -1) {
+        newUrl = newUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=menu.md");
+    } else {
+        newUrl = newUrl + "&page=menu.md";
+    }
+    toc.setAttribute("href", newUrl);
 
     if (!selected) {
         next.classList.add("disabled");

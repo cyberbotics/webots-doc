@@ -18,8 +18,7 @@ body {
 }
 #navigation {
   text-align: center;
-  height:20px;
-  text-size: 14px;
+  table-layout: fixed;
 }
 #menu {
   margin-top:1em;
@@ -154,7 +153,7 @@ figure {
 figcaption {
   font-style: italic;
 }
-table {
+#view table {
   max-width:80%; 
   margin:20px auto 20px auto;
   text-align:left;
@@ -163,23 +162,23 @@ table {
   border-color: #aaa;
   border-collapse: collapse;
 }
-table th {
+#view table th {
   border-width: 1px;
   border-style: solid;
   border-color: #ddd;
   background-color: #ddd;
 }
-table tr:hover td {
+#view table tr:hover td {
   background-color: #def;
 }
-table td {
+#view table td {
   padding: 6px;
   border-width: 1px;
   border-style: solid;
   border-color: #ddd;
   background-color: transparent;
 }
-.api > table {
+.api table {
   font-family: monospace;
   width: 80%;
 }

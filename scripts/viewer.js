@@ -22,10 +22,10 @@ function decomposePage(page) {
 
 function computeTargetPath() {
     var targetPath = "";
-    if (window.setup.url.startsWith("http")) {
-        targetPath = window.setup.url + window.setup.branch + "/";
+    if (setup.url.startsWith("http")) {
+        targetPath = setup.url + setup.branch + "/";
     }
-    targetPath += window.setup.book + "/";
+    targetPath += setup.book + "/";
     return targetPath;
 }
 
@@ -79,10 +79,10 @@ function addOnTheFlyEvent(el) {
 
 function aClick(el) {
     var decomposition = decomposePage(el.getAttribute('href'));
-    window.setup.page = decomposition[0];
-    window.setup.anchor = decomposition[1];
-    console.log('page = ' + window.setup.page);
-    console.log('anchor = ' + window.setup.anchor);
+    setup.page = decomposition[0];
+    setup.anchor = decomposition[1];
+    console.log('page = ' + setup.page);
+    console.log('anchor = ' + setup.anchor);
     getMDFile();
     forgeURL();
 }
@@ -102,8 +102,8 @@ function redirectImages(node) {
 }
 
 function applyAnchor() {
-    console.log("Anchor: " + window.setup.anchor);
-    var anchors = document.getElementsByName(window.setup.anchor);
+    console.log("Anchor: " + setup.anchor);
+    var anchors = document.getElementsByName(setup.anchor);
     if (anchors.length > 0) {
         anchors[0].scrollIntoView(true);
     }
@@ -159,7 +159,7 @@ function populateViewDiv(mdContent) {
 function forgeURL() {
     var url = location.href;
 
-    var pageString = "&page=" + window.setup.page;
+    var pageString = "&page=" + setup.page;
     if (url.indexOf("&page=") > -1) {
         url = url.replace(/&page=[^&]*.md/, pageString);
     } else {
@@ -273,7 +273,7 @@ function changeMenuSelection() {
     for (var i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (href.indexOf("page=" + window.setup.page) > -1) {
+        if (href.indexOf("page=" + setup.page) > -1) {
             var selected = a.parentNode;
             selected.classList.add("selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
@@ -383,9 +383,9 @@ function populateNavigation(selected) {
         } else {
             var newUrl = location.href;
             if (newUrl.indexOf("page=") > -1) {
-                newUrl = newUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + window.setup.book + ".md");
+                newUrl = newUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + setup.book + ".md");
             } else {
-                newUrl = newUrl + "&page=" + window.setup.book + ".md";
+                newUrl = newUrl + "&page=" + setup.book + ".md";
             }
             up.setAttribute("href", newUrl);
             addOnTheFlyEvent(up);
@@ -428,7 +428,7 @@ function showAccodionItem(item) {
 }
 
 function getMDFile() {
-    var target = computeTargetPath() + window.setup.page;
+    var target = computeTargetPath() + setup.page;
     console.log("Get MD file: " + target);
     $.ajax({
         type: "GET",
@@ -438,10 +438,10 @@ function getMDFile() {
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
-            var mainPage = window.setup.book + ".md";
+            var mainPage = setup.book + ".md";
             // get the main page instead
-            if (window.setup.page != mainPage) {
-                window.setup.page = mainPage;
+            if (setup.page != mainPage) {
+                setup.page = mainPage;
                 getMDFile();
             }
         }
@@ -478,14 +478,14 @@ document.addEventListener("DOMContentLoaded", function() {
         url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/gh-pages/");
     }
 
-    window.setup = {
+    setup = {
         "book":   getGETQueryValue("book", "guide"),
         "page":   getGETQueryValue("page", "guide.md"),
         "anchor": extractAnchor(),
         "branch": getGETQueryValue("branch", "gh-pages"),
         "url":    url
     }
-    console.log("Setup: " + JSON.stringify(window.setup));
+    console.log("Setup: " + JSON.stringify(setup));
 
     getMDFile();
     getMenuFile();

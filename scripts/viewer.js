@@ -48,18 +48,22 @@ function redirectUrls(node) {
             if (match && match.length >= 2) {
                 var newPage = match[1];
                 var anchor = match[2]; // could be undefined
-                var anchorString = (anchor && anchor.length > 0) ? anchor : "";
-                var currentUrl = location.href;
-                var newUrl = currentUrl;
-                if (currentUrl.indexOf("page=") > -1) {
-                    newUrl = currentUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + newPage + ".md" + anchorString);
-                } else {
-                    newUrl = currentUrl + "&page=" + newPage + ".md" + anchorString;
-                }
-                a.setAttribute("href", newUrl);
+                a.setAttribute("href", forgeUrl(newPage));
             }
         }
     }
+}
+
+function forgeUrl(page, anchor) {
+  var anchorString = (anchor && anchor.length > 0) ? anchor : "";
+  var currentUrl = location.href;
+  var newUrl = currentUrl;
+  if (currentUrl.indexOf("page=") > -1) {
+      newUrl = currentUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + page + ".md" + anchorString);
+  } else {
+      newUrl = currentUrl + "&page=" + page + ".md" + anchorString;
+  }
+  return newUrl;
 }
 
 function addOnTheFlyEvent(el) {
@@ -84,7 +88,7 @@ function aClick(el) {
     console.log('page = ' + setup.page);
     console.log('anchor = ' + setup.anchor);
     getMDFile();
-    forgeURL();
+    updateBrowserUrl();
 }
 
 function redirectImages(node) {
@@ -156,7 +160,7 @@ function populateViewDiv(mdContent) {
     updateSelection();
 }
 
-function forgeURL() {
+function updateBrowserUrl() {
     var url = location.href;
 
     var pageString = "&page=" + setup.page;
@@ -296,13 +300,8 @@ function populateNavigation(selected) {
     var up = document.getElementById("up");
     var toc = document.getElementById("toc");
 
-    var newUrl = location.href;
-    if (newUrl.indexOf("page=") > -1) {
-        newUrl = newUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=menu.md");
-    } else {
-        newUrl = newUrl + "&page=menu.md";
-    }
-    toc.setAttribute("href", newUrl);
+    toc.setAttribute("href", forgeUrl("menu"));
+    addOnTheFlyEvent(toc);
 
     if (!selected) {
         next.classList.add("disabled");
@@ -381,13 +380,7 @@ function populateNavigation(selected) {
             up.setAttribute("href", upElement.getAttribute("href"));
             addOnTheFlyEvent(up);
         } else {
-            var newUrl = location.href;
-            if (newUrl.indexOf("page=") > -1) {
-                newUrl = newUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + setup.book + ".md");
-            } else {
-                newUrl = newUrl + "&page=" + setup.book + ".md";
-            }
-            up.setAttribute("href", newUrl);
+            up.setAttribute("href", forgeUrl(setup.book));
             addOnTheFlyEvent(up);
             up.classList.remove("disabled");
         }

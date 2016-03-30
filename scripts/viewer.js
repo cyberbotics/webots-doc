@@ -381,7 +381,15 @@ function populateNavigation(selected) {
             up.setAttribute("href", upElement.getAttribute("href"));
             addOnTheFlyEvent(up);
         } else {
-            up.classList.add("disabled");
+            var newUrl = location.href;
+            if (newUrl.indexOf("page=") > -1) {
+                newUrl = newUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + window.setup.book + ".md");
+            } else {
+                newUrl = newUrl + "&page=" + window.setup.book + ".md";
+            }
+            up.setAttribute("href", newUrl);
+            addOnTheFlyEvent(up);
+            up.classList.remove("disabled");
         }
     }
 }

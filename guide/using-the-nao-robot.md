@@ -48,7 +48,7 @@ printed to Webots console.
 
 Now you can start Choregraphe with the --no-naoqi option. Please make sure the
 Choregraphe version matches the NAOqi version printed in Webots console. In
-Choregraphe choose the menu `Connection > Connect to...`. Then in the list,
+Choregraphe choose the menu `Connection / Connect to...`. Then in the list,
 select the NAOqi that was started by Webots, on you local machine, it will have
 the port number 9559, unless you change it. Note that the NAOqi will not appear
 in the list if the simulation was not started in Webots. If the simulation was
@@ -99,8 +99,8 @@ will make the robot sit down, and then stand up once he is done sitting down.
 
 Webots simulates Nao's top and bottom cameras. Using Aldebaran's Choregraphe or
 the Monitor programs, it is possible to switch between these cameras. In
-Choregraphe, use the "Select Camera" box in `Box Library > Vision`. The
-simulated camera image can be viewed in Choregraphe: `View > Video monitor`. The
+Choregraphe, use the "Select Camera" box in `Box Library / Vision`. The
+simulated camera image can be viewed in Choregraphe: `View / Video monitor`. The
 resolution of the image capture can be changed in Webots using the `cameraWidth`
 and `cameraHeight` fields of the robot. Note that the simulation speed decreases
 as the resolution increases. It is possible to hide the camera viewports (purple
@@ -119,7 +119,7 @@ NAOqi port number:
 2. Revert the simulation: push the `Revert` button in Webots 3D View
 3. In Webots Scene Tree, select a top level nodes, e.g. the Nao robot
 4. Then push the `Add` button, a dialog appears
-5. In the dialog, select `PROTO (Webots) > robots`
+5. In the dialog, select `PROTO (Webots) / robots`
 6. Then select one of the Nao models from the list, the Nao is added to the current
 world
 7. Select the Nao in the 3D view and move it away from the other one: SHIFT + left

@@ -15,7 +15,7 @@ figure](#expected-result-at-the-end-of-the-tutorial-about-compound-solids).
 
 > **handson**:
 Start from the results of the previous tutorial and create a new simulation
-called "compound\_solid.wbt" by using the menu `File > Save World As...`.
+called "compound\_solid.wbt" by using the menu `File / Save World As...`.
 
 ### Compound Solid
 

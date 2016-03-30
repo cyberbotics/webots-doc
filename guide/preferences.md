@@ -1,7 +1,7 @@
 ## Preferences
 
 The Webots preferences can be modified by a dialog box which can be open from
-the `Webots > Preferences` menu item on Mac, and from the `Tools > Preferences`
+the `Webots / Preferences` menu item on Mac, and from the `Tools / Preferences`
 menu item on the other operating systems.
 
 The dialog box is separated into tabs. Each of the following subsection

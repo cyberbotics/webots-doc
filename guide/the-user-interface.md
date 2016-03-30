@@ -169,7 +169,7 @@ Rendering` (default) and the `Wireframe` modes for Webots simulation window. In
 materials, colors and textures, in the same way they are usually seen by an eye
 or a camera. In *wireframe rendering* mode, only the segments of the renderable
 primitives are rendered. This mode can be useful to debug your meshes. If the
-*wireframe rendering* mode and the `View > Optional Rendering > Show All
+*wireframe rendering* mode and the `View / Optional Rendering / Show All
 Bounding Objects` toggle button are both activated, then only bounding objects
 are drawn (not the renderable primitives). This can be used to debug a problem
 with the collision detection.

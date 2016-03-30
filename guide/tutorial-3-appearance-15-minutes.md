@@ -13,7 +13,7 @@ figure](#simulation-after-having-setup-the-light-and-the-appearance-nodes).
 
 > **handson**:
 From the results of the previous tutorial, create a new simulation called
-"appearance.wbt" by using the `File > Save World As...` menu.
+"appearance.wbt" by using the `File / Save World As...` menu.
 
 ### Lights
 
@@ -106,8 +106,8 @@ image representation to a 3D model.
 Webots offers several rendering modes available in the `View` menu.
 
 > **handson**:
-View the simulation in wireframe mode by using the `View > Wireframe Rendering`
-menu item. Then restore the plain rendering mode: `View > Plain Rendering`.
+View the simulation in wireframe mode by using the `View / Wireframe Rendering`
+menu item. Then restore the plain rendering mode: `View / Plain Rendering`.
 
 ### Conclusion
 

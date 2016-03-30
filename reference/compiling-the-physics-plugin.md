@@ -1,6 +1,6 @@
 ## Compiling the Physics Plugin
 
-When a plugin is created using the menu `Wizard > New Physics Plugin`, Webots
+When a plugin is created using the menu `Wizard / New Physics Plugin`, Webots
 will automatically add a suitable ".c" or ".cpp" source file and a Makefile to
 the plugin's directory. Your plugin can be compiled with Webots text editor or
 manually by using `gcc` and `make` commands in a terminal. On Windows, you can

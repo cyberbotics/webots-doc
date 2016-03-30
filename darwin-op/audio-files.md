@@ -2,7 +2,7 @@
 
 %figure "Audio files available on the robot"
 
-| File                                      | Lenght [sec] | Size [kB] |
+| File                                      | Length [sec] | Size [kB] |
 | ----------------------------------------- | ------------ | --------- |
 | Autonomous soccer mode.mp3                | 1            | 29        |
 | Bye bye.mp3                               | 1            | 18.4      |

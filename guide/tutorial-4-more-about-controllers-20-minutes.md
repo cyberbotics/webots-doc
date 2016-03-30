@@ -222,7 +222,7 @@ follows:
 <!-- -->
 
 > **handson**:
-Compile your code by selecting the `Build > Build` menu item. Compilation errors
+Compile your code by selecting the `Build / Build` menu item. Compilation errors
 are displayed in red in the console. If there are any, fix them and retry to
 compile. Revert the simulation.
 

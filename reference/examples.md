@@ -2,7 +2,7 @@
 
 Webots comes with several examples of physics plugin. When opening an example,
 the code of the physics plugin should appear in Webots text editor. If it does
-not appear automatically, then you can always use the menu: `Tools > Edit
+not appear automatically, then you can always use the menu: `Tools / Edit
 Physics Plugin`.
 
 A simple example is the "WEBOTS\_HOME/projects/samples/howto/worlds/physics.wbt"

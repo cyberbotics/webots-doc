@@ -12,7 +12,7 @@ The differences between Webots PRO, EDU and MOD are explained
 ### How can I report a bug in Webots?
 
 If you can still start Webots, please report the bug by using Webots menu: `Help
-> Bug report...`.
+/ Bug report...`.
 
 If Webots cannot start any more, please report the bug there:
 [http://www.cyberbotics.com/bug](http://www.cyberbotics.com/bug). Please include

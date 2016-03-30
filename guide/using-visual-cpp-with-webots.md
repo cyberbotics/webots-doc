@@ -30,11 +30,11 @@ Visual C++ controller for Webots. Note that the resulting ".exe" file must be
 launched by Webots; it cannot be run from Visual C++.
 
 1. Copy a Webots project from Webots distribution to your "Documents" folder, or
-create an empty project directory using Webots menu: `Wizard > New Project
+create an empty project directory using Webots menu: `Wizard / New Project
 Directory...` Either way, the project directory must contain the "controllers"
 and "worlds" subdirectories.
 
-2. Start Visual C++ and select: `File > New > Project...` Then choose these
+2. Start Visual C++ and select: `File / New / Project...` Then choose these
 settings:
 
         Project type: General
@@ -47,7 +47,7 @@ settings:
     your Webots project directory.
 
 3. Then you can add a C or C++ source file to your project: Choose either: `Project
-> Add Existing Item` or `Project > Add New Item > C++ File (.cpp)`. In the
+/ Add Existing Item` or `Project / Add New Item / C++ File (.cpp)`. In the
 second case you can copy the content of one of the C/C++ examples of Webots
 distribution.
 
@@ -65,7 +65,7 @@ distribution.
           identifier 'ir0'
         ...
 
-4. Now we can set up the project configuration for Webots. Select the `Project >
+4. Now we can set up the project configuration for Webots. Select the `Project /
 Properties` menu. In the `Property Pages`, in the `Configuration Properties`,
 enter following configuration:
 
@@ -106,15 +106,15 @@ If you want to use the C++ API follow these instructions:
     can proceed like this:
 
     In Visual C++, in the `Solution Explorer`: right-mouse-click on the `Sources
-    Files` folder, then select `Add > New Filter`. This should create a `NewFilter1`
+    Files` folder, then select `Add / New Filter`. This should create a `NewFilter1`
     subfolder in your `Sources Files` folder. Then select the `NewFilter1` and with
-    the right-mouse-button: choose the `Add > Existing Item...` menu. In the file
+    the right-mouse-button: choose the `Add / Existing Item...` menu. In the file
     dialog, go to the "C:\Program Files\Webots\resources\languages\cpp" directory,
     then select all the .cpp files (but no other file) in that directory and hit the
     `Add` button. This should add the "Accelerometer.cpp, Camera.cpp, Compass.cpp",
     etc. source files to your project.
 
-6. Now you should be able to build your controller with the `Build > Build
+6. Now you should be able to build your controller with the `Build / Build
 MyController` menu item (or the F7 key). This should generate the
 "MyProject\controllers\MyController\MyController.exe" file.
 
@@ -130,7 +130,7 @@ should be using your Visual C++ controller.
 8. If you want to debug your controller with Visual C++ you can *attach* the
 debugger to the running controller process. Proceed like this: In Webots, hit
 the `Pause` button then the `Revert` button. Then, in Visual C++, use the `Debug
-> Attach to Process...` menu. In the dialog choose the `MyController.exe_webots`
+/ Attach to Process...` menu. In the dialog choose the `MyController.exe_webots`
 process. Still in Visual C++, you can now add breakpoints and watches in the
 controller code. Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.

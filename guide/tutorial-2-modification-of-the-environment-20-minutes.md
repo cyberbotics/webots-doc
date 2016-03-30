@@ -17,7 +17,7 @@ First we create a new simulation based on the one created in Tutorial 1.
 
 > **handson**:
 Make sure the "my\_first\_simulation.wbt" world file is open, and that the
-simulation is paused and is at a virtual time of 0. Using the `File > Save World
+simulation is paused and is at a virtual time of 0. Using the `File / Save World
 As...` menu, save the simulation as "obstacles.wbt".
 
 ### Modification of the Floor
@@ -41,8 +41,8 @@ To remove the `RectangleArena`, select it in the scene tree view and press the
 
 > **handson**:
 In order to add a different floor PROTO, select the `DirectionalLight` node and
-click on the `Add` button. In the open dialog box, and choose `PROTO (Webots) >
-objects > floors > Floor (Solid)`.
+click on the `Add` button. In the open dialog box, and choose `PROTO (Webots) /
+objects / floors / Floor (Solid)`.
 
 The newly added `Floor` PROTO has a default size of 10mx10m, but it is possible
 to adjust its size, its position and texture by changing the corresponding
@@ -125,7 +125,7 @@ Finally add a Physics node to the `physics` field of the Solid. By modifying the
 When the simulation is started, the ball hits the floor. You can move the ball
 by adding a force to it (CTRL + ALT + left-click + drag). The contact points
 between the ball and the floor can be displayed as cyan lines by enabling the
-`View > Optional Rendering > Show Contact Points` menu item.
+`View / Optional Rendering / Show Contact Points` menu item.
 
 ### Geometries
 
@@ -168,7 +168,7 @@ Select the first Sphere node (the child of the Shape) in the scene tree view.
 The field editor of the scene tree view allows you to enter the DEF string.
 Enter *"BALL\_GEOMETRY"*. Select the boundingObject field (containing the second
 Sphere node), and delete it by using the `Reset to default` button. Then click
-on the `Add` button, and select the `USE > BALL_GEOMETRY` in the dialog box. The
+on the `Add` button, and select the `USE / BALL_GEOMETRY` in the dialog box. The
 result is shown in [this
 figure](#def-use-mechanism-on-the-sphere-node-called-ball_geometry).
 

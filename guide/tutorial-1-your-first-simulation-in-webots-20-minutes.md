@@ -38,7 +38,7 @@ stable.
 <!-- -->
 
 > **handson**:
-Create a new world by selecting the `File > New World` menu item.
+Create a new world by selecting the `File / New World` menu item.
 
 A new world is now open. For now, the 3D window displays a black screen. This is
 normal because the scene tree contains only the following fundamental nodes:
@@ -59,7 +59,7 @@ Now we would like to add some light to the scene.
 > **handson**:
 Select the last node of the scene tree view (`Background`). Click on the `Add`
 button at the top of the scene tree view. In the open dialog box, and choose
-`New node > DirectionalLight`. The new node has been added but as there is no 3D
+`New node / DirectionalLight`. The new node has been added but as there is no 3D
 object in the scene, the result of this operation is not visible yet.
 
 Now we would like to add some environment (a floor and some walls). A predefined
@@ -67,8 +67,8 @@ high-level node called `RectangleArena` is designed to do this task quickly.
 
 > **handson**:
 Select the last node of the scene tree view (`DirectionalLight`). Click on the
-`Add` button. In the open dialog box, choose `PROTO (Webots) > objects > floors
-> RectangleArena`. The new node has been added and is appearing far away. Use
+`Add` button. In the open dialog box, choose `PROTO (Webots) / objects / floors
+/ RectangleArena`. The new node has been added and is appearing far away. Use
 the left click and the wheel of the mouse in the 3D view to choose a better
 viewpoint.
 
@@ -88,14 +88,14 @@ Now your environment should look like the one depicted in the
 [figure](prerequisites.md#the-webots-main-window-splits-into-four-dockable-subwindows-the-scene-tree-view-on-the-left-hand-side-including-a-panel-at-the-bottom-for-editing-fields-values-the-3d-view-in-the-center-the-text-editor-on-the-right-hand-side-and-the-console-at-bottom-of-the-window-note-that-some-of-these-subwindows-have-a-toolbar-with-buttons-the-main-menus-appear-on-the-top-of-the-main-window-the-virtual-time-counter-and-the-speedometer-are-displayed-in-the-right-part-of-the-3d-view-toolbar-the-status-text-is-displayed-in-the-bottom-left-of-the-main-window).
 
 > **handson**:
-Save the new world into your project by selecting the `File > Save World As...`
+Save the new world into your project by selecting the `File / Save World As...`
 menu item. Using the dialog box save the world into the
 "my\_webots\_projects/tutorials/worlds/my\_first\_simulation.wbt" file location.
 
 <!-- -->
 
 > **handson**:
-Revert the simulation by selecting the `File > Revert World` menu item.
+Revert the simulation by selecting the `File / Revert World` menu item.
 
 <!-- -->
 
@@ -148,7 +148,7 @@ the necessary nodes to define a e-puck robot.
 > **handson**:
 Select the last node of the scene tree view (called `RectangleArena`). In order
 to add the E-puck node, click on the `Add` button at the top of the scene tree
-view. In the open dialog box, and choose `PROTO (Webots) > robots > e-puck >
+view. In the open dialog box, and choose `PROTO (Webots) / robots / e-puck /
 E-puck (DifferentialWheels)`. Then save the simulation.
 
 <!-- -->
@@ -234,7 +234,7 @@ chapter](language-setup.md)).
 <!-- -->
 
 > **handson**:
-Create a new C controller called *e-puck\_go\_forward* using the `Wizards > New
+Create a new C controller called *e-puck\_go\_forward* using the `Wizards / New
 Robot Controller...` menu. This will create a new "e-puck\_go\_forward"
 directory in "my\_webots\_projects/tutorials/controllers". Select the option
 asking you to open the source file in the text editor.
@@ -282,8 +282,8 @@ Modify the program by inserting an include statement (`#include
 <!-- -->
 
 > **handson**:
-Save the modified source code (`File > Save Text File`), and compile it (`Build
-> Build`). Fix any compilation error if necessary. When Webots proposes to
+Save the modified source code (`File / Save Text File`), and compile it (`Build
+/ Build`). Fix any compilation error if necessary. When Webots proposes to
 revert the simulation, choose `Yes`.
 
 If everything is ok, your robot should go forwards.

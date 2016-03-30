@@ -1,7 +1,7 @@
 ## Plugin Setup
 
 You can add a new plugin, or edit the existing plugin, by using the menu `Tools
-> Edit Physics Plugin`. After a physics plugin was created it must be associated
+/ Edit Physics Plugin`. After a physics plugin was created it must be associated
 with the current ".wbt" file. This can be done in the Scene Tree: the
 [WorldInfo](worldinfo.md) node has a field called `physics` which indicates the
 name of the physics plugin associated with the current world. Select the

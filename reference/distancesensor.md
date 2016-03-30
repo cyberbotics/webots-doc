@@ -24,7 +24,7 @@ and laser type the collision occurs with the bounding objects of
 [Solid](solid.md) nodes themselves.
 
 The rays of the [DistanceSensor](#distancesensor) nodes can be displayed by
-checking the menu `View > Optional Rendering > Show Distance Sensor Rays`. The
+checking the menu `View / Optional Rendering / Show Distance Sensor Rays`. The
 red/green transition on the rays indicates the points of intersection with the
 bounding objects.
 

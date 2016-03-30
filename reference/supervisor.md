@@ -539,7 +539,7 @@ void wb_supervisor_simulation_quit(int status)
 **Description**
 
 The `wb_supervisor_simulator_quit()` function quits Webots, as if one was using
-the menu `File > Quit Webots`. This function makes it easier to invoke a Webots
+the menu `File / Quit Webots`. This function makes it easier to invoke a Webots
 simulation from a script because it allows to terminate the simulation
 automatically, without human intervention. As a result of quitting the simulator
 process, all controller processes, including the calling supervisor controller,

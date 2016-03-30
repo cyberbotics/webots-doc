@@ -65,7 +65,7 @@ in a 128 x 128 pixels ".png" file. The file name must correspond to that of the
 PROTO plus the ".png" extension and it must be stored in the "icons"
 subdirectory of the "protos" directory (see [this
 figure](#proto-directory-in-a-project-directory-structure)). Note that it is
-possible to create the ".png" files directly with Webots's menu `File > Take
+possible to create the ".png" files directly with Webots's menu `File / Take
 Screenshot...`. Then the image should be cropped or resized to 128 x 128 pixels
 using an image editor.
 

@@ -32,7 +32,7 @@ section](starting-webots.md).
 
 > If it's the first time you start Webots, a welcome dialog box invites you to
 choose a demo simulation. Choose any of them, but it's a good opportunity to
-take a look at our guided tour (also available using the `Help > Webots Guided
+take a look at our guided tour (also available using the `Help / Webots Guided
 Tour...` menu).
 
 Now a simulation is running.
@@ -61,7 +61,7 @@ shapes, etc.).
 <!-- -->
 
 > **handson**:
-In Webots, open the wizard by selecting the `Wizards > New Project Directory...`
+In Webots, open the wizard by selecting the `Wizards / New Project Directory...`
 menu item. From this wizard, follow the instructions to create a new project
 named "tutorials" in the "my\_webots\_projects" directory created before.
 

@@ -450,6 +450,8 @@ class BookParser:
                     else:
                         self.parseProgramListing(child, outFile)
                     outFile.write('\n\n')
+                elif child.tag == 'guimenu' or 'guimenuitem':
+                    text += '`' + self.parseText(child.text.replace(' > ', ' / '), False, False, False) + '`'
                 else:
                     text += '`' + self.parseText(child.text, False, False, False) + '`'
             else: # not a text tag

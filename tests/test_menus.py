@@ -36,11 +36,13 @@ class TestMenus(unittest.TestCase):
                 line = content[line_number].strip()
                 if len(line) == 0:
                     continue
+                elif line == '# Table of Contents':
+                    continue
                 else:
                     match = re.match(r'^- \[(.*)\]\((.*)\)$', line)
                     self.assertIsNotNone(
-                        match, msg='Line %d of "%s" does not match \
-                        the expected pattern' % (line_number, menu)
+                        match, msg='Line %d of "%s" does not match '
+                        'the expected pattern' % (line_number, menu)
                     )
                     for i in [1, 2]:
                         self.assertTrue(

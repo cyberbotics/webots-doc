@@ -1,3 +1,5 @@
+# Table of Contents
+
 - [Thanks](thanks.md)
 - [Introduction](introduction.md)
     - [Nodes and Functions](nodes-and-functions.md)

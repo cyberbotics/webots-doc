@@ -261,6 +261,7 @@ class BookParser:
         print 'Generating menu: ' + outputFilePath
 
         outFile = open(outputFilePath, 'w')
+        outFile.write("# Table of Contents\n\n")
 
         chapterCounter = 0
         for chapterNode in self.root.findall('.//preface') + self.root.findall('.//chapter'):
@@ -927,6 +928,8 @@ class BookParser:
 
     def parseBook(self, node, outFile):
         outFile.write('# ' + self.getTitle(node) + '\n\n')
+        # outFile.write('[Table of Contents](%s/menu.md)\n\n' % (self.bookName))
+
         for child in node.getchildren():
             if child.tag == 'bookinfo':
                 self.parseBookInfo(child, outFile)

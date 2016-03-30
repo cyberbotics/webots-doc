@@ -1,3 +1,5 @@
+# Table of Contents
+
 - [Foreword](foreword.md)
 - [Thanks](thanks.md)
 - [Installing Webots](installing-webots.md)

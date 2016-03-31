@@ -432,7 +432,7 @@ class BookParser:
                     ref = self.referenceManager.getReferenceById(linkend)
                     if ref is None:
                         raise Exception('reference to "' + linkend + '" is undefined')
-                    text += '[%s](%s)' % (self.parseText(child.text, True, False, False), ref.getUrl(outFile.name))
+                    text += '[%s](%s)' % (self.parseText(child.text, True, True, False), ref.getUrl(outFile.name))
                 elif child.tag == 'programlisting':
                     # flush text
                     text = self.formatText(text)

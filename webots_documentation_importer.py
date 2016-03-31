@@ -458,6 +458,8 @@ class BookParser:
             else: # not a text tag
                 if child.tag == 'space':
                     text += '&nbsp;'
+                elif child.tag == 'br':
+                    text += '<br/>'
                 elif child.tag == 'inlinegraphic':
                     fileref = child.attrib.get('fileref')
                     fileref = re.sub(r'^png/', 'images/', fileref)

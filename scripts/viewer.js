@@ -48,7 +48,7 @@ function redirectUrls(node) {
             if (match && match.length >= 2) {
                 var newPage = match[1];
                 var anchor = match[2]; // could be undefined
-                a.setAttribute("href", forgeUrl(newPage));
+                a.setAttribute("href", forgeUrl(newPage, anchor));
             }
         }
     }
@@ -163,9 +163,13 @@ function populateViewDiv(mdContent) {
 function updateBrowserUrl() {
     var url = location.href;
 
-    var pageString = "&page=" + setup.page;
-    if (url.indexOf("&page=") > -1) {
-        url = url.replace(/&page=[^&]*.md/, pageString);
+    var pageString = "page=" + setup.page;
+    if (setup.anchor && setup.anchor.length > 0) {
+        pageString += "#" + setup.anchor
+    }
+
+    if (url.indexOf("page=") > -1) {
+        url = url.replace(/page=[^&]*.md(#[^&].*)?/, pageString);
     } else {
         url += pageString;
     }

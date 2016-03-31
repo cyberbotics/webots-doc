@@ -201,12 +201,12 @@ window.onpopstate = function(event) {
 };
 
 function highlightCode(view) {
-    hljs.configure({languages: ['c', 'cpp', 'java', 'python', 'matlab', 'bash', 'nohighlight']});
+    var supportedLanguages = ['c', 'c++', 'java', 'python', 'matlab', 'bash', 'makefile', 'lua', 'xml'];
 
-    var pres = view.getElementsByTagName("pre");
-    for (var i = 0; i < pres.length; i++) {
-        var pre = pres[i];
-        var codes = pre.getElementsByTagName("code");
+    for (var i = 0; i < supportedLanguages.length; i++) {
+        var language = supportedLanguages[i];
+        hljs.configure({languages: [ language ]});
+        var codes = document.getElementsByClassName('language-' + language);
         for (var j = 0; j < codes.length; j++) {
             var code = codes[j];
             hljs.highlightBlock(code);

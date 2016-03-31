@@ -17,6 +17,13 @@ function decomposePage(page) {
         var anchor = match[2] ? match[2].substring(1) : "";
         return [mdFile, anchor];
     }
+
+    var match = /(book=[\w-]+)?$/.exec(page);
+    if (match && match.length == 2) {
+      var mdFile = match[1] + ".md";
+      return [mdFile, ""];      
+    }
+
     return ["", ""];
 }
 
@@ -43,7 +50,7 @@ function redirectUrls(node) {
             // open external links in a new window
             a.setAttribute("target", "_blank");
         } else if (href.endsWith("md") || href.indexOf(".md#") > -1) {
-            addOnTheFlyEvent(a);
+            addDynamicLoadEvent(a);
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
                 var newPage = match[1];
@@ -66,8 +73,8 @@ function forgeUrl(page, anchor) {
   return newUrl;
 }
 
-function addOnTheFlyEvent(el) {
-    if (el.classList.contains("on-the-fly")) {
+function addDynamicLoadEvent(el) {
+    if (el.classList.contains("dynamicLoad")) {
         return;
     }
 
@@ -78,7 +85,7 @@ function addOnTheFlyEvent(el) {
         },
         false
     );
-    el.classList.add("on-the-fly");
+    el.classList.add("dynamicLoad");
 }
 
 function aClick(el) {
@@ -160,6 +167,7 @@ function populateViewDiv(mdContent) {
     updateSelection();
 }
 
+// replace the browser URL after a dynamic load
 function updateBrowserUrl() {
     var url = location.href;
 
@@ -171,16 +179,26 @@ function updateBrowserUrl() {
     if (url.indexOf("page=") > -1) {
         url = url.replace(/page=[^&]*.md(#[^&].*)?/, pageString);
     } else {
-        url += pageString;
+        url += '&' + pageString;
     }
 
     if (history.pushState) {
         try {
-            history.pushState(null, null, url);
+            history.pushState({state:'new'}, null, url);
         } catch (err) {
         }
     }
 }
+
+// Make in order that the back button is working correctly
+window.onpopstate = function(event) {
+    var decomposition = decomposePage(document.location);
+    setup.page = decomposition[0];
+    setup.anchor = decomposition[1];
+    console.log('page = ' + setup.page);
+    console.log('anchor = ' + setup.anchor);
+    getMDFile();
+};
 
 function highlightCode(view) {
     hljs.configure({languages: ['c', 'cpp', 'java', 'python', 'matlab', 'bash', 'nohighlight']});
@@ -305,7 +323,7 @@ function populateNavigation(selected) {
     var toc = document.getElementById("toc");
 
     toc.setAttribute("href", forgeUrl("menu"));
-    addOnTheFlyEvent(toc);
+    addDynamicLoadEvent(toc);
 
     if (!selected) {
         next.classList.add("disabled");
@@ -334,7 +352,7 @@ function populateNavigation(selected) {
         if (nextElement) {
             next.classList.remove("disabled");
             next.setAttribute("href", nextElement.getAttribute("href"));
-            addOnTheFlyEvent(next);
+            addDynamicLoadEvent(next);
         } else {
             next.classList.add("disabled");
         }
@@ -360,7 +378,7 @@ function populateNavigation(selected) {
         if (previousElement) {
             previous.classList.remove("disabled");
             previous.setAttribute("href", previousElement.getAttribute("href"));
-            addOnTheFlyEvent(previous);
+            addDynamicLoadEvent(previous);
         } else {
             previous.classList.add("disabled");
         }
@@ -382,10 +400,10 @@ function populateNavigation(selected) {
         if (upElement) {
             up.classList.remove("disabled");
             up.setAttribute("href", upElement.getAttribute("href"));
-            addOnTheFlyEvent(up);
+            addDynamicLoadEvent(up);
         } else {
             up.setAttribute("href", forgeUrl(setup.book));
-            addOnTheFlyEvent(up);
+            addDynamicLoadEvent(up);
             up.classList.remove("disabled");
         }
     }

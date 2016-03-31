@@ -485,7 +485,7 @@ obstacles, external forces or the servo's own spring force, etc. It is also
 possible to wait until the [Servo](#servo) reaches the target position
 (synchronous) like this:
 
-``` c
+```c
 void servo_set_position_sync(WbDeviceTag tag, double target, int delay) {
   const double DELTA = 0.001;  // max tolerated difference
   wb_servo_set_position(tag, target);
@@ -507,7 +507,7 @@ the `wb_servo_set_position()` function in order to enable an endless rotational
 torque/force are taken into account. So for example, `wb_servo_set_velocity()`
 can be used for controlling the velocity of the endless rotation:
 
-``` c
+```c
 // velocity control
 wb_servo_set_position(tag, INFINITY);
 wb_servo_set_velocity(tag, desired_speed);  // rad/s

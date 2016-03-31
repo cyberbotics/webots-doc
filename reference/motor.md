@@ -277,7 +277,7 @@ is not blocked by obstacles, external forces or the motor's own spring force,
 etc. It is also possible to wait until the [Motor](#motor) reaches the target
 position (synchronous) like this:
 
-``` c
+```c
 void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, double target, int delay) {
   const double DELTA = 0.001;  // max tolerated difference
   wb_motor_set_position(tag_motor, target);
@@ -299,7 +299,7 @@ the `wb_motor_set_position()` function in order to enable an endless rotational
 torque/force are taken into account. So for example, `wb_motor_set_velocity()`
 can be used for controlling the velocity of the endless rotation:
 
-``` c
+```c
 // velocity control
 wb_motor_set_position(tag, INFINITY);
 wb_motor_set_velocity(tag, desired_speed);  // rad/s

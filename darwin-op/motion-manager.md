@@ -70,7 +70,7 @@ called.
 
 A typical use of the motion manager in mode step-by-step will be the following:
 
-``` c
+```c
 mMotionManager->playPage(1, false);
 while(mMotionManager->isMotionPlaying()) {
   mMotionManager->step(mTimeStep);

@@ -230,7 +230,7 @@ compile. Revert the simulation.
 
 Here is the complete code of the controller detailed in the previous subsection.
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/differential_wheels.h>
 #include <webots/distance_sensor.h>

@@ -25,7 +25,7 @@ results in a somewhat simpler code. Here is a pseudo-code example for the
 systematical optimization of two parameters *a* and *b* using only one
 controller:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 
@@ -103,7 +103,7 @@ You can easily reset the position, orientation and physics of the robot using
 the `wb_supervisor_field_set...()` and
 `wb_supervisor_simulation_reset_physics()` functions, here is an example:
 
-``` c
+```c
 // get handles to the robot's translation and rotation fields
 WbNodeRef robot_node = wb_supervisor_node_get_from_def("MY_ROBOT");
 WbFieldRef trans_field = wb_supervisor_node_get_field(robot_node, "translation");
@@ -141,7 +141,7 @@ optimization algorithm. The optimization state should be saved before calling
 `wb_supervisor_simulation_revert()` and reloaded when the `Supervisor`
 controller restarts. Here is a pseudo-code example:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 
@@ -226,7 +226,7 @@ associate it with the current genotype and proceed with the next genotype.
 Here is a possible (pseudo-code) implementation for the robot evaluation
 controller:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 

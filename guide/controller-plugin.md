@@ -130,7 +130,7 @@ The internal behavior of the `wb_robot_step()` call is the key point to
 understand how the different entry points of the robot window plugin are called
 (pseudo-code):
 
-``` c
+```c
 wb_robot_step() {
   wbw_write_actuators()
   wbw_pre_update_gui()

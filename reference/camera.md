@@ -383,7 +383,7 @@ works in a similar way but returns the grey level of the specified pixel by
 averaging the three RGB components. In the C version, these four macros return
 an `unsigned char` in the range [0..255]. Here is a C usage example:
 
-``` c
+```c
 const unsigned char *image = wb_camera_get_image(camera);
 for (int x = 0; x < image_width; x++)
   for (int y = 0; y < image_height; y++) {

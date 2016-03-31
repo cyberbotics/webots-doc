@@ -125,7 +125,7 @@ useful data from the head packet, before calling `wb_receiver_next_packet()`. It
 is illegal to call `wb_receiver_next_packet()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0). Here is a usage example:
 
-``` c
+```c
 while (wb_receiver_get_queue_length(tag) > 0) {
   const char *message = wb_receiver_get_data(tag);
   const double *dir = wb_receiver_get_emitter_direction(tag);

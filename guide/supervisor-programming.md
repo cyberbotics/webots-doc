@@ -46,7 +46,7 @@ code finds a `WbNodeRef` that corresponds to the robot node and then a
 `WbFieldRef` that corresponds to the robot's `translation` field. At each
 iteration it reads and prints the field's values.
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 #include <stdio.h>
@@ -107,7 +107,7 @@ next evaluation. To move the robot we need the `wb_supervisor_*()` functions and
 hence the base node of this robot in the Scene Tree must be a `Supervisor` and
 not a Robot.
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 #include <stdio.h>

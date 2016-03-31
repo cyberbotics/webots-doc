@@ -18,7 +18,7 @@ it.
 
 Try to change the color of the LED by changing this line:
 
-``` c
+```c
 mHeadLED->set(0xFF0000);
 ```
 

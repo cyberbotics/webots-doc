@@ -55,7 +55,7 @@ simulation speed.
 
 A point of the lidar point cloud is defined by the following structure
 
-``` c
+```c
 typedef struct {
   float x;
   float y;

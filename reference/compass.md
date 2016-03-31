@@ -99,7 +99,7 @@ with the x-axis. Now if the [Compass](#compass) node is in *upright* position,
 meaning that its y-axis is aligned with the global y-axis, then the bearing
 angle in degrees can be computed as follows:
 
-``` c
+```c
 double get_bearing_in_degrees() {
 const double *north = wb_compass_get_values(tag);
 double rad = atan2(north[0], north[2]);

@@ -24,7 +24,7 @@ complete (serial execution).
 
 In order to use them you have to write something similar to this:
 
-``` c
+```c
  #include <webots/Speaker.hpp>
 
  mSpeaker = getSpeaker("Speaker");
@@ -37,7 +37,7 @@ your code concerning the speaker within `#ifdef CROSSCOMPILATION` statements in
 order to keep the same code running in simulation and on the real robot. Here is
 an example:
 
-``` c
+```c
  #ifdef CROSSCOMPILATION
    mSpeaker = getSpeaker("Speaker");
    mSpeaker->enable(mTimeStep);
@@ -47,7 +47,7 @@ an example:
 Several audio files are already present on the robot in the "/darwin/Data/mp3/"
 folder, you can freely use them this way:
 
-``` c
+```c
 mSpeaker->playFile("/darwin/Data/mp3/Introduction.mp3"); // this file is already on the robot, no need to send it.
 ```
 

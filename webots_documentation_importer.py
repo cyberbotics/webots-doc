@@ -514,17 +514,29 @@ class BookParser:
         if indent == 0:
             output += '```'
             lang = node.attrib.get('lang')
-            if lang is not None:
-                if 'c' in lang:
-                    output += ' c'
-                elif 'C' in lang:
-                    output += ' c++'
-                elif 'J' in lang:
-                    output += ' java'
-                elif 'P' in lang:
-                    output += ' python'
-                elif 'M' in lang:
-                    output += ' matlab'
+            language = ''
+            if lang is not None and len(lang) > 0:
+                if 'C' in lang or 'c++' in lang:
+                    if len(language) > 0:
+                        language += ','
+                    language += 'c++'
+                elif 'c' in lang:
+                    if len(language) > 0:
+                        language += ','
+                    language += 'c'
+                if 'J' in lang or 'java' in lang:
+                    if len(language) > 0:
+                        language += ','
+                    language += 'java'
+                if 'P' in lang or 'python' in lang:
+                    if len(language) > 0:
+                        language += ','
+                    language += 'python'
+                if 'M' in lang or 'matlab' in lang:
+                    if len(language) > 0:
+                        language += ','
+                    language += 'matlab'
+                output += language
             output += '\n'
 
         text = self.parseText(node.text, False, False, True)

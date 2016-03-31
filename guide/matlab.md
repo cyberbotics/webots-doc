@@ -14,7 +14,7 @@ If the *MATLAB*<sup>TM</sup> code uses graphics, it is necessary to call the
 
 Here is a simple *MATLAB*<sup>TM</sup> controller example:
 
-```
+```matlab
 % uncomment the next two lines to use the
 ```
 
@@ -28,7 +28,7 @@ you would like to use the *MATLAB*<sup>TM</sup> desktop to interact with your
 controller you just need to add these two *MATLAB*<sup>TM</sup> commands
 somewhere at the beginning of your controller m-file:
 
-```
+```matlab
 desktop;
 keyboard;
 ```

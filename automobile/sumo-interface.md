@@ -47,7 +47,7 @@ interface. The plugin should be written in python, be in the same folder than
 the SUMO network files, and should implement the `SumoSupervisorPlugin` class
 with the two following entry-point functions:
 
-``` python
+```python
 class SumoSupervisorPlugin:
   def __init__(self, supervisor, traci, net):
     # TODO

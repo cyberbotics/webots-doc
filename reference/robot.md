@@ -248,7 +248,7 @@ results.
 
 **Simple C controller Example**
 
-``` c
+```c
 #include <webots/robot.h>
 
 #define TIME_STEP 32
@@ -388,7 +388,7 @@ equal to 0.
 The following example shows a typical example of introspection. It is used with
 the device API allowing to retrieve some information from a WbDeviceTag.
 
-``` c
+```c
 int n_devices = wb_robot_get_number_of_devices();
 int i;
 for(i=0; i<n_devices; i++) {
@@ -855,7 +855,7 @@ No particular format on the argument is imposed but any user chosen format is
 suitable as long as the controller and robot window codes agree. The following
 example shows how to send and receive data from the robot window plugin:
 
-``` c
+```c
 char message[128];
 sprintf(message, "hello");
 int *count = (int *)wb_robot_window_custom_function(message);
@@ -865,7 +865,7 @@ if (count != NULL)
 
 And here is the corresponding robot window function definition:
 
-``` c
+```c
 void *wbw_robot_window_custom_function(void *arg) {
   static int *count = NULL;
   if (count == NULL)  {

@@ -552,7 +552,7 @@ Webots can be defined by the status `status` parameter. Some typical values for
 this are the `EXIT_SUCCESS` or `EXIT_FAILURE` macros defined into the "stdlib.h"
 file. Here is a C example:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 #include <stdlib.h>
@@ -577,7 +577,7 @@ int main(int argc, char *argv[]) {
 In object-oriented languages, there is no `wb_robot_cleanup()` function, in this
 case the controller should call its destructor. Here is a C++ example:
 
-``` c
+```c
 #include <webots/Robot.hpp>
 #include <webots/Supervisor.hpp>
 #include <cstdlib>
@@ -1017,7 +1017,7 @@ to the `wb_supervisor_field_import_mf_node` function, except that the node is
 constructed from the `node_string` string. For example, if you want to create a
 new robot with a specific controller:
 
-``` c
+```c
 #include <webots/robot.h>
     include <webots/supervisor.h>
 

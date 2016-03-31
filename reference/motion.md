@@ -35,7 +35,7 @@ condition can be detected by calling the `isValid()` function after the
 constructor. If `isValid()` yields `false` then the `Motion` object should be
 explicitly deleted. See example below.
 
-``` c++
+```c++
 Motion *walk = new Motion(filename);
 if (! walk->isValid()) {
   cerr << "could not load file: " << filename << endl;
@@ -72,7 +72,7 @@ happens in the background and is activated as a side effect of calling the
 `wb_robot_step()` function. If you want to play a file and wait for its
 termination you can do it with this simple function:
 
-``` c
+```c
 void my_motion_play_sync(WbMotionRef motion)
 {
   wbu_motion_play(motion);

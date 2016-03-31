@@ -8,7 +8,7 @@ C++/Java/Python/Matlab.
 The tradition in computer science is to start with a "Hello World!" example. So
 here is a "Hello World!" example for a Webots controller:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <stdio.h>
 
@@ -60,7 +60,7 @@ Now that we have seen how to print a message to the console, we shall see how to
 read the sensors of a robot. The next example does continuously update and print
 the value returned by a `DistanceSensor`:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/distance_sensor.h>
 #include <stdio.h>
@@ -116,7 +116,7 @@ The sensor value is updated during the call to `wb_robot_step()`. The call to
 Note that some device return vector values instead of scalar values, for example
 these functions:
 
-``` c
+```c
 const double *wb_gps_get_values(WbDeviceTag tag);
 const double *wb_accelerometer_get_values(WbDeviceTag tag);
 const double *wb_gyro_get_values(WbDeviceTag tag);
@@ -131,7 +131,7 @@ Finally, note that the array elements should not be modified, for this reason
 the pointer is declared as *const*. Here are correct examples of code using
 these functions:
 
-``` c
+```c
 const double *pos = wb_gps_get_values(gps);
 
 // OK, to read the values they should never be explicitly deleted by the controller code.
@@ -153,7 +153,7 @@ memcpy(b, pos, sizeof(b));
 
 And here are incorrect examples:
 
-``` c
+```c
 const double *pos = wb_gps_get_values(gps);
 
 pos[0] = 3.5;      // ERROR: assignment of read-only location
@@ -184,7 +184,7 @@ The `wb_robot_step()` function sends the actuation command to the
 motion (i.e. reach the specified target position); it just simulates the motor's
 motion for the specified number of milliseconds.
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/motor.h>
 #include <math.h>
@@ -278,7 +278,7 @@ For that reason the following code snippet is a bad example. Clearly, the value
 specified with the first call to `wb_motor_set_position()` will be overwritten
 by the second call:
 
-``` c
+```c
 wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
 wb_motor_set_position(my_leg, 0.56);
 wb_robot_step(40);
@@ -286,7 +286,7 @@ wb_robot_step(40);
 
 Similarly this code does not make much sense either:
 
-``` c
+```c
 while (1) {
   double d1 = wb_distance_sensor_get_value(ds1);
   double d2 = wb_distance_sensor_get_value(ds1);
@@ -300,7 +300,7 @@ since there was no call to `wb_robot_step()` between the two sensor readings,
 the values returned by the sensor cannot have changed in the meantime. A working
 version would look like this:
 
-``` c
+```c
 while (1) {
   double d1 = wb_distance_sensor_get_value(ds1);
   wb_robot_step(40);
@@ -315,7 +315,7 @@ However the generally recommended approach is to have a single `wb_robot_step()`
 call in the main control loop, and to use it to update all the sensors and
 actuators simultaneously, like this:
 
-``` c
+```c
 while (1) {
   readSensors();
   actuateMotors();
@@ -328,7 +328,7 @@ the loop, in order to make sure that the sensors already have valid values prior
 to entering the `readSensors()` function. Otherwise the sensors will have
 undefined values during the first iteration of the loop, hence:
 
-``` c
+```c
 while (1) {
   wb_robot_step(TIME_STEP);
   readSensors();
@@ -340,7 +340,7 @@ Here is a complete example of using sensors and actuators together. The robot
 used here is a `DifferentialWheels` using differential steering. It uses two
 proximity sensors (`DistanceSensor`) to detect obstacles.
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/differential_wheels.h>
 #include <webots/distance_sensor.h>
@@ -394,7 +394,7 @@ Robot {
 
 and if the controller name is *"demo"*, then this sample controller code:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <stdio.h>
 
@@ -428,7 +428,7 @@ is going to be terminated by Webots. Then the controller has 1 second (clock
 time) to save important data, close files, etc. before it is effectively killed
 by Webots. Here is an example that shows how to detect the upcoming termination:
 
-``` c
+```c
 #include <webots/robot.h>
 #include <webots/distance_sensor.h>
 #include <stdio.h>
@@ -467,7 +467,7 @@ will terminate the controller process and freeze the simulation at the current
 simulation step. The physics simulation and every robot involved in the
 simulation will stop.
 
-``` c
+```c
 // freeze the whole simulation
 if (finished) {
   saveExperimentData();
@@ -479,7 +479,7 @@ If only one robot controller needs to terminate but the simulation should
 continue with the other robots, then the terminating robot should call
 `wb_robot_cleanup()` right before quitting:
 
-``` c
+```c
 // terminate only this robot controller
 if (finished) {
   saveExperimentsData();
@@ -570,7 +570,7 @@ replaced by the actual value already existing in the environment. The Webots
 
 Here is an example of a typical runtime.ini file.
 
-``` c
+```c
        ; typical runtime.ini
 
        [environment variables with relative paths]
@@ -598,7 +598,7 @@ specific version of the language interpreter whereas the `OPTIONS` key allows
 you to specific options that will be passed immediately to the language
 interpreter. For example:
 
-``` c
+```c
        ; runtime.ini for a Python controller on Mac OS X
 
        [python]
@@ -611,7 +611,7 @@ In the above example, the resulting command issued by Webots will be:
 followed by the value of the `controllerArgs` field of the corresponding `Robot`
 node.
 
-``` c
+```c
        ; runtime.ini for a Java controller on Windows
 
        [environment variables with relative paths]

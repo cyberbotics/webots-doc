@@ -74,7 +74,7 @@ etc. The various devices instances can be obtained with dedicated methods of the
 
 ### C++ Example
 
-``` c
+```c++
 #include <webots/Robot.hpp>
 #include <webots/LED.hpp>
 #include <webots/DistanceSensor.hpp>
@@ -123,7 +123,7 @@ int main(int argc, char **argv) {
 
 ### Java Example
 
-```
+```java
 import com.cyberbotics.webots.controller.*;
 
 public class MyRobot extends Robot {
@@ -162,7 +162,7 @@ public class MyRobot extends Robot {
 
 ### Python Example
 
-```
+```python
 from controller import *
 
 class MyRobot (Robot):

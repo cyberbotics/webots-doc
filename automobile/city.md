@@ -1,8 +1,8 @@
-## Autonomous vehicle
+## City
 
-%figure "The autonomous_vehicle world"
+%figure "The city world"
 
-![autonomous_vehicle.png](images/autonomous_vehicle.png)
+![city.png](images/city.png)
 
 %end
 

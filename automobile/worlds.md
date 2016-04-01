@@ -5,10 +5,11 @@ scenarios are distributed with Webots. All of these worlds use the previously
 presented objects and tools.
 
 ## Sections
-- [Autonomous vehicle](autonomous-vehicle.md)
+- [City](city.md)
+- [City night](city-night.md)
+- [City traffic](city-traffic.md)
 - [CH Morges](ch-morges.md)
 - [CH Vens](ch-vens.md)
-- [City night](city-night.md)
 - [SUMO interface example](sumo-interface-example.md)
 - [Village](village.md)
 - [Village winter](village-winter.md)

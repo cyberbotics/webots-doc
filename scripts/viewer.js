@@ -152,13 +152,11 @@ function populateViewDiv(mdContent) {
     // console.log("HTML content: \n\n")
     // console.log(html);
 
-    var div = document.createElement("div");
-    div.innerHTML = html;
+    view.innerHTML = html;
 
-    redirectImages(div);
-    redirectUrls(div);
+    redirectImages(view);
+    redirectUrls(view);
 
-    view.appendChild(div);
     applyAnchor();
 
     applyAnchorIcons(view);

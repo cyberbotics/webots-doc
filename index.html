@@ -8,20 +8,24 @@
     <link type="text/css" rel="stylesheet" href="style/style.css"/>
   </head>
   <body>
-    <table id="navigation">
-      <tr>
-        <td></td>
-        <td><a id="toc">Table of Contents</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a id="previous">&lt; Previous</a></td>
-        <td><a id="up">^ Up</a></td>
-        <td><a id="next">Next &gt;</a></td>
-      </tr>
-    </table>
-    <div id="menu"></div>
-    <div id="view"></div>
+    <div id="left">
+      <table id="navigation">
+        <tr>
+          <td colspan="3"><a id="toc">Table of Contents</a></td>
+        </tr>
+        <tr>
+          <td><a id="previous">&lt; Previous</a></td>
+          <td><a id="up">^ Up</a></td>
+          <td><a id="next">Next &gt;</a></td>
+        </tr>
+      </table>
+      <div id="menu"></div>
+    </div>
+
+    <div id="center">
+      <!--<div id="title"><p id="titleContent">Documentation<p></div>-->
+      <div id="view"></div>
+    </div>
 
     <script src="https://www.cyberbotics.com/wwi/8.3/request_methods.js"></script>
     <script src="https://www.cyberbotics.com/jquery/1.11.3/jquery.min.js"></script>

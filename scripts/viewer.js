@@ -92,8 +92,6 @@ function aClick(el) {
     var decomposition = decomposePage(el.getAttribute('href'));
     setup.page = decomposition[0];
     setup.anchor = decomposition[1];
-    console.log('page = ' + setup.page);
-    console.log('anchor = ' + setup.anchor);
     getMDFile();
     updateBrowserUrl();
 }
@@ -113,7 +111,6 @@ function redirectImages(node) {
 }
 
 function applyAnchor() {
-    console.log("Anchor: " + setup.anchor);
     var anchors = document.getElementsByName(setup.anchor);
     if (anchors.length > 0) {
         anchors[0].scrollIntoView(true);
@@ -193,8 +190,6 @@ window.onpopstate = function(event) {
     var decomposition = decomposePage(document.location);
     setup.page = decomposition[0];
     setup.anchor = decomposition[1];
-    console.log('page = ' + setup.page);
-    console.log('anchor = ' + setup.anchor);
     getMDFile();
 };
 

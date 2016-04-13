@@ -120,7 +120,7 @@ function applyAnchor() {
 function applyToTitleDiv() {
   var titleContentElement = document.getElementById("titleContent");
   if (titleContentElement) {
-    var newTitle = titleContentElement.innerHTML;
+    var newTitle = "";
     if (setup.book == "guide") {
       newTitle = "Webots User Guide";
     } else if (setup.book == "reference") {
@@ -130,12 +130,15 @@ function applyToTitleDiv() {
     } else if (setup.book == "darwin-op") {
       newTitle = "Webots for DARwIn-OP";
     }
-    newTitle += " <sub>(Webots " + getWebotsVersion() + ")</sub>";
-    titleContentElement.innerHTML = newTitle;
+    if (newTitle.length > 0) {
+      newTitle += " <span id='titleVersion'>(Webots " + getWebotsVersion() + ")<span>";
+      titleContentElement.innerHTML = newTitle;
+    }
   }
 }
 
 function getWebotsVersion() {
+  // Get the Webots version from the showdown wbVariables extension
   var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
   var converter = new showdown.Converter({extensions: ["wbVariables"]});
   var html = converter.makeHtml(version);

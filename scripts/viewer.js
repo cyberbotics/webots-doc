@@ -122,15 +122,14 @@ function applyToTitleDiv() {
   if (titleContentElement) {
     var newTitle = titleContentElement.innerHTML;
     if (setup.book == "guide") {
-      newTitle = "User guide";
+      newTitle = "Webots User Guide";
     } else if (setup.book == "reference") {
-      newTitle = "Reference Manual";
+      newTitle = "Webots Reference Manual";
     } else if (setup.book == "automobile") {
-      newTitle = "Automobile documentation";
+      newTitle = "Webots for automobiles";
     } else if (setup.book == "darwin-op") {
-      newTitle = "DARwIn-OP documentation";
+      newTitle = "Webots for DARwIn-OP";
     }
-    console.log("title : " + newTitle);
     titleContentElement.innerHTML = newTitle;
   }
 }

@@ -17,7 +17,7 @@ html, body {
 }
 #center {
   left: 20%;
-  width: 80%;
+  width: 79%;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -29,6 +29,9 @@ html, body {
 }
 #view {
   background-color: white;
+  width: 96%;
+  margin: 1%;
+  padding: 1%;
 }
 #navigation {
   background-color: white;

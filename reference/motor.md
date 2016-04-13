@@ -9,6 +9,7 @@ Motor {
   SFFloat acceleration -1 # (m/s^2 or rad/s^2): -1 or (0,inf)
   SFFloat minPosition  0  # (m or rad): (-inf,inf) or [-pi, pi]
   SFFloat maxPosition  0  # (m or rad): (-inf,inf) or [-pi, pi]
+  SFString sound ""       # wave file of the motor sound
 }
 ```
 
@@ -69,6 +70,11 @@ magnitude of the current translation in meters.
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Motor Limits"
 section, see below.
+
+- The `sound` field specifies the URL of a WAVE sound file, relatively to the
+location of the world file or PROTO file which contains the `Motor` node. This
+sound is used to play the sound of the motor. It is modulated in volume and
+pitch according to the velocity of the motor to produce a realistic motor sound.
 
 ### Units
 

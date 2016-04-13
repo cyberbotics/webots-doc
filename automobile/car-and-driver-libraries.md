@@ -9,5 +9,5 @@ car. This section presents and explains how to use these two libraries.
 ## Sections
 - [Driver library](driver-library.md)
 - [Car library](car-library.md)
-- [C++ version of the libraries](cpp-version-of-the-libraries.md)
+- [C++ and Java wrappers of the automobile libraries](cpp-and-java-wrappers-of-the-automobile-libraries.md)
 - [ROS support](ros-support.md)

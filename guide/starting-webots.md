@@ -30,6 +30,7 @@ Terminal (Linux/Mac) or a Command Prompt (Windows):
 SYNOPSIS: webots [options] [worldfile]
 OPTIONS:
   --minimize                  minimize Webots window on startup
+  --fullscreen                start Webots in fullscreen
   --mode=<mode>               choose startup mode (overrides
                               application preferences)
                               argument <mode> must be one of:
@@ -45,6 +46,8 @@ OPTIONS:
                               terminal
   --stderr                    redirect the controller stderr to the
                               terminal
+  --batch                     prevent Webots from creating blocking
+                              pop-up windows
   --start-streaming-server    starts the Webots streaming server
                               (Webots PRO is required)
     [="key[=value];..."]         parameters may be given as an option:

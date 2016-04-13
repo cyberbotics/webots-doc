@@ -62,6 +62,7 @@
     - [PointLight](pointlight.md)
     - [PositionSensor](positionsensor.md)
     - [Propeller](propeller.md)
+    - [Radar](radar.md)
     - [RangeFinder](rangefinder.md)
     - [Receiver](receiver.md)
     - [Robot](robot.md)

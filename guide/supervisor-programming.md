@@ -1,7 +1,7 @@
 ## Supervisor Programming
 
-The programming examples provided here are in C, but same concepts apply to
-C++/Java/Python/Matlab.
+The programming examples provided here are in C, but same concepts apply to C++,
+Java, Python and MATLAB.
 
 ### Introduction
 

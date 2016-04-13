@@ -2,15 +2,18 @@
 
 ```
 ContactProperties {
-  SFString   material1           "default"
-  SFString   material2           "default"
-  MFFloat    coulombFriction     1          # [0,inf)
-  SFVec2f    frictionRotation    0 0
-  SFFloat    bounce              0.5        # [0,1]
-  SFFloat    bounceVelocity      0.01       # (m/s)
-  MFFloat    forceDependentSlip  0
-  SFFloat    softERP             0.2
-  SFFloat    softCFM             0.001
+  SFString material1           "default"
+  SFString material2           "default"
+  MFFloat  coulombFriction     1          # [0,inf)
+  SFVec2f  frictionRotation    0 0
+  SFFloat  bounce              0.5        # [0,1]
+  SFFloat  bounceVelocity      0.01       # (m/s)
+  MFFloat  forceDependentSlip  0
+  SFFloat  softERP             0.2
+  SFFloat  softCFM             0.001
+  SFString bumpSound           "sounds/bump.wav"
+  SFString rollSound           "sounds/roll.waw"
+  SFString SlideSound          "sounds/slide.wav"
 }
 ```
 
@@ -121,6 +124,18 @@ the ERP concept.
 - The `softCFM` field defines the soft *Constraint Force Mixing* used by ODE to
 manage local contacts joints. [WorldInfo](worldinfo.md) for a description of the
 CFM concept.
+
+- The `bumpSound`, `rollSound` and `slideSound` fields define the URLs to WAVE
+files that are used to render the sounds of contacts. These URLs are expressed
+relatively to the world or PROTO file containing the `ContactProperties` node.
+`bumpSound` is the sound produced by the impact of a collision. Its gain is
+modulated by the energy involved in the collision. `rollSound` is the sound
+produced by a rolling object. Its gain and pitch are modulated by the angular
+velocities of the bodies in contact. `slideSound` is the sound produced by the
+friction of a body sliding on another body. Its gain and pitch are modulated by
+the linear velocity of the contact surface. The formulas affecting the gain and
+pitch of these sounds were determinated empirically to produce fairly realistic
+sounds. They are subject to improvements.
 
 > **note**:
 The youBot robot is a good example of asymmetric coulombFriction and

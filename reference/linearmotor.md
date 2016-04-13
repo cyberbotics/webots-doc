@@ -4,8 +4,9 @@ Derived from [Motor](motor.md).
 
 ```
 LinearMotor {
-  field SFString name       "linear motor" # used by wb_robot_get_device()
-  field SFFloat  maxForce   10             # max force (N) : [0, inf)
+  field SFString name     "linear motor"            # used by wb_robot_get_device()
+  field SFFloat  maxForce 10                        # max force (N) : [0, inf)
+  field SFString sound    "sounds/linear_motor.wav" # see Motor description
 }
 ```
 

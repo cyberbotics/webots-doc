@@ -25,8 +25,10 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; double [getThrottle](driver-library.md#wbu_driver_set_throttle)();                              |
 | &nbsp;&nbsp; void [setBrake](driver-library.md#wbu_driver_set_brake)(double brake);                          |
 | &nbsp;&nbsp; double [getBrake](driver-library.md#wbu_driver_set_brake)();                                    |
-| &nbsp;&nbsp; void [setIndicator](driver-library.md#wbu_driver_set_brake)(int state);                         |
-| &nbsp;&nbsp; void [setIndicatorWarning](driver-library.md#wbu_driver_set_indicator)(bool state);             |
+| &nbsp;&nbsp; void [setIndicator](driver-library.md#wbu_driver_set_indicator)(int state);                     |
+| &nbsp;&nbsp; void [setHazardFlashers](driver-library.md#wbu_driver_set_indicator)(bool state);               |
+| &nbsp;&nbsp; int [getIndicator](driver-library.md#wbu_driver_set_indicator)();                               |
+| &nbsp;&nbsp; bool [getHazardFlashers](driver-library.md#wbu_driver_set_indicator)();                         |
 | &nbsp;&nbsp; void [setDippedBeams](driver-library.md#wbu_driver_set_dipped_beams)(bool state);               |
 | &nbsp;&nbsp; void [setAntifogLights](driver-library.md#wbu_driver_set_dipped_beams)(bool state);             |
 | &nbsp;&nbsp; bool [getDippedBeams](driver-library.md#wbu_driver_set_dipped_beams)();                         |
@@ -70,6 +72,7 @@ methods:
 | &nbsp;&nbsp; double [getRightSteeringAngle](car-library.md#wbu_car_get_right_steering_angle)();                          |
 | &nbsp;&nbsp; double [getLeftSteeringAngle](car-library.md#wbu_car_get_right_steering_angle)();                           |
 | &nbsp;&nbsp; void [enableLimitedSlipDifferential](car-library.md#wbu_car_enable_limited_slip_differential)(bool enable); |
+| &nbsp;&nbsp; void [enableIndicatorAutoDisabling](car-library.md#wbu_car_enable_indicator_auto_disabling)(bool enable);   |
 | };                                                                                                                       |
 
 %end

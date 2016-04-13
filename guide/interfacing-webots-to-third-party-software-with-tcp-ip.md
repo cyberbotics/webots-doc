@@ -16,8 +16,8 @@ simulated Khepera robot is controlled by the "tcpip" controller which is in the
 full source code in "tcpip.c", so that you can modify it to suit your needs. A
 client example is provided in "client.c". This client may be used as a model to
 write a similar client using the programming language of your third party
-software. This has already been implemented in *Lisp*<sup>TM</sup> and
-*MATLAB*<sup>TM</sup> by some Webots users.
+software. This has already been implemented in *Lisp*<sup>TM</sup> and MATLAB by
+some Webots users.
 
 ### Main advantages
 

@@ -48,7 +48,7 @@
     - [Supervisor Programming](supervisor-programming.md)
     - [Using Numerical Optimization Methods](using-numerical-optimization-methods.md)
     - [C++/Java/Python](cpp-java-python.md)
-    - [Matlab](matlab.md)
+    - [MATLAB](matlab.md)
     - [Controller Plugin](controller-plugin.md)
     - [Webots Plugin](webots-plugin.md)
 - [Tutorials](tutorials.md)

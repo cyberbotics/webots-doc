@@ -80,10 +80,11 @@ double wbu_car_get_indicator_period()
 
 **Description**
 
-The first function is used to change the blinking period of the indicators. The
-argument should be specified in seconds.
+The `wbu_car_set_indicator_period` function is used to change the blinking
+period of the indicators. The argument should be specified in seconds.
 
-The second function returns the current blinking period of the indicators.
+The `wbu_car_get_indicator_period` function returns the current blinking period
+of the indicators.
 
 ---
 
@@ -189,11 +190,30 @@ void wbu_car_enable_limited_slip_differential(bool enable)
 
 **Description**
 
-These functions allow the user to enable or disable the limited differential
-slip (it is enabled by default). When the limited differential slip is enabled,
-at each time step, the torque (when control in torque is enabled) is
-redistributed among all the actuated wheels so that they rotate at the same
-speed (except the difference due to the geometric differential constraint). If
-the limited differential slip is disabled, when a wheel starts to slip, it will
-rotate faster than the others.
+This function allows the user to enable or disable the limited differential slip
+(it is enabled by default). When the limited differential slip is enabled, at
+each time step, the torque (when control in torque is enabled) is redistributed
+among all the actuated wheels so that they rotate at the same speed (except the
+difference due to the geometric differential constraint). If the limited
+differential slip is disabled, when a wheel starts to slip, it will rotate
+faster than the others.
+
+---
+
+**Name**
+
+**wbu\_car\_enable\_indicator\_auto\_disabling** - *Enable/disable the auto-disabling mechanism of the indicator*
+
+``` c
+#include <webots/car.h>
+
+void wbu_car_enable_indicator_auto_disabling(bool enable)
+```
+
+**Description**
+
+This function allows the user to enable or disable the indicator auto-disabling
+mechanism (it is enabled by default). When indicator auto-disabling mechanism is
+enabled, the indicator is automatically switched off when the car starts
+steering in the inverse direction of the one indicated by the indicator.
 

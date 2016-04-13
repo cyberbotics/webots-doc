@@ -41,20 +41,19 @@ double wbu_driver_get_steering_angle()
 
 **Description**
 
-The first function is used to steer the car, it steers the front wheels
-according to the Ackermann geometry (left and right wheels are not steered with
-the exact same angle). The angle is set in radians, a positive angle steers
-right and a negative angle steers left. The formulas used in order to compute
-the right and left angles are the following (`trackFront` and `wheelbase` are
-the parameters of the [Car](car.md) PROTO):
+The `wbu_driver_set_steering_angle` function is used to steer the car, it steers
+the front wheels  according to the Ackermann geometry (left and right wheels are
+not steered  with the exact same angle). The angle is set in radians, a positive
+angle steers right and a negative angle steers left. The formulas used in order
+to compute the right and left angles are the following (`trackFront` and
+`wheelbase` are the parameters of the [Car](car.md) PROTO):
 
 ```
 angle_right = atan(1 / cot(steering_angle) - trackFront / (2 * wheelbase))
 angle_left = atan(1 / cot(steering_angle) + trackFront / (2 * wheelbase))
 ```
 
-The second function simply returns the steering angle (argument of the last call
-to the previous function).
+The `wbu_driver_get_steering_angle` function returns the current steering angle.
 
 ---
 
@@ -71,17 +70,18 @@ double wbu_driver_get_target_cruising_speed()
 
 **Description**
 
-The first function activates the control in cruising speed of the car, the
-rotational speed of the wheels is forced (respecting the geometric differential
-constraint) in order that the car moves at the speed given in argument of the
-function (in kilometers per hour). When the control in cruising speed is
-activated, the speed is directly applied to the wheel without any engine model
-simulation, therefore any call to functions like `wbu_driver_get_rpm()` will
-raise an error. The acceleration of the car is computed using the `time0To100`
-field of the [Car](car.md) PROTO.
+The `wbu_driver_set_cruising_speed` function activates the control in cruising
+speed of the car, the rotational speed of the wheels is forced (respecting the
+geometric differential constraint) in order that the car moves at the speed
+given in argument of the function (in kilometers per hour). When the control in
+cruising speed is activated, the speed is directly applied to the wheel without
+any engine model simulation, therefore any call to functions like
+`wbu_driver_get_rpm()` will raise an error. The acceleration of the car is
+computed using the `time0To100` field of the [Car](car.md) PROTO.
 
-The second function simply returns the target cruising speed (argument of the
-last call to the previous function).
+The `wbu_driver_get_target_cruising_speed` function simply returns the target
+cruising speed (argument of the last call to the `wbu_driver_set_cruising_speed`
+function).
 
 ---
 
@@ -116,15 +116,15 @@ double wbu_driver_get_throttle()
 
 **Description**
 
-The first function is used in order to control the car in torque, it sets the
-state of the throttle. The argument should be between 0.0 and 1.0, 0 means that
-0% of the output torque of the engine is sent to the wheels and 1.0 means that
-100% of the output torque of the engine is sent to the wheels. For more
-information about how the output torque of the engine is computed see section
-[Engine models](#engine-models).
+The `wbu_driver_set_throttle` function is used in order to control the car in
+torque, it sets the state of the throttle. The argument should be between 0.0
+and 1.0, 0 means that 0% of the output torque of the engine is sent to the
+wheels and 1.0 means that 100% of the output torque of the engine is sent to the
+wheels. For more information about how the output torque of the engine is
+computed see section [Engine models](#engine-models).
 
-The second function simply returns the state of the throttle (argument of the
-last call to the previous function).
+The `wbu_driver_get_throttle` function simply returns the state of the throttle
+(argument of the last call to the `wbu_driver_set_throttle` function).
 
 ---
 
@@ -141,35 +141,38 @@ double wbu_driver_get_brake()
 
 **Description**
 
-This function brakes the car by increasing the `dampingConstant` coefficient of
-the rotational joints of each of the four wheels. The argument should be between
-0.0 and 1.0, 0 means that no damping constant is added on the joints (no
-breaking), 1 means that the parameter `brakeCoefficient` of the [Car](car.md)
-PROTO is applied on the `dampingConstant` of each joint (the value will be
-linearly interpolated between 0 and `brakeCoefficient` for any arguments between
-0 and 1).
+The `wbu_driver_set_brake` function brakes the car by increasing the
+`dampingConstant` coefficient of the rotational joints of each of the four
+wheels. The argument should be between 0.0 and 1.0, 0 means that no damping
+constant is added on the joints (no breaking), 1 means that the parameter
+`brakeCoefficient` of the [Car](car.md) PROTO is applied on the
+`dampingConstant` of each joint (the value will be linearly interpolated between
+0 and `brakeCoefficient` for any arguments between 0 and 1).
 
-The second function simply returns the state of the brake (argument of the last
-call to the previous function).
+The `wbu_driver_get_brake` function simply returns the state of the brake
+(argument of the last call to the `wbu_driver_set_brake` function).
 
 ---
 
 **Name**
 
-**wbu\_driver\_set\_indicator**, **wbu\_driver\_set\_indicator\_warning** - *Set the indicator state*
+**wbu\_driver\_set\_indicator**, **wbu\_driver\_get\_indicator**, **wbu\_driver\_set\_hazard\_flashers**, **wbu\_driver\_get\_hazard\_flashers** - *Set and get the indicator state*
 
 ``` c
 #include <webots/driver.h>
 
 void wbu_driver_set_indicator(int state)
-void wbu_driver_set_indicator_warning(bool state)
+wbu_indicator_state wbu_driver_get_indicator()
+void wbu_driver_set_hazard_flashers(bool state)
+bool wbu_driver_get_hazard_flashers()
 ```
 
 **Description**
 
-The first function allows the user to set (using the `wbu_indicator_state` enum)
-if the indicator should be on only for the right side of the car, the left side
-of the car or should be off.
+The `wbu_driver_set_indicator` function allows the user to set (using the
+`wbu_indicator_state` enum) if the indicator should be on only for the right
+side of the car, the left side of the car or should be off. The
+`wbu_driver_get_indicator` function allows the user to get the indicator state.
 
 %figure "wbu_indicator_state enumeration"
 
@@ -181,8 +184,10 @@ of the car or should be off.
 
 %end
 
-The second function allows the user to switch the warning on (indicator on both
-side of the car) or off.
+The `wbu_driver_set_hazard_flashers` function allows the user to switch the
+hazard flashers on (indicator on both side of the car) or off. The
+`wbu_driver_get_hazard_flashers` function allows the user to get the state of
+the hazard flashers.
 
 ---
 
@@ -201,11 +206,11 @@ bool wbu_driver_get_antifog_lights()
 
 **Description**
 
-The first two functions are used to enable or disable the dipped beams and the
-anti-fog lights.
+The `wbu_driver_set_dipped_beams` and `wbu_driver_set_antifog_lights` functions
+are used to enable or disable the dipped beams and the anti-fog lights.
 
-The second two functions return the state of the dipped beams or the anti-fog
-lights.
+The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions
+return the state of the dipped beams or the anti-fog lights.
 
 ---
 
@@ -243,16 +248,16 @@ int wbu_driver_get_gear_number()
 
 **Description**
 
-The first function sets the engaged gear. An argument of `-1` is used in order
-to engage the reverse gear, an argument of `0` is used in order to disengaged
-the gearbox. Any other arguments than `0` and `-1` should be between 1 and the
-number of coefficients set in the `gearRatio` parameter of the [Car](car.md)
-PROTO.
+The `wbu_driver_set_gear` function sets the engaged gear. An argument of `-1` is
+used in order to engage the reverse gear, an argument of `0` is used in order to
+disengaged the gearbox. Any other arguments than `0` and `-1` should be between
+1 and the number of coefficients set in the `gearRatio` parameter of the
+[Car](car.md) PROTO.
 
-The second function returns the currently engaged gear.
+The `wbu_driver_get_gear` function returns the currently engaged gear.
 
-The last function simply returns the number of available gears (including the
-reverse gear).
+The `wbu_driver_get_gear_number` function simply returns the number of available
+gears (including the reverse gear).
 
 ---
 
@@ -268,7 +273,7 @@ wbu_control_mode wbu_driver_get_control_mode()
 
 **Description**
 
-This function returns the current control mode of the car.
+This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
 %figure "wbu_control_mode enumeration"
 

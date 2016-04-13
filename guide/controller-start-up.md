@@ -20,10 +20,10 @@ Webots looks for these files in the specified order, in the
 3. "xyz\_controller.jar" (a Java .jar file)
 4. "xyz\_controller.bsg" (a Webots/BotStudio file)
 5. "xyz\_controller.py" (a Python script)
-6. "xyz\_controller.m" (a *MATLAB*<sup>TM</sup> script)
+6. "xyz\_controller.m" (a MATLAB script)
 
 The first file that is found will be executed by Webots using the required
-language interpreter (java, python, matlab). So the priority is defined by the
+language interpreter (Java, Python, MATLAB). So the priority is defined by the
 file extension, e.g. it won't be possible to execute "xyz\_controller.m" if a
 file named "xyz\_controller.py" is also present in the same controller
 directory. In the case that none of the above filenames exist or if the required

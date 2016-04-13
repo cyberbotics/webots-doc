@@ -4,16 +4,17 @@ Derived from [Transform](transform.md).
 
 ```
 Solid {
-  SFString   name               "solid"
-  SFString   model              ""
-  SFString   description        ""
-  SFString   contactMaterial    "default"
+  SFString   name                "solid"
+  SFString   model               ""
+  SFString   description         ""
+  SFString   contactMaterial     "default"
   MFNode     immersionProperties []
-  SFNode     boundingObject   NULL
-  SFNode     physics          NULL
-  SFBool     locked           FALSE
-  SFFloat    translationStep  0.01        # m
-  SFFloat    rotationStep     0.261799387 # pi/12 rad
+  SFNode     boundingObject      NULL
+  SFNode     physics             NULL
+  SFBool     locked              FALSE
+  SFFloat    radarCrossSection   0.0
+  SFFloat    translationStep     0.01        # m
+  SFFloat    rotationStep        0.261799387 # pi/12 rad
   # hidden fields
   hiddenField SFVec3f linearVelocity 0 0 0 # initial linear velocity
   hiddenField SFVec3f angularVelocity 0 0 0 # initial angular velocity
@@ -25,9 +26,9 @@ Direct derived nodes: [Accelerometer](accelerometer.md), [Camera](camera.md),
 [Display](display.md), [DistanceSensor](distancesensor.md),
 [Emitter](emitter.md), [GPS](gps.md), [Gyro](gyro.md),
 [InertialUnit](inertialunit.md), [LED](led.md), [Lidar](lidar.md),
-[LightSensor](lightsensor.md), [Pen](pen.md), [RangeFinder](rangefinder.md),
-[Receiver](receiver.md), [Robot](robot.md), [Servo](servo.md),
-[TouchSensor](touchsensor.md).
+[LightSensor](lightsensor.md), [Pen](pen.md), [Radar](radar.md),
+[RangeFinder](rangefinder.md), [Receiver](receiver.md), [Robot](robot.md),
+[Servo](servo.md), [TouchSensor](touchsensor.md).
 
 ### Description
 
@@ -73,6 +74,13 @@ if this field is not NULL then the `boundingObject` field must be specified.
 Please find more info in the description of the [Physics](physics.md) node.
 - `locked`: if `TRUE`, the solid object cannot be moved using the mouse. This is
 useful to prevent moving an object by mistake.
+- `radarCrossSection`: if greater than 0 this [Solid](#solid) node is a potential
+target for any [Radar](radar.md) device. Radar cross section (RCS) is the
+measure of a target's ability to reflect radar signals in the direction of the
+radar receiver, i.e. it is a measure of the ratio of backscatter density in the
+direction of the radar to the power density that is intercepted by the target.
+Typical values are 0.01 for a bird, 1 for a human, 100 for a car and 200 for a
+truck.
 - `translationStep` and `rotationStep`: these fields specify the minimum step size
 that will be used by the translate and rotate handles appearing in the 3D window
 when selecting a top solid. Continuous increment is obtained by setting the step

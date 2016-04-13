@@ -1,53 +1,73 @@
-## Matlab
+## MATLAB
 
 The *MATLAB*<sup>TM</sup> API for Webots is very similar to the C API. The
 functions names are identical, only the type and number of parameters differs
-slightly in some cases. The *MATLAB*<sup>TM</sup> functions and prototypes are
-described in Webots Reference Manual. Note that unlike with the C API, there are
-no `wb_robot_init()` and `wb_robot_cleanup()` functions in the
-*MATLAB*<sup>TM</sup>  API. The necessary initialization and cleanup are
-automatically carried out respectively before entering and after leaving the
-controller code.
+slightly in some cases. The MATLAB functions and prototypes are described in
+Webots Reference Manual. Note that unlike with the C API, there are no
+`wb_robot_init()` and `wb_robot_cleanup()` functions in the MATLAB API. The
+necessary initialization and cleanup are automatically carried out respectively
+before entering and after leaving the controller code.
 
-If the *MATLAB*<sup>TM</sup> code uses graphics, it is necessary to call the
-`drawnow` command somewhere in the control loop in order to flush the graphics.
+If the MATLAB code uses graphics, it is necessary to call the `drawnow` command
+somewhere in the control loop in order to flush the graphics.
 
-Here is a simple *MATLAB*<sup>TM</sup> controller example:
+Here is a simple MATLAB controller example:
 
 ```matlab
-% uncomment the next two lines to use the
+% uncomment the next two lines to use the MATLAB desktop
+%desktop;
+%keyboard;
+
+TIME_STEP = 32;
+
+my_led = wb_robot_get_device('my_led');
+my_sensor = wb_robot_get_device('my_sensor');
+
+wb_distance_sensor_enable(my_sensor, TIME_STEP);
+
+while wb_robot_step(TIME_STEP) ~= -1
+  % read the sensors
+  val = wb_distance_sensor_get_value(my_sensor);
+
+  % Process sensor data here
+
+  % send actuator commands
+  wb_led_set(my_led, 1);
+
+  % uncomment the next line if there's graphics to flush
+  % drawnow;
+end
 ```
 
-### Using the *MATLAB*<sup>TM</sup> desktop
+### Using the MATLAB desktop
 
 In order to avoid cluttering the desktop with too many windows, Webots starts
-*MATLAB*<sup>TM</sup> with the *-nodesktop* option. The *-nodesktop* option
-starts *MATLAB*<sup>TM</sup> without user interface and therefore it keeps the
-memory usage low which is useful in particular for multi-robot experiments. If
-you would like to use the *MATLAB*<sup>TM</sup> desktop to interact with your
-controller you just need to add these two *MATLAB*<sup>TM</sup> commands
-somewhere at the beginning of your controller m-file:
+MATLAB with the *-nodesktop* option. The *-nodesktop* option starts MATLAB
+without user interface and therefore it keeps the memory usage low which is
+useful in particular for multi-robot experiments. If you would like to use the
+MATLAB desktop to interact with your controller you just need to add these two
+MATLAB commands somewhere at the beginning of your controller m-file:
 
 ```matlab
 desktop;
 keyboard;
 ```
 
-The `desktop` command brings up the *MATLAB*<sup>TM</sup> desktop. The
-`keyboard` stops the execution of the controller and gives control to the
-keyboard (`K>>` prompt). Then *MATLAB*<sup>TM</sup> opens your controller m-file
-in its editor and indicates that the execution is stopped at the `keyboard`
-command. After that, the controller m-file can be debugged interactively, i.e.,
-it is possible to continue the execution step-by-step, set break points, watch
-variable, etc. While debugging, the current values of the controller variables
-are shown in the *MATLAB*<sup>TM</sup> workspace. It is possible to *continue*
-the execution of the controller by typing `return` at the `K>>` prompt. Finally
-the execution of the controller can be terminated with `Ctrl-C` key combination.
+The `desktop` command brings up the MATLAB desktop. The `keyboard` stops the
+execution of the controller and gives control to the keyboard (`K>>` prompt).
+Then MATLAB opens your controller m-file in its editor and indicates that the
+execution is stopped at the `keyboard` command. After that, the controller
+m-file can be debugged interactively, i.e., it is possible to continue the
+execution step-by-step, set break points, watch variable, etc. While debugging,
+the current values of the controller variables are shown in the MATLAB
+workspace. It is possible to *continue* the execution of the controller by
+typing `return` at the `K>>` prompt. Finally the execution of the controller can
+be terminated with `Ctrl-C` key combination.
 
 Once the controller is terminated, the connection with Webots remains active.
-Therefore it becomes possible to issue Webots commands directly at the
-*MATLAB*<sup>TM</sup> prompt, for example you can interactively issue commands
-to query the sensors, etc.:
+Therefore it becomes possible to issue Webots commands directly at the MATLAB
+prompt, for example you can interactively issue commands to query the sensors,
+etc.:
 
 ```
 >> wb_differential_wheels_set_speed(600, 600);
@@ -61,13 +81,13 @@ ans =
 ```
 
 It is possible to use additional `keyboard` statements in various places in your
-".m" controller. So each time *MATLAB*<sup>TM</sup> will run into a `keyboard`
-statement, it will return control to the `K>>` prompt where you will be able to
-debug interactively.
+".m" controller. So each time MATLAB will run into a `keyboard` statement, it
+will return control to the `K>>` prompt where you will be able to debug
+interactively.
 
 At this point, it is also possible to restart the controller by calling its
-m-file from *MATLAB*<sup>TM</sup> prompt. Note that this will restart the
-controller only, not the whole simulation, so the current robot and motor
-positions will be preserved. If you want to restart the whole simulation you
-need to use the `Revert` button as usual.
+m-file from MATLAB prompt. Note that this will restart the controller only, not
+the whole simulation, so the current robot and motor positions will be
+preserved. If you want to restart the whole simulation you need to use the
+`Revert` button as usual.
 

@@ -1,4 +1,4 @@
-# DARwIn-OP with Webots User Guide
+# Webots for DARwIn-OP
 
 Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
 

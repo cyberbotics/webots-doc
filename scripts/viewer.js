@@ -117,7 +117,25 @@ function applyAnchor() {
     }
 }
 
-function applyToTitle(mdContent) {
+function applyToTitleDiv() {
+  var titleContentElement = document.getElementById("titleContent");
+  if (titleContentElement) {
+    var newTitle = titleContentElement.innerHTML;
+    if (setup.book == "guide") {
+      newTitle = "User guide";
+    } else if (setup.book == "reference") {
+      newTitle = "Reference Manual";
+    } else if (setup.book == "automobile") {
+      newTitle = "Automobile documentation";
+    } else if (setup.book == "darwin-op") {
+      newTitle = "DARwIn-OP documentation";
+    }
+    console.log("title : " + newTitle);
+    titleContentElement.innerHTML = newTitle;
+  }
+}
+
+function applyToPageTitle(mdContent) {
     var hashtagIndex = mdContent.indexOf("#");
     if (hashtagIndex >= 0) {
         while (hashtagIndex + 1 < mdContent.length && mdContent[hashtagIndex + 1] == "#") {
@@ -140,7 +158,7 @@ function populateViewDiv(mdContent) {
     // console.log("Raw MD content:\n\n");
     // console.log(mdContent);
 
-    applyToTitle(mdContent);
+    applyToPageTitle(mdContent);
 
     // markdown to html
     var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors"]});
@@ -495,6 +513,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     console.log("Setup: " + JSON.stringify(setup));
 
+    applyToTitleDiv();
     getMDFile();
     getMenuFile();
 });

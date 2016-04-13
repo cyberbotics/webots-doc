@@ -27,7 +27,7 @@ html, body {
   margin: 1em;
   padding: 1em;
 }
-#view {
+#view, #title {
   background-color: white;
   width: 96%;
   margin: 1%;

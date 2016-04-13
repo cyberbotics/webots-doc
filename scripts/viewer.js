@@ -130,8 +130,18 @@ function applyToTitleDiv() {
     } else if (setup.book == "darwin-op") {
       newTitle = "Webots for DARwIn-OP";
     }
+    newTitle += " <sub>(Webots " + getWebotsVersion() + ")</sub>";
     titleContentElement.innerHTML = newTitle;
   }
+}
+
+function getWebotsVersion() {
+  var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
+  var converter = new showdown.Converter({extensions: ["wbVariables"]});
+  var html = converter.makeHtml(version);
+  var tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || "";
 }
 
 function applyToPageTitle(mdContent) {

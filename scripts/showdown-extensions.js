@@ -72,7 +72,11 @@ showdown.extension("wbFigure", function() {
             type: "lang",
             filter: function(text, converter, options) {
                 text = text.replace(/%figure\s+"([^]+?)"([^]+?)%end/gi, function(match, title, content) {
-                    var foo = converter.makeHtml(content);
+                    var foo = content;
+                    // convert the markdown content only if there is no math symbols inside
+                    if (content.indexOf("~D~D") < 0) {
+                      foo = converter.makeHtml(foo);
+                    }
                     return "<figure name=\"" + wbSlugify(title) + "\">" + foo + "<figcaption>" + title + "</figcaption></figure>";
                 });
                 return text;
@@ -149,4 +153,22 @@ showdown.extension("wbAnchors", function() {
             }
         }
     ];
+});
+
+// This extension is about converting "$$lexContent$$" patterns to
+// <math>lexContent</math> in order to be detected by MathJax 
+showdown.extension("wbMaths", function() {
+  return [
+      {
+          type: "lang",
+          filter: function(text, converter, options) {
+              // note: '$' is converted temporarily to '~D
+              // https://github.com/showdownjs/showdown/wiki/Extensions#gotchas'
+              text = text.replace(/~D~D.*~D~D/gi, function(match) {
+                  return "<math>" + match + "</math>";
+              });
+              return text;
+          }
+      }
+  ];
 });

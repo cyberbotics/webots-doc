@@ -173,7 +173,7 @@ function populateViewDiv(mdContent) {
     applyToPageTitle(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors"]});
+    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors", "wbMaths"]});
     var html = converter.makeHtml(mdContent);
 
     // console.log("HTML content: \n\n")
@@ -188,6 +188,7 @@ function populateViewDiv(mdContent) {
 
     applyAnchorIcons(view);
     highlightCode(view);
+    applyToMathTags(view);
 
     updateSelection();
 }
@@ -235,6 +236,14 @@ function highlightCode(view) {
             hljs.highlightBlock(code);
         }
     }
+}
+
+function applyToMathTags(view) {
+  var maths = view.getElementsByTagName("math"); 
+  for (var i = 0; i < maths.length; i++) { 
+      var math = maths[i];
+      
+  }
 }
 
 function applyAnchorIcons(view) {

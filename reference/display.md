@@ -146,7 +146,7 @@ formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
 
-![display_opacity.png](images/display_opacity.png)
+$$ Cn = \left(1-opacity\right)*Co + opacity*Cn $$
 
 %end
 

@@ -50,7 +50,31 @@ notation, the corresponding `TextureTransform` reads as
 
 %figure "Texture transformation in matrix notation"
 
-![texture_transform.png](images/texture_transform.png)
+$$
+C=\begin{pmatrix}
+1& 0 & C_s\\
+0& 1 & C_t\\
+0& 0 & 1
+\end{pmatrix}
+,\,
+S=\begin{pmatrix}
+S_s& 0 & 0\\
+0& S_t & 0\\
+0& 0 & 1
+\end{pmatrix}
+,\,
+R=\begin{pmatrix}
+\cos(\theta)&   \sin(\theta) & 0\\
+-\sin(\theta)& \cos(\theta) & 0\\
+0& 0 & 1
+\end{pmatrix}
+,\,
+T=\begin{pmatrix}
+1& 0 & T_s\\
+0& 1 & T_t\\
+0& 0 & 1
+\end{pmatrix}
+$$
 
 %end
 

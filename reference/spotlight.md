@@ -76,7 +76,14 @@ Contrary to the VRML specifications, the `attenuation` and the
 
 %figure "Spot light"
 
-![spot_light.png](images/spot_light.png)
+$$
+spot[i]=\Big\{
+\begin{array}{clcr}
+(\cos \alpha)^{\log \frac{\log \frac{1}{2}}{2 \cdot \log ( \cos (beamWidth))}} & \scriptsize \textrm{if (SpotLight and } \alpha \leq \textrm{CutOffAngle)} \\
+0 & \scriptsize \textrm{else if (SpotLight and } \alpha > \textrm{CutOffAngle)} \\
+1 & \scriptsize \textrm{otherwise}
+\end{array}
+$$
 
 %end
 

@@ -39,7 +39,7 @@ as described in [this figure](#gauss-markov-process).
 
 %figure "Gauss-Markov process"
 
-![gauss_markov.png](images/gauss_markov.png)
+$$ noise_{t} = corr * noise_{t-1} + \sqrt{1 - corr^{2}} * gaussian\_variate $$
 
 %end
 

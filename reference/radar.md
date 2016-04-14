@@ -117,7 +117,7 @@ The power returned by the target is computed using the following formulas:
 
 %figure "Received power"
 
-![radar_received_power.png](images/radar_received_power.png)
+$$ received\_power [dBm] = 10 * \log_{10}(\frac{received\_power}{0.001}) $$
 
 %end
 

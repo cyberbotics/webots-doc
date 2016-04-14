@@ -127,7 +127,7 @@ beam hits an obstacle.
 
 %figure "Weight distribution formulas"
 
-![weight_formula.png](images/weight_formula.png)
+$$ w_i=\frac{v_i}{\sum_{j=1}^{n} v_j} $$
 
 %end
 
@@ -310,4 +310,3 @@ WB\_DISTANCE\_SENSOR\_GENERIC.
 | "laser"             | WB\_DISTANCE\_SENSOR\_LASER      |
 
 %end
-

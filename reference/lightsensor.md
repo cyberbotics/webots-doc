@@ -78,7 +78,7 @@ figure](#light-sensor-irradiance-formula):
 
 %figure "Light sensor irradiance formula"
 
-![light_intensity.png](images/light_intensity.png)
+$$ E= \frac{1}{3} \vec F \cdot {\sum_{i=1}^{n} \left( on[i] \times att[i] \times spot[i] \times (I_a[i] + I_d[i]) \right) \vec C[i] } $$
 
 %end
 
@@ -91,7 +91,13 @@ value *att[i]* is the attenuation of light *i*, and is calculated as shown in
 
 %figure "Light attenuation"
 
-![light_attenuation.png](images/light_attenuation.png)
+$$
+att[i]=\Big\{
+\begin{array}{clcr}
+\frac{1}{a_1+a_2 d+a_3 d^2} & \scriptsize \textrm{if (PointLight or SpotLight)} \\
+1 & \scriptsize \textrm{otherwise}
+\end{array}
+$$
 
 %end
 
@@ -103,7 +109,13 @@ calculated as shown in [this figure](#direct-irradiance).
 
 %figure "Direct irradiance"
 
-![direct_light.png](images/direct_light.png)
+$$
+I_d[i]=\Big\{
+\begin{array}{clcr}
+0 & \scriptsize \textrm{if the light source is occluded} \\
+I[i] \left( \frac{\vec N * \vec L}{|\vec N||\vec L|}\right) & \scriptsize \textrm{otherwise}
+\end{array}
+$$
 
 %end
 

@@ -304,6 +304,28 @@ The following tables describe the C++ classes and their methods.
 
 %end
 
+%api "cpp_keyboard"
+
+|                                                                                     |
+| ----------------------------------------------------------------------------------- |
+| #include `<`webots/Keyboard.hpp`>`                                                  |
+| class [Keyboard](keyboard.md) {                                                     |
+| &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT,                   |
+| &nbsp;&nbsp; KEYBOARD\_UP, KEYBOARD\_RIGHT, KEYBOARD\_DOWN,                         |
+| &nbsp;&nbsp; KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                  |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                        |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                         |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                         |
+| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                     |
+| &nbsp;&nbsp; KEYBOARD\_ALT};                                                        |
+| &nbsp;&nbsp; virtual void [keyboardEnable](keyboard.md#wb_keyboard_enable)(int ms); |
+| &nbsp;&nbsp; virtual void [keyboardDisable](keyboard.md#wb_keyboard_enable)();      |
+| &nbsp;&nbsp; int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)();             |
+| &nbsp;&nbsp; int [getKey](keyboard.md#wb_keyboard_enable)() const;                  |
+| };                                                                                  |
+
+%end
+
 %api "cpp_led"
 
 |                                                                |
@@ -546,14 +568,6 @@ The following tables describe the C++ classes and their methods.
 | class [Robot](robot.md) {                                                                                                                  |
 | &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                                                             |
 | &nbsp;&nbsp; MODE\_REMOTE\_CONTROL};                                                                                                       |
-| &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT,                                                                          |
-| &nbsp;&nbsp; KEYBOARD\_UP, KEYBOARD\_RIGHT, KEYBOARD\_DOWN,                                                                                |
-| &nbsp;&nbsp; KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                                                                         |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                                                                               |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                                                                                |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                                                                                |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                                                                            |
-| &nbsp;&nbsp; KEYBOARD\_ALT};                                                                                                               |
 | &nbsp;&nbsp; [Robot](robot.md#wb_robot_step)();                                                                                            |
 | &nbsp;&nbsp; virtual [~Robot](robot.md#wb_robot_step)();                                                                                   |
 | &nbsp;&nbsp; virtual int [step](robot.md#wb_robot_step)(int ms);                                                                           |
@@ -568,6 +582,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#wb_robot_get_device)(const std::string &name);                                          |
 | &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#wb_robot_get_device)(const std::string &name);                 |
+| &nbsp;&nbsp; [Keyboard](#cpp_keyboard) *[getKeyboard](robot.md#wb_robot_get_device)();                                                     |
 | &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Lidar](#cpp_lidar) *[getLidar](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [LightSensor](#cpp_light_sensor) *[getLightSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
@@ -596,9 +611,6 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; bool [getSynchronization](robot.md#wb_robot_get_synchronization)() const;                                                     |
 | &nbsp;&nbsp; double [getTime](robot.md#wb_robot_get_time)() const;                                                                         |
 | &nbsp;&nbsp; std::string [getWorldPath](robot.md#wb_robot_get_world_path)() const;                                                         |
-| &nbsp;&nbsp; virtual void [keyboardEnable](robot.md#wb_robot_keyboard_enable)(int ms);                                                     |
-| &nbsp;&nbsp; virtual void [keyboardDisable](robot.md#wb_robot_keyboard_enable)();                                                          |
-| &nbsp;&nbsp; int [keyboardGetKey](robot.md#wb_robot_keyboard_enable)() const;                                                              |
 | &nbsp;&nbsp; int [getType](robot.md#wb_robot_get_type)() const;                                                                            |
 | &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                       |
 | };                                                                                                                                         |

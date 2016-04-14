@@ -293,6 +293,26 @@ The following tables describe the Python classes and their methods.
 
 %end
 
+%api "python_keyboard"
+
+|                                                                            |
+| -------------------------------------------------------------------------- |
+| from controller import Keyboard                                            |
+| class [Keyboard](keyboard.md) :                                            |
+| &nbsp;&nbsp; KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, KEYBOARD\_UP,  |
+| &nbsp;&nbsp; KEYBOARD\_RIGHT, KEYBOARD\_DOWN, KEYBOARD\_PAGEUP,            |
+| &nbsp;&nbsp; KEYBOARD\_PAGEDOWN, KEYBOARD\_NUMPAD\_HOME,                   |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_LEFT, KEYBOARD\_NUMPAD\_UP,                 |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_RIGHT, KEYBOARD\_NUMPAD\_DOWN,              |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_END, KEYBOARD\_KEY, KEYBOARD\_SHIFT,        |
+| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT                              |
+| &nbsp;&nbsp; def [enable](keyboard.md#wb_keyboard_enable)(self, ms)        |
+| &nbsp;&nbsp; def [disable](keyboard.md#wb_keyboard_enable)(self)           |
+| &nbsp;&nbsp; def [getSamplingPeriod](keyboard.md#wb_keyboard_enable)(self) |
+| &nbsp;&nbsp; def [getKey](keyboard.md#wb_keyboard_enable)(self)            |
+
+%end
+
 %api "python_led"
 
 |                                                               |
@@ -552,13 +572,6 @@ The following tables describe the Python classes and their methods.
 | class [Robot](robot.md) :                                                                        |
 | &nbsp;&nbsp; MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                         |
 | &nbsp;&nbsp; MODE\_REMOTE\_CONTROL                                                               |
-| &nbsp;&nbsp; KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, KEYBOARD\_UP,                        |
-| &nbsp;&nbsp; KEYBOARD\_RIGHT, KEYBOARD\_DOWN, KEYBOARD\_PAGEUP,                                  |
-| &nbsp;&nbsp; KEYBOARD\_PAGEDOWN, KEYBOARD\_NUMPAD\_HOME,                                         |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_LEFT, KEYBOARD\_NUMPAD\_UP,                                       |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_RIGHT, KEYBOARD\_NUMPAD\_DOWN,                                    |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_END, KEYBOARD\_KEY, KEYBOARD\_SHIFT,                              |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT                                                    |
 | &nbsp;&nbsp; def [\_\_init\_\_](robot.md#wb_robot_step)(self)                                    |
 | &nbsp;&nbsp; def [\_\_del\_\_](robot.md#wb_robot_step)(self)                                     |
 | &nbsp;&nbsp; def [step](robot.md#wb_robot_step)(self, ms)                                        |
@@ -573,6 +586,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                              |
 | &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                             |
 | &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                     |
+| &nbsp;&nbsp; def [getKeyboard](robot.md#wb_robot_get_device)(self)                               |
 | &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                              |
 | &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                      |
 | &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                            |
@@ -600,9 +614,6 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSynchronization](robot.md#wb_robot_get_synchronization)(self)               |
 | &nbsp;&nbsp; def [getTime](robot.md#wb_robot_get_time)(self)                                     |
 | &nbsp;&nbsp; def [getWorldPath](robot.md#wb_robot_get_world_path)(self)                          |
-| &nbsp;&nbsp; def [keyboardEnable](robot.md#wb_robot_keyboard_enable)(self, ms)                   |
-| &nbsp;&nbsp; def [keyboardDisable](robot.md#wb_robot_keyboard_enable)(self)                      |
-| &nbsp;&nbsp; def [keyboardGetKey](robot.md#wb_robot_keyboard_enable)(self)                       |
 | &nbsp;&nbsp; def [getType](robot.md#wb_robot_get_type)(self)                                     |
 
 %end

@@ -307,6 +307,28 @@ The following tables describe the Java classes and their methods.
 
 %end
 
+%api "java_keyboard"
+
+|                                                                                |
+| ------------------------------------------------------------------------------ |
+| import com.cyberbotics.webots.controller.Keyboard;                             |
+| public class [Keyboard](keyboard.md) {                                         |
+| &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME,            |
+| &nbsp;&nbsp; KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT,                    |
+| &nbsp;&nbsp; KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,             |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                   |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                    |
+| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                    |
+| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT,                                   |
+| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT;                                 |
+| &nbsp;&nbsp; public void [enable](keyboard.md#wb_keyboard_enable)(int ms);     |
+| &nbsp;&nbsp; public void [disable](keyboard.md#wb_keyboard_enable)();          |
+| &nbsp;&nbsp; public int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)(); |
+| &nbsp;&nbsp; public int [getKey](keyboard.md#wb_keyboard_enable)();            |
+| }                                                                              |
+
+%end
+
 %api "java_led"
 
 |                                                                        |
@@ -576,14 +598,6 @@ The following tables describe the Java classes and their methods.
 | public class [Robot](robot.md) {                                                                                                       |
 | &nbsp;&nbsp; public final static int MODE\_SIMULATION,                                                                                 |
 | &nbsp;&nbsp; MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL;                                                                          |
-| &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME,                                                                    |
-| &nbsp;&nbsp; KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT,                                                                            |
-| &nbsp;&nbsp; KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                                                     |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                                                                           |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                                                                            |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                                                                            |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT,                                                                                           |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT;                                                                                         |
 | &nbsp;&nbsp; public [Robot](robot.md#wb_robot_step)();                                                                                 |
 | &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                      |
 | &nbsp;&nbsp; public int [step](robot.md#wb_robot_step)(int ms);                                                                        |
@@ -598,6 +612,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#wb_robot_get_device)(String name);                                           |
 | &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#wb_robot_get_device)(String name);                  |
+| &nbsp;&nbsp; public [Keyboard](#java_keyboard) [getKeyboard](robot.md#wb_robot_get_device)();                                          |
 | &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Lidar](#java_lidar) [getLidar](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [LightSensor](#java_light_sensor) [getLightSensor](robot.md#wb_robot_get_device)(String name);                     |
@@ -626,9 +641,6 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public bool [getSynchronization](robot.md#wb_robot_get_synchronization)();                                                |
 | &nbsp;&nbsp; public double [getTime](robot.md#wb_robot_get_time)();                                                                    |
 | &nbsp;&nbsp; public String [getWorldPath](robot.md#wb_robot_get_world_path)();                                                         |
-| &nbsp;&nbsp; public void [keyboardEnable](robot.md#wb_robot_keyboard_enable)(int ms);                                                  |
-| &nbsp;&nbsp; public void [keyboardDisable](robot.md#wb_robot_keyboard_enable)();                                                       |
-| &nbsp;&nbsp; public int [keyboardGetKey](robot.md#wb_robot_keyboard_enable)();                                                         |
 | &nbsp;&nbsp; public int [getType](robot.md#wb_robot_get_type)();                                                                       |
 | }                                                                                                                                      |
 

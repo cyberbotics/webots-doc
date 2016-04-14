@@ -197,6 +197,35 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_keyboard"
+
+| % [Keyboard](keyboard.md) :                                                      |
+| -------------------------------------------------------------------------------- |
+| WB\_KEYBOARD\_END                                                                |
+| WB\_KEYBOARD\_HOME                                                               |
+| WB\_KEYBOARD\_LEFT                                                               |
+| WB\_KEYBOARD\_UP                                                                 |
+| WB\_KEYBOARD\_RIGHT                                                              |
+| WB\_KEYBOARD\_DOWN                                                               |
+| WB\_KEYBOARD\_PAGEUP                                                             |
+| WB\_KEYBOARD\_PAGEDOWN                                                           |
+| WB\_KEYBOARD\_NUMPAD\_HOME                                                       |
+| WB\_KEYBOARD\_NUMPAD\_LEFT                                                       |
+| WB\_KEYBOARD\_NUMPAD\_UP                                                         |
+| WB\_KEYBOARD\_NUMPAD\_RIGHT                                                      |
+| WB\_KEYBOARD\_NUMPAD\_DOWN                                                       |
+| WB\_KEYBOARD\_NUMPAD\_END                                                        |
+| WB\_KEYBOARD\_KEY                                                                |
+| WB\_KEYBOARD\_SHIFT                                                              |
+| WB\_KEYBOARD\_CONTROL                                                            |
+| WB\_KEYBOARD\_ALT                                                                |
+| [wb\_keyboard\_enable](keyboard.md#wb_keyboard_enable)(ms)                       |
+| [wb\_keyboard\_disable](keyboard.md#wb_keyboard_enable)()                        |
+| period = [wb\_keyboard\_get\_sampling\_period](keyboard.md#wb_keyboard_enable)() |
+| key = [wb\_keyboard\_get\_key](keyboard.md#wb_keyboard_enable)()                 |
+
+%end
+
 %api "matlab_led"
 
 | % [LED](led.md) :                              |
@@ -387,24 +416,6 @@ The following tables describe the Matlab functions.
 | WB\_MODE\_SIMULATION,                                                                                   |
 | WB\_MODE\_CROSS\_COMPILATION,                                                                           |
 | WB\_MODE\_REMOTE\_CONTROL                                                                               |
-| WB\_ROBOT\_KEYBOARD\_END                                                                                |
-| WB\_ROBOT\_KEYBOARD\_HOME                                                                               |
-| WB\_ROBOT\_KEYBOARD\_LEFT                                                                               |
-| WB\_ROBOT\_KEYBOARD\_UP                                                                                 |
-| WB\_ROBOT\_KEYBOARD\_RIGHT                                                                              |
-| WB\_ROBOT\_KEYBOARD\_DOWN                                                                               |
-| WB\_ROBOT\_KEYBOARD\_PAGEUP                                                                             |
-| WB\_ROBOT\_KEYBOARD\_PAGEDOWN                                                                           |
-| WB\_ROBOT\_KEYBOARD\_NUMPAD\_HOME                                                                       |
-| WB\_ROBOT\_KEYBOARD\_NUMPAD\_LEFT                                                                       |
-| WB\_ROBOT\_KEYBOARD\_NUMPAD\_UP                                                                         |
-| WB\_ROBOT\_KEYBOARD\_NUMPAD\_RIGHT                                                                      |
-| WB\_ROBOT\_KEYBOARD\_NUMPAD\_DOWN                                                                       |
-| WB\_ROBOT\_KEYBOARD\_NUMPAD\_END                                                                        |
-| WB\_ROBOT\_KEYBOARD\_KEY                                                                                |
-| WB\_ROBOT\_KEYBOARD\_SHIFT                                                                              |
-| WB\_ROBOT\_KEYBOARD\_CONTROL                                                                            |
-| WB\_ROBOT\_KEYBOARD\_ALT                                                                                |
 | [wb\_robot\_step](robot.md#wb_robot_step)(ms)                                                           |
 | tag = [wb\_robot\_get\_device](robot.md#wb_robot_get_device)('name')                                    |
 | size = [wb\_robot\_get\_number\_of\_devices](robot.md#wb_robot_get_device_by_index)()                   |
@@ -425,9 +436,6 @@ The following tables describe the Matlab functions.
 | sync = [wb\_robot\_get\_synchronization](robot.md#wb_robot_get_synchronization)()                       |
 | time = [wb\_robot\_get\_time](robot.md#wb_robot_get_time)()                                             |
 | path = [wb\_robot\_get\_world\_path](robot.md#wb_robot_get_world_path)()                                |
-| [wb\_robot\_keyboard\_enable](robot.md#wb_robot_keyboard_enable)(ms)                                    |
-| [wb\_robot\_keyboard\_disable](robot.md#wb_robot_keyboard_enable)()                                     |
-| key = [wb\_robot\_keyboard\_get\_key](robot.md#wb_robot_keyboard_enable)()                              |
 | type = [wb\_robot\_get\_type](robot.md#wb_robot_get_type)()                                             |
 
 %end

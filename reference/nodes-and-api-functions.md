@@ -42,6 +42,7 @@
 - [InertialUnit](inertialunit.md)
 - [Joint](joint.md)
 - [JointParameters](jointparameters.md)
+- [Keyboard](keyboard.md)
 - [LED](led.md)
 - [Lens](lens.md)
 - [Lidar](lidar.md)

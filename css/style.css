@@ -130,7 +130,7 @@ h3 {
   color: black;
 }
 .release-tag:before {
-  content: "Release ";
+  content: "release ";
 }
 h4 {
   font-size: 14px;

@@ -124,8 +124,13 @@ h2 {
 h3 {
   font-size: 26px;
 }
-#titleVersion {
-  font-size: 20px;
+.release-tag {
+  display: inline;
+  font-size: 16px;
+  color: black;
+}
+.release-tag:after {
+  content: " release";
 }
 h4 {
   font-size: 14px;

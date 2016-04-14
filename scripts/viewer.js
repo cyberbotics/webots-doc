@@ -118,7 +118,7 @@ function applyAnchor() {
 }
 
 function applyToTitleDiv() {
-  var titleContentElement = document.getElementById("titleContent");
+  var titleContentElement = document.getElementById("title-content");
   if (titleContentElement) {
     var newTitle = "";
     if (setup.book == "guide") {
@@ -131,7 +131,7 @@ function applyToTitleDiv() {
       newTitle = "Webots for DARwIn-OP";
     }
     if (newTitle.length > 0) {
-      newTitle += " <span id='titleVersion'>(Webots " + getWebotsVersion() + ")<span>";
+      newTitle += " <div class='release-tag'>" + getWebotsVersion() + "</div>";
       titleContentElement.innerHTML = newTitle;
     }
   }

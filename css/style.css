@@ -68,6 +68,10 @@ html, body {
   background: #ececec;
   border-color: #ccc;
 }
+.math {
+  margin: 1em;
+  font-size: 1.5em;
+}
 blockquote {
   border-left: 6px solid #ccc;
 }

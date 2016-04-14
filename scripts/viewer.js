@@ -188,7 +188,6 @@ function populateViewDiv(mdContent) {
 
     applyAnchorIcons(view);
     highlightCode(view);
-    applyToMathTags(view);
 
     updateSelection();
 }
@@ -236,14 +235,6 @@ function highlightCode(view) {
             hljs.highlightBlock(code);
         }
     }
-}
-
-function applyToMathTags(view) {
-  var maths = view.getElementsByTagName("math"); 
-  for (var i = 0; i < maths.length; i++) { 
-      var math = maths[i];
-      
-  }
 }
 
 function applyAnchorIcons(view) {

@@ -164,8 +164,8 @@ showdown.extension("wbMaths", function() {
           filter: function(text, converter, options) {
               // note: '$' is converted temporarily to '~D
               // https://github.com/showdownjs/showdown/wiki/Extensions#gotchas'
-              text = text.replace(/~D~D.*~D~D/gi, function(match) {
-                  return "<math>" + match + "</math>";
+              text = text.replace(/~D~D(.*)~D~D/gi, function(match, content) {
+                  return "<div class='math'><script type='math/tex'>" + content + "</script></div>";
               });
               return text;
           }

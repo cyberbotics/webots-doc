@@ -7,21 +7,21 @@ import os
 import re
 
 
-def file_replace(fname, pat, s_after):
+def file_replace(file, pattern, subst):
     """Search and replace a regex into a file."""
-    # first, see if the pattern is even in the file.
-    with open(fname) as f:
-        if not any(re.search(pat, line) for line in f):
-            return  # pattern does not occur in file so we are done.
+    # Read contents from file as a single string
+    file_handle = open(file, 'r')
+    file_string = file_handle.read()
+    file_handle.close()
 
-    # pattern is in the file, so perform replace operation.
-    with open(fname) as f:
-        out_fname = fname + ".tmp"
-        out = open(out_fname, "w")
-        for line in f:
-            out.write(re.sub(pat, s_after, line))
-        out.close()
-        os.rename(out_fname, fname)
+    # Use RE package to allow for replacement (also allowing for (multiline) REGEX)
+    file_string = (re.sub(pattern, subst, file_string))
+
+    # Write contents to file.
+    # Using mode 'w' truncates the file.
+    file_handle = open(file, 'w')
+    file_handle.write(file_string)
+    file_handle.close()
 
 
 if __name__ == '__main__':
@@ -42,6 +42,8 @@ if __name__ == '__main__':
 
         for match in re.finditer(r'(\$\$[^\$]*\$\$)', texContent):
             formula = match.group(1)
+            formula = formula.replace('\\', '\\\\')
+            formula = re.sub(r'\s*[\r\n]', '\n', formula)
             formulas.append(formula)
             print '-> %s\n' % (formula)
 
@@ -50,4 +52,4 @@ if __name__ == '__main__':
             imagePath = 'images' + os.sep + name + '.png'
             imageCompletePath = book + os.sep + imagePath
             if os.path.exists(imageCompletePath):
-                file_replace(mdFilePath, r'!\[.*\]\(%s\)\s' % (imagePath), formula)
+                file_replace(mdFilePath, r'!\[.*\]\(%s\)\s' % (imagePath), formula + '\n')

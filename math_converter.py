@@ -45,6 +45,9 @@ if __name__ == '__main__':
             formulas.append(formula)
             print '-> %s\n' % (formula)
 
-        imagePath = 'images/' + name + '.png'
         for mdFilePath in mdFilePaths:
-            file_replace(mdFilePath, r'!\[.*\](%s)]' % (imagePath), formula)
+            book = os.path.basename(os.path.dirname(mdFilePath))
+            imagePath = 'images' + os.sep + name + '.png'
+            imageCompletePath = book + os.sep + imagePath
+            if os.path.exists(imageCompletePath):
+                file_replace(mdFilePath, r'!\[.*\]\(%s\)\s' % (imagePath), formula)

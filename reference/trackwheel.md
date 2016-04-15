@@ -18,7 +18,7 @@ defined by a [Track](track.md) node.
 By default this node doesn't have any graphical shape and the shape of the wheel has to be defined inside the `children` field of the [TrackWheel](#trackwheel) node.
 All the children nodes will be automatically translated at the relative location specified in the `position` field and automatically rotated along the z-axis based on the speed of the parent [Track](track.md) node.
 Additionally this node is used by the parent [Track](track.md) node to compute the track belt path used for geometries animation and representing the track itself.
-Note that in order to automatically generate the track belt, the geometries animation has to be enabled, i.e. the `animatedGeometry` field of the parent [Track](track.md) node has to be defined and the `geometriesCount` field have to be greater than 0.
+Note that in order to automatically generate the track belt, the geometries animation has to be enabled, i.e. the `animatedGeometry` field of the parent [Track](track.md) node has to be defined and the `geometriesCount` field has to be greater than 0.
 
 The [TrackWheel](#trackwheel) node is a pure graphical object and doesn't have any physical behavior.
 All the physical properties are defined in the [Track](track.md) node. 

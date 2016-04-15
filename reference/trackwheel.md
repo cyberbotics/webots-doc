@@ -23,7 +23,7 @@ Note that in order to automatically generate the track belt, the geometries anim
 The [TrackWheel](#trackwheel) node is a pure graphical object and doesn't have any physical behavior.
 All the physical properties are defined in the [Track](track.md) node. 
 
-[TrackWheel](#trackwheel) node can only be inserted in the `children` field of a
+A [TrackWheel](#trackwheel) node can only be inserted in the `children` field of a
 [Track](track.md) node.
 
 ### Field Summary

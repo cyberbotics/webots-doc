@@ -38,4 +38,4 @@ The `position`field is also used to compute the relative translation of the `chi
 - `inner`: defines the location of the wheel with respect to the track belt.
 If the value is TRUE then the wheel is inside the track belt, otherwise it is outside.
 The value of this field also affects the automatic rotation direction of the user-defined wheel shape.
-If TRUE then the shape rotates in the same direction of the track, otherwise it will rotate in the opposite direction.
+If TRUE, the shape will rotate in the same direction of the track, otherwise it will rotate in the opposite direction.

@@ -293,6 +293,25 @@ The following tables describe the Python classes and their methods.
 
 %end
 
+%api "python_joystick"
+
+|                                                                                                 |
+| ----------------------------------------------------------------------------------------------- |
+| from controller import Joystick                                                                 |
+| class [Joystick](joystick.md) :                                                                 |
+| &nbsp;&nbsp; def [joystickEnable](joystick.md#wb_joystick_enable)(self, ms)                     |
+| &nbsp;&nbsp; def [joystickDisable](joystick.md#wb_joystick_enable)(self)                        |
+| &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                      |
+| &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                      |
+| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const      |
+| &nbsp;&nbsp; def [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(self, axis)         |
+| &nbsp;&nbsp; def [getPressedButton](joystick.md#wb_joystick_get_pressed_button)(self)           |
+| &nbsp;&nbsp; def [setForceFeedback](joystick.md#wb_joystick_set_force_feedback)(self, level)    |
+| &nbsp;&nbsp; def [setAutoCenteringGain](joystick.md#wb_joystick_set_force_feedback)(self, gain) |
+| &nbsp;&nbsp; def [setResistanceGain](joystick.md#wb_joystick_set_force_feedback)(self, gain)    |
+
+%end
+
 %api "python_keyboard"
 
 |                                                                            |
@@ -586,6 +605,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                              |
 | &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                             |
 | &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                     |
+| &nbsp;&nbsp; def [getJoystick](robot.md#wb_robot_get_device)(self)                               |
 | &nbsp;&nbsp; def [getKeyboard](robot.md#wb_robot_get_device)(self)                               |
 | &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                              |
 | &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                      |

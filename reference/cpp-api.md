@@ -304,6 +304,26 @@ The following tables describe the C++ classes and their methods.
 
 %end
 
+%api "cpp_joystick"
+
+|                                                                                                    |
+| -------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Joystick.hpp`>`                                                                 |
+| class [Joystick](joystick.md) {                                                                    |
+| &nbsp;&nbsp; virtual void [joystickEnable](joystick.md#wb_joystick_enable)(int ms);                |
+| &nbsp;&nbsp; virtual void [joystickDisable](joystick.md#wb_joystick_enable)();                     |
+| &nbsp;&nbsp; int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                            |
+| &nbsp;&nbsp; bool [isConnected](joystick.md#wb_joystick_is_connected)() const;                     |
+| &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;            |
+| &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;       |
+| &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;           |
+| &nbsp;&nbsp; void [setForceFeedback](joystick.md#wb_joystick_set_force_feedback)(int level);       |
+| &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_force_feedback)(double gain); |
+| &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_force_feedback)(double gain);    |
+| };                                                                                                 |
+
+%end
+
 %api "cpp_keyboard"
 
 |                                                                                     |
@@ -582,6 +602,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#wb_robot_get_device)(const std::string &name);                                          |
 | &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#wb_robot_get_device)(const std::string &name);                 |
+| &nbsp;&nbsp; [Joystick](#cpp_joystick) *[getJoystick](robot.md#wb_robot_get_device)();                                                     |
 | &nbsp;&nbsp; [Keyboard](#cpp_keyboard) *[getKeyboard](robot.md#wb_robot_get_device)();                                                     |
 | &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Lidar](#cpp_lidar) *[getLidar](robot.md#wb_robot_get_device)(const std::string &name);                                       |

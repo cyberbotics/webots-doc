@@ -307,6 +307,26 @@ The following tables describe the Java classes and their methods.
 
 %end
 
+%api "java_joystick"
+
+|                                                                                                           |
+| --------------------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Joystick                                                         |
+| public class [Joystick](joystick.md) {                                                                    |
+| &nbsp;&nbsp; public void [joystickEnable](joystick.md#wb_joystick_enable)(int ms);                        |
+| &nbsp;&nbsp; public void [joystickDisable](joystick.md#wb_joystick_enable)();                             |
+| &nbsp;&nbsp; public int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                            |
+| &nbsp;&nbsp; public bool [isConnected](joystick.md#wb_joystick_is_connected)();                           |
+| &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                  |
+| &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);             |
+| &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                 |
+| &nbsp;&nbsp; public void [setForceFeedback](joystick.md#wb_joystick_set_force_feedback)(int level);       |
+| &nbsp;&nbsp; public void [setAutoCenteringGain](joystick.md#wb_joystick_set_force_feedback)(double gain); |
+| &nbsp;&nbsp; public void [setResistanceGain](joystick.md#wb_joystick_set_force_feedback)(double gain);    |
+| };                                                                                                        |
+
+%end
+
 %api "java_keyboard"
 
 |                                                                                |
@@ -612,6 +632,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#wb_robot_get_device)(String name);                                           |
 | &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#wb_robot_get_device)(String name);                  |
+| &nbsp;&nbsp; public [Joystick](#java_joystick) [getJoystick](robot.md#wb_robot_get_device)();                                          |
 | &nbsp;&nbsp; public [Keyboard](#java_keyboard) [getKeyboard](robot.md#wb_robot_get_device)();                                          |
 | &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Lidar](#java_lidar) [getLidar](robot.md#wb_robot_get_device)(String name);                                        |

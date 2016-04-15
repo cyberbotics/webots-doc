@@ -37,7 +37,7 @@ but force feedback functions are not available.
 The track system doesn't have any default wheel, but it is possible to insert a
 [TrackWheel](trackwheel.md) node in the `children` field to define an object
 that will automatically rotate based on the [Track](#track) motor speed.
-Note that the [TrackWheel](trackwheel.md) nodeb is an abstract wheel and the shape
+Note that the [TrackWheel](trackwheel.md) node is an abstract wheel and the shape
 has to be defined by the user.
 
 Other than the motion, it is also possible to define an animation to show

@@ -127,7 +127,14 @@ corresponds to the angle between *-L* and the `direction` vector of the
 
 %figure "SpotLight factor"
 
-![spot_light_formula.png](images/spot_light_formula.png)
+$$
+spot[i]=\Big\{
+\begin{array}{clcr}
+(\cos \alpha)^{\log \frac{\log \frac{1}{2}}{2 \cdot \log ( \cos (beamWidth))}} & \scriptsize \textrm{if (SpotLight and } \alpha \leq \textrm{CutOffAngle)} \\
+0 & \scriptsize \textrm{else if (SpotLight and } \alpha > \textrm{CutOffAngle)} \\
+1 & \scriptsize \textrm{otherwise}
+\end{array}
+$$
 
 %end
 
@@ -221,4 +228,3 @@ into the `wb_light_sensor_enable()` function, or 0 if the device is disabled.
 `wb_light_sensor_get_value()` returns the most recent value measured by the
 specified light sensor. The returned value is the result of interpolating the
 irradiance *E* as described above with the sensor's `lookupTable`.
-

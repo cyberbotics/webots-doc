@@ -188,6 +188,7 @@ function populateViewDiv(mdContent) {
 
     applyAnchorIcons(view);
     highlightCode(view);
+    applyMathJax(view);
 
     updateSelection();
 }
@@ -237,12 +238,16 @@ function highlightCode(view) {
     }
 }
 
+function applyMathJax(el) {
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, el]);
+}
+
 function initMathJax() {
-  MathJax.Hub.Config({
-    jax: ["input/TeX", "output/HTML-CSS"],
-    showMathMenu: false,
-    showProcessingMessages: false
-  });
+    MathJax.Hub.Config({
+        jax: ["input/TeX", "output/HTML-CSS"],
+        showMathMenu: false,
+        showProcessingMessages: false
+    });
 }
 
 function applyAnchorIcons(view) {

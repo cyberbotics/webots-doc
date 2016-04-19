@@ -237,6 +237,12 @@ function highlightCode(view) {
     }
 }
 
+function initMathJax() {
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"]
+  });
+}
+
 function applyAnchorIcons(view) {
     var elements = [];
     var tags = ["figcaption", "h1", "h2", "h3", "h4", "h5", "h6"];
@@ -525,6 +531,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     console.log("Setup: " + JSON.stringify(setup));
 
+    initMathJax();
     applyToTitleDiv();
     getMDFile();
     getMenuFile();

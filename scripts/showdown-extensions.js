@@ -75,7 +75,7 @@ showdown.extension("wbFigure", function() {
                     var foo = content;
                     // convert the markdown content only if there is no math symbols inside
                     if (content.indexOf("~D~D") < 0) {
-                      foo = converter.makeHtml(foo);
+                        foo = converter.makeHtml(foo);
                     }
                     return "<figure name=\"" + wbSlugify(title) + "\">" + foo + "<figcaption>" + title + "</figcaption></figure>";
                 });

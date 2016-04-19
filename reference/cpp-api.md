@@ -318,8 +318,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                         |
 | &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                     |
 | &nbsp;&nbsp; KEYBOARD\_ALT};                                                        |
-| &nbsp;&nbsp; virtual void [keyboardEnable](keyboard.md#wb_keyboard_enable)(int ms); |
-| &nbsp;&nbsp; virtual void [keyboardDisable](keyboard.md#wb_keyboard_enable)();      |
+| &nbsp;&nbsp; virtual void [enable](keyboard.md#wb_keyboard_enable)(int ms);         |
+| &nbsp;&nbsp; virtual void [disable](keyboard.md#wb_keyboard_enable)();              |
 | &nbsp;&nbsp; int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)();             |
 | &nbsp;&nbsp; int [getKey](keyboard.md#wb_keyboard_enable)() const;                  |
 | };                                                                                  |

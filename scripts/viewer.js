@@ -239,7 +239,9 @@ function highlightCode(view) {
 
 function initMathJax() {
   MathJax.Hub.Config({
-    jax: ["input/TeX", "output/HTML-CSS"]
+    jax: ["input/TeX", "output/HTML-CSS"],
+    showMathMenu: false,
+    showProcessingMessages: false
   });
 }
 

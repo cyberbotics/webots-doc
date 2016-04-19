@@ -156,19 +156,20 @@ showdown.extension("wbAnchors", function() {
 });
 
 // This extension is about converting "$$lexContent$$" patterns to
-// <math>lexContent</math> in order to be detected by MathJax 
+// <div class='math'><script type='math/tex'>lexContent</script></div>
+// in order to be detected by MathJax
 showdown.extension("wbMaths", function() {
-  return [
-      {
-          type: "lang",
-          filter: function(text, converter, options) {
-              // note: '$' is converted temporarily to '~D
-              // https://github.com/showdownjs/showdown/wiki/Extensions#gotchas'
-              text = text.replace(/~D~D([^]+?)~D~D/gi, function(match, content) {
-                  return "<div class='math'><script type='math/tex'>" + content + "</script></div>";
-              });
-              return text;
-          }
-      }
-  ];
+    return [
+        {
+            type: "lang",
+            filter: function(text, converter, options) {
+                // note: '$' is converted temporarily to '~D
+                // https://github.com/showdownjs/showdown/wiki/Extensions#gotchas'
+                text = text.replace(/~D~D([^]+?)~D~D/gi, function(match, content) {
+                    return "<div class='math'><script type='math/tex'>" + content + "</script></div>";
+                });
+                return text;
+            }
+        }
+    ];
 });

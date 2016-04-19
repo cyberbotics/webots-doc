@@ -112,8 +112,11 @@ void wb_joystick_set_resistance_gain(double gain);
 
 **Description**
 
-The `wb_joystick_set_force_feedback()` function use force the joystick force feedback to add force on an axis. The joystick must support force feedback and the unit of `level` is hardware dependent.
+The `wb_joystick_set_force_feedback()` function use force the joystick force feedback to add force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
 
-The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware dependent.
+The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware specific.
 
-The `wb_joystick_set_resistance_gain()` function sets the resistance gain of the force feedback. Resistance is an effect that tend to prevent the axis from moving. The joystick must support force feedback and the unit of `gain` is hardware dependent.
+The `wb_joystick_set_resistance_gain()` function sets the resistance gain of the force feedback. Resistance is an effect that tend to prevent the axis from moving. The joystick must support force feedback and the unit of `gain` is hardware specific.
+
+> **note**:
+The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.

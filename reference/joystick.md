@@ -96,7 +96,7 @@ All the button pressed can be read by calling the `wb_joystick_get_key()` functi
 
 **Name**
 
-**wb\_joystick\_set\_force\_feedback**,
+**wb\_joystick\_set\_constant\_force**,
 **wb\_joystick\_set\_constant\_force\_duration**,
 **wb\_joystick\_set\_auto\_centering\_gain**,
 **wb\_joystick\_set\_resistance\_gain** - *set the force feedback parameters*

@@ -1,8 +1,8 @@
 ## Joystick
 
-The [Joystick](#joystick) is not a node, it is a set of functions available by default for each [Robot](robot.md) node to read the joystick input. It is therefore not a device and the functions do not require any `WbDeviceTag`.
+The [Joystick](#joystick) API doesn't correspond to a Webots node. It is a set of functions available for every [Robot](robot.md) node to read the input from a real joystick. Therefore, the joystick functions do not require any `WbDeviceTag` parameter.
 
-Each physical joystick can be used by one controller at the time only. If several joysticks are connected, each controller will get one.
+Each physical joystick can be used by one controller at a time only. If several joysticks are connected, different controllers may be able to use a different joystick.
 
 > **note**:
 In C++, Python and Java the joystick functions are in a dedicated class called
@@ -27,17 +27,17 @@ int wb_joystick_get_sampling_period()
 
 **Description**
 
-The `wb_joystick_enable()` function allows the user to enable the joystick measurement each `ms` milliseconds. When this function is called the first free joystick is paired with the controller.
+The `wb_joystick_enable()` function allows the user to enable a joystick measurement each `ms` milliseconds. When this function is called the first free joystick is paired with the controller.
 
-The `wb_joystick_disable()` function turns the joystick off. the joystick is released and can be used from another controller.
+The `wb_joystick_disable()` function turns the joystick off. The joystick is released so that it can be used by another controller.
 
-The `wb_joystick_get_sampling_period()` function returns the period given into the `wb_joystick_get_sampling_period()` function, or 0 if the device is disabled.
+The `wb_joystick_get_sampling_period()` function returns the value previously passed to the `wb_joystick_enable()` function, or 0 if the device is disabled.
 
 ---
 
 **Name**
 
-**wb\_joystick\_is\_connected** - *check if a joystick is paired with this controller joystick*
+**wb\_joystick\_is\_connected** - *check if a joystick is paired with this controller*
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
@@ -71,13 +71,13 @@ int  wb_joystick_get_axis_value(int axis)
 
 The `wb_joystick_get_number_of_axes()` function returns the number of axes of the joystick.
 
-The `wb_joystick_get_axis_value()` function returns the current value of the axis set in argument.
+The `wb_joystick_get_axis_value()` function returns the current value of the axis passed as an argument.
 
 ---
 
 **Name**
 
-**wb\_joystick\_get\_pressed\_button** - *joystick button state reading function*
+**wb\_joystick\_get\_pressed\_button** - *get the buttons pressed on the joystick*
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
@@ -89,8 +89,8 @@ int wb_joystick_get_pressed_button()
 
 **Description**
 
-This function allows you to read a button pressed on the joystick from a paired with this controller (if any). The Webots window must be selected and the simulation running.
-All the button pressed can be read by calling the `wb_joystick_get_key()` function repeatedly until this function returns -1. The returned value, if non-negative, is a button code corresponding to a button currently pressed. If no button is currently pressed, the function will return -1. Calling the `wb_joystick_get_key()` function a second time will return either -1 or the button code of another button which is currently simultaneously pressed. On Mac OSX, only the 12 first buttons and 2 first axes of the joystick are taken into account.
+This function allows you to read a button pressed on the joystick paired with this controller (if any). The Webots window must be selected and the simulation must be running.
+All the buttons pressed can be read by calling the `wb_joystick_get_key()` function repeatedly until this function returns -1. The returned value, if non-negative, is a button code corresponding to a button currently pressed. If no button is currently pressed, the function will return -1. Calling the `wb_joystick_get_key()` function a second time will return either -1 or the button code of another button which is currently simultaneously pressed. On Mac OS X, only the first 12 buttons and first 2 axes of the joystick are taken into account.
 
 ---
 
@@ -114,9 +114,9 @@ void wb_joystick_set_resistance_gain(double gain);
 
 **Description**
 
-The `wb_joystick_set_constant_force()` function use force the joystick force feedback to add a constant force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
+The `wb_joystick_set_constant_force()` function uses the joystick force feedback to add a constant force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
 
-The `wb_joystick_set_constant_force_duration()` function set for how long (in seconds) a force added with the `wb_joystick_set_constant_force()` function should be applied. After this duration if no other call to `wb_joystick_set_constant_force()` was done, the constant force is stopped. This is particularly useful in case the simulation is paused to make sure the force stops too. By default the duration is 1 second.
+The `wb_joystick_set_constant_force_duration()` function sets for how long (in seconds) a force added with the `wb_joystick_set_constant_force()` function should be applied. After this duration if no other call to `wb_joystick_set_constant_force()` was done, the constant force is stopped. This is particularly useful in case the simulation is paused to make sure the force stops too. By default the duration is 1 second.
 
 The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware specific.
 

@@ -306,21 +306,22 @@ The following tables describe the C++ classes and their methods.
 
 %api "cpp_joystick"
 
-|                                                                                                    |
-| -------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Joystick.hpp`>`                                                                 |
-| class [Joystick](joystick.md) {                                                                    |
-| &nbsp;&nbsp; virtual void [enable](joystick.md#wb_joystick_enable)(int ms);                        |
-| &nbsp;&nbsp; virtual void [disable](joystick.md#wb_joystick_enable)();                             |
-| &nbsp;&nbsp; int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                            |
-| &nbsp;&nbsp; bool [isConnected](joystick.md#wb_joystick_is_connected)() const;                     |
-| &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;            |
-| &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;       |
-| &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;           |
-| &nbsp;&nbsp; void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);       |
-| &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain); |
-| &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);    |
-| };                                                                                                 |
+|                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Joystick.hpp`>`                                                                           |
+| class [Joystick](joystick.md) {                                                                              |
+| &nbsp;&nbsp; virtual void [enable](joystick.md#wb_joystick_enable)(int ms);                                  |
+| &nbsp;&nbsp; virtual void [disable](joystick.md#wb_joystick_enable)();                                       |
+| &nbsp;&nbsp; int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                      |
+| &nbsp;&nbsp; bool [isConnected](joystick.md#wb_joystick_is_connected)() const;                               |
+| &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;                      |
+| &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;                 |
+| &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;                     |
+| &nbsp;&nbsp; void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);                 |
+| &nbsp;&nbsp; void [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(double duration);  |
+| &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain);           |
+| &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);              |
+| };                                                                                                           |
 
 %end
 

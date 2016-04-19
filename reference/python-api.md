@@ -295,20 +295,21 @@ The following tables describe the Python classes and their methods.
 
 %api "python_joystick"
 
-|                                                                                                 |
-| ----------------------------------------------------------------------------------------------- |
-| from controller import Joystick                                                                 |
-| class [Joystick](joystick.md) :                                                                 |
-| &nbsp;&nbsp; def [enable](joystick.md#wb_joystick_enable)(self, ms)                             |
-| &nbsp;&nbsp; def [disable](joystick.md#wb_joystick_enable)(self)                                |
-| &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                      |
-| &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                      |
-| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const      |
-| &nbsp;&nbsp; def [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(self, axis)         |
-| &nbsp;&nbsp; def [getPressedButton](joystick.md#wb_joystick_get_pressed_button)(self)           |
-| &nbsp;&nbsp; def [setConstantForce](joystick.md#wb_joystick_set_constant_force)(self, level)    |
-| &nbsp;&nbsp; def [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(self, gain) |
-| &nbsp;&nbsp; def [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(self, gain)    |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| from controller import Joystick                                                                         |
+| class [Joystick](joystick.md) :                                                                         |
+| &nbsp;&nbsp; def [enable](joystick.md#wb_joystick_enable)(self, ms)                                     |
+| &nbsp;&nbsp; def [disable](joystick.md#wb_joystick_enable)(self)                                        |
+| &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                              |
+| &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                              |
+| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const              |
+| &nbsp;&nbsp; def [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(self, axis)                 |
+| &nbsp;&nbsp; def [getPressedButton](joystick.md#wb_joystick_get_pressed_button)(self)                   |
+| &nbsp;&nbsp; def [setConstantForce](joystick.md#wb_joystick_set_constant_force)(self, level)            |
+| &nbsp;&nbsp; def [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(self, duration) |
+| &nbsp;&nbsp; def [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(self, gain)         |
+| &nbsp;&nbsp; def [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(self, gain)            |
 
 %end
 

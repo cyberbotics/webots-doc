@@ -97,6 +97,7 @@ All the button pressed can be read by calling the `wb_joystick_get_key()` functi
 **Name**
 
 **wb\_joystick\_set\_force\_feedback**,
+**wb\_joystick\_set\_constant\_force\_duration**,
 **wb\_joystick\_set\_auto\_centering\_gain**,
 **wb\_joystick\_set\_resistance\_gain** - *set the force feedback parameters*
 
@@ -106,6 +107,7 @@ All the button pressed can be read by calling the `wb_joystick_get_key()` functi
 #include <webots/joystick.h>
 
 void wb_joystick_set_constant_force(int level);
+void wb_joystick_set_constant_force_duration(double duration);
 void wb_joystick_set_auto_centering_gain(double gain);
 void wb_joystick_set_resistance_gain(double gain);
 ```
@@ -113,6 +115,8 @@ void wb_joystick_set_resistance_gain(double gain);
 **Description**
 
 The `wb_joystick_set_constant_force()` function use force the joystick force feedback to add a constant force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
+
+The `wb_joystick_set_constant_force_duration()` function set for how long (in seconds) a force added with the `wb_joystick_set_constant_force()` function should be applied. After this duration if no other call to `wb_joystick_set_constant_force()` was done, the constant force is stopped. This is particularly useful in case the simulation is paused to make sure the force stops too. By default the duration is 1 second.
 
 The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware specific.
 

@@ -317,9 +317,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;            |
 | &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;       |
 | &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;           |
-| &nbsp;&nbsp; void [setForceFeedback](joystick.md#wb_joystick_set_force_feedback)(int level);       |
-| &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_force_feedback)(double gain); |
-| &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_force_feedback)(double gain);    |
+| &nbsp;&nbsp; void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);       |
+| &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain); |
+| &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);    |
 | };                                                                                                 |
 
 %end

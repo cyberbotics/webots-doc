@@ -320,9 +320,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                  |
 | &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);             |
 | &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                 |
-| &nbsp;&nbsp; public void [setForceFeedback](joystick.md#wb_joystick_set_force_feedback)(int level);       |
-| &nbsp;&nbsp; public void [setAutoCenteringGain](joystick.md#wb_joystick_set_force_feedback)(double gain); |
-| &nbsp;&nbsp; public void [setResistanceGain](joystick.md#wb_joystick_set_force_feedback)(double gain);    |
+| &nbsp;&nbsp; public void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);       |
+| &nbsp;&nbsp; public void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain); |
+| &nbsp;&nbsp; public void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);    |
 | };                                                                                                        |
 
 %end

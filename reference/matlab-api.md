@@ -208,9 +208,9 @@ The following tables describe the Matlab functions.
 | axes_number = [wb_joystick_get_number_of_axes](joystick.md#wb_joystick_get_number_of_axes)() |
 | axis_value = [wb_joystick_get_axis_value](joystick.md#wb_joystick_get_number_of_axes)(axis)  |
 | button = [wb_joystick_get_pressed_button](joystick.md#wb_joystick_get_pressed_button)()      |
-| [wb_joystick_set_force_feedback](joystick.md#wb_joystick_set_force_feedback)(level)          |
-| [wb_joystick_set_auto_centering_gain](joystick.md#wb_joystick_set_force_feedback)(gain)      |
-| [wb_joystick_set_resistance_gain](joystick.md#wb_joystick_set_force_feedback)(gain)          |
+| [wb_joystick_set_constant_force](joystick.md#wb_joystick_set_constant_force)(level)          |
+| [wb_joystick_set_auto_centering_gain](joystick.md#wb_joystick_set_constant_force)(gain)      |
+| [wb_joystick_set_resistance_gain](joystick.md#wb_joystick_set_constant_force)(gain)          |
 
 %end
 

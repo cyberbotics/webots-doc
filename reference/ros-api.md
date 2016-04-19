@@ -161,9 +161,9 @@ for more information about the value of `robot_unique_name`).
 | [/joystick/get\_sampling\_period](joystick.md#wb_joystick_enable)                  | service       | webots\_ros::sensor\_get\_sampling\_period   | uint8 ask<br/>---<br/>uint32 period                                                  |
 | [/joystick/get\_number\_of\_axes](joystick.md#wb_joystick_get_number_of_axes)      | service       | webots\_ros::joystick\_get\_number\_of\_axes | uint8 ask<br/>---<br/>int32 numberOfAxes                                             |
 | [/joystick/is\_connected](joystick.md#wb_joystick_is_connected)                    | service       | webots\_ros::joystick\_is\_connected         | uint8 ask<br/>---<br/>uint8 connected                                                |
-| [/joystick/set\_force\_feedback](joystick.md#wb_joystick_set_force_feedback)       | service       | webots\_ros::joystick\_set\_force\_feedback  | int32 level<br/>---<br/>int8 success                                                 |
-| [/joystick/set\_auto\_centering\_gain](joystick.md#wb_joystick_set_force_feedback) | service       | webots\_ros::joystick\_set\_gain             | float64 gain<br/>---<br/>int8 success                                                |
-| [/joystick/set\_resistance\_gain](joystick.md#wb_joystick_set_force_feedback)      | service       | webots\_ros::joystick\_set\_gain             | float64 gain<br/>---<br/>int8 success                                                |
+| [/joystick/set\_force\_feedback](joystick.md#wb_joystick_set_constant_force)       | service       | webots\_ros::joystick\_set\_constant\_force  | int32 level<br/>---<br/>int8 success                                                 |
+| [/joystick/set\_auto\_centering\_gain](joystick.md#wb_joystick_set_constant_force) | service       | webots\_ros::joystick\_set\_gain             | float64 gain<br/>---<br/>int8 success                                                |
+| [/joystick/set\_resistance\_gain](joystick.md#wb_joystick_set_constant_force)      | service       | webots\_ros::joystick\_set\_gain             | float64 gain<br/>---<br/>int8 success                                                |
 
 ### Keyboard
 

@@ -105,14 +105,14 @@ All the button pressed can be read by calling the `wb_joystick_get_key()` functi
 ``` c
 #include <webots/joystick.h>
 
-void wb_joystick_set_force_feedback(int level);
+void wb_joystick_set_constant_force(int level);
 void wb_joystick_set_auto_centering_gain(double gain);
 void wb_joystick_set_resistance_gain(double gain);
 ```
 
 **Description**
 
-The `wb_joystick_set_force_feedback()` function use force the joystick force feedback to add force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
+The `wb_joystick_set_constant_force()` function use force the joystick force feedback to add a constant force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
 
 The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware specific.
 

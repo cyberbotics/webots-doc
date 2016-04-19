@@ -313,8 +313,8 @@ The following tables describe the Java classes and their methods.
 | --------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Joystick                                                         |
 | public class [Joystick](joystick.md) {                                                                    |
-| &nbsp;&nbsp; public void [joystickEnable](joystick.md#wb_joystick_enable)(int ms);                        |
-| &nbsp;&nbsp; public void [joystickDisable](joystick.md#wb_joystick_enable)();                             |
+| &nbsp;&nbsp; public void [enable](joystick.md#wb_joystick_enable)(int ms);                                |
+| &nbsp;&nbsp; public void [disable](joystick.md#wb_joystick_enable)();                                     |
 | &nbsp;&nbsp; public int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                            |
 | &nbsp;&nbsp; public bool [isConnected](joystick.md#wb_joystick_is_connected)();                           |
 | &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                  |

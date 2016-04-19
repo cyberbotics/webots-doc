@@ -310,8 +310,8 @@ The following tables describe the C++ classes and their methods.
 | -------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Joystick.hpp`>`                                                                 |
 | class [Joystick](joystick.md) {                                                                    |
-| &nbsp;&nbsp; virtual void [joystickEnable](joystick.md#wb_joystick_enable)(int ms);                |
-| &nbsp;&nbsp; virtual void [joystickDisable](joystick.md#wb_joystick_enable)();                     |
+| &nbsp;&nbsp; virtual void [enable](joystick.md#wb_joystick_enable)(int ms);                        |
+| &nbsp;&nbsp; virtual void [disable](joystick.md#wb_joystick_enable)();                             |
 | &nbsp;&nbsp; int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                            |
 | &nbsp;&nbsp; bool [isConnected](joystick.md#wb_joystick_is_connected)() const;                     |
 | &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;            |

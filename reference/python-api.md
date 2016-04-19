@@ -299,8 +299,8 @@ The following tables describe the Python classes and their methods.
 | ----------------------------------------------------------------------------------------------- |
 | from controller import Joystick                                                                 |
 | class [Joystick](joystick.md) :                                                                 |
-| &nbsp;&nbsp; def [joystickEnable](joystick.md#wb_joystick_enable)(self, ms)                     |
-| &nbsp;&nbsp; def [joystickDisable](joystick.md#wb_joystick_enable)(self)                        |
+| &nbsp;&nbsp; def [enable](joystick.md#wb_joystick_enable)(self, ms)                             |
+| &nbsp;&nbsp; def [disable](joystick.md#wb_joystick_enable)(self)                                |
 | &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                      |
 | &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                      |
 | &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const      |

@@ -77,7 +77,7 @@ exact same time but rather sequentially.
 X axis of to the [Lidar](#lidar) node).
 - The `horizontalResolution` field defines the number of points returned by
 layers.
-- The `fieldOfView` field defines the horizontal field of view angle of the lidar. The value is limited to the range *0* to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
+- The `fieldOfView` field defines the horizontal field of view angle of the lidar. The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
 - The `verticalFieldOfView` field defines the vertical repartition of the layers
 (angle between first and last layer).
 - The `NumberOfLayers` field defines the number of layers (number of lasers).

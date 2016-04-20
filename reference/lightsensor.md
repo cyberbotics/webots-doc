@@ -130,7 +130,7 @@ corresponds to the angle between *-L* and the `direction` vector of the
 $$
 spot[i]=\Big\{
 \begin{array}{clcr}
-(\cos \alpha)^{\log \frac{\log \frac{1}{2}}{2 \cdot \log ( \cos (beamWidth))}} & \scriptsize \textrm{if (SpotLight and } \alpha \leq \textrm{CutOffAngle)} \\
+(\cos \alpha)^{\large \log \frac{\log \frac{1}{2}}{2 \cdot \log ( \cos (beamWidth))}} & \scriptsize \textrm{if (SpotLight and } \alpha \leq \textrm{CutOffAngle)} \\
 0 & \scriptsize \textrm{else if (SpotLight and } \alpha > \textrm{CutOffAngle)} \\
 1 & \scriptsize \textrm{otherwise}
 \end{array}

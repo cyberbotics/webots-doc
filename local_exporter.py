@@ -9,6 +9,7 @@ import urllib2
 dependencies = [
     'highlight/9.2.0/default.min.css',
     'highlight/9.2.0/highlight.min.js',
+    'iframe-resizer/3.5.3/iframeResizer.contentWindow.min.js',
     'jquery/1.11.3/jquery.min.js',
     'jquery/1.11.3/jquery.min.map',
     'jquery-ui/1.11.4/jquery-ui.min.css',

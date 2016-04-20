@@ -18,9 +18,8 @@ html, body {
 #center {
   left: 20%;
   width: 79%;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+  float: left;
+  position: absolute;
 }
 #navigation, #accordion, #view {
   width: 100%;

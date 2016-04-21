@@ -239,7 +239,7 @@ controller side. In addition `wb_robot_cleanup()` signals the termination of the
 controller to the simulator. As a consequence, Webots removes the controller
 from the simulation which can continue normally with the execution of the other
 controllers (if any). If a C controller exits without calling
-`wb_robot_cleanup()`, then its termination will not be signalled to Webots. In
+`wb_robot_cleanup()`, then its termination will not be signaled to Webots. In
 this case the simulation will remain blocked (sleeping) on the current step (but
 only if this [Robot](#robot)'s `synchronization` field is TRUE). Note that the
 call to the `wb_robot_cleanup()` function must be the last API function call in
@@ -816,4 +816,3 @@ void *wbw_robot_window_custom_function(void *arg) {
 Given that the robot window can only be implemented for C/C++ controllers,
 `wb_robot_window_custom_function` is not available in Java, Phyton or Matlab
 API.
-

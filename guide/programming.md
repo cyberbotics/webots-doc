@@ -311,4 +311,3 @@ The content of the camera window will appear only after all the following steps 
 3. The `Camera` was enabled using the function `wb_camera_enable()` and a refresh rate of `r` milliseconds.
 4. One or several `wb_robot_step()` (or equivalent function) have been called covering a time span of at least `r` milliseconds.
 5. The function `wb_camera_get_image()` was called.
-

@@ -35,6 +35,7 @@ html, body {
   width: 100%;
   text-align: center;
   table-layout: fixed;
+  font-size: 20px;
 }
 #menu {
   clear: left;

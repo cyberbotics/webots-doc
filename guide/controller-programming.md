@@ -15,10 +15,10 @@ here is a "Hello World!" example for a Webots controller:
 int main() {
   wb_robot_init();
 
-  while (1) {
+  while (wb_robot_step(32) != -1)
     printf("Hello World!\n");
-    wb_robot_step(32);
-  }
+
+  wb_robot_cleanup();
 
   return 0;
 }
@@ -49,10 +49,62 @@ then return. This duration specifies an amount of simulated time, not real (wall
 clock) time, so it may actually take 1 millisecond or one minute of CPU time,
 depending on the complexity of the simulated world.
 
-Note that in this "Hello World!" example the `while` loop has no exit condition,
-hence the return statement is never reached. It is usual to have an infinite
-loop like this in the controller code: the result is that the controller runs as
-long as the simulation runs.
+Note that in this "Hello World!" example the return value of the `wb_robot_step()` function is used as exit condition.
+This is particularly useful to notify the controller program that Webots is closing the current simulation and give the oppurtunity to perform some cleanup, e.g., flushing or closing data files, etc..
+This could happen if Webots is closed, the current world is reloaded or a new world is loaded.
+Otherwise, if none of these actions are executed, the simulation will run forever.
+
+The `wb_robot_cleanup()` function is needed in particular when the controller program exits before the end of the simulation, i.e. before the `wb_robot_step()` function returns *-1*.
+In fact it notifies Webots that the program is terminating so that Webots can continue the simulation and free the relative resources.
+
+
+### Simulation step and wb_robot_step()
+
+Webots uses two different time steps:
+
+- The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
+- The control step (the argument of the `wb_robot_step()` function)
+
+The simulation step is the value specified in `WorldInfo.basicTimeStep` (in
+milliseconds). It indicates the duration of one step of simulation, i.e. the
+time interval between two computations of the position, speed, collisions, etc.
+of every simulated object. If the simulation uses physics (vs. kinematics), then
+the simulation step also specifies the interval between two computations of the
+forces and torques that need to be applied to the simulated rigid bodies.
+
+The control step is the duration of an iteration of the control loop. It
+corresponds to the parameter passed to the `wb_robot_step()` function. The
+`wb_robot_step()` function advances the controller time of the specified
+duration. It also synchronizes the sensor and actuator data with the simulator
+according to the controller time.
+
+The execution of a simulation step is an atomic operation: it cannot be
+interrupted. Hence a sensor measurement or a motor actuation can only take place
+between two simulation steps. For that reason the control step specified with
+each `wb_robot_step()` must be a multiple of the simulation step. So for
+example, if the simulation step is 16 ms, then the control step argument passed
+to `wb_robot_step()` can be 16, 32, 64, 128, etc.
+
+Every controller needs to call `wb_robot_step()` at regular intervals. If a
+controller does not call `wb_robot_step()` the sensors and actuators won't be
+updated and the simulator will block (in synchronous mode only). Because it
+needs to be called regularly, `wb_robot_step()` is usually placed in the main
+loop of the controller.
+
+If the simulation is run in step by step mode, i.e clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
+The following [figure](#controller_synchronization) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
+
+%figure "Synchronization of simulation and controller steps"
+
+![controller_synchronization.png](images/controller_synchronization.png)
+
+%end
+
+At every step, all the commands before the `wb_robot_step()` statements are executed first and the simulation stops in the middle of the execution of `wb_robot_step()`.
+Webots API functions are executed but only applied to the simulation world while processing `wb_robot_step()` request, that is when the controller program communicates with Webots process.
+When the simulation stops the new simulation status have already been computed, the simulation time has been updated and the new sensors values are ready.
+The 3D window displays the new world status that matches the simulation values that will be available next in the controller and not the values just used at the beginning of the current step.
+Note that the first step includes the initialization too. So all the statements until and including the first `wb_robot_step()` statement are executed.
 
 ### Reading Sensors
 
@@ -230,39 +282,6 @@ If you want to control the motion of several `RotationalMotor`s simultaneously,
 then you need to specify the desired position for each `RotationalMotor`
 separately, using    `wb_motor_set_position()`. Then you need to call
 `wb_robot_step()` once to actuate all the `RotationalMotor`s simultaneously.
-
-### How to use wb_robot_step()
-
-Webots uses two different time steps:
-
-- The control step (the argument of the `wb_robot_step()` function)
-- The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
-
-The control step is the duration of an iteration of the control loop. It
-corresponds to the parameter passed to the `wb_robot_step()` function. The
-`wb_robot_step()` function advances the controller time of the specified
-duration. It also synchronizes the sensor and actuator data with the simulator
-according to the controller time.
-
-Every controller needs to call `wb_robot_step()` at regular intervals. If a
-controller does not call `wb_robot_step()` the sensors and actuators won't be
-updated and the simulator will block (in synchronous mode only). Because it
-needs to be called regularly, `wb_robot_step()` is usually placed in the main
-loop of the controller.
-
-The simulation step is the value specified in `WorldInfo.basicTimeStep` (in
-milliseconds). It indicates the duration of one step of simulation, i.e. the
-time interval between two computations of the position, speed, collisions, etc.
-of every simulated object. If the simulation uses physics (vs. kinematics), then
-the simulation step also specifies the interval between two computations of the
-forces and torques that need to be applied to the simulated rigid bodies.
-
-The execution of a simulation step is an atomic operation: it cannot be
-interrupted. Hence a sensor measurement or a motor actuation can only take place
-between two simulation steps. For that reason the control step specified with
-each `wb_robot_step()` must be a multiple of the simulation step. So for
-example, if the simulation step is 16 ms, then the control step argument passed
-to `wb_robot_step()` can be 16, 32, 64, 128, etc.
 
 ### Using Sensors and Actuators Together
 
@@ -631,4 +650,3 @@ The Java `-classpath` (or -`cp`) option is automatically generated from the
 to the Java virtual machine includes "$(WEBOTS\_HOME)/lib/Controller.jar",
 either the current directory (".") or, if present, the controller jar file
 ("MyController.jar") and finally "../lib/MyLibrary.jar".
-

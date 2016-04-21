@@ -21,18 +21,18 @@ html, body {
   float: left;
   position: absolute;
 }
-#navigation, #accordion, #view {
-  width: 100%;
+#navigation, #view, #title {
+  background-color: white;
+  width: calc(100% - 4em);
   margin: 1em;
   padding: 1em;
 }
-#view, #title {
-  background-color: white;
-  width: 96%;
-  margin: 1%;
-  padding: 1%;
+#menu {
+  width: calc(100% - 2em);
+  margin: 1em;
 }
-#navigation {
+#navigation > table {
+  width: 100%;
   background-color: white;
   text-align: center;
   table-layout: fixed;

@@ -143,18 +143,18 @@ this function, *"my\_distance\_sensor"* in this example, refers to a device name
 specified in the robot description (".wbt" or ".proto" file). If the robot has
 no device with the specified name, this function returns 0.
 
-Each sensor must be enabled before it can be used. If a sensor is not enabled it
-returns undefined values. Enabling a sensor is achieved using the corresponding
+Each sensor must be enabled before it can be used and the sensor needs some time before being initialized. The initialization time corresponds to sensor's update delay.
+If a sensor is not enabled or the initialization is not completed yet it returns undefined values. Enabling a sensor is achieved using the corresponding
 `wb_*_enable()` function, where the star (*) stands for the sensor type. Every
 `wb_*_enable()` function allows to specify an update delay in milliseconds. The
 update delay specifies the desired interval between two updates of the sensor's
 data.
 
 In the usual case, the update delay is chosen to be similar to the control step
-(`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step()`.
+(`TIME_STEP`) and hence the first measurement will be available after executing `wb_robot_step()` and then it will be updated at every `wb_robot_step()`.
 If, for example, the update delay is chosen to be twice the control step then
-the sensor data will be updated every two `wb_robot_step()`: this can be used to
-simulate a slow device. Note that a larger update delay can also speed up the
+the first sensor data will be available after executing two `wb_robot_step()` statements and will be updated every two `wb_robot_step()`: this can be used to simulate a slow device.
+Note that a larger update delay can also speed up the
 simulation, especially for CPU intensive devices like the `Camera`. On the
 contrary, it would be pointless to choose an update delay smaller than the
 control step, because it will not be possible for the controller to process the
@@ -165,7 +165,7 @@ possible to disable a device at any time using the corresponding
 The sensor value is updated during the call to `wb_robot_step()`. The call to
 `wb_distance_sensor_get_value()` retrieves the latest value.
 
-Note that some device return vector values instead of scalar values, for example
+Note that some devices return vector values instead of scalar values, for example
 these functions:
 
 ```c

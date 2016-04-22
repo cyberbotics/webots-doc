@@ -21,24 +21,21 @@ html, body {
   float: left;
   position: absolute;
 }
-#navigation, #accordion, #view {
-  width: 100%;
+#navigation, #view, #title {
+  background-color: white;
+  width: calc(100% - 4em);
   margin: 1em;
   padding: 1em;
 }
-#view, #title {
-  background-color: white;
-  width: 96%;
-  margin: 1%;
-  padding: 1%;
+#menu {
+  width: calc(100% - 2em);
+  margin: 1em;
 }
-#navigation {
-  background-color: white;
+#navigation > table {
+  width: 100%;
   text-align: center;
   table-layout: fixed;
-}
-#navigation td {
-  white-space: nowrap;
+  font-size: 20px;
 }
 #menu {
   clear: left;

@@ -146,6 +146,8 @@ int wb_lidar_get_sampling_period(WbDeviceTag tag)
 
 `wb_lidar_enable()` allows the user to enable a lidar update each `ms`
 milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 `wb_lidar_disable()` turns the lidar off, saving computation time.
 
@@ -364,4 +366,3 @@ double wb_lidar_get_max_range(WbDeviceTag tag)
 
 The `wb_lidar_get_min_range()` and `wb_lidar_get_max_range()` functions return
 respectively the minimum and maximum range of the lidar.
-

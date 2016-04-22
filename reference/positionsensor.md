@@ -47,6 +47,8 @@ int wb_position_sensor_get_type(WbDeviceTag tag)
 
 `wb_position_sensor_enable()` enables a measurement of the joint position each
 `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 `wb_position_sensor_disable()` turns off the position sensor to save CPU time.
 
@@ -62,4 +64,3 @@ return `WB_ANGULAR` if the sensor is associated with a
 [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and
 `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a
 [Track](track.md) node.
-

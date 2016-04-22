@@ -141,6 +141,8 @@ int wb_radar_get_sampling_period(WbDeviceTag tag)
 
 `wb_radar_enable()` allows the user to enable a radar update each `ms`
 milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 `wb_radar_disable()` turns the radar off, saving computation time.
 
@@ -224,4 +226,3 @@ const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag)
 
 This function returns the targets array. The size of the array can be get using
 the function `wb_radar_get_number_of_targets`.
-

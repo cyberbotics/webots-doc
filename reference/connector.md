@@ -217,7 +217,7 @@ The `wb_connector_enable_presence()` function starts querying the
 [Connector](#connector)'s *presence* (see definition below) state each `ms`
 milliseconds.
 The provided `ms` argument specifies the [Connector](#connector)'s sampling period.
-Note it will be active only after the sampling period has expired.
+Note that it will be active only after the sampling period has expired.
 
 The `wb_connector_disable_presence()` function stops querying the
 [Connector](#connector)'s *presence*.

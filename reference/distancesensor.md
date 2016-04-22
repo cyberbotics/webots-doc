@@ -238,6 +238,8 @@ double wb_distance_sensor_get_value(WbDeviceTag tag)
 
 `wb_distance_sensor_enable()` allows the user to enable a distance sensor
 measurement each `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 `wb_distance_sensor_disable()` turns the distance sensor off, saving computation
 time.
@@ -310,4 +312,3 @@ WB\_DISTANCE\_SENSOR\_GENERIC.
 | "laser"             | WB\_DISTANCE\_SENSOR\_LASER      |
 
 %end
-

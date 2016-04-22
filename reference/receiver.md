@@ -92,8 +92,11 @@ of once every `ms` milliseconds. Incoming data packet are appended to the tail
 of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
 data packets will be discarded if the receiver's buffer size (specified in the
 [Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
-packets should be read at a high enough rate by the controller program. The
-function `wb_receiver_disable()` stops the background listening.
+packets should be read at a high enough rate by the controller program.
+The provided `ms` argument specifies the [Receiver](#receiver)'s sampling period.
+Note that the first data packets can be received only after the sampling period has expired.
+
+The function `wb_receiver_disable()` stops the background listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
@@ -326,4 +329,3 @@ the receiver.
 In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
 static integer of the [Receiver](#receiver) class
 (Receiver::CHANNEL\_BROADCAST).
-

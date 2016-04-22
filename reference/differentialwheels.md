@@ -209,6 +209,7 @@ robot doesn't move.
 The `wb_differential_wheels_get_encoders_sampling_period()` function returns the
 period given into the `wb_differential_wheels_enable_encoders()` function, or 0
 if the device is disabled.
+Note that the first encoders values will be available only after the sampling period has expired.
 
 ---
 
@@ -275,4 +276,3 @@ double wb_differential_wheels_get_speed_unit()
 The `wb_differential_wheels_get_speed_unit` function allows the user to get the
 value of the `speedUnit` field of the [DifferentialWheels](#differentialwheels)
 node.
-

@@ -404,6 +404,8 @@ feedback measurements for the specified motor. A new measurement will be
 performed each `ms` milliseconds; the result must be retrieved with the
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 The `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function returns the most recent motor force (resp. torque) measurement. This
@@ -520,4 +522,3 @@ WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
 | "linear"     | WB\_LINEAR   |
 
 %end
-

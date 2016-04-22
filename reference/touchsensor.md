@@ -164,6 +164,8 @@ const double *wb_touch_sensor_get_values(WbDeviceTag tag)
 
 `wb_touch_sensor_enable()` allows the user to enable a touch sensor measurement
 every `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 `wb_touch_sensor_disable()` turns the touch sensor off, saving computation time.
 
@@ -209,4 +211,3 @@ WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 | "force-3d"       | WB\_TOUCH\_SENSOR\_FORCE3D |
 
 %end
-

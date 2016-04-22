@@ -130,6 +130,8 @@ int wb_range_finder_get_sampling_period(WbDeviceTag tag)
 
 `wb_range_finder_enable()` allows the user to enable a range-finder update each
 `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 `wb_range_finder_disable()` turns the range-finder off, saving computation time.
 
@@ -272,4 +274,3 @@ For PNG images, the `quality` parameter is ignored.
 The return value of the `wb_range_finder_save_image()` is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized
 image file extension).
-

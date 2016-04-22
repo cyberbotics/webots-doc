@@ -63,6 +63,8 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 
 The `wb_accelerometer_enable()` function allows the user to enable the
 acceleration measurement each `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the sampling period has expired.
 
 The `wb_accelerometer_disable()` function turns the accelerometer off, saving
 computation time.
@@ -94,4 +96,3 @@ longer period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the 3D-vector as a list containing three floats.
-

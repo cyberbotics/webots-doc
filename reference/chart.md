@@ -19,7 +19,7 @@ A box with round corners represents a `Geometry` node; that is, a node that will
 be graphically depicted when placed in the `geometry` field of a
 [Shape](shape.md) node.
 
-A box with a grey background indicates a node that can be used directly (or
+A box with a gray background indicates a node that can be used directly (or
 composed using [Group](group.md) and [Transform](transform.md) nodes) to build a
 *boundingObject* used to detect collisions between [Solid](solid.md) objects.
 Note that not all geometry nodes can be used as boundingObjects, and that
@@ -31,4 +31,3 @@ combination of these will work correctly.
 ![node_hierarchy.png](images/node_hierarchy.png)
 
 %end
-

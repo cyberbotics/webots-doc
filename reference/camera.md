@@ -347,7 +347,7 @@ corresponding [Camera](#camera) node.
 
 **Name**
 
-**wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_grey** - *get the image data from a camera*
+**wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_gray** - *get the image data from a camera*
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
@@ -358,7 +358,7 @@ const unsigned char *wb_camera_get_image(WbDeviceTag tag)
 unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int x, int y)
 unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y)
 unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_grey(const unsigned char *image, int width, int x, int y)
+unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y)
 ```
 
 **Description**
@@ -377,8 +377,8 @@ outside the bounds of this chunk will cause an error.
 
 The `wb_camera_image_get_red(), wb_camera_image_get_green()` and
 `wb_camera_image_get_blue()` macros can be used for directly accessing the pixel
-RGB levels from the pixel coordinates. The `wb_camera_image_get_grey()` macro
-works in a similar way but returns the grey level of the specified pixel by
+RGB levels from the pixel coordinates. The `wb_camera_image_get_gray()` macro
+works in a similar way but returns the gray level of the specified pixel by
 averaging the three RGB components. In the C version, these four macros return
 an `unsigned char` in the range [0..255]. Here is a C usage example:
 
@@ -400,10 +400,10 @@ by the height of the image. Each `int` element of the array represents one pixel
 coded in BGRA (32 bits). For example red is `0x0000ff00`, green is `0x00ff0000`,
 etc. The `Camera.pixelGetRed(), Camera.pixelGetGreen()` and
 `Camera.pixelGetBlue()` functions can be used to decode a pixel value for the
-red, green and blue components. The `Camera.pixelGetGrey()` function works in a
-similar way, but returns the grey level of the pixel by averaging the three RGB
+red, green and blue components. The `Camera.pixelGetGray()` function works in a
+similar way, but returns the gray level of the pixel by averaging the three RGB
 components. Each of these four functions take an `int` pixel argument and return
-an `int` color/grey component in the range [0..255]. Here is an example:
+an `int` color/gray component in the range [0..255]. Here is an example:
 
 >     int[] image = camera.getImage();
 >     for (int i=0; i < image.length; i++) {
@@ -424,8 +424,8 @@ of the camera Here is an example:
 >     #...
 >     cameraData = camera.getImage()
 >
->     # get the grey component of the pixel (5,10)
->     grey = Camera.imageGetGrey(cameraData, camera.getWidth(), 5, 10)
+>     # get the gray component of the pixel (5,10)
+>     gray = Camera.imageGetGray(cameraData, camera.getWidth(), 5, 10)
 
 > Another way to use the camera in Python is to get the image by `getImageArray()`
 which returns a `list<list<list<int>>>`. This three dimensional list can be
@@ -438,7 +438,7 @@ directly used for accessing to the pixels. Here is an example:
 >         red   = image[x][y][0]
 >         green = image[x][y][1]
 >         blue  = image[x][y][2]
->         grey  = (red + green + blue) / 3
+>         gray  = (red + green + blue) / 3
 >         print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
 
 <!-- -->
@@ -499,4 +499,3 @@ images, the `quality` parameter is ignored.
 The return value of the `wb_camera_save_image()` is 0 in case of success. It is
 -1 in case of failure (unable to open the specified file or unrecognized image
 file extension).
-

@@ -57,8 +57,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public static int [pixelGetRed](camera.md#wb_camera_get_image)(int pixel);                              |
 | &nbsp;&nbsp; public static int [pixelGetGreen](camera.md#wb_camera_get_image)(int pixel);                            |
 | &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                   |
+| &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |                                                               |
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
 | }                                                                                                                    |
 

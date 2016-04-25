@@ -644,6 +644,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [RangeFinder](#java_range_finder) [getRangeFinder](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#wb_robot_get_device)(String name);                               |
 | &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [Speaker](#java_speaker) [getSpeaker](robot.md#wb_robot_get_device)(String name);                                  |
 | &nbsp;&nbsp; public [TouchSensor](#java_touch_sensor) [getTouchSensor](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                 |
 | &nbsp;&nbsp; public [Device](#java_device) [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                       |
@@ -694,6 +695,22 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setForce](servo.md#wb_servo_set_force)(double force);                                 |
 | &nbsp;&nbsp; public int [getType](servo.md#wb_servo_get_type)();                                                |
 | }                                                                                                               |
+
+%end
+
+%api "java_speaker"
+
+|                                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Speaker;                                                                                                                               |
+| public class [Speaker](speaker.md) extends [Device](#java_device) {                                                                                                             |
+| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                    |
+| &nbsp;&nbsp; public static void [playSound](servo.md#wb_speaker_play_sound)(Speaker left, Speaker right, String sound, double volume, double balance, bool loop); |
+| &nbsp;&nbsp; public void [stop](servo.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
+| &nbsp;&nbsp; public void [setLanguage](servo.md#wb_speaker_set_language)(const std::string &language);                                                                          |
+| &nbsp;&nbsp; public std::string [getLanguage](servo.md#wb_speaker_set_language)();                                                                                              |
+| &nbsp;&nbsp; public void [speak](servo.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
+| };                                                                                                                                                                              |
 
 %end
 

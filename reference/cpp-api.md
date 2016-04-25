@@ -613,6 +613,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
 | &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#wb_robot_get_device)(const std::string &name);                              |
+| &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                              |
 | &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                            |
@@ -665,6 +666,21 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setForce](servo.md#wb_servo_set_force)(double force);                             |
 | &nbsp;&nbsp; int [getType](servo.md#wb_servo_get_type)() const;                                              |
 | };                                                                                                           |
+
+%end
+
+%api "cpp_speaker"
+
+|                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Speaker.hpp`>`                                                                                                                                        |
+| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                             |
+| &nbsp;&nbsp; static void [playSound](servo.md#wb_speaker_play_sound)(Speaker *left, Speaker *right, const std::string &sound, double volume, double balance, bool loop); |
+| &nbsp;&nbsp; void [stop](servo.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
+| &nbsp;&nbsp; void [setLanguage](servo.md#wb_speaker_set_language)(const std::string &language);                                                                          |
+| &nbsp;&nbsp; std::string [getLanguage](servo.md#wb_speaker_set_language)();                                                                                              |
+| &nbsp;&nbsp; void [speak](servo.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
+| };                                                                                                                                                                       |
 
 %end
 

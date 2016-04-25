@@ -111,7 +111,7 @@ void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density)
 `wb_pen_set_ink_color()` changes the current ink color of the specified `tag`
 device. The `color` is a 32 bit integer value which defines the new color of the
 ink in the 0xRRGGBB hexadecimal format (i.e., 0x000000 is black, 0xFF0000 is
-red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is grey
+red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is gray
 0xFFFFFF is white, etc.). The `density` parameter defines the ink density, with
 0 meaning transparent ink and 1 meaning completely opaque ink.
 
@@ -129,4 +129,3 @@ In the Matlab version of `wb_pen_set_ink_color()`, the `color` argument must be
 a vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents
 the magenta color.
-

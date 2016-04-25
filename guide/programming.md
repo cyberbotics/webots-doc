@@ -314,4 +314,3 @@ have been completed:
 4. The function `wb_camera_get_image()` (or `wb_camera_get_range_image()` for a
 "range-finder" `Camera`) has been called.
 5. At least one `wb_robot_step()` (or equivalent function) has been called.
-

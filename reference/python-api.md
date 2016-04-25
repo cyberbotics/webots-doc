@@ -57,7 +57,6 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                         |
 | &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)             |
 | &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                         |
-| &nbsp;&nbsp; rangeImageGetDepth = staticmethod(rangeImageGetDepth)                             |
 | &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)          |
 
 %end

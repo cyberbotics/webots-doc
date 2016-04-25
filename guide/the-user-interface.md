@@ -204,7 +204,9 @@ joint axes are represented by black lines.
 
 The `Show RangeFinder frustums` allows you to display, or to hide, the OpenGL
 culling frustum and the recorded image for every range-finder in the scene,
-using a yellow wire frame. The OpenGL culling frustum is a truncated pyramid
+using a yellow wire frame.
+If the range-finder device is disabled or the initialization is not yet completed, the frustum will be drawn in gray.
+The OpenGL culling frustum is a truncated pyramid
 corresponding to the field of view of a range-finder. The recorded image is
 displayed on the plane described by the frustum at a distance corresponding to
 the minimum range of the range-finder from the device center. More information
@@ -212,6 +214,7 @@ about this concept is available in the OpenGL documentation.
 
 The `Show Lidar Rays Paths` allows you to display, or to hide, the layers (the
 laser ray paths) for every lidar in the scene, using a cyan wire frame.
+If the lidar device is disabled or the initialization is not yet completed the layers are drawn in gray.
 
 The `Show Lidar Point Cloud` allows you to display, or to hide, the point cloud
 for every lidar enabled in point cloud mode in the scene. The point cloud is
@@ -224,7 +227,9 @@ not displayed.
 
 The `Show Camera frustums` allows you to display, or to hide, the OpenGL culling
 frustum and the recorded image for every camera in the scene, using a magenta
-wire frame. The OpenGL culling frustum is a truncated pyramid corresponding to
+wire frame.
+If the camera device is disabled or the initialization is not yet completed, the frustum will be drawn in gray.
+The OpenGL culling frustum is a truncated pyramid corresponding to
 the field of view of a camera. The back of the pyramid is not represented
 because the far plane is set to infinity. The recorded image is displayed on the
 camera's near plane. More information about this concept is available in the
@@ -234,9 +239,11 @@ The `Show Distance Sensor rays` allows you to display, or to hide, the rays
 casted by the distance sensor devices. These rays are drawn as red lines (which
 become green beyond collision points). Their length corresponds to the maximum
 range of the device.
+If the distance sensor device is disabled or the initialization is not yet completed, the frustum will be drawn in gray.
 
 The `Show Light Sensor rays` allows you to display, or to hide, the rays casted
 by the light sensor devices. These rays are drawn as yellow lines.
+If the light sensor device is disabled or the initialization is not yet completed, the frustum will be drawn in gray.
 
 The `Show Lights` allows you to display, or to hide, the lights (including
 PointLights and SpotLights). DirectionalLights aren't represented. PointLights
@@ -256,6 +263,7 @@ equilibrium), red otherwise. This rendering option can be activated only for
 solids with no other solid at their top.
 
 The `Show Radar frustums` allows you to display, or to hide, the radar frustum.
+If the radar device is enabled the frustum is drawn in blue, otherwise if the radar is disabled or the initialization is not yet completed the frustum is drawn in gray.
 The radar frustum represents the volume in which a target can be detected by the
 radar.
 
@@ -487,4 +495,3 @@ milliseconds. The value of this time step defines the length of the time step
 executed during the `Step` mode. This step is multiplied by the `displayRefresh`
 field of the same `WorldInfo` node to define how frequently the display is
 refreshed.
-

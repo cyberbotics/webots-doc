@@ -56,7 +56,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
 | &nbsp;&nbsp; static unsigned char [imageGetBlue](camera.md#wb_camera_get_image)(const unsigned char *image,   |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp; static unsigned char [imageGetGrey](camera.md#wb_camera_get_image)(const unsigned char *image,   |
+| &nbsp;&nbsp; static unsigned char [imageGetGray](camera.md#wb_camera_get_image)(const unsigned char *image,   |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
 | &nbsp;&nbsp; int [saveImage](camera.md#wb_camera_save_image)(const std::string &filename, int quality) const; |
@@ -719,4 +719,3 @@ The following tables describe the C++ classes and their methods.
 | };                                                                                         |
 
 %end
-

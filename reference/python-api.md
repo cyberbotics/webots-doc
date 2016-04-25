@@ -673,11 +673,11 @@ The following tables describe the Python classes and their methods.
 | -------------------------------------------------------------------------------------------------------- |
 | from controller import Speaker                                                                           |
 | class [Speaker](speaker.md) ([Device](#python_device)) :                                                 |
-| &nbsp;&nbsp; def [playSound](servo.md#wb_speaker_play_sound)(left, right, sound, volume, balance, loop)  |
-| &nbsp;&nbsp; def [stop](servo.md#wb_speaker_stop)(self, sound)                                           |
-| &nbsp;&nbsp; def [setLanguage](servo.md#wb_speaker_set_language)(self, language)                         |
-| &nbsp;&nbsp; def [getLanguage](servo.md#wb_speaker_set_language)(self)                                   |
-| &nbsp;&nbsp; def [speak](servo.md#wb_speaker_set_language)(self, text, volume)                           |
+| &nbsp;&nbsp; def [playSound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, balance, loop)  |
+| &nbsp;&nbsp; def [stop](speaker.md#wb_speaker_stop)(self, sound)                                           |
+| &nbsp;&nbsp; def [setLanguage](speaker.md#wb_speaker_set_language)(self, language)                         |
+| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_set_language)(self)                                   |
+| &nbsp;&nbsp; def [speak](speaker.md#wb_speaker_set_language)(self, text, volume)                           |
 
 %end
 

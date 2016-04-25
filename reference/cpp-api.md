@@ -675,11 +675,11 @@ The following tables describe the C++ classes and their methods.
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Speaker.hpp`>`                                                                                                                                        |
 | class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                             |
-| &nbsp;&nbsp; static void [playSound](servo.md#wb_speaker_play_sound)(Speaker *left, Speaker *right, const std::string &sound, double volume, double balance, bool loop); |
-| &nbsp;&nbsp; void [stop](servo.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
-| &nbsp;&nbsp; void [setLanguage](servo.md#wb_speaker_set_language)(const std::string &language);                                                                          |
-| &nbsp;&nbsp; std::string [getLanguage](servo.md#wb_speaker_set_language)();                                                                                              |
-| &nbsp;&nbsp; void [speak](servo.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
+| &nbsp;&nbsp; static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker *left, Speaker *right, const std::string &sound, double volume, double balance, bool loop); |
+| &nbsp;&nbsp; void [stop](speaker.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
+| &nbsp;&nbsp; void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                          |
+| &nbsp;&nbsp; std::string [getLanguage](speaker.md#wb_speaker_set_language)();                                                                                              |
+| &nbsp;&nbsp; void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
 | };                                                                                                                                                                       |
 
 %end

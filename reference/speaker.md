@@ -110,7 +110,7 @@ This input "text", which consists only of markup tags, plays the generated sound
 
 **wb\_speaker\_play\_sound** - *plays a sound*
 
-{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
+{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/speaker.h>
@@ -129,9 +129,13 @@ The `sound` argument should specify the path to the wave file that should be pla
 The path to the sound file should be defined either absolutely or relatively to the controller.
 
 
+---
+
+**Name**
+
 **wb\_speaker\_stop** - *stops the speaker*
 
-{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
+{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/speaker.h>
@@ -145,10 +149,13 @@ This function stops the sound given in argument. The `sound` argument should be 
 
 It is possible to stop all the sound currently played by the speaker by setting `sound` to `NULL`.
 
+---
+
+**Name**
 
 **wb\_speaker\_set\_language**, **wb\_speaker\_get\_language**, **wb\_speaker\_speak** - *perform text to speech*
 
-{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
+{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/speaker.h>

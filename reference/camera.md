@@ -378,7 +378,7 @@ outside the bounds of this chunk will cause an error.
 The `wb_camera_image_get_red(), wb_camera_image_get_green()` and
 `wb_camera_image_get_blue()` macros can be used for directly accessing the pixel
 RGB levels from the pixel coordinates. The `wb_camera_image_get_grey()` macro
-works in a similar way but returns the grey level of the specified pixel by
+works in a similar way but returns the gray level of the specified pixel by
 averaging the three RGB components. In the C version, these four macros return
 an `unsigned char` in the range [0..255]. Here is a C usage example:
 
@@ -401,9 +401,9 @@ coded in BGRA (32 bits). For example red is `0x0000ff00`, green is `0x00ff0000`,
 etc. The `Camera.pixelGetRed(), Camera.pixelGetGreen()` and
 `Camera.pixelGetBlue()` functions can be used to decode a pixel value for the
 red, green and blue components. The `Camera.pixelGetGrey()` function works in a
-similar way, but returns the grey level of the pixel by averaging the three RGB
+similar way, but returns the gray level of the pixel by averaging the three RGB
 components. Each of these four functions take an `int` pixel argument and return
-an `int` color/grey component in the range [0..255]. Here is an example:
+an `int` color/gray component in the range [0..255]. Here is an example:
 
 >     int[] image = camera.getImage();
 >     for (int i=0; i < image.length; i++) {
@@ -499,4 +499,3 @@ images, the `quality` parameter is ignored.
 The return value of the `wb_camera_save_image()` is 0 in case of success. It is
 -1 in case of failure (unable to open the specified file or unrecognized image
 file extension).
-

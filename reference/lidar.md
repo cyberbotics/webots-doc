@@ -170,15 +170,16 @@ bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag)
 
 **Description**
 
-`wb_lidar_enable_point_cloud()` allows the user to enable the lidar point cloud
-update, the point cloud array is the updated with the same sampling period as
-the range image.
+`wb_lidar_enable_point_cloud()` allows the user to enable the lidar point cloud update, the point cloud array is then updated with the same sampling period as the range image.
 
 `wb_lidar_disable_point_cloud()` allows the user to disable the lidar point
 cloud update.
 
 The `wb_lidar_is_point_cloud_enabled()` function returns true if the point cloud
 update is enabled or false otherwise.
+
+> **note**:
+To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable()` function.
 
 ---
 

@@ -124,6 +124,8 @@ This function allows the user to play a sound file. Currently only wave file are
 
 The `sound` argument should specify the path to the wave file that should be played. The volume allows the user to specify the volume of this sound (between 0.0 and 1.0). The balance allows the user to specify the balance between left and right speaker (between -1.0 and +1.0, for respectively only left and only right). Finaly, the `loop` argument allows the user to set if the sound should be played only once or in a loop.
 
+It is possible to change the volume, balance, and loop parameters of a sound already playing by calling again the function with the same speakers with the same `sound` argument.
+
 
 > **note**:
 The path to the sound file should be defined either absolutely or relatively to the controller.

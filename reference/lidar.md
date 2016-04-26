@@ -179,7 +179,7 @@ The `wb_lidar_is_point_cloud_enabled()` function returns true if the point cloud
 update is enabled or false otherwise.
 
 > **note**:
-To get the point cloud array, enabling the point cloud is not sufficient, first the lidar should be enabled using the `wb_lidar_enable()` function.
+To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable()` function.
 
 ---
 

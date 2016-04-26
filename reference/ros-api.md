@@ -311,13 +311,13 @@ for more information about the value of `robot_unique_name`).
 
 ### Speaker
 
-| name                                                                    | service/topic | data type                           | data type definition                                                                            |
-| ----------------------------------------------------------------------- | ------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [/`<`device\_name`>`/play\_sound](speaker.md#wb_speaker_play_sound)     | service       | webots\_ros::speaker\_play\_sound   | string sound<br/>float64 volume<br/>float64 balance<br/><br/>int8 loop<br/>---<br/>int8 success |
-| [/`<`device\_name`>`/stop](speaker.md#wb_speaker_stop)                  | service       | webots\_ros::speaker\_stop          | string sound<br/>---<br/>int8 success                                                           |
-| [/`<`device\_name`>`/set\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_set\_language | string language<br/>---<br/>int8 success                                                        |
-| [/`<`device\_name`>`/get\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_get\_language | uint8 ask<br/>---<br/>string language<br/>                                                      |
-| [/`<`device\_name`>`/speak](speaker.md#wb_speaker_set_language)         | service       | webots\_ros::speaker\speak          | string text<br/>float64 volume<br/>---<br/>int8 success<br/>                                    |
+| name                                                                    | service/topic | data type                           | data type definition                                                                                         |
+| ----------------------------------------------------------------------- | ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [/`<`device\_name`>`/play\_sound](speaker.md#wb_speaker_play_sound)     | service       | webots\_ros::speaker\_play\_sound   | string sound<br/>float64 volume<br/>float64 pitch<br/>float64 balance<br/>int8 loop<br/>---<br/>int8 success |
+| [/`<`device\_name`>`/stop](speaker.md#wb_speaker_stop)                  | service       | webots\_ros::speaker\_stop          | string sound<br/>---<br/>int8 success                                                                        |
+| [/`<`device\_name`>`/set\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_set\_language | string language<br/>---<br/>int8 success                                                                     |
+| [/`<`device\_name`>`/get\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_get\_language | uint8 ask<br/>---<br/>string language<br/>                                                                   |
+| [/`<`device\_name`>`/speak](speaker.md#wb_speaker_set_language)         | service       | webots\_ros::speaker\speak          | string text<br/>float64 volume<br/>---<br/>int8 success<br/>                                                 |
 
 ### Supervisor
 

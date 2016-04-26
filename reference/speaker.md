@@ -115,16 +115,16 @@ This input "text", which consists only of markup tags, plays the generated sound
 ``` c
 #include <webots/speaker.h>
 
-void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double balance, bool loop)
+void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double pitch, double balance, bool loop)
 ```
 
 **Description**
 
 This function allows the user to play a sound file. Currently only wave file are supported. The function takes in argument two speaker `WbDeviceTag` respectively for the left and right channels. If booth channels should be played on the same speaker or the file has only one channel, it is possible to send the same tag twice. Alternatively, if one channel should be ignore, it is possible to send `0` instead of one of the two tags.
 
-The `sound` argument should specify the path to the wave file that should be played. The volume allows the user to specify the volume of this sound (between 0.0 and 1.0). The balance allows the user to specify the balance between left and right speaker (between -1.0 and +1.0, for respectively only left and only right). Finaly, the `loop` argument allows the user to set if the sound should be played only once or in a loop.
+The `sound` argument should specify the path to the wave file that should be played. The volume allows the user to specify the volume of this sound (between 0.0 and 1.0). The pitch allows the user to modify the pitch of the sound, the real pitch is multiplied by the pitch argument (the pitch should be positive, 1.0 means no pitch change). The balance allows the user to specify the balance between left and right speaker (between -1.0 and +1.0, for respectively only left and only right). Finaly, the `loop` argument allows the user to set if the sound should be played only once or in a loop.
 
-It is possible to change the volume, balance, and loop parameters of a sound already playing by calling again the function with the same speakers with the same `sound` argument.
+It is possible to change the volume, pitch, balance, and loop parameters of a sound already playing by calling again the function with the same speakers with the same `sound` argument.
 
 
 > **note**:

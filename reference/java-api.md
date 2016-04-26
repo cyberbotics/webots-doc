@@ -699,17 +699,17 @@ The following tables describe the Java classes and their methods.
 
 %api "java_speaker"
 
-|                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Speaker;                                                                                                                               |
-| public class [Speaker](speaker.md) extends [Device](#java_device) {                                                                                                             |
-| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                    |
-| &nbsp;&nbsp; public static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker left, Speaker right, String sound, double volume, double balance, bool loop); |
+|                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Speaker;                                                                                                                                 |
+| public class [Speaker](speaker.md) extends [Device](#java_device) {                                                                                                               |
+| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                      |
+| &nbsp;&nbsp; public static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker left, Speaker right, String sound, double volume, double pitch, double balance, bool loop); |
 | &nbsp;&nbsp; public void [stop](speaker.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
 | &nbsp;&nbsp; public void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                          |
 | &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_set_language)();                                                                                              |
 | &nbsp;&nbsp; public void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
-| };                                                                                                                                                                              |
+| };                                                                                                                                                                                |
 
 %end
 

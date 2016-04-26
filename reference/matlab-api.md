@@ -575,13 +575,13 @@ The following tables describe the Matlab functions.
 
 %api "matlab_speaker"
 
-| % [Speaker](speaker.md) :                                                                            |
-| ---------------------------------------------------------------------------------------------------- |
-| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, balance, loop) |
-| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                            |
-| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                         |
-| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                        |
-| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                            |
+| % [Speaker](speaker.md) :                                                                                   |
+| ----------------------------------------------------------------------------------------------------------- |
+| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
+| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
+| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
+| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
+| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
 
 %end
 

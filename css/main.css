@@ -628,6 +628,9 @@ a.carousel-caption {
 #navigation {
   margin: 0 2.5em 0;
 }
+#title {
+  margin-top: 40px;
+}
 #view {
   padding-top:0;
   padding-bottom:60px;

@@ -9,7 +9,7 @@ Speaker {
 
 ### Description
 
-The [Speaker](#speaker) node can be used to play sounds and perform text-to-speech.
+The [Speaker](#speaker) node represents a loudspeaker device that can be embbed onboard a robot or standing in the environment. It can be used to play sounds and perform text-to-speech from the controller API.
 
 ### Speaker Functions
 

@@ -274,7 +274,7 @@ p' = R * p + T
 ```
 
 where *p* is a point whose coordinates are given with respect to the local
-coordinate system of a node, *R* the the rotation matrix returned by
+coordinate system of a node, *R* the rotation matrix returned by
 `wb_supervisor_node_get_orientation(node)`, *T* is the position returned by
 `wb_supervisor_node_get_position(node)` and *p'* represents the same point but
 this time with coordinates expressed in the global (world) coordinate system.
@@ -1041,4 +1041,3 @@ an MF\_NODE (like if the node was manually removed from the scene tree).
 Note that these functions are still limited in the actual Webots version. For
 example, a device imported into a Robot node doesn't reset the Robot, so the
 device cannot be get by using the `wb_robot_get_device()` function.
-

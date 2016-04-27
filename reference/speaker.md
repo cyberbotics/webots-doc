@@ -112,21 +112,18 @@ In this example, the enclosed text is structured as a sentence.
 Hello, <pitch level="140"> Miss Jones </pitch> arrived.
 ```
 In this example, the section "Miss Jones" will be produced at a pitch level of a factor of 1.4 higher than normal.
-The pitch level can be set relative to the current setting by adding a percent character to the level value. E.g. setting the level to "150%" will set the pitch level to 150% of the current value. This can be useful in case of nested pitch tags. Allowed percentage values lie between 50% and 200%. Reducing and increasing the pitch level by a percentage is achievable by pre-prending a plus or minus character to the level value. When setting for example the level to "-20%" the current pitch will be reduced by 20%. Allowed percentage change values lie between -50% and +100%.
 
 - `speed`: The markup tag `<speed level="...">` changes the general speed level of the specified text portion to the value given by the parameter level. The normal speed level is 100, the allowed values lie between 20 (slowing down by a factor of 5) and 500 (speeding up by a factor of 5). The end tag `</speed>` resets the speed level to 100. Example:
 ```
 Hello, <speed level="300"> Miss Jones </speed> arrived.
 ```
 In this example, the section "Miss Jones" will be produced by a factor of 3 faster than normal.
-As for the pitch markup tag, relative speed levels and percentage changes can be specified using the percent, plus, and minus characters in the level value.
 
 - `volume`: The markup tag `<volume level="...">` changes the volume level of the specified text portion to the value given by the parameter level. The normal volume level is 100. Increasing the volume level (values > 100) may result in degraded signal quality due to saturation effects (clipping) and is not recommended. The allowed volume levels lie between 0 (i.e. no audible output) and 500 (increasing the volume by a factor of 5). The end tag `</volume>` resets the volume level to 100. Example:
 ```
 Hello, Miss <volume level="50"> Jones </volume> arrived.
 ```
 In this example, the volume of the section "Jones" will be decreased by a factor of 2.
-As for the pitch markup tag, relative volume levels and percentage changes can be specified using the percent, plus, and minus characters in the level value.
 
 - `play`: Using the empty tag `<play file="..."/>` or tag pair `<play file="..."> ... </play>` results in insertion of the specified sound file in the synthesized signal at the place specified in the input text. In the first variant, the sound file is played at the position where the combined tag is set, in the second variant the sound file is played as a substitute of the text between the start and the end tag, that is, the text between the start and the end tag is ignored. The sampling frequency of the input sound file must be identical to the sampling frequency of the synthesized signal. Examples:
 ```

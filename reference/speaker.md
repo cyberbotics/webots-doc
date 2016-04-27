@@ -76,12 +76,12 @@ void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume)
 
 The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech engine. The `language` parameter should be set to one of the following values:
 
-  - "en-US" for American English (default value)
-  - "en-UK" for British English
-  - "de-DE" for German
-  - "es-ES" for Spanish
-  - "fr-FR" for French
-  - "it-IT" for Italian
+  - `"en-US"` for American English (default value)
+  - `"en-UK"` for British English
+  - `"de-DE"` for German
+  - `"es-ES"` for Spanish
+  - `"fr-FR"` for French
+  - `"it-IT"` for Italian
 
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech.
 

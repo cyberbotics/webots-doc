@@ -128,7 +128,7 @@ It is possible to change the volume, pitch, balance, and loop parameters of a so
 
 
 > **note**:
-The path to the sound file should be defined either absolutely or relatively to the controller.
+The path to the sound file should be defined either absolutely or relatively to the controller or to the PROTO (if the robot is a PROTO).
 
 
 ---

@@ -9,7 +9,7 @@ Speaker {
 
 ### Description
 
-The [Speaker](#speaker) node represents a loudspeaker device that can be embbed onboard a robot or standing in the environment. It can be used to play sounds and perform text-to-speech from the controller API.
+The [Speaker](#speaker) node represents a loudspeaker device that can be embbeded onboard a robot or standing in the environment. It can be used to play sounds and perform text-to-speech from the controller API.
 
 ### Speaker Functions
 
@@ -34,7 +34,7 @@ The `sound` argument specifies the path to the wave file that should be played. 
 It is possible to change the volume, pitch, balance, and loop parameters of a sound currently playing by calling again the `wb_speaker_play_sound` function with the same speakers and `sound` arguments.
 
 > **note**:
-The path to the sound file should be defined either absolutely or relatively. If defined relatively, it be searched first relatively to the robot controller folder. If not found there and if the robot is a PROTO, it will be searched relatively to the PROTO folder of the robot.
+The path to the sound file should be defined either absolutely or relatively. If defined relatively, it will be searched first relatively to the robot controller folder. If not found there and if the robot is a PROTO, it will be searched relatively to the PROTO folder of the robot.
 
 ---
 

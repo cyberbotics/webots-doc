@@ -2,13 +2,16 @@
 
 Documentation for the Cyberbotics' Webots software
 
+## To view the current gh-pages branch:
 
-## Online result
+- https://www.cyberbotics.com/doc/guide/
+- https://www.cyberbotics.com/doc/reference/
+- https://www.cyberbotics.com/doc/automobile/
+- https://www.cyberbotics.com/doc/darwin-op/
 
-- http://omichel.github.io/webots-doc/?book=guide
-- http://omichel.github.io/webots-doc/?book=reference
-- http://omichel.github.io/webots-doc/?book=automobile
-- http://omichel.github.io/webots-doc/?book=darwin-op
+## To view a specific branch:
+
+- https://www.cyberbotics.com/doc/guide/guide?version=branch-name
 
 
 ## Run the doc offline

@@ -27,51 +27,60 @@ Following command line options are available when starting Webots from a
 Terminal (Linux/Mac) or a Command Prompt (Windows):
 
 ```
-SYNOPSIS: webots [options] [worldfile]
-OPTIONS:
-  --minimize                  minimize Webots window on startup
-  --fullscreen                start Webots in fullscreen
-  --mode=<mode>               choose startup mode (overrides
-                              application preferences)
-                              argument <mode> must be one of:
-                              pause, realtime, run or fast
-                              (Webots PRO is required to use:
-                              --mode==run or --mode=fast)
-  --help                      display this help message and exit
-  --sysinfo                   display information of the system and
-                              exit
-  --version                   display version information and exit
-  --uuid                      display the UUID of the computer and exit
-  --stdout                    redirect the controller stdout to the
-                              terminal
-  --stderr                    redirect the controller stderr to the
-                              terminal
-  --batch                     prevent Webots from creating blocking
-                              pop-up windows
-  --start-streaming-server    starts the Webots streaming server
-                              (Webots PRO is required)
-    [="key[=value];..."]         parameters may be given as an option:
-                                   port=1234 :
-                                     starts the streaming server
-                                     on port 1234
-                                   monitorActivity :
-                                     prints a dot '.' on stdout every
-                                     5 seconds
-                                   disableStandardStreamsRedirection :
-                                     disables the streaming of the
-                                     standard output and error streams
-  --log-performance="<file path>[,<steps count>]"
-                              measure the performance of Webots and
-                              log it in the specified <file path>
-                              file. <steps count> is an optional
-                              integer value that specifies how many
-                              steps are analyzed. If '--sysinfo' is
-                              also set then the system information are
-                              printed in the log file.
-  --ogre-log                  redirect the uncritical Ogre log messages
-                              to the Webots console (or to the standard
-                              output stream if the --stdout option
-                              is enabled).
+Usage: webots [options] [worldfile]
+
+Options:
+
+  --help
+    Display this help message and exit.
+
+  --version
+    Display version information and exit.
+
+  --sysinfo
+    Display information about the system and exit.
+
+  --uuid
+    Display the UUID of the computer and exit.
+
+  --mode=<mode>
+    Choose the startup mode, overriding application preferences. The <mode>
+    argument must be either pause, realtime, run or fast. Webots PRO is
+    required to use: --mode=run or --mode=fast.
+
+  --fullscreen
+    Start Webots in fullscreen.
+
+  --minimize
+    Minimize the Webots window on startup.
+
+  --batch
+    Prevent Webots from creating blocking pop-up windows.
+
+  --stdout
+    Redirect the stdout of the controllers to the terminal.
+
+  --stderr
+    Redirect the stderr of the controllers to the terminal.
+
+  --stream[="key[=value];..."]
+    Start the Webots streaming server (Webots PRO required). Parameters may be
+    given as an option:
+      port=1234          - Start the streaming server on port 1234.
+      monitorActivity    - Print a dot '.' on stdout every 5 seconds.
+      disableTextStreams - Disable the streaming of stdout and stderr.
+
+  --log-performance=<file>[,<steps>]
+    Measure the performance of Webots and log it in the file specified in the
+    <file> argument. The optional <steps> argument is an integer value that
+    specifies how many steps are logged. If the --sysinfo option is used, the
+    system information is prepended into the log file.
+
+  --enable-ogre-warnings
+    Redirect the uncritical Ogre log messages to the Webots console or to the
+    standard output stream if the --stdout option is used.
+
+Please report any bug to http://www.cyberbotics.com/bug
 ```
 
 The optional `worldfile` argument specifies the name of a .wbt file to open. If
@@ -101,27 +110,20 @@ to redirect the controllers output to a file or to pipe it to a shell command.
 redirects the *stderr* stream. Note that the *stderr* stream may also contain
 Webots error or warning messages.
 
-The `--start-streaming-server` option starts the Webots streaming server. An
-option can be given to change the default parameters of the streaming server.
-This option is a string containing a list of parameter keys and their values
-separated by semicolons. The supported options are described in [this
-table](#streaming-server-options).
+The `--stream` option starts the Webots streaming server. An option can be given to change the default parameters of the streaming server. This option is a string containing a list of parameter keys and their values separated by semicolons. The supported options are described in [this table](#streaming-server-options).
 
-The `--ogre-log` option redirects the uncritical Ogre log messages to the Webots
-console. The critical Ogre log messages are redirected there in any case. If the
-`--stdout` option is enabled then the uncritical Ogre log messages are
-redirected to the *stdout* stream of the Webots executable instead. Similarily,
-the `--stderr` option is redirecting the Ogre critical messages to the *stderr*
-stream.
+The `--enable-ogre-warnings` option redirects the uncritical Ogre log messages to the Webots console. The critical Ogre log messages are redirected there in any case. If the `--stdout` option is enabled then the uncritical Ogre log messages are redirected to the *stdout* stream of the Webots executable instead. Similarily, the `--stderr` option is redirecting the Ogre critical messages to the *stderr* stream.
 
 %figure "Streaming server options"
 
-| Key  | Value example | Description                                    |
-| ---- | ------------- | ---------------------------------------------- |
-| port | 1234          | The port on which the streaming server is open |
+| Key                | Value example | Description                                     |
+| ------------------ | ------------- | ----------------------------------------------- |
+| port               | 1234          | The port on which the streaming server is open. |
+| monitorActivity    |               | Print a dot '.' on stdout every 5 seconds.      |
+| disableTextStreams |               | Disable the streaming of stdout and stderr.     |
+
 
 %end
 
-For example, the following command will start Webots with the streaming server
-enabled on the TCP port '1234': `webots --start-streaming-server="port:1234"`
+For example, the following command will start Webots with the streaming server enabled on the TCP port '1234' and will disable the streaming of stdout and stderr: `webots --stream="port:1234;disableTextStreams"`
 

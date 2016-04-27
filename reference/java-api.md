@@ -53,12 +53,11 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public static int [imageGetRed](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);   |
 | &nbsp;&nbsp; public static int [imageGetGreen](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y); |
 | &nbsp;&nbsp; public static int [imageGetBlue](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
-| &nbsp;&nbsp; public static int [imageGetGrey](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
+| &nbsp;&nbsp; public static int [imageGetGray](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
 | &nbsp;&nbsp; public static int [pixelGetRed](camera.md#wb_camera_get_image)(int pixel);                              |
 | &nbsp;&nbsp; public static int [pixelGetGreen](camera.md#wb_camera_get_image)(int pixel);                            |
 | &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp; public static int [pixelGetGrey](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                   |
+| &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |                                                               |
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
 | }                                                                                                                    |
 
@@ -748,4 +747,3 @@ The following tables describe the Java classes and their methods.
 | }                                                                                         |
 
 %end
-

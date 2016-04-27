@@ -335,7 +335,7 @@ source code for this controller is in the "khepera\_gripper" directory.
 %end
 
 In this example, you can see a Khepera robot from K-Team equipped with a K213
-`Camera` device. This camera is a linear vision turret with greyscale images.
+`Camera` device. This camera is a linear vision turret with grayscale images.
 Using this device, the robot is able to translate the information contained in
 the image into text and print this result in the Console window. When you load
 this world, the robot will not begin to move immediately. It will give you
@@ -549,4 +549,3 @@ stride length factor:
 - W: Decrease frequency
 - S: Increase stride length factor
 - A: Decrease stride length factor
-

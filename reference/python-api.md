@@ -377,8 +377,8 @@ The following tables describe the Python classes and their methods.
 
 |                                                      |
 | ---------------------------------------------------- |
-| from controller import WbLidarPoint                  |
-| class [WbLidarPoint](lidar.md#wblidarpoint) :        |
+| from controller import LidarPoint                    |
+| class [LidarPoint](lidar.md#wblidarpoint) :          |
 | &nbsp;&nbsp; [self.x](lidar.md#wblidarpoint)         |
 | &nbsp;&nbsp; [self.y](lidar.md#wblidarpoint)         |
 | &nbsp;&nbsp; [self.z](lidar.md#wblidarpoint)         |
@@ -531,8 +531,8 @@ The following tables describe the Python classes and their methods.
 
 |                                                            |
 | ---------------------------------------------------------- |
-| from controller import WbRadarTarget                       |
-| class [WbRadarTarget](#python_radar_target) :              |
+| from controller import RadarTarget                         |
+| class [RadarTarget](#python_radar_target) :                |
 | &nbsp;&nbsp; self.distance                                 |
 | &nbsp;&nbsp; self.received\_power                          |
 | &nbsp;&nbsp; self.speed                                    |

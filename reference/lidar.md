@@ -71,6 +71,12 @@ The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin. The
 point was acquired. With lidar devices, all the points are not acquired at the
 exact same time but rather sequentially.
 
+> **note** [C++]:
+In C++ the name of the structure is `LidarPoint`.
+
+> **note** [Java/Python]:
+In Java and Python, the structure is replaced by a class called `LidarPoint`.
+
 ### Field Summary
 
 - The `tiltAngle` field defines the tilt angle of the sensor (rotation around the

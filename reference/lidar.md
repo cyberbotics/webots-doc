@@ -71,6 +71,12 @@ The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin. The
 point was acquired. With lidar devices, all the points are not acquired at the
 exact same time but rather sequentially.
 
+> **note** [C++]:
+In C++ the name of the structure is `LidarPoint`.
+
+> **note** [Java/Python]:
+In Java and Python, the structure is replaced by a class called `LidarPoint`.
+
 ### Field Summary
 
 - The `tiltAngle` field defines the tilt angle of the sensor (rotation around the
@@ -80,7 +86,7 @@ layers.
 - The `fieldOfView` field defines the horizontal field of view angle of the lidar. The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
 - The `verticalFieldOfView` field defines the vertical repartition of the layers
 (angle between first and last layer).
-- The `NumberOfLayers` field defines the number of layers (number of lasers).
+- The `numberOfLayers` field defines the number of layers (number of lasers).
 - The `minRange` field defines the minimum range of the lidar (objects closer to
 the lidar than the minimum range are not seen from the lidar).
 - The `maxRange` field defines the distance between the lidar and the far clipping
@@ -117,11 +123,11 @@ image. More information on compositors is provided in the
 [compositor](camera.md) field description of the [Camera](camera.md) node.
 
 > **note**:
-The fields `NumberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and
+The fields `numberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and
 `fieldOfView` should respect the following constraint in order to be able to
 simulate the lidar:
 
-        NumberOfLayers < verticalFieldOfView * horizontalResolution / fieldOfView
+        numberOfLayers < verticalFieldOfView * horizontalResolution / fieldOfView
 
     In case of 'rotating' lidar, the `fieldOfView` term in the constraint is
     replaced by `2 * π`.

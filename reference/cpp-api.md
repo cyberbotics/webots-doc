@@ -373,8 +373,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; bool [isPointCloudEnabled](lidar.md#wb_lidar_enable_point_cloud)();                                                     |
 | &nbsp;&nbsp; const float * [getRangeImage](lidar.md#wb_lidar_get_range_image)() const;                                               |
 | &nbsp;&nbsp; const float * [getLayerRangeImage](lidar.md#wb_lidar_get_range_image)(int layer) const;                                 |
-| &nbsp;&nbsp; const [WbLidarPoint](lidar.md#wblidarpoint) * [getPointCloud](lidar.md#wb_lidar_get_point_cloud)() const;               |
-| &nbsp;&nbsp; const [WbLidarPoint](lidar.md#wblidarpoint) * [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer) const; |
+| &nbsp;&nbsp; const [LidarPoint](lidar.md#wblidarpoint) * [getPointCloud](lidar.md#wb_lidar_get_point_cloud)() const;                 |
+| &nbsp;&nbsp; const [LidarPoint](lidar.md#wblidarpoint) * [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer) const;   |
 | &nbsp;&nbsp; int [getNumberOfPoints](lidar.md#wb_lidar_get_point_cloud)() const;                                                     |
 | &nbsp;&nbsp; double [getFrequency](lidar.md#wb_lidar_get_frequency)() const;                                                         |
 | &nbsp;&nbsp; void [setFrequency](lidar.md#wb_lidar_get_frequency)(double frequency);                                                 |
@@ -528,7 +528,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [disable](radar.md#wb_radar_enable)();                        |
 | &nbsp;&nbsp; int [getSamplingPeriod](radar.md#wb_radar_enable)();                       |
 | &nbsp;&nbsp; int [getNumberOfTargets](radar.md#wb_radar_get_number_of_targets)() const; |
-| &nbsp;&nbsp; const WbRadarTarget *[getTargets](radar.md#wb_radar_get_targets)() const;  |
+| &nbsp;&nbsp; const RadarTarget *[getTargets](radar.md#wb_radar_get_targets)() const;    |
 | &nbsp;&nbsp; double [getMinRange](radar.md#wb_radar_get_min_range)() const;             |
 | &nbsp;&nbsp; double [getMaxRange](radar.md#wb_radar_get_min_range)() const;             |
 | &nbsp;&nbsp; double [getHorizontalFov](radar.md#wb_radar_get_horizontal_fov)() const;   |

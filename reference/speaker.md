@@ -10,31 +10,31 @@ field  SFString  language "en-US"  # language used for the text-to-speech
 
 ### Description
 
-The [Speaker](#speaker) node can be used to play sounds and to perform text to speech.
+The [Speaker](#speaker) node can be used to play sounds and to perform text-to-speech.
 
 ### Field Summary
 
-- `language`: Language used for the text to speech. The following languages are supported: "en-US", "en-UK", "de-DE", "es-ES", "fr-FR", and  "it-IT".
+- `language`: Language used for the text-to-speech. The following languages are supported: "en-US", "en-UK", "de-DE", "es-ES", "fr-FR", and  "it-IT".
 
-### Text to speach
+### Text-to-speech
 
-The [Speaker](#speaker) node provide text to speech functionality, the following language are supported for now:
-  - American English
-  - British English
-  - German
-  - Spanish
-  - French
-  - Italian
+The [Speaker](#speaker) node provides a text-to-speech functionality in the following languages:
+  - American English (en-US)
+  - British English (en-UK)
+  - German (de-DE)
+  - Spanish (es-ES)
+  - French (fr-FR)
+  - Italian (it-IT)
 
-The text send to the text to speech is converted in sound by Webots and then played using the speaker. The text can be enriched using tags in order to make it more realistic.
+The text passed to the text-to-speech function is converted into sound by Webots and played through the speaker. The text can be enriched with special effect to make it more realistic. Such effects are speficied with XML tags.
 
-#### Text to speech tags
+#### Text-to-speech XML tags
 
 - `ignore`: A text portion marked by `<ignore> ... </ignore>` is fully ignored by the synthesis. Ignored sections may be nested. Example:
 ```
 Hello <ignore> any text </ignore> Mister Smith.
 ```
-In this example, the input text is synthesized as if it were only the sentence "Hello Mister Smith."
+This example is equivalent to sending "Hello Mister Smith." to the text-to-speech engine.
 
 - `p` of `paragraph`: Paragraph structures can be marked by `<p> ... </p>` or its extended form `<paragraph> ... </paragraph>`. In most cases, Webots automatically detects paragraph structures. The `<p>` tag can be used to enforce the setting of a paragraph structure. Example:
 ```

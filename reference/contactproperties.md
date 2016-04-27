@@ -30,7 +30,7 @@ When two [Solid](solid.md) nodes collide, a matching
 [ContactProperties](#contactproperties) node is searched in the
 [WorldInfo](worldinfo.md).`contactProperties` field. A
 [ContactProperties](#contactproperties) node will match if its `material1` and
-`material2` fields correspond (in any order) to the the `contactMaterial` fields
+`material2` fields correspond (in any order) to the `contactMaterial` fields
 of the two colliding [Solid](solid.md)s. The values of the first matching
 [ContactProperties](#contactproperties) are applied to the contact. If no
 matching node is found, default values are used. The default values are the same
@@ -141,4 +141,3 @@ sounds. They are subject to improvements.
 The youBot robot is a good example of asymmetric coulombFriction and
 forceDependentSlip, it is located in
 WEBOTS\_HOME/projects/robot/youbot/worlds/youbot.wbt.
-

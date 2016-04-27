@@ -4,91 +4,12 @@ Derived from [Device](device.md).
 
 ```
 Speaker {
-field  SFString  language "en-US"  # language used for the text-to-speech
 }
 ```
 
 ### Description
 
-The [Speaker](#speaker) node can be used to play sounds and to perform text-to-speech.
-
-### Field Summary
-
-- `language`: Language used for the text-to-speech. The following languages are supported: "en-US", "en-UK", "de-DE", "es-ES", "fr-FR", and  "it-IT".
-
-### Text-to-speech
-
-The [Speaker](#speaker) node provides a text-to-speech functionality in the following languages:
-  - American English (en-US)
-  - British English (en-UK)
-  - German (de-DE)
-  - Spanish (es-ES)
-  - French (fr-FR)
-  - Italian (it-IT)
-
-The text passed to the text-to-speech function is converted into sound by Webots and played through the speaker. The text can be enriched with special effect to make it more realistic. Such effects are speficied with XML tags.
-
-#### Text-to-speech XML tags
-
-- `ignore`: A text portion marked by `<ignore> ... </ignore>` is fully ignored by the synthesis. Ignored sections may be nested. Example:
-```
-Hello <ignore> any text </ignore> Mister Smith.
-```
-This example is equivalent to sending "Hello Mister Smith." to the text-to-speech engine.
-
-- `p` of `paragraph`: Paragraph structures can be marked by `<p> ... </p>` or its extended form `<paragraph> ... </paragraph>`. In most cases, Webots automatically detects paragraph structures. The `<p>` tag can be used to enforce the setting of a paragraph structure. Example:
-```
-<p> This is a paragraph. </p>
-```
-In this example, the enclosed text is structured as a paragraph.
-
-- `s` of `sentence`: Sentence structures can be marked by `<s> ... </s>` or its extended form `<sentence>... </sentence>`. In most cases, Webots automatically detects sentence structures. The `<s>` tag can be used to enforce the setting of a sentence structure. Example:
-```
-<s> This is a sentence. </s>
-```
-In this example, the enclosed text is structured as a sentence.
-
-- `pitch`: The markup tag `<pitch level="...">` changes the general pitch level of the specified text portion to the value given by the parameter level. The normal pitch level is 100, the allowed values lie between 50 (one octave lower) and 200 (one octave higher). The end tag `</pitch>` resets the pitch level to 100. Example:
-```
-Hello, <pitch level="140"> Miss Jones </pitch> arrived.
-```
-In this example, the section "Miss Jones" will be produced at a pitch level of a factor of 1.4 higher than normal.
-The pitch level can be set relative to the current setting by adding a percent character to the level value. E.g. setting the level to "150%" will set the pitch level to 150% of the current value. This can be useful in case of nested pitch tags. Allowed percentage values lie between 50% and 200%. Reducing and increasing the pitch level by a percentage is achievable by pre-prending a plus or minus character to the level value. When setting for example the level to "-20%" the current pitch will be reduced by 20%. Allowed percentage change values lie between -50% and +100%.
-
-- `speed`: The markup tag `<speed level="...">` changes the general speed level of the specified text portion to the value given by the parameter level. The normal speed level is 100, the allowed values lie between 20 (slowing down by a factor of 5) and 500 (speeding up by a factor of 5). The end tag `</speed>` resets the speed level to 100. Example:
-```
-Hello, <speed level="300"> Miss Jones </speed> arrived.
-```
-In this example, the section "Miss Jones" will be produced by a factor of 3 faster than normal.
-As for the pitch markup tag, relative speed levels and percentage changes can be specified using the percent, plus, and minus characters in the level value.
-
-- `volume`: The markup tag `<volume level="...">` changes the volume level of the specified text portion to the value given by the parameter level. The normal volume level is 100. Increasing the volume level (values > 100) may result in degraded signal quality due to saturation effects (clipping) and is not recommended. The allowed volume levels lie between 0 (i.e. no audible output) and 500 (increasing the volume by a factor of 5). The end tag `</volume>` resets the volume level to 100. Example:
-```
-Hello, Miss <volume level="50"> Jones </volume> arrived.
-```
-In this example, the volume of the section "Jones" will be decreased by a factor of 2.
-As for the pitch markup tag, relative volume levels and percentage changes can be specified using the percent, plus, and minus characters in the level value.
-
-- `play`: Using the empty tag `<play file="..."/>` or tag pair `<play file="..."> ... </play>` results in insertion of the specified sound file in the synthesized signal at the place specified in the input text. In the first variant, the sound file is played at the position where the combined tag is set, in the second variant the sound file is played as a substitute of the text between the start and the end tag, that is, the text between the start and the end tag is ignored. The sampling frequency of the input sound file must be identical to the sampling frequency of the synthesized signal. Examples:
-```
-Hello, Miss <play file="miller.wav"/>.
-Hello, Miss <play file="miller.wav"> Miller </play>.
-```
-In this example, the "miller.wav" sound file is played instead of pronouncing the "Miller" word using text-to-speech.
-
-- `genfile`: Using the markup section `<genfile file="..."> ... </genfile>` an arbitrary text portion can be saved to a separate sound file. The markup tag `<genfile>` can be used especially for creating synthetic voice prompts. Examples:
-```
-<genfile file="intro.wav"> Hello, Mister </genfile>
-<genfile file="miller.wav"> Miller, </genfile>
-<genfile file="rem.wav"> welcome.</genfile>
-Hello, Mister <genfile file="smith.wav"> Smith, </genfile> welcome.
-```
-In this example, three parts of the first sentence "Hello, Mister Miller, welcome." are saved in separate sound files of type wav, and the part "Smith," of the second sentence is also saved in a separate file. These generated sound files can, for instance, be used to generate a newly combined utterance using the markup tag `<play>`:
-```
-<play file="intro.wav"/> <play file="smith.wav"/>
-<play file="rem.wav"/>
-```
-This input "text", which consists only of markup tags, plays the generated sound files as if the (new) sentence "Hello, Mister Smith, welcome." had been synthesized, but, of course, with much less processing time. It is essential to note that the sentence part "Smith," should be synthesized and saved to a sound file in the appropriate sentence environment in order for the newly combined utterance to have a continuous melody and rhythm.
+The [Speaker](#speaker) node can be used to play sounds and perform text-to-speech.
 
 ### Speaker Functions
 
@@ -153,8 +74,77 @@ void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume)
 
 **Description**
 
-The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech.
+The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech engine. The `language` parameter should be set to one of the following values:
+
+  - "en-US" for American English (default value)
+  - "en-UK" for British English
+  - "de-DE" for German
+  - "es-ES" for Spanish
+  - "fr-FR" for French
+  - "it-IT" for Italian
 
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech.
 
-The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. 
+The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speaker. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effect to make it more realistic. Such effects are speficied with XML tags.
+
+**Text-to-speech XML tags**
+
+- `ignore`: A text portion marked by `<ignore> ... </ignore>` is fully ignored by the synthesis. Ignored sections may be nested. Example:
+```
+Hello <ignore> any text </ignore> Mister Smith.
+```
+This example is equivalent to sending "Hello Mister Smith." to the text-to-speech engine.
+
+- `p` of `paragraph`: Paragraph structures can be marked by `<p> ... </p>` or its extended form `<paragraph> ... </paragraph>`. In most cases, Webots automatically detects paragraph structures. The `<p>` tag can be used to enforce the setting of a paragraph structure. Example:
+```
+<p> This is a paragraph. </p>
+```
+In this example, the enclosed text is structured as a paragraph.
+
+- `s` of `sentence`: Sentence structures can be marked by `<s> ... </s>` or its extended form `<sentence>... </sentence>`. In most cases, Webots automatically detects sentence structures. The `<s>` tag can be used to enforce the setting of a sentence structure. Example:
+```
+<s> This is a sentence. </s>
+```
+In this example, the enclosed text is structured as a sentence.
+
+- `pitch`: The markup tag `<pitch level="...">` changes the general pitch level of the specified text portion to the value given by the parameter level. The normal pitch level is 100, the allowed values lie between 50 (one octave lower) and 200 (one octave higher). The end tag `</pitch>` resets the pitch level to 100. Example:
+```
+Hello, <pitch level="140"> Miss Jones </pitch> arrived.
+```
+In this example, the section "Miss Jones" will be produced at a pitch level of a factor of 1.4 higher than normal.
+The pitch level can be set relative to the current setting by adding a percent character to the level value. E.g. setting the level to "150%" will set the pitch level to 150% of the current value. This can be useful in case of nested pitch tags. Allowed percentage values lie between 50% and 200%. Reducing and increasing the pitch level by a percentage is achievable by pre-prending a plus or minus character to the level value. When setting for example the level to "-20%" the current pitch will be reduced by 20%. Allowed percentage change values lie between -50% and +100%.
+
+- `speed`: The markup tag `<speed level="...">` changes the general speed level of the specified text portion to the value given by the parameter level. The normal speed level is 100, the allowed values lie between 20 (slowing down by a factor of 5) and 500 (speeding up by a factor of 5). The end tag `</speed>` resets the speed level to 100. Example:
+```
+Hello, <speed level="300"> Miss Jones </speed> arrived.
+```
+In this example, the section "Miss Jones" will be produced by a factor of 3 faster than normal.
+As for the pitch markup tag, relative speed levels and percentage changes can be specified using the percent, plus, and minus characters in the level value.
+
+- `volume`: The markup tag `<volume level="...">` changes the volume level of the specified text portion to the value given by the parameter level. The normal volume level is 100. Increasing the volume level (values > 100) may result in degraded signal quality due to saturation effects (clipping) and is not recommended. The allowed volume levels lie between 0 (i.e. no audible output) and 500 (increasing the volume by a factor of 5). The end tag `</volume>` resets the volume level to 100. Example:
+```
+Hello, Miss <volume level="50"> Jones </volume> arrived.
+```
+In this example, the volume of the section "Jones" will be decreased by a factor of 2.
+As for the pitch markup tag, relative volume levels and percentage changes can be specified using the percent, plus, and minus characters in the level value.
+
+- `play`: Using the empty tag `<play file="..."/>` or tag pair `<play file="..."> ... </play>` results in insertion of the specified sound file in the synthesized signal at the place specified in the input text. In the first variant, the sound file is played at the position where the combined tag is set, in the second variant the sound file is played as a substitute of the text between the start and the end tag, that is, the text between the start and the end tag is ignored. The sampling frequency of the input sound file must be identical to the sampling frequency of the synthesized signal. Examples:
+```
+Hello, Miss <play file="miller.wav"/>.
+Hello, Miss <play file="miller.wav"> Miller </play>.
+```
+In this example, the "miller.wav" sound file is played instead of pronouncing the "Miller" word using text-to-speech.
+
+- `genfile`: Using the markup section `<genfile file="..."> ... </genfile>` an arbitrary text portion can be saved to a separate sound file. The markup tag `<genfile>` can be used especially for creating synthetic voice prompts. Examples:
+```
+<genfile file="intro.wav"> Hello, Mister </genfile>
+<genfile file="miller.wav"> Miller, </genfile>
+<genfile file="rem.wav"> welcome.</genfile>
+Hello, Mister <genfile file="smith.wav"> Smith, </genfile> welcome.
+```
+In this example, three parts of the first sentence "Hello, Mister Miller, welcome." are saved in separate sound files of type wav, and the part "Smith," of the second sentence is also saved in a separate file. These generated sound files can, for instance, be used to generate a newly combined utterance using the markup tag `<play>`:
+```
+<play file="intro.wav"/> <play file="smith.wav"/>
+<play file="rem.wav"/>
+```
+This input "text", which consists only of markup tags, plays the generated sound files as if the (new) sentence "Hello, Mister Smith, welcome." had been synthesized, but, of course, with much less processing time. It is essential to note that the sentence part "Smith," should be synthesized and saved to a sound file in the appropriate sentence environment in order for the newly combined utterance to have a continuous melody and rhythm.

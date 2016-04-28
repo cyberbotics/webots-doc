@@ -65,5 +65,4 @@ For [HingeJoint](hingejoint.md) and [SliderJoint](sliderjoint.md) nodes
 containing no [JointParameters](jointparameters.md), Webots uses the hidden
 field named `position`. For a [Hinge2Joint](hingejoint.md) node, an additional
 hidden field named `position2` is used to store the joint position with respect
-the the second hinge.
-
+the second hinge.

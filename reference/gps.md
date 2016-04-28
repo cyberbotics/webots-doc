@@ -49,7 +49,7 @@ to -1 (default) means that the sensor has an 'infinite' resolution (it can
 measure any infinitesimal change). This field accepts any value in the interval
 (0.0, inf).
 
-- `speedNoise`: This field defines the the standard deviation (expressed in meter)
+- `speedNoise`: This field defines the standard deviation (expressed in meter)
 of the gaussian noise added to the speed measurements of the GPS.
 
 - `speedResolution`: This field defines the resolution of the speed measurements,
@@ -159,4 +159,3 @@ instead of the degree, minute and second symbols.
 
 > **note** [C]:
 The returned string should be deallocated by the user.
-

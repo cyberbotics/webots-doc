@@ -98,7 +98,7 @@ seek to optimize the locomotion of a robot: it should walk as far as possible.
 Suppose that the robot's locomotion depends on two parameters (a and b), hence
 we have a two-dimensional search space.
 
-In the code, the evaluation of the a and b parameters is carried out in the the
+In the code, the evaluation of the a and b parameters is carried out in the
 `while` loop. The `actuateMotors()` function here is assumed to call
 `wb_motor_set_postion()` for each motor involved in the locomotion. After each
 evaluation the distance travelled by the robot is measured and logged. Then the
@@ -157,4 +157,3 @@ loop makes the robot walk during 60 seconds. One important point here is that
 the call to `wb_robot_step()` is placed in the innermost loop. This allows the
 motor positions to be updated at each iteration of the loop. If
 `wb_robot_step()` was placed anywhere else, this would not work.
-

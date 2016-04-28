@@ -623,27 +623,27 @@ a.carousel-caption {
   width: calc(100% - 4em);
   margin: 1em 1em 0;
   padding: 0 1em 2px 0;
-  top: 0px;
+  top: 0;
 }
 #navigation {
   margin: 0 2.5em 0;
 }
 #title {
   margin-top: 0px;
-  margin-left:40px;
+  margin-left: 40px;
 }
 #view {
-  margin-left:40px;
-  padding-top:0;
-  padding-bottom:60px;
-  margin-bottom:0;
+  margin-left: 40px;
+  padding-top: 0;
+  padding-bottom: 60px;
+  margin-bottom: 0;
 }
 #menu {
   clear: left;
   width: calc(100% - 2em);
   margin: 1em;
-  padding-bottom:0;
-  margin-bottom:0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 #menu ul {
   list-style-type: none;

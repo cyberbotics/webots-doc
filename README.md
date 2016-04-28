@@ -24,10 +24,10 @@ python -m SimpleHTTPServer
 
 In a browser, open:
 
-- [http://localhost:8000/?url=&book=guide](http://localhost:8000/?url=&book=guide)
-- [http://localhost:8000/?url=&book=reference](http://localhost:8000/?url=&book=reference)
-- [http://localhost:8000/?url=&book=automobile](http://localhost:8000/?url=&book=automobile)
-- [http://localhost:8000/?url=&book=dawrin-op](http://localhost:8000/?url=&book=darwin-op)
+- http://localhost:8000/local_index.html?url=&book=guide&page=guide.md
+- http://localhost:8000/local_index.html?url=&book=reference&page=reference.md
+- http://localhost:8000/local_index.html?url=&book=automobile&page=automobile.md
+- http://localhost:8000/local_index.html?url=&book=darwin-op&page=darwin-op.md
 
 
 ## Run the unit tests

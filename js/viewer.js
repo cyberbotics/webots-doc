@@ -350,7 +350,8 @@ function updateMenuScrollbar() {
 function updateSelection() {
     var selected = changeMenuSelection();
     populateNavigation(selected);
-    updateMenuScrollbar();
+    if (!local)
+        updateMenuScrollbar();
 }
 
 function getSelected() {

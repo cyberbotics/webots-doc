@@ -30,7 +30,7 @@
     # anchor is not sent to the server, so it has to be computed by the javascript
   }
 ?>
-    <div id="left">
+    <div id="left" style="top:46px;height:calc(100% - 46px)">
       <div id="navigation">
         <table>
           <tr>
@@ -45,7 +45,7 @@
       </div>
       <div id="menu"></div>
     </div>
-    <div id="center">
+    <div id="center" style="top:30px">
       <div id="title">
         <h2 id="title-content">Documentation</h2>
       </div>

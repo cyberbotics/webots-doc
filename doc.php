@@ -51,11 +51,11 @@
       </div>
       <div id="view"></div>
     </div>
-    <script src="https://www.cyberbotics.com/wwi/8.3/request_methods.js"></script>
+    <script src="https://www.cyberbotics.com/wwi/8.5/request_methods.js"></script>
     <script src="https://www.cyberbotics.com/highlight/9.2.0/highlight.min.js"></script>
     <script src="https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js"></script>
-    <script src="https://www.cyberbotics.com/files/repository/doc/showdown-extensions.js"></script>
-    <script src="https://www.cyberbotics.com/files/repository/doc/viewer.js"></script>
+    <script src="https://www.cyberbotics.com/wwi/8.5/showdown-extensions.js"></script>
+    <script src="https://www.cyberbotics.com/wwi/8.5/viewer.js"></script>
     <script>
     setup = {
         "book":   "<?=$book?>",

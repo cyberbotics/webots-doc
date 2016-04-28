@@ -340,10 +340,9 @@ function updateMenuScrollbar() {
     var e = document.documentElement;
     var t = document.documentElement.scrollTop || document.body.scrollTop;
     var p = e.scrollHeight - t - e.clientHeight;
-    // console.log("height = " + e.scrollHeight + " scrollTop = " + t + " clientHeight = " + e.clientHeight);
-    if (p < 244)
+    if (p < 244) // 244 is the height in pixels of the footer of Cyberbotics web page
         document.getElementById("left").style.height = (e.clientHeight - 290 + p) + "px";
-    else
+    else // 46 is the height in pixels of the header of Cyberbotics web page (46 + 244 = 290)
         document.getElementById("left").style.height = "calc(100% - 46px)";
 }
 

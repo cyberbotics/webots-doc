@@ -8,7 +8,9 @@ if (typeof String.prototype.endsWith !== "function")
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
 
-function setupUrl(url) {
+var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
+
+function setupUrlOnline(url) {
     var book_i = url.indexOf('/doc/', 8) + 5
     var page_i = url.indexOf('/', book_i) + 1
     var version_i = url.indexOf('?version=', page_i) + 9
@@ -45,6 +47,37 @@ function setupUrl(url) {
       setup.tag = '';
       setup.branch = version;
     }
+}
+
+function setupUrlLocal(url) {
+    setup.branch = '';
+    setup.tag = '';
+    setup.utl = '';
+    var book_i = url.indexOf("&book=") + 7;
+    var page_i = url.indexOf("&page=", book_i) + 7;
+    var anchor_i = url.indexOf('#', book_i) + 1;
+    if (anchor_i >= 1) {
+        setup.anchor = url.substr(anchor_i);
+        if (page_i >= 7)
+            setup.page = url.substr(page_i, anchor_i - page_i - 1);
+        else
+            setup.page = '';
+    } else {
+        setup.anchor = ''
+        if (page_i >= 7)
+            setup.page = url.substr(page_i);
+        else
+            setup.page = '';
+    }
+    if (page_i >= 7)
+        setup.book = url.substr(book_i, page_i - book_i);
+}
+
+function setupUrl(url) {
+    if (local)
+        setupUrlLocal()
+    else
+        setupUrlOnline()
     console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor)
 }
 
@@ -67,12 +100,11 @@ function redirectUrls(node) {
     for (var i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        if (! href) {
+        if (!href)
             continue;
-        }
         if (href.startsWith("http")) // open external links in a new window
             a.setAttribute("target", "_blank");
-        else if (href.endsWith("md") || href.indexOf(".md#") > -1) {
+        else if (href.endsWith(".md") || href.indexOf(".md#") > -1) {
             addDynamicLoadEvent(a);
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
@@ -88,7 +120,7 @@ function forgeUrl(page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? anchor : "";
   var currentUrl = location.href;
   var newUrl = currentUrl;
-  if (currentUrl.indexOf("www.cyberbotics.com") > -1) {
+  if (!local) {
     newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
     if (setup.tag!='')
       newUrl += "?version=" + setup.tag;
@@ -97,9 +129,9 @@ function forgeUrl(page, anchor) {
     newUrl += anchorString;
   } else {
       if (currentUrl.indexOf("page=") > -1)
-          newUrl = currentUrl.replace(/page=([\w-]+)\.md(#[\w-]+)?/, "page=" + page + ".md" + anchorString);
+          newUrl = currentUrl.replace(/page=([\w-]+)(#[\w-]+)?/, "page=" + page + anchorString);
       else
-          newUrl = currentUrl + "&page=" + page + ".md" + anchorString;
+          newUrl = currentUrl + "&page=" + page + anchorString;
   }
   return newUrl;
 }
@@ -340,13 +372,25 @@ function changeMenuSelection() {
     for (var i = 0; i < as.length; i++) {
         var a = as[i];
         var href = a.getAttribute("href");
-        var n = href.indexOf('?');
-        if (n > -1)
-          href = href.substring(0, n)
-        n = href.indexOf('#');
-        if (n > -1)
-          href = href.substring(0, n)
-        if (href.endsWith("/doc/" + setup.book + "/" + setup.page)) {
+        var selection;
+        if (local) {
+          if (href.indexOf("page=" + setup.page) > -1)
+              selection = true;
+          else
+              selection = false;
+        } else {
+          var n = href.indexOf('?');
+          if (n > -1)
+              href = href.substring(0, n)
+          n = href.indexOf('#');
+          if (n > -1)
+              href = href.substring(0, n)
+          if (href.endsWith("/doc/" + setup.book + "/" + setup.page))
+              selection = true;
+          else
+              selection = false;
+        }
+        if (selection) {
             var selected = a.parentNode;
             selected.classList.add("selected");
             if (selected.parentNode.parentNode.tagName.toLowerCase() == "li") {
@@ -523,10 +567,25 @@ function extractAnchor() {
 }
 
 window.onscroll=function(){
+    if (local)
+        return;
     updateMenuScrollbar();
 };
 
 document.addEventListener("DOMContentLoaded", function() {
+    if (local) {
+        var url = "";
+        if (location.href.indexOf("url=") > -1)
+            url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/gh-pages/");
+        setup = {
+            "book":   getGETQueryValue("book", "guide"),
+            "page":   getGETQueryValue("page", "guide"),
+            "anchor": extractAnchor(),
+            "branch": getGETQueryValue("branch", "gh-pages"),
+            "url":    url
+        }
+        console.log("Setup: " + JSON.stringify(setup));
+    }
     applyToTitleDiv();
     getMDFile();
     getMenuFile();

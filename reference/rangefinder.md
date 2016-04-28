@@ -8,6 +8,7 @@ RangeFinder {
   SFInt32    width            64
   SFInt32    height           64
   SFBool     spherical        FALSE
+  SFFloat    near             0.01
   SFFloat    minRange         0.01
   SFFloat    maxRange         1.0
   SFFloat    motionBlur       0.0
@@ -50,6 +51,8 @@ projection can be used for example to simulate a lidar device. More information
 on spherical projections is provided in the [spherical
 projection](camera.md#spherical-projection) section of the [Camera](camera.md)
 node.
+
+- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane. This plane is parallel to the camera retina (i.e. projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to put it just big enough so that the shape of the range-finder is not visible.
 
 - The `minRange` field defines the distance from the range-finder to the near
 clipping plane of the OpenGL view frustum. This plane is parallel to the

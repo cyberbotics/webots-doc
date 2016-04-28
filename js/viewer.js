@@ -75,10 +75,10 @@ function setupUrlLocal(url) {
 
 function setupUrl(url) {
     if (local)
-        setupUrlLocal()
+        setupUrlLocal();
     else
-        setupUrlOnline()
-    console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor)
+        setupUrlOnline();
+    console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor);
 }
 
 function computeTargetPath() {

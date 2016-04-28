@@ -5,7 +5,7 @@
 It may happen that the main window of Webots is not refreshed properly and
 appears blank at startup or upon resize or maximization. This is caused by a
 conflict between the Compiz window manager and OpenGL.
-Simply disabling the operating system's visual effecs should fix such a problem.
+Simply disabling the operating system's visual effects should fix such a problem.
 You can easily disable them using some tools like *Compiz Config Settings Manager* or *Unity Tweak Tool*.
 
 ### ssh -x

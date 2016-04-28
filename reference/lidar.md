@@ -37,9 +37,7 @@ field of view is imposed by the size (width and height) of the image (because of
 the constraint of square pixels) and not in the case of the [Lidar](#lidar) node
 where lines of pixels (laser scan) are extracted from the depth buffer.
 
-Lidar cannot see semi-transparent objects. An object can be semi-transparent
-either if its texture has an alpha channel, or if its
-[Material](material.md).`transparency` field is not equal to 1.
+Lidar cannot see semi-transparent objects as if they were not transparent. An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md).`transparency` field is not equal to 1.
 
 By default the [Lidar](#lidar) node outputs the depth values in an array, the
 depth values are order from left to right and from the top to the bottom layer

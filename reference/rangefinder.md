@@ -31,9 +31,7 @@ contains scaled and logarithmic values, an algorithm linearizes the buffer to
 metric values between `minRange` and `maxRange`. This is the buffer which is
 accessible by the `wb_range_finder_get_range_image` function.
 
-Range-finder cannot see semi-transparent objects. An object can be
-semi-transparent either if its texture has an alpha channel, or if its
-[Material](material.md).`transparency` field is not equal to 1.
+Range-finder see semi-transparent objects as if they were not transparent. An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md).`transparency` field is not equal to 1.
 
 ### Field Summary
 

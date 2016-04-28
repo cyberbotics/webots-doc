@@ -45,7 +45,7 @@
       </div>
       <div id="menu"></div>
     </div>
-    <div id="center" style="top:30px">
+    <div id="center" style="top:46px">
       <div id="title">
         <h2 id="title-content">Documentation</h2>
       </div>

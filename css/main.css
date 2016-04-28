@@ -630,8 +630,10 @@ a.carousel-caption {
 }
 #title {
   margin-top: 0px;
+  margin-left:40px;
 }
 #view {
+  margin-left:40px;
   padding-top:0;
   padding-bottom:60px;
   margin-bottom:0;

@@ -75,9 +75,9 @@ function setupUrlLocal(url) {
 
 function setupUrl(url) {
     if (local)
-        setupUrlLocal();
+        setupUrlLocal(url);
     else
-        setupUrlOnline();
+        setupUrlOnline(url);
     console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor);
 }
 

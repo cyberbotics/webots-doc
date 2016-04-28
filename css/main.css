@@ -631,6 +631,7 @@ a.carousel-caption {
 #title {
   margin-top: 0px;
   margin-left: 40px;
+  padding-bottom:0;
 }
 #view {
   margin-left: 40px;

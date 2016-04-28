@@ -11,33 +11,33 @@ if (typeof String.prototype.endsWith !== "function")
 var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
 
 function setupUrlOnline(url) {
-    var book_i = url.indexOf('/doc/', 8) + 5
-    var page_i = url.indexOf('/', book_i) + 1
-    var version_i = url.indexOf('?version=', page_i) + 9
+    var book_i = url.indexOf('/doc/', 8) + 5;
+    var page_i = url.indexOf('/', book_i) + 1;
+    var version_i = url.indexOf('?version=', page_i) + 9;
     var anchor_i;
     if (version_i > 9)
-        anchor_i = url.indexOf('#', version_i) + 1
+        anchor_i = url.indexOf('#', version_i) + 1;
     else
-        anchor_i = url.indexOf('#', page_i) + 1
+        anchor_i = url.indexOf('#', page_i) + 1;
     var version;
-    setup.book = url.substr(book_i, page_i - book_i - 1)
+    setup.book = url.substr(book_i, page_i - book_i - 1);
     if (version_i > 9) {
-        setup.page = url.substr(page_i, version_i - page_i - 9)
+        setup.page = url.substr(page_i, version_i - page_i - 9);
         if (anchor_i > 1) {
-          version = url.substr(version_i, hastag_i - version_i - 1)
-          setup.anchor = url.substr(anchor_i)
+          version = url.substr(version_i, hastag_i - version_i - 1);
+          setup.anchor = url.substr(anchor_i);
         } else {
-          version = url.substr(version_i)
-          setup.anchor = ''
+          version = url.substr(version_i);
+          setup.anchor = '';
         }
     } else {
         version = ''
         if (anchor_i > 1) {
-            setup.page = url.substr(page_i,hastag_i-page_i)
-            setup.anchor = url.substr(anchor_i)
+            setup.page = url.substr(page_i, hastag_i - page_i);
+            setup.anchor = url.substr(anchor_i);
         } else {
-            setup.page = url.substr(page_i)
-            setup.anchor = ''
+            setup.page = url.substr(page_i);
+            setup.anchor = '';
         }
     }
     if (version.match(/^\d+\.\d*(.)+$/)) {
@@ -63,7 +63,7 @@ function setupUrlLocal(url) {
         else
             setup.page = '';
     } else {
-        setup.anchor = ''
+        setup.anchor = '';
         if (page_i >= 7)
             setup.page = url.substr(page_i);
         else

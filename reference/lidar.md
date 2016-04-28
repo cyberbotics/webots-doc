@@ -91,8 +91,7 @@ layers.
 
 - The `numberOfLayers` field defines the number of layers (number of lasers).
 
-- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane, objects closer to
-the lidar than the near value are not detected by lidar. This plane is parallel to the camera retina (i.e. projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to put it just big enough so that the shape of the lidar is not visible. More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
+- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane, objects closer to the lidar than the near value are not detected by lidar. This plane is parallel to the camera retina (i.e. projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to put it just big enough so that the shape of the lidar is not visible. More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
 
 - The `minRange` field defines the minimum range of the lidar, objects closer to the lidar than the minimum range are not detected (but still occlude other objects).
 

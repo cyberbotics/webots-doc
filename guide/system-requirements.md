@@ -19,7 +19,7 @@ Webots on your computer systems to ensure they are compatible before you buy.
 The following operating systems are supported:
 
 - Linux: Webots is ensured to run on the latest Ubuntu Long Term Support (LTS)
-release, currently versions 16.04. But it is also known to run on most recent
+release, currently version 16.04. But it is also known to run on most recent
 major Linux distributions, including RedHat, Mandrake, Debian, Gentoo, SuSE, and
 Slackware. We recommend using a recent version of Linux. Webots is provided for
 Linux 64 (x86-64) systems. Since Webots 8.1.0, the Linux 32 (i386) version is no

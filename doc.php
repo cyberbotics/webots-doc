@@ -23,8 +23,8 @@
     }
   } else {
     # default values:
-    $book = 'guide';
-    $page = 'guide'; # FIXME: should be 'index'
+    $book = $uri;
+    $page = $book; # FIXME: should be 'index'
     $branch = '';
     $tag = '';
     # anchor is not sent to the server, so it has to be computed by the javascript

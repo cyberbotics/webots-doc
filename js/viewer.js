@@ -24,7 +24,7 @@ function setupUrlOnline(url) {
     if (version_i > 9) {
         setup.page = url.substr(page_i, version_i - page_i - 9);
         if (anchor_i > 1) {
-          version = url.substr(version_i, hastag_i - version_i - 1);
+          version = url.substr(version_i, anchor_i - version_i - 1);
           setup.anchor = url.substr(anchor_i);
         } else {
           version = url.substr(version_i);
@@ -33,7 +33,7 @@ function setupUrlOnline(url) {
     } else {
         version = ''
         if (anchor_i > 1) {
-            setup.page = url.substr(page_i, hastag_i - page_i);
+            setup.page = url.substr(page_i, anchor_i - page_i);
             setup.anchor = url.substr(anchor_i);
         } else {
             setup.page = url.substr(page_i);

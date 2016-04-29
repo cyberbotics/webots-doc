@@ -2,12 +2,6 @@
 
 Documentation for the Cyberbotics' Webots software
 
-## To view the current gh-pages branch:
-
-- https://www.cyberbotics.com/doc/guide/
-- https://www.cyberbotics.com/doc/reference/
-- https://www.cyberbotics.com/doc/automobile/
-- https://www.cyberbotics.com/doc/darwin-op/
 
 ## To view a specific branch:
 
@@ -16,9 +10,15 @@ Documentation for the Cyberbotics' Webots software
 
 ## Run the doc offline
 
+Create or update the local_index.html page:
+
+``` shell
+python local_exporter.py
+```
+
 Run a simple HTTP server:
 
-``` python
+``` shell
 python -m SimpleHTTPServer
 ```
 
@@ -35,4 +35,3 @@ In a browser, open:
 ``` python
 python -m unittest discover
 ```
-

@@ -17,7 +17,7 @@ function setupUrlOnline(url) {
   setup.tag = "";
   setup.branch = "";
 
-  var m = url.match(new RegExp("/([^/]+)/([^/]+)/?\\?([^/]*)$"));
+  var m = url.match(new RegExp("/([^/]+)/([^/\\?#]+)([^/]*)$"));
   if (m) {
     setup.book = m[1];
     setup.page = m[2];

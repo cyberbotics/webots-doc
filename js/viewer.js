@@ -75,9 +75,9 @@ function setupUrl(url) {
 function computeTargetPath() {
     var targetPath = "";
     if (setup.branch)
-      branch = setup.branch
+      branch = setup.branch;
     else
-      branch = 'gh-pages' // FIXME: should be master
+      branch = 'master';
     if (setup.url.startsWith("http"))
         targetPath = setup.url + branch + "/";
     targetPath += setup.book + "/";
@@ -569,12 +569,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)
-            url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/gh-pages/");
+            url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
         setup = {
             "book":   getGETQueryValue("book", "guide"),
             "page":   getGETQueryValue("page", "guide"),
             "anchor": extractAnchor(),
-            "branch": getGETQueryValue("branch", "gh-pages"),
+            "branch": getGETQueryValue("branch", "master"),
             "url":    url
         }
         console.log("Setup: " + JSON.stringify(setup));

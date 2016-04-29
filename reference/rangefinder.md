@@ -8,6 +8,7 @@ RangeFinder {
   SFInt32    width            64
   SFInt32    height           64
   SFBool     spherical        FALSE
+  SFFloat    near             0.01
   SFFloat    minRange         0.01
   SFFloat    maxRange         1.0
   SFFloat    motionBlur       0.0
@@ -51,13 +52,9 @@ on spherical projections is provided in the [spherical
 projection](camera.md#spherical-projection) section of the [Camera](camera.md)
 node.
 
-- The `minRange` field defines the distance from the range-finder to the near
-clipping plane of the OpenGL view frustum. This plane is parallel to the
-range-finder retina (i.e., projection plane). The minRange field determines the
-precision of the OpenGL depth buffer. A too small value produces depth fighting
-between overlaid polygons, resulting in random polygon overlaps. More
-information about the frustrum is provided in the [frustum](camera.md#frustum)
-section of the [Camera](camera.md) node.
+- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane. Objects closer to the range-finder than the near value are not detected by the range-finder. This plane is parallel to the camera retina (i.e., projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to set it just big enough so that the shape of the range-finder object is not visible. More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
+
+- The `minRange` field defines the minimum range of the range-finder (objects closer to the range-finder than the minimum range are not detected (but still occlude other objects).
 
 - The `maxRange` defines the distance between the range-finder and the far
 clipping plane of the OpenGL view frustum. This field defines the maximum range

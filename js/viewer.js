@@ -50,26 +50,27 @@ function setupUrlOnline(url) {
 }
 
 function setupUrlLocal(url) {
-    setup.branch = '';
     setup.tag = '';
-    var book_i = url.indexOf("&book=") + 6;
-    var page_i = url.indexOf("&page=", book_i) + 6;
-    var anchor_i = url.indexOf('#', book_i) + 1;
-    if (anchor_i >= 1) {
-        setup.anchor = url.substr(anchor_i);
-        if (page_i >= 6)
-            setup.page = url.substr(page_i, anchor_i - page_i - 1);
-        else
-            setup.page = '';
-    } else {
-        setup.anchor = '';
-        if (page_i >= 6)
-            setup.page = url.substr(page_i);
-        else
-            setup.page = '';
-    }
-    if (book_i >= 6)
-        setup.book = url.substr(book_i, page_i - book_i - 6);
+
+    var m;
+
+    m = url.match(/page=([^&#]*)/);
+    if (m)
+      setup.page = m[1].replace(/.md$/, "");
+    else
+      setup.page = "";
+
+    m = url.match(/book=([^&#]*)/);
+    if (m)
+      setup.book = m[1];
+    else
+      setup.book = "";
+
+    m = url.match(/#([^&#]*)/);
+    if (m)
+      setup.anchor = m[1];
+    else
+      setup.anchor = "";
 }
 
 function setupUrl(url) {

@@ -100,7 +100,9 @@ function redirectUrls(node) {
             var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
             if (match && match.length >= 2) {
                 var newPage = match[1];
-                var anchor = match[2]; // could be undefined
+                var anchor = match[2];
+                if (anchor)
+                  anchor = anchor.substring(1); // remove the '#' character
                 a.setAttribute("href", forgeUrl(newPage, anchor));
             }
         }
@@ -108,7 +110,7 @@ function redirectUrls(node) {
 }
 
 function forgeUrl(page, anchor) {
-  var anchorString = (anchor && anchor.length > 0) ? anchor : "";
+  var anchorString = (anchor && anchor.length > 0) ? ("#" + anchor) : "";
   var currentUrl = location.href;
   var newUrl = currentUrl;
   if (!local) {

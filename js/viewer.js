@@ -476,7 +476,7 @@ function populateNavigation(selected) {
             up.setAttribute("href", upElement.getAttribute("href"));
             addDynamicLoadEvent(up);
         } else {
-            up.setAttribute("href", forgeUrl('index'));
+            up.setAttribute("href", forgeUrl(setup.book)); // FIXME: should be 'index' page
             addDynamicLoadEvent(up);
             up.classList.remove("disabled");
         }
@@ -526,7 +526,7 @@ function getMDFile() {
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log("Status: " + textStatus);
             console.log("Error: " + errorThrown);
-            var mainPage = 'index';
+            var mainPage = setup.book; // FIXME: should 'index'
             // get the main page instead
             if (setup.page != mainPage) {
                 setup.page = mainPage;
@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", function() {
             url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
         setup = {
             "book":   getGETQueryValue("book", "guide"),
-            "page":   getGETQueryValue("page", "index"),
+            "page":   getGETQueryValue("page", "guide"),
             "anchor": extractAnchor(),
             "branch": getGETQueryValue("branch", "master"),
             "url":    url

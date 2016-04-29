@@ -252,7 +252,7 @@ function updateBrowserUrl() {
 
 // Make in order that the back button is working correctly
 window.onpopstate = function(event) {
-    setupUrl(document.location);
+    setupUrl(document.location.href);
     getMDFile();
 };
 

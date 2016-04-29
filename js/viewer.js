@@ -52,25 +52,24 @@ function setupUrlOnline(url) {
 function setupUrlLocal(url) {
     setup.branch = '';
     setup.tag = '';
-    setup.utl = '';
-    var book_i = url.indexOf("&book=") + 7;
-    var page_i = url.indexOf("&page=", book_i) + 7;
+    var book_i = url.indexOf("&book=") + 6;
+    var page_i = url.indexOf("&page=", book_i) + 6;
     var anchor_i = url.indexOf('#', book_i) + 1;
     if (anchor_i >= 1) {
         setup.anchor = url.substr(anchor_i);
-        if (page_i >= 7)
+        if (page_i >= 6)
             setup.page = url.substr(page_i, anchor_i - page_i - 1);
         else
             setup.page = '';
     } else {
         setup.anchor = '';
-        if (page_i >= 7)
+        if (page_i >= 6)
             setup.page = url.substr(page_i);
         else
             setup.page = '';
     }
-    if (page_i >= 7)
-        setup.book = url.substr(book_i, page_i - book_i);
+    if (book_i >= 6)
+        setup.book = url.substr(book_i, page_i - book_i - 6);
 }
 
 function setupUrl(url) {

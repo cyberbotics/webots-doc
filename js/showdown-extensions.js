@@ -29,8 +29,8 @@ showdown.extension("wbVariables", function() {
       webots : {
         version : {
           major : 8,
-          minor : 4,
-          bugfix : 1
+          minor : 5,
+          bugfix : 0
         }
       },
       date : {

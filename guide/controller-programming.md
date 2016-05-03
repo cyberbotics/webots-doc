@@ -48,7 +48,7 @@ then return. This duration specifies an amount of simulated time, not real (wall
 clock) time, so it may actually take 1 millisecond or one minute of real time,
 depending on the complexity of the simulated world.
 
-Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step()` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#Controller-Termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling `wb_robot_cleanup()`.
+Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step()` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling `wb_robot_cleanup()`.
 
 ### Reading Sensors
 

@@ -41,7 +41,8 @@ int main() {
       // run robot simulation for 30 seconds
       for (time = 0.0; time < 30.0; time += TIME_STEP / 1000.0) {
         actuateMotors(a, b, time);
-        wb_robot_step(TIME_STEP);
+        if (wb_robot_step(TIME_STEP) != -1)
+          goto my_exit;
       }
 
       // compute and print fitness
@@ -50,6 +51,7 @@ int main() {
     }
   }
 
+my_exit:
   wb_robot_cleanup();
   return 0;
 }
@@ -158,7 +160,8 @@ void evaluate_next_robot() {
   double time;
   for (time = 0.0; time < 30.0; time += TIME_STEP / 1000.0) {
     run_robot(params);
-    wb_robot_step(TIME_STEP);
+    if (wb_robot_step(TIME_STEP) == -1)
+      break;
   }
   ...
   // compute and store fitness
@@ -243,7 +246,8 @@ int main() {
   for (double time = 0.0; time < 30.0; time += TIME_STEP / 1000.0) {
     read_sensors(genotype);
     actuate_motors(time, genotype);
-    wb_robot_step(TIME_STEP);
+    if (wb_robot_step(TIME_STEP) == -1)
+      break;
   }
   ...
   double fitness = compute_fitness();

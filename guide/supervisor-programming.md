@@ -58,12 +58,13 @@ int main() {
   WbNodeRef robot_node = wb_supervisor_node_get_from_def("MY_ROBOT");
   WbFieldRef trans_field = wb_supervisor_node_get_field(robot_node, "translation");
 
-  while (1) {
+  while (wb_robot_step(32) != -1) {
     // this is done repeatedly
     const double *trans = wb_supervisor_field_get_sf_vec3f(trans_field);
     printf("MY_ROBOT is at position: %g %g %g\n", trans[0], trans[1], trans[2]);
-    wb_robot_step(32);
   }
+
+  wb_robot_cleanup();
 
   return 0;
 }
@@ -128,7 +129,8 @@ int main() {
       // evaluate robot during 60 seconds (simulation time)
       for (t = 0.0; t < 60.0; t += TIME_STEP / 1000.0) {
         actuateMotors(a, b, t);
-        wb_robot_step(TIME_STEP);
+        if (wb_robot_step(TIME_STEP) != -1)
+          goto my_exit;
       }
 
       // compute travelled distance
@@ -142,6 +144,9 @@ int main() {
     }
   }
 
+my_exit:
+  wb_robot_cleanup();
+  
   return 0;
 }
 ```

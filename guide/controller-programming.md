@@ -35,7 +35,7 @@ Like with any regular C code it is also possible to include the standard C
 headers, e.g. `#include <stdio.h>`. A call to the initialization function
 `wb_robot_init()` is required before any other C API function call. This
 function initializes the communication between the controller and Webots.
-`wb_robot_cleanup()` does the opposite: it closes the communication between the controller and Webots allowing to terminate the controller smoothly. Note that  `wb_robot_init()` and `wb_robot_cleanup()` exist only in the C API, they do not have any equivalent in the other supported programming languages.
+`wb_robot_cleanup()` does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly. Note that  `wb_robot_init()` and `wb_robot_cleanup()` exist only in the C API, they do not have any equivalent in the other supported programming languages.
 
 Usually the highest level control code is placed inside a `for` or a `while`
 loop. Within that loop there is a call to the `wb_robot_step()` function. This

@@ -163,13 +163,8 @@ function redirectImages(node) {
 
 function applyAnchor() {
     var anchors = document.getElementsByName(setup.anchor);
-    if (anchors.length > 0) {
+    if (anchors.length > 0)
         anchors[0].scrollIntoView(true);
-        if (!local)
-          window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
-        else
-          window.scrollBy(0, 180); // manual adjustment for the off-line version
-    }
 }
 
 function applyToTitleDiv() {

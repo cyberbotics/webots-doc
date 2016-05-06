@@ -4,7 +4,7 @@ This small tutorial will explain step by step how to create a real scenario insp
 
 ### Download the map
 
-We will use a part of the OpenStreetMap map to generate the Webots world file. To download the map go to the [OpenStreetMap website](https://www.openstreetmap.org/export). From there you can select the part of the map you want and donload it:
+We will use a part of the OpenStreetMap map to generate the Webots world file. To download the map go to the [OpenStreetMap website](https://www.openstreetmap.org/export). From there you can select the part of the map you want and download it:
 
 %figure "Export a part of map from OpenStreetMap"
 ![osm_export.png](images/osm_export.png)
@@ -41,11 +41,11 @@ netconvert --osm-files map.osm -o sumo.net.xml --geometry.remove --roundabouts.g
 ```
 
 > **note**:
-You will have to replace `map.osm` by the real name of you map and `longitude_value` and `latitude_value` by the value displayed previously by the [OpenStreetMap importer](openstreetmap-importer.md).
+You will have to replace `map.osm` by the real name of your map and `longitude_value` and `latitude_value` by the values displayed previously by the [OpenStreetMap importer](openstreetmap-importer.md).
 
-Both the [OpenStreetMap importer](openstreetmap-importer.md) and [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) will center the map, but it can happen the centering is not perfectly matching resulting in an offset between the Webots world and the SUMO network. To fix this problem, simply open the `sumo.net.xml` in a text editor and look for the line starting by `<location netOffset=` (should be at the beginning of the file). You will need to change the value of the `netOffset` field, the new value (for each component) should be the previous value summed with the value of `x_offset_value` and `y_offset_value` displayed by the [OpenStreetMap importer](openstreetmap-importer.md).
+Both the [OpenStreetMap importer](openstreetmap-importer.md) and [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) will center the map, but it can happen that the centering is not perfectly matching resulting in an offset between the Webots world and the SUMO network. To fix this problem, simply open the `sumo.net.xml` in a text editor and look for the line starting by `<location netOffset=` (should be at the beginning of the file). You will need to change the value of the `netOffset` field, the new value (for each component) should be the previous value summed with the value of `x_offset_value` and `y_offset_value` displayed by the [OpenStreetMap importer](openstreetmap-importer.md).
 
-You can then generate the route file, SUMO provide several ways to generate those route files. You may for example generate a [flow file](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) and then use [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) to generate the route file for you:
+You can then generate the route file, SUMO provides several ways to generate those route files. You may for example generate a [flow file](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) and then use [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) to generate the route file for you:
 ```
 duarouter --flows sumo.flow.xml --net-file sumo.net.xml --output-file sumo.rou.xml
 ```
@@ -70,6 +70,6 @@ Finally you need to write the [SUMO configuration file](http://sumo.dlr.de/wiki/
 
 ### Add the SUMO interface
 
-We now have all the required files, you just have to open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it). Since the network files are already generated you need to set the `useNetconvert` field to FALSE (or use the `-noNetconvert` option) and set in the `networkfiles` field the path to the directory where are located the SUMO network files.
+You now have all the required files, you just have to open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it). Since the network files are already generated you need to set the `useNetconvert` field to FALSE (or use the `--noNetconvert` option) and set in the `networkfiles` field (or use the `--d or --directory` option) the path to the directory where are located the SUMO network files.
 
 

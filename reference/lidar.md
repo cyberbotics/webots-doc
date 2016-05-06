@@ -9,6 +9,7 @@ Lidar {
   SFFloat    fieldOfView              1.5708
   SFFloat    verticalFieldOfView      0.2
   SFInt32    numberOfLayers           4
+  SFFloat    near                     0.01
   SFFloat    minRange                 0.01
   SFFloat    maxRange                 1.0
   SFString   type                     "fixed"
@@ -37,9 +38,7 @@ field of view is imposed by the size (width and height) of the image (because of
 the constraint of square pixels) and not in the case of the [Lidar](#lidar) node
 where lines of pixels (laser scan) are extracted from the depth buffer.
 
-Lidar cannot see semi-transparent objects. An object can be semi-transparent
-either if its texture has an alpha channel, or if its
-[Material](material.md).`transparency` field is not equal to 1.
+Lidar detects semi-transparent objects as if they were not transparent. An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md) `transparency` field is not equal to 1.
 
 By default the [Lidar](#lidar) node outputs the depth values in an array, the
 depth values are order from left to right and from the top to the bottom layer
@@ -71,57 +70,79 @@ The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin. The
 point was acquired. With lidar devices, all the points are not acquired at the
 exact same time but rather sequentially.
 
+> **note** [C++]:
+In C++ the name of the structure is `LidarPoint`.
+
+> **note** [Java/Python]:
+In Java and Python, the structure is replaced by a class called `LidarPoint`.
+
 ### Field Summary
 
 - The `tiltAngle` field defines the tilt angle of the sensor (rotation around the
 X axis of to the [Lidar](#lidar) node).
+
 - The `horizontalResolution` field defines the number of points returned by
 layers.
+
 - The `fieldOfView` field defines the horizontal field of view angle of the lidar. The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
+
 - The `verticalFieldOfView` field defines the vertical repartition of the layers
 (angle between first and last layer).
-- The `NumberOfLayers` field defines the number of layers (number of lasers).
-- The `minRange` field defines the minimum range of the lidar (objects closer to
-the lidar than the minimum range are not seen from the lidar).
+
+- The `numberOfLayers` field defines the number of layers (number of lasers).
+
+- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane. Objects closer to the lidar than the near value are not detected by the lidar. This plane is parallel to the camera retina (i.e., projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to set it just big enough so that the shape of the lidar object is not visible. More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
+
+- The `minRange` field defines the minimum range of the lidar, objects closer to the lidar than the minimum range are not detected (but still occlude other objects).
+
 - The `maxRange` field defines the distance between the lidar and the far clipping
 plane of the OpenGL view frustum. This field defines the maximum range that the
 lidar can achieve and so the maximum possible value of the range image (in
 meter).
+
 - The `type` field should either be 'fixed' or 'rotating', it defines if the lidar
 has a rotating or fixed head.
+
 - The `spherical` field switches between a planar or a spherical projection. It is
 highly recommended to use the spherical projection in case of fixed-head lidar.
 More information on spherical projections is provided in the [spherical
 projection](camera.md#spherical-projection) section of the [Camera](camera.md)
 node.
+
 - If the `noise` field is greater than 0.0, a gaussian noise is added to each
 depth value of a lidar image. A value of 0.0 corresponds to no noise and thus
 saves computation time. A value of 1.0 corresponds to a gaussian noise having a
 standard derivation of `maxRange` meters.
+
 - The `resolution` field defines the depth resolution of the lidar, that is the
 smallest depth difference that it is able to measure. Setting this field to -1
 (default) corresponds to an 'infinite' resolution (it can measure any
 infinitesimal change). This field accepts any value in the interval (0.0, inf).
+
 - The `defaultFrequency` field defines the default rotation frequency (defined in
 Hz) of the head if the `type` field is set to 'rotating'. The value of this
 field should be smaller or equal to the value of the `maxFrequency` field and
 bigger or equal to the value of the `minFrequency` field.
+
 - The `minFrequency` field defines the minimum rotation frequency (defined in Hz)
 of the head if the `type` field is set to 'rotating'.
+
 - The `maxFrequency` field defines the maximum rotation frequency (defined in Hz)
 of the head if the `type` field is set to 'rotating'.
+
 - A node can be inserted in the `rotatingHead` field to define the rotating head
 of the lidar.
+
 - The `compositor` field specifies the name of a compositor to apply on the depth
 image. More information on compositors is provided in the
 [compositor](camera.md) field description of the [Camera](camera.md) node.
 
 > **note**:
-The fields `NumberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and
+The fields `numberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and
 `fieldOfView` should respect the following constraint in order to be able to
 simulate the lidar:
 
-        NumberOfLayers < verticalFieldOfView * horizontalResolution / fieldOfView
+        numberOfLayers < verticalFieldOfView * horizontalResolution / fieldOfView
 
     In case of 'rotating' lidar, the `fieldOfView` term in the constraint is
     replaced by `2 * π`.
@@ -172,15 +193,16 @@ bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag)
 
 **Description**
 
-`wb_lidar_enable_point_cloud()` allows the user to enable the lidar point cloud
-update, the point cloud array is the updated with the same sampling period as
-the range image.
+`wb_lidar_enable_point_cloud()` allows the user to enable the lidar point cloud update, the point cloud array is then updated with the same sampling period as the range image.
 
 `wb_lidar_disable_point_cloud()` allows the user to disable the lidar point
 cloud update.
 
 The `wb_lidar_is_point_cloud_enabled()` function returns true if the point cloud
 update is enabled or false otherwise.
+
+> **note**:
+To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable()` function.
 
 ---
 

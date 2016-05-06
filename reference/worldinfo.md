@@ -132,7 +132,7 @@ should be set in meters for each coordinates if the `gpsCoordinateSystem` is
 `local`, and in decimal degree and meters for respectively the latitude,
 longitude and height if the `gpsCoordinateSystem` is `WGS84`. The reference
 vector is simply added to the position of the GPS device in case of `local`
-coordinates. In case of `WGS84` coordinates, the the latitude, longitude and
+coordinates. In case of `WGS84` coordinates, the latitude, longitude and
 altitude should correspond to the latitude, longitude and altitude of the center
 of the cartesian coordinate system of Webots.
 - The `lineScale` field allows the user to control the size of the optionally
@@ -147,4 +147,3 @@ arbitrary, but setting this value equal to the average size of a robot
 - The `contactProperties` field allows to specifiy a number of
 [ContactProperties](contactproperties.md) nodes that define the behavior when
 [Solid](solid.md) nodes collide.
-

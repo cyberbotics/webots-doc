@@ -15,11 +15,11 @@ here is a "Hello World!" example for a Webots controller:
 int main() {
   wb_robot_init();
 
-  while (wb_robot_step(32) != -1)
+  while(wb_robot_step(32) != -1)
     printf("Hello World!\n");
 
   wb_robot_cleanup();
-
+  
   return 0;
 }
 ```
@@ -34,25 +34,21 @@ files. These header files must be included using statements like `#include
 Like with any regular C code it is also possible to include the standard C
 headers, e.g. `#include <stdio.h>`. A call to the initialization function
 `wb_robot_init()` is required before any other C API function call. This
-function initializes the communication between the controller and Webots. Note
-that  `wb_robot_init()` exists only in the C API, it does not have any
-equivalent in the other supported programming languages.
+function initializes the communication between the controller and Webots.
+`wb_robot_cleanup()` does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly. Note that  `wb_robot_init()` and `wb_robot_cleanup()` exist only in the C API, they do not have any equivalent in the other supported programming languages.
 
 Usually the highest level control code is placed inside a `for` or a `while`
 loop. Within that loop there is a call to the `wb_robot_step()` function. This
 function synchronizes the controller's data with the simulator. The function
 `wb_robot_step()` needs to be present in every controller and it must be called
 at regular intervals, therefore it is usually placed in the main loop as in the
-above example. The value 32 specifies the duration of the control steps, i.e.
+above example. The value 32 specifies the duration of the control steps, i.e.,
 the function  `wb_robot_step()` shall compute 32 milliseconds of simulation and
 then return. This duration specifies an amount of simulated time, not real (wall
-clock) time, so it may actually take 1 millisecond or one minute of CPU time,
+clock) time, so it may actually take 1 millisecond or one minute of real time,
 depending on the complexity of the simulated world.
 
-Note that in this "Hello World!" example the return value of the `wb_robot_step()` function is used as exit condition.
-This is particularly useful to notify the controller program that Webots is closing the current simulation and give the oppurtunity to perform some cleanup, e.g., flushing or closing data files, etc..
-This could happen if Webots is closed, the current world is reloaded or a new world is loaded.
-Otherwise, if none of these actions are executed, the simulation will run forever.
+Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step()` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling `wb_robot_cleanup()`.
 
 The `wb_robot_cleanup()` function is needed in particular when the controller program exits before the end of the simulation, i.e. before the `wb_robot_step()` function returns *-1*.
 In fact it notifies Webots that the program is terminating so that Webots can continue the simulation and free the relative resources.
@@ -125,11 +121,12 @@ int main() {
   WbDeviceTag ds = wb_robot_get_device("my_distance_sensor");
   wb_distance_sensor_enable(ds, TIME_STEP);
 
-  while (1) {
-    wb_robot_step(TIME_STEP);
+  while (wb_robot_step(TIME_STEP) != -1) {
     double dist = wb_distance_sensor_get_value(ds);
     printf("sensor value is %f\n", dist);
   }
+
+  wb_robot_cleanup();
 
   return 0;
 }
@@ -143,18 +140,18 @@ this function, *"my\_distance\_sensor"* in this example, refers to a device name
 specified in the robot description (".wbt" or ".proto" file). If the robot has
 no device with the specified name, this function returns 0.
 
-Each sensor must be enabled before it can be used and the sensor needs some time before being initialized. The initialization time corresponds to sensor's update delay.
-If a sensor is not enabled or the initialization is not completed yet it returns undefined values. Enabling a sensor is achieved using the corresponding
+Each sensor must be enabled before it can be used. If a sensor is not enabled it
+returns undefined values. Enabling a sensor is achieved using the corresponding
 `wb_*_enable()` function, where the star (*) stands for the sensor type. Every
 `wb_*_enable()` function allows to specify an update delay in milliseconds. The
 update delay specifies the desired interval between two updates of the sensor's
 data.
 
 In the usual case, the update delay is chosen to be similar to the control step
-(`TIME_STEP`) and hence the first measurement will be available after executing `wb_robot_step()` and then it will be updated at every `wb_robot_step()`.
+(`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step()`.
 If, for example, the update delay is chosen to be twice the control step then
-the first sensor data will be available after executing two `wb_robot_step()` statements and will be updated every two `wb_robot_step()`: this can be used to simulate a slow device.
-Note that a larger update delay can also speed up the
+the sensor data will be updated every two `wb_robot_step()`: this can be used to
+simulate a slow device. Note that a larger update delay can also speed up the
 simulation, especially for CPU intensive devices like the `Camera`. On the
 contrary, it would be pointless to choose an update delay smaller than the
 control step, because it will not be possible for the controller to process the
@@ -165,7 +162,7 @@ possible to disable a device at any time using the corresponding
 The sensor value is updated during the call to `wb_robot_step()`. The call to
 `wb_distance_sensor_get_value()` retrieves the latest value.
 
-Note that some devices return vector values instead of scalar values, for example
+Note that some device return vector values instead of scalar values, for example
 these functions:
 
 ```c
@@ -251,12 +248,13 @@ int main() {
   double F = 2.0;   // frequency 2 Hz
   double t = 0.0;   // elapsed simulation time
 
-  while (1) {
+  while (wb_robot_step(TIME_STEP) != -1) {
     double pos = sin(t * 2.0 * M_PI * F);
     wb_motor_set_position(motor, pos);
-    wb_robot_step(TIME_STEP);
     t += (double)TIME_STEP / 1000.0;
   }
+
+  wb_robot_cleanup();
 
   return 0;
 }
@@ -300,18 +298,17 @@ by the second call:
 ```c
 wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
 wb_motor_set_position(my_leg, 0.56);
-wb_robot_step(40);
+wb_robot_step(40); // BAD: we don't test the return value of this function
 ```
 
 Similarly this code does not make much sense either:
 
 ```c
-while (1) {
+while (wb_robot_step(40) != -1) {
   double d1 = wb_distance_sensor_get_value(ds1);
   double d2 = wb_distance_sensor_get_value(ds1);
-  if (d2 < d1)   // WRONG: d2 will always equal d1 here
+  if (d2 > d1)   // WRONG: d2 will always equal d1 here
     avoidCollision();
-  wb_robot_step(40);
 }
 ```
 
@@ -320,13 +317,13 @@ the values returned by the sensor cannot have changed in the meantime. A working
 version would look like this:
 
 ```c
-while (1) {
+while (wb_robot_step(40) != -1) {
   double d1 = wb_distance_sensor_get_value(ds1);
-  wb_robot_step(40);
+  if (wb_robot_step(40) == -1)
+    break;
   double d2 = wb_distance_sensor_get_value(ds1);
-  if (d2 < d1)
+  if (d2 > d1)
     avoidCollision();
-  wb_robot_step(40);
 }
 ```
 
@@ -335,24 +332,19 @@ call in the main control loop, and to use it to update all the sensors and
 actuators simultaneously, like this:
 
 ```c
-while (1) {
+while (wb_robot_step(TIME_STEP) != -1) {
   readSensors();
   actuateMotors();
-  wb_robot_step(TIME_STEP);
 }
 ```
 
-Note that it may also be judicious to move `wb_robot_step()` to the beginning of
-the loop, in order to make sure that the sensors already have valid values prior
-to entering the `readSensors()` function. Otherwise the sensors will have
-undefined values during the first iteration of the loop, hence:
+Note that it is important to call `wb_robot_step()` at the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors()` function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence, the following is not a good example:
 
 ```c
-while (1) {
-  wb_robot_step(TIME_STEP);
-  readSensors();
+do {
+  readSensors(); // warning: sensor values are undefined on the first iteration
   actuateMotors();
-}
+} while (wb_robot_step(TIME_STEP) != -1);
 ```
 
 Here is a complete example of using sensors and actuators together. The robot
@@ -374,8 +366,7 @@ int main() {
   wb_distance_sensor_enable(left_sensor, TIME_STEP);
   wb_distance_sensor_enable(right_sensor, TIME_STEP);
 
-  while (1) {
-    wb_robot_step(TIME_STEP);
+  while (wb_robot_step(TIME_STEP) != -1) {
 
     // read sensors
     double left_dist = wb_distance_sensor_get_value(left_sensor);
@@ -388,6 +379,8 @@ int main() {
     // actuate wheel motors
     wb_differential_wheels_set_speed(left, right);
   }
+
+  wb_robot_cleanup();
 
   return 0;
 }
@@ -424,6 +417,8 @@ int main(int argc, const char *argv[]) {
   for (i = 0; i < argc; i++)
     printf("argv[%i]=%s\n", i, argv[i]);
 
+  wb_robot_cleanup();
+
   return 0;
 }
 ```
@@ -439,13 +434,7 @@ argv[3]=three
 
 ### Controller Termination
 
-Usually a controller process runs in an endless loop: it is terminated (killed)
-by Webots when the user reverts (reloads) the simulation or quits Webots. The
-controller cannot prevent its own termination but it can be notified shortly
-before this happens. The `wb_robot_step()` function returns -1 when the process
-is going to be terminated by Webots. Then the controller has 1 second (clock
-time) to save important data, close files, etc. before it is effectively killed
-by Webots. Here is an example that shows how to detect the upcoming termination:
+Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reverted, a new simulation is loaded, or the controller name is changed in the Webots scene tree. The controller cannot prevent its own termination but it can be notified shortly before this happens. The `wb_robot_step()` function returns -1 when the controller process is going to be terminated by Webots. Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots. Here is an example that shows how to save data before the upcoming termination:
 
 ```c
 #include <webots/robot.h>

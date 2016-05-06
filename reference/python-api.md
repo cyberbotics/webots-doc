@@ -55,9 +55,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen)                                       |
 | &nbsp;&nbsp; def [imageGetBlue](camera.md#wb_camera_get_image)(image, width, x, y)             |
 | &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                         |
-| &nbsp;&nbsp; def [imageGetGrey](camera.md#wb_camera_get_image)(image, width, x, y)             |
-| &nbsp;&nbsp; imageGetGrey = staticmethod(imageGetGrey)                                         |
-| &nbsp;&nbsp; rangeImageGetDepth = staticmethod(rangeImageGetDepth)                             |
+| &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)             |
+| &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                         |
 | &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)          |
 
 %end
@@ -378,8 +377,8 @@ The following tables describe the Python classes and their methods.
 
 |                                                      |
 | ---------------------------------------------------- |
-| from controller import WbLidarPoint                  |
-| class [WbLidarPoint](lidar.md#wblidarpoint) :        |
+| from controller import LidarPoint                    |
+| class [LidarPoint](lidar.md#wblidarpoint) :          |
 | &nbsp;&nbsp; [self.x](lidar.md#wblidarpoint)         |
 | &nbsp;&nbsp; [self.y](lidar.md#wblidarpoint)         |
 | &nbsp;&nbsp; [self.z](lidar.md#wblidarpoint)         |
@@ -532,8 +531,8 @@ The following tables describe the Python classes and their methods.
 
 |                                                            |
 | ---------------------------------------------------------- |
-| from controller import WbRadarTarget                       |
-| class [WbRadarTarget](#python_radar_target) :              |
+| from controller import RadarTarget                         |
+| class [RadarTarget](#python_radar_target) :                |
 | &nbsp;&nbsp; self.distance                                 |
 | &nbsp;&nbsp; self.received\_power                          |
 | &nbsp;&nbsp; self.speed                                    |
@@ -714,4 +713,3 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getType](touchsensor.md#wb_touch_sensor_get_type)(self)             |
 
 %end
-

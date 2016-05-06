@@ -274,7 +274,7 @@ p' = R * p + T
 ```
 
 where *p* is a point whose coordinates are given with respect to the local
-coordinate system of a node, *R* the the rotation matrix returned by
+coordinate system of a node, *R* the rotation matrix returned by
 `wb_supervisor_node_get_orientation(node)`, *T* is the position returned by
 `wb_supervisor_node_get_position(node)` and *p'* represents the same point but
 this time with coordinates expressed in the global (world) coordinate system.
@@ -565,7 +565,8 @@ int main(int argc, char *argv[]) {
   while (! finished) {
     // your controller code here
     ...
-    wb_robot_step(TIME_STEP);
+    if (wb_robot_step(TIME_STEP) == -1)
+      break;
   }
   saveExperimentsData();
   wb_supervisor_simulation_quit(EXIT_SUCCESS); // ask Webots to terminate
@@ -927,18 +928,18 @@ message is displayed).
 void wb_supervisor_field_set_sf_bool(WbFieldRef field, bool value)
 void wb_supervisor_field_set_sf_int32(WbFieldRef field, int value)
 void wb_supervisor_field_set_sf_float(WbFieldRef field, double value)
-void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values)
-void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values)
-void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values)
-void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values)
+void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values[2])
+void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values[3])
+void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values[4])
+void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values[3])
 void wb_supervisor_field_set_sf_string(WbFieldRef field, const char *value)
 void wb_supervisor_field_set_mf_bool(WbFieldRef field, int index, bool value)
 void wb_supervisor_field_set_mf_int32(WbFieldRef field, int index, int value)
 void wb_supervisor_field_set_mf_float(WbFieldRef field, int index, double value)
-void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values)
-void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values)
-void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values)
-void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values)
+void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values[2])
+void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values[3])
+void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values[4])
+void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values[3])
 void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value)
 ```
 
@@ -1041,4 +1042,3 @@ an MF\_NODE (like if the node was manually removed from the scene tree).
 Note that these functions are still limited in the actual Webots version. For
 example, a device imported into a Robot node doesn't reset the Robot, so the
 device cannot be get by using the `wb_robot_get_device()` function.
-

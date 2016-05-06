@@ -254,13 +254,13 @@ The actuators available in BotStudio are the LEDs and the motors. Each automaton
 state have two sliders for setting the motor speed value. Note that these values
 can be unset by clicking on the cursor of the slider. Each state have also 10
 square buttons for setting the LEDs states. A red button means the LED is turned
-on, a black one means it is turned off and a grey one means there is no
+on, a black one means it is turned off and a gray one means there is no
 modification.
 
 The sensor available in BotStudio are the distance sensors and the camera.
 Moreover a timer can be used to temporize the conditions by dragging the
 corresponding slider. Conditions over the IR sensors can be set by dragging the
-8 red sliders. A condition can be reversed by clicking on the grey part of the
+8 red sliders. A condition can be reversed by clicking on the gray part of the
 slider. Finally, the camera is used for giving a clue on the front environment
 of the e-puck. An algorithm is applied on the last line of the camera and
 returns a integer between -10 and 10 indicating if a black line is perceived
@@ -378,4 +378,3 @@ terminal:
 ```
 sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386
 ```
-

@@ -53,12 +53,11 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public static int [imageGetRed](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);   |
 | &nbsp;&nbsp; public static int [imageGetGreen](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y); |
 | &nbsp;&nbsp; public static int [imageGetBlue](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
-| &nbsp;&nbsp; public static int [imageGetGrey](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
+| &nbsp;&nbsp; public static int [imageGetGray](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
 | &nbsp;&nbsp; public static int [pixelGetRed](camera.md#wb_camera_get_image)(int pixel);                              |
 | &nbsp;&nbsp; public static int [pixelGetGreen](camera.md#wb_camera_get_image)(int pixel);                            |
 | &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp; public static int [pixelGetGrey](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                   |
+| &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |                                                               |
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
 | }                                                                                                                    |
 
@@ -376,8 +375,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public boolean [isPointCloudEnabled](lidar.md#wb_lidar_enable_point_cloud)();                                      |
 | &nbsp;&nbsp; public float[] [getRangeImage](lidar.md#wb_lidar_get_range_image)();                                               |
 | &nbsp;&nbsp; public float[] [getLayerRangeImage](lidar.md#wb_lidar_get_range_image)(int layer);                                 |
-| &nbsp;&nbsp; public [WbLidarPoint](lidar.md#wblidarpoint)[] [getPointCloud](lidar.md#wb_lidar_get_point_cloud)();               |
-| &nbsp;&nbsp; public [WbLidarPoint](lidar.md#wblidarpoint)[] [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer); |
+| &nbsp;&nbsp; public [LidarPoint](lidar.md#wblidarpoint)[] [getPointCloud](lidar.md#wb_lidar_get_point_cloud)();                 |
+| &nbsp;&nbsp; public [LidarPoint](lidar.md#wblidarpoint)[] [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer);   |
 | &nbsp;&nbsp; public int [getNumberOfPoints](lidar.md#wb_lidar_get_point_cloud)();                                               |
 | &nbsp;&nbsp; public double [getFrequency](lidar.md#wb_lidar_get_frequency)();                                                   |
 | &nbsp;&nbsp; public void [setFrequency](lidar.md#wb_lidar_get_frequency)(double frequency);                                     |
@@ -397,8 +396,8 @@ The following tables describe the Java classes and their methods.
 
 |                                                                   |
 | ----------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.WbLidarPoint;            |
-| public class [WbLidarPoint](lidar.md#wblidarpoint) {              |
+| import com.cyberbotics.webots.controller.LidarPoint;              |
+| public class [LidarPoint](lidar.md#wblidarpoint) {                |
 | &nbsp;&nbsp; public double [getX](lidar.md#wblidarpoint)();       |
 | &nbsp;&nbsp; public double [getY](lidar.md#wblidarpoint)();       |
 | &nbsp;&nbsp; public double [getZ](lidar.md#wblidarpoint)();       |
@@ -546,7 +545,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [disable](radar.md#wb_radar_enable)();                                              |
 | &nbsp;&nbsp; public int [getSamplingPeriod](radar.md#wb_radar_enable)();                                     |
 | &nbsp;&nbsp; public int [getNumberOfTargets](radar.md#wb_radar_get_number_of_targets)();                     |
-| &nbsp;&nbsp; public [WbRadarTarget](radar.md#wbradartarget)[] [getTargets](radar.md#wb_radar_get_targets)(); |
+| &nbsp;&nbsp; public [RadarTarget](radar.md#wbradartarget)[] [getTargets](radar.md#wb_radar_get_targets)();   |
 | &nbsp;&nbsp; public doubles [getMinRange](radar.md#wb_radar_get_min_range)();                                |
 | &nbsp;&nbsp; public double [getMaxRange](radar.md#wb_radar_get_min_range)();                                 |
 | &nbsp;&nbsp; public double [getHorizontalFov](radar.md#wb_radar_get_horizontal_fov)();                       |
@@ -559,8 +558,8 @@ The following tables describe the Java classes and their methods.
 
 |                                                                          |
 | ------------------------------------------------------------------------ |
-| import com.cyberbotics.webots.controller.WbRadarTarget;                  |
-| public class [WbRadarTarget](radar.md#wbradartarget) {                   |
+| import com.cyberbotics.webots.controller.RadarTarget;                    |
+| public class [RadarTarget](radar.md#wbradartarget) {                     |
 | &nbsp;&nbsp; public double [getDistance](radar.md#wbradartarget)();      |
 | &nbsp;&nbsp; public double [getReceivedPower](radar.md#wbradartarget)(); |
 | &nbsp;&nbsp; public double [getSpeed](radar.md#wbradartarget)();         |
@@ -748,4 +747,3 @@ The following tables describe the Java classes and their methods.
 | }                                                                                         |
 
 %end
-

@@ -37,7 +37,7 @@ robot (the front of the robot has negative *z* coordinates).
 
 ### Field Summary
 
-- `motorConsumption`: power consumption of the the motor in Watts.
+- `motorConsumption`: power consumption of the motor in Watts.
 - `axleLength`: distance between the two wheels (in meters). This field must be
 specified for "kinematics" based robot models. It will be ignored by "physics"
 based models.

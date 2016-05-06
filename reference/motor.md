@@ -290,11 +290,11 @@ void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, doub
   wb_position_sensor_enable(tag_sensor, TIME_STEP);
   double effective;  // effective position
   do {
-    wb_robot_step(TIME_STEP);
+    if (wb_robot_step(TIME_STEP) == -1)
+      break;
     delay -= TIME_STEP;
     effective = wb_position_sensor_get_value(tag_sensor);
-  }
-  while (fabs(target - effective) > DELTA && delay > 0);
+  } while (fabs(target - effective) > DELTA && delay > 0);
   wb_position_sensor_disable(tag_sensor);
 }
 ```

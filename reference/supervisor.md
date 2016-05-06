@@ -565,7 +565,8 @@ int main(int argc, char *argv[]) {
   while (! finished) {
     // your controller code here
     ...
-    wb_robot_step(TIME_STEP);
+    if (wb_robot_step(TIME_STEP) == -1)
+      break;
   }
   saveExperimentsData();
   wb_supervisor_simulation_quit(EXIT_SUCCESS); // ask Webots to terminate

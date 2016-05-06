@@ -5,20 +5,6 @@ for these examples are located in the "robots/(robot\_name)/worlds" directory,
 and the corresponding controllers are located in the
 "robots/(robot\_name)/controllers" directory.
 
-### aibo_ers210_rough.wbt
-
-**Keywords**: Aibo, Legged robot, uneven ground, IndexedFaceSet, texture
-
-%figure "aibo_ers210_rough"
-
-![aibo_ers210_rough.png](images/aibo_ers210_rough.png)
-
-%end
-
-In this example, you can see a silver Aibo ERS-210 robot walking on an uneven
-floor while a ball rolls and falls off. The uneven floor is principally made of
-a `IndexedFaceSet`.
-
 ### aibo_ers7.wbt
 
 **Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone

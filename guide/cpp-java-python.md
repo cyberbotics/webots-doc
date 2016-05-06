@@ -167,7 +167,7 @@ from controller import *
 
 class MyRobot (Robot):
   def run(self):
-    led = self.getLed('ledName')
+    led = self.getLED('ledName')
     distanceSensor = self.getDistanceSensor('distanceSensorName')
     distanceSensor.enable(32)
 

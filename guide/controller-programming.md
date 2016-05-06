@@ -50,10 +50,6 @@ depending on the complexity of the simulated world.
 
 Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step()` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling `wb_robot_cleanup()`.
 
-The `wb_robot_cleanup()` function is needed in particular when the controller program exits before the end of the simulation, i.e. before the `wb_robot_step()` function returns *-1*.
-In fact it notifies Webots that the program is terminating so that Webots can continue the simulation and free the relative resources.
-
-
 ### Simulation step and wb_robot_step()
 
 Webots uses two different time steps:

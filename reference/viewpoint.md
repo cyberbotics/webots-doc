@@ -2,12 +2,13 @@
 
 ```
 Viewpoint {
-  SFFloat      fieldOfView    0.785398  # (0,pi)
-  SFRotation   orientation    0 0 1 0   # 3D unit vector, angle (rad)
-  SFVec3f      position       0 0 0     # 3D vector
-  SFString     description    ""
-  SFFloat      near           0.05      # [0,inf)
-  SFString     follow         ""
+  SFFloat      fieldOfView        0.785398  # (0,pi)
+  SFRotation   orientation        0 0 1 0   # 3D unit vector, angle (rad)
+  SFVec3f      position           0 0 0     # 3D vector
+  SFString     description        ""
+  SFFloat      near               0.05      # [0,inf)
+  SFString     follow             ""
+  SFBool       followOrientation  FALSE
 }
 ```
 
@@ -46,4 +47,6 @@ to be followed from the `View / Follow Object` menu item. If multiple solid
 instances with the same name exist, the instance to be followed is identified by
 adding the instance number to the `follow` field value using the format
 "`<name>:<number>`".
+
+The `followOrientation` field can be used to follow an object orientation (in addition to position). This can be useful for example to see as if the viewpoint was the robot eyes. The `follow` field should be set with a valid object name otherwise this field will have no effect.
 

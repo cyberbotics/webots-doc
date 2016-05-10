@@ -143,7 +143,7 @@ function addDynamicLoadEvent(el) {
 }
 
 function aClick(el) {
-    setupUrl(el.getAttribute('href'))
+    setupUrl(el.getAttribute('href'));
     getMDFile();
     updateBrowserUrl();
 }

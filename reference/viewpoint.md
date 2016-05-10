@@ -48,5 +48,5 @@ instances with the same name exist, the instance to be followed is identified by
 adding the instance number to the `follow` field value using the format
 "`<name>:<number>`".
 
-The `followOrientation` field can be used to make the viewpoint follow also the orientation of an object (in addition to its position). If `followOrientation` is true, the viewpoint is fully attached to the followed object, like an embedded camera onboard a robot. The `follow` field should be set with a valid object name otherwise the `followOrientation` field has no effect.
+The `followOrientation` field can be used to make the viewpoint follow also the orientation of an object (in addition to its position). If `followOrientation` is true, the viewpoint is rigidly attached to the followed object, like an embedded camera onboard a robot. The `follow` field should be set with a valid object name otherwise the `followOrientation` field has no effect.
 

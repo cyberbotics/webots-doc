@@ -40,7 +40,7 @@ The `near` and the `fieldOfView` fields define together the viewing frustum. Any
 (standing between the camera and the near plane) won't appear.
 
 The `follow` field can be used to specify the name of a robot (or other object)
-that the viewpoint will follow in translation (travelling movement) during the simulation. If the string is
+that the viewpoint will follow in translation (traveling movement) during the simulation. If the string is
 empty, or if it does not correspond to any object, then the viewpoint will
 remain fixed. The `follow` field is automatically updated when setting the solid
 to be followed from the `View / Follow Object` menu item. If multiple solid

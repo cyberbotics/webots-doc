@@ -7,12 +7,15 @@ The simulation model is equiped with the following sensors and actuators:
 - A 3 axes accelerometer
 - A 3 axes gyroscope
 - A camera
+- A speaker
 
 The accelerometer returns values between 0 and 1024 corresponding to values
 between -3 [g] to +3 [g] like on the real robot. For the gyro, it returns also
 values between 0 and 1024, corresponding to values between -1600 [deg/sec] and
 +1600 [deg/sec], here again similarly to the values returned by the real robot.
 Their respective names are `Accelerometer` and `Gyro`.
+
+The speaker name is `Speaker` and it can be used to play sound files or perform text-to-speech.
 
 The camera is a RGBA camera and has a basic resolution of 160x120 pixels, but it
 can be changed to any value. The horizontal field of view is 1.0123 [rad].

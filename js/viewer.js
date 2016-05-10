@@ -91,7 +91,9 @@ function redirectUrls(node) {
         var href = a.getAttribute("href");
         if (!href)
             continue;
-        if (href.startsWith("http")) // open external links in a new window
+        else if (href.startsWith("#"))
+            addDynamicAnchorEvent(a); // on firefox, the second click on the anchor is not dealt cleanly
+        else if (href.startsWith("http")) // open external links in a new window
             a.setAttribute("target", "_blank");
         else if (href.endsWith(".md") || href.indexOf(".md#") > -1) {
             addDynamicLoadEvent(a);
@@ -127,6 +129,19 @@ function forgeUrl(page, anchor) {
       }
   }
   return newUrl;
+}
+
+function addDynamicAnchorEvent(el) {
+    if (el.classList.contains("dynamicAnchor"))
+        return;
+    el.addEventListener("click",
+        function (event) {
+            applyAnchor(event.target);
+            event.preventDefault();
+        },
+        false
+    );
+    el.classList.add("dynamicAnchor");
 }
 
 function addDynamicLoadEvent(el) {

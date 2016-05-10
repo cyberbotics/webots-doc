@@ -252,15 +252,17 @@ overflow-y:hidden;
 font-size:10px;
 color:gray;
 position:absolute;
-margin:5px 0px 0px 140px;
-top:-24px;
+margin:48px 0px 0px 140px;
+top:0px;
+left:40px;
 }
 .marginmenu ul {
 font-size:10px;
-margin:0px 20px 0px 130px;
+margin:64px 20px 0px 130px;
+left:10px;
 position:relative;
 float:left;
-width:140px;
+width:150px;
 border:none;
 background: #eee;
 padding: 6px;

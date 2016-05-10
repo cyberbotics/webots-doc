@@ -11,11 +11,9 @@ if (typeof String.prototype.endsWith !== "function")
 var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
 
 function setupUrlOnline(url) {
-  setup.book = "";
-  setup.page = "";
+  setup.book = "guide";
+  setup.page = "index";
   setup.anchor = "";
-  setup.tag = "";
-  setup.branch = "";
 
   var m = url.match(new RegExp("/([^/]+)/([^/\\?#]+)([^/]*)$"));
   if (m) {
@@ -49,13 +47,13 @@ function setupUrlLocal(url) {
     if (m)
       setup.page = m[1].replace(/.md$/, "");
     else
-      setup.page = "";
+      setup.page = "index";
 
     m = url.match(/book=([^&#]*)/);
     if (m)
       setup.book = m[1];
     else
-      setup.book = "";
+      setup.book = "guide";
 
     m = url.match(/#([^&#]*)/);
     if (m)
@@ -123,8 +121,10 @@ function forgeUrl(page, anchor) {
   } else {
       if (currentUrl.indexOf("page=") > -1)
           newUrl = currentUrl.replace(/page=([\w-]+)(#[\w-]+)?/, "page=" + page + anchorString);
-      else
-          newUrl = currentUrl + "&page=" + page + anchorString;
+      else {
+          var isFirstArgument = (currentUrl.indexOf("?") < 0);
+          newUrl = currentUrl + (isFirstArgument ? "?" : "&") + "page=" + page + anchorString;
+      }
   }
   return newUrl;
 }

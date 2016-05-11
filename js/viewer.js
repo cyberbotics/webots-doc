@@ -185,6 +185,7 @@ function applyAnchor() {
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
         else
           window.scrollBy(0, 180); // manual adjustment for the off-line version
+        updateBrowserUrl();
     }
 }
 

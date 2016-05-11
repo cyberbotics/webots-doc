@@ -11,11 +11,9 @@ if (typeof String.prototype.endsWith !== "function")
 var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
 
 function setupUrlOnline(url) {
-  setup.book = "";
-  setup.page = "";
+  setup.book = "guide";
+  setup.page = "index";
   setup.anchor = "";
-  setup.tag = "";
-  setup.branch = "";
 
   var m = url.match(new RegExp("/([^/]+)/([^/\\?#]+)([^/]*)$"));
   if (m) {
@@ -49,13 +47,13 @@ function setupUrlLocal(url) {
     if (m)
       setup.page = m[1].replace(/.md$/, "");
     else
-      setup.page = "";
+      setup.page = "index";
 
     m = url.match(/book=([^&#]*)/);
     if (m)
       setup.book = m[1];
     else
-      setup.book = "";
+      setup.book = "guide";
 
     m = url.match(/#([^&#]*)/);
     if (m)
@@ -93,7 +91,9 @@ function redirectUrls(node) {
         var href = a.getAttribute("href");
         if (!href)
             continue;
-        if (href.startsWith("http")) // open external links in a new window
+        else if (href.startsWith("#"))
+            addDynamicAnchorEvent(a); // on firefox, the second click on the anchor is not dealt cleanly
+        else if (href.startsWith("http")) // open external links in a new window
             a.setAttribute("target", "_blank");
         else if (href.endsWith(".md") || href.indexOf(".md#") > -1) {
             addDynamicLoadEvent(a);
@@ -123,10 +123,26 @@ function forgeUrl(page, anchor) {
   } else {
       if (currentUrl.indexOf("page=") > -1)
           newUrl = currentUrl.replace(/page=([\w-]+)(#[\w-]+)?/, "page=" + page + anchorString);
-      else
-          newUrl = currentUrl + "&page=" + page + anchorString;
+      else {
+          var isFirstArgument = (currentUrl.indexOf("?") < 0);
+          newUrl = currentUrl + (isFirstArgument ? "?" : "&") + "page=" + page + anchorString;
+      }
   }
   return newUrl;
+}
+
+function addDynamicAnchorEvent(el) {
+    if (el.classList.contains("dynamicAnchor"))
+        return;
+    el.addEventListener("click",
+        function (event) {
+            setup.anchor = extractAnchor(event.target.getAttribute('href'));
+            applyAnchor();
+            event.preventDefault();
+        },
+        false
+    );
+    el.classList.add("dynamicAnchor");
 }
 
 function addDynamicLoadEvent(el) {
@@ -143,7 +159,7 @@ function addDynamicLoadEvent(el) {
 }
 
 function aClick(el) {
-    setupUrl(el.getAttribute('href'))
+    setupUrl(el.getAttribute('href'));
     getMDFile();
     updateBrowserUrl();
 }
@@ -169,6 +185,7 @@ function applyAnchor() {
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
         else
           window.scrollBy(0, 180); // manual adjustment for the off-line version
+        updateBrowserUrl();
     }
 }
 
@@ -556,9 +573,8 @@ function getMenuFile() {
     });
 }
 
-function extractAnchor() {
-    var currentUrl = location.href;
-    var match = /#([\w-]+)/.exec(currentUrl);
+function extractAnchor(url) {
+    var match = /#([\w-]+)/.exec(url);
     if (match && match.length == 2)
         return match[1];
     return '';
@@ -578,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setup = {
             "book":   getGETQueryValue("book", "guide"),
             "page":   getGETQueryValue("page", "index"),
-            "anchor": extractAnchor(),
+            "anchor": extractAnchor(location.href),
             "branch": getGETQueryValue("branch", "master"),
             "url":    url
         }

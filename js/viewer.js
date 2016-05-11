@@ -136,7 +136,8 @@ function addDynamicAnchorEvent(el) {
         return;
     el.addEventListener("click",
         function (event) {
-            applyAnchor(event.target);
+            setup.anchor = extractAnchor(event.target.getAttribute('href'));
+            applyAnchor();
             event.preventDefault();
         },
         false
@@ -571,9 +572,8 @@ function getMenuFile() {
     });
 }
 
-function extractAnchor() {
-    var currentUrl = location.href;
-    var match = /#([\w-]+)/.exec(currentUrl);
+function extractAnchor(url) {
+    var match = /#([\w-]+)/.exec(url);
     if (match && match.length == 2)
         return match[1];
     return '';
@@ -593,7 +593,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setup = {
             "book":   getGETQueryValue("book", "guide"),
             "page":   getGETQueryValue("page", "index"),
-            "anchor": extractAnchor(),
+            "anchor": extractAnchor(location.href),
             "branch": getGETQueryValue("branch", "master"),
             "url":    url
         }

@@ -289,7 +289,7 @@ for 2D simulations (robots moving in the  *xz*-plane and the  *y *-axis oriented
 upwards), a positive *x *-component indicates that the emitter is located to the
 left of the receiver while a negative  *x *-component indicates that the emitter
 is located to the right.
-If the packet is sent from a physics plugin, the returned values will be will NaN (Not a Number).
+If the packet is sent from a physics plugin, the returned values will be NaN (Not a Number).
 The returned vector is valid only until the next call to `wb_receiver_next_packet()`.
 It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 

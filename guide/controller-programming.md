@@ -262,7 +262,7 @@ each `wb_robot_step()` must be a multiple of the simulation step. So for
 example, if the simulation step is 16 ms, then the control step argument passed
 to `wb_robot_step()` can be 16, 32, 64, 128, etc.
 
-If the simulation is run in step by step mode, i.e clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
+If the simulation is run in step-by-step mode, i.e., by clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
 The following [figure](#controller_synchronization) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
 
 %figure "Synchronization of simulation and controller steps"
@@ -273,7 +273,7 @@ The following [figure](#controller_synchronization) depicts in details the synch
 
 At every step, all the commands before the `wb_robot_step()` statements are executed first and the simulation stops in the middle of the execution of `wb_robot_step()`.
 Webots API functions are executed but they are applied to the simulation world only when processing `wb_robot_step()` request, that is when the controller process communicates with Webots process.
-When the simulation stops the new simulation status have already been computed, the simulation time has been updated and the new sensors values are ready.
+When the simulation stops, the new simulation status has already been computed, the simulation time has been updated and the new sensors values are ready.
 Note that the first step includes the initialization too.
 So all the statements before the second `wb_robot_step()` statement are executed.
 

@@ -275,9 +275,9 @@ the receiver's queue (see [this figure](#receiver-s-packet-queue)). It returns
 the simulated signal strength at the time the packet was transmitted. This
 signal strength is equal to the inverse of the distance between the emitter and
 the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
-strength and *r* is the distance between emitter and receiver. It is illegal to
-call this function if the receiver's queue is empty
-(`wb_receiver_get_queue_length()` == 0).
+strength and *r* is the distance between emitter and receiver.
+If the packet is sent from a physics plugin, the returned value will be positive infinity.
+It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 The function `wb_receiver_get_emitter_direction()` also operates on the head
 packet in the receiver's queue. It returns a normalized (length=1) vector that
@@ -288,9 +288,10 @@ the receiver, then the vector would be [0 0 1]. In the usual orientation used
 for 2D simulations (robots moving in the  *xz*-plane and the  *y *-axis oriented
 upwards), a positive *x *-component indicates that the emitter is located to the
 left of the receiver while a negative  *x *-component indicates that the emitter
-is located to the right. The returned vector is valid only until the next call
-to `wb_receiver_next_packet()`. It is illegal to call this function if the
-receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
+is located to the right.
+If the packet is sent from a physics plugin, the returned values will be will NaN (Not a Number).
+The returned vector is valid only until the next call to `wb_receiver_next_packet()`.
+It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 > **note** [Python]:
 `getEmitterDirection()` returns the vector as a list containing three floats.

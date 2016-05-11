@@ -239,11 +239,11 @@ The `Show Distance Sensor rays` allows you to display, or to hide, the rays
 casted by the distance sensor devices. These rays are drawn as red lines (which
 become green beyond collision points). Their length corresponds to the maximum
 range of the device.
-If the distance sensor device is disabled or the first measurement is not available yet, the frustum will be drawn in gray.
+If the distance sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
 The `Show Light Sensor rays` allows you to display, or to hide, the rays casted
 by the light sensor devices. These rays are drawn as yellow lines.
-If the light sensor device is disabled or the first measurement is not available yet, the frustum will be drawn in gray.
+If the light sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
 The `Show Lights` allows you to display, or to hide, the lights (including
 PointLights and SpotLights). DirectionalLights aren't represented. PointLights

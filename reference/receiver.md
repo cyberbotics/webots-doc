@@ -94,7 +94,7 @@ data packets will be discarded if the receiver's buffer size (specified in the
 [Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
 packets should be read at a high enough rate by the controller program.
 The provided `ms` argument specifies the [Receiver](#receiver)'s sampling period.
-The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the sampling period expired.
+The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the first sampling period elapsed.
 
 The function `wb_receiver_disable()` stops the background listening.
 

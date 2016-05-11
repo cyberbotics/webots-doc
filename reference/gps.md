@@ -81,7 +81,7 @@ const double wb_gps_get_speed(WbDeviceTag tag)
 `wb_gps_enable()` allows the user to enable a GPS measurement each `ms`
 milliseconds.
 The provided `ms` argument specifies the sensor's sampling period.
-Note that the first measurement will be available only after the sampling period has expired.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_gps_disable()` turns the GPS off, saving computation time.
 

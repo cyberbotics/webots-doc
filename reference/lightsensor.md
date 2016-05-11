@@ -201,7 +201,7 @@ double wb_light_sensor_get_value(WbDeviceTag tag)
 `wb_light_sensor_enable()` enables a light sensor measurement each `ms`
 milliseconds.
 The provided `ms` argument specifies the sensor's sampling period.
-Note that the first measurement will be available only after the sampling period has expired.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_light_sensor_disable()` turns off the light sensor to save CPU time.
 

@@ -34,7 +34,7 @@ is running. First, it is necessary to enable keyboard input by calling the
 `wb_keyboard_enable()` function. The `ms` parameter is expressed in
 milliseconds, and defines how frequently readings are updated.
 The provided `ms` argument specifies the sensor's sampling period.
-Note that the first key will be available only after the sampling period has expired.
+Note that the first key will be available only after the first sampling period elapsed.
 After that, values can be read by calling the `wb_keyboard_get_key()`
 function repeatedly until this function returns -1. The returned value, if
 non-negative, is a key code corresponding to a key currently pressed. If no

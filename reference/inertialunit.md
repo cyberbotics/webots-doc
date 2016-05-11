@@ -91,7 +91,7 @@ const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag)
 The `wb_inertial_unit_enable()` function turns on the angle measurement each
 `ms` milliseconds.
 The provided `ms` argument specifies the sensor's sampling period.
-Note that the first measurement will be available only after the sampling period has expired.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_inertial_unit_disable()` function turns off the
 [InertialUnit](#inertialunit) device.

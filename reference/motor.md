@@ -405,7 +405,7 @@ performed each `ms` milliseconds; the result must be retrieved with the
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function.
 The provided `ms` argument specifies the sensor's sampling period.
-Note that the first measurement will be available only after the sampling period has expired.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function returns the most recent motor force (resp. torque) measurement. This

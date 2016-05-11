@@ -62,7 +62,7 @@ int wb_compass_get_sampling_period(WbDeviceTag tag)
 The `wb_compass_enable()` function turns on the [Compass](#compass) measurement
 each `ms` milliseconds.
 The provided `ms` argument specifies the sensors's sampling period.
-Note that the first measurement will be available only after the sampling period has expired.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_compass_disable()` function turns off the [Compass](#compass) device.
 

@@ -48,7 +48,7 @@ int wb_position_sensor_get_type(WbDeviceTag tag)
 `wb_position_sensor_enable()` enables a measurement of the joint position each
 `ms` milliseconds.
 The provided `ms` argument specifies the sensor's sampling period.
-Note that the first measurement will be available only after the sampling period has expired.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_position_sensor_disable()` turns off the position sensor to save CPU time.
 

@@ -109,7 +109,7 @@ int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
 The `wb_emitter_send()` function adds to the emitter's queue a packet of `size` bytes located at the address indicated by `data`.
 The enqueued data packets will then be sent to potential receivers (and removed from the emitter's queue) at the rate specified by the `baudRate` field of the [Emitter](#emitter) node.
 Note that independently from the `baudRate`, the [Emitter](#emitter) node will need at least one basic time step to send the packet but the [Receiver](#receiver) node will receive it immediately.
-Moreover a packet will not be sent to a received its emitter robot.
+Moreover a packet will not be sent to its emitter robot.
 This function returns 1 if the message was placed in the sending queue, 0 if the sending queue was full.
 The queue is considered to be *full* when the sum of bytes of all the currently
 enqueued packets exceeds the buffer size specified by the `bufferSize` field.

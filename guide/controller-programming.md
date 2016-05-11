@@ -234,7 +234,7 @@ separately, using    `wb_motor_set_position()`. Then you need to call
 Webots uses two different time steps:
 
 - The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
-- The control step (the argument of the `wb_robot_step()` function)
+- The control step (specified as an argument of the `wb_robot_step()` function for each robot)
 
 The simulation step is the value specified in `WorldInfo.basicTimeStep` (in
 milliseconds). It indicates the duration of one step of simulation, i.e. the

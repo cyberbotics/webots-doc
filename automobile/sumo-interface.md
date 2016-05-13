@@ -67,4 +67,4 @@ Webots and then close the loop with SUMO.
 
 ### SumoInterface PROTO
 
-Instead of adding a `Supervisor` node and assigning the `sumo_supervisor` controller to it, you can simply add the `SumoInterface` which provide a simpler interface to change the argument of the controller and does not require you to copy the `sumo_supervisor` controller in the `controllers` directory of your project.
+Instead of adding a `Supervisor` node and assigning the `sumo_supervisor` controller to it, you can simply add the `SumoInterface` PROTO node which provides a simpler interface to change the argument of the controller and does not require you to copy the `sumo_supervisor` controller in the `controllers` directory of your project.

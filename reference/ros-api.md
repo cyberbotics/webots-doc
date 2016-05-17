@@ -170,7 +170,7 @@ for more information about the value of `robot_unique_name`).
 
 | name                                                              | service/topic | data type                                  | data type definition                                                                 |
 | ----------------------------------------------------------------- | ------------- | ------------------------------------------ | ------------------------------------------------------------------------------------ |  |
-| [/keyboard/key](keyboard.md#wb_keyboard_enable)                   | topic         | webots\_ros::Int8Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int8 data |
+| [/keyboard/key](keyboard.md#wb_keyboard_enable)                   | topic         | webots\_ros::Int32Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int32 data |
 | [/keyboard/enable](keyboard.md#wb_keyboard_enable)                | service       | webots\_ros::sensor\_enable                | int32 period<br/>---<br/>int8 success                                                |
 | [/keyboard/get\_sampling\_period](keyboard.md#wb_keyboard_enable) | service       | webots\_ros::sensor\_get\_sampling\_period | uint8 ask<br/>---<br/>uint32 period                                                  |
 

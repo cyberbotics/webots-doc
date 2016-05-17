@@ -6,7 +6,7 @@ device.
 The <device\_name> should be replaced by the actual name of the device and each
 services/topics names should be prepended with ``<robot_unique_name>`` (have a
 look at the [User
-Guide](http://www.cyberbotics.com/guide/using-ros.php#standard_ros_controller)
+Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)
 for more information about the value of `robot_unique_name`).
 
 ### Accelerometer

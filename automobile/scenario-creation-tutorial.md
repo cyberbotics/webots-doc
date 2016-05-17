@@ -1,6 +1,6 @@
-## Creation of a real world scenario
+## Scenario creation tutorial
 
-This small tutorial will explain step by step how to create a real scenario inspired from a real world map and then add traffic using SUMO.
+This small tutorial explains step-by-step how to create a scenario inspired from a real world map and then add traffic using SUMO.
 
 ### Download the map
 

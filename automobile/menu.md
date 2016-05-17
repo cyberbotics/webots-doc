@@ -24,7 +24,7 @@
 - [Tools](tools.md)
     - [OpenStreetMap importer](openstreetmap-importer.md)
     - [SUMO interface](sumo-interface.md)
-    - [Real world scenario creation tutorial](scenario-creation-tutorial.md)
+    - [Scenario creation tutorial](scenario-creation-tutorial.md)
 - [Worlds](worlds.md)
     - [City](city.md)
     - [City night](city-night.md)

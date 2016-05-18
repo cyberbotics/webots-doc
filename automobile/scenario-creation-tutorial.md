@@ -15,7 +15,7 @@ We will use a part of the OpenStreetMap map to generate the Webots world file. T
 As explained in the [OpenStreetMap importer](openstreetmap-importer.md) section, you should use the previously downloaded map to generate the Webots world.
 
 > **note**:
-This importer use splines to improve and smooth the path of the roads, unfortunately the OpenStreetMap to SUMO importer does not support this, it is therefore recommended to disable it (setting the spline subdivision to 0) if you want then to add traffic using SUMO.
+This importer uses splines to improve and smooth the path of the roads, unfortunately the OpenStreetMap to SUMO importer does not support this, it is therefore recommended to disable it (setting the spline subdivision to 0) if you want then to add traffic using SUMO.
 
 > **note**:
 It is strongly recommended to not use the 3D feature of the [OpenStreetMap importer](openstreetmap-importer.md) otherwise it will not be possible to add traffic using SUMO.

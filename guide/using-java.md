@@ -16,14 +16,14 @@ program a Java controller can be found in the
 ### Java and Java Compiler Installation
 
 In order to develop and run Java controllers for Webots it is necessary to have
-the Java Development Kit (JDK) version 1.7.
+the Java Development Kit (JDK) version 1.8.
 
 #### Installation Instructions
 
 The Java Development Kit (JDK) can be downloaded for free from the [Sun
 Developer Network](http://www.oracle.com/technetwork/java/javase/downloads).
 Make sure you choose the most recent release and the Standard Edition (SE) of
-the JDK 7. For Windows, make also sure you have selected the 64 bit version
+the JDK 8. For Windows, make also sure you have selected the 64 bit version
 since webots is incompatible with the 32 bit version. Then follow the
 installation instructions attending the package.
 
@@ -49,7 +49,7 @@ package.
 On Windows, the *PATH* variable must be set using the `Environment Variables`
 dialog.
 
-On Windows 7 and 8, this dialog can be opened like this: Choose `Start,
+On Windows, this dialog can be opened like this: Choose `Start,
 Settings, Control Panel, System and Security, System` and open `Advanced system
 settings`. Select the `Advanced` tab and click on the `Environment Variables`
 button.

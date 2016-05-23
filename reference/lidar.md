@@ -146,6 +146,13 @@ simulate the lidar:
 
     In case of 'rotating' lidar, the `fieldOfView` term in the constraint is
     replaced by `2 * π`.
+    
+#### Rotating lidar
+
+A lidar is said rotating if its `type` field is set to 'rotating'. In that case, the node inserted in the `rotatingHead` rotates along the Y axis at the frequency defined in the `defaultFrequency` field. This rotation starts as soon as the lidar is enabled. The internal depth camera is attached to this node and is therefore also rotating along the Y axis. 
+
+> **note**:
+The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π.
 
 ### Lidar Functions
 

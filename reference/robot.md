@@ -317,7 +317,7 @@ function returns 0.
 
 **Name**
 
-**Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getTouchSensor** - *get the instance of a robot's device*
+**Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
@@ -341,6 +341,7 @@ PositionSensor *Robot::getPositionSensor(const std::string &name)
 RangeFinder *Robot::getRangeFinder(const std::string &name)
 Receiver *Robot::getReceiver(const std::string &name)
 Servo *Robot::getServo(const std::string &name)
+Speaker *Robot::getSpeaker(const std::string &name)
 TouchSensor *Robot::getTouchSensor(const std::string &name)
 ```
 

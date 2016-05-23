@@ -4,9 +4,9 @@ The following tables describe the available ros messages and services for each
 device.
 
 The <device\_name> should be replaced by the actual name of the device and each
-services/topics names should be prepended with '/<robot\_unique\_name>' (have a
+services/topics names should be prepended with ``<robot_unique_name>`` (have a
 look at the [User
-Guide](http://www.cyberbotics.com/guide/using-ros.html#standard_ros_controller)
+Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)
 for more information about the value of `robot_unique_name`).
 
 ### Accelerometer
@@ -170,7 +170,7 @@ for more information about the value of `robot_unique_name`).
 
 | name                                                              | service/topic | data type                                  | data type definition                                                                 |
 | ----------------------------------------------------------------- | ------------- | ------------------------------------------ | ------------------------------------------------------------------------------------ |  |
-| [/keyboard/key](keyboard.md#wb_keyboard_enable)                   | topic         | webots\_ros::Int8Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int8 data |
+| [/keyboard/key](keyboard.md#wb_keyboard_enable)                   | topic         | webots\_ros::Int32Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int32 data |
 | [/keyboard/enable](keyboard.md#wb_keyboard_enable)                | service       | webots\_ros::sensor\_enable                | int32 period<br/>---<br/>int8 success                                                |
 | [/keyboard/get\_sampling\_period](keyboard.md#wb_keyboard_enable) | service       | webots\_ros::sensor\_get\_sampling\_period | uint8 ask<br/>---<br/>uint32 period                                                  |
 
@@ -308,6 +308,16 @@ for more information about the value of `robot_unique_name`).
 | [/robot/get\_type](robot.md#wb_robot_get_type)                             | service       | webots\_ros::device\_get\_type                 | uint8 ask<br/>---<br/>uint32 type                                                       |
 | [/robot/set\_mode](robot.md#wb_robot_get_mode)                             | service       | webots\_ros::robot\_set\_mode                  | char[] arg<br/>int32 mode<br/>---<br/>int8 success                                      |
 | /robot/get\_device\_list                                                   | service       | webots\_ros::robot\_get\_device\_list          | uint8 ask<br/>---<br/>string[] list                                                     |
+
+### Speaker
+
+| name                                                                    | service/topic | data type                           | data type definition                                                                                         |
+| ----------------------------------------------------------------------- | ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [/`<`device\_name`>`/play\_sound](speaker.md#wb_speaker_play_sound)     | service       | webots\_ros::speaker\_play\_sound   | string sound<br/>float64 volume<br/>float64 pitch<br/>float64 balance<br/>int8 loop<br/>---<br/>int8 success |
+| [/`<`device\_name`>`/stop](speaker.md#wb_speaker_stop)                  | service       | webots\_ros::speaker\_stop          | string sound<br/>---<br/>int8 success                                                                        |
+| [/`<`device\_name`>`/set\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_set\_language | string language<br/>---<br/>int8 success                                                                     |
+| [/`<`device\_name`>`/get\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_get\_language | uint8 ask<br/>---<br/>string language<br/>                                                                   |
+| [/`<`device\_name`>`/speak](speaker.md#wb_speaker_set_language)         | service       | webots\_ros::speaker\speak          | string text<br/>float64 volume<br/>---<br/>int8 success<br/>                                                 |
 
 ### Supervisor
 

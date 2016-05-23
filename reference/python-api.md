@@ -615,6 +615,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                      |
 | &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                         |
 | &nbsp;&nbsp; def [getServo](robot.md#wb_robot_get_device)(self, name)                            |
+| &nbsp;&nbsp; def [getSpeaker](robot.md#wb_robot_get_device)(self, name)                          |
 | &nbsp;&nbsp; def [getTouchSensor](robot.md#wb_robot_get_device)(self, name)                      |
 | &nbsp;&nbsp; def [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)(self)               |
 | &nbsp;&nbsp; def [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(self, index)          |
@@ -663,6 +664,20 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)(self)               |
 | &nbsp;&nbsp; def [setForce](servo.md#wb_servo_set_force)(self, force)                                       |
 | &nbsp;&nbsp; def [getType](servo.md#wb_servo_get_type)(self)                                                |
+
+%end
+
+%api "python_speaker"
+
+|                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------- |
+| from controller import Speaker                                                                                   |
+| class [Speaker](speaker.md) ([Device](#python_device)) :                                                         |
+| &nbsp;&nbsp; def [playSound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch balance, loop)  |
+| &nbsp;&nbsp; def [stop](speaker.md#wb_speaker_stop)(self, sound)                                                 |
+| &nbsp;&nbsp; def [setLanguage](speaker.md#wb_speaker_set_language)(self, language)                               |
+| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_set_language)(self)                                         |
+| &nbsp;&nbsp; def [speak](speaker.md#wb_speaker_set_language)(self, text, volume)                                 |
 
 %end
 

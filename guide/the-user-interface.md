@@ -145,6 +145,8 @@ want the viewpoint to follow an object, first you need to select the object with
 the mouse and then check the `Follow Object` menu item. Note that the `Follow
 Object` state is saved in the ".wbt" file.
 
+The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
+
 The `Restore Viewpoint` item restores the viewpoint's position and orientation
 to their initial settings when the file was loaded or reverted. This feature is
 handy when you get lost while navigating in the scene, and want to return to the

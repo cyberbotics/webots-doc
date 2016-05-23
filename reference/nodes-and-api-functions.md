@@ -69,6 +69,7 @@
 - [Slot](slot.md)
 - [Solid](solid.md)
 - [SolidReference](solidreference.md)
+- [Speaker](speaker.md)
 - [Sphere](sphere.md)
 - [SpotLight](spotlight.md)
 - [Supervisor](supervisor.md)

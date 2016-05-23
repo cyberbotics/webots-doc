@@ -20,7 +20,7 @@ Webots will run on most recent Linux distributions running glibc2.11.1 or
 earlier. This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc.
 Webots comes in two different package types: `.deb` and `.tar.bz2` (tarball).
 The `.deb` package is aimed at the latest Ubuntu Linux distribution whereas the
-tarball package includes many dependency libraries and there is therefore best
+tarball package includes many dependency libraries and it is therefore best
 suited for installation on other Linux distributions. These packages can be
 downloaded from our [web site](http://www.cyberbotics.com/linux).
 
@@ -124,29 +124,15 @@ This procedure explains how to install Webots from the DEB package (having the
 `.deb` extension).
 
 On Ubuntu, double-click on the DEB package file to open it with the Ubuntu
-Software Center and click on the `Install` button. If a previous version of
+Software App on 16.04 or Software Center in earlier versions and click on the `Install` button. If a previous version of
 Webots is already installed, then the text on the button could be different,
 like `Upgrade` or `Reinstall`.
+Note that GNOME Software App distributed in early versions of Ubuntu 16.04 contains a bug preventing the installation of third-party packages.
 
-Alternatively, the DEB package can also be installed using `dpkg` or `gdebi`
-with the `root` privileges. For 32-bit systems:
-
+Alternatively, the DEB package can also be installed using `apt` or `gdebi`
+with the `root` privileges.
 ```
-dpkg -i webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_i386.deb
-apt-get -f install
-```
-
-or
-
-```
-gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_i386.deb
-```
-
-For 64-bit systems:
-
-```
-dpkg -i webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
-apt-get -f install
+apt install ./webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
 or

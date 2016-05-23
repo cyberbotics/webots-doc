@@ -48,15 +48,17 @@ with *libav-tools* and *libavcodec-extra-54* packages.
 The advantage of this solution is that Webots will be updated with the system
 updates. This installation requires the `root` privileges.
 
-First of all, you may want to configure your apt package manager by adding this
+First of all, you may want to configure your APT package manager by adding the Cyberbotics repository.
+You can easily add it from the `Software and Updates` application.
+In the `Other Software` tab, click on the `Add...` button and copy the following 
 line:
 
 ```
 deb http://www.cyberbotics.com/debian/ binary-amd64/
 ```
 
-in the "/etc/apt/sources.list" configuration file. Then update the APT packages
-by using
+When you will close the window, the APT packages list should be automatocally updated.
+Otherwise you can manually execute the following command:
 
 ```
 apt-get update

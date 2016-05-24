@@ -56,7 +56,7 @@ In the `Other Software` tab, click on the `Add...` button and copy the following
 deb http://www.cyberbotics.com/debian/ binary-amd64/
 ```
 
-When you will close the window, the APT packages list should be automatocally updated.
+When you will close the window, the APT packages list should be automatically updated.
 Otherwise you can manually execute the following command:
 
 ```

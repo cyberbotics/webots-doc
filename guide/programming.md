@@ -304,13 +304,10 @@ function is described in the Physics Plugin chapter of the `Reference Manual`.
 
 ### Why does my camera window stay black?
 
-The content of the camera windows will appear only after all the following steps
-have been completed:
+The content of the camera window will appear only after all the following steps have been completed:
 
-1. The `Camera`'s name field has been specified.
-2. The `WbDeviceTag` for the `Camera` has been found with the function
-`wb_robot_get_device()`.
-3. The `Camera` has been enabled using the function `wb_camera_enable()`.
-4. The function `wb_camera_get_image()` (or `wb_camera_get_range_image()` for a
-"range-finder" `Camera`) has been called.
-5. At least one `wb_robot_step()` (or equivalent function) has been called.
+1. The `Camera`'s `name` field was specified.
+2. The `WbDeviceTag` for the `Camera` node was found using the `wb_robot_get_device()` function called with the corresponding `Camera`'s `name`.
+3. The `Camera` was enabled using the function `wb_camera_enable()` and a refresh rate of `r` milliseconds.
+4. One or several `wb_robot_step()` (or equivalent function) have been called covering a time span of at least `r` milliseconds.
+5. The function `wb_camera_get_image()` was called.

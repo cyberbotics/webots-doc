@@ -92,8 +92,11 @@ of once every `ms` milliseconds. Incoming data packet are appended to the tail
 of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
 data packets will be discarded if the receiver's buffer size (specified in the
 [Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
-packets should be read at a high enough rate by the controller program. The
-function `wb_receiver_disable()` stops the background listening.
+packets should be read at a high enough rate by the controller program.
+The provided `ms` argument specifies the [Receiver](#receiver)'s sampling period.
+The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the first sampling period elapsed.
+
+The function `wb_receiver_disable()` stops the background listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
@@ -118,6 +121,9 @@ void wb_receiver_next_packet(WbDeviceTag tag)
 The `wb_receiver_get_queue_length()` function returns the number of data packets
 currently present in the receiver's queue (see [this
 figure](#receiver-s-packet-queue)).
+
+The [Receiver](#receiver) node receives and queues the data packets immediately so that they will be available at the next sampling period.
+But the [Emitter](#emitter) node needs one basic time step to send the message.
 
 The `wb_receiver_next_packet()` function deletes the head packet. The next
 packet in the queue, if any, becomes the new head packet. The user must copy
@@ -327,4 +333,3 @@ the receiver.
 In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
 static integer of the [Receiver](#receiver) class
 (Receiver::CHANNEL\_BROADCAST).
-

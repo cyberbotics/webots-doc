@@ -245,6 +245,8 @@ int wb_camera_get_sampling_period(WbDeviceTag tag)
 
 `wb_camera_enable()` allows the user to enable a camera update each `ms`
 milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_camera_disable()` turns the camera off, saving computation time.
 

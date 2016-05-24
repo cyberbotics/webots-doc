@@ -28,6 +28,8 @@ int wb_joystick_get_sampling_period()
 **Description**
 
 The `wb_joystick_enable()` function allows the user to enable a joystick measurement each `ms` milliseconds. When this function is called the first free joystick is paired with the controller.
+The provided `ms` argument specifies the [Joystick](#joystick)'s sampling period.
+Note that the joystick will be active only after the first sampling period elapsed.
 
 The `wb_joystick_disable()` function turns the joystick off. The joystick is released so that it can be used by another controller.
 

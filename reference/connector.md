@@ -215,9 +215,14 @@ int wb_connector_get_presence(WbDeviceTag tag)
 
 The `wb_connector_enable_presence()` function starts querying the
 [Connector](#connector)'s *presence* (see definition below) state each `ms`
-milliseconds. The `wb_connector_disable_presence()` function stops querying the
-[Connector](#connector)'s *presence*. The
-`wb_connector_get_presence_sampling_period()` function returns the period at
+milliseconds.
+The provided `ms` argument specifies the [Connector](#connector)'s sampling period.
+Note that it will be active only after the first sampling period elapsed.
+
+The `wb_connector_disable_presence()` function stops querying the
+[Connector](#connector)'s *presence*.
+
+The `wb_connector_get_presence_sampling_period()` function returns the period at
 which the [Connector](#connector)'s *presence* is queried. The
 `wb_connector_get_presence()` function returns the current *presence* state of
 this connector, it returns:
@@ -288,4 +293,3 @@ each other from this moment on.
 If `wb_connector_unlock()` is invoked while there is a physical link between two
 `Connectors`, the link will be destroyed, unless `unilateralUnlock` is FALSE and
 the peer connector is still in the `isLocked` state.
-

@@ -57,6 +57,8 @@ const double *wb_gyro_get_values(WbDeviceTag tag)
 
 The `wb_gyro_enable()` function turns on the angular velocity measurement each
 `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_gyro_disable()` function turns off the [Gyro](#gyro) device.
 
@@ -81,4 +83,3 @@ period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the vector as a list containing three floats.
-

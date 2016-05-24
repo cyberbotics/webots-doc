@@ -209,6 +209,7 @@ robot doesn't move.
 The `wb_differential_wheels_get_encoders_sampling_period()` function returns the
 period given into the `wb_differential_wheels_enable_encoders()` function, or 0
 if the device is disabled.
+Note that the first encoders values will be available only after the first sampling period elapsed.
 
 ---
 

@@ -101,5 +101,4 @@ rendering system (up to 10x) when *compiz* desktop effects are on. Also these
 visual effects may cause some display bug where the main window of Webots is not
 properly refreshed. Hence, on Ubuntu (or other Linux) we recommend to deactivate
 the desktop effects. You can easily disable them using some tools like *Compiz
-Config Settings Manager* or *Unity Twerk Tool*.
-
+Config Settings Manager* or *Unity Tweak Tool*.

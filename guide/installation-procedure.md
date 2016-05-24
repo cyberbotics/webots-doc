@@ -50,8 +50,7 @@ updates. This installation requires the `root` privileges.
 
 First of all, you may want to configure your APT package manager by adding the Cyberbotics repository.
 You can easily add it from the `Software and Updates` application.
-In the `Other Software` tab, click on the `Add...` button and copy the following 
-line:
+In the `Other Software` tab, click on the `Add...` button and copy the following line:
 
 ```
 deb http://www.cyberbotics.com/debian/ binary-amd64/

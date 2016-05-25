@@ -87,7 +87,7 @@ default must be specified.
 "TwoChairs.wbt":
 
 ```
-#VRML_SIM V6.0 utf8
+#VRML_SIM V8.5 utf8
 
 WorldInfo {
 }

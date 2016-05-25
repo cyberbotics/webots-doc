@@ -15,6 +15,7 @@ and orientation of the PROTO instances.
 "TwoColorChair.proto":
 
 ```
+#VRML_SIM V8.5 utf8
 # A two-color chair
 
 PROTO TwoColorChair [

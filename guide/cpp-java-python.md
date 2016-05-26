@@ -151,9 +151,9 @@ timestep = int(robot.getBasicTimeStep())
 while robot.step(timestep) != -1:
   led = self.getLED('ledName')
   distanceSensor = self.getDistanceSensor('distanceSensorName')
-  distanceSensor.enable(32)
+  distanceSensor.enable(timestep)
 
-  while (self.step(32) != -1):
+  while (self.step(timestep) != -1):
     # Read the sensors, like:
     val = distanceSensor.getValue()
 

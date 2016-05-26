@@ -85,12 +85,12 @@ int main(int argc, char **argv) {
   Robot *robot = new Robot();
 
   int timeStep = (int) robot->getBasicTimeStep();
-  LED *led = getLED("ledName");
-  DistanceSensor *distanceSensor = getDistanceSensor("distanceSensorName");
+  LED *led = robot->getLED("ledName");
+  DistanceSensor *distanceSensor = robot->getDistanceSensor("distanceSensorName");
   distanceSensor->enable(timeStep);
 
   // Main control loop
-  while (step(timeStep) != -1) {
+  while (robot->step(timeStep) != -1) {
     // Read the sensors
     double val = distanceSensor->getValue();
 
@@ -111,18 +111,16 @@ int main(int argc, char **argv) {
 import com.cyberbotics.webots.controller.*;
 
 public class MyController {
-  private static final int TIME_STEP = 32;  // milliseconds
-
   public static void main(String[] args) {
     Robot robot = new Robot();
 
     int timeStep = (int) Math.round(robot.getBasicTimeStep());
-    LED led = getLED("my_led");
-    DistanceSensor distanceSensor = getDistanceSensor("my_distance_sensor");
+    LED led = robot.getLED("my_led");
+    DistanceSensor distanceSensor = robot.getDistanceSensor("my_distance_sensor");
     distanceSensor.enable(timeStep);
 
     // main control loop
-    while (step(timeStep) != -1) {
+    while (robot.step(timeStep) != -1) {
       // Read the sensors, like:
       double val = distanceSensor.getValue();
 
@@ -148,11 +146,11 @@ robot = Robot()
 
 timestep = int(robot.getBasicTimeStep())
 
-led = self.getLED('ledName')
-distanceSensor = self.getDistanceSensor('distanceSensorName')
+led = robot.getLED('ledName')
+distanceSensor = robot.getDistanceSensor('distanceSensorName')
 distanceSensor.enable(timestep)
 
-while (self.step(timestep) != -1):
+while (robot.step(timestep) != -1):
   # Read the sensors, like:
   val = distanceSensor.getValue()
 

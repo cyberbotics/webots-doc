@@ -148,19 +148,18 @@ robot = Robot()
 
 timestep = int(robot.getBasicTimeStep())
 
-while robot.step(timestep) != -1:
-  led = self.getLED('ledName')
-  distanceSensor = self.getDistanceSensor('distanceSensorName')
-  distanceSensor.enable(timestep)
+led = self.getLED('ledName')
+distanceSensor = self.getDistanceSensor('distanceSensorName')
+distanceSensor.enable(timestep)
 
-  while (self.step(timestep) != -1):
-    # Read the sensors, like:
-    val = distanceSensor.getValue()
+while (self.step(timestep) != -1):
+  # Read the sensors, like:
+  val = distanceSensor.getValue()
 
-    # Process sensor data here
+  # Process sensor data here
 
-    # Enter here functions to send actuator commands, like:
-    led.set(1)
+  # Enter here functions to send actuator commands, like:
+  led.set(1)
 
 # Enter here exit cleanup code
 ```

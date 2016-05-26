@@ -594,10 +594,10 @@ int main(int argc, char *argv[]) {
   while (! finished) {
     // your controller code here
     ...
-    if (step(TIME_STEP) == -1)
+    if (controller->step(TIME_STEP) == -1)
       break;
   }
-  simulationQuit(EXIT_SUCCESS);  // ask Webots to terminate
+  controller->simulationQuit(EXIT_SUCCESS);  // ask Webots to terminate
 
   delete controller; // cleanup resources
   return 0;

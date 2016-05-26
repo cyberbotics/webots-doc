@@ -583,25 +583,22 @@ case the controller should call its destructor. Here is a C++ example:
 #include <webots/Supervisor.hpp>
 #include <cstdlib>
 
+#define TIME_STEP 32
+
 using namespace webots;
 
-class MySupervisor : public Supervisor {
-public:
-  MySupervisor() { ... }
-  virtual ~MySupervisor() { ... }
-  void run() {
-    ...
-    while (! finished) {
-      // your controller code here
-      ...
-      step(TIME_STEP);
-    }
-    simulationQuit(EXIT_SUCCESS);  // ask Webots to terminate
-  }
-
 int main(int argc, char *argv[]) {
-  MySupervisor *controller = new MySupervisor();
-  controller->run();
+  Supervisor *controller = new Supervisor();
+
+  ...
+  while (! finished) {
+    // your controller code here
+    ...
+    if (step(TIME_STEP) == -1)
+      break;
+  }
+  simulationQuit(EXIT_SUCCESS);  // ask Webots to terminate
+
   delete controller; // cleanup resources
   return 0;
 }

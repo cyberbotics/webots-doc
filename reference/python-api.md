@@ -318,13 +318,10 @@ The following tables describe the Python classes and their methods.
 | -------------------------------------------------------------------------- |
 | from controller import Keyboard                                            |
 | class [Keyboard](keyboard.md) :                                            |
-| &nbsp;&nbsp; KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, KEYBOARD\_UP,  |
-| &nbsp;&nbsp; KEYBOARD\_RIGHT, KEYBOARD\_DOWN, KEYBOARD\_PAGEUP,            |
-| &nbsp;&nbsp; KEYBOARD\_PAGEDOWN, KEYBOARD\_NUMPAD\_HOME,                   |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_LEFT, KEYBOARD\_NUMPAD\_UP,                 |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_RIGHT, KEYBOARD\_NUMPAD\_DOWN,              |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_END, KEYBOARD\_KEY, KEYBOARD\_SHIFT,        |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT                              |
+| &nbsp;&nbsp; END, HOME, LEFT, UP, RIGHT, DOWN, PAGEUP,                     |
+| &nbsp;&nbsp; PAGEDOWN, NUMPAD\_HOME, NUMPAD\_LEFT, NUMPAD\_UP,             |
+| &nbsp;&nbsp; NUMPAD\_RIGHT, NUMPAD\_DOWN, NUMPAD\_END, KEY, SHIFT,         |
+| &nbsp;&nbsp; CONTROL, ALT                                                  |
 | &nbsp;&nbsp; def [enable](keyboard.md#wb_keyboard_enable)(self, ms)        |
 | &nbsp;&nbsp; def [disable](keyboard.md#wb_keyboard_enable)(self)           |
 | &nbsp;&nbsp; def [getSamplingPeriod](keyboard.md#wb_keyboard_enable)(self) |

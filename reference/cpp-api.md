@@ -331,14 +331,10 @@ The following tables describe the C++ classes and their methods.
 | ----------------------------------------------------------------------------------- |
 | #include `<`webots/Keyboard.hpp`>`                                                  |
 | class [Keyboard](keyboard.md) {                                                     |
-| &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT,                   |
-| &nbsp;&nbsp; KEYBOARD\_UP, KEYBOARD\_RIGHT, KEYBOARD\_DOWN,                         |
-| &nbsp;&nbsp; KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                  |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                        |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                         |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                         |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                     |
-| &nbsp;&nbsp; KEYBOARD\_ALT};                                                        |
+| &nbsp;&nbsp; enum {END, HOME, LEFT, UP, RIGHT, DOWN,                                |
+| &nbsp;&nbsp; PAGEUP, PAGEDOWN, NUMPAD\_HOME, NUMPAD\_LEFT,                          |
+| &nbsp;&nbsp; NUMPAD\_UP, NUMPAD\_RIGHT, NUMPAD\_DOWN, NUMPAD\_END,                  |
+| &nbsp;&nbsp; KEY, SHIFT, CONTROL, ALT};                                             |
 | &nbsp;&nbsp; virtual void [enable](keyboard.md#wb_keyboard_enable)(int ms);         |
 | &nbsp;&nbsp; virtual void [disable](keyboard.md#wb_keyboard_enable)();              |
 | &nbsp;&nbsp; int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)();             |

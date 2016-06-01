@@ -74,7 +74,7 @@ in case road assembly).
 is less value than way-points, 0 is used for the last remaining way-points).
 - `startingAngle`: Defines the angle of the road at the first way-point.
 - `endingAngle`: Defines the angle of the road at the last way-point.
-- `startLine`: Defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may used in this fied.
+- `startLine`: Defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this fied.
 - `endLine`: Defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 - `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
 value is lower than 0, the interpolation is disabled).

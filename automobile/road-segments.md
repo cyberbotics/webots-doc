@@ -272,7 +272,6 @@ Roundabout {
                                             "textures/road_line_triangle.png" ]
       MFString   startRoadsEndLine        [ ]
       MFBool     startRoadsDashedLine     FALSE
-      SFFloat    startRoadsSignsLength    0.6
       SFBool     roadBoundingObject       FALSE
       SFBool     borderBoundingObject     FALSE
       SFBool     centerBoundingObject     FALSE
@@ -327,7 +326,6 @@ RoadIntersection {
                                                   "textures/road_line_triangle.png" ]
       MFString   startRoadsEndLine              [ ]
       MFBool     startRoadsDashedLine           FALSE
-      SFFloat    startRoadsSignsLength          0.6
       SFBool     startRoadBorder                TRUE
       SFFloat    startRoadBorderHeight          0.15
       SFFloat    startRoadBorderWidth           0.8

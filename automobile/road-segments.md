@@ -33,6 +33,8 @@ Road {
       MFFloat    roadTilt                  [ 0, 0]
       MFFloat    startingAngle             [ ]
       MFFloat    endingAngle               [ ]
+      MFString   startLine                 [ ]
+      MFString   endLine                   [ ]
       SFInt32    splineSubdivision         4
       MFString   texture                   "textures/road.jpg"
       SFFloat    textureScale              2
@@ -72,6 +74,8 @@ in case road assembly).
 is less value than way-points, 0 is used for the last remaining way-points).
 - `startingAngle`: Defines the angle of the road at the first way-point.
 - `endingAngle`: Defines the angle of the road at the last way-point.
+- `startLine`: Defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may used in this fied.
+- `endLine`: Defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 - `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
 value is lower than 0, the interpolation is disabled).
 - `texture`: Defines the texture to be used for the road.
@@ -264,6 +268,9 @@ Roundabout {
       SFFloat    startRoadsLenght         5
       SFFloat    startRoadsWith           7
       SFInt32    startRoadsNumberOfLanes  2
+      MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
+                                            "textures/road_line_triangle.png" ]
+      MFString   startRoadsEndLine        [ ]
       MFBool     startRoadsDashedLine     FALSE
       SFFloat    startRoadsSignsLength    0.6
       SFBool     roadBoundingObject       FALSE
@@ -276,8 +283,6 @@ Roundabout {
       SFFloat    textureScale             2
       MFString   junctionTexture          "textures/asphalt.jpg"
       MFString   startRoadsTexture        "textures/road.jpg"
-      MFString   inputTexture             "textures/intersection_input.jpg"
-      MFString   outputTexture            "textures/intersection_output.jpg"
   }
 ```
 
@@ -298,8 +303,6 @@ object.
 - `roadNumber`: Defines the number of roads entering/leaving the roundabout.
 - `startRoads...`: Defines the properties of the roads entering/leaving the
 roundabout.
-- `inputTexture`: Defines the sign between the input lanes and the roundabout.
-- `outputTexture`: Defines the sign between the output lanes and the roundabout.
 
 ### RoadIntersection
 
@@ -320,6 +323,9 @@ RoadIntersection {
       SFBool     startRoads                     TRUE
       SFFloat    startRoadsLenght               5
       SFInt32    startRoadsNumberOfLanes        2
+      MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
+                                                  "textures/road_line_triangle.png" ]
+      MFString   startRoadsEndLine              [ ]
       MFBool     startRoadsDashedLine           FALSE
       SFFloat    startRoadsSignsLength          0.6
       SFBool     startRoadBorder                TRUE
@@ -331,8 +337,6 @@ RoadIntersection {
       SFBool     bottom                         FALSE
       SFBool     locked                         TRUE
       MFString   texture                        "textures/asphalt.jpg"
-      MFString   inputTexture                   "textures/intersection_input.jpg"
-      MFString   outputTexture                  "textures/intersection_output.jpg"
       MFString   startRoadsTexture              "textures/road.jpg"
   }
 ```

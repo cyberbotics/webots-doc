@@ -19,7 +19,7 @@ pressed to make the robot turn and move forward/backward, several keys can be
 pressed at the same time.
 
 Try to add some more action by using more keys. You can for example use the
-`KEYBOARD\_NUMPAD\_LEFT` and `KEYBOARD\_NUMPAD\_RIGHT` keys to make a left/right
+`NUMPAD\_LEFT` and `NUMPAD\_RIGHT` keys to make a left/right
 shoot (page 13 and 12 in motion manager). You can also use normal keys like 'A'
 instead if you prefer.
 

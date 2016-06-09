@@ -333,14 +333,10 @@ The following tables describe the Java classes and their methods.
 | ------------------------------------------------------------------------------ |
 | import com.cyberbotics.webots.controller.Keyboard;                             |
 | public class [Keyboard](keyboard.md) {                                         |
-| &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME,            |
-| &nbsp;&nbsp; KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT,                    |
-| &nbsp;&nbsp; KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,             |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                   |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                    |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                    |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT,                                   |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT;                                 |
+| &nbsp;&nbsp; public final static int END, HOME, LEFT, UP, RIGHT,               |
+| &nbsp;&nbsp; DOWN, PAGEUP, PAGEDOWN, NUMPAD\_HOME, NUMPAD\_LEFT,               |
+| &nbsp;&nbsp; NUMPAD\_UP, NUMPAD\_RIGHT, NUMPAD\_DOWN, NUMPAD\_END,             |
+| &nbsp;&nbsp; KEY, SHIFT, CONTROL, ALT;                                         |
 | &nbsp;&nbsp; public void [enable](keyboard.md#wb_keyboard_enable)(int ms);     |
 | &nbsp;&nbsp; public void [disable](keyboard.md#wb_keyboard_enable)();          |
 | &nbsp;&nbsp; public int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)(); |

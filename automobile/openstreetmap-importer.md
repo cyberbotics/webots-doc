@@ -33,8 +33,10 @@ You can use several arguments with this script:
 | --noRoad            | Do not include the roads in the generated world                                                                                     | By default, roads are included                                            |
 | --noArea            | Do not include the areas (water area, landuse, etc.) in the generated world                                                         | By default, areas are included                                            |
 | --noTree            | Do not include the isolated trees in the generated world                                                                            | By default, isolated trees are included                                   |
+| --noBarrier         | Do not include the barriers (fence, wall, etc.) in the generated world                                                              | By default, barriers are included                                         |
 | --noRiver           | Do not include the rivers in the generated world                                                                                    | By default, rivers are included                                           |
 | --noBuilding        | Do not include the buildings in the generated world                                                                                 | By default, buildings are included                                        |
+| --noRoadIntersection| Do not generate complex road intersections                                                                                          | By default, complex road intersections are generate                       |
 | --enable3D          | Use an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
 
 %end

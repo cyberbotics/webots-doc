@@ -17,7 +17,7 @@ configuration files (.netccfg and .sumocfg).
 Then the interface will automatically start SUMO and run it in synchronization
 with Webots time. Each time a new vehicle enter the SUMO simulation, it will be
 created in Webots too and its position and orientation will be continually
-updated. The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle number (starting from 0). If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (wich can make the simulation speed drop for a very short time). If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
+updated. The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle number (starting from 0). If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time). If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
 
 If the simulation contains traffic lights, the name of the
 corresponding `LEDs` node of these traffic lights in Webots should respect the
@@ -63,7 +63,7 @@ are: the `Supervisor` itself, the traci class in order to get information about
 the traci context and the net class to get information about the network. The
 second one is called at each SUMO step and the argument is the time step.
 
-Such plugin can be used for example to change traffic light state in SUMO.
+Such a plugin can be used for example to change traffic light state in SUMO.
 
 > **note**:
 Currently version 0.26 of SUMO is distributed with Webots.

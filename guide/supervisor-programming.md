@@ -146,7 +146,7 @@ int main() {
 
 my_exit:
   wb_robot_cleanup();
-  
+
   return 0;
 }
 ```

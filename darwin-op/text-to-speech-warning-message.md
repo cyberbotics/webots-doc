@@ -14,4 +14,3 @@ supress this message by executing the following command on the robot:
 ```
 sudo apt-get purge bluez-alsa
 ```
-

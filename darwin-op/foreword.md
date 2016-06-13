@@ -13,4 +13,3 @@ will be explained.
 
 We hope that you will enjoy working with Webots, and that it will greatly
 simplify your work with the DARwIn-OP.
-

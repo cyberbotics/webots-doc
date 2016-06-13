@@ -144,4 +144,3 @@ PROTO SimpleStairs [
   # template statements can be used up to there
 }
 ```
-

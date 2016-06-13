@@ -95,4 +95,3 @@ Shape {
 
 This will produce a compact [ElevationGrid](#elevationgrid) with texture mapping
 that aligns with the natural orientation of the image.
-

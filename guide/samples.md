@@ -180,4 +180,3 @@ example, the Stewart platform is loaded with a few stacked boxes, then the
 platform moves and the boxes stumble apart. This simulation attaches both ends
 of the linear actuators (hydraulic pistons) to the lower and the upper parts of
 the Stewart platform.
-

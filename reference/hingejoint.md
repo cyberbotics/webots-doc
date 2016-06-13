@@ -25,4 +25,3 @@ with a [HingeJointParameters](hingejointparameters.md) only. If empty,
 motor is specified, the joint is passive joint.
 - `position`: see [joint's hidden position
 field](joint.md#joint-s-hidden-position-fields).
-

@@ -307,4 +307,3 @@ the robot controllers which are the programs that define the robots behavior.
 Robot controllers can be written in C (or other languages). C controllers have
 to be compiled before they can be executed. Controllers are linked to robots via
 the `controller` fields of the robot nodes.
-

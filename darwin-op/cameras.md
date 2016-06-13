@@ -8,4 +8,3 @@ is shown and updated in real time.
 ![window_camera.png](images/window_camera.png)
 
 %end
-

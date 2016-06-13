@@ -42,4 +42,3 @@ empty, default values of the HingeJointParameters node apply.
 [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device attached
 to the second axis. If no motor is specified, this part of the joint is passive.
 - `position2`: see [joint's hidden position field](rotationalmotor.md).
-

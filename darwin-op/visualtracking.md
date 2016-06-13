@@ -37,4 +37,3 @@ color of the ball by changing the value in the constructor of
 
 This example can also be used as a tool to tune the parameters of the vision
 manager in order to fit your application.
-

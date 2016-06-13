@@ -23,4 +23,3 @@ identical solids or joints to occupy the same position is useless, if not
 hazardous, in a physics simulation. To safely duplicate one of these nodes, you
 can design a [PROTO](proto.md) model for this node and then add different PROTO
 instances to your world.
-

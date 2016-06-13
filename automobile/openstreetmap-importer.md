@@ -83,4 +83,3 @@ to give an osm file as input or a map area using a latitude-longitude rectangle.
 If you choose to use a latitude-longitude rectangle, it will take care
 automatically to download the corresponding osm file before to launch the script
 (you will therefore require an internet connexion).
-

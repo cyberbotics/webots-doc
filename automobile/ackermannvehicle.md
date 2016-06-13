@@ -80,4 +80,3 @@ the shapes of the wheel axes.
 ![simpleVehicle.png](images/simpleVehicle.png)
 
 %end
-

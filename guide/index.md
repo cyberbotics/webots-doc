@@ -57,4 +57,3 @@ registered trademarks of Microsoft Corp.
 
 *UNIX*<sup>TM</sup> is a registered trademark licensed exclusively by X/Open
 Company, Ltd.
-

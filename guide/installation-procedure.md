@@ -153,4 +153,3 @@ site](http://www.cyberbotics.com/macosx).
 "Webots" containing the "Webots" folder.
 3. Move this folder to your "/Applications" folder or wherever you would like to
 install Webots.
-

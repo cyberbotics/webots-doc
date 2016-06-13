@@ -60,4 +60,3 @@ The main executable name must be identical to the directory name.
 You can create all the files needed by a new controller using the wizard [New
 Robot Controller](the-user-interface.md) described in [this
 chapter](getting-started-with-webots.md).
-

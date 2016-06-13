@@ -109,4 +109,3 @@ with a regular Robot controller, the Supervisor controller will have access to
 privileged operations. The privileged operations include simulation control, for
 example, moving the robots to a random position, making a video capture of the
 simulation, etc.
-

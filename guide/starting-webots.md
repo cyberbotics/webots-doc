@@ -126,4 +126,3 @@ The `--enable-ogre-warnings` option redirects the uncritical Ogre log messages t
 %end
 
 For example, the following command will start Webots with the streaming server enabled on the TCP port '1234' and will disable the streaming of stdout and stderr: `webots --stream="port:1234;disableTextStreams"`
-

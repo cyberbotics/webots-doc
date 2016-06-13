@@ -29,4 +29,3 @@ torque* at run-time. The value of `maxTorque` should always be zero or positive
 (the default is 10). A small `maxTorque` value may result in a motor being
 unable to move to the target position because of its weight or other external
 forces.
-

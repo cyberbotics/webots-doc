@@ -49,4 +49,3 @@ the cylinder is tilted toward the +*z* axis, and the bottom texture appears
 right side up when the top of the cylinder is tilted toward the -*z* axis.
 [TextureTransform](texturetransform.md) affects the texture coordinates of the
 Cylinder.
-

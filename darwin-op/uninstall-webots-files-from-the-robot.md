@@ -20,4 +20,3 @@ If you install a new version of Webots on your computer the Webots files on the
 robot will automatically be updated at the sending of the first controller
 (don't worry if you use severals version of Webots, an older version can not
 erase files from a newer version).
-

@@ -79,4 +79,3 @@ bits (right hand side) indicate the blue level. For example, 0xff0000 is red,
 
 The `wb_led_get` function returns the value given as an argument of the last
 `wb_led_set` function call.
-

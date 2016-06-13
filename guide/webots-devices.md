@@ -215,4 +215,3 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.
 The "range-finder" measures the distance to objects, so the robot knows if there
 is enough room to move forward.
-

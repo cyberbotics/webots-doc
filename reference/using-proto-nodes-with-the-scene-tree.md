@@ -82,4 +82,3 @@ fields can be manipulated exactly like built-in node fields.
 ![scene_tree_with_protos.png](images/scene_tree_with_protos.png)
 
 %end
-

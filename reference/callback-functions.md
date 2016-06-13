@@ -173,4 +173,3 @@ calling this function. Therefore the arguments passed to `glVertex()` are
 expected to be specified in *world* coordinates. Note that the default OpenGL
 states should be restored before leaving this function otherwise the rendering
 in Webots 3D view may be altered.
-

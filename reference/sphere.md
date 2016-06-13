@@ -34,4 +34,3 @@ wrapping counterclockwise from the back of the sphere. The texture has a seam at
 the back where the *yz*-plane intersects the sphere.
 [TextureTransform](texturetransform.md) affects the texture coordinates of the
 Sphere.
-

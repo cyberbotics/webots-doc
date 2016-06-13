@@ -599,4 +599,3 @@ The following tables describe the Matlab functions.
 | type = [wb\_touch\_sensor\_get\_type](touchsensor.md#wb_touch_sensor_get_type)(tag)                 |
 
 %end
-

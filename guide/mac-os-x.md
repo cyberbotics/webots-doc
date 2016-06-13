@@ -7,4 +7,3 @@ same process. Generally this mechanism is working well, but some instabilities
 (crashes and warnings) may occur when a robot uses a MATLAB controller and a
 robot window at the same time. This is due to some conflicts between the Qt
 libraries used by MATLAB and the one used by Webots.
-

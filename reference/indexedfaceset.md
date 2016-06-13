@@ -90,4 +90,3 @@ IndexedFaceSet {
 ![indexed_face_set.png](images/indexed_face_set.png)
 
 %end
-

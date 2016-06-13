@@ -81,4 +81,3 @@ while(mMotionManager->isMotionPlaying()) {
   myStep();
 }
 ```
-

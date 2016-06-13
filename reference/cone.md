@@ -48,4 +48,3 @@ Cone.
 
 [Cone](#cone) geometries cannot be used as primitives for collision detection in
 bounding objects.
-

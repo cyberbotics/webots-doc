@@ -30,4 +30,3 @@ two functions:
 void dJointSetHinge2SuspensionAxis (dJointID, dReal x, dReal y, dReal z);
 void dJointGetHinge2SuspensionAxis (dJointID, dVector3 result);
 ```
-

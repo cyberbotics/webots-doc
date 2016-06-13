@@ -18,4 +18,3 @@ Many thanks are also due to Cyberbotics's Mentors: Prof. Jean-Daniel Nicoud
 (LAMI-EPFL), Dr. Francesco Mondada (EPFL), Dr. Takashi Gomi (Applied AI, Inc.).
 
 Finally, thanks to Skye Legon and Nathan Yawn, who proofread this manual.
-

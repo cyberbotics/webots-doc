@@ -19,4 +19,3 @@ will show up on the real robot screen (if any connected).
 This little window is used to capture the input of the keyboard. Please do not
 close this window or unset the focus on it (by clicking outside this window) or
 you wont be able to read the keyboard input anymore.
-

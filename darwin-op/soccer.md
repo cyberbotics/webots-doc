@@ -22,4 +22,3 @@ This example works in cross-compilation. But we recommend you to test it on a
 soft ground and away from any source of danger (stairs, hot surface, etc.),
 because the robot will move a lot and it is not excluded that it falls down from
 time to time.
-

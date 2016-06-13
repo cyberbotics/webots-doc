@@ -147,4 +147,3 @@ children [
 ![track_belt_concave.png](images/track_belt_concave.png)
 
 %end
-

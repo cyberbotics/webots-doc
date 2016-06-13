@@ -142,4 +142,3 @@ the "lib" directory.
 Advanced users may want to modify the Java API. They will need to modify the
 SWIG script (controller.i), the java sources and the Makefile located in the
 "resources/languages/java" directory.
-

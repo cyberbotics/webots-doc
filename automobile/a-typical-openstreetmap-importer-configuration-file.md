@@ -137,4 +137,3 @@
   laneWidth: 4
   texture: "textures/road_no_border_line.jpg"
 ```
-

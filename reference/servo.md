@@ -729,4 +729,3 @@ WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 | "linear"     | WB\_SERVO\_LINEAR     |
 
 %end
-

@@ -9,4 +9,3 @@ ODE functions are indicated.
 ![physics_execution_scheme.png](images/physics_execution_scheme.png)
 
 %end
-

@@ -50,4 +50,3 @@ For advanced users who want to modify the Python API, the SWIG script
 ("controller.i"), and the Makefile are located in the
 "resources/languages/python" directory while the generated library is located in
 the "lib".
-

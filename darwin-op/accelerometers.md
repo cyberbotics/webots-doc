@@ -19,4 +19,3 @@ time. The corresponding colors are the following:
 
 You can click any time on the graph to adjust the scale of the data currently
 plotted.
-

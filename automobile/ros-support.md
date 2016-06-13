@@ -9,4 +9,3 @@ controller](ros_automobile-controller.md#ros_automobile_messages) section.
 > **note**:
 You will need to copy the automobile service files in your catkin workspace and
 add them to the "CmakeList.txt" to be able to use them.
-

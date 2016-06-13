@@ -34,4 +34,3 @@
 | 239 | sitdown   | Jumps up and down quickly           | Standing up                   |
 
 %end
-

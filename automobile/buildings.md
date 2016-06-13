@@ -79,4 +79,3 @@ normally found in a city environment:
 ![bus_stop.png](images/bus_stop.png)
 
 %end
-

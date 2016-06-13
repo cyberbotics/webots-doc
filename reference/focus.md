@@ -28,4 +28,3 @@ they represent the minimum and maximum values that can be passed to the
 `wb_camera_set_focal_distance()` function and they can be retrieved using the
 functions `wb_camera_get_min_focal_distance()` and
 `wb_camera_get_max_focal_distance()`.
-

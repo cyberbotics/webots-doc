@@ -74,5 +74,3 @@ Finally you need to write the [SUMO configuration file](http://sumo.dlr.de/wiki/
 ### Add the SUMO interface
 
 Now that have all the required files, you can open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it). Since the network files are already generated, you need to set the `useNetconvert` field to FALSE (or use the `--noNetconvert` option) and set in the `networkfiles` field (or use the `--d or --directory` option) the path to the directory where the SUMO network files are located.
-
-

@@ -55,4 +55,3 @@ Robotics Systems. Here is the BibTex entry:
              Advanced-Robotic-Systems/Volume-1/39-42.pdf}
 }
 ```
-

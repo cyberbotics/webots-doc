@@ -216,4 +216,3 @@ This function allows the user to enable or disable the indicator auto-disabling
 mechanism (it is enabled by default). When indicator auto-disabling mechanism is
 enabled, the indicator is automatically switched off when the car starts
 steering in the inverse direction of the one indicated by the indicator.
-

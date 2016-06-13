@@ -6,4 +6,3 @@ keyboard and be sure to not unfocus the keyboard window on the robot.
 If you are starting the controller 'manually' by SSH, use the -X option when
 starting SSH, and use the command 'export DISPLAY=:0' before to start the
 controller.
-

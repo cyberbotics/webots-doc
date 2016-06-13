@@ -266,4 +266,3 @@ Webots distribution: look for the worlds called
 "WEBOTS\_HOME/projects/samples/curriculum/worlds" directory. These examples are
 described in the *Advanced Programming Exercises* of [Cyberbotics' Robot
 Curriculum](http://en.wikibooks.org/wiki/Cyberbotics'_Robot_Curriculum).
-

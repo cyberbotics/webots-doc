@@ -121,4 +121,3 @@ of this is located there (see the
 ![thymio2_ball.png](images/thymio2_ball.png)
 
 %end
-

@@ -180,4 +180,3 @@ On Linux, you can use the `killall` or the `pkill` commands, e.g.:
 ```
 $ killall hal naoqi-bin
 ```
-

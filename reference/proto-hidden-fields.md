@@ -72,4 +72,3 @@ pre-order traversal. There is no hidden field associated the [Solid](solid.md)
 node with index 1, namely the `SickLms291` PROTO, since its relative position
 and orientation are kept fixed during simulation. The indices ranging from 2 to
 5 correspond to the four [Solid](solid.md) wheels of the `Pioneer3at`.
-

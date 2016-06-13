@@ -6,4 +6,3 @@ Using [Robotis
 tool](http://support.robotis.com/ko/product/darwin-op/development/tools/firmware_installer.htm)
 in order to update the servomotors firmware should resolve the problem in both
 cases.
-

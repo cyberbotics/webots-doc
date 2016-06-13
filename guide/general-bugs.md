@@ -37,4 +37,3 @@ on another object in some direction than in some other, even if the friction
 coefficients are set to be symmetric. However, in most of the cases it is
 possible to get rid of these effects by tuning correctly the friction
 parameters.
-

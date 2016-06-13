@@ -30,4 +30,3 @@ located in "my\_project/plugins/physics/my\_physics/my\_physics[.c|.cpp]". If
 Webots does not find the file there, it will also look in the
 "WEBOTS\_HOME/resources/projects/plugins" and
 "WEBOTS\_HOME/projects/default/plugins" directories.
-

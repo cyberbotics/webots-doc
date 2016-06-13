@@ -111,4 +111,3 @@ language interpreter in C or Java to be used by your Webots controller for
 controlling the simulated robot. Such an interpreted language system was
 developed for the *Hemisson*<sup>TM</sup> robot with the
 *BotStudio*<sup>TM</sup> system.
-

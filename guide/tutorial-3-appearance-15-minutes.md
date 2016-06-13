@@ -118,4 +118,3 @@ You can go further on this topic by reading the detailed description of these
 nodes in the `Reference Manual`. The
 [section](modeling.md#how-to-get-a-realisitc-and-efficient-rendering) will give
 you a method to efficiently setup these nodes.
-

@@ -18,4 +18,3 @@ geometric shape, the colors shall replace the diffuse component of the material.
 RGB or RGBA textures take precedence over colors; specifying both an RGB or RGBA
 texture and a Color node for a geometric shape will result in the Color node
 being ignored.
-

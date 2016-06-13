@@ -31,4 +31,3 @@ casted by this shape.
 Objects cast shadows only if the world contains at least one [Light](light.md)
 node with `castShadows` field set to TRUE and if shadows are not disabled in the
 application preferences.
-

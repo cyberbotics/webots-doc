@@ -6,4 +6,3 @@ The following sensors/actuators are not present on the simulation model:
 interest in the simulation.
 - The microphones are not present in simulation because sound is not yet supported
 in Webots.
-

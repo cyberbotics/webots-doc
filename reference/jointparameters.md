@@ -154,4 +154,3 @@ position of the [Joint](joint.md) defined in the `anchor` field of a
 [JointParameters](#jointparameters) node. The position *x* corresponds to the
 current position of the [Joint](joint.md) defined in the `position` field of a
 [JointParameters](#jointparameters) node.
-

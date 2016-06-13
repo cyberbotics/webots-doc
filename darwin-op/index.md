@@ -25,4 +25,3 @@ Lausanne, Switzerland (EPFL). The EPFL makes no warranties of any kind on this
 software. In no event shall the EPFL be liable for incidental or consequential
 damages of any kind in connection with the use and exploitation of this
 software.
-

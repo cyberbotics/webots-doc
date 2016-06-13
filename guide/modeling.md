@@ -179,4 +179,3 @@ appearance of the objects when they are in shadows.
 4. Switch on the shadows if required. The shadows are particularily costly, and are
 strongly related to the `Shapes` resolution.
 5. Increase the `intensity` of each lamp.
-

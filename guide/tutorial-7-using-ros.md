@@ -133,4 +133,3 @@ functions.
 All the functions from the Webots API have their corresponding services or
 topics. You can find in the `Reference Manual` the definitions of all the
 services and topics associated with each device.
-

@@ -324,4 +324,3 @@ library handles the communication between your controller and Webots.
 
 The [section](controller-programming.md) explains in more detail controller
 programming. We invite you to read carefully this section before going on.
-

@@ -48,4 +48,3 @@ parameters that must be applied to every body in the simulation. A
 must be applied to the [Solid](solid.md) that contains the [Physics](physics.md)
 node. The damping specified in a [Physics](physics.md) node overrides the
 default damping.
-

@@ -88,4 +88,3 @@ declared in the PROTO's interface. For example, it is illegal to associate an
 `SFColor` with an `SFVec3f`. It is also illegal to associate a `SFColor` with a
 `MFColor` or vice versa. Results are undefined if a field of a node in the PROTO
 body is associated with more than one field in the PROTO's interface.
-

@@ -114,4 +114,3 @@ Method was not found.
 error in ==> launcher at 66
 calllib('libController','wb_robot_init');
 ```
-

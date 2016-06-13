@@ -41,4 +41,3 @@ PointLight {
   location 0 1 0
 }
 ```
-

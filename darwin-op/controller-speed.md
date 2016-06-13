@@ -9,4 +9,3 @@ graphics` should resolve this problem.
 If despite this you can not achieve a speed of 1.0x, it means that your
 connection with the robot is to slow. You should consider reducing camera
 resolution in order to increase the speed.
-

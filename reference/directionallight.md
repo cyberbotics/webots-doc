@@ -22,4 +22,3 @@ emanating from the light source in the global coordinate system. Light is
 emitted along parallel rays from an infinite distance away. The `direction`
 field is taken into account when computing the quantity of light received by a
 [LightSensor](lightsensor.md).
-

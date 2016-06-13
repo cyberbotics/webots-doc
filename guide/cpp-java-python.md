@@ -99,7 +99,7 @@ int main(int argc, char **argv) {
     // Enter here functions to send actuator commands
     led->set(1);
   }
-  
+
   delete robot;
   return 0;
 }

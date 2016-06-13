@@ -7,4 +7,3 @@ will be informed when you will try to send a controller to the real robot. In
 order to update the firmware version please use the [Firmware
 Installer](http://www.support.robotis.com/ko/product/darwin-op/development/tools/firmware_installer.htm)
 from ROBOTIS.
-

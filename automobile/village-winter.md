@@ -16,4 +16,3 @@ the amount of snow.
 Of course the friction phenomena between snow/ice and tires is very complex a nd
 this world should not be used as a ground truth but can still be used as a rough
 approximation.
-

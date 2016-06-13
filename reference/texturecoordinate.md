@@ -14,4 +14,3 @@ color value *color(s,t)*. Texture map values ([ImageTexture](imagetexture.md))
 range from 0.0 to 1.0 along the s and t axes. Texture coordinates identify a
 location (and thus a color value) in the texture map. The horizontal coordinate
 *s* is specified first, followed by the vertical coordinate *t*.
-

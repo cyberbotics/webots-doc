@@ -237,4 +237,3 @@ rigid bodies. You are able to add nodes from the scene tree view and to modify
 their fields. You have a more precise idea of what are the Solid, the Physics,
 the Shape, the Sphere and the Box nodes. You saw also the DEF-USE mechanism that
 allows to reduce node redundancy of the scene tree.
-

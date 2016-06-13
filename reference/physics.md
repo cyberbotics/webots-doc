@@ -316,4 +316,3 @@ simulation.
 [Physics](#physics) node when it is used as "force" sensor; it does not
 necessarily need a [Physics](#physics) node when it is only used as "bumper"
 sensor.
-

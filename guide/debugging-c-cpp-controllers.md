@@ -135,4 +135,3 @@ simple example we clearly see that the problem is caused by a NULL (0x0)
 to: fix the problem, recompile the controller and revert the simulation to give
 it another try. Once it works correctly you can remove the *-g* flag from the
 Makefile.
-

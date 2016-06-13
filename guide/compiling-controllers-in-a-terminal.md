@@ -59,4 +59,3 @@ $ mingw32-make clean
 $ mingw32-make my_robot.class
 $ mingw32-make my_robot.o
 ```
-

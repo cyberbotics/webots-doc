@@ -24,4 +24,3 @@ radial distortion of the Brown's distortion model.
 the tangential distortion of the Brown's distortion model. The value of the
 tangential coefficients are typically smaller than the value of the radial
 coefficients for standard cameras.
-

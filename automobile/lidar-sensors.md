@@ -145,4 +145,3 @@ VelodyneHDL-32E {
 
 The `fastModel` field can be used to simplify the model of the sensor by
 removing the noise in order to speed up the simulation.
-

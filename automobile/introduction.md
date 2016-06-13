@@ -16,4 +16,3 @@ automobile simulations.
 
 This work was sponsored by the project RO2IVSim of the Swiss Commission for
 Technology and Innovation CTI
-

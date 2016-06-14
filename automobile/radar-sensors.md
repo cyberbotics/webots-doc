@@ -79,4 +79,3 @@ meters.
 The `Smartmicro UMRR-0a type 31` radar has an horizontal field of view of 100
 degrees, a vertical field of view of 10 degrees and a maximum range of 45
 meters.
-

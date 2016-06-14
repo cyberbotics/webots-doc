@@ -76,4 +76,3 @@ WbNodeType wb_device_get_node_type(WbDeviceTag tag)
 to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md) API)
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
-

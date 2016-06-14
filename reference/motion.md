@@ -158,4 +158,3 @@ can be changed whether the motion is playing or stopped. The minimum value is 0
 **See also**
 
 [wbu\_motion\_play](#wbu_motion_play)
-

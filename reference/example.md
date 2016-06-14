@@ -140,4 +140,3 @@ definition or creating a new PROTO.
 ![two_chairs_v7-2-0.png](images/two_chairs_v7-2-0.png)
 
 %end
-

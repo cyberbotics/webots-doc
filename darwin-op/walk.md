@@ -32,4 +32,3 @@ the remote control in order to use the computer's keyboard instead.
 
 This example can also be used to explore and test all the parameters of the
 gait.
-

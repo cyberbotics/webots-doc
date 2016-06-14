@@ -84,4 +84,3 @@ provided in [this section](the-user-interface.md).
 ![tutorial_gui.png](images/tutorial_gui.png)
 
 %end
-

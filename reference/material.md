@@ -46,4 +46,3 @@ the center of the objects (the local position of the parent
 two transparent objects intersect each other, or if the coordinate center of a
 transparent object is located outside the effectively rendered polygons, or if
 the sizes of nearby transparent objects differ significantly.
-

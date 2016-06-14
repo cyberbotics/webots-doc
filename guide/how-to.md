@@ -134,4 +134,3 @@ switches the image displayed on the panel.
 
 This example shows a complex city model built with various `Transform` nodes.
 The model makes a intensive use of the `DEF` and `USE` VRML keywords.
-

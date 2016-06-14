@@ -46,4 +46,3 @@ another light). Activating the shadows of just one [Light](#light) can have a
 significant impact on the global rendering performance, particularly if the
 world contains either lots of objects or complex meshes. Some shadow issues can
 occurs in closed spaces.
-

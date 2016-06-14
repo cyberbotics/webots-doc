@@ -158,4 +158,3 @@ figure](#sonar-sensors-positions).
 
 The angle between two consecutive sensor directions is 20 degrees except for the
 four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
-

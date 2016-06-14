@@ -28,4 +28,3 @@ lights are ignored during rendering of the object that references this
 - The `textureTransform` field, if specified, shall contain a
 [TextureTransform](texturetransform.md) node. If the `textureTransform` is NULL
 or unspecified, the `textureTransform` field has no effect.
-

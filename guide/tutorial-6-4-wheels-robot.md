@@ -221,4 +221,3 @@ their controllers.
 More specifically you learnt the different kind of nodes involved in the
 building of the robot models, the way to translate and rotate a solid relatively
 to another, the way that a rotational motor is actuated by the controller.
-

@@ -86,4 +86,3 @@ Note that, in order to run, the gait manager needs to know the position of each
 servo and the values of the gyro. It is therefore essential to enable the gyro
 and the position feedback of each servo before to use it, if it is not the case,
 a warning will appear and they will automatically be enabled.
-

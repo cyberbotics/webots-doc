@@ -14,4 +14,3 @@ force of varying intensity, etc.
 
 Webots distribution comes with some implementations and usage examples for these
 plugins. You will find more info on this topic in Webots Reference Manual.
-

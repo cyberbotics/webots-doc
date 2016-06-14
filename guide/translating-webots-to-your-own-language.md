@@ -15,4 +15,3 @@ creation of a new translation or the improvement of an existing one, please
 follow the instructions located in the "readme.txt" file in the
 "Webots/resources/translations" folder. Don't forget to send us your translation
 files!
-

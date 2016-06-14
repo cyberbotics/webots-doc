@@ -13,4 +13,3 @@ value of the servo by using the slider beside the graph.
 ![window_servos.png](images/window_servos.png)
 
 %end
-

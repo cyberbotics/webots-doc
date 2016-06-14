@@ -132,4 +132,3 @@ make debug
 
 This will instruct gcc to add debugging information so that the executable can
 be debugged using gcc.
-

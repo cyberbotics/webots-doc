@@ -34,4 +34,3 @@ control (it has the same aspect from the one of the
 
 When the controller runs in remote-control mode, you can see in the other tabs
 of the robot window the values of the sensors of the real robot in real-time.
-

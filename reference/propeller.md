@@ -69,4 +69,3 @@ graphical representation of the propeller according to its motor's angular
 velocity omega: if |omega| > 24 π rad /s, only the [Solid](solid.md) defined in
 `fastHelix` is visible, otherwise only the [Solid](solid.md) defined in
 `slowHelix` is visible.
-

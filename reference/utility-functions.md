@@ -197,4 +197,3 @@ a '\n' (new line) character will automatically be added to each line. A '\f'
 ```
 void dWebotsConsolePrintf(const char *format, ...);
 ```
-

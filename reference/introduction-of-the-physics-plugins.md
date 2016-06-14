@@ -13,4 +13,3 @@ with a physics plugin you can implement your own collision detection system and
 define non-uniform friction parameters on some surfaces. Note that physics
 plugins can be programmed only in C or C++. Webots PRO is necessary to program
 physics plugins.
-

@@ -134,4 +134,3 @@ the `Pause` button then the `Revert` button. Then, in Visual C++, use the `Debug
 process. Still in Visual C++, you can now add breakpoints and watches in the
 controller code. Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
-

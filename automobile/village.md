@@ -12,4 +12,3 @@ complete and as realistic as possible. It includes some bridges, pedestrian
 crossing, rivers trees, etc. Furthermore, all the adequate traffic signs have
 been added and some dynamic traffic lights too. All the intersections were
 carefully designed and have the appropriate road signs.
-

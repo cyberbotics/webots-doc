@@ -38,4 +38,3 @@ utility. On Linux, these tools are often pre-installed, otherwise you will need
 to install them separately (*gcc* and *make* packages). For C++ you will also
 need the GNU C++ Compiler (*g++* package). Optionally you can also install the
 GNU Debugger (*gdb* package).
-

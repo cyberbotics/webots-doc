@@ -57,4 +57,3 @@ the shaders are not well supported.
 *Camera.antialiasing* fields and to disable this feature. We observed that some
 hardware doesn't support the OpenGL feature about anti-aliasing when rendering
 into a texture (RTT).
-

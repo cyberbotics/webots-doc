@@ -80,4 +80,3 @@ In this example you see that the error is located in the plugin's
 `webots_physics_init()` function. If the error is reported in an unknown
 function (and if the line number and file name are not displayed), then the
 crash may have occurred in Webots, or possibly in a library used by your plugin.
-

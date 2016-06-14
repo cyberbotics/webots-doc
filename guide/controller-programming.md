@@ -19,7 +19,7 @@ int main() {
     printf("Hello World!\n");
 
   wb_robot_cleanup();
-  
+
   return 0;
 }
 ```

@@ -134,4 +134,3 @@ licenses to download on his local computer as well as the duration of the lease
 for these licenses. Warning: this operation cannot be undone. Once transferred
 locally, the licenses are not available to other computers for the duration of
 the lease period.
-

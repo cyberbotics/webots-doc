@@ -21,7 +21,7 @@ Additionally this node is used by the parent [Track](track.md) node to compute t
 Note that in order to automatically generate the track belt, the geometries animation has to be enabled, i.e. the `animatedGeometry` field of the parent [Track](track.md) node has to be defined and the `geometriesCount` field has to be greater than 0.
 
 The [TrackWheel](#trackwheel) node is a pure graphical object and doesn't have any physical behavior.
-All the physical properties are defined in the [Track](track.md) node. 
+All the physical properties are defined in the [Track](track.md) node.
 
 A [TrackWheel](#trackwheel) node can only be inserted in the `children` field of a
 [Track](track.md) node.

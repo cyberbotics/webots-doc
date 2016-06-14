@@ -16,4 +16,3 @@ In this directory, you will find the following world files :
 - sphere.wbt
 - textured\_shapes.wbt
 - webots\_box.wbt
-

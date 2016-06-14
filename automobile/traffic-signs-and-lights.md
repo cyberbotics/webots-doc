@@ -57,4 +57,3 @@ shapes usually used for traffic signs:
 
 A complete set of textures is available with those traffic signs and can easily
 be applied using the `signImage` field.
-

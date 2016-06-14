@@ -79,4 +79,3 @@ Once the method `getBallCenter` was called it is possible to know which pixels
 of the image are part of the target object by using the method `isDetected`.
 This method returns true if the pixel (x,y) is part of the target object and
 false otherwise.
-

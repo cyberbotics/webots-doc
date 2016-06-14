@@ -62,4 +62,3 @@ network, or use small resolution camera images, or compress the image data
 before sending it to the controller. This overhead is negligible if you use a
 low resolution camera such as the Khepera K213 (see example
 "WEBOTS\_HOME/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
-

@@ -133,4 +133,3 @@ that the center of mass of the [Solid](#solid) does not depend on its
 `boundingObject`. The center of mass of is specified by the `centerOfMass` field
 of the [Physics](physics.md) node (in coordinates relative to the center of the
 [Solid](#solid)).
-

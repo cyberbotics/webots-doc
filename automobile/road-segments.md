@@ -481,4 +481,3 @@ Most of the fields are similar to the one of the `Road` PROTO. Therefore, only
 the specific ones will be explained.
 
 - `numberOfnewLanes`: Defines the number of new lanes to be added to the road.
-

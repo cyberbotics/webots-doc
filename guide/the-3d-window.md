@@ -150,4 +150,3 @@ restore the 3D window overlay simply by closing the window.
 ![rendering_device_window.png](images/rendering_device_window.png)
 
 %end
-

@@ -74,4 +74,3 @@ significantly slow down the simulation speed.
 ![selfCollision.png](images/selfCollision.png)
 
 %end
-

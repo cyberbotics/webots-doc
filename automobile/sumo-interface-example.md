@@ -12,4 +12,3 @@ of simulation, SUMO is started in graphic mode and will simulate some vehicles
 on the `horizontal` road. When a priority vehicle arrives from the `vertical`
 road, it will be detected from the lane sensor and the states of the traffic
 lights will change.
-

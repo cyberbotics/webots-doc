@@ -307,4 +307,3 @@ after a clipboard image is not needed any more.
 The `Display.imageNew()` function can display the image returned by the
 `Camera.getImage()` function directly if the pixel format argument is set to
 ARGB.
-

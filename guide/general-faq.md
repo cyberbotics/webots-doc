@@ -38,4 +38,3 @@ section](using-visual-cpp-with-webots.md). To create the import libraries (the
 "*.lib" files in Visual C++) from the "*.dll" files of the lib directory of
 Webots, please follow the instructions provided with the documentation of your
 compiler.
-

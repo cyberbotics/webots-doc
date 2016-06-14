@@ -53,4 +53,3 @@ EDU and Webots MOD.
 %end
 
 (1): refer to specific module description.
-

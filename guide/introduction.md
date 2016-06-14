@@ -10,4 +10,3 @@ software development tools must be installed separately. Note that Webots uses
 very standard tools that may already be present in a standard installation.
 Otherwise the instructions in this chapter will advise you about the
 installation of your software development tools.
-

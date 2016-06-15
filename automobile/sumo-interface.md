@@ -41,7 +41,7 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --rotateWheels        | Update the orientation of the wheels of the vehicles in Webots               | By default, the wheels orientation is not updated                                               |
 | --d or --directory    | Specifies the directory where are located the SUMO network files             | By default the files should be located close to the world in a directory called `worldName_net` |
 | --p --port            | Specifies which port SUMO and the interface should use to communicate        | By default, the port 8873 is used                                                               |
-| --s --seed            | Specifies the seed of the SUMO random number generator (0 means random seed) | By default, the a seed of 1 is used                                                             |
+| --s --seed            | Specifies the seed of the SUMO random number generator (0 means random seed) | By default, a seed of 1 is used                                                                 |
 
 %end
 

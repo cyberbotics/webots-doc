@@ -30,18 +30,18 @@ field `controllerArgs` in order to customize the behavior of the interface:
 
 %figure "sumo_supervisor arguments"
 
-| Argument              | Description                                                                  | Default value                                                                                   |
-| --------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| --nogui               | The command-line version of SUMO is launched                                 | By default, the GUI version of SUMO is launched                                                 |
-| --verbose             | Print SUMO outputs in Webots console                                         | SUMO outputs are lost                                                                           |
-| --step                | Specifies the time step of SUMO in milliseconds                              | By default, a time step of 200ms is used                                                        |
-| --noNetconvert        | Do not run netconvert before launching SUMO                                  | By default, netconvert is run before launching SUMO. It is required to disable netconvert if the *.net.xml file is already available (for example when importing it from OpenStreetMap)          |
-| --disableTraficLights | Do not update traffic light states in Webots                                 | By default, traffic light states are updated in Webots                                          |
-| --maxVehicles         | Specifies the maximum number of vehicles included in Webots                  | By default, a maximum of 100 vehicles are included in Webots                                    |
-| --rotateWheels        | Update the orientation of the wheels of the vehicles in Webots               | By default, the wheels orientation is not updated                                               |
-| --d or --directory    | Specifies the directory where are located the SUMO network files             | By default the files should be located close to the world in a directory called `worldName_net` |
-| --p --port            | Specifies which port SUMO and the interface should use to communicate        | By default, the port 8873 is used                                                               |
-| --s --seed            | Specifies the seed of the SUMO random number generator (0 means random seed) | By default, a seed of 1 is used                                                                 |
+| Argument              | Description                                                                                  | Default value                                                                                   |
+| --------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| --nogui               | The command-line version of SUMO is launched                                                 | By default, the GUI version of SUMO is launched                                                 |
+| --verbose             | Print SUMO outputs in Webots console                                                         | SUMO outputs are lost                                                                           |
+| --step                | Specifies the time step of SUMO in milliseconds                                              | By default, a time step of 200ms is used                                                        |
+| --noNetconvert        | Do not run netconvert before launching SUMO                                                  | By default, netconvert is run before launching SUMO. It is required to disable netconvert if the *.net.xml file is already available (for example when importing it from OpenStreetMap)          |
+| --disableTraficLights | Do not update traffic light states in Webots                                                 | By default, traffic light states are updated in Webots                                          |
+| --maxVehicles         | Specifies the maximum number of vehicles included in Webots                                  | By default, a maximum of 100 vehicles are included in Webots                                    |
+| --rotateWheels        | Update the orientation of the wheels of the vehicles in Webots                               | By default, the wheels orientation is not updated                                               |
+| --d or --directory    | Specifies the directory where are located the SUMO network files                             | By default the files should be located close to the world in a directory called `worldName_net` |
+| --p --port            | Specifies which port SUMO and the interface should use to communicate                        | By default, the port 8873 is used                                                               |
+| --s --seed            | Specifies the seed of the SUMO random number generator (0 for the '--random' option of SUMO) | By default, a seed of 1 is used                                                                 |
 
 %end
 

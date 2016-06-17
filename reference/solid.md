@@ -110,7 +110,7 @@ to define initial velocities for every physical objects in the scene.
 
 ### How to use the boundingObject field?
 
-The `boundingObject` field is used to define the bounds of a [Solid](#solid) as geometrical primitive.
+The `boundingObject` field is used to define the bounds of a [Solid](#solid) as geometrical primitives.
 Each `boundingObject` can hold one or several geometrical
 primitives, such as [Box](box.md), [Capsule](capsule.md),
 [Cylinder](cylinder.md), etc. These primitives should normally be chosen such as

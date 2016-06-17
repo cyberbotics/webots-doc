@@ -39,6 +39,7 @@ Road {
       MFString   texture                   "textures/road.jpg"
       SFFloat    textureScale              2
       MFString   pavementTexture           "textures/pavement.jpg"
+      MFString   bottomTexture             []
       SFBool     locked                    TRUE
       SFBool     roadBoundingObject        FALSE
       SFBool     rightBorderBoundingObject FALSE
@@ -81,6 +82,7 @@ value is lower than 0, the interpolation is disabled).
 - `texture`: Defines the texture to be used for the road.
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 - `roadBoundingObject`: Defines if the road should have a bounding object.
 - `rightBorderBoundingObject`: Defines if the right sidewalk should have a
 bounding object.

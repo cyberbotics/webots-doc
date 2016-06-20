@@ -112,6 +112,9 @@ or stacking simulation, you will need to specify the [Physics](#physics) nodes
 for the boxes so that the friction and gravity forces are applied to these
 objects.
 
+Note that if you add a dynamic [Solid](#solid) node inside a passive object, then it will behave like a normal dynamic object independent from the parent one.
+This is not true for the [TouchSensor](#touchsensor) node. If all the ancestor nodes are passive, the [TouchSensor](#touchsensor) is attached to the static environment and thus it won't move from its initial position.
+
 #### In robots
 
 Articulated robot, humanoids, vehicles and so on, are built as hierarchies of

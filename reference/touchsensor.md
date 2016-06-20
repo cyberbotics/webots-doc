@@ -125,7 +125,7 @@ robot) makes the actual contact with the floor. Therefore, it is necessary that
 the sensor's `boundingObject` extend below any other `boundingObject` of the
 robot (e.g., foot, ankle, etc.).
 
-If the [TouchSensor](#touchsensor) node doesn't have any dynamic ancestor [Solid](#solid) node, i.e. any node whose `physics` field is set, it will be attached to the static environment with an ODE fixed joint.
+If a [TouchSensor](#touchsensor) node doesn't have any dynamic ancestor [Solid](#solid) node, i.e. any node whose `physics` field is set, it will be attached to the static environment with an ODE fixed joint.
 This means that unlike all the other [Solid](#solid) nodes, even if the [TouchSensor](#touchsensor) node is dynamic it won't move from its initial position.
 
 ### Coordinate System

@@ -46,9 +46,9 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --rotate-wheels          | Updates the orientation of the wheels of the vehicles in Webots                                                                      | By default, the wheels orientation is not updated                                                |
 | --radius                 | Specifies the visibility radius of the vehicles in meters (only vehicles closer to the viewpoint than this radius will be displayed) | By default, the visibility radius is equal to -1 which means that all the vehicles are displayed |
 | --enable-height          | Specifies if height information should be extracted from the edge name                                                               | By default, all the vehicles are in the plane defined by y = 0                                   |
-| --d or --directory       | Specifies the directory where are located the SUMO network files                                                                     | By default the files should be located close to the world in a directory called `worldName_net`  |
-| --p --port               | Specifies which port SUMO and the interface should use to communicate                                                                | By default, the port 8873 is used                                                                |
-| --s --seed               | Specifies the seed of the SUMO random number generator (0 for the '--random' option of SUMO)                                         | By default, a seed of 1 is used                                                                  |
+| --directory              | Specifies the directory where are located the SUMO network files                                                                     | By default the files should be located close to the world in a directory called `worldName_net`  |
+| --port                   | Specifies which port SUMO and the interface should use to communicate                                                                | By default, the port 8873 is used                                                                |
+| --seed                   | Specifies the seed of the SUMO random number generator (0 for the '--random' option of SUMO)                                         | By default, a seed of 1 is used                                                                  |
 | --use-display            | Specifies if the GUI view of SUMO should be displayed in a Webots display (only working in GUI mode, and the Supervisor must have a display named 'sumo')                                                 | By default, the GUI view is not displayed  |
 | --display-refresh-rate   | Specifies the refresh rate of the SUMO display, expressed in milliseconds (no effect if the SUMO display is not activated)           | By default, a refresh rate of 1000ms is used                                                                  |
 | --display-zoom           | Specifies the initial zoom of the SUMO display in Webots (1.0 means no scaling)                                                      | By default, no scaling is performed                                                                  |
@@ -59,7 +59,7 @@ field `controllerArgs` in order to customize the behavior of the interface:
 
 ## Plugin mechanism
 
-In addition to the `sumo_supervisor` controller arguments, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder than the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
+In addition to the `sumo_supervisor` controller arguments, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
 
 ```python
 class SumoSupervisorPlugin:

@@ -7,6 +7,9 @@ a large number of vehicles in real-time. This interface is written in python in
 a supervisor controller and uses  [TraCI](http://sumo.dlr.de/wiki/TraCI) to
 communicate with SUMO.
 
+> **note**:
+Currently version 0.26 of SUMO is distributed with Webots.
+
 In order to use this interface a few rules need to be observed. First, a
 `Supervisor` node has to be added to the simulation and should use the
 `sumo_supervisor` controller. Then a folder called `worldName_net` should be
@@ -73,9 +76,6 @@ the traci context and the net class to get information about the network. The
 second one is called at each SUMO step and the argument is the time step.
 
 Such a plugin can be used for example to change traffic light state in SUMO.
-
-> **note**:
-Currently version 0.26 of SUMO is distributed with Webots.
 
 
 ## Display

@@ -46,17 +46,17 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --d or --directory       | Specifies the directory where are located the SUMO network files                                                                     | By default the files should be located close to the world in a directory called `worldName_net`  |
 | --p --port               | Specifies which port SUMO and the interface should use to communicate                                                                | By default, the port 8873 is used                                                                |
 | --s --seed               | Specifies the seed of the SUMO random number generator (0 for the '--random' option of SUMO)                                         | By default, a seed of 1 is used                                                                  |
-| --use-display            | Specifies if the GUI view of SUMO should be displayed in a Webots display (only working in GUI mode, and the Supervisor must have a display named 'sumo display')                                         | By default, the GUI view is not displayed  |
+| --use-display            | Specifies if the GUI view of SUMO should be displayed in a Webots display (only working in GUI mode, and the Supervisor must have a display named 'sumo')                                                 | By default, the GUI view is not displayed  |
 | --display-refresh-rate   | Specifies the refresh rate of the SUMO display, expressed in milliseconds (no effect if the SUMO display is not activated)           | By default, a refresh rate of 1000ms is used                                                                  |
 | --display-zoom           | Specifies the initial zoom of the SUMO display in Webots (1.0 means no scaling)                                                      | By default, no scaling is performed                                                                  |
 | --display-fit-size       | Specifies if the image should be resized to fit the SUMO display size or not                                                         | By default, the image is not resized                                                                  |
 
 %end
 
-In addition to these arguments, the plugin mechanism can be used to extend the
-interface. The plugin should be written in python, be in the same folder than
-the SUMO network files, and should implement the `SumoSupervisorPlugin` class
-with the two following entry-point functions:
+
+## Plugin mechanism
+
+In addition to the `sumo_supervisor` controller arguments, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder than the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
 
 ```python
 class SumoSupervisorPlugin:
@@ -77,6 +77,14 @@ Such a plugin can be used for example to change traffic light state in SUMO.
 > **note**:
 Currently version 0.26 of SUMO is distributed with Webots.
 
+
+## Display
+
+It is sometimes useful to see the GUI view of SUMO inside Webots (e.g. to emulate a GPS view). This can easily be achieved using the `--use-display` argument of the `sumo_supervisor` controller, the only constraints are that SUMO should run in GUI mode and the `Supervisor` node should own a `Display` device named `sumo`.
+
+It is then possible to change the refresh rate of the display using the `--display-refresh-rate` argument which specifies the refresh rate expressed in milliseconds. A zooming factor can also be set using the `--display-zoom` argument, this factor will automatically make SUMO zoom in/out at startup.
+
+If the current size of the SUMO window is bigger than the resolution of the `Display` device only the center of the view will be visible in the display. On the opposite, if the SUMO window is smaller than the resolution of the `Display` device, the image will not entirely fill the display. It is possible to rescale automatically the image at the display size using the `--display-fit-size` argument, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
 ### SumoInterface PROTO
 

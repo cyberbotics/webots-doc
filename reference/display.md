@@ -26,6 +26,7 @@ a [ImageTexture](imagetexture.md), then the internal texture of the(se)
 ### Field Summary
 
 - `width`: width of the display in pixels
+
 - `height`: height of the display in pixels
 
 ### Coordinates system

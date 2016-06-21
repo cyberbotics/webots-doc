@@ -18,12 +18,14 @@ Visible objects are constituted by a geometry and an appearance.
 - The `appearance` field contains an [Appearance](appearance.md) node that
 specifies the visual attributes (e.g., material and texture) to be applied to
 the geometry.
+
 - The `geometry` field contains a `Geometry` node: [Box](box.md),
 [Capsule](capsule.md), [Cone](cone.md), [Cylinder](cylinder.md),
 [ElevationGrid](elevationgrid.md), [IndexedFaceSet](indexedfaceset.md),
 [IndexedLineSet](indexedlineset.md), [Plane](plane.md) or [Sphere](sphere.md).
 The specified `Geometry` node is rendered with the specified appearance nodes
 applied.
+
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) shadows
 casted by this shape.
 

@@ -61,32 +61,47 @@ In Java and Python, the structure is replaced by a class called `RadarTarget`.
 
 - `minRange`: Defines the minimum range of the radar. Any object closer to the
 radar than this value will not be seen.
+
 - `maxRange`: Defines the maximum range of the radar. Any object farther to the
 radar than this value will not be seen (even if the returned power is
 sufficient).
+
 - `horizontalFieldOfView`: Defines the horizontal field of view of the radar
 detection frustum.
+
 - `verticalFieldOfView`: Defines the vertical field of view of the radar detection
 frustum.
+
 - `minAbsoluteRadialSpeed`: Defines the minimum absolute radial speed (relative to
 the radar) of the object to be considered as a target.
+
 - `minRadialSpeed` and `maxRadialSpeed`: Defines the minimum and maximum radial
 speed (relative to the radar) of the object to be visible. If both
 `minRadialSpeed` and `maxRadialSpeed` are zero (the default), the radial speed
 limits are deactivated.
+
 - `cellDistance`: Defines the minimum radial distance between two targets for the
 radar to be able to distinguish between them.
+
 - `cellSpeed`: Defines the minimum radial speed difference between two targets for
 the radar to be able to distinguish between them. A value of 0 means the speed
 is not used to distinguish objects but only the distance.
+
 - `rangeNoise`: Defines the gaussian noise of the distance measurements.
+
 - `speedNoise`: Defines the gaussian noise of the speed measurements.
+
 - `angularNoise`: Defines the gaussian noise of the angle measurements.
+
 - `antennaGain`: Defines the gain of the antenna in dBi.
+
 - `frequency`: Defines the frequency of the radar in Ghz.
+
 - `transmittedPower`: Defines the power transmitted by the radar in dBm.
+
 - `minDetectableSignal`: Defines the minimum detectable power in dBm. A returned
 power lower than this threshold will not produce any target.
+
 - `occlusion`: Defines if occlusions between the object and the radar should be
 checked before generating a target. This feature can become computationally
 expensive as the number of targets increase.

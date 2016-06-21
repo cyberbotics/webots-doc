@@ -32,6 +32,7 @@ defined by the `height` field and the `xSpacing` and `zSpacing` fields:
 
 - The `height` field is an `xDimension` by `zDimension` array of scalar values
 representing the height above the grid for each vertex.
+
 - The `xSpacing` and `zSpacing` fields indicate the distance between vertices in
 the *x* and *z* directions respectively, and shall be greater than zero.
 

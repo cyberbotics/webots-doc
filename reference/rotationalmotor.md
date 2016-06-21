@@ -21,6 +21,7 @@ rotational motion around the choosen axis.
 - The `name` field specifies the name identifier of the motor device. This the
 name to which `wb_robot_get_device()` can refer. It defaults to `"rotational
 motor"`.
+
 - The `maxTorque` field specifies both the upper limit and the default value for
 the motor *available torque*. The *available torque* is the torque that is
 available to the motor to perform the requested motions. The

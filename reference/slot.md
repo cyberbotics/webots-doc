@@ -35,6 +35,7 @@ can be connected only if they are of opposite gender (e.g. a [Slot](#slot) with
 a type ending with '`+`' can only be connected to a [Slot](#slot) with the same
 type, except that it ends with '`-`' instead of '`+`'). The default empty type
 matches any type.
+
 - `endPoint`: The node inserted in the endPoint of a [Slot](#slot) should be
 another [Slot](#slot) if this [Slot](#slot) is not already connected to another
 [Slot](#slot) (i.e., its parent is a [Slot](#slot)). If the pair of

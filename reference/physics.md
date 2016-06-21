@@ -95,8 +95,7 @@ necessary to specify all the [Physics](#physics) nodes in a Webots world.
 Whether to use or not a [Physics](#physics) node in a particular case depends on
 what aspect of the real world your want to model in your simulation.
 
-Note that if a [Solid](#solid) node contains a [Physics](#physics) node but none of its ancestor nodes contain a [Physics](#physics) node, then this node will be simulated in *physics* mode and it will move independently from its ancestor nodes.
-This is not true for the [TouchSensor](#touchsensor) node. If all the ancestor nodes contain no [Physics](#physics) node, the [TouchSensor](#touchsensor) is attached to the static environment with an ODE fixed joint and thus it won't move from its initial position.
+Note that if a [Solid](#solid) node has at least one [Solid](#solid) ancestor node and contains a [Physics](#physics) node but none of its [Solid](#solid) ancestor nodes contain a [Physics](#physics) node, then this node will be attached to the static environment with an ODE fixed joint and thus it won't move from its initial position.
 
 #### In passive objects
 

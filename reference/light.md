@@ -32,8 +32,10 @@ emission) to 1.0 (full intensity). However, when used together with
 desired, larger values of `intensity` and `ambientIntensity` can also be used.
 The `color` field specifies the spectral color properties of both the direct and
 ambient light emission as an RGB value.
+
 - The `on` boolean value allows the user to turn the light on (TRUE) or off
 (FALSE).
+
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) the
 casting of shadows for this [Light](#light). When activated, sharp shadows are
 casted from and received by any renderable object except for the

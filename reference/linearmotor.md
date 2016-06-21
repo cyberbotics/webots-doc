@@ -20,6 +20,7 @@ A [LinearMotor](#linearmotor) node can be used to power a
 - The `name` field specifies the name identifier of the motor device. This the
 name to which `wb_robot_get_device()` can refer. It defaults to `"linear
 motor"`.
+
 - The `maxForce` field specifies both the upper limit and the default value for
 the motor *available force*. The *available force* is the force that is
 available to the motor to perform the requested motions. The

@@ -51,20 +51,26 @@ automatically changed to 1.
 - `name`: name of the solid. In derived device classes this corresponds to the
 device name argument used by `wb_robot_get_device()`. Note that the name cannot
 contain the colon character '`:`'.
+
 - `model`: generic name of the solid (e.g., "chair").
+
 - `description`: short description (1 line) of the solid.
+
 - `contactMaterial`: name of the contact material. When the `boundingObject`s of
 [Solid](#solid) nodes intersect, the `contactMaterial` is used to define which
 [ContactProperties](contactproperties.md) must be applied at the contact points.
+
 - `immersionProperties`: list of [ immersionProperties](immersionproperties.md)
 nodes. It is used to specify dynamic interactions of the [Solid](#solid) node
 with one or more [Fluid](fluid.md) nodes.
+
 - `boundingObject`: the bounding object specifies the geometrical primitives used
 for collision detection. If the `boundingObject` field is NULL, then no
 collision detection is performed and that object can pass through any other
 object, e.g., the floor, obstacles and other robots. Note that if the
 `boundingObject` field is NULL then the `physics` field (see below) must also be
 NULL. You will find more explanations about the `boundingObject` field below.
+
 - `physics`: this field can optionally contain a [Physics](physics.md) node that
 is used to model the physical properties of this [Solid](#solid). A
 [Physics](physics.md) node should be added when effects such as gravity,
@@ -72,8 +78,10 @@ inertia, frictional and contact forces need to be simulated. If the `physics`
 field is NULL then Webots simulates this object in *kinematics* mode. Note that
 if this field is not NULL then the `boundingObject` field must be specified.
 Please find more info in the description of the [Physics](physics.md) node.
+
 - `locked`: if `TRUE`, the solid object cannot be moved using the mouse. This is
 useful to prevent moving an object by mistake.
+
 - `radarCrossSection`: if greater than 0 this [Solid](#solid) node is a potential
 target for any [Radar](radar.md) device. Radar cross section (RCS) is the
 measure of a target's ability to reflect radar signals in the direction of the
@@ -81,10 +89,12 @@ radar receiver, i.e. it is a measure of the ratio of backscatter density in the
 direction of the radar to the power density that is intercepted by the target.
 Typical values are 0.01 for a bird, 1 for a human, 100 for a car and 200 for a
 truck.
+
 - `translationStep` and `rotationStep`: these fields specify the minimum step size
 that will be used by the translate and rotate handles appearing in the 3D window
 when selecting a top solid. Continuous increment is obtained by setting the step
 value to -1.
+
 - `linearVelocity` and `angularVelocity`: these fields, which aren't visible from
 the Scene Tree, are used by Webots when saving a world file to store the initial
 linear and angular velocities of a [Solid](#solid) with a non-NULL

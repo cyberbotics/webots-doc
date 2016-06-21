@@ -48,12 +48,14 @@ corresponding sensor output values in user-defined units. The third column
 specifies the level of noise in percent of the corresponding output value. See
 the section on the [DistanceSensor](distancesensor.md) node for more explanation
 on how a `lookupTable` works.
+
 - `colorFilter`: specifies an RGB filter that can be used to approximate a
 physical color filter or spectral response. The total RGB irradiance is
 multiplied by this filter (see formula below) in order to obtain a scalar
 irradiance value *E* that is then used as the input to the lookup table. The
 `colorFilter` field can, for example, be used to selectively detect light
 sources according to color.
+
 - `occlusion`: specifies whether or not obstacles between the sensor and light
 sources should be taken into account in the calculation of irradiance. If the
 `occlusion` field is FALSE (the default), all potential obstacles (Walls, other
@@ -66,6 +68,7 @@ is disabled because the occlusion detection is computationally expensive and
 should be avoided whenever possible. For example, in a setup where it is obvious
 that there will never be an obstacle between a particular sensor and the various
 light sources, the `occlusion` flag can be set to FALSE.
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
 to -1 (default) means that the sensor has an 'infinite' resolution (it can

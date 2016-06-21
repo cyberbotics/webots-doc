@@ -60,14 +60,18 @@ behavior with the line drawn by the first robot.
 
 - `inkColor`: define the color of the pen's ink. This field can be changed from
 the pen API, using the `wb_pen_set_ink_color()` function.
+
 - `inkDensity`: define the density of the color of the ink. The value should be in
 the range [0,1]. This field can also be changed from the pen API, using the
 `wb_pen_set_ink_color()` function.
+
 - `leadSize`: define the width of the "tip" of the pen. This allows the robot to
 write a wider or narrower track.
+
 - `maxDistance`: define the maximal distance between the [Pen](#pen) device and a
 paintable object and allows to simulate write-on-contact behaviors. A value
 smaller or equal 0 represents an unlimited painting range.
+
 - `write`: this boolean field allows the robot to enable or disable writing with
 the pen. It is also switchable from the pen API, using the `wb_pen_write()`
 function.

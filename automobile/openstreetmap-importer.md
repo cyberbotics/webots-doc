@@ -39,6 +39,7 @@ You can use several arguments with this script:
 | --noBuilding        | Does not include the buildings in the generated world                                                                                | By default, buildings are included                                        |
 | --noRoadIntersection| Does not generate complex road intersections                                                                                         | By default, complex road intersections are generated                      |
 | --enable3D          | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
+| --disableMultipolygonBuilding | Does not generate building from multipolygon                                                                               | By default, buildings are generated from multipolygon                     |
 
 %end
 

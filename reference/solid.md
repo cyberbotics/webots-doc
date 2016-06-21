@@ -78,6 +78,9 @@ inertia, frictional and contact forces need to be simulated. If the `physics`
 field is NULL then Webots simulates this object in *kinematics* mode. Note that
 if this field is not NULL then the `boundingObject` field must be specified.
 Please find more info in the description of the [Physics](physics.md) node.
+For consecutive solids, e.g., two solids attached to each other with a joint or a solid attached to the static environment with a joint, no collision detection is performed even if the `physics` field is set.
+The reason is that this type of collision detection is usually not wanted by the user, because a very accurate design of the bounding objects of the solids would be required.
+To prevent two consecutive solid nodes from penetrating each other, the `minStop` and `maxStop` fields of the corresponding joint node should be adjusted accordingly.
 
 - `locked`: if `TRUE`, the solid object cannot be moved using the mouse. This is
 useful to prevent moving an object by mistake.
@@ -107,8 +110,8 @@ to define initial velocities for every physical objects in the scene.
 
 ### How to use the boundingObject field?
 
-`boundingObject`s are used to define the bounds of a [Solid](#solid) as
-geometrical primitive. Each `boundingObject` can hold one or several geometrical
+The `boundingObject` field is used to define the bounds of a [Solid](#solid) as geometrical primitives.
+Each `boundingObject` can hold one or several geometrical
 primitives, such as [Box](box.md), [Capsule](capsule.md),
 [Cylinder](cylinder.md), etc. These primitives should normally be chosen such as
 to represent the approximate bounds of the [Solid](#solid). In the usual case,
@@ -140,6 +143,6 @@ The `boundingObject`, together with the [Physics](physics.md) node, are used to
 compute the inertia matrix of the [Solid](#solid). Such a computation assumes a
 uniform mass distribution in the primitives composing the `boundingObject`. Note
 that the center of mass of the [Solid](#solid) does not depend on its
-`boundingObject`. The center of mass of is specified by the `centerOfMass` field
+`boundingObject`. The center of mass is specified by the `centerOfMass` field
 of the [Physics](physics.md) node (in coordinates relative to the center of the
 [Solid](#solid)).

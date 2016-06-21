@@ -49,6 +49,7 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --useSumoDisplay         | Specifies if the gui view of SUMO should be displayed in a Webots display (only working in gui mode, and the Supervisor must have a display named 'sumo display')                                         | By default, the gui view is not displayed  |
 | --sumoDisplayRefreshRate | Specifies the refresh rate of the SUMO display (no effect if the SUMO display is not activated)                                      | By default, a refresh rate of 1000ms is used                                                                  |
 | --sumoDisplayZoom        | Specifies the initial zoom of the SUMO display in Webots (100 means no scaling)                                                      | By default, no scaling is performed                                                                  |
+| --sumoDisplayResizeImage | Specifies if the image should be resized to fit the SUMO display size or not                                                         | By default, the image is not resized                                                                  |
 
 %end
 

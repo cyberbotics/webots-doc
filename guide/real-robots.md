@@ -275,7 +275,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 In this example, you can see two Khepera robots from K-Team moving inside an
 arena while avoiding each other and the walls. It is a good example of how to
-use teh kinematic mode of Webots. Like many other examples, this one uses the
+use the kinematic mode of Webots. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
 "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 

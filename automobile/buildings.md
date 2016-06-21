@@ -46,6 +46,7 @@ GenericBuilding {
      SFBool      snowOnRoof             FALSE
      SFFloat     roofHeight             3
      SFBool      enableBoundingObject   TRUE
+     SFBool      bottom                 FALSE
  }
 ```
 
@@ -64,6 +65,7 @@ roof` and `pyramidal roof`.
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
 roof).
 - `enableBoundingObject`: Defines if the building should have a bounding object.
+- `bottom`: Defines if the bottom face of the building should be displayed.
 
 ### Other city objects
 

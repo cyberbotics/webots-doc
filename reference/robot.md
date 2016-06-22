@@ -11,8 +11,8 @@ Robot {
   MFFloat    battery           []
   SFFloat    cpuConsumption    0   # [0,inf)
   SFBool     selfCollision     FALSE
-  SFBool     showRobotWindow   FALSE
-  SFString   robotWindow       ""
+  SFBool     showWindow        FALSE
+  SFString   window            ""
   SFString   remoteControl     ""
 }
 ```
@@ -105,15 +105,15 @@ of a robot leg with self collision enabled:
     an intermediate solid ("Leg"). In such an example, it is probably a good idea to
     set `minStop` and `maxStop` values for the "Knee" and "Ankle" joints.
 
-- `showRobotWindow`: defines whether the robot window should be shown at the
+- `showWindow`: defines whether the robot window should be shown at the
 startup of the controller. If yes, the related entry point function of the robot
 window controller plugin (`wbw_show()`) is called as soon as the controller is
 initialized.
 
-- `robotWindow`: defines the path of the robot window controller plugin used to
-display the robot window. If the `robotWindow` field is empty, the default
+- `window`: defines the path of the robot window controller plugin used to
+display the robot window. If the `window` field is empty, the default
 generic robot window is loaded. The search algorithm works as following: Let
-$(VALUE) be the value of the `robotWindow` field, let $(EXT) be the shared
+$(VALUE) be the value of the `window` field, let $(EXT) be the shared
 library file extension of the OS (".so", ".dll" or ".dylib"), let $(PREFIX) be
 the shared library file prefix of the OS ("" on windows and "lib" on other OS),
 let $(PROJECT) be the current project path, let $(WEBOTS) be the webots
@@ -126,7 +126,7 @@ file will be used as absolute path:
 
 - `remoteControl`: defines the path of the remote-control controller plugin used
 to remote control the real robot. The search algorithm is identical to the one
-used for the robotWindow field, except that the subdirectory of `plugins` is
+used for the `window` field, except that the subdirectory of `plugins` is
 `remote_controls` rather than `robot_windows`.
 
 ### Synchronous versus Asynchronous controllers

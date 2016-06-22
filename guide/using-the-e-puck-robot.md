@@ -233,9 +233,9 @@ The camera image (if present), the ground sensor values (if present) and the
 accelerometer values are displayed in the corresponding boxes on the right side
 of the window.
 
-This e-puck control window appears because the `robotWindow` field of the
+This e-puck control window appears because the `window` field of the
 `DifferentialWheel` node in the world file was set to "e-puck\_window". Changing
-this `robotWindow` to an empty string will disable this control window.
+this `window` to an empty string will disable this control window.
 
 #### BotStudio overview
 

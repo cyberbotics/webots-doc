@@ -631,7 +631,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getTime](robot.md#wb_robot_get_time)() const;                                                                         |
 | &nbsp;&nbsp; std::string [getWorldPath](robot.md#wb_robot_get_world_path)() const;                                                         |
 | &nbsp;&nbsp; int [getType](robot.md#wb_robot_get_type)() const;                                                                            |
-| &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                       |
+| &nbsp;&nbsp; void *[windowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                            |
 | };                                                                                                                                         |
 
 %end

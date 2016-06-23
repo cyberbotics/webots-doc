@@ -38,8 +38,9 @@ You can use several arguments with this script:
 | --no-rivers            | Does not include the rivers in the generated world                                                                                   | By default, rivers are included                                           |
 | --no-buildings         | Does not include the buildings in the generated world                                                                                | By default, buildings are included                                        |
 | --no-road-intersections| Does not generate complex road intersections                                                                                         | By default, complex road intersections are generated                      |
+| --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
 | --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
-| --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                                | By default, buildings are generated from multipolygon                   |
+| --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
 
 %end
 

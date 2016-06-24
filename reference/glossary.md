@@ -1,6 +1,6 @@
 # Glossary
 
-This glossary defines the terminology used in Webots to describe the various concepts related to the simulation.
+This glossary defines the terminology used to describe the various concepts related to a Webots simulation.
 
 **Actuator**: An *actuator* is a *node* representing a real robotics activator such as a motor, a LED, a radio emitter, etc. *Actuators* may receive commands from a *controller*. Some *actuators* are also *sensors* if they make sensory measurement, such as a motor than can provide position or force feedback.
 
@@ -8,7 +8,7 @@ This glossary defines the terminology used in Webots to describe the various con
 
 **Controller**: A *controller* is a program controlling the behavior of a *robot*. It can be written in different languages, including C, C++, Python, Java or MATLAB. It can read the data measured by the *sensors* of a *robot* and send commands to the *actuators* of the *robot*.
 
-**Controller Time Step**: The *controller time step* is the time increment executed at each iteration of the control loop of a *controller*. It is usually passed directly as an argument of the [Robot](robot.md#wb_robot_step)() function. It should be an exact multiple of the *basic time step* for a better simulation performance.
+**Controller Time Step**: The *controller time step* is the time increment executed at each iteration of the control loop of a *controller*. It is usually passed directly as an argument of the [wb_robot_step](robot.md#wb_robot_step)() function. It should be an exact multiple of the *basic time step* for a better simulation performance.
 
 **Descendant**: A *descendant* is a *node* which is hierarchically included inside another *node* in the *scene tree*.
 

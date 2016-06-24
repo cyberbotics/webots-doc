@@ -4,13 +4,17 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Actuator**: An *actuator* is a *node* representing a real robotics actuator such as a motor, a LED, a radio emitter, etc. *Actuators* may receive commands from a *controller*. Their behavior will affect the outcome of a simulation. Some *actuators* are also *sensors* if they make sensory measurement, such as a motor than can provide position or force feedback.
 
+**Ancestor node**: An *ancestor node* is a *node* that hierarchically includes another *node* in the *scene tree*.
+
 **Basic Time Step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation. It is specified as a field of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
+
+**Child node**: if referred to a *node*, it is meant to described a *node* contained in the 'children' field of another *node*.
 
 **Controller**: A *controller* is a program controlling the behavior of a *robot* and running on its own process. It can be written in different languages, including C, C++, Python, Java or MATLAB. It communicates with Webots through a local pipe to read the data measured by the *sensors* of a *robot* and send commands to the *actuators* of the *robot*.
 
 **Controller Time Step**: The *controller time step* is the time increment executed at each iteration of the control loop of a *controller*. It is usually passed directly as an argument of the [wb_robot_step](robot.md#wb_robot_step)() function. It should be an exact multiple of the *basic time step* for an optimal simulation performance.
 
-**Descendant**: A *descendant* is a *node* which is hierarchically included inside another *node* in the *scene tree*.
+**Descendant node**: A *descendant node* is a *node* which is hierarchically included inside another *node* in the *scene tree*.
 
 **Device**: A *device* is either an *actuator* or a *sensor*.
 
@@ -19,6 +23,8 @@ This glossary defines the terminology used to describe the various concepts rela
 **Kinematic Solid**: A *kinematic solid* is a *solid* which has no [Physics](physics.md) *node* defined, but which can move using the Webots kinematic physics engine.
 
 **Node**: A *node* is an object used to define a simulation *world*. All the Webots *nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
+
+**Parent node**: A *parent node* is the *node* in whose field another *node* is contained.
 
 **Passive Solid**: A *passive solid* is a *solid* which is not a *robot*, neither a *sensor* or an *actuator*. It may be either a *kinematic* or a *dynamic solid*.
 

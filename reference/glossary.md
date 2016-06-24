@@ -24,7 +24,7 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Node**: A *node* is an object used to define a simulation *world*. All the Webots *nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
 
-**Parent**: When referring to a *node", the *parent* of a *child* is a *node* containing the *child* at a relative depth of one in the *scene tree*. Note that a *parent* is always an *ancestors*, but an *ancestors* is not necessarily a *parent*.
+**Parent**: When referring to a *node", the *parent* of a *child* is a *node* containing the *child* at a relative depth of one in the *scene tree*. Note that a *parent* is always an *ancestor*, but an *ancestor* is not necessarily a *parent*.
 
 **Passive solid**: A *passive solid* is a *solid* which is not a *robot*, neither a *sensor* or an *actuator*. It may be either a *kinematic* or a *dynamic solid*.
 

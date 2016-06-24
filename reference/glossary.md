@@ -34,7 +34,7 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Sensor**: A *sensor* is a *node* representing a real robotics sensor such as a camera, a sonar or a gyroscope. *Sensors* can send measurement data, such as a camera image or a distance measurement to a *controller*.
 
-**Solid**: A *solid* is a [Solid](solid.md) node defining a physical object, including *robots*, *sensors*, *actuators* and *passive solids*.
+**Solid**: A *solid* is a [Solid](solid.md) *node* or any *node* inheriting from the [Solid](solid.md) *node*. It defines a physical object, including *robots*, *sensors*, *actuators* and *passive solids*.
 
 **Static Environment**: The *static environment* is a made up of all the *solids* of a *world* that have no [Physics](physics.md) *node* and cannot move, but have a bounding object defined. It is used to detect collisions with the *dynamic* and *kinematic solids* in order to prevent them from penetrating it.
 

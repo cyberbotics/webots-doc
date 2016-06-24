@@ -8,7 +8,7 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Basic time step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation. It is specified as a field of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
 
-**Child**: When referred to a *node*, the *child* of a *parent* is a *node* directly contained inside the *parent*, at a relative depth of one in the *scene tree*. Note that a *child* is always a *descendant*, but a *descendant* is not necessarly a *child*.
+**Child**: When referring to a *node*, the *child* of a *parent* is a *node* directly contained inside the *parent*, at a relative depth of one in the *scene tree*. Note that a *child* is always a *descendant*, but a *descendant* is not necessarly a *child*.
 
 **Controller**: A *controller* is a program controlling the behavior of a *robot* and running on its own process. It can be written in different languages, including C, C++, Python, Java or MATLAB. It communicates with Webots through a local pipe to read the data measured by the *sensors* of a *robot* and send commands to the *actuators* of the *robot*.
 

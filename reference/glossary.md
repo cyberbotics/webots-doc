@@ -2,7 +2,7 @@
 
 This glossary defines the terminology used to describe the various concepts related to a Webots simulation.
 
-**Actuator**: An *actuator* is a *node* representing a real robotics activator such as a motor, a LED, a radio emitter, etc. *Actuators* may receive commands from a *controller*. Some *actuators* are also *sensors* if they make sensory measurement, such as a motor than can provide position or force feedback.
+**Actuator**: An *actuator* is a *node* representing a real robotics actuator such as a motor, a LED, a radio emitter, etc. *Actuators* may receive commands from a *controller*. Some *actuators* are also *sensors* if they make sensory measurement, such as a motor than can provide position or force feedback.
 
 **Basic Time Step***: The *basic time step* is the time step increment used by Webots to advance the simulation time and perform physics simulation. It is specified as a field of the [WorldInfo](#worldinfo) *node* and is expressed in milliseconds.
 

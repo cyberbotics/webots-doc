@@ -20,6 +20,8 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Dynamic solid**: A *dynamic solid* is a *solid* which has a [Physics](physics.md) *node* defined and can move according to the Webots dynamic physics engine (ODE).
 
+**Field**: a *field* is an attribute of a *node*. It has a name and a data type as defined in VRML97. The data type can be a single item or a list of items from *node*, boolean, integer, floating point, string, 2D vector, 3D vector, color, etc.
+
 **Kinematic solid**: A *kinematic solid* is a *solid* which has no [Physics](physics.md) *node* defined, but which can move using the Webots kinematic physics engine.
 
 **Node**: A *node* is an object used to define a simulation *world*. All the Webots *nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.

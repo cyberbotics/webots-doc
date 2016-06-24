@@ -119,3 +119,4 @@
     - [Python API](python-api.md)
     - [Matlab API](matlab-api.md)
     - [ROS API](ros-api.md)
+- [Glossary](glossary.md)

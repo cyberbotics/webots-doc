@@ -4,7 +4,7 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Actuator**: An *actuator* is a *node* representing a real robotics actuator such as a motor, a LED, a radio emitter, etc. *Actuators* may receive commands from a *controller*. Their behavior will affect the outcome of a simulation. Some *actuators* are also *sensors* if they make sensory measurement, such as a motor than can provide position or force feedback.
 
-**Basic Time Step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation. It is specified as a field of the [WorldInfo](#worldinfo) *node* and is expressed in milliseconds.
+**Basic Time Step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation. It is specified as a field of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
 
 **Controller**: A *controller* is a program controlling the behavior of a *robot* and running on its own process. It can be written in different languages, including C, C++, Python, Java or MATLAB. It communicates with Webots through a local pipe to read the data measured by the *sensors* of a *robot* and send commands to the *actuators* of the *robot*.
 
@@ -14,25 +14,25 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Device**: A *device* is either an *actuator* or a *sensor*.
 
-**Dynamic Solid**: A *dynamic solid* is a *solid* which has a [Physics](#physics) *node* defined and can move according to the Webots dynamic physics engine (ODE).
+**Dynamic Solid**: A *dynamic solid* is a *solid* which has a [Physics](physics.md) *node* defined and can move according to the Webots dynamic physics engine (ODE).
 
-**Kinematic Solid**: A *kinematic solid* is a *solid* which has no [Physics](#physics) *node* defined, but which can move using the Webots kinematic physics engine.
+**Kinematic Solid**: A *kinematic solid* is a *solid* which has no [Physics](physics.md) *node* defined, but which can move using the Webots kinematic physics engine.
 
-**Node**: A *node* is an object used to define a simulation *world*. All the Webots *nodes* are depicted in the [Node Chart](#node-chart) and described in details in the [Nodes and API functions](#nodes-and-api-functions.md) section of this manual.
+**Node**: A *node* is an object used to define a simulation *world*. All the Webots *nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
 
 **Passive Solid**: A *passive solid* is a *solid* which is not a *robot*, neither a *sensor* or an *actuator*. It may be either a *kinematic* or a *dynamic solid*.
 
-**Robot**: A *robot* is a [Robot](#robot) *node* defining a robotic system. It usually includes *sensors* and *actuators* in its *descendants*.
+**Robot**: A *robot* is a [Robot](robot.md) *node* defining a robotic system. It usually includes *sensors* and *actuators* in its *descendants*.
 
 **Scene Tree**: The *scene tree* is the hierarchical tree structure containing all the *nodes* included in a *world*.
 
 **Sensor**: A *sensor* is a *node* representing a real robotics sensor such as a camera, a sonar or a gyroscope. *Sensors* can send measurement data, such as a camera image or a distance measurement to a *controller*.
 
-**Solid**: A *solid* is a [Solid](#Solid) node defining a physical object, including *robots*, *sensors*, *actuators* and *passive solids*.
+**Solid**: A *solid* is a [Solid](solid.md) node defining a physical object, including *robots*, *sensors*, *actuators* and *passive solids*.
 
-**Static Environment**: The *static environment* is a made up of all the *solids* of a *world* that have no [Physics](#physics) *node* and cannot move, but have a bounding object defined. It is used to detect collisions with the *dynamic* and *kinematic solids* in order to prevent them from penetrating it.
+**Static Environment**: The *static environment* is a made up of all the *solids* of a *world* that have no [Physics](physics.md) *node* and cannot move, but have a bounding object defined. It is used to detect collisions with the *dynamic* and *kinematic solids* in order to prevent them from penetrating it.
 
-**Supervisor**: A *supervisor* is a special *robot* defined by a [Supervisor](#supervisor) *node* that has some extra capabilities not available in real robots. It is therefore not realistic to model a real robot with a *supervisor*. *Supervisors* are nevertheless very useful to script a simulation and perform various operations that a normal user could do manually from the Webots graphical user interface (like moving objects, recording trajectories, making a movie, etc.).
+**Supervisor**: A *supervisor* is a special *robot* defined by a [Supervisor](supervisor.md) *node* that has some extra capabilities not available in real robots. It is therefore not realistic to model a real robot with a *supervisor*. *Supervisors* are nevertheless very useful to script a simulation and perform various operations that a normal user could do manually from the Webots graphical user interface (like moving objects, recording trajectories, making a movie, etc.).
 
 **Virtual Time**: The *virtual time* is the simulated time of a running simulation. It may run faster or slower than the real time, depending on the complexity of the simulation. The "run real time" feature of Webots allows the user to synchronize the *virtual time* with the real time to ensure a simulation is running no faster than real time.
 

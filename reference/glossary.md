@@ -6,7 +6,7 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Ancestor**: When referring to a *node*, the *ancestor* of a *descendant* is a *node* which hierarchically contains the *descendant* in the scene tree, at any relative depth.
 
-**Basic time step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation. It is specified as a field of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
+**Basic time step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation. It is specified as a *field* of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
 
 **Child**: When referring to a *node*, the *child* of a *parent* is a *node* directly contained inside the *parent*, at a relative depth of one in the *scene tree*. Note that a *child* is always a *descendant*, but a *descendant* is not necessarly a *child*.
 

@@ -64,4 +64,3 @@ access to your licenses.
 If you need further information about license issues, please send an e-mail to:
 
 [license@cyberbotics.com](mailto:license@cyberbotics.com)
-

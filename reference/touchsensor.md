@@ -29,8 +29,10 @@ Examples of using the [TouchSensor](#touchsensor) are provided by the
 
 - `type`: allows the user to select the type of sensor: "bumper", "force", or
 "force-3d", described below.
+
 - `lookupTable`: similar to the one used by the
 [DistanceSensor](distancesensor.md) node.
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
 to -1 (default) means that the sensor has an 'infinite' resolution (it can
@@ -164,6 +166,8 @@ const double *wb_touch_sensor_get_values(WbDeviceTag tag)
 
 `wb_touch_sensor_enable()` allows the user to enable a touch sensor measurement
 every `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the first sampling period has elapsed.
 
 `wb_touch_sensor_disable()` turns the touch sensor off, saving computation time.
 
@@ -209,4 +213,3 @@ WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 | "force-3d"       | WB\_TOUCH\_SENSOR\_FORCE3D |
 
 %end
-

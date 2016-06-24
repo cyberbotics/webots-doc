@@ -8,4 +8,3 @@ Webots or any computer. Warning: the robot still need to be in the start
 position when starting but their wont be any verification on the position, it is
 your responsibility to make sure that you always start the robot in this
 position (starting from an unknown position is not safe).
-

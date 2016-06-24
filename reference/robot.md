@@ -11,8 +11,8 @@ Robot {
   MFFloat    battery           []
   SFFloat    cpuConsumption    0   # [0,inf)
   SFBool     selfCollision     FALSE
-  SFBool     showRobotWindow   FALSE
-  SFString   robotWindow       ""
+  SFBool     showWindow        FALSE
+  SFString   window            ""
   SFString   remoteControl     ""
 }
 ```
@@ -105,15 +105,15 @@ of a robot leg with self collision enabled:
     an intermediate solid ("Leg"). In such an example, it is probably a good idea to
     set `minStop` and `maxStop` values for the "Knee" and "Ankle" joints.
 
-- `showRobotWindow`: defines whether the robot window should be shown at the
+- `showWindow`: defines whether the robot window should be shown at the
 startup of the controller. If yes, the related entry point function of the robot
 window controller plugin (`wbw_show()`) is called as soon as the controller is
 initialized.
 
-- `robotWindow`: defines the path of the robot window controller plugin used to
-display the robot window. If the `robotWindow` field is empty, the default
+- `window`: defines the path of the robot window controller plugin used to
+display the robot window. If the `window` field is empty, the default
 generic robot window is loaded. The search algorithm works as following: Let
-$(VALUE) be the value of the `robotWindow` field, let $(EXT) be the shared
+$(VALUE) be the value of the `window` field, let $(EXT) be the shared
 library file extension of the OS (".so", ".dll" or ".dylib"), let $(PREFIX) be
 the shared library file prefix of the OS ("" on windows and "lib" on other OS),
 let $(PROJECT) be the current project path, let $(WEBOTS) be the webots
@@ -126,7 +126,7 @@ file will be used as absolute path:
 
 - `remoteControl`: defines the path of the remote-control controller plugin used
 to remote control the real robot. The search algorithm is identical to the one
-used for the robotWindow field, except that the subdirectory of `plugins` is
+used for the `window` field, except that the subdirectory of `plugins` is
 `remote_controls` rather than `robot_windows`.
 
 ### Synchronous versus Asynchronous controllers
@@ -239,7 +239,7 @@ controller side. In addition `wb_robot_cleanup()` signals the termination of the
 controller to the simulator. As a consequence, Webots removes the controller
 from the simulation which can continue normally with the execution of the other
 controllers (if any). If a C controller exits without calling
-`wb_robot_cleanup()`, then its termination will not be signalled to Webots. In
+`wb_robot_cleanup()`, then its termination will not be signaled to Webots. In
 this case the simulation will remain blocked (sleeping) on the current step (but
 only if this [Robot](#robot)'s `synchronization` field is TRUE). Note that the
 call to the `wb_robot_cleanup()` function must be the last API function call in
@@ -317,7 +317,7 @@ function returns 0.
 
 **Name**
 
-**Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getTouchSensor** - *get the instance of a robot's device*
+**Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
@@ -341,6 +341,7 @@ PositionSensor *Robot::getPositionSensor(const std::string &name)
 RangeFinder *Robot::getRangeFinder(const std::string &name)
 Receiver *Robot::getReceiver(const std::string &name)
 Servo *Robot::getServo(const std::string &name)
+Speaker *Robot::getSpeaker(const std::string &name)
 TouchSensor *Robot::getTouchSensor(const std::string &name)
 ```
 
@@ -816,4 +817,3 @@ void *wbw_robot_window_custom_function(void *arg) {
 Given that the robot window can only be implemented for C/C++ controllers,
 `wb_robot_window_custom_function` is not available in Java, Phyton or Matlab
 API.
-

@@ -48,24 +48,24 @@
   laneWidth: 3.5
   laneNumber: 2
 
-  # AERA DEFAULTS SETTINGS #
+  # AREA DEFAULTS SETTINGS #
 
-  [aera]
+  [area]
   ignore: TRUE
 
-  [aera_farmland]
+  [area_farmland]
   ignore: FALSE
   texture: textures/dry_grass.jpg
 
-  [aera_farm]
+  [area_farm]
   ignore: FALSE
   texture: textures/dry_grass.jpg
 
-  [aera_water]
+  [area_water]
   ignore: FALSE
   blueComponent: 1
 
-  [aera_forest]
+  [area_forest]
   ignore: FALSE
   greenComponent: 1
   transparency: 0.7
@@ -137,4 +137,3 @@
   laneWidth: 4
   texture: "textures/road_no_border_line.jpg"
 ```
-

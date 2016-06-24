@@ -122,10 +122,12 @@ robot controllers and the `dWebotsReceive()` function to receive messages from
 robot controllers. In order to receive messages from the physics plugin, a robot
 has to contain a [Receiver](receiver.md) node set to an appropriate channel (see
 Reference Manual) and with a `baudRate` set to -1 (for infinite communication
-speed). Messages are sent from the physics plugin using the `dWebotsSend()`
+speed).
+Messages are sent from the physics plugin using the `dWebotsSend()`
 function, and received through the receiver API as if they were sent by an
-[Emitter](emitter.md) node with an infinite range and baud rate. Similarly, in
-order to send messages to the physics plugin, a robot has to contain an
+[Emitter](emitter.md) node with an infinite range and baud rate.
+Additionally the resulting signal strength will be positive infinity and the emitter direction will be NaN (Not a Number).
+Similarly, in order to send messages to the physics plugin, a robot has to contain an
 [Emitter](emitter.md) node set to `channel` 0 (as the physics plugin only
 receives data sent on this channel). The `range` and `baudRate` fields of the
 [Emitter](emitter.md) node should be set to -1 (infinite). Messages are sent to
@@ -195,4 +197,3 @@ a '\n' (new line) character will automatically be added to each line. A '\f'
 ```
 void dWebotsConsolePrintf(const char *format, ...);
 ```
-

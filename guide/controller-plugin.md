@@ -45,14 +45,14 @@ plugin work smoothly. Some of these entry points are required and some are
 optional.
 
 The `Robot` node defines the location of the controller plugin through its
-*robotWindow* and its *remoteControl* fields (cf. reference manual)
+*window* and its *remoteControl* fields (cf. reference manual)
 
 The controller plugin run in the main thread of the process (also known as GUI
 thread): the same as the controller executable. This implies that if an entry
 point of a plugin is blocking, the controller will also be blocked. And if the
 plugin crashes, the controller is also crashed.
 
-The search algorithm to convert the *robotWindow* and the *remoteControl* to an
+The search algorithm to convert the *window* and the *remoteControl* to an
 existing path is explained in the reference manual.
 
 Each distributed shared library is built thanks to the main Makefile (the same
@@ -71,7 +71,7 @@ A robot window plugin allows the programmer to efficiently create custom robot
 windows. Robot windows can be opened by double-clicking on the virtual robot, or
 by selecting the `Robot | Show Robot Window` menu item.
 
-The *robotWindow* field of the `Robot` node specifies a robot window (cf.
+The *window* field of the `Robot` node specifies a robot window (cf.
 documentation in the reference manual).
 
 The entry points of a robot window controller plugin are:
@@ -116,14 +116,14 @@ The entry points of a robot window controller plugin are:
     This function is called when the GUI should be show. This can occur either when
     the user double-click on the virtual robot, either when he selects the `Robot |
     Show Robot Window` menu item, or either at controller startup if the
-    *showRobotWindow* field of the `Robot` node is enabled.
+    *showWindow* field of the `Robot` node is enabled.
 
 - `void *wbw_robot_window_custom_function(void *)`
 
     This function can optionally be defined to communicate and pass data from and to
     the controller program. It is called directly by the user from the controller
     when executing the `wb_robot_window_custom_function` C function or
-    `Robot::robotWindowCustomFunction` C++ function. You can find more information
+    `Robot::windowCustomFunction` C++ function. You can find more information
     in the reference manual.
 
 The internal behavior of the `wb_robot_step()` call is the key point to
@@ -194,7 +194,7 @@ The motion editor (cf. the [figure](#motion-editor-view)) is a GUI helping to
 create motions which can be played by a robot. It is implemented in the Qt utils
 library, and is embedded inside the generic robot window plugin. This implies
 that the motion editor is accessible only if the robot is linked (cf. the
-Robot::robotWindow field) with either the generic window, or on a window using
+Robot::window field) with either the generic window, or on a window using
 the Qt utils library's corresponding widget.
 
 In the motion editor different fonts and colors are used to identify the status
@@ -301,4 +301,3 @@ A complete sample (communicating with the e-puck robot using bluetooth) can be
 found in this directory:
 
 `WEBOTS_HOME/projects/robots/e-puck/plugins/remote_controls/e-puck_bluetooth`
-

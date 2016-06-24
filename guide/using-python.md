@@ -42,7 +42,7 @@ site](http://www.python.org/).
 
 #### Windows Instructions
 
-Webots comes with Python 2.7 64-bit pre-installed in the "msys64" folder.
+You should install the latest version of Python 2.7 (64 bit) from the official [Python web site](https://www.python.org). Then, you have to modify your *PATH* environment variable to add the path to the python.exe binary which is located in the main *Python27* installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type *python --version*. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the *WEBOTS_HOME/projects/languages/python/worlds/example.wbt*)
 
 ### Source Code of the Python API
 
@@ -50,4 +50,3 @@ For advanced users who want to modify the Python API, the SWIG script
 ("controller.i"), and the Makefile are located in the
 "resources/languages/python" directory while the generated library is located in
 the "lib".
-

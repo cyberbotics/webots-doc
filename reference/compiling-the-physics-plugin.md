@@ -8,4 +8,3 @@ also use Visual C++ to compile the plugin. In this case, please note that the
 plugin should be dynamically linked to the ODE library. The Webots "lib"
 directory contains the gcc ("libode.a") and Visual C++ ("ode.lib") import
 libraries. Under Linux, you don't need to link the shared library with anything.
-

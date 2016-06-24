@@ -290,11 +290,11 @@ void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, doub
   wb_position_sensor_enable(tag_sensor, TIME_STEP);
   double effective;  // effective position
   do {
-    wb_robot_step(TIME_STEP);
+    if (wb_robot_step(TIME_STEP) == -1)
+      break;
     delay -= TIME_STEP;
     effective = wb_position_sensor_get_value(tag_sensor);
-  }
-  while (fabs(target - effective) > DELTA && delay > 0);
+  } while (fabs(target - effective) > DELTA && delay > 0);
   wb_position_sensor_disable(tag_sensor);
 }
 ```
@@ -404,6 +404,8 @@ feedback measurements for the specified motor. A new measurement will be
 performed each `ms` milliseconds; the result must be retrieved with the
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function returns the most recent motor force (resp. torque) measurement. This
@@ -520,4 +522,3 @@ WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
 | "linear"     | WB\_LINEAR   |
 
 %end
-

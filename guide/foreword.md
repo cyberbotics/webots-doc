@@ -13,4 +13,3 @@ with many facilities integrated, such as a source code editor, motion editor,
 etc.
 
 We hope that you will enjoy working with Webots {{ webots.version.major }}.
-

@@ -138,4 +138,3 @@ you to set this parameter to 0.
 `Balance ankle roll gain` is the gain at the ankle level for the lateral
 balance. Since the lateral balance does not work very well in simulation, we
 recommend you to set this parameter to 0.
-

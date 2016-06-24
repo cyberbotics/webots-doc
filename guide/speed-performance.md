@@ -8,10 +8,9 @@ here [this section](verifying-your-graphics-driver-installation.md).
 If you are using a laptop computer, please check the power options and make sure
 you are using the high performance power plan.
 
-On Ubuntu (or other Linux) we do also recommend to deactivate *compiz* (`System
-/ Preferences / Appearance / Visual Effects = None`). Depending on the graphics
-hardware, there may be a huge performance drop of the rendering system (up to
-10x) when *compiz* is on.
+On Ubuntu (or other Linux) we do also recommend to disable all visual effects.
+Depending on the graphics hardware, there may be a huge performance drop of the rendering system (up to 10x) when the visual effects are on.
+You can easily disable the operating system's visual effects using some tools like *Compiz Config Settings Manager* or *Unity Tweak Tool*.
 
 ### How can I change the speed of the simulation?
 
@@ -56,4 +55,3 @@ Replace complex primitives, like `Cylinder, IndexedFaceSet` and `ElevationGrid`
 by simpler primitives, like `Sphere, Capsule, Box` and `Plane`. Avoid using a
 composition of primitives (in a `Group` or a `Transform`) when a single
 primitive would do the trick.
-

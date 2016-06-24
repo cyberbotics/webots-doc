@@ -13,7 +13,7 @@ The `Driver` class provides the following methods:
 | ------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Driver.hpp`>`                                                                             |
 | class [Driver](driver-library.md) {                                                                          |
-| &nbsp;&nbsp; enum {INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEF};                                        |
+| &nbsp;&nbsp; enum {INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT};                                        |
 | &nbsp;&nbsp; enum {SPEED, TORQUE };                                                                          |
 | &nbsp;&nbsp; virtual int [step](driver-library.md#wbu_driver_step)();                                        |
 | &nbsp;&nbsp; void [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(double steeringAngle); |
@@ -76,4 +76,3 @@ methods:
 | };                                                                                                                       |
 
 %end
-

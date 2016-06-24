@@ -31,4 +31,3 @@ if image was displayed normally in 2D. On the bottom face of the box, when
 viewed from the inside down the -Y axis with the -Z axis as the view up
 direction, the texture is mapped onto the face with the same orientation as the
 if image was displayed normally in 2D.
-

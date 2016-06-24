@@ -8,6 +8,7 @@ RangeFinder {
   SFInt32    width            64
   SFInt32    height           64
   SFBool     spherical        FALSE
+  SFFloat    near             0.01
   SFFloat    minRange         0.01
   SFFloat    maxRange         1.0
   SFFloat    motionBlur       0.0
@@ -31,14 +32,11 @@ contains scaled and logarithmic values, an algorithm linearizes the buffer to
 metric values between `minRange` and `maxRange`. This is the buffer which is
 accessible by the `wb_range_finder_get_range_image` function.
 
-Range-finder cannot see semi-transparent objects. An object can be
-semi-transparent either if its texture has an alpha channel, or if its
-[Material](material.md).`transparency` field is not equal to 1.
+Range-finder detects semi-transparent objects as if they were not transparent. An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md) `transparency` field is not equal to 1.
 
 ### Field Summary
 
-- `fieldOfView`: horizontal field of view angle of the range-finder. The value
-ranges from *0* to π radians. Since range-finder pixels are squares, the
+- `fieldOfView`: horizontal field of view angle of the range-finder. The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit. Since range-finder pixels are squares, the
 vertical field of view can be computed from the `width`, `height` and horizontal
 `fieldOfView`:
 
@@ -54,13 +52,9 @@ on spherical projections is provided in the [spherical
 projection](camera.md#spherical-projection) section of the [Camera](camera.md)
 node.
 
-- The `minRange` field defines the distance from the range-finder to the near
-clipping plane of the OpenGL view frustum. This plane is parallel to the
-range-finder retina (i.e., projection plane). The minRange field determines the
-precision of the OpenGL depth buffer. A too small value produces depth fighting
-between overlaid polygons, resulting in random polygon overlaps. More
-information about the frustrum is provided in the [frustum](camera.md#frustum)
-section of the [Camera](camera.md) node.
+- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane. Objects closer to the range-finder than the near value are not detected by the range-finder. This plane is parallel to the camera retina (i.e., projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to set it just big enough so that the shape of the range-finder object is not visible. More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
+
+- The `minRange` field defines the minimum range of the range-finder (objects closer to the range-finder than the minimum range are not detected (but still occlude other objects).
 
 - The `maxRange` defines the distance between the range-finder and the far
 clipping plane of the OpenGL view frustum. This field defines the maximum range
@@ -131,6 +125,8 @@ int wb_range_finder_get_sampling_period(WbDeviceTag tag)
 
 `wb_range_finder_enable()` allows the user to enable a range-finder update each
 `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_range_finder_disable()` turns the range-finder off, saving computation time.
 
@@ -273,4 +269,3 @@ For PNG images, the `quality` parameter is ignored.
 The return value of the `wb_range_finder_save_image()` is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized
 image file extension).
-

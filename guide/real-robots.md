@@ -5,20 +5,6 @@ for these examples are located in the "robots/(robot\_name)/worlds" directory,
 and the corresponding controllers are located in the
 "robots/(robot\_name)/controllers" directory.
 
-### aibo_ers210_rough.wbt
-
-**Keywords**: Aibo, Legged robot, uneven ground, IndexedFaceSet, texture
-
-%figure "aibo_ers210_rough"
-
-![aibo_ers210_rough.png](images/aibo_ers210_rough.png)
-
-%end
-
-In this example, you can see a silver Aibo ERS-210 robot walking on an uneven
-floor while a ball rolls and falls off. The uneven floor is principally made of
-a `IndexedFaceSet`.
-
 ### aibo_ers7.wbt
 
 **Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone
@@ -289,7 +275,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 In this example, you can see two Khepera robots from K-Team moving inside an
 arena while avoiding each other and the walls. It is a good example of how to
-use teh kinematic mode of Webots. Like many other examples, this one uses the
+use the kinematic mode of Webots. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
 "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
@@ -335,7 +321,7 @@ source code for this controller is in the "khepera\_gripper" directory.
 %end
 
 In this example, you can see a Khepera robot from K-Team equipped with a K213
-`Camera` device. This camera is a linear vision turret with greyscale images.
+`Camera` device. This camera is a linear vision turret with grayscale images.
 Using this device, the robot is able to translate the information contained in
 the image into text and print this result in the Console window. When you load
 this world, the robot will not begin to move immediately. It will give you
@@ -549,4 +535,3 @@ stride length factor:
 - W: Decrease frequency
 - S: Increase stride length factor
 - A: Decrease stride length factor
-

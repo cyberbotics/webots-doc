@@ -27,7 +27,7 @@ The string value must coincide with the `name` field value of an existing
 drag force and drag torque of the submerging [Fluid](fluid.md).
 
     If the `referenceArea` is set to "xyz-projected area", the *x*-coordinate of the
-    drag force vector with respect to the the solid frame is given by:
+    drag force vector with respect to the solid frame is given by:
 
         drag_force_x = - c_x * fluid_density * (rel_linear_velocity_x)^2 * sign(rel_linear_velocity_x) * A_x
 
@@ -82,4 +82,3 @@ boundingObjects that contain fully or partially immersed [Box](box.md) nodes,
 fully immersed [Cylinder](cylinder.md), [Capsule](capsule.md) and
 [Sphere](sphere.md) nodes. The "immersed area" computation mode is implemented
 for every Geometry node.
-

@@ -33,4 +33,3 @@ linked.
 
 For advanced users who want to modify the C++ API, the C++ sources and the
 Makefile are located in the "resources/languages/cpp" directory.
-

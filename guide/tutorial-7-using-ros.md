@@ -3,7 +3,7 @@
 This tutorial explains how to use the nodes from the `webots_ros` package
 provided with Webots.
 
-These examples were tested with ROS `jade`, `indigo`, `hydro` and `groovy`
+These examples were tested with ROS `kinetic`, `jade`, `indigo`, `hydro` and `groovy`
 distributions on Linux. There is no warranty they will work if you use a
 different platform or an ancient distribution of ROS.
 
@@ -16,8 +16,8 @@ To install the last version of ROS on Ubuntu use the following commands:
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 0xB01FA116
 sudo apt-get update
-sudo apt-get install ros-jade-desktop-full
-sudo apt-get install ros-jade-sensor-msgs
+sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install ros-kinetic-sensor-msgs
 sudo rosdep init
 rosdep update
 ```
@@ -25,7 +25,7 @@ rosdep update
 For more information or to install it on another platform please reading
 [http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation).
 Unless you need older version for some other application, you should choose the
-latest distribution (Jade Turtle).
+latest distribution (Kinetic Kame).
 
 > **note**:
 If you never used the ROS framework before, it is strongly recommended to follow
@@ -133,4 +133,3 @@ functions.
 All the functions from the Webots API have their corresponding services or
 topics. You can find in the `Reference Manual` the definitions of all the
 services and topics associated with each device.
-

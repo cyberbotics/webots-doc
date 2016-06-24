@@ -27,6 +27,7 @@ for mapping the raw acceleration values [m/s^2] to device specific output
 values. With the lookup table it is also possible to add noise and to define the
 min and max output values. By default the lookup table is empty and therefore
 the raw acceleration values are returned (no mapping).
+
 - `xAxis, yAxis, zAxis`: Each of these boolean fields enables or disables
 computation for the specified axis. If one of these fields is set to FALSE, then
 the corresponding vector element will not be computed and will return *NaN* (Not
@@ -35,6 +36,7 @@ a Number). For example, if  `zAxis ` is FALSE, then
 all three axes are enabled (TRUE). Modifying these fields makes it possible to
 choose between a single, dual or three-axis accelerometer and to specify which
 axes will be used.
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. For example, if
 `resolution` is 0.2 instead of returning 1.767 the sensor will return 1.8.
@@ -63,6 +65,8 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 
 The `wb_accelerometer_enable()` function allows the user to enable the
 acceleration measurement each `ms` milliseconds.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_accelerometer_disable()` function turns the accelerometer off, saving
 computation time.
@@ -94,4 +98,3 @@ longer period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the 3D-vector as a list containing three floats.
-

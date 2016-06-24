@@ -197,6 +197,24 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_joystick"
+
+| % [Joystick](joystick.md) :                                                                     |
+| ----------------------------------------------------------------------------------------------- |
+| [wb\_joystick\_enable](joystick.md#wb_joystick_enable)(ms)                                      |
+| [wb\_joystick\_disable](joystick.md#wb_joystick_enable)()                                       |
+| period = [wb\_joystick\_get\_sampling\_period](joystick.md#wb_joystick_enable)()                |
+| connected = [wb_joystick_is_connected](joystick.md#wb_joystick_is_connected)()                  |
+| axes_number = [wb_joystick_get_number_of_axes](joystick.md#wb_joystick_get_number_of_axes)()    |
+| axis_value = [wb_joystick_get_axis_value](joystick.md#wb_joystick_get_number_of_axes)(axis)     |
+| button = [wb_joystick_get_pressed_button](joystick.md#wb_joystick_get_pressed_button)()         |
+| [wb_joystick_set_constant_force](joystick.md#wb_joystick_set_constant_force)(level)             |
+| [wb_joystick_set_constant_force_duration](joystick.md#wb_joystick_set_constant_force)(duration) |
+| [wb_joystick_set_auto_centering_gain](joystick.md#wb_joystick_set_constant_force)(gain)         |
+| [wb_joystick_set_resistance_gain](joystick.md#wb_joystick_set_constant_force)(gain)             |
+
+%end
+
 %api "matlab_keyboard"
 
 | % [Keyboard](keyboard.md) :                                                      |
@@ -555,6 +573,18 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_speaker"
+
+| % [Speaker](speaker.md) :                                                                                   |
+| ----------------------------------------------------------------------------------------------------------- |
+| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
+| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
+| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
+| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
+| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
+
+%end
+
 %api "matlab_touch_sensor"
 
 | % [TouchSensor](touchsensor.md) :                                                                   |
@@ -569,4 +599,3 @@ The following tables describe the Matlab functions.
 | type = [wb\_touch\_sensor\_get\_type](touchsensor.md#wb_touch_sensor_get_type)(tag)                 |
 
 %end
-

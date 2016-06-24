@@ -186,4 +186,3 @@ parameters allowing you to design robust simulations. The next step will be to
 create your own robot.
 
 You can test your skills by creating common objects such as a table.
-

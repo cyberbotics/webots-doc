@@ -21,12 +21,12 @@ attached. It can be used in the jointParameters field of
 - `anchor`: This field specifies the anchor position expressed in relative
 coordinates with respect to the center of the closest upper [Solid](solid.md)'s
 frame.
+
 - `springConstant` and `dampingConstant`: These fields specify the uniform amount
-of rotational spring and damping effect around each of the the frame axis of the
+of rotational spring and damping effect around each of the frame axis of the
 [BallJoint](balljoint.md)'s closest upper [Solid](solid.md) (see
 [Joint](joint.md)'s ["Springs and
 Dampers"](jointparameters.md#springs-and-dampers) section for more information
 on these constants). This is can be useful to simulate a retraction force that
 pulls the [BallJoint](balljoint.md) solid `endPoint` back towards its initial
 orientation.
-

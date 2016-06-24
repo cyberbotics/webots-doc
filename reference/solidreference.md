@@ -21,4 +21,3 @@ an existing [Solid](solid.md) node to be linked with the [Joint](joint.md)'s
 closest upper [Solid](solid.md) node. Referring to the [Joint](joint.md) closest
 upper [Solid](solid.md) node or to a [Solid](solid.md) node which has no common
 upper [Solid](solid.md) with the [Joint](joint.md) is prohibited.
-

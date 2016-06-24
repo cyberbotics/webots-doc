@@ -60,14 +60,18 @@ behavior with the line drawn by the first robot.
 
 - `inkColor`: define the color of the pen's ink. This field can be changed from
 the pen API, using the `wb_pen_set_ink_color()` function.
+
 - `inkDensity`: define the density of the color of the ink. The value should be in
 the range [0,1]. This field can also be changed from the pen API, using the
 `wb_pen_set_ink_color()` function.
+
 - `leadSize`: define the width of the "tip" of the pen. This allows the robot to
 write a wider or narrower track.
+
 - `maxDistance`: define the maximal distance between the [Pen](#pen) device and a
 paintable object and allows to simulate write-on-contact behaviors. A value
 smaller or equal 0 represents an unlimited painting range.
+
 - `write`: this boolean field allows the robot to enable or disable writing with
 the pen. It is also switchable from the pen API, using the `wb_pen_write()`
 function.
@@ -111,7 +115,7 @@ void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density)
 `wb_pen_set_ink_color()` changes the current ink color of the specified `tag`
 device. The `color` is a 32 bit integer value which defines the new color of the
 ink in the 0xRRGGBB hexadecimal format (i.e., 0x000000 is black, 0xFF0000 is
-red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is grey
+red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is gray
 0xFFFFFF is white, etc.). The `density` parameter defines the ink density, with
 0 meaning transparent ink and 1 meaning completely opaque ink.
 
@@ -129,4 +133,3 @@ In the Matlab version of `wb_pen_set_ink_color()`, the `color` argument must be
 a vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents
 the magenta color.
-

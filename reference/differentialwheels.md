@@ -37,22 +37,29 @@ robot (the front of the robot has negative *z* coordinates).
 
 ### Field Summary
 
-- `motorConsumption`: power consumption of the the motor in Watts.
+- `motorConsumption`: power consumption of the motor in Watts.
+
 - `axleLength`: distance between the two wheels (in meters). This field must be
 specified for "kinematics" based robot models. It will be ignored by "physics"
 based models.
+
 - `wheelRadius`: radius of the wheels (in meters). Both wheels must have the same
 radius. This field must be specified for "kinematics" based robot models. It
 will be ignored by "physics" based models.
+
 - `maxSpeed`: maximum speed of the wheels, expressed in *rad/s*.
+
 - `maxAcceleration`: maximum acceleration of the wheels, expressed in *rad/s^2*.
 It is used only in "kinematics" mode.
+
 - `speedUnit`: defines the unit used in the `wb_differential_wheels_set_speed()`
 function, expressed in *rad/s*.
+
 - `slipNoise`: slip noise added to each move expressed in percent. If the value is
 0.1, a noise component of +/- 10 percent is added to the command for each
 simulation step. The noise is, of course, different for each wheel. The noise
 has a uniform distribution, also known as as "white noise."
+
 - `encoderNoise`: white noise added to the incremental encoders. If the value is
 -1, the encoders are not simulated. If the value is 0, encoders are simulated
 without noise. Otherwise a cumulative uniform noise is added to encoder values.
@@ -69,11 +76,13 @@ then affected by the  `encoderNoise` (if any). This means that a noise is added
 to the amount of rotation in a similar way as with the `slipNoise`. Finally,
 this amount is multiplied by the `encoderResolution` (see below) and used to
 increment the encoder value, which can be read by the controller program.
+
 - `encoderResolution`: defines the number of encoder increments per radian of the
 wheel. An `encoderResolution` of *100* will make the encoders increment their
 value by (approximately) 628 each time the wheel makes a complete revolution.
 The -1 default value means that the encoder functionality is disabled as with
 `encoderNoise`.
+
 - `maxForce`: defines the maximum torque used by the robot to rotate each wheel in
 a "physics" based simulation. It corresponds to the `dParamFMax` parameter of an
 ODE hinge joint. It is ignored in "kinematics" based simulations.
@@ -209,6 +218,7 @@ robot doesn't move.
 The `wb_differential_wheels_get_encoders_sampling_period()` function returns the
 period given into the `wb_differential_wheels_enable_encoders()` function, or 0
 if the device is disabled.
+Note that the first encoders values will be available only after the first sampling period elapsed.
 
 ---
 
@@ -275,4 +285,3 @@ double wb_differential_wheels_get_speed_unit()
 The `wb_differential_wheels_get_speed_unit` function allows the user to get the
 value of the `speedUnit` field of the [DifferentialWheels](#differentialwheels)
 node.
-

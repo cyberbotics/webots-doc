@@ -23,6 +23,6 @@ with a [HingeJointParameters](hingejointparameters.md) only. If empty,
 [RotationalMotor](rotationalmotor.md), an angular
 [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device. If no
 motor is specified, the joint is passive joint.
+
 - `position`: see [joint's hidden position
 field](joint.md#joint-s-hidden-position-fields).
-

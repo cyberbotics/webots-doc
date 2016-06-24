@@ -37,9 +37,10 @@ based.
 the joint position, the axis position expressed in relative coordinates, the
 stop positions and suspension parameters. If the `jointParameters` field is left
 empty, default values of the HingeJointParameters node apply.
+
 - `device2`: This field optionally specifies a
 [RotationalMotor](rotationalmotor.md), an angular
 [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device attached
 to the second axis. If no motor is specified, this part of the joint is passive.
-- `position2`: see [joint's hidden position field](rotationalmotor.md).
 
+- `position2`: see [joint's hidden position field](rotationalmotor.md).

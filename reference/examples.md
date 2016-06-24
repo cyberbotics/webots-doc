@@ -23,4 +23,3 @@ suppress gravity, and apply a thrust force (propeller) for a blimp model.
 
 The "WEBOTS\_HOME/projects/samples/demos/worlds/salamander.wbt" shows how to
 simulate Archimedes'buoyant force and hydrodynamic drag forces.
-

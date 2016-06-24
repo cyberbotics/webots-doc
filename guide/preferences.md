@@ -9,7 +9,7 @@ corresponds to one of this tab.
 
 ### General
 
-The `General` tab contains misc preferences about the application.
+The `General` tab contains various preferences about the application.
 
 - The `Language` option allows you to choose the language of Webots user interface
 (restart needed).
@@ -27,6 +27,8 @@ now this value affects only the physical engine speed, and the controller
 compilation speed. Note that this is the maximum number of threads allowed, but
 the actual number of threads used is the one defined in the `optimalThreadCount`
 field of the `WorldInfo` node.
+- The `Warnings: Display save warning only for scene tree edit` checkbox prevents Webots from displaying any warning dialog window when you quit, revert or load a new world after the current world was modified by either changing the viewpoint, dragging, rotating, applying a force or applying a torque to an object. It will however still display a warning if the world was modified from the scene tree.
+- The `Update policy: Check for Webots updates on startup` checkbox allows Webots to check if a new version is available for download at every startup. If available, a dialog window will inform you about it.
 
 ### OpenGL
 
@@ -55,4 +57,3 @@ the shaders are not well supported.
 *Camera.antialiasing* fields and to disable this feature. We observed that some
 hardware doesn't support the OpenGL feature about anti-aliasing when rendering
 into a texture (RTT).
-

@@ -67,4 +67,3 @@ Some sample instances of wheels are provided (see for example
 ![BmwX5Wheel.png](images/BmwX5Wheel.png)
 
 %end
-

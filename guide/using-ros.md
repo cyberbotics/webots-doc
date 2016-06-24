@@ -143,4 +143,3 @@ work on your Linux system.
 
 > In the [Tutorials](tutorials.md) chapter, you will find a section explaining how
 to rebuild from scratch the joystick example.
-

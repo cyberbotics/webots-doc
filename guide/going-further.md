@@ -13,4 +13,3 @@ The algorithmic to develop your controllers is not explained in the Webots
 documentation. However another tutorial known as "curriculum" tackle some famous
 robot programming problems through a sequence of exercises using the e-puck
 robot and the C language.
-

@@ -56,7 +56,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
 | &nbsp;&nbsp; static unsigned char [imageGetBlue](camera.md#wb_camera_get_image)(const unsigned char *image,   |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp; static unsigned char [imageGetGrey](camera.md#wb_camera_get_image)(const unsigned char *image,   |
+| &nbsp;&nbsp; static unsigned char [imageGetGray](camera.md#wb_camera_get_image)(const unsigned char *image,   |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
 | &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
 | &nbsp;&nbsp; int [saveImage](camera.md#wb_camera_save_image)(const std::string &filename, int quality) const; |
@@ -304,22 +304,39 @@ The following tables describe the C++ classes and their methods.
 
 %end
 
+%api "cpp_joystick"
+
+|                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Joystick.hpp`>`                                                                           |
+| class [Joystick](joystick.md) {                                                                              |
+| &nbsp;&nbsp; virtual void [enable](joystick.md#wb_joystick_enable)(int ms);                                  |
+| &nbsp;&nbsp; virtual void [disable](joystick.md#wb_joystick_enable)();                                       |
+| &nbsp;&nbsp; int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                      |
+| &nbsp;&nbsp; bool [isConnected](joystick.md#wb_joystick_is_connected)() const;                               |
+| &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;                      |
+| &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;                 |
+| &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;                     |
+| &nbsp;&nbsp; void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);                 |
+| &nbsp;&nbsp; void [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(double duration);  |
+| &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain);           |
+| &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);              |
+| };                                                                                                           |
+
+%end
+
 %api "cpp_keyboard"
 
 |                                                                                     |
 | ----------------------------------------------------------------------------------- |
 | #include `<`webots/Keyboard.hpp`>`                                                  |
 | class [Keyboard](keyboard.md) {                                                     |
-| &nbsp;&nbsp; enum {KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT,                   |
-| &nbsp;&nbsp; KEYBOARD\_UP, KEYBOARD\_RIGHT, KEYBOARD\_DOWN,                         |
-| &nbsp;&nbsp; KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,                                  |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                        |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                         |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                         |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT, KEYBOARD\_CONTROL,                     |
-| &nbsp;&nbsp; KEYBOARD\_ALT};                                                        |
-| &nbsp;&nbsp; virtual void [keyboardEnable](keyboard.md#wb_keyboard_enable)(int ms); |
-| &nbsp;&nbsp; virtual void [keyboardDisable](keyboard.md#wb_keyboard_enable)();      |
+| &nbsp;&nbsp; enum {END, HOME, LEFT, UP, RIGHT, DOWN,                                |
+| &nbsp;&nbsp; PAGEUP, PAGEDOWN, NUMPAD\_HOME, NUMPAD\_LEFT,                          |
+| &nbsp;&nbsp; NUMPAD\_UP, NUMPAD\_RIGHT, NUMPAD\_DOWN, NUMPAD\_END,                  |
+| &nbsp;&nbsp; KEY, SHIFT, CONTROL, ALT};                                             |
+| &nbsp;&nbsp; virtual void [enable](keyboard.md#wb_keyboard_enable)(int ms);         |
+| &nbsp;&nbsp; virtual void [disable](keyboard.md#wb_keyboard_enable)();              |
 | &nbsp;&nbsp; int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)();             |
 | &nbsp;&nbsp; int [getKey](keyboard.md#wb_keyboard_enable)() const;                  |
 | };                                                                                  |
@@ -352,8 +369,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; bool [isPointCloudEnabled](lidar.md#wb_lidar_enable_point_cloud)();                                                     |
 | &nbsp;&nbsp; const float * [getRangeImage](lidar.md#wb_lidar_get_range_image)() const;                                               |
 | &nbsp;&nbsp; const float * [getLayerRangeImage](lidar.md#wb_lidar_get_range_image)(int layer) const;                                 |
-| &nbsp;&nbsp; const [WbLidarPoint](lidar.md#wblidarpoint) * [getPointCloud](lidar.md#wb_lidar_get_point_cloud)() const;               |
-| &nbsp;&nbsp; const [WbLidarPoint](lidar.md#wblidarpoint) * [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer) const; |
+| &nbsp;&nbsp; const [LidarPoint](lidar.md#wblidarpoint) * [getPointCloud](lidar.md#wb_lidar_get_point_cloud)() const;                 |
+| &nbsp;&nbsp; const [LidarPoint](lidar.md#wblidarpoint) * [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer) const;   |
 | &nbsp;&nbsp; int [getNumberOfPoints](lidar.md#wb_lidar_get_point_cloud)() const;                                                     |
 | &nbsp;&nbsp; double [getFrequency](lidar.md#wb_lidar_get_frequency)() const;                                                         |
 | &nbsp;&nbsp; void [setFrequency](lidar.md#wb_lidar_get_frequency)(double frequency);                                                 |
@@ -507,7 +524,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [disable](radar.md#wb_radar_enable)();                        |
 | &nbsp;&nbsp; int [getSamplingPeriod](radar.md#wb_radar_enable)();                       |
 | &nbsp;&nbsp; int [getNumberOfTargets](radar.md#wb_radar_get_number_of_targets)() const; |
-| &nbsp;&nbsp; const WbRadarTarget *[getTargets](radar.md#wb_radar_get_targets)() const;  |
+| &nbsp;&nbsp; const RadarTarget *[getTargets](radar.md#wb_radar_get_targets)() const;    |
 | &nbsp;&nbsp; double [getMinRange](radar.md#wb_radar_get_min_range)() const;             |
 | &nbsp;&nbsp; double [getMaxRange](radar.md#wb_radar_get_min_range)() const;             |
 | &nbsp;&nbsp; double [getHorizontalFov](radar.md#wb_radar_get_horizontal_fov)() const;   |
@@ -582,6 +599,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#wb_robot_get_device)(const std::string &name);                                          |
 | &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#wb_robot_get_device)(const std::string &name);                 |
+| &nbsp;&nbsp; [Joystick](#cpp_joystick) *[getJoystick](robot.md#wb_robot_get_device)();                                                     |
 | &nbsp;&nbsp; [Keyboard](#cpp_keyboard) *[getKeyboard](robot.md#wb_robot_get_device)();                                                     |
 | &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Lidar](#cpp_lidar) *[getLidar](robot.md#wb_robot_get_device)(const std::string &name);                                       |
@@ -591,6 +609,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
 | &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#wb_robot_get_device)(const std::string &name);                              |
+| &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                              |
 | &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                            |
@@ -612,7 +631,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getTime](robot.md#wb_robot_get_time)() const;                                                                         |
 | &nbsp;&nbsp; std::string [getWorldPath](robot.md#wb_robot_get_world_path)() const;                                                         |
 | &nbsp;&nbsp; int [getType](robot.md#wb_robot_get_type)() const;                                                                            |
-| &nbsp;&nbsp; void *[robotWindowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                       |
+| &nbsp;&nbsp; void *[windowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                            |
 | };                                                                                                                                         |
 
 %end
@@ -643,6 +662,21 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setForce](servo.md#wb_servo_set_force)(double force);                             |
 | &nbsp;&nbsp; int [getType](servo.md#wb_servo_get_type)() const;                                              |
 | };                                                                                                           |
+
+%end
+
+%api "cpp_speaker"
+
+|                                                                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Speaker.hpp`>`                                                                                                                                                        |
+| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                             |
+| &nbsp;&nbsp; static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker *left, Speaker *right, const std::string &sound, double volume, double pitch, double balance, bool loop); |
+| &nbsp;&nbsp; void [stop](speaker.md#wb_speaker_stop)(const std::string &sound);                                                                                                          |
+| &nbsp;&nbsp; void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                                        |
+| &nbsp;&nbsp; std::string [getLanguage](speaker.md#wb_speaker_set_language)();                                                                                                            |
+| &nbsp;&nbsp; void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                                   |
+| };                                                                                                                                                                                       |
 
 %end
 
@@ -697,4 +731,3 @@ The following tables describe the C++ classes and their methods.
 | };                                                                                         |
 
 %end
-

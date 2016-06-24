@@ -16,4 +16,3 @@ tag. The prototypes for the other languages are available through hyperlinks or
 directly in [this chapter](other-apis.md). The language-related particularities
 mentioned under the label called *C++ Note, Java Note, Python Note, Matlab
 Note*, etc.
-

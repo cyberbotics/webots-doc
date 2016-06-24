@@ -92,4 +92,3 @@ mixed.
 is independently and randomly selected between `minHeight` and `maxHeight`.
 - `minRadius and maxRadius`: Defines the radius interval. The radius of each tree
 is independently and randomly selected between `minRadius` and `maxRadius`.
-

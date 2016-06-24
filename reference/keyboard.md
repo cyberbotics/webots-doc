@@ -32,8 +32,10 @@ These functions allow you to read a key pressed on the computer keyboard from a
 controller program while the 3D window of Webots is selected and the simulation
 is running. First, it is necessary to enable keyboard input by calling the
 `wb_keyboard_enable()` function. The `ms` parameter is expressed in
-milliseconds, and defines how frequently readings are updated. After the enable
-function is called, values can be read by calling the `wb_keyboard_get_key()`
+milliseconds, and defines how frequently readings are updated.
+The provided `ms` argument specifies the sensor's sampling period.
+Note that the first key will be available only after the first sampling period elapsed.
+After that, values can be read by calling the `wb_keyboard_get_key()`
 function repeatedly until this function returns -1. The returned value, if
 non-negative, is a key code corresponding to a key currently pressed. If no
 modifier (shift, control or alt) key is pressed, the key code is the ASCII code
@@ -52,7 +54,7 @@ to stop the keyboard readings.
 
 > **note** [C++]:
 The keyboard predefined values are located into a (static) enumeration of the
-Keyboard class. For example, `Keyboard.KEYBOARD_CONTROL` corresponds to the
+Keyboard class. For example, `Keyboard.CONTROL` corresponds to the
 *Control* key stroke.
 
 <!-- -->
@@ -62,7 +64,7 @@ The keyboard predefined values are final integers located in the Keyboard class.
 For example, *Ctrl+B* can be tested like this:
 
 >     int key=keyboard.getKey()
->     if (key==Keyboard.KEYBOARD_CONTROL+'B')
+>     if (key==Keyboard.CONTROL+'B')
 >       System.out.Println("Ctrl+B is pressed");
 
 <!-- -->
@@ -72,6 +74,5 @@ The keyboard predefined values are integers located into the Keyboard class. For
 example, *Ctrl+B* can be tested like this:
 
 >     key=keyboard.getKey()
->     if (key==Keyboard.KEYBOARD_CONTROL+ord('B')):
+>     if (key==Keyboard.CONTROL+ord('B')):
 >       print 'Ctrl+B is pressed'
-

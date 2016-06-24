@@ -62,4 +62,3 @@ displays a progressive transition between its original color and the
 present level of charge. If set to FALSE, the indicator remains its original
 color until the charger is fully charged (i.e., the present energy level equals
 the maximum energy level). Then, it switches to the specified `emissiveColor`.
-

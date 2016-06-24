@@ -36,4 +36,3 @@ In the Java case there are two options. The controller can be placed in a
 "xyz\_controller.class". If a ".jar" file is used it must be named
 "xyz\_controller.jar" and it must contain a class named "xyz\_controller" that
 Webots will attempts to start.
-

@@ -75,7 +75,7 @@ class TestMenus(unittest.TestCase):
                 menu_content = menu_file.read()
             for file_path in os.listdir(book_path):
                 if (file_path.endswith(".md") and
-                        file_path != (book_name + '.md') and
+                        file_path != ('index.md') and
                         file_path != "menu.md"):
                     self.assertIn(
                         file_path, menu_content,

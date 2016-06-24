@@ -33,6 +33,7 @@ robots, etc ...) with a defined bounding object is a potential obstacle for an
 "infra-red" communication. The structure of the emitting or receiving robot
 itself will not block an "infra-red" transmission. Currently, there is no
 implementation difference between the "radio" and "serial" types.
+
 - `aperture`: opening angle of the reception cone (in radians); for "infra-red"
 only. The receiver can only receive messages from emitters currently located
 within its reception cone. The cone's apex is located at the origin ([0 0 0]) of
@@ -42,28 +43,34 @@ figure](emitter.md#illustration-of-aperture-and-range-for-infra-red-emitter-rece
 in [this section](emitter.md)). An `aperture` of -1 (the default) is considered
 to be infinite, meaning that a signal can be received from any direction. For
 "radio" receivers, the `aperture` field is ignored.
+
 - `channel`: reception channel. The value is an identification number for an
 "infra-red" receiver or a frequency for a "radio" receiver. Normally, both
 emitter and receiver must use the same channel in order to be able to
 communicate. However, the special -1 channel number allows the receiver to
 listen to all channels.
+
 - `baudRate`: the baud rate is the communication speed expressed in bits per
 second. It should be the same as the speed of the emitter. Currently, this field
 is ignored.
+
 - `byteSize`: the byte size is the number of bits used to represent one byte of
 transmitted data (usually 8, but may be more if control bits are used). It
 should be the same size as the emitter byte size. Currently, this field is
 ignored.
+
 - `bufferSize`: size (in bytes) of the reception buffer. The size of the received
 data should not exceed the buffer size at any time, otherwise data may be lost.
 A `bufferSize` of -1 (the default) is regarded as unlimited buffer size. If the
 previous data have not been read when new data are received, the previous data
 are lost.
+
 - `signalStrengthNoise`: standard deviation of the gaussian noise added to the
 signal strength returned by `wb_receiver_get_signal_strength`. The noise is
 proportionnal to the signal strength, e.g., a `signalStrengthNoise` of 0.1 will
 add a noise with a standard deviation of 0.1 for a signal strength of 1 and 0.2
 for a signal strength of 2.
+
 - `directionNoise`: standard deviation of the gaussian noise added to each of the
 components of the direction returned by `wb_receiver_get_emitter_direction`. The
 noise is not dependent on the distance between emitter-receiver.
@@ -92,8 +99,11 @@ of once every `ms` milliseconds. Incoming data packet are appended to the tail
 of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
 data packets will be discarded if the receiver's buffer size (specified in the
 [Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
-packets should be read at a high enough rate by the controller program. The
-function `wb_receiver_disable()` stops the background listening.
+packets should be read at a high enough rate by the controller program.
+The provided `ms` argument specifies the [Receiver](#receiver)'s sampling period.
+The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the first sampling period elapsed.
+
+The function `wb_receiver_disable()` stops the background listening.
 
 The `wb_receiver_get_sampling_period()` function returns the period given into
 the `wb_receiver_enable()` function, or 0 if the device is disabled.
@@ -118,6 +128,9 @@ void wb_receiver_next_packet(WbDeviceTag tag)
 The `wb_receiver_get_queue_length()` function returns the number of data packets
 currently present in the receiver's queue (see [this
 figure](#receiver-s-packet-queue)).
+
+The [Receiver](#receiver) node receives and queues the data packets immediately so that they will be available at the next sampling period.
+But the [Emitter](#emitter) node needs one basic time step to send the message.
 
 The `wb_receiver_next_packet()` function deletes the head packet. The next
 packet in the queue, if any, becomes the new head packet. The user must copy
@@ -275,9 +288,9 @@ the receiver's queue (see [this figure](#receiver-s-packet-queue)). It returns
 the simulated signal strength at the time the packet was transmitted. This
 signal strength is equal to the inverse of the distance between the emitter and
 the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
-strength and *r* is the distance between emitter and receiver. It is illegal to
-call this function if the receiver's queue is empty
-(`wb_receiver_get_queue_length()` == 0).
+strength and *r* is the distance between emitter and receiver.
+If the packet is sent from a physics plugin, the returned value will be positive infinity.
+It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 The function `wb_receiver_get_emitter_direction()` also operates on the head
 packet in the receiver's queue. It returns a normalized (length=1) vector that
@@ -288,9 +301,10 @@ the receiver, then the vector would be [0 0 1]. In the usual orientation used
 for 2D simulations (robots moving in the  *xz*-plane and the  *y *-axis oriented
 upwards), a positive *x *-component indicates that the emitter is located to the
 left of the receiver while a negative  *x *-component indicates that the emitter
-is located to the right. The returned vector is valid only until the next call
-to `wb_receiver_next_packet()`. It is illegal to call this function if the
-receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
+is located to the right.
+If the packet is sent from a physics plugin, the returned values will be NaN (Not a Number).
+The returned vector is valid only until the next call to `wb_receiver_next_packet()`.
+It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
 > **note** [Python]:
 `getEmitterDirection()` returns the vector as a list containing three floats.
@@ -326,4 +340,3 @@ the receiver.
 In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
 static integer of the [Receiver](#receiver) class
 (Receiver::CHANNEL\_BROADCAST).
-

@@ -42,4 +42,3 @@ and the one set using the `wb_brake_set_damping_constant()` function.
 if the sensor is associated with a [HingeJoint](hingejoint.md) or a
 [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a
 [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
-

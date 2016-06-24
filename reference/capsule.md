@@ -49,4 +49,3 @@ to the capsule's top. The middle part is mapped to the capsule's side (body).
 The bottom part is mapped to the capsule's bottom. On each part, the texture
 wraps counterclockwise (seen from above) starting from the intersection with the
 *y*- and negative *z*-plane.
-

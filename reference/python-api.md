@@ -55,9 +55,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen)                                       |
 | &nbsp;&nbsp; def [imageGetBlue](camera.md#wb_camera_get_image)(image, width, x, y)             |
 | &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                         |
-| &nbsp;&nbsp; def [imageGetGrey](camera.md#wb_camera_get_image)(image, width, x, y)             |
-| &nbsp;&nbsp; imageGetGrey = staticmethod(imageGetGrey)                                         |
-| &nbsp;&nbsp; rangeImageGetDepth = staticmethod(rangeImageGetDepth)                             |
+| &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)             |
+| &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                         |
 | &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)          |
 
 %end
@@ -293,19 +292,36 @@ The following tables describe the Python classes and their methods.
 
 %end
 
+%api "python_joystick"
+
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| from controller import Joystick                                                                         |
+| class [Joystick](joystick.md) :                                                                         |
+| &nbsp;&nbsp; def [enable](joystick.md#wb_joystick_enable)(self, ms)                                     |
+| &nbsp;&nbsp; def [disable](joystick.md#wb_joystick_enable)(self)                                        |
+| &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                              |
+| &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                              |
+| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const              |
+| &nbsp;&nbsp; def [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(self, axis)                 |
+| &nbsp;&nbsp; def [getPressedButton](joystick.md#wb_joystick_get_pressed_button)(self)                   |
+| &nbsp;&nbsp; def [setConstantForce](joystick.md#wb_joystick_set_constant_force)(self, level)            |
+| &nbsp;&nbsp; def [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(self, duration) |
+| &nbsp;&nbsp; def [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(self, gain)         |
+| &nbsp;&nbsp; def [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(self, gain)            |
+
+%end
+
 %api "python_keyboard"
 
 |                                                                            |
 | -------------------------------------------------------------------------- |
 | from controller import Keyboard                                            |
 | class [Keyboard](keyboard.md) :                                            |
-| &nbsp;&nbsp; KEYBOARD\_END, KEYBOARD\_HOME, KEYBOARD\_LEFT, KEYBOARD\_UP,  |
-| &nbsp;&nbsp; KEYBOARD\_RIGHT, KEYBOARD\_DOWN, KEYBOARD\_PAGEUP,            |
-| &nbsp;&nbsp; KEYBOARD\_PAGEDOWN, KEYBOARD\_NUMPAD\_HOME,                   |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_LEFT, KEYBOARD\_NUMPAD\_UP,                 |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_RIGHT, KEYBOARD\_NUMPAD\_DOWN,              |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_END, KEYBOARD\_KEY, KEYBOARD\_SHIFT,        |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT                              |
+| &nbsp;&nbsp; END, HOME, LEFT, UP, RIGHT, DOWN, PAGEUP,                     |
+| &nbsp;&nbsp; PAGEDOWN, NUMPAD\_HOME, NUMPAD\_LEFT, NUMPAD\_UP,             |
+| &nbsp;&nbsp; NUMPAD\_RIGHT, NUMPAD\_DOWN, NUMPAD\_END, KEY, SHIFT,         |
+| &nbsp;&nbsp; CONTROL, ALT                                                  |
 | &nbsp;&nbsp; def [enable](keyboard.md#wb_keyboard_enable)(self, ms)        |
 | &nbsp;&nbsp; def [disable](keyboard.md#wb_keyboard_enable)(self)           |
 | &nbsp;&nbsp; def [getSamplingPeriod](keyboard.md#wb_keyboard_enable)(self) |
@@ -358,8 +374,8 @@ The following tables describe the Python classes and their methods.
 
 |                                                      |
 | ---------------------------------------------------- |
-| from controller import WbLidarPoint                  |
-| class [WbLidarPoint](lidar.md#wblidarpoint) :        |
+| from controller import LidarPoint                    |
+| class [LidarPoint](lidar.md#wblidarpoint) :          |
 | &nbsp;&nbsp; [self.x](lidar.md#wblidarpoint)         |
 | &nbsp;&nbsp; [self.y](lidar.md#wblidarpoint)         |
 | &nbsp;&nbsp; [self.z](lidar.md#wblidarpoint)         |
@@ -512,8 +528,8 @@ The following tables describe the Python classes and their methods.
 
 |                                                            |
 | ---------------------------------------------------------- |
-| from controller import WbRadarTarget                       |
-| class [WbRadarTarget](#python_radar_target) :              |
+| from controller import RadarTarget                         |
+| class [RadarTarget](#python_radar_target) :                |
 | &nbsp;&nbsp; self.distance                                 |
 | &nbsp;&nbsp; self.received\_power                          |
 | &nbsp;&nbsp; self.speed                                    |
@@ -586,6 +602,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                              |
 | &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                             |
 | &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                     |
+| &nbsp;&nbsp; def [getJoystick](robot.md#wb_robot_get_device)(self)                               |
 | &nbsp;&nbsp; def [getKeyboard](robot.md#wb_robot_get_device)(self)                               |
 | &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                              |
 | &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                      |
@@ -595,6 +612,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                      |
 | &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                         |
 | &nbsp;&nbsp; def [getServo](robot.md#wb_robot_get_device)(self, name)                            |
+| &nbsp;&nbsp; def [getSpeaker](robot.md#wb_robot_get_device)(self, name)                          |
 | &nbsp;&nbsp; def [getTouchSensor](robot.md#wb_robot_get_device)(self, name)                      |
 | &nbsp;&nbsp; def [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)(self)               |
 | &nbsp;&nbsp; def [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(self, index)          |
@@ -646,6 +664,20 @@ The following tables describe the Python classes and their methods.
 
 %end
 
+%api "python_speaker"
+
+|                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------- |
+| from controller import Speaker                                                                                   |
+| class [Speaker](speaker.md) ([Device](#python_device)) :                                                         |
+| &nbsp;&nbsp; def [playSound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch balance, loop)  |
+| &nbsp;&nbsp; def [stop](speaker.md#wb_speaker_stop)(self, sound)                                                 |
+| &nbsp;&nbsp; def [setLanguage](speaker.md#wb_speaker_set_language)(self, language)                               |
+| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_set_language)(self)                                         |
+| &nbsp;&nbsp; def [speak](speaker.md#wb_speaker_set_language)(self, text, volume)                                 |
+
+%end
+
 %api "python_supervisor"
 
 |                                                                                                                                                             |
@@ -693,4 +725,3 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getType](touchsensor.md#wb_touch_sensor_get_type)(self)             |
 
 %end
-

@@ -343,4 +343,3 @@ output_torque_c = c * splitRpm^2 + b * splitRpm + a
 
 Here again, if the real rpm is below the `engineMinRPM` parameter of the `Car`
 PROTO the combustion engine is switched off.\\
-

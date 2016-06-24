@@ -53,12 +53,11 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public static int [imageGetRed](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);   |
 | &nbsp;&nbsp; public static int [imageGetGreen](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y); |
 | &nbsp;&nbsp; public static int [imageGetBlue](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
-| &nbsp;&nbsp; public static int [imageGetGrey](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
+| &nbsp;&nbsp; public static int [imageGetGray](camera.md#wb_camera_get_image)(int[] image, int width, int x, int y);  |
 | &nbsp;&nbsp; public static int [pixelGetRed](camera.md#wb_camera_get_image)(int pixel);                              |
 | &nbsp;&nbsp; public static int [pixelGetGreen](camera.md#wb_camera_get_image)(int pixel);                            |
 | &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp; public static int [pixelGetGrey](camera.md#wb_camera_get_image)(int pixel);                             |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                   |
+| &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |                                                               |
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
 | }                                                                                                                    |
 
@@ -307,20 +306,37 @@ The following tables describe the Java classes and their methods.
 
 %end
 
+%api "java_joystick"
+
+|                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------ |
+| import com.cyberbotics.webots.controller.Joystick                                                                  |
+| public class [Joystick](joystick.md) {                                                                             |
+| &nbsp;&nbsp; public void [enable](joystick.md#wb_joystick_enable)(int ms);                                         |
+| &nbsp;&nbsp; public void [disable](joystick.md#wb_joystick_enable)();                                              |
+| &nbsp;&nbsp; public int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                     |
+| &nbsp;&nbsp; public bool [isConnected](joystick.md#wb_joystick_is_connected)();                                    |
+| &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                           |
+| &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);                      |
+| &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                          |
+| &nbsp;&nbsp; public void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);                |
+| &nbsp;&nbsp; public void [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(double duration);  |
+| &nbsp;&nbsp; public void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain);          |
+| &nbsp;&nbsp; public void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);             |
+| };                                                                                                                 |
+
+%end
+
 %api "java_keyboard"
 
 |                                                                                |
 | ------------------------------------------------------------------------------ |
 | import com.cyberbotics.webots.controller.Keyboard;                             |
 | public class [Keyboard](keyboard.md) {                                         |
-| &nbsp;&nbsp; public final static int KEYBOARD\_END, KEYBOARD\_HOME,            |
-| &nbsp;&nbsp; KEYBOARD\_LEFT, KEYBOARD\_UP, KEYBOARD\_RIGHT,                    |
-| &nbsp;&nbsp; KEYBOARD\_DOWN, KEYBOARD\_PAGEUP, KEYBOARD\_PAGEDOWN,             |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_HOME, KEYBOARD\_NUMPAD\_LEFT,                   |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_UP, KEYBOARD\_NUMPAD\_RIGHT,                    |
-| &nbsp;&nbsp; KEYBOARD\_NUMPAD\_DOWN, KEYBOARD\_NUMPAD\_END,                    |
-| &nbsp;&nbsp; KEYBOARD\_KEY, KEYBOARD\_SHIFT,                                   |
-| &nbsp;&nbsp; KEYBOARD\_CONTROL, KEYBOARD\_ALT;                                 |
+| &nbsp;&nbsp; public final static int END, HOME, LEFT, UP, RIGHT,               |
+| &nbsp;&nbsp; DOWN, PAGEUP, PAGEDOWN, NUMPAD\_HOME, NUMPAD\_LEFT,               |
+| &nbsp;&nbsp; NUMPAD\_UP, NUMPAD\_RIGHT, NUMPAD\_DOWN, NUMPAD\_END,             |
+| &nbsp;&nbsp; KEY, SHIFT, CONTROL, ALT;                                         |
 | &nbsp;&nbsp; public void [enable](keyboard.md#wb_keyboard_enable)(int ms);     |
 | &nbsp;&nbsp; public void [disable](keyboard.md#wb_keyboard_enable)();          |
 | &nbsp;&nbsp; public int [getSamplingPeriod](keyboard.md#wb_keyboard_enable)(); |
@@ -355,8 +371,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public boolean [isPointCloudEnabled](lidar.md#wb_lidar_enable_point_cloud)();                                      |
 | &nbsp;&nbsp; public float[] [getRangeImage](lidar.md#wb_lidar_get_range_image)();                                               |
 | &nbsp;&nbsp; public float[] [getLayerRangeImage](lidar.md#wb_lidar_get_range_image)(int layer);                                 |
-| &nbsp;&nbsp; public [WbLidarPoint](lidar.md#wblidarpoint)[] [getPointCloud](lidar.md#wb_lidar_get_point_cloud)();               |
-| &nbsp;&nbsp; public [WbLidarPoint](lidar.md#wblidarpoint)[] [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer); |
+| &nbsp;&nbsp; public [LidarPoint](lidar.md#wblidarpoint)[] [getPointCloud](lidar.md#wb_lidar_get_point_cloud)();                 |
+| &nbsp;&nbsp; public [LidarPoint](lidar.md#wblidarpoint)[] [getLayerPointCloud](lidar.md#wb_lidar_get_point_cloud)(int layer);   |
 | &nbsp;&nbsp; public int [getNumberOfPoints](lidar.md#wb_lidar_get_point_cloud)();                                               |
 | &nbsp;&nbsp; public double [getFrequency](lidar.md#wb_lidar_get_frequency)();                                                   |
 | &nbsp;&nbsp; public void [setFrequency](lidar.md#wb_lidar_get_frequency)(double frequency);                                     |
@@ -376,8 +392,8 @@ The following tables describe the Java classes and their methods.
 
 |                                                                   |
 | ----------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.WbLidarPoint;            |
-| public class [WbLidarPoint](lidar.md#wblidarpoint) {              |
+| import com.cyberbotics.webots.controller.LidarPoint;              |
+| public class [LidarPoint](lidar.md#wblidarpoint) {                |
 | &nbsp;&nbsp; public double [getX](lidar.md#wblidarpoint)();       |
 | &nbsp;&nbsp; public double [getY](lidar.md#wblidarpoint)();       |
 | &nbsp;&nbsp; public double [getZ](lidar.md#wblidarpoint)();       |
@@ -525,7 +541,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [disable](radar.md#wb_radar_enable)();                                              |
 | &nbsp;&nbsp; public int [getSamplingPeriod](radar.md#wb_radar_enable)();                                     |
 | &nbsp;&nbsp; public int [getNumberOfTargets](radar.md#wb_radar_get_number_of_targets)();                     |
-| &nbsp;&nbsp; public [WbRadarTarget](radar.md#wbradartarget)[] [getTargets](radar.md#wb_radar_get_targets)(); |
+| &nbsp;&nbsp; public [RadarTarget](radar.md#wbradartarget)[] [getTargets](radar.md#wb_radar_get_targets)();   |
 | &nbsp;&nbsp; public doubles [getMinRange](radar.md#wb_radar_get_min_range)();                                |
 | &nbsp;&nbsp; public double [getMaxRange](radar.md#wb_radar_get_min_range)();                                 |
 | &nbsp;&nbsp; public double [getHorizontalFov](radar.md#wb_radar_get_horizontal_fov)();                       |
@@ -538,8 +554,8 @@ The following tables describe the Java classes and their methods.
 
 |                                                                          |
 | ------------------------------------------------------------------------ |
-| import com.cyberbotics.webots.controller.WbRadarTarget;                  |
-| public class [WbRadarTarget](radar.md#wbradartarget) {                   |
+| import com.cyberbotics.webots.controller.RadarTarget;                    |
+| public class [RadarTarget](radar.md#wbradartarget) {                     |
 | &nbsp;&nbsp; public double [getDistance](radar.md#wbradartarget)();      |
 | &nbsp;&nbsp; public double [getReceivedPower](radar.md#wbradartarget)(); |
 | &nbsp;&nbsp; public double [getSpeed](radar.md#wbradartarget)();         |
@@ -612,6 +628,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#wb_robot_get_device)(String name);                                           |
 | &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#wb_robot_get_device)(String name);                  |
+| &nbsp;&nbsp; public [Joystick](#java_joystick) [getJoystick](robot.md#wb_robot_get_device)();                                          |
 | &nbsp;&nbsp; public [Keyboard](#java_keyboard) [getKeyboard](robot.md#wb_robot_get_device)();                                          |
 | &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Lidar](#java_lidar) [getLidar](robot.md#wb_robot_get_device)(String name);                                        |
@@ -622,6 +639,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [RangeFinder](#java_range_finder) [getRangeFinder](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#wb_robot_get_device)(String name);                               |
 | &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [Speaker](#java_speaker) [getSpeaker](robot.md#wb_robot_get_device)(String name);                                  |
 | &nbsp;&nbsp; public [TouchSensor](#java_touch_sensor) [getTouchSensor](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                 |
 | &nbsp;&nbsp; public [Device](#java_device) [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                       |
@@ -672,6 +690,22 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setForce](servo.md#wb_servo_set_force)(double force);                                 |
 | &nbsp;&nbsp; public int [getType](servo.md#wb_servo_get_type)();                                                |
 | }                                                                                                               |
+
+%end
+
+%api "java_speaker"
+
+|                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Speaker;                                                                                                                                 |
+| public class [Speaker](speaker.md) extends [Device](#java_device) {                                                                                                               |
+| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                      |
+| &nbsp;&nbsp; public static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker left, Speaker right, String sound, double volume, double pitch, double balance, bool loop); |
+| &nbsp;&nbsp; public void [stop](speaker.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
+| &nbsp;&nbsp; public void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                          |
+| &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_set_language)();                                                                                              |
+| &nbsp;&nbsp; public void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
+| };                                                                                                                                                                                |
 
 %end
 
@@ -726,4 +760,3 @@ The following tables describe the Java classes and their methods.
 | }                                                                                         |
 
 %end
-

@@ -120,4 +120,3 @@ kinematic PROTOs is not based on a `Robot` node but on a `Solid` node, it is
 therefore not possible to add sensors or control it. This simplified versions
 are made for representing non-moving parked cars or to be moved using a
 Supervisor, they are much faster to simulate than the normal PROTOs.
-

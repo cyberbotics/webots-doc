@@ -1,5 +1,7 @@
 # webots-doc
 
+MODIFICATION ADDED
+
 This repository holds the documentation for the Cyberbotics' Webots software.
 You are very welcome to contribute to make this documentation better!
 In order to proceed, simply fork this repository, make your modifications and

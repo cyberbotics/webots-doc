@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [Thanks](thanks.md)
+- [Thanks](thanksFAULT.md)
 - [Introduction](introduction.md)
     - [Nodes and Functions](nodes-and-functions.md)
     - [ODE: Open Dynamics Engine](ode-open-dynamics-engine.md)

@@ -1,3 +1,8 @@
+/***
+ * Minimum tags to run webots-doc in standalone.
+ * Add or modify this file to integrate the doc in your website.
+ ***/
+
 html,
 body {
   outline:0;

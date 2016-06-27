@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/omichel/webots-doc.svg?branch=master)](https://travis-ci.org/omichel/webots-doc)
 
+
 # webots-doc
 
 This repository holds the documentation for the Cyberbotics' Webots software.

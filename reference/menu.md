@@ -93,7 +93,7 @@
 - [PROTO](proto.md)
     - [PROTO Definition](proto-definition.md)
     - [PROTO Instantiation](proto-instantiation.md)
-    - [Example](example.md)
+    - [PROTO Example](proto-example.md)
     - [Procedural PROTO nodes](procedural-proto-nodes.md)
     - [Using PROTO nodes with the Scene Tree](using-proto-nodes-with-the-scene-tree.md)
     - [PROTO Scoping Rules](proto-scoping-rules.md)
@@ -119,3 +119,4 @@
     - [Python API](python-api.md)
     - [Matlab API](matlab-api.md)
     - [ROS API](ros-api.md)
+- [Glossary](glossary.md)

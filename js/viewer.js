@@ -389,7 +389,12 @@ function changeMenuSelection() {
         var href = a.getAttribute("href");
         var selection;
         if (local) {
-          if (href.indexOf("page=" + setup.page) > -1)
+          var pageIndex = href.indexOf("page=" + setup.page);
+          // Notes:
+          // - the string length test is done to avoid wrong positive cases
+          //   where a page is a prefix of another.
+          // - 5 matches with the "page=" string length.
+          if (pageIndex > -1 && (5 + pageIndex + setup.page.length) == href.length)
               selection = true;
           else
               selection = false;

@@ -66,6 +66,7 @@
 .webots-doc #accordion li a,
 .webots-doc #accordion li ul li a {
   padding: 0.5em;
+  overflow-x: hidden;
 }
 .webots-doc #accordion li a {
   display: block;
@@ -120,6 +121,7 @@
 .webots-doc pre {
   margin: 30px;
   background-color: #ffeeee;
+  overflow-x: scroll;
 }
 .webots-doc code {
   background: transparent;

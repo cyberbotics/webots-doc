@@ -8,6 +8,7 @@
   width: 20%;
   position: fixed;
   height: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .webots-doc #center {
@@ -48,6 +49,7 @@
   margin: 1em;
   padding-bottom: 0;
   margin-bottom: 0;
+  overflow-x: hidden;
 }
 .webots-doc #menu ul {
   list-style-type: none;

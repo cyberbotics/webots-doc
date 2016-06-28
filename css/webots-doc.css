@@ -118,7 +118,7 @@
 .webots-doc pre {
   margin: 30px;
   background-color: #ffeeee;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .webots-doc code {
   background: transparent;

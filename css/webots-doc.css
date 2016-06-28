@@ -1,3 +1,8 @@
+/*
+ * CSS for the Webots documentation.
+ * All the CSS rules are applied to the 'webots-doc' container and its descendants.
+ */
+
 .webots-doc #left {
   top: 0;
   width: 20%;
@@ -29,7 +34,7 @@
 .webots-doc #title {
   margin-top: 0px;
   margin-left: 40px;
-  padding-bottom:0;
+  padding-bottom: 0;
 }
 .webots-doc #view {
   margin-left: 40px;

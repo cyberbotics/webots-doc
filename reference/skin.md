@@ -73,25 +73,22 @@ The joints are indexed starting from 0.
 
 **Name**
 
-**wb\_skin\_set\_joint\_angle\_relative**, **wb\_skin\_set\_joint\_angle\_absolute** -
-*set the joint angle, either relative to parent joint or in the absolute world coordinate frame.*
+**wb\_skin\_set\_joint\_angle** - *set the joint angle.*
 
 {[C++](cpp-api.md#cpp_skin)}, {[Java](java-api.md#java_skin)}, {[Python](python-api.md#python_skin)}, {[Matlab](matlab-api.md#matlab_skin)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/skin.h>
 
-void wb_character_set_joint_angle_relative(WbDeviceTag tag, const double rotation[4])
-void wb_character_set_joint_angle_absolute(WbDeviceTag tag, const double rotation[4])
+void wb_character_set_joint_angle(WbDeviceTag tag, int index, const double rotation[4], bool absolute)
 ```
 
 **Description**
 
-These functions set the rotation of the joint to the specified axis-angle value.
+This function sets the rotation of the joint to the specified axis-angle value.
 The rotation is specified as a double array, similar to `wb_supervisor_field_set_sf_rotation` [Supervisor](#supervisor) node.
-
-The function `wb_character_set_joint_angle_relative` sets the joint angle relative to the parent joint.
-The function `wb_character_set_joint_angle_absolute` sets the joint angle with respect to the absolute world frame.
+If the `absolute` argument is false the joint angle is set relative to the parent joint, otherwise the joint angle is set with respect to the absolute world frame.
+The joints are indexed starting from 0.
 
 > **note**:
 Please look at the example in "WEBOTS\_HOME/projects/humans/skin_animation/" directory for further information.

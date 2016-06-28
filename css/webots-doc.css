@@ -8,6 +8,7 @@
   width: 20%;
   position: fixed;
   height: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .webots-doc #center {
@@ -29,7 +30,7 @@
   top: 0;
 }
 .webots-doc #navigation {
-  margin: 0 2.5em 0;
+  margin: auto;
 }
 .webots-doc #title {
   margin-top: 0px;
@@ -48,24 +49,21 @@
   margin: 1em;
   padding-bottom: 0;
   margin-bottom: 0;
+  overflow-x: hidden;
 }
 .webots-doc #menu ul {
   list-style-type: none;
   padding: 0;
 }
 .webots-doc #navigation > table {
-  width: 100%;
   text-align: center;
-  table-layout: fixed;
   font-size: 20px;
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  margin: 0 auto 0 auto;
 }
 .webots-doc #accordion li a,
 .webots-doc #accordion li ul li a {
   padding: 0.5em;
+  overflow-x: hidden;
 }
 .webots-doc #accordion li a {
   display: block;
@@ -120,6 +118,7 @@
 .webots-doc pre {
   margin: 30px;
   background-color: #ffeeee;
+  overflow-x: auto;
 }
 .webots-doc code {
   background: transparent;

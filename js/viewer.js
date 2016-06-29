@@ -588,7 +588,6 @@ window.onscroll=function(){
 
 document.addEventListener("DOMContentLoaded", function() {
     $('#webots-doc').layout({
-        west__minSize: 130,
         west__size: 200,
         west__maxSize: 300
     });

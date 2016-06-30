@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<link rel='shortcut icon' href='https://www.cyberbotics.com/favicon.ico' type='image/x-icon' />
+<link rel="stylesheet" href="https://www.cyberbotics.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link type="text/css" href="https://www.cyberbotics.com/jquery-ui/1.11.4/jquery-ui.min.css" rel="stylesheet"/>
+<script src="https://www.cyberbotics.com//jquery/1.11.3/jquery.min.js"></script>
+<script src="https://www.cyberbotics.com//bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://www.cyberbotics.com//jquery-ui/1.11.4/jquery-ui.min.js"></script>
+<link rel='stylesheet' type='text/css' href='css/webots-doc.css'/>
+<link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/jquery-ui-layout/1.4.4/layout-default.css'/>
+<script src='https://www.cyberbotics.com/jquery-ui-layout/1.4.4/jquery.layout.js'></script>
+<script src='https://www.cyberbotics.com/wwi/8.5/request_methods.js'></script>
+<script src='https://www.cyberbotics.com/highlight/9.2.0/highlight.min.js'></script>
+<script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
+<script src='js/showdown-extensions.js'></script>
+<script src='js/viewer.js'></script>
+<script>
+  setup = {
+    'book':   'guide',
+    'page':   'installing-webots',
+    'anchor': extractAnchor(),
+    'branch': '',
+    'tag':    '',
+    'url':    'https://raw.githubusercontent.com/omichel/webots-doc/'
+  }
+  console.log('Setup: ' + JSON.stringify(setup));
+</script>
+<link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/css/main.css' />
+<title>Webots</title>
+</head>
+<body>
+<div id='container'>
+<div id='header'>
+<div id='header-fixed-menu'>
+<a class='header-menu' href='/index' style='padding-right:0'><img src='https://www.cyberbotics.com/images/webots.png' style='height:30px'></a>
+<a class='header-menu' href='/webots'>Webots</a>
+<a class='header-menu' href='/download'>Download</a>
+<a class='header-menu' href='/features'>Features</a>
+<a class='header-menu' href='/support'>Support</a>
+<a class='header-menu' href='/contest'>Contest</a>
+<a class='header-menu' href='/company'>About</a>
+<button class='color-button header-menu' onclick='document.location="/buy"'>Buy</button>
+<div style='position:absolute;top:0px;right:0px;'>
+<div id='header-login-menu'>
+<ul class='menu'>
+<li>
+<a>Fabien Rohrer</a>
+<ul class='menu'>
+<li><a href='/profile'>Profile</a></li>
+<li><a href='/administration'>Administration</a></li>
+<li><a href='/logout_script.php'>Log out</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='body'>
+    <div class="webots-doc" id="webots-doc" style="padding:0;">
+      <div id="left" style="top:46px;height:calc(100% - 46px)">
+        <div id="navigation">
+          <table>
+            <tr>
+              <td colspan="3"><a id="toc" title="Table of Contents">&equiv;</a></td>
+            </tr>
+            <tr>
+              <td><a id="previous" title="Previous page">&#x25C0;</a></td>
+              <td><a id="up" title="Up page">&#x25B2;</a></td>
+              <td><a id="next" title="Next page">&#x25B6;</a></td>
+            </tr>
+          </table>
+        </div>
+        <div id="menu"></div>
+      </div>
+      <div id="center" style="top:46px">
+        <div id="title">
+          <h2 id="title-content">Documentation</h2>
+        </div>
+        <div id="view"></div>
+      </div>
+ </div>
+ <div id='footer'>
+  <div id='footer-content'>
+   <div class='cyberbotics-footer-menu'><div id='footer-copyright'>Copyright &copy; <script type='text/javascript'>var today=new Date();document.write(today.getFullYear());</script> Cyberbotics Ltd.</div></div>
+   <div id='footer-title'><b>CYBERBOTICS Ltd.</b><br><i>professional robotics simulation</i><br><br>
+   Cyberbotics is developing Webots: a robot simulator used in more than 1200 companies, universities and research centers worldwide.<br><br>
+   <form action='https://www.google.com' id='cse-search-box' target='_blank'>
+   <input name='cx' type='hidden' value='010707408630039569038:qndv60mrcok' />
+   <input name='ie' type='hidden' value='UTF-8' />
+   <input id='footer-search-button' name='sa' type='submit' value='' />
+   <input id='footer-search-input' name='q' /></form>
+   <div style='padding-left:50px;padding-bottom:10px;padding-top:15px;'>
+   <a id='footer-twitter-button' target='_blank' title='Follow us on Twitter' href='https://twitter.com/webots'>Twitter</a>
+   <a id='footer-google-plus-button' target='_blank' title='Follow us on Google+' href='https://plus.google.com/u/0/102660318356960219732/posts'>Google+</a>
+   <a id='footer-youtube-button' target='_blank' title='Follow us on YouTube' href='http://www.youtube.com/user/cyberboticswebots'>YouTube</a></div></div>
+   <div id='footer-vertical-bar-container'><div id='footer-vertical-bar'></div></div>
+   <div class='cyberbotics-footer-menu'><a class='cyberbotics-footer-menu-title' href='/company'>Company</a><a class='cyberbotics-footer-menu-item' href='/services'>Services</a><a class='cyberbotics-footer-menu-item' a href='/partners'>Partners</a><a class='cyberbotics-footer-menu-item' href='/privacy'>Privacy</a><a class='cyberbotics-footer-menu-item' href='/contact'>Contact</a></div>
+   <div class='cyberbotics-footer-menu'><a class='cyberbotics-footer-menu-title' href='/webots.php'>Webots</a><a class='cyberbotics-footer-menu-item' href='/download'>Download</a><a class='cyberbotics-footer-menu-item' href='/features'>Features</a><a class='cyberbotics-footer-menu-item' href='/movies'>Movies</a><a class='cyberbotics-footer-menu-item' href='/screenshots'>Screenshots</a><a class='cyberbotics-footer-menu-item' href='/users'>Users</a><a class='cyberbotics-footer-menu-item' href='/publications.php'>Publications</a></div>
+   <div class='cyberbotics-footer-menu'><a class='cyberbotics-footer-menu-title' href='/buy'>Buy</a><a class='cyberbotics-footer-menu-item' href='/item?id=1'>Webots PRO</a><a class='cyberbotics-footer-menu-item' href='/item?id=3'>Webots EDU</a><a class='cyberbotics-footer-menu-item' href='/mod'>Webots MOD</a><a class='cyberbotics-footer-menu-item' href='/e-puck'>e-puck</a></div>
+   <div class='cyberbotics-footer-menu'><a class='cyberbotics-footer-menu-title' href='/support'>Support</a><a class='cyberbotics-footer-menu-item' href='/guide'>User guide</a><a class='cyberbotics-footer-menu-item' href='/reference'>Reference manual</a><a class='cyberbotics-footer-menu-item' href='/curriculum'>Curriculum</a><a class='cyberbotics-footer-menu-item' href='/reports.php'>Technical reports</a><a class='cyberbotics-footer-menu-item' href='/rotation_tool'>Rotation tool</a><a class='cyberbotics-footer-menu-item' href='/terrain_generator'>Terrain generator</a><a class='cyberbotics-footer-menu-item' href='/forum'>Forum</a><a class='cyberbotics-footer-menu-item' href='/support_ticket'>Support ticket</a><a class='cyberbotics-footer-menu-item' href='/bug_report'>Bug report</a></div>
+   <div class='cyberbotics-footer-menu'><a class='cyberbotics-footer-menu-title' href='/contest'>Contest</a><a class='cyberbotics-footer-menu-item' href='/blockly.php'>Blockly</a><a class='cyberbotics-footer-menu-item' href='/nao_race'>NAO race</a></div>
+   <div class='cyberbotics-footer-menu'><a class='cyberbotics-footer-menu-title' href='/account'>My account</a><a class='cyberbotics-footer-menu-item' href='/profile'>Profile</a><a class='cyberbotics-footer-menu-item' href='/administration'>Administration</a><a class='cyberbotics-footer-menu-item' href='/logout'>Log out</a></div>
+  </div>
+ </div>
+</div>
+</body>
+</html>

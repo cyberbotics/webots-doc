@@ -63,9 +63,11 @@ Keyboard class. For example, `Keyboard.CONTROL` corresponds to the
 The keyboard predefined values are final integers located in the Keyboard class.
 For example, *Ctrl+B* can be tested like this:
 
->     int key=keyboard.getKey()
->     if (key==Keyboard.CONTROL+'B')
->       System.out.Println("Ctrl+B is pressed");
+> ```java
+> int key=keyboard.getKey()
+> if (key==Keyboard.CONTROL+'B')
+>   System.out.Println("Ctrl+B is pressed");
+> ```
 
 <!-- -->
 
@@ -73,6 +75,8 @@ For example, *Ctrl+B* can be tested like this:
 The keyboard predefined values are integers located into the Keyboard class. For
 example, *Ctrl+B* can be tested like this:
 
->     key=keyboard.getKey()
->     if (key==Keyboard.CONTROL+ord('B')):
->       print 'Ctrl+B is pressed'
+> ```python
+> key=keyboard.getKey()
+> if (key==Keyboard.CONTROL+ord('B')):
+>   print 'Ctrl+B is pressed'
+> ```

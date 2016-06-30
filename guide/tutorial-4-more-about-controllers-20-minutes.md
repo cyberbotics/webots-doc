@@ -89,9 +89,11 @@ corresponding to the Robot, the DifferentialWheels and the DistanceSensor nodes
 in order to be able to use the corresponding API (documented in chapter 3 of the
 `Reference Manual`):
 
->     #include <webots/robot.h>
->     #include <webots/differential_wheels.h>
->     #include <webots/distance_sensor.h>
+> ```c
+> #include <webots/robot.h>
+> #include <webots/differential_wheels.h>
+> #include <webots/distance_sensor.h>
+> ```
 
 <!-- -->
 
@@ -102,7 +104,9 @@ function, and it will also be used to enable the devices. This duration is
 specified in milliseconds and it must be a multiple of the value in the
 `basicTimeStep` field of the WorldInfo node.
 
->     #define TIME_STEP 64
+> ```c
+> #define TIME_STEP 64
+> ```
 
 <!-- -->
 
@@ -117,26 +121,28 @@ function and it has to be cleaned up using the `wb_robot_cleanup()` function.
 > **handson**:
 Write the prototype of the `main()` function as follows:
 
->     // entry point of the controller
->     int main(int argc, char **argv)
->     {
->       // initialize the Webots API
->       wb_robot_init();
->       // initialize devices
->       // feedback loop
->       while (1) {
->         // step simulation
->         int delay = wb_robot_step(TIME_STEP);
->         if (delay == -1) // exit event from webots
->           break;
->         // read sensors outputs
->         // process behavior
->         // write actuators inputs
->       }
->       // cleanup the Webots API
->       wb_robot_cleanup();
->       return 0; //EXIT_SUCCESS
->     }
+> ```c
+> // entry point of the controller
+> int main(int argc, char **argv)
+> {
+>   // initialize the Webots API
+>   wb_robot_init();
+>   // initialize devices
+>   // feedback loop
+>   while (1) {
+>     // step simulation
+>     int delay = wb_robot_step(TIME_STEP);
+>     if (delay == -1) // exit event from webots
+>       break;
+>     // read sensors outputs
+>     // process behavior
+>     // write actuators inputs
+>   }
+>   // cleanup the Webots API
+>   wb_robot_cleanup();
+>   return 0; //EXIT_SUCCESS
+> }
+> ```
 
 <!-- -->
 
@@ -155,18 +161,20 @@ refreshed.
 Just after the comment *"// initialize devices"*, get and enable the distance
 sensors as follows:
 
->     // initialize devices
->     int i;
->     WbDeviceTag ps[8];
->     char ps_names[8][4] = {
->       "ps0", "ps1", "ps2", "ps3",
->       "ps4", "ps5", "ps6", "ps7"
->     };
+> ```c
+> // initialize devices
+> int i;
+> WbDeviceTag ps[8];
+> char ps_names[8][4] = {
+>   "ps0", "ps1", "ps2", "ps3",
+>   "ps4", "ps5", "ps6", "ps7"
+> };
 >
->     for (i=0; i<8; i++) {
->       ps[i] = wb_robot_get_device(ps_names[i]);
->       wb_distance_sensor_enable(ps[i], TIME_STEP);
->     }
+> for (i=0; i<8; i++) {
+>   ps[i] = wb_robot_get_device(ps_names[i]);
+>   wb_distance_sensor_enable(ps[i], TIME_STEP);
+> }
+> ```
 
 <!-- -->
 
@@ -174,10 +182,12 @@ sensors as follows:
 In the main loop, just after the comment *"// read sensors outputs"*, read the
 distance sensor values as follows:
 
->     // read sensors outputs
->     double ps_values[8];
->     for (i=0; i<8 ; i++)
->       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
+> ```c
+> // read sensors outputs
+> double ps_values[8];
+> for (i=0; i<8 ; i++)
+>   ps_values[i] = wb_distance_sensor_get_value(ps[i]);
+> ```
 
 <!-- -->
 
@@ -186,15 +196,17 @@ In the main loop, just after the comment *"// process behavior"*, detect if a
 collision occurs (i.e. the value returned by a distance sensor is bigger than a
 threshold) as follows:
 
->     // detect obstacles
->     bool left_obstacle =
->       ps_values[0] > 100.0 ||
->       ps_values[1] > 100.0 ||
->       ps_values[2] > 100.0;
->     bool right_obstacle =
->       ps_values[5] > 100.0 ||
->       ps_values[6] > 100.0 ||
->       ps_values[7] > 100.0;
+> ```c
+> // detect obstacles
+> bool left_obstacle =
+>   ps_values[0] > 100.0 ||
+>   ps_values[1] > 100.0 ||
+>   ps_values[2] > 100.0;
+> bool right_obstacle =
+>   ps_values[5] > 100.0 ||
+>   ps_values[6] > 100.0 ||
+>   ps_values[7] > 100.0;
+> ```
 
 <!-- -->
 
@@ -202,22 +214,24 @@ threshold) as follows:
 Finally, use the information about the obstacle to actuate the wheels as
 follows:
 
->     // init speeds
->     double left_speed  = 500;
->     double right_speed = 500;
->     // modify speeds according to obstacles
->     if (left_obstacle) {
->       // turn right
->       left_speed  -= 500;
->       right_speed += 500;
->     }
->     else if (right_obstacle) {
->       // turn left
->       left_speed  += 500;
->       right_speed -= 500;
->     }
->     // write actuators inputs
->     wb_differential_wheels_set_speed(left_speed, right_speed);
+> ```c
+> // init speeds
+> double left_speed  = 500;
+> double right_speed = 500;
+> // modify speeds according to obstacles
+> if (left_obstacle) {
+>   // turn right
+>   left_speed  -= 500;
+>   right_speed += 500;
+> }
+> else if (right_obstacle) {
+>   // turn left
+>   left_speed  += 500;
+>   right_speed -= 500;
+> }
+> // write actuators inputs
+> wb_differential_wheels_set_speed(left_speed, right_speed);
+> ```
 
 <!-- -->
 

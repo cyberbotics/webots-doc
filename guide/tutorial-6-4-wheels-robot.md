@@ -177,26 +177,32 @@ new. The following note explain how to proceed.
 To program the rotational motors, the first step is to include the API module
 corresponding to the RotationalMotor node:
 
->     #include <webots/motor.h>
+> ```c
+>  #include <webots/motor.h>
+> ```
 
 > Then to get the references of the RotationalMotor nodes:
 
->     // initialize motors
->     WbDeviceTag wheels[4];
->     char wheels_names[4][8] = {
->       "wheel1", "wheel2", "wheel3", "wheel4"
->     };
->     for (i=0; i<4 ; i++)
->       wheels[i] = wb_robot_get_device(wheels_names[i]);
+> ```c
+>  // initialize motors
+>  WbDeviceTag wheels[4];
+>  char wheels_names[4][8] = {
+>    "wheel1", "wheel2", "wheel3", "wheel4"
+>  };
+>  for (i=0; i<4 ; i++)
+>    wheels[i] = wb_robot_get_device(wheels_names[i]);
+> ```
 
 > A motor can be actuated by setting its position, its velocity, its acceleration
 or its force (cf. `Reference Manual`). Here we are interested in setting its
 velocity. This can be achieve by setting its position at infinity, and by
 bounding its velocity:
 
->     double speed = -1.5; // [rad/s]
->     wb_motor_set_position(wheels[0], INFINITY);
->     wb_motor_set_velocity(wheels[0], speed);
+> ```c
+>  double speed = -1.5; // [rad/s]
+>  wb_motor_set_position(wheels[0], INFINITY);
+>  wb_motor_set_velocity(wheels[0], speed);
+> ```
 
 <!-- -->
 

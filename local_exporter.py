@@ -27,6 +27,8 @@ dependencies = [
     'jquery-ui/1.11.4/images/ui-icons_454545_256x240.png',
     'jquery-ui/1.11.4/images/ui-icons_888888_256x240.png',
     'jquery-ui/1.11.4/images/ui-icons_cd0a0a_256x240.png',
+    'jquery-ui-layout/1.4.4/layout-default.css',
+    'jquery-ui-layout/1.4.4/jquery.layout.js',
     'showdown/1.3.0/showdown.js',
     'showdown/1.3.0/showdown.js.map',
     'showdown/1.3.0/showdown.min.js',

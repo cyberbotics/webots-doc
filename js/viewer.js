@@ -262,6 +262,8 @@ function populateViewDiv(mdContent) {
     highlightCode(view);
 
     updateSelection();
+
+    centerResizeCallback();
 }
 
 // replace the browser URL after a dynamic load
@@ -591,7 +593,27 @@ window.onscroll=function(){
     updateMenuScrollbar();
 };
 
+function centerResizeCallback() {
+  if (lock == true) return;
+  lock = true;
+  $("#webots-doc").height(1);
+  lll.resizeAll();
+  var contentScrollHeight = document.getElementById("center").scrollHeight;
+  console.log("resize: " + contentScrollHeight);
+  $("#webots-doc").height(contentScrollHeight);
+  lll.resizeAll();
+  lock = false;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+    lock = false;
+    lll = $('#webots-doc').layout({
+        center__onresize: centerResizeCallback,
+        west__size: 200,
+        west__maxSize: 300
+    });
+    centerResizeCallback();
+
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)

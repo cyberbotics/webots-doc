@@ -952,7 +952,7 @@ The `wb_supervisor_field_set_mf_*()` functions work the same way as the
 argument. They take an additional `index` argument which refers to the index of
 the item in the multiple field. The type of the field has to match with the name
 of the function used and the index should be comprised between minus the total
-number of items and the total number of items minus one, otherwise the value of the field remains unchanged (and a warning message is displayed). Using a negative index starts the count from the last element of the field until the first one. Index 0 is equivalent to minus number of items. Index -1 is equivalent to the number of items minus one.
+number of items and the total number of items minus one, otherwise the value of the field remains unchanged (and a warning message is displayed). Using a negative index starts the count from the last element of the field until the first one. Index -1 represents the last item and the first item is represented by index 0 or minus number of items.
 
 > **note**:
 Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when

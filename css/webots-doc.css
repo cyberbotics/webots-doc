@@ -117,7 +117,7 @@
 }
 .webots-doc pre {
   margin: 30px;
-  background-color: #ffeeee;
+  background-color: #eee;
   overflow-x: auto;
 }
 .webots-doc code {

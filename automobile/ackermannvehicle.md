@@ -13,35 +13,35 @@ actuators) can be added using the `extensionSlot` field.
 
 ```
 AckermannVehicle {
-    SFVec3f    translation                    0 0.4 0
-    SFRotation rotation                       0 1 0 0.0
-    SFString   name                           "vehicle"
-    SFString   model                          "AckermannVehicle"
-    SFString   controller                     "void"
-    SFString   controllerArgs                 ""
-    SFBool     synchronization                TRUE
-    SFFloat    trackFront                     1.7
-    SFFloat    trackRear                      1.7
-    SFFloat    wheelbase                      4.0
-    SFFloat    minSteeringAngle              -1
-    SFFloat    maxSteeringAngle               1
-    SFFloat    suspensionFrontSpringConstant  100000
-    SFFloat    suspensionFrontDampingConstant 4000
-    SFFloat    suspensionRearSpringConstant   100000
-    SFFloat    suspensionRearDampingConstant  4000
-    SFFloat    wheelsDampingConstant          5
-    MFNode     extensionSlot                  NULL
-    SFNode     boundingObject                 NULL
-    SFNode     physics                        NULL
-    SFNode     wheelFrontRight                AutomobileWheel { }
-    SFNode     wheelFrontLeft                 AutomobileWheel { }
-    SFNode     wheelRearRight                 AutomobileWheel { }
-    SFNode     wheelRearLeft                  AutomobileWheel { }
-    MFNode     axisDevicesFrontRight          [ ]
-    MFNode     axisDevicesFrontLeft           [ ]
-    MFNode     axisDevicesRearRight           [ ]
-    MFNode     axisDevicesRearLeft            [ ]
-    SFString   data                           ""
+  SFVec3f    translation                    0 0.4 0
+  SFRotation rotation                       0 1 0 0.0
+  SFString   name                           "vehicle"
+  SFString   model                          "AckermannVehicle"
+  SFString   controller                     "void"
+  SFString   controllerArgs                 ""
+  SFBool     synchronization                TRUE
+  SFFloat    trackFront                     1.7
+  SFFloat    trackRear                      1.7
+  SFFloat    wheelbase                      4.0
+  SFFloat    minSteeringAngle              -1
+  SFFloat    maxSteeringAngle               1
+  SFFloat    suspensionFrontSpringConstant  100000
+  SFFloat    suspensionFrontDampingConstant 4000
+  SFFloat    suspensionRearSpringConstant   100000
+  SFFloat    suspensionRearDampingConstant  4000
+  SFFloat    wheelsDampingConstant          5
+  MFNode     extensionSlot                  NULL
+  SFNode     boundingObject                 NULL
+  SFNode     physics                        NULL
+  SFNode     wheelFrontRight                AutomobileWheel { }
+  SFNode     wheelFrontLeft                 AutomobileWheel { }
+  SFNode     wheelRearRight                 AutomobileWheel { }
+  SFNode     wheelRearLeft                  AutomobileWheel { }
+  MFNode     axisDevicesFrontRight          [ ]
+  MFNode     axisDevicesFrontLeft           [ ]
+  MFNode     axisDevicesRearRight           [ ]
+  MFNode     axisDevicesRearLeft            [ ]
+  SFString   data                           ""
 }
 ```
 

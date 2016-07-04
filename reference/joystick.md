@@ -17,7 +17,7 @@ In C++, Python and Java the joystick functions are in a dedicated class called
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/joystick.h>
 
 void wb_joystick_enable(int ms)
@@ -43,7 +43,7 @@ The `wb_joystick_get_sampling_period()` function returns the value previously pa
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/joystick.h>
 
 bool wb_joystick_is_connected(int ms)
@@ -62,7 +62,7 @@ Once the joystick is enabled, this function can be used to check if a free joyst
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/joystick.h>
 
 int  wb_joystick_get_number_of_axes()
@@ -83,7 +83,7 @@ The `wb_joystick_get_axis_value()` function returns the current value of the axi
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/joystick.h>
 
 int wb_joystick_get_pressed_button()
@@ -105,7 +105,7 @@ All the buttons pressed can be read by calling the `wb_joystick_get_key()` funct
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/joystick.h>
 
 void wb_joystick_set_constant_force(int level);

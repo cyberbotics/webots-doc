@@ -296,8 +296,7 @@ generated, the rfcomm file has to be given to Webots through an environment
 variable. It may also occur that the rfcomm file doesn't have the read rights. A
 typical pairing can be done using the following commands:
 
-```
-
+```sh
 # Get the e-puck MAC adress
 $ hcitool scan
 Scanning ...
@@ -349,7 +348,7 @@ For using this feature, your code has to be written in C and to use the C Webots
 API. Moreover, you need to define a specific Makefile called "Makefile.e-puck"
 in the controller directory. This Makefile must include the following file:
 
-```
+```makefile
 include $(WEBOTS_HOME)/projects/robots/e-puck/transfer/libepuck/Makefile.include
 ```
 
@@ -366,7 +365,7 @@ subdirectory of your Webots directory.
 
 When cross-compiling on Linux 64 bit, it may occur such kind of error:
 
-```
+```sh
 /bin/sh: 1:
 pic30-elf-gcc: not found
 make: *** [e-puck_cross-compilation-pic30.o] Error 127
@@ -375,6 +374,6 @@ make: *** [e-puck_cross-compilation-pic30.o] Error 127
 This error can be fixed simply by installing the following packets from a
 terminal:
 
-```
+```sh
 sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386
 ```

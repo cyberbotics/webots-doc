@@ -6,7 +6,7 @@ This manager implement the `DARwInOPVisionManager` class.
 
 **DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
 
-``` c
+```c
 #include <DARwInOPVisionManager.hpp>
 
 DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)
@@ -43,7 +43,7 @@ HSV colorspace.
 
 **bool getBallCenter(double &x, double &y, const unsigned char * image)** - *Get the position of the target object*
 
-``` c
+```c
 #include <DARwInOPVisionManager.hpp>
 
 getBallCenter(double x, double y, const unsigned char * image)
@@ -67,7 +67,7 @@ the target object, this method proceeds to the following steps:
 
 **bool isDetected(int x, int y);** - *Determine if a pixel of the image is part of the target*
 
-``` c
+```c
 #include <DARwInOPVisionManager.hpp>
 
 isDetected(int x, int y)

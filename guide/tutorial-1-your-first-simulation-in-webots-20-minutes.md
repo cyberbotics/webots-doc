@@ -257,27 +257,29 @@ Modify the program by inserting an include statement (`#include
 <webots/differential_wheels.h>`), and by applying a differential wheels command
 (`wb_differential_wheels_set_speed(100, 100)`) :
 
->     #include <webots/robot.h>
+> ```c
+> #include <webots/robot.h>
 >
->     // Added a new include file
->     #include <webots/differential_wheels.h>
+> // Added a new include file
+> #include <webots/differential_wheels.h>
 >
->     #define TIME_STEP 64
+> #define TIME_STEP 64
 >
->     int main(int argc, char **argv)
->     {
->       wb_robot_init();
+> int main(int argc, char **argv)
+> {
+>   wb_robot_init();
 >
->       // set up the speeds
->       wb_differential_wheels_set_speed(100, 100);
+>   // set up the speeds
+>   wb_differential_wheels_set_speed(100, 100);
 >
->       do {
->       } while (wb_robot_step(TIME_STEP) != -1);
+>   do {
+>   } while (wb_robot_step(TIME_STEP) != -1);
 >
->       wb_robot_cleanup();
+>   wb_robot_cleanup();
 >
->       return 0;
->     }
+>   return 0;
+> }
+> ```
 
 <!-- -->
 

@@ -575,22 +575,22 @@ replaced by the actual value already existing in the environment. The Webots
 Here is an example of a typical runtime.ini file.
 
 ```c
-       ; typical runtime.ini
+; typical runtime.ini
 
-       [environment variables with relative paths]
-       WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
+[environment variables with relative paths]
+WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
 
-       [environment variables]
-       ROS_MASTER_URI = http://localhost:11311
+[environment variables]
+ROS_MASTER_URI = http://localhost:11311
 
-       [environment variables for Windows]
-       NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
+[environment variables for Windows]
+NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
 
-       [environment variables for Mac OS X]
-       NAOQI_LIBRARY_FOLDER = lib
+[environment variables for Mac OS X]
+NAOQI_LIBRARY_FOLDER = lib
 
-       [environment variables for Linux]
-       NAOQI_LIBRARY_FOLDER = lib
+[environment variables for Linux]
+NAOQI_LIBRARY_FOLDER = lib
 ```
 
 ### Languages settings
@@ -603,11 +603,11 @@ you to specific options that will be passed immediately to the language
 interpreter. For example:
 
 ```c
-       ; runtime.ini for a Python controller on Mac OS X
+; runtime.ini for a Python controller on Mac OS X
 
-       [python]
-       COMMAND = /opt/local/bin/python2.7
-       OPTIONS = -m package.name.given
+[python]
+COMMAND = /opt/local/bin/python2.7
+OPTIONS = -m package.name.given
 ```
 
 In the above example, the resulting command issued by Webots will be:
@@ -616,15 +616,15 @@ followed by the value of the `controllerArgs` field of the corresponding `Robot`
 node.
 
 ```c
-       ; runtime.ini for a Java controller on Windows
+; runtime.ini for a Java controller on Windows
 
-       [environment variables with relative paths]
-       CLASSPATH = ../lib/MyLibrary.jar
-       JAVA_LIBRARY_PATH = ../lib
+[environment variables with relative paths]
+CLASSPATH = ../lib/MyLibrary.jar
+JAVA_LIBRARY_PATH = ../lib
 
-       [java]
-       COMMAND = javaw.exe
-       OPTIONS = -Xms6144k
+[java]
+COMMAND = javaw.exe
+OPTIONS = -Xms6144k
 ```
 
 > **note**:

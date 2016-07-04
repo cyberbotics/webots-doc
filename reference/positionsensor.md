@@ -33,7 +33,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/position_sensor.h>
 
 void wb_position_sensor_enable(WbDeviceTag tag, int ms)

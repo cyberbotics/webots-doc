@@ -50,7 +50,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_compass)}, {[Java](java-api.md#java_compass)}, {[Python](python-api.md#python_compass)}, {[Matlab](matlab-api.md#matlab_compass)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/compass.h>
 
 void wb_compass_enable(WbDeviceTag tag, int ms)
@@ -76,7 +76,7 @@ measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the [Compass](#compass) device. Here is the internal
 algorithm of `wb_compass_get_values()` in pseudo-code:
 
-```
+```c
 float[3] wb_compass_get_values() {
   float[3] n = getGlobalNorthDirection();
   n = rotateToCompassOrientation3D(n);

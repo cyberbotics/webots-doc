@@ -66,7 +66,7 @@ value in the interval (0.0, inf).
 
 {[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gps.h>
 
 void wb_gps_enable(WbDeviceTag tag, int ms)
@@ -121,7 +121,7 @@ period they must be copied.
 
 {[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gps.h>
 
 int wb_gps_get_coordinate_system(WbDeviceTag tag)
@@ -142,7 +142,7 @@ WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 
 {[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gps.h>
 
 const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees)

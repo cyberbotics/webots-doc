@@ -206,7 +206,7 @@ specified by calling the `wb_servo_set_velocity()` function. This will initiate
 a continuous servo motion at the desired speed, while taking into account the
 specified acceleration and motor force. Example:
 
-```
+```c
 wb_servo_set_position(servo, INFINITY);
 wb_servo_set_velocity(servo, 6.28);  // 1 rotation per second
 ```
@@ -469,7 +469,7 @@ Please note the dummy [Physics](physics.md) and the 1 millimeter
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
 void wb_servo_set_position(WbDeviceTag tag, double position)
@@ -579,7 +579,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
 void wb_servo_enable_position(WbDeviceTag tag, int ms)
@@ -617,7 +617,7 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
 void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms)
@@ -675,7 +675,7 @@ the device is disabled.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
 void wb_servo_set_force(WbDeviceTag tag, double force)
@@ -718,7 +718,7 @@ dampers with controllable properties. The example in
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
 int wb_servo_get_type(WbDeviceTag tag)

@@ -6,7 +6,7 @@
 
 {[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
-``` c
+```c
 #include <webots/utils/motion.h>
 
 WbMotionRef wbu_motion_new(const char *filename)
@@ -55,7 +55,7 @@ if (! walk->isValid()) {
 
 {[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
-``` c
+```c
 #include <webots/utils/motion.h>
 
 void wbu_motion_play(WbMotionRef motion)
@@ -121,7 +121,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 {[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
-``` c
+```c
 #include <webots/utils/motion.h>
 
 bool wbu_motion_is_over(WbMotionRef motion)

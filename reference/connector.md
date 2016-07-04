@@ -202,7 +202,7 @@ To be functional, a [Connector](#connector) node requires the presence of a
 
 {[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/connector.h>
 
 void wb_connector_enable_presence(WbDeviceTag tag, int ms)
@@ -268,7 +268,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 {[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/connector.h>
 
 void wb_connector_lock(WbDeviceTag tag)

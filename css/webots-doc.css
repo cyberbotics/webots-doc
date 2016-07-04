@@ -116,11 +116,14 @@
   color: black;
 }
 .webots-doc pre {
-  margin: 30px;
-  background-color: #ffeeee;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  background-color: #eee;
   overflow-x: auto;
 }
 .webots-doc code {
+  padding: 0px;
   background: transparent;
   color: #444;
 }

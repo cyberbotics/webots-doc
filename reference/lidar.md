@@ -162,7 +162,7 @@ The internal depth camera is using a horizontal field of view defined in the `fi
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 void wb_lidar_enable(WbDeviceTag tag, int ms)
@@ -190,7 +190,7 @@ The `wb_lidar_get_sampling_period()` function returns the period given into the
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 void wb_lidar_enable_point_cloud(WbDeviceTag tag)
@@ -219,7 +219,7 @@ To get the point cloud array, enabling the point cloud is not sufficient. First 
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 const float *wb_lidar_get_range_image(WbDeviceTag tag)
@@ -261,7 +261,7 @@ are identical but their handling is of course different.
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag)
@@ -295,7 +295,7 @@ number of points associated to).
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 double wb_lidar_get_frequency(WbDeviceTag tag)
@@ -319,7 +319,7 @@ range [minFrequency; maxFrequency].
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 int wb_lidar_get_horizontal_resolution(WbDeviceTag tag)
@@ -341,7 +341,7 @@ The `wb_lidar_get_number_of_layers()` returns the number of layers of the lidar.
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 double wb_lidar_get_min_frequency(WbDeviceTag tag)
@@ -362,7 +362,7 @@ head of the lidar (in case of rotating lidar).
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 double wb_lidar_get_fov(WbDeviceTag tag)
@@ -384,7 +384,7 @@ lidar.
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
 double wb_lidar_get_min_range(WbDeviceTag tag)

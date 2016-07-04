@@ -52,14 +52,14 @@ First of all, you may want to configure your APT package manager by adding the C
 You can easily add it from the `Software and Updates` application.
 In the `Other Software` tab, click on the `Add...` button and copy the following line:
 
-```
+```sh
 deb http://www.cyberbotics.com/debian/ binary-amd64/
 ```
 
 When you will close the window, the APT packages list should be automatically updated.
 Otherwise you can manually execute the following command:
 
-```
+```sh
 apt-get update
 ```
 
@@ -67,13 +67,13 @@ Optionally, Webots can be autentified thanks to the `Cyberbotics.asc` signature
 file which can be downloaded [here](http://www.cyberbotics.com/linux), using
 this command:
 
-```
+```sh
 apt-key add /path/to/Cyberbotics.asc
 ```
 
 Then proceed to the installation of Webots using:
 
-```
+```sh
 apt-get install webots
 ```
 
@@ -90,13 +90,13 @@ Once uncompressed, it is recommended to set the WEBOTS\_HOME environment
 variable to point to the webots directory obtained from the uncompression of the
 tarball:
 
-```
+```sh
 tar xjf webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}-x86-64.tar.bz2
 ```
 
 and
 
-```
+```sh
 export WEBOTS_HOME=/home/username/webots
 ```
 
@@ -117,13 +117,14 @@ If a previous version of Webots is already installed, then the text on the butto
 Note that GNOME Software App distributed in the first release of Ubuntu 16.04 contains a bug preventing the installation of third-party packages.
 
 Alternatively, the DEB package can also be installed using `apt` or `gdebi` with the `root` privileges:
-```
+
+```sh
 apt install ./webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
 or
 
-```
+```sh
 gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 

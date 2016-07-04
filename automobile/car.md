@@ -8,19 +8,19 @@ function of the transmission type set in the parameters.
 
 ```
 Car {
-    #fields specific to Car
-      SFString   type                           "traction"
-      SFString   engineType                     "combustion"
-      SFFloat    brakeCoefficient               500
-      SFFloat    time0To100                     10
-      SFFloat    engineMaxTorque                250
-      SFFloat    engineMaxPower                 50000
-      SFFloat    engineMinRPM                   1000
-      SFFloat    engineMaxRPM                   4500
-      SFVec3f    engineFunctionCoefficients     150 0.1 0
-      MFFloat    gearRatio                      [-12 10 7 5 2.5 1]
-      SFFloat    hybridPowerSplitRatio          0.25
-      SFFloat    hybridPowerSplitRPM            3000
+  #fields specific to Car
+  SFString   type                           "traction"
+  SFString   engineType                     "combustion"
+  SFFloat    brakeCoefficient               500
+  SFFloat    time0To100                     10
+  SFFloat    engineMaxTorque                250
+  SFFloat    engineMaxPower                 50000
+  SFFloat    engineMinRPM                   1000
+  SFFloat    engineMaxRPM                   4500
+  SFVec3f    engineFunctionCoefficients     150 0.1 0
+  MFFloat    gearRatio                      [-12 10 7 5 2.5 1]
+  SFFloat    hybridPowerSplitRatio          0.25
+  SFFloat    hybridPowerSplitRPM            3000
 }
 ```
 
@@ -69,20 +69,20 @@ from `extensionSlot`.
 
 ```
 AutomobileLights {
-      MFNode    front           NULL
-      MFColor   frontColor      [ 0.8 0.8 0.8 ]
-      MFNode    rightIndicator  NULL
-      MFNode    leftIndicator   NULL
-      MFColor   indicatorColor  [ 1 0.7 0.1 ]
-      MFNode    antifog         NULL
-      MFColor   antifogColor    [ 0.8 0.8 0.8 ]
-      MFNode    braking         NULL
-      MFColor   brakingColor    [ 0.7 0.12 0.12 ]
-      MFNode    rear            NULL
-      MFColor   rearColor       [ 0.8 0.8 0.8 ]
-      MFNode    backwards       NULL
-      MFColor   backwardsColor  [ 0.7 0.12 0.12 ]
-  }
+  MFNode    front           NULL
+  MFColor   frontColor      [ 0.8 0.8 0.8 ]
+  MFNode    rightIndicator  NULL
+  MFNode    leftIndicator   NULL
+  MFColor   indicatorColor  [ 1 0.7 0.1 ]
+  MFNode    antifog         NULL
+  MFColor   antifogColor    [ 0.8 0.8 0.8 ]
+  MFNode    braking         NULL
+  MFColor   brakingColor    [ 0.7 0.12 0.12 ]
+  MFNode    rear            NULL
+  MFColor   rearColor       [ 0.8 0.8 0.8 ]
+  MFNode    backwards       NULL
+  MFColor   backwardsColor  [ 0.7 0.12 0.12 ]
+}
 ```
 
 Here again, you can easily create your own PROTO that inherits from the

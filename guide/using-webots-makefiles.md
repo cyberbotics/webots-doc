@@ -42,14 +42,14 @@ should not be used in any language other than C or C++.
 For example, if a controller has several ".c" source files, then this can be
 specified like this in the controller's Makefile:
 
-```
+```makefile
 C_SOURCES = my_controller.c my_second_file.c my_third_file.c
 ```
 
 If a project has several ".cpp" source files, then this can be specified like
 this:
 
-```
+```makefile
 CXX_SOURCES = my_controller.cpp my_second_file.cpp my_third_file.cc
 ```
 
@@ -95,7 +95,7 @@ C:\Users\YourName\XYZLib\lib\XYZLib.dll
 
 Then here is how this should be specified in the Makefile:
 
-```
+```makefile
 INCLUDE = -I"C:\Users\YourName\XYZLib\include"
 LIBRARIES = -L"C:\Users\YourName\XYZLib\lib" -lXYZLib
 ```
@@ -117,7 +117,7 @@ functions starting with the `wb` prefix and provided by C header files, e.g.
 `#include <webots/robot.h>`. To use the C API in a C++ controller you need to
 add this line in your controller Makefile:
 
-```
+```makefile
 USE_C_API = true
 ```
 
@@ -126,7 +126,7 @@ USE_C_API = true
 If you need to debug your controller, you need to recompile it with the `debug`
 target from a terminal:
 
-```
+```sh
 make debug
 ```
 

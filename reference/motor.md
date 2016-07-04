@@ -250,7 +250,7 @@ Warnings are displayed if theses rules are not respected.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
 void wb_motor_set_position(WbDeviceTag tag, double position)
@@ -383,7 +383,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
 void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms)
@@ -456,7 +456,7 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
 void wb_motor_set_force(WbDeviceTag tag, double force)
@@ -502,7 +502,7 @@ dampers with controllable properties. The example in
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
 int wb_motor_get_type(WbDeviceTag tag)

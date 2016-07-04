@@ -30,13 +30,13 @@ of them are visible in the following picture):
 
 ```
 SimpleTree {
-     SFString   type                 "cherry tree"
-     SFBool     withSnow             FALSE
-     SFFloat    height               4
-     SFFloat    radius               2
-     SFInt32    subdivision          2
-     SFBool     enableBoundingObject TRUE
- }
+  SFString   type                 "cherry tree"
+  SFBool     withSnow             FALSE
+  SFFloat    height               4
+  SFFloat    radius               2
+  SFInt32    subdivision          2
+  SFBool     enableBoundingObject TRUE
+}
 ```
 
 #### SimpleTree Field Summary
@@ -63,16 +63,16 @@ large amount of trees.
 
 ```
 Forest {
-     MFString   treesFiles           [ ]
-     MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
-     SFFloat    density              0.2
-     SFString   type                 "random"
-     SFBool     withSnow             FALSE
-     SFFloat    maxHeight            6
-     SFFloat    minHeight            2
-     SFFloat    maxRadius            3
-     SFFloat    minRadius            1
- }
+  MFString   treesFiles           [ ]
+  MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
+  SFFloat    density              0.2
+  SFString   type                 "random"
+  SFBool     withSnow             FALSE
+  SFFloat    maxHeight            6
+  SFFloat    minHeight            2
+  SFFloat    maxRadius            3
+  SFFloat    minRadius            1
+}
 ```
 
 #### Forest Field Summary

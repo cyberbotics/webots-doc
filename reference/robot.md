@@ -314,7 +314,7 @@ function returns 0.
 
 **See also**
 
-[wb_robot_step](#wb_robot_step).
+[wb\_robot\_step](#wb_robot_step).
 
 ---
 
@@ -363,8 +363,9 @@ Python.
 
 **See also**
 
-[wb_robot_get_device](#wb_robot_get_device).
-[wb_robot_step](#wb_robot_step).
+[wb\_robot\_get\_device](#wb_robot_get_device).
+
+[wb\_robot\_step](#wb_robot_step).
 
 
 ---
@@ -728,7 +729,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[wb_robot_mutex_new](#wb_robot_mutex_new).
+[wb\_robot\_mutex\_new](#wb_robot_mutex_new).
 
 ---
 
@@ -766,7 +767,7 @@ other threads to lock it.
 
 **See also**
 
-[wb_robot_task_new](#wb_robot_task_new).
+[wb\_robot\_task\_new](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

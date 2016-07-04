@@ -359,7 +359,7 @@ function `getDistanceSensor` will return a reference to a
 found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
-> Note: These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb_robot_get_device](#wb_robot_get_device).
+> Note: These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
 
 **See also**
 

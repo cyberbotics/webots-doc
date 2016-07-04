@@ -309,7 +309,7 @@ identifier will be used subsequently for enabling, sending commands to, or
 reading data from this device. If the specified device is not found, the
 function returns 0.
 
-> Note: This functions is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
+> Note: This function is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
 
 
 **See also**
@@ -728,7 +728,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[section](#wb_robot_mutex_new).
+[wb_robot_mutex_new](#wb_robot_mutex_new).
 
 ---
 
@@ -766,7 +766,7 @@ other threads to lock it.
 
 **See also**
 
-[section](#wb_robot_task_new).
+[wb_robot_task_new](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

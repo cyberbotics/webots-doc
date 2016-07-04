@@ -309,9 +309,12 @@ identifier will be used subsequently for enabling, sending commands to, or
 reading data from this device. If the specified device is not found, the
 function returns 0.
 
+> Note: This functions is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
+
+
 **See also**
 
-[section](#wb_robot_step).
+[wb_robot_step](#wb_robot_step).
 
 ---
 
@@ -356,9 +359,13 @@ function `getDistanceSensor` will return a reference to a
 found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
+> Note: These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb_robot_get_device](#wb_robot_get_device).
+
 **See also**
 
-[section](#wb_robot_step).
+[wb_robot_get_device](#wb_robot_get_device).
+[wb_robot_step](#wb_robot_step).
+
 
 ---
 

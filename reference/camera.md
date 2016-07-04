@@ -408,14 +408,14 @@ components. Each of these four functions take an `int` pixel argument and return
 an `int` color/gray component in the range [0..255]. Here is an example:
 
 > ```java
->  int[] image = camera.getImage();
->  for (int i=0; i < image.length; i++) {
->    int pixel = image[i];
->    int r = Camera.pixelGetRed(pixel);
->    int g = Camera.pixelGetGreen(pixel);
->    int b = Camera.pixelGetBlue(pixel);
->    System.out.println("red=" + r + " green=" + g + " blue=" + b);
->  }
+> int[] image = camera.getImage();
+> for (int i=0; i < image.length; i++) {
+>   int pixel = image[i];
+>   int r = Camera.pixelGetRed(pixel);
+>   int g = Camera.pixelGetGreen(pixel);
+>   int b = Camera.pixelGetBlue(pixel);
+>   System.out.println("red=" + r + " green=" + g + " blue=" + b);
+> }
 > ```
 
 <!-- -->
@@ -426,11 +426,11 @@ char *` of the C API. `imageGet*`-like functions can be used to get the channels
 of the camera Here is an example:
 
 > ```python
->  #...
->  cameraData = camera.getImage()
+> #...
+> cameraData = camera.getImage()
 >
->  # get the gray component of the pixel (5,10)
->  gray = Camera.imageGetGray(cameraData, camera.getWidth(), 5, 10)
+> # get the gray component of the pixel (5,10)
+> gray = Camera.imageGetGray(cameraData, camera.getWidth(), 5, 10)
 > ```
 
 > Another way to use the camera in Python is to get the image by `getImageArray()`
@@ -438,15 +438,15 @@ which returns a `list<list<list<int>>>`. This three dimensional list can be
 directly used for accessing to the pixels. Here is an example:
 
 > ```python
->  image = camera.getImageArray()
->  # display the components of each pixel
->  for x in range(0,camera.getWidth()):
->    for y in range(0,camera.getHeight()):
->      red   = image[x][y][0]
->      green = image[x][y][1]
->      blue  = image[x][y][2]
->      gray  = (red + green + blue) / 3
->      print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
+> image = camera.getImageArray()
+> # display the components of each pixel
+> for x in range(0,camera.getWidth()):
+>   for y in range(0,camera.getHeight()):
+>     red   = image[x][y][0]
+>     green = image[x][y][1]
+>     blue  = image[x][y][2]
+>     gray  = (red + green + blue) / 3
+>     print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
 > ```
 
 <!-- -->
@@ -461,22 +461,22 @@ camera's image and the float values are the metric distance values deduced from
 the OpenGL z-buffer.
 
 > ```matlab
->  camera = wb_robot_get_device('camera');
->  wb_camera_enable(camera,TIME_STEP);
->  half_width = floor(wb_camera_get_width(camera) / 2);
->  half_height = floor(wb_camera_get_height(camera) / 2);
->  % color camera image
->  image = wb_camera_get_image(camera);
->  red_middle_point = image(half_width,half_heigth,1);% red color component of the pixel lying in the middle of the image
->  green_middle_line = sum(image(half_width,:,2));% sum of the green color over the vertical middle line of the image
->  blue_overall = sum(sum(image(:,:,3));% sum of the blue color over all the pixels in the image
->  fprintf('red_middle_point = %d, green_middle_line = %d, blue_overall = %d\n', red_middle_point, green_middle_line, blue_overall);
->  % range-finder camera image
->  image = wb_camera_get_range_image(camera);
->  imagesc(image,[0 1]);
->  colormap(gray);
->  drawnow;
->  distance = min(min(image))% distance to the closest point seen by the camera
+> camera = wb_robot_get_device('camera');
+> wb_camera_enable(camera,TIME_STEP);
+> half_width = floor(wb_camera_get_width(camera) / 2);
+> half_height = floor(wb_camera_get_height(camera) / 2);
+> % color camera image
+> image = wb_camera_get_image(camera);
+> red_middle_point = image(half_width,half_heigth,1);% red color component of the pixel lying in the middle of the image
+> green_middle_line = sum(image(half_width,:,2));% sum of the green color over the vertical middle line of the image
+> blue_overall = sum(sum(image(:,:,3));% sum of the blue color over all the pixels in the image
+> fprintf('red_middle_point = %d, green_middle_line = %d, blue_overall = %d\n', red_middle_point, green_middle_line, blue_overall);
+> % range-finder camera image
+> image = wb_camera_get_range_image(camera);
+> imagesc(image,[0 1]);
+> colormap(gray);
+> drawnow;
+> distance = min(min(image))% distance to the closest point seen by the camera
 > ```
 
 ---

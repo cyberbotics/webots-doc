@@ -1,7 +1,7 @@
 ## A typical OpenstreetMap importer configuration file
 
 ```ini
-# BUILDINGS DEFAULTS SETTINGS #
+  # BUILDINGS DEFAULTS SETTINGS #
 
   [building]
   ignore: FALSE

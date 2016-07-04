@@ -13,6 +13,7 @@ automatically from the constructor/destructor of the
 The following program shows how to set the cruising speed and the steering angle
 in Java:
 
+> ```java
 >     import com.cyberbotics.webots.controller.Robot;
 >     import com.cyberbotics.webots.automobile.Driver;
 >
@@ -27,6 +28,7 @@ in Java:
 >        };
 >      }
 >     }
+> ```
 
 
 
@@ -34,8 +36,7 @@ in Java:
 The following program shows how to set the cruising speed and the steering angle
 in Python:
 
->     """vehicle_driver controller."""
->     
+> ```python
 >     import math
 >     import os
 >     import sys
@@ -56,3 +57,4 @@ in Python:
 >     while driver.step() != -1:
 >         angle = 0.3 * math.cos(driver.getTime())
 >         driver.setSteeringAngle(angle)
+> ```

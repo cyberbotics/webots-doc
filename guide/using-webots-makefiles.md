@@ -126,7 +126,7 @@ USE_C_API = true
 If you need to debug your controller, you need to recompile it with the `debug`
 target from a terminal:
 
-```shell
+```sh
 make debug
 ```
 

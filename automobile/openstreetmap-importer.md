@@ -10,7 +10,7 @@ in real-time). And then convert it using the script.
 
 The script is written in python, a typical usage is:
 
-```shell
+```sh
 python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
 ```
 

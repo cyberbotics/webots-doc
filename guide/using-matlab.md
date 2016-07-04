@@ -44,14 +44,14 @@ to make "matlab" globally accessible. Otherwise you can create the link at
 anytime afterwards with this shell command (please change according to your
 actual MATLAB installation directory and version):
 
-```bash
+```sh
 $ sudo ln -s /usr/local/MATLAB/R2016a/bin/matlab /usr/local/bin/matlab
 ```
 
 Similarly, on Mac OS X, if Webots is unable to find the "matlab" startup script
 then you should add a symlink in "/usr/bin":
 
-```bash
+```sh
 $ sudo ln -s /Applications/MATLAB_R2016a.app/bin/matlab /usr/bin/matlab
 ```
 

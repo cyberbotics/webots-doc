@@ -18,7 +18,7 @@ responsive, this usually indicates the crash of a controller. This can easily be
 confirmed by listing the active processes at this moment: For example on Linux,
 type:
 
-```bash
+```sh
 $ ps -e
 ...
 12751 pts/1    00:00:16 webots
@@ -55,7 +55,7 @@ CFLAGS = -g
 Then you must recompile the controller, either by using the `Clean` and `Build`
 buttons of the Webots text editor or directly in a terminal:
 
-```bash
+```sh
 $ make clean
 $ make
 ...
@@ -69,7 +69,7 @@ using `ps -e` (Linux) or `ps -x` (Mac OS X), or using the *Task Manager*
 (Windows). The PID is in the left-most column of output of `ps` as shown above.
 Then open a terminal and start the debugger by typing:
 
-```bash
+```sh
 $ gdb
 ...
 (gdb) attach PID
@@ -98,7 +98,7 @@ Program received signal SIGSEGV, Segmentation fault.
 This indicates the location of the problem. You can examine the call stack more
 precisely by using the `where` command of `gdb`. For example type:
 
-```bash
+```sh
 (gdb) where
 #0 0x00cd6dd5 in _IO_str_overflow_internal() from /lib/tls/libc.so.6
 #1 0x00cd596f in _IO_default_xsputn_internal() from /lib/tls/libc.so.6
@@ -119,7 +119,7 @@ controller is still in memory you can query the values of some variables in
 order to understand what happened. For example, you can use the `frame` and
 `print` commands:
 
-```bash
+```sh
 (gdb) frame 6
 #6  0x08048953 in run (ms=0) at soccer_supervisor.c:106
 106         sprintf(time_string, "%02d:%02d", (int) (time / 60),

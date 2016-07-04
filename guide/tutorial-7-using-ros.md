@@ -12,7 +12,7 @@ different platform or an ancient distribution of ROS.
 In order to use these nodes, you will first need to install the ROS framework.
 To install the last version of ROS on Ubuntu use the following commands:
 
-```bash
+```sh
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 0xB01FA116
 sudo apt-get update
@@ -39,7 +39,7 @@ your catkin workspace.
 If you haven't created any catkin workspace yet, you can create one with the
 following commands:
 
-```bash
+```sh
 mkdir -p catkin_ws/src
 cd catkin_ws/src
 catkin_init_workspace
@@ -56,7 +56,7 @@ The `webots_ros` package already contains a "CmakeList.txt" with build
 instructions for the package. All you have to do, in order to build the package,
 is to run:
 
-```bash
+```sh
 cd catkin_ws
 catkin_make
 ```
@@ -67,7 +67,7 @@ Now that you have built the package, you can run the example you want. You will
 first have to launch the master node with the following commands from the catkin
 workspace:
 
-```bash
+```sh
 source devel/setup.bash
 roscore
 ```
@@ -86,7 +86,7 @@ variables or in a runtime.ini file in the controller directory.
 You can then start the ROS node corresponding to this example in a new terminal
 using the following commands from the catkin workspace:
 
-```bash
+```sh
 source devel/setup.bash
 rosrun webots_ros [node_name]
 ```
@@ -95,7 +95,7 @@ For example, if you opened the world
 "projects/languages/ros/worlds/panoramic\_view\_recorder.wbt" you will have to
 start the `panoramic_view_recorder` node with the following command:
 
-```bash
+```sh
 rosrun webots_ros panoramic_view_recorder
 ```
 

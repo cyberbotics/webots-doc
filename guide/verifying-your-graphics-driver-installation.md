@@ -36,14 +36,14 @@ may also solve various problems, i.e., odd graphics rendering or Webots crashes.
 On Linux, use this command to check if a hardware accelerated driver is
 installed:
 
-```bash
+```sh
 $ glxinfo | grep OpenGL
 ```
 
 If the output contains the string "NVIDIA", "ATI", or "Intel", this indicates
 that a hardware driver is currently installed:
 
-```bash
+```sh
 $ glxinfo | grep OpenGL
 OpenGL vendor string: NVIDIA Corporation
 OpenGL renderer string: GeForce 8500 GT/PCI/SSE2
@@ -55,7 +55,7 @@ If you read "Mesa", "Software Rasterizer" or "GDI Generic", this indicates that
 the hardware driver is currently not installed and that your computer is
 currently using a slow software emulation of OpenGL:
 
-```bash
+```sh
 $ glxinfo | grep OpenGL
 OpenGL vendor string: Mesa project: www.mesa3d.org
 OpenGL renderer string: Mesa GLX Indirect
@@ -69,7 +69,7 @@ On Ubuntu the driver can usually be installed automatically from the `Additional
 Drivers` tab of the `Software & Update` window. Otherwise you can find out what
 graphics hardware is installed on your computer by using this command:
 
-```bash
+```sh
 $ lspci | grep VGA
 01:00.0 VGA compatible controller: nVidia Corporation GeForce 8500 GT (rev a1)
 ```

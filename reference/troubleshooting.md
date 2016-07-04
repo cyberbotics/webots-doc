@@ -21,7 +21,7 @@ CFLAGS=-g
 Then you must rebuild the plugin using Webots Text Editor or using these
 commands in a terminal:
 
-```bash
+```sh
 $ make clean
 $ make
 ```
@@ -30,7 +30,7 @@ Make sure that the *-g* flag appears in the compilation line. Once you have
 rebuilt the plugin, you can quit Webots, and restart it using `gdb` in a
 terminal, like this:
 
-```bash
+```sh
 $ cd /usr/local/webots
 $ export LD_LIBRARY_PATH=/usr/local/webots/lib:$LD_LIBRARY_PATH
 $ gdb ./webots-bin

@@ -42,7 +42,7 @@ From now you should be able to open the generated world file directly in Webots:
 
 We can also use the previously downloaded map to generate the SUMO network file. You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for this:
 
-```shell
+```sh
 netconvert --osm-files map.osm -o sumo.net.xml --geometry.remove --roundabouts.guess --ramps.guess --junctions.join --osm.railway.oneway-default --tls.guess-signals --tls.discard-simple --tls.join --proj "+proj=robin +lon_0=longitude_value +lat_0=latitude_value +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs"
 ```
 
@@ -53,7 +53,7 @@ Both the [OpenStreetMap importer](openstreetmap-importer.md) and [netconvert](ht
 
 You can then generate the route file, SUMO provides several ways to generate route files. You may for example generate a [flow file](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) and then use [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) to generate the route file for you:
 
-```shell
+```sh
 duarouter --flows sumo.flow.xml --net-file sumo.net.xml --output-file sumo.rou.xml
 ```
 

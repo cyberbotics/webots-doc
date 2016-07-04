@@ -30,8 +30,6 @@ in Java:
 >     }
 > ```
 
-
-
 > **note** [Python]:
 The following program shows how to set the cruising speed and the steering angle
 in Python:

@@ -122,6 +122,7 @@
   overflow-x: auto;
 }
 .webots-doc code {
+  padding: 0px;
   background: transparent;
   color: #444;
 }

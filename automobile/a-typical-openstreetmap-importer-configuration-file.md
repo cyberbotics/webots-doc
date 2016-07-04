@@ -1,6 +1,6 @@
 ## A typical OpenstreetMap importer configuration file
 
-```
+```ini
 # BUILDINGS DEFAULTS SETTINGS #
 
   [building]

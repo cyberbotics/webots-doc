@@ -50,7 +50,7 @@ methods:
 |                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------- |
 | from automobile import Car                                                                                                   |
-| public class [Car](car-library.md) ([Driver](#python_driver)) :                                                              |
+| class [Car](car-library.md) ([Driver](#python_driver)) :                                                                     |
 | &nbsp;&nbsp; TRACTION, PROPULSION, FOUR\_BY\_FOUR                                                                            |
 | &nbsp;&nbsp; COMBUTSION\_ENGINE, ELECTRIC\_ENGINE, PARALLEL\_HYBRID\_ENGINE, POWER\_SPLIT\_HYBRID\_ENGINE                    |
 | &nbsp;&nbsp; WHEEL\_FRONT\_RIGHT, WHEEL\_FRONT\_LEFT, WHEEL\_REAR\_RIGHT, WHEEL\_REAR\_LEFT, WHEEL\_NB                       |

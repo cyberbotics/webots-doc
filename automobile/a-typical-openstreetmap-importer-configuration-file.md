@@ -79,7 +79,7 @@ ignore: TRUE
 [road_motorway]
 ignore: FALSE
 border: FALSE
-# this is for oneway
+# this is for 3 lanes oneway
 laneNumber: 3
 laneWidth: 3.5
 
@@ -92,7 +92,7 @@ laneWidth: 4
 [road_trunk]
 ignore: FALSE
 border: FALSE
-# this is for oneway
+# this is for 2 lanes oneway
 laneNumber: 2
 laneWidth: 3
 

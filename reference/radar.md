@@ -150,7 +150,7 @@ The power returned by the target is computed using the following formulas:
 
 {[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/radar.h>
 
 void wb_radar_enable(WbDeviceTag tag, int ms)
@@ -178,7 +178,7 @@ The `wb_radar_get_sampling_period()` function returns the period given into the
 
 {[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/radar.h>
 
 double wb_radar_get_min_range(WbDeviceTag tag)
@@ -198,7 +198,7 @@ range of the radar.
 
 {[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/radar.h>
 
 double wb_radar_get_horizontal_fov(WbDeviceTag tag)
@@ -218,7 +218,7 @@ vertical field of view of the radar.
 
 {[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/radar.h>
 
 int wb_radar_get_number_of_targets(WbDeviceTag tag)
@@ -237,7 +237,7 @@ by the radar.
 
 {[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/radar.h>
 
 const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag)

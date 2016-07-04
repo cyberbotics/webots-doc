@@ -233,7 +233,7 @@ restored.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 void wb_camera_enable(WbDeviceTag tag, int ms)
@@ -261,7 +261,7 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 double wb_camera_get_fov(WbDeviceTag tag)
@@ -289,7 +289,7 @@ not defined, then the functions `wb_camera_get_min_fov()` and
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 double wb_camera_get_focal_length(WbDeviceTag tag)
@@ -314,7 +314,7 @@ the other functions will return 0.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 int wb_camera_get_width(WbDeviceTag tag)
@@ -334,7 +334,7 @@ corresponding [Camera](#camera) node.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 double wb_camera_get_near(WbDeviceTag tag)
@@ -353,7 +353,7 @@ corresponding [Camera](#camera) node.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 const unsigned char *wb_camera_get_image(WbDeviceTag tag)
@@ -487,7 +487,7 @@ the OpenGL z-buffer.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality)

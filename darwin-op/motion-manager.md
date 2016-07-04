@@ -15,7 +15,7 @@ More informations about this tool provided by ROBOTIS is available on Robotis
 
 **DARwInOPMotionManager(webots::Robot *robot)** - *Motion Manager constructor*
 
-``` c
+```c
 #include <DARwInOPMotionManager.hpp>
 
 DARwInOPMotionManager(webots::Robot * robot)
@@ -31,7 +31,7 @@ The first parameter is the robot on which the algorithm applies.
 
 **void playPage(int id)** - *Plays a motion*
 
-``` c
+```c
 #include <DARwInOPMotionManager.hpp>
 
 playPage(int id)
@@ -53,7 +53,7 @@ method `playPage` with the second parameter set to false:
 
 **void playPage(int id, bool sync = true)**, **void step(int ms)**, **bool isMotionPlaying()** - *Starts the motion in Step-by-Step mode.*
 
-``` c
+```c
 #include <DARwInOPMotionManager.hpp>
 
 playPage(int id, bool sync)

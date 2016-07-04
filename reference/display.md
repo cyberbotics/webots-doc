@@ -86,7 +86,7 @@ restored.
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
 int wb_display_get_width(WbDeviceTag tag)
@@ -106,7 +106,7 @@ fields.
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
 void wb_display_set_color(WbDeviceTag tag, int color)
@@ -165,7 +165,7 @@ the magenta color.
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
 void wb_display_draw_pixel(WbDeviceTag tag, int x, int y)
@@ -203,8 +203,7 @@ vertices. The list of vertices must be defined into `px` and `py`. If the first
 pixel coordinates are not identical to the last ones, the loop is automatically
 closed. Here is an example :
 
-```
-
+```c
   const int px[] = {10,20,10, 0};
   const int py[] = {0, 10,20,10};
   wb_display_draw_polygon(display,px,py,4); // draw a diamond
@@ -239,7 +238,7 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
 WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format)

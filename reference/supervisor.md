@@ -44,7 +44,7 @@ controller.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_export_image(const char *filename, int quality)
@@ -76,7 +76,7 @@ scored.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 WbNodeRef wb_supervisor_node_get_from_def(const char *def)
@@ -99,7 +99,7 @@ It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
 example:
 
-```
+```c
 WbNodeRef node = wb_supervisor_node_get_from_def("ROBOT.JOINT.SOLID");
 ```
 
@@ -141,7 +141,7 @@ having to define a DEF name for it.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 WbNodeType wb_supervisor_node_get_type(WbNodeRef node)
@@ -184,7 +184,7 @@ integers can be directly compared with the output of the `Node::getType()`
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_node_remove(WbNodeRef node)
@@ -203,7 +203,7 @@ argument from the Webots scene tree.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 WbFieldRef wb_supervisor_node_get_field(WbNodeRef node, const char *field_name)
@@ -229,7 +229,7 @@ if the field corresponding to the field name is an hidden field.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 const double *wb_supervisor_node_get_position(WbNodeRef node)
@@ -294,7 +294,7 @@ deallocated at the next time step.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node)
@@ -324,7 +324,7 @@ deallocated at the next time step.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index)
@@ -359,7 +359,7 @@ deallocated at the next time step.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node)
@@ -383,7 +383,7 @@ shows how to use this function.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 bool wb_supervisor_node_get_static_balance(WbNodeRef node)
@@ -408,7 +408,7 @@ mass onto this plane lies inside or outside the support polygon.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 const double *wb_supervisor_node_get_velocity(WbNodeRef node)
@@ -441,7 +441,7 @@ y and z axes.
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_node_reset_physics(WbNodeRef node)
@@ -466,7 +466,7 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency)
@@ -530,7 +530,7 @@ represents the magenta color.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_simulation_quit(int status)
@@ -612,7 +612,7 @@ int main(int argc, char *argv[]) {
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_simulation_revert()
@@ -635,7 +635,7 @@ restarts.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 int wb_supervisor_simulation_get_mode()
@@ -683,7 +683,7 @@ clicking on the corresponding buttons in the user interface.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_load_world(const char *filename)
@@ -719,7 +719,7 @@ argument. In this case, a simple save operation is performed.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_simulation_reset_physics()
@@ -750,7 +750,7 @@ after calling this function.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_movie_start_recording(const char *filename, int width, int height, int codec, int quality, int acceleration, bool caption)
@@ -798,7 +798,7 @@ reset to `FALSE`.
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 bool wb_supervisor_animation_start_recording(const char *filename)
@@ -829,7 +829,7 @@ indicating their success.
 
 {[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 WbFieldType wb_supervisor_field_get_type(WbFieldRef field)
@@ -870,7 +870,7 @@ be directly compared with the output of the `Field::getType()`
 
 {[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 bool wb_supervisor_field_get_sf_bool(WbFieldRef field)
@@ -919,7 +919,7 @@ message is displayed).
 
 {[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_field_set_sf_bool(WbFieldRef field, bool value)
@@ -976,7 +976,7 @@ and setting fields with the above described functions.
 
 {[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/supervisor.h>
 
 void wb_supervisor_field_import_mf_node(WbFieldRef field, int position, const char *filename)

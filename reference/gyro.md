@@ -46,7 +46,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_gyro)}, {[Java](java-api.md#java_gyro)}, {[Python](python-api.md#python_gyro)}, {[Matlab](matlab-api.md#matlab_gyro)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gyro.h>
 
 void wb_gyro_enable(WbDeviceTag tag, int ms)

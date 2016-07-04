@@ -26,13 +26,13 @@ a github branch of this repository:
 
 Create or update the local_index.html page:
 
-``` shell
+```shell
 python local_exporter.py
 ```
 
 Run a simple HTTP server:
 
-``` shell
+```shell
 python -m SimpleHTTPServer
 ```
 
@@ -46,6 +46,6 @@ In a browser, open:
 
 ## Run the unit tests
 
-``` python
+```shell
 python -m unittest discover
 ```

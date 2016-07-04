@@ -52,7 +52,7 @@ value in the interval (0.0, inf).
 
 {[C++](cpp-api.md#cpp_accelerometer)}, {[Java](java-api.md#java_accelerometer)}, {[Python](python-api.md#python_accelerometer)}, {[Matlab](matlab-api.md#matlab_accelerometer)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/accelerometer.h>
 
 void wb_accelerometer_enable(WbDeviceTag tag, int ms)

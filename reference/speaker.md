@@ -19,7 +19,7 @@ The [Speaker](#speaker) node represents a loudspeaker device that can be embbede
 
 {[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/speaker.h>
 
 void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double pitch, double balance, bool loop)
@@ -44,7 +44,7 @@ The path to the sound file should be defined either absolutely or relatively. If
 
 {[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/speaker.h>
 
 void wb_speaker_stop(WbDeviceTag tag, const char *sound)
@@ -64,7 +64,7 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 
 {[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/speaker.h>
 
 void wb_speaker_set_language(WbDeviceTag tag, const char *language)
@@ -90,58 +90,76 @@ The `wb_speaker_speak` function allows the user to execute text-to-speech on the
 **Text-to-speech XML tags**
 
 - `ignore`: A text portion marked by `<ignore> ... </ignore>` is fully ignored by the synthesis. Ignored sections may be nested. Example:
-```
+
+    ```xml
 Hello <ignore> any text </ignore> Mister Smith.
-```
-This example is equivalent to sending "Hello Mister Smith." to the text-to-speech engine.
+    ```
+
+    This example is equivalent to sending "Hello Mister Smith." to the text-to-speech engine.
 
 - `p` of `paragraph`: Paragraph structures can be marked by `<p> ... </p>` or its extended form `<paragraph> ... </paragraph>`. In most cases, Webots automatically detects paragraph structures. The `<p>` tag can be used to enforce the setting of a paragraph structure. Example:
-```
-<p> This is a paragraph. </p>
-```
-In this example, the enclosed text is structured as a paragraph.
+
+    ```xml
+ <p> This is a paragraph. </p>
+    ```
+
+    In this example, the enclosed text is structured as a paragraph.
 
 - `s` of `sentence`: Sentence structures can be marked by `<s> ... </s>` or its extended form `<sentence>... </sentence>`. In most cases, Webots automatically detects sentence structures. The `<s>` tag can be used to enforce the setting of a sentence structure. Example:
-```
+
+    ```xml
 <s> This is a sentence. </s>
-```
-In this example, the enclosed text is structured as a sentence.
+    ```
+
+    In this example, the enclosed text is structured as a sentence.
 
 - `pitch`: The markup tag `<pitch level="...">` changes the general pitch level of the specified text portion to the value given by the parameter level. The normal pitch level is 100, the allowed values lie between 50 (one octave lower) and 200 (one octave higher). The end tag `</pitch>` resets the pitch level to 100. Example:
-```
+
+    ```xml
 Hello, <pitch level="140"> Miss Jones </pitch> arrived.
-```
-In this example, the section "Miss Jones" will be produced at a pitch level of a factor of 1.4 higher than normal.
+    ```
+
+    In this example, the section "Miss Jones" will be produced at a pitch level of a factor of 1.4 higher than normal.
 
 - `speed`: The markup tag `<speed level="...">` changes the general speed level of the specified text portion to the value given by the parameter level. The normal speed level is 100, the allowed values lie between 20 (slowing down by a factor of 5) and 500 (speeding up by a factor of 5). The end tag `</speed>` resets the speed level to 100. Example:
-```
+
+    ```xml
 Hello, <speed level="300"> Miss Jones </speed> arrived.
-```
-In this example, the section "Miss Jones" will be produced by a factor of 3 faster than normal.
+    ```
+
+    In this example, the section "Miss Jones" will be produced by a factor of 3 faster than normal.
 
 - `volume`: The markup tag `<volume level="...">` changes the volume level of the specified text portion to the value given by the parameter level. The normal volume level is 100. Increasing the volume level (values > 100) may result in degraded signal quality due to saturation effects (clipping) and is not recommended. The allowed volume levels lie between 0 (i.e. no audible output) and 500 (increasing the volume by a factor of 5). The end tag `</volume>` resets the volume level to 100. Example:
-```
+
+    ```xml
 Hello, Miss <volume level="50"> Jones </volume> arrived.
-```
-In this example, the volume of the section "Jones" will be decreased by a factor of 2.
+    ```
+
+    In this example, the volume of the section "Jones" will be decreased by a factor of 2.
 
 - `play`: Using the empty tag `<play file="..."/>` or tag pair `<play file="..."> ... </play>` results in insertion of the specified sound file in the synthesized signal at the place specified in the input text. In the first variant, the sound file is played at the position where the combined tag is set, in the second variant the sound file is played as a substitute of the text between the start and the end tag, that is, the text between the start and the end tag is ignored. The sampling frequency of the input sound file must be identical to the sampling frequency of the synthesized signal. Examples:
-```
+
+    ```xml
 Hello, Miss <play file="miller.wav"/>.
 Hello, Miss <play file="miller.wav"> Miller </play>.
-```
-In this example, the "miller.wav" sound file is played instead of pronouncing the "Miller" word using text-to-speech.
+    ```
+
+    In this example, the "miller.wav" sound file is played instead of pronouncing the "Miller" word using text-to-speech.
 
 - `genfile`: Using the markup section `<genfile file="..."> ... </genfile>` an arbitrary text portion can be saved to a separate sound file. The markup tag `<genfile>` can be used especially for creating synthetic voice prompts. Examples:
-```
+
+    ```xml
 <genfile file="intro.wav"> Hello, Mister </genfile>
 <genfile file="miller.wav"> Miller, </genfile>
 <genfile file="rem.wav"> welcome.</genfile>
 Hello, Mister <genfile file="smith.wav"> Smith, </genfile> welcome.
-```
-In this example, three parts of the first sentence "Hello, Mister Miller, welcome." are saved in separate sound files of type wav, and the part "Smith," of the second sentence is also saved in a separate file. These generated sound files can, for instance, be used to generate a newly combined utterance using the markup tag `<play>`:
-```
+    ```
+
+    In this example, three parts of the first sentence "Hello, Mister Miller, welcome." are saved in separate sound files of type wav, and the part "Smith," of the second sentence is also saved in a separate file. These generated sound files can, for instance, be used to generate a newly combined utterance using the markup tag `<play>`:
+
+    ```xml
 <play file="intro.wav"/> <play file="smith.wav"/>
 <play file="rem.wav"/>
-```
-This input "text", which consists only of markup tags, plays the generated sound files as if the (new) sentence "Hello, Mister Smith, welcome." had been synthesized, but, of course, with much less processing time. It is essential to note that the sentence part "Smith," should be synthesized and saved to a sound file in the appropriate sentence environment in order for the newly combined utterance to have a continuous melody and rhythm.
+    ```
+
+    This input "text", which consists only of markup tags, plays the generated sound files as if the (new) sentence "Hello, Mister Smith, welcome." had been synthesized, but, of course, with much less processing time. It is essential to note that the sentence part "Smith," should be synthesized and saved to a sound file in the appropriate sentence environment in order for the newly combined utterance to have a continuous melody and rhythm.

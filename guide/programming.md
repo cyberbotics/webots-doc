@@ -139,39 +139,43 @@ correspond to the `name` field of the device, not to the VRML DEF name!
 because it uses the `WbDeviceTag` of a `Camera` in a `wb_distance_sensor_*()`
 function. Here is an example of what is wrong:
 
-        #include <webots/robot.h>
-        #include <webots/camera.h>
-        #include <webots/distance_sensor.h>
-
-        #define TIME_STEP 32
-
-        int main() {
-          wb_robot_init();
-          WbDeviceTag camera = wb_robot_get_device("camera");
-          wb_camera_enable(camera, TIME_STEP);
-          ...
-          double value = wb_distance_sensor_get_value(camera);  // WRONG!
-          ...
-        }
+> ```c
+> #include <webots/robot.h>
+> #include <webots/camera.h>
+> #include <webots/distance_sensor.h>
+> 
+> #define TIME_STEP 32
+> 
+> int main() {
+>   wb_robot_init();
+>   WbDeviceTag camera = wb_robot_get_device("camera");
+>   wb_camera_enable(camera, TIME_STEP);
+>   ...
+>   double value = wb_distance_sensor_get_value(camera);  // WRONG!
+>   ...
+> }
+> ```
 
 3. The `WbDeviceTag` may also be invalid because it is used before initialization
 with `wb_robot_get_device()`, or because it is not initialized at all, or
 because it is corrupted by a programming error in the controller code. Here is
 such an example:
 
-        #include <webots/robot.h>
-        #include <webots/camera.h>
-        #include <webots/distance_sensor.h>
-
-        #define TIME_STEP 32
-
-        int main() {
-          wb_robot_init();
-          WbDeviceTag distance_sensor, camera = wb_robot_get_device("camera");
-          wb_camera_enable(camera, TIME_STEP);
-          wb_distance_sensor_enable(distance_sensor, TIME_STEP);  // WRONG!
-          ...
-        }
+> ```c
+> #include <webots/robot.h>
+> #include <webots/camera.h>
+> #include <webots/distance_sensor.h>
+> 
+> #define TIME_STEP 32
+> 
+> int main() {
+>   wb_robot_init();
+>   WbDeviceTag distance_sensor, camera = wb_robot_get_device("camera");
+>   wb_camera_enable(camera, TIME_STEP);
+>   wb_distance_sensor_enable(distance_sensor, TIME_STEP);  // WRONG!
+>   ...
+> }
+> ```
 
 ### Is it possible to apply a (user specified) force to a robot?
 
@@ -183,7 +187,7 @@ must associate the plugin with your simulation world. This can be done by
 editing the `WorldInfo.physics` field in the Scene Tree. Then you must modify
 the plugin code such as to add the force. Here is an example:
 
-```
+```c
 #include <ode/ode.h>
 #include <plugins/physics.h>
 
@@ -263,39 +267,41 @@ whenever necessary. The collision detection mechanism is based on the shapes
 specified in the `boundingObject`s. Now if you want to programmatically detect
 collision, there are several methods:
 
-1. In controller code: you can detect collision by using `TouchSensor`s placed
+- In controller code: you can detect collision by using `TouchSensor`s placed
 around your robot body or where the collision is expected. You can use
 `TouchSensor`s of type "bumper" that return a boolean status 1 or 0, whether
 there is a collision or not. In fact a "bumper" `TouchSensor` will return 1 when
 its `boundingObject` intersects another `boundingObject` and 0 otherwise.
-2. In supervisor code (Webots PRO required): you can detect collisions by tracking
+- In supervisor code (Webots PRO required): you can detect collisions by tracking
 the position of robots using the `wb_supervisor_field_get_*()` functions. Here
 is a naive example assuming that the robots are cylindrical and moving in the
 xz-plane.
 
-        #define ROBOT_RADIUS ...
-        ...
-        int are_colliding(WbFieldRef trans1, WbFieldRef trans2) {
-          const double *p1 = wb_supervisor_field_get_sf_vec3f(trans1);
-          const double *p2 = wb_supervisor_field_get_sf_vec3f(trans2);
-          double dx = p2[0] - p1[0];
-          double dz = p2[2] - p1[2];
-          double dz = p2[2] - p1[2];
-          return sqrt(dx * dx + dz * dz) < 2.0 * ROBOT_RADIUS;
-        }
-          ...
-          // do this once only, in the initialization
-          WbNodeRef robot1 = wb_supervisor_node_get_from_def("MY_ROBOT1");
-          WbNodeRef robot2 = wb_supervisor_node_get_from_def("MY_ROBOT2");
-          WbFieldRef trans1 = wb_supervisor_node_get_field(robot1, "translation");
-          WbFieldRef trans2 = wb_supervisor_node_get_field(robot2, "translation");
-          ...
-          // detect collision
-          if (are_colliding(trans1, trans2)) {
-            ...
-          }
+> ```c
+> #define ROBOT_RADIUS ...
+> ...
+> int are_colliding(WbFieldRef trans1, WbFieldRef trans2) {
+>   const double *p1 = wb_supervisor_field_get_sf_vec3f(trans1);
+>   const double *p2 = wb_supervisor_field_get_sf_vec3f(trans2);
+>   double dx = p2[0] - p1[0];
+>   double dz = p2[2] - p1[2];
+>   double dz = p2[2] - p1[2];
+>   return sqrt(dx * dx + dz * dz) < 2.0 * ROBOT_RADIUS;
+> }
+>   ...
+>   // do this once only, in the initialization
+>   WbNodeRef robot1 = wb_supervisor_node_get_from_def("MY_ROBOT1");
+>   WbNodeRef robot2 = wb_supervisor_node_get_from_def("MY_ROBOT2");
+>   WbFieldRef trans1 = wb_supervisor_node_get_field(robot1, "translation");
+>   WbFieldRef trans2 = wb_supervisor_node_get_field(robot2, "translation");
+>   ...
+>   // detect collision
+>   if (are_colliding(trans1, trans2)) {
+>     ...
+>   }
+> ```
 
-3. In the physics plugin (Webots PRO required): you can replace or extend Webots
+- In the physics plugin (Webots PRO required): you can replace or extend Webots
 collision detection mechanism. This is an advanced technique that requires
 knowledge of the [ODE (Open Dynamics Engine)
 API](http://ode-wiki.org/wiki/index.php?title=Manual). Your collision detection

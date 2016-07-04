@@ -47,7 +47,7 @@ between 0 (off) and 255 (maximum intensity).
 
 {[C++](cpp-api.md#cpp_led)}, {[Java](java-api.md#java_led)}, {[Python](python-api.md#python_led)}, {[Matlab](matlab-api.md#matlab_led)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/led.h>
 
 void wb_led_set(WbDeviceTag tag, int value)

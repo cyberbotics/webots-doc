@@ -15,7 +15,7 @@ call to an ODE API function modifying the current world (contacts, bodies,
 geoms) should be mutex protected within this callback function. We recommend
 using POSIX mutexes as exemplified here:
 
-```
+```c
 static pthread_mutex_t mutex;
 
 void webots_physics_init() {
@@ -54,7 +54,7 @@ reading config files or writing log files in this directory.
 
 The obsolete arguments can be retrieved as follows:
 
-```
+```c
 void webots_physics_init(dWorldID, dSpaceID, dJointGroupID) {
   // get body of the robot part
   dBodyID body = dWebotsGetBodyFromDEF("MY_ROBOT_PART");
@@ -148,7 +148,7 @@ to determine if the function is called when rendering the 3D view (`view` ==
 NULL) or when rendering a robot camera (`view` == Robot::name). Here is an
 implementation example:
 
-```
+```c
 void webots_physics_draw(int pass, const char *view) {
   if (pass == 1 && view == NULL) {
     /* This code is reached only during the second pass of the 3D view */

@@ -190,7 +190,7 @@ radiometry terms and units in this document with their photometry equivalents:
 
 {[C++](cpp-api.md#cpp_light_sensor)}, {[Java](java-api.md#java_light_sensor)}, {[Python](python-api.md#python_light_sensor)}, {[Matlab](matlab-api.md#matlab_light_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/light_sensor.h>
 
 void wb_light_sensor_enable(WbDeviceTag tag, int ms)

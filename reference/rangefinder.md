@@ -113,7 +113,7 @@ restored.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
 void wb_range_finder_enable(WbDeviceTag tag, int ms)
@@ -141,7 +141,7 @@ into the `wb_range_finder_enable()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
 double wb_range_finder_get_fov(WbDeviceTag tag)
@@ -160,7 +160,7 @@ of a range-finder.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
 int wb_range_finder_get_width(WbDeviceTag tag)
@@ -180,7 +180,7 @@ in the corresponding [RangeFinder](#rangefinder) node.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
 double wb_range_finder_get_min_range(WbDeviceTag tag)
@@ -200,7 +200,7 @@ device as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
 const float *wb_range_finder_get_range_image(WbDeviceTag tag)
@@ -247,7 +247,7 @@ are identical but their handling is of course different.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
 int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality)

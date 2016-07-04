@@ -83,7 +83,7 @@ noise is not dependent on the distance between emitter-receiver.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
 void wb_receiver_enable(WbDeviceTag tag, int ms)
@@ -116,7 +116,7 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
 int wb_receiver_get_queue_length(WbDeviceTag tag)
@@ -188,7 +188,7 @@ code that is not robust.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
 const void *wb_receiver_get_data(WbDeviceTag tag)
@@ -280,7 +280,7 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
 double wb_receiver_get_signal_strength(WbDeviceTag tag)
@@ -323,7 +323,7 @@ It is illegal to call this function if the receiver's queue is empty (`wb_receiv
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
 void wb_receiver_set_channel(WbDeviceTag tag, int channel)

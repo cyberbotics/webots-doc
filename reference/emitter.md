@@ -98,7 +98,7 @@ range` and `aperture` will be ignored.
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
 int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
@@ -172,7 +172,7 @@ in a C/C++ controller.
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
 void wb_emitter_set_channel(WbDeviceTag tag, int channel)
@@ -202,7 +202,7 @@ static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
 void wb_emitter_set_range(WbDeviceTag tag, double range)
@@ -228,7 +228,7 @@ returns the current emitter's range. For both the `wb_emitter_set_range()` and
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
 int wb_emitter_get_buffer_size(WbDeviceTag tag)

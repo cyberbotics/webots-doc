@@ -43,7 +43,6 @@ example of the controllers directory having one simple controller written in C
 which can be edited and executed.
 
 ```
-
 controllers/
 controllers/simple_controller/
 controllers/simple_controller/Makefile

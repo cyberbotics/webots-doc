@@ -83,7 +83,7 @@ Tree. A `Joint` is passive if its device is null (or at least not a
 `Motor`-derived node. Alternatively, it is also possible to make a `Motor`
 become passive during the simulation; this can be done like this:
 
-```
+```c
 wb_motor_set_motor_force(motor, 0.0);
 ```
 
@@ -98,7 +98,7 @@ In the plugin code, you must simply add an ODE *fixed joint* between the
 *dBodyID* of the robot part and the static environment. This can be implemented
 like this:
 
-```
+```c
 #include <ode/ode.h>
 #include <plugins/physics.h>
 

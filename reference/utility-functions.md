@@ -13,7 +13,7 @@ dBodyID object can then be used with all the available ODE `dBody*()` functions
 (see ODE documentation). For example it is possible to add a force to the body
 with `dBodyAddForce()`, etc. The prototype of this function is:
 
-```
+```c
 dBodyID dWebotsGetBodyFromDEF(const char *DEF);
 ```
 
@@ -23,7 +23,7 @@ It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
 example:
 
-```
+```c
 dBodyID head_pitch_body = dWebotsGetBodyFromDEF("BLUE_PLAYER_1.HeadYaw.HeadPitch");
 ```
 
@@ -58,7 +58,7 @@ boundingObject of the [Solid](solid.md). The dGeomID object can then be used
 with all the available ODE `dGeom*()` functions (see ODE documentation). The
 prototype of this function is:
 
-```
+```c
 dGeomID dWebotsGetGeomFromDEF(const char *DEF);
 ```
 
@@ -134,7 +134,7 @@ receives data sent on this channel). The `range` and `baudRate` fields of the
 the physics plugin using the standard [Emitter](emitter.md) API functions. They
 are received by the physics plugin through the `dWebotsReceive()` function.
 
-```
+```c
 void dWebotsSend(int channel,const void *buffer,int size);
 const void *dWebotsReceive(int *size);
 ```
@@ -183,7 +183,7 @@ This function returns the current simulation time in milliseconds [ms] as a
 double precision floating point value. This corresponds to the time displayed in
 the bottom right corner of the main Webots window.
 
-```
+```c
 double dWebotsGetTime(void);
 ```
 
@@ -196,6 +196,6 @@ optional extra arguments should match these conversion specifiers. A prefix and
 a '\n' (new line) character will automatically be added to each line. A '\f'
 (form feed) character can optionally be used for clearing up the console.
 
-```
+```c
 void dWebotsConsolePrintf(const char *format, ...);
 ```

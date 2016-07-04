@@ -152,7 +152,7 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 {[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_touch_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/touch_sensor.h>
 
 void wb_touch_sensor_enable(WbDeviceTag tag, int ms)
@@ -191,7 +191,7 @@ of type "force-3d" exclusively.
 
 {[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_servo)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/touch_sensor.h>
 
 int wb_touch_sensor_get_type(WbDeviceTag tag)

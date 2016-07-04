@@ -10,7 +10,7 @@ redirect Webots graphical output to another computer.
 Here is the usual way to start from computer A, a Webots instance that will run
 on computer B:
 
-```
+```bash
 $ ssh myname@computerB.org
 $ export DISPLAY=:0.0
 $ webots --mode=fast --stdout --stderr myworld.wbt
@@ -47,7 +47,7 @@ kill the remote jobs, including Webots. Fortunately it is easy to overcome this
 problem by starting the Webots as a background job and redirecting its output to
 a file:
 
-```
+```bash
 $ ssh myname@computerB.org
 $ export DISPLAY=:0.0
 $ webots --mode=fast --stdout --stderr myworld.wbt &> out.txt &

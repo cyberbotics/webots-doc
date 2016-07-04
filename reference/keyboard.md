@@ -17,7 +17,7 @@ In C++, Python and Java the keyboard functions are in a dedicated class called
 
 {[C++](cpp-api.md#cpp_keyboard)}, {[Java](java-api.md#java_keyboard)}, {[Python](python-api.md#python_keyboard)}, {[Matlab](matlab-api.md#matlab_keyboard)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/keyboard.h>
 
 void wb_keyboard_enable(int ms)

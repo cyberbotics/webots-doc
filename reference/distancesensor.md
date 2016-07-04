@@ -225,7 +225,7 @@ The ground texture must be placed in a [Plane](plane.md).
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/distance_sensor.h>
 
 void wb_distance_sensor_enable(WbDeviceTag tag, int ms)
@@ -260,7 +260,7 @@ of the return value is defined by this lookup table.
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/distance_sensor.h>
 
 double wb_distance_sensor_get_max_range(WbDeviceTag tag)
@@ -287,7 +287,7 @@ sensor in radians.
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/distance_sensor.h>
 
 int wb_distance_sensor_get_type(WbDeviceTag tag)

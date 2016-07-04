@@ -177,6 +177,6 @@ each one.
 
 On Linux, you can use the `killall` or the `pkill` commands, e.g.:
 
-```
+```bash
 $ killall hal naoqi-bin
 ```

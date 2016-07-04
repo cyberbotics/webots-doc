@@ -176,7 +176,7 @@ network with an unpredictable delay (like the Internet).
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 int wb_robot_step(int ms)
@@ -293,7 +293,7 @@ int main() {
 
 {[Matlab](matlab-api.md#matlab_robot)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 WbDeviceTag wb_robot_get_device(const char *name)
@@ -321,7 +321,7 @@ function returns 0.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
-``` c
+```c
 #include <webots/Robot.hpp>
 
 Accelerometer *Robot::getAccelerometer(const std::string &name)
@@ -368,7 +368,7 @@ Python.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 WbDeviceTag wb_robot_get_device_by_index(int index)
@@ -416,7 +416,7 @@ for(i=0; i<n_devices; i++) {
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 void wb_robot_battery_sensor_enable(int ms)
@@ -450,7 +450,7 @@ disabled.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 double wb_robot_get_basic_time_step()
@@ -469,7 +469,7 @@ This function returns the value of the `basicTimeStep` field of the
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 int wb_robot_get_mode()
@@ -507,7 +507,7 @@ The integers can be compared to the following enumeration items:
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 const char *wb_robot_get_name()
@@ -537,7 +537,7 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 const char *wb_robot_get_model()
@@ -561,7 +561,7 @@ controller terminates.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 const char * wb_robot_get_data()
@@ -584,7 +584,7 @@ the robot node.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/nodes.h>
      #include <webots/robot.h>
 
@@ -604,7 +604,7 @@ WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 const char *wb_robot_get_project_path()
@@ -626,7 +626,7 @@ char string. It should not be deallocated.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 const char *wb_robot_get_world_path()
@@ -646,7 +646,7 @@ should not be deallocated.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 const char *wb_robot_get_controller_name()
@@ -666,7 +666,7 @@ Robot::controllerArgs fields.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 bool wb_robot_get_synchronization()
@@ -685,7 +685,7 @@ field of the Robot node.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
 double wb_robot_get_time()
@@ -703,7 +703,7 @@ does not matter whether the controller is synchronized or not.
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
 
-``` c
+```c
 #include <webots/robot.h>
 
 void wb_robot_task_new(void (*task, void *param)
@@ -729,7 +729,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
 
-``` c
+```c
 #include <webots/robot.h>
 
 WbMutexRef wb_robot_mutex_new()
@@ -770,7 +770,7 @@ multi-threaded programming techniques for further information.
 
 **wb\_robot\_window\_custom\_function** - *communication with the robot window*
 
-``` c
+```c
 #include <webots/robot_window.h>
 
 void *wb_robot_window_custom_function(void *arg)

@@ -363,9 +363,7 @@ Python.
 
 **See also**
 
-[wb\_robot\_get\_device](#wb_robot_get_device).
-
-[wb\_robot\_step](#wb_robot_step).
+[wb\_robot\_get\_device](#wb_robot_get_device), [wb\_robot\_step](#wb_robot_step).
 
 
 ---

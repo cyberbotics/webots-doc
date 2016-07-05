@@ -52,6 +52,7 @@
 ?>
     <div class="webots-doc" id="webots-doc" style="padding:0;">
       <div id="left" style="top:46px;height:calc(100% - 46px)">
+        <div class="ui-resizable-handle ui-resizable-e" id="handle"></div>
         <div id="navigation">
           <table>
             <tr>

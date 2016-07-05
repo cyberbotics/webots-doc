@@ -20,6 +20,12 @@
   margin-bottom: 0;
   overflow: auto;
 }
+.webots-doc #handle {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
 .webots-doc #navigation,
 .webots-doc #view,
 .webots-doc #title {

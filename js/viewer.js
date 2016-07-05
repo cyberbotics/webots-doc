@@ -591,7 +591,20 @@ window.onscroll=function(){
     updateMenuScrollbar();
 };
 
+function updateCenterDimensions() {
+    var leftCenterWidth = 100.0 * $("#left").width() / $("#webots-doc").width(); // in percent
+    $("#center").css("left", leftCenterWidth + "%");
+    $("#center").css("width", (100 - leftCenterWidth) + "%");
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+    $("#left").resizable({
+        handles: {
+            "e": "#handle"
+        },
+        resize: updateCenterDimensions
+    });
+
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)

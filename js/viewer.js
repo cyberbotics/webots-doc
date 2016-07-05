@@ -543,6 +543,7 @@ function showAccodionItem(item) {
 }
 
 function getMDFile() {
+    window.scrollTo(0, 0);
     var target = computeTargetPath() + setup.page + '.md';
     console.log("Get MD file: " + target);
     $.ajax({

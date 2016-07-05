@@ -184,7 +184,8 @@ function applyAnchor() {
         if (!local)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
         updateBrowserUrl();
-    }
+    } else
+      window.scrollTo(0, 0);
 }
 
 function applyToTitleDiv() {
@@ -256,7 +257,14 @@ function populateViewDiv(mdContent) {
     redirectImages(view);
     redirectUrls(view);
 
-    applyAnchor();
+    var images = view.getElementsByTagName("img");
+    if (images.length > 0) {
+      // apply the anchor only when the images are loaded,
+      // otherwise, the anchor can be overestimated.
+      var lastImage = images[images.length - 1];
+      $(lastImage).load(applyAnchor);
+    } else
+      applyAnchor();
 
     applyAnchorIcons(view);
     highlightCode(view);
@@ -543,7 +551,6 @@ function showAccodionItem(item) {
 }
 
 function getMDFile() {
-    window.scrollTo(0, 0);
     var target = computeTargetPath() + setup.page + '.md';
     console.log("Get MD file: " + target);
     $.ajax({

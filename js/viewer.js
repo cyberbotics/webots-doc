@@ -602,6 +602,8 @@ document.addEventListener("DOMContentLoaded", function() {
         handles: {
             "e": "#handle"
         },
+        minWidth: 25,
+        maxWidth: 300,
         resize: updateCenterDimensions
     });
 

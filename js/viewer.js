@@ -233,6 +233,8 @@ function applyToPageTitle(mdContent) {
 }
 
 function populateViewDiv(mdContent) {
+    setupUrl(document.location.href);
+
     var view = document.getElementById("view");
     while (view.firstChild)
         view.removeChild(view.firstChild);

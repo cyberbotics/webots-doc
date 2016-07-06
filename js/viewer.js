@@ -612,6 +612,7 @@ function initializeHandle() {
     handle.handle.on('mousedown', function (e) {
         handle.isResizing = true;
         handle.lastDownX = e.clientX;
+        handle.container.css('user-select', 'none');
     });
 
     $(document).on('mousemove', function (e) {
@@ -627,6 +628,7 @@ function initializeHandle() {
         handle.center.css('width', (100.0 - ratio) + '%');
     }).on('mouseup', function (e) {
         handle.isResizing = false;
+        handle.container.css('user-select', 'auto');
     });
 }
 

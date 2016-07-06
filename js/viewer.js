@@ -610,26 +610,26 @@ function initializeHandle() {
     handle.minThreshold = 130; // under this threshold, the handle is totally hidden
     handle.max = 250;
 
-    handle.left = $('#left'),
-    handle.center = $('#center'),
-    handle.handle = $('#handle');
-    handle.container = $('#webots-doc')
+    handle.left = $("#left"),
+    handle.center = $("#center"),
+    handle.handle = $("#handle");
+    handle.container = $("#webots-doc")
 
     handle.isResizing = false;
     handle.lastDownX = 0;
 
-    handle.handle.on('mousedown', function (e) {
+    handle.handle.on("mousedown", function (e) {
         handle.isResizing = true;
         handle.lastDownX = e.clientX;
-        handle.container.css('user-select', 'none');
-    }).on('dblclick', function (e) {
-        if (handle.left.css('width').startsWith("0"))
+        handle.container.css("user-select", "none");
+    }).on("dblclick", function (e) {
+        if (handle.left.css("width").startsWith("0"))
             setHandleWidth(20);
         else
             setHandleWidth(0);
     });
 
-    $(document).on('mousemove', function (e) {
+    $(document).on("mousemove", function (e) {
         if (!handle.isResizing)
             return;
         var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
@@ -641,9 +641,9 @@ function initializeHandle() {
             return;
         var width = 100.0 * mousePosition / handle.container.width(); // in percent
         setHandleWidth(width);
-    }).on('mouseup', function (e) {
+    }).on("mouseup", function (e) {
         handle.isResizing = false;
-        handle.container.css('user-select', 'auto');
+        handle.container.css("user-select", "auto");
     });
 }
 

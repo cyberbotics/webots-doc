@@ -22,6 +22,12 @@
   -moz-box-shadow:inset 0px 0px 0px 1px #b6b6b6;
   box-shadow:inset 0px 0px 0px 1px #b6b6b6;
 }
+.webots-doc #handle:after {
+  content: '≡';
+  color: #aaa;
+  position:absolute;
+  top: 50%;
+}
 .webots-doc #handle:hover {
   background-color: #c8c8f0;
 }

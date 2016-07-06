@@ -622,6 +622,11 @@ function initializeHandle() {
         handle.isResizing = true;
         handle.lastDownX = e.clientX;
         handle.container.css('user-select', 'none');
+    }).on('dblclick', function (e) {
+        if (handle.left.css('width').startsWith("0"))
+            setHandleWidth(20);
+        else
+            setHandleWidth(0);
     });
 
     $(document).on('mousemove', function (e) {
@@ -639,11 +644,6 @@ function initializeHandle() {
     }).on('mouseup', function (e) {
         handle.isResizing = false;
         handle.container.css('user-select', 'auto');
-    }).on('dblclick', function (e) {
-        if (handle.left.css('width').startsWith("0"))
-            setHandleWidth(20);
-        else
-            setHandleWidth(0);
     });
 }
 

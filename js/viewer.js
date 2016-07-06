@@ -599,6 +599,7 @@ function initializeHandle() {
 
     handle.isResizing = false;
     handle.lastDownX = 0;
+
     handle.left = $('#left'),
     handle.center = $('#center'),
     handle.handle = $('#handle');
@@ -612,7 +613,7 @@ function initializeHandle() {
     $(document).on('mousemove', function (e) {
         if (!handle.isResizing)
             return;
-        var handleLeft = 100.0 * e.clientX / handle.container.width(); // in percent
+        var handleLeft = 100.0 * (e.clientX  - handle.container.offset().left) / handle.container.width(); // in percent
         handle.left.css('width', handleLeft + '%');
         handle.handle.css('left', handleLeft + '%');
         handle.center.css('left', handleLeft + '%');

@@ -593,6 +593,14 @@ function extractAnchor(url) {
     return '';
 }
 
+// width: in percent
+function setHandleWidth(width) {
+    handle.left.css('width', width + '%');
+    handle.handle.css('left', width + '%');
+    handle.center.css('left', width + '%');
+    handle.center.css('width', (100.0 - width) + '%');
+}
+
 function initializeHandle() {
     // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
     handle = {}; // structure where all the handle info is stored
@@ -621,14 +629,17 @@ function initializeHandle() {
         var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
         if (mousePosition < handle.min || mousePosition > handle.max)
             return;
-        var ratio = 100.0 * mousePosition / handle.container.width(); // in percent
-        handle.left.css('width', ratio + '%');
-        handle.handle.css('left', ratio + '%');
-        handle.center.css('left', ratio + '%');
-        handle.center.css('width', (100.0 - ratio) + '%');
+        var width = 100.0 * mousePosition / handle.container.width(); // in percent
+        setHandleWidth(width);
     }).on('mouseup', function (e) {
         handle.isResizing = false;
         handle.container.css('user-select', 'auto');
+    }).on('dblclick', function (e) {
+        console.log(handle.left.css('width'));
+        if (handle.left.css('width').startsWith("0"))
+            setHandleWidth(20);
+        else
+            setHandleWidth(0);
     });
 }
 

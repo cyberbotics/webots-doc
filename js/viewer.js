@@ -612,7 +612,7 @@ function initializeHandle() {
 
     // dimension bounds of the handle in pixels
     handle.min = 0;
-    handle.minThreshold = 130; // under this threshold, the handle is totally hidden
+    handle.minThreshold = 100; // under this threshold, the handle is totally hidden
     handle.max = Math.max(250, handle.left.width());
 
     handle.isResizing = false;
@@ -638,10 +638,11 @@ function initializeHandle() {
         if (!handle.isResizing)
             return;
         var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
-        if (mousePosition < handle.minThreshold) {
+        if (mousePosition < handle.minThreshold / 2) {
             setHandleWidth(0);
             return;
-        }
+        } else if (mousePosition < handle.minThreshold)
+            return;
         if (mousePosition < handle.min || mousePosition > handle.max)
             return;
         var width = 100.0 * mousePosition / handle.container.width(); // in percent

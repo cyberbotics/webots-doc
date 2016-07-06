@@ -593,13 +593,45 @@ function extractAnchor(url) {
     return '';
 }
 
+function initializeHandle() {
+    // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
+    handle = {}; // structure where all the handle info is stored
+
+    handle.isResizing = false;
+    handle.lastDownX = 0;
+    handle.left = $('#left'),
+    handle.right = $('#center'),
+    handle.handle = $('#handle');
+    handle.container = $('#webots-doc')
+
+    handle.handle.on('mousedown', function (e) {
+        handle.isResizing = true;
+        handle.lastDownX = e.clientX;
+    });
+
+    $(document).on('mousemove', function (e) {
+        if (!handle.isResizing)
+            return;
+        var handleLeft = 100.0 * e.clientX / handle.container.width(); // in percent
+        handle.left.css('width', handleLeft + '%');
+        handle.handle.css('left', handleLeft + '%');
+        handle.right.css('left', handleLeft + '%');
+        handle.right.css('width', (100.0 - handleLeft) + '%');
+    }).on('mouseup', function (e) {
+        handle.isResizing = false;
+    });
+}
+
 window.onscroll=function(){
     if (local)
         return;
     updateMenuScrollbar();
 };
 
+
 document.addEventListener("DOMContentLoaded", function() {
+    initializeHandle();
+
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)

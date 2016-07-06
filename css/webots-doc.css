@@ -10,6 +10,21 @@
   height: 100%;
   overflow-y: auto;
 }
+.webots-doc #handle {
+  left: 20%;
+  width: 10px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #ededed;
+  cursor: ew-resize;
+  -webkit-box-shadow:inset 0px 0px 0px 1px #b6b6b6;
+  -moz-box-shadow:inset 0px 0px 0px 1px #b6b6b6;
+  box-shadow:inset 0px 0px 0px 1px #b6b6b6;
+}
+.webots-doc #handle:hover {
+  background-color: #c8c8f0;
+}
 .webots-doc #center {
   top: 0px;
   left: 20%;

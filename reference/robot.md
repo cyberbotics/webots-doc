@@ -309,9 +309,12 @@ identifier will be used subsequently for enabling, sending commands to, or
 reading data from this device. If the specified device is not found, the
 function returns 0.
 
+> Note: This function is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
+
+
 **See also**
 
-[section](#wb_robot_step).
+[wb\_robot\_step](#wb_robot_step).
 
 ---
 
@@ -356,9 +359,12 @@ function `getDistanceSensor` will return a reference to a
 found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
+> Note: These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
+
 **See also**
 
-[section](#wb_robot_step).
+[wb\_robot\_get\_device](#wb_robot_get_device), [wb\_robot\_step](#wb_robot_step).
+
 
 ---
 
@@ -721,7 +727,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[section](#wb_robot_mutex_new).
+[wb\_robot\_mutex\_new](#wb_robot_mutex_new).
 
 ---
 
@@ -759,7 +765,7 @@ other threads to lock it.
 
 **See also**
 
-[section](#wb_robot_task_new).
+[wb\_robot\_task\_new](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

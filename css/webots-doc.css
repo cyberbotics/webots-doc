@@ -18,12 +18,12 @@
   z-index: 1;
   background-color: #ededed;
   cursor: ew-resize;
-  font-size: smaller;
   border-left: 1px solid #b6b6b6;
   border-right: 1px solid #b6b6b6;
 }
 .webots-doc #handle.local:after {
   content: '≡';
+  font-size: 9px;
   color: #aaa;
   position:absolute;
   top: 50%;

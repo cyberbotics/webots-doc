@@ -618,6 +618,11 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
 
+    if (local)
+        handle.handle.addClass("local");
+    else
+        handle.handle.addClass("online");
+
     handle.handle.on("mousedown", function (e) {
         handle.isResizing = true;
         handle.lastDownX = e.clientX;

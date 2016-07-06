@@ -8,7 +8,6 @@
   width: 20%;
   position: fixed;
   height: 100%;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 .webots-doc #center {
@@ -20,7 +19,6 @@
   margin-bottom: 0;
   overflow: auto;
 }
-.webots-doc #navigation,
 .webots-doc #view,
 .webots-doc #title {
   background-color: white;
@@ -28,9 +26,6 @@
   margin: 1em 1em 0;
   padding: 0 1em 2px 0;
   top: 0;
-}
-.webots-doc #navigation {
-  margin: auto;
 }
 .webots-doc #title {
   margin-top: 0px;
@@ -43,13 +38,19 @@
   padding-bottom: 60px;
   margin-bottom: 0;
 }
+.webots-doc #navigation,
 .webots-doc #menu {
   clear: left;
   width: calc(100% - 2em);
-  margin: 1em;
   padding-bottom: 0;
   margin-bottom: 0;
   overflow-x: hidden;
+}
+.webots-doc #navigation {
+  margin: auto;
+}
+.webots-doc #menu {
+  margin: 1em;
 }
 .webots-doc #menu ul {
   list-style-type: none;

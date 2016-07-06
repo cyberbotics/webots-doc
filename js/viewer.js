@@ -600,7 +600,7 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
     handle.left = $('#left'),
-    handle.right = $('#center'),
+    handle.center = $('#center'),
     handle.handle = $('#handle');
     handle.container = $('#webots-doc')
 
@@ -615,8 +615,8 @@ function initializeHandle() {
         var handleLeft = 100.0 * e.clientX / handle.container.width(); // in percent
         handle.left.css('width', handleLeft + '%');
         handle.handle.css('left', handleLeft + '%');
-        handle.right.css('left', handleLeft + '%');
-        handle.right.css('width', (100.0 - handleLeft) + '%');
+        handle.center.css('left', handleLeft + '%');
+        handle.center.css('width', (100.0 - handleLeft) + '%');
     }).on('mouseup', function (e) {
         handle.isResizing = false;
     });

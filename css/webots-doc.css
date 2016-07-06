@@ -63,15 +63,10 @@
 .webots-doc #menu {
   clear: left;
   width: calc(100% - 2em);
+  margin: auto;
   padding-bottom: 0;
   margin-bottom: 0;
   overflow-x: hidden;
-}
-.webots-doc #navigation {
-  margin: auto;
-}
-.webots-doc #menu {
-  margin: 0.5em;
 }
 .webots-doc #menu ul {
   list-style-type: none;

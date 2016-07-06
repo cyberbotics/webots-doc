@@ -605,8 +605,9 @@ function initializeHandle() {
     // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
     handle = {}; // structure where all the handle info is stored
 
-    // dimension bounds of the handle
+    // dimension bounds of the handle in pixels
     handle.min = 0;
+    handle.minThreshold = 130; // under this threshold, the handle is totally hidden
     handle.max = 250;
 
     handle.left = $('#left'),
@@ -627,6 +628,10 @@ function initializeHandle() {
         if (!handle.isResizing)
             return;
         var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
+        if (mousePosition < handle.minThreshold) {
+            setHandleWidth(0);
+            return;
+        }
         if (mousePosition < handle.min || mousePosition > handle.max)
             return;
         var width = 100.0 * mousePosition / handle.container.width(); // in percent
@@ -635,7 +640,6 @@ function initializeHandle() {
         handle.isResizing = false;
         handle.container.css('user-select', 'auto');
     }).on('dblclick', function (e) {
-        console.log(handle.left.css('width'));
         if (handle.left.css('width').startsWith("0"))
             setHandleWidth(20);
         else

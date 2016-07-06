@@ -605,15 +605,15 @@ function initializeHandle() {
     // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
     handle = {}; // structure where all the handle info is stored
 
-    // dimension bounds of the handle in pixels
-    handle.min = 0;
-    handle.minThreshold = 130; // under this threshold, the handle is totally hidden
-    handle.max = 250;
-
     handle.left = $("#left"),
     handle.center = $("#center"),
     handle.handle = $("#handle");
     handle.container = $("#webots-doc")
+
+    // dimension bounds of the handle in pixels
+    handle.min = 0;
+    handle.minThreshold = 130; // under this threshold, the handle is totally hidden
+    handle.max = Math.max(250, handle.left.width());
 
     handle.isResizing = false;
     handle.lastDownX = 0;

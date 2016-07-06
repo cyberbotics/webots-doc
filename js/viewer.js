@@ -602,7 +602,7 @@ document.addEventListener("DOMContentLoaded", function() {
         handles: {
             "e": "#handle"
         },
-        minWidth: 25,
+        minWidth: 10,
         maxWidth: 300,
         resize: updateCenterDimensions
     });

@@ -597,13 +597,17 @@ function initializeHandle() {
     // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
     handle = {}; // structure where all the handle info is stored
 
-    handle.isResizing = false;
-    handle.lastDownX = 0;
-
     handle.left = $('#left'),
     handle.center = $('#center'),
     handle.handle = $('#handle');
     handle.container = $('#webots-doc')
+
+    // min dimensions of the handle
+    handle.min = - handle.handle.width() / 2;
+    handle.max = 250;
+
+    handle.isResizing = false;
+    handle.lastDownX = 0;
 
     handle.handle.on('mousedown', function (e) {
         handle.isResizing = true;
@@ -613,11 +617,14 @@ function initializeHandle() {
     $(document).on('mousemove', function (e) {
         if (!handle.isResizing)
             return;
-        var handleLeft = 100.0 * (e.clientX  - handle.container.offset().left) / handle.container.width(); // in percent
-        handle.left.css('width', handleLeft + '%');
-        handle.handle.css('left', handleLeft + '%');
-        handle.center.css('left', handleLeft + '%');
-        handle.center.css('width', (100.0 - handleLeft) + '%');
+        var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
+        if (mousePosition < handle.min || mousePosition > handle.max)
+            return;
+        var ratio = 100.0 * mousePosition / handle.container.width(); // in percent
+        handle.left.css('width', ratio + '%');
+        handle.handle.css('left', ratio + '%');
+        handle.center.css('left', ratio + '%');
+        handle.center.css('width', (100.0 - ratio) + '%');
     }).on('mouseup', function (e) {
         handle.isResizing = false;
     });

@@ -612,7 +612,7 @@ function initializeHandle() {
 
     // dimension bounds of the handle in pixels
     handle.min = 0;
-    handle.minThreshold = 100; // under this threshold, the handle is totally hidden
+    handle.minThreshold = 75; // under this threshold, the handle is totally hidden
     handle.max = Math.max(250, handle.left.width());
 
     handle.isResizing = false;

@@ -12,15 +12,15 @@
 }
 .webots-doc #handle {
   left: 20%;
-  width: 10px;
+  width: 8px;
   height: 100%;
   position: fixed;
   z-index: 1;
   background-color: #ededed;
   cursor: ew-resize;
-  -webkit-box-shadow:inset 0px 0px 0px 1px #b6b6b6;
-  -moz-box-shadow:inset 0px 0px 0px 1px #b6b6b6;
-  box-shadow:inset 0px 0px 0px 1px #b6b6b6;
+  font-size: smaller;
+  border-left: 1px solid #b6b6b6;
+  border-right: 1px solid #b6b6b6;
 }
 .webots-doc #handle:after {
   content: '≡';

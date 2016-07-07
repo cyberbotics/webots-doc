@@ -574,7 +574,7 @@ replaced by the actual value already existing in the environment. The Webots
 
 Here is an example of a typical runtime.ini file.
 
-```c
+```ini
 ; typical runtime.ini
 
 [environment variables with relative paths]
@@ -602,7 +602,7 @@ specific version of the language interpreter whereas the `OPTIONS` key allows
 you to specific options that will be passed immediately to the language
 interpreter. For example:
 
-```c
+```ini
 ; runtime.ini for a Python controller on Mac OS X
 
 [python]
@@ -615,7 +615,7 @@ In the above example, the resulting command issued by Webots will be:
 followed by the value of the `controllerArgs` field of the corresponding `Robot`
 node.
 
-```c
+```ini
 ; runtime.ini for a Java controller on Windows
 
 [environment variables with relative paths]

@@ -14,6 +14,7 @@
   left: 20%;
   width: 6px;
   height: 100%;
+  box-sizing: content-box; /* in the online doc, bootstrap is overriding box-sizing */
   position: fixed;
   z-index: 1;
   background-color: #ededed;
@@ -98,7 +99,7 @@
 .webots-doc blockquote {
   margin: 5px 10px;
   padding: 0;
-  font-size: 14px; /* in the online doc, bootstrap is overriding font-size */
+  font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
   border-left: 6px solid #ccc;
 }
 .webots-doc li {

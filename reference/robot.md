@@ -833,7 +833,7 @@ void wb_robot_window_send(const char *message, int length);
 
 **Description**
 
-These functions allow the robot controller to communicate with a HTML robot window. Such a window is embeded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
+These functions allow the robot controller to communicate with a HTML robot window. Such a window is embedded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
 
 The `wb_robot_window_receive` function allows a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.Robot.send()` method of the Webots Javascript API.
 

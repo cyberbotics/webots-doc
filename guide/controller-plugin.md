@@ -301,3 +301,23 @@ A complete sample (communicating with the e-puck robot using bluetooth) can be
 found in this directory:
 
 `WEBOTS_HOME/projects/robots/e-puck/plugins/remote_controls/e-puck_bluetooth`
+
+### HTML robot window
+
+As an alternative to native robot windows described earlier in this section, it is also possible to implement a HTML robot window. HTML robot windows present several advantages over the native robot windows:
+
+1. They are easier to implement: simple HTML layout, simple Javascript programming, no compilation needed.
+2. They communicate very simply with the robot controller using two basic functions: `wb_robot_window_send()` and `wb_robot_window_receive()`. The equivalent Javascript functions are `webots.Robot.receive()` and `webots.Robot.send()`.
+3. They cause no Qt DLL conflicts with third-party software, such as MATLAB or NAOqi. MATLAB and NAOqi could hardly be used with native robot windows because of such conflicts.
+4. They are well integrated into the Webots main window as additional dockable sub-windows.
+5. They are web-ready and could be used to display robot windows on web pages.
+
+A simple example of a HTML robot window is provided in the `robots/thymio/thymio2.wbt` sample simulation and demonstrates:
+
+- How to display sensor information in the robot window.
+- How to send user interface events (like mouse clicks) from the robot window to the controller program.
+- How to change the title of the robot window from the controller program.
+
+Currently, HTML robot windows can communicate only with C and C++ controller programs, but this will be extended soon to Python, Java and MATLAB controllers.
+
+The e-puck, Darwin-OP and generic robot window are still using the native robot window. However, they will soon be ported to the HTML robot window. After that, the native robot window system will be progressively phased out.

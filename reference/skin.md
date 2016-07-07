@@ -73,9 +73,9 @@ No rest pose is set for those joints which are not present in the rest pose file
 5: 0.976296, 0.21644, 0, 0     
 ```
 
-- The `bones` fields contains a list of [SolidReference](#solid_reference) nodes that provide the information to attach a Webots skeleton made of [Solid](#solid) and [Joint](#joint) nodes.
+- The `bones` fields contains a list of [SolidReference](#solidreference) nodes that provide the information to attach a Webots skeleton made of [Solid](#solid) and [Joint](#joint) nodes.
 In order to setup correctly the skeleton, the solid have to be listed in the same order as specified in the mesh file.
-This means that if in the mesh file the thigh bone is referenced using the index number 3, then the [SolidReference](#solid_reference) linking to the tigh [Solid](#solid) has to inserted in the `bones` field at index 3 as well.
+This means that if in the mesh file the thigh bone is referenced using the index number 3, then the [SolidReference](#solidreference) linking to the tigh [Solid](#solid) has to inserted in the `bones` field at index 3 as well.
 
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) shadows casted by this shape. Note that if the mesh triangle count is very big, the casted shadows will be automatically disabled.
 
@@ -114,7 +114,7 @@ But if a Webots skeleton is used, then the joint count will correspond to the va
 ``` c
 #include <webots/skin.h>
 
-void wb_character_set_joint_angle(WbDeviceTag tag, int index, const double rotation[4], bool absolute)
+void wb_character_set_joint_angle(WbDeviceTag tag, int index, const double rotation[4], bool absolute);
 ```
 
 **Description**

@@ -36,11 +36,11 @@ measure any infinitesimal change). This field accepts any value in the interval
 ```c
 #include <webots/position_sensor.h>
 
-void wb_position_sensor_enable(WbDeviceTag tag, int ms)
-void wb_position_sensor_disable(WbDeviceTag tag)
-int wb_position_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_position_sensor_get_value(WbDeviceTag tag)
-int wb_position_sensor_get_type(WbDeviceTag tag)
+void wb_position_sensor_enable(WbDeviceTag tag, int ms);
+void wb_position_sensor_disable(WbDeviceTag tag);
+int wb_position_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_position_sensor_get_value(WbDeviceTag tag);
+int wb_position_sensor_get_type(WbDeviceTag tag);
 ```
 
 **Description**

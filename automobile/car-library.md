@@ -13,8 +13,8 @@ encoders). All the functions included in this library are explained below.
 ```c
 #include <webots/car.h>
 
-void wbu_car_init()
-void wbu_car_cleanup()
+void wbu_car_init();
+void wbu_car_cleanup();
 ```
 
 **Description**
@@ -35,8 +35,8 @@ functions since they are already called from the corresponding functions of the
 ```c
 #include <webots/car.h>
 
-wbu_car_type wbu_car_get_type()
-wbu_car_engine_type wbu_car_get_type()
+wbu_car_type wbu_car_get_type();
+wbu_car_engine_type wbu_car_get_type();
 ```
 
 **Description**
@@ -74,8 +74,8 @@ of the car.
 ```c
 #include <webots/car.h>
 
-void wbu_car_set_indicator_period(double period)
-double wbu_car_get_indicator_period()
+void wbu_car_set_indicator_period(double period);
+double wbu_car_get_indicator_period();
 ```
 
 **Description**
@@ -95,8 +95,8 @@ of the indicators.
 ```c
 #include <webots/car.h>
 
-bool wbu_car_get_backwards_lights()
-bool wbu_car_get_brake_lights()
+bool wbu_car_get_backwards_lights();
+bool wbu_car_get_brake_lights();
 ```
 
 **Description**
@@ -114,11 +114,11 @@ appropriated).
 ```c
 #include <webots/car.h>
 
-double wbu_car_get_track_front()
-double wbu_car_get_track_rear()
-double wbu_car_get_wheelbase()
-double wbu_car_get_front_wheel_radius()
-double wbu_car_get_rear_wheel_radius()
+double wbu_car_get_track_front();
+double wbu_car_get_track_rear();
+double wbu_car_get_wheelbase();
+double wbu_car_get_front_wheel_radius();
+double wbu_car_get_rear_wheel_radius();
 ```
 
 **Description**
@@ -134,8 +134,8 @@ All these functions provide important physical characteristics of the car.
 ```c
 #include <webots/car.h>
 
-double wbu_car_get_wheel_encoder(int wheel_index)
-double wbu_car_get_wheel_speed(int wheel_index)
+double wbu_car_get_wheel_encoder(int wheel_index);
+double wbu_car_get_wheel_speed(int wheel_index);
 ```
 
 **Description**
@@ -166,8 +166,8 @@ enum.
 ```c
 #include <webots/car.h>
 
-double wbu_car_get_right_steering_angle()
-double wbu_car_get_left_steering_angle()
+double wbu_car_get_right_steering_angle();
+double wbu_car_get_left_steering_angle();
 ```
 
 **Description**
@@ -185,7 +185,7 @@ different).
 ```c
 #include <webots/car.h>
 
-void wbu_car_enable_limited_slip_differential(bool enable)
+void wbu_car_enable_limited_slip_differential(bool enable);
 ```
 
 **Description**
@@ -207,7 +207,7 @@ faster than the others.
 ```c
 #include <webots/car.h>
 
-void wbu_car_enable_indicator_auto_disabling(bool enable)
+void wbu_car_enable_indicator_auto_disabling(bool enable);
 ```
 
 **Description**

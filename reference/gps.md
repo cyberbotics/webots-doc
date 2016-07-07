@@ -69,11 +69,11 @@ value in the interval (0.0, inf).
 ```c
 #include <webots/gps.h>
 
-void wb_gps_enable(WbDeviceTag tag, int ms)
-void wb_gps_disable(WbDeviceTag tag)
-int wb_gps_get_sampling_period(WbDeviceTag tag)
-const double *wb_gps_get_values(WbDeviceTag tag)
-const double wb_gps_get_speed(WbDeviceTag tag)
+void wb_gps_enable(WbDeviceTag tag, int ms);
+void wb_gps_disable(WbDeviceTag tag);
+int wb_gps_get_sampling_period(WbDeviceTag tag);
+const double *wb_gps_get_values(WbDeviceTag tag);
+const double wb_gps_get_speed(WbDeviceTag tag);
 ```
 
 **Description**
@@ -124,7 +124,7 @@ period they must be copied.
 ```c
 #include <webots/gps.h>
 
-int wb_gps_get_coordinate_system(WbDeviceTag tag)
+int wb_gps_get_coordinate_system(WbDeviceTag tag);
 ```
 
 **Description**
@@ -145,7 +145,7 @@ WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 ```c
 #include <webots/gps.h>
 
-const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees)
+const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees);
 ```
 
 **Description**

@@ -9,8 +9,8 @@
 ```c
 #include <webots/utils/motion.h>
 
-WbMotionRef wbu_motion_new(const char *filename)
-void wbu_motion_delete(WbMotionRef motion)
+WbMotionRef wbu_motion_new(const char *filename);
+void wbu_motion_delete(WbMotionRef motion);
 ```
 
 **Description**
@@ -58,10 +58,10 @@ if (! walk->isValid()) {
 ```c
 #include <webots/utils/motion.h>
 
-void wbu_motion_play(WbMotionRef motion)
-void wbu_motion_stop(WbMotionRefmotion)
-void wbu_motion_set_loop(WbMotionRef motion, bool loop)
-void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse)
+void wbu_motion_play(WbMotionRef motion);
+void wbu_motion_stop(WbMotionRefmotion);
+void wbu_motion_set_loop(WbMotionRef motion, bool loop);
+void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse);
 ```
 
 **Description**
@@ -124,10 +124,10 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 ```c
 #include <webots/utils/motion.h>
 
-bool wbu_motion_is_over(WbMotionRef motion)
-int wbu_motion_get_duration(WbMotionRefmotion)
-int wbu_motion_get_time(WbMotionRef motion, bool loop)
-void wbu_motion_set_time(WbMotionRefmotion, int ms)
+bool wbu_motion_is_over(WbMotionRef motion);
+int wbu_motion_get_duration(WbMotionRefmotion);
+int wbu_motion_get_time(WbMotionRef motion, bool loop);
+void wbu_motion_set_time(WbMotionRefmotion, int ms);
 ```
 
 **Description**

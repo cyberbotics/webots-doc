@@ -86,9 +86,9 @@ noise is not dependent on the distance between emitter-receiver.
 ```c
 #include <webots/receiver.h>
 
-void wb_receiver_enable(WbDeviceTag tag, int ms)
-void wb_receiver_disable(WbDeviceTag tag)
-int wb_receiver_get_sampling_period(WbDeviceTag tag)
+void wb_receiver_enable(WbDeviceTag tag, int ms);
+void wb_receiver_disable(WbDeviceTag tag);
+int wb_receiver_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -119,8 +119,8 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 ```c
 #include <webots/receiver.h>
 
-int wb_receiver_get_queue_length(WbDeviceTag tag)
-void wb_receiver_next_packet(WbDeviceTag tag)
+int wb_receiver_get_queue_length(WbDeviceTag tag);
+void wb_receiver_next_packet(WbDeviceTag tag);
 ```
 
 **Description**
@@ -191,8 +191,8 @@ code that is not robust.
 ```c
 #include <webots/receiver.h>
 
-const void *wb_receiver_get_data(WbDeviceTag tag)
-int wb_receiver_get_data_size(WbDeviceTag tag)
+const void *wb_receiver_get_data(WbDeviceTag tag);
+int wb_receiver_get_data_size(WbDeviceTag tag);
 ```
 
 **Description**
@@ -283,8 +283,8 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 ```c
 #include <webots/receiver.h>
 
-double wb_receiver_get_signal_strength(WbDeviceTag tag)
-const double *wb_receiver_get_emitter_direction(WbDeviceTag tag)
+double wb_receiver_get_signal_strength(WbDeviceTag tag);
+const double *wb_receiver_get_emitter_direction(WbDeviceTag tag);
 ```
 
 **Description**
@@ -326,8 +326,8 @@ It is illegal to call this function if the receiver's queue is empty (`wb_receiv
 ```c
 #include <webots/receiver.h>
 
-void wb_receiver_set_channel(WbDeviceTag tag, int channel)
-int wb_receiver_get_channel(WbDeviceTag tag)
+void wb_receiver_set_channel(WbDeviceTag tag, int channel);
+int wb_receiver_get_channel(WbDeviceTag tag);
 ```
 
 **Description**

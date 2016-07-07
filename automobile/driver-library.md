@@ -11,9 +11,9 @@ library are explained below.
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_init()
-void wbu_driver_cleanup()
-int wbu_driver_step()
+void wbu_driver_init();
+void wbu_driver_cleanup();
+int wbu_driver_step();
 ```
 
 **Description**
@@ -35,8 +35,8 @@ used.
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_steering_angle(double steering_angle)
-double wbu_driver_get_steering_angle()
+void wbu_driver_set_steering_angle(double steering_angle);
+double wbu_driver_get_steering_angle();
 ```
 
 **Description**
@@ -49,8 +49,8 @@ to compute the right and left angles are the following (`trackFront` and
 `wheelbase` are the parameters of the [Car](car.md) PROTO):
 
 ```c
-angle_right = atan(1 / cot(steering_angle) - trackFront / (2 * wheelbase))
-angle_left = atan(1 / cot(steering_angle) + trackFront / (2 * wheelbase))
+angle_right = atan(1 / cot(steering_angle) - trackFront / (2 * wheelbase));
+angle_left = atan(1 / cot(steering_angle) + trackFront / (2 * wheelbase));
 ```
 
 The `wbu_driver_get_steering_angle` function returns the current steering angle.
@@ -64,8 +64,8 @@ The `wbu_driver_get_steering_angle` function returns the current steering angle.
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_cruising_speed(double speed)
-double wbu_driver_get_target_cruising_speed()
+void wbu_driver_set_cruising_speed(double speed);
+double wbu_driver_get_target_cruising_speed();
 ```
 
 **Description**
@@ -92,7 +92,7 @@ function).
 ```c
 #include <webots/driver.h>
 
-double wbu_driver_get_current_speed()
+double wbu_driver_get_current_speed();
 ```
 
 **Description**
@@ -110,8 +110,8 @@ and their respective radius.
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_throttle(double throttle)
-double wbu_driver_get_throttle()
+void wbu_driver_set_throttle(double throttle);
+double wbu_driver_get_throttle();
 ```
 
 **Description**
@@ -135,8 +135,8 @@ The `wbu_driver_get_throttle` function simply returns the state of the throttle
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_brake(double brake)
-double wbu_driver_get_brake()
+void wbu_driver_set_brake(double brake);
+double wbu_driver_get_brake();
 ```
 
 **Description**
@@ -161,10 +161,10 @@ The `wbu_driver_get_brake` function simply returns the state of the brake
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_indicator(int state)
-wbu_indicator_state wbu_driver_get_indicator()
-void wbu_driver_set_hazard_flashers(bool state)
-bool wbu_driver_get_hazard_flashers()
+void wbu_driver_set_indicator(int state);
+wbu_indicator_state wbu_driver_get_indicator();
+void wbu_driver_set_hazard_flashers(bool state);
+bool wbu_driver_get_hazard_flashers();
 ```
 
 **Description**
@@ -198,10 +198,10 @@ the hazard flashers.
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_dipped_beams(bool state)
-void wbu_driver_set_antifog_lights(bool state)
-bool wbu_driver_get_dipped_beams()
-bool wbu_driver_get_antifog_lights()
+void wbu_driver_set_dipped_beams(bool state);
+void wbu_driver_set_antifog_lights(bool state);
+bool wbu_driver_get_dipped_beams();
+bool wbu_driver_get_antifog_lights();
 ```
 
 **Description**
@@ -221,7 +221,7 @@ return the state of the dipped beams or the anti-fog lights.
 ```c
 #include <webots/driver.h>
 
-double wbu_driver_get_rpm()
+double wbu_driver_get_rpm();
 ```
 
 **Description**
@@ -241,9 +241,9 @@ because there is no engine model when control in cruising speed is enabled.
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_gear(int gear)
-int wbu_driver_get_gear()
-int wbu_driver_get_gear_number()
+void wbu_driver_set_gear(int gear);
+int wbu_driver_get_gear();
+int wbu_driver_get_gear_number();
 ```
 
 **Description**
@@ -268,7 +268,7 @@ gears (including the reverse gear).
 ```c
 #include <webots/driver.h>
 
-wbu_control_mode wbu_driver_get_control_mode()
+wbu_control_mode wbu_driver_get_control_mode();
 ```
 
 **Description**

@@ -87,7 +87,7 @@ function.
 ```c
 #include <webots/pen.h>
 
-void wb_pen_write(WbDeviceTag tag, bool write)
+void wb_pen_write(WbDeviceTag tag, bool write);
 ```
 
 **Description**
@@ -107,7 +107,7 @@ will write; if `write` is *false*, it won't.
 ```c
 #include <webots/pen.h>
 
-void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density)
+void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density);
 ```
 
 **Description**

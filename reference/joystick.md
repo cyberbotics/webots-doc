@@ -20,9 +20,9 @@ In C++, Python and Java the joystick functions are in a dedicated class called
 ```c
 #include <webots/joystick.h>
 
-void wb_joystick_enable(int ms)
-void wb_joystick_disable()
-int wb_joystick_get_sampling_period()
+void wb_joystick_enable(int ms);
+void wb_joystick_disable();
+int wb_joystick_get_sampling_period();
 ```
 
 **Description**
@@ -46,7 +46,7 @@ The `wb_joystick_get_sampling_period()` function returns the value previously pa
 ```c
 #include <webots/joystick.h>
 
-bool wb_joystick_is_connected(int ms)
+bool wb_joystick_is_connected(int ms);
 ```
 
 **Description**
@@ -65,8 +65,8 @@ Once the joystick is enabled, this function can be used to check if a free joyst
 ```c
 #include <webots/joystick.h>
 
-int  wb_joystick_get_number_of_axes()
-int  wb_joystick_get_axis_value(int axis)
+int  wb_joystick_get_number_of_axes();
+int  wb_joystick_get_axis_value(int axis);
 ```
 
 **Description**
@@ -86,7 +86,7 @@ The `wb_joystick_get_axis_value()` function returns the current value of the axi
 ```c
 #include <webots/joystick.h>
 
-int wb_joystick_get_pressed_button()
+int wb_joystick_get_pressed_button();
 ```
 
 **Description**

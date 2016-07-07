@@ -9,7 +9,7 @@ This manager implement the `DARwInOPVisionManager` class.
 ```c
 #include <DARwInOPVisionManager.hpp>
 
-DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)
+DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent);
 ```
 
 **Description**
@@ -46,7 +46,7 @@ HSV colorspace.
 ```c
 #include <DARwInOPVisionManager.hpp>
 
-getBallCenter(double x, double y, const unsigned char * image)
+void getBallCenter(double x, double y, const unsigned char * image);
 ```
 
 **Description**
@@ -70,7 +70,7 @@ the target object, this method proceeds to the following steps:
 ```c
 #include <DARwInOPVisionManager.hpp>
 
-isDetected(int x, int y)
+void isDetected(int x, int y);
 ```
 
 **Description**

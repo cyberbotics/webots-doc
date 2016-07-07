@@ -165,9 +165,9 @@ The internal depth camera is using a horizontal field of view defined in the `fi
 ```c
 #include <webots/lidar.h>
 
-void wb_lidar_enable(WbDeviceTag tag, int ms)
-void wb_lidar_disable(WbDeviceTag tag)
-int wb_lidar_get_sampling_period(WbDeviceTag tag)
+void wb_lidar_enable(WbDeviceTag tag, int ms);
+void wb_lidar_disable(WbDeviceTag tag);
+int wb_lidar_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -193,9 +193,9 @@ The `wb_lidar_get_sampling_period()` function returns the period given into the
 ```c
 #include <webots/lidar.h>
 
-void wb_lidar_enable_point_cloud(WbDeviceTag tag)
-void wb_lidar_disable_point_cloud(WbDeviceTag tag)
-bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag)
+void wb_lidar_enable_point_cloud(WbDeviceTag tag);
+void wb_lidar_disable_point_cloud(WbDeviceTag tag);
+bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag);
 ```
 
 **Description**
@@ -222,8 +222,8 @@ To get the point cloud array, enabling the point cloud is not sufficient. First 
 ```c
 #include <webots/lidar.h>
 
-const float *wb_lidar_get_range_image(WbDeviceTag tag)
-const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer)
+const float *wb_lidar_get_range_image(WbDeviceTag tag);
+const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 ```
 
 **Description**
@@ -264,9 +264,9 @@ are identical but their handling is of course different.
 ```c
 #include <webots/lidar.h>
 
-const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag)
-const WbLidarPoint *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer)
-int wb_lidar_get_number_of_points(WbDeviceTag tag)
+const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag);
+const WbLidarPoint *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
+int wb_lidar_get_number_of_points(WbDeviceTag tag);
 ```
 
 **Description**
@@ -298,8 +298,8 @@ number of points associated to).
 ```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_frequency(WbDeviceTag tag)
-void wb_lidar_set_frequency(WbDeviceTag tag, double frequency)
+double wb_lidar_get_frequency(WbDeviceTag tag);
+void wb_lidar_set_frequency(WbDeviceTag tag, double frequency);
 ```
 
 **Description**
@@ -322,8 +322,8 @@ range [minFrequency; maxFrequency].
 ```c
 #include <webots/lidar.h>
 
-int wb_lidar_get_horizontal_resolution(WbDeviceTag tag)
-int wb_lidar_get_number_of_layers(WbDeviceTag tag)
+int wb_lidar_get_horizontal_resolution(WbDeviceTag tag);
+int wb_lidar_get_number_of_layers(WbDeviceTag tag);
 ```
 
 **Description**
@@ -344,8 +344,8 @@ The `wb_lidar_get_number_of_layers()` returns the number of layers of the lidar.
 ```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_min_frequency(WbDeviceTag tag)
-double wb_lidar_get_max_frequency(WbDeviceTag tag)
+double wb_lidar_get_min_frequency(WbDeviceTag tag);
+double wb_lidar_get_max_frequency(WbDeviceTag tag);
 ```
 
 **Description**
@@ -365,8 +365,8 @@ head of the lidar (in case of rotating lidar).
 ```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_fov(WbDeviceTag tag)
-int wb_lidar_get_vertical_fov(WbDeviceTag tag)
+double wb_lidar_get_fov(WbDeviceTag tag);
+int wb_lidar_get_vertical_fov(WbDeviceTag tag);
 ```
 
 **Description**
@@ -387,8 +387,8 @@ lidar.
 ```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_min_range(WbDeviceTag tag)
-double wb_lidar_get_max_range(WbDeviceTag tag)
+double wb_lidar_get_min_range(WbDeviceTag tag);
+double wb_lidar_get_max_range(WbDeviceTag tag);
 ```
 
 **Description**

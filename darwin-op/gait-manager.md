@@ -17,7 +17,7 @@ default values that are stored in a "*.ini" configuration file. In the
 ```c
 #include <DARwInOPGaitManager.hpp>
 
-DARwInOPGaitManager(webots::Robot * robot, const std::string iniFilename)
+DARwInOPGaitManager(webots::Robot * robot, const std::string iniFilename);
 ```
 
 **Description**
@@ -37,11 +37,11 @@ your controller:
 ```c
 #include <DARwInOPGaitManager.hpp>
 
-setXAmplitude(double x)
-setYAmplitude(double y)
-setAAmplitude(double a)
-setMoveAimOn(bool q)
-setBalanceEnable(bool q)
+void setXAmplitude(double x);
+void setYAmplitude(double y);
+void setAAmplitude(double a);
+void setMoveAimOn(bool q);
+void setBalanceEnable(bool q);
 ```
 
 **Description**
@@ -71,9 +71,9 @@ Finally the following methods can be used in order to run the algorithm:
 ```c
 #include <DARwInOPGaitManager.hpp>
 
-start()
-step()
-int msstop()
+void start();
+void step();
+int msstop();
 ```
 
 **Description**

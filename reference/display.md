@@ -89,8 +89,8 @@ restored.
 ```c
 #include <webots/display.h>
 
-int wb_display_get_width(WbDeviceTag tag)
-int wb_display_get_height(WbDeviceTag tag)
+int wb_display_get_width(WbDeviceTag tag);
+int wb_display_get_height(WbDeviceTag tag);
 ```
 
 **Description**
@@ -109,9 +109,9 @@ fields.
 ```c
 #include <webots/display.h>
 
-void wb_display_set_color(WbDeviceTag tag, int color)
-void wb_display_set_alpha(WbDeviceTag tag, double alpha)
-void wb_display_set_opacity(WbDeviceTag tag, double opacity)
+void wb_display_set_color(WbDeviceTag tag, int color);
+void wb_display_set_alpha(WbDeviceTag tag, double alpha);
+void wb_display_set_opacity(WbDeviceTag tag, double opacity);
 ```
 
 **Description**
@@ -168,15 +168,15 @@ the magenta color.
 ```c
 #include <webots/display.h>
 
-void wb_display_draw_pixel(WbDeviceTag tag, int x, int y)
-void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2)
-void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height)
-void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
-void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
-void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y)
-void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height)
-void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
-void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
+void wb_display_draw_pixel(WbDeviceTag tag, int x, int y);
+void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2);
+void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
+void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
+void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
+void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y);
+void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
+void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
+void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
 ```
 
 **Description**
@@ -241,12 +241,12 @@ languages the size is determined directly from the `x` and `y` arguments.
 ```c
 #include <webots/display.h>
 
-WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format)
-WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename)
-WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height)
-void wb_display_image_paste(WbDeviceTag tag, WbImageRef ir, int x, int y)
-void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename)
-void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir)
+WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format);
+WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename);
+WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height);
+void wb_display_image_paste(WbDeviceTag tag, WbImageRef ir, int x, int y);
+void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename);
+void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir);
 ```
 
 **Description**

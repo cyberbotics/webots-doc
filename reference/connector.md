@@ -205,10 +205,10 @@ To be functional, a [Connector](#connector) node requires the presence of a
 ```c
 #include <webots/connector.h>
 
-void wb_connector_enable_presence(WbDeviceTag tag, int ms)
-void wb_connector_disable_presence(WbDeviceTag tag)
-int wb_connector_get_presence_sampling_period(WbDeviceTag tag)
-int wb_connector_get_presence(WbDeviceTag tag)
+void wb_connector_enable_presence(WbDeviceTag tag, int ms);
+void wb_connector_disable_presence(WbDeviceTag tag);
+int wb_connector_get_presence_sampling_period(WbDeviceTag tag);
+int wb_connector_get_presence(WbDeviceTag tag);
 ```
 
 **Description**
@@ -271,8 +271,8 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 ```c
 #include <webots/connector.h>
 
-void wb_connector_lock(WbDeviceTag tag)
-void wb_connector_unlock(WbDeviceTag tag)
+void wb_connector_lock(WbDeviceTag tag);
+void wb_connector_unlock(WbDeviceTag tag);
 ```
 
 **Description**

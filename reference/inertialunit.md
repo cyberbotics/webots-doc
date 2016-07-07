@@ -80,10 +80,10 @@ measure any infinitesimal change). This field accepts any value in the interval
 ```c
 #include <webots/inertial_unit.h>
 
-void wb_inertial_unit_enable(WbDeviceTag tag, int ms)
-void wb_inertial_unit_disable(WbDeviceTag tag)
-int wb_inertial_unit_get_sampling_period(WbDeviceTag tag)
-const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag)
+void wb_inertial_unit_enable(WbDeviceTag tag, int ms);
+void wb_inertial_unit_disable(WbDeviceTag tag);
+int wb_inertial_unit_get_sampling_period(WbDeviceTag tag);
+const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 ```
 
 **Description**

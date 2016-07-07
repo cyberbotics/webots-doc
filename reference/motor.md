@@ -253,22 +253,22 @@ Warnings are displayed if theses rules are not respected.
 ```c
 #include <webots/motor.h>
 
-void wb_motor_set_position(WbDeviceTag tag, double position)
-void wb_motor_set_velocity(WbDeviceTag tag, double velocity)
-void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration)
-void wb_motor_set_available_force(WbDeviceTag tag, double force)
-void wb_motor_set_available_torque(WbDeviceTag tag, double torque)
-void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d)
-double wb_motor_get_target_position(WbDeviceTag tag)
-double wb_motor_get_min_position(WbDeviceTag tag)
-double wb_motor_get_max_position(WbDeviceTag tag)
-double wb_motor_get_velocity(WbDeviceTag tag)
-double wb_motor_get_max_velocity(WbDeviceTag tag)
-double wb_motor_get_acceleration(WbDeviceTag tag)
-double wb_motor_get_available_force(WbDeviceTag tag)
-double wb_motor_get_max_force(WbDeviceTag tag)
-double wb_motor_get_available_torque(WbDeviceTag tag)
-double wb_motor_get_max_torque(WbDeviceTag tag)
+void wb_motor_set_position(WbDeviceTag tag, double position);
+void wb_motor_set_velocity(WbDeviceTag tag, double velocity);
+void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration);
+void wb_motor_set_available_force(WbDeviceTag tag, double force);
+void wb_motor_set_available_torque(WbDeviceTag tag, double torque);
+void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d);
+double wb_motor_get_target_position(WbDeviceTag tag);
+double wb_motor_get_min_position(WbDeviceTag tag);
+double wb_motor_get_max_position(WbDeviceTag tag);
+double wb_motor_get_velocity(WbDeviceTag tag);
+double wb_motor_get_max_velocity(WbDeviceTag tag);
+double wb_motor_get_acceleration(WbDeviceTag tag);
+double wb_motor_get_available_force(WbDeviceTag tag);
+double wb_motor_get_max_force(WbDeviceTag tag);
+double wb_motor_get_available_torque(WbDeviceTag tag);
+double wb_motor_get_max_torque(WbDeviceTag tag);
 ```
 
 **Description**
@@ -386,14 +386,14 @@ respectively the `minPosition` and the `maxPosition` fields.
 ```c
 #include <webots/motor.h>
 
-void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms)
-void wb_motor_disable_force_feedback(WbDeviceTag tag)
-int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag)
-double wb_motor_get_force_feedback(WbDeviceTag tag)
-void wb_motor_enable_torque_feedback(WbDeviceTag tag, int ms)
-void wb_motor_disable_torque_feedback(WbDeviceTag tag)
-int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag)
-double wb_motor_get_torque_feedback(WbDeviceTag tag)
+void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms);
+void wb_motor_disable_force_feedback(WbDeviceTag tag);
+int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag);
+double wb_motor_get_force_feedback(WbDeviceTag tag);
+void wb_motor_enable_torque_feedback(WbDeviceTag tag, int ms);
+void wb_motor_disable_torque_feedback(WbDeviceTag tag);
+int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
+double wb_motor_get_torque_feedback(WbDeviceTag tag);
 ```
 
 **Description**
@@ -459,8 +459,8 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 ```c
 #include <webots/motor.h>
 
-void wb_motor_set_force(WbDeviceTag tag, double force)
-void wb_motor_set_torque(WbDeviceTag tag, double torque)
+void wb_motor_set_force(WbDeviceTag tag, double force);
+void wb_motor_set_torque(WbDeviceTag tag, double torque);
 ```
 
 **Description**
@@ -505,7 +505,7 @@ dampers with controllable properties. The example in
 ```c
 #include <webots/motor.h>
 
-int wb_motor_get_type(WbDeviceTag tag)
+int wb_motor_get_type(WbDeviceTag tag);
 ```
 
 **Description**

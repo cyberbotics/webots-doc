@@ -49,10 +49,10 @@ measure any infinitesimal change). This field accepts any value in the interval
 ```c
 #include <webots/gyro.h>
 
-void wb_gyro_enable(WbDeviceTag tag, int ms)
-void wb_gyro_disable(WbDeviceTag tag)
-int wb_gyro_get_sampling_period(WbDeviceTag tag)
-const double *wb_gyro_get_values(WbDeviceTag tag)
+void wb_gyro_enable(WbDeviceTag tag, int ms);
+void wb_gyro_disable(WbDeviceTag tag);
+int wb_gyro_get_sampling_period(WbDeviceTag tag);
+const double *wb_gyro_get_values(WbDeviceTag tag);
 ```
 
 **Description**

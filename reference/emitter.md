@@ -101,7 +101,7 @@ range` and `aperture` will be ignored.
 ```c
 #include <webots/emitter.h>
 
-int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
+int wb_emitter_send(WbDeviceTag tag, const void *data, int size);
 ```
 
 **Description**
@@ -175,8 +175,8 @@ in a C/C++ controller.
 ```c
 #include <webots/emitter.h>
 
-void wb_emitter_set_channel(WbDeviceTag tag, int channel)
-int wb_emitter_get_channel(WbDeviceTag tag)
+void wb_emitter_set_channel(WbDeviceTag tag, int channel);
+int wb_emitter_get_channel(WbDeviceTag tag);
 ```
 
 **Description**
@@ -205,8 +205,8 @@ static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 ```c
 #include <webots/emitter.h>
 
-void wb_emitter_set_range(WbDeviceTag tag, double range)
-double wb_emitter_get_range(WbDeviceTag tag)
+void wb_emitter_set_range(WbDeviceTag tag, double range);
+double wb_emitter_get_range(WbDeviceTag tag);
 ```
 
 **Description**
@@ -231,7 +231,7 @@ returns the current emitter's range. For both the `wb_emitter_set_range()` and
 ```c
 #include <webots/emitter.h>
 
-int wb_emitter_get_buffer_size(WbDeviceTag tag)
+int wb_emitter_get_buffer_size(WbDeviceTag tag);
 ```
 
 **Description**

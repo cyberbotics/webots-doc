@@ -116,9 +116,9 @@ restored.
 ```c
 #include <webots/range_finder.h>
 
-void wb_range_finder_enable(WbDeviceTag tag, int ms)
-void wb_range_finder_disable(WbDeviceTag tag)
-int wb_range_finder_get_sampling_period(WbDeviceTag tag)
+void wb_range_finder_enable(WbDeviceTag tag, int ms);
+void wb_range_finder_disable(WbDeviceTag tag);
+int wb_range_finder_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -144,7 +144,7 @@ into the `wb_range_finder_enable()` function, or 0 if the device is disabled.
 ```c
 #include <webots/range_finder.h>
 
-double wb_range_finder_get_fov(WbDeviceTag tag)
+double wb_range_finder_get_fov(WbDeviceTag tag);
 ```
 
 **Description**
@@ -163,8 +163,8 @@ of a range-finder.
 ```c
 #include <webots/range_finder.h>
 
-int wb_range_finder_get_width(WbDeviceTag tag)
-int wb_range_finder_get_height(WbDeviceTag tag)
+int wb_range_finder_get_width(WbDeviceTag tag);
+int wb_range_finder_get_height(WbDeviceTag tag);
 ```
 
 **Description**
@@ -183,8 +183,8 @@ in the corresponding [RangeFinder](#rangefinder) node.
 ```c
 #include <webots/range_finder.h>
 
-double wb_range_finder_get_min_range(WbDeviceTag tag)
-double wb_range_finder_get_max_range(WbDeviceTag tag)
+double wb_range_finder_get_min_range(WbDeviceTag tag);
+double wb_range_finder_get_max_range(WbDeviceTag tag);
 ```
 
 **Description**
@@ -203,8 +203,8 @@ device as defined in the corresponding [RangeFinder](#rangefinder) node.
 ```c
 #include <webots/range_finder.h>
 
-const float *wb_range_finder_get_range_image(WbDeviceTag tag)
-float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y)
+const float *wb_range_finder_get_range_image(WbDeviceTag tag);
+float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y);
 ```
 
 **Description**
@@ -250,7 +250,7 @@ are identical but their handling is of course different.
 ```c
 #include <webots/range_finder.h>
 
-int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality)
+int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
 **Description**

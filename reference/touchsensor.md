@@ -155,11 +155,11 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 ```c
 #include <webots/touch_sensor.h>
 
-void wb_touch_sensor_enable(WbDeviceTag tag, int ms)
-void wb_touch_sensor_disable(WbDeviceTag tag)
-int wb_touch_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_touch_sensor_get_value(WbDeviceTag tag)
-const double *wb_touch_sensor_get_values(WbDeviceTag tag)
+void wb_touch_sensor_enable(WbDeviceTag tag, int ms);
+void wb_touch_sensor_disable(WbDeviceTag tag);
+int wb_touch_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_touch_sensor_get_value(WbDeviceTag tag);
+const double *wb_touch_sensor_get_values(WbDeviceTag tag);
 ```
 
 **Description**
@@ -194,7 +194,7 @@ of type "force-3d" exclusively.
 ```c
 #include <webots/touch_sensor.h>
 
-int wb_touch_sensor_get_type(WbDeviceTag tag)
+int wb_touch_sensor_get_type(WbDeviceTag tag);
 ```
 
 **Description**

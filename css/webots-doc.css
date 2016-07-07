@@ -99,6 +99,9 @@
   border-color: #ccc;
 }
 .webots-doc blockquote {
+  margin: 5px 10px;
+  padding: 0;
+  font-size: 14px; /* in the online doc, bootstrap is overriding font-size */
   border-left: 6px solid #ccc;
 }
 .webots-doc li {

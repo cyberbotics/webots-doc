@@ -593,13 +593,89 @@ function extractAnchor(url) {
     return '';
 }
 
+// width: in pixels
+function setHandleWidth(width) {
+    handle.left.css('width', width + 'px');
+    handle.handle.css('left', width + 'px');
+    handle.center.css('left', width + 'px');
+    handle.center.css('width', "calc(100% - " + width + "px)");
+}
+
+function initializeHandle() {
+    // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
+    handle = {}; // structure where all the handle info is stored
+
+    handle.left = $("#left"),
+    handle.center = $("#center"),
+    handle.handle = $("#handle");
+    handle.container = $("#webots-doc")
+
+    // dimension bounds of the handle in pixels
+    handle.min = 0;
+    handle.minThreshold = 75; // under this threshold, the handle is totally hidden
+    handle.initialWidth = handle.left.width();
+    handle.max = Math.max(250, handle.initialWidth);
+
+    handle.enableColor = "#c8c8f0";
+    handle.disableColor = "#ededed";
+
+    handle.isResizing = false;
+    handle.lastDownX = 0;
+
+    if (local)
+        handle.handle.addClass("local");
+    else
+        handle.handle.addClass("online");
+
+    setHandleWidth(handle.initialWidth);
+
+    handle.handle.on("mousedown", function (e) {
+        handle.isResizing = true;
+        handle.lastDownX = e.clientX;
+        handle.container.css("user-select", "none");
+        handle.handleColor = handle.handle.css("background-color");
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("dblclick", function (e) {
+        if (handle.left.css("width").startsWith("0"))
+            setHandleWidth(handle.initialWidth);
+        else
+            setHandleWidth(0);
+    }).on("mouseover", function () {
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("mouseout", function () {
+        if (!handle.isResizing)
+            handle.handle.css("background-color", handle.disableColor);
+    });
+
+    $(document).on("mousemove", function (e) {
+        if (!handle.isResizing)
+            return;
+        var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
+        if (mousePosition < handle.minThreshold / 2) {
+            setHandleWidth(0);
+            return;
+        } else if (mousePosition < handle.minThreshold)
+            return;
+        if (mousePosition < handle.min || mousePosition > handle.max)
+            return;
+        setHandleWidth(mousePosition);
+    }).on("mouseup", function (e) {
+        handle.isResizing = false;
+        handle.container.css("user-select", "auto");
+        handle.handle.css("background-color", handle.disableColor);
+    });
+}
+
 window.onscroll=function(){
     if (local)
         return;
     updateMenuScrollbar();
 };
 
+
 document.addEventListener("DOMContentLoaded", function() {
+    initializeHandle();
+
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)

@@ -593,12 +593,12 @@ function extractAnchor(url) {
     return '';
 }
 
-// width: in percent
+// width: in pixels
 function setHandleWidth(width) {
-    handle.left.css('width', width + '%');
-    handle.handle.css('left', width + '%');
-    handle.center.css('left', width + '%');
-    handle.center.css('width', (100.0 - width) + '%');
+    handle.left.css('width', width + 'px');
+    handle.handle.css('left', width + 'px');
+    handle.center.css('left', width + 'px');
+    handle.center.css('width', "calc(100% - " + width + "px)");
 }
 
 function initializeHandle() {
@@ -613,7 +613,8 @@ function initializeHandle() {
     // dimension bounds of the handle in pixels
     handle.min = 0;
     handle.minThreshold = 75; // under this threshold, the handle is totally hidden
-    handle.max = Math.max(250, handle.left.width());
+    handle.initialWidth = handle.left.width();
+    handle.max = Math.max(250, handle.initialWidth);
 
     handle.enableColor = "#c8c8f0";
     handle.disableColor = "#ededed";
@@ -626,6 +627,8 @@ function initializeHandle() {
     else
         handle.handle.addClass("online");
 
+    setHandleWidth(handle.initialWidth);
+
     handle.handle.on("mousedown", function (e) {
         handle.isResizing = true;
         handle.lastDownX = e.clientX;
@@ -634,7 +637,7 @@ function initializeHandle() {
         handle.handle.css("background-color", handle.enableColor);
     }).on("dblclick", function (e) {
         if (handle.left.css("width").startsWith("0"))
-            setHandleWidth(20);
+            setHandleWidth(handle.initialWidth);
         else
             setHandleWidth(0);
     }).on("mouseover", function () {
@@ -655,8 +658,7 @@ function initializeHandle() {
             return;
         if (mousePosition < handle.min || mousePosition > handle.max)
             return;
-        var width = 100.0 * mousePosition / handle.container.width(); // in percent
-        setHandleWidth(width);
+        setHandleWidth(mousePosition);
     }).on("mouseup", function (e) {
         handle.isResizing = false;
         handle.container.css("user-select", "auto");

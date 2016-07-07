@@ -827,8 +827,8 @@ API.
 ```c
 #include <webots/robot_window.h>
 
-const char *wb_robot_window_receive(int *length)
-void wb_robot_window_send(const char *message, int length)
+const char *wb_robot_window_receive(int *length);
+void wb_robot_window_send(const char *message, int length);
 ```
 
 **Description**

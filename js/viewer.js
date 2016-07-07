@@ -615,6 +615,9 @@ function initializeHandle() {
     handle.minThreshold = 75; // under this threshold, the handle is totally hidden
     handle.max = Math.max(250, handle.left.width());
 
+    handle.enableColor = "#c8c8f0";
+    handle.disableColor = "#ededed";
+
     handle.isResizing = false;
     handle.lastDownX = 0;
 
@@ -627,11 +630,18 @@ function initializeHandle() {
         handle.isResizing = true;
         handle.lastDownX = e.clientX;
         handle.container.css("user-select", "none");
+        handle.handleColor = handle.handle.css("background-color");
+        handle.handle.css("background-color", handle.enableColor);
     }).on("dblclick", function (e) {
         if (handle.left.css("width").startsWith("0"))
             setHandleWidth(20);
         else
             setHandleWidth(0);
+    }).on("mouseover", function () {
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("mouseout", function () {
+        if (!handle.isResizing)
+            handle.handle.css("background-color", handle.disableColor);
     });
 
     $(document).on("mousemove", function (e) {
@@ -650,6 +660,7 @@ function initializeHandle() {
     }).on("mouseup", function (e) {
         handle.isResizing = false;
         handle.container.css("user-select", "auto");
+        handle.handle.css("background-color", handle.disableColor);
     });
 }
 

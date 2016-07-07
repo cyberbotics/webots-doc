@@ -28,9 +28,6 @@
   position:absolute;
   top: 50%;
 }
-.webots-doc #handle:hover {
-  background-color: #c8c8f0;
-}
 .webots-doc #center {
   top: 0px;
   left: 20%;

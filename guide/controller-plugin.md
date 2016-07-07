@@ -320,4 +320,4 @@ A simple example of a HTML robot window is provided in the `robots/thymio/thymio
 
 Currently, HTML robot windows can communicate only with C and C++ controller programs, but this will be extended soon to Python, Java and MATLAB controllers.
 
-The e-puck, Darwin-OP and generic robot window are still using the native robot window. However, they will soon be ported to the HTML robot window. After that, the native robot window system will be progressively phased out.
+The e-puck, Darwin-OP and generic robot windows are still using the native robot window. However, they will soon be ported to the HTML robot window. After that, the native robot window system will be progressively phased out.

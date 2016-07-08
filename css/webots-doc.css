@@ -138,11 +138,14 @@
   border-radius: 4px;
   background-color: #eee;
   overflow-x: auto;
+  font-size: 16px;
 }
 .webots-doc code {
   padding: 0px;
   background: transparent;
   color: #444;
+  font-size: 16px;
+  line-height: 18px;
 }
 .webots-doc h1,
 .webots-doc h2,

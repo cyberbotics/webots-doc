@@ -97,10 +97,11 @@
   border-color: #ccc;
 }
 .webots-doc blockquote {
-  margin: 5px 10px;
-  padding: 0;
+  margin: 20px 10px;
+  padding: 20px;
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
-  border-left: 6px solid #ccc;
+  border-left: 6px solid #ffe070;
+  background-color: #fff4cc;
 }
 .webots-doc li {
   font-weight: normal;
@@ -135,8 +136,8 @@
 .webots-doc pre {
   padding: 30px 10px 30px 40px;
   margin: 20px 10px;
-  border-radius: 10px;
-  background-color: #ececec;
+  border-radius: 20px;
+  background-color: #e8f4ff;
   overflow-x: auto;
   font-size: 16px;
 }

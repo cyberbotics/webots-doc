@@ -141,6 +141,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setColor](display.md#wb_display_set_color)(int color);                                                                       |
 | &nbsp;&nbsp; public void [setAlpha](display.md#wb_display_set_color)(double alpha);                                                                    |
 | &nbsp;&nbsp; public void [setOpacity](display.md#wb_display_set_color)(double opacity);                                                                |
+| &nbsp;&nbsp; public void [attachCamera](display.md#wb_display_attach_camera)(Camera camera);                                                           |
+| &nbsp;&nbsp; public void [detachCamera](display.md#wb_display_attach_camera)();                                                                        |
 | &nbsp;&nbsp; public void [drawPixel](display.md#wb_display_draw_pixel)(int x1, int y1);                                                                |
 | &nbsp;&nbsp; public void [drawLine](display.md#wb_display_draw_pixel)(int x1, int y1, int x2, int y2);                                                 |
 | &nbsp;&nbsp; public void [drawRectangle](display.md#wb_display_draw_pixel)(int x, int y, int width, int height);                                       |
@@ -151,7 +153,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [fillOval](display.md#wb_display_draw_pixel)(int cx, int cy, int a, int b);                                                   |
 | &nbsp;&nbsp; public void [fillPolygon](display.md#wb_display_draw_pixel)(int[] x, int[] y);                                                            |
 | &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageCopy](display.md#wb_display_image_new)(int x, int y, int width, int height);                     |
-| &nbsp;&nbsp; public void [imagePaste](display.md#wb_display_image_new)([ImageRef](#java_image_ref) ir, int x, int y);                                  |
+| &nbsp;&nbsp; public void [imagePaste](display.md#wb_display_image_new)([ImageRef](#java_image_ref) ir, int x, int y, boolean blend);                   |
 | &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageLoad](display.md#wb_display_image_new)(String filename);                                         |
 | &nbsp;&nbsp; public [ImageRef](#java_image_ref) [imageNew](display.md#wb_display_image_new)(int width, int height, int[] data, int format);            |
 | &nbsp;&nbsp; public void [imageSave](display.md#wb_display_image_new)([ImageRef](#java_image_ref) ir, String filename);                                |

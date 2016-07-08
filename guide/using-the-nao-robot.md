@@ -31,7 +31,7 @@ this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".
 ### Using Webots with Choregraphe
 
 These instructions have been tested with Webots 8.0.0 and Choregraphe 2.1.1.10.
-Please Note that Webots must not be launched as root when using any world
+Please note that Webots must not be launched as root when using any world
 containing naoqisim, otherwise Choregraphe won't be able to send instructions to
 the robot in Webots.
 

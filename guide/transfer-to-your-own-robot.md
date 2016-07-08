@@ -98,7 +98,7 @@ Webots supports cross-compilation for several existing commercial robots. For th
 no modification in the code. For the *Hemisson*<sup>TM</sup> robot, this system
 needs a few include files to replace the Webots API include files. For the
 *Khepera*<sup>TM</sup> robot, a specific C library is used in addition to
-specific include-files.
+specific include files.
 
 ### Interpreted language
 

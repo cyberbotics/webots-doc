@@ -32,7 +32,7 @@ controller.
 ### Understand the e-puck Model
 
 Controller programming requires some information related to the e-puck model.
-in order to create the collision avoidance algorithm, we need to read the values of its 8
+In order to create the collision avoidance algorithm, we need to read the values of its 8
 infra-red distance sensors located around its turret, and we need to actuate its
 two wheels. The way that the distance sensors are distributed around the turret
 and the e-puck direction are depicted in [this
@@ -49,7 +49,7 @@ measured (an obstacle is close) and 0 means that no light is measured (no
 obstacle).
 
 In the same way, the e-puck root node is a DifferentialWheel node and can be
-accessed by the "webots/differential\_wheel.h" include-file. The speed is given in
+accessed by the "webots/differential\_wheel.h" include file. The speed is given in
 a number of ticks/seconds where 1000 ticks correspond to a complete rotation of
 the wheel. The values are clamped between -1000 and 1000.
 

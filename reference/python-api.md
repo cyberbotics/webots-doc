@@ -135,6 +135,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setColor](display.md#wb_display_set_color)(self, color)                     |
 | &nbsp;&nbsp; def [setAlpha](display.md#wb_display_set_color)(self, alpha)                     |
 | &nbsp;&nbsp; def [setOpacity](display.md#wb_display_set_color)(self, opacity)                 |
+| &nbsp;&nbsp; def [attachCamera](display.md#wb_display_attach_camera)(self, camera);           |
+| &nbsp;&nbsp; def [detachCamera](display.md#wb_display_attach_camera)(self);                   |
 | &nbsp;&nbsp; def [drawPixel](display.md#wb_display_draw_pixel)(self, x1, y1)                  |
 | &nbsp;&nbsp; def [drawLine](display.md#wb_display_draw_pixel)(self, x1, y1, x2, y2)           |
 | &nbsp;&nbsp; def [drawRectangle](display.md#wb_display_draw_pixel)(self, x, y, width, height) |
@@ -145,7 +147,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [fillOval](display.md#wb_display_draw_pixel)(self, cx, cy, a, b)             |
 | &nbsp;&nbsp; def [fillPolygon](display.md#wb_display_draw_pixel)(self, x, y)                  |
 | &nbsp;&nbsp; def [imageCopy](display.md#wb_display_image_new)(self, x, y, width, height)      |
-| &nbsp;&nbsp; def [imagePaste](display.md#wb_display_image_new)(self, ir, x, y)                |
+| &nbsp;&nbsp; def [imagePaste](display.md#wb_display_image_new)(self, ir, x, y, blend=False)   |
 | &nbsp;&nbsp; def [imageLoad](display.md#wb_display_image_new)(self, filename)                 |
 | &nbsp;&nbsp; def [imageNew](display.md#wb_display_image_new)(self, data, format)              |
 | &nbsp;&nbsp; def [imageSave](display.md#wb_display_image_new)(self, ir, filename)             |

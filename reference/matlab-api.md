@@ -111,6 +111,8 @@ The following tables describe the Matlab functions.
 | [wb\_display\_set\_color](display.md#wb_display_set_color)(tag, [r g b])                             |
 | [wb\_display\_set\_alpha](display.md#wb_display_set_color)(tag, alpha)                               |
 | [wb\_display\_set\_opacity](display.md#wb_display_set_color)(tag, opacity)                           |
+| [wb\_display\_attach\_camera](display.md#wb_display_attach_camera)(tag, camera_tag)                  |
+| [wb\_display\_detach\_camera](display.md#wb_display_attach_camera)(tag)                              |
 | [wb\_display\_draw\_pixel](display.md#wb_display_draw_pixel)(tag, x, y)                              |
 | [wb\_display\_draw\_line](display.md#wb_display_draw_pixel)(tag, x1, y1, x2, y2)                     |
 | [wb\_display\_draw\_rectangle](display.md#wb_display_draw_pixel)(tag, x, y, width, height)           |
@@ -121,7 +123,7 @@ The following tables describe the Matlab functions.
 | [wb\_display\_fill\_oval](display.md#wb_display_draw_pixel)(tag, cx, cy, a, b)                       |
 | [wb\_display\_fill\_polygon](display.md#wb_display_draw_pixel)(tag, [x1 x2 ... xn], [y1 y2 ... yn])  |
 | image = [wb\_display\_image\_copy](display.md#wb_display_image_new)(tag, x, y, width, height)        |
-| [wb\_display\_image\_paste](display.md#wb_display_image_new)(tag, image, x, y)                       |
+| [wb\_display\_image\_paste](display.md#wb_display_image_new)(tag, image, x, y, blend)                |
 | image = [wb\_display\_image\_load](display.md#wb_display_image_new)(tag, 'filename')                 |
 | image = [wb\_display\_image\_new](display.md#wb_display_image_new)(tag, width, height, data ,format) |
 | [wb\_display\_image\_save](display.md#wb_display_image_new)(tag, image, 'filename')                  |

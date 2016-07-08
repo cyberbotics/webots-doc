@@ -142,6 +142,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setColor](display.md#wb_display_set_color)(int color);                                                                          |
 | &nbsp;&nbsp; virtual void [setAlpha](display.md#wb_display_set_color)(double alpha);                                                                       |
 | &nbsp;&nbsp; virtual void [setOpacity](display.md#wb_display_set_color)(double opacity);                                                                   |
+| &nbsp;&nbsp; virtual void [attachCamera](display.md#wb_display_attach_camera)(Camera *camera);                                                             |
+| &nbsp;&nbsp; virtual void [detachCamera](display.md#wb_display_attach_camera)();                                                                           |
 | &nbsp;&nbsp; virtual void [drawPixel](display.md#wb_display_draw_pixel)(int x1, int y1);                                                                   |
 | &nbsp;&nbsp; virtual void [drawLine](display.md#wb_display_draw_pixel)(int x1, int y1, int x2, int y2);                                                    |
 | &nbsp;&nbsp; virtual void [drawRectangle](display.md#wb_display_draw_pixel)(int x, int y, int width, int height);                                          |
@@ -152,7 +154,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [fillOval](display.md#wb_display_draw_pixel)(int cx, int cy, int a, int b);                                                      |
 | &nbsp;&nbsp; virtual void [fillPolygon](display.md#wb_display_draw_pixel)(const int *x, const int *y, int size);                                           |
 | &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageCopy](display.md#wb_display_image_new)(int x, int y, int width, int height) const;                          |
-| &nbsp;&nbsp; virtual void [imagePaste](display.md#wb_display_image_new)([ImageRef](#cpp_image_ref) *ir, int x, int y);                                     |
+| &nbsp;&nbsp; virtual void [imagePaste](display.md#wb_display_image_new)([ImageRef](#cpp_image_ref) *ir, int x, int y, blend=false);                        |
 | &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageLoad](display.md#wb_display_image_new)(const std::string &filename) const;                                  |
 | &nbsp;&nbsp; [ImageRef](#cpp_image_ref) *[imageNew](display.md#wb_display_image_new)(int width, int height, const void *data, int format) const;           |
 | &nbsp;&nbsp; void [imageSave](display.md#wb_display_image_new)([ImageRef](#cpp_image_ref) *ir, const std::string &filename) const;                         |

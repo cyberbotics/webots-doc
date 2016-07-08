@@ -80,11 +80,13 @@ for more information about the value of `robot_unique_name`).
 ### Display
 
 | name                                                                    | service/topic | data type                             | data type definition                                                                |
-| ----------------------------------------------------------------------- | ------------- | ------------------------------------- | ----------------------------------------------------------------------------------- |  |
+| ----------------------------------------------------------------------- | ------------- | ------------------------------------- | ----------------------------------------------------------------------------------- |
 | [/`<`device\_name`>`/get\_info](display.md#wb_display_get_width)        | service       | webots\_ros::display\_get\_info       | uint8 ask<br/>---<br/>uint32 width<br/>uint32 height                                |
 | [/`<`device\_name`>`/set\_color](display.md#wb_display_set_color)       | service       | webots\_ros::display\_set\_color      | int32 color<br/>---<br/>int8 success                                                |
 | [/`<`device\_name`>`/set\_alpha](display.md#wb_display_set_color)       | service       | webots\_ros::display\_set\_alpha      | float64 alpha<br/>---<br/>int8 success                                              |
 | [/`<`device\_name`>`/set\_opacity](display.md#wb_display_set_color)     | service       | webots\_ros::display\_set\_opacity    | float64 opacity<br/>---<br/>int8 success                                            |
+| [/`<`device\_name`>`/set\_attach\_camera](display.md#wb_display_attach_camera) | service | webots\_ros::display\_attach\_camera | string camera<br/>---<br/>int8 success                                              |
+| [/`<`device\_name`>`/set\_detach\_camera](display.md#wb_display_attach_camera) | service | webots\_ros::display\_detach\_camera | uint8 ask<br/>---<br/>int8 success                                                   |
 | [/`<`device\_name`>`/draw\_pixel](display.md#wb_display_draw_pixel)     | service       | webots\_ros::display\_draw\_pixel     | int32 x1<br/>int32 y1<br/>---<br/>int8 success                                      |
 | [/`<`device\_name`>`/draw\_line](display.md#wb_display_draw_pixel)      | service       | webots\_ros::display\_draw\_line      | int32 x1<br/>int32 y1<br/>int32 x2<br/>int32 y2<br/>---<br/>int8 success            |
 | [/`<`device\_name`>`/draw\_rectangle](display.md#wb_display_draw_pixel) | service       | webots\_ros::display\_draw\_rectangle | int32 x<br/>int32 y<br/>int32 width<br/>int32 height<br/>---<br/>int8 success       |
@@ -96,7 +98,7 @@ for more information about the value of `robot_unique_name`).
 | [/`<`device\_name`>`/fill\_polygon](display.md#wb_display_draw_pixel)   | service       | webots\_ros::display\_fill\_polygon   | int32[] x<br/>int32[] y<br/>int32 size<br/>---<br/>int8 success                     |
 | [/`<`device\_name`>`/image\_new](display.md#wb_display_image_new)       | service       | webots\_ros::display\_image\_new      | int32 width<br/>int32 height<br/>char[] data<br/>int32 format<br/>---<br/>uint64 ir |
 | [/`<`device\_name`>`/image\_copy](display.md#wb_display_image_new)      | service       | webots\_ros::display\_image\_copy     | int32 x<br/>int32 y<br/>int32 width<br/>int32 height<br/>---<br/>uint64 ir          |
-| [/`<`device\_name`>`/image\_paste](display.md#wb_display_image_new)     | service       | webots\_ros::display\_image\_paste    | uint64 ir<br/>int32 x<br/>int32 y<br/>---<br/>int8 success                          |
+| [/`<`device\_name`>`/image\_paste](display.md#wb_display_image_new)     | service       | webots\_ros::display\_image\_paste    | uint64 ir<br/>int32 x<br/>int32 y<br/>uint8 blend<br/>---<br/>int8 success          |
 | [/`<`device\_name`>`/image\_load](display.md#wb_display_image_new)      | service       | webots\_ros::display\_image\_load     | string filename<br/>---<br/>uint64 ir                                               |
 | [/`<`device\_name`>`/image\_save](display.md#wb_display_image_new)      | service       | webots\_ros::display\_image\_save     | string filename<br/>uint64 ir<br/>---<br/>int8 success                              |
 | [/`<`device\_name`>`/image\_delete](display.md#wb_display_image_new)    | service       | webots\_ros::display\_image\_delete   | uint64 ir<br/>---<br/>int8 success                                                  |

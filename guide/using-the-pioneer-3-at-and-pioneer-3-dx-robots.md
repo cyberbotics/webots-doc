@@ -94,7 +94,7 @@ figure](#pioneer-3-dx-an-all-purpose-base-used-for-research-and-applications)).
 
 The base Pioneer 3-DX platform is assembled with motors featuring 500-tick
 encoders, 19 cm wheels, tough aluminum body, 8 forward-facing ultrasonic (sonar)
-sensors, 8 optional real-facing sonar, 1, 2 or 3 hot-swappable batteries, and a
+sensors, 8 optional rear-facing sonars, 1, 2 or 3 hot-swappable batteries, and a
 complete software development kit. The base Pioneer 3-DX platform can reach
 speeds of 1.6 meters per second and carry a payload of up to 23 kg.
 

@@ -110,7 +110,7 @@ The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file, using the X3DOM web standard, based on WebGL. This
 is especially useful for publishing Webots-created worlds on the Web. X3DOM is
 supported in recent versions of Firefox, Chrome, Internet Explorer and Safari on
-Mac OS X (see details on the [X3DOM web site](http://www.x3dom.org)).
+Mac OS X (see details on the [X3DOM website](http://www.x3dom.org)).
 
 > **note**:
 With the Chrome browser, in order to be able to open HTML/X3DOM files locally,
@@ -177,7 +177,7 @@ are drawn (not the renderable primitives). This can be used to debug a problem
 with the collision detection.
 
 Finally, the `Optional Rendering` submenu allows you to display, or to hide,
-supplementary information. These rendering are displayed only in the main
+supplementary information. These renderings are displayed only in the main
 rendering and hide in the robot camera. They are used to understand better the
 behavior of the simulation.
 
@@ -298,7 +298,7 @@ node.
 ![](images/fast-button.png =26x26) The `Fast` menu item (and button) is like
 `Run`, except that no graphical rendering is performed (Webots PRO only). As the
 graphical rendering is disabled (black screen) this allows for a faster
-simulation and therefore this is well suited for cpu-intensive simulations
+simulation and therefore is well suited for cpu-intensive simulations
 (genetic algorithms, vision, learning, etc.).
 
 ### Build Menu
@@ -363,9 +363,7 @@ the 3D view independently from the specific robot's device option set in
 
 The `Tools` menu allows you to open various Webots windows.
 
-The `3D View` menu item shows or hides the
-
-The `Scene Tree` menu item opens the
+The `3D View` menu item shows or hides the 3D window that and allows you to interact with the 3D simulation.
 
 The `Scene Tree` menu item opens the `Scene Tree` window in which you can edit
 the virtual world. Alternatively it is also possible to double-click on some of
@@ -378,7 +376,7 @@ used for editing and compiling controller source code.
 The `Console` menu item opens the Webots Console, which is a read-only console
 that is used to display Webots error messages and controller outputs.
 
-The `Restore Layout` menu item restores the factory layout of the panes of the
+The `Restore Layout` menu item restores the factory layout of the panels of the
 main window.
 
 The `Clear Console` menu item clears the console.
@@ -390,7 +388,7 @@ The `License Manager...` item opens the `Webots License Manager` window that
 allows you to see which licenses are in use and optionally to transfer some
 license to your local computer for off-line use. Please note that the transfer
 of license may be limited by your local license administrator: It may not be
-possible to transfer some license to your local computer or only for a limited
+possible to transfer some licenses to your local computer or only for a limited
 duration depending on the configuration defined by your local license
 administrator. Please ask your local license administrator in case of problem.
 
@@ -437,7 +435,7 @@ of HTML pages, PDF documents, etc.
 ### Main toolbar
 
 The main toolbar contains items for editing the world and the speedometer (see
-subsection [this section](#speedometer-and-virtual-time)), other than shortcuts
+ [subsection](#speedometer-and-virtual-time)), other than shortcuts
 to items of the `File`, `Simulation` and `View` menus. Edit actions always apply
 on the selected object, that is highlighted both in the 3D window and in the
 Scene Tree.

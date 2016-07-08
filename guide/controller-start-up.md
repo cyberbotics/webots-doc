@@ -1,7 +1,7 @@
 ## Controller Start-up
 
 The .wbt file contains the name of the controller that needs to be started for
-each robot. The controller name is platform and language independent field; for
+each robot. The controller name is a platform and language independent field; for
 example when a controller name is specified as "xyz\_controller" in the .wbt
 file, this does not say anything about the controller's programming language or
 platform. This is done deliberately to ensure the platform and programming
@@ -11,7 +11,7 @@ So when Webots tries to start a controller it must first determine what
 programming language is used by this controller. So, Webots looks in the
 project's "controllers" directory for a subdirectory that matches the controller
 name. Then, in this controller directory, it looks for a file that matches the
-controller name. For example if the controller name is "xyz\_controller", then
+controller's name. For example if the controller's name is "xyz\_controller", then
 Webots looks for these files in the specified order, in the
 "PROJECT\_DIRECTORY/controllers/xyz\_controller" directory.
 

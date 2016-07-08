@@ -1,13 +1,13 @@
 ## Citing Webots
 
 If you write a scientific paper or describe your project involving Webots on a
-web page, we will greatly appreciate if you can add a reference to Webots. For
-example by explicitly mentioning Cyberbotics' web site or by referencing a
+web page, we would greatly appreciate it if you could add a reference to Webots. For
+example by explicitly mentioning Cyberbotics' website or by referencing a
 journal paper that describes Webots. To make this simpler, we provide here some
 citation examples, including BibTex entries that you can use in your own
 documents.
 
-### Citing Cyberbotics' web site
+### Citing Cyberbotics' website
 
 *This project uses [Webots](http://www.cyberbotics.com), a commercial mobile
 robot simulation software developed by Cyberbotics Ltd.*

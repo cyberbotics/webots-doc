@@ -33,8 +33,7 @@ licenses.
 licenses simultaneously.
 5. Type `webots@my.university.edu` in the "users:" text area.
 6. If the account doesn't already exists, `webots@my.university.edu` will receive
-an e-mail asking to create a user account at [Cyberbotics' web
-site](https://www.cyberbotics.com).
+an e-mail asking to create a user account at [Cyberbotics' website](https://www.cyberbotics.com).
 7. Create this account (if needed), log in and visit the Profile page of this
 account. Copy the "Alternate password for Webots 8". This password allows
 students to use Webots, but not to log in this user account. It looks like
@@ -56,13 +55,13 @@ using Webots.
 credentials, e.g., the user account which was used to activate your Webots
 licenses.
 2. Create a new user pack from the administration page and call it "Students".
-3. Grant access to all your 20 Webots EDU license (tick boxes).
+3. Grant access to all your 20 Webots EDU licenses (tick boxes).
 4. Set the concurrency value to 1 to prevent a single user to use multiple
 instances of Webots at the same time.
 5. Type (or copy/paste) the list of student e-mail addresses in the "users:" text
 area.
 6. Press the apply button. The e-mail addresses which are not already registered on
-Cyberbotics' web site will receive an invitation e-mail explaining how to
+Cyberbotics' website will receive an invitation e-mail explaining how to
 register a Webots account and use the newly granted Webots licenses. For
 existing accounts, no e-mail is sent and it is your responsibility to inform the
 students about their modified license rights.
@@ -74,7 +73,7 @@ students about their modified license rights.
 You can install Webots on all the computers in a classroom, even if you have
 more computers than licenses. In our example, if you have 20 licenses and 30
 computers, then 20 students could use the software simultaneously on any of the
-30 computers. If a 21rst student comes in, he won't be able to start Webots
+30 computers. However, if a 21rst student comes in, he won't be able to start Webots
 until one of the 20 students stops using Webots.
 
 #### Restrict the license to specific machines

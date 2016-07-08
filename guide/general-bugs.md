@@ -2,14 +2,14 @@
 
 ### Intel GMA graphics cards
 
-Webots should run on any fairly recent computer equipped with a nVidia or ATI
+Webots should run on any fairly recent computer equipped with a nVidia or AMD
 graphics card and up-to-date graphics drivers. Webots is not guaranteed to work
 with Intel GMA graphics cards: it may crash or exhibit display bugs. Upgrading
 to the latest versions of the Intel graphics driver may help resolve such
 problems (without any guarantee). Graphics drivers from Intel may be obtained
-from the [Intel download center web site](http://downloadcenter.intel.com).
+from the [Intel download center website](http://downloadcenter.intel.com).
 Linux graphics drivers from Intel may be obtained from the [Intel Linux Graphics
-web site](http://intellinuxgraphics.org).
+website](http://intellinuxgraphics.org).
 
 ### Virtualization
 
@@ -20,7 +20,7 @@ in such environments.
 
 ### Collision detection
 
-Although collision detection works well generally well, `Cylinder-Cylinder`,
+Although collision detection generally works well , `Cylinder-Cylinder`,
 `Cylinder-Capsule`, `IndexedFaceSet-IndexedFaceSet` and
 `IndexedFaceSet-Cylinder` collision detection may occasionaly yield wrong
 contact points. Sometimes the contact points may be slightly off the shape,

@@ -4,7 +4,7 @@
 
 There are different functions depending whether this information must be
 accessed in the controller, in the Supervisor or in the physics plugin. Note
-that Webots PRO is required for using `Supervisor` and the physics plugin
+that Webots PRO is required to use `Supervisor` and the physics plugin
 functions. All the functions described below will return the 3D position in
 meters and expressed in the global (world) coordinate system.
 
@@ -115,7 +115,7 @@ message in question is shown. So this problem often happens when you:
 
 - Have moved the project or source files to a location that does not correspond to
 the above description.
-- Use an external build system, e.g. Visual Studio, that is not configured to
+- Use an external building system, e.g. Visual Studio, that is not configured to
 generate the executable file at the right location.
 - Have changed the Robot's controller field to a location where no
 executable/interpretable file can be found.
@@ -143,9 +143,9 @@ function. Here is an example of what is wrong:
 > #include <webots/robot.h>
 > #include <webots/camera.h>
 > #include <webots/distance_sensor.h>
-> 
+>
 > #define TIME_STEP 32
-> 
+>
 > int main() {
 >   wb_robot_init();
 >   WbDeviceTag camera = wb_robot_get_device("camera");
@@ -165,9 +165,9 @@ such an example:
 > #include <webots/robot.h>
 > #include <webots/camera.h>
 > #include <webots/distance_sensor.h>
-> 
+>
 > #define TIME_STEP 32
-> 
+>
 > int main() {
 >   wb_robot_init();
 >   WbDeviceTag distance_sensor, camera = wb_robot_get_device("camera");
@@ -241,7 +241,7 @@ Please lookup for the `Display` node in the `Reference Manual`.
 previous FAQ question, just above. After you have added the physics plugin you
 will have to implement the `webots_physics_draw` function. The implementation
 must be based on the OpenGL API, hence some OpenGL knowledge will be useful. You
-will find an sample implementation in the `Reference Manual` in the chapter
+will find a sample implementation in the `Reference Manual` in the chapter
 about the Physics Plugin.
 
 ### What does this mean: "The time step used by controller {...} is not a multiple of WorldInfo.basicTimeStep!"?

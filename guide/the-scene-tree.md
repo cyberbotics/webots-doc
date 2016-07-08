@@ -8,7 +8,7 @@ representation. The scene tree of Webots is structured like a VRML97 file. It is
 composed of a list of nodes, each containing fields. Fields can contain values
 (text strings, numerical values) or other nodes.
 
-This section describes the user interface of the Scene Tree, gives an overview
+This section describes the user interface of the Scene Tree, and gives an overview
 of the VRML97 nodes and Webots nodes.
 
 %figure "Scene Tree Window"
@@ -21,7 +21,7 @@ of the VRML97 nodes and Webots nodes.
 
 Nodes can be expanded with a double-click. When a field is selected, its value
 can be edited at the bottom of the Scene Tree. All changes will be immediately
-reflected in the 3D window. The following buttons are available int the field
+reflected in the 3D window. The following buttons are available in the field
 editor section:
 
 ![](images/reset-button.png =26x26) `Reset`: Resets a field to its default
@@ -39,9 +39,9 @@ Additionally, when a node is selected, other actions are available as shown in
 
 %end
 
-`Tranform to`: Allow to change the type of the selected node by chosing the
+`Tranform to`: Allows to change the type of the selected node by chosing the
 target type from a given list of suitable types. This action is not available
-for all node's types.
+for all node types.
 
 `Export...`: Exports nodes that can then be imported in other worlds.
 

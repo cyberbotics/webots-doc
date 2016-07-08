@@ -18,7 +18,7 @@ $ webots --mode=fast --stdout --stderr myworld.wbt
 
 The first line logs onto computer B. The 2nd line sets the DISPLAY variable to
 the display 0 (and screen 0) of computer B. This will indicate to all X11
-applications (including Webots) that they needs to connect to the X-server
+applications (including Webots) that they need to connect to the X-server
 running on the local computer: computer B in this case. This step is necessary
 because the DISPLAY variable is usually not set in an `ssh` session.
 

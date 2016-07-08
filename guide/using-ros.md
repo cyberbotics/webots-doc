@@ -18,10 +18,10 @@ experimental on Mac OS X and has partial functionality under Windows.
 
 ROS has two basic "sides": The operating system side, ros, as described above
 and ros-pkg, a suite of user contributed packages (organized into sets called
-stacks) that implement functionality such as simultaneous localization and
+stacks) that implement functionalities such as simultaneous localization and
 mapping, planning, perception, simulation etc.
 
-ROS is released under the terms of the BSD license, and is open source software.
+ROS is released under the terms of the BSD license, and is an open source software.
 It is free for commercial and research use. The ros-pkg contributed packages are
 licensed under a variety of open source licenses.
 
@@ -34,7 +34,7 @@ robot in Webots and acts as a ROS node, providing all the Webots functions as
 services or topics to other ROS nodes. The second custom and more complicated
 solution is to build your own Webots controller that will also be a ROS node
 using Webots and ROS libraries. This solution should only be used for specific
-application that cannot be done with the standard controller.
+applications that cannot be done with the standard controller.
 
 #### Standard Controller
 
@@ -54,10 +54,10 @@ different instances of the same robot, the name of the robot is followed by the
 ID of the process and the IP address of the computer.
 
 "[device\_name]": since the same function can refer to different devices, this
-field show you which device it refers to.
+field shows you which device it refers to.
 
-"[service/topic\_name]": this field is equal or really close to the Webots
-function it corresponds. For topics, it is followed by the sampling period. For
+"[service/topic\_name]": this field is indentical or very close to the Webots
+function it corresponds to. For topics, it is followed by the sampling period. For
 services, it is also the name of the corresponding srv file.
 
 #### Using the Standard Controller

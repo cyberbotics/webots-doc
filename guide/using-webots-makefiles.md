@@ -35,7 +35,7 @@ variables:
 %end
 
 Every source file specified using these variables, will be added to the
-controller build. In addition dependency files will be automatically generated
+controller build. In addition, dependency files will be automatically generated
 by the `make` command in order to minimize the build. Note that these variables
 should not be used in any language other than C or C++.
 
@@ -47,7 +47,7 @@ C_SOURCES = my_controller.c my_second_file.c my_third_file.c
 ```
 
 If a project has several ".cpp" source files, then this can be specified like
-this:
+such:
 
 ```makefile
 CXX_SOURCES = my_controller.cpp my_second_file.cpp my_third_file.cc
@@ -78,7 +78,7 @@ Webots C/C++ controllers are regular binary executable files that can easily be
 compiled and linked with external libraries. To add an external library it is
 only necessary to specify the path to the header files, and the path and name of
 the library in the controller's Makefile. For example the `-I`*dir* flag can be
-used to add a directory to search for include files. The LIBRARIES variable can
+used to add a directory to search for include-files. The LIBRARIES variable can
 be used to pass flags to the linker. For example the `-L`*dir* flag can be used
 to add a directory to search for static or dynamic libraries, and the `-l` flag
 can be used to specify the name of a library that needs to be linked with the

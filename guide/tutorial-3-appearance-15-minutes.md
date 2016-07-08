@@ -11,13 +11,13 @@ figure](#simulation-after-having-setup-the-light-and-the-appearance-nodes).
 
 ### New simulation
 
-> **handson**:
+> **hands on**:
 From the results of the previous tutorial, create a new simulation called
 "appearance.wbt" by using the `File / Save World As...` menu.
 
 ### Lights
 
-> **theory**:
+> **Theory**:
 The lighting of a world is determined by light nodes. There are three types of
 light nodes: the DirectionalLight, the PointLight and the SpotLight. A
 DirectionalLight simulates a light which is infinitely far (ex: the sun), a
@@ -39,7 +39,7 @@ Your simulation is currently lighted by a PointLight node at the top of the
 scene. We want to replace this light node by a DirectionalLight node casting
 shadows.
 
-> **handson**:
+> **hands on**:
 Remove the PointLight node, and add a new DirectionalLight node instead. Set its
 `ambientIntensity` field to *0.5*, its `castShadows` field to *TRUE*, and its
 `direction` field to *{1, -2, 1}*.
@@ -48,14 +48,14 @@ Remove the PointLight node, and add a new DirectionalLight node instead. Set its
 
 The aim of this subsection is to color the walls with blue.
 
-> **theory**:
+> **Theory**:
 The **Appearance** node of the Shape node determines the graphical appearance of
 the object. Among other things, this node is responsible for the color and
 texture of objects.
 
 <!-- -->
 
-> **handson**:
+> **hands on**:
 In the Shape node representing graphically the first wall, add an Appearance
 node to the `appearance` field. Then add a Material node to the `material` field
 of the freshly created Appearance node. Set its `diffuseColor` field to blue
@@ -67,7 +67,7 @@ been correctly implemented, all the walls should turn blue.
 The aim of this subsection is to apply a texture on the ball. A texture on a
 rolling object can help to appreciate its movement.
 
-> **handson**:
+> **hands on**:
 Similarly add an Appearance node to the ball. Instead of a Material node, add an
 ImageTexture node to the `texture` field of the Appearance node. Add an item to
 the `url` field using the `Add` button. Then set the value of the newly added
@@ -90,7 +90,7 @@ mapped onto the Sphere node in Webots.
 
 <!-- -->
 
-> **theory**:
+> **Theory**:
 Textures are mapped onto Geometry nodes according to predefined **UV mapping**
 functions described in the `Reference Manual`. A UV mapping function maps a 2D
 image representation to a 3D model.
@@ -105,7 +105,7 @@ image representation to a 3D model.
 
 Webots offers several rendering modes available in the `View` menu.
 
-> **handson**:
+> **hands on**:
 View the simulation in wireframe mode by using the `View / Wireframe Rendering`
 menu item. Then restore the plain rendering mode: `View / Plain Rendering`.
 
@@ -115,6 +115,6 @@ In this tutorial, you have learnt how to set up a good looking environment using
 the Appearance node and the light nodes.
 
 You can go further on this topic by reading the detailed description of these
-nodes in the `Reference Manual`. The
+nodes in the `Reference Manual`. This
 [section](modeling.md#how-to-get-a-realisitc-and-efficient-rendering) will give
 you a method to efficiently setup these nodes.

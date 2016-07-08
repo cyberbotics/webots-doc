@@ -224,7 +224,7 @@ parameter evaluation. When the robot controller finishes the evaluation, it
 writes the fitness result into another text file and then it calls the
 `wb_supervisor_simulation_quit()` function to terminate Webots. Then the control
 flow returns to the optimization program that can read the resulting fitness,
-associate it with the current genotype and proceed with the next genotype.
+associated it with the current genotype and proceed with the next genotype.
 
 Here is a possible (pseudo-code) implementation for the robot evaluation
 controller:

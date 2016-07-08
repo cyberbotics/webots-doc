@@ -142,7 +142,7 @@ replace the old ones for the following drawing instructions. It is expressed as
 a floating point value between 0.0 and 1.0; while 0 means that the new pixel has
 no effect over the old one and 1 means that the new pixel replaces entirely the
 old one. Only the color channel is affected by the `opacity` according to the
-[figure](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
+[blending](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
 formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
@@ -306,7 +306,7 @@ sub-image is defined by its top left coordinate (`x`,`y`) and its dimensions
 
 `wb_display_image_paste()` pastes a clipboard image referred to by the `ir`
 parameter to the main display image. The (`x`,`y`) coordinates define the top
-left point of the pasted image. If the `blend` parameter is true, the resulting pixels displayed in the main display image are computed using a blending operation (similar to the one depicted in the [figure](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity) formula but involving the alpha channels of the old and new pixels instead of the opacity). In the `blend` parameter is set to false, the resulting pixels are simply copied from the clipboard image.
+left point of the pasted image. If the `blend` parameter is true, the resulting pixels displayed in the main display image are computed using a blending operation (similar to the one depicted in the [blending](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity) formula but involving the alpha channels of the old and new pixels instead of the opacity). In the `blend` parameter is set to false, the resulting pixels are simply copied from the clipboard image.
 
 `wb_display_image_save()` saves a clipboard image referred to by the `ir`
 parameter to a file. The file name is defined by the `filename` parameter

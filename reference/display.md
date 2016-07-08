@@ -169,8 +169,8 @@ the magenta color.
 ```c
 #include <webots/display.h>
 
-void           wb_display_attach_camera(WbDeviceTag tag, WbDeviceTag camera_tag);
-void           wb_display_detach_camera(WbDeviceTag tag);
+void wb_display_attach_camera(WbDeviceTag tag, WbDeviceTag camera_tag);
+void wb_display_detach_camera(WbDeviceTag tag);
 ```
 
 **Description**

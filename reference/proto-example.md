@@ -1,4 +1,4 @@
-## Example
+## PROTO Example
 
 A complete example of PROTO definition and instantiation is provided here. The
 PROTO is called `TwoColorChair`; it defines a simple chair with four legs and a

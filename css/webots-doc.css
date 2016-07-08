@@ -146,8 +146,10 @@
   background: transparent;
   color: #444;
   font-size: 16px;
-  line-height: 18px;
   overflow-y: hidden;
+}
+.webots-doc p > code {
+  line-height:18px;
 }
 .webots-doc h1,
 .webots-doc h2,

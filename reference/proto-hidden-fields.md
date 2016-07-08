@@ -68,7 +68,7 @@ The names of the first six hidden fields all contain 0 as primary index, which
 is the index of the `Pioneer3at` PROTO itself. The additional secondary indices
 for the four hidden `position` fields correspond to the four
 [HingeJoint](hingejoint.md) nodes used for the wheels and numbered by means of
-pre-order traversal. There is no hidden field associated the [Solid](solid.md)
+pre-order traversal. There is no hidden field associated to the [Solid](solid.md)
 node with index 1, namely the `SickLms291` PROTO, since its relative position
 and orientation are kept fixed during simulation. The indices ranging from 2 to
 5 correspond to the four [Solid](solid.md) wheels of the `Pioneer3at`.

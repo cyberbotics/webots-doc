@@ -50,7 +50,7 @@ a PROTO only if its *base type* is suitable for the chosen insertion point. For
 example, a PROTO whose base type is [Material](material.md) cannot be inserted
 in a `boundingObject` field. In [this
 figure](#adding-an-instance-of-the-twocolorchair-proto) you can see how the
-`TwoColorChair` PROTO appears in the dialog. Note that, the dialog's text pane
+`TwoColorChair` PROTO appears in the dialog. Note that, the dialog's text plane
 is automatically filled with any comment placed at the beginning of the ".proto"
 file.
 

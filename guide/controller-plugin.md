@@ -212,7 +212,7 @@ motor position range are written in red.
 
 A remote-control plugin allows to simply and efficiently create an interface
 using the Webots API to communicate with a real robot. The main purpose of a
-remote-controled library is to wrap all the Webots API functions used by the robot
+remote-control library is to wrap all the Webots API functions used by the robot
 with a protocol communicating to the real robot. Generally, a program (client)
 runs on the real robot, and decodes the communication protocol to dialog with
 the real robot devices.

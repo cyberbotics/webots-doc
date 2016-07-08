@@ -146,6 +146,7 @@
   color: #444;
   font-size: 16px;
   line-height: 18px;
+  overflow-y: hidden;
 }
 .webots-doc h1,
 .webots-doc h2,

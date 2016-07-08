@@ -50,7 +50,7 @@ not be possible to reopen the file.
 reloads the current world from the saved version and restarts the simulation
 from the beginning.
 
-> **note**:
+> **Note**:
 When opening (or reverting) a world, if the world takes more than 2 seconds to
 load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
@@ -112,7 +112,7 @@ is especially useful for publishing Webots-created worlds on the Web. X3DOM is
 supported in recent versions of Firefox, Chrome, Internet Explorer and Safari on
 Mac OS X (see details on the [X3DOM website](http://www.x3dom.org)).
 
-> **note**:
+> **Note**:
 With the Chrome browser, in order to be able to open HTML/X3DOM files locally,
 e.g., not from the Web, you may need to allow Chrome to open local files
 referred to by the HTML/X3DOM file, e.g., textures. This can be achieved by
@@ -388,7 +388,7 @@ The `License Manager...` item opens the `Webots License Manager` window that
 allows you to see which licenses are in use and optionally to transfer some
 license to your local computer for off-line use. Please note that the transfer
 of license may be limited by your local license administrator: It may not be
-possible to transfer some licenses to your local computer or only for a limited
+possible to transfer a license to your local computer or only for a limited
 duration depending on the configuration defined by your local license
 administrator. Please ask your local license administrator in case of problem.
 
@@ -434,8 +434,7 @@ of HTML pages, PDF documents, etc.
 
 ### Main toolbar
 
-The main toolbar contains items for editing the world and the speedometer (see
- [subsection](#speedometer-and-virtual-time)), other than shortcuts
+The main toolbar contains items for editing the world and the speedometer (see this [subsection](#speedometer-and-virtual-time)), other than shortcuts
 to items of the `File`, `Simulation` and `View` menus. Edit actions always apply
 on the selected object, that is highlighted both in the 3D window and in the
 Scene Tree.

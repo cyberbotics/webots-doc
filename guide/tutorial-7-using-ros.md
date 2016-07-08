@@ -27,7 +27,7 @@ For more information or to install it on another platform please read
 Unless you need older version for some other application, you should choose the
 latest distribution (Kinetic Kame).
 
-> **note**:
+> **Note**:
 If you never used the ROS framework before, it is strongly recommended to follow
 some tutorials from:
 [http://wiki.ros.org/ROS/Tutorials](http://wiki.ros.org/ROS/Tutorials). These
@@ -99,7 +99,7 @@ start the `panoramic_view_recorder` node with the following command:
 rosrun webots_ros panoramic_view_recorder
 ```
 
-> **note**:
+> **Note**:
 The seed of Webots' random number generator is initialized at the beginning
 of the simulation and not when the ROS nodes connect. Webots has to be running
 for the ROS nodes to connect. However, we cannot guarantee how long it will
@@ -113,7 +113,7 @@ make ROS-based simulation reproducible.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 If you want to use different computers for the ROS master, the Webots simulation
 and/or the nodes, you must be able to connect to each of them with SSH in both
 ways. The hostname and IP addresses of these computers should be listed in the

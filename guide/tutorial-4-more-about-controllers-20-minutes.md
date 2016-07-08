@@ -19,12 +19,12 @@ the chapter, links to further robotics algorithmics are given.
 
 ### New World and new Controller
 
-> **hands on**:
+> **Hands on**:
 Save the previous world as "collision\_avoidance.wbt".
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Create a new C controller called "e-puck\_avoid\_collision" using the wizard.
 Modify the `controller` field of the E-puck node in order to link it to the new
 controller.
@@ -83,7 +83,7 @@ machine in [this figure](#uml-state-machine-of-a-simple-feedback-loop).
 
 The complete code of this controller is given in the next subsection.
 
-> **hands on**:
+> **Hands on**:
 At the beginning of the controller file, add the include directives
 corresponding to the Robot, the DifferentialWheels and the DistanceSensor nodes
 in order to be able to use the corresponding API (documented in chapter 3 of the
@@ -97,8 +97,8 @@ in order to be able to use the corresponding API (documented in chapter 3 of the
 
 <!-- -->
 
-> **hands on**:
-Just after including the statements add a macro that defines the duration of each
+> **Hands on**:
+Just after the include statements add a macro that defines the duration of each
 physics step. This macro will be used as argument to the `wb_robot_step()`
 function, and it will also be used to enable the devices. This duration is
 specified in milliseconds and it must be a multiple of the value in the
@@ -118,7 +118,7 @@ function and it has to be cleaned up using the `wb_robot_cleanup()` function.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Write the prototype of the `main()` function as follows:
 
 > ```c
@@ -157,7 +157,7 @@ refreshed.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Just after the comment *"// initialize devices"*, get and enable the distance
 sensors as follows:
 
@@ -178,7 +178,7 @@ sensors as follows:
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 In the main loop, just after the comment *"// read sensors outputs"*, read the
 distance sensor values as follows:
 
@@ -191,7 +191,7 @@ distance sensor values as follows:
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 In the main loop, just after the comment *"// process behavior"*, detect if a
 collision occurs (i.e. the value returned by a distance sensor is bigger than a
 threshold) as follows:
@@ -210,7 +210,7 @@ threshold) as follows:
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Finally, use the information about the obstacle to actuate the wheels as
 follows:
 
@@ -235,7 +235,7 @@ follows:
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Compile your code by selecting the `Build / Build` menu item. Compilation errors
 are displayed in red in the console. If there are any, fix them and retry to
 compile. Revert the simulation.

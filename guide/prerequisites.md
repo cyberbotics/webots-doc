@@ -7,7 +7,7 @@ obviously a necessary step to get started with the tutorials.
 
 Webots has to be installed on your computer.
 
-> **hands on**:
+> **Hands on**:
 Install Webots by following the instructions given in [this
 chapter](installing-webots.md).
 
@@ -16,7 +16,7 @@ chapter](installing-webots.md).
 The first step is to create a directory which will contain all your files
 related to Webots.
 
-> **hands on**:
+> **Hands on**:
 From your operating system  interface, choose a location on your hard disk where
 you have the writing rights (for example, your "[My]Documents" directory).
 Create a directory that will contain all your Webots projects, and name it
@@ -26,7 +26,7 @@ Create a directory that will contain all your Webots projects, and name it
 
 You need to learn how to launch Webots.
 
-> **hands on**:
+> **Hands on**:
 Start Webots by following the instructions given in [this
 section](starting-webots.md).
 
@@ -44,7 +44,7 @@ Webots projects. Your first Webots project will be the tutorials from this
 chapter. So let us now create a project named "tutorials" which will contain all
 the simulations of this chapter.
 
-> **note**:
+> **Note**:
 As mentioned earlier in this chapter, the solutions of the tutorials are
 included in the "WEBOTS\_HOME/projects/samples/tutorials" subdirectory of
 Webots. Don't look at it now! Hopefully, your own "tutorials" directory should
@@ -60,14 +60,14 @@ shapes, etc.).
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 In Webots, open the wizard by selecting the `Wizards / New Project Directory...`
 menu item. From this wizard, follow the instructions to create a new project
 named "tutorials" in the "my\_webots\_projects" directory created before.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 From your desktop, open the project directory and observe its subdirectories. We
 will soon explain the purpose of each directory.
 

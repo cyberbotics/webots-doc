@@ -69,7 +69,7 @@ the robot using the different services available. Good examples of such ROS node
 can be found inside Webots at "WEBOTS\_HOME/projects/languages/ros/webots\_ros".
 In this folder you will find useful instructions to help you.
 
-> **note**:
+> **Note**:
 If you want to access the controller from another machine and the roscore isn't
 running on the same machine as Webots, you will need to edit the
 ROS\_MASTER\_URI variable. This can be done by editing your environment
@@ -87,7 +87,7 @@ it.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 If you want to have a predefined [robot\_unique\_name] you can do it by adding
 '--name=predefined\_name' in the controller arguments. Note that you are then
 responsible for avoiding any name clashes between the different robot
@@ -95,7 +95,7 @@ controllers.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 By default the ROS controller is not blocking the simulation even if no ROS node
 is connected to it. In order to synchronize the simulation with the ROS node,
 the '--synchronize' argument can be used, so that the simulation will not run as
@@ -137,7 +137,7 @@ interfaces between Webots and ROS. The controller directory includes all the
 the controller binary. The "ros" folder also includes a "README.txt" file with
 detailed installation and usage instructions.
 
-> **note**:
+> **Note**:
 Following the instructions "README.md" is necessary to make the joystick example
 work on your Linux system.
 

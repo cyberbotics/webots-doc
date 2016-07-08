@@ -82,9 +82,9 @@ system for the e-puck and the Hemisson robot. Samples are located in the
 
 Unlike the remote control system, the cross-compilation system requires the
 source code of your Webots controller to be recompiled using the cross-compilation
-tools specific to your own robot. You will also need to rewrite the Webots include-files
+tools specific to your own robot. You will also need to rewrite the Webots include files
 to be specific to your own robot. In simple cases, you can just
-rewrite the Webots include-files you need, as in the "hemisson" example. In more
+rewrite the Webots include files you need, as in the "hemisson" example. In more
 complex cases, you will also need to write some C source files to be used as a
 replacement for the Webots "Controller" library, but running on the real robot.
 You should then recompile your Webots controller with your robot
@@ -96,7 +96,7 @@ should be uploaded onto the real robot for local execution.
 Webots supports cross-compilation for several existing commercial robots. For the
 *e-puck*<sup>TM</sup> robot, this system is fully integrated in Webots and needs
 no modification in the code. For the *Hemisson*<sup>TM</sup> robot, this system
-needs a few include-files to replace the Webots API include-files. For the
+needs a few include files to replace the Webots API include files. For the
 *Khepera*<sup>TM</sup> robot, a specific C library is used in addition to
 specific include-files.
 

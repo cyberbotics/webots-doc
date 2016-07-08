@@ -19,7 +19,7 @@ Intel may be obtained from the [Intel download center website](http://downloadce
 obtained from the [Intel Linux Graphics website](http://intellinuxgraphics.org). If some graphical bugs subsist, changing
 the "RTT preferred mode" from the Webots OpenGL Preferences from "Framebuffer
 Object" to "Pixelbuffer Object" or "Direct Copy" may fix the problems. However,
-this may also impact the 3D performances.
+this may also impact the 3D performance.
 
 ### Upgrading your graphics driver
 

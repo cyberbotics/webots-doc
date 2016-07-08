@@ -15,6 +15,6 @@ connection. This problem is not specific to Webots but to most GLX (OpenGL on
 the X Window system) applications that use complex OpenGL graphics. We think
 this is caused by incomplete or defective implementation of the GLX support in
 the graphics drivers on Linux. It may help to run the `ssh -x` tunnel across two
-computers with the same graphics hardware, e.g., both nVidia or both AMD. It
+computers with the same graphics hardware, e.g., both NVIDIA or both AMD. It
 also usually works to use Mesa OpenGL on both sides of the `ssh -x` tunnel,
 however this solution is extremely slow.

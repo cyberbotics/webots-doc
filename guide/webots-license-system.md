@@ -10,7 +10,7 @@ Internet, you can transfer your Internet license from the server to your local
 computer for a limited duration. After the expiration of this duration, your
 license will be automatically transferred back to the license server.
 
-> **note**:
+> **Note**:
 Cyberbotics license servers are located in Switzerland on a highly reliable
 network featuring a 99.9% up-time. However, if for some reason our servers would
 fail, a security system will allow you to run Webots, by connecting automatically to an alternate server located in the Cloud
@@ -25,7 +25,7 @@ servers:
 - `https://www.cyberbotics.com (port 443)`
 - `https://webots-license.appspot.com (port 443)`
 
-> **note**:
+> **Note**:
 If you are using a proxy to access the Internet, Webots will retrieve your
 system proxy configuration automatically.
 
@@ -44,7 +44,7 @@ When Webots is started for the first time, a login dialog invites you to
 register a user account on Cyberbotics' website (if not already done) and to
 enter the corresponding license information to log in to your Webots session.
 
-> **note**:
+> **Note**:
 The `Synchronization` field of the Webots login dialog defines how frequently
 Webots checks the license server. Setting this field to a small value will cause
 more networking activity, but will allow you to release the license quickly

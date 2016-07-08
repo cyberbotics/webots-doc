@@ -28,7 +28,7 @@ of charge and the users pay only for the modules they need. Various modules are
 available for purchase at different price tags. They include special robot
 models (e.g., NAO, DARwIn-OP, e-puck, Thymio 2, etc.) which can be programmed
 using different programming languages (e.g., C/C++, Matlab, Python) or
-interfaces to third party softwares or hardwares, etc. They are all described on the
+interfaces to third party software or hardware, etc. They are all described on the
 Cyberbotics website.
 
 ### Webots licences overview
@@ -43,7 +43,7 @@ EDU and Webots MOD.
 | Supervisor capability                | yes | no  | no         |
 | Physics plug-in programming          | yes | no  | no         |
 | Fast simulation mode                 | yes | no  | no         |
-| Robot and environment modeling      | yes | yes | no         |
+| Robot and environment modeling       | yes | yes | no         |
 | Robot programming                    | yes | yes | yes/no (1) |
 | Transfer to real robots              | yes | yes | yes/no (1) |
 | Multi-platform: Windows, Mac & Linux | yes | yes | yes        |

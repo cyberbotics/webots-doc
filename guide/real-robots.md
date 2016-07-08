@@ -346,7 +346,7 @@ it move straight forward until it detects an obstacle. This client program
 `client` must be launched separately from Webots. The source code for this
 controller and for the client program are in the "pipe" directory.
 
-> **note**:
+> **Note**:
 As this example is based on standard UNIX pipes, it does not work under Windows.
 
 ### khepera_tcpip.wbt

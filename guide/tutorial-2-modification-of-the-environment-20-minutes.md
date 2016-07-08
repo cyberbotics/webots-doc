@@ -15,7 +15,7 @@ front of you, will also help understanding the nodes inheritance relationship.
 
 First we create a new simulation based on the one created in Tutorial 1.
 
-> **hands on**:
+> **Hands on**:
 Make sure the "my\_first\_simulation.wbt" world file is open, and that the
 simulation is paused and is at a virtual time of 0. Using the `File / Save World
 As...` menu, save the simulation as "obstacles.wbt".
@@ -25,7 +25,7 @@ As...` menu, save the simulation as "obstacles.wbt".
 The default `RectangleArena` PROTO defines a simple floor pinned on the statical
 environment, i.e. without Physics node, and surrounded by walls.
 
-> **note**:
+> **Note**:
 In order to define an object as static, its physics node has not to be set
 (NULL).
 
@@ -33,13 +33,13 @@ Other pre-built floors are available in the Webots objects library. We will now
 delete the default arena and add a simple floor that we will manually surround
 the walls later in this this tutorial.
 
-> **hands on**:
+> **Hands on**:
 To remove the `RectangleArena`, select it in the scene tree view and press the
 `Delete` button located in the toolbar.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 In order to add a different floor PROTO, select the `DirectionalLight` node and
 click on the `Add` button. In the open dialog box, and choose `PROTO (Webots) /
 objects / floors / Floor (Solid)`.
@@ -48,7 +48,7 @@ The newly added `Floor` PROTO has a default size of 10mx10m, but it is possible
 to adjust its size, its position and texture by changing the corresponding
 fields.
 
-> **hands on**:
+> **Hands on**:
 In the scene tree view select and expand the `Floor`. Modify the `size` fields
 and set it to *{1, 1}* to resize it to 1mx1m.
 
@@ -105,7 +105,7 @@ body as shown in this
 [figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics).
 As Geometry nodes we will use Spheres.
 
-> **hands on**:
+> **Hands on**:
 In the scene tree view, select the last node and add a Solid node using the
 `Add` button. Similarly select the `children` field of the Solid node, and add a
 Shape node to it. Add a Sphere node as the `geometry` field of the newly created
@@ -121,7 +121,7 @@ Finally add a Physics node to the `physics` field of the Solid. By modifying the
 
 %end
 
-> **note**:
+> **Note**:
 When the simulation is started, the ball hits the floor. You can move the ball
 by adding a force to it (CTRL + ALT + left-click + drag). The contact points
 between the ball and the floor can be displayed as cyan lines by enabling the
@@ -139,7 +139,7 @@ know which primitive you can use.
 We now want to reduce the size of the Sphere and to increase its graphical
 quality by increasing the number of triangles used to represent it.
 
-> **hands on**:
+> **Hands on**:
 For each Sphere node defining the ball, set its `radius` field to *0.05* and its
 `subdivision` field to *2*. Refer to the `Reference Manual` to understand what
 the `subdivision` field stands for.
@@ -163,7 +163,7 @@ The two Sphere definitions that we have used earlier to define the ball, are
 redundant. We will now merge these two Spheres into only once using the DEF-USE
 mechanism.
 
-> **hands on**:
+> **Hands on**:
 Select the first Sphere node (the child of the Shape) in the scene tree view.
 The field editor of the scene tree view allows you to enter the DEF string.
 Enter *"BALL\_GEOMETRY"*. Select the boundingObject field (containing the second
@@ -174,7 +174,7 @@ figure](#def-use-mechanism-on-the-sphere-node-called-ball_geometry).
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Now, changing the `radius` field of the first Sphere node does also modify the
 `boundingObject`.
 
@@ -209,7 +209,7 @@ best Geometry primitive to implement the walls is the Box node. Only one Shape
 has to be defined for all the walls. The expected result is shown in [this
 figure](#the-simulation-state-at-the-end-of-this-second-tutorial).
 
-> **hands on**:
+> **Hands on**:
 Add four walls without physics and using only one definition of the Shape node.
 
 The solution is located in the solution directory under the "obstacle.wbt".

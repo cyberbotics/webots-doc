@@ -627,7 +627,7 @@ COMMAND = javaw.exe
 OPTIONS = -Xms6144k
 ```
 
-> **note**:
+> **Note**:
 The Java `-classpath` (or -`cp`) option is automatically generated from the
 `CLASSPATH` environment variable. Therefore you should not add it to the
 `OPTIONS` key, but rather to a standard environment variable in your

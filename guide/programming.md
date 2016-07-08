@@ -115,7 +115,7 @@ message in question is shown. So this problem often happens when you:
 
 - Have moved the project or source files to a location that does not correspond to
 the above description.
-- Use an external building system, e.g. Visual Studio, that is not configured to
+- Use an external build system, e.g. Visual Studio, that is not configured to
 generate the executable file at the right location.
 - Have changed the Robot's controller field to a location where no
 executable/interpretable file can be found.

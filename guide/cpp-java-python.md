@@ -55,7 +55,7 @@ controller, and vice versa. For example it won't be possible to call
 
 Generally, the user-defined controller class should have a `run()` function that
 implements the main controller loop. That loop should contain a call to the
-`Robot`'s `step()` method. Then, the only responsability of the controller's
+`Robot`'s `step()` method. Then, the only responsibility of the controller's
 `main()` function is to create an instance of the user-defined controller class,
 call its `run()` method and finally delete (C++ only) the instance: see examples
 below. Note that the controller should never create more than one instance of a

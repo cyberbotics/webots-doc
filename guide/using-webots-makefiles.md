@@ -78,7 +78,7 @@ Webots C/C++ controllers are regular binary executable files that can easily be
 compiled and linked with external libraries. To add an external library it is
 only necessary to specify the path to the header files, and the path and name of
 the library in the controller's Makefile. For example the `-I`*dir* flag can be
-used to add a directory to search for include-files. The LIBRARIES variable can
+used to add a directory to search for include files. The LIBRARIES variable can
 be used to pass flags to the linker. For example the `-L`*dir* flag can be used
 to add a directory to search for static or dynamic libraries, and the `-l` flag
 can be used to specify the name of a library that needs to be linked with the

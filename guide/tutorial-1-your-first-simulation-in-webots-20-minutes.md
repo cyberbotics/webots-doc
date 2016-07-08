@@ -29,14 +29,14 @@ subdirectory called "worlds".
 
 Webots is currently open and runs an arbitrary simulation.
 
-> **hands on**:
+> **Hands on**:
 Pause the current simulation by clicking on the `Pause` button of the 3D view.
 The simulation is paused if the virtual time counter on the 3D view toolbar is
 stable.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Create a new world by selecting the `File / New World` menu item.
 
 A new world is now open. For now, the 3D window displays a black screen. This is
@@ -47,7 +47,7 @@ and no 3D object are defined, the entire scene is empty and unlit, and thus blac
 
 The first step is about to modify the background color.
 
-> **hands on**:
+> **Hands on**:
 Modify the background color, by setting up the `skyColor` field of the
 `Background` node. Choose a blue color (e.g. red = 0.4, green = 0.7 and blue =
 1.0) using the color picker at the bottom of the scene tree. The background of
@@ -55,7 +55,7 @@ the 3D view should be modified accordingly.
 
 Now we would like to add some light to the scene.
 
-> **hands on**:
+> **Hands on**:
 Select the last node of the scene tree view (`Background`). Click on the `Add`
 button at the top of the scene tree view. In the open dialog box, and choose
 `New node / DirectionalLight`. The new node has been added but since there is no 3D
@@ -64,7 +64,7 @@ object in the scene, the result of this operation is not visible yet.
 Now, we would like to add some environment (a floor and some walls). A predefined
 high-level node called `RectangleArena` is designed to accomplish this task quickly.
 
-> **hands on**:
+> **Hands on**:
 Select the last node of the scene tree view (`DirectionalLight`). Click on the
 `Add` button. In the open dialog box, choose `PROTO (Webots) / objects / floors
 / RectangleArena`. The new node has been added and is appearing far away. Use
@@ -73,32 +73,32 @@ viewpoint.
 
 It's a good time to improve the scene light.
 
-> **hands on**:
+> **Hands on**:
 Modify the following fields of the `DirectionalLight` node: `ambientIntensity`
 to 1, `direction` to [-0.33 -1 -0.5] and `castShadows` to TRUE.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 In the scene tree, the fields are displayed in blue if they differ from their
 default values.
 
 Now your environment should look like the one depicted in the
 [figure](prerequisites.md#the-webots-main-window-splits-into-four-dockable-subwindows-the-scene-tree-view-on-the-left-hand-side-including-a-panel-at-the-bottom-for-editing-fields-values-the-3d-view-in-the-center-the-text-editor-on-the-right-hand-side-and-the-console-at-bottom-of-the-window-note-that-some-of-these-subwindows-have-a-toolbar-with-buttons-the-main-menus-appear-on-the-top-of-the-main-window-the-virtual-time-counter-and-the-speedometer-are-displayed-in-the-right-part-of-the-3d-view-toolbar-the-status-text-is-displayed-in-the-bottom-left-of-the-main-window).
 
-> **hands on**:
+> **Hands on**:
 Save the new world into your project by selecting the `File / Save World As...`
 menu item. Using the dialog box save the world into the
 "my\_webots\_projects/tutorials/worlds/my\_first\_simulation.wbt" file location.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Revert the simulation by selecting the `File / Revert World` menu item.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 You can change the viewpoint of the 3D view by using the mouse buttons (left
 button, right button and the wheel).
 
@@ -114,7 +114,7 @@ fields can be modified.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 In the 3D view, click on the floor to selected it. When it is selected, the floor
 is surrounded by white lines and the corresponding node is selected in the scene
 tree view. Now click on the blue sky to unselect the floor.
@@ -144,7 +144,7 @@ nodes are defined in separate ".proto", but this will be explained in more
 details later. For now, consider the E-puck node as a black box that contains all
 the necessary nodes to define a e-puck robot.
 
-> **hands on**:
+> **Hands on**:
 Select the last node of the scene tree view (called `RectangleArena`). In order
 to add the E-puck node, click on the `Add` button at the top of the scene tree
 view. In the open dialog box, and choose `PROTO (Webots) / robots / e-puck /
@@ -152,14 +152,14 @@ E-puck (DifferentialWheels)`. Then save the simulation.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Now if you run the simulation, the robot moves: that's because the robot uses a
 default controller with that behavior. Please pause and revert the simulation
 before going on.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 You can change the robot's position in the 3D view using the translation and
 rotation handles (see [this section](the-3d-window.md#axis-aligned-handles)).
 
@@ -174,7 +174,7 @@ rotation handles (see [this section](the-3d-window.md#axis-aligned-handles)).
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Starting the simulation by pressing the `Run` button will make Webots running
 the simulation as fast as possible. In order to obtain a real-time simulation
 speed, the `Real-Time` button has to be pressed.
@@ -182,7 +182,7 @@ speed, the `Real-Time` button has to be pressed.
 Now we are going to modify the world and decrease the step of the physics
 simulation: this will increase the accuracy of the simulation.
 
-> **hands on**:
+> **Hands on**:
 In the scene tree view, expand the WorldInfo node (the first node). Set its
 `basicTimeStep` field to *16*. Then save the simulation.
 
@@ -194,7 +194,7 @@ them, you have to set this field value to a positive number. Detailed
 definitions can be found in chapter 3 of the [Reference
 Manual](http://www.cyberbotics.com/reference/).
 
-> **hands on**:
+> **Hands on**:
 In this tutorial we will not use the Camera devices of the E-puck. So we can
 hide the window by expanding the E-puck node and setting the fields
 `camera_pixelSize` to 0. Don't forget to revert the simulation before changing
@@ -218,21 +218,21 @@ cans use only one controller at a time.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Each robot controller is executed in a separate child process spawned by Webots.
 Controllers don't share the same address space, and they can run in different
 processor cores.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Other languages than C are available but may require a setup. Please refer to
 the language chapter to setup the other languages (see [this
 chapter](language-setup.md)).
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Create a new C controller called *e-puck\_go\_forward* using the `Wizards / New
 Robot Controller...` menu. This will create a new "e-puck\_go\_forward"
 directory in "my\_webots\_projects/tutorials/controllers". Select the option
@@ -242,7 +242,7 @@ The new C source file is displayed in Webots text editor window. This C file can
 be compiled without any modification, however the code has no real effect. We
 will now link the E-puck node with the new controller before modifying it.
 
-> **hands on**:
+> **Hands on**:
 Link the `E-puck` node with the *e-puck\_go\_forward* controller. This can be
 done in the scene tree view by selecting the `controller` field of the E-puck
 node, then use the field editor at the bottom of the scene tree view: press the
@@ -251,7 +251,7 @@ controller is linked, save the world.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Modify the program by inserting an include statement (`#include
 <webots/differential_wheels.h>`), and by applying a differential wheels command
 (`wb_differential_wheels_set_speed(100, 100)`) :
@@ -281,14 +281,14 @@ Modify the program by inserting an include statement (`#include
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Save the modified source code (`File / Save Text File`), and compile it (`Build
 / Build`). Fix any compilation error if necessary. When Webots proposes to
 revert the simulation, choose `Yes`.
 
 If everything is ok, your robot should go forwards.
 
-> **note**:
+> **Note**:
 In the "controllers" directory of your project, a directory containing the
 *e-puck\_go\_forward* controller has been created. The "e-puck\_go\_forward"
 directory contains an "e-puck\_go\_forward" binary file generated after the

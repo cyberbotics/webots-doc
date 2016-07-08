@@ -11,7 +11,7 @@ figure](#simulation-after-having-setup-the-light-and-the-appearance-nodes).
 
 ### New simulation
 
-> **hands on**:
+> **Hands on**:
 From the results of the previous tutorial, create a new simulation called
 "appearance.wbt" by using the `File / Save World As...` menu.
 
@@ -28,7 +28,7 @@ Manual`.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Lights are costly in term of performance. Minimizing the number of lights
 increases the rendering speed. A maximum of 8 lights is allowed if the shaders
 are disabled in the Webots preferences. A PointLight is more efficient than a
@@ -39,7 +39,7 @@ Your simulation is currently lighted by a PointLight node at the top of the
 scene. We want to replace this light node by a DirectionalLight node casting
 shadows.
 
-> **hands on**:
+> **Hands on**:
 Remove the PointLight node, and add a new DirectionalLight node instead. Set its
 `ambientIntensity` field to *0.5*, its `castShadows` field to *TRUE*, and its
 `direction` field to *{1, -2, 1}*.
@@ -55,7 +55,7 @@ texture of objects.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 In the Shape node representing graphically the first wall, add an Appearance
 node to the `appearance` field. Then add a Material node to the `material` field
 of the freshly created Appearance node. Set its `diffuseColor` field to blue
@@ -67,7 +67,7 @@ been correctly implemented, all the walls should turn blue.
 The aim of this subsection is to apply a texture on the ball. A texture on a
 rolling object can help to appreciate its movement.
 
-> **hands on**:
+> **Hands on**:
 Similarly add an Appearance node to the ball. Instead of a Material node, add an
 ImageTexture node to the `texture` field of the Appearance node. Add an item to
 the `url` field using the `Add` button. Then set the value of the newly added
@@ -76,7 +76,7 @@ the file selection dialog.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 The texture URLs must be defined either relative to the "worlds" directory of
 your project directory or relative to the default project directory
 "WEBOTS\_HOME/projects/default/worlds". In the default project directory you
@@ -84,7 +84,7 @@ will find textures that are available for every world.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Open the "bricks.png" texture in an image viewer while you observe how it is
 mapped onto the Sphere node in Webots.
 
@@ -105,7 +105,7 @@ image representation to a 3D model.
 
 Webots offers several rendering modes available in the `View` menu.
 
-> **hands on**:
+> **Hands on**:
 View the simulation in wireframe mode by using the `View / Wireframe Rendering`
 menu item. Then restore the plain rendering mode: `View / Plain Rendering`.
 

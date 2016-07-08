@@ -24,7 +24,7 @@ Note that, for compiling source code it is necessary to have the appropriate
 development tools installed. You will find information on the development tools
 [here](language-setup.md).
 
-The possible compilation actions are listed bellow. Some of them are
+The possible compilation actions are listed below. Some of them are
 only accessible in the `Build` menu, whereas `Build` and `Clean` actions have a
 shortcut in the Text Editor toolbar.
 

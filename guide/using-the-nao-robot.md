@@ -31,7 +31,7 @@ this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".
 ### Using Webots with Choregraphe
 
 These instructions have been tested with Webots 8.0.0 and Choregraphe 2.1.1.10.
-Please note that Webots must not be launched as root when using any world
+Please Note that Webots must not be launched as root when using any world
 containing naoqisim, otherwise Choregraphe won't be able to send instructions to
 the robot in Webots.
 
@@ -147,7 +147,7 @@ simulation speed drifts away from 1.0x, the physics simulation gets wrong
 (unnatural) and thus Choregraphe motions don't work as expected any more. For
 example if Webots indicates 0.5x, this means that it is only able to simulate at
 half real-time the motion provided by Choregraphe: the physics simulation is too
-slow. Therefore it is important to keep the simulation speed as clpse as possible to 1.0x. There are currently no means of synchronizing Webots and
+slow. Therefore it is important to keep the simulation speed as close as possible to 1.0x. There are currently no means of synchronizing Webots and
 Choregraphe, but this problem will be addressed in a future release. It is often
 possible to prevent the simulation speed from going below 1.0x, by keeping the
 CPU and GPU load as low as possible. There are several ways to do that, here are

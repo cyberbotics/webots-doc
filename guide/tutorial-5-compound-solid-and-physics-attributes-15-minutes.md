@@ -13,7 +13,7 @@ figure](#expected-result-at-the-end-of-the-tutorial-about-compound-solids).
 
 ### New simulation
 
-> **hands on**:
+> **Hands on**:
 Start from the results of the previous tutorial and create a new simulation
 called "compound\_solid.wbt" by using the menu `File / Save World As...`.
 
@@ -30,7 +30,7 @@ We want to implement a dumbbell made of a handle (Cylinder) and of two weights
 [figure](#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries)
 depicts the Solid nodes and its subnodes required to implement the dumbbell.
 
-> **hands on**:
+> **Hands on**:
 Create the dumbbell by following the
 [figure](#representation-of-the-subnodes-of-a-compound-solid-made-of-several-transformed-geometries).
 Create the handle first without placing it in a Transform node (so the handle
@@ -62,7 +62,7 @@ value).
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Set the mass of the dumbbell to *2* [kg]. The density is not used and should be
 set to *-1*.
 
@@ -76,13 +76,13 @@ relatively to the origin of the Solid.
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Let's say that one of the weights is heavier than the other one. Move the center
 of mass of the dumbbell of *0.01* [m] along the *y*-axis.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Note that when the solid is selected, the center of mass is represented in the
 3D view by a coordinate system which is darker than the coordinate system
 representing the solid center.
@@ -100,7 +100,7 @@ component defines the rotation angle about the axis (in [rad]).
 
 <!-- -->
 
-> **hands on**:
+> **Hands on**:
 Modify the rotation of the Solid node of the dumbbell in order to move the
 handle's axis (*y*-axis) parallel to the ground. A unit axis of *(1, 0, 0)* and
 an angle of *π/2* is a possible solution.
@@ -142,7 +142,7 @@ the contact properties between two categories of Solids.
 We want now to modify the friction model between the dumbbell and the other
 solids of the environment.
 
-> **hands on**:
+> **Hands on**:
 Set the `contactMaterial` field of the dumbbell to *"dumbbell"*. In the
 WorldInfo node, add a ContactProperties node between the *"default"* and
 *"dumbbell"* categories. Try to set the `coulombFriction` field to *0* and
@@ -173,7 +173,7 @@ of Webots. A complete description of these parameters can be found in the
 `Reference Manual`. Remark simply that the Physics, WorldInfo and
 ContactProperties nodes contains other fields.
 
-> **hands on**:
+> **Hands on**:
 Search in the `Reference Manual` how to add a linear damping on all the objects,
 how to unset the auto-disable feature and how to use the inertia matrix.
 

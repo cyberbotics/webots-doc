@@ -20,10 +20,10 @@ In C++, Python and Java the keyboard functions are in a dedicated class called
 ```c
 #include <webots/keyboard.h>
 
-void wb_keyboard_enable(int ms)
-void wb_keyboard_disable()
-int wb_keyboard_get_sampling_period()
-int wb_keyboard_get_key()
+void wb_keyboard_enable(int ms);
+void wb_keyboard_disable();
+int wb_keyboard_get_sampling_period();
+int wb_keyboard_get_key();
 ```
 
 **Description**

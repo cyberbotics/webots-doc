@@ -132,12 +132,12 @@ understand how the different entry points of the robot window plugin are called
 
 ```c
 wb_robot_step() {
-  wbw_write_actuators()
-  wbw_pre_update_gui()
-  write_request_to_webots_pipe()
-  wbw_update_gui() // returns when something on the pipe
-  read_request_to_webots_pipe()
-  wbw_read_sensors()
+  wbw_write_actuators();
+  wbw_pre_update_gui();
+  write_request_to_webots_pipe();
+  wbw_update_gui(); // returns when something on the pipe
+  read_request_to_webots_pipe();
+  wbw_read_sensors();
 }
 ```
 

@@ -23,7 +23,7 @@ sensor).
 ```c
 #include <webots/device.h>
 
-const char *wb_device_get_model(WbDeviceTag tag)
+const char *wb_device_get_model(WbDeviceTag tag);
 ```
 
 **Description**
@@ -46,7 +46,7 @@ a `model` field)
 ```c
 #include <webots/device.h>
 
-const char *wb_device_get_name(WbDeviceTag tag)
+const char *wb_device_get_name(WbDeviceTag tag);
 ```
 
 **Description**
@@ -67,7 +67,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 ```c
 #include <webots/device.h>
 
-WbNodeType wb_device_get_node_type(WbDeviceTag tag)
+WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 ```
 
 **Description**

@@ -193,10 +193,10 @@ radiometry terms and units in this document with their photometry equivalents:
 ```c
 #include <webots/light_sensor.h>
 
-void wb_light_sensor_enable(WbDeviceTag tag, int ms)
-void wb_light_sensor_disable(WbDeviceTag tag)
-int wb_light_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_light_sensor_get_value(WbDeviceTag tag)
+void wb_light_sensor_enable(WbDeviceTag tag, int ms);
+void wb_light_sensor_disable(WbDeviceTag tag);
+int wb_light_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_light_sensor_get_value(WbDeviceTag tag);
 ```
 
 **Description**

@@ -472,14 +472,14 @@ Please note the dummy [Physics](physics.md) and the 1 millimeter
 ```c
 #include <webots/servo.h>
 
-void wb_servo_set_position(WbDeviceTag tag, double position)
-double wb_servo_get_target_position(WbDeviceTag tag)
-void wb_servo_set_velocity(WbDeviceTag tag, double velocity)
-void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration)
-void wb_servo_set_motor_force(WbDeviceTag tag, double force)
-void wb_servo_set_control_p(WbDeviceTag tag, double p)
-double wb_servo_get_min_position(WbDeviceTag tag)
-double wb_servo_get_max_position(WbDeviceTag tag)
+void wb_servo_set_position(WbDeviceTag tag, double position);
+double wb_servo_get_target_position(WbDeviceTag tag);
+void wb_servo_set_velocity(WbDeviceTag tag, double velocity);
+void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration);
+void wb_servo_set_motor_force(WbDeviceTag tag, double force);
+void wb_servo_set_control_p(WbDeviceTag tag, double p);
+double wb_servo_get_min_position(WbDeviceTag tag);
+double wb_servo_get_max_position(WbDeviceTag tag);
 ```
 
 **Description**
@@ -582,10 +582,10 @@ respectively the `minPosition` and the `maxPosition` fields.
 ```c
 #include <webots/servo.h>
 
-void wb_servo_enable_position(WbDeviceTag tag, int ms)
-void wb_servo_disable_position(WbDeviceTag tag)
-int wb_servo_get_position_sampling_period(WbDeviceTag tag)
-double wb_servo_get_position(WbDeviceTag tag)
+void wb_servo_enable_position(WbDeviceTag tag, int ms);
+void wb_servo_disable_position(WbDeviceTag tag);
+int wb_servo_get_position_sampling_period(WbDeviceTag tag);
+double wb_servo_get_position(WbDeviceTag tag);
 ```
 
 **Description**
@@ -620,10 +620,10 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 ```c
 #include <webots/servo.h>
 
-void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms)
-void wb_servo_disable_motor_force_feedback(WbDeviceTag tag)
-int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag)
-double wb_servo_get_motor_force_feedback(WbDeviceTag tag)
+void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms);
+void wb_servo_disable_motor_force_feedback(WbDeviceTag tag);
+int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag);
+double wb_servo_get_motor_force_feedback(WbDeviceTag tag);
 ```
 
 **Description**
@@ -678,7 +678,7 @@ the device is disabled.
 ```c
 #include <webots/servo.h>
 
-void wb_servo_set_force(WbDeviceTag tag, double force)
+void wb_servo_set_force(WbDeviceTag tag, double force);
 ```
 
 **Description**
@@ -721,7 +721,7 @@ dampers with controllable properties. The example in
 ```c
 #include <webots/servo.h>
 
-int wb_servo_get_type(WbDeviceTag tag)
+int wb_servo_get_type(WbDeviceTag tag);
 ```
 
 **Description**

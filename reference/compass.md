@@ -53,10 +53,10 @@ measure any infinitesimal change). This field accepts any value in the interval
 ```c
 #include <webots/compass.h>
 
-void wb_compass_enable(WbDeviceTag tag, int ms)
-void wb_compass_disable(WbDeviceTag tag)
-const double *wb_compass_get_values(WbDeviceTag tag)
-int wb_compass_get_sampling_period(WbDeviceTag tag)
+void wb_compass_enable(WbDeviceTag tag, int ms);
+void wb_compass_disable(WbDeviceTag tag);
+const double *wb_compass_get_values(WbDeviceTag tag);
+int wb_compass_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**

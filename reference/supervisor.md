@@ -47,7 +47,7 @@ controller.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_export_image(const char *filename, int quality)
+void wb_supervisor_export_image(const char *filename, int quality);
 ```
 
 **Description**
@@ -79,12 +79,12 @@ scored.
 ```c
 #include <webots/supervisor.h>
 
-WbNodeRef wb_supervisor_node_get_from_def(const char *def)
-WbNodeRef wb_supervisor_node_get_from_id(int id)
-int wb_supervisor_node_get_id(WbNodeRef node)
-WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node)
-WbNodeRef wb_supervisor_node_get_root()
-WbNodeRef wb_supervisor_node_get_self()
+WbNodeRef wb_supervisor_node_get_from_def(const char *def);
+WbNodeRef wb_supervisor_node_get_from_id(int id);
+int wb_supervisor_node_get_id(WbNodeRef node);
+WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node);
+WbNodeRef wb_supervisor_node_get_root();
+WbNodeRef wb_supervisor_node_get_self();
 ```
 
 **Description**
@@ -144,9 +144,9 @@ having to define a DEF name for it.
 ```c
 #include <webots/supervisor.h>
 
-WbNodeType wb_supervisor_node_get_type(WbNodeRef node)
-const char *wb_supervisor_node_get_type_name(WbNodeRef node)
-const char *wb_supervisor_node_get_base_type_name(WbNodeRef node)
+WbNodeType wb_supervisor_node_get_type(WbNodeRef node);
+const char *wb_supervisor_node_get_type_name(WbNodeRef node);
+const char *wb_supervisor_node_get_base_type_name(WbNodeRef node);
 ```
 
 **Description**
@@ -187,7 +187,7 @@ integers can be directly compared with the output of the `Node::getType()`
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_node_remove(WbNodeRef node)
+void wb_supervisor_node_remove(WbNodeRef node);
 ```
 
 **Description**
@@ -206,7 +206,7 @@ argument from the Webots scene tree.
 ```c
 #include <webots/supervisor.h>
 
-WbFieldRef wb_supervisor_node_get_field(WbNodeRef node, const char *field_name)
+WbFieldRef wb_supervisor_node_get_field(WbNodeRef node, const char *field_name);
 ```
 
 **Description**
@@ -232,8 +232,8 @@ if the field corresponding to the field name is an hidden field.
 ```c
 #include <webots/supervisor.h>
 
-const double *wb_supervisor_node_get_position(WbNodeRef node)
-const double *wb_supervisor_node_get_orientation(WbNodeRef node)
+const double *wb_supervisor_node_get_position(WbNodeRef node);
+const double *wb_supervisor_node_get_orientation(WbNodeRef node);
 ```
 
 **Description**
@@ -297,7 +297,7 @@ deallocated at the next time step.
 ```c
 #include <webots/supervisor.h>
 
-const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node)
+const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node);
 ```
 
 **Description**
@@ -327,7 +327,7 @@ deallocated at the next time step.
 ```c
 #include <webots/supervisor.h>
 
-const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index)
+const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index);
 ```
 
 **Description**
@@ -362,7 +362,7 @@ deallocated at the next time step.
 ```c
 #include <webots/supervisor.h>
 
-const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node)
+const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node);
 ```
 
 **Description**
@@ -386,7 +386,7 @@ shows how to use this function.
 ```c
 #include <webots/supervisor.h>
 
-bool wb_supervisor_node_get_static_balance(WbNodeRef node)
+bool wb_supervisor_node_get_static_balance(WbNodeRef node);
 ```
 
 **Description**
@@ -411,8 +411,8 @@ mass onto this plane lies inside or outside the support polygon.
 ```c
 #include <webots/supervisor.h>
 
-const double *wb_supervisor_node_get_velocity(WbNodeRef node)
-void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6])
+const double *wb_supervisor_node_get_velocity(WbNodeRef node);
+void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6]);
 ```
 
 **Description**
@@ -444,7 +444,7 @@ y and z axes.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_node_reset_physics(WbNodeRef node)
+void wb_supervisor_node_reset_physics(WbNodeRef node);
 ```
 
 **Description**
@@ -469,7 +469,7 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency)
+void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency);
 ```
 
 **Description**
@@ -533,7 +533,7 @@ represents the magenta color.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_simulation_quit(int status)
+void wb_supervisor_simulation_quit(int status);
 ```
 
 **Description**
@@ -615,7 +615,7 @@ int main(int argc, char *argv[]) {
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_simulation_revert()
+void wb_supervisor_simulation_revert();
 ```
 
 **Description**
@@ -638,8 +638,8 @@ restarts.
 ```c
 #include <webots/supervisor.h>
 
-int wb_supervisor_simulation_get_mode()
-void wb_supervisor_simulation_set_mode(int mode)
+int wb_supervisor_simulation_get_mode();
+void wb_supervisor_simulation_set_mode(int mode);
 ```
 
 **Description**
@@ -686,8 +686,8 @@ clicking on the corresponding buttons in the user interface.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_load_world(const char *filename)
-bool wb_supervisor_save_world(const char *filename)
+void wb_supervisor_load_world(const char *filename);
+bool wb_supervisor_save_world(const char *filename);
 ```
 
 **Description**
@@ -722,7 +722,7 @@ argument. In this case, a simple save operation is performed.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_simulation_reset_physics()
+void wb_supervisor_simulation_reset_physics();
 ```
 
 **Description**
@@ -753,10 +753,10 @@ after calling this function.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_movie_start_recording(const char *filename, int width, int height, int codec, int quality, int acceleration, bool caption)
-void wb_supervisor_movie_stop_recording()
-bool wb_supervisor_movie_is_ready()
-bool wb_supervisor_movie_failed()
+void wb_supervisor_movie_start_recording(const char *filename, int width, int height, int codec, int quality, int acceleration, bool caption);
+void wb_supervisor_movie_stop_recording();
+bool wb_supervisor_movie_is_ready();
+bool wb_supervisor_movie_failed();
 ```
 
 **Description**
@@ -801,8 +801,8 @@ reset to `FALSE`.
 ```c
 #include <webots/supervisor.h>
 
-bool wb_supervisor_animation_start_recording(const char *filename)
-bool wb_supervisor_animation_stop_recording()
+bool wb_supervisor_animation_start_recording(const char *filename);
+bool wb_supervisor_animation_stop_recording();
 ```
 
 **Description**
@@ -832,9 +832,9 @@ indicating their success.
 ```c
 #include <webots/supervisor.h>
 
-WbFieldType wb_supervisor_field_get_type(WbFieldRef field)
-const char *wb_supervisor_field_get_type_name(WbFieldRef field)
-int wb_supervisor_field_get_count(WbFieldRef field)
+WbFieldType wb_supervisor_field_get_type(WbFieldRef field);
+const char *wb_supervisor_field_get_type_name(WbFieldRef field);
+int wb_supervisor_field_get_count(WbFieldRef field);
 ```
 
 **Description**
@@ -873,24 +873,24 @@ be directly compared with the output of the `Field::getType()`
 ```c
 #include <webots/supervisor.h>
 
-bool wb_supervisor_field_get_sf_bool(WbFieldRef field)
-int wb_supervisor_field_get_sf_int32(WbFieldRef field)
-double wb_supervisor_field_get_sf_float(WbFieldRef field)
-const double *wb_supervisor_field_get_sf_vec2f(WbFieldRef sf_field)
-const double *wb_supervisor_field_get_sf_vec3f(WbFieldRef field)
-const double *wb_supervisor_field_get_sf_rotation(WbFieldRef field)
-const double *wb_supervisor_field_get_sf_color(WbFieldRef field)
-const char *wb_supervisor_field_get_sf_string(WbFieldRef field)
-WbNodeRef wb_supervisor_field_get_sf_node(WbFieldRef field)
-bool wb_supervisor_field_get_mf_bool(WbFieldRef field, int index)
-int wb_supervisor_field_get_mf_in32(WbFieldRef field, int index)
-double wb_supervisor_field_get_mf_float(WbFieldRef field, int index)
-const double *wb_supervisor_field_get_mf_vec2f(WbFieldRef field, int index)
-const double *wb_supervisor_field_get_mf_vec3f(WbFieldRef field, int index)
-const double *wb_supervisor_field_get_mf_rotation(WbFieldRef field, int index)
-const double *wb_supervisor_field_get_mf_color(WbFieldRef field, int index)
-const char *wb_supervisor_field_get_mf_string(WbFieldRef field, int index)
-WbNodeRef wb_supervisor_field_get_mf_node(WbFieldRef field, int index)
+bool wb_supervisor_field_get_sf_bool(WbFieldRef field);
+int wb_supervisor_field_get_sf_int32(WbFieldRef field);
+double wb_supervisor_field_get_sf_float(WbFieldRef field);
+const double *wb_supervisor_field_get_sf_vec2f(WbFieldRef sf_field);
+const double *wb_supervisor_field_get_sf_vec3f(WbFieldRef field);
+const double *wb_supervisor_field_get_sf_rotation(WbFieldRef field);
+const double *wb_supervisor_field_get_sf_color(WbFieldRef field);
+const char *wb_supervisor_field_get_sf_string(WbFieldRef field);
+WbNodeRef wb_supervisor_field_get_sf_node(WbFieldRef field);
+bool wb_supervisor_field_get_mf_bool(WbFieldRef field, int index);
+int wb_supervisor_field_get_mf_in32(WbFieldRef field, int index);
+double wb_supervisor_field_get_mf_float(WbFieldRef field, int index);
+const double *wb_supervisor_field_get_mf_vec2f(WbFieldRef field, int index);
+const double *wb_supervisor_field_get_mf_vec3f(WbFieldRef field, int index);
+const double *wb_supervisor_field_get_mf_rotation(WbFieldRef field, int index);
+const double *wb_supervisor_field_get_mf_color(WbFieldRef field, int index);
+const char *wb_supervisor_field_get_mf_string(WbFieldRef field, int index);
+WbNodeRef wb_supervisor_field_get_mf_node(WbFieldRef field, int index);
 ```
 
 **Description**
@@ -922,22 +922,22 @@ message is displayed).
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_field_set_sf_bool(WbFieldRef field, bool value)
-void wb_supervisor_field_set_sf_int32(WbFieldRef field, int value)
-void wb_supervisor_field_set_sf_float(WbFieldRef field, double value)
-void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values[2])
-void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values[3])
-void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values[4])
-void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values[3])
-void wb_supervisor_field_set_sf_string(WbFieldRef field, const char *value)
-void wb_supervisor_field_set_mf_bool(WbFieldRef field, int index, bool value)
-void wb_supervisor_field_set_mf_int32(WbFieldRef field, int index, int value)
-void wb_supervisor_field_set_mf_float(WbFieldRef field, int index, double value)
-void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values[2])
-void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values[3])
-void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values[4])
-void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values[3])
-void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value)
+void wb_supervisor_field_set_sf_bool(WbFieldRef field, bool value);
+void wb_supervisor_field_set_sf_int32(WbFieldRef field, int value);
+void wb_supervisor_field_set_sf_float(WbFieldRef field, double value);
+void wb_supervisor_field_set_sf_vec2f(WbFieldRef sf_field, const double values[2]);
+void wb_supervisor_field_set_sf_vec3f(WbFieldRef field, const double values[3]);
+void wb_supervisor_field_set_sf_rotation(WbFieldRef field, const double values[4]);
+void wb_supervisor_field_set_sf_color(WbFieldRef field, const double values[3]);
+void wb_supervisor_field_set_sf_string(WbFieldRef field, const char *value);
+void wb_supervisor_field_set_mf_bool(WbFieldRef field, int index, bool value);
+void wb_supervisor_field_set_mf_int32(WbFieldRef field, int index, int value);
+void wb_supervisor_field_set_mf_float(WbFieldRef field, int index, double value);
+void wb_supervisor_field_set_mf_vec2f(WbFieldRef field, int index, const double values[2]);
+void wb_supervisor_field_set_mf_vec3f(WbFieldRef field, int index, const double values[3]);
+void wb_supervisor_field_set_mf_rotation(WbFieldRef field, int index, const double values[4]);
+void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double values[3]);
+void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value);
 ```
 
 **Description**
@@ -979,9 +979,9 @@ and setting fields with the above described functions.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_field_import_mf_node(WbFieldRef field, int position, const char *filename)
-void wb_supervisor_field_import_mf_node_from_string(WbFieldRef field, int position, const char *node_string)
-void wb_supervisor_field_remove_mf_node(WbFieldRef field, int position)
+void wb_supervisor_field_import_mf_node(WbFieldRef field, int position, const char *filename);
+void wb_supervisor_field_import_mf_node_from_string(WbFieldRef field, int position, const char *node_string);
+void wb_supervisor_field_remove_mf_node(WbFieldRef field, int position);
 ```
 
 **Description**

@@ -154,9 +154,9 @@ initial elevation throughout the simulation.
 ```c
 #include <webots/differential_wheels.h>
 
-void wb_differential_wheels_set_speed(double left, double right)
-double wb_differential_wheels_get_left_speed()
-double wb_differential_wheels_get_right_speed()
+void wb_differential_wheels_set_speed(double left, double right);
+double wb_differential_wheels_get_left_speed();
+double wb_differential_wheels_get_right_speed();
 ```
 
 **Description**
@@ -188,9 +188,9 @@ function.
 ```c
 #include <webots/differential_wheels.h>
 
-void wb_differential_wheels_enable_encoders(int ms)
-void wb_differential_wheels_disable_encoders()
-int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag)
+void wb_differential_wheels_enable_encoders(int ms);
+void wb_differential_wheels_disable_encoders();
+int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -231,9 +231,9 @@ Note that the first encoders values will be available only after the first sampl
 ```c
 #include <webots/differential_wheels.h>
 
-double wb_differential_wheels_get_left_encoder()
-double wb_differential_wheels_get_right_encoder()
-void wb_differential_wheels_set_encoders(double left, double right)
+double wb_differential_wheels_get_left_encoder();
+double wb_differential_wheels_get_right_encoder();
+void wb_differential_wheels_set_encoders(double left, double right);
 ```
 
 **Description**
@@ -257,7 +257,7 @@ instead, it will simply reset the encoders with the specified value.
 ```c
 #include <webots/differential_wheels.h>
 
-double wb_differential_wheels_get_max_speed()
+double wb_differential_wheels_get_max_speed();
 ```
 
 **Description**
@@ -277,7 +277,7 @@ node.
 ```c
 #include <webots/differential_wheels.h>
 
-double wb_differential_wheels_get_speed_unit()
+double wb_differential_wheels_get_speed_unit();
 ```
 
 **Description**

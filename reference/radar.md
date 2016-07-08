@@ -153,9 +153,9 @@ The power returned by the target is computed using the following formulas:
 ```c
 #include <webots/radar.h>
 
-void wb_radar_enable(WbDeviceTag tag, int ms)
-void wb_radar_disable(WbDeviceTag tag)
-int wb_radar_get_sampling_period(WbDeviceTag tag)
+void wb_radar_enable(WbDeviceTag tag, int ms);
+void wb_radar_disable(WbDeviceTag tag);
+int wb_radar_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -181,8 +181,8 @@ The `wb_radar_get_sampling_period()` function returns the period given into the
 ```c
 #include <webots/radar.h>
 
-double wb_radar_get_min_range(WbDeviceTag tag)
-double wb_radar_get_max_range(WbDeviceTag tag)
+double wb_radar_get_min_range(WbDeviceTag tag);
+double wb_radar_get_max_range(WbDeviceTag tag);
 ```
 
 **Description**
@@ -201,8 +201,8 @@ range of the radar.
 ```c
 #include <webots/radar.h>
 
-double wb_radar_get_horizontal_fov(WbDeviceTag tag)
-double wb_radar_get_vertical_fov(WbDeviceTag tag)
+double wb_radar_get_horizontal_fov(WbDeviceTag tag);
+double wb_radar_get_vertical_fov(WbDeviceTag tag);
 ```
 
 **Description**
@@ -221,7 +221,7 @@ vertical field of view of the radar.
 ```c
 #include <webots/radar.h>
 
-int wb_radar_get_number_of_targets(WbDeviceTag tag)
+int wb_radar_get_number_of_targets(WbDeviceTag tag);
 ```
 
 **Description**
@@ -240,7 +240,7 @@ by the radar.
 ```c
 #include <webots/radar.h>
 
-const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag)
+const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag);
 ```
 
 **Description**

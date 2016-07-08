@@ -50,8 +50,8 @@ between 0 (off) and 255 (maximum intensity).
 ```c
 #include <webots/led.h>
 
-void wb_led_set(WbDeviceTag tag, int value)
-int wb_led_get(WbDeviceTag tag)
+void wb_led_set(WbDeviceTag tag, int value);
+int wb_led_get(WbDeviceTag tag);
 ```
 
 **Description**

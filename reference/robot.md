@@ -179,9 +179,9 @@ network with an unpredictable delay (like the Internet).
 ```c
 #include <webots/robot.h>
 
-int wb_robot_step(int ms)
-void wb_robot_init()
-void wb_robot_cleanup()
+int wb_robot_step(int ms);
+void wb_robot_init();
+void wb_robot_cleanup();
 ```
 
 **Description**
@@ -296,7 +296,7 @@ int main() {
 ```c
 #include <webots/robot.h>
 
-WbDeviceTag wb_robot_get_device(const char *name)
+WbDeviceTag wb_robot_get_device(const char *name);
 ```
 
 **Description**
@@ -327,25 +327,25 @@ function returns 0.
 ```c
 #include <webots/Robot.hpp>
 
-Accelerometer *Robot::getAccelerometer(const std::string &name)
-Camera *Robot::getCamera(const std::string &name)
-Compass *Robot::getCompass(const std::string &name)
-Connector *Robot::getConnector(const std::string &name)
-Display *Robot::getDisplay(const std::string &name)
-DistanceSensor *Robot::getDistanceSensor(const std::string &name)
-Emitter *Robot::getEmitter(const std::string &name)
-GPS *Robot::getGPS(const std::string &name)
-Gyro *Robot::getGyro(const std::string &name)
-InertialUnit *Robot::getInertialUnit(const std::string &name)
-LightSensor *Robot::getLightSensor(const std::string &name)
-Motor *Robot::getMotor(const std::string &name)
-Pen *Robot::getPen(const std::string &name)
-PositionSensor *Robot::getPositionSensor(const std::string &name)
-RangeFinder *Robot::getRangeFinder(const std::string &name)
-Receiver *Robot::getReceiver(const std::string &name)
-Servo *Robot::getServo(const std::string &name)
-Speaker *Robot::getSpeaker(const std::string &name)
-TouchSensor *Robot::getTouchSensor(const std::string &name)
+Accelerometer *Robot::getAccelerometer(const std::string &name);
+Camera *Robot::getCamera(const std::string &name);
+Compass *Robot::getCompass(const std::string &name);
+Connector *Robot::getConnector(const std::string &name);
+Display *Robot::getDisplay(const std::string &name);
+DistanceSensor *Robot::getDistanceSensor(const std::string &name);
+Emitter *Robot::getEmitter(const std::string &name);
+GPS *Robot::getGPS(const std::string &name);
+Gyro *Robot::getGyro(const std::string &name);
+InertialUnit *Robot::getInertialUnit(const std::string &name);
+LightSensor *Robot::getLightSensor(const std::string &name);
+Motor *Robot::getMotor(const std::string &name);
+Pen *Robot::getPen(const std::string &name);
+PositionSensor *Robot::getPositionSensor(const std::string &name);
+RangeFinder *Robot::getRangeFinder(const std::string &name);
+Receiver *Robot::getReceiver(const std::string &name);
+Servo *Robot::getServo(const std::string &name);
+Speaker *Robot::getSpeaker(const std::string &name);
+TouchSensor *Robot::getTouchSensor(const std::string &name);
 ```
 
 **Description**
@@ -377,8 +377,8 @@ Python.
 ```c
 #include <webots/robot.h>
 
-WbDeviceTag wb_robot_get_device_by_index(int index)
-int wb_robot_get_number_of_devices()
+WbDeviceTag wb_robot_get_device_by_index(int index);
+int wb_robot_get_number_of_devices();
 ```
 
 **Description**
@@ -425,10 +425,10 @@ for(i=0; i<n_devices; i++) {
 ```c
 #include <webots/robot.h>
 
-void wb_robot_battery_sensor_enable(int ms)
-void wb_robot_battery_sensor_disable()
-double wb_robot_battery_sensor_get_value()
-int wb_robot_get_battery_sampling_period(WbDeviceTag tag)
+void wb_robot_battery_sensor_enable(int ms);
+void wb_robot_battery_sensor_disable();
+double wb_robot_battery_sensor_get_value();
+int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -459,7 +459,7 @@ disabled.
 ```c
 #include <webots/robot.h>
 
-double wb_robot_get_basic_time_step()
+double wb_robot_get_basic_time_step();
 ```
 
 **Description**
@@ -478,8 +478,8 @@ This function returns the value of the `basicTimeStep` field of the
 ```c
 #include <webots/robot.h>
 
-int wb_robot_get_mode()
-void wb_robot_set_mode(int mode, void *arg)
+int wb_robot_get_mode();
+void wb_robot_set_mode(int mode, void *arg);
 ```
 
 **Description**
@@ -516,7 +516,7 @@ The integers can be compared to the following enumeration items:
 ```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_name()
+const char *wb_robot_get_name();
 ```
 
 **Description**
@@ -546,7 +546,7 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 ```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_model()
+const char *wb_robot_get_model();
 ```
 
 **Description**
@@ -570,8 +570,8 @@ controller terminates.
 ```c
 #include <webots/robot.h>
 
-const char * wb_robot_get_data()
-void wb_robot_set_data(const char *data)
+const char * wb_robot_get_data();
+void wb_robot_set_data(const char *data);
 ```
 
 **Description**
@@ -594,7 +594,7 @@ the robot node.
 #include <webots/nodes.h>
      #include <webots/robot.h>
 
-WbNodeType wb_robot_get_type()
+WbNodeType wb_robot_get_type();
 ```
 
 **Description**
@@ -613,7 +613,7 @@ WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 ```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_project_path()
+const char *wb_robot_get_project_path();
 ```
 
 **Description**
@@ -635,7 +635,7 @@ char string. It should not be deallocated.
 ```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_world_path()
+const char *wb_robot_get_world_path();
 ```
 
 **Description**
@@ -655,8 +655,8 @@ should not be deallocated.
 ```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_controller_name()
-const char *wb_robot_get_controller_arguments()
+const char *wb_robot_get_controller_name();
+const char *wb_robot_get_controller_arguments();
 ```
 
 **Description**
@@ -675,7 +675,7 @@ Robot::controllerArgs fields.
 ```c
 #include <webots/robot.h>
 
-bool wb_robot_get_synchronization()
+bool wb_robot_get_synchronization();
 ```
 
 **Description**
@@ -694,7 +694,7 @@ field of the Robot node.
 ```c
 #include <webots/robot.h>
 
-double wb_robot_get_time()
+double wb_robot_get_time();
 ```
 
 **Description**
@@ -712,7 +712,7 @@ does not matter whether the controller is synchronized or not.
 ```c
 #include <webots/robot.h>
 
-void wb_robot_task_new(void (*task, void *param)
+void wb_robot_task_new(void (*task, void *param);
 ```
 
 **Description**
@@ -738,10 +738,10 @@ below) to ensure that such data is not accessed by a different thread.
 ```c
 #include <webots/robot.h>
 
-WbMutexRef wb_robot_mutex_new()
-void wb_robot_mutex_delete(WbMutexRef mutex)
-void wb_robot_mutex_lock(WbMutexRef mutex)
-void wb_robot_mutex_unlock(WBMutexRef mutex)
+WbMutexRef wb_robot_mutex_new();
+void wb_robot_mutex_delete(WbMutexRef mutex);
+void wb_robot_mutex_lock(WbMutexRef mutex);
+void wb_robot_mutex_unlock(WBMutexRef mutex);
 ```
 
 **Description**
@@ -779,7 +779,7 @@ multi-threaded programming techniques for further information.
 ```c
 #include <webots/robot_window.h>
 
-void *wb_robot_window_custom_function(void *arg)
+void *wb_robot_window_custom_function(void *arg);
 ```
 
 **Description**

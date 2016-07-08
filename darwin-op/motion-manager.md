@@ -34,7 +34,7 @@ The first parameter is the robot on which the algorithm applies.
 ```c
 #include <DARwInOPMotionManager.hpp>
 
-playPage(int id)
+void playPage(int id);
 ```
 
 **Description**
@@ -56,9 +56,9 @@ method `playPage` with the second parameter set to false:
 ```c
 #include <DARwInOPMotionManager.hpp>
 
-playPage(int id, bool sync)
-step(int ms)
-isMotionPlaying()
+void playPage(int id, bool sync);
+void step(int ms);
+void isMotionPlaying();
 ```
 
 **Description**

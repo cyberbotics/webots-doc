@@ -236,9 +236,9 @@ restored.
 ```c
 #include <webots/camera.h>
 
-void wb_camera_enable(WbDeviceTag tag, int ms)
-void wb_camera_disable(WbDeviceTag tag)
-int wb_camera_get_sampling_period(WbDeviceTag tag)
+void wb_camera_enable(WbDeviceTag tag, int ms);
+void wb_camera_disable(WbDeviceTag tag);
+int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
@@ -264,10 +264,10 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 ```c
 #include <webots/camera.h>
 
-double wb_camera_get_fov(WbDeviceTag tag)
-double wb_camera_get_min_fov(WbDeviceTag tag)
-double wb_camera_get_max_fov(WbDeviceTag tag)
-void wb_camera_set_fov(WbDeviceTag tag, double fov)
+double wb_camera_get_fov(WbDeviceTag tag);
+double wb_camera_get_min_fov(WbDeviceTag tag);
+double wb_camera_get_max_fov(WbDeviceTag tag);
+void wb_camera_set_fov(WbDeviceTag tag, double fov);
 ```
 
 **Description**
@@ -292,11 +292,11 @@ not defined, then the functions `wb_camera_get_min_fov()` and
 ```c
 #include <webots/camera.h>
 
-double wb_camera_get_focal_length(WbDeviceTag tag)
-double wb_camera_get_focal_distance(WbDeviceTag tag)
-double wb_camera_get_max_focal_distance(WbDeviceTag tag)
-double wb_camera_get_min_focal_distance(WbDeviceTag tag)
-void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
+double wb_camera_get_focal_length(WbDeviceTag tag);
+double wb_camera_get_focal_distance(WbDeviceTag tag);
+double wb_camera_get_max_focal_distance(WbDeviceTag tag);
+double wb_camera_get_min_focal_distance(WbDeviceTag tag);
+void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 ```
 
 **Description**
@@ -317,8 +317,8 @@ the other functions will return 0.
 ```c
 #include <webots/camera.h>
 
-int wb_camera_get_width(WbDeviceTag tag)
-int wb_camera_get_height(WbDeviceTag tag)
+int wb_camera_get_width(WbDeviceTag tag);
+int wb_camera_get_height(WbDeviceTag tag);
 ```
 
 **Description**
@@ -337,7 +337,7 @@ corresponding [Camera](#camera) node.
 ```c
 #include <webots/camera.h>
 
-double wb_camera_get_near(WbDeviceTag tag)
+double wb_camera_get_near(WbDeviceTag tag);
 ```
 
 **Description**
@@ -356,11 +356,11 @@ corresponding [Camera](#camera) node.
 ```c
 #include <webots/camera.h>
 
-const unsigned char *wb_camera_get_image(WbDeviceTag tag)
-unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y)
+const unsigned char *wb_camera_get_image(WbDeviceTag tag);
+unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int x, int y);
+unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y);
+unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y);
+unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
 ```
 
 **Description**
@@ -490,7 +490,7 @@ the OpenGL z-buffer.
 ```c
 #include <webots/camera.h>
 
-int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality)
+int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
 **Description**

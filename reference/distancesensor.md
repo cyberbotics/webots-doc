@@ -228,10 +228,10 @@ The ground texture must be placed in a [Plane](plane.md).
 ```c
 #include <webots/distance_sensor.h>
 
-void wb_distance_sensor_enable(WbDeviceTag tag, int ms)
-void wb_distance_sensor_disable(WbDeviceTag tag)
-int wb_distance_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_distance_sensor_get_value(WbDeviceTag tag)
+void wb_distance_sensor_enable(WbDeviceTag tag, int ms);
+void wb_distance_sensor_disable(WbDeviceTag tag);
+int wb_distance_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_distance_sensor_get_value(WbDeviceTag tag);
 ```
 
 **Description**
@@ -263,9 +263,9 @@ of the return value is defined by this lookup table.
 ```c
 #include <webots/distance_sensor.h>
 
-double wb_distance_sensor_get_max_range(WbDeviceTag tag)
-double wb_distance_sensor_get_min_range(WbDeviceTag tag)
-double wb_distance_sensor_get_aperture(WbDeviceTag tag)
+double wb_distance_sensor_get_max_range(WbDeviceTag tag);
+double wb_distance_sensor_get_min_range(WbDeviceTag tag);
+double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 ```
 
 **Description**
@@ -290,7 +290,7 @@ sensor in radians.
 ```c
 #include <webots/distance_sensor.h>
 
-int wb_distance_sensor_get_type(WbDeviceTag tag)
+int wb_distance_sensor_get_type(WbDeviceTag tag);
 ```
 
 **Description**

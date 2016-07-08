@@ -22,7 +22,7 @@ The [Speaker](#speaker) node represents a loudspeaker device that can be embbede
 ```c
 #include <webots/speaker.h>
 
-void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double pitch, double balance, bool loop)
+void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double pitch, double balance, bool loop);
 ```
 
 **Description**
@@ -47,7 +47,7 @@ The path to the sound file should be defined either absolutely or relatively. If
 ```c
 #include <webots/speaker.h>
 
-void wb_speaker_stop(WbDeviceTag tag, const char *sound)
+void wb_speaker_stop(WbDeviceTag tag, const char *sound);
 ```
 
 **Description**
@@ -67,9 +67,9 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 ```c
 #include <webots/speaker.h>
 
-void wb_speaker_set_language(WbDeviceTag tag, const char *language)
-const char * wb_speaker_get_language(WbDeviceTag tag)
-void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume)
+void wb_speaker_set_language(WbDeviceTag tag, const char *language);
+const char * wb_speaker_get_language(WbDeviceTag tag);
+void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
 ```
 
 **Description**

@@ -92,7 +92,7 @@ In order to create a cross-platform controller, it is recommended to use the
 We recommend to use the latest MATLAB version on an up-to-date operating system.
 
 Note that 64-bit versions of Webots are not compatible with 32-bit versions of
-MATLAB. Webots comes only in 64-bit flavours and therefore it can only
+MATLAB. Webots comes only in 64-bit flavors and therefore it can only
 inter-operate with a 64 bit version of MATLAB.
 
 On some platforms the MATLAB interface needs `perl` and `gcc` to be installed

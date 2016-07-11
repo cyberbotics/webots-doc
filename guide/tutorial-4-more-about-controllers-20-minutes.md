@@ -132,7 +132,7 @@ Write the prototype of the `main()` function as follows:
 >   while (1) {
 >     // step simulation
 >     int delay = wb_robot_step(TIME_STEP);
->     if (delay == -1) // exit event from webots
+>     if (delay == -1) // exit event from Webots
 >       break;
 >     // read sensors outputs
 >     // process behavior
@@ -276,7 +276,7 @@ int main(int argc, char **argv)
   while (1) {
     // step simulation
     int delay = wb_robot_step(TIME_STEP);
-    if (delay == -1) // exit event from webots
+    if (delay == -1) // exit event from Webots
       break;
 
     // read sensors outputs

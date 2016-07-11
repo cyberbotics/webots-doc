@@ -56,7 +56,7 @@ ID of the process and the IP address of the computer.
 "[device\_name]": since the same function can refer to different devices, this
 field shows you which device it refers to.
 
-"[service/topic\_name]": this field is indentical or very close to the Webots
+"[service/topic\_name]": this field is identical or very close to the Webots
 function it corresponds to. For topics, it is followed by the sampling period. For
 services, it is also the name of the corresponding srv file.
 

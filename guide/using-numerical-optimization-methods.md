@@ -210,7 +210,7 @@ time does clearly revert the simulation completely, so each robot will start
 from the same initial state. The drawback of this method is that the
 optimization algorithm has to be programmed outside of Webots. This external
 program can be written in any programming language, e.g. shell script, C, PHP,
-perl, etc., provided that there is a way to call webots and wait for its
+perl, etc., provided that there is a way to call Webots and wait for its
 termination, e.g. like the C standard `system()` does. On the contrary, the
 parameter evaluation must be implemented in a Webots controller.
 
@@ -224,7 +224,7 @@ parameter evaluation. When the robot controller finishes the evaluation, it
 writes the fitness result into another text file and then it calls the
 `wb_supervisor_simulation_quit()` function to terminate Webots. Then the control
 flow returns to the optimization program that can read the resulting fitness,
-associated it with the current genotype and proceed with the next genotype.
+associate fitness with the current genotype and proceed with the next genotype.
 
 Here is a possible (pseudo-code) implementation for the robot evaluation
 controller:

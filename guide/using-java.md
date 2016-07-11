@@ -24,7 +24,7 @@ The Java Development Kit (JDK) can be downloaded for free from the [Sun
 Developer Network](http://www.oracle.com/technetwork/java/javase/downloads).
 Make sure you choose the most recent release and the Standard Edition (SE) of
 the JDK 8. For Windows, make also sure you have selected the 64 bit version
-since webots is not compatible with the 32 bit version. Then, follow the
+since Webots is not compatible with the 32 bit version. Then, follow the
 installation instructions attending the package.
 
 The `java` command is the Java Virtual Machine (JVM); it is used to execute

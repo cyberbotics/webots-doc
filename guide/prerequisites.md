@@ -17,7 +17,7 @@ The first step is to create a directory which will contain all your files
 related to Webots.
 
 > **Hands on**:
-From your operating system  interface, choose a location on your hard disk where
+From your operating system interface, choose a location on your hard disk where
 you have the writing rights (for example, your "[My]Documents" directory).
 Create a directory that will contain all your Webots projects, and name it
 "my\_webots\_projects".

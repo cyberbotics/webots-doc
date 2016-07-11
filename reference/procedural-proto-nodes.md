@@ -43,7 +43,7 @@ key contains the `'Appearance'` string.
 [this table](#content-of-the-context-dictionary) shows the available information
 and its corresponding keys.
 - The VRML comment ("#") prevails over the Lua statements.
-- The following Lua modules are availble directly: base, table, io, os, string,
+- The following Lua modules are available directly: base, table, io, os, string,
 math, debug, package.
 - The LUA\_PATH environment variable can be modified (before running Webots) to
 include external Lua modules.

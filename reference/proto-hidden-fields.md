@@ -1,10 +1,10 @@
 ## PROTO hidden fields
 
 Regular PROTO fields let you change, save and restore, chosen characteristics of
-your model. In constrast, PROTO encapsulation prevent field values which are not
+your model. In constrast, PROTO encapsulation prevents field values which are not
 accessible through PROTO fields, but which may change during simulation, from
 being saved and subsequently restored. Still, this is not true for all field
-values, since Webots save for you hidden PROTO fields which are bound to change
+values, since Webots saves for you hidden PROTO fields which are bound to change
 over simulation time. Namely the `translation` and `rotation` fields of
 [Solid](solid.md) nodes as well as the `position` fields of [Joint](joint.md)
 nodes are saved as hidden PROTO fields in the field scope of every top-level
@@ -68,7 +68,7 @@ The names of the first six hidden fields all contain 0 as primary index, which
 is the index of the `Pioneer3at` PROTO itself. The additional secondary indices
 for the four hidden `position` fields correspond to the four
 [HingeJoint](hingejoint.md) nodes used for the wheels and numbered by means of
-pre-order traversal. There is no hidden field associated the [Solid](solid.md)
+pre-order traversal. There is no hidden field associated to the [Solid](solid.md)
 node with index 1, namely the `SickLms291` PROTO, since its relative position
 and orientation are kept fixed during simulation. The indices ranging from 2 to
 5 correspond to the four [Solid](solid.md) wheels of the `Pioneer3at`.

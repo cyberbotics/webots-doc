@@ -1,10 +1,10 @@
 ## PROTO hidden fields
 
 Regular PROTO fields let you change, save and restore, chosen characteristics of
-your model. In constrast, PROTO encapsulation prevent field values which are not
+your model. In constrast, PROTO encapsulation prevents field values which are not
 accessible through PROTO fields, but which may change during simulation, from
 being saved and subsequently restored. Still, this is not true for all field
-values, since Webots save for you hidden PROTO fields which are bound to change
+values, since Webots saves for you hidden PROTO fields which are bound to change
 over simulation time. Namely the `translation` and `rotation` fields of
 [Solid](solid.md) nodes as well as the `position` fields of [Joint](joint.md)
 nodes are saved as hidden PROTO fields in the field scope of every top-level

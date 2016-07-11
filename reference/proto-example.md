@@ -82,7 +82,7 @@ statement placed inside the `DEF LEG_SHAPE Shape` node which is then reused
 
 The "ProtoInstantiationExample.wbt" file below exemplifies the instantiation of
 this PROTO. PROTO nodes are instantiated using the regular node syntax. Fields
-with the default value can be omitted. Fields which value differs from the
+with the default value can be omitted. Field values which differ from the
 default must be specified.
 
 "TwoChairs.wbt":

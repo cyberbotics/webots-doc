@@ -2,7 +2,7 @@
 
 Cyberbotics is grateful to all the people who contributed to the development of
 Webots, Webots sample applications, the Webots User Guide, the Webots Reference
-Manual, and the Webots web site, including Stefania Pedrazzi, David Mansolino,
+Manual, and the Webots website, including Stefania Pedrazzi, David Mansolino,
 Yvan Bourquin, Fabien Rohrer, Jean-Christophe Fillion-Robin, Jordi Porta,
 Emanuele Ornella, Yuri Lopez de Meneses, Sébastien Hugues, Auke-Jan Ispeert,
 Jonas Buchli, Alessandro Crespi, Ludovic Righetti, Julien Gagnet, Lukas Hohl,

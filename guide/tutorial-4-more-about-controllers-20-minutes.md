@@ -12,19 +12,19 @@ sensor values, how to command the actuators, and how to program a simple
 feedback loop.
 
 This chapter only addresses the correct usage of Webots functions. The study of
-robotics algorithms is beyond the goals of this tutorial and so this won't be
+robotics algorithms is beyond the goals of this tutorial and so it won't be
 addressed here. Some rudimentary programming knowledge is required to tackle
 this chapter (any C tutorial should be a sufficient introduction). At the end of
 the chapter, links to further robotics algorithmics are given.
 
 ### New World and new Controller
 
-> **handson**:
+> **Hands on**:
 Save the previous world as "collision\_avoidance.wbt".
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 Create a new C controller called "e-puck\_avoid\_collision" using the wizard.
 Modify the `controller` field of the E-puck node in order to link it to the new
 controller.
@@ -32,7 +32,7 @@ controller.
 ### Understand the e-puck Model
 
 Controller programming requires some information related to the e-puck model.
-For doing the collision avoidance algorithm, we need to read the values of its 8
+In order to create the collision avoidance algorithm, we need to read the values of its 8
 infra-red distance sensors located around its turret, and we need to actuate its
 two wheels. The way that the distance sensors are distributed around the turret
 and the e-puck direction are depicted in [this
@@ -44,16 +44,16 @@ the robot. These nodes are referenced by their `name` fields (from "ps0" to
 that a DistanceSensor node can be accessed through the related module of the
 Webots API (through the "webots/distance\_sensor.h" include file). The values
 returned by the distance sensors are scaled between 0 and 4096 (piecewise
-linearly to the distance), while 4096 means that a big amount of light is
+linearly to the distance). While 4096 means that a big amount of light is
 measured (an obstacle is close) and 0 means that no light is measured (no
 obstacle).
 
 In the same way, the e-puck root node is a DifferentialWheel node and can be
-access by the "webots/differential\_wheel.h" include file. The speed is given in
+accessed by the "webots/differential\_wheel.h" include file. The speed is given in
 a number of ticks/seconds where 1000 ticks correspond to a complete rotation of
 the wheel. The values are clamped between -1000 and 1000.
 
-> **theory**:
+> **Theory**:
 The **controller API** is the programming interface that gives you access to the
 simulated sensors and actuators of the robot. For example, including the
 "webots/distance\_sensor.h" file allows to use the `wb_distance_sensor_*()`
@@ -77,13 +77,13 @@ Chapter 3 of the `Reference Manual` together with the description of each node.
 
 We would like to program a very simple collision avoidance behavior. You will
 program the robot to go forwards until an obstacle is detected by the front
-distance sensors, and then to turn towards the obstacle-free direction. For
-doing that, we will use the simple feedback loop depicted in the UML state
+distance sensors, and then to turn towards the obstacle-free direction. In order to
+do that, we will use the simple feedback loop depicted in the UML state
 machine in [this figure](#uml-state-machine-of-a-simple-feedback-loop).
 
 The complete code of this controller is given in the next subsection.
 
-> **handson**:
+> **Hands on**:
 At the beginning of the controller file, add the include directives
 corresponding to the Robot, the DifferentialWheels and the DistanceSensor nodes
 in order to be able to use the corresponding API (documented in chapter 3 of the
@@ -97,7 +97,7 @@ in order to be able to use the corresponding API (documented in chapter 3 of the
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 Just after the include statements add a macro that defines the duration of each
 physics step. This macro will be used as argument to the `wb_robot_step()`
 function, and it will also be used to enable the devices. This duration is
@@ -110,7 +110,7 @@ specified in milliseconds and it must be a multiple of the value in the
 
 <!-- -->
 
-> **theory**:
+> **Theory**:
 The function called `main()` is where the controller program starts execution.
 The arguments passed to main() are given by the `controllerArgs` field of the
 Robot node. The Webots API has to be initialized using the `wb_robot_init()`
@@ -118,7 +118,7 @@ function and it has to be cleaned up using the `wb_robot_cleanup()` function.
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 Write the prototype of the `main()` function as follows:
 
 > ```c
@@ -132,7 +132,7 @@ Write the prototype of the `main()` function as follows:
 >   while (1) {
 >     // step simulation
 >     int delay = wb_robot_step(TIME_STEP);
->     if (delay == -1) // exit event from webots
+>     if (delay == -1) // exit event from Webots
 >       break;
 >     // read sensors outputs
 >     // process behavior
@@ -146,7 +146,7 @@ Write the prototype of the `main()` function as follows:
 
 <!-- -->
 
-> **theory**:
+> **Theory**:
 A robot device is referenced by a `WbDeviceTag`. The `WbDeviceTag` is retrieved
 by the `wb_robot_get_device()` function. Then it is used as first argument in
 every function call concerning this device.
@@ -157,7 +157,7 @@ refreshed.
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 Just after the comment *"// initialize devices"*, get and enable the distance
 sensors as follows:
 
@@ -178,7 +178,7 @@ sensors as follows:
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 In the main loop, just after the comment *"// read sensors outputs"*, read the
 distance sensor values as follows:
 
@@ -191,7 +191,7 @@ distance sensor values as follows:
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 In the main loop, just after the comment *"// process behavior"*, detect if a
 collision occurs (i.e. the value returned by a distance sensor is bigger than a
 threshold) as follows:
@@ -210,7 +210,7 @@ threshold) as follows:
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 Finally, use the information about the obstacle to actuate the wheels as
 follows:
 
@@ -235,7 +235,7 @@ follows:
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 Compile your code by selecting the `Build / Build` menu item. Compilation errors
 are displayed in red in the console. If there are any, fix them and retry to
 compile. Revert the simulation.
@@ -276,7 +276,7 @@ int main(int argc, char **argv)
   while (1) {
     // step simulation
     int delay = wb_robot_step(TIME_STEP);
-    if (delay == -1) // exit event from webots
+    if (delay == -1) // exit event from Webots
       break;
 
     // read sensors outputs
@@ -320,7 +320,7 @@ int main(int argc, char **argv)
 
 ### Conclusion
 
-Here is a quick summary of the key points you need to understand before going
+Here is a quick summary of the key points you need to understand before continuing
 on:
 
 - The controller entry point is the `main()` function like any standard C program.
@@ -331,10 +331,10 @@ function.
 - A device is referenced by the `name` field of its device node. The reference of
 the node can be retrieved thanks to the `wb_robot_get_device()` function.
 - Each controller program is executed as a child process of the Webots process. A
-controller process does not share any memory with Webots (except the cameras
+controller process does not share any memory with Webots (except the cameras'
 images) and it can run on another CPU (or CPU core) than Webots.
 - The controller code is linked with the "libController" dynamic library. This
 library handles the communication between your controller and Webots.
 
-The [section](controller-programming.md) explains in more detail controller
+This [section](controller-programming.md) explains in more details controller
 programming. We invite you to read carefully this section before going on.

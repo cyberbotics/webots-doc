@@ -35,7 +35,7 @@ variables:
 %end
 
 Every source file specified using these variables, will be added to the
-controller build. In addition dependency files will be automatically generated
+controller build. In addition, dependency files will be automatically generated
 by the `make` command in order to minimize the build. Note that these variables
 should not be used in any language other than C or C++.
 
@@ -47,7 +47,7 @@ C_SOURCES = my_controller.c my_second_file.c my_third_file.c
 ```
 
 If a project has several ".cpp" source files, then this can be specified like
-this:
+such:
 
 ```makefile
 CXX_SOURCES = my_controller.cpp my_second_file.cpp my_third_file.cc

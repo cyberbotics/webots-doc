@@ -2,12 +2,12 @@
 
 ### Introduction
 
-The Python API has been generated from the C++ API by using SWIG. That implies
+The Python API has been generated from the C++ API by using SWIG. This implies
 that their class hierarchy, their class names and their function names are
 almost identical. The Python API is currently composed of a set of about 25
 classes having about 200 public functions located in the module called
 *controller*. The classes are either representations of a node of the scene tree
-(such as Robot, LED, etc.) or either utility classes (such as Motion, ImageRef,
+(such as Robot, LED, etc.) or utility classes (such as Motion, ImageRef,
 etc.). A complete description of these functions can be found in the reference
 guide while the instructions about the common way to program a Python controller
 can be found in [this chapter](programming-fundamentals.md).
@@ -22,7 +22,7 @@ without guarantee. Python 3 is not supported.
 
 #### Mac OS X and Linux Instructions
 
-Most of the Linux distribution have Python 2.7 already installed. Mac OS X also
+Most of the Linux distributions have Python 2.7 already installed. Mac OS X also
 has Python installed by default. To check the current version of Python
 installed on your system, you can type in a terminal:
 
@@ -37,12 +37,11 @@ command line is installed on your computer, you can type in a terminal:
 $ python2.7 --version
 ```
 
-More information is available from the [Python official web
-site](http://www.python.org/).
+More information is available from the [Python official website](http://www.python.org/).
 
 #### Windows Instructions
 
-You should install the latest version of Python 2.7 (64 bit) from the official [Python web site](https://www.python.org). Then, you have to modify your *PATH* environment variable to add the path to the python.exe binary which is located in the main *Python27* installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type *python --version*. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the *WEBOTS_HOME/projects/languages/python/worlds/example.wbt*)
+You should install the latest version of Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your *PATH* environment variable to add the path to the python.exe binary which is located in the main *Python27* installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type *python --version*. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the *WEBOTS_HOME/projects/languages/python/worlds/example.wbt*)
 
 ### Source Code of the Python API
 

@@ -1,6 +1,6 @@
 ## Compiling Controllers in a Terminal
 
-It is possible to compile Webots controllers in a terminal instead of the
+It is possible to compile Webots controllers in a terminal instead of using the
 built-in editor. In this case you need to define the `WEBOTS_HOME` environment
 variable and make it point to Webots installation directory. The `WEBOTS_HOME`
 variable is used to locate Webots header files and libraries in the Makefiles.

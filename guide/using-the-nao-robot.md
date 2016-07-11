@@ -5,7 +5,7 @@
 The Nao robot is a humanoid robot developed by [Aldebaran
 Robotics](http://www.aldebaran-robotics.com). This section explains how to use
 Nao robot simulated in Webots together with the Choregraphe program of
-[Aldebaran Robotics](http://www.aldebaran-robotics.com). Currently Webots
+[Aldebaran Robotics](http://www.aldebaran-robotics.com). Currently, Webots
 supports the Nao v3.3, v4.0 and v5.0 versions, with and without their
 articulated fingers (respectively with 25 and 21 degrees of freedom) for the
 first two.
@@ -24,7 +24,7 @@ the goal. You can find another NAOqi example in the
 "challenge.wbt" file in this folder is a solution to the NAO Challenge contest
 (edition 2013-2014).
 
-In addition Nao robots are also used in the world files of the
+In addition to that, Nao robots are also used in the world files of the
 [Robotstadium](http://www.robotstadium.org) contest. These files are located in
 this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".
 
@@ -112,7 +112,7 @@ possible to completely switch off the simulation of the cameras by adding the
 ### Using Several Nao robots
 
 It is possible to have several Nao robots in your simulation, however each Nao
-robot must use a different NAOqi port. Here how to copy a Nao and assign the
+robot must use a different NAOqi port. Here's how to copy a Nao and assign the
 NAOqi port number:
 
 1. Pause the simulation: push the `Pause` button in Webots 3D View
@@ -147,8 +147,7 @@ simulation speed drifts away from 1.0x, the physics simulation gets wrong
 (unnatural) and thus Choregraphe motions don't work as expected any more. For
 example if Webots indicates 0.5x, this means that it is only able to simulate at
 half real-time the motion provided by Choregraphe: the physics simulation is too
-slow. Therefore it is important to keep the simulation speed as much as possible
-close to 1.0x. There are currently no means of synchronizing Webots and
+slow. Therefore it is important to keep the simulation speed as close as possible to 1.0x. There are currently no means of synchronizing Webots and
 Choregraphe, but this problem will be addressed in a future release. It is often
 possible to prevent the simulation speed from going below 1.0x, by keeping the
 CPU and GPU load as low as possible. There are several ways to do that, here are

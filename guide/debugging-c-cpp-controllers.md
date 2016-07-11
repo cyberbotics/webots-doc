@@ -52,7 +52,7 @@ adding this line to the controller's Makefile:
 CFLAGS = -g
 ```
 
-Then you must recompile the controller, either by using the `Clean` and `Build`
+Then, you must recompile the controller, either by using the `Clean` and `Build`
 buttons of the Webots text editor or directly in a terminal:
 
 ```sh

@@ -10,7 +10,7 @@ different platform or an ancient distribution of ROS.
 ### Installing ROS
 
 In order to use these nodes, you will first need to install the ROS framework.
-To install the last version of ROS on Ubuntu use the following commands:
+To install the latest version of ROS on Ubuntu use the following commands:
 
 ```sh
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -22,16 +22,16 @@ sudo rosdep init
 rosdep update
 ```
 
-For more information or to install it on another platform please reading
+For more information or to install it on another platform please read
 [http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation).
 Unless you need older version for some other application, you should choose the
 latest distribution (Kinetic Kame).
 
-> **note**:
+> **Note**:
 If you never used the ROS framework before, it is strongly recommended to follow
-some tutorials at:
+some tutorials from:
 [http://wiki.ros.org/ROS/Tutorials](http://wiki.ros.org/ROS/Tutorials). These
-tutorials will also help you setting up your ROS environment and initializing
+tutorials will also help you set up your ROS environment and initialize
 your catkin workspace.
 
 ### webots_ros package installation
@@ -47,7 +47,7 @@ catkin_init_workspace
 
 Once your workspace is set, you have to copy the `webots_ros` folder located in
 "projects/languages/ros" in the `src` folder of your catkin workspace. You will
-also need to copy the list of the services and messages definitions of the
+also need to copy the list of services and messages definitions of the
 `webots_ros` package. Simply copy the `srv` and `msg` folders located in
 "projects/default/controllers/ros/include" into the "webots\_ros" folder of your
 catkin workspace.
@@ -99,10 +99,10 @@ start the `panoramic_view_recorder` node with the following command:
 rosrun webots_ros panoramic_view_recorder
 ```
 
-> **note**:
-The seed of the Webots random number generator is initialized at the beginning
+> **Note**:
+The seed of Webots' random number generator is initialized at the beginning
 of the simulation and not when the ROS nodes connect. Webots has to be running
-so that the ROS nodes can connect. However, we cannot guarantee how long it will
+for the ROS nodes to connect. However, we cannot guarantee how long it will
 run before the ROS nodes connect. Therefore, the sensor measurements and motor
 commands will slightly differ from one run to another, due to the noise being
 slightly different at the time of the connection of the ROS nodes. This may have
@@ -113,7 +113,7 @@ make ROS-based simulation reproducible.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 If you want to use different computers for the ROS master, the Webots simulation
 and/or the nodes, you must be able to connect to each of them with SSH in both
 ways. The hostname and IP addresses of these computers should be listed in the
@@ -132,4 +132,4 @@ functions.
 
 All the functions from the Webots API have their corresponding services or
 topics. You can find in the `Reference Manual` the definitions of all the
-services and topics associated with each device.
+services and topics associated to each device.

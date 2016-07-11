@@ -5,7 +5,7 @@ the `Webots / Preferences` menu item on Mac, and from the `Tools / Preferences`
 menu item on the other operating systems.
 
 The dialog box is separated into tabs. Each of the following subsection
-corresponds to one of this tab.
+corresponds to one of these tabs.
 
 ### General
 
@@ -38,7 +38,7 @@ depending on the GPU OpenGL abilities.
 
 - The `RTT preferred mode` option allows you to modify the method used to create
 the Camera device images. The methods are sorted from the most efficient one to
-the less efficient one.
+the least efficient one.
 
 - The `Disable shadows` option allows you to disable completely the shadows in the
 3D view and in the Camera rendering, whatever the values of the

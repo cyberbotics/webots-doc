@@ -5,8 +5,7 @@
 *MATLAB*<sup>TM</sup> is a numerical computing environment and an interpreted
 programming language. It allows easy matrix manipulation, plotting of functions
 and data, implementation of algorithms and creation of user interfaces. You can
-get more information on the official [MathWorks](http://www.mathworks.com) web
-site. MATLAB is widely used in robotics in particular for its *Image Processing,
+get more information on the official [MathWorks website](http://www.mathworks.com) . MATLAB is widely used in robotics in particular for its *Image Processing,
 Neural Networks* and *Genetics Algorithms* toolboxes. Webots allows to directly
 use MATLAB scripts as robot controller programs for your simulations. Using the
 MATLAB interface, it becomes easy to visualize controller or supervisor data,
@@ -29,7 +28,7 @@ Windows), therefore, if MATLAB can be started from a terminal then it can also
 be started from Webots.
 
 On Windows, the MATLAB installer will normally add MATLAB's bin directories to
-your *Path* environment variable, so usually Webots will be able to locate
+your *Path* environment variable, so usually, Webots will be able to locate
 MATLAB after a standard installation. However, in case it does not work, please
 make sure that your *Path* contains this directory (or something slightly
 different, according to your MATLAB version):
@@ -38,7 +37,7 @@ different, according to your MATLAB version):
 Path=C:\Program Files\MATLAB\R2009b\bin
 ```
 
-On Linux, the MATLAB installer does normally suggest to add a symlink to the
+On Linux, the MATLAB installer normally suggests to add a symlink to the
 "matlab" startup script in the "/usr/local/bin" directory. This is a good option
 to make "matlab" globally accessible. Otherwise you can create the link at
 anytime afterwards with this shell command (please change according to your
@@ -93,10 +92,10 @@ In order to create a cross-platform controller, it is recommended to use the
 We recommend to use the latest MATLAB version on an up-to-date operating system.
 
 Note that 64-bit versions of Webots are not compatible with 32-bit versions of
-MATLAB. Webots comes only in 64-bit flavour and therefore it can only
+MATLAB. Webots comes only in 64-bit flavors and therefore it can only
 inter-operate with a 64 bit version of MATLAB.
 
-On some platform the MATLAB interface needs `perl` and `gcc` to be installed
+On some platforms the MATLAB interface needs `perl` and `gcc` to be installed
 separately. These tools are required because MATLAB's `loadlibrary()` function
 will need to recompile Webots header files on the fly. According to MATLAB's
 documentation this will be the case on 64-bit systems, and hence we advice

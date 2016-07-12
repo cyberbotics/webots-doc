@@ -9,8 +9,8 @@
 ``` c
 #include <webots/utils/bvh_reader.h>
 
-WbBvhDataRef wbu_bvh_read_file(const char *filename)
-void wbu_bvh_cleanup(WbBvhDataRef motion)
+WbBvhDataRef wbu_bvh_read_file(const char *filename);
+void wbu_bvh_cleanup(WbBvhDataRef motion);
 ```
 
 **Description**
@@ -37,10 +37,10 @@ After this function is called the corresponding `WbBvhDataRef` object can no lon
 ``` c
 #include <webots/utils/bvh_reader.h>
 
-int wbu_bvh_get_joint_count(WbBvhDataRef ref)
-const char* wbu_bvh_get_joint_name(WbBvhDataRef ref, int joint_index)
-int wbu_bvh_get_frame_count(WbBvhDataRef ref)
-void wbu_bvh_set_scale(WbBvhDataRef ref, double scale)
+int wbu_bvh_get_joint_count(WbBvhDataRef ref);
+const char* wbu_bvh_get_joint_name(WbBvhDataRef ref, int joint_index);
+int wbu_bvh_get_frame_count(WbBvhDataRef ref);
+void wbu_bvh_set_scale(WbBvhDataRef ref, double scale);
 ```
 
 **Description**
@@ -67,10 +67,9 @@ The function `wbu_bvh_set_scale()` sets the scale factor, which is used to scale
 ``` c
 #include <webots/utils/bvh_reader.h>
 
-bool wbu_bvh_step(WbBvhDataRef ref)
-bool wbu_bvh_goto_frame(WbBvhDataRef ref, int frame_number)
-bool wbu_bvh_reset(WbBvhDataRef ref)
-void wbu_bvh_set_scale(WbBvhDataRef ref, double scale)
+bool wbu_bvh_step(WbBvhDataRef ref);
+bool wbu_bvh_goto_frame(WbBvhDataRef ref, int frame_number);
+bool wbu_bvh_reset(WbBvhDataRef ref);
 ```
 
 **Description**
@@ -111,8 +110,8 @@ void main() {
 ``` c
 #include <webots/utils/bvh_reader.h>
 
-double *wbu_bvh_get_joint_rotation(WbBvhDataRef ref, int joint_index)
-double *wbu_bvh_get_root_translation(WbBvhDataRef ref)
+double *wbu_bvh_get_joint_rotation(WbBvhDataRef ref, int joint_index);
+double *wbu_bvh_get_root_translation(WbBvhDataRef ref);
 ```
 
 **Description**
@@ -151,41 +150,6 @@ void main() {
 
 **Name**
 
-**wbu\_bvh\_set\_rest\_pose** -
-*specify the rest pose of the skeleton for which this BVH file is being used.*
-
-{[C++](cpp-api.md#cpp_bvh)}, {[Java](java-api.md#java_bvh)}, {[Python](python-api.md#python_bvh)}, {[Matlab](matlab-api.md#matlab_bvh)}
-
-``` c
-#include <webots/utils/bvh_reader.h>
-
-bool *wbu_bvh_set_rest_pose(WbBvhDataRef ref, const char* rest_pose_filename)
-```
-
-**Description**
-
-The function `wbu_bvh_set_rest_pose` sets the rest pose of the skeleton, i.e. the pose the skeleton should have if all the rotations are set to zero.
-In other words, this is the initial reference pose relative to which all rotations are specified.
-It is necessary to set the rest pose in some cases, because while the BVH file may record joint rotations relative to a certain pose, the object model which is being animated might have a different reference pose, and this difference needs to be taken into account.     
-
-The rest pose is specified in a text file in the format shown below.
-The first string is the joint name.
-The next four numbers represent a quaternion, with its elements in the order [w, x, y, z].
-It is not necessary to specify rest pose for all joints.
-No rest pose is set for those joints which are not present in the rest pose file.
-
-```
-lThigh: 0.98477, 0.173642, 0.00151535, -0.00859396
-rThigh: 0.98477, 0.173642, -0.00151535, 0.00859396
-abdomen: 0.976296, 0.21644, 0, 0     
-```
-
-This function must be called before calling wbu_bvh_adapt_skeleton().
-
----
-
-**Name**
-
 **wbu\_bvh\_adapt\_skeleton** -
 *adapt the skeleton specified in the BVH file to be able to re-target the BVH motion data for animating of a [Skin](#skin) node.*
 
@@ -194,7 +158,7 @@ This function must be called before calling wbu_bvh_adapt_skeleton().
 ``` c
 #include <webots/utils/bvh_reader.h>
 
-bool *wbu_bvh_adapt_skeleton(WbBvhDataRef ref, int num_joints, const char** joint_name_list)
+void wbu_bvh_adapt_skeleton(WbBvhDataRef ref, int num_joints, const char** joint_name_list);
 ```
 
 **Description**

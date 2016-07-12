@@ -17,7 +17,7 @@ Skin {
 
 ### Description
 
-The [Skin](#skin) node can be used to model an animated character in the simulation world, for example, a human, or an animal.
+The [Skin](#skin) node can be used to simulate soft mesh animation for example of a human or an animal.
 The skin mesh is imported from Ogre XML files specified by the `model` name.
 But in order to be animated it has to be attached to a skeleton so that the rotation of the skeleton joints results in appropriate deformation of the skin mesh.
 This nodes provides two alternative ways to define a skeleton.
@@ -25,7 +25,7 @@ The first method consists in providing an Ogre XML Skeleton file that will havin
 Otherwise it is possible to list [Solid](#solid) noded corresponding to the mesh bones using the `bones` field.
 If in the first case the resulting object animation will be purely graphical, when linking the [Skin](#skin) to an existing Webots skeleton made of [Solid](#solid) and [Joint](#joint) nodes it is possible to animate an dynamic object.
 
-The XML files containing the skin mesh and skeleton model files can be generated using a 3D modeling software like Blender (TM) and using the plugin to export to Ogre. 
+The XML files containing the skin mesh and skeleton model files can be generated using a 3D modeling software like Blender (TM) and using the plugin to export to Ogre.
 Makehuman (TM) is a tool for generating models of humans. The human characters in the provided samples are generated using Makehuman (TM).
 
 #### Physically driven skin animation
@@ -46,7 +46,7 @@ In this case the skeleton needed to animate the skin is expected to be loaded fr
 - The `translation` field defines the translation from the parent coordinate system to the children's coordinate system.
 
 - The `rotation` field defines an arbitrary rotation of the children's coordinate system with respect to the parent coordinate system.
-Please refer to [Tranfsorm](#transform) `rotation` field description for more information.
+Please refer to [Transform](#transform) `rotation` field description for more information.
 
 - The `scale` field specifies a possibly non-uniform scale of the mesh. Only positive values are permitted; non-positive values scale are automatically reset to 1.
 

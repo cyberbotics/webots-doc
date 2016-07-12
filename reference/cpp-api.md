@@ -28,6 +28,29 @@ The following tables describe the C++ classes and their methods.
 
 %end
 
+
+%api "cpp_bvh"
+
+|                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/utils/BvhReader.hpp`>`                                                                           |
+| class [BvhReader](bvh.md) {                                                                                         |
+| &nbsp;&nbsp; [BvhReader](bvh.md#wbu_bvh_read_file)(const std::string &fileName);                                    |
+| &nbsp;&nbsp; virtual [~BvhReader](bvh.md#wbu_bvh_cleanup)();                                                        |
+| &nbsp;&nbsp; int [getJointCount](bvh.md#wbu_bvh_get_joint_count)() const;                                           |
+| &nbsp;&nbsp; const std::string &[getJointName](bvh.md#wbu_bvh_get_joint_name)(int jointId) const;                   |
+| &nbsp;&nbsp; int [getFrameCount](bvh.md#wbu_bvh_get_frame_count)() const;                                           |
+| &nbsp;&nbsp; void [setScale](bvh.md#wbu_bvh_set_scale)(double scale);                                               |
+| &nbsp;&nbsp; bool [step](bvh.md#wbu_bvh_step)();                                                                    |
+| &nbsp;&nbsp; bool [gotoFrame](bvh.md#wbu_bvh_goto_frame)(int frameNumber);                                          |
+| &nbsp;&nbsp; bool [reset](bvh.md#wbu_bvh_reset)();                                                                  |
+| &nbsp;&nbsp; const double *[getRootTranslation](bvh.md#wbu_bvh_get_root_translation)() const;                       |
+| &nbsp;&nbsp; const double *[getJointRotation](bvh.md#wbu_bvh_get_joint_rotation)(int jointId) const;                |
+| &nbsp;&nbsp; void [adaptSkeleton](bvh.md#wbu_bvh_adapt_skeleton)(nnt jointCount, const char **jointNameList) const; |
+| };                                                                                                                  |
+
+%end
+
 %api "cpp_camera"
 
 |                                                                                                               |
@@ -465,7 +488,7 @@ The following tables describe the C++ classes and their methods.
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Node.hpp`>`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | class Node {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| &nbsp;&nbsp; enum { NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM }; |
+| &nbsp;&nbsp; enum { NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SKIN, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM }; |
 | &nbsp;&nbsp; virtual void [remove](supervisor.md#wb_supervisor_node_remove)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | &nbsp;&nbsp; int [getId](supervisor.md#wb_supervisor_node_get_from_def)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | &nbsp;&nbsp; int [getType](supervisor.md#wb_supervisor_node_get_type)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -609,7 +632,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
 | &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#wb_robot_get_device)(const std::string &name);                              |
-| &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                              |
+| &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                              |                              |
+| &nbsp;&nbsp; [Skin](#cpp_skin) *[getSkin](robot.md#wb_robot_get_device)(const std::string &name);                              |
 | &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                            |
@@ -662,6 +686,20 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setForce](servo.md#wb_servo_set_force)(double force);                             |
 | &nbsp;&nbsp; int [getType](servo.md#wb_servo_get_type)() const;                                              |
 | };                                                                                                           |
+
+%end
+
+
+%api "cpp_skin"
+
+|                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Skin.hpp`>`                                                                                        |
+| class [Skin](skin.md) : public [Device](#cpp_device) {                                                                |
+| &nbsp;&nbsp; int [getJointCount](skin.md#wb_skin_get_joint_count)() const;                                            |
+| &nbsp;&nbsp; const std::string &[getJointName](skin.md#wb_skin_get_joint_name)(int index) const;                      |
+| &nbsp;&nbsp; void [setJointAngle](skin.md#wb_skin_set_joint_angle)(int index, const double *rotation, bool absolute); |
+| };                                                                                                                    |
 
 %end
 

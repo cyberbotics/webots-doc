@@ -309,6 +309,14 @@ for more information about the value of `robot_unique_name`).
 | [/robot/set\_mode](robot.md#wb_robot_get_mode)                             | service       | webots\_ros::robot\_set\_mode                  | char[] arg<br/>int32 mode<br/>---<br/>int8 success                                      |
 | /robot/get\_device\_list                                                   | service       | webots\_ros::robot\_get\_device\_list          | uint8 ask<br/>---<br/>string[] list                                                     |
 
+### Skin
+
+| name                                                                      | service/topic | data type                           | data type definition                                                                                         |
+| -----------------------------------------------------------------------   | ------------- | ----------------------------- | - ----------------------------------------- |
+| [/`<`device\_name`>`/get\_joint\_count](skin.md#wb_skin_get_joint_count) | service       | webots\_ros::get\_joint\_count | uint8 ask<br/>---<br/>int32 jointCount<br/> |
+| [/`<`device\_name`>`/get\_joint\_name](skin.md#wb_skin_get_joint_name)   | service       | webots\_ros::get\_joint\_name  | int32 index<br/>---<br/>string name<br/>    |
+| [/`<`device\_name`>`/set\_joint\_angle](skin.md#wb_skin_set_joint_angle) | service       | webots\_ros::set\_joint\_angle | int32 index<br/>float64[] value<br/>bool absolute</br>---<br/>int32 success<br/>
+
 ### Speaker
 
 | name                                                                    | service/topic | data type                           | data type definition                                                                                         |

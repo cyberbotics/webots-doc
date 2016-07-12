@@ -595,11 +595,11 @@ The following tables describe the Matlab functions.
 
 %api "matlab_skin"
 
-| % [Skin](skin.md) :                                                                      |
-| -----------------------------------------------------------------------------------------|
-| count = [wb\_skin\_get\_joint\_count](skin.md#wb_skin_get_joint_count)(tag)                          |
-| name = [wb\_skin\_get\_joint\_name](skin.md#wb_skin_get_joint_name)(tag, index)                     |
-| [wb\_skin\_set\_joint\_angle](skin.md#wb_skin_set_joint_angle)(tag, index, values, absolute) |
+| % [Skin](skin.md) :                                                                                    |
+| -------------------------------------------------------------------------------------------------------|
+| count = [wb\_skin\_get\_bone\_count](skin.md#wb_skin_get_bone_count)(tag)                              |
+| name = [wb\_skin\_get\_bone\_name](skin.md#wb_skin_get_bone_name)(tag, index)                          |
+| [wb\_skin\_set\_bone\_orientation](skin.md#wb_skin_set_bone_orientation)(tag, index, values, absolute) |
 
 %end
 

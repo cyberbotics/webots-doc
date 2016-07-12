@@ -83,46 +83,46 @@ This means that if in the mesh file the thigh bone is referenced using the index
 
 **Name**
 
-**wb\_skin\_get\_joint\_count**, **wb\_skin\_get\_joint\_name** - *get the number and the names of joints in the skeleton of loaded skin model.*
+**wb\_skin\_get\_bone\_count**, **wb\_skin\_get\_bone\_name** - *get the number and the names of bones in the skeleton of loaded skin model.*
 
 {[C++](cpp-api.md#cpp_skin)}, {[Java](java-api.md#java_skin)}, {[Python](python-api.md#python_skin)}, {[Matlab](matlab-api.md#matlab_skin)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/skin.h>
 
-int wb_skin_get_joint_count(WbDeviceTag tag);
-const char *wb_skin_get_joint_name(WbDeviceTag tag, int index);
+int wb_skin_get_bone_count(WbDeviceTag tag);
+const char *wb_skin_get_bone_name(WbDeviceTag tag, int index);
 ```
 
 **Description**
 
-The function `wb_skin_get_joint_count` returns the total number of joints in the skeleton loaded by the [Skin](#skin) node.
-The function `wb_skin_get_joint_name` returns the name of the joint at the specified index.
-The joints are indexed starting from 0.
+The function `wb_skin_get_bone_count` returns the total number of bones in the skeleton loaded by the [Skin](#skin) node.
+The function `wb_skin_get_bone_name` returns the name of the bone at the specified index.
+The bones are indexed starting from 0.
 
 This two functions are available both if using a Webots skeleton or a skeleton specified in an Ogre XML file.
-But if a Webots skeleton is used, then the joint count will correspond to the valid nodes specified in the `bones` field and the joint names will correspond to the referenced [Solid](#solid) names.
+But if a Webots skeleton is used, then the bone count will correspond to the valid nodes specified in the `bones` field and the bone names will correspond to the referenced [Solid](#solid) names.
 
 ---
 
 **Name**
 
-**wb\_skin\_set\_joint\_angle** - *set the joint angle.*
+**wb\_skin\_set\_bone\_angle** - *set the bone orientation.*
 
 {[C++](cpp-api.md#cpp_skin)}, {[Java](java-api.md#java_skin)}, {[Python](python-api.md#python_skin)}, {[Matlab](matlab-api.md#matlab_skin)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/skin.h>
 
-void wb_character_set_joint_angle(WbDeviceTag tag, int index, const double rotation[4], bool absolute);
+void wb_character_set_bone_orientation(WbDeviceTag tag, int index, const double rotation[4], bool absolute);
 ```
 
 **Description**
 
-This function sets the rotation of the joint to the specified axis-angle value.
+This function sets the rotation of the skin's internal skeleton bone to the specified axis-angle rotation value.
 The rotation is specified as a double array, similar to `wb_supervisor_field_set_sf_rotation` [Supervisor](#supervisor) node.
-If the `absolute` argument is false the joint angle is set relative to the parent joint, otherwise the joint angle is set with respect to the absolute world frame.
-The joints are indexed starting from 0.
+If the `absolute` argument is false the bone orientation is set relative to the parent bone, otherwise the bone orientation is set with respect to the absolute world frame.
+The bones are indexed starting from 0.
 
 This function is only available if the `bones` field is not specified, i.e. if the object is purely graphical and the skin is not already animated using the [Joint](#joint) node rotation.
 

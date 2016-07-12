@@ -689,13 +689,13 @@ The following tables describe the Python classes and their methods.
 
 %api "python_skin"
 
-|                                                                                                    |
-|  ------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Skin.hpp`>`                                                                     |
-| class [Skin](skin.md) : public [Device](#python_device) {                                          |
-| &nbsp;&nbsp; def [getJointCount](skin.md#wb_skin_get_joint_count)(self)                            |
-| &nbsp;&nbsp; def [getJointName](skin.md#wb_skin_get_joint_name)(self, index)                       |
-| &nbsp;&nbsp; def [setJointAngle](skin.md#wb_skin_set_joint_angle)(self, index, rotation, absolute) |                                                                     
+|                                                                                                              |
+|  ----------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Skin.hpp`>`                                                                               |
+| class [Skin](skin.md) : public [Device](#python_device) {                                                    |
+| &nbsp;&nbsp; def [getBoneCount](skin.md#wb_skin_get_bone_count)(self)                                        |
+| &nbsp;&nbsp; def [getBoneName](skin.md#wb_skin_get_bone_name)(self, index)                                   |
+| &nbsp;&nbsp; def [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(self, index, rotation, absolute) |                                                                     
 
 %end
 

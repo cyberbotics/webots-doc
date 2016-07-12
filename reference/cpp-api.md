@@ -692,14 +692,14 @@ The following tables describe the C++ classes and their methods.
 
 %api "cpp_skin"
 
-|                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Skin.hpp`>`                                                                                        |
-| class [Skin](skin.md) : public [Device](#cpp_device) {                                                                |
-| &nbsp;&nbsp; int [getJointCount](skin.md#wb_skin_get_joint_count)() const;                                            |
-| &nbsp;&nbsp; const std::string &[getJointName](skin.md#wb_skin_get_joint_name)(int index) const;                      |
-| &nbsp;&nbsp; void [setJointAngle](skin.md#wb_skin_set_joint_angle)(int index, const double *rotation, bool absolute); |
-| };                                                                                                                    |
+|                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Skin.hpp`>`                                                                                                  |
+| class [Skin](skin.md) : public [Device](#cpp_device) {                                                                          |
+| &nbsp;&nbsp; int [getBoneCount](skin.md#wb_skin_get_bone_count)() const;                                                        |
+| &nbsp;&nbsp; const std::string &[getBoneName](skin.md#wb_skin_get_bone_name)(int index) const;                                  |
+| &nbsp;&nbsp; void [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(int index, const double *rotation, bool absolute); |
+| };                                                                                                                              |
 
 %end
 

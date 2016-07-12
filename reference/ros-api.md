@@ -311,11 +311,11 @@ for more information about the value of `robot_unique_name`).
 
 ### Skin
 
-| name                                                                      | service/topic | data type                           | data type definition                                                                                         |
-| -----------------------------------------------------------------------   | ------------- | ----------------------------- | - ----------------------------------------- |
-| [/`<`device\_name`>`/get\_joint\_count](skin.md#wb_skin_get_joint_count) | service       | webots\_ros::get\_joint\_count | uint8 ask<br/>---<br/>int32 jointCount<br/> |
-| [/`<`device\_name`>`/get\_joint\_name](skin.md#wb_skin_get_joint_name)   | service       | webots\_ros::get\_joint\_name  | int32 index<br/>---<br/>string name<br/>    |
-| [/`<`device\_name`>`/set\_joint\_angle](skin.md#wb_skin_set_joint_angle) | service       | webots\_ros::set\_joint\_angle | int32 index<br/>float64[] value<br/>bool absolute</br>---<br/>int32 success<br/>
+| name                                                                               | service/topic | data type                     | data type definition                                                                                         |
+| ---------------------------------------------------------------------------------- | ------------- | ----------------------------- | - ----------------------------------------- |
+| [/`<`device\_name`>`/get\_bone\_count](skin.md#wb_skin_get_bone_count)             | service       | webots\_ros::get\_bone\_count | uint8 ask<br/>---<br/>int32 count<br/>      |
+| [/`<`device\_name`>`/get\_bone\_name](skin.md#wb_skin_get_bone_name)               | service       | webots\_ros::get\_bone\_name  | int32 index<br/>---<br/>string name<br/>    |
+| [/`<`device\_name`>`/set\_bone\_orientation](skin.md#wb_skin_set_bone_orientation) | service       | webots\_ros::set\_bone\_orientation | int32 index<br/>float64[] value<br/>bool absolute</br>---<br/>int32 success<br/> |
 
 ### Speaker
 

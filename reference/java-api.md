@@ -718,14 +718,14 @@ The following tables describe the Java classes and their methods.
 
 %api "java_skin"
 
-|                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Skin.hpp`>`                                                                                             |
-| class [Skin](skin.md) : public [Device](#java_device) {                                                                    |
-| &nbsp;&nbsp; public int [getJointCount](skin.md#wb_skin_get_joint_count)();                                                |
-| &nbsp;&nbsp; public String [getJointName](skin.md#wb_skin_get_joint_name)(int index);                                      |
-| &nbsp;&nbsp; public void [setJointAngle](skin.md#wb_skin_set_joint_angle)(int index, double[] rotation, boolean absolute); |
-| }                                                                                                                          |
+|                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Skin.hpp`>`                                                                                                       |
+| class [Skin](skin.md) : public [Device](#java_device) {                                                                              |
+| &nbsp;&nbsp; public int [getBonetCount](skin.md#wb_skin_get_bone_count)();                                                           |
+| &nbsp;&nbsp; public String [getBoneName](skin.md#wb_skin_get_bone_name)(int index);                                                  |
+| &nbsp;&nbsp; public void [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(int index, double[] rotation, boolean absolute); |
+| }                                                                                                                                    |
 
 %end
 

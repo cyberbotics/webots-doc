@@ -170,7 +170,7 @@ Therefore, firstly, the extra joints in the BVH file must be removed.
 Further, since the joint rotations are specified as relative to parent joints, they must be recomputed in case a joint is removed.
 This computation is done by this function.
 
-The arguments to this function are the number of joints and the list of joints names in the [Skin](#skin) node.
-They can be obtained by calling the functions `wb_skin_get_joint_count` and `wb_character_get_joint_name`.
+The arguments to this function are the number of bones and the list of bones names in the [Skin](#skin) node.
+They can be obtained by calling the functions `wb_skin_get_bone_count` and `wb_skin_get_bone_name`.
 Note that if the nomenclature of the joints in the [Skin](#skin) node is different from that of the BVH file, the names have to be manually translated.
 Please refer to the advanced sample project in "WEBOTS\_HOME/projects/humans/skin_animation/" directory for an example of how this is done.

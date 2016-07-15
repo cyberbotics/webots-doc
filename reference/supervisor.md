@@ -462,6 +462,24 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 **Name**
 
+**wb\_supervisor\_node\_hide\_from\_camera** - *hide the node*
+
+{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_hide_from_camera(WbNodeRef node, WbNodeRef camera_node, bool hide);
+```
+
+**Description**
+
+The `wb_supervisor_node_hide_from_camera()` function hide a node from the specified [Camera](camera.md), [Lidar](lidar.md) or [RangeFinder](rangefinder.md) node or from the [Viewpoint](viewpoint.md). The `node` argument must be the node to hide, the `camera_node` must be a [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. The `hide` argument can be used to specify if the node should be hidden or shown, be default all the nodes are visible, it is useful to show a node only if it was previously hidden using this function.
+
+---
+
+**Name**
+
 **wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}

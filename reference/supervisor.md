@@ -474,7 +474,7 @@ void wb_supervisor_node_set_visibility(WbNodeRef node, WbNodeRef from, bool visi
 
 **Description**
 
-The `wb_supervisor_node_set_visibility()` function set the visibility of a node from the specified [Camera](camera.md), [Lidar](lidar.md) or [RangeFinder](rangefinder.md) node or from the [Viewpoint](viewpoint.md). The `node` argument must be the node to hide/show, the `from` argument must be a [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. The `visible` argument can be used to specify if the node should be hidden or shown, be default all the nodes are visible, it is useful to show a node only if it was previously hidden using this function.
+The `wb_supervisor_node_set_visibility()` function set the visibility of a node from the specified [Camera](camera.md), [Lidar](lidar.md) or [RangeFinder](rangefinder.md) node or from the [Viewpoint](viewpoint.md). The `node` argument must be the node to hide/show, the `from` argument must be a [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. The `visible` argument can be used to specify if the node should be hidden or shown, by default all the nodes are visible, it is useful to show a node only if it was previously hidden using this function.
 
 ---
 

@@ -39,7 +39,7 @@ def download(url, target_file_path):
     """Download URL to file."""
     print 'Download "%s" to "%s"' % (url, target_file_path)
 
-    response = urllib2.urlopen(url, timeout=5)
+    response = urllib2.urlopen(url, timeout=30)
     content = response.read()
 
     target_directory = os.path.dirname(target_file_path)

@@ -4,7 +4,7 @@
 
 import os
 import re
-import urllib2
+import urllib
 
 dependencies = [
     'highlight/9.5.0/default.min.css',
@@ -39,7 +39,7 @@ def download(url, target_file_path):
     """Download URL to file."""
     print 'Download "%s" to "%s"' % (url, target_file_path)
 
-    response = urllib2.urlopen(url, timeout=5)
+    response = urllib.urlopen(url)
     content = response.read()
 
     target_directory = os.path.dirname(target_file_path)

@@ -41,7 +41,7 @@ def download(url, target_file_path):
     print 'Download "%s" to "%s"' % (url, target_file_path)
 
     # Sometimes Travis cannot get the file at the first trial
-    nTrials = 3
+    nTrials = 5
     for i in range(nTrials):
         try:
             response = urllib2.urlopen(url, timeout=5)

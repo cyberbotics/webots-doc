@@ -4,6 +4,7 @@
 
 import os
 import re
+import sys
 import urllib2
 
 dependencies = [
@@ -39,7 +40,18 @@ def download(url, target_file_path):
     """Download URL to file."""
     print 'Download "%s" to "%s"' % (url, target_file_path)
 
-    response = urllib2.urlopen(url, timeout=10)
+    # Sometimes Travis cannot get the file at the first trial
+    nTrials = 3
+    for i in range(nTrials):
+        try:
+            response = urllib2.urlopen(url, timeout=5)
+            break
+        except:
+            if i == nTrials - 1:
+                sys.exit('Cannot get url: ' + url)
+    if i > 0:
+        print '(number of trials: %d)' % (nTrials)
+
     content = response.read()
 
     target_directory = os.path.dirname(target_file_path)

@@ -61,7 +61,7 @@ def download(url, target_file_path):
             if i == nTrials - 1:
                 sys.exit('Cannot get url: ' + url)
     if i > 0:
-        print '(number of trials: %d)' % (i)
+        print '(number of trials: %d)' % (i + 1)
 
 script_directory = os.path.dirname(os.path.realpath(__file__)) + os.sep
 

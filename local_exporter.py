@@ -45,7 +45,7 @@ def download(url, target_file_path):
     if not os.path.exists(target_directory):
         os.makedirs(target_directory)
 
-    # Sometimes Travis cannot get the file at the first trial.
+    # Sometimes Travis cannot get the file at the first trial
     nTrials = 3
     for i in range(nTrials):
         try:

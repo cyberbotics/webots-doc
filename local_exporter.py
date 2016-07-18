@@ -5,6 +5,7 @@
 import os
 import re
 import sys
+import time
 import urllib2
 
 dependencies = [
@@ -49,8 +50,10 @@ def download(url, target_file_path):
         except:
             if i == nTrials - 1:
                 sys.exit('Cannot get url: ' + url)
+            else:
+                time.sleep(1)
     if i > 0:
-        print '(number of trials: %d)' % (nTrials)
+        print '(number of trials: %d)' % (i)
 
     content = response.read()
 

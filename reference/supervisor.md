@@ -462,7 +462,7 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 **Name**
 
-**wb\_supervisor\_node\_set\_visibility** - *set the visibility of the node*
+**wb\_supervisor\_node\_set\_visibility** - *set the visibility of a node*
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
@@ -474,7 +474,7 @@ void wb_supervisor_node_set_visibility(WbNodeRef node, WbNodeRef from, bool visi
 
 **Description**
 
-The `wb_supervisor_node_set_visibility()` function sets the visibility of a node from the specified [Camera](camera.md), [Lidar](lidar.md) or [RangeFinder](rangefinder.md) node or from the [Viewpoint](viewpoint.md). The `node` argument must be the node to hide/show, the `from` argument must be a [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. The `visible` argument can be used to specify if the node should be hidden or shown, by default all the nodes are visible, it is useful to show a node only if it was previously hidden using this function.
+The `wb_supervisor_node_set_visibility()` function sets the visibility of a node from the specified [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. The `node` argument is the node to hide or show, the `from` argument must be either a [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. The `visible` argument specifies whether the node should be hidden (false) or shown (true). By default, all the nodes are visible. It is relevant to show a node only if it was previously hidden using this function.
 
 ---
 

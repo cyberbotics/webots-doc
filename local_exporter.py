@@ -39,7 +39,7 @@ def download(url, target_file_path):
     """Download URL to file."""
     print 'Download "%s" to "%s"' % (url, target_file_path)
 
-    response = urllib2.urlopen(url, timeout=30)
+    response = urllib2.urlopen(url, timeout=5)
     content = response.read()
 
     target_directory = os.path.dirname(target_file_path)
@@ -64,7 +64,7 @@ with open(script_directory + 'local_index.html', 'w') as file:
 
 for dependency in dependencies:
     download(
-        'http://www.cyberbotics.com/' + dependency,
+        'https://www.cyberbotics.com/' + dependency,
         script_directory + 'dependencies' + os.sep + dependency.replace(
             "/", os.sep)
     )

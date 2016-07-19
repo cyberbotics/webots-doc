@@ -194,8 +194,7 @@ no actuation in Webots and no update of the sensors in the controller.
 The `duration` parameter specifies the amount of time, expressed in milliseconds, that must be simulated
 until the `wb_robot_step()` function returns. Note that this is not real time
 but virtual (simulation) time, so this is not like calling the system's
-`sleep()`. In fact the function may return immediately, however the important
-point is that when it returns, the requested duration of simulation time will have elapsed.
+`sleep()`. Depending on the complexity of the simulation and execution mode, the function may return quickly. When it returns, the requested duration of simulation time is elapsed.
 In other words the physics will have run for the specified duration and hence the
 motors may have moved, the sensor values may have changed, etc. Note that the `duration`
 parameter must be a multiple of the `WorldInfo.basicTimeStep`.

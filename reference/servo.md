@@ -582,7 +582,7 @@ respectively the `minPosition` and the `maxPosition` fields.
 ```c
 #include <webots/servo.h>
 
-void wb_servo_enable_position(WbDeviceTag tag, int ms);
+void wb_servo_enable_position(WbDeviceTag tag, int sampling_period);
 void wb_servo_disable_position(WbDeviceTag tag);
 int wb_servo_get_position_sampling_period(WbDeviceTag tag);
 double wb_servo_get_position(WbDeviceTag tag);
@@ -591,8 +591,8 @@ double wb_servo_get_position(WbDeviceTag tag);
 **Description**
 
 The `wb_servo_enable_position()` function activates position measurements for
-the specified servo. A new position measurement will be performed each `ms`
-milliseconds; the result must be obtained with the `wb_servo_get_position()`
+the specified servo. A new position measurement will be performed each `sampling_period`
+(expressed in milliseconds); the result must be obtained with the `wb_servo_get_position()`
 function. The returned value corresponds to the most recent measurement of the
 servo position. The `wb_servo_get_position()` function measures the *effective
 position* of the servo which, under the effect of external forces, is usually
@@ -620,7 +620,7 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 ```c
 #include <webots/servo.h>
 
-void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms);
+void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int sampling_period);
 void wb_servo_disable_motor_force_feedback(WbDeviceTag tag);
 int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag);
 double wb_servo_get_motor_force_feedback(WbDeviceTag tag);
@@ -630,7 +630,7 @@ double wb_servo_get_motor_force_feedback(WbDeviceTag tag);
 
 The `wb_servo_enable_motor_force_feedback()` function activates torque/force
 feedback measurements for the specified servo. A new measurement will be
-performed each `ms` milliseconds; the result must be retrieved with the
+performed each `sampling_period` (expressed in milliseconds); the result must be retrieved with the
 `wb_servo_get_motor_force_feedback()` function.
 
 The `wb_servo_get_motor_force_feedback()` function returns the most recent motor

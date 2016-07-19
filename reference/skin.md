@@ -107,24 +107,26 @@ But if a Webots skeleton is used, then the bone count will correspond to the val
 
 **Name**
 
-**wb\_skin\_set\_bone\_angle** - *set the bone orientation.*
+**wb\_skin\_set\_bone\_orientation**, **wb\_skin\_set\_bone\_position** - *set the bone orientation and position.*
 
 {[C++](cpp-api.md#cpp_skin)}, {[Java](java-api.md#java_skin)}, {[Python](python-api.md#python_skin)}, {[Matlab](matlab-api.md#matlab_skin)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/skin.h>
 
-void wb_character_set_bone_orientation(WbDeviceTag tag, int index, const double rotation[4], bool absolute);
+void wb_skin_set_bone_orientation(WbDeviceTag tag, int index, const double rotation[4], bool absolute);
+void wb_skin_set_bone_position(WbDeviceTag tag, int index, const double position[3], bool absolute);
 ```
 
 **Description**
 
-This function sets the rotation of the skin's internal skeleton bone to the specified axis-angle rotation value.
+`wb_skin_set_bone_orientation` function sets the rotation of the skin's internal skeleton bone to the specified axis-angle rotation value.
 The rotation is specified as a double array, similar to `wb_supervisor_field_set_sf_rotation` [Supervisor](#supervisor) node.
-If the `absolute` argument is false the bone orientation is set relative to the parent bone, otherwise the bone orientation is set with respect to the absolute world frame.
+`wb_skin_set_bone_position` function sets the position of the skin's internal skeleton bone.
+If the `absolute` argument is false the bone orientation is set relatively to the parent bone, otherwise the bone orientation is set with respect to the absolute world frame.
 The bones are indexed starting from 0.
 
-This function is only available if the `bones` field is not specified, i.e. if the object is purely graphical and the skin is not already animated using the [Joint](#joint) node rotation.
+These functions are only available if the `bones` field is not specified, i.e. if the object is purely graphical and the skin is not already animated using the [Joint](#joint) node rotation.
 
 > **note**:
 Please look at the example in "WEBOTS\_HOME/projects/humans/skin_animation/" directory for further information.

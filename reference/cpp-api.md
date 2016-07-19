@@ -699,6 +699,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getBoneCount](skin.md#wb_skin_get_bone_count)() const;                                                        |
 | &nbsp;&nbsp; const std::string &[getBoneName](skin.md#wb_skin_get_bone_name)(int index) const;                                  |
 | &nbsp;&nbsp; void [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(int index, const double *rotation, bool absolute); |
+| &nbsp;&nbsp; void [setBonePosition](skin.md#wb_skin_set_bone_position)(int index, const double *position, bool absolute);       |
 | };                                                                                                                              |
 
 %end

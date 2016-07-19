@@ -725,6 +725,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getBonetCount](skin.md#wb_skin_get_bone_count)();                                                           |
 | &nbsp;&nbsp; public String [getBoneName](skin.md#wb_skin_get_bone_name)(int index);                                                  |
 | &nbsp;&nbsp; public void [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(int index, double[] rotation, boolean absolute); |
+| &nbsp;&nbsp; public void [setBonePosition](skin.md#wb_skin_set_bone_position)(int index, double[] position, boolean absolute); |
 | }                                                                                                                                    |
 
 %end

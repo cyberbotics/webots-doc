@@ -695,7 +695,8 @@ The following tables describe the Python classes and their methods.
 | class [Skin](skin.md) : public [Device](#python_device) {                                                    |
 | &nbsp;&nbsp; def [getBoneCount](skin.md#wb_skin_get_bone_count)(self)                                        |
 | &nbsp;&nbsp; def [getBoneName](skin.md#wb_skin_get_bone_name)(self, index)                                   |
-| &nbsp;&nbsp; def [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(self, index, rotation, absolute) |                                                                     
+| &nbsp;&nbsp; def [setBoneOrientation](skin.md#wb_skin_set_bone_orientation)(self, index, rotation, absolute) |
+| &nbsp;&nbsp; def [setBonePosition](skin.md#wb_skin_set_bone_position)(self, index, position, absolute) |                                                                    
 
 %end
 

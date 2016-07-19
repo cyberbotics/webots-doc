@@ -600,6 +600,7 @@ The following tables describe the Matlab functions.
 | count = [wb\_skin\_get\_bone\_count](skin.md#wb_skin_get_bone_count)(tag)                              |
 | name = [wb\_skin\_get\_bone\_name](skin.md#wb_skin_get_bone_name)(tag, index)                          |
 | [wb\_skin\_set\_bone\_orientation](skin.md#wb_skin_set_bone_orientation)(tag, index, values, absolute) |
+| [wb\_skin\_set\_bone\_position](skin.md#wb_skin_set_bone_position)(tag, index, values, absolute)       |
 
 %end
 

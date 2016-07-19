@@ -53,7 +53,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 ```c
 #include <webots/compass.h>
 
-void wb_compass_enable(WbDeviceTag tag, int ms);
+void wb_compass_enable(WbDeviceTag tag, int sampling_period);
 void wb_compass_disable(WbDeviceTag tag);
 const double *wb_compass_get_values(WbDeviceTag tag);
 int wb_compass_get_sampling_period(WbDeviceTag tag);
@@ -61,9 +61,8 @@ int wb_compass_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-The `wb_compass_enable()` function turns on the [Compass](#compass) measurement
-each `ms` milliseconds.
-The provided `ms` argument specifies the sensors's sampling period.
+The `wb_compass_enable()` function turns on the [Compass](#compass) measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_compass_disable()` function turns off the [Compass](#compass) device.

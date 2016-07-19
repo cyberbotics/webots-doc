@@ -179,7 +179,7 @@ network with an unpredictable delay (like the Internet).
 ```c
 #include <webots/robot.h>
 
-int wb_robot_step(int ms);
+int wb_robot_step(int duration);
 void wb_robot_init();
 void wb_robot_cleanup();
 ```
@@ -191,13 +191,13 @@ This function synchronizes the sensor and actuator data between Webots and the
 controllers. If the `wb_robot_step()` function is not called then there will be
 no actuation in Webots and no update of the sensors in the controller.
 
-The `ms` parameter specifies the number of milliseconds that must be simulated
+The `duration` parameter specifies the amount of time, expressed in milliseconds, that must be simulated
 until the `wb_robot_step()` function returns. Note that this is not real time
 but virtual (simulation) time, so this is not like calling the system's
 `sleep()`. In fact the function may return immediately, however the important
-point is that when it returns `ms` milliseconds of simulation will have elapsed.
-In other words the physics will have run for `ms` milliseconds and hence the
-motors may have moved, the sensor values may have changed, etc. Note that `ms`
+point is that when it returns, the requested duration of simulation time will have elapsed.
+In other words the physics will have run for the specified duration and hence the
+motors may have moved, the sensor values may have changed, etc. Note that the `duration`
 parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
 If this function returns -1, this indicates that Webots wishes to terminate the
@@ -215,11 +215,11 @@ follows:
 
 - if `dt` = 0, then the asynchronous behavior was equivalent to the synchronous
 behavior.
-- if 0 <= `dt` <= `ms`, then the actuator values were set at `controller_time` +
-`dt`, and the sensor values were measured at `controller_time` + `ms`, as
+- if 0 <= `dt` <= `duration`, then the actuator values were set at `controller_time` +
+`dt`, and the sensor values were measured at `controller_time` + `duration`, as
 requested. It means that the step actually lasted the requested number of
 milliseconds, but the actuator commands could not be executed on time.
-- if `dt` > `ms`, then the actuators values were set at `controller_time` + `dt`,
+- if `dt` > `duration`, then the actuators values were set at `controller_time` + `dt`,
 and the sensor values were also measured at `controller_time` + `dt`. It means
 that the requested step duration could not be respected.
 
@@ -425,7 +425,7 @@ for(i=0; i<n_devices; i++) {
 ```c
 #include <webots/robot.h>
 
-void wb_robot_battery_sensor_enable(int ms);
+void wb_robot_battery_sensor_enable(int sampling_period);
 void wb_robot_battery_sensor_disable();
 double wb_robot_battery_sensor_get_value();
 int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
@@ -435,7 +435,7 @@ int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
 
 These functions allow you to measure the present energy level of the robot
 battery. First, it is necessary to enable battery sensor measurements by calling
-the `wb_robot_battery_sensor_enable()` function. The `ms` parameter is expressed
+the `wb_robot_battery_sensor_enable()` function. The `sampling_period` parameter is expressed
 in milliseconds and defines how frequently measurements are performed. After the
 battery sensor is enabled a value can be read from it by calling the
 `wb_robot_battery_sensor_get_value()` function. The returned value corresponds

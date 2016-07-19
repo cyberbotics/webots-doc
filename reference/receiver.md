@@ -86,7 +86,7 @@ noise is not dependent on the distance between emitter-receiver.
 ```c
 #include <webots/receiver.h>
 
-void wb_receiver_enable(WbDeviceTag tag, int ms);
+void wb_receiver_enable(WbDeviceTag tag, int sampling_period);
 void wb_receiver_disable(WbDeviceTag tag);
 int wb_receiver_get_sampling_period(WbDeviceTag tag);
 ```
@@ -95,12 +95,12 @@ int wb_receiver_get_sampling_period(WbDeviceTag tag);
 
 `wb_receiver_enable()` starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate
-of once every `ms` milliseconds. Incoming data packet are appended to the tail
+of once every `sampling_period` (expressed in milliseconds). Incoming data packet are appended to the tail
 of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
 data packets will be discarded if the receiver's buffer size (specified in the
 [Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
 packets should be read at a high enough rate by the controller program.
-The provided `ms` argument specifies the [Receiver](#receiver)'s sampling period.
+The `sampling_period` argument specifies the sampling period of the [Receiver](#receiver) and is expressed in milliseconds.
 The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the first sampling period elapsed.
 
 The function `wb_receiver_disable()` stops the background listening.

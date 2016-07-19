@@ -127,7 +127,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 bool wbu_motion_is_over(WbMotionRef motion);
 int wbu_motion_get_duration(WbMotionRefmotion);
 int wbu_motion_get_time(WbMotionRef motion, bool loop);
-void wbu_motion_set_time(WbMotionRefmotion, int ms);
+void wbu_motion_set_time(WbMotionRefmotion, int t);
 ```
 
 **Description**
@@ -149,11 +149,11 @@ motion file in milliseconds.
 The `wbu_motion_get_time()` function returns the current playback position in
 milliseconds.
 
-The `wbu_motion_set_time()` function allows to change the playback position.
-This enables, for example, to skip forward or backward. Note that, the position
+The `wbu_motion_set_time()` function allows to change the playback position in time.
+This allows the user to skip forward or backwards. Note that, the position time
 can be changed whether the motion is playing or stopped. The minimum value is 0
 (beginning of the motion), and the maximum value is the value returned by the
-`wbu_motion_get_duration()` function (end of the motion).
+`wbu_motion_get_duration()` function (end of the motion). It is expressed in milliseconds.
 
 **See also**
 

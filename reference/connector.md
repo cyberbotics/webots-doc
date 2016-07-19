@@ -205,7 +205,7 @@ To be functional, a [Connector](#connector) node requires the presence of a
 ```c
 #include <webots/connector.h>
 
-void wb_connector_enable_presence(WbDeviceTag tag, int ms);
+void wb_connector_enable_presence(WbDeviceTag tag, int sampling_period);
 void wb_connector_disable_presence(WbDeviceTag tag);
 int wb_connector_get_presence_sampling_period(WbDeviceTag tag);
 int wb_connector_get_presence(WbDeviceTag tag);
@@ -214,9 +214,8 @@ int wb_connector_get_presence(WbDeviceTag tag);
 **Description**
 
 The `wb_connector_enable_presence()` function starts querying the
-[Connector](#connector)'s *presence* (see definition below) state each `ms`
-milliseconds.
-The provided `ms` argument specifies the [Connector](#connector)'s sampling period.
+[Connector](#connector)'s *presence* (see definition below).
+The provided `sampling_period` argument specifies the sampling period of the [Connector](#connector) and is expressed in milliseconds.
 Note that it will be active only after the first sampling period elapsed.
 
 The `wb_connector_disable_presence()` function stops querying the

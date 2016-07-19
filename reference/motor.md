@@ -386,11 +386,11 @@ respectively the `minPosition` and the `maxPosition` fields.
 ```c
 #include <webots/motor.h>
 
-void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms);
+void wb_motor_enable_force_feedback(WbDeviceTag tag, int sampling_period);
 void wb_motor_disable_force_feedback(WbDeviceTag tag);
 int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag);
 double wb_motor_get_force_feedback(WbDeviceTag tag);
-void wb_motor_enable_torque_feedback(WbDeviceTag tag, int ms);
+void wb_motor_enable_torque_feedback(WbDeviceTag tag, int sampling_period);
 void wb_motor_disable_torque_feedback(WbDeviceTag tag);
 int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
 double wb_motor_get_torque_feedback(WbDeviceTag tag);
@@ -400,11 +400,10 @@ double wb_motor_get_torque_feedback(WbDeviceTag tag);
 
 The `wb_motor_enable_force_feedback()` (resp.
 `wb_motor_enable_torque_feedback()`) function activates force (resp. torque)
-feedback measurements for the specified motor. A new measurement will be
-performed each `ms` milliseconds; the result must be retrieved with the
+feedback measurements for the specified motor. The result must be retrieved with the
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function.
-The provided `ms` argument specifies the sensor's sampling period.
+The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)

@@ -486,6 +486,18 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_speaker"
+
+| % [Speaker](speaker.md) :                                                                                   |
+| ----------------------------------------------------------------------------------------------------------- |
+| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
+| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
+| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
+| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
+| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
+
+%end
+
 %api "matlab_supervisor"
 
 | % [Supervisor](supervisor.md) :                                                                                                                                      |
@@ -573,18 +585,6 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                 |
 | [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                         |
 | [wb\_supervisor\_node\_set\_visibility](supervisor.md#wb_supervisor_node_set_visibility)(node, from, visible)                                                        |
-
-%end
-
-%api "matlab_speaker"
-
-| % [Speaker](speaker.md) :                                                                                   |
-| ----------------------------------------------------------------------------------------------------------- |
-| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
-| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
-| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
-| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
-| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
 
 %end
 

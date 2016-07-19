@@ -2,7 +2,7 @@
 
 ### Intel GMA graphics cards
 
-Webots should run on any fairly recent computer equipped with a nVidia or AMD
+Webots should run on any fairly recent computer equipped with a NVIDIA or AMD
 graphics card and up-to-date graphics drivers. Webots is not guaranteed to work
 with Intel GMA graphics cards: it may crash or exhibit display bugs. Upgrading
 to the latest versions of the Intel graphics driver may help resolve such

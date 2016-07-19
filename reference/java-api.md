@@ -679,9 +679,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setVelocity](servo.md#wb_servo_set_position)(double vel);                                      |
 | &nbsp;&nbsp; public void [setAcceleration](servo.md#wb_servo_set_position)(double force);                                |
 | &nbsp;&nbsp; public void [setMotorForce](servo.md#wb_servo_set_position)(double motor\_force);                           |
+| &nbsp;&nbsp; public void [setControlP](servo.md#wb_servo_set_position)(double p);                                        |
 | &nbsp;&nbsp; public double [getMinPosition](servo.md#wb_servo_set_position)();                                           |
 | &nbsp;&nbsp; public double [getMaxPosition](servo.md#wb_servo_set_position)();                                           |
-| &nbsp;&nbsp; public void [setControlP](servo.md#wb_servo_set_position)(double p);                                        |
 | &nbsp;&nbsp; public void [enablePosition](servo.md#wb_servo_enable_position)(int sampling_period);                       |
 | &nbsp;&nbsp; public void [disablePosition](servo.md#wb_servo_enable_position)();                                         |
 | &nbsp;&nbsp; public int [getPositionSamplingPeriod](servo.md#wb_servo_enable_position)();                                |

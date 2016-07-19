@@ -213,25 +213,17 @@ int wb_connector_get_presence(WbDeviceTag tag);
 
 **Description**
 
-The `wb_connector_enable_presence()` function starts querying the
-[Connector](#connector)'s *presence* (see definition below).
-The provided `sampling_period` argument specifies the sampling period of the [Connector](#connector) and is expressed in milliseconds.
-Note that it will be active only after the first sampling period elapsed.
+The `wb_connector_enable_presence()` function starts querying the presence sensor of the [Connector](#connector). The `sampling_period` argument specifies the sampling period of the presence sensor. It is expressed in milliseconds. Note that it will be active only after the first sampling period elapsed.
 
-The `wb_connector_disable_presence()` function stops querying the
-[Connector](#connector)'s *presence*.
+The `wb_connector_disable_presence()` function stops querying the presence sensor of the [Connector](#connector).
 
-The `wb_connector_get_presence_sampling_period()` function returns the period at
-which the [Connector](#connector)'s *presence* is queried. The
-`wb_connector_get_presence()` function returns the current *presence* state of
-this connector, it returns:
+The `wb_connector_get_presence_sampling_period()` function returns the period at which the presence sensor of the [Connector](#connector) is queried. The `wb_connector_get_presence()` function returns the current *presence* state of this connector, it returns:
 
-- 1: in case of the *presence* of a peer connector
+- 1: in case of the presence of a peer connector
 - 0: in case of the absence of a peer connector
 - -1: not applicable (if this connector is of "passive" type)
 
-The *presence* state is defined as the correct positioning of a compatible peer
-[Connector](#connector).
+The *presence* state is defined as the correct positioning of a compatible peer [Connector](#connector).
 
 Two connectors are in position if they are axis-aligned, rotation-aligned and
 near enough. To be axis-aligned, the angle between the *z*-axes of the two

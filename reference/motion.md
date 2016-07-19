@@ -153,7 +153,7 @@ The `wbu_motion_set_time()` function allows to change the playback position in t
 This allows the user to skip forwards or backwards. Note that, the time position
 can be changed whether the motion is playing or stopped. The minimum value is 0
 (beginning of the motion), and the maximum value is the value returned by the
-`wbu_motion_get_duration()` function (end of the motion). It is expressed in milliseconds.
+`wbu_motion_get_duration()` function (end of the motion). The time position is expressed in milliseconds.
 
 **See also**
 

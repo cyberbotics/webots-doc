@@ -2,9 +2,9 @@
 
 ### Supported graphics cards
 
-Webots officially supports only recent nVidia and AMD graphics adapters. So it
+Webots officially supports only recent NVIDIA and AMD graphics adapters. So it
 is recommended to run Webots on computers equipped with such graphics adapters
-and up-to-date drivers provided by the card manufacturer (i.e., nVidia or AMD).
+and up-to-date drivers provided by the card manufacturer (i.e., NVIDIA or AMD).
 Such drivers are often bundled with the operating system (Windows, Linux and Mac
 OS X), but in some cases, it may be necessary to fetch it from the website of
 the card manufacturer.
@@ -74,7 +74,7 @@ $ lspci | grep VGA
 
 Then you can normally download the appropriate driver from the graphics hardware
 manufacturer's website: [http://www.nvidia.com](http://www.nvidia.com) for an
-nVidia card or [http://www.amd.com](http://www.amd.com) for a AMD graphics card.
+NVIDIA card or [http://www.amd.com](http://www.amd.com) for a AMD graphics card.
 Please follow the manufacturer's instructions for the installation.
 
 #### Upgrading the GPU driver on Windows
@@ -85,7 +85,7 @@ Please follow the manufacturer's instructions for the installation.
 4. Click on the plus sign to the left of `Display adapters`. The name of the driver
 appears. Make a note of it.
 5. Go to the website of your card manufacturer:
-[http://www.nvidia.com](http://www.nvidia.com) for an nVidia card or
+[http://www.nvidia.com](http://www.nvidia.com) for an NVIDIA card or
 [http://www.amd.com](http://www.amd.com) for a AMD graphics card.
 6. Download the driver corresponding to your graphics card.
 7. Follow the instructions from the manufacturer to install the driver.

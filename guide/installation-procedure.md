@@ -1,8 +1,6 @@
 ## Installation procedure
 
-Usually, you will need to be "administrator" to install Webots. Once installed,
-Webots can be used by a regular, unprivileged user. To install Webots, please
-follow this procedure:
+Usually, you will need to have system administrator rights to install Webots. Once installed, Webots can be used by a regular, unprivileged user. To install Webots, please follow this procedure:
 
 1. Uninstall completely any old version of Webots that may have been installed on
 your computer previously.
@@ -10,7 +8,7 @@ your computer previously.
 
 > **Note**:
 After installation, the most important Webots features will be available, but
-some third party tools (such as Java, Python, or *MATLAB*<sup>TM</sup>) may be
+some third party tools (such as Java, Python or MATLAB) may be
 necessary to run or compile specific projects. The
 [chapter](language-setup.md) covers the set up of these tools.
 
@@ -32,7 +30,7 @@ privileges by preceding all the commands by the `sudo` command.
 
 > **Note**:
 Webots will run much faster if you install an accelerated OpenGL drivers. If you
-have a nVidia or AMD graphics card, it is highly recommended that you install
+have a NVIDIA or AMD graphics card, it is highly recommended that you install
 the Linux graphics drivers from these manufacturers to take the full advantage
 of the OpenGL hardware acceleration with Webots. Please find instructions in
 [this section](verifying-your-graphics-driver-installation.md).

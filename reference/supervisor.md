@@ -462,6 +462,24 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 **Name**
 
+**wb\_supervisor\_node\_set\_visibility** - *set the visibility of a node*
+
+{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_set_visibility(WbNodeRef node, WbNodeRef from, bool visible);
+```
+
+**Description**
+
+The `wb_supervisor_node_set_visibility()` function sets the visibility of a node from the specified [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. In particular it defines if the node is visible in the image recorded by the `from` device. The `from` argument must be either a [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node. In case of the [Viewpoint](viewpoint.md) the node is hidden or shown in the main 3D scene. The `node` argument is the node to hide or show, if the node has some children they all will be recursively hidden too, any type of node is allowed but it doesn't make sense to hide a node that has no visual appearance in the 3D scene. The `visible` argument specifies whether the node should be hidden (false) or shown (true). By default, all the nodes are visible. It is relevant to show a node only if it was previously hidden using this function.
+
+---
+
+**Name**
+
 **wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}

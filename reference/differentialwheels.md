@@ -188,7 +188,7 @@ function.
 ```c
 #include <webots/differential_wheels.h>
 
-void wb_differential_wheels_enable_encoders(int ms);
+void wb_differential_wheels_enable_encoders(int sampling_period);
 void wb_differential_wheels_disable_encoders();
 int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 ```
@@ -197,6 +197,7 @@ int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 
 These functions allow the user to enable or disable the incremental wheel
 encoders for both wheels of the [DifferentialWheels](#differentialwheels) robot.
+The `sampling_period` argument defines the sampling period of the encoder and is expressed in milliseconds.
 Incremental encoders are counters that increment each time a wheel turns. The
 amount added to an incremental encoder is computed from the angle the wheel
 rotated and from the `encoderResolution` parameter of the

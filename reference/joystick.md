@@ -20,15 +20,15 @@ In C++, Python and Java the joystick functions are in a dedicated class called
 ```c
 #include <webots/joystick.h>
 
-void wb_joystick_enable(int ms);
+void wb_joystick_enable(int sampling_period);
 void wb_joystick_disable();
 int wb_joystick_get_sampling_period();
 ```
 
 **Description**
 
-The `wb_joystick_enable()` function allows the user to enable a joystick measurement each `ms` milliseconds. When this function is called the first free joystick is paired with the controller.
-The provided `ms` argument specifies the [Joystick](#joystick)'s sampling period.
+The `wb_joystick_enable()` function allows the user to enable joystick measurements. When this function is called the first free joystick is paired with the controller.
+The `sampling_period` argument specifies the sampling period of the [Joystick](#joystick) and is expressed in milliseconds.
 Note that the joystick will be active only after the first sampling period elapsed.
 
 The `wb_joystick_disable()` function turns the joystick off. The joystick is released so that it can be used by another controller.

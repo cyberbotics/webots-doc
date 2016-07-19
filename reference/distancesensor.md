@@ -228,7 +228,7 @@ The ground texture must be placed in a [Plane](plane.md).
 ```c
 #include <webots/distance_sensor.h>
 
-void wb_distance_sensor_enable(WbDeviceTag tag, int ms);
+void wb_distance_sensor_enable(WbDeviceTag tag, int sampling_period);
 void wb_distance_sensor_disable(WbDeviceTag tag);
 int wb_distance_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_distance_sensor_get_value(WbDeviceTag tag);
@@ -236,9 +236,8 @@ double wb_distance_sensor_get_value(WbDeviceTag tag);
 
 **Description**
 
-`wb_distance_sensor_enable()` allows the user to enable a distance sensor
-measurement each `ms` milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_distance_sensor_enable()` allows the user to enable distance sensor measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_distance_sensor_disable()` turns the distance sensor off, saving computation

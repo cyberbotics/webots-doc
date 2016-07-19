@@ -106,7 +106,7 @@ precisely by using the `where` command of `gdb`. For example type:
 #3 0x00cb17ea in vfprintf() from /lib/tls/libc.so.6
 #4 0x00ccb9cb in vsprintf() from /lib/tls/libc.so.6
 #5 0x00cb8d4b in sprintf() from /lib/tls/libc.so.6
-#6 0x08048972 in run(ms=0) at soccer_supervisor.c:106
+#6 0x08048972 in run(duration=0) at soccer_supervisor.c:106
 #7 0x08048b0a in main() at soccer_supervisor.c:140
 ```
 
@@ -121,7 +121,7 @@ order to understand what happened. For example, you can use the `frame` and
 
 ```sh
 (gdb) frame 6
-#6  0x08048953 in run (ms=0) at soccer_supervisor.c:106
+#6  0x08048953 in run (duration=0) at soccer_supervisor.c:106
 106         sprintf(time_string, "%02d:%02d", (int) (time / 60),
  (int) time % 60);
 (gdb) print time_string

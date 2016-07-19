@@ -165,16 +165,15 @@ The internal depth camera is using a horizontal field of view defined in the `fi
 ```c
 #include <webots/lidar.h>
 
-void wb_lidar_enable(WbDeviceTag tag, int ms);
+void wb_lidar_enable(WbDeviceTag tag, int sampling_period);
 void wb_lidar_disable(WbDeviceTag tag);
 int wb_lidar_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_lidar_enable()` allows the user to enable a lidar update each `ms`
-milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_lidar_enable()` allows the user to enable lidar updates.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_lidar_disable()` turns the lidar off, saving computation time.

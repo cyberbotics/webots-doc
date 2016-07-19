@@ -153,16 +153,15 @@ The power returned by the target is computed using the following formulas:
 ```c
 #include <webots/radar.h>
 
-void wb_radar_enable(WbDeviceTag tag, int ms);
+void wb_radar_enable(WbDeviceTag tag, int sampling_period);
 void wb_radar_disable(WbDeviceTag tag);
 int wb_radar_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_radar_enable()` allows the user to enable a radar update each `ms`
-milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_radar_enable()` allows the user to enable radar updates.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_radar_disable()` turns the radar off, saving computation time.

@@ -55,7 +55,7 @@ value in the interval (0.0, inf).
 ```c
 #include <webots/accelerometer.h>
 
-void wb_accelerometer_enable(WbDeviceTag tag, int ms)
+void wb_accelerometer_enable(WbDeviceTag tag, int sampling_period)
 void wb_accelerometer_disable(WbDeviceTag tag)
 int wb_accelerometer_get_sampling_period(WbDeviceTag tag)
 const double *wb_accelerometer_get_values(WbDeviceTag tag)
@@ -63,16 +63,14 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 
 **Description**
 
-The `wb_accelerometer_enable()` function allows the user to enable the
-acceleration measurement each `ms` milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+The `wb_accelerometer_enable()` function allows the user to enable the acceleration measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_accelerometer_disable()` function turns the accelerometer off, saving
 computation time.
 
-The `wb_accelerometer_get_sampling_period()` function returns the period given
-into the `wb_accelerometer_enable()` function, or 0 if the device is disabled.
+The `wb_accelerometer_get_sampling_period()` function returns the sampling period given to the `wb_accelerometer_enable()` function, or 0 if the device is disabled.
 
 The `wb_accelerometer_get_values()` function returns the current values measured
 by the [Accelerometer](#accelerometer). These values are returned as a

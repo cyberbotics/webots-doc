@@ -69,7 +69,7 @@ value in the interval (0.0, inf).
 ```c
 #include <webots/gps.h>
 
-void wb_gps_enable(WbDeviceTag tag, int ms);
+void wb_gps_enable(WbDeviceTag tag, int sampling_period);
 void wb_gps_disable(WbDeviceTag tag);
 int wb_gps_get_sampling_period(WbDeviceTag tag);
 const double *wb_gps_get_values(WbDeviceTag tag);
@@ -78,9 +78,8 @@ const double wb_gps_get_speed(WbDeviceTag tag);
 
 **Description**
 
-`wb_gps_enable()` allows the user to enable a GPS measurement each `ms`
-milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_gps_enable()` allows the user to enable GPS measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_gps_disable()` turns the GPS off, saving computation time.

@@ -236,16 +236,15 @@ restored.
 ```c
 #include <webots/camera.h>
 
-void wb_camera_enable(WbDeviceTag tag, int ms);
+void wb_camera_enable(WbDeviceTag tag, int sampling_period);
 void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_camera_enable()` allows the user to enable a camera update each `ms`
-milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_camera_enable()` allows the user to enable a camera.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_camera_disable()` turns the camera off, saving computation time.

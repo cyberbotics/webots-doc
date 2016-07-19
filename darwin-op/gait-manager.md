@@ -7,7 +7,7 @@ A lot of parameters are available in the Framework algorithm to tune the gait.
 But in order to make this manager easy to use, only a subset of the parameters
 can be set. The other parameters are set to default values that are known to
 works fine. It is however possible to change them if needed, by changing the
-default values that are stored in a "*.ini" configuration file. In the
+default values that are stored in a ".ini" configuration file. In the
 [appendix](walking-parameters.md), all the parameters of the gait are explained.
 
 **Name**
@@ -66,20 +66,20 @@ Finally the following methods can be used in order to run the algorithm:
 
 **Name**
 
-**void start()**, **void step(int ms)**, **void stop()** - *Start, stop and run the gait.*
+**void start()**, **void step(int duration)**, **void stop()** - *Start, stop and run the gait.*
 
 ```c
 #include <DARwInOPGaitManager.hpp>
 
 void start();
-void step();
-int msstop();
+void step(int duration);
+int stop();
 ```
 
 **Description**
 
-Start and stop need to be used to stop/start the algorithm and step is used to
-run `ms` milliseconds of the algorithm.
+The *start* and *stop* functions are used to start and stop the algorithm. The *step* function is used to
+run the algorithm for a specified *duration*, expressed in milliseconds.
 
 > **note**:
 Note that, in order to run, the gait manager needs to know the position of each

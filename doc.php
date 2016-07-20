@@ -2,6 +2,7 @@
   # the URL follow this format https://www.cyberbotics.com/doc/book/page?v=version#anchor where version and anchor are optional
   $uri = substr(htmlspecialchars($_SERVER['REQUEST_URI']), 5); // we remove the "/doc/" prefix
   $i = strpos($uri, '/');
+  unset($repository);
   if ($i !== FALSE) {
     $book = substr($uri, 0, $i);
     $j = strpos($uri, '?version=');
@@ -16,7 +17,13 @@
         $branch = '';
         $tag = $version;
       } else {
-        $branch = $version;
+        $n = strpos($version, ':');
+        if ($n === FALSE)
+          $branch = $version;
+        else {
+          $branch = substr($version, $n + 1);
+          $repository = substr($version, 0, $n);
+        }
         $tag = '';
       }
     }
@@ -28,6 +35,8 @@
     $tag = '';
     # anchor is not sent to the server, so it has to be computed by the javascript
   }
+  if (!isset($repository))
+    $repository = 'omichel';
   $scripts="
     <link rel='stylesheet' type='text/css' href='/css/webots-doc.css'/>
     <link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/highlight/9.5.0/default.min.css'/>
@@ -43,7 +52,7 @@
         'anchor': extractAnchor(),
         'branch': '$branch',
         'tag':    '$tag',
-        'url':    'https://raw.githubusercontent.com/omichel/webots-doc/'
+        'url':    'https://raw.githubusercontent.com/$repository/webots-doc/'
       }
       console.log('Setup: ' + JSON.stringify(setup));
     </script>

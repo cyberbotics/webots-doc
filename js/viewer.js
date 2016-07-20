@@ -26,8 +26,13 @@ function setupUrlOnline(url) {
       var version = m[1];
       if (version.match(/^\d+\.\d*(.)+$/))
         setup.tag = version;
-      else
-        setup.branch = version;
+      else {
+        var n = version.indexOf(':');
+        if (n == -1)
+          setup.branch = version;
+        else
+          setup.branch = version.substr(n + 1);
+      }
     }
 
     m = arguments.match(/#([^&#]*)/);

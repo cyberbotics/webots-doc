@@ -3,7 +3,7 @@
 
 # webots-doc
 
-This repository holds the documentation for the Cyberbotics' Webots software.
+This repository contains the documentation of the Webots software.
 You are very welcome to contribute to make this documentation better!
 In order to proceed, simply fork this repository, make your modifications and
 open a pull request that we will review and merge.
@@ -13,14 +13,18 @@ open a pull request that we will review and merge.
 You can display the documentation corresponding to a specific version of Webots
 by using the version argument in the URL, for example:
 
-- https://www.cyberbotics.com/doc/guide/guide?version=8.5
+- https://www.cyberbotics.com/doc/guide/index?version=8.5
 
 This version argument corresponds to a git tag on this repository.
 
 Alternatively, it is possible to display the documentation corresponding to
 a github branch of this repository:
 
-- https://www.cyberbotics.com/doc/guide/guide?version=master
+- https://www.cyberbotics.com/doc/guide/index?version=master
+
+Or to a github branch (e.g. `reference_proto`) of any public github repository (e.g. `remidhum`):
+
+- https://www.cyberbotics.com/doc/guide/index?version=remidhum:reference_proto
 
 ## Run the doc offline
 

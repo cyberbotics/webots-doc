@@ -22,7 +22,7 @@ a github branch of this repository:
 
 - https://www.cyberbotics.com/doc/guide/index?version=master
 
-Or to a github branch (`reference_proto`) of any public github repository (`remidhum`):
+Or to a github branch (e.g. `reference_proto`) of any public github repository (e.g. `remidhum`):
 
 - https://www.cyberbotics.com/doc/guide/index?version=remidhum:reference_proto
 

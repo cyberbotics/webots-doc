@@ -32,6 +32,6 @@ lights are ignored during rendering of the object that references this
 [TextureTransform](texturetransform.md) node. If the `textureTransform` is NULL
 or unspecified, the `textureTransform` field has no effect.
 
-- The `name` field specifies appearance name.
+- The `name` field specifies the appearance name.
 This is especially needed to uniquely identify the appearance definition in MFNode fields supporting multiple Appearance nodes.
 In case of SFNode fields containing a single Appearance node it is not necessary to define a unique name.

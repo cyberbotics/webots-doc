@@ -175,7 +175,7 @@ void wb_display_detach_camera(WbDeviceTag tag);
 
 **Description**
 
-These functions are used to attach/detach a camera to a display. When a camera is attached to a display, the camera images are efficiently copied to the background of the display. This is useful to simulate for example mirrors or head-up display (HUD).
+These functions are used to attach/detach a camera to a display. When a camera is attached to a display, the camera images are efficiently copied to the background of the display. This is useful for example to draw over some camera rendering or to simulate mirrors.
 
 ---
 

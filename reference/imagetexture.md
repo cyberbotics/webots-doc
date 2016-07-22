@@ -71,7 +71,6 @@ The texture path is searched from the corresponding `url` element according to
 the following rule:
 
 ```
-
 i = current_url_index
 generic_textures_path = "$WEBOTS_HOME/projects/default/worlds"
 if is_absolute(url[i]) then

@@ -6,7 +6,7 @@ The following tables describe the Matlab functions.
 
 | % [Accelerometer](accelerometer.md) :                                                                  |
 | ------------------------------------------------------------------------------------------------------ |
-| [wb\_accelerometer\_enable](accelerometer.md#wb_accelerometer_get_values)(tag, ms)                     |
+| [wb\_accelerometer\_enable](accelerometer.md#wb_accelerometer_get_values)(tag, sampling_period)        |
 | [wb\_accelerometer\_disable](accelerometer.md#wb_accelerometer_get_values)(tag)                        |
 | period = [wb\_accelerometer\_get\_sampling\_period](accelerometer.md#wb_accelerometer_get_values)(tag) |
 | [x y z] = [wb\_accelerometer\_get\_values](accelerometer.md#wb_accelerometer_get_values)(tag)          |
@@ -26,7 +26,7 @@ The following tables describe the Matlab functions.
 
 | % [Camera](camera.md) :                                                                        |
 | ---------------------------------------------------------------------------------------------- |
-| [wb\_camera\_enable](camera.md#wb_camera_enable)(tag, ms)                                      |
+| [wb\_camera\_enable](camera.md#wb_camera_enable)(tag, sampling_period)                         |
 | [wb\_camera\_disable](camera.md#wb_camera_enable)(tag)                                         |
 | period = [wb\_camera\_get\_sampling\_period](camera.md#wb_camera_enable)(tag)                  |
 | fov = [wb\_camera\_get\_fov](camera.md#wb_camera_get_fov)(tag)                                 |
@@ -50,7 +50,7 @@ The following tables describe the Matlab functions.
 
 | % [Compass](compass.md) :                                                            |
 | ------------------------------------------------------------------------------------ |
-| [wb\_compass\_enable](compass.md#wb_compass_get_values)(tag, ms)                     |
+| [wb\_compass\_enable](compass.md#wb_compass_get_values)(tag, sampling_period)        |
 | [wb\_compass\_disable](compass.md#wb_compass_get_values)(tag)                        |
 | period = [wb\_compass\_get\_sampling\_period](compass.md#wb_compass_get_values)(tag) |
 | [x y z] = [wb\_compass\_get\_values](compass.md#wb_compass_get_values)(tag)          |
@@ -61,7 +61,7 @@ The following tables describe the Matlab functions.
 
 | % [Connector](connector.md) :                                                                          |
 | ------------------------------------------------------------------------------------------------------ |
-| [wb\_connector\_enable\_presence](connector.md#wb_connector_get_presence)(tag, ms)                     |
+| [wb\_connector\_enable\_presence](connector.md#wb_connector_get_presence)(tag, sampling_period)        |
 | [wb\_connector\_disable\_presence](connector.md#wb_connector_get_presence)(tag)                        |
 | period = [wb\_connector\_get\_presence\_sampling\_period](connector.md#wb_connector_get_presence)(tag) |
 | presence = [wb\_connector\_get\_presence](connector.md#wb_connector_get_presence)(tag)                 |
@@ -87,7 +87,7 @@ The following tables describe the Matlab functions.
 | [wb\_differential\_wheels\_set\_speed](differentialwheels.md#wb_differential_wheels_set_speed)(left, right)                          |
 | left = [wb\_differential\_wheels\_get\_left\_speed](differentialwheels.md#wb_differential_wheels_set_speed)()                        |
 | right = [wb\_differential\_wheels\_get\_right\_speed](differentialwheels.md#wb_differential_wheels_set_speed)()                      |
-| [wb\_differential\_wheels\_enable\_encoders](differentialwheels.md#wb_differential_wheels_enable_encoders)(ms)                       |
+| [wb\_differential\_wheels\_enable\_encoders](differentialwheels.md#wb_differential_wheels_enable_encoders)(sampling_period)          |
 | [wb\_differential\_wheels\_disable\_encoders](differentialwheels.md#wb_differential_wheels_enable_encoders)()                        |
 | period = [wb\_differential\_wheels\_get\_encoders\_sampling\_period](differentialwheels.md#wb_differential_wheels_enable_encoders)() |
 | left = [wb\_differential\_wheels\_get\_left\_encoder](differentialwheels.md#wb_differential_wheels_get_left_encoder)()               |
@@ -111,6 +111,8 @@ The following tables describe the Matlab functions.
 | [wb\_display\_set\_color](display.md#wb_display_set_color)(tag, [r g b])                             |
 | [wb\_display\_set\_alpha](display.md#wb_display_set_color)(tag, alpha)                               |
 | [wb\_display\_set\_opacity](display.md#wb_display_set_color)(tag, opacity)                           |
+| [wb\_display\_attach\_camera](display.md#wb_display_attach_camera)(tag, camera_tag)                  |
+| [wb\_display\_detach\_camera](display.md#wb_display_attach_camera)(tag)                              |
 | [wb\_display\_draw\_pixel](display.md#wb_display_draw_pixel)(tag, x, y)                              |
 | [wb\_display\_draw\_line](display.md#wb_display_draw_pixel)(tag, x1, y1, x2, y2)                     |
 | [wb\_display\_draw\_rectangle](display.md#wb_display_draw_pixel)(tag, x, y, width, height)           |
@@ -121,7 +123,7 @@ The following tables describe the Matlab functions.
 | [wb\_display\_fill\_oval](display.md#wb_display_draw_pixel)(tag, cx, cy, a, b)                       |
 | [wb\_display\_fill\_polygon](display.md#wb_display_draw_pixel)(tag, [x1 x2 ... xn], [y1 y2 ... yn])  |
 | image = [wb\_display\_image\_copy](display.md#wb_display_image_new)(tag, x, y, width, height)        |
-| [wb\_display\_image\_paste](display.md#wb_display_image_new)(tag, image, x, y)                       |
+| [wb\_display\_image\_paste](display.md#wb_display_image_new)(tag, image, x, y, blend)                |
 | image = [wb\_display\_image\_load](display.md#wb_display_image_new)(tag, 'filename')                 |
 | image = [wb\_display\_image\_new](display.md#wb_display_image_new)(tag, width, height, data ,format) |
 | [wb\_display\_image\_save](display.md#wb_display_image_new)(tag, image, 'filename')                  |
@@ -135,7 +137,7 @@ The following tables describe the Matlab functions.
 | ------------------------------------------------------------------------------------------------------------- |
 | WB\_DISTANCE\_SENSOR\_GENERIC, WB\_DISTANCE\_SENSOR\_INFRA\_RED,                                              |
 | WB\_DISTANCE\_SENSOR\_SONAR, WB\_DISTANCE\_SENSOR\_LASER                                                      |
-| [wb\_distance\_sensor\_enable](distancesensor.md#wb_distance_sensor_get_value)(tag, ms)                       |
+| [wb\_distance\_sensor\_enable](distancesensor.md#wb_distance_sensor_get_value)(tag, sampling_period)          |
 | [wb\_distance\_sensor\_disable](distancesensor.md#wb_distance_sensor_get_value)(tag)                          |
 | period = [wb\_distance\_sensor\_get\_sampling\_period](distancesensor.md#wb_distance_sensor_get_value)(tag)   |
 | value = [wb\_distance\_sensor\_get\_value](distancesensor.md#wb_distance_sensor_get_value)(tag)               |
@@ -165,7 +167,7 @@ The following tables describe the Matlab functions.
 | % [GPS](gps.md) :                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------- |
 | WB\_GPS\_LOCAL\_COORDINATE, WB\_GPS\_WGS84\_COORDINATE,                                                                                 |
-| [wb\_gps\_enable](gps.md#wb_gps_get_values)(tag, ms)                                                                                    |
+| [wb\_gps\_enable](gps.md#wb_gps_get_values)(tag, sampling_period)                                                                       |
 | [wb\_gps\_disable](gps.md#wb_gps_get_values)(tag)                                                                                       |
 | period = [wb\_gps\_get\_sampling\_period](gps.md#wb_gps_get_values)(tag)                                                                |
 | [x y z] = [wb\_gps\_get\_values](gps.md#wb_gps_get_values)(tag)                                                                         |
@@ -179,7 +181,7 @@ The following tables describe the Matlab functions.
 
 | % [Gyro](gyro.md) :                                                         |
 | --------------------------------------------------------------------------- |
-| [wb\_gyro\_enable](gyro.md#wb_gyro_get_values)(tag, ms)                     |
+| [wb\_gyro\_enable](gyro.md#wb_gyro_get_values)(tag, sampling_period)        |
 | [wb\_gyro\_disable](gyro.md#wb_gyro_get_values)(tag)                        |
 | period = [wb\_gyro\_get\_sampling\_period](gyro.md#wb_gyro_get_values)(tag) |
 | [x y z] = [wb\_gyro\_get\_values](gyro.md#wb_gyro_get_values)(tag)          |
@@ -190,7 +192,7 @@ The following tables describe the Matlab functions.
 
 | % [InertialUnit](inertialunit.md) :                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------ |
-| [wb\_inertial\_unit\_enable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag, ms)                               |
+| [wb\_inertial\_unit\_enable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag, sampling_period)                  |
 | [wb\_inertial\_unit\_disable](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag)                                  |
 | period = [wb\_inertial\_unit\_get\_sampling\_period](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag)           |
 | [roll pitch yaw] = [wb\_inertial\_unit\_get\_roll\_pitch\_yaw](inertialunit.md#wb_inertial_unit_get_roll_pitch_yaw)(tag) |
@@ -201,7 +203,7 @@ The following tables describe the Matlab functions.
 
 | % [Joystick](joystick.md) :                                                                     |
 | ----------------------------------------------------------------------------------------------- |
-| [wb\_joystick\_enable](joystick.md#wb_joystick_enable)(ms)                                      |
+| [wb\_joystick\_enable](joystick.md#wb_joystick_enable)(sampling_period)                         |
 | [wb\_joystick\_disable](joystick.md#wb_joystick_enable)()                                       |
 | period = [wb\_joystick\_get\_sampling\_period](joystick.md#wb_joystick_enable)()                |
 | connected = [wb_joystick_is_connected](joystick.md#wb_joystick_is_connected)()                  |
@@ -237,7 +239,7 @@ The following tables describe the Matlab functions.
 | WB\_KEYBOARD\_SHIFT                                                              |
 | WB\_KEYBOARD\_CONTROL                                                            |
 | WB\_KEYBOARD\_ALT                                                                |
-| [wb\_keyboard\_enable](keyboard.md#wb_keyboard_enable)(ms)                       |
+| [wb\_keyboard\_enable](keyboard.md#wb_keyboard_enable)(sampling_period)          |
 | [wb\_keyboard\_disable](keyboard.md#wb_keyboard_enable)()                        |
 | period = [wb\_keyboard\_get\_sampling\_period](keyboard.md#wb_keyboard_enable)() |
 | key = [wb\_keyboard\_get\_key](keyboard.md#wb_keyboard_enable)()                 |
@@ -257,7 +259,7 @@ The following tables describe the Matlab functions.
 
 | % [Lidar](lidar.md) :                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------- |
-| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, ms);                                                              |
+| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, sampling_period);                                                 |
 | &nbsp;&nbsp; [wb\_lidar\_enable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                        |
 | &nbsp;&nbsp; [wb\_lidar\_disable](lidar.md#wb_lidar_enable)(tag);                                                                 |
 | &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                       |
@@ -285,7 +287,7 @@ The following tables describe the Matlab functions.
 
 | % [LightSensor](lightsensor.md) :                                                                  |
 | -------------------------------------------------------------------------------------------------- |
-| [wb\_light\_sensor\_enable](lightsensor.md#wb_light_sensor_get_value)(tag, ms)                     |
+| [wb\_light\_sensor\_enable](lightsensor.md#wb_light_sensor_get_value)(tag, sampling_period)        |
 | [wb\_light\_sensor\_disable](lightsensor.md#wb_light_sensor_get_value)(tag)                        |
 | period = [wb\_light\_sensor\_get\_sampling\_period](lightsensor.md#wb_light_sensor_get_value)(tag) |
 | value = [wb\_light\_sensor\_get\_value](lightsensor.md#wb_light_sensor_get_value)(tag)             |
@@ -330,12 +332,12 @@ The following tables describe the Matlab functions.
 | force = [wb\_motor\_get\_max\_force](motor.md#wb_motor_set_position)(tag)                                   |
 | torque = [wb\_motor\_get\_available\_torque](motor.md#wb_motor_set_position)(tag)                           |
 | torque = [wb\_motor\_get\_max\_torque](motor.md#wb_motor_set_position)(tag)                                 |
-| [wb\_motor\_enable\_force\_feedback](motor.md#wb_motor_enable_force_feedback)(tag, ms)                      |
+| [wb\_motor\_enable\_force\_feedback](motor.md#wb_motor_enable_force_feedback)(tag, sampling_period)         |
 | [wb\_motor\_disable\_force\_feedback](motor.md#wb_motor_enable_force_feedback)(tag)                         |
 | period = [wb\_motor\_get\_force\_feedback\_sampling\_period](motor.md#wb_motor_enable_force_feedback)(tag)  |
 | force = [wb\_motor\_get\_force\_feedback](motor.md#wb_motor_enable_force_feedback)(tag)                     |
 | [wb\_motor\_set\_force](motor.md#wb_motor_set_force)(tag, force)                                            |
-| [wb\_motor\_enable\_torque\_feedback](motor.md#wb_motor_enable_force_feedback)(tag, ms)                     |
+| [wb\_motor\_enable\_torque\_feedback](motor.md#wb_motor_enable_force_feedback)(tag, sampling_period)        |
 | [wb\_motor\_disable\_torque\_feedback](motor.md#wb_motor_enable_force_feedback)(tag)                        |
 | period = [wb\_motor\_get\_torque\_feedback\_sampling\_period](motor.md#wb_motor_enable_force_feedback)(tag) |
 | force = [wb\_motor\_get\_torque\_feedback](motor.md#wb_motor_enable_force_feedback)(tag)                    |
@@ -366,7 +368,7 @@ The following tables describe the Matlab functions.
 | % [PositionSensor](positionsensor.md) :                                                                     |
 | ----------------------------------------------------------------------------------------------------------- |
 | WB\_ANGULAR, WB\_LINEAR                                                                                     |
-| [wb\_position\_sensor\_enable](positionsensor.md#wb_position_sensor_get_value)(tag, ms)                     |
+| [wb\_position\_sensor\_enable](positionsensor.md#wb_position_sensor_get_value)(tag, sampling_period)        |
 | [wb\_position\_sensor\_disable](positionsensor.md#wb_position_sensor_get_value)(tag)                        |
 | period = [wb\_position\_sensor\_get\_sampling\_period](positionsensor.md#wb_position_sensor_get_value)(tag) |
 | value = [wb\_position\_sensor\_get\_value](positionsensor.md#wb_position_sensor_get_value)(tag)             |
@@ -378,7 +380,7 @@ The following tables describe the Matlab functions.
 
 | % [Radar](radar.md) :                                                                                 |
 | ----------------------------------------------------------------------------------------------------- |
-| [wb\_radar\_enable](radar.md#wb_radar_enable)(tag, ms)                                                |
+| [wb\_radar\_enable](radar.md#wb_radar_enable)(tag, sampling_period)                                   |
 | [wb\_radar\_disable](radar.md#wb_radar_enable)(tag)                                                   |
 | period = [wb\_radar\_get\_sampling\_period](radar.md#wb_radar_enable)(tag)                            |
 | targets\_number = [wb\_radar\_get\_number\_of\_targets](radar.md#wb_radar_get_number_of_targets)(tag) |
@@ -394,7 +396,7 @@ The following tables describe the Matlab functions.
 
 | % [RangeFinder](rangefinder.md) :                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------ |
-| [wb\_range\_finder\_enable](rangefinder.md#wb_range_finder_enable)(tag, ms)                                        |
+| [wb\_range\_finder\_enable](rangefinder.md#wb_range_finder_enable)(tag, sampling_period)                           |
 | [wb\_range\_finder\_disable](rangefinder.md#wb_range_finder_enable)(tag)                                           |
 | period = [wb\_range\_finder\_get\_sampling\_period](rangefinder.md#wb_range_finder_enable)(tag)                    |
 | fov = [wb\_range\_finder\_get\_fov](rangefinder.md#wb_range_finder_get_fov)(tag)                                   |
@@ -413,7 +415,7 @@ The following tables describe the Matlab functions.
 | % [Receiver](receiver.md) :                                                                         |
 | --------------------------------------------------------------------------------------------------- |
 | WB\_CHANNEL\_BROADCAST                                                                              |
-| [wb\_receiver\_enable](receiver.md#wb_receiver_enable)(tag, ms)                                     |
+| [wb\_receiver\_enable](receiver.md#wb_receiver_enable)(tag, sampling_period)                        |
 | [wb\_receiver\_disable](receiver.md#wb_receiver_enable)(tag)                                        |
 | period = [wb\_receiver\_get\_sampling\_period](receiver.md#wb_receiver_enable)(tag)                 |
 | length = [wb\_receiver\_get\_queue\_length](receiver.md#wb_receiver_get_queue_length)(tag)          |
@@ -434,11 +436,11 @@ The following tables describe the Matlab functions.
 | WB\_MODE\_SIMULATION,                                                                                   |
 | WB\_MODE\_CROSS\_COMPILATION,                                                                           |
 | WB\_MODE\_REMOTE\_CONTROL                                                                               |
-| [wb\_robot\_step](robot.md#wb_robot_step)(ms)                                                           |
+| [wb\_robot\_step](robot.md#wb_robot_step)(sampling_period)                                              |
 | tag = [wb\_robot\_get\_device](robot.md#wb_robot_get_device)('name')                                    |
 | size = [wb\_robot\_get\_number\_of\_devices](robot.md#wb_robot_get_device_by_index)()                   |
 | tag = [wb\_robot\_get\_device\_by\_index](robot.md#wb_robot_get_device_by_index)(index)                 |
-| [wb\_robot\_battery\_sensor\_enable](robot.md#wb_robot_battery_sensor_enable)(ms)                       |
+| [wb\_robot\_battery\_sensor\_enable](robot.md#wb_robot_battery_sensor_enable)(sampling_period)          |
 | [wb\_robot\_battery\_sensor\_disable](robot.md#wb_robot_battery_sensor_enable)()                        |
 | period = [wb\_robot\_battery\_sensor\_get\_sampling\_period](robot.md#wb_robot_battery_sensor_enable)() |
 | value = [wb\_robot\_battery\_sensor\_get\_value](robot.md#wb_robot_battery_sensor_enable)()             |
@@ -471,16 +473,28 @@ The following tables describe the Matlab functions.
 | [wb\_servo\_set\_control\_p](servo.md#wb_servo_set_position)(tag, p)                                                    |
 | min = [wb\_servo\_get\_min\_position](servo.md#wb_servo_set_position)(tag)                                              |
 | max = [wb\_servo\_get\_max\_position](servo.md#wb_servo_set_position)(tag)                                              |
-| [wb\_servo\_enable\_position](servo.md#wb_servo_enable_position)(tag, ms)                                               |
+| [wb\_servo\_enable\_position](servo.md#wb_servo_enable_position)(tag, sampling_period)                                  |
 | [wb\_servo\_disable\_position](servo.md#wb_servo_enable_position)(tag)                                                  |
 | period = [wb\_servo\_get\_position\_sampling\_period](servo.md#wb_servo_enable_position)(tag)                           |
 | position = [wb\_servo\_get\_position](servo.md#wb_servo_enable_position)(tag)                                           |
-| [wb\_servo\_enable\_motor\_force\_feedback](servo.md#wb_servo_enable_motor_force_feedback)(tag, ms)                     |
+| [wb\_servo\_enable\_motor\_force\_feedback](servo.md#wb_servo_enable_motor_force_feedback)(tag, sampling_period)        |
 | [wb\_servo\_disable\_motor\_force\_feedback](servo.md#wb_servo_enable_motor_force_feedback)(tag)                        |
 | period = [wb\_servo\_get\_motor\_force\_feedback\_sampling\_period](servo.md#wb_servo_enable_motor_force_feedback)(tag) |
 | force = [wb\_servo\_get\_motor\_force\_feedback](servo.md#wb_servo_enable_motor_force_feedback)(tag)                    |
 | [wb\_servo\_set\_force](servo.md#wb_servo_set_force)(tag, force)                                                        |
 | type = [wb\_servo\_get\_type](servo.md#wb_servo_get_type)(tag)                                                          |
+
+%end
+
+%api "matlab_speaker"
+
+| % [Speaker](speaker.md) :                                                                                   |
+| ----------------------------------------------------------------------------------------------------------- |
+| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
+| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
+| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
+| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
+| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
 
 %end
 
@@ -570,18 +584,7 @@ The following tables describe the Matlab functions.
 | velocity = [wb\_supervisor\_node\_get\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node)                                                                |
 | [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                 |
 | [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                         |
-
-%end
-
-%api "matlab_speaker"
-
-| % [Speaker](speaker.md) :                                                                                   |
-| ----------------------------------------------------------------------------------------------------------- |
-| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
-| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
-| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
-| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
-| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
+| [wb\_supervisor\_node\_set\_visibility](supervisor.md#wb_supervisor_node_set_visibility)(node, from, visible)                                                        |
 
 %end
 
@@ -591,7 +594,7 @@ The following tables describe the Matlab functions.
 | --------------------------------------------------------------------------------------------------- |
 | WB\_TOUCH\_SENSOR\_BUMPER, WB\_TOUCH\_SENSOR\_FORCE,                                                |
 | WB\_TOUCH\_SENSOR\_FORCE3D                                                                          |
-| [wb\_touch\_sensor\_enable](touchsensor.md#wb_touch_sensor_get_values)(tag, ms)                     |
+| [wb\_touch\_sensor\_enable](touchsensor.md#wb_touch_sensor_get_values)(tag, sampling_period)        |
 | [wb\_touch\_sensor\_disable](touchsensor.md#wb_touch_sensor_get_values)(tag)                        |
 | period = [wb\_touch\_sensor\_get\_sampling\_period](touchsensor.md#wb_touch_sensor_get_values)(tag) |
 | value = [wb\_touch\_sensor\_get\_value](touchsensor.md#wb_touch_sensor_get_values)(tag)             |

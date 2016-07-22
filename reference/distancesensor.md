@@ -225,20 +225,19 @@ The ground texture must be placed in a [Plane](plane.md).
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/distance_sensor.h>
 
-void wb_distance_sensor_enable(WbDeviceTag tag, int ms)
-void wb_distance_sensor_disable(WbDeviceTag tag)
-int wb_distance_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_distance_sensor_get_value(WbDeviceTag tag)
+void wb_distance_sensor_enable(WbDeviceTag tag, int sampling_period);
+void wb_distance_sensor_disable(WbDeviceTag tag);
+int wb_distance_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_distance_sensor_get_value(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_distance_sensor_enable()` allows the user to enable a distance sensor
-measurement each `ms` milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_distance_sensor_enable()` allows the user to enable distance sensor measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_distance_sensor_disable()` turns the distance sensor off, saving computation
@@ -260,12 +259,12 @@ of the return value is defined by this lookup table.
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/distance_sensor.h>
 
-double wb_distance_sensor_get_max_range(WbDeviceTag tag)
-double wb_distance_sensor_get_min_range(WbDeviceTag tag)
-double wb_distance_sensor_get_aperture(WbDeviceTag tag)
+double wb_distance_sensor_get_max_range(WbDeviceTag tag);
+double wb_distance_sensor_get_min_range(WbDeviceTag tag);
+double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 ```
 
 **Description**
@@ -287,10 +286,10 @@ sensor in radians.
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/distance_sensor.h>
 
-int wb_distance_sensor_get_type(WbDeviceTag tag)
+int wb_distance_sensor_get_type(WbDeviceTag tag);
 ```
 
 **Description**

@@ -15,7 +15,7 @@ More informations about this tool provided by ROBOTIS is available on Robotis
 
 **DARwInOPMotionManager(webots::Robot *robot)** - *Motion Manager constructor*
 
-``` c
+```c
 #include <DARwInOPMotionManager.hpp>
 
 DARwInOPMotionManager(webots::Robot * robot)
@@ -31,10 +31,10 @@ The first parameter is the robot on which the algorithm applies.
 
 **void playPage(int id)** - *Plays a motion*
 
-``` c
+```c
 #include <DARwInOPMotionManager.hpp>
 
-playPage(int id)
+void playPage(int id);
 ```
 
 **Description**
@@ -51,24 +51,21 @@ method `playPage` with the second parameter set to false:
 
 **Name**
 
-**void playPage(int id, bool sync = true)**, **void step(int ms)**, **bool isMotionPlaying()** - *Starts the motion in Step-by-Step mode.*
+**void playPage(int id, bool sync = true)**, **void step(int duration)**, **bool isMotionPlaying()** - *Starts the motion in Step-by-Step mode.*
 
-``` c
+```c
 #include <DARwInOPMotionManager.hpp>
 
-playPage(int id, bool sync)
-step(int ms)
-isMotionPlaying()
+void playPage(int id, bool sync);
+void step(int duration);
+bool isMotionPlaying();
 ```
 
 **Description**
 
-The first function initiate the motion, but not run it, then in order to play ms
-second of the motion, the second method need to be called (before the robot
-step). In order to know if the motion is finished, the third method can be
-called.
+The *playPage* function initializes the motion, but does not run it. The *step* method has to be called to run it (before calling the robot *step* function). The *duration* argument is expressed in milliseconds. The *isMotionPlaying* method determines if the motion is currently running.
 
-A typical use of the motion manager in mode step-by-step will be the following:
+Here is a typical use of the motion manager in step-by-step mode:
 
 ```c
 mMotionManager->playPage(1, false);

@@ -50,7 +50,7 @@ detected, the robot moves back and turns a bit.
 %end
 
 In this example, a robot uses a camera to detect colored objects. The robot
-analyses the RGB color level of each pixel of the camera images. It turns and
+analyzes the RGB color level of each pixel of the camera images. It turns and
 stops for a few seconds when it has detected something. It also prints a message
 in the Console explaining the type of object it has detected. You can move the
 robot to different parts of the arena (using the mouse) to see what it is able
@@ -70,10 +70,10 @@ In this example, a light robot (light blue) is lifted over two heavier robots
 (dark blue). All three robots are equipped with a `Connector` placed at the tip
 of a moveable handle (`HingeJoint`). An `IndexedLineSet` is added to every
 `Connector` in order to show the axes. When the simulation starts, the light
-robot approaches the first heavy robot and their connectors dock to each other.
-Then both robots rotate their handles simultaneously, and hence the light robot
-gets passed over the heavy one. Then the light robot gets passed over another
-time the second heavy robot and so on ... All the robots in this simulation use
+robot approaches the first heavy robot and their connectors dock to one another.
+Then both robots rotate their handles simultaneously, hence the light robot
+gets lifted over the heavy one. Then the light robot gets passed over another
+time by the second heavy robot and so on ... All the robots in this simulation use
 the same controller; the different behaviors are selected according to the
 robot's name.
 
@@ -105,10 +105,9 @@ other one with a `Receiver`. Both robots move among the obstacles while the
 *emitter* robot sends messages to the *receiver* robot. The range of the
 `Emitter` device is indicated by the radius of the transparent sphere around the
 emitter robot. The state of the communication between the two robots is
-displayed in the Console. You can observe that when the *receiver* robot enters
-the *receiver*'s sphere, and that at the same time there is no obstacle between
-the robots, then the communication is established, otherwise the communication
-is interrupted. Note that the communication between "infra-red" `Emitter`s and
+displayed in the Console. You can observe this when the *receiver* robot enters
+the *emitter*'s sphere while no direct obstacle is present on the route, then the communication is established, otherwise the communication is interrupted.
+Note that the communication between "infra-red" `Emitter`s and
 `Receiver`s can be blocked by an obstacle, this is not the case with "radio"
 `Emitter`s and `Receiver`s.
 
@@ -153,7 +152,7 @@ collision, which is printed in the Console window.
 
 %end
 
-This example shows two different techniques for finding out the current position
+This example shows two different techniques to find the current position
 of a robot. The first technique consists in using an on-board `GPS` device. The
 second method uses a `Supervisor` controller that reads and transmits the
 position info to the robot. Note that a `Supervisor` can read (or change) the
@@ -214,4 +213,4 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.
 The "range-finder" measures the distance to objects, so the robot knows if there
-is enough room to move forward.
+is enough room to move forward or not.

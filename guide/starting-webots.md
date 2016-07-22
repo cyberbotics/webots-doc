@@ -1,6 +1,6 @@
 ## Starting Webots
 
-The first time you start Webots it will open the "Welcome to Webots!" menu with
+The first time you start Webots, it will open the "Welcome to Webots!" menu with
 a list of possible starting points.
 
 ### Linux
@@ -19,7 +19,7 @@ Cyberbotics` menu and click on the `Webots {{ webots.version.major }}.{{
 webots.version.minor }}.{{ webots.version.bugfix }}` menu item.
 
 On Windows 8, open the `Start` screen, scroll to the screen's right until
-spotting the Cyberbotics section and click on the `Webots` icon.
+you spot the Cyberbotics section and click on the `Webots` icon.
 
 ### Command Line Arguments
 

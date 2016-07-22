@@ -23,7 +23,7 @@ which can draw on any 3D object.
 
 ### Thymio II model
 
-The [table](#thymio-ii-devices) shows which devices are supported by the model,
+The following [table](#thymio-ii-devices) shows which devices are supported by the model,
 and their names (using the Webots terminology).
 
 %figure "Thymio II devices"
@@ -112,7 +112,7 @@ located there (see the [figure](#simulation-of-a-thymio-ii-having-a-pen)):
 [These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be
 reproduced by adding a `Thymio2Ball` node in your world. The ball can be
 slightly moved by applying a force on it (`ALT + mouse left click`). An example
-of this is located there (see the
+of this is located here (see the
 [figure](#simulation-of-a-thymio-ii-above-a-ball)):
 "WEBOTS\_HOME/projects/robots/thymio/worlds/thymio2\_ball.wbt"
 

@@ -19,12 +19,12 @@ meters.
 
 ```
 DelphiESR {
-    SFVec3f    translation    0 0 0
-    SFRotation rotation       0 1 0 0
-    SFString   name           "delphi-esr"
-    SFBool     occlusion      FALSE
-    SFBool     longRangeMode  FALSE
-  }
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "delphi-esr"
+  SFBool     occlusion      FALSE
+  SFBool     longRangeMode  FALSE
+}
 ```
 
 The `occlusion` field can be used to set if occlusions between the targets and

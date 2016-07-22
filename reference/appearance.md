@@ -16,7 +16,8 @@ geometric node. The value for each of the fields in this node may be NULL.
 However, if the field is non-NULL, it shall contain one node of the appropriate
 type.
 
-A Python converter is provided in *WEBOTS_HOME/bin/ogre* directory to automatically generate the [Appearance](#appearance) nodes from an Ogre material file.
+>**note**
+The *WEBOTS_HOME/bin/ogre/OgreMaterialConverter* Python script is available to automatically generate the [Appearance](#appearance) nodes from an Ogre material file.
 The generated [Appearance](#appearance) nodes are saved in `.wbo` format.
 
 ### Field Summary

@@ -17,7 +17,7 @@ However, if the field is non-NULL, it shall contain one node of the appropriate
 type.
 
 >**note**
-The *WEBOTS_HOME/bin/ogre/OgreMaterialConverter* Python script is available to automatically generate the [Appearance](#appearance) nodes from an Ogre material file.
+The *WEBOTS_HOME/bin/ogre/OgreMaterialConverter.py* Python script is available to automatically generate the [Appearance](#appearance) nodes from an Ogre material file.
 The generated [Appearance](#appearance) nodes are saved in `.wbo` format.
 
 ### Field Summary

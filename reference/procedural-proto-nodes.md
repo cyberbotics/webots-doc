@@ -50,7 +50,7 @@ include external Lua modules.
 - Lua standard output and error streams are redirected on the Webots console
 (written respectively in regular and in red colors). This allows developers to
 use the Lua regular functions to write on these streams.
-- The lua-gd module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can for example be used to generate textures.
+- The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can for example be used to generate textures.
 
 %figure "VRML type to Lua type conversion"
 

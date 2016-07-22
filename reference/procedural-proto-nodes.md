@@ -50,6 +50,7 @@ include external Lua modules.
 - Lua standard output and error streams are redirected on the Webots console
 (written respectively in regular and in red colors). This allows developers to
 use the Lua regular functions to write on these streams.
+- The lua-gd module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can for example be used to generate textures.
 
 %figure "VRML type to Lua type conversion"
 
@@ -70,13 +71,14 @@ use the Lua regular functions to write on these streams.
 
 %figure "Content of the context dictionary"
 
-| Key             | Value                                                                                                                                |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| world           | absolute path to the current world file (including file name and extension)                                                          |
-| proto           | absolute path to the current PROTO file (including file name and extension)                                                          |
-| project\_path   | absolute path to the current project directory                                                                                       |
-| webots\_version | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
-| webots\_home    | absolute path to the Webots installation directory                                                                                   |
+| Key                     | Value                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| world                   | absolute path to the current world file (including file name and extension)                                                          |
+| proto                   | absolute path to the current PROTO file (including file name and extension)                                                          |
+| project\_path           | absolute path to the current project directory                                                                                       |
+| webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
+| webots\_home            | absolute path to the Webots installation directory                                                                                   |
+| temporary\_files\_path  | absolute path to the temporary folder currently used by Webots (this is the location where is generated the PROTO file)              |
 
 %end
 

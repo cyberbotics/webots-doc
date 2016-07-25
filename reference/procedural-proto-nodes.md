@@ -79,7 +79,7 @@ use the Lua regular functions to write on these streams.
 | webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
 | webots\_home            | absolute path to the Webots installation directory                                                                                   |
 | temporary\_files\_path  | absolute path to the temporary folder currently used by Webots (this is the location where the PROTO file is generated)              |
-| os                      | OS string ("windows", "linux" or "darwin")                                                                                           |
+| os                      | OS string ("windows", "linux" or "mac")                                                                                              |
 
 %end
 

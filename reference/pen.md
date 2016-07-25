@@ -84,10 +84,10 @@ function.
 
 {[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/pen.h>
 
-void wb_pen_write(WbDeviceTag tag, bool write)
+void wb_pen_write(WbDeviceTag tag, bool write);
 ```
 
 **Description**
@@ -104,10 +104,10 @@ will write; if `write` is *false*, it won't.
 
 {[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/pen.h>
 
-void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density)
+void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density);
 ```
 
 **Description**
@@ -121,7 +121,7 @@ red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is gray
 
 **Example**
 
-```
+```c
 wb_pen_set_ink_color(pen,0xF01010,0.9);
 ```
 

@@ -3,9 +3,9 @@
 ### Selecting an object
 
 A single mouse click allows you to select a solid object. The bounding object of
-a selected solid is represented by white lines. These lines turn rose if the
+a selected solid is represented by white lines. These lines turn pink if the
 solid is colliding with another one and blue when the solid is idle, i.e., it
-comes to rest and it doesn't interact with any other active solid. Selecting a
+comes to rest and it does not interact with any other active solid. Selecting a
 robot enables the `Show Robot Window` item in the `Tools` menu. Double-clicking
 on a solid object opens the Robot Window and if it was closed, the Scene Tree.
 
@@ -20,21 +20,20 @@ Dragging the mouse while pressing a mouse button moves the camera of the 3D
 window.
 
 - *Camera rotation*: In the 3D window, press the left button and drag the mouse to
-select an object and rotate the viewpoint about it. If no object is selected,
-the camera rotates about the origin of the world coordinate system.
+select an object and rotate the viewpoint around it. If no object is selected,
+the camera rotates around the origin of the world coordinate system.
 - *Camera translation*: In the 3D window, press the right button and drag the
-mouse to translate the camera with the mouse motion.
+mouse to translate the camera.
 - *Zooming / Camera rotation*: In the 3D window, press both left and right mouse
 buttons simultaneously (or just the middle button) and drag the mouse
 vertically, to zoom in and out. Dragging the mouse horizontally will rotate the
-camera about the viewing axis. Alternatively, the mouse wheel alone can also be
+camera around the viewing axis. Alternatively, the mouse wheel alone can also be
 used for zooming.
 
-> **note**:
+> **Note**:
 If you are a Mac user with a single button mouse, hold the Alt key and press the
 mouse button to translate the camera according to the mouse motion. Hold the
-control key (Ctrl) down and press the mouse button to zoom / rotate the camera
-with the mouse motion.
+control key (Ctrl) down and press the mouse button to zoom / rotate the camera.
 
 ### Moving a solid object
 
@@ -51,7 +50,7 @@ the desired position. A label will show the currect relative translation or
 rotation during the movement, as shown in [this
 figure](#labels-displaying-relative-translation-and-rotation-when-moving-objects-with-handles).
 
-If the Control key (Ctrl), the handles for resizing the solid object will be
+If the Control key (Ctrl) is pressed, the handles for resizing the solid object will be
 displayed instead of translation and rotation handles. These resize handles can
 also be enabled from the Field Editor.
 
@@ -75,7 +74,7 @@ key, press the left mouse button and drag.
 and right mouse buttons (or the middle button) and drag. Alternatively, the
 mouse wheel combined with the Shift key can also be used.
 
-> **note**:
+> **Note**:
 If you are a Mac user with a single button mouse, hold the Shift key and the
 Control key (Ctrl) down and press the mouse button to rotate the selected object
 according to mouse motion. Hold the Shift key and the Command key (key with
@@ -87,7 +86,7 @@ according to mouse motion.
 To apply a force to an object, place the mouse pointer where the force will
 apply, hold down the Alt key and left mouse button together while dragging the
 mouse. Linux users should also hold down the Control key (Ctrl) together with
-the Alt key. This way your are drawing a 3D-vector whose end is located in the
+the Alt key. This way your are drawing a 3D-vector whose end is located on the
 plane parallel to the view which passes through the point of application. The
 intensity of the applied force is directly proportional to the cube of the
 length of this vector.
@@ -99,12 +98,12 @@ key and right mouse button together while dragging the mouse. Linux users should
 also hold down the Control key (Ctrl) together with the Alt key. Also, Mac OS X
 users with a one-button mouse should hold down the Control key (Ctrl) to emulate
 the right mouse button. This way your are drawing a 3D-vector with origin the
-center of mass and whose end is located in the plane parallel to the view which
+center of mass and whose end is located on the plane parallel to the view which
 passes through this center. The object is prompted to turn around the vector
-direction, the intensity of the applied torque being directly proportional to
+direction, the intensity of the applied torque is directly proportional to
 the product of the mass by the length of the 3D-vector.
 
-> **note**:
+> **Note**:
 In pause mode, you can simultaneously add a force and a torque to the same
 selected solid. Camera rotation can be useful when checking wether your force /
 torque vector has the desired direction.
@@ -137,7 +136,7 @@ Devices` and `RangeFinder Devices` items in `Robot` menu.
 
 %end
 
-### Show Camera and Display images in separate window
+### Show Camera and Display images in a separate window
 
 Overlay images can also be displayed outside the 3D window, see [this
 figure](#camera-and-display-image-window). When double-clicking with the left

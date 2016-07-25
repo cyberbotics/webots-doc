@@ -20,10 +20,10 @@ sensor).
 
 {[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/device.h>
 
-const char *wb_device_get_model(WbDeviceTag tag)
+const char *wb_device_get_model(WbDeviceTag tag);
 ```
 
 **Description**
@@ -43,10 +43,10 @@ a `model` field)
 
 {[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/device.h>
 
-const char *wb_device_get_name(WbDeviceTag tag)
+const char *wb_device_get_name(WbDeviceTag tag);
 ```
 
 **Description**
@@ -64,10 +64,10 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 {[C++](cpp-api.md#cpp_device)}, {[Java](java-api.md#java_device)}, {[Python](python-api.md#python_device)}, {[Matlab](matlab-api.md#matlab_device)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/device.h>
 
-WbNodeType wb_device_get_node_type(WbDeviceTag tag)
+WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 ```
 
 **Description**

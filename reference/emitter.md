@@ -98,10 +98,10 @@ range` and `aperture` will be ignored.
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
+int wb_emitter_send(WbDeviceTag tag, const void *data, int size);
 ```
 
 **Description**
@@ -139,10 +139,12 @@ string, the *struct* module can be used. This module performs conversions
 between Python values and C structs represented as Python strings. Here is an
 example:
 
->     import struct
->     #...
->     message = struct.pack("chd","a",45,120.08)
->     emitter.send(message)
+> ```python
+> import struct
+> #...
+> message = struct.pack("chd","a",45,120.08)
+> emitter.send(message)
+> ```
 
 <!-- -->
 
@@ -152,13 +154,15 @@ implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received
 in a C/C++ controller.
 
->     String request = "You are number " + num + "\0";
->     try {
->       emitter.send(request.getBytes("US-ASCII"));
->     }
->     catch (java.io.UnsupportedEncodingException e) {
->       System.out.println(e);
->     }
+> ```java
+> String request = "You are number " + num + "\0";
+> try {
+>   emitter.send(request.getBytes("US-ASCII"));
+> }
+> catch (java.io.UnsupportedEncodingException e) {
+>   System.out.println(e);
+> }
+> ```
 
 ---
 
@@ -168,11 +172,11 @@ in a C/C++ controller.
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-void wb_emitter_set_channel(WbDeviceTag tag, int channel)
-int wb_emitter_get_channel(WbDeviceTag tag)
+void wb_emitter_set_channel(WbDeviceTag tag, int channel);
+int wb_emitter_get_channel(WbDeviceTag tag);
 ```
 
 **Description**
@@ -198,11 +202,11 @@ static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-void wb_emitter_set_range(WbDeviceTag tag, double range)
-double wb_emitter_get_range(WbDeviceTag tag)
+void wb_emitter_set_range(WbDeviceTag tag, double range);
+double wb_emitter_get_range(WbDeviceTag tag);
 ```
 
 **Description**
@@ -224,10 +228,10 @@ returns the current emitter's range. For both the `wb_emitter_set_range()` and
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-int wb_emitter_get_buffer_size(WbDeviceTag tag)
+int wb_emitter_get_buffer_size(WbDeviceTag tag);
 ```
 
 **Description**

@@ -176,12 +176,12 @@ network with an unpredictable delay (like the Internet).
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-int wb_robot_step(int ms)
-void wb_robot_init()
-void wb_robot_cleanup()
+int wb_robot_step(int duration);
+void wb_robot_init();
+void wb_robot_cleanup();
 ```
 
 **Description**
@@ -191,13 +191,12 @@ This function synchronizes the sensor and actuator data between Webots and the
 controllers. If the `wb_robot_step()` function is not called then there will be
 no actuation in Webots and no update of the sensors in the controller.
 
-The `ms` parameter specifies the number of milliseconds that must be simulated
+The `duration` parameter specifies the amount of time, expressed in milliseconds, that must be simulated
 until the `wb_robot_step()` function returns. Note that this is not real time
 but virtual (simulation) time, so this is not like calling the system's
-`sleep()`. In fact the function may return immediately, however the important
-point is that when it returns `ms` milliseconds of simulation will have elapsed.
-In other words the physics will have run for `ms` milliseconds and hence the
-motors may have moved, the sensor values may have changed, etc. Note that `ms`
+`sleep()`. Depending on the complexity of the simulation and execution mode, the function may return quickly. When it returns, the requested duration of simulation time is elapsed.
+In other words the physics runs for the specified duration: objects may move, the
+motors may run, the sensor values may change, etc. Note that the `duration`
 parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
 If this function returns -1, this indicates that Webots wishes to terminate the
@@ -215,11 +214,11 @@ follows:
 
 - if `dt` = 0, then the asynchronous behavior was equivalent to the synchronous
 behavior.
-- if 0 <= `dt` <= `ms`, then the actuator values were set at `controller_time` +
-`dt`, and the sensor values were measured at `controller_time` + `ms`, as
+- if 0 <= `dt` <= `duration`, then the actuator values were set at `controller_time` +
+`dt`, and the sensor values were measured at `controller_time` + `duration`, as
 requested. It means that the step actually lasted the requested number of
 milliseconds, but the actuator commands could not be executed on time.
-- if `dt` > `ms`, then the actuators values were set at `controller_time` + `dt`,
+- if `dt` > `duration`, then the actuators values were set at `controller_time` + `dt`,
 and the sensor values were also measured at `controller_time` + `dt`. It means
 that the requested step duration could not be respected.
 
@@ -293,10 +292,10 @@ int main() {
 
 {[Matlab](matlab-api.md#matlab_robot)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-WbDeviceTag wb_robot_get_device(const char *name)
+WbDeviceTag wb_robot_get_device(const char *name);
 ```
 
 **Description**
@@ -309,9 +308,12 @@ identifier will be used subsequently for enabling, sending commands to, or
 reading data from this device. If the specified device is not found, the
 function returns 0.
 
+> Note: This function is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
+
+
 **See also**
 
-[section](#wb_robot_step).
+[wb\_robot\_step](#wb_robot_step).
 
 ---
 
@@ -321,28 +323,28 @@ function returns 0.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
-``` c
+```c
 #include <webots/Robot.hpp>
 
-Accelerometer *Robot::getAccelerometer(const std::string &name)
-Camera *Robot::getCamera(const std::string &name)
-Compass *Robot::getCompass(const std::string &name)
-Connector *Robot::getConnector(const std::string &name)
-Display *Robot::getDisplay(const std::string &name)
-DistanceSensor *Robot::getDistanceSensor(const std::string &name)
-Emitter *Robot::getEmitter(const std::string &name)
-GPS *Robot::getGPS(const std::string &name)
-Gyro *Robot::getGyro(const std::string &name)
-InertialUnit *Robot::getInertialUnit(const std::string &name)
-LightSensor *Robot::getLightSensor(const std::string &name)
-Motor *Robot::getMotor(const std::string &name)
-Pen *Robot::getPen(const std::string &name)
-PositionSensor *Robot::getPositionSensor(const std::string &name)
-RangeFinder *Robot::getRangeFinder(const std::string &name)
-Receiver *Robot::getReceiver(const std::string &name)
-Servo *Robot::getServo(const std::string &name)
-Speaker *Robot::getSpeaker(const std::string &name)
-TouchSensor *Robot::getTouchSensor(const std::string &name)
+Accelerometer *Robot::getAccelerometer(const std::string &name);
+Camera *Robot::getCamera(const std::string &name);
+Compass *Robot::getCompass(const std::string &name);
+Connector *Robot::getConnector(const std::string &name);
+Display *Robot::getDisplay(const std::string &name);
+DistanceSensor *Robot::getDistanceSensor(const std::string &name);
+Emitter *Robot::getEmitter(const std::string &name);
+GPS *Robot::getGPS(const std::string &name);
+Gyro *Robot::getGyro(const std::string &name);
+InertialUnit *Robot::getInertialUnit(const std::string &name);
+LightSensor *Robot::getLightSensor(const std::string &name);
+Motor *Robot::getMotor(const std::string &name);
+Pen *Robot::getPen(const std::string &name);
+PositionSensor *Robot::getPositionSensor(const std::string &name);
+RangeFinder *Robot::getRangeFinder(const std::string &name);
+Receiver *Robot::getReceiver(const std::string &name);
+Servo *Robot::getServo(const std::string &name);
+Speaker *Robot::getSpeaker(const std::string &name);
+TouchSensor *Robot::getTouchSensor(const std::string &name);
 ```
 
 **Description**
@@ -356,9 +358,12 @@ function `getDistanceSensor` will return a reference to a
 found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
+> Note: These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
+
 **See also**
 
-[section](#wb_robot_step).
+[wb\_robot\_get\_device](#wb_robot_get_device), [wb\_robot\_step](#wb_robot_step).
+
 
 ---
 
@@ -368,11 +373,11 @@ Python.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-WbDeviceTag wb_robot_get_device_by_index(int index)
-int wb_robot_get_number_of_devices()
+WbDeviceTag wb_robot_get_device_by_index(int index);
+int wb_robot_get_number_of_devices();
 ```
 
 **Description**
@@ -416,20 +421,20 @@ for(i=0; i<n_devices; i++) {
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-void wb_robot_battery_sensor_enable(int ms)
-void wb_robot_battery_sensor_disable()
-double wb_robot_battery_sensor_get_value()
-int wb_robot_get_battery_sampling_period(WbDeviceTag tag)
+void wb_robot_battery_sensor_enable(int sampling_period);
+void wb_robot_battery_sensor_disable();
+double wb_robot_battery_sensor_get_value();
+int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
 These functions allow you to measure the present energy level of the robot
 battery. First, it is necessary to enable battery sensor measurements by calling
-the `wb_robot_battery_sensor_enable()` function. The `ms` parameter is expressed
+the `wb_robot_battery_sensor_enable()` function. The `sampling_period` parameter is expressed
 in milliseconds and defines how frequently measurements are performed. After the
 battery sensor is enabled a value can be read from it by calling the
 `wb_robot_battery_sensor_get_value()` function. The returned value corresponds
@@ -450,10 +455,10 @@ disabled.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-double wb_robot_get_basic_time_step()
+double wb_robot_get_basic_time_step();
 ```
 
 **Description**
@@ -469,11 +474,11 @@ This function returns the value of the `basicTimeStep` field of the
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-int wb_robot_get_mode()
-void wb_robot_set_mode(int mode, void *arg)
+int wb_robot_get_mode();
+void wb_robot_set_mode(int mode, void *arg);
 ```
 
 **Description**
@@ -507,10 +512,10 @@ The integers can be compared to the following enumeration items:
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_name()
+const char *wb_robot_get_name();
 ```
 
 **Description**
@@ -537,10 +542,10 @@ world is located in the "projects/samples/demos/worlds" directory of Webots.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_model()
+const char *wb_robot_get_model();
 ```
 
 **Description**
@@ -561,11 +566,11 @@ controller terminates.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-const char * wb_robot_get_data()
-void wb_robot_set_data(const char *data)
+const char * wb_robot_get_data();
+void wb_robot_set_data(const char *data);
 ```
 
 **Description**
@@ -584,11 +589,11 @@ the robot node.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/nodes.h>
      #include <webots/robot.h>
 
-WbNodeType wb_robot_get_type()
+WbNodeType wb_robot_get_type();
 ```
 
 **Description**
@@ -604,10 +609,10 @@ WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_project_path()
+const char *wb_robot_get_project_path();
 ```
 
 **Description**
@@ -626,10 +631,10 @@ char string. It should not be deallocated.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_world_path()
+const char *wb_robot_get_world_path();
 ```
 
 **Description**
@@ -646,11 +651,11 @@ should not be deallocated.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-const char *wb_robot_get_controller_name()
-const char *wb_robot_get_controller_arguments()
+const char *wb_robot_get_controller_name();
+const char *wb_robot_get_controller_arguments();
 ```
 
 **Description**
@@ -666,10 +671,10 @@ Robot::controllerArgs fields.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-bool wb_robot_get_synchronization()
+bool wb_robot_get_synchronization();
 ```
 
 **Description**
@@ -685,10 +690,10 @@ field of the Robot node.
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/robot.h>
 
-double wb_robot_get_time()
+double wb_robot_get_time();
 ```
 
 **Description**
@@ -703,10 +708,10 @@ does not matter whether the controller is synchronized or not.
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
 
-``` c
+```c
 #include <webots/robot.h>
 
-void wb_robot_task_new(void (*task, void *param)
+void wb_robot_task_new(void (*task, void *param);
 ```
 
 **Description**
@@ -721,7 +726,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[section](#wb_robot_mutex_new).
+[wb\_robot\_mutex\_new](#wb_robot_mutex_new).
 
 ---
 
@@ -729,13 +734,13 @@ below) to ensure that such data is not accessed by a different thread.
 
 **wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
 
-``` c
+```c
 #include <webots/robot.h>
 
-WbMutexRef wb_robot_mutex_new()
-void wb_robot_mutex_delete(WbMutexRef mutex)
-void wb_robot_mutex_lock(WbMutexRef mutex)
-void wb_robot_mutex_unlock(WBMutexRef mutex)
+WbMutexRef wb_robot_mutex_new();
+void wb_robot_mutex_delete(WbMutexRef mutex);
+void wb_robot_mutex_lock(WbMutexRef mutex);
+void wb_robot_mutex_unlock(WBMutexRef mutex);
 ```
 
 **Description**
@@ -759,7 +764,7 @@ other threads to lock it.
 
 **See also**
 
-[section](#wb_robot_task_new).
+[wb\_robot\_task\_new](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.
@@ -770,10 +775,10 @@ multi-threaded programming techniques for further information.
 
 **wb\_robot\_window\_custom\_function** - *communication with the robot window*
 
-``` c
+```c
 #include <webots/robot_window.h>
 
-void *wb_robot_window_custom_function(void *arg)
+void *wb_robot_window_custom_function(void *arg);
 ```
 
 **Description**

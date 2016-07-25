@@ -50,20 +50,19 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_compass)}, {[Java](java-api.md#java_compass)}, {[Python](python-api.md#python_compass)}, {[Matlab](matlab-api.md#matlab_compass)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/compass.h>
 
-void wb_compass_enable(WbDeviceTag tag, int ms)
-void wb_compass_disable(WbDeviceTag tag)
-const double *wb_compass_get_values(WbDeviceTag tag)
-int wb_compass_get_sampling_period(WbDeviceTag tag)
+void wb_compass_enable(WbDeviceTag tag, int sampling_period);
+void wb_compass_disable(WbDeviceTag tag);
+const double *wb_compass_get_values(WbDeviceTag tag);
+int wb_compass_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-The `wb_compass_enable()` function turns on the [Compass](#compass) measurement
-each `ms` milliseconds.
-The provided `ms` argument specifies the sensors's sampling period.
+The `wb_compass_enable()` function turns on the [Compass](#compass) measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_compass_disable()` function turns off the [Compass](#compass) device.
@@ -76,7 +75,7 @@ measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the [Compass](#compass) device. Here is the internal
 algorithm of `wb_compass_get_values()` in pseudo-code:
 
-```
+```c
 float[3] wb_compass_get_values() {
   float[3] n = getGlobalNorthDirection();
   n = rotateToCompassOrientation3D(n);

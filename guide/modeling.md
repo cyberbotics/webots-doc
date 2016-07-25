@@ -17,8 +17,8 @@ all.
 (`Physics.mass`) together will have a hard time to keep its error low. For
 example, using a `Joint` to connect a hand and a hair may be unstable if the
 hand/hair mass ratio is large.
-4. Increase the value of `WorldInfo.CFM`. This will make the system more
-numerically robust and less susceptible to stability problems. This will also
+4. Increase the value of `WorldInfo.CFM`. This will make the system
+numerically more robust and less susceptible to stability problems. This will also
 make the system look more *spongy* so a tradeoff has to be found.
 5. Avoid making robots (or other objects) move faster than reasonably for the time
 step (`WorldInfo.basicTimeStep`). Since contact forces are computed and applied
@@ -83,7 +83,7 @@ Tree. A `Joint` is passive if its device is null (or at least not a
 `Motor`-derived node. Alternatively, it is also possible to make a `Motor`
 become passive during the simulation; this can be done like this:
 
-```
+```c
 wb_motor_set_motor_force(motor, 0.0);
 ```
 
@@ -98,7 +98,7 @@ In the plugin code, you must simply add an ODE *fixed joint* between the
 *dBodyID* of the robot part and the static environment. This can be implemented
 like this:
 
-```
+```c
 #include <ode/ode.h>
 #include <plugins/physics.h>
 
@@ -159,19 +159,19 @@ Reducing them to low poly meshes is recommended.
 The rendering is also closely related to the `Materials`. To set a `Material`
 without texture, set only its `Appearance` node. Then you can play with the
 `diffuseColor` field to set its color (avoid to use pure colors, balancing the
-RGB components give better results). To set a `Material` with texture, set only
+RGB components gives better results). To set a `Material` with texture, set only
 its `ImageTexture` node. Eventually, the `specularColor` field can be set to a
 gray value to set a reflection on the object. The other fields (especially the
 `ambientIntensity` and the `emissiveColor` fields) shouldn't be modified except
 in specific situations.
 
-The `color` field of the `ElevationGrid` shouldn't be use for a realistic
+The `color` field of the `ElevationGrid` shouldn't be used for a realistic
 rendering because it is not affected by the ambient light with the same way as
 the other `Shapes`.
 
 Here is a methodology to set up the lights:
 
-1. Place the lights at the desired places. Often a single directional light
+1. Place the lights at the desired places. Often, a single directional light
 pointing down is sufficient.
 2. Set both their `ambientIntensity` and their `intensity` fields to 0.
 3. Increase the `ambientIntensity` of the main light. The result will be the

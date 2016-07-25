@@ -4,7 +4,7 @@
 Zoom {
    SFFloat     maxFieldOfView 1.5 # (rad)
    SFFloat     minFieldOfView 0.5 # (rad)
- }
+}
 ```
 
 ### Description

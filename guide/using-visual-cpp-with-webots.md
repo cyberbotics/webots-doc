@@ -14,7 +14,7 @@ classes and methods that can be used in C++ controllers only.
 Two Visual C++ projects examples are included in Webots distribution:
 "WEBOTS\_HOME\projects\robots\khr-2hv\controllers\khr2\khr2.vcproj" and
 "WEBOTS\_HOME\projects\robots\khr-2hv\plugins\physics\khr2\physics.vcproj".
-However in principle any C or C++ controller from Webots distribution can be
+However, in principle any C or C++ controller from Webots distribution can be
 turned into a Visual C++ project.
 
 ### Configuration
@@ -75,8 +75,8 @@ enter following configuration:
     This will tell Visual C++ where to find Webots C API (.h files).
 
     By default Visual C++ places the .exe file in a "Debug" or "Release"
-    subdirectory. However order to be executed by Webots, the .exe file must be
-    placed directly at the root of the "MyController" directory. So in this example
+    subdirectory. However, in order to be executed by Webots, the .exe file must be
+    placed directly at the root of the "MyController" directory. So, in this example
     the .exe should be there: "MyProject\controllers\MyController\MyController.exe".
     Consequently the linker output file should be configured like this:
 
@@ -123,7 +123,7 @@ and verify that your robot is associated with the correct controller: In the
 `Scene tree`, expand the robot node and check the `controller` field. It should
 be: `controller "MyController"`. Otherwise you should change it: hit the `...`
 (ellipsis) button, this opens a selection dialog. In the selection dialog choose
-"MyController". Then hit the `Save` button in Webots main window. Finally you
+"MyController". Then hit the `Save` button in Webots' main window. Finally you
 can hit the `Run` button to start the simulation. At this point the simulation
 should be using your Visual C++ controller.
 

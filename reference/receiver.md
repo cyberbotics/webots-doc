@@ -83,24 +83,24 @@ noise is not dependent on the distance between emitter-receiver.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
-void wb_receiver_enable(WbDeviceTag tag, int ms)
-void wb_receiver_disable(WbDeviceTag tag)
-int wb_receiver_get_sampling_period(WbDeviceTag tag)
+void wb_receiver_enable(WbDeviceTag tag, int sampling_period);
+void wb_receiver_disable(WbDeviceTag tag);
+int wb_receiver_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
 `wb_receiver_enable()` starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate
-of once every `ms` milliseconds. Incoming data packet are appended to the tail
+of once every `sampling_period` (expressed in milliseconds). Incoming data packet are appended to the tail
 of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
 data packets will be discarded if the receiver's buffer size (specified in the
 [Receiver](#receiver) node) is exceeded. To avoid buffer overflow, the data
 packets should be read at a high enough rate by the controller program.
-The provided `ms` argument specifies the [Receiver](#receiver)'s sampling period.
+The `sampling_period` argument specifies the sampling period of the [Receiver](#receiver) and is expressed in milliseconds.
 The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the first sampling period elapsed.
 
 The function `wb_receiver_disable()` stops the background listening.
@@ -116,11 +116,11 @@ the `wb_receiver_enable()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
-int wb_receiver_get_queue_length(WbDeviceTag tag)
-void wb_receiver_next_packet(WbDeviceTag tag)
+int wb_receiver_get_queue_length(WbDeviceTag tag);
+void wb_receiver_next_packet(WbDeviceTag tag);
 ```
 
 **Description**
@@ -188,11 +188,11 @@ code that is not robust.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
-const void *wb_receiver_get_data(WbDeviceTag tag)
-int wb_receiver_get_data_size(WbDeviceTag tag)
+const void *wb_receiver_get_data(WbDeviceTag tag);
+int wb_receiver_get_data_size(WbDeviceTag tag);
 ```
 
 **Description**
@@ -218,10 +218,12 @@ function of the [Emitter](emitter.md) device, using the functions of the struct
 module is recommended for sending primitive data types. Here is an example for
 getting the data:
 
->     import struct
->     #...
->     message=receiver.getData()
->     dataList=struct.unpack("chd",message)
+> ```python
+> import struct
+> #...
+> message=receiver.getData()
+> dataList=struct.unpack("chd",message)
+> ```
 
 <!-- -->
 
@@ -231,22 +233,24 @@ receiving code is responsible for extracting the data from the *libpointer*
 using MATLAB's `setdatatype()` and `get()` functions. Here is an example on how
 to send and receive a 2x3 MATLAB matrix.
 
->     % sending robot
->     emitter = wb_robot_get_device('emitter');
+> ```matlab
+> % sending robot
+> emitter = wb_robot_get_device('emitter');
 >
->     A = [1, 2, 3; 4, 5, 6];
->     wb_emitter_send(emitter, A);
+> A = [1, 2, 3; 4, 5, 6];
+> wb_emitter_send(emitter, A);
 
->     % receiving robot
->     receiver = wb_robot_get_device('receiver');
->     wb_receiver_enable(receiver, TIME_STEP);
+> % receiving robot
+> receiver = wb_robot_get_device('receiver');
+> wb_receiver_enable(receiver, TIME_STEP);
 >
->     while wb_receiver_get_queue_length(receiver) > 0
->       pointer = wb_receiver_get_data(receiver);
->       setdatatype(pointer, 'doublePtr', 2, 3);
->       A = get(pointer, 'Value');
->       wb_receiver_next_packet(receiver);
->     end
+> while wb_receiver_get_queue_length(receiver) > 0
+>   pointer = wb_receiver_get_data(receiver);
+>   setdatatype(pointer, 'doublePtr', 2, 3);
+>   A = get(pointer, 'Value');
+>   wb_receiver_next_packet(receiver);
+> end
+> ```
 
 > The MATLAB `wb_receiver_get_data()` function can also take a second argument
 that specifies the type of the expected data. In this case the function does not
@@ -254,14 +258,16 @@ return a *libpointer* but an object of the specified type, and it is not
 necessary to call `setdatatype()` and `get()`. For example
 `wb_receiver_get_data()` can be used like this:
 
->     % receiving robot
->     receiver = wb_robot_get_device('receiver');
->     wb_receiver_enable(receiver, TIME_STEP);
+> ```matlab
+> % receiving robot
+> receiver = wb_robot_get_device('receiver');
+> wb_receiver_enable(receiver, TIME_STEP);
 >
->     while wb_receiver_get_queue_length(receiver) > 0
->       A = wb_receiver_get_data(receiver, 'double');
->       wb_receiver_next_packet(receiver);
->     end
+> while wb_receiver_get_queue_length(receiver) > 0
+>   A = wb_receiver_get_data(receiver, 'double');
+>   wb_receiver_next_packet(receiver);
+> end
+> ```
 
 > The available types are 'uint8', 'double' and 'string'. More sophisticated data
 typed must be accessed explicitly using `setdatatype()` and `get()`.
@@ -274,11 +280,11 @@ typed must be accessed explicitly using `setdatatype()` and `get()`.
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
-double wb_receiver_get_signal_strength(WbDeviceTag tag)
-const double *wb_receiver_get_emitter_direction(WbDeviceTag tag)
+double wb_receiver_get_signal_strength(WbDeviceTag tag);
+const double *wb_receiver_get_emitter_direction(WbDeviceTag tag);
 ```
 
 **Description**
@@ -317,11 +323,11 @@ It is illegal to call this function if the receiver's queue is empty (`wb_receiv
 
 {[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/receiver.h>
 
-void wb_receiver_set_channel(WbDeviceTag tag, int channel)
-int wb_receiver_get_channel(WbDeviceTag tag)
+void wb_receiver_set_channel(WbDeviceTag tag, int channel);
+int wb_receiver_get_channel(WbDeviceTag tag);
 ```
 
 **Description**

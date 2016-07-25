@@ -99,6 +99,7 @@ Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to gene
   - Times New Roman
   - Trebuchet MS
   - Verdana
+
 In addition to these fonts, it is possible to add other TrueType fonts file in the `PROJECT_HOME/fonts` directory.
 
 ### Example

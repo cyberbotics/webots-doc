@@ -50,7 +50,7 @@ include external Lua modules.
 - Lua standard output and error streams are redirected on the Webots console
 (written respectively in regular and in red colors). This allows developers to
 use the Lua regular functions to write on these streams.
-- The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can for example be used to generate textures.
+- The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can be used, for example, to generate textures.
 
 %figure "VRML type to Lua type conversion"
 
@@ -85,7 +85,7 @@ use the Lua regular functions to write on these streams.
 
 ### Texture generation
 
-Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate texture to be used by the PROTO file. The following fonts are available to write on the texture:
+Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO. The following standard fonts are available to write on the texture:
   - Arial
   - Arial Black
   - Comic Sans MS
@@ -100,7 +100,7 @@ Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to gene
   - Trebuchet MS
   - Verdana
 
-In addition to these fonts, it is possible to add other TrueType fonts file in the `PROJECT_HOME/fonts` directory.
+In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 
 ### Example
 

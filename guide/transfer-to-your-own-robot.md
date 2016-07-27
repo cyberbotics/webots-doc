@@ -56,7 +56,7 @@ order to leave the controller in a clean fashion.
 
 Once linked with your own remote control plugin, you can control your real robot
 by running the simulation in Webots. It might be useful to also add a robot
-window (see [this section](controller-plugin.md#native-robot-window-deprecated)) to
+window (see [this section](controller-plugin.md#robot-window)) to
 graphically display specific sensor values, motor commands or a stop button.
 
 Such a remote control system is designed to be implemented in C/C++ as explained

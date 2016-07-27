@@ -65,7 +65,7 @@ as the one used to build the controllers):
 
 %end
 
-### HTML robot window
+### Robot window
 
 A robot window allows the programmer to efficiently create custom user interfaces for his robots. Robot windows can be opened by double-clicking on the virtual robot, or by selecting the `Robot | Show Robot Window` menu item. The *window* field of the `Robot` node specifies a robot window (cf. documentation in the reference manual).
 

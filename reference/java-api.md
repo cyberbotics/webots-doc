@@ -141,6 +141,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setColor](display.md#wb_display_set_color)(int color);                                                                       |
 | &nbsp;&nbsp; public void [setAlpha](display.md#wb_display_set_color)(double alpha);                                                                    |
 | &nbsp;&nbsp; public void [setOpacity](display.md#wb_display_set_color)(double opacity);                                                                |
+| &nbsp;&nbsp; public void [setFont](display.md#wb_display_set_color)(String font, int size);                                                            |
 | &nbsp;&nbsp; public void [attachCamera](display.md#wb_display_attach_camera)(Camera camera);                                                           |
 | &nbsp;&nbsp; public void [detachCamera](display.md#wb_display_attach_camera)();                                                                        |
 | &nbsp;&nbsp; public void [drawPixel](display.md#wb_display_draw_pixel)(int x1, int y1);                                                                |

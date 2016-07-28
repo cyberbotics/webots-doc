@@ -142,6 +142,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setColor](display.md#wb_display_set_color)(int color);                                                                          |
 | &nbsp;&nbsp; virtual void [setAlpha](display.md#wb_display_set_color)(double alpha);                                                                       |
 | &nbsp;&nbsp; virtual void [setOpacity](display.md#wb_display_set_color)(double opacity);                                                                   |
+| &nbsp;&nbsp; virtual void [setFont](display.md#wb_display_set_color)(const std::string &font, int size);                                                   |
 | &nbsp;&nbsp; virtual void [attachCamera](display.md#wb_display_attach_camera)(Camera *camera);                                                             |
 | &nbsp;&nbsp; virtual void [detachCamera](display.md#wb_display_attach_camera)();                                                                           |
 | &nbsp;&nbsp; virtual void [drawPixel](display.md#wb_display_draw_pixel)(int x1, int y1);                                                                   |

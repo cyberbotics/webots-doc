@@ -152,7 +152,7 @@ formula.
 
 %end
 
-`wb_display_set_font()` defines the font and the size used for the characters drawn with the `wb_display_draw_text` function. The following standard fonts are available:
+`wb_display_set_font()` defines the font and the size (in pixel) used for the characters drawn with the `wb_display_draw_text` function. The following standard fonts are available:
   - Arial
   - Arial Black
   - Comic Sans MS

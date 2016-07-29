@@ -102,7 +102,7 @@ fields.
 
 **Name**
 
-**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of a display*
+**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity**, **wb\_display\_set\_font**  - *set the drawing properties of a display*
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
@@ -112,11 +112,12 @@ fields.
 void wb_display_set_color(WbDeviceTag tag, int color);
 void wb_display_set_alpha(WbDeviceTag tag, double alpha);
 void wb_display_set_opacity(WbDeviceTag tag, double opacity);
+void wb_display_set_font(WbDeviceTag tag, const char *font, int size);
 ```
 
 **Description**
 
-These three functions define the context in which the subsequent drawing
+These four functions define the context in which the subsequent drawing
 commands (see [draw primitive functions](#wb_display_draw_pixel)) will be
 applied.
 
@@ -150,6 +151,23 @@ formula.
 ![display_opacity.png](images/display_opacity.png)
 
 %end
+
+`wb_display_set_font()` defines the font and the size (in pixel) used for the characters drawn with the `wb_display_draw_text` function. The following standard fonts are available:
+  - Arial
+  - Arial Black
+  - Comic Sans MS
+  - Courier New
+  - Georgia
+  - Impact
+  - Lucida Console
+  - Lucida Sans Unicode
+  - Palatino Linotype
+  - Tahoma
+  - Times New Roman
+  - Trebuchet MS
+  - Verdana
+
+In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 
 > **note** [Matlab]:
 In the Matlab version of `wb_display_set_color()` the `color` argument must be a

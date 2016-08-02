@@ -111,7 +111,7 @@ The following tables describe the Matlab functions.
 | [wb\_display\_set\_color](display.md#wb_display_set_color)(tag, [r g b])                             |
 | [wb\_display\_set\_alpha](display.md#wb_display_set_color)(tag, alpha)                               |
 | [wb\_display\_set\_opacity](display.md#wb_display_set_color)(tag, opacity)                           |
-| [wb\_display\_set\_font](display.md#wb_display_set_color)(tag, font, size)                           |
+| [wb\_display\_set\_font](display.md#wb_display_set_color)(tag, font, size, anti_aliasing)            |
 | [wb\_display\_attach\_camera](display.md#wb_display_attach_camera)(tag, camera_tag)                  |
 | [wb\_display\_detach\_camera](display.md#wb_display_attach_camera)(tag)                              |
 | [wb\_display\_draw\_pixel](display.md#wb_display_draw_pixel)(tag, x, y)                              |

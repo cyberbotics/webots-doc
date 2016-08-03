@@ -102,8 +102,11 @@ The export line should however be included in a configuration script like
 "/etc/profile", so that it is set properly for every session.
 
 Some additional libraries are needed in order to properly run Webots. In
-particular *libjpeg62*, *libav-tools*, *libpci* and *libavcodec-extra-54* have
+particular *libjpeg62*, *libav-tools*, *libpci3* and *libavcodec-ffmpeg-extra56* have
 to be installed on the system.
+
+> **Note**:
+On old versions of Ubuntu (before 16.04) *libpci3* should be replaced by *libpci* and *libavcodec-ffmpeg-extra56* by *libavcodec-extra-54*.
 
 #### From the DEB package
 

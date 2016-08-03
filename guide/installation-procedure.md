@@ -105,6 +105,9 @@ Some additional libraries are needed in order to properly run Webots. In
 particular *libjpeg62*, *libav-tools*, *libpci* and *libavcodec-extra-54* have
 to be installed on the system.
 
+> **Note**:
+From Ubuntu 16.04 *libpci* is replaced by *libpci3* and *libavcodec-extra-54* by *libavcodec-ffmpeg-extra56*.
+
 #### From the DEB package
 
 This procedure explains how to install Webots from the DEB package (having the

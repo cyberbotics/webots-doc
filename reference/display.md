@@ -112,7 +112,7 @@ fields.
 void wb_display_set_color(WbDeviceTag tag, int color);
 void wb_display_set_alpha(WbDeviceTag tag, double alpha);
 void wb_display_set_opacity(WbDeviceTag tag, double opacity);
-void wb_display_set_font(WbDeviceTag tag, const char *font, int size);
+void wb_display_set_font(WbDeviceTag tag, const char *font, int size, bool anti_aliasing);
 ```
 
 **Description**
@@ -152,7 +152,7 @@ formula.
 
 %end
 
-`wb_display_set_font()` defines the font and the size (in pixel) used for the characters drawn with the `wb_display_draw_text` function. The following standard fonts are available:
+`wb_display_set_font()` defines the font and the size (in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters. The following standard fonts are available:
   - Arial
   - Arial Black
   - Comic Sans MS

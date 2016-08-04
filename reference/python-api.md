@@ -135,7 +135,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setColor](display.md#wb_display_set_color)(self, color)                     |
 | &nbsp;&nbsp; def [setAlpha](display.md#wb_display_set_color)(self, alpha)                     |
 | &nbsp;&nbsp; def [setOpacity](display.md#wb_display_set_color)(self, opacity)                 |
-| &nbsp;&nbsp; def [setFont](display.md#wb_display_set_color)(self, font, size)                 |
+| &nbsp;&nbsp; def [setFont](display.md#wb_display_set_color)(self, font, size, antiAliasing)   |
 | &nbsp;&nbsp; def [attachCamera](display.md#wb_display_attach_camera)(self, camera)            |
 | &nbsp;&nbsp; def [detachCamera](display.md#wb_display_attach_camera)(self)                    |
 | &nbsp;&nbsp; def [drawPixel](display.md#wb_display_draw_pixel)(self, x1, y1)                  |

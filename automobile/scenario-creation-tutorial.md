@@ -20,14 +20,16 @@ This importer uses splines to improve and smooth the path of the roads, unfortun
 > **note**:
 It is strongly recommended to not use the 3D feature of the [OpenStreetMap importer](openstreetmap-importer.md) otherwise it will not be possible to add traffic using SUMO.
 
-Once the conversion is complete, the importer will display the number of objects generated, the map offset and reference coordinates:
+Once the conversion is complete, the importer will display the number of objects generated, the map offset, the reference coordinates and the projection used:
 
 ```
  * map centered with this offset: x_offset_value,y_offset_value.
  * reference coordinates: latitude_value,longitude_value.
+ * projection used: 'projection parameters'.
 ```
 
-It is important that you keep these offset and reference coordinates since you will need to reuse them to generate traffic with SUMO.
+It is important that you keep these offset and projection since you will need to reuse them to generate traffic with SUMO.
+The projection parameters should looks like: `'+proj=utm +north +zone=32 +lon_0=6.505000 +lat_0=46.511000 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs'`
 
 From now you should be able to open the generated world file directly in Webots:
 
@@ -43,7 +45,7 @@ From now you should be able to open the generated world file directly in Webots:
 We can also use the previously downloaded map to generate the SUMO network file. You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for this:
 
 ```sh
-netconvert --osm-files map.osm -o sumo.net.xml --geometry.remove --roundabouts.guess --ramps.guess --junctions.join --osm.railway.oneway-default --tls.guess-signals --tls.discard-simple --tls.join --proj "+proj=robin +lon_0=longitude_value +lat_0=latitude_value +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs"
+netconvert --osm-files map.osm -o sumo.net.xml --geometry.remove --roundabouts.guess --ramps.guess --junctions.join --osm.railway.oneway-default --tls.guess-signals --tls.discard-simple --tls.join --proj "projection parameters"
 ```
 
 > **note**:

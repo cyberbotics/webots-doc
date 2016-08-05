@@ -16,33 +16,36 @@ purpose.
 
 ```
 Road {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFFloat    width                     7
-      SFInt32    numberOfLanes             2
-      MFBool     dashedLine                TRUE
-      SFFloat    roadBorderHeight          0.15
-      MFFloat    roadBorderWidth           [ 0.8 ]
-      SFBool     road                      TRUE
-      SFBool     rightBorder               TRUE
-      SFBool     leftBorder                TRUE
-      SFBool     bottom                    FALSE
-      SFBool     rightSide                 TRUE
-      SFBool     leftSide                  TRUE
-      MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]
-      MFFloat    roadTilt                  [ 0, 0]
-      MFFloat    startingAngle             [ ]
-      MFFloat    endingAngle               [ ]
-      SFInt32    splineSubdivision         4
-      MFString   texture                   "textures/road.jpg"
-      SFFloat    textureScale              2
-      MFString   pavementTexture           "textures/pavement.jpg"
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE
-      SFBool     rightBorderBoundingObject FALSE
-      SFBool     leftBorderBoundingObject  FALSE
-      SFString   contactMaterial           "default"
-  }
+  SFVec3f    translation               0 0 0
+  SFRotation rotation                  0 1 0 0
+  SFFloat    width                     7
+  SFInt32    numberOfLanes             2
+  MFBool     dashedLine                TRUE
+  SFFloat    roadBorderHeight          0.15
+  MFFloat    roadBorderWidth           [ 0.8 ]
+  SFBool     road                      TRUE
+  SFBool     rightBorder               TRUE
+  SFBool     leftBorder                TRUE
+  SFBool     bottom                    FALSE
+  SFBool     rightSide                 TRUE
+  SFBool     leftSide                  TRUE
+  MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]
+  MFFloat    roadTilt                  [ 0, 0]
+  MFFloat    startingAngle             [ ]
+  MFFloat    endingAngle               [ ]
+  MFString   startLine                 [ ]
+  MFString   endLine                   [ ]
+  SFInt32    splineSubdivision         4
+  MFString   texture                   "textures/road.jpg"
+  SFFloat    textureScale              2
+  MFString   pavementTexture           "textures/pavement.jpg"
+  MFString   bottomTexture             []
+  SFBool     locked                    TRUE
+  SFBool     roadBoundingObject        FALSE
+  SFBool     rightBorderBoundingObject FALSE
+  SFBool     leftBorderBoundingObject  FALSE
+  SFString   contactMaterial           "default"
+}
 ```
 
 #### Road field Summary
@@ -72,11 +75,14 @@ in case road assembly).
 is less value than way-points, 0 is used for the last remaining way-points).
 - `startingAngle`: Defines the angle of the road at the first way-point.
 - `endingAngle`: Defines the angle of the road at the last way-point.
+- `startLine`: Defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this fied.
+- `endLine`: Defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 - `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
 value is lower than 0, the interpolation is disabled).
 - `texture`: Defines the texture to be used for the road.
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 - `roadBoundingObject`: Defines if the road should have a bounding object.
 - `rightBorderBoundingObject`: Defines if the right sidewalk should have a
 bounding object.
@@ -96,31 +102,31 @@ create a straight road.
 
 ```
 StraightRoadSegment {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFFloat    width                     7
-      SFInt32    numberOfLanes             2
-      MFBool     dashedLine                TRUE
-      SFFloat    roadBorderHeight          0.15
-      SFFloat    startingRoadBorderWidth   0.8
-      SFFloat    endingRoadBorderWidth     0.8
-      SFBool     rightBorder               TRUE
-      SFBool     leftBorder                TRUE
-      SFBool     bottom                    FALSE
-      SFBool     rightSide                 TRUE
-      SFBool     leftSide                  TRUE
-      SFFloat    length                    10
-      SFFloat    startingRoadTilt          0
-      SFFloat    endingRoadTilt            0
-      MFString   texture                   "textures/road.jpg"
-      SFFloat    textureScale              2
-      MFString   pavementTexture           "textures/pavement.jpg"
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE
-      SFBool     rightBorderBoundingObject FALSE
-      SFBool     leftBorderBoundingObject  FALSE
-      SFString   contactMaterial           "default"
-  }
+  SFVec3f    translation               0 0 0
+  SFRotation rotation                  0 1 0 0
+  SFFloat    width                     7
+  SFInt32    numberOfLanes             2
+  MFBool     dashedLine                TRUE
+  SFFloat    roadBorderHeight          0.15
+  SFFloat    startingRoadBorderWidth   0.8
+  SFFloat    endingRoadBorderWidth     0.8
+  SFBool     rightBorder               TRUE
+  SFBool     leftBorder                TRUE
+  SFBool     bottom                    FALSE
+  SFBool     rightSide                 TRUE
+  SFBool     leftSide                  TRUE
+  SFFloat    length                    10
+  SFFloat    startingRoadTilt          0
+  SFFloat    endingRoadTilt            0
+  MFString   texture                   "textures/road.jpg"
+  SFFloat    textureScale              2
+  MFString   pavementTexture           "textures/pavement.jpg"
+  SFBool     locked                    TRUE
+  SFBool     roadBoundingObject        FALSE
+  SFBool     rightBorderBoundingObject FALSE
+  SFBool     leftBorderBoundingObject  FALSE
+  SFString   contactMaterial           "default"
+}
 ```
 
 #### StraightRoadSegment Field Summary
@@ -149,29 +155,29 @@ a regularly curved road.
 
 ```
 CurvedRoadSegment {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFFloat    width                     7
-      SFInt32    numberOfLanes             2
-      MFBool     dashedLine                TRUE
-      SFFloat    roadBorderHeight          0.15
-      MFFloat    roadBorderWidth           [ 0.8 ]
-      SFBool     rightBorder               TRUE
-      SFBool     leftBorder                TRUE
-      SFBool     bottom                    FALSE
-      SFFloat    curvatureRadius           10
-      SFFloat    totalAngle                1.5708
-      SFInt32    subdivision               8
-      SFFloat    tilt                      0
-      MFString   texture                   "textures/road.jpg"
-      SFFloat    textureScale              2
-      MFString   pavementTexture           "textures/pavement.jpg"
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE
-      SFBool     rightBorderBoundingObject FALSE
-      SFBool     leftBorderBoundingObject  FALSE
-      SFString   contactMaterial           "default"
-  }
+  SFVec3f    translation               0 0 0
+  SFRotation rotation                  0 1 0 0
+  SFFloat    width                     7
+  SFInt32    numberOfLanes             2
+  MFBool     dashedLine                TRUE
+  SFFloat    roadBorderHeight          0.15
+  MFFloat    roadBorderWidth           [ 0.8 ]
+  SFBool     rightBorder               TRUE
+  SFBool     leftBorder                TRUE
+  SFBool     bottom                    FALSE
+  SFFloat    curvatureRadius           10
+  SFFloat    totalAngle                1.5708
+  SFInt32    subdivision               8
+  SFFloat    tilt                      0
+  MFString   texture                   "textures/road.jpg"
+  SFFloat    textureScale              2
+  MFString   pavementTexture           "textures/pavement.jpg"
+  SFBool     locked                    TRUE
+  SFBool     roadBoundingObject        FALSE
+  SFBool     rightBorderBoundingObject FALSE
+  SFBool     leftBorderBoundingObject  FALSE
+  SFString   contactMaterial           "default"
+}
 ```
 
 #### CurvedRoadSegment Field Summary
@@ -199,31 +205,31 @@ garage input ramp.
 
 ```
 Helicoidal {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFFloat    width                     7
-      SFInt32    numberOfLanes             2
-      MFBool     dashedLine                TRUE
-      SFFloat    roadBorderHeight          0.15
-      SFFloat    roadBorderWidth           0.8
-      SFBool     rightBorder               TRUE
-      SFBool     leftBorder                TRUE
-      SFBool     bottom                    FALSE
-      SFBool     rightSide                 TRUE
-      SFBool     leftSide                  TRUE
-      SFFloat    height                    20
-      SFFloat    radius                    15
-      SFFloat    heigthStep                5
-      SFFloat    subdivision               64
-      MFString   texture                   "textures/road.jpg"
-      SFFloat    textureScale              2
-      MFString   pavementTexture           "textures/pavement.jpg"
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE
-      SFBool     rightBorderBoundingObject FALSE
-      SFBool     leftBorderBoundingObject  FALSE
-      SFString   contactMaterial           "default"
-  }
+  SFVec3f    translation               0 0 0
+  SFRotation rotation                  0 1 0 0
+  SFFloat    width                     7
+  SFInt32    numberOfLanes             2
+  MFBool     dashedLine                TRUE
+  SFFloat    roadBorderHeight          0.15
+  SFFloat    roadBorderWidth           0.8
+  SFBool     rightBorder               TRUE
+  SFBool     leftBorder                TRUE
+  SFBool     bottom                    FALSE
+  SFBool     rightSide                 TRUE
+  SFBool     leftSide                  TRUE
+  SFFloat    height                    20
+  SFFloat    radius                    15
+  SFFloat    heigthStep                5
+  SFFloat    subdivision               64
+  MFString   texture                   "textures/road.jpg"
+  SFFloat    textureScale              2
+  MFString   pavementTexture           "textures/pavement.jpg"
+  SFBool     locked                    TRUE
+  SFBool     roadBoundingObject        FALSE
+  SFBool     rightBorderBoundingObject FALSE
+  SFBool     leftBorderBoundingObject  FALSE
+  SFString   contactMaterial           "default"
+}
 ```
 
 #### Helicoidal Field Summary
@@ -248,37 +254,37 @@ The `Roundabout` PROTO represents a roundabout intersection.
 
 ```
 Roundabout {
-      SFVec3f    translation              0 0 0
-      SFRotation rotation                 0 1 0 0
-      SFInt32    subdivision              16
-      SFInt32    numberOfLanes            2
-      SFBool     bottom                   FALSE
-      SFBool     border                   TRUE
-      SFFloat    borderWidth              0.8
-      SFFloat    borderHeight             0.2
-      SFFloat    innerRadius              4
-      SFFloat    outerRadius              8
-      SFBool     center                   TRUE
-      SFVec2f    centerTextureScale       4 4
-      SFInt32    roadNumber               4
-      SFFloat    startRoadsLenght         5
-      SFFloat    startRoadsWith           7
-      SFInt32    startRoadsNumberOfLanes  2
-      MFBool     startRoadsDashedLine     FALSE
-      SFFloat    startRoadsSignsLength    0.6
-      SFBool     roadBoundingObject       FALSE
-      SFBool     borderBoundingObject     FALSE
-      SFBool     centerBoundingObject     FALSE
-      SFString   contactMaterial          "default"
-      SFBool     locked                   TRUE
-      MFString   centerTexture            "textures/grass.png"
-      MFString   texture                  "textures/road_no_border_line.jpg"
-      SFFloat    textureScale             2
-      MFString   junctionTexture          "textures/asphalt.jpg"
-      MFString   startRoadsTexture        "textures/road.jpg"
-      MFString   inputTexture             "textures/intersection_input.jpg"
-      MFString   outputTexture            "textures/intersection_output.jpg"
-  }
+  SFVec3f    translation              0 0 0
+  SFRotation rotation                 0 1 0 0
+  SFInt32    subdivision              16
+  SFInt32    numberOfLanes            2
+  SFBool     bottom                   FALSE
+  SFBool     border                   TRUE
+  SFFloat    borderWidth              0.8
+  SFFloat    borderHeight             0.2
+  SFFloat    innerRadius              4
+  SFFloat    outerRadius              8
+  SFBool     center                   TRUE
+  SFVec2f    centerTextureScale       4 4
+  SFInt32    roadNumber               4
+  SFFloat    startRoadsLenght         5
+  SFFloat    startRoadsWith           7
+  SFInt32    startRoadsNumberOfLanes  2
+  MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
+                                        "textures/road_line_triangle.png" ]
+  MFString   startRoadsEndLine        [ ]
+  MFBool     startRoadsDashedLine     FALSE
+  SFBool     roadBoundingObject       FALSE
+  SFBool     borderBoundingObject     FALSE
+  SFBool     centerBoundingObject     FALSE
+  SFString   contactMaterial          "default"
+  SFBool     locked                   TRUE
+  MFString   centerTexture            "textures/grass.png"
+  MFString   texture                  "textures/road_no_border_line.jpg"
+  SFFloat    textureScale             2
+  MFString   junctionTexture          "textures/asphalt.jpg"
+  MFString   startRoadsTexture        "textures/road.jpg"
+}
 ```
 
 #### Roundabout Field Summary
@@ -298,8 +304,6 @@ object.
 - `roadNumber`: Defines the number of roads entering/leaving the roundabout.
 - `startRoads...`: Defines the properties of the roads entering/leaving the
 roundabout.
-- `inputTexture`: Defines the sign between the input lanes and the roundabout.
-- `outputTexture`: Defines the sign between the output lanes and the roundabout.
 
 ### RoadIntersection
 
@@ -313,28 +317,28 @@ The `RoadIntersection` PROTO represents a perpendicular intersection.
 
 ```
 RoadIntersection {
-      SFVec3f    translation                    0 0 0
-      SFRotation rotation                       0 1 0 0
-      SFInt32    roadNumber                     4
-      SFFloat    roadsWith                      7
-      SFBool     startRoads                     TRUE
-      SFFloat    startRoadsLenght               5
-      SFInt32    startRoadsNumberOfLanes        2
-      MFBool     startRoadsDashedLine           FALSE
-      SFFloat    startRoadsSignsLength          0.6
-      SFBool     startRoadBorder                TRUE
-      SFFloat    startRoadBorderHeight          0.15
-      SFFloat    startRoadBorderWidth           0.8
-      SFBool     startRoadBorderboundingObject  FALSE
-      SFBool     boundingObject                 FALSE
-      SFString   contactMaterial                "default"
-      SFBool     bottom                         FALSE
-      SFBool     locked                         TRUE
-      MFString   texture                        "textures/asphalt.jpg"
-      MFString   inputTexture                   "textures/intersection_input.jpg"
-      MFString   outputTexture                  "textures/intersection_output.jpg"
-      MFString   startRoadsTexture              "textures/road.jpg"
-  }
+  SFVec3f    translation                    0 0 0
+  SFRotation rotation                       0 1 0 0
+  SFInt32    roadNumber                     4
+  SFFloat    roadsWith                      7
+  SFBool     startRoads                     TRUE
+  SFFloat    startRoadsLenght               5
+  SFInt32    startRoadsNumberOfLanes        2
+  MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
+                                              "textures/road_line_triangle.png" ]
+  MFString   startRoadsEndLine              [ ]
+  MFBool     startRoadsDashedLine           FALSE
+  SFBool     startRoadBorder                TRUE
+  SFFloat    startRoadBorderHeight          0.15
+  SFFloat    startRoadBorderWidth           0.8
+  SFBool     startRoadBorderboundingObject  FALSE
+  SFBool     boundingObject                 FALSE
+  SFString   contactMaterial                "default"
+  SFBool     bottom                         FALSE
+  SFBool     locked                         TRUE
+  MFString   texture                        "textures/asphalt.jpg"
+  MFString   startRoadsTexture              "textures/road.jpg"
+}
 ```
 
 ### LaneSeparation
@@ -349,30 +353,30 @@ The `LaneSeparation` PROTO represents a road spliting into two.
 
 ```
 LaneSeparation {
-      SFVec3f    translation                 0 0 0
-      SFRotation rotation                    0 1 0 0
-      SFFloat    width                       14
-      SFFloat    length                      5
-      SFInt32    numberOfLanes               4
-      SFInt32    numberOfleavingLanes        2
-      SFBool     newLaneLeft                 TRUE
-      MFBool     dashedLine                  TRUE
-      SFFloat    roadBorderHeight            0.15
-      SFFloat    roadBorderWidth             0.8
-      SFBool     rightBorder                 TRUE
-      SFBool     leftBorder                  TRUE
-      SFBool     centralBorder               TRUE
-      SFBool     bottom                      FALSE
-      MFString   texture                     "textures/road.jpg"
-      SFFloat    textureScale                2
-      MFString   pavementTexture             "textures/pavement.jpg"
-      SFBool     locked                      TRUE
-      SFBool     roadBoundingObject          FALSE
-      SFBool     rightBorderBoundingObject   FALSE
-      SFBool     leftBorderBoundingObject    FALSE
-      SFBool     centralBorderBoundingObject FALSE
-      SFString   contactMaterial             "default"
-  }
+  SFVec3f    translation                 0 0 0
+  SFRotation rotation                    0 1 0 0
+  SFFloat    width                       14
+  SFFloat    length                      5
+  SFInt32    numberOfLanes               4
+  SFInt32    numberOfleavingLanes        2
+  SFBool     newLaneLeft                 TRUE
+  MFBool     dashedLine                  TRUE
+  SFFloat    roadBorderHeight            0.15
+  SFFloat    roadBorderWidth             0.8
+  SFBool     rightBorder                 TRUE
+  SFBool     leftBorder                  TRUE
+  SFBool     centralBorder               TRUE
+  SFBool     bottom                      FALSE
+  MFString   texture                     "textures/road.jpg"
+  SFFloat    textureScale                2
+  MFString   pavementTexture             "textures/pavement.jpg"
+  SFBool     locked                      TRUE
+  SFBool     roadBoundingObject          FALSE
+  SFBool     rightBorderBoundingObject   FALSE
+  SFBool     leftBorderBoundingObject    FALSE
+  SFBool     centralBorderBoundingObject FALSE
+  SFString   contactMaterial             "default"
+}
 ```
 
 #### LaneSeparation Field Summary
@@ -400,28 +404,28 @@ road.
 
 ```
 AddLaneRoadSegment {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFFloat    width                     7
-      SFFloat    length                    20
-      SFInt32    numberOfLanes             2
-      SFBool     newLaneLeft               TRUE
-      MFBool     dashedLine                TRUE
-      SFFloat    roadBorderHeight          0.15
-      SFFloat    roadBorderWidth           0.8
-      SFBool     rightBorder               TRUE
-      SFBool     leftBorder                TRUE
-      SFBool     bottom                    FALSE
-      MFString   texture                   "textures/road.jpg"
-      SFFloat    textureScale              2
-      MFString   newLanetexture            "textures/road_no_border_line.jpg"
-      MFString   pavementTexture           "textures/pavement.jpg"
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE
-      SFBool     rightBorderBoundingObject FALSE
-      SFBool     leftBorderBoundingObject  FALSE
-      SFString   contactMaterial           "default"
-  }
+  SFVec3f    translation               0 0 0
+  SFRotation rotation                  0 1 0 0
+  SFFloat    width                     7
+  SFFloat    length                    20
+  SFInt32    numberOfLanes             2
+  SFBool     newLaneLeft               TRUE
+  MFBool     dashedLine                TRUE
+  SFFloat    roadBorderHeight          0.15
+  SFFloat    roadBorderWidth           0.8
+  SFBool     rightBorder               TRUE
+  SFBool     leftBorder                TRUE
+  SFBool     bottom                    FALSE
+  MFString   texture                   "textures/road.jpg"
+  SFFloat    textureScale              2
+  MFString   newLanetexture            "textures/road_no_border_line.jpg"
+  MFString   pavementTexture           "textures/pavement.jpg"
+  SFBool     locked                    TRUE
+  SFBool     roadBoundingObject        FALSE
+  SFBool     rightBorderBoundingObject FALSE
+  SFBool     leftBorderBoundingObject  FALSE
+  SFString   contactMaterial           "default"
+}
 ```
 
 #### AddLaneRoadSegment Field Summary
@@ -448,29 +452,29 @@ several lanes to the road.
 
 ```
 AddLanesRoadSegment {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFFloat    width                     7
-      SFFloat    length                    20
-      SFInt32    numberOfLanes             2
-      SFInt32    numberOfnewLanes          2
-      SFBool     newLaneLeft               TRUE
-      MFBool     dashedLine                TRUE
-      SFFloat    roadBorderHeight          0.15
-      SFFloat    roadBorderWidth           0.8
-      SFBool     rightBorder               TRUE
-      SFBool     leftBorder                TRUE
-      SFBool     bottom                    FALSE
-      MFString   texture                   "textures/road.jpg"
-      SFFloat    textureScale              2
-      MFString   newLanetexture            "textures/road_no_border_line.jpg"
-      MFString   pavementTexture           "textures/pavement.jpg"
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE
-      SFBool     rightBorderBoundingObject FALSE
-      SFBool     leftBorderBoundingObject  FALSE
-      SFString   contactMaterial           "default"
-  }
+  SFVec3f    translation               0 0 0
+  SFRotation rotation                  0 1 0 0
+  SFFloat    width                     7
+  SFFloat    length                    20
+  SFInt32    numberOfLanes             2
+  SFInt32    numberOfnewLanes          2
+  SFBool     newLaneLeft               TRUE
+  MFBool     dashedLine                TRUE
+  SFFloat    roadBorderHeight          0.15
+  SFFloat    roadBorderWidth           0.8
+  SFBool     rightBorder               TRUE
+  SFBool     leftBorder                TRUE
+  SFBool     bottom                    FALSE
+  MFString   texture                   "textures/road.jpg"
+  SFFloat    textureScale              2
+  MFString   newLanetexture            "textures/road_no_border_line.jpg"
+  MFString   pavementTexture           "textures/pavement.jpg"
+  SFBool     locked                    TRUE
+  SFBool     roadBoundingObject        FALSE
+  SFBool     rightBorderBoundingObject FALSE
+  SFBool     leftBorderBoundingObject  FALSE
+  SFString   contactMaterial           "default"
+}
 ```
 
 #### AddLanesRoadSegment Field Summary
@@ -479,4 +483,3 @@ Most of the fields are similar to the one of the `Road` PROTO. Therefore, only
 the specific ones will be explained.
 
 - `numberOfnewLanes`: Defines the number of new lanes to be added to the road.
-

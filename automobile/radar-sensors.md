@@ -19,12 +19,12 @@ meters.
 
 ```
 DelphiESR {
-    SFVec3f    translation    0 0 0
-    SFRotation rotation       0 1 0 0
-    SFString   name           "delphi-esr"
-    SFBool     occlusion      FALSE
-    SFBool     longRangeMode  FALSE
-  }
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "delphi-esr"
+  SFBool     occlusion      FALSE
+  SFBool     longRangeMode  FALSE
+}
 ```
 
 The `occlusion` field can be used to set if occlusions between the targets and
@@ -79,4 +79,3 @@ meters.
 The `Smartmicro UMRR-0a type 31` radar has an horizontal field of view of 100
 degrees, a vertical field of view of 10 degrees and a maximum range of 45
 meters.
-

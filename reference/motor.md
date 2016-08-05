@@ -250,25 +250,25 @@ Warnings are displayed if theses rules are not respected.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-void wb_motor_set_position(WbDeviceTag tag, double position)
-void wb_motor_set_velocity(WbDeviceTag tag, double velocity)
-void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration)
-void wb_motor_set_available_force(WbDeviceTag tag, double force)
-void wb_motor_set_available_torque(WbDeviceTag tag, double torque)
-void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d)
-double wb_motor_get_target_position(WbDeviceTag tag)
-double wb_motor_get_min_position(WbDeviceTag tag)
-double wb_motor_get_max_position(WbDeviceTag tag)
-double wb_motor_get_velocity(WbDeviceTag tag)
-double wb_motor_get_max_velocity(WbDeviceTag tag)
-double wb_motor_get_acceleration(WbDeviceTag tag)
-double wb_motor_get_available_force(WbDeviceTag tag)
-double wb_motor_get_max_force(WbDeviceTag tag)
-double wb_motor_get_available_torque(WbDeviceTag tag)
-double wb_motor_get_max_torque(WbDeviceTag tag)
+void wb_motor_set_position(WbDeviceTag tag, double position);
+void wb_motor_set_velocity(WbDeviceTag tag, double velocity);
+void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration);
+void wb_motor_set_available_force(WbDeviceTag tag, double force);
+void wb_motor_set_available_torque(WbDeviceTag tag, double torque);
+void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d);
+double wb_motor_get_target_position(WbDeviceTag tag);
+double wb_motor_get_min_position(WbDeviceTag tag);
+double wb_motor_get_max_position(WbDeviceTag tag);
+double wb_motor_get_velocity(WbDeviceTag tag);
+double wb_motor_get_max_velocity(WbDeviceTag tag);
+double wb_motor_get_acceleration(WbDeviceTag tag);
+double wb_motor_get_available_force(WbDeviceTag tag);
+double wb_motor_get_max_force(WbDeviceTag tag);
+double wb_motor_get_available_torque(WbDeviceTag tag);
+double wb_motor_get_max_torque(WbDeviceTag tag);
 ```
 
 **Description**
@@ -383,27 +383,28 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms)
-void wb_motor_disable_force_feedback(WbDeviceTag tag)
-int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag)
-double wb_motor_get_force_feedback(WbDeviceTag tag)
-void wb_motor_enable_torque_feedback(WbDeviceTag tag, int ms)
-void wb_motor_disable_torque_feedback(WbDeviceTag tag)
-int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag)
-double wb_motor_get_torque_feedback(WbDeviceTag tag)
+void wb_motor_enable_force_feedback(WbDeviceTag tag, int sampling_period);
+void wb_motor_disable_force_feedback(WbDeviceTag tag);
+int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag);
+double wb_motor_get_force_feedback(WbDeviceTag tag);
+void wb_motor_enable_torque_feedback(WbDeviceTag tag, int sampling_period);
+void wb_motor_disable_torque_feedback(WbDeviceTag tag);
+int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
+double wb_motor_get_torque_feedback(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_motor_enable_force_feedback()` (resp.
 `wb_motor_enable_torque_feedback()`) function activates force (resp. torque)
-feedback measurements for the specified motor. A new measurement will be
-performed each `ms` milliseconds; the result must be retrieved with the
+feedback measurements for the specified motor. The result must be retrieved with the
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function.
+The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function returns the most recent motor force (resp. torque) measurement. This
@@ -454,11 +455,11 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-void wb_motor_set_force(WbDeviceTag tag, double force)
-void wb_motor_set_torque(WbDeviceTag tag, double torque)
+void wb_motor_set_force(WbDeviceTag tag, double force);
+void wb_motor_set_torque(WbDeviceTag tag, double torque);
 ```
 
 **Description**
@@ -500,10 +501,10 @@ dampers with controllable properties. The example in
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-int wb_motor_get_type(WbDeviceTag tag)
+int wb_motor_get_type(WbDeviceTag tag);
 ```
 
 **Description**
@@ -520,4 +521,3 @@ WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
 | "linear"     | WB\_LINEAR   |
 
 %end
-

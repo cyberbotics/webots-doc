@@ -43,10 +43,12 @@ linear motor, a piston, a hydraulic/pneumatic cylinder, a spring, or a damper.
 
 - The `type` field is a string which specifies the [Servo](#servo) type, and may
 be either "rotational" (default) or "linear".
+
 - The `maxVelocity` field specifies both the upper limit and the default value for
 the servo *velocity*. The *velocity* can be changed at run-time with the
 `wb_servo_set_velocity()` function. The value should always be positive (the
 default is 10).
+
 - The `maxForce` field specifies both the upper limit and the default value for
 the servo *motor force*. The *motor force* is the torque/force that is available
 to the motor to perform the requested motions. The `wb_servo_set_motor_force()`
@@ -54,6 +56,7 @@ function can be used to change the *motor force* at run-time. The value of
 `maxForce` should always be zero or positive (the default is 10). A small
 `maxForce` value may result in a servo being unable to move to the target
 position because of its weight or other external forces.
+
 - The `controlP` field specifies the initial value of the *P* parameter, which is
 the *proportional gain* of the servo P-controller. A high *P* results in a large
 response to a small error, and therefore a more sensitive system. Note that by
@@ -61,23 +64,29 @@ setting *P* too high, the system can become unstable. With a small *P*, more
 simulation steps are needed to reach the target position, but the system is more
 stable. The value of *P* can be changed at run-time with the
 `wb_servo_set_control_p()` function.
+
 - The `acceleration` field defines the default acceleration of the P-controller. A
 value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_servo_set_acceleration()` function.
+
 - The `position` field represents the current *position* of the [Servo](#servo),
 in radians or meters. For a "rotational" servo, `position` represents the
 current rotation angle in radians. For a "linear" servo, `position` represents
 the magnitude of the current translation in meters.
+
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Servo Limits"
 section, see below.
+
 - The `minStop` and `maxStop` fields specify the position of physical (or
 mechanical) stops. These fields are described in more detail in the "Servo
 Limits" section, see below.
+
 - The `springConstant` and `dampingConstant` fields allow the addition of spring
 and/or damping behavior to the [Servo](#servo). These fields are described in
 more detail in the "Springs and Dampers" section, see below.
+
 - The `staticFriction` allows to add a friction opposed to the [Servo](#servo)
 movement. This field is described in more detail in the "Friction" section, see
 below.
@@ -197,7 +206,7 @@ specified by calling the `wb_servo_set_velocity()` function. This will initiate
 a continuous servo motion at the desired speed, while taking into account the
 specified acceleration and motor force. Example:
 
-```
+```c
 wb_servo_set_position(servo, INFINITY);
 wb_servo_set_velocity(servo, 6.28);  // 1 rotation per second
 ```
@@ -460,17 +469,17 @@ Please note the dummy [Physics](physics.md) and the 1 millimeter
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_set_position(WbDeviceTag tag, double position)
-double wb_servo_get_target_position(WbDeviceTag tag)
-void wb_servo_set_velocity(WbDeviceTag tag, double velocity)
-void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration)
-void wb_servo_set_motor_force(WbDeviceTag tag, double force)
-void wb_servo_set_control_p(WbDeviceTag tag, double p)
-double wb_servo_get_min_position(WbDeviceTag tag)
-double wb_servo_get_max_position(WbDeviceTag tag)
+void wb_servo_set_position(WbDeviceTag tag, double position);
+double wb_servo_get_target_position(WbDeviceTag tag);
+void wb_servo_set_velocity(WbDeviceTag tag, double velocity);
+void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration);
+void wb_servo_set_motor_force(WbDeviceTag tag, double force);
+void wb_servo_set_control_p(WbDeviceTag tag, double p);
+double wb_servo_get_min_position(WbDeviceTag tag);
+double wb_servo_get_max_position(WbDeviceTag tag);
 ```
 
 **Description**
@@ -570,20 +579,20 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_enable_position(WbDeviceTag tag, int ms)
-void wb_servo_disable_position(WbDeviceTag tag)
-int wb_servo_get_position_sampling_period(WbDeviceTag tag)
-double wb_servo_get_position(WbDeviceTag tag)
+void wb_servo_enable_position(WbDeviceTag tag, int sampling_period);
+void wb_servo_disable_position(WbDeviceTag tag);
+int wb_servo_get_position_sampling_period(WbDeviceTag tag);
+double wb_servo_get_position(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_servo_enable_position()` function activates position measurements for
-the specified servo. A new position measurement will be performed each `ms`
-milliseconds; the result must be obtained with the `wb_servo_get_position()`
+the specified servo. A new position measurement will be performed each `sampling_period`
+(expressed in milliseconds); the result must be obtained with the `wb_servo_get_position()`
 function. The returned value corresponds to the most recent measurement of the
 servo position. The `wb_servo_get_position()` function measures the *effective
 position* of the servo which, under the effect of external forces, is usually
@@ -608,20 +617,20 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms)
-void wb_servo_disable_motor_force_feedback(WbDeviceTag tag)
-int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag)
-double wb_servo_get_motor_force_feedback(WbDeviceTag tag)
+void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int sampling_period);
+void wb_servo_disable_motor_force_feedback(WbDeviceTag tag);
+int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag);
+double wb_servo_get_motor_force_feedback(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_servo_enable_motor_force_feedback()` function activates torque/force
 feedback measurements for the specified servo. A new measurement will be
-performed each `ms` milliseconds; the result must be retrieved with the
+performed each `sampling_period` (expressed in milliseconds); the result must be retrieved with the
 `wb_servo_get_motor_force_feedback()` function.
 
 The `wb_servo_get_motor_force_feedback()` function returns the most recent motor
@@ -666,10 +675,10 @@ the device is disabled.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_set_force(WbDeviceTag tag, double force)
+void wb_servo_set_force(WbDeviceTag tag, double force);
 ```
 
 **Description**
@@ -709,10 +718,10 @@ dampers with controllable properties. The example in
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-int wb_servo_get_type(WbDeviceTag tag)
+int wb_servo_get_type(WbDeviceTag tag);
 ```
 
 **Description**
@@ -729,4 +738,3 @@ WB\_SERVO\_LINEAR, and otherwise it returns WB\_SERVO\_ROTATIONAL.
 | "linear"     | WB\_SERVO\_LINEAR     |
 
 %end
-

@@ -2,7 +2,7 @@
 
 Cyberbotics is grateful to all the people who contributed to the development of
 Webots, Webots sample applications, the Webots User Guide, the Webots Reference
-Manual, and the Webots web site, including Stefania Pedrazzi, David Mansolino,
+Manual, and the Webots website, including Stefania Pedrazzi, David Mansolino,
 Yvan Bourquin, Fabien Rohrer, Jean-Christophe Fillion-Robin, Jordi Porta,
 Emanuele Ornella, Yuri Lopez de Meneses, Sébastien Hugues, Auke-Jan Ispeert,
 Jonas Buchli, Alessandro Crespi, Ludovic Righetti, Julien Gagnet, Lukas Hohl,
@@ -18,4 +18,3 @@ Moreover, many thanks are due to Cyberbotics's Mentors: Prof. Jean-Daniel Nicoud
 (LAMI-EPFL), Dr. Francesco Mondada (EPFL), Dr. Takashi Gomi (Applied AI, Inc.).
 
 Finally, thanks to Skye Legon and Nathan Yawn, who proofread this guide.
-

@@ -37,16 +37,17 @@ buildings.
 
 ```
 GenericBuilding {
-     SFFloat     floorHeight            3
-     SFInt32     floorNumber            3
-     MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
-     SFString    wallType               "building2"
-     SFString    roofType               "tiled"
-     SFString    roofShape              "pyramidal roof"
-     SFBool      snowOnRoof             FALSE
-     SFFloat     roofHeight             3
-     SFBool      enableBoundingObject   TRUE
- }
+  SFFloat     floorHeight            3
+  SFInt32     floorNumber            3
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
+  SFString    wallType               "building2"
+  SFString    roofType               "tiled"
+  SFString    roofShape              "pyramidal roof"
+  SFBool      snowOnRoof             FALSE
+  SFFloat     roofHeight             3
+  SFBool      enableBoundingObject   TRUE
+  SFBool      bottom                 FALSE
+}
 ```
 
 #### GenericBuilding Field Summary
@@ -64,6 +65,7 @@ roof` and `pyramidal roof`.
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
 roof).
 - `enableBoundingObject`: Defines if the building should have a bounding object.
+- `bottom`: Defines if the bottom face of the building should be displayed.
 
 ### Other city objects
 
@@ -79,4 +81,3 @@ normally found in a city environment:
 ![bus_stop.png](images/bus_stop.png)
 
 %end
-

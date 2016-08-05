@@ -127,8 +127,7 @@ this controller is in the "hemisson" directory.
 
 %end
 
-In this example, a Hoap2 robot from Fujitsu performs the Shiko dance (the dance
-which sumos perform before a match). This robot is equipped with `TouchSensors`
+In this example, a Hoap2 robot from Fujitsu performs the Shiko dance (the dance sumos perform before a combat). This robot is equipped with `TouchSensors`
 on the soles of its feet; it measures and logs the pressure exerted by its body
 on the ground. The source code for this controller is in the "hoap2" directory.
 
@@ -200,7 +199,7 @@ using an infrared sensor on the conveyor belt, while the other one waits. All
 the IPR robots use the same controller, whose source code is in the
 "ipr\_serial" directory. This example also uses a client program which
 coordinates the movements of the robots. The source code for this client is in
-the file "ipr\_serial/client/ipr\_factory.c".
+the "ipr\_serial/client/ipr\_factory.c" file.
 
 ### ipr_models.wbt
 
@@ -275,7 +274,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 In this example, you can see two Khepera robots from K-Team moving inside an
 arena while avoiding each other and the walls. It is a good example of how to
-use teh kinematic mode of Webots. Like many other examples, this one uses the
+use the kinematic mode of Webots. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
 "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
@@ -347,7 +346,7 @@ it move straight forward until it detects an obstacle. This client program
 `client` must be launched separately from Webots. The source code for this
 controller and for the client program are in the "pipe" directory.
 
-> **note**:
+> **Note**:
 As this example is based on standard UNIX pipes, it does not work under Windows.
 
 ### khepera_tcpip.wbt
@@ -462,8 +461,8 @@ in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
 This example contains a model of the *Shrimp* robot, which is a mobile platform
 for rough terrain from [Bluebotics](http://www.bluebotics.ch). It has 6 wheels
-and a passive structure which allows it to adapt to the terrain profile and
-climb obstacles. It can also turn on the spot. In this example the robot will
+and a passive structure that adapts to the terrain profile and
+climbs obstacles. It can also turn on the spot. In this example the robot will
 first move on its own to the center of the world; then you may drive it yourself
 using the keyboard. To find out which keys will allow you to perform these
 operations, please read the explanation message printed at the beginning of the
@@ -519,8 +518,7 @@ or left). Keyboard actions include:
 - F: Walk forward
 
 The walking gait used in the controller relies on an inverse kinematics model.
-Further details are available from [BIRG web
-site](http://birg.epfl.ch/page66584.html). The  included controller illustrates
+Further details are available from [BIRG website](http://birg.epfl.ch/page66584.html). The  included controller illustrates
 a trotting gait showing the best performance so far. The turning capabilities of
 the robot are based on the stride length modulation. When the robot is asked to
 turn right, the stride length of the right side and left side are respectively

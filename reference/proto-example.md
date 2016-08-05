@@ -1,4 +1,4 @@
-## Example
+## PROTO Example
 
 A complete example of PROTO definition and instantiation is provided here. The
 PROTO is called `TwoColorChair`; it defines a simple chair with four legs and a
@@ -15,6 +15,7 @@ and orientation of the PROTO instances.
 "TwoColorChair.proto":
 
 ```
+#VRML_SIM V8.5 utf8
 # A two-color chair
 
 PROTO TwoColorChair [
@@ -81,13 +82,13 @@ statement placed inside the `DEF LEG_SHAPE Shape` node which is then reused
 
 The "ProtoInstantiationExample.wbt" file below exemplifies the instantiation of
 this PROTO. PROTO nodes are instantiated using the regular node syntax. Fields
-with the default value can be omitted. Fields which value differ from the
+with the default value can be omitted. Field values which differ from the
 default must be specified.
 
 "TwoChairs.wbt":
 
 ```
-#VRML_SIM V6.0 utf8
+#VRML_SIM V8.5 utf8
 
 WorldInfo {
 }
@@ -139,4 +140,3 @@ definition or creating a new PROTO.
 ![two_chairs_v7-2-0.png](images/two_chairs_v7-2-0.png)
 
 %end
-

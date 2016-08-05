@@ -71,4 +71,3 @@ If a `Transform` is named using the [DEF](def-and-use.md) keyword and later
 referenced inside a `boundingObject` with a USE statement, the constraint
 corresponding to its first `Geometry` descendant applies to the `scale` fields
 of the defining `Transform` and of all its further references.
-

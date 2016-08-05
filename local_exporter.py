@@ -4,12 +4,12 @@
 
 import os
 import re
+import sys
 import urllib2
 
 dependencies = [
-    'highlight/9.2.0/default.min.css',
-    'highlight/9.2.0/highlight.min.js',
-    'iframe-resizer/3.5.3/iframeResizer.contentWindow.min.js',
+    'highlight/9.5.0/default.min.css',
+    'highlight/9.5.0/highlight.min.js',
     'jquery/1.11.3/jquery.min.js',
     'jquery/1.11.3/jquery.min.map',
     'jquery-ui/1.11.4/jquery-ui.min.css',
@@ -40,17 +40,28 @@ def download(url, target_file_path):
     """Download URL to file."""
     print 'Download "%s" to "%s"' % (url, target_file_path)
 
-    response = urllib2.urlopen(url, timeout=5)
-    content = response.read()
-
+    # Prepare the target directory
     target_directory = os.path.dirname(target_file_path)
     if not os.path.exists(target_directory):
         os.makedirs(target_directory)
 
-    f = open(target_file_path, 'w')
-    f.write(content)
-    f.close()
+    # Sometimes Travis cannot get the file at the first trial
+    nTrials = 3
+    for i in range(nTrials):
+        try:
+            response = urllib2.urlopen(url, timeout=5)
+            content = response.read()
 
+            f = open(target_file_path, 'w')
+            f.write(content)
+            f.close()
+
+            break
+        except:
+            if i == nTrials - 1:
+                sys.exit('Cannot get url: ' + url)
+    if i > 0:
+        print '(number of trials: %d)' % (i + 1)
 
 script_directory = os.path.dirname(os.path.realpath(__file__)) + os.sep
 
@@ -65,7 +76,7 @@ with open(script_directory + 'local_index.html', 'w') as file:
 
 for dependency in dependencies:
     download(
-        'http://www.cyberbotics.com/' + dependency,
+        'https://www.cyberbotics.com/' + dependency,
         script_directory + 'dependencies' + os.sep + dependency.replace(
             "/", os.sep)
     )

@@ -38,4 +38,3 @@ from the real robot.
 - `Ease of use`: Webots greatly simplifies the programming of the robot. Indeed,
 Webots API is simple to understand and to use and come with a complete
 documentation.
-

@@ -14,23 +14,23 @@ PROTO featuring the corresponding `automobileWheel` slots.
 
 ```
 AutomobileWheel {
-    SFFloat    thickness          0.3
-    SFFloat    tireRadius         0.4
-    SFInt32    subdivision        24
-    SFFloat    curvatureFactor    0.35
-    SFInt32    edgeSubdivision    1
-    SFFloat    rimRadius          0.28
-    SFInt32    rimBeamNumber      5
-    SFFloat    rimBeamWidth       0.1
-    SFFloat    centralInnerRadius 0.09
-    SFFloat    centralOuterRadius 0.13
-    SFFloat    rimBeamThickness   0.2
-    SFFloat    rimBeamOffset      0.03
-    SFString   contactMaterial    "default"
-    SFNode     tireAppearance     Appearance { material Material {} }
-    SFNode     rimAppearance      Appearance { material Material {} }
-    SFNode     physics            Physics {}
-    MFNode     logoSlot           []
+  SFFloat    thickness          0.3
+  SFFloat    tireRadius         0.4
+  SFInt32    subdivision        24
+  SFFloat    curvatureFactor    0.35
+  SFInt32    edgeSubdivision    1
+  SFFloat    rimRadius          0.28
+  SFInt32    rimBeamNumber      5
+  SFFloat    rimBeamWidth       0.1
+  SFFloat    centralInnerRadius 0.09
+  SFFloat    centralOuterRadius 0.13
+  SFFloat    rimBeamThickness   0.2
+  SFFloat    rimBeamOffset      0.03
+  SFString   contactMaterial    "default"
+  SFNode     tireAppearance     Appearance { material Material {} }
+  SFNode     rimAppearance      Appearance { material Material {} }
+  SFNode     physics            Physics {}
+  MFNode     logoSlot           []
 }
 ```
 
@@ -67,4 +67,3 @@ Some sample instances of wheels are provided (see for example
 ![BmwX5Wheel.png](images/BmwX5Wheel.png)
 
 %end
-

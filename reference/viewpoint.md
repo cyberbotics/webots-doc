@@ -2,12 +2,13 @@
 
 ```
 Viewpoint {
-  SFFloat      fieldOfView    0.785398  # (0,pi)
-  SFRotation   orientation    0 0 1 0   # 3D unit vector, angle (rad)
-  SFVec3f      position       0 0 0     # 3D vector
-  SFString     description    ""
-  SFFloat      near           0.05      # [0,inf)
-  SFString     follow         ""
+  SFFloat      fieldOfView        0.785398  # (0,pi)
+  SFRotation   orientation        0 0 1 0   # 3D unit vector, angle (rad)
+  SFVec3f      position           0 0 0     # 3D vector
+  SFString     description        ""
+  SFFloat      near               0.05      # [0,inf)
+  SFString     follow             ""
+  SFBool       followOrientation  FALSE
 }
 ```
 
@@ -39,7 +40,7 @@ The `near` and the `fieldOfView` fields define together the viewing frustum. Any
 (standing between the camera and the near plane) won't appear.
 
 The `follow` field can be used to specify the name of a robot (or other object)
-that the viewpoint needs to follow during the simulation. If the string is
+that the viewpoint will follow in translation (traveling movement) during the simulation. If the string is
 empty, or if it does not correspond to any object, then the viewpoint will
 remain fixed. The `follow` field is automatically updated when setting the solid
 to be followed from the `View / Follow Object` menu item. If multiple solid
@@ -47,3 +48,4 @@ instances with the same name exist, the instance to be followed is identified by
 adding the instance number to the `follow` field value using the format
 "`<name>:<number>`".
 
+The `followOrientation` field can be used to make the viewpoint follow also the orientation of an object (in addition to its position). If `followOrientation` is true, the viewpoint is rigidly attached to the followed object, like an embedded camera onboard a robot. The `follow` field should be set with a valid object name otherwise the `followOrientation` field has no effect.

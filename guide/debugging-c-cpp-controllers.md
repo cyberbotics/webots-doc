@@ -18,7 +18,7 @@ responsive, this usually indicates the crash of a controller. This can easily be
 confirmed by listing the active processes at this moment: For example on Linux,
 type:
 
-```
+```sh
 $ ps -e
 ...
 12751 pts/1    00:00:16 webots
@@ -48,14 +48,14 @@ The first step is to recompile the controller code with the *-g* flag, in order
 to add debugging information to the executable file. This can be achieved by
 adding this line to the controller's Makefile:
 
-```
+```makefile
 CFLAGS = -g
 ```
 
-Then you must recompile the controller, either by using the `Clean` and `Build`
+Then, you must recompile the controller, either by using the `Clean` and `Build`
 buttons of the Webots text editor or directly in a terminal:
 
-```
+```sh
 $ make clean
 $ make
 ...
@@ -69,7 +69,7 @@ using `ps -e` (Linux) or `ps -x` (Mac OS X), or using the *Task Manager*
 (Windows). The PID is in the left-most column of output of `ps` as shown above.
 Then open a terminal and start the debugger by typing:
 
-```
+```sh
 $ gdb
 ...
 (gdb) attach PID
@@ -98,7 +98,7 @@ Program received signal SIGSEGV, Segmentation fault.
 This indicates the location of the problem. You can examine the call stack more
 precisely by using the `where` command of `gdb`. For example type:
 
-```
+```sh
 (gdb) where
 #0 0x00cd6dd5 in _IO_str_overflow_internal() from /lib/tls/libc.so.6
 #1 0x00cd596f in _IO_default_xsputn_internal() from /lib/tls/libc.so.6
@@ -106,7 +106,7 @@ precisely by using the `where` command of `gdb`. For example type:
 #3 0x00cb17ea in vfprintf() from /lib/tls/libc.so.6
 #4 0x00ccb9cb in vsprintf() from /lib/tls/libc.so.6
 #5 0x00cb8d4b in sprintf() from /lib/tls/libc.so.6
-#6 0x08048972 in run(ms=0) at soccer_supervisor.c:106
+#6 0x08048972 in run(duration=0) at soccer_supervisor.c:106
 #7 0x08048b0a in main() at soccer_supervisor.c:140
 ```
 
@@ -119,9 +119,9 @@ controller is still in memory you can query the values of some variables in
 order to understand what happened. For example, you can use the `frame` and
 `print` commands:
 
-```
+```sh
 (gdb) frame 6
-#6  0x08048953 in run (ms=0) at soccer_supervisor.c:106
+#6  0x08048953 in run (duration=0) at soccer_supervisor.c:106
 106         sprintf(time_string, "%02d:%02d", (int) (time / 60),
  (int) time % 60);
 (gdb) print time_string
@@ -135,4 +135,3 @@ simple example we clearly see that the problem is caused by a NULL (0x0)
 to: fix the problem, recompile the controller and revert the simulation to give
 it another try. Once it works correctly you can remove the *-g* flag from the
 Makefile.
-

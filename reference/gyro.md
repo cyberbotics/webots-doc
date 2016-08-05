@@ -24,12 +24,14 @@ for mapping the raw angular velocity values [rad/s] to device specific output
 values. With the lookup table it is also possible to add noise and to define the
 min and max output values. By default the lookup table is empty and therefore
 the raw values are returned (no mapping).
+
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation
 should be enabled or disabled for the specified axis. If one of these fields is
 set to FALSE, then the corresponding vector element will not be computed and it
 will return *NaN* (Not a Number) For example if `zAxis` is FALSE, then
 `wb_gyro_get_values()[2]` returns *NaN*. The default is that all three axes are
 enabled (TRUE).
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
 to -1 (default) means that the sensor has an 'infinite' resolution (it can
@@ -44,19 +46,20 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_gyro)}, {[Java](java-api.md#java_gyro)}, {[Python](python-api.md#python_gyro)}, {[Matlab](matlab-api.md#matlab_gyro)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gyro.h>
 
-void wb_gyro_enable(WbDeviceTag tag, int ms)
-void wb_gyro_disable(WbDeviceTag tag)
-int wb_gyro_get_sampling_period(WbDeviceTag tag)
-const double *wb_gyro_get_values(WbDeviceTag tag)
+void wb_gyro_enable(WbDeviceTag tag, int sampling_period);
+void wb_gyro_disable(WbDeviceTag tag);
+int wb_gyro_get_sampling_period(WbDeviceTag tag);
+const double *wb_gyro_get_values(WbDeviceTag tag);
 ```
 
 **Description**
 
-The `wb_gyro_enable()` function turns on the angular velocity measurement each
-`ms` milliseconds.
+The `wb_gyro_enable()` function turns on the angular velocity measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_gyro_disable()` function turns off the [Gyro](#gyro) device.
 
@@ -81,4 +84,3 @@ period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the vector as a list containing three floats.
-

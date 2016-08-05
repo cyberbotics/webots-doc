@@ -60,14 +60,18 @@ behavior with the line drawn by the first robot.
 
 - `inkColor`: define the color of the pen's ink. This field can be changed from
 the pen API, using the `wb_pen_set_ink_color()` function.
+
 - `inkDensity`: define the density of the color of the ink. The value should be in
 the range [0,1]. This field can also be changed from the pen API, using the
 `wb_pen_set_ink_color()` function.
+
 - `leadSize`: define the width of the "tip" of the pen. This allows the robot to
 write a wider or narrower track.
+
 - `maxDistance`: define the maximal distance between the [Pen](#pen) device and a
 paintable object and allows to simulate write-on-contact behaviors. A value
 smaller or equal 0 represents an unlimited painting range.
+
 - `write`: this boolean field allows the robot to enable or disable writing with
 the pen. It is also switchable from the pen API, using the `wb_pen_write()`
 function.
@@ -80,10 +84,10 @@ function.
 
 {[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/pen.h>
 
-void wb_pen_write(WbDeviceTag tag, bool write)
+void wb_pen_write(WbDeviceTag tag, bool write);
 ```
 
 **Description**
@@ -100,10 +104,10 @@ will write; if `write` is *false*, it won't.
 
 {[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/pen.h>
 
-void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density)
+void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density);
 ```
 
 **Description**
@@ -117,7 +121,7 @@ red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is gray
 
 **Example**
 
-```
+```c
 wb_pen_set_ink_color(pen,0xF01010,0.9);
 ```
 

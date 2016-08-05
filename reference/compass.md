@@ -26,6 +26,7 @@ for mapping each vector component (between -1.0 and +1.0) to device specific
 output values. With the lookup table it is also possible to add noise and to
 define min and max output values. By default the lookup table is empty and
 therefore no mapping is applied.
+
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation
 should be enabled or disabled for the specified axis. If one of these fields is
 set to FALSE, then the corresponding vector element will not be computed and it
@@ -34,6 +35,7 @@ wb\_compass\_get\_values()[2] will always return *NaN*. The default is that all
 three axes are enabled (TRUE). Modifying these fields makes it possible to
 choose between a single, dual or a three-axis digital compass and to specify
 which axes will be used.
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
 to -1 (default) means that the sensor has an 'infinite' resolution (it can
@@ -48,19 +50,20 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_compass)}, {[Java](java-api.md#java_compass)}, {[Python](python-api.md#python_compass)}, {[Matlab](matlab-api.md#matlab_compass)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/compass.h>
 
-void wb_compass_enable(WbDeviceTag tag, int ms)
-void wb_compass_disable(WbDeviceTag tag)
-const double *wb_compass_get_values(WbDeviceTag tag)
-int wb_compass_get_sampling_period(WbDeviceTag tag)
+void wb_compass_enable(WbDeviceTag tag, int sampling_period);
+void wb_compass_disable(WbDeviceTag tag);
+const double *wb_compass_get_values(WbDeviceTag tag);
+int wb_compass_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-The `wb_compass_enable()` function turns on the [Compass](#compass) measurement
-each `ms` milliseconds.
+The `wb_compass_enable()` function turns on the [Compass](#compass) measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_compass_disable()` function turns off the [Compass](#compass) device.
 
@@ -72,7 +75,7 @@ measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the [Compass](#compass) device. Here is the internal
 algorithm of `wb_compass_get_values()` in pseudo-code:
 
-```
+```c
 float[3] wb_compass_get_values() {
   float[3] n = getGlobalNorthDirection();
   n = rotateToCompassOrientation3D(n);
@@ -121,4 +124,3 @@ period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the vector as a list containing three floats.
-

@@ -30,11 +30,9 @@ software.
 
 *Aibo*<sup>TM</sup> is a registered trademark of SONY Corp.
 
-*Radeon*<sup>TM</sup> is a registered trademark of ATI Technologies Inc.
+*GeForce*<sup>TM</sup> is a registered trademark of NVIDIA Corp.
 
-*GeForce*<sup>TM</sup> is a registered trademark of nVidia, Corp.
-
-*Java*<sup>TM</sup> is a registered trademark of Sun MicroSystems, Inc.
+*Java*<sup>TM</sup> is a registered trademark of Oracle Corp.
 
 *Khepera*<sup>TM</sup> and *Koala*<sup>TM</sup> are registered trademarks of
 K-Team S.A.
@@ -50,11 +48,8 @@ the LEGO group.
 
 *Ubuntu*<sup>TM</sup> is a registered trademark of Canonical Ltd.
 
-*Visual C++*<sup>TM</sup>, *Windows*<sup>TM</sup>, *Windows NT*<sup>TM</sup>,
-*Windows 2000*<sup>TM</sup>, *Windows XP*<sup>TM</sup>, *Windows
-Vista*<sup>TM</sup>, *Windows 7*<sup>TM</sup> and *Windows 8*<sup>TM</sup> are
+*Visual C++*<sup>TM</sup>, *Windows*<sup>TM</sup>, *Windows XP*<sup>TM</sup>, *Windows Vista*<sup>TM</sup>, *Windows 7*<sup>TM</sup>, *Windows 8*<sup>TM</sup> and *Windows 10*<sup>TM</sup> are
 registered trademarks of Microsoft Corp.
 
 *UNIX*<sup>TM</sup> is a registered trademark licensed exclusively by X/Open
 Company, Ltd.
-

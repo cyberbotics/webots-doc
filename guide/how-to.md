@@ -51,8 +51,8 @@ demonstrate the usage of the `wb_motor_set_force()` function to control a
 `LinearMotor` with a user specified force. In this example,
 `wb_motor_set_force()` is used to simulate the effect of a spring and a damper
 between the two boxes. When the simulation starts, the motor force is used to
-move the boxes apart. Then the motor force is turned off and boxes oscillate for
-a while now according to the spring and damping equations programmed in the
+move the boxes apart. Then, the motor force is turned off and the boxes oscillate for
+a while according to the spring and damping equations programmed in the
 controller.
 
 ### inverted_pendulum.wbt
@@ -134,4 +134,3 @@ switches the image displayed on the panel.
 
 This example shows a complex city model built with various `Transform` nodes.
 The model makes a intensive use of the `DEF` and `USE` VRML keywords.
-

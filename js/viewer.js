@@ -11,11 +11,9 @@ if (typeof String.prototype.endsWith !== "function")
 var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
 
 function setupUrlOnline(url) {
-  setup.book = "";
-  setup.page = "";
+  setup.book = "guide";
+  setup.page = "index";
   setup.anchor = "";
-  setup.tag = "";
-  setup.branch = "";
 
   var m = url.match(new RegExp("/([^/]+)/([^/\\?#]+)([^/]*)$"));
   if (m) {
@@ -28,8 +26,13 @@ function setupUrlOnline(url) {
       var version = m[1];
       if (version.match(/^\d+\.\d*(.)+$/))
         setup.tag = version;
-      else
-        setup.branch = version;
+      else {
+        var n = version.indexOf(':');
+        if (n == -1)
+          setup.branch = version;
+        else
+          setup.branch = version.substr(n + 1);
+      }
     }
 
     m = arguments.match(/#([^&#]*)/);
@@ -49,13 +52,13 @@ function setupUrlLocal(url) {
     if (m)
       setup.page = m[1].replace(/.md$/, "");
     else
-      setup.page = "";
+      setup.page = "index";
 
     m = url.match(/book=([^&#]*)/);
     if (m)
       setup.book = m[1];
     else
-      setup.book = "";
+      setup.book = "guide";
 
     m = url.match(/#([^&#]*)/);
     if (m)
@@ -93,7 +96,9 @@ function redirectUrls(node) {
         var href = a.getAttribute("href");
         if (!href)
             continue;
-        if (href.startsWith("http")) // open external links in a new window
+        else if (href.startsWith("#"))
+            addDynamicAnchorEvent(a); // on firefox, the second click on the anchor is not dealt cleanly
+        else if (href.startsWith("http")) // open external links in a new window
             a.setAttribute("target", "_blank");
         else if (href.endsWith(".md") || href.indexOf(".md#") > -1) {
             addDynamicLoadEvent(a);
@@ -123,10 +128,26 @@ function forgeUrl(page, anchor) {
   } else {
       if (currentUrl.indexOf("page=") > -1)
           newUrl = currentUrl.replace(/page=([\w-]+)(#[\w-]+)?/, "page=" + page + anchorString);
-      else
-          newUrl = currentUrl + "&page=" + page + anchorString;
+      else {
+          var isFirstArgument = (currentUrl.indexOf("?") < 0);
+          newUrl = currentUrl + (isFirstArgument ? "?" : "&") + "page=" + page + anchorString;
+      }
   }
   return newUrl;
+}
+
+function addDynamicAnchorEvent(el) {
+    if (el.classList.contains("dynamicAnchor"))
+        return;
+    el.addEventListener("click",
+        function (event) {
+            setup.anchor = extractAnchor(event.target.getAttribute('href'));
+            applyAnchor();
+            event.preventDefault();
+        },
+        false
+    );
+    el.classList.add("dynamicAnchor");
 }
 
 function addDynamicLoadEvent(el) {
@@ -143,7 +164,7 @@ function addDynamicLoadEvent(el) {
 }
 
 function aClick(el) {
-    setupUrl(el.getAttribute('href'))
+    setupUrl(el.getAttribute('href'));
     getMDFile();
     updateBrowserUrl();
 }
@@ -167,9 +188,9 @@ function applyAnchor() {
         anchors[0].scrollIntoView(true);
         if (!local)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
-        else
-          window.scrollBy(0, 180); // manual adjustment for the off-line version
-    }
+        updateBrowserUrl();
+    } else
+      window.scrollTo(0, 0);
 }
 
 function applyToTitleDiv() {
@@ -218,6 +239,8 @@ function applyToPageTitle(mdContent) {
 }
 
 function populateViewDiv(mdContent) {
+    setupUrl(document.location.href);
+
     var view = document.getElementById("view");
     while (view.firstChild)
         view.removeChild(view.firstChild);
@@ -239,7 +262,14 @@ function populateViewDiv(mdContent) {
     redirectImages(view);
     redirectUrls(view);
 
-    applyAnchor();
+    var images = view.getElementsByTagName("img");
+    if (images.length > 0) {
+      // apply the anchor only when the images are loaded,
+      // otherwise, the anchor can be overestimated.
+      var lastImage = images[images.length - 1];
+      $(lastImage).load(applyAnchor);
+    } else
+      applyAnchor();
 
     applyAnchorIcons(view);
     highlightCode(view);
@@ -264,7 +294,7 @@ window.onpopstate = function(event) {
 };
 
 function highlightCode(view) {
-    var supportedLanguages = ['c', 'c++', 'java', 'python', 'matlab', 'bash', 'makefile', 'lua', 'xml'];
+    var supportedLanguages = ['c', 'c++', 'java', 'python', 'matlab', 'sh', 'ini', 'tex', 'makefile', 'lua', 'xml'];
 
     for (var i = 0; i < supportedLanguages.length; i++) {
         var language = supportedLanguages[i];
@@ -372,7 +402,12 @@ function changeMenuSelection() {
         var href = a.getAttribute("href");
         var selection;
         if (local) {
-          if (href.indexOf("page=" + setup.page) > -1)
+          var pageIndex = href.indexOf("page=" + setup.page);
+          // Notes:
+          // - the string length test is done to avoid wrong positive cases
+          //   where a page is a prefix of another.
+          // - 5 matches with the "page=" string length.
+          if (pageIndex > -1 && (5 + pageIndex + setup.page.length) == href.length)
               selection = true;
           else
               selection = false;
@@ -556,12 +591,84 @@ function getMenuFile() {
     });
 }
 
-function extractAnchor() {
-    var currentUrl = location.href;
-    var match = /#([\w-]+)/.exec(currentUrl);
+function extractAnchor(url) {
+    var match = /#([\w-]+)/.exec(url);
     if (match && match.length == 2)
         return match[1];
     return '';
+}
+
+// width: in pixels
+function setHandleWidth(width) {
+    handle.left.css('width', width + 'px');
+    handle.handle.css('left', width + 'px');
+    handle.center.css('left', width + 'px');
+    handle.center.css('width', "calc(100% - " + width + "px)");
+}
+
+function initializeHandle() {
+    // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
+    handle = {}; // structure where all the handle info is stored
+
+    handle.left = $("#left"),
+    handle.center = $("#center"),
+    handle.handle = $("#handle");
+    handle.container = $("#webots-doc")
+
+    // dimension bounds of the handle in pixels
+    handle.min = 0;
+    handle.minThreshold = 75; // under this threshold, the handle is totally hidden
+    handle.initialWidth = handle.left.width();
+    handle.max = Math.max(250, handle.initialWidth);
+
+    handle.enableColor = "#c8c8f0";
+    handle.disableColor = "#ededed";
+
+    handle.isResizing = false;
+    handle.lastDownX = 0;
+
+    if (local)
+        handle.handle.addClass("local");
+    else
+        handle.handle.addClass("online");
+
+    setHandleWidth(handle.initialWidth);
+
+    handle.handle.on("mousedown", function (e) {
+        handle.isResizing = true;
+        handle.lastDownX = e.clientX;
+        handle.container.css("user-select", "none");
+        handle.handleColor = handle.handle.css("background-color");
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("dblclick", function (e) {
+        if (handle.left.css("width").startsWith("0"))
+            setHandleWidth(handle.initialWidth);
+        else
+            setHandleWidth(0);
+    }).on("mouseover", function () {
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("mouseout", function () {
+        if (!handle.isResizing)
+            handle.handle.css("background-color", handle.disableColor);
+    });
+
+    $(document).on("mousemove", function (e) {
+        if (!handle.isResizing)
+            return;
+        var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
+        if (mousePosition < handle.minThreshold / 2) {
+            setHandleWidth(0);
+            return;
+        } else if (mousePosition < handle.minThreshold)
+            return;
+        if (mousePosition < handle.min || mousePosition > handle.max)
+            return;
+        setHandleWidth(mousePosition);
+    }).on("mouseup", function (e) {
+        handle.isResizing = false;
+        handle.container.css("user-select", "auto");
+        handle.handle.css("background-color", handle.disableColor);
+    });
 }
 
 window.onscroll=function(){
@@ -570,7 +677,10 @@ window.onscroll=function(){
     updateMenuScrollbar();
 };
 
+
 document.addEventListener("DOMContentLoaded", function() {
+    initializeHandle();
+
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)
@@ -578,7 +688,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setup = {
             "book":   getGETQueryValue("book", "guide"),
             "page":   getGETQueryValue("page", "index"),
-            "anchor": extractAnchor(),
+            "anchor": extractAnchor(location.href),
             "branch": getGETQueryValue("branch", "master"),
             "url":    url
         }

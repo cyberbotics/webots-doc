@@ -19,7 +19,7 @@ int main() {
     printf("Hello World!\n");
 
   wb_robot_cleanup();
-  
+
   return 0;
 }
 ```
@@ -89,7 +89,7 @@ specified in the robot description (".wbt" or ".proto" file). If the robot has
 no device with the specified name, this function returns 0.
 
 Each sensor must be enabled before it can be used. If a sensor is not enabled it
-returns undefined values. Enabling a sensor is achieved using the corresponding
+returns undefined values. Enabling a sensor is achieved by using the corresponding
 `wb_*_enable()` function, where the star (*) stands for the sensor type. Every
 `wb_*_enable()` function allows to specify an update delay in milliseconds. The
 update delay specifies the desired interval between two updates of the sensor's
@@ -220,33 +220,21 @@ may have fully completed the motion when `wb_robot_step()` returns.
 
 Note that `wb_motor_set_position()` only specifies the *desired* target
 position. Just like with real robots, it is possible (in physics-based
-simulations only), that the `RotationalMotro` is not able to reach this
+simulations only), that the `RotationalMotor` is not able to reach this
 position, because it is blocked by obstacles or because the motor's torque
-(`maxForce`) is insufficient to oppose to the gravity, etc.
+(`maxForce`) is insufficient to oppose gravity, etc.
 
 If you want to control the motion of several `RotationalMotor`s simultaneously,
 then you need to specify the desired position for each `RotationalMotor`
 separately, using    `wb_motor_set_position()`. Then you need to call
 `wb_robot_step()` once to actuate all the `RotationalMotor`s simultaneously.
 
-### How to use wb_robot_step()
+### Simulation step and wb_robot_step()
 
 Webots uses two different time steps:
 
-- The control step (the argument of the `wb_robot_step()` function)
 - The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
-
-The control step is the duration of an iteration of the control loop. It
-corresponds to the parameter passed to the `wb_robot_step()` function. The
-`wb_robot_step()` function advances the controller time of the specified
-duration. It also synchronizes the sensor and actuator data with the simulator
-according to the controller time.
-
-Every controller needs to call `wb_robot_step()` at regular intervals. If a
-controller does not call `wb_robot_step()` the sensors and actuators won't be
-updated and the simulator will block (in synchronous mode only). Because it
-needs to be called regularly, `wb_robot_step()` is usually placed in the main
-loop of the controller.
+- The control step (specified as an argument of the `wb_robot_step()` function for each robot)
 
 The simulation step is the value specified in `WorldInfo.basicTimeStep` (in
 milliseconds). It indicates the duration of one step of simulation, i.e. the
@@ -255,12 +243,39 @@ of every simulated object. If the simulation uses physics (vs. kinematics), then
 the simulation step also specifies the interval between two computations of the
 forces and torques that need to be applied to the simulated rigid bodies.
 
+The control step is the duration of an iteration of the control loop. It
+corresponds to the parameter passed to the `wb_robot_step()` function. The
+`wb_robot_step()` function advances the controller time of the specified
+duration. It also synchronizes the sensors and actuators data with the simulator
+according to the controller time.
+
+Every controller needs to call `wb_robot_step()` at regular intervals. If a
+controller does not call `wb_robot_step()` the sensors and actuators won't be
+updated and the simulator will block (in synchronous mode only). Because it
+needs to be called regularly, `wb_robot_step()` is usually placed in the main
+loop of the controller.
+
 The execution of a simulation step is an atomic operation: it cannot be
 interrupted. Hence a sensor measurement or a motor actuation can only take place
 between two simulation steps. For that reason the control step specified with
-each `wb_robot_step()` must be a multiple of the simulation step. So for
+each `wb_robot_step()` must be a multiple of the simulation step. So, for
 example, if the simulation step is 16 ms, then the control step argument passed
 to `wb_robot_step()` can be 16, 32, 64, 128, etc.
+
+If the simulation is run in step-by-step mode, i.e., by clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
+The following [figure](#controller_synchronization) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
+
+%figure "Synchronization of simulation and controller steps"
+
+![controller_synchronization.png](images/controller_synchronization.png)
+
+%end
+
+At every step, all the commands before the `wb_robot_step()` statements are executed first and the simulation stops in the middle of the execution of `wb_robot_step()`.
+Webots API functions are executed but they are applied to the simulation world only when processing `wb_robot_step()` request, that is when the controller process communicates with Webots process.
+When the simulation stops, the new simulation status has already been computed, the simulation time has been updated and the new sensors values are ready.
+Note that the first step includes the initialization too.
+So all the statements before the second `wb_robot_step()` statement are executed.
 
 ### Using Sensors and Actuators Together
 
@@ -270,7 +285,7 @@ total: one for Webots and two for the two robots. Each controller process
 exchanges sensors and actuators data with the Webots process during the calls to
 `wb_robot_step()`. So for example, `wb_motor_set_position()` does not
 immediately send the data to Webots. Instead it stores the data locally and the
-data are effectively sent when `wb_robot_step()` is called.
+data is effectively sent when `wb_robot_step()` is called.
 
 For that reason the following code snippet is a bad example. Clearly, the value
 specified with the first call to `wb_motor_set_position()` will be overwritten
@@ -308,7 +323,7 @@ while (wb_robot_step(40) != -1) {
 }
 ```
 
-However the generally recommended approach is to have a single `wb_robot_step()`
+However, the generally recommended approach is to have a single `wb_robot_step()`
 call in the main control loop, and to use it to update all the sensors and
 actuators simultaneously, like this:
 
@@ -385,7 +400,7 @@ Robot {
 }
 ```
 
-and if the controller name is *"demo"*, then this sample controller code:
+and if the controller's name is *"demo"*, then this sample controller code:
 
 ```c
 #include <webots/robot.h>
@@ -524,19 +539,19 @@ replaced by the actual value already existing in the environment. The Webots
     This section should contain only environment variables with relative paths.
     Paths must be separated by the colon symbol ':' and the separator between
     directories is the slash symbol '/'. Variables declared in this section will be
-    add on every platform. On Windows, colons will be replaced by semicolon and
+    added on every platform. On Windows, colons will be replaced by semicolon and
     slash will be replaced by backslash according to the Windows syntax.
 
 - `[environment variables]`
 
     Environment variables defined in this section will also be added to the
     environment on every platform but they will be written directly with no syntax
-    change. It's a good place for variables that don't contain any path.
+    change. It's a good location for variables that don't contain any path.
 
 - `[environment variables for Windows]`
 
     Variables defined in this section will only be added to the environment if the
-    controller is run on the Windows platform. If you want to declare paths in this
+    controller is ran on the Windows platform. If you want to declare paths in this
     section, the value should be written between double-quotes symbols ".
 
 - `[environment variables for Mac OS X]`
@@ -546,7 +561,7 @@ replaced by the actual value already existing in the environment. The Webots
 
 - `[environment variables for Linux]`
 
-    Variables defined here will be added on all Linux platforms but not on Mac or
+    Variables defined here will be added on all Linux platforms but not on Mac nor
     Windows.
 
 - `[environment variables for Linux 32]`
@@ -559,23 +574,23 @@ replaced by the actual value already existing in the environment. The Webots
 
 Here is an example of a typical runtime.ini file.
 
-```c
-       ; typical runtime.ini
+```ini
+; typical runtime.ini
 
-       [environment variables with relative paths]
-       WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
+[environment variables with relative paths]
+WEBOTS_LIBRARY_PATH = lib:$(WEBOTS_LIBRARY_PATH):../../library
 
-       [environment variables]
-       ROS_MASTER_URI = http://localhost:11311
+[environment variables]
+ROS_MASTER_URI = http://localhost:11311
 
-       [environment variables for Windows]
-       NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
+[environment variables for Windows]
+NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
 
-       [environment variables for Mac OS X]
-       NAOQI_LIBRARY_FOLDER = lib
+[environment variables for Mac OS X]
+NAOQI_LIBRARY_FOLDER = lib
 
-       [environment variables for Linux]
-       NAOQI_LIBRARY_FOLDER = lib
+[environment variables for Linux]
+NAOQI_LIBRARY_FOLDER = lib
 ```
 
 ### Languages settings
@@ -584,40 +599,39 @@ The "runtime.ini" file may also contain language specific sections, named
 `[java]`, `[python]` and `[matlab]`. Each of this section may include two keys,
 namely `COMMAND` and `OPTIONS`. The `COMMAND` key allows you to define a
 specific version of the language interpreter whereas the `OPTIONS` key allows
-you to specific options that will be passed immediately to the language
+you to access specific options that will be passed immediately to the language
 interpreter. For example:
 
-```c
-       ; runtime.ini for a Python controller on Mac OS X
+```ini
+; runtime.ini for a Python controller on Mac OS X
 
-       [python]
-       COMMAND = /opt/local/bin/python2.7
-       OPTIONS = -m package.name.given
+[python]
+COMMAND = /opt/local/bin/python2.7
+OPTIONS = -m package.name.given
 ```
 
-In the above example, the resulting command issued by Webots will be:
+In the example above, the resulting command issued by Webots will be:
 `/opt/local/bin/python2.7 -m package.name.given my_controller.py` possibly
 followed by the value of the `controllerArgs` field of the corresponding `Robot`
 node.
 
-```c
-       ; runtime.ini for a Java controller on Windows
+```ini
+; runtime.ini for a Java controller on Windows
 
-       [environment variables with relative paths]
-       CLASSPATH = ../lib/MyLibrary.jar
-       JAVA_LIBRARY_PATH = ../lib
+[environment variables with relative paths]
+CLASSPATH = ../lib/MyLibrary.jar
+JAVA_LIBRARY_PATH = ../lib
 
-       [java]
-       COMMAND = javaw.exe
-       OPTIONS = -Xms6144k
+[java]
+COMMAND = javaw.exe
+OPTIONS = -Xms6144k
 ```
 
-> **note**:
+> **Note**:
 The Java `-classpath` (or -`cp`) option is automatically generated from the
 `CLASSPATH` environment variable. Therefore you should not add it to the
 `OPTIONS` key, but rather to a standard environment variable in your
-"runtime.ini" file. In the above example, the final `-classpath` option passed
+"runtime.ini" file. In the example above, the final `-classpath` option passed
 to the Java virtual machine includes "$(WEBOTS\_HOME)/lib/Controller.jar",
 either the current directory (".") or, if present, the controller jar file
 ("MyController.jar") and finally "../lib/MyLibrary.jar".
-

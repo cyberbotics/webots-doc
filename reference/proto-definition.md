@@ -11,7 +11,7 @@ PROTO protoName [ protoInterface ] { protoBody }
 ```
 
 The interface is a sequence of field declarations which specify the types, names
-and default values for the PROTO's fields. A field declaration has this syntax:
+and default values for the PROTO's fields. A field declaration has the following syntax:
 
 ```
 field fieldType fieldName defaultValue
@@ -52,7 +52,7 @@ PROTO*.
 
 Nodes in the PROTO definition may have their fields associated with the fields
 of the PROTO interface. This is accomplished using IS statements in the body of
-the node. An IS statement consists of the name of a field from a built-in node
+the node. An IS statement consists in the name of a field from a built-in node
 followed by the keyword IS followed by the name of one of the fields of the
 PROTO interface:
 
@@ -88,4 +88,3 @@ declared in the PROTO's interface. For example, it is illegal to associate an
 `SFColor` with an `SFVec3f`. It is also illegal to associate a `SFColor` with a
 `MFColor` or vice versa. Results are undefined if a field of a node in the PROTO
 body is associated with more than one field in the PROTO's interface.
-

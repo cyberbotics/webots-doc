@@ -26,4 +26,3 @@ used, resulting in a more natural fog appearance. If `fogType` is
 "EXPONENTIAL2", a square exponential increase in blending is used, resulting in
 an even more natural fog appearance (see the OpenGL documentation for more
 details about fog rendering).
-

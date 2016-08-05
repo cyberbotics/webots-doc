@@ -13,7 +13,7 @@ dBodyID object can then be used with all the available ODE `dBody*()` functions
 (see ODE documentation). For example it is possible to add a force to the body
 with `dBodyAddForce()`, etc. The prototype of this function is:
 
-```
+```c
 dBodyID dWebotsGetBodyFromDEF(const char *DEF);
 ```
 
@@ -23,7 +23,7 @@ It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
 example:
 
-```
+```c
 dBodyID head_pitch_body = dWebotsGetBodyFromDEF("BLUE_PLAYER_1.HeadYaw.HeadPitch");
 ```
 
@@ -58,7 +58,7 @@ boundingObject of the [Solid](solid.md). The dGeomID object can then be used
 with all the available ODE `dGeom*()` functions (see ODE documentation). The
 prototype of this function is:
 
-```
+```c
 dGeomID dWebotsGetGeomFromDEF(const char *DEF);
 ```
 
@@ -122,17 +122,19 @@ robot controllers and the `dWebotsReceive()` function to receive messages from
 robot controllers. In order to receive messages from the physics plugin, a robot
 has to contain a [Receiver](receiver.md) node set to an appropriate channel (see
 Reference Manual) and with a `baudRate` set to -1 (for infinite communication
-speed). Messages are sent from the physics plugin using the `dWebotsSend()`
+speed).
+Messages are sent from the physics plugin using the `dWebotsSend()`
 function, and received through the receiver API as if they were sent by an
-[Emitter](emitter.md) node with an infinite range and baud rate. Similarly, in
-order to send messages to the physics plugin, a robot has to contain an
+[Emitter](emitter.md) node with an infinite range and baud rate.
+Additionally the resulting signal strength will be positive infinity and the emitter direction will be NaN (Not a Number).
+Similarly, in order to send messages to the physics plugin, a robot has to contain an
 [Emitter](emitter.md) node set to `channel` 0 (as the physics plugin only
 receives data sent on this channel). The `range` and `baudRate` fields of the
 [Emitter](emitter.md) node should be set to -1 (infinite). Messages are sent to
 the physics plugin using the standard [Emitter](emitter.md) API functions. They
 are received by the physics plugin through the `dWebotsReceive()` function.
 
-```
+```c
 void dWebotsSend(int channel,const void *buffer,int size);
 const void *dWebotsReceive(int *size);
 ```
@@ -152,26 +154,28 @@ message will terminate with the null character `\0` preventing the correct copy
 and display of the returned data. The following example shows how to split
 concatenated string messages:
 
->     int dataSize;
->     const char *data = (const char *)dWebotsReceive(&dataSize);
->     if (dataSize > 0) {
->       char *msg = new char[dataSize];
->       int count = 1, i = 0, j = 0;
->       for ( ; i < dataSize; ++i) {
->         char c = data[i];
->         if (c == '\0') {
->           msg[j] = c;
->           // process message
->           dWebotsConsolePrintf("Received message %d: %s\n", count, msg);
->           // reset for next string
->           ++count;
->           j = 0;
->         } else {
->           msg[j] = c;
->           ++j;
->         }
->       }
+> ```c
+> int dataSize;
+> const char *data = (const char *)dWebotsReceive(&dataSize);
+> if (dataSize > 0) {
+>   char *msg = new char[dataSize];
+>   int count = 1, i = 0, j = 0;
+>   for ( ; i < dataSize; ++i) {
+>     char c = data[i];
+>     if (c == '\0') {
+>       msg[j] = c;
+>       // process message
+>       dWebotsConsolePrintf("Received message %d: %s\n", count, msg);
+>       // reset for next string
+>       ++count;
+>       j = 0;
+>     } else {
+>       msg[j] = c;
+>       ++j;
 >     }
+>   }
+> }
+> ```
 
 ### dWebotsGetTime()
 
@@ -179,7 +183,7 @@ This function returns the current simulation time in milliseconds [ms] as a
 double precision floating point value. This corresponds to the time displayed in
 the bottom right corner of the main Webots window.
 
-```
+```c
 double dWebotsGetTime(void);
 ```
 
@@ -192,7 +196,6 @@ optional extra arguments should match these conversion specifiers. A prefix and
 a '\n' (new line) character will automatically be added to each line. A '\f'
 (form feed) character can optionally be used for clearing up the console.
 
-```
+```c
 void dWebotsConsolePrintf(const char *format, ...);
 ```
-

@@ -3,35 +3,35 @@
 This tutorial explains how to use the nodes from the `webots_ros` package
 provided with Webots.
 
-These examples were tested with ROS `jade`, `indigo`, `hydro` and `groovy`
+These examples were tested with ROS `kinetic`, `jade`, `indigo`, `hydro` and `groovy`
 distributions on Linux. There is no warranty they will work if you use a
 different platform or an ancient distribution of ROS.
 
 ### Installing ROS
 
 In order to use these nodes, you will first need to install the ROS framework.
-To install the last version of ROS on Ubuntu use the following commands:
+To install the latest version of ROS on Ubuntu use the following commands:
 
-```
+```sh
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 0xB01FA116
 sudo apt-get update
-sudo apt-get install ros-jade-desktop-full
-sudo apt-get install ros-jade-sensor-msgs
+sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install ros-kinetic-sensor-msgs
 sudo rosdep init
 rosdep update
 ```
 
-For more information or to install it on another platform please reading
+For more information or to install it on another platform please read
 [http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation).
 Unless you need older version for some other application, you should choose the
-latest distribution (Jade Turtle).
+latest distribution (Kinetic Kame).
 
-> **note**:
+> **Note**:
 If you never used the ROS framework before, it is strongly recommended to follow
-some tutorials at:
+some tutorials from:
 [http://wiki.ros.org/ROS/Tutorials](http://wiki.ros.org/ROS/Tutorials). These
-tutorials will also help you setting up your ROS environment and initializing
+tutorials will also help you set up your ROS environment and initialize
 your catkin workspace.
 
 ### webots_ros package installation
@@ -39,7 +39,7 @@ your catkin workspace.
 If you haven't created any catkin workspace yet, you can create one with the
 following commands:
 
-```
+```sh
 mkdir -p catkin_ws/src
 cd catkin_ws/src
 catkin_init_workspace
@@ -47,7 +47,7 @@ catkin_init_workspace
 
 Once your workspace is set, you have to copy the `webots_ros` folder located in
 "projects/languages/ros" in the `src` folder of your catkin workspace. You will
-also need to copy the list of the services and messages definitions of the
+also need to copy the list of services and messages definitions of the
 `webots_ros` package. Simply copy the `srv` and `msg` folders located in
 "projects/default/controllers/ros/include" into the "webots\_ros" folder of your
 catkin workspace.
@@ -56,7 +56,7 @@ The `webots_ros` package already contains a "CmakeList.txt" with build
 instructions for the package. All you have to do, in order to build the package,
 is to run:
 
-```
+```sh
 cd catkin_ws
 catkin_make
 ```
@@ -67,7 +67,7 @@ Now that you have built the package, you can run the example you want. You will
 first have to launch the master node with the following commands from the catkin
 workspace:
 
-```
+```sh
 source devel/setup.bash
 roscore
 ```
@@ -86,7 +86,7 @@ variables or in a runtime.ini file in the controller directory.
 You can then start the ROS node corresponding to this example in a new terminal
 using the following commands from the catkin workspace:
 
-```
+```sh
 source devel/setup.bash
 rosrun webots_ros [node_name]
 ```
@@ -95,14 +95,14 @@ For example, if you opened the world
 "projects/languages/ros/worlds/panoramic\_view\_recorder.wbt" you will have to
 start the `panoramic_view_recorder` node with the following command:
 
-```
+```sh
 rosrun webots_ros panoramic_view_recorder
 ```
 
-> **note**:
-The seed of the Webots random number generator is initialized at the beginning
+> **Note**:
+The seed of Webots' random number generator is initialized at the beginning
 of the simulation and not when the ROS nodes connect. Webots has to be running
-so that the ROS nodes can connect. However, we cannot guarantee how long it will
+for the ROS nodes to connect. However, we cannot guarantee how long it will
 run before the ROS nodes connect. Therefore, the sensor measurements and motor
 commands will slightly differ from one run to another, due to the noise being
 slightly different at the time of the connection of the ROS nodes. This may have
@@ -113,7 +113,7 @@ make ROS-based simulation reproducible.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 If you want to use different computers for the ROS master, the Webots simulation
 and/or the nodes, you must be able to connect to each of them with SSH in both
 ways. The hostname and IP addresses of these computers should be listed in the
@@ -132,5 +132,4 @@ functions.
 
 All the functions from the Webots API have their corresponding services or
 topics. You can find in the `Reference Manual` the definitions of all the
-services and topics associated with each device.
-
+services and topics associated to each device.

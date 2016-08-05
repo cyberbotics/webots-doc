@@ -50,7 +50,7 @@ not be possible to reopen the file.
 reloads the current world from the saved version and restarts the simulation
 from the beginning.
 
-> **note**:
+> **Note**:
 When opening (or reverting) a world, if the world takes more than 2 seconds to
 load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
@@ -110,9 +110,9 @@ The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file, using the X3DOM web standard, based on WebGL. This
 is especially useful for publishing Webots-created worlds on the Web. X3DOM is
 supported in recent versions of Firefox, Chrome, Internet Explorer and Safari on
-Mac OS X (see details on the [X3DOM web site](http://www.x3dom.org)).
+Mac OS X (see details on the [X3DOM website](http://www.x3dom.org)).
 
-> **note**:
+> **Note**:
 With the Chrome browser, in order to be able to open HTML/X3DOM files locally,
 e.g., not from the Web, you may need to allow Chrome to open local files
 referred to by the HTML/X3DOM file, e.g., textures. This can be achieved by
@@ -145,6 +145,8 @@ want the viewpoint to follow an object, first you need to select the object with
 the mouse and then check the `Follow Object` menu item. Note that the `Follow
 Object` state is saved in the ".wbt" file.
 
+The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
+
 The `Restore Viewpoint` item restores the viewpoint's position and orientation
 to their initial settings when the file was loaded or reverted. This feature is
 handy when you get lost while navigating in the scene, and want to return to the
@@ -175,7 +177,7 @@ are drawn (not the renderable primitives). This can be used to debug a problem
 with the collision detection.
 
 Finally, the `Optional Rendering` submenu allows you to display, or to hide,
-supplementary information. These rendering are displayed only in the main
+supplementary information. These renderings are displayed only in the main
 rendering and hide in the robot camera. They are used to understand better the
 behavior of the simulation.
 
@@ -204,7 +206,9 @@ joint axes are represented by black lines.
 
 The `Show RangeFinder frustums` allows you to display, or to hide, the OpenGL
 culling frustum and the recorded image for every range-finder in the scene,
-using a yellow wire frame. The OpenGL culling frustum is a truncated pyramid
+using a yellow wire frame.
+If the range-finder device is disabled or the first image is not available yet, the frustum will be drawn in gray.
+The OpenGL culling frustum is a truncated pyramid
 corresponding to the field of view of a range-finder. The recorded image is
 displayed on the plane described by the frustum at a distance corresponding to
 the minimum range of the range-finder from the device center. More information
@@ -212,6 +216,7 @@ about this concept is available in the OpenGL documentation.
 
 The `Show Lidar Rays Paths` allows you to display, or to hide, the layers (the
 laser ray paths) for every lidar in the scene, using a cyan wire frame.
+If the lidar device is disabled or the first measurement is not available yet, the layers are drawn in gray.
 
 The `Show Lidar Point Cloud` allows you to display, or to hide, the point cloud
 for every lidar enabled in point cloud mode in the scene. The point cloud is
@@ -224,7 +229,9 @@ not displayed.
 
 The `Show Camera frustums` allows you to display, or to hide, the OpenGL culling
 frustum and the recorded image for every camera in the scene, using a magenta
-wire frame. The OpenGL culling frustum is a truncated pyramid corresponding to
+wire frame.
+If the camera device is disabled or the first image is not available yet, the frustum will be drawn in gray.
+The OpenGL culling frustum is a truncated pyramid corresponding to
 the field of view of a camera. The back of the pyramid is not represented
 because the far plane is set to infinity. The recorded image is displayed on the
 camera's near plane. More information about this concept is available in the
@@ -234,9 +241,11 @@ The `Show Distance Sensor rays` allows you to display, or to hide, the rays
 casted by the distance sensor devices. These rays are drawn as red lines (which
 become green beyond collision points). Their length corresponds to the maximum
 range of the device.
+If the distance sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
 The `Show Light Sensor rays` allows you to display, or to hide, the rays casted
 by the light sensor devices. These rays are drawn as yellow lines.
+If the light sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
 The `Show Lights` allows you to display, or to hide, the lights (including
 PointLights and SpotLights). DirectionalLights aren't represented. PointLights
@@ -256,6 +265,7 @@ equilibrium), red otherwise. This rendering option can be activated only for
 solids with no other solid at their top.
 
 The `Show Radar frustums` allows you to display, or to hide, the radar frustum.
+If the radar device is enabled the frustum is drawn in blue, otherwise if the radar is disabled or the first measurement is not available yet, the frustum is drawn in gray.
 The radar frustum represents the volume in which a target can be detected by the
 radar.
 
@@ -288,7 +298,7 @@ node.
 ![](images/fast-button.png =26x26) The `Fast` menu item (and button) is like
 `Run`, except that no graphical rendering is performed (Webots PRO only). As the
 graphical rendering is disabled (black screen) this allows for a faster
-simulation and therefore this is well suited for cpu-intensive simulations
+simulation and therefore is well suited for cpu-intensive simulations
 (genetic algorithms, vision, learning, etc.).
 
 ### Build Menu
@@ -353,9 +363,7 @@ the 3D view independently from the specific robot's device option set in
 
 The `Tools` menu allows you to open various Webots windows.
 
-The `3D View` menu item shows or hides the
-
-The `Scene Tree` menu item opens the
+The `3D View` menu item shows or hides the 3D window that and allows you to interact with the 3D simulation.
 
 The `Scene Tree` menu item opens the `Scene Tree` window in which you can edit
 the virtual world. Alternatively it is also possible to double-click on some of
@@ -368,7 +376,7 @@ used for editing and compiling controller source code.
 The `Console` menu item opens the Webots Console, which is a read-only console
 that is used to display Webots error messages and controller outputs.
 
-The `Restore Layout` menu item restores the factory layout of the panes of the
+The `Restore Layout` menu item restores the factory layout of the panels of the
 main window.
 
 The `Clear Console` menu item clears the console.
@@ -380,7 +388,7 @@ The `License Manager...` item opens the `Webots License Manager` window that
 allows you to see which licenses are in use and optionally to transfer some
 license to your local computer for off-line use. Please note that the transfer
 of license may be limited by your local license administrator: It may not be
-possible to transfer some license to your local computer or only for a limited
+possible to transfer a license to your local computer or only for a limited
 duration depending on the configuration defined by your local license
 administrator. Please ask your local license administrator in case of problem.
 
@@ -426,8 +434,7 @@ of HTML pages, PDF documents, etc.
 
 ### Main toolbar
 
-The main toolbar contains items for editing the world and the speedometer (see
-subsection [this section](#speedometer-and-virtual-time)), other than shortcuts
+The main toolbar contains items for editing the world and the speedometer (see this [subsection](#speedometer-and-virtual-time)), other than shortcuts
 to items of the `File`, `Simulation` and `View` menus. Edit actions always apply
 on the selected object, that is highlighted both in the 3D window and in the
 Scene Tree.
@@ -487,4 +494,3 @@ milliseconds. The value of this time step defines the length of the time step
 executed during the `Step` mode. This step is multiplied by the `displayRefresh`
 field of the same `WorldInfo` node to define how frequently the display is
 refreshed.
-

@@ -10,7 +10,7 @@ in real-time). And then convert it using the script.
 
 The script is written in python, a typical usage is:
 
-```
+```sh
 python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
 ```
 
@@ -23,19 +23,25 @@ You can use several arguments with this script:
 
 %figure "OpenStreetMap importer arguments"
 
-| Argument            | Description                                                                                                                         | Default value                                                             |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| --inputFile         | Specifies the OSM file to be converted                                                                                              | If not specified, the script try to convert "map.osm"                     |
-| --outputFile        | Specifies the name of the generated world file                                                                                      | If not specified, the generated world is called "map.wbt"                 |
-| --configFile        | Specifies which configuration file to use                                                                                           | If not specified, tries to use the configuration file called "config.ini" |
-| --splineSubdivision | Defines the spline subdivision used for roads, rivers, etc.                                                                         | A default value of 4 is used                                              |
-| --noForest          | Do not include the forests in the generated world                                                                                   | By default, forests are included                                          |
-| --noRoad            | Do not include the roads in the generated world                                                                                     | By default, roads are included                                            |
-| --noArea            | Do not include the areas (water area, landuse, etc.) in the generated world                                                         | By default, areas are included                                            |
-| --noTree            | Do not include the isolated trees in the generated world                                                                            | By default, isolated trees are included                                   |
-| --noRiver           | Do not include the rivers in the generated world                                                                                    | By default, rivers are included                                           |
-| --noBuilding        | Do not include the buildings in the generated world                                                                                 | By default, buildings are included                                        |
-| --enable3D          | Use an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
+| Argument               | Description                                                                                                                          | Default value                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| --input                | Specifies the OSM file to be converted                                                                                               | If not specified, the script try to convert "map.osm"                     |
+| --output               | Specifies the name of the generated world file                                                                                       | If not specified, the generated world is called "map.wbt"                 |
+| --config-file          | Specifies which configuration file to use                                                                                            | If not specified, tries to use the configuration file called "config.ini" |
+| --spline-subdivision   | Defines the spline subdivision used for roads, rivers, etc.                                                                          | A default value of 4 is used                                              |
+| --layer-height         | Defines the height of a layer (the 'layer' tag is ignored if set to 0)                                                               | A default value of 5.0 is used                                            |
+| --no-forests           | Does not include the forests in the generated world                                                                                  | By default, forests are included                                          |
+| --no-roads             | Does not include the roads in the generated world                                                                                    | By default, roads are included                                            |
+| --no-areas             | Does not include the areas (water area, landuse, etc.) in the generated world                                                        | By default, areas are included                                            |
+| --no-trees             | Does not include the isolated trees in the generated world                                                                           | By default, isolated trees are included                                   |
+| --no-barriers          | Does not include the barriers (fence, wall, etc.) in the generated world                                                             | By default, barriers are included                                         |
+| --no-rivers            | Does not include the rivers in the generated world                                                                                   | By default, rivers are included                                           |
+| --no-buildings         | Does not include the buildings in the generated world                                                                                | By default, buildings are included                                        |
+| --no-road-intersections| Does not generate complex road intersections                                                                                         | By default, complex road intersections are generated                      |
+| --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
+| --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
+| --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
+| --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 
 %end
 
@@ -83,4 +89,3 @@ to give an osm file as input or a map area using a latitude-longitude rectangle.
 If you choose to use a latitude-longitude rectangle, it will take care
 automatically to download the corresponding osm file before to launch the script
 (you will therefore require an internet connexion).
-

@@ -76,4 +76,3 @@ Archimedes'thrust.
 
 - `locked`: if `TRUE`, the fluid object cannot be moved using the mouse. This is
 useful to prevent moving an object by mistake.
-

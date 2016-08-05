@@ -95,6 +95,8 @@ necessary to specify all the [Physics](#physics) nodes in a Webots world.
 Whether to use or not a [Physics](#physics) node in a particular case depends on
 what aspect of the real world your want to model in your simulation.
 
+Note that if a [Solid](#solid) node has at least one [Solid](#solid) ancestor node and contains a [Physics](#physics) node but none of its [Solid](#solid) ancestor nodes contain a [Physics](#physics) node, then this node will be attached to the static environment with an ODE fixed joint and thus it won't move from its initial position.
+
 #### In passive objects
 
 If a passive object should never move during a simulation then you should leave
@@ -316,4 +318,3 @@ simulation.
 [Physics](#physics) node when it is used as "force" sensor; it does not
 necessarily need a [Physics](#physics) node when it is only used as "bumper"
 sensor.
-

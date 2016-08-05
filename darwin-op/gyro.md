@@ -9,4 +9,3 @@ in real time. Here again four different types of graph can be plot.
 ![window_gyro.png](images/window_gyro.png)
 
 %end
-

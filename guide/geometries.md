@@ -1,7 +1,7 @@
 ## Geometries
 
 This section shows the geometric primitives available in Webots. The world files
-for these examples are located in the "sample/geometries /worlds" directory.
+for these examples are located in the "sample/geometries/worlds" directory.
 
 In this directory, you will find the following world files :
 
@@ -16,4 +16,3 @@ In this directory, you will find the following world files :
 - sphere.wbt
 - textured\_shapes.wbt
 - webots\_box.wbt
-

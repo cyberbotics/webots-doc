@@ -233,18 +233,19 @@ restored.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-void wb_camera_enable(WbDeviceTag tag, int ms)
-void wb_camera_disable(WbDeviceTag tag)
-int wb_camera_get_sampling_period(WbDeviceTag tag)
+void wb_camera_enable(WbDeviceTag tag, int sampling_period);
+void wb_camera_disable(WbDeviceTag tag);
+int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_camera_enable()` allows the user to enable a camera update each `ms`
-milliseconds.
+`wb_camera_enable()` allows the user to enable a camera.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_camera_disable()` turns the camera off, saving computation time.
 
@@ -259,13 +260,13 @@ The `wb_camera_get_sampling_period()` function returns the period given into the
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-double wb_camera_get_fov(WbDeviceTag tag)
-double wb_camera_get_min_fov(WbDeviceTag tag)
-double wb_camera_get_max_fov(WbDeviceTag tag)
-void wb_camera_set_fov(WbDeviceTag tag, double fov)
+double wb_camera_get_fov(WbDeviceTag tag);
+double wb_camera_get_min_fov(WbDeviceTag tag);
+double wb_camera_get_max_fov(WbDeviceTag tag);
+void wb_camera_set_fov(WbDeviceTag tag, double fov);
 ```
 
 **Description**
@@ -287,14 +288,14 @@ not defined, then the functions `wb_camera_get_min_fov()` and
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-double wb_camera_get_focal_length(WbDeviceTag tag)
-double wb_camera_get_focal_distance(WbDeviceTag tag)
-double wb_camera_get_max_focal_distance(WbDeviceTag tag)
-double wb_camera_get_min_focal_distance(WbDeviceTag tag)
-void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance)
+double wb_camera_get_focal_length(WbDeviceTag tag);
+double wb_camera_get_focal_distance(WbDeviceTag tag);
+double wb_camera_get_max_focal_distance(WbDeviceTag tag);
+double wb_camera_get_min_focal_distance(WbDeviceTag tag);
+void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 ```
 
 **Description**
@@ -312,11 +313,11 @@ the other functions will return 0.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-int wb_camera_get_width(WbDeviceTag tag)
-int wb_camera_get_height(WbDeviceTag tag)
+int wb_camera_get_width(WbDeviceTag tag);
+int wb_camera_get_height(WbDeviceTag tag);
 ```
 
 **Description**
@@ -332,10 +333,10 @@ corresponding [Camera](#camera) node.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-double wb_camera_get_near(WbDeviceTag tag)
+double wb_camera_get_near(WbDeviceTag tag);
 ```
 
 **Description**
@@ -351,14 +352,14 @@ corresponding [Camera](#camera) node.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-const unsigned char *wb_camera_get_image(WbDeviceTag tag)
-unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y)
-unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y)
+const unsigned char *wb_camera_get_image(WbDeviceTag tag);
+unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int x, int y);
+unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y);
+unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y);
+unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
 ```
 
 **Description**
@@ -405,14 +406,16 @@ similar way, but returns the gray level of the pixel by averaging the three RGB
 components. Each of these four functions take an `int` pixel argument and return
 an `int` color/gray component in the range [0..255]. Here is an example:
 
->     int[] image = camera.getImage();
->     for (int i=0; i < image.length; i++) {
->       int pixel = image[i];
->       int r = Camera.pixelGetRed(pixel);
->       int g = Camera.pixelGetGreen(pixel);
->       int b = Camera.pixelGetBlue(pixel);
->       System.out.println("red=" + r + " green=" + g + " blue=" + b);
->     }
+> ```java
+> int[] image = camera.getImage();
+> for (int i=0; i < image.length; i++) {
+>   int pixel = image[i];
+>   int r = Camera.pixelGetRed(pixel);
+>   int g = Camera.pixelGetGreen(pixel);
+>   int b = Camera.pixelGetBlue(pixel);
+>   System.out.println("red=" + r + " green=" + g + " blue=" + b);
+> }
+> ```
 
 <!-- -->
 
@@ -421,25 +424,29 @@ an `int` color/gray component in the range [0..255]. Here is an example:
 char *` of the C API. `imageGet*`-like functions can be used to get the channels
 of the camera Here is an example:
 
->     #...
->     cameraData = camera.getImage()
+> ```python
+> #...
+> cameraData = camera.getImage()
 >
->     # get the gray component of the pixel (5,10)
->     gray = Camera.imageGetGray(cameraData, camera.getWidth(), 5, 10)
+> # get the gray component of the pixel (5,10)
+> gray = Camera.imageGetGray(cameraData, camera.getWidth(), 5, 10)
+> ```
 
 > Another way to use the camera in Python is to get the image by `getImageArray()`
 which returns a `list<list<list<int>>>`. This three dimensional list can be
 directly used for accessing to the pixels. Here is an example:
 
->     image = camera.getImageArray()
->     # display the components of each pixel
->     for x in range(0,camera.getWidth()):
->       for y in range(0,camera.getHeight()):
->         red   = image[x][y][0]
->         green = image[x][y][1]
->         blue  = image[x][y][2]
->         gray  = (red + green + blue) / 3
->         print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
+> ```python
+> image = camera.getImageArray()
+> # display the components of each pixel
+> for x in range(0,camera.getWidth()):
+>   for y in range(0,camera.getHeight()):
+>     red   = image[x][y][0]
+>     green = image[x][y][1]
+>     blue  = image[x][y][2]
+>     gray  = (red + green + blue) / 3
+>     print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
+> ```
 
 <!-- -->
 
@@ -452,22 +459,24 @@ third being the RGB code: 1 for red, 2 for blue and 3 for green.
 camera's image and the float values are the metric distance values deduced from
 the OpenGL z-buffer.
 
->     camera = wb_robot_get_device('camera');
->     wb_camera_enable(camera,TIME_STEP);
->     half_width = floor(wb_camera_get_width(camera) / 2);
->     half_height = floor(wb_camera_get_height(camera) / 2);
->     % color camera image
->     image = wb_camera_get_image(camera);
->     red_middle_point = image(half_width,half_heigth,1);% red color component of the pixel lying in the middle of the image
->     green_middle_line = sum(image(half_width,:,2));% sum of the green color over the vertical middle line of the image
->     blue_overall = sum(sum(image(:,:,3));% sum of the blue color over all the pixels in the image
->     fprintf('red_middle_point = %d, green_middle_line = %d, blue_overall = %d\n', red_middle_point, green_middle_line, blue_overall);
->     % range-finder camera image
->     image = wb_camera_get_range_image(camera);
->     imagesc(image,[0 1]);
->     colormap(gray);
->     drawnow;
->     distance = min(min(image))% distance to the closest point seen by the camera
+> ```matlab
+> camera = wb_robot_get_device('camera');
+> wb_camera_enable(camera,TIME_STEP);
+> half_width = floor(wb_camera_get_width(camera) / 2);
+> half_height = floor(wb_camera_get_height(camera) / 2);
+> % color camera image
+> image = wb_camera_get_image(camera);
+> red_middle_point = image(half_width,half_heigth,1);% red color component of the pixel lying in the middle of the image
+> green_middle_line = sum(image(half_width,:,2));% sum of the green color over the vertical middle line of the image
+> blue_overall = sum(sum(image(:,:,3));% sum of the blue color over all the pixels in the image
+> fprintf('red_middle_point = %d, green_middle_line = %d, blue_overall = %d\n', red_middle_point, green_middle_line, blue_overall);
+> % range-finder camera image
+> image = wb_camera_get_range_image(camera);
+> imagesc(image,[0 1]);
+> colormap(gray);
+> drawnow;
+> distance = min(min(image))% distance to the closest point seen by the camera
+> ```
 
 ---
 
@@ -477,10 +486,10 @@ the OpenGL z-buffer.
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/camera.h>
 
-int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality)
+int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
 **Description**

@@ -30,6 +30,7 @@ programming interface. By default, the `color` defines only one color (red), but
 you can change this and add extra colors that could be selected from the LED
 programming interface. However, the number of colors defined depends on the
 value of the `gradual` field (see below).
+
 - `gradual`: This defines the type of LED. If set to FALSE, the LED can take any
 of the color values defined in the `color` list. If set to TRUE, then the
 `color` list should either be empty or contain only one color value. If the
@@ -46,11 +47,11 @@ between 0 (off) and 255 (maximum intensity).
 
 {[C++](cpp-api.md#cpp_led)}, {[Java](java-api.md#java_led)}, {[Python](python-api.md#python_led)}, {[Matlab](matlab-api.md#matlab_led)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/led.h>
 
-void wb_led_set(WbDeviceTag tag, int value)
-int wb_led_get(WbDeviceTag tag)
+void wb_led_set(WbDeviceTag tag, int value);
+int wb_led_get(WbDeviceTag tag);
 ```
 
 **Description**
@@ -79,4 +80,3 @@ bits (right hand side) indicate the blue level. For example, 0xff0000 is red,
 
 The `wb_led_get` function returns the value given as an argument of the last
 `wb_led_set` function call.
-

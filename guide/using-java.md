@@ -7,39 +7,39 @@ that their class hierarchy, their class names and their function names are
 almost identical. The Java API is currently composed of a set of about 25
 classes having about 200 public functions located in the package called
 *com.cyberbotics.webots.controller*. The classes are either representations of a
-node of the scene tree (such as Robot, LED, etc.) or either utility classes
+node of the scene tree (such as Robot, LED, etc.) or utility classes
 (such as Motion, ImageRef, etc.). A complete description of these functions can
 be found in the reference guide while the instructions about the common way to
-program a Java controller can be found in the
+program a Java controller can be found in this
 [chapter](programming-fundamentals.md).
 
 ### Java and Java Compiler Installation
 
 In order to develop and run Java controllers for Webots it is necessary to have
-the Java Development Kit (JDK) version 1.7.
+the Java Development Kit (JDK) version 1.8.
 
 #### Installation Instructions
 
 The Java Development Kit (JDK) can be downloaded for free from the [Sun
 Developer Network](http://www.oracle.com/technetwork/java/javase/downloads).
 Make sure you choose the most recent release and the Standard Edition (SE) of
-the JDK 7. For Windows, make also sure you have selected the 64 bit version
-since webots is incompatible with the 32 bit version. Then follow the
+the JDK 8. For Windows, make also sure you have selected the 64 bit version
+since Webots is not compatible with the 32 bit version. Then, follow the
 installation instructions attending the package.
 
-The `java` command is the Java Virtual Machine (JVM); it is used for executing
+The `java` command is the Java Virtual Machine (JVM); it is used to execute
 Java controllers in Webots. The `javac` command is the Java compiler; it is used
-for compiling Java controllers in Webots text editor.
+to compile Java controllers in Webots' text editor.
 
 These commands should be accessible from a terminal. If it is not the case, this
 can be done by modifying your *PATH* environment variable.
 
-On Mac the JDK installer should do this automatically.
+On Mac, the JDK installer should do this automatically.
 
 On Linux, you can set the *PATH* by adding this line to your "~/.bashrc" or
 equivalent file.
 
-```
+```sh
 $ export PATH=/usr/lib/jvm/java-XXXXXX/bin:$PATH
 ```
 
@@ -49,7 +49,7 @@ package.
 On Windows, the *PATH* variable must be set using the `Environment Variables`
 dialog.
 
-On Windows 7 and 8, this dialog can be opened like this: Choose `Start,
+On Windows, this dialog can be opened like this: Choose `Start,
 Settings, Control Panel, System and Security, System` and open `Advanced system
 settings`. Select the `Advanced` tab and click on the `Environment Variables`
 button.
@@ -74,7 +74,7 @@ the `Environment Variables` dialog.
 
 #### Linux and OpenJDK Instructions
 
-In alternative to Oracle JDK, on most popular Linux distribution is also
+In alternative to Oracle JDK, on most popular Linux distribution it is also
 possible to directly install the open-source JDK from the system package
 manager. Detailed information can be found on the [OpenJDK
 website](http://openjdk.java.net/install/index.html).
@@ -85,11 +85,11 @@ If a Java controller fails to execute or compile, check that the `java`,
 respectively the `javac` commands are reachable. You can verify this easily by
 opening a Terminal (Linux and Mac OS X) or a Command Prompt (Windows) and typing
 `java` or `javac`. If these commands are not reachable from the Terminal (or
-Command Prompt) they will not be reachable by Webots. In this case check that
+Command Prompt) they will not be reachable by Webots. In this case, check that
 the JDK is installed and that your *PATH* variable is defined correctly as
 explained above.
 
-If you run into an error message that looks approximately like this:
+If you run into an error message that looks like this:
 
 ```
 Native code library failed to load. See the chapter on Dynamic Linking
@@ -115,15 +115,15 @@ of the current controller directory, and the content of the *CLASSPATH*
 environment variable. In order to include third-party jar files, you should
 define (or modify) this environment variable before running Webots (see the
 previous section in order to know how to set an environment variable). Under
-windows, the CLASSPATH seems like this,
+windows, the CLASSPATH looks like this,
 
-```
+```sh
 $ set CLASSPATH=C:\Program Files\java\jdk\bin;relative\mylib.jar
 ```
 
-while under Linux and Mac OS X, it seems like this:
+while under Linux and Mac OS X, it looks like this:
 
-```
+```sh
 $ export CLASSPATH=/usr/lib/jvm/java/bin:relative/mylib.jar
 ```
 
@@ -142,4 +142,3 @@ the "lib" directory.
 Advanced users may want to modify the Java API. They will need to modify the
 SWIG script (controller.i), the java sources and the Makefile located in the
 "resources/languages/java" directory.
-

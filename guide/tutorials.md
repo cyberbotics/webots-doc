@@ -10,13 +10,13 @@ programming is nevertheless required. The examples are written in C language. If
 you are not familiar with the C language, you should be able to understand this
 chapter anyway, because the C programs below are very simple. Except for
 programming, you don't need any particular knowledge to go through the tutorials
-included in this chapter. However a basic background knowledge in robotics,
+included in this chapter. However, a basic background knowledge in robotics,
 mathematics, modeling and tree representation might turn out to be helpful.
 Experienced Webots users may skip the first tutorials. However, we would
 recommend them to read at least the introduction and conclusion of these
 tutorials.
 
-Each section of this chapter (except the first one and the last one) is a
+Each section of this chapter (except the first and last one) is a
 tutorial. Each tutorial has a precise educational objective explained in the
 first paragraph. The acquired  concepts are then summarized in the conclusion
 subsection. A tutorial is designed as a sequence of interactive steps. The

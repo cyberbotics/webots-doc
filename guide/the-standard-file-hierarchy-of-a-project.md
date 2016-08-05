@@ -22,7 +22,7 @@ The link between the world files and this directory is done through the
 - "worlds": this directory contains the world files, the project files (see below)
 and the textures (typically in a subdirectory called "textures").
 
-> **note**:
+> **Note**:
 Note that the directories can be created by using the wizard [New Project
 Directory](the-user-interface.md) described in [this
 chapter](getting-started-with-webots.md).
@@ -43,7 +43,6 @@ example of the controllers directory having one simple controller written in C
 which can be edited and executed.
 
 ```
-
 controllers/
 controllers/simple_controller/
 controllers/simple_controller/Makefile
@@ -51,13 +50,12 @@ controllers/simple_controller/simple_controller.c
 controllers/simple_controller/simple_controller[.exe]
 ```
 
-> **note**:
+> **Note**:
 The main executable name must be identical to the directory name.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 You can create all the files needed by a new controller using the wizard [New
 Robot Controller](the-user-interface.md) described in [this
 chapter](getting-started-with-webots.md).
-

@@ -3,13 +3,13 @@
 ### Introduction
 
 The C++ API is a wrapper of the C API described in the previous section. The
-major part of the C functions has been wrapped in a function of a specific
+major part of the C functions have been wrapped in a function of a specific
 class. It is currently composed of a set of about 25 classes having about 200
 public functions. The classes are either representations of a node of the scene
-tree (such as Robot, LED, etc.) or either utility classes (such as Motion,
+tree (such as Robot, LED, etc.) or utility classes (such as Motion,
 ImageRef, etc.). A complete description of these functions can be found in the
 reference guide while the instructions about the common way to program a C++
-controller can be found in the [chapter](programming-fundamentals.md).
+controller can be found in this [chapter](programming-fundamentals.md).
 
 ### C++ Compiler Installation
 
@@ -33,4 +33,3 @@ linked.
 
 For advanced users who want to modify the C++ API, the C++ sources and the
 Makefile are located in the "resources/languages/cpp" directory.
-

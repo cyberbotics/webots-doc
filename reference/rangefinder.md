@@ -113,18 +113,19 @@ restored.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
-void wb_range_finder_enable(WbDeviceTag tag, int ms)
-void wb_range_finder_disable(WbDeviceTag tag)
-int wb_range_finder_get_sampling_period(WbDeviceTag tag)
+void wb_range_finder_enable(WbDeviceTag tag, int sampling_period);
+void wb_range_finder_disable(WbDeviceTag tag);
+int wb_range_finder_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_range_finder_enable()` allows the user to enable a range-finder update each
-`ms` milliseconds.
+`wb_range_finder_enable()` allows the user to enable range-finder updates.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_range_finder_disable()` turns the range-finder off, saving computation time.
 
@@ -139,10 +140,10 @@ into the `wb_range_finder_enable()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
-double wb_range_finder_get_fov(WbDeviceTag tag)
+double wb_range_finder_get_fov(WbDeviceTag tag);
 ```
 
 **Description**
@@ -158,11 +159,11 @@ of a range-finder.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
-int wb_range_finder_get_width(WbDeviceTag tag)
-int wb_range_finder_get_height(WbDeviceTag tag)
+int wb_range_finder_get_width(WbDeviceTag tag);
+int wb_range_finder_get_height(WbDeviceTag tag);
 ```
 
 **Description**
@@ -178,11 +179,11 @@ in the corresponding [RangeFinder](#rangefinder) node.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
-double wb_range_finder_get_min_range(WbDeviceTag tag)
-double wb_range_finder_get_max_range(WbDeviceTag tag)
+double wb_range_finder_get_min_range(WbDeviceTag tag);
+double wb_range_finder_get_max_range(WbDeviceTag tag);
 ```
 
 **Description**
@@ -198,11 +199,11 @@ device as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
-const float *wb_range_finder_get_range_image(WbDeviceTag tag)
-float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y)
+const float *wb_range_finder_get_range_image(WbDeviceTag tag);
+float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y);
 ```
 
 **Description**
@@ -245,10 +246,10 @@ are identical but their handling is of course different.
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/range_finder.h>
 
-int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality)
+int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
 **Description**
@@ -267,4 +268,3 @@ For PNG images, the `quality` parameter is ignored.
 The return value of the `wb_range_finder_save_image()` is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized
 image file extension).
-

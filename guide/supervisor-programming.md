@@ -15,7 +15,7 @@ from a controller program associated with a `Supervisor` node, not with a
 create `Supervisor` nodes or use the `wb_supervisor_*()` functions.
 
 In the Scene Tree, a `Supervisor` node can be used in the same context where a
-`Robot` node is used, hence it can be used as a basis node to model a robot. But
+`Robot` node is used, hence it can be used as a base node to model a robot. But
 in addition, the `wb_supervisor_*()` functions can also be used to control the
 simulation process and modify the Scene Tree. For example the `Supervisor` can
 replace human actions such as measuring the distance travelled by a robot or
@@ -146,15 +146,15 @@ int main() {
 
 my_exit:
   wb_robot_cleanup();
-  
+
   return 0;
 }
 ```
 
 As in the previous example, the `trans_field` variable is a `WbFieldRef` that
 identifies the `translation` field of the robot. In this example the
-`trans_field` is used both for getting (`wb_supervisor_field_get_sf_vec3f()`)
-and for setting (`wb_supervisor_field_set_sf_vec3f`) the field's value.
+`trans_field` is used both to get (`wb_supervisor_field_get_sf_vec3f()`)
+and to set (`wb_supervisor_field_set_sf_vec3f`) the field's value.
 
 Please note that the program structure is composed of three nested `for` loops.
 The two outer loops change the values of the a and b parameters. The innermost

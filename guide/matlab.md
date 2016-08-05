@@ -65,11 +65,11 @@ typing `return` at the `K>>` prompt. Finally the execution of the controller can
 be terminated with `Ctrl-C` key combination.
 
 Once the controller is terminated, the connection with Webots remains active.
-Therefore it becomes possible to issue Webots commands directly at the MATLAB
+Therefore it becomes possible to issue Webots commands directly on the MATLAB
 prompt, for example you can interactively issue commands to query the sensors,
 etc.:
 
-```
+```matlab
 >> wb_differential_wheels_set_speed(600, 600);
 >> wb_robot_step(1000);
 >> wb_gps_get_values(gps)
@@ -90,4 +90,3 @@ m-file from MATLAB prompt. Note that this will restart the controller only, not
 the whole simulation, so the current robot and motor positions will be
 preserved. If you want to restart the whole simulation you need to use the
 `Revert` button as usual.
-

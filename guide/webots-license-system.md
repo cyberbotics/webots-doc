@@ -10,11 +10,10 @@ Internet, you can transfer your Internet license from the server to your local
 computer for a limited duration. After the expiration of this duration, your
 license will be automatically transferred back to the license server.
 
-> **note**:
+> **Note**:
 Cyberbotics license servers are located in Switzerland on a highly reliable
 network featuring a 99.9% up-time. However, if for some reason our servers would
-fail, a security system will allow you to run Webots even in case of server
-failure, by connecting automatically to an alternate server located in the Cloud
+fail, a security system will allow you to run Webots, by connecting automatically to an alternate server located in the Cloud
 (hosted on Google App Engine).
 
 ### Firewall configuration (optional)
@@ -26,7 +25,7 @@ servers:
 - `https://www.cyberbotics.com (port 443)`
 - `https://webots-license.appspot.com (port 443)`
 
-> **note**:
+> **Note**:
 If you are using a proxy to access the Internet, Webots will retrieve your
 system proxy configuration automatically.
 
@@ -39,13 +38,13 @@ documentation, you agree to abide by all the provisions of this license.
 ### License setup
 
 A Webots license is originally associated with an e-mail address which
-corresponds to a user account on Cyberbotics's web site.
+corresponds to a user account on Cyberbotics' website.
 
 When Webots is started for the first time, a login dialog invites you to
-register a user account on Cyberbotics's web site (if not already done) and to
-enter the corresponding license information to log in your Webots session.
+register a user account on Cyberbotics' website (if not already done) and to
+enter the corresponding license information to log in to your Webots session.
 
-> **note**:
+> **Note**:
 The `Synchronization` field of the Webots login dialog defines how frequently
 Webots checks the license server. Setting this field to a small value will cause
 more networking activity, but will allow you to release the license quickly
@@ -56,7 +55,7 @@ minutes if you crashed Webots on a machine and want to restart it on another.
 ### License administration
 
 If you are the administrator of the license, you can log into your Webots
-account on Cyberbotics' web site and go to the `Administration` page under the
+account on Cyberbotics' website and go to the `Administration` page under the
 `My Account` tab. From there, you will be able to monitor your licenses, to
 purchase more licenses, to create groups of users and to grant customized user
 access to your licenses.
@@ -64,4 +63,3 @@ access to your licenses.
 If you need further information about license issues, please send an e-mail to:
 
 [license@cyberbotics.com](mailto:license@cyberbotics.com)
-

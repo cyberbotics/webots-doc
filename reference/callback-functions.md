@@ -15,7 +15,7 @@ call to an ODE API function modifying the current world (contacts, bodies,
 geoms) should be mutex protected within this callback function. We recommend
 using POSIX mutexes as exemplified here:
 
-```
+```c
 static pthread_mutex_t mutex;
 
 void webots_physics_init() {
@@ -42,7 +42,7 @@ void webots_physics_cleanup() {
 }
 ```
 
-### void webots_physics_init(dWorldID, dSpaceID, dJointGroupID)
+### void webots\_physics\_init(dWorldID, dSpaceID, dJointGroupID)
 
 This function is called upon initialization of the world. Its arguments are
 obsolete and should not be used. This function is a good place to call the
@@ -54,7 +54,7 @@ reading config files or writing log files in this directory.
 
 The obsolete arguments can be retrieved as follows:
 
-```
+```c
 void webots_physics_init(dWorldID, dSpaceID, dJointGroupID) {
   // get body of the robot part
   dBodyID body = dWebotsGetBodyFromDEF("MY_ROBOT_PART");
@@ -81,7 +81,7 @@ reproducible simulations, it is also required that all controllers run in
 own random number generator that you might also want to reinitialize separately
 via the `dRandSetSeed()` function.
 
-### int webots_physics_collide(dGeomID, dGeomID)
+### int webots\_physics\_collide(dGeomID, dGeomID)
 
 This function is called whenever a collision occurs between two geoms. It may be
 called several times (or not at all) during a single simulation step, depending
@@ -109,13 +109,13 @@ function may be called from different threads. You should ensure it is
 re-entrant and that every ODE function call modifying the ODE world is protected
 by mutexes as explained earlier.
 
-### void webots_physics_step()
+### void webots\_physics\_step()
 
 This function is called before every physics simulation step (call to the ODE
 `dWorldStep()` function). For example it can contain code to read the position
 and orientation of bodies or add forces and torques to bodies.
 
-### void webots_physics_step_end()
+### void webots\_physics\_step\_end()
 
 This function is called right after every physics simulation step (call to the
 ODE `dWorldStep()` function). It can be used to read values out of
@@ -126,14 +126,14 @@ ODE User Guide for more information). For example, if the plugin has registered
 the structures will be filled during `dWorldStep()` and the result can be read
 straight afterwards in `webots_physics_step_end()`.
 
-### void webots_physics_cleanup()
+### void webots\_physics\_cleanup()
 
 This function is the counterpart to the `webots_physics_init()` function. It is
 called once, when the world is destroyed, and can be used to perform cleanup
 operations, such as closing files and freeing the objects that have been created
 in the plugin.
 
-### void webots_physics_draw(int pass, const char *view)
+### void webots\_physics\_draw(int pass, const char *view)
 
 This function is used to add user-specified OpenGL graphics to the 3D view
 and/or to the cameras. For example, this can be used to draw robots
@@ -148,7 +148,7 @@ to determine if the function is called when rendering the 3D view (`view` ==
 NULL) or when rendering a robot camera (`view` == Robot::name). Here is an
 implementation example:
 
-```
+```c
 void webots_physics_draw(int pass, const char *view) {
   if (pass == 1 && view == NULL) {
     /* This code is reached only during the second pass of the 3D view */
@@ -173,4 +173,3 @@ calling this function. Therefore the arguments passed to `glVertex()` are
 expected to be specified in *world* coordinates. Note that the default OpenGL
 states should be restored before leaving this function otherwise the rendering
 in Webots 3D view may be altered.
-

@@ -21,4 +21,3 @@ possible to use the derived field in template statements without restrictions,
 but if it used in a IS statement then the two identifiers before and after the
 IS keyword have to match. If the derived field has a unique name then no
 restrictions apply.
-

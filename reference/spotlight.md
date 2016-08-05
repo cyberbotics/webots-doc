@@ -47,14 +47,13 @@ function from the inner angle to the outer angle is a cosine raised to a power
 function:
 
 ```
+intensity(angle) = intensity * (cosine(angle) ** exponent)
 
-    intensity(angle) = intensity * (cosine(angle) ** exponent)
-
-    where exponent = 0.5*log(0.5)/log(cos(beamWidth)),
-          intensity is the SpotLight's field value,
-          intensity(angle) is the light intensity at an arbitrary
-              angle from the direction vector,
-          and angle ranges from 0.0 at central axis to cutOffAngle.
+where exponent = 0.5*log(0.5)/log(cos(beamWidth)),
+  intensity is the SpotLight's field value,
+  intensity(angle) is the light intensity at an arbitrary
+      angle from the direction vector,
+  and angle ranges from 0.0 at central axis to cutOffAngle.
 ```
 
 If `beamWidth` > `cutOffAngle`, then `beamWidth` is assumed to be equal to
@@ -79,4 +78,3 @@ Contrary to the VRML specifications, the `attenuation` and the
 ![spot_light.png](images/spot_light.png)
 
 %end
-

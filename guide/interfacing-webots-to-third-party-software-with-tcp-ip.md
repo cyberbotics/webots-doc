@@ -2,7 +2,7 @@
 
 ### Overview
 
-Webots offers programming APIs for following languages: C/C++, Java, Python and
+Webots offers programming APIs for the following languages: C/C++, Java, Python and
 *MATLAB*<sup>TM</sup>. It is also possible to interface Webots with other
 programming languages of software packages, such as *Lisp*<sup>TM</sup>,
 *LabView*<sup>TM</sup>, etc. Such an interface can be implemented through a
@@ -62,4 +62,3 @@ network, or use small resolution camera images, or compress the image data
 before sending it to the controller. This overhead is negligible if you use a
 low resolution camera such as the Khepera K213 (see example
 "WEBOTS\_HOME/projects/robots/khepera/khepera1/worlds/khepera\_k213.wbt").
-

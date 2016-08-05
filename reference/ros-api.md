@@ -4,9 +4,9 @@ The following tables describe the available ros messages and services for each
 device.
 
 The <device\_name> should be replaced by the actual name of the device and each
-services/topics names should be prepended with '/<robot\_unique\_name>' (have a
+services/topics names should be prepended with ``<robot_unique_name>`` (have a
 look at the [User
-Guide](http://www.cyberbotics.com/guide/using-ros.html#standard_ros_controller)
+Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)
 for more information about the value of `robot_unique_name`).
 
 ### Accelerometer
@@ -80,11 +80,14 @@ for more information about the value of `robot_unique_name`).
 ### Display
 
 | name                                                                    | service/topic | data type                             | data type definition                                                                |
-| ----------------------------------------------------------------------- | ------------- | ------------------------------------- | ----------------------------------------------------------------------------------- |  |
+| ----------------------------------------------------------------------- | ------------- | ------------------------------------- | ----------------------------------------------------------------------------------- |
 | [/`<`device\_name`>`/get\_info](display.md#wb_display_get_width)        | service       | webots\_ros::display\_get\_info       | uint8 ask<br/>---<br/>uint32 width<br/>uint32 height                                |
 | [/`<`device\_name`>`/set\_color](display.md#wb_display_set_color)       | service       | webots\_ros::display\_set\_color      | int32 color<br/>---<br/>int8 success                                                |
 | [/`<`device\_name`>`/set\_alpha](display.md#wb_display_set_color)       | service       | webots\_ros::display\_set\_alpha      | float64 alpha<br/>---<br/>int8 success                                              |
 | [/`<`device\_name`>`/set\_opacity](display.md#wb_display_set_color)     | service       | webots\_ros::display\_set\_opacity    | float64 opacity<br/>---<br/>int8 success                                            |
+| [/`<`device\_name`>`/set\_font](display.md#wb_display_set_color)        | service       | webots\_ros::display\_set\_font       | string font<br/>int32 size<br/>uint8 antiAliasing<br/>---<br/>int8 success          |
+| [/`<`device\_name`>`/set\_attach\_camera](display.md#wb_display_attach_camera) | service | webots\_ros::display\_attach\_camera | string camera<br/>---<br/>int8 success                                              |
+| [/`<`device\_name`>`/set\_detach\_camera](display.md#wb_display_attach_camera) | service | webots\_ros::display\_detach\_camera | uint8 ask<br/>---<br/>int8 success                                                   |
 | [/`<`device\_name`>`/draw\_pixel](display.md#wb_display_draw_pixel)     | service       | webots\_ros::display\_draw\_pixel     | int32 x1<br/>int32 y1<br/>---<br/>int8 success                                      |
 | [/`<`device\_name`>`/draw\_line](display.md#wb_display_draw_pixel)      | service       | webots\_ros::display\_draw\_line      | int32 x1<br/>int32 y1<br/>int32 x2<br/>int32 y2<br/>---<br/>int8 success            |
 | [/`<`device\_name`>`/draw\_rectangle](display.md#wb_display_draw_pixel) | service       | webots\_ros::display\_draw\_rectangle | int32 x<br/>int32 y<br/>int32 width<br/>int32 height<br/>---<br/>int8 success       |
@@ -96,7 +99,7 @@ for more information about the value of `robot_unique_name`).
 | [/`<`device\_name`>`/fill\_polygon](display.md#wb_display_draw_pixel)   | service       | webots\_ros::display\_fill\_polygon   | int32[] x<br/>int32[] y<br/>int32 size<br/>---<br/>int8 success                     |
 | [/`<`device\_name`>`/image\_new](display.md#wb_display_image_new)       | service       | webots\_ros::display\_image\_new      | int32 width<br/>int32 height<br/>char[] data<br/>int32 format<br/>---<br/>uint64 ir |
 | [/`<`device\_name`>`/image\_copy](display.md#wb_display_image_new)      | service       | webots\_ros::display\_image\_copy     | int32 x<br/>int32 y<br/>int32 width<br/>int32 height<br/>---<br/>uint64 ir          |
-| [/`<`device\_name`>`/image\_paste](display.md#wb_display_image_new)     | service       | webots\_ros::display\_image\_paste    | uint64 ir<br/>int32 x<br/>int32 y<br/>---<br/>int8 success                          |
+| [/`<`device\_name`>`/image\_paste](display.md#wb_display_image_new)     | service       | webots\_ros::display\_image\_paste    | uint64 ir<br/>int32 x<br/>int32 y<br/>uint8 blend<br/>---<br/>int8 success          |
 | [/`<`device\_name`>`/image\_load](display.md#wb_display_image_new)      | service       | webots\_ros::display\_image\_load     | string filename<br/>---<br/>uint64 ir                                               |
 | [/`<`device\_name`>`/image\_save](display.md#wb_display_image_new)      | service       | webots\_ros::display\_image\_save     | string filename<br/>uint64 ir<br/>---<br/>int8 success                              |
 | [/`<`device\_name`>`/image\_delete](display.md#wb_display_image_new)    | service       | webots\_ros::display\_image\_delete   | uint64 ir<br/>---<br/>int8 success                                                  |
@@ -170,7 +173,7 @@ for more information about the value of `robot_unique_name`).
 
 | name                                                              | service/topic | data type                                  | data type definition                                                                 |
 | ----------------------------------------------------------------- | ------------- | ------------------------------------------ | ------------------------------------------------------------------------------------ |  |
-| [/keyboard/key](keyboard.md#wb_keyboard_enable)                   | topic         | webots\_ros::Int8Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int8 data |
+| [/keyboard/key](keyboard.md#wb_keyboard_enable)                   | topic         | webots\_ros::Int32Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int32 data |
 | [/keyboard/enable](keyboard.md#wb_keyboard_enable)                | service       | webots\_ros::sensor\_enable                | int32 period<br/>---<br/>int8 success                                                |
 | [/keyboard/get\_sampling\_period](keyboard.md#wb_keyboard_enable) | service       | webots\_ros::sensor\_get\_sampling\_period | uint8 ask<br/>---<br/>uint32 period                                                  |
 
@@ -356,6 +359,7 @@ for more information about the value of `robot_unique_name`).
 | [/supervisor/node/get\_field](supervisor.md#wb_supervisor_node_get_field)                                          | service       | webots\_ros::node\_get\_field                        | uint64 node<br/>string fieldName<br/>---<br/>uint64 field                                                                                                                                                                                                         |
 | [/supervisor/node/remove](supervisor.md#wb_supervisor_node_remove)                                                 | service       | webots\_ros::node\_remove                            | uint64 node<br/>---<br/>int8 success                                                                                                                                                                                                                              |
 | [/supervisor/node/reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)                                  | service       | webots\_ros::node\_reset\_physics                    | uint64 node<br/>---<br/>int8 success                                                                                                                                                                                                                              |
+| [/supervisor/node/set\_visibility](supervisor.md#wb_supervisor_node_set_visibility)                                | service       | webots\_ros::node\_hide\_from\_camera                | uint64 node<br/>uint64 from<br/>uint8 visible<br/>---<br/>int8 success                                                                                                                                                                                            |
 | [/supervisor/field/get\_type](supervisor.md#wb_supervisor_field_get_type)                                          | service       | webots\_ros::field\_get\_type                        | uint64 node<br/>---<br/>int8 success                                                                                                                                                                                                                              |
 | [/supervisor/field/get\_type\_name](supervisor.md#wb_supervisor_field_get_type)                                    | service       | webots\_ros::field\_get\_type\_name                  | uint64 field<br/>---<br/>string name                                                                                                                                                                                                                              |
 | [/supervisor/field/get\_count](supervisor.md#wb_supervisor_field_get_type)                                         | service       | webots\_ros::field\_get\_count                       | uint64 field<br/>---<br/>int32 count                                                                                                                                                                                                                              |
@@ -390,4 +394,3 @@ for more information about the value of `robot_unique_name`).
 | [/`<`device\_name`>`/enable](touchsensor.md#wb_touch_sensor_get_values)                | service       | webots\_ros::sensor\_enable                                                                        | int32 period<br/>---<br/>int8 success                                                                                                                  |
 | [/`<`device\_name`>`/get\_sampling\_period](touchsensor.md#wb_touch_sensor_get_values) | service       | webots\_ros::sensor\_get\_sampling\_period                                                         | uint8 ask<br/>---<br/>uint32 period                                                                                                                    |
 | [/`<`device\_name`>`/get\_type](touchsensor.md#wb_touch_sensor_get_type)               | service       | webots\_ros::device\_get\_type                                                                     | uint8 ask<br/>---<br/>uint8 type                                                                                                                       |
-

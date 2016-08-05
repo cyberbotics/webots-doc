@@ -15,4 +15,3 @@ Bicycle {
 When PROTO instances are read from a ".wbt" file, field values for the fields of
 the PROTO interface may be given. If given, the field values are used for all
 nodes in the PROTO definition that have IS statements for those fields.
-

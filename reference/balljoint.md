@@ -18,4 +18,3 @@ ropes and flexible beams.
 It inherits [Joint](joint.md)'s `jointParameters` field. This field can be
 filled with a [BallJointParameters](balljointparameters.md) node only. If empty,
 [BallJointParameters](balljointparameters.md) default values apply.
-

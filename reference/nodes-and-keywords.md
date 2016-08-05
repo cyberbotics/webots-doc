@@ -48,4 +48,3 @@ These reserved keywords cannot be used in DEF or PROTO names:
 SFFloat, SFInt32, SFString, SFVec2f, SFVec3f, SFRotation, SFBool, MFNode,
 MFColor, MFFloat, MFInt32, MFString, MFVec2f, MFVec3f, MFRotation` and
 `MFBool`.
-

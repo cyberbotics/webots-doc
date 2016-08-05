@@ -72,7 +72,7 @@ inter-robot communication, please use positive channel numbers.
 
 - `baudRate`: the baud rate is the communication speed expressed in number of bits
 per second. A `baudRate` of -1 (the default) is regarded as infinite and causes
-the data to be transmitted immediately (within one control step) from emitter to
+the data to be transmitted immediately (within one basic time step) from emitter to
 receiver.
 
 - `byteSize`: the byte size is the number of bits required to transmit one byte of
@@ -98,20 +98,19 @@ range` and `aperture` will be ignored.
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-int wb_emitter_send(WbDeviceTag tag, const void *data, int size)
+int wb_emitter_send(WbDeviceTag tag, const void *data, int size);
 ```
 
 **Description**
 
-The `wb_emitter_send()` function adds to the emitters's queue a packet of `size`
-bytes located at the address indicated by `data`. The enqueued data packets will
-then be sent to potential receivers (and removed from the emitter's queue) at
-the rate specified by the `baudRate` field of the [Emitter](#emitter) node. Note
-that a packet will not be sent to its emitter robot. This function returns 1 if
-the message was placed in the sending queue, 0 if the sending queue was full.
+The `wb_emitter_send()` function adds to the emitter's queue a packet of `size` bytes located at the address indicated by `data`.
+The enqueued data packets will then be sent to potential receivers (and removed from the emitter's queue) at the rate specified by the `baudRate` field of the [Emitter](#emitter) node.
+Note that independently from the `baudRate`, the [Emitter](#emitter) node will need at least one basic time step to send the packet but the [Receiver](#receiver) node will receive it immediately.
+Moreover a packet will not be sent to its emitter robot.
+This function returns 1 if the message was placed in the sending queue, 0 if the sending queue was full.
 The queue is considered to be *full* when the sum of bytes of all the currently
 enqueued packets exceeds the buffer size specified by the `bufferSize` field.
 Note that a packet must have at least 1 byte.
@@ -140,10 +139,12 @@ string, the *struct* module can be used. This module performs conversions
 between Python values and C structs represented as Python strings. Here is an
 example:
 
->     import struct
->     #...
->     message = struct.pack("chd","a",45,120.08)
->     emitter.send(message)
+> ```python
+> import struct
+> #...
+> message = struct.pack("chd","a",45,120.08)
+> emitter.send(message)
+> ```
 
 <!-- -->
 
@@ -153,13 +154,15 @@ implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received
 in a C/C++ controller.
 
->     String request = "You are number " + num + "\0";
->     try {
->       emitter.send(request.getBytes("US-ASCII"));
->     }
->     catch (java.io.UnsupportedEncodingException e) {
->       System.out.println(e);
->     }
+> ```java
+> String request = "You are number " + num + "\0";
+> try {
+>   emitter.send(request.getBytes("US-ASCII"));
+> }
+> catch (java.io.UnsupportedEncodingException e) {
+>   System.out.println(e);
+> }
+> ```
 
 ---
 
@@ -169,11 +172,11 @@ in a C/C++ controller.
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-void wb_emitter_set_channel(WbDeviceTag tag, int channel)
-int wb_emitter_get_channel(WbDeviceTag tag)
+void wb_emitter_set_channel(WbDeviceTag tag, int channel);
+int wb_emitter_get_channel(WbDeviceTag tag);
 ```
 
 **Description**
@@ -199,11 +202,11 @@ static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-void wb_emitter_set_range(WbDeviceTag tag, double range)
-double wb_emitter_get_range(WbDeviceTag tag)
+void wb_emitter_set_range(WbDeviceTag tag, double range);
+double wb_emitter_get_range(WbDeviceTag tag);
 ```
 
 **Description**
@@ -225,10 +228,10 @@ returns the current emitter's range. For both the `wb_emitter_set_range()` and
 
 {[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/emitter.h>
 
-int wb_emitter_get_buffer_size(WbDeviceTag tag)
+int wb_emitter_get_buffer_size(WbDeviceTag tag);
 ```
 
 **Description**
@@ -239,4 +242,3 @@ field of the [Emitter](#emitter) node. The buffer size indicates the maximum
 number of data bytes that the emitter's queue can hold in total, if the size is
 -1, the number of data bytes is not limited. When the buffer is full, calls to
 `wb_emitter_send()` will fail and return 0.
-

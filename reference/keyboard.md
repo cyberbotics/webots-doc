@@ -17,13 +17,13 @@ In C++, Python and Java the keyboard functions are in a dedicated class called
 
 {[C++](cpp-api.md#cpp_keyboard)}, {[Java](java-api.md#java_keyboard)}, {[Python](python-api.md#python_keyboard)}, {[Matlab](matlab-api.md#matlab_keyboard)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/keyboard.h>
 
-void wb_keyboard_enable(int ms)
-void wb_keyboard_disable()
-int wb_keyboard_get_sampling_period()
-int wb_keyboard_get_key()
+void wb_keyboard_enable(int sampling_period);
+void wb_keyboard_disable();
+int wb_keyboard_get_sampling_period();
+int wb_keyboard_get_key();
 ```
 
 **Description**
@@ -31,9 +31,10 @@ int wb_keyboard_get_key()
 These functions allow you to read a key pressed on the computer keyboard from a
 controller program while the 3D window of Webots is selected and the simulation
 is running. First, it is necessary to enable keyboard input by calling the
-`wb_keyboard_enable()` function. The `ms` parameter is expressed in
-milliseconds, and defines how frequently readings are updated. After the enable
-function is called, values can be read by calling the `wb_keyboard_get_key()`
+`wb_keyboard_enable()` function. The `sampling_period` parameter is expressed in
+milliseconds, and defines how frequently readings are updated.
+Note that the first key will be available only after the first sampling period elapsed.
+After that, values can be read by calling the `wb_keyboard_get_key()`
 function repeatedly until this function returns -1. The returned value, if
 non-negative, is a key code corresponding to a key currently pressed. If no
 modifier (shift, control or alt) key is pressed, the key code is the ASCII code
@@ -52,7 +53,7 @@ to stop the keyboard readings.
 
 > **note** [C++]:
 The keyboard predefined values are located into a (static) enumeration of the
-Keyboard class. For example, `Keyboard.KEYBOARD_CONTROL` corresponds to the
+Keyboard class. For example, `Keyboard.CONTROL` corresponds to the
 *Control* key stroke.
 
 <!-- -->
@@ -61,9 +62,11 @@ Keyboard class. For example, `Keyboard.KEYBOARD_CONTROL` corresponds to the
 The keyboard predefined values are final integers located in the Keyboard class.
 For example, *Ctrl+B* can be tested like this:
 
->     int key=keyboard.getKey()
->     if (key==Keyboard.KEYBOARD_CONTROL+'B')
->       System.out.Println("Ctrl+B is pressed");
+> ```java
+> int key=keyboard.getKey()
+> if (key==Keyboard.CONTROL+'B')
+>   System.out.Println("Ctrl+B is pressed");
+> ```
 
 <!-- -->
 
@@ -71,7 +74,8 @@ For example, *Ctrl+B* can be tested like this:
 The keyboard predefined values are integers located into the Keyboard class. For
 example, *Ctrl+B* can be tested like this:
 
->     key=keyboard.getKey()
->     if (key==Keyboard.KEYBOARD_CONTROL+ord('B')):
->       print 'Ctrl+B is pressed'
-
+> ```python
+> key=keyboard.getKey()
+> if (key==Keyboard.CONTROL+ord('B')):
+>   print 'Ctrl+B is pressed'
+> ```

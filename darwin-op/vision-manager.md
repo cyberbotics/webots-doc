@@ -6,10 +6,10 @@ This manager implement the `DARwInOPVisionManager` class.
 
 **DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
 
-``` c
+```c
 #include <DARwInOPVisionManager.hpp>
 
-DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)
+DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent);
 ```
 
 **Description**
@@ -43,10 +43,10 @@ HSV colorspace.
 
 **bool getBallCenter(double &x, double &y, const unsigned char * image)** - *Get the position of the target object*
 
-``` c
+```c
 #include <DARwInOPVisionManager.hpp>
 
-getBallCenter(double x, double y, const unsigned char * image)
+void getBallCenter(double x, double y, const unsigned char * image);
 ```
 
 **Description**
@@ -67,10 +67,10 @@ the target object, this method proceeds to the following steps:
 
 **bool isDetected(int x, int y);** - *Determine if a pixel of the image is part of the target*
 
-``` c
+```c
 #include <DARwInOPVisionManager.hpp>
 
-isDetected(int x, int y)
+void isDetected(int x, int y);
 ```
 
 **Description**
@@ -79,4 +79,3 @@ Once the method `getBallCenter` was called it is possible to know which pixels
 of the image are part of the target object by using the method `isDetected`.
 This method returns true if the pixel (x,y) is part of the target object and
 false otherwise.
-

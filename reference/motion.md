@@ -6,11 +6,11 @@
 
 {[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
-``` c
+```c
 #include <webots/utils/motion.h>
 
-WbMotionRef wbu_motion_new(const char *filename)
-void wbu_motion_delete(WbMotionRef motion)
+WbMotionRef wbu_motion_new(const char *filename);
+void wbu_motion_delete(WbMotionRef motion);
 ```
 
 **Description**
@@ -55,13 +55,13 @@ if (! walk->isValid()) {
 
 {[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
-``` c
+```c
 #include <webots/utils/motion.h>
 
-void wbu_motion_play(WbMotionRef motion)
-void wbu_motion_stop(WbMotionRefmotion)
-void wbu_motion_set_loop(WbMotionRef motion, bool loop)
-void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse)
+void wbu_motion_play(WbMotionRef motion);
+void wbu_motion_stop(WbMotionRefmotion);
+void wbu_motion_set_loop(WbMotionRef motion, bool loop);
+void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse);
 ```
 
 **Description**
@@ -103,7 +103,7 @@ that the loop mode can be changed while the motion is playing.
 The `wbu_motion_set_reverse()` sets the *reverse mode* of the specified motion.
 If the *reverse mode* is `true`, the motion file plays backwards. For example,
 by using the *reverse mode*, it may be possible to turn a forwards walking
-motion into a backwards walking motion. The *reverse mode* can be changed while
+motion into a backward walking motion. The *reverse mode* can be changed while
 the motion is playing, in this case, the motion will go back from its current
 position.
 
@@ -121,13 +121,13 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 
 {[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
 
-``` c
+```c
 #include <webots/utils/motion.h>
 
-bool wbu_motion_is_over(WbMotionRef motion)
-int wbu_motion_get_duration(WbMotionRefmotion)
-int wbu_motion_get_time(WbMotionRef motion, bool loop)
-void wbu_motion_set_time(WbMotionRefmotion, int ms)
+bool wbu_motion_is_over(WbMotionRef motion);
+int wbu_motion_get_duration(WbMotionRefmotion);
+int wbu_motion_get_time(WbMotionRef motion, bool loop);
+void wbu_motion_set_time(WbMotionRefmotion, int t);
 ```
 
 **Description**
@@ -149,13 +149,12 @@ motion file in milliseconds.
 The `wbu_motion_get_time()` function returns the current playback position in
 milliseconds.
 
-The `wbu_motion_set_time()` function allows to change the playback position.
-This enables, for example, to skip forward or backward. Note that, the position
+The `wbu_motion_set_time()` function allows to change the playback position in time.
+This allows the user to skip forwards or backwards. Note that, the time position
 can be changed whether the motion is playing or stopped. The minimum value is 0
 (beginning of the motion), and the maximum value is the value returned by the
-`wbu_motion_get_duration()` function (end of the motion).
+`wbu_motion_get_duration()` function (end of the motion). The time position is expressed in milliseconds.
 
 **See also**
 
 [wbu\_motion\_play](#wbu_motion_play)
-

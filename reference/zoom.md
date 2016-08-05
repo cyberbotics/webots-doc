@@ -4,7 +4,7 @@
 Zoom {
    SFFloat     maxFieldOfView 1.5 # (rad)
    SFFloat     minFieldOfView 0.5 # (rad)
- }
+}
 ```
 
 ### Description
@@ -22,4 +22,3 @@ respectively the maxium and minimum zoom levels). Hence, they represent the
 minimum and maximum values that can be passed to the `wb_camera_set_fov()`
 function and they can be retrieved using the functions `wb_camera_get_min_fov()`
 and `wb_camera_get_max_fov()`.
-

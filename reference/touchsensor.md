@@ -29,8 +29,10 @@ Examples of using the [TouchSensor](#touchsensor) are provided by the
 
 - `type`: allows the user to select the type of sensor: "bumper", "force", or
 "force-3d", described below.
+
 - `lookupTable`: similar to the one used by the
 [DistanceSensor](distancesensor.md) node.
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
 to -1 (default) means that the sensor has an 'infinite' resolution (it can
@@ -150,20 +152,21 @@ real physical force. This approximation usually improves as the `basicTimeStep`
 
 {[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_touch_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/touch_sensor.h>
 
-void wb_touch_sensor_enable(WbDeviceTag tag, int ms)
-void wb_touch_sensor_disable(WbDeviceTag tag)
-int wb_touch_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_touch_sensor_get_value(WbDeviceTag tag)
-const double *wb_touch_sensor_get_values(WbDeviceTag tag)
+void wb_touch_sensor_enable(WbDeviceTag tag, int sampling_period);
+void wb_touch_sensor_disable(WbDeviceTag tag);
+int wb_touch_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_touch_sensor_get_value(WbDeviceTag tag);
+const double *wb_touch_sensor_get_values(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_touch_sensor_enable()` allows the user to enable a touch sensor measurement
-every `ms` milliseconds.
+`wb_touch_sensor_enable()` allows the user to enable touch sensor measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period has elapsed.
 
 `wb_touch_sensor_disable()` turns the touch sensor off, saving computation time.
 
@@ -187,10 +190,10 @@ of type "force-3d" exclusively.
 
 {[C++](cpp-api.md#cpp_touch_sensor)}, {[Java](java-api.md#java_touch_sensor)}, {[Python](python-api.md#python_touch_sensor)}, {[Matlab](matlab-api.md#matlab_servo)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/touch_sensor.h>
 
-int wb_touch_sensor_get_type(WbDeviceTag tag)
+int wb_touch_sensor_get_type(WbDeviceTag tag);
 ```
 
 **Description**
@@ -209,4 +212,3 @@ WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 | "force-3d"       | WB\_TOUCH\_SENSOR\_FORCE3D |
 
 %end
-

@@ -55,4 +55,3 @@ resolution is set, the default resolution of 320x240 will be used.
 | 800           | 600            | 22.5 |
 
 %end
-

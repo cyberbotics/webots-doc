@@ -33,20 +33,21 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/position_sensor.h>
 
-void wb_position_sensor_enable(WbDeviceTag tag, int ms)
-void wb_position_sensor_disable(WbDeviceTag tag)
-int wb_position_sensor_get_sampling_period(WbDeviceTag tag)
-double wb_position_sensor_get_value(WbDeviceTag tag)
-int wb_position_sensor_get_type(WbDeviceTag tag)
+void wb_position_sensor_enable(WbDeviceTag tag, int sampling_period);
+void wb_position_sensor_disable(WbDeviceTag tag);
+int wb_position_sensor_get_sampling_period(WbDeviceTag tag);
+double wb_position_sensor_get_value(WbDeviceTag tag);
+int wb_position_sensor_get_type(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_position_sensor_enable()` enables a measurement of the joint position each
-`ms` milliseconds.
+`wb_position_sensor_enable()` enables measurements of the joint position.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_position_sensor_disable()` turns off the position sensor to save CPU time.
 
@@ -62,4 +63,3 @@ return `WB_ANGULAR` if the sensor is associated with a
 [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and
 `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a
 [Track](track.md) node.
-

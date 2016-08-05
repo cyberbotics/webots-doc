@@ -27,6 +27,7 @@ for mapping the raw acceleration values [m/s^2] to device specific output
 values. With the lookup table it is also possible to add noise and to define the
 min and max output values. By default the lookup table is empty and therefore
 the raw acceleration values are returned (no mapping).
+
 - `xAxis, yAxis, zAxis`: Each of these boolean fields enables or disables
 computation for the specified axis. If one of these fields is set to FALSE, then
 the corresponding vector element will not be computed and will return *NaN* (Not
@@ -35,6 +36,7 @@ a Number). For example, if  `zAxis ` is FALSE, then
 all three axes are enabled (TRUE). Modifying these fields makes it possible to
 choose between a single, dual or three-axis accelerometer and to specify which
 axes will be used.
+
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. For example, if
 `resolution` is 0.2 instead of returning 1.767 the sensor will return 1.8.
@@ -50,10 +52,10 @@ value in the interval (0.0, inf).
 
 {[C++](cpp-api.md#cpp_accelerometer)}, {[Java](java-api.md#java_accelerometer)}, {[Python](python-api.md#python_accelerometer)}, {[Matlab](matlab-api.md#matlab_accelerometer)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/accelerometer.h>
 
-void wb_accelerometer_enable(WbDeviceTag tag, int ms)
+void wb_accelerometer_enable(WbDeviceTag tag, int sampling_period)
 void wb_accelerometer_disable(WbDeviceTag tag)
 int wb_accelerometer_get_sampling_period(WbDeviceTag tag)
 const double *wb_accelerometer_get_values(WbDeviceTag tag)
@@ -61,14 +63,14 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 
 **Description**
 
-The `wb_accelerometer_enable()` function allows the user to enable the
-acceleration measurement each `ms` milliseconds.
+The `wb_accelerometer_enable()` function allows the user to enable the acceleration measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_accelerometer_disable()` function turns the accelerometer off, saving
 computation time.
 
-The `wb_accelerometer_get_sampling_period()` function returns the period given
-into the `wb_accelerometer_enable()` function, or 0 if the device is disabled.
+The `wb_accelerometer_get_sampling_period()` function returns the sampling period given to the `wb_accelerometer_enable()` function, or 0 if the device is disabled.
 
 The `wb_accelerometer_get_values()` function returns the current values measured
 by the [Accelerometer](#accelerometer). These values are returned as a
@@ -94,4 +96,3 @@ longer period they must be copied.
 
 > **note** [Python]:
 `getValues()` returns the 3D-vector as a list containing three floats.
-

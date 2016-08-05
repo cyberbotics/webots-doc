@@ -147,6 +147,13 @@ simulate the lidar:
     In case of 'rotating' lidar, the `fieldOfView` term in the constraint is
     replaced by `2 * π`.
 
+#### Rotating lidar
+
+A lidar is said rotating if its `type` field is set to 'rotating'. In that case, the node inserted in the `rotatingHead` rotates along the Y axis at the frequency defined in the `defaultFrequency` field. This rotation starts as soon as the lidar is enabled. The internal depth camera is attached to this node and is therefore also rotating along the Y axis.
+
+> **note**:
+The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π.
+
 ### Lidar Functions
 
 **Name**
@@ -155,18 +162,19 @@ simulate the lidar:
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-void wb_lidar_enable(WbDeviceTag tag, int ms)
-void wb_lidar_disable(WbDeviceTag tag)
-int wb_lidar_get_sampling_period(WbDeviceTag tag)
+void wb_lidar_enable(WbDeviceTag tag, int sampling_period);
+void wb_lidar_disable(WbDeviceTag tag);
+int wb_lidar_get_sampling_period(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_lidar_enable()` allows the user to enable a lidar update each `ms`
-milliseconds.
+`wb_lidar_enable()` allows the user to enable lidar updates.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
+Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_lidar_disable()` turns the lidar off, saving computation time.
 
@@ -181,12 +189,12 @@ The `wb_lidar_get_sampling_period()` function returns the period given into the
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-void wb_lidar_enable_point_cloud(WbDeviceTag tag)
-void wb_lidar_disable_point_cloud(WbDeviceTag tag)
-bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag)
+void wb_lidar_enable_point_cloud(WbDeviceTag tag);
+void wb_lidar_disable_point_cloud(WbDeviceTag tag);
+bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag);
 ```
 
 **Description**
@@ -210,11 +218,11 @@ To get the point cloud array, enabling the point cloud is not sufficient. First 
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-const float *wb_lidar_get_range_image(WbDeviceTag tag)
-const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer)
+const float *wb_lidar_get_range_image(WbDeviceTag tag);
+const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 ```
 
 **Description**
@@ -252,12 +260,12 @@ are identical but their handling is of course different.
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag)
-const WbLidarPoint *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer)
-int wb_lidar_get_number_of_points(WbDeviceTag tag)
+const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag);
+const WbLidarPoint *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
+int wb_lidar_get_number_of_points(WbDeviceTag tag);
 ```
 
 **Description**
@@ -286,11 +294,11 @@ number of points associated to).
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_frequency(WbDeviceTag tag)
-void wb_lidar_set_frequency(WbDeviceTag tag, double frequency)
+double wb_lidar_get_frequency(WbDeviceTag tag);
+void wb_lidar_set_frequency(WbDeviceTag tag, double frequency);
 ```
 
 **Description**
@@ -310,11 +318,11 @@ range [minFrequency; maxFrequency].
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-int wb_lidar_get_horizontal_resolution(WbDeviceTag tag)
-int wb_lidar_get_number_of_layers(WbDeviceTag tag)
+int wb_lidar_get_horizontal_resolution(WbDeviceTag tag);
+int wb_lidar_get_number_of_layers(WbDeviceTag tag);
 ```
 
 **Description**
@@ -332,11 +340,11 @@ The `wb_lidar_get_number_of_layers()` returns the number of layers of the lidar.
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_min_frequency(WbDeviceTag tag)
-double wb_lidar_get_max_frequency(WbDeviceTag tag)
+double wb_lidar_get_min_frequency(WbDeviceTag tag);
+double wb_lidar_get_max_frequency(WbDeviceTag tag);
 ```
 
 **Description**
@@ -353,11 +361,11 @@ head of the lidar (in case of rotating lidar).
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_fov(WbDeviceTag tag)
-int wb_lidar_get_vertical_fov(WbDeviceTag tag)
+double wb_lidar_get_fov(WbDeviceTag tag);
+int wb_lidar_get_vertical_fov(WbDeviceTag tag);
 ```
 
 **Description**
@@ -375,15 +383,14 @@ lidar.
 
 {[C++](cpp-api.md#cpp_lidar)}, {[Java](java-api.md#java_lidar)}, {[Python](python-api.md#python_lidar)}, {[Matlab](matlab-api.md#matlab_lidar)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/lidar.h>
 
-double wb_lidar_get_min_range(WbDeviceTag tag)
-double wb_lidar_get_max_range(WbDeviceTag tag)
+double wb_lidar_get_min_range(WbDeviceTag tag);
+double wb_lidar_get_max_range(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_lidar_get_min_range()` and `wb_lidar_get_max_range()` functions return
 respectively the minimum and maximum range of the lidar.
-

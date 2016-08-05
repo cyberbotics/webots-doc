@@ -29,7 +29,7 @@ Once the conversion is complete, the importer will display the number of objects
 ```
 
 It is important that you keep these offset and projection since you will need to reuse them to generate traffic with SUMO.
-The projection parameters should looks like: `'+proj=utm +north +zone=32 +lon_0=6.505000 +lat_0=46.511000 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs'`
+The projection parameters should look like: `'+proj=utm +north +zone=32 +lon_0=6.505000 +lat_0=46.511000 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs'`
 
 From now you should be able to open the generated world file directly in Webots:
 

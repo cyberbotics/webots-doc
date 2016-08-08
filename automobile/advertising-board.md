@@ -18,6 +18,8 @@ and the side flattened.
 
 ```
 AdvertisingBoard {
+  SFVec3f     translation       0 0 0
+  SFRotation  rotation          0 1 0 0
   MFString    frontTexture      "textures/webots_billboard.jpg"
   MFString    backTexture       "textures/webots_billboard.jpg"
   SFBool      displayBackLight  FALSE

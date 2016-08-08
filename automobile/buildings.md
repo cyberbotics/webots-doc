@@ -82,9 +82,9 @@ normally found in a city environment:
 - BusStop
 - Fence
 - Fountain
-- PublicToilets
+- PublicToilet
 
-%figure "The BusStop and PublicToilets PROTOs"
+%figure "The BusStop and PublicToilet PROTOs"
 
 ![bus_stop.png](images/bus_stop.png)
 ![public-toilet.png](images/public-toilet.png)

@@ -42,7 +42,7 @@ some part of the road in nightly environments.
 ![speed_sign.png](images/speed_sign.png)
 ![caution_sign.png](images/caution_sign.png)
 ![yield_sign.png](images/yield_sign.png)
-![sign_pole.png](images/sign-pole.png)
+![sign_pole.png](images/sign_pole.png)
 
 +++
 %end
@@ -71,7 +71,7 @@ size, color and number of `signBoards` are implemented as independent fields.
 
 %end
 
-`HighwayPole`is usually used to indicate directions or general information on highways.
+`HighwayPole` is usually used to indicate directions or general information on highways.
 It can support, on either one or two stands, multiple signs using the different sign fields.
 Just like `HighwaySign`, `HighwayPole` is fully customizable as its size,
 color and number of signs and stands are implemented as independent fields.

@@ -26,7 +26,7 @@ The following PROTOs of buildings are available to add in your worlds:
 
 %figure "An example of FastFoodRestaurant with two sides"
 
-![FastFoodRestaurant.png](images/FastFoodRestaurant.png)
+![fastfood-restaurant.png](images/fastfood-restaurant.png)
 
 %end
 
@@ -87,6 +87,6 @@ normally found in a city environment:
 %figure "The BusStop and PublicToilets PROTOs"
 
 ![bus_stop.png](images/bus_stop.png)
-![PublicToilets.png](images/PublicToilets.png)
+![public-toilet.png](images/public-toilet.png)
 
 %end

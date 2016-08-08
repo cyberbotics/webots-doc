@@ -42,7 +42,9 @@ some part of the road in nightly environments.
 ![speed_sign.png](images/speed_sign.png)
 ![caution_sign.png](images/caution_sign.png)
 ![yield_sign.png](images/yield_sign.png)
+![sign-pole.png](images/sign-pole.png)
 
++++
 %end
 
 A total of 6 traffic signs are available. They represent the various sizes and
@@ -54,7 +56,7 @@ shapes usually used for traffic signs:
 - `SpeedLimitSign`: Rectangular sign usually used for speed limits.
 - `StopSign`: Octagonal sign usually used for stop.
 - `YieldSign`: Triangular sign usually used for yield.
-- `SignPole`: Arrow shaped sign usually used to indicate a direction.
+- `SignPole`: Arrow shaped sign usually used to indicate a direction. The text and its properties ar e implemented as fields.
 
 A complete set of textures is available with those traffic signs and can easily
 be applied using the `signBoards` field. The signs are fully customizable as their

@@ -44,7 +44,6 @@ some part of the road in nightly environments.
 ![yield_sign.png](images/yield_sign.png)
 ![sign_pole.png](images/sign_pole.png)
 
-+++
 %end
 
 A total of 6 traffic signs are available. They represent the various sizes and

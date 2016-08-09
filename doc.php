@@ -52,6 +52,7 @@
         'anchor': extractAnchor(),
         'branch': '$branch',
         'tag':    '$tag',
+        'repository': '$repository',
         'url':    'https://raw.githubusercontent.com/$repository/webots-doc/'
       }
       console.log('Setup: ' + JSON.stringify(setup));

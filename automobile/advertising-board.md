@@ -41,9 +41,9 @@ AdvertisingBoard {
 - `frontTexture`: Defines the front display texture.
 - `backTexture`: Defines the back display texture.
 - `displayBackLight`: Defines wether the displays are backlit or not.
-- `displayWidth`: Defines the width of the display.
-- `displayHeight`: Defines the height of the display.
-- `frameThickness`: Defines the thickness of the display.
+- `displayWidth`: Defines the width of the displays.
+- `displayHeight`: Defines the height of the displays.
+- `frameThickness`: Defines the thickness of the frame.
 - `frameColor`: Defines the color of the outer frame of the board.
 - `poleColor`: Defines the color of the pole if present.
 - `poleNumber`: Defines the number of poles. Their position is defined by the

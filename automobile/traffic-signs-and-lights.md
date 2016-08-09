@@ -36,7 +36,7 @@ some part of the road in nightly environments.
 
 ### Traffic signs
 
-%figure "Various traffic signs and traffic lights"
+%figure "Various traffic signs"
 
 ![order_sign.png](images/order_sign.png)
 ![speed_sign.png](images/speed_sign.png)

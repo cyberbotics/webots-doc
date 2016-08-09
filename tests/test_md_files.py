@@ -28,3 +28,12 @@ class TestMDFiles(unittest.TestCase):
                     len(content), 0,
                     msg='MD file "%s" is empty' % (md_filename)
                 )
+
+    def test_md_files_are_not_containing_ad_blocks_prohibited_keywords(self):
+        """Test that the MD files are not containing prohibited keywords."""
+        books = Books()
+        for book in books.books:
+            self.assertFalse(
+                'advertising' in book.md_paths,
+                msg='MD file "%s" contains "advertising"' % (book.md_paths)
+            )

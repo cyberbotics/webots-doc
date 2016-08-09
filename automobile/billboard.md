@@ -1,6 +1,6 @@
-## Advertising board
+## Billboard
 
-The AdvertisingBoard PROTO allows the presentation of up to two backlit displays
+Billboards can be defined thanks to the AdvertisingBoard PROTO which allows the presentation of up to two backlit displays
 on up to four equally spaced stands.
 
 ### AdvertisingBoard

@@ -120,9 +120,13 @@ function forgeUrl(page, anchor) {
   var newUrl = currentUrl;
   if (!local) {
     newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
-    if (setup.tag!='')
+    if (setup.tag != '' && setup.repository)
+      newUrl += "?version=" + setup.repository + ":" + setup.tag;
+    else if (setup.tag != '')
       newUrl += "?version=" + setup.tag;
-    else if (setup.branch!='')
+    else if (setup.branch != '' && setup.repository)
+      newUrl += "?version=" + setup.repository + ":" + setup.branch;
+    else if (setup.branch != '')
       newUrl += "?version=" + setup.branch;
     newUrl += anchorString;
   } else {

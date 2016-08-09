@@ -22,10 +22,17 @@ The following PROTOs of buildings are available to add in your worlds:
 - SimpleTwoFloorsHouse
 - TheThreeTowers
 - UBuilding
+- FastFoodRestaurant
+
+%figure "An example of FastFoodRestaurant with two sides"
+
+![fastfood-restaurant.png](images/fastfood-restaurant.png)
+
+%end
 
 ### Generic building
 
-In addition to those PROTOs of buildings, the `GenericBuilding` PROTO represent
+In addition to those building PROTOs, the `GenericBuilding` PROTO represent
 a highly customizable building and can be used to model a large variety of
 buildings.
 
@@ -75,9 +82,11 @@ normally found in a city environment:
 - BusStop
 - Fence
 - Fountain
+- PublicToilet
 
-%figure "The BusStop PROTO"
+%figure "The BusStop and PublicToilet PROTOs"
 
 ![bus_stop.png](images/bus_stop.png)
+![public-toilet.png](images/public-toilet.png)
 
 %end

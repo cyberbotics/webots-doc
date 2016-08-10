@@ -145,7 +145,7 @@ webots.version.bugfix }}\_setup.exe /SILENT" or "webots-{{ webots.version.major
 If you observe 3D rendering anomalies or if Webots crashes, it is strongly
 recommend to upgrade your graphics driver.
 
-### installation on Mac OS X
+### Installation on Mac OS X
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
 webots.version.bugfix }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
@@ -153,3 +153,16 @@ webots.version.bugfix }}.dmg" installation file from our [website](http://www.cy
 "Webots" containing the "Webots" folder.
 3. Move this folder to your "/Applications" folder or wherever you would like to
 install Webots.
+4. During the first Webots launch, Mac OS X may complain about Webots which
+cannot be opened because it is from an unidentified developer
+(see [this figure](#security-and-privacy-settings)).
+In this case, please modify the `Preferences / Security & Privacy` OS settings
+as shown in the figure.
+Don't forget to restore the settings once Webots has been started successfully.
+
+%figure "Security and Privacy settings"
+
+![mac-unidentified-developper-dialog.png](images/mac-unidentified-developper-dialog.png)
+![mac-security-and-privacy-settings.png](images/mac-security-and-privacy-settings.png)
+
+%end

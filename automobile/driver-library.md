@@ -1,6 +1,6 @@
 ## Driver library
 
-The [driver](#driver-library) library provides all the usual functionality
+The [driver](#driver-library) library provides all the usual functionalities
 available to a human driving his own car. All the functions included in this
 library are explained below.
 
@@ -72,7 +72,7 @@ double wbu_driver_get_target_cruising_speed();
 
 The `wbu_driver_set_cruising_speed` function activates the control in cruising
 speed of the car, the rotational speed of the wheels is forced (respecting the
-geometric differential constraint) in order that the car moves at the speed
+geometric differential constraint) in order for the car to move at the speed
 given in argument of the function (in kilometers per hour). When the control in
 cruising speed is activated, the speed is directly applied to the wheel without
 any engine model simulation, therefore any call to functions like

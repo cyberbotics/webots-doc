@@ -101,7 +101,7 @@ bool wbu_car_get_brake_lights();
 
 **Description**
 
-This two functions return respectively the state of the backwards and brake
+These two functions return respectively the state of the backwards and brake
 lights (these two lights are switched on automatically by the library when
 appropriated).
 
@@ -123,7 +123,7 @@ double wbu_car_get_rear_wheel_radius();
 
 **Description**
 
-All these functions provide important physical characteristics of the car.
+All these functions provide important physical characteristics from the car.
 
 ---
 
@@ -172,7 +172,7 @@ double wbu_car_get_left_steering_angle();
 
 **Description**
 
-These two functions return respectively the right and left steering angle
+These two functions return respectively the right and left steering angles
 (because of the Ackermann steering geometry, the two angles are slightly
 different).
 
@@ -193,7 +193,7 @@ void wbu_car_enable_limited_slip_differential(bool enable);
 This function allows the user to enable or disable the limited differential slip
 (it is enabled by default). When the limited differential slip is enabled, at
 each time step, the torque (when control in torque is enabled) is redistributed
-among all the actuated wheels so that they rotate at the same speed (except the
+amongst all the actuated wheels so that they rotate at the same speed (except the
 difference due to the geometric differential constraint). If the limited
 differential slip is disabled, when a wheel starts to slip, it will rotate
 faster than the others.

@@ -51,7 +51,7 @@ rotational speed of the engine and the wheels, the number of elements defines
 the number of gears, the first element should be negative and is the reverse
 gear.
 - `hybridPowerSplitRatio`: Defines the ratio of the output power of the combustion
-engine that is used to charging the battery in case of `power-split hybrid`
+engine that is used to charge the battery in case of `power-split hybrid`
 `engineType`.
 - `hybridPowerSplitRPM`: Defines the fixed rotational speed of the combustion
 engine in case of `power-split hybrid` `engineType`.

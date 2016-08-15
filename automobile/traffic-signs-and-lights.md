@@ -36,12 +36,13 @@ some part of the road in nightly environments.
 
 ### Traffic signs
 
-%figure "Various traffic sign and traffic light"
+%figure "Various traffic signs"
 
 ![order_sign.png](images/order_sign.png)
 ![speed_sign.png](images/speed_sign.png)
 ![caution_sign.png](images/caution_sign.png)
 ![yield_sign.png](images/yield_sign.png)
+![sign_pole.png](images/sign_pole.png)
 
 %end
 
@@ -49,11 +50,27 @@ A total of 6 traffic signs are available. They represent the various sizes and
 shapes usually used for traffic signs:
 
 - `CautionSign`: Diamond sign usually used for warnings.
-- `ExitSign`: Big rectangular sign used for example for highway exit.
+- `ExitSign`: Big rectangular sign used for example for highway exits.
 - `OrderSign`: Circular sign usually used for interdictions.
-- `SpeedLimitSign`: Rectangular sign usually used for speed limit.
+- `SpeedLimitSign`: Rectangular sign usually used for speed limits.
 - `StopSign`: Octagonal sign usually used for stop.
 - `YieldSign`: Triangular sign usually used for yield.
+- `SignPole`: Arrow shaped sign usually used to indicate a direction. The text and its properties are implemented as fields.
 
 A complete set of textures is available with those traffic signs and can easily
-be applied using the `signImage` field.
+be applied using the `signBoards` field. The signs are fully customizable as their
+size, color and number of `signBoards` are implemented as independent fields.
+
+### Highway signs
+
+%figure "Highway poles with one or two stands"
+
+![HighwayPole1.png](images/HighwayPole1.png)
+![HighwayPole2.png](images/HighwayPole2.png)
+
+%end
+
+`HighwayPole` is usually used to indicate directions or general information on highways.
+It can support, on either one or two stands, multiple signs using the different sign fields.
+Just like `HighwaySign`, `HighwayPole` is fully customizable as its size,
+color and number of signs and stands are implemented as independent fields.

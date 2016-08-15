@@ -306,7 +306,7 @@ structure is contained in
 `WEBOTS_HOME/include/controller/c/webots/remote_control.h`
 
 For example, if you want to be able to use the distance sensor of the real
-robot, you have to wrap the `wbr_set_refresh_rate()` function (to set the
+robot, you have to wrap the `wbr_set_sampling_period()` function (to set the
 internal state of the remote control library to read this distance sensor only
 when required), and to call `wbr_distance_sensor_set_value()` into the
 remote-control library when the distance sensor is refreshed (typically into the

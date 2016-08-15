@@ -20,6 +20,7 @@
     - [Road segments](road-segments.md)
     - [Traffic signs and lights](traffic-signs-and-lights.md)
     - [Buildings](buildings.md)
+    - [Billboard](billboard.md)
     - [Nature](nature.md)
 - [Tools](tools.md)
     - [OpenStreetMap importer](openstreetmap-importer.md)

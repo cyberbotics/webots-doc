@@ -11,6 +11,8 @@ Car {
   #fields specific to Car
   SFString   type                           "traction"
   SFString   engineType                     "combustion"
+  SFString   engineSound                    "sounds/engine.wav"
+  SFFloat    engineSoundRpmReference        1000
   SFFloat    brakeCoefficient               500
   SFFloat    time0To100                     10
   SFFloat    engineMaxTorque                250
@@ -32,6 +34,8 @@ Car {
 `electric`, `parallel hybrid` and `power-split hybrid` (for a serial hybrid
 please use electric instead). See section [Engine
 models](driver-library.md#engine-models) for more information.
+- `engineSound`: Defines the sound used to simulate the engine sound, if the string is empty the engine sound is not simulated.
+- `engineSoundRpmReference`: Defines the reference rotation per minutes of the engine sound. See the [Engine sound](#engine-sound) paragraph for more information about the engine sound simulation.
 - `brakeCoefficient`: Defines the maximum `dampingConstant` applied by the brake
 on the wheels joint.
 - `time0To100`: Defines the time to accelerate from 0 to 100 km/h in seconds, this
@@ -58,6 +62,14 @@ engine in case of `power-split hybrid` `engineType`.
 
 The `extensionSlot` field is filled in by default with the `AutomobileLights`
 PROTO.
+
+#### Engine sound
+
+If the `engineSound` field of the `Car` PROTO is not empty, the sound file defined in this field is used to simulate the engine sound. The amplitude and frequency of the sound is modulated in function of the rpm and throttle values:
+
+%figure "Engine sound simulation"
+![engine_sound.png](images/engine_sound.png)
+%end
 
 ### AutomobileLights
 

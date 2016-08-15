@@ -41,6 +41,7 @@ You can use several arguments with this script:
 | --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
 | --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
+| --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 
 %end
 

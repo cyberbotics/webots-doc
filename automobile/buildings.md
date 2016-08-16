@@ -32,7 +32,7 @@ The following PROTOs of buildings are available to add in your worlds:
 
 ### Generic building
 
-In addition to those building PROTOs, the `GenericBuilding` PROTO represent
+In addition to those building PROTOs, the `GenericBuilding` PROTO represents
 a highly customizable building and can be used to model a large variety of
 buildings.
 
@@ -68,16 +68,16 @@ building).
 `tiled`, `gravel` and `slate`.
 - `roofShape`: Defines the geometry of the roof. Supported geometry are `flat
 roof` and `pyramidal roof`.
-- `snowOnRoof`: Defines if snow should be added on top of the roof.
+- `snowOnRoof`: Defines whether snow should be added on top of the roof.
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
 roof).
-- `enableBoundingObject`: Defines if the building should have a bounding object.
-- `bottom`: Defines if the bottom face of the building should be displayed.
+- `enableBoundingObject`: Defines whether the building should have a bounding object.
+- `bottom`: Defines whether the bottom face of the building should be displayed.
 
 ### Other city objects
 
 In addition to buildings, other PROTO nodes are available representing objects
-normally found in a city environment:
+usually found in a city environment:
 
 - BusStop
 - Fence

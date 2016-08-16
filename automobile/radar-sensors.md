@@ -4,7 +4,7 @@ Several radar models are available.
 
 ### Delphi ESR
 
-The `Delphi ESR` is a radar which can see cars up to 174 meters, has a vertical
+The `Delphi ESR` is a radar which can see cars up to 174 meters ahead, has a vertical
 field of view of 4.5 degrees and an horizontal field of view of up to 90
 degrees. The sensor can operate in two modes: the long range mode uses an
 horizontal field of view of 20 degrees and a maximum range of 174 meters, the
@@ -27,7 +27,7 @@ DelphiESR {
 }
 ```
 
-The `occlusion` field can be used to set if occlusions between the targets and
+The `occlusion` field can be used to set whether occlusions between the targets and
 the radar should be checked.
 
 The `longRangeMode` field can be used to set the radar mode.
@@ -54,7 +54,7 @@ SmsUmrr-0a29/30/31 {
   }
 ```
 
-The `occlusion` field can be used to set if occlusions between the targets and
+The `occlusion` field can be used to set whether occlusions between the targets and
 the radar should be checked.
 
 The `cellSpeed` field can be used to set the minimum radial distance between two

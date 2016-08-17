@@ -1048,7 +1048,7 @@ new robot with a specific controller:
 
 ```c
 #include <webots/robot.h>
-include <webots/supervisor.h>
+#include <webots/supervisor.h>
 
 #define TIME_STEP 32
 

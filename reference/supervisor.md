@@ -487,7 +487,7 @@ The `wb_supervisor_node_set_visibility()` function sets the visibility of a node
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency);
+void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency, const char *font);
 ```
 
 **Description**
@@ -502,7 +502,7 @@ and `y` parameters are the coordinates of the upper left corner of the text,
 relative to the upper left corner of the 3D window. These floating point values
 are expressed in percent of the 3D window width and height, hence, they should
 lie in the range 0-1. The `size` parameter defines the size of the font to be
-used. It is expressed in the same unit as the `y` parameter. Finally, the
+used. It is expressed in the same unit as the `y` parameter. The
 `color` parameter defines the color of the label. It is expressed as a 3 bytes
 RGB integer, the most significant byte (leftmost byte in hexadecimal
 representation) represents the red component, the second most significant byte
@@ -510,26 +510,40 @@ represents the green component and the third byte represents the blue component.
 The `transparency` parameter defines the transparency of the label. A
 transparency level of 0 means no transparency, while a transparency level of 1
 means total transparency (the text will be invisible). Intermediate values
-correspond to semi-transparent levels.
+correspond to semi-transparent levels. Finally, the `font` parameter defines the
+font used to draw the text, the following standard fonts are available:
+  - Arial
+  - Arial Black
+  - Comic Sans MS
+  - Courier New
+  - Georgia
+  - Impact
+  - Lucida Console
+  - Lucida Sans Unicode
+  - Palatino Linotype
+  - Tahoma
+  - Times New Roman
+  - Trebuchet MS
+  - Verdana
 
-**Example**
 
--
+**Examples**
 
-        wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0);
+```c
+wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0,"Arial");
+```
 
 will display the label "hello world" in red at the upper left corner of the 3D
 window.
 
--
-
-        wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5);
-
+```c
+wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5,"Impact");
+```
 will display the label "hello Webots" in semi-transparent green, just below.
 
--
-
-        supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0);
+```c
+supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0,"Times New Roman");
+```
 
 will change the label "hello world" defined earlier into "hello universe", using
 a yellow color for the new text.
@@ -1034,19 +1048,19 @@ new robot with a specific controller:
 
 ```c
 #include <webots/robot.h>
-    include <webots/supervisor.h>
+#include <webots/supervisor.h>
 
-    #define TIME_STEP 32
+#define TIME_STEP 32
 
-    int main(int argc, char **argv) {
-      wb_robot_init();
+int main(int argc, char **argv) {
+  wb_robot_init();
 
-      WbNodeRef root_node = wb_supervisor_node_get_root();
-      WbFieldRef root_children_field = wb_supervisor_node_get_field(root_node, "children");
-      wb_supervisor_field_import_mf_node_from_string(root_children_field, 4, "DEF MY_ROBOT Robot { controller \"my_controller\" }");
+  WbNodeRef root_node = wb_supervisor_node_get_root();
+  WbFieldRef root_children_field = wb_supervisor_node_get_field(root_node, "children");
+  wb_supervisor_field_import_mf_node_from_string(root_children_field, 4, "DEF MY_ROBOT Robot { controller \"my_controller\" }");
 
-      ...
-    }
+  ...
+}
 ```
 
 The `wb_supervisor_field_remove_mf_node()` function removes a Webots node from

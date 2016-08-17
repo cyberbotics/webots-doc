@@ -537,12 +537,12 @@ will display the label "hello world" in red at the upper left corner of the 3D
 window.
 
 ```c
-        wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5,"Impact");
+wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5,"Impact");
 ```
 will display the label "hello Webots" in semi-transparent green, just below.
 
 ```c
-        supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0,"Times New Roman");
+supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0,"Times New Roman");
 ```
 
 will change the label "hello world" defined earlier into "hello universe", using

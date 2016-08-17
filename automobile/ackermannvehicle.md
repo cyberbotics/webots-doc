@@ -64,9 +64,9 @@ vehicle.
 descendant PROTOs).
 - `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`,
 `PositionSensor` and `Motor`).
-- `data`: Defines an user `data` string of the `Robot` node.
+- `data`: Defines a user `data` string of the `Robot` node.
 
-The center of the vehicle (position 0 0 0) is in the center of the rear wheels
+The center of the vehicle (position 0 0 0) is at the center of the rear wheels
 axis. Any node added in the `extensionSlot` is added relatively to this
 position. A `Transform` node should be used to move an extension node away from
 this center.

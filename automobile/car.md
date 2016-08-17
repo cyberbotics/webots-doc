@@ -3,8 +3,8 @@
 The `Car` PROTO inherits from the [AckermannVehicle](ackermannvehicle.md) PROTO
 and extends it. It should be used with the [driver](driver-library.md) library
 in order to add a model of the engine, transmission, lights, gearbox and brake.
-The joint devices are automatically filled in with the appropriate devices in
-function of the transmission type set in the parameters.
+The joint devices are automatically filled in with the appropriate devices depending
+on the transmission type set in the parameters.
 
 ```
 Car {
@@ -48,14 +48,14 @@ the electric engine torque.
 - `engineMinRPM and engineMaxRPM`: Defines the working range of the engine
 (`engineMinRPM` not used in case of `electric` `engineType`).
 - `engineFunctionCoefficients`: Define the coefficients of the second order
-function used to approximate the output torque in function of the rotational
+function used to approximate the output torque as a function of the rotational
 speed of the motor.
 - `gearRatio`: Defines the total (not only the gearbox ratio) ratio between the
 rotational speed of the engine and the wheels, the number of elements defines
 the number of gears, the first element should be negative and is the reverse
 gear.
 - `hybridPowerSplitRatio`: Defines the ratio of the output power of the combustion
-engine that is used for charging the battery in case of `power-split hybrid`
+engine that is used to charge the battery in case of `power-split hybrid`
 `engineType`.
 - `hybridPowerSplitRPM`: Defines the fixed rotational speed of the combustion
 engine in case of `power-split hybrid` `engineType`.

@@ -68,4 +68,5 @@ This constant is particularly useful to loop over the lights.
 
 ### X3Dom export
 
-**TODO**
+When exporting the present GLSL shader to X3Dom, it is converted from `GLSL v120` to the `X3Dom` shaders (`WebGL` shaders with custom variables).
+Generally this automatic conversion is working fine, however if it is problematic, please write a bug support to help us in improving the conversion function.

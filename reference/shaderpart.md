@@ -38,12 +38,32 @@ GLSL learning is beyond the scope of this document, please refer to the followin
 
 ### Variables
 
-**TODO**
+All the standard GLSL variables are accessible from the GPU program (gl_Vertex, gl_ModelViewMatrix, etc.).
+Please refer to their documentation.
+
+The links between the VRML fields and these variables are various.
+Some of them are is described in the following table:
+
+| VRML field(s)                                       | GLSL variable                                            |
+| =================================================== | ======================================================== |
+| `Material.ambientIntensity * Material.diffuseColor` | `gl_FrontMaterial.ambient.rgb`                           |
+| `Material.diffuseColor`                             | `gl_FrontMaterial.diffuse.rgb`                           |
+| `Material.emissiveColor`                            | `gl_FrontMaterial.emissive.rgb`                          |
+| `Material.shininess`                                | `gl_FrontMaterial.shininess`                             |
+| `Material.specularColor`                            | `gl_FrontMaterial.specular.rgb`                          |
+| `sum(Light.ambientIntensity * Light.color)`         | `gl_LightModel.ambient`                                  |
+| `Light.color * Light.intensity`                     | `gl_LightSource[X].diffuse`                              |
+| `Light.on`                                          | *An unlit light is not present in the light list*        |
+| `[Point/Spot]Light.attenuation`                     | `gl_LightSource[X].*attenuation`                         |
+| `[Point/Spot]Light.location`                        | `gl_LightSource[X].position`                             |
+| `[Point/Spot]Light.radius`                          | *Not available*                                          |
+| `DirectionLight.direction`                          | *Most approaching value:* `gl_LightSource[X].halfVector` |
 
 
-### Special variables
+### Special preprocessor variables
 
-**TODO**
+- `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
+This constant is particularly useful to loop over the lights.
 
 
 ### X3Dom export

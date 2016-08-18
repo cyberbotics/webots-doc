@@ -20,6 +20,14 @@ The `type` field indicates the uniform variable type.
 
 The `value` field indicates the uniform variable value.
 
+
 ### Supported types
 
-**TODO**
+For now, the uniform variables support the following types:
+
+| Uniform type | GLSL type   | Value example |
+| ============ | =========== | ============= |
+| "SFInt32"    | `sampler2D` | "2"           |
+| "SFFloat"    | `float`     | "1.2"         |
+| "SFVec2f"    | `vec2`      | "1.2 2.3"     |
+| "SFVec3f"    | `vec3`      | "1.2 2.3 3.4" |

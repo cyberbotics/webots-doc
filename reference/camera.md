@@ -157,7 +157,9 @@ and `height` fields define the vertical angle of the frustum according to the
 above formula.
 
 The far clipping plane is defined by the `far` field, it can be set at an
-infinite distance by setting the `far` field to 0.
+infinite distance by setting the `far` field to 0.  Setting a far clipping
+plane will filter-out far objects and can therefore greatly improved the
+rendering performance.
 
 Generally speaking there is no far clipping plane while this is common in other
 OpenGL programs. In Webots, a camera can see as far as needed.

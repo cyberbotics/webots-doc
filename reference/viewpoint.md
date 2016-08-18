@@ -34,7 +34,8 @@ main window. The near field determines the precision of the OpenGL depth buffer.
 A too small value may cause depth fighting between overlaid polygons, resulting
 in random polygon overlaps. The far clipping plane is parallel to the near
 clipping plane and is defined by the `far` field. The far clipping plane can be
-set at an infinite distance by setting the `far` field to 0.
+set at an infinite distance by setting the `far` field to 0. Setting a far clipping
+plane will filter-out far objects and can therefore greatly improved the rendering performance.
 
 The `near`, `far` and the `fieldOfView` fields define together the viewing frustum. Any
 3D shape outside this frustum won't be rendered. Hence, shapes too close

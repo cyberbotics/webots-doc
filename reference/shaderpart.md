@@ -42,7 +42,7 @@ All the standard GLSL variables are accessible from the GPU program (gl_Vertex, 
 Please refer to their documentation.
 
 The links between the VRML fields and these variables are various.
-Some of them are is described in the following table:
+Some of them are described in the following table:
 
 | VRML field(s)                                       | GLSL variable                                            |
 | =================================================== | ======================================================== |
@@ -53,7 +53,7 @@ Some of them are is described in the following table:
 | `Material.specularColor`                            | `gl_FrontMaterial.specular.rgb`                          |
 | `sum(Light.ambientIntensity * Light.color)`         | `gl_LightModel.ambient`                                  |
 | `Light.color * Light.intensity`                     | `gl_LightSource[X].diffuse`                              |
-| `Light.on`                                          | *An unlit light is not present in the light list*        |
+| `Light.on`                                          | *An unlit light is simply not in the light list*         |
 | `[Point/Spot]Light.attenuation`                     | `gl_LightSource[X].*attenuation`                         |
 | `[Point/Spot]Light.location`                        | `gl_LightSource[X].position`                             |
 | `[Point/Spot]Light.radius`                          | *Not available*                                          |
@@ -66,7 +66,7 @@ Some of them are is described in the following table:
 This constant is particularly useful to loop over the lights.
 
 
-### X3Dom export
+### X3DOM export
 
-When exporting the present GLSL shader to X3Dom, it is converted from `GLSL v120` to the `X3Dom` shaders (`WebGL` shaders with custom variables).
-Generally this automatic conversion is working fine, however if it is problematic, please write a bug support to help us in improving the conversion function.
+When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
+Generally this automatic conversion is working fine, however if it is problematic, please write a bug support to help us improving the conversion function.

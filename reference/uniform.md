@@ -10,7 +10,7 @@ Uniform {
 
 ### Description
 
-The [Uniform](#uniform) node specifies an uniform named variable.
+The [Uniform](#uniform) node specifies a uniform named variable.
 Uniform variables are used to pass variables to the vertex or fragment shaders
 defined in the same [ComposedShader](composedshader.md) node.
 
@@ -23,7 +23,7 @@ The `value` field indicates the uniform variable value.
 
 ### Supported types
 
-For now, the uniform variables support the following types:
+The uniform variables support the following types:
 
 | Uniform type | GLSL type   | Value example |
 | ============ | =========== | ============= |

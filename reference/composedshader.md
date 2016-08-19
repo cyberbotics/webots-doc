@@ -2,20 +2,20 @@
 
 ```
 ComposedShader {
-  vrmlField MFNode fields []
+  vrmlField MFNode uniforms []
   vrmlField MFNode parts  []
 }
 ```
 
 ### Description
 
-The [ComposedShader](#composedshader) node defines a shader as a list of vertex or fragment programs and the fields passed to these programs.
+The [ComposedShader](#composedshader) node defines a shader as a list of vertex or fragment programs and the uniforms passed to these programs.
 
 The `parts` type is a list of [ShaderPart](shaderpart.md) nodes.
 Generally a [ShaderPart](shaderpart.md) node of type "VERTEX" and another of type "FRAGMENT" are expected.
-If several [ShaderPart](shaderpart.md) node of the same type are given, then only the last ones are used.
+If several [ShaderPart](shaderpart.md) nodes of the same type are given, then only the first occurrence of each type is used.
 
-The `fields` type is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
+The `uniforms` type is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
 
 ### Limitations
@@ -25,7 +25,7 @@ Currently the [Shape](shape.md) nodes having a [ComposedShader](#composedshader)
 
 ### Example
 
-The following example shows a shader blending 2 textures together and multiplying the result by the Material.diffuseColor field:
+The following example shows a shader blending two textures together and multiplying the result by the Material.diffuseColor field:
 
 ```
 Shape {
@@ -49,7 +49,7 @@ Shape {
     }
     shaders [
       ComposedShader {
-        fields [
+        uniforms [
           Uniform {
             name "myMixFactor"
             type "SFFloat"

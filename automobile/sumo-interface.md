@@ -8,7 +8,7 @@ a supervisor controller and uses  [TraCI](http://sumo.dlr.de/wiki/TraCI) to
 communicate with SUMO.
 
 > **note**:
-Currently version 0.26 of SUMO is distributed with Webots.
+Currently version 0.27.1 of SUMO is distributed with Webots.
 
 In order to use this interface a few rules need to be observed. First, a
 `Supervisor` node has to be added to the simulation and should use the

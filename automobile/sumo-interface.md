@@ -57,6 +57,10 @@ field `controllerArgs` in order to customize the behavior of the interface:
 %end
 
 
+> **note** [Mac OSX]:
+On mac OSX, SUMO relies on X11, you need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
+
+
 ## Plugin mechanism
 
 In addition to the `sumo_supervisor` controller arguments, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:

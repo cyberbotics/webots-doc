@@ -12,7 +12,7 @@ The [X3D](http://www.web3d.org/x3d/what-x3d) file is containing the graphical in
 It can be imported in many 3D softwares (for visualizing, modeling, etc.).
 
 The `HTML5` page is containing a Webots player which displays the `X3D` file
-as shown in ![the figure bellow](web-scene.md#screenshot-of-a-web-scene-page-generated-by-webots).
+as shown in ![the figure bellow](#screenshot-of-a-web-scene-page-generated-by-webots).
 It can be open in any recent Web browser as documented in [the section bellow](#remarks-on-the-used-technologies-and-their-limitations).
 The navigation in the player is done using the mouse or the touch screen, similarly than the Webots navigation.
 

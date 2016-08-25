@@ -18,12 +18,26 @@ except that the `X3D` file and the animation are sent on the fly to the browser 
 
 ### How to stream a Webots Simulation
 
-**TODO: document**
+Start Webots with the streaming server using the `--stream` option.
+Please refer to this [documentation](starting-webots.md#command-line-arguments)
+to know the suboptions.
+
+Open the streaming viewer page in your Web browser:
+
+```
+$(WEBOTS_HOME)/resources/web/streaming_viewer/index.html 
+```
+
+Use the buttons on the top of the page to connect to the Webots streaming server.
+
+**Note**:
+IP and ports between should match. The port should not be used by another application.
 
 
 ### How to embed a Web Scene in your Website
 
-Please refer to [this section](web-animation.md#how-to-embed-a-web-scene-in-your-website).
+Similarily to [this section](web-animation.md#how-to-embed-a-web-scene-in-your-website),
+please refer to the streaming viewer page to embed a Webots stream in your Website.
 
 
 ### Limitations

@@ -107,26 +107,12 @@ simulation. However, frames are only captured during Webots steps and not when
 the simulation is paused.
 
 The `Export HTML5 Model...` item allows you to export the current world as an
-interactive 3D ".html" file, using the X3DOM web standard, based on WebGL. This
-is especially useful for publishing Webots-created worlds on the Web. X3DOM is
-supported in recent versions of Firefox, Chrome, Internet Explorer and Safari on
-Mac OS X (see details on the [X3DOM website](http://www.x3dom.org)).
-
-> **Note**:
-With the Chrome browser, in order to be able to open HTML/X3DOM files locally,
-e.g., not from the Web, you may need to allow Chrome to open local files
-referred to by the HTML/X3DOM file, e.g., textures. This can be achieved by
-passing the `--allow-file-access-from-files` option at Chrome startup. Otherwise
-textures won't show up in the 3D models.
+interactive 3D ".html" file, using the X3DOM web standard, based on WebGL.
 
 ![](images/animation-button.png =26x26) The `Make HTML5 Animation...` item
 allows you to record a simulation as a 3D animation and publish it on a HTML5
-web page. The result is similar to a movie with playback controls, except that
-you can change the viewpoint at any time. Several files are generated: an X3D
-file containing the 3D scene, a JSON file containing the animation data and a
-HTML5 file displaying the result using X3DOM and jQuery. Once the animation
-recording is started, this item is changed to `Stop HTML5 Animation...` and can
-be used to stop the animation recording.
+web page.
+You can get more information about this topic in [this section](web-animation.md).
 
 The `Quit Webots` terminates the current simulation and closes Webots.
 

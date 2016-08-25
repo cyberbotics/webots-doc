@@ -1,5 +1,14 @@
 ## Web Animation
 
+<!--
+The result is similar to a movie with playback controls, except that
+you can change the viewpoint at any time. Several files are generated: an X3D
+file containing the 3D scene, a JSON file containing the animation data and a
+HTML5 file displaying the result using X3DOM and jQuery. Once the animation
+recording is started, this item is changed to `Stop HTML5 Animation...` and can
+be used to stop the animation recording.
+-->
+
 ### Purpose
 
 Similarly to the web scene export, Webots can export a scene and its animation

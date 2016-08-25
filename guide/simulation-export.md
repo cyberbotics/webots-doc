@@ -1,6 +1,6 @@
 # Simulation Export
 
-This chapter describes how to export the Webots simulations to external applications or to standard file formats.
+This chapter describes how to export Webots simulations to external applications or to files with standard formats.
 
 
 ## Sections

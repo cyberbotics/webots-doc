@@ -12,7 +12,8 @@ as shown in [the figure above](#screenshot-of-webots-used-as-a-streaming-server)
 
 %end
 
-### How to stream a Webots simulation
+
+### How to stream a Webots Simulation
 
 **TODO: document**
 
@@ -22,6 +23,19 @@ as shown in [the figure above](#screenshot-of-webots-used-as-a-streaming-server)
 **TODO: document**
 
 
+### How to embed a Web Scene in your Website
+
+**TODO: document**
+
+
+### Limitations
+
+**TODO: document**
+
+
 ### Technologies and Limitations
 
-**TODO: document (cf. X3D - same section)**
+To render the scene in a Web browser, Webots is using X3DOM
+(cf. [limitations](web-scene.md#technologies-and-limitations)).
+To stream the scene modifications, Webots is using websockets.
+Websockets are present on the majority of recent web browsers.

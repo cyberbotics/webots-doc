@@ -107,12 +107,13 @@ simulation. However, frames are only captured during Webots steps and not when
 the simulation is paused.
 
 The `Export HTML5 Model...` item allows you to export the current world as an
-interactive 3D ".html" file, using the X3DOM web standard, based on WebGL.
+interactive 3D ".html" file.
 You can get more information about this topic in [this section](web-scene.md).
 
 ![](images/animation-button.png =26x26) The `Make HTML5 Animation...` item
-allows you to record a simulation as a 3D animation and publish it on a HTML5
-web page.
+allows you to record a simulation as a 3D animation and publish it on a HTML5 web page.
+Once the animation recording is started, this item is changed to `Stop HTML5 Animation...`
+and can be used to stop the animation recording.
 You can get more information about this topic in [this section](web-animation.md).
 
 The `Quit Webots` terminates the current simulation and closes Webots.

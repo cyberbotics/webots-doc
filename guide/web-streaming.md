@@ -1,10 +1,12 @@
 ## Web Streaming
 
-### Purpose
+### Description
 
-Webots can be used as a web streaming server, i.e., to send the graphical information of a 3D scene to several
-web browsers (used as clients), and to stream scene modifications (such as the moving objects positions, etc.),
-as shown in [the figure above](#screenshot-of-webots-used-as-a-streaming-server).
+Webots can be used as a Web streaming server, i.e.,
+to stream a simulation to several interactive 3D `HTML` pages.
+
+The mechanism is similar to the [web animation export](web-animation.md)
+except that the `X3D` file and the animation are sent on the fly to the browser clients.
 
 %figure "Screenshot of Webots used as a streaming server"
 
@@ -35,7 +37,8 @@ as shown in [the figure above](#screenshot-of-webots-used-as-a-streaming-server)
 
 ### Technologies and Limitations
 
-To render the scene in a Web browser, Webots is using the same technologies as to render a web scene
-(cf. [limitations](web-scene.md#remarks-on-the-used-technologies-and-their-limitations)).
-To stream the scene modifications, Webots is using websockets.
-Websockets are present on the majority of recent web browsers.
+Please refer to [this section](web-animation.md#remarks-on-the-used-technologies-and-their-limitations).
+
+The data is sent to the clients using [WebSockets](https://www.websocket.org/).
+`WebSockets` is supported in recent versions of Firefox, Chrome, Edge, Internet Explorer and Safari on
+Mac OS X (see details on the [WebSockets website](https://www.websocket.org/)).

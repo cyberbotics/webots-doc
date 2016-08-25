@@ -1,14 +1,14 @@
 ## Web Animation
 
-### Purpose
+### Description
 
-Webots can record a simulation to an interactive 3D HTML page.
+Webots can record a simulation to an interactive 3D `HTML` page.
 The result looks like a movie in which the viewpoint can be modified.
 
 The result is similar to a movie with playback controls, except that
 you can change the viewpoint at any time.
 
-The mechanism is very similar to the [web scene export](web-scene.md),
+The mechanism is similar to the [web scene export](web-scene.md),
 except that a supplementary `JSON` animation file containing the moving objects positions is exported.
 
 The [figure bellow](#screenshot-of-a-web-animation-page-generated-by-webots)

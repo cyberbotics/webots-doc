@@ -26,17 +26,31 @@ The navigation in the scene can be done using the mouse or the touch screen, sim
 
 ### How to export a Web Scene
 
-**TODO: document**
+Select the `File / Export HTML5 Model...` menu item and choose the target `HTML` file.
+
+**Note**:
+The `X3D` file and the required textures are exported in the same directory as the target `HTML` file.
+
+**Note**:
+The following playback option may not work correctly depending on your default Web browser
+(cf. [section bellow](#remarks-on-the-used-technologies-and-their-limitations))
 
 
 ### How to embed a Web Scene in your Website
 
-**TODO: document**
+The exported `HTML` page is designed to be as simple as possible, and is the reference for
+an integration in an external Website.
+The `CSS` and `JavaScript` resources on the Cyberbotics Website will be stored for long term, and can be used.
+Alternatively, an `<iframe>` tag pointing on the generated Webots page 
 
 
 ### Limitations
 
-**TODO: document**
+All the graphical nodes (geometries, appearances, lights, transforms, etc.) are supported.
+
+The rendering of the Webots player is done using [X3DOM](http://www.x3dom.org).
+It may occur that the rendering is not strictly equivalent, mainly in term of lighting, shadows and material rendering.
+Our both implementations of the `X3D` standard may differ.
 
 
 ### Remarks on the used Technologies and their Limitations

@@ -51,6 +51,8 @@
     - [MATLAB](matlab.md)
     - [Controller Plugin](controller-plugin.md)
     - [Webots Plugin](webots-plugin.md)
+- [Simulation Export](simulation-export.md)
+    - [Web Streaming](web-streaming.md)
 - [Tutorials](tutorials.md)
     - [Prerequisites](prerequisites.md)
     - [Tutorial 1: Your first Simulation in Webots (20 minutes)](tutorial-1-your-first-simulation-in-webots-20-minutes.md)

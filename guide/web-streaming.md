@@ -20,7 +20,7 @@ except that the `X3D` file and the animation are sent on the fly to the browser 
 
 Start Webots with the streaming server using the `--stream` option.
 Please refer to this [documentation](starting-webots.md#command-line-arguments)
-to know the suboptions.
+to know the sub-options.
 
 Open the streaming viewer page in your Web browser:
 
@@ -36,7 +36,7 @@ IP and ports between should match. The port should not be used by another applic
 
 ### How to embed a Web Scene in your Website
 
-Similarily to [this section](web-animation.md#how-to-embed-a-web-scene-in-your-website),
+Similarly to [this section](web-animation.md#how-to-embed-a-web-animation-in-your-website),
 please refer to the streaming viewer page to embed a Webots stream in your Website.
 
 

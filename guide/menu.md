@@ -52,6 +52,8 @@
     - [Controller Plugin](controller-plugin.md)
     - [Webots Plugin](webots-plugin.md)
 - [Simulation Export](simulation-export.md)
+    - [X3D and Web Scene](web-scene.md)
+    - [Web Animation](web-animation.md)
     - [Web Streaming](web-streaming.md)
 - [Tutorials](tutorials.md)
     - [Prerequisites](prerequisites.md)

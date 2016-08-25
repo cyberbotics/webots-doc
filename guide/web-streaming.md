@@ -24,4 +24,4 @@ as shown in [the figure above](#screenshot-of-webots-used-as-a-streaming-server)
 
 ### Technologies and Limitations
 
-**TODO: document**
+**TODO: document (cf. X3D - same section)**

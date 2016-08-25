@@ -34,6 +34,9 @@ The `X3D` file, the `JSON` animation file and the required textures are exported
 The playback option may not work correctly depending on your default Web browser
 (cf. [section bellow](#remarks-on-the-used-technologies-and-their-limitations))
 
+**Note**:
+A [Supervisor](supervisor-programming.md) can start/stop an animation from as well.
+
 
 ### How to embed a Web Animation in your Website
 

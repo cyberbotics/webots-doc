@@ -37,8 +37,8 @@ except that the `X3D` file and the animation are sent on the fly to the browser 
 
 ### Technologies and Limitations
 
-Please refer to [this section](web-animation.md#remarks-on-the-used-technologies-and-their-limitations).
-
 The data is sent to the clients using [WebSockets](https://www.websocket.org/).
 `WebSockets` is supported in recent versions of Firefox, Chrome, Edge, Internet Explorer and Safari on
 Mac OS X (see details on the [WebSockets website](https://www.websocket.org/)).
+
+Moreover, please refer to [this section](web-animation.md#remarks-on-the-used-technologies-and-their-limitations).

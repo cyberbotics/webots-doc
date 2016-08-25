@@ -2,8 +2,8 @@
 
 ### Purpose
 
-Webots can be used as a web streaming server, i.e., to send an entire 3D scene to several
-Web browsers (clients), and to stream the position of the moving objects,
+Webots can be used as a web streaming server, i.e., to send the graphical information of a 3D scene to several
+web browsers (used as clients), and to stream scene modifications (such as the moving objects positions, etc.),
 as shown in [the figure above](#screenshot-of-webots-used-as-a-streaming-server).
 
 %figure "Screenshot of Webots used as a streaming server"

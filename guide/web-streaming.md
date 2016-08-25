@@ -21,19 +21,14 @@ except that the `X3D` file and the animation are sent on the fly to the browser 
 **TODO: document**
 
 
-### What can be streamed
-
-**TODO: document**
-
-
 ### How to embed a Web Scene in your Website
 
-**TODO: document**
+Please refer to [this section](web-animation.md#how-to-embed-a-web-scene-in-your-website).
 
 
 ### Limitations
 
-**TODO: document**
+Please refer to [this section](web-animation.md#limitations).
 
 
 ### Technologies and Limitations

@@ -108,6 +108,7 @@ the simulation is paused.
 
 The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file, using the X3DOM web standard, based on WebGL.
+You can get more information about this topic in [this section](web-scene.md).
 
 ![](images/animation-button.png =26x26) The `Make HTML5 Animation...` item
 allows you to record a simulation as a 3D animation and publish it on a HTML5

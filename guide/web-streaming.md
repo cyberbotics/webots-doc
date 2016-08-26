@@ -4,7 +4,7 @@
 
 Webots can be used as a Web streaming server, i.e.,
 to stream a simulation to several interactive 3D `HTML` pages,
-as shown in the [figure bellow](web-streaming.md#screenshot-of-webots-streaming-server).
+as shown in the [figure below](web-streaming.md#screenshot-of-webots-streaming-server).
 
 The mechanism is similar to the [web animation export](web-animation.md)
 except that the `X3D` file and the animation are sent on the fly to the browser clients.

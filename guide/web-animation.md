@@ -43,8 +43,9 @@ Please refer to [this section](web-scene.md#how-to-embed-a-web-scene-in-your-web
 
 ### Limitations
 
-Webots is exporting only the `Transform.translation`, `Transform.rotation` and `LED.color` fields.
-Modifying the other VRML fields, adding/removing nodes are not recorded in the animation file.
+The animation file is containing only modifications over the `Transform.translation`, `Transform.rotation` and `LED.color` fields.
+The other VRML fields are not recorded in the animation file.
+Node insertion or deletion are also not recorded in the animation file.
 
 Moreover, please refer to [this section](web-scene.md#limitations).
 

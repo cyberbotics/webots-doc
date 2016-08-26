@@ -33,7 +33,7 @@ The playback option may not work correctly depending on your default Web browser
 In this case, please refer to the [section below](#remarks-on-the-used-technologies-and-their-limitations).
 
 **Note**:
-A [Supervisor](supervisor-programming.md) can start/stop an animation from as well.
+A [Supervisor](supervisor-programming.md) can start or stop an animation recording as well.
 
 
 ### How to embed a Web Animation in your Website

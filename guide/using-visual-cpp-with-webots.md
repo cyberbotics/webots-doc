@@ -87,7 +87,7 @@ enter following configuration:
 
     With old version of Visual C++, the default target is a 32-bit binary
 
-    In case you are compiling the controller as a 32-bit binary, , you will need to link it with the 32-bit version of the Controller library instead:
+    In case you are compiling the controller as a 32-bit binary, you will need to link it with the 32-bit version of the Controller library instead:
 
         Linker > General > Additional Library Directories:
           C:\Program Files\Webots\msys64\mingw32\lib\

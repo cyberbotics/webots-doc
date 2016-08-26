@@ -88,7 +88,7 @@ enter following configuration:
     In case you are compiling the controller as a 32-bit binary, which is the default in old versions of Visual C++, you will need to link it with the 32-bit version of the Controller library:
 
         Linker > General > Additional Library Directories:
-          C:\Program Files\Webots\msys64\mingw64\lib\
+          C:\Program Files\Webots\msys64\mingw32\lib\
 
 5. If you want to use the C API, you should skip step 5 and go directly to step 6.
 If you want to use the C++ API follow these instructions:

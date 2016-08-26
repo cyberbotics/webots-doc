@@ -5,7 +5,7 @@
 Webots can export a world to an interactive 3D `HTML` page.
 This feature is especially useful for publishing Webots-created worlds on the Web.
 
-During the export, an [X3D](http://www.web3d.org/x3d/what-x3d) file and a `HTML5` page are generated.
+During the export, a [X3D](http://www.web3d.org/x3d/what-x3d) file and a `HTML5` page are generated.
 
 The `X3D` file contains the graphical information of the world.
 `X3D` is a modern `XML`-based file format for representing 3D computer graphics.

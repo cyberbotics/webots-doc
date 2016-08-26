@@ -51,8 +51,12 @@ will be stored for long term, and can be used from an external Website.
 All the graphical nodes (Box, Sphere, Appearance, Material, ImageTexture, Light, Transform, etc.) are supported.
 
 The rendering of the Webots player is done using the [X3DOM](http://www.x3dom.org) Web standard.
-It may occur that the rendering is not strictly equivalent, mainly in term of shadows, lighting, and material rendering,
-because our both implementations of the `X3D` standard may differ.
+It may occur that the rendering is not strictly equivalent, because our both implementations of the `X3D` standard may differ.
+
+Particularly:
+
+- Webots uses additive stencil shadows, while `X3DOM` uses experimental shader-based shadows.
+The `X3DOM` shadows may have aliasing artifacts or can appear brighter than the Webots ones.
 
 
 ### Remarks on the used Technologies and their Limitations

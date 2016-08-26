@@ -1,6 +1,6 @@
-# Simulation Export
+# Web Interface
 
-This chapter describes how to export Webots simulations to external applications.
+This chapter describes how to export to X3D format and web pages.
 
 
 ## Sections

@@ -2,7 +2,7 @@
 
 ```
 ComposedShader {
-  vrmlField MFNode fields []
+  vrmlField MFNode uniforms []
   vrmlField MFNode parts  []
 }
 ```
@@ -15,7 +15,7 @@ The `parts` type is a list of [ShaderPart](shaderpart.md) nodes.
 Generally a [ShaderPart](shaderpart.md) node of type "VERTEX" and another of type "FRAGMENT" are expected.
 If several [ShaderPart](shaderpart.md) nodes of the same type are given, then only the first occurrence of each type is used.
 
-The `fields` type is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
+The `uniforms` type is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
 
 ### Limitations
@@ -49,7 +49,7 @@ Shape {
     }
     shaders [
       ComposedShader {
-        fields [
+        uniforms [
           Uniform {
             name "myMixFactor"
             type "SFFloat"

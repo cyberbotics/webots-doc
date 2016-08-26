@@ -47,7 +47,7 @@ The animation file is containing only modifications over the `Transform.translat
 The other VRML fields are not recorded in the animation file.
 Node insertion or deletion are also not recorded in the animation file.
 
-Moreover, please refer to [this section](web-scene.md#limitations).
+Additional limitations are described to [this section](web-scene.md#limitations).
 
 
 ### Remarks on the used Technologies and their Limitations

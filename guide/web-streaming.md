@@ -60,8 +60,6 @@ Except that adding and deleting objects from Webots is propagated to the clients
 ### Technologies and Limitations
 
 The data is sent to the clients using [WebSockets](https://www.websocket.org/).
-`WebSockets` is supported in recent versions of Firefox, Chrome, Edge, Internet Explorer and Safari on
-Mac OS X (see details on the [WebSockets website](https://www.websocket.org/)).
-In case of related issues, make sure that `WebSockets` is enabled in your Web browser settings.
+In case of related issues, make sure that `WebSockets` are enabled in your Web browser settings.
 
-Additional limitations are described in [this section](web-animation.md#remarks-on-the-used-technologies-and-their-limitations).
+Please refer to the limitations described in [this section](web-animation.md#remarks-on-the-used-technologies-and-their-limitations).

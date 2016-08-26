@@ -11,11 +11,7 @@ API is composed of ".h" files that contains flat C functions that can be used in
 C or C++ controllers. The C++ API is composed of ".hpp" files that contain C++
 classes and methods that can be used in C++ controllers only.
 
-Two Visual C++ projects examples are included in Webots distribution:
-"WEBOTS\_HOME\projects\robots\khr-2hv\controllers\khr2\khr2.vcproj" and
-"WEBOTS\_HOME\projects\robots\khr-2hv\plugins\physics\khr2\physics.vcproj".
-However, in principle any C or C++ controller from Webots distribution can be
-turned into a Visual C++ project.
+Two Microsoft Visual C++ 2010 Express projects examples are included in the Webots distribution: "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\robocup_striker\\robocup_striker.sln" and "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\naoqisim\\naoqisim.sln". However, in principle any C or C++ controller from the Webots distribution can be turned into a Visual C++ project.
 
 ### Configuration
 
@@ -88,6 +84,12 @@ enter following configuration:
           Controller.lib
         Linker > General > Additional Library Directories:
           C:\Program Files\Webots\msys64\mingw64\lib\
+
+    Note that with old versions of Visual C++, the default target is a 32-bit binary.
+    In case you are compiling the controller as a 32-bit binary, you will need to link it with the 32-bit version of the Controller library instead:
+
+        Linker > General > Additional Library Directories:
+          C:\Program Files\Webots\msys64\mingw32\lib\
 
 5. If you want to use the C API, you should skip step 5 and go directly to step 6.
 If you want to use the C++ API follow these instructions:

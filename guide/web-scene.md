@@ -7,7 +7,7 @@ This feature is especially useful for publishing Webots-created worlds on the We
 
 When doing so, an [X3D](http://www.web3d.org/x3d/what-x3d) file and a `HTML5` page are generated.
 
-The [X3D](http://www.web3d.org/x3d/what-x3d) file is containing the graphical information of the world.
+The `X3D` file is containing the graphical information of the world.
 `X3D` is a modern `XML`-based file format for representing 3D computer graphics.
 It can be imported in many 3D softwares (for visualizing, modeling, etc.).
 
@@ -43,7 +43,7 @@ an integration in an external Website.
 Alternatively, an `<iframe>` tag pointing on the generated Webots page is a less elegant but simpler solution.
 
 The resources (`CSS`, `JavaScript`, etc.) on the [Cyberbotics Website](https://www.cyberbotics.com)
-will be stored for long term, and can be used in an external Website.
+will be stored for long term, and can be used from an external Website.
 
 
 ### Limitations
@@ -51,8 +51,8 @@ will be stored for long term, and can be used in an external Website.
 All the graphical nodes (geometries, appearances, lights, transforms, etc.) are supported.
 
 The rendering of the Webots player is done using the [X3DOM](http://www.x3dom.org) Web standard.
-It may occur that the rendering is not strictly equivalent, mainly in term of shadows, lighting, and material rendering.
-Our both implementations of the `X3D` standard may differ.
+It may occur that the rendering is not strictly equivalent, mainly in term of shadows, lighting, and material rendering,
+because our both implementations of the `X3D` standard may differ.
 
 
 ### Remarks on the used Technologies and their Limitations

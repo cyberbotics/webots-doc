@@ -34,6 +34,16 @@ Use the buttons on the top of the page to connect to the Webots streaming server
 IP and ports between should match. The port should not be used by another application.
 
 
+### Network settings
+
+The Webots streaming server is simply  running on the local computer on a given port
+(`1234` by default, but it can be modified from the [command line arguments](starting-webots.md#command-line-arguments)).
+This port should not be used by another application.
+In order to be visible from the outside network, 
+the port should be open (e.g. on simple networks, this can be done by modifying the NAT settings of the router).
+The firewall of the local computer may complain about this operation, in this case, please modify its settings.
+
+
 ### How to embed a Web Scene in your Website
 
 Similarly to [this section](web-animation.md#how-to-embed-a-web-animation-in-your-website),
@@ -42,7 +52,8 @@ please refer to the streaming viewer page to embed a Webots stream in your Websi
 
 ### Limitations
 
-Please refer to [this section](web-animation.md#limitations).
+The streaming server has the same limitations as the [Web animation](web-animation.md#limitations).
+Except that adding and deleting objects from Webots is propagated to the clients.
 
 
 ### Technologies and Limitations

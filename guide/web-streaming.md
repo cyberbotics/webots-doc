@@ -19,8 +19,8 @@ except that the `X3D` file and the animation are sent on the fly to the browser 
 ### How to stream a Webots Simulation
 
 Start Webots with the streaming server using the `--stream` option.
-Please refer to this [documentation](starting-webots.md#command-line-arguments)
-to know the sub-options.
+Please refer to the [command line documentation](starting-webots.md#command-line-arguments)
+for details about the sub-options.
 
 Open the streaming viewer page in your Web browser:
 

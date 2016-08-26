@@ -70,3 +70,9 @@ This constant is particularly useful to loop over the lights.
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
 Generally this automatic conversion is working fine, however if it is problematic, please write a bug support to help us improving the conversion function.
+
+#### Known differences
+
+- **Lights order**: In Webots the lights list is sorted by the distance between the lights and the target object,
+while in `X3DOM` the list is simply sorted by the Light node definition order.
+So it's recommended to deal the lights in a generic way.

@@ -7,7 +7,7 @@ to stream a simulation to several interactive 3D `HTML` pages,
 as shown in the [figure below](web-streaming.md#screenshot-of-webots-streaming-server).
 
 The mechanism is similar to the [web animation export](web-animation.md)
-except that the `X3D` file and the animation are sent on the fly to the browser clients.
+except that the `X3D` file and the animation are sent on the fly to the Web browser clients.
 
 %figure "Screenshot of Webots streaming server"
 
@@ -31,7 +31,7 @@ $(WEBOTS_HOME)/resources/web/streaming_viewer/index.html
 Use the buttons on the top of the page to connect to the Webots streaming server.
 
 **Note**:
-IP and ports between the streaming server and the client page should match.
+`IP` address and port for the streaming server and the client page should match.
 The port should not be used by another application.
 
 

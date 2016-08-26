@@ -65,6 +65,7 @@ The Webots player is using internally the `X3DOM` library (based on `WebGL`).
 
 `X3DOM` is supported in recent versions of Firefox, Chrome, Edge, Internet Explorer and Safari on
 Mac OS X (see details on the [X3DOM website](http://www.x3dom.org)).
+In case of related issues, make sure that `WebGL` is enabled in your Web browser settings.
 
 **Note**:
 The Chrome browser cannot open local files using the file protocol by default,

@@ -144,7 +144,7 @@ etc.).
 The corresponding precompiled libraries are incompatible with Visual C++,
 because they are compiled using the `gcc` compiler tool chain embedded in Webots.
 
-To use these libraries with your project, their source files should be built directly in your project,
+To use these libraries with your project, their source files should be compiled directly in your project,
 exactly as it's done for the `libCppController` library (cf. instructions above).
 
 For example, to add the `automobile library for C++`:

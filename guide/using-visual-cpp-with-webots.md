@@ -136,3 +136,31 @@ the `Pause` button then the `Revert` button. Then, in Visual C++, use the `Debug
 process. Still in Visual C++, you can now add breakpoints and watches in the
 controller code. Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
+
+
+### Link with the Webots libraries
+
+Webots contains several `C` or `C++` libraries based on the `libController` or
+`libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
+etc.).
+The corresponding precompiled libraries are incompatible with Visual C++,
+because they are compiled using the `gcc` compiler tool chain embedded in Webots.
+
+To use these libraries with your project, their source files should be compiled directly in your project,
+exactly as it's done for the `libCppController` library (cf. instructions above).
+
+For example, to add the `automobile library for C++`:
+
+- add the following include files to your project (`C/C++ > General > Additional Include Directories`)
+
+    - `projects/automobile/libraries/car/include/webots/*.h`
+    - `projects/automobile/libraries/driver/include/webots/*.h`
+    - `projects/automobile/libraries/CppCar/include/webots/*.hpp`
+    - `projects/automobile/libraries/CppDriver/include/webots/*.hpp`
+
+- add the following source files to your project (`Add / Existing Item...`)
+
+    - `projects/automobile/libraries/car/src/*.c`
+    - `projects/automobile/libraries/driver/src/*.c`
+    - `projects/automobile/libraries/CppCar/src/*.cpp`
+    - `projects/automobile/libraries/CppDriver/src/*.cpp`

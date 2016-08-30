@@ -4,12 +4,13 @@ Derived from [Device](device.md).
 
 ```
 Motor {
-  SFFloat maxVelocity  10 # (m/s or rad/s): (0,inf)
+  SFFloat acceleration -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
   SFVec3f controlPID   10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
-  SFFloat acceleration -1 # (m/s^2 or rad/s^2): -1 or (0,inf)
-  SFFloat minPosition  0  # (m or rad): (-inf,inf) or [-pi, pi]
-  SFFloat maxPosition  0  # (m or rad): (-inf,inf) or [-pi, pi]
-  SFString sound ""       # wave file of the motor sound
+  SFFloat efficiency   0.8    # energy conversion efficiency (0, 1)
+  SFFloat minPosition  0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat maxPosition  0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat maxVelocity  10     # (m/s or rad/s): (0, inf)
+  SFString sound ""           # wave file of the motor sound
 }
 ```
 
@@ -27,10 +28,10 @@ power a [SliderJoint](hingejoint.md), producing a sliding motion along its axis.
 
 ### Field Summary
 
-- The `maxVelocity` field specifies both the upper limit and the default value for
-the motor *velocity*. The *velocity* can be changed at run-time with the
-`wb_motor_set_velocity()` function. The value should always be positive (the
-default is 10).
+- The `acceleration` field defines the default acceleration of the P-controller. A
+value of -1 (infinite) means that the acceleration is not limited by the
+P-controller. The acceleration can be changed at run-time with the
+`wb_motor_set_acceleration()` function.
 
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
@@ -57,14 +58,16 @@ position, but the system is more stable.
     The value of *P, I* and *D* can be changed at run-time with the
     `wb_motor_set_control_pid()` function.
 
-- The `acceleration` field defines the default acceleration of the P-controller. A
-value of -1 (infinite) means that the acceleration is not limited by the
-P-controller. The acceleration can be changed at run-time with the
-`wb_motor_set_acceleration()` function.
+- The `efficiency` field defines the energy conversion efficiency used to compute the electrical energy consumption if battery simulation is enabled in the parent Robot node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Motor Limits"
 section, see below.
+
+- The `maxVelocity` field specifies both the upper limit and the default value for
+the motor *velocity*. The *velocity* can be changed at run-time with the
+`wb_motor_set_velocity()` function. The value should always be positive (the
+default is 10).
 
 - The `sound` field specifies the URL of a WAVE sound file, relatively to the
 location of the world file or PROTO file which contains the `Motor` node. This
@@ -201,7 +204,7 @@ control) algorithm is used.
 
 %figure "Motor Control Summary"
 
-|                                                                                | position control                                 | velocity control                                 | force or torque control                      |
+| &nbsp;                                                                         | position control                                 | velocity control                                 | force or torque control                      |
 | ------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | -------------------------------------------- |
 | uses PID-controller                                                            | yes                                              | no                                               | no                                           |
 | wb\_motor\_set\_position()                                                     | * specifies the desired position                 | should be set to INFINITY                        | switches to position/velocity control        |
@@ -236,6 +239,25 @@ hard limits, such that `minStop <= minValue` and `maxStop>= maxValue`. Moreover
 a simulation instability can appear if `position` is exactly equal to one of the
 bounds defined by the `minStop` and `maxStop` fields at the simulation startup.
 Warnings are displayed if theses rules are not respected.
+
+### Energy Consumption
+
+If the parent [Robot](robot.md) node of a motor has a `battery` field defined, then the energy consumption is computed for the whole robot, adding energy consumption of every device, including this motor.
+The energy consumption for a motor (`electrical_input_power`) is computed according to the following equation:
+
+`electrical_input_power` = `mechanical_output_power` / `efficiency`
+
+Where `mechanical_output_power` is given by:
+
+`mechanical_output_power` = `output_torque` * `output_angular_velocity` in case of a [RotationalMotor](rotationalmotor.md)
+
+and
+
+`mechanical_output_power` = `output_force` * `output_linear_velocity` in case of a [LinearMotor](linearmotor.md)
+
+The `output_torque` is the value returned by the [wb_motor_get_torque_feedback](#wb_motor_get_torque_feedback) function.
+The `output_force` is the value returned by the [wb_motor_get_force_feedback](#wb_motor_get_force_feedback) function.
+The `output_angular_velocity` and `output_linear_velocity` are instantaneous velocities computed dynamically by Webots.
 
 ### Motor Functions
 

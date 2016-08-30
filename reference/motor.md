@@ -73,14 +73,14 @@ pitch according to the velocity of the motor to produce a realistic motor sound.
 
 ### Units
 
-By *motor position*, we mean joint position as defined in
-[JointParameters](jointparameters.md). Rotational motors units are expressed in
-*radians* while linear motors units are expressed in *meters*. See [this
-table](#motor-units):
+The position of a motor corresponds to joint position as defined in
+[JointParameters](jointparameters.md). The position of a rotational motor is
+expressed in *radians* while the position of a linear motor is expressed in
+*meters*. See [this table](#motor-units):
 
 %figure "Motor Units"
 
-|              | Rotational                   | Linear                    |
+| &nbsp;       | Rotational                   | Linear                    |
 | ------------ | ---------------------------- | ------------------------- |
 | Position     | rad (radians)                | m (meters)                |
 | Velocity     | rad/s (radians / second)     | m/s (meters / second)     |

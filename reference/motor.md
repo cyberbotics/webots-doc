@@ -242,8 +242,7 @@ Warnings are displayed if theses rules are not respected.
 
 ### Energy Consumption
 
-If the parent [Robot](robot.md) node of a motor has a `battery` field defined, then the energy consumption is computed for the whole robot, adding energy consumption of every device, including this motor.
-The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
+If the [Robot](robot.md) ancestor of a [Motor](motor.md) node has a `battery` field defined, then the energy consumption is computed for the whole robot, adding energy consumption of every device, including this motor. The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
 
 `electrical_input_power` = `output_torque` * `consumption`
 

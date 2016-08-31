@@ -65,7 +65,7 @@ two remain constant. *Important:* when the current energy value reaches zero,
 the corresponding controller process terminates and the simulated robot stops
 all motion.
 
-    Note: *[J]=[V].[A].[s] and [J]=[V].[A.h]/3600*
+> Note: *[J]=[V].[A].[s] and [J]=[V].[A.h]/3600*
 
 - `cpuConsumption`: power consumption of the CPU (central processing unit) of the
 robot in Watts.

@@ -5,8 +5,8 @@ Derived from [Device](device.md).
 ```
 Motor {
   SFFloat acceleration -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
+  SFFloat consumption  10     # energy consumption (W/N or W/(N*m))
   SFVec3f controlPID   10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
-  SFFloat efficiency   0.8    # energy conversion efficiency (0, 1)
   SFFloat minPosition  0      # (m or rad): (-inf, inf) or [-pi, pi]
   SFFloat maxPosition  0      # (m or rad): (-inf, inf) or [-pi, pi]
   SFFloat maxVelocity  10     # (m/s or rad/s): (0, inf)
@@ -33,6 +33,8 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
+- The `consumption` field defines how energy is consumed by the motor if battery simulation is enabled in the parent Robot node. The details on motor energy consumption are provided [below](#energy-consumption).
+
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
 high *P* results in a large response to a small error, and therefore a more
@@ -57,8 +59,6 @@ position, but the system is more stable.
 
     The value of *P, I* and *D* can be changed at run-time with the
     `wb_motor_set_control_pid()` function.
-
-- The `efficiency` field defines the energy conversion efficiency used to compute the electrical energy consumption if battery simulation is enabled in the parent Robot node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Motor Limits"
@@ -243,21 +243,17 @@ Warnings are displayed if theses rules are not respected.
 ### Energy Consumption
 
 If the parent [Robot](robot.md) node of a motor has a `battery` field defined, then the energy consumption is computed for the whole robot, adding energy consumption of every device, including this motor.
-The energy consumption for a motor (`electrical_input_power`) is computed according to the following equation:
+The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
 
-`electrical_input_power` = `mechanical_output_power` / `efficiency`
+`electrical_input_power` = `output_torque` * `consumption`
 
-Where `mechanical_output_power` is given by:
+Similarly, for a linear motor it is computed according to the following equation:
 
-`mechanical_output_power` = `output_torque` * `output_angular_velocity` in case of a [RotationalMotor](rotationalmotor.md)
+`electrical_input_power` = `output_force` * `consumption`
 
-and
+Where `output_torque` is the value returned by the [wb_motor_get_torque_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb_motor_get_force_feedback](#wb_motor_get_force_feedback) function and `consumption` is a constant provided by the `consumption` field of the [Motor](motor.md) node.
 
-`mechanical_output_power` = `output_force` * `output_linear_velocity` in case of a [LinearMotor](linearmotor.md)
-
-The `output_torque` is the value returned by the [wb_motor_get_torque_feedback](#wb_motor_get_torque_feedback) function.
-The `output_force` is the value returned by the [wb_motor_get_force_feedback](#wb_motor_get_force_feedback) function.
-The `output_angular_velocity` and `output_linear_velocity` are instantaneous velocities computed dynamically by Webots.
+> Note: This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for early prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.
 
 ### Motor Functions
 

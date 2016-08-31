@@ -254,7 +254,7 @@ Similarly, for a linear motor it is computed according to the following equation
 Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumption` is a constant provided by the `consumption` field of the [Motor](motor.md) node.
 
 > **note**:
-This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for early prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.
+This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for most prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.
 
 ### Motor Functions
 

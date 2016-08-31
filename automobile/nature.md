@@ -1,6 +1,6 @@
 ## Nature
 
-In addition to the usual PROTO of `RoundTree`, `Rocks`, etc. Two PROTOs have
+In addition to the usual PROTO of `RoundTree`, `Rocks`, etc. Two PROTO models have
 been developed to efficiently represent trees.
 
 ### SimpleTree

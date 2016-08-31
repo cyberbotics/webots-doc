@@ -33,7 +33,7 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
-- The `consumption` field defines how energy is consumed by the motor if battery simulation is enabled in the parent [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
+- The `consumption` field defines how energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A

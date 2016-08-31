@@ -33,7 +33,7 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
-- The `consumption` field defines how energy is consumed by the motor if battery simulation is enabled in the parent Robot node. The details on motor energy consumption are provided [below](#energy-consumption).
+- The `consumption` field defines how energy is consumed by the motor if battery simulation is enabled in the parent [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
@@ -251,7 +251,7 @@ Similarly, for a linear motor it is computed according to the following equation
 
 `electrical_input_power` = `output_force` * `consumption`
 
-Where `output_torque` is the value returned by the [wb_motor_get_torque_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb_motor_get_force_feedback](#wb_motor_get_force_feedback) function and `consumption` is a constant provided by the `consumption` field of the [Motor](motor.md) node.
+Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumption` is a constant provided by the `consumption` field of the [Motor](motor.md) node.
 
 > Note: This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for early prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.
 

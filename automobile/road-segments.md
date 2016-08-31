@@ -1,6 +1,6 @@
 ## Road segments
 
-The first part of this section will present the various PROTOs of road segments
+The first part of this section will present the various PROTO models of road segments
 and intersections, that can be used to build the road network.
 
 ### Road

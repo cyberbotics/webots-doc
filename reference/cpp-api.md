@@ -699,7 +699,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [Node](#cpp_node) *[getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(const std::string &name);                                                      |
 | &nbsp;&nbsp; [Node](#cpp_node) *[getFromId](supervisor.md#wb_supervisor_node_get_from_def)(int id);                                                                        |
 | &nbsp;&nbsp; virtual void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, const std::string &label, double xpos, double ypos,                                    |
-| &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency);                                                                                                     |
+| &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency, const std::string &font="Arial");                                                                    |
 | &nbsp;&nbsp; virtual void [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(int status);                                                                       |
 | &nbsp;&nbsp; virtual void [simulationRevert](supervisor.md#wb_supervisor_simulation_revert)();                                                                             |
 | &nbsp;&nbsp; virtual void [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)();                                                                |

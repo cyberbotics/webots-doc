@@ -8,9 +8,10 @@ You can download a map of any part of the world from
 more than a few kilometers square if you want to be able to run your simulation
 in real-time). And then convert it using the script.
 
-The script is written in python, a typical usage is:
+The script is written in Python. A typical usage is:
 
 ```sh
+cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
 python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
 ```
 
@@ -25,7 +26,7 @@ You can use several arguments with this script:
 
 | Argument               | Description                                                                                                                          | Default value                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| --input                | Specifies the OSM file to be converted                                                                                               | If not specified, the script try to convert "map.osm"                     |
+| --input                | Specifies the OSM file to be converted                                                                                               | If not specified, the script tries to convert "map.osm"                   |
 | --output               | Specifies the name of the generated world file                                                                                       | If not specified, the generated world is called "map.wbt"                 |
 | --config-file          | Specifies which configuration file to use                                                                                            | If not specified, tries to use the configuration file called "config.ini" |
 | --spline-subdivision   | Defines the spline subdivision used for roads, rivers, etc.                                                                          | A default value of 4 is used                                              |
@@ -39,7 +40,7 @@ You can use several arguments with this script:
 | --no-buildings         | Does not include the buildings in the generated world                                                                                | By default, buildings are included                                        |
 | --no-road-intersections| Does not generate complex road intersections                                                                                         | By default, complex road intersections are generated                      |
 | --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
-| --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (require an internet connexion) | By default, the ground of the generated world is flat                     |
+| --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (requires an internet connexion)| By default, the ground of the generated world is flat                     |
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
 | --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 
@@ -51,8 +52,8 @@ be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
 
 ### Map edition and creation
 
-If you want to edit a map exported from OpenStreetMap before to convert it into
-a Webots world, we recommend to use JOSM. [JOSM](https://josm.openstreetmap.de)
+If you want to edit a map exported from OpenStreetMap before converting it into
+a Webots world, we recommend using JOSM. [JOSM](https://josm.openstreetmap.de)
 is an open source software written in Java. It is very powerful and easy to use.
 Using JOSM you can easily edit a map in order to add some elements, correct some
 parts, etc.
@@ -72,7 +73,7 @@ a map fully created in JOSM and then exported and opened in Webots.
 ### Graphical user interface
 
 To ease the use of this tool, a graphical interace has been created. This
-grapical interface can be easily started from the last tab of the [robot
+grapical interface can easily be started from the last tab of the [robot
 window](robot-window.md).
 
 %figure "The OpenStreetMap importer graphical user interface"
@@ -87,5 +88,5 @@ set all the arguments of the script using the graphical user interface of the
 robot window. Furthermore, using this graphical interface you can choose either
 to give an osm file as input or a map area using a latitude-longitude rectangle.
 If you choose to use a latitude-longitude rectangle, it will take care
-automatically to download the corresponding osm file before to launch the script
+to automatically download the corresponding osm file before launching the script
 (you will therefore require an internet connexion).

@@ -3,8 +3,8 @@
 The `Car` PROTO inherits from the [AckermannVehicle](ackermannvehicle.md) PROTO
 and extends it. It should be used with the [driver](driver-library.md) library
 in order to add a model of the engine, transmission, lights, gearbox and brake.
-The joint devices are automatically filled in with the appropriate devices in
-function of the transmission type set in the parameters.
+The joint devices are automatically filled in with the appropriate devices depending
+on the transmission type set in the parameters.
 
 ```
 Car {
@@ -48,14 +48,14 @@ the electric engine torque.
 - `engineMinRPM and engineMaxRPM`: Defines the working range of the engine
 (`engineMinRPM` not used in case of `electric` `engineType`).
 - `engineFunctionCoefficients`: Define the coefficients of the second order
-function used to approximate the output torque in function of the rotational
+function used to approximate the output torque as a function of the rotational
 speed of the motor.
 - `gearRatio`: Defines the total (not only the gearbox ratio) ratio between the
 rotational speed of the engine and the wheels, the number of elements defines
 the number of gears, the first element should be negative and is the reverse
 gear.
 - `hybridPowerSplitRatio`: Defines the ratio of the output power of the combustion
-engine that is used for charging the battery in case of `power-split hybrid`
+engine that is used to charge the battery in case of `power-split hybrid`
 `engineType`.
 - `hybridPowerSplitRPM`: Defines the fixed rotational speed of the combustion
 engine in case of `power-split hybrid` `engineType`.
@@ -99,7 +99,7 @@ AutomobileLights {
 
 Here again, you can easily create your own PROTO that inherits from the
 [Car](#car) PROTO to define your own custom and complete model of car. Three
-PROTOs that inherit from the [Car](#car) PROTO are provided. These PROTOs
+PROTO models that inherit from the [Car](#car) PROTO are provided. They
 represent three different models of car: the X5 from BMW, the C-Zero from
 Citroen and the Prius from Toyota.
 
@@ -109,7 +109,7 @@ Citroen and the Prius from Toyota.
 
 %end
 
-An interesting aspect of these three PROTOs is that the `extensionSlot` is
+An interesting aspect of these three PROTO nodes is that the `extensionSlot` is
 divided into four `sensorsSlot` in order to provide smart predefined positions
 where to put sensors (or actuators if needed), which are in the front, top, rear
 and center of the car. The position of the central sensors slot is always at 0 0
@@ -127,8 +127,8 @@ differs), see the [following table](#slotpositions) for the exact positions.
 
 %end
 
-For each model of car, a `simple` PROTO is present too. This simplified
-kinematic PROTOs is not based on a `Robot` node but on a `Solid` node, it is
-therefore not possible to add sensors or control it. This simplified versions
-are made for representing non-moving parked cars or to be moved using a
-Supervisor, they are much faster to simulate than the normal PROTOs.
+For each model of car, a `simple` PROTO is present too. These simplified
+kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is
+therefore not possible to add sensors or control them. But they are made
+to represent non-moving parked cars or to be moved using a
+Supervisor because they are much faster to simulate than the normal PROTO models.

@@ -1,12 +1,12 @@
 ## Road segments
 
-The first part of this section will present the various PROTOs of road segments
+The first part of this section will present the various PROTO models of road segments
 and intersections, that can be used to build the road network.
 
 ### Road
 
 The `Road` PROTO is the most generic one. It can be used for a large variety of
-purpose.
+purposes.
 
 %figure "Generic segment of road"
 
@@ -50,48 +50,52 @@ Road {
 
 #### Road field Summary
 
-- `width`: Defines the total with of the road (excluding sidewalk).
+- `width`: Defines the total width of the road (excluding sidewalk).
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
-- `dashedLine`: Defines for each line separating two lanes if it should be
+- `dashedLine`: Defines for each line separating two lanes whether it should be
 continuous or dashed.
 - `roadBorderHeight`: Defines the height of the sidewalk.
 - `roadBorderWidth`: Defines the width of the sidewalk associated to each
-way-point (if there is less value than way-points, the last value is used for
+way-point (if there are less values than way-points, the last value is used for
 the last remaining way-points).
-- `road`: Defines if the road should be present or not (useful in case you only
+- `road`: Defines whether the road should be present or not (useful in case you only
 need the sidewalk).
-- `rightBorder`: Defines if the road should have a right sidewalk.
-- `leftBorder`: Defines if the road should have a left sidewalk.
-- `bottom`: Defines if the road bottom should be displayed (useful in case of
+- `rightBorder`: Defines whether the road should have a right sidewalk.
+- `leftBorder`: Defines whether the road should have a left sidewalk.
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of
 bridge).
-- `rightSide`: This field is used for the texture mapping. It defines if the side
+- `rightSide`: This field is used for the texture mapping. It defines whether the side
 of the texture should be used for the right side of the road (useful to disable
 in case road assembly).
-- `leftSide`: This field is used for the texture mapping. It defines if the side
+- `leftSide`: This field is used for the texture mapping. It defines whether the side
 of the texture should be used for the left side of the road (useful to disable
 in case road assembly).
 - `wayPoints`: Defines the path of the road.
 - `roadTilt`: Defines the tilting angle corresponding to each way-point (if there
-is less value than way-points, 0 is used for the last remaining way-points).
+are less values than way-points, 0 is used for the last remaining way-points).
 - `startingAngle`: Defines the angle of the road at the first way-point.
 - `endingAngle`: Defines the angle of the road at the last way-point.
-- `startLine`: Defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this fied.
-- `endLine`: Defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
+- `startLine`: Defines the texture used for the road line at the first way-point
+for each lane. If the string is empty, no road line will be added for the corresponding
+lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png`
+may be used in this fied.
+- `endLine`: Defines the texture used for the road line at the last way-point for
+each lane. If the string is empty, no road line will be added for the corresponding lane.
 - `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
 value is lower than 0, the interpolation is disabled).
 - `texture`: Defines the texture to be used for the road.
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
-- `roadBoundingObject`: Defines if the road should have a bounding object.
-- `rightBorderBoundingObject`: Defines if the right sidewalk should have a
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a
 bounding object.
-- `leftBorderBoundingObject`: Defines if the left sidewalk should have a bounding
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
 object.
 
 ### StraightRoadSegment
 
-The `StraightRoadSegment` PROTO is the most simple one. It can only be used to
+The `StraightRoadSegment` PROTO is the simplest one. It can only be used to
 create a straight road.
 
 %figure "Straight segment of road"
@@ -182,7 +186,7 @@ CurvedRoadSegment {
 
 #### CurvedRoadSegment Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
+Most of the fields are similar to the [Road](#road) PROTO. Therefore,
 only the specific ones will be explained.
 
 - `curvatureRadius`: Defines the curvature radius of the center of the road.
@@ -194,7 +198,7 @@ only the specific ones will be explained.
 
 The `HelicoidalRoadSegment` PROTO represents an helicoidal road. It is mainly
 meant to showcase how the [Road](#road) PROTO can be inherited to create complex
-road structure in the third dimension. It can for example be used to model a
+road structure in the third dimension. It can, for example, be used to model a
 garage input ramp.
 
 %figure "Helicoidal segment of road"
@@ -234,12 +238,12 @@ Helicoidal {
 
 #### Helicoidal Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
+Most of the fields are similar to the [Road](#road) PROTO. Therefore,
 only the specific ones will be explained.
 
 - `height`: Defines the total height covered by the road.
 - `radius`: Defines the radius of the center of the road.
-- `heigthStep`: Defines the step for the road to make one complete round.
+- `heigthStep`: Defines the step for the road to complete one lap.
 - `subdivision`: Defines the subdivision of the helicoid.
 
 ### Roundabout
@@ -295,11 +299,10 @@ only the specific ones will be explained.
 - `subdivision`: Defines the subdivision of the circle.
 - `innerRadius`: Defines the inner radius of the roundabout.
 - `outerRadius`: Defines the outer radius of the roundabout.
-- `center`: Defines if the roundabout should have a central part.
+- `center`: Defines whether the roundabout should have a central part.
 - `centerTexture`: Defines the texture to be used for the central part.
-- `centerTextureScale`: Defines the scale of the texture used for the central
-part.
-- `centerBoundingObject`: Defines if the central part should have a bounding
+- `centerTextureScale`: Defines the scale of the previous texture.
+- `centerBoundingObject`: Defines whether the central part should have a bounding
 object.
 - `roadNumber`: Defines the number of roads entering/leaving the roundabout.
 - `startRoads...`: Defines the properties of the roads entering/leaving the
@@ -343,7 +346,7 @@ RoadIntersection {
 
 ### LaneSeparation
 
-The `LaneSeparation` PROTO represents a road spliting into two.
+The `LaneSeparation` PROTO represents a road spliting in two.
 
 %figure "Lane separation"
 
@@ -434,7 +437,7 @@ Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
 only the specific ones will be explained.
 
 - `length`: Defines in how many meter the new lane is created.
-- `newLaneLeft`: Defines if the new lane should be created on the right or left
+- `newLaneLeft`: Defines whether the new lane should be created on the right or left
 side of the road.
 - `newLanetexture`: Defines the texture to be used for the new lane.
 
@@ -480,6 +483,6 @@ AddLanesRoadSegment {
 #### AddLanesRoadSegment Field Summary
 
 Most of the fields are similar to the one of the `Road` PROTO. Therefore, only
-the specific ones will be explained.
+the specific one will be explained.
 
 - `numberOfnewLanes`: Defines the number of new lanes to be added to the road.

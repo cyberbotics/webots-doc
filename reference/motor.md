@@ -62,11 +62,6 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
-- The `position` field represents the current *position* of the [Motor](#motor),
-in radians or meters. For a rotational motor, `position` represents the current
-rotation angle in radians. For a linear motor, `position` represents the
-magnitude of the current translation in meters.
-
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Motor Limits"
 section, see below.
@@ -154,7 +149,7 @@ where  *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and
 *D* are the PID-control gains specified in the `controlPID` field, or set with
 `wb_motor_set_control_pid()`, *P<sub>t</sub>* is the *target position* of the
 motor set by the function `wb_motor_set_position()`, *P<sub>c</sub>* is the
-current motor position as reflected by the `position` field, *V<sub>d</sub>* is
+current motor position, *V<sub>d</sub>* is
 the desired velocity as specified by the `maxVelocity` field (default) or set
 with `wb_motor_set_velocity()`, *a* is the acceleration required to reach *Vc*
 in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
@@ -478,7 +473,7 @@ In a "rotational" motor, the *torque* parameter specifies the amount of torque
 the *force* parameter specifies the amount of force [N] that will be applied
 along the sliding axis. A positive *force* (resp. *torque*) will move the bodies
 in the positive direction, which corresponds to the direction of the motor when
-the `position` field increases. When invoking `wb_motor_set_force()` (resp.
+its position value increases. When invoking `wb_motor_set_force()` (resp.
 `wb_motor_set_torque()`), the specified *force* (resp. *torque*) parameter
 cannot exceed the current motor force (resp. torque) of the motor specified with
 `wb_motor_set_force()` (resp. `wb_motor_set_torque()`) and defaulting to the

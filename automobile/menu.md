@@ -1,7 +1,7 @@
 # Table of Contents
 
 - [Introduction](introduction.md)
-- [PROTOs](protos.md)
+- [PROTO nodes](proto-nodes.md)
     - [AutomobileWheel](automobilewheel.md)
     - [AckermannVehicle](ackermannvehicle.md)
     - [Car](car.md)

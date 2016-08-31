@@ -6,7 +6,7 @@
 
 %end
 
-The following PROTOs of buildings are available to add in your worlds:
+The following PROTO nodes of buildings are available to add in your worlds:
 
 - Auditorium
 - BigGlassTower
@@ -32,7 +32,7 @@ The following PROTOs of buildings are available to add in your worlds:
 
 ### Generic building
 
-In addition to those building PROTOs, the `GenericBuilding` PROTO represents
+In addition to those building PROTO nodes, the `GenericBuilding` PROTO represents
 a highly customizable building and can be used to model a large variety of
 buildings.
 
@@ -84,7 +84,7 @@ usually found in a city environment:
 - Fountain
 - PublicToilet
 
-%figure "The BusStop and PublicToilet PROTOs"
+%figure "The BusStop and PublicToilet PROTO models"
 
 ![bus_stop.png](images/bus_stop.png)
 ![public-toilet.png](images/public-toilet.png)

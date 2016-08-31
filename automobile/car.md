@@ -99,7 +99,7 @@ AutomobileLights {
 
 Here again, you can easily create your own PROTO that inherits from the
 [Car](#car) PROTO to define your own custom and complete model of car. Three
-PROTOs that inherit from the [Car](#car) PROTO are provided. These PROTOs
+PROTO models that inherit from the [Car](#car) PROTO are provided. They
 represent three different models of car: the X5 from BMW, the C-Zero from
 Citroen and the Prius from Toyota.
 
@@ -109,7 +109,7 @@ Citroen and the Prius from Toyota.
 
 %end
 
-An interesting aspect of these three PROTOs is that the `extensionSlot` is
+An interesting aspect of these three PROTO nodes is that the `extensionSlot` is
 divided into four `sensorsSlot` in order to provide smart predefined positions
 where to put sensors (or actuators if needed), which are in the front, top, rear
 and center of the car. The position of the central sensors slot is always at 0 0
@@ -127,8 +127,8 @@ differs), see the [following table](#slotpositions) for the exact positions.
 
 %end
 
-For each model of car, a `simple` PROTO is present too. This simplified
-kinematic PROTOs is not based on a `Robot` node but on a `Solid` node, it is
-therefore not possible to add sensors or control it. This simplified versions
-are made for representing non-moving parked cars or to be moved using a
-Supervisor, they are much faster to simulate than the normal PROTOs.
+For each model of car, a `simple` PROTO is present too. These simplified
+kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is
+therefore not possible to add sensors or control them. But they are made
+to represent non-moving parked cars or to be moved using a
+Supervisor because they are much faster to simulate than the normal PROTO models.

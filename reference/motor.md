@@ -33,7 +33,7 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
-- The `consumption` field defines how energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
+- The `consumption` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
@@ -242,7 +242,7 @@ Warnings are displayed if theses rules are not respected.
 
 ### Energy Consumption
 
-If the [Robot](robot.md) ancestor of a [Motor](motor.md) node has a `battery` field defined, then the energy consumption is computed for the whole robot, adding energy consumption of every device, including this motor. The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
+If the [Robot](robot.md) ancestor of a [Motor](motor.md) node has a `battery` field defined, then the energy consumption is computed for the whole robot. This computation sums up the energy consumption of every device, including this motor. The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
 
 `electrical_input_power` = `output_torque` * `consumption`
 

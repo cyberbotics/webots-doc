@@ -47,7 +47,7 @@ the joint motion.
 
 ### Units
 
-The position of a rotational joint ([HingeJoint](hingejoint.md),
+The position of a rotational joint ([HingeJoint](hingejoint.md) or
 [Hinge2Joint](hinge2joint.md)) is expressed in *radians* while the position of
 a linear joint ([SliderJoint](sliderjoint.md)) is expressed in *meters*. See
 [this table](#joint-units):

@@ -61,7 +61,7 @@ sensors, shape of the vehicle, etc.).
 - `physics`: `Physics` node of the vehicle defining the physical parameters of the
 vehicle.
 - `wheelX`: Slot to insert an `AutomobileWheel` (or any `AutomobileWheel`
-descendant PROTOs).
+descendant PROTO nodes).
 - `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`,
 `PositionSensor` and `Motor`).
 - `data`: Defines a user `data` string of the `Robot` node.

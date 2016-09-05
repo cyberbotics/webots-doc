@@ -112,8 +112,6 @@ Webots error or warning messages.
 
 The `--stream` option starts the Webots streaming server. An option can be given to change the default parameters of the streaming server. This option is a string containing a list of parameter keys and their values separated by semicolons. The supported options are described in [this table](#streaming-server-options).
 
-The `--enable-ogre-warnings` option redirects the uncritical Ogre log messages to the Webots console. The critical Ogre log messages are redirected there in any case. If the `--stdout` option is enabled then the uncritical Ogre log messages are redirected to the *stdout* stream of the Webots executable instead. Similarily, the `--stderr` option is redirecting the Ogre critical messages to the *stderr* stream.
-
 %figure "Streaming server options"
 
 | Key                | Value example | Description                                     |
@@ -122,7 +120,10 @@ The `--enable-ogre-warnings` option redirects the uncritical Ogre log messages t
 | monitorActivity    |               | Print a dot '.' on stdout every 5 seconds.      |
 | disableTextStreams |               | Disable the streaming of stdout and stderr.     |
 
-
 %end
 
 For example, the following command will start Webots with the streaming server enabled on the TCP port '1234' and will disable the streaming of stdout and stderr: `webots --stream="port:1234;disableTextStreams"`
+
+You can get more information about web streaming in [this section](web-streaming.md).
+
+The `--enable-ogre-warnings` option redirects the uncritical Ogre log messages to the Webots console. The critical Ogre log messages are redirected there in any case. If the `--stdout` option is enabled then the uncritical Ogre log messages are redirected to the *stdout* stream of the Webots executable instead. Similarily, the `--stderr` option is redirecting the Ogre critical messages to the *stderr* stream.

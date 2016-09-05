@@ -8,7 +8,7 @@ a supervisor controller and uses  [TraCI](http://sumo.dlr.de/wiki/TraCI) to
 communicate with SUMO.
 
 > **note**:
-Currently version 0.26 of SUMO is distributed with Webots.
+Currently version 0.27.1 of SUMO is distributed with Webots.
 
 In order to use this interface a few rules need to be observed. First, a
 `Supervisor` node has to be added to the simulation and should use the
@@ -22,7 +22,7 @@ with Webots time. Each time a new vehicle enters the SUMO simulation, it will be
 created in Webots too and its position and orientation will be continually
 updated. The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle number (starting from 0). If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time). If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
 
-If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTOs will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
+If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
 
 If the simulation contains traffic lights, the name of the
 corresponding `LEDs` node of these traffic lights in Webots should respect the
@@ -55,6 +55,10 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --display-fit-size       | Specifies whether the image should be resized to fit the SUMO display size or not                                                    | By default, the image is not resized                                                             |
 
 %end
+
+
+> **note** [Mac OS X]:
+On Mac OS X, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
 
 ## Plugin mechanism

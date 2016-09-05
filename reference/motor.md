@@ -4,13 +4,13 @@ Derived from [Device](device.md).
 
 ```
 Motor {
-  SFFloat acceleration -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
-  SFFloat consumption  10     # energy consumption (W/N or W/(N*m))
-  SFVec3f controlPID   10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
-  SFFloat minPosition  0      # (m or rad): (-inf, inf) or [-pi, pi]
-  SFFloat maxPosition  0      # (m or rad): (-inf, inf) or [-pi, pi]
-  SFFloat maxVelocity  10     # (m/s or rad/s): (0, inf)
-  SFString sound ""           # wave file of the motor sound
+  SFFloat acceleration      -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
+  SFFloat consumptionFactor 10     # energy consumption (W/N or W/(N*m))
+  SFVec3f controlPID        10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
+  SFFloat minPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat maxVelocity       10     # (m/s or rad/s): (0, inf)
+  SFString sound            ""     # wave file of the motor sound
 }
 ```
 
@@ -33,7 +33,7 @@ value of -1 (infinite) means that the acceleration is not limited by the
 P-controller. The acceleration can be changed at run-time with the
 `wb_motor_set_acceleration()` function.
 
-- The `consumption` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
+- The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
@@ -244,13 +244,13 @@ Warnings are displayed if theses rules are not respected.
 
 If the [Robot](robot.md) ancestor of a [Motor](motor.md) node has a `battery` field defined, then the energy consumption is computed for the whole robot. This computation sums up the energy consumption of every device, including this motor. The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
 
-`electrical_input_power` = `output_torque` * `consumption`
+`electrical_input_power` = `output_torque` * `consumptionFactor`
 
 Similarly, for a linear motor it is computed according to the following equation:
 
-`electrical_input_power` = `output_force` * `consumption`
+`electrical_input_power` = `output_force` * `consumptionFactor`
 
-Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumption` is a constant provided by the `consumption` field of the [Motor](motor.md) node.
+Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumptionFactor` is a constant provided by the `consumptionFactor` field of the [Motor](motor.md) node.
 
 > **note**:
 This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for most prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.

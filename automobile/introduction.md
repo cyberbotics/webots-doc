@@ -6,7 +6,7 @@ already familiar with Webots software and documentation, including the Webots
 [User Guide](http://www.cyberbotics.com/guide/) and [Reference
 Manual](http://www.cyberbotics.com/reference/).
 
-The first section of this document focuses on various PROTOs that help the user
+The first section of this document focuses on various PROTO nodes that help the user
 to create realistic models of vehicles. The second section introduces
 programming libraries used to ease the control of these vehicles. The
 third one presents the dedicated robot-window. The fourth one describes various

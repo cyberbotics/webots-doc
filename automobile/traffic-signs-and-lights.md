@@ -1,10 +1,10 @@
 ## Traffic signs and lights
 
-In addition to the `PedestrianCrossing` and `TrafficCone` PROTOs, a set of
+In addition to the `PedestrianCrossing` and `TrafficCone` PROTO nodes, a set of
 traffic signs and lights is provided.
 
 All of those traffic signs and lights can either be mounted on the `Pole` or
-`TrafficLightBigPole` PROTOs. The first one is a simple cylindrical pole on
+`TrafficLightBigPole` PROTO models. The first one is a simple cylindrical pole on
 which one element can be mounted. On the second bigger one, a maximum of three
 elements can be mounted.
 

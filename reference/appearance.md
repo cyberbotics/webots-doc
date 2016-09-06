@@ -20,7 +20,7 @@ type.
 
 - The `material` field, if specified, shall contain a [Material](material.md) node.
 If the `material` field is NULL, lighting is off
-(all lights are ignored during rendering of the object that references this [Appearance](#appearance))
+(all lights are ignored during the rendering of the object that references this [Appearance](#appearance))
 and the unlit object color is (1,1,1).
 
 - The `texture` field, if specified, shall contain an

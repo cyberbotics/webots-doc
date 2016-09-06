@@ -9,7 +9,7 @@ Robot {
   SFString   data              ""
   SFBool     synchronization   TRUE
   MFFloat    battery           []
-  SFFloat    cpuConsumption    0   # [0,inf)
+  SFFloat    cpuConsumption    10  # [0,inf)
   SFBool     selfCollision     FALSE
   SFBool     showWindow        FALSE
   SFString   window            ""
@@ -65,7 +65,8 @@ two remain constant. *Important:* when the current energy value reaches zero,
 the corresponding controller process terminates and the simulated robot stops
 all motion.
 
-    Note: *[J]=[V].[A].[s] and [J]=[V].[A.h]/3600*
+> **note**:
+*[J]=[V].[A].[s] and [J]=[V].[A.h]/3600*
 
 - `cpuConsumption`: power consumption of the CPU (central processing unit) of the
 robot in Watts.
@@ -308,7 +309,8 @@ identifier will be used subsequently for enabling, sending commands to, or
 reading data from this device. If the specified device is not found, the
 function returns 0.
 
-> Note: This function is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
+> **note**:
+This function is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
 
 
 **See also**
@@ -358,7 +360,8 @@ function `getDistanceSensor` will return a reference to a
 found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
-> Note: These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
+> **note**:
+These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
 
 **See also**
 

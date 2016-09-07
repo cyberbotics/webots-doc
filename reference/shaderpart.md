@@ -25,7 +25,7 @@ as the only supported shading language for now.
 
 ### GLSL 120 documentation
 
-GLSL learning is beyond the scope of this document, please refer to the following sources:
+The GLSL documentation is available from following sources:
 
 1. Official sources
     - [The OpenGL® Shading Language](https://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf)
@@ -70,7 +70,7 @@ This constant is particularly useful to loop over the lights.
 ### X3DOM export
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
-Generally this automatic conversion is working fine, however if it is problematic, please write a bug support to help us improving the conversion function.
+Generally this automatic conversion is working fine, however if you suspect a wrong behavior, please write a bug report to help us improving the conversion function.
 
 #### Known differences
 

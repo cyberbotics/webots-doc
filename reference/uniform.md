@@ -16,14 +16,14 @@ defined in the same [ComposedShader](composedshader.md) node.
 
 The `name` field indicates the uniform variable name.
 
-The `type` field indicates the uniform variable type.
+The `type` field indicates the uniform variable data type.
 
 The `value` field indicates the uniform variable value.
 
 
 ### Supported types
 
-The uniform variables support the following types:
+The uniform variables support the following data types:
 
 | Uniform type | GLSL type   | Value example |
 | ============ | =========== | ============= |

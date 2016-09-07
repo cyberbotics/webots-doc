@@ -32,3 +32,4 @@ If the `textureTransform` is NULL, the `textureTransform` field has no effect.
 
 - The `shaders` field, if specified, shall contain a [ComposedShader](composedshader.md) node.
 If the `shaders` is NULL, the `shaders` field has no effect.
+Only the first item of the `shaders` field is affecting the appearance.

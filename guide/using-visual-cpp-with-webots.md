@@ -83,13 +83,13 @@ enter following configuration:
         Linker > Input > Additional Dependencies:
           Controller.lib
         Linker > General > Additional Library Directories:
-          C:\Program Files\Webots\msys64\mingw64\lib\
+          C:\Program Files\Webots\msys64\mingw64\bin\
 
     Note that with old versions of Visual C++, the default target is a 32-bit binary.
     In case you are compiling the controller as a 32-bit binary, you will need to link it with the 32-bit version of the Controller library instead:
 
         Linker > General > Additional Library Directories:
-          C:\Program Files\Webots\msys64\mingw32\lib\
+          C:\Program Files\Webots\msys64\mingw32\bin\
 
 5. If you want to use the C API, you should skip step 5 and go directly to step 6.
 If you want to use the C++ API follow these instructions:
@@ -142,25 +142,35 @@ Now the controller should pause when it reaches one of your breakpoints.
 
 Webots contains several `C` or `C++` libraries based on the `libController` or
 `libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
-etc.).
-The corresponding precompiled libraries are incompatible with Visual C++,
-because they are compiled using the `gcc` compiler tool chain embedded in Webots.
+`youBot library`, etc.).
+These precompiled `C` libraries are released with the corresponding Visual Studio `.lib` file
+(the linker to the `.dll` file) facilitating their integration into a Visual Studio project.
 
+However this is not the case for the `C++` libraries which are incompatible with Visual C++,
+because they are compiled using the `gcc` compiler tool chain embedded in Webots.
 To use these libraries with your project, their source files should be compiled directly in your project,
 exactly as it's done for the `libCppController` library (cf. instructions above).
 
-For example, to add the `automobile library for C++`:
+For example, to add the `C++ automobile libraries`:
 
 - add the following include files to your project (`C/C++ > General > Additional Include Directories`)
 
-    - `projects/automobile/libraries/car/include/webots/*.h`
-    - `projects/automobile/libraries/driver/include/webots/*.h`
-    - `projects/automobile/libraries/CppCar/include/webots/*.hpp`
-    - `projects/automobile/libraries/CppDriver/include/webots/*.hpp`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/car/include`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/driver/include`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/include`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/include`
 
-- add the following source files to your project (`Add / Existing Item...`)
+- add the `C` `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
 
-    - `projects/automobile/libraries/car/src/*.c`
-    - `projects/automobile/libraries/driver/src/*.c`
-    - `projects/automobile/libraries/CppCar/src/*.cpp`
-    - `projects/automobile/libraries/CppDriver/src/*.cpp`
+    - `car.lib`
+    - `driver.lib`
+
+- add the `C` `car` and `driver` libraries paths (`Linker > General > Additional Library Directories`):
+
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/car`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/driver`
+
+- add the following `C++` source files to your project (`Add / New Filter` and `Add / Existing Item...`)
+
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/src/*.cpp`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/src/*.cpp`

@@ -15,15 +15,20 @@ and with the basic concepts of Webots.
 
 ### Create a new World
 
-In this subsection, we will create a new simulation. The content of a simulation
-is stored in a world file. This world file contains all the information related
-to your simulation, i.e. where the objects are, what they look like, how they interact with each other, what is the sky color, where is the
-gravity vector, etc.
+A World contains information like where the objects
+are, what they look like, how they interact with each other, what is the sky
+color, where is the gravity vector, etc.
 
 > **Theory**:
-A **world** is defined by a tree of **nodes**. Each node has some customizable
-properties called **fields**. A world is stored in a file having the ".wbt"
-suffix. The format of this file is derived from the **VRML** language, and is
+A **world** defines the initial state of a simulation.
+The different objects are called **nodes** and are organized hierarchically
+in a **scene tree**. It means that a node can have some sub-nodes.
+
+<!-- -->
+
+> **Note**:
+A world is stored in a file having the ".wbt" extension.
+The file format is derived from the **VRML** language, and is
 human readable. The world files must be stored directly in the project
 subdirectory called "worlds".
 
@@ -45,6 +50,7 @@ normal because the scene tree contains only the following fundamental nodes:
 camera parameters) and `Background` (defining the background color). As no light
 and no 3D object are defined, the entire scene is empty and unlit, and thus black.
 
+Each node has some customizable properties called **fields**.
 The first step is about to modify the background color.
 
 > **Hands on**:

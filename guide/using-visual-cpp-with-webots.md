@@ -143,13 +143,17 @@ Now the controller should pause when it reaches one of your breakpoints.
 Webots contains several `C` or `C++` libraries based on the `libController` or
 `libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
 `youBot library`, etc.).
-These precompiled `C` libraries are released with the corresponding Visual Studio `.lib` file
-(the linker to the `.dll` file) facilitating their integration into a Visual Studio project.
 
-However this is not the case for the `C++` libraries which are incompatible with Visual C++,
-because they are compiled using the `gcc` compiler tool chain embedded in Webots.
+The precompiled `C` libraries are released with the corresponding Visual Studio `.lib` file
+(the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
+There is one `.lib` file per architecture (`.x32.lib` for the 32 bits architecture,
+and `.x64.lib` for the 64 bits architecture).
+The chosen architecture should match with Visual Studio solution platform.
+
+However there is no precompiled `C++` libraries, because they are compiled using
+the `gcc` compiler tool chain embedded in Webots which is incompatible with Visual C++.
 To use these libraries with your project, their source files should be compiled directly in your project,
-exactly as it's done for the `libCppController` library (cf. instructions above).
+exactly as for the `libCppController` library (cf. instructions above).
 
 For example, to add the `C++ automobile libraries`:
 
@@ -162,8 +166,8 @@ For example, to add the `C++ automobile libraries`:
 
 - add the `C` `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
 
-    - `car.lib`
-    - `driver.lib`
+    - `car.x64.lib`
+    - `driver.x64.lib`
 
 - add the `C` `car` and `driver` libraries paths (`Linker > General > Additional Library Directories`):
 

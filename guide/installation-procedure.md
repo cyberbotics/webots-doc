@@ -47,11 +47,10 @@ The advantage of this solution is that Webots will be updated with the system
 updates. This installation requires the `root` privileges.
 
 First of all, you may want to configure your APT package manager by adding the Cyberbotics repository.
-You can easily add it from the `Software and Updates` application.
-In the `Other Software` tab, click on the `Add...` button and copy the following line:
+Simply execute the following line:
 
 ```sh
-deb http://www.cyberbotics.com/debian/ binary-amd64/
+apt-add-repository 'deb http://www.cyberbotics.com/debian/ binary-amd64/'
 ```
 
 When you will close the window, the APT packages list should be automatically updated.

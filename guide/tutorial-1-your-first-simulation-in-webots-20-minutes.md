@@ -44,11 +44,13 @@ stable.
 > **Hands on**:
 Create a new world by selecting the `File / New World` menu item.
 
-A new world is now open. For now, the 3D window displays a black screen. This is
-normal because the scene tree contains only the following fundamental nodes:
-`WorldInfo` (containing misc global parameters), `Viewpoint` (defining the main
-camera parameters) and `Background` (defining the background color). As no light
-and no 3D object are defined, the entire scene is empty and unlit, and thus black.
+A new world is now open. For now, the 3D window displays a black screen.
+The Scene Tree View (on the left hand side) currently lists the fundamental nodes:
+- `WorldInfo`: containing misc global parameters ;
+- `Viewpoint`: defining the main camera parameters ;
+- and `Background`: defining the background color.
+
+As no light and no 3D object are defined, the entire scene is empty and unlit, and thus black.
 
 Each node has some customizable properties called **fields**.
 The first step is about to modify the background color.

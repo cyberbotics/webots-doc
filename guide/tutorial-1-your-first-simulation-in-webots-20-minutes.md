@@ -61,23 +61,26 @@ Modify the background color, by setting up the `skyColor` field of the
 1.0) using the color picker at the bottom of the scene tree. The background of
 the 3D view should be modified accordingly.
 
-Now we would like to add some light to the scene.
+Now, we would like to add some environment object (a floor and some walls).
+A predefined node called `RectangleArena` is designed to accomplish this task
+quickly.
 
 > **Hands on**:
-Select the last node of the scene tree view (`Background`). Click on the `Add`
-button at the top of the scene tree view. In the open dialog box, and choose
-`New node / DirectionalLight`. The new node has been added but since there is no 3D
-object in the scene, the result of this operation is not visible yet.
-
-Now, we would like to add some environment (a floor and some walls). A predefined
-high-level node called `RectangleArena` is designed to accomplish this task quickly.
-
-> **Hands on**:
-Select the last node of the scene tree view (`DirectionalLight`). Click on the
-`Add` button. In the open dialog box, choose `PROTO (Webots) / objects / floors
+Select the last node of the scene tree view (`Background`). Click on the
+`Add` button at the top of the Scene Tree View.
+In the open dialog box, choose `PROTO (Webots) / objects / floors
 / RectangleArena`. The new node has been added and is appearing far away. Use
 the left click and the wheel of the mouse in the 3D view to choose a better
 viewpoint.
+
+However, the rectangle arena appears black because the scene is still unlit.
+Now we would like to add some light to the scene.
+
+> **Hands on**:
+Select the last node of the scene tree view (`RectangleArena`).
+Click on the `Add` button. In the open dialog box, choose
+`New node / DirectionalLight`. The new node has been added and we can admire our
+rectangle arena's colors.
 
 It's a good time to improve the scene light.
 

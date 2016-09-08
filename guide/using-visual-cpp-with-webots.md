@@ -146,13 +146,14 @@ Webots contains several `C` or `C++` libraries based on the `libController` or
 
 The precompiled `C` libraries are released with the corresponding Visual Studio `.lib` file
 (the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
-There is one `.lib` file per architecture (`.x32.lib` for the 32 bits architecture,
+There is one `.lib` file per architecture (`.x32.lib` for the 32 bits architecture
 and `.x64.lib` for the 64 bits architecture).
-The chosen architecture should match with Visual Studio solution platform.
+The chosen architecture should match with Visual Studio solution platform and the path
+to the `Controller.lib` library.
 
-However there is no precompiled `C++` libraries, because they are compiled using
-the `gcc` compiler tool chain embedded in Webots which is incompatible with Visual C++.
-To use these libraries with your project, their source files should be compiled directly in your project,
+However there is no precompiled `C++` libraries for Visual Studio, because
+the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
+To use the `C++` libraries with your project, their source files should be compiled directly in your project,
 exactly as for the `libCppController` library (cf. instructions above).
 
 For example, to add the `C++ automobile libraries`:

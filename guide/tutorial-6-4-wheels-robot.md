@@ -120,7 +120,7 @@ fields of the Solid node. While the rotation origin (anchor) and the rotation
 axis (axis) are defined by the optional HingeJointParameters child of the
 HingeJoint node.
 
-%figure "Representation of a Hinge joint"
+%figure "Representation of a hinge joint"
 
 ![hinge_joint.png](images/hinge_joint.png)
 

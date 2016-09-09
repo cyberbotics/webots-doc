@@ -88,7 +88,7 @@ It's a good time to improve the scene light.
 Modify the following fields of the `DirectionalLight` node:
 - `ambientIntensity` to 1 ;
 - `direction` to [-0.33 -1 -0.5] ;
-- `castShadows` to TRUE.
+- and `castShadows` to TRUE.
 
 <!-- -->
 

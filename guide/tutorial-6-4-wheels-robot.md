@@ -120,6 +120,12 @@ fields of the Solid node. While the rotation origin (anchor) and the rotation
 axis (axis) are defined by the optional HingeJointParameters child of the
 HingeJoint node.
 
+%figure "Representation of a hinge joint"
+
+![hinge_joint.png](images/hinge_joint.png)
+
+%end
+
 For the first wheel, the Solid translation should be defined to *(0.06, 0,
 0.05)* in order to define the relative gap between the body and the wheel. The
 HingeJointParameters anchor should also be defined to *(0.06, 0, 0.05)* to

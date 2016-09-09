@@ -50,6 +50,12 @@ In a browser, open:
 
 ## Run the unit tests
 
+Requires module pep8:
+```sh
+sudo apt-get install python-pip
+pip install pep8
+```
+
 ```sh
 python -m unittest discover
 ```

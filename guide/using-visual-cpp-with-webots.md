@@ -144,10 +144,15 @@ Webots contains several `C` or `C++` libraries based on the `libController` or
 `libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
 `youBot library`, etc.).
 
-The precompiled `C` libraries are released with the corresponding Visual Studio `.lib` file
+The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file
 (the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
-There is one `.lib` file per architecture (`.x32.lib` for the 32 bits architecture
-and `.x64.lib` for the 64 bits architecture).
+They are located in the following directories (depending on their architecture):
+
+```
+$(WEBOTS_HOME)/msys64/ming[32/64]/lib/*.lib
+```
+
+**Note**:
 The chosen architecture should match with Visual Studio solution platform and the path
 to the `Controller.lib` library.
 
@@ -167,13 +172,8 @@ For example, to add the `C++ automobile libraries`:
 
 - add the `C` `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
 
-    - `car.x64.lib`
-    - `driver.x64.lib`
-
-- add the `C` `car` and `driver` libraries paths (`Linker > General > Additional Library Directories`):
-
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/car`
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/driver`
+    - `car.lib`
+    - `driver.lib`
 
 - add the following `C++` source files to your project (`Add / New Filter` and `Add / Existing Item...`)
 

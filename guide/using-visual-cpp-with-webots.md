@@ -144,7 +144,7 @@ Webots contains several `C` or `C++` libraries based on the `libController` or
 `libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
 `youBot library`, etc.).
 
-The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` files
+The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file
 (the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
 They are located in the following directories (depending on their architecture):
 

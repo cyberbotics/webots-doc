@@ -9,7 +9,14 @@ The `DARwInOPVisionManager` class allows you to use some image processing tools.
 ```c++
 #include <DARwInOPVisionManager.hpp>
 
-DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent);
+DARwInOPVisionManager(int width,
+                      int height,
+                      int hue,
+                      int hueTolerance,
+                      int minSaturation,
+                      int minValue,
+                      int minPercent,
+                      int maxPercent);
 ```
 
 **Description**

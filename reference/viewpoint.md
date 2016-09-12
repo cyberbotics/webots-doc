@@ -51,5 +51,5 @@ adding the instance number to the `follow` field value using the format
 
 The `followOrientation` field can be used to make the viewpoint follow also the orientation of an object (in addition to its position). If `followOrientation` is true, the viewpoint is rigidly attached to the followed object, like an embedded camera onboard a robot. The `follow` field should be set with a valid object name otherwise the `followOrientation` field has no effect.
 
-The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add lens flare
-to the view (if any light casts flares).
+The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens flare
+effect to the view (if any light casts flares).

@@ -1,6 +1,6 @@
 ## Vision Manager
 
-This manager implement the `DARwInOPVisionManager` class.
+The `DARwInOPVisionManager` class allows you to use some image processing tools.
 
 **Name**
 

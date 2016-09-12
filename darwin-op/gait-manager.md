@@ -81,8 +81,8 @@ int stop();
 The *start* and *stop* functions are used to start and stop the algorithm. The *step* function is used to
 run the algorithm for a specified *duration*, expressed in milliseconds.
 
-> **note**:
-Note that, in order to run, the gait manager needs to know the position of each
-servo and the values of the gyro. It is therefore essential to enable the gyro
-and the position feedback of each servo before to use it, if it is not the case,
+> **Note**:
+In order to run, the gait manager needs to know the position of each
+servo and the values of the gyroscope. It is therefore essential to enable the gyroscope
+and the position feedback of each servo before using it. If it is not the case,
 a warning will appear and they will automatically be enabled.

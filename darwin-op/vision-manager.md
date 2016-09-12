@@ -48,12 +48,12 @@ HSV colorspace.
 
 **Name**
 
-**bool getBallCenter(double &x, double &y, const unsigned char * image)** - *Get the position of the target object*
+**bool getBallCenter(double &x, double &y, const unsigned char \*image)** - *Get the position of the target object*
 
 ```c++
 #include <DARwInOPVisionManager.hpp>
 
-void getBallCenter(double x, double y, const unsigned char * image);
+void getBallCenter(double &x, double &y, const unsigned char *image);
 ```
 
 **Description**

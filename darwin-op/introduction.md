@@ -1,6 +1,6 @@
 ## Introduction
 
-The Darwin-op is an open source miniature humanoid robot platform with advanced
+The DARwIn-OP is an open source miniature humanoid robot platform with advanced
 computational power. The name DARwIn-OP means Dynamic Anthropomorphic Robot with
 Intelligence-Open Platform. It is developed and manufactured by ROBOTIS (a
 Korean robot manufacturer) in collaboration with the University of Pennsylvania.

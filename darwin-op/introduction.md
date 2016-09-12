@@ -6,7 +6,7 @@ computational power. The name DARwIn-OP means _**D**ynamic **A**nthropomorphic *
 Korean robot manufacturer) in collaboration with the University of Pennsylvania.
 
 The DARwIn-OP is mainly used by universities and research centers for
-educational and research purpose. It has a total of 20 degrees of freedoms:
+educational and research purposes. It has a total of 20 degrees of freedoms:
 
 - 2 in the head.
 - 3 in each arm.

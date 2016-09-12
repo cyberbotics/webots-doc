@@ -1,6 +1,6 @@
 ## Gait Manager
 
-This manager implements the `DARwInOPGaitManager` class and allows you to use
+The `DARwInOPGaitManager` class allows you to use
 the walking algorithm of the Framework.
 
 A lot of parameters are available in the Framework algorithm to tune the gait.

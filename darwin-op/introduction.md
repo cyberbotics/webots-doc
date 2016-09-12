@@ -25,7 +25,7 @@ robot:
 any risk of damaging the robot. You will also be able to run automatically a lot
 of different simulations in a very small amount of time (to tune up parameters
 for example), which would be impossible to do with the real robot.
-- `Cross compilation`: When your controller is doing fine in simulation, you will
+- `Cross-compilation`: When your controller is doing fine in simulation, you will
 be able to send and run it on the real robot without changing anything to your
 code, just by pressing a button in the robot window.
 - `Remote control`: To debug or understand your controller's behavior, you will be

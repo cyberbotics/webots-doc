@@ -13,12 +13,12 @@ The `Action Editor` tool is provided by ROBOTIS. More information about are avai
 
 **Name**
 
-**DARwInOPMotionManager(webots::Robot *robot)** - *Motion Manager constructor*
+**DARwInOPMotionManager(webots::Robot \* robot)** - *Motion Manager constructor*
 
-```c
+```c++
 #include <DARwInOPMotionManager.hpp>
 
-DARwInOPMotionManager(webots::Robot * robot)
+DARwInOPMotionManager(webots::Robot * robot);
 ```
 
 **Description**
@@ -31,7 +31,7 @@ The first parameter is the robot on which the algorithm applies.
 
 **void playPage(int id)** - *Plays a motion*
 
-```c
+```c++
 #include <DARwInOPMotionManager.hpp>
 
 void playPage(int id);
@@ -39,7 +39,7 @@ void playPage(int id);
 
 **Description**
 
-Plays the motion associated with page `id`
+Plays the motion associated with page `id`.
 
 ### Motion Manager in Step-by-Step
 
@@ -53,7 +53,7 @@ method `playPage` with the second parameter set to false:
 
 **void playPage(int id, bool sync = true)**, **void step(int duration)**, **bool isMotionPlaying()** - *Starts the motion in Step-by-Step mode.*
 
-```c
+```c++
 #include <DARwInOPMotionManager.hpp>
 
 void playPage(int id, bool sync);
@@ -67,7 +67,7 @@ The *playPage* function initializes the motion, but does not run it. The *step* 
 
 Here is a typical use of the motion manager in step-by-step mode:
 
-```c
+```c++
 mMotionManager->playPage(1, false);
 while(mMotionManager->isMotionPlaying()) {
   mMotionManager->step(mTimeStep);

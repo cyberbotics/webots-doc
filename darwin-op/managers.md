@@ -5,7 +5,7 @@ Robotis Framework in simulation. This library is divided in three parts called
 managers. Each manager implements a module of the Framework. The first one
 called `Gait` manager allows you to use the walking algorithm of the Robotis
 Framework. The second one called `Motion` manager allows you to play predefined
-motions stored in the "motion\\_4096.bin" file. The last one called `Vision`
+motions stored in the "motion\_4096.bin" file. The last one called `Vision`
 manager, contains some image processing tools, useful for example to find a
 colored ball in the camera image.
 

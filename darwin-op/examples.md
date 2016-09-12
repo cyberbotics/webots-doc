@@ -14,10 +14,10 @@ example.
 ![](images/button_revert.png =26x26) The `Revert...` is used to reload the
 example file and restart the simulation.
 
-![](images/button_play.png =26x26) The `Run...` is used to start the simulation
+![](images/button_play.png =26x26) The `Run...` is used to start or resume the simulation
 at real time speed.
 
-![](images/button_stop.png =26x26) The `Stop...` is used to stop the simulation.
+![](images/button_pause.png =26x26) The `Pause...` is used to pause the simulation.
 
 You will also need to use the following buttons to edit the examples (they are
 situated on top of the text editor):

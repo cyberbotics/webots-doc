@@ -61,12 +61,12 @@ void getBallCenter(double &x, double &y, const unsigned char *image);
 Get the center of the target object. This method returns true if the target was
 found, and false otherwise. If found, the x and y variables are set. The image
 pointer indicates the original image buffer. In order to find the position of
-the target object, this method proceeds to the following steps:
+the target object. This method proceeds with the following steps:
 
-- Store the BGRA version of the image in a buffer
-- Use this buffer to convert the image to HSV format
-- Use the `Finder` class of the Framework to find the target object
-- Extract and save the position of the target object
+- Stores the BGRA version of the image in a buffer.
+- Uses this buffer to convert the image to HSV format.
+- Uses the `Finder` class of the Framework to find the target object.
+- Extracts and saves the position of the target object.
 
 ---
 

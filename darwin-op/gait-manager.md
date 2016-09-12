@@ -25,7 +25,7 @@ DARwInOPGaitManager(webots::Robot * robot, const std::string & iniFilename);
 The first parameter is the robot on which the algorithm applies and the second
 is the file name in which the default parameters are stored.
 
-The following method are available in order to modify the main parameters in
+The following methods are available in order to modify the main parameters in
 your controller:
 
 ---

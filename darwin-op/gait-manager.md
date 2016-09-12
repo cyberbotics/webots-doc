@@ -12,12 +12,12 @@ default values that are stored in a ".ini" configuration file. In the
 
 **Name**
 
-**DARwInOPGaitManager(webots::Robot \* robot, const std::string & iniFilename)** - *Gait Manager constructor*
+**DARwInOPGaitManager(webots::Robot \*robot, const std::string &iniFilename)** - *Gait Manager constructor*
 
 ```c++
 #include <DARwInOPGaitManager.hpp>
 
-DARwInOPGaitManager(webots::Robot * robot, const std::string & iniFilename);
+DARwInOPGaitManager(webots::Robot *robot, const std::string &iniFilename);
 ```
 
 **Description**

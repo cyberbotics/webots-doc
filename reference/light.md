@@ -7,6 +7,7 @@ Light {
   SFFloat   intensity          1        # [0,1]
   SFBool    on                 TRUE
   SFBool    castShadows        FALSE
+  SFBool    castFlares         FALSE
 }
 ```
 
@@ -48,3 +49,8 @@ another light). Activating the shadows of just one [Light](#light) can have a
 significant impact on the global rendering performance, particularly if the
 world contains either lots of objects or complex meshes. Some shadow issues can
 occurs in closed spaces.
+
+- The `castFlares` field allows the user to turn on (TRUE) or off (FALSE)
+the flares for this [Light](light.md). When turned on, the flares will be visible to
+every [Viewpoint](viewpoint.md) and [Camera](camera.md) node whose `lensFlare` field
+contains a [LensFlare](lensflare.md) node.

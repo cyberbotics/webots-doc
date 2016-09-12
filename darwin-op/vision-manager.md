@@ -23,14 +23,14 @@ DARwInOPVisionManager(int width,
 
 The Vision Manager constructor. The arguments are the following:
 
-- The widht of the image
-- The height of the image
-- The color hue of the target object to find
-- The tolerance on the color hue of the target object to find
-- The minimum color saturation of the target object to find
-- The minimum color value of the target object to find
-- The minimum percentage of color value in the image to validate the result
-- The maximum percentage of color value in the image to validate the result
+- The width of the image.
+- The height of the image.
+- The color hue of the target object to find.
+- The tolerance on the color hue of the target object to find.
+- The minimum color saturation of the target object to find.
+- The minimum color value of the target object to find.
+- The minimum percentage of color value in the image to validate the result.
+- The maximum percentage of color value in the image to validate the result.
 
 To find the color hue of the target object and to understand the impact of the
 saturation and value you can refer to figure [HSV](#sv-colorspace) , for more

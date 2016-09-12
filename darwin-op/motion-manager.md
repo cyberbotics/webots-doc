@@ -13,12 +13,12 @@ The `Action Editor` tool is provided by ROBOTIS. More information about are avai
 
 **Name**
 
-**DARwInOPMotionManager(webots::Robot \* robot)** - *Motion Manager constructor*
+**DARwInOPMotionManager(webots::Robot \*robot)** - *Motion Manager constructor*
 
 ```c++
 #include <DARwInOPMotionManager.hpp>
 
-DARwInOPMotionManager(webots::Robot * robot);
+DARwInOPMotionManager(webots::Robot *robot);
 ```
 
 **Description**

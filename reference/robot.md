@@ -823,5 +823,28 @@ void *wbw_robot_window_custom_function(void *arg) {
 
 > **note** [Java, Python, Matlab]:
 Given that the robot window can only be implemented for C/C++ controllers,
-`wb_robot_window_custom_function` is not available in Java, Phyton or Matlab
+`wb_robot_window_custom_function` is not available in Java, Python or Matlab
 API.
+
+---
+
+**Name**
+
+**wb\_robot\_window\_receive**, **wb\_robot\_window\_send** - *communication with a HTML robot window*
+
+```c
+#include <webots/robot_window.h>
+
+const char *wb_robot_window_receive(int *length);
+void wb_robot_window_send(const char *message, int length);
+```
+
+**Description**
+
+These functions allow the robot controller to communicate with a HTML robot window. Such a window is embedded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
+
+The `wb_robot_window_receive` function allows a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.Robot.send()` method of the Webots Javascript API.
+
+The `wb_robot_window_send` function allows a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.Robot.receive()` method of the Webots Javascript API.
+
+> **note** [Java, Python, Matlab]: These functions are not available in the Java, Python or Matlab API.

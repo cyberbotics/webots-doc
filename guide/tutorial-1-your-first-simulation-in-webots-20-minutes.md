@@ -15,15 +15,20 @@ and with the basic concepts of Webots.
 
 ### Create a new World
 
-In this subsection, we will create a new simulation. The content of a simulation
-is stored in a world file. This world file contains all the information related
-to your simulation, i.e. where the objects are, what they look like, how they interact with each other, what is the sky color, where is the
-gravity vector, etc.
+A World contains information like where the objects
+are, what they look like, how they interact with each other, what is the sky
+color, where is the gravity vector, etc.
 
 > **Theory**:
-A **world** is defined by a tree of **nodes**. Each node has some customizable
-properties called **fields**. A world is stored in a file having the ".wbt"
-suffix. The format of this file is derived from the **VRML** language, and is
+A **World** defines the initial state of a simulation.
+The different objects are called **Nodes** and are organized hierarchically
+in a **Scene Tree**. It means that a node can have some sub-nodes.
+
+<!-- -->
+
+> **Note**:
+A world is stored in a file having the ".wbt" extension.
+The file format is derived from the **VRML** language, and is
 human readable. The world files must be stored directly in the project
 subdirectory called "worlds".
 
@@ -39,48 +44,56 @@ stable.
 > **Hands on**:
 Create a new world by selecting the `File / New World` menu item.
 
-A new world is now open. For now, the 3D window displays a black screen. This is
-normal because the scene tree contains only the following fundamental nodes:
-`WorldInfo` (containing misc global parameters), `Viewpoint` (defining the main
-camera parameters) and `Background` (defining the background color). As no light
-and no 3D object are defined, the entire scene is empty and unlit, and thus black.
+A new world is now open. For now, the 3D window displays a black screen.
+The Scene Tree view (on the left hand side) currently lists the fundamental nodes:
+- `WorldInfo`: containing misc global parameters ;
+- `Viewpoint`: defining the main camera parameters ;
+- and `Background`: defining the background color.
 
+As no light and no 3D object are defined, the entire scene is empty and unlit, and thus black.
+
+Each node has some customizable properties called **fields**.
 The first step is about to modify the background color.
 
 > **Hands on**:
 Modify the background color, by setting up the `skyColor` field of the
 `Background` node. Choose a blue color (e.g. red = 0.4, green = 0.7 and blue =
-1.0) using the color picker at the bottom of the scene tree. The background of
+1.0) using the color picker at the bottom of the Scene Tree view. The background of
 the 3D view should be modified accordingly.
 
-Now we would like to add some light to the scene.
+Now, we would like to add some environment object (a floor and some walls).
+A predefined node called `RectangleArena` is designed to accomplish this task
+quickly.
 
 > **Hands on**:
-Select the last node of the scene tree view (`Background`). Click on the `Add`
-button at the top of the scene tree view. In the open dialog box, and choose
-`New node / DirectionalLight`. The new node has been added but since there is no 3D
-object in the scene, the result of this operation is not visible yet.
-
-Now, we would like to add some environment (a floor and some walls). A predefined
-high-level node called `RectangleArena` is designed to accomplish this task quickly.
-
-> **Hands on**:
-Select the last node of the scene tree view (`DirectionalLight`). Click on the
-`Add` button. In the open dialog box, choose `PROTO (Webots) / objects / floors
+Select the last node of the Scene Tree view (`Background`). Click on the
+`Add` button at the top of the Scene Tree view.
+In the open dialog box, choose `PROTO (Webots) / objects / floors
 / RectangleArena`. The new node has been added and is appearing far away. Use
 the left click and the wheel of the mouse in the 3D view to choose a better
 viewpoint.
 
+However, the rectangle arena appears black because the scene is still unlit.
+Now we would like to add some light to the scene.
+
+> **Hands on**:
+Select the last node of the Scene Tree view (`RectangleArena`).
+Click on the `Add` button. In the open dialog box, choose
+`New node / DirectionalLight`. The new node has been added and we can admire our
+rectangle arena's colors.
+
 It's a good time to improve the scene light.
 
 > **Hands on**:
-Modify the following fields of the `DirectionalLight` node: `ambientIntensity`
-to 1, `direction` to [-0.33 -1 -0.5] and `castShadows` to TRUE.
+Modify the following fields of the `DirectionalLight` node:
+- `ambientIntensity` to 1 ;
+- `direction` to [-0.33 -1 -0.5] ;
+- and `castShadows` to TRUE.
 
 <!-- -->
 
 > **Note**:
-In the scene tree, the fields are displayed in blue if they differ from their
+In the Scene Tree view, the fields are displayed in blue if they differ from their
 default values.
 
 Now your environment should look like the one depicted in the
@@ -116,8 +129,8 @@ fields can be modified.
 
 > **Hands on**:
 In the 3D view, click on the floor to selected it. When it is selected, the floor
-is surrounded by white lines and the corresponding node is selected in the scene
-tree view. Now click on the blue sky to unselect the floor.
+is surrounded by white lines and the corresponding node is selected in the Scene
+Tree view. Now click on the blue sky to unselect the floor.
 
 ### Add an e-puck Robot
 
@@ -145,8 +158,8 @@ details later. For now, consider the E-puck node as a black box that contains al
 the necessary nodes to define a e-puck robot.
 
 > **Hands on**:
-Select the last node of the scene tree view (called `RectangleArena`). In order
-to add the E-puck node, click on the `Add` button at the top of the scene tree
+Select the last node of the Scene Tree view (called `RectangleArena`). In order
+to add the E-puck node, click on the `Add` button at the top of the Scene Tree
 view. In the open dialog box, and choose `PROTO (Webots) / robots / e-puck /
 E-puck (DifferentialWheels)`. Then save the simulation.
 
@@ -183,7 +196,7 @@ Now we are going to modify the world and decrease the step of the physics
 simulation: this will increase the accuracy of the simulation.
 
 > **Hands on**:
-In the scene tree view, expand the WorldInfo node (the first node). Set its
+In the Scene Tree view, expand the WorldInfo node (the first node). Set its
 `basicTimeStep` field to *16*. Then save the simulation.
 
 Just after you added the E-puck node, a black window appeared in the upper left
@@ -244,8 +257,8 @@ will now link the E-puck node with the new controller before modifying it.
 
 > **Hands on**:
 Link the `E-puck` node with the *e-puck\_go\_forward* controller. This can be
-done in the scene tree view by selecting the `controller` field of the E-puck
-node, then use the field editor at the bottom of the scene tree view: press the
+done in the Scene Tree view by selecting the `controller` field of the E-puck
+node, then use the field editor at the bottom of the Scene Tree view: press the
 `Select...` button and then select *e-puck\_go\_forward* in the list. Once the
 controller is linked, save the world.
 

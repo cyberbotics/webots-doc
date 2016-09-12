@@ -23,7 +23,7 @@ example, this is done in the constructor.
 You can also try to add an oscillation of the head, by adding this in your main
 loop:
 
-```c
+```c++
 mMotors[18]->setPosition(sin(getTime()));
 ```
 

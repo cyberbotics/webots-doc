@@ -30,7 +30,11 @@ You need to learn how to launch Webots.
 Start Webots by following the instructions given in [this
 section](starting-webots.md).
 
-> If it's the first time you start Webots, a welcome dialog box invites you to
+<!-- -->
+
+> **Note**:
+A Guided Tour is available if you have a PRO or EDU License.
+If it's the first time you start Webots, a welcome dialog box invites you to
 choose a demo simulation. Choose any of them, but it's a good opportunity to
 take a look at our guided tour (also available using the `Help / Webots Guided
 Tour...` menu).

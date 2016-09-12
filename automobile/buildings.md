@@ -47,7 +47,7 @@ GenericBuilding {
   SFFloat     floorHeight            3
   SFInt32     floorNumber            3
   MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
-  SFString    wallType               "building2"
+  SFString    wallType               "windowed building"
   SFString    roofType               "tiled"
   SFString    roofShape              "pyramidal roof"
   SFBool      snowOnRoof             FALSE

@@ -12,12 +12,12 @@ default values that are stored in a ".ini" configuration file. In the
 
 **Name**
 
-**DARwInOPGaitManager(webots::Robot *robot, const std::string &iniFilename)** - *Gait Manager constructor*
+**DARwInOPGaitManager(webots::Robot \* robot, const std::string & iniFilename)** - *Gait Manager constructor*
 
-```c
+```c++
 #include <DARwInOPGaitManager.hpp>
 
-DARwInOPGaitManager(webots::Robot * robot, const std::string iniFilename);
+DARwInOPGaitManager(webots::Robot * robot, const std::string & iniFilename);
 ```
 
 **Description**
@@ -34,7 +34,7 @@ your controller:
 
 **void setXAmplitude(double x)**, **void setYAmplitude(double y)**, **void setAAmplitude(double a)**, **void setMoveAimOn(bool q)**, **void setBalanceEnable(bool q)** - *Change the gait parameters*
 
-```c
+```c++
 #include <DARwInOPGaitManager.hpp>
 
 void setXAmplitude(double x);
@@ -68,7 +68,7 @@ Finally the following methods can be used in order to run the algorithm:
 
 **void start()**, **void step(int duration)**, **void stop()** - *Start, stop and run the gait.*
 
-```c
+```c++
 #include <DARwInOPGaitManager.hpp>
 
 void start();

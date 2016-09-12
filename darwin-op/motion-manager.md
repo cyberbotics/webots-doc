@@ -8,7 +8,7 @@ It is also possible to add custom motions to this file by using the `Action
 Editor` tool.
 
 > **Note**:
-More information about this tool provided by ROBOTIS is available on Robotis
+The `Action Editor` tool is provided by ROBOTIS. More information about are available on the
 [website](http://www.support.robotis.com/ko/product/darwin-op/development/tools/action_editor.htm).
 
 **Name**

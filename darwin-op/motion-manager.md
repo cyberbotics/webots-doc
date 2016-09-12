@@ -1,6 +1,6 @@
 ## Motion Manager
 
-This manager implement the `DARwInOPMotionManager` class and allows you to play
+The `DARwInOPMotionManager` class allows you to play
 a predefined motion stored in the "motion\_4096.bin" file. The main motions and
 their corresponding ids are listed in [appendix](motions-files.md).
 

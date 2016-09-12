@@ -43,8 +43,8 @@ Plays the motion associated with page `id`.
 
 ### Motion Manager in Step-by-Step
 
-By default when starting a motion, the motion is run synchronously. That is the
-controller is stopped until the motion is finished. But it is also possible to
+By default when starting a motion, the motion is run synchronously. It means that the
+controller execution is stopped until the motion is finished. But it is also possible to
 run a motion asynchronously, in that case, the motion is started but the
 execution flow of the controller is not stopped. This can be done by calling the
 method `playPage` with the second parameter set to false:

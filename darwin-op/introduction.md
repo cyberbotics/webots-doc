@@ -1,8 +1,8 @@
 ## Introduction
 
 The DARwIn-OP is an open source miniature humanoid robot platform with advanced
-computational power. The name DARwIn-OP means Dynamic Anthropomorphic Robot with
-Intelligence-Open Platform. It is developed and manufactured by ROBOTIS (a
+computational power. The name DARwIn-OP means _**D**ynamic **A**nthropomorphic **R**obot **w**ith
+**In**telligence**-O**pen **P**latform_. It is developed and manufactured by ROBOTIS (a
 Korean robot manufacturer) in collaboration with the University of Pennsylvania.
 
 The DARwIn-OP is mainly used by universities and research centers for

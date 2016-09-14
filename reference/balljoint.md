@@ -9,6 +9,12 @@ BallJoint {
 
 ### Description
 
+%figure "Ball joint representation"
+
+![ballJoint.png](images/ballJoint.png)
+
+%end
+
 The [BallJoint](#balljoint) node can be used to model a ball joint. A ball
 joint, also called ball-and-socket, prevents translation motion while allowing
 rotation around its anchor (3 degrees of freedom). It supports spring and

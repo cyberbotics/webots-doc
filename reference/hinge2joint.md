@@ -12,6 +12,12 @@ Hinge2Joint {
 
 ### Description
 
+%figure "Hinge 2 joint representation"
+
+![hinge2Joint.png](images/hinge2Joint.png)
+
+%end
+
 The [Hinge2Joint](#hinge2joint) node can be used to model a hinge2 joint, i.e. a
 joint allowing only rotational motions around two intersecting axes (2 degrees
 of freedom). These axes cross at the `anchor` point and need not to be

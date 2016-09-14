@@ -11,6 +11,12 @@ SliderJoint {
 
 ### Description
 
+%figure "Slider joint representation"
+
+![sliderJoint.png](images/sliderJoint.png)
+
+%end
+
 The [SliderJoint](#sliderjoint) node can be used to model a slider, i.e. a joint
 allowing only a translation motion along a given axis (1 degree of freedom). It
 inherits [Joint](joint.md)'s `jointParameters` field. This field can be filled

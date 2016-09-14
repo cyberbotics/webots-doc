@@ -36,7 +36,7 @@ Webots is currently open and runs an arbitrary simulation.
 
 > **Hands on**:
 Pause the current simulation by clicking on the `Pause` button of the 3D view.
-The simulation is paused if the virtual time counter on the 3D view toolbar is
+The simulation is paused if the virtual time counter on the main toolbar is
 stable.
 
 <!-- -->
@@ -145,7 +145,7 @@ simulation is paused and that the virtual time elapsed is 0.
 > **Theory**:
 When a Webots world is modified with the intention of being saved, it is
 fundamental that the simulation is first paused and reverted to its initial
-state, i.e. the virtual time counter on the 3D view toolbar should show
+state, i.e. the virtual time counter on the main toolbar should show
 0:00:00:000. Otherwise at each save, the position of each 3D objects can
 accumulate errors. Therefore, any modification of the world should be performed
 in that order: **pause, revert, modify and save the simulation**.

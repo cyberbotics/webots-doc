@@ -53,6 +53,7 @@
     - [Keyboard](keyboard.md)
     - [LED](led.md)
     - [Lens](lens.md)
+    - [LensFlare](lensflare.md)
     - [Lidar](lidar.md)
     - [Light](light.md)
     - [LightSensor](lightsensor.md)

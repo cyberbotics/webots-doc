@@ -16,6 +16,7 @@ Camera {
   SFNode     lens             NULL
   SFNode     focus            NULL
   SFNode     zoom             NULL
+  AFNode     lensFlare        NULL
   SFString   compositor       ""
 }
 ```
@@ -101,6 +102,9 @@ no focus is available on the camera device.
 - The `zoom` field may contain a [Zoom](zoom.md) node to provide the camera device
 with a controllable zoom system. If this field is set to NULL, then no zoom is
 available on the camera device.
+
+- The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens
+flare effect to the camera image (if any light casts flares).
 
 - The `compositor` field specifies the name of a compositor to apply on the camera
 image. A compositor can be used to apply a shader in order to alter the original

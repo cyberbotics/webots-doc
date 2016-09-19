@@ -65,12 +65,18 @@ Some of them are described in the following table:
 
 - `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
 This constant is particularly useful to loop over the lights.
+- `FOG_TYPE` is an integer matching with the current fog type:
+    - `0` stands for no fog
+    - `1` stands for an exponential fog
+    - `2` stands for an exponential2 fog
+    - `3` stands for a linear fog
 
 
 ### X3DOM export
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
 Generally this automatic conversion is working fine, however if you suspect a wrong behavior, please write a bug report to help us improving the conversion function.
+
 
 #### Known differences
 

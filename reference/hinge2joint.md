@@ -12,7 +12,7 @@ Hinge2Joint {
 
 ### Description
 
-%figure "Hinge 2 joint representation"
+%figure "Hinge 2 joint"
 
 ![hinge2Joint.png](images/hinge2Joint.png)
 

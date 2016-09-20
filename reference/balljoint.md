@@ -9,7 +9,7 @@ BallJoint {
 
 ### Description
 
-%figure "Ball joint representation"
+%figure "Ball joint"
 
 ![ballJoint.png](images/ballJoint.png)
 

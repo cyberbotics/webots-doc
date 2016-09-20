@@ -11,7 +11,7 @@ SliderJoint {
 
 ### Description
 
-%figure "Slider joint representation"
+%figure "Slider joint"
 
 ![sliderJoint.png](images/sliderJoint.png)
 

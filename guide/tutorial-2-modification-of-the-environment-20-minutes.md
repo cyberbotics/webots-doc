@@ -31,7 +31,7 @@ In order to define an object as static, its physics node has not to be set
 
 Other pre-built floors are available in the Webots objects library. We will now
 delete the default arena and add a simple floor that we will manually surround
-the walls later in this this tutorial.
+the walls later in this tutorial.
 
 > **Hands on**:
 To remove the `RectangleArena`, select it in the scene tree view and press the

@@ -45,7 +45,7 @@ The links between the VRML fields and these variables are various.
 Some of them are described in the following table:
 
 | VRML field(s)                                        | GLSL variable                                                   |
-| ==================================================== | =============================================================== |
+| ---------------------------------------------------- | --------------------------------------------------------------- |
 | `Material.ambientIntensity * Material.diffuseColor`  | `gl_FrontMaterial.ambient.rgb`                                  |
 | `Material.diffuseColor`                              | `gl_FrontMaterial.diffuse.rgb`                                  |
 | `Material.emissiveColor`                             | `gl_FrontMaterial.emissive.rgb`                                 |

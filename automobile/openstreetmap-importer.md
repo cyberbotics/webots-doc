@@ -8,9 +8,10 @@ You can download a map of any part of the world from
 more than a few kilometers square if you want to be able to run your simulation
 in real-time). And then convert it using the script.
 
-The script is written in python, a typical usage is:
+The script is written in Python. A typical usage is:
 
 ```sh
+cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
 python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
 ```
 

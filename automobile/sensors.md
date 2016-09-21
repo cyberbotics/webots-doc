@@ -1,6 +1,6 @@
 # Sensors
 
-This section will present a brief overview of various PROTOs of sensors widely
+This section will present a brief overview of various PROTO models of sensors widely
 used in automobile.
 
 ## Sections

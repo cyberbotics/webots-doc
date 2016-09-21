@@ -2,8 +2,9 @@
 
 ```
 ComposedShader {
-  vrmlField MFNode uniforms []
-  vrmlField MFNode parts  []
+  vrmlField MFNode uniforms    []
+  vrmlField MFNode parts       []
+  field     SFBool transparent FALSE
 }
 ```
 
@@ -17,10 +18,21 @@ If several [ShaderPart](shaderpart.md) nodes of the same type are given, then on
 
 The `uniforms` field is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
+The `transparent` field indicates to Webots if its fragment program plans to use the alpha channel.
+If it is set to `FALSE` then
+the alpha channel will be ignored,
+and the [Shape](shape.md) node containing the [ComposedShader](#composedshader) will be rendered
+in the rendering queue of the opaque objects.
+If it is set to `TRUE` then
+the alpha channel will be used,
+and the container [Shape](shape.md) node will be rendered
+in the rendering queue of the transparent objects.
+
 
 ### Limitations
 
-Currently the [Shape](shape.md) nodes having a [ComposedShader](#composedshader) cannot receive shadows.
+- The [Shape](shape.md) nodes containing a [ComposedShader](#composedshader) node cannot receive shadows.
+- The [Shape](shape.md) nodes containing a transparent [ComposedShader](#composedshader) node cannot cast shadows.
 
 
 ### Example

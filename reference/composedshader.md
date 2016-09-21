@@ -18,7 +18,7 @@ If several [ShaderPart](shaderpart.md) nodes of the same type are given, then on
 
 The `uniforms` field is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
-The `transparent` field indicates to Webots if its fragment program plans to use the alpha channel.
+The `transparent` field indicates if the shader will use the alpha channel.
 If it is set to `FALSE` then
 the alpha channel will be ignored,
 and the [Shape](shape.md) node containing the [ComposedShader](#composedshader) will be rendered

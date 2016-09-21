@@ -115,6 +115,9 @@ Finally add a Physics node to the `physics` field of the Solid. By modifying the
 *{0, 0.1, -0.2}* for example). Save the simulation. The result is depicted in
 [this figure](#your-first-rigid-body-in-webots).
 
+> **Note**:
+In order to get a shaded object, it is necessary to also add an appearance. To do this, select the `appearance` field of the Shape node and use the `Add` button. Then, you can add a blank `Material` to the `material` field in a similar way.
+
 %figure "Your first rigid body in Webots."
 
 ![tutorial_ball.png](images/tutorial_ball.png)

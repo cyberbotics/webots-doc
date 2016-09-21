@@ -38,7 +38,7 @@ The GLSL documentation is available from following sources:
 
 ### Variables
 
-All the standard GLSL variables are accessible from the GPU program (gl_Vertex, gl_ModelViewMatrix, etc.).
+All the standard GLSL variables are accessible from the GPU program (`gl_Vertex`, `gl_ModelViewMatrix`, etc.).
 Please refer to their documentation.
 
 The links between the VRML fields and these variables are various.

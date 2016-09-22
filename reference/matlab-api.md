@@ -381,7 +381,7 @@ The following tables describe the Matlab functions.
 
 | % [Radar](radar.md) :                                                                                 |
 | ----------------------------------------------------------------------------------------------------- |
-| [wb\_radar\_enable](radar.md#wb_radar_enable)(tag, sampling_period)                                   |
+| [wb\_radar\_enable](radar.md#wb_radar_enable)(tag, ms)                                                |
 | [wb\_radar\_disable](radar.md#wb_radar_enable)(tag)                                                   |
 | period = [wb\_radar\_get\_sampling\_period](radar.md#wb_radar_enable)(tag)                            |
 | targets\_number = [wb\_radar\_get\_number\_of\_targets](radar.md#wb_radar_get_number_of_targets)(tag) |
@@ -487,6 +487,19 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_skin"
+
+| % [Skin](skin.md) :                                                                                         |
+| ------------------------------------------------------------------------------------------------------------|
+| count = [wb\_skin\_get\_bone\_count](skin.md#wb_skin_get_bone_count)(tag)                                   |
+| name = [wb\_skin\_get\_bone\_name](skin.md#wb_skin_get_bone_name)(tag, index)                               |
+| orientation =[wb\_skin\_get\_bone\_orientation](skin.md#wb_skin_get_bone_orientation)(tag, index, absolute) |
+| position = [wb\_skin\_get\_bone\_position](skin.md#wb_skin_get_bone_position)(tag, index, absolute)         |
+| [wb\_skin\_set\_bone\_orientation](skin.md#wb_skin_set_bone_orientation)(tag, index, values, absolute)      |
+| [wb\_skin\_set\_bone\_position](skin.md#wb_skin_set_bone_position)(tag, index, values, absolute)            |
+
+%end
+
 %api "matlab_speaker"
 
 | % [Speaker](speaker.md) :                                                                                   |
@@ -586,19 +599,6 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                 |
 | [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                         |
 | [wb\_supervisor\_node\_set\_visibility](supervisor.md#wb_supervisor_node_set_visibility)(node, from, visible)                                                        |
-
-%end
-
-%api "matlab_skin"
-
-| % [Skin](skin.md) :                                                                                         |
-| ------------------------------------------------------------------------------------------------------------|
-| count = [wb\_skin\_get\_bone\_count](skin.md#wb_skin_get_bone_count)(tag)                                   |
-| name = [wb\_skin\_get\_bone\_name](skin.md#wb_skin_get_bone_name)(tag, index)                               |
-| orientation =[wb\_skin\_get\_bone\_orientation](skin.md#wb_skin_get_bone_orientation)(tag, index, absolute) |
-| position = [wb\_skin\_get\_bone\_position](skin.md#wb_skin_get_bone_position)(tag, index, absolute)         |
-| [wb\_skin\_set\_bone\_orientation](skin.md#wb_skin_set_bone_orientation)(tag, index, values, absolute)      |
-| [wb\_skin\_set\_bone\_position](skin.md#wb_skin_set_bone_position)(tag, index, values, absolute)            |
 
 %end
 

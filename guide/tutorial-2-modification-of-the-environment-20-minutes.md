@@ -110,13 +110,14 @@ In the scene tree view, select the last node and add a Solid node using the
 `Add` button. Similarly select the `children` field of the Solid node, and add a
 Shape node to it. In order to get a shaded object as shown in the figure, it is 
 necessary to specify an appearance. To do this, select the `appearance` field of 
-the Shape node and use the `Add` button. Then, you can add a blank `Material` to 
-the `material` field in a similar way. Add a Sphere node as the `geometry` field 
-of the newly created Shape node. Add another Sphere node to the `boundingObject` 
-field of the Solid. Finally add a Physics node to the `physics` field of the 
-Solid. By modifying the `translation` field of the Solid node, place the ball in 
-front of the robot (at *{0, 0.1, -0.2}* for example). Save the simulation. The 
-result is depicted in [this figure](#your-first-rigid-body-in-webots).
+the Shape node and use the `Add` button. Then, you can add a default `Material` 
+to the `material` field in a similar way. Add a Sphere node as the `geometry` 
+field of the newly created Shape node. Add another Sphere node to the 
+`boundingObject` field of the Solid. Finally add a Physics node to the `physics` 
+field of the Solid. By modifying the `translation` field of the Solid node, 
+place the ball in front of the robot (at *{0, 0.1, -0.2}* for example). Save the 
+simulation. The result is depicted in 
+[this figure](#your-first-rigid-body-in-webots).
 
 %figure "Your first rigid body in Webots."
 

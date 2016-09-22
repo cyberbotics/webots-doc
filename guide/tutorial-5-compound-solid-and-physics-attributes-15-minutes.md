@@ -116,10 +116,10 @@ objects is very efficient. Generally speaking, the efficiency of these
 primitives can be sorted like this: Sphere > Box > Capsule > Cylinder. Where the
 Sphere is the most efficient. But this can be neglected for a common usage.
 
-The IndexdedFaceSet geometry primitive can also be used in a bounding object.
+The IndexedFaceSet geometry primitive can also be used in a bounding object.
 But this primitive is less efficient than the other primitives listed above.
 Moreover its behavior is sometimes buggy. For this reasons, we don't recommend
-using the IndexdedFaceSet when another solution using a combination of the other
+using the IndexedFaceSet when another solution using a combination of the other
 primitives is possible.
 
 Grounds can be defined using the Plane or the ElevationGrid primitives. The

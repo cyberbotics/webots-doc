@@ -28,27 +28,6 @@ The following tables describe the Java classes and their methods.
 
 %end
 
-%api "java_bvh"
-
-|                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.BvhReader;                                                             |
-| public class [BvhReader](bvh.md) {                                                                              |
-| &nbsp;&nbsp; public [BvhReader](bvh.md#wbu_bvh_read_file)(String fileName);                                     |
-| &nbsp;&nbsp; public int [getJointCount](bvh.md#wbu_bvh_get_joint_count)();                                      |
-| &nbsp;&nbsp; public String [getJointName](bvh.md#wbu_bvh_get_joint_name)(int jointId);                          |
-| &nbsp;&nbsp; public int [getFrameCount](bvh.md#wbu_bvh_get_frame_count)();                                      |
-| &nbsp;&nbsp; public void [setScale](bvh.md#wbu_bvh_set_scale)(double scale);                                    |
-| &nbsp;&nbsp; public bool [step](bvh.md#wbu_bvh_step)();                                                         |
-| &nbsp;&nbsp; public bool [gotoFrame](bvh.md#wbu_bvh_goto_frame)(int frameNumber);                               |
-| &nbsp;&nbsp; public bool [reset](bvh.md#wbu_bvh_reset)();                                                       |
-| &nbsp;&nbsp; public double[] [getRootTranslation](bvh.md#wbu_bvh_get_root_translation)();                       |
-| &nbsp;&nbsp; public double[] [getJointRotation](bvh.md#wbu_bvh_get_joint_rotation)(int jointId);                |
-| &nbsp;&nbsp; public void [adaptSkeleton](bvh.md#wbu_bvh_adapt_skeleton)(int jointCount, String[] jointNameList) |
-| }                                                                                                               |
-
-%end
-
 %api "java_camera"
 
 |                                                                                                                      |

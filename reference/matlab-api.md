@@ -381,7 +381,7 @@ The following tables describe the Matlab functions.
 
 | % [Radar](radar.md) :                                                                                 |
 | ----------------------------------------------------------------------------------------------------- |
-| [wb\_radar\_enable](radar.md#wb_radar_enable)(tag, ms)                                                |
+| [wb\_radar\_enable](radar.md#wb_radar_enable)(tag, sampling_period)                                   |
 | [wb\_radar\_disable](radar.md#wb_radar_enable)(tag)                                                   |
 | period = [wb\_radar\_get\_sampling\_period](radar.md#wb_radar_enable)(tag)                            |
 | targets\_number = [wb\_radar\_get\_number\_of\_targets](radar.md#wb_radar_get_number_of_targets)(tag) |

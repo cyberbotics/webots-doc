@@ -77,20 +77,19 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_inertial_unit)}, {[Java](java-api.md#java_inertial_unit)}, {[Python](python-api.md#python_inertial_unit)}, {[Matlab](matlab-api.md#matlab_inertial_unit)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/inertial_unit.h>
 
-void wb_inertial_unit_enable(WbDeviceTag tag, int ms)
-void wb_inertial_unit_disable(WbDeviceTag tag)
-int wb_inertial_unit_get_sampling_period(WbDeviceTag tag)
-const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag)
+void wb_inertial_unit_enable(WbDeviceTag tag, int sampling_period);
+void wb_inertial_unit_disable(WbDeviceTag tag);
+int wb_inertial_unit_get_sampling_period(WbDeviceTag tag);
+const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 ```
 
 **Description**
 
-The `wb_inertial_unit_enable()` function turns on the angle measurement each
-`ms` milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+The `wb_inertial_unit_enable()` function turns on the angle measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_inertial_unit_disable()` function turns off the

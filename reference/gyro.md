@@ -46,20 +46,19 @@ measure any infinitesimal change). This field accepts any value in the interval
 
 {[C++](cpp-api.md#cpp_gyro)}, {[Java](java-api.md#java_gyro)}, {[Python](python-api.md#python_gyro)}, {[Matlab](matlab-api.md#matlab_gyro)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gyro.h>
 
-void wb_gyro_enable(WbDeviceTag tag, int ms)
-void wb_gyro_disable(WbDeviceTag tag)
-int wb_gyro_get_sampling_period(WbDeviceTag tag)
-const double *wb_gyro_get_values(WbDeviceTag tag)
+void wb_gyro_enable(WbDeviceTag tag, int sampling_period);
+void wb_gyro_disable(WbDeviceTag tag);
+int wb_gyro_get_sampling_period(WbDeviceTag tag);
+const double *wb_gyro_get_values(WbDeviceTag tag);
 ```
 
 **Description**
 
-The `wb_gyro_enable()` function turns on the angular velocity measurement each
-`ms` milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+The `wb_gyro_enable()` function turns on the angular velocity measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_gyro_disable()` function turns off the [Gyro](#gyro) device.

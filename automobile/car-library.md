@@ -10,11 +10,11 @@ encoders). All the functions included in this library are explained below.
 
 **wbu\_car\_init**, **wbu\_car\_cleanup** - *Initialise and clean*
 
-``` c
+```c
 #include <webots/car.h>
 
-void wbu_car_init()
-void wbu_car_cleanup()
+void wbu_car_init();
+void wbu_car_cleanup();
 ```
 
 **Description**
@@ -32,11 +32,11 @@ functions since they are already called from the corresponding functions of the
 
 **wbu\_car\_get\_type**, **wbu\_car\_get\_engine\_type** - *Get the car and engine type*
 
-``` c
+```c
 #include <webots/car.h>
 
-wbu_car_type wbu_car_get_type()
-wbu_car_engine_type wbu_car_get_type()
+wbu_car_type wbu_car_get_type();
+wbu_car_engine_type wbu_car_get_type();
 ```
 
 **Description**
@@ -71,11 +71,11 @@ of the car.
 
 **wbu\_car\_set\_indicator\_period**, **wbu\_car\_get\_indicator\_period** - *Set and get the indicator period*
 
-``` c
+```c
 #include <webots/car.h>
 
-void wbu_car_set_indicator_period(double period)
-double wbu_car_get_indicator_period()
+void wbu_car_set_indicator_period(double period);
+double wbu_car_get_indicator_period();
 ```
 
 **Description**
@@ -92,16 +92,16 @@ of the indicators.
 
 **wbu\_car\_get\_backwards\_lights**, **wbu\_car\_get\_brake\_lights** - *Get the state of the backwards/brake lights*
 
-``` c
+```c
 #include <webots/car.h>
 
-bool wbu_car_get_backwards_lights()
-bool wbu_car_get_brake_lights()
+bool wbu_car_get_backwards_lights();
+bool wbu_car_get_brake_lights();
 ```
 
 **Description**
 
-This two functions return respectively the state of the backwards and brake
+These two functions return respectively the state of the backwards and brake
 lights (these two lights are switched on automatically by the library when
 appropriated).
 
@@ -111,19 +111,19 @@ appropriated).
 
 **wbu\_car\_get\_track\_front**, **wbu\_car\_get\_track\_rear**, **wbu\_car\_get\_wheelbase**, **wbu\_car\_get\_front\_wheel\_radius**, **wbu\_car\_get\_rear\_wheel\_radius** - *Get car caracteristics*
 
-``` c
+```c
 #include <webots/car.h>
 
-double wbu_car_get_track_front()
-double wbu_car_get_track_rear()
-double wbu_car_get_wheelbase()
-double wbu_car_get_front_wheel_radius()
-double wbu_car_get_rear_wheel_radius()
+double wbu_car_get_track_front();
+double wbu_car_get_track_rear();
+double wbu_car_get_wheelbase();
+double wbu_car_get_front_wheel_radius();
+double wbu_car_get_rear_wheel_radius();
 ```
 
 **Description**
 
-All these functions provide important physical characteristics of the car.
+All these functions provide important physical characteristics from the car.
 
 ---
 
@@ -131,11 +131,11 @@ All these functions provide important physical characteristics of the car.
 
 **wbu\_car\_get\_wheel\_encoder**, **wbu\_car\_get\_wheel\_speed** - *Get the wheels speed/encoder*
 
-``` c
+```c
 #include <webots/car.h>
 
-double wbu_car_get_wheel_encoder(int wheel_index)
-double wbu_car_get_wheel_speed(int wheel_index)
+double wbu_car_get_wheel_encoder(int wheel_index);
+double wbu_car_get_wheel_speed(int wheel_index);
 ```
 
 **Description**
@@ -163,16 +163,16 @@ enum.
 
 **wbu\_car\_get\_right\_steering\_angle**, **wbu\_car\_get\_left\_steering\_angle** - *Get the right/left steering angle*
 
-``` c
+```c
 #include <webots/car.h>
 
-double wbu_car_get_right_steering_angle()
-double wbu_car_get_left_steering_angle()
+double wbu_car_get_right_steering_angle();
+double wbu_car_get_left_steering_angle();
 ```
 
 **Description**
 
-These two functions return respectively the right and left steering angle
+These two functions return respectively the right and left steering angles
 (because of the Ackermann steering geometry, the two angles are slightly
 different).
 
@@ -182,10 +182,10 @@ different).
 
 **wbu\_car\_enable\_limited\_slip\_differential** - *Enable/disable the limited slip differential mechanism*
 
-``` c
+```c
 #include <webots/car.h>
 
-void wbu_car_enable_limited_slip_differential(bool enable)
+void wbu_car_enable_limited_slip_differential(bool enable);
 ```
 
 **Description**
@@ -193,7 +193,7 @@ void wbu_car_enable_limited_slip_differential(bool enable)
 This function allows the user to enable or disable the limited differential slip
 (it is enabled by default). When the limited differential slip is enabled, at
 each time step, the torque (when control in torque is enabled) is redistributed
-among all the actuated wheels so that they rotate at the same speed (except the
+amongst all the actuated wheels so that they rotate at the same speed (except the
 difference due to the geometric differential constraint). If the limited
 differential slip is disabled, when a wheel starts to slip, it will rotate
 faster than the others.
@@ -204,10 +204,10 @@ faster than the others.
 
 **wbu\_car\_enable\_indicator\_auto\_disabling** - *Enable/disable the auto-disabling mechanism of the indicator*
 
-``` c
+```c
 #include <webots/car.h>
 
-void wbu_car_enable_indicator_auto_disabling(bool enable)
+void wbu_car_enable_indicator_auto_disabling(bool enable);
 ```
 
 **Description**

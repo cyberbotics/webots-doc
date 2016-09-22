@@ -6,7 +6,7 @@
 
 %end
 
-The following PROTOs of buildings are available to add in your worlds:
+The following PROTO nodes of buildings are available to add in your worlds:
 
 - Auditorium
 - BigGlassTower
@@ -22,10 +22,17 @@ The following PROTOs of buildings are available to add in your worlds:
 - SimpleTwoFloorsHouse
 - TheThreeTowers
 - UBuilding
+- FastFoodRestaurant
+
+%figure "An example of FastFoodRestaurant with two sides"
+
+![fastfood-restaurant.png](images/fastfood-restaurant.png)
+
+%end
 
 ### Generic building
 
-In addition to those PROTOs of buildings, the `GenericBuilding` PROTO represent
+In addition to those building PROTO nodes, the `GenericBuilding` PROTO represents
 a highly customizable building and can be used to model a large variety of
 buildings.
 
@@ -37,17 +44,17 @@ buildings.
 
 ```
 GenericBuilding {
-     SFFloat     floorHeight            3
-     SFInt32     floorNumber            3
-     MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
-     SFString    wallType               "building2"
-     SFString    roofType               "tiled"
-     SFString    roofShape              "pyramidal roof"
-     SFBool      snowOnRoof             FALSE
-     SFFloat     roofHeight             3
-     SFBool      enableBoundingObject   TRUE
-     SFBool      bottom                 FALSE
- }
+  SFFloat     floorHeight            3
+  SFInt32     floorNumber            3
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
+  SFString    wallType               "windowed building"
+  SFString    roofType               "tiled"
+  SFString    roofShape              "pyramidal roof"
+  SFBool      snowOnRoof             FALSE
+  SFFloat     roofHeight             3
+  SFBool      enableBoundingObject   TRUE
+  SFBool      bottom                 FALSE
+}
 ```
 
 #### GenericBuilding Field Summary
@@ -61,23 +68,25 @@ building).
 `tiled`, `gravel` and `slate`.
 - `roofShape`: Defines the geometry of the roof. Supported geometry are `flat
 roof` and `pyramidal roof`.
-- `snowOnRoof`: Defines if snow should be added on top of the roof.
+- `snowOnRoof`: Defines whether snow should be added on top of the roof.
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
 roof).
-- `enableBoundingObject`: Defines if the building should have a bounding object.
-- `bottom`: Defines if the bottom face of the building should be displayed.
+- `enableBoundingObject`: Defines whether the building should have a bounding object.
+- `bottom`: Defines whether the bottom face of the building should be displayed.
 
 ### Other city objects
 
 In addition to buildings, other PROTO nodes are available representing objects
-normally found in a city environment:
+usually found in a city environment:
 
 - BusStop
 - Fence
 - Fountain
+- PublicToilet
 
-%figure "The BusStop PROTO"
+%figure "The BusStop and PublicToilet PROTO models"
 
 ![bus_stop.png](images/bus_stop.png)
+![public-toilet.png](images/public-toilet.png)
 
 %end

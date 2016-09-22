@@ -206,7 +206,7 @@ specified by calling the `wb_servo_set_velocity()` function. This will initiate
 a continuous servo motion at the desired speed, while taking into account the
 specified acceleration and motor force. Example:
 
-```
+```c
 wb_servo_set_position(servo, INFINITY);
 wb_servo_set_velocity(servo, 6.28);  // 1 rotation per second
 ```
@@ -469,17 +469,17 @@ Please note the dummy [Physics](physics.md) and the 1 millimeter
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_set_position(WbDeviceTag tag, double position)
-double wb_servo_get_target_position(WbDeviceTag tag)
-void wb_servo_set_velocity(WbDeviceTag tag, double velocity)
-void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration)
-void wb_servo_set_motor_force(WbDeviceTag tag, double force)
-void wb_servo_set_control_p(WbDeviceTag tag, double p)
-double wb_servo_get_min_position(WbDeviceTag tag)
-double wb_servo_get_max_position(WbDeviceTag tag)
+void wb_servo_set_position(WbDeviceTag tag, double position);
+double wb_servo_get_target_position(WbDeviceTag tag);
+void wb_servo_set_velocity(WbDeviceTag tag, double velocity);
+void wb_servo_set_acceleration(WbDeviceTag tag, double acceleration);
+void wb_servo_set_motor_force(WbDeviceTag tag, double force);
+void wb_servo_set_control_p(WbDeviceTag tag, double p);
+double wb_servo_get_min_position(WbDeviceTag tag);
+double wb_servo_get_max_position(WbDeviceTag tag);
 ```
 
 **Description**
@@ -579,20 +579,20 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_enable_position(WbDeviceTag tag, int ms)
-void wb_servo_disable_position(WbDeviceTag tag)
-int wb_servo_get_position_sampling_period(WbDeviceTag tag)
-double wb_servo_get_position(WbDeviceTag tag)
+void wb_servo_enable_position(WbDeviceTag tag, int sampling_period);
+void wb_servo_disable_position(WbDeviceTag tag);
+int wb_servo_get_position_sampling_period(WbDeviceTag tag);
+double wb_servo_get_position(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_servo_enable_position()` function activates position measurements for
-the specified servo. A new position measurement will be performed each `ms`
-milliseconds; the result must be obtained with the `wb_servo_get_position()`
+the specified servo. A new position measurement will be performed each `sampling_period`
+(expressed in milliseconds); the result must be obtained with the `wb_servo_get_position()`
 function. The returned value corresponds to the most recent measurement of the
 servo position. The `wb_servo_get_position()` function measures the *effective
 position* of the servo which, under the effect of external forces, is usually
@@ -617,20 +617,20 @@ into the `wb_servo_enable_position()` function, or 0 if the device is disabled.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int ms)
-void wb_servo_disable_motor_force_feedback(WbDeviceTag tag)
-int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag)
-double wb_servo_get_motor_force_feedback(WbDeviceTag tag)
+void wb_servo_enable_motor_force_feedback(WbDeviceTag tag, int sampling_period);
+void wb_servo_disable_motor_force_feedback(WbDeviceTag tag);
+int wb_servo_get_motor_force_feedback_sampling_period(WbDeviceTag tag);
+double wb_servo_get_motor_force_feedback(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_servo_enable_motor_force_feedback()` function activates torque/force
 feedback measurements for the specified servo. A new measurement will be
-performed each `ms` milliseconds; the result must be retrieved with the
+performed each `sampling_period` (expressed in milliseconds); the result must be retrieved with the
 `wb_servo_get_motor_force_feedback()` function.
 
 The `wb_servo_get_motor_force_feedback()` function returns the most recent motor
@@ -675,10 +675,10 @@ the device is disabled.
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-void wb_servo_set_force(WbDeviceTag tag, double force)
+void wb_servo_set_force(WbDeviceTag tag, double force);
 ```
 
 **Description**
@@ -718,10 +718,10 @@ dampers with controllable properties. The example in
 
 {[C++](cpp-api.md#cpp_servo)}, {[Java](java-api.md#java_servo)}, {[Python](python-api.md#python_servo)}, {[Matlab](matlab-api.md#matlab_servo)}
 
-``` c
+```c
 #include <webots/servo.h>
 
-int wb_servo_get_type(WbDeviceTag tag)
+int wb_servo_get_type(WbDeviceTag tag);
 ```
 
 **Description**

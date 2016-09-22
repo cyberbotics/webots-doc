@@ -66,21 +66,20 @@ value in the interval (0.0, inf).
 
 {[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gps.h>
 
-void wb_gps_enable(WbDeviceTag tag, int ms)
-void wb_gps_disable(WbDeviceTag tag)
-int wb_gps_get_sampling_period(WbDeviceTag tag)
-const double *wb_gps_get_values(WbDeviceTag tag)
-const double wb_gps_get_speed(WbDeviceTag tag)
+void wb_gps_enable(WbDeviceTag tag, int sampling_period);
+void wb_gps_disable(WbDeviceTag tag);
+int wb_gps_get_sampling_period(WbDeviceTag tag);
+const double *wb_gps_get_values(WbDeviceTag tag);
+const double wb_gps_get_speed(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_gps_enable()` allows the user to enable a GPS measurement each `ms`
-milliseconds.
-The provided `ms` argument specifies the sensor's sampling period.
+`wb_gps_enable()` allows the user to enable GPS measurements.
+The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 `wb_gps_disable()` turns the GPS off, saving computation time.
@@ -121,10 +120,10 @@ period they must be copied.
 
 {[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gps.h>
 
-int wb_gps_get_coordinate_system(WbDeviceTag tag)
+int wb_gps_get_coordinate_system(WbDeviceTag tag);
 ```
 
 **Description**
@@ -142,10 +141,10 @@ WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 
 {[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/gps.h>
 
-const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees)
+const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees);
 ```
 
 **Description**

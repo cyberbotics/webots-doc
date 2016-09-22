@@ -7,7 +7,7 @@ obviously a necessary step to get started with the tutorials.
 
 Webots has to be installed on your computer.
 
-> **handson**:
+> **Hands on**:
 Install Webots by following the instructions given in [this
 chapter](installing-webots.md).
 
@@ -16,21 +16,25 @@ chapter](installing-webots.md).
 The first step is to create a directory which will contain all your files
 related to Webots.
 
-> **handson**:
+> **Hands on**:
 From your operating system interface, choose a location on your hard disk where
 you have the writing rights (for example, your "[My]Documents" directory).
-Create there a directory that will contain all your Webots projects, and name it
+Create a directory that will contain all your Webots projects, and name it
 "my\_webots\_projects".
 
 ### Start Webots
 
 You need to learn how to launch Webots.
 
-> **handson**:
+> **Hands on**:
 Start Webots by following the instructions given in [this
 section](starting-webots.md).
 
-> If it's the first time you start Webots, a welcome dialog box invites you to
+<!-- -->
+
+> **Note**:
+A Guided Tour is available if you have a PRO or EDU License.
+If it's the first time you start Webots, a welcome dialog box invites you to
 choose a demo simulation. Choose any of them, but it's a good opportunity to
 take a look at our guided tour (also available using the `Help / Webots Guided
 Tour...` menu).
@@ -40,11 +44,11 @@ Now a simulation is running.
 ### Create a new Project
 
 The freshly created "my\_webots\_projects" directory will contain all your
-Webots projects. Your first Webots project will be the tutorials of this
-chapter. So let's create now a project named "tutorials" which will contain all
+Webots projects. Your first Webots project will be the tutorials from this
+chapter. So let us now create a project named "tutorials" which will contain all
 the simulations of this chapter.
 
-> **note**:
+> **Note**:
 As mentioned earlier in this chapter, the solutions of the tutorials are
 included in the "WEBOTS\_HOME/projects/samples/tutorials" subdirectory of
 Webots. Don't look at it now! Hopefully, your own "tutorials" directory should
@@ -52,7 +56,7 @@ be pretty similar to that one at the end.
 
 <!-- -->
 
-> **theory**:
+> **Theory**:
 A **project** is a directory containing all the files related to a set of
 simulations. It is the highest container in Webots. Two simulations should
 reside in the same project if they share some content (robots, source code, 3D
@@ -60,14 +64,14 @@ shapes, etc.).
 
 <!-- -->
 
-> **handson**:
+> **Hands on**:
 In Webots, open the wizard by selecting the `Wizards / New Project Directory...`
 menu item. From this wizard, follow the instructions to create a new project
 named "tutorials" in the "my\_webots\_projects" directory created before.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 From your desktop, open the project directory and observe its subdirectories. We
 will soon explain the purpose of each directory.
 

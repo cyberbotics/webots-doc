@@ -4,12 +4,13 @@ Derived from [Device](device.md).
 
 ```
 Motor {
-  SFFloat maxVelocity  10 # (m/s or rad/s): (0,inf)
-  SFVec3f controlPID   10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
-  SFFloat acceleration -1 # (m/s^2 or rad/s^2): -1 or (0,inf)
-  SFFloat minPosition  0  # (m or rad): (-inf,inf) or [-pi, pi]
-  SFFloat maxPosition  0  # (m or rad): (-inf,inf) or [-pi, pi]
-  SFString sound ""       # wave file of the motor sound
+  SFFloat acceleration      -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
+  SFFloat consumptionFactor 10     # energy consumption (W/N or W/(N*m))
+  SFVec3f controlPID        10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
+  SFFloat minPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat maxVelocity       10     # (m/s or rad/s): (0, inf)
+  SFString sound            ""     # wave file of the motor sound
 }
 ```
 
@@ -27,10 +28,12 @@ power a [SliderJoint](hingejoint.md), producing a sliding motion along its axis.
 
 ### Field Summary
 
-- The `maxVelocity` field specifies both the upper limit and the default value for
-the motor *velocity*. The *velocity* can be changed at run-time with the
-`wb_motor_set_velocity()` function. The value should always be positive (the
-default is 10).
+- The `acceleration` field defines the default acceleration of the P-controller. A
+value of -1 (infinite) means that the acceleration is not limited by the
+P-controller. The acceleration can be changed at run-time with the
+`wb_motor_set_acceleration()` function.
+
+- The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
 
 - The first coordinate of `controlPID` field specifies the initial value of the
 *P* parameter, which is the *proportional gain* of the motor PID-controller. A
@@ -57,19 +60,14 @@ position, but the system is more stable.
     The value of *P, I* and *D* can be changed at run-time with the
     `wb_motor_set_control_pid()` function.
 
-- The `acceleration` field defines the default acceleration of the P-controller. A
-value of -1 (infinite) means that the acceleration is not limited by the
-P-controller. The acceleration can be changed at run-time with the
-`wb_motor_set_acceleration()` function.
-
-- The `position` field represents the current *position* of the [Motor](#motor),
-in radians or meters. For a rotational motor, `position` represents the current
-rotation angle in radians. For a linear motor, `position` represents the
-magnitude of the current translation in meters.
-
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Motor Limits"
 section, see below.
+
+- The `maxVelocity` field specifies both the upper limit and the default value for
+the motor *velocity*. The *velocity* can be changed at run-time with the
+`wb_motor_set_velocity()` function. The value should always be positive (the
+default is 10).
 
 - The `sound` field specifies the URL of a WAVE sound file, relatively to the
 location of the world file or PROTO file which contains the `Motor` node. This
@@ -78,14 +76,14 @@ pitch according to the velocity of the motor to produce a realistic motor sound.
 
 ### Units
 
-By *motor position*, we mean joint position as defined in
-[JointParameters](jointparameters.md). Rotational motors units are expressed in
-*radians* while linear motors units are expressed in *meters*. See [this
-table](#motor-units):
+The position of a motor corresponds to joint position as defined in
+[JointParameters](jointparameters.md). The position of a rotational motor is
+expressed in *radians* while the position of a linear motor is expressed in
+*meters*. See [this table](#motor-units):
 
 %figure "Motor Units"
 
-|              | Rotational                   | Linear                    |
+| &nbsp;       | Rotational                   | Linear                    |
 | ------------ | ---------------------------- | ------------------------- |
 | Position     | rad (radians)                | m (meters)                |
 | Velocity     | rad/s (radians / second)     | m/s (meters / second)     |
@@ -154,7 +152,7 @@ where  *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and
 *D* are the PID-control gains specified in the `controlPID` field, or set with
 `wb_motor_set_control_pid()`, *P<sub>t</sub>* is the *target position* of the
 motor set by the function `wb_motor_set_position()`, *P<sub>c</sub>* is the
-current motor position as reflected by the `position` field, *V<sub>d</sub>* is
+current motor position, *V<sub>d</sub>* is
 the desired velocity as specified by the `maxVelocity` field (default) or set
 with `wb_motor_set_velocity()`, *a* is the acceleration required to reach *Vc*
 in one time step, *V<sub>p</sub>* is the motor velocity of the previous time
@@ -206,7 +204,7 @@ control) algorithm is used.
 
 %figure "Motor Control Summary"
 
-|                                                                                | position control                                 | velocity control                                 | force or torque control                      |
+| &nbsp;                                                                         | position control                                 | velocity control                                 | force or torque control                      |
 | ------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | -------------------------------------------- |
 | uses PID-controller                                                            | yes                                              | no                                               | no                                           |
 | wb\_motor\_set\_position()                                                     | * specifies the desired position                 | should be set to INFINITY                        | switches to position/velocity control        |
@@ -242,6 +240,21 @@ a simulation instability can appear if `position` is exactly equal to one of the
 bounds defined by the `minStop` and `maxStop` fields at the simulation startup.
 Warnings are displayed if theses rules are not respected.
 
+### Energy Consumption
+
+If the [Robot](robot.md) ancestor of a [Motor](motor.md) node has a `battery` field defined, then the energy consumption is computed for the whole robot. This computation sums up the energy consumption of every device, including this motor. The energy consumption (expressed in Joule) is computed by integrating the power consumption over time (expressed in Watt). The power consumption for a rotational motor (`electrical_input_power`) is computed according to the following equation:
+
+`electrical_input_power` = `output_torque` * `consumptionFactor`
+
+Similarly, for a linear motor it is computed according to the following equation:
+
+`electrical_input_power` = `output_force` * `consumptionFactor`
+
+Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumptionFactor` is a constant provided by the `consumptionFactor` field of the [Motor](motor.md) node.
+
+> **note**:
+This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for most prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.
+
 ### Motor Functions
 
 **Name**
@@ -250,25 +263,25 @@ Warnings are displayed if theses rules are not respected.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-void wb_motor_set_position(WbDeviceTag tag, double position)
-void wb_motor_set_velocity(WbDeviceTag tag, double velocity)
-void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration)
-void wb_motor_set_available_force(WbDeviceTag tag, double force)
-void wb_motor_set_available_torque(WbDeviceTag tag, double torque)
-void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d)
-double wb_motor_get_target_position(WbDeviceTag tag)
-double wb_motor_get_min_position(WbDeviceTag tag)
-double wb_motor_get_max_position(WbDeviceTag tag)
-double wb_motor_get_velocity(WbDeviceTag tag)
-double wb_motor_get_max_velocity(WbDeviceTag tag)
-double wb_motor_get_acceleration(WbDeviceTag tag)
-double wb_motor_get_available_force(WbDeviceTag tag)
-double wb_motor_get_max_force(WbDeviceTag tag)
-double wb_motor_get_available_torque(WbDeviceTag tag)
-double wb_motor_get_max_torque(WbDeviceTag tag)
+void wb_motor_set_position(WbDeviceTag tag, double position);
+void wb_motor_set_velocity(WbDeviceTag tag, double velocity);
+void wb_motor_set_acceleration(WbDeviceTag tag, double acceleration);
+void wb_motor_set_available_force(WbDeviceTag tag, double force);
+void wb_motor_set_available_torque(WbDeviceTag tag, double torque);
+void wb_motor_set_control_pid(WbDeviceTag tag, double p, double i, double d);
+double wb_motor_get_target_position(WbDeviceTag tag);
+double wb_motor_get_min_position(WbDeviceTag tag);
+double wb_motor_get_max_position(WbDeviceTag tag);
+double wb_motor_get_velocity(WbDeviceTag tag);
+double wb_motor_get_max_velocity(WbDeviceTag tag);
+double wb_motor_get_acceleration(WbDeviceTag tag);
+double wb_motor_get_available_force(WbDeviceTag tag);
+double wb_motor_get_max_force(WbDeviceTag tag);
+double wb_motor_get_available_torque(WbDeviceTag tag);
+double wb_motor_get_max_torque(WbDeviceTag tag);
 ```
 
 **Description**
@@ -383,28 +396,27 @@ respectively the `minPosition` and the `maxPosition` fields.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-void wb_motor_enable_force_feedback(WbDeviceTag tag, int ms)
-void wb_motor_disable_force_feedback(WbDeviceTag tag)
-int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag)
-double wb_motor_get_force_feedback(WbDeviceTag tag)
-void wb_motor_enable_torque_feedback(WbDeviceTag tag, int ms)
-void wb_motor_disable_torque_feedback(WbDeviceTag tag)
-int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag)
-double wb_motor_get_torque_feedback(WbDeviceTag tag)
+void wb_motor_enable_force_feedback(WbDeviceTag tag, int sampling_period);
+void wb_motor_disable_force_feedback(WbDeviceTag tag);
+int wb_motor_get_force_feedback_sampling_period(WbDeviceTag tag);
+double wb_motor_get_force_feedback(WbDeviceTag tag);
+void wb_motor_enable_torque_feedback(WbDeviceTag tag, int sampling_period);
+void wb_motor_disable_torque_feedback(WbDeviceTag tag);
+int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
+double wb_motor_get_torque_feedback(WbDeviceTag tag);
 ```
 
 **Description**
 
 The `wb_motor_enable_force_feedback()` (resp.
 `wb_motor_enable_torque_feedback()`) function activates force (resp. torque)
-feedback measurements for the specified motor. A new measurement will be
-performed each `ms` milliseconds; the result must be retrieved with the
+feedback measurements for the specified motor. The result must be retrieved with the
 `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
 function.
-The provided `ms` argument specifies the sensor's sampling period.
+The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
 The `wb_motor_get_force_feedback()` (resp. `wb_motor_get_torque_feedback()`)
@@ -456,11 +468,11 @@ given in the `wb_motor_enable_force_feedback()` (resp.
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-void wb_motor_set_force(WbDeviceTag tag, double force)
-void wb_motor_set_torque(WbDeviceTag tag, double torque)
+void wb_motor_set_force(WbDeviceTag tag, double force);
+void wb_motor_set_torque(WbDeviceTag tag, double torque);
 ```
 
 **Description**
@@ -479,7 +491,7 @@ In a "rotational" motor, the *torque* parameter specifies the amount of torque
 the *force* parameter specifies the amount of force [N] that will be applied
 along the sliding axis. A positive *force* (resp. *torque*) will move the bodies
 in the positive direction, which corresponds to the direction of the motor when
-the `position` field increases. When invoking `wb_motor_set_force()` (resp.
+its position value increases. When invoking `wb_motor_set_force()` (resp.
 `wb_motor_set_torque()`), the specified *force* (resp. *torque*) parameter
 cannot exceed the current motor force (resp. torque) of the motor specified with
 `wb_motor_set_force()` (resp. `wb_motor_set_torque()`) and defaulting to the
@@ -502,10 +514,10 @@ dampers with controllable properties. The example in
 
 {[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/motor.h>
 
-int wb_motor_get_type(WbDeviceTag tag)
+int wb_motor_get_type(WbDeviceTag tag);
 ```
 
 **Description**

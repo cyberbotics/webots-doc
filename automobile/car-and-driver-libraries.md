@@ -1,13 +1,14 @@
 # Car and Driver libraries
 
-To ease the creation of controllers for any [Car](car.md) PROTOs (or any PROTOs
-inherited from [Car](car.md)), two libraries are provided. These two libraries
-are easy to use, provide high-level functionalities and save the user from
-knowing the name of the internal devices nodes (`Motors`, `Brakes`, etc.) of the
-car. This section presents and explains how to use these two libraries.
+To ease the creation of controllers for any [Car](car.md) PROTO models (or any
+PROTO node inherited from [Car](car.md)), two libraries are provided.
+These two libraries are easy to use, provide high-level functionalities and save
+the user from knowing the name of the internal devices nodes (`Motors`,
+`Brakes`, etc.) of the car.
+This section presents and explains how to use these two libraries.
 
 ## Sections
 - [Driver library](driver-library.md)
 - [Car library](car-library.md)
-- [C++ and Java wrappers of the automobile libraries](cpp-and-java-wrappers-of-the-automobile-libraries.md)
+- [C++, Java and Python wrappers of the automobile libraries](cpp-java-and-python-wrappers-of-the-automobile-libraries.md)
 - [ROS support](ros-support.md)

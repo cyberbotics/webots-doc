@@ -11,11 +11,7 @@ API is composed of ".h" files that contains flat C functions that can be used in
 C or C++ controllers. The C++ API is composed of ".hpp" files that contain C++
 classes and methods that can be used in C++ controllers only.
 
-Two Visual C++ projects examples are included in Webots distribution:
-"WEBOTS\_HOME\projects\robots\khr-2hv\controllers\khr2\khr2.vcproj" and
-"WEBOTS\_HOME\projects\robots\khr-2hv\plugins\physics\khr2\physics.vcproj".
-However in principle any C or C++ controller from Webots distribution can be
-turned into a Visual C++ project.
+Two Microsoft Visual C++ 2010 Express projects examples are included in the Webots distribution: "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\robocup_striker\\robocup_striker.sln" and "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\naoqisim\\naoqisim.sln". However, in principle any C or C++ controller from the Webots distribution can be turned into a Visual C++ project.
 
 ### Configuration
 
@@ -75,8 +71,8 @@ enter following configuration:
     This will tell Visual C++ where to find Webots C API (.h files).
 
     By default Visual C++ places the .exe file in a "Debug" or "Release"
-    subdirectory. However order to be executed by Webots, the .exe file must be
-    placed directly at the root of the "MyController" directory. So in this example
+    subdirectory. However, in order to be executed by Webots, the .exe file must be
+    placed directly at the root of the "MyController" directory. So, in this example
     the .exe should be there: "MyProject\controllers\MyController\MyController.exe".
     Consequently the linker output file should be configured like this:
 
@@ -88,6 +84,12 @@ enter following configuration:
           Controller.lib
         Linker > General > Additional Library Directories:
           C:\Program Files\Webots\msys64\mingw64\lib\
+
+    Note that with old versions of Visual C++, the default target is a 32-bit binary.
+    In case you are compiling the controller as a 32-bit binary, you will need to link it with the 32-bit version of the Controller library instead:
+
+        Linker > General > Additional Library Directories:
+          C:\Program Files\Webots\msys64\mingw32\lib\
 
 5. If you want to use the C API, you should skip step 5 and go directly to step 6.
 If you want to use the C++ API follow these instructions:
@@ -123,7 +125,7 @@ and verify that your robot is associated with the correct controller: In the
 `Scene tree`, expand the robot node and check the `controller` field. It should
 be: `controller "MyController"`. Otherwise you should change it: hit the `...`
 (ellipsis) button, this opens a selection dialog. In the selection dialog choose
-"MyController". Then hit the `Save` button in Webots main window. Finally you
+"MyController". Then hit the `Save` button in Webots' main window. Finally you
 can hit the `Run` button to start the simulation. At this point the simulation
 should be using your Visual C++ controller.
 
@@ -134,3 +136,47 @@ the `Pause` button then the `Revert` button. Then, in Visual C++, use the `Debug
 process. Still in Visual C++, you can now add breakpoints and watches in the
 controller code. Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
+
+
+### Link with the Webots libraries
+
+Webots contains several `C` or `C++` libraries based on the `libController` or
+`libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
+`youBot library`, etc.).
+
+The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file
+(the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
+They are located in the following directories (depending on their architecture):
+
+```
+$(WEBOTS_HOME)/msys64/ming32/lib/
+$(WEBOTS_HOME)/msys64/ming64/lib/
+```
+
+**Note**:
+The chosen architecture should match with Visual Studio solution platform and the path
+to the `Controller.lib` library.
+
+However there is no precompiled `C++` libraries for Visual Studio, because
+the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
+To use the `C++` libraries with your project, their source files should be compiled directly in your project,
+exactly as for the `libCppController` library (cf. instructions above).
+
+For example, to add the `C++ automobile libraries`:
+
+- add the following include files to your project (`C/C++ > General > Additional Include Directories`)
+
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/car/include`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/driver/include`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/include`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/include`
+
+- add the `C` `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
+
+    - `car.lib`
+    - `driver.lib`
+
+- add the following `C++` source files to your project (`Add / New Filter` and `Add / Existing Item...`)
+
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/src/*.cpp`
+    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/src/*.cpp`

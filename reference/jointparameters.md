@@ -28,10 +28,7 @@ parameters node, it has no anchor.
 
 ### Field Summary
 
-- The `position` field represents the current *position* of the joint, in radians
-or meters. For an hinge, `position` represents the current rotation angle in
-radians. For a slider, `position` represents the magnitude of the current
-translation in meters.
+- The `position` field represents the current *position* of the joint, in radians or meters. For an hinge, it is the current rotation angle in radians. For a slider, it is the magnitude of the current translation in meters. When changing the `position` field from the Webots scene tree, Webots also changes the corresponding `rotation` (for a hinge) or `translation` (for a slider) field in the `endPoint` solid of the parent joint node to keep the consistency of the model. Similarly, when changing the `position` field of a [JointParameters](#jointparameters) node in a text editor, you should take care of also changing the corresponding `rotation` or `translation` field accordingly.
 
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
 position. These fields are described in more detail in the "Joint Limits"
@@ -50,14 +47,14 @@ the joint motion.
 
 ### Units
 
-Rotational joint units ([HingeJoint](hingejoint.md),
-[Hinge2Joint](hinge2joint.md)) are expressed in *radians* while linear joint
-units ([SliderJoint](sliderjoint.md)) are expressed in *meters*. See [this
-table](#joint-units):
+The position of a rotational joint ([HingeJoint](hingejoint.md) or
+[Hinge2Joint](hinge2joint.md)) is expressed in *radians* while the position of
+a linear joint ([SliderJoint](sliderjoint.md)) is expressed in *meters*. See
+[this table](#joint-units):
 
 %figure "Joint Units"
 
-|          | Rotational    | Linear     |
+|  &nbsp;  | Rotational    | Linear     |
 | -------- | ------------- | ---------- |
 | Position | rad (radians) | m (meters) |
 

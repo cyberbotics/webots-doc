@@ -82,15 +82,15 @@ restored.
 
 **Name**
 
-**wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of the display*
+**wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of a display*
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
-int wb_display_get_width(WbDeviceTag tag)
-int wb_display_get_height(WbDeviceTag tag)
+int wb_display_get_width(WbDeviceTag tag);
+int wb_display_get_height(WbDeviceTag tag);
 ```
 
 **Description**
@@ -102,21 +102,22 @@ fields.
 
 **Name**
 
-**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity** - *set the drawing properties of the display*
+**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity**, **wb\_display\_set\_font**  - *set the drawing properties of a display*
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
-void wb_display_set_color(WbDeviceTag tag, int color)
-void wb_display_set_alpha(WbDeviceTag tag, double alpha)
-void wb_display_set_opacity(WbDeviceTag tag, double opacity)
+void wb_display_set_color(WbDeviceTag tag, int color);
+void wb_display_set_alpha(WbDeviceTag tag, double alpha);
+void wb_display_set_opacity(WbDeviceTag tag, double opacity);
+void wb_display_set_font(WbDeviceTag tag, const char *font, int size, bool anti_aliasing);
 ```
 
 **Description**
 
-These three functions define the context in which the subsequent drawing
+These four functions define the context in which the subsequent drawing
 commands (see [draw primitive functions](#wb_display_draw_pixel)) will be
 applied.
 
@@ -142,7 +143,7 @@ replace the old ones for the following drawing instructions. It is expressed as
 a floating point value between 0.0 and 1.0; while 0 means that the new pixel has
 no effect over the old one and 1 means that the new pixel replaces entirely the
 old one. Only the color channel is affected by the `opacity` according to the
-[figure](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
+[blending](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
 formula.
 
 %figure "Blending formula used to compute the new the color channels (Cn) of a pixel from the old color channels (Co) of the background pixel and from the opacity."
@@ -151,37 +152,74 @@ formula.
 
 %end
 
+`wb_display_set_font()` defines the font and the size (in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters. The following standard fonts are available:
+  - Arial
+  - Arial Black
+  - Comic Sans MS
+  - Courier New
+  - Georgia
+  - Impact
+  - Lucida Console
+  - Lucida Sans Unicode
+  - Palatino Linotype
+  - Tahoma
+  - Times New Roman
+  - Trebuchet MS
+  - Verdana
+
+In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
+
 > **note** [Matlab]:
 In the Matlab version of `wb_display_set_color()` the `color` argument must be a
 vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents
 the magenta color.
 
+
 ---
 
 **Name**
 
-**wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on the display*
+**wb\_display\_attach\_camera**, **wb\_display\_detach\_camera** - *attach/detach a camera to a display*
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
-void wb_display_draw_pixel(WbDeviceTag tag, int x, int y)
-void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2)
-void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height)
-void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
-void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
-void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y)
-void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height)
-void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b)
-void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size)
+void wb_display_attach_camera(WbDeviceTag tag, WbDeviceTag camera_tag);
+void wb_display_detach_camera(WbDeviceTag tag);
 ```
 
 **Description**
 
-These functions order the execution of a drawing primitive on the display. They
+These functions are used to attach/detach a camera to a display. When a camera is attached to a display, the camera images are efficiently copied to the background of the display. This is useful for example to draw over some camera rendering or to simulate mirrors.
+
+---
+
+**Name**
+
+**wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on a display*
+
+{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/display.h>
+
+void wb_display_draw_pixel(WbDeviceTag tag, int x, int y);
+void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2);
+void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
+void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
+void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
+void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y);
+void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
+void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
+void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
+```
+
+**Description**
+
+These functions order the execution of a drawing primitive on a display. They
 depend on the context of the display as defined by the contextual functions (see
 [set context functions](#wb_display_set_color)).
 
@@ -203,8 +241,7 @@ vertices. The list of vertices must be defined into `px` and `py`. If the first
 pixel coordinates are not identical to the last ones, the loop is automatically
 closed. Here is an example :
 
-```
-
+```c
   const int px[] = {10,20,10, 0};
   const int py[] = {0, 10,20,10};
   wb_display_draw_polygon(display,px,py,4); // draw a diamond
@@ -239,15 +276,15 @@ languages the size is determined directly from the `x` and `y` arguments.
 
 {[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/display.h>
 
-WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format)
-WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename)
-WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height)
-void wb_display_image_paste(WbDeviceTag tag, WbImageRef ir, int x, int y)
-void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename)
-void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir)
+WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format);
+WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename);
+WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height);
+void wb_display_image_paste(WbDeviceTag tag, WbImageRef ir, int x, int y, bool blend);
+void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename);
+void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir);
 ```
 
 **Description**
@@ -284,12 +321,7 @@ sub-image is defined by its top left coordinate (`x`,`y`) and its dimensions
 
 `wb_display_image_paste()` pastes a clipboard image referred to by the `ir`
 parameter to the main display image. The (`x`,`y`) coordinates define the top
-left point of the pasted image. The resulting pixels displayed in the main
-display image are computed using a blending operation (similar to the one
-depicted in the
-[figure](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity)
-formula but involving the alpha channels of the old and new pixels instead of
-the opacity).
+left point of the pasted image. If the `blend` parameter is true, the resulting pixels displayed in the main display image are computed using a blending operation (similar to the one defined in the [blending](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity) formula but involving the alpha channels of the old and new pixels instead of the opacity). In the `blend` parameter is set to false, the resulting pixels are simply copied from the clipboard image. The paste operation is much faster if `blend` is set to false.
 
 `wb_display_image_save()` saves a clipboard image referred to by the `ir`
 parameter to a file. The file name is defined by the `filename` parameter

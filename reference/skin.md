@@ -10,7 +10,6 @@ Skin {
   SFString     name          "skin"
   SFString     model         ""
   MFNode       appearance    []
-  SFString     restPosePath  ""
   MFNode       bones         []
   SFBool       castShadows   TRUE
 }
@@ -19,30 +18,32 @@ Skin {
 ### Description
 
 The [Skin](#skin) node can be used to simulate soft mesh animation for example of a human or an animal.
-The skin mesh is imported from an Ogre mesh files specified by the `model` name.
-But in order to be animated it has to be attached to a skeleton so that the rotation of the skeleton joints results in appropriate deformation of the skin mesh.
-This nodes provides two alternative ways to define a skeleton.
-The first method consists in providing an Ogre XML skeleton file having the same file name as the Ogre Mesh file.
-Otherwise it is possible to list [Solid](#solid.md) noded corresponding to the mesh bones using the `bones` field.
+The skin mesh is imported from an Ogre mesh file specified by the `model` name,
+but in order to be animated it has to be attached to a skeleton so that the rotation of the skeleton joints results in appropriate deformation of the skin mesh.
+
+This node provides two alternative ways to define a skeleton.
+The first method consists in providing an Ogre XML skeleton file having the same file name as the Ogre mesh file.
+The second method consists in listing the [Solid](#solid.md) nodes corresponding to the mesh bones using the `bones` field.
 If in the first case the resulting object animation will be purely graphical, when linking the [Skin](#skin) to an existing Webots skeleton made of [Solid](#solid.md) and [Joint](#joint.md) nodes it is possible to animate an dynamic object.
 
-The XML files containing the skin mesh and skeleton model files can be generated using a 3D modeling software like Blender (TM) and using the plugin to export to Ogre. Then the mesh.xml XML file has to be converted to a .mesh binary file in order to use it in Webots.
-The converter executable is available at "$(WEBOTS\_HOME)/bin/ogre/OgreXMLConverter".
+The XML files containing the skin mesh and skeleton can be generated using a 3D modeling software and then exporting them to Ogre format.
+For example, the [Blender2OGRE](https://bitbucket.org/iboshkov/blender2ogre) plugin can be used to export the mesh and skeleton from [Blender](https://www.blender.org/) 3D modeling tool.
+Then the exported ".mesh.xml" and ".skeleton.xml" XML file have to be converted to the corresponding ".mesh" and ".skeleton" binary files using the converter "$(WEBOTS\_HOME)/bin/ogre/OgreXMLConverter" in order to use it in Webots.
 
-Makehuman (TM) is a tool for generating models of humans. The human characters in the provided samples are generated using Makehuman (TM).
+Other tools can be used for generating the characters to animate, for example human characters in the provided samples are generated using [MakeHuman](http://www.makehuman.org/).
 
 #### Physically driven skin animation
 
 If you want that the skin is animated based on the movements of a dynamic object then you have to specify skeleton by listing the [Solid](#solid.md) nodes corresponding to the skeleton bones in the `bones` field.
-Each [Solid](#solid.md) bone have to be a child node of a [Joint](#joint.md).
-Moreover mesh bone structure and the [Solid](#solid.md)/[Joint](#joint.md) have to match.
-In particular this means that the number of mesh bones have to match with the number of joints.
-
+Each listed [Solid](#solid.md) bone have to be a child node of a [Joint](#joint.md).
+Moreover the mesh bone structure and the [Solid](#solid.md)/[Joint](#joint.md) have to match.
+In particular, this means that the number of mesh bones have to match with the number of joints and
+that the [Solid](#solid.md) nodes have to be listed in the same order as the specified in the mesh file.
 
 #### Pure graphical skin animation
 
 For a purely graphical skin animation the `bones` field doesn't have to be specified.
-In this case the skeleton needed to animate the skin is expected to be loaded from a file named "<modelName>.skeleton.xml", where <modelName> corresponds to the `model` field value, and located in the same folder as the mesh and material files.
+In this case the skeleton needed to animate the skin is loaded from a file named "<modelName>.skeleton.xml", where <modelName> corresponds to the `model` field value, and located in the same folder as the mesh file.
 
 ### Field Summary
 
@@ -62,24 +63,6 @@ The materials used by the imported mesh have to be defined in the `appearance` f
 - `appearance`: list of [Appearance](#appearance.md) nodes defining the materials used by the mesh defined in the `model` field.
 In order to be correctly used, the `name` field of the child [Appearance](#appearance.md) node has to match the material name used in the mesh definition.
 If multiple [Appearance](#appearance.md) nodes have the same `name` field value, the first one is used.
-
-- `restPosePath`: path to a file containing the rest pose of the skin model.
-Rest pose is the pose the object should have if all the rotations are set to zero.
-In other words, this is the initial reference pose relative to which all rotations are specified.
-This is needed when we want to re-target pose data from another source and animate the character.
-For example, this source could be a motion file.
-In that case, the rest pose of this character node and the rest pose defined in the motion file must be similar.
-This field may be an absolute path, or a path relative to current project directory.
-The rest pose is specified in a text file in the format shown below.
-Thefirst number is the joint id, as specified in the .skeleton file.
-The next four numbers represent a quaternion, with its elements in the order [w, x, y, z].
-It is not necessary to specify rest pose for all joints.
-No rest pose is set for those joints which are not present in the rest pose file.
-```
-2: 0.98477, 0.173642, 0.00151535, -0.00859396
-3: 0.98477, 0.173642, -0.00151535, 0.00859396
-5: 0.976296, 0.21644, 0, 0     
-```
 
 - The `bones` fields contains a list of [SolidReference](#solidreference.md) nodes that provide the information to attach a Webots skeleton made of [Solid](#solid.md) and [Joint](#joint.md) nodes.
 In order to setup correctly the skeleton, the solid have to be listed in the same order as specified in the mesh file.
@@ -115,26 +98,38 @@ But if a Webots skeleton is used, then the bone count will correspond to the val
 
 **Name**
 
-**wb\_skin\_set\_bone\_orientation**, **wb\_skin\_set\_bone\_position** - *set the bone orientation and position.*
+**wb\_skin\_get\_bone\_orientation**, **wb\_skin\_get\_bone\_position,
+  wb\_skin\_set\_bone\_orientation**, **wb\_skin\_set\_bone\_position** - *get or set the bone orientation and position.*
 
 {[C++](cpp-api.md#cpp_skin)}, {[Java](java-api.md#java_skin)}, {[Python](python-api.md#python_skin)}, {[Matlab](matlab-api.md#matlab_skin)}, {[ROS](ros-api.md)}
 
 ``` c
 #include <webots/skin.h>
 
+void wb_skin_get_bone_orientation(WbDeviceTag tag, int index, bool absolute);
+void wb_skin_get_bone_position(WbDeviceTag tag, int index, bool absolute);
 void wb_skin_set_bone_orientation(WbDeviceTag tag, int index, const double rotation[4], bool absolute);
 void wb_skin_set_bone_position(WbDeviceTag tag, int index, const double position[3], bool absolute);
 ```
 
 **Description**
 
-`wb_skin_set_bone_orientation` function sets the rotation of the skin's internal skeleton bone to the specified axis-angle rotation value.
-The rotation is specified as a double array, similar to `wb_supervisor_field_set_sf_rotation` [Supervisor](#supervisor.md) node.
-`wb_skin_set_bone_position` function sets the position of the skin's internal skeleton bone.
-If the `absolute` argument is false the bone orientation is set relatively to the parent bone, otherwise the bone orientation is set with respect to the absolute world frame.
-The bones are indexed starting from 0.
+These functions set or return the skin's internal skeleton bone position and orientation.
+Each bone is identified using an index value between 0 and the bones count returned by `wb_skin_get_bone_count`.
+If the `absolute` argument is FALSE the orientation and position values are relative to the parent bone coordinate system.
+Otherwise, if `absolute` is TRUE the orientation and position values are relative to the [Skin](#skin.md) node's coordinate system.
 
-These functions are only available if the `bones` field is not specified, i.e. if the object is purely graphical and the skin is not already animated using the [Joint](#joint.md) node rotation.
+`wb_skin_set_bone_orientation` function sets the rotation of the skeleton bone to the specified axis-angle rotation value.
+The rotation is specified as a double array, similar to `wb_supervisor_field_set_sf_rotation` [Supervisor](#supervisor.md) node.
+
+`wb_skin_get_bone_orientation` function returns the axis-angle rotation of the skeleton bone
+using the same format as in `wb_skin_set_bone_orientation`.
+
+`wb_skin_set_bone_position` function sets the position of the skeleton bone.
+
+`wb_skin_get_bone_position` function returns the position of the skeleton bone
 
 > **note**:
-Please look at the example in "WEBOTS\_HOME/projects/humans/skin_animation/" directory for further information.
+The setter functions `wb_skin_set_bone_orientation` and `wb_skin_set_bone_position` are only available
+if the `bones` field is not specified, i.e. if the object is purely graphical and the skin is not already
+animated using the [Joint](#joint.md) nodes rotation.

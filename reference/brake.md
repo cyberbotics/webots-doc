@@ -23,11 +23,11 @@ the friction of a joint. The [Brake](#brake) node can be inserted in the
 
 {[C++](cpp-api.md#cpp_brake)}, {[Java](java-api.md#java_brake)}, {[Python](python-api.md#python_brake)}, {[Matlab](matlab-api.md#matlab_brake)}, {[ROS](ros-api.md)}
 
-``` c
+```c
 #include <webots/brake.h>
 
-void wb_brake_set_damping_constant(WbDeviceTag tag, double damping_constant)
-int wb_brake_get_type(WbDeviceTag tag)
+void wb_brake_set_damping_constant(WbDeviceTag tag, double damping_constant);
+int wb_brake_get_type(WbDeviceTag tag);
 ```
 
 **Description**

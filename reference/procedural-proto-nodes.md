@@ -43,13 +43,14 @@ key contains the `'Appearance'` string.
 [this table](#content-of-the-context-dictionary) shows the available information
 and its corresponding keys.
 - The VRML comment ("#") prevails over the Lua statements.
-- The following Lua modules are availble directly: base, table, io, os, string,
+- The following Lua modules are available directly: base, table, io, os, string,
 math, debug, package.
 - The LUA\_PATH environment variable can be modified (before running Webots) to
 include external Lua modules.
 - Lua standard output and error streams are redirected on the Webots console
 (written respectively in regular and in red colors). This allows developers to
 use the Lua regular functions to write on these streams.
+- The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can be used, for example, to generate textures.
 
 %figure "VRML type to Lua type conversion"
 
@@ -70,15 +71,36 @@ use the Lua regular functions to write on these streams.
 
 %figure "Content of the context dictionary"
 
-| Key             | Value                                                                                                                                |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| world           | absolute path to the current world file (including file name and extension)                                                          |
-| proto           | absolute path to the current PROTO file (including file name and extension)                                                          |
-| project\_path   | absolute path to the current project directory                                                                                       |
-| webots\_version | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
-| webots\_home    | absolute path to the Webots installation directory                                                                                   |
+| Key                     | Value                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| world                   | absolute path to the current world file (including file name and extension)                                                          |
+| proto                   | absolute path to the current PROTO file (including file name and extension)                                                          |
+| project\_path           | absolute path to the current project directory                                                                                       |
+| webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
+| webots\_home            | absolute path to the Webots installation directory                                                                                   |
+| temporary\_files\_path  | absolute path to the temporary folder currently used by Webots (this is the location where the PROTO file is generated)              |
+| os                      | OS string ("windows", "linux" or "mac")                                                                                              |
 
 %end
+
+### Texture generation
+
+Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO. The following standard fonts are available to write on the texture:
+  - Arial
+  - Arial Black
+  - Comic Sans MS
+  - Courier New
+  - Georgia
+  - Impact
+  - Lucida Console
+  - Lucida Sans Unicode
+  - Palatino Linotype
+  - Tahoma
+  - Times New Roman
+  - Trebuchet MS
+  - Verdana
+
+In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 
 ### Example
 
@@ -91,7 +113,9 @@ PROTO SimpleStairs [
   field SFRotation rotation    0 1 0 0
   field SFInt32    nSteps      10
   field SFVec3f    stepSize    0.2 0.2 0.8
-  field SFNode     appearance  NULL
+  field SFColor    color       0 1 0
+  field SFString   text        "my text"
+  field SFNode     physics     NULL
 ]
 {
   # template statements can be used from here
@@ -104,16 +128,35 @@ PROTO SimpleStairs [
     -- print the path to this proto
     print(context.proto)
 
-    if fields.stepSize.value ~= fields.stepSize.defaultValue then
-      print('The step size used is not the default one')
+    if fields.stepSize.value.x ~= fields.stepSize.defaultValue.x then
+      print('The X step size used is not the default one')
     end
 
-    -- print the first texture url of the ImageTexture node
-    -- inside the Appearance node
-    if fields.appearance.value and fields.appearance.value.fields.texture.value then
-      -- The following test is true: fields.appearance.value.fields.texture.value.node_name == "ImageTexture"
-      print (fields.appearance.value.fields.texture.value.url[0])
+    -- print the mass inside the physics node
+    if fields.physics.value then
+      print (fields.physics.value.fields.mass.value)
     end
+
+   -- load lua-gd module and create a uniform texture
+   local gd = require("gd")
+   local im = gd.createTrueColor(128, 128)
+   color = im:colorAllocate(fields.color.value.r * 255, fields.color.value.g * 255, fields.color.value.b * 255)
+   im:filledRectangle(0, 0, 127, 127, color)
+   -- add the text in the texture
+   textColor = im:colorAllocate(0, 0, 0)
+   gd.fontCacheSetup()
+   im:stringFT(textColor, "Arial", 20, 0, 5, 60, fields.text.value)
+   -- save the image in a png file
+   local name = debug.getinfo(1,'S').source  -- get the name of the current file
+   local i = 0  -- make sure the file does not already exist
+   local file = io.open(name .. i .. ".png", "r")
+   while file do
+     file:close()
+     i = i + 1
+     file = io.open(name .. i .. ".png", "r")
+   end
+   im:png(name .. i .. ".png")
+   gd.fontCacheShutdown()
   }%
   Solid {
     translation IS translation
@@ -121,14 +164,18 @@ PROTO SimpleStairs [
     children [
       DEF SIMPLE_STAIRS_GROUP Group {
         children [
-        %{ for i = 0, (fields.nSteps.value - 1) do }%
-          %{ x = i * fields.stepSize.value.x }%
-          %{ y = i * fields.stepSize.value.y + fields.stepSize.value.y / 2 }%
+        %{ for j = 0, (fields.nSteps.value - 1) do }%
+          %{ x = j * fields.stepSize.value.x }%
+          %{ y = j * fields.stepSize.value.y + fields.stepSize.value.y / 2 }%
             Transform {
               translation %{=x}% %{=y}% 0
               children [
                 Shape {
-                  appearance IS appearance
+                  appearance Appearance {
+                    texture ImageTexture {
+                      url [ %{= '"' .. context.temporary_files_path .. name .. i .. '.png"' }% ]
+                    }
+                  }
                   geometry Box {
                     size IS stepSize
                   }
@@ -140,6 +187,7 @@ PROTO SimpleStairs [
       }
     ]
     boundingObject USE SIMPLE_STAIRS_GROUP
+    physics IS physics
   }
   # template statements can be used up to there
 }

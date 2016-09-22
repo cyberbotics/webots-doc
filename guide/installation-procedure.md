@@ -1,17 +1,15 @@
 ## Installation procedure
 
-Usually, you will need to be "administrator" to install Webots. Once installed,
-Webots can be used by a regular, unprivileged user. To install Webots, please
-follow this procedure:
+Usually, you will need to have system administrator rights to install Webots. Once installed, Webots can be used by a regular, unprivileged user. To install Webots, please follow this procedure:
 
 1. Uninstall completely any old version of Webots that may have been installed on
 your computer previously.
 2. Install Webots for your operating system as explained below.
 
-> **note**:
+> **Note**:
 After installation, the most important Webots features will be available, but
-some third party tools (such as Java, Python, or *MATLAB*<sup>TM</sup>) may be
-necessary for running or compiling specific projects. The
+some third party tools (such as Java, Python or MATLAB) may be
+necessary to run or compile specific projects. The
 [chapter](language-setup.md) covers the set up of these tools.
 
 ### Installation on linux
@@ -22,24 +20,24 @@ Webots comes in two different package types: `.deb` and `.tar.bz2` (tarball).
 The `.deb` package is aimed at the latest Ubuntu Linux distribution whereas the
 tarball package includes many dependency libraries and it is therefore best
 suited for installation on other Linux distributions. These packages can be
-downloaded from our [web site](http://www.cyberbotics.com/linux).
+downloaded from our [website](http://www.cyberbotics.com/linux).
 
-> **note**:
+> **Note**:
 Some of the following commands requires the `root` privileges. You can get these
 privileges by preceding all the commands by the `sudo` command.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Webots will run much faster if you install an accelerated OpenGL drivers. If you
-have a nVidia or ATI graphics card, it is highly recommended that you install
+have a NVIDIA or AMD graphics card, it is highly recommended that you install
 the Linux graphics drivers from these manufacturers to take the full advantage
-of the OpenGL hardware acceleration with Webots. Please find instructions here
+of the OpenGL hardware acceleration with Webots. Please find instructions in
 [this section](verifying-your-graphics-driver-installation.md).
 
 <!-- -->
 
-> **note**:
+> **Note**:
 Webots needs the *avconv* program to create MPEG-4 movies, that can be installed
 with *libav-tools* and *libavcodec-extra-54* packages.
 
@@ -49,17 +47,25 @@ The advantage of this solution is that Webots will be updated with the system
 updates. This installation requires the `root` privileges.
 
 First of all, you may want to configure your APT package manager by adding the Cyberbotics repository.
-You can easily add it from the `Software and Updates` application.
+Simply execute the following lines:
+
+```sh
+apt-add-repository 'deb http://www.cyberbotics.com/debian/ binary-amd64/'
+apt-get update
+```
+
+As an alternative, you can easily add the Cyberbotics repository from the
+`Software and Updates` application.
 In the `Other Software` tab, click on the `Add...` button and copy the following line:
 
-```
+```text
 deb http://www.cyberbotics.com/debian/ binary-amd64/
 ```
 
 When you will close the window, the APT packages list should be automatically updated.
 Otherwise you can manually execute the following command:
 
-```
+```sh
 apt-get update
 ```
 
@@ -67,18 +73,18 @@ Optionally, Webots can be autentified thanks to the `Cyberbotics.asc` signature
 file which can be downloaded [here](http://www.cyberbotics.com/linux), using
 this command:
 
-```
+```sh
 apt-key add /path/to/Cyberbotics.asc
 ```
 
 Then proceed to the installation of Webots using:
 
-```
+```sh
 apt-get install webots
 ```
 
-> **note**:
-This procedure can also be done using any APT front-end tool such as the
+> **Note**:
+This procedure can also be done using any APT front-end tools such as the
 Synaptic Package Manager. But only a command line procedure is documented here.
 
 #### From the tarball package
@@ -90,13 +96,13 @@ Once uncompressed, it is recommended to set the WEBOTS\_HOME environment
 variable to point to the webots directory obtained from the uncompression of the
 tarball:
 
-```
+```sh
 tar xjf webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}-x86-64.tar.bz2
 ```
 
 and
 
-```
+```sh
 export WEBOTS_HOME=/home/username/webots
 ```
 
@@ -104,8 +110,11 @@ The export line should however be included in a configuration script like
 "/etc/profile", so that it is set properly for every session.
 
 Some additional libraries are needed in order to properly run Webots. In
-particular *libjpeg62*, *libav-tools*, *libpci* and *libavcodec-extra-54* have
+particular *libjpeg62*, *libav-tools*, *libpci3* and *libavcodec-ffmpeg-extra56* have
 to be installed on the system.
+
+> **Note**:
+On old versions of Ubuntu (before 16.04) *libpci3* should be replaced by *libpci* and *libavcodec-ffmpeg-extra56* by *libavcodec-extra-54*.
 
 #### From the DEB package
 
@@ -117,21 +126,21 @@ If a previous version of Webots is already installed, then the text on the butto
 Note that GNOME Software App distributed in the first release of Ubuntu 16.04 contains a bug preventing the installation of third-party packages.
 
 Alternatively, the DEB package can also be installed using `apt` or `gdebi` with the `root` privileges:
-```
+
+```sh
 apt install ./webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
 or
 
-```
+```sh
 gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
 ### Installation on Windows
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
-webots.version.bugfix }}\_setup.exe" installation file from our [web
-site](http://www.cyberbotics.com/windows).
+webots.version.bugfix }}\_setup.exe" installation file from our [website](http://www.cyberbotics.com/windows).
 2. Double click on this file.
 3. Follow the installation instructions.
 
@@ -141,15 +150,27 @@ webots.version.bugfix }}\_setup.exe /SILENT" or "webots-{{ webots.version.major
 }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}\_setup.exe
 /VERYSILENT"
 
-If you observe 3D rendering anomalies or Webots crashes, it is strongly
+If you observe 3D rendering anomalies or if Webots crashes, it is strongly
 recommend to upgrade your graphics driver.
 
-### installation on Mac OS X
+### Installation on Mac OS X
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
-webots.version.bugfix }}.dmg" installation file from our [web
-site](http://www.cyberbotics.com/macosx).
+webots.version.bugfix }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
 2. Double click on this file. This will mount on the desktop a volume named
 "Webots" containing the "Webots" folder.
 3. Move this folder to your "/Applications" folder or wherever you would like to
 install Webots.
+4. During the first Webots launch, Mac OS X may complain about Webots which
+cannot be opened because it is from an unidentified developer
+(see [this figure](#security-and-privacy-settings)).
+In this case, please modify the `Preferences / Security & Privacy` OS settings
+as shown in the figure.
+Don't forget to restore the settings once Webots has been started successfully.
+
+%figure "Security and Privacy settings"
+
+![mac-unidentified-developper-dialog.png](images/mac-unidentified-developper-dialog.png)
+![mac-security-and-privacy-settings.png](images/mac-security-and-privacy-settings.png)
+
+%end

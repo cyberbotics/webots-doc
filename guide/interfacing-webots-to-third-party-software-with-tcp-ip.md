@@ -2,7 +2,7 @@
 
 ### Overview
 
-Webots offers programming APIs for following languages: C/C++, Java, Python and
+Webots offers programming APIs for the following languages: C/C++, Java, Python and
 *MATLAB*<sup>TM</sup>. It is also possible to interface Webots with other
 programming languages of software packages, such as *Lisp*<sup>TM</sup>,
 *LabView*<sup>TM</sup>, etc. Such an interface can be implemented through a

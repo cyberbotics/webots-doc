@@ -26,8 +26,13 @@ function setupUrlOnline(url) {
       var version = m[1];
       if (version.match(/^\d+\.\d*(.)+$/))
         setup.tag = version;
-      else
-        setup.branch = version;
+      else {
+        var n = version.indexOf(':');
+        if (n == -1)
+          setup.branch = version;
+        else
+          setup.branch = version.substr(n + 1);
+      }
     }
 
     m = arguments.match(/#([^&#]*)/);
@@ -115,9 +120,13 @@ function forgeUrl(page, anchor) {
   var newUrl = currentUrl;
   if (!local) {
     newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
-    if (setup.tag!='')
+    if (setup.tag != '' && setup.repository && setup.repository != "omichel")
+      newUrl += "?version=" + setup.repository + ":" + setup.tag;
+    else if (setup.tag != '')
       newUrl += "?version=" + setup.tag;
-    else if (setup.branch!='')
+    else if (setup.branch != '' && setup.repository && setup.repository != "omichel")
+      newUrl += "?version=" + setup.repository + ":" + setup.branch;
+    else if (setup.branch != '')
       newUrl += "?version=" + setup.branch;
     newUrl += anchorString;
   } else {
@@ -183,10 +192,9 @@ function applyAnchor() {
         anchors[0].scrollIntoView(true);
         if (!local)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
-        else
-          window.scrollBy(0, 180); // manual adjustment for the off-line version
         updateBrowserUrl();
-    }
+    } else
+      window.scrollTo(0, 0);
 }
 
 function applyToTitleDiv() {
@@ -235,6 +243,8 @@ function applyToPageTitle(mdContent) {
 }
 
 function populateViewDiv(mdContent) {
+    setupUrl(document.location.href);
+
     var view = document.getElementById("view");
     while (view.firstChild)
         view.removeChild(view.firstChild);
@@ -256,7 +266,14 @@ function populateViewDiv(mdContent) {
     redirectImages(view);
     redirectUrls(view);
 
-    applyAnchor();
+    var images = view.getElementsByTagName("img");
+    if (images.length > 0) {
+      // apply the anchor only when the images are loaded,
+      // otherwise, the anchor can be overestimated.
+      var lastImage = images[images.length - 1];
+      $(lastImage).load(applyAnchor);
+    } else
+      applyAnchor();
 
     applyAnchorIcons(view);
     highlightCode(view);
@@ -281,7 +298,7 @@ window.onpopstate = function(event) {
 };
 
 function highlightCode(view) {
-    var supportedLanguages = ['c', 'c++', 'java', 'python', 'matlab', 'bash', 'makefile', 'lua', 'xml'];
+    var supportedLanguages = ['c', 'c++', 'java', 'python', 'matlab', 'sh', 'ini', 'tex', 'makefile', 'lua', 'xml'];
 
     for (var i = 0; i < supportedLanguages.length; i++) {
         var language = supportedLanguages[i];
@@ -389,7 +406,12 @@ function changeMenuSelection() {
         var href = a.getAttribute("href");
         var selection;
         if (local) {
-          if (href.indexOf("page=" + setup.page) > -1)
+          var pageIndex = href.indexOf("page=" + setup.page);
+          // Notes:
+          // - the string length test is done to avoid wrong positive cases
+          //   where a page is a prefix of another.
+          // - 5 matches with the "page=" string length.
+          if (pageIndex > -1 && (5 + pageIndex + setup.page.length) == href.length)
               selection = true;
           else
               selection = false;
@@ -580,13 +602,89 @@ function extractAnchor(url) {
     return '';
 }
 
+// width: in pixels
+function setHandleWidth(width) {
+    handle.left.css('width', width + 'px');
+    handle.handle.css('left', width + 'px');
+    handle.center.css('left', width + 'px');
+    handle.center.css('width', "calc(100% - " + width + "px)");
+}
+
+function initializeHandle() {
+    // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
+    handle = {}; // structure where all the handle info is stored
+
+    handle.left = $("#left"),
+    handle.center = $("#center"),
+    handle.handle = $("#handle");
+    handle.container = $("#webots-doc")
+
+    // dimension bounds of the handle in pixels
+    handle.min = 0;
+    handle.minThreshold = 75; // under this threshold, the handle is totally hidden
+    handle.initialWidth = handle.left.width();
+    handle.max = Math.max(250, handle.initialWidth);
+
+    handle.enableColor = "#c8c8f0";
+    handle.disableColor = "#ededed";
+
+    handle.isResizing = false;
+    handle.lastDownX = 0;
+
+    if (local)
+        handle.handle.addClass("local");
+    else
+        handle.handle.addClass("online");
+
+    setHandleWidth(handle.initialWidth);
+
+    handle.handle.on("mousedown", function (e) {
+        handle.isResizing = true;
+        handle.lastDownX = e.clientX;
+        handle.container.css("user-select", "none");
+        handle.handleColor = handle.handle.css("background-color");
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("dblclick", function (e) {
+        if (handle.left.css("width").startsWith("0"))
+            setHandleWidth(handle.initialWidth);
+        else
+            setHandleWidth(0);
+    }).on("mouseover", function () {
+        handle.handle.css("background-color", handle.enableColor);
+    }).on("mouseout", function () {
+        if (!handle.isResizing)
+            handle.handle.css("background-color", handle.disableColor);
+    });
+
+    $(document).on("mousemove", function (e) {
+        if (!handle.isResizing)
+            return;
+        var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
+        if (mousePosition < handle.minThreshold / 2) {
+            setHandleWidth(0);
+            return;
+        } else if (mousePosition < handle.minThreshold)
+            return;
+        if (mousePosition < handle.min || mousePosition > handle.max)
+            return;
+        setHandleWidth(mousePosition);
+    }).on("mouseup", function (e) {
+        handle.isResizing = false;
+        handle.container.css("user-select", "auto");
+        handle.handle.css("background-color", handle.disableColor);
+    });
+}
+
 window.onscroll=function(){
     if (local)
         return;
     updateMenuScrollbar();
 };
 
+
 document.addEventListener("DOMContentLoaded", function() {
+    initializeHandle();
+
     if (local) {
         var url = "";
         if (location.href.indexOf("url=") > -1)

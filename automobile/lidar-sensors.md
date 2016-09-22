@@ -18,12 +18,12 @@ of 0.04 meter and a gaussian noise with a standard deviation of 0.1 meter.
 
 ```
 IbeoLux {
-    SFVec3f    translation             0 0 0
-    SFRotation rotation                0 1 0 0
-    SFString   name                    "ibeo"
-    SFBool     useExtendedFieldOfView  FALSE
-    SFBool     fastModel               FALSE
-  }
+  SFVec3f    translation             0 0 0
+  SFRotation rotation                0 1 0 0
+  SFString   name                    "ibeo"
+  SFBool     useExtendedFieldOfView  FALSE
+  SFBool     fastModel               FALSE
+}
 ```
 
 The `IbeoLux` PROTO can either be used in normal field of view mode (80 degrees
@@ -39,7 +39,7 @@ to speed up the simulation.
 The `Sick Lms 291` is a 1 layer lidar with a range of up to 80 meters and a
 field of view of up to 180 degrees.
 
-The model of the `IbeoLux` contains a spherical projection, a configurable fixed
+The model of the `Sick Lms 291` contains a spherical projection, a configurable fixed
 resolution and a configurable gaussian noise.
 
 %figure "Sick Lms 291 lidar"
@@ -50,12 +50,12 @@ resolution and a configurable gaussian noise.
 
 ```
 SickLms291 {
-    SFVec3f translation 0 0 0
-    SFRotation rotation  0 1 0 0
-    SFString name "lms291"
-    SFFloat noise 0.0
-    SFInt32 resolution 180
-  }
+  SFVec3f translation 0 0 0
+  SFRotation rotation  0 1 0 0
+  SFString name "lms291"
+  SFFloat noise 0.0
+  SFInt32 resolution 180
+}
 ```
 
 The `noise` field specifies the standard deviation of the gaussian noise in
@@ -84,11 +84,11 @@ gaussian noise with a standard deviation of 0.03 meter.
 
 ```
 VelodyneVLP-16 {
-    SFVec3f    translation    0 0 0
-    SFRotation rotation       0 1 0 0
-    SFString   name           "velodyne"
-    SFBool     fastModel      FALSE
-    }
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "velodyne"
+  SFBool     fastModel      FALSE
+}
 ```
 
 The `fastModel` field can be used to simplify the model of the sensor by
@@ -110,11 +110,11 @@ deviation of 0.02 meter and a rotating head.
 
 ```
 VelodyneHDL-32E {
-    SFVec3f    translation    0 0 0
-    SFRotation rotation       0 1 0 0
-    SFString   name           "velodyne"
-    SFBool     fastModel      FALSE
-    }
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "velodyne"
+  SFBool     fastModel      FALSE
+}
 ```
 
 The `fastModel` field can be used to simplify the model of the sensor by
@@ -136,11 +136,11 @@ deviation of 0.02 meter and a rotating head.
 
 ```
 VelodyneHDL-32E {
-    SFVec3f    translation    0 0 0
-    SFRotation rotation       0 1 0 0
-    SFString   name           "velodyne"
-    SFBool     fastModel      FALSE
-    }
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "velodyne"
+  SFBool     fastModel      FALSE
+}
 ```
 
 The `fastModel` field can be used to simplify the model of the sensor by

@@ -22,7 +22,7 @@ Often, the easiest way to transfer your control program to a real robot is to
 develop a remote control system. In this case, your control program runs on the
 computer, but instead of sending commands to and reading sensor data from the
 simulated robot, it sends commands to and reads sensor data from the real robot.
-Developing such a remote control system can be achieved in a very simple way by
+Developing such a remote control system can be achieved in a very simple manner by
 writing your own implementation of the Webots API functions as a small library.
 For example, you will probably have to implement the
 `wb_differential_wheels_set_speed()` function to send a specific command to the
@@ -50,18 +50,18 @@ infinite loop). It requests that the simulator performs a simulation step of ms
 milliseconds; that is, to advance the simulation by this amount of time.
 
 The `wb_robot_cleanup()` function should be called at the end of a program in
-order to leave the controller cleanly.
+order to leave the controller in a clean fashion.
 
 #### Running your real robot
 
 Once linked with your own remote control plugin, you can control your real robot
 by running the simulation in Webots. It might be useful to also add a robot
-window plugin (see [this section](controller-plugin.md#robot-window-plugin)) to
+window (see [this section](controller-plugin.md#robot-window)) to
 graphically display specific sensor values, motor commands or a stop button.
 
 Such a remote control system is designed to be implemented in C/C++ as explained
 in [this section](controller-plugin.md); however, it can also be implemented
-other programming languages creating a wrapper.
+in other programming languages by creating a wrapper.
 
 ### Cross-compilation
 
@@ -80,10 +80,10 @@ system for the e-puck and the Hemisson robot. Samples are located in the
 
 #### Developing a custom library
 
-Unlike the remote control system, the cross-compilation system requires that the
-source code of your Webots controller be recompiled using the cross-compilation
-tools specific to your own robot. You will also need to rewrite the Webots
-include files to be specific to your own robot. In simple cases, you can just
+Unlike the remote control system, the cross-compilation system requires the
+source code of your Webots controller to be recompiled using the cross-compilation
+tools specific to your own robot. You will also need to rewrite the Webots include files
+to be specific to your own robot. In simple cases, you can just
 rewrite the Webots include files you need, as in the "hemisson" example. In more
 complex cases, you will also need to write some C source files to be used as a
 replacement for the Webots "Controller" library, but running on the real robot.
@@ -93,7 +93,7 @@ should be uploaded onto the real robot for local execution.
 
 #### Examples
 
-Webots support cross-compilation for several existing commercial robots. For the
+Webots supports cross-compilation for several existing commercial robots. For the
 *e-puck*<sup>TM</sup> robot, this system is fully integrated in Webots and needs
 no modification in the code. For the *Hemisson*<sup>TM</sup> robot, this system
 needs a few include files to replace the Webots API include files. For the

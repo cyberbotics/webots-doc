@@ -11,6 +11,6 @@ You can simply ignore this message. This message is due to the fact that the
 robot is trying to communicate with a non-existent bluetooth device. You can
 supress this message by executing the following command on the robot:
 
-```
+```sh
 sudo apt-get purge bluez-alsa
 ```

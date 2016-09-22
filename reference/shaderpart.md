@@ -38,14 +38,14 @@ The GLSL documentation is available from following sources:
 
 ### Variables
 
-All the standard GLSL variables are accessible from the GPU program (gl_Vertex, gl_ModelViewMatrix, etc.).
+All the standard GLSL variables are accessible from the GPU program (`gl_Vertex`, `gl_ModelViewMatrix`, etc.).
 Please refer to their documentation.
 
 The links between the VRML fields and these variables are various.
 Some of them are described in the following table:
 
 | VRML field(s)                                        | GLSL variable                                                   |
-| ==================================================== | =============================================================== |
+| ---------------------------------------------------- | --------------------------------------------------------------- |
 | `Material.ambientIntensity * Material.diffuseColor`  | `gl_FrontMaterial.ambient.rgb`                                  |
 | `Material.diffuseColor`                              | `gl_FrontMaterial.diffuse.rgb`                                  |
 | `Material.emissiveColor`                             | `gl_FrontMaterial.emissive.rgb`                                 |
@@ -65,12 +65,18 @@ Some of them are described in the following table:
 
 - `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
 This constant is particularly useful to loop over the lights.
+- `FOG_TYPE` is an integer matching with the current fog type:
+    - `0` stands for no fog
+    - `1` stands for an exponential fog
+    - `2` stands for an exponential2 fog
+    - `3` stands for a linear fog
 
 
 ### X3DOM export
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
 Generally this automatic conversion is working fine, however if you suspect a wrong behavior, please write a bug report to help us improving the conversion function.
+
 
 #### Known differences
 

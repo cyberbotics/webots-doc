@@ -195,7 +195,7 @@ corresponding to the RotationalMotor node:
 >  char wheels_names[4][8] = {
 >    "wheel1", "wheel2", "wheel3", "wheel4"
 >  };
->  for (int i=0; i<4 ; i++)
+>  for (i=0; i<4 ; i++)
 >    wheels[i] = wb_robot_get_device(wheels_names[i]);
 > ```
 

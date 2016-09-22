@@ -170,7 +170,7 @@ sensors as follows:
 >   "ps4", "ps5", "ps6", "ps7"
 > };
 >
-> for (int i=0; i<8; i++) {
+> for (i=0; i<8; i++) {
 >   ps[i] = wb_robot_get_device(ps_names[i]);
 >   wb_distance_sensor_enable(ps[i], TIME_STEP);
 > }
@@ -185,7 +185,7 @@ distance sensor values as follows:
 > ```c
 > // read sensors outputs
 > double ps_values[8];
-> for (int i=0; i<8 ; i++)
+> for (i=0; i<8 ; i++)
 >   ps_values[i] = wb_distance_sensor_get_value(ps[i]);
 > ```
 
@@ -267,7 +267,7 @@ int main(int argc, char **argv)
   };
 
   // initialize devices
-  for (int i=0; i<8 ; i++) {
+  for (i=0; i<8 ; i++) {
     ps[i] = wb_robot_get_device(ps_names[i]);
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
@@ -281,7 +281,7 @@ int main(int argc, char **argv)
 
     // read sensors outputs
     double ps_values[8];
-    for (int i=0; i<8 ; i++)
+    for (i=0; i<8 ; i++)
       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
 
     // detect obstacles

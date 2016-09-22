@@ -68,11 +68,11 @@ The aim of this subsection is to apply a texture on the ball. A texture on a
 rolling object can help to appreciate its movement.
 
 > **Hands on**:
-Similarly add an Appearance node to the ball. Add an ImageTexture node to the 
-`texture` field as well as a Material node to the `material` field of the 
-Appearance node. Add an item to the `url` field using the `Add` button. Then set 
-the value of the newly added `url` item to 
-"WEBOTS\_HOME/projects/default/worlds/textures/bricks.png" using the file 
+Similarly add an Appearance node to the ball. Add a Material node to the 
+`material` field as well as an ImageTexture node to the `texture` field of the 
+Appearance node. Add an item to the ImageTexture's `url` field using the `Add` 
+button. Then set the value of the newly added `url` item to 
+"WEBOTS\_HOME/projects/default/worlds/textures/red_brick_wall.jpg" using the file 
 selection dialog.
 
 <!-- -->
@@ -86,7 +86,7 @@ will find textures that are available for every world.
 <!-- -->
 
 > **Note**:
-Open the "red_brick_wall.png" texture in an image viewer while you observe how 
+Open the "red_brick_wall.jpg" texture in an image viewer while you observe how 
 it is mapped onto the Sphere node in Webots.
 
 <!-- -->

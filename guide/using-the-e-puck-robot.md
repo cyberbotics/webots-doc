@@ -209,30 +209,20 @@ can improve these models using your contribution.
 
 ### Control interface
 
-#### Control window
+#### Robot window
 
-%figure "The e-puck control window for simulation"
+%figure "The e-puck robot window"
 
-![e-puck_control.png](images/e-puck_control.png)
+![e-puck_control.png](images/e-puck_robot_window.png)
 
 %end
 
-When opening a world containing an e-puck robot, Webots displays the e-puck
-control window (which also appears when you double-click on the e-puck robot).
-This window is depicted in [this
-figure](#the-e-puck-control-window-for-simulation). It allows visualizing the
-devices of the robot. The distance measurements are displayed in red, outside
-the body of the robot. The light measurements are displayed in yellow, above the
-distance measurements. The 10 LEDs are displayed in black when off and red (or
-green) when on. The motor speeds are displayed in blue, and the motor position
-is displayed in the Encoder box in the bottom right hand corner of the window.
-The camera image (if present), the ground sensor values (if present) and the
-accelerometer values are displayed in the corresponding boxes on the right side
-of the window.
+When opening a world containing an e-puck robot, Webots may display the e-puck robot window. If it is not displayed, you can open it by double-clicking on the e-puck robot. This window is depicted in [this figure](#the-e-puck-robot-window). It includes the visualization of the sensors of the robot. The proximity measurements are displayed in black, outside the body of the robot. The light measurements are displayed in blue, below the
+proximity measurements. The motor speeds are displayed in red, and the motor positions are displayed in green. The camera image is displayed on the top of the window and the XYZ accelerometer values are displayed on the robot.
 
-This e-puck control window appears because the `window` field of the
-`DifferentialWheel` node in the world file was set to "e-puck\_window". Changing
-this `window` to an empty string will disable this control window.
+In addition to displaying the sensor information, the e-puck robot window also has a number of buttons. The `Enable All` allows the user to enable all the sensors measurements on the robot, this cannot be undone and is meant for debugging purposes only. The Simulation / COM ports drop down menu allows the user to switch between the simulation and the remote control of a real e-puck robot connected to a COM port of the computer. In order to have the remote control working properly, the e-puck robot should run the Webots firmware (see below). Finally, the `Upload HEX...` button allows the user to upload a cross-compilation HEX file on the robot to execute it on the micro-controller of the robot. The Webots firmware can be uploaded this way on the e-puck robot.
+
+This e-puck control window appears because the `window` field of the `E-puck` node in the world file was set to "e-puck". Changing this `window` to an empty string will disable this control window.
 
 #### BotStudio overview
 
@@ -310,51 +300,25 @@ webots
 
 #### Bluetooth remote control
 
-Once properly set up, the Bluetooth connection to your e-puck should appear in
-the popup menu of the control. If it doesn't appear there, it means that your
-computer was not properly configured to interface with your e-puck robot through
-Bluetooth. Please refer to the instructions given in the previous section.
+Once properly set up, the Bluetooth connection to your e-puck should appear in the dropdown menus of the e-puck robot window. If it doesn't appear there, it means that your computer was not properly configured to interface with your e-puck robot through Bluetooth. Please refer to the instructions given in the previous section.
 
-When selecting a specific Bluetooth connection from the popup menu of the
-control window, Webots will try to establish a connection with your e-puck
-robot. Once connected, it will display the version of the e-puck serial
-communication software on the Webots console (e.g. 'Running real e-puck (Version
-1.4.3 March 2010 (Webots))'), and will switch the control to the real robot.
-That is, it will send motor commands to the real robot and display sensor
-information (proximity, light, camera image, etc.) coming from the real robot.
-This makes the transfer from the simulation to the real robot trivially simple.
-Note that in the same popup menu, the `Refresh ports` menu item can be used for
-updating the COM ports.
+When selecting a specific Bluetooth connection from the popup menu of the control window, Webots will try to establish a connection with your e-puck robot. Once connected, it will display the version of the e-puck serial communication software on the Webots console (e.g. `[e-puck] Running real e-puck (Version 1.5.2 April 2015 (Webots))`), and will switch the control to the real robot. That is, it will send motor commands to the real robot and display sensor information (proximity, light, camera image, etc.) coming from the real robot. This makes the transfer from the simulation to the real robot trivially simple. Note that in the same popup menu, the `Refresh` menu item can be used to update the list of COM ports.
 
-The remote control has two requirements: the Bluetooth must be correctly set up
-(computer side) and the e-puck must be programmed with the Webots last firmware.
-To set up Bluetooth, please refer to the official e-puck website. To upload the last firmware on your robot, switch on your robot, press the
-`Upload to e-puck robot...` button on the control window and finally select the COM port which corresponds to your robot and the
-"WEBOTS\_HOME/projects/robots/e-puck/transfer/firmware/firmware-x.x.x.hex" file
-located in your Webots directory (*x.x.x* has to be replaced by the current
-firmware's version).
+The remote control has two requirements: the Bluetooth must be correctly set up (computer side) and the e-puck must be programmed with the Webots latest firmware. To set up Bluetooth, please refer to the official e-puck website. To upload the last firmware on your robot, switch on your robot, press the `Upload HEX...` button on the e-puck robot window and select the COM port which corresponds to your robot. Then choose the "WEBOTS\_HOME/projects/robots/e-puck/transfer/firmware/firmware-x.x.x.hex" file located in your Webots directory (*x.x.x* has to be replaced by the current firmware's version).
 
 #### Cross-compilation
 
-An alternative to the remote-control session for running the real e-puck is to
-cross-compile your code and to upload it on the e-puck.
+An alternative to the remote-control session for running the real e-puck is to cross-compile your code and to upload it on the e-puck.
 
-To use this feature, your code has to be written in C and use the C Webots
-API. Moreover, you need to define a specific Makefile called "Makefile.e-puck"
-in the controller directory. This Makefile must include the following file:
+To use this feature, your code has to be written in C and use the C Webots API. Moreover, you need to define a specific Makefile called "Makefile.e-puck" in the controller directory. This Makefile must include the following file:
 
 ```makefile
 include $(WEBOTS_HOME)/projects/robots/e-puck/transfer/libepuck/Makefile.include
 ```
 
-Thanks to this, it is possible to cross-compile with Webots by using the `Build
-/ Cross-compile` menu item of the text editor. Note that the `Upload to e-puck
-robot...` button of the e-puck control window allows you to upload a file
-generated by the cross-compilation extended by ".hex" on the e-puck robot.
+Thanks to this, it is possible to cross-compile with Webots by using the `Build / Cross-compile` menu item of the text editor. Note that the `Upload HEX...` button of the e-puck control window allows you to upload a file generated by the cross-compilation extended by ".hex" on the e-puck robot.
 
-An example of cross-compilation is given in the
-"WEBOTS\_HOME/projects/robots/e-puck/controllers/e-puck\_cross-compilation "
-subdirectory of your Webots directory.
+An example of cross-compilation is given in the "WEBOTS\_HOME/projects/robots/e-puck/controllers/e-puck\_cross-compilation " subdirectory of your Webots directory.
 
 #### Cross-compilation issues on Linux 64 bit
 

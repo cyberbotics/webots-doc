@@ -1,6 +1,6 @@
 ## VisualTracking
 
-This example illustrates the use of the camera (including the vision manager and
+This example illustrates the use of the camera (including the [Vision Manager](vision-manager.md) and
 of the RGB LEDs.
 
 %figure "Visual tracking example"

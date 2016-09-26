@@ -1,10 +1,10 @@
 ## Foreword
 
-This document will explain you how is it possible to program the DARwIn-OP robot
+This document will explain you how it is possible to program the DARwIn-OP robot
 using Webots. Webots allows to program both the virtual robot model and the real
-robot by crosscompiling programs, or by remote-controlling the robot.
+robot by cross-compiling programs, or by remote-controlling the robot.
 
-In the first chapters, all the features of the simulation model of the DARwIn-op
+In the first chapters, all the features of the simulation model of the DARwIn-OP
 will be presented and the examples included in Webots will be explained.
 
 Then, in the following chapters, the possibilities of interaction with the real

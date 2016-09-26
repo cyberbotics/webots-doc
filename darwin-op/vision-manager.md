@@ -1,29 +1,36 @@
 ## Vision Manager
 
-This manager implement the `DARwInOPVisionManager` class.
+The `DARwInOPVisionManager` class allows you to use some image processing tools.
 
 **Name**
 
 **DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
 
-```c
+```c++
 #include <DARwInOPVisionManager.hpp>
 
-DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent);
+DARwInOPVisionManager(int width,
+                      int height,
+                      int hue,
+                      int hueTolerance,
+                      int minSaturation,
+                      int minValue,
+                      int minPercent,
+                      int maxPercent);
 ```
 
 **Description**
 
 The Vision Manager constructor. The arguments are the following:
 
-- The widht of the image
-- The height of the image
-- The color hue of the target object to find
-- The tolerance on the color hue of the target object to find
-- The minimum color saturation of the target object to find
-- The minimum color value of the target object to find
-- The minimum percentage of color value in the image to validate the result
-- The maximum percentage of color value in the image to validate the result
+- The width of the image.
+- The height of the image.
+- The color hue of the target object to find.
+- The tolerance on the color hue of the target object to find.
+- The minimum color saturation of the target object to find.
+- The minimum color value of the target object to find.
+- The minimum percentage of color value in the image to validate the result.
+- The maximum percentage of color value in the image to validate the result.
 
 To find the color hue of the target object and to understand the impact of the
 saturation and value you can refer to figure [HSV](#sv-colorspace) , for more
@@ -41,12 +48,12 @@ HSV colorspace.
 
 **Name**
 
-**bool getBallCenter(double &x, double &y, const unsigned char * image)** - *Get the position of the target object*
+**bool getBallCenter(double &x, double &y, const unsigned char \*image)** - *Get the position of the target object*
 
-```c
+```c++
 #include <DARwInOPVisionManager.hpp>
 
-void getBallCenter(double x, double y, const unsigned char * image);
+void getBallCenter(double &x, double &y, const unsigned char *image);
 ```
 
 **Description**
@@ -54,12 +61,12 @@ void getBallCenter(double x, double y, const unsigned char * image);
 Get the center of the target object. This method returns true if the target was
 found, and false otherwise. If found, the x and y variables are set. The image
 pointer indicates the original image buffer. In order to find the position of
-the target object, this method proceeds to the following steps:
+the target object. This method proceeds with the following steps:
 
-- Store the BGRA version of the image in a buffer
-- Use this buffer to convert the image to HSV format
-- Use the `Finder` class of the Framework to find the target object
-- Extract and save the position of the target object
+- Stores the BGRA version of the image in a buffer.
+- Uses this buffer to convert the image to HSV format.
+- Uses the `Finder` class of the Framework to find the target object.
+- Extracts and saves the position of the target object.
 
 ---
 
@@ -67,7 +74,7 @@ the target object, this method proceeds to the following steps:
 
 **bool isDetected(int x, int y);** - *Determine if a pixel of the image is part of the target*
 
-```c
+```c++
 #include <DARwInOPVisionManager.hpp>
 
 void isDetected(int x, int y);

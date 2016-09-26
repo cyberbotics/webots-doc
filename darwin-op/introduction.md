@@ -1,12 +1,12 @@
 ## Introduction
 
-The Darwin-op is an open source miniature humanoid robot platform with advanced
-computational power. The name DARwIn-OP means Dynamic Anthropomorphic Robot with
-Intelligence-Open Platform. It is developed and manufactured by ROBOTIS (a
+The DARwIn-OP is an open source miniature humanoid robot platform with advanced
+computational power. The name DARwIn-OP means _**D**ynamic **A**nthropomorphic **R**obot **w**ith
+**In**telligence**-O**pen **P**latform_. It is developed and manufactured by ROBOTIS (a
 Korean robot manufacturer) in collaboration with the University of Pennsylvania.
 
 The DARwIn-OP is mainly used by universities and research centers for
-educational and research purpose. It has a total of 20 degrees of freedoms:
+educational and research purposes. It has a total of 20 degrees of freedoms:
 
 - 2 in the head.
 - 3 in each arm.
@@ -25,7 +25,7 @@ robot:
 any risk of damaging the robot. You will also be able to run automatically a lot
 of different simulations in a very small amount of time (to tune up parameters
 for example), which would be impossible to do with the real robot.
-- `Cross compilation`: When your controller is doing fine in simulation, you will
+- `Cross-compilation`: When your controller is doing fine in simulation, you will
 be able to send and run it on the real robot without changing anything to your
 code, just by pressing a button in the robot window.
 - `Remote control`: To debug or understand your controller's behavior, you will be

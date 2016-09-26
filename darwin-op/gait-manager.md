@@ -1,6 +1,6 @@
 ## Gait Manager
 
-This manager implements the `DARwInOPGaitManager` class and allows you to use
+The `DARwInOPGaitManager` class allows you to use
 the walking algorithm of the Framework.
 
 A lot of parameters are available in the Framework algorithm to tune the gait.
@@ -12,12 +12,12 @@ default values that are stored in a ".ini" configuration file. In the
 
 **Name**
 
-**DARwInOPGaitManager(webots::Robot *robot, const std::string &iniFilename)** - *Gait Manager constructor*
+**DARwInOPGaitManager(webots::Robot \*robot, const std::string &iniFilename)** - *Gait Manager constructor*
 
-```c
+```c++
 #include <DARwInOPGaitManager.hpp>
 
-DARwInOPGaitManager(webots::Robot * robot, const std::string iniFilename);
+DARwInOPGaitManager(webots::Robot *robot, const std::string &iniFilename);
 ```
 
 **Description**
@@ -25,7 +25,7 @@ DARwInOPGaitManager(webots::Robot * robot, const std::string iniFilename);
 The first parameter is the robot on which the algorithm applies and the second
 is the file name in which the default parameters are stored.
 
-The following method are available in order to modify the main parameters in
+The following methods are available in order to modify the main parameters in
 your controller:
 
 ---
@@ -34,7 +34,7 @@ your controller:
 
 **void setXAmplitude(double x)**, **void setYAmplitude(double y)**, **void setAAmplitude(double a)**, **void setMoveAimOn(bool q)**, **void setBalanceEnable(bool q)** - *Change the gait parameters*
 
-```c
+```c++
 #include <DARwInOPGaitManager.hpp>
 
 void setXAmplitude(double x);
@@ -68,7 +68,7 @@ Finally the following methods can be used in order to run the algorithm:
 
 **void start()**, **void step(int duration)**, **void stop()** - *Start, stop and run the gait.*
 
-```c
+```c++
 #include <DARwInOPGaitManager.hpp>
 
 void start();
@@ -81,8 +81,8 @@ int stop();
 The *start* and *stop* functions are used to start and stop the algorithm. The *step* function is used to
 run the algorithm for a specified *duration*, expressed in milliseconds.
 
-> **note**:
-Note that, in order to run, the gait manager needs to know the position of each
-servo and the values of the gyro. It is therefore essential to enable the gyro
-and the position feedback of each servo before to use it, if it is not the case,
+> **Note**:
+In order to run, the gait manager needs to know the position of each
+servo and the values of the gyroscope. It is therefore essential to enable the gyroscope
+and the position feedback of each servo before using it. If it is not the case,
 a warning will appear and they will automatically be enabled.

@@ -20,7 +20,16 @@ configuration files (.netccfg and .sumocfg).
 Then the interface will automatically start SUMO and run it in synchronization
 with Webots time. Each time a new vehicle enters the SUMO simulation, it will be
 created in Webots too and its position and orientation will be continually
-updated. The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle number (starting from 0). If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time). If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
+updated. The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle
+number (starting from 0). If some vehicles whose DEF name is `SUMO_VEHICLEX` are
+already present in the world at the simulation start, then the interface will
+automatically use them before creating new vehicles, this can be useful to avoid
+real-time addition of vehicles (which can make the simulation speed drop for a very
+short time). Furthermore, when a vehicle enters the SUMO network, if a vehicle
+whose DEF name is identical to the ID of the vehicle in SUMO is present in the
+simulation, this vehicle is then associated to the one in SUMO.
+
+If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
 
 If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
 

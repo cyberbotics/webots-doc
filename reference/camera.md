@@ -9,6 +9,7 @@ Camera {
   SFInt32    height           64
   SFBool     spherical        FALSE
   SFFloat    near             0.01
+  SFFloat    far              0.0
   SFBool     antiAliasing     FALSE
   SFFloat    motionBlur       0.0
   SFFloat    noise            0.0
@@ -48,6 +49,8 @@ near field determines the precision of the OpenGL depth buffer. A too small
 value produces depth fighting between overlaid polygons, resulting in random
 polygon overlaps. More information on frustums in the corresponding subsection
 below.
+
+- The `far` field defines the distance from the camera to the far clipping plane.
 
 - The `antiAliasing` field switches on or off (the default) anti-aliasing effect
 on the camera images. Anti-aliasing is a technique that assigns pixel colors
@@ -152,6 +155,11 @@ defines the position of the near clipping plane (x, y, -near). The `fieldOfView`
 field defines the horizontal angle of the frustum. The `fieldOfView`, `width`
 and `height` fields define the vertical angle of the frustum according to the
 above formula.
+
+The far clipping plane is defined by the `far` field, it can be set at an
+infinite distance by setting the `far` field to 0.  Setting a far clipping
+plane will filter-out far objects and can therefore greatly improved the
+rendering performance.
 
 Generally speaking there is no far clipping plane while this is common in other
 OpenGL programs. In Webots, a camera can see as far as needed.

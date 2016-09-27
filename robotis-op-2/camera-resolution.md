@@ -22,7 +22,7 @@ in the scene tree window).
 
 %end
 
-> **note**:
+> **Note**:
 You do not need to choose a width and a height from the same line, any
 combination of height and width is valid (for example, you can use a resolution
 of 320x30).

@@ -41,7 +41,7 @@ class Books:
             os.path.dirname(os.path.realpath(__file__)), os.pardir))
         # discover the project path
         self._books = []
-        for bookName in ["guide", "reference", "darwin-op", "automobile"]:
+        for bookName in ["guide", "reference", "robotis-op-2", "automobile"]:
             path = os.path.join(self._project_path, bookName)
             self._books.append(Book(path, bookName))
 

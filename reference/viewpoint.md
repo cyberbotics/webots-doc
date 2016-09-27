@@ -7,6 +7,7 @@ Viewpoint {
   SFVec3f      position           0 0 0     # 3D vector
   SFString     description        ""
   SFFloat      near               0.05      # [0,inf)
+  SFFloat      far                0.0       # [0,inf)
   SFString     follow             ""
   SFBool       followOrientation  FALSE
   SFNode       lensFlare          NULL
@@ -33,10 +34,11 @@ plane. This plane is parallel to the projection plane for the 3D display in the
 main window. The near field determines the precision of the OpenGL depth buffer.
 A too small value may cause depth fighting between overlaid polygons, resulting
 in random polygon overlaps. The far clipping plane is parallel to the near
-clipping plane and is defined at an infinite distance from the camera. The far
-clipping plane distance cannot be modified.
+clipping plane and is defined by the `far` field. The far clipping plane can be
+set at an infinite distance by setting the `far` field to 0. Setting a far clipping
+plane will filter-out far objects and can therefore greatly improved the rendering performance.
 
-The `near` and the `fieldOfView` fields define together the viewing frustum. Any
+The `near`, `far` and the `fieldOfView` fields define together the viewing frustum. Any
 3D shape outside this frustum won't be rendered. Hence, shapes too close
 (standing between the camera and the near plane) won't appear.
 

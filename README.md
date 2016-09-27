@@ -45,7 +45,7 @@ In a browser, open:
 - [http://localhost:8000/local_index.html?url=&book=guide](http://localhost:8000/local_index.html?url=&book=guide)
 - [http://localhost:8000/local_index.html?url=&book=reference](http://localhost:8000/local_index.html?url=&book=reference)
 - [http://localhost:8000/local_index.html?url=&book=automobile](http://localhost:8000/local_index.html?url=&book=automobile)
-- [http://localhost:8000/local_index.html?url=&book=darwin-op](http://localhost:8000/local_index.html?url=&book=darwin-op)
+- [http://localhost:8000/local_index.html?url=&book=robotis-op-2](http://localhost:8000/local_index.html?url=&book=robotis-op-2)
 
 
 ## Run the unit tests

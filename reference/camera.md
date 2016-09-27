@@ -158,7 +158,7 @@ above formula.
 
 The far clipping plane is defined by the `far` field, it can be set at an
 infinite distance by setting the `far` field to 0.  Setting a far clipping
-plane will filter-out far objects and can therefore greatly improved the
+plane will filter out far objects and can therefore greatly improve the
 rendering performance.
 
 Generally speaking there is no far clipping plane while this is common in other

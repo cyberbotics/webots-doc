@@ -3,29 +3,24 @@
 The simulation model is equiped with the following sensors and actuators:
 
 - 20 servos
-- LEDs (including 2 RGB ones)
-- A 3 axes accelerometer
-- A 3 axes gyroscope
+- 5 LEDs (including 2 RGB ones)
+- A 3-axes accelerometer
+- A 3-axes gyroscope
 - A camera
 - A speaker
 
-The accelerometer returns values between 0 and 1024 corresponding to values
-between -3 [g] to +3 [g] like on the real robot. For the gyro, it returns also
-values between 0 and 1024, corresponding to values between -1600 [deg/sec] and
-+1600 [deg/sec], here again similarly to the values returned by the real robot.
-Their respective names are `Accelerometer` and `Gyro`.
+### Servos
 
-The speaker name is `Speaker` and it can be used to play sound files or perform text-to-speech.
+Servo positions and identifiers can be found in the following
+[figure](#position-of-the-servos).
 
-The camera is a RGBA camera and has a basic resolution of 160x120 pixels, but it
-can be changed to any value. The horizontal field of view is 1.0123 [rad].
+%figure "Position of the servos"
+![robotis_op2_servo_map.png](images/robotis_op2_servo_map.png)
+%end
 
-Each of the 2 RBG LEDs, called `HeadLed` and `EyeLed`, is split in two separated
-parts, one on the head of the robot and one other small part on the back panel
-of the robot. There are also three other standard LEDs on the back panel of the
-robot, they are called `BackLedGreen`, `BackLedBlue` and `BackLedRed`.
+Mapping between identifiers and names can be found in following table.
 
-%figure "Names of the servo of the DARwIn-OP"
+%figure "Identifiers to name mapping for Robotis OP2 servos"
 
 | ID | Name      | ID | Name      | ID | Name      | ID | Name      |
 | -- | --------- | -- | --------- | -- | --------- | -- | --------- |
@@ -37,27 +32,56 @@ robot, they are called `BackLedGreen`, `BackLedBlue` and `BackLedRed`.
 
 %end
 
-The corresponding position of each servo can be seen in figure
-[Actuator](#position-of-the-servos). Each of the 20 servos has the following
-configuration:
+Each of the 20 servos has the following configuration.
 
-%figure "Configuration of the servo of the DARwIn-OP"
-
-|                |      |        | | | | |  |
-| --------------- | ----- | ------- |  |  |  |  |  |
+%figure "Standard servo configuration"
+|                 |       |         |
+| --------------- | ----- | ------- |
 | maxForce        | 2.5   | N*m     |
 | acceleration    | 55    | rad/s^2 |
 | maxVelocity     | 12.26 | rad/s   |
 | dampingConstant | 0.002 |         |
 | staticFriction  | 0.025 | N*m     |
-
 %end
 
-%figure "Position of the servos"
+### LEDs
 
-![DARwIn-OP_Actuator.png](images/DARwIn-OP_Actuator.png)
+The two RGB LEDs are placed on the robot head. They are called `HeadLed` and
+`EyeLed`. The two eyes will have same color. Note that these LEDs are
+replicated on the robot back panel.
 
-%end
+The three other LEDs are unicolor and placed on the robot back.
+They are called `BackLedGreen`, `BackLedBlue` and `BackLedRed`.
+
+### Accelerometer
+
+The accelerometer returns values between 0 and 1024 corresponding to values
+between -3 [g] to +3 [g] like on the real robot.
+Its name is `Accelerometer`.
+
+### Gyroscope
+
+The gyroscope returns values between 0 and 1024, corresponding to values between
+ -1600 [deg/sec] and +1600 [deg/sec], similarly to the values returned by the real robot.
+Its name is `Gyro`.
+
+### Camera
+
+The camera is a RGBA camera. It has a default resolution of 160x120 pixels, but it
+can be changed to any value.
+The horizontal field of view is 1.0123 [rad].
+
+### Speaker
+
+The speaker name is `Speaker` and it can be used to play sound files or perform
+text-to-speech.
+
+
+
+
+
+
+### More information
 
 For more information on the use of all of these sensors/actuators refer to the
 [Reference Manual](http://www.cyberbotics.com/reference) of Webots.

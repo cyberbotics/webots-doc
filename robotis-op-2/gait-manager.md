@@ -1,6 +1,6 @@
 ## Gait Manager
 
-The `DARwInOPGaitManager` class allows you to use
+The `RobotisOp2GaitManager` class allows you to use
 the walking algorithm of the Framework.
 
 A lot of parameters are available in the Framework algorithm to tune the gait.
@@ -12,12 +12,12 @@ default values that are stored in a ".ini" configuration file. In the
 
 **Name**
 
-**DARwInOPGaitManager(webots::Robot \*robot, const std::string &iniFilename)** - *Gait Manager constructor*
+**RobotisOp2GaitManager(webots::Robot \*robot, const std::string &iniFilename)** - *Gait Manager constructor*
 
 ```c++
-#include <DARwInOPGaitManager.hpp>
+#include <RobotisOp2GaitManager.hpp>
 
-DARwInOPGaitManager(webots::Robot *robot, const std::string &iniFilename);
+RobotisOp2GaitManager(webots::Robot *robot, const std::string &iniFilename);
 ```
 
 **Description**
@@ -35,7 +35,7 @@ your controller:
 **void setXAmplitude(double x)**, **void setYAmplitude(double y)**, **void setAAmplitude(double a)**, **void setMoveAimOn(bool q)**, **void setBalanceEnable(bool q)** - *Change the gait parameters*
 
 ```c++
-#include <DARwInOPGaitManager.hpp>
+#include <RobotisOp2GaitManager.hpp>
 
 void setXAmplitude(double x);
 void setYAmplitude(double y);
@@ -69,11 +69,11 @@ Finally the following methods can be used in order to run the algorithm:
 **void start()**, **void step(int duration)**, **void stop()** - *Start, stop and run the gait.*
 
 ```c++
-#include <DARwInOPGaitManager.hpp>
+#include <RobotisOp2GaitManager.hpp>
 
 void start();
 void step(int duration);
-int stop();
+int  stop();
 ```
 
 **Description**

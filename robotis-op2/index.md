@@ -1,4 +1,4 @@
-# Webots for DARwIn-OP
+# Webots for Robotis OP2
 
 Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
 

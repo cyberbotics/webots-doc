@@ -65,16 +65,31 @@ as the one used to build the controllers):
 
 %end
 
-### Robot Window Plugin
+### Robot window
 
-A robot window plugin allows the programmer to efficiently create custom robot
-windows. Robot windows can be opened by double-clicking on the virtual robot, or
-by selecting the `Robot | Show Robot Window` menu item.
+A robot window allows the programmer to efficiently create custom user interfaces for his robots. Robot windows can be opened by double-clicking on the virtual robot, or by selecting the `Robot | Show Robot Window` menu item. The *window* field of the `Robot` node specifies a robot window (cf. documentation in the reference manual).
 
-The *window* field of the `Robot` node specifies a robot window (cf.
-documentation in the reference manual).
+Robot windows are implemented in HTML and provide the following features:
 
-The entry points of a robot window controller plugin are:
+1. They rely on HTML layout and Javascript programming.
+2. They communicate directly with the robot controller using two Javascript functions: `webots.Robot.receive()` and `webots.Robot.send()`. The equivalent controller functions are `wb_robot_window_send()` and `wb_robot_window_receive()`.
+3. They are web-ready and could be used to display robot windows on web pages.
+
+A simple example of a HTML robot window is provided in the `robots/thymio/thymio2.wbt` sample simulation and demonstrates:
+
+- How to display sensor information in the robot window.
+- How to send user interface events (like mouse clicks) from the robot window to the controller program.
+- How to change the title of the robot window from the controller program.
+
+Currently, HTML robot windows can communicate only with C and C++ controller programs, but this will be extended soon to Python, Java and MATLAB controllers.
+
+The e-puck, Darwin-OP and generic robot windows are still using the native robot window (see below). However, they will soon be ported to the HTML robot window. After that, the native robot window system will be progressively phased out.
+
+### Native robot window (deprecated)
+
+Native robot window still exist in Webots. However, they are deprecated and it is not recommended to use them when developing new robot windows. They are more complicated to implement than HTML robot windows and are known to cause Qt DLL conflicts with third-party software, such as MATLAB or NAOqi.
+
+The entry points of a native robot window controller plugin are:
 
 - `bool wbw_init()`
 
@@ -166,9 +181,9 @@ Other samples can be found:
 
 `WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/e-puck_window`
 
-### Qt utility library
+#### Qt utility library
 
-In order to facilitate the creation of robot window plugins using the Qt
+In order to facilitate the creation of native robot window using the Qt
 framework, Webots has a utility library allowing to hide the complexity of the
 management of the robot windows.
 
@@ -181,7 +196,7 @@ good example illustrating how to use this library.
 The location of the qt utility library is
 `WEBOTS_HOME/resources/projects/libraries/qt_utils`
 
-### Motion editor
+#### Motion editor
 
 A motion is a chronological sequence of robot poses. A pose is defined by a set
 of commands (in position) of the robot motors.

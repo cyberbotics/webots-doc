@@ -7,7 +7,7 @@ Light {
   SFFloat   intensity          1        # [0,1]
   SFBool    on                 TRUE
   SFBool    castShadows        FALSE
-  SFBool    castLensFlares         FALSE
+  SFBool    castLensFlares     FALSE
 }
 ```
 

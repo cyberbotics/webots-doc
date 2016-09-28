@@ -1,22 +1,22 @@
 ## Vision Manager
 
-The `DARwInOPVisionManager` class allows you to use some image processing tools.
+The `RobotisOp2VisionManager` class allows you to use some image processing tools.
 
 **Name**
 
-**DARwInOPVisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
+**RobotisOp2VisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
 
 ```c++
-#include <DARwInOPVisionManager.hpp>
+#include <RobotisOp2VisionManager.hpp>
 
-DARwInOPVisionManager(int width,
-                      int height,
-                      int hue,
-                      int hueTolerance,
-                      int minSaturation,
-                      int minValue,
-                      int minPercent,
-                      int maxPercent);
+RobotisOp2VisionManager(int width,
+                       int height,
+                       int hue,
+                       int hueTolerance,
+                       int minSaturation,
+                       int minValue,
+                       int minPercent,
+                       int maxPercent);
 ```
 
 **Description**
@@ -51,7 +51,7 @@ HSV colorspace.
 **bool getBallCenter(double &x, double &y, const unsigned char \*image)** - *Get the position of the target object*
 
 ```c++
-#include <DARwInOPVisionManager.hpp>
+#include <RobotisOp2VisionManager.hpp>
 
 void getBallCenter(double &x, double &y, const unsigned char *image);
 ```
@@ -75,7 +75,7 @@ the target object. This method proceeds with the following steps:
 **bool isDetected(int x, int y);** - *Determine if a pixel of the image is part of the target*
 
 ```c++
-#include <DARwInOPVisionManager.hpp>
+#include <RobotisOp2VisionManager.hpp>
 
 void isDetected(int x, int y);
 ```

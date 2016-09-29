@@ -29,7 +29,7 @@
     - [Dynamixel MX28 firmware](dynamixel-mx28-firmware.md)
     - [Using keyboard](using-keyboard.md)
 - [Remote control](remote-control.md)
-    - [Using remote-control from robot-window](using-remote-control-from-robot-window.md)
+    - [Using remote control from Robot Window](using-remote-control-from-robot-window.md)
     - [Camera resolution](camera-resolution.md)
     - [Controller speed](controller-speed.md)
 - [Known Bugs](known-bugs.md)

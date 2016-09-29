@@ -5,7 +5,7 @@ remote compilation. Indeed they are smaller in order to not slow down too much
 the communication speed between Webots and the robot. All available resolutions
 are specified in the [following table](#cameraremoteresolution).
 Unlike from remote compilation you do not have to specify the desired resolution
-in any file, the resolution is automatically send to the robot from Webots. So
+in any file, the resolution is automatically sent to the robot from Webots. So
 in order to adjust the resolution, just do the same way you would do it in the
 simulation (by editing `cameraWidth` and `cameraHeight` fields of the Robotis OP2
 in the scene tree window).

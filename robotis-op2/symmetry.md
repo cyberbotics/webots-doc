@@ -13,7 +13,9 @@ zero in order to completely release this arm. Then, in an infinite loop, the
 position of the previous three servos is read and displayed. Finally, still in
 the loop, the opposite position of each servo of the right arm is applied to the
 corresponding servo of the left arm in order to mimic the motion of the right
-arm. In order to move the right arm which is free in simulation, select the
+arm.
+
+You are now able to move the right arm which is free in simulation: select the
 robot, then press Ctrl+Alt and left click on the arm, then without releasing the
 left button move the mouse. This will apply a force (symbolized by an arrow)
 which will make the arm move. Note that it is very important to enable the
@@ -28,6 +30,6 @@ mMotors[18]->setPosition(sin(getTime()));
 ```
 
 Then save the file, press the build button and finally revert the simulation to
-start the new controller. This example is well suited for the cross-compilation
-and we recommended that you start by testing the cross-compilation tool by using
+start the new controller. This example is well suited for the remote compilation
+and we recommended that you start by testing the remote compilation tool by using
 this example.

@@ -2,11 +2,18 @@
 
 This document will explain to you how to program the Robotis OP2 robot using
 Webots. Webots allows you to program both the virtual robot model and the real
-robot by remote-compiling or by remote-controlling the robot.
+robot by remote compiling or by remote controlling the robot.
 
 >**Note**:
 Differences with DARwIn-OP robot are limited. Explanations should be compatible
 with this robot model.
+
+To be able to use text-to-speach feature, it is **required** to install the
+program `espeak` on the robot.
+
+```sh
+sudo apt-get install espeak
+```
 
 In first chapters, all simulation model features of the Robotis OP 2 will be
 presented and examples included in Webots will be explained.

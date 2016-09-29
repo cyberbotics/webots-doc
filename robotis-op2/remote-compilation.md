@@ -1,6 +1,7 @@
-# Cross-Compilation
+# Remote compilation
 
-Cross-compilation can be used to transfer the controller to the real robot.
+Remote compilation can be used to transfer the controller to the real robot
+and to compile the controller on the robot.
 
 ## Sections
 - [Settings](settings.md)

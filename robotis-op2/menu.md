@@ -21,7 +21,7 @@
     - [Position sensors](position-sensors.md)
     - [Camera](camera.md)
     - [Motion editor](motion-editor.md)
-- [Cross-Compilation](cross-compilation.md)
+- [Remote compilation](remote-compilation.md)
     - [Settings](settings.md)
     - [Send a controller to the robot](send-a-controller-to-the-robot.md)
     - [Permanently install a controller to the robot](permanently-install-a-controller-to-the-robot.md)

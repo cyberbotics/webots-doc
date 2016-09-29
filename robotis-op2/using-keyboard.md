@@ -1,13 +1,12 @@
 ## Using keyboard
 
-The use of the keyboard is also available in cross-compilation. To use a
-keyboard you just have to connect an usb keyboard to the robot to one of the two
+The use of the keyboard is also available in remote compilation. To use a
+keyboard you just have to connect an USB keyboard to the robot to one of the two
 USB ports available on the back of the robot (any wireless keyboard will also
 works).
 
 Then when enabling the keyboard in your controller, a small window like the one
-depicted on figure
-[keyboardWindow](#small-window-used-to-capture-the-keyboard-inputs-in-cross-compilation)
+depicted on this [figure](#small-window-used-to-capture-the-keyboard-inputs-in-cross-compilation)
 will show up on the real robot screen (if any connected).
 
 %figure "Small window used to capture the keyboard inputs in cross-compilation"

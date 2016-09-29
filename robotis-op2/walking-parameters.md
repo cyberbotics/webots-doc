@@ -51,7 +51,7 @@ file (.ini) to tune the gait.
 
 %end
 
-`Hip pitch offset` is the tilt of DARwIn-OP's body. It uses a special unit of
+`Hip pitch offset` is the tilt of the robot's body. It uses a special unit of
 the motor correspondig to 2.85 degree.
 
 %figure "Walking: hip pitch offset parameter"
@@ -60,7 +60,7 @@ the motor correspondig to 2.85 degree.
 
 %end
 
-`Period time` is the time required for DArwIn-Op to complete two full steps
+`Period time` is the time required for the robot to complete two full steps
 (left and right foot). Unit is in millisecond.
 
 %figure "Walking: period time parameter"
@@ -79,7 +79,7 @@ only one foot (either left or right) is on the ground.
 %end
 
 `Step forward back ratio` is the differential distance according to X direction,
-between DARwIn-OP's left and right foot during walk. Unit is in millimeter.
+between the left and right foot during walk. Unit is in millimeter.
 
 %figure "Walking: step forward back ratio parameter"
 
@@ -96,7 +96,7 @@ millimeter.
 
 %end
 
-`Swing right left` is the left and right Swaying of DARwIn-OP's body during
+`Swing right left` is the left and right swaying of the body during
 walking. Unit is in millimeter.
 
 %figure "Walking: swing right left parameter"
@@ -105,7 +105,7 @@ walking. Unit is in millimeter.
 
 %end
 
-`Swing top down` is the up and down swaying of DARwIn-OP's body during walking.
+`Swing top down` is the up and down swaying of the body during walking.
 Unit is in millimeter.
 
 %figure "Walking: swing top down parameter"

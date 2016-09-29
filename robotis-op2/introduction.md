@@ -10,10 +10,10 @@ The previous model was named DARwIn-OP. It means _**D**ynamic **A**nthropomorphi
 **In**telligence**-O**pen **P**latform_.
 
 The Robotis OP2 is mainly used by universities and research centers for
-educational and research purposes. It has a total of 20 degrees of freedoms:
+educational and research purposes. It has a total of twenty degrees of freedom:
 
-- Two in the head ;
-- Three in each arm ;
+- Two in the head;
+- Three in each arm;
 - Six in each leg.
 
 This robot is available at a fairly low price and is based on open source

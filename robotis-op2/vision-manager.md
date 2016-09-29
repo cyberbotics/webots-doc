@@ -10,13 +10,13 @@ The `RobotisOp2VisionManager` class allows you to use some image processing tool
 #include <RobotisOp2VisionManager.hpp>
 
 RobotisOp2VisionManager(int width,
-                       int height,
-                       int hue,
-                       int hueTolerance,
-                       int minSaturation,
-                       int minValue,
-                       int minPercent,
-                       int maxPercent);
+                        int height,
+                        int hue,
+                        int hueTolerance,
+                        int minSaturation,
+                        int minValue,
+                        int minPercent,
+                        int maxPercent);
 ```
 
 **Description**
@@ -33,7 +33,7 @@ The Vision Manager constructor. The arguments are the following:
 - The maximum percentage of color value in the image to validate the result.
 
 To find the color hue of the target object and to understand the impact of the
-saturation and value you can refer to figure [HSV](#sv-colorspace) , for more
+saturation and value you can refer to figure [HSV](#sv-colorspace), for more
 information you can also find a lot of great documentation on the Internet about
 HSV colorspace.
 

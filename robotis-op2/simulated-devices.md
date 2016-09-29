@@ -57,13 +57,13 @@ They are called `BackLedGreen`, `BackLedBlue` and `BackLedRed`.
 
 The accelerometer returns values between 0 and 1024 corresponding to values
 between -3 [g] to +3 [g] like on the real robot.
-Its name is `Accelerometer`.
+The Webots device simulating it is called `Accelerometer`.
 
 ### Gyroscope
 
 The gyroscope returns values between 0 and 1024, corresponding to values between
  -1600 [deg/sec] and +1600 [deg/sec], similarly to the values returned by the real robot.
-Its name is `Gyro`.
+The Webots device simulating it is called `Gyro`.
 
 ### Camera
 
@@ -73,13 +73,8 @@ The horizontal field of view is 1.0123 [rad].
 
 ### Speaker
 
-The speaker name is `Speaker` and it can be used to play sound files or perform
+The Webots device simulating a speaker is named `Speaker`. It can be used to play sound files or perform
 text-to-speech.
-
-
-
-
-
 
 ### More information
 
@@ -87,14 +82,7 @@ For more information on the use of all of these sensors/actuators refer to the
 [Reference Manual](http://www.cyberbotics.com/reference) of Webots.
 
 The physical model is very realistic and self collision check is available. To
-activate the self collision expand DARwIn-OP in the scene tree and set
-selfCollision field to true (see figure
-[selfCollision](#scene-tree-of-the-darwin-op)). Use the self collision check
-only if you need it, because it is very computationally costly and can therefore
+activate the self collision expand the Robotis OP2 node in the scene tree and set
+`selfCollision` field to `true`. Use the self collision check
+only if you need it, because it is an expensive computation feature and can therefore
 significantly slow down the simulation speed.
-
-%figure "Scene tree of the DARwIn-OP"
-
-![selfCollision.png](images/selfCollision.png)
-
-%end

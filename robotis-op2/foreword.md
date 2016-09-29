@@ -8,7 +8,7 @@ robot by remote compiling or by remote controlling the robot.
 Differences with DARwIn-OP robot are limited. Explanations should be compatible
 with this robot model.
 
-To be able to use text-to-speach feature, it is **required** to install the
+To be able to use text-to-speech feature, it is **required** to install the
 program `espeak` on the robot.
 
 ```sh
@@ -20,8 +20,8 @@ presented and examples included in Webots will be explained.
 
 Then, in following chapters, we will see different interactions with the
 robot:
-- Real-time sensors viewing ;
-- Remote compilation ;
+- Real-time sensors viewing;
+- Remote compilation;
 - Controller installation.
 
 We hope that you will enjoy working with Webots, and that it will greatly

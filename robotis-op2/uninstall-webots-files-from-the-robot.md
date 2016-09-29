@@ -1,7 +1,7 @@
 ## Uninstall Webots files from the robot
 
-If you don't need to use anymore Webots with your DARwIn-OP, you can uninstall
-all the files installed on the DARwIn-OP by Webots by pressing this button:
+If you don't need to use anymore Webots with your Robotis OP2, you can uninstall
+all files installed on the robot by Webots by pressing this button:
 
 %figure "Uninstall button"
 

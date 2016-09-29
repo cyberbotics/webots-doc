@@ -3,7 +3,7 @@
 For any information about Webots, please visit [Cyberbotics
 website](http://www.cyberbotics.com).
 
-For any information about the Robotis-OP 2 robot, please visit [ROBOTIS
+For any information about the Robotis OP2 robot, please visit [ROBOTIS
 website](http://support.robotis.com/en/techsupport_eng.htm#product/robotis-op2.htm).
 
 >**Note**:

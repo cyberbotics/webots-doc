@@ -20,7 +20,7 @@ to walk.
 - Then, the keys up/down/right/left are pressed to make the robot turn
 and move forward/backward, several keys can be pressed at the same time.
 
-Try to add some more action by using more keys. You can for example use the
+Try to add some more actions by using more keys. You can for example use the
 `NUMPAD_RIGHT` and `NUMPAD_LEFT` keys to make a right/left
 shoot (page ids 12 and 13 in [Motion manager](motion-manager.md)). You can also use normal keys like 'A'
 instead if you prefer.

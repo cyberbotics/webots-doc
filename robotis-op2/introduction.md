@@ -1,6 +1,6 @@
 ## Introduction
 
-The Robotis OP2 (or formally ROBOTIS OP2) is an open source miniature humanoid
+The ROBOTIS OP2 is an open source miniature humanoid
 robot platform with advanced computational power.
 It is developed and manufactured by ROBOTIS (a Korean robot manufacturer) in
 collaboration with the University of Pennsylvania.
@@ -9,7 +9,7 @@ collaboration with the University of Pennsylvania.
 The previous model was named DARwIn-OP. It means _**D**ynamic **A**nthropomorphic **R**obot **w**ith
 **In**telligence**-O**pen **P**latform_.
 
-The Robotis OP2 is mainly used by universities and research centers for
+The ROBOTIS OP2 is mainly used by universities and research centers for
 educational and research purposes. It has a total of twenty degrees of freedom:
 
 - Two in the head;
@@ -20,8 +20,8 @@ This robot is available at a fairly low price and is based on open source
 components (both hardware and software). It has been used in the RoboCup
 international competition with some success.
 
-The Robotis OP2 robot has been fully integrated into Webots in collaboration with
-ROBOTIS. By using Robotis OP2 in conjunction with Webots you will have following
+The ROBOTIS OP2 robot has been fully integrated into Webots in collaboration with
+ROBOTIS. By using ROBOTIS OP2 in conjunction with Webots you will have following
  benefits compared to a direct use of ROBOTIS API on the robot:
 
 - **Simulation**: You will be able to test your controller in simulation, without

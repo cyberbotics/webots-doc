@@ -1,6 +1,6 @@
 ## Uninstall Webots files from the robot
 
-If you don't need to use anymore Webots with your Robotis OP2, you can uninstall
+If you don't need to use anymore Webots with your ROBOTIS OP2, you can uninstall
 all files installed on the robot by Webots by pressing this button:
 
 %figure "Uninstall button"

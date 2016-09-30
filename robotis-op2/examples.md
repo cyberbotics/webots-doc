@@ -1,7 +1,7 @@
 # Examples
 
 In this part we will see all the examples provided with Webots for the
-Robotis OP2 model. We will describe how they work, how to use them and what can
+ROBOTIS OP2 model. We will describe how they work, how to use them and what can
 be done with them. All the examples can be found in
 "WEBOTS\_HOME/projects/robots/robotis-op2/worlds".
 

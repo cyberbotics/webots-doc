@@ -208,7 +208,7 @@ function applyToTitleDiv() {
     else if (setup.book == "automobile")
       newTitle = "Webots for automobiles";
     else if (setup.book == "robotis-op2")
-      newTitle = "Webots for Robotis OP2";
+      newTitle = "Webots for ROBOTIS OP2";
     else
       newTitle = "";
     if (newTitle.length > 0) {

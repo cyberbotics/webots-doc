@@ -20,7 +20,7 @@ Servo positions and identifiers can be found in the following
 
 Mapping between identifiers and names can be found in following table.
 
-%figure "Identifiers to name mapping for Robotis OP2 servos"
+%figure "Identifiers to name mapping for ROBOTIS OP2 servos"
 
 | ID | Name      | ID | Name      | ID | Name      | ID | Name      |
 | -- | --------- | -- | --------- | -- | --------- | -- | --------- |
@@ -82,7 +82,7 @@ For more information on the use of all of these sensors/actuators refer to the
 [Reference Manual](http://www.cyberbotics.com/reference) of Webots.
 
 The physical model is very realistic and self collision check is available. To
-activate the self collision expand the Robotis OP2 node in the scene tree and set
+activate the self collision expand the ROBOTIS OP2 node in the scene tree and set
 `selfCollision` field to `true`. Use the self collision check
 only if you need it, because it is an expensive computation feature and can therefore
 significantly slow down the simulation speed.

@@ -49,7 +49,7 @@ set in the fields `camera_width` and `camera_height`. Only the resolutions
 specified in the following table are supported, if another
 resolution is set, the default resolution of 320x240 will be used.
 
-%figure "Camera resolutions supported by the camera of the Robotis OP2"
+%figure "Camera resolutions supported by the camera of the ROBOTIS OP2"
 
 | Width [pixel] | Height [pixel] | FPS  |
 | ------------- | -------------- | ---- |

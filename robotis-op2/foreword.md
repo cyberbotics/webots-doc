@@ -1,6 +1,6 @@
 ## Foreword
 
-This document will explain to you how to program the Robotis OP2 robot using
+This document will explain to you how to program the ROBOTIS OP2 robot using
 Webots. Webots allows you to program both the virtual robot model and the real
 robot by remote compiling or by remote controlling the robot.
 
@@ -25,4 +25,4 @@ robot:
 - Controller installation.
 
 We hope that you will enjoy working with Webots, and that it will greatly
-simplify your work with the Robotis OP2.
+simplify your work with the ROBOTIS OP2.

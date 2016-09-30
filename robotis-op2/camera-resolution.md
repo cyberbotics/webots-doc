@@ -7,7 +7,7 @@ are specified in the [following table](#cameraremoteresolution).
 Unlike from remote compilation you do not have to specify the desired resolution
 in any file, the resolution is automatically sent to the robot from Webots. So
 in order to adjust the resolution, just do the same way you would do it in the
-simulation (by editing `cameraWidth` and `cameraHeight` fields of the Robotis OP2
+simulation (by editing `cameraWidth` and `cameraHeight` fields of the ROBOTIS OP2
 in the scene tree window).
 
 %figure "Camera resolutions supported in remote-control"

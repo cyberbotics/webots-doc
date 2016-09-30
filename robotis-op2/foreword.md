@@ -15,7 +15,7 @@ program `espeak` on the robot.
 sudo apt-get install espeak
 ```
 
-In first chapters, all simulation model features of the Robotis OP 2 will be
+In first chapters, all simulation model features of the ROBOTIS OP 2 will be
 presented and examples included in Webots will be explained.
 
 Then, in following chapters, we will see different interactions with the

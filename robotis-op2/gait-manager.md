@@ -84,6 +84,6 @@ run the algorithm for a specified *duration*, expressed in milliseconds.
 > **Note**:
 In order to run, the gait manager needs to know the position of each
 servo and the values of the gyroscope. It is therefore essential to enable the
-`Gyro` device and the position feedback of each servo before using it.
+`Gyro` device and the `PositionSensor` device of each servo before using it.
 If it is not the case, a warning will appear and they will automatically be
 enabled.

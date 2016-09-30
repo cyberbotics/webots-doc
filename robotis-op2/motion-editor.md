@@ -3,7 +3,7 @@
 This tab allows you to create, edit or play a motion file. It contains an animation
 which can be executed by the robot at any time.
 
-%figure "Motion editor tab of the Robot Window"
+%figure "Motion editor tab of the robot window"
 ![Motion Editor view](images/window_motion_editor.png)
 %end
 

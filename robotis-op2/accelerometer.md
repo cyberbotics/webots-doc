@@ -11,7 +11,7 @@ time. The corresponding colors are the following:
 - Green for axis Y
 - Blue for axis Z
 
-%figure "Accelerometer tab of the Robot Window"
+%figure "Accelerometer tab of the robot window"
 
 ![window_accel.png](images/window_accel.png)
 

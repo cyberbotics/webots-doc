@@ -1,7 +1,7 @@
 ## An error occurs when compiling the framework and/or wrapper
 
 Be sure to have the latest framework version installed on the robot.
-If installation is done via the Webots Robot Window, then delete the file
+If installation is done via the Webots robot window, then delete the file
 "/robotis/version.txt".
 
 >**Note**:

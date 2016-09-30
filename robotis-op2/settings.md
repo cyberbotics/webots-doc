@@ -1,7 +1,7 @@
 ## Settings
 
 To send your controller to the real robot and make it run on it, go to the
-`Transfer` tab of the Robot Window (figure
+`Transfer` tab of the robot window (figure
 [Transfer tab](#transfer-tab-of-the-robot-window)).
 
 %figure "Transfer tab of the robot window"

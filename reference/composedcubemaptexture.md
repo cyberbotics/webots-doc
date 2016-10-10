@@ -13,9 +13,9 @@ ComposedCubeMapTexture {
 
 ### Description
 
-The [ComposedCubeMapTexture](#composedcubemaptexture) node defines a cubic texture used for environment mapping.
+The [ComposedCubeMapTexture](#composedcubemaptexture) node defines a cubic texture used for environment mapping. It is composed of exactly six [ImageTexture](imagetexture.md) nodes, all of which have to be defined for the resulting texture to be generated.
 
-Each of the six fields takes a texture corresponding to the side of the environment. For instance `right` takes the texture displayed on the side of the cube along the +X direction. Accordingly we have the following order, with the Z-axis pointing outwards: right:+X (0), left:-X (1), top:+Y (2), bottom:-Y (3), front:+Z (4), back:-Z (5).
+Each of the six fields takes a texture corresponding to the side of the environment. For instance `right` takes the texture displayed on the side of the cube along the +X direction. Accordingly we have the following order, with the Z-axis pointing forward (towards the screen): right:+X, left:-X, top:+Y, bottom:-Y, front:+Z, back:-Z.
 
 The [ComposedCubeMapTexture](#composedcubemaptexture) is typically used together with a [ComposedShader](composedshader.md). It can be set to an Appearance's texture field on its own, or in conjunction with other textures inside a [MultiTexture](multitexture.md) node.
 
@@ -110,7 +110,14 @@ Shape {
       }
     ]
   }
-  geometry TeapotMesh {
+  geometry Sphere {
+    subdivision 4
   }
 }
 ```
+
+Which results in the following textured Sphere:
+
+%figure "Environment Mapped Sphere"
+
+![environment-mapping.png](images/environment-mapping.png)

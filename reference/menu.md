@@ -19,6 +19,7 @@
     - [Charger](charger.md)
     - [Color](color.md)
     - [Compass](compass.md)
+    - [ComposedCubeMapTexture](composedcubemaptexture.md)
     - [ComposedShader](composedshader.md)
     - [Cone](cone.md)
     - [Connector](connector.md)

@@ -13,9 +13,9 @@ ComposedCubeMapTexture {
 
 ### Description
 
-The [ComposedCubeMapTexture](#composedcubemaptexture) node defines a cubic texture used for environment mapping. It is composed of exactly six [ImageTexture](imagetexture.md) nodes, all of which have to be defined for the resulting texture to be generated.
+The [ComposedCubeMapTexture](#composedcubemaptexture) node defines a cubic texture used for environment mapping. It is composed of exactly six [ImageTexture](imagetexture.md) nodes, all of which must be defined for the resulting texture to be generated. If at least one of them is not, the texture remains unusable.
 
-Each of the six fields takes a texture corresponding to the side of the environment. For instance `right` takes the texture displayed on the side of the cube along the +X direction. Accordingly we have the following order: right:+X, left:-X, top:+Y, bottom:-Y, front:+Z, back:-Z.
+Each of the six fields takes a texture corresponding to the side of the environment. For instance `right` takes the texture displayed on the side of the cube along the +X direction. Accordingly we have the following order: right: +X, left: -X, top: +Y, bottom: -Y, front: +Z, back: -Z.
 
 The [ComposedCubeMapTexture](#composedcubemaptexture) is typically used together with a [ComposedShader](composedshader.md). It can be set to an Appearance's texture field on its own, or in conjunction with other textures inside a [MultiTexture](multitexture.md) node.
 

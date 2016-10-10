@@ -121,3 +121,5 @@ Which results in the following textured Sphere:
 %figure "Environment Mapped Sphere"
 
 ![environment-mapping.png](images/environment-mapping.png)
+
+%end

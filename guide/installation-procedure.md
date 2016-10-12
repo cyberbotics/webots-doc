@@ -161,6 +161,15 @@ webots.version.bugfix }}.dmg" installation file from our [website](http://www.cy
 "Webots" containing the "Webots" folder.
 3. Move this folder to your "/Applications" folder or wherever you would like to
 install Webots.
+5. It is recommended to increase the size of the system shared memory in order to run simulations with more than 8 camera or display devices (such as the PR2 robot). In order to proceed, edit the following file from the Terminal application as administrator: `sudo pico /etc/sysctl.conf`. It is likely this file doesn't exist on your system, in which case an empty file will be created. Edit this file so that it contains the lines:
+```
+kern.sysv.shmmax=16777216
+kern.sysv.shmmin=1
+kern.sysv.shmmni=128
+kern.sysv.shmseg=32
+kern.sysv.shmall=4096
+```
+These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the Mac OS X documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
 4. During the first Webots launch, Mac OS X may complain about Webots which
 cannot be opened because it is from an unidentified developer
 (see [this figure](#security-and-privacy-settings)).

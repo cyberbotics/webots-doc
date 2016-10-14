@@ -3,7 +3,7 @@
 Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
 
 %figure
-![ImageData](images/titleweb.png)
+![ImageData](images/robotis-op2.png)
 %end
 
 Copyright &copy; {{ date.year }} Cyberbotics Ltd.

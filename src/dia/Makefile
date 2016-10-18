@@ -60,8 +60,6 @@ GUIDE_TARGETS= \
  controller_plugin.pdf \
  controller_plugin.pdf.png
 
-install : all
-
 all : $(REF_TARGETS) $(GUIDE_TARGETS)
 
 %.pdf : %.eps

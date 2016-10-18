@@ -9,11 +9,11 @@ default:
 
 dia: dia/*.dia
 	@echo "Producing diagrams..."
-	@make install -C dia
+	@make -C dia
 
 math: math/*.tex
 	@echo "Producing math formulas..."
-	@make install -C math
+	@make -C math
 
 clean:
 	@make clean -C math

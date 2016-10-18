@@ -61,8 +61,6 @@ GUIDE_TARGETS= \
  controller_plugin.pdf.png
 
 install : all
-	cp $(REF_TARGETS) ../../../doc/reference/pdf
-	cp $(GUIDE_TARGETS) ../../../doc/guide/pdf
 
 all : $(REF_TARGETS) $(GUIDE_TARGETS)
 
@@ -70,7 +68,7 @@ all : $(REF_TARGETS) $(GUIDE_TARGETS)
 	epstopdf --outfile=$@ $<
 
 %.eps : %.dia
-	dia -e $@ $< 
+	dia -e $@ $<
 
 %.pdf.png : %.eps
 	convert $< $@

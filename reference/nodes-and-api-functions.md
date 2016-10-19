@@ -69,6 +69,7 @@
 - [Servo](servo.md)
 - [ShaderPart](shaderpart.md)
 - [Shape](shape.md)
+- [Skin](skin.md)
 - [SliderJoint](sliderjoint.md)
 - [Slot](slot.md)
 - [Solid](solid.md)

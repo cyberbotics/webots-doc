@@ -313,6 +313,17 @@ for more information about the value of `robot_unique_name`).
 | [/robot/set\_mode](robot.md#wb_robot_get_mode)                             | service       | webots\_ros::robot\_set\_mode                  | char[] arg<br/>int32 mode<br/>---<br/>int8 success                                      |
 | /robot/get\_device\_list                                                   | service       | webots\_ros::robot\_get\_device\_list          | uint8 ask<br/>---<br/>string[] list                                                     |
 
+### Skin
+
+| name                                                                               | service/topic | data type                     | data type definition                                                                                         |
+| ---------------------------------------------------------------------------------- | ------------- | ----------------------------- | - ----------------------------------------- |
+| [/`<`device\_name`>`/get\_bone\_count](skin.md#wb_skin_get_bone_count)             | service       | webots\_ros::skin\_get\_bone\_count | uint8 ask<br/>---<br/>int32 count<br/>      |
+| [/`<`device\_name`>`/get\_bone\_name](skin.md#wb_skin_get_bone_name)               | service       | webots\_ros::skin\_get\_bone\_name  | int32 index<br/>---<br/>string name<br/>    |
+| [/`<`device\_name`>`/get\_bone\_orientation](skin.md#wb_skin_get_bone_orientation) | service       | webots\_ros::skin\_get\_bone\_orientation | int32 index<br/>bool absolute</br>---<br/>geometry_msgs/Quaternion orientation<br/> |
+| [/`<`device\_name`>`/get\_bone\_position](skin.md#wb_skin_get_bone_position)       | service       | webots\_ros::skin\_get\_bone\_position | int32 index<br/>bool absolute</br>---<br/>geometry_msgs/Vector3 position<br/> |
+| [/`<`device\_name`>`/set\_bone\_orientation](skin.md#wb_skin_set_bone_orientation) | service       | webots\_ros::skin\_set\_bone\_orientation | int32 index<br/>geometry_msgs/Quaternion orientation<br/>bool absolute</br>---<br/>int32 success<br/> |
+| [/`<`device\_name`>`/set\_bone\_position](skin.md#wb_skin_set_bone_position)       | service       | webots\_ros::skin\_set\_bone\_position | int32 index<br/>geometry_msgs/Vector3 position<br/>bool absolute</br>---<br/>int32 success<br/> |
+
 ### Speaker
 
 | name                                                                    | service/topic | data type                           | data type definition                                                                                         |

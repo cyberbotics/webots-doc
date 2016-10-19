@@ -12,5 +12,5 @@ The [MultiTexture](#multitexture) node specifies the application of several indi
 
 It's particularly useful to pass several textures to a [ComposedShader](composedshader.md) node.
 
-The `texture` field contains a list of texture nodes (i.e. [ImageTexture](imagetexture.md)).
+The `texture` field contains a list of texture nodes (i.e. [ImageTexture](imagetexture.md) and [ComposedCubeMapTexture](composedcubemaptexture.md)).
 It may not contain another MultiTexture node.

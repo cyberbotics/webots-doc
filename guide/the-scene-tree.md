@@ -30,7 +30,7 @@ value.
 ![](images/help-button.png =26x26) `Help`: Context sensitive help for the
 currently selected node.
 
-![](images/focus_button.png =26x26) `Focus`: Move viewpoint to focus on selected node.
+![](images/focus_button.png =26x26) `Move viewpoint to object`: Move viewpoint to center and zoom on the selected node. The object will be at the center of the 3D view and will be almost completely visible.
 
 Additionally, when a node is selected, other actions are available as shown in
 [this figure](#webots-node-editor):

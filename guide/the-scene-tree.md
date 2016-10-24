@@ -30,6 +30,8 @@ value.
 ![](images/help-button.png =26x26) `Help`: Context sensitive help for the
 currently selected node.
 
+![](images/focus_button.png =26x26) `Focus`: Move viewpoint to focus on selected node.
+
 Additionally, when a node is selected, other actions are available as shown in
 [this figure](#webots-node-editor):
 

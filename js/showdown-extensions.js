@@ -29,7 +29,7 @@ showdown.extension("wbVariables", function() {
       webots : {
         version : {
           major : 8,
-          minor : 5,
+          minor : 6,
           bugfix : 0
         }
       },

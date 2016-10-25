@@ -75,12 +75,15 @@ Shape {
             content [
               "#version 120"
               ""
+              "uniform mat4 worldMatrix;"
+              "uniform mat4 viewMatrixInverse;"
+              ""
               "varying vec3 N;"
               "varying vec3 E;"
               ""
               "void main() {"
-              "  E = gl_Vertex.xyz - vec3(gl_ModelViewMatrixInverse * vec4(0.,0.,0.,1.));"
-              "  N = gl_Normal;"
+              "  E = (worldMatrix * gl_Vertex).xyz - viewMatrixInverse[3].xyz;"
+              "  N = (worldMatrix * vec4(gl_Normal, 0.0)).xyz;"
               "  gl_Position = ftransform();"
               "}"
             ]

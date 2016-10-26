@@ -29,7 +29,7 @@ If the `material` field is NULL, lighting is off
 and the unlit object color is (1,1,1).
 
 - The `texture` field, if specified, shall contain an
-[ImageTexture](imagetexture.md) node or a [MultiTexture](multitexture.md) node.
+[ImageTexture](imagetexture.md) node, a [MultiTexture](multitexture.md) node or a [ComposedCubeMapTexture](composedcubemaptexture.md).
 If the `texture` node is NULL, the object that references this [Appearance](#appearance) is not textured.
 
 - The `textureTransform` field, if specified, shall contain a [TextureTransform](texturetransform.md) node.

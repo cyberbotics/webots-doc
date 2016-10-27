@@ -24,9 +24,9 @@ Here is a list of supported variables:
 
 | type | name              | description                                                 |
 |------|-------------------|-------------------------------------------------------------|
-| vec4 | viewMatrix        | The matrix transformation from world space to camera space. |
-| vec4 | viewMatrixInverse | The inverse transformation of viewMatrix                    |
-| vec4 | worldMatrix       | The matrix transformation from model space to world space   |
+| mat4 | viewMatrix        | The matrix transformation from world space to camera space. |
+| mat4 | viewMatrixInverse | The inverse transformation of viewMatrix.                   |
+| mat4 | worldMatrix       | The matrix transformation from model space to world space.  |
 
 The `transparent` field indicates if the shader will use the alpha channel.
 If it is set to `FALSE` then

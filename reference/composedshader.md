@@ -18,7 +18,7 @@ If several [ShaderPart](shaderpart.md) nodes of the same type are given, then on
 
 The `uniforms` field is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
-Webots provides a set of useful uniforms that can be invoked within a shader program and for which there is no need to add a [Uniform](uniform.md) field. To use them, simply declare them as `uniform` in your shader. For example, if you want to use the currently elapsed time, declare `uniform vec4 worldMatrix` and use the `worldMatrix` variable just like any other.
+Webots provides a set of useful uniforms that can be invoked within a shader program and for which there is no need to add a [Uniform](uniform.md) field. To use them, simply declare them as `uniform` in your shader. For example, if you wish to perform calculations in world space, declare `uniform vec4 worldMatrix` and use the `worldMatrix` variable to transform elements from model to world space.
 
 Here is a list of supported variables:
 

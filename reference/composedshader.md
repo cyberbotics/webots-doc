@@ -18,6 +18,16 @@ If several [ShaderPart](shaderpart.md) nodes of the same type are given, then on
 
 The `uniforms` field is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
+Webots provides a set of useful uniforms that can be invoked within a shader program and for which there is no need to add a [Uniform](uniform.md) field. To use them, simply declare them as `uniform` in your shader. For example, if you want to use the currently elapsed time, declare `uniform vec4 worldMatrix` and use the `worldMatrix` variable just like any other.
+
+Here is a list of supported variables:
+
+| type | name              | description                                                 |
+|------|-------------------|-------------------------------------------------------------|
+| vec4 | viewMatrix        | The matrix transformation from world space to camera space. |
+| vec4 | viewMatrixInverse | The inverse transformation of viewMatrix                    |
+| vec4 | worldMatrix       | The matrix transformation from model space to world space   |
+
 The `transparent` field indicates if the shader will use the alpha channel.
 If it is set to `FALSE` then
 the alpha channel will be ignored,

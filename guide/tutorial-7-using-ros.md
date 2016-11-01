@@ -3,9 +3,8 @@
 This tutorial explains how to use the nodes from the `webots_ros` package
 provided with Webots.
 
-These examples were tested with ROS `kinetic`, `jade`, `indigo`, `hydro` and `groovy`
-distributions on Linux. There is no warranty they will work if you use a
-different platform or an ancient distribution of ROS.
+These examples were tested with ROS `kinetic` on Linux.
+There is no warranty they will work if you use a different platform or an ancient distribution of ROS.
 
 ### Installing ROS
 

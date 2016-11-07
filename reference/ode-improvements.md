@@ -1,4 +1,4 @@
-## ODE improvments
+## ODE improvements
 
 In order to extend ODE possibilities and correct some bugs, the version of ODE
 bundled with Webots was improved. New functions were added and some existing

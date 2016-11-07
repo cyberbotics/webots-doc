@@ -8,6 +8,6 @@
 - [Structure of ODE objects](structure-of-ode-objects.md)
 - [Compiling the Physics Plugin](compiling-the-physics-plugin.md)
 - [Examples](examples.md)
-- [ODE improvments](ode-improvments.md)
+- [ODE improvements](ode-improvements.md)
 - [Troubleshooting](troubleshooting.md)
 - [Execution Scheme](execution-scheme.md)

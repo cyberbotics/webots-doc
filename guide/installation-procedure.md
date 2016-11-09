@@ -170,16 +170,35 @@ kern.sysv.shmseg=32
 kern.sysv.shmall=4096
 ```
 These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the Mac OS X documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
-5. During the first Webots launch, Mac OS X may complain about Webots which
+
+#### Mac OS X security
+
+During the first Webots launch, Mac OS X may complain about Webots which
 cannot be opened because it is from an unidentified developer
-(see [this figure](#security-and-privacy-settings)).
-In this case, please modify the `Preferences / Security & Privacy` OS settings
-as shown in the figure.
-Don't forget to restore the settings once Webots has been started successfully.
+(see [this figure](#unidentified-developer-dialog)).
 
-%figure "Security and Privacy settings"
+%figure "Unidentified developer dialog"
 
-![mac-unidentified-developper-dialog.png](images/mac-unidentified-developper-dialog.png)
-![mac-security-and-privacy-settings.png](images/mac-security-and-privacy-settings.png)
+![mac-unidentified-developer-dialog.png](images/mac-unidentified-developer-dialog.png)
 
 %end
+
+In this case, please disable the Apple security about unidentified developers
+by typing in a terminal the following command:
+
+```
+sudo spctl --master-disable
+```
+
+Then double-clicking on the Webots icon should display the following dialog,
+allowing you to open Webots as shown in [this figure](#open-an-application-downloaded-from-internet).
+
+%figure "Open an application downloaded from internet"
+
+![mac-open-application-downloaded-from-internet-dialog.png](images/mac-open-application-downloaded-from-internet-dialog.png)
+
+%end
+
+Finally, you can restore the Mac OS X security, by ticking the
+`Preferences / Security & Privacy / General / Allow apps downloaded from: / App Store and identified developers`
+OS settings.

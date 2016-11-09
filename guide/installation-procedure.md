@@ -171,7 +171,7 @@ kern.sysv.shmall=4096
 ```
 These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the Mac OS X documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
 
-#### Mac OS X security
+### Mac OS X security
 
 During the first Webots launch, Mac OS X may complain about Webots which
 cannot be opened because it is from an unidentified developer

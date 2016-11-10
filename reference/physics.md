@@ -24,7 +24,7 @@ node derived from [Solid](solid.md)). The presence or absence of a
 [Physics](#physics) node in the `physics` field of a [Solid](solid.md) defines
 whether the [Solid](solid.md) will have a *physics* or a *kinematic* behavior.
 
-> **note**:
+> **Note**:
 In older Webots versions, `coulombFriction, bounce, bounceVelocity` and
 `forceDependentSlip` fields used to be specified in [Physics](#physics) nodes.
 Now these values must be specified in [ContactProperties](contactproperties.md)
@@ -124,7 +124,7 @@ grasping robotic hand or gripper is crucial for the simulation of such devices.
 Therefore the mechanical body parts of robots (eg., legs, wheels, arms, hands,
 etc) need in general to have [Physics](#physics) nodes.
 
-> **note**:
+> **Note**:
 It is possible to set the `physics` field of a [Robot](robot.md) or a top
 [Solid](solid.md) to `NULL` in order to pin its base to the static environment.
 This can be useful for the simulation of a robot arm whose base segment is
@@ -135,7 +135,7 @@ have no [Physics](#physics) nodes.
 
 <!-- -->
 
-> **note**:
+> **Note**:
 The [DifferentialWheels](differentialwheels.md) robot is a special case: it can
 move even if it does not have [Physics](#physics) nodes. That's because Webots
 uses a special *kinematics* algorithm for
@@ -161,7 +161,7 @@ just before the highest ancestor without [Physics](#physics) node. This way
 modelling a rigid assembly of [Solid](solid.md)s won't hurt physics simulation
 speed even if it aggregates numerous components.
 
-> **note**:
+> **Note**:
 When solid merging applies, only the highest ancestor of the rigid assembly has
 a body (a non null `dBodyID` in ODE terms) which holds the physical properties
 of the assembly. This may impact the way you design a [physics
@@ -307,7 +307,7 @@ volume in the simulated robot. This is true for these devices:
 [LED](led.md), [LightSensor](lightsensor.md), [Pen](pen.md), and
 [Receiver](receiver.md).
 
-> **note**:
+> **Note**:
 The [InertialUnit](inertialunit.md) and [Connector](connector.md) nodes work
 differently. Indeed, they require the presence of a [Physics](#physics) node in
 their parent node to be functional. It is also possible to specify a

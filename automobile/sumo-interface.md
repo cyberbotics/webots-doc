@@ -7,7 +7,7 @@ a large number of vehicles in real-time. This interface is written in python in
 a supervisor controller and uses  [TraCI](http://sumo.dlr.de/wiki/TraCI) to
 communicate with SUMO.
 
-> **note**:
+> **Note**:
 Currently version 0.27.1 of SUMO is distributed with Webots.
 
 In order to use this interface a few rules need to be observed. First, a
@@ -66,7 +66,7 @@ field `controllerArgs` in order to customize the behavior of the interface:
 %end
 
 
-> **note** [Mac OS X]:
+> **Note** [Mac OS X]:
 On Mac OS X, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
 

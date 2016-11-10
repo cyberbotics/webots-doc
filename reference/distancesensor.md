@@ -189,7 +189,7 @@ the paint color applied on the object with the [Pen](pen.md) device. Then, the
 distance value computed by the simulator is divided by the reflection factor
 before the lookup table is used to compute the output value.
 
-> **note**:
+> **Note**:
 Unlike other distance sensor rays, "infra-red" rays can detect solid parts of
 the robot itself. It is thus important to ensure that no solid geometries
 interpose between the sensor and the area to inspect.

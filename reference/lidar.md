@@ -70,10 +70,10 @@ The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin. The
 point was acquired. With lidar devices, all the points are not acquired at the
 exact same time but rather sequentially.
 
-> **note** [C++]:
+> **Note** [C++]:
 In C++ the name of the structure is `LidarPoint`.
 
-> **note** [Java/Python]:
+> **Note** [Java/Python]:
 In Java and Python, the structure is replaced by a class called `LidarPoint`.
 
 ### Field Summary
@@ -137,7 +137,7 @@ of the lidar.
 image. More information on compositors is provided in the
 [compositor](camera.md) field description of the [Camera](camera.md) node.
 
-> **note**:
+> **Note**:
 The fields `numberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and
 `fieldOfView` should respect the following constraint in order to be able to
 simulate the lidar:
@@ -151,7 +151,7 @@ simulate the lidar:
 
 A lidar is said rotating if its `type` field is set to 'rotating'. In that case, the node inserted in the `rotatingHead` rotates along the Y axis at the frequency defined in the `defaultFrequency` field. This rotation starts as soon as the lidar is enabled. The internal depth camera is attached to this node and is therefore also rotating along the Y axis.
 
-> **note**:
+> **Note**:
 The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π.
 
 ### Lidar Functions
@@ -207,7 +207,7 @@ cloud update.
 The `wb_lidar_is_point_cloud_enabled()` function returns true if the point cloud
 update is enabled or false otherwise.
 
-> **note**:
+> **Note**:
 To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable()` function.
 
 ---
@@ -246,7 +246,7 @@ Attempting to read outside the bounds of this memory chunk will cause an error.
 The `wb_lidar_get_layer_range_image()` function is a convenient way of getting
 directly the sub range image associated with one layer.
 
-> **note** [Python]:
+> **Note** [Python]:
 The Lidar class has two methods for getting the lidar image. The
 `getRangeImage()` returns a one-dimensional list of floats, while the
 `getRangeImageArray()` returns a two-dimensional list of floats. Their content

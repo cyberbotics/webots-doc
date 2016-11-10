@@ -138,7 +138,7 @@ function. The format of this buffers is BGRA (32 bits). We recommend to use the
 `wb_camera_image_get_*`-like functions to access the buffer because the internal
 format could change.
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 The Matlab API uses a language-specific representation of color images
 consisting of a 3D array of RGB triplets. Please look at the [Matlab
 example](#wb_camera_get_image) in the `wb_camera_get_image` function's
@@ -402,7 +402,7 @@ for (int x = 0; x < image_width; x++)
   }
 ```
 
-> **note** [Java]:
+> **Note** [Java]:
 `Camera.getImage()` returns an array of int (`int[]`). The length of this array
 corresponds to the number of pixels in the image, that is the width multiplied
 by the height of the image. Each `int` element of the array represents one pixel
@@ -427,7 +427,7 @@ an `int` color/gray component in the range [0..255]. Here is an example:
 
 <!-- -->
 
-> **note** [Python]:
+> **Note** [Python]:
 `getImage()` returns a `string`. This `string` is closely related to the `const
 char *` of the C API. `imageGet*`-like functions can be used to get the channels
 of the camera Here is an example:
@@ -458,7 +458,7 @@ directly used for accessing to the pixels. Here is an example:
 
 <!-- -->
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 `wb_camera_get_image()` returns a 3-dimensional array of `uint(8)`. The first
 two dimensions of the array are the width and the height of camera's image, the
 third being the RGB code: 1 for red, 2 for blue and 3 for green.

@@ -14,10 +14,10 @@ We will use a part of the OpenStreetMap map to generate the Webots world file. T
 
 As explained in the [OpenStreetMap importer](openstreetmap-importer.md) section, you should use the previously downloaded map to generate the Webots world.
 
-> **note**:
+> **Note**:
 This importer uses splines to improve and smooth the path of the roads, unfortunately the OpenStreetMap to SUMO importer does not support this, it is therefore recommended to disable it (setting the spline subdivision to 0) if you want then to add traffic using SUMO.
 
-> **note**:
+> **Note**:
 It is strongly recommended to not use the 3D feature of the [OpenStreetMap importer](openstreetmap-importer.md) otherwise it will not be possible to add traffic using SUMO.
 
 Once the conversion is complete, the importer will display the number of objects generated, the map offset, the reference coordinates and the projection used:
@@ -48,7 +48,7 @@ We can also use the previously downloaded map to generate the SUMO network file.
 netconvert --osm-files map.osm -o sumo.net.xml --geometry.remove --roundabouts.guess --ramps.guess --junctions.join --osm.railway.oneway-default --tls.guess-signals --tls.discard-simple --tls.join --proj "projection parameters"
 ```
 
-> **note**:
+> **Note**:
 You will have to replace `map.osm` by the real name of your map and `longitude_value` and `latitude_value` by the values displayed previously by the [OpenStreetMap importer](openstreetmap-importer.md).
 
 Both the [OpenStreetMap importer](openstreetmap-importer.md) and [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) will center the map, but it can happen that the centering is not perfectly matched and results in an offset between the Webots world and the SUMO network. To fix this problem, simply open the `sumo.net.xml` in a text editor and look for the line starting by `<location netOffset=` (it should be at the beginning of the file). You will need to change the value of the `netOffset` field, the new value (for each component) should be the previous value additioned to the value of `x_offset_value` and `y_offset_value` displayed by the [OpenStreetMap importer](openstreetmap-importer.md).

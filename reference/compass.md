@@ -113,7 +113,7 @@ return bearing;
 }
 ```
 
-> **note** [C, C++]:
+> **Note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the
 [Compass](#compass) node, therefore it is illegal to free this pointer.
 Furthermore, note that the pointed values are only valid until the next call to
@@ -122,5 +122,5 @@ period they must be copied.
 
 <!-- -->
 
-> **note** [Python]:
+> **Note** [Python]:
 `getValues()` returns the vector as a list containing three floats.

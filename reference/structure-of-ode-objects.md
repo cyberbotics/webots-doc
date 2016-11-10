@@ -25,7 +25,7 @@ information shall be useful for implementing physics plugins.
 
 %end
 
-> **note**:
+> **Note**:
 Although a physics plugin grants you access to the dGeomIDs created and managed
 by Webots, you should never attempt to set a user-defined data pointer by means
 of dGeomSetData() for these dGeomIDs as Webots stores its own data pointer in

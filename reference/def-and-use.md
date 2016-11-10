@@ -15,7 +15,7 @@ it in the ".wbt" or ".proto" file.
 USE defName
 ```
 
-> **note**:
+> **Note**:
 Although it is permitted to name any node using the DEF keyword, USE statements
 are not allowed for `Solid`, `Joint`, `JointParameters`, and
 `BallJointParameters` nodes and their derived nodes. Indeed, the ability for

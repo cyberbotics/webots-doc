@@ -51,10 +51,10 @@ The `distance` is the radial distance between the radar and the target. The
 of the target relative to the radar sensor. The `azimuth` is the horizontal
 angle of the target relative to the radar.
 
-> **note** [C++]:
+> **Note** [C++]:
 In C++ the name of the structure is `RadarTarget`.
 
-> **note** [Java/Python]:
+> **Note** [Java/Python]:
 In Java and Python, the structure is replaced by a class called `RadarTarget`.
 
 ### Field Summary

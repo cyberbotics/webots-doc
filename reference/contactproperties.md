@@ -36,7 +36,7 @@ of the two colliding [Solid](solid.md)s. The values of the first matching
 matching node is found, default values are used. The default values are the same
 as those indicated above.
 
-> **note**:
+> **Note**:
 In older Webots versions, contact properties used to be specified in
 [Physics](physics.md) nodes. For compatibility reasons, contact properties
 specified like this are still functional in Webots, but they trigger deprecation
@@ -137,7 +137,7 @@ the linear velocity of the contact surface. The formulas affecting the gain and
 pitch of these sounds were determinated empirically to produce fairly realistic
 sounds. They are subject to improvements.
 
-> **note**:
+> **Note**:
 The youBot robot is a good example of asymmetric coulombFriction and
 forceDependentSlip, it is located in
 WEBOTS\_HOME/projects/robot/youbot/worlds/youbot.wbt.

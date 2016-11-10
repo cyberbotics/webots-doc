@@ -29,7 +29,7 @@ applied.
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) shadows
 casted by this shape.
 
-> **note**:
+> **Note**:
 Objects cast shadows only if the world contains at least one [Light](light.md)
 node with `castShadows` field set to TRUE and if shadows are not disabled in the
 application preferences.

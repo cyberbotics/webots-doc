@@ -79,7 +79,7 @@ attraction state, or that a suction pump was activated, etc. But the actual
 physical link exists only if `wb_connector_lock()` was called when a compatible
 peer was present (or if the [Connector](#connector) was auto-locked).
 
-    > **note**:
+    > **Note**:
 If `Connectors` nodes are locked and correctly aligned (and compatible) in the
 .wbt file then the simulation will start with these connectors already attached
 by a physical link. You can take advantage of this feature to start your
@@ -189,7 +189,7 @@ connect.
 
 %end
 
-> **note**:
+> **Note**:
 To be functional, a [Connector](#connector) node requires the presence of a
 [Physics](physics.md) node in its parent node. But it is not necessary to add a
 [Physics](physics.md) node to the [Connector](#connector) itself.

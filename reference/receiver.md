@@ -160,7 +160,7 @@ long as emitters and receivers agree.
 
 %end
 
-> **note**:
+> **Note**:
 Webots' Emitter/Receiver API guarantees that:
 
 - Packets will be received in the same order they were sent
@@ -212,7 +212,7 @@ equal to the *size* argument of the corresponding `emitter_send_packet()` call.
 It is illegal to call `wb_receiver_get_data_size()` when the queue is empty
 (`wb_receiver_get_queue_length()` == 0).
 
-> **note** [Python]:
+> **Note** [Python]:
 The `getData()` function returns a string. Similarly to the `sendPacket()`
 function of the [Emitter](emitter.md) device, using the functions of the struct
 module is recommended for sending primitive data types. Here is an example for
@@ -227,7 +227,7 @@ getting the data:
 
 <!-- -->
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 The Matlab `wb_receiver_get_data()` function returns a MATLAB *libpointer*. The
 receiving code is responsible for extracting the data from the *libpointer*
 using MATLAB's `setdatatype()` and `get()` functions. Here is an example on how
@@ -312,7 +312,7 @@ If the packet is sent from a physics plugin, the returned values will be NaN (No
 The returned vector is valid only until the next call to `wb_receiver_next_packet()`.
 It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
 
-> **note** [Python]:
+> **Note** [Python]:
 `getEmitterDirection()` returns the vector as a list containing three floats.
 
 ---
@@ -342,7 +342,7 @@ channels.
 The `wb_receiver_get_channel()` function returns the current channel number of
 the receiver.
 
-> **note** [C++, Java, Python]:
+> **Note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
 static integer of the [Receiver](#receiver) class
 (Receiver::CHANNEL\_BROADCAST).

@@ -232,7 +232,7 @@ range value, directly from its pixel coordinates. The `range_finder_width`
 parameter can be obtained from the `wb_range_finder_get_width()` function. The
 `x` and `y` parameters are the coordinates of the pixel in the image.
 
-> **note** [Python]:
+> **Note** [Python]:
 The RangeFinder class has two methods for getting the range-finder image. The
 `getRangeImage()` returns a one-dimensional list of floats, while the
 `getRangeImageArray()` returns a two-dimensional list of floats. Their content

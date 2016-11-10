@@ -173,7 +173,7 @@ These settings increase the amount of shared memory to four times the usual defa
 
 ### Mac OS X security
 
-During the first launch of Webots, Mac OS X may complain about the opening of Webots because it is from an unidentified developer
+During the first Webots launch, Mac OS X may complain about opening Webots because it is from an unidentified developer
 (see [this figure](#unidentified-developer-dialog)).
 
 %figure "Unidentified developer dialog"

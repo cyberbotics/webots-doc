@@ -194,4 +194,4 @@ Mac OS X should propose to open the application anyway
 
 In earlier versions of Mac OS X, this last operation may not work.
 In this case, refer to your Mac OS X security settings to open Webots anyway
-(`Preferences / Security & Privacy / General / Allow apps downloaded from:`).
+(`System Preferences / Security & Privacy / General / Allow apps downloaded from:`).

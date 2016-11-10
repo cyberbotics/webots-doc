@@ -182,7 +182,7 @@ During the first Webots launch, Mac OS X may complain about opening Webots becau
 
 %end
 
-In this case, `Ctrl + click` (or right-click) on the Webots icon, and select the `open` menu item.
+In this case, `Ctrl + click` (or right-click) on the Webots icon, and select the `Open` menu item.
 Mac OS X should propose to open the application anyway
 (see [this figure](#unidentified-developer-dialog)).
 

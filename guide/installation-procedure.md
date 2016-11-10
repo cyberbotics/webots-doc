@@ -173,8 +173,7 @@ These settings increase the amount of shared memory to four times the usual defa
 
 ### Mac OS X security
 
-During the first Webots launch, Mac OS X may complain about Webots which
-cannot be opened because it is from an unidentified developer
+During the first launch of Webots, Mac OS X may complain about the opening of Webots because it is from an unidentified developer
 (see [this figure](#unidentified-developer-dialog)).
 
 %figure "Unidentified developer dialog"
@@ -183,22 +182,16 @@ cannot be opened because it is from an unidentified developer
 
 %end
 
-In this case, please disable the Apple security about unidentified developers
-by typing in a terminal the following command:
+In this case, right-click on the Webots icon, and select the `open` menu item.
+Mac OS X should propose to open the application anyway
+(see [this figure](#unidentified-developer-dialog)).
 
-```
-sudo spctl --master-disable
-```
+%figure "Open Webots anyway"
 
-Then double-clicking on the Webots icon should display the following dialog,
-allowing you to open Webots as shown in [this figure](#open-an-application-downloaded-from-internet).
-
-%figure "Open an application downloaded from internet"
-
-![mac-open-application-downloaded-from-internet-dialog.png](images/mac-open-application-downloaded-from-internet-dialog.png)
+![mac-open-anyway.png](images/mac-open-anyway.png)
 
 %end
 
-Finally, you can restore the Mac OS X security, by ticking the
-`Preferences / Security & Privacy / General / Allow apps downloaded from: / App Store and identified developers`
-OS settings.
+In earlier versions of Mac OS X, this last operation may not work.
+In this case, refer to your Mac OS X security settings to open Webots anyway
+(`Preferences / Security & Privacy / General / Allow apps downloaded from:`).

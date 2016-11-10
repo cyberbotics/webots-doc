@@ -170,16 +170,28 @@ kern.sysv.shmseg=32
 kern.sysv.shmall=4096
 ```
 These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the Mac OS X documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
-5. During the first Webots launch, Mac OS X may complain about Webots which
-cannot be opened because it is from an unidentified developer
-(see [this figure](#security-and-privacy-settings)).
-In this case, please modify the `Preferences / Security & Privacy` OS settings
-as shown in the figure.
-Don't forget to restore the settings once Webots has been started successfully.
 
-%figure "Security and Privacy settings"
+### Mac OS X security
 
-![mac-unidentified-developper-dialog.png](images/mac-unidentified-developper-dialog.png)
-![mac-security-and-privacy-settings.png](images/mac-security-and-privacy-settings.png)
+During the first Webots launch, Mac OS X may complain about opening Webots because it is from an unidentified developer
+(see [this figure](#unidentified-developer-dialog)).
+
+%figure "Unidentified developer dialog"
+
+![mac-unidentified-developer-dialog.png](images/mac-unidentified-developer-dialog.png)
 
 %end
+
+In this case, `Ctrl + click` (or right-click) on the Webots icon, and select the `Open` menu item.
+Mac OS X should propose to open the application anyway
+(see [this figure](#unidentified-developer-dialog)).
+
+%figure "Open Webots anyway"
+
+![mac-open-anyway.png](images/mac-open-anyway.png)
+
+%end
+
+In earlier versions of Mac OS X, this last operation may not work.
+In this case, refer to your Mac OS X security settings to open Webots anyway
+(`System Preferences / Security & Privacy / General / Allow apps downloaded from:`).

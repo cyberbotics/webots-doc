@@ -4,7 +4,7 @@ The [Joystick](#joystick) API doesn't correspond to a Webots node. It is a set o
 
 Each physical joystick can be used by one controller at a time only. If several joysticks are connected, different controllers may be able to use a different joystick.
 
-> **note**:
+> **Note**:
 In C++, Python and Java the joystick functions are in a dedicated class called
 `Joystick`. In order to get the `Joystick` instance, you should call the
 `getJoystick()` function of the `Robot` class.
@@ -124,5 +124,5 @@ The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gai
 
 The `wb_joystick_set_resistance_gain()` function sets the resistance gain of the force feedback. Resistance is an effect that tend to prevent the axis from moving. The joystick must support force feedback and the unit of `gain` is hardware specific.
 
-> **note**:
+> **Note**:
 The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.

@@ -9,7 +9,7 @@ used to define the method names. The `init` and `cleanup` functions are called
 automatically from the constructor/destructor of the
 [Driver](cpp-libraries.md#cppdriver) and [Car](cpp-libraries.md#cppcar) classes.
 
-> **note** [Java]:
+> **Note** [Java]:
 The following program shows how to set the cruising speed and the steering angle
 in Java:
 
@@ -30,7 +30,7 @@ in Java:
 > }
 > ```
 
-> **note** [Python]:
+> **Note** [Python]:
 The following program shows how to set the cruising speed and the steering angle
 in Python:
 

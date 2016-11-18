@@ -169,7 +169,7 @@ formula.
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 In the Matlab version of `wb_display_set_color()` the `color` argument must be a
 vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents
@@ -263,7 +263,7 @@ of outlined.
 polygon drawn by the `wb_display_draw_polygon()` function except that it is
 filled instead of outlined.
 
-> **note** [Java, Python, Matlab]:
+> **Note** [Java, Python, Matlab]:
 The Java, Python and Matlab equivalent of `wb_display_draw_polygon()` and
 `wb_display_fill_polygon()` don't have a `size` argument because in these
 languages the size is determined directly from the `x` and `y` arguments.
@@ -336,7 +336,7 @@ specified by the `ir` parameter. After this call the value of `ir` becomes
 invalid and should not be used any more. Using this function is recommended
 after a clipboard image is not needed any more.
 
-> **note** [Java]:
+> **Note** [Java]:
 The `Display.imageNew()` function can display the image returned by the
 `Camera.getImage()` function directly if the pixel format argument is set to
 ARGB.

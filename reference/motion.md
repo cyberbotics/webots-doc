@@ -28,7 +28,7 @@ playback.
 The `wbu_motion_delete()` function frees all the memory associated with the
 `WbMotionRef`. This `WbMotionRef` can no longer be used afterwards.
 
-> **note** [C++, Java, Python]:
+> **Note** [C++, Java, Python]:
 The constructor and destructor of the Motion class are used instead of
 `wbu_motion_new()` and `wbu_motion_delete()`. In these languages, an error
 condition can be detected by calling the `isValid()` function after the

@@ -66,7 +66,7 @@ automatically reset to *x x x*. The same holds for a `Transform` placed inside a
 of the previous constrained scale fields, the two others are actuated using the
 new value and the corresponding constraint rule.
 
-> **note**:
+> **Note**:
 If a `Transform` is named using the [DEF](def-and-use.md) keyword and later
 referenced inside a `boundingObject` with a USE statement, the constraint
 corresponding to its first `Geometry` descendant applies to the `scale` fields

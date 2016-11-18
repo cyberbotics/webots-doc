@@ -228,7 +228,7 @@ double wbu_driver_get_rpm();
 
 This function returns the estimation of the engine rotation speed.
 
-> **note**:
+> **Note**:
 If the control in cruising speed is enabled, this function returns an error
 because there is no engine model when control in cruising speed is enabled.
 
@@ -304,7 +304,7 @@ of the `Car` PROTO, the output torque is:
 output_torque = c * rpm^2 + b * rpm + a
 ```
 
-> **note**:
+> **Note**:
 if the rpm is below the `engineMinRPM` parameter of the [Car](car.md) PROTO,
 `engineMinRPM` is used instead of the real rpm, but if the rpm is above the
 `engineMaxRPM` parameter, then the output torque is 0.

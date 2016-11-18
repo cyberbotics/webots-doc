@@ -44,13 +44,13 @@ An example of a textured floor used with a robot equipped with a pen is given in
 the "pen.wbt" example world (located in the "projects/samples/devices/worlds"
 directory of Webots).
 
-> **note**:
+> **Note**:
 The `inkEvaporation` field of the [WorldInfo](worldinfo.md) node controls how
 fast the ink evaporates (disappears).
 
 <!-- -->
 
-> **note**:
+> **Note**:
 The drawings performed by a pen can be seen by infra-red distance sensors.
 Hence, it is possible to implement a robotics experiment where a robot draws a
 line on the floor with a pen and a second robot performs a line following
@@ -128,7 +128,7 @@ wb_pen_set_ink_color(pen,0xF01010,0.9);
 The above statement will change the ink color of the indicated pen to some red
 color.
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 In the Matlab version of `wb_pen_set_ink_color()`, the `color` argument must be
 a vector containing the three RGB components: `[RED GREEN BLUE]`. Each component
 must be a value between 0.0 and 1.0. For example the vector `[1 0 1]` represents

@@ -85,7 +85,7 @@ axis. Note that the gravity can be specified in the `gravity` field in the
 this offset must be subtracted. The device's output will be zero during free
 fall when no offset is substracted.
 
-> **note** [C, C++]:
+> **Note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the
 [Accelerometer](#accelerometer) node, therefore it is illegal to free this
 pointer. Furthermore, note that the pointed values are only valid until the next
@@ -94,5 +94,5 @@ longer period they must be copied.
 
 <!-- -->
 
-> **note** [Python]:
+> **Note** [Python]:
 `getValues()` returns the 3D-vector as a list containing three floats.

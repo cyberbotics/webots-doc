@@ -83,7 +83,7 @@ are used.
 total number of bytes in the packets enqueued in the emitter cannot exceed this
 number. A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
 
-> **note**:
+> **Note**:
 [Emitter](#emitter) nodes can also be used to communicate with the physics
 plugin (see [this chapter](physics-plugin.md)). In this case the channel must be
 set to 0 (the default). In addition it is highly recommended to choose -1 for
@@ -133,7 +133,7 @@ double array[5] = { 3.0, x, y, -1/z, -5.5 };
 wb_emitter_send(tag, array, 5 * sizeof(double));
 ```
 
-> **note** [Python]:
+> **Note** [Python]:
 The `send()` function sends a string. For sending primitive data types into this
 string, the *struct* module can be used. This module performs conversions
 between Python values and C structs represented as Python strings. Here is an
@@ -148,7 +148,7 @@ example:
 
 <!-- -->
 
-> **note** [Java]:
+> **Note** [Java]:
 The Java `send()` method does not have a `size` argument because the size is
 implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received
@@ -190,7 +190,7 @@ emitter can selectively send data to different receivers. The
 `wb_emitter_get_channel()` function returns the current channel number of the
 emitter.
 
-> **note** [C++, Java, Python]:
+> **Note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
 static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 

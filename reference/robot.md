@@ -65,7 +65,7 @@ two remain constant. *Important:* when the current energy value reaches zero,
 the corresponding controller process terminates and the simulated robot stops
 all motion.
 
-> **note**:
+> **Note**:
 *[J]=[V].[A].[s] and [J]=[V].[A.h]/3600*
 
 - `cpuConsumption`: power consumption of the CPU (central processing unit) of the
@@ -309,7 +309,7 @@ identifier will be used subsequently for enabling, sending commands to, or
 reading data from this device. If the specified device is not found, the
 function returns 0.
 
-> **note**:
+> **Note**:
 This function is not available in the C++, Java and Python APIs. Instead, C++, Java and Python users should use device specific typed methods (see below).
 
 
@@ -360,7 +360,7 @@ function `getDistanceSensor` will return a reference to a
 found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
-> **note**:
+> **Note**:
 These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
 
 **See also**
@@ -821,7 +821,7 @@ void *wbw_robot_window_custom_function(void *arg) {
 }
 ```
 
-> **note** [Java, Python, Matlab]:
+> **Note** [Java, Python, Matlab]:
 Given that the robot window can only be implemented for C/C++ controllers,
 `wb_robot_window_custom_function` is not available in Java, Python or Matlab
 API.

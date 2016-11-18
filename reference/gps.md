@@ -100,7 +100,7 @@ GPS.
 The `wb_gps_get_speed()` function returns the current [GPS](#gps) speed in
 meters per second.
 
-> **note** [C, C++]:
+> **Note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the
 [GPS](#gps) node, therefore it is illegal to free this pointer. Furthermore,
 note that the pointed values are only valid until the next call to
@@ -109,7 +109,7 @@ period they must be copied.
 
 <!-- -->
 
-> **note** [Python]:
+> **Note** [Python]:
 `getValues()` returns the 3D-vector as a list containing three floats.
 
 ---
@@ -152,11 +152,11 @@ const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees);
 This function converts a decimal degrees coordinate into a string representing
 the coordinate in the degrees minutes seconds format.
 
-> **note**:
+> **Note**:
 Your system should support UTF-8 otherwise you may get strange characters
 instead of the degree, minute and second symbols.
 
 <!-- -->
 
-> **note** [C]:
+> **Note** [C]:
 The returned string should be deallocated by the user.

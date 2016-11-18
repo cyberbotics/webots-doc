@@ -161,7 +161,7 @@ by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in
 seconds), and *A* is the acceleration of the motor as specified by the
 `acceleration` field (default) or set with `wb_motor_set_acceleration()`.
 
-> **note**:
+> **Note**:
 *error_integral* and *previous_error* are both reset to *0* after every call of
 `wb_motor_set_control_pid()`.
 
@@ -252,7 +252,7 @@ Similarly, for a linear motor it is computed according to the following equation
 
 Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumptionFactor` is a constant provided by the `consumptionFactor` field of the [Motor](motor.md) node.
 
-> **note**:
+> **Note**:
 This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for most prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.
 
 ### Motor Functions
@@ -324,22 +324,22 @@ wb_motor_set_position(tag, INFINITY);
 wb_motor_set_velocity(tag, desired_speed);  // rad/s
 ```
 
-> **note** [C++]:
+> **Note** [C++]:
 In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
 
 <!-- -->
 
-> **note** [Java]:
+> **Note** [Java]:
 In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
 
 <!-- -->
 
-> **note** [Python]:
+> **Note** [Python]:
 In Python use `float('+inf')` instead of INFINITY
 
 <!-- -->
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 In MATLAB use `inf` instead of INFINITY
 
 The `wb_motor_get_target_position()` function allows the user to get the target

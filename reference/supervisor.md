@@ -17,7 +17,7 @@ If a [Supervisor](#supervisor) contains devices then the
 [Supervisor](#supervisor) controller can use them. Webots PRO is required to use
 the [Supervisor](#supervisor) node.
 
-> **note**:
+> **Note**:
 Note that in some special cases the [Supervisor](#supervisor) functions might
 return wrong values and it might not be possible to retrieve fields and nodes.
 This occurs when closing a world and quitting its controllers, i.e. reverting
@@ -27,7 +27,7 @@ string, an empty string is returned instead of a NULL pointer.
 
 <!-- -->
 
-> **note** [C++, Java, Python]:
+> **Note** [C++, Java, Python]:
 It is a good practice to check for a NULL pointer after calling a
 [Supervisor](#supervisor) function.
 
@@ -171,7 +171,7 @@ corresponding to the base type name of the node, like "DifferentialWheels",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
 NULL.
 
-> **note** [C++, Java, Python]:
+> **Note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_NODE\_* constants are available as static
 integers of the `Node` class (for example, Node::DIFFERENTIAL\_WHEELS). These
 integers can be directly compared with the output of the `Node::getType()`
@@ -217,7 +217,7 @@ belongs to. It can be a single field (SF) or a multiple field (MF). If no such
 field name exists for the specified node or the field is an internal field of a
 PROTO, the return value is NULL. Otherwise, it returns a handler to a field.
 
-> **note**:
+> **Note**:
 The `wb_supervisor_node_get_field()` function will return a valid field handler
 if the field corresponding to the field name is an hidden field.
 
@@ -282,7 +282,7 @@ this time with coordinates expressed in the global (world) coordinate system.
 The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
 use these functions to do this.
 
-> **note**:
+> **Note**:
 The returned pointers are valid during one time step only as memory will be
 deallocated at the next time step.
 
@@ -312,7 +312,7 @@ always the zero vector.
 
 The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
-> **note**:
+> **Note**:
 The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
@@ -347,7 +347,7 @@ values on the first 3 array components.
 The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project
 shows how to use this function.
 
-> **note**:
+> **Note**:
 The returned pointer is valid during one time step only as memory will be
 deallocated at the next time step.
 
@@ -548,7 +548,7 @@ supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0,"Times New Roman");
 will change the label "hello world" defined earlier into "hello universe", using
 a yellow color for the new text.
 
-> **note** [Matlab]:
+> **Note** [Matlab]:
 In the Matlab version of `wb_supervisor_set_label()` the `color` argument must
 be a vector containing the three RGB components: `[RED GREEN BLUE]`. Each
 component must be a value between 0.0 and 1.0. For example the vector `[1 0 1]`
@@ -739,7 +739,7 @@ path is used instead (e.g., a simple save operation). The boolean return value
 indicates the success of the save operation. Be aware that this function can
 overwrite silently existing files, so that the corresponding data may be lost.
 
-> **note** [C++, Java, Python, Matlab]:
+> **Note** [C++, Java, Python, Matlab]:
 In the other APIs, the `Robot.saveWorld()` function can be called without
 argument. In this case, a simple save operation is performed.
 
@@ -889,7 +889,7 @@ NULL is passed as an argument to this function, it returns -1. Hence, this
 function can also be used to test if a field is MF (like `WB_MF_INT32`) or SF
 (like `WB_SF_BOOL`).
 
-> **note** [C++, Java, Python]:
+> **Note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_*F\_* constants are available as static
 integers of the `Field` class (for example, Field::SF\_BOOL). These integers can
 be directly compared with the output of the `Field::getType()`
@@ -986,7 +986,7 @@ the item in the multiple field. The type of the field has to match with the name
 of the function used and the index should be comprised between minus the total
 number of items and the total number of items minus one, otherwise the value of the field remains unchanged (and a warning message is displayed). Using a negative index starts the count from the last element of the field until the first one. Index -1 represents the last item and the first item is represented by index 0 or minus number of items.
 
-> **note**:
+> **Note**:
 Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when
 changing its translation or rotation using `wb_supervisor_field_set_sf_vec2f`
 and `wb_supervisor_field_set_sf_rotation` functions. If needed, the user has to
@@ -1066,7 +1066,7 @@ int main(int argc, char **argv) {
 The `wb_supervisor_field_remove_mf_node()` function removes a Webots node from
 an MF\_NODE (like if the node was manually removed from the scene tree).
 
-> **note**:
+> **Note**:
 Note that these functions are still limited in the actual Webots version. For
 example, a device imported into a Robot node doesn't reset the Robot, so the
 device cannot be get by using the `wb_robot_get_device()` function.

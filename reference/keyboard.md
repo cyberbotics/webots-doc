@@ -4,7 +4,7 @@ The [Keyboard](#keyboard) is not a node, it is a set of functions available by
 default for each [Robot](robot.md) node to read the keyboard input. It is
 therefore not a device and the functions do not require any `WbDeviceTag`.
 
-> **note** [Python]:
+> **Note** [Python]:
 In C++, Python and Java the keyboard functions are in a dedicated class called
 `Keyboard`. In order to get the `Keyboard` instance, you should call the
 `getKeyboard()` function of the `Robot` class.
@@ -51,14 +51,14 @@ simultaneously pressed. The function can be called up to 7 times to detect up to
 7 simultaneous keys pressed. The `wb_keyboard_disable()` function should be used
 to stop the keyboard readings.
 
-> **note** [C++]:
+> **Note** [C++]:
 The keyboard predefined values are located into a (static) enumeration of the
 Keyboard class. For example, `Keyboard.CONTROL` corresponds to the
 *Control* key stroke.
 
 <!-- -->
 
-> **note** [Java]:
+> **Note** [Java]:
 The keyboard predefined values are final integers located in the Keyboard class.
 For example, *Ctrl+B* can be tested like this:
 
@@ -70,7 +70,7 @@ For example, *Ctrl+B* can be tested like this:
 
 <!-- -->
 
-> **note** [Python]:
+> **Note** [Python]:
 The keyboard predefined values are integers located into the Keyboard class. For
 example, *Ctrl+B* can be tested like this:
 

@@ -43,7 +43,7 @@ available with the `ros_automobile` controller.
 | [/automobile/set\_steering\_angle](driver-library.md#wbu_driver_set_steering_angle)                                                                                                                                                                                                                                                                              | service       | webots\_ros::automobile\_set\_steering\_angle                | float64 angle<br/>---<br/>int8 success                                                                                                        |
 | [/automobile/set\_throttle](driver-library.md#wbu_driver_set_throttle)                                                                                                                                                                                                                                                                                           | service       | webots\_ros::automobile\_set\_throttle                       | float64 throttle<br/>---<br/>int8 success                                                                                                     |
 
-> **note**:
+> **Note**:
 To enable synchronous simulation you will have to call the `/robot/time_step`
 service with a positive `step` argument. Then each time this service is called a
 car step will be executed (set the `step` argument to 0 to disable

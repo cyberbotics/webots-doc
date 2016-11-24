@@ -61,8 +61,7 @@ position, but the system is more stable.
     `wb_motor_set_control_pid()` function.
 
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
-position. These fields are described in more detail in the "Motor Limits"
-section, see below.
+position. These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
 - The `maxVelocity` field specifies both the upper limit and the default value for
 the motor *velocity*. The *velocity* can be changed at run-time with the

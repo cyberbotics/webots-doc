@@ -81,8 +81,8 @@ the lease period.
 
 Once downloaded, each license is stored into a file located in the following folder:
 
-- macOS: `~/Library/Application Support/Cyberbotics/Webots/licenses`
 - Linux: `~/.local/share/Cyberbotics/Webots/licenses/`
+- macOS: `~/Library/Application Support/Cyberbotics/Webots/licenses`
 - Windows: `%HOMEPATH%\AppData\Roaming\Cyberbotics\Webots\licenses\`
 
 ### Getting help about the Webots license system

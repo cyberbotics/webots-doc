@@ -60,6 +60,33 @@ account on Cyberbotics' website and go to the `Administration` page under the
 purchase more licenses, to create groups of users and to grant customized user
 access to your licenses.
 
-If you need further information about license issues, please send an e-mail to:
+### Using Webots without Internet connection
+
+It is possible to use Webots without any Internet connection for a limited
+amount of time. Users who anticipate they will be away from the Internet can
+download a license locally on their machine for a specified lease duration.
+During this period of time, the license is considered to be in use and is not
+available to other users. The maximum lease duration can be defined by the
+administrator of the licenses in the "Edit module pack" administration web page.
+It can be set to "None" to prevent any off-line use of Webots. Otherwise, the
+maximum lease value can be chosen between 1 hour and 7 days.
+
+In order to download a license locally for off-line use, a user should go to the
+`Tools` menu of Webots and open the `License Manager...` item. A new window
+should pop-up to display the available licenses. The user can then choose which
+licenses to download on his local computer as well as the duration of the lease
+for these licenses. Warning: this operation cannot be undone. Once transferred
+locally, the licenses are not available to other computers for the duration of
+the lease period.
+
+Once downloaded, each license is stored into a file located in the following folder:
+
+macOS: `~/Library/Application Support/Cyberbotics/Webots/licenses`
+Linux: `~/.local/share/Cyberbotics/Webots/licenses/`
+Windows: `%HOMEPATH%\AppData\Roaming\Cyberbotics\Webots\licenses\`
+
+### Getting help about the Webots license system
+
+If you need further information about the Webots license system, please send an e-mail to:
 
 [license@cyberbotics.com](mailto:license@cyberbotics.com)

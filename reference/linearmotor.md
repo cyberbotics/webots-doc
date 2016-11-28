@@ -30,4 +30,4 @@ force* at run-time. The value of `maxForce` should always be zero or positive
 (the default is 10). A small `maxForce` value may result in a motor being unable
 to move to the target position because of its weight or other external forces.
 
-- The `muscle` field optionally specifies a [Muscle](muscle.md) node that graphically represent the contraction of an artificial muscle.
+- The `muscle` field optionally specifies a [Muscle](muscle.md) node that graphically displays the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [SliderJoint](sliderjoint.md).

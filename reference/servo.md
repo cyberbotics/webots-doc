@@ -98,7 +98,7 @@ expressed in *meters*. See [this table](#servo-units):
 
 %figure "Servo Units"
 
-|              | Rotational                   | Linear                    |
+| &nbsp;       | Rotational                   | Linear                    |
 | ------------ | ---------------------------- | ------------------------- |
 | Position     | rad (radians)                | m (meters)                |
 | Velocity     | rad/s (radians / second)     | m/s (meters / second)     |
@@ -233,7 +233,7 @@ used.
 
 %figure "Servo Control Summary"
 
-|                                | position control                 | velocity control                 | force control                         |
+| &nbsp;                         | position control                 | velocity control                 | force control                         |
 | ------------------------------ | -------------------------------- | -------------------------------- | ------------------------------------- |
 | uses P-controller              | yes                              | no                               | no                                    |
 | wb\_servo\_set\_position()     | * specifies the desired position | should be set to INFINITY        | switches to position/velocity control |

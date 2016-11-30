@@ -423,7 +423,7 @@ function returns the most recent motor force (resp. torque) measurement. This
 function measures the amount of motor force (resp. torque) that is currently
 being used by the motor in order to achieve the desired motion or hold the
 current position. For a "rotational" motor, the returned value is a torque
-[N*m]; for a "linear" motor, the value is a force [N]. The returned value is an
+[N\*m]; for a "linear" motor, the value is a force [N]. The returned value is an
 approximation computed by the physics engine, and therefore it may be
 inaccurate. The returned value normally does not exceed the available motor
 force (resp. torque) specified with `wb_motor_set_force()` (resp.

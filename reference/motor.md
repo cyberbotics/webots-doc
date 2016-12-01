@@ -492,7 +492,8 @@ along the sliding axis. A positive *force* (resp. *torque*) will move the bodies
 in the positive direction, which corresponds to the direction of the motor when
 its position value increases. When invoking `wb_motor_set_force()` (resp.
 `wb_motor_set_torque()`), the specified *force* (resp. *torque*) parameter
-cannot exceed the current available force (resp. torque) of the motor specified in the `maxForce` with (resp. `maxTorque`) field or by calling `wb_motor_set_available_force()` (resp. `wb_motor_set_available_torque()`) otherwise the value will be reset to the maximum valid value.
+cannot exceed the currently available force (resp. torque) of the motor.
+The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling `wb_motor_set_available_force()` (resp. `wb_motor_set_available_torque()`).
 
 Note that this function applies only to *physics-based* simulation. Therefore,
 the `physics` and `boundingObject` fields of the [Motor](#motor) node must be

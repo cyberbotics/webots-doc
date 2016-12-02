@@ -2,9 +2,10 @@
 
 ```
 Muscle {
-  field SFDouble maxRadius 0.2
-  field MFColor  colors    []            # idle (0), contracting (1), and relaxing(2) state colors
-  field SFBool   visible   TRUE
+  field SFDouble maxRadius   0.2
+  field MFColor  colors      []            # idle (0), contracting (1), and relaxing(2) state colors
+  field SFBool   castShadows TRUE
+  field SFBool   visible     TRUE
 }
 ```
 
@@ -33,5 +34,8 @@ Only three colors are used, so if more items are specified then they will be ign
 If only two colors are defined, then same color (item 1) is used when the muscle is contracting or relaxing.
 If only one color is defined, then the specified color is be used for all the muscle states.
 If `colors` field is empty, the default color (pure red) is used for all the muscle states.
+
+- The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) shadows
+casted by the muscle spheroid mesh.
 
 - The `visible` field is used to show (TRUE) or hide (FALSE) the muscle in the 3D scene.

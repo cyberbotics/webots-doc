@@ -11,6 +11,7 @@ Motor {
   SFFloat maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
   SFFloat maxVelocity       10     # (m/s or rad/s): (0, inf)
   SFString sound            ""     # wave file of the motor sound
+  field SFNode   muscle   NULL
 }
 ```
 
@@ -73,6 +74,8 @@ default is 10).
 location of the world file or PROTO file which contains the `Motor` node. This
 sound is used to play the sound of the motor. It is modulated in volume and
 pitch according to the velocity of the motor to produce a realistic motor sound.
+
+- The `muscle` field optionally specifies a [Muscle](muscle.md) node that graphically displays the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md). This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
 
 ### Units
 

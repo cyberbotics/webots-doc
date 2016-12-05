@@ -11,12 +11,12 @@ Muscle {
 
 ### Description
 
-A [Muscle](#muscle) node can be used to graphically display the contraction of an artificial muscle implemented using [SliderJoint](sliderjoint.md) and [LinearMotor](linearmotor.md) nodes.
+A [Muscle](#muscle) node can be used to graphically display the contraction of an artificial muscle implemented using [Joint](joint.md) and [Motor](motor.md) nodes.
 The artificial muscle is represented using a spheroid where the symmetry axis is the vector between the joint's parent [Solid](solid.md) node and the `endPoint` [Solid](solid.md) node.
 The other two axes have the same length computed based on the symmetry axis length so that the volume remains constant during stretching.
-In order to define the spheroid's volume, the `minPosition` and `maxPosition` limits of the parent [LinearMotor](linearmotor.md) node have to be defined.
+In order to define the spheroid's volume, the `minPosition` and `maxPosition` limits of the parent [Motor](motor.md) node have to be defined.
 
-Note that the [Muscle](#muscle) node cannot be used in case of a [LinearMotor](linearmotor.md) device included in a [Track](track.md) node.
+Note that the [Muscle](#muscle) node cannot be used in case of a [Motor](motor.md) device included in a [Hinge2Joint](hinge2joint.md) or [Track](track.md) node.
 
 ### Field Summary
 

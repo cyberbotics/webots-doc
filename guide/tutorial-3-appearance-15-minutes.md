@@ -48,7 +48,7 @@ The **Appearance** node of the Shape node determines the graphical appearance of
 the object. Among other things, this node is responsible for the color and
 texture of objects.
 
-<!-- --> 
+<!-- -->
 
 > **Hands on**:
 In the Shape node representing graphically the first wall, add an Appearance

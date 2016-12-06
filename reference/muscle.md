@@ -2,9 +2,9 @@
 
 ```
 Muscle {
+  field SFDouble maxRadius   0.2
   field SFVec3f  startOffset 0 0 0
   field SFVec3f  endOffset   0 0 0
-  field SFDouble maxRadius   0.2
   field MFColor  colors      []            # idle (0), contracting (1), and relaxing(2) state colors
   field SFBool   castShadows TRUE
   field SFBool   visible     TRUE
@@ -22,17 +22,16 @@ Note that the [Muscle](#muscle) node cannot be used in case of a [Motor](motor.m
 
 ### Field Summary
 
+- The `maxRadius` field specifies the length of the two equally sized axes of the graphical spheroid when the distance between the joint's parent [Transform](transform.md) and the `endPoint` [Solid](solid.md) nodes is minimal.
+This value is used to recompute the shape of the muscle when the joint moves in order to keep the spheroid volume constant.
+
 - The `startOffset` specifies the position of the bottom point of the muscle spheroid in the coordinate system of the closest upper [Transform](transform.md) node.
 If the `startOffset` is `[0, 0, 0]`, then the spheroid bottom point corresponds to the closest upper [Transform](transform.md) origin.
 
 - The `endOffset` specifies the position of the top point of the muscle spheroid in the coordinate system of the [Joint](joint.md).`endPoint` [Solid](solid.md) node.
 If the `endOffset` is `[0, 0, 0]`, then the spheroid top point correspoinds to the `endPoint` [Solid](solid.md) origin.
 
-- The `maxRadius` field specifies the length of the two equally sized axes of the graphical spheroid when the distance between the joint's parent [Transform](transform.md) and the `endPoint` [Solid](solid.md) nodes is minimal.
-This value is used to recompute the shape of the muscle when the joint moves in order to keep the spheroid volume constant.
-
-- The `colors` field specifies the color of the spheroid at the three different muscle states: idle (item 0), negative movement (item 1), and positive movement (item 2).
-Depending on the axis setup of the joint setup, the negative movement could correspond to the muscle contraction or the muscle relaxation.
+- The `colors` field specifies the color of the spheroid at the three different muscle states: idle (item 0), contracting (item 1), and relaxing (item 2).
 The displayed color results by mixing the idle color and the current state color with a percentage depending on the force applied by the motor:
 ```
 color = idle_color * (1 - percentage) + other_color * percentage

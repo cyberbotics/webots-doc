@@ -178,11 +178,13 @@ rotation handles (see [this section](the-3d-window.md#axis-aligned-handles)).
 
 > Alternatively, the following keyboard shortcuts are available:
 
->  *SHIFT + left-click + drag* to move the robot parallel to the floor;
+> *SHIFT + left-click + drag* to move the robot parallel to the floor;
 
 > *SHIFT + mouse-wheel* to move the robot up or down.
 
 > Finally, it is possible to apply a force to the robot: *ALT + left-click + drag*.
+
+> **Note**: On Linux, you should also press the *CTRL* key in addition to *ALT + left-click + drag*.
 
 <!-- -->
 

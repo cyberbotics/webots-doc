@@ -47,8 +47,7 @@ Create a new world by selecting the `File / New World` menu item.
 A new world is now open. For now, the 3D window displays a black screen.
 The Scene Tree view (on the left hand side) currently lists the fundamental nodes:
 - `WorldInfo`: containing misc global parameters ;
-- `Viewpoint`: defining the main camera parameters ;
-- and `Background`: defining the background color.
+- `Viewpoint`: defining the main camera parameters.
 
 As no light and no 3D object are defined, the entire scene is empty and unlit, and thus black.
 
@@ -56,10 +55,11 @@ Each node has some customizable properties called **fields**.
 The first step is about to modify the background color.
 
 > **Hands on**:
-Modify the background color, by setting up the `skyColor` field of the
-`Background` node. Choose a blue color (e.g. red = 0.4, green = 0.7 and blue =
-1.0) using the color picker at the bottom of the Scene Tree view. The background of
-the 3D view should be modified accordingly.
+Create a `Background` node by clicking on the plus icon above the Scene Tree view, 
+and select "Background" from the "New Node" option. Modify the background color, 
+by setting up the `skyColor` field of the `Background` node. Choose a blue color 
+(e.g. red = 0.4, green = 0.7 and blue = 1.0) using the color picker at the bottom
+of the Scene Tree view. The background of the 3D view should be modified accordingly.
 
 Now, we would like to add some environment object (a floor and some walls).
 A predefined node called `RectangleArena` is designed to accomplish this task
@@ -178,12 +178,11 @@ rotation handles (see [this section](the-3d-window.md#axis-aligned-handles)).
 
 > Alternatively, the following keyboard shortcuts are available:
 
-> * SHIFT + left-clicking + drag* to move the robot parallel to the floor;
+>  *SHIFT + left-click + drag* to move the robot parallel to the floor;
 
 > *SHIFT + mouse-wheel* to move the robot up or down.
 
-> Finally, it is possible to add a force to the robot: *CTRL + ALT + left-clicking
-+ drag*.
+> Finally, it is possible to apply a force to the robot: *ALT + left-click + drag*.
 
 <!-- -->
 
@@ -199,19 +198,16 @@ simulation: this will increase the accuracy of the simulation.
 In the Scene Tree view, expand the WorldInfo node (the first node). Set its
 `basicTimeStep` field to *16*. Then save the simulation.
 
-Just after you added the E-puck node, a black window appeared in the upper left
+Just after you add the E-puck node, a black window appears in the upper-left
 corner of the 3D view. It shows the content of Camera nodes, but it will stay
-black until not explicitly used during a simulation. In order to hide it, you
-simply have to set the `pixelSize` equal to 0. Then, if you want to re-enable
-them, you have to set this field value to a positive number. Detailed
-definitions can be found in chapter 3 of the [Reference
-Manual](http://www.cyberbotics.com/reference/).
+black until not explicitly used during a simulation. The camera can be resized 
+by dragging the marked corner or hidden by clicking the "x" in the top-right of
+the camera window.
 
 > **Hands on**:
 In this tutorial we will not use the Camera devices of the E-puck. So we can
-hide the window by expanding the E-puck node and setting the fields
-`camera_pixelSize` to 0. Don't forget to revert the simulation before changing
-the values and to save it after the modifications.
+hide the window by clicking the "x" on the camera window. 
+Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
 
 ### Create a new Controller
 

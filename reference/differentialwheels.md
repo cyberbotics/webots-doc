@@ -128,7 +128,7 @@ initial elevation throughout the simulation.
 
 %figure "DifferentialWheels simulation modes"
 
-|                       | Physics mode       | Kinematics mode                    |
+| &nbsp;                | Physics mode       | Kinematics mode                    |
 | --------------------- | ------------------ | ---------------------------------- |
 | Motion triggered by   | Wheels friction    | 2d Webots kinematics               |
 | Friction simulation   | Yes, Coulomb model | No, robot slides against obstacles |

@@ -14,7 +14,7 @@ Muscle {
 ### Description
 
 A [Muscle](#muscle) node can be used to graphically display the contraction of an artificial muscle implemented using [Joint](joint.md) and [Motor](motor.md) nodes.
-The artificial muscle is represented using a spheroid where the symmetry axis is the vector between the joint's closest upper [Transform](transform.md) node (or `startOffset` position) and the `endPoint` [Solid](solid.md) node (or `endOffset` position).
+The artificial muscle is represented using a spheroid where the symmetry axis is the vector between the joint's closest upper [Transform](transform.md) node and the `endPoint` [Solid](solid.md) node.
 The other two axes have the same length computed based on the symmetry axis length so that the volume remains constant during stretching.
 In order to define the spheroid's volume, the `minPosition` and `maxPosition` limits of the parent [Motor](motor.md) node have to be defined.
 

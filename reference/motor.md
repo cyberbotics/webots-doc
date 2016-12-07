@@ -61,8 +61,7 @@ position, but the system is more stable.
     `wb_motor_set_control_pid()` function.
 
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target
-position. These fields are described in more detail in the "Motor Limits"
-section, see below.
+position. These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
 - The `maxVelocity` field specifies both the upper limit and the default value for
 the motor *velocity*. The *velocity* can be changed at run-time with the
@@ -372,7 +371,7 @@ retrieved using the `wb_motor_get_available_force()` (resp.
 `wb_motor_get_available_torque()`) function and `wb_motor_get_max_force()`
 (reps. `wb_motor_get_max_torque()`) function returns the limit specified in the
 `maxForce` (resp. `maxTorque`) field. Note that if the force/torque is not
-explicitly set using `wb_motor_set_[force|torque]()`, then
+explicitly set using `wb_motor_set_available_[force|torque]()`, then
 `wb_motor_get_available_[force|torque]()` and
 `wb_motor_get_max_[force|torque]()` functions return the same value.
 
@@ -424,7 +423,7 @@ function returns the most recent motor force (resp. torque) measurement. This
 function measures the amount of motor force (resp. torque) that is currently
 being used by the motor in order to achieve the desired motion or hold the
 current position. For a "rotational" motor, the returned value is a torque
-[N*m]; for a "linear" motor, the value is a force [N]. The returned value is an
+[N\*m]; for a "linear" motor, the value is a force [N]. The returned value is an
 approximation computed by the physics engine, and therefore it may be
 inaccurate. The returned value normally does not exceed the available motor
 force (resp. torque) specified with `wb_motor_set_force()` (resp.
@@ -487,15 +486,14 @@ example a PID controller. Note that when `wb_motor_set_force()` (resp.
 previously added by the PID-controller.
 
 In a "rotational" motor, the *torque* parameter specifies the amount of torque
-[N.m] that will be applied around the motor rotation axis. In a "linear" motor,
+[N\*m] that will be applied around the motor rotation axis. In a "linear" motor,
 the *force* parameter specifies the amount of force [N] that will be applied
 along the sliding axis. A positive *force* (resp. *torque*) will move the bodies
 in the positive direction, which corresponds to the direction of the motor when
 its position value increases. When invoking `wb_motor_set_force()` (resp.
 `wb_motor_set_torque()`), the specified *force* (resp. *torque*) parameter
-cannot exceed the current motor force (resp. torque) of the motor specified with
-`wb_motor_set_force()` (resp. `wb_motor_set_torque()`) and defaulting to the
-value of the `maxForce` (resp. `maxTorque`) field.
+cannot exceed the currently available force (resp. torque) of the motor.
+The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling `wb_motor_set_available_force()` (resp. `wb_motor_set_available_torque()`).
 
 Note that this function applies only to *physics-based* simulation. Therefore,
 the `physics` and `boundingObject` fields of the [Motor](#motor) node must be

@@ -152,7 +152,7 @@ formula.
 
 %end
 
-`wb_display_set_font()` defines the font and the size (in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters. The following standard fonts are available:
+`wb_display_set_font()` defines the font and its `size` (i.e. the character height in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters. The following standard fonts are available:
   - Arial
   - Arial Black
   - Comic Sans MS
@@ -168,6 +168,7 @@ formula.
   - Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
+The default font is `Arial, 8 pixels, with anti-aliasing`.
 
 > **Note** [Matlab]:
 In the Matlab version of `wb_display_set_color()` the `color` argument must be a
@@ -247,9 +248,8 @@ closed. Here is an example :
   wb_display_draw_polygon(display,px,py,4); // draw a diamond
 ```
 
-`wb_display_draw_text()` draws an ASCII text from the (`x`,`y`) coordinate. The
-font used to display the characters has a size of 8x8 pixels. There is no extra
-space between characters.
+`wb_display_draw_text()` draws an ASCII text from the (`x`,`y`) coordinate.
+The font used for drawing the text is defined by the [`wb_display_set_font()`](#wb_display_set_color) function.
 
 `wb_display_fill_rectangle()` draws a rectangle having the same properties as
 the rectangle drawn by the `wb_display_draw_rectangle()` function except that it

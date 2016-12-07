@@ -36,7 +36,7 @@ SpotLight, but less than a DirectionalLight. Note finally that casting shadows
 can reduce the simulation speed drastically.
 
 > **Hands on**:
-Adjust your DirectionalLight node. Set its`ambientIntensity` field to *0.5*, its
+Adjust your DirectionalLight node. Set its `ambientIntensity` field to *0.5*, its
 `castShadows` field to *TRUE*, and its `direction` field to *{1, -2, 1}*.
 
 ### Modify the Appearance of the Walls

@@ -61,6 +61,7 @@
     - [LinearMotor](linearmotor.md)
     - [Material](material.md)
     - [MultiTexture](multitexture.md)
+    - [Muscle](muscle.md)
     - [Motor](motor.md)
     - [Pen](pen.md)
     - [Physics](physics.md)

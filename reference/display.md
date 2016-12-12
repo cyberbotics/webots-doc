@@ -162,13 +162,14 @@ formula.
   - Lucida Console
   - Lucida Sans Unicode
   - Palatino Linotype
+  - PetMe64
   - Tahoma
   - Times New Roman
   - Trebuchet MS
   - Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
-The default font is `Lucida Console, 8 pixels, with anti-aliasing`.
+The default font is `PetMe64, 8 pixels, with anti-aliasing`.
 
 > **Note** [Matlab]:
 In the Matlab version of `wb_display_set_color()` the `color` argument must be a

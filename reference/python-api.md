@@ -609,10 +609,12 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getJoystick](robot.md#wb_robot_get_device)(self)                                     |
 | &nbsp;&nbsp; def [getKeyboard](robot.md#wb_robot_get_device)(self)                                     |
 | &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                                    |
+| &nbsp;&nbsp; def [getLidar](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                            |
 | &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getPen](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getPositionSensor](robot.md#wb_robot_get_device)(self, name)                         |
+| &nbsp;&nbsp; def [getRadar](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                            |
 | &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                               |
 | &nbsp;&nbsp; def [getServo](robot.md#wb_robot_get_device)(self, name)                                  |

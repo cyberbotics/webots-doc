@@ -640,7 +640,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [Pen](#java_pen) [getPen](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](robot.md#wb_robot_get_device)(String name);            |
-| &nbsp;&nbsp; public [Radar](#java_radar) [getRadar](robot.md#wb_robot_get_device)(String name);            |
+| &nbsp;&nbsp; public [Radar](#java_radar) [getRadar](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [RangeFinder](#java_range_finder) [getRangeFinder](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#wb_robot_get_device)(String name);                               |
 | &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#wb_robot_get_device)(String name);                                        |

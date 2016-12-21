@@ -4,12 +4,12 @@ You have now enough knowledge to set up your own simulation in Webots. You are a
 to design and implement a robot, to setup its controller and to design an
 environment.
 
-However, the Webots possibilities go far beyond this. Reading the documentation
+However, the possibilities one has with Webots go far beyond what we have covered here. Reading the documentation
 related with your application in the [User
 Guide](http://www.cyberbotics.com/guide/) or in the `Reference Manual` is the
 first step to extend your knowledge.
 
-The algorithmic to develop your controllers is not explained in the Webots
+The algorithms to develop your controllers are not explained in the Webots
 documentation. However, another tutorial known as "curriculum" tackles some famous
 robot programming problems through a sequence of exercises using the e-puck
 robot and the C language.

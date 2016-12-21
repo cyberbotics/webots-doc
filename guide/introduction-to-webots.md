@@ -41,7 +41,7 @@ etc.)
 You will need a minimal amount of technical knowledge to develop your own
 simulations:
 
-- A basic knowledge of the C, C++, Java, Python or Matlab programming language is
+- A basic knowledge of the C, C++, Java, Python or MATLAB programming language is
 necessary to program your own robot controllers. However, even if you don't know
 these languages, you can still program the e-puck and Hemisson robots using a
 simple graphical programming language called BotStudio.
@@ -59,7 +59,7 @@ A Webots simulation is composed of following items:
 environment. The .wbt file does sometimes depend on external PROTO files
 (.proto) and textures.
 2. One or several controller programs for the above robots (in
-C/C++/Java/Python/Matlab).
+C/C++/Java/Python/MATLAB).
 3. An optional physics plugin that can be used to modify Webots regular physics
 behavior (in C/C++).
 
@@ -80,17 +80,17 @@ Webots project.
 
 A controller is a computer program that controls a robot specified in a world
 file. Controllers can be written in any of the programming languages supported
-by Webots: C, C++, Java, Python or *MATLAB*<sup>TM</sup>. When a simulation
+by Webots: C, C++, Java, Python or MATLAB. When a simulation
 starts, Webots launches the specified controllers, each as a separate process,
 and it associates the controller processes with the simulated robots. Note that
 several robots can use the same controller code, however a distinct process will
 be launched for each robot.
 
 Some programming languages need to be compiled (C and C++) other languages need
-to be interpreted (Python and *MATLAB*<sup>TM</sup>) and some need to be both
+to be interpreted (Python and MATLAB) and some need to be both
 compiled and interpreted (Java). For example, C and C++ controllers are compiled
 to platform-dependent binary executables (for example ".exe" under Windows).
-Python and *MATLAB*<sup>TM</sup> controllers are interpreted by the
+Python and MATLAB controllers are interpreted by the
 corresponding run-time systems (which must be installed). Java controller need
 to be compiled to byte code (".class" files or ".jar") and then interpreted by a
 Java Virtual Machine.

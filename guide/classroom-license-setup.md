@@ -114,22 +114,3 @@ If no IP restriction is set (see above), then the students will be able to use
 Webots anytime, from any computer, including their own personal computers. In
 such a case, it's better to use multiple user accounts rather than a single one,
 to avoid that a few students use all the licenses permanently.
-
-### Using Webots without Internet connection
-
-It is possible to use Webots without any Internet connection for a limited
-amount of time. Users who anticipate they will be away from the Internet can
-download a license locally on their machine for a specified lease duration.
-During this period of time, the license is considered to be in use and is not
-available to other users. The maximum lease duration can be defined by the
-administrator of the licenses in the "Edit module pack" administration web page.
-It can be set to "None" to prevent any off-line use of Webots. Otherwise, the
-maximum lease value can be chosen between 1 hour and 7 days.
-
-In order to download a license locally for off-line use, a user should go to the
-`Tools` menu of Webots and open the `License Manager...` item. A new window
-should pop-up to display the available licenses. The user can then choose which
-licenses to download on his local computer as well as the duration of the lease
-for these licenses. Warning: this operation cannot be undone. Once transferred
-locally, the licenses are not available to other computers for the duration of
-the lease period.

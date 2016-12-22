@@ -52,7 +52,7 @@ A SWIG script uses the C++ controller API to generate the Python API.
 Install [SWIG](http://www.swig.org/), make sure that typing `python2.7` leads to
 the expected Python installation, and recompile the Python API.
 
-For example, the Python Homebrew may be use by typing the following commands:
+For example, on macOS, the Python Homebrew may be used by typing the following commands:
 
 ```sh
 cd ${WEBOTS_HOME}

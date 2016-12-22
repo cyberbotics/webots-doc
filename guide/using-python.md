@@ -39,14 +39,14 @@ $ python2.7 --version
 
 #### Windows Instructions
 
-You should install the latest version of Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your *PATH* environment variable to add the path to the python.exe binary which is located in the main *Python27* installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type *python --version*. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the *WEBOTS_HOME/projects/languages/python/worlds/example.wbt*)
+You should install the latest version of Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python27` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt`)
 
-#### Use another Python distribution
+#### How to use another Python distribution
 
 For advanced users and without guarantee, the Python controller library
 can be recompiled to support other Python releases.
 
-The source code is located in "WEBOTS_HOME/resources/languages/python".
+The source code is located in `WEBOTS_HOME/resources/languages/python`.
 A SWIG script uses the C++ controller API to generate the Python API.
 
 Install [SWIG](http://www.swig.org/), make sure that typing `python2.7` leads to

@@ -49,7 +49,7 @@ Some of them are described in the following table:
 | `Material.ambientIntensity * Material.diffuseColor`  | `gl_FrontMaterial.ambient.rgb`                                  |
 | `Material.diffuseColor`                              | `gl_FrontMaterial.diffuse.rgb`                                  |
 | `Material.emissiveColor`                             | `gl_FrontMaterial.emissive.rgb`                                 |
-| `Material.shininess`                                 | `gl_FrontMaterial.shininess * 128.0`                            |
+| `Material.shininess`                                 | `gl_FrontMaterial.shininess / 128.0`                            |
 | `Material.specularColor`                             | `gl_FrontMaterial.specular.rgb`                                 |
 | `sum(Light.ambientIntensity * Light.color)`          | `gl_LightModel.ambient`                                         |
 | `Light.color * Light.intensity`                      | `gl_LightSource[X].diffuse`                                     |
@@ -58,7 +58,7 @@ Some of them are described in the following table:
 | `[Point/Spot]Light.attenuation`                      | `gl_LightSource[X].*attenuation`                                |
 | `[Point/Spot]Light.location`                         | `gl_LightSource[X].position`                                    |
 | `[Point/Spot]Light.radius`                           | *Not available*                                                 |
-| `DirectionLight.direction`                           | *Most approaching value:* `gl_LightSource[X].halfVector`        |
+| `DirectionalLight.direction`                         | `gl_LightSource[X].position`                                    |
 
 
 ### Special preprocessor variables

@@ -37,15 +37,27 @@ command line is installed on your computer, you can type in a terminal:
 $ python2.7 --version
 ```
 
-More information is available from the [Python official website](http://www.python.org/).
-
 #### Windows Instructions
 
-You should install the latest version of Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your *PATH* environment variable to add the path to the python.exe binary which is located in the main *Python27* installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type *python --version*. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the *WEBOTS_HOME/projects/languages/python/worlds/example.wbt*)
+You should install the latest version of Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python27` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt`)
 
-### Source Code of the Python API
+#### How to use another Python distribution
 
-For advanced users who want to modify the Python API, the SWIG script
-("controller.i"), and the Makefile are located in the
-"resources/languages/python" directory while the generated library is located in
-the "lib".
+For advanced users and without guarantee, the Python controller library
+can be recompiled to support other Python releases.
+
+The source code is located in `WEBOTS_HOME/resources/languages/python`.
+A SWIG script uses the C++ controller API to generate the Python API.
+
+Install [SWIG](http://www.swig.org/), make sure that typing `python2.7` leads to
+the expected Python installation, and recompile the Python API.
+
+For example, on macOS, the Python Homebrew may be used by typing the following commands:
+
+```sh
+cd ${WEBOTS_HOME}
+export PYTHON_VERSION=2.7
+export PYTHON_PATH=/usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7
+make clean -C resources/languages/python
+make -C resources/languages/python
+```

@@ -321,7 +321,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 
 **Name**
 
-**Robot::getAccelerometer**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDistanceSensor**, **Robot::getDisplay**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getLED**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
+**Robot::getAccelerometer**, **Robot::getBrake**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDisplay**, **Robot::getDistanceSensor**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getJoystick**, **Robot::getKeyboard**, **Robot::getLED**, **Robot::getLidar**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRadar**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
@@ -329,6 +329,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 #include <webots/Robot.hpp>
 
 Accelerometer *Robot::getAccelerometer(const std::string &name);
+Brake *Robot::getBrake(const std::string &name);
 Camera *Robot::getCamera(const std::string &name);
 Compass *Robot::getCompass(const std::string &name);
 Connector *Robot::getConnector(const std::string &name);
@@ -338,10 +339,15 @@ Emitter *Robot::getEmitter(const std::string &name);
 GPS *Robot::getGPS(const std::string &name);
 Gyro *Robot::getGyro(const std::string &name);
 InertialUnit *Robot::getInertialUnit(const std::string &name);
+Joystick *Robot::getJoystick();
+Keyboard *Robot::getKeyboard();
+LED *Robot::getLED(const std::string &name);
+Lidar *Robot::getLidar(const std::string &name);
 LightSensor *Robot::getLightSensor(const std::string &name);
 Motor *Robot::getMotor(const std::string &name);
 Pen *Robot::getPen(const std::string &name);
 PositionSensor *Robot::getPositionSensor(const std::string &name);
+Radar *Robot::getRadar(const std::string &name);
 RangeFinder *Robot::getRangeFinder(const std::string &name);
 Receiver *Robot::getReceiver(const std::string &name);
 Servo *Robot::getServo(const std::string &name);

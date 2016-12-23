@@ -35,14 +35,9 @@ are disabled in the Webots preferences. A PointLight is more efficient than a
 SpotLight, but less than a DirectionalLight. Note finally that casting shadows
 can reduce the simulation speed drastically.
 
-Your simulation is currently lighted by a PointLight node at the top of the
-scene. We want to replace this light node by a DirectionalLight node casting
-shadows.
-
 > **Hands on**:
-Remove the PointLight node, and add a new DirectionalLight node instead. Set its
-`ambientIntensity` field to *0.5*, its `castShadows` field to *TRUE*, and its
-`direction` field to *{1, -2, 1}*.
+Adjust your DirectionalLight node. Set its `ambientIntensity` field to *0.5*, its
+`castShadows` field to *TRUE*, and its `direction` field to *{1, -2, 1}*.
 
 ### Modify the Appearance of the Walls
 

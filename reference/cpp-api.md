@@ -611,10 +611,11 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [Pen](#cpp_pen) *[getPen](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
+| &nbsp;&nbsp; [Radar](#cpp_radar) *[getRadar](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#wb_robot_get_device)(const std::string &name);                              |
-| &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                                 |
 | &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#wb_robot_get_device)(const std::string &name);                                       |
+| &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                                 |
 | &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                            |
 | &nbsp;&nbsp; [Device](#cpp_device) *[getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(int index);                                  |

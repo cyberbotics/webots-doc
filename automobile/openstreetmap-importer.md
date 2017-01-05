@@ -12,7 +12,7 @@ The script is written in Python. A typical usage is:
 
 ```sh
 cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
+python importer.py --input=myMap.osm --output=myWorld.wbt
 ```
 
 This command will create the file called `myWorld.wbt` and if there is some

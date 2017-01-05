@@ -256,14 +256,15 @@ int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int qualit
 
 The `wb_range_finder_save_image()` function allows the user to save a `tag`
 image which was previously obtained with the `wb_range_finder_get_image()`
-function. The image is saved in a file in either PNG or JPEG format. The image
+function. The image can be saved in a file using the PNG, JPEG, or TIFF format. The image
 format is specified by the `filename` parameter. If `filename` is terminated by
-`.png`, the image format is PNG. If `filename` is terminated by `.jpg` or
-`.jpeg`, the image format is JPEG. Other image formats are not supported. The
+`.png`, the image format is PNG. Similarly, if `filename` is terminated by `.jpg` or
+`.jpeg`, the image format is JPEG. Lastly, if `filename` is terminated by `.tif` or
+`.tiff`, the image format is TIFF. Other image formats are not supported. The
 `quality` parameter is useful only for JPEG images. It defines the JPEG quality
 of the saved image. The `quality` parameter should be in the range 1 (worst
 quality) to 100 (best quality). Low quality JPEG files will use less disk space.
-For PNG images, the `quality` parameter is ignored.
+For PNG and TIFF images, the `quality` parameter is ignored.
 
 The return value of the `wb_range_finder_save_image()` is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized

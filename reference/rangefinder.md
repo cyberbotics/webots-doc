@@ -266,6 +266,10 @@ of the saved image. The `quality` parameter should be in the range 1 (worst
 quality) to 100 (best quality). Low quality JPEG files will use less disk space.
 For PNG and TIFF images, the `quality` parameter is ignored.
 
+PNG and JPEG images are saved using an 8-bit RGB (grayscale) encoding. TIFF images are saved
+as 8-bit single-channel images. Given this, depth data is always stored in the
+range `0` to `255`, thus can be extracted for further use by reading the image file.
+
 The return value of the `wb_range_finder_save_image()` is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized
 image file extension).

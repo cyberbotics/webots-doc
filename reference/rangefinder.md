@@ -242,7 +242,7 @@ are identical but their handling is of course different.
 
 **Name**
 
-**wb\_range\_finder\_save\_image** - *save a range-finder image in PNG,JPEG or TIFF format*
+**wb\_range\_finder\_save\_image** - *save a range-finder image in PNG, JPEG or TIFF format*
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 

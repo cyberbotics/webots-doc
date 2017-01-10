@@ -242,7 +242,7 @@ are identical but their handling is of course different.
 
 **Name**
 
-**wb\_range\_finder\_save\_image** - *save a range-finder image in either PNG or JPEG format*
+**wb\_range\_finder\_save\_image** - *save a range-finder image in PNG, JPEG or TIFF format*
 
 {[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
 
@@ -256,14 +256,20 @@ int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int qualit
 
 The `wb_range_finder_save_image()` function allows the user to save a `tag`
 image which was previously obtained with the `wb_range_finder_get_image()`
-function. The image is saved in a file in either PNG or JPEG format. The image
+function. The image can be saved in a file using the PNG, JPEG, or TIFF format. The image
 format is specified by the `filename` parameter. If `filename` is terminated by
-`.png`, the image format is PNG. If `filename` is terminated by `.jpg` or
-`.jpeg`, the image format is JPEG. Other image formats are not supported. The
+`.png`, the image format is PNG. Similarly, if `filename` is terminated by `.jpg` or
+`.jpeg`, the image format is JPEG. Lastly, if `filename` is terminated by `.tif` or
+`.tiff`, the image format is TIFF. Other image formats are not supported. The
 `quality` parameter is useful only for JPEG images. It defines the JPEG quality
 of the saved image. The `quality` parameter should be in the range 1 (worst
 quality) to 100 (best quality). Low quality JPEG files will use less disk space.
-For PNG images, the `quality` parameter is ignored.
+For PNG and TIFF images, the `quality` parameter is ignored.
+
+PNG and JPEG images are saved using an 8-bit RGB (grayscale) encoding. TIFF images are saved
+as 32-bit floating-point single-channel images. For PNG and JPEG, depth data is stored in the
+range `0` to `255`, and for TIFF depth data is in the range `0.0` to `1.0`. This depth data can thus
+be extracted for further use by reading the image file.
 
 The return value of the `wb_range_finder_save_image()` is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized

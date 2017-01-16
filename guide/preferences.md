@@ -44,7 +44,7 @@ the least efficient one.
 on the 3D scene in Webots. This option can lead to reduced performance, but it improves 
 graphical fidelity significantly. It is disabled by default on systems that do not meet 
 our minimum requirements. Note that this option does not apply to any Camera rendering, 
-this is managed the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
+this is managed by the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
 
 - The `Disable shadows` option allows you to disable completely the shadows in the
 3D view and in the Camera rendering, whatever the values of the

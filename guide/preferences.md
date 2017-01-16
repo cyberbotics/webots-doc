@@ -40,6 +40,12 @@ depending on the GPU OpenGL abilities.
 the Camera device images. The methods are sorted from the most efficient one to
 the least efficient one.
 
+- The `Main 3D View Anti-Aliasing` option allows you to enable Multisample Anti-Aliasing
+on the 3D Scene in Webots. This option can lead to reduced performance, but it improves 
+graphical fidelity significantly. It is disabled by default on systems that do not meet 
+our minimum requirements. Note that this option does not apply to any `Camera` rendering, 
+this is managed by a separate setting in the same tab of the preferences dialog.
+
 - The `Disable shadows` option allows you to disable completely the shadows in the
 3D view and in the Camera rendering, whatever the values of the
 *Light.castShadows* fields.

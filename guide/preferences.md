@@ -40,7 +40,7 @@ depending on the GPU OpenGL abilities.
 the Camera device images. The methods are sorted from the most efficient one to
 the least efficient one.
 
-- The `Main 3D View Anti-Aliasing` option allows you to enable Multisample Anti-Aliasing
+- The `Main 3D view anti-aliasing` option allows you to enable Multisample Anti-Aliasing
 on the 3D scene in Webots. This option can lead to reduced performance, but it improves 
 graphical fidelity significantly. It is disabled by default on systems that do not meet 
 our minimum requirements. Note that this option does not apply to any Camera rendering, 

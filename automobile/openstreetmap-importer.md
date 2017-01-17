@@ -12,29 +12,26 @@ in real-time). And then convert it using the script.
 Additionally a SUMO road network file should be provided to the importer in order
 to generate the roads.
 This file can be generated from the same input OpenStreetMap map using the SUMO
-`netconvert` tool (embedded in Webots).
-Typically, the `sumo.net.xml` file can be created the following way:
+`netconvert` tool embedded in Webots.
+Typically the `sumo.net.xml` file is created the following way:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/sumo
-export PATH=$PATH:$(pwd)/lib
 ./netconvert --osm-files map.osm -o sumo.net.xml
 ```
 
-The script is written in Python. A typical usage is:
+The importer script is written in Python. A typical usage is:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
 python importer.py --inputFile=myMap.osm --sumoNetworkFile=sumo.net.xml --outputFile=myWorld.wbt
 ```
 
-This command will create the file called `myWorld.wbt` and if there is some
-forest in the map, it will generate a `forest` folder too. This `forest` folder
-contains the [forest files](nature.md#forest) of the forests present in the
-world.
+This command will create the file called `myWorld.wbt`.
+Some extra folders such as `forest` can be generated in the target directory depending
+on the importer arguments.
 
-A detailed tutorial about an automobile scenario creation
-can be found in [this section](scenario-creation-tutorial.md).
+Find [here](scenario-creation-tutorial.md) a detailed tutorial about an automobile scenario creation.
 
 You can use several arguments with this script:
 

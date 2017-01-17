@@ -1,8 +1,7 @@
 ## Scenario creation tutorial
 
 This small tutorial explains step-by-step how to create a scenario inspired from a real world map and then add traffic using SUMO.
-This tutorial has been written for `linux` and `macOS` because of the use of the terminal.
-The same can be achieved on `Windows` converting the commands accordingly.
+This tutorial has been written for `linux` and `macOS`, but the same can be achieved on `Windows` converting the following commands to `DOS`.
 
 
 ### Creation of the Webots project directory
@@ -26,10 +25,10 @@ We will use a part of the OpenStreetMap map to generate the Webots world file. T
 
 Get the map projection parameters which will be reuse them to generate the SUMO network file.
 
-```
+```sh
 cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
-$ python importer.py --input=/path/to/map.osm --extract-projection
-+proj=utm +north +zone=32 +lon_0=6.505000 +lat_0=46.511000 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs
+python importer.py --input=/path/to/map.osm --extract-projection
+# Typical result: +proj=utm +north +zone=32 +lon_0=6.505000 +lat_0=46.511000 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs
 ```
 
 

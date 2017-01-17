@@ -1,24 +1,40 @@
 ## OpenStreetMap importer
 
-In order to ease the creation of new environments for automobile simulations, a
-script has been created to convert maps from OpenStreetMap into Webots worlds.
+In order to ease the creation of new environments for automobile simulations,
+Webots worlds can be generated from OpenStreetMap maps using the importer script
+described here.
 
-You can download a map of any part of the world from
+You can download an OpenStreetMap map of any part of the world from
 [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use
 more than a few kilometers square if you want to be able to run your simulation
 in real-time). And then convert it using the script.
+
+Additionally a SUMO road network file should be provided to the importer in order
+to generate the roads.
+This file can be generated from the same input OpenStreetMap map using the SUMO
+`netconvert` tool (embedded in Webots).
+Typically, the `sumo.net.xml` file can be created the following way:
+
+```sh
+cd $(WEBOTS_HOME)/projects/automobile/resources/sumo
+export PATH=$PATH:$(pwd)/lib
+./netconvert --osm-files map.osm -o sumo.net.xml
+```
 
 The script is written in Python. A typical usage is:
 
 ```sh
 cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
+python importer.py --inputFile=myMap.osm --sumoNetworkFile=sumo.net.xml --outputFile=myWorld.wbt
 ```
 
 This command will create the file called `myWorld.wbt` and if there is some
 forest in the map, it will generate a `forest` folder too. This `forest` folder
 contains the [forest files](nature.md#forest) of the forests present in the
 world.
+
+Please take a look at [this section](scenario-creation-tutorial.md) for
+a complete tutorial about how to create an automobile simulation.
 
 You can use several arguments with this script:
 

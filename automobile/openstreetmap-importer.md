@@ -16,7 +16,7 @@ This file can be generated from the same input OpenStreetMap map using the SUMO
 Typically, the `sumo.net.xml` file can be created the following way:
 
 ```sh
-cd $(WEBOTS_HOME)/projects/automobile/resources/sumo
+cd $WEBOTS_HOME/projects/automobile/resources/sumo
 export PATH=$PATH:$(pwd)/lib
 ./netconvert --osm-files map.osm -o sumo.net.xml
 ```
@@ -24,7 +24,7 @@ export PATH=$PATH:$(pwd)/lib
 The script is written in Python. A typical usage is:
 
 ```sh
-cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
+cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
 python importer.py --inputFile=myMap.osm --sumoNetworkFile=sumo.net.xml --outputFile=myWorld.wbt
 ```
 
@@ -33,8 +33,8 @@ forest in the map, it will generate a `forest` folder too. This `forest` folder
 contains the [forest files](nature.md#forest) of the forests present in the
 world.
 
-Please take a look at [this section](scenario-creation-tutorial.md) for
-a complete tutorial about how to create an automobile simulation.
+A detailed tutorial about an automobile scenario creation
+can be found in [this section](scenario-creation-tutorial.md).
 
 You can use several arguments with this script:
 

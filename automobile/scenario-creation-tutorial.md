@@ -87,7 +87,7 @@ It is strongly recommended to not use the 3D feature of the [OpenStreetMap impor
 
 ```sh
 cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=$WBT_PROJECT_PATH/worlds/map_net/myMap.osm --sumoNetworkFile=$WBT_PROJECT_PATH/worlds/map_net/sumo.net.xml --outputFile=$WBT_PROJECT_PATH/worlds/map.wbt
+python importer.py --inputFile=$WBT_PROJECT_PATH/worlds/map_net/myMap.osm --sumo-network-file=$WBT_PROJECT_PATH/worlds/map_net/sumo.net.xml --outputFile=$WBT_PROJECT_PATH/worlds/map.wbt
 ```
 
 > **Node**:

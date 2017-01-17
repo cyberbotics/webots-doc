@@ -24,7 +24,7 @@ The importer script is written in Python. A typical usage is:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --sumoNetworkFile=sumo.net.xml --outputFile=myWorld.wbt
+python importer.py --inputFile=myMap.osm --sumo-network-file=sumo.net.xml --outputFile=myWorld.wbt
 ```
 
 This command will create the file called `myWorld.wbt`.
@@ -40,7 +40,7 @@ You can use several arguments with this script:
 | Argument               | Description                                                                                                                          | Default value                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | --input                | Specifies the OSM file to be converted                                                                                               | If not specified, the script tries to convert "map.osm"                   |
-| --sumoNetworkFile      | Specifies a SUMO network which is used to generate roads.                                                                            | If not specified, the script tries to open "sumo.net.xml"                 |
+| --sumo-network-file    | Specifies a SUMO network which is used to generate roads.                                                                            | If not specified, the script tries to open "sumo.net.xml"                 |
 | --output               | Specifies the name of the generated world file                                                                                       | If not specified, the generated world is called "map.wbt"                 |
 | --config-file          | Specifies which configuration file to use                                                                                            | If not specified, tries to use the configuration file called "config.ini" |
 | --spline-subdivision   | Defines the spline subdivision used for roads, rivers, etc.                                                                          | A default value of 0 is used                                              |

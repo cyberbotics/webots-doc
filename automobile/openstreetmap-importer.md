@@ -7,27 +7,28 @@ described here.
 You can download an OpenStreetMap map of any part of the world from
 [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use
 more than a few kilometers square if you want to be able to run your simulation
-in real-time). And then convert it using the script.
+in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using
+the importer script.
 
 Additionally a SUMO road network file should be provided to the importer in order
 to generate the roads.
 This file can be generated from the same input OpenStreetMap map using the SUMO
-`netconvert` tool embedded in Webots.
-Typically the `sumo.net.xml` file is created the following way:
+`netconvert` tool provided in Webots.
+The `sumo.net.xml` file is created the following way:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/sumo
-./netconvert --osm-files map.osm -o sumo.net.xml
+./netconvert --osm-files myMap.osm -o sumo.net.xml
 ```
 
-The importer script is written in Python. A typical usage is:
+Then, you should use the `importer.py` python script to generate the `myMap.wbt`
+webots simulation world from the `myMap.osm` and `sumo.net.xml` files:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --sumo-network-file=sumo.net.xml --outputFile=myWorld.wbt
+python importer.py --inputFile=myMap.osm --sumo-network-file=sumo.net.xml --outputFile=myMap.wbt
 ```
 
-This command will create the file called `myWorld.wbt`.
 Some extra folders such as `forest` can be generated in the target directory depending
 on the importer arguments.
 
@@ -56,7 +57,7 @@ You can use several arguments with this script:
 | --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (requires an internet connexion)| By default, the ground of the generated world is flat                     |
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
 | --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
-| --extract-projection   | Extracts the projection from the OSM file, displays it and exits.                                                                    | By default, this option is disabled.                                      |
+| --extract-projection   | Extracts the projection from the OSM file, displays it and exits.                                                                    | By default, this parameter is disabled.                                   |
 
 %end
 

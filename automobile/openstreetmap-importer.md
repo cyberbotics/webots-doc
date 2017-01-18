@@ -1,24 +1,38 @@
 ## OpenStreetMap importer
 
-In order to ease the creation of new environments for automobile simulations, a
-script has been created to convert maps from OpenStreetMap into Webots worlds.
+In order to ease the creation of new environments for automobile simulations,
+Webots worlds can be generated from OpenStreetMap maps using the importer script
+described here.
 
-You can download a map of any part of the world from
+You can download an OpenStreetMap map of any part of the world from
 [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use
-more than a few kilometers square if you want to be able to run your simulation
-in real-time). And then convert it using the script.
+more than a few square kilometers if you want to be able to run your simulation
+in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using
+the importer script.
 
-The script is written in Python. A typical usage is:
+Additionally a SUMO road network file should be provided to the importer in order
+to generate the roads.
+This file can be generated from the same input OpenStreetMap map using the SUMO
+`netconvert` tool provided in Webots.
+The `sumo.net.xml` file is created the following way:
 
 ```sh
-cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --outputFile=myWorld.wbt
+cd $WEBOTS_HOME/projects/automobile/resources/sumo
+./netconvert --osm-files myMap.osm -o sumo.net.xml
 ```
 
-This command will create the file called `myWorld.wbt` and if there is some
-forest in the map, it will generate a `forest` folder too. This `forest` folder
-contains the [forest files](nature.md#forest) of the forests present in the
-world.
+Then, you should use the `importer.py` python script to generate the `myMap.wbt`
+webots simulation world from the `myMap.osm` and `sumo.net.xml` files:
+
+```sh
+cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
+python importer.py --inputFile=myMap.osm --sumo-network-file=sumo.net.xml --outputFile=myMap.wbt
+```
+
+Some extra folders such as `forest` can be generated in the target directory depending
+on the importer arguments.
+
+Find [here](scenario-creation-tutorial.md) a detailed tutorial about an automobile scenario creation.
 
 You can use several arguments with this script:
 
@@ -27,9 +41,10 @@ You can use several arguments with this script:
 | Argument               | Description                                                                                                                          | Default value                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | --input                | Specifies the OSM file to be converted                                                                                               | If not specified, the script tries to convert "map.osm"                   |
+| --sumo-network-file    | Specifies a SUMO network which is used to generate roads.                                                                            | If not specified, the script tries to open "sumo.net.xml"                 |
 | --output               | Specifies the name of the generated world file                                                                                       | If not specified, the generated world is called "map.wbt"                 |
 | --config-file          | Specifies which configuration file to use                                                                                            | If not specified, tries to use the configuration file called "config.ini" |
-| --spline-subdivision   | Defines the spline subdivision used for roads, rivers, etc.                                                                          | A default value of 4 is used                                              |
+| --spline-subdivision   | Defines the spline subdivision used for roads, rivers, etc.                                                                          | A default value of 0 is used                                              |
 | --layer-height         | Defines the height of a layer (the 'layer' tag is ignored if set to 0)                                                               | A default value of 5.0 is used                                            |
 | --no-forests           | Does not include the forests in the generated world                                                                                  | By default, forests are included                                          |
 | --no-roads             | Does not include the roads in the generated world                                                                                    | By default, roads are included                                            |
@@ -38,11 +53,11 @@ You can use several arguments with this script:
 | --no-barriers          | Does not include the barriers (fence, wall, etc.) in the generated world                                                             | By default, barriers are included                                         |
 | --no-rivers            | Does not include the rivers in the generated world                                                                                   | By default, rivers are included                                           |
 | --no-buildings         | Does not include the buildings in the generated world                                                                                | By default, buildings are included                                        |
-| --no-road-intersections| Does not generate complex road intersections                                                                                         | By default, complex road intersections are generated                      |
 | --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
 | --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (requires an internet connexion)| By default, the ground of the generated world is flat                     |
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
 | --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
+| --extract-projection   | Extracts the projection from the OSM file, displays it and exits.                                                                    | By default, this parameter is disabled.                                   |
 
 %end
 

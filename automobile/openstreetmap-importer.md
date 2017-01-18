@@ -6,7 +6,7 @@ described here.
 
 You can download an OpenStreetMap map of any part of the world from
 [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use
-more than a few kilometers square if you want to be able to run your simulation
+more than a few square kilometers if you want to be able to run your simulation
 in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using
 the importer script.
 

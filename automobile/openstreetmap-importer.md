@@ -17,8 +17,8 @@ This file can be generated from the same input OpenStreetMap map using the SUMO
 The `sumo.net.xml` file is created the following way:
 
 ```sh
-cd $WEBOTS_HOME/projects/automobile/resources/sumo
-./netconvert --osm-files myMap.osm -o sumo.net.xml
+cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
+python importer.py --input=myMap.osm --output=myWorld.wbt
 ```
 
 Then, you should use the `importer.py` python script to generate the `myMap.wbt`

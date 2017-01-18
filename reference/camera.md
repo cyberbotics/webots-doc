@@ -26,7 +26,7 @@ Camera {
 
 The [Camera](#camera) node is used to model a robot's on-board camera. The
 resulting image can be displayed on the 3D window. Depending on its setup, the
-Camera node can model a linear camera, a typical RGB camera or even a biological
+Camera node can model a linear camera, a typical RGB camera or even a fish
 eye which is spherically distorted.
 
 ### Field Summary
@@ -41,7 +41,7 @@ view can be computed from the `width`, `height` and horizontal `fieldOfView`:
 - `height`: height of the image in pixels
 
 - `spherical`: switch between a planar or a spherical projection. A spherical
-projection can be used for example to simulate a biological eye. More
+projection can be used for example to simulate a fisheye lens. More
 information on spherical projection in the corresponding subsection below.
 
 - The `near` field defines the distance from the camera to the near clipping
@@ -186,9 +186,9 @@ camera.
 
 OpenGL is designed to have only planar projections. However spherical
 projections are very useful for simulating a camera pointing on a curved mirror
-or a biological eye. Therefore we implemented a camera mode rendering spherical
-projections. It can be enabled simply by switching on the corresponding
-`spherical` field described above.
+or a fisheye effect as found in many biological eyes. Therefore we implemented
+a camera mode rendering spherical projections. It can be enabled simply by switching
+on the corresponding `spherical` field described above.
 
 Internally, depending on the field of view, a spherical camera is implemented by
 using between 1 to 6 OpenGL cameras oriented towards the faces of a cube (the

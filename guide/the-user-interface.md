@@ -458,7 +458,8 @@ how fast the simulation runs compared to real time. In other words, it
 represents the speed of the virtual time. If the value of the speedometer is 2,
 it means that your computer simulation is running twice as fast as the
 corresponding real robots would. This information is valid both in `Run` mode
-and `Fast` mode.
+and `Fast` mode. Note: Simulation speed is not displayed when running a simulation
+in step-by-step mode (`N/A` is displayed instead).
 
 %figure "Speedometer"
 

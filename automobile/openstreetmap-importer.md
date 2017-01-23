@@ -58,7 +58,7 @@ You can use several arguments with this script:
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
 | --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 | --extract-projection   | Extracts the projection from the OSM file, displays it and exits.                                                                    | By default, this parameter is disabled.                                   |
-
+| --removal-radius       | Specifies the radius (in meters) around each road waypoints outside which any object are removed.                                    | By default this feature is disabled (radius = 0.0).                       |
 %end
 
 In addition to these arguments, a configuration file can be used to define how

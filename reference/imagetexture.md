@@ -5,7 +5,7 @@ ImageTexture {
   MFString   url       []
   SFBool     repeatS   TRUE
   SFBool     repeatT   TRUE
-  SFBool     filtering TRUE
+  SFInt32    filtering 4
 }
 ```
 
@@ -56,14 +56,17 @@ that it fills the shape. If `repeatS` is `FALSE`, the texture coordinates are
 clamped in the *s* direction to lie within the [0.0,1.0] range. The `repeatT`
 field is analogous to the `repeatS` field.
 
-The `filtering` field defines whether the texture will be displayed using a
-texture filtering or not. No filtering corresponds to a simple nearest-neighbor
-pixel interpolation filtering method. Filtering corresponds to both an
-anisotropic filtering method (using mipmapping) which chooses the smallest
-mipmap according to the texture orientation and to the texture distance, and a
-trilinear filtering method which smooths the texture. Using filtering doesn't
-affect significantly the run-time performance, however it may increase slightly
-the initialization time because of the generation of the mipmaps.
+The `filtering` field defines the level of quality obtained from filtering
+techniques applied to the texture. This parameter ranges from 0 to 5, 0
+corresponding to no filtering, only performing a simple nearest-neighbor pixel
+interpolation filtering method. At 1, simple mipmapping is applied. From 2
+onwards an additional anisotropic filtering is applied with increasing sampling
+count. Using filtering doesn't affect significantly the run-time performance for
+values up to 4, however it may increase slightly the initialization time because
+of the mipmap generation. No filtering can produce artefacts caused by aliasing,
+while low filtering gets rid of such artefacts at the cost of a blurred texture.
+Increasing the `filtering` value beyond 1 restores sharpness to distant textures
+when viewed at extreme angles.
 
 An [ImageTexture](#imagetexture) can also be used together with a 
 [ComposedShader](composedshader.md). In the fragment shader the texture can be 

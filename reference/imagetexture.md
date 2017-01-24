@@ -58,15 +58,14 @@ field is analogous to the `repeatS` field.
 
 The `filtering` field defines the level of quality obtained from filtering
 techniques applied to the texture. This parameter ranges from 0 to 5, 0
-corresponding to no filtering, only performing a simple nearest-neighbor pixel
-interpolation filtering method. At 1, simple mipmapping is applied. From 2
-onwards an additional anisotropic filtering is applied with increasing sampling
-count. Using filtering doesn't affect significantly the run-time performance for
-values up to 4, however it may increase slightly the initialization time because
-of the mipmap generation. No filtering can produce artefacts caused by aliasing,
-while low filtering gets rid of such artefacts at the cost of a blurred texture.
-Increasing the `filtering` value beyond 1 restores sharpness to distant textures
-when viewed at extreme angles.
+corresponding to no filtering, only performing simple nearest-neighbor pixel
+interpolation. At 1, simple mipmapping is applied. From 2 onwards additional 
+anisotropic filtering is applied with an increasing sampling factor. Using filtering 
+doesn't significantly affect the run-time performance for values up to 4, however 
+it may increase slightly the initialization time due to mipmap generation. 
+A setting of 0 can produce artefacts caused by aliasing, while low filtering gets rid
+of such artefacts at the cost of a blurred texture. Increasing the `filtering` value
+beyond 1 restores sharpness to distant textures when viewed at extreme angles.
 
 An [ImageTexture](#imagetexture) can also be used together with a 
 [ComposedShader](composedshader.md). In the fragment shader the texture can be 

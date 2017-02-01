@@ -40,10 +40,12 @@ Road {
   SFFloat    textureScale              2
   MFString   pavementTexture           "textures/pavement.jpg"
   MFString   bottomTexture             []
+  SFString   turnLanes                 ""
   SFBool     locked                    TRUE
   SFBool     roadBoundingObject        FALSE
   SFBool     rightBorderBoundingObject FALSE
   SFBool     leftBorderBoundingObject  FALSE
+  SFBool     castShadows               FALSE
   SFString   contactMaterial           "default"
 }
 ```
@@ -78,7 +80,7 @@ are less values than way-points, 0 is used for the last remaining way-points).
 - `startLine`: Defines the texture used for the road line at the first way-point
 for each lane. If the string is empty, no road line will be added for the corresponding
 lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png`
-may be used in this fied.
+may be used in this field.
 - `endLine`: Defines the texture used for the road line at the last way-point for
 each lane. If the string is empty, no road line will be added for the corresponding lane.
 - `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
@@ -87,11 +89,15 @@ value is lower than 0, the interpolation is disabled).
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
+- `turnLanes`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes" key (e.g. "through|left;through|none")
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a
 bounding object.
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
 object.
+- `castShadows`: defines whether the road should cast shadows.
+- `contactMaterial`: defines the road contact material (used by the ContactProperties node).
+
 
 ### StraightRoadSegment
 

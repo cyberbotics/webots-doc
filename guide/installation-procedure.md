@@ -139,9 +139,11 @@ gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.ver
 
 #### Server edition
 
-Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work.
+Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
+* `xserver-xorg-core`
+* `libpulse0`
 
-Webots needs the X Window system and thus the `xserver-xorg-core` and `libxslt1.1` packages have to be installed. These packages are automatically installed when using the DEB package, but in case of the tarball package the user has to manually install them.
+These packages are automatically installed when using the DEB package, but in case of the tarball package the user has to manually install them.
 
 Additionally, it is also necessary to install an OS GUI, for example the Unity desktop `ubuntu-desktop` package.
 

@@ -4,9 +4,9 @@ Derived from [HingeJoint](hingejoint.md).
 
 ```
 Hinge2Joint {
-  SFNode jointParameters2 NULL     # JointParameters for second axis
-  MFNode device2          [ ]      # RotationalMotor, PositionSensor and Brake
-  hiddenField SFFloat position2  0 # initial position with respect to the second hinge (rad)
+  SFNode   jointParameters2 NULL     # JointParameters for second axis
+  MFNode   device2          []       # RotationalMotor, PositionSensor and Brake
+  SFFloat .position2        0        # initial position with respect to the second hinge (rad)
 }
 ```
 
@@ -49,4 +49,4 @@ empty, default values of the HingeJointParameters node apply.
 [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device attached
 to the second axis. If no motor is specified, this part of the joint is passive.
 
-- `position2`: see [joint's hidden position field](rotationalmotor.md).
+- `.position2`: see [joint's hidden position field](rotationalmotor.md).

@@ -15,8 +15,8 @@ Solid {
   SFFloat    radarCrossSection   0.0
   SFFloat    translationStep     0.01        # m
   SFFloat    rotationStep        0.261799387 # pi/12 rad
-  SFVec3f   .linearVelocity      0 0 0       # initial linear velocity
-  SFVec3f   .angularVelocity     0 0 0       # initial angular velocity
+  SFVec3f    linearVelocity      0 0 0       # initial linear velocity
+  SFVec3f    angularVelocity     0 0 0       # initial angular velocity
 }
 ```
 
@@ -97,7 +97,7 @@ that will be used by the translate and rotate handles appearing in the 3D window
 when selecting a top solid. Continuous increment is obtained by setting the step
 value to -1.
 
-- `.linearVelocity` and `.angularVelocity`: these fields, which aren't visible from
+- `linearVelocity` and `angularVelocity`: these fields, which aren't visible from
 the Scene Tree, are used by Webots when saving a world file to store the initial
 linear and angular velocities of a [Solid](#solid) with a non-NULL
 [Physics](physics.md) node. If the [Solid](#solid) node is merged into a solid

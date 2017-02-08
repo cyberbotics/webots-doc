@@ -4,8 +4,8 @@ Derived from [Joint](joint.md).
 
 ```
 HingeJoint {
-  MFNode   device   [ ] # RotationalMotor, PositionSensor and Brake
-  SFFloat .position 0   # (rad) initial position
+  MFNode  device   [ ] # RotationalMotor, PositionSensor and Brake
+  SFFloat position 0   # (rad) initial position
 }
 ```
 
@@ -30,4 +30,4 @@ with a [HingeJointParameters](hingejointparameters.md) only. If empty,
 [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device. If no
 motor is specified, the joint is passive joint.
 
-- `.position`: see [joint's hidden position field](joint.md#joint-s-hidden-position-fields).
+- `position`: This field is not visible from the Scene Tree, see [joint's hidden position field](joint.md#joint-s-hidden-position-fields).

@@ -3,7 +3,7 @@
 ```
 WorldInfo {
   SFString   title                          ""
-  MFString   info                           []
+  MFString   info                           [ ]
   SFVec3f    gravity                        0 -9.81 0
   SFFloat    CFM                            0.00001  # [0,inf)
   SFFloat    ERP                            0.2      # [0,1]
@@ -20,7 +20,7 @@ WorldInfo {
   SFString   gpsCoordinateSystem            "local"  # should either be 'local' or 'WGS84'
   SFVec3f    gpsReference                   0 0 0    # defines the offset for each coordinate [m]
   SFFloat    lineScale                      0.1      # control the length of every arbitrary-sized lines
-  MFNode     contactProperties              []       # see ContactProperties node
+  MFNode     contactProperties              [ ]      # see ContactProperties node
 }
 ```
 

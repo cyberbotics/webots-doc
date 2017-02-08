@@ -8,7 +8,7 @@ Robot {
   SFString   controllerArgs    ""
   SFString   data              ""
   SFBool     synchronization   TRUE
-  MFFloat    battery           []
+  MFFloat    battery           [ ]
   SFFloat    cpuConsumption    10  # [0,inf)
   SFBool     selfCollision     FALSE
   SFBool     showWindow        FALSE

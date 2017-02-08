@@ -8,7 +8,7 @@ Solid {
   SFString   model               ""
   SFString   description         ""
   SFString   contactMaterial     "default"
-  MFNode     immersionProperties []
+  MFNode     immersionProperties [ ]
   SFNode     boundingObject      NULL
   SFNode     physics             NULL
   SFBool     locked              FALSE

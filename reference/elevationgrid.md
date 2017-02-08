@@ -3,7 +3,7 @@
 ```
 ElevationGrid {
   SFNode    color            NULL
-  MFFloat   height           []     # (-inf,inf)
+  MFFloat   height           [ ]    # (-inf,inf)
   SFBool    colorPerVertex   TRUE
   SFInt32   xDimension       0      # [0,inf)
   SFFloat   xSpacing         1      # (0,inf)

@@ -4,14 +4,14 @@ Derived from [Device](device.md).
 
 ```
 Motor {
-  SFFloat acceleration      -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
-  SFFloat consumptionFactor 10     # energy consumption (W/N or W/(N*m))
-  SFVec3f controlPID        10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
-  SFFloat minPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
-  SFFloat maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
-  SFFloat maxVelocity       10     # (m/s or rad/s): (0, inf)
-  SFString sound            ""     # wave file of the motor sound
-  field SFNode   muscle   NULL
+  SFFloat  acceleration      -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
+  SFFloat  consumptionFactor 10     # energy consumption (W/N or W/(N*m))
+  SFVec3f  controlPID        10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
+  SFFloat  minPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat  maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
+  SFFloat  maxVelocity       10     # (m/s or rad/s): (0, inf)
+  SFString sound             ""     # wave file of the motor sound
+  MFNode   muscles           []
 }
 ```
 
@@ -74,7 +74,7 @@ location of the world file or PROTO file which contains the `Motor` node. This
 sound is used to play the sound of the motor. It is modulated in volume and
 pitch according to the velocity of the motor to produce a realistic motor sound.
 
-- The `muscle` field optionally specifies a [Muscle](muscle.md) node that graphically displays the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md). This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
+- The `muscles` field optionally specifies one or more [Muscle](muscle.md) nodes that graphically display the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md). This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
 
 ### Units
 

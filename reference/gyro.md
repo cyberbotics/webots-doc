@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 Gyro {
-  MFVec3f    lookupTable    []    # interpolation
+  MFVec3f    lookupTable    [ ]   # interpolation
   SFBool     xAxis          TRUE  # compute x-axis
   SFBool     yAxis          TRUE  # compute y-axis
   SFBool     zAxis          TRUE  # compute z-axis

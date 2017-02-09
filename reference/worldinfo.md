@@ -3,7 +3,7 @@
 ```
 WorldInfo {
   SFString   title                          ""
-  MFString   info                           []
+  MFString   info                           [ ]
   SFVec3f    gravity                        0 -9.81 0
   SFFloat    CFM                            0.00001  # [0,inf)
   SFFloat    ERP                            0.2      # [0,1]

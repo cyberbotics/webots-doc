@@ -81,18 +81,18 @@ from `extensionSlot`.
 
 ```
 AutomobileLights {
-  MFNode    front           NULL
+  MFNode    front           [ ]
   MFColor   frontColor      [ 0.8 0.8 0.8 ]
-  MFNode    rightIndicator  NULL
-  MFNode    leftIndicator   NULL
+  MFNode    rightIndicator  [ ]
+  MFNode    leftIndicator   [ ]
   MFColor   indicatorColor  [ 1 0.7 0.1 ]
-  MFNode    antifog         NULL
+  MFNode    antifog         [ ]
   MFColor   antifogColor    [ 0.8 0.8 0.8 ]
-  MFNode    braking         NULL
+  MFNode    braking         [ ]
   MFColor   brakingColor    [ 0.7 0.12 0.12 ]
-  MFNode    rear            NULL
+  MFNode    rear            [ ]
   MFColor   rearColor       [ 0.8 0.8 0.8 ]
-  MFNode    backwards       NULL
+  MFNode    backwards       [ ]
   MFColor   backwardsColor  [ 0.7 0.12 0.12 ]
 }
 ```

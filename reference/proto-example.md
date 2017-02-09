@@ -24,7 +24,8 @@ PROTO TwoColorChair [
   field SFColor    legColor          1 1 0
   field SFColor    seatColor         1 0.65 0
   field SFNode     seatGeometry      NULL
-  field MFNode     seatExtensionSlot []       ]
+  field MFNode     seatExtensionSlot []
+]
 {
   Solid {
     translation IS translation

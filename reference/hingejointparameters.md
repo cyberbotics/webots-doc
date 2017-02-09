@@ -4,12 +4,12 @@ Derived from [JointParameters](jointparameters.md).
 
 ```
 HingeJointParameters {
-  field SFVec3f anchor                    0 0 0 # for the rotation axis (m)
+  SFVec3f anchor                    0 0 0 # for the rotation axis (m)
   # the following field have different default values than the parent class
-  field SFVec3f axis                      1 0 0 # rotation axis
-  field SFFloat suspensionSpringConstant  0     # linear spring constant along the suspension axis (Ns/m)
-  field SFFloat suspensionDampingConstant 0     # linear damping constant along the suspension axis (Ns/m)
-  field SFVec3f suspensionAxis            1 0 0 # direction of the suspension axis
+  SFVec3f axis                      1 0 0 # rotation axis
+  SFFloat suspensionSpringConstant  0     # linear spring constant along the suspension axis (Ns/m)
+  SFFloat suspensionDampingConstant 0     # linear damping constant along the suspension axis (Ns/m)
+  SFVec3f suspensionAxis            1 0 0 # direction of the suspension axis
 }
 ```
 

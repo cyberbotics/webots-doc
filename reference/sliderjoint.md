@@ -4,8 +4,8 @@ Derived from [Joint](joint.md).
 
 ```
 SliderJoint {
-  field       MFNode  device   [ ]        # linear motor or linear position sensor
-  hiddenField SFFloat position 0          # initial position (m)
+  MFNode  device   [ ]   # linear motor or linear position sensor
+  SFFloat position 0     # initial position (m)
 }
 ```
 
@@ -29,5 +29,4 @@ with a [JointParameters](jointparameters.md) only. If empty,
 linear [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device. If
 no motor is specified, the joint is passive joint.
 
-- `position`: see [joint's hidden position
-field](joint.md#joint-s-hidden-position-fields).
+- `position`: This field is not visible from the Scene Tree, see [joint's hidden position field](joint.md#joint-s-hidden-position-fields).

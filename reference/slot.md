@@ -2,8 +2,8 @@
 
 ```
 Slot {
-  field     SFString type      ""
-  vrmlField SFNode   endPoint  NULL
+  SFString type      ""
+  SFNode   endPoint  NULL
 }
 ```
 

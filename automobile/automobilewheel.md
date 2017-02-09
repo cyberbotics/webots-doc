@@ -30,7 +30,7 @@ AutomobileWheel {
   SFNode     tireAppearance     Appearance { material Material {} }
   SFNode     rimAppearance      Appearance { material Material {} }
   SFNode     physics            Physics {}
-  MFNode     logoSlot           []
+  MFNode     logoSlot           [ ]
 }
 ```
 

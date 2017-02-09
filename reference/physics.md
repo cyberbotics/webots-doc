@@ -5,7 +5,7 @@ Physics {
   SFFloat     density             1000      # (kg/m^3) -1 or > 0
   SFFloat     mass                -1        # (kg) -1 or > 0
   SFVec3f     centerOfMass        0 0 0     # (-inf,inf)
-  MFVec3f     inertiaMatrix       []        # empty or 2 values
+  MFVec3f     inertiaMatrix       [ ]       # empty or 2 values
   SFNode      damping             NULL      # optional damping node
 }
 ```

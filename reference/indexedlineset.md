@@ -3,7 +3,7 @@
 ```
 IndexedLineSet {
   SFNode    coord        NULL
-  MFInt32   coordIndex   []    # [-1,inf)
+  MFInt32   coordIndex   [ ]   # [-1,inf)
 }
 ```
 

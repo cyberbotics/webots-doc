@@ -17,7 +17,7 @@ necessary to run or compile specific projects. The
 Webots will run on most recent Linux distributions running glibc2.11.1 or
 earlier. This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc.
 Webots comes in two different package types: `.deb` and `.tar.bz2` (tarball).
-The `.deb` package is aimed at the latest Ubuntu Linux distribution whereas the
+The `.deb` package is aimed at the latest LTS Ubuntu Linux distribution whereas the
 tarball package includes many dependency libraries and it is therefore best
 suited for installation on other Linux distributions. These packages can be
 downloaded from our [website](http://www.cyberbotics.com/linux).
@@ -136,6 +136,16 @@ or
 ```sh
 gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
+
+#### Server edition
+
+Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
+* `xserver-xorg-core`
+* `libpulse0`
+
+These packages are automatically installed when using the DEB package, but in case of the tarball package the user has to manually install them.
+
+Additionally, it is also necessary to install an OS GUI, for example the Unity desktop `ubuntu-desktop` package.
 
 ### Installation on Windows
 

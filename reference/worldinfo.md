@@ -3,7 +3,7 @@
 ```
 WorldInfo {
   SFString   title                          ""
-  MFString   info                           []
+  MFString   info                           [ ]
   SFVec3f    gravity                        0 -9.81 0
   SFFloat    CFM                            0.00001  # [0,inf)
   SFFloat    ERP                            0.2      # [0,1]
@@ -19,7 +19,7 @@ WorldInfo {
   SFVec3f    northDirection                 1 0 0    # for compass and InertialUnit
   SFString   gpsCoordinateSystem            "local"  # should either be 'local' or 'WGS84'
   SFVec3f    gpsReference                   0 0 0    # defines the offset for each coordinate [m]
-  SFFloat    lineScale                      0.1      # control the length of every arbitrary-sized lines
+  SFFloat    lineScale                      0.1      # control the length of every arbitrary-sized lines and mouse zoom
   MFNode     contactProperties              []       # see ContactProperties node
 }
 ```
@@ -158,7 +158,9 @@ axes, the local coordinate systems and centers of mass of solid nodes, the rays
 of light sensors, the point light representations, the camera frustums, or the
 offsets used for drawing bounding objects and the laser beam. Increasing the
 `lineScale` value can help in case of depth fighting problems between the red
-spot of a laser beam and the detected object. The value of this field is somehow
+spot of a laser beam and the detected object. The `lineScale` value is also used
+to define the step of the zoom using the mouse wheel: increasing the `lineScale`
+value will make the mouse wheel zoom faster. The value of this field is somehow
 arbitrary, but setting this value equal to the average size of a robot
 (expressed in meter) is likely to be a good initial choice.
 

@@ -2,12 +2,12 @@
 
 ```
 Background {
-  MFString backUrl   []
-  MFString bottomUrl []
-  MFString frontUrl  []
-  MFString leftUrl   []
-  MFString rightUrl  []
-  MFString topUrl    []
+  MFString backUrl   [ ]
+  MFString bottomUrl [ ]
+  MFString frontUrl  [ ]
+  MFString leftUrl   [ ]
+  MFString rightUrl  [ ]
+  MFString topUrl    [ ]
   MFColor  skyColor  [ 0 0 0 ] # [0,1]
 }
 ```

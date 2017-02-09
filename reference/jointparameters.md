@@ -2,13 +2,13 @@
 
 ```
 JointParameters {
-  field SFFloat position        0 # current position (m or rad)
-  field SFVec3f axis        0 0 1 # displacement axis (m)
-  field SFFloat minStop         0 # low stop position (m or rad)
-  field SFFloat maxStop         0 # high stop position (m or rad)
-  field SFFloat springConstant  0 # spring constant (N/m or Nm)
-  field SFFloat dampingConstant 0 # damping constant (Ns/m or Nms)
-  field SFFloat staticFriction  0 # friction constant (Ns/m or Nms)
+  SFFloat position        0 # current position (m or rad)
+  SFVec3f axis        0 0 1 # displacement axis (m)
+  SFFloat minStop         0 # low stop position (m or rad)
+  SFFloat maxStop         0 # high stop position (m or rad)
+  SFFloat springConstant  0 # spring constant (N/m or Nm)
+  SFFloat dampingConstant 0 # damping constant (Ns/m or Nms)
+  SFFloat staticFriction  0 # friction constant (Ns/m or Nms)
 }
 ```
 

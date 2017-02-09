@@ -2,13 +2,13 @@
 
 ```
 Propeller {
-  field SFVec3f shaftAxis       1 0 0 # (m)
-  field SFVec3f centerOfThrust  0 0 0 # (m)
-  field SFVec2f thrustConstants 1 0   # Ns^2/rad : (-inf, inf), Ns^2/(m*rad) : (-inf, inf)
-  field SFVec2f torqueConstants 1 0   # Nms^2/rad : (-inf, inf), Ns^2/rad : (-inf, inf)
-  field SFNode device           NULL  # RotationalMotor
-  field SFNode fastHelix        NULL  # Solid node containing a graphical representation for rotation speed > 24 π rad/s (720 rpm)
-  field SFNode slowHelix        NULL  # Solid node containing a graphical representation for rotation speed <= 24 π rad/s
+  SFVec3f shaftAxis       1 0 0 # (m)
+  SFVec3f centerOfThrust  0 0 0 # (m)
+  SFVec2f thrustConstants 1 0   # Ns^2/rad : (-inf, inf), Ns^2/(m*rad) : (-inf, inf)
+  SFVec2f torqueConstants 1 0   # Nms^2/rad : (-inf, inf), Ns^2/rad : (-inf, inf)
+  SFNode device           NULL  # RotationalMotor
+  SFNode fastHelix        NULL  # Solid node containing a graphical representation for rotation speed > 24 π rad/s (720 rpm)
+  SFNode slowHelix        NULL  # Solid node containing a graphical representation for rotation speed <= 24 π rad/s
 }
 ```
 

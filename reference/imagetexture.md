@@ -2,7 +2,7 @@
 
 ```
 ImageTexture {
-  MFString   url       []
+  MFString   url       [ ]
   SFBool     repeatS   TRUE
   SFBool     repeatT   TRUE
   SFInt32    filtering 4

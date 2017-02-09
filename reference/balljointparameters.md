@@ -2,9 +2,9 @@
 
 ```
 BallJointParameters {
-  field SFVec3f anchor 0 0 0      # point at which the bodies are connected (m)
-  field SFFloat springConstant  0 # uniform rotational spring constant (Nm)
-  field SFFloat dampingConstant 0 # uniform rotational damping constant (Nms)
+  SFVec3f anchor          0 0 0 # point at which the bodies are connected (m)
+  SFFloat springConstant  0     # uniform rotational spring constant (Nm)
+  SFFloat dampingConstant 0     # uniform rotational damping constant (Nms)
 }
 ```
 

@@ -39,7 +39,7 @@ Road {
   MFString   texture                   "textures/road.jpg"
   SFFloat    textureScale              2
   MFString   pavementTexture           "textures/pavement.jpg"
-  MFString   bottomTexture             []
+  MFString   bottomTexture             [ ]
   SFBool     locked                    TRUE
   SFBool     roadBoundingObject        FALSE
   SFBool     rightBorderBoundingObject FALSE

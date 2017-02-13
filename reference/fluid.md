@@ -4,15 +4,15 @@ Derived from [Transform](transform.md).
 
 ```
 Fluid {
-  SFString  description    ""
-  SFString  name           "fluid"  # used in ImmersionProperties
-  SFString  model          ""       # generic name of the fluid (eg: "sea")
-  SFString  description    ""       # a short (1 line) of description of the fluid
-  SFFloat   density        1000     # (kg/m^3) fluid density
-  SFFloat   viscosity      0.001    # (kg/(ms)) fluid's dynamic viscosity
-  SFVec3f   streamVelocity 0 0 0    # (m/s) linear fluid velocity
-  SFNode    boundingObject NULL
-  SFBool    locked         FALSE
+  SFString description    ""
+  SFString name           "fluid" # used in ImmersionProperties
+  SFString model          ""      # generic name of the fluid (eg: "sea")
+  SFString description    ""      # a short (1 line) of description of the fluid
+  SFFloat  density        1000    # (kg/m^3) fluid density
+  SFFloat  viscosity      0.001   # (kg/(ms)) fluid's dynamic viscosity
+  SFVec3f  streamVelocity 0 0 0   # (m/s) linear fluid velocity
+  SFNode   boundingObject NULL
+  SFBool   locked         FALSE
 }
 ```
 

@@ -12,19 +12,19 @@ Derived from [Device](device.md).
 
 ```
 Servo {
-  SFString   type             "rotational"
-  SFFloat    maxVelocity      10      # (0,inf)
-  SFFloat    maxForce         10      # [0,inf)
-  SFFloat    controlP         10      # (0,inf)
-  SFFloat    acceleration     -1      # -1 or (0,inf)
-  SFFloat    position         0
-  SFFloat    minPosition      0       # (-inf,0]
-  SFFloat    maxPosition      0       # [0,inf)
-  SFFloat    minStop          0       # [-pi,0]
-  SFFloat    maxStop          0       # [0,pi]
-  SFFloat    springConstant   0       # [0,inf)
-  SFFloat    dampingConstant  0       # [0,inf)
-  SFFloat    staticFriction   0       # [0,inf)
+  SFString type            "rotational"
+  SFFloat  maxVelocity     10           # (0,inf)
+  SFFloat  maxForce        10           # [0,inf)
+  SFFloat  controlP        10           # (0,inf)
+  SFFloat  acceleration    -1           # -1 or (0,inf)
+  SFFloat  position        0
+  SFFloat  minPosition     0            # (-inf,0]
+  SFFloat  maxPosition     0            # [0,inf)
+  SFFloat  minStop         0            # [-pi,0]
+  SFFloat  maxStop         0            # [0,pi]
+  SFFloat  springConstant  0            # [0,inf)
+  SFFloat  dampingConstant 0            # [0,inf)
+  SFFloat  staticFriction  0            # [0,inf)
 }
 ```
 

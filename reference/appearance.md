@@ -2,9 +2,9 @@
 
 ```
 Appearance {
-  SFNode   material           NULL
-  SFNode   texture            NULL
-  SFNode   textureTransform   NULL
+  SFNode material         NULL
+  SFNode texture          NULL
+  SFNode textureTransform NULL
 }
 ```
 

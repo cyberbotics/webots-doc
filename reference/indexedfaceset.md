@@ -2,14 +2,14 @@
 
 ```
 IndexedFaceSet {
-  SFNode    coord           NULL
-  SFNode    texCoord        NULL
-  SFBool    solid           TRUE  # ignored and regarded as TRUE
-  SFBool    ccw             TRUE
-  SFBool    convex          TRUE
-  MFInt32   coordIndex      [ ]   # [-1,inf)
-  MFInt32   texCoordIndex   [ ]   # [-1,inf)
-  SFFloat   creaseAngle     0     # [0,inf)
+  SFNode  coord         NULL
+  SFNode  texCoord      NULL
+  SFBool  solid         TRUE # ignored and regarded as TRUE
+  SFBool  ccw           TRUE
+  SFBool  convex        TRUE
+  MFInt32 coordIndex    [ ]  # [-1,inf)
+  MFInt32 texCoordIndex [ ]  # [-1,inf)
+  SFFloat creaseAngle   0    # [0,inf)
 }
 ```
 

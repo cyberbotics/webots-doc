@@ -2,9 +2,9 @@
 
 ```
 Shape {
-  SFNode   appearance   NULL
-  SFNode   geometry     NULL
-  SFBool   castShadows  TRUE
+  SFNode appearance  NULL
+  SFNode geometry    NULL
+  SFBool castShadows TRUE
 }
 ```
 

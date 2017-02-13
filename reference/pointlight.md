@@ -4,9 +4,9 @@ Derived from [Light](light.md).
 
 ```
 PointLight {
-  SFVec3f   attenuation   1 0 0    # [0,inf)
-  SFVec3f   location      0 0 0    # (-inf,inf)
-  SFFloat   radius        100      # [0,inf)
+  SFVec3f attenuation 1 0 0 # [0,inf)
+  SFVec3f location    0 0 0 # (-inf,inf)
+  SFFloat radius      100   # [0,inf)
 }
 ```
 

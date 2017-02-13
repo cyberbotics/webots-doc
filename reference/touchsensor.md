@@ -4,9 +4,9 @@ Derived from [Device](device.md).
 
 ```
 TouchSensor {
-  SFString   type          "bumper"
-  MFVec3f    lookupTable   [ 0 0 0, 5000 50000 0 ]
-  SFFloat    resolution    -1
+  SFString type        "bumper"
+  MFVec3f  lookupTable [ 0 0 0, 5000 50000 0 ]
+  SFFloat  resolution  -1
 }
 ```
 

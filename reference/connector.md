@@ -4,18 +4,18 @@ Derived from [Device](device.md).
 
 ```
 Connector {
-  SFString   type                "symmetric"
-  SFBool     isLocked            FALSE
-  SFBool     autoLock            FALSE
-  SFBool     unilateralLock      TRUE
-  SFBool     unilateralUnlock    TRUE
-  SFFloat    distanceTolerance   0.01  # [0,inf)
-  SFFloat    axisTolerance       0.2   # [0,pi)
-  SFFloat    rotationTolerance   0.2   # [0,pi)
-  SFInt32    numberOfRotations   4
-  SFBool     snap                TRUE
-  SFFloat    tensileStrength     -1
-  SFFloat    shearStrength       -1
+  SFString type              "symmetric"
+  SFBool   isLocked          FALSE
+  SFBool   autoLock          FALSE
+  SFBool   unilateralLock    TRUE
+  SFBool   unilateralUnlock  TRUE
+  SFFloat  distanceTolerance 0.01        # [0,inf)
+  SFFloat  axisTolerance     0.2         # [0,pi)
+  SFFloat  rotationTolerance 0.2         # [0,pi)
+  SFInt32  numberOfRotations 4
+  SFBool   snap              TRUE
+  SFFloat  tensileStrength   -1
+  SFFloat  shearStrength     -1
 }
 ```
 

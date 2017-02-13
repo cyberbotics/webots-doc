@@ -4,20 +4,20 @@ Derived from [Device](device.md).
 
 ```
 Camera {
-  SFFloat    fieldOfView      0.7854
-  SFInt32    width            64
-  SFInt32    height           64
-  SFBool     spherical        FALSE
-  SFFloat    near             0.01
-  SFFloat    far              0.0
-  SFBool     antiAliasing     FALSE
-  SFFloat    motionBlur       0.0
-  SFFloat    noise            0.0
-  SFString   noiseMaskUrl     ""
-  SFNode     lens             NULL
-  SFNode     focus            NULL
-  SFNode     zoom             NULL
-  SFString   compositor       ""
+  SFFloat  fieldOfView  0.7854
+  SFInt32  width        64
+  SFInt32  height       64
+  SFBool   spherical    FALSE
+  SFFloat  near         0.01
+  SFFloat  far          0.0
+  SFBool   antiAliasing FALSE
+  SFFloat  motionBlur   0.0
+  SFFloat  noise        0.0
+  SFString noiseMaskUrl ""
+  SFNode   lens         NULL
+  SFNode   focus        NULL
+  SFNode   zoom         NULL
+  SFString compositor   ""
 }
 ```
 

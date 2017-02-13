@@ -2,12 +2,12 @@
 
 ```
 Light {
-  SFFloat   ambientIntensity   0        # [0,1]
-  SFColor   color              1 1 1    # [0,1]
-  SFFloat   intensity          1        # [0,1]
-  SFBool    on                 TRUE
-  SFBool    castShadows        FALSE
-  SFBool    castLensFlares     FALSE
+  SFFloat ambientIntensity 0     # [0,1]
+  SFColor color            1 1 1 # [0,1]
+  SFFloat intensity        1     # [0,1]
+  SFBool  on               TRUE
+  SFBool  castShadows      FALSE
+  SFBool  castLensFlares   FALSE
 }
 ```
 

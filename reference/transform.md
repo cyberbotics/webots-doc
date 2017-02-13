@@ -4,9 +4,9 @@ Derived from [Group](group.md).
 
 ```
 Transform {
-  SFVec3f      translation   0 0 0     # 3D vector
-  SFRotation   rotation      0 1 0 0   # 3D unit vector,angle (rad)
-  SFVec3f      scale         1 1 1     # 3 real scaling factors
+  SFVec3f    translation 0 0 0   # 3D vector
+  SFRotation rotation    0 1 0 0 # 3D unit vector,angle (rad)
+  SFVec3f    scale       1 1 1   # 3 real scaling factors
 }
 ```
 

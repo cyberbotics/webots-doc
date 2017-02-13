@@ -4,23 +4,23 @@ Derived from [Device](device.md).
 
 ```
 Radar {
-  SFFloat    minRange                1
-  SFFloat    maxRange               50.0
-  SFFloat    horizontalFieldOfView   0.78
-  SFFloat    verticalFieldOfView     0.1
-  SFFloat    minAbsoluteRadialSpeed  0.0
-  SFFloat    minRadialSpeed          1
-  SFFloat    maxRadialSpeed         -1
-  SFFloat    cellDistance            0.0
-  SFFloat    cellSpeed               0.0
-  SFFloat    rangeNoise              0.0
-  SFFloat    speedNoise              0.0
-  SFFloat    angularNoise            0.0
-  SFFloat    antennaGain            20.0
-  SFFloat    frequency              24.0
-  SFFloat    transmittedPower        1.0
-  SFFloat    minDetectableSignal    -100
-  SFBool     occlusion             FALSE
+  SFFloat minRange               1
+  SFFloat maxRange               50.0
+  SFFloat horizontalFieldOfView  0.78
+  SFFloat verticalFieldOfView    0.1
+  SFFloat minAbsoluteRadialSpeed 0.0
+  SFFloat minRadialSpeed         1
+  SFFloat maxRadialSpeed         -1
+  SFFloat cellDistance           0.0
+  SFFloat cellSpeed              0.0
+  SFFloat rangeNoise             0.0
+  SFFloat speedNoise             0.0
+  SFFloat angularNoise           0.0
+  SFFloat antennaGain            20.0
+  SFFloat frequency              24.0
+  SFFloat transmittedPower       1.0
+  SFFloat minDetectableSignal    -100
+  SFBool  occlusion              FALSE
 }
 ```
 

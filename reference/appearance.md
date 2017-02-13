@@ -2,11 +2,11 @@
 
 ```
 Appearance {
-  SFNode   material           NULL
-  SFNode   texture            NULL
-  SFNode   textureTransform   NULL
-  MFNode   shaders            NULL
-  SFString name               "appearance"
+  SFNode   material         NULL
+  SFNode   texture          NULL
+  SFNode   textureTransform NULL
+  MFNode   shaders          NULL
+  SFString name             "appearance"
 }
 ```
 

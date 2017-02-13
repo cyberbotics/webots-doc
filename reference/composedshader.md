@@ -2,9 +2,9 @@
 
 ```
 ComposedShader {
-  vrmlField MFNode uniforms    []
-  vrmlField MFNode parts       []
-  field     SFBool transparent FALSE
+  MFNode uniforms    [ ]
+  MFNode parts       [ ]
+  SFBool transparent FALSE
 }
 ```
 

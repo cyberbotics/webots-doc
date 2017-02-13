@@ -2,12 +2,12 @@
 
 ```
 ComposedCubeMapTexture {
-  vrmlField SFNode right   NULL
-  vrmlField SFNode left    NULL
-  vrmlField SFNode top     NULL
-  vrmlField SFNode bottom  NULL
-  vrmlField SFNode front   NULL
-  vrmlField SFNode back    NULL
+  SFNode right  NULL
+  SFNode left   NULL
+  SFNode top    NULL
+  SFNode bottom NULL
+  SFNode front  NULL
+  SFNode back   NULL
 }
 ```
 

@@ -2,8 +2,8 @@
 
 ```
 Damping {
-  SFFloat   linear        0.2     # [0,1]
-  SFFloat   angular       0.2     # [0,1]
+  SFFloat linear  0.2 # [0,1]
+  SFFloat angular 0.2 # [0,1]
 }
 ```
 

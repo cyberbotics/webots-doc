@@ -2,8 +2,8 @@
 
 ```
 Sphere {
-  SFFloat   radius        1   # (-inf,inf)
-  SFInt32   subdivision   1   # [0,5] or 10
+  SFFloat radius      1 # (-inf,inf)
+  SFInt32 subdivision 1 # [0,5] or 10
 }
 ```
 

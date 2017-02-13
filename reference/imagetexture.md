@@ -2,10 +2,10 @@
 
 ```
 ImageTexture {
-  MFString   url       [ ]
-  SFBool     repeatS   TRUE
-  SFBool     repeatT   TRUE
-  SFBool     filtering TRUE
+  MFString url       [ ]
+  SFBool   repeatS   TRUE
+  SFBool   repeatT   TRUE
+  SFBool   filtering TRUE
 }
 ```
 

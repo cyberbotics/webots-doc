@@ -2,18 +2,18 @@
 
 ```
 ContactProperties {
-  SFString material1           "default"
-  SFString material2           "default"
-  MFFloat  coulombFriction     1          # [0,inf)
-  SFVec2f  frictionRotation    0 0
-  SFFloat  bounce              0.5        # [0,1]
-  SFFloat  bounceVelocity      0.01       # (m/s)
-  MFFloat  forceDependentSlip  0
-  SFFloat  softERP             0.2
-  SFFloat  softCFM             0.001
-  SFString bumpSound           "sounds/bump.wav"
-  SFString rollSound           "sounds/roll.waw"
-  SFString SlideSound          "sounds/slide.wav"
+  SFString material1          "default"
+  SFString material2          "default"
+  MFFloat  coulombFriction    1                  # [0,inf)
+  SFVec2f  frictionRotation   0 0
+  SFFloat  bounce             0.5                # [0,1]
+  SFFloat  bounceVelocity     0.01               # (m/s)
+  MFFloat  forceDependentSlip 0
+  SFFloat  softERP            0.2
+  SFFloat  softCFM            0.001
+  SFString bumpSound          "sounds/bump.wav"
+  SFString rollSound          "sounds/roll.waw"
+  SFString SlideSound         "sounds/slide.wav"
 }
 ```
 

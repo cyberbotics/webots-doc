@@ -167,11 +167,9 @@ outside the robot is necessary (see the
 
 > **Hands on**:
 Add the two distance sensors as explained above. The distance sensors are at an
-angle to 0.3 [rad] with the robot front vector. Set their `type` field to
-"sonar". Set their graphical and physical shape to a cube (not transformed)
-having a edge of *0.01* [m]. Set their color to blue. Set their `name` field
-according to the labels of [this
-figure](#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices).
+angle to 0.3 [rad] with the robot front vector. Set their graphical and physical
+shape to a cube (not transformed) having a edge of *0.01* [m]. Set their color
+to blue. Set their `name` field according to the labels of [this figure](#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-devices).
 
 ### Controller
 

@@ -174,8 +174,7 @@ of Webots. A complete description of these parameters can be found in the
 ContactProperties nodes contains other fields.
 
 > **Hands on**:
-Search in the `Reference Manual` how to add a linear damping on all the objects,
-how to unset the auto-disable feature and how to use the inertia matrix.
+Search in the `Reference Manual` how to add a linear damping on all the objects, how to use the inertia matrix and how to use the physicsDisableTime property.
 
 ### Conclusion
 

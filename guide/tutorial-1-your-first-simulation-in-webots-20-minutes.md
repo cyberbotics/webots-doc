@@ -225,7 +225,7 @@ before they can be run as robot controllers. Python and Matlab controllers are
 interpreted languages so they will run without being compiled. The `controller`
 field of a robot specifies which controller is currently linked with to it.
 Please take notice that a controller can be used by several robots, but a robot
-cans use only one controller at a time.
+can only use one controller at a time.
 
 <!-- -->
 
@@ -247,7 +247,7 @@ chapter](language-setup.md)).
 Create a new C controller called *e-puck\_go\_forward* using the `Wizards / New
 Robot Controller...` menu. This will create a new "e-puck\_go\_forward"
 directory in "my\_webots\_projects/tutorials/controllers". Select the option
-asking you to open the source file in the text editor.
+offering you to open the source file in the text editor.
 
 The new C source file is displayed in Webots text editor window. This C file can
 be compiled without any modification, however the code has no real effect. We

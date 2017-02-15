@@ -67,7 +67,7 @@ Similarly add an Appearance node to the ball. Add a Material node to the
 `material` field as well as an ImageTexture node to the `texture` field of the 
 Appearance node. Add an item to the ImageTexture's `url` field using the `Add` 
 button. Then set the value of the newly added `url` item to 
-"WEBOTS\_HOME/projects/default/worlds/textures/red_brick_wall.jpg" using the file 
+"WEBOTS\_HOME/projects/default/worlds/textures/red\_brick\_wall.jpg" using the file 
 selection dialog.
 
 <!-- -->
@@ -81,7 +81,7 @@ will find textures that are available for every world.
 <!-- -->
 
 > **Note**:
-Open the "red_brick_wall.jpg" texture in an image viewer while you observe how 
+Open the "red\_brick\_wall.jpg" texture in an image viewer while you observe how 
 it is mapped onto the Sphere node in Webots.
 
 <!-- -->

@@ -98,10 +98,14 @@ AutomobileLights {
 ```
 
 Here again, you can easily create your own PROTO that inherits from the
-[Car](#car) PROTO to define your own custom and complete model of car. Three
+[Car](#car) PROTO to define your own custom and complete model of car. Several
 PROTO models that inherit from the [Car](#car) PROTO are provided. They
-represent three different models of car: the X5 from BMW, the C-Zero from
-Citroen and the Prius from Toyota.
+represent different models of car:
+
+- the X5 from BMW
+- the MKZ from Lincoln
+- the C-Zero from Citroen
+- the Prius from Toyota
 
 %figure "Models of cars created using the Car PROTO"
 
@@ -109,7 +113,7 @@ Citroen and the Prius from Toyota.
 
 %end
 
-An interesting aspect of these three PROTO nodes is that the `extensionSlot` is
+An interesting aspect of these PROTO nodes is that the `extensionSlot` is
 divided into four `sensorsSlot` in order to provide smart predefined positions
 where to put sensors (or actuators if needed), which are in the front, top, rear
 and center of the car. The position of the central sensors slot is always at 0 0
@@ -124,6 +128,7 @@ differs), see the [following table](#slotpositions) for the exact positions.
 | BmwX5        | 0.0 0.45 3.850         | 0.0 1.45 1.000       | 0.0 0.3 -1.000        |
 | CitroenCZero | 0.0 0.05 3.075         | 0.0 1.35 1.075       | 0.0 0.3 -0.425        |
 | ToyotaPrius  | 0.0 0.40 3.635         | 0.0 1.30 1.100       | 0.0 0.3 -0.850        |
+| LincolnMKZ   | 0.0 0.142 3.944        | 0.0 1.16 1.110       | 0.0 0.33 -1.06        |
 
 %end
 

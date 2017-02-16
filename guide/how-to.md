@@ -110,7 +110,7 @@ score, places the players to their initial position when a goal is scored, etc.
 
 ### texture_change.wbt
 
-**Keywords**: Supervisor, texture, wb_supervisor_field_set_*(), Camera
+**Keywords**: Supervisor, texture, `wb_supervisor_field_set_*()`, Camera
 
 %figure "texture_change"
 

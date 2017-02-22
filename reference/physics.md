@@ -52,12 +52,11 @@ specify the mass rather than the density.
 
 - The `centerOfMass` field defines the position of the center of mass of the
 solid.
-If there is no vectors in the `centerOfMass` field, then the center of mass of
+If there is no vector in the `centerOfMass` field, then the center of mass of
 the solid is automatically computed based on the [Solid](solid.md)
 `boundingObject`.
-If there are several vectors in the `centerOfMass` field, then only the first
-vector determines the [Solid](solid.md) center of mass and the automatic computation
-is overriden.
+If there is one vector in the `centerOfMass` field, it determines the
+[Solid](solid.md) center of mass, and so the automatic computation is overriden.
 This vector is expressed in meters in the relative coordinate system of the
 [Solid](solid.md) node. If this vector is different from [0 0 0], then
 the center of mass is depicted as a dark red/green/blue cross in Webots

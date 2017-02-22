@@ -4,7 +4,7 @@
 Physics {
   SFFloat density       1000  # (kg/m^3) -1 or > 0
   SFFloat mass          -1    # (kg) -1 or > 0
-  SFVec3f centerOfMass  0 0 0 # (-inf,inf)
+  MFVec3f centerOfMass  0 0 0 # (-inf,inf)
   MFVec3f inertiaMatrix [ ]   # empty or 2 values
   SFNode  damping       NULL  # optional damping node
 }
@@ -51,8 +51,15 @@ indicated in the specifications of the robot, then it is more accurate to
 specify the mass rather than the density.
 
 - The `centerOfMass` field defines the position of the center of mass of the
-solid. It is expressed in meters in the relative coordinate system of the
-[Solid](solid.md) node. If `centerOfMass` field is different from [0 0 0], then
+solid.
+If there is no vectors in the `centerOfMass` field, then the center of mass of
+the solid is automatically computed based on the [Solid](solid.md)
+`boundingObject`.
+If there are vectors in the `centerOfMass` field, then the first vector
+determines the [Solid](solid.md) center of mass (the automatic computation is
+overrode).
+This vector is expressed in meters in the relative coordinate system of the
+[Solid](solid.md) node. If this vector is different from [0 0 0], then
 the center of mass is depicted as a dark red/green/blue cross in Webots
 3D-window.
 

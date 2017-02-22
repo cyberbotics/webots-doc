@@ -4,7 +4,7 @@
 Physics {
   SFFloat density       1000  # (kg/m^3) -1 or > 0
   SFFloat mass          -1    # (kg) -1 or > 0
-  MFVec3f centerOfMass  0 0 0 # (-inf,inf)
+  MFVec3f centerOfMass  [ ]   # position of the center of mass
   MFVec3f inertiaMatrix [ ]   # empty or 2 values
   SFNode  damping       NULL  # optional damping node
 }
@@ -55,9 +55,9 @@ solid.
 If there is no vectors in the `centerOfMass` field, then the center of mass of
 the solid is automatically computed based on the [Solid](solid.md)
 `boundingObject`.
-If there are vectors in the `centerOfMass` field, then the first vector
-determines the [Solid](solid.md) center of mass (the automatic computation is
-overrode).
+If there are several vectors in the `centerOfMass` field, then only the first
+vector determines the [Solid](solid.md) center of mass and the automatic computation
+is overriden.
 This vector is expressed in meters in the relative coordinate system of the
 [Solid](solid.md) node. If this vector is different from [0 0 0], then
 the center of mass is depicted as a dark red/green/blue cross in Webots

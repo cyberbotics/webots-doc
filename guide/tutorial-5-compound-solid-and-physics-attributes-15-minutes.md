@@ -175,7 +175,7 @@ ContactProperties nodes contains other fields.
 
 > **Hands on**:
 Search in the `Reference Manual` how to add a linear damping on all the objects,
-how to unset the auto-disable feature and how to use the inertia matrix.
+how to use the inertia matrix and how to use the physicsDisableTime property.
 
 ### Conclusion
 

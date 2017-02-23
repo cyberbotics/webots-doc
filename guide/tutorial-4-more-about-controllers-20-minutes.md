@@ -198,11 +198,11 @@ threshold) as follows:
 
 > ```c
 > // detect obstacles
-> bool left_obstacle =
+> bool right_obstacle =
 >   ps_values[0] > 100.0 ||
 >   ps_values[1] > 100.0 ||
 >   ps_values[2] > 100.0;
-> bool right_obstacle =
+> bool left_obstacle =
 >   ps_values[5] > 100.0 ||
 >   ps_values[6] > 100.0 ||
 >   ps_values[7] > 100.0;
@@ -221,13 +221,13 @@ follows:
 > // modify speeds according to obstacles
 > if (left_obstacle) {
 >   // turn right
->   left_speed  -= 500;
->   right_speed += 500;
+>   left_speed  += 500;
+>   right_speed -= 500;
 > }
 > else if (right_obstacle) {
 >   // turn left
->   left_speed  += 500;
->   right_speed -= 500;
+>   left_speed  -= 500;
+>   right_speed += 500;
 > }
 > // write actuators inputs
 > wb_differential_wheels_set_speed(left_speed, right_speed);
@@ -285,11 +285,11 @@ int main(int argc, char **argv)
       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
 
     // detect obstacles
-    bool left_obstacle =
+    bool right_obstacle =
       ps_values[0] > 100.0 ||
       ps_values[1] > 100.0 ||
       ps_values[2] > 100.0;
-    bool right_obstacle =
+    bool left_obstacle =
       ps_values[5] > 100.0 ||
       ps_values[6] > 100.0 ||
       ps_values[7] > 100.0;
@@ -300,12 +300,12 @@ int main(int argc, char **argv)
 
     // modify speeds according to obstacles
     if (left_obstacle) {
-      left_speed  -= 500;
-      right_speed += 500;
-    }
-    else if (right_obstacle) {
       left_speed  += 500;
       right_speed -= 500;
+    }
+    else if (right_obstacle) {
+      left_speed  -= 500;
+      right_speed += 500;
     }
 
     // write actuators inputs

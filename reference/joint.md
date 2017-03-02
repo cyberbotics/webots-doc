@@ -38,8 +38,8 @@ a [BallJoint](balljoint.md).
     refers to the second rotation axis.
 
     3D-vector parameters (e.g `axis, anchor`) are always expressed in relative
-    coordinates with respect to the closest upper [Solid](solid.md)'s frame using
-    the meter as unit. If the  `jointParameters` field is not specified, parameters
+    coordinates with respect to the closest upper [Transform](transform.md)'s frame using
+    the meter as unit. If the `jointParameters` field is not specified, parameters
     are set with the default values defined in the corresponding parameter node.
 
 - `endPoint`: this field specifies which [Solid](solid.md) will be subjected to

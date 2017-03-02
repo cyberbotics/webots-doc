@@ -38,4 +38,4 @@ constant along the suspension axis.
 The `suspensionSpringConstant` and `suspensionDampingConstant` fields can be
 used to add a linear spring and/or damping behavior *along* the axis defined in
 `suspensionAxis`. These fields are described in more detail in
-[JointParameters Springs and Dampers](jointparameters.md#springs-and-dampers) section.
+[JointParameters](jointparameters.md)'s ["Springs and Dampers"](jointparameters.md#springs-and-dampers) section.

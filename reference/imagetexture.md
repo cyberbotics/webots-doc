@@ -58,8 +58,10 @@ field is analogous to the `repeatS` field.
 
 The `filtering` field defines the level of quality obtained from filtering
 techniques applied to the texture. This parameter ranges from 0 to an integer
-increment relative to the maximum supported anisotropy level (usually 5), 0
-corresponding to no filtering, only performing simple nearest-neighbor pixel
+increment relative to the maximum supported anisotropy level, which is usually 5.
+If the maximum supported level is exceeded, the filtering level will be silently
+brought back to the value corresponding to it.
+0 corresponds to no filtering, only performing simple nearest-neighbor pixel
 interpolation. At 1, simple mipmapping is applied. From 2 onwards additional 
 anisotropic filtering is applied with an increasing sampling factor. Using filtering 
 doesn't significantly affect the run-time performance for values up to 4, however 

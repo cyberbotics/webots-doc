@@ -57,7 +57,8 @@ clamped in the *s* direction to lie within the [0.0,1.0] range. The `repeatT`
 field is analogous to the `repeatS` field.
 
 The `filtering` field defines the level of quality obtained from filtering
-techniques applied to the texture. This parameter ranges from 0 to 5, 0
+techniques applied to the texture. This parameter ranges from 0 to an integer
+increment relative to the maximum supported anisotropy level (usually 5), 0
 corresponding to no filtering, only performing simple nearest-neighbor pixel
 interpolation. At 1, simple mipmapping is applied. From 2 onwards additional 
 anisotropic filtering is applied with an increasing sampling factor. Using filtering 

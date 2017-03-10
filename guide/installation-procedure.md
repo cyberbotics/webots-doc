@@ -137,6 +137,16 @@ or
 gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
 ```
 
+#### Server edition
+
+Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
+* `xserver-xorg-core`
+* `libpulse0`
+
+These packages are automatically installed when using the DEB package, but in case of the tarball package the user has to manually install them.
+
+Additionally, it is also necessary to install an OS GUI, for example the Unity desktop `ubuntu-desktop` package.
+
 ### Installation on Windows
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{

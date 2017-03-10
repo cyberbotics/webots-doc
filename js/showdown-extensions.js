@@ -30,11 +30,11 @@ showdown.extension("wbVariables", function() {
         version : {
           major : 8,
           minor : 5,
-          bugfix : 3
+          bugfix : 4
         }
       },
       date : {
-        year : 2016
+        year : 2017
       }
     };
 

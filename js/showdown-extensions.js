@@ -34,7 +34,7 @@ showdown.extension("wbVariables", function() {
         }
       },
       date : {
-        year : 2016
+        year : 2017
       }
     };
 

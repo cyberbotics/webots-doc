@@ -72,7 +72,7 @@ scored.
 
 **Name**
 
-**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
+**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_def**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
@@ -81,6 +81,7 @@ scored.
 
 WbNodeRef wb_supervisor_node_get_from_def(const char *def);
 WbNodeRef wb_supervisor_node_get_from_id(int id);
+const char *wb_supervisor_node_get_def(WbNodeRef node);
 int wb_supervisor_node_get_id(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_root();
@@ -113,6 +114,10 @@ world. It is recommended to use this function only when knowing formerly the
 identifier (rather than looping on this function to retrieve all the nodes of a
 world). For example, when exporting an X3D file, its XML nodes are containing an
 `id` attribute which matches with the unique identifier described here.
+
+The `wb_supervisor_node_get_def()` retrieves the DEF name of the node
+passed as a parameter. If no DEF name is specified, this function returns the empty
+string.
 
 The `wb_supervisor_node_get_id()` retrieves the unique identifier of the node
 given in parameter.

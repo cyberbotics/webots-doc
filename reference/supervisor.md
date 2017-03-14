@@ -115,8 +115,8 @@ identifier (rather than looping on this function to retrieve all the nodes of a
 world). For example, when exporting an X3D file, its XML nodes are containing an
 `id` attribute which matches with the unique identifier described here.
 
-The `wb_supervisor_node_get_def()` retrieves the DEF name of the node
-passed as a parameter. If no DEF name is specified, this function returns the empty
+The `wb_supervisor_node_get_def()` retrieves the DEF name of the node passed 
+as a parameter. If no DEF name is specified, this function returns the empty
 string.
 
 The `wb_supervisor_node_get_id()` retrieves the unique identifier of the node

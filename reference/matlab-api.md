@@ -513,7 +513,7 @@ The following tables describe the Matlab functions.
 | node = [wb\_supervisor\_node\_get\_self](supervisor.md#wb_supervisor_node_get_from_def)()                                                                            |
 | node = [wb\_supervisor\_node\_get\_from\_def](supervisor.md#wb_supervisor_node_get_from_def)('def')                                                                  |
 | node = [wb\_supervisor\_node\_get\_from\_id](supervisor.md#wb_supervisor_node_get_from_def)('id')                                                                    |
-| s  = [wb\_supervisor\_node\_get\_def](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                           |
+| s  = [wb\_supervisor\_node\_get\_def](supervisor.md#wb_supervisor_node_get_def)(node)                                                                           |
 | id = [wb\_supervisor\_node\_get\_id](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                            |
 | node = [wb\_supervisor\_node\_get\_parent\_node](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                |
 | [wb\_supervisor\_node\_remove](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                  |

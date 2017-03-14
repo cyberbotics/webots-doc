@@ -202,6 +202,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; MF\_STRING, MF\_NODE                                                                                       |
 | &nbsp;&nbsp; def [getType](supervisor.md#wb_supervisor_field_get_type)(self)                                            |
 | &nbsp;&nbsp; def [getTypeName](supervisor.md#wb_supervisor_field_get_type)(self)                                        |
+| &nbsp;&nbsp; def [getDef](supervisor.md#wb_supervisor_field_get_def)(self)                                              |
 | &nbsp;&nbsp; def [getCount](supervisor.md#wb_supervisor_field_get_type)(self)                                           |
 | &nbsp;&nbsp; def [getSFBool](supervisor.md#wb_supervisor_field_get_sf_bool)(self)                                       |
 | &nbsp;&nbsp; def [getSFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)(self)                                      |

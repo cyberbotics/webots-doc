@@ -72,7 +72,7 @@ scored.
 
 **Name**
 
-**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
+**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
@@ -80,6 +80,7 @@ scored.
 #include <webots/supervisor.h>
 
 WbNodeRef wb_supervisor_node_get_from_def(const char *def);
+const char *wb_supervisor_node_get_def(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_from_id(int id);
 int wb_supervisor_node_get_id(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node);
@@ -106,7 +107,10 @@ WbNodeRef node = wb_supervisor_node_get_from_def("ROBOT.JOINT.SOLID");
 means that we are searching for a node named "SOLID" inside a node named
 "JOINT", inside a node named "ROBOT".
 
-Similarily, the `wb_supervisor_node_get_from_id()` function retrieves a handle
+The `wb_supervisor_node_get_def()` retrieves the DEF name of the node passed 
+as a parameter. If no DEF name is specified, this function returns NULL.
+
+The `wb_supervisor_node_get_from_id()` function retrieves a handle
 to a node, but from its unique identifier (the `id` parameter). The function
 returns NULL if the given identifier doesn't match with any node of the current
 world. It is recommended to use this function only when knowing formerly the

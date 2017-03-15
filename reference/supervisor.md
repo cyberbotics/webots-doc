@@ -108,8 +108,7 @@ means that we are searching for a node named "SOLID" inside a node named
 "JOINT", inside a node named "ROBOT".
 
 The `wb_supervisor_node_get_def()` retrieves the DEF name of the node passed 
-as a parameter. If no DEF name is specified, this function returns the empty
-string.
+as a parameter. If no DEF name is specified, this function returns NULL.
 
 The `wb_supervisor_node_get_from_id()` function retrieves a handle
 to a node, but from its unique identifier (the `id` parameter). The function

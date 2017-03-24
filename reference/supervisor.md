@@ -168,12 +168,12 @@ this function returns the PROTO name, like "E-puck", "RectangleArena", "Door",
 etc. Otherwise if the argument node is not a PROTO node the returned value is
 the same as the output of `wb_supervisor_node_get_base_type_name` function, i.e.
 "DifferentialWheels", "Appearance", "LightSensor", etc. If the argument is NULL,
-the function returns NULL.
+the function returns the empty string.
 
 The `wb_supervisor_node_get_base_type_name()` function returns a text string
 corresponding to the base type name of the node, like "DifferentialWheels",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
-NULL.
+the empty string.
 
 > **Note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_NODE\_* constants are available as static
@@ -885,7 +885,7 @@ The `wb_supervisor_field_get_type_name()` returns a text string corresponding to
 the data type of a field found previously from the
 `wb_supervisor_node_get_field()` function. Field type names are defined in the
 VRML'97 specifications and include for example: `"SFFloat"`, `"MFNode"`,
-`"SFString"`, etc. If the argument is NULL, the function returns NULL.
+`"SFString"`, etc. If the argument is NULL, the function returns the empty string.
 
 The `wb_supervisor_field_get_count()` returns the number of items of a multiple
 field (MF) passed as an argument to this function. If a single field (SF) or
@@ -937,7 +937,7 @@ used, otherwise the return value is undefined (and a warning message is
 displayed). If the `field` parameter is NULL, it has the wrong type, or the
 `index` is not valid, then a default value is returned. Default values are
 defined as `0` and `0.0` for integer and double values, `false` in case of
-boolean values, and NULL for vectors, strings and pointers.
+boolean values, NULL for vectors and pointers and the empty string `""` for strings.
 
 The `wb_supervisor_field_get_mf_*()` functions work the same way as the
 `wb_supervisor_field_get_sf_*()` functions but with multiple `field` argument.

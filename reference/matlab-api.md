@@ -586,6 +586,7 @@ The following tables describe the Matlab functions.
 | velocity = [wb\_supervisor\_node\_get\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node)                                                                |
 | [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                 |
 | [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                         |
+| [wb\_supervisor\_node\_reset\_controller](supervisor.md#wb_supervisor_node_reset_controller)(node)                                                                   |
 | [wb\_supervisor\_node\_set\_visibility](supervisor.md#wb_supervisor_node_set_visibility)(node, from, visible)                                                        |
 
 %end

@@ -466,6 +466,26 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 **Name**
 
+**wb\_supervisor\_node\_restart\_controller** - *restarts the controller of the given robot*
+
+{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_restart_controller(WbNodeRef node);
+```
+
+**Description**
+
+The `wb_supervisor_node_restart_controller()` function restarts the controller of the Robot
+passed to it. If a node other than a Robot is passed to this function, no change is effected,
+and a warning message is printed to the console.
+
+---
+
+**Name**
+
 **wb\_supervisor\_node\_set\_visibility** - *set the visibility of a node*
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}

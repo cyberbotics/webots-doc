@@ -478,8 +478,8 @@ void wb_supervisor_node_reset_controller(WbNodeRef node);
 
 **Description**
 
-The `wb_supervisor_node_reset_controller()` function resets the controller of the Robot
-passed to it. If a node other than a Robot is passed to it, this function returns an error.
+The `wb_supervisor_node_reset_controller()` function restarts the controller of the Robot
+passed to it. If a node other than a Robot is passed to this function, it returns an error.
 
 ---
 

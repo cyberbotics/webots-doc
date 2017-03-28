@@ -466,7 +466,7 @@ refer to [this section](#wb_supervisor_simulation_reset_physics).
 
 **Name**
 
-**wb\_supervisor\_node\_reset\_controller** - *resets the controller of the given robot*
+**wb\_supervisor\_node\_restart\_controller** - *restarts the controller of the given robot*
 
 {[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 

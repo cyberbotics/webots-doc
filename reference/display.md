@@ -196,6 +196,8 @@ void wb_display_detach_camera(WbDeviceTag tag);
 
 These functions are used to attach/detach a camera to a display. When a camera is attached to a display, the camera images are efficiently copied to the background of the display. This is useful for example to draw over some camera rendering or to simulate mirrors.
 
+After detaching a camera, the pixels that have not been manually drawn will be transparent, i.e. their color will be balck (0x000000) and their alpha value will be 0.0.
+
 ---
 
 **Name**

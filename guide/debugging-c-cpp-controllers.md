@@ -32,7 +32,7 @@ $ ps -e
 ...
 ```
 
-On Mac OS X, use rather `ps -x` and on Windows use the *Task Manager* for this.
+On macOS, use rather `ps -x` and on Windows use the *Task Manager* for this.
 If one of your robot controllers is missing in the list (or appearing as
 *<defunct>*) this confirms that it has crashed and therefore blocked the
 simulation. In this example the "soccer\_supervisor" has crashed. Note that the
@@ -65,7 +65,7 @@ Note that, the *-g* flag should now appear in the compilation line. Once you
 have recompiled the controller, hit the `Pause` and `Revert` buttons. This
 pauses the simulation and reloads the freshly compiled versions of the
 controller. Now find the process ID (PID) of the "soccer\_supervisor" process,
-using `ps -e` (Linux) or `ps -x` (Mac OS X), or using the *Task Manager*
+using `ps -e` (Linux) or `ps -x` (macOS), or using the *Task Manager*
 (Windows). The PID is in the left-most column of output of `ps` as shown above.
 Then open a terminal and start the debugger by typing:
 

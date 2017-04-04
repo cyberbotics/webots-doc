@@ -1,4 +1,4 @@
-## Mac OS X
+## macOS
 
 ### MATLAB and robot plugins
 

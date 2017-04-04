@@ -1,4 +1,4 @@
-## The 3D Window
+macOS## The 3D Window
 
 ### Selecting an object
 
@@ -95,7 +95,7 @@ length of this vector.
 
 To apply a torque to an object, place the mouse pointer on it, hold down the Alt
 key and right mouse button together while dragging the mouse. Linux users should
-also hold down the Control key (Ctrl) together with the Alt key. Also, Mac OS X
+also hold down the Control key (Ctrl) together with the Alt key. Also, macOS
 users with a one-button mouse should hold down the Control key (Ctrl) to emulate
 the right mouse button. This way your are drawing a 3D-vector with origin the
 center of mass and whose end is located on the plane parallel to the view which

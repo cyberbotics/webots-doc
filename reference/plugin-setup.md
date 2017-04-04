@@ -12,7 +12,7 @@ plugin in the dialog and then save the ".wbt" file.
 Note that the `WorldInfo.physics` string specifies the name of the plugin source
 and binary files without extension. The extension will be added by Webots
 depending on the platform: it will be ".so" (Linux), ".dll" (Windows) or
-".dylib" (Mac OS X) for the binary file. For example, this
+".dylib" (macOS) for the binary file. For example, this
 [WorldInfo](worldinfo.md) node:
 
 ```

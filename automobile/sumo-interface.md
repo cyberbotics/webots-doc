@@ -66,8 +66,8 @@ field `controllerArgs` in order to customize the behavior of the interface:
 %end
 
 
-> **Note** [Mac OS X]:
-On Mac OS X, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
+> **Note** [macOS]:
+On macOS, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
 
 ## Plugin mechanism

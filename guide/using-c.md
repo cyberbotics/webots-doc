@@ -18,15 +18,15 @@ compiler, so there is usually no need to install a separate compiler. The MinGW
 compiler is a port of the GNU Compiler Collection (gcc) on the Windows platform.
 The advantage of using the MinGW compiler will be the better portability of your
 controller code. If you develop your code with MinGW it will be straightforward
-to recompile it on the other Webots supported platforms: Mac OS X and Linux.
+to recompile it on the other Webots supported platforms: macOS and Linux.
 However, if you prefer using the Visual C++ compiler you will find instructions
 [here](using-visual-cpp-with-webots.md).
 
-#### Mac OS X Instructions
+#### macOS Instructions
 
 In order to compile C/C++ controllers on the Mac, you will need to install Apple
 Xcode. Xcode is a suite of tools, developed by Apple, for developing software
-for Mac OS X. Xcode is free and can be downloaded from the Apple App Store.
+for macOS. Xcode is free and can be downloaded from the Apple App Store.
 Webots will need principally the `gcc` (GNU C Compiler) and `make` commands of
 Xcode. To install these commands, start Xcode and go to Xcode menu, Preferences,
 Downloads, Components and click `Install` for "Command Line Tools".

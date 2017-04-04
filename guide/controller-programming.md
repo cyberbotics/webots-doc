@@ -556,7 +556,7 @@ replaced by the actual value already existing in the environment. The Webots
 
 - `[environment variables for Mac OS X]`
 
-    Variables defined here will only be added on Mac OS X and ignored on other
+    Variables defined here will only be added on macOS and ignored on other
     platforms.
 
 - `[environment variables for Linux]`
@@ -603,7 +603,7 @@ you to access specific options that will be passed immediately to the language
 interpreter. For example:
 
 ```ini
-; runtime.ini for a Python controller on Mac OS X
+; runtime.ini for a Python controller on macOS
 
 [python]
 COMMAND = /opt/local/bin/python2.7

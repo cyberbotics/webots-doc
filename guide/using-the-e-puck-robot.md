@@ -271,7 +271,7 @@ file.
 #### Bluetooth setup
 
 The e-puck has a Bluetooth interface allowing it to communicate with Webots.
-This feature is available under Windows, Linux and Mac OS X. The Bluetooth
+This feature is available under Windows, Linux and macOS. The Bluetooth
 interface must be set up according to your operating system (OS). Generally it
 is as simple as using the Bluetooth interface of your OS in order to discover
 and to pair the e-puck as a regular Bluetooth device. The complete instructions

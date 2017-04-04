@@ -554,7 +554,7 @@ replaced by the actual value already existing in the environment. The Webots
     controller is ran on the Windows platform. If you want to declare paths in this
     section, the value should be written between double-quotes symbols ".
 
-- `[environment variables for Mac OS X]`
+- `[environment variables for macOS]`
 
     Variables defined here will only be added on macOS and ignored on other
     platforms.
@@ -586,7 +586,7 @@ ROS_MASTER_URI = http://localhost:11311
 [environment variables for Windows]
 NAOQI_LIBRARY_FOLDER = "bin;C:\Users\My Documents\Naoqi\bin"
 
-[environment variables for Mac OS X]
+[environment variables for macOS]
 NAOQI_LIBRARY_FOLDER = lib
 
 [environment variables for Linux]

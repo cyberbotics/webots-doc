@@ -103,7 +103,7 @@ LIBRARIES = -L"C:\Users\YourName\XYZLib\lib" -lXYZLib
 The first line tells gcc where to look for the *#include<XYZLib.h>* file. The
 second line tells gcc to link the executable controller with the "XYZLib.dll"
 and where that ".dll" can be found. Note that this would be similar on Linux and
-Mac OS X, you would just need to use UNIX-compatible paths instead. If more
+macOS, you would just need to use UNIX-compatible paths instead. If more
 external libraries are required, it is always possible to use additional `-I,
 -L` and `-l` flags. For more information on these flags, please refer to the
 `gcc` man page.

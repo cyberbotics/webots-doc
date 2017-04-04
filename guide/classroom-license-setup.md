@@ -100,7 +100,7 @@ be saved and the students won't need to enter it again. You may also automate
 this process by copying an already configured Webots preferences to all the user
 accounts used by the students. On Windows, the Webots preferences are stored in
 the registry under the "HKEY\_CURRENT\_USER/SOFTWARE/Cyberbotics" key (so you
-need to use a tool that copies registry keys across user accounts). On Mac OS X,
+need to use a tool that copies registry keys across user accounts). On macOS,
 the Webots preferences are stored in a file under the user home directory at
 "~/Library/Preferences/com.cyberbotics.Webots-{{ webots.version.major }}.{{
 webots.version.minor }}.plist". On Linux, the Webots

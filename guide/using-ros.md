@@ -14,7 +14,7 @@ message-passing between processes, and package management. It is based on a
 graph architecture where processing takes place in nodes that may receive, post
 and multiplex sensor, control, state, planning, actuator and other messages. The
 library is geared towards a Unix-like system and is supported under Linux,
-experimental on Mac OS X and has partial functionality under Windows.
+experimental on macOS and has partial functionality under Windows.
 
 ROS has two basic "sides": The operating system side, ros, as described above
 and ros-pkg, a suite of user contributed packages (organized into sets called
@@ -79,8 +79,8 @@ connect to each of the computer in ssh in both ways. As ROS uses the hostname to
 find other computers on the network, you must add other computers' hostname and
 the associated IP address to the known hosts of each computer. You can find this
 list in a file named *hosts*. On Linux distribution, you can find it directly at
-/etc/hosts; on Mac OS X, it is located at /private/etc/hosts; on Windows, it is
-located at C:\Windows\System32\drivers\etc\hosts. On Windows and Mac OS X, this
+/etc/hosts; on macOS, it is located at /private/etc/hosts; on Windows, it is
+located at C:\Windows\System32\drivers\etc\hosts. On Windows and macOS, this
 a hidden path and you will need to search directly for this path. The hosts file
 is usually protected and you will need administrator or root privileges to edit
 it.

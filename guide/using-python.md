@@ -20,9 +20,9 @@ The Python API of Webots is built with Python 2.7. Python 2.7 or earlier
 versions are therefore recommended although more recent versions can work
 without guarantee. Python 3 is not supported.
 
-#### Mac OS X and Linux Instructions
+#### macOS and Linux Instructions
 
-Most of the Linux distributions have Python 2.7 already installed. Mac OS X also
+Most of the Linux distributions have Python 2.7 already installed. macOS also
 has Python installed by default. To check the current version of Python
 installed on your system, you can type in a terminal:
 

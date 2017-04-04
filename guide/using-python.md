@@ -74,7 +74,7 @@ Install the package `python-opencv` for example by typing the following command 
 sudo apt-get install python-opencv
 ```
 
-#### macOS X
+#### macOS
 
 TODO
 

@@ -1,4 +1,4 @@
-macOS## The 3D Window
+## The 3D Window
 
 ### Selecting an object
 

@@ -7,7 +7,7 @@ variable is used to locate Webots header files and libraries in the Makefiles.
 Setting an environment variable depends on the platform (and shell), here are
 some examples:
 
-### Mac OS X and Linux
+### macOS and Linux
 
 These examples assume that Webots is installed in the default directory. On
 Linux, type this:
@@ -16,7 +16,7 @@ Linux, type this:
 $ export WEBOTS_HOME=/usr/local/webots
 ```
 
-or add this line to your "~/.bash\_profile" file. On Mac OS X, type this:
+or add this line to your "~/.bash\_profile" file. On macOS, type this:
 
 ```sh
 $ export WEBOTS_HOME=/Applications/Webots

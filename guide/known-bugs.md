@@ -5,5 +5,5 @@ resolved on the short term but possible workarounds are explained.
 
 ## Sections
 - [General bugs](general-bugs.md)
-- [Mac OS X](mac-os-x.md)
+- [macOS](mac-os.md)
 - [Linux](linux.md)

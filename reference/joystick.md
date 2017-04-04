@@ -92,7 +92,7 @@ int wb_joystick_get_pressed_button();
 **Description**
 
 This function allows you to read a button pressed on the joystick paired with this controller (if any). The Webots window must be selected and the simulation must be running.
-All the buttons pressed can be read by calling the `wb_joystick_get_key()` function repeatedly until this function returns -1. The returned value, if non-negative, is a button code corresponding to a button currently pressed. If no button is currently pressed, the function will return -1. Calling the `wb_joystick_get_key()` function a second time will return either -1 or the button code of another button which is currently simultaneously pressed. On Mac OS X, only the first 12 buttons and first 2 axes of the joystick are taken into account.
+All the buttons pressed can be read by calling the `wb_joystick_get_key()` function repeatedly until this function returns -1. The returned value, if non-negative, is a button code corresponding to a button currently pressed. If no button is currently pressed, the function will return -1. Calling the `wb_joystick_get_key()` function a second time will return either -1 or the button code of another button which is currently simultaneously pressed. On macOS, only the first 12 buttons and first 2 axes of the joystick are taken into account.
 
 ---
 

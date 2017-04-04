@@ -100,7 +100,7 @@ you to take a screenshot of the current view in Webots. It opens a file dialog
 to save the current view as a PNG or JPG image.
 
 ![](images/movie-button.png =26x26) The `Make Movie...` item allows you to
-create MPEG movies (Linux and Mac OS X) or AVI movies (Windows). Once the movie
+create MPEG movies (Linux and macOS) or AVI movies (Windows). Once the movie
 recording is started, this item is changed in `Stop Movie...`. During the
 recording, it is possible to the change the running mode and pause the
 simulation. However, frames are only captured during Webots steps and not when

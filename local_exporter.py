@@ -3,7 +3,9 @@
 """Copy 'index.html' to 'local.html' and get JS dependencies locally."""
 
 import os
+import platform
 import re
+import ssl
 import sys
 import urllib2
 
@@ -48,7 +50,14 @@ def download(url, target_file_path):
     nTrials = 3
     for i in range(nTrials):
         try:
-            response = urllib2.urlopen(url, timeout=5)
+            if platform.system() == 'Linux':
+                # On Ubuntu 16.04 there are issues if the certificates are not ignored.
+                ctx = ssl.create_default_context()
+                ctx.check_hostname = False
+                ctx.verify_mode = ssl.CERT_NONE
+               response = urllib2.urlopen(url, timeout=5, context=ctx)
+            else:
+               response = urllib2.urlopen(url, timeout=5)
             content = response.read()
 
             f = open(target_file_path, 'w')
@@ -56,6 +65,10 @@ def download(url, target_file_path):
             f.close()
 
             break
+        except urllib2.HTTPError, e:
+            print 'HTTPError = ' + str(e.reason)
+        except urllib2.URLError, e:
+            print 'URLError = ' + str(e.reason)
         except:
             if i == nTrials - 1:
                 sys.exit('Cannot get url: ' + url)

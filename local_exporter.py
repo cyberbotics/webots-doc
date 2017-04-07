@@ -3,7 +3,9 @@
 """Copy 'index.html' to 'local.html' and get JS dependencies locally."""
 
 import os
+import platform
 import re
+import ssl
 import sys
 import urllib2
 
@@ -35,6 +37,7 @@ dependencies = [
     'wwi/8.5/request_methods.js'
 ]
 
+
 def download(url, target_file_path):
     """Download URL to file."""
     print '# downloading %s' % url
@@ -48,7 +51,17 @@ def download(url, target_file_path):
     nTrials = 3
     for i in range(nTrials):
         try:
-            response = urllib2.urlopen(url, timeout=5)
+            if platform.system() == 'Linux' and \
+               hasattr(ssl, 'create_default_context'):
+                # On Ubuntu 16.04 there are issues with the certificates.
+                # But 'create_default_context' has been introduced in python
+                # 2.7.9 and it is not available on Ubuntu 14.04.
+                ctx = ssl.create_default_context()
+                ctx.check_hostname = False
+                ctx.verify_mode = ssl.CERT_NONE
+                response = urllib2.urlopen(url, timeout=5, context=ctx)
+            else:
+                response = urllib2.urlopen(url, timeout=5)
             content = response.read()
 
             f = open(target_file_path, 'w')
@@ -56,11 +69,15 @@ def download(url, target_file_path):
             f.close()
 
             break
-        except:
-            if i == nTrials - 1:
-                sys.exit('Cannot get url: ' + url)
+        except urllib2.HTTPError, e:
+            print 'HTTPError = ' + str(e.reason)
+        except urllib2.URLError, e:
+            print 'URLError = ' + str(e.reason)
+        if i == nTrials - 1:
+            sys.exit('Cannot get url: ' + url)
     if i > 0:
         print '# (number of trials: %d)' % (i + 1)
+
 
 script_directory = os.path.dirname(os.path.realpath(__file__)) + os.sep
 

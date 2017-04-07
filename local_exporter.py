@@ -37,6 +37,7 @@ dependencies = [
     'wwi/8.5/request_methods.js'
 ]
 
+
 def download(url, target_file_path):
     """Download URL to file."""
     print '# downloading %s' % url
@@ -50,14 +51,15 @@ def download(url, target_file_path):
     nTrials = 3
     for i in range(nTrials):
         try:
-            if platform.system() == 'Linux':
-                # On Ubuntu 16.04 there are issues if the certificates are not ignored.
+            if platform.system() == 'Linux' and \
+               int(platform.python_version_tuple()[0]) >= 3:
+                # On Ubuntu 16.04 there are issues with the certificates.
                 ctx = ssl.create_default_context()
                 ctx.check_hostname = False
                 ctx.verify_mode = ssl.CERT_NONE
-               response = urllib2.urlopen(url, timeout=5, context=ctx)
+                response = urllib2.urlopen(url, timeout=5, context=ctx)
             else:
-               response = urllib2.urlopen(url, timeout=5)
+                response = urllib2.urlopen(url, timeout=5)
             content = response.read()
 
             f = open(target_file_path, 'w')
@@ -69,11 +71,11 @@ def download(url, target_file_path):
             print 'HTTPError = ' + str(e.reason)
         except urllib2.URLError, e:
             print 'URLError = ' + str(e.reason)
-        except:
-            if i == nTrials - 1:
-                sys.exit('Cannot get url: ' + url)
+        if i == nTrials - 1:
+            sys.exit('Cannot get url: ' + url)
     if i > 0:
         print '# (number of trials: %d)' % (i + 1)
+
 
 script_directory = os.path.dirname(os.path.realpath(__file__)) + os.sep
 

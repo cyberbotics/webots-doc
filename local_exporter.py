@@ -52,8 +52,10 @@ def download(url, target_file_path):
     for i in range(nTrials):
         try:
             if platform.system() == 'Linux' and \
-               int(platform.python_version_tuple()[0]) >= 3:
+               hasattr(ssl, 'create_default_context'):
                 # On Ubuntu 16.04 there are issues with the certificates.
+                # But 'create_default_context' has been introduced in python
+                # 2.7.9 and it is not available on Ubuntu 14.04.
                 ctx = ssl.create_default_context()
                 ctx.check_hostname = False
                 ctx.verify_mode = ssl.CERT_NONE

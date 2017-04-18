@@ -104,6 +104,7 @@ represent different models of car:
 
 - the X5 from BMW
 - the MKZ from Lincoln
+- the Sport SVR from Range Rover
 - the C-Zero from Citroen
 - the Prius from Toyota
 
@@ -123,12 +124,13 @@ differs), see the [following table](#slotpositions) for the exact positions.
 
 %figure "Positions of the sensors slots"
 
-| Model        | Front slot translation | Top slot translation | Rear slot translation |
-| ------------ | ---------------------- | -------------------- | --------------------- |
-| BmwX5        | 0.0 0.45 3.850         | 0.0 1.45 1.000       | 0.0 0.3 -1.000        |
-| CitroenCZero | 0.0 0.05 3.075         | 0.0 1.35 1.075       | 0.0 0.3 -0.425        |
-| ToyotaPrius  | 0.0 0.40 3.635         | 0.0 1.30 1.100       | 0.0 0.3 -0.850        |
-| LincolnMKZ   | 0.0 0.142 3.944        | 0.0 1.16 1.110       | 0.0 0.33 -1.06        |
+| Model              | Front slot translation | Top slot translation | Rear slot translation |
+| ------------------ | ---------------------- | -------------------- | --------------------- |
+| BmwX5              | 0.0 0.45 3.850         | 0.0 1.45 1.000       | 0.0 0.3 -1.000        |
+| LincolnMKZ         | 0.0 0.142 3.944        | 0.0 1.16 1.110       | 0.0 0.33 -1.06        |
+| RangeRoverSportSVR | 0.0 0.5 3.5            | 0.0 1.3 1.4          | 0.0 0.33 -1.06        |
+| CitroenCZero       | 0.0 0.05 3.075         | 0.0 1.35 1.075       | 0.0 0.3 -0.425        |
+| ToyotaPrius        | 0.0 0.40 3.635         | 0.0 1.30 1.100       | 0.0 0.3 -0.850        |
 
 %end
 

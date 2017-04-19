@@ -74,16 +74,16 @@ The following tables describe the Java classes and their methods.
 |                                                                                            |
 | ------------------------------------------------------------------------------------------ |
 | import com.cyberbotics.webots.controller.CameraRecognitionObject;                          |
-| public class [CameraRecognitionObject](radar.md#camerarecognitionobject) {                 |
-| &nbsp;&nbsp; public int [getId](radar.md#camerarecognitionobject)();                       |
-| &nbsp;&nbsp; public double[] [getRelativePosition](radar.md#camerarecognitionobject)();    |
-| &nbsp;&nbsp; public double[] [getRelativeOrientation](radar.md#camerarecognitionobject)(); |
-| &nbsp;&nbsp; public double[] [getSize](radar.md#camerarecognitionobject)();                |
-| &nbsp;&nbsp; public int[] [getPositionOnImage](radar.md#camerarecognitionobject)();        |
-| &nbsp;&nbsp; public int[] [getSizeOnImage](radar.md#camerarecognitionobject)();            |
-| &nbsp;&nbsp; public int [getColorNumber](radar.md#camerarecognitionobject)();              |
-| &nbsp;&nbsp; public double[] [getColors](radar.md#camerarecognitionobject)();              |
-| &nbsp;&nbsp; public String [getName](radar.md#camerarecognitionobject)();                  |
+| public class [CameraRecognitionObject](camera.md#camerarecognitionobject) {                 |
+| &nbsp;&nbsp; public int [getId](camera.md#camerarecognitionobject)();                       |
+| &nbsp;&nbsp; public double[] [getRelativePosition](camera.md#camerarecognitionobject)();    |
+| &nbsp;&nbsp; public double[] [getRelativeOrientation](camera.md#camerarecognitionobject)(); |
+| &nbsp;&nbsp; public double[] [getSize](camera.md#camerarecognitionobject)();                |
+| &nbsp;&nbsp; public int[] [getPositionOnImage](camera.md#camerarecognitionobject)();        |
+| &nbsp;&nbsp; public int[] [getSizeOnImage](camera.md#camerarecognitionobject)();            |
+| &nbsp;&nbsp; public int [getColorNumber](camera.md#camerarecognitionobject)();              |
+| &nbsp;&nbsp; public double[] [getColors](camera.md#camerarecognitionobject)();              |
+| &nbsp;&nbsp; public String [getName](camera.md#camerarecognitionobject)();                  |
 | }                                                                                          |
 
 %end

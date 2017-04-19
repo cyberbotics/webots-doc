@@ -4,7 +4,7 @@
 Recognition {
   SFFloat  maxRange     100     # (m)
   SFInt32  maxObjects   -1      # maximum number of objects detected simultaneously
-  SFBool   occlusion    TRUE    # should occlusions between the radar and the target be checked
+  SFBool   occlusion    TRUE    # should occlusions between the camera and the object be checked
   SFColor  frameColor   1 0 0   # color of the objects frame in the overlay
 }
 ```

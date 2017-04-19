@@ -1,7 +1,18 @@
 ## Camera sensors
 
-No specific model of camera have been modelled, but it is easy to create your
+No specific model of camera have been modeled, but it is easy to create your
 own model using the Camera node of Webots which includes by default a zoom and a
 focusing mechanism. The Camera node also includes a model of motion blur,
 various models of noise, lens distortion and the possibility to use a spherical
 projection.
+
+
+### Smart camera
+
+If a `Recognition` node is added to the camera, the camera returns not only the image but also all the objects detected in the camera image and their size and position. It is therefore very easy to simulate smart camera such as Mobileye one.
+
+%figure "Smart camera output"
+
+![smart_camera.png](images/smart_camera.png)
+
+%end

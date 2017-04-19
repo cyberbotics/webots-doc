@@ -33,6 +33,8 @@ AckermannVehicle {
   MFNode     extensionSlot                  [ ]
   SFNode     boundingObject                 NULL
   SFNode     physics                        NULL
+  SFFloat    radarCrossSection              100
+  MFColor    recognitionColors              [ ]
   SFNode     wheelFrontRight                AutomobileWheel { }
   SFNode     wheelFrontLeft                 AutomobileWheel { }
   SFNode     wheelRearRight                 AutomobileWheel { }
@@ -60,6 +62,8 @@ sensors, shape of the vehicle, etc.).
 - `boundingObject`: Physical geometry of the vehicle.
 - `physics`: `Physics` node of the vehicle defining the physical parameters of the
 vehicle.
+- `radarCrossSection`: Defines the `radarCrossSection` of the vehicle.
+- `recognitionColors`: Defines the `recognitionColors` of the vehicle.
 - `wheelX`: Slot to insert an `AutomobileWheel` (or any `AutomobileWheel`
 descendant PROTO nodes).
 - `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`,

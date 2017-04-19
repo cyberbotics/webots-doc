@@ -17,6 +17,7 @@ Camera {
   SFNode   lens         NULL
   SFNode   focus        NULL
   SFNode   zoom         NULL
+  SFNode   recognition  NULL
   SFNode   lensFlare    NULL
   SFString compositor   ""
 }
@@ -105,6 +106,9 @@ no focus is available on the camera device.
 - The `zoom` field may contain a [Zoom](zoom.md) node to provide the camera device
 with a controllable zoom system. If this field is set to NULL, then no zoom is
 available on the camera device.
+
+- The `recognition` field may contain a [Recognition](recognition.md) node to provide the camera device
+with object recognition capability.
 
 - The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens
 flare effect to the camera image (if any light casts flares).
@@ -520,3 +524,63 @@ images, the `quality` parameter is ignored.
 The return value of the `wb_camera_save_image()` is 0 in case of success. It is
 -1 in case of failure (unable to open the specified file or unrecognized image
 file extension).
+
+---
+
+**Name**
+
+**wb\_camera\_has\_recognition**,**wb\_camera\_recognition\_enable**,**wb\_camera\_recognition\_disable**,**wb\_camera\_recognition\_get\_sampling\_period**,**wb\_camera\_recognition\_get\_number\_of\_objects**,**wb\_camera\_recognition\_get\_objects**  - *camera recognition functions*
+
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/camera.h>
+
+bool wb_camera_has_recognition(WbDeviceTag tag);
+void wb_camera_recognition_enable(WbDeviceTag tag, int sampling_period);
+void wb_camera_recognition_disable(WbDeviceTag tag);
+int wb_camera_recognition_get_sampling_period(WbDeviceTag tag);
+int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
+const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
+```
+
+**Description**
+
+If a [Recognition](recognition.md) node is present in the `recognition` node, the camera can recognize objects in its image.
+
+The function `wb_camera_has_recognition` can be used to determine whether a [Recognition](recognition.md) node is present or not.
+
+The function `wb_camera_recognition_enable()` allows the user to enable the recognition, note that it is not needed to enable the camera to let recognition work.
+
+The function `wb_camera_recognition_disable()` turns the recognition off, saving computation time.
+
+The `wb_camera_recognition_get_sampling_period()` function returns the period given into the `wb_camera_recognition_enable()` function, or 0 if the recognition is disabled.
+
+The function `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get_objects` allow the user to get the current number of recognized objects and the objects array.
+
+
+#### Camera recognition object
+
+A camera recognition object is defined by the following structure:
+
+```c
+typedef struct {
+ int      id;
+ double   relative_position[3];
+ double   relative_orientation[4];
+ double   size[2];
+ int      position_on_image[2];
+ int      size_on_image[2];
+ int      color_number;
+ double  *colors;
+ char    *name;
+} WbCameraRecognitionObject;
+```
+
+The `id` represents the node id corresponding to the object, it is possible to use this id directly in the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) supervisor function. The `relative_position` and `relative_orientation` are expressed relatively to the camera. The `size` represent the X and Y size relatively to the camera (it is of course impossible to know the depth of the object). The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image. The `color_number` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each colors is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `color_number`. Finally `name` return the `model` field of the object.
+
+> **Note** [C++]:
+In C++ the name of the structure is `CameraRecognitionObject`.
+
+> **Note** [Java/Python]:
+In Java and Python, the structure is replaced by a class called `CameraRecognitionObject`.

@@ -72,6 +72,7 @@
     - [Radar](radar.md)
     - [RangeFinder](rangefinder.md)
     - [Receiver](receiver.md)
+    - [Recognition](recognition.md)
     - [Robot](robot.md)
     - [RotationalMotor](rotationalmotor.md)
     - [Servo](servo.md)

@@ -13,6 +13,7 @@ Solid {
   SFNode   physics             NULL
   SFBool   locked              FALSE
   SFFloat  radarCrossSection   0.0
+  MFColor  recognitionColors   []
   SFFloat  translationStep     0.01        # m
   SFFloat  rotationStep        0.261799387 # pi/12 rad
   SFVec3f  linearVelocity      0 0 0       # initial linear velocity
@@ -91,6 +92,9 @@ radar receiver, i.e. it is a measure of the ratio of backscatter density in the
 direction of the radar to the power density that is intercepted by the target.
 Typical values are 0.01 for a bird, 1 for a human, 100 for a car and 200 for a
 truck.
+
+- `recognitionColors`: if not empty, this [Solid](#solid) node is a potential object recognized by any [Camera](camera.md) device with a [Recognition](recognition.md) node.
+The colors defined in this field are the ones returned for this object if recognized by the camera, but they have no impact in the visual appearance of the [Solid](#solid) node.
 
 - `translationStep` and `rotationStep`: these fields specify the minimum step size
 that will be used by the translate and rotate handles appearing in the 3D window

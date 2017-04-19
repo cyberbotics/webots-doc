@@ -558,8 +558,9 @@ The `wb_camera_recognition_get_sampling_period()` function returns the period gi
 
 The function `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get_objects` allow the user to get the current number of recognized objects and the objects array.
 
+---
 
-### Camera recognition object
+**Camera recognition object**
 
 A camera recognition object is defined by the following structure:
 

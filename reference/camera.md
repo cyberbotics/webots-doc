@@ -107,8 +107,7 @@ no focus is available on the camera device.
 with a controllable zoom system. If this field is set to NULL, then no zoom is
 available on the camera device.
 
-- The `recognition` field may contain a [Recognition](recognition.md) node to provide the camera device
-with object recognition capability.
+- The `recognition` field may contain a [Recognition](recognition.md) node to provide the camera device with object recognition capability.
 
 - The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens
 flare effect to the camera image (if any light casts flares).
@@ -578,7 +577,7 @@ typedef struct {
 } WbCameraRecognitionObject;
 ```
 
-The `id` represents the node id corresponding to the object, it is possible to use this id directly in the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) supervisor function. The `relative_position` and `relative_orientation` are expressed relatively to the camera. The `size` represent the X and Y size relatively to the camera (it is of course impossible to know the depth of the object). The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image. The `color_number` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each colors is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `color_number`. Finally `name` return the `model` field of the object.
+The `id` represents the node id corresponding to the object, it is possible to use this id directly in the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) supervisor function. The `relative_position` and `relative_orientation` are expressed relatively to the camera. The `size` represents the X and Y sizes relatively to the camera (it is of course impossible to know the depth of the object). The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image. The `color_number` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each colors is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `color_number`. Finally `name` return the `model` field of the object.
 
 > **Note** [C++]:
 In C++ the name of the structure is `CameraRecognitionObject`.

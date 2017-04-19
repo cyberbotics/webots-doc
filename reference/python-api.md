@@ -28,60 +28,60 @@ The following tables describe the Python classes and their methods.
 
 %api "python_camera"
 
-|                                                                                                         |
-| ------------------------------------------------------------------------------------------------------- |
-| from controller import Camera                                                                           |
-| class [Camera](camera.md) ([Device](#python_device)) :                                                  |
-| &nbsp;&nbsp; def [enable](camera.md#wb_camera_enable)(self, sampling_period)                            |
-| &nbsp;&nbsp; def [disable](camera.md#wb_camera_enable)(self)                                            |
-| &nbsp;&nbsp; def [getSamplingPeriod](camera.md#wb_camera_enable)(self)                                  |
-| &nbsp;&nbsp; def [getFov](camera.md#wb_camera_get_fov)(self)                                            |
-| &nbsp;&nbsp; def [getMinFov](camera.md#wb_camera_get_fov)(self)                                         |
-| &nbsp;&nbsp; def [getMaxFov](camera.md#wb_camera_get_fov)(self)                                         |
-| &nbsp;&nbsp; def [setFov](camera.md#wb_camera_get_fov)(self, fov)                                       |
-| &nbsp;&nbsp; def [getFocalLength](camera.md#wb_camera_get_focal_length)(self)                           |
-| &nbsp;&nbsp; def [getFocalDistance](camera.md#wb_camera_get_focal_length)(self)                         |
-| &nbsp;&nbsp; def [getMaxFocalDistance](camera.md#wb_camera_get_focal_length)(self)                      |
-| &nbsp;&nbsp; def [getMinFocalDistance](camera.md#wb_camera_get_focal_length)(self)                      |
-| &nbsp;&nbsp; def [setFocalDistance](camera.md#wb_camera_get_focal_length)(self, focalDistance)          |
-| &nbsp;&nbsp; def [getWidth](camera.md#wb_camera_get_width)(self)                                        |
-| &nbsp;&nbsp; def [getHeight](camera.md#wb_camera_get_width)(self)                                       |
-| &nbsp;&nbsp; def [getNear](camera.md#wb_camera_get_near)(self)                                          |
-| &nbsp;&nbsp; def [getImage](camera.md#wb_camera_get_image)(self)                                        |
-| &nbsp;&nbsp; def [getImageArray](camera.md#wb_camera_get_image)(self)                                   |
-| &nbsp;&nbsp; def [imageGetRed](camera.md#wb_camera_get_image)(image, width, x, y)                       |
-| &nbsp;&nbsp; imageGetRed = staticmethod(imageGetRed)                                                    |
-| &nbsp;&nbsp; def [imageGetGreen](camera.md#wb_camera_get_image)(image, width, x, y)                     |
-| &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen)                                                |
-| &nbsp;&nbsp; def [imageGetBlue](camera.md#wb_camera_get_image)(image, width, x, y)                      |
-| &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                                  |
-| &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)                      |
-| &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                                  |
-| &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)                   |
-| &nbsp;&nbsp; def [hasRecognition](camera.md#wb_camera_recognition)(self)                                |
-| &nbsp;&nbsp; def [recognitionEnable]camera.md#wb_camera_recognition)(self, samplingPeriod)              |
-| &nbsp;&nbsp; def [recognitionDisable]camera.md#wb_camera_recognition)(self)                             |
-| &nbsp;&nbsp; def [getRecognitionSamplingPeriod]camera.md#wb_camera_recognition)(self)                   |
-| &nbsp;&nbsp; def [getRecognitionNumberOfObjects]camera.md#wb_camera_recognition)(self)                  |
-| &nbsp;&nbsp; def CameraRecognitionObject *[getRecognitionObjects]camera.md#wb_camera_recognition)(self) |
+|                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ |
+| from controller import Camera                                                                                |
+| class [Camera](camera.md) ([Device](#python_device)) :                                                       |
+| &nbsp;&nbsp; def [enable](camera.md#wb_camera_enable)(self, sampling_period)                                 |
+| &nbsp;&nbsp; def [disable](camera.md#wb_camera_enable)(self)                                                 |
+| &nbsp;&nbsp; def [getSamplingPeriod](camera.md#wb_camera_enable)(self)                                       |
+| &nbsp;&nbsp; def [getFov](camera.md#wb_camera_get_fov)(self)                                                 |
+| &nbsp;&nbsp; def [getMinFov](camera.md#wb_camera_get_fov)(self)                                              |
+| &nbsp;&nbsp; def [getMaxFov](camera.md#wb_camera_get_fov)(self)                                              |
+| &nbsp;&nbsp; def [setFov](camera.md#wb_camera_get_fov)(self, fov)                                            |
+| &nbsp;&nbsp; def [getFocalLength](camera.md#wb_camera_get_focal_length)(self)                                |
+| &nbsp;&nbsp; def [getFocalDistance](camera.md#wb_camera_get_focal_length)(self)                              |
+| &nbsp;&nbsp; def [getMaxFocalDistance](camera.md#wb_camera_get_focal_length)(self)                           |
+| &nbsp;&nbsp; def [getMinFocalDistance](camera.md#wb_camera_get_focal_length)(self)                           |
+| &nbsp;&nbsp; def [setFocalDistance](camera.md#wb_camera_get_focal_length)(self, focalDistance)               |
+| &nbsp;&nbsp; def [getWidth](camera.md#wb_camera_get_width)(self)                                             |
+| &nbsp;&nbsp; def [getHeight](camera.md#wb_camera_get_width)(self)                                            |
+| &nbsp;&nbsp; def [getNear](camera.md#wb_camera_get_near)(self)                                               |
+| &nbsp;&nbsp; def [getImage](camera.md#wb_camera_get_image)(self)                                             |
+| &nbsp;&nbsp; def [getImageArray](camera.md#wb_camera_get_image)(self)                                        |
+| &nbsp;&nbsp; def [imageGetRed](camera.md#wb_camera_get_image)(image, width, x, y)                            |
+| &nbsp;&nbsp; imageGetRed = staticmethod(imageGetRed)                                                         |
+| &nbsp;&nbsp; def [imageGetGreen](camera.md#wb_camera_get_image)(image, width, x, y)                          |
+| &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen)                                                     |
+| &nbsp;&nbsp; def [imageGetBlue](camera.md#wb_camera_get_image)(image, width, x, y)                           |
+| &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                                       |
+| &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)                           |
+| &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                                       |
+| &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)                        |
+| &nbsp;&nbsp; def [hasRecognition](camera.md#wb_camera_has_recognition)(self)                                 |
+| &nbsp;&nbsp; def [recognitionEnable](camera.md#wb_camera_has_recognition)(self, samplingPeriod)              |
+| &nbsp;&nbsp; def [recognitionDisable](camera.md#wb_camera_has_recognition)(self)                             |
+| &nbsp;&nbsp; def [getRecognitionSamplingPeriod](camera.md#wb_camera_has_recognition)(self)                   |
+| &nbsp;&nbsp; def [getRecognitionNumberOfObjects](camera.md#wb_camera_has_recognition)(self)                  |
+| &nbsp;&nbsp; def CameraRecognitionObject *[getRecognitionObjects](camera.md#wb_camera_has_recognition)(self) |
 
 %end
 
 %api "camera_recognition_object"
 
-|                                                                       |
-| --------------------------------------------------------------------- |
-| from controller import CameraRecognitionObject                        |
-| class [CameraRecognitionObject](#python_camera_recognition_object) :  |
-| &nbsp;&nbsp; self.id                                                  |
-| &nbsp;&nbsp; self.relative_position                                   |
-| &nbsp;&nbsp; self.relative_orientation                                |
-| &nbsp;&nbsp; self.size                                                |
-| &nbsp;&nbsp; self.position_on_image                                   |
-| &nbsp;&nbsp; self.size_on_image                                       |
-| &nbsp;&nbsp; self.color_number                                        |
-| &nbsp;&nbsp; self.colors                                              |
-| &nbsp;&nbsp; self.name                                                |
+|                                                |
+| ---------------------------------------------- |
+| from controller import CameraRecognitionObject |
+| class CameraRecognitionObjec :                 |
+| &nbsp;&nbsp; self.id                           |
+| &nbsp;&nbsp; self.relative_position            |
+| &nbsp;&nbsp; self.relative_orientation         |
+| &nbsp;&nbsp; self.size                         |
+| &nbsp;&nbsp; self.position_on_image            |
+| &nbsp;&nbsp; self.size_on_image                |
+| &nbsp;&nbsp; self.color_number                 |
+| &nbsp;&nbsp; self.colors                       |
+| &nbsp;&nbsp; self.name                         |
 
 %end
 

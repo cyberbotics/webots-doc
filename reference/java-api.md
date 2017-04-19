@@ -59,32 +59,32 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#wb_camera_get_image)(int pixel);                             |
 | &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
-| &nbsp;&nbsp; public bool [hasRecognition](camera.md#wb_camera_recognition)();                                        |
-| &nbsp;&nbsp; public void [recognitionEnable]camera.md#wb_camera_recognition)(int samplingPeriod);                    |
-| &nbsp;&nbsp; public void [recognitionDisable]camera.md#wb_camera_recognition)();                                     |
-| &nbsp;&nbsp; public int [getRecognitionSamplingPeriod]camera.md#wb_camera_recognition)();                            |
-| &nbsp;&nbsp; public int [getRecognitionNumberOfObjects]camera.md#wb_camera_recognition)();                           |
-| &nbsp;&nbsp; public const CameraRecognitionObject *[getRecognitionObjects]camera.md#wb_camera_recognition)();        |
+| &nbsp;&nbsp; public bool [hasRecognition](camera.md#wb_camera_has_recognition)();                                    |
+| &nbsp;&nbsp; public void [recognitionEnable](camera.md#wb_camera_has_recognition)(int samplingPeriod);               |
+| &nbsp;&nbsp; public void [recognitionDisable](camera.md#wb_camera_has_recognition)();                                |
+| &nbsp;&nbsp; public int [getRecognitionSamplingPeriod](camera.md#wb_camera_has_recognition)();                       |
+| &nbsp;&nbsp; public int [getRecognitionNumberOfObjects](camera.md#wb_camera_has_recognition)();                      |
+| &nbsp;&nbsp; public const CameraRecognitionObject *[getRecognitionObjects](camera.md#wb_camera_has_recognition)();   |
 | }                                                                                                                    |
 
 %end
 
 %api "camera_recognition_object"
 
-|                                                                                            |
-| ------------------------------------------------------------------------------------------ |
-| import com.cyberbotics.webots.controller.CameraRecognitionObject;                          |
-| public class [CameraRecognitionObject](camera.md#camerarecognitionobject) {                 |
-| &nbsp;&nbsp; public int [getId](camera.md#camerarecognitionobject)();                       |
-| &nbsp;&nbsp; public double[] [getRelativePosition](camera.md#camerarecognitionobject)();    |
-| &nbsp;&nbsp; public double[] [getRelativeOrientation](camera.md#camerarecognitionobject)(); |
-| &nbsp;&nbsp; public double[] [getSize](camera.md#camerarecognitionobject)();                |
-| &nbsp;&nbsp; public int[] [getPositionOnImage](camera.md#camerarecognitionobject)();        |
-| &nbsp;&nbsp; public int[] [getSizeOnImage](camera.md#camerarecognitionobject)();            |
-| &nbsp;&nbsp; public int [getColorNumber](camera.md#camerarecognitionobject)();              |
-| &nbsp;&nbsp; public double[] [getColors](camera.md#camerarecognitionobject)();              |
-| &nbsp;&nbsp; public String [getName](camera.md#camerarecognitionobject)();                  |
-| }                                                                                          |
+|                                                                   |
+| ----------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.CameraRecognitionObject; |
+| public class CameraRecognitionObject {                            |
+| &nbsp;&nbsp; public int getId();                                  |
+| &nbsp;&nbsp; public double[] getRelativePosition();               |
+| &nbsp;&nbsp; public double[] getRelativeOrientation();            |
+| &nbsp;&nbsp; public double[] getSize();                           |
+| &nbsp;&nbsp; public int[] getPositionOnImage();                   |
+| &nbsp;&nbsp; public int[] getSizeOnImage();                       |
+| &nbsp;&nbsp; public int getColorNumber();                         |
+| &nbsp;&nbsp; public double[] getColors();                         |
+| &nbsp;&nbsp; public String getNam]();                             |
+| }                                                                 |
 
 %end
 

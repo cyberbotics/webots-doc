@@ -43,12 +43,12 @@ The following tables describe the Matlab functions.
 | near = [wb\_camera\_get\_near](camera.md#wb_camera_get_near)(tag)                              |
 | image = [wb\_camera\_get\_image](camera.md#wb_camera_get_image)(tag)                           |
 | [wb\_camera\_save\_image](camera.md#wb_camera_save_image)(tag, 'filename', quality)            |
-| [wb\_camera\_has\_recognition](camera.md#wb_camera_recognition)(tag)                           |
-| [wb\_camera\_recognition\_disable](camera.md#wb_camera_recognition)(tag)                       |
-| [wb\_camera\_recognition\_enable](camera.md#wb_camera_recognition)(tag, sampling_period)       |
-| [wb\_camera\_recognition\_get\_number\_of\_objects](camera.md#wb_camera_recognition)(tag)      |
-| [wb\_camera\_recognition\_get\_objects](camera.md#wb_camera_recognition)(tag)                  |
-| [wb\_camera\_recognition\_get\_sampling\_period](camera.md#wb_camera_recognition)(tag)         |
+| [wb\_camera\_has\_recognition](camera.md#wb_camera_has_recognition)(tag)                       |
+| [wb\_camera\_recognition\_disable](camera.md#wb_camera_has_recognition)(tag)                   |
+| [wb\_camera\_recognition\_enable](camera.md#wb_camera_has_recognition)(tag, sampling_period)   |
+| [wb\_camera\_recognition\_get\_number\_of\_objects](camera.md#wb_camera_has_recognition)(tag)  |
+| [wb\_camera\_recognition\_get\_objects](camera.md#wb_camera_has_recognition)(tag)              |
+| [wb\_camera\_recognition\_get\_sampling\_period](camera.md#wb_camera_has_recognition)(tag)     |
 
 %end
 

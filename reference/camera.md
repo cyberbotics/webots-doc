@@ -108,9 +108,9 @@ with a controllable zoom system. If this field is set to NULL, then no zoom is
 available on the camera device.
 
 - The `recognition` field may contain a [Recognition](recognition.md) node to provide the camera device with object recognition capability.
-The camera can only recognized [Solid](solid.md) whose `recognitionColors` is not empty.
+The camera can only recognize [Solid](solid.md) whose `recognitionColors` is not empty.
 The object size is estimated using the `boundingObject` of the [Solid](solid.md) and the ones of all its children.
-Note that the size is estimated and can be overestimated.
+Note that the returned size is an estimation and can be in some cases overestimated.
 In case the [Solid](solid.md) and its children doesn't have any bounding object, the dimension is estimated using the shape, this estimation is usually widely overestimated.
 
 - The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens

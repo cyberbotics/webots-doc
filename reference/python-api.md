@@ -69,19 +69,19 @@ The following tables describe the Python classes and their methods.
 
 %api "camera_recognition_object"
 
-|                                                |
-| ---------------------------------------------- |
-| from controller import CameraRecognitionObject |
-| class CameraRecognitionObjec :                 |
-| &nbsp;&nbsp; self.id                           |
-| &nbsp;&nbsp; self.relative_position            |
-| &nbsp;&nbsp; self.relative_orientation         |
-| &nbsp;&nbsp; self.size                         |
-| &nbsp;&nbsp; self.position_on_image            |
-| &nbsp;&nbsp; self.size_on_image                |
-| &nbsp;&nbsp; self.color_number                 |
-| &nbsp;&nbsp; self.colors                       |
-| &nbsp;&nbsp; self.name                         |
+|                                                 |
+| ----------------------------------------------- |
+| from controller import CameraRecognitionObject  |
+| class CameraRecognitionObject :                 |
+| &nbsp;&nbsp; def get_id(self)                   |
+| &nbsp;&nbsp; def get_relative_position(self)    |
+| &nbsp;&nbsp; def get_relative_orientation(self) |
+| &nbsp;&nbsp; def get_size(self)                 |
+| &nbsp;&nbsp; def get_position_on_image(self)    |
+| &nbsp;&nbsp; def get_size_on_image(self)        |
+| &nbsp;&nbsp; def get_color_number(self)         |
+| &nbsp;&nbsp; def get_colors(self)               |
+| &nbsp;&nbsp; def get_name(self)                 |
 
 %end
 

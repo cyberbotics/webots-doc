@@ -69,7 +69,12 @@ So this library has to be installed on the system in order to correctly run the 
 
 #### Linux
 
-Install the package `python-opencv` for example by typing the following command in a terminal:
+On Ubuntu 16.04, use the `pip` command to install OpenCV:
+```
+sudo pip install opencv-python
+```
+
+On older Ubuntu versions, it can be installed using the the APT package `python-opencv` for example by typing the following command in a terminal:
 ```
 sudo apt-get install python-opencv
 ```

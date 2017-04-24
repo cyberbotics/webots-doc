@@ -84,7 +84,7 @@ sudo apt-get install python-opencv
 Since macOS El Capitan, open a Terminal and type:
 
 ```
-sudo pip install opencv-python --user python
+sudo pip install opencv-python --user
 ```
 
 On older macOS versions, type:

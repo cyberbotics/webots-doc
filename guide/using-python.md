@@ -81,7 +81,18 @@ sudo apt-get install python-opencv
 
 #### macOS
 
-TODO
+Since macOS El Capitan, open a Terminal and type:
+
+```
+sudo pip install opencv-python --user python
+```
+
+On older macOS versions, type:
+
+```
+sudo pip install opencv-python
+```
+
 
 #### Windows
 

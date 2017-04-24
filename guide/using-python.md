@@ -61,3 +61,36 @@ export PYTHON_PATH=/usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/V
 make clean -C resources/languages/python
 make -C resources/languages/python
 ```
+
+### Python Libraries
+
+The sample simulation `WEBOTS_HOME/projects/web/visual_tracking` use the Python [OpenCV](http://opencv.org/) library.
+So this library has to be installed on the system in order to correctly run the simulation.
+
+#### Linux
+
+On Ubuntu 16.04, use the `pip` command to install OpenCV:
+```
+sudo pip install opencv-python
+```
+
+On older Ubuntu versions, it can be installed using the the APT package `python-opencv` for example by typing the following command in a terminal:
+```
+sudo apt-get install python-opencv
+```
+
+#### macOS
+
+Open a Terminal and type:
+
+```
+pip install opencv-python --user
+```
+
+#### Windows
+
+Open the DOS console (CMD.EXE) and type:
+```
+PYTHON_PATH\Scripts\pip.exe install opencv-python
+```
+where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python27`.

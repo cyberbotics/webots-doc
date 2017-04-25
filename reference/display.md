@@ -297,7 +297,7 @@ list is initially empty. The functions described below use a reference
 (corresponding to the `WbImageRef` data type) to refer to a specific image.
 Clipboard images can be created either with `wb_display_image_new()`, or
 `wb_display_image_load()`, or `wb_display_image_copy()`. They should be deleted
-with the `wb_display_image_delete()` function.when they are no more used.
+with the `wb_display_image_delete()` function when they are no more used.
 Finally, note that both the main display image and the clipboard images have an
 alpha channel.
 

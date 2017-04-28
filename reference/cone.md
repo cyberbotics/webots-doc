@@ -2,8 +2,8 @@
 
 ```
 Cone {
-  SFFloat bottomRadius 1    # (-inf,inf)
-  SFFloat height       2    # (-inf,inf)
+  SFFloat bottomRadius 1    # (0,inf)
+  SFFloat height       2    # (0,inf)
   SFBool  side         TRUE
   SFBool  bottom       TRUE
   SFInt32 subdivision  12   # (3,inf)

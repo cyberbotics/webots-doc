@@ -3,8 +3,8 @@
 ```
 Cylinder {
   SFBool  bottom      TRUE
-  SFFloat height      2    # (-inf,inf)
-  SFFloat radius      1    # (-inf,inf)
+  SFFloat height      2    # (0,inf)
+  SFFloat radius      1    # (0,inf)
   SFBool  side        TRUE
   SFBool  top         TRUE
   SFInt32 subdivision 12   # (2,inf)

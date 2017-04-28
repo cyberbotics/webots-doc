@@ -2,10 +2,11 @@
 
 ```
 Recognition {
-  SFFloat  maxRange     100     # (m)
-  SFInt32  maxObjects   -1      # maximum number of objects detected simultaneously
-  SFBool   occlusion    TRUE    # should occlusions between the camera and the object be checked
-  SFColor  frameColor   1 0 0   # color of the objects frame in the overlay
+  SFFloat  maxRange       100     # (m)
+  SFInt32  maxObjects     -1      # maximum number of objects detected simultaneously
+  SFBool   occlusion      TRUE    # should occlusions between the camera and the object be checked
+  SFColor  frameColor     1 0 0   # color of the objects frame in the overlay
+  SFInt32  frameThickness 1       # thickness of the objects frame in the overlay
 }
 ```
 
@@ -23,3 +24,5 @@ When a [Camera](camera.md) device has a [Recognition](#recognition) node in its 
 - The `occlusion` field defines if occlusions between the camera and the object should be checked. Disabling the occlusions detection can save computational time and therefore speed up the simulation, but it can lead to recognized object that are not really visible to the camera.
 
 - The `frameColor` field defines the color used to frame the objects recognized by the camera in its overlay.
+
+- The `frameThickness` field defines the thickness of the frames in the camera overlay. 0 means no object frame in the camera overlay.

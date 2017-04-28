@@ -93,8 +93,8 @@ direction of the radar to the power density that is intercepted by the target.
 Typical values are 0.01 for a bird, 1 for a human, 100 for a car and 200 for a
 truck.
 
-- `recognitionColors`: if not empty, this [Solid](#solid) node is a potential object recognized by any [Camera](camera.md) device with a [Recognition](recognition.md) node.
-The colors defined in this field are the ones returned for this object if recognized by the camera, but they have no impact in the visual appearance of the [Solid](#solid) node.
+- `recognitionColors`: if not empty, this [Solid](#solid) node may be recognized by any [Camera](camera.md) device with a [Recognition](recognition.md) node.
+The colors defined in this field are returned for this object if recognized by a camera, but they have no impact on the visual appearance of the [Solid](#solid) node.
 
 - `translationStep` and `rotationStep`: these fields specify the minimum step size
 that will be used by the translate and rotate handles appearing in the 3D window

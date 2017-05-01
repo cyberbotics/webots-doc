@@ -570,18 +570,18 @@ A camera recognition object is defined by the following structure:
 ```c
 typedef struct {
  int      id;
- double   relative_position[3];
- double   relative_orientation[4];
+ double   position[3];
+ double   orientation[4];
  double   size[2];
  int      position_on_image[2];
  int      size_on_image[2];
- int      color_number;
+ int      number_of_colors;
  double  *colors;
  char    *name;
 } WbCameraRecognitionObject;
 ```
 
-The `id` represents the node id corresponding to the object, it is possible to use this id directly in the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) supervisor function. The `relative_position` and `relative_orientation` are expressed relatively to the camera (the relative position is the one of the center of the object which can differ from its origin) and the units are meters. The `size` represents the X and Y sizes in meters relatively to the camera (it is of course impossible to know the depth of the object). The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image, the units are pixels. The `color_number` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each colors is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `color_number`. Finally `name` return the `model` field of the object.
+The `id` represents the node id corresponding to the object, it is possible to use this id directly in the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) supervisor function. The `position` and `orientation` are expressed relatively to the camera (the relative position is the one of the center of the object which can differ from its origin) and the units are meters. The `size` represents the X and Y sizes in meters relatively to the camera (it is of course impossible to know the depth of the object). The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image, the units are pixels. The `number_of_colors` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each colors is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `number_of_colors`. Finally `name` return the `model` field of the object.
 
 > **Note** [C++]:
 In C++ the name of the structure is `CameraRecognitionObject`.

@@ -76,12 +76,12 @@ The following tables describe the Java classes and their methods.
 | import com.cyberbotics.webots.controller.CameraRecognitionObject; |
 | public class CameraRecognitionObject {                            |
 | &nbsp;&nbsp; public int getId();                                  |
-| &nbsp;&nbsp; public double[] getRelativePosition();               |
-| &nbsp;&nbsp; public double[] getRelativeOrientation();            |
+| &nbsp;&nbsp; public double[] getPosition();                       |
+| &nbsp;&nbsp; public double[] getOrientation();                    |
 | &nbsp;&nbsp; public double[] getSize();                           |
 | &nbsp;&nbsp; public int[] getPositionOnImage();                   |
 | &nbsp;&nbsp; public int[] getSizeOnImage();                       |
-| &nbsp;&nbsp; public int getColorNumber();                         |
+| &nbsp;&nbsp; public int getNumberOfColors();                      |
 | &nbsp;&nbsp; public double[] getColors();                         |
 | &nbsp;&nbsp; public String getNam]();                             |
 | }                                                                 |

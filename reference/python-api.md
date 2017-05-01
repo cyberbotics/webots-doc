@@ -74,12 +74,12 @@ The following tables describe the Python classes and their methods.
 | from controller import CameraRecognitionObject  |
 | class CameraRecognitionObject :                 |
 | &nbsp;&nbsp; def get_id(self)                   |
-| &nbsp;&nbsp; def get_relative_position(self)    |
-| &nbsp;&nbsp; def get_relative_orientation(self) |
+| &nbsp;&nbsp; def get_position(self)             |
+| &nbsp;&nbsp; def get_orientation(self)          |
 | &nbsp;&nbsp; def get_size(self)                 |
 | &nbsp;&nbsp; def get_position_on_image(self)    |
 | &nbsp;&nbsp; def get_size_on_image(self)        |
-| &nbsp;&nbsp; def get_color_number(self)         |
+| &nbsp;&nbsp; def get_number_of_colors(self)     |
 | &nbsp;&nbsp; def get_colors(self)               |
 | &nbsp;&nbsp; def get_name(self)                 |
 

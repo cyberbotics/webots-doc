@@ -62,8 +62,8 @@ sensors, shape of the vehicle, etc.).
 - `boundingObject`: Physical geometry of the vehicle.
 - `physics`: `Physics` node of the vehicle defining the physical parameters of the
 vehicle.
-- `radarCrossSection`: Defines the `radarCrossSection` of the vehicle.
-- `recognitionColors`: Defines the `recognitionColors` of the vehicle.
+- `radarCrossSection`: Defines the `radarCrossSection` of the vehicle, if greater than 0, this vehicle is a potential target for any Radar device. It measures the vehicle ability to reflect radar signals in the direction of the radar receiver.
+- `recognitionColors`: Defines the `recognitionColors` of the vehicle. If not empty, this vehicle may be recognized by any Camera device with recognition capability.
 - `wheelX`: Slot to insert an `AutomobileWheel` (or any `AutomobileWheel`
 descendant PROTO nodes).
 - `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`,

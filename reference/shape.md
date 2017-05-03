@@ -30,7 +30,7 @@ applied.
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) shadows
 casted by this shape.
 
-- The `isPickable` field defines is the object is detected (TRUE) or not (FALSE) when clicking on the 3D scene.
+- The `isPickable` field defines if the object is detected (TRUE) or not (FALSE) when clicking on the 3D scene.
 
 > **Note**:
 Objects cast shadows only if the world contains at least one [Light](light.md)

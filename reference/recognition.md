@@ -21,7 +21,7 @@ When a [Camera](camera.md) device has a [Recognition](#recognition) node in its 
 
 - The `maxObjects` field defines the maximum number of objects detected by the camera. `-1` means no limit. If more objects are visible by the camera, only the `maxObjects` biggest ones (considering pixel size) are recognized.
 
-- The `occlusion` field defines if occlusions between the camera and the object should be checked. Disabling the occlusions detection can save computational time and therefore speed up the simulation, but it can lead to recognized object that are not really visible to the camera.
+- The `occlusion` field defines if occlusions between the camera and the object should be checked. Disabling the occlusion can be useful to allow the camera to see through thin or transparent objects that may hide the center of the object we are interested in, but it can lead to recognized object that are not really visible to the camera. Additionally, it will slightly speed up the simulation.
 
 - The `frameColor` field defines the color used to frame the objects recognized by the camera in its overlay.
 

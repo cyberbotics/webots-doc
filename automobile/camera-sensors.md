@@ -9,7 +9,7 @@ projection.
 
 ### Smart camera
 
-If a `Recognition` node is added to the camera, the camera can return not only the image but also all the objects detected in the camera image and their size and position. It is therefore very easy to simulate smart cameras such as Mobileye one.
+If a `Recognition` node is added to the camera, the camera can return not only the image but also all objects detected in the camera image and their size and position. It is therefore very easy to simulate smart cameras such as the Mobileye.
 
 %figure "Smart camera output"
 

@@ -20,8 +20,8 @@ Dragging the mouse while pressing a mouse button moves the camera of the 3D
 window.
 
 - *Camera rotation*: In the 3D window, click on an object with the left mouse
-button and drag the mouse to rotate the viewpoint around it. If you clicked on
-the background, the camera rotates around its own position.
+button and drag the mouse to rotate the viewpoint around it. If you click on
+the background, the camera will rotate around its own position.
 - *Camera translation*: In the 3D window, press the right button and drag the
 mouse to translate the camera.
 - *Zooming / Camera rotation*: In the 3D window, press both left and right mouse

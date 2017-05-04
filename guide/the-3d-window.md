@@ -19,9 +19,9 @@ the Control key (Ctrl) together with the Alt key.
 Dragging the mouse while pressing a mouse button moves the camera of the 3D
 window.
 
-- *Camera rotation*: In the 3D window, press the left button and drag the mouse to
-select an object and rotate the viewpoint around it. If no object is selected,
-the camera rotates around the origin of the world coordinate system.
+- *Camera rotation*: In the 3D window, click on an object with the left mouse
+button and drag the mouse to rotate the viewpoint around it. If you click on
+the background, the camera will rotate around its own position.
 - *Camera translation*: In the 3D window, press the right button and drag the
 mouse to translate the camera.
 - *Zooming / Camera rotation*: In the 3D window, press both left and right mouse

@@ -457,6 +457,34 @@ The following tables describe the Python classes and their methods.
 
 %end
 
+%api "python_mouse"
+
+|                                                                            |
+| -------------------------------------------------------------------------- |
+| from controller import Mouse                                               |
+| class [Mouse](mouse.md) :                                                  |
+| &nbsp;&nbsp; def [enable](mouse.md#wb_mouse_enable)(self, sampling_period) |
+| &nbsp;&nbsp; def [disable](mouse.md#wb_mouse_enable)(self)                 |
+| &nbsp;&nbsp; def [getSamplingPeriod](mouse.md#wb_mouse_enable)(self)       |
+| &nbsp;&nbsp; def [getState](mouse.md#wb_mouse_enable)(self)                |
+
+%end
+
+%api "python_mouse_state"
+
+|                                           |
+| ------------------------------------------|
+| from controller import MouseState         |
+| class [MouseState](#python_mouse_state) : |
+| &nbsp;&nbsp; self.left                    |
+| &nbsp;&nbsp; self.middle                  |
+| &nbsp;&nbsp; self.right                   |
+| &nbsp;&nbsp; self.x                       |
+| &nbsp;&nbsp; self.y                       |
+| &nbsp;&nbsp; self.z                       |
+
+%end
+
 %api "python_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -608,12 +636,13 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                                   |
 | &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                           |
-| &nbsp;&nbsp; def [getJoystick](robot.md#wb_robot_get_device)(self)                                     |
-| &nbsp;&nbsp; def [getKeyboard](robot.md#wb_robot_get_device)(self)                                     |
+| &nbsp;&nbsp; def getJoystick(self)                                                                     |
+| &nbsp;&nbsp; def getKeyboard(self)                                                                     |
 | &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getLidar](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                            |
 | &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                                  |
+| &nbsp;&nbsp; def getMouse(self)                                                                        |
 | &nbsp;&nbsp; def [getPen](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getPositionSensor](robot.md#wb_robot_get_device)(self, name)                         |
 | &nbsp;&nbsp; def [getRadar](robot.md#wb_robot_get_device)(self, name)                                  |

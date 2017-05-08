@@ -15,7 +15,7 @@ In order to use this interface a few rules need to be observed. First, a
 `sumo_supervisor` controller. Then a folder called `worldName_net` should be
 present close to the world file. This folder should contain the usual files
 defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the
-configuration files (.netccfg and .sumocfg).
+configuration files (.netccfg and .sumocfg). The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded in priority, if those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you can't know which one is going to be used).
 
 Then the interface will automatically start SUMO and run it in synchronization
 with Webots time. Each time a new vehicle enters the SUMO simulation, it will be

@@ -17,6 +17,7 @@ Camera {
   SFNode   lens         NULL
   SFNode   focus        NULL
   SFNode   zoom         NULL
+  SFNode   recognition  NULL
   SFNode   lensFlare    NULL
   SFString compositor   ""
 }
@@ -105,6 +106,12 @@ no focus is available on the camera device.
 - The `zoom` field may contain a [Zoom](zoom.md) node to provide the camera device
 with a controllable zoom system. If this field is set to NULL, then no zoom is
 available on the camera device.
+
+- The `recognition` field may contain a [Recognition](recognition.md) node to provide the camera device with object recognition capabilities.
+The camera can only recognize [Solid](solid.md) nodes whose `recognitionColors` is not empty.
+The object size is estimated using the `boundingObject` of the [Solid](solid.md) and the ones of all its children.
+Note that the returned size is an estimation and can be in some cases overestimated.
+In case the [Solid](solid.md) and its children don't have any bounding object, the dimension is estimated using the shape, this estimation is usually widely overestimated.
 
 - The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens
 flare effect to the camera image (if any light casts flares).
@@ -261,7 +268,7 @@ Note that the first measurement will be available only after the first sampling 
 
 `wb_camera_disable()` turns the camera off, saving computation time.
 
-The `wb_camera_get_sampling_period()` function returns the period given into the
+The `wb_camera_get_sampling_period()` function returns the period given to the
 `wb_camera_enable()` function, or 0 if the device is disabled.
 
 ---
@@ -520,3 +527,64 @@ images, the `quality` parameter is ignored.
 The return value of the `wb_camera_save_image()` is 0 in case of success. It is
 -1 in case of failure (unable to open the specified file or unrecognized image
 file extension).
+
+---
+
+**Name**
+
+**wb\_camera\_has\_recognition**,**wb\_camera\_recognition\_enable**,**wb\_camera\_recognition\_disable**,**wb\_camera\_recognition\_get\_sampling\_period**,**wb\_camera\_recognition\_get\_number\_of\_objects**,**wb\_camera\_recognition\_get\_objects**  - *camera recognition functions*
+
+{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/camera.h>
+
+bool wb_camera_has_recognition(WbDeviceTag tag);
+void wb_camera_recognition_enable(WbDeviceTag tag, int sampling_period);
+void wb_camera_recognition_disable(WbDeviceTag tag);
+int wb_camera_recognition_get_sampling_period(WbDeviceTag tag);
+int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
+const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
+```
+
+**Description**
+
+If a [Recognition](recognition.md) node is present in the `recognition` field, the camera can recognize objects in its image.
+
+The `wb_camera_has_recognition` function can be used to determine whether a [Recognition](recognition.md) node is present or not.
+
+The `wb_camera_recognition_enable()` function allows the user to enable recognition. It is not necessary to enable the camera for recognition to work.
+
+The `wb_camera_recognition_disable()` function turns off the recognition, saving computation time.
+
+The `wb_camera_recognition_get_sampling_period()` function returns the period given to the `wb_camera_recognition_enable()` function, or 0 if the recognition is disabled.
+
+The `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get_objects` functions allow the user to get the current number of recognized objects and the objects array.
+
+---
+
+**Camera recognition object**
+
+A camera recognition object is defined by the following structure:
+
+```c
+typedef struct {
+ int      id;
+ double   position[3];
+ double   orientation[4];
+ double   size[2];
+ int      position_on_image[2];
+ int      size_on_image[2];
+ int      number_of_colors;
+ double  *colors;
+ char    *model;
+} WbCameraRecognitionObject;
+```
+
+The `id` represents the node id corresponding to the object, and it is possible to use this id directly in the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) supervisor function. The `position` and `orientation` are expressed relatively to the camera (the relative position is the one of the center of the object which can differ from its origin) and the units are meter and radian. The `size` represents the X and Y sizes in meters relatively to the camera (it is of course impossible to know the depth of the object). The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image, the units are pixels. The `number_of_colors` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each color is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `number_of_colors`. Finally `model` returns the `model` field of the [Solid](solid.md) node.
+
+> **Note** [C++]:
+In C++ the name of the structure is `CameraRecognitionObject`.
+
+> **Note** [Java/Python]:
+In Java and Python, the structure is replaced by a class called `CameraRecognitionObject`.

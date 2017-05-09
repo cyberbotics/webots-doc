@@ -30,37 +30,43 @@ The following tables describe the C++ classes and their methods.
 
 %api "cpp_camera"
 
-|                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Camera.hpp`>`                                                                              |
-| class [Camera](camera.md) : public [Device](#cpp_device) {                                                    |
-| &nbsp;&nbsp; virtual void [enable](camera.md#wb_camera_enable)(int sampling_period);                          |
-| &nbsp;&nbsp; virtual void [disable](camera.md#wb_camera_enable)();                                            |
-| &nbsp;&nbsp; int [getSamplingPeriod](camera.md#wb_camera_enable)();                                           |
-| &nbsp;&nbsp; double [getFov](camera.md#wb_camera_get_fov)() const;                                            |
-| &nbsp;&nbsp; double [getMinFov](camera.md#wb_camera_get_fov)() const;                                         |
-| &nbsp;&nbsp; double [getMaxFov](camera.md#wb_camera_get_fov)() const;                                         |
-| &nbsp;&nbsp; virtual void [setFov](camera.md#wb_camera_get_fov)(double fov);                                  |
-| &nbsp;&nbsp; double [getFocalLength](camera.md#wb_camera_get_focal_length)() const;                           |
-| &nbsp;&nbsp; double [getFocalDistance](camera.md#wb_camera_get_focal_length)() const;                         |
-| &nbsp;&nbsp; double [getMaxFocalDistance](camera.md#wb_camera_get_focal_length)() const;                      |
-| &nbsp;&nbsp; double [getMinFocalDistance](camera.md#wb_camera_get_focal_length)() const;                      |
-| &nbsp;&nbsp; virtual void [setFocalDistance](camera.md#wb_camera_get_focal_length)(double focalDistance);     |
-| &nbsp;&nbsp; int [getWidth](camera.md#wb_camera_get_width)() const;                                           |
-| &nbsp;&nbsp; int [getHeight](camera.md#wb_camera_get_width)() const;                                          |
-| &nbsp;&nbsp; double [getNear](camera.md#wb_camera_get_near)() const;                                          |
-| &nbsp;&nbsp; const unsigned char *[getImage](camera.md#wb_camera_get_image)() const;                          |
-| &nbsp;&nbsp; static unsigned char [imageGetRed](camera.md#wb_camera_get_image)(const unsigned char *image,    |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp; static unsigned char [imageGetGreen](camera.md#wb_camera_get_image)(const unsigned char *image,  |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp; static unsigned char [imageGetBlue](camera.md#wb_camera_get_image)(const unsigned char *image,   |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp; static unsigned char [imageGetGray](camera.md#wb_camera_get_image)(const unsigned char *image,   |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                            |
-| &nbsp;&nbsp; int [saveImage](camera.md#wb_camera_save_image)(const std::string &filename, int quality) const; |
-| };                                                                                                            |
+|                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Camera.hpp`>`                                                                                   |
+| class [Camera](camera.md) : public [Device](#cpp_device) {                                                         |
+| &nbsp;&nbsp; virtual void [enable](camera.md#wb_camera_enable)(int sampling_period);                               |
+| &nbsp;&nbsp; virtual void [disable](camera.md#wb_camera_enable)();                                                 |
+| &nbsp;&nbsp; int [getSamplingPeriod](camera.md#wb_camera_enable)();                                                |
+| &nbsp;&nbsp; double [getFov](camera.md#wb_camera_get_fov)() const;                                                 |
+| &nbsp;&nbsp; double [getMinFov](camera.md#wb_camera_get_fov)() const;                                              |
+| &nbsp;&nbsp; double [getMaxFov](camera.md#wb_camera_get_fov)() const;                                              |
+| &nbsp;&nbsp; virtual void [setFov](camera.md#wb_camera_get_fov)(double fov);                                       |
+| &nbsp;&nbsp; double [getFocalLength](camera.md#wb_camera_get_focal_length)() const;                                |
+| &nbsp;&nbsp; double [getFocalDistance](camera.md#wb_camera_get_focal_length)() const;                              |
+| &nbsp;&nbsp; double [getMaxFocalDistance](camera.md#wb_camera_get_focal_length)() const;                           |
+| &nbsp;&nbsp; double [getMinFocalDistance](camera.md#wb_camera_get_focal_length)() const;                           |
+| &nbsp;&nbsp; virtual void [setFocalDistance](camera.md#wb_camera_get_focal_length)(double focalDistance);          |
+| &nbsp;&nbsp; int [getWidth](camera.md#wb_camera_get_width)() const;                                                |
+| &nbsp;&nbsp; int [getHeight](camera.md#wb_camera_get_width)() const;                                               |
+| &nbsp;&nbsp; double [getNear](camera.md#wb_camera_get_near)() const;                                               |
+| &nbsp;&nbsp; const unsigned char *[getImage](camera.md#wb_camera_get_image)() const;                               |
+| &nbsp;&nbsp; static unsigned char [imageGetRed](camera.md#wb_camera_get_image)(const unsigned char *image,         |
+| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                 |
+| &nbsp;&nbsp; static unsigned char [imageGetGreen](camera.md#wb_camera_get_image)(const unsigned char *image,       |
+| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                 |
+| &nbsp;&nbsp; static unsigned char [imageGetBlue](camera.md#wb_camera_get_image)(const unsigned char *image,        |
+| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                 |
+| &nbsp;&nbsp; static unsigned char [imageGetGray](camera.md#wb_camera_get_image)(const unsigned char *image,        |
+| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                 |
+| &nbsp;&nbsp;&nbsp;&nbsp; int width, int x, int y);                                                                 |
+| &nbsp;&nbsp; int [saveImage](camera.md#wb_camera_save_image)(const std::string &filename, int quality) const;      |
+| &nbsp;&nbsp; bool [hasRecognition](camera.md#wb_camera_has_recognition)() const;                                   |
+| &nbsp;&nbsp; void [recognitionEnable](camera.md#wb_camera_has_recognition)(int samplingPeriod);                    |
+| &nbsp;&nbsp; void [recognitionDisable](camera.md#wb_camera_has_recognition)();                                     |
+| &nbsp;&nbsp; int [getRecognitionSamplingPeriod](camera.md#wb_camera_has_recognition)() const;                      |
+| &nbsp;&nbsp; int [getRecognitionNumberOfObjects](camera.md#wb_camera_has_recognition)() const;                     |
+| &nbsp;&nbsp; const CameraRecognitionObject *[getRecognitionObjects](camera.md#wb_camera_has_recognition)() const;  |
+| };                                                                                                                 |
 
 %end
 
@@ -468,7 +474,7 @@ The following tables describe the C++ classes and their methods.
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Node.hpp`>`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | class Node {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| &nbsp;&nbsp; enum { NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM }; |
+| &nbsp;&nbsp; enum { NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM }; |
 | &nbsp;&nbsp; virtual void [remove](supervisor.md#wb_supervisor_node_remove)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | &nbsp;&nbsp; int [getId](supervisor.md#wb_supervisor_node_get_from_def)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | &nbsp;&nbsp; int [getType](supervisor.md#wb_supervisor_node_get_type)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |

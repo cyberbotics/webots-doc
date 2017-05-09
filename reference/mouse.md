@@ -24,8 +24,8 @@ typedef struct {
 } WbMouseState;
 ```
 
-The `left`, `middle` and `right` variables are matching respectively with the left, middle and right buttons of the computer mouse.
-A `true` state is matching with the pushed button, while a `false` state is matching with the released button.
+The `left`, `middle` and `right` fields are matching respectively with the left, middle and right buttons of the computer mouse.
+A `true` state means the button is pressed while a `false` state means the button is released.
 
 The `x`, `y` and `z` variables are indicating the 3D coordinate where the mouse is pointing in the 3D window.
 These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
@@ -49,10 +49,9 @@ WbMouseState wb_mouse_get_state();
 
 **Description**
 
-The state of the computer mouse can be read from a controller program while the simulation is running by using the functions above. 
+The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions. 
 Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()` function.
 The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
 Note that the first state will be available only after the first sampling period elapsed.
 After that, the state can be read by calling the `wb_mouse_get_state()` function (for more details, see [WbMouseState](#wbmousestate)).
-The measurement of the mouse state is performed each time the `sampling_period` expires during a simulation step.
 The `wb_mouse_disable()` function should be used to stop the mouse readings.

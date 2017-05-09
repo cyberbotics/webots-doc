@@ -1,6 +1,6 @@
 ## Mouse
 
-The [Mouse](#mouse) is a set of functions available by default for each [Robot](robot.md) node and it is used to read the computer mouse input.
+The [Mouse](#mouse) API provides a set of functions available by default for each [Robot](robot.md) node and it is used to read the computer mouse input.
 It doesn't have any corresponding Node.
 
 > **Note** [C++, Python, Java]:
@@ -54,6 +54,5 @@ Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()`
 The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
 Note that the first state will be available only after the first sampling period elapsed.
 After that, the state can be read by calling the `wb_mouse_get_state()` function (for more details, see [WbMouseState](#wbmousestate)).
-The measurement of the mouse state is done once at each simulation step.
+The measurement of the mouse state is performed each time the `sampling_period` expires during a simulation step.
 The `wb_mouse_disable()` function should be used to stop the mouse readings.
-

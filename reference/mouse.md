@@ -27,7 +27,7 @@ typedef struct {
 The `left`, `middle` and `right` fields are matching respectively with the left, middle and right buttons of the computer mouse.
 A `true` state means the button is pressed while a `false` state means the button is released.
 
-The `x`, `y` and `z` variables are indicating the 3D coordinate where the mouse is pointing in the 3D window.
+The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.
 These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
 
 ### Mouse Functions

@@ -1,13 +1,11 @@
 ## Mouse
 
-The [Mouse](#mouse) is a set of functions available by default for each [Robot](robot.md) node to read the computer mouse input.
-It doesn't have a corresponding Node and therefore do not require any
-`WbDeviceTag`.
+The [Mouse](#mouse) is a set of functions available by default for each [Robot](robot.md) node and it is used to read the computer mouse input.
+It doesn't have any corresponding Node.
 
 > **Note** [C++, Python, Java]:
-In C++, Python and Java the mouse functions are in a dedicated class called
-`Mouse`. In order to get the `Mouse` instance, you should call the
-`getMouse()` function of the `Robot` class.
+In C++, Python and Java, the mouse functions are in a dedicated class called `Mouse`.
+In order to get the `Mouse` instance, you should call the `Robot.getMouse()` function.
 
 #### WbMouseState
 
@@ -15,7 +13,7 @@ The state of a mouse is defined by the following structure:
 
 ```c
 typedef struct {
-  // mouse button states
+  // mouse buttons state
   bool left;
   bool middle;
   bool right;
@@ -26,15 +24,11 @@ typedef struct {
 } WbMouseState;
 ```
 
-The `left`, `middle` and `right` variables are matching with respectively the
-left, middle and right buttons of the computer mouse.
-A `true` state is matching with the pushed button, while a `false` state is
-matching with the released button.
+The `left`, `middle` and `right` variables are matching respectively with the left, middle and right buttons of the computer mouse.
+A `true` state is matching with the pushed button, while a `false` state is matching with the released button.
 
-The `x`, `y` and `z` variables are indicating the 3D coordinate where the mouse
-is pointing in the 3D window.
-These values may be `NaN` if not applicable, for example is the mouse is pointing
-to the scene background.
+The `x`, `y` and `z` variables are indicating the 3D coordinate where the mouse is pointing in the 3D window.
+These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
 
 ### Mouse Functions
 
@@ -55,15 +49,11 @@ WbMouseState wb_mouse_get_state();
 
 **Description**
 
-The state of the computer mouse can be read from a controller program
-while the simulation is running using the functions above. 
-Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()`
-function.
-The `sampling_period` parameter is expressed in milliseconds, and defines how
-frequently readings are updated.
-Note that the first state will be available only after the first sampling period
-elapsed.
-After that, the state can be read by calling the `wb_mouse_get_state()`
-function (for more details, see [WbMouseState](#wbmousestate)).
+The state of the computer mouse can be read from a controller program while the simulation is running by using the functions above. 
+Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()` function.
+The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
+Note that the first state will be available only after the first sampling period elapsed.
+After that, the state can be read by calling the `wb_mouse_get_state()` function (for more details, see [WbMouseState](#wbmousestate)).
 The measurement of the mouse state is done once at each simulation step.
 The `wb_mouse_disable()` function should be used to stop the mouse readings.
+

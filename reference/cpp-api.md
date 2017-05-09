@@ -471,7 +471,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [enable](mouse.md#wb_mouse_enable)(int sampling_period); |
 | &nbsp;&nbsp; virtual void [disable](mouse.md#wb_mouse_enable)();                   |
 | &nbsp;&nbsp; int [getSamplingPeriod](mouse.md#wb_mouse_enable)();                  |
-| &nbsp;&nbsp; int [getKey](mouse.md#wb_mouse_enable)() const;                       |
+| &nbsp;&nbsp; [WbMouseState](mouse.md#wbmousestate) [getState](mouse.md#wb_mouse_enable)() const;                     |
 | };                                                                                 |
 
 %end

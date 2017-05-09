@@ -481,15 +481,15 @@ The following tables describe the Java classes and their methods.
 
 %api "java_mouse"
 
-|                                                                                   |
-| --------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Mouse;                                   |
-| public class [mouse](mouse.md) {                                                  |
-| &nbsp;&nbsp; public void [enable](mouse.md#wb_mouse_enable)(int sampling_period); |
-| &nbsp;&nbsp; public void [disable](mouse.md#wb_mouse_enable)();                   |
-| &nbsp;&nbsp; public int [getSamplingPeriod](mouse.md#wb_mouse_enable)();          |
-| &nbsp;&nbsp; public [MouseState](#java_mouse_state) [getState](mouse.md#wb_mouse_enable)();                     |
-| }                                                                                 |
+|                                                                                             |
+| ------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Mouse;                                             |
+| public class [mouse](mouse.md) {                                                            |
+| &nbsp;&nbsp; public void [enable](mouse.md#wb_mouse_enable)(int sampling_period);           |
+| &nbsp;&nbsp; public void [disable](mouse.md#wb_mouse_enable)();                             |
+| &nbsp;&nbsp; public int [getSamplingPeriod](mouse.md#wb_mouse_enable)();                    |
+| &nbsp;&nbsp; public [MouseState](#java_mouse_state) [getState](mouse.md#wb_mouse_enable)(); |
+| }                                                                                           |
 
 %end
 

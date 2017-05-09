@@ -102,11 +102,20 @@ Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to gene
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 
+### Optimization
+
+Using procedural PROTOs can greatly increase the lodaing time of your worlds because every procedural PROTO need to be evaluated.
+
+To reduce the number of evaluation you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`). If the `static` tag is present, then in a world who uses the same procedural PROTO several times, the PROTO is evaluated only once if all the fields value are the same.
+> **Note**:
+This tag should not be used if the result of the PROTOs depend of something else than the fields value (e.g. use a random value).
+
 ### Example
 
 ```
 
-#VRML_SIM V8.1.0 utf8
+#VRML_SIM V8.6 utf8
+# tags: static
 
 PROTO SimpleStairs [
   field SFVec3f    translation 0 0 0

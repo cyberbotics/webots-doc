@@ -104,11 +104,12 @@ In addition to these fonts, it is possible to add other TrueType fonts file in y
 
 ### Optimization
 
-Using procedural PROTOs can greatly increase the lodaing time of your worlds because every procedural PROTO need to be evaluated.
+Using procedural PROTO files can greatly increase the loading time of your worlds because every procedural PROTO need to be evaluated.
 
-To reduce the number of evaluation you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`). If the `static` tag is present, then in a world who uses the same procedural PROTO several times, the PROTO is evaluated only once if all the fields value are the same.
+To reduce the number of evaluations you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`).
+Then, if the same procedural PROTO is used several times in a world and all the fields value are the same, the PROTO is evaluated only once.
 > **Note**:
-This tag should not be used if the result of the PROTOs depend of something else than the fields value (e.g. use a random value).
+This tag should not be used if the result of the PROTO depends on something else than the fields value (e.g. use a random value).
 
 ### Example
 

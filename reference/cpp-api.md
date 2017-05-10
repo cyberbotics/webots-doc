@@ -468,6 +468,20 @@ The following tables describe the C++ classes and their methods.
 
 %end
 
+%api "cpp_mouse"
+
+|                                                                                                  |
+| ------------------------------------------------------------------------------------------------ |
+| #include `<`webots/Mouse.hpp`>`                                                                  |
+| class [Mouse](mouse.md) {                                                                        |
+| &nbsp;&nbsp; virtual void [enable](mouse.md#wb_mouse_enable)(int sampling_period);               |
+| &nbsp;&nbsp; virtual void [disable](mouse.md#wb_mouse_enable)();                                 |
+| &nbsp;&nbsp; int [getSamplingPeriod](mouse.md#wb_mouse_enable)();                                |
+| &nbsp;&nbsp; [WbMouseState](mouse.md#wbmousestate) [getState](mouse.md#wb_mouse_enable)() const; |
+| };                                                                                               |
+
+%end
+
 %api "cpp_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -611,12 +625,13 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [GPS](#cpp_gps) *[getGPS](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Gyro](#cpp_gyro) *[getGyro](robot.md#wb_robot_get_device)(const std::string &name);                                          |
 | &nbsp;&nbsp; [InertialUnit](#cpp_inertial_unit) *[getInertialUnit](robot.md#wb_robot_get_device)(const std::string &name);                 |
-| &nbsp;&nbsp; [Joystick](#cpp_joystick) *[getJoystick](robot.md#wb_robot_get_device)();                                                     |
-| &nbsp;&nbsp; [Keyboard](#cpp_keyboard) *[getKeyboard](robot.md#wb_robot_get_device)();                                                     |
+| &nbsp;&nbsp; [Joystick](#cpp_joystick) *getJoystick();                                                                                     |
+| &nbsp;&nbsp; [Keyboard](#cpp_keyboard) *getKeyboard();                                                                                     |
 | &nbsp;&nbsp; [LED](#cpp_led) *[getLED](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [Lidar](#cpp_lidar) *[getLidar](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [LightSensor](#cpp_light_sensor) *[getLightSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](robot.md#wb_robot_get_device)(const std::string &name);                                       |
+| &nbsp;&nbsp; [Mouse](#cpp_mouse) *getMouse();                                                                                              |
 | &nbsp;&nbsp; [Pen](#cpp_pen) *[getPen](robot.md#wb_robot_get_device)(const std::string &name);                                             |
 | &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](robot.md#wb_robot_get_device)(const std::string &name);           |
 | &nbsp;&nbsp; [Radar](#cpp_radar) *[getRadar](robot.md#wb_robot_get_device)(const std::string &name);                                       |

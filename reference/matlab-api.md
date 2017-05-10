@@ -353,6 +353,17 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_mouse"
+
+| % [Mouse](mouse.md) :                                                   |
+| ----------------------------------------------------------------------- |
+| [wb\_mouse\_enable](mouse.md#wb_mouse_enable)(sampling_period)          |
+| [wb\_mouse\_disable](mouse.md#wb_mouse_enable)()                        |
+| period = [wb\_mouse\_get\_sampling\_period](mouse.md#wb_mouse_enable)() |
+| state = [wb_mouse_get_state](mouse.md#wb_mouse_enable)()                |
+
+%end
+
 %api "matlab_node"
 
 | Node:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |

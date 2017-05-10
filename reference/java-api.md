@@ -504,6 +504,36 @@ The following tables describe the Java classes and their methods.
 
 %end
 
+%api "java_mouse"
+
+|                                                                                             |
+| ------------------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Mouse;                                             |
+| public class [mouse](mouse.md) {                                                            |
+| &nbsp;&nbsp; public void [enable](mouse.md#wb_mouse_enable)(int sampling_period);           |
+| &nbsp;&nbsp; public void [disable](mouse.md#wb_mouse_enable)();                             |
+| &nbsp;&nbsp; public int [getSamplingPeriod](mouse.md#wb_mouse_enable)();                    |
+| &nbsp;&nbsp; public [MouseState](#java_mouse_state) [getState](mouse.md#wb_mouse_enable)(); |
+| }                                                                                           |
+
+%end
+
+%api "java_mouse_state"
+
+|                                                                  |
+| ---------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.MouseState;             |
+| public class [MouseState](mouse.md#wbmousestate) {               |
+| &nbsp;&nbsp; public double [getLeft](mouse.md#wbmousestate)();   |
+| &nbsp;&nbsp; public double [getMiddle](mouse.md#wbmousestate)(); |
+| &nbsp;&nbsp; public double [getRight](mouse.md#wbmousestate)();  |
+| &nbsp;&nbsp; public double [getX](mouse.md#wbmousestate)();      |
+| &nbsp;&nbsp; public double [getY](mouse.md#wbmousestate)();      |
+| &nbsp;&nbsp; public double [getZ](mouse.md#wbmousestate)();      |
+| }                                                                |
+
+%end
+
 %api "java_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -659,12 +689,13 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [GPS](#java_gps) [getGPS](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Gyro](#java_gyro) [getGyro](robot.md#wb_robot_get_device)(String name);                                           |
 | &nbsp;&nbsp; public [InertialUnit](#java_inertial_unit) [getInertialUnit](robot.md#wb_robot_get_device)(String name);                  |
-| &nbsp;&nbsp; public [Joystick](#java_joystick) [getJoystick](robot.md#wb_robot_get_device)();                                          |
-| &nbsp;&nbsp; public [Keyboard](#java_keyboard) [getKeyboard](robot.md#wb_robot_get_device)();                                          |
+| &nbsp;&nbsp; public [Joystick](#java_joystick) getJoystick();                                                                          |
+| &nbsp;&nbsp; public [Keyboard](#java_keyboard) getKeyboard();                                                                          |
 | &nbsp;&nbsp; public [LED](#java_led) [getLED](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [Lidar](#java_lidar) [getLidar](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [LightSensor](#java_light_sensor) [getLightSensor](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](robot.md#wb_robot_get_device)(String name);                                        |
+| &nbsp;&nbsp; public [Motor](#java_mouse) getMouse();                                                                                   |
 | &nbsp;&nbsp; public [Pen](#java_pen) [getPen](robot.md#wb_robot_get_device)(String name);                                              |
 | &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](robot.md#wb_robot_get_device)(String name);            |
 | &nbsp;&nbsp; public [Radar](#java_radar) [getRadar](robot.md#wb_robot_get_device)(String name);                                        |

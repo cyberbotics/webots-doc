@@ -50,6 +50,16 @@ randomly selected in the list.
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the
 bounding object is made of a simple cylinder).
 
+### Tree
+
+The `Tree` PROTO is similar to the `SimpleTree` PROTO. It is less configurable but way faster to load.
+
+#### Tree Field Summary
+
+- `scale`: The first and last components of the scale define the radius of the tree and the middle one defines it's height.
+- `texture`: Defines the texture to use for the tree.
+- `boundingObject`: Can be used to add an optionnal bounding object to the tree.
+
 ### Forest
 
 The `Forest` PROTO use only one `IndexedFaceSet` to represent efficiently a

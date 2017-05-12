@@ -3,8 +3,8 @@
 ```
 Capsule {
   SFBool  bottom      TRUE
-  SFFloat height      2    # (-inf,inf)
-  SFFloat radius      1    # (-inf,inf)
+  SFFloat height      2    # (0,inf)
+  SFFloat radius      1    # (0,inf)
   SFBool  side        TRUE
   SFBool  top         TRUE
   SFInt32 subdivision 12   # (2,inf)
@@ -26,11 +26,6 @@ A capsule has three optional parts: the `side`, the `top` and the `bottom`. Each
 part has an associated boolean field that indicates whether the part should be
 drawn or not. For collision detection, all parts are considered to be present,
 regardless of the value of these boolean fields.
-
-If both `height` and `radius` are positive, the outside faces of the capsule are
-displayed while if they are negative, the inside faces are displayed. The values
-of `height` and `radius` must both be greater than zero when the capsule is used
-for collision detection.
 
 The `subdivision` field defines the number of triangles that must be used to
 represent the capsule and so its resolution. More precisely, it corresponds to

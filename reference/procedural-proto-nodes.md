@@ -158,6 +158,7 @@ PROTO SimpleStairs [
    im:stringFT(textColor, "Arial", 20, 0, 5, 60, fields.text.value)
    -- save the image in a png file
    local name = debug.getinfo(1,'S').source  -- get the name of the current file
+   name = name .. math.random(0, 100000)  -- add a random number to reduce name clashes
    local i = 0  -- make sure the file does not already exist
    local file = io.open(name .. i .. ".png", "r")
    while file do

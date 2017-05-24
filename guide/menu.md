@@ -18,6 +18,7 @@
     - [The Scene Tree](the-scene-tree.md)
     - [Preferences](preferences.md)
     - [Citing Webots](citing-webots.md)
+    - [Computer peripherals](computer-peripherals.md)
 - [Sample Webots Applications](sample-webots-applications.md)
     - [Samples](samples.md)
     - [Webots Devices](webots-devices.md)

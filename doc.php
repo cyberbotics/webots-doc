@@ -1,6 +1,12 @@
 <?php
+  $request_uri = htmlspecialchars($_SERVER['REQUEST_URI']);
+  if (substr($request_uri, 0, 5) != "/doc/") { # redirect aliases
+    $request_uri = "/doc/".substr($request_uri, 1)."/index"; // we remove the "/" prefix
+    header("Location: $request_uri");
+    exit();
+  }
   # the URL follow this format https://www.cyberbotics.com/doc/book/page?v=version#anchor where version and anchor are optional
-  $uri = substr(htmlspecialchars($_SERVER['REQUEST_URI']), 5); // we remove the "/doc/" prefix
+  $uri = substr($request_uri, 5); // we remove the "/doc/" prefix
   $i = strpos($uri, '/');
   unset($repository);
   if ($i !== FALSE) {

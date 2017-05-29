@@ -22,8 +22,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; public double [getCurrentSpeed](driver-library.md#wbu_driver_get_current_speed)();                     |
 | &nbsp;&nbsp; public void [setThrottle](driver-library.md#wbu_driver_set_throttle)(double throttle);                 |
 | &nbsp;&nbsp; public double [getThrottle](driver-library.md#wbu_driver_set_throttle)();                              |
-| &nbsp;&nbsp; public void [setBrake](driver-library.md#wbu_driver_set_brake)(double brake);                          |
-| &nbsp;&nbsp; public double [getBrake](driver-library.md#wbu_driver_set_brake)();                                    |
+| &nbsp;&nbsp; public void [setBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(double intensity);   |
+| &nbsp;&nbsp; public double [getBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)();                 |
 | &nbsp;&nbsp; public void [setIndicator](driver-library.md#wbu_driver_set_indicator)(int state);                     |
 | &nbsp;&nbsp; public void [setHazardFlashers](driver-library.md#wbu_driver_set_indicator)(bool state);               |
 | &nbsp;&nbsp; public int [getIndicator](driver-library.md#wbu_driver_set_indicator)();                               |

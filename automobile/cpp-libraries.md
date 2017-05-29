@@ -13,7 +13,7 @@ The `Driver` class provides the following methods:
 | ------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Driver.hpp`>`                                                                             |
 | class [Driver](driver-library.md) {                                                                          |
-| &nbsp;&nbsp; enum {INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT};                                        |
+| &nbsp;&nbsp; enum {INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT};                                       |
 | &nbsp;&nbsp; enum {SPEED, TORQUE };                                                                          |
 | &nbsp;&nbsp; virtual int [step](driver-library.md#wbu_driver_step)();                                        |
 | &nbsp;&nbsp; void [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(double steeringAngle); |
@@ -23,8 +23,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; double [getCurrentSpeed](driver-library.md#wbu_driver_get_current_speed)();                     |
 | &nbsp;&nbsp; void [setThrottle](driver-library.md#wbu_driver_set_throttle)(double throttle);                 |
 | &nbsp;&nbsp; double [getThrottle](driver-library.md#wbu_driver_set_throttle)();                              |
-| &nbsp;&nbsp; void [setBrake](driver-library.md#wbu_driver_set_brake)(double brake);                          |
-| &nbsp;&nbsp; double [getBrake](driver-library.md#wbu_driver_set_brake)();                                    |
+| &nbsp;&nbsp; void [setBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(double intensity);   |
+| &nbsp;&nbsp; double [getBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)();                 |
 | &nbsp;&nbsp; void [setIndicator](driver-library.md#wbu_driver_set_indicator)(int state);                     |
 | &nbsp;&nbsp; void [setHazardFlashers](driver-library.md#wbu_driver_set_indicator)(bool state);               |
 | &nbsp;&nbsp; int [getIndicator](driver-library.md#wbu_driver_set_indicator)();                               |

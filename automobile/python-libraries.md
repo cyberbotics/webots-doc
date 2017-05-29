@@ -22,8 +22,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; def [getCurrentSpeed](driver-library.md#wbu_driver_get_current_speed)(self)                            |
 | &nbsp;&nbsp; def [setThrottle](driver-library.md#wbu_driver_set_throttle)(self, throttle)                           |
 | &nbsp;&nbsp; def [getThrottle](driver-library.md#wbu_driver_set_throttle)(self)                                     |
-| &nbsp;&nbsp; def [setBrake](driver-library.md#wbu_driver_set_brake)(self, brake)                                    |
-| &nbsp;&nbsp; def [getBrake](driver-library.md#wbu_driver_set_brake)(self)                                           |
+| &nbsp;&nbsp; def [setBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(self, intensity)             |
+| &nbsp;&nbsp; def [getBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(self)                        |
 | &nbsp;&nbsp; def [setIndicator](driver-library.md#wbu_driver_set_indicator)(self, state)                            |
 | &nbsp;&nbsp; def [setHazardFlashers](driver-library.md#wbu_driver_set_indicator)(self, state)                       |
 | &nbsp;&nbsp; def [getIndicator](driver-library.md#wbu_driver_set_indicator)(self)                                   |

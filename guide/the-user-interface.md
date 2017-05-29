@@ -143,10 +143,10 @@ original viewpoint.
 The `Fullscreen` item enables and disables displaying the 3D window on the
 entire screen.
 
-The `Virtual Reality Headset` submenu allows you to use a virtual reality headset such as HTC Vive or Oculus Rift to view the simulation.
+The `Virtual Reality Headset` submenu allows you to use a virtual reality headset such as the HTC Vive or Oculus Rift to view the simulation.
 The `Enable` item allows you to switch the simulation view to the headset.
 The `Track headset position` and `Track headset orientation` items specifies if the headset position and orientation should be tracked and applied to the viewpoint.
-The `View left eye`, `View right eye` and `Empty view` radio buttons allows you to choose what should be displayed in the simulation view, you can either see the left eye image, right eye image or nothing.
+The `View left eye`, `View right eye` and `Empty view` radio buttons allow you to choose what should be displayed in the simulation view. You can either see the left eye image, right eye image or nothing.
 The headset installation procedure is described [here](computer-peripherals.md).
 
 > **Note**:

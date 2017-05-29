@@ -12,7 +12,7 @@ On Mac OS X, only the first 12 buttons and first 2 axes of the joystick are take
 ### Virtual reality headset
 On Windows you can use a virtual reality headset to view the simulation.
 We use SteamVR to interface the headset with Webots, you will therefore need to install [Steam](http://store.steampowered.com/about/) and then [SteamVR](steam://run/250820).
-SteamVR is currently still unstable on Linux and Mac OS X, this is why we decided to support virtual reality headset only on Windows for now, but this might change in a near future.
+SteamVR is currently still unstable on Linux and Mac OS X, this is why we decided to support virtual reality headset only on Windows for now, but this might change in the near future.
 We have tested Webots with the [HTC Vive](https://www.vive.com/) and [Oculus Rift](https://www.oculus.com/), but it might work with other virtual reality headsets too.
 
 #### HTC Vive

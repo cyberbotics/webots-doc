@@ -9,7 +9,7 @@ Speaker {
 
 ### Description
 
-The [Speaker](#speaker) node represents a loudspeaker device that can be embbeded onboard a robot or standing in the environment. It can be used to play sounds and perform text-to-speech from the controller API.
+The [Speaker](#speaker) node represents a loudspeaker device that can be embedded onboard a robot or standing in the environment. It can be used to play sounds and perform text-to-speech from the controller API.
 
 ### Speaker Functions
 
@@ -81,9 +81,9 @@ The `wb_speaker_set_engine` function allows the user to set the text-to-speech e
   - `"pico"` for the SVOX Pico text-to-speech engine (default value).
   - `"microsoft"` for the Microsoft SAPI5 text-to-speech engine (only available on Windows).
 
-The function returns `false` if the engine cannot not be set and `true` otherwise.
+The function returns `false` if the engine cannot be set and `true` otherwise.
 
-The `wb_speaker_get_engine` function allows the user to get the engine of the text-to-speech for a speaker device.
+The `wb_speaker_get_engine` function allows the user to get the text-to-speech engine for a speaker device.
 
 The `wb_speaker_set_language` function allows the user to set the language of the current text-to-speech engine. For the `"pico"` engine, the `language` parameter should be set to one of the following values:
 
@@ -101,7 +101,7 @@ The function will return `true` on success and `false` if it failed to set the r
 
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech for a speaker device.
 
-The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speficied `speaker`. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard. Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines. Additional tags and parameters may be supported by the `microsoft` engine. Please refer to the {[Microsoft Speech API  (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx)} documentation about it.
+The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the specified `speaker`. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard. Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines. Additional tags and parameters may be supported by the `microsoft` engine. Please refer to the [Microsoft Speech API  (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx) documentation about it.
 
 **SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 

@@ -78,8 +78,8 @@ void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
 
 The `wb_speaker_set_engine` function allows the user to set the text-to-speech engine that is going to be used by a speaker. The `engine` parameter should be one of the following values:
 
-  - `"pico"` for the SVOX Pico text-to-speech engine (default value)
-  - `"microsoft"` for the Microsoft SAPI5 text-to-speech engine (only available on Windows)
+  - `"pico"` for the SVOX Pico text-to-speech engine (default value).
+  - `"microsoft"` for the Microsoft SAPI5 text-to-speech engine (only available on Windows).
 
 The function returns `false` is the engine cannot not be set and `true` otherwise.
 
@@ -87,32 +87,28 @@ The `wb_speaker_get_engine` function allows the user to get the engine of the te
 
 The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech engine. For the `"pico"` engine, the `language` parameter should be set to one of the following values:
 
-  - `"en-US"` for American English (default value)
-  - `"en-UK"` for British English
-  - `"de-DE"` for German
-  - `"es-ES"` for Spanish
-  - `"fr-FR"` for French
-  - `"it-IT"` for Italian
+  - `"en-US"` for American English (default value).
+  - `"en-UK"` for British English.
+  - `"de-DE"` for German.
+  - `"es-ES"` for Spanish.
+  - `"fr-FR"` for French.
+  - `"it-IT"` for Italian.
 
 For the `"microsoft"` engine, it should follow the same format and correspond to an existing language, installed on the Windows computer.
-The `language` argument should follow the `"ll-CC"` format where `ll` (lowercase) corresponds to an ISO 639-1 language code and `CC` (uppercase) corresponds to an ISO 3166 country code.
+The `language` argument should follow the `"ll-CC"` format where `ll` (lowercase) corresponds to an ISO 639-1 language code and `CC` (uppercase) corresponds to an ISO 3166 country code, like for example `"en-US"` or `"fr-FR"`.
 
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech for a speaker device.
 
-The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speaker. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags and depend on the text-to-speech engine used.
+The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speficied `speaker`. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard. Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines. Additional tags and parameters may be supported by the `microsoft` engine. Please refer to the Microsoft Windows SAPI5 documentation about it.
 
-XML tags can be added in the `text` passed as an argument to `wb_speaker_speak()` that comply with
-the SSML (Speech Synthesis Markup Language) standard supported by Pico and Microsoft SAPI5 engine
-(see below).
-
-**SSML Text-to-speech XML tags supported by the PICO and Microsoft engines**
+**SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 
 - `prosody` has three supported parameters: `pitch`, `rate` and `volume`.
-  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch. For example `-2st`. The `st` indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
-  - `rate` indicates the speaking rate of the contained text. This is a relative value, expressed as a number that acts as a multiplier of the default. For example, a value of `1` results in no change in the rate. A value of `.5` results in a halving of the rate. A value of `3` results in a tripling of the rate.
-  - `volume` indicates the volume level of the speaking voice. This value should be expressed as a number in the range of 0.0 to 100.0, from quietest to loudest. For example, `75`. The default is `100`.
+  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch. For example `-2st`. The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
+  - `rate` indicates the speaking rate (speed) of the contained text. This is a relative value, expressed as a number that acts as a multiplier of the default. For example, a value of `1` results in no change in the rate. A value of `.5` results in a halving of the rate. A value of `3` results in a tripling of the rate.
+  - `volume` indicates the volume level of the speaking voice. This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest. For example, `75`. The default is `100`.
 
-- `audio` has one supported parameter which is `src`, specifying a WAV file. This results in insertion of the specified sound file in the synthesized signal at the place specified in the input text.
+- `audio` has one supported parameter which is `src`, specifying a WAV file. This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
 
 Example:
 

@@ -704,7 +704,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; std::string [getEngine](speaker.md#wb_speaker_get_engine)();                                                                                                                |
 | &nbsp;&nbsp; std::string [getLanguage](speaker.md#wb_speaker_get_language)();                                                                                                            |
 | &nbsp;&nbsp; bool [setEngine](speaker.md#wb_speaker_set_engine)(const std::string &engine);                                                                                              |
-| &nbsp;&nbsp; void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                                        |
+| &nbsp;&nbsp; bool [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                                        |
 | &nbsp;&nbsp; void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                                   |
 | };                                                                                                                                                                                       |
 

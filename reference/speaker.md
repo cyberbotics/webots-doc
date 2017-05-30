@@ -68,7 +68,7 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 #include <webots/speaker.h>
 
 bool wb_speaker_set_engine(WbDeviceTag tag, const char *engine);
-void wb_speaker_set_language(WbDeviceTag tag, const char *language);
+bool wb_speaker_set_language(WbDeviceTag tag, const char *language);
 const char *wb_speaker_get_engine(WbDeviceTag tag);
 const char *wb_speaker_get_language(WbDeviceTag tag);
 void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
@@ -81,11 +81,11 @@ The `wb_speaker_set_engine` function allows the user to set the text-to-speech e
   - `"pico"` for the SVOX Pico text-to-speech engine (default value).
   - `"microsoft"` for the Microsoft SAPI5 text-to-speech engine (only available on Windows).
 
-The function returns `false` is the engine cannot not be set and `true` otherwise.
+The function returns `false` if the engine cannot not be set and `true` otherwise.
 
 The `wb_speaker_get_engine` function allows the user to get the engine of the text-to-speech for a speaker device.
 
-The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech engine. For the `"pico"` engine, the `language` parameter should be set to one of the following values:
+The `wb_speaker_set_language` function allows the user to set the language of the current text-to-speech engine. For the `"pico"` engine, the `language` parameter should be set to one of the following values:
 
   - `"en-US"` for American English (default value).
   - `"en-UK"` for British English.
@@ -97,9 +97,11 @@ The `wb_speaker_set_language` function allows the user to set the language of th
 For the `"microsoft"` engine, it should follow the same format and correspond to an existing language, installed on the Windows computer.
 The format is `"ll-CC"` where `ll` (lowercase) corresponds to an ISO 639-1 language code and `CC` (uppercase) corresponds to an ISO 3166 country code, like for example `"en-US"` or `"fr-FR"`.
 
+The function will return `true` on success and `false` if it failed to set the requested `language` for the current engine.
+
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech for a speaker device.
 
-The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speficied `speaker`. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard. Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines. Additional tags and parameters may be supported by the `microsoft` engine. Please refer to the Microsoft Windows SAPI5 documentation about it.
+The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speficied `speaker`. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard. Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines. Additional tags and parameters may be supported by the `microsoft` engine. Please refer to the {[Microsoft Speech API  (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx)} documentation about it.
 
 **SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 
@@ -114,5 +116,5 @@ Example:
 
 ```
 Hello! Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian. Using tags I can modulate my speech, like for example change <prosody pitch="140">the pitch of my voice</pitch>, <pitch level="80">and speak with a very low pitch</pitch>. <speed level="50">And I can change the speed</speed><speed level="150">at which I speak</speed>. I can also <volume level="20">adjust the volume of my voice</volume>. "
-Last but not least, I can imitate animals: <play file="sounds/cow.wav">Meuh</play>
+Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</play>
 ```

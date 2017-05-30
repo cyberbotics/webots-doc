@@ -513,7 +513,7 @@ The following tables describe the Matlab functions.
 | engine = [wb_speaker_get_engine](speaker.md#wb_speaker_get_engine)(tag)                                     |
 | language = [wb_speaker_get_language](speaker.md#wb_speaker_get_language)(tag)                               |
 | success = [wb_speaker_set_engine](speaker.md#wb_speaker_set_engine)(tag, language)                          |
-| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
+| success = [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                      |
 | [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
 
 %end

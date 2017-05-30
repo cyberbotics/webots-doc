@@ -768,7 +768,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_get_engine)();                                                                                                   |
 | &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_get_language)();                                                                                                 |
 | &nbsp;&nbsp; public boolean [setEngine](speaker.md#wb_speaker_set_engine)(const std::string &engine);                                                                                |
-| &nbsp;&nbsp; public void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                             |
+| &nbsp;&nbsp; public boolean [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                          |
 | &nbsp;&nbsp; public void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                        |
 | };                                                                                                                                                                                   |
 

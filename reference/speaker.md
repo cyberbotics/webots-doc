@@ -95,7 +95,7 @@ The `wb_speaker_set_language` function allows the user to set the language of th
   - `"it-IT"` for Italian.
 
 For the `"microsoft"` engine, it should follow the same format and correspond to an existing language, installed on the Windows computer.
-The `language` argument should follow the `"ll-CC"` format where `ll` (lowercase) corresponds to an ISO 639-1 language code and `CC` (uppercase) corresponds to an ISO 3166 country code, like for example `"en-US"` or `"fr-FR"`.
+The format is `"ll-CC"` where `ll` (lowercase) corresponds to an ISO 639-1 language code and `CC` (uppercase) corresponds to an ISO 3166 country code, like for example `"en-US"` or `"fr-FR"`.
 
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech for a speaker device.
 

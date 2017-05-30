@@ -59,7 +59,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public static int [pixelGetBlue](camera.md#wb_camera_get_image)(int pixel);                             |
 | &nbsp;&nbsp; public static int [pixelGetGray](camera.md#wb_camera_get_image)(int pixel);                             |
 | &nbsp;&nbsp; public int [saveImage](camera.md#wb_camera_save_image)(String filename, int quality);                   |
-| &nbsp;&nbsp; public bool [hasRecognition](camera.md#wb_camera_has_recognition)();                                    |
+| &nbsp;&nbsp; public boolean [hasRecognition](camera.md#wb_camera_has_recognition)();                                 |
 | &nbsp;&nbsp; public void [recognitionEnable](camera.md#wb_camera_has_recognition)(int samplingPeriod);               |
 | &nbsp;&nbsp; public void [recognitionDisable](camera.md#wb_camera_has_recognition)();                                |
 | &nbsp;&nbsp; public int [getRecognitionSamplingPeriod](camera.md#wb_camera_has_recognition)();                       |
@@ -237,7 +237,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getType](supervisor.md#wb_supervisor_field_get_type)();                                                      |
 | &nbsp;&nbsp; public String [getTypeName](supervisor.md#wb_supervisor_field_get_type)();                                               |
 | &nbsp;&nbsp; public int [getCount](supervisor.md#wb_supervisor_field_get_type)();                                                     |
-| &nbsp;&nbsp; public bool [getSFBool](supervisor.md#wb_supervisor_field_get_sf_bool)();                                                |
+| &nbsp;&nbsp; public boolean [getSFBool](supervisor.md#wb_supervisor_field_get_sf_bool)();                                             |
 | &nbsp;&nbsp; public int [getSFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)();                                                |
 | &nbsp;&nbsp; public double [getSFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)();                                             |
 | &nbsp;&nbsp; public double[] [getSFVec2f](supervisor.md#wb_supervisor_field_get_sf_bool)();                                           |
@@ -246,7 +246,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getSFColor](supervisor.md#wb_supervisor_field_get_sf_bool)();                                           |
 | &nbsp;&nbsp; public String [getSFString](supervisor.md#wb_supervisor_field_get_sf_bool)();                                            |
 | &nbsp;&nbsp; public [Node](#java_node) [getSFNode](supervisor.md#wb_supervisor_field_get_sf_bool)();                                  |
-| &nbsp;&nbsp; public bool [getMFBool](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                       |
+| &nbsp;&nbsp; public boolean [getMFBool](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                    |
 | &nbsp;&nbsp; public int [getMFInt32](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                       |
 | &nbsp;&nbsp; public double [getMFFloat](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                    |
 | &nbsp;&nbsp; public double[] [getMFVec2f](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                  |
@@ -255,7 +255,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getMFRotation](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                               |
 | &nbsp;&nbsp; public String [getMFString](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                                   |
 | &nbsp;&nbsp; public [Node](#java_node) [getMFNode](supervisor.md#wb_supervisor_field_get_sf_bool)(int index);                         |
-| &nbsp;&nbsp; public void [setSFBool](supervisor.md#wb_supervisor_field_set_sf_bool)(bool value);                                      |
+| &nbsp;&nbsp; public void [setSFBool](supervisor.md#wb_supervisor_field_set_sf_bool)(boolean value);                                   |
 | &nbsp;&nbsp; public void [setSFInt32](supervisor.md#wb_supervisor_field_set_sf_bool)(int value);                                      |
 | &nbsp;&nbsp; public void [setSFFloat](supervisor.md#wb_supervisor_field_set_sf_bool)(double value);                                   |
 | &nbsp;&nbsp; public void [setSFVec2f](supervisor.md#wb_supervisor_field_set_sf_bool)(double values[2]);                               |
@@ -263,7 +263,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setSFRotation](supervisor.md#wb_supervisor_field_set_sf_bool)(double values[4]);                            |
 | &nbsp;&nbsp; public void [setSFColor](supervisor.md#wb_supervisor_field_set_sf_bool)(double values[3]);                               |
 | &nbsp;&nbsp; public void [setSFString](supervisor.md#wb_supervisor_field_set_sf_bool)(String value);                                  |
-| &nbsp;&nbsp; public void [setMFBool](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, bool value);                           |
+| &nbsp;&nbsp; public void [setMFBool](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, boolean value);                        |
 | &nbsp;&nbsp; public void [setMFInt32](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, int value);                           |
 | &nbsp;&nbsp; public void [setMFFloat](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, double value);                        |
 | &nbsp;&nbsp; public void [setMFVec2f](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, double values[2]);                    |
@@ -343,7 +343,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [enable](joystick.md#wb_joystick_enable)(int sampling_period);                            |
 | &nbsp;&nbsp; public void [disable](joystick.md#wb_joystick_enable)();                                              |
 | &nbsp;&nbsp; public int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                     |
-| &nbsp;&nbsp; public bool [isConnected](joystick.md#wb_joystick_is_connected)();                                    |
+| &nbsp;&nbsp; public boolean [isConnected](joystick.md#wb_joystick_is_connected)();                                 |
 | &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                           |
 | &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);                      |
 | &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                          |
@@ -447,22 +447,22 @@ The following tables describe the Java classes and their methods.
 
 %api "java_motion"
 
-|                                                                                 |
-| ------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Motion;                                |
-| public class [Motion](motion.md) {                                              |
-| &nbsp;&nbsp; public [Motion](motion.md#wbu_motion_new)(String fileName);        |
-| &nbsp;&nbsp; protected void [finalize](motion.md#wbu_motion_new)();             |
-| &nbsp;&nbsp; public bool [isValid](motion.md#wbu_motion_new)();                 |
-| &nbsp;&nbsp; public void [play](motion.md#wbu_motion_play)();                   |
-| &nbsp;&nbsp; public void [stop](motion.md#wbu_motion_play)();                   |
-| &nbsp;&nbsp; public void [setLoop](motion.md#wbu_motion_play)(bool loop);       |
-| &nbsp;&nbsp; public void [setReverse](motion.md#wbu_motion_play)(bool reverse); |
-| &nbsp;&nbsp; public bool [isOver](motion.md#wbu_motion_is_over)();              |
-| &nbsp;&nbsp; public int [getDuration](motion.md#wbu_motion_is_over)();          |
-| &nbsp;&nbsp; public int [getTime](motion.md#wbu_motion_is_over)();              |
-| &nbsp;&nbsp; public void [setTime](motion.md#wbu_motion_is_over)(int time);     |
-| }                                                                               |
+|                                                                                    |
+| ---------------------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.Motion;                                   |
+| public class [Motion](motion.md) {                                                 |
+| &nbsp;&nbsp; public [Motion](motion.md#wbu_motion_new)(String fileName);           |
+| &nbsp;&nbsp; protected void [finalize](motion.md#wbu_motion_new)();                |
+| &nbsp;&nbsp; public boolean [isValid](motion.md#wbu_motion_new)();                 |
+| &nbsp;&nbsp; public void [play](motion.md#wbu_motion_play)();                      |
+| &nbsp;&nbsp; public void [stop](motion.md#wbu_motion_play)();                      |
+| &nbsp;&nbsp; public void [setLoop](motion.md#wbu_motion_play)(boolean loop);       |
+| &nbsp;&nbsp; public void [setReverse](motion.md#wbu_motion_play)(boolean reverse); |
+| &nbsp;&nbsp; public boolean [isOver](motion.md#wbu_motion_is_over)();              |
+| &nbsp;&nbsp; public int [getDuration](motion.md#wbu_motion_is_over)();             |
+| &nbsp;&nbsp; public int [getTime](motion.md#wbu_motion_is_over)();                 |
+| &nbsp;&nbsp; public void [setTime](motion.md#wbu_motion_is_over)(int time);        |
+| }                                                                                  |
 
 %end
 
@@ -554,12 +554,12 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double[] [getCenterOfMass](supervisor.md#wb_supervisor_node_get_center_of_mass)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | &nbsp;&nbsp; public double[] [getContactPoint](supervisor.md#wb_supervisor_node_get_contact_point)(int index);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | &nbsp;&nbsp; public int [getNumberOfContactPoints](supervisor.md#wb_supervisor_node_get_number_of_contact_points)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| &nbsp;&nbsp; public bool [getStaticBalance](supervisor.md#wb_supervisor_node_get_static_balance)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| &nbsp;&nbsp; public boolean [getStaticBalance](supervisor.md#wb_supervisor_node_get_static_balance)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | &nbsp;&nbsp; public double[] [getVelocity](supervisor.md#wb_supervisor_node_get_velocity)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | &nbsp;&nbsp; public void [setVelocity](supervisor.md#wb_supervisor_node_get_velocity)(double velocity[6]);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | &nbsp;&nbsp; public void [resetPhysics](supervisor.md#wb_supervisor_node_reset_physics)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | &nbsp;&nbsp; public void [restartController](supervisor.md#wb_supervisor_node_restart_controller)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| &nbsp;&nbsp; public void [setVisibility](supervisor.md#wb_supervisor_node_set_visibility)(Node from, bool visible);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| &nbsp;&nbsp; public void [setVisibility](supervisor.md#wb_supervisor_node_set_visibility)(Node from, boolean visible);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 %end
@@ -570,7 +570,7 @@ The following tables describe the Java classes and their methods.
 | ----------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Pen;                                                   |
 | public class [Pen](pen.md) extends [Device](#java_device) {                                     |
-| &nbsp;&nbsp; public void [write](pen.md#wb_pen_write)(bool write);                              |
+| &nbsp;&nbsp; public void [write](pen.md#wb_pen_write)(boolean write);                           |
 | &nbsp;&nbsp; public void [setInkColor](pen.md#wb_pen_set_ink_color)(int color, double density); |
 | }                                                                                               |
 
@@ -719,7 +719,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public String [getControllerName](robot.md#wb_robot_get_controller_name)();                                               |
 | &nbsp;&nbsp; public String [getControllerArguments](robot.md#wb_robot_get_controller_name)();                                          |
 | &nbsp;&nbsp; public String [getProjectPath](robot.md#wb_robot_get_project_path)();                                                     |
-| &nbsp;&nbsp; public bool [getSynchronization](robot.md#wb_robot_get_synchronization)();                                                |
+| &nbsp;&nbsp; public boolean [getSynchronization](robot.md#wb_robot_get_synchronization)();                                             |
 | &nbsp;&nbsp; public double [getTime](robot.md#wb_robot_get_time)();                                                                    |
 | &nbsp;&nbsp; public String [getWorldPath](robot.md#wb_robot_get_world_path)();                                                         |
 | &nbsp;&nbsp; public int [getType](robot.md#wb_robot_get_type)();                                                                       |
@@ -758,17 +758,19 @@ The following tables describe the Java classes and their methods.
 
 %api "java_speaker"
 
-|                                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Speaker;                                                                                                                                 |
-| public class [Speaker](speaker.md) extends [Device](#java_device) {                                                                                                               |
-| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                      |
-| &nbsp;&nbsp; public static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker left, Speaker right, String sound, double volume, double pitch, double balance, bool loop); |
-| &nbsp;&nbsp; public void [stop](speaker.md#wb_speaker_stop)(const std::string &sound);                                                                                            |
-| &nbsp;&nbsp; public void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                          |
-| &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_set_language)();                                                                                              |
-| &nbsp;&nbsp; public void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                     |
-| };                                                                                                                                                                                |
+|                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| import com.cyberbotics.webots.controller.Speaker;                                                                                                                                    |
+| public class [Speaker](speaker.md) extends [Device](#java_device) {                                                                                                                  |
+| class [Speaker](speaker.md) : public [Device](#cpp_device) {                                                                                                                         |
+| &nbsp;&nbsp; public static void [playSound](speaker.md#wb_speaker_play_sound)(Speaker left, Speaker right, String sound, double volume, double pitch, double balance, boolean loop); |
+| &nbsp;&nbsp; public void [stop](speaker.md#wb_speaker_stop)(const std::string &sound);                                                                                               |
+| &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_get_engine)();                                                                                                   |
+| &nbsp;&nbsp; public std::string [getLanguage](speaker.md#wb_speaker_get_language)();                                                                                                 |
+| &nbsp;&nbsp; public boolean [setEngine](speaker.md#wb_speaker_set_engine)(const std::string &engine);                                                                                |
+| &nbsp;&nbsp; public void [setLanguage](speaker.md#wb_speaker_set_language)(const std::string &language);                                                                             |
+| &nbsp;&nbsp; public void [speak](speaker.md#wb_speaker_set_language)(const std::string &text, double volume);                                                                        |
+| };                                                                                                                                                                                   |
 
 %end
 
@@ -801,10 +803,10 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [movieStartRecording](supervisor.md#wb_supervisor_movie_start_recording)(String file, int width, int height, int codec, int quality, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int acceleration, boolean caption);                                                                                                  |
 | &nbsp;&nbsp; public void [movieStopRecording](supervisor.md#wb_supervisor_movie_start_recording)();                                                           |
-| &nbsp;&nbsp; public bool [movieIsReady](supervisor.md#wb_supervisor_movie_start_recording)();                                                                 |
-| &nbsp;&nbsp; public bool [movieFailed](supervisor.md#wb_supervisor_movie_start_recording)();                                                                  |
-| &nbsp;&nbsp; public bool [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(String file);                                       |
-| &nbsp;&nbsp; public bool [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)();                                                   |
+| &nbsp;&nbsp; public boolean [movieIsReady](supervisor.md#wb_supervisor_movie_start_recording)();                                                              |
+| &nbsp;&nbsp; public boolean [movieFailed](supervisor.md#wb_supervisor_movie_start_recording)();                                                               |
+| &nbsp;&nbsp; public boolean [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(String file);                                    |
+| &nbsp;&nbsp; public boolean [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)();                                                |
 | }                                                                                                                                                             |
 
 %end

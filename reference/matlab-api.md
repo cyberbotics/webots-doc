@@ -510,8 +510,10 @@ The following tables describe the Matlab functions.
 | ----------------------------------------------------------------------------------------------------------- |
 | [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
 | [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
+| engine = [wb_speaker_get_engine](speaker.md#wb_speaker_get_engine)(tag)                                     |
+| language = [wb_speaker_get_language](speaker.md#wb_speaker_get_language)(tag)                               |
+| success = [wb_speaker_set_engine](speaker.md#wb_speaker_set_engine)(tag, language)                          |
 | [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
-| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
 | [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
 
 %end

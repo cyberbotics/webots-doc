@@ -60,21 +60,32 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 
 **Name**
 
-**wb\_speaker\_set\_language**, **wb\_speaker\_get\_language**, **wb\_speaker\_speak** - *perform text-to-speech*
+**wb\_speaker\_set\_engine**, **wb\_speaker\_set\_language**, **wb\_speaker\_get\_engine**, **wb\_speaker\_get\_language**, **wb\_speaker\_speak** - *perform text-to-speech*
 
 {[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/speaker.h>
 
+bool wb_speaker_set_engine(WbDeviceTag tag, const char *engine);
 void wb_speaker_set_language(WbDeviceTag tag, const char *language);
-const char * wb_speaker_get_language(WbDeviceTag tag);
+const char *wb_speaker_get_engine(WbDeviceTag tag);
+const char *wb_speaker_get_language(WbDeviceTag tag);
 void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
 ```
 
 **Description**
 
-The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech engine. The `language` parameter should be set to one of the following values:
+The `wb_speaker_set_engine` function allows the user to set the text-to-speech engine that is going to be used by a speaker. The `engine` parameter should be one of the following values:
+
+  - `"pico"` for the SVOX Pico text-to-speech engine (default value)
+  - `"microsoft"` for the Microsoft SAPI5 text-to-speech engine (only available on Windows)
+
+The function returns `false` is the engine cannot not be set and `true` otherwise.
+
+The `wb_speaker_get_engine` function allows the user to get the engine of the text-to-speech for a speaker device.
+
+The `wb_speaker_set_language` function allows the user to set the language of the text-to-speech engine. For the `"pico"` engine, the `language` parameter should be set to one of the following values:
 
   - `"en-US"` for American English (default value)
   - `"en-UK"` for British English
@@ -83,83 +94,29 @@ The `wb_speaker_set_language` function allows the user to set the language of th
   - `"fr-FR"` for French
   - `"it-IT"` for Italian
 
-The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech.
+For the `"microsoft"` engine, it should follow the same format and correspond to an existing language, installed on the Windows computer.
+The `language` argument should follow the `"ll-CC"` format where `ll` (lowercase) corresponds to an ISO 639-1 language code and `CC` (uppercase) corresponds to an ISO 3166 country code.
 
-The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speaker. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are speficied with XML tags.
+The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech for a speaker device.
 
-**Text-to-speech XML tags**
+The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the speaker. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags and depend on the text-to-speech engine used.
 
-- `ignore`: A text portion marked by `<ignore> ... </ignore>` is fully ignored by the synthesis. Ignored sections may be nested. Example:
+XML tags can be added in the `text` passed as an argument to `wb_speaker_speak()` that comply with
+the SSML (Speech Synthesis Markup Language) standard supported by Pico and Microsoft SAPI5 engine
+(see below).
 
-    ```xml
-Hello <ignore> any text </ignore> Mister Smith.
-    ```
+**SSML Text-to-speech XML tags supported by the PICO and Microsoft engines**
 
-    This example is equivalent to sending "Hello Mister Smith." to the text-to-speech engine.
+- `prosody` has three supported parameters: `pitch`, `rate` and `volume`.
+  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch. For example `-2st`. The `st` indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
+  - `rate` indicates the speaking rate of the contained text. This is a relative value, expressed as a number that acts as a multiplier of the default. For example, a value of `1` results in no change in the rate. A value of `.5` results in a halving of the rate. A value of `3` results in a tripling of the rate.
+  - `volume` indicates the volume level of the speaking voice. This value should be expressed as a number in the range of 0.0 to 100.0, from quietest to loudest. For example, `75`. The default is `100`.
 
-- `p` of `paragraph`: Paragraph structures can be marked by `<p> ... </p>` or its extended form `<paragraph> ... </paragraph>`. In most cases, Webots automatically detects paragraph structures. The `<p>` tag can be used to enforce the setting of a paragraph structure. Example:
+- `audio` has one supported parameter which is `src`, specifying a WAV file. This results in insertion of the specified sound file in the synthesized signal at the place specified in the input text.
 
-    ```xml
- <p> This is a paragraph. </p>
-    ```
+Example:
 
-    In this example, the enclosed text is structured as a paragraph.
-
-- `s` of `sentence`: Sentence structures can be marked by `<s> ... </s>` or its extended form `<sentence>... </sentence>`. In most cases, Webots automatically detects sentence structures. The `<s>` tag can be used to enforce the setting of a sentence structure. Example:
-
-    ```xml
-<s> This is a sentence. </s>
-    ```
-
-    In this example, the enclosed text is structured as a sentence.
-
-- `pitch`: The markup tag `<pitch level="...">` changes the general pitch level of the specified text portion to the value given by the parameter level. The normal pitch level is 100, the allowed values lie between 50 (one octave lower) and 200 (one octave higher). The end tag `</pitch>` resets the pitch level to 100. Example:
-
-    ```xml
-Hello, <pitch level="140"> Miss Jones </pitch> arrived.
-    ```
-
-    In this example, the section "Miss Jones" will be produced at a pitch level of a factor of 1.4 higher than normal.
-
-- `speed`: The markup tag `<speed level="...">` changes the general speed level of the specified text portion to the value given by the parameter level. The normal speed level is 100, the allowed values lie between 20 (slowing down by a factor of 5) and 500 (speeding up by a factor of 5). The end tag `</speed>` resets the speed level to 100. Example:
-
-    ```xml
-Hello, <speed level="300"> Miss Jones </speed> arrived.
-    ```
-
-    In this example, the section "Miss Jones" will be produced by a factor of 3 faster than normal.
-
-- `volume`: The markup tag `<volume level="...">` changes the volume level of the specified text portion to the value given by the parameter level. The normal volume level is 100. Increasing the volume level (values > 100) may result in degraded signal quality due to saturation effects (clipping) and is not recommended. The allowed volume levels lie between 0 (i.e. no audible output) and 500 (increasing the volume by a factor of 5). The end tag `</volume>` resets the volume level to 100. Example:
-
-    ```xml
-Hello, Miss <volume level="50"> Jones </volume> arrived.
-    ```
-
-    In this example, the volume of the section "Jones" will be decreased by a factor of 2.
-
-- `play`: Using the empty tag `<play file="..."/>` or tag pair `<play file="..."> ... </play>` results in insertion of the specified sound file in the synthesized signal at the place specified in the input text. In the first variant, the sound file is played at the position where the combined tag is set, in the second variant the sound file is played as a substitute of the text between the start and the end tag, that is, the text between the start and the end tag is ignored. The sampling frequency of the input sound file must be identical to the sampling frequency of the synthesized signal. Examples:
-
-    ```xml
-Hello, Miss <play file="miller.wav"/>.
-Hello, Miss <play file="miller.wav"> Miller </play>.
-    ```
-
-    In this example, the "miller.wav" sound file is played instead of pronouncing the "Miller" word using text-to-speech.
-
-- `genfile`: Using the markup section `<genfile file="..."> ... </genfile>` an arbitrary text portion can be saved to a separate sound file. The markup tag `<genfile>` can be used especially for creating synthetic voice prompts. Examples:
-
-    ```xml
-<genfile file="intro.wav"> Hello, Mister </genfile>
-<genfile file="miller.wav"> Miller, </genfile>
-<genfile file="rem.wav"> welcome.</genfile>
-Hello, Mister <genfile file="smith.wav"> Smith, </genfile> welcome.
-    ```
-
-    In this example, three parts of the first sentence "Hello, Mister Miller, welcome." are saved in separate sound files of type wav, and the part "Smith," of the second sentence is also saved in a separate file. These generated sound files can, for instance, be used to generate a newly combined utterance using the markup tag `<play>`:
-
-    ```xml
-<play file="intro.wav"/> <play file="smith.wav"/>
-<play file="rem.wav"/>
-    ```
-
-    This input "text", which consists only of markup tags, plays the generated sound files as if the (new) sentence "Hello, Mister Smith, welcome." had been synthesized, but, of course, with much less processing time. It is essential to note that the sentence part "Smith," should be synthesized and saved to a sound file in the appropriate sentence environment in order for the newly combined utterance to have a continuous melody and rhythm.
+```
+Hello! Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian. Using tags I can modulate my speech, like for example change <prosody pitch="140">the pitch of my voice</pitch>, <pitch level="80">and speak with a very low pitch</pitch>. <speed level="50">And I can change the speed</speed><speed level="150">at which I speak</speed>. I can also <volume level="20">adjust the volume of my voice</volume>. "
+Last but not least, I can imitate animals: <play file="sounds/cow.wav">Meuh</play>
+```

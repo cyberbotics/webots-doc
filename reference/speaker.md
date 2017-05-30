@@ -115,6 +115,6 @@ The `wb_speaker_speak` function allows the user to execute text-to-speech on the
 Example:
 
 ```
-Hello! Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian. Using tags I can modulate my speech, like for example change <prosody pitch="140">the pitch of my voice</pitch>, <pitch level="80">and speak with a very low pitch</pitch>. <speed level="50">And I can change the speed</speed><speed level="150">at which I speak</speed>. I can also <volume level="20">adjust the volume of my voice</volume>. "
-Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</play>
+Hello! Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian.
+Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>. <prosody rate="0.5">And I can change the speed</prosody><prosody rate="1.5">at which I speak</prosody>. I can also <prosody volume="20">adjust the volume of my voice</prosody>. Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</audio>
 ```

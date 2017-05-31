@@ -10,3 +10,4 @@ This chapter gives an overview of Webots' windows and menus.
 - [The Scene Tree](the-scene-tree.md)
 - [Preferences](preferences.md)
 - [Citing Webots](citing-webots.md)
+- [Computer peripherals](computer-peripherals.md)

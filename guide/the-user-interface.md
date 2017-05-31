@@ -143,6 +143,16 @@ original viewpoint.
 The `Fullscreen` item enables and disables displaying the 3D window on the
 entire screen.
 
+The `Virtual Reality Headset` submenu allows you to use a virtual reality headset such as the HTC Vive or Oculus Rift to view the simulation.
+The `Enable` item allows you to switch the simulation view to the headset.
+The `Track headset position` and `Track headset orientation` items specifies if the headset position and orientation should be tracked and applied to the viewpoint.
+The `View left eye`, `View right eye` and `Empty view` radio buttons allow you to choose what should be displayed in the simulation view. You can either see the left eye image, right eye image or nothing.
+The headset installation procedure is described [here](computer-peripherals.md).
+
+> **Note**:
+This menu is currently present only on Windows.
+If you are on Windows and the menu is not enabled, it indicates that the drivers are not installed or that no headset is connected.
+
 The `Projection` radio button group allows you to choose between the
 `Perspective Projection` (default) and the `Orthographic Projection` mode for
 Webots simulation window. The *perspective* mode corresponds to a natural

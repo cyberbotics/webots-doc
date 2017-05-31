@@ -332,8 +332,10 @@ for more information about the value of `robot_unique_name`).
 | ----------------------------------------------------------------------- | ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | [/`<`device\_name`>`/play\_sound](speaker.md#wb_speaker_play_sound)     | service       | webots\_ros::speaker\_play\_sound   | string sound<br/>float64 volume<br/>float64 pitch<br/>float64 balance<br/>int8 loop<br/>---<br/>int8 success |
 | [/`<`device\_name`>`/stop](speaker.md#wb_speaker_stop)                  | service       | webots\_ros::speaker\_stop          | string sound<br/>---<br/>int8 success                                                                        |
+| [/`<`device\_name`>`/get\_engine](speaker.md#wb_speaker_get_engine)     | service       | webots\_ros::speaker\_get\_engine | uint8 ask<br/>---<br/>string engine<br/>                                                                   |
+| [/`<`device\_name`>`/get\_language](speaker.md#wb_speaker_get_language) | service       | webots\_ros::speaker\_get\_language | uint8 ask<br/>---<br/>string language<br/>                                                                   |
+| [/`<`device\_name`>`/set\_engine](speaker.md#wb_speaker_set_engine) | service       | webots\_ros::speaker\_set\_engine | string engine<br/>---<br/>int8 success                                                                     |
 | [/`<`device\_name`>`/set\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_set\_language | string language<br/>---<br/>int8 success                                                                     |
-| [/`<`device\_name`>`/get\_language](speaker.md#wb_speaker_set_language) | service       | webots\_ros::speaker\_get\_language | uint8 ask<br/>---<br/>string language<br/>                                                                   |
 | [/`<`device\_name`>`/speak](speaker.md#wb_speaker_set_language)         | service       | webots\_ros::speaker\speak          | string text<br/>float64 volume<br/>---<br/>int8 success<br/>                                                 |
 
 ### Supervisor

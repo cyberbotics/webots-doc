@@ -733,8 +733,10 @@ The following tables describe the Python classes and their methods.
 | class [Speaker](speaker.md) ([Device](#python_device)) :                                                         |
 | &nbsp;&nbsp; def [playSound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch balance, loop)  |
 | &nbsp;&nbsp; def [stop](speaker.md#wb_speaker_stop)(self, sound)                                                 |
+| &nbsp;&nbsp; def [getEngine](speaker.md#wb_speaker_get_engine)(self)                                             |
+| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_get_language)(self)                                         |
+| &nbsp;&nbsp; def [setEngine](speaker.md#wb_speaker_set_engine)(self, engine)                                     |
 | &nbsp;&nbsp; def [setLanguage](speaker.md#wb_speaker_set_language)(self, language)                               |
-| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_set_language)(self)                                         |
 | &nbsp;&nbsp; def [speak](speaker.md#wb_speaker_set_language)(self, text, volume)                                 |
 
 %end

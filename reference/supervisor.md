@@ -1099,7 +1099,7 @@ device cannot be get by using the `wb_robot_get_device()` function.
 
 **Name**
 
-**wb\_supervisor\_virtual\_reality\_headset\_is\_used**, **wb\_supervisor\_virtual\_reality\_headset\_get\_position**, **wb\_supervisor\_virtual\_reality\_headset\_get\_orientation** - *get a handler and more information on a field in a node*
+**wb\_supervisor\_virtual\_reality\_headset\_is\_used**, **wb\_supervisor\_virtual\_reality\_headset\_get\_position**, **wb\_supervisor\_virtual\_reality\_headset\_get\_orientation** - *check if a virtual reality headset is used and get its position and orientation*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 

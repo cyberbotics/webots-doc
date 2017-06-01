@@ -1113,7 +1113,7 @@ const double *wb_supervisor_virtual_reality_headset_get_orientation();
 
 **Description**
 
-The `wb_supervisor_virtual_reality_headset_is_used()` function returns true is a virtual reality headset is currently used to view the simulation.
+The `wb_supervisor_virtual_reality_headset_is_used()` function returns true if a virtual reality headset is currently used to view the simulation.
 for more information about how to use a virtual reality headset reefer too the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#view-menu).
 
 The `wb_supervisor_virtual_reality_headset_get_position()` and `wb_supervisor_virtual_reality_headset_get_orientation` functions return respectively the current position and orientation of the virtual reality headset as a vector of 3 doubles and a matrix containing 9 doubles that should be interpreted as a 3 x 3 orthogonal rotation matrix:
@@ -1122,5 +1122,5 @@ The `wb_supervisor_virtual_reality_headset_get_position()` and `wb_supervisor_vi
 [ R[3] R[4] R[5] ]
 [ R[6] R[7] R[8] ]
 ```
-If the position or the orientation of the virtual reality headset is not tracked, these fucntions will return respectively a null vector and an identity matrix.
+If the position or the orientation of the virtual reality headset is not tracked, these functions will return respectively a null vector and an identity matrix.
 If no virtual reality headset is currently used, these functions will return `NaN` (Not a Number) values.

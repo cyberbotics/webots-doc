@@ -1122,5 +1122,4 @@ The `wb_supervisor_virtual_reality_headset_get_position()` and `wb_supervisor_vi
 [ R[3] R[4] R[5] ]
 [ R[6] R[7] R[8] ]
 ```
-If the position or the orientation of the virtual reality headset is not tracked, these functions will return respectively a null vector and an identity matrix.
-If no virtual reality headset is currently used, these functions will return `NaN` (Not a Number) values.
+If the position or the orientation of the virtual reality headset is not tracked or no virtual reality headset is currently used, these functions will return `NaN` (Not a Number) values.

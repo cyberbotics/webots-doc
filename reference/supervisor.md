@@ -107,7 +107,7 @@ WbNodeRef node = wb_supervisor_node_get_from_def("ROBOT.JOINT.SOLID");
 means that we are searching for a node named "SOLID" inside a node named
 "JOINT", inside a node named "ROBOT".
 
-The `wb_supervisor_node_get_def()` retrieves the DEF name of the node passed 
+The `wb_supervisor_node_get_def()` retrieves the DEF name of the node passed
 as a parameter. If no DEF name is specified, this function returns the empty string.
 
 The `wb_supervisor_node_get_from_id()` function retrieves a handle
@@ -1094,3 +1094,32 @@ an MF\_NODE (like if the node was manually removed from the scene tree).
 Note that these functions are still limited in the actual Webots version. For
 example, a device imported into a Robot node doesn't reset the Robot, so the
 device cannot be get by using the `wb_robot_get_device()` function.
+
+---
+
+**Name**
+
+**wb\_supervisor\_virtual\_reality\_headset\_is\_used**, **wb\_supervisor\_virtual\_reality\_headset\_get\_position**, **wb\_supervisor\_virtual\_reality\_headset\_get\_orientation** - *check if a virtual reality headset is used and get its position and orientation*
+
+{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+bool          wb_supervisor_virtual_reality_headset_is_used();
+const double *wb_supervisor_virtual_reality_headset_get_position();
+const double *wb_supervisor_virtual_reality_headset_get_orientation();
+```
+
+**Description**
+
+The `wb_supervisor_virtual_reality_headset_is_used()` function returns true if a virtual reality headset is currently used to view the simulation.
+For more information about how to use a virtual reality headset refer to the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#view-menu).
+
+The `wb_supervisor_virtual_reality_headset_get_position()` and `wb_supervisor_virtual_reality_headset_get_orientation` functions return respectively the current position and orientation of the virtual reality headset as a vector of 3 doubles and a matrix containing 9 doubles that should be interpreted as a 3 x 3 orthogonal rotation matrix:
+```
+[ R[0] R[1] R[2] ]
+[ R[3] R[4] R[5] ]
+[ R[6] R[7] R[8] ]
+```
+If the position or the orientation of the virtual reality headset is not tracked or no virtual reality headset is currently used, these functions will return `NaN` (Not a Number) values.

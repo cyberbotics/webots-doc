@@ -807,6 +807,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public boolean [movieFailed](supervisor.md#wb_supervisor_movie_start_recording)();                                                               |
 | &nbsp;&nbsp; public boolean [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(String file);                                    |
 | &nbsp;&nbsp; public boolean [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)();                                                |
+| &nbsp;&nbsp; public boolean [virtualRealityHeadsetIsUsed](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)();                                     |
+| &nbsp;&nbsp; public double[] [virtualRealityHeadsetGetPosition](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)();                               |
+| &nbsp;&nbsp; public double[] [virtualRealityHeadsetGetOrientation](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)();                            |
 | }                                                                                                                                                             |
 
 %end

@@ -770,6 +770,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [movieFailed](supervisor.md#wb_supervisor_movie_start_recording)(self)                                                                     |
 | &nbsp;&nbsp; def [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(self, file)                                               |
 | &nbsp;&nbsp; def [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)(self)                                                      |
+| &nbsp;&nbsp; def [virtualRealityHeadsetIsUsed](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)(self)                                           |
+| &nbsp;&nbsp; def [virtualRealityHeadsetGetPosition](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)(self)                                      |
+| &nbsp;&nbsp; def [virtualRealityHeadsetGetOrientation](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)(self)                                   |
 
 %end
 

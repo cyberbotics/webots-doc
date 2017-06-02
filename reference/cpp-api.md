@@ -741,6 +741,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; bool [movieFailed](supervisor.md#wb_supervisor_movie_start_recording)() const;                                                                                |
 | &nbsp;&nbsp; virtual bool [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(const std::string &file);                                       |
 | &nbsp;&nbsp; virtual bool [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)();                                                               |
+| &nbsp;&nbsp; bool [virtualRealityHeadsetIsUsed](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)();                                                            |
+| &nbsp;&nbsp; const double *[virtualRealityHeadsetGetPosition](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)();                                              |
+| &nbsp;&nbsp; const double *[virtualRealityHeadsetGetOrientation](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)();                                           |
 | };                                                                                                                                                                         |
 
 %end

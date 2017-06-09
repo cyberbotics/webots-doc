@@ -21,8 +21,8 @@ contains the [forest files](nature.md#forest) of the forests present in the
 world.
 
 > **Note**:
-The importer script depends on the following python packages: `lxml`, `pyproj` and `scipy`.
-You might install them using pip: `pip install lxml pyproj scipy`
+The importer script depends on the following Python packages: `lxml`, `pyproj` and `scipy`.
+You can install them using pip: `pip install lxml pyproj scipy`
 
 You can use several arguments with this script:
 

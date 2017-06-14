@@ -18,8 +18,14 @@ purposes.
 Road {
   SFVec3f    translation               0 0 0
   SFRotation rotation                  0 1 0 0
+  SFString   name                      ""
+  SFString   id                        ""
+  SFString   startCrossroad            ""
+  SFString   endCrossroad              ""
   SFFloat    width                     7
   SFInt32    numberOfLanes             2
+  SFInt32    numberOfForwardLanes      1
+  SFFloat    speedLimit                -1.0
   MFBool     dashedLine                TRUE
   SFFloat    roadBorderHeight          0.15
   MFFloat    roadBorderWidth           [ 0.8 ]
@@ -40,7 +46,8 @@ Road {
   SFFloat    textureScale              2
   MFString   pavementTexture           "textures/pavement.jpg"
   MFString   bottomTexture             [ ]
-  SFString   turnLanes                 ""
+  SFString   turnLanesForward          ""
+  SFString   turnLanesBackward         ""
   SFBool     locked                    TRUE
   SFBool     roadBoundingObject        FALSE
   SFBool     rightBorderBoundingObject FALSE
@@ -52,8 +59,16 @@ Road {
 
 #### Road field Summary
 
+- `name`: Could contain the street name.
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `startCrossroad`: Could contain a reference to the Crossroad connected at the first Road waypoint.
+Setting correctly this field is required to use the SUMO exporter.
+- `endCrossroad`: Could contain a reference to the Crossroad connected at the last Road waypoint.
+Setting correctly this field is required to use the SUMO exporter.
 - `width`: Defines the total width of the road (excluding sidewalk).
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
+- `numberOfForwardLanes`: Defines number of forward lanes.
+- `speedLimit`: Could contain the speed limit in meter per seconds.
 - `dashedLine`: Defines for each line separating two lanes whether it should be
 continuous or dashed.
 - `roadBorderHeight`: Defines the height of the sidewalk.
@@ -89,7 +104,8 @@ value is lower than 0, the interpolation is disabled).
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
-- `turnLanes`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes" key (e.g. "through|left;through|none")
+- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none").
+- `turnLanesBackward`: Idem for the OSM "turn:lanes:backward" key.
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a
 bounding object.

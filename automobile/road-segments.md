@@ -268,6 +268,41 @@ only the specific ones will be explained.
 - `heigthStep`: Defines the step for the road to complete one lap.
 - `subdivision`: Defines the subdivision of the helicoid.
 
+### Crossroad
+
+The `Crossroad` PROTO represents a Crossroad.
+
+%figure "Crossroad intersection"
+
+![crossroad.png](images/crossroad.png)
+
+%end
+
+```
+Crossroad {
+  SFVec3f    translation             0 0 0
+  SFRotation rotation                0 1 0 0
+  SFString   id                      ""
+  MFVec3f    shape                   [ 0 0 0, 1 0 0, 0 0 1]
+  MFString   connectedRoadIDs        []
+  SFBool     crossroadBoundingObject FALSE
+  SFBool     bottom                  FALSE
+  SFBool     locked                  TRUE
+  SFBool     castShadows             FALSE
+  SFString   contactMaterial         "default"
+}
+```
+
+#### Crossroad Field Summary
+
+Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
+only the specific ones will be explained.
+
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `crossroadBoundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
+
 ### Roundabout
 
 The `Roundabout` PROTO represents a roundabout intersection.

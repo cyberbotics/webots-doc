@@ -33,6 +33,7 @@ from the `myMap.wbt` webots simulation world.
 cd $WEBOTS_HOME/projects/automobile/resources/SUMO_exporter
 mkdir myMap_net
 python exporter.py --input=myMap.wbt --output=myMap_net
+$WEBOTS_HOME/projects/automobile/resources/bin/netconvert --node-files=myMap_net/sumo.nod.xml --edge-files=myMap_net/sumo.edg.xml --output-file=myMap_net/sumo.net.xml
 ```
 
 

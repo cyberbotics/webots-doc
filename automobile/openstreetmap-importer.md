@@ -48,7 +48,7 @@ webots simulation world from the `myMap.osm` file:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --outputFile=myMap.wbt
+python importer.py --input=myMap.osm --output=myMap.wbt
 ```
 
 Some extra folders such as `forest` can be generated in the target directory depending

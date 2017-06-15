@@ -5,16 +5,16 @@
 
 html,
 body {
-  outline:0;
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family:Tahoma,Arial,sans-serif;
-  font-size:14px;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 14px;
 }
 @font-face {
-	font-family:"Raleway";
-	font-style:normal;
-	font-weight:100;
-	src:local("Raleway Thin"),local("Raleway-Thin"),url("Raleway-Thin.woff") format("woff")
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Raleway Thin"), local("Raleway-Thin"), url("Raleway-Thin.woff") format("woff")
 }

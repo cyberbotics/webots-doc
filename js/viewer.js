@@ -8,7 +8,8 @@ if (typeof String.prototype.endsWith !== "function")
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
 
-var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
+var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1 &&
+            location.href.indexOf('://robotbenchmark.net/webots_documentation') == -1 ;
 
 function setupUrlOnline(url) {
   setup.book = "guide";
@@ -68,7 +69,7 @@ function setupUrlLocal(url) {
 }
 
 function setupUrl(url) {
-    if (local)
+    if (local || setup.localUrlMode)
         setupUrlLocal(url);
     else
         setupUrlOnline(url);
@@ -118,7 +119,7 @@ function forgeUrl(page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ("#" + anchor) : "";
   var currentUrl = location.href;
   var newUrl = currentUrl;
-  if (!local) {
+  if (!local && !setup.localUrlMode) {
     newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
     if (setup.tag != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.tag;

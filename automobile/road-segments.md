@@ -60,11 +60,11 @@ Road {
 #### Road field Summary
 
 - `name`: Could contain the street name.
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
-- `startCrossroad`: Could contain a reference to the Crossroad connected at the first Road waypoint.
-Setting correctly this field is required to use the SUMO exporter.
-- `endCrossroad`: Could contain a reference to the Crossroad connected at the last Road waypoint.
-Setting correctly this field is required to use the SUMO exporter.
+- `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
+- `startCrossroad`: Could contain a reference to the [Crossroad](#crossroad) connected at the first Road waypoint.
+Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
+- `endCrossroad`: Could contain a reference to the [Crossroad](#crossroad) connected at the last Road waypoint.
+Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
 - `width`: Defines the total width of the road (excluding sidewalk).
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 - `numberOfForwardLanes`: Defines number of forward lanes.
@@ -104,7 +104,9 @@ value is lower than 0, the interpolation is disabled).
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
-- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none").
+- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same
+format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none").
+Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Key:turn.
 - `turnLanesBackward`: Idem for the OSM "turn:lanes:backward" key.
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a
@@ -298,9 +300,9 @@ Crossroad {
 Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
 only the specific ones will be explained.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
 - `crossroadBoundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
 
 ### Roundabout

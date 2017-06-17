@@ -1,8 +1,8 @@
 ## SUMO exporter
 
-In order to be able to simulate traffic on your simulation, it is required to
+In order to be able to simulate traffic in your simulation, it is required to
 have a SUMO network file (`sumo.net.xml`).
-The SUMO exporter can creates a SUMO network files from a Webots simulation.
+The SUMO exporter can create SUMO network files from a Webots simulation.
 
 
 ## Dependencies
@@ -25,7 +25,7 @@ correctly.
 ## How to use the exporter
 
 You should use the `exporter.py` python script to generate the `sumo.nod.xml`,
-the `sumo.edg.xml` and the `sumo.sumocfg` SUMO files.
+`sumo.edg.xml` and `sumo.sumocfg` SUMO files.
 These files can be used by SUMO `netconvert` to generate the `sumo.net.xml` file
 from the `myMap.wbt` webots simulation world.
 
@@ -33,7 +33,7 @@ from the `myMap.wbt` webots simulation world.
 cd $WEBOTS_HOME/projects/automobile/resources/SUMO_exporter
 mkdir myMap_net
 python exporter.py --input=myMap.wbt --output=myMap_net
-$WEBOTS_HOME/projects/automobile/resources/bin/netconvert --node-files=myMap_net/sumo.nod.xml --edge-files=myMap_net/sumo.edg.xml --output-file=myMap_net/sumo.net.xml
+$WEBOTS_HOME/projects/automobile/resources/sumo/bin/netconvert --node-files=myMap_net/sumo.nod.xml --edge-files=myMap_net/sumo.edg.xml --output-file=myMap_net/sumo.net.xml
 ```
 
 

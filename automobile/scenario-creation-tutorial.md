@@ -30,7 +30,7 @@ It is strongly recommended to not use the 3D feature of the [OpenStreetMap impor
 
 ```sh
 cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=$WBT_PROJECT_PATH/worlds/myMap_net/myMap.osm --sumo-network-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --outputFile=$WBT_PROJECT_PATH/worlds/myMap.wbt
+python importer.py --input=$WBT_PROJECT_PATH/worlds/myMap_net/myMap.osm --sumo-network-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output=$WBT_PROJECT_PATH/worlds/myMap.wbt
 ```
 
 > **Node**:
@@ -46,12 +46,13 @@ You should be able to open the generated world file directly in Webots:
 
 It is recommended at this stage to perform a manual check of the imported roads and crossroads,
 to erase possible issues done by the importer.
-A good strategy could be fix the OSM data typically to add/remove wayPoints and import again the simulation.
+A good strategy could be to fix the OSM data typically to add/remove wayPoints and import again the simulation.
 
 
 ### Generate the SUMO network files
 
-We can also use the previously downloaded map to generate the SUMO network file. You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for this:
+We can also use the previously generated Webots world to generate the SUMO network file.
+You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for this:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/SUMO_exporter
@@ -69,7 +70,7 @@ $WEBOTS_HOME/projects/automobile/resources/bin/netedit $WBT_PROJECT_PATH/worlds/
 You can then generate the route file, SUMO provides several ways to generate route files. You may for example generate a [flow file](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) and then use [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) to generate the route file for you:
 
 ```sh
-./duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
+$WEBOTS_HOME/projects/automobile/resources/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
 ```
 
 

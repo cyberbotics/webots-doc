@@ -16,7 +16,7 @@ the importer script.
 Follow the instructions to install Python:
 https://www.cyberbotics.com/doc/guide/using-python
 
-Then install the Python `pyproj` and `shapely` modules, as described bellow.
+Then install the Python `pyproj` and `shapely` modules, as described below.
 
 ### Linux
 

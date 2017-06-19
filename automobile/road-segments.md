@@ -20,8 +20,8 @@ Road {
   SFRotation rotation                  0 1 0 0
   SFString   name                      ""
   SFString   id                        ""
-  SFString   startCrossroad            ""
-  SFString   endCrossroad              ""
+  SFString   startJunction             ""
+  SFString   endJunction               ""
   SFFloat    width                     7
   SFInt32    numberOfLanes             2
   SFInt32    numberOfForwardLanes      1
@@ -61,9 +61,9 @@ Road {
 
 - `name`: Could contain the street name.
 - `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
-- `startCrossroad`: Could contain a reference to the [Crossroad](#crossroad) connected at the first Road waypoint.
+- `startJunction`: Could contain a reference to the [Crossroad](#crossroad) connected at the first Road waypoint.
 Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
-- `endCrossroad`: Could contain a reference to the [Crossroad](#crossroad) connected at the last Road waypoint.
+- `endJunction`: Could contain a reference to the [Crossroad](#crossroad) connected at the last Road waypoint.
 Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
 - `width`: Defines the total width of the road (excluding sidewalk).
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).

@@ -102,7 +102,7 @@
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
   border-left: 6px solid #ffe070;
   background-color: #fff4cc;
-  background-image:url('/css/images/note.png');
+  background-image: url('/css/images/note.png'), url('../css/images/note.png'); /* online url, offline url*/
   background-repeat: no-repeat;
   background-position: 10px 24px;
 }

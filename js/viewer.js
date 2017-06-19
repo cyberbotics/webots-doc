@@ -9,9 +9,11 @@ if (typeof String.prototype.endsWith !== "function")
     };
 
 if (!setup)
-  var setup = {'webotsEmbedded': true};
+  var setup = {};
 
-function setupUrlOnline(url) {
+var isCyberboticsUrl = location.href.indexOf('://www.cyberbotics.com/doc') != -1;
+
+function setupCyberboticsUrl(url) {
   setup.book = "guide";
   setup.page = "index";
   setup.anchor = "";
@@ -44,7 +46,7 @@ function setupUrlOnline(url) {
   }
 }
 
-function setupUrlLocal(url) {
+function setupDefaultUrl(url) {
     setup.tag = '';
 
     var m;
@@ -69,10 +71,10 @@ function setupUrlLocal(url) {
 }
 
 function setupUrl(url) {
-    if (setup.webotsEmbedded || setup.localUrlMode)
-        setupUrlLocal(url);
+    if (isCyberboticsUrl)
+        setupCyberboticsUrl(url);
     else
-        setupUrlOnline(url);
+        setupDefaultUrl(url);
     console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor);
 }
 
@@ -119,8 +121,8 @@ function forgeUrl(page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ("#" + anchor) : "";
   var currentUrl = location.href;
   var newUrl = currentUrl;
-  if (!setup.webotsEmbedded && !setup.localUrlMode) {
-    newUrl = hostUrl + "/" + setup.book + "/" + page;
+  if (isCyberboticsUrl) {
+    newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
     if (setup.tag != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.tag;
     else if (setup.tag != '')
@@ -191,7 +193,7 @@ function applyAnchor() {
     var anchors = document.getElementsByName(setup.anchor);
     if (anchors.length > 0) {
         anchors[0].scrollIntoView(true);
-        if (!setup.webotsEmbedded)
+        if (isCyberboticsUrl)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
         updateBrowserUrl();
     } else
@@ -382,7 +384,7 @@ function updateMenuScrollbar() {
 function updateSelection() {
     var selected = changeMenuSelection();
     populateNavigation(selected);
-    if (!setup.webotsEmbedded)
+    if (isCyberboticsUrl)
         updateMenuScrollbar();
 }
 
@@ -406,7 +408,7 @@ function changeMenuSelection() {
         var a = as[i];
         var href = a.getAttribute("href");
         var selection;
-        if (setup.webotsEmbedded) {
+        if (!isCyberboticsUrl) {
           var pageIndex = href.indexOf("page=" + setup.page);
           // Notes:
           // - the string length test is done to avoid wrong positive cases
@@ -635,10 +637,10 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
 
-    if (setup.webotsEmbedded)
-        handle.handle.addClass("local");
+    if (isCyberboticsUrl)
+        handle.handle.addClass("cyberbotics");
     else
-        handle.handle.addClass("online");
+        handle.handle.addClass("default");
 
     setHandleWidth(handle.initialWidth);
 
@@ -680,7 +682,7 @@ function initializeHandle() {
 }
 
 window.onscroll=function(){
-    if (setup.webotsEmbedded)
+    if (!isCyberboticsUrl)
         return;
     updateMenuScrollbar();
 };

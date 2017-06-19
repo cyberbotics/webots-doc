@@ -10,6 +10,7 @@ Viewpoint {
   SFFloat    far               0.0      # [0,inf)
   SFString   follow            ""
   SFBool     followOrientation FALSE
+  SFFloat    followSmoothness  0.5      # [0, 1]
   SFNode     lensFlare         NULL
 }
 ```
@@ -52,6 +53,12 @@ adding the instance number to the `follow` field value using the format
 "`<name>:<number>`".
 
 The `followOrientation` field can be used to make the viewpoint follow also the orientation of an object (in addition to its position). If `followOrientation` is true, the viewpoint is rigidly attached to the followed object, like an embedded camera onboard a robot. The `follow` field should be set with a valid object name otherwise the `followOrientation` field has no effect.
+
+The `followSmoothness` field defines how smooth the camera is when following an object.
+With a value of 0 the camera follows the movement of the object instantly,
+and increasing the value increases the inertia of the camera thus making the movement more fluid.
+Higher values can sometimes make the camera lag behind in the case of fast moving objects that change direction often.
+This parameter is ignored if the `followOrientation` field is set to `TRUE`.
 
 The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens flare
 effect to the view (if any light casts flares).

@@ -8,8 +8,8 @@ if (typeof String.prototype.endsWith !== "function")
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
 
-var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1 &&
-            location.href.indexOf('://robotbenchmark.net/webots_documentation') == -1 ;
+if (!setup)
+  var setup = {'webotsEmbedded': true};
 
 function setupUrlOnline(url) {
   setup.book = "guide";
@@ -69,7 +69,7 @@ function setupUrlLocal(url) {
 }
 
 function setupUrl(url) {
-    if (local || setup.localUrlMode)
+    if (setup.webotsEmbedded || setup.localUrlMode)
         setupUrlLocal(url);
     else
         setupUrlOnline(url);
@@ -119,8 +119,8 @@ function forgeUrl(page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ("#" + anchor) : "";
   var currentUrl = location.href;
   var newUrl = currentUrl;
-  if (!local && !setup.localUrlMode) {
-    newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
+  if (!setup.webotsEmbedded && !setup.localUrlMode) {
+    newUrl = hostUrl + "/" + setup.book + "/" + page;
     if (setup.tag != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.tag;
     else if (setup.tag != '')
@@ -191,7 +191,7 @@ function applyAnchor() {
     var anchors = document.getElementsByName(setup.anchor);
     if (anchors.length > 0) {
         anchors[0].scrollIntoView(true);
-        if (!local)
+        if (!setup.webotsEmbedded)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
         updateBrowserUrl();
     } else
@@ -382,7 +382,7 @@ function updateMenuScrollbar() {
 function updateSelection() {
     var selected = changeMenuSelection();
     populateNavigation(selected);
-    if (!local)
+    if (!setup.webotsEmbedded)
         updateMenuScrollbar();
 }
 
@@ -406,7 +406,7 @@ function changeMenuSelection() {
         var a = as[i];
         var href = a.getAttribute("href");
         var selection;
-        if (local) {
+        if (setup.webotsEmbedded) {
           var pageIndex = href.indexOf("page=" + setup.page);
           // Notes:
           // - the string length test is done to avoid wrong positive cases
@@ -635,7 +635,7 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
 
-    if (local)
+    if (setup.webotsEmbedded)
         handle.handle.addClass("local");
     else
         handle.handle.addClass("online");
@@ -680,7 +680,7 @@ function initializeHandle() {
 }
 
 window.onscroll=function(){
-    if (local)
+    if (setup.webotsEmbedded)
         return;
     updateMenuScrollbar();
 };
@@ -689,19 +689,17 @@ window.onscroll=function(){
 document.addEventListener("DOMContentLoaded", function() {
     initializeHandle();
 
-    if (local) {
-        var url = "";
-        if (location.href.indexOf("url=") > -1)
-            url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
-        setup = {
-            "book":   getGETQueryValue("book", "guide"),
-            "page":   getGETQueryValue("page", "index"),
-            "anchor": extractAnchor(location.href),
-            "branch": getGETQueryValue("branch", "master"),
-            "url":    url
-        }
-        console.log("Setup: " + JSON.stringify(setup));
-    }
+    if (!setup.url && location.href.indexOf("url=") > -1)
+      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
+    if (!setup.book)
+      setup.book = getGETQueryValue("book", "guide");
+    if (!setup.page)
+      setup.page = getGETQueryValue("page", "index");
+    if (!setup.anchor)
+      setup.anchor = extractAnchor(location.href);
+    if (!setup.branch)
+      setup.anchor = getGETQueryValue("branch", "master");
+
     applyToTitleDiv();
     getMDFile();
     getMenuFile();

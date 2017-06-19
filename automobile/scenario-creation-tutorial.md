@@ -30,7 +30,7 @@ It is strongly recommended to not use the 3D feature of the [OpenStreetMap impor
 
 ```sh
 cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
-python importer.py --input=$WBT_PROJECT_PATH/worlds/myMap_net/myMap.osm --sumo-network-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output=$WBT_PROJECT_PATH/worlds/myMap.wbt
+python importer.py --input=$WBT_PROJECT_PATH/worlds/myMap_net/myMap.osm --output=$WBT_PROJECT_PATH/worlds/myMap.wbt
 ```
 
 > **Node**:

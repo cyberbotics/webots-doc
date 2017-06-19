@@ -57,14 +57,14 @@ You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/SUMO_exporter
 python exporter.py --input=$WBT_PROJECT_PATH/worlds/myMap.wbt --output=$WBT_PROJECT_PATH/worlds/myMap_net
-$WEBOTS_HOME/projects/automobile/resources/bin/netconvert --node-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.nod.xml --edge-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.edg.xml --output-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
+$WEBOTS_HOME/projects/automobile/resources/sumo/bin/netconvert --node-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.nod.xml --edge-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.edg.xml --output-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
 ```
 
 It is recommended at this stage to perform a manual check of the SUMO network file.
 To do this, open the `sumo.net.xml` file in SUMO `netedit`:
 
 ```sh
-$WEBOTS_HOME/projects/automobile/resources/bin/netedit $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
+$WEBOTS_HOME/projects/automobile/resources/sumo/bin/netedit $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
 ```
 
 You can then generate the route file, SUMO provides several ways to generate route files. You may for example generate a [flow file](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) and then use [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) to generate the route file for you:

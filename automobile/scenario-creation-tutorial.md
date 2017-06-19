@@ -70,7 +70,7 @@ $WEBOTS_HOME/projects/automobile/resources/sumo/bin/netedit $WBT_PROJECT_PATH/wo
 You can then generate the route file, SUMO provides several ways to generate route files. You may for example generate a [flow file](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) and then use [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) to generate the route file for you:
 
 ```sh
-$WEBOTS_HOME/projects/automobile/resources/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
+$WEBOTS_HOME/projects/automobile/resources/sumo/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
 ```
 
 

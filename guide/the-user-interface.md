@@ -131,7 +131,10 @@ The `Follow Object` menu item allows you to switch between a fixed (static)
 viewpoint and a viewpoint that follows a mobile object (usually a robot). If you
 want the viewpoint to follow an object, first you need to select the object with
 the mouse and then check the `Follow Object` menu item. Note that the `Follow
-Object` state is saved in the ".wbt" file.
+Object` state is saved in the ".wbt" file. By default, the viewpoint will follow
+the object smoothly, mitigating shaking or jerky movements of the object. You can
+change this behavior by changing the `followSmoothness` field of the Viewpoint node
+in the scene tree.
 
 The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
 

@@ -282,16 +282,16 @@ The `Crossroad` PROTO represents a Crossroad.
 
 ```
 Crossroad {
-  SFVec3f    translation             0 0 0
-  SFRotation rotation                0 1 0 0
-  SFString   id                      ""
-  MFVec3f    shape                   [ 0 0 0, 1 0 0, 0 0 1]
-  MFString   connectedRoadIDs        []
-  SFBool     crossroadBoundingObject FALSE
-  SFBool     bottom                  FALSE
-  SFBool     locked                  TRUE
-  SFBool     castShadows             FALSE
-  SFString   contactMaterial         "default"
+  SFVec3f    translation      0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString   id               ""
+  MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
+  MFString   connectedRoadIDs []
+  SFBool     boundingObject   FALSE
+  SFBool     bottom           FALSE
+  SFBool     locked           TRUE
+  SFBool     castShadows      FALSE
+  SFString   contactMaterial  "default"
 }
 ```
 
@@ -303,7 +303,7 @@ only the specific ones will be explained.
 - `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
 - `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
-- `crossroadBoundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
+- `boundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
 
 ### Roundabout
 

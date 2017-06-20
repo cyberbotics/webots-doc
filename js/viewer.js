@@ -631,10 +631,13 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
 
-    if (local)
+    if (local) {
         handle.handle.addClass("local");
-    else
+        handle.center.addClass("local");
+    } else {
         handle.handle.addClass("online");
+        handle.center.addClass("online");
+    }
 
     setHandleWidth(handle.initialWidth);
 

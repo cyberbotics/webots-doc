@@ -10,6 +10,9 @@
   height: 100%;
   overflow-y: auto;
 }
+.webots-doc .default#left {
+  top: 0px !important;
+}
 .webots-doc #handle {
   left: 20%;
   width: 6px;
@@ -22,11 +25,11 @@
   border-left: 1px solid #b6b6b6;
   border-right: 1px solid #b6b6b6;
 }
-.webots-doc #handle.local:after {
+.webots-doc #handle.default:after {
   content: '≡';
   font-size: 9px;
   color: #aaa;
-  position:absolute;
+  position: absolute;
   top: 50%;
 }
 .webots-doc #center {
@@ -37,6 +40,9 @@
   padding-bottom: 0;
   margin-bottom: 0;
   overflow: auto;
+}
+.webots-doc .default#center {
+  top: 0px !important;
 }
 .webots-doc #view,
 .webots-doc #title {
@@ -98,13 +104,18 @@
 }
 .webots-doc blockquote {
   margin: 20px 10px;
-  padding: 20px;
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
   border-left: 6px solid #ffe070;
   background-color: #fff4cc;
-  background-image:url('/css/images/note.png');
+  background-image: url('/css/images/note.png');
   background-repeat: no-repeat;
   background-position: 10px 24px;
+}
+.webots-doc .cyberbotics blockquote {
+  padding: 20px;
+}
+.webots-doc .default blockquote {
+  padding: 10px 20px 10px 20px;
 }
 .webots-doc li {
   font-weight: normal;

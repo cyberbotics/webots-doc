@@ -41,7 +41,7 @@ For example the connections between junctions can be improved at this stage.
 
 Note that SUMO `netedit` can display weird widths and offsets for the lanes
 during the first load of the network file.
-This can be solved simply by saving the unmodified `sumo.net.xml` or
+This can be solved simply by saving the unmodified `sumo.net.xml` file or
 by selecting the `Processing / Compute Junctions` menu item.
 
 

@@ -16,18 +16,18 @@ the importer script.
 Follow the instructions to install Python:
 https://www.cyberbotics.com/doc/guide/using-python
 
-Then install the Python `pyproj` and `shapely` modules, as described below.
+Then install the Python `lxml`, `pyproj` and `shapely` modules, as described below.
 
 ### Linux
 
 ```
-sudo pip install pyproj shapely
+sudo pip install lxml pyproj shapely
 ```
 
 ### macOS
 
 ```
-pip install pyproj shapely --user
+pip install lxml pyproj shapely --user
 ```
 
 ### Windows
@@ -36,6 +36,7 @@ Download the shapely wheel called "Shapely‑1.5.17‑cp27‑cp27m‑win_amd64.w
 on http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely and type a cmd terminal:
 
 ```
+%PYTHON_PATH%\Scripts\pip.exe install lxml
 %PYTHON_PATH%\Scripts\pip.exe install pyproj
 %PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely-1.5.17-cp27-cp27m-win_amd64.whlls
 ```
@@ -80,7 +81,7 @@ You can use several arguments with this script:
 | --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
 | --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (requires an internet connexion)| By default, the ground of the generated world is flat                     |
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
-| --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
+| --projection           | Defines the projection parameters, the projection parameters should be defined following the [PROJ.4 rules](http://proj4.org/parameters.html), it should looks like: `"+proj=robin +lon_0=2.3945 +lat_0=48.8365 +x_0=0.0725 +y_0=-5206258.932 +ellps=WGS84 +units=m +no_defs"`. Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 | --extract-projection   | Extracts the projection from the OSM file, displays it and exits.                                                                    | By default, this parameter is disabled.                                   |
 | --removal-radius       | Specifies the radius (in meters) around each road waypoint beyond which any object is removed.                                       | By default this feature is disabled (radius = 0.0).                       |
 %end

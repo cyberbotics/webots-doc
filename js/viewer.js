@@ -60,7 +60,7 @@ function setupDefaultUrl(url) {
     m = url.match(/book=([^&#]*)/);
     if (m)
       setup.book = m[1];
-    else
+    else if (!setup.book)
       setup.book = "guide";
 
     m = url.match(/#([^&#]*)/);
@@ -691,16 +691,18 @@ window.onscroll=function(){
 document.addEventListener("DOMContentLoaded", function() {
   initializeHandle();
 
-  if (!setup.url && location.href.indexOf("url=") > -1)
-    setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
-  if (!setup.book)
-    setup.book = getGETQueryValue("book", "guide");
-  if (!setup.page)
-    setup.page = getGETQueryValue("page", "index");
-  if (!setup.anchor)
-    setup.anchor = extractAnchor(location.href);
-  if (!setup.branch)
-    setup.anchor = getGETQueryValue("branch", "master");
+  if (!isCyberboticsUrl) {
+    if (!setup.url && location.href.indexOf("url=") > -1)
+      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
+    if (!setup.book)
+      setup.book = getGETQueryValue("book", "guide");
+    if (!setup.page)
+      setup.page = getGETQueryValue("page", "index");
+    if (!setup.anchor)
+      setup.anchor = extractAnchor(location.href);
+    if (!setup.branch)
+      setup.anchor = getGETQueryValue("branch", "master");
+  }
 
   applyToTitleDiv();
   getMDFile();

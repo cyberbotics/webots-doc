@@ -10,29 +10,54 @@ more than a few square kilometers if you want to be able to run your simulation
 in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using
 the importer script.
 
-Additionally a SUMO road network file should be provided to the importer in order
-to generate the roads.
-This file can be generated from the same input OpenStreetMap map using the SUMO
-`netconvert` tool provided in Webots.
-The `sumo.net.xml` file is created the following way:
 
-```sh
-cd $WEBOTS_HOME/projects/automobile/resources/sumo
-./netconvert --osm-files myMap.osm -o sumo.net.xml
+## Dependencies
+
+Follow the instructions to install Python:
+https://www.cyberbotics.com/doc/guide/using-python
+
+Then install the Python `pyproj` and `shapely` modules, as described below.
+
+### Linux
+
+```
+sudo pip install pyproj shapely
 ```
 
-Then, you should use the `importer.py` python script to generate the `myMap.wbt`
-webots simulation world from the `myMap.osm` and `sumo.net.xml` files:
+### macOS
+
+```
+pip install pyproj shapely --user
+```
+
+### Windows
+
+Download the shapely wheel called "Shapely‑1.5.17‑cp27‑cp27m‑win_amd64.whl"
+on http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely and type a cmd terminal:
+
+```
+%PYTHON_PATH%\Scripts\pip.exe install pyproj
+%PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely-1.5.17-cp27-cp27m-win_amd64.whlls
+```
+
+
+## How to use the importer
+
+You should use the `importer.py` python script to generate the `myMap.wbt`
+webots simulation world from the `myMap.osm` file:
 
 ```sh
 cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
-python importer.py --inputFile=myMap.osm --sumo-network-file=sumo.net.xml --outputFile=myMap.wbt
+python importer.py --input=myMap.osm --output=myMap.wbt
 ```
 
 Some extra folders such as `forest` can be generated in the target directory depending
 on the importer arguments.
 
 Find [here](scenario-creation-tutorial.md) a detailed tutorial about an automobile scenario creation.
+
+
+## Arguments
 
 You can use several arguments with this script:
 
@@ -41,10 +66,8 @@ You can use several arguments with this script:
 | Argument               | Description                                                                                                                          | Default value                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | --input                | Specifies the OSM file to be converted                                                                                               | If not specified, the script tries to convert "map.osm"                   |
-| --sumo-network-file    | Specifies a SUMO network which is used to generate roads.                                                                            | If not specified, the script tries to open "sumo.net.xml"                 |
 | --output               | Specifies the name of the generated world file                                                                                       | If not specified, the generated world is called "map.wbt"                 |
 | --config-file          | Specifies which configuration file to use                                                                                            | If not specified, tries to use the configuration file called "config.ini" |
-| --spline-subdivision   | Defines the spline subdivision used for roads, rivers, etc.                                                                          | A default value of 0 is used                                              |
 | --layer-height         | Defines the height of a layer (the 'layer' tag is ignored if set to 0)                                                               | A default value of 5.0 is used                                            |
 | --no-forests           | Does not include the forests in the generated world                                                                                  | By default, forests are included                                          |
 | --no-roads             | Does not include the roads in the generated world                                                                                    | By default, roads are included                                            |
@@ -66,6 +89,7 @@ In addition to these arguments, a configuration file can be used to define how
 to handle most of the OpenStreetMap entities. A typical configuration file can
 be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
 
+
 ### Map edition and creation
 
 If you want to edit a map exported from OpenStreetMap before converting it into
@@ -86,6 +110,7 @@ create new environment from scratch. You can see in the [previous
 picture](#left-the-osm-file-created-in-josm-right-the-resulting-world-open-in-webots-after-conversion)
 a map fully created in JOSM and then exported and opened in Webots.
 
+
 ### Graphical user interface
 
 To ease the use of this tool, a graphical interace has been created. This
@@ -99,7 +124,7 @@ window](robot-window.md).
 %end
 
 As you can see on [previous
-picture](#the-openstreetmap-importer-graphical-user-interface) , it is easy to
+picture](#the-openstreetmap-importer-graphical-user-interface), it is easy to
 set all the arguments of the script using the graphical user interface of the
 robot window. Furthermore, using this graphical interface you can choose either
 to give an osm file as input or a map area using a latitude-longitude rectangle.

@@ -277,7 +277,7 @@ Roundabout {
   SFBool     center                   TRUE
   SFVec2f    centerTextureScale       4 4
   SFInt32    roadNumber               4
-  SFFloat    startRoadsLenght         5
+  SFFloat    startRoadsLength         5
   SFFloat    startRoadsWith           7
   SFInt32    startRoadsNumberOfLanes  2
   MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
@@ -331,7 +331,7 @@ RoadIntersection {
   SFInt32    roadNumber                     4
   SFFloat    roadsWith                      7
   SFBool     startRoads                     TRUE
-  SFFloat    startRoadsLenght               5
+  SFFloat    startRoadsLength               5
   SFInt32    startRoadsNumberOfLanes        2
   MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
                                               "textures/road_line_triangle.png" ]

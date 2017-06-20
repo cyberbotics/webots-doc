@@ -238,21 +238,21 @@ The `Show LightSensor Rays` allows you to display, or to hide, the rays casted
 by the light sensor devices. These rays are drawn as yellow lines.
 If the light sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
-The `Show Light Positions` allows you to display, or to hide, the position of lights (including PointLights and SpotLights).
-DirectionalLights aren't represented.
-PointLights and SpotLights are represented by a colored circle surrounded by a flare.
+The `Show Light Positions` allows you to display, or to hide, the position of PointLight and SpotLight lights.
+DirectionalLight nodes aren't represented.
+PointLight and SpotLight nodes are represented by a colored circle surrounded by a flare.
 
 The `Show Pen Painting Rays` allows you to display, or to hide, the rays in
 which the pen devices paint. These rays are drawn as violet lines if painting is
 enabled, otherwise as gray lines.
 
-The `Show Center Of Mass` allows you to display, or to hide, the global center of mass of a selected solid (with non NULL `Physics` node).
+The `Show Center Of Mass` allows you to display, or to hide, the global center of mass of a selected solid with non NULL `Physics` node.
 The center of mass is rendered in dark blue.
 
-The `Show Center Of Buoyancy` allows you to display, or to hide, the global center of buoyancy of a selected solid (with non NULL `Physics` node).
+The `Show Center Of Buoyancy` allows you to display, or to hide, the global center of buoyancy of a selected solid with non NULL `Physics` node.
 The center of buoyancy is rendered in purple.
 
-The `Show Support Polygon` allows you to display, or to hide, the support polygon of a selected solid (with non NULL `Physics` node).
+The `Show Support Polygon` allows you to display, or to hide, the support polygon of a selected solid with non NULL `Physics` node.
 By support polygon we mean the projection of the
 convex hull of the solid's contact points on the horizontal plane which contains the lowest one.
 In addition, the projection of the center of mass in the latter plane is rendered in green if it lies inside the support polygon (static equilibrium), red otherwise.

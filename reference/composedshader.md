@@ -1,3 +1,6 @@
+> **Note**:
+This node is experimental, i.e. its long-term support is not guaranteed.
+
 ## ComposedShader
 
 ```

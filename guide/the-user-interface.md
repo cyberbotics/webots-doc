@@ -116,6 +116,9 @@ Once the animation recording is started, this item is changed to `Stop HTML5 Ani
 and can be used to stop the animation recording.
 You can get more information about this topic in [this section](web-animation.md).
 
+The `Logout and quit Webots` terminates the current simulation, closes Webots and resets the user credentials
+so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password.
+
 The `Quit Webots` terminates the current simulation and closes Webots.
 
 ### Edit Menu
@@ -185,14 +188,14 @@ a corresponding contact force are not shown. A contact force is generated only
 for objects simulated with physics (`Physics` node required). A step is required
 for taking this operation into account.
 
-The `Show Connector axes` allows you to display, or to hide, the connector axes.
+The `Show Connector Axes` allows you to display, or to hide, the connector axes.
 The rotation alignments are depicted in black while the y and z axes
 respectively in green and blue.
 
-The `Show Joint axes` allows you to display, or to hide, the joint axes. The
+The `Show Joint Axes` allows you to display, or to hide, the joint axes. The
 joint axes are represented by black lines.
 
-The `Show RangeFinder frustums` allows you to display, or to hide, the OpenGL
+The `Show RangeFinder Frustums` allows you to display, or to hide, the OpenGL
 culling frustum and the recorded image for every range-finder in the scene,
 using a yellow wire frame.
 If the range-finder device is disabled or the first image is not available yet, the frustum will be drawn in gray.
@@ -215,7 +218,7 @@ significantly slow-down the simulation speed. Note that if the point cloud
 contains more than 2500 points, the rays from the lidar origin to the point are
 not displayed.
 
-The `Show Camera frustums` allows you to display, or to hide, the OpenGL culling
+The `Show Camera Frustums` allows you to display, or to hide, the OpenGL culling
 frustum and the recorded image for every camera in the scene, using a magenta
 wire frame.
 If the camera device is disabled or the first image is not available yet, the frustum will be drawn in gray.
@@ -225,34 +228,37 @@ because the far plane is set to infinity. The recorded image is displayed on the
 camera's near plane. More information about this concept is available in the
 OpenGL documentation.
 
-The `Show Distance Sensor rays` allows you to display, or to hide, the rays
+The `Show DistanceSensor Rays` allows you to display, or to hide, the rays
 casted by the distance sensor devices. These rays are drawn as red lines (which
 become green beyond collision points). Their length corresponds to the maximum
 range of the device.
 If the distance sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
-The `Show Light Sensor rays` allows you to display, or to hide, the rays casted
+The `Show LightSensor Rays` allows you to display, or to hide, the rays casted
 by the light sensor devices. These rays are drawn as yellow lines.
 If the light sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
-The `Show Lights` allows you to display, or to hide, the lights (including
-PointLights and SpotLights). DirectionalLights aren't represented. PointLights
-and SpotLights are represented by a colored circle surrounded by a flare.
+The `Show Light Positions` allows you to display, or to hide, the position of lights (including PointLights and SpotLights).
+DirectionalLights aren't represented.
+PointLights and SpotLights are represented by a colored circle surrounded by a flare.
 
 The `Show Pen Painting Rays` allows you to display, or to hide, the rays in
 which the pen devices paint. These rays are drawn as violet lines if painting is
 enabled, otherwise as gray lines.
 
-The `Show Center Of Mass and Support Polygon` allows you to display, or to hide,
-both the global center of mass of a selected solid (with non NULL `Physics`
-node) and its support polygon. By support polygon we mean the projection of the
-convex hull of the solid's contact points on the horizontal plane which contains
-the lowest one. In addition, the projection of the center of mass in the latter
-plane is rendered in green if it lies inside the support polygon (static
-equilibrium), red otherwise. This rendering option can be activated only for
-solids with no other solid at their top.
+The `Show Center Of Mass` allows you to display, or to hide, the global center of mass of a selected solid (with non NULL `Physics` node).
+The center of mass is rendered in dark blue.
 
-The `Show Radar frustums` allows you to display, or to hide, the radar frustum.
+The `Show Center Of Buoyancy` allows you to display, or to hide, the global center of buoyancy of a selected solid (with non NULL `Physics` node).
+The center of buoyancy is rendered in purple.
+
+The `Show Support Polygon` allows you to display, or to hide, the support polygon of a selected solid (with non NULL `Physics` node).
+By support polygon we mean the projection of the
+convex hull of the solid's contact points on the horizontal plane which contains the lowest one.
+In addition, the projection of the center of mass in the latter plane is rendered in green if it lies inside the support polygon (static equilibrium), red otherwise.
+This rendering option can be activated only for solids with no other solid at their top.
+
+The `Show Radar Frustums` allows you to display, or to hide, the radar frustum.
 If the radar device is enabled the frustum is drawn in blue, otherwise if the radar is disabled or the first measurement is not available yet, the frustum is drawn in gray.
 The radar frustum represents the volume in which a target can be detected by the
 radar.
@@ -303,6 +309,9 @@ there is only one robot in the simulation:
 
 The `Edit Controller` menu item opens the source file of the controller of the
 selected robot.
+
+The `Show Robot Window` menu item opens the robot window of the selected robot.
+The robot window can also be opened by double-clicking on the robot in the 3D window.
 
 The `Camera Devices` submenu contains the list of all the camera devices of the
 selected robot and lets the user show or hide single camera overlay images by
@@ -364,6 +373,8 @@ used for editing and compiling controller source code.
 The `Console` menu item opens the Webots Console, which is a read-only console
 that is used to display Webots error messages and controller outputs.
 
+The `Documentation` menu item shows or hides the offline Webots documentation window.
+
 The `Restore Layout` menu item restores the factory layout of the panels of the
 main window.
 
@@ -382,6 +393,8 @@ administrator. Please ask your local license administrator in case of problem.
 
 The `Preferences` item pops up a window described in [this
 section](preferences.md).
+
+The `Check for updates...` item pops up a window informing if the Webots version in use is the latest one and providing the link to download the latest version if needed.
 
 ### Wizards Menu
 

@@ -20,6 +20,10 @@ forest in the map, it will generate a `forest` folder too. This `forest` folder
 contains the [forest files](nature.md#forest) of the forests present in the
 world.
 
+> **Note**:
+The importer script depends on the following Python packages: `lxml`, `pyproj` and `scipy`.
+You can install them using pip: `pip install lxml pyproj scipy`
+
 You can use several arguments with this script:
 
 %figure "OpenStreetMap importer arguments"
@@ -42,7 +46,7 @@ You can use several arguments with this script:
 | --no-intersection-road-lines | Does not generate road start and end lines at intersections                                                                    | By default, road start and end lines are generated at intersections       |
 | --enable-3D            | Uses an external service to retrieve elevation information and use an `ElevationGrid` for the ground (requires an internet connexion)| By default, the ground of the generated world is flat                     |
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
-| --projection           | Defines the projection parameters, the projection parameters should be defined following the PROJ.4 rules (https://trac.osgeo.org/proj/wiki/GenParms). Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
+| --projection           | Defines the projection parameters, the projection parameters should be defined following the [PROJ.4 rules](http://proj4.org/parameters.html), it should looks like: `"+proj=robin +lon_0=2.3945 +lat_0=48.8365 +x_0=0.0725 +y_0=-5206258.932 +ellps=WGS84 +units=m +no_defs"`. Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 
 %end
 

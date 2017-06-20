@@ -272,7 +272,7 @@ only the specific ones will be explained.
 
 ### Crossroad
 
-The `Crossroad` PROTO represents a Crossroad.
+The `Crossroad` PROTO represents a crossroad.
 
 %figure "Crossroad intersection"
 

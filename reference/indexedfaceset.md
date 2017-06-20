@@ -6,7 +6,7 @@ IndexedFaceSet {
   SFNode  texCoord      NULL
   SFBool  solid         TRUE # ignored and regarded as TRUE
   SFBool  ccw           TRUE
-  SFBool  convex        TRUE
+  SFBool  convex        TRUE # ignored
   MFInt32 coordIndex    [ ]  # [-1,inf)
   MFInt32 texCoordIndex [ ]  # [-1,inf)
   SFFloat creaseAngle   0    # [0,inf)
@@ -59,6 +59,12 @@ contain end-of-face markers (-1) in exactly the same places as the `coordIndex`
 field. If the greatest index in the `texCoordIndex` field is N, then there must
 be N+1 texture coordinates in the [TextureCoordinate](texturecoordinate.md)
 node.
+
+The `ccw` field indicates whether the vertices are ordered in a counter-clockwise direction when the mesh is viewed from the outside (TRUE).
+If the order is clockwise, this field value has to be set to FALSE.
+
+The `solid` and `convex` fields are currently ignored in Webots.
+They provide hints about the mesh shape to optimize certain rendering features: whether it is solid and whether it contains convex faces.
 
 The `creaseAngle` field, affects how default normals are generated. For example,
 when an [IndexedFaceSet](#indexedfaceset) has to generate default normals, it

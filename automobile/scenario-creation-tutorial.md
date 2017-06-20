@@ -44,9 +44,10 @@ You should be able to open the generated world file directly in Webots:
 ![osm_tutorial_import2.png](images/osm_tutorial_import2.png)
 %end
 
-It is recommended at this stage to perform a manual check of the imported roads and crossroads,
-to erase possible issues done by the importer.
-A good strategy could be to fix the OSM data typically to add/remove wayPoints and import again the simulation.
+It is recommended at this stage to edit the imported roads and crossroads in Webots.
+Indeed, the importer may generate some bugs, depending on the OSM complexity.
+A good workflow is to fix the OSM data using the `JOSM` editor by adding/removing OSM nodes.
+We recommend to push the modifications on the OSM data server.
 
 
 ### Generate the SUMO network files

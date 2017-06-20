@@ -637,10 +637,15 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
 
-    if (isCyberboticsUrl)
-        handle.handle.addClass("cyberbotics");
-    else
-        handle.handle.addClass("default");
+    if (isCyberboticsUrl) {
+      handle.left.addClass("cyberbotics");
+      handle.handle.addClass("cyberbotics");
+      handle.center.addClass("cyberbotics");
+    } else {
+      handle.left.addClass("default");
+      handle.handle.addClass("default");
+      handle.center.addClass("default");
+    }
 
     setHandleWidth(handle.initialWidth);
 

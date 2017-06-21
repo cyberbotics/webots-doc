@@ -48,6 +48,7 @@ It is recommended at this stage to edit the imported roads and crossroads in Web
 Indeed, the importer may generate some bugs, depending on the OSM complexity.
 A good workflow is to fix the OSM data using the `JOSM` editor by adding/removing OSM nodes.
 We recommend to push the modifications on the OSM data server.
+You can also enable the spline subdivision on some of the roads in Webots in order to smooth them if needed.
 
 
 ### Generate the SUMO network files

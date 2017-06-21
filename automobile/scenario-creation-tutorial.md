@@ -74,13 +74,13 @@ $WEBOTS_HOME/projects/automobile/resources/sumo/bin/netedit $WBT_PROJECT_PATH/wo
 At this stage, a SUMO route file should be created to describe the traffic, i.e.,
 the number of vehicles, which road they should take, the vehicle properties, etc.
 
-This [SUMO document](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) explains precisely how to achieve this.
+This [SUMO document](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) explains in detail how this is done.
 
-This following subsections describes two ways to create a SUMO route file.
+The following subsections describe two ways to create a SUMO route file.
 The use of the SUMO [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) program is required in both cases.
 
 
-#### Create randomly a SUMO route file
+#### Create a SUMO route file randomly
 
 The purpose of the SUMO `randomTrips.py` script is to generate a random SUMO trip file.
 This file can be used as an input argument of `SUMO duarouter` to create the expected SUMO route file.
@@ -92,9 +92,9 @@ $WEBOTS_HOME/projects/automobile/resources/sumo/bin/duarouter --trip-files $WBT_
 ```
 
 
-#### Create manually a SUMO route file
+#### Create a SUMO route file manually
 
-Alternatively a SUMO flow file can be created to define the traffic by vehicles flows.
+Alternatively a SUMO flow file can be created to define the traffic by vehicle flows.
 Please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes)
 to learn how to create this file, and put it there:
 `$WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml`

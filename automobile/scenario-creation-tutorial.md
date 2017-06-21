@@ -87,7 +87,7 @@ This file can be used as an input argument of `SUMO duarouter` to create the exp
 Here are the commands to do so:
 
 ```sh
-python $WEBOTS_HOME/projects/automobile/resources/sumo/tools/randomTrips.py -n $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml -o $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml -e 3600 -p 2
+python $WEBOTS_HOME/projects/automobile/resources/sumo/tools/randomTrips.py -n $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml -o $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml
 $WEBOTS_HOME/projects/automobile/resources/sumo/bin/duarouter --trip-files $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml --ignore-errors true
 ```
 

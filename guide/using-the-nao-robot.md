@@ -134,7 +134,16 @@ Repeat the above procedure for each additional robot that you need. Remember
 that every robot must have a different port number specified in
 `controllerArgs`.
 
-### Getting the right speed for realistic simulation
+
+### Known Problems
+
+#### macOS support
+
+Aldebaran dropped the `simulator SDK` support for macOS since the `2.1.2.17` version.
+Webots includes this latest version for macOS, however it doesn't work on recent macOS versions.
+
+
+#### Timing issues: Getting the right speed for realistic simulation
 
 Choregraphe uses exclusively real-time and so the robot's motions are meant to
 be carried out in real-time. The Webots simulator uses a virtual time base that
@@ -163,7 +172,8 @@ components
 - Remove unnecessary objects from the simulation, in particular objects with
 physics
 
-### Known Problems
+
+#### Unexpected Webots crashes
 
 If for some unexpected reason Webots crashes, it is possible that the `hal` or
 `naoqi-bin` processes remain active in memory. In this case we recommend you to

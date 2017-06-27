@@ -140,7 +140,7 @@ that every robot must have a different port number specified in
 #### macOS support
 
 Aldebaran dropped the `simulator SDK` support for macOS since the `2.1.2.17` version.
-Webots includes this last version for macOS, but some issues prevents to run `naoqisim` on recent macOS versions.
+Webots includes this latest version for macOS, however it doesn't work on recent macOS versions.
 
 
 #### Timing issues: Getting the right speed for realistic simulation

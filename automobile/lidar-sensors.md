@@ -2,6 +2,12 @@
 
 A wide range of lidar sensors have been modelled.
 
+%figure "Lidar simulation"
+
+![ibeo.png](images/lidar.png)
+
+%end
+
 ### Ibeo lux
 
 The `IbeoLux` is a 4 layers lidar with a range of up to 200 meters and a field

@@ -40,7 +40,7 @@ of the OpenGL hardware acceleration with Webots. Please find instructions in
 > **Note**:
 Webots needs the *avconv* program to create MPEG-4 movies, that can be installed
 with *libav-tools*, *libavcodec-extra*, and *libfdk-aac0* packages.
-The package names are specific to Ubuntu 16.04 but they could change on different releases and distributions.
+The package names are specific to Ubuntu 16.04 and they could slightly change on different releases and distributions.
 
 #### Using Advanced Packaging Tool (APT)
 

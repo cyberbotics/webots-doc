@@ -44,6 +44,7 @@ buildings.
 
 ```
 Building {
+  SFString    name                   ""
   SFFloat     floorHeight            3
   SFInt32     floorNumber            3
   MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
@@ -59,6 +60,7 @@ Building {
 
 #### Building Field Summary
 
+- `name`: Could contain the building name.
 - `floorHeight`: Defines the height of one floor.
 - `floorNumber`: Defines the number of floors (excluding roof).
 - `corners`: Defines the geometry of the building (2D ground footprint of the

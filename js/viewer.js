@@ -201,6 +201,7 @@ function applyToTitleDiv() {
   var titleContentElement = document.getElementById("title-content");
   if (titleContentElement) {
     var newTitle;
+    console.log("bruh!", setup.book)
     if (setup.book == "guide")
       newTitle = "Webots User Guide";
     else if (setup.book == "reference")

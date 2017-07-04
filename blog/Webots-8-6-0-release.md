@@ -30,7 +30,9 @@ Thanks to Valve introducing OpenVR, you can now experience Webots automobile sim
 
 It is now possible to add object recognition directly to a Camera using the Recognition node:
 
+%figure
 ![smart camera](images/8.6/recognition.png)
+%end
 
 The camera will return (in addition to the raw image) the list of recognized objects in the camera frame. Each object will be defined by its relative position, relative orientation, size, position and size on the image, color list and model name. It is also possible to configure the maximum detection range and maximum number of objects detected simultaneously.
 
@@ -38,7 +40,9 @@ The camera will return (in addition to the raw image) the list of recognized obj
 
 You can now graphically represent the contraction and relaxation of an artificial muscle using the new Muscle node:
 
+%figure
 ![Muscle](images/8.6/muscle.gif)
+%end
 
 These muscles are attached to an underlying LinearMotor or RotationalMotor node.
 See the feature presentation [video](http://www.youtube.com/watch?v=pd0jD1TbJe4) for more details.
@@ -47,7 +51,9 @@ See the feature presentation [video](http://www.youtube.com/watch?v=pd0jD1TbJe4)
 
 Attach lens flares to the Viewpoint or any robot camera to simulate glare from the sun:
 
+%figure
 ![LensFlare](images/8.6/lens_flare.png)
+%end
 
 ## Interaction, Interaction, Interaction
 
@@ -57,7 +63,9 @@ Now the Viewpoint movement speed and zoom is always relative to scene geometry. 
 
 We have also added a new feature that makes scene navigation even easier; with one click of button you can center the view on any object you have selected, near or far:  
 
+%figure
 ![Move To Viewpoint](images/8.6/viewpoint.gif)
+%end
 
 Now, even if you wish to find a small object nearby, or locate a car that has driven several miles away, one click is all it takes.
 
@@ -71,13 +79,17 @@ We've put work into improving the visual quality of simulations with this update
 
 Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) support is now enabled in Webots. MSAA smooths jagged edges of scene geometry for a nicer appearance:
 
+%figure
 ![Jaggy](images/8.6/msaa.png)
+%end
 
 The default MSAA level is 2x, but via the preferences this can be increased to as much as 8x or disabled.
 
 Textures can now be filtered using Anisotropic filtering techniques to avoid Moiré patterns and perspective Aliasing. Here is a checkerboard floor seen from far without and with Anisotropic Filtering enabled:
 
+%figure
 ![grim](images/8.6/moire_pattern.png)
+%end
 
 ## Extra Goodies
 

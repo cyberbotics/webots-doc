@@ -37,6 +37,14 @@ Attach lens flares to the Viewpoint or any robot camera to simulate glare from t
 
 ### OSM
 
+### VR
+
+Thanks to Valve introducing OpenVR, you can now experience Webots automobile simulations in VR, putting yourself in the driver's seat. 
+
+%figure "HTC Vive headset with Logitech Racing Wheel Controller"
+![VR Headset](images/vr_headset.png)
+%end
+
 With Webots 8.6.0 our automobile simulation tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
 
 %figure "8.5.0"
@@ -49,13 +57,6 @@ With Webots 8.6.0 our automobile simulation tools are more advanced than ever. W
 
 We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
 
-### VR
-
-Thanks to Valve introducing OpenVR, you can now experience Webots automobile simulations in VR, putting yourself in the driver's seat. 
-
-%figure "HTC Vive headset with Logitech Racing Wheel Controller"
-![VR Headset](images/vr_headset.png)
-%end
 
 ## Interaction, Interaction, Interaction
 

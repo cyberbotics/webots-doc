@@ -9,11 +9,11 @@ Today we're happy to announce the release of Webots 8.6.0. This new release brin
 With Webots 8.6.0 our automobile simulation tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
 
 %figure "8.5.0"
-![8.5](images/8.6/osm_master.png)
+![8.5](images/osm_master.png)
 %end
 
 %figure "8.6.0"
-![8.6](images/8.6/osm_develop.png)
+![8.6](images/osm_develop.png)
 %end
 
 We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
@@ -31,7 +31,7 @@ Thanks to Valve introducing OpenVR, you can now experience Webots automobile sim
 It is now possible to add object recognition directly to a Camera using the Recognition node:
 
 %figure
-![smart camera](images/8.6/recognition.png)
+![smart camera](images/recognition.png)
 %end
 
 The camera will return (in addition to the raw image) the list of recognized objects in the camera frame. Each object will be defined by its relative position, relative orientation, size, position and size on the image, color list and model name. It is also possible to configure the maximum detection range and maximum number of objects detected simultaneously.
@@ -41,7 +41,7 @@ The camera will return (in addition to the raw image) the list of recognized obj
 You can now graphically represent the contraction and relaxation of an artificial muscle using the new Muscle node:
 
 %figure
-![Muscle](images/8.6/muscle.gif)
+![Muscle](images/muscle.gif)
 %end
 
 These muscles are attached to an underlying LinearMotor or RotationalMotor node.
@@ -52,7 +52,7 @@ See the feature presentation [video](http://www.youtube.com/watch?v=pd0jD1TbJe4)
 Attach lens flares to the Viewpoint or any robot camera to simulate glare from the sun:
 
 %figure
-![LensFlare](images/8.6/lens_flare.png)
+![LensFlare](images/lens_flare.png)
 %end
 
 ## Interaction, Interaction, Interaction
@@ -64,7 +64,7 @@ Now the Viewpoint movement speed and zoom is always relative to scene geometry. 
 We have also added a new feature that makes scene navigation even easier; with one click of button you can center the view on any object you have selected, near or far:  
 
 %figure
-![Move To Viewpoint](images/8.6/viewpoint.gif)
+![Move To Viewpoint](images/viewpoint.gif)
 %end
 
 Now, even if you wish to find a small object nearby, or locate a car that has driven several miles away, one click is all it takes.
@@ -80,7 +80,7 @@ We've put work into improving the visual quality of simulations with this update
 Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) support is now enabled in Webots. MSAA smooths jagged edges of scene geometry for a nicer appearance:
 
 %figure
-![Jaggy](images/8.6/msaa.png)
+![Jaggy](images/msaa.png)
 %end
 
 The default MSAA level is 2x, but via the preferences this can be increased to as much as 8x or disabled.
@@ -88,7 +88,7 @@ The default MSAA level is 2x, but via the preferences this can be increased to a
 Textures can now be filtered using Anisotropic filtering techniques to avoid Moiré patterns and perspective Aliasing. Here is a checkerboard floor seen from far without and with Anisotropic Filtering enabled:
 
 %figure
-![grim](images/8.6/moire_pattern.png)
+![grim](images/moire_pattern.png)
 %end
 
 ## Extra Goodies

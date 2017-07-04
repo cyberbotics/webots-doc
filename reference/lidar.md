@@ -154,6 +154,9 @@ A lidar is said rotating if its `type` field is set to 'rotating'. In that case,
 > **Note**:
 The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π. The same comment applies to the horizontal resolution, the internal depth camera is using a horizontal resolution defined in the `horizontalResolution` field, but the actual returned resolution of the lidar is equal to: horizontalResolution * 2 * pi / fieldOfView.
 
+> **Note**:
+If the resulting point cloud of a rotating lidar looks distorted, it probably means that you have to reduce the simulation time step.
+
 ### Lidar Functions
 
 **Name**

@@ -8,13 +8,10 @@ Today we're happy to announce the release of Webots 8.6.0. This new release brin
 
 With Webots 8.6.0 our automobile simulation tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
 
-
-# (These images need resizing)
 #### Before
 ![Master](https://cyberbotics.com/files/repository/files/8-6-0release/osm%20master.png)
 #### After
 ![Master](https://cyberbotics.com/files/repository/files/8-6-0release/osm%20develop.png)
-
 
 We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
 

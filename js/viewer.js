@@ -181,7 +181,7 @@ function redirectImages(node) {
         var img = imgs[i];
         var src = img.getAttribute("src");
         var match = /^(\w*)\/([\w-\.]*)$/.exec(src);
-        if (match && match.length == 3)
+        if (match && (match.length == 3 || match.length == 4))
             img.setAttribute("src", targetPath + match[1] + "/" + match[2]);
     }
 }

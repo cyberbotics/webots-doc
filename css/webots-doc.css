@@ -254,8 +254,18 @@
   width: 80%;
 }
 
+.blog #title {
+  text-align: center;
+}
+
 .blog #view {
   width: 60%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.blog #view p {
   margin: 0 auto;
   margin-bottom: 40px;
   padding: 10px;

@@ -1,4 +1,4 @@
-# Webots 8.6.0
+# Version 8.6.0 Released
 
 Today we're happy to announce the release of Webots 8.6.0. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the changelog (link will be added here)):
 

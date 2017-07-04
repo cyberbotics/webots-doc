@@ -22,7 +22,9 @@ We have expanded our library of calibrated vehicles to include models from Linco
 
 Thanks to Valve introducing OpenVR, you can now experience Webots automobile simulations in VR, putting yourself in the driver's seat. 
 
-#### (Image of David with HTC vive, racing wheel and stereo vision output on screen) (perhaps new camera?)
+%figure "HTC Vive headset with Logitech Racing Wheel Controller"
+![VR Headset](images/vr_headset.png)
+%end
 
 ## New Nodes
 

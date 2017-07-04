@@ -32,7 +32,7 @@ Thanks to Valve introducing OpenVR, you can now experience Webots automobile sim
 
 It is now possible to add object recognition directly to a Camera using the Recognition node:
 
-%figure
+%figure "Camera Recognition"
 ![smart camera](images/recognition.png)
 %end
 
@@ -42,7 +42,7 @@ The camera will return (in addition to the raw image) the list of recognized obj
 
 You can now graphically represent the contraction and relaxation of an artificial muscle using the new Muscle node:
 
-%figure
+%figure "Muscles in Webots"
 ![Muscle](images/muscle.gif)
 %end
 
@@ -53,7 +53,7 @@ See the feature presentation [video](http://www.youtube.com/watch?v=pd0jD1TbJe4)
 
 Attach lens flares to the Viewpoint or any robot camera to simulate glare from the sun:
 
-%figure
+%figure "Lens Flares"
 ![LensFlare](images/lens_flare.png)
 %end
 
@@ -65,7 +65,7 @@ Now the Viewpoint movement speed and zoom is always relative to scene geometry. 
 
 We have also added a new feature that makes scene navigation even easier; with one click of button you can center the view on any object you have selected, near or far:  
 
-%figure
+%figure "The New 'Move to Viewpoint' feature in action"
 ![Move To Viewpoint](images/viewpoint.gif)
 %end
 
@@ -81,7 +81,7 @@ We've put work into improving the visual quality of simulations with this update
 
 Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) support is now enabled in Webots. MSAA smooths jagged edges of scene geometry for a nicer appearance:
 
-%figure
+%figure "The effect of MSAA"
 ![Jaggy](images/msaa.png)
 %end
 
@@ -89,7 +89,7 @@ The default MSAA level is 2x, but via the preferences this can be increased to a
 
 Textures can now be filtered using Anisotropic filtering techniques to avoid Moiré patterns and perspective Aliasing. Here is a checkerboard floor seen from far without and with Anisotropic Filtering enabled:
 
-%figure
+%figure "Moiré patterns are eliminated with Anisotropic Filtering"
 ![grim](images/moire_pattern.png)
 %end
 

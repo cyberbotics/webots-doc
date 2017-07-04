@@ -84,12 +84,6 @@
         <div id="view"></div>
       </div>
     </div>
-    <script type="text/javascript">
-      // remove "documentation" title if we're on a blog post
-      var url = window.location.href;
-      if url.includes("blog")
-        document.getElementById("title").innerHTML = "";
-    </script>
 <?php
   include 'footer.php';
 ?>

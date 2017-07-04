@@ -220,6 +220,14 @@ function applyToTitleDiv() {
   }
 }
 
+function setUpBlogStyleIfNeeded() {
+  if (setup.book == "blog") {
+    var center = document.getElementById("center")
+    center.setAttribute("class", "blog");
+  }
+
+}
+
 function getWebotsVersion() {
   // Get the Webots version from the showdown wbVariables extension
   var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
@@ -701,6 +709,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Setup: " + JSON.stringify(setup));
     }
     applyToTitleDiv();
+    setUpBlogStyleIfNeeded();
     getMDFile();
     getMenuFile();
 });

@@ -2,37 +2,13 @@
 
 Today we're happy to announce the release of Webots 8.6.0. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the changelog (link will be added here)):
 
-## Drive.
-
-### OSM
-
-With Webots 8.6.0 our automobile simulation tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
-
-%figure "8.5.0"
-![8.5](images/osm_master.png)
-%end
-
-%figure "8.6.0"
-![8.6](images/osm_develop.png)
-%end
-
-We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
-
-### VR
-
-Thanks to Valve introducing OpenVR, you can now experience Webots automobile simulations in VR, putting yourself in the driver's seat. 
-
-%figure "HTC Vive headset with Logitech Racing Wheel Controller"
-![VR Headset](images/vr_headset.png)
-%end
-
 ## New Nodes
 
 ### Smart Cameras
 
 It is now possible to add object recognition directly to a Camera using the Recognition node:
 
-%figure "Camera Recognition"
+%figure "Robot Camera Object Recognition"
 ![smart camera](images/recognition.png)
 %end
 
@@ -55,6 +31,30 @@ Attach lens flares to the Viewpoint or any robot camera to simulate glare from t
 
 %figure "Lens Flares"
 ![LensFlare](images/lens_flare.png)
+%end
+
+## Drive.
+
+### OSM
+
+With Webots 8.6.0 our automobile simulation tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
+
+%figure "8.5.0"
+![8.5](images/osm_master.png)
+%end
+
+%figure "8.6.0"
+![8.6](images/osm_develop.png)
+%end
+
+We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
+
+### VR
+
+Thanks to Valve introducing OpenVR, you can now experience Webots automobile simulations in VR, putting yourself in the driver's seat. 
+
+%figure "HTC Vive headset with Logitech Racing Wheel Controller"
+![VR Headset](images/vr_headset.png)
 %end
 
 ## Interaction, Interaction, Interaction

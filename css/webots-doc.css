@@ -253,3 +253,18 @@
   font-family: monospace;
   width: 80%;
 }
+
+.blog #view {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.blog #view h1, .blog #view h2 {
+  text-align: center;
+}
+
+.blog #view h3 {
+  text-align: left;
+}

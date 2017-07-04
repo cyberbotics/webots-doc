@@ -266,13 +266,19 @@
 }
 
 .blog #view p {
-  margin: 0 auto;
-  margin-bottom: 40px;
-  padding: 10px;
+  width: 90%;
 }
 
-.blog #view h1, .blog #view h2 {
+.blog #view h1, h2 {
   text-align: center;
+}
+
+.blog #view h1 {  
+  font-size: 56px;
+}
+
+.blog #view h2 {
+  font-size: 40px;
 }
 
 .blog #view h3 {

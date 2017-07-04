@@ -1,5 +1,7 @@
 # Version 8.6.0 Released
 
+---
+
 Today we're happy to announce the release of Webots 8.6.0. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the changelog (link will be added here)):
 
 ## New Nodes
@@ -33,6 +35,8 @@ Attach lens flares to the Viewpoint or any robot camera to simulate glare from t
 ![LensFlare](images/lens_flare.png)
 %end
 
+---
+
 ## Drive.
 
 
@@ -58,6 +62,7 @@ With Webots 8.6.0 our environment modelling tools are more advanced than ever. W
 
 We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
 
+---
 
 ## Interaction, Interaction, Interaction
 
@@ -77,6 +82,8 @@ You can now disable picking for objects in the scene for objects that are purely
 
 These are just some of the extra workflow improvements we are bringing with Webots 8.6.0.
 
+---
+
 ## Better Visuals
 
 We've put work into improving the visual quality of simulations with this update.
@@ -94,6 +101,8 @@ Textures can now be filtered using Anisotropic filtering techniques to avoid Moi
 %figure "Moiré patterns are eliminated with Anisotropic Filtering"
 ![grim](images/moire_pattern.png)
 %end
+
+---
 
 ## Extra Goodies
 

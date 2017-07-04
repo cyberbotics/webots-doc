@@ -38,6 +38,8 @@ class TestMenus(unittest.TestCase):
                     continue
                 elif line == '# Table of Contents':
                     continue
+                elif line == '# New Releases':
+                    continue
                 else:
                     match = re.match(r'^- \[(.*)\]\((.*)\)$', line)
                     self.assertIsNotNone(

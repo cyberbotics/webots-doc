@@ -35,7 +35,6 @@ Attach lens flares to the Viewpoint or any robot camera to simulate glare from t
 
 ## Drive.
 
-### OSM
 
 ### VR
 
@@ -45,7 +44,9 @@ Thanks to Valve introducing OpenVR, you can now experience Webots automobile sim
 ![VR Headset](images/vr_headset.png)
 %end
 
-With Webots 8.6.0 our automobile simulation tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
+### OSM
+
+With Webots 8.6.0 our environment modelling tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
 
 %figure "8.5.0"
 ![8.5](images/osm_master.png)

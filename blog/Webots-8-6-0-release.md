@@ -1,6 +1,6 @@
 # Version 8.6.0 Released
 
-<p id="publish-date"></p>
+<p id="publish-date">date string</p>
 
 <p id="author-name">By Tom Norton</p>
 

@@ -74,7 +74,9 @@ We have expanded our library of calibrated vehicles to include models from Linco
 
 This update also brings about numerous upgrades to user interaction. Now the Viewpoint movement speed and zoom is always relative to scene geometry. This means you can easily move around any world, big or small, with ease, from editing sensor positions on an E-puck to positioning buildings in a city simulation. 
 
-### INSERT SCROLLING GIF COMPARISON
+%figure "Fixed Zoom Speed (Left) vs Relative Zoom Speed (right)"
+![Zoom](images/zoom.gif)
+%end
 
 ### Needle In A Haystack
 

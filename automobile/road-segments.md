@@ -284,6 +284,7 @@ The `Crossroad` PROTO represents a crossroad.
 Crossroad {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
+  SFString   name             ""                      # could contain the crossroad name
   SFString   id               ""
   MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
   MFString   connectedRoadIDs []
@@ -300,6 +301,7 @@ Crossroad {
 Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
 only the specific ones will be explained.
 
+- `name`: Could contain the crossroad name.
 - `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
 - `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).

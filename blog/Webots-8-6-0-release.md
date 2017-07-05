@@ -69,11 +69,10 @@ We have expanded our library of calibrated vehicles to include models from Linco
 
 ## Interaction, Interaction, Interaction
 
-This update also brings about numerous upgrades to user interaction. 
 
 ### It's All Relative
 
-Now the Viewpoint movement speed and zoom is always relative to scene geometry. This means you can easily move around any world, big or small, with ease, from editing sensor positions on an E-puck to positioning buildings in a city simulation. 
+This update also brings about numerous upgrades to user interaction. Now the Viewpoint movement speed and zoom is always relative to scene geometry. This means you can easily move around any world, big or small, with ease, from editing sensor positions on an E-puck to positioning buildings in a city simulation. 
 
 ### INSERT SCROLLING GIF COMPARISON
 

@@ -115,10 +115,10 @@ Textures can now be filtered using Anisotropic filtering techniques to avoid Moi
 
 ## Extra Goodies
 
-- World loading time has been reduced by up to 50% on large worlds.
+World loading time has been reduced by up to 50% on large worlds.
 
-- Users on Windows can now benefit from Microsoft text-to-speech technologies via the Speaker API.
+Users on Windows can now benefit from Microsoft text-to-speech technologies via the Speaker API.
 
-- The Supervisor API has been extended to perform various new actions, including restarting a robot's controller, getting mouse interactions, getting a node's DEF name, and interacting with the VR headset.
+The Supervisor API has been extended to perform various new actions, including restarting a robot's controller, getting mouse interactions, getting a node's DEF name, and interacting with the VR headset.
 
-- The Webots objects library has been further extended.
+The Webots objects library has been further extended.

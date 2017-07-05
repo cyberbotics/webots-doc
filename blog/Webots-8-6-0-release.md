@@ -1,8 +1,12 @@
 # Version 8.6.0 Released
 
+<p id="publish-date"></p>
+
+<p id="author-name">By Tom Norton</p>
+
 ---
 
-Today we're happy to announce the release of Webots 8.6.0. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the changelog (link will be added here)):
+Today we're happy to announce the release of Webots 8.6.0. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the changelog (insert link here)).
 
 
 ## New Nodes
@@ -15,7 +19,7 @@ It is now possible to add object recognition directly to a Camera using the Reco
 ![smart camera](images/recognition.png)
 %end
 
-The camera will return (in addition to the raw image) the list of recognized objects in the camera frame. Each object will be defined by its relative position, relative orientation, size, position and size on the image, color list and model name. It is also possible to configure the maximum detection range and maximum number of objects detected simultaneously.
+The smart camera returns (in addition to the raw image) the list of recognized objects in the camera frame. Each object will be defined by its relative position, relative orientation, size, position and size on the image, color list and model name. It is also possible to configure the maximum detection range and maximum number of objects detected simultaneously.
 
 ### Muscles
 

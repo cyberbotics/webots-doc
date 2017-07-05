@@ -712,7 +712,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         console.log("Setup: " + JSON.stringify(setup));
     }
-
     applyToTitleDiv();
     getMDFile();
     getMenuFile();

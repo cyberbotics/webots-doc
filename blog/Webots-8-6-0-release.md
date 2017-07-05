@@ -86,21 +86,16 @@ We have also added a new feature that makes scene navigation even easier; with o
 ![Move To Viewpoint](images/viewpoint.gif)
 %end
 
-Now, even if you wish to find a small object nearby, or locate a car that has driven several miles away, one click is all it takes.
-
-You can now even stop accidentally selecting purely visual objects by disabling picking for Shape nodes.
-
-These are just some of the extra workflow improvements we are bringing with Webots 8.6.0.
+Now, even if you wish to find a small object nearby, or locate a car that has driven several miles away, one click is all it takes. You can now even stop accidentally selecting purely visual objects by disabling picking for Shape nodes. These are just some of the extra workflow improvements we are bringing with Webots 8.6.0.
 
 ---
 
 ## Better Visuals
 
-We've put work into improving the visual quality of simulations with this update.
 
 ### Smooth Edges
 
-Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) support is now enabled in Webots. MSAA smooths jagged edges of scene geometry for a nicer appearance:
+We've put work into improving the visual quality of simulations with this update. Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) support is now enabled in Webots. MSAA smooths jagged edges of scene geometry for a nicer appearance:
 
 %figure "The effect of MSAA"
 ![Jaggy](images/msaa.png)
@@ -120,10 +115,10 @@ Textures can now be filtered using Anisotropic filtering techniques to avoid Moi
 
 ## Extra Goodies
 
- - World loading time has been reduced by up to 50% on large worlds.
+- World loading time has been reduced by up to 50% on large worlds.
 
- - Users on Windows can now benefit from Microsoft text-to-speech technologies via the Speaker API.
+- Users on Windows can now benefit from Microsoft text-to-speech technologies via the Speaker API.
 
- - The Supervisor API has been extended to perform various new actions, including restarting a robot's controller, getting mouse interactions, getting a node's DEF name, and interacting with the VR headset.
+- The Supervisor API has been extended to perform various new actions, including restarting a robot's controller, getting mouse interactions, getting a node's DEF name, and interacting with the VR headset.
 
- - The Webots objects library has been further extended.
+- The Webots objects library has been further extended.

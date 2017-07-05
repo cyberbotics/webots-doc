@@ -226,6 +226,8 @@ function setUpBlogStyleIfNeeded() {
     center.setAttribute("class", "blog");
 
     setHandleWidth(0);
+
+    document.title = "Webots Blog";
   }
 }
 
@@ -290,6 +292,7 @@ function populateViewDiv(mdContent) {
     highlightCode(view);
 
     updateSelection();
+    setUpBlogStyleIfNeeded();
 }
 
 // replace the browser URL after a dynamic load
@@ -713,5 +716,4 @@ document.addEventListener("DOMContentLoaded", function() {
     applyToTitleDiv();
     getMDFile();
     getMenuFile();
-    setUpBlogStyleIfNeeded();
 });

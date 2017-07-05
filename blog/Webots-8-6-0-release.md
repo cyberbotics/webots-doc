@@ -1,7 +1,6 @@
 # Version 8.6.0 Released
 
-<p id="publish-date">date string</p>
-<p id="author-name">By Tom Norton</p>
+<p id="publish-data">By Tom Norton - 14th July 2017</p>
 
 ---
 

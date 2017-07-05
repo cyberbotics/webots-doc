@@ -71,7 +71,13 @@ We have expanded our library of calibrated vehicles to include models from Linco
 
 This update also brings about numerous upgrades to user interaction. 
 
+### It's All Relative
+
 Now the Viewpoint movement speed and zoom is always relative to scene geometry. This means you can easily move around any world, big or small, with ease, from editing sensor positions on an E-puck to positioning buildings in a city simulation. 
+
+### INSERT SCROLLING GIF COMPARISON
+
+### Needle In A Haystack
 
 We have also added a new feature that makes scene navigation even easier; with one click of button you can center the view on any object you have selected, near or far:  
 
@@ -81,7 +87,7 @@ We have also added a new feature that makes scene navigation even easier; with o
 
 Now, even if you wish to find a small object nearby, or locate a car that has driven several miles away, one click is all it takes.
 
-You can now disable picking for objects in the scene for objects that are purely visual and are annoying to select by accident.
+You can now even stop accidentally selecting purely visual objects by disabling picking for Shape nodes.
 
 These are just some of the extra workflow improvements we are bringing with Webots 8.6.0.
 
@@ -91,6 +97,8 @@ These are just some of the extra workflow improvements we are bringing with Webo
 
 We've put work into improving the visual quality of simulations with this update.
 
+### Smooth Edges
+
 Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) support is now enabled in Webots. MSAA smooths jagged edges of scene geometry for a nicer appearance:
 
 %figure "The effect of MSAA"
@@ -98,6 +106,8 @@ Jagged edges are a thing of the past as Multi-Sample Anti-Aliasing (MSAA) suppor
 %end
 
 The default MSAA level is 2x, but via the preferences this can be increased to as much as 8x or disabled.
+
+### Improved Texture Filtering
 
 Textures can now be filtered using Anisotropic filtering techniques to avoid Moiré patterns and perspective Aliasing. Here is a checkerboard floor seen from far without and with Anisotropic Filtering enabled:
 

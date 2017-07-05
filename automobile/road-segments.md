@@ -284,7 +284,7 @@ The `Crossroad` PROTO represents a crossroad.
 Crossroad {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
-  SFString   name             ""                      # could contain the crossroad name
+  SFString   name             ""
   SFString   id               ""
   MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
   MFString   connectedRoadIDs []

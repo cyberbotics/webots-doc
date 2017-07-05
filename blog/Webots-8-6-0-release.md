@@ -32,7 +32,7 @@ See the feature presentation [video](http://www.youtube.com/watch?v=pd0jD1TbJe4)
 
 ### Blinding Light
 
-Attach lens flares to the Viewpoint or any robot camera to simulate glare from the sun:
+Add a LensFlare node to the Viewpoint or any robot camera to simulate glare from the sun:
 
 %figure "Lens Flares"
 ![LensFlare](images/lens_flare.png)

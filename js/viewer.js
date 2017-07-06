@@ -252,7 +252,6 @@ function setUpBlogStyleIfNeeded() {
       modal.appendChild(modalContent);
       modal.appendChild(caption);
 
-
       figures[0].parentNode.appendChild(modal);
 
       window.onclick = function(event) {

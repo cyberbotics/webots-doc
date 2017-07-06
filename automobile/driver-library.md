@@ -284,6 +284,38 @@ This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
 %end
 
+---
+
+**Name**
+
+**wbu\_driver\_set\_wipers\_mode**, **wbu\_driver\_get\_wipers\_mode** - *Set and get the wipers' mode*
+
+```c
+#include <webots/driver.h>
+
+void wbu_driver_set_wipers_mode(int mode);
+wbu_wiper_mode wbu_driver_get_wipers_mode();
+```
+
+**Description**
+
+The `wbu_driver_set_wipers_mode` function allows the user to set (using the
+`wbu_wiper_mode` enum) various speeds for the wipers from slow to fast. Whilst
+the slow and normal mode share the same speed, the slow mode activates the
+wipers once every few seconds. The `wbu_driver_get_wipers_mode` function allows
+the user to get the wipers' mode.
+
+%figure "wbu_wiper_mode enumeration"
+
+| ENUM   | Value |
+| ------ | ----- |
+| DOWN   | 0     |
+| SLOW   | 1     |
+| NORMAL | 2     |
+| FAST   | 3     |
+
+%end
+
 ### Engine models
 
 When the control in torque of the car is enabled, at each step the output torque

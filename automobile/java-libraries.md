@@ -14,6 +14,7 @@ The `Driver` class provides the following methods:
 | public class [Driver](driver-library.md) {                                                                          |
 | &nbsp;&nbsp; public final static int INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT;                             |
 | &nbsp;&nbsp; public final static int SPEED, TORQUE;                                                                 |
+| &nbsp;&nbsp; public final static int WIPER\_DOWN, WIPER\_SLOW, WIPER\_NORMAL, WIPER\_FAST;                          |
 | &nbsp;&nbsp; public int [step](driver-library.md#wbu_driver_step)();                                                |
 | &nbsp;&nbsp; public void [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(double steeringAngle); |
 | &nbsp;&nbsp; public double [getSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)();                   |
@@ -37,6 +38,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; public void [setGear](driver-library.md#wbu_driver_set_gear)(int gear);                                |
 | &nbsp;&nbsp; public int [getGearNumber](driver-library.md#wbu_driver_set_gear)();                                   |
 | &nbsp;&nbsp; public int [getControlMode](driver-library.md#wbu_driver_get_control_mode)();                          |
+| &nbsp;&nbsp; public void [setWiperMode](driver-library.md#wbu_driver_set_wipers_mode)(int mode);                    |
+| &nbsp;&nbsp; public int [getWiperMode](driver-library.md#wbu_driver_set_wipers_mode)();                             |
 | }                                                                                                                   |
 
 %end

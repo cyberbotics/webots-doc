@@ -125,7 +125,6 @@ Textures can now be filtered using Anisotropic filtering techniques to avoid Moi
 
 ## Extra Goodies
 
-
 World loading time has been reduced by up to 50% on large worlds.
 
 Users on Windows can now benefit from Microsoft text-to-speech technologies via the Speaker API.

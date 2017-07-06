@@ -40,7 +40,7 @@ Add a LensFlare node to the Viewpoint or any robot camera to simulate glare from
 
 ### Robots Within Robots
 
-After many requests from users, it is now possible to insert a Robot node as a descendant of another Robot in the scene tree. This change adds a new concept to what the Robot node really represents; one can now think of a robot as being a closed system of devices, managed by a controller program. For example, users may wish to embed a custom device on a humaniod robot. Here is just one example of the possibilities this change introduces (Image courtesy of Groupe INTRA):
+After many requests from users, it is now possible to insert a Robot node as a descendant of another Robot in the scene tree. This change adds a new concept to what the Robot node really represents; one can now think of a robot as being a closed system of devices, managed by a controller program. For example, users may wish to embed a custom device on a humaniod robot. Here is just one example of the possibilities this change introduces (Image courtesy of [Groupe INTRA](http://www.groupe-intra.com/fra)):
 
 %figure "Radiometer Device Embedded On Tracked EOLE Robot"
 ![EOLE](images/eole.png)

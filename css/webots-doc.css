@@ -310,8 +310,8 @@
 }
 
 .blog #view img {
-  max-width: 650px;
-  min-width: 650px;
+  max-width: 75%;
+  min-width: 75%;
 }
 
 .blog #view #publish-data {

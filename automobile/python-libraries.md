@@ -14,6 +14,7 @@ The `Driver` class provides the following methods:
 | class [Driver](driver-library.md) (Robot) :                                                                         |
 | &nbsp;&nbsp; INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT                                                      |
 | &nbsp;&nbsp; SPEED, TORQUE                                                                                          |
+| &nbsp;&nbsp; WIPER\_DOWN, WIPER\_SLOW, WIPER\_NORMAL, WIPER\_FAST                                                   |
 | &nbsp;&nbsp; def [step](driver-library.md#wbu_driver_step)(self)                                                    |
 | &nbsp;&nbsp; def [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(self, steeringAngle)           |
 | &nbsp;&nbsp; def [getSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(self)                          |
@@ -37,6 +38,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; def [setGear](driver-library.md#wbu_driver_set_gear)(self, gear)                                       |
 | &nbsp;&nbsp; def [getGearNumber](driver-library.md#wbu_driver_set_gear)(self)                                       |
 | &nbsp;&nbsp; def [getControlMode](driver-library.md#wbu_driver_get_control_mode)(self)                              |
+| &nbsp;&nbsp; def [setWiperMode](driver-library.md#wbu_driver_set_wipers_mode)(self, mode)                           |
+| &nbsp;&nbsp; def [getWiperMode](driver-library.md#wbu_driver_set_wipers_mode)(self)                                 |
 
 %end
 

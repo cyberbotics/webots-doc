@@ -65,11 +65,11 @@ Thanks to Valve introducing OpenVR, you can now experience Webots automobile sim
 
 With Webots 8.6.0 our environment modelling tools are more advanced than ever. We've overhauled our OpenStreetMap importer to make modelling real-world road networks and districts in Webots as quick and easy as possible, in even more detail and more accurately than before. Here is a comparison between previously imported road structures and revamped import:
 
-%figure "8.5.0"
+%figure "OSM Import in 8.5.0"
 ![8.5](images/osm_master.png)
 %end
 
-%figure "8.6.0"
+%figure "Revamped OSM Import in 8.6.0"
 ![8.6](images/osm_develop.png)
 %end
 

@@ -228,6 +228,50 @@ function setUpBlogStyleIfNeeded() {
     setHandleWidth(0);
 
     document.title = "Webots Blog";
+
+    var figures = document.getElementsByTagName("figure");
+    console.log(figures.length);
+    if (figures.length > 0) {
+
+      var modal = document.createElement("div");
+      var caption = document.createElement("div");
+      var close = document.createElement("span");
+      var modalContent = document.createElement("img");
+
+      modal.setAttribute("class", "modal");
+      modalContent.setAttribute("class", "modal-content");
+      caption.setAttribute("id", "caption");
+      
+      close.setAttribute("class", "close");
+      close.innerHTML = "&times;";
+      close.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      modal.appendChild(close);
+      modal.appendChild(modalContent);
+      modal.appendChild(caption);
+
+
+      figures[0].parentNode.appendChild(modal);
+
+      window.onclick = function(event) {
+        if (event.target == modal)
+          modal.style.display = "none";
+      }
+
+      var images = [];
+      for (var i = figures.length - 1; i >= 0; i--) {
+        figures[i].onclick = null;
+        console.log(figures[i].innerHTML[0]);
+        images[i] = figures[i].firstChild;
+        images[i].onclick = function () {
+          modal.style.display = "block";
+          modalContent.src = this.src;
+          caption.innerHTML = this.parentNode.childNodes[1].innerHTML;
+        }
+      }
+    }
   }
 }
 

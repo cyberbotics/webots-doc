@@ -279,9 +279,9 @@
   margin: 0 auto;
 }
 
-.blog #view h1, h2 {
+.blog #view h1, .blog #view h2 {
   text-align: center;
-  /*font-weight: bold;*/
+  color: #555;
 }
 
 .blog #view h1 {  
@@ -295,8 +295,9 @@
 }
 
 .blog #view h3 {
+  font-family: "Roboto";
   text-align: center;
-  color: #616181;
+  color: #444;
 }
 
 .blog #view hr {
@@ -312,6 +313,17 @@
 .blog #view img {
   max-width: 75%;
   min-width: 75%;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.05s;
+}
+
+.blog #view img:hover {
+  opacity: 0.7;
+}
+
+.blog #view .modal img:hover {
+  opacity: 1.0;
 }
 
 .blog #view #publish-data {
@@ -325,4 +337,78 @@
 @font-face {
   font-family: "Roboto";
   src: url(https://www.cyberbotics.com/files/repository/www/fonts/Roboto.ttf) format("truetype");
+}
+
+.blog .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.blog #view .modal-content {
+  margin: 0 auto;
+  display: block;
+  max-width: 75%;
+  min-width: 50%;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.05s;
+}
+
+.blog #view .modal-content img {
+  max-width: 75%;
+  min-width: 0%;
+}
+
+.blog #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.blog .modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.blog .close {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.blog .close:hover,
+.blog .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }

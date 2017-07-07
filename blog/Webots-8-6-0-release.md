@@ -73,7 +73,13 @@ With Webots 8.6.0 our environment modelling tools are more advanced than ever. W
 ![8.6](images/osm_develop.png)
 %end
 
-We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover, as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
+We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover:
+
+%figure "Left: Lincoln MKZ 2017. Right: RangeRover Sport SVR 2015."
+![8.6](images/new_car_models.png)
+%end
+
+as well as improving and optimizing our existing car models. Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
 
 ---
 

@@ -267,7 +267,7 @@
 
 .blog {
   background-color: #ede9e8;
-  background-image: url(https://www.cyberbotics.com/files/repository/www/wwi/8.5/crossword.png);
+  background-image: url(https://www.cyberbotics.com/files/repository/www/blog_resources/images/crossword.png);
 }
 
 .blog #title {
@@ -347,7 +347,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url(https://www.cyberbotics.com/files/repository/www/fonts/Roboto.ttf) format("truetype");
+  src: url(https://www.cyberbotics.com/files/repository/www/blog_resources/fonts/Roboto.ttf) format("truetype");
 }
 
 .blog .modal {

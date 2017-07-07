@@ -233,7 +233,6 @@ function setUpBlogStyleIfNeeded() {
     document.title = "Webots Blog";
 
     var figures = document.getElementsByTagName("figure");
-    console.log(figures.length);
     if (figures.length > 0) {
 
       var modal = document.createElement("div");
@@ -265,7 +264,6 @@ function setUpBlogStyleIfNeeded() {
       var images = [];
       for (var i = figures.length - 1; i >= 0; i--) {
         figures[i].onclick = null;
-        console.log(figures[i].innerHTML[0]);
         images[i] = figures[i].firstChild;
         images[i].onclick = function () {
           modal.style.display = "block";

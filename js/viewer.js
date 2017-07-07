@@ -208,6 +208,8 @@ function applyToTitleDiv() {
       newTitle = "Webots User Guide";
     else if (setup.book == "reference")
       newTitle = "Webots Reference Manual";
+    else if (setup.book == "blog")
+      newTitle = "Webots Blog";
     else if (setup.book == "automobile")
       newTitle = "Webots for automobiles";
     else if (setup.book == "robotis-op2")
@@ -217,6 +219,60 @@ function applyToTitleDiv() {
     if (newTitle.length > 0) {
       newTitle += " <div class='release-tag'>" + getWebotsVersion() + "</div>";
       titleContentElement.innerHTML = newTitle;
+    }
+  }
+}
+
+function setUpBlogStyleIfNeeded() {
+  if (setup.book == "blog") {
+    var center = document.getElementById("center");
+    center.setAttribute("class", "blog");
+
+    setHandleWidth(0);
+
+    document.title = "Webots Blog";
+
+    var figures = document.getElementsByTagName("figure");
+    console.log(figures.length);
+    if (figures.length > 0) {
+
+      var modal = document.createElement("div");
+      var caption = document.createElement("div");
+      var close = document.createElement("span");
+      var modalContent = document.createElement("img");
+
+      modal.setAttribute("class", "modal");
+      modalContent.setAttribute("class", "modal-content");
+      caption.setAttribute("id", "caption");
+      
+      close.setAttribute("class", "close");
+      close.innerHTML = "&times;";
+      close.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      modal.appendChild(close);
+      modal.appendChild(modalContent);
+      modal.appendChild(caption);
+
+      figures[0].parentNode.appendChild(modal);
+
+      window.onclick = function(event) {
+        if (event.target == modal)
+          modal.style.display = "none";
+      }
+
+      var images = [];
+      for (var i = figures.length - 1; i >= 0; i--) {
+        figures[i].onclick = null;
+        console.log(figures[i].innerHTML[0]);
+        images[i] = figures[i].firstChild;
+        images[i].onclick = function () {
+          modal.style.display = "block";
+          modalContent.src = this.src;
+          caption.innerHTML = this.parentNode.childNodes[1].innerHTML;
+        }
+      }
     }
   }
 }
@@ -282,6 +338,7 @@ function populateViewDiv(mdContent) {
     highlightCode(view);
 
     updateSelection();
+    setUpBlogStyleIfNeeded();
 }
 
 // replace the browser URL after a dynamic load

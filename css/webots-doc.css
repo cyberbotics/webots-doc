@@ -264,3 +264,162 @@
   font-family: monospace;
   width: 80%;
 }
+
+.blog {
+  background-color: #ede9e8;
+  background-image: url(https://www.cyberbotics.com/files/repository/www/wwi/8.5/crossword.png);
+}
+
+.blog #title {
+  text-align: center;
+  background: transparent;
+}
+
+.blog #view {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 10px;
+  background: transparent;
+}
+
+.blog #view p {
+  font-family: "Roboto";
+  width: 85%;
+  font-size: 1.1em;
+  margin: 0 auto;
+}
+
+.blog #view h1, .blog #view h2 {
+  text-align: center;
+  color: #555;
+}
+
+.blog #view h1 {  
+  font-size: 85px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.blog #view h2 {
+  font-size: 60px;
+}
+
+.blog #view h3 {
+  font-family: "Roboto";
+  text-align: center;
+  color: #444;
+}
+
+.blog #view hr {
+  border: 0;
+  padding-top: 1px;
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.blog #view img {
+  max-width: 75%;
+  min-width: 75%;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.05s;
+}
+
+.blog #view img:hover {
+  opacity: 0.7;
+}
+
+.blog #view .modal img:hover {
+  opacity: 1.0;
+}
+
+.blog #view #publish-data {
+  font-family: "Roboto";
+  font-size: 0.85em;
+  text-align: right;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(https://www.cyberbotics.com/files/repository/www/fonts/Roboto.ttf) format("truetype");
+}
+
+.blog .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.blog #view .modal-content {
+  margin: 0 auto;
+  display: block;
+  max-width: 75%;
+  min-width: 50%;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.05s;
+}
+
+.blog #view .modal-content img {
+  max-width: 75%;
+  min-width: 0%;
+}
+
+.blog #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.blog .modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.blog .close {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.blog .close:hover,
+.blog .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

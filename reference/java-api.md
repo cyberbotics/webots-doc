@@ -788,6 +788,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [Node](#java_node) [getSelf](supervisor.md#wb_supervisor_node_get_from_def)();                                                            |
 | &nbsp;&nbsp; public [Node](#java_node) [getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(String name);                                              |
 | &nbsp;&nbsp; public [Node](#java_node) [getFromId](supervisor.md#wb_supervisor_node_get_from_def)(int id);                                                    |
+| &nbsp;&nbsp; public [Node](#java_node) [getSelected](supervisor.md#wb_supervisor_node_get_from_def)();                                                        |
 | &nbsp;&nbsp; public void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, String label, double xpos, double ypos,                                    |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency, String font);                                                                           |
 | &nbsp;&nbsp; public void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, String label, double xpos, double ypos,                                    |

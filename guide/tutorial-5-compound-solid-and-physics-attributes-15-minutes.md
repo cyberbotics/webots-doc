@@ -114,7 +114,7 @@ also crucial to increase the simulation speed.
 Using a combination of Sphere, Box, Capsule and Cylinder nodes for defining
 objects is very efficient. Generally speaking, the efficiency of these
 primitives can be sorted like this: Sphere > Box > Capsule > Cylinder, where the
-Sphere is the most efficient. But this can be neglected for common usage.
+Sphere is the most efficient. But this can be neglected under common usage.
 
 The IndexedFaceSet geometry primitive can also be used in a bounding object.
 But this primitive is less efficient than the other primitives listed above.

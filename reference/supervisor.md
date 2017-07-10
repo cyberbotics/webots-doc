@@ -915,7 +915,7 @@ const double *wb_supervisor_field_get_sf_color(WbFieldRef field);
 const char *wb_supervisor_field_get_sf_string(WbFieldRef field);
 WbNodeRef wb_supervisor_field_get_sf_node(WbFieldRef field);
 bool wb_supervisor_field_get_mf_bool(WbFieldRef field, int index);
-int wb_supervisor_field_get_mf_in32(WbFieldRef field, int index);
+int wb_supervisor_field_get_mf_int32(WbFieldRef field, int index);
 double wb_supervisor_field_get_mf_float(WbFieldRef field, int index);
 const double *wb_supervisor_field_get_mf_vec2f(WbFieldRef field, int index);
 const double *wb_supervisor_field_get_mf_vec3f(WbFieldRef field, int index);

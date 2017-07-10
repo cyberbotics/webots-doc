@@ -506,6 +506,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; self.x                       |
 | &nbsp;&nbsp; self.y                       |
 | &nbsp;&nbsp; self.z                       |
+| &nbsp;&nbsp; self.selected\_node\_id      |
 
 %end
 

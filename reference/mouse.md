@@ -21,6 +21,8 @@ typedef struct {
   double x;
   double y;
   double z;
+  // selected node id
+  int selected_node_id;
 } WbMouseState;
 ```
 
@@ -29,6 +31,8 @@ A `true` state means the button is pressed while a `false` state means the butto
 
 The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.
 These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
+
+The `selected_node_id` field is indicating the node id of the currently selected node or `0` if no node is selected.
 
 ### Mouse Functions
 
@@ -49,7 +53,7 @@ WbMouseState wb_mouse_get_state();
 
 **Description**
 
-The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions. 
+The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions.
 Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()` function.
 The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
 Note that the first state will be available only after the first sampling period elapsed.

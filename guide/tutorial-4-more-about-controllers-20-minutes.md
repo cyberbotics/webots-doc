@@ -268,7 +268,7 @@ int main(int argc, char **argv)
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
 
-  // feedback loop: step simulation until receiving an exit event
+  // feedback loop: step simulation until an exit event is received
   while (wb_robot_step(TIME_STEP) != -1) {
     // read sensors outputs
     double ps_values[8];
@@ -291,10 +291,12 @@ int main(int argc, char **argv)
 
     // modify speeds according to obstacles
     if (left_obstacle) {
+      // turn right
       left_speed  += 500;
       right_speed -= 500;
     }
     else if (right_obstacle) {
+      // turn left
       left_speed  -= 500;
       right_speed += 500;
     }

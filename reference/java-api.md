@@ -520,17 +520,18 @@ The following tables describe the Java classes and their methods.
 
 %api "java_mouse_state"
 
-|                                                                  |
-| ---------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.MouseState;             |
-| public class [MouseState](mouse.md#wbmousestate) {               |
-| &nbsp;&nbsp; public double [getLeft](mouse.md#wbmousestate)();   |
-| &nbsp;&nbsp; public double [getMiddle](mouse.md#wbmousestate)(); |
-| &nbsp;&nbsp; public double [getRight](mouse.md#wbmousestate)();  |
-| &nbsp;&nbsp; public double [getX](mouse.md#wbmousestate)();      |
-| &nbsp;&nbsp; public double [getY](mouse.md#wbmousestate)();      |
-| &nbsp;&nbsp; public double [getZ](mouse.md#wbmousestate)();      |
-| }                                                                |
+|                                                                         |
+| ----------------------------------------------------------------------- |
+| import com.cyberbotics.webots.controller.MouseState;                    |
+| public class [MouseState](mouse.md#wbmousestate) {                      |
+| &nbsp;&nbsp; public double [getLeft](mouse.md#wbmousestate)();          |
+| &nbsp;&nbsp; public double [getMiddle](mouse.md#wbmousestate)();        |
+| &nbsp;&nbsp; public double [getRight](mouse.md#wbmousestate)();         |
+| &nbsp;&nbsp; public double [getX](mouse.md#wbmousestate)();             |
+| &nbsp;&nbsp; public double [getY](mouse.md#wbmousestate)();             |
+| &nbsp;&nbsp; public double [getZ](mouse.md#wbmousestate)();             |
+| &nbsp;&nbsp; public int [getSelectedNodeId()](mouse.md#wbmousestate)(); |
+| }                                                                       |
 
 %end
 

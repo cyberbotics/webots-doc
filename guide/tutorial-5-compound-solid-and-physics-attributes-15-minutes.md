@@ -114,7 +114,7 @@ also crucial to increase the simulation speed.
 Using a combination of Sphere, Box, Capsule and Cylinder nodes for defining
 objects is very efficient. Generally speaking, the efficiency of these
 primitives can be sorted like this: Sphere > Box > Capsule > Cylinder, where the
-Sphere is the most efficient. But this can be neglected for a common usage.
+Sphere is the most efficient. But this can be neglected for common usage.
 
 The IndexedFaceSet geometry primitive can also be used in a bounding object.
 But this primitive is less efficient than the other primitives listed above.
@@ -156,12 +156,12 @@ The most critical parameters for a physics simulation are stored in the
 
 The `basicTimeStep` field determines the duration (in [ms]) of a physics step.
 The bigger this value is, the quicker the simulation is, the less precise the
-simulation is. We recommend values between *8* and *16* for a regular use of
+simulation is. We recommend values between *8* and *16* for regular use of
 Webots.
 
 It's more difficult to explain the behavior of the `ERP` and `CFM` fields. These
 values are directly used by the physics engine to determine how the constraints
-are solved. The default values are well defined  for a regular use of Webots. We
+are solved. The default values are well defined  for regular use of Webots. We
 recommend to read the `Reference Manual` and the documentation of
 [ODE](http://ode-wiki.org/wiki/index.php?title=Manual) (physics engine used in
 Webots) to understand completely their purpose.

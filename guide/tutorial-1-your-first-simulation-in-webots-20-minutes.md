@@ -214,7 +214,7 @@ Don't forget to revert the simulation before hiding the camera and to save it af
 ### Create a new Controller
 
 We will now program a simple controller that will just make the robot move
-forwards. As there is no obstacle, the robot will go forwards for ever. Firstly
+forwards. As there is no obstacle, the robot will move forwards for ever. Firstly
 we will create and edit the C controller, then we will link it to the robot.
 
 > **Theory**:
@@ -297,7 +297,7 @@ Save the modified source code (`File / Save Text File`), and compile it (`Build
 / Build`). Fix any compilation errors if necessary. When Webots proposes to
 revert the simulation, choose `Yes`.
 
-If everything is ok, your robot should go forwards.
+If everything is ok, your robot should move forwards.
 
 > **Note**:
 In the "controllers" directory of your project, a directory containing the

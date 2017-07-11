@@ -15,6 +15,7 @@ The `Driver` class provides the following methods:
 | class [Driver](driver-library.md) {                                                                          |
 | &nbsp;&nbsp; enum {INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT};                                       |
 | &nbsp;&nbsp; enum {SPEED, TORQUE };                                                                          |
+| &nbsp;&nbsp; enum {DOWN, SLOW, NORMAL, FAST};                                                                |
 | &nbsp;&nbsp; virtual int [step](driver-library.md#wbu_driver_step)();                                        |
 | &nbsp;&nbsp; void [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(double steeringAngle); |
 | &nbsp;&nbsp; double [getSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)();                   |
@@ -38,6 +39,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; void [setGear](driver-library.md#wbu_driver_set_gear)(int gear);                                |
 | &nbsp;&nbsp; int [getGearNumber](driver-library.md#wbu_driver_set_gear)();                                   |
 | &nbsp;&nbsp; int [getControlMode](driver-library.md#wbu_driver_get_control_mode)();                          |
+| &nbsp;&nbsp; void [setWipersMode](driver-library.md#wbu_driver_set_wipers_mode)(int mode);                   |
+| &nbsp;&nbsp; int [getWipersMode](driver-library.md#wbu_driver_set_wipers_mode)();                            |
 | };                                                                                                           |
 
 %end

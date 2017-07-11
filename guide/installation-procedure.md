@@ -39,7 +39,8 @@ of the OpenGL hardware acceleration with Webots. Please find instructions in
 
 > **Note**:
 Webots needs the *avconv* program to create MPEG-4 movies, that can be installed
-with *libav-tools*, *libavcodec-extra-54*, and *libfdk-aac0* packages.
+with *libav-tools*, *libavcodec-extra*, and *libfdk-aac0* packages.
+The package names are specific to Ubuntu 16.04 and they could slightly change on different releases and distributions.
 
 #### Using Advanced Packaging Tool (APT)
 
@@ -110,11 +111,11 @@ The export line should however be included in a configuration script like
 "/etc/profile", so that it is set properly for every session.
 
 Some additional libraries are needed in order to properly run Webots. In
-particular *libjpeg62*, *libav-tools*, *libpci3* and *libavcodec-ffmpeg-extra56* have
+particular *libjpeg8*, *libav-tools*, *libpci3* and *libavcodec-extra* have
 to be installed on the system.
 
 > **Note**:
-On old versions of Ubuntu (before 16.04) *libpci3* should be replaced by *libpci* and *libavcodec-ffmpeg-extra56* by *libavcodec-extra-54*.
+On old versions of Ubuntu or other linux distributions the library names and versions could be slightly different.
 
 #### From the DEB package
 
@@ -163,7 +164,7 @@ webots.version.bugfix }}\_setup.exe /SILENT" or "webots-{{ webots.version.major
 If you observe 3D rendering anomalies or if Webots crashes, it is strongly
 recommend to upgrade your graphics driver.
 
-### Installation on Mac OS X
+### Installation on macOS
 
 1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
 webots.version.bugfix }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
@@ -179,11 +180,11 @@ kern.sysv.shmmni=128
 kern.sysv.shmseg=32
 kern.sysv.shmall=4096
 ```
-These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the Mac OS X documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
+These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the macOS documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
 
-### Mac OS X security
+### macOS security
 
-During the first Webots launch, Mac OS X may complain about opening Webots because it is from an unidentified developer
+During the first Webots launch, macOS may complain about opening Webots because it is from an unidentified developer
 (see [this figure](#unidentified-developer-dialog)).
 
 %figure "Unidentified developer dialog"
@@ -193,7 +194,7 @@ During the first Webots launch, Mac OS X may complain about opening Webots becau
 %end
 
 In this case, `Ctrl + click` (or right-click) on the Webots icon, and select the `Open` menu item.
-Mac OS X should propose to open the application anyway
+macOS should propose to open the application anyway
 (see [this figure](#unidentified-developer-dialog)).
 
 %figure "Open Webots anyway"
@@ -202,6 +203,6 @@ Mac OS X should propose to open the application anyway
 
 %end
 
-In earlier versions of Mac OS X, this last operation may not work.
-In this case, refer to your Mac OS X security settings to open Webots anyway
+In earlier versions of macOS, this last operation may not work.
+In this case, refer to your macOS security settings to open Webots anyway
 (`System Preferences / Security & Privacy / General / Allow apps downloaded from:`).

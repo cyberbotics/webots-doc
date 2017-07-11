@@ -86,7 +86,10 @@ class TestReferences(unittest.TestCase):
                     )
                     if ref.startswith('http'):
                         continue
-                    # 2. mailto
+                    # 3. steam link
+                    if ref.startswith('steam:'):
+                        continue
+                    # 4. mailto
                     if ref.startswith('mailto:'):
                         mailto = ref[len('mailto:') + 1:]
                         (name, address) = parseaddr(mailto)
@@ -95,7 +98,7 @@ class TestReferences(unittest.TestCase):
                             msg='Invalid address "%s"' % (mailto)
                         )
                         continue
-                    # 3. link to another MD file
+                    # 5. link to another MD file
                     link = ''
                     anchor = ''
                     if ref.startswith('#'):
@@ -117,7 +120,7 @@ class TestReferences(unittest.TestCase):
                             os.path.isfile(file_path),
                             msg='%s: "%s" not found' % (md_path, file_path)
                         )
-                    # 4. Anchor
+                    # 6. Anchor
                     if anchor != '':
                         file_path = ''
                         if link == '':

@@ -72,7 +72,7 @@ scored.
 
 **Name**
 
-**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
+**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self**, **wb\_supervisor\_node\_get\_selected** - *get a handle to a node in the world*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
@@ -80,20 +80,21 @@ scored.
 #include <webots/supervisor.h>
 
 WbNodeRef wb_supervisor_node_get_from_def(const char *def);
+const char *wb_supervisor_node_get_def(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_from_id(int id);
 int wb_supervisor_node_get_id(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_root();
 WbNodeRef wb_supervisor_node_get_self();
+WbNodeRef wb_supervisor_node_get_selected();
 ```
 
 **Description**
 
-The `wb_supervisor_node_get_from_def()` function retrieves a handle to a node in
+The `wb_supervisor_node_get_from_def()` function returns a handle to a node in
 the world from its DEF name. The return value can be used for subsequent calls
 to functions which require a `WbNodeRef` parameter. If the requested node does
-not exist in the current world file or is an internal node of a PROTO, the
-function returns NULL, otherwise, it returns a non-NULL handle.
+not exist in the current world file or is an internal node of a PROTO, the function returns NULL.
 
 It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
@@ -106,7 +107,10 @@ WbNodeRef node = wb_supervisor_node_get_from_def("ROBOT.JOINT.SOLID");
 means that we are searching for a node named "SOLID" inside a node named
 "JOINT", inside a node named "ROBOT".
 
-Similarily, the `wb_supervisor_node_get_from_id()` function retrieves a handle
+The `wb_supervisor_node_get_def()` retrieves the DEF name of the node passed
+as a parameter. If no DEF name is specified, this function returns the empty string.
+
+The `wb_supervisor_node_get_from_id()` function retrieves a handle
 to a node, but from its unique identifier (the `id` parameter). The function
 returns NULL if the given identifier doesn't match with any node of the current
 world. It is recommended to use this function only when knowing formerly the
@@ -132,6 +136,9 @@ The `wb_supervisor_node_get_self()` function returns a handle to the
 [Supervisor](#supervisor) node itself on which the controller is run. This is a
 utility function that simplifies the task of retrieving the base node without
 having to define a DEF name for it.
+
+The `wb_supervisor_node_get_selected()` function returns a handle to the currently selected node in the scene tree.
+If no node is currently selected, the function returns NULL.
 
 ---
 
@@ -164,12 +171,12 @@ this function returns the PROTO name, like "E-puck", "RectangleArena", "Door",
 etc. Otherwise if the argument node is not a PROTO node the returned value is
 the same as the output of `wb_supervisor_node_get_base_type_name` function, i.e.
 "DifferentialWheels", "Appearance", "LightSensor", etc. If the argument is NULL,
-the function returns NULL.
+the function returns the empty string.
 
 The `wb_supervisor_node_get_base_type_name()` function returns a text string
 corresponding to the base type name of the node, like "DifferentialWheels",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
-NULL.
+the empty string.
 
 > **Note** [C++, Java, Python]:
 In the oriented-object APIs, the WB\_NODE\_* constants are available as static
@@ -457,6 +464,26 @@ argument must be a [Solid](solid.md) node (or a derived node). This function
 could be useful for resetting the physics of a solid after changing its
 translation or rotation. To stop the inertia of all available solids please
 refer to [this section](#wb_supervisor_simulation_reset_physics).
+
+---
+
+**Name**
+
+**wb\_supervisor\_node\_restart\_controller** - *restarts the controller of the given robot*
+
+{[C++](cpp-api.md#cpp_node)}, {[Java](java-api.md#java_node)}, {[Python](python-api.md#python_node)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_restart_controller(WbNodeRef node);
+```
+
+**Description**
+
+The `wb_supervisor_node_restart_controller()` function restarts the controller of the Robot
+passed to it. If a node other than a Robot is passed to this function, no change is effected,
+and a warning message is printed to the console.
 
 ---
 
@@ -881,7 +908,7 @@ The `wb_supervisor_field_get_type_name()` returns a text string corresponding to
 the data type of a field found previously from the
 `wb_supervisor_node_get_field()` function. Field type names are defined in the
 VRML'97 specifications and include for example: `"SFFloat"`, `"MFNode"`,
-`"SFString"`, etc. If the argument is NULL, the function returns NULL.
+`"SFString"`, etc. If the argument is NULL, the function returns the empty string.
 
 The `wb_supervisor_field_get_count()` returns the number of items of a multiple
 field (MF) passed as an argument to this function. If a single field (SF) or
@@ -933,7 +960,7 @@ used, otherwise the return value is undefined (and a warning message is
 displayed). If the `field` parameter is NULL, it has the wrong type, or the
 `index` is not valid, then a default value is returned. Default values are
 defined as `0` and `0.0` for integer and double values, `false` in case of
-boolean values, and NULL for vectors, strings and pointers.
+boolean values, NULL for vectors and pointers and the empty string `""` for strings.
 
 The `wb_supervisor_field_get_mf_*()` functions work the same way as the
 `wb_supervisor_field_get_sf_*()` functions but with multiple `field` argument.
@@ -1070,3 +1097,32 @@ an MF\_NODE (like if the node was manually removed from the scene tree).
 Note that these functions are still limited in the actual Webots version. For
 example, a device imported into a Robot node doesn't reset the Robot, so the
 device cannot be get by using the `wb_robot_get_device()` function.
+
+---
+
+**Name**
+
+**wb\_supervisor\_virtual\_reality\_headset\_is\_used**, **wb\_supervisor\_virtual\_reality\_headset\_get\_position**, **wb\_supervisor\_virtual\_reality\_headset\_get\_orientation** - *check if a virtual reality headset is used and get its position and orientation*
+
+{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+bool          wb_supervisor_virtual_reality_headset_is_used();
+const double *wb_supervisor_virtual_reality_headset_get_position();
+const double *wb_supervisor_virtual_reality_headset_get_orientation();
+```
+
+**Description**
+
+The `wb_supervisor_virtual_reality_headset_is_used()` function returns true if a virtual reality headset is currently used to view the simulation.
+For more information about how to use a virtual reality headset refer to the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#view-menu).
+
+The `wb_supervisor_virtual_reality_headset_get_position()` and `wb_supervisor_virtual_reality_headset_get_orientation` functions return respectively the current position and orientation of the virtual reality headset as a vector of 3 doubles and a matrix containing 9 doubles that should be interpreted as a 3 x 3 orthogonal rotation matrix:
+```
+[ R[0] R[1] R[2] ]
+[ R[3] R[4] R[5] ]
+[ R[6] R[7] R[8] ]
+```
+If the position or the orientation of the virtual reality headset is not tracked or no virtual reality headset is currently used, these functions will return `NaN` (Not a Number) values.

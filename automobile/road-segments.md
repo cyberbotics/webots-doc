@@ -18,8 +18,14 @@ purposes.
 Road {
   SFVec3f    translation               0 0 0
   SFRotation rotation                  0 1 0 0
+  SFString   name                      ""
+  SFString   id                        ""
+  SFString   startJunction             ""
+  SFString   endJunction               ""
   SFFloat    width                     7
   SFInt32    numberOfLanes             2
+  SFInt32    numberOfForwardLanes      1
+  SFFloat    speedLimit                -1.0
   MFBool     dashedLine                TRUE
   SFFloat    roadBorderHeight          0.15
   MFFloat    roadBorderWidth           [ 0.8 ]
@@ -40,18 +46,29 @@ Road {
   SFFloat    textureScale              2
   MFString   pavementTexture           "textures/pavement.jpg"
   MFString   bottomTexture             [ ]
+  SFString   turnLanesForward          ""
+  SFString   turnLanesBackward         ""
   SFBool     locked                    TRUE
   SFBool     roadBoundingObject        FALSE
   SFBool     rightBorderBoundingObject FALSE
   SFBool     leftBorderBoundingObject  FALSE
+  SFBool     castShadows               FALSE
   SFString   contactMaterial           "default"
 }
 ```
 
 #### Road field Summary
 
+- `name`: Could contain the street name.
+- `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
+- `startJunction`: Could contain a reference to the [Crossroad](#crossroad) connected at the first Road waypoint.
+Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
+- `endJunction`: Could contain a reference to the [Crossroad](#crossroad) connected at the last Road waypoint.
+Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
 - `width`: Defines the total width of the road (excluding sidewalk).
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
+- `numberOfForwardLanes`: Defines number of forward lanes.
+- `speedLimit`: Could contain the speed limit in meter per seconds.
 - `dashedLine`: Defines for each line separating two lanes whether it should be
 continuous or dashed.
 - `roadBorderHeight`: Defines the height of the sidewalk.
@@ -78,7 +95,7 @@ are less values than way-points, 0 is used for the last remaining way-points).
 - `startLine`: Defines the texture used for the road line at the first way-point
 for each lane. If the string is empty, no road line will be added for the corresponding
 lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png`
-may be used in this fied.
+may be used in this field.
 - `endLine`: Defines the texture used for the road line at the last way-point for
 each lane. If the string is empty, no road line will be added for the corresponding lane.
 - `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
@@ -87,11 +104,18 @@ value is lower than 0, the interpolation is disabled).
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
+- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same
+format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none").
+Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Key:turn.
+- `turnLanesBackward`: Idem for the OSM "turn:lanes:backward" key.
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a
 bounding object.
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
 object.
+- `castShadows`: defines whether the road should cast shadows.
+- `contactMaterial`: defines the road contact material (used by the ContactProperties node).
+
 
 ### StraightRoadSegment
 
@@ -246,6 +270,43 @@ only the specific ones will be explained.
 - `heigthStep`: Defines the step for the road to complete one lap.
 - `subdivision`: Defines the subdivision of the helicoid.
 
+### Crossroad
+
+The `Crossroad` PROTO represents a crossroad.
+
+%figure "Crossroad intersection"
+
+![crossroad.png](images/crossroad.png)
+
+%end
+
+```
+Crossroad {
+  SFVec3f    translation      0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString   name             ""
+  SFString   id               ""
+  MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
+  MFString   connectedRoadIDs []
+  SFBool     boundingObject   FALSE
+  SFBool     bottom           FALSE
+  SFBool     locked           TRUE
+  SFBool     castShadows      FALSE
+  SFString   contactMaterial  "default"
+}
+```
+
+#### Crossroad Field Summary
+
+Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
+only the specific ones will be explained.
+
+- `name`: Could contain the crossroad name.
+- `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
+- `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
+- `boundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
+
 ### Roundabout
 
 The `Roundabout` PROTO represents a roundabout intersection.
@@ -271,7 +332,7 @@ Roundabout {
   SFBool     center                   TRUE
   SFVec2f    centerTextureScale       4 4
   SFInt32    roadNumber               4
-  SFFloat    startRoadsLenght         5
+  SFFloat    startRoadsLength         5
   SFFloat    startRoadsWith           7
   SFInt32    startRoadsNumberOfLanes  2
   MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
@@ -325,7 +386,7 @@ RoadIntersection {
   SFInt32    roadNumber                     4
   SFFloat    roadsWith                      7
   SFBool     startRoads                     TRUE
-  SFFloat    startRoadsLenght               5
+  SFFloat    startRoadsLength               5
   SFInt32    startRoadsNumberOfLanes        2
   MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
                                               "textures/road_line_triangle.png" ]

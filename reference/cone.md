@@ -2,8 +2,8 @@
 
 ```
 Cone {
-  SFFloat bottomRadius 1    # (-inf,inf)
-  SFFloat height       2    # (-inf,inf)
+  SFFloat bottomRadius 1    # (0,inf)
+  SFFloat height       2    # (0,inf)
   SFBool  side         TRUE
   SFBool  bottom       TRUE
   SFInt32 subdivision  12   # (3,inf)
@@ -17,9 +17,6 @@ field specifies the height of the cone from the center of the base to the apex.
 By default, the cone has a radius of 1 meter at the bottom and a height of 2
 meters, with its apex at y = height/2 and its bottom at y = -height/2.  See
 [this figure](#the-cone-node).
-
-If both `bottomRadius` and `height` are positive, the outside faces of the cone
-are displayed while if they are negative, the inside faces are displayed.
 
 The `side` field specifies whether the sides of the cone are created, and the
 `bottom` field specifies whether the bottom cap of the cone is created. A value

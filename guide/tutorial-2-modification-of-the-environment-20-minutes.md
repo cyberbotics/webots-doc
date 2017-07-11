@@ -63,12 +63,12 @@ between any two given points of a rigid body remains constant in time regardless
 of external forces exerted on it. Soft bodies and articulated objects are not
 rigid bodies, e.g. the following are not rigid bodies: a rope, a tyre, a sponge and an
 articulated robot arm. However, an articulated entity can be broken into of
-several undividable rigid bodies. For example a table, a robot finger phalanx or
-a wheel are undividable rigid bodies.
+several indivisible rigid bodies. For example a table, a robot finger phalanx or
+a wheel are indivisible rigid bodies.
 
 The physics engine of Webots is designed for simulating rigid bodies. An
 important step, when designing a simulation, is to break up the various
-entities into undividable rigid bodies.
+entities into indivisible rigid bodies.
 
 > **Theory**:
 In Webots there is a direct match between a rigid body and a **Solid** node.
@@ -171,7 +171,8 @@ mechanism.
 Select the first Sphere node (the child of the Shape) in the scene tree view.
 The field editor of the scene tree view allows you to enter the DEF string.
 Enter *"BALL\_GEOMETRY"*. Select the boundingObject field (containing the second
-Sphere node), and delete it by using the `Reset to default` button in the field editor. Then, click
+Sphere node), and delete it by using the `Reset to default` button in the field editor 
+(represented by an asterisk). Then, click
 on the `Add` button, and select the `USE / BALL_GEOMETRY` in the dialog box. The
 result is shown in [this
 figure](#def-use-mechanism-on-the-sphere-node-called-ball_geometry).
@@ -201,8 +202,8 @@ For convenience, the `boundingObject` field accepts also the Shape node (rather
 than the Sphere node directly). It would be also possible to use the same
 DEF-USE mechanism at the Shape level as shown in [this
 figure](#def-use-mechanism-applied-on-the-shape-node-of-a-solid). For now the
-best advantage is to use this Shape also directly for graphical purposes. Later
-this will turn out to be very useful for some sensors.
+greatest benefit is being able to also use this Shape directly for graphical purposes. Later
+this mechanism will turn out to be very useful for some sensors.
 
 In order to verify your progression, implement by yourself four walls to
 surround the environment. The walls have to be defined statically to the
@@ -231,13 +232,12 @@ The simulation of rigid bodies is computationally expensive. The simulation
 speed can be increased by minimizing the number of bounding objects, minimizing
 the constraints between them (more information about the constraints in the next
 tutorials), and maximizing the `WorldInfo.basicTimeStep` field. On each
-simulation, a **trade-off** has to be found between the simulation speed and the
+simulation, a **trade-off** has to be found between simulation speed and
 realism.
 
 ### Conclusion
 
 At the end of this tutorial, you are able to create simple environments based on
 rigid bodies. You are able to add nodes from the scene tree view and to modify
-their fields. You have a more precise idea of what are the Solid, the Physics,
-the Shape, the Sphere and the Box nodes. You also saw the DEF-USE mechanism that
+their fields. You have become acquainted with the Solid, Physics, Shape, Sphere and Box nodes. You also saw the DEF-USE mechanism that
 allows to reduce node redundancy of the scene tree.

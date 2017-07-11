@@ -28,36 +28,60 @@ The following tables describe the Python classes and their methods.
 
 %api "python_camera"
 
-|                                                                                                |
-| ---------------------------------------------------------------------------------------------- |
-| from controller import Camera                                                                  |
-| class [Camera](camera.md) ([Device](#python_device)) :                                         |
-| &nbsp;&nbsp; def [enable](camera.md#wb_camera_enable)(self, sampling_period)                   |
-| &nbsp;&nbsp; def [disable](camera.md#wb_camera_enable)(self)                                   |
-| &nbsp;&nbsp; def [getSamplingPeriod](camera.md#wb_camera_enable)(self)                         |
-| &nbsp;&nbsp; def [getFov](camera.md#wb_camera_get_fov)(self)                                   |
-| &nbsp;&nbsp; def [getMinFov](camera.md#wb_camera_get_fov)(self)                                |
-| &nbsp;&nbsp; def [getMaxFov](camera.md#wb_camera_get_fov)(self)                                |
-| &nbsp;&nbsp; def [setFov](camera.md#wb_camera_get_fov)(self, fov)                              |
-| &nbsp;&nbsp; def [getFocalLength](camera.md#wb_camera_get_focal_length)(self)                  |
-| &nbsp;&nbsp; def [getFocalDistance](camera.md#wb_camera_get_focal_length)(self)                |
-| &nbsp;&nbsp; def [getMaxFocalDistance](camera.md#wb_camera_get_focal_length)(self)             |
-| &nbsp;&nbsp; def [getMinFocalDistance](camera.md#wb_camera_get_focal_length)(self)             |
-| &nbsp;&nbsp; def [setFocalDistance](camera.md#wb_camera_get_focal_length)(self, focalDistance) |
-| &nbsp;&nbsp; def [getWidth](camera.md#wb_camera_get_width)(self)                               |
-| &nbsp;&nbsp; def [getHeight](camera.md#wb_camera_get_width)(self)                              |
-| &nbsp;&nbsp; def [getNear](camera.md#wb_camera_get_near)(self)                                 |
-| &nbsp;&nbsp; def [getImage](camera.md#wb_camera_get_image)(self)                               |
-| &nbsp;&nbsp; def [getImageArray](camera.md#wb_camera_get_image)(self)                          |
-| &nbsp;&nbsp; def [imageGetRed](camera.md#wb_camera_get_image)(image, width, x, y)              |
-| &nbsp;&nbsp; imageGetRed = staticmethod(imageGetRed)                                           |
-| &nbsp;&nbsp; def [imageGetGreen](camera.md#wb_camera_get_image)(image, width, x, y)            |
-| &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen)                                       |
-| &nbsp;&nbsp; def [imageGetBlue](camera.md#wb_camera_get_image)(image, width, x, y)             |
-| &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                         |
-| &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)             |
-| &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                         |
-| &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)          |
+|                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ |
+| from controller import Camera                                                                                |
+| class [Camera](camera.md) ([Device](#python_device)) :                                                       |
+| &nbsp;&nbsp; def [enable](camera.md#wb_camera_enable)(self, sampling_period)                                 |
+| &nbsp;&nbsp; def [disable](camera.md#wb_camera_enable)(self)                                                 |
+| &nbsp;&nbsp; def [getSamplingPeriod](camera.md#wb_camera_enable)(self)                                       |
+| &nbsp;&nbsp; def [getFov](camera.md#wb_camera_get_fov)(self)                                                 |
+| &nbsp;&nbsp; def [getMinFov](camera.md#wb_camera_get_fov)(self)                                              |
+| &nbsp;&nbsp; def [getMaxFov](camera.md#wb_camera_get_fov)(self)                                              |
+| &nbsp;&nbsp; def [setFov](camera.md#wb_camera_get_fov)(self, fov)                                            |
+| &nbsp;&nbsp; def [getFocalLength](camera.md#wb_camera_get_focal_length)(self)                                |
+| &nbsp;&nbsp; def [getFocalDistance](camera.md#wb_camera_get_focal_length)(self)                              |
+| &nbsp;&nbsp; def [getMaxFocalDistance](camera.md#wb_camera_get_focal_length)(self)                           |
+| &nbsp;&nbsp; def [getMinFocalDistance](camera.md#wb_camera_get_focal_length)(self)                           |
+| &nbsp;&nbsp; def [setFocalDistance](camera.md#wb_camera_get_focal_length)(self, focalDistance)               |
+| &nbsp;&nbsp; def [getWidth](camera.md#wb_camera_get_width)(self)                                             |
+| &nbsp;&nbsp; def [getHeight](camera.md#wb_camera_get_width)(self)                                            |
+| &nbsp;&nbsp; def [getNear](camera.md#wb_camera_get_near)(self)                                               |
+| &nbsp;&nbsp; def [getImage](camera.md#wb_camera_get_image)(self)                                             |
+| &nbsp;&nbsp; def [getImageArray](camera.md#wb_camera_get_image)(self)                                        |
+| &nbsp;&nbsp; def [imageGetRed](camera.md#wb_camera_get_image)(image, width, x, y)                            |
+| &nbsp;&nbsp; imageGetRed = staticmethod(imageGetRed)                                                         |
+| &nbsp;&nbsp; def [imageGetGreen](camera.md#wb_camera_get_image)(image, width, x, y)                          |
+| &nbsp;&nbsp; imageGetGreen = staticmethod(imageGetGreen)                                                     |
+| &nbsp;&nbsp; def [imageGetBlue](camera.md#wb_camera_get_image)(image, width, x, y)                           |
+| &nbsp;&nbsp; imageGetBlue = staticmethod(imageGetBlue)                                                       |
+| &nbsp;&nbsp; def [imageGetGray](camera.md#wb_camera_get_image)(image, width, x, y)                           |
+| &nbsp;&nbsp; imageGetGray = staticmethod(imageGetGray)                                                       |
+| &nbsp;&nbsp; def [saveImage](camera.md#wb_camera_save_image)(self, filename, quality)                        |
+| &nbsp;&nbsp; def [hasRecognition](camera.md#wb_camera_has_recognition)(self)                                 |
+| &nbsp;&nbsp; def [recognitionEnable](camera.md#wb_camera_has_recognition)(self, samplingPeriod)              |
+| &nbsp;&nbsp; def [recognitionDisable](camera.md#wb_camera_has_recognition)(self)                             |
+| &nbsp;&nbsp; def [getRecognitionSamplingPeriod](camera.md#wb_camera_has_recognition)(self)                   |
+| &nbsp;&nbsp; def [getRecognitionNumberOfObjects](camera.md#wb_camera_has_recognition)(self)                  |
+| &nbsp;&nbsp; def CameraRecognitionObject *[getRecognitionObjects](camera.md#wb_camera_has_recognition)(self) |
+
+%end
+
+%api "camera_recognition_object"
+
+|                                                 |
+| ----------------------------------------------- |
+| from controller import CameraRecognitionObject  |
+| class CameraRecognitionObject :                 |
+| &nbsp;&nbsp; def get_id(self)                   |
+| &nbsp;&nbsp; def get_position(self)             |
+| &nbsp;&nbsp; def get_orientation(self)          |
+| &nbsp;&nbsp; def get_size(self)                 |
+| &nbsp;&nbsp; def get_position_on_image(self)    |
+| &nbsp;&nbsp; def get_size_on_image(self)        |
+| &nbsp;&nbsp; def get_number_of_colors(self)     |
+| &nbsp;&nbsp; def get_colors(self)               |
+| &nbsp;&nbsp; def get_name(self)                 |
 
 %end
 
@@ -457,18 +481,47 @@ The following tables describe the Python classes and their methods.
 
 %end
 
+%api "python_mouse"
+
+|                                                                            |
+| -------------------------------------------------------------------------- |
+| from controller import Mouse                                               |
+| class [Mouse](mouse.md) :                                                  |
+| &nbsp;&nbsp; def [enable](mouse.md#wb_mouse_enable)(self, sampling_period) |
+| &nbsp;&nbsp; def [disable](mouse.md#wb_mouse_enable)(self)                 |
+| &nbsp;&nbsp; def [getSamplingPeriod](mouse.md#wb_mouse_enable)(self)       |
+| &nbsp;&nbsp; def [getState](mouse.md#wb_mouse_enable)(self)                |
+
+%end
+
+%api "python_mouse_state"
+
+|                                           |
+| ------------------------------------------|
+| from controller import MouseState         |
+| class [MouseState](#python_mouse_state) : |
+| &nbsp;&nbsp; self.left                    |
+| &nbsp;&nbsp; self.middle                  |
+| &nbsp;&nbsp; self.right                   |
+| &nbsp;&nbsp; self.x                       |
+| &nbsp;&nbsp; self.y                       |
+| &nbsp;&nbsp; self.z                       |
+
+%end
+
 %api "python_node"
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | from controller import Node                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | class Node :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| &nbsp;&nbsp; NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM |
+| &nbsp;&nbsp; NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM |
 | &nbsp;&nbsp; def [remove](supervisor.md#wb_supervisor_node_remove)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | &nbsp;&nbsp; def [getType](supervisor.md#wb_supervisor_node_get_type)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | &nbsp;&nbsp; def [getId](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | &nbsp;&nbsp; def [getTypeName](supervisor.md#wb_supervisor_node_get_type)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | &nbsp;&nbsp; def [getBaseTypeName](supervisor.md#wb_supervisor_node_get_type)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| &nbsp;&nbsp; def [getDef](supervisor.md#wb_supervisor_node_get_def)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | &nbsp;&nbsp; def [getField](supervisor.md#wb_supervisor_node_get_field)(self, fieldName)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | &nbsp;&nbsp; def [getParentNode](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | &nbsp;&nbsp; def [getPosition](supervisor.md#wb_supervisor_node_get_position)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -480,6 +533,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getVelocity](supervisor.md#wb_supervisor_node_get_velocity)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | &nbsp;&nbsp; def [setVelocity](supervisor.md#wb_supervisor_node_get_velocity)(self, velocity)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | &nbsp;&nbsp; def [resetPhysics](supervisor.md#wb_supervisor_node_reset_physics)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| &nbsp;&nbsp; def [restartController](supervisor.md#wb_supervisor_node_restart_controller)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | &nbsp;&nbsp; def [setVisibility](supervisor.md#wb_supervisor_node_set_visibility)(self, from, visible)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 %end
@@ -606,12 +660,13 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                                   |
 | &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                           |
-| &nbsp;&nbsp; def [getJoystick](robot.md#wb_robot_get_device)(self)                                     |
-| &nbsp;&nbsp; def [getKeyboard](robot.md#wb_robot_get_device)(self)                                     |
+| &nbsp;&nbsp; def getJoystick(self)                                                                     |
+| &nbsp;&nbsp; def getKeyboard(self)                                                                     |
 | &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getLidar](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                            |
 | &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                                  |
+| &nbsp;&nbsp; def getMouse(self)                                                                        |
 | &nbsp;&nbsp; def [getPen](robot.md#wb_robot_get_device)(self, name)                                    |
 | &nbsp;&nbsp; def [getPositionSensor](robot.md#wb_robot_get_device)(self, name)                         |
 | &nbsp;&nbsp; def [getRadar](robot.md#wb_robot_get_device)(self, name)                                  |
@@ -678,8 +733,10 @@ The following tables describe the Python classes and their methods.
 | class [Speaker](speaker.md) ([Device](#python_device)) :                                                         |
 | &nbsp;&nbsp; def [playSound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch balance, loop)  |
 | &nbsp;&nbsp; def [stop](speaker.md#wb_speaker_stop)(self, sound)                                                 |
+| &nbsp;&nbsp; def [getEngine](speaker.md#wb_speaker_get_engine)(self)                                             |
+| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_get_language)(self)                                         |
+| &nbsp;&nbsp; def [setEngine](speaker.md#wb_speaker_set_engine)(self, engine)                                     |
 | &nbsp;&nbsp; def [setLanguage](speaker.md#wb_speaker_set_language)(self, language)                               |
-| &nbsp;&nbsp; def [getLanguage](speaker.md#wb_speaker_set_language)(self)                                         |
 | &nbsp;&nbsp; def [speak](speaker.md#wb_speaker_set_language)(self, text, volume)                                 |
 
 %end
@@ -698,6 +755,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSelf](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                             |
 | &nbsp;&nbsp; def [getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(self, name)                                                                    |
 | &nbsp;&nbsp; def [getFromId](supervisor.md#wb_supervisor_node_get_from_def)(self, id)                                                                       |
+| &nbsp;&nbsp; def [getSelected](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                         |
 | &nbsp;&nbsp; def [setLabel](supervisor.md#wb_supervisor_set_label)(self, id, label, xpos, ypos, size, color, transparency, font="Arial")                    |
 | &nbsp;&nbsp; def [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(self, status)                                                                |
 | &nbsp;&nbsp; def [simulationRevert](supervisor.md#wb_supervisor_simulation_revert)(self)                                                                    |
@@ -713,6 +771,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [movieFailed](supervisor.md#wb_supervisor_movie_start_recording)(self)                                                                     |
 | &nbsp;&nbsp; def [animationStartRecording](supervisor.md#wb_supervisor_animation_start_recording)(self, file)                                               |
 | &nbsp;&nbsp; def [animationStopRecording](supervisor.md#wb_supervisor_animation_start_recording)(self)                                                      |
+| &nbsp;&nbsp; def [virtualRealityHeadsetIsUsed](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)(self)                                           |
+| &nbsp;&nbsp; def [virtualRealityHeadsetGetPosition](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)(self)                                      |
+| &nbsp;&nbsp; def [virtualRealityHeadsetGetOrientation](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)(self)                                   |
 
 %end
 

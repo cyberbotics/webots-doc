@@ -196,6 +196,8 @@ void wb_display_detach_camera(WbDeviceTag tag);
 
 These functions are used to attach/detach a camera to a display. When a camera is attached to a display, the camera images are efficiently copied to the background of the display. This is useful for example to draw over some camera rendering or to simulate mirrors.
 
+After detaching a camera, the pixels that have not been manually drawn will be transparent, i.e. their color will be black (0x000000) and their alpha value will be 0.0.
+
 ---
 
 **Name**
@@ -323,8 +325,9 @@ sub-image is defined by its top left coordinate (`x`,`y`) and its dimensions
 parameter to the main display image. The (`x`,`y`) coordinates define the top
 left point of the pasted image. If the `blend` parameter is true, the resulting pixels displayed in the main display image are computed using a blending operation (similar to the one defined in the [blending](#blending-formula-used-to-compute-the-new-the-color-channels-cn-of-a-pixel-from-the-old-color-channels-co-of-the-background-pixel-and-from-the-opacity) formula but involving the alpha channels of the old and new pixels instead of the opacity). In the `blend` parameter is set to false, the resulting pixels are simply copied from the clipboard image. The paste operation is much faster if `blend` is set to false.
 
-`wb_display_image_save()` saves a clipboard image referred to by the `ir`
-parameter to a file. The file name is defined by the `filename` parameter
+`wb_display_image_save()` saves a clipboard image referred to by the `ir` parameter to a file.
+If the `ir` parameter is NULL, then the current display image is saved.
+The file name is defined by the `filename` parameter
 (relatively to the controller directory). The image is saved in a file using
 either the PNG format or the JPEG format depending on the end of the `filename`
 parameter (respectively ".png" and ".jpg"). Note that this function involves

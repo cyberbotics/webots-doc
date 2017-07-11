@@ -24,6 +24,7 @@
     - [Nature](nature.md)
 - [Tools](tools.md)
     - [OpenStreetMap importer](openstreetmap-importer.md)
+    - [SUMO exporter](sumo-exporter.md)
     - [SUMO interface](sumo-interface.md)
     - [Scenario creation tutorial](scenario-creation-tutorial.md)
 - [Worlds](worlds.md)

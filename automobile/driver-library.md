@@ -130,18 +130,18 @@ The `wbu_driver_get_throttle` function simply returns the state of the throttle
 
 **Name**
 
-**wbu\_driver\_set\_brake**, **wbu\_driver\_get\_brake** - *Set and get the brake*
+**wbu\_driver\_set\_brake\_intensity**, **wbu\_driver\_get\_brake\_intensity** - *Set and get the brake intensity*
 
 ```c
 #include <webots/driver.h>
 
-void wbu_driver_set_brake(double brake);
-double wbu_driver_get_brake();
+void wbu_driver_set_brake_intensity(double intensity);
+double wbu_driver_get_brake_intensity();
 ```
 
 **Description**
 
-The `wbu_driver_set_brake` function brakes the car by increasing the
+The `wbu_driver_set_brake_intensity` function brakes the car by increasing the
 `dampingConstant` coefficient of the rotational joints of each of the four
 wheels. The argument should be between 0.0 and 1.0, 0 means that no damping
 constant is added on the joints (no breaking), 1 means that the parameter
@@ -149,8 +149,8 @@ constant is added on the joints (no breaking), 1 means that the parameter
 `dampingConstant` of each joint (the value will be linearly interpolated between
 0 and `brakeCoefficient` for any arguments between 0 and 1).
 
-The `wbu_driver_get_brake` function simply returns the state of the brake
-(argument of the last call to the `wbu_driver_set_brake` function).
+The `wbu_driver_get_brake_intensity` function simply returns the current brake intensity
+(argument of the last call to the `wbu_driver_set_brake_intensity` function).
 
 ---
 
@@ -281,6 +281,38 @@ This `wbu_driver_get_control_mode` returns the current control mode of the car.
 | ------ | ----- |
 | SPEED  | 0     |
 | TORQUE | 1     |
+
+%end
+
+---
+
+**Name**
+
+**wbu\_driver\_set\_wipers\_mode**, **wbu\_driver\_get\_wipers\_mode** - *Set and get the wipers' mode*
+
+```c
+#include <webots/driver.h>
+
+void wbu_driver_set_wipers_mode(int mode);
+wbu_wipers_mode wbu_driver_get_wipers_mode();
+```
+
+**Description**
+
+The `wbu_driver_set_wipers_mode` function allows the user to set (using the
+`wbu_wipers_mode` enum) various speeds for the wipers from slow to fast. Whilst
+the slow and normal mode share the same speed, the slow mode activates the
+wipers once every few seconds. The `wbu_driver_get_wipers_mode` function allows
+the user to get the wipers' mode.
+
+%figure "wbu_wipers_mode enumeration"
+
+| ENUM   | Value |
+| ------ | ----- |
+| DOWN   | 0     |
+| SLOW   | 1     |
+| NORMAL | 2     |
+| FAST   | 3     |
 
 %end
 

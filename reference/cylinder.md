@@ -3,8 +3,8 @@
 ```
 Cylinder {
   SFBool  bottom      TRUE
-  SFFloat height      2    # (-inf,inf)
-  SFFloat radius      1    # (-inf,inf)
+  SFFloat height      2    # (0,inf)
+  SFFloat radius      1    # (0,inf)
   SFBool  side        TRUE
   SFBool  top         TRUE
   SFInt32 subdivision 12   # (2,inf)
@@ -19,9 +19,6 @@ local coordinate system and with a central axis oriented along the local
 `radius` field specifies the radius of the cylinder and the `height` field
 specifies the height of the cylinder along the central axis. See [this
 figure](#the-cylinder-node).
-
-If both `height` and `radius` are positive, the outside faces of the cylinder
-are displayed while if they are negative, the inside faces are displayed.
 
 The cylinder has three parts: the side, the top (y = +`height`/2) and the bottom
 (y = -`height+`/2). Each part has an associated `SFBool` field that indicates

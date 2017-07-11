@@ -8,7 +8,7 @@ a supervisor controller and uses  [TraCI](http://sumo.dlr.de/wiki/TraCI) to
 communicate with SUMO.
 
 > **Note**:
-Currently version 0.28.0 of SUMO is distributed with Webots.
+Currently version 0.30 of SUMO is distributed with Webots.
 
 In order to use this interface a few rules need to be observed. First, a
 `Supervisor` node has to be added to the simulation and should use the
@@ -62,12 +62,13 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --display-refresh-rate   | Specifies the refresh rate of the SUMO display, expressed in milliseconds (no effect if the SUMO display is not activated)           | By default, a refresh rate of 1000ms is used                                                     |
 | --display-zoom           | Specifies the initial zoom of the SUMO display in Webots (1.0 means no scaling)                                                      | By default, no scaling is performed                                                              |
 | --display-fit-size       | Specifies whether the image should be resized to fit the SUMO display size or not                                                    | By default, the image is not resized                                                             |
+| --sumo-arguments         | Specifies additional SUMO arguments                                                                                                  | By default, SUMO is started without any additional argument                                      |
 
 %end
 
 
-> **Note** [Mac OS X]:
-On Mac OS X, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
+> **Note** [macOS]:
+On macOS, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
 
 ## Plugin mechanism
@@ -102,3 +103,10 @@ If the current size of the SUMO window is bigger than the resolution of the `Dis
 ### SumoInterface PROTO
 
 Instead of adding a `Supervisor` node and assigning the `sumo_supervisor` controller to it, you can simply add the `SumoInterface` PROTO node which provides a simpler interface to change the arguments of the controller and does not require you to copy the `sumo_supervisor` controller in the `controllers` directory of your project.
+
+
+## Using the SUMO executables distributed with Webots
+
+SUMO is distributed with Webots, it is located in `WEBOTS_HOME/projects/automobile/resources/sumo`, you can find all the executables in the `bin` folder.
+To be able to use these executables you need first to add `WEBOTS_HOME/projects/automobile/resources/sumo/bin` to your PATH.
+You will then for example be able to use `netedit` to edit your network files.

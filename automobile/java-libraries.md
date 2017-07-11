@@ -14,6 +14,7 @@ The `Driver` class provides the following methods:
 | public class [Driver](driver-library.md) {                                                                          |
 | &nbsp;&nbsp; public final static int INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT;                             |
 | &nbsp;&nbsp; public final static int SPEED, TORQUE;                                                                 |
+| &nbsp;&nbsp; public final static int DOWN, SLOW, NORMAL, FAST;                                                      |
 | &nbsp;&nbsp; public int [step](driver-library.md#wbu_driver_step)();                                                |
 | &nbsp;&nbsp; public void [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(double steeringAngle); |
 | &nbsp;&nbsp; public double [getSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)();                   |
@@ -22,8 +23,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; public double [getCurrentSpeed](driver-library.md#wbu_driver_get_current_speed)();                     |
 | &nbsp;&nbsp; public void [setThrottle](driver-library.md#wbu_driver_set_throttle)(double throttle);                 |
 | &nbsp;&nbsp; public double [getThrottle](driver-library.md#wbu_driver_set_throttle)();                              |
-| &nbsp;&nbsp; public void [setBrake](driver-library.md#wbu_driver_set_brake)(double brake);                          |
-| &nbsp;&nbsp; public double [getBrake](driver-library.md#wbu_driver_set_brake)();                                    |
+| &nbsp;&nbsp; public void [setBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(double intensity);   |
+| &nbsp;&nbsp; public double [getBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)();                 |
 | &nbsp;&nbsp; public void [setIndicator](driver-library.md#wbu_driver_set_indicator)(int state);                     |
 | &nbsp;&nbsp; public void [setHazardFlashers](driver-library.md#wbu_driver_set_indicator)(bool state);               |
 | &nbsp;&nbsp; public int [getIndicator](driver-library.md#wbu_driver_set_indicator)();                               |
@@ -37,6 +38,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; public void [setGear](driver-library.md#wbu_driver_set_gear)(int gear);                                |
 | &nbsp;&nbsp; public int [getGearNumber](driver-library.md#wbu_driver_set_gear)();                                   |
 | &nbsp;&nbsp; public int [getControlMode](driver-library.md#wbu_driver_get_control_mode)();                          |
+| &nbsp;&nbsp; public void [setWipersMode](driver-library.md#wbu_driver_set_wipers_mode)(int mode);                   |
+| &nbsp;&nbsp; public int [getWipersMode](driver-library.md#wbu_driver_set_wipers_mode)();                            |
 | }                                                                                                                   |
 
 %end

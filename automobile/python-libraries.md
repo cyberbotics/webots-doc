@@ -14,6 +14,7 @@ The `Driver` class provides the following methods:
 | class [Driver](driver-library.md) (Robot) :                                                                         |
 | &nbsp;&nbsp; INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT                                                      |
 | &nbsp;&nbsp; SPEED, TORQUE                                                                                          |
+| &nbsp;&nbsp; DOWN, SLOW, NORMAL, FAST                                                                               |
 | &nbsp;&nbsp; def [step](driver-library.md#wbu_driver_step)(self)                                                    |
 | &nbsp;&nbsp; def [setSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(self, steeringAngle)           |
 | &nbsp;&nbsp; def [getSteeringAngle](driver-library.md#wbu_driver_set_steering_angle)(self)                          |
@@ -22,8 +23,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; def [getCurrentSpeed](driver-library.md#wbu_driver_get_current_speed)(self)                            |
 | &nbsp;&nbsp; def [setThrottle](driver-library.md#wbu_driver_set_throttle)(self, throttle)                           |
 | &nbsp;&nbsp; def [getThrottle](driver-library.md#wbu_driver_set_throttle)(self)                                     |
-| &nbsp;&nbsp; def [setBrake](driver-library.md#wbu_driver_set_brake)(self, brake)                                    |
-| &nbsp;&nbsp; def [getBrake](driver-library.md#wbu_driver_set_brake)(self)                                           |
+| &nbsp;&nbsp; def [setBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(self, intensity)             |
+| &nbsp;&nbsp; def [getBrakeIntensity](driver-library.md#wbu_driver_set_brake_intensity)(self)                        |
 | &nbsp;&nbsp; def [setIndicator](driver-library.md#wbu_driver_set_indicator)(self, state)                            |
 | &nbsp;&nbsp; def [setHazardFlashers](driver-library.md#wbu_driver_set_indicator)(self, state)                       |
 | &nbsp;&nbsp; def [getIndicator](driver-library.md#wbu_driver_set_indicator)(self)                                   |
@@ -37,6 +38,8 @@ The `Driver` class provides the following methods:
 | &nbsp;&nbsp; def [setGear](driver-library.md#wbu_driver_set_gear)(self, gear)                                       |
 | &nbsp;&nbsp; def [getGearNumber](driver-library.md#wbu_driver_set_gear)(self)                                       |
 | &nbsp;&nbsp; def [getControlMode](driver-library.md#wbu_driver_get_control_mode)(self)                              |
+| &nbsp;&nbsp; def [setWipersMode](driver-library.md#wbu_driver_set_wipers_mode)(self, mode)                          |
+| &nbsp;&nbsp; def [getWipersMode](driver-library.md#wbu_driver_set_wipers_mode)(self)                                |
 
 %end
 

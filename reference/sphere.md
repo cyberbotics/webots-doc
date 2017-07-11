@@ -2,7 +2,7 @@
 
 ```
 Sphere {
-  SFFloat radius      1 # (-inf,inf)
+  SFFloat radius      1 # (0,inf)
   SFInt32 subdivision 1 # [0,5] or 10
 }
 ```
@@ -10,9 +10,6 @@ Sphere {
 The [Sphere](#sphere) node specifies a sphere centered at (0,0,0) in the local
 coordinate system. The `radius` field specifies the radius of the sphere (see
 [this figure](#sphere-node)).
-
-If `radius` is positive, the outside faces of the sphere are displayed while if
-it is negative, the inside faces are displayed.
 
 %figure "Sphere node"
 

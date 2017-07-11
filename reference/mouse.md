@@ -30,6 +30,12 @@ A `true` state means the button is pressed while a `false` state means the butto
 The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.
 These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
 
+> **Note** [C++]:
+In C++ the name of the structure is `MouseState`.
+
+> **Note** [Java/Python]:
+In Java and Python, the structure is replaced by a class called `MouseState`.
+
 ### Mouse Functions
 
 **Name**
@@ -49,7 +55,7 @@ WbMouseState wb_mouse_get_state();
 
 **Description**
 
-The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions. 
+The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions.
 Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()` function.
 The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
 Note that the first state will be available only after the first sampling period elapsed.

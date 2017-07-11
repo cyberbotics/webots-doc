@@ -542,20 +542,20 @@ The following tables describe the C++ classes and their methods.
 
 %api "cpp_radar"
 
-|                                                                                         |
-| --------------------------------------------------------------------------------------- |
-| #include `<`webots/Radar.hpp`>`                                                         |
-| class [Radar](radar.md) : public [Device](#cpp_device) {                                |
-| &nbsp;&nbsp; virtual void [enable](radar.md#wb_radar_enable)(int sampling_period);      |
-| &nbsp;&nbsp; virtual void [disable](radar.md#wb_radar_enable)();                        |
-| &nbsp;&nbsp; int [getSamplingPeriod](radar.md#wb_radar_enable)();                       |
-| &nbsp;&nbsp; int [getNumberOfTargets](radar.md#wb_radar_get_number_of_targets)() const; |
-| &nbsp;&nbsp; const RadarTarget *[getTargets](radar.md#wb_radar_get_targets)() const;    |
-| &nbsp;&nbsp; double [getMinRange](radar.md#wb_radar_get_min_range)() const;             |
-| &nbsp;&nbsp; double [getMaxRange](radar.md#wb_radar_get_min_range)() const;             |
-| &nbsp;&nbsp; double [getHorizontalFov](radar.md#wb_radar_get_horizontal_fov)() const;   |
-| &nbsp;&nbsp; double [getVerticalFov](radar.md#wb_radar_get_horizontal_fov)() const;     |
-| };                                                                                      |
+|                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------- |
+| #include `<`webots/Radar.hpp`>`                                                                                |
+| class [Radar](radar.md) : public [Device](#cpp_device) {                                                       |
+| &nbsp;&nbsp; virtual void [enable](radar.md#wb_radar_enable)(int sampling_period);                             |
+| &nbsp;&nbsp; virtual void [disable](radar.md#wb_radar_enable)();                                               |
+| &nbsp;&nbsp; int [getSamplingPeriod](radar.md#wb_radar_enable)();                                              |
+| &nbsp;&nbsp; int [getNumberOfTargets](radar.md#wb_radar_get_number_of_targets)() const;                        |
+| &nbsp;&nbsp; const [RadarTarget](radar.md#wbradartarget) *[getTargets](radar.md#wb_radar_get_targets)() const; |
+| &nbsp;&nbsp; double [getMinRange](radar.md#wb_radar_get_min_range)() const;                                    |
+| &nbsp;&nbsp; double [getMaxRange](radar.md#wb_radar_get_min_range)() const;                                    |
+| &nbsp;&nbsp; double [getHorizontalFov](radar.md#wb_radar_get_horizontal_fov)() const;                          |
+| &nbsp;&nbsp; double [getVerticalFov](radar.md#wb_radar_get_horizontal_fov)() const;                            |
+| };                                                                                                             |
 
 %end
 

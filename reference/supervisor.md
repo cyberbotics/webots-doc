@@ -91,11 +91,10 @@ WbNodeRef wb_supervisor_node_get_selected();
 
 **Description**
 
-The `wb_supervisor_node_get_from_def()` function retrieves a handle to a node in
+The `wb_supervisor_node_get_from_def()` function returns a handle to a node in
 the world from its DEF name. The return value can be used for subsequent calls
 to functions which require a `WbNodeRef` parameter. If the requested node does
-not exist in the current world file or is an internal node of a PROTO, the
-function returns NULL, otherwise, it returns a non-NULL handle.
+not exist in the current world file or is an internal node of a PROTO, the function returns NULL.
 
 It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
@@ -138,8 +137,8 @@ The `wb_supervisor_node_get_self()` function returns a handle to the
 utility function that simplifies the task of retrieving the base node without
 having to define a DEF name for it.
 
-The `wb_supervisor_node_get_selected()` function retrieves a handle to the currently selected node in the scene tree (which might not be a top node).
-If no node is currently selected, the function returns NULL, otherwise, it returns a non-NULL handle.
+The `wb_supervisor_node_get_selected()` function returns a handle to the currently selected node in the scene tree (which might not be a top node).
+If no node is currently selected, the function returns NULL.
 
 ---
 

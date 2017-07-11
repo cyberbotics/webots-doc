@@ -138,8 +138,8 @@ The `wb_supervisor_node_get_self()` function returns a handle to the
 utility function that simplifies the task of retrieving the base node without
 having to define a DEF name for it.
 
-The `wb_supervisor_node_get_selected()` function retrieves a handle to the currently selected node.
-It no node is currently selected, the function returns NULL, otherwise, it returns a non-NULL handle.
+The `wb_supervisor_node_get_selected()` function retrieves a handle to the currently selected node in the scene tree.
+If no node is currently selected, the function returns NULL, otherwise, it returns a non-NULL handle.
 
 ---
 

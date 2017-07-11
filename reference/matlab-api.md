@@ -264,29 +264,29 @@ The following tables describe the Matlab functions.
 
 %api "matlab_lidar"
 
-| % [Lidar](lidar.md) :                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------- |
-| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, sampling_period);                                                 |
-| &nbsp;&nbsp; [wb\_lidar\_enable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                        |
-| &nbsp;&nbsp; [wb\_lidar\_disable](lidar.md#wb_lidar_enable)(tag);                                                                 |
-| &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                       |
-| &nbsp;&nbsp; period = [wb\_lidar\_get\_sampling\_period](lidar.md#wb_lidar_enable)(tag);                                          |
-| &nbsp;&nbsp; state = [wb\_lidar\_is\_point\_cloud\_enabled](lidar.md#wb_lidar_enable)(tag);                                       |
-| &nbsp;&nbsp; range = [wb\_lidar\_get\_range\_image](lidar.md#wb_lidar_get_range_image)(tag);                                      |
-| &nbsp;&nbsp; range = [wb\_lidar\_get\_layer\_range\_image](lidar.md#wb_lidar_get_range_image)(tag, layer);                        |
-| &nbsp;&nbsp; points = [wb\_lidar\_get\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag);                                     |
-| &nbsp;&nbsp; points = [wb\_lidar\_get\_layer\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag, layer);                       |
-| &nbsp;&nbsp; number\_of\_points = [wb\_lidar\_get\_number\_of\_points](lidar.md#wb_lidar_get_point_cloud)(tag);                   |
-| &nbsp;&nbsp; frequency = [wb\_lidar\_get\_frequency](lidar.md#wb_lidar_get_frequency)(tag);                                       |
-| &nbsp;&nbsp; [wb\_lidar\_set\_frequency](lidar.md#wb_lidar_get_frequency)(tag, frequency);                                        |
-| &nbsp;&nbsp; horizontal\_resolution = [wb\_lidar\_get\_horizontal\_resolution](lidar.md#wb_lidar_get_horizontal_resolution)(tag); |
-| &nbsp;&nbsp; number\_of\_layers = [wb\_lidar\_get\_number\_of\_layers](lidar.md#wb_lidar_get_horizontal_resolution)(tag);         |
-| &nbsp;&nbsp; min\_frequency = [wb\_lidar\_get\_min\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag);                         |
-| &nbsp;&nbsp; max\_frequency = [wb\_lidar\_get\_max\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag);                         |
-| &nbsp;&nbsp; fov = [wb\_lidar\_get\_fov](lidar.md#wb_lidar_get_fov)(tag);                                                         |
-| &nbsp;&nbsp; vertical\_fov = [wb\_lidar\_get\_vertical\_fov](lidar.md#wb_lidar_get_fov)(tag);                                     |
-| &nbsp;&nbsp; min\_range = [wb\_lidar\_get\_min\_range](lidar.md#wb_lidar_get_min_range)(tag);                                     |
-| &nbsp;&nbsp; max\_range = [wb\_lidar\_get\_max\_range](lidar.md#wb_lidar_get_min_range)(tag);                                     |
+| % [Lidar](lidar.md) :                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, sampling_period)                                                 |
+| &nbsp;&nbsp; [wb\_lidar\_enable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag)                                        |
+| &nbsp;&nbsp; [wb\_lidar\_disable](lidar.md#wb_lidar_enable)(tag)                                                                 |
+| &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag)                                       |
+| &nbsp;&nbsp; period = [wb\_lidar\_get\_sampling\_period](lidar.md#wb_lidar_enable)(tag)                                          |
+| &nbsp;&nbsp; state = [wb\_lidar\_is\_point\_cloud\_enabled](lidar.md#wb_lidar_enable)(tag)                                       |
+| &nbsp;&nbsp; range = [wb\_lidar\_get\_range\_image](lidar.md#wb_lidar_get_range_image)(tag)                                      |
+| &nbsp;&nbsp; range = [wb\_lidar\_get\_layer\_range\_image](lidar.md#wb_lidar_get_range_image)(tag, layer)                        |
+| &nbsp;&nbsp; points = [wb\_lidar\_get\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag)                                     |
+| &nbsp;&nbsp; points = [wb\_lidar\_get\_layer\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag, layer)                       |
+| &nbsp;&nbsp; number\_of\_points = [wb\_lidar\_get\_number\_of\_points](lidar.md#wb_lidar_get_point_cloud)(tag)                   |
+| &nbsp;&nbsp; frequency = [wb\_lidar\_get\_frequency](lidar.md#wb_lidar_get_frequency)(tag)                                       |
+| &nbsp;&nbsp; [wb\_lidar\_set\_frequency](lidar.md#wb_lidar_get_frequency)(tag, frequency)                                        |
+| &nbsp;&nbsp; horizontal\_resolution = [wb\_lidar\_get\_horizontal\_resolution](lidar.md#wb_lidar_get_horizontal_resolution)(tag) |
+| &nbsp;&nbsp; number\_of\_layers = [wb\_lidar\_get\_number\_of\_layers](lidar.md#wb_lidar_get_horizontal_resolution)(tag)         |
+| &nbsp;&nbsp; min\_frequency = [wb\_lidar\_get\_min\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag)                         |
+| &nbsp;&nbsp; max\_frequency = [wb\_lidar\_get\_max\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag)                         |
+| &nbsp;&nbsp; fov = [wb\_lidar\_get\_fov](lidar.md#wb_lidar_get_fov)(tag)                                                         |
+| &nbsp;&nbsp; vertical\_fov = [wb\_lidar\_get\_vertical\_fov](lidar.md#wb_lidar_get_fov)(tag)                                     |
+| &nbsp;&nbsp; min\_range = [wb\_lidar\_get\_min\_range](lidar.md#wb_lidar_get_min_range)(tag)                                     |
+| &nbsp;&nbsp; max\_range = [wb\_lidar\_get\_max\_range](lidar.md#wb_lidar_get_min_range)(tag)                                     |
 
 %end
 
@@ -590,6 +590,22 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_field\_set\_mf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z a])                                                   |
 | [wb\_supervisor\_field\_set\_mf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [r g b])                                                        |
 | [wb\_supervisor\_field\_set\_mf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, 'value')                                                       |
+| [wb\_supervisor\_field\_import\_mf\_bool](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, value)                                                  |
+| [wb\_supervisor\_field\_import\_mf\_int32](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, value)                                                 |
+| [wb\_supervisor\_field\_import\_mf\_float](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, value)                                                 |
+| [wb\_supervisor\_field\_import\_mf\_vec2f](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, [x y])                                                 |
+| [wb\_supervisor\_field\_import\_mf\_vec3f](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, [x y z])                                               |
+| [wb\_supervisor\_field\_import\_mf\_rotation](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, [x y z a])                                          |
+| [wb\_supervisor\_field\_import\_mf\_color](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, [r g b])                                               |
+| [wb\_supervisor\_field\_import\_mf\_string](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position, 'value')                                              |
+| [wb\_supervisor\_field\_remove\_mf\_bool](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                         |
+| [wb\_supervisor\_field\_remove\_mf\_int32](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                        |
+| [wb\_supervisor\_field\_remove\_mf\_float](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                        |
+| [wb\_supervisor\_field\_remove\_mf\_vec2f](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                        |
+| [wb\_supervisor\_field\_remove\_mf\_vec3f](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                        |
+| [wb\_supervisor\_field\_remove\_mf\_rotation](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                     |
+| [wb\_supervisor\_field\_remove\_mf\_color](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                        |
+| [wb\_supervisor\_field\_remove\_mf\_string](supervisor.md#wb_supervisor_field_import_mf_bool)(field, position)                                                       |
 | [wb\_supervisor\_field\_import\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'filename')                                             |
 | [wb\_supervisor\_field\_import\_mf\_node\_from\_string](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'node\_string')                           |
 | [wb\_supervisor\_field\_remove\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position)                                                         |

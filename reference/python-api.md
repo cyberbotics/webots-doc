@@ -261,6 +261,22 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [setMFRotation](supervisor.md#wb_supervisor_field_set_sf_bool)(self, index, values)                    |
 | &nbsp;&nbsp; def [setMFColor](supervisor.md#wb_supervisor_field_set_sf_bool)(self, index, values)                       |
 | &nbsp;&nbsp; def [setMFString](supervisor.md#wb_supervisor_field_set_sf_bool)(self, index, value)                       |
+| &nbsp;&nbsp; def [importMFBool](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, value);                  |
+| &nbsp;&nbsp; def [importMFInt32](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, value);                 |
+| &nbsp;&nbsp; def [importMFFloat](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, value);                 |
+| &nbsp;&nbsp; def [importMFVec2f](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, values);                |
+| &nbsp;&nbsp; def [importMFVec3f](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, values);                |
+| &nbsp;&nbsp; def [importMFRotation](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index,  values);            |
+| &nbsp;&nbsp; def [importMFColor](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, values);                |
+| &nbsp;&nbsp; def [importMFString](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index, value);                |
+| &nbsp;&nbsp; def [removeMFBool](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                         |
+| &nbsp;&nbsp; def [removeMFInt32](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                        |
+| &nbsp;&nbsp; def [removeMFFloat](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                        |
+| &nbsp;&nbsp; def [removeMFVec2f](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                        |
+| &nbsp;&nbsp; def [removeMFVec3f](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                        |
+| &nbsp;&nbsp; def [removeMFRotation](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                     |
+| &nbsp;&nbsp; def [removeMFColor](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                        |
+| &nbsp;&nbsp; def [removeMFString](supervisor.md#wb_supervisor_field_import_mf_bool)(self, index);                       |
 | &nbsp;&nbsp; def [importMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(self, position, filename)             |
 | &nbsp;&nbsp; def [importMFNodeFromString](supervisor.md#wb_supervisor_field_import_mf_node)(self, position, nodeString) |
 | &nbsp;&nbsp; def [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(self, position)                       |

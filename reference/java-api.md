@@ -271,6 +271,22 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setMFRotation](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, double values[4]);                 |
 | &nbsp;&nbsp; public void [setMFColor](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, double values[3]);                    |
 | &nbsp;&nbsp; public void [setMFString](supervisor.md#wb_supervisor_field_set_sf_bool)(int index, String value);                       |
+| &nbsp;&nbsp; public void [importMFBool](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, bool value);                     |
+| &nbsp;&nbsp; public void [importMFInt32](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, int value);                     |
+| &nbsp;&nbsp; public void [importMFFloat](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, double value);                  |
+| &nbsp;&nbsp; public void [importMFVec2f](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, double values[2]);              |
+| &nbsp;&nbsp; public void [importMFVec3f](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, double values[3]);              |
+| &nbsp;&nbsp; public void [importMFRotation](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, double values[4]);           |
+| &nbsp;&nbsp; public void [importMFColor](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, double values[3]);              |
+| &nbsp;&nbsp; public void [importMFString](supervisor.md#wb_supervisor_field_import_mf_bool)(int index, String value);                 |
+| &nbsp;&nbsp; public void [removeMFBool](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                                 |
+| &nbsp;&nbsp; public void [removeMFInt32](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                                |
+| &nbsp;&nbsp; public void [removeMFFloat](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                                |
+| &nbsp;&nbsp; public void [removeMFVec2f](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                                |
+| &nbsp;&nbsp; public void [removeMFVec3f](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                                |
+| &nbsp;&nbsp; public void [removeMFRotation](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                             |
+| &nbsp;&nbsp; public void [removeMFColor](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                                |
+| &nbsp;&nbsp; public void [removeMFString](supervisor.md#wb_supervisor_field_import_mf_bool)(int index);                               |
 | &nbsp;&nbsp; public void [importMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(int position, String filename);             |
 | &nbsp;&nbsp; public void [importMFNodeFromString](supervisor.md#wb_supervisor_field_import_mf_node)(int position, String nodeString); |
 | &nbsp;&nbsp; public void [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(int position);                              |

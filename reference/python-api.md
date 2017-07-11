@@ -755,6 +755,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSelf](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                             |
 | &nbsp;&nbsp; def [getFromDef](supervisor.md#wb_supervisor_node_get_from_def)(self, name)                                                                    |
 | &nbsp;&nbsp; def [getFromId](supervisor.md#wb_supervisor_node_get_from_def)(self, id)                                                                       |
+| &nbsp;&nbsp; def [getSelected](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                         |
 | &nbsp;&nbsp; def [setLabel](supervisor.md#wb_supervisor_set_label)(self, id, label, xpos, ypos, size, color, transparency, font="Arial")                    |
 | &nbsp;&nbsp; def [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(self, status)                                                                |
 | &nbsp;&nbsp; def [simulationRevert](supervisor.md#wb_supervisor_simulation_revert)(self)                                                                    |

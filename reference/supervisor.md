@@ -72,7 +72,7 @@ scored.
 
 **Name**
 
-**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self** - *get a handle to a node in the world*
+**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self**, **wb\_supervisor\_node\_get\_selected** - *get a handle to a node in the world*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
@@ -86,15 +86,15 @@ int wb_supervisor_node_get_id(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_parent_node(WbNodeRef node);
 WbNodeRef wb_supervisor_node_get_root();
 WbNodeRef wb_supervisor_node_get_self();
+WbNodeRef wb_supervisor_node_get_selected();
 ```
 
 **Description**
 
-The `wb_supervisor_node_get_from_def()` function retrieves a handle to a node in
+The `wb_supervisor_node_get_from_def()` function returns a handle to a node in
 the world from its DEF name. The return value can be used for subsequent calls
 to functions which require a `WbNodeRef` parameter. If the requested node does
-not exist in the current world file or is an internal node of a PROTO, the
-function returns NULL, otherwise, it returns a non-NULL handle.
+not exist in the current world file or is an internal node of a PROTO, the function returns NULL.
 
 It is possible to use dots (.) as scoping operator in the DEF parameter. Dots
 can be used when looking for a specific node path in the node hierarchy. For
@@ -136,6 +136,9 @@ The `wb_supervisor_node_get_self()` function returns a handle to the
 [Supervisor](#supervisor) node itself on which the controller is run. This is a
 utility function that simplifies the task of retrieving the base node without
 having to define a DEF name for it.
+
+The `wb_supervisor_node_get_selected()` function returns a handle to the currently selected node in the scene tree.
+If no node is currently selected, the function returns NULL.
 
 ---
 

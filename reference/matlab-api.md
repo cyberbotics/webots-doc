@@ -590,15 +590,15 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_field\_set\_mf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z a])                                                   |
 | [wb\_supervisor\_field\_set\_mf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [r g b])                                                        |
 | [wb\_supervisor\_field\_set\_mf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, 'value')                                                       |
-| [wb\_supervisor\_field\_insert\_mf\_bool](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, value)                                                  |
-| [wb\_supervisor\_field\_insert\_mf\_int32](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, value)                                                 |
-| [wb\_supervisor\_field\_insert\_mf\_float](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, value)                                                 |
-| [wb\_supervisor\_field\_insert\_mf\_vec2f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, [x y])                                                 |
-| [wb\_supervisor\_field\_insert\_mf\_vec3f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, [x y z])                                               |
-| [wb\_supervisor\_field\_insert\_mf\_rotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, [x y z a])                                          |
-| [wb\_supervisor\_field\_insert\_mf\_color](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, [r g b])                                               |
-| [wb\_supervisor\_field\_insert\_mf\_string](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, 'value')                                              |
-| [wb\_supervisor\_field\_remove\_mf](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                               |
+| [wb\_supervisor\_field\_insert\_mf\_bool](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, value)                                                     |
+| [wb\_supervisor\_field\_insert\_mf\_int32](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, value)                                                    |
+| [wb\_supervisor\_field\_insert\_mf\_float](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, value)                                                    |
+| [wb\_supervisor\_field\_insert\_mf\_vec2f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [x y])                                                    |
+| [wb\_supervisor\_field\_insert\_mf\_vec3f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [x y z])                                                  |
+| [wb\_supervisor\_field\_insert\_mf\_rotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [x y z a])                                             |
+| [wb\_supervisor\_field\_insert\_mf\_color](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [r g b])                                                  |
+| [wb\_supervisor\_field\_insert\_mf\_string](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, 'value')                                                 |
+| [wb\_supervisor\_field\_remove\_mf](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index)                                                                  |
 | [wb\_supervisor\_field\_import\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'filename')                                             |
 | [wb\_supervisor\_field\_import\_mf\_node\_from\_string](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'node\_string')                           |
 | type = [wb\_supervisor\_node\_get\_type](supervisor.md#wb_supervisor_node_get_type)(node)                                                                            |

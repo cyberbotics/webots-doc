@@ -1038,31 +1038,31 @@ and setting fields with the above described functions.
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_field_insert_mf_bool(WbFieldRef field, int position, bool value);
-void wb_supervisor_field_insert_mf_int32(WbFieldRef field, int position, int value);
-void wb_supervisor_field_insert_mf_float(WbFieldRef field, int position, double value);
-void wb_supervisor_field_insert_mf_vec2f(WbFieldRef field, int position, const double values[2]);
-void wb_supervisor_field_insert_mf_vec3f(WbFieldRef field, int position, const double values[3]);
-void wb_supervisor_field_insert_mf_rotation(WbFieldRef field, int position, const double values[4]);
-void wb_supervisor_field_insert_mf_color(WbFieldRef field, int position, const double values[3]);
-void wb_supervisor_field_insert_mf_string(WbFieldRef field, int position, const char *value);
+void wb_supervisor_field_insert_mf_bool(WbFieldRef field, int index, bool value);
+void wb_supervisor_field_insert_mf_int32(WbFieldRef field, int index, int value);
+void wb_supervisor_field_insert_mf_float(WbFieldRef field, int index, double value);
+void wb_supervisor_field_insert_mf_vec2f(WbFieldRef field, int index, const double values[2]);
+void wb_supervisor_field_insert_mf_vec3f(WbFieldRef field, int index, const double values[3]);
+void wb_supervisor_field_insert_mf_rotation(WbFieldRef field, int index, const double values[4]);
+void wb_supervisor_field_insert_mf_color(WbFieldRef field, int index, const double values[3]);
+void wb_supervisor_field_insert_mf_string(WbFieldRef field, int index, const char *value);
 
-void wb_supervisor_field_remove_mf(WbFieldRef field, int position);
+void wb_supervisor_field_remove_mf(WbFieldRef field, int index);
 ```
 
 **Description**
 
 The `wb_supervisor_field_insert_mf_*()` functions insert a value to a specified multiple `field` (MF).
 The type of the field has to match with the name of the function used, otherwise the value of the field remains unchanged (and a warning message is displayed).
-The `position` parameter defines the position in the MF field where the new node will be inserted.
-It can be positive or negative. Here are a few examples for the `position` parameter:
+The `index` parameter defines the position in the MF field where the new node will be inserted.
+It can be positive or negative. Here are a few examples for the `index` parameter:
 
 - 0: insert at the beginning of the field.
-- 1: insert at the second position.
-- 2: insert at the third position.
-- -1: insert at the last position.
-- -2: insert at the second position from the end of the field.
-- -3: insert at the third position from the end.
+- 1: insert at the second index.
+- 2: insert at the third index.
+- -1: insert at the last index.
+- -2: insert at the second index from the end of the field.
+- -3: insert at the third index from the end.
 
 The `wb_supervisor_field_remove_mf()` function removes a value to a specified multiple `field` (MF).
 

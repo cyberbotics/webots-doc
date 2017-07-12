@@ -598,17 +598,9 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_field\_insert\_mf\_rotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, [x y z a])                                          |
 | [wb\_supervisor\_field\_insert\_mf\_color](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, [r g b])                                               |
 | [wb\_supervisor\_field\_insert\_mf\_string](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position, 'value')                                              |
-| [wb\_supervisor\_field\_remove\_mf\_bool](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                         |
-| [wb\_supervisor\_field\_remove\_mf\_int32](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                        |
-| [wb\_supervisor\_field\_remove\_mf\_float](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                        |
-| [wb\_supervisor\_field\_remove\_mf\_vec2f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                        |
-| [wb\_supervisor\_field\_remove\_mf\_vec3f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                        |
-| [wb\_supervisor\_field\_remove\_mf\_rotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                     |
-| [wb\_supervisor\_field\_remove\_mf\_color](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                        |
-| [wb\_supervisor\_field\_remove\_mf\_string](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                       |
+| [wb\_supervisor\_field\_remove\_mf](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, position)                                                               |
 | [wb\_supervisor\_field\_import\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'filename')                                             |
 | [wb\_supervisor\_field\_import\_mf\_node\_from\_string](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'node\_string')                           |
-| [wb\_supervisor\_field\_remove\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position)                                                         |
 | type = [wb\_supervisor\_node\_get\_type](supervisor.md#wb_supervisor_node_get_type)(node)                                                                            |
 | name = [wb\_supervisor\_node\_get\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                      |
 | name = [wb\_supervisor\_node\_get\_base\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                |

@@ -258,17 +258,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; void [insertMFRotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index, const double values[4]);                                                                                  |
 | &nbsp;&nbsp; void [insertMFColor](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index, const double values[3]);                                                                                     |
 | &nbsp;&nbsp; void [insertMFString](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index, const std::string &value);                                                                                  |
-| &nbsp;&nbsp; void [removeMFBool](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                              |
-| &nbsp;&nbsp; void [removeMFInt32](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                             |
-| &nbsp;&nbsp; void [removeMFFloat](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                             |
-| &nbsp;&nbsp; void [removeMFVec2f](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                             |
-| &nbsp;&nbsp; void [removeMFVec3f](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                             |
-| &nbsp;&nbsp; void [removeMFRotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                          |
-| &nbsp;&nbsp; void [removeMFColor](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                             |
-| &nbsp;&nbsp; void [removeMFString](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                            |
+| &nbsp;&nbsp; void [removeMF](supervisor.md#wb_supervisor_field_insert_mf_bool)(int index);                                                                                                                  |
 | &nbsp;&nbsp; void [importMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(int position, const std::string &filename);                                                                              |
 | &nbsp;&nbsp; void [importMFNodeFromString](supervisor.md#wb_supervisor_field_import_mf_node)(int position, const std::string &nodeString);                                                                  |
-| &nbsp;&nbsp; void [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(int position);                                                                                                           |
 | };                                                                                                                                                                                                          |
 
 %end

@@ -269,17 +269,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [insertMFRotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index,  values)             |
 | &nbsp;&nbsp; def [insertMFColor](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index, values)                 |
 | &nbsp;&nbsp; def [insertMFString](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index, value)                 |
-| &nbsp;&nbsp; def [removeMFBool](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                          |
-| &nbsp;&nbsp; def [removeMFInt32](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                         |
-| &nbsp;&nbsp; def [removeMFFloat](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                         |
-| &nbsp;&nbsp; def [removeMFVec2f](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                         |
-| &nbsp;&nbsp; def [removeMFVec3f](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                         |
-| &nbsp;&nbsp; def [removeMFRotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                      |
-| &nbsp;&nbsp; def [removeMFColor](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                         |
-| &nbsp;&nbsp; def [removeMFString](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                        |
+| &nbsp;&nbsp; def [removeMF](supervisor.md#wb_supervisor_field_insert_mf_bool)(self, index)                              |
 | &nbsp;&nbsp; def [importMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(self, position, filename)             |
 | &nbsp;&nbsp; def [importMFNodeFromString](supervisor.md#wb_supervisor_field_import_mf_node)(self, position, nodeString) |
-| &nbsp;&nbsp; def [removeMFNode](supervisor.md#wb_supervisor_field_import_mf_node)(self, position)                       |
 
 %end
 

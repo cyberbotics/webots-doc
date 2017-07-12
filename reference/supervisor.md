@@ -1052,9 +1052,9 @@ void wb_supervisor_field_remove_mf(WbFieldRef field, int index);
 
 **Description**
 
-The `wb_supervisor_field_insert_mf_*()` functions insert a value to a specified multiple `field` (MF).
-The type of the field has to match with the name of the function used, otherwise the value of the field remains unchanged (and a warning message is displayed).
-The `index` parameter defines the position in the MF field where the new node will be inserted.
+The `wb_supervisor_field_insert_mf_*()` functions insert an item to a specified multiple `field` (MF).
+The type of the field has to match with the name of the function used, otherwise the field remains unchanged (and a warning message is displayed).
+The `index` parameter defines the position in the MF field where the new item will be inserted.
 It can be positive or negative. Here are a few examples for the `index` parameter:
 
 - 0: insert at the beginning of the field.
@@ -1064,7 +1064,7 @@ It can be positive or negative. Here are a few examples for the `index` paramete
 - -2: insert at the second index from the end of the field.
 - -3: insert at the third index from the end.
 
-The `wb_supervisor_field_remove_mf()` function removes a value to a specified multiple `field` (MF).
+The `wb_supervisor_field_remove_mf()` function removes an item from a specified multiple `field` (MF).
 
 ---
 

@@ -1031,21 +1031,21 @@ and setting fields with the above described functions.
 
 **Name**
 
-**wb\_supervisor\_field\_import\_mf\_bool**, **wb\_supervisor\_field\_import\_mf\_int32**, **wb\_supervisor\_field\_import\_mf\_float**, **wb\_supervisor\_field\_import\_mf\_vec2f**, **wb\_supervisor\_field\_import\_mf\_vec3f**, **wb\_supervisor\_field\_import\_mf\_rotation**, **wb\_supervisor\_field\_import\_mf\_color**, **wb\_supervisor\_field\_import\_mf\_string**, **wb\_supervisor\_field\_remove\_mf\_bool**, **wb\_supervisor\_field\_remove\_mf\_int32**, **wb\_supervisor\_field\_remove\_mf\_float**, **wb\_supervisor\_field\_remove\_mf\_vec2f**, **wb\_supervisor\_field\_remove\_mf\_vec3f**, **wb\_supervisor\_field\_remove\_mf\_rotation**, **wb\_supervisor\_field\_remove\_mf\_color**, **wb\_supervisor\_field\_remove\_mf\_string** - *import or remove a value in a field*
+**wb\_supervisor\_field\_insert\_mf\_bool**, **wb\_supervisor\_field\_insert\_mf\_int32**, **wb\_supervisor\_field\_insert\_mf\_float**, **wb\_supervisor\_field\_insert\_mf\_vec2f**, **wb\_supervisor\_field\_insert\_mf\_vec3f**, **wb\_supervisor\_field\_insert\_mf\_rotation**, **wb\_supervisor\_field\_insert\_mf\_color**, **wb\_supervisor\_field\_insert\_mf\_string**, **wb\_supervisor\_field\_remove\_mf\_bool**, **wb\_supervisor\_field\_remove\_mf\_int32**, **wb\_supervisor\_field\_remove\_mf\_float**, **wb\_supervisor\_field\_remove\_mf\_vec2f**, **wb\_supervisor\_field\_remove\_mf\_vec3f**, **wb\_supervisor\_field\_remove\_mf\_rotation**, **wb\_supervisor\_field\_remove\_mf\_color**, **wb\_supervisor\_field\_remove\_mf\_string** - *insert or remove a value in a field*
 
 {[C++](cpp-api.md#cpp_field)}, {[Java](java-api.md#java_field)}, {[Python](python-api.md#python_field)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_field_import_mf_bool(WbFieldRef field, int position, bool value);
-void wb_supervisor_field_import_mf_int32(WbFieldRef field, int position, int value);
-void wb_supervisor_field_import_mf_float(WbFieldRef field, int position, double value);
-void wb_supervisor_field_import_mf_vec2f(WbFieldRef field, int position, const double values[2]);
-void wb_supervisor_field_import_mf_vec3f(WbFieldRef field, int position, const double values[3]);
-void wb_supervisor_field_import_mf_rotation(WbFieldRef field, int position, const double values[4]);
-void wb_supervisor_field_import_mf_color(WbFieldRef field, int position, const double values[3]);
-void wb_supervisor_field_import_mf_string(WbFieldRef field, int position, const char *value);
+void wb_supervisor_field_insert_mf_bool(WbFieldRef field, int position, bool value);
+void wb_supervisor_field_insert_mf_int32(WbFieldRef field, int position, int value);
+void wb_supervisor_field_insert_mf_float(WbFieldRef field, int position, double value);
+void wb_supervisor_field_insert_mf_vec2f(WbFieldRef field, int position, const double values[2]);
+void wb_supervisor_field_insert_mf_vec3f(WbFieldRef field, int position, const double values[3]);
+void wb_supervisor_field_insert_mf_rotation(WbFieldRef field, int position, const double values[4]);
+void wb_supervisor_field_insert_mf_color(WbFieldRef field, int position, const double values[3]);
+void wb_supervisor_field_insert_mf_string(WbFieldRef field, int position, const char *value);
 
 void wb_supervisor_field_remove_mf_bool(WbFieldRef field, int position);
 void wb_supervisor_field_remove_mf_int32(WbFieldRef field, int position);
@@ -1059,7 +1059,7 @@ void wb_supervisor_field_remove_mf_string(WbFieldRef field, int position);
 
 **Description**
 
-The `wb_supervisor_field_import_mf__*()` functions import a value to a specified
+The `wb_supervisor_field_insert_mf__*()` functions insert a value to a specified
 multiple `field` (MF). The type of the field has to match with the name of the
 function used, otherwise the value of the field remains unchanged (and a warning
 message is displayed).

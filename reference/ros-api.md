@@ -9,6 +9,21 @@ look at the [User
 Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)
 for more information about the value of `robot_unique_name`).
 
+### Common services
+
+| service name | service definition                     |
+| ------------ | -------------------------------------- |
+| get_bool     | bool ask<br/>---<br/>bool value        |
+| get_float    | bool ask<br/>---<br/>float64 value     |
+| get_int      | bool ask<br/>---<br/>int32 value       |
+| get_string   | bool ask<br/>---<br/>string value      |
+| get_float    | bool value<br/>---<br/>bool success    |
+| get_float    | float64 value<br/>---<br/>bool success |
+| get_float    | int32 value<br/>---<br/>bool success   |
+| get_float    | string value<br/>---<br/>bool success  |
+
+
+
 ### Accelerometer
 
 | name                                                                                      | service/topic | data type                                                                  | data type definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -20,7 +35,7 @@ for more information about the value of `robot_unique_name`).
 ### Brake
 
 | name                                                                                 | service/topic | data type                                  | data type definition                             |
-| ------------------------------------------------------------------------------------ | ------------- | ------------------------------------------ | ------------------------------------------------ |  |
+| ------------------------------------------------------------------------------------ | ------------- | ------------------------------------------ | ------------------------------------------------ |
 | [/`<`device\_name`>`/set\_damping\_constant](brake.md#wb_brake_set_damping_constant) | service       | webots\_ros::brake\_set\_damping\_constant | float64 dampingConstant<br/>---<br/>int8 success |
 | [/`<`device\_name`>`/get\_type](brake.md#wb_brake_set_damping_constant)              | service       | webots\_ros::device\_get\_type             | uint8 ask<br/>---<br/>uint8 type                 |
 

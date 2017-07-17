@@ -17,10 +17,10 @@ except that the `X3D` file and the animation are sent on the fly to the Web brow
 
 The web interface displays a toolbar with the following actions:
 * Simulation time: indicates the current simulation time on the first line of the simulation element. The second line is currently not used and indicates how long the simulation will run.
-* ![](images/web_interface_console.png =24x24) Console: open the console window where the simulation messages are printed.
-* ![](images/web_interface_help.png =24x24) Help: open the help window containing the documentation of the web interface.
-* ![](images/web_interface_fullscreen.png =24x24) Fullscreen: enter full screen mode.
-* ![](images/web_interface_exit_fullscreen.png =24x24) Exit fullscreen: exit full screen mode.
+* ![](images/web_interface_console.png =26x26) Console: open the console window where the simulation messages are printed.
+* ![](images/web_interface_help.png =26x26) Help: open the help window containing the documentation of the web interface.
+* ![](images/web_interface_fullscreen.png =26x26) Fullscreen: enter full screen mode.
+* ![](images/web_interface_exit_fullscreen.png =26x26) Exit fullscreen: exit full screen mode.
 
 The sample Javascript we provide to communicate with Webots supports advanced features that are not available during the basic broadcast streaming.
 This includes controlling the execution of the simulation, modifying the Python robot controller program and displaying the robot windows.

@@ -16,7 +16,7 @@ except that the `X3D` file and the animation are sent on the fly to the Web brow
 %end
 
 The web interface displays a toolbar with the following actions:
-* Simulation time: indicates the current simulation time on the first line of the simulation element. The second line is currently not used and indicates how long the simulation will run.
+* Simulation time: this item indicates the current simulation time on the first line of the simulation element. The second line is currently not used and indicates how long the simulation will run.
 * ![](images/web_interface_console.png =26x26) Console: open the console window where the simulation messages are printed.
 * ![](images/web_interface_help.png =26x26) Help: open the help window containing the documentation of the web interface.
 * ![](images/web_interface_fullscreen.png =26x26) Fullscreen: enter full screen mode.
@@ -25,8 +25,8 @@ The web interface displays a toolbar with the following actions:
 The sample Javascript we provide to communicate with Webots supports advanced features that are not available during the basic broadcast streaming.
 This includes controlling the execution of the simulation, modifying the Python robot controller program and displaying the robot windows.
 All these functionalities are enabled when starting the streaming using the `simulation_server.py` and `session_server.py` script located at `WEBOTS_HOME/resources/web/server`.
-These scripts run a complete simulation server that execute Webots in a secure environment using Firejail and that instantiates a new Webots instance for each connected client.
-This is still a work in progress so the documentation is limited and the system could change in the next releases.
+These scripts run a complete simulation server that executes Webots in a secure environment using [Firejail Security Sandbox](https://firejail.wordpress.com/) and instantiates a new Webots instance for each connected client.
+The simulation server is still a work in progress so the documentation is limited and the system could change in the next releases.
 
 
 ### How to stream a Webots Simulation

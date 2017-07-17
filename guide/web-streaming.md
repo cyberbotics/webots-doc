@@ -15,6 +15,19 @@ except that the `X3D` file and the animation are sent on the fly to the Web brow
 
 %end
 
+The web interface displays a toolbar with the following actions:
+* Simulation time: indicates the current simulation time on the first line of the simulation element. The second line is currently not used and indicates how long the simulation will run.
+* ![](images/web_interface_console.png =26x26) Console: open the console window where the simulation messages are printed.
+* ![](images/web_interface_help.png =26x26) Help: open the help window containing the documentation of the web interface.
+* ![](images/web_interface_fullscreen.png =26x26) Fullscreen: enter full screen mode.
+* ![](images/web_interface_exit_fullscreen.png =26x26) Exit fullscreen: exit full screen mode.
+
+The sample Javascript we provide to communicate with Webots supports advanced features that are not available during the basic broadcast streaming.
+This includes controlling the execution of the simulation, modifying the Python robot controller program and displaying the robot windows.
+All these functionalities are enabled when starting the streaming using the `simulation_server.py` and `session_server.py` script located at `WEBOTS_HOME/resources/web/server`.
+These scripts run a complete simulation server that execute Webots in a secure environment using Firejail and that instantiates a new Webots instance for each connected client.
+This is still a work in progress so the documentation is limited and the system could change in the next releases.
+
 
 ### How to stream a Webots Simulation
 
@@ -25,7 +38,7 @@ for details about the sub-options.
 Open the streaming viewer page in your Web browser:
 
 ```
-$(WEBOTS_HOME)/resources/web/streaming_viewer/index.html 
+$(WEBOTS_HOME)/resources/web/streaming_viewer/index.html
 ```
 
 Use the buttons on the top of the page to connect to the Webots streaming server.
@@ -40,7 +53,7 @@ The port should not be used by another application.
 The Webots streaming server is simply running on the local computer on a given port
 (`1234` by default, but it can be modified from the [command line arguments](starting-webots.md#command-line-arguments)).
 This port should not be used by another application.
-In order to be visible from the outside network, 
+In order to be visible from the outside network,
 the port should be open (e.g. on simple networks, this can be done by modifying the NAT settings of the router).
 The firewall of the local computer may complain about this operation, in this case, please modify its settings.
 

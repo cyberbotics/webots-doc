@@ -11,17 +11,17 @@ for more information about the value of `robot_unique_name`).
 
 ### Common services
 
-| service name | service definition                        |
-| ------------ | ----------------------------------------- |
-| get_bool     | bool ask<br/>---<br/>bool value           |
-| get_float    | bool ask<br/>---<br/>float64 value        |
-| get_int      | bool ask<br/>---<br/>int32 value          |
-| get_string   | bool ask<br/>---<br/>string value         |
-| set_bool     | bool value<br/>---<br/>bool success       |
-| set_float    | float64 value<br/>---<br/>bool success    |
-| set_floats   | float64[] values<br/>---<br/>bool success |
-| set_int      | int32 value<br/>---<br/>bool success      |
-| set_string   | string value<br/>---<br/>bool success     |
+| service name    | service definition                        |
+| --------------- | ----------------------------------------- |
+| get_bool        | bool ask<br/>---<br/>bool value           |
+| get_float       | bool ask<br/>---<br/>float64 value        |
+| get_int         | bool ask<br/>---<br/>int32 value          |
+| get_string      | bool ask<br/>---<br/>string value         |
+| set_bool        | bool value<br/>---<br/>bool success       |
+| set_float       | float64 value<br/>---<br/>bool success    |
+| set_float_array | float64[] values<br/>---<br/>bool success |
+| set_int         | int32 value<br/>---<br/>bool success      |
+| set_string      | string value<br/>---<br/>bool success     |
 
 
 
@@ -88,10 +88,10 @@ for more information about the value of `robot_unique_name`).
 | name                                                                                                                           | service/topic | data type                                                     | data type definition                                                                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [/differential\_wheels/lwheel and /differential\_wheels/rwheel](differentialwheels.md#wb_differential_wheels_get_left_encoder) | topic         | webots\_ros::Float64Stamped                                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>float64 data                                                                                                                                                                            |
-| [/differential\_wheels/set\_encoders](differentialwheels.md#wb_differential_wheels_get_left_encoder)                           | service       | [webots\_ros::set\_floats](#common_services)                  |                                                                                                                                                                                                                                                                    |
+| [/differential\_wheels/set\_encoders](differentialwheels.md#wb_differential_wheels_get_left_encoder)                           | service       | [webots\_ros::set\_float\_array](#common_services)            |                                                                                                                                                                                                                                                                    |
 | [/differential\_wheels\_encoders/enable](differentialwheels.md#wb_differential_wheels_enable_encoders)                         | service       | [webots\_ros::set\_int](#common_services)                     |                                                                                                                                                                                                                                                                    |
 | [/differential\_wheels\_encoders/get\_sampling\_period](differentialwheels.md#wb_differential_wheels_enable_encoders)          | service       | [webots\_ros::get\_int](#common_services)                     |                                                                                                                                                                                                                                                                    |
-| [/differential\_wheels/set\_speed](differentialwheels.md#wb_differential_wheels_set_speed)                                     | service       | [webots\_ros::set\_floats](#common_services)                  |                                                                                                                                                                                                                                                                    |
+| [/differential\_wheels/set\_speed](differentialwheels.md#wb_differential_wheels_set_speed)                                     | service       | [webots\_ros::set\_float\_array](#common_services)            |                                                                                                                                                                                                                                                                    |
 | /differential\_wheels/subscribe\_twist\_commands                                                                               | service       | webots\_ros::differential\_wheels\_subscribe\_twist\_commands | uint8 subscribe<br/>---<br/>int8 success<br/><br/>Note: this service is used to subscribe to a topic called '/differential\_wheels/twist\_commands' which should send [geometry\_msgs::Twist](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html) commands. |
 | [/differential\_wheels/get\_max\_speed](differentialwheels.md#wb_differential_wheels_get_max_speed)                            | service       | [webots\_ros::get\_float](#common_services)                   |                                                                                                                                                                                                                                                                    |
 | [/differential\_wheels/get\_speed](differentialwheels.md#wb_differential_wheels_set_speed)                                     | service       | webots\_ros::differential\_wheels\_get\_speed                 | uint8 ask<br/>---<br/>float64 speed                                                                                                                                                                                                                                |

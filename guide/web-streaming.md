@@ -15,8 +15,8 @@ except that the `X3D` file and the animation are sent on the fly to the Web brow
 
 %end
 
-The web interface displays a toolbar with the following actions:
-* Simulation time: this item indicates the current simulation time on the first line of the simulation element. The second line is currently not used and indicates how long the simulation will run.
+The web interface displays a toolbar with the following items:
+* Simulation time: this item indicates the current simulation time on the first line. The second line is not used with this streaming solution and it will indicates how long the simulation will run.
 * ![](images/web_interface_console.png =26x26) Console: open the console window where the simulation messages are printed.
 * ![](images/web_interface_help.png =26x26) Help: open the help window containing the documentation of the web interface.
 * ![](images/web_interface_fullscreen.png =26x26) Fullscreen: enter full screen mode.

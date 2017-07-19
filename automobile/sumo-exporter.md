@@ -24,6 +24,12 @@ correctly.
 
 ## How to use the exporter
 
+> **Note**:
+A prerequisite on Linux is to run add the SUMO bin path in your LD_LIBRARY_PATH environment variable:
+
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SUMO_HOME/bin
+
+
 You should use the `exporter.py` python script to generate the `sumo.nod.xml`,
 `sumo.edg.xml` and `sumo.sumocfg` SUMO files.
 These files can be used by SUMO `netconvert` to generate the `sumo.net.xml` file

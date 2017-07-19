@@ -54,7 +54,7 @@ You can also enable the spline subdivision on some of the roads in Webots in ord
 ### Generate the SUMO network files
 
 > **Note**:
-A prerequisite on Linux is to run add the SUMO bin path in your LD_LIBRARY_PATH environment variable:
+On Linux, the SUMO bin path should be added in your LD_LIBRARY_PATH environment variable in order to run the SUMO binaries:
 
         export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SUMO_HOME/bin
 

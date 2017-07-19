@@ -56,7 +56,7 @@ You can also enable the spline subdivision on some of the roads in Webots in ord
 > **Note**:
 On Linux, the SUMO bin path should be added in your LD_LIBRARY_PATH environment variable in order to run the SUMO binaries:
 
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SUMO_HOME/bin
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/automobile/resources/sumo/bin
 
 We can also use the previously generated Webots world to generate the SUMO network file.
 You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for this:

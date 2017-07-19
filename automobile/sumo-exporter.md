@@ -27,7 +27,7 @@ correctly.
 > **Note**:
 On Linux, the SUMO bin path should be added in your LD_LIBRARY_PATH environment variable in order to run the SUMO binaries:
 
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SUMO_HOME/bin
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/automobile/resources/sumo/bin
 
 
 You should use the `exporter.py` python script to generate the `sumo.nod.xml`,

@@ -1,0 +1,23 @@
+/*
+ * Minimal CSS for a web page displaying the Webots documentation.
+ * Edit this file to integrate the documentation in your own web pages.
+ */
+
+html,
+body {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 14px;
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100;
+  /*
+    Issue: QtWebKit font-face support is buggy on macOS.
+    Workaround: Do not define a source a let a system font be loaded.
+  */
+}

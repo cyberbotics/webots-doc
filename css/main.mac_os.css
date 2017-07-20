@@ -18,6 +18,6 @@ body {
   font-weight: 100;
   /*
     Issue: QtWebKit font-face support is buggy on macOS.
-    Workaround: Do not define a source a let a system font be loaded.
+    Workaround: Do not define a source and let a system font be loaded.
   */
 }

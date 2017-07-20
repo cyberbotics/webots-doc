@@ -16,5 +16,8 @@ body {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 100;
-  src: local("Raleway Thin"), local("Raleway-Thin"), url("Raleway-Thin.woff") format("woff");
+  /*
+    Issue: QtWebKit font-face support is buggy on macOS.
+    Workaround: Do not define a source and let a system font be loaded.
+  */
 }

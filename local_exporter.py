@@ -87,6 +87,10 @@ with open(script_directory + 'index.html', 'r') as file:
 
 reg = r'"https://www\.cyberbotics\.com/([^"]*)"'
 content = re.sub(reg, r'"dependencies/\1"', content)
+if platform.system() == 'Darwin':
+    # Because of the bad support of @font-face by QtWebKit on macOS,
+    # a custom CSS containing a system font is preferred for macOS.
+    content = content.replace('"css/main.css"', '"css/main.mac_os.css"')
 
 html_file_path = script_directory + 'local_index.html'
 with open(html_file_path, 'w') as file:

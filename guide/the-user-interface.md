@@ -100,7 +100,7 @@ you to take a screenshot of the current view in Webots. It opens a file dialog
 to save the current view as a PNG or JPG image.
 
 ![](images/movie-button.png =26x26) The `Make Movie...` item allows you to
-create MPEG movies (Linux and Mac OS X) or AVI movies (Windows). Once the movie
+create MPEG movies (Linux and macOS) or AVI movies (Windows). Once the movie
 recording is started, this item is changed in `Stop Movie...`. During the
 recording, it is possible to the change the running mode and pause the
 simulation. However, frames are only captured during Webots steps and not when
@@ -134,7 +134,10 @@ The `Follow Object` menu item allows you to switch between a fixed (static)
 viewpoint and a viewpoint that follows a mobile object (usually a robot). If you
 want the viewpoint to follow an object, first you need to select the object with
 the mouse and then check the `Follow Object` menu item. Note that the `Follow
-Object` state is saved in the ".wbt" file.
+Object` state is saved in the ".wbt" file. By default, the viewpoint will follow
+the object smoothly, mitigating shaking or jerky movements of the object. You can
+change this behavior by changing the `followSmoothness` field of the Viewpoint node
+in the scene tree.
 
 The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
 
@@ -145,6 +148,16 @@ original viewpoint.
 
 The `Fullscreen` item enables and disables displaying the 3D window on the
 entire screen.
+
+The `Virtual Reality Headset` submenu allows you to use a virtual reality headset such as the HTC Vive or Oculus Rift to view the simulation.
+The `Enable` item allows you to switch the simulation view to the headset.
+The `Track headset position` and `Track headset orientation` items specifies if the headset position and orientation should be tracked and applied to the viewpoint.
+The `View left eye`, `View right eye` and `Empty view` radio buttons allow you to choose what should be displayed in the simulation view. You can either see the left eye image, right eye image or nothing.
+The headset installation procedure is described [here](computer-peripherals.md).
+
+> **Note**:
+This menu is currently present only on Windows.
+If you are on Windows and the menu is not enabled, it indicates that the drivers are not installed or that no headset is connected.
 
 The `Projection` radio button group allows you to choose between the
 `Perspective Projection` (default) and the `Orthographic Projection` mode for

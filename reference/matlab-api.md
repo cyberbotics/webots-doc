@@ -43,6 +43,12 @@ The following tables describe the Matlab functions.
 | near = [wb\_camera\_get\_near](camera.md#wb_camera_get_near)(tag)                              |
 | image = [wb\_camera\_get\_image](camera.md#wb_camera_get_image)(tag)                           |
 | [wb\_camera\_save\_image](camera.md#wb_camera_save_image)(tag, 'filename', quality)            |
+| [wb\_camera\_has\_recognition](camera.md#wb_camera_has_recognition)(tag)                       |
+| [wb\_camera\_recognition\_disable](camera.md#wb_camera_has_recognition)(tag)                   |
+| [wb\_camera\_recognition\_enable](camera.md#wb_camera_has_recognition)(tag, sampling_period)   |
+| [wb\_camera\_recognition\_get\_number\_of\_objects](camera.md#wb_camera_has_recognition)(tag)  |
+| [wb\_camera\_recognition\_get\_objects](camera.md#wb_camera_has_recognition)(tag)              |
+| [wb\_camera\_recognition\_get\_sampling\_period](camera.md#wb_camera_has_recognition)(tag)     |
 
 %end
 
@@ -258,29 +264,29 @@ The following tables describe the Matlab functions.
 
 %api "matlab_lidar"
 
-| % [Lidar](lidar.md) :                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------- |
-| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, sampling_period);                                                 |
-| &nbsp;&nbsp; [wb\_lidar\_enable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                        |
-| &nbsp;&nbsp; [wb\_lidar\_disable](lidar.md#wb_lidar_enable)(tag);                                                                 |
-| &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag);                                       |
-| &nbsp;&nbsp; period = [wb\_lidar\_get\_sampling\_period](lidar.md#wb_lidar_enable)(tag);                                          |
-| &nbsp;&nbsp; state = [wb\_lidar\_is\_point\_cloud\_enabled](lidar.md#wb_lidar_enable)(tag);                                       |
-| &nbsp;&nbsp; range = [wb\_lidar\_get\_range\_image](lidar.md#wb_lidar_get_range_image)(tag);                                      |
-| &nbsp;&nbsp; range = [wb\_lidar\_get\_layer\_range\_image](lidar.md#wb_lidar_get_range_image)(tag, layer);                        |
-| &nbsp;&nbsp; points = [wb\_lidar\_get\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag);                                     |
-| &nbsp;&nbsp; points = [wb\_lidar\_get\_layer\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag, layer);                       |
-| &nbsp;&nbsp; number\_of\_points = [wb\_lidar\_get\_number\_of\_points](lidar.md#wb_lidar_get_point_cloud)(tag);                   |
-| &nbsp;&nbsp; frequency = [wb\_lidar\_get\_frequency](lidar.md#wb_lidar_get_frequency)(tag);                                       |
-| &nbsp;&nbsp; [wb\_lidar\_set\_frequency](lidar.md#wb_lidar_get_frequency)(tag, frequency);                                        |
-| &nbsp;&nbsp; horizontal\_resolution = [wb\_lidar\_get\_horizontal\_resolution](lidar.md#wb_lidar_get_horizontal_resolution)(tag); |
-| &nbsp;&nbsp; number\_of\_layers = [wb\_lidar\_get\_number\_of\_layers](lidar.md#wb_lidar_get_horizontal_resolution)(tag);         |
-| &nbsp;&nbsp; min\_frequency = [wb\_lidar\_get\_min\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag);                         |
-| &nbsp;&nbsp; max\_frequency = [wb\_lidar\_get\_max\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag);                         |
-| &nbsp;&nbsp; fov = [wb\_lidar\_get\_fov](lidar.md#wb_lidar_get_fov)(tag);                                                         |
-| &nbsp;&nbsp; vertical\_fov = [wb\_lidar\_get\_vertical\_fov](lidar.md#wb_lidar_get_fov)(tag);                                     |
-| &nbsp;&nbsp; min\_range = [wb\_lidar\_get\_min\_range](lidar.md#wb_lidar_get_min_range)(tag);                                     |
-| &nbsp;&nbsp; max\_range = [wb\_lidar\_get\_max\_range](lidar.md#wb_lidar_get_min_range)(tag);                                     |
+| % [Lidar](lidar.md) :                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| &nbsp;&nbsp; [wb\_lidar\_enable](lidar.md#wb_lidar_enable)(tag, sampling_period)                                                 |
+| &nbsp;&nbsp; [wb\_lidar\_enable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag)                                        |
+| &nbsp;&nbsp; [wb\_lidar\_disable](lidar.md#wb_lidar_enable)(tag)                                                                 |
+| &nbsp;&nbsp; [wb\_lidar\_disable\_point\_cloud](lidar.md#wb_lidar_enable_point_cloud)(tag)                                       |
+| &nbsp;&nbsp; period = [wb\_lidar\_get\_sampling\_period](lidar.md#wb_lidar_enable)(tag)                                          |
+| &nbsp;&nbsp; state = [wb\_lidar\_is\_point\_cloud\_enabled](lidar.md#wb_lidar_enable)(tag)                                       |
+| &nbsp;&nbsp; range = [wb\_lidar\_get\_range\_image](lidar.md#wb_lidar_get_range_image)(tag)                                      |
+| &nbsp;&nbsp; range = [wb\_lidar\_get\_layer\_range\_image](lidar.md#wb_lidar_get_range_image)(tag, layer)                        |
+| &nbsp;&nbsp; points = [wb\_lidar\_get\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag)                                     |
+| &nbsp;&nbsp; points = [wb\_lidar\_get\_layer\_point\_cloud](lidar.md#wb_lidar_get_point_cloud)(tag, layer)                       |
+| &nbsp;&nbsp; number\_of\_points = [wb\_lidar\_get\_number\_of\_points](lidar.md#wb_lidar_get_point_cloud)(tag)                   |
+| &nbsp;&nbsp; frequency = [wb\_lidar\_get\_frequency](lidar.md#wb_lidar_get_frequency)(tag)                                       |
+| &nbsp;&nbsp; [wb\_lidar\_set\_frequency](lidar.md#wb_lidar_get_frequency)(tag, frequency)                                        |
+| &nbsp;&nbsp; horizontal\_resolution = [wb\_lidar\_get\_horizontal\_resolution](lidar.md#wb_lidar_get_horizontal_resolution)(tag) |
+| &nbsp;&nbsp; number\_of\_layers = [wb\_lidar\_get\_number\_of\_layers](lidar.md#wb_lidar_get_horizontal_resolution)(tag)         |
+| &nbsp;&nbsp; min\_frequency = [wb\_lidar\_get\_min\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag)                         |
+| &nbsp;&nbsp; max\_frequency = [wb\_lidar\_get\_max\_frequency](lidar.md#wb_lidar_get_min_frequency)(tag)                         |
+| &nbsp;&nbsp; fov = [wb\_lidar\_get\_fov](lidar.md#wb_lidar_get_fov)(tag)                                                         |
+| &nbsp;&nbsp; vertical\_fov = [wb\_lidar\_get\_vertical\_fov](lidar.md#wb_lidar_get_fov)(tag)                                     |
+| &nbsp;&nbsp; min\_range = [wb\_lidar\_get\_min\_range](lidar.md#wb_lidar_get_min_range)(tag)                                     |
+| &nbsp;&nbsp; max\_range = [wb\_lidar\_get\_max\_range](lidar.md#wb_lidar_get_min_range)(tag)                                     |
 
 %end
 
@@ -347,11 +353,22 @@ The following tables describe the Matlab functions.
 
 %end
 
+%api "matlab_mouse"
+
+| % [Mouse](mouse.md) :                                                   |
+| ----------------------------------------------------------------------- |
+| [wb\_mouse\_enable](mouse.md#wb_mouse_enable)(sampling_period)          |
+| [wb\_mouse\_disable](mouse.md#wb_mouse_enable)()                        |
+| period = [wb\_mouse\_get\_sampling\_period](mouse.md#wb_mouse_enable)() |
+| state = [wb_mouse_get_state](mouse.md#wb_mouse_enable)()                |
+
+%end
+
 %api "matlab_node"
 
 | Node:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| WB\_NODE\_NO\_NODE, WB\_NODE\_ACCELEROMETER, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, WB\_NODE\_BALL\_JOINT, WB\_NODE\_BALL\_JOINT\_PARAMETERS, WB\_NODE\_BOX, WB\_NODE\_BRAKE, WB\_NODE\_CAMERA, WB\_NODE\_CAPSULE, WB\_NODE\_CHARGER, WB\_NODE\_COLOR, WB\_NODE\_COMPASS, WB\_NODE\_CONE, WB\_NODE\_CONNECTOR, WB\_NODE\_CONTACT\_PROPERTIES, WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, WB\_NODE\_DAMPING, WB\_NODE\_DIFFERENTIAL\_WHEELS, WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_DISPLAY, WB\_NODE\_DISTANCE\_SENSOR, WB\_NODE\_ELEVATION\_GRID, WB\_NODE\_EMITTER, WB\_NODE\_EXTRUSION, WB\_NODE\_FLUID, WB\_NODE\_FOCUS, WB\_NODE\_FOG, WB\_NODE\_GPS, WB\_NODE\_GROUP, WB\_NODE\_GYRO, WB\_NODE\_HINGE\_2\_JOINT, WB\_NODE\_HINGE\_2\_JOINT\_PARAMETERS, WB\_NODE\_HINGE\_JOINT, WB\_NODE\_HINGE\_JOINT\_PARAMETERS, WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_IMMERSION\_PROPERTIES, WB\_NODE\_INDEXED\_FACE\_SET, WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_INERTIAL\_UNIT, WB\_NODE\_JOINT\_PARAMETERS, WB\_NODE\_LED, WB\_NODE\_LIDAR, WB\_NODE\_LIGHT\_SENSOR, WB\_NODE\_LINEAR\_MOTOR, WB\_NODE\_LENS\_DISTORTION, WB\_NODE\_MATERIAL, WB\_NODE\_MICROPHONE, WB\_NODE\_PEN, WB\_NODE\_PHYSICS, WB\_NODE\_PLANE, WB\_NODE\_POINT\_LIGHT, WB\_NODE\_POSITION\_SENSOR, WB\_NODE\_PROPELLER, WB\_NODE\_RADAR, WB\_NODE\_RADIO, WB\_NODE\_RANGE\_FINDER, WB\_NODE\_RECEIVER, WB\_NODE\_ROBOT, WB\_NODE\_ROTATIONAL\_MOTOR, WB\_NODE\_SERVO, WB\_NODE\_SHAPE, WB\_NODE\_SLIDER\_JOINT, WB\_NODE\_SLOT, WB\_NODE\_SOLID, WB\_NODE\_SOLID\_REFERENCE, WB\_NODE\_SPEAKER, WB\_NODE\_SPHERE, WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SUPERVISOR, WB\_NODE\_SWITCH, WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, WB\_NODE\_TOUCH\_SENSOR, WB\_NODE\_TRACK, WB\_NODE\_TRACK\_WHEEL, WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO, WB\_NODE\_ZOOM |
+| WB\_NODE\_NO\_NODE, WB\_NODE\_ACCELEROMETER, WB\_NODE\_APPEARANCE, WB\_NODE\_BACKGROUND, WB\_NODE\_BALL\_JOINT, WB\_NODE\_BALL\_JOINT\_PARAMETERS, WB\_NODE\_BOX, WB\_NODE\_BRAKE, WB\_NODE\_CAMERA, WB\_NODE\_CAPSULE, WB\_NODE\_CHARGER, WB\_NODE\_COLOR, WB\_NODE\_COMPASS, WB\_NODE\_CONE, WB\_NODE\_CONNECTOR, WB\_NODE\_CONTACT\_PROPERTIES, WB\_NODE\_COORDINATE, WB\_NODE\_CYLINDER, WB\_NODE\_DAMPING, WB\_NODE\_DIFFERENTIAL\_WHEELS, WB\_NODE\_DIRECTIONAL\_LIGHT, WB\_NODE\_DISPLAY, WB\_NODE\_DISTANCE\_SENSOR, WB\_NODE\_ELEVATION\_GRID, WB\_NODE\_EMITTER, WB\_NODE\_EXTRUSION, WB\_NODE\_FLUID, WB\_NODE\_FOCUS, WB\_NODE\_FOG, WB\_NODE\_GPS, WB\_NODE\_GROUP, WB\_NODE\_GYRO, WB\_NODE\_HINGE\_2\_JOINT, WB\_NODE\_HINGE\_2\_JOINT\_PARAMETERS, WB\_NODE\_HINGE\_JOINT, WB\_NODE\_HINGE\_JOINT\_PARAMETERS, WB\_NODE\_IMAGE\_TEXTURE, WB\_NODE\_IMMERSION\_PROPERTIES, WB\_NODE\_INDEXED\_FACE\_SET, WB\_NODE\_INDEXED\_LINE\_SET, WB\_NODE\_INERTIAL\_UNIT, WB\_NODE\_JOINT\_PARAMETERS, WB\_NODE\_LED, WB\_NODE\_LIDAR, WB\_NODE\_LIGHT\_SENSOR, WB\_NODE\_LINEAR\_MOTOR, WB\_NODE\_LENS\_DISTORTION, WB\_NODE\_MATERIAL, WB\_NODE\_MICROPHONE, WB\_NODE\_PEN, WB\_NODE\_PHYSICS, WB\_NODE\_PLANE, WB\_NODE\_POINT\_LIGHT, WB\_NODE\_POSITION\_SENSOR, WB\_NODE\_PROPELLER, WB\_NODE\_RADAR, WB\_NODE\_RADIO, WB\_NODE\_RANGE\_FINDER, WB\_NODE\_RECEIVER, WB\_NODE\_RECOGNITION, WB\_NODE\_ROBOT, WB\_NODE\_ROTATIONAL\_MOTOR, WB\_NODE\_SERVO, WB\_NODE\_SHAPE, WB\_NODE\_SLIDER\_JOINT, WB\_NODE\_SLOT, WB\_NODE\_SOLID, WB\_NODE\_SOLID\_REFERENCE, WB\_NODE\_SPEAKER, WB\_NODE\_SPHERE, WB\_NODE\_SPOT\_LIGHT, WB\_NODE\_SUPERVISOR, WB\_NODE\_SWITCH, WB\_NODE\_TEXTURE\_COORDINATE, WB\_NODE\_TEXTURE\_TRANSFORM, WB\_NODE\_TOUCH\_SENSOR, WB\_NODE\_TRACK, WB\_NODE\_TRACK\_WHEEL, WB\_NODE\_TRANSFORM, WB\_NODE\_VIEWPOINT, WB\_NODE\_WORLD\_INFO, WB\_NODE\_ZOOM |
 
 %end
 
@@ -493,8 +510,10 @@ The following tables describe the Matlab functions.
 | ----------------------------------------------------------------------------------------------------------- |
 | [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
 | [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
-| [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                                |
-| language = [wb_speaker_get_language](speaker.md#wb_speaker_set_language)(tag)                               |
+| engine = [wb_speaker_get_engine](speaker.md#wb_speaker_get_engine)(tag)                                     |
+| language = [wb_speaker_get_language](speaker.md#wb_speaker_get_language)(tag)                               |
+| success = [wb_speaker_set_engine](speaker.md#wb_speaker_set_engine)(tag, engine)                            |
+| success = [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                      |
 | [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
 
 %end
@@ -512,9 +531,11 @@ The following tables describe the Matlab functions.
 | node = [wb\_supervisor\_node\_get\_root](supervisor.md#wb_supervisor_node_get_from_def)()                                                                            |
 | node = [wb\_supervisor\_node\_get\_self](supervisor.md#wb_supervisor_node_get_from_def)()                                                                            |
 | node = [wb\_supervisor\_node\_get\_from\_def](supervisor.md#wb_supervisor_node_get_from_def)('def')                                                                  |
+| s  = [wb\_supervisor\_node\_get\_def](supervisor.md#wb_supervisor_node_get_def)(node)                                                                                |
 | node = [wb\_supervisor\_node\_get\_from\_id](supervisor.md#wb_supervisor_node_get_from_def)('id')                                                                    |
 | id = [wb\_supervisor\_node\_get\_id](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                            |
 | node = [wb\_supervisor\_node\_get\_parent\_node](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                |
+| node = [wb\_supervisor\_node\_get\_selected](supervisor.md#wb_supervisor_node_get_from_def)()                                                                        |
 | [wb\_supervisor\_node\_remove](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                  |
 | [wb\_supervisor\_set\_label](supervisor.md#wb_supervisor_set_label)(id, 'text', x, y, size, [r g b], transparency)                                                   |
 | [wb\_supervisor\_simulation\_quit](supervisor.md#wb_supervisor_simulation_quit)(status)                                                                              |
@@ -569,9 +590,17 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_field\_set\_mf\_rotation](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [x y z a])                                                   |
 | [wb\_supervisor\_field\_set\_mf\_color](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, [r g b])                                                        |
 | [wb\_supervisor\_field\_set\_mf\_string](supervisor.md#wb_supervisor_field_set_sf_bool)(field, index, 'value')                                                       |
+| [wb\_supervisor\_field\_insert\_mf\_bool](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, value)                                                     |
+| [wb\_supervisor\_field\_insert\_mf\_int32](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, value)                                                    |
+| [wb\_supervisor\_field\_insert\_mf\_float](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, value)                                                    |
+| [wb\_supervisor\_field\_insert\_mf\_vec2f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [x y])                                                    |
+| [wb\_supervisor\_field\_insert\_mf\_vec3f](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [x y z])                                                  |
+| [wb\_supervisor\_field\_insert\_mf\_rotation](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [x y z a])                                             |
+| [wb\_supervisor\_field\_insert\_mf\_color](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, [r g b])                                                  |
+| [wb\_supervisor\_field\_insert\_mf\_string](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index, 'value')                                                 |
+| [wb\_supervisor\_field\_remove\_mf](supervisor.md#wb_supervisor_field_insert_mf_bool)(field, index)                                                                  |
 | [wb\_supervisor\_field\_import\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'filename')                                             |
 | [wb\_supervisor\_field\_import\_mf\_node\_from\_string](supervisor.md#wb_supervisor_field_import_mf_node)(field, position, 'node\_string')                           |
-| [wb\_supervisor\_field\_remove\_mf\_node](supervisor.md#wb_supervisor_field_import_mf_node)(field, position)                                                         |
 | type = [wb\_supervisor\_node\_get\_type](supervisor.md#wb_supervisor_node_get_type)(node)                                                                            |
 | name = [wb\_supervisor\_node\_get\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                      |
 | name = [wb\_supervisor\_node\_get\_base\_type\_name](supervisor.md#wb_supervisor_node_get_type)(node)                                                                |
@@ -585,7 +614,11 @@ The following tables describe the Matlab functions.
 | velocity = [wb\_supervisor\_node\_get\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node)                                                                |
 | [wb\_supervisor\_node\_set\_velocity](supervisor.md#wb_supervisor_node_get_velocity)(node, velocity)                                                                 |
 | [wb\_supervisor\_node\_reset\_physics](supervisor.md#wb_supervisor_node_reset_physics)(node)                                                                         |
+| [wb\_supervisor\_node\_restart\_controller](supervisor.md#wb_supervisor_node_restart_controller)(node)                                                               |
 | [wb\_supervisor\_node\_set\_visibility](supervisor.md#wb_supervisor_node_set_visibility)(node, from, visible)                                                        |
+| used = [wb\_supervisor\_virtual\_reality\_headset\_is\_used](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)()                                          |
+| position = [wb\_supervisor\_virtual\_reality\_headset\_get\_position](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)()                                 |
+| orientation = [wb\_supervisor\_virtual\_reality\_headset\_get\_orientation](supervisor.md#wb_supervisor_virtual_reality_headset_is_used)()                           |
 
 %end
 

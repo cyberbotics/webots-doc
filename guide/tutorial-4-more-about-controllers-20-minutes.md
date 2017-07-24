@@ -128,12 +128,8 @@ Write the prototype of the `main()` function as follows:
 >   // initialize the Webots API
 >   wb_robot_init();
 >   // initialize devices
->   // feedback loop
->   while (1) {
->     // step simulation
->     int delay = wb_robot_step(TIME_STEP);
->     if (delay == -1) // exit event from Webots
->       break;
+>   // feedback loop: step simulation until receiving an exit event
+>   while (wb_robot_step(TIME_STEP) != -1) {
 >     // read sensors outputs
 >     // process behavior
 >     // write actuators inputs
@@ -272,13 +268,8 @@ int main(int argc, char **argv)
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
 
-  // feedback loop
-  while (1) {
-    // step simulation
-    int delay = wb_robot_step(TIME_STEP);
-    if (delay == -1) // exit event from Webots
-      break;
-
+  // feedback loop: step simulation until an exit event is received
+  while (wb_robot_step(TIME_STEP) != -1) {
     // read sensors outputs
     double ps_values[8];
     for (i=0; i<8 ; i++)
@@ -300,10 +291,12 @@ int main(int argc, char **argv)
 
     // modify speeds according to obstacles
     if (left_obstacle) {
+      // turn right
       left_speed  += 500;
       right_speed -= 500;
     }
     else if (right_obstacle) {
+      // turn left
       left_speed  -= 500;
       right_speed += 500;
     }

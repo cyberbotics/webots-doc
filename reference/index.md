@@ -39,7 +39,7 @@ K-Team S.A.
 
 *Linux*<sup>TM</sup> is a registered trademark of Linus Torvalds.
 
-*Mac OS X*<sup>TM</sup> is a registered trademark of Apple Inc.
+*macOS*<sup>TM</sup> is a registered trademark of Apple Inc.
 
 *Mindstorms*<sup>TM</sup> and *LEGO*<sup>TM</sup> are registered trademarks of
 the LEGO group.

@@ -8,9 +8,12 @@ if (typeof String.prototype.endsWith !== "function")
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
 
-var local = location.href.indexOf('://www.cyberbotics.com/doc') == -1;
+if (!setup)
+  var setup = {};
 
-function setupUrlOnline(url) {
+var isCyberboticsUrl = location.href.indexOf('://www.cyberbotics.com/doc') != -1;
+
+function setupCyberboticsUrl(url) {
   setup.book = "guide";
   setup.page = "index";
   setup.anchor = "";
@@ -43,7 +46,7 @@ function setupUrlOnline(url) {
   }
 }
 
-function setupUrlLocal(url) {
+function setupDefaultUrl(url) {
     setup.tag = '';
 
     var m;
@@ -57,7 +60,7 @@ function setupUrlLocal(url) {
     m = url.match(/book=([^&#]*)/);
     if (m)
       setup.book = m[1];
-    else
+    else if (!setup.book)
       setup.book = "guide";
 
     m = url.match(/#([^&#]*)/);
@@ -68,10 +71,10 @@ function setupUrlLocal(url) {
 }
 
 function setupUrl(url) {
-    if (local)
-        setupUrlLocal(url);
+    if (isCyberboticsUrl)
+        setupCyberboticsUrl(url);
     else
-        setupUrlOnline(url);
+        setupDefaultUrl(url);
     console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor);
 }
 
@@ -118,7 +121,7 @@ function forgeUrl(page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ("#" + anchor) : "";
   var currentUrl = location.href;
   var newUrl = currentUrl;
-  if (!local) {
+  if (isCyberboticsUrl) {
     newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
     if (setup.tag != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.tag;
@@ -190,7 +193,7 @@ function applyAnchor() {
     var anchors = document.getElementsByName(setup.anchor);
     if (anchors.length > 0) {
         anchors[0].scrollIntoView(true);
-        if (!local)
+        if (isCyberboticsUrl)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
         updateBrowserUrl();
     } else
@@ -205,6 +208,8 @@ function applyToTitleDiv() {
       newTitle = "Webots User Guide";
     else if (setup.book == "reference")
       newTitle = "Webots Reference Manual";
+    else if (setup.book == "blog")
+      newTitle = "Webots Blog";
     else if (setup.book == "automobile")
       newTitle = "Webots for automobiles";
     else if (setup.book == "robotis-op2")
@@ -214,6 +219,58 @@ function applyToTitleDiv() {
     if (newTitle.length > 0) {
       newTitle += " <div class='release-tag'>" + getWebotsVersion() + "</div>";
       titleContentElement.innerHTML = newTitle;
+    }
+  }
+}
+
+function setUpBlogStyleIfNeeded() {
+  if (setup.book == "blog") {
+    var center = document.getElementById("center");
+    center.setAttribute("class", "blog");
+
+    setHandleWidth(0);
+
+    document.title = "Webots Blog";
+
+    var figures = document.getElementsByTagName("figure");
+    if (figures.length > 0) {
+
+      var modal = document.createElement("div");
+      var caption = document.createElement("div");
+      var close = document.createElement("span");
+      var modalContent = document.createElement("img");
+
+      modal.setAttribute("class", "modal");
+      modalContent.setAttribute("class", "modal-content");
+      caption.setAttribute("id", "caption");
+      
+      close.setAttribute("class", "close");
+      close.innerHTML = "&times;";
+      close.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      modal.appendChild(close);
+      modal.appendChild(modalContent);
+      modal.appendChild(caption);
+
+      figures[0].parentNode.appendChild(modal);
+
+      window.onclick = function(event) {
+        if (event.target == modal)
+          modal.style.display = "none";
+      }
+
+      var images = [];
+      for (var i = figures.length - 1; i >= 0; i--) {
+        figures[i].onclick = null;
+        images[i] = figures[i].firstChild;
+        images[i].onclick = function () {
+          modal.style.display = "block";
+          modalContent.src = this.src;
+          caption.innerHTML = this.parentNode.childNodes[1].innerHTML;
+        }
+      }
     }
   }
 }
@@ -279,6 +336,7 @@ function populateViewDiv(mdContent) {
     highlightCode(view);
 
     updateSelection();
+    setUpBlogStyleIfNeeded();
 }
 
 // replace the browser URL after a dynamic load
@@ -381,7 +439,7 @@ function updateMenuScrollbar() {
 function updateSelection() {
     var selected = changeMenuSelection();
     populateNavigation(selected);
-    if (!local)
+    if (isCyberboticsUrl)
         updateMenuScrollbar();
 }
 
@@ -405,7 +463,7 @@ function changeMenuSelection() {
         var a = as[i];
         var href = a.getAttribute("href");
         var selection;
-        if (local) {
+        if (!isCyberboticsUrl) {
           var pageIndex = href.indexOf("page=" + setup.page);
           // Notes:
           // - the string length test is done to avoid wrong positive cases
@@ -622,7 +680,10 @@ function initializeHandle() {
     // dimension bounds of the handle in pixels
     handle.min = 0;
     handle.minThreshold = 75; // under this threshold, the handle is totally hidden
-    handle.initialWidth = handle.left.width();
+    if (setup.menuWidth && setup.menuWidth != "")
+      handle.initialWidth = setup.menuWidth;
+    else
+      handle.initialWidth = handle.left.width();
     handle.max = Math.max(250, handle.initialWidth);
 
     handle.enableColor = "#c8c8f0";
@@ -631,12 +692,14 @@ function initializeHandle() {
     handle.isResizing = false;
     handle.lastDownX = 0;
 
-    if (local) {
-        handle.handle.addClass("local");
-        handle.center.addClass("local");
+    if (isCyberboticsUrl) {
+      handle.left.addClass("cyberbotics");
+      handle.handle.addClass("cyberbotics");
+      handle.center.addClass("cyberbotics");
     } else {
-        handle.handle.addClass("online");
-        handle.center.addClass("online");
+      handle.left.addClass("default");
+      handle.handle.addClass("default");
+      handle.center.addClass("default");
     }
 
     setHandleWidth(handle.initialWidth);
@@ -679,29 +742,29 @@ function initializeHandle() {
 }
 
 window.onscroll=function(){
-    if (local)
+    if (!isCyberboticsUrl)
         return;
     updateMenuScrollbar();
 };
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    initializeHandle();
+  initializeHandle();
 
-    if (local) {
-        var url = "";
-        if (location.href.indexOf("url=") > -1)
-            url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
-        setup = {
-            "book":   getGETQueryValue("book", "guide"),
-            "page":   getGETQueryValue("page", "index"),
-            "anchor": extractAnchor(location.href),
-            "branch": getGETQueryValue("branch", "master"),
-            "url":    url
-        }
-        console.log("Setup: " + JSON.stringify(setup));
-    }
-    applyToTitleDiv();
-    getMDFile();
-    getMenuFile();
+  if (!isCyberboticsUrl) {
+    if (!setup.url && location.href.indexOf("url=") > -1)
+      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
+    if (!setup.book)
+      setup.book = getGETQueryValue("book", "guide");
+    if (!setup.page)
+      setup.page = getGETQueryValue("page", "index");
+    if (!setup.anchor)
+      setup.anchor = extractAnchor(location.href);
+    if (!setup.branch)
+      setup.anchor = getGETQueryValue("branch", "master");
+  }
+
+  applyToTitleDiv();
+  getMDFile();
+  getMenuFile();
 });

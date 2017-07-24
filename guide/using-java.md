@@ -83,7 +83,7 @@ website](http://openjdk.java.net/install/index.html).
 
 If a Java controller fails to execute or compile, check that the `java`,
 respectively the `javac` commands are reachable. You can verify this easily by
-opening a Terminal (Linux and Mac OS X) or a Command Prompt (Windows) and typing
+opening a Terminal (Linux and macOS) or a Command Prompt (Windows) and typing
 `java` or `javac`. If these commands are not reachable from the Terminal (or
 Command Prompt) they will not be reachable by Webots. In this case, check that
 the JDK is installed and that your *PATH* variable is defined correctly as
@@ -99,9 +99,9 @@ image found.
 ```
 
 this is due to a 32-bit/64-bit incompatibility between Java Virtual Machine
-(JVM) and Webots. On Mac OS X this problem should disappear after you upgrade to
+(JVM) and Webots. On macOS this problem should disappear after you upgrade to
 a recent version of Webots (6.3.0 or newer). On Windows, Webots is only
-compatible with 64-bit versions of Java. On Linux (and Mac OS X) you should be
+compatible with 64-bit versions of Java. On Linux (and macOS) you should be
 able to solve this problem by replacing the default "java" command string by
 "java -d32" or "java -d64" in the dialog `Tools / Preferences / General / Java
 command`.
@@ -121,7 +121,7 @@ windows, the CLASSPATH looks like this,
 $ set CLASSPATH=C:\Program Files\java\jdk\bin;relative\mylib.jar
 ```
 
-while under Linux and Mac OS X, it looks like this:
+while under Linux and macOS, it looks like this:
 
 ```sh
 $ export CLASSPATH=/usr/lib/jvm/java/bin:relative/mylib.jar

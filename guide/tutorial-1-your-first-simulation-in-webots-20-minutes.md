@@ -52,7 +52,7 @@ The Scene Tree view (on the left hand side) currently lists the fundamental node
 As no light and no 3D object are defined, the entire scene is empty and unlit, and thus black.
 
 Each node has some customizable properties called **fields**.
-The first step is about to modify the background color.
+The first step is about modifying the background color.
 
 > **Hands on**:
 Create a `Background` node by clicking on the plus icon above the Scene Tree view, 
@@ -191,7 +191,7 @@ rotation handles (see [this section](the-3d-window.md#axis-aligned-handles)).
 > **Note**:
 Starting the simulation by pressing the `Run` button will make Webots running
 the simulation as fast as possible. In order to obtain a real-time simulation
-speed, the `Real-Time` button has to be pressed.
+speed, the `Real-Time` button needs to be pressed.
 
 Now we are going to modify the world and decrease the step of the physics
 simulation: this will increase the accuracy of the simulation.
@@ -214,7 +214,7 @@ Don't forget to revert the simulation before hiding the camera and to save it af
 ### Create a new Controller
 
 We will now program a simple controller that will just make the robot move
-forwards. As there is no obstacle, the robot will go forwards for ever. Firstly
+forwards. As there is no obstacle, the robot will move forwards for ever. Firstly
 we will create and edit the C controller, then we will link it to the robot.
 
 > **Theory**:
@@ -231,14 +231,14 @@ can only use one controller at a time.
 
 > **Note**:
 Each robot controller is executed in a separate child process spawned by Webots.
-Controllers don't share the same address space, and they can run in different
+Controllers don't share the same address space, and they can run on different
 processor cores.
 
 <!-- -->
 
 > **Note**:
 Other languages than C are available but may require a setup. Please refer to
-the language chapter to setup the other languages (see [this
+the language chapter to setup other languages (see [this
 chapter](language-setup.md)).
 
 <!-- -->
@@ -294,10 +294,10 @@ Modify the program by inserting an include statement (`#include
 
 > **Hands on**:
 Save the modified source code (`File / Save Text File`), and compile it (`Build
-/ Build`). Fix any compilation error if necessary. When Webots proposes to
+/ Build`). Fix any compilation errors if necessary. When Webots proposes to
 revert the simulation, choose `Yes`.
 
-If everything is ok, your robot should go forwards.
+If everything is ok, your robot should move forwards.
 
 > **Note**:
 In the "controllers" directory of your project, a directory containing the

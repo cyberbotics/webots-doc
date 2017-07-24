@@ -47,7 +47,7 @@ actual MATLAB installation directory and version):
 $ sudo ln -s /usr/local/MATLAB/R2016a/bin/matlab /usr/local/bin/matlab
 ```
 
-Similarly, on Mac OS X, if Webots is unable to find the "matlab" startup script
+Similarly, on macOS, if Webots is unable to find the "matlab" startup script
 then you should add a symlink in "/usr/bin":
 
 ```sh
@@ -75,7 +75,7 @@ any problem, or possible improvement about these files.
 
 ### Display information to Webots console
 
-On Linux and Mac OS X, the MATLAB output is redirected as is to the Webots
+On Linux and macOS, the MATLAB output is redirected as is to the Webots
 console. This means you can use all the MATLAB display features (`disp()`,
 `display()`, omitting the semicolon character at the end of a statement, etc.).
 
@@ -102,7 +102,7 @@ documentation this will be the case on 64-bit systems, and hence we advice
 64-bit Webots users (on Linux) to make sure that these packages are installed on
 their systems.
 
-On some Mac OS X systems the MATLAB interface will work only if you install the
+On some macOS systems the MATLAB interface will work only if you install the
 Xcode development environment, because `gcc` is required. An error message like
 this one, is a symptom of the above described problem:
 

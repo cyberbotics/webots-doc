@@ -7,7 +7,7 @@ a list of possible starting points.
 
 Open a terminal and type `webots` to launch Webots.
 
-### Mac OS X
+### macOS
 
 Open the directory in which you installed the Webots package and double-click on
 the Webots icon.

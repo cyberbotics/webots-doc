@@ -41,7 +41,7 @@ Adjust your DirectionalLight node. Set its `ambientIntensity` field to *0.5*, it
 
 ### Modify the Appearance of the Walls
 
-The aim of this subsection is to color the walls with blue.
+The aim of this subsection is to color the walls in blue.
 
 > **Theory**:
 The **Appearance** node of the Shape node determines the graphical appearance of

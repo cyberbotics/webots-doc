@@ -43,17 +43,15 @@ source does not emit light outside of this solid angle. The `beamWidth` field
 specifies an inner solid angle in which the light source emits light at uniform
 full intensity. The light source's emission intensity drops off from the inner
 solid angle (`beamWidth`) to the outer solid angle (`cutOffAngle`). The drop off
-function from the inner angle to the outer angle is a cosine raised to a power
-function:
+function from the inner angle to the outer angle is a linear interpolation:
 
 ```
-intensity(angle) = intensity * (cosine(angle) ** exponent)
+intensity(angle) = intensity * (angle - cutOffAngle) / (beamWidth - cutOffAngle)
 
-where exponent = 0.5*log(0.5)/log(cos(beamWidth)),
-  intensity is the SpotLight's field value,
+where intensity is the SpotLight's field value,
   intensity(angle) is the light intensity at an arbitrary
       angle from the direction vector,
-  and angle ranges from 0.0 at central axis to cutOffAngle.
+  and angle ranges from beamWidth to cutOffAngle.
 ```
 
 If `beamWidth` > `cutOffAngle`, then `beamWidth` is assumed to be equal to

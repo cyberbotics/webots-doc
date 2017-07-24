@@ -146,15 +146,10 @@ Webots contains several `C` or `C++` libraries based on the `libController` or
 
 The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file
 (the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
-They are located in the following directories (depending on their architecture):
-
-```
-$(WEBOTS_HOME)/msys64/ming32/lib/
-$(WEBOTS_HOME)/msys64/ming64/lib/
-```
+They are located in the same directory as the library source, where the `.dll` file is generated.
 
 **Note**:
-The chosen architecture should match with Visual Studio solution platform and the path
+The chosen architecture (32 or 64-bit) should match with Visual Studio solution platform and the path
 to the `Controller.lib` library.
 
 However there is no precompiled `C++` libraries for Visual Studio, because

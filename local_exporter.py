@@ -66,6 +66,7 @@ def download(url, target_file_path):
 
             f = open(target_file_path, 'w')
             f.write(content)
+            os.chmod(target_file_path, 0o644)
             f.close()
 
             break
@@ -86,9 +87,15 @@ with open(script_directory + 'index.html', 'r') as file:
 
 reg = r'"https://www\.cyberbotics\.com/([^"]*)"'
 content = re.sub(reg, r'"dependencies/\1"', content)
+if platform.system() == 'Darwin':
+    # Because of the bad support of @font-face by QtWebKit on macOS,
+    # a custom CSS containing a system font is preferred for macOS.
+    content = content.replace('"css/main.css"', '"css/main.mac_os.css"')
 
-with open(script_directory + 'local_index.html', 'w') as file:
+html_file_path = script_directory + 'local_index.html'
+with open(html_file_path, 'w') as file:
     file.write(content)
+    os.chmod(html_file_path, 0o644)
 
 for dependency in dependencies:
     download(

@@ -21,6 +21,7 @@ Then install the Python `lxml`, `pyproj` and `shapely` modules, as described bel
 ### Linux
 
 ```
+sudo apt-get install python-pip
 sudo pip install lxml pyproj shapely
 ```
 

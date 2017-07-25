@@ -82,6 +82,11 @@ IS statements may appear inside the PROTO definition wherever fields may appear.
 IS statements shall refer to fields defined in the PROTO declaration. Multiple
 IS statements for the same field in the PROTO interface declaration is valid.
 
+An interface field that is not linked to an internal PROTO field will produce a
+warning when parsed. This warning can be suppressed when declaring an interface
+field by using the `unconnectedField` keyword instead of `field` in the
+declaration.
+
 It is an error for an IS statement to refer to a non-existent interface field.
 It is an error if the type of the field being associated does not match the type
 declared in the PROTO's interface. For example, it is illegal to associate an

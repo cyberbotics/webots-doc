@@ -121,16 +121,3 @@ score, places the players to their initial position when a goal is scored, etc.
 In this example, a robot moves forward and backward in front of a large textured
 panel. The robot watches the panel with its `Camera`. Meanwhile a `Supervisor`
 switches the image displayed on the panel.
-
-### town.wbt
-
-**Keywords**: Transform, USE, DEF
-
-%figure "town"
-
-![town.png](images/town.png)
-
-%end
-
-This example shows a complex city model built with various `Transform` nodes.
-The model makes a intensive use of the `DEF` and `USE` VRML keywords.

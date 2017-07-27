@@ -83,8 +83,8 @@ the last remaining way-points).
 need the sidewalk).
 - `rightBorder`: Defines whether the road should have a right sidewalk.
 - `leftBorder`: Defines whether the road should have a left sidewalk.
-- `rightFence`: Defines whether a fence should be added along the right road.
-- `leftFence`: Defines whether a fence should be added along the left road.
+- `rightFence`: Defines whether a fence should be added along the right border of the road.
+- `leftFence`: Defines whether a fence should be added along the left border of the road.
 - `bottom`: Defines whether the road bottom should be displayed (useful in case of
 bridge).
 - `rightSide`: This field is used for the texture mapping. It defines whether the side

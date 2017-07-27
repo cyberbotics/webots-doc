@@ -32,6 +32,8 @@ Road {
   SFBool     road                      TRUE
   SFBool     rightBorder               TRUE
   SFBool     leftBorder                TRUE
+  SFBool     rightFence                FALSE
+  SFBool     leftFence                 FALSE
   SFBool     bottom                    FALSE
   SFBool     rightSide                 TRUE
   SFBool     leftSide                  TRUE
@@ -52,6 +54,8 @@ Road {
   SFBool     roadBoundingObject        FALSE
   SFBool     rightBorderBoundingObject FALSE
   SFBool     leftBorderBoundingObject  FALSE
+  SFBool     rightFenceBoundingObject  TRUE
+  SFBool     leftFenceBoundingObject   TRUE
   SFBool     castShadows               FALSE
   SFString   contactMaterial           "default"
 }
@@ -79,6 +83,8 @@ the last remaining way-points).
 need the sidewalk).
 - `rightBorder`: Defines whether the road should have a right sidewalk.
 - `leftBorder`: Defines whether the road should have a left sidewalk.
+- `rightFence`: Defines whether a fence should be added along the right road.
+- `leftFence`: Defines whether a fence should be added along the left road.
 - `bottom`: Defines whether the road bottom should be displayed (useful in case of
 bridge).
 - `rightSide`: This field is used for the texture mapping. It defines whether the side
@@ -113,6 +119,8 @@ Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Ke
 bounding object.
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
 object.
+- `rightFenceBoundingObject`: Defines whether the right fence (if any) should have a bounding object.
+- `leftFenceBoundingObject`: Defines whether the left fence (if any) should have a bounding object.
 - `castShadows`: defines whether the road should cast shadows.
 - `contactMaterial`: defines the road contact material (used by the ContactProperties node).
 

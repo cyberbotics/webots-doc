@@ -21,10 +21,14 @@ of the VRML97 nodes and Webots nodes.
 
 Nodes can be expanded with a double-click. When a field is selected, its value
 can be edited at the bottom of the Scene Tree. Double-clicking or pressing the
-Enter key on a field selects the first editable item of the field editor panel.
+`Enter` key on a field selects the first editable item of the field editor panel.
 Keyboard focus can be returned to the Scene Tree by tabbing through all of the
-items in the field editor panel. All changes will be immediately reflected in
-the 3D window. The following buttons are available in the field editor section:
+items in the field editor panel. For text fields, changes are applied by
+pressing the `Enter` key. This is the same for numeric fields, but the up and
+down arrow keys can also be used to adjust values up and down, with changes
+immediately applied. For checkboxes, values are changed using the `Space` bar.
+Applied changes are immediately reflected in the 3D window. The following
+buttons are available in the field editor section:
 
 ![](images/reset-button.png =26x26) `Reset`: Resets a field to its default
 value.

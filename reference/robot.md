@@ -6,7 +6,7 @@ Derived from [Solid](solid.md).
 Robot {
   SFString controller      "void"
   SFString controllerArgs  ""
-  SFString data            ""
+  SFString customData      ""
   SFBool   synchronization TRUE
   MFFloat  battery         [ ]
   SFFloat  cpuConsumption  10  # [0,inf)
@@ -43,7 +43,7 @@ extension is added on the Windows platforms only.
 characters) to be passed to the `main()` function of the C/C++ controller
 program or the `main()` method of the Java controller program.
 
-- `data`: this field may contain any user data, for example parameters
+- `customData`: this field may contain any user data, for example parameters
 corresponding to the configuration of the robot. It can be read from the robot
 controller using the  `wb_robot_get_data()` function and can be written using
 the `wb_robot_set_data()` function. It may also be used as a convenience for
@@ -584,10 +584,10 @@ void wb_robot_set_data(const char *data);
 
 **Description**
 
-The `wb_robot_get_data` function returns the string contained in the `data`
+The `wb_robot_get_data` function returns the string contained in the `customData`
 field of the robot node.
 
-The `wb_robot_set_data` function set the string contained in the `data` field of
+The `wb_robot_set_data` function set the string contained in the `customData` field of
 the robot node.
 
 ---

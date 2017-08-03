@@ -692,8 +692,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)(self)                       |
 | &nbsp;&nbsp; def [getMode](robot.md#wb_robot_get_mode)(self)                                           |
 | &nbsp;&nbsp; def [getModel](robot.md#wb_robot_get_model)(self)                                         |
-| &nbsp;&nbsp; def [getCustomData](robot.md#wb_robot_get_custom_data)(self)                              |
-| &nbsp;&nbsp; def [setCustomData](robot.md#wb_robot_get_custom_data)(self, data)                        |
+| &nbsp;&nbsp; def [getCustomData](robot.md#wb_robot_get_data)(self)                                     |
+| &nbsp;&nbsp; def [setCustomData](robot.md#wb_robot_get_data)(self, data)                               |
 | &nbsp;&nbsp; def [getName](robot.md#wb_robot_get_name)(self)                                           |
 | &nbsp;&nbsp; def [getControllerName](robot.md#wb_robot_get_controller_name)(self)                      |
 | &nbsp;&nbsp; def [getControllerArguments](robot.md#wb_robot_get_controller_name)(self)                 |

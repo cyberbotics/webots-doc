@@ -721,8 +721,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)();                                                |
 | &nbsp;&nbsp; public int [getMode](robot.md#wb_robot_get_mode)();                                                                       |
 | &nbsp;&nbsp; public String [getModel](robot.md#wb_robot_get_model)();                                                                  |
-| &nbsp;&nbsp; public String [getData](robot.md#wb_robot_get_data)();                                                                    |
-| &nbsp;&nbsp; public [setData](robot.md#wb_robot_get_data)(String data);                                                                |
+| &nbsp;&nbsp; public String [getCustomData](robot.md#wb_robot_get_custom_data)();                                                       |
+| &nbsp;&nbsp; public [setCustomData](robot.md#wb_robot_get_custom_data)(String data);                                                   |
 | &nbsp;&nbsp; public String [getName](robot.md#wb_robot_get_name)();                                                                    |
 | &nbsp;&nbsp; public String [getControllerName](robot.md#wb_robot_get_controller_name)();                                               |
 | &nbsp;&nbsp; public String [getControllerArguments](robot.md#wb_robot_get_controller_name)();                                          |

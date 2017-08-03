@@ -45,8 +45,8 @@ program or the `main()` method of the Java controller program.
 
 - `customData`: this field may contain any user data, for example parameters
 corresponding to the configuration of the robot. It can be read from the robot
-controller using the  `wb_robot_get_data()` function and can be written using
-the `wb_robot_set_data()` function. It may also be used as a convenience for
+controller using the  `wb_robot_get_custom_data()` function and can be written using
+the `wb_robot_set_custom_data()` function. It may also be used as a convenience for
 communicating between a robot and a supervisor without implementing a Receiver /
 Emitter system: The supervisor can read and write in this field using the
 generic supervisor functions for accessing fields.
@@ -569,7 +569,7 @@ controller terminates.
 
 **Name**
 
-**wb\_robot\_get\_data**, **wb\_robot\_set\_data** - *return the data defined in the robot node*
+**wb\_robot\_get\_custom\_data**, **wb\_robot\_set\_custom\_data** - *return the custom data defined in the robot node*
 
  - *set the data defined in the robot node*
 
@@ -578,16 +578,16 @@ controller terminates.
 ```c
 #include <webots/robot.h>
 
-const char * wb_robot_get_data();
-void wb_robot_set_data(const char *data);
+const char * wb_robot_get_custom_data();
+void wb_robot_set_custom_data(const char *data);
 ```
 
 **Description**
 
-The `wb_robot_get_data` function returns the string contained in the `customData`
+The `wb_robot_get_custom_data` function returns the string contained in the `customData`
 field of the robot node.
 
-The `wb_robot_set_data` function set the string contained in the `customData` field of
+The `wb_robot_set_custom_data` function set the string contained in the `customData` field of
 the robot node.
 
 ---

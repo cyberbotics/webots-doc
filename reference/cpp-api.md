@@ -657,8 +657,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)() const;                                                     |
 | &nbsp;&nbsp; int [getMode](robot.md#wb_robot_get_mode)() const;                                                                            |
 | &nbsp;&nbsp; std::string [getModel](robot.md#wb_robot_get_model)() const;                                                                  |
-| &nbsp;&nbsp; std::string [getData](robot.md#wb_robot_get_data)() const;                                                                    |
-| &nbsp;&nbsp; void [setData](robot.md#wb_robot_get_data)(const std::string &data);                                                          |
+| &nbsp;&nbsp; std::string [getCustomData](robot.md#wb_robot_get_custom_data)() const;                                                       |
+| &nbsp;&nbsp; void [setCustomData](robot.md#wb_robot_get_custom_data)(const std::string &data);                                             |
 | &nbsp;&nbsp; std::string [getName](robot.md#wb_robot_get_name)() const;                                                                    |
 | &nbsp;&nbsp; std::string [getControllerName](robot.md#wb_robot_get_controller_name)() const;                                               |
 | &nbsp;&nbsp; std::string [getControllerArguments](robot.md#wb_robot_get_controller_name)() const;                                          |

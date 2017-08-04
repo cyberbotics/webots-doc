@@ -465,8 +465,8 @@ The following tables describe the Matlab functions.
 | step = [wb\_robot\_get\_basic\_time\_step](robot.md#wb_robot_get_basic_time_step)()                     |
 | mode = [wb\_robot\_get\_mode](robot.md#wb_robot_get_mode)()                                             |
 | model = [wb\_robot\_get\_model](robot.md#wb_robot_get_model)()                                          |
-| data = [getData](robot.md#wb_robot_get_data)()                                                          |
-| [setData](robot.md#wb_robot_get_data)('data')                                                           |
+| data = [getCustomData](robot.md#wb_robot_get_custom_data)()                                             |
+| [setCustomData](robot.md#wb_robot_get_custom_data)('data')                                              |
 | name = [wb\_robot\_get\_name](robot.md#wb_robot_get_name)()                                             |
 | name = [wb\_robot\_get\_controller\_name](robot.md#wb_robot_get_controller_name)()                      |
 | name = [wb\_robot\_get\_controller\_arguments](robot.md#wb_robot_get_controller_name)()                 |

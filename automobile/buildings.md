@@ -79,7 +79,7 @@ roof).
 ### SimpleBuilding PROTO
 
 The `SimpleBuilding` PROTO is similar to the `Building` one except that the wall and roof appearances don't need to be set.
-The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. Some wall types and roof types supported colors. So there is two other parameters : `wallColor` and `roofColor`.
+The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define respectively the color of the wall and roof. Note that not all the wall and roof types support the color argument.
 
 The available roof types are:
   - tiled

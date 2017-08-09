@@ -64,7 +64,7 @@ Building {
 - `name`: Could contain the building name.
 - `floorHeight`: Defines the height of one floor.
 - `floorNumber`: Defines the number of floors (excluding roof).
-- `startingFloor`: Defines the number of floors between the ground and the first floor.
+- `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
 - `corners`: Defines the geometry of the building (2D ground footprint of the
 building).
 - `wallAppearance`: Defines the appearance used for the walls of the building.
@@ -79,7 +79,7 @@ roof).
 ### SimpleBuilding PROTO
 
 The `SimpleBuilding` PROTO is similar to the `Building` one except that the wall and roof appearances don't need to be set.
-The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define respectively the color of the wall and roof. Note that not all the wall and roof types support the color argument.
+The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define the color of the wall and roof, respectively. Bear in mind that not all the wall and roof types support the color argument.
 
 The available roof types are:
   - tiled (supports color)

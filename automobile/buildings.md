@@ -82,17 +82,13 @@ The `SimpleBuilding` PROTO is similar to the `Building` one except that the wall
 The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define respectively the color of the wall and roof. Note that not all the wall and roof types support the color argument.
 
 The available roof types are:
-  - tiled
+  - tiled (supports color)
   - gravel
   - slate
   - old tiles
   - sheet metal
   - metal tiles
-  - bitumen
-
-The available colored roof types are:
-  - tiled
-  - bitumen
+  - bitumen (supports color)
 
 The available wall types are:
   - glass building
@@ -101,7 +97,7 @@ The available wall types are:
   - gray glass building
   - blue glass building
   - arcade-style building
-  - transparent highrise
+  - transparent highrise (supports color)
   - windowed building
   - old brick building
   - red and white building
@@ -111,25 +107,16 @@ The available wall types are:
   - stone brick
   - stone wall
   - glass highrise
-  - old house
+  - old house (supports color)
   - old building
   - highrise
-  - brick building
+  - brick building (supports color)
   - residential building
   - old office building
-  - factory building
-  - tall house
-  - office building
-  - concrete building
-
-The available colored wall types are:
-  - old house
-  - brick building
-  - factory building,
-  - tall house
-  - office building
-  - concrete building
-  - transparent highrise
+  - factory building (supports color)
+  - tall house (supports color)
+  - office building (supports color)
+  - concrete building (supports color)
 ### Other city objects
 
 In addition to buildings, other PROTO nodes are available representing objects

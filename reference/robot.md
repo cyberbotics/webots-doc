@@ -836,21 +836,23 @@ API.
 
 **Name**
 
-**wb\_robot\_window\_receive**, **wb\_robot\_window\_send** - *communication with a HTML robot window*
+**wb\_robot\_wwi\_receive**, **wb\_robot\_wwi\_receive\_text**, **wb\_robot\_wwi\_send**, **wb\_robot\_wwi\_send\_text** - *communication with a HTML robot window*
 
 ```c
-#include <webots/robot_window.h>
+#include <webots/utils/default_robot_window.h>
 
-const char *wb_robot_window_receive(int *length);
-void wb_robot_window_send(const char *message, int length);
+const char *wb_robot_wwi_receive(int *size);
+const char *wb_robot_wwi_receive_text();
+void wb_robot_wwi_send(const char *data, int size);
+voidwb_robot_wwi_send_text(const char *text);
 ```
 
 **Description**
 
 These functions allow the robot controller to communicate with a HTML robot window. Such a window is embedded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
 
-The `wb_robot_window_receive` function allows a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.Robot.send()` method of the Webots Javascript API.
+The `wb_robot_wwi_receive` and `wb_robot_wwi_receive_text` functions allow a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.window("<robot window name>").send()` method of the Webots Javascript API.
 
-The `wb_robot_window_send` function allows a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.Robot.receive()` method of the Webots Javascript API.
+The `wb_robot_window_send` and `wb_robot_wwi_send_text` functions allow a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.window("<robot window name>").receive()` method of the Webots Javascript API.
 
-> **note** [Java, Python, Matlab]: These functions are not available in the Java, Python or Matlab API.
+> **note** [Java, Python, Matlab]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python or Matlab API.

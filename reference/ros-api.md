@@ -341,6 +341,9 @@ for more information about the value of `robot_unique_name`).
 | [/robot/get\_type](robot.md#wb_robot_get_type)                             | service       | [webots\_ros::get\_int](#common_services)      |                                                                                         |
 | [/robot/set\_mode](robot.md#wb_robot_get_mode)                             | service       | webots\_ros::robot\_set\_mode                  | char[] arg<br/>int32 mode<br/>---<br/>int8 success                                      |
 | /robot/get\_device\_list                                                   | service       | webots\_ros::robot\_get\_device\_list          | uint8 ask<br/>---<br/>string[] list                                                     |
+| [/robot/wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)            | service       | [webots\_ros::get\_string](#common_services)       |                                                                                         |
+| [/robot/wwi\_send\_text](robot.md#wb_robot_wwi_send_text)                  | service       | [webots\_ros::set\_string](#common_services)           |                                                                                         |  |
+
 
 ### Speaker
 

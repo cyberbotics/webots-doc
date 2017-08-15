@@ -819,7 +819,7 @@ void *wb_robot_window_custom_function(void *arg);
 
 The `wb_robot_window_custom_function` function allows a robot controller to
 communicate with the native C/C++ robot window plugin.
-Native robot windows are deprecated and instead it is recommended to use the HTML robot  windows and their API functions
+Native robot windows are deprecated and instead it is recommended to use the HTML robot windows and their API functions:
 [`wb_robot_wwi_receive_text`](#wb_robot_wwi_receive_text) and [`wb_robot_wwi_send_text`](#wb_robot_wwi_send_text).
 
 When this function is called, the

@@ -702,6 +702,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getTime](robot.md#wb_robot_get_time)(self)                                           |
 | &nbsp;&nbsp; def [getWorldPath](robot.md#wb_robot_get_world_path)(self)                                |
 | &nbsp;&nbsp; def [getType](robot.md#wb_robot_get_type)(self)                                           |
+| &nbsp;&nbsp; def [wwiSendText](robot.md#wb_robot_wwi_send_text)(self, text)                            |
+| &nbsp;&nbsp; def [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)(self)                            |
 
 %end
 

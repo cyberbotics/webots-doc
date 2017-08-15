@@ -782,7 +782,32 @@ multi-threaded programming techniques for further information.
 
 **Name**
 
-**wb\_robot\_window\_custom\_function** - *communication with the robot window*
+**wb\_robot\_wwi\_receive**, **wb\_robot\_wwi\_receive\_text**, **wb\_robot\_wwi\_send**, **wb\_robot\_wwi\_send\_text** - *communication with a HTML robot window*
+
+```c
+#include <webots/utils/default_robot_window.h>
+
+const char *wb_robot_wwi_receive(int *size);
+const char *wb_robot_wwi_receive_text();
+void wb_robot_wwi_send(const char *data, int size);
+void wb_robot_wwi_send_text(const char *text);
+```
+
+**Description**
+
+These functions allow the robot controller to communicate with a HTML robot window. Such a window is embedded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
+
+The `wb_robot_wwi_receive` and `wb_robot_wwi_receive_text` functions allow a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.window("<robot window name>").send()` method of the Webots Javascript API.
+
+The `wb_robot_window_send` and `wb_robot_wwi_send_text` functions allow a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.window("<robot window name>").receive()` method of the Webots Javascript API.
+
+> **note** [Java, Python, Matlab, ROS]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python, Matlab, or ROS API.
+
+---
+
+**Name**
+
+**wb\_robot\_window\_custom\_function** - *communication with the native C/C++ robot window [deprecated]*
 
 ```c
 #include <webots/robot_window.h>
@@ -793,7 +818,11 @@ void *wb_robot_window_custom_function(void *arg);
 **Description**
 
 The `wb_robot_window_custom_function` function allows a robot controller to
-communicate with the robot window plugin. When this function is called, the
+communicate with the native C/C++ robot window plugin.
+Native robot windows are deprecated and instead it is recommended to use the HTML robot windows and their API functions:
+[`wb_robot_wwi_receive_text`](#wb_robot_wwi_receive_text) and [`wb_robot_wwi_send_text`](#wb_robot_wwi_send_text).
+
+When this function is called, the
 robot window corresponding `wbw_robot_window_custom_function` function is
 executed. This robot window entry point has to be explicitly defined in the
 plugin. Please also note that it can correctly be executed only if the robot
@@ -828,29 +857,6 @@ void *wbw_robot_window_custom_function(void *arg) {
 ```
 
 > **Note** [Java, Python, Matlab]:
-Given that the robot window can only be implemented for C/C++ controllers,
+Given that the native robot window can only be implemented for C/C++ controllers,
 `wb_robot_window_custom_function` is not available in Java, Python or Matlab
 API.
-
----
-
-**Name**
-
-**wb\_robot\_window\_receive**, **wb\_robot\_window\_send** - *communication with a HTML robot window*
-
-```c
-#include <webots/robot_window.h>
-
-const char *wb_robot_window_receive(int *length);
-void wb_robot_window_send(const char *message, int length);
-```
-
-**Description**
-
-These functions allow the robot controller to communicate with a HTML robot window. Such a window is embedded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
-
-The `wb_robot_window_receive` function allows a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.Robot.send()` method of the Webots Javascript API.
-
-The `wb_robot_window_send` function allows a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.Robot.receive()` method of the Webots Javascript API.
-
-> **note** [Java, Python, Matlab]: These functions are not available in the Java, Python or Matlab API.

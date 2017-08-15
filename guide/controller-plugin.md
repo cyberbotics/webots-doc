@@ -72,7 +72,8 @@ A robot window allows the programmer to efficiently create custom user interface
 Robot windows are implemented in HTML and provide the following features:
 
 1. They rely on HTML layout and Javascript programming.
-2. They communicate directly with the robot controller using two Javascript functions: `webots.Robot.receive()` and `webots.Robot.send()`. The equivalent controller functions are `wb_robot_window_send()` and `wb_robot_window_receive()`.
+2. They communicate directly with the robot controller using two Javascript functions: `webots.window("<robot window name>").receive()` and `webots.window("<robot window name>").send()`.
+The equivalent controller functions are `wb_robot_wwi_receive_text()` and `wb_robot_wwi_send_text()`.
 3. They are web-ready and could be used to display robot windows on web pages.
 
 A simple example of a HTML robot window is provided in the `robots/thymio/thymio2.wbt` sample simulation and demonstrates:

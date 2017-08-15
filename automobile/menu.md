@@ -17,6 +17,7 @@
     - [Radar sensors](radar-sensors.md)
     - [Camera sensors](camera-sensors.md)
 - [Objects](objects.md)
+    - [Simple Vehicles](simple-vehicles.md)
     - [Road segments](road-segments.md)
     - [Traffic signs and lights](traffic-signs-and-lights.md)
     - [Buildings](buildings.md)

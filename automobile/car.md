@@ -102,11 +102,11 @@ Here again, you can easily create your own PROTO that inherits from the
 PROTO models that inherit from the [Car](#car) PROTO are provided. They
 represent different models of car:
 
-- the X5 from BMW
-- the MKZ from Lincoln
 - the Sport SVR from Range Rover
-- the C-Zero from Citroen
+- the X5 from BMW
 - the Prius from Toyota
+- the MKZ from Lincoln
+- the C-Zero from Citroen
 
 %figure "Models of cars created using the Car PROTO"
 
@@ -134,8 +134,4 @@ differs), see the [following table](#slotpositions) for the exact positions.
 
 %end
 
-For each model of car, a `simple` PROTO is present too. These simplified
-kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is
-therefore not possible to add sensors or control them. But they are made
-to represent non-moving parked cars or to be moved using a
-Supervisor because they are much faster to simulate than the normal PROTO models.
+In order to lighten up some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.

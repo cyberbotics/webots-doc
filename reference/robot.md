@@ -790,7 +790,7 @@ multi-threaded programming techniques for further information.
 const char *wb_robot_wwi_receive(int *size);
 const char *wb_robot_wwi_receive_text();
 void wb_robot_wwi_send(const char *data, int size);
-voidwb_robot_wwi_send_text(const char *text);
+void wb_robot_wwi_send_text(const char *text);
 ```
 
 **Description**

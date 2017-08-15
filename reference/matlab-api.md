@@ -475,8 +475,8 @@ The following tables describe the Matlab functions.
 | time = [wb\_robot\_get\_time](robot.md#wb_robot_get_time)()                                             |
 | path = [wb\_robot\_get\_world\_path](robot.md#wb_robot_get_world_path)()                                |
 | type = [wb\_robot\_get\_type](robot.md#wb_robot_get_type)()                                             |
-| [wb\_robot\_wwwi\_send\_text](robot.md#wb_robot_wwi_send_text)(text)                                    |
-| text = [wb\_robot\_wwwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)()                           |
+| [wb\_robot\_wwi\_send\_text](robot.md#wb_robot_wwi_send_text)(text)                                    |
+| text = [wb\_robot\_wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)()                           |
 
 %end
 

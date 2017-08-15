@@ -77,6 +77,7 @@ Forest {
   MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
   SFFloat    density              0.2
   SFString   type                 "random"
+  MFString   groundTexture        ["textures/dry_leaf.jpg"]
   SFBool     withSnow             FALSE
   SFFloat    maxHeight            6
   SFFloat    minHeight            2
@@ -97,6 +98,7 @@ position of the trees is randomly generated from this shape.
 the density of three to be generated (in trees per meter square).
 - `type`: Defines the type of threes, in case of `random` type, the forest will be
 mixed.
+- `groundTexture`: Defines the texture of the forest ground.
 - `withSnow`: Defines whether the texture used should have snow on top.
 - `minHeight and maxHeight`: Defines the height interval. The height of each tree
 is independently and randomly selected between `minHeight` and `maxHeight`.

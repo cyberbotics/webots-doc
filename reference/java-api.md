@@ -731,6 +731,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getTime](robot.md#wb_robot_get_time)();                                                                    |
 | &nbsp;&nbsp; public String [getWorldPath](robot.md#wb_robot_get_world_path)();                                                         |
 | &nbsp;&nbsp; public int [getType](robot.md#wb_robot_get_type)();                                                                       |
+| &nbsp;&nbsp; public void [wwiSendText](robot.md#wb_robot_wwi_send_text)(String text);                                                  |
+| &nbsp;&nbsp; public String [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)();                                                     |
 | }                                                                                                                                      |
 
 %end

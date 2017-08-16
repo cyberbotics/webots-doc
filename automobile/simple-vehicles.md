@@ -26,7 +26,9 @@ faster to simulate than the normal PROTO models.
 device with recognition capability (i.e. with a Recognition node).
 - `wheelBoundingObject`: Allows to enable the physical geometry of the wheels.
 
-The different CarSimple PROTO represent the different models of [Car](#car):
+CarSimple is not an actual PROTO but defines the common structure of all the
+'simple' versions of the cars. The different simple versions of the car PROTO nodes
+represent the different models of [Car](#car):
 
 - the Sport SVR from Range Rover
 - the X5 from BMW
@@ -43,8 +45,7 @@ The different CarSimple PROTO represent the different models of [Car](#car):
 ### MotorcycleSimple
 
 Due to the presence of driver, the MotorcycleSimple PROTO have a slightly different
-organisation. The constituing models are not based on the `Solid` node of a `Robot`
-as they cannot be controled in the way a [Car](#car) is.
+organisation.
 
 ```
 PROTO MotocycleSimple {

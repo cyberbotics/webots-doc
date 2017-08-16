@@ -45,7 +45,7 @@ on http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely and type a cmd terminal:
 
 ## How to use the importer
 
-You should use the `importer.py` python script to generate the `myMap.wbt`
+You should use the `importer.py` Python script to generate the `myMap.wbt`
 webots simulation world from the `myMap.osm` file:
 
 ```sh

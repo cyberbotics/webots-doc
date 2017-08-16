@@ -30,7 +30,7 @@ On Linux, the path to the SUMO binaries directory should be added in your LD\_LI
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/automobile/resources/sumo/bin
 ```
 
-You should use the `exporter.py` python script to generate the `sumo.nod.xml`,
+You should use the `exporter.py` Python script to generate the `sumo.nod.xml`,
 `sumo.edg.xml` and `sumo.sumocfg` SUMO files.
 These files can be used by SUMO `netconvert` to generate the `sumo.net.xml` file
 from the `myMap.wbt` webots simulation world.

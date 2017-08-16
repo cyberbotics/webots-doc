@@ -3,7 +3,7 @@
 An interface with a microscopic traffic simulator called `SUMO` (Simulation of
 Urban MObility) has been developed using a `Supervisor` node. The advantage of
 interfacing SUMO with Webots is that it allows to easily generate traffic using
-a large number of vehicles in real-time. This interface is written in python in
+a large number of vehicles in real-time. This interface is written in Python in
 a supervisor controller and uses  [TraCI](http://sumo.dlr.de/wiki/TraCI) to
 communicate with SUMO.
 

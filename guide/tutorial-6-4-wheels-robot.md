@@ -88,7 +88,7 @@ nodes hierarchy of the robot.
 
 > **Hands on**:
 At the end of the scene tree, add a Robot node having four HingeJoints having a
-Solid child. Please refer to [this
+Solid as endPoint. Please refer to [this
 figure](#high-level-representation-of-the-4-wheels-robot).
 
 <!-- -->

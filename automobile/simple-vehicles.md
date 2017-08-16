@@ -64,7 +64,7 @@ PROTO MotocycleSimple {
 - `secondaryColor`: Defines a secondary color to be chosen alongside the main one.
 - `driver`: Defines a `Slot` node for the motorcycle driver.
 
-The MotorycleSimple PROTO represent a scooter and a motorcycle:
+The MotorycleSimple PROTO represents a scooter:
 
 %figure "Models of MotorcycleSimple currently available"
 

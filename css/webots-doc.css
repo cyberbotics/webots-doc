@@ -287,7 +287,7 @@
   font-family: "Roboto";
   width: 85%;
   font-size: 1.1em;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 .blog #view h1, .blog #view h2 {
@@ -425,7 +425,7 @@
 }
 
 .blog iframe {
-  width: 80%;
+  width: 50%;
   margin: 30px auto;
   display: block;
 }

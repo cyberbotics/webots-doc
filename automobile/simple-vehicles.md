@@ -48,7 +48,7 @@ Due to the presence of driver, the MotorcycleSimple PROTO nodes have a slightly 
 organisation.
 
 ```
-PROTO MotocycleSimple {
+PROTO MotorcycleSimple {
   field       SFVec3f    translation             0 0.25 0
   field       SFRotation rotation                0 1 0 0
   vrmlField   SFColor    primaryColor            0.43 0.11 0.1

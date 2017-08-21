@@ -278,7 +278,7 @@ function setUpBlogStyleIfNeeded() {
 function getWebotsVersion() {
   // Get the Webots version from the showdown wbVariables extension
   var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
-  var converter = new showdown.Converter({extensions: ["wbVariables", "youtube"]});
+  var converter = new showdown.Converter({extensions: ["wbVariables"]});
   var html = converter.makeHtml(version);
   var tmp = document.createElement("div");
   tmp.innerHTML = html;
@@ -312,7 +312,7 @@ function populateViewDiv(mdContent) {
     applyToPageTitle(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors"]});
+    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors", "youtube"]});
     var html = converter.makeHtml(mdContent);
 
     // console.log("HTML content: \n\n")

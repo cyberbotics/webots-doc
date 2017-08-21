@@ -10,12 +10,18 @@ Cyberbotics Ltd. is launching [https://robotbenchmark.net](https://robotbenchmar
 
 ![youtube video](https://www.youtube.com/watch?v=S0k0cJb_Mus =640x360)
 
+
+
+
 Robotbenchmark offers a series of robot programming challenges that address various topics across a wide range of difficulty levels, from middle school to PhD. Users don't need to install any software on their computer, cloud-based 3D robotics simulations run on a web page. They can learn programming by writing Python code to control robot behavior. The performance achieved by users is recorded and displayed online, so that they can challenge their friends and show off their skills at robot programming on social networks. Everything is designed to be extremely easy-to-use, runs on any computer, any web browser, and is totally free of charge.
+
 
 
 We'd like to invite you, our Webots users, to try this new platform. Any feeback or comments are invaluable, and will greatly help us on our mission to make robot programming accessible to everyone.
 
 This project is co-funded by the Human Brain Project.
+
+
 
 ### About the Human Brain Project
 

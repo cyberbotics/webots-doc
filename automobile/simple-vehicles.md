@@ -45,7 +45,8 @@ represent the different models of [Car](#car):
 ### MotorcycleSimple
 
 Due to the presence of driver, the MotorcycleSimple PROTO nodes have a slightly different
-organisation.
+organisation. Similar to CarSimple, the MotorcycleSimple PROTO displayed bellow
+is just a common structure for the different versions of the motorcycles.
 
 ```
 PROTO MotorcycleSimple {

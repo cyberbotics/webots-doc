@@ -19,14 +19,12 @@ class TestImages(unittest.TestCase):
                     content = f.read()
                 for match in re.finditer(r"!\[(.*?)\]\((.*?)\)", content):
                     # remove parameters
-                    is_youtube_video = match.group(1) == "youtube video"
-                    if not is_youtube_video:
-                        image_ref = match.group(2).split(' ')[0]
-                        image_path = os.path.join(book.path, image_ref)
-                        self.assertTrue(
-                            os.path.isfile(image_path),
-                            msg='%s: "%s" not found' % (md_path, image_path)
-                        )
+                    image_ref = match.group(2).split(' ')[0]
+                    image_path = os.path.join(book.path, image_ref)
+                    self.assertTrue(
+                        os.path.isfile(image_path),
+                        msg='%s: "%s" not found' % (md_path, image_path)
+                    )
 
     def test_all_images_are_used(self):
         """Test that all the image files are referenced somewhere."""

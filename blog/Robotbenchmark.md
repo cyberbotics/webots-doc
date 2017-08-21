@@ -4,7 +4,7 @@
 
 ---
 
-Cyberbotics Ltd. is launching [https://robotbenchmark.net](https://robotbenchmark.net) to allow everyone to program simulated robots online.
+Cyberbotics Ltd. is launching [robotbenchmark.net](https://robotbenchmark.net) to allow everyone to program simulated robots online.
 
 ### Video Presentation
 
@@ -19,10 +19,12 @@ Robotbenchmark offers a series of robot programming challenges that address vari
 
 We'd like to invite you, our Webots users, to try this new platform. Any feeback or comments are invaluable, and will greatly help us on our mission to make robot programming accessible to everyone.
 
+
+
 This project is co-funded by the Human Brain Project.
 
 
 
 ### About the Human Brain Project
 
-The Human Brain Project is a large ten-year scientific research project that aims to build a collaborative ICT-based scientific research infrastructure to allow researchers across the globe to advance knowledge in the fields of neuroscience, computing, neurorobotics, and brain-related medicine. The Project, which started on 1 October 2013, is a European Commission Future and Emerging Technologies Flagship. Based in Geneva, Switzerland, it is coordinated by the École Polytechnique Fédérale de Lausanne and is largely funded by the European Union. [https://humanbrainproject.eu](https://humanbrainproject.eu)
+The Human Brain Project is a large ten-year scientific research project that aims to build a collaborative ICT-based scientific research infrastructure to allow researchers across the globe to advance knowledge in the fields of neuroscience, computing, neurorobotics, and brain-related medicine. The Project, which started on 1 October 2013, is a European Commission Future and Emerging Technologies Flagship. Based in Geneva, Switzerland, it is coordinated by the École Polytechnique Fédérale de Lausanne and is largely funded by the European Union. [https://humanbrainproject.eu](humanbrainproject.eu)

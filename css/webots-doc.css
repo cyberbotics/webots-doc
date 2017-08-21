@@ -425,6 +425,7 @@
 }
 
 .blog iframe {
+  width: 80%;
   margin: 30px auto;
   display: block;
 }

@@ -44,7 +44,7 @@ represent the different models of [Car](#car):
 
 ### MotorcycleSimple
 
-Due to the presence of driver, the MotorcycleSimple PROTO have a slightly different
+Due to the presence of driver, the MotorcycleSimple PROTO nodes have a slightly different
 organisation.
 
 ```

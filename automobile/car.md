@@ -134,4 +134,4 @@ differs), see the [following table](#slotpositions) for the exact positions.
 
 %end
 
-In order to lighten up some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.
+In order to simplify some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.

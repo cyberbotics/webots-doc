@@ -16,10 +16,7 @@ Robotbenchmark offers a series of robot programming challenges that address vari
 We'd like to invite you, our Webots users, to try this new platform. Any feeback or comments are invaluable, and will greatly help us on our mission to make robot programming accessible to everyone.
 
 
-This project is funded by Cyberbotics Ltd. and the Human Brain Project.
-
----
-About Cyberbotics Ltd.: Cyberbotics is a Swiss-based company, spin-off from the École Polytechnique Fédérale de Lausanne, specialized in the development of robotics simulation software. It has been developing and selling the Webots software for more than 19 years. Webots is a reference software in robotics simulation being used in more than 1200 companies and universities across the world. Cyberbotics is also involved in industrial and research projects, such as the Human Brain Project. [https://cyberbotics.com](https://cyberbotics.com)
+This project is co-funded by the Human Brain Project.
 
 #### About the Human Brain Project
 

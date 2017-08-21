@@ -243,7 +243,7 @@ function setUpBlogStyleIfNeeded() {
       modal.setAttribute("class", "modal");
       modalContent.setAttribute("class", "modal-content");
       caption.setAttribute("id", "caption");
-      
+
       close.setAttribute("class", "close");
       close.innerHTML = "&times;";
       close.onclick = function() {
@@ -278,7 +278,7 @@ function setUpBlogStyleIfNeeded() {
 function getWebotsVersion() {
   // Get the Webots version from the showdown wbVariables extension
   var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
-  var converter = new showdown.Converter({extensions: ["wbVariables"]});
+  var converter = new showdown.Converter({extensions: ["wbVariables", "youtube"]});
   var html = converter.makeHtml(version);
   var tmp = document.createElement("div");
   tmp.innerHTML = html;

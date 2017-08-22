@@ -55,7 +55,7 @@ PROTO TwoWheelerSimple {
   vrmlField   SFColor    primaryColor            0.43 0.11 0.1
   vrmlField   SFColor    secondaryColor          0.69 0.43 0.43
   field       MFColor    recognitionColors       [ 0.43 0.11 0.1, 0.69 0.43 0.43 ]
-  field       SFNode     driver                  ScooterDriver { }
+  field       SFNode     driver                  TwoWheelerDriver { }
   field       SFString   name                    "vehicle"
   field       SFBool     wheelBoundingObject     FALSE
 }
@@ -66,7 +66,7 @@ PROTO TwoWheelerSimple {
 - `secondaryColor`: Defines a secondary color to be chosen alongside the main one.
 - `driver`: Defines a `Slot` node for the motorcycle driver.
 
-The TwoWheelerSimple PROTO represents a scooter:
+The ScooterSimple is an example of actual TwoWheelerSimple PROTO that represents a scooter:
 
 %figure "Models of TwoWheelerSimple currently available"
 

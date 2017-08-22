@@ -68,8 +68,8 @@ PROTO TwoWheelerSimple {
 
 The ScooterSimple is an example of actual TwoWheelerSimple PROTO that represents a scooter:
 
-%figure "Models of TwoWheelerSimple currently available"
+%figure "Model of ScooterSimple currently available"
 
-![two_wheelers.png](images/two_wheelers.png)
+![scooter.png](images/scooter.png)
 
 %end

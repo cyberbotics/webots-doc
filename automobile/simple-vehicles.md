@@ -24,7 +24,7 @@ faster to simulate than the normal PROTO models.
 
 - `recognitionColors`: If not empty, this vehicle may be recognized by any Camera
 device with recognition capability (i.e. with a Recognition node).
-- `wheelBoundingObject`: Allows to enable the physical geometry of the wheels.
+- `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 
 CarSimple is not an actual PROTO but defines the common structure of all the
 'simple' versions of the cars. The different simple versions of the car PROTO nodes

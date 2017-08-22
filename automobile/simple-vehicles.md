@@ -42,14 +42,14 @@ represent the different models of [Car](#car):
 
 %end
 
-### MotorcycleSimple
+### TwoWheelerSimple
 
-Due to the presence of driver, the MotorcycleSimple PROTO nodes have a slightly different
-organisation. Similar to CarSimple, the MotorcycleSimple PROTO displayed bellow
-is just a common structure for the different versions of the motorcycles.
+Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different
+organisation. Similar to CarSimple, the TwoWheelerSimple PROTO displayed bellow
+is just a common structure for the different versions of the two wheelers.
 
 ```
-PROTO MotorcycleSimple {
+PROTO TwoWheelerSimple {
   field       SFVec3f    translation             0 0.25 0
   field       SFRotation rotation                0 1 0 0
   vrmlField   SFColor    primaryColor            0.43 0.11 0.1
@@ -61,15 +61,15 @@ PROTO MotorcycleSimple {
 }
 ```
 
-#### MotorycleSimple Field Summary
+#### TwoWheelerSimple Field Summary
 
 - `secondaryColor`: Defines a secondary color to be chosen alongside the main one.
 - `driver`: Defines a `Slot` node for the motorcycle driver.
 
-The MotorycleSimple PROTO represents a scooter:
+The TwoWheelerSimple PROTO represents a scooter:
 
-%figure "Models of MotorcycleSimple currently available"
+%figure "Models of TwoWheelerSimple currently available"
 
-![motorcycle.png](images/motorcycle.png)
+![two_wheelers.png](images/two_wheelers.png)
 
 %end

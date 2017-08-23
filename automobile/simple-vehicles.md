@@ -64,7 +64,7 @@ PROTO TwoWheelerSimple {
 #### TwoWheelerSimple Field Summary
 
 - `secondaryColor`: Defines a secondary color to be chosen alongside the main one.
-- `driver`: Defines a `Slot` node for the two_wheeler driver.
+- `driver`: Defines a `Slot` node for the two-wheeler driver.
 
 ScooterSimple and MotorbikeSimple are examples of actual TwoWheelerSimple PROTO that represent a scooter and a motorbike:
 

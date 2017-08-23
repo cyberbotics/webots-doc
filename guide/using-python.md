@@ -75,10 +75,7 @@ sudo apt-get install python-pip
 sudo pip install opencv-python
 ```
 
-On older Ubuntu versions, it can be installed using the the APT package `python-opencv` for example by typing the following command in a terminal:
-```
-sudo apt-get install python-opencv
-```
+On Ubuntu 14.04 it doesn't need to be installed because the Python OpenCV library is already included in the Ubuntu 14.04 tarball package.
 
 #### macOS
 

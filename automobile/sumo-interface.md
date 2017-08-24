@@ -62,6 +62,8 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --display-refresh-rate   | Specifies the refresh rate of the SUMO display, expressed in milliseconds (no effect if the SUMO display is not activated)           | By default, a refresh rate of 1000ms is used                                                     |
 | --display-zoom           | Specifies the initial zoom of the SUMO display in Webots (1.0 means no scaling)                                                      | By default, no scaling is performed                                                              |
 | --display-fit-size       | Specifies whether the image should be resized to fit the SUMO display size or not                                                    | By default, the image is not resized                                                             |
+| --maximum-lateral-speed  | Specifies the maximal lateral speed of any vehicle in meter per second                                                               | By default, the maximum lateral speed is 2.5 m/s                                                 |
+| --maximum-angular-speed  | Specifies the maximal angular speed of any vehicle in radian per second                                                              | By default, the maximum angular speed is 3 rad/s                                                 |
 | --sumo-arguments         | Specifies additional SUMO arguments                                                                                                  | By default, SUMO is started without any additional argument                                      |
 
 %end

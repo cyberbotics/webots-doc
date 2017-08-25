@@ -64,7 +64,7 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --display-fit-size       | Specifies whether the image should be resized to fit the SUMO display size or not                                                    | By default, the image is not resized                                                             |
 | --maximum-lateral-speed  | Specifies the maximal lateral speed of any vehicle in meter per second                                                               | By default, the maximum lateral speed is 2.5 m/s                                                 |
 | --maximum-angular-speed  | Specifies the maximal angular speed of any vehicle in radian per second                                                              | By default, the maximum angular speed is 3 rad/s                                                 |
-| --lane-change-delay      | Specifies the time required to change lane (during this period position in Webots and SUMO may not be synchronized anymore)          | By default, 3 seconds are required to change lane                                                |
+| --lane-change-delay      | Specifies the time spent to change of lane (during this period, the position of the car in Webots and SUMO may not be synchronized anymore)          | By default, lane change takes 3 seconds                                                |
 | --sumo-arguments         | Specifies additional SUMO arguments                                                                                                  | By default, SUMO is started without any additional argument                                      |
 
 %end

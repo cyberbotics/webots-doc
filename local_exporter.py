@@ -34,6 +34,7 @@ dependencies = [
     'showdown/1.3.0/showdown.js.map',
     'showdown/1.3.0/showdown.min.js',
     'showdown/1.3.0/showdown.min.js.map',
+    'showdown/1.3.0/showdown-youtube.min.js',
     'wwi/8.6/request_methods.js'
 ]
 

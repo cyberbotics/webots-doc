@@ -19,8 +19,17 @@ Then install the Python `lxml`, `pyproj` and `shapely` modules, as described bel
 
 ### Linux
 
+#### Ubuntu 16.04
+
 ```
 sudo apt-get install python-pip
+sudo pip install lxml pyproj shapely
+```
+
+#### Ubuntu 14.04
+
+```
+sudo apt-get install python-pip python-dev libgeos-c1
 sudo pip install lxml pyproj shapely
 ```
 

@@ -18,8 +18,6 @@ program a Java controller can be found in this
 In order to develop and run Java controllers for Webots it is necessary to have
 the Java Development Kit (JDK) version 1.8.
 
-#### Installation Instructions
-
 The Java Development Kit (JDK) can be downloaded for free from the [Sun
 Developer Network](http://www.oracle.com/technetwork/java/javase/downloads).
 Make sure you choose the most recent release and the Standard Edition (SE) of

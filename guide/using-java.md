@@ -18,8 +18,6 @@ program a Java controller can be found in this
 In order to develop and run Java controllers for Webots it is necessary to have
 the Java Development Kit (JDK) version 1.8.
 
-#### Installation Instructions
-
 The Java Development Kit (JDK) can be downloaded for free from the [Sun
 Developer Network](http://www.oracle.com/technetwork/java/javase/downloads).
 Make sure you choose the most recent release and the Standard Edition (SE) of
@@ -31,25 +29,15 @@ The `java` command is the Java Virtual Machine (JVM); it is used to execute
 Java controllers in Webots. The `javac` command is the Java compiler; it is used
 to compile Java controllers in Webots' text editor.
 
-These commands should be accessible from a terminal. If it is not the case, this
-can be done by modifying your *PATH* environment variable.
+These commands should be accessible from a terminal after the installation.
+If it is not the case, this can be done by modifying your *PATH* environment variable.
 
-On Mac, the JDK installer should do this automatically.
-
-On Linux, you can set the *PATH* by adding this line to your "~/.bashrc" or
-equivalent file.
-
-```sh
-$ export PATH=/usr/lib/jvm/java-XXXXXX/bin:$PATH
-```
-
-Where *java-XXXXXX* should correspond to the actual name of the installed JDK
-package.
+#### Windows
 
 On Windows, the *PATH* variable must be set using the `Environment Variables`
 dialog.
 
-On Windows, this dialog can be opened like this: Choose `Start,
+This dialog can be opened like this: Choose `Start,
 Settings, Control Panel, System and Security, System` and open `Advanced system
 settings`. Select the `Advanced` tab and click on the `Environment Variables`
 button.
@@ -72,12 +60,35 @@ be achieved by adding it in the "/etc/profile" file. On Windows this can be
 achieved by adding it to the *Path* variable in the `System variables` part of
 the `Environment Variables` dialog.
 
-#### Linux and OpenJDK Instructions
+#### Linux
+
+On Linux the Oracle Java Development Kit (JDK) version 1.8 can also be installed with this procedure:
+```sh
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+```
+
+If after the installation ``java`` or ``javac`` commands are not available from your terminal, you update the *PATH* by adding this line to your "~/.bashrc" or equivalent file:
+
+```sh
+$ export PATH=/usr/lib/jvm/java-XXXXXX/bin:$PATH
+```
+
+Where *java-XXXXXX* should correspond to the actual name of the installed JDK
+package.
+
+##### OpenJDK
 
 In alternative to Oracle JDK, on most popular Linux distribution it is also
 possible to directly install the open-source JDK from the system package
 manager. Detailed information can be found on the [OpenJDK
 website](http://openjdk.java.net/install/index.html).
+
+#### macOS
+
+On macOS, the JDK installer should setup the *PATH* variable automatically, so
+you shouldn't have to do anything.
 
 #### Troubleshooting the Java installation
 

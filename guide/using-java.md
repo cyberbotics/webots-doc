@@ -32,8 +32,6 @@ to compile Java controllers in Webots' text editor.
 These commands should be accessible from a terminal after the installation.
 If it is not the case, this can be done by modifying your *PATH* environment variable.
 
-On Mac, the JDK installer should do this automatically.
-
 #### Windows
 
 On Windows, the *PATH* variable must be set using the `Environment Variables`
@@ -63,6 +61,7 @@ achieved by adding it to the *Path* variable in the `System variables` part of
 the `Environment Variables` dialog.
 
 #### Linux
+
 On Linux the Oracle Java Development Kit (JDK) version 1.8 can also be installed with this procedure:
 ```sh
 $ sudo add-apt-repository ppa:webupd8team/java
@@ -79,13 +78,17 @@ $ export PATH=/usr/lib/jvm/java-XXXXXX/bin:$PATH
 Where *java-XXXXXX* should correspond to the actual name of the installed JDK
 package.
 
-
 ##### OpenJDK
 
 In alternative to Oracle JDK, on most popular Linux distribution it is also
 possible to directly install the open-source JDK from the system package
 manager. Detailed information can be found on the [OpenJDK
 website](http://openjdk.java.net/install/index.html).
+
+#### macOS
+
+On macOS, the JDK installer should setup the *PATH* variable automatically, so
+you shouldn't have to do anything.
 
 #### Troubleshooting the Java installation
 

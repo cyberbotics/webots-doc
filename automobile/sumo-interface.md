@@ -31,7 +31,7 @@ simulation, this vehicle is then associated to the one in SUMO.
 
 If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
 
-If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
+If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO. Similarly, the class `motorbike` will randomly select between the `Motorbike` or the `Scooter` PROTO. Finally, the classes `trailer` and `truck` will select the `Truck` PROTO, respectively with and without a trailer. 
 
 If the simulation contains traffic lights, the name of the
 corresponding `LEDs` node of these traffic lights in Webots should respect the

@@ -120,18 +120,40 @@ where to put sensors (or actuators if needed), which are in the front, top, rear
 and center of the car. The position of the central sensors slot is always at 0 0
 0 (which is the center of the rear wheels axis). For the three other sensor
 slots, the positions are different for each model (because the size of the cars
-differs), see the [following table](#slotpositions) for the exact positions.
+differs), see the [following table](#positions-of-the-car-sensors-slots) for the exact positions.
 
-%figure "Positions of the sensors slots"
+%figure "Positions of the car sensors slots"
 
 | Model              | Front slot translation | Top slot translation | Rear slot translation |
 | ------------------ | ---------------------- | -------------------- | --------------------- |
-| BmwX5              | 0.0 0.45 3.850         | 0.0 1.45 1.000       | 0.0 0.3 -1.000        |
-| LincolnMKZ         | 0.0 0.142 3.944        | 0.0 1.16 1.110       | 0.0 0.33 -1.06        |
+| BmwX5              | 0.0 0.45 3.85          | 0.0 1.45 1.0         | 0.0 0.3 -1.0          |
+| LincolnMKZ         | 0.0 0.142 3.944        | 0.0 1.16 1.11        | 0.0 0.33 -1.06        |
 | RangeRoverSportSVR | 0.0 0.5 3.5            | 0.0 1.3 1.4          | 0.0 0.33 -1.06        |
 | CitroenCZero       | 0.0 0.05 3.075         | 0.0 1.35 1.075       | 0.0 0.3 -0.425        |
-| ToyotaPrius        | 0.0 0.40 3.635         | 0.0 1.30 1.100       | 0.0 0.3 -0.850        |
+| ToyotaPrius        | 0.0 0.40 3.635         | 0.0 1.30 1.1         | 0.0 0.3 -0.850        |
 
 %end
 
 In order to simplify some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.
+
+### Heavy-weights
+
+Just like the car models presented above, two generic heavy-weights PROTO inherit from the `car` PROTO: a bus and a truck. In the case of the truck, a trailer can be present or not. The latter is based on a `Slot` node which is the endPoint of a `HingeJoint` allowing the trailer to freely rotate around its attachment point.
+
+%figure "Models of the bus and truck created using the Car PROTO"
+
+![heavy_weights.png](images/heavy_weights.png)
+
+%end
+
+Similar to the car models, the heavy-weights provide four `sensorSlots` at the top, front, rear and center of the vehicles. Because the trailer for the `Truck` is optional, the center slot is defined at the center of the rear wheel axis of the cab. The rest of the positions can be seen in the [following table](#positions-of-the-heavy-weights-sensors-slots):
+
+%figure "Positions of the heavy-weights sensors slots"
+
+| Model   | Front slot translation | Top slot translation | Rear slot translation |
+| ------- | ---------------------- | -------------------- | --------------------- |
+| Bus     | 0.0 0.2 11.5           | 0.0 5.3 2.5          | 0.0 1.0 -6.2          |
+| Truck   | 0.0 1.1 6.75           | 0.0 4.15 4.3         | 0.0 2.7 -7.3          |
+
+
+%end

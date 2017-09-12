@@ -161,7 +161,7 @@ other using `Connector` devices. Connector devices are used to simulate the
 mechanical connections of docking systems. In this example, the robot modules go
 through a sequence of loops and worm-like configurations while changing their
 mode of locomotion. All modules use the same controller code, but their actual
-module behaviour is chosen according to the name of the module.
+module behavior is chosen according to the name of the module.
 
 ### stewart_platform.wbt
 

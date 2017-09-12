@@ -147,7 +147,7 @@ avoidance algorithm based on the use of the 16 sonar sensors (see the
 "braitenberg.c" controller file in the
 "WEBOTS\_HOME/projects/robots/pioneer/pioneer3dx/controller" directory). The
 "pioneer3dx\_with\_kinect.wbt" world file in the same directory is a simple
-simulation example of an obstacle avoidance behaviour based on a Microsoft
+simulation example of an obstacle avoidance behavior based on a Microsoft
 kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
 
 The Pioneer 3-DX motors are RotationalMotor nodes named according to [this

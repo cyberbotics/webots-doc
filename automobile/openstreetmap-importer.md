@@ -19,8 +19,17 @@ Then install the Python `lxml`, `pyproj` and `shapely` modules, as described bel
 
 ### Linux
 
+#### Ubuntu 16.04
+
 ```
 sudo apt-get install python-pip
+sudo pip install lxml pyproj shapely
+```
+
+#### Ubuntu 14.04
+
+```
+sudo apt-get install python-pip python-dev libgeos-c1
 sudo pip install lxml pyproj shapely
 ```
 
@@ -47,7 +56,7 @@ and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 
 ## How to use the importer
 
-You should use the `importer.py` python script to generate the `myMap.wbt`
+You should use the `importer.py` Python script to generate the `myMap.wbt`
 webots simulation world from the `myMap.osm` file:
 
 ```sh

@@ -120,7 +120,7 @@ where to put sensors (or actuators if needed), which are in the front, top, rear
 and center of the car. The position of the central sensors slot is always at 0 0
 0 (which is the center of the rear wheels axis). For the three other sensor
 slots, the positions are different for each model (because the size of the cars
-differs), see the [following table](#positions-of-the-car-sensors-slots) for the exact positions.
+differs), see the [following table](#positions-of-the-car-sensor-slots) for the exact positions.
 
 %figure "Positions of the car sensor slots"
 

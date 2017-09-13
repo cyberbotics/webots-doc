@@ -18,7 +18,7 @@ faster to simulate than the normal PROTO models.
    field       SFString   name                    "vehicle"
    field       SFBool     wheelBoundingObject     FALSE
  }
- ```
+```
 
 #### CarSimple Field Summary
 

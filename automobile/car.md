@@ -138,9 +138,9 @@ In order to simplify some simulations, `Solid` based cars can be used from the [
 
 ### Heavy-weights
 
-Just like the car models presented above, two generic heavy-weights PROTO inherit from the `car` PROTO: a bus and a truck. In the case of the truck, a trailer can be present or not. The latter is the endPoint of a `HingeJoint` allowing the trailer to freely rotate around its attachment point. There are currently two trailers to be used: a regular one and a tank shaped model.
+Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck. In the case of the truck, a trailer can be present or not. The latter is the `endPoint` of a `HingeJoint` allowing the trailer to freely rotate around its attachment point. There are currently two trailers to be used: a regular one and a tank shaped model.
 
-%figure "Models of the bus and truck created using the Car PROTO"
+%figure "Models of the bus and truck created using the `Car` PROTO"
 
 ![heavy_weights.png](images/heavy_weights.png)
 

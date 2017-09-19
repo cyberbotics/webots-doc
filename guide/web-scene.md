@@ -30,6 +30,8 @@ When the export is completed, Webots will ask to playback the resulting file in 
 
 ![screenshot-html-export-dialog.png](images/screenshot-html-export-dialog.png)
 
+The chosen `X3D` parameters are stored in the [project file](the-standard-file-hierarchy-of-a-project.md#the-project-files) and automatically proposed during the next HTML export.
+
 **Note**:
 The `X3D` file and the required textures are exported in the same directory as the target `HTML` file.
 

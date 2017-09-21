@@ -270,11 +270,11 @@ double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 **Description**
 
 `wb_distance_sensor_get_max_range()` returns the maximum range of the distance
-sensor. This value is computed accorfing to the lookup table of the
+sensor. This value is computed using the lookup table of the
 [DistanceSensor](#distancesensor) node.
 
 `wb_distance_sensor_get_min_range()` returns the minimum range of the distance
-sensor. This value is computed accorfing to the lookup table of the
+sensor. This value is computed using the lookup table of the
 [DistanceSensor](#distancesensor) node.
 
 The `wb_distance_sensor_get_aperture()` returns the aperture of the distance

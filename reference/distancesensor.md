@@ -269,11 +269,11 @@ double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 
 **Description**
 
-`wb_distance_sensor_get_max_value()` returns the maximum value of the distance
-sensor. This value is the `DistanceSensor.lookupTable[lastVec3f].y` value.
+`wb_distance_sensor_get_max_value()` returns the maximum value which can be returned by the distance sensor.
+This value is the maximum of the second column of the `DistanceSensor.lookupTable` field.
 
-`wb_distance_sensor_get_min_value()` returns the minimum value of the distance
-sensor. This value is the `DistanceSensor.lookupTable[firstVec3f].y` value.
+`wb_distance_sensor_get_min_value()` returns the minimum value which can be returned by the distance sensor.
+This value is the minimum of the second column of the `DistanceSensor.lookupTable` field.
 
 The `wb_distance_sensor_get_aperture()` returns the aperture of the distance
 sensor in radians.

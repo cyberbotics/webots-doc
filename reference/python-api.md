@@ -191,9 +191,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [disable](distancesensor.md#wb_distance_sensor_get_value)(self)                 |
 | &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)(self)       |
 | &nbsp;&nbsp; def [getValue](distancesensor.md#wb_distance_sensor_get_value)(self)                |
-| &nbsp;&nbsp; def [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
-| &nbsp;&nbsp; def [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
-| &nbsp;&nbsp; def [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
+| &nbsp;&nbsp; def [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
+| &nbsp;&nbsp; def [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
+| &nbsp;&nbsp; def [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
 | &nbsp;&nbsp; def [getType](distancesensor.md#wb_distance_sensor_get_type)(self)                  |
 
 %end

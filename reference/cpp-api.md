@@ -181,9 +181,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [disable](distancesensor.md#wb_distance_sensor_get_value)();                   |
 | &nbsp;&nbsp; int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();                  |
 | &nbsp;&nbsp; double [getValue](distancesensor.md#wb_distance_sensor_get_value)() const;                  |
-| &nbsp;&nbsp; double [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
-| &nbsp;&nbsp; double [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
-| &nbsp;&nbsp; double [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
+| &nbsp;&nbsp; double [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
+| &nbsp;&nbsp; double [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
+| &nbsp;&nbsp; double [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
 | &nbsp;&nbsp; int [getType](distancesensor.md#wb_distance_sensor_get_type)() const;                       |
 | };                                                                                                       |
 

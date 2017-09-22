@@ -57,7 +57,9 @@ of texture at each time step. If the value is *[0 0]* the texture will not move.
 Only the first child of the [Track](#track) is taken into consideration for
 texture animation, and it has to be a [Shape](shape.md), a [Group](group.md)
 node or a [Group](group.md) descendant having a [Shape](shape.md) node as its
-first child.
+first child. Also note that the [Appearance](#appearance) node of the
+[Shape](shape.md) and its `texture` and `textureTransform` fields have to be
+explicitly defined.
 
 ### Geometries Animation
 

@@ -28,7 +28,9 @@ The 3D navigation in the player is possible using the mouse or the touch screen,
 Select the `File / Export HTML5 Model...` menu item, select the desired `X3D` parameters and choose the target `HTML` file in the pop-up dialog.
 When the export is completed, Webots will ask to playback the resulting file in the default Web browser.
 
+%figure "The HTML export dialog."
 ![screenshot-html-export-dialog.png](images/screenshot-html-export-dialog.png)
+%end
 
 The chosen `X3D` parameters are stored in the [project file](the-standard-file-hierarchy-of-a-project.md#the-project-files) and automatically proposed during the next HTML export.
 

@@ -199,9 +199,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [disable](distancesensor.md#wb_distance_sensor_get_value)();                   |
 | &nbsp;&nbsp; public int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();          |
 | &nbsp;&nbsp; public double [getValue](distancesensor.md#wb_distance_sensor_get_value)();                |
-| &nbsp;&nbsp; public double [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)();         |
-| &nbsp;&nbsp; public double [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)();         |
-| &nbsp;&nbsp; public double [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)();         |
+| &nbsp;&nbsp; public double [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)();         |
+| &nbsp;&nbsp; public double [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)();         |
+| &nbsp;&nbsp; public double [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)();         |
 | &nbsp;&nbsp; public int [getType](distancesensor.md#wb_distance_sensor_get_type)();                     |
 | }                                                                                                       |
 

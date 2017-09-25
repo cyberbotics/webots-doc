@@ -9,7 +9,7 @@ import ssl
 import sys
 import urllib2
 
-verbose = len(sys.argv) and (sys.argv[1] == '--verbose')
+silent = len(sys.argv) > 1 and (sys.argv[1] == '--silent')
 
 dependencies = [
     'highlight/9.5.0/default.min.css',
@@ -43,7 +43,7 @@ dependencies = [
 
 def download(url, target_file_path):
     """Download URL to file."""
-    if verbose:
+    if not silent:
         print ('# downloading %s' % url)
 
     # Prepare the target directory

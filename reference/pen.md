@@ -20,7 +20,7 @@ device coincides with the *-y*-axis of the node. So, it can be adjusted by
 modifying the rotation and translation fields of the [Solid](solid.md) node. By
 setting the `maxDistance` field is possible to define the range of the
 [Pen](#pen) and paint only on objects close to the device. For example with a
-small value of `maxDistance` you can simulate the real behaviour of a pen or
+small value of `maxDistance` you can simulate the real behavior of a pen or
 pencil that writes only on physical contact. If `maxDistance` is set to 0
 (default value), the range will be unlimited.
 

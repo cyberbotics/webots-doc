@@ -369,7 +369,7 @@ deallocated at the next time step.
 ```c
 #include <webots/supervisor.h>
 
-const double *wb_supervisor_node_get_number_of_contact_points(WbNodeRef node);
+int wb_supervisor_node_get_number_of_contact_points(WbNodeRef node);
 ```
 
 **Description**

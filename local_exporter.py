@@ -9,6 +9,8 @@ import ssl
 import sys
 import urllib2
 
+silent = len(sys.argv) > 1 and (sys.argv[1] == '--silent')
+
 dependencies = [
     'highlight/9.5.0/default.min.css',
     'highlight/9.5.0/highlight.min.js',
@@ -34,13 +36,15 @@ dependencies = [
     'showdown/1.3.0/showdown.js.map',
     'showdown/1.3.0/showdown.min.js',
     'showdown/1.3.0/showdown.min.js.map',
+    'showdown/1.3.0/showdown-youtube.min.js',
     'wwi/8.6/request_methods.js'
 ]
 
 
 def download(url, target_file_path):
     """Download URL to file."""
-    print '# downloading %s' % url
+    if not silent:
+        print ('# downloading %s' % url)
 
     # Prepare the target directory
     target_directory = os.path.dirname(target_file_path)
@@ -71,13 +75,13 @@ def download(url, target_file_path):
 
             break
         except urllib2.HTTPError, e:
-            print 'HTTPError = ' + str(e.reason)
+            sys.stderr.write('HTTPError = ' + str(e.reason))
         except urllib2.URLError, e:
-            print 'URLError = ' + str(e.reason)
+            sys.stderr.write('URLError = ' + str(e.reason))
         if i == nTrials - 1:
             sys.exit('Cannot get url: ' + url)
     if i > 0:
-        print '# (number of trials: %d)' % (i + 1)
+        sys.stderr.write('# (number of trials: %d)' % (i + 1))
 
 
 script_directory = os.path.dirname(os.path.realpath(__file__)) + os.sep

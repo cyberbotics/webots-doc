@@ -13,15 +13,23 @@ the importer script.
 
 ## Dependencies
 
-Follow the instructions to install Python:
-https://www.cyberbotics.com/doc/guide/using-python
+Follow [these instructions](https://www.cyberbotics.com/doc/guide/using-python) to install Python.
 
 Then install the Python `lxml`, `pyproj` and `shapely` modules, as described below.
 
 ### Linux
 
+#### Ubuntu 16.04
+
 ```
 sudo apt-get install python-pip
+sudo pip install lxml pyproj shapely
+```
+
+#### Ubuntu 14.04
+
+```
+sudo apt-get install python-pip python-dev libgeos-c1
 sudo pip install lxml pyproj shapely
 ```
 
@@ -33,8 +41,11 @@ pip install lxml pyproj shapely --user
 
 ### Windows
 
-Download the shapely wheel called "Shapely‑1.5.17‑cp27‑cp27m‑win_amd64.whl"
-on http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely and type a cmd terminal:
+As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency.
+You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
+
+Download the shapely wheel called [`Shapely‑1.5.17‑cp27‑cp27m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely)
+and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 
 ```
 %PYTHON_PATH%\Scripts\pip.exe install lxml

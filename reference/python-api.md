@@ -191,9 +191,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [disable](distancesensor.md#wb_distance_sensor_get_value)(self)                 |
 | &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)(self)       |
 | &nbsp;&nbsp; def [getValue](distancesensor.md#wb_distance_sensor_get_value)(self)                |
-| &nbsp;&nbsp; def [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
-| &nbsp;&nbsp; def [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
-| &nbsp;&nbsp; def [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
+| &nbsp;&nbsp; def [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
+| &nbsp;&nbsp; def [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
+| &nbsp;&nbsp; def [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
 | &nbsp;&nbsp; def [getType](distancesensor.md#wb_distance_sensor_get_type)(self)                  |
 
 %end
@@ -692,8 +692,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)(self)                       |
 | &nbsp;&nbsp; def [getMode](robot.md#wb_robot_get_mode)(self)                                           |
 | &nbsp;&nbsp; def [getModel](robot.md#wb_robot_get_model)(self)                                         |
-| &nbsp;&nbsp; def [getData](robot.md#wb_robot_get_data)(self)                                           |
-| &nbsp;&nbsp; def [setData](robot.md#wb_robot_get_data)(self, data)                                     |
+| &nbsp;&nbsp; def [getCustomData](robot.md#wb_robot_get_custom_data)(self)                              |
+| &nbsp;&nbsp; def [setCustomData](robot.md#wb_robot_get_custom_data)(self, data)                        |
 | &nbsp;&nbsp; def [getName](robot.md#wb_robot_get_name)(self)                                           |
 | &nbsp;&nbsp; def [getControllerName](robot.md#wb_robot_get_controller_name)(self)                      |
 | &nbsp;&nbsp; def [getControllerArguments](robot.md#wb_robot_get_controller_name)(self)                 |

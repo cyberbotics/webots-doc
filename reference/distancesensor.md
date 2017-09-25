@@ -255,25 +255,25 @@ of the return value is defined by this lookup table.
 
 **Name**
 
-**wb\_distance\_sensor\_get\_max\_range**, **wb\_distance\_sensor\_get\_min\_range**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum range, minimum range and aperture*
+**wb\_distance\_sensor\_get\_max\_value**, **wb\_distance\_sensor\_get\_min\_value**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum value, minimum value and aperture*
 
 {[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/distance_sensor.h>
 
-double wb_distance_sensor_get_max_range(WbDeviceTag tag);
-double wb_distance_sensor_get_min_range(WbDeviceTag tag);
+double wb_distance_sensor_get_max_value(WbDeviceTag tag);
+double wb_distance_sensor_get_min_value(WbDeviceTag tag);
 double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 ```
 
 **Description**
 
-`wb_distance_sensor_get_max_range()` returns the maximum range of the distance
-sensor in meter.
+`wb_distance_sensor_get_max_value()` returns the maximum value which can be returned by the distance sensor.
+This value is the maximum of the second column of the `DistanceSensor.lookupTable` field.
 
-`wb_distance_sensor_get_min_range()` returns the minimum range of the distance
-sensor in meter.
+`wb_distance_sensor_get_min_value()` returns the minimum value which can be returned by the distance sensor.
+This value is the minimum of the second column of the `DistanceSensor.lookupTable` field.
 
 The `wb_distance_sensor_get_aperture()` returns the aperture of the distance
 sensor in radians.

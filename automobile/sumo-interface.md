@@ -31,7 +31,7 @@ simulation, this vehicle is then associated to the one in SUMO.
 
 If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
 
-If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
+If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO. Similarly, the class `motorbike` will randomly select between the `Motorbike` and the `Scooter` PROTO. Finally, the classes `trailer` and `truck` will select the `Truck` PROTO, respectively with and without a trailer. 
 
 If the simulation contains traffic lights, the name of the
 corresponding `LEDs` node of these traffic lights in Webots should respect the
@@ -62,6 +62,9 @@ field `controllerArgs` in order to customize the behavior of the interface:
 | --display-refresh-rate   | Specifies the refresh rate of the SUMO display, expressed in milliseconds (no effect if the SUMO display is not activated)           | By default, a refresh rate of 1000ms is used                                                     |
 | --display-zoom           | Specifies the initial zoom of the SUMO display in Webots (1.0 means no scaling)                                                      | By default, no scaling is performed                                                              |
 | --display-fit-size       | Specifies whether the image should be resized to fit the SUMO display size or not                                                    | By default, the image is not resized                                                             |
+| --maximum-lateral-speed  | Specifies the maximal lateral speed of any vehicle in meter per second                                                               | By default, the maximum lateral speed is 2.5 m/s                                                 |
+| --maximum-angular-speed  | Specifies the maximal angular speed of any vehicle in radian per second                                                              | By default, the maximum angular speed is 3 rad/s                                                 |
+| --lane-change-delay      | Specifies the time spent to change of lane (during this period, the position of the car in Webots and SUMO may not be synchronized anymore)          | By default, lane change takes 3 seconds                                                |
 | --sumo-arguments         | Specifies additional SUMO arguments                                                                                                  | By default, SUMO is started without any additional argument                                      |
 
 %end

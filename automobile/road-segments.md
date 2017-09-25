@@ -16,44 +16,48 @@ purposes.
 
 ```
 Road {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFString   name                      ""
-  SFString   id                        ""
-  SFString   startJunction             ""
-  SFString   endJunction               ""
-  SFFloat    width                     7
-  SFInt32    numberOfLanes             2
-  SFInt32    numberOfForwardLanes      1
-  SFFloat    speedLimit                -1.0
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
-  MFFloat    roadBorderWidth           [ 0.8 ]
-  SFBool     road                      TRUE
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
-  SFBool     rightSide                 TRUE
-  SFBool     leftSide                  TRUE
-  MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]
-  MFFloat    roadTilt                  [ 0, 0]
-  MFFloat    startingAngle             [ ]
-  MFFloat    endingAngle               [ ]
-  MFString   startLine                 [ ]
-  MFString   endLine                   [ ]
-  SFInt32    splineSubdivision         4
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   pavementTexture           "textures/pavement.jpg"
-  MFString   bottomTexture             [ ]
-  SFString   turnLanesForward          ""
-  SFString   turnLanesBackward         ""
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFBool     castShadows               FALSE
-  SFString   contactMaterial           "default"
+  SFVec3f    translation                0 0 0
+  SFRotation rotation                   0 1 0 0
+  SFString   name                       ""
+  SFString   id                         ""
+  SFString   startJunction              ""
+  SFString   endJunction                ""
+  SFFloat    width                      7
+  SFInt32    numberOfLanes              2
+  SFInt32    numberOfForwardLanes       1
+  SFFloat    speedLimit                 -1.0
+  MFBool     dashedLine                 TRUE
+  SFFloat    roadBorderHeight           0.15
+  MFFloat    roadBorderWidth            [ 0.8 ]
+  SFBool     road                       TRUE
+  SFBool     rightBorder                TRUE
+  SFBool     leftBorder                 TRUE
+  SFBool     rightBarrier               FALSE
+  SFBool     leftBarrier                FALSE
+  SFBool     bottom                     FALSE
+  SFBool     rightSide                  TRUE
+  SFBool     leftSide                   TRUE
+  MFVec3f    wayPoints                  [ 0 0 0, 0 0 1 ]
+  MFFloat    roadTilt                   [ 0, 0]
+  MFFloat    startingAngle              [ ]
+  MFFloat    endingAngle                [ ]
+  MFString   startLine                  [ ]
+  MFString   endLine                    [ ]
+  SFInt32    splineSubdivision          4
+  MFString   texture                    "textures/road.jpg"
+  SFFloat    textureScale               2
+  MFString   pavementTexture            "textures/pavement.jpg"
+  MFString   bottomTexture              [ ]
+  SFString   turnLanesForward           ""
+  SFString   turnLanesBackward          ""
+  SFBool     locked                     TRUE
+  SFBool     roadBoundingObject         FALSE
+  SFBool     rightBorderBoundingObject  FALSE
+  SFBool     leftBorderBoundingObject   FALSE
+  SFBool     rightBarrierBoundingObject TRUE
+  SFBool     leftBarrierBoundingObject  TRUE
+  SFBool     castShadows                FALSE
+  SFString   contactMaterial            "default"
 }
 ```
 
@@ -79,6 +83,8 @@ the last remaining way-points).
 need the sidewalk).
 - `rightBorder`: Defines whether the road should have a right sidewalk.
 - `leftBorder`: Defines whether the road should have a left sidewalk.
+- `rightBarrier`: Defines whether a crash barrier should be added along the right border of the road.
+- `leftBarrier`: Defines whether a crash barrier should be added along the left border of the road.
 - `bottom`: Defines whether the road bottom should be displayed (useful in case of
 bridge).
 - `rightSide`: This field is used for the texture mapping. It defines whether the side
@@ -113,6 +119,8 @@ Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Ke
 bounding object.
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
 object.
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: defines whether the road should cast shadows.
 - `contactMaterial`: defines the road contact material (used by the ContactProperties node).
 

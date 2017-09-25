@@ -148,9 +148,9 @@ The following tables describe the Matlab functions.
 | [wb\_distance\_sensor\_disable](distancesensor.md#wb_distance_sensor_get_value)(tag)                          |
 | period = [wb\_distance\_sensor\_get\_sampling\_period](distancesensor.md#wb_distance_sensor_get_value)(tag)   |
 | value = [wb\_distance\_sensor\_get\_value](distancesensor.md#wb_distance_sensor_get_value)(tag)               |
-| max\_range = [wb\_distance\_sensor\_get\_max\_range](distancesensor.md#wb_distance_sensor_get_max_range)(tag) |
-| min\_range = [wb\_distance\_sensor\_get\_min\_range](distancesensor.md#wb_distance_sensor_get_max_range)(tag) |
-| aperture = [wb\_distance\_sensor\_get\_aperture](distancesensor.md#wb_distance_sensor_get_max_range)(tag)     |
+| max\_value = [wb\_distance\_sensor\_get\_max\_value](distancesensor.md#wb_distance_sensor_get_max_value)(tag) |
+| min\_value = [wb\_distance\_sensor\_get\_min\_value](distancesensor.md#wb_distance_sensor_get_max_value)(tag) |
+| aperture = [wb\_distance\_sensor\_get\_aperture](distancesensor.md#wb_distance_sensor_get_max_value)(tag)     |
 | type = [wb\_distance\_sensor\_get\_type](distancesensor.md#wb_distance_sensor_get_value)(tag)                 |
 
 %end
@@ -465,8 +465,8 @@ The following tables describe the Matlab functions.
 | step = [wb\_robot\_get\_basic\_time\_step](robot.md#wb_robot_get_basic_time_step)()                     |
 | mode = [wb\_robot\_get\_mode](robot.md#wb_robot_get_mode)()                                             |
 | model = [wb\_robot\_get\_model](robot.md#wb_robot_get_model)()                                          |
-| data = [getData](robot.md#wb_robot_get_data)()                                                          |
-| [setData](robot.md#wb_robot_get_data)('data')                                                           |
+| data = [getCustomData](robot.md#wb_robot_get_custom_data)()                                             |
+| [setCustomData](robot.md#wb_robot_get_custom_data)('data')                                              |
 | name = [wb\_robot\_get\_name](robot.md#wb_robot_get_name)()                                             |
 | name = [wb\_robot\_get\_controller\_name](robot.md#wb_robot_get_controller_name)()                      |
 | name = [wb\_robot\_get\_controller\_arguments](robot.md#wb_robot_get_controller_name)()                 |

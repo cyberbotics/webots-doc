@@ -153,6 +153,7 @@ The `Virtual Reality Headset` submenu allows you to use a virtual reality headse
 The `Enable` item allows you to switch the simulation view to the headset.
 The `Track headset position` and `Track headset orientation` items specifies if the headset position and orientation should be tracked and applied to the viewpoint.
 The `View left eye`, `View right eye` and `Empty view` radio buttons allow you to choose what should be displayed in the simulation view. You can either see the left eye image, right eye image or nothing.
+The `Anti-aliasing` item allows you to enable anti-aliasing on both eye images (note that anti-aliasing will decrease simulation speed).
 The headset installation procedure is described [here](computer-peripherals.md).
 
 > **Note**:

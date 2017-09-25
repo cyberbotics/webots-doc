@@ -181,9 +181,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [disable](distancesensor.md#wb_distance_sensor_get_value)();                   |
 | &nbsp;&nbsp; int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();                  |
 | &nbsp;&nbsp; double [getValue](distancesensor.md#wb_distance_sensor_get_value)() const;                  |
-| &nbsp;&nbsp; double [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
-| &nbsp;&nbsp; double [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
-| &nbsp;&nbsp; double [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
+| &nbsp;&nbsp; double [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
+| &nbsp;&nbsp; double [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
+| &nbsp;&nbsp; double [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
 | &nbsp;&nbsp; int [getType](distancesensor.md#wb_distance_sensor_get_type)() const;                       |
 | };                                                                                                       |
 
@@ -657,8 +657,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)() const;                                                     |
 | &nbsp;&nbsp; int [getMode](robot.md#wb_robot_get_mode)() const;                                                                            |
 | &nbsp;&nbsp; std::string [getModel](robot.md#wb_robot_get_model)() const;                                                                  |
-| &nbsp;&nbsp; std::string [getData](robot.md#wb_robot_get_data)() const;                                                                    |
-| &nbsp;&nbsp; void [setData](robot.md#wb_robot_get_data)(const std::string &data);                                                          |
+| &nbsp;&nbsp; std::string [getCustomData](robot.md#wb_robot_get_custom_data)() const;                                                       |
+| &nbsp;&nbsp; void [setCustomData](robot.md#wb_robot_get_custom_data)(const std::string &data);                                             |
 | &nbsp;&nbsp; std::string [getName](robot.md#wb_robot_get_name)() const;                                                                    |
 | &nbsp;&nbsp; std::string [getControllerName](robot.md#wb_robot_get_controller_name)() const;                                               |
 | &nbsp;&nbsp; std::string [getControllerArguments](robot.md#wb_robot_get_controller_name)() const;                                          |

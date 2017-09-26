@@ -49,6 +49,7 @@
     <script src='https://www.cyberbotics.com/wwi/8.6/request_methods.js'></script>
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
+    <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
     <script src='https://www.cyberbotics.com/wwi/8.6/showdown-extensions.js'></script>
     <script src='https://www.cyberbotics.com/wwi/8.6/viewer.js'></script>
     <script>

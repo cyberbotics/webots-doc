@@ -97,7 +97,23 @@ where `PYTHON_PATH` is the path to the Python installation directory, for exampl
 
 As described above, the Python libraries for Webots are precompiled with Python 2.7.
 It is possible to use another Python version such as Python 3 or macOS brew Python,
-but this requires to recompile these libraries.
+by recompiling these libraries.
 This documentation is generic and may not cover all the cases.
 This task should be reserved for users having strong knowledge in their OS, build systems
 and in terminal management.
+
+#### Windows
+
+The target Python version for this demo: Python 3.6.
+
+1. Download and install [SWIG precompiled for windows (swigwin)](http://swig.org/download.html).
+2. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
+3. From the MSYS2 terminal, type:
+
+```shell
+export PYTHON_VERSION=3.6
+export PYTHON_HOME=/C/Users/$USER/AppData/Local/Programs/Python/Python36
+export PATH=/C/Program\ Files/Webots/msys64/mingw64/bin:/C/Program\ Files/Webots/msys64/usr/bin:$PATH
+cd /C/Program\ Files/Webots/resources/languages/python
+make
+```

@@ -102,9 +102,7 @@ This documentation is generic and may not cover all the cases.
 This task should be reserved for users having strong knowledge in their OS, build systems
 and in terminal management.
 
-#### Windows
-
-The target Python version for this demo: Python 3.6.
+#### Python 3.6 on Windows
 
 1. Uninstall any Python installation.
 2. Download and install [Python 3.6 for x86_64](https://www.python.org/downloads/):

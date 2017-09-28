@@ -113,7 +113,7 @@ The target Python version for this demo: Python 3.6.
 ```shell
 export PYTHON_VERSION=3.6
 export PYTHON_HOME=/C/Users/$USER/AppData/Local/Programs/Python/Python36
-export PATH=/C/Program\ Files/Webots/msys64/mingw64/bin:/C/Program\ Files/Webots/msys64/usr/bin:$PATH
+export PATH=/C/Program\ Files/Webots/msys64/mingw64/bin:/C/Program\ Files/Webots/msys64/usr/bin:/C/Program\ Files/swigwin-3.0.12:$PATH
 cd /C/Program\ Files/Webots/resources/languages/python
 make
 ```

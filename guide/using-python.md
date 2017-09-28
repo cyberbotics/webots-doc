@@ -108,7 +108,12 @@ The target Python version for this demo: Python 3.6.
 
 1. Download and install [SWIG precompiled for windows (swigwin)](http://swig.org/download.html).
 2. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
-3. From the MSYS2 terminal, type:
+3. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
+You should enable the user write rights at least for these paths:
+    - `/C/Program\ Files/Webots/resources/languages/python`
+    - `/C/Program\ Files/Webots/lib/python`
+4. Remove this file: `/C/Program\ Files/Webots/msys64/usr/bin/swig.exe`.
+5. From the MSYS2 terminal, type:
 
 ```shell
 export PYTHON_VERSION=3.6

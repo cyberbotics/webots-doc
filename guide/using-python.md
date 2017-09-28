@@ -92,3 +92,12 @@ Open the DOS console (CMD.EXE) and type:
 PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
 where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python27`.
+
+### Use an alternative Python version
+
+As described above, the Python libraries for Webots are precompiled with Python 2.7.
+It is possible to use another Python version such as Python 3 or macOS brew Python,
+but this requires to recompile these libraries.
+This documentation is generic and may not cover all the cases.
+This task should be reserved for users having strong knowledge in their OS, build systems
+and in terminal management.

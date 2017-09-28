@@ -110,16 +110,15 @@ and in terminal management.
     `C:\Users\fabien\AppData\Local\Programs\Python\Python36` directory.
     - Add `extern double hypot(double, double);` at the 3rd line of
     `C:\Users\fabien\AppData\Local\Programs\Python\Python36\include\Python.h`
-3. Download and install [SWIG precompiled for windows (swigwin)](http://swig.org/download.html).
-4. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
-5. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
+3. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
+4. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
 You should enable the user write rights at least for these paths:
     - `/C/Program\ Files/Webots/resources/languages/python`
     - `/C/Program\ Files/Webots/lib/python`
-6. Replace every occurrence of `PyString_FromStringAndSize` by `PyString_FromStringAndSize` in
+5. Replace every occurrence of `PyString_FromStringAndSize` by `PyString_FromStringAndSize` in
 `/C/Program\ Files/Webots/resources/languages/python/controller.i`.
-7. Remove the line `init_controller` in `/C/Program\ Files/Webots/resources/languages/python/_controller.def`.
-8. From the MSYS2 terminal, type:
+6. Remove the line `init_controller` in `/C/Program\ Files/Webots/resources/languages/python/_controller.def`.
+7. From the MSYS2 terminal, type:
 
 ```shell
 # Update and install gcc and make
@@ -133,7 +132,7 @@ cd /C/Program\ Files/Webots/resources/languages/python
 make
 ```
 
-9. Foreach Python controller, create a `runtime.ini` file containing:
+8. Foreach Python controller, create a `runtime.ini` file containing:
 
 ```ini
 [python]

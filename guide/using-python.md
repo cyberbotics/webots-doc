@@ -106,19 +106,39 @@ and in terminal management.
 
 The target Python version for this demo: Python 3.6.
 
-1. Download and install [SWIG precompiled for windows (swigwin)](http://swig.org/download.html).
-2. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
-3. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
+1. Uninstall any Python installation.
+2. Download and install [Python 3.6 for x86_64](https://www.python.org/downloads/):
+    - Extend your system `PATH` environment variable to add the
+    `C:\Users\fabien\AppData\Local\Programs\Python\Python36` directory.
+    - Add `extern double hypot(double, double);` at the 3rd line of
+    `C:\Users\fabien\AppData\Local\Programs\Python\Python36\include\Python.h`
+3. Download and install [SWIG precompiled for windows (swigwin)](http://swig.org/download.html).
+4. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
+5. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
 You should enable the user write rights at least for these paths:
     - `/C/Program\ Files/Webots/resources/languages/python`
     - `/C/Program\ Files/Webots/lib/python`
-4. Remove this file: `/C/Program\ Files/Webots/msys64/usr/bin/swig.exe`.
-5. From the MSYS2 terminal, type:
+6. Replace every occurrence of `PyString_FromStringAndSize` by `PyString_FromStringAndSize` in
+`/C/Program\ Files/Webots/resources/languages/python/controller.i`.
+7. Remove the line `init_controller` in `/C/Program\ Files/Webots/resources/languages/python/_controller.def`.
+8. From the MSYS2 terminal, type:
 
 ```shell
+# Update and install gcc and make
+pacman -Syuu
+pacman -S mingw-w64-x86_64-gcc make
+
+# Setup and compile Webots library for Python 3.6
 export PYTHON_VERSION=3.6
 export PYTHON_HOME=/C/Users/$USER/AppData/Local/Programs/Python/Python36
-export PATH=/C/Program\ Files/Webots/msys64/mingw64/bin:/C/Program\ Files/Webots/msys64/usr/bin:/C/Program\ Files/swigwin-3.0.12:$PATH
+export PATH=/C/Program\ Files/swigwin-3.0.12:$PATH
 cd /C/Program\ Files/Webots/resources/languages/python
 make
+```
+
+9. Foreach Python controller, create a `runtime.ini` file containing:
+
+```ini
+[python]
+COMMAND = python
 ```

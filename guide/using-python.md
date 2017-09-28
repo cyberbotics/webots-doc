@@ -124,12 +124,11 @@ You should enable the user write rights at least for these paths:
 ```shell
 # Update and install gcc and make
 pacman -Syuu
-pacman -S mingw-w64-x86_64-gcc make
+pacman -S mingw-w64-x86_64-gcc make swig
 
 # Setup and compile Webots library for Python 3.6
 export PYTHON_VERSION=3.6
 export PYTHON_HOME=/C/Users/$USER/AppData/Local/Programs/Python/Python36
-export PATH=/C/Program\ Files/swigwin-3.0.12:$PATH
 cd /C/Program\ Files/Webots/resources/languages/python
 make
 ```

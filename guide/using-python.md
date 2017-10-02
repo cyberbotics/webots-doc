@@ -100,8 +100,8 @@ As described above, the Python libraries for Webots are precompiled with Python 
 It is possible to use another Python version such as Python 3 or macOS brew Python,
 by recompiling these libraries.
 This documentation is generic and may not cover all the cases.
-This task should be reserved for users having strong knowledge in their OS, build systems
-and in terminal management.
+This task should be reserved for users that have strong experience in their OS,
+build systems and terminal management.
 
 The general idea is to complete the following tasks:
 
@@ -123,10 +123,7 @@ The general idea is to complete the following tasks:
 You should enable the user write rights at least for these paths:
     - `/C/Program\ Files/Webots/resources/languages/python`
     - `/C/Program\ Files/Webots/lib/python`
-5. Replace every occurrence of `PyString_FromStringAndSize` by `PyBytes_FromStringAndSize` in
-`/C/Program\ Files/Webots/resources/languages/python/controller.i`.
-6. Remove the line `init_controller` in `/C/Program\ Files/Webots/resources/languages/python/_controller.def`.
-7. From the MSYS2 terminal, type:
+5. From the MSYS2 terminal, type:
 
 ```shell
 # Update and install gcc and make

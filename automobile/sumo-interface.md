@@ -10,7 +10,7 @@ communicate with SUMO.
 > **Note**:
 Currently version 0.30 of SUMO is distributed with Webots.
 
-In order to use this interface, a `SumoInterface` PROTO node needs to be added to the world.
+In order to use this interface, a `SumoInterface` PROTO node should to be added to the world.
 And a folder called `worldName_net` should be present close to the world file.
 This folder should contain the usual files defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the
 configuration files (.netccfg and .sumocfg), for more information please refeer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
@@ -54,7 +54,7 @@ Webots from SUMO by the interface.
 
 ### The SumoInterface PROTO
 
-Here is the parameters of the `SumoInterface` PROTO (which is inherits from the `Spervisor` node):
+Here is the parameters of the `SumoInterface` PROTO (which inherits from the `Spervisor` node):
 
 ```
 PROTO SumoInterface [
@@ -83,21 +83,21 @@ PROTO SumoInterface [
 #### SumoInterface fields summary
 
 - `gui`: Defines if the command-line or GUI version of SUMO should be used.
-- `useNetconvert`: Defines if netconvert should be called before launching SUMO, this should be disable if a `*.net` is already provided.
-- `enableTrafficLights`: Defines if the traffic lights synchronization should be used or nots.
-- `enableWheelsRotation`: Defines if the wheels of the vehicles should rotate or note (wheels rotation hae an impact on the simulation speed but make the simulation looks more realistic).
+- `useNetconvert`: Defines if netconvert should be called before launching SUMO, this should be disabled if a `*.net` is already provided.
+- `enableTrafficLights`: Defines if the traffic lights synchronization should be used or not.
+- `enableWheelsRotation`: Defines if the wheels of the vehicles should rotate or not (wheels rotation has an impact on the simulation speed but make the simulation looks more realistic).
 - `maxVehicules`: Defines the maximum number of vehicles added in Webots from SUMO.
-- `radius`: Defines the visibility radius of the vehicles in meters (only vehicles closer to the viewpoint than this radius will be displayed). A negative value means that all the vehicles are visible.
+- `radius`: Defines the visibility radius of the vehicles in meters (only vehicles closer to the viewpoint than this radius will be added in Webots). A negative value means that all the vehicles are added.
 - `maximumLateralSpeed`: Defines the maximal lateral speed of any vehicle in meter per second.
 - `maximumAngularSpeed`: Defines the maximal angular speed of any vehicle in radian per second.
-- `laneChangeDelay`: Defines the time spent to change lane (during this period, the position of the car in Webots and SUMO may not be synchronized anymore).
+- `laneChangeDelay`: Defines the time spent to change lane (during this period, the position of the vehicle in Webots and SUMO may not be synchronized anymore).
 - `enableHeight`: Defines whether height information should be extracted from the edge name (experimental).
 - `step`: Defines the time step of SUMO in milliseconds (should be bigger or equal to the world time step).
 - `port`: Defines which port SUMO and Webots should use to communicate.
-- `seed`: Defines the seed of the SUMO random number generator. USe 0 for a random seed (`--random` option of SUMO).
-- `networkFiles`: Defines the directory where are located the SUMO network files. If this field is empty, the files should be located close to the world in a directory called `worldName_net`.
+- `seed`: Defines the seed of the SUMO random number generator. Use `0` for a random seed (`--random` option of SUMO).
+- `networkFiles`: Defines the directory where are located the SUMO network files. If this field is empty, the files should be located in the same directory than the world file in a directory called `worldName_net`.
 - `sumoArguments`: Defines additional arguments passed to SUMO when started.
-- `display`: Can optonnaly contain a `SumoDisplay` node.
+- `display`: Can optionally contain a `SumoDisplay` node.
 - `verbose`: Defines if SUMO outputs should be printed in the Webots console.
 - `synchronization`: Defines if the interface controller is synchronized with Webots or not.
 - `children`: Can be used to insert other nodes, in particular the traffic lights should be added in this field.
@@ -107,7 +107,6 @@ PROTO SumoInterface [
 
 It is sometimes useful to see the GUI view of SUMO inside Webots (e.g. to emulate a GPS view).
 This can easily be achieved by adding a `SumoInterface` node in the `display` field of the `SumoInterface` PROTO and using SUMO in GUI mode.
-
 
 ```
 PROTO SumoDisplay [
@@ -123,13 +122,13 @@ PROTO SumoDisplay [
 
 - `width`: Defines the width of the `Display`.
 - `height`: Defines the height of the `Display`.
-- `zoom`: Defines the sooming factor that will make SUMO automatically zoom in/out at startup.
-- `refreshRate`: Defines the refresh rate of the display in in milliseconds.
-- `fitSize`: If the current size of the SUMO window is bigger than the resolution defines by the `width` and `height` fields, only the center of the view will be visible in the `Display`. On the opposite, if the SUMO window is smaller than the resolution, the image will not entirely fill it. If `fitSize` is set to TRUE, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
+- `zoom`: Defines the zooming factor that will make SUMO automatically zoom in/out at startup.
+- `refreshRate`: Defines the refresh rate of the display in milliseconds.
+- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`. On the opposite, if the SUMO window is smaller than the resolution, the image will not entirely fill it. If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
 ## Plugin mechanism
 
-In addition to the `sumo_supervisor` controller arguments, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
+In addition to the PROTO parameters, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
 
 ```python
 class SumoSupervisorPlugin:

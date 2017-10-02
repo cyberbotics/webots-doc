@@ -54,7 +54,7 @@ Webots from SUMO by the interface.
 
 ### The SumoInterface PROTO
 
-Here is the parameters of the `SumoInterface` PROTO (which inherits from the `Spervisor` node):
+Here is the parameters of the `SumoInterface` PROTO (which inherits from the `Supervisor` node):
 
 ```
 PROTO SumoInterface [
@@ -83,7 +83,7 @@ PROTO SumoInterface [
 #### SumoInterface fields summary
 
 - `gui`: Defines if the command-line or GUI version of SUMO should be used.
-- `useNetconvert`: Defines if netconvert should be called before launching SUMO, this should be disabled if a `*.net` is already provided.
+- `useNetconvert`: Defines if NETCONVERT should be called before launching SUMO, this should be disabled if a `*.net` is already provided.
 - `enableTrafficLights`: Defines if the traffic lights synchronization should be used or not.
 - `enableWheelsRotation`: Defines if the wheels of the vehicles should rotate or not (wheels rotation has an impact on the simulation speed but make the simulation looks more realistic).
 - `maxVehicules`: Defines the maximum number of vehicles added in Webots from SUMO.

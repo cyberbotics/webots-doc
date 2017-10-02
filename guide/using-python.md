@@ -93,6 +93,7 @@ PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
 where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python27`.
 
+
 ### Use an alternative Python version
 
 As described above, the Python libraries for Webots are precompiled with Python 2.7.
@@ -108,7 +109,8 @@ The general idea is to complete the following tasks:
 2. Get [SWIG](http://www.swig.org/download.html).
 3. Recompile this directory: `$WEBOTS_HOME/resources/languages/python`
 
-#### Python 3.6 on Windows
+
+#### Example: build the Webots libraries for Python 3.6 under Windows
 
 1. Uninstall any Python installation.
 2. Download and install [Python 3.6 for x86_64](https://www.python.org/downloads/):
@@ -138,7 +140,7 @@ cd /C/Program\ Files/Webots/resources/languages/python
 make
 ```
 
-8. Foreach Python controller, create a `runtime.ini` file containing:
+8. Foreach Python 3.6 controller, create a `runtime.ini` file containing:
 
 ```ini
 [python]

@@ -102,20 +102,26 @@ This documentation is generic and may not cover all the cases.
 This task should be reserved for users having strong knowledge in their OS, build systems
 and in terminal management.
 
+The general idea is to complete the following tasks:
+
+1. Install the new Python version.
+2. Get [SWIG](http://www.swig.org/download.html).
+3. Recompile this directory: `$WEBOTS_HOME/resources/languages/python`
+
 #### Python 3.6 on Windows
 
 1. Uninstall any Python installation.
 2. Download and install [Python 3.6 for x86_64](https://www.python.org/downloads/):
     - Extend your system `PATH` environment variable to add the
-    `C:\Users\fabien\AppData\Local\Programs\Python\Python36` directory.
+    `C:\Users\$USER\AppData\Local\Programs\Python\Python36` directory.
     - Add `extern double hypot(double, double);` at the 3rd line of
-    `C:\Users\fabien\AppData\Local\Programs\Python\Python36\include\Python.h`
+    `C:\Users\$USER\AppData\Local\Programs\Python\Python36\include\Python.h`
 3. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
 4. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
 You should enable the user write rights at least for these paths:
     - `/C/Program\ Files/Webots/resources/languages/python`
     - `/C/Program\ Files/Webots/lib/python`
-5. Replace every occurrence of `PyString_FromStringAndSize` by `PyString_FromStringAndSize` in
+5. Replace every occurrence of `PyString_FromStringAndSize` by `PyBytes_FromStringAndSize` in
 `/C/Program\ Files/Webots/resources/languages/python/controller.i`.
 6. Remove the line `init_controller` in `/C/Program\ Files/Webots/resources/languages/python/_controller.def`.
 7. From the MSYS2 terminal, type:

@@ -13,7 +13,7 @@ Currently version 0.30 of SUMO is distributed with Webots.
 In order to use this interface, a `SumoInterface` PROTO node should to be added to the world.
 And a folder called `worldName_net` should be present close to the world file.
 This folder should contain the usual files defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the
-configuration files (.netccfg and .sumocfg), for more information please refeer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
+configuration files (.netccfg and .sumocfg), for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
 The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded in priority, if those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you can't know which one is going to be used).
 
 The interface will automatically start SUMO and run it in synchronization

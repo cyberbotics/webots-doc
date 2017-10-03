@@ -33,7 +33,7 @@ geometries found in its `boundingObject`; overlaps are not handled.
 The `linear` field indicates the amount of damping that must be applied to the
 body's linear motion. The `angular` field indicates the amount of damping that
 must be applied to the body's angular motion. The linear damping can be used,
-e.g., to slow down a vehicule by simulating air or water friction. The angular
+e.g., to slow down a vehicle by simulating air or water friction. The angular
 damping can be used, e.g., to slow down the rotation of a rolling ball or the
 spin of a coin. Note that the damping is applied regardless of the shape of the
 object, so damping cannot be used to model complex fluid dynamics (use

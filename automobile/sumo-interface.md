@@ -11,10 +11,10 @@ communicate with SUMO.
 Currently version 0.30 of SUMO is distributed with Webots.
 
 In order to use this interface, a `SumoInterface` PROTO node should to be added to the world.
-And a folder called `worldName_net` should be present close to the world file.
+And a folder called `worldName_net` should be present at the same level as the world file.
 This folder should contain the usual files defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the
 configuration files (.netccfg and .sumocfg), for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
-The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded in priority, if those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you can't know which one is going to be used).
+The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded by default. If those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you don't know which one is going to be used).
 
 The interface will automatically start SUMO and run it in synchronization
 with Webots time. Each time a new vehicle enters the SUMO simulation, it will be
@@ -54,7 +54,7 @@ Webots from SUMO by the interface.
 
 ### The SumoInterface PROTO
 
-Here is the parameters of the `SumoInterface` PROTO (which inherits from the `Supervisor` node):
+Here are the parameters of the `SumoInterface` PROTO (which inherits from the `Supervisor` node):
 
 ```
 PROTO SumoInterface [
@@ -62,7 +62,7 @@ PROTO SumoInterface [
   field SFBool    useNetconvert         TRUE
   field SFBool    enableTrafficLights   TRUE
   field SFBool    enableWheelsRotation  FALSE
-  field SFInt32   maxVehicules          100
+  field SFInt32   maxVehicles           100
   field SFInt32   radius               -1
   field SFFloat   maximumLateralSpeed   2.5
   field SFFloat   maximumAngularSpeed   3
@@ -85,20 +85,20 @@ PROTO SumoInterface [
 - `gui`: Defines if the command-line or GUI version of SUMO should be used.
 - `useNetconvert`: Defines if NETCONVERT should be called before launching SUMO, this should be disabled if a `*.net` is already provided.
 - `enableTrafficLights`: Defines if the traffic lights synchronization should be used or not.
-- `enableWheelsRotation`: Defines if the wheels of the vehicles should rotate or not (wheels rotation has an impact on the simulation speed but make the simulation looks more realistic).
-- `maxVehicules`: Defines the maximum number of vehicles added in Webots from SUMO.
-- `radius`: Defines the visibility radius of the vehicles in meters (only vehicles closer to the viewpoint than this radius will be added in Webots). A negative value means that all the vehicles are added.
+- `enableWheelsRotation`: Defines if the wheels of the vehicles should rotate or not (wheels rotation has an impact on the simulation speed but makes the simulation look more realistic).
+- `maxVehicles`: Defines the maximum number of vehicles added in Webots from SUMO.
+- `radius`: Defines the visibility radius of the vehicles in meters (if the distance between the viewpoint and a vehicle is greater than this radius, the vehicle will not be added in Webots). A negative value means that all the vehicles are added.
 - `maximumLateralSpeed`: Defines the maximal lateral speed of any vehicle in meter per second.
 - `maximumAngularSpeed`: Defines the maximal angular speed of any vehicle in radian per second.
 - `laneChangeDelay`: Defines the time spent to change lane (during this period, the position of the vehicle in Webots and SUMO may not be synchronized anymore).
 - `enableHeight`: Defines whether height information should be extracted from the edge name (experimental).
 - `step`: Defines the time step of SUMO in milliseconds (should be bigger or equal to the world time step).
 - `port`: Defines which port SUMO and Webots should use to communicate.
-- `seed`: Defines the seed of the SUMO random number generator. Use `0` for a random seed (`--random` option of SUMO).
-- `networkFiles`: Defines the directory where are located the SUMO network files. If this field is empty, the files should be located in the same directory than the world file in a directory called `worldName_net`.
+- `seed`: Defines the seed of the SUMO random number generator. Use `0` for a random time-based seed (equivalent to the `--random` option of SUMO, for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Simulation/Randomness)).
+- `networkFiles`: Defines the directory where the SUMO network files are stored. If this field is empty, the files should be stored in a directory called `worldName_net` located in the same directory as the world file.
 - `sumoArguments`: Defines additional arguments passed to SUMO when started.
 - `display`: Can optionally contain a `SumoDisplay` node.
-- `verbose`: Defines if SUMO outputs should be printed in the Webots console.
+- `verbose`: Defines if SUMO output should be printed in the Webots console.
 - `synchronization`: Defines if the interface controller is synchronized with Webots or not.
 - `children`: Can be used to insert other nodes, in particular the traffic lights should be added in this field.
 
@@ -124,7 +124,7 @@ PROTO SumoDisplay [
 - `height`: Defines the height of the `Display`.
 - `zoom`: Defines the zooming factor that will make SUMO automatically zoom in/out at startup.
 - `refreshRate`: Defines the refresh rate of the display in milliseconds.
-- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`. On the opposite, if the SUMO window is smaller than the resolution, the image will not entirely fill it. If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
+- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`. On the contrary, if the SUMO window is smaller than the resolution, the image will not entirely fill it. If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
 ## Plugin mechanism
 

@@ -100,8 +100,7 @@ As described above, the Python libraries for Webots are precompiled with Python 
 It is possible to use another Python version such as Python 3 or macOS brew Python,
 by recompiling these libraries.
 This documentation is generic and may not cover all the cases.
-This task should be reserved for users that have strong experience in their OS,
-build systems and terminal management.
+This task requires advanced knowledge in operating systems management.
 
 The general idea is to complete the following tasks:
 
@@ -119,8 +118,8 @@ The general idea is to complete the following tasks:
     - Add `extern double hypot(double, double);` at the 3rd line of
     `C:\Users\$USER\AppData\Local\Programs\Python\Python36\include\Python.h`
 3. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
-4. If Webots is installed in `C:\\Program Files` then the write rights are certainly disabled.
-You should enable the user write rights at least for these paths:
+4. You should either start the MSYS2 console in administrator mode (right click on the MSYS2.exe icon and select Run as administrator) or
+enable the user write rights at least for these folders:
     - `/C/Program\ Files/Webots/resources/languages/python`
     - `/C/Program\ Files/Webots/lib/python`
 5. From the MSYS2 terminal, type:

@@ -86,7 +86,7 @@ sudo apt-get install python-numpy
 Open a Terminal and type:
 
 ```
-pip install opencv-python numpy --user
+pip install opencv-python --user
 ```
 
 #### Windows

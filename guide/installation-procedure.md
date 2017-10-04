@@ -113,6 +113,8 @@ The export line should however be included in a configuration script like
 Some additional libraries are needed in order to properly run Webots. In
 particular *libjpeg8*, *libav-tools*, *libpci3* and *libavcodec-extra* have
 to be installed on the system.
+If you need to compile [controller plugins](controller-plugin.md) or [physics plugins](webots-plugin.md#physics-plugin),
+then you also have to install *mesa-common-dev* and *libgl1-mesa-dev* packages.
 
 > **Note**:
 On old versions of Ubuntu or other linux distributions the library names and versions could be slightly different.

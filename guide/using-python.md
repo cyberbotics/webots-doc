@@ -66,13 +66,14 @@ make -C resources/languages/python
 
 The `WEBOTS_HOME/projects/web/visual_tracking` sample simulation uses the Python [OpenCV](http://opencv.org/) and [NumPy](http://numpy.org/) packages.
 So these packages have to be installed on the system in order to correctly run this simulation.
+Using Python *pip*, the *NumPy* package is automatically installed with *opencv-python* package.
 
 #### Linux
 
 On Ubuntu 16.04, use the `pip` command to install OpenCV:
 ```sh
 sudo apt-get install python-pip
-sudo pip install opencv-python numpy
+sudo pip install opencv-python
 ```
 
 On Ubuntu 14.04 OpenCV doesn't need to be installed because the Python OpenCV library is already included in the Ubuntu 14.04 tarball package.
@@ -93,7 +94,7 @@ pip install opencv-python --user
 
 Open the DOS console (CMD.EXE) and type:
 ```
-PYTHON_PATH\Scripts\pip.exe install opencv-python numpy
+PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
 where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python27`.
 

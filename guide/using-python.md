@@ -86,14 +86,14 @@ sudo apt-get install python-numpy
 Open a Terminal and type:
 
 ```
-pip install opencv-python --user
+pip install opencv-python numpy --user
 ```
 
 #### Windows
 
 Open the DOS console (CMD.EXE) and type:
 ```
-PYTHON_PATH\Scripts\pip.exe install opencv-python
+PYTHON_PATH\Scripts\pip.exe install opencv-python numpy
 ```
 where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python27`.
 

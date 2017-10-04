@@ -64,8 +64,8 @@ make -C resources/languages/python
 
 ### Python Libraries
 
-The sample simulation `WEBOTS_HOME/projects/web/visual_tracking` use the Python [OpenCV](http://opencv.org/) library and [NumPy](http://numpy.org/) package.
-So this library has to be installed on the system in order to correctly run the simulation.
+The `WEBOTS_HOME/projects/web/visual_tracking` sample simulation uses the Python [OpenCV](http://opencv.org/) and [NumPy](http://numpy.org/) packages.
+So these packages have to be installed on the system in order to correctly run this simulation.
 
 #### Linux
 

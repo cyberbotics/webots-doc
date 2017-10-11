@@ -314,7 +314,7 @@ void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, doub
 }
 ```
 
-The `INFINITY` (*#include <math.h>*) value can be used as the second argument to
+The `INFINITY` (`#include <math.h>`) value can be used as the second argument to
 the `wb_motor_set_position()` function in order to enable an endless rotational
 (or linear) motion. The current values for velocity, acceleration and motor
 torque/force are taken into account. So for example, `wb_motor_set_velocity()`

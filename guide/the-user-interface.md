@@ -105,6 +105,7 @@ recording is started, this item is changed in `Stop Movie...`. During the
 recording, it is possible to the change the running mode and pause the
 simulation. However, frames are only captured during Webots steps and not when
 the simulation is paused.
+Other than choosing the resolution and the quality of the movie, it is also possible to record the simulation in accelerated mode or in slow motion by setting the `Video acceleration` value.
 
 The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file.

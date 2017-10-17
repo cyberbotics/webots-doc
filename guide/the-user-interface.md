@@ -102,10 +102,20 @@ to save the current view as a PNG or JPG image.
 ![](images/movie-button.png =26x26) The `Make Movie...` item allows you to
 create MPEG movies (Linux and macOS) or AVI movies (Windows). Once the movie
 recording is started, this item is changed in `Stop Movie...`. During the
-recording, it is possible to the change the running mode and pause the
+recording, it is possible to change the running mode and pause the
 simulation. However, frames are only captured during Webots steps and not when
 the simulation is paused.
-Other than choosing the resolution and the quality of the movie, it is also possible to record the simulation in accelerated mode or in slow motion by setting the `Video acceleration` value.
+Other than choosing the resolution and the compression quality of the movie, it is also possible to record the simulation in accelerated mode or in slow motion by setting the `Video acceleration` value.
+If the video acceleration value is below 1, the recorded movie will run slower than the simulation.
+The maximum slow down, i.e. the minimum acceleration value, is defined by the basic time step of the simulation because it is not possible to record at a higher frame rate than the simulation update rate.
+In order to increase the maximum slow down please consider reducing the simulation basic time step.
+Then, by checking the video caption option the current acceleration value can be displayed on the top right corner of the 3D scene.
+
+%figure "`Make Movie...` pop up dialog"
+
+![make_movie_dialog.png](images/make_movie_dialog.png)
+
+%end
 
 The `Export HTML5 Model...` item allows you to export the current world as an
 interactive 3D ".html" file.

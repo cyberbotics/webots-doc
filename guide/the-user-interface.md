@@ -108,8 +108,8 @@ the simulation is paused.
 Other than choosing the resolution and the compression quality of the movie, it is also possible to record the simulation in accelerated mode or in slow motion by setting the `Video acceleration` value in the pop-up dialog.
 If the video acceleration value is below 1, the recorded movie will run slower than the simulation.
 The maximum slow down, i.e. the minimum acceleration value, is defined by the basic time step of the simulation because it is not possible to record at a higher frame rate than the simulation update rate.
-In order to increase the maximum slow down please consider reducing the simulation basic time step.
-Then, by checking the video caption option the current acceleration value can be displayed on the top right corner of the 3D scene.
+In order to increase the maximum slow down you should reduce the simulation basic time step.
+Checking the video caption option will display the acceleration value in the top right corner of the movie.
 
 %figure "'Make Movie...' dialog"
 

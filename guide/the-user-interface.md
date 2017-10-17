@@ -111,7 +111,7 @@ The maximum slow down, i.e. the minimum acceleration value, is defined by the ba
 In order to increase the maximum slow down please consider reducing the simulation basic time step.
 Then, by checking the video caption option the current acceleration value can be displayed on the top right corner of the 3D scene.
 
-%figure "`Make Movie...` pop up dialog"
+%figure "\"Make Movie...\" pop up dialog"
 
 ![make_movie_dialog.png](images/make_movie_dialog.png)
 

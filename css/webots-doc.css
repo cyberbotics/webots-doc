@@ -188,9 +188,6 @@
   font-size: 14px;
   color: black;
 }
-.webots-doc .release-tag:before {
-  content: "release ";
-}
 .webots-doc h4 {
   font-size: 14px;
 }

@@ -15,7 +15,7 @@ and orientation of the PROTO instances.
 "TwoColorChair.proto":
 
 ```
-#VRML_SIM V8.6 utf8
+#VRML_SIM R2018a utf8
 # A two-color chair
 
 PROTO TwoColorChair [
@@ -89,7 +89,7 @@ default must be specified.
 "TwoChairs.wbt":
 
 ```
-#VRML_SIM V8.6 utf8
+#VRML_SIM R2018a utf8
 
 WorldInfo {
 }

@@ -115,7 +115,7 @@ This tag should not be used if the result of the PROTO depends on something else
 
 ```
 
-#VRML_SIM V8.6 utf8
+#VRML_SIM R2018a utf8
 # tags: static
 
 PROTO SimpleStairs [

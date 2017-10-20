@@ -16,7 +16,7 @@ becomes possible to reuse your existing MATLAB code directly in Webots.
 ### MATLAB Installation
 
 In order to use MATLAB controllers in Webots, the MATLAB software must be
-installed (a MATLAB license is required). Webots {{ webots.version.revision }} supports only MATLAB versions
+installed (a MATLAB license is required). Webots {{ webots.version.full }} supports only MATLAB versions
 2015b (64 bits), R2016a, R2016b and R2017a.
 
 Webots must be able to access the "matlab" executable (usually a script) in

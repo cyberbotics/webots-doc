@@ -1,6 +1,6 @@
 # Webots for automobiles
 
-Release {{ webots.version.revision }}
+Release {{ webots.version.full }}
 
 %figure
 ![ImageData](images/titleweb.png)

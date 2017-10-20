@@ -15,7 +15,7 @@ the Webots icon.
 ### Windows
 
 On Windows 10 and Windows 7, open the `Start` menu, go to the `Program Files /
-Cyberbotics` menu and click on the `Webots {{ webots.version.revision }}` menu item.
+Cyberbotics` menu and click on the `Webots {{ webots.version.full }}` menu item.
 
 On Windows 8, open the `Start` screen, scroll to the screen's right until
 you spot the Cyberbotics section and click on the `Webots` icon.

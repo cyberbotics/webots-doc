@@ -1,6 +1,6 @@
 # Webots for ROBOTIS OP2
 
-Release {{ webots.version.revision }}
+Release {{ webots.version.full }}
 
 %figure
 ![ImageData](images/robotis-op2.png)

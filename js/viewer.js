@@ -277,7 +277,7 @@ function setUpBlogStyleIfNeeded() {
 
 function getWebotsVersion() {
   // Get the Webots version from the showdown wbVariables extension
-  var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
+  var version = "{{ webots.version.full }}";
   var converter = new showdown.Converter({extensions: ["wbVariables"]});
   var html = converter.makeHtml(version);
   var tmp = document.createElement("div");

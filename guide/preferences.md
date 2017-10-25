@@ -67,5 +67,5 @@ into a texture (RTT).
 
 - The `Width of rasterized lines` value specifies the width of all the lines drawn in the 3D scene.
 In particular this affects the visual representations of bounding objects, coordinate systems,
-optional renderings, apply force and torque arrows, and IndexedLineSet nodes.
+optional renderings, axis of translation and rotation handles, apply force and torque arrows, and IndexedLineSet nodes.
 The default value is 1.0.

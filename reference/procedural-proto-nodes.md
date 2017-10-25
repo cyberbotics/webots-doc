@@ -15,7 +15,7 @@ documentation](http://www.lua.org/docs.html) for complementary information.
 
 A template engine is used to evaluate the PROTO according to the fields values
 of the PROTO, before being loaded in Webots. The template engine used is
-[slt2](https://github.com/henix/slt2) (under the MIT license).
+[liluat](https://github.com/FSMaxB/liluat) (under the MIT license).
 
 ### Programming Facts
 
@@ -149,6 +149,7 @@ PROTO SimpleStairs [
 
    -- load lua-gd module and create a uniform texture
    local gd = require("gd")
+   local debug = require("debug")
    local im = gd.createTrueColor(128, 128)
    color = im:colorAllocate(fields.color.value.r * 255, fields.color.value.g * 255, fields.color.value.b * 255)
    im:filledRectangle(0, 0, 127, 127, color)

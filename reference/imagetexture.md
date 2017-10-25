@@ -91,13 +91,13 @@ if is_absolute(url[i]) then
   else
     return Error
 else
-  if defined_in_a_project_PROTO(current_node) and is_existing(PROTO_path + url[i])
+  if defined_in_a_project_PROTO(current_node) and exists(PROTO_path + url[i])
     return PROTO_path + url[i]
-  else if is_existing(world_path + url[i])
+  else if exists(world_path + url[i])
     return world_path + url[i]
-  else if defined_in_a_webots_PROTO(current_node) and is_existing(PROTO_path + url[i])
+  else if defined_in_a_webots_PROTO(current_node) and exists(PROTO_path + url[i])
       return PROTO_path + url[i]
-  else if is_existing(generic_textures_path + url[i])
+  else if exists(generic_textures_path + url[i])
     return generic_textures_path + url[i]
   endif
 endif

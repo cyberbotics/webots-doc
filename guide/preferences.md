@@ -42,9 +42,9 @@ the Camera device images. The methods are sorted from the most efficient one to
 the least efficient one.
 
 - The `Main 3D view anti-aliasing` option allows you to enable Multisample Anti-Aliasing
-on the 3D scene in Webots. This option can lead to reduced performance, but it improves 
-graphical fidelity significantly. It is disabled by default on systems that do not meet 
-our minimum requirements. Note that this option does not apply to any Camera rendering, 
+on the 3D scene in Webots. This option can lead to reduced performance, but it improves
+graphical fidelity significantly. It is disabled by default on systems that do not meet
+our minimum requirements. Note that this option does not apply to any Camera rendering,
 this is managed by the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
 
 - The `Disable shadows` option allows you to disable completely the shadows in the
@@ -64,3 +64,8 @@ the shaders are not well supported.
 *Camera.antialiasing* fields and to disable this feature. We observed that some
 hardware doesn't support the OpenGL feature about anti-aliasing when rendering
 into a texture (RTT).
+
+- The `Width of rasterized lines` value specifies the width of all the lines drawn in the 3D scene.
+In particular this affects the visual representations of bounding objects, coordinate systems,
+optional renderings, apply force and torque arrows, and IndexedLineSet nodes.
+The default value is 1.0.

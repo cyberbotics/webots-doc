@@ -1,6 +1,6 @@
 ## Symmetry
 
-This example is very basic and explains the use of the servos.
+This example is very basic and explains the use of the motors.
 
 %figure "Symmetry example"
 
@@ -8,11 +8,11 @@ This example is very basic and explains the use of the servos.
 
 %end
 
-It starts by setting the motor force of the three servos of the right arm to
+It starts by setting the motor force of the three motors of the right arm to
 zero in order to completely release this arm. Then, in an infinite loop, the
-position of the previous three servos is read and displayed. Finally, still in
-the loop, the opposite position of each servo of the right arm is applied to the
-corresponding servo of the left arm in order to mimic the motion of the right
+position of the previous three motors is read and displayed. Finally, still in
+the loop, the opposite position of each motor of the right arm is applied to the
+corresponding motor of the left arm in order to mimic the motion of the right
 arm.
 
 You are now able to move the right arm which is free in simulation: select the

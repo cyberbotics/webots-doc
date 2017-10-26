@@ -13,7 +13,7 @@ documentation](http://www.lua.org/docs.html) for complementary information.
 
 ### Template Engine
 
-A template engine is used to evaluate the PROTO according to the fields values
+A template engine is used to evaluate the PROTO according to the field values
 of the PROTO, before being loaded in Webots. The template engine used is
 [liluat](https://github.com/FSMaxB/liluat) (under the MIT license).
 
@@ -107,9 +107,9 @@ In addition to these fonts, it is possible to add other TrueType fonts file in y
 Using procedural PROTO files can greatly increase the loading time of your worlds because every procedural PROTO need to be evaluated.
 
 To reduce the number of evaluations you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`).
-Then, if the same procedural PROTO is used several times in a world and all the fields value are the same, the PROTO is evaluated only once.
+Then, if the same procedural PROTO is used several times in a world and all the field value are the same, the PROTO is evaluated only once.
 > **Note**:
-This tag should not be used if the result of the PROTO depends on something else than the fields value (e.g. use a random value).
+This tag should not be used if the result of the PROTO depends on something else than the field value (e.g. use a random value).
 
 ### Example
 

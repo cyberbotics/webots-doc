@@ -9,20 +9,10 @@ REF_TARGETS= \
  hinge_joint.pdf.png \
  linear_motor.pdf \
  linear_motor.pdf.png \
- linear_servo.pdf \
- linear_servo.pdf.png \
  motor_control.pdf \
  motor_control.pdf.png \
- rotational_servo.pdf \
- rotational_servo.pdf.png \
  rotational_motor.pdf \
  rotational_motor.pdf.png \
- servo_control.pdf \
- servo_control.pdf.png \
- servo_mechanics.pdf \
- servo_mechanics.pdf.png \
- servo_serial.pdf \
- servo_serial.pdf.png \
  connector_alignment.pdf \
  connector_alignment.pdf.png \
  emitter_receiver.pdf \

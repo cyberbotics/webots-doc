@@ -13,9 +13,9 @@ documentation](http://www.lua.org/docs.html) for complementary information.
 
 ### Template Engine
 
-A template engine is used to evaluate the PROTO according to the fields values
+A template engine is used to evaluate the PROTO according to the field values
 of the PROTO, before being loaded in Webots. The template engine used is
-[slt2](https://github.com/henix/slt2) (under the MIT license).
+[liluat](https://github.com/FSMaxB/liluat) (under the MIT license).
 
 ### Programming Facts
 
@@ -107,9 +107,9 @@ In addition to these fonts, it is possible to add other TrueType fonts file in y
 Using procedural PROTO files can greatly increase the loading time of your worlds because every procedural PROTO need to be evaluated.
 
 To reduce the number of evaluations you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`).
-Then, if the same procedural PROTO is used several times in a world and all the fields value are the same, the PROTO is evaluated only once.
+Then, if the same procedural PROTO is used several times in a world and all the field values are the same, the PROTO is evaluated only once.
 > **Note**:
-This tag should not be used if the result of the PROTO depends on something else than the fields value (e.g. use a random value).
+This tag should not be used if the result of the PROTO depends on something else than the field values (e.g. use a random value).
 
 ### Example
 
@@ -149,6 +149,7 @@ PROTO SimpleStairs [
 
    -- load lua-gd module and create a uniform texture
    local gd = require("gd")
+   local debug = require("debug")
    local im = gd.createTrueColor(128, 128)
    color = im:colorAllocate(fields.color.value.r * 255, fields.color.value.g * 255, fields.color.value.b * 255)
    im:filledRectangle(0, 0, 127, 127, color)

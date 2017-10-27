@@ -20,8 +20,11 @@ the first child is a [Shape](shape.md) node, the `emissiveColor` field of its
 child is a [Group](group.md) node, a recursive search is applied on this node in
 order to find which color field must be modified, so every [Light](light.md),
 [Shape](shape.md) and [Group](group.md) node is altered according to the
-previous rules. In terms of [Light](light.md) nodes, [LED](#led) nodes can only accept 
+previous rules. In terms of [Light](light.md) nodes, [LED](#led) nodes can only accept
 [PointLight](pointlight.md) and [SpotLight](spotlight.md) nodes as children.
+Note that [USE](def-and-use.md) nodes cannot be used for [Material](material.md) and
+[Light](light.md) that are going to be automatically altered by the [LED](#led)
+functionality.
 
 ### Field Summary
 

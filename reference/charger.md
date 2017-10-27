@@ -20,6 +20,7 @@ power supply. Instead, it is a battery itself: it accumulates energy with time.
 It could be compared to a solar power panel charging a battery. When the robot
 comes to get energy, it can't get more than the charger has presently
 accumulated.
+Note that only one robot can be charged at a time.
 
 The appearance of the [Charger](#charger) node can be altered by its current
 energy. When the [Charger](#charger) node is full, the resulting color
@@ -45,7 +46,7 @@ The fields specific to the [Charger](#charger) node are:
 - `battery`: this field should contain three values, namely the present energy of
 the charger (*J*), its maximum energy (*J*) and its charging speed (*W=J/s*).
 
-- `radius`: radius of the charging area in meters. The charging area is a disk
+- `radius`: radius of the charging area in meters. The charging area is a sphere
 centered on the origin of the charger coordinate system. The robot can recharge
 itself if its origin is in the charging area (see [this
 figure](#the-sensitive-area-of-a-charger)).

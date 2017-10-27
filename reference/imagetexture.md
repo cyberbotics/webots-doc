@@ -64,17 +64,17 @@ value related to the maximum supported anisotropy level. This value usually is 5
 If the maximum supported level is exceeded, the filtering level will be silently
 brought back to the value corresponding to it.
 0 corresponds to no filtering, only performing simple nearest-neighbor pixel
-interpolation. At 1, simple mipmapping is applied. From 2 onwards additional 
-anisotropic filtering is applied with an increasing sampling factor. Using filtering 
-doesn't significantly affect the run-time performance for values up to 4, however 
-it may increase slightly the initialization time due to mipmap generation. 
-A setting of 0 can produce artefacts caused by aliasing, while low filtering gets rid
-of such artefacts at the cost of a blurred texture. Increasing the `filtering` value
+interpolation. At 1, simple mipmapping is applied. From 2 onwards additional
+anisotropic filtering is applied with an increasing sampling factor. Using filtering
+doesn't significantly affect the run-time performance for values up to 4, however
+it may increase slightly the initialization time due to mipmap generation.
+A setting of 0 can produce artifacts caused by aliasing, while low filtering gets rid
+of such artifacts at the cost of a blurred texture. Increasing the `filtering` value
 beyond 1 restores sharpness to distant textures when viewed at extreme angles.
 
-An [ImageTexture](#imagetexture) can also be used together with a 
-[ComposedShader](composedshader.md). In the fragment shader the texture can be 
-queried through a `uniform sampler2D` using the OpenGL function 
+An [ImageTexture](#imagetexture) can also be used together with a
+[ComposedShader](composedshader.md). In the fragment shader the texture can be
+queried through a `uniform sampler2D` using the OpenGL function
 `vec4 texture2D(sampler2D s, vec2 coord [, float bias])`.
 
 ### Search rule of the texture path
@@ -91,11 +91,13 @@ if is_absolute(url[i]) then
   else
     return Error
 else
-  if defined_in_a_PROTO(current_node) and is_existing(PROTO_path + url[i])
+  if defined_in_a_project_PROTO(current_node) and exists(PROTO_path + url[i])
     return PROTO_path + url[i]
-  else if is_existing(world_path + url[i])
+  else if exists(world_path + url[i])
     return world_path + url[i]
-  else if is_existing(generic_textures_path + url[i])
+  else if defined_in_a_webots_PROTO(current_node) and exists(PROTO_path + url[i])
+    return PROTO_path + url[i]
+  else if exists(generic_textures_path + url[i])
     return generic_textures_path + url[i]
   endif
 endif

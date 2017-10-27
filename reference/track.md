@@ -61,7 +61,7 @@ first child. Also note that the [Appearance](appearance.md) node of the
 [Shape](shape.md) and its `texture` and `textureTransform` fields have to be
 explicitly defined.
 
-Note that [TextureTransform](texturetransform.md) node that is going to be automatically
+Note that the [TextureTransform](texturetransform.md) node that is going to be automatically
 altered by the [Track](#track) functionality cannot be [USE](def-and-use.md) nodes.
 
 ### Geometries Animation

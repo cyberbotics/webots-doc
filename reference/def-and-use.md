@@ -30,7 +30,7 @@ useless, if not hazardous, in a physics simulation. To safely duplicate one of t
 nodes, you can design a [PROTO](proto.md) model for this node and then add
 different PROTO instances to your world.
 
-The same principle also applies to [Material](material.md) and [Light](light.md)
+The same principle applies to [Material](material.md) and [Light](light.md)
 nodes located in the first child of [Charger](charger.md) and [LED](led.md) nodes
 whose emissive color changes automatically based on the [Charger](charger.md)
 energy and [LED](led.md) setup.

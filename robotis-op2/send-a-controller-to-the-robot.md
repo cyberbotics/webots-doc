@@ -47,4 +47,4 @@ To stop the controller press the following button:
 This will stop the controller and clean all files previously sent to the robot.
 You can also stop the controller by pressing the right button at the back of the
 robot. This will not entirely stop the controller but will at least avoid the
-robot from moving. It will also release the torque of all the servos.
+robot from moving. It will also release the torque of all the servomotors.

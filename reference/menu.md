@@ -76,7 +76,6 @@
     - [Recognition](recognition.md)
     - [Robot](robot.md)
     - [RotationalMotor](rotationalmotor.md)
-    - [Servo](servo.md)
     - [ShaderPart](shaderpart.md)
     - [Shape](shape.md)
     - [SliderJoint](sliderjoint.md)

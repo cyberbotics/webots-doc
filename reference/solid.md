@@ -28,7 +28,7 @@ Direct derived nodes: [Accelerometer](accelerometer.md), [Camera](camera.md),
 [InertialUnit](inertialunit.md), [LED](led.md), [Lidar](lidar.md),
 [LightSensor](lightsensor.md), [Pen](pen.md), [Radar](radar.md),
 [RangeFinder](rangefinder.md), [Receiver](receiver.md), [Robot](robot.md),
-[Servo](servo.md), [TouchSensor](touchsensor.md).
+[TouchSensor](touchsensor.md).
 
 ### Description
 

@@ -7,6 +7,6 @@ checked, the value of the sensor is shown and plotted in function of the time.
 
 %figure "Position sensor tab of the robot window"
 
-![window_servos.png](images/window_position_sensors.png)
+![window_position_sensors.png](images/window_position_sensors.png)
 
 %end

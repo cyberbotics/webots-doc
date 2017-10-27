@@ -2,25 +2,26 @@
 
 The simulation model is equiped with the following sensors and actuators:
 
-- 20 servos
+- 20 motors
+- 20 position sensors
 - 5 LEDs (including 2 RGB ones)
 - A 3-axes accelerometer
 - A 3-axes gyroscope
 - A camera
 - A speaker
 
-### Servos
+### Motors and position sensors
 
-Servo positions and identifiers can be found in the following
+Motor positions and identifiers can be found in the following
 [figure](#position-of-the-servos).
 
-%figure "Position of the servos"
+%figure "Position of the Motor"
 ![robotis_op2_servo_map.png](images/robotis_op2_servo_map.png)
 %end
 
 Mapping between identifiers and names can be found in following table.
 
-%figure "Identifiers to name mapping for ROBOTIS OP2 servos"
+%figure "Identifiers to name mapping for ROBOTIS OP2 motors"
 
 | ID | Name      | ID | Name      | ID | Name      | ID | Name      |
 | -- | --------- | -- | --------- | -- | --------- | -- | --------- |
@@ -32,9 +33,9 @@ Mapping between identifiers and names can be found in following table.
 
 %end
 
-Each of the 20 servos has the following configuration.
+Each of the 20 motors has the following configuration.
 
-%figure "Standard servo configuration"
+%figure "Standard motor configuration"
 |                 |       |         |
 | --------------- | ----- | ------- |
 | maxForce        | 2.5   | N*m     |
@@ -43,6 +44,21 @@ Each of the 20 servos has the following configuration.
 | dampingConstant | 0.002 |         |
 | staticFriction  | 0.025 | N*m     |
 %end
+
+For the position sensors, the name is the same than the one of the motors, with a 'S' postfix:
+
+%figure "Identifiers to name mapping for ROBOTIS OP2 position sensors"
+
+| ID | Name       | ID | Name       | ID | Name       | ID | Name       |
+| -- | ---------- | -- | ---------- | -- | ---------- | -- | ---------- |
+| 1  | ShoulderRS | 2  | ShoulderLS | 3  | ArmUpperRS | 4  | ArmUpperLS |
+| 5  | ArmLowerRS | 6  | ArmLowerLS | 7  | PelvYRS    | 8  | PelvYLS    |
+| 9  | PelvRS     | 10 | PelvLS     | 11 | LegUpperRS | 12 | LegUpperLS |
+| 13 | LegLowerRS | 14 | LegLowerLS | 15 | AnkleRS    | 16 | AnkleLS    |
+| 17 | FootRS     | 18 | FootLS     | 19 | NeckS      | 20 | HeadS      |
+
+%end
+
 
 ### LEDs
 

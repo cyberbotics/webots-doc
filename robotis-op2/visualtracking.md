@@ -11,7 +11,7 @@ This example illustrates the use of the camera (including the
 
 In the infinite loop the [Vision Manager](vision-manager.md) is used to find the red ball. Then, if
 the ball has been found the head led is set to green and otherwise to red. Then,
-again, if the ball has been found the position of the two servos of the head is
+again, if the ball has been found the position of the two motors of the head is
 corrected to watch in the direction of the ball. To move the ball in simulation,
 press Ctrl+Shift and move the ball with the left button of the mouse pressed on
 it.

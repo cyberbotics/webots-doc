@@ -321,7 +321,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 
 **Name**
 
-**Robot::getAccelerometer**, **Robot::getBrake**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDisplay**, **Robot::getDistanceSensor**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getJoystick**, **Robot::getKeyboard**, **Robot::getLED**, **Robot::getLidar**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRadar**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
+**Robot::getAccelerometer**, **Robot::getBrake**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDisplay**, **Robot::getDistanceSensor**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getJoystick**, **Robot::getKeyboard**, **Robot::getLED**, **Robot::getLidar**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRadar**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
@@ -350,7 +350,6 @@ PositionSensor *Robot::getPositionSensor(const std::string &name);
 Radar *Robot::getRadar(const std::string &name);
 RangeFinder *Robot::getRangeFinder(const std::string &name);
 Receiver *Robot::getReceiver(const std::string &name);
-Servo *Robot::getServo(const std::string &name);
 Speaker *Robot::getSpeaker(const std::string &name);
 TouchSensor *Robot::getTouchSensor(const std::string &name);
 ```

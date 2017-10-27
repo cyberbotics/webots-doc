@@ -35,9 +35,9 @@ child is a [Shape](shape.md) node, the `emissiveColor` field of its
 child is a [Group](group.md) node, a recursive search is applied on this node
 and every [Light](light.md), [Shape](shape.md) and [Group](group.md) nodes are
 altered according to the two previous rules.
-Note that [USE](def-and-use.md) nodes cannot be used for [Material](material.md)
-and [Light](light.md) that are going to be automatically altered by the
-[Charger](#charger) functionality.
+Note that [Material](material.md) and [Light](light.md) nodes that are going to be
+automatically altered by the [Charger](#charger) functionality cannot be
+[USE](def-and-use.md) nodes.
 
 ### Field Summary
 

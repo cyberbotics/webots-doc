@@ -22,9 +22,10 @@ order to find which color field must be modified, so every [Light](light.md),
 [Shape](shape.md) and [Group](group.md) node is altered according to the
 previous rules. In terms of [Light](light.md) nodes, [LED](#led) nodes can only accept
 [PointLight](pointlight.md) and [SpotLight](spotlight.md) nodes as children.
-Note that [USE](def-and-use.md) nodes cannot be used for [Material](material.md) and
-[Light](light.md) that are going to be automatically altered by the [LED](#led)
-functionality.
+
+Note that [Material](material.md) and [Light](light.md) nodes that are going to be
+automatically altered by the [LED](#led) functionality cannot be
+[USE](def-and-use.md) nodes.
 
 ### Field Summary
 

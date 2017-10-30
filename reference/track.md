@@ -62,7 +62,7 @@ first child. Also note that the [Appearance](appearance.md) node of the
 explicitly defined.
 
 Note that the [TextureTransform](texturetransform.md) node that is going to be automatically
-altered by the [Track](#track) functionality cannot be [USE](def-and-use.md) nodes.
+altered by the [Track](#track) functionality cannot be a [USE](def-and-use.md) node.
 
 ### Geometries Animation
 

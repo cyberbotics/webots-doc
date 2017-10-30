@@ -22,7 +22,7 @@ exceptions where USE nodes are not valid. A USE node is an exact copy of the
 corresponding DEF node, and thus no property of a USE node can change independently
 from the DEF node.
 
-For this reasons it is not allowed to insert USE nodes of [Solid](solid.md),
+For this reason it is not allowed to insert USE nodes of [Solid](solid.md),
 [Joint](joint.md), [JointParameters](jointparameters.md), and
 [BallJointParameters](balljointparameters.md) nodes and their derived nodes.
 Indeed, the ability for identical solids or joints to occupy the same position is

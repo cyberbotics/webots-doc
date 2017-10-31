@@ -14,8 +14,24 @@ The integration of the automobile simulation has been improved in Webots R2018a.
 ### New location for car PROTO files and libraries
 
 The car PROTO files, libraries and associated worlds have been moved into `WEBOTS_HOME/projects/robots/cars`.
-You will therefore have to update your Makefile, in C, C++ and JAVA, the new `WEBOTS_AUTOMOBILE_PATH` should be set to `$(WEBOTS_HOME)/projects/robots/cars/libraries` instead of `$(WEBOTS_HOME)/projects/automobile/libraries`.
-Similarly in python, the library path should be set to `os.environ.get("WEBOTS_HOME") + "/projects/robots/cars/libraries/python"` instead of `os.environ.get("WEBOTS_HOME") + "/projects/automobile/libraries/python"`.
+
+You will therefore have to update your Makefile, in C, C++ and JAVA, the new `WEBOTS_AUTOMOBILE_PATH` should be set to:
+```
+$(WEBOTS_HOME)/projects/robots/cars/libraries
+```
+instead of:
+```
+$(WEBOTS_HOME)/projects/automobile/libraries
+```
+
+Similarly in python, the library path should be set to:
+```
+os.environ.get("WEBOTS_HOME") + "/projects/robots/cars/libraries/python"
+```
+instead of:
+```
+os.environ.get("WEBOTS_HOME") + "/projects/automobile/libraries/python"
+```
 
 ### New large vehicle models
 

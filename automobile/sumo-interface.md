@@ -148,6 +148,6 @@ Such a plugin can be used for example to change traffic light state in SUMO.
 
 ## Using the SUMO executables distributed with Webots
 
-SUMO is distributed with Webots, it is located in `WEBOTS_HOME/projects/automobile/resources/sumo`, you can find all the executables in the `bin` folder.
-To be able to use these executables you need first to add `WEBOTS_HOME/projects/automobile/resources/sumo/bin` to your PATH.
+SUMO is distributed with Webots, it is located in `WEBOTS_HOME/projects/default/resources/sumo`, you can find all the executables in the `bin` folder.
+To be able to use these executables you need first to add `WEBOTS_HOME/projects/default/resources/sumo/bin` to your PATH.
 You will then for example be able to use `netedit` to edit your network files.

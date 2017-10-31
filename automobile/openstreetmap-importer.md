@@ -60,7 +60,7 @@ You should use the `importer.py` Python script to generate the `myMap.wbt`
 webots simulation world from the `myMap.osm` file:
 
 ```sh
-cd $WEBOTS_HOME/projects/automobile/resources/OSM_importer
+cd $WEBOTS_HOME/resources/osm_importer
 python importer.py --input=myMap.osm --output=myMap.wbt
 ```
 

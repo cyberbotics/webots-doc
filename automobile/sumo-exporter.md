@@ -27,7 +27,7 @@ correctly.
 On Linux, the path to the SUMO binaries directory should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
 
 ```sh
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/automobile/resources/sumo/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/default/resources/sumo/bin
 ```
 
 You should use the `exporter.py` Python script to generate the `sumo.nod.xml`,
@@ -36,10 +36,10 @@ These files can be used by SUMO `netconvert` to generate the `sumo.net.xml` file
 from the `myMap.wbt` webots simulation world.
 
 ```sh
-cd $WEBOTS_HOME/projects/automobile/resources/SUMO_exporter
+cd $WEBOTS_HOME/resources/sumo_exporter
 mkdir myMap_net
 python exporter.py --input=myMap.wbt --output=myMap_net
-$WEBOTS_HOME/projects/automobile/resources/sumo/bin/netconvert --node-files=myMap_net/sumo.nod.xml --edge-files=myMap_net/sumo.edg.xml --output-file=myMap_net/sumo.net.xml
+$WEBOTS_HOME/projects/default/resources/sumo/bin/netconvert --node-files=myMap_net/sumo.nod.xml --edge-files=myMap_net/sumo.edg.xml --output-file=myMap_net/sumo.net.xml
 ```
 
 The resulting `sumo.net.xml` file can be open in SUMO `netedit` for some edition.

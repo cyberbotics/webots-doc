@@ -19,7 +19,7 @@ Take better screenshots and record better videos of your robot by aligning the v
 
 ### Smooth
 
-Now, all automated Viewpoint movement is animated. When resetting the viewpoint, moving the viewpoint to an object, or moving to any of the six default views:
+Now, all automated Viewpoint movement is animated, when resetting the viewpoint, moving the viewpoint to an object, or moving to any of the six default views:
 
 ![youtube video](https://www.youtube.com/watch?v=S0k0cJb_Mus)
 

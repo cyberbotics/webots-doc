@@ -7,6 +7,24 @@
 Today we're happy to announce the release of Webots R2018a. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html)).
 
 
+## Enhanced Viewpoint Movement
+
+### Line It Up Just Right
+
+Take better screenshots and record better videos of your robot by aligning the viewpoint on one of the six world axes, using the new Change tool:
+
+%figure "Models of large vehicles"
+![viewpoint menu](images/viewpoint_menu.png)
+%end
+
+### Smooth
+
+Now, all automated Viewpoint movement is animated. When resetting the viewpoint, moving the viewpoint to an object, or moving to any of the six default views:
+
+![youtube video](https://www.youtube.com/watch?v=S0k0cJb_Mus)
+
+---
+
 ## Improved Automobile Simulation Integration
 
 The integration of the automobile simulation has been improved in Webots R2018a.

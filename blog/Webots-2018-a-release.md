@@ -11,7 +11,7 @@ Today we're happy to announce the release of Webots R2018a. This new release bri
 
 The integration of the automobile simulation has been improved in Webots R2018a.
 
-### Renaming of the 'automobile' folder has been renamed into 'vehicles'
+### The 'automobile' folder has been renamed into 'vehicles'
 
 You will therefore have to update your Makefile, in C, C++ and JAVA, the new `WEBOTS_AUTOMOBILE_PATH` should be set to:
 ```
@@ -31,6 +31,8 @@ instead of:
 os.environ.get("WEBOTS_HOME") + "/projects/automobile/libraries/python"
 ```
 
+Furthemore, vehicles are now prganized by brand.
+
 ### New model of trucks and two wheeled vehicles
 
 In adition to the `Bus` PROTO two new model of trucks have been added:
@@ -45,11 +47,11 @@ Furthermore, a model of motorbike and a model of scooter have been added:
 ![two wheels](images/two_wheels.png)
 %end
 
-All these new models are now used in the SUMo interface.
+All these new models are now used in the SUMO interface.
 
-### Moved OSM_importer and SUMO_exporter
+### Moved OSM\_importer and SUMO\_exporter
 
-The OpenStreetmap importer and the SUMO exporter have both been moved in the `WEBOTS_HOME/resources` folder and renamed into `osm_importer` and `sumo_exporter` to make sure they can be easily used in other contexts than automobile simulations.
+The [OpenStreetmap](https://www.openstreetmap.org) importer and the [SUMO](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki) exporter have both been moved in the `WEBOTS_HOME/resources` folder and renamed into `osm_importer` and `sumo_exporter` to make sure they can be easily used in other contexts than automobile simulations.
 
 ### SUMO interface as a default controller
 

@@ -91,7 +91,8 @@ Changing the value of this field can have a non-negligeable impact on the speed
 of the simulation. For simulations involving several robots physically
 independent from each other, setting a value greater than 1 can significantly
 improve the speed of simulation. In other cases, it may however reduce the
-simulation speed due to the overhead of the multi-threading.
+simulation speed due to the overhead of the multi-threading. Note that using more
+than 1 thread can result in non replicable simulations.
 
 - The `physicsDisableTime` determines the amount of simulation time (in seconds)
 before the idle solids are automatically disabled from the physics computation.

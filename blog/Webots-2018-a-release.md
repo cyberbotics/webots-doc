@@ -13,8 +13,8 @@ Automobile simulation tools have been largely integrated into the default Webots
 
 ### Renamed Automobile Folder
 
-The 'automobile' folder has been renamed into 'vehicles'.
-You will therefore have to update your Makefile: for C, C++ and JAVA, the new `WEBOTS_AUTOMOBILE_PATH` should be set to:
+The 'automobile' folder has been renamed to 'vehicles'.
+You will therefore have to update your Makefile: for C, C++ and Java, the new `WEBOTS_AUTOMOBILE_PATH` should be set to:
 ```
 $(WEBOTS_HOME)/projects/vehicles/libraries
 ```

@@ -31,7 +31,7 @@ around as though it has life on its own, with complete disregard for gravity.
 
 ### How to make replicable/deterministic simulations?
 
-In order for a Webots simulation results to be reproducible, the following conditions must
+In order for Webots simulation results to be reproducible, the following conditions must
 be fulfilled:
 
 1. Each simulation must be restarted either by pushing the `Revert` button, or by

@@ -52,7 +52,7 @@ variables may also be a source of undeterministc behavior.
 and on the same OS platform. Different OS platforms and different Webots
 versions may result small numerical differences.
 5. Webots physics must run in single thread mode.
-The number of threads used by the physics engine (ODE) can be changed globally in the [preferences](preferences.md) or using the `WorldInfo.basicTimeStep` field.
+The number of threads used by the physics engine (ODE) can be changed either globally in the [preferences](preferences.md) or using the `WorldInfo.basicTimeStep` field. It should be set to 1.
 
 If the five above conditions are met, Webots simulations become replicable. This
 means that after the same number of steps two simulations will have exactly the

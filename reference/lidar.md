@@ -267,7 +267,7 @@ are identical but their handling is of course different.
 #include <webots/lidar.h>
 
 const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag);
-const WbLidarPoint *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
+const WbLidarPoint *wb_lidar_get_layer_point_cloud(WbDeviceTag tag, int layer);
 int wb_lidar_get_number_of_points(WbDeviceTag tag);
 ```
 

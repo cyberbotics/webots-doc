@@ -31,7 +31,7 @@ around as though it has life on its own, with complete disregard for gravity.
 
 ### How to make replicable/deterministic simulations?
 
-In order for a Webots simulation to be replicable, the following conditions must
+In order for Webots simulation results to be reproducible, the following conditions must
 be fulfilled:
 
 1. Each simulation must be restarted either by pushing the `Revert` button, or by
@@ -51,8 +51,10 @@ variables may also be a source of undeterministc behavior.
 4. Each simulation must be executed with the same version of the Webots software
 and on the same OS platform. Different OS platforms and different Webots
 versions may result small numerical differences.
+5. Webots physics must run in single thread mode.
+The number of threads used by the physics engine (ODE) can be changed either globally in the [preferences](preferences.md) or using the `WorldInfo.basicTimeStep` field. It should be set to 1.
 
-If the four above conditions are met, Webots simulations become replicable. This
+If the five above conditions are met, Webots simulations become replicable. This
 means that after the same number of steps two simulations will have exactly the
 same internal state. Hence if both simulation are saved using the `Save as...`
 button, the resulting files will be identical. This is true independently of the

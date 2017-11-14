@@ -138,8 +138,6 @@ initial elevation throughout the simulation.
 | axleLength field      | Ignored            | Used                               |
 | maxAcceleration field | Ignored            | Used                               |
 | maxForce field        | Used               | Ignored                            |
-| Sensor rays shape     | 3d cone            | 3d cone                            |
-| RGB sensitive         | Yes                | Yes                                |
 
 %end
 

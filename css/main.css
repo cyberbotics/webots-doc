@@ -16,5 +16,5 @@ body {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 100;
-  src: local("Raleway Thin"), local("Raleway-Thin"), url("Raleway-Thin.ttf") format("truetype"), url("Raleway-Thin.woff") format("woff");
+  src: local("Raleway Thin"), local("Raleway-Thin"), url("Raleway-Thin.ttf") format("truetype");
 }

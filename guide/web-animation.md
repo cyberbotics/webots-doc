@@ -57,6 +57,7 @@ Node insertion or deletion are also not recorded in the animation file.
 
 Additional limitations are described in [this section](web-scene.md#limitations).
 
+
 ### Scene refresh rate
 
 The scene refresh rate is defined by the `WorldInfo.FPS` field.
@@ -65,6 +66,10 @@ However, the `WorldInfo.basicTimeStep` field have an impact on the refresh rate 
 %figure "Animation refresh rate."
 ![animation_refresh_rate_formula.png](images/animation_refresh_rate_formula.png)
 %end
+
+> **Note**:
+It is not recommended to change the `WorldInfo.FPS` or `WorldInfo.basicTimeStep` fields while recording an animation.
+
 
 ### Remarks on the used Technologies and their Limitations
 

@@ -62,9 +62,9 @@ Additional limitations are described in [this section](web-scene.md#limitations)
 The scene refresh rate is defined by the `WorldInfo.FPS` field.
 However, the `WorldInfo.basicTimeStep` field have an impact on the refresh rate too, because the update are only sent during the simulation step. The actual refresh rate can be computed with the following formula:
 
-$$
-max(\frac{\frac{1000}{basicTimeStep}}{ceil(\frac{1000}{basciTimeStep * FPS})},\frac{1000}{basicTimeStep})
-$$
+%figure "Animation refresh rate."
+![animation_refresh_rate_formula.png](images/animation_refresh_rate_formula.png)
+%end
 
 ### Remarks on the used Technologies and their Limitations
 

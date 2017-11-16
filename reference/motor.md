@@ -535,3 +535,22 @@ WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
 | "linear"     | WB\_LINEAR   |
 
 %end
+
+---
+
+**Name**
+
+**wb\_motor\_get\_brake**, **wb\_motor\_get\_position\_sensor** - *get associated devices*
+
+{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/brake.h>
+
+WbDeviceTag wb_motor_get_brake(WbDeviceTag tag);
+WbDeviceTag wb_motor_get_position_sensor(WbDeviceTag tag);
+```
+
+**Description**
+
+The `wb_motor_get_motor()` and `wb_motor_get_position_sensor` functions return the [Brake](brake.md) and [PositionSensor](position_sensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.

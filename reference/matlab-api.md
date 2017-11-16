@@ -19,6 +19,8 @@ The following tables describe the Matlab functions.
 | ------------------------------------------------------------------------------------------------- |
 | [wb\_brake\_set\_damping\_constant](brake.md#wb_brake_set_damping_constant)(tag, dampingConstant) |
 | type = [wb\_brake\_get\_type](brake.md#wb_brake_set_damping_constant)(tag)                        |
+| tag = [wb\_brake\_get\_motor](brake.md#wb_brake_get_motor)(tag)                                   |
+| tag = [wb\_brake\_get\_position\_sensor](brake.md#wb_brake_get_position_sensor)(tag)              |
 
 %end
 
@@ -350,6 +352,8 @@ The following tables describe the Matlab functions.
 | force = [wb\_motor\_get\_torque\_feedback](motor.md#wb_motor_enable_force_feedback)(tag)                    |
 | [wb\_motor\_set\_torque](motor.md#wb_motor_set_force)(tag, torque)                                          |
 | type = [wb\_motor\_get\_type](motor.md#wb_motor_get_type)(tag)                                              |
+| tag = [wb\_motor\_get\_brake](motor.md#wb_motor_get_brake)(tag)                                             |
+| tag = [wb\_motor\_get\_position\_sensor](motor.md#wb_motor_get_position_sensor)(tag)                        |
 
 %end
 
@@ -391,6 +395,8 @@ The following tables describe the Matlab functions.
 | period = [wb\_position\_sensor\_get\_sampling\_period](positionsensor.md#wb_position_sensor_get_value)(tag) |
 | value = [wb\_position\_sensor\_get\_value](positionsensor.md#wb_position_sensor_get_value)(tag)             |
 | type = [wb\_position\_sensor\_get\_type](positionsensor.md#wb_position_sensor_get_value)(tag)               |
+| tag = [wb\_position\_sensor\_get\_brake](positionsensor.md#wb_position_sensor_get_brake)(tag)               |
+| tag = [wb\_position\_sensor\_get\_motor](positionsensor.md#wb_position_sensor_get_motor)(tag)               |
 
 %end
 

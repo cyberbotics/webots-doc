@@ -49,7 +49,7 @@ The animation file contains only modifications over the following fields:
   - `LED.color`
   - `Material.diffuseColor`
   - `Material.emissiveColor`
-  - `WbTextureTransform.translation` (only for the Track node)
+  - `TextureTransform.translation` (only for the Track node)
   - `Transform.rotation`
   - `Transform.translation`
 The other VRML fields are not recorded in the animation file.
@@ -61,9 +61,9 @@ Additional limitations are described in [this section](web-scene.md#limitations)
 ### Scene refresh rate
 
 The scene refresh rate is defined by the `WorldInfo.FPS` field.
-However, the `WorldInfo.basicTimeStep` field have an impact on the refresh rate too, because the update are only sent during the simulation step. The actual refresh rate can be computed with the following formula:
+However, the `WorldInfo.basicTimeStep` field have an impact on the refresh rate too, because the updates are only sent during the simulation step. The actual refresh rate can be computed with the following formula:
 
-%figure "Animation refresh rate."
+%figure
 ![animation_refresh_rate_formula.png](images/animation_refresh_rate_formula.png)
 %end
 

@@ -45,7 +45,13 @@ Please refer to [this section](web-scene.md#how-to-embed-a-web-scene-in-your-web
 
 ### Limitations
 
-The animation file contains only modifications over the `Transform.translation`, `Transform.rotation` and `LED.color` fields.
+The animation file contains only modifications over the following fields:
+  - `LED.color`
+  - `Material.diffuseColor`
+  - `Material.emissiveColor`
+  - `WbTextureTransform.translation` (only for the Track node)
+  - `Transform.rotation`
+  - `Transform.translation`
 The other VRML fields are not recorded in the animation file.
 Node insertion or deletion are also not recorded in the animation file.
 

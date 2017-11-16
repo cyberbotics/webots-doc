@@ -68,7 +68,7 @@ distance of the light to the surface being illuminated. The default is no
 attenuation. An `attenuation` value of `0` `0` `0` is identical to `1` `0` `0`.
 Attenuation values must be >= 0.0.
 
-Contrary to the VRML specifications, the `attenuation` and the
+Contrary to the VRML97 specifications, the `attenuation` and the
 `ambientIntensity` fields cannot be set simultaneously.
 
 %figure "Spot light"

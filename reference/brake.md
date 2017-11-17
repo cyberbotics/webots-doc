@@ -60,4 +60,4 @@ WbDeviceTag wb_brake_get_position_sensor(WbDeviceTag tag);
 
 **Description**
 
-The `wb_brake_get_motor()` and `wb_brake_get_position_sensor` functions return the [Motor](motor.md) and [PositionSensor](position_sensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.
+The `wb_brake_get_motor()` and `wb_brake_get_position_sensor` functions return the [Motor](motor.md) and [PositionSensor](positionsensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.

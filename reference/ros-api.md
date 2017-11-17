@@ -279,14 +279,14 @@ for more information about the value of `robot_unique_name`).
 
 ### PositionSensor
 
-| name                                                                                        | service/topic | data type                                  | data type definition                                                                    |
-| ------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------ | --------------------------------------------------------------------------------------- |
-| [/`<`device\_name`>`/value](positionsensor.md#wb_position_sensor_get_value)                 | topic         | webots\_ros::Float64Stamped                | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>float64 data |
-| [/`<`device\_name`>`/enable](positionsensor.md#wb_position_sensor_get_value)                | service       | [webots\_ros::set\_int](#common_services)  |                                                                                         |
-| [/`<`device\_name`>`/get\_sampling\_period](positionsensor.md#wb_position_sensor_get_value) | service       | [webots\_ros::get\_int](#common_services)  |                                                                                         |
-| [/`<`device\_name`>`/get\_type](positionsensor.md#wb_position_sensor_get_value)             | service       | [webots\_ros::get\_int](#common_services)  |                                                                                         |
-| [/`<`device\_name`>`/get\_brake\_name](positionsensor.md#wb_position_sensor_get_brake)      | service       | [webots\_ros::get\_string](#common_services)                                              |
-| [/`<`device\_name`>`/get\_motor\_name](positionsensor.md#wb_position_sensor_get_brake)      | service       | [webots\_ros::get\_string](#common_services)                                              |
+| name                                                                                        | service/topic | data type                                    | data type definition                                                                    |
+| ------------------------------------------------------------------------------------------- | ------------- | -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [/`<`device\_name`>`/value](positionsensor.md#wb_position_sensor_get_value)                 | topic         | webots\_ros::Float64Stamped                  | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>float64 data |
+| [/`<`device\_name`>`/enable](positionsensor.md#wb_position_sensor_get_value)                | service       | [webots\_ros::set\_int](#common_services)    |                                                                                         |
+| [/`<`device\_name`>`/get\_sampling\_period](positionsensor.md#wb_position_sensor_get_value) | service       | [webots\_ros::get\_int](#common_services)    |                                                                                         |
+| [/`<`device\_name`>`/get\_type](positionsensor.md#wb_position_sensor_get_value)             | service       | [webots\_ros::get\_int](#common_services)    |                                                                                         |
+| [/`<`device\_name`>`/get\_brake\_name](positionsensor.md#wb_position_sensor_get_brake)      | service       | [webots\_ros::get\_string](#common_services) |                                                                                         |
+| [/`<`device\_name`>`/get\_motor\_name](positionsensor.md#wb_position_sensor_get_brake)      | service       | [webots\_ros::get\_string](#common_services) |                                                                                         |
 
 ### Radar
 

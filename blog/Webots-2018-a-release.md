@@ -21,7 +21,7 @@ Take better screenshots and record better videos of your robot by aligning the v
 
 Now, all automated Viewpoint movement is animated, when resetting the viewpoint, moving the viewpoint to an object, or moving to any of the six default views:
 
-<video width="320" height="240" autoplay loop align="center">
+<video width="640" height="480" autoplay loop align="center">
   <source src="https://www.cyberbotics.com/files/repository/videos/viewpoint_animation.webm" type="video/webm">
 </video>
 

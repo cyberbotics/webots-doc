@@ -40,7 +40,7 @@ in Python:
 > import sys
 >
 > try:
->   libraryPath = os.environ.get("WEBOTS_HOME") + "/projects/automobile/libraries/python"
+>   libraryPath = os.environ.get("WEBOTS_HOME") + "/projects/vehicles/libraries/python"
 >   libraryPath.replace('/', os.sep)
 >   sys.path.append(libraryPath)
 >   from automobile import Driver

@@ -131,13 +131,13 @@ Note that GNOME Software App distributed in the first release of Ubuntu 16.04 co
 Alternatively, the DEB package can also be installed using `apt` or `gdebi` with the `root` privileges:
 
 ```sh
-apt install ./webots_{{ webots.version.package }}_amd64.deb
+apt install ./webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
 or
 
 ```sh
-gdebi webots_{{ webots.version.package }}_amd64.deb
+gdebi webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
 #### Server edition

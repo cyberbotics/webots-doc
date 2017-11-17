@@ -27,11 +27,12 @@ Now, all automated Viewpoint movement is animated, when resetting the viewpoint,
 
 ## Improved Automobile Simulation Integration
 
-The integration of the automobile simulation has been improved in Webots R2018a.
+Automobile simulation tools have been largely integrated into the default Webots resources.
 
-### The 'automobile' folder has been renamed into 'vehicles'
+### Renamed Automobile Folder
 
-You will therefore have to update your Makefile, in C, C++ and JAVA, the new `WEBOTS_AUTOMOBILE_PATH` should be set to:
+The 'automobile' folder has been renamed to 'vehicles'.
+You will therefore have to update your Makefile: for C, C++ and Java, the new `WEBOTS_AUTOMOBILE_PATH` should be set to:
 ```
 $(WEBOTS_HOME)/projects/vehicles/libraries
 ```
@@ -49,17 +50,17 @@ instead of:
 os.environ.get("WEBOTS_HOME") + "/projects/automobile/libraries/python"
 ```
 
-Furthemore, vehicles are now prganized by brand.
+Furthermore, vehicles are now organized by brand.
 
-### New model of trucks and two wheeled vehicles
+### New Truck & Two-Wheeled Models
 
-In adition to the `Bus` PROTO two new model of trucks have been added:
+In addition to the `Bus` PROTO two new models of trucks have been added:
 
 %figure "Models of large vehicles"
 ![large vehicles](images/large_vehicles.png)
 %end
 
-Furthermore, a model of motorbike and a model of scooter have been added:
+Furthermore, a model of a motorbike and a model of a scooter have been added:
 
 %figure "Models of two wheels vehicles"
 ![two wheels](images/two_wheels.png)
@@ -69,8 +70,8 @@ All these new models are now used in the SUMO interface.
 
 ### Moved OSM\_importer and SUMO\_exporter
 
-The [OpenStreetmap](https://www.openstreetmap.org) importer and the [SUMO](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki) exporter have both been moved in the `WEBOTS_HOME/resources` folder and renamed into `osm_importer` and `sumo_exporter` to make sure they can be easily used in other contexts than automobile simulations.
+The [OpenStreetmap](https://www.openstreetmap.org) importer and the [SUMO](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki) exporter have both been moved to the `WEBOTS_HOME/resources` folder and renamed to `osm_importer` and `sumo_exporter` to make sure they can be easily used in other contexts than automobile simulations.
 
-### SUMO interface as a default controller
+### SUMO Interface as Default Controller
 
-The SUMO interface and PROTO have been moved in the `WEBOTS_HOME/projects/default` and can now be used in any project.
+The SUMO interface and PROTO have been moved to `WEBOTS_HOME/projects/default` and can now be used in any project.

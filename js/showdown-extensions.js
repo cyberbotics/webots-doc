@@ -39,9 +39,11 @@ showdown.extension("wbVariables", function() {
         year : 2018
       }
     };
+    // compute debian package version format by removing initial 'R'
+    vars.webots.version.debian_package = vars.webots.version.package.substring(1);
 
     return [
-        { // replace '{{ var }}' by the vars dictionnary above
+        { // replace '{{ var }}' by the vars dictionary above
             type: "html",
             //regex: /\^\s*\(([^]+?)\)/gi,
             regex: /\{\{([^]+?)\}\}/gi,

@@ -52,7 +52,7 @@ The animation file contains only modifications over the following fields:
   - `TextureTransform.translation` (only for the Track node)
   - `Transform.rotation`
   - `Transform.translation`
-The other VRML fields are not recorded in the animation file.
+The other VRML97 fields are not recorded in the animation file.
 Node insertion or deletion are also not recorded in the animation file.
 
 Additional limitations are described in [this section](web-scene.md#limitations).

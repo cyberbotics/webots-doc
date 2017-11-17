@@ -44,10 +44,10 @@ The GLSL documentation is available from following sources:
 All the standard GLSL variables are accessible from the GPU program (`gl_Vertex`, `gl_ModelViewMatrix`, etc.).
 Please refer to their documentation.
 
-The links between the VRML fields and these variables are various.
+The links between the VRML97 fields and these variables are various.
 Some of them are described in the following table:
 
-| VRML field(s)                                        | GLSL variable                                                   |
+| VRML97 field(s)                                      | GLSL variable                                                   |
 | ---------------------------------------------------- | --------------------------------------------------------------- |
 | `Material.ambientIntensity * Material.diffuseColor`  | `gl_FrontMaterial.ambient.rgb`                                  |
 | `Material.diffuseColor`                              | `gl_FrontMaterial.diffuse.rgb`                                  |

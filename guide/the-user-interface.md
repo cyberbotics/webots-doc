@@ -80,10 +80,10 @@ layout in order to print files from the text editor.
 The `Print...` menu item opens a window allowing you to print the current file
 of the text editor.
 
-The `Import VRML 2.0...` menu item adds VRML97 objects at the end of the scene
+The `Import VRML97...` menu item adds VRML97 objects at the end of the scene
 tree. These objects come from a VRML97 file you must specify. This feature is
 useful for importing complex shapes that were modeled in a 3D modelling program,
-then exported to VRML97 (or VRML 2.0). Most 3D modelling software, like 3D
+then exported to VRML97 (previously called VRML 2.0). Most 3D modelling software, like 3D
 Studio Max, Maya, AutoCAD, Pro Engineer, AC3D, or Art Of Illusion, include the
 VRML97 (or VRML 2.0) export feature. Be aware that Webots cannot import files in
 VRML 1.0 format. Once imported, these objects appear as `Group`, `Transform` or
@@ -91,7 +91,7 @@ VRML 1.0 format. Once imported, these objects appear as `Group`, `Transform` or
 objects into Webots nodes (like `Solid`, `DifferentialWheels`, etc.) or cut and
 paste them into the `children` list of existing Webots nodes.
 
-The `Export VRML 2.0...` item allows you to save the currently loaded world as a
+The `Export VRML97...` item allows you to save the currently loaded world as a
 ".wrl" file, conforming to the VRML97 standard. Such a file can, in turn, be
 opened with any VRML97 viewer and most 3D modeling software.
 

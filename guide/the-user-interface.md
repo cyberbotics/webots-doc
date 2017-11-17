@@ -127,10 +127,10 @@ Once the animation recording is started, this item is changed to `Stop HTML5 Ani
 and can be used to stop the animation recording.
 You can get more information about this topic in [this section](web-animation.md).
 
-The `Logout and quit Webots` terminates the current simulation, closes Webots and resets the user credentials
+`Logout and quit Webots` terminates the current simulation, closes Webots and resets the user credentials
 so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password.
 
-The `Quit Webots` terminates the current simulation and closes Webots.
+`Quit Webots` terminates the current simulation and closes Webots.
 
 ### Edit Menu
 
@@ -152,10 +152,12 @@ in the scene tree.
 
 The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
 
-The `Restore Viewpoint` item restores the viewpoint's position and orientation
+The ![](images/restore_viewpoint.png =26x26) `Restore Viewpoint` item restores the viewpoint's position and orientation
 to their initial settings when the file was loaded or reverted. This feature is
 handy when you get lost while navigating in the scene, and want to return to the
 original viewpoint.
+
+![](images/move_viewpoint_to_object_button.png =26x26) `Move viewpoint to object` moves the viewpoint to center and zoom on the selected node. If the selected item is a field, the upper parent node will be targeted. The object will be at the center of the 3D view and will be completely visible.
 
 The `Fullscreen` item enables and disables displaying the 3D window on the
 entire screen.

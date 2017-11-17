@@ -387,6 +387,13 @@
   height: 150px;
 }
 
+.blog .webm {
+  display: block;
+  max-width: 70% !important;
+  max-height: auto !important;
+  margin: 0 auto;
+}
+
 .blog .modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;

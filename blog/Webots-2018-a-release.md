@@ -14,7 +14,7 @@ Today we're happy to announce the release of Webots R2018a. This new release bri
 Take better screenshots and record better videos of your robot by aligning the viewpoint on one of the six world axes, using the new Change tool:
 
 %figure "New Change View Menu"
-![viewpoint menu](https://raw.githubusercontent.com/omichel/webots-doc/update-blog-post-for-animated-views/blog/images/viewpoint%20menu.png)
+![viewpoint menu](images/viewpoint_menu.png)
 %end
 
 ### Smooth

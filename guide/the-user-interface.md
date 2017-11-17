@@ -152,7 +152,7 @@ in the scene tree.
 
 The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
 
-The ![](images/restore_viewpoint.png =26x26) `Restore Viewpoint` item restores the viewpoint's position and orientation
+![](images/restore_viewpoint.png =26x26) The `Restore Viewpoint` item restores the viewpoint's position and orientation
 to their initial settings when the file was loaded or reverted. This feature is
 handy when you get lost while navigating in the scene, and want to return to the
 original viewpoint.

@@ -28,7 +28,7 @@ in a **Scene Tree**. It means that a node can have some sub-nodes.
 
 > **Note**:
 A world is stored in a file having the ".wbt" extension.
-The file format is derived from the **VRML** language, and is
+The file format is derived from the **VRML97** language, and is
 human readable. The world files must be stored directly in the project
 subdirectory called "worlds".
 
@@ -55,9 +55,9 @@ Each node has some customizable properties called **fields**.
 The first step is about modifying the background color.
 
 > **Hands on**:
-Create a `Background` node by clicking on the plus icon above the Scene Tree view, 
-and select "Background" from the "New Node" option. Modify the background color, 
-by setting up the `skyColor` field of the `Background` node. Choose a blue color 
+Create a `Background` node by clicking on the plus icon above the Scene Tree view,
+and select "Background" from the "New Node" option. Modify the background color,
+by setting up the `skyColor` field of the `Background` node. Choose a blue color
 (e.g. red = 0.4, green = 0.7 and blue = 1.0) using the color picker at the bottom
 of the Scene Tree view. The background of the 3D view should be modified accordingly.
 
@@ -202,13 +202,13 @@ In the Scene Tree view, expand the WorldInfo node (the first node). Set its
 
 Just after you add the E-puck node, a black window appears in the upper-left
 corner of the 3D view. It shows the content of Camera nodes, but it will stay
-black until not explicitly used during a simulation. The camera can be resized 
+black until not explicitly used during a simulation. The camera can be resized
 by dragging the marked corner or hidden by clicking the "x" in the top-right of
 the camera window.
 
 > **Hands on**:
 In this tutorial we will not use the Camera devices of the E-puck. So we can
-hide the window by clicking the "x" on the camera window. 
+hide the window by clicking the "x" on the camera window.
 Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
 
 ### Create a new Controller
@@ -312,7 +312,7 @@ We hope you enjoyed creating your first simulation. You have been able to set up
 your environment, to add a robot and to program it. The important thing is that
 you learnt the fundamental concepts summarized below:
 
-A Webots world is made up of nodes organized in a VRML-like tree structure. A world
+A Webots world is made up of nodes organized in a VRML97-like tree structure. A world
 is saved in a ".wbt" file stored in a Webots project. The project also contains
 the robot controllers which are the programs that define the robots' behavior.
 Robot controllers can be written in C (or other languages). C controllers have

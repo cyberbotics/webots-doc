@@ -2,7 +2,7 @@
 
 ### Nodes
 
-Webots nodes listed in this reference are described using standard VRML syntax.
+Webots nodes listed in this reference are described using standard VRML97 syntax.
 Principally, Webots uses a subset of the VRML97 nodes and fields, but it also
 defines additional nodes and fields specific to robotic definitions. For
 example, the Webots [WorldInfo](worldinfo.md) and [Sphere](sphere.md) nodes have

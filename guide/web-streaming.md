@@ -67,6 +67,11 @@ Similarly to [this section](web-animation.md#how-to-embed-a-web-animation-in-you
 please refer to the streaming viewer page to embed a Webots stream in your Website.
 
 
+### Scene refresh rate
+
+The scene refresh rate is defined by the `WorldInfo.FPS` field. The same fields than for the [web animation](web-animation.md#limitations) are updated.
+
+
 ### Limitations
 
 The streaming server has the same limitations as the [Web animation](web-animation.md#limitations).

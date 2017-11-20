@@ -131,7 +131,7 @@ the robot and to use its encoders.
 As is the case for any Differential Wheels robot set at its default position in
 Webots, the forward direction of the e-puck is given by the negative *z*-axis of
 the world coordinates. This is also the direction the eye of the camera is
-looking to; in keeping with the VRML standard, the direction vector of the
+looking to; in keeping with the VRML97 standard, the direction vector of the
 camera is pointing in the opposite direction, namely the direction of the
 positive *z*-axis. The axle's direction is given by the positive *x*-axis.
 Proximity sensors, light sensors and LEDs are numbered clockwise; their location

@@ -11,7 +11,7 @@ Today we're happy to announce the release of Webots R2018a. This new release bri
 
 ### Line It Up Just Right
 
-Take better screenshots and record better videos of your robot by aligning the viewpoint on one of the six world axes, using the new Change tool:
+Take better screenshots and record better videos of your robot by aligning the viewpoint on one of the six world axes, using the new Change View tool:
 
 %figure "New Change View Menu"
 ![viewpoint menu](images/viewpoint_menu.png)

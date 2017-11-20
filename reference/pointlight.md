@@ -28,5 +28,5 @@ accurately model physical reality. Indeed, if a point source radiates light
 uniformly in all directions and there is no absorption, then the irradiance
 drops off in proportion to the square of the distance from the surface.
 
-Contrary to the VRML specifications, the `attenuation` and the
+Contrary to the VRML97 specifications, the `attenuation` and the
 `ambientIntensity` fields cannot be set simultaneously.

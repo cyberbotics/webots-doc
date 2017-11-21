@@ -70,7 +70,7 @@ return `WB_ANGULAR` if the sensor is associated with a
 
 **wb\_position\_sensor\_get\_brake**, **wb\_position\_sensor_get\_motor** - *get associated devices*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+{[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/brake.h>

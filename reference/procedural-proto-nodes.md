@@ -121,6 +121,7 @@ This tag should not be used if the result of the PROTO depends on something else
 PROTO SimpleStairs [
   field SFVec3f    translation 0 0 0
   field SFRotation rotation    0 1 0 0
+  field SFString   name        "stairs"
   field SFInt32    nSteps      10
   field SFVec3f    stepSize    0.2 0.2 0.8
   field SFColor    color       0 1 0
@@ -198,6 +199,7 @@ PROTO SimpleStairs [
         ]
       }
     ]
+    name IS name
     boundingObject USE SIMPLE_STAIRS_GROUP
     physics IS physics
   }

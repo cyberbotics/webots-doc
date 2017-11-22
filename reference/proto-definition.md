@@ -29,6 +29,7 @@ Here is an example of PROTO definition:
 PROTO MyProto [
   field SFVec3f    translation   0 0 0
   field SFRotation rotation      0 1 0 0
+  field SFString   name          "my proto"
   field SFColor    color         0.5 0.5 0.5
   field SFNode     physics       NULL
   field MFNode     extensionSlot []
@@ -62,6 +63,7 @@ For example:
 PROTO Bicycle [
   field SFVec3f    position   0 0 0
   field SFRotation rotation   0 1 0 0
+  field SFString   name       "bicycle"
   field SFColor    frameColor 0.5 0.5 0.5
   field SFBool     hasBrakes  TRUE
 ]

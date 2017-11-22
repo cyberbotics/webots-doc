@@ -394,6 +394,12 @@
   animation-duration: 0.4s;
 }
 
+.blog .webm {
+  display: block;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
@@ -425,4 +431,23 @@
   width: 50%;
   margin: 30px auto;
   display: block;
+}
+
+.blog pre {
+  margin: 10px auto;
+  max-width: 75%;
+  padding: 15px 10px 15px 30px;
+  border-radius: 2px;
+  background-color: #444;
+  overflow-x: auto;
+  font-size: 16px;
+}
+.blog code {
+  margin: 3px;
+  padding: 3px;
+  background: transparent;
+  color: #eee;
+  background-color: #444;
+  font-size: 16px;
+  overflow-y: hidden;
 }

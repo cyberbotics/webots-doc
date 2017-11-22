@@ -14,6 +14,7 @@ PROTO featuring the corresponding `automobileWheel` slots.
 
 ```
 AutomobileWheel {
+  SFString   name               "automobile wheel"
   SFFloat    thickness          0.3
   SFFloat    tireRadius         0.4
   SFInt32    subdivision        24
@@ -36,6 +37,7 @@ AutomobileWheel {
 
 ### AutomobileWheel Field Summary
 
+- `name`: Identifies the wheel.
 - `thickness`: Defines the thickness of the wheel.
 - `tireRadius`: Defines the outer radius of the wheel.
 - `subdivision`: Defines the number of subdivisions for the cylinder

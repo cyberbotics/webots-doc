@@ -44,7 +44,7 @@ buildings.
 
 ```
 Building {
-  SFString    name                   ""
+  SFString    name                   "building"
   SFFloat     floorHeight            3
   SFInt32     floorNumber            3
   SFInt32     startingFloor          0
@@ -61,7 +61,6 @@ Building {
 
 #### Building Field Summary
 
-- `name`: Could contain the building name.
 - `floorHeight`: Defines the height of one floor.
 - `floorNumber`: Defines the number of floors (excluding roof).
 - `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.

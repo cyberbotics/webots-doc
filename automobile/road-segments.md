@@ -18,7 +18,7 @@ purposes.
 Road {
   SFVec3f    translation                0 0 0
   SFRotation rotation                   0 1 0 0
-  SFString   name                       ""
+  SFString   name                       "road"
   SFString   id                         ""
   SFString   startJunction              ""
   SFString   endJunction                ""
@@ -240,7 +240,7 @@ garage input ramp.
 %end
 
 ```
-Helicoidal {
+HelicoidalRoadSegment {
   SFVec3f    translation               0 0 0
   SFRotation rotation                  0 1 0 0
   SFFloat    width                     7
@@ -292,7 +292,7 @@ The `Crossroad` PROTO represents a crossroad.
 Crossroad {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
-  SFString   name             ""
+  SFString   name             "crossroad"
   SFString   id               ""
   MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
   MFString   connectedRoadIDs []
@@ -329,6 +329,7 @@ The `Roundabout` PROTO represents a roundabout intersection.
 Roundabout {
   SFVec3f    translation              0 0 0
   SFRotation rotation                 0 1 0 0
+  SFString   name                     "roundabout"
   SFInt32    subdivision              16
   SFInt32    numberOfLanes            2
   SFBool     bottom                   FALSE
@@ -391,6 +392,7 @@ The `RoadIntersection` PROTO represents a perpendicular intersection.
 RoadIntersection {
   SFVec3f    translation                    0 0 0
   SFRotation rotation                       0 1 0 0
+  SFString   name                           "road intersection"
   SFInt32    roadNumber                     4
   SFFloat    roadsWith                      7
   SFBool     startRoads                     TRUE
@@ -478,6 +480,7 @@ road.
 AddLaneRoadSegment {
   SFVec3f    translation               0 0 0
   SFRotation rotation                  0 1 0 0
+  SFString   name                      "road"
   SFFloat    width                     7
   SFFloat    length                    20
   SFInt32    numberOfLanes             2
@@ -526,6 +529,7 @@ several lanes to the road.
 AddLanesRoadSegment {
   SFVec3f    translation               0 0 0
   SFRotation rotation                  0 1 0 0
+  SFString   name                      "road"
   SFFloat    width                     7
   SFFloat    length                    20
   SFInt32    numberOfLanes             2

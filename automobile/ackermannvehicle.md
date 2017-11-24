@@ -35,10 +35,10 @@ AckermannVehicle {
   SFNode     physics                        NULL
   SFFloat    radarCrossSection              100
   MFColor    recognitionColors              [ ]
-  SFNode     wheelFrontRight                AutomobileWheel { }
-  SFNode     wheelFrontLeft                 AutomobileWheel { }
-  SFNode     wheelRearRight                 AutomobileWheel { }
-  SFNode     wheelRearLeft                  AutomobileWheel { }
+  SFNode     wheelFrontRight                VehicleWheel { }
+  SFNode     wheelFrontLeft                 VehicleWheel { }
+  SFNode     wheelRearRight                 VehicleWheel { }
+  SFNode     wheelRearLeft                  VehicleWheel { }
   MFNode     axisDevicesFrontRight          [ ]
   MFNode     axisDevicesFrontLeft           [ ]
   MFNode     axisDevicesRearRight           [ ]
@@ -64,7 +64,7 @@ sensors, shape of the vehicle, etc.).
 vehicle.
 - `radarCrossSection`: If greater than 0, this vehicle is a potential target for any Radar device. It measures the vehicle's ability to reflect radar signals in the direction of the radar receiver.
 - `recognitionColors`: If not empty, this vehicle may be recognized by any Camera device with recognition capability (i.e. with a Recognition node).
-- `wheelX`: Slot to insert an `AutomobileWheel` (or any `AutomobileWheel`
+- `wheelX`: Slot to insert a `VehicleWheel` (or any `VehicleWheel`
 descendant PROTO nodes).
 - `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`,
 `PositionSensor` and `Motor`).

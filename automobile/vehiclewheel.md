@@ -6,7 +6,7 @@ configurations. The base node of the `VehicleWheel` PROTO is a `Slot` of type
 `vehicle wheel` so that it can only be inserted as a wheel of a vehicle
 PROTO featuring the corresponding `VehicleWheel` slots.
 
-%figure "An VehicleWheel PROTO with the default field value"
+%figure "A VehicleWheel PROTO with the default field value"
 
 ![VehicleWheel.png](images/vehicle_wheel.png)
 

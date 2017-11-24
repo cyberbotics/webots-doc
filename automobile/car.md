@@ -60,7 +60,7 @@ engine that is used to charge the battery in case of `power-split hybrid`
 - `hybridPowerSplitRPM`: Defines the fixed rotational speed of the combustion
 engine in case of `power-split hybrid` `engineType`.
 
-The `extensionSlot` field is filled in by default with the `AutomobileLights`
+The `extensionSlot` field is filled in by default with the `VehicleLights`
 PROTO.
 
 #### Engine sound
@@ -71,16 +71,16 @@ If the `engineSound` field of the `Car` PROTO is not empty, the sound file defin
 ![engine_sound.png](images/engine_sound.png)
 %end
 
-### AutomobileLights
+### VehicleLights
 
-The `AutomobileLights` PROTO is used to add all the models of the regular lights
+The `VehicleLights` PROTO is used to add all the models of the regular lights
 present in a car (based on `LED` nodes). For each light you can specify its
 shape and the color emitted when the light is switched on. Of course if you
-don't need to have lights you can safely remove the `AutomobileLights` PROTO
+don't need to have lights you can safely remove the `VehicleLights` PROTO
 from `extensionSlot`.
 
 ```
-AutomobileLights {
+VehicleLights {
   MFNode    front           [ ]
   MFColor   frontColor      [ 0.8 0.8 0.8 ]
   MFNode    rightIndicator  [ ]

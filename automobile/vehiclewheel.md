@@ -4,7 +4,7 @@ The `VehicleWheel` allows the user to easily create vehicle wheels. It is
 designed to be generic and customizable to cover a wide range of wheel
 configurations. The base node of the `VehicleWheel` PROTO is a `Slot` of type
 `vehicle wheel` so that it can only be inserted as a wheel of a vehicle
-PROTO featuring the corresponding `VehicleWheel` slots.
+PROTO featuring the corresponding `vehicleWheel` slots.
 
 %figure "A VehicleWheel PROTO with the default field value"
 

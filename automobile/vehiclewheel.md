@@ -8,7 +8,7 @@ PROTO featuring the corresponding `VehicleWheel` slots.
 
 %figure "An VehicleWheel PROTO with the default field value"
 
-![VehicleWheel.png](images/VehicleWheel.png)
+![VehicleWheel.png](images/vehicle_wheel.png)
 
 %end
 

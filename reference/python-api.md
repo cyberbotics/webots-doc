@@ -337,7 +337,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [disable](joystick.md#wb_joystick_enable)(self)                                        |
 | &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                              |
 | &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                              |
-| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const              |
+| &nbsp;&nbsp; def [getModel](joystick.md#wb_joystick_get_model)(self)                                    |
+| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self)                    |
 | &nbsp;&nbsp; def [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(self, axis)                 |
 | &nbsp;&nbsp; def [getPressedButton](joystick.md#wb_joystick_get_pressed_button)(self)                   |
 | &nbsp;&nbsp; def [setConstantForce](joystick.md#wb_joystick_set_constant_force)(self, level)            |

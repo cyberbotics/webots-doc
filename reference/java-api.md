@@ -352,6 +352,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [disable](joystick.md#wb_joystick_enable)();                                              |
 | &nbsp;&nbsp; public int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                     |
 | &nbsp;&nbsp; public boolean [isConnected](joystick.md#wb_joystick_is_connected)();                                 |
+| &nbsp;&nbsp; public String [getModel](joystick.md#wb_joystick_get_model)();                                        |
 | &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                           |
 | &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);                      |
 | &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                          |

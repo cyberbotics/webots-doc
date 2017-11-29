@@ -214,6 +214,7 @@ The following tables describe the Matlab functions.
 | [wb\_joystick\_disable](joystick.md#wb_joystick_enable)()                                       |
 | period = [wb\_joystick\_get\_sampling\_period](joystick.md#wb_joystick_enable)()                |
 | connected = [wb_joystick_is_connected](joystick.md#wb_joystick_is_connected)()                  |
+| name = [wb_joystick_get_name](joystick.md#wb_joystick_get_name)()                               |
 | axes_number = [wb_joystick_get_number_of_axes](joystick.md#wb_joystick_get_number_of_axes)()    |
 | axis_value = [wb_joystick_get_axis_value](joystick.md#wb_joystick_get_number_of_axes)(axis)     |
 | button = [wb_joystick_get_pressed_button](joystick.md#wb_joystick_get_pressed_button)()         |

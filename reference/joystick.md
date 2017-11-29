@@ -57,6 +57,26 @@ Once the joystick is enabled, this function can be used to check if a free joyst
 
 **Name**
 
+**wb\_joystick\_get\_name** - *get the name of the currently connected joystick*
+
+{[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/joystick.h>
+
+const char *wb_joystick_get_name();
+```
+
+**Description**
+
+When a joystick is connected to the controller, this function returns the name of the joystick.
+If no joystick is connected to the controller, a NULL pointer is returned instead.
+The returned name of the joystick may looks like: `Logitech G29 Driving Force Racing Wheel USB`.
+
+---
+
+**Name**
+
 **wb\_joystick\_get\_number\_of\_axes**,
 **wb\_joystick\_get\_axis\_value** - *get number of axes and axis value*
 

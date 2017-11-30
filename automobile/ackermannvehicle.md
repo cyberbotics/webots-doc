@@ -30,7 +30,7 @@ AckermannVehicle {
   SFFloat    suspensionRearSpringConstant   100000
   SFFloat    suspensionRearDampingConstant  4000
   SFFloat    wheelsDampingConstant          5
-  SFFloat    steeringMaxTorque              10000
+  SFFloat    maxSteeringTorque              10000
   MFNode     extensionSlot                  [ ]
   SFNode     boundingObject                 NULL
   SFNode     physics                        NULL

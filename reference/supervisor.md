@@ -972,7 +972,7 @@ message is displayed).
 
 > **Note**:
 If a `wb_supervisor_field_set_*()` operation was executed just before a corresponding `wb_supervisor_field_get_*()` operation,
-in the same time step, the controller library will not send to the query to Webots, but answer directly with the value that
+in the same time step, the controller library will not send the query to Webots, but answer directly with the value that
 has just been set before.
 
 ---

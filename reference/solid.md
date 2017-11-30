@@ -196,6 +196,7 @@ Robot {
 
 In this example [Solid](#solid) nodes `A`, `B`, `D`, `E`, and `F` are sibling nodes
 because they have a comment upper [Solid](#solid) node, i.e. the [Robot](#robot) node.
-Solid node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](#robot) node.
+Solid node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](robot.md) node.
 
-Note that we refer to Solid nodes, but this rule applies to all the [Solid](#solid) derived nodes. Devices have the additional constraint that the `name` field value has to be unique inside the Robot node.
+Note that we refer to Solid nodes, but this rule applies to all the [Solid](#solid) derived nodes.
+Devices have the additional constraint that the `name` field value has to be unique inside the Robot node.

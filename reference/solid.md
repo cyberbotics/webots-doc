@@ -50,7 +50,9 @@ automatically changed to 1.
 
 - `name`: name of the solid. In derived device classes this corresponds to the
 device name argument used by `wb_robot_get_device()`. Note that the name cannot
-contain the colon character '`:`'.
+contain the colon character '`:`' and
+should preferably identify the solid uniquely, please refer to then
+[Unique Solid name](#unique-solid-name) section for further details.
 
 - `model`: generic name of the solid (e.g., "chair").
 
@@ -149,3 +151,51 @@ that the center of mass of the [Solid](#solid) does not depend on its
 `boundingObject`. The center of mass is specified by the `centerOfMass` field
 of the [Physics](physics.md) node (in coordinates relative to the center of the
 [Solid](#solid)).
+
+
+### Unique Solid name
+
+The capability of identifying uniquely each [Solid](#solid) node is a base requirements for other advanced features,
+for example let the viewpoint follow a solid object or store the preferences of the rendering devices overlays.
+For this reason since Webots R2018a, the user is encouraged to set unique names for sibling [Solid](#solid) nodes and
+a warning will be printed in the console if this rule is not respected.
+With sibling [Solid](#solid) nodes we indicate two [Solid](#solid) nodes for which the upper [Solid](#solid) node is the same.
+It doesn't matter if other nodes with a different type exist between the current and the upper [Solid](#solid) node.
+
+For example, here is a sample robot definition.
+```
+Robot {
+  children [
+    DEF A Solid { }
+    DEF B Solid {
+      children [
+        DEF C Solid {
+        }
+      ]
+    }
+    Group {
+      children [
+        Transform {
+          children [
+            DEF D Solid { }
+          ]
+        }
+      ]
+    }
+    HingeJoint {
+      endPoint DEF E Solid { }
+    }
+    Slot {
+      endPoint Slot {
+        endPoint DEF F Solid { }
+      }
+    }
+  ]
+}
+```
+
+In this example [Solid](#solid) nodes `A`, `B`, `D`, `E`, and `F` are sibling nodes
+because they have a comment upper [Solid](#solid) node, i.e. the [Robot](#robot) node.
+Solid node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](#robot) node.
+
+Note that we refer to Solid nodes, but this rule applies to all the [Solid](#solid) derived nodes. Devices have the additional constraint that the `name` field value has to be unique inside the Robot node.

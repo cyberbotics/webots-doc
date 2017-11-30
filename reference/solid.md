@@ -199,4 +199,4 @@ because they have a comment upper [Solid](#solid) node, i.e. the [Robot](#robot)
 Solid node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](robot.md) node.
 
 Note that we refer to Solid nodes, but this rule applies to all the [Solid](#solid) derived nodes.
-Devices have the additional constraint that the `name` field value has to be unique inside the Robot node.
+Devices have the additional constraint that the `name` field value has to be unique inside the [Robot](robot.md) node.

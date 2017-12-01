@@ -155,9 +155,9 @@ of the [Physics](physics.md) node (in coordinates relative to the center of the
 ### Unique Solid name
 
 The capability of identifying uniquely each [Solid](#solid) node is a base requirement for other advanced features,
-for example let the viewpoint follow a solid object or store the preferences for the rendering devices overlays.
+for example to let the viewpoint follow a solid object or to store the preferences for the rendering devices overlays.
 For this reason since Webots R2018a, the user is encouraged to set unique names for sibling [Solid](#solid) nodes and
-a warning will be printed in the console if this rule is not respected.
+a warning is printed in the console if this rule is not respected.
 With sibling [Solid](#solid) nodes we indicate two [Solid](#solid) nodes for which the upper [Solid](#solid) node is the same.
 It doesn't matter if other nodes with a different type exist between the current and the upper [Solid](#solid) node.
 
@@ -194,13 +194,13 @@ Robot {
 ```
 
 In this example [Solid](#solid) nodes `A`, `B`, `D`, `E`, and `F` are sibling nodes
-because they have a comment upper [Solid](#solid) node, i.e. the [Robot](robot.md) node.
-Solid node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](robot.md) node.
+because they have the same upper [Solid](#solid) node, i.e. the [Robot](robot.md) node.
+[Solid](#solid) node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](robot.md) node.
 
-To smooth the creation of worlds, when a new [Solid](#solid) node is inserted from the GUI or from a [Supervisor](robot.md) controller Webots checks the name of the just inserted node and automatically computes a unique name if needed.
-The computed name contains an additional suffix with the form `(<i>)`,
+To smooth the creation of worlds, when a new [Solid](#solid) node is inserted from the GUI or from a [Supervisor](robot.md) controller, Webots checks the name of the just inserted node and automatically computes a unique name if needed.
+The computed name contains an additional suffix `(<i>)`,
 where `<i>` is the smallest available positive index that produces a unique name between sibling [Solid](#solid) nodes.
-For example if sibling [Solid](#solid) nodes with the name 'solid', 'solid(1)', and 'solid(3)' already exists, the computed name for the new node will be 'solid(2)'.
+For example, if sibling [Solid](#solid) nodes with the name 'solid', 'solid(1)', and 'solid(3)' already exists, the computed name for the new node will be 'solid(2)'.
 
-Note that in this section we refer to Solid nodes, but this rule applies to all the [Solid](#solid) derived nodes.
-Devices have the additional constraint that the `name` field value has to be unique inside the [Robot](robot.md) node.
+Note that in this section we refer to [Solid](#solid) nodes, but this rule applies to all the [Solid](#solid) derived nodes.
+Devices have the additional constraint that their `name` field value has to be unique inside the [Robot](robot.md) node.

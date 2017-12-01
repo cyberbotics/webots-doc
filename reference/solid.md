@@ -158,7 +158,7 @@ The capability of identifying uniquely each [Solid](#solid) node is a base requi
 for example to let the viewpoint follow a solid object or to store the preferences for the rendering devices overlays.
 For this reason since Webots R2018a, the user is encouraged to set unique names for sibling [Solid](#solid) nodes and
 a warning is printed in the console if this rule is not respected.
-With sibling [Solid](#solid) nodes we indicate two [Solid](#solid) nodes for which the upper [Solid](#solid) node is the same.
+With sibling [Solid](#solid) nodes we mean [Solid](#solid) nodes for which the upper [Solid](#solid) node is the same.
 It doesn't matter if other nodes with a different type exist between the current and the upper [Solid](#solid) node.
 
 For example, here is a sample robot definition.

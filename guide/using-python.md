@@ -27,16 +27,15 @@ installed on your system, you can type in a terminal:
 $ python --version
 ```
 
-Webots will start Python using the standard `python` command line. As a consequence, it will execute the first `python` binary found in the current `PATH`. If you need a different version of Python than the default one, please install this different version if needed and configure your environment so that it becomes the default `python` version when called from the command line in a terminal.
+Webots will start Python using the standard `python` command line. As a consequence, it will execute the first `python` binary found in the current `PATH`. If you need a different version of Python, please install it if needed and configure your environment so that it becomes the default `python` version when called from the command line in a terminal.
 
 #### Windows
 
-You should install the latest version of Python 3.6 (64 bit) or Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python36` or `Python27` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt` world file.
+You should install the latest version of Python 3.6 (64 bit) or Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python36` or `Python27` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the correct Python version, then, everything is setup properly and you should be able to run the Python example provided with Webots in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt` world file.
 
 ### Libraries
 
-The `WEBOTS_HOME/projects/web/visual_tracking` sample simulation uses the Python [OpenCV](http://opencv.org/) and [NumPy](http://numpy.org/) packages.
-So these packages have to be installed on the system in order to correctly run this simulation.
+The `WEBOTS_HOME/projects/web/visual_tracking` sample simulation uses the Python [OpenCV](http://opencv.org/) and [NumPy](http://numpy.org/) packages. These packages have to be installed on the system in order to correctly run this simulation.
 Using Python *pip*, the *NumPy* package is automatically installed with *opencv-python* package.
 
 #### Linux
@@ -56,23 +55,21 @@ sudo apt-get install python-numpy
 #### macOS
 
 Open a Terminal and type:
-
-```
+```sh
 pip install opencv-python --user
 ```
 
 #### Windows
 
 Open the DOS console (CMD.EXE) and type:
-```
+```sh
 PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
 where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
 
 ### Use an alternative Python version
 
-As described above, the Python libraries for Webots are precompiled for Python 3.6, Python 2.7 and on Ubuntu for the default Python 3 version provided with the system. It is possible however to use another Python version by recompiling the Webots Python libraries.
-Such a task requires some knowledge in software installation, compilation from sources and Makefile.
+As explained above, the Python libraries for Webots are precompiled for Python 3.6, Python 2.7 and on Ubuntu for the default Python 3 version provided with the system. It is possible however to use another Python version by recompiling the Webots Python libraries. Such a task requires some knowledge in software installation, compilation from sources and Makefile.
 
 The general idea is to walk through the following steps:
 

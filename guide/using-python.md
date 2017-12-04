@@ -16,13 +16,12 @@ can be found in [this chapter](programming-fundamentals.md).
 
 #### Version
 
-The Python API of Webots is built with Python 2.7. Python 2.7 or earlier
-versions are therefore recommended although more recent versions can work
-without guarantee. Python 3 is not supported.
+The Python API of Webots supports both Python 2.7 and Python 3.6.
+On Ubuntu 16.04, it also supports Python 3.5 and on Ubuntu 14.04, it also support Python 3.4.
 
 #### macOS and Linux Instructions
 
-Most of the Linux distributions have Python 2.7 already installed. macOS also
+Most of the Linux distributions have Python already installed. macOS also
 has Python installed by default. To check the current version of Python
 installed on your system, you can type in a terminal:
 
@@ -30,16 +29,11 @@ installed on your system, you can type in a terminal:
 $ python --version
 ```
 
-Webots will start Python using the `python2.7` command line. To check if this
-command line is installed on your computer, you can type in a terminal:
-
-```sh
-$ python2.7 --version
-```
+Webots will start Python using the standard `python` command line. As a consequence, it will execute the first `python` binary found in the current PATH. Please refer to your operating system documentation to install and/or default to a different version of Python on the command line.
 
 #### Windows Instructions
 
-You should install the latest version of Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python27` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots (in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt`)
+You should install the latest version of Python 2.7 (64 bit) or Python 3.6 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python27` or `Python36` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the Python version, then, everything is setup properly and you should be able to run the Python examples provided with Webots in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt` world file.
 
 #### How to use another Python distribution
 
@@ -96,54 +90,19 @@ Open the DOS console (CMD.EXE) and type:
 ```
 PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
-where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python27`.
+where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
 
 
 ### Use an alternative Python version
 
-As described above, the Python libraries for Webots are precompiled with Python 2.7.
-It is possible to use another Python version such as Python 3 or macOS brew Python,
-by recompiling these libraries.
-This documentation is generic and may not cover all the cases.
-This task requires advanced knowledge in operating systems management.
+As described above, the Python libraries for Webots are precompiled with Python 2.7 and Python 3.6.
+It is possible however to use another Python version by recompiling these libraries.
+Such a task requires some knowledge in software installation, recompilation and Makefile.
 
-The general idea is to complete the following tasks:
+The general idea is to walk through the following steps:
 
-1. Install the new Python version.
+1. Install a new Python version and add the path to the new python binary in your PATH environment variable, so that you can execute `python --version` from a console with the correct version.
 2. Get [SWIG](http://www.swig.org/download.html).
-3. Recompile this directory: `$WEBOTS_HOME/resources/languages/python`
+3. Recompile the Python wrapper located in this directory: `$WEBOTS_HOME/resources/languages/python` using its Makefile. You may check the above Makefile in `$WEBOTS_HOME/resources/languages/Makefile` to understand how to call the Python Makefile with different options.
 
-
-#### Example: build the Webots libraries for Python 3.6 under Windows
-
-1. Uninstall any Python installation.
-2. Download and install [Python 3.6 for x86_64](https://www.python.org/downloads/):
-    - Extend your system `PATH` environment variable to add the
-    `C:\Users\$USER\AppData\Local\Programs\Python\Python36` directory.
-    - Add `extern double hypot(double, double);` at the 3rd line of
-    `C:\Users\$USER\AppData\Local\Programs\Python\Python36\include\Python.h`
-3. Download, install and run [MSYS2 for x86_64](http://www.msys2.org/).
-4. You should either start the MSYS2 console in administrator mode (right click on the MSYS2.exe icon and select Run as administrator) or
-enable the user write rights at least for these folders:
-    - `/C/Program\ Files/Webots/resources/languages/python`
-    - `/C/Program\ Files/Webots/lib/python`
-5. From the MSYS2 terminal, type:
-
-```shell
-# Update and install gcc and make
-pacman -Syuu
-pacman -S mingw-w64-x86_64-gcc make swig
-
-# Setup and compile Webots library for Python 3.6
-export PYTHON_VERSION=3.6
-export PYTHON_HOME=/C/Users/$USER/AppData/Local/Programs/Python/Python36
-cd /C/Program\ Files/Webots/resources/languages/python
-make
-```
-
-8. Foreach Python 3.6 controller, create a `runtime.ini` file containing:
-
-```ini
-[python]
-COMMAND = python
-```
+Note: on Windows, you will need to install [MSYS2 for x86_64](http://www.msys2.org/) and run it in administrator mode to be able to modify files in `$WEBOTS_HOME`. From the MSYS2 console, you will need to install at least the following packages with the `pacman` command: `mingw-w65-x86_64_gcc` `make` and `swig`. Also, it is necessary to add `extern double hypot(double, double);` at the 3rd line of `$PYTHON_HOME\include\Python.h`.

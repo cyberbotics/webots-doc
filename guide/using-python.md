@@ -17,7 +17,7 @@ On Ubuntu 16.04, it also supports Python 3.5 and on Ubuntu 14.04, it also suppor
 
 ### Installation
 
-#### macOS and Linux
+#### macOS and Linux installation
 
 Most of the Linux distributions have Python already installed. macOS also
 has Python installed by default. To check the current version of Python
@@ -29,7 +29,7 @@ $ python --version
 
 Webots will start Python using the standard `python` command line. As a consequence, it will execute the first `python` binary found in the current `PATH`. If you need a different version of Python, please install it if needed and configure your environment so that it becomes the default `python` version when called from the command line in a terminal.
 
-#### Windows
+#### Windows installation
 
 You should install the latest version of Python 3.6 (64 bit) or Python 2.7 (64 bit) from the official [Python website](https://www.python.org). Then, you have to modify your `PATH` environment variable to add the path to the python.exe binary which is located in the main `Python36` or `Python27` installation folder. To check this was done properly, you can open a DOS console (CMD.EXE) and type `python --version`. If it displays the correct Python version, then, everything is setup properly and you should be able to run the Python example provided with Webots in the `WEBOTS_HOME/projects/languages/python/worlds/example.wbt` world file.
 
@@ -38,7 +38,7 @@ You should install the latest version of Python 3.6 (64 bit) or Python 2.7 (64 b
 The `WEBOTS_HOME/projects/web/visual_tracking` sample simulation uses the Python [OpenCV](http://opencv.org/) and [NumPy](http://numpy.org/) packages. These packages have to be installed on the system in order to correctly run this simulation.
 Using Python *pip*, the *NumPy* package is automatically installed with *opencv-python* package.
 
-#### Linux
+#### Linux libraries
 
 On Ubuntu 16.04, use the `pip` command to install OpenCV:
 ```sh
@@ -52,14 +52,14 @@ On Ubuntu 14.04 OpenCV doesn't need to be installed because the Python OpenCV li
 sudo apt-get install python-numpy
 ```
 
-#### macOS
+#### macOS libraries
 
 Open a Terminal and type:
 ```sh
 pip install opencv-python --user
 ```
 
-#### Windows
+#### Windows libraries
 
 Open the DOS console (CMD.EXE) and type:
 ```sh

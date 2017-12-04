@@ -19,9 +19,10 @@ On Ubuntu 16.04, it also supports Python 3.5 and on Ubuntu 14.04, it also suppor
 
 #### macOS and Linux installation
 
-Most of the Linux distributions have Python already installed. macOS also
-has Python installed by default. To check the current version of Python
-installed on your system, you can type in a terminal:
+Most of the Linux distributions have Python 2.7 and 3.x already installed.
+macOS has Python 2.7 installed by default.
+It is possible to install Python 3.6 from the [Python web site](https://www.python.org) or from various Linux repositories.
+To check the current version of Python installed on your system, you can type in a terminal:
 
 ```sh
 $ python --version

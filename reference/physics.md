@@ -142,12 +142,12 @@ have no [Physics](#physics) nodes.
 <!-- -->
 
 > **Note**:
-The [Robot](#robot) node with a differential wheels configuration are a special case: they can
+The [Robot](#robot) nodes with a differential wheels configuration are a special case: they can
 move even if they don't have [Physics](#physics) nodes. That's because Webots
-uses a special *kinematics* algorithm for this kind of robots robots without [Physics](#physics).
+uses a special *kinematics* algorithm for this kind of robots without [Physics](#physics).
 However, if the [Physics](#physics) nodes are present then Webots uses the regular *physics* simulation algorithms.
 For a [Robot](#robot) node to be detected as a differential wheels, the following constraints must be satisfied:
-the robots must have 2 [HingeJoint](#hingejoint) nodes whose axes are aligned and the [Solid](#solid) nodes in
+the robot must have 2 [HingeJoint](#hingejoint) nodes whose axes are aligned and the [Solid](#solid) nodes in
 the `endPoint` field of the joints must each have a [Cylinder](#cylinder) node as bounding object with the same radius.
 
 #### Implicit solid merging and joints

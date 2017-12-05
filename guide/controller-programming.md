@@ -369,7 +369,6 @@ int main() {
   wb_motor_set_velocity(left_motor, 0.0);
   wb_motor_set_velocity(right_motor, 0.0);
 
-
   while (wb_robot_step(TIME_STEP) != -1) {
 
     // read sensors

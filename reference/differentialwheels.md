@@ -3,7 +3,7 @@
 -> **Note**:
 From Webots R2018a, the [DifferentialWheels](#differentialwheels) node is deprecated and should not be used in any new simulation models. It is kept for backwards compatibility only.
 Instead of using a [DifferentialWheels](#differentialwheels) node, a Robot node should be used instead with two [HingeJoint](#hingejoint), [RotationalMotor](#rotationalmotor) and [PositionSensor](#positionsensor) nodes.
-In that case, it is recommended to name the two [RotationalMotor](#rotationalmotor) `left wheel motor` and `right wheel motor` and the two [PositionSensor](#positionsensor) `left wheel sensor` and `right wheel sensor`.
+In that case, it is recommended to name the two [RotationalMotor](#rotationalmotor) nodes `left wheel motor` and `right wheel motor` and the two [PositionSensor](#positionsensor) nodes `left wheel sensor` and `right wheel sensor`.
 
 Derived from [Robot](robot.md).
 

@@ -264,7 +264,7 @@ controller is linked, save the world.
 
 > **Hands on**:
 Modify the program by inserting an include statement (`#include
-<webots/motor.h>`), get the motor devices (`WbDeviceTag motor = wb_robot_get_device("motor_name");`),
+<webots/motor.h>`), getting the motor devices (`WbDeviceTag motor = wb_robot_get_device("motor_name");`),
 and by applying a motor command (`wb_motor_set_position(motor, 10);`):
 
 > ```c
@@ -302,7 +302,7 @@ Save the modified source code (`File / Save Text File`), and compile it (`Build
 revert the simulation, choose `Yes`.
 
 If everything is ok, your robot should move forwards.
-The robot will move using it's maximum speed for a while and then step once the wheels have rotated of 10 radians.
+The robot will move using it's maximum speed for a while and then stop once the wheels have rotated of 10 radians.
 
 > **Note**:
 In the "controllers" directory of your project, a directory containing the
@@ -313,7 +313,7 @@ match with the binary name.
 
 ### Extend the controller to speed control
 
-The wheel of differential wheels robots are often controlled in velocity and not in position like we did in the previous example.
+The wheels of differential wheels robots are often controlled in velocity and not in position like we did in the previous example.
 In order to control the motors of the wheels in speed you need to set the target position to the infinity and the set the desired speed:
 
 > ```c
@@ -347,7 +347,7 @@ In order to control the motors of the wheels in speed you need to set the target
 > ```
 
 Try to change your previous controller by this one, and then recompile and revert the simulation.
-The robot will now move at a speed of 1 radian per second but will never stop.
+The robot will now move (the wheels will rotate at a speed of 1 radian per second) and never stop.
 
 ### Conclusion
 

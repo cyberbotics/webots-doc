@@ -66,7 +66,7 @@ table](#e-puck-features).
 
 The e-puck model in Webots is depicted in [this
 figure](#the-e-puck-model-in-webots). This model includes support for the
-differential wheel motors (encoders are also simulated as position sensors), the infra-red sensors
+differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors
 for proximity and light measurements, the accelerometer, the camera, the 8
 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet
 simulated in the current model. Besides standard e-puck devices, the model also

@@ -172,7 +172,7 @@ is applied.
 A [Connector](#connector)'s axis system is displayed by Webots when the
 corresponding robot is selected or when *Display Axes* is checked in Webots
 *Preferences*. The *z*-axis is drawn as a 5 cm blue line, the y-axis (a
-potential docking rotation) is drawn as a 5 cm green line, and each additional
+potential docking rotation) is drawn as a 5 cm red line, and each additional
 potential docking rotation is displayed as a 4 cm black line. The bounding
 objects and graphical objects of a [Connector](#connector) should normally be
 designed such that the docking surface corresponds exactly to *xy*-plane of the

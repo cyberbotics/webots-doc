@@ -106,7 +106,7 @@ section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 %end
 
 The e-puck dimensions and speed specifications are shown in [this table](#e-puck-specifications).
-The functions `wb_motor_set_velocity()`, `wb_position_sensor_get_value()` will allow you to set the speed of
+The `wb_motor_set_velocity()` and `wb_position_sensor_get_value()` functions allow you to set the speed of
 the robot and to use its encoders.
 
 %figure "Devices orientations"

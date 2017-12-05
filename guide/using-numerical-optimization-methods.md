@@ -62,15 +62,12 @@ evaluated and the robot is moved back to it initial position. Note that this
 controller needs to be executed in a `Supervisor` in order to access the
 `wb_supervisor_field_*()` functions that are necessary to read and reset the
 robot's position. So when using this approach, the robot must be based on a
-`Supervisor` node in the Scene Tree. Note that this approach is not suitable to
-optimize a `DifferentialWheels` robot, because due to the class hierarchy, a
-robot cannot be a `DifferentialWheels` and a `Supervisor` at the same time.
+`Supervisor` node in the Scene Tree.
 
 #### Using two distinct types of controllers
 
 If, on the contrary, your simulation requires the simultaneous execution of
-several robots, e.g. swarm robotics, or if your robot is a `DifferentialWheels`,
-then it is advised to use two distinct types of controller: one for the
+several robots, e.g. swarm robotics, it is advised to use two distinct types of controller: one for the
 optimization algorithm and one for the robot's behavior. The optimization
 algorithm should go in a `Supervisor` controller while the robots' behavior can
 go in a regular (non-Supervisor) controller.

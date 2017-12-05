@@ -48,11 +48,6 @@ linearly to the distance). While 4096 means that a big amount of light is
 measured (an obstacle is close) and 0 means that no light is measured (no
 obstacle).
 
-In the same way, the e-puck root node is a DifferentialWheel node and can be
-accessed by the "webots/differential\_wheel.h" include file. The speed is given in
-a number of ticks/seconds where 1000 ticks correspond to a complete rotation of
-the wheel. The values are clamped between -1000 and 1000.
-
 > **Theory**:
 The **controller API** is the programming interface that gives you access to the
 simulated sensors and actuators of the robot. For example, including the
@@ -85,14 +80,14 @@ The complete code of this controller is given in the next subsection.
 
 > **Hands on**:
 At the beginning of the controller file, add the include directives
-corresponding to the Robot, the DifferentialWheels and the DistanceSensor nodes
+corresponding to the Robot, the DistanceSensor and the Motor nodes
 in order to be able to use the corresponding API (documented in chapter 3 of the
 `Reference Manual`):
 
 > ```c
 > #include <webots/robot.h>
-> #include <webots/differential_wheels.h>
 > #include <webots/distance_sensor.h>
+> #include <webots/motor.h>
 > ```
 
 <!-- -->
@@ -175,6 +170,20 @@ sensors as follows:
 <!-- -->
 
 > **Hands on**:
+After initialization of the devices, initialize the motors:
+
+> ```c
+> WbDeviceTagleft_motor = wb_robot_get_device("left wheel motor");
+> WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
+> wb_motor_set_position(left_motor, INFINITY);
+> wb_motor_set_position(right_motor, INFINITY);
+> wb_motor_set_velocity(left_motor, 0.0);
+> wb_motor_set_velocity(right_motor, 0.0);
+> ```
+
+<!-- -->
+
+> **Hands on**:
 In the main loop, just after the comment *"// read sensors outputs"*, read the
 distance sensor values as follows:
 
@@ -226,7 +235,8 @@ follows:
 >   right_speed += 500;
 > }
 > // write actuators inputs
-> wb_differential_wheels_set_speed(left_speed, right_speed);
+> wb_motor_set_velocity(left_motor, left_speed);
+> wb_motor_set_velocity(right_motor, right_speed);
 > ```
 
 <!-- -->
@@ -242,8 +252,8 @@ Here is the complete code of the controller detailed in the previous subsection.
 
 ```c
 #include <webots/robot.h>
-#include <webots/differential_wheels.h>
 #include <webots/distance_sensor.h>
+#include <webots/motor.h>
 
 // time in [ms] of a simulation step
 #define TIME_STEP 64
@@ -267,6 +277,13 @@ int main(int argc, char **argv)
     ps[i] = wb_robot_get_device(ps_names[i]);
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
+
+  WbDeviceTagleft_motor = wb_robot_get_device("left wheel motor");
+  WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
+  wb_motor_set_position(left_motor, INFINITY);
+  wb_motor_set_position(right_motor, INFINITY);
+  wb_motor_set_velocity(left_motor, 0.0);
+  wb_motor_set_velocity(right_motor, 0.0);
 
   // feedback loop: step simulation until an exit event is received
   while (wb_robot_step(TIME_STEP) != -1) {
@@ -302,7 +319,8 @@ int main(int argc, char **argv)
     }
 
     // write actuators inputs
-    wb_differential_wheels_set_speed(left_speed, right_speed);
+    wb_motor_set_velocity(left_motor, left_speed);
+    wb_motor_set_velocity(right_motor, right_speed);
   }
 
   // cleanup the Webots API

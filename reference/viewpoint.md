@@ -49,7 +49,7 @@ If the string is empty, or if it does not correspond to any solid object, then t
 The `follow` field is automatically updated when setting the solid to be followed from the `View / Follow Object` menu item.
 Given that the same [Solid](solid.md).name field value could be used by different [Solid](solid.md) nodes,
 the `follow` field value also contains the name of the ancestor [Solid](solid.md) nodes.
-The list of [Solid](solid.md) names is joined using the character `:` and the '\\' and ':' characters contained in a [Solid](solid.md) name is escaped by prepending '\\'.
+The list of [Solid](solid.md) names is joined using the character ':' and the '\\' and ':' characters contained in a [Solid](solid.md) name is escaped by prepending '\\'.
 For example, please consider the following structure where the `TARGET` solid is followed:
 ```
 Robot {

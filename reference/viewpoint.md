@@ -43,14 +43,39 @@ The `near`, `far` and the `fieldOfView` fields define together the viewing frust
 3D shape outside this frustum won't be rendered. Hence, shapes too close
 (standing between the camera and the near plane) won't appear.
 
-The `follow` field can be used to specify the name of a robot (or other object)
-that the viewpoint will follow in translation (traveling movement) during the simulation. If the string is
-empty, or if it does not correspond to any object, then the viewpoint will
-remain fixed. The `follow` field is automatically updated when setting the solid
-to be followed from the `View / Follow Object` menu item. If multiple solid
-instances with the same name exist, the instance to be followed is identified by
-adding the instance number to the `follow` field value using the format
-"`<name>:<number>`".
+The `follow` field can be used to specify the name of a robot (or other solid object)
+that the viewpoint will follow in translation (traveling movement) during the simulation.
+If the string is empty, or if it does not correspond to any solid object, then the viewpoint will remain fixed.
+The `follow` field is automatically updated when setting the solid to be followed from the `View / Follow Object` menu item.
+Given that the same [Solid](solid.md).name field value could be used by different [Solid](solid.md) nodes,
+the `follow` field value also contains the name of the ancestor [Solid](solid.md).
+Given that name has to be unique between sibling [Solid](solid.md) nodes,
+as explained in the [Unique Solid name](solid.md#unique-solid-name) section,
+this string will uniquely identify the robot (or solid object) to follow.
+The list of [Solid](solid.md) names is joined using the character `:`.
+For example, please consider the following structure where the `TARGET` solid is followed:
+```
+Robot {
+  Solid {
+    children [
+      Solid {
+        name "solid"
+      }
+    ]
+    name "first solid"
+  }
+  Solid {
+    children {
+      DEF TARGET Solid {
+        name "solid" // <- followed object
+      }
+    }
+    name "second solid"
+  }
+  name "robot"
+}
+```
+Then, `follow` value will be "robot:second solid:solid".
 
 The `followOrientation` field can be used to make the viewpoint follow also the orientation of an object (in addition to its position). If `followOrientation` is true, the viewpoint is rigidly attached to the followed object, like an embedded camera onboard a robot. The `follow` field should be set with a valid object name otherwise the `followOrientation` field has no effect.
 

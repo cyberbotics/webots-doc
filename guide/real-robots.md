@@ -49,7 +49,7 @@ corresponding `LED` on.
 
 ### e-puck.wbt
 
-**Keywords**: DifferentialWheels, texture, Braitenberg,  Accelerometer, Odometry, E-puck
+**Keywords**: differential wheels, texture, Braitenberg,  Accelerometer, Odometry, E-puck
 
 %figure "e-puck"
 
@@ -66,7 +66,7 @@ this controller is in the
 
 ### e-puck_line.wbt
 
-**Keywords**: DifferentialWheels, line following, texture, behavior-based
+**Keywords**: differential wheels, line following, texture, behavior-based
     robotics, E-puck
 
 %figure "e-puck_line"
@@ -86,7 +86,7 @@ section](#e-puck_line_demo-wbt)). The source code for this controller is in the
 
 ### e-puck_line_demo.wbt
 
-**Keywords**: DifferentialWheels, line following, texture, behavior-based
+**Keywords**: differential wheels, line following, texture, behavior-based
     robotics, E-puck
 
 %figure "e-puck_line_demo"
@@ -103,7 +103,7 @@ assignment, the source code is not distributed.
 
 ### hemisson_cross_compilation.wbt
 
-**Keywords**: DifferentialWheels, Pen, cross-compilation, texture, Hemisson
+**Keywords**: differential wheels, Pen, cross-compilation, texture, Hemisson
 
 %figure "hemisson_cross_compilation"
 
@@ -219,7 +219,7 @@ All the IPR robots use the same controller, whose source code is in the
 
 ### khepera.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, texture, Khepera
 
 %figure "khepera"
 
@@ -234,7 +234,7 @@ while avoiding the walls. Like many other examples, this one uses the
 
 ### khepera2.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera II
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, texture, Khepera II
 
 %figure "khepera2"
 
@@ -249,7 +249,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 ### khepera3.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, texture, Khepera III
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, texture, Khepera III
 
 %figure "khepera3"
 
@@ -264,7 +264,7 @@ arena while avoiding the walls. Like many other examples, this one uses the
 
 ### khepera_kinematic.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Kinematic, Khepera
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, Kinematic, Khepera
 
 %figure "khepera_kinematic"
 
@@ -280,7 +280,7 @@ use the kinematic mode of Webots. Like many other examples, this one uses the
 
 ### khepera_gripper.wbt
 
-**Keywords**: DifferentialWheels, Gripper, Khepera
+**Keywords**: differential wheels, Gripper, Khepera
 
 %figure "khepera_gripper"
 
@@ -295,7 +295,7 @@ controller is in the "khepera\_gripper" directory.
 
 ### khepera_gripper_camera.wbt
 
-**Keywords**: DifferentialWheels, Gripper, Camera, Khepera
+**Keywords**: differential wheels, Gripper, Camera, Khepera
 
 %figure "khepera_gripper_camera"
 
@@ -311,7 +311,7 @@ source code for this controller is in the "khepera\_gripper" directory.
 
 ### khepera_k213.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, K213, linear Camera, Khepera
+**Keywords**: differential wheels, DistanceSensor, K213, linear Camera, Khepera
 
 %figure "khepera_k213"
 
@@ -330,7 +330,7 @@ directory.
 
 ### khepera_pipe.wbt
 
-**Keywords**: DifferentialWheels, UNIX pipe, client program, Khepera
+**Keywords**: differential wheels, UNIX pipe, client program, Khepera
 
 %figure "khepera_pipe"
 
@@ -351,7 +351,7 @@ As this example is based on standard UNIX pipes, it does not work under Windows.
 
 ### khepera_tcpip.wbt
 
-**Keywords**: DifferentialWheels, TCP/IP, client program, Khepera
+**Keywords**: differential wheels, TCP/IP, client program, Khepera
 
 %figure "khepera_tcpip"
 
@@ -370,7 +370,7 @@ directory.
 
 ### koala.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Koala
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, Koala
 
 %figure "koala"
 
@@ -385,7 +385,7 @@ while avoiding the walls. Like many other examples, this one uses the
 
 ### magellan.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Magellan
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, Magellan
 
 %figure "magellan"
 
@@ -401,7 +401,7 @@ the "others/worlds" directory. Like many other examples, this one uses the
 
 ### pioneer2.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Pioneer 2
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, Pioneer 2
 
 %figure "pioneer2"
 
@@ -416,7 +416,7 @@ uses the `braitenberg` controller. The source code for this controller is in the
 
 ### rover.wbt
 
-**Keywords**: DifferentialWheels, bumper, TouchSensor, line following, Rover, Java
+**Keywords**: differential wheels, bumper, TouchSensor, line following, Rover, Java
 
 %figure "rover"
 
@@ -435,7 +435,7 @@ directory.
 
 ### scout2.wbt
 
-**Keywords**: DifferentialWheels, DistanceSensor, Braitenberg, Scout 2
+**Keywords**: differential wheels, DistanceSensor, Braitenberg, Scout 2
 
 %figure "scout2"
 

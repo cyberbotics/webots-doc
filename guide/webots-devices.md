@@ -8,7 +8,7 @@ to the device they exemplify.
 
 ### battery.wbt
 
-**Keywords**: Battery, Charger, DifferentialWheels
+**Keywords**: Battery, Charger, differential wheels
 
 %figure "battery"
 
@@ -27,7 +27,7 @@ full.
 
 ### bumper.wbt
 
-**Keywords**: TouchSensor, bumper, DifferentialWheels
+**Keywords**: TouchSensor, bumper, differential wheels
 
 %figure "bumper"
 
@@ -41,7 +41,7 @@ detected, the robot moves back and turns a bit.
 
 ### camera.wbt
 
-**Keywords**: Camera, image processing, DifferentialWheels
+**Keywords**: Camera, image processing, differential wheels
 
 %figure "camera"
 
@@ -58,7 +58,7 @@ to detect.
 
 ### connector.wbt
 
-**Keywords**: Connector, RotationalMotor, IndexedLineSet, USE, DEF, DifferentialWheels
+**Keywords**: Connector, RotationalMotor, IndexedLineSet, USE, DEF, differential wheels
 
 %figure "connector"
 
@@ -79,7 +79,7 @@ robot's name.
 
 ### distance_sensor.wbt
 
-**Keywords**: DistanceSensor, Braitenberg, DifferentialWheels
+**Keywords**: DistanceSensor, Braitenberg, differential wheels
 
 %figure "distance_sensor"
 
@@ -92,7 +92,7 @@ around its body. The robot avoids obstacles using the Braitenberg technique.
 
 ### emitter_receiver.wbt
 
-**Keywords**: DifferentialWheels, Emitter, Receiver, infra-red transmission, USE, DEF
+**Keywords**: differential wheels, Emitter, Receiver, infra-red transmission, USE, DEF
 
 %figure "emitter_receiver"
 
@@ -113,7 +113,7 @@ Note that the communication between "infra-red" `Emitter`s and
 
 ### encoders.wbt
 
-**Keywords**: DifferentialWheels, encoders
+**Keywords**: differential wheels, encoders
 
 %figure "encoders"
 
@@ -122,14 +122,14 @@ Note that the communication between "infra-red" `Emitter`s and
 %end
 
 This example demonstrates the usage of the wheel encoders of
-`DifferentialWheels` robots. The controller randomly chooses target encoder
+`differential wheels` robots. The controller randomly chooses target encoder
 positions, then it rotates its wheels until the encoder values reach the chosen
 target position. Then the encoders are reset and the controller chooses new
 random values. The robot does not pay any attention to obstacles.
 
 ### force_sensor.wbt
 
-**Keywords**: Force, TouchSensor, DifferentialWheels
+**Keywords**: Force, TouchSensor, differential wheels
 
 %figure "force_sensor"
 
@@ -144,7 +144,7 @@ collision, which is printed in the Console window.
 
 ### gps.wbt
 
-**Keywords**: GPS, Supervisor, DifferentialWheels, keyboard
+**Keywords**: GPS, Supervisor, differential wheels, keyboard
 
 %figure "gps"
 
@@ -163,7 +163,7 @@ position read by the Supervisor.
 
 ### led.wbt
 
-**Keywords**: LED, DifferentialWheels
+**Keywords**: LED, differential wheels
 
 %figure "led"
 
@@ -203,7 +203,7 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 ### range_finder.wbt
 
-**Keywords**: Range-finder, Camera, DifferentialWheels
+**Keywords**: Range-finder, Camera, differential wheels
 
 %figure "range_finder"
 

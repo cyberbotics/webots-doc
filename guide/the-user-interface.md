@@ -88,7 +88,7 @@ Studio Max, Maya, AutoCAD, Pro Engineer, AC3D, or Art Of Illusion, include the
 VRML97 (or VRML 2.0) export feature. Be aware that Webots cannot import files in
 VRML 1.0 format. Once imported, these objects appear as `Group`, `Transform` or
 `Shape` nodes at the bottom of the scene tree. You can then either turn these
-objects into Webots nodes (like `Solid`, `DifferentialWheels`, etc.) or cut and
+objects into Webots nodes (like `Solid`, `Robot`, etc.) or cut and
 paste them into the `children` list of existing Webots nodes.
 
 The `Export VRML97...` item allows you to save the currently loaded world as a

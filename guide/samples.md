@@ -68,7 +68,7 @@ In this example, a humanoid robot performs endless gymnastic movements.
 
 ### moon.wbt
 
-**Keywords**: DifferentialWheels, Koala, keyboard, texture
+**Keywords**: differential wheels, Koala, keyboard, texture
 
 %figure "moon"
 
@@ -118,7 +118,7 @@ principle.
 
 ### soccer.wbt
 
-**Keywords**: Soccer, Supervisor, DifferentialWheels, label
+**Keywords**: Soccer, Supervisor, differential wheels, label
 
 %figure "soccer"
 
@@ -126,7 +126,7 @@ principle.
 
 %end
 
-In this example, two teams of simple `DifferentialWheels` robots play soccer. A
+In this example, two teams of simple robots play soccer. A
 `Supervisor` is used as the referee; it counts the goals and displays the
 current score and the remaining time in the 3D view. This example shows how a
 `Supervisor` can be used to read and change the position of objects.

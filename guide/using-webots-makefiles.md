@@ -69,7 +69,7 @@ These variables can be used to pass flags to the gcc compiler or linker.
 | CFLAGS    | Specifies a list of flags that will be passed to the gcc/g++ compiler                                      |
 | LFLAGS    | Specifies a list of flags that will be passed to the linker                                                |
 | INCLUDE   | Specifies directories to be added to the list of places searched by the gcc/g++ compiler for include files |
-| LIBRARIES | Specifies directories and libraries to be added to the list of places searched by the linker               |
+| LIBRARIES | Specifies library search directories and libraries passed to the linker                                    |
 
 %end
 

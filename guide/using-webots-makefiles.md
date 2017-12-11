@@ -128,7 +128,7 @@ USE_C_API = true
 
 #### Using Qt libraries in a C++ Controller
 
-Some Qt libraries are embedded with Webots and can be automatically linked from your controller program listing listing the module names in the controller Makefile the requires modules using the QT variable.
+Some Qt libraries are embedded with Webots and can be easily linked from your controller Makefile by listing the required modules in the QT variable.
 For example, if your controller uses QtCore, QtGui, QtWidgets, and QtNetwork, you can add the following line in your Makefile to link to the Webots embedded Qt libraries:
 
 ```makefile
@@ -140,10 +140,10 @@ You can find the available modules in the `WEBOTS_HOME/include/qt` directory.
 
 #### Verbose compilation
 
-It is possible to display detailed information about the executed sequence of commands by setting the VERBOSE variable in your controller Makefile:
+It is possible to display detailed information about the executed sequence of commands by setting the VERBOSE variable to a non-empty value in your controller Makefile:
 
 ```makefile
-VERBOSE = true
+VERBOSE = 1
 ```
 
 #### Adding Debug Information

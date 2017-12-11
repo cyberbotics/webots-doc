@@ -30,6 +30,7 @@ AckermannVehicle {
   SFFloat    suspensionRearSpringConstant   100000
   SFFloat    suspensionRearDampingConstant  4000
   SFFloat    wheelsDampingConstant          5
+  SFFloat    maxSteeringTorque              10000
   MFNode     extensionSlot                  [ ]
   SFNode     boundingObject                 NULL
   SFNode     physics                        NULL
@@ -57,6 +58,8 @@ steering angle of the front wheels.
 - `suspension...`: Defines the characteristics of the suspension.
 - `wheelsDampingConstant`: Defines the `dampingConstant` of each wheel joint used
 to simulate the frictions of the vehicle.
+- `maxSteeringTorque`: Defines the maximum torque applied on the y-axis
+of the front wheels.
 - `extensionSlot`: Extension slot allowing the user to add other nodes (e.g.,
 sensors, shape of the vehicle, etc.).
 - `boundingObject`: Physical geometry of the vehicle.

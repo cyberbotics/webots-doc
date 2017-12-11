@@ -3,7 +3,7 @@
 The following tables describe the available ros messages and services for each
 device.
 
-The <device\_name> should be replaced by the actual name of the device and each
+The `<device_name>` should be replaced by the actual name of the device and each
 services/topics names should be prepended with ``<robot_unique_name>`` (have a
 look at the [User
 Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)

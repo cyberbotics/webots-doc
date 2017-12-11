@@ -60,15 +60,16 @@ controller directory is "my\_controller" then the list must contain either
 
 ### Using the Compiler and Linker Flags (C/C++)
 
-These two variables can be used to pass flags to the gcc compiler or linker.
+These variables can be used to pass flags to the gcc compiler or linker.
 
 %figure "Webots Makefile Compiler Variables"
 
-| Variable  | Usage                                                                 |
-| --------- | --------------------------------------------------------------------- |
-| CFLAGS    | Specifies a list of flags that will be passed to the gcc/g++ compiler |
-| INCLUDE   | Specifies a list of flags that will be passed to the gcc/g++ compiler |
-| LIBRARIES | Specifies a list of flags that will be passed to the linker           |
+| Variable  | Usage                                                                                                      |
+| --------- | ---------------------------------------------------------------------------------------------------------- |
+| CFLAGS    | Specifies a list of flags that will be passed to the gcc/g++ compiler                                      |
+| LFLAGS    | Specifies a list of flags that will be passed to the linker                                                |
+| INCLUDE   | Specifies directories to be added to the list of places searched by the gcc/g++ compiler for include files |
+| LIBRARIES | Specifies library search directories and libraries passed to the linker                                    |
 
 %end
 
@@ -78,11 +79,10 @@ Webots C/C++ controllers are regular binary executable files that can easily be
 compiled and linked with external libraries. To add an external library it is
 only necessary to specify the path to the header files, and the path and name of
 the library in the controller's Makefile. For example the `-I`*dir* flag can be
-used to add a directory to search for include files. The LIBRARIES variable can
-be used to pass flags to the linker. For example the `-L`*dir* flag can be used
-to add a directory to search for static or dynamic libraries, and the `-l` flag
-can be used to specify the name of a library that needs to be linked with the
-controller.
+added in the INCLUDE variable to specify a directory to search for include files.
+The LIBRARIES variable can be used to pass flags to the linker.
+For example the `-L`*dir* flag can be used to add a directory to search for static or dynamic libraries, and the `-l` flag
+can be used to specify the name of a library that needs to be linked with the controller.
 
 For example, let's assume that you would like to add an external library called
 *XYZLib*. And let's assume that the library's header files and ".dll" file are
@@ -108,6 +108,12 @@ external libraries are required, it is always possible to use additional `-I,
 -L` and `-l` flags. For more information on these flags, please refer to the
 `gcc` man page.
 
+
+CFLAGS is equivalent to INCLUDE but it is suggested to use it for specifying other gcc/g++ compilation options than adding include directories.
+Similarly, LFLAGS is equivalent to LIBRARIES but LFLAGS variable is added before LIBRARIES variable in the linker command
+and it is suggested to use it for other linking options than adding libraries.
+You can find a list of compiler and linker options on the [gcc website](https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html#Option-Summary).
+
 #### Using Webots C API in a C++ Controller
 
 Normally, C++ controllers use Webots C++ API. The C++ API is a set of C++
@@ -119,6 +125,26 @@ add this line in your controller Makefile:
 
 ```makefile
 USE_C_API = true
+```
+
+#### Using Qt libraries in a C++ Controller
+
+Some Qt libraries are embedded with Webots and can be easily linked from your controller Makefile by listing the required modules in the QT variable.
+For example, if your controller uses QtCore, QtGui, QtWidgets, and QtNetwork, you can add the following line in your Makefile to link to the Webots embedded Qt libraries:
+
+```makefile
+QT = core gui widgets network
+```
+
+Note that not all the Qt modules are embedded with Webots.
+You can find the available modules in the `WEBOTS_HOME/include/qt` directory.
+
+#### Verbose compilation
+
+It is possible to display detailed information about the executed sequence of commands by setting the VERBOSE variable to a non-empty value in your controller Makefile:
+
+```makefile
+VERBOSE = 1
 ```
 
 #### Adding Debug Information

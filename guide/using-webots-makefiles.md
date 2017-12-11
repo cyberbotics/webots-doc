@@ -110,7 +110,8 @@ external libraries are required, it is always possible to use additional `-I,
 
 
 CFLAGS is equivalent to INCLUDE but it is suggested to use it for specifying other gcc/g++ compilation options than adding include directories.
-Similarly, LFLAGS is equivalent to LIBRARIES but it is suggested to use it for other linking options than adding libraries.
+Similarly, LFLAGS is equivalent to LIBRARIES but LFLAGS variable is added before LIBRARIES variable in the linker command
+and it is suggested to use it for other linking options than adding libraries.
 You can find a list of compiler and linker options on the [gcc website](https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html#Option-Summary).
 
 #### Using Webots C API in a C++ Controller

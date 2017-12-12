@@ -12,6 +12,8 @@ purposes.
 
 ![road.png](images/road.png)
 
+Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
+
 %end
 
 ```
@@ -136,6 +138,8 @@ create a straight road.
 
 %end
 
+Derived from [Road](#road).
+
 ```
 StraightRoadSegment {
   SFFloat    startingRoadBorderWidth   0.8
@@ -170,6 +174,8 @@ a regularly curved road.
 
 %end
 
+Derived from [Road](#road).
+
 ```
 CurvedRoadSegment {
   SFFloat    curvatureRadius           10
@@ -202,6 +208,8 @@ garage input ramp.
 
 %end
 
+Derived from [Road](#road).
+
 ```
 HelicoidalRoadSegment {
   SFFloat    height                    20
@@ -231,13 +239,22 @@ The `Crossroad` PROTO represents a crossroad.
 
 %end
 
+Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
+
 ```
 Crossroad {
+  SFVec3f    translation      0 0 0
+  SFRotation rotation         0 1 0 0
   SFString   name             "crossroad"
   SFString   id               ""
   MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
   MFString   connectedRoadIDs []
   SFBool     boundingObject   FALSE
+  SFBool     bottom           FALSE
+  MFString   texture          "textures/asphalt.jpg"
+  SFBool     locked           TRUE
+  SFBool     castShadows      FALSE
+  SFString   contactMaterial  "default"
 }
 ```
 
@@ -251,6 +268,10 @@ only the specific ones will be explained.
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
 - `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
 - `boundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
+- `bottom`: Defines whether the crossroad bottom should be displayed (useful in case of
+bridge).
+- `castShadows`: Defines whether the crossroad should cast shadows.
+- `contactMaterial`: Defines the crossroad contact material (used by the ContactProperties node).
 
 ### Roundabout
 
@@ -261,6 +282,8 @@ The `Roundabout` PROTO represents a roundabout intersection.
 ![roudabout.png](images/roudabout.png)
 
 %end
+
+Derived from [Crossroad](#crossroad).
 
 ```
 Roundabout {
@@ -312,6 +335,8 @@ The `RoadIntersection` PROTO represents a perpendicular intersection.
 
 %end
 
+Derived from [Crossroad](#crossroad).
+
 ```
 RoadIntersection {
   SFVec3f    translation                    0 0 0
@@ -349,6 +374,8 @@ The `LaneSeparation` PROTO represents a road spliting in two.
 
 %end
 
+Derived from [Crossroad](#crossroad) and [Road](#road).
+
 ```
 LaneSeparation {
   SFInt32    numberOfleavingLanes        2
@@ -381,6 +408,8 @@ road.
 
 %end
 
+Derived from [Crossroad](#crossroad) and [Road](#road).
+
 ```
 AddLaneRoadSegment {
   SFFloat    length                    20
@@ -410,6 +439,8 @@ several lanes to the road.
 ![AddLanes.png](images/AddLanes.png)
 
 %end
+
+Derived from [Crossroad](#crossroad) and [Road](#road).
 
 ```
 AddLanesRoadSegment {

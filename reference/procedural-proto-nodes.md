@@ -29,20 +29,20 @@ statement.
 dictionary keys matches the PROTO's fields names. Each entry of this dictionary
 is a sub-dictionary with two keys named "value" and "defaultValue", the first
 one contains the current state of the field and the second one contains its the
-default state. The conversion between the VRML types and the Lua types is
+default state. The conversion between the VRML97 types and the Lua types is
 detailed in [this table](#vrml-type-to-lua-type-conversion).
 - As shown in [this table](#vrml-type-to-lua-type-conversion), the conversion of a
-VRML node is a Lua dictionary. This dictionary contains the following keys:
-"node\_name" containing the VRML node name, "fields" which is a dictionary
-containing the Lua representation of the VRML node fields, and "super" which can
+VRML97 node is a Lua dictionary. This dictionary contains the following keys:
+"node\_name" containing the VRML97 node name, "fields" which is a dictionary
+containing the Lua representation of the VRML97 node fields, and "super" which can
 contains the super PROTO node (the node above in the hierarchy) if existing.
-This dictionary is equal to `nil` if the VRML node is not defined (`NULL`). For
+This dictionary is equal to `nil` if the VRML97 node is not defined (`NULL`). For
 example, in the SimpleStairs example below, the `fields.appearance.node_name`
 key contains the `'Appearance'` string.
 - The `context` dictionary provides contextual information about the PROTO. Table
 [this table](#content-of-the-context-dictionary) shows the available information
 and its corresponding keys.
-- The VRML comment ("#") prevails over the Lua statements.
+- The VRML97 comment ("#") prevails over the Lua statements.
 - The following Lua modules are available directly: base, table, io, os, string,
 math, debug, package.
 - The LUA\_PATH environment variable can be modified (before running Webots) to
@@ -52,20 +52,20 @@ include external Lua modules.
 use the Lua regular functions to write on these streams.
 - The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can be used, for example, to generate textures.
 
-%figure "VRML type to Lua type conversion"
+%figure "VRML97 type to Lua type conversion"
 
-| VRML type  | Lua type                                              |
-| ---------- | ----------------------------------------------------- |
-| SFBool     | boolean                                               |
-| SFInt32    | number                                                |
-| SFFloat    | number                                                |
-| SFString   | string                                                |
-| SFVec2f    | dictionary (keys = "x" and "y")                       |
-| SFVec3f    | dictionary (keys = "x", "y" and "z")                  |
-| SFRotation | dictionary (keys = "x", "y", "z" and "a")             |
-| SFColor    | dictionary (keys = "r", "g" and "b")                  |
-| SFNode     | dictionary (keys = "node\_name", "fields"[, "super"]) |
-| MF*        | array (indexes = multiple value positions)            |
+| VRML97 type  | Lua type                                              |
+| ------------ | ----------------------------------------------------- |
+| SFBool       | boolean                                               |
+| SFInt32      | number                                                |
+| SFFloat      | number                                                |
+| SFString     | string                                                |
+| SFVec2f      | dictionary (keys = "x" and "y")                       |
+| SFVec3f      | dictionary (keys = "x", "y" and "z")                  |
+| SFRotation   | dictionary (keys = "x", "y", "z" and "a")             |
+| SFColor      | dictionary (keys = "r", "g" and "b")                  |
+| SFNode       | dictionary (keys = "node\_name", "fields"[, "super"]) |
+| MF*          | array (indexes = multiple value positions)            |
 
 %end
 
@@ -121,6 +121,7 @@ This tag should not be used if the result of the PROTO depends on something else
 PROTO SimpleStairs [
   field SFVec3f    translation 0 0 0
   field SFRotation rotation    0 1 0 0
+  field SFString   name        "stairs"
   field SFInt32    nSteps      10
   field SFVec3f    stepSize    0.2 0.2 0.8
   field SFColor    color       0 1 0
@@ -198,6 +199,7 @@ PROTO SimpleStairs [
         ]
       }
     ]
+    name IS name
     boundingObject USE SIMPLE_STAIRS_GROUP
     physics IS physics
   }

@@ -23,9 +23,7 @@ Direct derived nodes: [DifferentialWheels](differentialwheels.md),
 ### Description
 
 The [Robot](#robot) node can be used as basis for building a robot, e.g., an
-articulated robot, a humanoid robot, a wheeled robot... If you want to build a
-two-wheels robot with differential-drive you should also consider the
-[DifferentialWheels](differentialwheels.md) node. If you would like to build a
+articulated robot, a humanoid robot, a wheeled robot... If you would like to build a
 robot with supervisor capabilities use the [Supervisor](supervisor.md) node
 instead (Webots PRO license required).
 

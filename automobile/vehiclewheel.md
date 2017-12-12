@@ -1,19 +1,20 @@
-## AutomobileWheel
+## VehicleWheel
 
-The `AutomobileWheel` allows the user to easily create automobile wheels. It is
+The `VehicleWheel` allows the user to easily create vehicle wheels. It is
 designed to be generic and customizable to cover a wide range of wheel
-configurations. The base node of the `AutomobileWheel` PROTO is a `Slot` of type
-`automobile wheel` so that it can only be inserted as a wheel of an automobile
-PROTO featuring the corresponding `automobileWheel` slots.
+configurations. The base node of the `VehicleWheel` PROTO is a `Slot` of type
+`vehicle wheel` so that it can only be inserted as a wheel of a vehicle
+PROTO featuring the corresponding `vehicleWheel` slots.
 
-%figure "An AutomobileWheel PROTO with the default field value"
+%figure "A VehicleWheel PROTO with the default field value"
 
-![automobileWheel.png](images/automobileWheel.png)
+![VehicleWheel.png](images/vehicle_wheel.png)
 
 %end
 
 ```
-AutomobileWheel {
+VehicleWheel {
+  SFString   name               "vehicle wheel"
   SFFloat    thickness          0.3
   SFFloat    tireRadius         0.4
   SFInt32    subdivision        24
@@ -34,8 +35,9 @@ AutomobileWheel {
 }
 ```
 
-### AutomobileWheel Field Summary
+### VehicleWheel Field Summary
 
+- `name`: Identifies the wheel.
 - `thickness`: Defines the thickness of the wheel.
 - `tireRadius`: Defines the outer radius of the wheel.
 - `subdivision`: Defines the number of subdivisions for the cylinder
@@ -60,9 +62,9 @@ characteristics.
 logo.
 
 Some sample instances of wheels are provided (see for example
-`BmwX5Wheel.proto`) which inherit from `AutomobileWheel`.
+`BmwX5Wheel.proto`) which inherit from `VehicleWheel`.
 
-%figure "Example of modeling of a BMW X5 wheel using the AutomobileWheel PROTO"
+%figure "Example of modeling of a BMW X5 wheel using the VehicleWheel PROTO"
 
 ![BmwX5Wheel.png](images/BmwX5Wheel.png)
 

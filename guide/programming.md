@@ -134,7 +134,7 @@ can happen mainly for three reasons:
 `wb_robot_get_device()`. Indeed, the `wb_robot_get_device()` function returns 0,
 if it cannot not find a device with the specified name in the robot. Note that
 the name specified in the argument of the `wb_robot_get_device()` function must
-correspond to the `name` field of the device, not to the VRML DEF name!
+correspond to the `name` field of the device, not to the VRML97 DEF name!
 2. Your controller code is mixing up two types of `WbDeviceTag`s, for example
 because it uses the `WbDeviceTag` of a `Camera` in a `wb_distance_sensor_*()`
 function. Here is an example of what is wrong:

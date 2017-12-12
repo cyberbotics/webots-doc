@@ -80,18 +80,18 @@ layout in order to print files from the text editor.
 The `Print...` menu item opens a window allowing you to print the current file
 of the text editor.
 
-The `Import VRML 2.0...` menu item adds VRML97 objects at the end of the scene
+The `Import VRML97...` menu item adds VRML97 objects at the end of the scene
 tree. These objects come from a VRML97 file you must specify. This feature is
 useful for importing complex shapes that were modeled in a 3D modelling program,
-then exported to VRML97 (or VRML 2.0). Most 3D modelling software, like 3D
+then exported to VRML97 (previously called VRML 2.0). Most 3D modelling software, like 3D
 Studio Max, Maya, AutoCAD, Pro Engineer, AC3D, or Art Of Illusion, include the
 VRML97 (or VRML 2.0) export feature. Be aware that Webots cannot import files in
 VRML 1.0 format. Once imported, these objects appear as `Group`, `Transform` or
 `Shape` nodes at the bottom of the scene tree. You can then either turn these
-objects into Webots nodes (like `Solid`, `DifferentialWheels`, etc.) or cut and
+objects into Webots nodes (like `Solid`, `Robot`, etc.) or cut and
 paste them into the `children` list of existing Webots nodes.
 
-The `Export VRML 2.0...` item allows you to save the currently loaded world as a
+The `Export VRML97...` item allows you to save the currently loaded world as a
 ".wrl" file, conforming to the VRML97 standard. Such a file can, in turn, be
 opened with any VRML97 viewer and most 3D modeling software.
 
@@ -127,10 +127,10 @@ Once the animation recording is started, this item is changed to `Stop HTML5 Ani
 and can be used to stop the animation recording.
 You can get more information about this topic in [this section](web-animation.md).
 
-The `Logout and quit Webots` terminates the current simulation, closes Webots and resets the user credentials
+`Logout and quit Webots` terminates the current simulation, closes Webots and resets the user credentials
 so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password.
 
-The `Quit Webots` terminates the current simulation and closes Webots.
+`Quit Webots` terminates the current simulation and closes Webots.
 
 ### Edit Menu
 
@@ -152,10 +152,14 @@ in the scene tree.
 
 The `Follow Object and Rotate` menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
 
-The `Restore Viewpoint` item restores the viewpoint's position and orientation
+![](images/restore_viewpoint.png =26x26) The `Restore Viewpoint` item restores the viewpoint's position and orientation
 to their initial settings when the file was loaded or reverted. This feature is
 handy when you get lost while navigating in the scene, and want to return to the
 original viewpoint.
+
+![](images/move_viewpoint_to_object_button.png =26x26) `Move viewpoint to object` moves the viewpoint to center and zoom on the selected node. If the selected item is a field, the upper parent node will be targeted. The object will be at the center of the 3D view and will be completely visible.
+
+![](images/front_view.png =26x26) The `Change View` submenu moves the viewpoint to align it on any of the six world-aligned axes around the selected object. If no object is selected, the viewpoint will be centered on the world origin. The available options are ![](images/front_view.png =26x26) `Front View`, ![](images/back_view.png =26x26) `Back View`, ![](images/left_view.png =26x26) `Left View`, ![](images/right_view.png =26x26) `Right View`, ![](images/top_view.png =26x26) `Top View` and ![](images/bottom_view.png =26x26) `Bottom View`.
 
 The `Fullscreen` item enables and disables displaying the 3D window on the
 entire screen.

@@ -28,7 +28,7 @@ in a **Scene Tree**. It means that a node can have some sub-nodes.
 
 > **Note**:
 A world is stored in a file having the ".wbt" extension.
-The file format is derived from the **VRML** language, and is
+The file format is derived from the **VRML97** language, and is
 human readable. The world files must be stored directly in the project
 subdirectory called "worlds".
 
@@ -55,9 +55,9 @@ Each node has some customizable properties called **fields**.
 The first step is about modifying the background color.
 
 > **Hands on**:
-Create a `Background` node by clicking on the plus icon above the Scene Tree view, 
-and select "Background" from the "New Node" option. Modify the background color, 
-by setting up the `skyColor` field of the `Background` node. Choose a blue color 
+Create a `Background` node by clicking on the plus icon above the Scene Tree view,
+and select "Background" from the "New Node" option. Modify the background color,
+by setting up the `skyColor` field of the `Background` node. Choose a blue color
 (e.g. red = 0.4, green = 0.7 and blue = 1.0) using the color picker at the bottom
 of the Scene Tree view. The background of the 3D view should be modified accordingly.
 
@@ -160,8 +160,8 @@ the necessary nodes to define a e-puck robot.
 > **Hands on**:
 Select the last node of the Scene Tree view (called `RectangleArena`). In order
 to add the E-puck node, click on the `Add` button at the top of the Scene Tree
-view. In the open dialog box, and choose `PROTO (Webots) / robots / e-puck /
-E-puck (DifferentialWheels)`. Then save the simulation.
+view. In the open dialog box, and choose `PROTO (Webots) / robots / gctronic / e-puck /
+E-puck (Robot)`. Then save the simulation.
 
 <!-- -->
 
@@ -202,13 +202,13 @@ In the Scene Tree view, expand the WorldInfo node (the first node). Set its
 
 Just after you add the E-puck node, a black window appears in the upper-left
 corner of the 3D view. It shows the content of Camera nodes, but it will stay
-black until not explicitly used during a simulation. The camera can be resized 
+black until not explicitly used during a simulation. The camera can be resized
 by dragging the marked corner or hidden by clicking the "x" in the top-right of
 the camera window.
 
 > **Hands on**:
 In this tutorial we will not use the Camera devices of the E-puck. So we can
-hide the window by clicking the "x" on the camera window. 
+hide the window by clicking the "x" on the camera window.
 Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
 
 ### Create a new Controller
@@ -264,14 +264,14 @@ controller is linked, save the world.
 
 > **Hands on**:
 Modify the program by inserting an include statement (`#include
-<webots/differential_wheels.h>`), and by applying a differential wheels command
-(`wb_differential_wheels_set_speed(100, 100)`) :
+<webots/motor.h>`), getting the motor devices (`WbDeviceTag motor = wb_robot_get_device("motor_name");`),
+and by applying a motor command (`wb_motor_set_position(motor, 10);`):
 
 > ```c
 > #include <webots/robot.h>
 >
 > // Added a new include file
-> #include <webots/differential_wheels.h>
+> #include <webots/motor.h>
 >
 > #define TIME_STEP 64
 >
@@ -279,8 +279,12 @@ Modify the program by inserting an include statement (`#include
 > {
 >   wb_robot_init();
 >
->   // set up the speeds
->   wb_differential_wheels_set_speed(100, 100);
+>   // get the motor devices
+>   WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
+>   WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
+>   // set the target position of the motors
+>   wb_motor_set_position(left_motor, 10.0);
+>   wb_motor_set_position(right_motor, 10.0);
 >
 >   while (wb_robot_step(TIME_STEP) != -1);
 >
@@ -298,6 +302,7 @@ Save the modified source code (`File / Save Text File`), and compile it (`Build
 revert the simulation, choose `Yes`.
 
 If everything is ok, your robot should move forwards.
+The robot will move using it's maximum speed for a while and then stop once the wheels have rotated of 10 radians.
 
 > **Note**:
 In the "controllers" directory of your project, a directory containing the
@@ -306,13 +311,51 @@ directory contains an "e-puck\_go\_forward" binary file generated after the
 compilation of the controller. Note that the controller directory name should
 match with the binary name.
 
+### Extend the controller to speed control
+
+The wheels of differential wheels robots are often controlled in velocity and not in position like we did in the previous example.
+In order to control the motors of the wheels in speed you need to set the target position to the infinity and the set the desired speed:
+
+> ```c
+> #include <webots/robot.h>
+>
+> // Added a new include file
+> #include <webots/motor.h>
+>
+> #define TIME_STEP 64
+>
+> int main(int argc, char **argv)
+> {
+>   wb_robot_init();
+>
+>   // get the motor devices
+>   WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
+>   WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
+>   // set the target position of the motors
+>   wb_motor_set_position(left_motor, INFINITY);
+>   wb_motor_set_position(right_motor, INFINITY);
+>   // set the desired velocity of the motors
+>   wb_motor_set_velocity(left_motor, 1.0);
+>   wb_motor_set_velocity(right_motor, 1.0);
+>
+>   while (wb_robot_step(TIME_STEP) != -1);
+>
+>   wb_robot_cleanup();
+>
+>   return 0;
+> }
+> ```
+
+Try to change your previous controller by this one, and then recompile and revert the simulation.
+The robot will now move (the wheels will rotate at a speed of 1 radian per second) and never stop.
+
 ### Conclusion
 
 We hope you enjoyed creating your first simulation. You have been able to set up
 your environment, to add a robot and to program it. The important thing is that
 you learnt the fundamental concepts summarized below:
 
-A Webots world is made up of nodes organized in a VRML-like tree structure. A world
+A Webots world is made up of nodes organized in a VRML97-like tree structure. A world
 is saved in a ".wbt" file stored in a Webots project. The project also contains
 the robot controllers which are the programs that define the robots' behavior.
 Robot controllers can be written in C (or other languages). C controllers have

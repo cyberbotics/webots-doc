@@ -70,7 +70,6 @@ prompt, for example you can interactively issue commands to query the sensors,
 etc.:
 
 ```matlab
->> wb_differential_wheels_set_speed(600, 600);
 >> wb_robot_step(1000);
 >> wb_gps_get_values(gps)
 

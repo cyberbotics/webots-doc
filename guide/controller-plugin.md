@@ -76,7 +76,7 @@ Robot windows are implemented in HTML and provide the following features:
 The equivalent controller functions are `wb_robot_wwi_receive_text()` and `wb_robot_wwi_send_text()`.
 3. They are web-ready and could be used to display robot windows on web pages.
 
-A simple example of a HTML robot window is provided in the `robots/thymio/thymio2.wbt` sample simulation and demonstrates:
+A simple example of an HTML robot window is provided in the `robots/thymio/thymio2.wbt` sample simulation and demonstrates:
 
 - How to display sensor information in the robot window.
 - How to send user interface events (like mouse clicks) from the robot window to the controller program.
@@ -84,11 +84,11 @@ A simple example of a HTML robot window is provided in the `robots/thymio/thymio
 
 The HTML robot windows can communicate with controller programs written using any of the supported programming languages, i.e. C, C++, Python, Java, MATLAB and ROS.
 
-The automobile, Darwin-OP robot windows and BotStudio are still using the native robot window (see below). However, they will soon be ported to the HTML robot window. After that, the native robot window system will be progressively phased out.
+The vehicle, Darwin-OP robot windows and BotStudio still use the native robot window (see below). However, they will soon be ported to the HTML robot window. After that, the native robot window system will be progressively phased out.
 
 ### Native robot window (deprecated)
 
-Native robot window still exist in Webots. However, they are deprecated and it is not recommended to use them when developing new robot windows. They are more complicated to implement than HTML robot windows and are known to cause Qt DLL conflicts with third-party software, such as MATLAB or NAOqi.
+Native robot windows still exist in Webots. However, they are deprecated and it is not recommended to use them when developing new robot windows. They are more complicated to implement than HTML robot windows and are known to cause Qt DLL conflicts with third-party software, such as MATLAB or NAOqi.
 
 The entry points of a native robot window controller plugin are:
 
@@ -206,10 +206,10 @@ The motion is stored in a motion file in a user-readable format. The controller
 API allows to play easily the motion files on your robot. You can get the
 complete motion API in the reference manual.
 
-The motion editor (cf. the [figure](#motion-editor-view)) is a GUI helping to
+The motion editor (cf. the [figure](#motion-editor-view)) is a GUI which helps to
 create motions which can be played by a robot.
 This editor is implemented as a Qt widget of the legacy generic window (deprecated).
-This implies that the motion editor is accessible only if the robot is linked with
+This means that the motion editor is accessible only if the robot is linked with
 either the generic window i.e. by setting the `Robot.window` field to `generic_window`.
 
 In the motion editor different fonts and colors are used to identify the status

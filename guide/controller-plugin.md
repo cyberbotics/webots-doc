@@ -207,11 +207,10 @@ API allows to play easily the motion files on your robot. You can get the
 complete motion API in the reference manual.
 
 The motion editor (cf. the [figure](#motion-editor-view)) is a GUI helping to
-create motions which can be played by a robot. It is implemented in the Qt utils
-library, and is embedded inside the generic robot window plugin. This implies
-that the motion editor is accessible only if the robot is linked (cf. the
-Robot::window field) with either the generic window, or on a window using
-the Qt utils library's corresponding widget.
+create motions which can be played by a robot.
+This editor is implemented as a Qt widget of the legacy generic window (deprecated).
+This implies that the motion editor is accessible only if the robot is linked with
+either the generic window i.e. by setting the `Robot.window` field to `generic_window`.
 
 In the motion editor different fonts and colors are used to identify the status
 of poses and motor states: modified items are displayed using bold font,

@@ -12,9 +12,9 @@ purposes.
 
 ![road.png](images/road.png)
 
-Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
-
 %end
+
+Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
 
 ```
 Road {
@@ -268,6 +268,7 @@ only the specific ones will be explained.
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
 - `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
 - `boundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
+- `texture`: Defines the texture of the crossroad.
 - `bottom`: Defines whether the crossroad bottom should be displayed (useful in case of
 bridge).
 - `castShadows`: Defines whether the crossroad should cast shadows.

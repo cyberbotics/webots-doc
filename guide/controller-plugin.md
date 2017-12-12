@@ -210,7 +210,7 @@ The motion editor (cf. the [figure](#motion-editor-view)) is a GUI which helps t
 create motions which can be played by a robot.
 This editor is implemented as a Qt widget of the legacy generic window (deprecated).
 This means that the motion editor is accessible only if the robot is linked with
-either the generic window i.e. by setting the `Robot.window` field to `generic_window`.
+the generic window i.e. by setting the `Robot.window` field to `generic_window`.
 
 In the motion editor different fonts and colors are used to identify the status
 of poses and motor states: modified items are displayed using bold font,

@@ -15,7 +15,7 @@ in Java:
 
 > ```java
 > import com.cyberbotics.webots.controller.Robot;
-> import com.cyberbotics.webots.automobile.Driver;
+> import com.cyberbotics.webots.controller.vehicle.Driver;
 >
 > public class VehicleDriver {
 >   public static void main(String[] args) {

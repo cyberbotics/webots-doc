@@ -41,10 +41,10 @@ pip install lxml pyproj shapely --user
 
 ### Windows
 
-As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency.
-You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
+As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency. You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
+If you are using Python 3.6 you will need [Microsoft Visual C++ Build Tools for Visual Studio 2017](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15) instead.
 
-Download the shapely wheel called [`Shapely‑<<version>>‑cp27‑cp27m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely)
+Download the shapely wheel called [`Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely)
 and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 
 ```

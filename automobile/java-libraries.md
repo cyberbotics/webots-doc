@@ -10,7 +10,7 @@ The `Driver` class provides the following methods:
 
 |                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Driver;                                                                    |
+| import com.cyberbotics.webots.controller.vehicle.Driver;                                                            |
 | public class [Driver](driver-library.md) {                                                                          |
 | &nbsp;&nbsp; public final static int INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT;                             |
 | &nbsp;&nbsp; public final static int SPEED, TORQUE;                                                                 |
@@ -53,7 +53,7 @@ methods:
 
 |                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------- |
-| import com.cyberbotics.webots.controller.Car;                                                                                       |
+| import com.cyberbotics.webots.controller.vehicle.Car;                                                                               |
 | public class [Car](car-library.md) extends [Driver](#java_driver) {                                                                 |
 | &nbsp;&nbsp; public final static int TRACTION, PROPULSION, FOUR\_BY\_FOUR;                                                          |
 | &nbsp;&nbsp; public final static int COMBUTSION\_ENGINE, ELECTRIC\_ENGINE, PARALLEL\_HYBRID\_ENGINE, POWER\_SPLIT\_HYBRID\_ENGINE;  |

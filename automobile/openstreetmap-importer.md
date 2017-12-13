@@ -50,7 +50,7 @@ and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 ```
 %PYTHON_PATH%\Scripts\pip.exe install lxml
 %PYTHON_PATH%\Scripts\pip.exe install pyproj
-%PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely-<<version>>-cp27-cp27m-win_amd64.whl
+%PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl
 ```
 
 

@@ -73,8 +73,8 @@ def download(url, target_file_path):
                 response = urlopen(url, timeout=5)
             content = response.read()
 
-            f = open(target_file_path, 'w')
-            f.write(str(content))
+            f = open(target_file_path, 'wb')
+            f.write(content)
             os.chmod(target_file_path, 0o644)
             f.close()
 

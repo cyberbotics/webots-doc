@@ -4,7 +4,13 @@
 
 ---
 
-Today we're happy to announce the release of Webots R2018a. This new release brings a ton of new features and improvements, coupled with the same dedicated patches addressing bugs and regressions. Listed below are some of the key features of this release (for a full list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html)).
+Today we're happy to announce the release of the all-new Webots 2018a, packed with some great new features. We're going to talk about some of them here, but for a comprehensive list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html)).
+
+## New Beginnings
+
+This release brings a change to the way Webots is released. We have been looking for a means of improving our release schedule to provide reliability for our users, and a more strict release schedule that ensures updates are shipped predictably and reliably. Thus, we are migrating from a Major-Minor-Maintenance versioning system to follow the MathWorks model. We will now be aiming to release new editions of Webots annualy, with major intermediate releases every six months, starting with Webots 2018a, then Webots 2018b, then Webots 2019a etc. Maintenance revisions will still be shipped to fix critical bugs between these release milestones.
+
+---
 
 ## Enhanced Viewpoint Movement
 
@@ -23,6 +29,18 @@ Now, all automated Viewpoint movement is animated, when resetting the viewpoint,
 <video class="webm" autoplay loop>
   <source src="https://www.cyberbotics.com/files/repository/videos/viewpoint_animation.webm" type="video/webm">
 </video>
+
+---
+
+## HTML5 Robot Windows
+
+<video class="webm" autoplay loop>
+  <source src="https://www.cyberbotics.com/files/repository/videos/html_robot_window.webm" type="video/webm">
+</video>
+
+---
+
+## Python 3
 
 ---
 

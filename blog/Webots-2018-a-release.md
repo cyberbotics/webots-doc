@@ -24,19 +24,27 @@ Take better screenshots and record better videos of your robot by aligning the v
 
 Now, all automated Viewpoint movement is animated, when resetting the viewpoint, moving the viewpoint to an object, or moving to any of the six default views:
 
+%figure "Animated Views In Action"
 <video class="webm" autoplay loop>
   <source src="https://www.cyberbotics.com/files/repository/videos/viewpoint_animation.webm" type="video/webm">
 </video>
+%end
 
 ---
 
 ## HTML5 Robot Windows
 
-Over the last couple of years we have been slowly phasing out our native QT-based robot window system, in order to use Web technologies for more powerful layout & design tools. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create!
+Over the last couple of years we have been slowly phasing out our native QT-based robot window system, in order to use Web technologies for more powerful layout & design tools. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create:
 
+%figure "HTML5 Robot Windows In Webots"
+![html5 windows](images/html_robot_window.png)
+%end
+
+%figure "Viewing Different Robot Devices In New Window"
 <video class="webm" autoplay loop>
   <source src="https://www.cyberbotics.com/files/repository/videos/html_robot_window.webm" type="video/webm">
 </video>
+%end
 
 ---
 

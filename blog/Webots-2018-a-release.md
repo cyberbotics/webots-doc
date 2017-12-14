@@ -45,6 +45,7 @@ Over the last couple of years we have been slowly phasing out our native QT-base
 %end
 
 We will continue to port features in from the legacy windows (such as the Motion Editor) over time, along with extending the original design for better information about your robot.
+
 ---
 
 ## Python 3

@@ -75,3 +75,13 @@ Furthermore, a model of a motorbike and a model of a scooter have been added:
 %end
 
 All these new models are now used in the SUMO interface.
+
+## Web Interface
+
+As you may know, this year we opened [Robotbenchmark](https://robotbenchmark.net) to allow anyone to program simulated robots online. As a part of building and updating this site we have made numerous improvements to our web interface, including widening the support for object animation (materials, texture animation in the Track node, etc), performance optimization in animation playback and loading times, and an all new X3D export parameter dialog: 
+
+%figure "X3D Export Dialog"
+![x3d export](images/screenshot-html-export-dialog.png)
+%end
+
+This dialog lets you tune specific parameters related to the X3DOM scene rendered in the browser.

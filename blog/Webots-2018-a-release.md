@@ -34,11 +34,11 @@ Now, all automated Viewpoint movement is animated, when resetting the viewpoint,
 
 ## HTML5 Robot Windows
 
-Over the last couple of years we have been slowly phasing out our native QT-based robot window system, in order to use Web technologies for more powerful layout & design tools. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create:
-
 %figure "HTML5 Robot Windows In Webots"
 ![html5 windows](images/html_robot_window.png)
 %end
+
+Over the last couple of years we have been slowly phasing out our native QT-based robot window system, in order to use Web technologies for more powerful layout & design tools. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create:
 
 %figure "Viewing Different Robot Devices In New Window"
 <video class="webm" autoplay loop>

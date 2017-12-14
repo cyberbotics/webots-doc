@@ -76,6 +76,8 @@ Furthermore, a model of a motorbike and a model of a scooter have been added:
 
 All these new models are now used in the SUMO interface.
 
+---
+
 ## Web Interface
 
 As you may know, this year we opened [Robotbenchmark](https://robotbenchmark.net) to allow anyone to program simulated robots online. As a part of building and updating this site we have made numerous improvements to our web interface, including widening the support for object animation (materials, texture animation in the Track node, etc), performance optimization in animation playback and loading times, and an all new X3D export parameter dialog: 
@@ -85,3 +87,17 @@ As you may know, this year we opened [Robotbenchmark](https://robotbenchmark.net
 %end
 
 This dialog lets you tune specific parameters related to the X3DOM scene rendered in the browser.
+
+---
+
+## Extra Goodies
+
+Movies can now be recorded in slow motion.
+
+To ensure reproducable simulations, floating-point precision when saving files has been maximised.
+
+Large MF fields are no longer saved vertically, to reduce file sizes and improve loading times.
+
+The `street_furniture` folder has been filled with more models!
+
+

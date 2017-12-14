@@ -1,6 +1,6 @@
 # Version R2018a Released
 
-<p id="publish-data">By XXX - XXth XXX 2018</p>
+<p id="publish-data">By Tom Norton - XXth XXX 2018</p>
 
 ---
 

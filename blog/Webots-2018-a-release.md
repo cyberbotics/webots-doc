@@ -50,6 +50,10 @@ We will continue to port features in from the legacy windows (such as the Motion
 
 ## Python 3
 
+%figure "Python 3 Support For Webots"
+![python 3](images/python.png)
+%end
+
 One of our most requested features in recent months has been to support Python 3. With a divided community and people migrating their codebases from 2.7 to 3.4 and up, we have decided to provide support for both, so users can take advantage of the many Python 3 libraries, and users who aren't quite ready to make the leap can still continue working on their controllers without a hitch.
 
 ---

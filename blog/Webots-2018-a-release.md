@@ -32,7 +32,7 @@ Now, all automated Viewpoint movement is animated, when resetting the viewpoint,
 
 ## HTML5 Robot Windows
 
-Over the last couple of years we have been slowly phasing out our native QT-based robot window system, in order to use Web technologies for more powerful layout & design tools, starting with the E-puck and Thymio II robots. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny generic window for use with any robot you create.
+Over the last couple of years we have been slowly phasing out our native QT-based robot window system, in order to use Web technologies for more powerful layout & design tools. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create!
 
 <video class="webm" autoplay loop>
   <source src="https://www.cyberbotics.com/files/repository/videos/html_robot_window.webm" type="video/webm">

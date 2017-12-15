@@ -161,7 +161,7 @@ sensors as follows:
 >   "ps4", "ps5", "ps6", "ps7"
 > };
 >
-> for (i=0; i<8; i++) {
+> for (i = 0; i < 8; i++) {
 >   ps[i] = wb_robot_get_device(ps_names[i]);
 >   wb_distance_sensor_enable(ps[i], TIME_STEP);
 > }
@@ -190,7 +190,7 @@ distance sensor values as follows:
 > ```c
 > // read sensors outputs
 > double ps_values[8];
-> for (i=0; i<8 ; i++)
+> for (i = 0; i < 8 ; i++)
 >   ps_values[i] = wb_distance_sensor_get_value(ps[i]);
 > ```
 
@@ -204,13 +204,13 @@ threshold) as follows:
 > ```c
 > // detect obstacles
 > bool right_obstacle =
->   ps_values[0] > 100.0 ||
->   ps_values[1] > 100.0 ||
->   ps_values[2] > 100.0;
+>   ps_values[0] > 70.0 ||
+>   ps_values[1] > 70.0 ||
+>   ps_values[2] > 70.0;
 > bool left_obstacle =
->   ps_values[5] > 100.0 ||
->   ps_values[6] > 100.0 ||
->   ps_values[7] > 100.0;
+>   ps_values[5] > 70.0 ||
+>   ps_values[6] > 70.0 ||
+>   ps_values[7] > 70.0;
 > ```
 
 <!-- -->
@@ -273,7 +273,7 @@ int main(int argc, char **argv)
   };
 
   // initialize devices
-  for (i=0; i<8 ; i++) {
+  for (i = 0; i < 8 ; i++) {
     ps[i] = wb_robot_get_device(ps_names[i]);
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
@@ -289,18 +289,18 @@ int main(int argc, char **argv)
   while (wb_robot_step(TIME_STEP) != -1) {
     // read sensors outputs
     double ps_values[8];
-    for (i=0; i<8 ; i++)
+    for (i = 0; i < 8 ; i++)
       ps_values[i] = wb_distance_sensor_get_value(ps[i]);
 
     // detect obstacles
     bool right_obstacle =
-      ps_values[0] > 100.0 ||
-      ps_values[1] > 100.0 ||
-      ps_values[2] > 100.0;
+      ps_values[0] > 70.0 ||
+      ps_values[1] > 70.0 ||
+      ps_values[2] > 70.0;
     bool left_obstacle =
-      ps_values[5] > 100.0 ||
-      ps_values[6] > 100.0 ||
-      ps_values[7] > 100.0;
+      ps_values[5] > 70.0 ||
+      ps_values[6] > 70.0 ||
+      ps_values[7] > 70.0;
 
     // init speeds
     double left_speed  = 500;

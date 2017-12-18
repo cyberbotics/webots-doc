@@ -15,7 +15,7 @@ the importer script.
 
 Follow [these instructions](https://www.cyberbotics.com/doc/guide/using-python) to install Python.
 
-Then install the Python `lxml`, `pyproj` and `shapely` modules, as described below.
+Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as described below.
 
 ### Linux
 
@@ -23,20 +23,20 @@ Then install the Python `lxml`, `pyproj` and `shapely` modules, as described bel
 
 ```
 sudo apt-get install python-pip
-sudo pip install lxml pyproj shapely
+sudo pip install lxml pyproj shapely webcolors
 ```
 
 #### Ubuntu 14.04
 
 ```
 sudo apt-get install python-pip python-dev libgeos-c1 libspatialindex-c3
-sudo pip install lxml pyproj shapely
+sudo pip install lxml pyproj shapely webcolors
 ```
 
 ### macOS
 
 ```
-pip install lxml pyproj shapely --user
+pip install lxml pyproj shapely webcolors --user
 ```
 
 ### Windows
@@ -50,6 +50,7 @@ and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 ```
 %PYTHON_PATH%\Scripts\pip.exe install lxml
 %PYTHON_PATH%\Scripts\pip.exe install pyproj
+%PYTHON_PATH%\Scripts\pip.exe install webcolors
 %PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl
 ```
 

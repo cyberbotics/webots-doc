@@ -9,22 +9,24 @@ There is no warranty they will work if you use a different platform or an ancien
 ### Installing ROS
 
 In order to use these nodes, you will first need to install the ROS framework.
-To install the latest version of ROS on Ubuntu use the following commands:
+To install the latest version of ROS on Ubuntu 16.04 use the following commands:
 
 ```sh
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo apt-get update
-sudo apt-get install ros-kinetic-desktop-full
-sudo apt-get install ros-kinetic-sensor-msgs
+sudo apt-get install ros-lunar-desktop-full
+sudo apt-get install ros-lunar-sensor-msgs
 sudo rosdep init
 rosdep update
 ```
 
+On Ubuntu 14.04, you have to install the `kinetic` packages instead of the `lunar` ones.
+
 For more information or to install it on another platform please read
 [http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation).
 Unless you need older version for some other application, you should choose the
-latest distribution (Kinetic Kame or Lunar Loggerhead).
+latest distribution (Lunar Loggerhead or Kinetic Kame).
 
 > **Note**:
 If you never used the ROS framework before, it is strongly recommended to follow
@@ -39,6 +41,7 @@ If you haven't created any catkin workspace yet, you can create one with the
 following commands:
 
 ```sh
+source /opt/ros/<distro>/setup.bash
 mkdir -p catkin_ws/src
 cd catkin_ws/src
 catkin_init_workspace
@@ -48,8 +51,14 @@ Once your workspace is set, you have to copy the `webots_ros` folder located in
 "projects/languages/ros" in the `src` folder of your catkin workspace. You will
 also need to copy the list of services and messages definitions of the
 `webots_ros` package. Simply copy the `srv` and `msg` folders located in
-"projects/default/controllers/ros/include" into the "webots\_ros" folder of your
-catkin workspace.
+"projects/default/controllers/ros/include" into the `src/webots\_ros` folder of your
+catkin workspace. Here are the instructions
+
+```sh
+cp -r <webots>/projects/languages/ros/webots_ros .
+cp -r <webots>/projects/default/controllers/ros/include/srv webots_ros/
+cp -r <webots>/projects/default/controllers/ros/include/msg webots_ros/
+```
 
 The `webots_ros` package already contains a "CmakeList.txt" with build
 instructions for the package. All you have to do, in order to build the package,

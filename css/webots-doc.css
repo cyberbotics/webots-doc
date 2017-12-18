@@ -451,3 +451,8 @@
   font-size: 16px;
   overflow-y: hidden;
 }
+
+.blog figcaption {
+  font-style: italic;
+  padding: 10px;
+}

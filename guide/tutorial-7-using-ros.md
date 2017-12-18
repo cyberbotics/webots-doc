@@ -51,7 +51,7 @@ also need to copy the list of services and messages definitions of the
 `webots_ros` package. Simply copy the `srv` and `msg` folders located in
 "projects/default/controllers/ros/include" into the `src/webots\_ros` folder of your
 catkin workspace.
-To copy the Webots folders int `catkin_ws/src` you can use the following instructions:
+To copy the Webots folders in `catkin_ws/src` you can use the following instructions:
 
 ```sh
 cp -r <webots>/projects/languages/ros/webots_ros .

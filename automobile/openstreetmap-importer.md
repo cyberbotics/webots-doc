@@ -30,7 +30,7 @@ sudo pip install lxml pyproj shapely
 
 ```
 sudo apt-get install python-pip python-dev libgeos-c1 libspatialindex-c3
-sudo pip install lxml pyproj shapely
+sudo pip install lxml pyproj shapely webcolors
 ```
 
 ### macOS

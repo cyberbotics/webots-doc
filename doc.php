@@ -15,22 +15,15 @@
     if ($j === FALSE) {
       $page = substr($uri, $i + 1);
       $branch = '';
-      $tag = '';
     } else {
       $page = substr($uri, $i + 1, $j - $i - 1);
       $version = substr($uri, $j + 9);
-      if (preg_match('/^\d+\.\d*(.)+$/',$version)) {
-        $branch = '';
-        $tag = $version;
-      } else {
-        $n = strpos($version, ':');
-        if ($n === FALSE)
-          $branch = $version;
-        else {
-          $branch = substr($version, $n + 1);
-          $repository = substr($version, 0, $n);
-        }
-        $tag = '';
+      $n = strpos($version, ':');
+      if ($n === FALSE)
+        $branch = $version;
+      else {
+        $branch = substr($version, $n + 1);
+        $repository = substr($version, 0, $n);
       }
     }
   } else {
@@ -38,7 +31,6 @@
     $book = $uri;
     $page = 'index';
     $branch = '';
-    $tag = '';
     # anchor is not sent to the server, so it has to be computed by the javascript
   }
   if (!isset($repository))
@@ -58,7 +50,6 @@
         'page':   '$page',
         'anchor': extractAnchor(),
         'branch': '$branch',
-        'tag':    '$tag',
         'repository': '$repository',
         'url':    'https://raw.githubusercontent.com/$repository/webots-doc/'
       }

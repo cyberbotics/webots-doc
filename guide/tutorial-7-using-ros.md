@@ -39,6 +39,7 @@ If you haven't created any catkin workspace yet, you can create one with the
 following commands:
 
 ```sh
+source /opt/ros/<distro>/setup.bash
 mkdir -p catkin_ws/src
 cd catkin_ws/src
 catkin_init_workspace
@@ -48,8 +49,15 @@ Once your workspace is set, you have to copy the `webots_ros` folder located in
 "projects/languages/ros" in the `src` folder of your catkin workspace. You will
 also need to copy the list of services and messages definitions of the
 `webots_ros` package. Simply copy the `srv` and `msg` folders located in
-"projects/default/controllers/ros/include" into the "webots\_ros" folder of your
+"projects/default/controllers/ros/include" into the `src/webots\_ros` folder of your
 catkin workspace.
+To copy the Webots folders in `catkin_ws/src` you can use the following instructions:
+
+```sh
+cp -r <webots>/projects/languages/ros/webots_ros .
+cp -r <webots>/projects/default/controllers/ros/include/srv webots_ros/
+cp -r <webots>/projects/default/controllers/ros/include/msg webots_ros/
+```
 
 The `webots_ros` package already contains a "CmakeList.txt" with build
 instructions for the package. All you have to do, in order to build the package,

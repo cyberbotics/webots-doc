@@ -54,6 +54,6 @@ Unfortunately, several remote desktop applications do not support this very well
 ### Virtualization
 
 Because it highly relies on OpenGL, Webots may not work properly in virtualized
-environments (such as VMWare or VirtualBox) which often lack a good OpenGL
+environments (such as VMWare or VirtualBox) which often lack good OpenGL
 support. Hence, Webots may exhibit some display bugs, run very slowly or crash
 in such environments.

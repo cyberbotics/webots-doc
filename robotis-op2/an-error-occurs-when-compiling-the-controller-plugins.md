@@ -5,5 +5,5 @@ Usually you should get error messages in the Webots console mentioning the missi
 Otherwise here are the instructions to install all the required ones:
 
 ```sh
-sudo apt-get install libssh-dev libzip-dev
+sudo apt-get install libssh-dev libzip-dev libjpeg-dev
 ```

@@ -1,9 +1,6 @@
 ## macOS
 
-### MATLAB and robot plugins
+### MSAA anti-aliasing may corrupt movie creation
 
-The controllers and the robot plugins (e.g. the robot windows) are sharing the
-same process. Generally this mechanism works well, but some instabilities
-(crashes and warnings) may occur when a robot uses a MATLAB controller and a
-native robot window at the same time. This is due to some conflicts between the Qt
-libraries used by MATLAB and the one used by Webots.
+On some macOS configuration, it was observed that activating the MSAA anti-aliasing was causing problems with movie creation.
+If you experience any problem with movie creation, try to deactivate the Main 3D view anti-aliasing from the Webots OpenGL preferences.

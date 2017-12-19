@@ -23,7 +23,7 @@ website](http://intellinuxgraphics.org).
 
 ### NAOqi support is discontinued: NAQqi-based controllers may not work properly
 
-The makers of the NAO humanoid robot, SoftBank Robotics, do not maintain any more the NAOqi interface library that is used to connect Webots to NAOqi and Choregraphe.
+The makers of the NAO humanoid robot, SoftBank Robotics, no longer maintain the NAOqi interface library that is used to connect Webots to NAOqi and Choregraphe.
 As a consequence Cyberbotics cannot ensure that the NAOqi-based Webots controller will work with the various versions of NAOqi and Choregraphe released by SoftBank Robotics.
 The `naoqisim` controller is provided as-is, without any guarantee it will work properly.
 A known bug is that the robot window cannot not be displayed properly when using the `naoqisim` controller on Windows.

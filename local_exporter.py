@@ -7,7 +7,12 @@ import platform
 import re
 import ssl
 import sys
-import urllib2
+try:
+    # For Python 3.0 and later
+    from urllib.request import urlopen, HTTPError, URLError
+except ImportError:
+    # Fall back to Python 2's urllib2
+    from urllib2 import urlopen, HTTPError, URLError
 
 silent = len(sys.argv) > 1 and (sys.argv[1] == '--silent')
 
@@ -37,7 +42,7 @@ dependencies = [
     'showdown/1.3.0/showdown.min.js',
     'showdown/1.3.0/showdown.min.js.map',
     'showdown/1.3.0/showdown-youtube.min.js',
-    'wwi/8.6/request_methods.js'
+    'wwi/R2018a/request_methods.js'
 ]
 
 
@@ -63,20 +68,20 @@ def download(url, target_file_path):
                 ctx = ssl.create_default_context()
                 ctx.check_hostname = False
                 ctx.verify_mode = ssl.CERT_NONE
-                response = urllib2.urlopen(url, timeout=5, context=ctx)
+                response = urlopen(url, timeout=5, context=ctx)
             else:
-                response = urllib2.urlopen(url, timeout=5)
+                response = urlopen(url, timeout=5)
             content = response.read()
 
-            f = open(target_file_path, 'w')
+            f = open(target_file_path, 'wb')
             f.write(content)
             os.chmod(target_file_path, 0o644)
             f.close()
 
             break
-        except urllib2.HTTPError, e:
+        except HTTPError as e:
             sys.stderr.write('HTTPError = ' + str(e.reason))
-        except urllib2.URLError, e:
+        except URLError as e:
             sys.stderr.write('URLError = ' + str(e.reason))
         if i == nTrials - 1:
             sys.exit('Cannot get url: ' + url)
@@ -92,9 +97,7 @@ with open(script_directory + 'index.html', 'r') as file:
 reg = r'"https://www\.cyberbotics\.com/([^"]*)"'
 content = re.sub(reg, r'"dependencies/\1"', content)
 if platform.system() == 'Darwin':
-    # Because of the bad support of @font-face by QtWebKit on macOS,
-    # a custom CSS containing a system font is preferred for macOS.
-    content = content.replace('"css/main.css"', '"css/main.mac_os.css"')
+    content = content.replace('"css/main.css"', '"css/main.macos.css"')
 
 html_file_path = script_directory + 'local_index.html'
 with open(html_file_path, 'w') as file:
@@ -104,6 +107,5 @@ with open(html_file_path, 'w') as file:
 for dependency in dependencies:
     download(
         'https://www.cyberbotics.com/' + dependency,
-        script_directory + 'dependencies' + os.sep + dependency.replace(
-            "/", os.sep)
+        script_directory + 'dependencies' + os.sep + dependency.replace("/", os.sep)
     )

@@ -170,11 +170,11 @@ corresponding to the name of the node. If the argument node is a PROTO node,
 this function returns the PROTO name, like "E-puck", "RectangleArena", "Door",
 etc. Otherwise if the argument node is not a PROTO node the returned value is
 the same as the output of `wb_supervisor_node_get_base_type_name` function, i.e.
-"DifferentialWheels", "Appearance", "LightSensor", etc. If the argument is NULL,
+"Robot", "Appearance", "LightSensor", etc. If the argument is NULL,
 the function returns the empty string.
 
 The `wb_supervisor_node_get_base_type_name()` function returns a text string
-corresponding to the base type name of the node, like "DifferentialWheels",
+corresponding to the base type name of the node, like "Robot",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
 the empty string.
 
@@ -907,7 +907,7 @@ in "webots/supervisor.h" and include for example: `WB_SF_FLOAT`, `WB_MF_NODE`,
 The `wb_supervisor_field_get_type_name()` returns a text string corresponding to
 the data type of a field found previously from the
 `wb_supervisor_node_get_field()` function. Field type names are defined in the
-VRML'97 specifications and include for example: `"SFFloat"`, `"MFNode"`,
+VRML97 specifications and include for example: `"SFFloat"`, `"MFNode"`,
 `"SFString"`, etc. If the argument is NULL, the function returns the empty string.
 
 The `wb_supervisor_field_get_count()` returns the number of items of a multiple

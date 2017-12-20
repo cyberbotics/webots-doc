@@ -27,6 +27,11 @@ now this value affects only the physical engine speed, and the controller
 compilation speed. Note that this is the maximum number of threads allowed, but
 the actual number of threads used is the one defined in the `optimalThreadCount`
 field of the `WorldInfo` node.
+- The `Python command` defines which Python command is invoked by Webots when starting a Python controller.
+The default value is `python`.
+It should work on most systems assuming that `python` is installed and available from the command line.
+On some systems, it may be useful to set it to `python3.6` for example if you want to launch the controllers with this specific version of Python.
+Bear in mind that this value may be overridden by the content of a `runtime.ini` file of a Python controller that may redefine a specific Python command to launch that controller.
 - The `Warnings: Display save warning only for scene tree edit` checkbox prevents Webots from displaying any warning dialog window when you quit, revert or load a new world after the current world was modified by either changing the viewpoint, dragging, rotating, applying a force or torque to an object, or modifying the world from a controller.
 It will however still display a warning if the world was modified from the scene tree.
 - The `Update policy: Check for Webots updates on startup` checkbox allows Webots to check if a new version is available for download at every startup. If available, a dialog window will inform you about it.
@@ -42,9 +47,9 @@ the Camera device images. The methods are sorted from the most efficient one to
 the least efficient one.
 
 - The `Main 3D view anti-aliasing` option allows you to enable Multisample Anti-Aliasing
-on the 3D scene in Webots. This option can lead to reduced performance, but it improves 
-graphical fidelity significantly. It is disabled by default on systems that do not meet 
-our minimum requirements. Note that this option does not apply to any Camera rendering, 
+on the 3D scene in Webots. This option can lead to reduced performance, but it improves
+graphical fidelity significantly. It is disabled by default on systems that do not meet
+our minimum requirements. Note that this option does not apply to any Camera rendering,
 this is managed by the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
 
 - The `Disable shadows` option allows you to disable completely the shadows in the
@@ -64,3 +69,8 @@ the shaders are not well supported.
 *Camera.antialiasing* fields and to disable this feature. We observed that some
 hardware doesn't support the OpenGL feature about anti-aliasing when rendering
 into a texture (RTT).
+
+- The `Width of rasterized lines` value specifies the width of all the lines drawn in the 3D scene.
+In particular this affects the visual representations of bounding objects, coordinate systems,
+optional renderings, axes of translation and rotation handles, apply force and torque arrows, and IndexedLineSet nodes.
+The default value is 1.0.

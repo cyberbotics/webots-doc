@@ -90,23 +90,6 @@ example of:
 - how to handle collisions
 - how to draw objects using OpenGL
 
-### supervisor.wbt
-
-**Keywords**: Supervisor, DifferentialWheels, soccer, label, import node,
-    restart simulation, screenshot, change controller
-
-%figure "supervisor"
-
-![supervisor.png](images/supervisor.png)
-
-%end
-
-This shows a simple soccer game with six robots and a referee. The `Supervisor`
-code demonstrates the usage of several `Supervisor` functions. For example, the
-`Supervisor` inserts a second ball to the simulation, changes its color, takes a
-picture of the 3D view, restarts the simulation, etc. In addition the
-`Supervisor` also plays the role of a soccer referee: it displays the current
-score, places the players to their initial position when a goal is scored, etc.
 
 ### texture_change.wbt
 
@@ -121,16 +104,3 @@ score, places the players to their initial position when a goal is scored, etc.
 In this example, a robot moves forward and backward in front of a large textured
 panel. The robot watches the panel with its `Camera`. Meanwhile a `Supervisor`
 switches the image displayed on the panel.
-
-### town.wbt
-
-**Keywords**: Transform, USE, DEF
-
-%figure "town"
-
-![town.png](images/town.png)
-
-%end
-
-This example shows a complex city model built with various `Transform` nodes.
-The model makes a intensive use of the `DEF` and `USE` VRML keywords.

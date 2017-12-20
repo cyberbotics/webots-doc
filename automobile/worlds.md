@@ -10,6 +10,8 @@ presented objects and tools.
 - [City traffic](city-traffic.md)
 - [CH Morges](ch-morges.md)
 - [CH Vens](ch-vens.md)
+- [Highway](highway.md)
+- [Highway overtake](highway-overtake.md)
 - [SUMO interface example](sumo-interface-example.md)
 - [Village](village.md)
 - [Village winter](village-winter.md)

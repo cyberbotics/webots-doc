@@ -44,9 +44,10 @@ buildings.
 
 ```
 Building {
-  SFString    name                   ""
+  SFString    name                   "building"
   SFFloat     floorHeight            3
   SFInt32     floorNumber            3
+  SFInt32     startingFloor          0
   MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
   SFNode      wallAppearance         Appearance { material Material {} }
   SFNode      roofAppearance         Appearance { material Material {} }
@@ -60,14 +61,14 @@ Building {
 
 #### Building Field Summary
 
-- `name`: Could contain the building name.
 - `floorHeight`: Defines the height of one floor.
 - `floorNumber`: Defines the number of floors (excluding roof).
+- `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
 - `corners`: Defines the geometry of the building (2D ground footprint of the
 building).
 - `wallAppearance`: Defines the appearance used for the walls of the building.
 - `roofShape`: Defines the geometry of the roof. Supported geometry are `flat
-roof` and `pyramidal roof`.
+roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
 - `roofAppearance`: Defines the appearance used for the roof of the building.
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
 roof).
@@ -77,16 +78,16 @@ roof).
 ### SimpleBuilding PROTO
 
 The `SimpleBuilding` PROTO is similar to the `Building` one except that the wall and roof appearances don't need to be set.
-The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones.
+The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define the color of the wall and roof, respectively. Bear in mind that not all the wall and roof types support the color argument.
 
 The available roof types are:
-  - tiled
+  - tiled (supports color)
   - gravel
   - slate
   - old tiles
   - sheet metal
   - metal tiles
-  - bitumen
+  - bitumen (supports color)
 
 The available wall types are:
   - glass building
@@ -95,7 +96,7 @@ The available wall types are:
   - gray glass building
   - blue glass building
   - arcade-style building
-  - transparent highrise
+  - transparent highrise (supports color)
   - windowed building
   - old brick building
   - red and white building
@@ -105,16 +106,16 @@ The available wall types are:
   - stone brick
   - stone wall
   - glass highrise
-  - old house
+  - old house (supports color)
   - old building
   - highrise
-  - brick building
+  - brick building (supports color)
   - residential building
   - old office building
-  - factory building
-  - tall house
-  - office building
-
+  - factory building (supports color)
+  - tall house (supports color)
+  - office building (supports color)
+  - concrete building (supports color)
 ### Other city objects
 
 In addition to buildings, other PROTO nodes are available representing objects

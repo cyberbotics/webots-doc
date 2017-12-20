@@ -1,6 +1,6 @@
 # Webots User Guide
 
-Release {{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}
+Release {{ webots.version.full }}
 
 %figure
 ![ImageData](images/1234web.png)

@@ -10,7 +10,7 @@ The `Driver` class provides the following methods:
 
 |                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------- |
-| from automobile import Driver                                                                                       |
+| from vehicle import Driver                                                                                          |
 | class [Driver](driver-library.md) (Robot) :                                                                         |
 | &nbsp;&nbsp; INDICATOR\_OFF, INDICATOR\_RIGHT, INDICATOR\_LEFT                                                      |
 | &nbsp;&nbsp; SPEED, TORQUE                                                                                          |
@@ -52,7 +52,7 @@ methods:
 
 |                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------- |
-| from automobile import Car                                                                                                   |
+| from vehicle import Car                                                                                                      |
 | class [Car](car-library.md) ([Driver](#python_driver)) :                                                                     |
 | &nbsp;&nbsp; TRACTION, PROPULSION, FOUR\_BY\_FOUR                                                                            |
 | &nbsp;&nbsp; COMBUTSION\_ENGINE, ELECTRIC\_ENGINE, PARALLEL\_HYBRID\_ENGINE, POWER\_SPLIT\_HYBRID\_ENGINE                    |

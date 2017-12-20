@@ -98,7 +98,7 @@ variable to point to the webots directory obtained from the uncompression of the
 tarball:
 
 ```sh
-tar xjf webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}-x86-64.tar.bz2
+tar xjf webots-{{ webots.version.package }}-x86-64.tar.bz2
 ```
 
 and
@@ -115,6 +115,8 @@ particular *libjpeg8*, *libav-tools*, *libpci3* and *libavcodec-extra* have
 to be installed on the system.
 If you need to compile [controller plugins](controller-plugin.md) or [physics plugins](webots-plugin.md#physics-plugin),
 then you also have to install *mesa-common-dev* and *libgl1-mesa-dev* packages.
+Other particular libraries could also be required to recompile some of the distributed binary files.
+In this case an error message will be printed in the Webots console mentioning the missing dependency.
 
 > **Note**:
 On old versions of Ubuntu or other linux distributions the library names and versions could be slightly different.
@@ -131,13 +133,13 @@ Note that GNOME Software App distributed in the first release of Ubuntu 16.04 co
 Alternatively, the DEB package can also be installed using `apt` or `gdebi` with the `root` privileges:
 
 ```sh
-apt install ./webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
+apt install ./webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
 or
 
 ```sh
-gdebi webots_{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}_amd64.deb
+gdebi webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
 #### Server edition
@@ -152,15 +154,12 @@ Additionally, it is also necessary to install an OS GUI, for example the Unity d
 
 ### Installation on Windows
 
-1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
-webots.version.bugfix }}\_setup.exe" installation file from our [website](http://www.cyberbotics.com/windows).
+1. Download the "webots-{{ webots.version.package }}\_setup.exe" installation file from our [website](http://www.cyberbotics.com/windows).
 2. Double click on this file.
 3. Follow the installation instructions.
 
 It is possible to install Webots silently from an administrator DOS console, by
-typing "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
-webots.version.bugfix }}\_setup.exe /SILENT" or "webots-{{ webots.version.major
-}}.{{ webots.version.minor }}.{{ webots.version.bugfix }}\_setup.exe
+typing "webots-{{ webots.version.package }}\_setup.exe /SILENT" or "webots-{{ webots.version.package }}\_setup.exe
 /VERYSILENT"
 
 If you observe 3D rendering anomalies or if Webots crashes, it is strongly
@@ -168,8 +167,7 @@ recommend to upgrade your graphics driver.
 
 ### Installation on macOS
 
-1. Download the "webots-{{ webots.version.major }}.{{ webots.version.minor }}.{{
-webots.version.bugfix }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
+1. Download the "webots-{{ webots.version.package }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
 2. Double click on this file. This will mount on the desktop a volume named
 "Webots" containing the "Webots" folder.
 3. Move this folder to your "/Applications" folder or wherever you would like to

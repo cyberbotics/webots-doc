@@ -47,6 +47,9 @@ Use the buttons on the top of the page to connect to the Webots streaming server
 `IP` address and port for the streaming server and the client page should match.
 The port should not be used by another application.
 
+The streaming functionality use the `X3D` export parameters stored in the [project file](the-standard-file-hierarchy-of-a-project.md#the-project-files).
+These parameters are set when [exporting a HTML5 model](web-scene.md#how-to-export-a-web-scene) or [recording an animation](web-animation.md#how-to-export-a-web-animation).
+
 
 ### Network settings
 
@@ -62,6 +65,11 @@ The firewall of the local computer may complain about this operation, in this ca
 
 Similarly to [this section](web-animation.md#how-to-embed-a-web-animation-in-your-website),
 please refer to the streaming viewer page to embed a Webots stream in your Website.
+
+
+### Scene refresh rate
+
+The scene refresh rate is defined by the `WorldInfo.FPS` field. The same fields than for the [web animation](web-animation.md#limitations) are updated.
 
 
 ### Limitations

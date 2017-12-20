@@ -13,9 +13,9 @@ documentation](http://www.lua.org/docs.html) for complementary information.
 
 ### Template Engine
 
-A template engine is used to evaluate the PROTO according to the fields values
+A template engine is used to evaluate the PROTO according to the field values
 of the PROTO, before being loaded in Webots. The template engine used is
-[slt2](https://github.com/henix/slt2) (under the MIT license).
+[liluat](https://github.com/FSMaxB/liluat) (under the MIT license).
 
 ### Programming Facts
 
@@ -29,20 +29,20 @@ statement.
 dictionary keys matches the PROTO's fields names. Each entry of this dictionary
 is a sub-dictionary with two keys named "value" and "defaultValue", the first
 one contains the current state of the field and the second one contains its the
-default state. The conversion between the VRML types and the Lua types is
+default state. The conversion between the VRML97 types and the Lua types is
 detailed in [this table](#vrml-type-to-lua-type-conversion).
 - As shown in [this table](#vrml-type-to-lua-type-conversion), the conversion of a
-VRML node is a Lua dictionary. This dictionary contains the following keys:
-"node\_name" containing the VRML node name, "fields" which is a dictionary
-containing the Lua representation of the VRML node fields, and "super" which can
+VRML97 node is a Lua dictionary. This dictionary contains the following keys:
+"node\_name" containing the VRML97 node name, "fields" which is a dictionary
+containing the Lua representation of the VRML97 node fields, and "super" which can
 contains the super PROTO node (the node above in the hierarchy) if existing.
-This dictionary is equal to `nil` if the VRML node is not defined (`NULL`). For
+This dictionary is equal to `nil` if the VRML97 node is not defined (`NULL`). For
 example, in the SimpleStairs example below, the `fields.appearance.node_name`
 key contains the `'Appearance'` string.
 - The `context` dictionary provides contextual information about the PROTO. Table
 [this table](#content-of-the-context-dictionary) shows the available information
 and its corresponding keys.
-- The VRML comment ("#") prevails over the Lua statements.
+- The VRML97 comment ("#") prevails over the Lua statements.
 - The following Lua modules are available directly: base, table, io, os, string,
 math, debug, package.
 - The LUA\_PATH environment variable can be modified (before running Webots) to
@@ -52,20 +52,20 @@ include external Lua modules.
 use the Lua regular functions to write on these streams.
 - The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can be used, for example, to generate textures.
 
-%figure "VRML type to Lua type conversion"
+%figure "VRML97 type to Lua type conversion"
 
-| VRML type  | Lua type                                              |
-| ---------- | ----------------------------------------------------- |
-| SFBool     | boolean                                               |
-| SFInt32    | number                                                |
-| SFFloat    | number                                                |
-| SFString   | string                                                |
-| SFVec2f    | dictionary (keys = "x" and "y")                       |
-| SFVec3f    | dictionary (keys = "x", "y" and "z")                  |
-| SFRotation | dictionary (keys = "x", "y", "z" and "a")             |
-| SFColor    | dictionary (keys = "r", "g" and "b")                  |
-| SFNode     | dictionary (keys = "node\_name", "fields"[, "super"]) |
-| MF*        | array (indexes = multiple value positions)            |
+| VRML97 type  | Lua type                                              |
+| ------------ | ----------------------------------------------------- |
+| SFBool       | boolean                                               |
+| SFInt32      | number                                                |
+| SFFloat      | number                                                |
+| SFString     | string                                                |
+| SFVec2f      | dictionary (keys = "x" and "y")                       |
+| SFVec3f      | dictionary (keys = "x", "y" and "z")                  |
+| SFRotation   | dictionary (keys = "x", "y", "z" and "a")             |
+| SFColor      | dictionary (keys = "r", "g" and "b")                  |
+| SFNode       | dictionary (keys = "node\_name", "fields"[, "super"]) |
+| MF*          | array (indexes = multiple value positions)            |
 
 %end
 
@@ -76,7 +76,7 @@ use the Lua regular functions to write on these streams.
 | world                   | absolute path to the current world file (including file name and extension)                                                          |
 | proto                   | absolute path to the current PROTO file (including file name and extension)                                                          |
 | project\_path           | absolute path to the current project directory                                                                                       |
-| webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major, minor and maintenance) |
+| webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major and revision)           |
 | webots\_home            | absolute path to the Webots installation directory                                                                                   |
 | temporary\_files\_path  | absolute path to the temporary folder currently used by Webots (this is the location where the PROTO file is generated)              |
 | os                      | OS string ("windows", "linux" or "mac")                                                                                              |
@@ -107,20 +107,21 @@ In addition to these fonts, it is possible to add other TrueType fonts file in y
 Using procedural PROTO files can greatly increase the loading time of your worlds because every procedural PROTO need to be evaluated.
 
 To reduce the number of evaluations you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`).
-Then, if the same procedural PROTO is used several times in a world and all the fields value are the same, the PROTO is evaluated only once.
+Then, if the same procedural PROTO is used several times in a world and all the field values are the same, the PROTO is evaluated only once.
 > **Note**:
-This tag should not be used if the result of the PROTO depends on something else than the fields value (e.g. use a random value).
+This tag should not be used if the result of the PROTO depends on something else than the field values (e.g. use a random value).
 
 ### Example
 
 ```
 
-#VRML_SIM V8.6 utf8
+#VRML_SIM R2018a utf8
 # tags: static
 
 PROTO SimpleStairs [
   field SFVec3f    translation 0 0 0
   field SFRotation rotation    0 1 0 0
+  field SFString   name        "stairs"
   field SFInt32    nSteps      10
   field SFVec3f    stepSize    0.2 0.2 0.8
   field SFColor    color       0 1 0
@@ -149,6 +150,7 @@ PROTO SimpleStairs [
 
    -- load lua-gd module and create a uniform texture
    local gd = require("gd")
+   local debug = require("debug")
    local im = gd.createTrueColor(128, 128)
    color = im:colorAllocate(fields.color.value.r * 255, fields.color.value.g * 255, fields.color.value.b * 255)
    im:filledRectangle(0, 0, 127, 127, color)
@@ -197,6 +199,7 @@ PROTO SimpleStairs [
         ]
       }
     ]
+    name IS name
     boundingObject USE SIMPLE_STAIRS_GROUP
     physics IS physics
   }

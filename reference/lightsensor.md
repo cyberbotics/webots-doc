@@ -161,7 +161,7 @@ any occlusion if its `boundingObject` is not specified.
 
 > **Note**:
 The default value of the `attenuation` field of [PointLight](pointlight.md)s and
-[SpotLight](spotlight.md)s is *1 0 0*. These values correspond to the VRML
+[SpotLight](spotlight.md)s is *1 0 0*. These values correspond to the VRML97
 default, and are not appropriate for modeling the attenuation of a real lights.
 If a point or spot light radiates uniformly in all directions and there is no
 absorption, then the irradiance drops off in proportion to the square of the

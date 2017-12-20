@@ -191,9 +191,9 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [disable](distancesensor.md#wb_distance_sensor_get_value)(self)                 |
 | &nbsp;&nbsp; def [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)(self)       |
 | &nbsp;&nbsp; def [getValue](distancesensor.md#wb_distance_sensor_get_value)(self)                |
-| &nbsp;&nbsp; def [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
-| &nbsp;&nbsp; def [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
-| &nbsp;&nbsp; def [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)(self)         |
+| &nbsp;&nbsp; def [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
+| &nbsp;&nbsp; def [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
+| &nbsp;&nbsp; def [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)(self)         |
 | &nbsp;&nbsp; def [getType](distancesensor.md#wb_distance_sensor_get_type)(self)                  |
 
 %end
@@ -337,7 +337,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [disable](joystick.md#wb_joystick_enable)(self)                                        |
 | &nbsp;&nbsp; def [getSamplingPeriod](joystick.md#wb_joystick_enable)(self)                              |
 | &nbsp;&nbsp; def [isConnected](joystick.md#wb_joystick_is_connected)(self)                              |
-| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self) const              |
+| &nbsp;&nbsp; def [getModel](joystick.md#wb_joystick_get_model)(self)                                    |
+| &nbsp;&nbsp; def [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)(self)                    |
 | &nbsp;&nbsp; def [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(self, axis)                 |
 | &nbsp;&nbsp; def [getPressedButton](joystick.md#wb_joystick_get_pressed_button)(self)                   |
 | &nbsp;&nbsp; def [setConstantForce](joystick.md#wb_joystick_set_constant_force)(self, level)            |
@@ -523,7 +524,7 @@ The following tables describe the Python classes and their methods.
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | from controller import Node                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | class Node :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| &nbsp;&nbsp; NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM |
+| &nbsp;&nbsp; NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM |
 | &nbsp;&nbsp; def [remove](supervisor.md#wb_supervisor_node_remove)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | &nbsp;&nbsp; def [getType](supervisor.md#wb_supervisor_node_get_type)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | &nbsp;&nbsp; def [getId](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -680,7 +681,6 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getRadar](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                            |
 | &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                               |
-| &nbsp;&nbsp; def [getServo](robot.md#wb_robot_get_device)(self, name)                                  |
 | &nbsp;&nbsp; def [getSpeaker](robot.md#wb_robot_get_device)(self, name)                                |
 | &nbsp;&nbsp; def [getTouchSensor](robot.md#wb_robot_get_device)(self, name)                            |
 | &nbsp;&nbsp; def [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)(self)                     |
@@ -692,8 +692,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)(self)                       |
 | &nbsp;&nbsp; def [getMode](robot.md#wb_robot_get_mode)(self)                                           |
 | &nbsp;&nbsp; def [getModel](robot.md#wb_robot_get_model)(self)                                         |
-| &nbsp;&nbsp; def [getData](robot.md#wb_robot_get_data)(self)                                           |
-| &nbsp;&nbsp; def [setData](robot.md#wb_robot_get_data)(self, data)                                     |
+| &nbsp;&nbsp; def [getCustomData](robot.md#wb_robot_get_custom_data)(self)                              |
+| &nbsp;&nbsp; def [setCustomData](robot.md#wb_robot_get_custom_data)(self, data)                        |
 | &nbsp;&nbsp; def [getName](robot.md#wb_robot_get_name)(self)                                           |
 | &nbsp;&nbsp; def [getControllerName](robot.md#wb_robot_get_controller_name)(self)                      |
 | &nbsp;&nbsp; def [getControllerArguments](robot.md#wb_robot_get_controller_name)(self)                 |
@@ -704,34 +704,6 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getType](robot.md#wb_robot_get_type)(self)                                           |
 | &nbsp;&nbsp; def [wwiSendText](robot.md#wb_robot_wwi_send_text)(self, text)                            |
 | &nbsp;&nbsp; def [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)(self)                            |
-
-%end
-
-%api "python_servo"
-
-|                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------- |
-| from controller import Servo                                                                                      |
-| class [Servo](servo.md) ([Device](#python_device)) :                                                              |
-| &nbsp;&nbsp; ROTATIONAL, LINEAR                                                                                   |
-| &nbsp;&nbsp; def [setPosition](servo.md#wb_servo_set_position)(self, position)                                    |
-| &nbsp;&nbsp; def [getTargetPosition](servo.md#wb_servo_set_position)(self)                                        |
-| &nbsp;&nbsp; def [setVelocity](servo.md#wb_servo_set_position)(self, vel)                                         |
-| &nbsp;&nbsp; def [setAcceleration](servo.md#wb_servo_set_position)(self, force)                                   |
-| &nbsp;&nbsp; def [setMotorForce](servo.md#wb_servo_set_position)(self, motor\_force)                              |
-| &nbsp;&nbsp; def [setControlP](servo.md#wb_servo_set_position)(self, p)                                           |
-| &nbsp;&nbsp; def [getMinPosition](servo.md#wb_servo_set_position)(self)                                           |
-| &nbsp;&nbsp; def [getMaxPosition](servo.md#wb_servo_set_position)(self)                                           |
-| &nbsp;&nbsp; def [enablePosition](servo.md#wb_servo_enable_position)(self, sampling_period)                       |
-| &nbsp;&nbsp; def [disablePosition](servo.md#wb_servo_enable_position)(self)                                       |
-| &nbsp;&nbsp; def [getPositionSamplingPeriod](servo.md#wb_servo_enable_position)(self)                             |
-| &nbsp;&nbsp; def [getPosition](servo.md#wb_servo_enable_position)(self)                                           |
-| &nbsp;&nbsp; def [enableMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)(self, sampling_period) |
-| &nbsp;&nbsp; def [disableMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)(self)                 |
-| &nbsp;&nbsp; def [getMotorForceFeedbackSamplingPeriod](servo.md#wb_servo_enable_motor_force_feedback)(self)       |
-| &nbsp;&nbsp; def [getMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)(self)                     |
-| &nbsp;&nbsp; def [setForce](servo.md#wb_servo_set_force)(self, force)                                             |
-| &nbsp;&nbsp; def [getType](servo.md#wb_servo_get_type)(self)                                                      |
 
 %end
 

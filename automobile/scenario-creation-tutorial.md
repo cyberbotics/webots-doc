@@ -29,7 +29,7 @@ As explained in the [OpenStreetMap importer](openstreetmap-importer.md) section,
 It is strongly recommended to not use the 3D feature of the [OpenStreetMap importer](openstreetmap-importer.md) otherwise it will not be possible to add traffic using SUMO.
 
 ```sh
-cd $(WEBOTS_HOME)/projects/automobile/resources/OSM_importer
+cd $(WEBOTS_HOME)/resources/osm_importer
 python importer.py --input=$WBT_PROJECT_PATH/worlds/myMap_net/myMap.osm --output=$WBT_PROJECT_PATH/worlds/myMap.wbt
 ```
 
@@ -56,23 +56,23 @@ You can also enable the spline subdivision on some of the roads in Webots in ord
 On Linux, the path to the SUMO binaries directory should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
 
 ```sh
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/automobile/resources/sumo/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/default/resources/sumo/bin
 ```
 
 We can also use the previously generated Webots world to generate the SUMO network file.
 You need to use the [netconvert](http://sumo.dlr.de/wiki/NETCONVERT) utility for this:
 
 ```sh
-cd $WEBOTS_HOME/projects/automobile/resources/SUMO_exporter
+cd $WEBOTS_HOME/resources/sumo_exporter
 python exporter.py --input=$WBT_PROJECT_PATH/worlds/myMap.wbt --output=$WBT_PROJECT_PATH/worlds/myMap_net
-$WEBOTS_HOME/projects/automobile/resources/sumo/bin/netconvert --node-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.nod.xml --edge-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.edg.xml --output-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
+$WEBOTS_HOME/projects/default/resources/sumo/bin/netconvert --node-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.nod.xml --edge-files=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.edg.xml --output-file=$WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
 ```
 
 It is recommended at this stage to perform a manual check of the SUMO network file.
 To do this, open the `sumo.net.xml` file in SUMO `netedit`:
 
 ```sh
-$WEBOTS_HOME/projects/automobile/resources/sumo/bin/netedit $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
+$WEBOTS_HOME/projects/default/resources/sumo/bin/netedit $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
 ```
 
 
@@ -94,8 +94,8 @@ This file can be used as an input argument of `SUMO duarouter` to create the exp
 Here are the commands to do so:
 
 ```sh
-python $WEBOTS_HOME/projects/automobile/resources/sumo/tools/randomTrips.py -n $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml -o $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml
-$WEBOTS_HOME/projects/automobile/resources/sumo/bin/duarouter --trip-files $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml --ignore-errors true
+python $WEBOTS_HOME/projects/default/resources/sumo/tools/randomTrips.py -n $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml -o $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml
+$WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --trip-files $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml --ignore-errors true
 ```
 
 
@@ -109,7 +109,7 @@ to learn how to create this file, and put it there:
 Then use `SUMO duarouter` to create the target SUMO route file, like this:
 
 ```sh
-$WEBOTS_HOME/projects/automobile/resources/sumo/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
+$WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
 ```
 
 

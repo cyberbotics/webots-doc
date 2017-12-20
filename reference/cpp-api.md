@@ -181,9 +181,9 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [disable](distancesensor.md#wb_distance_sensor_get_value)();                   |
 | &nbsp;&nbsp; int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();                  |
 | &nbsp;&nbsp; double [getValue](distancesensor.md#wb_distance_sensor_get_value)() const;                  |
-| &nbsp;&nbsp; double [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
-| &nbsp;&nbsp; double [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
-| &nbsp;&nbsp; double [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)() const;           |
+| &nbsp;&nbsp; double [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
+| &nbsp;&nbsp; double [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
+| &nbsp;&nbsp; double [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)() const;           |
 | &nbsp;&nbsp; int [getType](distancesensor.md#wb_distance_sensor_get_type)() const;                       |
 | };                                                                                                       |
 
@@ -331,6 +331,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [disable](joystick.md#wb_joystick_enable)();                                       |
 | &nbsp;&nbsp; int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                      |
 | &nbsp;&nbsp; bool [isConnected](joystick.md#wb_joystick_is_connected)() const;                               |
+| &nbsp;&nbsp; std::string [getModel](joystick.md#wb_joystick_get_model)() const;                              |
 | &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;                      |
 | &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;                 |
 | &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;                     |
@@ -496,7 +497,7 @@ The following tables describe the C++ classes and their methods.
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | #include `<`webots/Node.hpp`>`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | class Node {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| &nbsp;&nbsp; enum { NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM }; |
+| &nbsp;&nbsp; enum { NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM }; |
 | &nbsp;&nbsp; virtual void [remove](supervisor.md#wb_supervisor_node_remove)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | &nbsp;&nbsp; int [getId](supervisor.md#wb_supervisor_node_get_from_def)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | &nbsp;&nbsp; int [getType](supervisor.md#wb_supervisor_node_get_type)() const;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -645,7 +646,6 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; [Radar](#cpp_radar) *[getRadar](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [RangeFinder](#cpp_range_finder) *[getRangeFinder](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; [Receiver](#cpp_receiver) *[getReceiver](robot.md#wb_robot_get_device)(const std::string &name);                              |
-| &nbsp;&nbsp; [Servo](#cpp_servo) *[getServo](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [Speaker](#cpp_speaker) *[getSpeaker](robot.md#wb_robot_get_device)(const std::string &name);                                 |
 | &nbsp;&nbsp; [TouchSensor](#cpp_touch_sensor) *[getTouchSensor](robot.md#wb_robot_get_device)(const std::string &name);                    |
 | &nbsp;&nbsp; int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                            |
@@ -657,8 +657,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)() const;                                                     |
 | &nbsp;&nbsp; int [getMode](robot.md#wb_robot_get_mode)() const;                                                                            |
 | &nbsp;&nbsp; std::string [getModel](robot.md#wb_robot_get_model)() const;                                                                  |
-| &nbsp;&nbsp; std::string [getData](robot.md#wb_robot_get_data)() const;                                                                    |
-| &nbsp;&nbsp; void [setData](robot.md#wb_robot_get_data)(const std::string &data);                                                          |
+| &nbsp;&nbsp; std::string [getCustomData](robot.md#wb_robot_get_custom_data)() const;                                                       |
+| &nbsp;&nbsp; void [setCustomData](robot.md#wb_robot_get_custom_data)(const std::string &data);                                             |
 | &nbsp;&nbsp; std::string [getName](robot.md#wb_robot_get_name)() const;                                                                    |
 | &nbsp;&nbsp; std::string [getControllerName](robot.md#wb_robot_get_controller_name)() const;                                               |
 | &nbsp;&nbsp; std::string [getControllerArguments](robot.md#wb_robot_get_controller_name)() const;                                          |
@@ -673,35 +673,6 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; void [wwiSendText](robot.md#wb_robot_wwi_send_text)(const std::string &text);                                                      |
 | &nbsp;&nbsp; void *[windowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                            |
 | };                                                                                                                                         |
-
-%end
-
-%api "cpp_servo"
-
-|                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------- |
-| #include `<`webots/Servo.hpp`>`                                                                                           |
-| class [Servo](servo.md) : public [Device](#cpp_device) {                                                                  |
-| &nbsp;&nbsp; enum {ROTATIONAL, LINEAR};                                                                                   |
-| &nbsp;&nbsp; virtual void [setPosition](servo.md#wb_servo_set_position)(double position);                                 |
-| &nbsp;&nbsp; virtual void [setVelocity](servo.md#wb_servo_set_position)(double vel);                                      |
-| &nbsp;&nbsp; virtual void [setAcceleration](servo.md#wb_servo_set_position)(double force);                                |
-| &nbsp;&nbsp; virtual void [setMotorForce](servo.md#wb_servo_set_position)(double motor\_force);                           |
-| &nbsp;&nbsp; virtual void [setControlP](servo.md#wb_servo_set_position)(double p);                                        |
-| &nbsp;&nbsp; double [getTargetPosition](servo.md#wb_servo_set_position)(double position) const;                           |
-| &nbsp;&nbsp; double [getMinPosition](servo.md#wb_servo_set_position)() const;                                             |
-| &nbsp;&nbsp; double [getMaxPosition](servo.md#wb_servo_set_position)() const;                                             |
-| &nbsp;&nbsp; virtual void [enablePosition](servo.md#wb_servo_enable_position)(int sampling_period);                       |
-| &nbsp;&nbsp; virtual void [disablePosition](servo.md#wb_servo_enable_position)();                                         |
-| &nbsp;&nbsp; int [getPositionSamplingPeriod](servo.md#wb_servo_enable_position)();                                        |
-| &nbsp;&nbsp; double [getPosition](servo.md#wb_servo_enable_position)() const;                                             |
-| &nbsp;&nbsp; virtual void [enableMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)(int sampling_period); |
-| &nbsp;&nbsp; virtual void [disableMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)();                   |
-| &nbsp;&nbsp; double [getMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)() const;                       |
-| &nbsp;&nbsp; int [getMotorForceFeedbackSamplingPeriod](servo.md#wb_servo_enable_motor_force_feedback)();                  |
-| &nbsp;&nbsp; virtual void [setForce](servo.md#wb_servo_set_force)(double force);                                          |
-| &nbsp;&nbsp; int [getType](servo.md#wb_servo_get_type)() const;                                                           |
-| };                                                                                                                        |
 
 %end
 

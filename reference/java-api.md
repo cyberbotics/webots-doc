@@ -199,9 +199,9 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [disable](distancesensor.md#wb_distance_sensor_get_value)();                   |
 | &nbsp;&nbsp; public int [getSamplingPeriod](distancesensor.md#wb_distance_sensor_get_value)();          |
 | &nbsp;&nbsp; public double [getValue](distancesensor.md#wb_distance_sensor_get_value)();                |
-| &nbsp;&nbsp; public double [getMaxRange](distancesensor.md#wb_distance_sensor_get_max_range)();         |
-| &nbsp;&nbsp; public double [getMinRange](distancesensor.md#wb_distance_sensor_get_max_range)();         |
-| &nbsp;&nbsp; public double [getAperture](distancesensor.md#wb_distance_sensor_get_max_range)();         |
+| &nbsp;&nbsp; public double [getMaxValue](distancesensor.md#wb_distance_sensor_get_max_value)();         |
+| &nbsp;&nbsp; public double [getMinValue](distancesensor.md#wb_distance_sensor_get_max_value)();         |
+| &nbsp;&nbsp; public double [getAperture](distancesensor.md#wb_distance_sensor_get_max_value)();         |
 | &nbsp;&nbsp; public int [getType](distancesensor.md#wb_distance_sensor_get_type)();                     |
 | }                                                                                                       |
 
@@ -352,6 +352,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [disable](joystick.md#wb_joystick_enable)();                                              |
 | &nbsp;&nbsp; public int [getSamplingPeriod](joystick.md#wb_joystick_enable)();                                     |
 | &nbsp;&nbsp; public boolean [isConnected](joystick.md#wb_joystick_is_connected)();                                 |
+| &nbsp;&nbsp; public String [getModel](joystick.md#wb_joystick_get_model)();                                        |
 | &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                           |
 | &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);                      |
 | &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                          |
@@ -548,7 +549,7 @@ The following tables describe the Java classes and their methods.
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Node;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | public class Node {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| &nbsp;&nbsp; public final static int NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SERVO, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM; |
+| &nbsp;&nbsp; public final static int NO\_NODE, ACCELEROMETER, APPEARANCE, BACKGROUND, BALL\_JOINT, BALL\_JOINT\_PARAMETERS, BOX, BRAKE, CAMERA, CAPSULE, CHARGER, COLOR, COMPASS, CONE, CONNECTOR, CONTACT\_PROPERTIES, COORDINATE, CYLINDER, DAMPING, DIFFERENTIAL\_WHEELS, DIRECTIONAL\_LIGHT, DISPLAY, DISTANCE\_SENSOR, ELEVATION\_GRID, EMITTER, EXTRUSION, FOCUS, FLUID, FOG, GPS, GROUP, GYRO, HINGE\_2\_JOINT, HINGE\_2\_JOINT\_PARAMETERS, HINGE\_JOINT, HINGE\_JOINT\_PARAMETERS, IMAGE\_TEXTURE, IMMERSION\_PROPERTIES, INDEXED\_FACE\_SET, INDEXED\_LINE\_SET, INERTIAL\_UNIT, JOINT\_PARAMETERS, LED, LENS\_DISTORTION, LIDAR, LIGHT\_SENSOR, LINEAR\_MOTOR, MATERIAL, MICROPHONE, PEN, PHYSICS, PLANE, POINT\_LIGHT, POSITION\_SENSOR, PROPELLER, RADAR, RADIO, RANGE\_FINDER, RECEIVER, RECOGNITION, ROBOT, ROTATIONAL\_MOTOR, SHAPE, SLIDER\_JOINT, SLOT, SOLID, SOLID\_REFERENCE, SPEAKER, SPHERE, SPOT\_LIGHT, SUPERVISOR, SWITCH, TEXTURE\_COORDINATE, TEXTURE\_TRANSFORM, TOUCH\_SENSOR, TRACK, TRACK\_WHEEL, TRANSFORM, VIEWPOINT, WORLD\_INFO, ZOOM; |
 | &nbsp;&nbsp; public void [remove](supervisor.md#wb_supervisor_node_remove)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | &nbsp;&nbsp; public int [getId](supervisor.md#wb_supervisor_node_get_from_def)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | &nbsp;&nbsp; public int [getType](supervisor.md#wb_supervisor_node_get_type)();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -709,7 +710,6 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public [Radar](#java_radar) [getRadar](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [RangeFinder](#java_range_finder) [getRangeFinder](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public [Receiver](#java_receiver) [getReceiver](robot.md#wb_robot_get_device)(String name);                               |
-| &nbsp;&nbsp; public [Servo](#java_servo) [getServo](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [Speaker](#java_speaker) [getSpeaker](robot.md#wb_robot_get_device)(String name);                                  |
 | &nbsp;&nbsp; public [TouchSensor](#java_touch_sensor) [getTouchSensor](robot.md#wb_robot_get_device)(String name);                     |
 | &nbsp;&nbsp; public int [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)();                                                 |
@@ -721,8 +721,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)();                                                |
 | &nbsp;&nbsp; public int [getMode](robot.md#wb_robot_get_mode)();                                                                       |
 | &nbsp;&nbsp; public String [getModel](robot.md#wb_robot_get_model)();                                                                  |
-| &nbsp;&nbsp; public String [getData](robot.md#wb_robot_get_data)();                                                                    |
-| &nbsp;&nbsp; public [setData](robot.md#wb_robot_get_data)(String data);                                                                |
+| &nbsp;&nbsp; public String [getCustomData](robot.md#wb_robot_get_custom_data)();                                                       |
+| &nbsp;&nbsp; public [setCustomData](robot.md#wb_robot_get_custom_data)(String data);                                                   |
 | &nbsp;&nbsp; public String [getName](robot.md#wb_robot_get_name)();                                                                    |
 | &nbsp;&nbsp; public String [getControllerName](robot.md#wb_robot_get_controller_name)();                                               |
 | &nbsp;&nbsp; public String [getControllerArguments](robot.md#wb_robot_get_controller_name)();                                          |
@@ -734,35 +734,6 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [wwiSendText](robot.md#wb_robot_wwi_send_text)(String text);                                                  |
 | &nbsp;&nbsp; public String [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)();                                                     |
 | }                                                                                                                                      |
-
-%end
-
-%api "java_servo"
-
-|                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| import com.cyberbotics.webots.controller.Servo;                                                                          |
-| public class [Servo](servo.md) extends [Device](#java_device) {                                                          |
-| &nbsp;&nbsp; public final static int ROTATIONAL, LINEAR;                                                                 |
-| &nbsp;&nbsp; public void [setPosition](servo.md#wb_servo_set_position)(double position);                                 |
-| &nbsp;&nbsp; public double [getTargetPosition](servo.md#wb_servo_set_position)();                                        |
-| &nbsp;&nbsp; public void [setVelocity](servo.md#wb_servo_set_position)(double vel);                                      |
-| &nbsp;&nbsp; public void [setAcceleration](servo.md#wb_servo_set_position)(double force);                                |
-| &nbsp;&nbsp; public void [setMotorForce](servo.md#wb_servo_set_position)(double motor\_force);                           |
-| &nbsp;&nbsp; public void [setControlP](servo.md#wb_servo_set_position)(double p);                                        |
-| &nbsp;&nbsp; public double [getMinPosition](servo.md#wb_servo_set_position)();                                           |
-| &nbsp;&nbsp; public double [getMaxPosition](servo.md#wb_servo_set_position)();                                           |
-| &nbsp;&nbsp; public void [enablePosition](servo.md#wb_servo_enable_position)(int sampling_period);                       |
-| &nbsp;&nbsp; public void [disablePosition](servo.md#wb_servo_enable_position)();                                         |
-| &nbsp;&nbsp; public int [getPositionSamplingPeriod](servo.md#wb_servo_enable_position)();                                |
-| &nbsp;&nbsp; public double [getPosition](servo.md#wb_servo_enable_position)();                                           |
-| &nbsp;&nbsp; public void [enableMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)(int sampling_period); |
-| &nbsp;&nbsp; public void [disableMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)();                   |
-| &nbsp;&nbsp; public int [getMotorForceFeedbackSamplingPeriod](servo.md#wb_servo_enable_motor_force_feedback)();          |
-| &nbsp;&nbsp; public double [getMotorForceFeedback](servo.md#wb_servo_enable_motor_force_feedback)();                     |
-| &nbsp;&nbsp; public void [setForce](servo.md#wb_servo_set_force)(double force);                                          |
-| &nbsp;&nbsp; public int [getType](servo.md#wb_servo_get_type)();                                                         |
-| }                                                                                                                        |
 
 %end
 

@@ -25,9 +25,8 @@ pencil that writes only on physical contact. If `maxDistance` is set to 0
 (default value), the range will be unlimited.
 
 In order to be paintable, an object should be made up of a [Solid](solid.md)
-node containing a [Shape](shape.md) with a valid `Geometry`. Even if a
-[ImageTexture](imagetexture.md) is already defined, the painture is applied over
-the texture without modifying it.
+node containing a [Shape](shape.md) with a valid `Geometry` and an [ImageTexture](imagetexture.md).
+The painted layer is applied over the texture without modifying it.
 
 The precision of the painting action mainly depends on the `subdivision` field
 of the `Geometry` node. A high `subdivision` value increases the number of

@@ -29,6 +29,7 @@ Here is an example of PROTO definition:
 PROTO MyProto [
   field SFVec3f    translation   0 0 0
   field SFRotation rotation      0 1 0 0
+  field SFString   name          "my proto"
   field SFColor    color         0.5 0.5 0.5
   field SFNode     physics       NULL
   field MFNode     extensionSlot []
@@ -62,6 +63,7 @@ For example:
 PROTO Bicycle [
   field SFVec3f    position   0 0 0
   field SFRotation rotation   0 1 0 0
+  field SFString   name       "bicycle"
   field SFColor    frameColor 0.5 0.5 0.5
   field SFBool     hasBrakes  TRUE
 ]
@@ -81,6 +83,13 @@ PROTO Bicycle [
 IS statements may appear inside the PROTO definition wherever fields may appear.
 IS statements shall refer to fields defined in the PROTO declaration. Multiple
 IS statements for the same field in the PROTO interface declaration is valid.
+
+An interface field that is not linked to an internal PROTO field with an IS may
+produce a warning when parsed. This warning can be suppressed when declaring an
+interface field by using the `unconnectedField` keyword instead of `field` in the
+declaration. This is useful when the value of an interface field is used to 'store'
+relevant data that a `Supervisor` controller may wish to access, such as the speed
+limit for a stretch of road, or an object's radioactivity.
 
 It is an error for an IS statement to refer to a non-existent interface field.
 It is an error if the type of the field being associated does not match the type

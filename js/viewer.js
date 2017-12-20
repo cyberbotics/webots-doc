@@ -27,15 +27,11 @@ function setupCyberboticsUrl(url) {
     m = url.match(/version=([^&#]*)/);
     if (m) {
       var version = m[1];
-      if (version.match(/^\d+\.\d*(.)+$/))
-        setup.tag = version;
-      else {
-        var n = version.indexOf(':');
-        if (n == -1)
-          setup.branch = version;
-        else
-          setup.branch = version.substr(n + 1);
-      }
+      var n = version.indexOf(':');
+      if (n == -1)
+        setup.branch = version;
+      else
+        setup.branch = version.substr(n + 1);
     }
 
     m = arguments.match(/#([^&#]*)/);
@@ -47,8 +43,6 @@ function setupCyberboticsUrl(url) {
 }
 
 function setupDefaultUrl(url) {
-    setup.tag = '';
-
     var m;
 
     m = url.match(/page=([^&#]*)/);
@@ -75,7 +69,7 @@ function setupUrl(url) {
         setupCyberboticsUrl(url);
     else
         setupDefaultUrl(url);
-    console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" tag="+setup.tag+" anchor="+setup.anchor);
+    console.log("book="+setup.book+" page="+setup.page+" branch="+setup.branch+" anchor="+setup.anchor);
 }
 
 function computeTargetPath() {
@@ -123,11 +117,7 @@ function forgeUrl(page, anchor) {
   var newUrl = currentUrl;
   if (isCyberboticsUrl) {
     newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
-    if (setup.tag != '' && setup.repository && setup.repository != "omichel")
-      newUrl += "?version=" + setup.repository + ":" + setup.tag;
-    else if (setup.tag != '')
-      newUrl += "?version=" + setup.tag;
-    else if (setup.branch != '' && setup.repository && setup.repository != "omichel")
+    if (setup.branch != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.branch;
     else if (setup.branch != '')
       newUrl += "?version=" + setup.branch;
@@ -276,8 +266,10 @@ function setUpBlogStyleIfNeeded() {
 }
 
 function getWebotsVersion() {
+  if (setup.branch)
+    return setup.branch;
   // Get the Webots version from the showdown wbVariables extension
-  var version = "{{ webots.version.major }}.{{ webots.version.minor }}.{{ webots.version.bugfix }}";
+  var version = "{{ webots.version.full }}";
   var converter = new showdown.Converter({extensions: ["wbVariables"]});
   var html = converter.makeHtml(version);
   var tmp = document.createElement("div");

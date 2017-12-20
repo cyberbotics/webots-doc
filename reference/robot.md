@@ -6,7 +6,7 @@ Derived from [Solid](solid.md).
 Robot {
   SFString controller      "void"
   SFString controllerArgs  ""
-  SFString data            ""
+  SFString customData      ""
   SFBool   synchronization TRUE
   MFFloat  battery         [ ]
   SFFloat  cpuConsumption  10  # [0,inf)
@@ -23,9 +23,7 @@ Direct derived nodes: [DifferentialWheels](differentialwheels.md),
 ### Description
 
 The [Robot](#robot) node can be used as basis for building a robot, e.g., an
-articulated robot, a humanoid robot, a wheeled robot... If you want to build a
-two-wheels robot with differential-drive you should also consider the
-[DifferentialWheels](differentialwheels.md) node. If you would like to build a
+articulated robot, a humanoid robot, a wheeled robot... If you would like to build a
 robot with supervisor capabilities use the [Supervisor](supervisor.md) node
 instead (Webots PRO license required).
 
@@ -43,10 +41,10 @@ extension is added on the Windows platforms only.
 characters) to be passed to the `main()` function of the C/C++ controller
 program or the `main()` method of the Java controller program.
 
-- `data`: this field may contain any user data, for example parameters
+- `customData`: this field may contain any user data, for example parameters
 corresponding to the configuration of the robot. It can be read from the robot
-controller using the  `wb_robot_get_data()` function and can be written using
-the `wb_robot_set_data()` function. It may also be used as a convenience for
+controller using the  `wb_robot_get_custom_data()` function and can be written using
+the `wb_robot_set_custom_data()` function. It may also be used as a convenience for
 communicating between a robot and a supervisor without implementing a Receiver /
 Emitter system: The supervisor can read and write in this field using the
 generic supervisor functions for accessing fields.
@@ -321,7 +319,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 
 **Name**
 
-**Robot::getAccelerometer**, **Robot::getBrake**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDisplay**, **Robot::getDistanceSensor**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getJoystick**, **Robot::getKeyboard**, **Robot::getLED**, **Robot::getLidar**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRadar**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getServo**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
+**Robot::getAccelerometer**, **Robot::getBrake**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDisplay**, **Robot::getDistanceSensor**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getJoystick**, **Robot::getKeyboard**, **Robot::getLED**, **Robot::getLidar**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRadar**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
 
@@ -350,7 +348,6 @@ PositionSensor *Robot::getPositionSensor(const std::string &name);
 Radar *Robot::getRadar(const std::string &name);
 RangeFinder *Robot::getRangeFinder(const std::string &name);
 Receiver *Robot::getReceiver(const std::string &name);
-Servo *Robot::getServo(const std::string &name);
 Speaker *Robot::getSpeaker(const std::string &name);
 TouchSensor *Robot::getTouchSensor(const std::string &name);
 ```
@@ -569,7 +566,7 @@ controller terminates.
 
 **Name**
 
-**wb\_robot\_get\_data**, **wb\_robot\_set\_data** - *return the data defined in the robot node*
+**wb\_robot\_get\_custom\_data**, **wb\_robot\_set\_custom\_data** - *return the custom data defined in the robot node*
 
  - *set the data defined in the robot node*
 
@@ -578,16 +575,16 @@ controller terminates.
 ```c
 #include <webots/robot.h>
 
-const char * wb_robot_get_data();
-void wb_robot_set_data(const char *data);
+const char * wb_robot_get_custom_data();
+void wb_robot_set_custom_data(const char *data);
 ```
 
 **Description**
 
-The `wb_robot_get_data` function returns the string contained in the `data`
+The `wb_robot_get_custom_data` function returns the string contained in the `customData`
 field of the robot node.
 
-The `wb_robot_set_data` function set the string contained in the `data` field of
+The `wb_robot_set_custom_data` function set the string contained in the `customData` field of
 the robot node.
 
 ---

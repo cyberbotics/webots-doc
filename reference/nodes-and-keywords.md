@@ -34,7 +34,7 @@ Charger, Compass, Connector, ContactProperties, Damping, DifferentialWheels,
 DistanceSensor, Display, Emitter, GPS, Gyro, HingeJoint, HingeJointParameters,
 Hinge2Joint, Hinge2JointParameters, InertialUnit, JointParameters, LED,
 LightSensor, LinearMotor, Pen, Physics, Plane, PositionSensor, Receiver, Robot,
-RotationalMotor, Servo, SliderJoint, Solid, SolidReference, Supervisor` and
+RotationalMotor, SliderJoint, Solid, SolidReference, Supervisor` and
 `TouchSensor`.
 
 Please refer to [this chapter](nodes-and-api-functions.md) for a detailed

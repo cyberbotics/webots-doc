@@ -14,46 +14,52 @@ purposes.
 
 %end
 
+Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
+
 ```
 Road {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFString   name                      ""
-  SFString   id                        ""
-  SFString   startJunction             ""
-  SFString   endJunction               ""
-  SFFloat    width                     7
-  SFInt32    numberOfLanes             2
-  SFInt32    numberOfForwardLanes      1
-  SFFloat    speedLimit                -1.0
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
-  MFFloat    roadBorderWidth           [ 0.8 ]
-  SFBool     road                      TRUE
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
-  SFBool     rightSide                 TRUE
-  SFBool     leftSide                  TRUE
-  MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]
-  MFFloat    roadTilt                  [ 0, 0]
-  MFFloat    startingAngle             [ ]
-  MFFloat    endingAngle               [ ]
-  MFString   startLine                 [ ]
-  MFString   endLine                   [ ]
-  SFInt32    splineSubdivision         4
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   pavementTexture           "textures/pavement.jpg"
-  MFString   bottomTexture             [ ]
-  SFString   turnLanesForward          ""
-  SFString   turnLanesBackward         ""
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFBool     castShadows               FALSE
-  SFString   contactMaterial           "default"
+  SFVec3f    translation                0 0 0
+  SFRotation rotation                   0 1 0 0
+  SFString   name                       "road"
+  SFString   id                         ""
+  SFString   startJunction              ""
+  SFString   endJunction                ""
+  SFFloat    width                      7
+  SFInt32    numberOfLanes              2
+  SFInt32    numberOfForwardLanes       1
+  SFFloat    speedLimit                 -1.0
+  MFBool     dashedLine                 TRUE
+  SFFloat    roadBorderHeight           0.15
+  MFFloat    roadBorderWidth            [ 0.8 ]
+  SFBool     road                       TRUE
+  SFBool     rightBorder                TRUE
+  SFBool     leftBorder                 TRUE
+  SFBool     rightBarrier               FALSE
+  SFBool     leftBarrier                FALSE
+  SFBool     bottom                     FALSE
+  SFBool     rightSide                  TRUE
+  SFBool     leftSide                   TRUE
+  MFVec3f    wayPoints                  [ 0 0 0, 0 0 1 ]
+  MFFloat    roadTilt                   [ 0, 0]
+  MFFloat    startingAngle              [ ]
+  MFFloat    endingAngle                [ ]
+  MFString   startLine                  [ ]
+  MFString   endLine                    [ ]
+  SFInt32    splineSubdivision          4
+  MFString   texture                    "textures/road.jpg"
+  SFFloat    textureScale               2
+  MFString   pavementTexture            "textures/pavement.jpg"
+  MFString   bottomTexture              [ ]
+  SFString   turnLanesForward           ""
+  SFString   turnLanesBackward          ""
+  SFBool     locked                     TRUE
+  SFBool     roadBoundingObject         FALSE
+  SFBool     rightBorderBoundingObject  FALSE
+  SFBool     leftBorderBoundingObject   FALSE
+  SFBool     rightBarrierBoundingObject TRUE
+  SFBool     leftBarrierBoundingObject  TRUE
+  SFBool     castShadows                FALSE
+  SFString   contactMaterial            "default"
 }
 ```
 
@@ -79,6 +85,8 @@ the last remaining way-points).
 need the sidewalk).
 - `rightBorder`: Defines whether the road should have a right sidewalk.
 - `leftBorder`: Defines whether the road should have a left sidewalk.
+- `rightBarrier`: Defines whether a crash barrier should be added along the right border of the road.
+- `leftBarrier`: Defines whether a crash barrier should be added along the left border of the road.
 - `bottom`: Defines whether the road bottom should be displayed (useful in case of
 bridge).
 - `rightSide`: This field is used for the texture mapping. It defines whether the side
@@ -113,6 +121,8 @@ Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Ke
 bounding object.
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
 object.
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: defines whether the road should cast shadows.
 - `contactMaterial`: defines the road contact material (used by the ContactProperties node).
 
@@ -128,32 +138,15 @@ create a straight road.
 
 %end
 
+Derived from [Road](#road).
+
 ```
 StraightRoadSegment {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFFloat    width                     7
-  SFInt32    numberOfLanes             2
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
   SFFloat    startingRoadBorderWidth   0.8
   SFFloat    endingRoadBorderWidth     0.8
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
-  SFBool     rightSide                 TRUE
-  SFBool     leftSide                  TRUE
   SFFloat    length                    10
   SFFloat    startingRoadTilt          0
   SFFloat    endingRoadTilt            0
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   pavementTexture           "textures/pavement.jpg"
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFString   contactMaterial           "default"
 }
 ```
 
@@ -181,30 +174,14 @@ a regularly curved road.
 
 %end
 
+Derived from [Road](#road).
+
 ```
 CurvedRoadSegment {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFFloat    width                     7
-  SFInt32    numberOfLanes             2
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
-  MFFloat    roadBorderWidth           [ 0.8 ]
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
   SFFloat    curvatureRadius           10
   SFFloat    totalAngle                1.5708
   SFInt32    subdivision               8
   SFFloat    tilt                      0
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   pavementTexture           "textures/pavement.jpg"
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFString   contactMaterial           "default"
 }
 ```
 
@@ -231,32 +208,14 @@ garage input ramp.
 
 %end
 
+Derived from [Road](#road).
+
 ```
-Helicoidal {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFFloat    width                     7
-  SFInt32    numberOfLanes             2
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
-  SFFloat    roadBorderWidth           0.8
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
-  SFBool     rightSide                 TRUE
-  SFBool     leftSide                  TRUE
+HelicoidalRoadSegment {
   SFFloat    height                    20
   SFFloat    radius                    15
   SFFloat    heigthStep                5
   SFFloat    subdivision               64
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   pavementTexture           "textures/pavement.jpg"
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFString   contactMaterial           "default"
 }
 ```
 
@@ -280,16 +239,19 @@ The `Crossroad` PROTO represents a crossroad.
 
 %end
 
+Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
+
 ```
 Crossroad {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
-  SFString   name             ""
+  SFString   name             "crossroad"
   SFString   id               ""
   MFVec3f    shape            [ 0 0 0, 1 0 0, 0 0 1]
   MFString   connectedRoadIDs []
   SFBool     boundingObject   FALSE
   SFBool     bottom           FALSE
+  MFString   texture          "textures/asphalt.jpg"
   SFBool     locked           TRUE
   SFBool     castShadows      FALSE
   SFString   contactMaterial  "default"
@@ -306,6 +268,11 @@ only the specific ones will be explained.
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
 - `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
 - `boundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
+- `texture`: Defines the texture of the crossroad.
+- `bottom`: Defines whether the crossroad bottom should be displayed (useful in case of
+bridge).
+- `castShadows`: Defines whether the crossroad should cast shadows.
+- `contactMaterial`: Defines the crossroad contact material (used by the ContactProperties node).
 
 ### Roundabout
 
@@ -317,16 +284,11 @@ The `Roundabout` PROTO represents a roundabout intersection.
 
 %end
 
+Derived from [Crossroad](#crossroad).
+
 ```
 Roundabout {
-  SFVec3f    translation              0 0 0
-  SFRotation rotation                 0 1 0 0
   SFInt32    subdivision              16
-  SFInt32    numberOfLanes            2
-  SFBool     bottom                   FALSE
-  SFBool     border                   TRUE
-  SFFloat    borderWidth              0.8
-  SFFloat    borderHeight             0.2
   SFFloat    innerRadius              4
   SFFloat    outerRadius              8
   SFBool     center                   TRUE
@@ -340,14 +302,9 @@ Roundabout {
   MFString   startRoadsEndLine        [ ]
   MFBool     startRoadsDashedLine     FALSE
   SFBool     roadBoundingObject       FALSE
-  SFBool     borderBoundingObject     FALSE
   SFBool     centerBoundingObject     FALSE
-  SFString   contactMaterial          "default"
-  SFBool     locked                   TRUE
   MFString   centerTexture            "textures/grass.png"
-  MFString   texture                  "textures/road_no_border_line.jpg"
   SFFloat    textureScale             2
-  MFString   junctionTexture          "textures/asphalt.jpg"
   MFString   startRoadsTexture        "textures/road.jpg"
 }
 ```
@@ -379,10 +336,13 @@ The `RoadIntersection` PROTO represents a perpendicular intersection.
 
 %end
 
+Derived from [Crossroad](#crossroad).
+
 ```
 RoadIntersection {
   SFVec3f    translation                    0 0 0
   SFRotation rotation                       0 1 0 0
+  SFString   name                           "road intersection"
   SFInt32    roadNumber                     4
   SFFloat    roadsWith                      7
   SFBool     startRoads                     TRUE
@@ -415,31 +375,14 @@ The `LaneSeparation` PROTO represents a road spliting in two.
 
 %end
 
+Derived from [Crossroad](#crossroad) and [Road](#road).
+
 ```
 LaneSeparation {
-  SFVec3f    translation                 0 0 0
-  SFRotation rotation                    0 1 0 0
-  SFFloat    width                       14
-  SFFloat    length                      5
-  SFInt32    numberOfLanes               4
   SFInt32    numberOfleavingLanes        2
   SFBool     newLaneLeft                 TRUE
-  MFBool     dashedLine                  TRUE
-  SFFloat    roadBorderHeight            0.15
-  SFFloat    roadBorderWidth             0.8
-  SFBool     rightBorder                 TRUE
-  SFBool     leftBorder                  TRUE
   SFBool     centralBorder               TRUE
-  SFBool     bottom                      FALSE
-  MFString   texture                     "textures/road.jpg"
-  SFFloat    textureScale                2
-  MFString   pavementTexture             "textures/pavement.jpg"
-  SFBool     locked                      TRUE
-  SFBool     roadBoundingObject          FALSE
-  SFBool     rightBorderBoundingObject   FALSE
-  SFBool     leftBorderBoundingObject    FALSE
   SFBool     centralBorderBoundingObject FALSE
-  SFString   contactMaterial             "default"
 }
 ```
 
@@ -466,29 +409,13 @@ road.
 
 %end
 
+Derived from [Crossroad](#crossroad) and [Road](#road).
+
 ```
 AddLaneRoadSegment {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFFloat    width                     7
   SFFloat    length                    20
-  SFInt32    numberOfLanes             2
   SFBool     newLaneLeft               TRUE
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
-  SFFloat    roadBorderWidth           0.8
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   newLanetexture            "textures/road_no_border_line.jpg"
-  MFString   pavementTexture           "textures/pavement.jpg"
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFString   contactMaterial           "default"
+  MFString   newLaneTexture            "textures/road_no_border_line.jpg"
 }
 ```
 
@@ -500,7 +427,7 @@ only the specific ones will be explained.
 - `length`: Defines in how many meter the new lane is created.
 - `newLaneLeft`: Defines whether the new lane should be created on the right or left
 side of the road.
-- `newLanetexture`: Defines the texture to be used for the new lane.
+- `newLaneTexture`: Defines the texture to be used for the new lane.
 
 ### AddLanesRoadSegment
 
@@ -514,30 +441,11 @@ several lanes to the road.
 
 %end
 
+Derived from [Crossroad](#crossroad) and [Road](#road).
+
 ```
 AddLanesRoadSegment {
-  SFVec3f    translation               0 0 0
-  SFRotation rotation                  0 1 0 0
-  SFFloat    width                     7
-  SFFloat    length                    20
-  SFInt32    numberOfLanes             2
-  SFInt32    numberOfnewLanes          2
-  SFBool     newLaneLeft               TRUE
-  MFBool     dashedLine                TRUE
-  SFFloat    roadBorderHeight          0.15
-  SFFloat    roadBorderWidth           0.8
-  SFBool     rightBorder               TRUE
-  SFBool     leftBorder                TRUE
-  SFBool     bottom                    FALSE
-  MFString   texture                   "textures/road.jpg"
-  SFFloat    textureScale              2
-  MFString   newLanetexture            "textures/road_no_border_line.jpg"
-  MFString   pavementTexture           "textures/pavement.jpg"
-  SFBool     locked                    TRUE
-  SFBool     roadBoundingObject        FALSE
-  SFBool     rightBorderBoundingObject FALSE
-  SFBool     leftBorderBoundingObject  FALSE
-  SFString   contactMaterial           "default"
+  SFInt32    numberOfNewLanes          2
 }
 ```
 
@@ -546,4 +454,4 @@ AddLanesRoadSegment {
 Most of the fields are similar to the one of the `Road` PROTO. Therefore, only
 the specific one will be explained.
 
-- `numberOfnewLanes`: Defines the number of new lanes to be added to the road.
+- `numberOfNewLanes`: Defines the number of new lanes to be added to the road.

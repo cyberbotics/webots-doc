@@ -60,7 +60,7 @@ engine that is used to charge the battery in case of `power-split hybrid`
 - `hybridPowerSplitRPM`: Defines the fixed rotational speed of the combustion
 engine in case of `power-split hybrid` `engineType`.
 
-The `extensionSlot` field is filled in by default with the `AutomobileLights`
+The `extensionSlot` field is filled in by default with the `VehicleLights`
 PROTO.
 
 #### Engine sound
@@ -71,16 +71,16 @@ If the `engineSound` field of the `Car` PROTO is not empty, the sound file defin
 ![engine_sound.png](images/engine_sound.png)
 %end
 
-### AutomobileLights
+### VehicleLights
 
-The `AutomobileLights` PROTO is used to add all the models of the regular lights
+The `VehicleLights` PROTO is used to add all the models of the regular lights
 present in a car (based on `LED` nodes). For each light you can specify its
 shape and the color emitted when the light is switched on. Of course if you
-don't need to have lights you can safely remove the `AutomobileLights` PROTO
+don't need to have lights you can safely remove the `VehicleLights` PROTO
 from `extensionSlot`.
 
 ```
-AutomobileLights {
+VehicleLights {
   MFNode    front           [ ]
   MFColor   frontColor      [ 0.8 0.8 0.8 ]
   MFNode    rightIndicator  [ ]
@@ -102,11 +102,11 @@ Here again, you can easily create your own PROTO that inherits from the
 PROTO models that inherit from the [Car](#car) PROTO are provided. They
 represent different models of car:
 
-- the X5 from BMW
-- the MKZ from Lincoln
 - the Sport SVR from Range Rover
-- the C-Zero from Citroen
+- the X5 from BMW
 - the Prius from Toyota
+- the MKZ from Lincoln
+- the C-Zero from Citroen
 
 %figure "Models of cars created using the Car PROTO"
 
@@ -120,22 +120,40 @@ where to put sensors (or actuators if needed), which are in the front, top, rear
 and center of the car. The position of the central sensors slot is always at 0 0
 0 (which is the center of the rear wheels axis). For the three other sensor
 slots, the positions are different for each model (because the size of the cars
-differs), see the [following table](#slotpositions) for the exact positions.
+differs), see the [following table](#positions-of-the-car-sensor-slots) for the exact positions.
 
-%figure "Positions of the sensors slots"
+%figure "Positions of the car sensor slots"
 
 | Model              | Front slot translation | Top slot translation | Rear slot translation |
 | ------------------ | ---------------------- | -------------------- | --------------------- |
-| BmwX5              | 0.0 0.45 3.850         | 0.0 1.45 1.000       | 0.0 0.3 -1.000        |
-| LincolnMKZ         | 0.0 0.142 3.944        | 0.0 1.16 1.110       | 0.0 0.33 -1.06        |
+| BmwX5              | 0.0 0.45 3.85          | 0.0 1.45 1.0         | 0.0 0.3 -1.0          |
+| LincolnMKZ         | 0.0 0.142 3.944        | 0.0 1.16 1.11        | 0.0 0.33 -1.06        |
 | RangeRoverSportSVR | 0.0 0.5 3.5            | 0.0 1.3 1.4          | 0.0 0.33 -1.06        |
 | CitroenCZero       | 0.0 0.05 3.075         | 0.0 1.35 1.075       | 0.0 0.3 -0.425        |
-| ToyotaPrius        | 0.0 0.40 3.635         | 0.0 1.30 1.100       | 0.0 0.3 -0.850        |
+| ToyotaPrius        | 0.0 0.40 3.635         | 0.0 1.30 1.1         | 0.0 0.3 -0.850        |
 
 %end
 
-For each model of car, a `simple` PROTO is present too. These simplified
-kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is
-therefore not possible to add sensors or control them. But they are made
-to represent non-moving parked cars or to be moved using a
-Supervisor because they are much faster to simulate than the normal PROTO models.
+In order to simplify some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.
+
+### Heavy-weights
+
+Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck. In the case of the truck, a trailer can be present or not. The latter is the `endPoint` of a `HingeJoint` allowing the trailer to freely rotate around its attachment point. There are currently two trailers to be used: a regular one and a tank shaped model.
+
+%figure "Models of the bus and truck created using the `Car` PROTO"
+
+![heavy_weights.png](images/heavy_weights.png)
+
+%end
+
+Similar to the car models, the heavy-weights provide four `sensorSlots` at the top, front, rear and center of the vehicles. Because the trailer for the `Truck` is optional, the center slot is defined at the center of the rear wheel axis of the cab. The rest of the positions can be seen in the [following table](#positions-of-the-heavy-weights-sensors-slots):
+
+%figure "Positions of the heavy-weights sensors slots"
+
+| Model   | Front slot translation | Top slot translation | Rear slot translation |
+| ------- | ---------------------- | -------------------- | --------------------- |
+| Bus     | 0.0 0.2 11.5           | 0.0 5.3 2.5          | 0.0 1.0 -6.2          |
+| Truck   | 0.0 1.1 6.75           | 0.0 4.15 4.3         | 0.0 2.7 -7.3          |
+
+
+%end

@@ -15,12 +15,13 @@ and orientation of the PROTO instances.
 "TwoColorChair.proto":
 
 ```
-#VRML_SIM V8.6 utf8
+#VRML_SIM R2018a utf8
 # A two-color chair
 
 PROTO TwoColorChair [
   field SFVec3f    translation       0 0.91 0
   field SFRotation rotation          0 1 0 0
+  field SFString   name              "two-color chair"
   field SFColor    legColor          1 1 0
   field SFColor    seatColor         1 0.65 0
   field SFNode     seatGeometry      NULL
@@ -70,6 +71,7 @@ PROTO TwoColorChair [
         children [ USE LEG_SHAPE ]
       }
     ]
+    name IS name
   }
 }
 ```
@@ -89,7 +91,7 @@ default must be specified.
 "TwoChairs.wbt":
 
 ```
-#VRML_SIM V8.6 utf8
+#VRML_SIM R2018a utf8
 
 WorldInfo {
 }

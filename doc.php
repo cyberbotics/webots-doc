@@ -15,22 +15,15 @@
     if ($j === FALSE) {
       $page = substr($uri, $i + 1);
       $branch = '';
-      $tag = '';
     } else {
       $page = substr($uri, $i + 1, $j - $i - 1);
       $version = substr($uri, $j + 9);
-      if (preg_match('/^\d+\.\d*(.)+$/',$version)) {
-        $branch = '';
-        $tag = $version;
-      } else {
-        $n = strpos($version, ':');
-        if ($n === FALSE)
-          $branch = $version;
-        else {
-          $branch = substr($version, $n + 1);
-          $repository = substr($version, 0, $n);
-        }
-        $tag = '';
+      $n = strpos($version, ':');
+      if ($n === FALSE)
+        $branch = $version;
+      else {
+        $branch = substr($version, $n + 1);
+        $repository = substr($version, 0, $n);
       }
     }
   } else {
@@ -38,7 +31,6 @@
     $book = $uri;
     $page = 'index';
     $branch = '';
-    $tag = '';
     # anchor is not sent to the server, so it has to be computed by the javascript
   }
   if (!isset($repository))
@@ -46,19 +38,18 @@
   $scripts="
     <link rel='stylesheet' type='text/css' href='/css/webots-doc.css'/>
     <link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/highlight/9.5.0/default.min.css'/>
-    <script src='https://www.cyberbotics.com/wwi/8.6/request_methods.js'></script>
+    <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/8.6/showdown-extensions.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/8.6/viewer.js'></script>
+    <script src='https://www.cyberbotics.com/wwi/R2018a/showdown-extensions.js'></script>
+    <script src='https://www.cyberbotics.com/wwi/R2018a/viewer.js'></script>
     <script>
       setup = {
         'book':   '$book',
         'page':   '$page',
         'anchor': extractAnchor(),
         'branch': '$branch',
-        'tag':    '$tag',
         'repository': '$repository',
         'url':    'https://raw.githubusercontent.com/$repository/webots-doc/'
       }

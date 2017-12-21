@@ -334,11 +334,14 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; std::string [getModel](joystick.md#wb_joystick_get_model)() const;                              |
 | &nbsp;&nbsp; int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)() const;                      |
 | &nbsp;&nbsp; int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis) const;                 |
+| &nbsp;&nbsp; int [getNumberOfPovs](joystick.md#wb_joystick_get_number_of_povs)() const;                      |
+| &nbsp;&nbsp; int [getPovValue](joystick.md#wb_joystick_get_number_of_povs)(int pov) const;                   |
 | &nbsp;&nbsp; int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)() const;                     |
 | &nbsp;&nbsp; void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);                 |
 | &nbsp;&nbsp; void [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(double duration);   |
 | &nbsp;&nbsp; void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain);           |
 | &nbsp;&nbsp; void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);              |
+| &nbsp;&nbsp; void [setForceAxis](joystick.md#wb_joystick_set_constant_force)(int axis);                      |
 | };                                                                                                           |
 
 %end

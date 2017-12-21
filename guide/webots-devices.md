@@ -1,20 +1,23 @@
 ## Webots Devices
 
-This section provides a simple example for each Webots device. The world files
-are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and
-their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers"
-directory. The world files and the corresponding controller are named according
-to the device they exemplify.
+The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots applications demonstrating the individual Webots devices and their corresponding API.
+
+The world files are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers" directory.
+The world files and the corresponding controllers are named according to the device they demonstrate.
+
+Most of the devices below are shown using a simple two-wheeled blue robot on a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
+The studied devices are attached on this robot.
+
+%figure "MyBot in closed squared arena."
+
+![mybot.png](images/mybot.png)
+
+%end
+
 
 ### battery.wbt
 
-**Keywords**: Battery, Charger, differential wheels
-
-%figure "battery"
-
-![battery.png](images/battery.png)
-
-%end
+**Keywords**: Battery, Charger
 
 In this example, a robot moves in a closed arena. The energy consumed by the
 wheel motors slowly discharges the robot's battery. When the battery level
@@ -27,13 +30,7 @@ full.
 
 ### bumper.wbt
 
-**Keywords**: TouchSensor, bumper, differential wheels
-
-%figure "bumper"
-
-![bumper.png](images/bumper.png)
-
-%end
+**Keywords**: TouchSensor, bumper
 
 In this example, a robot moves in a closed arena filled with obstacles. Its
 "bumper" `TouchSensor` is used to detect collisions. Each time a collision is
@@ -41,13 +38,7 @@ detected, the robot moves back and turns a bit.
 
 ### camera.wbt
 
-**Keywords**: Camera, image processing, differential wheels
-
-%figure "camera"
-
-![camera.png](images/camera.png)
-
-%end
+**Keywords**: Camera, image processing, pixel, RGB
 
 In this example, a robot uses a camera to detect colored objects. The robot
 analyzes the RGB color level of each pixel of the camera images. It turns and
@@ -58,13 +49,7 @@ to detect.
 
 ### connector.wbt
 
-**Keywords**: Connector, RotationalMotor, IndexedLineSet, USE, DEF, differential wheels
-
-%figure "connector"
-
-![connector.png](images/connector.png)
-
-%end
+**Keywords**: Connector, RotationalMotor, IndexedLineSet
 
 In this example, a light robot (light blue) is lifted over two heavier robots
 (dark blue). All three robots are equipped with a `Connector` placed at the tip
@@ -79,26 +64,14 @@ robot's name.
 
 ### distance_sensor.wbt
 
-**Keywords**: DistanceSensor, Braitenberg, differential wheels
-
-%figure "distance_sensor"
-
-![distance_sensor.png](images/distance_sensor.png)
-
-%end
+**Keywords**: DistanceSensor, Braitenberg
 
 In this example, a robot has eight `DistanceSensor`s placed at regular intervals
 around its body. The robot avoids obstacles using the Braitenberg technique.
 
 ### emitter_receiver.wbt
 
-**Keywords**: differential wheels, Emitter, Receiver, infra-red transmission, USE, DEF
-
-%figure "emitter_receiver"
-
-![emitter_receiver.png](images/emitter_receiver.png)
-
-%end
+**Keywords**: Emitter, Receiver, infra-red transmission
 
 In this example, there are two robots: one is equipped with an `Emitter`, the
 other one with a `Receiver`. Both robots move among the obstacles while the
@@ -113,13 +86,7 @@ Note that the communication between "infra-red" `Emitter`s and
 
 ### encoders.wbt
 
-**Keywords**: differential wheels, encoders
-
-%figure "encoders"
-
-![encoders.png](images/encoders.png)
-
-%end
+**Keywords**: encoders
 
 This example demonstrates the usage of the wheel encoders of
 `differential wheels` robots. The controller randomly chooses target encoder
@@ -129,13 +96,7 @@ random values. The robot does not pay any attention to obstacles.
 
 ### force_sensor.wbt
 
-**Keywords**: Force, TouchSensor, differential wheels
-
-%figure "force_sensor"
-
-![force_sensor.png](images/force_sensor.png)
-
-%end
+**Keywords**: Force, TouchSensor
 
 This example is nearly the same as "bumper.wbt" (see [this
 section](#bumper-wbt)). The only difference is that this robot uses a "force"
@@ -144,13 +105,7 @@ collision, which is printed in the Console window.
 
 ### gps.wbt
 
-**Keywords**: GPS, Supervisor, differential wheels, keyboard
-
-%figure "gps"
-
-![gps.png](images/gps.png)
-
-%end
+**Keywords**: GPS, Supervisor, keyboard
 
 This example shows two different techniques to find the current position
 of a robot. The first technique consists in using an on-board `GPS` device. The
@@ -163,26 +118,13 @@ position read by the Supervisor.
 
 ### led.wbt
 
-**Keywords**: LED, differential wheels
-
-%figure "led"
-
-![led.png](images/led.png)
-
-%end
+**Keywords**: LED
 
 In this example, a robot moves while randomly changing the color of three `LED`s
 on the top of its body. The color choice is printed in the Console.
 
 ### light_sensor.wbt
 
-**Keywords**: LightSensor, PointLight, lamp, light following
-
-%figure "light_sensor"
-
-![light_sensor.png](images/light_sensor.png)
-
-%end
 
 In this example, the robot uses two `LightSensor`s to follow a light source. The
 light source can be moved with the mouse; the robot will follow it.
@@ -191,25 +133,13 @@ light source can be moved with the mouse; the robot will follow it.
 
 **Keywords**: Pen, keyboard
 
-%figure "pen"
-
-![pen.png](images/pen.png)
-
-%end
-
 In this example, a robot uses a `Pen` device to draw on the floor. The
 controller randomly chooses the ink color. The ink on the floor fades slowly.
 Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 ### range_finder.wbt
 
-**Keywords**: Range-finder, Camera, differential wheels
-
-%figure "range_finder"
-
-![range_finder.png](images/range_finder.png)
-
-%end
+**Keywords**: Range-finder, Camera
 
 In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.
 The "range-finder" measures the distance to objects, so the robot knows if there

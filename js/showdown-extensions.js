@@ -154,3 +154,18 @@ showdown.extension("wbAnchors", function() {
         }
     ];
 });
+
+ // TODO: comment
+showdown.extension("wbImageSection", function() {
+    return [
+        { // TODO: comment
+            type: "lang",
+            filter: function(text, converter, options) {
+                text = text.replace(/(!\[[^\]]*\]\s*\([^\)]*\)): ([^\n]*)/gi, function(match, image, text) {
+                    return '<section><b>' + converter.makeHtml(image) + converter.makeHtml(text) + '</b></section>';
+                });
+                return text;
+            }
+        }
+    ];
+});

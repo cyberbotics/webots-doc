@@ -19,6 +19,12 @@ The studied devices are attached on this robot.
 
 **Keywords**: Battery, Charger
 
+%figure "battery"
+
+![battery.png](images/battery.png)
+
+%end
+
 In this example, a robot moves in a closed arena. The energy consumed by the
 wheel motors slowly discharges the robot's battery. When the battery level
 reaches zero, the robot is powered off. In order to remain powered, the robot
@@ -32,6 +38,12 @@ full.
 
 **Keywords**: TouchSensor, bumper
 
+%figure "bumper"
+
+![bumper.png](images/bumper.png)
+
+%end
+
 In this example, a robot moves in a closed arena filled with obstacles. Its
 "bumper" `TouchSensor` is used to detect collisions. Each time a collision is
 detected, the robot moves back and turns a bit.
@@ -39,6 +51,12 @@ detected, the robot moves back and turns a bit.
 ### camera.wbt
 
 **Keywords**: Camera, image processing, pixel, RGB
+
+%figure "camera"
+
+![camera.png](images/camera.png)
+
+%end
 
 In this example, a robot uses a camera to detect colored objects. The robot
 analyzes the RGB color level of each pixel of the camera images. It turns and
@@ -50,6 +68,12 @@ to detect.
 ### connector.wbt
 
 **Keywords**: Connector, RotationalMotor, IndexedLineSet
+
+%figure "connector"
+
+![connector.png](images/connector.png)
+
+%end
 
 In this example, a light robot (light blue) is lifted over two heavier robots
 (dark blue). All three robots are equipped with a `Connector` placed at the tip
@@ -66,12 +90,24 @@ robot's name.
 
 **Keywords**: DistanceSensor, Braitenberg
 
+%figure "distance_sensor"
+
+![distance_sensor.png](images/distance_sensor.png)
+
+%end
+
 In this example, a robot has eight `DistanceSensor`s placed at regular intervals
 around its body. The robot avoids obstacles using the Braitenberg technique.
 
 ### emitter_receiver.wbt
 
 **Keywords**: Emitter, Receiver, infra-red transmission
+
+%figure "emitter_receiver"
+
+![emitter_receiver.png](images/emitter_receiver.png)
+
+%end
 
 In this example, there are two robots: one is equipped with an `Emitter`, the
 other one with a `Receiver`. Both robots move among the obstacles while the
@@ -88,6 +124,12 @@ Note that the communication between "infra-red" `Emitter`s and
 
 **Keywords**: encoders
 
+%figure "encoders"
+
+![encoders.png](images/encoders.png)
+
+%end
+
 This example demonstrates the usage of the wheel encoders of
 `differential wheels` robots. The controller randomly chooses target encoder
 positions, then it rotates its wheels until the encoder values reach the chosen
@@ -98,6 +140,12 @@ random values. The robot does not pay any attention to obstacles.
 
 **Keywords**: Force, TouchSensor
 
+%figure "force_sensor"
+
+![force_sensor.png](images/force_sensor.png)
+
+%end
+
 This example is nearly the same as "bumper.wbt" (see [this
 section](#bumper-wbt)). The only difference is that this robot uses a "force"
 `TouchSensor` instead of a "bumper". So this robot can measure the force of each
@@ -106,6 +154,12 @@ collision, which is printed in the Console window.
 ### gps.wbt
 
 **Keywords**: GPS, Supervisor, keyboard
+
+%figure "gps"
+
+![gps.png](images/gps.png)
+
+%end
 
 This example shows two different techniques to find the current position
 of a robot. The first technique consists in using an on-board `GPS` device. The
@@ -120,11 +174,23 @@ position read by the Supervisor.
 
 **Keywords**: LED
 
+%figure "led"
+
+![led.png](images/led.png)
+
+%end
+
 In this example, a robot moves while randomly changing the color of three `LED`s
 on the top of its body. The color choice is printed in the Console.
 
 ### light_sensor.wbt
 
+
+%figure "light_sensor"
+
+![light_sensor.png](images/light_sensor.png)
+
+%end
 
 In this example, the robot uses two `LightSensor`s to follow a light source. The
 light source can be moved with the mouse; the robot will follow it.
@@ -133,6 +199,12 @@ light source can be moved with the mouse; the robot will follow it.
 
 **Keywords**: Pen, keyboard
 
+%figure "pen"
+
+![pen.png](images/pen.png)
+
+%end
+
 In this example, a robot uses a `Pen` device to draw on the floor. The
 controller randomly chooses the ink color. The ink on the floor fades slowly.
 Use the 'Y' and 'X' keys to switch the `Pen` on and off.
@@ -140,6 +212,12 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 ### range_finder.wbt
 
 **Keywords**: Range-finder, Camera
+
+%figure "range_finder"
+
+![range_finder.png](images/range_finder.png)
+
+%end
 
 In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.
 The "range-finder" measures the distance to objects, so the robot knows if there

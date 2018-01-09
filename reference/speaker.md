@@ -9,7 +9,8 @@ Speaker {
 
 ### Description
 
-The [Speaker](#speaker) node represents a loudspeaker device that can be embedded onboard a robot or standing in the environment. It can be used to play sounds and perform text-to-speech from the controller API.
+The [Speaker](#speaker) node represents a loudspeaker device that can be embedded onboard a robot or standing in the environment.
+It can be used to play sounds and perform text-to-speech from the controller API.
 
 ### Speaker Functions
 
@@ -27,9 +28,23 @@ void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *soun
 
 **Description**
 
-This function allows the user to play a sound file. Currently only wave files are supported. The function takes as arguments two speaker `WbDeviceTag` respectively for the left and right channels. If both channels should be played on the same speaker or the file has only one channel, it is possible to pass the same device tag for both left and right arguments. Alternatively, if one channel should be ignored, it is possible to pass `0` instead of one of the two tags.
+This function allows the user to play a sound file.
+All major audio formats are supported, such as MP3, AIFF, AAC, WAV, FLAC and OGG Vorbis.
+For an exhaustive list, see [here](https://en.wikipedia.org/wiki/FFmpeg#Supported_formats).
+The function takes as arguments two speaker `WbDeviceTag` respectively for the left and right channels.
+If both channels should be played on the same speaker or the file has only one channel, it is possible to pass the same device tag for both left and right arguments.
+Alternatively, if one channel should be ignored, it is possible to pass `0` instead of one of the two tags.
 
-The `sound` argument specifies the path to the wave file that should be played. The `volume` argument allows the user to specify the volume of this sound (between 0.0 and 1.0). The `pitch` argument allows the user to modify the pitch of the sound, the default sound pitch is multiplied by the pitch argument. The `pitch` argument should be positive. A value of 1.0 means no pitch change. The `balance` argument allows the user to specify the balance between the left and the right speaker (between -1.0 and 1.0). A value of 0 means no balance: both channels have the same volume. A value of -1.0 means that the right channel is muted. A value of 1.0 means that the left channel is muted. Intermediate values define a difference of volume between the left and right channels. Finally, the boolean `loop` argument defines if the sound will be played only once or repeatedly.
+The `sound` argument specifies the path to the sound file that should be played.
+The `volume` argument allows the user to specify the volume of this sound (between 0.0 and 1.0).
+The `pitch` argument allows the user to modify the pitch of the sound, the default sound pitch is multiplied by the pitch argument.
+The `pitch` argument should be positive.
+A value of 1.0 means no pitch change.
+The `balance` argument allows the user to specify the balance between the left and the right speaker (between -1.0 and 1.0).
+A value of 0 means no balance: both channels have the same volume.
+A value of -1.0 means that the right channel is muted. A value of 1.0 means that the left channel is muted.
+Intermediate values define a difference of volume between the left and right channels.
+Finally, the boolean `loop` argument defines if the sound will be played only once or repeatedly.
 
 It is possible to change the volume, pitch, balance, and loop parameters of a sound currently playing by calling again the `wb_speaker_play_sound` function with the same speakers and `sound` arguments.
 
@@ -52,7 +67,9 @@ void wb_speaker_stop(WbDeviceTag tag, const char *sound);
 
 **Description**
 
-This function stops a specific sound. The `sound` argument is the path to an audio file currently playing in the speaker. It should be the same path as the one previously provided to the `wb_speaker_play_sound` function.
+This function stops a specific sound.
+The `sound` argument is the path to an audio file currently playing in the speaker.
+It should be the same path as the one previously provided to the `wb_speaker_play_sound` function.
 
 It is possible to stop all the sounds currently playing in a speaker by setting `sound` to `NULL`.
 
@@ -76,7 +93,8 @@ void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
 
 **Description**
 
-The `wb_speaker_set_engine` function allows the user to set the text-to-speech engine that is going to be used by a speaker. The `engine` parameter should be one of the following values:
+The `wb_speaker_set_engine` function allows the user to set the text-to-speech engine that is going to be used by a speaker.
+The `engine` parameter should be one of the following values:
 
   - `"pico"` for the SVOX Pico text-to-speech engine (default value).
   - `"microsoft"` for the Microsoft SAPI5 text-to-speech engine (only available on Windows).
@@ -85,7 +103,8 @@ The function returns `false` if the engine cannot be set and `true` otherwise.
 
 The `wb_speaker_get_engine` function allows the user to get the text-to-speech engine for a speaker device.
 
-The `wb_speaker_set_language` function allows the user to set the language of the current text-to-speech engine. For the `"pico"` engine, the `language` parameter should be set to one of the following values:
+The `wb_speaker_set_language` function allows the user to set the language of the current text-to-speech engine.
+For the `"pico"` engine, the `language` parameter should be set to one of the following values:
 
   - `"en-US"` for American English (default value).
   - `"en-UK"` for British English.
@@ -101,20 +120,38 @@ The function will return `true` on success and `false` if it failed to set the r
 
 The `wb_speaker_get_language` function allows the user to get the language of the text-to-speech for a speaker device.
 
-The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker. The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function. The resulting sound is played through the specified `speaker`. The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic. Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard. Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines. Additional tags and parameters may be supported by the `microsoft` engine. Please refer to the [Microsoft Speech API  (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx) documentation about it.
+The `wb_speaker_speak` function allows the user to execute text-to-speech on the speaker.
+The value of the `text` parameter is converted into sound by Webots using the engine specified by the `wb_speaker_set_engine` function and the language specified by the `wb_speaker_set_language` function.
+The resulting sound is played through the specified `speaker`.
+The specified text could be plain text including punctuation signs such as "Hello world!", or can be enriched with special effects to make it more realistic.
+Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard.
+Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines.
+Additional tags and parameters may be supported by the `microsoft` engine.
+Please refer to the [Microsoft Speech API  (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx) documentation about it.
 
 **SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 
 - `prosody` has three supported parameters: `pitch`, `rate` and `volume`.
-  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch. For example `-2st`. The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
-  - `rate` indicates the speaking rate (speed) of the contained text. This is a relative value, expressed as a number that acts as a multiplier of the default. For example, a value of `1` results in no change in the rate. A value of `.5` results in a halving of the rate. A value of `3` results in a tripling of the rate.
-  - `volume` indicates the volume level of the speaking voice. This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest. For example, `75`. The default is `100`.
+  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch.
+    For example `-2st`. The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
+  - `rate` indicates the speaking rate (speed) of the contained text.
+    This is a relative value, expressed as a number that acts as a multiplier of the default.
+    For example, a value of `1` results in no change in the rate.
+    A value of `.5` results in a halving of the rate.
+    A value of `3` results in a tripling of the rate.
+  - `volume` indicates the volume level of the speaking voice.
+    This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest.
+    For example, `75`.
+    The default is `100`.
 
-- `audio` has one supported parameter which is `src`, specifying a WAV file. This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
+- `audio` has one supported parameter which is `src`, specifying a WAV file.
+  This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
 
 Example:
 
 ```
 Hello! Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian.
-Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>. <prosody rate="0.5">And I can change the speed</prosody><prosody rate="1.5">at which I speak</prosody>. I can also <prosody volume="20">adjust the volume of my voice</prosody>. Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</audio>
+Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>. 
+<prosody rate="0.5">And I can change the speed</prosody><prosody rate="1.5">at which I speak</prosody>.
+I can also <prosody volume="20">adjust the volume of my voice</prosody>. Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</audio>
 ```

@@ -65,7 +65,7 @@ SickLms291 {
 }
 ```
 
-The `noise` field specifies the standard deviation of the gaussian noise in meters.
+The `noise` field specifies the standard deviation of the gaussian depth noise in meters.
 
 The `resolution` field specifies the number of points returned per layer per scan.
 
@@ -73,8 +73,8 @@ The `resolution` field specifies the number of points returned per layer per sca
 
 The `Sick LD-MRS` is a 2 or 4 layers lidar with a range of 300 meters and a field of view of respectively 110 or 85 degrees.
 
-Top and bottom layers are split horizontally with an angle of 2.4 degrees.
-Bottom layer corresponds to layer 0.
+The top and bottom layers are split horizontally with an angle of 2.4 degrees.
+Layer 0 corresponds to the bottom layer.
 First response values are corresponding to the device right.
 The frustum cone is shifted to the right by an offset angle of 7.5 degrees when 4 layers are set, and 5 degrees when 2 layers are set.
 
@@ -96,15 +96,14 @@ SickLdMrs {
 }
 ```
 
-The `noise` field specifies the standard deviation of the gaussian noise in meters.
+The `noise` field specifies the standard deviation of gaussian image noise in meters.
 
 The `numberOfLayers` field specifies the number of horizontal layers. It can be either 2 or 4.
 
-The `angularResolution` field specifies the vertical angular gap between to measurement.
+The `angularResolution` field specifies the vertical angular gap between two measurements.
 From the `Sick LD-MRS` specification, it can be either 0.125, 0.25 or 0.5 degrees (to be converted in radians).
 
-The `physics` field specifies if the sensor should be affected by the physics (mass = 1 [kg]) or not.
-
+The `physics` field specifies if the sensor should be affected by physics (mass = 1 [kg]) or not.
 
 ### Velodyne
 

@@ -24,8 +24,8 @@ The following tables describe the C++ classes and their methods.
 | class [Brake](brake.md) : public [Device](#cpp_device) {                                                      |
 | &nbsp;&nbsp; void [setDampingConstant](brake.md#wb_brake_set_damping_constant)(double dampingConstant) const; |
 | &nbsp;&nbsp; int [getType](brake.md#wb_brake_set_damping_constant)() const;                                   |
-| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](brake.md#wb_brake_get_motor)() const;                                          |
-| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](brake.md#wb_brake_get_position_sensor)()  const;             |
+| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](brake.md#wb_brake_get_motor)();                                  |
+| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](brake.md#wb_brake_get_position_sensor)(); |
 | };                                                                                                            |
 
 %end
@@ -474,8 +474,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; double [getTorqueFeedback](motor.md#wb_motor_enable_force_feedback)() const;                       |
 | &nbsp;&nbsp; virtual void [setTorque](motor.md#wb_motor_set_force)(double torque);                              |
 | &nbsp;&nbsp; int [getType](motor.md#wb_motor_get_type)() const;                                                 |
-| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](motor.md#wb_motor_get_brake)() const;                                            |
-| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](motor.md#wb_motor_get_position_sensor)()  const;               |
+| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](motor.md#wb_motor_get_brake)();                                    |
+| &nbsp;&nbsp; [PositionSensor](#cpp_position_sensor) *[getPositionSensor](motor.md#wb_motor_get_position_sensor)(); |
 | };                                                                                                              |
 
 %end
@@ -548,8 +548,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [getSamplingPeriod](positionsensor.md#wb_position_sensor_get_value)();                  |
 | &nbsp;&nbsp; double [getValue](positionsensor.md#wb_position_sensor_get_value)() const;                  |
 | &nbsp;&nbsp; int [getType](positionsensor.md#wb_position_sensor_get_value)() const;                      |
-| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](positionsensor.md#wb_position_sensor_get_brake)() const;                  |
-| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](positionsensor.md#wb_position_sensor_get_motor)() const;                  |
+| &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](positionsensor.md#wb_position_sensor_get_brake)();          |
+| &nbsp;&nbsp; [Motor](#cpp_motor) *[getMotor](positionsensor.md#wb_position_sensor_get_motor)();          |
 | };                                                                                                       |
 
 %end

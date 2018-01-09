@@ -67,7 +67,7 @@ SickLms291 {
 }
 ```
 
-The `noise` field specifies the standard deviation of the gaussian noise in
+The `noise` field specifies the standard deviation of the gaussian depth noise in
 meters.
 
 The `resolution` field specifies the number of points returned per layer per

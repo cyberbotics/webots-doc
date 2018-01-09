@@ -24,8 +24,8 @@ The following tables describe the Java classes and their methods.
 | public class [Brake](brake.md) extends [Device](#java_device) {                                                |
 | &nbsp;&nbsp; public void [setDampingConstant](brake.md#wb_brake_set_damping_constant)(double dampingConstant); |
 | &nbsp;&nbsp; public int [getType](brake.md#wb_brake_set_damping_constant)();                                   |
-| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](brake.md#wb_brake_get_motor)();                                           |
-| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](brake.md#wb_brake_get_position_sensor)();               |
+| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](brake.md#wb_brake_get_motor)();                            |
+| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](brake.md#wb_brake_get_position_sensor)(); |
 | }                                                                                                              |
 
 %end
@@ -514,8 +514,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getTorqueFeedback](motor.md#wb_motor_enable_force_feedback)();                     |
 | &nbsp;&nbsp; public void [setTorque](motor.md#wb_motor_set_force)(double torque);                              |
 | &nbsp;&nbsp; public int [getType](motor.md#wb_motor_get_type)();                                               |
-| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](motor.md#wb_motor_get_brake)();                                           |
-| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](motor.md#wb_motor_get_position_sensor)();               |
+| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](motor.md#wb_motor_get_brake)();                            |
+| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](motor.md#wb_motor_get_position_sensor)(); |
 | }                                                                                                              |
 
 %end
@@ -604,8 +604,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getSamplingPeriod](positionsensor.md#wb_position_sensor_get_value)();          |
 | &nbsp;&nbsp; public double [getValue](positionsensor.md#wb_position_sensor_get_value)();                |
 | &nbsp;&nbsp; public int [getType](positionsensor.md#wb_position_sensor_get_value)();                    |
-| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](positionsensor.md#wb_position_sensor_get_brake)();                 |
-| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](positionsensor.md#wb_position_sensor_get_motor)();                 |
+| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](positionsensor.md#wb_position_sensor_get_brake)();  |
+| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](positionsensor.md#wb_position_sensor_get_motor)();  |
 | }                                                                                                       |
 
 %end

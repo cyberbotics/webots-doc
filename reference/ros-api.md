@@ -3,7 +3,7 @@
 The following tables describe the available ros messages and services for each
 device.
 
-The <device\_name> should be replaced by the actual name of the device and each
+The `<device_name>` should be replaced by the actual name of the device and each
 services/topics names should be prepended with ``<robot_unique_name>`` (have a
 look at the [User
 Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)
@@ -182,14 +182,18 @@ for more information about the value of `robot_unique_name`).
 | -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | [/joystick/pressed_button](joystick.md#wb_joystick_get_pressed_button)                 | topic         | webots\_ros::Int8Stamped                               | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int8 data |
 | [/joystick/axis`<`X`>`](joystick.md#wb_joystick_get_number_of_axes)                    | topic         | webots\_ros::Int8Stamped                               | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int8 data |
+| [/joystick/pov`<`X`>`](joystick.md#wb_joystick_get_number_of_povs)                     | topic         | webots\_ros::Int8Stamped                               | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int8 data |
 | [/joystick/enable](joystick.md#wb_joystick_enable)                                     | service       | [webots\_ros::set\_int](#common_services)              |                                                                                      |
 | [/joystick/get\_sampling\_period](joystick.md#wb_joystick_enable)                      | service       | [webots\_ros::get\_int](#common_services)              |                                                                                      |
 | [/joystick/get\_number\_of\_axes](joystick.md#wb_joystick_get_number_of_axes)          | service       | [webots\_ros::get\_int](#common_services)              |                                                                                      |
+| [/joystick/get\_number\_of\_povs](joystick.md#wb_joystick_get_number_of_povs)          | service       | [webots\_ros::get\_int](#common_services)              |                                                                                      |
 | [/joystick/is\_connected](joystick.md#wb_joystick_is_connected)                        | service       | [webots\_ros::get\_bool](#common_services)             |                                                                                      |
+| [/joystick/get\_model](joystick.md#wb_joystick_get_model)                              | service       | [webots\_ros::get\_string](#common_services)           |                                                                                      |
 | [/joystick/set\_constant\_force](joystick.md#wb_joystick_set_constant_force)           | service       | [webots\_ros::set\_int](#common_services)              |                                                                                      |
 | [/joystick/set\_constant\_force\_duration](joystick.md#wb_joystick_set_constant_force) | service       | [webots\_ros::set\_float](#common_services)            |                                                                                      |
 | [/joystick/set\_auto\_centering\_gain](joystick.md#wb_joystick_set_constant_force)     | service       | [webots\_ros::set\_float](#common_services)            |                                                                                      |
 | [/joystick/set\_resistance\_gain](joystick.md#wb_joystick_set_constant_force)          | service       | [webots\_ros::set\_float](#common_services)            |                                                                                      |
+| [/joystick/set\_force\_axis](joystick.md#wb_joystick_set_constant_force)               | service       | [webots\_ros::set\_int](#common_services)              |                                                                                      |
 
 ### Keyboard
 

@@ -216,13 +216,17 @@ The following tables describe the Matlab functions.
 | [wb\_joystick\_disable](joystick.md#wb_joystick_enable)()                                       |
 | period = [wb\_joystick\_get\_sampling\_period](joystick.md#wb_joystick_enable)()                |
 | connected = [wb_joystick_is_connected](joystick.md#wb_joystick_is_connected)()                  |
+| model = [wb_joystick_get_model](joystick.md#wb_joystick_get_model)()                            |
 | axes_number = [wb_joystick_get_number_of_axes](joystick.md#wb_joystick_get_number_of_axes)()    |
 | axis_value = [wb_joystick_get_axis_value](joystick.md#wb_joystick_get_number_of_axes)(axis)     |
+| povs_number = [wb_joystick_get_number_of_povs](joystick.md#wb_joystick_get_number_of_povs)()    |
+| pov_value = [wb_joystick_get_pov_value](joystick.md#wb_joystick_get_number_of_povs)(pov)        |
 | button = [wb_joystick_get_pressed_button](joystick.md#wb_joystick_get_pressed_button)()         |
 | [wb_joystick_set_constant_force](joystick.md#wb_joystick_set_constant_force)(level)             |
 | [wb_joystick_set_constant_force_duration](joystick.md#wb_joystick_set_constant_force)(duration) |
 | [wb_joystick_set_auto_centering_gain](joystick.md#wb_joystick_set_constant_force)(gain)         |
 | [wb_joystick_set_resistance_gain](joystick.md#wb_joystick_set_constant_force)(gain)             |
+| [wb_joystick_set_force_axis](joystick.md#wb_joystick_set_constant_force)(axis)                  |
 
 %end
 

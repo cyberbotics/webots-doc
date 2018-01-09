@@ -15,7 +15,7 @@ the importer script.
 
 Follow [these instructions](https://www.cyberbotics.com/doc/guide/using-python) to install Python.
 
-Then install the Python `lxml`, `pyproj` and `shapely` modules, as described below.
+Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as described below.
 
 ### Linux
 
@@ -23,34 +23,35 @@ Then install the Python `lxml`, `pyproj` and `shapely` modules, as described bel
 
 ```
 sudo apt-get install python-pip
-sudo pip install lxml pyproj shapely
+sudo pip install lxml pyproj shapely webcolors
 ```
 
 #### Ubuntu 14.04
 
 ```
 sudo apt-get install python-pip python-dev libgeos-c1 libspatialindex-c3
-sudo pip install lxml pyproj shapely
+sudo pip install lxml pyproj shapely webcolors
 ```
 
 ### macOS
 
 ```
-pip install lxml pyproj shapely --user
+pip install lxml pyproj shapely webcolors --user
 ```
 
 ### Windows
 
-As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency.
-You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
+As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency. You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
+If you are using Python 3.6 you will need [Microsoft Visual C++ Build Tools for Visual Studio 2017](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15) instead.
 
-Download the shapely wheel called [`Shapely‑<<version>>‑cp27‑cp27m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely)
+Download the shapely wheel called [`Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely)
 and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 
 ```
 %PYTHON_PATH%\Scripts\pip.exe install lxml
 %PYTHON_PATH%\Scripts\pip.exe install pyproj
-%PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely-<<version>>-cp27-cp27m-win_amd64.whl
+%PYTHON_PATH%\Scripts\pip.exe install webcolors
+%PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl
 ```
 
 

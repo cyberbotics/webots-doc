@@ -49,7 +49,7 @@ SmsUmrr-0a29/30/31 {
     SFRotation rotation       0 1 0 0
     SFString   name           "sms-umrr"
     SFBool     occlusion      FALSE
-    SFFloat    cellSpeed   0.0
+    SFFloat    cellSpeed      0.0
     SFFloat    angularNoise   0.0
   }
 ```

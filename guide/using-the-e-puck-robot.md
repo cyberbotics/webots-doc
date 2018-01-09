@@ -66,7 +66,7 @@ table](#e-puck-features).
 
 The e-puck model in Webots is depicted in [this
 figure](#the-e-puck-model-in-webots). This model includes support for the
-differential wheel motors (encoders are also simulated), the infra-red sensors
+differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors
 for proximity and light measurements, the accelerometer, the camera, the 8
 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet
 simulated in the current model. Besides standard e-puck devices, the model also
@@ -82,7 +82,8 @@ section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 
 | Device                     | Name                                                     |
 | -------------------------- | -------------------------------------------------------- |
-| Differential wheels        | differential wheels                                      |
+| Motors                     | 'left wheel motor' and 'right wheel motor'               |
+| Position sensors           | 'left wheel sensor' and 'right wheel sensor'             |
 | Proximity sensors          | ps0 to ps7                                               |
 | Light sensors              | ls0 to ls7                                               |
 | LEDs                       | led0 to led7 (e-puck ring), led8 (body) and led9 (front) |
@@ -99,17 +100,13 @@ section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 | Robot radius          | 37 mm         |
 | Wheel radius          | 20.5 mm       |
 | Axle length           | 52 mm         |
-| Encoder resolution    | 159.23        |
-| Speed unit            | 0.00628 rad/s |
-| Maximum angular speed | 1000 units    |
+| Encoder resolution    | 0.00628 rad   |
+| Maximum angular speed | 6.28 rad/s    |
 
 %end
 
-The e-puck dimensions and speed specifications are shown in [this
-table](#e-puck-specifications). The functions
-`wb_differential_wheels_set_speed()`,
-`wb_differential_wheels_get_left_encoder()` and
-`wb_differential_wheels_get_right_encoder()` will allow you to set the speed of
+The e-puck dimensions and speed specifications are shown in [this table](#e-puck-specifications).
+The `wb_motor_set_velocity()` and `wb_position_sensor_get_value()` functions allow you to set the speed of
 the robot and to use its encoders.
 
 %figure "Devices orientations"
@@ -128,8 +125,7 @@ the robot and to use its encoders.
 
 %end
 
-As is the case for any Differential Wheels robot set at its default position in
-Webots, the forward direction of the e-puck is given by the negative *z*-axis of
+The forward direction of the e-puck is given by the negative *z*-axis of
 the world coordinates. This is also the direction the eye of the camera is
 looking to; in keeping with the VRML97 standard, the direction vector of the
 camera is pointing in the opposite direction, namely the direction of the

@@ -170,11 +170,11 @@ corresponding to the name of the node. If the argument node is a PROTO node,
 this function returns the PROTO name, like "E-puck", "RectangleArena", "Door",
 etc. Otherwise if the argument node is not a PROTO node the returned value is
 the same as the output of `wb_supervisor_node_get_base_type_name` function, i.e.
-"DifferentialWheels", "Appearance", "LightSensor", etc. If the argument is NULL,
+"Robot", "Appearance", "LightSensor", etc. If the argument is NULL,
 the function returns the empty string.
 
 The `wb_supervisor_node_get_base_type_name()` function returns a text string
-corresponding to the base type name of the node, like "DifferentialWheels",
+corresponding to the base type name of the node, like "Robot",
 "Appearance", "LightSensor", etc. If the argument is NULL, the function returns
 the empty string.
 
@@ -970,6 +970,9 @@ function used and the index should be comprised between 0 and the total number
 of item minus one, otherwise the return value is undefined (and a warning
 message is displayed).
 
+> **Note**:
+If a `wb_supervisor_field_set_*()` operation was executed just before a corresponding `wb_supervisor_field_get_*()` operation, in the same time step, the controller library will not send the query to Webots, but answer directly with the value that has just been set before.
+
 ---
 
 **Name**
@@ -1012,6 +1015,8 @@ argument. They take an additional `index` argument which refers to the index of
 the item in the multiple field. The type of the field has to match with the name
 of the function used and the index should be comprised between minus the total
 number of items and the total number of items minus one, otherwise the value of the field remains unchanged (and a warning message is displayed). Using a negative index starts the count from the last element of the field until the first one. Index -1 represents the last item and the first item is represented by index 0 or minus number of items.
+
+The set operations are received by Webots from possibly several supervisors running concurrently. In order to ensure reproducible simulation results, they are executed only once all set operations are received, just before advancing the simulation time. The order of execution of the set operations is defined by the order of the Supervisor nodes in the scene tree. As a consequence, if a supervisor sets the translation field of a node and immediately retrieves the absolute position of the same node using `wb_supervisor_node_get_position()`, it will actually get the previous position of the node. This is because the execution of the set operation is postponed to the beginning of the next simulation step. In order to retrieve the new position of the node, a `wb_robot_step()` call with a non-zero argument should be executed before calling `wb_supervisor_node_get_position()`.
 
 > **Note**:
 Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when

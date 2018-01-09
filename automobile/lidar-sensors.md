@@ -45,11 +45,9 @@ to speed up the simulation.
 
 #### Sick Lms 291
 
-The `Sick Lms 291` is a 1 layer lidar with a range of up to 80 meters and a
-field of view of up to 180 degrees.
+The `Sick Lms 291` is a 1 layer lidar with a range of up to 80 meters and a field of view of up to 180 degrees.
 
-The model of the `Sick Lms 291` contains a spherical projection, a configurable fixed
-resolution and a configurable gaussian noise.
+The model of the `Sick Lms 291` contains a spherical projection, a configurable fixed resolution and a configurable gaussian noise.
 
 %figure "Sick Lms 291 lidar"
 
@@ -67,22 +65,18 @@ SickLms291 {
 }
 ```
 
-The `noise` field specifies the standard deviation of the gaussian noise in
-meters.
+The `noise` field specifies the standard deviation of the gaussian noise in meters.
 
-The `resolution` field specifies the number of points returned per layer per
-scan.
+The `resolution` field specifies the number of points returned per layer per scan.
 
 #### Sick LD-MRS
 
-The `Sick LD-MRS` is a 2 or 4 layers lidar with a range of 300 meters and a
-field of view of respectively 110 or 85 degrees.
+The `Sick LD-MRS` is a 2 or 4 layers lidar with a range of 300 meters and a field of view of respectively 110 or 85 degrees.
 
 Top and bottom layers are split horizontally with an angle of 2.4 degrees.
 Bottom layer corresponds to layer 0.
 First response values are corresponding to the device right.
-The frustum cone is shifted to the right by an offset angle of 7.5 degrees when 4 layers are set,
-and 5 degrees when 2 layers are set.
+The frustum cone is shifted to the right by an offset angle of 7.5 degrees when 4 layers are set, and 5 degrees when 2 layers are set.
 
 %figure "Sick LD-MRS lidar"
 
@@ -102,8 +96,7 @@ SickLdMrs {
 }
 ```
 
-The `noise` field specifies the standard deviation of the gaussian noise in
-meters.
+The `noise` field specifies the standard deviation of the gaussian noise in meters.
 
 The `numberOfLayers` field specifies the number of horizontal layers. It can be either 2 or 4.
 

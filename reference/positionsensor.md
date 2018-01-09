@@ -63,3 +63,22 @@ return `WB_ANGULAR` if the sensor is associated with a
 [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and
 `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a
 [Track](track.md) node.
+
+---
+
+**Name**
+
+**wb\_position\_sensor\_get\_brake**, **wb\_position\_sensor_get\_motor** - *get associated devices*
+
+{[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/brake.h>
+
+WbDeviceTag wb_position_sensor_get_brake(WbDeviceTag tag);
+WbDeviceTag wb_position_sensor_get_motor(WbDeviceTag tag);
+```
+
+**Description**
+
+The `wb_position_sensor_get_brake()` and `wb_position_sensor_get_motor` functions return the [Brake](brake.md) and [Motor](motor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.

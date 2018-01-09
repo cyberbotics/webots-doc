@@ -23,6 +23,8 @@ The following tables describe the Python classes and their methods.
 | class [Brake](brake.md) ([Device](#python_device)) :                                                 |
 | &nbsp;&nbsp; def [setDampingConstant](brake.md#wb_brake_set_damping_constant)(self, dampingConstant) |
 | &nbsp;&nbsp; def [getType](brake.md#wb_brake_set_damping_constant)(self)                             |
+| &nbsp;&nbsp; def [getMotor](brake.md#wb_brake_get_motor)(self);                                      |
+| &nbsp;&nbsp; def [getPositionSensor](brake.md#wb_brake_get_position_sensor)(self);                   |
 
 %end
 
@@ -490,6 +492,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getTorqueFeedback](motor.md#wb_motor_enable_force_feedback)(self)                     |
 | &nbsp;&nbsp; def [setTorque](motor.md#wb_motor_set_force)(self, torque)                                 |
 | &nbsp;&nbsp; def [getType](motor.md#wb_motor_get_type)(self)                                            |
+| &nbsp;&nbsp; def [getBrake](motor.md#wb_motor_get_brake)(self)                                          |
+| &nbsp;&nbsp; def [getPositionSensor](motor.md#wb_motor_get_position_sensor)(self)                       |
 
 %end
 
@@ -573,6 +577,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSamplingPeriod](positionsensor.md#wb_position_sensor_get_value)(self)       |
 | &nbsp;&nbsp; def [getValue](positionsensor.md#wb_position_sensor_get_value)(self)                |
 | &nbsp;&nbsp; def [getType](positionsensor.md#wb_position_sensor_get_value)(self)                 |
+| &nbsp;&nbsp; def [getBrake](positionsensor.md#wb_position_sensor_get_brake)(self)                |
+| &nbsp;&nbsp; def [getMotor](positionsensor.md#wb_position_sensor_get_motor)(self)                |
 
 %end
 

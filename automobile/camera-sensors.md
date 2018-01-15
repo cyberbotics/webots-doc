@@ -4,7 +4,7 @@ Adding a generic Camera node is sufficient for most of the applications.
 Generic cameras are customizable (resolution, field of view, noise, etc.) and include a zoom and a focusing mechanism by default.
 Special effects like motion blur, various models of noise, lens distortion and the use of a spherical projection are available.
 
-In addition of adding generic Camera nodes, some predefined camera models are also present in Webots.
+In addition to adding generic Camera nodes, some predefined camera models are also present in Webots.
 
 
 ### Smart camera

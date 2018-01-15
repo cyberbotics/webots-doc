@@ -16,3 +16,12 @@ If a `Recognition` node is added to the camera, the camera can return not only t
 ![smart_camera.png](images/smart_camera.png)
 
 %end
+
+
+### MultiSense S21
+
+%figure "MultiSense S21"
+
+![multisense_s21.png](images/multisense_s21.png)
+
+%end

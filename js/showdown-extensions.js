@@ -163,7 +163,7 @@ showdown.extension("wbIllustratedSection", function() {
         { // TODO: comment
             type: "lang",
             filter: function(text, converter, options) {
-                text = text.replace(/\n(!\[[^\]]*\]\s*\([^\)]*\)) ([^\n]*)\n\n/gi, function(match, image, content) {
+                text = text.replace(/\n(!\[[^\]]*\]\s*\([^\)]*\)) +([^]+?)\n\n/gi, function(match, image, content) {
                     var htmlImage = converter.makeHtml(image);
                     if (htmlImage.startsWith('<p>') && htmlImage.endsWith('</p>'))  // Remove useless "p" encapsulation.
                       htmlImage = htmlImage.substr(3, htmlImage.length - 7);

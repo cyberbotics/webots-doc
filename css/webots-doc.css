@@ -261,6 +261,18 @@
   font-family: monospace;
   width: 80%;
 }
+.webots-doc .illustrated-section {
+  float: left;
+  margin: 20px 20%;
+}
+.webots-doc .illustrated-section img {
+  max-width: 20%;
+  float: left;
+  padding: 3px 10px 10px 10px;
+}
+.webots-doc .illustrated-section p {
+  margin: 0px;
+}
 
 .blog {
   background-color: #ede9e8;

@@ -5,7 +5,7 @@ The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots applicatio
 The world files are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers" directory.
 The world files and the corresponding controllers are named according to the device they demonstrate.
 
-Most of the devices below are shown using a simple two-wheeled blue robot on a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
+Most of the devices below are shown using a simple two-wheeled blue robot called MyBot on a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
 The studied devices are attached on this robot.
 
 %figure "MyBot in closed squared arena."
@@ -19,7 +19,13 @@ The studied devices are attached on this robot.
 
 **Keywords**: Battery, Charger
 
-![battery.png](images/battery.png) In this example, a robot moves in a closed arena. The energy consumed by the wheel motors slowly discharges the robot's battery. When the battery level reaches zero, the robot is powered off. In order to remain powered, the robot must recharge its battery at energy chargers. Chargers are represented by the semi-transparent colored cylinders in the four corners of the arena. Only a full charger can recharge the robot's battery. The color of a charger changes with its energy level: it is red when completely empty and green when completely full.
+![battery.png](images/battery.png) In this example, myBot moves in a closed arena.
+The energy consumed by the wheel motors slowly discharges the robot's battery.
+When the battery level reaches zero, the robot is powered off.
+In order to remain powered, the robot must recharge its battery at energy chargers.
+Chargers are represented by the semi-transparent colored cylinders in the four corners of the arena.
+Only a full charger can recharge the robot's battery.
+The color of a charger changes with its energy level: it is red when completely empty and green when completely full.
 
 ### bumper.wbt
 

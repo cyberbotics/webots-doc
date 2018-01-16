@@ -19,7 +19,7 @@ The studied devices are attached on this robot.
 
 **Keywords**: Battery, Charger
 
-![battery.png](images/battery.png) In this example, myBot moves in a closed arena.
+![battery.png](images/battery.png) In this example, `MyBot` moves in a closed arena filled with obstacles.
 The energy consumed by the wheel motors slowly discharges the robot's battery.
 When the battery level reaches zero, the robot is powered off.
 In order to remain powered, the robot must recharge its battery at energy chargers.
@@ -31,14 +31,8 @@ The color of a charger changes with its energy level: it is red when completely 
 
 **Keywords**: TouchSensor, bumper
 
-%figure "bumper"
-
-![bumper.png](images/bumper.png)
-
-%end
-
-In this example, a robot moves in a closed arena filled with obstacles. Its
-"bumper" `TouchSensor` is used to detect collisions. Each time a collision is
+![bumper.png](images/bumper.png) In this example, `MyBot` moves in a closed arena filled with obstacles.
+Its "bumper" `TouchSensor` is used to detect collisions. Each time a collision is
 detected, the robot moves back and turns a bit.
 
 ### camera.wbt

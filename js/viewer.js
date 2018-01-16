@@ -304,7 +304,7 @@ function populateViewDiv(mdContent) {
     applyToPageTitle(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors", "wbImageSection", "youtube"]});
+    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors", "wbIllustratedSection", "youtube"]});
     var html = converter.makeHtml(mdContent);
 
     // console.log("HTML content: \n\n")

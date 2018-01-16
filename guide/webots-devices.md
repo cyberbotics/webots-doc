@@ -19,7 +19,7 @@ The studied devices are attached on this robot.
 
 **Keywords**: Battery, Charger
 
-![battery.png](images/battery.png): In this example, a robot moves in a closed arena. The energy consumed by the wheel motors slowly discharges the robot's battery. When the battery level reaches zero, the robot is powered off. In order to remain powered, the robot must recharge its battery at energy chargers. Chargers are represented by the semi-transparent colored cylinders in the four corners of the arena. Only a full charger can recharge the robot's battery. The color of a charger changes with its energy level: it is red when completely empty and green when completely full.
+![battery.png](images/battery.png) In this example, a robot moves in a closed arena. The energy consumed by the wheel motors slowly discharges the robot's battery. When the battery level reaches zero, the robot is powered off. In order to remain powered, the robot must recharge its battery at energy chargers. Chargers are represented by the semi-transparent colored cylinders in the four corners of the arena. Only a full charger can recharge the robot's battery. The color of a charger changes with its energy level: it is red when completely empty and green when completely full.
 
 ### bumper.wbt
 

@@ -51,9 +51,22 @@ It also prints a colored message (using ANSI codes) in the Console explaining th
 
 **Keywords**: Camera, autofocus, depth-of-field
 
-![camera_auto_focus.png](images/camera_auto_focus.png) In this example, `MyBot` uses an autofocus camera.
+![camera_auto_focus.png](images/camera_auto_focus.png) In this example, `MyBot` demonstrates an autofocus camera.
 The robot uses a `DistanceSensor` to get the distance to the front object and adjusts its Camera focal length accordingly.
 The objects displayed before or after this distance are blurred.
+
+
+### camera_compositor.wbt
+
+**Keywords**: Camera, compositor, special effects, shaders
+
+![camera_compositor.png](images/camera_compositor.png) In this example, `MyBot` demonstrates camera special effects.
+The robot has 4 `Camera`s with different special effects applied on them:
+
+- **GrayScale**: The RGB components are merged producing a gray scaled image.
+- **OldMove**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
+- **Laplace**: A Laplacian filter is applied to the image showing image edges sharply.
+- **Invert**: The RGB components are inverted.
 
 
 ### connector.wbt

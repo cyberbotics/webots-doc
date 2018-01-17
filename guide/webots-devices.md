@@ -161,9 +161,8 @@ The robot does not pay any attention to obstacles.
 
 **Keywords**: Force, TouchSensor
 
-![force_sensor.png](images/force_sensor.png) This example is nearly the same as "bumper.wbt" (see [this section](#bumper-wbt)).
-The only difference is that this robot uses a "force"
-`TouchSensor` instead of a "bumper".
+![force_sensor.png](images/force_sensor.png) This example is nearly the same as [bumper.wbt](#bumper-wbt).
+The only difference is that this robot uses a "force" `TouchSensor` instead of a "bumper".
 So this robot can measure the force of each collision, which is printed in the Console window.
 
 

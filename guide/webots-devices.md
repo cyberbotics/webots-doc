@@ -179,15 +179,15 @@ Moving and rotating the box will change the displayed force.
 
 ### gps.wbt
 
-**Keywords**: GPS, Supervisor, keyboard
+**Keywords**: GPS, Keyboard, get robot position
 
 ![gps.png](images/gps.png) This example shows two different techniques to find the current position of `MyBot`.
 The first technique consists in using an on-board `GPS` device.
 The second method uses a `Supervisor` controller that reads and transmits the position info to the robot.
 Note that a `Supervisor` can read (or change) the position of any object in the simulation at any time.
 This example implements both techniques, and you can choose either one or the other with the keyboard.
-The 'G' key prints the robot's GPS device position.
-The 'S' key prints the position read by the Supervisor.
+The `G` key prints the robot's GPS device position.
+The `S` key prints the position read by the Supervisor.
 
 
 ### led.wbt

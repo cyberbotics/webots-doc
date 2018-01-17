@@ -7,6 +7,7 @@ The world files and the corresponding controllers are named according to the dev
 
 Most of the devices below are shown using a simple two-wheeled blue robot called MyBot on a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
 The studied devices are attached on this robot.
+Often, `MyBot` moves and avoid obstacles using 2 `DistanceSensor`s and a Braitenberg technique.
 
 %figure "MyBot in closed squared arena."
 

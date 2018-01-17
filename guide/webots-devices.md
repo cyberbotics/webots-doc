@@ -65,6 +65,7 @@ The objects displayed before or after this distance are blurred.
 The robot has 4 `Camera`s with different special effects applied on them:
 The related compositors and shaders are located in the `worlds/compositors` directory.
 
+
 - **GrayScale**: The RGB components are merged producing a gray scaled image.
 - **OldMove**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
 - **Laplace**: A Laplacian filter is applied to the image showing image edges sharply.
@@ -207,6 +208,15 @@ The resulting position is displayed in the `Console` at each step.
 A gyro is mounted on 3 rotational motors (each motor is corresponding to one axis).
 The motors a running consecutively for a while.
 The resulting angular velocity measured by the gyro is displayed in the `Console`.
+
+
+### hokuyo.wbt
+
+**Keywords**: Hokuyo, Lidar, Display plot
+
+![hokuyo.png](images/hokuyo.png) This example shows how to use `Lidar`s and plot their response on a `Display` device.
+Two `Hokuyo` `Lidar`s are mounted on the `MyBot`.
+At each step, the lidars are updated, and their response are displayed in distinct `Display`s.
 
 
 ### led.wbt

@@ -160,7 +160,7 @@ showdown.extension("wbAnchors", function() {
  //     `![battery.png](images/battery.png) In this example, etc.`
 showdown.extension("wbIllustratedSection", function() {
     return [
-        { // TODO: comment
+        {
             type: "lang",
             filter: function(text, converter, options) {
                 text = text.replace(/\n(!\[[^\]]*\]\s*\([^\)]*\)) +([^]+?)\n\n/gi, function(match, image, content) {

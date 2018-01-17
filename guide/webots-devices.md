@@ -48,7 +48,7 @@ When it has detected something, it turns, stops for a few seconds and saves the 
 It also prints a colored message (using ANSI codes) in the Console explaining the type of object it has detected.
 
 
-### camera_auto_focus.wbt
+### camera\_auto\_focus.wbt
 
 **Keywords**: Camera, autofocus, depth-of-field
 
@@ -57,13 +57,14 @@ The robot uses a `DistanceSensor` to get the distance to the front object and ad
 The objects displayed before or after this distance are blurred.
 
 
-### camera_compositor.wbt
+### camera\_compositor.wbt
 
 **Keywords**: Camera, compositor, special effects, shaders
 
 ![camera_compositor.png](images/camera_compositor.png) In this example, `MyBot` demonstrates camera special effects.
-The related compositors and shaders are located in the `worlds/compositors` directory.
 The robot has 4 `Camera`s with different special effects applied on them:
+The related compositors and shaders are located in the `worlds/compositors` directory.
+
 
 - **GrayScale**: The RGB components are merged producing a gray scaled image.
 - **OldMove**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
@@ -71,14 +72,15 @@ The robot has 4 `Camera`s with different special effects applied on them:
 - **Invert**: The RGB components are inverted.
 
 
-### camera_motion_blur.wbt
+### camera\_motion\_blur.wbt
 
 **Keywords**: Camera, motion blur
 
 ![camera_compositor.png](images/camera_motion_blur.png) In this example, `MyBot` demonstrates the camera motion blur effect.
+The motion blur response time is given by the `Camera.motionBlur` field.
 
 
-### camera_noise_mask.wbt
+### camera\_noise\_mask.wbt
 
 **Keywords**: Camera, noise mask
 
@@ -86,7 +88,7 @@ The robot has 4 `Camera`s with different special effects applied on them:
 The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 
-### camera_recognition.wbt
+### camera\_recognition.wbt
 
 **Keywords**: Camera, pattern recognition, smart camera
 
@@ -109,7 +111,22 @@ Then the light robot gets passed over another time by the second heavy robot and
 All the robots in this simulation use the same controller; the different behaviors are selected according to the robot's name.
 
 
-### distance_sensor.wbt
+### display.wbt
+
+**Keywords**: Display, write in textures, overlay
+
+![display.png](images/display.png) This example demonstrates several use examples of the `Display` device.
+
+
+- The `MyBot` `Display` called "emoticon_display" is displayed as a 2D overlay on top of the 3D window, and is displayed as a texture on the screen mounted on the `MyBot`.
+It loads the `emoticons.png` image contains a grid of emoticons, and shows randomly a different part of this image every 30 steps.
+- The `MyBot` `Display` called "camera_display" is displayed as a 2D overlay on top of the 3D window.
+It copies the `Camera` image, and draws over it a yellow rectangle and text where yellow pixels are detected.
+- The `Supervisor` `Display` called "ground display" is displayed as a texture on the floor.
+The `Supervisor` get the position of `MyBot` and draws a green dot at this location.
+
+
+### distance\_sensor.wbt
 
 **Keywords**: DistanceSensor, Braitenberg
 
@@ -117,7 +134,7 @@ All the robots in this simulation use the same controller; the different behavio
 The robot avoids obstacles using the Braitenberg technique.
 
 
-### emitter_receiver.wbt
+### emitter\_receiver.wbt
 
 **Keywords**: Emitter, Receiver, infra-red transmission
 
@@ -139,7 +156,7 @@ Then the encoders are reset and the controller chooses new random values.
 The robot does not pay any attention to obstacles.
 
 
-### force_sensor.wbt
+### force\_sensor.wbt
 
 **Keywords**: Force, TouchSensor
 
@@ -170,7 +187,7 @@ The 'S' key prints the position read by the Supervisor.
 The color choice is printed in the Console.
 
 
-### light_sensor.wbt
+### light\_sensor.wbt
 
 
 ![light_sensor.png](images/light_sensor.png) In this example, `MyBot` uses two `LightSensor`s to follow a light source.
@@ -187,7 +204,7 @@ The ink on the floor fades slowly.
 Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 
-### range_finder.wbt
+### range\_finder.wbt
 
 **Keywords**: Range-finder, Camera
 

@@ -65,7 +65,6 @@ The objects displayed before or after this distance are blurred.
 The robot has 4 `Camera`s with different special effects applied on them:
 The related compositors and shaders are located in the `worlds/compositors` directory.
 
-
 - **GrayScale**: The RGB components are merged producing a gray scaled image.
 - **OldMove**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
 - **Laplace**: A Laplacian filter is applied to the image showing image edges sharply.
@@ -148,7 +147,7 @@ Note that the communication between "infra-red" `Emitter`s and `Receiver`s can b
 
 ### encoders.wbt
 
-**Keywords**: encoders
+**Keywords**: PositionSensor, encoders
 
 ![encoders.png](images/encoders.png) This example demonstrates the usage of the wheel encoders of `differential wheels` robots.
 The controller randomly chooses target encoder positions, then it rotates its wheels until the encoder values reach the chosen target position.
@@ -159,11 +158,23 @@ The robot does not pay any attention to obstacles.
 
 ### force\_sensor.wbt
 
-**Keywords**: Force, TouchSensor
+**Keywords**: TouchSensor, force sensor
 
 ![force_sensor.png](images/force_sensor.png) This example is nearly the same as [bumper.wbt](#bumper-wbt).
 The only difference is that this robot uses a "force" `TouchSensor` instead of a "bumper".
 So this robot can measure the force of each collision, which is printed in the Console window.
+
+
+### force3d\_sensor.wbt
+
+**Keywords**: TouchSensor, 3D force sensor
+
+![force3d_sensor.png](images/force3d_sensor.png) This example demonstrates how to use a 3D force sensor.
+The opaque box in the center of the transparent one is a `Robot` node.
+The `TouchSensor` is the child of the Robot node.
+This setup allow to measure the force on the six sides of the `TouchSensor`.
+The resulting force vector is displayed in the console.
+Moving and rotating the box will change the displayed force.
 
 
 ### gps.wbt

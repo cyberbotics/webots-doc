@@ -190,6 +190,15 @@ The `G` key prints the robot's GPS device position.
 The `S` key prints the position read by the Supervisor.
 
 
+### gps_lat_long.wbt
+
+**Keywords**: GPS, WGS84, Latitude-Longitude
+
+![gps.png](images/gps.png) This example shows how to set a WGS84 reference, and how to retrieve the robot WGS84 latitude, longitude and latitude in this reference.
+The reference is set in the `WorldInfo.gpsCoordinateSytem` and `WorldInfo.gpsReference`.
+The resulting position is displayed in the `Console` at each step.
+
+
 ### led.wbt
 
 **Keywords**: LED

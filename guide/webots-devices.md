@@ -33,30 +33,27 @@ The color of a charger changes with its energy level: it is red when completely 
 **Keywords**: TouchSensor, bumper
 
 ![bumper.png](images/bumper.png) In this example, `MyBot` moves in a closed arena filled with obstacles.
-Its "bumper" `TouchSensor` is used to detect collisions.
-Each time a collision is detected, the robot moves back and turns a bit.
+Its "bumper" `TouchSensor` (represented by a black box) is used to detect collisions.
+Each time a collision is detected, `MyBot` moves back and turns a bit.
 
 
 ### camera.wbt
 
-**Keywords**: Camera, image processing, pixel, RGB
+**Keywords**: Camera, image processing, RGB pixel, Camera noise, PNG, ANSI
 
-![camera.png](images/camera.png) In this example, a robot uses a camera to detect colored objects.
+![camera.png](images/camera.png) In this example, `MyBot` uses a camera to detect colored objects.
 The robot analyzes the RGB color level of each pixel of the camera images.
-It turns and stops for a few seconds when it has detected something.
-It also prints a message in the Console explaining the type of object it has detected.
-You can move the robot to different parts of the arena (using the mouse) to see what it is able to detect.
+When it has detected something, it turns, stops for a few seconds and saves the current image in a PNG file to the user directory.
+It also prints a colored message (using ANSI codes) in the Console explaining the type of object it has detected.
 
 
 ### connector.wbt
 
 **Keywords**: Connector, RotationalMotor, IndexedLineSet
 
-![connector.png](images/connector.png) In this example, a light robot (light blue) is lifted over two heavier robots
-(dark blue).
+![connector.png](images/connector.png) In this example, a light `MyBot` (light blue) is lifted over two heavier `MyBot`s (dark blue).
 All three robots are equipped with a `Connector` placed at the tip of a moveable handle (`HingeJoint`).
-An `IndexedLineSet` is added to every
-`Connector` in order to show the axes.
+An `IndexedLineSet` is added to every `Connector` in order to show the axes.
 When the simulation starts, the light robot approaches the first heavy robot and their connectors dock to one another.
 Then both robots rotate their handles simultaneously, hence the light robot gets lifted over the heavy one.
 Then the light robot gets passed over another time by the second heavy robot and so on ...
@@ -67,7 +64,7 @@ All the robots in this simulation use the same controller; the different behavio
 
 **Keywords**: DistanceSensor, Braitenberg
 
-![distance_sensor.png](images/distance_sensor.png) In this example, a robot has eight `DistanceSensor`s placed at regular intervals around its body.
+![distance_sensor.png](images/distance_sensor.png) In this example, `MyBot` has eight `DistanceSensor`s placed at regular intervals around its body.
 The robot avoids obstacles using the Braitenberg technique.
 
 
@@ -76,8 +73,7 @@ The robot avoids obstacles using the Braitenberg technique.
 **Keywords**: Emitter, Receiver, infra-red transmission
 
 ![emitter_receiver.png](images/emitter_receiver.png) In this example, there are two robots: one is equipped with an `Emitter`, the other one with a `Receiver`.
-Both robots move among the obstacles while the
-*emitter* robot sends messages to the *receiver* robot.
+Both robots move among the obstacles while the *emitter* robot sends messages to the *receiver* robot.
 The range of the `Emitter` device is indicated by the radius of the transparent sphere around the emitter robot.
 The state of the communication between the two robots is displayed in the Console.
 You can observe this when the *receiver* robot enters the *emitter*'s sphere while no direct obstacle is present on the route, then the communication is established, otherwise the communication is interrupted.
@@ -108,7 +104,7 @@ So this robot can measure the force of each collision, which is printed in the C
 
 **Keywords**: GPS, Supervisor, keyboard
 
-![gps.png](images/gps.png) This example shows two different techniques to find the current position of a robot.
+![gps.png](images/gps.png) This example shows two different techniques to find the current position of `MyBot`.
 The first technique consists in using an on-board `GPS` device.
 The second method uses a `Supervisor` controller that reads and transmits the position info to the robot.
 Note that a `Supervisor` can read (or change) the position of any object in the simulation at any time.
@@ -121,14 +117,14 @@ The 'S' key prints the position read by the Supervisor.
 
 **Keywords**: LED
 
-![led.png](images/led.png) In this example, a robot moves while randomly changing the color of three `LED`s on the top of its body.
+![led.png](images/led.png) In this example, `MyBot` moves while randomly changing the color of three `LED`s on the top of its body.
 The color choice is printed in the Console.
 
 
 ### light_sensor.wbt
 
 
-![light_sensor.png](images/light_sensor.png) In this example, the robot uses two `LightSensor`s to follow a light source.
+![light_sensor.png](images/light_sensor.png) In this example, `MyBot` uses two `LightSensor`s to follow a light source.
 The light source can be moved with the mouse; the robot will follow it.
 
 
@@ -136,7 +132,7 @@ The light source can be moved with the mouse; the robot will follow it.
 
 **Keywords**: Pen, keyboard
 
-![pen.png](images/pen.png) In this example, a robot uses a `Pen` device to draw on the floor.
+![pen.png](images/pen.png) In this example, `MyBot` uses a `Pen` device to draw on the floor.
 The controller randomly chooses the ink color.
 The ink on the floor fades slowly.
 Use the 'Y' and 'X' keys to switch the `Pen` on and off.
@@ -146,5 +142,5 @@ Use the 'Y' and 'X' keys to switch the `Pen` on and off.
 
 **Keywords**: Range-finder, Camera
 
-![range_finder.png](images/range_finder.png) In this example, the robot uses a "range-finder" `Camera` to avoid obstacles.
+![range_finder.png](images/range_finder.png) In this example, `MyBot` uses a "range-finder" `Camera` to avoid obstacles.
 The "range-finder" measures the distance to objects, so the robot knows if there is enough room to move forward or not.

@@ -47,6 +47,15 @@ When it has detected something, it turns, stops for a few seconds and saves the 
 It also prints a colored message (using ANSI codes) in the Console explaining the type of object it has detected.
 
 
+### camera_auto_focus.wbt
+
+**Keywords**: Camera, autofocus, depth-of-field
+
+![camera_auto_focus.png](images/camera_auto_focus.png) In this example, `MyBot` uses an autofocus camera.
+The robot uses a `DistanceSensor` to get the distance to the front object and adjusts its Camera focal length accordingly.
+The objects displayed before or after this distance are blurred.
+
+
 ### connector.wbt
 
 **Keywords**: Connector, RotationalMotor, IndexedLineSet

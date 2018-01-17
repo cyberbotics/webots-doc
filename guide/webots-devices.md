@@ -199,6 +199,16 @@ The reference is set in the `WorldInfo.gpsCoordinateSytem` and `WorldInfo.gpsRef
 The resulting position is displayed in the `Console` at each step.
 
 
+### gyro.wbt
+
+**Keywords**: Gyro, angular velocity
+
+![gyro.png](images/gyro.png) This example shows how to measure an angular velocity.
+A gyro is mounted on 3 rotational motors (each motor is corresponding to one axis).
+The motors a running consecutively for a while.
+The resulting angular velocity measured by the gyro is displayed in the `Console`.
+
+
 ### led.wbt
 
 **Keywords**: LED

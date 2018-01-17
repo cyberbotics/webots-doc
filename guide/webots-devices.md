@@ -85,6 +85,15 @@ The robot has 4 `Camera`s with different special effects applied on them:
 The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 
+### camera_recognition.wbt
+
+**Keywords**: Camera, pattern recognition, smart camera
+
+![camera_recognition.png](images/camera_recognition.png)  In this example, `MyBot` demonstrates how to use object recognition capabilities.
+The robot camera displays yellow rectangles around the recognized objects.
+The camera recognizes `Solid` nodes whose `recognitionColors` field is not empty.
+
+
 ### connector.wbt
 
 **Keywords**: Connector, RotationalMotor, IndexedLineSet

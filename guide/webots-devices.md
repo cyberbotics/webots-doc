@@ -69,6 +69,13 @@ The robot has 4 `Camera`s with different special effects applied on them:
 - **Invert**: The RGB components are inverted.
 
 
+### camera_motion_blur.wbt
+
+**Keywords**: Camera, motion blur
+
+![camera_compositor.png](images/camera_motion_blur.png)  In this example, `MyBot` demonstrates the camera motion blur effect.
+
+
 ### connector.wbt
 
 **Keywords**: Connector, RotationalMotor, IndexedLineSet

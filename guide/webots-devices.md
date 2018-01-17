@@ -61,6 +61,7 @@ The objects displayed before or after this distance are blurred.
 **Keywords**: Camera, compositor, special effects, shaders
 
 ![camera_compositor.png](images/camera_compositor.png) In this example, `MyBot` demonstrates camera special effects.
+The related compositors and shaders are located in the `worlds/compositors` directory.
 The robot has 4 `Camera`s with different special effects applied on them:
 
 - **GrayScale**: The RGB components are merged producing a gray scaled image.
@@ -74,6 +75,14 @@ The robot has 4 `Camera`s with different special effects applied on them:
 **Keywords**: Camera, motion blur
 
 ![camera_compositor.png](images/camera_motion_blur.png)  In this example, `MyBot` demonstrates the camera motion blur effect.
+
+
+### camera_noise_mask.wbt
+
+**Keywords**: Camera, noise mask
+
+![camera_noise_mask.png](images/camera_noise_mask.png)  In this example, `MyBot` demonstrates how to create a noise effect by adding a noise mask to the camera image.
+The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 
 ### connector.wbt

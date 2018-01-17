@@ -74,14 +74,14 @@ The robot has 4 `Camera`s with different special effects applied on them:
 
 **Keywords**: Camera, motion blur
 
-![camera_compositor.png](images/camera_motion_blur.png)  In this example, `MyBot` demonstrates the camera motion blur effect.
+![camera_compositor.png](images/camera_motion_blur.png) In this example, `MyBot` demonstrates the camera motion blur effect.
 
 
 ### camera_noise_mask.wbt
 
 **Keywords**: Camera, noise mask
 
-![camera_noise_mask.png](images/camera_noise_mask.png)  In this example, `MyBot` demonstrates how to create a noise effect by adding a noise mask to the camera image.
+![camera_noise_mask.png](images/camera_noise_mask.png) In this example, `MyBot` demonstrates how to create a noise effect by adding a noise mask to the camera image.
 The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 
@@ -89,8 +89,9 @@ The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 **Keywords**: Camera, pattern recognition, smart camera
 
-![camera_recognition.png](images/camera_recognition.png)  In this example, `MyBot` demonstrates how to use object recognition capabilities.
+![camera_recognition.png](images/camera_recognition.png) In this example, `MyBot` demonstrates how to use object recognition capabilities.
 The robot camera displays yellow rectangles around the recognized objects.
+Information about the objects currently recognized are displayed in the `Console`.
 The camera recognizes `Solid` nodes whose `recognitionColors` field is not empty.
 
 
@@ -103,7 +104,7 @@ All three robots are equipped with a `Connector` placed at the tip of a moveable
 An `IndexedLineSet` is added to every `Connector` in order to show the axes.
 When the simulation starts, the light robot approaches the first heavy robot and their connectors dock to one another.
 Then both robots rotate their handles simultaneously, hence the light robot gets lifted over the heavy one.
-Then the light robot gets passed over another time by the second heavy robot and so on ...
+Then the light robot gets passed over another time by the second heavy robot and so on...
 All the robots in this simulation use the same controller; the different behaviors are selected according to the robot's name.
 
 

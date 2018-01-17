@@ -153,6 +153,7 @@ Note that the communication between "infra-red" `Emitter`s and `Receiver`s can b
 ![encoders.png](images/encoders.png) This example demonstrates the usage of the wheel encoders of `differential wheels` robots.
 The controller randomly chooses target encoder positions, then it rotates its wheels until the encoder values reach the chosen target position.
 Then the encoders are reset and the controller chooses new random values.
+The encoders are modelled using `PositionSensor` nodes applied on `HingeJoint` nodes.
 The robot does not pay any attention to obstacles.
 
 

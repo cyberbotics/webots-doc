@@ -138,9 +138,9 @@ The robot avoids obstacles using the Braitenberg technique.
 
 **Keywords**: Emitter, Receiver, infra-red transmission
 
-![emitter_receiver.png](images/emitter_receiver.png) In this example, there are two robots: one is equipped with an `Emitter`, the other one with a `Receiver`.
+![emitter_receiver.png](images/emitter_receiver.png) In this example, there are two robots: one is equipped with an `Emitter` and the other one with a `Receiver`.
 Both robots move among the obstacles while the *emitter* robot sends messages to the *receiver* robot.
-The range of the `Emitter` device is indicated by the radius of the transparent sphere around the emitter robot.
+The range of the `Emitter` device is indicated by the radius of the transparent gray sphere around the emitter robot.
 The state of the communication between the two robots is displayed in the Console.
 You can observe this when the *receiver* robot enters the *emitter*'s sphere while no direct obstacle is present on the route, then the communication is established, otherwise the communication is interrupted.
 Note that the communication between "infra-red" `Emitter`s and `Receiver`s can be blocked by an obstacle, this is not the case with "radio" `Emitter`s and `Receiver`s.

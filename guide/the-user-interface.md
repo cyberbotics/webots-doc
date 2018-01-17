@@ -512,7 +512,9 @@ in step-by-step mode (`N/A` is displayed instead).
 To the left of the speedometer, the *virtual time* is displayed using following
 format:
 
-*H:MM:SS:MMM*
+```
+H:MM:SS:MMM
+```
 
 where *H* is the number of hours (may be several digits), *MM* is the number of
 minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds

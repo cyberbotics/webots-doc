@@ -276,7 +276,7 @@ A ruler indicates the linear motor progression.
 
 **Keywords**: RotationalMotor, force control, energy consumption
 
-![linear_motor.png](images/linear_motor.png) In this example, a rotational motor is controlled in force to push a cardboard.
+![motor.png](images/motor.png) In this example, a rotational motor is controlled in force to push a cardboard.
 The force feedback applied on the motor and the energy consumed by the robot are displayed in the console.
 
 

@@ -115,7 +115,7 @@ All the robots in this simulation use the same controller; the different behavio
 
 **Keywords**: Display, write in textures, overlay
 
-![display.png](images/display.png) This example demonstrates several use examples of the `Display` device.
+![display.png](images/display.png) This example demonstrates several use of the `Display` device.
 
 
 - The `MyBot` `Display` called "emoticon_display" is displayed as a 2D overlay on top of the 3D window, and is displayed as a texture on the screen mounted on the `MyBot`.
@@ -214,9 +214,9 @@ The resulting angular velocity measured by the gyro is displayed in the `Console
 
 **Keywords**: Hokuyo, Lidar, Display plot
 
-![hokuyo.png](images/hokuyo.png) This example shows how to use `Lidar`s and plot their response on a `Display` device.
+![hokuyo.png](images/hokuyo.png) This example shows how to use `Lidar`s and plot their depth output on a `Display` device.
 Two `Hokuyo` `Lidar`s are mounted on the `MyBot`.
-At each step, the lidars are updated, and their response are displayed in distinct `Display`s.
+At each step, the lidars are updated, and their depth output are displayed in distinct `Display`s.
 
 
 ### inertial\_unit.wbt
@@ -338,8 +338,8 @@ This noisy position is compared to the actual `Emitter` position measured with a
 **Keywords**: Sick LMS 291, Lidar, 3-wheeled robot, lidar plot
 
 ![sick.png](images/sick.png) In this example, a 3-wheeled robot mounted with a `Sick LMS 291` lidar sensor moves through an area with obstacles.
-The robot use the lidar response to avoid collisions.
-The lidar response is also plot into a `Display` device.
+The robot use the lidar depth output to avoid collisions.
+The lidar depth output is also plot into a `Display` device.
 
 
 ### speaker.wbt
@@ -374,7 +374,15 @@ The resulting projection is shown in a 2D camera overlay.
 
 **Keywords**: Supervisor, queries on scene tree
 
-![supervisor.png](images/supervisor.png) This examples shows basic operations of a `Supervisor` node.
+![supervisor.png](images/supervisor.png) This example shows basic operations of a `Supervisor` node.
 The `Supervisor` starts with displaying the names of the scene tree root nodes.
 Then it displays the content of the `WorldInfo.gravity` field.
 Finally, after 8 seconds, it moves the `PointLight`.
+
+
+### track.wbt
+
+**Keywords**: Track, caterpillar track, conveyor belt
+
+![track.png](images/track.png) This example shows two use case of the `Track` node.
+The `Track` node is used to model two caterpillar tracks, and a conveyor belt.

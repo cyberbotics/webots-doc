@@ -297,6 +297,18 @@ Use the `Y` and `X` keys to switch the `Pen` on and off.
 ![position_sensor.png](images/position_sensor.png) In this example, `MyBot` uses a `PositionSensor` to maintain a red log in balance.
 
 
+### propeller.wbt
+
+**Keywords**: Propeller, rotors, fan
+
+![propeller.png](images/propeller.png) In this example, 3 helicopters designed differently demonstrates the use of the `Propeller` node.
+
+
+- *Red helicopter*: It is composed of axial and trail rotors.
+- *Green helicopter*: It is composed of 2 coaxial rotors.
+- *Blue helicopter*: It is composed of a single axial rotors.
+
+
 ### range\_finder.wbt
 
 **Keywords**: Range-finder, Camera

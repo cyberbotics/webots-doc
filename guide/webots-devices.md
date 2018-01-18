@@ -309,6 +309,14 @@ Use the `Y` and `X` keys to switch the `Pen` on and off.
 - *Blue helicopter*: It is composed of a single axial rotors.
 
 
+### radar.wbt
+
+**Keywords**: Radar
+
+![radar.png](images/radar.png) In this example, the `MyBot` with the black box is detecting the `MyBot`s with red boxes.
+The black box is a `Radar` device, while the red boxes are `Solid`s with a positive `radarCrossSection` (this is required to be detected by the `Radar`).
+
+
 ### range\_finder.wbt
 
 **Keywords**: Range-finder, Camera

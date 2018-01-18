@@ -290,11 +290,11 @@ The ink on the floor fades slowly.
 Use the `Y` and `X` keys to switch the `Pen` on and off.
 
 
-### position_sensor.wbt
+### position\_sensor.wbt
 
 **Keywords**: PositionSensor, force control
 
-![pen.png](images/pen.png) In this example, `MyBot` uses a `PositionSensor` to maintain a red log in balance.
+![position_sensor.png](images/position_sensor.png) In this example, `MyBot` uses a `PositionSensor` to maintain a red log in balance.
 
 
 ### range\_finder.wbt

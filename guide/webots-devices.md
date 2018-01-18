@@ -228,6 +228,15 @@ An `InertialUnit` is mounted on a 3 DOF arm which is moving from one random targ
 Each time a target is reached, the absolute roll, pitch and yaw angles of the `InertialUnit` are displayed in the `Console`.
 
 
+### laser\_pointer.wbt
+
+**Keywords**: DistanceSensor, laser
+
+![laser_pointer.png](images/laser_pointer.png) This example demonstrates how to use the `DistanceSensor` device in laser mode.
+`MyBot` turns round with two laser pointers enabled.
+Red dots are displayed where the laser beam is intersecting obstacles.
+
+
 ### led.wbt
 
 **Keywords**: LED

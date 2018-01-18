@@ -342,11 +342,21 @@ The robot use the lidar response to avoid collisions.
 The lidar response is also plot into a `Display` device.
 
 
+### speaker.wbt
+
+**Keywords**: Speaker, WAV
+
+![speaker.png](images/speaker.png) In this example, the `MyBot` is mounted by a `Speaker` device.
+A WAV file is played on this speaker, while the `MyBot` is moving over the camera.
+The intensity of the left and right loudspeakers differ depending on the robot position.
+The Webots sound should be enabled to hear the result on the computer loudspeakers.
+
+
 ### speaker\_text\_to\_speech.wbt
 
 **Keywords**: Speaker, text to speech
 
 ![speaker_text_to_speech.png](images/speaker_text_to_speech.png) In this example, the `MyBot` is mounted by a `Speaker` device.
-A text is played in this speaker.
+A text formated in XML is played in this speaker.
 This text is containing voice modulations including pitch, rate and volume modifications.
-The Webots sound should be enabled to listen the result on the computer loudspeakers.
+The Webots sound should be enabled to hear the result on the computer loudspeakers.

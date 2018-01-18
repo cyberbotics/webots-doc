@@ -205,7 +205,7 @@ The resulting position is displayed in the `Console` at each step.
 **Keywords**: Gyro, angular velocity
 
 ![gyro.png](images/gyro.png) This example shows how to measure an angular velocity.
-A gyro is mounted on 3 rotational motors (each motor is corresponding to one axis).
+A gyro is mounted on 3 rotational motors (each motor corresponds to one axis).
 The motors a running consecutively for a while.
 The resulting angular velocity measured by the gyro is displayed in the `Console`.
 
@@ -224,7 +224,7 @@ At each step, the lidars are updated, and their response are displayed in distin
 **Keywords**: InertialUnit, roll/pitch/yaw angles
 
 ![inertial_unit.png](images/inertial_unit.png) This example demonstrates the use of `InertialUnit` device.
-An `InertialUnit` is mounted on a 3 DOF arm which is moving from one random target to another.
+An `InertialUnit` is mounted on a 3 DOF arm which moves from one random target to another.
 Each time a target is reached, the absolute roll, pitch and yaw angles of the `InertialUnit` are displayed in the `Console`.
 
 
@@ -234,7 +234,7 @@ Each time a target is reached, the absolute roll, pitch and yaw angles of the `I
 
 ![laser_pointer.png](images/laser_pointer.png) This example demonstrates the use of `DistanceSensor` device in laser mode.
 `MyBot` turns round with two laser pointers enabled.
-Red dots are displayed where the laser beam is intersecting obstacles.
+Red dots are displayed where the laser beam intersects obstacles.
 
 
 ### led.wbt
@@ -313,7 +313,7 @@ Use the `Y` and `X` keys to switch the `Pen` on and off.
 
 **Keywords**: Radar
 
-![radar.png](images/radar.png) In this example, the `MyBot` with the black box is detecting the `MyBot`s with red boxes.
+![radar.png](images/radar.png) In this example, the `MyBot` with the black box detects the `MyBot`s with red boxes.
 The black box is a `Radar` device, while the red boxes are `Solid`s with a positive `radarCrossSection` (this is required to be detected by the `Radar`).
 
 
@@ -331,3 +331,12 @@ The `RangeFinder` measures the distance to objects, so the robot knows if there 
 
 ![receiver_noise.png](images/receiver_noise.png) In this example, the `MyBot` at the center uses its `Receiver` device to get the `Emitter` device position  of the other `MyBot`.
 This noisy position is compared to the actual `Emitter` position measured with a noise-free GPS.
+
+
+### sick.wbt
+
+**Keywords**: Sick LMS 291, Lidar, 3-wheeled robot, lidar plot
+
+![sick.png](images/sick.png) In this example, a 3-wheeled robot mounted with a `Sick LMS 291` lidar sensor moves through an area with obstacles.
+The robot use the lidar response to avoid collisions.
+The lidar response is also plot into a `Display` device.

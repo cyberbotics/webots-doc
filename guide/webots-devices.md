@@ -263,6 +263,15 @@ The `Lidar` point cloud can be shown enabling the `View / Optional Rendering / S
 The light source can be moved with the mouse; the robot will follow it.
 
 
+### linear\_motor.wbt
+
+**Keywords**: LinearMotor, set motor position
+
+![linear_motor.png](images/linear_motor.png) In this example, a linear motor from position `0` and then progresses by steps of `2 [cm]` until it reaches `20 [cm]`.
+Once done, it comes back to position `0` and restarts.
+A ruler indicates the linear motor progression.
+
+
 ### pen.wbt
 
 **Keywords**: Pen, keyboard

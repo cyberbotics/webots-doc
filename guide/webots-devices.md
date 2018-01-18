@@ -272,6 +272,14 @@ Once done, it comes back to position `0` and restarts.
 A ruler indicates the linear motor progression.
 
 
+### motor.wbt
+
+**Keywords**: RotationalMotor, force control, energy consumption
+
+![linear_motor.png](images/linear_motor.png) In this example, a rotational motor is controlled in force to push a cardboard.
+The force feedback applied on the motor and the energy consumed by the robot are displayed in the console.
+
+
 ### pen.wbt
 
 **Keywords**: Pen, keyboard

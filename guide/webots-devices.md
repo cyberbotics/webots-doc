@@ -360,3 +360,11 @@ The Webots sound should be enabled to hear the result on the computer loudspeake
 A text formated in XML is played in this speaker.
 This text is containing voice modulations including pitch, rate and volume modifications.
 The Webots sound should be enabled to hear the result on the computer loudspeakers.
+
+
+### spherical\_camera.wbt
+
+**Keywords**: Camera, spherical projection
+
+![spherical_projection.png](images/spherical_projection.png) In this example, the `MyBot` is mounted by a spherical `Camera` device.
+The resulting projection is shown in a 2D camera overlay.

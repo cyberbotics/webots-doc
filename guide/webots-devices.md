@@ -246,8 +246,16 @@ Each LED material emissive color and LED mounted `PointLight` are modified accor
 The color choice is printed in the Console.
 
 
-### light\_sensor.wbt
+### lidar.wbt
 
+**Keywords**: Lidar
+
+![lidar.png](images/lidar.png) In this example, `MyBot` demonstrates the use of a `Lidar` device.
+The `Lidar` mounted on the `MyBot` scans the environment.
+The `Lidar` point cloud can be shown enabling the `View / Optional Rendering / Show Lidar Point Cloud`.
+
+
+### light\_sensor.wbt
 
 ![light_sensor.png](images/light_sensor.png) In this example, `MyBot` uses two `LightSensor`s to follow a light source.
 The light source can be moved with the mouse; the robot will follow it.

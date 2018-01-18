@@ -368,3 +368,13 @@ The Webots sound should be enabled to hear the result on the computer loudspeake
 
 ![spherical_projection.png](images/spherical_projection.png) In this example, the `MyBot` is mounted by a spherical `Camera` device.
 The resulting projection is shown in a 2D camera overlay.
+
+
+### supervisor.wbt
+
+**Keywords**: Supervisor, queries on scene tree
+
+![supervisor.png](images/supervisor.png) This examples shows basic operations of a `Supervisor` node.
+The `Supervisor` starts with displaying the names of the scene tree root nodes.
+Then it displays the content of the `WorldInfo.gravity` field.
+Finally, after 8 seconds, it moves the `PointLight`.

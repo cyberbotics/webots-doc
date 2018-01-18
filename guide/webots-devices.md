@@ -319,7 +319,7 @@ The black box is a `Radar` device, while the red boxes are `Solid`s with a posit
 
 ### range\_finder.wbt
 
-**Keywords**: Range-finder, Camera
+**Keywords**: RangeFinder
 
-![range_finder.png](images/range_finder.png) In this example, `MyBot` uses a "range-finder" `Camera` to avoid obstacles.
-The "range-finder" measures the distance to objects, so the robot knows if there is enough room to move forward or not.
+![range_finder.png](images/range_finder.png) In this example, `MyBot` uses a `RangeFinder` to avoid obstacles.
+The `RangeFinder` measures the distance to objects, so the robot knows if there is enough room to move forward or not.

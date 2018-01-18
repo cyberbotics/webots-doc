@@ -323,3 +323,11 @@ The black box is a `Radar` device, while the red boxes are `Solid`s with a posit
 
 ![range_finder.png](images/range_finder.png) In this example, `MyBot` uses a `RangeFinder` to avoid obstacles.
 The `RangeFinder` measures the distance to objects, so the robot knows if there is enough room to move forward or not.
+
+
+### receiver\_noise.wbt
+
+**Keywords**: Receiver, signal strength, direction noise
+
+![receiver_noise.png](images/receiver_noise.png) In this example, the `MyBot` at the center uses its `Receiver` device to get the `Emitter` device position  of the other `MyBot`.
+This noisy position is compared to the actual `Emitter` position measured with a noise-free GPS.

@@ -56,12 +56,12 @@ load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
 be opened instead.
 
-![](images/fast-revert-button.png =26x26) The `Fast Revert World` menu item (and button) restore the initial state of the simulation.
-The simulation is not entirely distructed and reconstructed like with a normal revert but the initial state of all the nodes is restored which is way faster.
+![](images/reset-world-button.png =26x26) The `Reset World` menu item (and button) restore the initial state of the simulation.
+The simulation is not entirely distructed and reconstructed like with a revert but the initial state of all the nodes is restored which is way faster.
 
 > **Note**:
-There are currently some limitation to the fast revert.
-The node removed from the simulation (either manually or from a Supervisor) are not re-imported during the fast revert. Furthermore, not all the changes to the node fields are reverted.
+There are currently some limitation to the reset.
+The node removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset. Furthermore, not all the changes to the node fields are reverted.
 
 ![](images/new-button.png =26x26) The `New Text File` menu item (and button)
 opens an empty text file in the text editor.

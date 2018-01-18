@@ -219,6 +219,15 @@ Two `Hokuyo` `Lidar`s are mounted on the `MyBot`.
 At each step, the lidars are updated, and their response are displayed in distinct `Display`s.
 
 
+### inertial\_unit.wbt
+
+**Keywords**: InertialUnit, roll/pitch/yaw angles
+
+![inertial_unit.png](images/inertial_unit.png) This example demonstrates how to use the `InertialUnit` device.
+An `InertialUnit` is mounted on a 3 DOF arm which is moving from one random target to another.
+Each time a target is reached, the absolute roll, pitch and yaw angles of the `InertialUnit` are displayed in the `Console`.
+
+
 ### led.wbt
 
 **Keywords**: LED

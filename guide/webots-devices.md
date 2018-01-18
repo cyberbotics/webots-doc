@@ -287,7 +287,7 @@ The force feedback applied on the motor and the energy consumed by the robot are
 ![pen.png](images/pen.png) In this example, `MyBot` uses a `Pen` device to draw on the floor.
 The controller randomly chooses the ink color.
 The ink on the floor fades slowly.
-Use the 'Y' and 'X' keys to switch the `Pen` on and off.
+Use the `Y` and `X` keys to switch the `Pen` on and off.
 
 
 ### range\_finder.wbt

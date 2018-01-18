@@ -84,7 +84,7 @@ The motion blur response time is given by the `Camera.motionBlur` field.
 
 **Keywords**: Camera, noise mask
 
-![camera_noise_mask.png](images/camera_noise_mask.png) In this example, `MyBot` demonstrates how to create a noise effect by adding a noise mask to the camera image.
+![camera_noise_mask.png](images/camera_noise_mask.png) In this example, `MyBot` demonstrates noise effect based on noise mask.
 The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 
@@ -92,7 +92,7 @@ The noise mask is determined by the `Camera.noiseMaskUrl` field.
 
 **Keywords**: Camera, pattern recognition, smart camera
 
-![camera_recognition.png](images/camera_recognition.png) In this example, `MyBot` demonstrates how to use object recognition capabilities.
+![camera_recognition.png](images/camera_recognition.png) In this example, `MyBot` demonstrates object recognition capabilities.
 The robot camera displays yellow rectangles around the recognized objects.
 Information about the objects currently recognized are displayed in the `Console`.
 The camera recognizes `Solid` nodes whose `recognitionColors` field is not empty.
@@ -223,7 +223,7 @@ At each step, the lidars are updated, and their response are displayed in distin
 
 **Keywords**: InertialUnit, roll/pitch/yaw angles
 
-![inertial_unit.png](images/inertial_unit.png) This example demonstrates how to use the `InertialUnit` device.
+![inertial_unit.png](images/inertial_unit.png) This example demonstrates the use of `InertialUnit` device.
 An `InertialUnit` is mounted on a 3 DOF arm which is moving from one random target to another.
 Each time a target is reached, the absolute roll, pitch and yaw angles of the `InertialUnit` are displayed in the `Console`.
 
@@ -232,7 +232,7 @@ Each time a target is reached, the absolute roll, pitch and yaw angles of the `I
 
 **Keywords**: DistanceSensor, laser
 
-![laser_pointer.png](images/laser_pointer.png) This example demonstrates how to use the `DistanceSensor` device in laser mode.
+![laser_pointer.png](images/laser_pointer.png) This example demonstrates the use of `DistanceSensor` device in laser mode.
 `MyBot` turns round with two laser pointers enabled.
 Red dots are displayed where the laser beam is intersecting obstacles.
 
@@ -242,6 +242,7 @@ Red dots are displayed where the laser beam is intersecting obstacles.
 **Keywords**: LED
 
 ![led.png](images/led.png) In this example, `MyBot` moves while randomly changing the color of three `LED`s on the top of its body.
+Each LED material emissive color and LED mounted `PointLight` are modified accordingly.
 The color choice is printed in the Console.
 
 

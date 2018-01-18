@@ -1,13 +1,13 @@
 ## Webots Devices
 
-The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots applications demonstrating individually the Webots devices and their API.
+The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots worlds that individually demonstrate the Webots devices and their API.
 
 The world files are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers" directory.
 The world files and the corresponding controllers are named according to the device they demonstrate.
 
 Most of the devices below use a simple two-wheeled blue robot called MyBot moving in a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
 The studied devices are attached on this robot.
-`MyBot` moves and avoid obstacles using two `DistanceSensor`s and a technique based on the Braitenberg vehicles.
+`MyBot` moves and avoid obstacles using two `DistanceSensor`s and a technique based on Braitenberg vehicles.
 
 %figure "MyBot in a squared arena."
 
@@ -35,7 +35,7 @@ The color of a charger changes with its energy level: it is red when completely 
 
 ![bumper.png](images/bumper.png) In this example, `MyBot` moves in a closed arena filled with obstacles.
 Its "bumper" `TouchSensor` (represented by a black box) detects collisions.
-`MyBot` moves back and turns a bit each time this event occurs.
+`MyBot` moves back and turns a little each time a collision is detected.
 
 
 ### camera.wbt
@@ -46,7 +46,7 @@ Its "bumper" `TouchSensor` (represented by a black box) detects collisions.
 The robot analyzes the RGB color level of each pixel of the camera images.
 When it has detected something, it turns, stops for a few seconds and saves the image in a PNG file to the user directory.
 It also prints a colored message (using ANSI codes) in the `Console` explaining the type of object it has detected.
-A white noise is applied on the `Camera`.
+White noise is applied on the `Camera`.
 
 
 ### camera\_auto\_focus.wbt
@@ -63,12 +63,12 @@ The objects displayed before or after this distance are blurred.
 **Keywords**: Camera, compositor, special effects, shaders
 
 ![camera_compositor.png](images/camera_compositor.png) In this example, `MyBot` demonstrates camera special effects.
-Four `Camera` are mounted on the `MyBot`, each of them pointing on a different direction.
+Four `Camera`s are mounted on the `MyBot`, each of them pointing in a different direction.
 Special effects are applied on them:
 
 
 - **GrayScale**: The RGB components are merged producing a gray scaled image.
-- **OldMove**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
+- **OldMovie**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
 - **Laplace**: A Laplacian filter is applied to the image showing image edges sharply.
 - **Invert**: The RGB components are inverted.
 
@@ -123,9 +123,9 @@ All the robots in this simulation use the same controller; the different behavio
 
 
 - The `MyBot` `Display` called "emoticon_display" is displayed as a 2D overlay on top of the 3D window, and is displayed as a texture on the screen mounted on the `MyBot`.
-It loads the `emoticons.png` image contains a grid of emoticons, and shows randomly a different part of this image every 30 steps.
+It loads the `emoticons.png` image contains a grid of emoticons (as a sprite sheet), and randomly selects an emoticon from this image every 30 steps.
 - The `MyBot` `Display` called "camera_display" is displayed as a 2D overlay on top of the 3D window.
-It copies the `Camera` image, and draws over it a yellow rectangle and text where yellow pixels are detected.
+It copies the `Camera` image, and draws a yellow rectangle and text over it where yellow pixels are detected.
 - The `Supervisor` `Display` called "ground display" is displayed as a texture on the floor.
 The `Supervisor` get the position of `MyBot` and draws a green dot at this location.
 
@@ -134,8 +134,8 @@ The `Supervisor` get the position of `MyBot` and draws a green dot at this locat
 
 **Keywords**: DistanceSensor, Braitenberg
 
-![distance_sensor.png](images/distance_sensor.png) In this example, eight `DistanceSensor` are mounted at regular intervals around the `MyBot` body.
-The robot avoids obstacles using a technique based on the Braitenberg vehicles.
+![distance_sensor.png](images/distance_sensor.png) In this example, eight `DistanceSensor`s are mounted at regular intervals around the `MyBot` body.
+The robot avoids obstacles using a technique based on Braitenberg vehicles.
 
 
 ### emitter\_receiver.wbt
@@ -199,7 +199,7 @@ The `S` key prints the position read by the Supervisor.
 
 **Keywords**: GPS, WGS84, Latitude-Longitude
 
-![gps.png](images/gps.png) This example shows how to set a `WGS84` reference, and how to retrieve the robot `WGS84` latitude, longitude and latitude in this reference.
+![gps.png](images/gps.png) This example shows how to set a `WGS84` reference, and how to retrieve the robot's `WGS84` latitude and longitude in this reference.
 The reference is set in the `WorldInfo.gpsCoordinateSytem` and `WorldInfo.gpsReference`.
 The resulting position is displayed in the `Console` at each step.
 
@@ -208,7 +208,7 @@ The resulting position is displayed in the `Console` at each step.
 
 **Keywords**: Gyro, angular velocity
 
-![gyro.png](images/gyro.png) This example shows how to measure an angular velocity.
+![gyro.png](images/gyro.png) This example shows how to measure angular velocity.
 A `Gyro` is mounted on three rotational motors (each motor corresponds to one axis).
 The motors a running consecutively for a while.
 The resulting angular velocity measured by the gyro is displayed in the `Console`.
@@ -227,8 +227,8 @@ At each step, the lidars are updated, and their depth output are displayed in di
 
 **Keywords**: InertialUnit, roll/pitch/yaw angles
 
-![inertial_unit.png](images/inertial_unit.png) This example demonstrates the use of `InertialUnit` device.
-An `InertialUnit` is mounted on a 3 DOF arm which moves from one random target to another.
+![inertial_unit.png](images/inertial_unit.png) This example demonstrates the use of an `InertialUnit` device.
+An `InertialUnit` is mounted on a 3 DOF (Degrees Of Freedom) arm which moves from one random target to another.
 Each time a target is reached, the absolute roll, pitch and yaw angles of the `InertialUnit` are displayed in the `Console`.
 
 
@@ -236,9 +236,9 @@ Each time a target is reached, the absolute roll, pitch and yaw angles of the `I
 
 **Keywords**: DistanceSensor, laser
 
-![laser_pointer.png](images/laser_pointer.png) This example demonstrates the use of `DistanceSensor` device in laser mode.
+![laser_pointer.png](images/laser_pointer.png) This example demonstrates the use of `DistanceSensor` devices in laser mode.
 `MyBot` turns round with two laser pointers enabled.
-Red dots are displayed where the laser beam intersects obstacles.
+Red dots are displayed where the laser beam hits obstacles.
 
 
 ### led.wbt
@@ -246,7 +246,7 @@ Red dots are displayed where the laser beam intersects obstacles.
 **Keywords**: LED
 
 ![led.png](images/led.png) In this example, `MyBot` moves while randomly changing the color of three `LED`s on the top of its body.
-Each LED material emissive color and LED mounted `PointLight` are modified accordingly.
+Each LED's material emissive color and embedded `PointLight` are modified accordingly.
 The color choice is printed in the `Console`.
 
 
@@ -256,7 +256,7 @@ The color choice is printed in the `Console`.
 
 ![lidar.png](images/lidar.png) In this example, `MyBot` demonstrates the use of a `Lidar` device.
 The `Lidar` mounted on the `MyBot` scans the environment.
-The `Lidar` point cloud can be shown enabling the `View / Optional Rendering / Show Lidar Point Cloud`.
+The `Lidar` point cloud can be shown by enabling the `View / Optional Rendering / Show Lidar Point Cloud`.
 
 
 ### light\_sensor.wbt
@@ -280,7 +280,7 @@ A ruler indicates the linear motor progression.
 
 **Keywords**: RotationalMotor, force control, energy consumption
 
-![motor.png](images/motor.png) In this example, a rotational motor is controlled in force to push a cardboard.
+![motor.png](images/motor.png) In this example, a rotational motor is controlled in force mode to push a cardboard.
 The force feedback applied on the motor and the energy consumed by the robot are displayed in the `Console`.
 
 
@@ -305,12 +305,12 @@ Use the `Y` and `X` keys to switch the `Pen` on and off.
 
 **Keywords**: Propeller, rotors, fan
 
-![propeller.png](images/propeller.png) In this example, 3 helicopters designed differently demonstrates the use of the `Propeller` node.
+![propeller.png](images/propeller.png) In this example, 3 helicopters with different designs demonstrate the use of the `Propeller` node.
 
 
-- *Red helicopter*: It is composed of axial and trail rotors.
+- *Red helicopter*: It is composed of axial and tail rotors.
 - *Green helicopter*: It is composed of 2 coaxial rotors.
-- *Blue helicopter*: It is composed of a single axial rotors.
+- *Blue helicopter*: It is composed of a single axial rotor.
 
 
 ### radar.wbt
@@ -352,7 +352,7 @@ The lidar depth output is also plot into a `Display` device.
 
 ![speaker.png](images/speaker.png) In this example, a `Speaker` device is mounted on the `MyBot`.
 A WAV file is played on this speaker, while the `MyBot` is moving over the camera.
-The intensity of the left and right loudspeakers differ depending on the robot position.
+The intensity of the left and right audio channels differs depending on the robot position.
 The Webots sound should be enabled to hear the result on the computer loudspeakers.
 
 

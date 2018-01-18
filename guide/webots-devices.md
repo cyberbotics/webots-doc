@@ -340,3 +340,13 @@ This noisy position is compared to the actual `Emitter` position measured with a
 ![sick.png](images/sick.png) In this example, a 3-wheeled robot mounted with a `Sick LMS 291` lidar sensor moves through an area with obstacles.
 The robot use the lidar response to avoid collisions.
 The lidar response is also plot into a `Display` device.
+
+
+### speaker\_text\_to\_speech.wbt
+
+**Keywords**: Speaker, text to speech
+
+![speaker_text_to_speech.png](images/speaker_text_to_speech.png) In this example, the `MyBot` is mounted by a `Speaker` device.
+A text is played in this speaker.
+This text is containing voice modulations including pitch, rate and volume modifications.
+The Webots sound should be enabled to listen the result on the computer loudspeakers.

@@ -1,15 +1,15 @@
 ## Webots Devices
 
-The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots applications demonstrating the individual Webots devices and their corresponding API.
+The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots applications demonstrating individually the Webots devices and their API.
 
 The world files are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers" directory.
 The world files and the corresponding controllers are named according to the device they demonstrate.
 
-Most of the devices below are shown using a simple two-wheeled blue robot called MyBot on a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
+Most of the devices below use a simple two-wheeled blue robot called MyBot moving in a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
 The studied devices are attached on this robot.
-Often, `MyBot` moves and avoid obstacles using 2 `DistanceSensor`s and a Braitenberg technique.
+`MyBot` moves and avoid obstacles using two `DistanceSensor`s and a technique based on the Braitenberg vehicles.
 
-%figure "MyBot in closed squared arena."
+%figure "MyBot in a squared arena."
 
 ![mybot.png](images/mybot.png)
 
@@ -22,7 +22,7 @@ Often, `MyBot` moves and avoid obstacles using 2 `DistanceSensor`s and a Braiten
 
 ![battery.png](images/battery.png) In this example, `MyBot` moves in a closed arena filled with obstacles.
 The energy consumed by the wheel motors slowly discharges the robot's battery.
-When the battery level reaches zero, the robot is powered off.
+When the battery level reaches zero, the robot is powered off and stops moving.
 In order to remain powered, the robot must recharge its battery at energy chargers.
 Chargers are represented by the semi-transparent colored cylinders in the four corners of the arena.
 Only a full charger can recharge the robot's battery.
@@ -34,8 +34,8 @@ The color of a charger changes with its energy level: it is red when completely 
 **Keywords**: TouchSensor, bumper
 
 ![bumper.png](images/bumper.png) In this example, `MyBot` moves in a closed arena filled with obstacles.
-Its "bumper" `TouchSensor` (represented by a black box) is used to detect collisions.
-Each time a collision is detected, `MyBot` moves back and turns a bit.
+Its "bumper" `TouchSensor` (represented by a black box) detects collisions.
+`MyBot` moves back and turns a bit each time this event occurs.
 
 
 ### camera.wbt
@@ -44,16 +44,17 @@ Each time a collision is detected, `MyBot` moves back and turns a bit.
 
 ![camera.png](images/camera.png) In this example, `MyBot` uses a camera to detect colored objects.
 The robot analyzes the RGB color level of each pixel of the camera images.
-When it has detected something, it turns, stops for a few seconds and saves the current image in a PNG file to the user directory.
-It also prints a colored message (using ANSI codes) in the Console explaining the type of object it has detected.
+When it has detected something, it turns, stops for a few seconds and saves the image in a PNG file to the user directory.
+It also prints a colored message (using ANSI codes) in the `Console` explaining the type of object it has detected.
+A white noise is applied on the `Camera`.
 
 
 ### camera\_auto\_focus.wbt
 
 **Keywords**: Camera, autofocus, depth-of-field
 
-![camera_auto_focus.png](images/camera_auto_focus.png) In this example, `MyBot` demonstrates an autofocus camera.
-The robot uses a `DistanceSensor` to get the distance to the front object and adjusts its Camera focal length accordingly.
+![camera_auto_focus.png](images/camera_auto_focus.png) In this example, `MyBot` demonstrates a `Camera` with autofocus.
+The robot uses a `DistanceSensor` to get the distance to the front object and adjusts the `Camera` focal length accordingly.
 The objects displayed before or after this distance are blurred.
 
 
@@ -62,14 +63,17 @@ The objects displayed before or after this distance are blurred.
 **Keywords**: Camera, compositor, special effects, shaders
 
 ![camera_compositor.png](images/camera_compositor.png) In this example, `MyBot` demonstrates camera special effects.
-The robot has 4 `Camera`s with different special effects applied on them:
-The related compositors and shaders are located in the `worlds/compositors` directory.
+Four `Camera` are mounted on the `MyBot`, each of them pointing on a different direction.
+Special effects are applied on them:
 
 
 - **GrayScale**: The RGB components are merged producing a gray scaled image.
 - **OldMove**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
 - **Laplace**: A Laplacian filter is applied to the image showing image edges sharply.
 - **Invert**: The RGB components are inverted.
+
+> **Notes**:
+The related compositors and shaders are located in the `worlds/compositors` directory.
 
 
 ### camera\_motion\_blur.wbt
@@ -130,8 +134,8 @@ The `Supervisor` get the position of `MyBot` and draws a green dot at this locat
 
 **Keywords**: DistanceSensor, Braitenberg
 
-![distance_sensor.png](images/distance_sensor.png) In this example, `MyBot` has eight `DistanceSensor`s placed at regular intervals around its body.
-The robot avoids obstacles using the Braitenberg technique.
+![distance_sensor.png](images/distance_sensor.png) In this example, eight `DistanceSensor` are mounted at regular intervals around the `MyBot` body.
+The robot avoids obstacles using a technique based on the Braitenberg vehicles.
 
 
 ### emitter\_receiver.wbt
@@ -150,10 +154,10 @@ Note that the communication between "infra-red" `Emitter`s and `Receiver`s can b
 
 **Keywords**: PositionSensor, encoders
 
-![encoders.png](images/encoders.png) This example demonstrates the usage of the wheel encoders of `differential wheels` robots.
+![encoders.png](images/encoders.png) This example demonstrates the usage of the wheel encoders of two-wheeled robots.
 The controller randomly chooses target encoder positions, then it rotates its wheels until the encoder values reach the chosen target position.
 Then the encoders are reset and the controller chooses new random values.
-The encoders are modelled using `PositionSensor` nodes applied on `HingeJoint` nodes.
+`PositionSensor` nodes applied on `HingeJoint` nodes model the encoders.
 The robot does not pay any attention to obstacles.
 
 
@@ -163,7 +167,7 @@ The robot does not pay any attention to obstacles.
 
 ![force_sensor.png](images/force_sensor.png) This example is nearly the same as [bumper.wbt](#bumper-wbt).
 The only difference is that this robot uses a "force" `TouchSensor` instead of a "bumper".
-So this robot can measure the force of each collision, which is printed in the Console window.
+So this robot can measure the force of each collision, which is printed in the `Console`.
 
 
 ### force3d\_sensor.wbt
@@ -174,7 +178,7 @@ So this robot can measure the force of each collision, which is printed in the C
 The opaque box in the center of the transparent one is a `Robot` node.
 The `TouchSensor` is the child of the Robot node.
 This setup allow to measure the force on the six sides of the `TouchSensor`.
-The resulting force vector is displayed in the console.
+The resulting force vector is displayed in the `Console`.
 Moving and rotating the box will change the displayed force.
 
 
@@ -195,7 +199,7 @@ The `S` key prints the position read by the Supervisor.
 
 **Keywords**: GPS, WGS84, Latitude-Longitude
 
-![gps.png](images/gps.png) This example shows how to set a WGS84 reference, and how to retrieve the robot WGS84 latitude, longitude and latitude in this reference.
+![gps.png](images/gps.png) This example shows how to set a `WGS84` reference, and how to retrieve the robot `WGS84` latitude, longitude and latitude in this reference.
 The reference is set in the `WorldInfo.gpsCoordinateSytem` and `WorldInfo.gpsReference`.
 The resulting position is displayed in the `Console` at each step.
 
@@ -205,7 +209,7 @@ The resulting position is displayed in the `Console` at each step.
 **Keywords**: Gyro, angular velocity
 
 ![gyro.png](images/gyro.png) This example shows how to measure an angular velocity.
-A gyro is mounted on 3 rotational motors (each motor corresponds to one axis).
+A `Gyro` is mounted on three rotational motors (each motor corresponds to one axis).
 The motors a running consecutively for a while.
 The resulting angular velocity measured by the gyro is displayed in the `Console`.
 
@@ -243,7 +247,7 @@ Red dots are displayed where the laser beam intersects obstacles.
 
 ![led.png](images/led.png) In this example, `MyBot` moves while randomly changing the color of three `LED`s on the top of its body.
 Each LED material emissive color and LED mounted `PointLight` are modified accordingly.
-The color choice is printed in the Console.
+The color choice is printed in the `Console`.
 
 
 ### lidar.wbt
@@ -277,7 +281,7 @@ A ruler indicates the linear motor progression.
 **Keywords**: RotationalMotor, force control, energy consumption
 
 ![motor.png](images/motor.png) In this example, a rotational motor is controlled in force to push a cardboard.
-The force feedback applied on the motor and the energy consumed by the robot are displayed in the console.
+The force feedback applied on the motor and the energy consumed by the robot are displayed in the `Console`.
 
 
 ### pen.wbt
@@ -346,7 +350,7 @@ The lidar depth output is also plot into a `Display` device.
 
 **Keywords**: Speaker, WAV
 
-![speaker.png](images/speaker.png) In this example, the `MyBot` is mounted by a `Speaker` device.
+![speaker.png](images/speaker.png) In this example, a `Speaker` device is mounted on the `MyBot`.
 A WAV file is played on this speaker, while the `MyBot` is moving over the camera.
 The intensity of the left and right loudspeakers differ depending on the robot position.
 The Webots sound should be enabled to hear the result on the computer loudspeakers.
@@ -356,7 +360,7 @@ The Webots sound should be enabled to hear the result on the computer loudspeake
 
 **Keywords**: Speaker, text to speech
 
-![speaker_text_to_speech.png](images/speaker_text_to_speech.png) In this example, the `MyBot` is mounted by a `Speaker` device.
+![speaker_text_to_speech.png](images/speaker_text_to_speech.png) In this example, a `Speaker` device is mounted on the `MyBot`.
 A text formated in XML is played in this speaker.
 This text is containing voice modulations including pitch, rate and volume modifications.
 The Webots sound should be enabled to hear the result on the computer loudspeakers.
@@ -366,7 +370,7 @@ The Webots sound should be enabled to hear the result on the computer loudspeake
 
 **Keywords**: Camera, spherical projection
 
-![spherical_camera.png](images/spherical_camera.png) In this example, the `MyBot` is mounted by a spherical `Camera` device.
+![spherical_camera.png](images/spherical_camera.png) In this example, a spherical `Camera` device is mounted on the `MyBot`.
 The resulting projection is shown in a 2D camera overlay.
 
 
@@ -377,12 +381,12 @@ The resulting projection is shown in a 2D camera overlay.
 ![supervisor.png](images/supervisor.png) This example shows basic operations of a `Supervisor` node.
 The `Supervisor` starts with displaying the names of the scene tree root nodes.
 Then it displays the content of the `WorldInfo.gravity` field.
-Finally, after 8 seconds, it moves the `PointLight`.
+Finally, after eight seconds, it moves the `PointLight`.
 
 
 ### track.wbt
 
 **Keywords**: Track, caterpillar track, conveyor belt
 
-![track.png](images/track.png) This example shows two use case of the `Track` node.
+![track.png](images/track.png) This example shows two use cases of the `Track` node.
 The `Track` node is used to model two caterpillar tracks, and a conveyor belt.

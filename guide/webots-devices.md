@@ -257,6 +257,8 @@ The `Lidar` point cloud can be shown enabling the `View / Optional Rendering / S
 
 ### light\_sensor.wbt
 
+**Keywords**: LightSensor
+
 ![light_sensor.png](images/light_sensor.png) In this example, `MyBot` uses two `LightSensor`s to follow a light source.
 The light source can be moved with the mouse; the robot will follow it.
 

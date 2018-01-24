@@ -45,7 +45,7 @@ Hence it is possible to call the `Robot`'s methods, such as, e.g., `step()` or
 `getLED()`, from the `DifferentialWheels` and `Supervisor` controllers. But it
 is not possible to call the `Supervisor` methods from a `DifferentialWheels`
 controller, and vice versa. For example it won't be possible to call
-`simulationRevert()` from a `DifferentialWheels` controller.
+`reloadWorld()` from a `DifferentialWheels` controller.
 
 %figure "A small subset of Webots oriented-object APIs"
 

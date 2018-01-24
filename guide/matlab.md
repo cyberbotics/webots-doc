@@ -88,4 +88,4 @@ At this point, it is also possible to restart the controller by calling its
 m-file from MATLAB prompt. Note that this will restart the controller only, not
 the whole simulation, so the current robot and motor positions will be
 preserved. If you want to restart the whole simulation you need to use the
-`Revert` button as usual.
+`Reload` button as usual.

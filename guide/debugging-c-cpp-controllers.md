@@ -62,7 +62,7 @@ $ make
 ```
 
 Note that, the *-g* flag should now appear in the compilation line. Once you
-have recompiled the controller, hit the `Pause` and `Revert` buttons. This
+have recompiled the controller, hit the `Pause` and `Reload` buttons. This
 pauses the simulation and reloads the freshly compiled versions of the
 controller. Now find the process ID (PID) of the "soccer\_supervisor" process,
 using `ps -e` (Linux) or `ps -x` (macOS), or using the *Task Manager*
@@ -132,6 +132,6 @@ The `frame` command instructs the debugger to select the specified stack frame,
 and the `print` command prints the current value of an expression. In this
 simple example we clearly see that the problem is caused by a NULL (0x0)
 *time\_string* argument passed to the `sprintf()` function. The next steps are
-to: fix the problem, recompile the controller and revert the simulation to give
+to: fix the problem, recompile the controller and reload the world to give
 it another try. Once it works correctly you can remove the *-g* flag from the
 Makefile.

@@ -134,7 +134,7 @@ resource files of Webots can be used in any compositor, they are located in
 "WEBOTS\_HOME/resources/ogre". Compositors can be added/removed at any time,
 even while the simulation is running. However, the compositor resource files are
 loaded at the same time as the world file. Therefore any modification to the
-compositor files will need a revert of the simulation to be taken into account.
+compositor files will need a reload of the world to be taken into account.
 
 ### Camera image
 

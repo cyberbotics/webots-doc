@@ -119,7 +119,7 @@ the above description.
 generate the executable file at the right location.
 - Have changed the Robot's controller field to a location where no
 executable/interpretable file can be found.
-- Have "reverted" the world after "cleaning" of the controller project.
+- Have "reloaded" the world after "cleaning" of the controller project.
 
 ### What does this mean: "Warning: invalid WbDeviceTag in API function call" ?
 

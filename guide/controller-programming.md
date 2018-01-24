@@ -438,7 +438,7 @@ argv[3]=three
 
 ### Controller Termination
 
-Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reverted, a new simulation is loaded, or the controller name is changed in the Webots scene tree. The controller cannot prevent its own termination but it can be notified shortly before this happens. The `wb_robot_step()` function returns -1 when the controller process is going to be terminated by Webots. Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots. Here is an example that shows how to save data before the upcoming termination:
+Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reset, the world is reloaded, a new simulation is loaded, or the controller name is changed in the Webots scene tree. The controller cannot prevent its own termination but it can be notified shortly before this happens. The `wb_robot_step()` function returns -1 when the controller process is going to be terminated by Webots. Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots. Here is an example that shows how to save data before the upcoming termination:
 
 ```c
 #include <webots/robot.h>

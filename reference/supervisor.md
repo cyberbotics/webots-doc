@@ -20,7 +20,7 @@ the [Supervisor](#supervisor) node.
 > **Note**:
 Note that in some special cases the [Supervisor](#supervisor) functions might
 return wrong values and it might not be possible to retrieve fields and nodes.
-This occurs when closing a world and quitting its controllers, i.e. reverting
+This occurs when closing a world and quitting its controllers, i.e. reloading
 the current world, opening a new world, or closing Webots. In this case the
 output will be a NULL pointer or a default value. For functions returning a
 string, an empty string is returned instead of a NULL pointer.
@@ -667,29 +667,6 @@ int main(int argc, char *argv[]) {
 
 **Name**
 
-**wb\_supervisor\_simulation\_revert** - *reload the current world*
-
-{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
-
-```c
-#include <webots/supervisor.h>
-
-void wb_supervisor_simulation_revert();
-```
-
-**Description**
-
-The `wb_supervisor_simulator_revert()` function sends a request to the simulator
-process, asking it to reload the current world immediately. As a result of
-reloading the current world, the supervisor process and all the robot processes
-are terminated and restarted. You may wish to save some data in a file from your
-supervisor program in order to reload it when the supervisor controller
-restarts.
-
----
-
-**Name**
-
 **wb\_supervisor\_simulation\_get\_mode**, **wb\_supervisor\_simulation\_set\_mode** - *get and set the simulation mode*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
@@ -738,7 +715,7 @@ clicking on the corresponding buttons in the user interface.
 
 **Name**
 
-**wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
+**wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world**, **wb\_supervisor\_reload\_world** - *Load, save or reload the current world.*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
@@ -747,6 +724,7 @@ clicking on the corresponding buttons in the user interface.
 
 void wb_supervisor_load_world(const char *filename);
 bool wb_supervisor_save_world(const char *filename);
+void wb_supervisor_reload_world();
 ```
 
 **Description**
@@ -769,6 +747,13 @@ overwrite silently existing files, so that the corresponding data may be lost.
 > **Note** [C++, Java, Python, Matlab]:
 In the other APIs, the `Robot.saveWorld()` function can be called without
 argument. In this case, a simple save operation is performed.
+
+The `wb_supervisor_reload_world()` function sends a request to the simulator
+process, asking it to reload the current world immediately. As a result of
+reloading the current world, the supervisor process and all the robot processes
+are terminated and restarted. You may wish to save some data in a file from your
+supervisor program in order to reload it when the supervisor controller
+restarts.
 
 ---
 

@@ -46,18 +46,18 @@ filename entered by the user. Note that a ".wbt" file should always be saved in
 a Webots project directory, and in the "worlds" subdirectory, otherwise it will
 not be possible to reopen the file.
 
-![](images/revert-button.png =26x26) The `Revert World` menu item (and button)
+![](images/revert-button.png =26x26) The `Reload World` menu item (and button)
 reloads the current world from the saved version and restarts the simulation
 from the beginning.
 
 > **Note**:
-When opening (or reverting) a world, if the world takes more than 2 seconds to
+When opening (or reloading) a world, if the world takes more than 2 seconds to
 load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
 be opened instead.
 
-![](images/reset-world-button.png =26x26) The `Reset World` menu item (and button) restore the initial state of the simulation.
-The simulation is not entirely distructed and reconstructed like with a revert but the initial state of all the nodes is restored which is way faster.
+![](images/reset-simulation-button.png =26x26) The `Reset Simulation` menu item (and button) restore the initial state of the simulation.
+The simulation is not entirely distructed and reconstructed like with a reload but the initial state of all the nodes is restored, which is way faster.
 
 > **Note**:
 There are currently some limitation to the reset.

@@ -116,7 +116,7 @@ robot must use a different NAOqi port. Here's how to copy a Nao and assign the
 NAOqi port number:
 
 1. Pause the simulation: push the `Pause` button in Webots 3D View
-2. Revert the simulation: push the `Revert` button in Webots 3D View
+2. Reload the simulation: push the `Reload` button in Webots 3D View
 3. In Webots Scene Tree, select a top level nodes, e.g. the Nao robot
 4. Then push the `Add` button, a dialog appears
 5. In the dialog, select `PROTO (Webots) / robots`

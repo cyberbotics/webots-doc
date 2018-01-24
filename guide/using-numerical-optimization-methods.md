@@ -127,17 +127,17 @@ the robot controller process (using Webots `Emitter` / `Receiver` communication
 system). The robot controller program should be able to handle such a message
 and reset its state accordingly.
 
-#### Using the wb_supervisor_simulation_revert() function
+#### Using the wb_supervisor_reload_world() function
 
 This function restarts the physics simulation and all controllers from the very
 beginning. With this method, everything is reset, including the physics and the
 motor positions and the controllers. But this function does also restart the
-controller that called `wb_supervisor_simulation_revert()`, this is usually the
+controller that called `wb_supervisor_reload_world()`, this is usually the
 controller that runs the optimization algorithm, and as a consequence the
 optimization state is lost. Hence for using this technique, it is necessary to
 develop functions that can save and restore the complete state of the
 optimization algorithm. The optimization state should be saved before calling
-`wb_supervisor_simulation_revert()` and reloaded when the `Supervisor`
+`wb_supervisor_reload_world()` and reloaded when the `Supervisor`
 controller restarts. Here is a pseudo-code example:
 
 ```c
@@ -169,7 +169,7 @@ void evaluate_next_robot() {
   optimizer_save_state("my_state_file.txt");
   ...
   // start next evaluation
-  wb_supervisor_simulation_revert();
+  wb_supervisor_reload_world();
   wb_robot_step(TIME_STEP);
   exit(0);
 }
@@ -203,7 +203,7 @@ controller, so this approach makes perfectly sense.
 
 For example, Webots can be called from a shell script or from any type of
 program suitable for running the optimization algorithm. Starting Webots each
-time does clearly revert the simulation completely, so each robot will start
+time does clearly reload the world completely, so each robot will start
 from the same initial state. The drawback of this method is that the
 optimization algorithm has to be programmed outside of Webots. This external
 program can be written in any programming language, e.g. shell script, C, PHP,

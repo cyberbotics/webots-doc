@@ -29,7 +29,7 @@ loop:
 mMotors[18]->setPosition(sin(getTime()));
 ```
 
-Then save the file, press the build button and finally revert the simulation to
+Then save the file, press the build button and finally reload the world to
 start the new controller. This example is well suited for the remote compilation
 and we recommended that you start by testing the remote compilation tool by using
 this example.

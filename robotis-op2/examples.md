@@ -11,7 +11,7 @@ are situated on top of the 3D view):
 ![](images/open_button.png =26x26) The `Open World...` is used to open another
 example.
 
-![](images/revert_button.png =26x26) The `Revert...` is used to reload the
+![](images/revert_button.png =26x26) The `Reload...` is used to reload the
 example file and restart the simulation.
 
 ![](images/real_time_button.png =26x26) The `Run...` is used to start or resume the simulation

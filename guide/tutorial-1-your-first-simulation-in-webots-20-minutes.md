@@ -107,7 +107,7 @@ menu item. Using the dialog box save the world into the
 <!-- -->
 
 > **Hands on**:
-Revert the simulation by selecting the `File / Revert World` menu item.
+Reload the simulation by selecting the `File / Reload World` menu item.
 
 <!-- -->
 
@@ -144,11 +144,11 @@ simulation is paused and that the virtual time elapsed is 0.
 
 > **Theory**:
 When a Webots world is modified with the intention of being saved, it is
-fundamental that the simulation is first paused and reverted to its initial
+fundamental that the simulation is first paused and reloaded to its initial
 state, i.e. the virtual time counter on the main toolbar should show
 0:00:00:000. Otherwise at each save, the position of each 3D objects can
 accumulate errors. Therefore, any modification of the world should be performed
-in that order: **pause, revert, modify and save the simulation**.
+in that order: **pause, reload, modify and save the simulation**.
 
 As we don't need to create the e-puck robot from scratch, we will just have to
 import a special E-puck node (in fact: a PROTO node as the `RectangleArena` we
@@ -167,7 +167,7 @@ E-puck (Robot)`. Then save the simulation.
 
 > **Note**:
 Now if you run the simulation, the robot moves: that's because the robot uses a
-default controller with that behavior. Please pause and revert the simulation
+default controller with that behavior. Please pause and reload the simulation
 before going on.
 
 <!-- -->
@@ -209,7 +209,7 @@ the camera window.
 > **Hands on**:
 In this tutorial we will not use the Camera devices of the E-puck. So we can
 hide the window by clicking the "x" on the camera window.
-Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
+Don't forget to reload the simulation before hiding the camera and to save it after the modifications.
 
 ### Create a new Controller
 
@@ -299,7 +299,7 @@ and by applying a motor command (`wb_motor_set_position(motor, 10);`):
 > **Hands on**:
 Save the modified source code (`File / Save Text File`), and compile it (`Build
 / Build`). Fix any compilation errors if necessary. When Webots proposes to
-revert the simulation, choose `Yes`.
+reload the world, choose `Yes`.
 
 If everything is ok, your robot should move forwards.
 The robot will move using it's maximum speed for a while and then stop once the wheels have rotated of 10 radians.
@@ -346,7 +346,7 @@ In order to control the motors of the wheels in speed you need to set the target
 > }
 > ```
 
-Try to change your previous controller by this one, and then recompile and revert the simulation.
+Try to change your previous controller by this one, and then recompile and reload the world.
 The robot will now move (the wheels will rotate at a speed of 1 radian per second) and never stop.
 
 ### Conclusion

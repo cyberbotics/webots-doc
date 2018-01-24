@@ -32,7 +32,7 @@ The default value is `python`.
 It should work on most systems assuming that `python` is installed and available from the command line.
 On some systems, it may be useful to set it to `python3.6` for example if you want to launch the controllers with this specific version of Python.
 Bear in mind that this value may be overridden by the content of a `runtime.ini` file of a Python controller that may redefine a specific Python command to launch that controller.
-- The `Warnings: Display save warning only for scene tree edit` checkbox prevents Webots from displaying any warning dialog window when you quit, revert or load a new world after the current world was modified by either changing the viewpoint, dragging, rotating, applying a force or torque to an object, or modifying the world from a controller.
+- The `Warnings: Display save warning only for scene tree edit` checkbox prevents Webots from displaying any warning dialog window when you quit, reload or load a new world after the current world was modified by either changing the viewpoint, dragging, rotating, applying a force or torque to an object, or modifying the world from a controller.
 It will however still display a warning if the world was modified from the scene tree.
 - The `Update policy: Check for Webots updates on startup` checkbox allows Webots to check if a new version is available for download at every startup. If available, a dialog window will inform you about it.
 

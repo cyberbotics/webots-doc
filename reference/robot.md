@@ -199,7 +199,7 @@ motors may run, the sensor values may change, etc. Note that the `duration`
 parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
 If this function returns -1, this indicates that Webots wishes to terminate the
-controller. This happens when the user hits the `Revert` button or quits Webots.
+controller. This happens when the user hits the `Reload` button or quits Webots.
 So if your code needs to do some cleanup, e.g.,  flushing or closing data files,
 etc., it is necessary to test this return value and take proper action. The
 controller termination cannot be vetoed: one second later the controller is

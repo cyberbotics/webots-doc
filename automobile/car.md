@@ -60,6 +60,7 @@ engine that is used to charge the battery in case of `power-split hybrid`
 - `hybridPowerSplitRPM`: Defines the fixed rotational speed of the combustion
 engine in case of `power-split hybrid` `engineType`.
 
+For more information about the last eight fields and how they are used internally please refer to the [Engine models](driver-library.md#engine-models) section.
 The `extensionSlot` field is filled in by default with the `VehicleLights`
 PROTO.
 

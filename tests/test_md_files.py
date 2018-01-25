@@ -33,7 +33,7 @@ class TestMDFiles(unittest.TestCase):
         """Test that the MD files don't contain prohibited keywords."""
         books = Books()
         for book in books.books:
-            # 'advertising' causes issues with ad blocks like software.
+            # 'advertising' causes issues with ad blocking software.
             self.assertFalse(
                 'advertising' in book.md_paths,
                 msg='MD file "%s" contains "advertising"' % (book.md_paths)

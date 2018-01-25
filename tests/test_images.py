@@ -11,7 +11,7 @@ class TestImages(unittest.TestCase):
     """Unit test of the images."""
 
     def test_images_are_valid(self):
-        """Test that the MD files refer on valid URLs."""
+        """Test that the MD files refer to valid URLs."""
         books = Books()
         for book in books.books:
             for md_path in book.md_paths:

@@ -7,10 +7,10 @@ from books import Books
 
 
 class TestParagraphs(unittest.TestCase):
-    """Unit test of the MD files."""
+    """Unit test of the paragraphs."""
 
     def setUp(self):
-        """Setup: get all the paragraphs."""
+        """Setup: get all the paragraphs and notes."""
         self.paragraphs = []
         books = Books()
         for book in books.books:
@@ -32,18 +32,27 @@ class TestParagraphs(unittest.TestCase):
                 content = re.sub(r'%figure.*%end', '', content, flags=re.S)
                 content = re.sub(r'%api.*%end', '', content, flags=re.S)
 
-                # Extract paragraphs (and notes)
+                # Extract paragraphs and notes.
                 for match in re.finditer(r'(?s)((?:[^\n][\n]?)+)', content):
                     paragraph = content[match.start():match.end() - 1]
                     # - Arrays.
                     if paragraph.startswith('| '):
                         continue
                     self.paragraphs.append(paragraph)
-        # Debug: Uncomment to display all the acquired paragraphs.
+        # Debug: Uncomment to display all the acquired paragraphs and notes.
         # for p in self.paragraphs:
         #     print ('@@@')
         #     print (p)
 
-    def test_something(self):
-        """TODO."""
-        pass
+    def test_code_inside_hyperlink_is_forbidden(self):
+        """Test that no code is inserted inside hyperlinks."""
+        linkRE = re.compile(r'\[([^\]]*)\]\s*\(([^\)]*)\)')
+
+        for p in self.paragraphs:
+            for m in re.finditer(linkRE, p):
+                linkName = m.group(1).strip()
+                # linkUrl = m.group(2).strip()
+                self.assertFalse(
+                    '`' in linkName,
+                    msg='Hyperlink "%s" contains code.' % m.group(0)
+                )

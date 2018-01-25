@@ -17,16 +17,16 @@ class TestMenus(unittest.TestCase):
             self.menus.append(os.path.join(book.path, 'menu.md'))
 
     def test_menu_files_are_existing(self):
-        """The menu.md files are existing in each book."""
+        """The menu.md files exist in each book."""
         self.assertGreater(len(self.menus), 0, msg='No menu found')
         for menu in self.menus:
             self.assertTrue(
                 os.path.isfile(menu),
-                msg='File "%s" is not existing' % (menu)
+                msg='File "%s" does not exist' % (menu)
             )
 
     def test_menu_are_refering_valid_files(self):
-        """The menu.md references are pointing on valid files."""
+        """The menu.md references refer valid files."""
         for menu in self.menus:
             with open(menu) as f:
                 content = f.readlines()

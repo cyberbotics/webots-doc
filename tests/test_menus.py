@@ -68,7 +68,7 @@ class TestMenus(unittest.TestCase):
             )
 
     def test_all_book_files_are_referred_by_the_menu_file(self):
-        """All the book files are referred by the menu files."""
+        """All the book files are referred to by the menu files."""
         for menu in self.menus:
             book_path = os.path.dirname(menu)
             book_name = os.path.basename(book_path)

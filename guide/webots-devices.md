@@ -195,7 +195,7 @@ The `G` key prints the robot's GPS device position.
 The `S` key prints the position read by the Supervisor.
 
 
-### gps_lat_long.wbt
+### gps\_lat\_long.wbt
 
 **Keywords**: GPS, WGS84, Latitude-Longitude
 

@@ -4,12 +4,12 @@ This section gives various examples of complex behaviors and/or functionalities.
 The world files are located in the "WEBOTS\_HOME/projects/samples/howto/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/howto/controllers" directory.
 For each, the world file and its corresponding controller are named according to the behavior they exemplify.
 
-### asymmetric_friction1.wbt
+### asymmetric\_friction1.wbt
 
 TODO
 
 
-### asymmetric_friction2.wbt
+### asymmetric\_friction2.wbt
 
 TODO
 
@@ -32,22 +32,22 @@ After a few seconds, all the motors are turned off and the robot collapses.
 This example illustrates how to build a simple articulated robot and also how to turn off motor power.
 
 
-### center_of_mass.wbt
+### center\_of\_mass.wbt
 
 TODO
 
 
-### contact_points.wbt
+### contact\_points.wbt
 
 TODO
 
 
-### cylinder_stack.wbt
+### cylinder\_stack.wbt
 
 TODO
 
 
-### force_control.wbt
+### force\_control.wbt
 
 **Keywords**: Force control, linear motor, spring and damper
 
@@ -57,22 +57,22 @@ In this example, `wb_motor_set_force()` is used to simulate the effect of a spri
 Then, the motor force is turned off and the boxes oscillate for a while according to the spring and damping equations programmed in the controller.
 
 
-### force_control.wbt
+### force\_control.wbt
 
 TODO
 
 
-### four_wheels.wbt
+### four\_wheels.wbt
 
 TODO
 
 
-### gui_tracker.wbt
+### gui\_tracker.wbt
 
 TODO
 
 
-### inverted_pendulum.wbt
+### inverted\_pendulum.wbt
 
 **Keywords**: Inverted pendulum, PID, LinearMotor
 
@@ -80,23 +80,23 @@ TODO
 This is known as the "Inverted Pendulum Problem", and it is solved in our example by using a PID (Proportional Integral Differential) controller.
 
 
-### mouse_events.wbt
+### mouse\_events.wbt
 
 TODO
 
 
-### omni_wheels.wbt
+### omni\_wheels.wbt
 
 
 TODO
 
 
-### passive_dynamic_walker.wbt
+### passive\_dynamic\_walker.wbt
 
 TODO
 
 
-### pedal_racer.wbt
+### pedal\_racer.wbt
 
 TODO
 
@@ -122,12 +122,12 @@ This plugins is an example of:
 TODO
 
 
-### sick_terrain_scanning.wbt
+### sick\_terrain\_scanning.wbt
 
 TODO
 
 
-### texture_change.wbt
+### texture\_change.wbt
 
 **Keywords**: Supervisor, texture, `wb_supervisor_field_set_*()`, Camera
 
@@ -140,6 +140,6 @@ The robot watches the panel with its `Camera`. Meanwhile a `Supervisor` switches
 TODO
 
 
-### ziegler_nichols.wbt
+### ziegler\_nichols.wbt
 
 TODO

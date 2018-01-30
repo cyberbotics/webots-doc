@@ -55,7 +55,7 @@
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/showdown-extensions.js'></script>
+    <script src='$rawgiturl$branch/js/showdown-extensions.js'></script>
     <script src='$rawgiturl$branch/js/viewer.js'></script>
   ";
   include 'header.php';

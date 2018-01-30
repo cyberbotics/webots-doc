@@ -751,7 +751,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!setup.page)
       setup.page = getGETQueryValue("page", "index");
     if (!setup.anchor)
-      setup.anchor = extractAnchor(location.href);
+      setup.anchor = window.location.hash.substring(1);
     if (!setup.branch)
       setup.branch = getGETQueryValue("branch", "master");
   }

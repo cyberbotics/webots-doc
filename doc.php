@@ -35,7 +35,6 @@
   }
   if (!isset($repository))
     $repository = 'omichel';
-  $url = "https://raw.githubusercontent.com/$repository/webots-doc/";
   $rawgiturl = "https://rawgit.com/$repository/webots-doc/"
   if ($branch === 'master')
     $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/";  // RawGit production URL.
@@ -47,7 +46,7 @@
         'anchor':     window.location.hash.substring(1),
         'branch':     '$branch',
         'repository': '$repository',
-        'url':        '$url'
+        'url':        'https://raw.githubusercontent.com/$repository/webots-doc/'
       }
       console.log('Setup: ' + JSON.stringify(setup));
     </script>

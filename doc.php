@@ -5,7 +5,7 @@
     header("Location: $request_uri");
     exit();
   }
-  # the URL follow this format https://www.cyberbotics.com/doc/book/page?v=version#anchor where version and anchor are optional
+  # the URL follow this format https://www.cyberbotics.com/doc/book/page?version=tagOrBranch#anchor where version and anchor are optional
   $uri = substr($request_uri, 5); // we remove the "/doc/" prefix
   $i = strpos($uri, '/');
   unset($repository);
@@ -35,26 +35,30 @@
   }
   if (!isset($repository))
     $repository = 'omichel';
+  if ($branch === '')
+    $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/master/";  // RawGit production URL.
+  else
+    $rawgiturl = "https://rawgit.com/$repository/webots-doc/"; // RawGit development URL.
   $scripts="
-    <link rel='stylesheet' type='text/css' href='/css/webots-doc.css'/>
+    <script>
+      setup = {
+        'book':       '$book',
+        'page':       '$page',
+        'anchor':     window.location.hash.substring(1),
+        'branch':     '$branch',
+        'repository': '$repository',
+        'url':        'https://raw.githubusercontent.com/$repository/webots-doc/'
+      }
+      console.log('Setup: ' + JSON.stringify(setup));
+    </script>
+    <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc.css'/>
     <link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/highlight/9.5.0/default.min.css'/>
     <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/showdown-extensions.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/viewer.js'></script>
-    <script>
-      setup = {
-        'book':   '$book',
-        'page':   '$page',
-        'anchor': extractAnchor(),
-        'branch': '$branch',
-        'repository': '$repository',
-        'url':    'https://raw.githubusercontent.com/$repository/webots-doc/'
-      }
-      console.log('Setup: ' + JSON.stringify(setup));
-    </script>
+    <script src='$rawgiturl$branch/js/showdown-extensions.js'></script>
+    <script src='$rawgiturl$branch/js/viewer.js'></script>
   ";
   include 'header.php';
 ?>

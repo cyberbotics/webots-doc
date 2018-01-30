@@ -1,11 +1,18 @@
 ## How To
 
-This section gives various examples of complex behaviors and/or
-functionalities. The world files are located in the
-"WEBOTS\_HOME/projects/samples/howto/worlds" directory, and their controllers in
-the "WEBOTS\_HOME/projects/samples/howto/controllers" directory. For each, the
-world file and its corresponding controller are named according to the behavior
-they exemplify.
+This section gives various examples of complex behaviors and/or functionalities.
+The world files are located in the "WEBOTS\_HOME/projects/samples/howto/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/howto/controllers" directory.
+For each, the world file and its corresponding controller are named according to the behavior they exemplify.
+
+### asymmetric_friction1.wbt
+
+TODO
+
+
+### asymmetric_friction2.wbt
+
+TODO
+
 
 ### binocular.wbt
 
@@ -21,6 +28,7 @@ This example simply shows how to equip a robot with two `Camera`s for
 stereovision. The example does not actually perform stereovision or any form of
 computer vision.
 
+
 ### biped.wbt
 
 **Keywords**: Humanoid robot, biped robot, power off, passive joint
@@ -35,6 +43,22 @@ In this example, a biped robot stands up while his head rotates. After a few
 seconds, all the motors are turned off and the robot collapses. This example
 illustrates how to build a simple articulated robot and also how to turn off
 motor power.
+
+
+### center_of_mass.wbt
+
+TODO
+
+
+### contact_points.wbt
+
+TODO
+
+
+### cylinder_stack.wbt
+
+TODO
+
 
 ### force_control.wbt
 
@@ -55,6 +79,21 @@ move the boxes apart. Then, the motor force is turned off and the boxes oscillat
 a while according to the spring and damping equations programmed in the
 controller.
 
+### force_control.wbt
+
+TODO
+
+
+### four_wheels.wbt
+
+TODO
+
+
+### gui_tracker.wbt
+
+TODO
+
+
 ### inverted_pendulum.wbt
 
 **Keywords**: Inverted pendulum, PID, LinearMotor
@@ -69,6 +108,27 @@ In this example, a robot moves from left to right in order to keep an inverted
 pendulum upright. This is known as the "Inverted Pendulum Problem", and it is
 solved in our example by using a PID (Proportional Integral Differential)
 controller.
+
+### mouse_events.wbt
+
+TODO
+
+
+### omni_wheels.wbt
+
+
+TODO
+
+
+### passive_dynamic_walker.wbt
+
+TODO
+
+
+### pedal_racer.wbt
+
+TODO
+
 
 ### physics.wbt
 
@@ -91,6 +151,16 @@ example of:
 - how to draw objects using OpenGL
 
 
+### rope.wbt
+
+TODO
+
+
+### sick_terrain_scanning.wbt
+
+TODO
+
+
 ### texture_change.wbt
 
 **Keywords**: Supervisor, texture, `wb_supervisor_field_set_*()`, Camera
@@ -104,3 +174,12 @@ example of:
 In this example, a robot moves forward and backward in front of a large textured
 panel. The robot watches the panel with its `Camera`. Meanwhile a `Supervisor`
 switches the image displayed on the panel.
+
+### vision.wbt
+
+TODO
+
+
+### ziegler_nichols.wbt
+
+TODO

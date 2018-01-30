@@ -759,4 +759,7 @@ document.addEventListener("DOMContentLoaded", function() {
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
+
+  // test
+  document.getElementById('left').style.backgroundColor = 'blue';
 });

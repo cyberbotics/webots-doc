@@ -35,8 +35,8 @@
   }
   if (!isset($repository))
     $repository = 'omichel';
-  if ($branch === 'master')
-    $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/";  // RawGit production URL.
+  if ($branch === '')
+    $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/master/";  // RawGit production URL.
   else
     $rawgiturl = "https://rawgit.com/$repository/webots-doc/"; // RawGit development URL.
   $scripts="

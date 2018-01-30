@@ -36,7 +36,7 @@
   if (!isset($repository))
     $repository = 'omichel';
   $url = "https://raw.githubusercontent.com/$repository/webots-doc/";
-  $rawgiturl = "https://rawgit.com/$repository/webots-doc/";
+  $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/";
   $scripts="
     <script>
       setup = {

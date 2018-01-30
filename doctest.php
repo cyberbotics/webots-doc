@@ -5,7 +5,7 @@
     header("Location: $request_uri");
     exit();
   }
-  # the URL follow this format https://www.cyberbotics.com/doc/book/page?v=version#anchor where version and anchor are optional
+  # the URL follow this format https://www.cyberbotics.com/doc/book/page?version=tagOrBranch#anchor where version and anchor are optional
   $uri = substr($request_uri, 9); // we remove the "/doctest/" prefix
   $i = strpos($uri, '/');
   unset($repository);

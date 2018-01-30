@@ -117,7 +117,7 @@ function forgeUrl(page, anchor) {
   var newUrl = currentUrl;
   if (isCyberboticsUrl) {
     var i = location.href.indexOf('cyberbotics.com/doc');
-    newUrl = location.href.substr(0, i) + "cyberbotics.com/doctest/" + setup.book + "/" + page;
+    newUrl = location.href.substr(0, i) + "cyberbotics.com/doc/" + setup.book + "/" + page;
     if (setup.branch != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.branch;
     else if (setup.branch != '')
@@ -473,7 +473,7 @@ function changeMenuSelection() {
           n = href.indexOf('#');
           if (n > -1)
               href = href.substring(0, n)
-          if (href.endsWith("/doctest/" + setup.book + "/" + setup.page))
+          if (href.endsWith("/doc/" + setup.book + "/" + setup.page))
               selection = true;
           else
               selection = false;
@@ -760,7 +760,4 @@ document.addEventListener("DOMContentLoaded", function() {
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
-
-  // test
-  document.getElementById('left').style.backgroundColor = 'blue';
 });

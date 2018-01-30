@@ -11,7 +11,7 @@ if (typeof String.prototype.endsWith !== "function")
 if (!setup)
   var setup = {};
 
-var isCyberboticsUrl = location.href.indexOf('://www.cyberbotics.com/doc') != -1;
+var isCyberboticsUrl = location.href.indexOf('cyberbotics.com/doc') != -1;
 
 function setupCyberboticsUrl(url) {
   setup.book = "guide";
@@ -116,7 +116,8 @@ function forgeUrl(page, anchor) {
   var currentUrl = location.href;
   var newUrl = currentUrl;
   if (isCyberboticsUrl) {
-    newUrl = "https://www.cyberbotics.com/doc/" + setup.book + "/" + page;
+    var i = location.href.indexOf('cyberbotics.com/doc');
+    newUrl = location.href.substr(0, i) + "cyberbotics.com/doc/" + setup.book + "/" + page;
     if (setup.branch != '' && setup.repository && setup.repository != "omichel")
       newUrl += "?version=" + setup.repository + ":" + setup.branch;
     else if (setup.branch != '')
@@ -304,7 +305,7 @@ function populateViewDiv(mdContent) {
     applyToPageTitle(mdContent);
 
     // markdown to html
-    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors", "youtube"]});
+    var converter = new showdown.Converter({tables: "True", extensions: ["wbVariables", "wbAPI", "wbFigure", "wbAnchors", "wbIllustratedSection", "youtube"]});
     var html = converter.makeHtml(mdContent);
 
     // console.log("HTML content: \n\n")

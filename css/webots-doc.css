@@ -173,6 +173,7 @@
   font-style: normal;
   font-weight: 100;
   color: #888;
+  clear: both;
 }
 .webots-doc h1 {
   font-size: 46px;
@@ -261,6 +262,23 @@
 .webots-doc .api table {
   font-family: monospace;
   width: 80%;
+}
+.webots-doc ul {
+  clear: both;
+}
+.webots-doc .illustrated-section {
+  overflow: hidden;
+  padding: 10px 0px;
+  margin: 20px 10px;
+}
+.webots-doc .illustrated-section img {
+  max-width: 30%;
+  min-width: 120px;
+  float: left;
+  padding: 3px 10px 0px 0px;
+}
+.webots-doc .illustrated-section p {
+  margin: 0px;
 }
 
 .blog {

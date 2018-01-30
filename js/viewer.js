@@ -744,8 +744,8 @@ document.addEventListener("DOMContentLoaded", function() {
   initializeHandle();
 
   if (!isCyberboticsUrl) {
-    if (!setup.url && location.href.indexOf("url=") > -1)
-      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
+    if (!setup.url)
+      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/");
     if (!setup.book)
       setup.book = getGETQueryValue("book", "guide");
     if (!setup.page)
@@ -753,7 +753,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!setup.anchor)
       setup.anchor = extractAnchor(location.href);
     if (!setup.branch)
-      setup.anchor = getGETQueryValue("branch", "master");
+      setup.branch = getGETQueryValue("branch", "master");
   }
 
   applyToTitleDiv();

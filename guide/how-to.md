@@ -16,7 +16,7 @@ TODO
 
 ### binocular.wbt
 
-**Keywords**: Stereovision, Stereoscopy, Camera
+**Keywords**: Camera, stereovision, stereoscopic cameras
 
 
 ![binocular.png](images/binocular.png) This example simply shows how to equip a robot with two `Camera`s for stereovision.

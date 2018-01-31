@@ -24,13 +24,13 @@ class TestParagraphs(unittest.TestCase):
                 content = re.sub(r'^#.*', '', content)
                 content = re.sub(r'\n#.*', '\n', content)
                 # - Multiline code sections.
-                content = re.sub(r'```.*```', '', content, flags=re.S)
+                content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
                 # - Items.
                 content = re.sub(r'\n\s*-.*', '', content)
                 content = re.sub(r'\n\s*\d+\..*', '', content)
                 # - Showdown extensions.
-                content = re.sub(r'%figure.*%end', '', content, flags=re.S)
-                content = re.sub(r'%api.*%end', '', content, flags=re.S)
+                content = re.sub(r'%figure.+?(?=%end)%end', '', content, flags=re.S)
+                content = re.sub(r'%api.+?(?=%end)%end', '', content, flags=re.S)
 
                 # Extract paragraphs and notes.
                 for match in re.finditer(r'(?s)((?:[^\n][\n]?)+)', content):
@@ -52,7 +52,4 @@ class TestParagraphs(unittest.TestCase):
             for m in re.finditer(linkRE, p):
                 linkName = m.group(1).strip()
                 # linkUrl = m.group(2).strip()
-                self.assertFalse(
-                    '`' in linkName,
-                    msg='Hyperlink "%s" contains code.' % m.group(0)
-                )
+                self.assertFalse('`' in linkName, msg='Hyperlink "%s" contains code.' % m.group(0))

@@ -50,7 +50,6 @@ class TestParagraphs(unittest.TestCase):
         for p in self.paragraphs:
             for m in re.finditer(self.hyperlinkRE, p):
                 linkName = m.group(1).strip()
-                # linkUrl = m.group(2).strip()
                 self.assertFalse('`' in linkName, msg='Hyperlink "%s" contains code.' % m.group(0))
 
     def test_underscores_in_hyperlinks_are_protected(self):
@@ -58,7 +57,6 @@ class TestParagraphs(unittest.TestCase):
         for p in self.paragraphs:
             for m in re.finditer(self.hyperlinkRE, p):
                 linkName = m.group(1).strip()
-                # linkUrl = m.group(2).strip()
                 self.assertTrue(re.search(r'[^\\]_', linkName) is None, msg='Hyperlink "%s" contains unprotected underscore(s).' % m.group(0))
 
     def test_hyperlinks_do_not_contain_prohibited_characters(self):
@@ -66,5 +64,4 @@ class TestParagraphs(unittest.TestCase):
         for p in self.paragraphs:
             for m in re.finditer(self.hyperlinkRE, p):
                 linkName = m.group(1).strip()
-                # linkUrl = m.group(2).strip()
                 self.assertTrue(re.search(r'[<>]', linkName) is None, msg='Hyperlink "%s" contains forbidden characters.' % m.group(0))

@@ -252,7 +252,7 @@ Similarly, for a linear motor it is computed according to the following equation
 
 `electrical_input_power` = `output_force` * `consumptionFactor`
 
-Where `output_torque` is the value returned by the [wb\_motor\_get\_torque\_feedback](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [wb\_motor\_get\_force\_feedback](#wb_motor_get_force_feedback) function and `consumptionFactor` is a constant provided by the `consumptionFactor` field of the [Motor](motor.md) node.
+Where `output_torque` is the value returned by the [`wb_motor_get_torque_feedback`](#wb_motor_get_torque_feedback) function, `output_force` is the value returned by the [`wb_motor_get_force_feedback`](#wb_motor_get_force_feedback) function and `consumptionFactor` is a constant provided by the `consumptionFactor` field of the [Motor](motor.md) node.
 
 > **Note**:
 This is a very simplified model for the energy consumption of an electrical motor, but it is sufficient for most prototyping purposes. If a more specific or accurate model is needed, it can be implemented in the robot controller itself.

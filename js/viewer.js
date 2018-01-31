@@ -139,9 +139,14 @@ function addDynamicAnchorEvent(el) {
         return;
     el.addEventListener("click",
         function (event) {
-            setup.anchor = extractAnchor(event.target.getAttribute('href'));
-            applyAnchor();
-            event.preventDefault();
+            var node = event.target;
+            while (node && !node.hasAttribute('href'))
+                node = node.getParent();
+            if (node) {
+                setup.anchor = extractAnchor(node.getAttribute('href'));
+                applyAnchor();
+                event.preventDefault();
+            }
         },
         false
     );
@@ -745,16 +750,16 @@ document.addEventListener("DOMContentLoaded", function() {
   initializeHandle();
 
   if (!isCyberboticsUrl) {
-    if (!setup.url && location.href.indexOf("url=") > -1)
-      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/master/");
+    if (!setup.url)
+      setup.url = getGETQueryValue("url", "https://raw.githubusercontent.com/omichel/webots-doc/");
     if (!setup.book)
       setup.book = getGETQueryValue("book", "guide");
     if (!setup.page)
       setup.page = getGETQueryValue("page", "index");
     if (!setup.anchor)
-      setup.anchor = extractAnchor(location.href);
+      setup.anchor = window.location.hash.substring(1);
     if (!setup.branch)
-      setup.anchor = getGETQueryValue("branch", "master");
+      setup.branch = getGETQueryValue("branch", "master");
   }
 
   applyToTitleDiv();

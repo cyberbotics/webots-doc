@@ -597,7 +597,7 @@ the robot node.
 
 ```c
 #include <webots/nodes.h>
-     #include <webots/robot.h>
+#include <webots/robot.h>
 
 WbNodeType wb_robot_get_type();
 ```

@@ -56,11 +56,6 @@ In this example, `wb_motor_set_force()` is used to simulate the effect of a spri
 Then, the motor force is turned off and the boxes oscillate for a while according to the spring and damping equations programmed in the controller.
 
 
-### force\_control.wbt
-
-TODO
-
-
 ### four\_wheels.wbt
 
 TODO

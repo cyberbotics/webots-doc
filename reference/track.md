@@ -20,7 +20,7 @@ Usually it is not needed that the `boundingObject` matches exactly the track bel
 to specify the external shape of the belt especially the parts where it could touch the ground or some obstacles.
 A simple example is shown in the [following figure](#track_bounding_object-example).
 
-Additionally, in order to work correctly, the [Track](#track) node have to fulfill these conditions:
+Additionally, in order to work correctly, the [Track](#track) node has to fulfill these conditions:
 * the y-axis of the [Track](#track) node is parallel to the world up vector;
 * the belt and wheels are aligned on a plane perpendicular to the [Track](#track) node's z-axis.
 

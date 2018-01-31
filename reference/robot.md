@@ -313,7 +313,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 
 **See also**
 
-[`wb_robot_step()`](#wb_robot_step).
+[`wb_robot_step`](#wb_robot_step).
 
 ---
 
@@ -364,11 +364,11 @@ found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
 > **Note**:
-These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [`wb_robot_get_device()`](#wb_robot_get_device) function.
+These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [`wb_robot_get_device`](#wb_robot_get_device) function.
 
 **See also**
 
-[`wb_robot_get_device()`](#wb_robot_get_device), [`wb_robot_step()`](#wb_robot_step).
+[`wb_robot_get_device`](#wb_robot_get_device), [`wb_robot_step`](#wb_robot_step).
 
 
 ---
@@ -732,7 +732,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[`wb_robot_mutex_new()`](#wb_robot_mutex_new).
+[`wb_robot_mutex_new`](#wb_robot_mutex_new).
 
 ---
 
@@ -770,7 +770,7 @@ other threads to lock it.
 
 **See also**
 
-[`wb_robot_task_new()`](#wb_robot_task_new).
+[`wb_robot_task_new`](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.
@@ -817,7 +817,7 @@ void *wb_robot_window_custom_function(void *arg);
 The `wb_robot_window_custom_function` function allows a robot controller to
 communicate with the native C/C++ robot window plugin.
 Native robot windows are deprecated and instead it is recommended to use the HTML robot windows and their API functions:
-[`wb_robot_wwi_receive_text()`](#wb_robot_wwi_receive_text) and [`wb_robot_wwi_send_text()`](#wb_robot_wwi_send_text).
+[`wb_robot_wwi_receive_text`](#wb_robot_wwi_receive_text) and [`wb_robot_wwi_send_text`](#wb_robot_wwi_send_text).
 
 When this function is called, the
 robot window corresponding `wbw_robot_window_custom_function` function is

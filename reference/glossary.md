@@ -12,7 +12,7 @@ This glossary defines the terminology used to describe the various concepts rela
 
 **Controller**: A *controller* is a program controlling the behavior of a *robot* and running on its own process. It can be written in different languages, including C, C++, Python, Java or MATLAB. It communicates with Webots through a local pipe to read the data measured by the *sensors* of a *robot* and send commands to the *actuators* of the *robot*.
 
-**Controller time step**: The *controller time step* is the time increment executed at each iteration of the control loop of a *controller*. It is usually passed directly as an argument of the [`wb_robot_step()`](robot.md#wb_robot_step) function. It should be an exact multiple of the *basic time step* for an optimal simulation performance.
+**Controller time step**: The *controller time step* is the time increment executed at each iteration of the control loop of a *controller*. It is usually passed directly as an argument of the [`wb_robot_step`](robot.md#wb_robot_step) function. It should be an exact multiple of the *basic time step* for an optimal simulation performance.
 
 **Descendant**: When referring to a *node*, the *descendant* of an *ancestor* is a *node* hierarchically contained inside the *ancestor* at any relative depth in the *scene tree*.
 

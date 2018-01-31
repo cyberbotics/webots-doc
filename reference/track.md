@@ -14,10 +14,10 @@ Track {
 The [Track](#track) node defines a track object that could be used to model
 tracks for conveyor belts or tank robots.
 
-Note that this works only in *physics-based* simulation.
-Therefore, the `physics` and `boundingObject` fields of the [Track](#track) node and related [Solid](solid.md) nodes must be defined to work properly.
-Usually it is not needed that the `boundingObject` matches exactly the track belt shape, but it is possible to use basic geometries like boxes and cylinders
-to specify the external shape of the belt especially the parts where it could touch the ground or some obstacles.
+Note that this works only in *physics-based* simulations.
+Therefore, the `physics` and `boundingObject` fields of the [Track](#track) node and related [Solid](solid.md) nodes must be non-NULL for it to work correctly.
+It is not a requirement that the `boundingObject` exactly matches the track belt shape; it is possible to use basic geometries such as boxes and cylinders
+to specify the external shape of the belt, especially the parts where it may touch the ground or obstacles.
 A simple example is shown in the [following figure](#track_bounding_object-example).
 
 Additionally, in order to work correctly, the [Track](#track) node has to fulfill these conditions:

@@ -44,8 +44,8 @@ By default the [Lidar](#lidar) node outputs the depth values in an array, the
 depth values are order from left to right and from the top to the bottom layer
 (like a [RangeFinder](rangefinder.md) node does). Complementary the point cloud
 mode can be enabled thanks to the
-[wb\_lidar\_enable\_point\_cloud](#wb_lidar_enable) function. It is then
-possible to call the [wb\_lidar\_get\_point\_cloud](#wb_lidar_get_point_cloud)
+[`wb_lidar_enable_point_cloud()`](#wb_lidar_enable) function. It is then
+possible to call the [`wb_lidar_get_point_cloud()`](#wb_lidar_get_point_cloud)
 to get the lidar output as a point cloud (array of points). Be aware that the
 point cloud mode is computationally expensive and can therefore slow-down the
 simulation speed.
@@ -274,7 +274,7 @@ int wb_lidar_get_number_of_points(WbDeviceTag tag);
 **Description**
 
 The `wb_lidar_get_point_cloud()` returns the pointer to the point cloud array,
-each point consists of a [WbLidarPoint](#wblidarpoint). The memory chunk
+each point consists of a [`WbLidarPoint`](#wblidarpoint). The memory chunk
 returned by this function shall not be freed, as it is managed by the lidar
 internally. The size in bytes of the point cloud can be computed as follows:
 

@@ -732,7 +732,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[wb\_robot\_mutex\_new](#wb_robot_mutex_new).
+[`wb_robot_mutex_new`](#wb_robot_mutex_new).
 
 ---
 

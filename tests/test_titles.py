@@ -22,10 +22,6 @@ class TestTitles(unittest.TestCase):
                 # Remove annoying string sequences.
                 # - Multiline code sections.
                 content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
-                if md_path.endswith('using-numerical-optimization-methods.md'):
-                    print 'CONTENT'
-                    print content
-                    print 'EOF'
 
                 # Extract titles.
                 for match in re.finditer(r'(#+ .*)', content):
@@ -38,7 +34,4 @@ class TestTitles(unittest.TestCase):
     def test_underscores_are_protected(self):
         """Test that titles doesn't contain any unprotected underscore."""
         for t in self.titles:
-            self.assertTrue(
-                re.search(r'[^\\]_', t) is None,
-                msg='Title "%s" contains unprotected underscore(s).' % t
-            )
+            self.assertTrue(re.search(r'[^\\]_', t) is None, msg='Title "%s" contains unprotected underscore(s).' % t)

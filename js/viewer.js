@@ -139,9 +139,14 @@ function addDynamicAnchorEvent(el) {
         return;
     el.addEventListener("click",
         function (event) {
-            setup.anchor = extractAnchor(event.target.getAttribute('href'));
-            applyAnchor();
-            event.preventDefault();
+            var node = event.target;
+            while (node && !node.hasAttribute('href'))
+                node = node.getParent();
+            if (node) {
+                setup.anchor = extractAnchor(node.getAttribute('href'));
+                applyAnchor();
+                event.preventDefault();
+            }
         },
         false
     );

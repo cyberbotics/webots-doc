@@ -208,20 +208,20 @@ The following tables describe the Matlab functions.
 
 %api "matlab_joystick"
 
-| % [Joystick](joystick.md) :                                                                     |
-| ----------------------------------------------------------------------------------------------- |
-| [wb\_joystick\_enable](joystick.md#wb_joystick_enable)(sampling_period)                         |
-| [wb\_joystick\_disable](joystick.md#wb_joystick_enable)()                                       |
-| period = [wb\_joystick\_get\_sampling\_period](joystick.md#wb_joystick_enable)()                |
-| connected = [wb_joystick_is_connected](joystick.md#wb_joystick_is_connected)()                  |
-| model = [wb_joystick_get_model](joystick.md#wb_joystick_get_model)()                            |
-| axes_number = [wb_joystick_get_number_of_axes](joystick.md#wb_joystick_get_number_of_axes)()    |
-| axis_value = [wb_joystick_get_axis_value](joystick.md#wb_joystick_get_number_of_axes)(axis)     |
-| button = [wb_joystick_get_pressed_button](joystick.md#wb_joystick_get_pressed_button)()         |
-| [wb_joystick_set_constant_force](joystick.md#wb_joystick_set_constant_force)(level)             |
-| [wb_joystick_set_constant_force_duration](joystick.md#wb_joystick_set_constant_force)(duration) |
-| [wb_joystick_set_auto_centering_gain](joystick.md#wb_joystick_set_constant_force)(gain)         |
-| [wb_joystick_set_resistance_gain](joystick.md#wb_joystick_set_constant_force)(gain)             |
+| % [Joystick](joystick.md) :                                                                          |
+| ---------------------------------------------------------------------------------------------------- |
+| [wb\_joystick\_enable](joystick.md#wb_joystick_enable)(sampling_period)                              |
+| [wb\_joystick\_disable](joystick.md#wb_joystick_enable)()                                            |
+| period = [wb\_joystick\_get\_sampling\_period](joystick.md#wb_joystick_enable)()                     |
+| connected = [wb\_joystick\_is\_connected](joystick.md#wb_joystick_is_connected)()                    |
+| model = [wb\_joystick\_get\_model](joystick.md#wb_joystick_get_model)()                              |
+| axes_number = [wb\_joystick\_get\_number\_of\_axes](joystick.md#wb_joystick_get_number_of_axes)()    |
+| axis_value = [wb\_joystick\_get\_axis\_value](joystick.md#wb_joystick_get_number_of_axes)(axis)      |
+| button = [wb\_joystick\_get\_pressed\_button](joystick.md#wb_joystick_get_pressed_button)()          |
+| [wb\_joystick\_set\_constant\_force](joystick.md#wb_joystick_set_constant_force)(level)              |
+| [wb\_joystick\_set\_constant\_force\_duration](joystick.md#wb_joystick_set_constant_force)(duration) |
+| [wb\_joystick\_set\_auto\_centering\_gain](joystick.md#wb_joystick_set_constant_force)(gain)         |
+| [wb\_joystick\_set\_resistance\_gain](joystick.md#wb_joystick_set_constant_force)(gain)              |
 
 %end
 
@@ -361,7 +361,7 @@ The following tables describe the Matlab functions.
 | [wb\_mouse\_enable](mouse.md#wb_mouse_enable)(sampling_period)          |
 | [wb\_mouse\_disable](mouse.md#wb_mouse_enable)()                        |
 | period = [wb\_mouse\_get\_sampling\_period](mouse.md#wb_mouse_enable)() |
-| state = [wb_mouse_get_state](mouse.md#wb_mouse_enable)()                |
+| state = [wb\_mouse\_get\_state](mouse.md#wb_mouse_enable)()             |
 
 %end
 
@@ -476,22 +476,22 @@ The following tables describe the Matlab functions.
 | time = [wb\_robot\_get\_time](robot.md#wb_robot_get_time)()                                             |
 | path = [wb\_robot\_get\_world\_path](robot.md#wb_robot_get_world_path)()                                |
 | type = [wb\_robot\_get\_type](robot.md#wb_robot_get_type)()                                             |
-| [wb\_robot\_wwi\_send\_text](robot.md#wb_robot_wwi_send_text)(text)                                    |
-| text = [wb\_robot\_wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)()                           |
+| [wb\_robot\_wwi\_send\_text](robot.md#wb_robot_wwi_send_text)(text)                                     |
+| text = [wb\_robot\_wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)()                            |
 
 %end
 
 %api "matlab_speaker"
 
-| % [Speaker](speaker.md) :                                                                                   |
-| ----------------------------------------------------------------------------------------------------------- |
-| [wb_speaker_play_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
-| [wb_speaker_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                   |
-| engine = [wb_speaker_get_engine](speaker.md#wb_speaker_get_engine)(tag)                                     |
-| language = [wb_speaker_get_language](speaker.md#wb_speaker_get_language)(tag)                               |
-| success = [wb_speaker_set_engine](speaker.md#wb_speaker_set_engine)(tag, engine)                            |
-| success = [wb_speaker_set_language](speaker.md#wb_speaker_set_language)(tag, language)                      |
-| [wb_speaker_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                   |
+| % [Speaker](speaker.md) :                                                                                      |
+| -------------------------------------------------------------------------------------------------------------- |
+| [wb\_speaker\_play\_sound](speaker.md#wb_speaker_play_sound)(left, right, sound, volume, pitch, balance, loop) |
+| [wb\_speaker\_stop](speaker.md#wb_speaker_stop)(tag, sound)                                                    |
+| engine = [wb\_speaker\_get\_engine](speaker.md#wb_speaker_get_engine)(tag)                                     |
+| language = [wb\_speaker\_get\_language](speaker.md#wb_speaker_get_language)(tag)                               |
+| success = [wb\_speaker\_set\_engine](speaker.md#wb_speaker_set_engine)(tag, engine)                            |
+| success = [wb\_speaker\_set\_language](speaker.md#wb_speaker_set_language)(tag, language)                      |
+| [wb\_speaker\_speak](speaker.md#wb_speaker_set_language)(tag, text, volume)                                    |
 
 %end
 

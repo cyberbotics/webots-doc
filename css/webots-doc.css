@@ -165,6 +165,9 @@
 .webots-doc p > code {
   line-height:18px;
 }
+.webots-doc a code {
+  color: #888;
+}
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3 {

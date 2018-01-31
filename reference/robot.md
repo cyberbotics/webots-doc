@@ -313,7 +313,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 
 **See also**
 
-[wb\_robot\_step](#wb_robot_step).
+[`wb_robot_step()`](#wb_robot_step).
 
 ---
 
@@ -732,7 +732,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[`wb_robot_mutex_new`](#wb_robot_mutex_new).
+[`wb_robot_mutex_new()`](#wb_robot_mutex_new).
 
 ---
 

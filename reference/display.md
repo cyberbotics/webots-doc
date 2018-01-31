@@ -251,7 +251,7 @@ closed. Here is an example :
 ```
 
 `wb_display_draw_text()` draws an ASCII text from the (`x`,`y`) coordinate.
-The font used for drawing the text is defined by the [`wb_display_set_font()`](#wb_display_set_color) function.
+The font used for drawing the text is defined by the [wb_display_set_font()](#wb_display_set_color) function.
 
 `wb_display_fill_rectangle()` draws a rectangle having the same properties as
 the rectangle drawn by the `wb_display_draw_rectangle()` function except that it

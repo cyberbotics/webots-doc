@@ -525,6 +525,7 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_node\_remove](supervisor.md#wb_supervisor_node_get_from_def)(node)                                                                                  |
 | [wb\_supervisor\_set\_label](supervisor.md#wb_supervisor_set_label)(id, 'text', x, y, size, [r g b], transparency)                                                   |
 | [wb\_supervisor\_simulation\_quit](supervisor.md#wb_supervisor_simulation_quit)(status)                                                                              |
+| [wb\_supervisor\_simulation\_reset](supervisor.md#wb_supervisor_simulation_reset)()                                                                                  |
 | [wb\_supervisor\_simulation\_reset\_physics](supervisor.md#wb_supervisor_simulation_reset_physics)()                                                                 |
 | mode = [wb\_supervisor\_simulation\_get\_mode](supervisor.md#wb_supervisor_simulation_set_mode)()                                                                    |
 | [wb\_supervisor\_simulation\_set\_mode](supervisor.md#wb_supervisor_simulation_set_mode)(mode)                                                                       |

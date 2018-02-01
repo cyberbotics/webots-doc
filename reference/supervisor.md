@@ -759,6 +759,30 @@ restarts.
 
 **Name**
 
+**wb\_supervisor\_simulation\_reset** - *reset the simulation*
+
+{[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_simulation_reset();
+```
+
+**Description**
+
+The `wb_supervisor_simulation_reset()` function sends a request to the simulator process, asking it to reset the simulation immediately.
+As a result of the reset, the supervisor process and all the robot processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
+
+Furthermore, this function resets the seed of the random number generator used
+in Webots, so that noise-based simulations can be be reproduced identically
+after calling this function.
+
+---
+
+**Name**
+
 **wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}

@@ -784,6 +784,7 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, String label, double xpos, double ypos,                                    |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency);                                                                                        |
 | &nbsp;&nbsp; public void [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(int status);                                                           |
+| &nbsp;&nbsp; public void [simulationReset](supervisor.md#wb_supervisor_simulation_reset)();                                                                   |
 | &nbsp;&nbsp; public void [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)();                                                    |
 | &nbsp;&nbsp; public int [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)();                                                               |
 | &nbsp;&nbsp; public void [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(int mode);                                                      |

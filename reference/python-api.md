@@ -749,6 +749,7 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSelected](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                         |
 | &nbsp;&nbsp; def [setLabel](supervisor.md#wb_supervisor_set_label)(self, id, label, xpos, ypos, size, color, transparency, font="Arial")                    |
 | &nbsp;&nbsp; def [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(self, status)                                                                |
+| &nbsp;&nbsp; def [simulationReset](supervisor.md#wb_supervisor_simulation_reset)(self)                                                                      |
 | &nbsp;&nbsp; def [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)(self)                                                       |
 | &nbsp;&nbsp; def [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)(self)                                                                 |
 | &nbsp;&nbsp; def [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(self, mode)                                                           |

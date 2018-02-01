@@ -720,6 +720,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; virtual void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, const std::string &label, double xpos, double ypos,                                    |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency, const std::string &font="Arial");                                                                    |
 | &nbsp;&nbsp; virtual void [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(int status);                                                                       |
+| &nbsp;&nbsp; virtual void [simulationReset](supervisor.md#wb_supervisor_simulation_reset)();                                                                               |
 | &nbsp;&nbsp; virtual void [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)();                                                                |
 | &nbsp;&nbsp; virtual void [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(int mode);                                                                  |
 | &nbsp;&nbsp; int [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)() const;                                                                             |

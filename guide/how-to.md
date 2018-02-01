@@ -55,7 +55,10 @@ This can be visualized with the `View / Optional Rendering / Show Center of Mass
 
 ### contact\_points.wbt
 
-TODO
+**Keywords**: Contact points
+
+![contact_points.png](images/contact_points.png) In this example, a box is falling until it reaches the ground.
+A physics plugin (cf. `WorldInfo.physics`) get information on the contact points and display the reaction forces in red.
 
 
 ### cylinder\_stack.wbt

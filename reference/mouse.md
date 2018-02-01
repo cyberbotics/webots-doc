@@ -59,5 +59,5 @@ The state of the computer mouse can be read from a controller program while the 
 Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()` function.
 The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
 Note that the first state will be available only after the first sampling period elapsed.
-After that, the state can be read by calling the `wb_mouse_get_state()` function (for more details, see [WbMouseState](#wbmousestate)).
+After that, the state can be read by calling the `wb_mouse_get_state()` function (for more details, see [`WbMouseState`](#wbmousestate)).
 The `wb_mouse_disable()` function should be used to stop the mouse readings.

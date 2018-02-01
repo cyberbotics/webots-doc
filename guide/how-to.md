@@ -159,7 +159,10 @@ This plugins is an example of:
 
 ### rope.wbt
 
-TODO
+**Keywords**: BallJoint, rope
+
+![rope.png](images/rope.png) In this example, a rope is simulated.
+The rope is composed of a several discrete rigid cylinders attached using ball joints.
 
 
 ### sick\_terrain\_scanning.wbt

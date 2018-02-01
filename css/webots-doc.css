@@ -49,7 +49,12 @@
   background-color: transparent;
   max-width: calc(1000px - 4em);
   margin: 1em auto 1em auto;
+}
+.webots-doc #title {
   padding: 0px 40px;
+}
+.webots-doc #view {
+  padding: 0px 40px 40px 40px;
 }
 .webots-doc #navigation,
 .webots-doc #menu {

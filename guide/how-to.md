@@ -167,7 +167,11 @@ The rope is composed of a several discrete rigid cylinders attached using ball j
 
 ### sick\_terrain\_scanning.wbt
 
-TODO
+**Keywords**: Lidar, Sick, scanning
+
+![sick_terrain_scanning.png](images/sick_terrain_scanning.png) In this example, a Pioneer 3AT mounted with a Sick LMS 291 is scanning its environment.
+Each lidar scan is displayed in a `Display` device.
+A Supervisor is applying the scan depth output by removing pixels on a black texture which is applied on the ground.
 
 
 ### texture\_change.wbt

@@ -8,8 +8,8 @@ import os
 class TestMDFiles(unittest.TestCase):
     """Unit test of the MD files."""
 
-    def test_md_files_are_existing(self):
-        """Test that the MD files are existing."""
+    def test_md_files_exist(self):
+        """Test that the MD files exist."""
         books = Books()
         self.assertGreater(len(books.books), 0, msg='No books found')
         for book in books.books:
@@ -29,10 +29,11 @@ class TestMDFiles(unittest.TestCase):
                     msg='MD file "%s" is empty' % (md_filename)
                 )
 
-    def test_md_files_are_not_containing_ad_blocks_prohibited_keywords(self):
-        """Test that the MD files are not containing prohibited keywords."""
+    def test_md_files_dont_contain_prohibited_keywords(self):
+        """Test that the MD files don't contain prohibited keywords."""
         books = Books()
         for book in books.books:
+            # 'advertising' causes issues with ad blocking software.
             self.assertFalse(
                 'advertising' in book.md_paths,
                 msg='MD file "%s" contains "advertising"' % (book.md_paths)

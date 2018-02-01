@@ -10,8 +10,8 @@ For each, the world file and its corresponding controller are named according to
 **Keywords**: ContactProperties, asymmetric friction
 
 ![asymmetric_friction1.png](images/asymmetric_friction1.png) This example shows the setup of asymmetric friction between two solids.
-A small box is sliding on two leaning fixed boxes.
-Each boxes are stripped with black lines.
+A small box slides on two leaning fixed boxes.
+Each of the boxes are striped with black lines.
 There is a smaller friction along the black lines, therefore the box is sliding along the black lines.
 
 
@@ -20,9 +20,9 @@ There is a smaller friction along the black lines, therefore the box is sliding 
 **Keywords**: ContactProperties, asymmetric friction
 
 ![asymmetric_friction2.png](images/asymmetric_friction2.png) This example shows the setup of asymmetric friction between two solids.
-A solid is composed of two cylinders is sliding down a leaning plane.
+A solid composed of two cylinders is sliding down a leaning plane.
 The black strips on the cylinders indicate the friction direction:
-there is a smaller friction along the black lines.
+there is smaller friction along the black lines.
 Rotate the solid to modify its speed.
 
 
@@ -48,7 +48,7 @@ This example illustrates the build of a simple articulated robot and also how to
 **Keywords**: Center of mass
 
 ![center_of_mass.png](images/center_of_mass.png) In this example, a light robot rotates a heavy mass.
-The inertia of the heavy mass let the robot base turns round.
+The inertia of the heavy mass lets the robot base turn round.
 The overall center of mass of the robot is changing.
 This can be visualized with the `View / Optional Rendering / Show Center of Mass...` or `mass` tab of in the node editor when the robot is selected.
 
@@ -76,7 +76,7 @@ A Supervisor get information on the contact points and display the reaction forc
 ![force_control.png](images/force_control.png) This world shows two boxes connected by a `LinearMotor`.
 Here, the purpose is to demonstrate the usage of the `wb_motor_set_force()` function to control a `LinearMotor` with a user specified force.
 In this example, `wb_motor_set_force()` is used to simulate the effect of a spring and a damper between the two boxes. When the simulation starts, the motor force is used to move the boxes apart.
-Then, the motor force is turned off and the boxes oscillate for a while according to the spring and damping equations programmed in the controller.
+Then, the motor force is turned off and the boxes oscillate for a while, according to the spring and damping equations programmed in the controller.
 
 
 ### four\_wheels.wbt
@@ -84,8 +84,8 @@ Then, the motor force is turned off and the boxes oscillate for a while accordin
 **Keywords**: four-wheeled frame
 
 ![four_wheels.png](images/four_wheels.png) This example shows three models of four-wheeled vehicles.
-In the first layout, the four motorized wheels are positioned circularly, as it could be done for omnidirectional-wheeled robots.
-In the second layout, the four motorized wheels are oriented in the same direction, as it could be done for a robot with tracks.
+In the first layout, the four motorized wheels are positioned circularly, as could be done for omnidirectional-wheeled robots.
+In the second layout, the four motorized wheels are oriented in the same direction, as could be done for a robot with tracks.
 In the third layout, a simple [Ackermann steering geometry](https://en.wikipedia.org/wiki/Ackermann_steering_geometry) is shown.
 Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf. the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
 
@@ -130,7 +130,7 @@ Faster omnidirectional wheels implementations could be achieved using asymmetric
 
 ![passive_dynamic_walker.png](images/passive_dynamic_walker.png) This example shows a passive dynamic walker model.
 This biped robot is not motorized.
-It goes done the slope in a smooth move simply because of its shape and its potential energy.
+It goes down the slope with a smooth motion simply because of its shape and its potential energy.
 
 
 ### pedal\_racer.wbt
@@ -138,7 +138,7 @@ It goes done the slope in a smooth move simply because of its shape and its pote
 **Keywords**: Pedal racer, apply a force
 
 ![pedal_racer.png](images/pedal_racer.png) This example shows the mouse interaction with a complex model.
-You can apply a force to the pedals using `Alt + mouse left clic.`.
+You can apply a force to the pedals using `Alt + mouse left click.`.
 
 
 ### physics.wbt
@@ -162,7 +162,7 @@ This plugins is an example of:
 **Keywords**: BallJoint, rope
 
 ![rope.png](images/rope.png) In this example, a rope is simulated.
-The rope is composed of a several discrete rigid cylinders attached using ball joints.
+The rope is composed of several discrete rigid cylinders attached using ball joints.
 
 
 ### sick\_terrain\_scanning.wbt
@@ -171,7 +171,7 @@ The rope is composed of a several discrete rigid cylinders attached using ball j
 
 ![sick_terrain_scanning.png](images/sick_terrain_scanning.png) In this example, a Pioneer 3AT mounted with a Sick LMS 291 is scanning its environment.
 Each lidar scan is displayed in a `Display` device.
-A Supervisor is applying the scan depth output by removing pixels on a black texture which is applied on the ground.
+A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
 
 
 ### texture\_change.wbt
@@ -196,7 +196,7 @@ The `Camera` image is given to OpenCV, OpenCV filters are applied on the image, 
 
 **Keywords**: PID control, Ziegler-Nichols method, plot
 
-![ziegler_nichols.png](images/ziegler_nichols.png) This example shows the use of wb_motor_set_pid()
+![ziegler_nichols.png](images/ziegler_nichols.png) This example shows the use of the `wb_motor_set_pid` function.
 It adapts its PID parameters as specified by the [Ziegler-Nichols tuning method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method).
 Each P-controller is tested during a period of 400 time steps, i.e. 12.8 seconds.
 A P-controller 'succeeds' if a constant error amplitude repeats at least 10 times during the test period.

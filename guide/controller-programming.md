@@ -229,7 +229,7 @@ then you need to specify the desired position for each `RotationalMotor`
 separately, using    `wb_motor_set_position()`. Then you need to call
 `wb_robot_step()` once to actuate all the `RotationalMotor`s simultaneously.
 
-### Simulation step and wb_robot_step()
+### Simulation step and wb\_robot\_step()
 
 Webots uses two different time steps:
 

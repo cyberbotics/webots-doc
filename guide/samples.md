@@ -8,7 +8,7 @@ source code in the "WEBOTS\_HOME/projects/samples/demos/controllers" directory.
 For each demo, the world file and its corresponding controller have the same
 name.
 
-### blimp_lis.wbt
+### blimp\_lis.wbt
 
 **Keywords**: Flying robot, physics plugin, keyboard, joystick
 
@@ -163,7 +163,7 @@ through a sequence of loops and worm-like configurations while changing their
 mode of locomotion. All modules use the same controller code, but their actual
 module behavior is chosen according to the name of the module.
 
-### stewart_platform.wbt
+### stewart\_platform.wbt
 
 **Keywords**: Stewart platform, linear motion, physics plugin, ball joint, universal joint
 

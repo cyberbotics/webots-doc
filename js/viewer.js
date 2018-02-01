@@ -236,7 +236,7 @@ function setUpBlogStyleIfNeeded() {
     document.title = "Webots Blog";
 
     // add webots ladybug
-    $("#view").prepend("<img src='blog/images/webots.png' style='display: block; min-width: 100px; width: 100px; margin: 0 auto;'/>")
+    $("#view").prepend("<img src='images/webots.png' style='display: block; min-width: 100px; width: 100px; margin: 0 auto;'/>")
 
     var figures = document.getElementsByTagName("figure");
     if (figures.length > 0) {

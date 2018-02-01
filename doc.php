@@ -51,7 +51,7 @@
       }
       console.log('Setup: ' + JSON.stringify(setup));
     </script>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' >
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' />
     <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc.css'/>
     <link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/highlight/9.5.0/default.min.css'/>
     <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>

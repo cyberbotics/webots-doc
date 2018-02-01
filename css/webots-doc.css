@@ -47,10 +47,10 @@
   margin: 0 auto;
   background-color: white;
   max-width: calc(1000px - 4em);
-  padding: 40px;
 }
 .webots-doc #view {
   padding: 10px 40px 60px 40px;
+  margin-bottom: 30px;
 }
 .webots-doc #title {
   padding: 40px 40px 10px 40px;

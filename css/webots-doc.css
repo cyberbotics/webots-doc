@@ -283,9 +283,16 @@
   margin: 0px;
 }
 
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: local("fonts/Roboto"), local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+}
+
 .blog {
   background-color: #ede9e8;
-  background-image: url(/files/repository/www/blog_resources/images/crossword.png);
+  background-image: url(//cyberbotics.com/files/repository/www/blog_resources/images/crossword.png);
 }
 
 .blog #title {
@@ -363,10 +370,6 @@
   margin-bottom: 2px;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url(/files/repository/www/blog_resources/fonts/Roboto.ttf) format("truetype");
-}
 
 .blog .modal {
   display: none;

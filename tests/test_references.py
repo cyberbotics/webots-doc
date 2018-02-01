@@ -70,7 +70,7 @@ class TestReferences(unittest.TestCase):
                     s.add(a)
 
     def test_references_are_valid(self):
-        """Test that the MD files are pointing on valid URLs."""
+        """Test that the MD files refer valid URLs."""
         books = Books()
         for book in books.books:
             for md_path in book.md_paths:

@@ -83,4 +83,5 @@ The general idea is to walk through the following steps:
 2. Get [SWIG](http://www.swig.org/download.html).
 3. Recompile the Python wrapper located in this directory: `$WEBOTS_HOME/resources/languages/python` using its Makefile. You may check the above Makefile in `$WEBOTS_HOME/resources/languages/Makefile` to understand how to call the Python Makefile with different options.
 
-On Windows you will need to install [MSYS2 for x86_64](http://www.msys2.org/) and run it in administrator mode to be able to modify files in `$WEBOTS_HOME`. From the MSYS2 console, you will need to install at least the following packages with the `pacman` command: `mingw-w65-x86_64_gcc` `make` and `swig`. Also, it is necessary to add `extern double hypot(double, double);` at the 3rd line of `$PYTHON_HOME\include\Python.h` to work around a compilation issue.
+On Windows you will need to install [MSYS2 for x86\_64](http://www.msys2.org/) and run it in administrator mode to be able to modify files in `$WEBOTS_HOME`.
+From the MSYS2 console, you will need to install at least the following packages with the `pacman` command: `mingw-w65-x86_64_gcc` `make` and `swig`.

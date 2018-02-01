@@ -55,15 +55,18 @@ This can be visualized with the `View / Optional Rendering / Show Center of Mass
 
 ### contact\_points.wbt
 
-**Keywords**: Contact points
+**Keywords**: Physics plugin, contact points
 
-![contact_points.png](images/contact_points.png) In this example, a box is falling until it reaches the ground.
-A physics plugin (cf. `WorldInfo.physics`) get information on the contact points and display the reaction forces in red.
+![contact_points.png](images/contact_points.png) In this example, a box falls until it reaches the ground.
+A physics plugin (cf. `WorldInfo.physics`) get information on the contact points and display the reaction forces on the `Console` and as red lines.
 
 
 ### cylinder\_stack.wbt
 
-TODO
+**Keywords**: Supervisor, contact points, cylinder collisions
+
+![cylinder_stack.png](images/cylinder_stack.png) In this example, a stack of cylinders collapses.
+A Supervisor get information on the contact points and display the reaction forces in the `Console`.
 
 
 ### force\_control.wbt

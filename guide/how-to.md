@@ -135,7 +135,10 @@ It goes done the slope in a smooth move simply because of its shape and its pote
 
 ### pedal\_racer.wbt
 
-TODO
+**Keywords**: Pedal racer, apply force
+
+![pedal_racer.png](images/pedal_racer.png) This example shows how to interact simply with a complex model.
+You can apply a force to the pedals using `Alt + mouse left clic.`.
 
 
 ### physics.wbt

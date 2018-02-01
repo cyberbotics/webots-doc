@@ -492,8 +492,9 @@
 }
 
 .blog #left {
-  top: 0;
-  width: 50%;
+  top: -46px;
+  padding-top: 46px;
+  width: 20%;
   position: fixed;
   height: 100%;
   overflow-y: auto;

@@ -9,7 +9,7 @@ For each, the world file and its corresponding controller are named according to
 
 **Keywords**: ContactProperties, asymmetric friction
 
-![asymmetric_friction1.png](images/asymmetric_friction1.png) This example shows how to setup asymmetric friction between two solids.
+![asymmetric_friction1.png](images/asymmetric_friction1.png) This example shows the setup of asymmetric friction between two solids.
 A small box is sliding on two leaning fixed boxes.
 Each boxes are stripped with black lines.
 There is a smaller friction along the black lines, therefore the box is sliding along the black lines.
@@ -19,7 +19,7 @@ There is a smaller friction along the black lines, therefore the box is sliding 
 
 **Keywords**: ContactProperties, asymmetric friction
 
-![asymmetric_friction2.png](images/asymmetric_friction2.png) This example shows how to setup asymmetric friction between two solids.
+![asymmetric_friction2.png](images/asymmetric_friction2.png) This example shows the setup of asymmetric friction between two solids.
 A solid is composed of two cylinders is sliding down a leaning plane.
 The black strips on the cylinders indicate the friction direction:
 there is a smaller friction along the black lines.
@@ -30,7 +30,7 @@ Rotate the solid to modify its speed.
 
 **Keywords**: Camera, stereovision, stereoscopic cameras
 
-![binocular.png](images/binocular.png) This example simply shows how to equip a robot with two `Camera`s for stereovision.
+![binocular.png](images/binocular.png) This example simply shows the use of two `Camera`s for stereovision.
 The example does not actually perform stereovision or any form of computer vision.
 
 
@@ -40,7 +40,7 @@ The example does not actually perform stereovision or any form of computer visio
 
 ![biped.png](images/biped.png) In this example, a biped robot stands up while his head rotates.
 After a few seconds, all the motors are turned off and the robot collapses.
-This example illustrates how to build a simple articulated robot and also how to turn off motor power.
+This example illustrates the build of a simple articulated robot and also how to turn off motor power.
 
 
 ### center\_of\_mass.wbt
@@ -94,7 +94,7 @@ Note that more completed Ackermann steering geometry can be achieved using the `
 
 **Keywords**: GUI, custom Qt-based robot window
 
-![gui_tracker.png](images/gui_tracker.png) This example shows how to use the deprecated Qt-based system to create custom windows.
+![gui_tracker.png](images/gui_tracker.png) This example shows the use of the deprecated Qt-based system to create custom windows.
 A Supervisor is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
 This window is based on Qt (embedded in Webots) and the `Qt utils` helper library.
 
@@ -111,7 +111,7 @@ This is known as the "Inverted Pendulum Problem", and it is solved in our exampl
 
 **Keywords**: Mouse events
 
-![mouse_events.png](images/mouse_events.png) This example shows how to use the Supervisor mouse events.
+![mouse_events.png](images/mouse_events.png) This example shows the use of the Supervisor mouse events.
 When the simulation is running, the `Supervisor` controller called `mouse_events.c` get the last mouse event and displays in the `Console` the 3D coordinate and the name of the hit object.
 
 
@@ -119,7 +119,7 @@ When the simulation is running, the `Supervisor` controller called `mouse_events
 
 **Keywords**: Omnidirectional wheels
 
-![omni_wheels.png](images/omni_wheels.png) This example shows how to create omnidirectional wheels.
+![omni_wheels.png](images/omni_wheels.png) This example shows an omnidirectional wheel model.
 In this example, the omnidirectional wheels are modeled with two layers of joints and cylinders solids.
 Faster omnidirectional wheels implementations could be achieved using asymmetric friction (cf. `Youbot` model).
 
@@ -128,7 +128,7 @@ Faster omnidirectional wheels implementations could be achieved using asymmetric
 
 **Keywords**: Passive dynamic walker
 
-![passive_dynamic_walker.png](images/passive_dynamic_walker.png) This example shows how to create a passive dynamic walker.
+![passive_dynamic_walker.png](images/passive_dynamic_walker.png) This example shows a passive dynamic walker model.
 This biped robot is not motorized.
 It goes done the slope in a smooth move simply because of its shape and its potential energy.
 
@@ -137,7 +137,7 @@ It goes done the slope in a smooth move simply because of its shape and its pote
 
 **Keywords**: Pedal racer, apply a force
 
-![pedal_racer.png](images/pedal_racer.png) This example shows how to interact simply with a complex model.
+![pedal_racer.png](images/pedal_racer.png) This example shows the mouse interaction with a complex model.
 You can apply a force to the pedals using `Alt + mouse left clic.`.
 
 
@@ -186,7 +186,7 @@ The robot watches the panel with its `Camera`. Meanwhile a `Supervisor` switches
 
 **Keywords**: OpenCV, color filter
 
-![vision.png](images/vision.png) This example demonstrates how to use [OpenCV](https://opencv.org/) to process the camera image.
+![vision.png](images/vision.png) This example demonstrates the use of [OpenCV](https://opencv.org/) to process the camera image.
 The robot acquires images from a colored scene.
 The controller is linked with OpenCV (embedded in Webots).
 The `Camera` image is given to OpenCV, OpenCV filters are applied on the image, and the result is displayed in a `Display` overlay.
@@ -194,4 +194,12 @@ The `Camera` image is given to OpenCV, OpenCV filters are applied on the image, 
 
 ### ziegler\_nichols.wbt
 
-TODO
+**Keywords**: PID control, Ziegler-Nichols method, plot
+
+![ziegler_nichols.png](images/ziegler_nichols.png) This example shows the use of wb_motor_set_pid()
+It adapts its PID parameters as specified by the [Ziegler-Nichols tuning method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method).
+Each P-controller is tested during a period of 400 time steps, i.e. 12.8 seconds.
+A P-controller 'succeeds' if a constant error amplitude repeats at least 10 times during the test period.
+Otherwise the proportional gain P is incremented by 10 and the experiment restarts.
+The tuned Ziegler-Nichols 'ultimate' gains will be computed for the first successful controller.
+The result is plot in a `Display` overlay.

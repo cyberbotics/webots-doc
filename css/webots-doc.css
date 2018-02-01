@@ -286,8 +286,13 @@
 @font-face {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 100;
   src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Light";
+  font-style: normal;
+  src: local("fonts/Raleway Light"), local("fonts/Raleway-Light"), url("fonts/Raleway-Light.ttf") format("truetype");
 }
 
 .blog {
@@ -313,12 +318,13 @@
   width: 85%;
   font-size: 1.3em;
   margin: 15px auto;
-  color: black;
+  color: #222;
 }
 
 .blog #view h1, .blog #view h2 {
   text-align: center;
   color: #222;
+  font-family: "Raleway Light";
 }
 
 .blog #view h1 {

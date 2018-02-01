@@ -45,7 +45,12 @@ This example illustrates how to build a simple articulated robot and also how to
 
 ### center\_of\_mass.wbt
 
-TODO
+**Keywords**: Center of mass
+
+![center_of_mass.png](images/center_of_mass.png) In this example, a light robot rotates a heavy mass.
+The inertia of the heavy mass let the robot base turns round.
+The overall center of mass of the robot is changing.
+This can be visualized with the `View / Optional Rendering / Show Center of Mass...` or `mass` tab of in the node editor when the robot is selected.
 
 
 ### contact\_points.wbt

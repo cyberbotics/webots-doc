@@ -9,7 +9,7 @@ For each, the world file and its corresponding controller are named according to
 
 **Keywords**: ContactProperties, asymmetric friction
 
-![asymmetric_friction1.png](images/asymmetric_friction1.png) This example shows how to setup asymmetric friction between two colliding solids.
+![asymmetric_friction1.png](images/asymmetric_friction1.png) This example shows how to setup asymmetric friction between two solids.
 A small box is sliding on two leaning fixed boxes.
 Each boxes are stripped with black lines.
 There is a smaller friction along the black lines, therefore the box is sliding along the black lines.
@@ -17,7 +17,13 @@ There is a smaller friction along the black lines, therefore the box is sliding 
 
 ### asymmetric\_friction2.wbt
 
-TODO
+**Keywords**: ContactProperties, asymmetric friction
+
+![asymmetric_friction2.png](images/asymmetric_friction2.png) This example shows how to setup asymmetric friction between two solids.
+A solid is composed of two cylinders is sliding down a leaning plane.
+The black strips on the cylinders indicate the friction direction:
+there is a smaller friction along the black lines.
+Rotate the solid to modify its speed.
 
 
 ### binocular.wbt

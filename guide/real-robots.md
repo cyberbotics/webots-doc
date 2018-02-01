@@ -5,7 +5,7 @@ for these examples are located in the "robots/(robot\_name)/worlds" directory,
 and the corresponding controllers are located in the
 "robots/(robot\_name)/controllers" directory.
 
-### aibo_ers7.wbt
+### aibo\_ers7.wbt
 
 **Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone
 
@@ -64,7 +64,7 @@ distance and the orientation of the e-puck are displayed. The source code for
 this controller is in the
 "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
-### e-puck_line.wbt
+### e-puck\_line.wbt
 
 **Keywords**: differential wheels, line following, texture, behavior-based
     robotics, E-puck
@@ -84,7 +84,7 @@ this assignment is shown in the world e-puck\_line\_demo.wbt (see [this
 section](#e-puck_line_demo-wbt)). The source code for this controller is in the
 "e-puck\_line" directory.
 
-### e-puck_line_demo.wbt
+### e-puck\_line\_demo.wbt
 
 **Keywords**: differential wheels, line following, texture, behavior-based
     robotics, E-puck
@@ -101,7 +101,7 @@ case, you can see that the robot avoids the obstacle, then recovers its path
 along the line. As the controller used in this world is the solution to the
 assignment, the source code is not distributed.
 
-### hemisson_cross_compilation.wbt
+### hemisson\_cross\_compilation.wbt
 
 **Keywords**: differential wheels, Pen, cross-compilation, texture, Hemisson
 
@@ -116,7 +116,7 @@ obstacles. Its `Pen` device draws a black line which slowly fades. This example
 is a cross-compilation example for the real Hemisson robot. The source code for
 this controller is in the "hemisson" directory.
 
-### hoap2_sumo.wbt
+### hoap2\_sumo.wbt
 
 **Keywords**: Robot node, humanoid, texture, dancing, Hoap 2, IndexedFaceSet, RotationalMotor,
     active joint, force, TouchSensor
@@ -131,7 +131,7 @@ In this example, a Hoap2 robot from Fujitsu performs the Shiko dance (the dance 
 on the soles of its feet; it measures and logs the pressure exerted by its body
 on the ground. The source code for this controller is in the "hoap2" directory.
 
-### hoap2_walk.wbt
+### hoap2\_walk.wbt
 
 **Keywords**: Robot node, humanoid, texture, walking, Hoap 2, IndexedFaceSet, RotationalMotor,
     active joint, force, TouchSensor
@@ -147,7 +147,7 @@ This robot is equipped with `TouchSensors` on the soles of its feet; it measures
 and logs the pressure exerted by its body on the ground. The source code for
 this controller is in the "hoap2" directory.
 
-### ipr_collaboration.wbt
+### ipr\_collaboration.wbt
 
 **Keywords**: Robot node, robotic arm, collaboration, TCP/IP, client program, IPR,
     IndexedFaceSet, RotationalMotor, active joint
@@ -165,7 +165,7 @@ directory. This particular example uses, in addition to this controller, a
 client program which coordinates the movements of the robots. The source code
 for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
 
-### ipr_cube.wbt
+### ipr\_cube.wbt
 
 **Keywords**: Robot node, robotic arm, TCP/IP, client program, IPR,
     IndexedFaceSet, RotationalMotor, active joint
@@ -182,12 +182,12 @@ the "ipr\_serial" directory. This example also uses a client program which
 drives the movements of the robot. The source code of this client is in the
 "ipr\_serial/client/ipr\_cube.c" file.
 
-### ipr_factory.wbt
+### ipr\_factory.wbt
 
 **Keywords**: Robot node, Supervisor, conveyor belt, robotic arm, TCP/IP,
     client program, IPR, IndexedFaceSet, RotationalMotor, active joint
 
-%figure "ipr_factory"
+%figure "ipr\_factory"
 
 ![ipr_factory.png](images/ipr_factory.png)
 
@@ -201,7 +201,7 @@ the IPR robots use the same controller, whose source code is in the
 coordinates the movements of the robots. The source code for this client is in
 the "ipr\_serial/client/ipr\_factory.c" file.
 
-### ipr_models.wbt
+### ipr\_models.wbt
 
 **Keywords**: Robot node, robotic arm, TCP/IP, IPR, IndexedFaceSet, RotationalMotor, active joint
 
@@ -262,13 +262,13 @@ arena while avoiding the walls. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
 "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
-### khepera_kinematic.wbt
+### khepera\_kinematic.wbt
 
 **Keywords**: differential wheels, DistanceSensor, Braitenberg, Kinematic, Khepera
 
 %figure "khepera_kinematic"
 
-![khepera_kinematic.png](images/khepera_kinematic.png)
+![khepera\_kinematic.png](images/khepera_kinematic.png)
 
 %end
 
@@ -278,7 +278,7 @@ use the kinematic mode of Webots. Like many other examples, this one uses the
 `braitenberg` controller. The source code for this controller is in the
 "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
-### khepera_gripper.wbt
+### khepera\_gripper.wbt
 
 **Keywords**: differential wheels, Gripper, Khepera
 
@@ -293,7 +293,7 @@ gripper. The robot uses its gripper to grab a stick, move a bit with it and drop
 it on the ground. This behavior is repeated endlessly. The source code for this
 controller is in the "khepera\_gripper" directory.
 
-### khepera_gripper_camera.wbt
+### khepera\_gripper\_camera.wbt
 
 **Keywords**: differential wheels, Gripper, Camera, Khepera
 
@@ -309,7 +309,7 @@ with it and drop it on the floor. This behavior is repeated endlessly. In this
 world, the robot does not analyse the images it takes with its camera. The
 source code for this controller is in the "khepera\_gripper" directory.
 
-### khepera_k213.wbt
+### khepera\_k213.wbt
 
 **Keywords**: differential wheels, DistanceSensor, K213, linear Camera, Khepera
 
@@ -328,7 +328,7 @@ enough time to read the explanations printed in the Console window concerning
 this world. The source code for this controller is in the "khepera\_k213"
 directory.
 
-### khepera_pipe.wbt
+### khepera\_pipe.wbt
 
 **Keywords**: differential wheels, UNIX pipe, client program, Khepera
 
@@ -349,7 +349,7 @@ controller and for the client program are in the "pipe" directory.
 > **Note**:
 As this example is based on standard UNIX pipes, it does not work under Windows.
 
-### khepera_tcpip.wbt
+### khepera\_tcpip.wbt
 
 **Keywords**: differential wheels, TCP/IP, client program, Khepera
 

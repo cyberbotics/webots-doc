@@ -28,11 +28,11 @@ showdown.extension("wbVariables", function() {
     var vars = {
       webots : {
         version : {
-          major : "R2018a",
+          major : "R2018b",
           // full is equal to major for the first major version
           // and contains the revision number for subsequent versions
-          full : "R2018a",
-          package : "R2018a"
+          full : "R2018b",
+          package : "R2018b"
         }
       },
       date : {

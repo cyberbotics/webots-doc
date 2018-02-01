@@ -38,12 +38,12 @@
   $scripts="
     <link rel='stylesheet' type='text/css' href='/css/webots-doc.css'/>
     <link rel='stylesheet' type='text/css' href='https://www.cyberbotics.com/highlight/9.5.0/default.min.css'/>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>
+    <script src='https://www.cyberbotics.com/wwi/R2018b/request_methods.js'></script>
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/showdown-extensions.js'></script>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/viewer.js'></script>
+    <script src='https://www.cyberbotics.com/wwi/R2018b/showdown-extensions.js'></script>
+    <script src='https://www.cyberbotics.com/wwi/R2018b/viewer.js'></script>
     <script>
       setup = {
         'book':   '$book',

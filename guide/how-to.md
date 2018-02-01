@@ -184,7 +184,12 @@ The robot watches the panel with its `Camera`. Meanwhile a `Supervisor` switches
 
 ### vision.wbt
 
-TODO
+**Keywords**: OpenCV, color filter
+
+![vision.png](images/vision.png) This example demonstrates how to use [OpenCV](https://opencv.org/) to process the camera image.
+The robot acquires images from a colored scene.
+The controller is linked with OpenCV (embedded in Webots).
+The `Camera` image is given to OpenCV, OpenCV filters are applied on the image, and the result is displayed in a `Display` overlay.
 
 
 ### ziegler\_nichols.wbt

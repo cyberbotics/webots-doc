@@ -287,7 +287,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
-  src: local("fonts/Roboto"), local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+  src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
 }
 
 .blog {

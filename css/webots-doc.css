@@ -283,6 +283,8 @@
   margin: 0px;
 }
 
+@import url(//fonts.googleapis.com/css?family=Roboto);
+
 .blog {
   background-color: #ede9e8;
   background-image: url(/files/repository/www/blog_resources/images/crossword.png);
@@ -363,10 +365,6 @@
   margin-bottom: 2px;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url(/files/repository/www/blog_resources/fonts/Roboto.ttf) format("truetype");
-}
 
 .blog .modal {
   display: none;

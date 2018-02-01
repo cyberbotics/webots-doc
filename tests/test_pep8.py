@@ -49,6 +49,7 @@ class TestCodeFormat(unittest.TestCase):
             paths=[script_directory],
             reporter=CustomReport
         )
+        checker.options.ignore = ('E501')  # E501: line too long (> 80 characters)
         report = checker.check_files()
         self.assertEqual(
             report.total_errors, 0,

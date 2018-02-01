@@ -109,7 +109,10 @@ This is known as the "Inverted Pendulum Problem", and it is solved in our exampl
 
 ### mouse\_events.wbt
 
-TODO
+**Keywords**: Mouse events
+
+![mouse_events.png](images/mouse_events.png) This example shows how to use the Supervisor mouse events.
+When the simulation is running, the `Supervisor` controller called `mouse_events.c` get the last mouse event and displays in the `Console` the 3D coordinate and the name of the hit object.
 
 
 ### omni\_wheels.wbt

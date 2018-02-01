@@ -36,7 +36,7 @@ seconds, all the motors are turned off and the robot collapses. This example
 illustrates how to build a simple articulated robot and also how to turn off
 motor power.
 
-### force_control.wbt
+### force\_control.wbt
 
 **Keywords**: Force control, linear motor, spring and damper
 
@@ -55,7 +55,7 @@ move the boxes apart. Then, the motor force is turned off and the boxes oscillat
 a while according to the spring and damping equations programmed in the
 controller.
 
-### inverted_pendulum.wbt
+### inverted\_pendulum.wbt
 
 **Keywords**: Inverted pendulum, PID, LinearMotor
 
@@ -91,7 +91,7 @@ example of:
 - how to draw objects using OpenGL
 
 
-### texture_change.wbt
+### texture\_change.wbt
 
 **Keywords**: Supervisor, texture, `wb_supervisor_field_set_*()`, Camera
 

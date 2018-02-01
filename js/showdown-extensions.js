@@ -154,3 +154,24 @@ showdown.extension("wbAnchors", function() {
         }
     ];
 });
+
+ // This extension allows to define an illustrated section, simply if a paragraph is starting with an image:
+ // e.g:
+ //     `![battery.png](images/battery.png) In this example, etc.`
+showdown.extension("wbIllustratedSection", function() {
+    return [
+        {
+            type: "lang",
+            filter: function(text, converter, options) {
+                text = text.replace(/\n(!\[[^\]]*\]\s*\([^\)]*\)) +([^]+?)\n\n/gi, function(match, image, content) {
+                    var htmlImage = converter.makeHtml(image);
+                    if (htmlImage.startsWith('<p>') && htmlImage.endsWith('</p>'))  // Remove useless "p" encapsulation.
+                      htmlImage = htmlImage.substr(3, htmlImage.length - 7);
+                    var htmlContent = converter.makeHtml(content);
+                    return '<section class="illustrated-section">' + htmlImage + htmlContent + '</section>';
+                });
+                return text;
+            }
+        }
+    ];
+});

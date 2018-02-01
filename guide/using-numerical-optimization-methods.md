@@ -96,7 +96,7 @@ When using optimization algorithm, you will probably need to reset the robot
 after or before each fitness evaluation. There are several approaches to
 resetting the robot:
 
-#### Using the wb_supervisor_field_set_*() and wb_supervisor_simulation_reset_physics() functions
+#### Using the wb\_supervisor\_field\_set\_*() and wb\_supervisor\_simulation\_reset\_physics() functions
 
 You can easily reset the position, orientation and physics of the robot using
 the `wb_supervisor_field_set...()` and
@@ -127,7 +127,7 @@ the robot controller process (using Webots `Emitter` / `Receiver` communication
 system). The robot controller program should be able to handle such a message
 and reset its state accordingly.
 
-#### Using the wb_supervisor_simulation_revert() function
+#### Using the wb\_supervisor\_simulation\_revert() function
 
 This function restarts the physics simulation and all controllers from the very
 beginning. With this method, everything is reset, including the physics and the

@@ -215,12 +215,22 @@ function applyToTitleDiv() {
 
 function setUpBlogStyleIfNeeded() {
   if (setup.book == "blog") {
-    var center = document.getElementById("center");
-    center.setAttribute("class", "blog");
+    document.getElementById("webots-doc").setAttribute("class", "webots-doc blog");
+    document.getElementById("center").setAttribute("class", "blog");
 
-    setHandleWidth(0);
+    // add "Posts" header above menu
+    if (document.getElementById("sidebarHeader") === null) {
+      var navigation = document.getElementById("navigation");
+      var posts = document.createElement("h2");
+      posts.setAttribute("id", "sidebarHeader")
+      posts.innerHTML = "Posts";
+      navigation.parentNode.insertBefore(posts, navigation.nextSibling);
+    }
 
     document.title = "Webots Blog";
+
+    // add webots ladybug
+    $("#view").prepend("<img src='blog/images/webots.png' style='display: block; min-width: 100px; width: 100px; margin: 0 auto;'/>")
 
     var figures = document.getElementsByTagName("figure");
     if (figures.length > 0) {

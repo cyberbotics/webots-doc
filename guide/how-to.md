@@ -126,7 +126,11 @@ Faster omnidirectional wheels implementations could be achieved using asymmetric
 
 ### passive\_dynamic\_walker.wbt
 
-TODO
+**Keywords**: Passive dynamic walker
+
+![passive_dynamic_walker.png](images/passive_dynamic_walker.png) This example shows how to create a passive dynamic walker.
+This biped robot is not motorized.
+It goes done the slope in a smooth move simply because of its shape and its potential energy.
 
 
 ### pedal\_racer.wbt

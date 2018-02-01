@@ -117,8 +117,11 @@ When the simulation is running, the `Supervisor` controller called `mouse_events
 
 ### omni\_wheels.wbt
 
+**Keywords**: Omnidirectional wheels
 
-TODO
+![omni_wheels.png](images/omni_wheels.png) This example shows how to create omnidirectional wheels.
+In this example, the omnidirectional wheels are modeled with two layers of joints and cylinders solids.
+Faster omnidirectional wheels implementations could be achieved using asymmetric friction (cf. `Youbot` model).
 
 
 ### passive\_dynamic\_walker.wbt

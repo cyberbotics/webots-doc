@@ -81,7 +81,13 @@ Then, the motor force is turned off and the boxes oscillate for a while accordin
 
 ### four\_wheels.wbt
 
-TODO
+**Keywords**: four-wheeled frame
+
+![four_wheels.png](images/four_wheels.png) This example shows three models of four-wheeled vehicles.
+In the first layout, the four motorized wheels are positioned circularly, as it could be done for omnidirectional-wheeled robots.
+In the second layout, the four motorized wheels are oriented in the same direction, as it could be done for a robot with tracks.
+In the third layout, a simple [Ackermann steering geometry](https://en.wikipedia.org/wiki/Ackermann_steering_geometry) is shown.
+Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf. the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
 
 
 ### gui\_tracker.wbt

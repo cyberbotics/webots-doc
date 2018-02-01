@@ -92,7 +92,11 @@ Note that more completed Ackermann steering geometry can be achieved using the `
 
 ### gui\_tracker.wbt
 
-TODO
+**Keywords**: GUI, custom Qt-based robot window
+
+![gui_tracker.png](images/gui_tracker.png) This example shows how to use the deprecated Qt-based system to create custom windows.
+A Supervisor is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
+This window is based on Qt (embedded in Webots) and the `Qt utils` helper library.
 
 
 ### inverted\_pendulum.wbt

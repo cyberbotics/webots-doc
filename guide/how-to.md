@@ -66,7 +66,7 @@ A physics plugin (cf. `WorldInfo.physics`) gets information on the contact point
 **Keywords**: Supervisor, contact points, cylinder collisions
 
 ![cylinder_stack.png](images/cylinder_stack.png) In this example, a stack of cylinders collapses.
-A Supervisor get information on the contact points and display the reaction forces in the `Console`.
+A Supervisor gets information on the contact points and displays the reaction forces in the `Console`.
 
 
 ### force\_control.wbt

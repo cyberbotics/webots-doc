@@ -201,5 +201,5 @@ It adapts its PID parameters as specified by the [Ziegler-Nichols tuning method]
 Each P-controller is tested during a period of 400 time steps, i.e. 12.8 seconds.
 A P-controller 'succeeds' if a constant error amplitude repeats at least 10 times during the test period.
 Otherwise the proportional gain P is incremented by 10 and the experiment restarts.
-The tuned Ziegler-Nichols 'ultimate' gains will be computed for the first successful controller.
+The tuned Ziegler-Nichols "ultimate" gains will be computed for the first successful controller.
 The result is plot in a `Display` overlay.

@@ -42,18 +42,18 @@
   overflow: auto;
   background: lightgray;
 }
-
 .webots-doc .default#center {
   top: 0px !important;
 }
-
 .webots-doc #content {
   max-width: calc(1000px - 4em);
   margin: 0 auto;
   background: white;
   min-height: 100vh;
 }
-
+.webots-doc #title-content {
+  margin: 0;
+}
 .webots-doc #view,
 .webots-doc #title {
   background-color: white;
@@ -62,11 +62,6 @@
   padding: 0 1em 2px 0;
   top: 0;
 }
-
-.webots-doc #title-content {
-  margin: 0;
-}
-
 .webots-doc #title {
   margin-top: 0px;
   margin-left: 40px;

@@ -38,13 +38,13 @@ is "my\_controller" then the controller program should be located in
 extension is added on the Windows platforms only.
 
 - `controllerArgs`: string containing the arguments (separated by space
-characters) to be passed to the `main()` function of the C/C++ controller
-program or the `main()` method of the Java controller program.
+characters) to be passed to the `main` function of the C/C++ controller
+program or the `main` method of the Java controller program.
 
 - `customData`: this field may contain any user data, for example parameters
 corresponding to the configuration of the robot. It can be read from the robot
-controller using the  `wb_robot_get_custom_data()` function and can be written using
-the `wb_robot_set_custom_data()` function. It may also be used as a convenience for
+controller using the  `wb_robot_get_custom_data` function and can be written using
+the `wb_robot_set_custom_data` function. It may also be used as a convenience for
 communicating between a robot and a supervisor without implementing a Receiver /
 Emitter system: The supervisor can read and write in this field using the
 generic supervisor functions for accessing fields.
@@ -52,7 +52,7 @@ generic supervisor functions for accessing fields.
 - `synchronization`: if the value is `TRUE` (default value), the simulator is
 synchronized with the controller; if the value is `FALSE`, the simulator runs as
 fast as possible, without waiting for the controller. The
-`wb_robot_get_synchronization()` function can be used to read the value of this
+`wb_robot_get_synchronization` function can be used to read the value of this
 field from a controller program.
 
 - `battery`: this field should contain three values: the first one corresponds to
@@ -106,7 +106,7 @@ of a robot leg with self collision enabled:
 
 - `showWindow`: defines whether the robot window should be shown at the
 startup of the controller. If yes, the related entry point function of the robot
-window controller plugin (`wbw_show()`) is called as soon as the controller is
+window controller plugin (i.e. the `wbw_show` function) is called as soon as the controller is
 initialized.
 
 - `window`: defines the path of the robot window controller plugin used to
@@ -134,9 +134,9 @@ The `synchronization` field specifies if a robot controller must be synchronized
 with the simulator or not.
 
 If `synchronization` is `TRUE` (the default), the simulator will wait for the
-controller's `wb_robot_step()` whenever necessary to keep the simulation and the
+controller's `wb_robot_step` function call whenever necessary to keep the simulation and the
 controller synchronized. So for example if the simulation step
-(`WorldInfo.basicTimeStep`) is 16 ms and the control step (`wb_robot_step()`) is
+(`WorldInfo.basicTimeStep`) is 16 ms and the control step is
 64 ms, then Webots will always execute precisely 4 simulation steps during one
 control step. After the 4th simulation step, Webots will wait for the
 controller's next control step (call to `wb_robot_step(64)`).
@@ -185,15 +185,16 @@ void wb_robot_cleanup();
 
 **Description**
 
-The `wb_robot_step()` function is crucial and must be used in every controller.
+The `wb_robot_step` function is crucial and must be used in every controller.
 This function synchronizes the sensor and actuator data between Webots and the
-controllers. If the `wb_robot_step()` function is not called then there will be
+controllers. If the `wb_robot_step` function is not called then there will be
 no actuation in Webots and no update of the sensors in the controller.
 
 The `duration` parameter specifies the amount of time, expressed in milliseconds, that must be simulated
-until the `wb_robot_step()` function returns. Note that this is not real time
+until the `wb_robot_step` function returns. Note that this is not real time
 but virtual (simulation) time, so this is not like calling the system's
-`sleep()`. Depending on the complexity of the simulation and execution mode, the function may return quickly. When it returns, the requested duration of simulation time is elapsed.
+`sleep` function.
+Depending on the complexity of the simulation and execution mode, the function may return quickly. When it returns, the requested duration of simulation time is elapsed.
 In other words the physics runs for the specified duration: objects may move, the
 motors may run, the sensor values may change, etc. Note that the `duration`
 parameter must be a multiple of the `WorldInfo.basicTimeStep`.
@@ -221,26 +222,26 @@ milliseconds, but the actuator commands could not be executed on time.
 and the sensor values were also measured at `controller_time` + `dt`. It means
 that the requested step duration could not be respected.
 
-The C API has two additional functions `wb_robot_init()` and
-`wb_robot_cleanup()`. There is not equivalent of the `wb_robot_init()` and
-`wb_robot_cleanup()` functions in the Java, Python, C++ and MATLAB APIs. In
+The C API has two additional functions: `wb_robot_init` and
+`wb_robot_cleanup`. There is not equivalent of the `wb_robot_init` and
+`wb_robot_cleanup` functions in the Java, Python, C++ and MATLAB APIs. In
 these languages the necessary initialization and cleanup of the controller
 library is done automatically.
 
-The `wb_robot_init()` function is used to initialize the Webots controller
+The `wb_robot_init` function is used to initialize the Webots controller
 library and enable the communication with the Webots simulator. Note that the
-`wb_robot_init()` function must be called before any other Webots API function.
+`wb_robot_init` function must be called before any other Webots API function.
 
-Calling the `wb_robot_cleanup()` function is the clean way to terminate a C
+Calling the `wb_robot_cleanup` function is the clean way to terminate a C
 controller. This function frees the various resources allocated by Webots on the
-controller side. In addition `wb_robot_cleanup()` signals the termination of the
+controller side. In addition the `wb_robot_cleanup` function signals the termination of the
 controller to the simulator. As a consequence, Webots removes the controller
 from the simulation which can continue normally with the execution of the other
 controllers (if any). If a C controller exits without calling
-`wb_robot_cleanup()`, then its termination will not be signaled to Webots. In
+the `wb_robot_cleanup` function, then its termination will not be signaled to Webots. In
 this case the simulation will remain blocked (sleeping) on the current step (but
 only if this [Robot](#robot)'s `synchronization` field is TRUE). Note that the
-call to the `wb_robot_cleanup()` function must be the last API function call in
+call to the `wb_robot_cleanup` function must be the last API function call in
 a C controller. Any subsequent Webots API function call will give unpredictable
 results.
 
@@ -393,9 +394,9 @@ allow to get the devices from an internal flat list storing the devices. The
 size of this list matches with the number of devices. The order of this list
 matches with their declaration in the scene tree.
 
-If `index` is out of the bounds of the list index (from 0 to
-wb\_robot\_get\_number\_of\_devices() - 1) then the returned WbDeviceTag is
-equal to 0.
+If `index` is out of the bounds of the list index (from `0` to
+`wb_robot_get_number_of_devices() - 1`) then the returned WbDeviceTag is
+equal to `0`.
 
 The following example shows a typical example of introspection. It is used with
 the device API allowing to retrieve some information from a WbDeviceTag.
@@ -440,17 +441,17 @@ int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
 
 These functions allow you to measure the present energy level of the robot
 battery. First, it is necessary to enable battery sensor measurements by calling
-the `wb_robot_battery_sensor_enable()` function. The `sampling_period` parameter is expressed
+the `wb_robot_battery_sensor_enable` function. The `sampling_period` parameter is expressed
 in milliseconds and defines how frequently measurements are performed. After the
 battery sensor is enabled a value can be read from it by calling the
-`wb_robot_battery_sensor_get_value()` function. The returned value corresponds
+`wb_robot_battery_sensor_get_value` function. The returned value corresponds
 to the present energy level of the battery expressed in Joules (*J*).
 
-The `wb_robot_battery_sensor_disable()` function should be used to stop battery
+The `wb_robot_battery_sensor_disable` function should be used to stop battery
 sensor measurements.
 
-The `wb_robot_get_battery_sampling_period()` function returns the period given
-into the `wb_robot_battery_sensor_enable()` function, or 0 if the device is
+The `wb_robot_get_battery_sampling_period` function returns the period given
+into the `wb_robot_battery_sensor_enable` function, or 0 if the device is
 disabled.
 
 ---
@@ -500,7 +501,7 @@ in the user guide).
 
 The integers can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the *wb_robot_[gs]et_mode()* functions"
+%figure "Helper enumeration to interpret the integer argument and return value of the *wb_robot_[gs]et_mode* functions"
 
 | Mode                         | Purpose                |
 | ---------------------------- | ---------------------- |
@@ -751,21 +752,21 @@ void wb_robot_mutex_unlock(WBMutexRef mutex);
 
 **Description**
 
-The `wb_robot_mutex_new()` function creates a new mutex and returns a reference
+The `wb_robot_mutex_new` function creates a new mutex and returns a reference
 to that mutex to be used with other mutex functions. A newly created mutex is
 always initially unlocked. Mutexes (mutual excluders) are useful with
 multi-threaded controllers to protect some resources (typically variables or
 memory chunks) from being used simultaneously by different threads.
 
-The `wb_robot_mutex_delete()` function deletes the specified `mutex`. This
+The `wb_robot_mutex_delete` function deletes the specified `mutex`. This
 function should be used when a mutex is no longer in use.
 
-The `wb_robot_mutex_lock()` function attempts to lock the specified `mutex`. If
+The `wb_robot_mutex_lock` function attempts to lock the specified `mutex`. If
 the mutex is already locked by another thread, this function waits until the
 other thread unlocks the mutex, and then locks it. This function returns only
 after it has locked the specified `mutex`.
 
-The `wb_robot_mutex_unlock()` function unlocks the specified `mutex`, allowing
+The `wb_robot_mutex_unlock` function unlocks the specified `mutex`, allowing
 other threads to lock it.
 
 **See also**
@@ -794,9 +795,9 @@ void wb_robot_wwi_send_text(const char *text);
 
 These functions allow the robot controller to communicate with a HTML robot window. Such a window is embedded as a dockable sub-window in the Webots user interface. The content of the window is written in HTML and Javascript functions are used to communicate with the robot controller.
 
-The `wb_robot_wwi_receive` and `wb_robot_wwi_receive_text` functions allow a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.window("<robot window name>").send()` method of the Webots Javascript API.
+The `wb_robot_wwi_receive` and `wb_robot_wwi_receive_text` functions allow a robot controller to receive a message sent from a Javascript function running in the HTML robot window. The message is sent using the `webots.window("<robot window name>").send` method of the Webots Javascript API.
 
-The `wb_robot_window_send` and `wb_robot_wwi_send_text` functions allow a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.window("<robot window name>").receive()` method of the Webots Javascript API.
+The `wb_robot_window_send` and `wb_robot_wwi_send_text` functions allow a robot controller to send a message to a Javascript function running in the HTML robot window. The message is received using the `webots.window("<robot window name>").receive` method of the Webots Javascript API.
 
 > **note** [Java, Python, Matlab, ROS]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python, Matlab, or ROS API.
 

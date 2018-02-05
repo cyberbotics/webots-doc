@@ -8,7 +8,9 @@ pBuffer = ''
 def flushBuffer(f):
     """Flush pBuffer :-P."""
     global pBuffer
-    txt = pBuffer.replace('wb', 'truite')
+    txt = pBuffer.replace('\n', ' ')
+    txt = txt.replace('  ', ' ')
+    txt = txt.replace('.', '.\n')
     f.write(txt)
     pBuffer = ''
 

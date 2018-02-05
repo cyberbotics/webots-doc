@@ -28,7 +28,7 @@ const char *wb_device_get_model(WbDeviceTag tag);
 
 **Description**
 
-`wb_device_get_model()` returns the model string of the device corresponding to
+The `wb_device_get_model` function returns the model string of the device corresponding to
 the WbDeviceTag given as parameter (`tag`).
 
 This function returns NULL if the WbDeviceTag does not match a valid device, or
@@ -51,7 +51,7 @@ const char *wb_device_get_name(WbDeviceTag tag);
 
 **Description**
 
-`wb_device_get_name()` convert the WbDeviceTag given as parameter (`tag`) to its
+The `wb_device_get_name` function converts the WbDeviceTag given as parameter (`tag`) to its
 corresponding name.
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
@@ -72,7 +72,7 @@ WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 
 **Description**
 
-`wb_device_get_node_type()` convert the WbDeviceTag given as parameter (`tag`)
+The `wb_device_get_node_type` function converts the WbDeviceTag given as parameter (`tag`)
 to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md) API)
 
 This function returns NULL if the WbDeviceTag does not match a valid device.

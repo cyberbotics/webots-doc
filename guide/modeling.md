@@ -35,7 +35,7 @@ In order for Webots simulation results to be reproducible, the following conditi
 be fulfilled:
 
 1. Each simulation must be restarted either by pushing the `Revert` button, or by
-using the `wb_supervisor_simulation_revert()` function, or by restarting Webots.
+using the `wb_supervisor_simulation_revert` function, or by restarting Webots.
 Any other method for resetting the simulation will not reset the physics
 (velocity, inertia, etc.) and other simulation data, hence the simulation state
 will be reset only partly. The random seeds used by Webots internally are reset

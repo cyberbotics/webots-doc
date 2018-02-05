@@ -69,14 +69,14 @@ from) another "symmetric" connector. An "active" connector can only lock to (and
 unlock from) a "passive" connector. A "passive" connector cannot lock or unlock.
 
 - `isLocked`: represents the locking state of the [Connector](#connector). The
-locking state can be changed through the API functions `wb_connector_lock()` and
-`wb_connector_unlock()`. The *locking state* means the current state of the
+locking state can be changed through the `wb_connector_lock` and
+`wb_connector_unlock` API functions. The *locking state* means the current state of the
 locking hardware, it does not indicates whether or not an actual physical link
 exists between two connectors. For example, according to the hardware type,
 `isLocked` can mean that a mechanical latch or a gripper is closed, that
 electro-magnets are activated, that permanent magnets were moved to an
 attraction state, or that a suction pump was activated, etc. But the actual
-physical link exists only if `wb_connector_lock()` was called when a compatible
+physical link exists only if the `wb_connector_lock` function was called when a compatible
 peer was present (or if the [Connector](#connector) was auto-locked).
 
     > **Note**:
@@ -89,7 +89,7 @@ simulation with the desired mechanical configuration.
 allows a connector to automatically lock when a compatible peer becomes present.
 In order to successfully auto-lock, both the `autoLock` and the `isLocked`
 fields must be TRUE when the peer becomes present, this means that
-`wb_connector_lock()` must have been invoked earlier. The general idea of
+`wb_connector_lock` must have been invoked earlier. The general idea of
 `autoLock` is to allow passive locking. Many spring mounted latching mechanisms
 or magnetic systems passively lock their peer.
 
@@ -213,11 +213,11 @@ int wb_connector_get_presence(WbDeviceTag tag);
 
 **Description**
 
-The `wb_connector_enable_presence()` function starts querying the presence sensor of the [Connector](#connector). The `sampling_period` argument specifies the sampling period of the presence sensor. It is expressed in milliseconds. Note that it will be active only after the first sampling period elapsed.
+The `wb_connector_enable_presence` function starts querying the presence sensor of the [Connector](#connector). The `sampling_period` argument specifies the sampling period of the presence sensor. It is expressed in milliseconds. Note that it will be active only after the first sampling period elapsed.
 
-The `wb_connector_disable_presence()` function stops querying the presence sensor of the [Connector](#connector).
+The `wb_connector_disable_presence` function stops querying the presence sensor of the [Connector](#connector).
 
-The `wb_connector_get_presence_sampling_period()` function returns the period at which the presence sensor of the [Connector](#connector) is queried. The `wb_connector_get_presence()` function returns the current *presence* state of this connector, it returns:
+The `wb_connector_get_presence_sampling_period` function returns the period at which the presence sensor of the [Connector](#connector) is queried. The `wb_connector_get_presence` function returns the current *presence* state of this connector, it returns:
 
 - 1: in case of the presence of a peer connector
 - 0: in case of the absence of a peer connector
@@ -268,19 +268,19 @@ void wb_connector_unlock(WbDeviceTag tag);
 
 **Description**
 
-The `wb_connector_lock()` and `wb_connector_unlock()` functions can be used to
+The `wb_connector_lock` and `wb_connector_unlock` functions can be used to
 set or unset the [Connector](#connector)'s locking state (`isLocked` field) and
 eventually create or destroy the physical connection between two
 [Connector](#connector) nodes.
 
-If `wb_connector_lock()` is invoked while a peer connector is *present* (see the
+If the `wb_connector_lock` function is invoked while a peer connector is *present* (see the
 definition of *presence* above), a physical link will be created between the two
 connectors. If both the `isLocked` and `autoLock` fields are TRUE, then the
 physical link will be created automatically as soon as the peer's *presence* is
-detected. If `wb_connector_lock()` succeeds in creating the link, the two
+detected. If the `wb_connector_lock` function succeeds in creating the link, the two
 connected bodies will keep a constant distance and orientation with respect to
 each other from this moment on.
 
-If `wb_connector_unlock()` is invoked while there is a physical link between two
+If the `wb_connector_unlock` function is invoked while there is a physical link between two
 `Connectors`, the link will be destroyed, unless `unilateralUnlock` is FALSE and
 the peer connector is still in the `isLocked` state.

@@ -262,14 +262,14 @@ int wb_camera_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-`wb_camera_enable()` allows the user to enable a camera.
+The `wb_camera_enable` function allows the user to enable a camera.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_camera_disable()` turns the camera off, saving computation time.
+The `wb_camera_disable` function turns the camera off, saving computation time.
 
-The `wb_camera_get_sampling_period()` function returns the period given to the
-`wb_camera_enable()` function, or 0 if the device is disabled.
+The `wb_camera_get_sampling_period` function returns the period given to the
+`wb_camera_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -293,11 +293,11 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov);
 These functions allow the controller to get and set the value for the field of
 view (fov) of a camera. The original value for this field of view is defined in
 the [Camera](#camera) node, as `fieldOfView`. Note that changing the field of
-view using `wb_camera_set_fov()` is possible only if the camera device has a
+view using the `wb_camera_set_fov` function is possible only if the camera device has a
 [Zoom](zoom.md) node defined in its `zoom` field. The minimum and maximum values
 for the field of view are defined in this [Zoom](zoom.md) node, if the zoom is
-not defined, then the functions `wb_camera_get_min_fov()` and
-`wb_camera_get_max_fov()` will return the camera's field of view.
+not defined, then the `wb_camera_get_min_fov` and
+`wb_camera_get_max_fov` functions will return the camera's field of view.
 
 ---
 
@@ -321,7 +321,7 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 
 These functions allow the controller to get and set the focusing parameters.
 Note that if the camera device has no [Focus](focus.md) node defined in its
-`focus` field, it is not possible to call `wb_camera_set_focal_distance()` and
+`focus` field, it is not possible to call the `wb_camera_set_focal_distance` function and
 the other functions will return 0.
 
 ---
@@ -383,7 +383,7 @@ unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, in
 
 **Description**
 
-The `wb_camera_get_image()` function reads the last image grabbed by the camera.
+The `wb_camera_get_image` function reads the last image grabbed by the camera.
 The image is coded as a sequence of three bytes representing the red, green and
 blue levels of a pixel. Pixels are stored in horizontal lines ranging from the
 top left hand side of the image down to bottom right hand side. The memory chunk
@@ -395,9 +395,9 @@ itself. The size in bytes of this memory chunk can be computed as follows:
 Internal pixel format of the buffer is BGRA (32 bits). Attempting to read
 outside the bounds of this chunk will cause an error.
 
-The `wb_camera_image_get_red(), wb_camera_image_get_green()` and
-`wb_camera_image_get_blue()` macros can be used for directly accessing the pixel
-RGB levels from the pixel coordinates. The `wb_camera_image_get_gray()` macro
+The `wb_camera_image_get_red, wb_camera_image_get_green` and
+`wb_camera_image_get_blue` macros can be used for directly accessing the pixel
+RGB levels from the pixel coordinates. The `wb_camera_image_get_gray` macro
 works in a similar way but returns the gray level of the specified pixel by
 averaging the three RGB components. In the C version, these four macros return
 an `unsigned char` in the range [0..255]. Here is a C usage example:
@@ -414,13 +414,13 @@ for (int x = 0; x < image_width; x++)
 ```
 
 > **Note** [Java]:
-`Camera.getImage()` returns an array of int (`int[]`). The length of this array
+The `Camera.getImage` function returns an array of int (`int[]`). The length of this array
 corresponds to the number of pixels in the image, that is the width multiplied
 by the height of the image. Each `int` element of the array represents one pixel
 coded in BGRA (32 bits). For example red is `0x0000ff00`, green is `0x00ff0000`,
-etc. The `Camera.pixelGetRed(), Camera.pixelGetGreen()` and
-`Camera.pixelGetBlue()` functions can be used to decode a pixel value for the
-red, green and blue components. The `Camera.pixelGetGray()` function works in a
+etc. The `Camera.pixelGetRed`, `Camera.pixelGetGreen` and
+`Camera.pixelGetBlue` functions can be used to decode a pixel value for the
+red, green and blue components. The `Camera.pixelGetGray` function works in a
 similar way, but returns the gray level of the pixel by averaging the three RGB
 components. Each of these four functions take an `int` pixel argument and return
 an `int` color/gray component in the range [0..255]. Here is an example:
@@ -439,7 +439,7 @@ an `int` color/gray component in the range [0..255]. Here is an example:
 <!-- -->
 
 > **Note** [Python]:
-`getImage()` returns a `string`. This `string` is closely related to the `const
+The `getImage` function returns a `string`. This `string` is closely related to the `const
 char *` of the C API. `imageGet*`-like functions can be used to get the channels
 of the camera Here is an example:
 
@@ -451,7 +451,7 @@ of the camera Here is an example:
 > gray = Camera.imageGetGray(cameraData, camera.getWidth(), 5, 10)
 > ```
 
-> Another way to use the camera in Python is to get the image by `getImageArray()`
+> Another way to use the camera in Python is to get the image by the `getImageArray` function
 which returns a `list<list<list<int>>>`. This three dimensional list can be
 directly used for accessing to the pixels. Here is an example:
 
@@ -470,10 +470,10 @@ directly used for accessing to the pixels. Here is an example:
 <!-- -->
 
 > **Note** [Matlab]:
-`wb_camera_get_image()` returns a 3-dimensional array of `uint(8)`. The first
+The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`. The first
 two dimensions of the array are the width and the height of camera's image, the
 third being the RGB code: 1 for red, 2 for blue and 3 for green.
-`wb_camera_get_range_image()` returns a 2-dimensional array of
+The `wb_camera_get_range_image` function returns a 2-dimensional array of
 `float('single')`. The dimensions of the array are the width and the length of
 camera's image and the float values are the metric distance values deduced from
 the OpenGL z-buffer.
@@ -513,8 +513,8 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 
 **Description**
 
-The `wb_camera_save_image()` function allows the user to save a `tag` image
-which was previously obtained with the `wb_camera_get_image()` function. The
+The `wb_camera_save_image` function allows the user to save a `tag` image
+which was previously obtained with the `wb_camera_get_image` function. The
 image is saved in a file in either PNG or JPEG format. The image format is
 specified by the `filename` parameter. If `filename` is terminated by `.png`,
 the image format is PNG. If `filename` is terminated by `.jpg` or `.jpeg`, the
@@ -524,7 +524,7 @@ saved image. The `quality` parameter should be in the range 1 (worst quality) to
 100 (best quality). Low quality JPEG files will use less disk space. For PNG
 images, the `quality` parameter is ignored.
 
-The return value of the `wb_camera_save_image()` is 0 in case of success. It is
+The return value of the `wb_camera_save_image` function is 0 in case of success. It is
 -1 in case of failure (unable to open the specified file or unrecognized image
 file extension).
 
@@ -553,11 +553,11 @@ If a [Recognition](recognition.md) node is present in the `recognition` field, t
 
 The `wb_camera_has_recognition` function can be used to determine whether a [Recognition](recognition.md) node is present or not.
 
-The `wb_camera_recognition_enable()` function allows the user to enable recognition. It is not necessary to enable the camera for recognition to work.
+The `wb_camera_recognition_enable` function allows the user to enable recognition. It is not necessary to enable the camera for recognition to work.
 
-The `wb_camera_recognition_disable()` function turns off the recognition, saving computation time.
+The `wb_camera_recognition_disable` function turns off the recognition, saving computation time.
 
-The `wb_camera_recognition_get_sampling_period()` function returns the period given to the `wb_camera_recognition_enable()` function, or 0 if the recognition is disabled.
+The `wb_camera_recognition_get_sampling_period` function returns the period given to the `wb_camera_recognition_enable` function, or 0 if the recognition is disabled.
 
 The `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get_objects` functions allow the user to get the current number of recognized objects and the objects array.
 

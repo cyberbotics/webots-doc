@@ -60,5 +60,5 @@ can safely exit the `ssh` session, while Webots keeps running.
 
 In this case the decision to terminate the job is usually made in the Supervisor
 code according to simulation specific criteria. The
-`wb_supervisor_simulation_quit()` function can be used to automatically
+`wb_supervisor_simulation_quit` function can be used to automatically
 terminate Webots when the job is over.

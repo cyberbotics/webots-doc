@@ -1,31 +1,50 @@
 """Refactor paragraphs to have one sentence by line."""
 import glob
+import shutil
 
-path = "*/*.md"
+pBuffer = ''
 
-for filename in glob.glob(path):
-    backup = filename.replace('.md', '.backup.md')
+
+def flushBuffer(f):
+    """Flush pBuffer :-P."""
+    global pBuffer
+    txt = pBuffer.replace('wb', 'truite')
+    f.write(txt)
+    pBuffer = ''
+
+
+for filename in glob.glob('*/*.md'):
+    backup = filename.replace('.md', '.back')
     with open(filename, 'r') as f:
         content = f.readlines()
     with open(backup, 'w') as f:
         skipUntil = None
+        pBuffer = ''
         for line in content:
+            assert(not skipUntil or not pBuffer)
             if skipUntil:
                 f.write(line)
                 if line.startswith(skipUntil):
                     skipUntil = None
                 continue
 
-            if line.startswith('#'):
+            if line.startswith('#') or line.startswith('---') or line.startswith('\n'):
+                flushBuffer(f)
                 f.write(line)
             elif line.startswith('%figure') or line.startswith('%api'):
+                flushBuffer(f)
                 skipUntil = '%end'
                 f.write(line)
             elif line.startswith('| '):
+                flushBuffer(f)
                 skipUntil = '\n'
                 f.write(line)
-            elif line.startswith('```'):
+            elif line.startswith('```') or line.startswith('> ```'):
+                flushBuffer(f)
                 skipUntil = '```'
                 f.write(line)
             else:
-                print line[:-1]
+                pBuffer += line
+        flushBuffer(f)
+
+    shutil.move(backup, filename)

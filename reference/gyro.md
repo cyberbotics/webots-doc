@@ -29,8 +29,8 @@ the raw values are returned (no mapping).
 should be enabled or disabled for the specified axis. If one of these fields is
 set to FALSE, then the corresponding vector element will not be computed and it
 will return *NaN* (Not a Number) For example if `zAxis` is FALSE, then
-`wb_gyro_get_values()[2]` returns *NaN*. The default is that all three axes are
-enabled (TRUE).
+the second element of the array returned by the `wb_gyro_get_values` function returns *NaN*.
+The default is that all three axes are enabled (TRUE).
 
 - `resolution`: This field allows to define the resolution of the sensor, the
 resolution is the smallest change that it is able to measure. Setting this field
@@ -57,16 +57,16 @@ const double *wb_gyro_get_values(WbDeviceTag tag);
 
 **Description**
 
-The `wb_gyro_enable()` function turns on the angular velocity measurements.
+The `wb_gyro_enable` function turns on the angular velocity measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_gyro_disable()` function turns off the [Gyro](#gyro) device.
+The `wb_gyro_disable` function turns off the [Gyro](#gyro) device.
 
-The `wb_gyro_get_sampling_period()` function returns the period given into the
-`wb_gyro_enable()` function, or 0 if the device is disabled.
+The `wb_gyro_get_sampling_period` function returns the period given into the
+`wb_gyro_enable` function, or 0 if the device is disabled.
 
-The `wb_gyro_get_values()` function returns the current measurement of the
+The `wb_gyro_get_values` function returns the current measurement of the
 [Gyro](#gyro) device. The values are returned as a 3D-vector therefore only the
 indices 0, 1, and 2 are valid for accessing the vector. Each vector element
 represents the angular velocity about one of the axes of the [Gyro](#gyro) node,
@@ -77,10 +77,10 @@ angular velocity about the *x*-axis, the second element to the *y*-axis, etc.
 The returned vector is a pointer to the internal values managed by the
 [Gyro](#gyro) node, therefore it is illegal to free this pointer. Furthermore,
 note that the pointed values are only valid until the next call to
-`wb_robot_step()` or `Robot::step()`. If these values are needed for a longer
+the `wb_robot_step` or `Robot::step` functions. If these values are needed for a longer
 period they must be copied.
 
 <!-- -->
 
 > **Note** [Python]:
-`getValues()` returns the vector as a list containing three floats.
+The `getValues` function returns the vector as a list containing three floats.

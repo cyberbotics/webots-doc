@@ -7,7 +7,7 @@ Each physical joystick can be used by one controller at a time only. If several 
 > **Note**:
 In C++, Python and Java the joystick functions are in a dedicated class called
 `Joystick`. In order to get the `Joystick` instance, you should call the
-`getJoystick()` function of the `Robot` class.
+`getJoystick` function of the `Robot` class.
 
 ### Joystick Functions
 
@@ -27,13 +27,13 @@ int wb_joystick_get_sampling_period();
 
 **Description**
 
-The `wb_joystick_enable()` function allows the user to enable joystick measurements. When this function is called the first free joystick is paired with the controller.
+The `wb_joystick_enable` function allows the user to enable joystick measurements. When this function is called the first free joystick is paired with the controller.
 The `sampling_period` argument specifies the sampling period of the [Joystick](#joystick) and is expressed in milliseconds.
 Note that the joystick will be active only after the first sampling period elapsed.
 
-The `wb_joystick_disable()` function turns the joystick off. The joystick is released so that it can be used by another controller.
+The `wb_joystick_disable` function turns the joystick off. The joystick is released so that it can be used by another controller.
 
-The `wb_joystick_get_sampling_period()` function returns the value previously passed to the `wb_joystick_enable()` function, or 0 if the device is disabled.
+The `wb_joystick_get_sampling_period` function returns the value previously passed to the `wb_joystick_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -91,9 +91,9 @@ int  wb_joystick_get_axis_value(int axis);
 
 **Description**
 
-The `wb_joystick_get_number_of_axes()` function returns the number of axes of the joystick.
+The `wb_joystick_get_number_of_axes` function returns the number of axes of the joystick.
 
-The `wb_joystick_get_axis_value()` function returns the current value of the axis passed as an argument.
+The `wb_joystick_get_axis_value` function returns the current value of the axis passed as an argument.
 
 ---
 
@@ -112,7 +112,7 @@ int wb_joystick_get_pressed_button();
 **Description**
 
 This function allows you to read a button pressed on the joystick paired with this controller (if any). The Webots window must be selected and the simulation must be running.
-All the buttons pressed can be read by calling the `wb_joystick_get_key()` function repeatedly until this function returns -1. The returned value, if non-negative, is a button code corresponding to a button currently pressed. If no button is currently pressed, the function will return -1. Calling the `wb_joystick_get_key()` function a second time will return either -1 or the button code of another button which is currently simultaneously pressed. On macOS, only the first 12 buttons and first 2 axes of the joystick are taken into account.
+All the buttons pressed can be read by calling the `wb_joystick_get_key` function repeatedly until this function returns -1. The returned value, if non-negative, is a button code corresponding to a button currently pressed. If no button is currently pressed, the function will return -1. Calling the `wb_joystick_get_key` function a second time will return either -1 or the button code of another button which is currently simultaneously pressed. On macOS, only the first 12 buttons and first 2 axes of the joystick are taken into account.
 
 ---
 
@@ -136,13 +136,13 @@ void wb_joystick_set_resistance_gain(double gain);
 
 **Description**
 
-The `wb_joystick_set_constant_force()` function uses the joystick force feedback to add a constant force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
+The `wb_joystick_set_constant_force` function uses the joystick force feedback to add a constant force on an axis. The joystick must support force feedback and the unit of `level` is hardware specific.
 
-The `wb_joystick_set_constant_force_duration()` function sets for how long (in seconds) a force added with the `wb_joystick_set_constant_force()` function should be applied. After this duration if no other call to `wb_joystick_set_constant_force()` was done, the constant force is stopped. This is particularly useful in case the simulation is paused to make sure the force stops too. By default the duration is 1 second.
+The `wb_joystick_set_constant_force_duration` function sets for how long (in seconds) a force added with the `wb_joystick_set_constant_force` function should be applied. After this duration if no other call to `wb_joystick_set_constant_force` was done, the constant force is stopped. This is particularly useful in case the simulation is paused to make sure the force stops too. By default the duration is 1 second.
 
-The `wb_joystick_set_auto_centering_gain()` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware specific.
+The `wb_joystick_set_auto_centering_gain` function sets the auto-centering gain of the force feedback. Auto-centering is an effect that tend to align the axis with the zero position. The joystick must support force feedback and the unit of `gain` is hardware specific.
 
-The `wb_joystick_set_resistance_gain()` function sets the resistance gain of the force feedback. Resistance is an effect that tend to prevent the axis from moving. The joystick must support force feedback and the unit of `gain` is hardware specific.
+The `wb_joystick_set_resistance_gain` function sets the resistance gain of the force feedback. Resistance is an effect that tend to prevent the axis from moving. The joystick must support force feedback and the unit of `gain` is hardware specific.
 
 > **Note**:
 The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.

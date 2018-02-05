@@ -745,6 +745,15 @@ window.onscroll=function(){
     updateMenuScrollbar();
 };
 
+function fixPageLayout() {
+  content = document.createElement("div");
+  content.setAttribute("id", "content");
+  document.querySelector("#center").appendChild(content);
+
+  document.querySelector("#content").appendChild(document.querySelector("#title"));
+  document.querySelector("#content").appendChild(document.querySelector("#view"));
+}
+
 
 document.addEventListener("DOMContentLoaded", function() {
   initializeHandle();
@@ -765,4 +774,5 @@ document.addEventListener("DOMContentLoaded", function() {
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
+  fixPageLayout();
 });

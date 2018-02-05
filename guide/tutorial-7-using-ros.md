@@ -33,7 +33,7 @@ some tutorials from:
 tutorials will also help you set up your ROS environment and initialize
 your catkin workspace.
 
-### webots_ros package installation
+### webots\_ros package installation
 
 If you haven't created any catkin workspace yet, you can create one with the
 following commands:

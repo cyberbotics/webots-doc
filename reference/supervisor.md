@@ -806,10 +806,6 @@ This function is especially useful for resetting a robot to its initial position
 and inertia. To stop the inertia of a single [Solid](solid.md) node please refer
 to [this section](#wb_supervisor_node_reset_physics).
 
-Furthermore, this function resets the seed of the random number generator used
-in Webots, so that noise-based simulations can be be reproduced identically
-after calling this function.
-
 ---
 
 **Name**

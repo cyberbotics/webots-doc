@@ -313,7 +313,7 @@ This function is not available in the C++, Java and Python APIs. Instead, C++, J
 
 **See also**
 
-[wb\_robot\_step](#wb_robot_step).
+[`wb_robot_step`](#wb_robot_step).
 
 ---
 
@@ -364,11 +364,11 @@ found, the function returns `NULL` in C++, `null` in Java or the `none` in
 Python.
 
 > **Note**:
-These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [wb\_robot\_get\_device](#wb_robot_get_device).
+These functions are not available in the C and MATLAB APIs. Instead, C and Matlab users should use [`wb_robot_get_device`](#wb_robot_get_device) function.
 
 **See also**
 
-[wb\_robot\_get\_device](#wb_robot_get_device), [wb\_robot\_step](#wb_robot_step).
+[`wb_robot_get_device`](#wb_robot_get_device), [`wb_robot_step`](#wb_robot_step).
 
 
 ---
@@ -597,7 +597,7 @@ the robot node.
 
 ```c
 #include <webots/nodes.h>
-     #include <webots/robot.h>
+#include <webots/robot.h>
 
 WbNodeType wb_robot_get_type();
 ```
@@ -732,7 +732,7 @@ below) to ensure that such data is not accessed by a different thread.
 
 **See also**
 
-[wb\_robot\_mutex\_new](#wb_robot_mutex_new).
+[`wb_robot_mutex_new`](#wb_robot_mutex_new).
 
 ---
 
@@ -770,7 +770,7 @@ other threads to lock it.
 
 **See also**
 
-[wb\_robot\_task\_new](#wb_robot_task_new).
+[`wb_robot_task_new`](#wb_robot_task_new).
 
 Users unfamiliar with the mutex concept may wish to consult a reference on
 multi-threaded programming techniques for further information.

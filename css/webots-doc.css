@@ -40,7 +40,7 @@
   padding-bottom: 0;
   margin-bottom: 0;
   overflow: auto;
-  background: lightgray;
+  background: #ddd;
 }
 .webots-doc .default#center {
   top: 0px !important;
@@ -50,6 +50,10 @@
   margin: 0 auto;
   background: white;
   min-height: 100vh;
+  padding: 0px 20px 0px 20px;
+  -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.3);
 }
 .webots-doc #title-content {
   margin: 0;
@@ -116,11 +120,14 @@
 .webots-doc blockquote {
   margin: 20px 10px;
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
-  border-left: 6px solid #ffe070;
-  background-color: #fff4cc;
+  background-color: #eee;
   background-image: url(images/note.png);
   background-repeat: no-repeat;
   background-position: 10px 24px;
+  border-radius: 3px;
+}
+.webots-doc blockquote p {
+  color: black;
 }
 .webots-doc .cyberbotics blockquote {
   padding: 20px;
@@ -143,7 +150,7 @@
   color: #ddd;
 }
 .webots-doc a {
-  color: #888;
+  color: #c12a2a;
   text-decoration: none;
   outline: 0;
 }
@@ -161,23 +168,26 @@
 .webots-doc pre {
   padding: 30px 10px 30px 40px;
   margin: 20px 10px;
-  border-radius: 20px;
-  background-color: #e8f4ff;
+  background-color: #444;
+  color: #fff;
+  border-radius: 4px;
   overflow-x: auto;
   font-size: 16px;
 }
 .webots-doc code {
   padding: 0;
   background: transparent;
-  color: #444;
   font-size: 16px;
   overflow-y: hidden;
 }
 .webots-doc p > code {
   line-height:18px;
+  background: #eee;
+  padding: 2px;
+  color: #000;
 }
 .webots-doc a code {
-  color: #888;
+  color: #a88;
 }
 .webots-doc h1,
 .webots-doc h2,
@@ -185,18 +195,21 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 100;
-  color: #888;
+  color: #a33;
   clear: both;
 }
 .webots-doc h1 {
   font-size: 46px;
   padding-bottom: 16px;
+  font-weight: bold;
 }
 .webots-doc h2 {
   font-size: 32px;
+  font-weight: bold;
 }
 .webots-doc h3 {
   font-size: 26px;
+  font-weight: bold;
 }
 .webots-doc .release-tag {
   display: inline;
@@ -231,7 +244,7 @@
   opacity: 1;
 }
 .webots-doc p {
-  color: #444;
+  color: #222;
   margin-left: 10px;
   margin-right: 10px;
   text-align: justify;

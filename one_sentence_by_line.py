@@ -10,7 +10,10 @@ def flushBuffer(f):
     global pBuffer
     txt = pBuffer.replace('\n', ' ')
     txt = txt.replace('  ', ' ')
-    txt = txt.replace('.', '.\n')
+    txt = txt.replace('. ', '.\n')
+    txt = txt.replace(' \n', '\n')
+    txt += '\n'
+    txt = txt.replace('\n\n', '\n')
     f.write(txt)
     pBuffer = ''
 
@@ -29,6 +32,9 @@ for filename in glob.glob('*/*.md'):
                 if line.startswith(skipUntil):
                     skipUntil = None
                 continue
+
+            if line.startswith('- ') and pBuffer:
+                flushBuffer(f)
 
             if line.startswith('#') or line.startswith('---') or line.startswith('\n'):
                 flushBuffer(f)

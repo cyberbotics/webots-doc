@@ -775,9 +775,7 @@ The `wb_supervisor_simulation_reset()` function sends a request to the simulator
 As a result of the reset, the supervisor process and all the robot processes are terminated and restarted.
 You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
 
-Furthermore, this function resets the seed of the random number generator used
-in Webots, so that noise-based simulations can be be reproduced identically
-after calling this function.
+Furthermore, this function resets the seed of the random number generator used in Webots, so that noise-based simulations can be be reproduced identically after calling this function.
 
 ---
 

@@ -150,7 +150,7 @@
   color: #ddd;
 }
 .webots-doc a {
-  color: #a50e0e;
+  color: #317589;
   text-decoration: none;
   outline: 0;
 }
@@ -195,7 +195,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 100;
-  color: #a33;
+  color: #317589;
   clear: both;
 }
 .webots-doc h1 {
@@ -244,9 +244,11 @@
   opacity: 1;
 }
 .webots-doc p {
-  color: #222;
+  font-family: "Roboto";
+  color: black;
   margin-left: 10px;
   margin-right: 10px;
+  font-size: 16px;
   text-align: justify;
 }
 .webots-doc img {

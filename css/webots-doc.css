@@ -56,7 +56,7 @@
 }
 .webots-doc #view,
 .webots-doc #title {
-  background-color: white;
+  background-color: transparent;
   width: calc(100% - 4em);
   margin: 1em 1em 0;
   padding: 0 1em 2px 0;

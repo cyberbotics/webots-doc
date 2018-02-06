@@ -1,6 +1,6 @@
 """Refactor paragraphs to have one sentence by line."""
 import glob
-import shutil
+import os
 
 pBuffer = ''
 
@@ -12,9 +12,9 @@ def flushBuffer(f):
     txt = txt.replace('  ', ' ')
     txt = txt.replace('. ', '.\n')
     txt = txt.replace(' \n', '\n')
-    txt += '\n'
-    txt = txt.replace('\n\n', '\n')
+    txt = txt.strip()
     f.write(txt)
+    f.write('\n')
     pBuffer = ''
 
 
@@ -33,17 +33,17 @@ for filename in glob.glob('*/*.md'):
                     skipUntil = None
                 continue
 
-            if line.startswith('- ') and pBuffer:
+            if line.startswith('\n'):
                 flushBuffer(f)
-
-            if line.startswith('#') or line.startswith('---') or line.startswith('\n'):
+                f.write(line)
+            elif line.startswith('#') or line.startswith('---'):
                 flushBuffer(f)
                 f.write(line)
             elif line.startswith('%figure') or line.startswith('%api'):
                 flushBuffer(f)
                 skipUntil = '%end'
                 f.write(line)
-            elif line.startswith('| '):
+            elif line.startswith('| ') or line.startswith('- '):
                 flushBuffer(f)
                 skipUntil = '\n'
                 f.write(line)
@@ -55,4 +55,20 @@ for filename in glob.glob('*/*.md'):
                 pBuffer += line
         flushBuffer(f)
 
-    shutil.move(backup, filename)
+    with open(backup, 'r') as f:
+        content = f.readlines()
+    with open(filename, 'w') as f:
+        previousLine = ''
+        for l in range(len(content)):
+            line = content[l]
+
+            if l == 0 or l == len(content) - 1:
+                if line == '\n':
+                    previousLine = line
+                    continue
+
+            if previousLine != '\n' or line != '\n':
+                f.write(line)
+            previousLine = line
+
+    os.remove(backup)

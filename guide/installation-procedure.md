@@ -101,7 +101,7 @@ tarball:
 tar xjf webots-{{ webots.version.package }}-x86-64.tar.bz2
 ```
 
-and
+and:
 
 ```sh
 export WEBOTS_HOME=/home/username/webots
@@ -136,7 +136,7 @@ Alternatively, the DEB package can also be installed using `apt` or `gdebi` with
 apt install ./webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
-or
+or:
 
 ```sh
 gdebi webots_{{ webots.version.debian_package }}_amd64.deb
@@ -145,6 +145,7 @@ gdebi webots_{{ webots.version.debian_package }}_amd64.deb
 #### Server edition
 
 Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
+
 * `xserver-xorg-core`
 * `libpulse0`
 
@@ -159,8 +160,17 @@ Additionally, it is also necessary to install an OS GUI, for example the Unity d
 3. Follow the installation instructions.
 
 It is possible to install Webots silently from an administrator DOS console, by
-typing "webots-{{ webots.version.package }}\_setup.exe /SILENT" or "webots-{{ webots.version.package }}\_setup.exe
-/VERYSILENT"
+typing:
+
+```bash
+webots-{{ webots.version.package }}_setup.exe /SILENT
+```
+
+or:
+
+```bash
+webots-{{ webots.version.package }}\_setup.exe /VERYSILENT
+```
 
 If you observe 3D rendering anomalies or if Webots crashes, it is strongly
 recommend to upgrade your graphics driver.

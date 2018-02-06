@@ -477,7 +477,7 @@ This function returns the value of the `basicTimeStep` field of the
 
 **Name**
 
-**wb\_robot\_get\_mode** - *get operating mode, simulation vs. real robot*
+**wb\_robot\_get\_mode** - *get operating mode, simulation versus real robot*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 

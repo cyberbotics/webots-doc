@@ -7,7 +7,7 @@ controller are executed in distinct operating system processes. For example,
 when the "soccer.wbt" world is executed, there is a total of eight processes in
 memory; one for Webots, six for the six player robots, and one for the
 supervisor. To debug a C/C++ controller with Visual C++, please see
-[here.](using-visual-cpp-with-webots.md)
+[here](using-visual-cpp-with-webots.md).
 
 When a controller process performs an illegal instruction, it is terminated by
 the operating system while the Webots process and the other controller processes
@@ -81,8 +81,8 @@ Continuing.
 Where PID stands for the PID of the "soccer\_supervisor" process. The `attach`
 command will attach the debugger to the "soccer\_supervisor" process and
 interrupt its execution. Then the `cont` command will instruct the debugger to
-resume the execution of the process. (On Windows you will need to install the
-"gdb.exe" file separately and use an MSYS console to achieve this.)
+resume the execution of the process. On Windows you will need to install the
+"gdb.exe" file separately and use an MSYS console to achieve this.
 
 Then hit the `Run` button to start the simulation and let it run until the
 controller crashes again. The controller's execution can be interrupted at any

@@ -104,6 +104,7 @@ $WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --trip-files $WBT_PRO
 Alternatively a SUMO flow file can be created to define the traffic by vehicle flows.
 Please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes)
 to learn how to create this file, and put it there:
+
 `$WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml`
 
 Then use `SUMO duarouter` to create the target SUMO route file, like this:

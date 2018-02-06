@@ -28,7 +28,7 @@ A [TrackWheel](#trackwheel) node can only be inserted in the `children` field of
 
 ### Field Summary
 
-The fields of the [TrackWheel](#trackwheel) are mainly used to automatically generate the track belt path in case the geometries animation is defined in the [Track](track.md) node
+The fields of the [TrackWheel](#trackwheel) are mainly used to automatically generate the track belt path in case the geometries animation is defined in the [Track](track.md) node:
 
 - `position`: defines the position of the wheel on the x-y plane of the [Track](track.md) node coordinate system.
 The `position`field is also used to compute the relative translation of the `children` nodes.

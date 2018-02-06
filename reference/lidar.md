@@ -52,7 +52,7 @@ simulation speed.
 
 #### WbLidarPoint
 
-A point of the lidar point cloud is defined by the following structure
+A point of the lidar point cloud is defined by the following structure:
 
 ```c
 typedef struct {
@@ -241,8 +241,9 @@ The memory chunk returned by this function shall not be freed, as it is managed
 by the lidar internally. The size in bytes of the range image can be computed as
 follows:
 
-`size` = `lidar_horizontal_resolution` * `lidar_number_of_layers` *
-sizeof(float)
+```
+size = lidar_horizontal_resolution * lidar_number_of_layers * sizeof(float)
+```
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 

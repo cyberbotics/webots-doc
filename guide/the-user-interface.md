@@ -479,7 +479,8 @@ hides the Scene Tree and resizes the 3D window consequently.
 
 - ![](images/paste-button.png =26x26) **Paste**: Pastes the copied or cut object.
 
-    Note that the first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
+    > **Note**:
+The first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
 `Background`) cannot be cut, copied or pasted. One single instance of each of
 these nodes must be present in every Webots world, and in that precise order.
 

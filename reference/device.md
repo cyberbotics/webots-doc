@@ -33,7 +33,7 @@ the WbDeviceTag given as parameter (`tag`).
 
 This function returns NULL if the WbDeviceTag does not match a valid device, or
 returns an empty string if the device is not a solid device (i.e. does not have
-a `model` field)
+a `model` field).
 
 ---
 
@@ -73,6 +73,6 @@ WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 **Description**
 
 The `wb_device_get_node_type` function converts the WbDeviceTag given as parameter (`tag`)
-to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md) API)
+to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md) API).
 
 This function returns NULL if the WbDeviceTag does not match a valid device.

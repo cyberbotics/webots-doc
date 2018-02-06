@@ -46,7 +46,7 @@ Given a point **T** with texture coordinates *(s,t)* and a
 *(C<sub>s</sub><sub>t</sub>*, *T* be the translation of vector
 *(T<sub>s</sub><sub>t</sub>*, *R* the rotation with center *(0,0)* and angle θ
 , and *S* a scaling with scaling factors *S<sub>s</sub><sub>t</sub>*. In matrix
-notation, the corresponding `TextureTransform` reads as
+notation, the corresponding `TextureTransform` reads as:
 
 %figure "Texture transformation in matrix notation"
 

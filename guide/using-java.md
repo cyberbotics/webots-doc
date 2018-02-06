@@ -126,7 +126,7 @@ of the current controller directory, and the content of the *CLASSPATH*
 environment variable. In order to include third-party jar files, you should
 define (or modify) this environment variable before running Webots (see the
 previous section in order to know how to set an environment variable). Under
-windows, the CLASSPATH looks like this,
+windows, the CLASSPATH looks like this:
 
 ```sh
 $ set CLASSPATH=C:\Program Files\java\jdk\bin;relative\mylib.jar

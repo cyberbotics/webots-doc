@@ -22,11 +22,12 @@ class TestParagraphs(unittest.TestCase):
                     content = f.read()
 
                 # Remove annoying string sequences.
-                # - Notes.
-                content = re.sub(r'\n\s*>.+?(?=\n\n)', '\n', content, flags=re.S)
                 # - Multiline code sections.
                 content = re.sub(r'```.+?(?=```)```', '\n', content, flags=re.S)
                 content = re.sub(r'\n`.+?(?=`\n)`\n', '\n', content, flags=re.S)
+                # - Notes.
+                content = re.sub(r'\n\s*>.+?(?=\n\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*>.+?(?=\n$)', '\n', content, flags=re.S)
                 # - Showdown extensions.
                 content = re.sub(r'%figure.+?(?=%end)%end', '\n', content, flags=re.S)
                 content = re.sub(r'%api.+?(?=%end)%end', '\n', content, flags=re.S)
@@ -48,6 +49,7 @@ class TestParagraphs(unittest.TestCase):
                 # - Special statements
                 content = re.sub(r'\nRelease {{.+?}}\n', '\n', content, flags=re.S)
                 content = re.sub(r'\n\s*\*\*.+?\n', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*\*.+?\*\n', '\n', content, flags=re.S)
                 content = re.sub(r'\n\s*\{.+?\n', '\n', content, flags=re.S)
 
                 # Extract paragraphs.

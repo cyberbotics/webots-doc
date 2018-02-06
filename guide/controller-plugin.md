@@ -57,6 +57,7 @@ existing path is explained in the reference manual.
 
 Each distributed shared library is built thanks to the main Makefile (the same
 as the one used to build the controllers):
+
 `WEBOTS_HOME/resources/Makefile.include`
 
 %figure "Controller plugin overview"
@@ -173,14 +174,14 @@ If the robot window cannot be loaded (bad path, bad initialization, etc.), a
 generic robot window is opened instead. This generic robot window displays
 several sensors and actuators. The source code of this robot window is a good
 demonstrator of the robot window plugin abilities. All the source code is
-located there:
-`WEBOTS_HOME/resources/projects/plugins/robot_windows/generic_window`
+located in the following directory:
 
-Other samples can be found:
+- `WEBOTS_HOME/resources/projects/plugins/robot_windows/generic_window`
 
-`WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/botstudio`
+Other samples can be found in the following directories:
 
-`WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/e-puck_window`
+- `WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/botstudio`
+- `WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/e-puck_window`
 
 #### Qt utility library
 
@@ -194,8 +195,7 @@ events, a class to handle Webots standard paths, and a collection of widgets to
 display the Webots devices. The source code of the generic robot window is a
 good example illustrating how to use this library.
 
-The location of the qt utility library is
-`WEBOTS_HOME/resources/projects/libraries/qt_utils`
+The location of the qt utility library is `WEBOTS_HOME/resources/projects/libraries/qt_utils`.
 
 #### Motion editor
 
@@ -235,7 +235,7 @@ the real robot devices.
 The remote-control library is initialized when an entity calls the
 `wb_robot_set_mode` libController function. This entity is typically
 libRobotWindow, because it's quite convenient to use the GUI to initialize the
-communication (i.e. entering the IP address of the robot, etc.)
+communication (i.e. entering the IP address of the robot, etc.).
 
 There are two entry points to the remote-control library:
 
@@ -302,7 +302,8 @@ current state of the robot.
     `wbr_actuator_set_value)` function is called, and has to be sent to the real robot.
 
 The complete definition of the remote control API and of the `WbrInterface`
-structure is contained in
+structure is contained in the following file:
+
 `WEBOTS_HOME/include/controller/c/webots/remote_control.h`
 
 For example, if you want to be able to use the distance sensor of the real

@@ -47,7 +47,7 @@ third-party packages.
 During simulation there can be multiple instances of robots or devices and other
 Webots applications connected to the ROS network. Therefore the controller uses
 a specific syntax to declare its services or topics on the network:
-"[robot\_unique\_name]/[device\_name]/[service/topic\_name]"
+"[robot\_unique\_name]/[device\_name]/[service/topic\_name]".
 
 "[robot\_unique\_name]": in order to avoid any misunderstanding between
 different instances of the same robot, the name of the robot is followed by the

@@ -19,7 +19,7 @@ elements can be mounted.
 Two kinds of traffic lights are available, they both have 3 `LEDs` and can
 therefore be controlled if inserted in a `Robot` node. For both of them, the
 shape of the light can either be a full circle or an arrow (defined in the
-`lamp_geometry` field)
+`lamp_geometry` field).
 
 - `TrafficLight`: Normal traffic light with 3 colors.
 - `TrafficLightHorizontal`: Normal traffic light with 3 colors but with horizontal

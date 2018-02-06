@@ -47,9 +47,13 @@ for filename in glob.glob('*/*.md'):
                 flushBuffer(f)
                 skipUntil = '\n'
                 f.write(line)
-            elif line.startswith('```') or line.startswith('> ```'):
+            elif line.startswith('```'):
                 flushBuffer(f)
                 skipUntil = '```'
+                f.write(line)
+            elif line.startswith('> ```'):
+                flushBuffer(f)
+                skipUntil = '> ```'
                 f.write(line)
             else:
                 pBuffer += line

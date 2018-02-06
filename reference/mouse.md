@@ -5,7 +5,7 @@ It doesn't have any corresponding Node.
 
 > **Note** [C++, Python, Java]:
 In C++, Python and Java, the mouse functions are in a dedicated class called `Mouse`.
-In order to get the `Mouse` instance, you should call the `Robot.getMouse()` function.
+In order to get the `Mouse` instance, you should call the `Robot.getMouse` function.
 
 #### WbMouseState
 
@@ -56,8 +56,8 @@ WbMouseState wb_mouse_get_state();
 **Description**
 
 The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions.
-Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable()` function.
+Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable` function.
 The `sampling_period` parameter is expressed in milliseconds, and defines how frequently readings are updated.
 Note that the first state will be available only after the first sampling period elapsed.
-After that, the state can be read by calling the `wb_mouse_get_state()` function (for more details, see [`WbMouseState`](#wbmousestate)).
-The `wb_mouse_disable()` function should be used to stop the mouse readings.
+After that, the state can be read by calling the `wb_mouse_get_state` function (for more details, see [`WbMouseState`](#wbmousestate)).
+The `wb_mouse_disable` function should be used to stop the mouse readings.

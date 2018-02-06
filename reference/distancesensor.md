@@ -32,8 +32,8 @@ bounding objects.
 
 - `lookupTable`: a table used for specifying the desired response curve and noise
 of the device. This table indicates how the ray intersection distances measured
-by Webots must be mapped to response values returned by the function
-`wb_distance_sensor_get_value()`. The first column of the table specifies the
+by Webots must be mapped to response values returned by the `wb_distance_sensor_get_value`
+function. The first column of the table specifies the
 input distances, the second column specifies the corresponding desired response
 values, and the third column indicates the desired standard deviation of the
 noise. The noise on the return value is computed according to a gaussian random
@@ -236,17 +236,17 @@ double wb_distance_sensor_get_value(WbDeviceTag tag);
 
 **Description**
 
-`wb_distance_sensor_enable()` allows the user to enable distance sensor measurements.
+The `wb_distance_sensor_enable` function allows the user to enable distance sensor measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_distance_sensor_disable()` turns the distance sensor off, saving computation
+The `wb_distance_sensor_disable` function turns the distance sensor off, saving computation
 time.
 
-The `wb_distance_sensor_get_sampling_period()` function returns the period given
-into the `wb_distance_sensor_enable()` function, or 0 if the device is disabled.
+The `wb_distance_sensor_get_sampling_period` function returns the period given
+into the `wb_distance_sensor_enable` function, or 0 if the device is disabled.
 
-`wb_distance_sensor_get_value()` returns the last value measured by the
+The `wb_distance_sensor_get_value` function returns the last value measured by the
 specified distance sensor. This value is computed by the simulator according to
 the lookup table of the [DistanceSensor](#distancesensor) node. Hence, the range
 of the return value is defined by this lookup table.
@@ -269,13 +269,13 @@ double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 
 **Description**
 
-`wb_distance_sensor_get_max_value()` returns the maximum value which can be returned by the distance sensor.
+The `wb_distance_sensor_get_max_value` function returns the maximum value which can be returned by the distance sensor.
 This value is the maximum of the second column of the `DistanceSensor.lookupTable` field.
 
-`wb_distance_sensor_get_min_value()` returns the minimum value which can be returned by the distance sensor.
+The `wb_distance_sensor_get_min_value` function returns the minimum value which can be returned by the distance sensor.
 This value is the minimum of the second column of the `DistanceSensor.lookupTable` field.
 
-The `wb_distance_sensor_get_aperture()` returns the aperture of the distance
+The `wb_distance_sensor_get_aperture` function returns the aperture of the distance
 sensor in radians.
 
 ---
@@ -301,7 +301,7 @@ WB\_DISTANCE\_SENSOR\_INFRA\_RED, if it is "sonar" then it returns
 WB\_DISTANCE\_SENSOR\_SONAR and otherwise it returns
 WB\_DISTANCE\_SENSOR\_GENERIC.
 
-%figure "Return values for the *wb_distance_sensor_get_type()* function"
+%figure "Return values for the `wb_distance_sensor_get_type_*` functions"
 
 | DistanceSensor.type | return value                     |
 | ------------------- | -------------------------------- |

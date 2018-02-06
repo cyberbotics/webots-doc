@@ -45,20 +45,20 @@ int wb_position_sensor_get_type(WbDeviceTag tag);
 
 **Description**
 
-`wb_position_sensor_enable()` enables measurements of the joint position.
+The `wb_position_sensor_enable` function enables measurements of the joint position.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_position_sensor_disable()` turns off the position sensor to save CPU time.
+The `wb_position_sensor_disable` function turns off the position sensor to save CPU time.
 
-The `wb_position_sensor_get_sampling_period()` function returns the period given
-into the `wb_position_sensor_enable()` function, or 0 if the device is disabled.
+The `wb_position_sensor_get_sampling_period` function returns the period given
+into the `wb_position_sensor_enable` function, or 0 if the device is disabled.
 
-`wb_position_sensor_get_value()` returns the most recent value measured by the
+The `wb_position_sensor_get_value` function returns the most recent value measured by the
 specified position sensor. Depending on the type, it will return a value in
 radians (angular position sensor) or in meters (linear position sensor).
 
-`wb_position_sensor_get_type()` returns the type of the position sensor. It will
+The `wb_position_sensor_get_type` function returns the type of the position sensor. It will
 return `WB_ANGULAR` if the sensor is associated with a
 [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and
 `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a

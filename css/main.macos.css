@@ -12,13 +12,3 @@ body {
   font-family: Tahoma, Arial, sans-serif;
   font-size: 14px;
 }
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 100;
-  src: local("Helvetica");
-  /*
-    Issue: QtWebKit or Qt font management have issues with the Raleway texture on macOS.
-    Dirty workaround: Force an Helvetica font in this case.
-  */
-}

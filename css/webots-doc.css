@@ -3,6 +3,20 @@
  * All the CSS rules are applied to the 'webots-doc' container and its descendants.
  */
 
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 300;
+  src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
+}
+
 .webots-doc #left {
   top: 0;
   width: 20%;
@@ -319,20 +333,6 @@
 }
 .webots-doc .illustrated-section p {
   margin: 0px;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 300;
-  src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
 }
 
 .blog {

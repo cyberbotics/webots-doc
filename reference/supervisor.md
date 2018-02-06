@@ -748,12 +748,9 @@ overwrite silently existing files, so that the corresponding data may be lost.
 In the other APIs, the `Robot.worldSave` function can be called without
 argument. In this case, a simple save operation is performed.
 
-The `wb_supervisor_world_reload` function sends a request to the simulator
-process, asking it to reload the current world immediately. As a result of
-reloading the current world, the supervisor process and all the robot processes
-are terminated and restarted. You may wish to save some data in a file from your
-supervisor program in order to reload it when the supervisor controller
-restarts.
+The `wb_supervisor_world_reload` function sends a request to the simulator process, asking it to reload the current world immediately.
+As a result of reloading the current world, the supervisor process and all the robot processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
 
 ---
 

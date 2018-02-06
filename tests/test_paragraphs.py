@@ -46,6 +46,13 @@ class TestParagraphs(unittest.TestCase):
         #     print ('@@@')
         #     print (p)
 
-    def test_tu_peux_pas(self):
-        """Tu peux pas test."""
-        pass
+    def test_one_sentence_per_line(self):
+        """Test that each sentence is written on one line."""
+        for p in self.paragraphs:
+            lines = p.split('\n')
+            for line in lines:
+                if len(line.strip()) == 0:
+                    continue
+                if '**Keywords**' in line:
+                    continue
+                self.assertTrue(line.endswith('.') or line.endswith(':'), msg='The following line does not end with a period: "%s"' % line)

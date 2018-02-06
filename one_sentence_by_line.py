@@ -1,6 +1,7 @@
 """Refactor paragraphs to have one sentence by line."""
 import glob
 import os
+import re
 
 pBuffer = ''
 
@@ -48,7 +49,7 @@ for filename in glob.glob('*/*.md'):
                 flushBuffer(f)
                 skipUntil = '%end'
                 f.write(line)
-            elif line.startswith('| ') or line.startswith('- '):
+            elif line.startswith('| ') or line.startswith('- ') or re.match(r'^\d+\.\s', line):
                 flushBuffer(f)
                 skipUntil = '\n'
                 f.write(line)

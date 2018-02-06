@@ -52,7 +52,7 @@ class TestParagraphs(unittest.TestCase):
                     # - Arrays.
                     if paragraph.startswith('| ') or paragraph.startswith('> '):
                         continue
-                    self.paragraphs.append(paragraph)
+                    self.paragraphs.append({'paragraph': paragraph, 'md': md_path})
         # Debug: Uncomment to display all the acquired paragraphs.
         # for p in self.paragraphs:
         #     print ('@@@')
@@ -61,7 +61,7 @@ class TestParagraphs(unittest.TestCase):
     def test_one_sentence_per_line(self):
         """Test that each sentence is written on one line."""
         for p in self.paragraphs:
-            lines = p.split('\n')
+            lines = p['paragraph'].split('\n')
             for line in lines:
                 if len(line.strip()) == 0:
                     continue
@@ -69,7 +69,7 @@ class TestParagraphs(unittest.TestCase):
                     continue
                 # self.assertTrue(
                 #     line.endswith('.') or line.endswith(':') or line.endswith('!'),
-                #     msg='The following line does not end with a period: "%s"' % line
+                #     msg='%s: The following line does not end correctly: "%s"' % (p['md'], line)
                 # )
                 if not (line.endswith('.') or line.endswith(':') or line.endswith('!')):
-                    print line
+                    print p['md'] + ': ' + line

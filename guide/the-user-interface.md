@@ -60,8 +60,26 @@ be opened instead.
 The simulation is not entirely destructed and reconstructed like with a reload, but the initial state of all the nodes is restored, which is way faster.
 
     > **Note**:
-There are currently some limitations to the reset.
-The nodes removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset. Furthermore, changes to node fields done manually or using a Supervisor are not reverted.
+In order to reset the simulation, the following steps are performed:
+  - The simulation time is set to 0.0
+  - All the nodes added during the simulation are removed.
+  - All the sound sources are stopped.
+  - The random seeds used by Webots internally are reset.
+  - All the nodes are reset. This has the following implication depending on the node type :
+    - **Brake**: The brake is released.
+    - **Charger**: The `battery` field and the `emissiveColor` field of the Material node of the first Shape child node are restored.
+    - **Connector**: If attached, the connector is detached and the value of the `isLocked` field is restored.
+    - **Emitter-Receiver**: the message queue is cleared.
+    - **Joint/Motor**: The position, velocity, acceleration, available torque and available force are restored.
+    - **LED**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a Shape node, the `emissiveColor` field of its Material node is restored.
+    - **Lidar**: The position of the rotating head is restored.
+    - **Pen**: All the painted textures are cleaned.
+    - **Propeller**: The slow helix and it's initial position are restored.
+    - **Robot**: The `battery` field is restored and the controller is restarted.
+    - **Solid**: The `translation` and `rotation` fields are restored and the physic is reset.
+    - **Supervisor**: All the labels are removed.
+    - **Track**: The motor position is restored and the `translation` field of the textureTransform node of the Appearance node of the first Shape children node is restored.
+    - **Viewpoint**: The `orientation` and `position` fields are restored.
 
 - ![](images/new-button.png =26x26) The **New Text File** menu item (and button)
 opens an empty text file in the text editor.

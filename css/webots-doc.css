@@ -120,20 +120,21 @@
 .webots-doc blockquote {
   margin: 20px 10px;
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
-  background-color: #eee;
+  background: #f1f1f1;
   background-image: url(images/note.png);
   background-repeat: no-repeat;
   background-position: 10px 24px;
-  border-radius: 3px;
+  border-left: 2px solid #ccc;
+  padding: 3px;
 }
-.webots-doc blockquote p {
-  color: black;
+.webots-doc blockquote > p > code {
+  background: #f2f2f2;
 }
 .webots-doc .cyberbotics blockquote {
   padding: 20px;
 }
 .webots-doc .default blockquote {
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
 .webots-doc li {
   font-family: "Roboto";
@@ -168,7 +169,7 @@
   color: black;
 }
 .webots-doc pre {
-  padding: 30px 10px 30px 40px;
+  padding: 20px 10px 20px 40px;
   margin: 20px 10px;
   background-color: #f1f1f1;
   color: #333;
@@ -195,25 +196,21 @@
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3 {
-  font-family: 'Raleway';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 100;
-  color: #317589;
+  color: #0e6f8c;
   clear: both;
   margin: 20px auto;
 }
 .webots-doc h1 {
   font-size: 46px;
   padding-bottom: 16px;
-  font-weight: bold;
 }
 .webots-doc h2 {
   font-size: 32px;
-  font-weight: bold;
 }
 .webots-doc h3 {
   font-size: 26px;
-  font-weight: bold;
 }
 .webots-doc .release-tag {
   display: inline;
@@ -255,6 +252,7 @@
   margin-right: 10px;
   font-size: 16px;
   text-align: justify;
+  line-height: 130%;
 }
 .webots-doc img {
   max-width: 100%;
@@ -322,7 +320,7 @@
 @font-face {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
 }
 

@@ -17,7 +17,7 @@ except ImportError:
 silent = len(sys.argv) > 1 and (sys.argv[1] == '--silent')
 
 dependencies = [
-    'highlight/9.5.0/default.min.css',
+    'highlight/9.5.0/highlight_style.min.css',
     'highlight/9.5.0/highlight.min.js',
     'jquery/1.11.3/jquery.min.js',
     'jquery/1.11.3/jquery.min.map',

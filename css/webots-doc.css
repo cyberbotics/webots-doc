@@ -136,6 +136,7 @@
   padding: 10px 20px 10px 20px;
 }
 .webots-doc li {
+  font-family: "Roboto";
   font-weight: normal;
 }
 .webots-doc li.selected {
@@ -169,23 +170,24 @@
 .webots-doc pre {
   padding: 30px 10px 30px 40px;
   margin: 20px 10px;
-  background-color: #444;
-  color: #fff;
+  background-color: #282A2E;
+  color: #DFE1E1;
   border-radius: 4px;
   overflow-x: auto;
   font-size: 16px;
+  font-family: "Inconsolata";
 }
 .webots-doc code {
   padding: 0;
   background: transparent;
-  font-size: 16px;
-  overflow-y: hidden;
+  font-size: 15px;
+  font-family: "Roboto Mono";
 }
 .webots-doc p > code {
-  line-height:18px;
-  background: #eee;
-  padding: 2px;
   color: #000;
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 .webots-doc a code {
   color: #a88;
@@ -198,6 +200,7 @@
   font-weight: 100;
   color: #317589;
   clear: both;
+  margin: 20px auto;
 }
 .webots-doc h1 {
   font-size: 46px;
@@ -318,6 +321,13 @@
   font-style: normal;
   font-weight: 100;
   src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 300;
+  src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
 }
 
 .blog {

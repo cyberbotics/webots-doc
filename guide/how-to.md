@@ -51,8 +51,7 @@ This can be visualized with the `View / Optional Rendering / Show Center of Mass
 **Keywords**: Physics plugin, contact points
 
 ![contact_points.png](images/contact_points.png) In this example, a box falls until it reaches the ground.
-A physics plugin (cf.
-`WorldInfo.physics`) gets information on the contact points and displays the reaction forces on the `Console` and as red lines.
+A physics plugin (cf. `WorldInfo.physics`) gets information on the contact points and displays the reaction forces on the `Console` and as red lines.
 
 ### cylinder\_stack.wbt
 
@@ -79,8 +78,7 @@ Then, the motor force is turned off and the boxes oscillate for a while, accordi
 In the first layout, the four motorized wheels are positioned circularly, as could be done for omnidirectional-wheeled robots.
 In the second layout, the four motorized wheels are oriented in the same direction, as could be done for a robot with tracks.
 In the third layout, a simple [Ackermann steering geometry](https://en.wikipedia.org/wiki/Ackermann_steering_geometry) is shown.
-Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf.
-the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
+Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf. the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
 
 ### gui\_tracker.wbt
 
@@ -110,8 +108,7 @@ When the simulation is running, the `Supervisor` controller called `mouse_events
 
 ![omni_wheels.png](images/omni_wheels.png) This example shows an omnidirectional wheel model.
 In this example, the omnidirectional wheels are modeled with two layers of joints and cylinders solids.
-Faster omnidirectional wheels implementations could be achieved using asymmetric friction (cf.
-`Youbot` model).
+Faster omnidirectional wheels implementations could be achieved using asymmetric friction (cf. `Youbot` model).
 
 ### passive\_dynamic\_walker.wbt
 

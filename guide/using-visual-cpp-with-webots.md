@@ -144,8 +144,7 @@ They are located in the same directory as the library source, where the `.dll` f
 **Note**: The chosen architecture (32 or 64-bit) should match with Visual Studio solution platform and the path to the `Controller.lib` library.
 
 However there is no precompiled `C++` libraries for Visual Studio, because the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
-To use the `C++` libraries with your project, their source files should be compiled directly in your project, exactly as for the `libCppController` library (cf.
-instructions above).
+To use the `C++` libraries with your project, their source files should be compiled directly in your project, exactly as for the `libCppController` library (cf. instructions above).
 
 For example, to add the `C++ automobile libraries`:
 

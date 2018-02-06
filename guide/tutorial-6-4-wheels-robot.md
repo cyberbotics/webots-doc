@@ -165,8 +165,7 @@ The following note explain how to proceed.
 >    wheels[i] = wb_robot_get_device(wheels_names[i]);
 > ```
 
-> A motor can be actuated by setting its position, its velocity, its acceleration or its force (cf.
-`Reference Manual`).
+> A motor can be actuated by setting its position, its velocity, its acceleration or its force (cf. `Reference Manual`).
 Here we are interested in setting its velocity.
 This can be achieved by setting its position at infinity, and by bounding its velocity:
 
@@ -180,8 +179,7 @@ This can be achieved by setting its position at infinity, and by bounding its ve
 
 > **Hands on**: Implement a controller called "4\_wheels\_collision\_avoidance" moving the robot and avoiding obstacles by detecting them by the distance sensors.
 
-> Note that the `lookupTable` field of the DistanceSensor nodes indicates which values are returned by the sensor (cf.
-`Reference Manual`).
+> Note that the `lookupTable` field of the DistanceSensor nodes indicates which values are returned by the sensor (cf. `Reference Manual`).
 
 > Don't forget to set the `controller` field of the Robot node to indicate your new controller.
 

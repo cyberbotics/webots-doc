@@ -31,8 +31,7 @@ After its loading, some controller plugin functions (entry points) are called by
 A set of entry points have to be defined to let the controller plugin work smoothly.
 Some of these entry points are required and some are optional.
 
-The `Robot` node defines the location of the controller plugin through its *window* and its *remoteControl* fields (cf.
-reference manual).
+The `Robot` node defines the location of the controller plugin through its *window* and its *remoteControl* fields (cf. reference manual).
 
 The controller plugin runs in the main thread of the process (also known as GUI thread): the same as the controller executable.
 This implies that if an entry point of a plugin is blocked, the controller will also be blocked.
@@ -54,8 +53,7 @@ Each distributed shared library is built thanks to the main Makefile (the same a
 
 A robot window allows the programmer to efficiently create custom user interfaces for his robots.
 Robot windows can be opened by double-clicking on the virtual robot, or by selecting the `Robot | Show Robot Window` menu item.
-The *window* field of the `Robot` node specifies a robot window (cf.
-documentation in the reference manual).
+The *window* field of the `Robot` node specifies a robot window (cf. documentation in the reference manual).
 
 Robot windows are implemented in HTML and provide the following features:
 
@@ -185,8 +183,7 @@ The motion is stored in a motion file in a user-readable format.
 The controller API allows to play easily the motion files on your robot.
 You can get the complete motion API in the reference manual.
 
-The motion editor (cf.
-the [figure](#motion-editor-view)) is a GUI which helps to create motions which can be played by a robot.
+The motion editor (cf. the [figure](#motion-editor-view)) is a GUI which helps to create motions which can be played by a robot.
 This editor is implemented as a Qt widget of the legacy generic window (deprecated).
 This means that the motion editor is accessible only if the robot is linked with the generic window i.e. by setting the `Robot.window` field to `generic_window`.
 

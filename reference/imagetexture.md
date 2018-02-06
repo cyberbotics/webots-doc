@@ -24,8 +24,7 @@ These relationships are depicted below.
 %end
 
 The texture is read from the file specified by the `url` field.
-The file should be specified with a relative path (cf.
-[this section](#search-rule-of-the-texture-path)).
+The file should be specified with a relative path (cf. [this section](#search-rule-of-the-texture-path)).
 Absolute paths work as well, but they are not recommended because they are not portable across different systems.
 Ideally, the texture file should lie next to the world file, possibly inside a "textures" subfolder.
 Supported image formats include both JPEG and PNG.

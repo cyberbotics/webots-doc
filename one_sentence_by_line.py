@@ -12,7 +12,7 @@ def flushBuffer(f):
     txt = txt.replace('  ', ' ')
     txt = txt.replace('. ', '.\n')
     txt = txt.replace(' \n', '\n')
-    txt = txt.strip()
+    txt = txt.rstrip()
     f.write(txt)
     f.write('\n')
     pBuffer = ''
@@ -55,7 +55,7 @@ for filename in glob.glob('*/*.md'):
                 flushBuffer(f)
                 skipUntil = '> ```'
                 f.write(line)
-            elif line.startswith('        '):
+            elif line.startswith('    ') or line.startswith('        '):
                 flushBuffer(f)
                 skipUntil = '\n'
                 f.write(line)

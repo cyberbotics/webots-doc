@@ -14,7 +14,7 @@ body {
 }
 /*
   Issue: QtWebKit or Qt font management has issues loading ttf glyphs on macOS.
-  Dirty workaround: Force standards fonts in this case.
+  Dirty workaround: Force standard fonts in this case.
 */
 .webots-doc pre, .webots-doc code, .webots-doc code > a, .webots-doc .api table, .webots-doc .api td > a  {
   font-family: monospace;

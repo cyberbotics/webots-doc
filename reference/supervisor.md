@@ -539,6 +539,7 @@ transparency level of 0 means no transparency, while a transparency level of 1
 means total transparency (the text will be invisible). Intermediate values
 correspond to semi-transparent levels. Finally, the `font` parameter defines the
 font used to draw the text, the following standard fonts are available:
+
   - Arial
   - Arial Black
   - Comic Sans MS

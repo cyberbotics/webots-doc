@@ -28,7 +28,6 @@ class TestParagraphs(unittest.TestCase):
                 # - Multiline code sections.
                 content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
                 # - Items.
-                content = re.sub(r'\n\s*\*\*.+?(?=\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*-.+?(?=\n\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*-.+?(?=\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*\d+\..+?(?=\n\n)', '', content, flags=re.S)
@@ -40,6 +39,9 @@ class TestParagraphs(unittest.TestCase):
                 content = re.sub(r'%api.+?(?=%end)%end', '', content, flags=re.S)
                 # - HTML statements
                 content = re.sub(r'<!--.*-->', '', content, flags=re.S)
+                # - Special characters
+                content = re.sub(r'\n\s*\*\*.+?(?=\*\*\n)', '', content, flags=re.S)
+                content = re.sub(r'\n\s*\{.+?(?=\}\n)', '', content, flags=re.S)
 
                 # Extract paragraphs and notes.
                 for match in re.finditer(r'(?s)((?:[^\n][\n]?)+)', content):

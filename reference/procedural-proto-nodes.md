@@ -86,6 +86,7 @@ use the Lua regular functions to write on these streams.
 ### Texture generation
 
 Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO. The following standard fonts are available to write on the texture:
+
   - Arial
   - Arial Black
   - Comic Sans MS

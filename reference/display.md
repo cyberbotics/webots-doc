@@ -153,6 +153,7 @@ formula.
 %end
 
 The `wb_display_set_font` function defines the font and its `size` (i.e. the character height in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters. The following standard fonts are available:
+
   - Arial
   - Arial Black
   - Comic Sans MS

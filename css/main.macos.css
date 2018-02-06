@@ -13,18 +13,12 @@ body {
   font-size: 14px;
 }
 /*
-  Issue: QtWebKit or Qt font management have issues with the Raleway texture on macOS.
-  Dirty workaround: Force an Helvetica font in this case.
+  Issue: QtWebKit or Qt font management has issues loading ttf glyphs on macOS.
+  Dirty workaround: Force standards fonts in this case.
 */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 100;
-  src: local("Helvetica");
+.webots-doc pre, .webots-doc code, .webots-doc code > a, .webots-doc .api table, .webots-doc .api td > a  {
+  font-family: monospace;
 }
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 100;
-  src: local(monospace);
+.webots-doc li, .webots-doc a, .webots-doc h1, .webots-doc h2, .webots-doc h3, .webots-doc p {
+  font-family: "Helvetica";
 }

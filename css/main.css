@@ -12,10 +12,3 @@ body {
   font-family: Tahoma, Arial, sans-serif;
   font-size: 14px;
 }
-
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 300;
-  src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
-}

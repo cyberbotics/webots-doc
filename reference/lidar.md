@@ -279,7 +279,9 @@ each point consists of a [`WbLidarPoint`](#wblidarpoint). The memory chunk
 returned by this function shall not be freed, as it is managed by the lidar
 internally. The size in bytes of the point cloud can be computed as follows:
 
-`size` = `lidar_number_of_points` * sizeof(WbLidarPoint)
+```
+size = lidar_number_of_points * sizeof(WbLidarPoint)
+```
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 

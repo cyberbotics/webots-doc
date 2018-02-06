@@ -223,7 +223,9 @@ running from left to right and from top to bottom. The memory chunk returned by
 this function shall not be freed, as it is managed by the range-finder
 internally. The size in bytes of the range image can be computed as follows:
 
-`size` = `range_finder_width` * `range_finder_height` * sizeof(float)
+```
+size = range_finder_width * range_finder_height * sizeof(float)
+```
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 

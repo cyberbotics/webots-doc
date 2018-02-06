@@ -194,13 +194,13 @@
   border-radius: 2px;
   overflow-x: auto;
   font-size: 16px;
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc code {
   padding: 0;
   background: transparent;
   font-size: 15px;
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc p > code, .webots-doc li > code {
   color: #222;
@@ -209,7 +209,7 @@
   border-radius: 4px;
 }
 .webots-doc code > a {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc h1,
 .webots-doc h2,

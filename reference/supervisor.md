@@ -748,7 +748,7 @@ overwrite silently existing files, so that the corresponding data may be lost.
 In the other APIs, the `Robot.worldSave()` function can be called without
 argument. In this case, a simple save operation is performed.
 
-The `wb_supervisor_world_reload()` function sends a request to the simulator
+The `wb_supervisor_world_reload` function sends a request to the simulator
 process, asking it to reload the current world immediately. As a result of
 reloading the current world, the supervisor process and all the robot processes
 are terminated and restarted. You may wish to save some data in a file from your
@@ -772,9 +772,9 @@ void wb_supervisor_simulation_reset();
 **Description**
 
 The `wb_supervisor_simulation_reset()` function sends a request to the simulator process, asking it to reset the simulation immediately.
-The simulation is not entirely destructed and reconstructed like when calling `wb_supervisor_world_reload`, but the initial state of all the nodes is restored, which is way faster.
-This function resets also the seed of the random number generator used in Webots, so that noise-based simulations can be be reproduced identically after calling this function.
-There are currently some limitations to the reset, The nodes removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset.
+The simulation is not entirely destructed and reconstructed like when calling the `wb_supervisor_world_reload` function, but the initial state of all the nodes is restored, which is way faster.
+This function resets also the seed of the random number generator used in Webots, so that noise-based simulations can be reproduced identically after calling this function.
+There are currently some limitations to the reset, the nodes removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset.
 Furthermore, changes to node fields done manually or using a Supervisor are not reverted.
 As a result of the reset, the supervisor process and all the robot processes are terminated and restarted.
 You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.

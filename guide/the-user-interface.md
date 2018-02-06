@@ -57,13 +57,13 @@ possible to cancel the loading of the world, in that case, the empty world will
 be opened instead.
 
 - ![](images/reset-simulation-button.png =26x26) The **Reset Simulation** menu item (and button) restores the initial state of the simulation.
-The simulation is not entirely destructed and reconstructed like with a reload, but the initial state of all the nodes is restored, which is way faster.
+The simulation is not entirely destroyed and reconstructed as with a reload, but the initial state of all nodes is restored, which is much faster.
 
     > **Note**:
 In order to reset the simulation, the following steps are performed:
-  - The simulation time is set to 0.0
-  - All the nodes added during the simulation are removed.
-  - All the sound sources are stopped.
+  - The simulation time is set to 00:00:00
+  - All nodes added during the simulation are removed.
+  - All sound sources are stopped.
   - The random seeds used by Webots internally are reset.
   - All the nodes are reset. This has the following implication depending on the node type:
     - **Brake**: The brake is released.

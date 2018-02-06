@@ -56,12 +56,12 @@ load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
 be opened instead.
 
-- ![](images/reset-simulation-button.png =26x26) The **Reset Simulation** menu item (and button) restore the initial state of the simulation.
+- ![](images/reset-simulation-button.png =26x26) The **Reset Simulation** menu item (and button) restores the initial state of the simulation.
 The simulation is not entirely destructed and reconstructed like with a reload, but the initial state of all the nodes is restored, which is way faster.
 
     > **Note**:
 There are currently some limitations to the reset.
-The node removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset. Furthermore, not all the changes to the node fields are reverted.
+The nodes removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset. Furthermore, changes to node fields done manually or using a Supervisor are not reverted.
 
 - ![](images/new-button.png =26x26) The **New Text File** menu item (and button)
 opens an empty text file in the text editor.

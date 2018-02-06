@@ -772,10 +772,12 @@ void wb_supervisor_simulation_reset();
 **Description**
 
 The `wb_supervisor_simulation_reset()` function sends a request to the simulator process, asking it to reset the simulation immediately.
+The simulation is not entirely destructed and reconstructed like when calling `wb_supervisor_reload_world`, but the initial state of all the nodes is restored, which is way faster.
+Furthermore, this function resets the seed of the random number generator used in Webots, so that noise-based simulations can be be reproduced identically after calling this function.
+There are currently some limitations to the reset, The nodes removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset.
+Furthermore, changes to node fields done manually or using a Supervisor are not reverted.
 As a result of the reset, the supervisor process and all the robot processes are terminated and restarted.
 You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
-
-Furthermore, this function resets the seed of the random number generator used in Webots, so that noise-based simulations can be be reproduced identically after calling this function.
 
 ---
 

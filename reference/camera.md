@@ -532,7 +532,7 @@ file extension).
 
 **Name**
 
-**wb\_camera\_has\_recognition**,**wb\_camera\_recognition\_enable**,**wb\_camera\_recognition\_disable**,**wb\_camera\_recognition\_get\_sampling\_period**,**wb\_camera\_recognition\_get\_number\_of\_objects**,**wb\_camera\_recognition\_get\_objects**  - *camera recognition functions*
+**wb\_camera\_has\_recognition**, **wb\_camera\_recognition\_enable**, **wb\_camera\_recognition\_disable**, **wb\_camera\_recognition\_get\_sampling\_period**, **wb\_camera\_recognition\_get\_number\_of\_objects**, **wb\_camera\_recognition\_get\_objects**  - *camera recognition functions*
 
 {[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
 

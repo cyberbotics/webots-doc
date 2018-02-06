@@ -45,7 +45,7 @@ plugin work smoothly. Some of these entry points are required and some are
 optional.
 
 The `Robot` node defines the location of the controller plugin through its
-*window* and its *remoteControl* fields (cf. reference manual)
+*window* and its *remoteControl* fields (cf. reference manual).
 
 The controller plugin runs in the main thread of the process (also known as GUI
 thread): the same as the controller executable. This implies that if an entry

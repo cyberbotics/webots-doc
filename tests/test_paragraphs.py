@@ -32,10 +32,13 @@ class TestParagraphs(unittest.TestCase):
                 content = re.sub(r'\n\s*-.+?(?=\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*\d+\..+?(?=\n\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*\d+\..+?(?=\n)', '', content, flags=re.S)
+                content = re.sub(r'\n    .+?(?=\n)', '', content, flags=re.S)
                 content = re.sub(r'\n        .+?(?=\n)', '', content, flags=re.S)
                 # - Showdown extensions.
                 content = re.sub(r'%figure.+?(?=%end)%end', '', content, flags=re.S)
                 content = re.sub(r'%api.+?(?=%end)%end', '', content, flags=re.S)
+                # - HTML statements
+                content = re.sub(r'<!--.*-->', '', content, flags=re.S)
 
                 # Extract paragraphs and notes.
                 for match in re.finditer(r'(?s)((?:[^\n][\n]?)+)', content):

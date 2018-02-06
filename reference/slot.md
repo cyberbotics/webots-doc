@@ -9,22 +9,15 @@ Slot {
 
 ### Description
 
-[Slot](#slot) nodes always works with pairs, only a second [Slot](#slot) can be
-added in the `endPoint` field of a [Slot](#slot) before to be able to add any
-node in the `endPoint` field of the second [Slot](#slot). Furthermore, the
-second [Slot](#slot) can be added only if it has the same `type` as the first
-one. The [Slot](#slot) node is particularly useful with PROTO nodes, it allows the
-user to constrain the type of nodes that can be added in an extension field of
-the PROTO. Imagine for example that you have an armed robot in which you can
-plug different kinds of hands. In order to do so you will put the hand as an
-extension field of your robot, you will then be able to add all the different
-PROTO models of hand that you have made. But nothing prevents you from adding a PROTO of
-table in the hand extension field. The [Slot](#slot) is made for preventing this
-kind of problems. By encapsulating your extension field in a [Slot](#slot) and
-using the [Slot](#slot) node as base node for all your hands PROTO nodes and defining
-the same `type` for the field [Slot](#slot) and the PROTO [Slot](#slot), only
-hands can be inserted in the extension field. This is illustrated in the
-[example](#example) section.
+[Slot](#slot) nodes always works with pairs, only a second [Slot](#slot) can be added in the `endPoint` field of a [Slot](#slot) before to be able to add any node in the `endPoint` field of the second [Slot](#slot).
+Furthermore, the second [Slot](#slot) can be added only if it has the same `type` as the first one.
+The [Slot](#slot) node is particularly useful with PROTO nodes, it allows the user to constrain the type of nodes that can be added in an extension field of the PROTO.
+Imagine for example that you have an armed robot in which you can plug different kinds of hands.
+In order to do so you will put the hand as an extension field of your robot, you will then be able to add all the different PROTO models of hand that you have made.
+But nothing prevents you from adding a PROTO of table in the hand extension field.
+The [Slot](#slot) is made for preventing this kind of problems.
+By encapsulating your extension field in a [Slot](#slot) and using the [Slot](#slot) node as base node for all your hands PROTO nodes and defining the same `type` for the field [Slot](#slot) and the PROTO [Slot](#slot), only hands can be inserted in the extension field.
+This is illustrated in the [example](#example) section.
 
 ### Field Summary
 
@@ -45,9 +38,7 @@ in a `children` field can be inserted in the `endPoint` field of the second
 
 ### Example
 
-If you want to write a proto of a robot called `MyRobot` that accepts only hands
-in its field `handExtension`, you have to set the field `handExtension` to be
-the `endPoint` of a [Slot](#slot).
+If you want to write a proto of a robot called `MyRobot` that accepts only hands in its field `handExtension`, you have to set the field `handExtension` to be the `endPoint` of a [Slot](#slot).
 
 ```
 PROTO MyRobot [
@@ -64,8 +55,7 @@ Robot {
 }
 ```
 
-Then any PROTO of a hand needs to use the [Slot](#slot) as base node and the
-`type` of this [Slot](#slot) should match the one in `MyRobot`.
+Then any PROTO of a hand needs to use the [Slot](#slot) as base node and the `type` of this [Slot](#slot) should match the one in `MyRobot`.
 
 ```
 PROTO RobotHand [

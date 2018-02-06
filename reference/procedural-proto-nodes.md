@@ -1,21 +1,18 @@
 ## Procedural PROTO nodes
 
-The expressive power of PROTO nodes can be significantly improved by extending
-them using a scripting language. In this way, the PROTO node may contain
-constants, mathematic expressions, loops, conditional expressions, randomness,
-and so on.
+The expressive power of PROTO nodes can be significantly improved by extending them using a scripting language.
+In this way, the PROTO node may contain constants, mathematic expressions, loops, conditional expressions, randomness, and so on.
 
 ### Scripting language
 
-The used scripting language is [Lua](http://www.lua.org). Introducing and
-learning Lua is outside the scope of this document. Please refer to the [Lua
-documentation](http://www.lua.org/docs.html) for complementary information.
+The used scripting language is [Lua](http://www.lua.org).
+Introducing and learning Lua is outside the scope of this document.
+Please refer to the [Lua documentation](http://www.lua.org/docs.html) for complementary information.
 
 ### Template Engine
 
-A template engine is used to evaluate the PROTO according to the field values
-of the PROTO, before being loaded in Webots. The template engine used is
-[liluat](https://github.com/FSMaxB/liluat) (under the MIT license).
+A template engine is used to evaluate the PROTO according to the field values of the PROTO, before being loaded in Webots.
+The template engine used is [liluat](https://github.com/FSMaxB/liluat) (under the MIT license).
 
 ### Programming Facts
 
@@ -85,21 +82,10 @@ use the Lua regular functions to write on these streams.
 
 ### Texture generation
 
-Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO. The following standard fonts are available to write on the texture:
+Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO.
+The following standard fonts are available to write on the texture:
 
-  - Arial
-  - Arial Black
-  - Comic Sans MS
-  - Courier New
-  - Georgia
-  - Impact
-  - Lucida Console
-  - Lucida Sans Unicode
-  - Palatino Linotype
-  - Tahoma
-  - Times New Roman
-  - Trebuchet MS
-  - Verdana
+ - Arial  - Arial Black  - Comic Sans MS  - Courier New  - Georgia  - Impact  - Lucida Console  - Lucida Sans Unicode  - Palatino Linotype  - Tahoma  - Times New Roman  - Trebuchet MS  - Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 
@@ -109,8 +95,8 @@ Using procedural PROTO files can greatly increase the loading time of your world
 
 To reduce the number of evaluations you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`).
 Then, if the same procedural PROTO is used several times in a world and all the field values are the same, the PROTO is evaluated only once.
-> **Note**:
-This tag should not be used if the result of the PROTO depends on something else than the field values (e.g. use a random value).
+> **Note**: This tag should not be used if the result of the PROTO depends on something else than the field values (e.g.
+use a random value).
 
 ### Example
 

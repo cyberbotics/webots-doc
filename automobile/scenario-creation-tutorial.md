@@ -3,7 +3,6 @@
 This small tutorial explains step-by-step how to create a scenario inspired from a real world map and then add traffic using SUMO.
 This tutorial was written for `linux` and `macOS`, but the same can be achieved on `Windows` converting the following commands to `DOS`.
 
-
 ### Creation of the Webots project directory
 
 ```sh
@@ -11,30 +10,28 @@ export WBT_PROJECT_PATH=/your/webots/project/path  # define here your project pa
 mkdir -p $WBT_PROJECT_PATH/worlds/myMap_net
 ```
 
-
 ### Download the OpenStreetMap map
 
-We will use a part of the OpenStreetMap map to generate the Webots world file. To download the map go to the [OpenStreetMap website](https://www.openstreetmap.org/export). From there you can select the part of the map you want and download it:
+We will use a part of the OpenStreetMap map to generate the Webots world file.
+To download the map go to the [OpenStreetMap website](https://www.openstreetmap.org/export).
+From there you can select the part of the map you want and download it:
 
 %figure "Export a part of map from OpenStreetMap"
 ![osm_export.png](images/osm_export.png)
 %end
 
-
 ### Generate the Webots world
 
 As explained in the [OpenStreetMap importer](openstreetmap-importer.md) section, you should use the previously downloaded map to generate the Webots world.
 
-> **Note**:
-It is strongly recommended to not use the 3D feature of the [OpenStreetMap importer](openstreetmap-importer.md) otherwise it will not be possible to add traffic using SUMO.
+> **Note**: It is strongly recommended to not use the 3D feature of the [OpenStreetMap importer](openstreetmap-importer.md) otherwise it will not be possible to add traffic using SUMO.
 
 ```sh
 cd $(WEBOTS_HOME)/resources/osm_importer
 python importer.py --input=$WBT_PROJECT_PATH/worlds/myMap_net/myMap.osm --output=$WBT_PROJECT_PATH/worlds/myMap.wbt
 ```
 
-> **Node**:
-The `myMap.wbt` base name and the `myMap_net` directory prefix should match.
+> **Node**: The `myMap.wbt` base name and the `myMap_net` directory prefix should match.
 
 You should be able to open the generated world file directly in Webots:
 
@@ -49,7 +46,6 @@ Indeed, the importer may generate some bugs, depending on the OSM complexity.
 A good workflow is to fix the OSM data using the `JOSM` editor by adding/removing OSM nodes.
 We recommend to push the modifications on the OSM data server.
 You can also enable the spline subdivision on some of the roads in Webots in order to smooth them if needed.
-
 
 ### Generate the SUMO network files
 
@@ -75,17 +71,14 @@ To do this, open the `sumo.net.xml` file in SUMO `netedit`:
 $WEBOTS_HOME/projects/default/resources/sumo/bin/netedit $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
 ```
 
-
 ### Generate the SUMO route file
 
-At this stage, a SUMO route file should be created to describe the traffic, i.e.,
-the number of vehicles, which road they should take, the vehicle properties, etc.
+At this stage, a SUMO route file should be created to describe the traffic, i.e., the number of vehicles, which road they should take, the vehicle properties, etc.
 
 This [SUMO document](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) explains in detail how this is done.
 
 The following subsections describe two ways to create a SUMO route file.
 The use of the SUMO [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) program is required in both cases.
-
 
 #### Create a SUMO route file randomly
 
@@ -98,12 +91,10 @@ python $WEBOTS_HOME/projects/default/resources/sumo/tools/randomTrips.py -n $WBT
 $WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --trip-files $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml --ignore-errors true
 ```
 
-
 #### Create a SUMO route file manually
 
 Alternatively a SUMO flow file can be created to define the traffic by vehicle flows.
-Please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes)
-to learn how to create this file, and put it there:
+Please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) to learn how to create this file, and put it there:
 
 `$WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml`
 
@@ -113,7 +104,7 @@ Then use `SUMO duarouter` to create the target SUMO route file, like this:
 $WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
 ```
 
-
 ### Add the SUMO interface
 
-Now that you have all the required files, you can open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it). Since the network files are already generated, you need to set the `useNetconvert` field to FALSE (or use the `--noNetconvert` parameter) and set in the `networkfiles` field (or use the `--d or --directory` parameter) the path to the directory where the SUMO network files are located.
+Now that you have all the required files, you can open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it).
+Since the network files are already generated, you need to set the `useNetconvert` field to FALSE (or use the `--noNetconvert` parameter) and set in the `networkfiles` field (or use the `--d or --directory` parameter) the path to the directory where the SUMO network files are located.

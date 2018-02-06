@@ -2,12 +2,9 @@
 
 ### Description
 
-Webots can be used as a Web streaming server, i.e.,
-to stream a simulation to several interactive 3D `HTML` pages,
-as shown in the [figure below](web-streaming.md#screenshot-of-webots-streaming-server).
+Webots can be used as a Web streaming server, i.e., to stream a simulation to several interactive 3D `HTML` pages, as shown in the [figure below](web-streaming.md#screenshot-of-webots-streaming-server).
 
-The mechanism is similar to the [web animation export](web-animation.md)
-except that the `X3D` file and the animation are sent on the fly to the Web browser clients.
+The mechanism is similar to the [web animation export](web-animation.md) except that the `X3D` file and the animation are sent on the fly to the Web browser clients.
 
 %figure "Screenshot of Webots streaming server"
 
@@ -29,12 +26,10 @@ All these functionalities are enabled when starting the streaming using the `sim
 These scripts run a complete simulation server that executes Webots in a secure environment using [Firejail Security Sandbox](https://firejail.wordpress.com/) and instantiates a new Webots instance for each connected client.
 The simulation server is still a work in progress so the documentation is limited and the system could change in the next releases.
 
-
 ### How to stream a Webots Simulation
 
 Start Webots with the streaming server using the `--stream` option.
-Please refer to the [command line documentation](starting-webots.md#command-line-arguments)
-for details about the sub-options.
+Please refer to the [command line documentation](starting-webots.md#command-line-arguments) for details about the sub-options.
 
 Open the streaming viewer page in your Web browser:
 
@@ -44,40 +39,33 @@ $(WEBOTS_HOME)/resources/web/streaming_viewer/index.html
 
 Use the buttons on the top of the page to connect to the Webots streaming server.
 
-**Note**:
-`IP` address and port for the streaming server and the client page should match.
+**Note**: `IP` address and port for the streaming server and the client page should match.
 The port should not be used by another application.
 
 The streaming functionality use the `X3D` export parameters stored in the [project file](the-standard-file-hierarchy-of-a-project.md#the-project-files).
 These parameters are set when [exporting a HTML5 model](web-scene.md#how-to-export-a-web-scene) or [recording an animation](web-animation.md#how-to-export-a-web-animation).
 
-
 ### Network settings
 
-The Webots streaming server is simply running on the local computer on a given port
-(`1234` by default, but it can be modified from the [command line arguments](starting-webots.md#command-line-arguments)).
+The Webots streaming server is simply running on the local computer on a given port (`1234` by default, but it can be modified from the [command line arguments](starting-webots.md#command-line-arguments)).
 This port should not be used by another application.
-In order to be visible from the outside network,
-the port should be open (e.g. on simple networks, this can be done by modifying the NAT settings of the router).
+In order to be visible from the outside network, the port should be open (e.g.
+on simple networks, this can be done by modifying the NAT settings of the router).
 The firewall of the local computer may complain about this operation, in this case, please modify its settings.
-
 
 ### How to embed a Web Scene in your Website
 
-Similarly to [this section](web-animation.md#how-to-embed-a-web-animation-in-your-website),
-please refer to the streaming viewer page to embed a Webots stream in your Website.
-
+Similarly to [this section](web-animation.md#how-to-embed-a-web-animation-in-your-website), please refer to the streaming viewer page to embed a Webots stream in your Website.
 
 ### Scene refresh rate
 
-The scene refresh rate is defined by the `WorldInfo.FPS` field. The same fields than for the [web animation](web-animation.md#limitations) are updated.
-
+The scene refresh rate is defined by the `WorldInfo.FPS` field.
+The same fields than for the [web animation](web-animation.md#limitations) are updated.
 
 ### Limitations
 
 The streaming server has the same limitations as the [Web animation](web-animation.md#limitations).
 Except that adding and deleting objects from Webots is propagated to the clients.
-
 
 ### Technologies and Limitations
 

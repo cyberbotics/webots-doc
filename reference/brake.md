@@ -9,11 +9,8 @@ Brake {
 
 ### Description
 
-A [Brake](#brake) node can be used in a mechanical simulation in order to change
-the friction of a joint. The [Brake](#brake) node can be inserted in the
-`device` field of a [HingeJoint](hingejoint.md), a
-[Hinge2Joint](hinge2joint.md), a [SliderJoint](sliderjoint.md), or a
-[Track](track.md).
+A [Brake](#brake) node can be used in a mechanical simulation in order to change the friction of a joint.
+The [Brake](#brake) node can be inserted in the `device` field of a [HingeJoint](hingejoint.md), a [Hinge2Joint](hinge2joint.md), a [SliderJoint](sliderjoint.md), or a [Track](track.md).
 
 ### Brake Functions
 
@@ -32,13 +29,8 @@ int wb_brake_get_type(WbDeviceTag tag);
 
 **Description**
 
-The `wb_brake_set_damping_constant` function sets the value of the dampingConstant
-coefficient (Ns/m or Nms) of the joint. If any dampingConstant is already set
-using [JointParameters](jointparameters.md) the resulting dampingConstant
-coefficient is the sum of the one in the [JointParameters](jointparameters.md)
-and the one set using the `wb_brake_set_damping_constant` function.
+The `wb_brake_set_damping_constant` function sets the value of the dampingConstant coefficient (Ns/m or Nms) of the joint.
+If any dampingConstant is already set using [JointParameters](jointparameters.md) the resulting dampingConstant coefficient is the sum of the one in the [JointParameters](jointparameters.md) and the one set using the `wb_brake_set_damping_constant` function.
 
-The `wb_brake_get_type` function returns the type of the brake. It will return `WB_ANGULAR`
-if the sensor is associated with a [HingeJoint](hingejoint.md) or a
-[Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a
-[SliderJoint](sliderjoint.md) or a [Track](track.md) node.
+The `wb_brake_get_type` function returns the type of the brake.
+It will return `WB_ANGULAR` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.

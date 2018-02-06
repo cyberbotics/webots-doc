@@ -1,10 +1,8 @@
 ## Car
 
-The `Car` PROTO inherits from the [AckermannVehicle](ackermannvehicle.md) PROTO
-and extends it. It should be used with the [driver](driver-library.md) library
-in order to add a model of the engine, transmission, lights, gearbox and brake.
-The joint devices are automatically filled in with the appropriate devices depending
-on the transmission type set in the parameters.
+The `Car` PROTO inherits from the [AckermannVehicle](ackermannvehicle.md) PROTO and extends it.
+It should be used with the [driver](driver-library.md) library in order to add a model of the engine, transmission, lights, gearbox and brake.
+The joint devices are automatically filled in with the appropriate devices depending on the transmission type set in the parameters.
 
 ```
 Car {
@@ -61,12 +59,12 @@ engine that is used to charge the battery in case of `power-split hybrid`
 engine in case of `power-split hybrid` `engineType`.
 
 For more information about the last eight fields and how they are used internally please refer to the [Engine models](driver-library.md#engine-models) section.
-The `extensionSlot` field is filled in by default with the `VehicleLights`
-PROTO.
+The `extensionSlot` field is filled in by default with the `VehicleLights` PROTO.
 
 #### Engine sound
 
-If the `engineSound` field of the `Car` PROTO is not empty, the sound file defined in this field is used to simulate the engine sound. The amplitude and frequency of the sound is modulated in function of the rpm and throttle values:
+If the `engineSound` field of the `Car` PROTO is not empty, the sound file defined in this field is used to simulate the engine sound.
+The amplitude and frequency of the sound is modulated in function of the rpm and throttle values:
 
 %figure "Engine sound simulation"
 ![engine_sound.png](images/engine_sound.png)
@@ -74,11 +72,9 @@ If the `engineSound` field of the `Car` PROTO is not empty, the sound file defin
 
 ### VehicleLights
 
-The `VehicleLights` PROTO is used to add all the models of the regular lights
-present in a car (based on `LED` nodes). For each light you can specify its
-shape and the color emitted when the light is switched on. Of course if you
-don't need to have lights you can safely remove the `VehicleLights` PROTO
-from `extensionSlot`.
+The `VehicleLights` PROTO is used to add all the models of the regular lights present in a car (based on `LED` nodes).
+For each light you can specify its shape and the color emitted when the light is switched on.
+Of course if you don't need to have lights you can safely remove the `VehicleLights` PROTO from `extensionSlot`.
 
 ```
 VehicleLights {
@@ -98,10 +94,9 @@ VehicleLights {
 }
 ```
 
-Here again, you can easily create your own PROTO that inherits from the
-[Car](#car) PROTO to define your own custom and complete model of car. Several
-PROTO models that inherit from the [Car](#car) PROTO are provided. They
-represent different models of car:
+Here again, you can easily create your own PROTO that inherits from the [Car](#car) PROTO to define your own custom and complete model of car.
+Several PROTO models that inherit from the [Car](#car) PROTO are provided.
+They represent different models of car:
 
 - the Sport SVR from Range Rover
 - the X5 from BMW
@@ -115,13 +110,9 @@ represent different models of car:
 
 %end
 
-An interesting aspect of these PROTO nodes is that the `extensionSlot` is
-divided into four `sensorsSlot` in order to provide smart predefined positions
-where to put sensors (or actuators if needed), which are in the front, top, rear
-and center of the car. The position of the central sensors slot is always at 0 0
-0 (which is the center of the rear wheels axis). For the three other sensor
-slots, the positions are different for each model (because the size of the cars
-differs), see the [following table](#positions-of-the-car-sensor-slots) for the exact positions.
+An interesting aspect of these PROTO nodes is that the `extensionSlot` is divided into four `sensorsSlot` in order to provide smart predefined positions where to put sensors (or actuators if needed), which are in the front, top, rear and center of the car.
+The position of the central sensors slot is always at 0 0 0 (which is the center of the rear wheels axis).
+For the three other sensor slots, the positions are different for each model (because the size of the cars differs), see the [following table](#positions-of-the-car-sensor-slots) for the exact positions.
 
 %figure "Positions of the car sensor slots"
 
@@ -139,7 +130,10 @@ In order to simplify some simulations, `Solid` based cars can be used from the [
 
 ### Heavy-weights
 
-Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck. In the case of the truck, a trailer can be present or not. The latter is the `endPoint` of a `HingeJoint` allowing the trailer to freely rotate around its attachment point. There are currently two trailers to be used: a regular one and a tank shaped model.
+Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck.
+In the case of the truck, a trailer can be present or not.
+The latter is the `endPoint` of a `HingeJoint` allowing the trailer to freely rotate around its attachment point.
+There are currently two trailers to be used: a regular one and a tank shaped model.
 
 %figure "Models of the bus and truck created using the `Car` PROTO"
 
@@ -147,7 +141,9 @@ Just like the car models presented above, two generic heavy-weights PROTO inheri
 
 %end
 
-Similar to the car models, the heavy-weights provide four `sensorSlots` at the top, front, rear and center of the vehicles. Because the trailer for the `Truck` is optional, the center slot is defined at the center of the rear wheel axis of the cab. The rest of the positions can be seen in the [following table](#positions-of-the-heavy-weights-sensors-slots):
+Similar to the car models, the heavy-weights provide four `sensorSlots` at the top, front, rear and center of the vehicles.
+Because the trailer for the `Truck` is optional, the center slot is defined at the center of the rear wheel axis of the cab.
+The rest of the positions can be seen in the [following table](#positions-of-the-heavy-weights-sensors-slots):
 
 %figure "Positions of the heavy-weights sensors slots"
 
@@ -155,6 +151,5 @@ Similar to the car models, the heavy-weights provide four `sensorSlots` at the t
 | ------- | ---------------------- | -------------------- | --------------------- |
 | Bus     | 0.0 0.2 11.5           | 0.0 5.3 2.5          | 0.0 1.0 -6.2          |
 | Truck   | 0.0 1.1 6.75           | 0.0 4.15 4.3         | 0.0 2.7 -7.3          |
-
 
 %end

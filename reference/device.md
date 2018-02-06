@@ -9,8 +9,7 @@ Device {
 
 ### Description
 
-This abstract node (not instanciable) represents a robot device (actuator and/or
-sensor).
+This abstract node (not instanciable) represents a robot device (actuator and/or sensor).
 
 ### Device Functions
 
@@ -28,12 +27,9 @@ const char *wb_device_get_model(WbDeviceTag tag);
 
 **Description**
 
-The `wb_device_get_model` function returns the model string of the device corresponding to
-the WbDeviceTag given as parameter (`tag`).
+The `wb_device_get_model` function returns the model string of the device corresponding to the WbDeviceTag given as parameter (`tag`).
 
-This function returns NULL if the WbDeviceTag does not match a valid device, or
-returns an empty string if the device is not a solid device (i.e. does not have
-a `model` field).
+This function returns NULL if the WbDeviceTag does not match a valid device, or returns an empty string if the device is not a solid device (i.e. does not have a `model` field).
 
 ---
 
@@ -51,8 +47,7 @@ const char *wb_device_get_name(WbDeviceTag tag);
 
 **Description**
 
-The `wb_device_get_name` function converts the WbDeviceTag given as parameter (`tag`) to its
-corresponding name.
+The `wb_device_get_name` function converts the WbDeviceTag given as parameter (`tag`) to its corresponding name.
 
 This function returns NULL if the WbDeviceTag does not match a valid device.
 
@@ -72,7 +67,7 @@ WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 
 **Description**
 
-The `wb_device_get_node_type` function converts the WbDeviceTag given as parameter (`tag`)
-to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md) API).
+The `wb_device_get_node_type` function converts the WbDeviceTag given as parameter (`tag`) to its corresponding WbNodeType (cf.
+the [Supervisor](supervisor.md) API).
 
 This function returns NULL if the WbDeviceTag does not match a valid device.

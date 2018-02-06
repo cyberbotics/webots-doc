@@ -21,18 +21,16 @@ RangeFinder {
 
 ### Description
 
-The [RangeFinder](#rangefinder) node is used to model a robot's on-board
-range-finder (depth camera). The resulting image can be displayed on the 3D
-window.
+The [RangeFinder](#rangefinder) node is used to model a robot's on-board range-finder (depth camera).
+The resulting image can be displayed on the 3D window.
 
-The range-finder measures depth information (in meters) from an OpenGL
-rendering. Each time a range-finder is refreshed, an OpenGL rendering is
-computed, and the z-buffer is copied into a buffer of `float`. As the z-buffer
-contains scaled and logarithmic values, an algorithm linearizes the buffer to
-metric values between `minRange` and `maxRange`. This is the buffer which is
-accessible by the `wb_range_finder_get_range_image` function.
+The range-finder measures depth information (in meters) from an OpenGL rendering.
+Each time a range-finder is refreshed, an OpenGL rendering is computed, and the z-buffer is copied into a buffer of `float`.
+As the z-buffer contains scaled and logarithmic values, an algorithm linearizes the buffer to metric values between `minRange` and `maxRange`.
+This is the buffer which is accessible by the `wb_range_finder_get_range_image` function.
 
-Range-finder detects semi-transparent objects as if they were not transparent. An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md) `transparency` field is not equal to 1.
+Range-finder detects semi-transparent objects as if they were not transparent.
+An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md) `transparency` field is not equal to 1.
 
 ### Field Summary
 
@@ -92,18 +90,14 @@ image. More information on compositors is provided in the
 
 %end
 
-The range-finder image is shown by default on top of the 3D window with a yellow
-border, see [this figure](#rangefinder-overlay-image). The user can move this
-range-finder image at the desired position using the mouse drag and drop and
-resize it by clicking on the icon at the bottom right corner. Additionally a
-close button is available on the top right corner to hide the image. Once the
-robot is selected, it is also possible to show or hide the overlay images from
-the `RangeFinder Devices` item in `Robot` menu.
+The range-finder image is shown by default on top of the 3D window with a yellow border, see [this figure](#rangefinder-overlay-image).
+The user can move this range-finder image at the desired position using the mouse drag and drop and resize it by clicking on the icon at the bottom right corner.
+Additionally a close button is available on the top right corner to hide the image.
+Once the robot is selected, it is also possible to show or hide the overlay images from the `RangeFinder Devices` item in `Robot` menu.
 
-It is also possible to show the range-finder image in an external window by
-double-clicking on it. After doing it, the overlay disappears and a new window
-pops up. Then, after closing the window, the overlay will be automatically
-restored.
+It is also possible to show the range-finder image in an external window by double-clicking on it.
+After doing it, the overlay disappears and a new window pops up.
+Then, after closing the window, the overlay will be automatically restored.
 
 ### RangeFinder Functions
 
@@ -129,8 +123,7 @@ Note that the first measurement will be available only after the first sampling 
 
 The `wb_range_finder_disable` function turns the range-finder off, saving computation time.
 
-The `wb_range_finder_get_sampling_period` function returns the period given
-into the `wb_range_finder_enable` function, or 0 if the device is disabled.
+The `wb_range_finder_get_sampling_period` function returns the period given into the `wb_range_finder_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -148,8 +141,7 @@ double wb_range_finder_get_fov(WbDeviceTag tag);
 
 **Description**
 
-These functions allow the controller to get the value of the field of view (fov)
-of a range-finder.
+These functions allow the controller to get the value of the field of view (fov) of a range-finder.
 
 ---
 
@@ -168,8 +160,7 @@ int wb_range_finder_get_height(WbDeviceTag tag);
 
 **Description**
 
-These functions return the width and height of a range-finder image as defined
-in the corresponding [RangeFinder](#rangefinder) node.
+These functions return the width and height of a range-finder image as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
@@ -188,8 +179,7 @@ double wb_range_finder_get_max_range(WbDeviceTag tag);
 
 **Description**
 
-These functions return the minRange and maxRange parameters of a range-finder
-device as defined in the corresponding [RangeFinder](#rangefinder) node.
+These functions return the minRange and maxRange parameters of a range-finder device as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
@@ -208,20 +198,15 @@ float wb_range_finder_image_get_depth(const float *range_image, int width, int x
 
 **Description**
 
-The `wb_range_finder_get_range_image` macro allows the user to read the
-contents of the last range image grabbed by a range-finder. The range image is
-computed using the depth buffer produced by the OpenGL rendering. Each pixel
-corresponds to the distance expressed in meter from the object to the plane
-defined by the equation *z = 0* within the coordinates system of the
-range-finder. The bounds of the range image is determined by the near clipping
-plane (defined by the `minRange` field) and the far clipping plane (defined by
-the `maxRange` field). The range image is coded as an array of single precision
-floating point values corresponding to the range value of each pixel of the
-image. The precision of the range-finder values decreases when the objects are
-located farther from the near clipping plane. Pixels are stored in scan lines
-running from left to right and from top to bottom. The memory chunk returned by
-this function shall not be freed, as it is managed by the range-finder
-internally. The size in bytes of the range image can be computed as follows:
+The `wb_range_finder_get_range_image` macro allows the user to read the contents of the last range image grabbed by a range-finder.
+The range image is computed using the depth buffer produced by the OpenGL rendering.
+Each pixel corresponds to the distance expressed in meter from the object to the plane defined by the equation *z = 0* within the coordinates system of the range-finder.
+The bounds of the range image is determined by the near clipping plane (defined by the `minRange` field) and the far clipping plane (defined by the `maxRange` field).
+The range image is coded as an array of single precision floating point values corresponding to the range value of each pixel of the image.
+The precision of the range-finder values decreases when the objects are located farther from the near clipping plane.
+Pixels are stored in scan lines running from left to right and from top to bottom.
+The memory chunk returned by this function shall not be freed, as it is managed by the range-finder internally.
+The size in bytes of the range image can be computed as follows:
 
 ```
 size = range_finder_width * range_finder_height * sizeof(float)
@@ -229,16 +214,13 @@ size = range_finder_width * range_finder_height * sizeof(float)
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 
-The `wb_range_finder_image_get_depth` macro is a convenient way to access a
-range value, directly from its pixel coordinates. The `range_finder_width`
-parameter can be obtained from the `wb_range_finder_get_width` function. The
-`x` and `y` parameters are the coordinates of the pixel in the image.
+The `wb_range_finder_image_get_depth` macro is a convenient way to access a range value, directly from its pixel coordinates.
+The `range_finder_width` parameter can be obtained from the `wb_range_finder_get_width` function.
+The `x` and `y` parameters are the coordinates of the pixel in the image.
 
-> **Note** [Python]:
-The RangeFinder class has two methods for getting the range-finder image. The
-`getRangeImage` function returns a one-dimensional list of floats, while the
-`getRangeImageArray` function returns a two-dimensional list of floats. Their content
-are identical but their handling is of course different.
+> **Note** [Python]: The RangeFinder class has two methods for getting the range-finder image.
+The `getRangeImage` function returns a one-dimensional list of floats, while the `getRangeImageArray` function returns a two-dimensional list of floats.
+Their content are identical but their handling is of course different.
 
 ---
 
@@ -256,23 +238,23 @@ int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int qualit
 
 **Description**
 
-The `wb_range_finder_save_image` function allows the user to save a `tag`
-image which was previously obtained with the `wb_range_finder_get_image`
-function. The image can be saved in a file using the PNG, JPEG, or TIFF format. The image
-format is specified by the `filename` parameter. If `filename` is terminated by
-`.png`, the image format is PNG. Similarly, if `filename` is terminated by `.jpg` or
-`.jpeg`, the image format is JPEG. Lastly, if `filename` is terminated by `.tif` or
-`.tiff`, the image format is TIFF. Other image formats are not supported. The
-`quality` parameter is useful only for JPEG images. It defines the JPEG quality
-of the saved image. The `quality` parameter should be in the range 1 (worst
-quality) to 100 (best quality). Low quality JPEG files will use less disk space.
+The `wb_range_finder_save_image` function allows the user to save a `tag` image which was previously obtained with the `wb_range_finder_get_image` function.
+The image can be saved in a file using the PNG, JPEG, or TIFF format.
+The image format is specified by the `filename` parameter.
+If `filename` is terminated by `.png`, the image format is PNG.
+Similarly, if `filename` is terminated by `.jpg` or `.jpeg`, the image format is JPEG.
+Lastly, if `filename` is terminated by `.tif` or `.tiff`, the image format is TIFF.
+Other image formats are not supported.
+The `quality` parameter is useful only for JPEG images.
+It defines the JPEG quality of the saved image.
+The `quality` parameter should be in the range 1 (worst quality) to 100 (best quality).
+Low quality JPEG files will use less disk space.
 For PNG and TIFF images, the `quality` parameter is ignored.
 
-PNG and JPEG images are saved using an 8-bit RGB (grayscale) encoding. TIFF images are saved
-as 32-bit floating-point single-channel images. For PNG and JPEG, depth data is stored in the
-range `0` to `255`, and for TIFF depth data is in the range `0.0` to `1.0`. This depth data can thus
-be extracted for further use by reading the image file.
+PNG and JPEG images are saved using an 8-bit RGB (grayscale) encoding.
+TIFF images are saved as 32-bit floating-point single-channel images.
+For PNG and JPEG, depth data is stored in the range `0` to `255`, and for TIFF depth data is in the range `0.0` to `1.0`.
+This depth data can thus be extracted for further use by reading the image file.
 
 The return value of the `wb_range_finder_save_image` function is 0 in case of success.
-It is -1 in case of failure (unable to open the specified file or unrecognized
-image file extension).
+It is -1 in case of failure (unable to open the specified file or unrecognized image file extension).

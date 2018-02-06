@@ -1,15 +1,9 @@
 ## OpenStreetMap importer
 
-In order to ease the creation of new environments for automobile simulations,
-Webots worlds can be generated from OpenStreetMap maps using the importer script
-described here.
+In order to ease the creation of new environments for automobile simulations, Webots worlds can be generated from OpenStreetMap maps using the importer script described here.
 
-You can download an OpenStreetMap map of any part of the world from
-[www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use
-more than a few square kilometers if you want to be able to run your simulation
-in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using
-the importer script.
-
+You can download an OpenStreetMap map of any part of the world from [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use more than a few square kilometers if you want to be able to run your simulation in real-time) and then save it as a Webots world file (e.g.
+`myMap.wbt`) using the importer script.
 
 ## Dependencies
 
@@ -41,11 +35,11 @@ pip install lxml pyproj shapely webcolors --user
 
 ### Windows
 
-As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency. You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
+As a prerequisite, `Microsoft Visual C++ Compiler for Python 2.7` (version `9.0` or higher) is required to build the `pyproj` dependency.
+You can download it [from there](https://www.microsoft.com/en-us/download/details.aspx?id=44266).
 If you are using Python 3.6 you will need [Microsoft Visual C++ Build Tools for Visual Studio 2017](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15) instead.
 
-Download the shapely wheel called [`Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely)
-and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
+Download the shapely wheel called [`Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl`](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely) and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 
 ```
 %PYTHON_PATH%\Scripts\pip.exe install lxml
@@ -54,22 +48,18 @@ and type in the [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe):
 %PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl
 ```
 
-
 ## How to use the importer
 
-You should use the `importer.py` Python script to generate the `myMap.wbt`
-webots simulation world from the `myMap.osm` file:
+You should use the `importer.py` Python script to generate the `myMap.wbt` webots simulation world from the `myMap.osm` file:
 
 ```sh
 cd $WEBOTS_HOME/resources/osm_importer
 python importer.py --input=myMap.osm --output=myMap.wbt
 ```
 
-Some extra folders such as `forest` can be generated in the target directory depending
-on the importer arguments.
+Some extra folders such as `forest` can be generated in the target directory depending on the importer arguments.
 
 Find [here](scenario-creation-tutorial.md) a detailed tutorial about an automobile scenario creation.
-
 
 ## Arguments
 
@@ -99,18 +89,15 @@ You can use several arguments with this script:
 | --removal-radius       | Specifies the radius (in meters) around each road waypoint beyond which any object is removed.                                       | By default this feature is disabled (radius = 0.0).                       |
 %end
 
-In addition to these arguments, a configuration file can be used to define how
-to handle most of the OpenStreetMap entities. A typical configuration file can
-be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
-
+In addition to these arguments, a configuration file can be used to define how to handle most of the OpenStreetMap entities.
+A typical configuration file can be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
 
 ### Map edition and creation
 
-If you want to edit a map exported from OpenStreetMap before converting it into
-a Webots world, we recommend using JOSM. [JOSM](https://josm.openstreetmap.de)
-is an open source software written in Java. It is very powerful and easy to use.
-Using JOSM you can easily edit a map in order to add some elements, correct some
-parts, etc.
+If you want to edit a map exported from OpenStreetMap before converting it into a Webots world, we recommend using JOSM.
+[JOSM](https://josm.openstreetmap.de) is an open source software written in Java.
+It is very powerful and easy to use.
+Using JOSM you can easily edit a map in order to add some elements, correct some parts, etc.
 
 %figure "Left: the OSM file created in JOSM. Right: the resulting world open in Webots after conversion"
 
@@ -119,17 +106,13 @@ parts, etc.
 
 %end
 
-In addition to editing map from OpenStreetmap, JOSM is also very convenient to
-create new environment from scratch. You can see in the [previous
-picture](#left-the-osm-file-created-in-josm-right-the-resulting-world-open-in-webots-after-conversion)
-a map fully created in JOSM and then exported and opened in Webots.
-
+In addition to editing map from OpenStreetmap, JOSM is also very convenient to create new environment from scratch.
+You can see in the [previous picture](#left-the-osm-file-created-in-josm-right-the-resulting-world-open-in-webots-after-conversion) a map fully created in JOSM and then exported and opened in Webots.
 
 ### Graphical user interface
 
-To ease the use of this tool, a graphical interace has been created. This
-grapical interface can easily be started from the last tab of the [robot
-window](robot-window.md).
+To ease the use of this tool, a graphical interace has been created.
+This grapical interface can easily be started from the last tab of the [robot window](robot-window.md).
 
 %figure "The OpenStreetMap importer graphical user interface"
 
@@ -137,11 +120,6 @@ window](robot-window.md).
 
 %end
 
-As you can see on [previous
-picture](#the-openstreetmap-importer-graphical-user-interface), it is easy to
-set all the arguments of the script using the graphical user interface of the
-robot window. Furthermore, using this graphical interface you can choose either
-to give an osm file as input or a map area using a latitude-longitude rectangle.
-If you choose to use a latitude-longitude rectangle, it will take care
-to automatically download the corresponding osm file before launching the script
-(you will therefore require an internet connexion).
+As you can see on [previous picture](#the-openstreetmap-importer-graphical-user-interface), it is easy to set all the arguments of the script using the graphical user interface of the robot window.
+Furthermore, using this graphical interface you can choose either to give an osm file as input or a map area using a latitude-longitude rectangle.
+If you choose to use a latitude-longitude rectangle, it will take care to automatically download the corresponding osm file before launching the script (you will therefore require an internet connexion).

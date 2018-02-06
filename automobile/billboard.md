@@ -1,14 +1,12 @@
 ## Billboard
 
-Billboards can be defined thanks to the AdvertisingBoard PROTO which allows the presentation of up to two backlit displays
-on up to four equally spaced stands.
+Billboards can be defined thanks to the AdvertisingBoard PROTO which allows the presentation of up to two backlit displays on up to four equally spaced stands.
 
 ### AdvertisingBoard
 
-The board display is fully resizable on the three axes allowing any image format
-to be displayed. Please note that increasing the thickness of the frame (using the `frameThickness` field)
-will also spread the displays. If a texture field is null, the frame is extended
-and the side flattened.
+The board display is fully resizable on the three axes allowing any image format to be displayed.
+Please note that increasing the thickness of the frame (using the `frameThickness` field) will also spread the displays.
+If a texture field is null, the frame is extended and the side flattened.
 
 %figure "A few examples of different advertising boards"
 

@@ -1,9 +1,9 @@
 # Remote compilation
 
-Remote compilation can be used to transfer the controller to the real robot
-and to compile the controller on the robot.
+Remote compilation can be used to transfer the controller to the real robot and to compile the controller on the robot.
 
 ## Sections
+
 - [Settings](settings.md)
 - [Send a controller to the robot](send-a-controller-to-the-robot.md)
 - [Permanently install a controller to the robot](permanently-install-a-controller-to-the-robot.md)

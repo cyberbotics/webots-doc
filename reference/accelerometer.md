@@ -14,11 +14,9 @@ Accelerometer {
 
 ### Description
 
-The [Accelerometer](#accelerometer) node can be used to model accelerometer
-devices such as those commonly found in mobile electronics, robots and game
-input devices. The [Accelerometer](#accelerometer) node measures acceleration
-and gravity induced reaction forces over 1, 2 or 3 axes. It can be used for
-example to detect fall, the up/down direction, etc.
+The [Accelerometer](#accelerometer) node can be used to model accelerometer devices such as those commonly found in mobile electronics, robots and game input devices.
+The [Accelerometer](#accelerometer) node measures acceleration and gravity induced reaction forces over 1, 2 or 3 axes.
+It can be used for example to detect fall, the up/down direction, etc.
 
 ### Field Summary
 
@@ -67,32 +65,22 @@ The `wb_accelerometer_enable` function allows the user to enable the acceleratio
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_accelerometer_disable` function turns the accelerometer off, saving
-computation time.
+The `wb_accelerometer_disable` function turns the accelerometer off, saving computation time.
 
 The `wb_accelerometer_get_sampling_period` function returns the sampling period given to the `wb_accelerometer_enable` function, or 0 if the device is disabled.
 
-The `wb_accelerometer_get_values` function returns the current values measured
-by the [Accelerometer](#accelerometer). These values are returned as a
-3D-vector, therefore only the indices 0, 1, and 2 are valid for accessing the
-vector. Each element of the vector represents the acceleration along the
-corresponding axis of the [Accelerometer](#accelerometer) node, expressed in
-meters per second squared [m/s^2]. The first element corresponds to the x-axis,
-the second element to the y-axis, etc. An [Accelerometer](#accelerometer) at
-rest with earth's gravity will indicate 1 g (9.81 m/s^2) along the vertical
-axis. Note that the gravity can be specified in the `gravity` field in the
-[WorldInfo](worldinfo.md) node. To obtain the acceleration due to motion alone,
-this offset must be subtracted. The device's output will be zero during free
-fall when no offset is substracted.
+The `wb_accelerometer_get_values` function returns the current values measured by the [Accelerometer](#accelerometer).
+These values are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are valid for accessing the vector.
+Each element of the vector represents the acceleration along the corresponding axis of the [Accelerometer](#accelerometer) node, expressed in meters per second squared [m/s^2].
+The first element corresponds to the x-axis, the second element to the y-axis, etc. An [Accelerometer](#accelerometer) at rest with earth's gravity will indicate 1 g (9.81 m/s^2) along the vertical axis.
+Note that the gravity can be specified in the `gravity` field in the [WorldInfo](worldinfo.md) node.
+To obtain the acceleration due to motion alone, this offset must be subtracted.
+The device's output will be zero during free fall when no offset is substracted.
 
-> **Note** [C, C++]:
-The returned vector is a pointer to the internal values managed by the
-[Accelerometer](#accelerometer) node, therefore it is illegal to free this
-pointer. Furthermore, note that the pointed values are only valid until the next
-call to the `wb_robot_step` or `Robot::step` functions. If these values are needed for a
-longer period they must be copied.
+> **Note** [C, C++]: The returned vector is a pointer to the internal values managed by the [Accelerometer](#accelerometer) node, therefore it is illegal to free this pointer.
+Furthermore, note that the pointed values are only valid until the next call to the `wb_robot_step` or `Robot::step` functions.
+If these values are needed for a longer period they must be copied.
 
 <!-- -->
 
-> **Note** [Python]:
-The `getValues` function returns the 3D-vector as a list containing three floats.
+> **Note** [Python]: The `getValues` function returns the 3D-vector as a list containing three floats.

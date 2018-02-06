@@ -21,32 +21,21 @@ Solid {
 }
 ```
 
-Direct derived nodes: [Accelerometer](accelerometer.md), [Camera](camera.md),
-[Charger](charger.md), [Compass](compass.md), [Connector](connector.md),
-[Display](display.md), [DistanceSensor](distancesensor.md),
-[Emitter](emitter.md), [GPS](gps.md), [Gyro](gyro.md),
-[InertialUnit](inertialunit.md), [LED](led.md), [Lidar](lidar.md),
-[LightSensor](lightsensor.md), [Pen](pen.md), [Radar](radar.md),
-[RangeFinder](rangefinder.md), [Receiver](receiver.md), [Robot](robot.md),
-[TouchSensor](touchsensor.md).
+Direct derived nodes: [Accelerometer](accelerometer.md), [Camera](camera.md), [Charger](charger.md), [Compass](compass.md), [Connector](connector.md), [Display](display.md), [DistanceSensor](distancesensor.md), [Emitter](emitter.md), [GPS](gps.md), [Gyro](gyro.md), [InertialUnit](inertialunit.md), [LED](led.md), [Lidar](lidar.md), [LightSensor](lightsensor.md), [Pen](pen.md), [Radar](radar.md), [RangeFinder](rangefinder.md), [Receiver](receiver.md), [Robot](robot.md), [TouchSensor](touchsensor.md).
 
 ### Description
 
-A [Solid](#solid) node represents an object with physical properties such as
-dimensions, a contact material and optionally a mass. The [Solid](#solid) class
-is the base class for collision-detected objects. Robots and device classes are
-subclasses of the [Solid](#solid) class. In the 3D window, [Solid](#solid) nodes
-can be manipulated (dragged, lifted, rotated, etc) using the mouse.
+A [Solid](#solid) node represents an object with physical properties such as dimensions, a contact material and optionally a mass.
+The [Solid](#solid) class is the base class for collision-detected objects.
+Robots and device classes are subclasses of the [Solid](#solid) class.
+In the 3D window, [Solid](#solid) nodes can be manipulated (dragged, lifted, rotated, etc) using the mouse.
 
 ### Solid Fields
 
-Note that in the [Solid](#solid) node, the `scale` field inherited from the
-[Transform](transform.md) must always remain uniform, i.e., of the form `x x x`
-where `x` is any positive real number. This ensures that all primitive
-geometries will remain suitable for ODE collision detection. Whenever a scale
-coordinate is changed, the two other ones are automatically changed to this new
-value. If a scale coordinate is assigned a non-positive value, it is
-automatically changed to 1.
+Note that in the [Solid](#solid) node, the `scale` field inherited from the [Transform](transform.md) must always remain uniform, i.e., of the form `x x x` where `x` is any positive real number.
+This ensures that all primitive geometries will remain suitable for ODE collision detection.
+Whenever a scale coordinate is changed, the two other ones are automatically changed to this new value.
+If a scale coordinate is assigned a non-positive value, it is automatically changed to 1.
 
 - `name`: name of the solid. In derived device classes this corresponds to the
 device name argument used by the `wb_robot_get_device` function. Note that the name cannot
@@ -116,21 +105,13 @@ to define initial velocities for every physical objects in the scene.
 ### How to use the boundingObject field?
 
 The `boundingObject` field is used to define the bounds of a [Solid](#solid) as geometrical primitives.
-Each `boundingObject` can hold one or several geometrical
-primitives, such as [Box](box.md), [Capsule](capsule.md),
-[Cylinder](cylinder.md), etc. These primitives should normally be chosen such as
-to represent the approximate bounds of the [Solid](#solid). In the usual case,
-the graphical representation of a robot is composed of many complex shapes,
-e.g., [IndexedFaceSet](indexedfaceset.md)s, placed in the `children` field of
-the [Solid](#solid) nodes. However this graphical representation is usually too
-complex to be used directly for detecting collisions. If there are too many
-faces the simulation becomes slow and error-prone. For that reason, it is useful
-to be able to approximate the graphical representation by simpler primitives,
-e.g., one or more [Box](box.md) or [Capsule](capsule.md)s, etc. This is the
-purpose of the `boundingObject` field.
+Each `boundingObject` can hold one or several geometrical primitives, such as [Box](box.md), [Capsule](capsule.md), [Cylinder](cylinder.md), etc. These primitives should normally be chosen such as to represent the approximate bounds of the [Solid](#solid).
+In the usual case, the graphical representation of a robot is composed of many complex shapes, e.g., [IndexedFaceSet](indexedfaceset.md)s, placed in the `children` field of the [Solid](#solid) nodes.
+However this graphical representation is usually too complex to be used directly for detecting collisions.
+If there are too many faces the simulation becomes slow and error-prone.
+For that reason, it is useful to be able to approximate the graphical representation by simpler primitives, e.g., one or more [Box](box.md) or [Capsule](capsule.md)s, etc. This is the purpose of the `boundingObject` field.
 
-Various combinations of primitives can be used in a `boundingObject`: it can
-contain either:
+Various combinations of primitives can be used in a `boundingObject`: it can contain either:
 
 1. A [Box](box.md) node,
 2. A [Capsule](capsule.md) node,
@@ -144,20 +125,15 @@ contain either:
 field, or
 10. A [Group](group.md) node with several `children`, each being one of the above.
 
-The `boundingObject`, together with the [Physics](physics.md) node, are used to
-compute the inertia matrix of the [Solid](#solid). Such a computation assumes a
-uniform mass distribution in the primitives composing the `boundingObject`. Note
-that the center of mass of the [Solid](#solid) does not depend on its
-`boundingObject`. The center of mass is specified by the `centerOfMass` field
-of the [Physics](physics.md) node (in coordinates relative to the center of the
-[Solid](#solid)).
+The `boundingObject`, together with the [Physics](physics.md) node, are used to compute the inertia matrix of the [Solid](#solid).
+Such a computation assumes a uniform mass distribution in the primitives composing the `boundingObject`.
+Note that the center of mass of the [Solid](#solid) does not depend on its `boundingObject`.
+The center of mass is specified by the `centerOfMass` field of the [Physics](physics.md) node (in coordinates relative to the center of the [Solid](#solid)).
 
 ### Unique Solid name
 
-The capability of identifying uniquely each [Solid](#solid) node is a base requirement for other advanced features,
-for example to let the viewpoint follow a solid object or to store the preferences for the rendering devices overlays.
-For this reason since Webots R2018a, the user is encouraged to set unique names for sibling [Solid](#solid) nodes and
-a warning is printed in the console if this rule is not respected.
+The capability of identifying uniquely each [Solid](#solid) node is a base requirement for other advanced features, for example to let the viewpoint follow a solid object or to store the preferences for the rendering devices overlays.
+For this reason since Webots R2018a, the user is encouraged to set unique names for sibling [Solid](#solid) nodes and a warning is printed in the console if this rule is not respected.
 With sibling [Solid](#solid) nodes we mean [Solid](#solid) nodes for which the upper [Solid](#solid) node is the same.
 It doesn't matter if other nodes with a different type exist between the current and the upper [Solid](#solid) node.
 
@@ -193,13 +169,11 @@ Robot {
 }
 ```
 
-In this example [Solid](#solid) nodes `A`, `B`, `D`, `E`, and `F` are sibling nodes
-because they have the same upper [Solid](#solid) node, i.e. the [Robot](robot.md) node.
+In this example [Solid](#solid) nodes `A`, `B`, `D`, `E`, and `F` are sibling nodes because they have the same upper [Solid](#solid) node, i.e. the [Robot](robot.md) node.
 [Solid](#solid) node `C` is not a sibling because his upper [Solid](#solid) node is `B` and not the [Robot](robot.md) node.
 
 To smooth the creation of worlds, when a new [Solid](#solid) node is inserted from the GUI or from a [Supervisor](robot.md) controller, Webots checks the name of the just inserted node and automatically computes a unique name if needed.
-The computed name contains an additional suffix `(<i>)`,
-where `<i>` is the smallest available positive index that produces a unique name between sibling [Solid](#solid) nodes.
+The computed name contains an additional suffix `(<i>)`, where `<i>` is the smallest available positive index that produces a unique name between sibling [Solid](#solid) nodes.
 For example, if sibling [Solid](#solid) nodes with the name 'solid', 'solid(1)', and 'solid(3)' already exists, the computed name for the new node will be 'solid(2)'.
 
 Note that in this section we refer to [Solid](#solid) nodes, but this rule applies to all the [Solid](#solid) derived nodes.

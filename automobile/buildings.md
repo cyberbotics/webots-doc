@@ -32,9 +32,7 @@ The following PROTO nodes of buildings are available to add in your worlds:
 
 ### Building PROTO
 
-In addition to those building PROTO nodes, the `Building` PROTO represents
-a highly customizable building and can be used to model a large variety of
-buildings.
+In addition to those building PROTO nodes, the `Building` PROTO represents a highly customizable building and can be used to model a large variety of buildings.
 
 %figure "An example of Building with the default parameters"
 
@@ -78,7 +76,9 @@ roof).
 ### SimpleBuilding PROTO
 
 The `SimpleBuilding` PROTO is similar to the `Building` one except that the wall and roof appearances don't need to be set.
-The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define the color of the wall and roof, respectively. Bear in mind that not all the wall and roof types support the color argument.
+The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones.
+The `wallColor` and `roofColor` fields define the color of the wall and roof, respectively.
+Bear in mind that not all the wall and roof types support the color argument.
 
 The available roof types are:
 
@@ -121,8 +121,7 @@ The available wall types are:
 
 ### Other city objects
 
-In addition to buildings, other PROTO nodes are available representing objects
-usually found in a city environment:
+In addition to buildings, other PROTO nodes are available representing objects usually found in a city environment:
 
 - BusStop
 - Fence

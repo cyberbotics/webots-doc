@@ -26,29 +26,19 @@ Lidar {
 
 ### Description
 
-The [Lidar](#lidar) node is used to model a robot's on-board lidar
-(laser-scanner).
+The [Lidar](#lidar) node is used to model a robot's on-board lidar (laser-scanner).
 
-The lidar measures depth information (in meters) from an OpenGL rendering, like
-the [RangeFinder](rangefinder.md) node does. Whereas a
-[RangeFinder](rangefinder.md) node is used to simulate a depth camera (like for
-example a Kinect), the [Lidar](#lidar) node is used to simulate laser scans. The
-main difference is that for the [RangeFinder](rangefinder.md) node the vertical
-field of view is imposed by the size (width and height) of the image (because of
-the constraint of square pixels) and not in the case of the [Lidar](#lidar) node
-where lines of pixels (laser scan) are extracted from the depth buffer.
+The lidar measures depth information (in meters) from an OpenGL rendering, like the [RangeFinder](rangefinder.md) node does.
+Whereas a [RangeFinder](rangefinder.md) node is used to simulate a depth camera (like for example a Kinect), the [Lidar](#lidar) node is used to simulate laser scans.
+The main difference is that for the [RangeFinder](rangefinder.md) node the vertical field of view is imposed by the size (width and height) of the image (because of the constraint of square pixels) and not in the case of the [Lidar](#lidar) node where lines of pixels (laser scan) are extracted from the depth buffer.
 
-Lidar detects semi-transparent objects as if they were not transparent. An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md) `transparency` field is not equal to 1.
+Lidar detects semi-transparent objects as if they were not transparent.
+An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md) `transparency` field is not equal to 1.
 
-By default the [Lidar](#lidar) node outputs the depth values in an array, the
-depth values are order from left to right and from the top to the bottom layer
-(like a [RangeFinder](rangefinder.md) node does). Complementary the point cloud
-mode can be enabled thanks to the
-[`wb_lidar_enable_point_cloud`](#wb_lidar_enable) function. It is then
-possible to call the [`wb_lidar_get_point_cloud`](#wb_lidar_get_point_cloud)
-to get the lidar output as a point cloud (array of points). Be aware that the
-point cloud mode is computationally expensive and can therefore slow-down the
-simulation speed.
+By default the [Lidar](#lidar) node outputs the depth values in an array, the depth values are order from left to right and from the top to the bottom layer (like a [RangeFinder](rangefinder.md) node does).
+Complementary the point cloud mode can be enabled thanks to the [`wb_lidar_enable_point_cloud`](#wb_lidar_enable) function.
+It is then possible to call the [`wb_lidar_get_point_cloud`](#wb_lidar_get_point_cloud) to get the lidar output as a point cloud (array of points).
+Be aware that the point cloud mode is computationally expensive and can therefore slow-down the simulation speed.
 
 #### WbLidarPoint
 
@@ -64,17 +54,13 @@ typedef struct {
 } WbLidarPoint;
 ```
 
-The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin. The
-`layer_id` field specifies to which layer this point belongs to (from 0 to
-`numberOfLayers` - 1) and the `time` field specifies the exact time at which the
-point was acquired. With lidar devices, all the points are not acquired at the
-exact same time but rather sequentially.
+The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin.
+The `layer_id` field specifies to which layer this point belongs to (from 0 to `numberOfLayers` - 1) and the `time` field specifies the exact time at which the point was acquired.
+With lidar devices, all the points are not acquired at the exact same time but rather sequentially.
 
-> **Note** [C++]:
-In C++ the name of the structure is `LidarPoint`.
+> **Note** [C++]: In C++ the name of the structure is `LidarPoint`.
 
-> **Note** [Java/Python]:
-In Java and Python, the structure is replaced by a class called `LidarPoint`.
+> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `LidarPoint`.
 
 ### Field Summary
 
@@ -137,10 +123,7 @@ of the lidar.
 image. More information on compositors is provided in the
 [compositor](camera.md) field description of the [Camera](camera.md) node.
 
-> **Note**:
-The fields `numberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and
-`fieldOfView` should respect the following constraint in order to be able to
-simulate the lidar:
+> **Note**: The fields `numberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and `fieldOfView` should respect the following constraint in order to be able to simulate the lidar:
 
         numberOfLayers < verticalFieldOfView * horizontalResolution / fieldOfView
 
@@ -149,13 +132,15 @@ simulate the lidar:
 
 #### Rotating lidar
 
-A lidar is said rotating if its `type` field is set to 'rotating'. In that case, the node inserted in the `rotatingHead` rotates along the Y axis at the frequency defined in the `defaultFrequency` field. This rotation starts as soon as the lidar is enabled. The internal depth camera is attached to this node and is therefore also rotating along the Y axis.
+A lidar is said rotating if its `type` field is set to 'rotating'.
+In that case, the node inserted in the `rotatingHead` rotates along the Y axis at the frequency defined in the `defaultFrequency` field.
+This rotation starts as soon as the lidar is enabled.
+The internal depth camera is attached to this node and is therefore also rotating along the Y axis.
 
-> **Note**:
-The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π. The same comment applies to the horizontal resolution, the internal depth camera is using a horizontal resolution defined in the `horizontalResolution` field, but the actual returned resolution of the lidar is equal to: horizontalResolution * 2 * pi / fieldOfView.
+> **Note**: The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π.
+The same comment applies to the horizontal resolution, the internal depth camera is using a horizontal resolution defined in the `horizontalResolution` field, but the actual returned resolution of the lidar is equal to: horizontalResolution * 2 * pi / fieldOfView.
 
-> **Note**:
-If the resulting point cloud of a rotating lidar looks distorted, it probably means that you have to reduce the simulation time step.
+> **Note**: If the resulting point cloud of a rotating lidar looks distorted, it probably means that you have to reduce the simulation time step.
 
 ### Lidar Functions
 
@@ -181,8 +166,7 @@ Note that the first measurement will be available only after the first sampling 
 
 The `wb_lidar_disable` function turns the lidar off, saving computation time.
 
-The `wb_lidar_get_sampling_period` function returns the period given into the
-`wb_lidar_enable` function, or 0 if the device is disabled.
+The `wb_lidar_get_sampling_period` function returns the period given into the `wb_lidar_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -204,14 +188,12 @@ bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag);
 
 The `wb_lidar_enable_point_cloud` function allows the user to enable the lidar point cloud update, the point cloud array is then updated with the same sampling period as the range image.
 
-The `wb_lidar_disable_point_cloud` function allows the user to disable the lidar point
-cloud update.
+The `wb_lidar_disable_point_cloud` function allows the user to disable the lidar point cloud update.
 
-The `wb_lidar_is_point_cloud_enabled` function returns true if the point cloud
-update is enabled or false otherwise.
+The `wb_lidar_is_point_cloud_enabled` function returns true if the point cloud update is enabled or false otherwise.
 
-> **Note**:
-To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable` function.
+> **Note**: To get the point cloud array, enabling the point cloud is not sufficient.
+First the lidar should be enabled using the `wb_lidar_enable` function.
 
 ---
 
@@ -230,16 +212,13 @@ const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 
 **Description**
 
-The `wb_lidar_get_range_image` function allows the user to read the contents
-of the last range image grabbed by a lidar. The range image is computed using
-the depth buffer produced by the OpenGL rendering. The range image is coded as
-an array of single precision floating point values corresponding to the range
-value of each pixel of the image. The precision of the lidar values decreases
-when the objects are located farther from the near clipping plane. Pixels are
-stored in scan lines running from left to right and from first to last layer.
-The memory chunk returned by this function shall not be freed, as it is managed
-by the lidar internally. The size in bytes of the range image can be computed as
-follows:
+The `wb_lidar_get_range_image` function allows the user to read the contents of the last range image grabbed by a lidar.
+The range image is computed using the depth buffer produced by the OpenGL rendering.
+The range image is coded as an array of single precision floating point values corresponding to the range value of each pixel of the image.
+The precision of the lidar values decreases when the objects are located farther from the near clipping plane.
+Pixels are stored in scan lines running from left to right and from first to last layer.
+The memory chunk returned by this function shall not be freed, as it is managed by the lidar internally.
+The size in bytes of the range image can be computed as follows:
 
 ```
 size = lidar_horizontal_resolution * lidar_number_of_layers * sizeof(float)
@@ -247,14 +226,11 @@ size = lidar_horizontal_resolution * lidar_number_of_layers * sizeof(float)
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 
-The `wb_lidar_get_layer_range_image` function is a convenient way of getting
-directly the sub range image associated with one layer.
+The `wb_lidar_get_layer_range_image` function is a convenient way of getting directly the sub range image associated with one layer.
 
-> **Note** [Python]:
-The Lidar class has two methods for getting the lidar image. The
-`getRangeImage` function returns a one-dimensional list of floats, while the
-`getRangeImageArray` function returns a two-dimensional list of floats. Their content
-are identical but their handling is of course different.
+> **Note** [Python]: The Lidar class has two methods for getting the lidar image.
+The `getRangeImage` function returns a one-dimensional list of floats, while the `getRangeImageArray` function returns a two-dimensional list of floats.
+Their content are identical but their handling is of course different.
 
 ---
 
@@ -274,10 +250,9 @@ int wb_lidar_get_number_of_points(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_point_cloud` function returns the pointer to the point cloud array,
-each point consists of a [`WbLidarPoint`](#wblidarpoint). The memory chunk
-returned by this function shall not be freed, as it is managed by the lidar
-internally. The size in bytes of the point cloud can be computed as follows:
+The `wb_lidar_get_point_cloud` function returns the pointer to the point cloud array, each point consists of a [`WbLidarPoint`](#wblidarpoint).
+The memory chunk returned by this function shall not be freed, as it is managed by the lidar internally.
+The size in bytes of the point cloud can be computed as follows:
 
 ```
 size = lidar_number_of_points * sizeof(WbLidarPoint)
@@ -285,12 +260,9 @@ size = lidar_number_of_points * sizeof(WbLidarPoint)
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 
-The `wb_lidar_get_layer_point_cloud` function is a convenient way of getting
-directly the sub point cloud associated with one layer.
+The `wb_lidar_get_layer_point_cloud` function is a convenient way of getting directly the sub point cloud associated with one layer.
 
-The `wb_lidar_get_number_of_points` function returns the total number of
-points contained in the point cloud (each layer is assumed to have the same
-number of points associated to).
+The `wb_lidar_get_number_of_points` function returns the total number of points contained in the point cloud (each layer is assumed to have the same number of points associated to).
 
 ---
 
@@ -309,12 +281,10 @@ void wb_lidar_set_frequency(WbDeviceTag tag, double frequency);
 
 **Description**
 
-The `wb_lidar_get_frequency` function returns the current rotating frequency of the
-lidar head (in case of rotating lidar).
+The `wb_lidar_get_frequency` function returns the current rotating frequency of the lidar head (in case of rotating lidar).
 
-The `wb_lidar_set_frequency` function sets the current rotating frequency of the lidar
-head (in case of rotating lidar). The `frequency` argument should be in the
-range [minFrequency; maxFrequency].
+The `wb_lidar_set_frequency` function sets the current rotating frequency of the lidar head (in case of rotating lidar).
+The `frequency` argument should be in the range [minFrequency; maxFrequency].
 
 ---
 
@@ -333,8 +303,7 @@ int wb_lidar_get_number_of_layers(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_horizontal_resolution` function returns the horizontal resolution of
-the lidar.
+The `wb_lidar_get_horizontal_resolution` function returns the horizontal resolution of the lidar.
 
 The `wb_lidar_get_number_of_layers` function returns the number of layers of the lidar.
 
@@ -355,9 +324,7 @@ double wb_lidar_get_max_frequency(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions
-return respectively the minimum and maximum allowed rotating frequency of the
-head of the lidar (in case of rotating lidar).
+The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions return respectively the minimum and maximum allowed rotating frequency of the head of the lidar (in case of rotating lidar).
 
 ---
 
@@ -378,8 +345,7 @@ int wb_lidar_get_vertical_fov(WbDeviceTag tag);
 
 The `wb_lidar_get_fov` function returns the horizontal field of view of the lidar.
 
-The `wb_lidar_get_vertical_fov` function returns the vertical field of view of the
-lidar.
+The `wb_lidar_get_vertical_fov` function returns the vertical field of view of the lidar.
 
 ---
 
@@ -398,5 +364,4 @@ double wb_lidar_get_max_range(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_min_range` and `wb_lidar_get_max_range` functions return
-respectively the minimum and maximum range of the lidar.
+The `wb_lidar_get_min_range` and `wb_lidar_get_max_range` functions return respectively the minimum and maximum range of the lidar.

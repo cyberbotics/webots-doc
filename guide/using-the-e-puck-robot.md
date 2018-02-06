@@ -1,11 +1,10 @@
 ## Using the e-puck robot
 
-In this section, you will learn how to use Webots with the ([e-puck robot](#the-e-puck-robot-at-work)). E-puck is a miniature mobile robot
-originally developed at EPFL for teaching purposes by the designers of the
-successful Khepera robot. The hardware and software of e-puck is fully open
-source, providing low level access to every electronic device and offering
-unlimited extension possibilities. The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this
-robot. E-puck is also available for purchase from Cyberbotics Ltd.
+In this section, you will learn how to use Webots with the ([e-puck robot](#the-e-puck-robot-at-work)).
+E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
+The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.
+The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.
+E-puck is also available for purchase from Cyberbotics Ltd.
 
 ### Overview of the robot
 
@@ -29,8 +28,7 @@ computer. It doesn't need any cables, providing optimal working comfort.
 simple to repair.
 - *Affordable*: the price tag of e-puck is friendly to university budgets.
 
-E-puck is equipped with a large number of devices, as summarized in [this
-table](#e-puck-features).
+E-puck is equipped with a large number of devices, as summarized in [this table](#e-puck-features).
 
 %figure "e-puck features"
 
@@ -64,19 +62,11 @@ table](#e-puck-features).
 
 %end
 
-The e-puck model in Webots is depicted in [this
-figure](#the-e-puck-model-in-webots). This model includes support for the
-differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors
-for proximity and light measurements, the accelerometer, the camera, the 8
-surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet
-simulated in the current model. Besides standard e-puck devices, the model also
-provides two slots that can be used to extend the functionality and to equip the
-robot with additional devices. In particular, the ground sensors module
-extension of the real e-puck robot is modeled in Webots to provide 3 optional
-infra-red sensors pointing to the ground in front of the robot. The
-[table](#devices-names) displays the names of the simulated devices which are to
-be used as an argument of the `wb_robot_get_device` function (see the Robot
-section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
+The e-puck model in Webots is depicted in [this figure](#the-e-puck-model-in-webots).
+This model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.
+Besides standard e-puck devices, the model also provides two slots that can be used to extend the functionality and to equip the robot with additional devices.
+In particular, the ground sensors module extension of the real e-puck robot is modeled in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
+The [table](#devices-names) displays the names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 
 %figure "Devices names"
 
@@ -106,8 +96,7 @@ section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 %end
 
 The e-puck dimensions and speed specifications are shown in [this table](#e-puck-specifications).
-The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow you to set the speed of
-the robot and to use its encoders.
+The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow you to set the speed of the robot and to use its encoders.
 
 %figure "Devices orientations"
 
@@ -125,20 +114,13 @@ the robot and to use its encoders.
 
 %end
 
-The forward direction of the e-puck is given by the negative *z*-axis of
-the world coordinates. This is also the direction the eye of the camera is
-looking to; in keeping with the VRML97 standard, the direction vector of the
-camera is pointing in the opposite direction, namely the direction of the
-positive *z*-axis. The axle's direction is given by the positive *x*-axis.
-Proximity sensors, light sensors and LEDs are numbered clockwise; their location
-and orientation are shown in [this table](#e-puck-specifications) and [this
-table](#devices-orientations). The last column of the latter lists the angles between the negative *x*-axis and
-the direction of the devices, the plane *zOx* being oriented counter-clockwise.
-Note that the proximity sensors and the light sensors are actually the same
-devices of the real robot used in a different mode, so their direction coincides.
-Proximity sensors responses are simulated in accordance with the lookup table in
-[this figure](#proximity-sensor-response-against-distance); this table is the
-outcome of calibrations performed on the real robot.
+The forward direction of the e-puck is given by the negative *z*-axis of the world coordinates.
+This is also the direction the eye of the camera is looking to; in keeping with the VRML97 standard, the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
+The axle's direction is given by the positive *x*-axis.
+Proximity sensors, light sensors and LEDs are numbered clockwise; their location and orientation are shown in [this table](#e-puck-specifications) and [this table](#devices-orientations).
+The last column of the latter lists the angles between the negative *x*-axis and the direction of the devices, the plane *zOx* being oriented counter-clockwise.
+Note that the proximity sensors and the light sensors are actually the same devices of the real robot used in a different mode, so their direction coincides.
+Proximity sensors responses are simulated in accordance with the lookup table in [this figure](#proximity-sensor-response-against-distance); this table is the outcome of calibrations performed on the real robot.
 
 %figure "Proximity sensor response against distance"
 
@@ -146,16 +128,10 @@ outcome of calibrations performed on the real robot.
 
 %end
 
-The resolution of the camera was limited to 52x39 pixels, as this is the maximum
-rectangular image with a 4:3 ratio which can be obtained from the remote control
-interface with the real robot.
+The resolution of the camera was limited to 52x39 pixels, as this is the maximum rectangular image with a 4:3 ratio which can be obtained from the remote control interface with the real robot.
 
-The standard model of the e-puck is provided in the "E-puck.proto" PROTO file
-which is located in the "WEBOTS\_HOME/projects/robots/e-puck/protos" directory
-of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and
-"E-puckGroundSensors.proto" PROTO file); you will find complete specifications
-in it. The two PROTO fields `groundSensorSlot` and `turretSlot` have been
-included in the simulation model in order to support extension modules.
+The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
+The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 
 %figure "Sensors, LEDs and camera"
 
@@ -163,25 +139,14 @@ included in the simulation model in order to support extension modules.
 
 %end
 
-Several simulation examples are located in the
-"WEBOTS\_HOME/projects/robots/e-puck/worlds" directory of the Webots
-distribution. The "e-puck\_line.wbt" world (see [this
-figure](#an-e-puck-extension-for-line-following)) especially examplifies the use
-of ground sensors. Ground sensors can be added to a real e-puck robot by
-inserting a special extension card with three sensors just below the camera of
-the robot. These sensors are actually simple infra-red sensors which allow the
-e-puck robot to see the color level of the ground at three locations in a line
-across its front. The `groundSensorSlot` field of the standard E-puck PROTO is
-expressly provided to equip the simulated e-puck robot with the ground
-sensors extension modeled in the `E-puckGroundSensors` PROTO. This is
-particularly useful for implementing line following behaviors. The
-"e-puck\_line" controller program contains the source code for a simple line
-following system which, as an exercise, can be improved to obtain the
-behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck
-robot is able to follow the line drawn on the floor, but also to avoid obstacles
-and return to the line following behavior afterwards. This model was contributed
-by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises
-with Webots and extended e-puck robots.
+Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/e-puck/worlds" directory of the Webots distribution.
+The "e-puck\_line.wbt" world (see [this figure](#an-e-puck-extension-for-line-following)) especially examplifies the use of ground sensors.
+Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
+These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
+The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
+This is particularly useful for implementing line following behaviors.
+The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
+This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.
 
 %figure "An e-puck extension for line following"
 
@@ -189,19 +154,12 @@ with Webots and extended e-puck robots.
 
 %end
 
-The directory "WEBOTS\_HOME/projects/samples/curriculum" contains a rich
-collection of simulations involving the e-puck robot. You will find inside it
-all the worlds and controllers corresponding to the exercices of Cyberbotics
-robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
-Written in collaboration with professors and master students of EPFL,
-Cyberbotics curriculum is an educational document intended for all level of
-learnings in robotics. It addresses a dozen of topics ranging from finite state
-automata to particle swarm optimization, all illustated through the real or the
-simulated e-puck robot; you can browse it
-[here](http://www.cyberbotics.com/curriculum).  The e-puck models of Webots
-distribution are open source and you are welcome to modify them. If you develop
-a useful modification and would like to share it, please let us know so that we
-can improve these models using your contribution.
+The directory "WEBOTS\_HOME/projects/samples/curriculum" contains a rich collection of simulations involving the e-puck robot.
+You will find inside it all the worlds and controllers corresponding to the exercices of Cyberbotics robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
+Written in collaboration with professors and master students of EPFL, Cyberbotics curriculum is an educational document intended for all level of learnings in robotics.
+It addresses a dozen of topics ranging from finite state automata to particle swarm optimization, all illustated through the real or the simulated e-puck robot; you can browse it [here](http://www.cyberbotics.com/curriculum).
+The e-puck models of Webots distribution are open source and you are welcome to modify them.
+If you develop a useful modification and would like to share it, please let us know so that we can improve these models using your contribution.
 
 ### Control interface
 
@@ -213,50 +171,54 @@ can improve these models using your contribution.
 
 %end
 
-When opening a world containing an e-puck robot, Webots may display the e-puck robot window. If it is not displayed, you can open it by double-clicking on the e-puck robot. This window is depicted in [this figure](#the-e-puck-robot-window). It includes the visualization of the sensors of the robot. The proximity measurements are displayed in black, outside the body of the robot. The light measurements are displayed in blue, below the
-proximity measurements. The motor speeds are displayed in red, and the motor positions are displayed in green. The camera image is displayed on the top of the window and the XYZ accelerometer values are displayed on the robot.
+When opening a world containing an e-puck robot, Webots may display the e-puck robot window.
+If it is not displayed, you can open it by double-clicking on the e-puck robot.
+This window is depicted in [this figure](#the-e-puck-robot-window).
+It includes the visualization of the sensors of the robot.
+The proximity measurements are displayed in black, outside the body of the robot.
+The light measurements are displayed in blue, below the proximity measurements.
+The motor speeds are displayed in red, and the motor positions are displayed in green.
+The camera image is displayed on the top of the window and the XYZ accelerometer values are displayed on the robot.
 If the e-puck robot is equipped with the ground sensors extension modeled in `E-puckGroundSensors`, then the ground sensors measurements are represented by the three grayscale boxes.
 
-In addition to displaying the sensor information, the e-puck robot window also has a number of buttons. The `Enable All` allows the user to enable all the sensors measurements on the robot, this cannot be undone and is meant for debugging purposes only. The Simulation / COM ports drop down menu allows the user to switch between the simulation and the remote control of a real e-puck robot connected to a COM port of the computer. In order to have the remote control working properly, the e-puck robot should run the Webots firmware (see below). Finally, the `Upload HEX...` button allows the user to upload a cross-compilation HEX file on the robot to execute it on the micro-controller of the robot. The Webots firmware can be uploaded this way on the e-puck robot.
+In addition to displaying the sensor information, the e-puck robot window also has a number of buttons.
+The `Enable All` allows the user to enable all the sensors measurements on the robot, this cannot be undone and is meant for debugging purposes only.
+The Simulation / COM ports drop down menu allows the user to switch between the simulation and the remote control of a real e-puck robot connected to a COM port of the computer.
+In order to have the remote control working properly, the e-puck robot should run the Webots firmware (see below).
+Finally, the `Upload HEX...` button allows the user to upload a cross-compilation HEX file on the robot to execute it on the micro-controller of the robot.
+The Webots firmware can be uploaded this way on the e-puck robot.
 
-This e-puck control window appears because the `window` field of the `E-puck` node in the world file was set to "e-puck". Changing this `window` to an empty string will disable this control window.
+This e-puck control window appears because the `window` field of the `E-puck` node in the world file was set to "e-puck".
+Changing this `window` to an empty string will disable this control window.
 
 #### BotStudio overview
 
-BotStudio is a user interface to graphically program the e-puck thanks to a
-finite state automaton. Behaviors such as wall follower, collision avoider or
-line follower can be implemented quickly thanks to this interface. BotStudio is
-typically destinated for the educational field, particularly for beginners in
-robotics.
+BotStudio is a user interface to graphically program the e-puck thanks to a finite state automaton.
+Behaviors such as wall follower, collision avoider or line follower can be implemented quickly thanks to this interface.
+BotStudio is typically destinated for the educational field, particularly for beginners in robotics.
 
-An automaton state of BotStudio corresponds to a state of the e-puck actuators
-while a transition corresponds to a condition over its sensor values. A
-transition is fired when all of its conditions are fulfilled (logical AND). A
-logical OR can be performed by several transitions between two states.
+An automaton state of BotStudio corresponds to a state of the e-puck actuators while a transition corresponds to a condition over its sensor values.
+A transition is fired when all of its conditions are fulfilled (logical AND).
+A logical OR can be performed by several transitions between two states.
 
-The actuators available in BotStudio are the LEDs and the motors. Each automaton
-state have two sliders for setting the motor speed value. Note that these values
-can be unset by clicking on the cursor of the slider. Each state also have 10
-square buttons to set the LEDs states. A red button means the LED is turned
-on, a black one means it is turned off and a gray one means there is no
-modification.
+The actuators available in BotStudio are the LEDs and the motors.
+Each automaton state have two sliders for setting the motor speed value.
+Note that these values can be unset by clicking on the cursor of the slider.
+Each state also have 10 square buttons to set the LEDs states.
+A red button means the LED is turned on, a black one means it is turned off and a gray one means there is no modification.
 
 The sensor available in BotStudio are the distance sensors and the camera.
-Moreover a timer can be used to temporize the conditions by dragging the
-corresponding slider. Conditions over the IR sensors can be set by dragging the
-8 red sliders. A condition can be reversed by clicking on the gray part of the
-slider. Finally, the camera is used to give a clue on the front environment
-of the e-puck. An algorithm is applied on the last line of the camera and
-returns a integer between -10 and 10 indicating if a black line is perceived
-respectively at the left and at the right of the e-puck field of view. A
-condition can be set on this value to get a line follower behavior.
+Moreover a timer can be used to temporize the conditions by dragging the corresponding slider.
+Conditions over the IR sensors can be set by dragging the 8 red sliders.
+A condition can be reversed by clicking on the gray part of the slider.
+Finally, the camera is used to give a clue on the front environment of the e-puck.
+An algorithm is applied on the last line of the camera and returns a integer between -10 and 10 indicating if a black line is perceived respectively at the left and at the right of the e-puck field of view.
+A condition can be set on this value to get a line follower behavior.
 
-BotStudio is depicted in this [figure](#botstudio-window). An example of
-BotStudio can be found by opening the
-"WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file.
+BotStudio is depicted in this [figure](#botstudio-window).
+An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file.
 
-The BotStudio windows appears when the e-puck's controller points on a *.bsg*
-file.
+The BotStudio windows appears when the e-puck's controller points on a *.bsg* file.
 
 %figure "BotStudio window"
 
@@ -267,18 +229,16 @@ file.
 #### Bluetooth setup
 
 The e-puck has a Bluetooth interface allowing it to communicate with Webots.
-This feature is available under Windows, Linux and macOS. The Bluetooth
-interface must be set up according to your operating system (OS). Generally it
-is as simple as using the Bluetooth interface of your OS in order to discover
-and to pair the e-puck as a regular Bluetooth device. The complete instructions
-about pairing can be found on the [GCTronic
-website](http://www.gctronic.com/doc/index.php/E-Puck#Getting_started).
+This feature is available under Windows, Linux and macOS.
+The Bluetooth interface must be set up according to your operating system (OS).
+Generally it is as simple as using the Bluetooth interface of your OS in order to discover and to pair the e-puck as a regular Bluetooth device.
+The complete instructions about pairing can be found on the [GCTronic website](http://www.gctronic.com/doc/index.php/E-Puck#Getting_started).
 
-On linux, the pairing has to be done manually (without using the Bluetooth
-interface of the OS). This can be done by using the `rfcomm` command. Once
-it has been generated, the rfcomm file has to be given to Webots through an environment
-variable. It may also occur that the rfcomm file doesn't have the reading rights. A
-typical pairing can be done using the following commands:
+On linux, the pairing has to be done manually (without using the Bluetooth interface of the OS).
+This can be done by using the `rfcomm` command.
+Once it has been generated, the rfcomm file has to be given to Webots through an environment variable.
+It may also occur that the rfcomm file doesn't have the reading rights.
+A typical pairing can be done using the following commands:
 
 ```sh
 # Get the e-puck MAC adress
@@ -297,23 +257,36 @@ webots
 
 #### Bluetooth remote control
 
-Once properly set up, the Bluetooth connection to your e-puck should appear in the dropdown menus of the e-puck robot window. If it doesn't appear there, it means that your computer was not properly configured to interface with your e-puck robot through Bluetooth. Please refer to the instructions given in the previous section.
+Once properly set up, the Bluetooth connection to your e-puck should appear in the dropdown menus of the e-puck robot window.
+If it doesn't appear there, it means that your computer was not properly configured to interface with your e-puck robot through Bluetooth.
+Please refer to the instructions given in the previous section.
 
-When selecting a specific Bluetooth connection from the popup menu of the control window, Webots will try to establish a connection with your e-puck robot. Once connected, it will display the version of the e-puck serial communication software on the Webots console (e.g. `[e-puck] Running real e-puck (Version 1.5.2 April 2015 (Webots))`), and will switch the control to the real robot. That is, it will send motor commands to the real robot and display sensor information (proximity, light, camera image, etc.) coming from the real robot. This makes the transfer from the simulation to the real robot trivially simple. Note that in the same popup menu, the `Refresh` menu item can be used to update the list of COM ports.
+When selecting a specific Bluetooth connection from the popup menu of the control window, Webots will try to establish a connection with your e-puck robot.
+Once connected, it will display the version of the e-puck serial communication software on the Webots console (e.g.
+`[e-puck] Running real e-puck (Version 1.5.2 April 2015 (Webots))`), and will switch the control to the real robot.
+That is, it will send motor commands to the real robot and display sensor information (proximity, light, camera image, etc.) coming from the real robot.
+This makes the transfer from the simulation to the real robot trivially simple.
+Note that in the same popup menu, the `Refresh` menu item can be used to update the list of COM ports.
 
-The remote control has two requirements: the Bluetooth must be correctly set up (computer side) and the e-puck must be programmed with the Webots latest firmware. To set up Bluetooth, please refer to the official e-puck website. To upload the last firmware on your robot, switch on your robot, press the `Upload HEX...` button on the e-puck robot window and select the COM port which corresponds to your robot. Then choose the "WEBOTS\_HOME/projects/robots/e-puck/transfer/firmware/firmware-x.x.x.hex" file located in your Webots directory (*x.x.x* has to be replaced by the current firmware's version).
+The remote control has two requirements: the Bluetooth must be correctly set up (computer side) and the e-puck must be programmed with the Webots latest firmware.
+To set up Bluetooth, please refer to the official e-puck website.
+To upload the last firmware on your robot, switch on your robot, press the `Upload HEX...` button on the e-puck robot window and select the COM port which corresponds to your robot.
+Then choose the "WEBOTS\_HOME/projects/robots/e-puck/transfer/firmware/firmware-x.x.x.hex" file located in your Webots directory (*x.x.x* has to be replaced by the current firmware's version).
 
 #### Cross-compilation
 
 An alternative to the remote-control session for running the real e-puck is to cross-compile your code and to upload it on the e-puck.
 
-To use this feature, your code has to be written in C and use the C Webots API. Moreover, you need to define a specific Makefile called "Makefile.e-puck" in the controller directory. This Makefile must include the following file:
+To use this feature, your code has to be written in C and use the C Webots API.
+Moreover, you need to define a specific Makefile called "Makefile.e-puck" in the controller directory.
+This Makefile must include the following file:
 
 ```makefile
 include $(WEBOTS_HOME)/projects/robots/e-puck/transfer/libepuck/Makefile.include
 ```
 
-Thanks to this, it is possible to cross-compile with Webots by using the `Build / Cross-compile` menu item of the text editor. Note that the `Upload HEX...` button of the e-puck control window allows you to upload a file generated by the cross-compilation extended by ".hex" on the e-puck robot.
+Thanks to this, it is possible to cross-compile with Webots by using the `Build / Cross-compile` menu item of the text editor.
+Note that the `Upload HEX...` button of the e-puck control window allows you to upload a file generated by the cross-compilation extended by ".hex" on the e-puck robot.
 
 An example of cross-compilation is given in the "WEBOTS\_HOME/projects/robots/e-puck/controllers/e-puck\_cross-compilation " subdirectory of your Webots directory.
 
@@ -327,8 +300,7 @@ pic30-elf-gcc: not found
 make: *** [e-puck_cross-compilation-pic30.o] Error 127
 ```
 
-This error can be fixed simply by installing the following packets from a
-terminal:
+This error can be fixed simply by installing the following packets from a terminal:
 
 ```sh
 sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386

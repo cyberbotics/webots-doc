@@ -1,5 +1,4 @@
-> **Note**:
-This node is experimental, i.e. its long-term support is not guaranteed.
+> **Note**: This node is experimental, i.e. its long-term support is not guaranteed.
 
 ## ComposedShader
 
@@ -21,7 +20,9 @@ If several [ShaderPart](shaderpart.md) nodes of the same type are given, then on
 
 The `uniforms` field is a list of [Uniform](uniform.md) nodes corresponding to the uniform variables passed to the [ShaderPart](shaderpart.md) programs.
 
-Webots provides a set of useful uniforms that can be invoked within a shader program and for which there is no need to add a [Uniform](uniform.md) field. To use them, simply declare them as `uniform` in your shader. For example, if you wish to perform calculations in world space, declare `uniform vec4 worldMatrix` and use the `worldMatrix` variable to transform elements from model to world space.
+Webots provides a set of useful uniforms that can be invoked within a shader program and for which there is no need to add a [Uniform](uniform.md) field.
+To use them, simply declare them as `uniform` in your shader.
+For example, if you wish to perform calculations in world space, declare `uniform vec4 worldMatrix` and use the `worldMatrix` variable to transform elements from model to world space.
 
 Here is a list of supported variables:
 
@@ -32,21 +33,13 @@ Here is a list of supported variables:
 | mat4 | worldMatrix       | The matrix transformation from model space to world space.  |
 
 The `transparent` field indicates if the shader will use the alpha channel.
-If it is set to `FALSE` then
-the alpha channel will be ignored,
-and the [Shape](shape.md) node containing the [ComposedShader](#composedshader) will be rendered
-in the rendering queue of the opaque objects.
-If it is set to `TRUE` then
-the alpha channel will be used,
-and the container [Shape](shape.md) node will be rendered
-in the rendering queue of the transparent objects.
-
+If it is set to `FALSE` then the alpha channel will be ignored, and the [Shape](shape.md) node containing the [ComposedShader](#composedshader) will be rendered in the rendering queue of the opaque objects.
+If it is set to `TRUE` then the alpha channel will be used, and the container [Shape](shape.md) node will be rendered in the rendering queue of the transparent objects.
 
 ### Limitations
 
 - The [Shape](shape.md) nodes containing a [ComposedShader](#composedshader) node cannot receive shadows.
 - The [Shape](shape.md) nodes containing a transparent [ComposedShader](#composedshader) node cannot cast shadows.
-
 
 ### Example
 

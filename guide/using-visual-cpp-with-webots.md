@@ -2,28 +2,24 @@
 
 ### Introduction
 
-Microsoft Visual C++ is an integrated development environment (IDE) for C/C++
-available on the Windows platform. On Windows, Visual C++ is a possible
-alternative to using Webots built-in gcc (MinGW) compiler. Visual C++ can be
-used to develop controllers using Webots C or C++ API. The developer must choose
-one of these two APIs as they cannot be used together in controller code. The C
-API is composed of ".h" files that contains flat C functions that can be used in
-C or C++ controllers. The C++ API is composed of ".hpp" files that contain C++
-classes and methods that can be used in C++ controllers only.
+Microsoft Visual C++ is an integrated development environment (IDE) for C/C++ available on the Windows platform.
+On Windows, Visual C++ is a possible alternative to using Webots built-in gcc (MinGW) compiler.
+Visual C++ can be used to develop controllers using Webots C or C++ API.
+The developer must choose one of these two APIs as they cannot be used together in controller code.
+The C API is composed of ".h" files that contains flat C functions that can be used in C or C++ controllers.
+The C++ API is composed of ".hpp" files that contain C++ classes and methods that can be used in C++ controllers only.
 
-Two Microsoft Visual C++ 2010 Express projects examples are included in the Webots distribution: "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\robocup_striker\\robocup_striker.sln" and "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\naoqisim\\naoqisim.sln". However, in principle any C or C++ controller from the Webots distribution can be turned into a Visual C++ project.
+Two Microsoft Visual C++ 2010 Express projects examples are included in the Webots distribution: "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\robocup_striker\\robocup_striker.sln" and "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\naoqisim\\naoqisim.sln".
+However, in principle any C or C++ controller from the Webots distribution can be turned into a Visual C++ project.
 
 ### Configuration
 
-When creating a Webots controller with Visual C++, it is necessary to specify
-the path to Webots ".h" and/or ".hpp" files. It is also necessary to configure
-the linker to use the "Controller.lib" import library from Webots distribution.
-The "Controller.lib" files is needed to link with the "Controller.dll" file that
-must be used by the controller in order to communicate with Webots.
+When creating a Webots controller with Visual C++, it is necessary to specify the path to Webots ".h" and/or ".hpp" files.
+It is also necessary to configure the linker to use the "Controller.lib" import library from Webots distribution.
+The "Controller.lib" files is needed to link with the "Controller.dll" file that must be used by the controller in order to communicate with Webots.
 
-The following procedure (Visual C++ 2008 Express) explains how to create a
-Visual C++ controller for Webots. Note that the resulting ".exe" file must be
-launched by Webots; it cannot be run from Visual C++.
+The following procedure (Visual C++ 2008 Express) explains how to create a Visual C++ controller for Webots.
+Note that the resulting ".exe" file must be launched by Webots; it cannot be run from Visual C++.
 
 1. Copy a Webots project from Webots distribution to your "Documents" folder, or
 create an empty project directory using Webots menu: `Wizard / New Project
@@ -137,25 +133,19 @@ process. Still in Visual C++, you can now add breakpoints and watches in the
 controller code. Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
 
-
 ### Link with the Webots libraries
 
-Webots contains several `C` or `C++` libraries based on the `libController` or
-`libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`,
-`youBot library`, etc.).
+Webots contains several `C` or `C++` libraries based on the `libController` or `libCppController` libraries (e.g.
+the `automobile library`, `DARwIn-OP library`, `youBot library`, etc.).
 
-The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file
-(the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
+The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file (the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
 They are located in the same directory as the library source, where the `.dll` file is generated.
 
-**Note**:
-The chosen architecture (32 or 64-bit) should match with Visual Studio solution platform and the path
-to the `Controller.lib` library.
+**Note**: The chosen architecture (32 or 64-bit) should match with Visual Studio solution platform and the path to the `Controller.lib` library.
 
-However there is no precompiled `C++` libraries for Visual Studio, because
-the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
-To use the `C++` libraries with your project, their source files should be compiled directly in your project,
-exactly as for the `libCppController` library (cf. instructions above).
+However there is no precompiled `C++` libraries for Visual Studio, because the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
+To use the `C++` libraries with your project, their source files should be compiled directly in your project, exactly as for the `libCppController` library (cf.
+instructions above).
 
 For example, to add the `C++ automobile libraries`:
 

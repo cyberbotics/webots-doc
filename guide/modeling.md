@@ -36,10 +36,7 @@ be fulfilled:
 
 1. Each simulation must be restarted either by pushing the `Reload` button, or by
 using the `wb_supervisor_reload_world()` function, or by restarting Webots.
-Any other method for resetting the simulation will not reset the physics
-(velocity, inertia, etc.) and other simulation data, hence the simulation state
-will be reset only partly. The random seeds used by Webots internally are reset
-for each simulation restarted with one of the above methods.
+The random seeds used by Webots internally are reset for each simulation restarted with one of the above methods.
 2. The `synchronization` flag of every robot and supervisor must be TRUE. Otherwise
 the number of physics steps per control step may vary with the current CPU load
 and hence the robot's behavior may also vary.

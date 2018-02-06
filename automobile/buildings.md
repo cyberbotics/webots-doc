@@ -81,41 +81,44 @@ The `SimpleBuilding` PROTO is similar to the `Building` one except that the wall
 The `wallAppearance` and `roofAppearance` fields are replaced by the `wallType` and `roofType` ones. The `wallColor` and `roofColor` fields define the color of the wall and roof, respectively. Bear in mind that not all the wall and roof types support the color argument.
 
 The available roof types are:
-  - tiled (supports color)
-  - gravel
-  - slate
-  - old tiles
-  - sheet metal
-  - metal tiles
-  - bitumen (supports color)
+
+- tiled (supports color)
+- gravel
+- slate
+- old tiles
+- sheet metal
+- metal tiles
+- bitumen (supports color)
 
 The available wall types are:
-  - glass building
-  - classic building
-  - orange building
-  - gray glass building
-  - blue glass building
-  - arcade-style building
-  - transparent highrise (supports color)
-  - windowed building
-  - old brick building
-  - red and white building
-  - construction building
-  - red brick wall
-  - old brick wall
-  - stone brick
-  - stone wall
-  - glass highrise
-  - old house (supports color)
-  - old building
-  - highrise
-  - brick building (supports color)
-  - residential building
-  - old office building
-  - factory building (supports color)
-  - tall house (supports color)
-  - office building (supports color)
-  - concrete building (supports color)
+
+- glass building
+- classic building
+- orange building
+- gray glass building
+- blue glass building
+- arcade-style building
+- transparent highrise (supports color)
+- windowed building
+- old brick building
+- red and white building
+- construction building
+- red brick wall
+- old brick wall
+- stone brick
+- stone wall
+- glass highrise
+- old house (supports color)
+- old building
+- highrise
+- brick building (supports color)
+- residential building
+- old office building
+- factory building (supports color)
+- tall house (supports color)
+- office building (supports color)
+- concrete building (supports color)
+
 ### Other city objects
 
 In addition to buildings, other PROTO nodes are available representing objects

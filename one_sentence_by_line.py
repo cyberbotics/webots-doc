@@ -8,10 +8,13 @@ pBuffer = ''
 def flushBuffer(f):
     """Flush pBuffer :-P."""
     global pBuffer
-    txt = pBuffer.replace('\n', ' ')
+    txt = pBuffer
+    txt = txt.replace('\n', ' ')
+    txt = txt.replace('i.e. ', 'i.e.@')
     txt = txt.replace('  ', ' ')
     txt = txt.replace('. ', '.\n')
     txt = txt.replace(' \n', '\n')
+    txt = txt.replace('i.e.@', 'i.e. ')
     txt = txt.rstrip()
     f.write(txt)
     f.write('\n')

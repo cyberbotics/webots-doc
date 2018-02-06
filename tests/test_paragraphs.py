@@ -12,7 +12,7 @@ class TestParagraphs(unittest.TestCase):
     hyperlinkRE = re.compile(r'[^\!]\[([^\]]*)\]\s*\(([^\)]*)\)')
 
     def setUp(self):
-        """Setup: get all the paragraphs and notes."""
+        """Setup: get all the paragraphs."""
         self.paragraphs = []
         books = Books()
         for book in books.books:
@@ -22,35 +22,42 @@ class TestParagraphs(unittest.TestCase):
                     content = f.read()
 
                 # Remove annoying string sequences.
-                # - Headers.
-                content = re.sub(r'^#.*', '', content)
-                content = re.sub(r'\n#.*', '\n', content)
                 # - Multiline code sections.
-                content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
-                # - Items.
-                content = re.sub(r'\n\s*-.+?(?=\n\n)', '', content, flags=re.S)
-                content = re.sub(r'\n\s*-.+?(?=\n)', '', content, flags=re.S)
-                content = re.sub(r'\n\s*\d+\..+?(?=\n\n)', '', content, flags=re.S)
-                content = re.sub(r'\n\s*\d+\..+?(?=\n)', '', content, flags=re.S)
-                content = re.sub(r'\n    .+?(?=\n)', '', content, flags=re.S)
-                content = re.sub(r'\n        .+?(?=\n)', '', content, flags=re.S)
+                content = re.sub(r'```.+?(?=```)```', '\n', content, flags=re.S)
                 # - Showdown extensions.
-                content = re.sub(r'%figure.+?(?=%end)%end', '', content, flags=re.S)
-                content = re.sub(r'%api.+?(?=%end)%end', '', content, flags=re.S)
+                content = re.sub(r'%figure.+?(?=%end)%end', '\n', content, flags=re.S)
+                content = re.sub(r'%api.+?(?=%end)%end', '\n', content, flags=re.S)
+                # - Notes.
+                content = re.sub(r'\n\s*>.+?(?=\n\n)', '\n', content, flags=re.S)
+                # - Headers.
+                content = re.sub(r'^#.*', '\n', content)
+                content = re.sub(r'\n#.*', '\n', content)
+                # - Items.
+                content = re.sub(r'\n\s*-.+?(?=\n\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*-.+?(?=\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*\d+\..+?(?=\n\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*\d+\..+?(?=\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n    .+?(?=\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n        .+?(?=\n)', '\n', content, flags=re.S)
                 # - HTML statements
-                content = re.sub(r'<!--.*-->', '', content, flags=re.S)
+                content = re.sub(r'<!--.*-->', '\n', content, flags=re.S)
+                content = re.sub(r'\n---\n', '\n', content, flags=re.S)
                 # - Special characters
-                content = re.sub(r'\n\s*\*\*.+?(?=\*\*\n)', '', content, flags=re.S)
-                content = re.sub(r'\n\s*\{.+?(?=\}\n)', '', content, flags=re.S)
+                content = re.sub(r'\n\s*\*\*.+?\n', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*\{.+?\n', '\n', content, flags=re.S)
 
-                # Extract paragraphs and notes.
+                # Extract paragraphs.
                 for match in re.finditer(r'(?s)((?:[^\n][\n]?)+)', content):
                     paragraph = content[match.start():match.end() - 1]
                     # - Arrays.
-                    if paragraph.startswith('| '):
+                    if paragraph.startswith('| ') or paragraph.startswith('> '):
                         continue
+                    if md_path == '/Users/fabien/develop/webots-master/doc/automobile/nature.md':
+                        print '----'
+                        print paragraph
+                        print '----'
                     self.paragraphs.append(paragraph)
-        # Debug: Uncomment to display all the acquired paragraphs and notes.
+        # Debug: Uncomment to display all the acquired paragraphs.
         # for p in self.paragraphs:
         #     print ('@@@')
         #     print (p)

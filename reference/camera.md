@@ -390,7 +390,9 @@ top left hand side of the image down to bottom right hand side. The memory chunk
 returned by this function must not be freed, as it is handled by the camera
 itself. The size in bytes of this memory chunk can be computed as follows:
 
-`byte_size` = `camera_width` * `camera_height` * 4
+```
+byte_size = camera_width * camera_height * 4
+```
 
 Internal pixel format of the buffer is BGRA (32 bits). Attempting to read
 outside the bounds of this chunk will cause an error.

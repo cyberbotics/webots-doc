@@ -28,6 +28,7 @@ class TestParagraphs(unittest.TestCase):
                 # - Multiline code sections.
                 content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
                 # - Items.
+                content = re.sub(r'\n\s*\*\*.+?(?=\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*-.+?(?=\n\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*-.+?(?=\n)', '', content, flags=re.S)
                 content = re.sub(r'\n\s*\d+\..+?(?=\n\n)', '', content, flags=re.S)
@@ -61,7 +62,9 @@ class TestParagraphs(unittest.TestCase):
                     continue
                 if '**Keywords**' in line:
                     continue
-                self.assertTrue(
-                    line.endswith('.') or line.endswith(':') or line.endswith('!'),
-                    msg='The following line does not end with a period: "%s"' % line
-                )
+                # self.assertTrue(
+                #     line.endswith('.') or line.endswith(':') or line.endswith('!'),
+                #     msg='The following line does not end with a period: "%s"' % line
+                # )
+                if not (line.endswith('.') or line.endswith(':') or line.endswith('!')):
+                    print line

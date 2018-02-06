@@ -34,9 +34,9 @@ class TestParagraphs(unittest.TestCase):
                 content = re.sub(r'\n#.*', '\n', content)
                 # - Items.
                 content = re.sub(r'\n\s*-.+?(?=\n\n)', '\n', content, flags=re.S)
-                content = re.sub(r'\n\s*-.+?(?=\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*-.+?(?=\n$)', '\n', content, flags=re.S)
                 content = re.sub(r'\n\s*\d+\..+?(?=\n\n)', '\n', content, flags=re.S)
-                content = re.sub(r'\n\s*\d+\..+?(?=\n)', '\n', content, flags=re.S)
+                content = re.sub(r'\n\s*\d+\..+?(?=\n$)', '\n', content, flags=re.S)
                 content = re.sub(r'\n    .+?(?=\n)', '\n', content, flags=re.S)
                 content = re.sub(r'\n        .+?(?=\n)', '\n', content, flags=re.S)
                 # - HTML statements
@@ -52,10 +52,6 @@ class TestParagraphs(unittest.TestCase):
                     # - Arrays.
                     if paragraph.startswith('| ') or paragraph.startswith('> '):
                         continue
-                    if md_path == '/Users/fabien/develop/webots-master/doc/automobile/nature.md':
-                        print '----'
-                        print paragraph
-                        print '----'
                     self.paragraphs.append(paragraph)
         # Debug: Uncomment to display all the acquired paragraphs.
         # for p in self.paragraphs:

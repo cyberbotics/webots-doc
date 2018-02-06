@@ -9,7 +9,7 @@ your callback functions.
 This function looks for a [Solid](solid.md) node with the specified name and
 returns the corresponding dBodyID. The returned dBodyID is an ODE object that
 represent a rigid body with properties such as mass, velocity, inertia, etc. The
-dBodyID object can then be used with all the available ODE `dBody*` functions
+dBodyID object can then be used with all the available ODE's `dBody*` functions
 (see ODE documentation). For example it is possible to add a force to the body
 with the `dBodyAddForce` function, etc. The prototype of this function is:
 
@@ -55,7 +55,7 @@ returns the corresponding dGeomID. A dGeomID is an ODE object that represents a
 geometrical shape such as a sphere, a cylinder, a box, etc., or a coordinate
 system transformation. The dGeomID returned by Webots corresponds to the
 boundingObject of the [Solid](solid.md). The dGeomID object can then be used
-with all the available ODE `dGeom*` functions (see ODE documentation). The
+with all the available ODE's `dGeom*` functions (see ODE documentation). The
 prototype of this function is:
 
 ```c

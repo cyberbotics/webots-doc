@@ -223,7 +223,7 @@ and the sensor values were also measured at `controller_time` + `dt`. It means
 that the requested step duration could not be respected.
 
 The C API has two additional functions: `wb_robot_init` and
-`wb_robot_cleanup`. There is not equivalent of the `wb_robot_init` and
+`wb_robot_cleanup`. There is no equivalent of the `wb_robot_init` and
 `wb_robot_cleanup` functions in the Java, Python, C++ and MATLAB APIs. In
 these languages the necessary initialization and cleanup of the controller
 library is done automatically.
@@ -501,7 +501,7 @@ in the user guide).
 
 The integers can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the *wb_robot_[gs]et_mode* functions"
+%figure "Helper enumeration to interpret the integer argument and return value of the `wb_robot_[gs]et_mode` functions"
 
 | Mode                         | Purpose                |
 | ---------------------------- | ---------------------- |

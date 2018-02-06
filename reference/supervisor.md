@@ -282,8 +282,8 @@ p' = R * p + T
 
 where *p* is a point whose coordinates are given with respect to the local
 coordinate system of a node, *R* the rotation matrix returned by
-`wb_supervisor_node_get_orientation(node)`, *T* is the position returned by
-`wb_supervisor_node_get_position(node)` and *p'* represents the same point but
+the `wb_supervisor_node_get_orientation` function, *T* is the position returned by
+the `wb_supervisor_node_get_position` function and *p'* represents the same point but
 this time with coordinates expressed in the global (world) coordinate system.
 
 The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
@@ -708,7 +708,7 @@ with the current simulation mode, i.e., if the simulation is currently paused,
 is running in real-time, or in fast mode with or without the graphical
 renderings. The macros described in the [table](#simulation-modes) are matching
 with the return value of this function. The value returned by this function is
-updated during the previous function call of the `wb_robot_init` or of the
+updated during the previous function call of the `wb_robot_init` or
 `wb_robot_step` functions.
 
 The `wb_supervisor_simulation_set_mode` function allows to set the simulation
@@ -791,7 +791,7 @@ simulator process, asking it to stop the movement of all physics-enabled solids
 in the world. It means that for any [Solid](solid.md) node containing a
 [Physics](physics.md) node, the linear and angular velocities of the
 corresponding body are reset to 0, hence the inertia is also zeroed. This is
-actually implemented by calling the ODE `dBodySetLinearVel` and
+actually implemented by calling the ODE's `dBodySetLinearVel` and
 `dBodySetAngularVel` functions for all bodies with a zero velocity parameter.
 This function is especially useful for resetting a robot to its initial position
 and inertia. To stop the inertia of a single [Solid](solid.md) node please refer
@@ -894,19 +894,19 @@ int wb_supervisor_field_get_count(WbFieldRef field);
 
 **Description**
 
-The `wb_supervisor_field_get_type` returns the data type of a field found
+The `wb_supervisor_field_get_type` function returns the data type of a field found
 previously from the `wb_supervisor_node_get_field` function, as a symbolic
 value. If the argument is NULL, the function returns 0. Field types are defined
 in "webots/supervisor.h" and include for example: `WB_SF_FLOAT`, `WB_MF_NODE`,
 `WB_SF_STRING`, etc.
 
-The `wb_supervisor_field_get_type_name` returns a text string corresponding to
+The `wb_supervisor_field_get_type_name` function returns a text string corresponding to
 the data type of a field found previously from the
 `wb_supervisor_node_get_field` function. Field type names are defined in the
 VRML97 specifications and include for example: `"SFFloat"`, `"MFNode"`,
 `"SFString"`, etc. If the argument is NULL, the function returns the empty string.
 
-The `wb_supervisor_field_get_count` returns the number of items of a multiple
+The `wb_supervisor_field_get_count` function returns the number of items of a multiple
 field (MF) passed as an argument to this function. If a single field (SF) or
 NULL is passed as an argument to this function, it returns -1. Hence, this
 function can also be used to test if a field is MF (like `WB_MF_INT32`) or SF

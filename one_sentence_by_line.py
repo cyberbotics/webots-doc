@@ -55,6 +55,10 @@ for filename in glob.glob('*/*.md'):
                 flushBuffer(f)
                 skipUntil = '> ```'
                 f.write(line)
+            elif line.startswith('        '):
+                flushBuffer(f)
+                skipUntil = '\n'
+                f.write(line)
             else:
                 pBuffer += line
         flushBuffer(f)

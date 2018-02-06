@@ -745,7 +745,6 @@ window.onscroll=function(){
     updateMenuScrollbar();
 };
 
-
 document.addEventListener("DOMContentLoaded", function() {
   initializeHandle();
 

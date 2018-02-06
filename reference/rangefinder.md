@@ -123,14 +123,14 @@ int wb_range_finder_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-`wb_range_finder_enable()` allows the user to enable range-finder updates.
+The `wb_range_finder_enable` function allows the user to enable range-finder updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_range_finder_disable()` turns the range-finder off, saving computation time.
+The `wb_range_finder_disable` function turns the range-finder off, saving computation time.
 
-The `wb_range_finder_get_sampling_period()` function returns the period given
-into the `wb_range_finder_enable()` function, or 0 if the device is disabled.
+The `wb_range_finder_get_sampling_period` function returns the period given
+into the `wb_range_finder_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -208,7 +208,7 @@ float wb_range_finder_image_get_depth(const float *range_image, int width, int x
 
 **Description**
 
-The `wb_range_finder_get_range_image()` macro allows the user to read the
+The `wb_range_finder_get_range_image` macro allows the user to read the
 contents of the last range image grabbed by a range-finder. The range image is
 computed using the depth buffer produced by the OpenGL rendering. Each pixel
 corresponds to the distance expressed in meter from the object to the plane
@@ -227,15 +227,15 @@ internally. The size in bytes of the range image can be computed as follows:
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 
-The `wb_range_finder_image_get_depth()` macro is a convenient way to access a
+The `wb_range_finder_image_get_depth` macro is a convenient way to access a
 range value, directly from its pixel coordinates. The `range_finder_width`
-parameter can be obtained from the `wb_range_finder_get_width()` function. The
+parameter can be obtained from the `wb_range_finder_get_width` function. The
 `x` and `y` parameters are the coordinates of the pixel in the image.
 
 > **Note** [Python]:
 The RangeFinder class has two methods for getting the range-finder image. The
-`getRangeImage()` returns a one-dimensional list of floats, while the
-`getRangeImageArray()` returns a two-dimensional list of floats. Their content
+`getRangeImage` function returns a one-dimensional list of floats, while the
+`getRangeImageArray` function returns a two-dimensional list of floats. Their content
 are identical but their handling is of course different.
 
 ---
@@ -254,8 +254,8 @@ int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int qualit
 
 **Description**
 
-The `wb_range_finder_save_image()` function allows the user to save a `tag`
-image which was previously obtained with the `wb_range_finder_get_image()`
+The `wb_range_finder_save_image` function allows the user to save a `tag`
+image which was previously obtained with the `wb_range_finder_get_image`
 function. The image can be saved in a file using the PNG, JPEG, or TIFF format. The image
 format is specified by the `filename` parameter. If `filename` is terminated by
 `.png`, the image format is PNG. Similarly, if `filename` is terminated by `.jpg` or
@@ -271,6 +271,6 @@ as 32-bit floating-point single-channel images. For PNG and JPEG, depth data is 
 range `0` to `255`, and for TIFF depth data is in the range `0.0` to `1.0`. This depth data can thus
 be extracted for further use by reading the image file.
 
-The return value of the `wb_range_finder_save_image()` is 0 in case of success.
+The return value of the `wb_range_finder_save_image` function is 0 in case of success.
 It is -1 in case of failure (unable to open the specified file or unrecognized
 image file extension).

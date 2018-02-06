@@ -75,8 +75,8 @@ any problem, or possible improvement about these files.
 ### Display information to Webots console
 
 On Linux and macOS, the MATLAB output is redirected as is to the Webots
-console. This means you can use all the MATLAB display features (`disp()`,
-`display()`, omitting the semicolon character at the end of a statement, etc.).
+console. This means you can use all the MATLAB display features including the `disp`
+and `display` (omitting the semicolon character at the end of a statement.).
 
 On Windows, the MATLAB output is not redirected to the Webots console. The
 `wb_console_print(text, stream)` function should be used to display some text in
@@ -95,7 +95,7 @@ MATLAB. Webots comes only in 64-bit flavors and therefore it can only
 inter-operate with a 64 bit version of MATLAB.
 
 On some platforms the MATLAB interface needs `perl` and `gcc` to be installed
-separately. These tools are required because MATLAB's `loadlibrary()` function
+separately. These tools are required because MATLAB's `loadlibrary` function
 will need to recompile Webots header files on the fly. According to MATLAB's
 documentation this will be the case on 64-bit systems, and hence we advice
 64-bit Webots users (on Linux) to make sure that these packages are installed on

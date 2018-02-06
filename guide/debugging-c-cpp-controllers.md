@@ -111,9 +111,9 @@ precisely by using the `where` command of `gdb`. For example type:
 ```
 
 By examining carefully the call stack you can locate the source of the error. In
-this example we will assume that the `sprintf()` function is OK, because it is
+this example we will assume that the `sprintf` function is OK, because it is
 in a system library. Therefore it seems that the problem is caused by an illegal
-use of the `sprintf()` function in the `run()` function. The line 106 of the
+use of the `sprintf` function in the `run` function. The line 106 of the
 source file "soccer\_supervisor.c" must be examined closely. While the
 controller is still in memory you can query the values of some variables in
 order to understand what happened. For example, you can use the `frame` and
@@ -131,7 +131,7 @@ $1 = 0x0
 The `frame` command instructs the debugger to select the specified stack frame,
 and the `print` command prints the current value of an expression. In this
 simple example we clearly see that the problem is caused by a NULL (0x0)
-*time\_string* argument passed to the `sprintf()` function. The next steps are
+*time\_string* argument passed to the `sprintf` function. The next steps are
 to: fix the problem, recompile the controller and revert the simulation to give
 it another try. Once it works correctly you can remove the *-g* flag from the
 Makefile.

@@ -10,11 +10,13 @@ def flushBuffer(f):
     global pBuffer
     txt = pBuffer
     txt = txt.replace('\n', ' ')
-    txt = txt.replace('i.e. ', 'i.e.@')
+    txt = txt.replace('i.e.', 'i@e@')
+    txt = txt.replace('etc.', 'etc@')
     txt = txt.replace('  ', ' ')
     txt = txt.replace('. ', '.\n')
     txt = txt.replace(' \n', '\n')
-    txt = txt.replace('i.e.@', 'i.e. ')
+    txt = txt.replace('i@e@', 'i.e.')
+    txt = txt.replace('etc@', 'etc.')
     txt = txt.rstrip()
     f.write(txt)
     f.write('\n')

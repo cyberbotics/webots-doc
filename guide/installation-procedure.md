@@ -146,8 +146,8 @@ gdebi webots_{{ webots.version.debian_package }}_amd64.deb
 
 Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
 
-* `xserver-xorg-core`
-* `libpulse0`
+- `xserver-xorg-core`
+- `libpulse0`
 
 These packages are automatically installed when using the DEB package, but in case of the tarball package the user has to manually install them.
 

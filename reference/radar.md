@@ -160,14 +160,14 @@ int wb_radar_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-`wb_radar_enable()` allows the user to enable radar updates.
+The `wb_radar_enable` function allows the user to enable radar updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_radar_disable()` turns the radar off, saving computation time.
+The `wb_radar_disable` function turns the radar off, saving computation time.
 
-The `wb_radar_get_sampling_period()` function returns the period given into the
-`wb_radar_enable()` function, or 0 if the device is disabled.
+The `wb_radar_get_sampling_period` function returns the period given into the
+`wb_radar_enable` function, or 0 if the device is disabled.
 
 ---
 

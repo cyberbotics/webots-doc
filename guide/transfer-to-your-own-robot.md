@@ -25,7 +25,7 @@ simulated robot, it sends commands to and reads sensor data from the real robot.
 Developing such a remote control system can be achieved in a very simple manner by
 writing your own implementation of the Webots API functions as a small library.
 For example, you will probably have to implement the
-`wb_motor_set_velocity()` function to send a specific command to the
+`wb_motor_set_velocity` function to send a specific command to the
 real robot with the wheel speeds as an argument. This command can be sent to the
 real robot via the serial port of the PC, or any other PC-robot interface you
 have. You will probably need to make some unit conversions, since your robot may
@@ -42,14 +42,14 @@ described in [this section](controller-plugin.md#remote-control-plugin).
 
 #### Special functions
 
-The `wb_robot_init()` function must be the first called function. It performs
+The `wb_robot_init` function must be the first called function. It performs
 the controller library's initialization.
 
-The `wb_robot_step()` function should be called repeatedly (typically in an
+The `wb_robot_step` function should be called repeatedly (typically in an
 infinite loop). It requests that the simulator performs a simulation step of ms
 milliseconds; that is, to advance the simulation by this amount of time.
 
-The `wb_robot_cleanup()` function should be called at the end of a program in
+The `wb_robot_cleanup` function should be called at the end of a program in
 order to leave the controller in a clean fashion.
 
 #### Running your real robot

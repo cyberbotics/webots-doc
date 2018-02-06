@@ -81,7 +81,7 @@ geometrical primitives in `boundingObject`.
     The Ixx values are expressed in kg*m^2. The principals moments of inertia must
     be positive. The inertia matrix is defined with respect to the `centerOfMass` of
     the [Solid](solid.md). Internally, these 6 values are passed unchanged to the
-    `dMassSetParameters()` ODE function.
+    ODE's `dMassSetParameters` function.
 
 - The `damping` field allows to specify a [Damping](damping.md) node that defines
 the velocity damping parameters to be applied to the [Solid](solid.md).

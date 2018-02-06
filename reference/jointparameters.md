@@ -84,7 +84,7 @@ was applied to the [Joint](joint.md)'s child initially in zero position.
 For example if we have a [HingeJoint](hingejoint.md) and a `position` field
 value of 1.5708, this means that this [HingeJoint](joint.md) is 90 degrees from
 its initial rotation with respect to the hinge rotation axis. The values passed
-to the `wb_motor_set_position()` function are specified with respect to the zero
+to the `wb_motor_set_position` function are specified with respect to the zero
 position. The values of the `minStop` and `maxStop` fields are also defined with
 respect to the zero position.
 

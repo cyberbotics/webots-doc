@@ -118,13 +118,13 @@ The entry points of a native robot window controller plugin are:
 - `void wbw_read_sensors()`
 
     This function is called when it is time to read the sensors values from the
-    Webots API. For example in this callback the `wb_distance_sensor_get_value`
+    Webots API. For example in this callback function the `wb_distance_sensor_get_value`
     function can be called.
 
 - `void wbw_write_actuators()`
 
     This function is called when it is time to write the actuator commands from the
-    Webots API. For example in this callback the `wb_motor_set_position` function
+    Webots API. For example in this callback function the `wb_motor_set_position` function
     can be called.
 
 - `void wbw_show()`

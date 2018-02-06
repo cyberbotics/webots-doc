@@ -91,8 +91,8 @@ control the collision. If you don't wish to handle a particular collision you
 should return 0 to inform Webots that the default collision handling code must
 be used.
 
-Otherwise you should use ODE's `dCollide` function to find the contact points
-between the colliding objects and then you can create contact joints using ODE's
+Otherwise you should use the ODE's `dCollide` function to find the contact points
+between the colliding objects and then you can create contact joints using the ODE's
 `dJointCreateContact` function. Normally the contact joints should be created
 within the contact joint group given by the `dWebotsGetContactJointGroup`
 function. Note that this contact joint group is automatically emptied after each
@@ -118,13 +118,13 @@ and orientation of bodies or add forces and torques to bodies.
 ### void webots\_physics\_step\_end()
 
 This function is called right after every physics simulation step (call to the
-ODE `dWorldStep` function). It can be used to read values out of
+ODE's `dWorldStep` function). It can be used to read values out of
 `dJointFeedback` structures. ODE's `dJointFeedback` structures are used to know
 how much torque and force is added by a specific joint to the joined bodies (see
 ODE User Guide for more information). For example, if the plugin has registered
-`dJointFeedback` structures (using ODE's function `dJointSetFeedback`), then
+`dJointFeedback` structures (using the ODE's `dJointSetFeedback` function), then
 the structures will be filled during the `dWorldStep` function call and the result can be read
-straight afterwards in the `webots_physics_step_end` call.
+straight afterwards in the `webots_physics_step_end` function call.
 
 ### void webots\_physics\_cleanup()
 

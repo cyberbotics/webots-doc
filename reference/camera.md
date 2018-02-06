@@ -395,7 +395,7 @@ itself. The size in bytes of this memory chunk can be computed as follows:
 Internal pixel format of the buffer is BGRA (32 bits). Attempting to read
 outside the bounds of this chunk will cause an error.
 
-The `wb_camera_image_get_red, wb_camera_image_get_green` and
+The `wb_camera_image_get_red`, `wb_camera_image_get_green` and
 `wb_camera_image_get_blue` macros can be used for directly accessing the pixel
 RGB levels from the pixel coordinates. The `wb_camera_image_get_gray` macro
 works in a similar way but returns the gray level of the specified pixel by

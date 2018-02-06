@@ -82,7 +82,7 @@ searches for an object named "MY\_ROBOT" in the Scene Tree. Note that the name
 in question is the DEF name of the object, not the name field which is used to
 identify devices. The function returns a `WbNodeRef` which is an opaque and
 unique reference to the corresponding Scene Tree node. Then the call to
-`wb_supervisor_node_get_field` finds a `WbFieldRef` in the specified node. The
+`wb_supervisor_node_get_field` function finds a `WbFieldRef` in the specified node. The
 "translation" field represents the robot's position in the global (world)
 coordinate system.
 

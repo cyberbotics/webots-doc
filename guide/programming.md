@@ -57,7 +57,7 @@ the velocity directly:
 
 To get the angular velocity of a robot (or robot part) in the robot's controller
 code: add a `Gyro` node to the robot (or robot part), then use the
-`wb_robot_get_device, wb_gyro_enable` and `wb_gyro_get_values` functions.
+`wb_robot_get_device`, `wb_gyro_enable` and `wb_gyro_get_values` functions.
 You will find more information about the `Gyro` node and functions in the
 `Reference Manual`.
 

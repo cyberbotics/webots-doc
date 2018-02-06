@@ -31,7 +31,7 @@ therefore no mapping is applied.
 should be enabled or disabled for the specified axis. If one of these fields is
 set to FALSE, then the corresponding vector element will not be computed and it
 will return *NaN* (Not a Number). For example if zAxis is FALSE, then the
-second element of the array returned by the `wb\_compass\_get\_values` function
+second element of the array returned by the `wb_compass_get_values` function
 will always return *NaN*. The default is that all
 three axes are enabled (TRUE). Modifying these fields makes it possible to
 choose between a single, dual or a three-axis digital compass and to specify
@@ -74,7 +74,7 @@ the `wb_compass_enable` function, or 0 if the device is disabled.
 The `wb_compass_get_values` function returns the current [Compass](#compass)
 measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the [Compass](#compass) device. Here is the internal
-algorithm of `wb_compass_get_values` in pseudo-code:
+algorithm of the `wb_compass_get_values` function in pseudo-code:
 
 ```c
 float[3] wb_compass_get_values() {

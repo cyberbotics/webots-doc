@@ -88,8 +88,8 @@ simulation with the desired mechanical configuration.
 - `autoLock`: specifies if auto-locking is enabled or disabled. Auto-locking
 allows a connector to automatically lock when a compatible peer becomes present.
 In order to successfully auto-lock, both the `autoLock` and the `isLocked`
-fields must be TRUE when the peer becomes present, this means that
-`wb_connector_lock` must have been invoked earlier. The general idea of
+fields must be TRUE when the peer becomes present, this means that the
+`wb_connector_lock` function must have been invoked earlier. The general idea of
 `autoLock` is to allow passive locking. Many spring mounted latching mechanisms
 or magnetic systems passively lock their peer.
 

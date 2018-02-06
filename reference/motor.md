@@ -327,22 +327,22 @@ wb_motor_set_velocity(tag, desired_speed);  // rad/s
 ```
 
 > **Note** [C++]:
-In C++ use `std::numeric_limits<double>::infinity()` instead of INFINITY
+In C++, use the `std::numeric_limits<double>::infinity` function instead of INFINITY.
 
 <!-- -->
 
 > **Note** [Java]:
-In Java use `Double.POSITIVE_INFINITY` instead of INFINITY
+In Java use `Double.POSITIVE_INFINITY` instead of INFINITY.
 
 <!-- -->
 
 > **Note** [Python]:
-In Python use `float('+inf')` instead of INFINITY
+In Python use `float('+inf')` instead of INFINITY.
 
 <!-- -->
 
 > **Note** [Matlab]:
-In MATLAB use `inf` instead of INFINITY
+In MATLAB use `inf` instead of INFINITY.
 
 The `wb_motor_get_target_position` function allows the user to get the target
 position. This value matches with the argument given to the last
@@ -353,7 +353,7 @@ reach while moving to the target position. In other words, this means that the
 motor will accelerate (using the specified acceleration, see below) until the
 target velocity is reached. The velocity argument passed to this function cannot
 exceed the limit specified in the `maxVelocity` field. The specified velocity
-can be retrieved using the `wb_motor_get_velocity` function and
+can be retrieved using the `wb_motor_get_velocity` function. The
 `wb_motor_get_max_velocity` function returns the limit specified in the
 `maxVelocity` field. Note that if the velocity is not explicitly set using
 the `wb_motor_set_velocity` function, then the `wb_motor_get_velocity` and
@@ -371,7 +371,7 @@ the motor to carry out the requested motion. The motor force/torque specified
 with this function cannot exceed the value specified in the
 `maxForce`/`maxTorque` field. The specified force (resp. torque) can be
 retrieved using the `wb_motor_get_available_force` (resp.
-`wb_motor_get_available_torque`) function and `wb_motor_get_max_force`
+`wb_motor_get_available_torque`) function. The `wb_motor_get_max_force`
 (reps. `wb_motor_get_max_torque`) function returns the limit specified in the
 `maxForce` (resp. `maxTorque`) field. Note that if the force/torque is not
 explicitly set using the `wb_motor_set_available_[force|torque]` function, then the
@@ -429,12 +429,12 @@ current position. For a "rotational" motor, the returned value is a torque
 [N\*m]; for a "linear" motor, the value is a force [N]. The returned value is an
 approximation computed by the physics engine, and therefore it may be
 inaccurate. The returned value normally does not exceed the available motor
-force (resp. torque) specified with `wb_motor_set_force` (resp.
-`wb_motor_set_torque`). The default value is provided by the `maxForce` (resp.
+force (resp. torque) specified with the `wb_motor_set_force` (resp.
+`wb_motor_set_torque`) function. The default value is provided by the `maxForce` (resp.
 `maxTorque` field. Note that this function measures the *current motor force*
 (resp. *torque*) exclusively, all other external or internal forces (resp.
-torques) that may apply to the motor are ignored. In particular,
-`wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) does
+torques) that may apply to the motor are ignored. In particular, the
+`wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function does
 not measure:
 
 - The spring and damping forces that apply when the `springConstant` or
@@ -494,7 +494,7 @@ the *force* parameter specifies the amount of force [N] that will be applied
 along the sliding axis. A positive *force* (resp. *torque*) will move the bodies
 in the positive direction, which corresponds to the direction of the motor when
 its position value increases. When invoking the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) functions, the specified *force* (resp. *torque*) parameter
+`wb_motor_set_torque`) function, the specified *force* (resp. *torque*) parameter
 cannot exceed the currently available force (resp. torque) of the motor.
 The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling the `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function.
 
@@ -527,7 +527,7 @@ This function allows the user to retrieve the motor type defined by the `type`
 field. If the value of the `type` field is "linear", this function returns
 WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
 
-%figure "Return values for the `wb_motor_get_type()` function"
+%figure "Return values for the `wb_motor_get_type` function"
 
 | Motor.type   | return value |
 | ------------ | ------------ |

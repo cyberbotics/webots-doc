@@ -136,7 +136,7 @@ The `wb_receiver_next_packet` function deletes the head packet. The next
 packet in the queue, if any, becomes the new head packet. The user must copy
 useful data from the head packet, before calling the `wb_receiver_next_packet` function. It
 is illegal to call the `wb_receiver_next_packet` function when the queue is empty
-(`wb_receiver_get_queue_length` == 0). Here is a usage example:
+(i.e. when `wb_receiver_get_queue_length() == 0`). Here is a usage example:
 
 ```c
 while (wb_receiver_get_queue_length(tag) > 0) {
@@ -201,7 +201,7 @@ The `wb_receiver_get_data` function returns the data of the packet at the head
 of the reception queue (see [this figure](#receiver-s-packet-queue)). The
 returned data pointer is only valid until the next call to the
 `wb_receiver_next_packet` function. It is illegal to call the `wb_receiver_get_data` function when
-the queue is empty (i.e. when the `wb_receiver_get_queue_length` function returns 0). The
+the queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`). The
 [Receiver](#receiver) node knows nothing about that structure of the data being
 sent but its byte size. The emitting and receiving code is responsible to agree
 on a specific format.
@@ -210,7 +210,7 @@ The `wb_receiver_get_data_size` function returns the number of data bytes
 present in the head packet of the reception queue. The *data size* is always
 equal to the *size* argument of the corresponding `emitter_send_packet` function call.
 It is illegal to call the `wb_receiver_get_data_size` function when the queue is empty
-(i.e. when the `wb_receiver_get_queue_length` function returns 0).
+(i.e. when `wb_receiver_get_queue_length() == 0`).
 
 > **Note** [Python]:
 The `getData` function returns a string. Similarly to the `sendPacket`
@@ -296,7 +296,7 @@ signal strength is equal to the inverse of the distance between the emitter and
 the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
 strength and *r* is the distance between emitter and receiver.
 If the packet is sent from a physics plugin, the returned value will be positive infinity.
-It is illegal to call this function if the receiver's queue is empty (i.e. when the `wb_receiver_get_queue_length` function returns 0).
+It is illegal to call this function if the receiver's queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`).
 
 The `wb_receiver_get_emitter_direction` function also operates on the head
 packet in the receiver's queue. It returns a normalized (length=1) vector that
@@ -310,7 +310,7 @@ left of the receiver while a negative  *x *-component indicates that the emitter
 is located to the right.
 If the packet is sent from a physics plugin, the returned values will be NaN (Not a Number).
 The returned vector is valid only until the next call to the `wb_receiver_next_packet` function.
-It is illegal to call this function if the receiver's queue is empty (i.e. when the `wb_receiver_get_queue_length` function returns 0).
+It is illegal to call this function if the receiver's queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`).
 
 > **Note** [Python]:
 The `getEmitterDirection` function returns the vector as a list containing three floats.

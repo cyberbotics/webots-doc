@@ -40,7 +40,7 @@
   padding-bottom: 0;
   margin-bottom: 0;
   overflow: auto;
-  background: #eee;
+  background: lightblue;
 }
 .webots-doc .default#center {
   top: 0px !important;
@@ -175,7 +175,7 @@
   border-radius: 2px;
   overflow-x: auto;
   font-size: 16px;
-  font-family: "Inconsolata";
+  font-family: "Roboto Mono";
 }
 .webots-doc code {
   padding: 0;
@@ -190,8 +190,13 @@
   border-radius: 4px;
 }
 .webots-doc a code {
-  color: #a88;
+  font-family: "Roboto Mono";
 }
+
+.webots-doc code > a {
+  font-family: "Roboto Mono";
+}
+
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3 {
@@ -295,8 +300,11 @@
   word-wrap: break-word;
 }
 .webots-doc .api table {
-  font-family: monospace;
+  font-family: "Roboto Mono";
   width: 80%;
+}
+.webots-doc .api td > a {
+  font-family: "Roboto Mono";
 }
 .webots-doc ul {
   clear: both;

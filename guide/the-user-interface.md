@@ -69,7 +69,7 @@ In order to reset the simulation, the following steps are performed:
     - **Brake**: The brake is released.
     - **Charger**: The `battery` field and the `emissiveColor` field of the Material node of the first Shape child node are restored.
     - **Connector**: If attached, the connector is detached and the value of the `isLocked` field is restored.
-    - **Emitter-Receiver**: the message queue is cleared.
+    - **Emitter-Receiver**: The message queue is cleared.
     - **Joint/Motor**: The position, velocity, acceleration, available torque and available force are restored.
     - **LED**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a Shape node, the `emissiveColor` field of its Material node is restored.
     - **Lidar**: The position of the rotating head is restored.

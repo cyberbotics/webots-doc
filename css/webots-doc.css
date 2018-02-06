@@ -170,9 +170,9 @@
 .webots-doc pre {
   padding: 30px 10px 30px 40px;
   margin: 20px 10px;
-  background-color: #282A2E;
-  color: #DFE1E1;
-  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 2px;
   overflow-x: auto;
   font-size: 16px;
   font-family: "Inconsolata";

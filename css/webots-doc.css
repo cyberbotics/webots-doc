@@ -189,14 +189,9 @@
   padding: 2px 6px;
   border-radius: 4px;
 }
-.webots-doc a code {
-  font-family: "Roboto Mono";
-}
-
 .webots-doc code > a {
   font-family: "Roboto Mono";
 }
-
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3 {

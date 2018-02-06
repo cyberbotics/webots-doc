@@ -64,8 +64,8 @@ avoidance behavior based on the use of a SICK LIDAR (see the
 "WEBOTS\_HOME/projects/robots/pioneer/pioneer3at/controller" directory).
 
 The Pioneer 3-AT motors are RotationalMotor nodes named according to [this
-figure](#pioneer-3-at-motor-names). The `wb_set_motor_position()` and
-`wb_set_motor_velocity()` functions allow the user to manage the rotation of the
+figure](#pioneer-3-at-motor-names). The `wb_set_motor_position` and
+`wb_set_motor_velocity` functions allow the user to manage the rotation of the
 wheels. The sonar sensors are numbered according to [this
 figure](#sonar-sensors-positions).
 
@@ -151,8 +151,8 @@ simulation example of an obstacle avoidance behavior based on a Microsoft
 kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
 
 The Pioneer 3-DX motors are RotationalMotor nodes named according to [this
-figure](#pioneer-3-dx-motor-names). The `wb_set_motor_position()` and
-`wb_set_motor_velocity()` functions allow the user to manage the rotation of the
+figure](#pioneer-3-dx-motor-names). The `wb_set_motor_position` and
+`wb_set_motor_velocity` functions allow the user to manage the rotation of the
 wheels. The sonar sensors are numbered according to [this
 figure](#sonar-sensors-positions).
 

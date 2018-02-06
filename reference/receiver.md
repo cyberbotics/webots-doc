@@ -93,7 +93,7 @@ int wb_receiver_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-`wb_receiver_enable()` starts the receiver listening for incoming data packets.
+The `wb_receiver_enable` function starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate
 of once every `sampling_period` (expressed in milliseconds). Incoming data packet are appended to the tail
 of the reception queue (see [this figure](#receiver-s-packet-queue)). Incoming
@@ -103,10 +103,10 @@ packets should be read at a high enough rate by the controller program.
 The `sampling_period` argument specifies the sampling period of the [Receiver](#receiver) and is expressed in milliseconds.
 The [Receiver](#receiver) node receives and queues the incoming packets since it is enabled, but the first data packets can only be retrieved after the first sampling period elapsed.
 
-The function `wb_receiver_disable()` stops the background listening.
+The `wb_receiver_disable` function stops the background listening.
 
-The `wb_receiver_get_sampling_period()` function returns the period given into
-the `wb_receiver_enable()` function, or 0 if the device is disabled.
+The `wb_receiver_get_sampling_period` function returns the period given into
+the `wb_receiver_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -125,18 +125,18 @@ void wb_receiver_next_packet(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_get_queue_length()` function returns the number of data packets
+The `wb_receiver_get_queue_length` function returns the number of data packets
 currently present in the receiver's queue (see [this
 figure](#receiver-s-packet-queue)).
 
 The [Receiver](#receiver) node receives and queues the data packets immediately so that they will be available at the next sampling period.
 But the [Emitter](#emitter) node needs one basic time step to send the message.
 
-The `wb_receiver_next_packet()` function deletes the head packet. The next
+The `wb_receiver_next_packet` function deletes the head packet. The next
 packet in the queue, if any, becomes the new head packet. The user must copy
-useful data from the head packet, before calling `wb_receiver_next_packet()`. It
-is illegal to call `wb_receiver_next_packet()` when the queue is empty
-(`wb_receiver_get_queue_length()` == 0). Here is a usage example:
+useful data from the head packet, before calling the `wb_receiver_next_packet` function. It
+is illegal to call the `wb_receiver_next_packet` function when the queue is empty
+(i.e. when `wb_receiver_get_queue_length() == 0`). Here is a usage example:
 
 ```c
 while (wb_receiver_get_queue_length(tag) > 0) {
@@ -175,7 +175,7 @@ then the Receivers will receive, on average, one data packet at each step, but
 they may sometimes get zero packets, and sometimes two! Therefore it is
 recommend to write code that is tolerant to variations in the transmission
 timing and that can deal with the eventuality of receiving several or no packets
-at all during a particular time step. The `wb_receiver_get_queue_length()`
+at all during a particular time step. The `wb_receiver_get_queue_length`
 function should be used to check how many packets are actually present in the
 [Receiver](#receiver)'s queue. Making assumptions based on timing will result in
 code that is not robust.
@@ -197,23 +197,23 @@ int wb_receiver_get_data_size(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_get_data()` function returns the data of the packet at the head
+The `wb_receiver_get_data` function returns the data of the packet at the head
 of the reception queue (see [this figure](#receiver-s-packet-queue)). The
-returned data pointer is only valid until the next call to the function
-`wb_receiver_next_packet()`. It is illegal to call `wb_receiver_get_data()` when
-the queue is empty (`wb_receiver_get_queue_length()` == 0). The
+returned data pointer is only valid until the next call to the
+`wb_receiver_next_packet` function. It is illegal to call the `wb_receiver_get_data` function when
+the queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`). The
 [Receiver](#receiver) node knows nothing about that structure of the data being
 sent but its byte size. The emitting and receiving code is responsible to agree
 on a specific format.
 
-The `wb_receiver_get_data_size()` function returns the number of data bytes
+The `wb_receiver_get_data_size` function returns the number of data bytes
 present in the head packet of the reception queue. The *data size* is always
-equal to the *size* argument of the corresponding `emitter_send_packet()` call.
-It is illegal to call `wb_receiver_get_data_size()` when the queue is empty
-(`wb_receiver_get_queue_length()` == 0).
+equal to the *size* argument of the corresponding `emitter_send_packet` function call.
+It is illegal to call the `wb_receiver_get_data_size` function when the queue is empty
+(i.e. when `wb_receiver_get_queue_length() == 0`).
 
 > **Note** [Python]:
-The `getData()` function returns a string. Similarly to the `sendPacket()`
+The `getData` function returns a string. Similarly to the `sendPacket`
 function of the [Emitter](emitter.md) device, using the functions of the struct
 module is recommended for sending primitive data types. Here is an example for
 getting the data:
@@ -228,9 +228,9 @@ getting the data:
 <!-- -->
 
 > **Note** [Matlab]:
-The Matlab `wb_receiver_get_data()` function returns a MATLAB *libpointer*. The
+The Matlab `wb_receiver_get_data` function returns a MATLAB *libpointer*. The
 receiving code is responsible for extracting the data from the *libpointer*
-using MATLAB's `setdatatype()` and `get()` functions. Here is an example on how
+using MATLAB's `setdatatype` and `get` functions. Here is an example on how
 to send and receive a 2x3 MATLAB matrix.
 
 > ```matlab
@@ -252,11 +252,11 @@ to send and receive a 2x3 MATLAB matrix.
 > end
 > ```
 
-> The MATLAB `wb_receiver_get_data()` function can also take a second argument
+> The MATLAB `wb_receiver_get_data` function can also take a second argument
 that specifies the type of the expected data. In this case the function does not
 return a *libpointer* but an object of the specified type, and it is not
-necessary to call `setdatatype()` and `get()`. For example
-`wb_receiver_get_data()` can be used like this:
+necessary to call `setdatatype` and `get` functions. For example
+the `wb_receiver_get_data` function can be used like this:
 
 > ```matlab
 > % receiving robot
@@ -270,7 +270,7 @@ necessary to call `setdatatype()` and `get()`. For example
 > ```
 
 > The available types are 'uint8', 'double' and 'string'. More sophisticated data
-typed must be accessed explicitly using `setdatatype()` and `get()`.
+typed must be accessed explicitly using `setdatatype` and `get` functions.
 
 ---
 
@@ -289,16 +289,16 @@ const double *wb_receiver_get_emitter_direction(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_get_signal_strength()` function operates on the head packet in
+The `wb_receiver_get_signal_strength` function operates on the head packet in
 the receiver's queue (see [this figure](#receiver-s-packet-queue)). It returns
 the simulated signal strength at the time the packet was transmitted. This
 signal strength is equal to the inverse of the distance between the emitter and
 the receiver squared. In other words, *s = 1 / r^2*, where *s* is the signal
 strength and *r* is the distance between emitter and receiver.
 If the packet is sent from a physics plugin, the returned value will be positive infinity.
-It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
+It is illegal to call this function if the receiver's queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`).
 
-The function `wb_receiver_get_emitter_direction()` also operates on the head
+The `wb_receiver_get_emitter_direction` function also operates on the head
 packet in the receiver's queue. It returns a normalized (length=1) vector that
 indicates the direction of the emitter with respect to the receiver's coordinate
 system. The three vector components indicate the *x, y *, and  *z*-directions of
@@ -309,11 +309,11 @@ upwards), a positive *x *-component indicates that the emitter is located to the
 left of the receiver while a negative  *x *-component indicates that the emitter
 is located to the right.
 If the packet is sent from a physics plugin, the returned values will be NaN (Not a Number).
-The returned vector is valid only until the next call to `wb_receiver_next_packet()`.
-It is illegal to call this function if the receiver's queue is empty (`wb_receiver_get_queue_length()` == 0).
+The returned vector is valid only until the next call to the `wb_receiver_next_packet` function.
+It is illegal to call this function if the receiver's queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`).
 
 > **Note** [Python]:
-`getEmitterDirection()` returns the vector as a list containing three floats.
+The `getEmitterDirection` function returns the vector as a list containing three floats.
 
 ---
 
@@ -332,14 +332,14 @@ int wb_receiver_get_channel(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_set_channel()` function allows a receiver to change its
+The `wb_receiver_set_channel` function allows a receiver to change its
 reception channel. It modifies the `channel` field of the corresponding
 [Receiver](#receiver) node. Normally, a receiver can only receive data packets
 from emitters that use the same channel. However, the special
 WB\_CHANNEL\_BROADCAST value can be used to listen simultaneously to all
 channels.
 
-The `wb_receiver_get_channel()` function returns the current channel number of
+The `wb_receiver_get_channel` function returns the current channel number of
 the receiver.
 
 > **Note** [C++, Java, Python]:

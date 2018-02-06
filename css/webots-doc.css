@@ -40,13 +40,23 @@
   padding-bottom: 0;
   margin-bottom: 0;
   overflow: auto;
+  background: lightgray;
 }
 .webots-doc .default#center {
   top: 0px !important;
 }
+.webots-doc #content {
+  max-width: calc(1000px - 4em);
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+}
+.webots-doc #title-content {
+  margin: 0;
+}
 .webots-doc #view,
 .webots-doc #title {
-  background-color: white;
+  background-color: transparent;
   width: calc(100% - 4em);
   margin: 1em 1em 0;
   padding: 0 1em 2px 0;
@@ -56,6 +66,7 @@
   margin-top: 0px;
   margin-left: 40px;
   padding-bottom: 0;
+  padding-top: 40px;
 }
 .webots-doc #view {
   margin-left: 40px;
@@ -237,7 +248,8 @@
   font-style: italic;
 }
 .webots-doc #view table {
-  max-width: 80%;
+  table-layout: fixed;
+  width: 80%;
   margin: 20px auto 20px auto;
   text-align: left;
   color: #333;
@@ -260,6 +272,7 @@
   border-style: solid;
   border-color: #ddd;
   background-color: transparent;
+  word-wrap: break-word;
 }
 .webots-doc .api table {
   font-family: monospace;

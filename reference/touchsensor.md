@@ -63,7 +63,7 @@ this reason, a "force" sensor must be oriented such that its positive *z*-axis
 points outside of the robot, in the direction where the force needs to me
 measured. For example if the [TouchSensor](#touchsensor) is used as foot sensor
 then the *z*-axis should be oriented downwards. The scalar force value must be
-read using the `wb_touch_sensor_get_value()` function.
+read using the `wb_touch_sensor_get_value` function.
 
 #### "force-3d" Sensors
 
@@ -71,7 +71,7 @@ A "force-3d" [TouchSensor](#touchsensor) returns a 3d-vector that represents the
 cumulative force currently applied to its body. This 3d-vector is expressed in
 the coordinate system of the [TouchSensor](#touchsensor). The length of the
 vector reflects the magnitude of the force. The force vector must be read using
-the `wb_touch_sensor_get_values()` function.
+the `wb_touch_sensor_get_values` function.
 
 %figure "TouchSensor types"
 
@@ -90,7 +90,7 @@ the `wb_touch_sensor_get_values()` function.
 A "force" and "force-3d" sensors can optionally specify a `lookupTable` to
 simulate the possible non-linearity (and saturation) of the real device. The
 `lookupTable` allows the user to map the simulated force measured in Newtons (N)
-to an output value that will be returned by the `wb_touch_sensor_get_value()`
+to an output value that will be returned by the `wb_touch_sensor_get_value`
 function. The value returned by the force sensor is first computed by the ODE
 physics engine, then interpolated using the `lookupTable`, and finally noise is
 added (if specified in the lookupTable). Each line of the `lookupTable` contains
@@ -164,21 +164,21 @@ const double *wb_touch_sensor_get_values(WbDeviceTag tag);
 
 **Description**
 
-`wb_touch_sensor_enable()` allows the user to enable touch sensor measurements.
+The `wb_touch_sensor_enable` function allows the user to enable touch sensor measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period has elapsed.
 
-`wb_touch_sensor_disable()` turns the touch sensor off, saving computation time.
+The `wb_touch_sensor_disable` function turns the touch sensor off, saving computation time.
 
-`wb_touch_sensor_get_value()` returns the last value measured by a "bumper" or
+The `wb_touch_sensor_get_value` function returns the last value measured by a "bumper" or
 "force" [TouchSensor](#touchsensor). This function can be used with a sensor of
 type "bumper" or "force". For a "force" sensor, the value may be altered by an
 optional lookup table. For a "bumper" sensor, the value can be 0.0 or 1.0.
 
-The `wb_touch_sensor_get_sampling_period()` function returns the period given
-into the `wb_touch_sensor_enable()` function, or 0 if the device is disabled.
+The `wb_touch_sensor_get_sampling_period` function returns the period given
+into the `wb_touch_sensor_enable` function, or 0 if the device is disabled.
 
-`wb_touch_sensor_get_values()` returns the last force vector measured by a
+The `wb_touch_sensor_get_values` function returns the last force vector measured by a
 "force-3d" [TouchSensor](#touchsensor). This function can be used with a sensor
 of type "force-3d" exclusively.
 
@@ -203,7 +203,7 @@ This function allows the user to retrieve the touch sensor type defined by the
 returns WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns
 WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
 
-%figure "Return values for the *wb_touch_sensor_get_type()* function"
+%figure "Return values for the `wb_touch_sensor_get_type` function"
 
 | TouchSensor.type | return value               |
 | ---------------- | -------------------------- |

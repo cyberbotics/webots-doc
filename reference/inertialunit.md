@@ -54,8 +54,8 @@ the *yaw* angle should be computed. The `zAxis` field defines whether the
 *pitch* angle should be computed. If one of these fields is set to FALSE, then
 the corresponding angle element will not be computed and it will return *NaN*
 (Not a Number). For example if `zAxis` is FALSE, then
-`wb_inertial_unit_get_values()[2]` returns *NaN*. The default is that all three
-axes are enabled (TRUE).
+the second element of the array returned by the `wb_inertial_unit_get_values` function returns *NaN*.
+The default is that all three axes are enabled (TRUE).
 
 %figure "Roll, pitch and yaw angles in Webots' Inertial Unit"
 
@@ -88,17 +88,17 @@ const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 
 **Description**
 
-The `wb_inertial_unit_enable()` function turns on the angle measurements.
+The `wb_inertial_unit_enable` function turns on the angle measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_inertial_unit_disable()` function turns off the
+The `wb_inertial_unit_disable` function turns off the
 [InertialUnit](#inertialunit) device.
 
-The `wb_inertial_unit_get_sampling_period()` function returns the period given
-into the `wb_inertial_unit_enable()` function, or 0 if the device is disabled.
+The `wb_inertial_unit_get_sampling_period` function returns the period given
+into the `wb_inertial_unit_enable` function, or 0 if the device is disabled.
 
-The `wb_inertial_unit_get_roll_pitch_yaw()` function returns the current *roll*,
+The `wb_inertial_unit_get_roll_pitch_yaw` function returns the current *roll*,
 *pitch* and *yaw* angles of the [InertialUnit](#inertialunit). The values are
 returned as an array of 3 components therefore only the indices 0, 1, and 2 are
 valid for accessing the returned array. Note that the indices 0, 1 and 2 return
@@ -127,11 +127,11 @@ oriented towards the west. The *yaw* angle can be used as a compass.
 > **Note** [C, C++]:
 The returned vector is a pointer to internal values managed by the Webots,
 therefore it is illegal to free this pointer. Furthermore, note that the pointed
-values are only valid until the next call to `wb_robot_step()` or
-`Robot::step()`. If these values are needed for a longer period they must be
+values are only valid until the next call to the `wb_robot_step` or
+`Robot::step` functions. If these values are needed for a longer period they must be
 copied.
 
 <!-- -->
 
 > **Note** [Python]:
-`getRollPitchYaw()` returns the angles as a list containing three floats.
+The `getRollPitchYaw` function returns the angles as a list containing three floats.

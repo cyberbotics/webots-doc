@@ -27,7 +27,7 @@ several simulated robots in the same world using several instances of the same
 party software to control several robots through several TCP/IP connections. To
 allow the "tcpip" process to open a different port depending on the controlled
 robot, you should give a different `name` to each robot and use the
-`robot_get_name()` in the "tcpip" controller to retrieve this name and decide
+`robot_get_name` function in the "tcpip" controller to retrieve this name and decide
 which port to open for each robot.
 
 The second advantage is that you can also control a real robot from your third

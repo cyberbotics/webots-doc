@@ -14,7 +14,7 @@ void dJointSetHingeSuspensionAxis (dJointID, dReal x, dReal y, dReal z);
 void dJointGetHingeSuspensionAxis (dJointID, dVector3 result);
 ```
 
-Furthermore, the `dJointSetHingeParam()` and `dJointGetHingeParam()` functions
+Furthermore, the `dJointSetHingeParam` and `dJointGetHingeParam` functions
 support `dParamSuspensionERP` and `dParamSuspensionCFM` parameters.
 
 ### Hinge 2 joint

@@ -51,7 +51,7 @@ obstacle).
 > **Theory**:
 The **controller API** is the programming interface that gives you access to the
 simulated sensors and actuators of the robot. For example, including the
-"webots/distance\_sensor.h" file allows to use the `wb_distance_sensor_*()`
+"webots/distance\_sensor.h" file allows to use the `wb_distance_sensor_*`
 functions and with these functions you can query the values of the
 DistanceSensor nodes. The documentation on the API functions can be found in
 Chapter 3 of the `Reference Manual` together with the description of each node.
@@ -94,7 +94,7 @@ in order to be able to use the corresponding API (documented in chapter 3 of the
 
 > **Hands on**:
 Just after the include statements add a macro that defines the duration of each
-physics step. This macro will be used as argument to the `wb_robot_step()`
+physics step. This macro will be used as argument to the `wb_robot_step`
 function, and it will also be used to enable the devices. This duration is
 specified in milliseconds and it must be a multiple of the value in the
 `basicTimeStep` field of the WorldInfo node.
@@ -106,15 +106,15 @@ specified in milliseconds and it must be a multiple of the value in the
 <!-- -->
 
 > **Theory**:
-The function called `main()` is where the controller program starts execution.
-The arguments passed to main() are given by the `controllerArgs` field of the
-Robot node. The Webots API has to be initialized using the `wb_robot_init()`
-function and it has to be cleaned up using the `wb_robot_cleanup()` function.
+The `main` function is where the controller program starts execution.
+The arguments passed to the `main` function are given by the `controllerArgs` field of the
+Robot node. The Webots API has to be initialized using the `wb_robot_init`
+function and it has to be cleaned up using the `wb_robot_cleanup` function.
 
 <!-- -->
 
 > **Hands on**:
-Write the prototype of the `main()` function as follows:
+Write the prototype of the `main` function as follows:
 
 > ```c
 > // entry point of the controller
@@ -139,7 +139,7 @@ Write the prototype of the `main()` function as follows:
 
 > **Theory**:
 A robot device is referenced by a `WbDeviceTag`. The `WbDeviceTag` is retrieved
-by the `wb_robot_get_device()` function. Then it is used as first argument in
+by the `wb_robot_get_device` function. Then it is used as first argument in
 every function call concerning this device.
 
 > A sensor such as the DistanceSensor has to be enabled before use. The second
@@ -334,13 +334,13 @@ int main(int argc, char **argv)
 Here is a quick summary of the key points you need to understand before continuing
 on:
 
-- The controller entry point is the `main()` function like any standard C program.
-- No Webots function should be called before the call of the `wb_robot_init()`
+- The controller entry point is the `main` function like any standard C program.
+- No Webots function should be called before the call of the `wb_robot_init`
 function.
 - The last function to call before leaving the main function is the
-`wb_robot_cleanup()` function.
+`wb_robot_cleanup` function.
 - A device is referenced by the `name` field of its device node. The reference of
-the node can be retrieved thanks to the `wb_robot_get_device()` function.
+the node can be retrieved thanks to the `wb_robot_get_device` function.
 - Each controller program is executed as a child process of the Webots process. A
 controller process does not share any memory with Webots (except the cameras'
 images) and it can run on another CPU (or CPU core) than Webots.

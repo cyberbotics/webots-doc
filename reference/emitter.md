@@ -43,7 +43,7 @@ a message if it is located within the emission sphere. A value of -1 (the
 default) for `range` is considered to be an infinite range.
 
 - `maxRange`: defines the maximum value allowed for `range`. This field defines
-the maximum value that can be set using `wb_emitter_set_range()`. A value of -1
+the maximum value that can be set using the `wb_emitter_set_range` function. A value of -1
 (the default) for `maxRange` is considered to be infinite.
 
 - `aperture` opening angle of the emission cone (in radians); for "infra-red"
@@ -106,7 +106,7 @@ int wb_emitter_send(WbDeviceTag tag, const void *data, int size);
 
 **Description**
 
-The `wb_emitter_send()` function adds to the emitter's queue a packet of `size` bytes located at the address indicated by `data`.
+The `wb_emitter_send` function adds to the emitter's queue a packet of `size` bytes located at the address indicated by `data`.
 The enqueued data packets will then be sent to potential receivers (and removed from the emitter's queue) at the rate specified by the `baudRate` field of the [Emitter](#emitter) node.
 Note that independently from the `baudRate`, the [Emitter](#emitter) node will need at least one basic time step to send the packet but the [Receiver](#receiver) node will receive it immediately.
 Moreover a packet will not be sent to its emitter robot.
@@ -134,7 +134,7 @@ wb_emitter_send(tag, array, 5 * sizeof(double));
 ```
 
 > **Note** [Python]:
-The `send()` function sends a string. For sending primitive data types into this
+The `send` function sends a string. For sending primitive data types into this
 string, the *struct* module can be used. This module performs conversions
 between Python values and C structs represented as Python strings. Here is an
 example:
@@ -149,7 +149,7 @@ example:
 <!-- -->
 
 > **Note** [Java]:
-The Java `send()` method does not have a `size` argument because the size is
+The Java `send` method does not have a `size` argument because the size is
 implicitly passed with the `data` argument. Here is an example of sending a Java
 string in a way that is compatible with a C string, so that it can be received
 in a C/C++ controller.
@@ -181,13 +181,13 @@ int wb_emitter_get_channel(WbDeviceTag tag);
 
 **Description**
 
-The `wb_emitter_set_channel()` function allows the controller to change the
+The `wb_emitter_set_channel` function allows the controller to change the
 transmission channel. This modifies the `channel` field of the corresponding
 [Emitter](#emitter) node. Normally, an emitter can send data only to receivers
 that use the same channel. However, the special WB\_CHANNEL\_BROADCAST value can
 be used for broadcasting to all channels. By switching the channel number an
 emitter can selectively send data to different receivers. The
-`wb_emitter_get_channel()` function returns the current channel number of the
+`wb_emitter_get_channel` function returns the current channel number of the
 emitter.
 
 > **Note** [C++, Java, Python]:
@@ -211,14 +211,14 @@ double wb_emitter_get_range(WbDeviceTag tag);
 
 **Description**
 
-The `wb_emitter_set_range()` function allows the controller to change the
+The `wb_emitter_set_range` function allows the controller to change the
 transmission range at run-time. Data packets can only reach receivers located
 within the emitter's range. This function modifies the `range` field of the
 corresponding [Emitter](#emitter) node. If the specified `range` argument is
 larger than the `maxRange` field of the [Emitter](#emitter) node then the
-current range will be set to `maxRange`. The `wb_emitter_get_range()` function
-returns the current emitter's range. For both the `wb_emitter_set_range()` and
-`emitter_get_range()` functions, a value of -1 indicates an infinite range.
+current range will be set to `maxRange`. The `wb_emitter_get_range` function
+returns the current emitter's range. For both the `wb_emitter_set_range` and
+`emitter_get_range` functions, a value of -1 indicates an infinite range.
 
 ---
 
@@ -236,9 +236,9 @@ int wb_emitter_get_buffer_size(WbDeviceTag tag);
 
 **Description**
 
-The `wb_emitter_get_buffer_size()` function returns the size (in bytes) of the
+The `wb_emitter_get_buffer_size` function returns the size (in bytes) of the
 transmission buffer. This corresponds to the value specified by the `bufferSize`
 field of the [Emitter](#emitter) node. The buffer size indicates the maximum
 number of data bytes that the emitter's queue can hold in total, if the size is
 -1, the number of data bytes is not limited. When the buffer is full, calls to
-`wb_emitter_send()` will fail and return 0.
+the `wb_emitter_send` function will fail and return 0.

@@ -9,9 +9,9 @@ your callback functions.
 This function looks for a [Solid](solid.md) node with the specified name and
 returns the corresponding dBodyID. The returned dBodyID is an ODE object that
 represent a rigid body with properties such as mass, velocity, inertia, etc. The
-dBodyID object can then be used with all the available ODE `dBody*()` functions
+dBodyID object can then be used with all the available ODE's `dBody*` functions
 (see ODE documentation). For example it is possible to add a force to the body
-with `dBodyAddForce()`, etc. The prototype of this function is:
+with the `dBodyAddForce` function, etc. The prototype of this function is:
 
 ```c
 dBodyID dWebotsGetBodyFromDEF(const char *DEF);
@@ -55,7 +55,7 @@ returns the corresponding dGeomID. A dGeomID is an ODE object that represents a
 geometrical shape such as a sphere, a cylinder, a box, etc., or a coordinate
 system transformation. The dGeomID returned by Webots corresponds to the
 boundingObject of the [Solid](solid.md). The dGeomID object can then be used
-with all the available ODE `dGeom*()` functions (see ODE documentation). The
+with all the available ODE's `dGeom*` functions (see ODE documentation). The
 prototype of this function is:
 
 ```c
@@ -74,8 +74,8 @@ to test for NULL returned values, because passing a NULL dGeomID to an ODE
 function is illegal and will crash the plugin and Webots.
 
 Using the returned dGeomID, it is also possible to obtain the corresponding
-dBodyID object using ODE's `dGeomGetBody()` function. This is an alternative to
-calling the `dWebotsGetGeomFromDEF()` function described above.
+dBodyID object using ODE's `dGeomGetBody` function. This is an alternative to
+calling the `dWebotsGetGeomFromDEF` function described above.
 
 Note that this function returns only the top level dGeomID of the
 boundingObject, but the boundingObject can be made of a whole hierarchy of
@@ -88,9 +88,9 @@ of the boundingObject.
 ### dWebotsGetContactJointGroup()
 
 This function allows you to retrieve the contact joint group where to create the
-contacts. It is typically called inside the `webots_physics_collide()` function.
+contacts. It is typically called inside the `webots_physics_collide` function.
 Remark that this group may change during the time and should be retrieved at
-each `webots_physics_collide()` call.
+each `webots_physics_collide` call.
 
 ### dGeomSetDynamicFlag(dGeomID geom)
 
@@ -117,13 +117,13 @@ It is also useful if your physics plugin implements some actuators (like an
 Akermann drive model), and needs to receive motor commands from a robot
 controller.
 
-The physics plugin API provides the `dWebotsSend()` function to send messages to
-robot controllers and the `dWebotsReceive()` function to receive messages from
+The physics plugin API provides the `dWebotsSend` function to send messages to
+robot controllers and the `dWebotsReceive` function to receive messages from
 robot controllers. In order to receive messages from the physics plugin, a robot
 has to contain a [Receiver](receiver.md) node set to an appropriate channel (see
 Reference Manual) and with a `baudRate` set to -1 (for infinite communication
 speed).
-Messages are sent from the physics plugin using the `dWebotsSend()`
+Messages are sent from the physics plugin using the `dWebotsSend`
 function, and received through the receiver API as if they were sent by an
 [Emitter](emitter.md) node with an infinite range and baud rate.
 Additionally the resulting signal strength will be positive infinity and the emitter direction will be NaN (Not a Number).
@@ -132,17 +132,17 @@ Similarly, in order to send messages to the physics plugin, a robot has to conta
 receives data sent on this channel). The `range` and `baudRate` fields of the
 [Emitter](emitter.md) node should be set to -1 (infinite). Messages are sent to
 the physics plugin using the standard [Emitter](emitter.md) API functions. They
-are received by the physics plugin through the `dWebotsReceive()` function.
+are received by the physics plugin through the `dWebotsReceive` function.
 
 ```c
 void dWebotsSend(int channel,const void *buffer,int size);
 const void *dWebotsReceive(int *size);
 ```
 
-The `dWebotsSend()` function sends `size` bytes of data contained in `buffer`
+The `dWebotsSend` function sends `size` bytes of data contained in `buffer`
 over the specified communication `channel`.
 
-The `dWebotsReceive()` function receives any data sent on channel 0. If no data
+The `dWebotsReceive` function receives any data sent on channel 0. If no data
 was sent, it returns NULL; otherwise it returns a pointer to a buffer containing
 the received data. If `size` is non-NULL, it is set to the number of bytes of
 data available in the returned buffer. If multiple messages are sent to the
@@ -190,7 +190,7 @@ double dWebotsGetTime(void);
 ### dWebotsConsolePrintf()
 
 This function prints a line of formatted text to the Webots console. The format
-argument is the same as the standard C `printf()` function, i.e., the format
+argument is the same as the standard C `printf` function, i.e., the format
 string may contain format characters defining conversion specifiers, and
 optional extra arguments should match these conversion specifiers. A prefix and
 a '\n' (new line) character will automatically be added to each line. A '\f'

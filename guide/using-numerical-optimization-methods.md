@@ -60,7 +60,7 @@ my_exit:
 In this example the robot runs for 30 simulated seconds and then the fitness is
 evaluated and the robot is moved back to it initial position. Note that this
 controller needs to be executed in a `Supervisor` in order to access the
-`wb_supervisor_field_*()` functions that are necessary to read and reset the
+`wb_supervisor_field_*` functions that are necessary to read and reset the
 robot's position. So when using this approach, the robot must be based on a
 `Supervisor` node in the Scene Tree.
 
@@ -99,8 +99,8 @@ resetting the robot:
 #### Using the wb\_supervisor\_field\_set\_*() and wb\_supervisor\_simulation\_reset\_physics() functions
 
 You can easily reset the position, orientation and physics of the robot using
-the `wb_supervisor_field_set...()` and
-`wb_supervisor_simulation_reset_physics()` functions, here is an example:
+the `wb_supervisor_field_set...` and
+`wb_supervisor_simulation_reset_physics` functions, here is an example:
 
 ```c
 // get handles to the robot's translation and rotation fields
@@ -121,7 +121,7 @@ position and orientation. This may be fine for some types of optimization, but
 insufficient for others. Although it is possible to add more parameters to the
 set of data to be reset, it is sometimes difficult to reset everything. Neither
 motor positions, nor the robot controller(s) are reset this way. The motor
-positions should be reset using the `wb_motor_set_position()` and the robot
+positions should be reset using the `wb_motor_set_position` function and the robot
 controller should be reset by sending a message from the supervisor process to
 the robot controller process (using Webots `Emitter` / `Receiver` communication
 system). The robot controller program should be able to handle such a message
@@ -132,12 +132,12 @@ and reset its state accordingly.
 This function restarts the physics simulation and all controllers from the very
 beginning. With this method, everything is reset, including the physics and the
 motor positions and the controllers. But this function does also restart the
-controller that called `wb_supervisor_world_reload()`, this is usually the
+controller that called the `wb_supervisor_world_reload` function, this is usually the
 controller that runs the optimization algorithm, and as a consequence the
 optimization state is lost. Hence for using this technique, it is necessary to
 develop functions that can save and restore the complete state of the
 optimization algorithm. The optimization state should be saved before calling
-`wb_supervisor_world_reload()` and reloaded when the `Supervisor`
+the `wb_supervisor_world_reload` function and reloaded when the `Supervisor`
 controller restarts. Here is a pseudo-code example:
 
 ```c
@@ -188,10 +188,10 @@ int main() {
 }
 ```
 
-If this technique is used with Genetic Algorithms for example, then the function
-`optimizer_save_state()` should save at least all the genotypes and fitness
+If this technique is used with Genetic Algorithms for example, then the
+`optimizer_save_state` function should save at least all the genotypes and fitness
 results of the current GA population. If this technique is used with Particle
-Swarm Optimization, then the `optimizer_save_state()` function should at least
+Swarm Optimization, then the `optimizer_save_state` function should at least
 save the position, velocity and fitness of all particles currently in the swarm.
 
 #### By starting and quitting Webots
@@ -208,7 +208,7 @@ from the same initial state. The drawback of this method is that the
 optimization algorithm has to be programmed outside of Webots. This external
 program can be written in any programming language, e.g. shell script, C, PHP,
 perl, etc., provided that there is a way to call Webots and wait for its
-termination, e.g. like the C standard `system()` does. On the contrary, the
+termination, e.g. like the C standard `system` function does. On the contrary, the
 parameter evaluation must be implemented in a Webots controller.
 
 With this approach, the optimization algorithm and the robot controller(s) run
@@ -219,7 +219,7 @@ write the genotypes values into a text file then call Webots. When Webots
 starts, the robot controller reads the genotype file and carries out the
 parameter evaluation. When the robot controller finishes the evaluation, it
 writes the fitness result into another text file and then it calls the
-`wb_supervisor_simulation_quit()` function to terminate Webots. Then the control
+`wb_supervisor_simulation_quit` function to terminate Webots. Then the control
 flow returns to the optimization program that can read the resulting fitness,
 associate fitness with the current genotype and proceed with the next genotype.
 

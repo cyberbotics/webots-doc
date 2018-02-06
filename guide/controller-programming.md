@@ -32,23 +32,23 @@ Webots C API (Application Programming Interface) is provided by regular C header
 files. These header files must be included using statements like `#include
 <webots/xyz.h>` where `xyz` represents the name of a Webots node in lowercase.
 Like with any regular C code it is also possible to include the standard C
-headers, e.g. `#include <stdio.h>`. A call to the initialization function
-`wb_robot_init()` is required before any other C API function call. This
+headers, e.g. `#include <stdio.h>`. A call to the initialization
+`wb_robot_init` function is required before any other C API function call. This
 function initializes the communication between the controller and Webots.
-`wb_robot_cleanup()` does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly. Note that  `wb_robot_init()` and `wb_robot_cleanup()` exist only in the C API, they do not have any equivalent in the other supported programming languages.
+The `wb_robot_cleanup` function does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly. Note that the `wb_robot_init` and `wb_robot_cleanup` functions exist only in the C API, they do not have any equivalent in the other supported programming languages.
 
 Usually the highest level control code is placed inside a `for` or a `while`
-loop. Within that loop there is a call to the `wb_robot_step()` function. This
-function synchronizes the controller's data with the simulator. The function
-`wb_robot_step()` needs to be present in every controller and it must be called
+loop. Within that loop there is a call to the `wb_robot_step` function. This
+function synchronizes the controller's data with the simulator. The `wb_robot_step` function
+needs to be present in every controller and it must be called
 at regular intervals, therefore it is usually placed in the main loop as in the
 above example. The value 32 specifies the duration of the control steps, i.e.,
-the function  `wb_robot_step()` shall compute 32 milliseconds of simulation and
+the `wb_robot_step` function shall compute 32 milliseconds of simulation and
 then return. This duration specifies an amount of simulated time, not real (wall
 clock) time, so it may actually take 1 millisecond or one minute of real time,
 depending on the complexity of the simulated world.
 
-Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step()` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling `wb_robot_cleanup()`.
+Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling the `wb_robot_cleanup` function.
 
 ### Reading Sensors
 
@@ -82,7 +82,7 @@ int main() {
 
 As you can notice, prior to using a device, it is necessary to get the
 corresponding device tag (`WbDeviceTag`); this is done using the
-`wb_robot_get_device()` function. The `WbDeviceTag` is an opaque type that is
+`wb_robot_get_device` function. The `WbDeviceTag` is an opaque type that is
 used to identify a device in the controller code. Note that the string passed to
 this function, *"my\_distance\_sensor"* in this example, refers to a device name
 specified in the robot description (".wbt" or ".proto" file). If the robot has
@@ -90,25 +90,25 @@ no device with the specified name, this function returns 0.
 
 Each sensor must be enabled before it can be used. If a sensor is not enabled it
 returns undefined values. Enabling a sensor is achieved by using the corresponding
-`wb_*_enable()` function, where the star (*) stands for the sensor type. Every
-`wb_*_enable()` function allows to specify an update delay in milliseconds. The
+`wb_*_enable` function, where the star (`*`) stands for the sensor type. Every
+`wb_*_enable` function allows to specify an update delay in milliseconds. The
 update delay specifies the desired interval between two updates of the sensor's
 data.
 
 In the usual case, the update delay is chosen to be similar to the control step
-(`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step()`.
+(`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step` function call.
 If, for example, the update delay is chosen to be twice the control step then
-the sensor data will be updated every two `wb_robot_step()`: this can be used to
+the sensor data will be updated every two `wb_robot_step` function calls: this can be used to
 simulate a slow device. Note that a larger update delay can also speed up the
 simulation, especially for CPU intensive devices like the `Camera`. On the
 contrary, it would be pointless to choose an update delay smaller than the
 control step, because it will not be possible for the controller to process the
 device's data at a higher frequency than that imposed by the control step. It is
 possible to disable a device at any time using the corresponding
-`wb_*_disable()` function. This may increase the simulation speed.
+`wb_*_disable` function. This may increase the simulation speed.
 
-The sensor value is updated during the call to `wb_robot_step()`. The call to
-`wb_distance_sensor_get_value()` retrieves the latest value.
+The sensor value is updated during the call to the `wb_robot_step` function. The call to
+the `wb_distance_sensor_get_value` function retrieves the latest value.
 
 Note that some device return vector values instead of scalar values, for example
 these functions:
@@ -165,18 +165,18 @@ The example below shows how to make a rotational motor oscillate with a 2 Hz
 sine signal.
 
 Just like sensors, each Webots actuator must be identified by a `WbDeviceTag`
-returned by the `wb_robot_get_device()` function. However, unlike sensors,
+returned by the `wb_robot_get_device` function. However, unlike sensors,
 actuators don't need to be expressly enabled; they actually don't have
-`wb_*_enable()` functions.
+`wb_*_enable` functions.
 
 To control a motion, it is generally useful to decompose that motion in discrete
 steps that correspond to the control step. As before, an infinite loop is used
 here: at each iteration a new target position is computed according to a sine
-equation. The `wb_motor_set_position()` function stores a new position request
-for the corresponding rotational motor. Note that `wb_motor_set_position()`
+equation. The `wb_motor_set_position` function stores a new position request
+for the corresponding rotational motor. Note that the `wb_motor_set_position` function
 stores the new position, but it does not immediately actuate the motor. The
-effective actuation starts on the next line, in the call to `wb_robot_step()`.
-The `wb_robot_step()` function sends the actuation command to the
+effective actuation starts on the next line, in the call to the `wb_robot_step` function.
+The `wb_robot_step` function sends the actuation command to the
 `RotationalMotor` but it does not wait for the `RotationalMotor` to complete the
 motion (i.e. reach the specified target position); it just simulates the motor's
 motion for the specified number of milliseconds.
@@ -208,17 +208,17 @@ int main() {
 }
 ```
 
-When `wb_robot_step()` returns, the motor has moved by a certain (linear or
+When the `wb_robot_step` function returns, the motor has moved by a certain (linear or
 rotational) amount which depends on the target position, the duration of the
-control step (specified with `wb_robot_step()`), the velocity, acceleration,
+control step (specified with the `wb_robot_step` function argument), the velocity, acceleration,
 force, and other parameters specified in the ".wbt" description of the `Motor`.
 For example, if a very small control step or a low motor velocity is specified,
-the motor will not have moved much when `wb_robot_step()` returns. In this case
+the motor will not have moved much when the `wb_robot_step` function returns. In this case
 several control steps are required for the `RotationalMotor` to reach the target
 position. If a longer duration or a higher velocity is specified, then the motor
-may have fully completed the motion when `wb_robot_step()` returns.
+may have fully completed the motion when the `wb_robot_step` function returns.
 
-Note that `wb_motor_set_position()` only specifies the *desired* target
+Note that the `wb_motor_set_position` function only specifies the *desired* target
 position. Just like with real robots, it is possible (in physics-based
 simulations only), that the `RotationalMotor` is not able to reach this
 position, because it is blocked by obstacles or because the motor's torque
@@ -226,15 +226,15 @@ position, because it is blocked by obstacles or because the motor's torque
 
 If you want to control the motion of several `RotationalMotor`s simultaneously,
 then you need to specify the desired position for each `RotationalMotor`
-separately, using    `wb_motor_set_position()`. Then you need to call
-`wb_robot_step()` once to actuate all the `RotationalMotor`s simultaneously.
+separately, using the `wb_motor_set_position` function. Then you need to call
+the `wb_robot_step` function once to actuate all the `RotationalMotor`s simultaneously.
 
 ### Simulation step and wb\_robot\_step()
 
 Webots uses two different time steps:
 
 - The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
-- The control step (specified as an argument of the `wb_robot_step()` function for each robot)
+- The control step (specified as an argument of the `wb_robot_step` function for each robot)
 
 The simulation step is the value specified in `WorldInfo.basicTimeStep` (in
 milliseconds). It indicates the duration of one step of simulation, i.e. the
@@ -244,23 +244,23 @@ the simulation step also specifies the interval between two computations of the
 forces and torques that need to be applied to the simulated rigid bodies.
 
 The control step is the duration of an iteration of the control loop. It
-corresponds to the parameter passed to the `wb_robot_step()` function. The
-`wb_robot_step()` function advances the controller time of the specified
+corresponds to the parameter passed to the `wb_robot_step` function. The
+`wb_robot_step` function advances the controller time of the specified
 duration. It also synchronizes the sensors and actuators data with the simulator
 according to the controller time.
 
-Every controller needs to call `wb_robot_step()` at regular intervals. If a
-controller does not call `wb_robot_step()` the sensors and actuators won't be
+Every controller needs to call the `wb_robot_step` function at regular intervals. If a
+controller does not call the `wb_robot_step` function, then the sensors and actuators won't be
 updated and the simulator will block (in synchronous mode only). Because it
-needs to be called regularly, `wb_robot_step()` is usually placed in the main
+needs to be called regularly, the `wb_robot_step` function call is usually placed in the main
 loop of the controller.
 
 The execution of a simulation step is an atomic operation: it cannot be
 interrupted. Hence a sensor measurement or a motor actuation can only take place
 between two simulation steps. For that reason the control step specified with
-each `wb_robot_step()` must be a multiple of the simulation step. So, for
+each `wb_robot_step` function calls must be a multiple of the simulation step. So, for
 example, if the simulation step is 16 ms, then the control step argument passed
-to `wb_robot_step()` can be 16, 32, 64, 128, etc.
+to the `wb_robot_step` function can be 16, 32, 64, 128, etc.
 
 If the simulation is run in step-by-step mode, i.e., by clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
 The following [figure](#controller_synchronization) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
@@ -271,24 +271,24 @@ The following [figure](#controller_synchronization) depicts in details the synch
 
 %end
 
-At every step, all the commands before the `wb_robot_step()` statements are executed first and the simulation stops in the middle of the execution of `wb_robot_step()`.
-Webots API functions are executed but they are applied to the simulation world only when processing `wb_robot_step()` request, that is when the controller process communicates with Webots process.
+At every step, all the commands before the `wb_robot_step` function call statements are executed first and the simulation stops in the middle of the execution of the `wb_robot_step` function.
+Webots API functions are executed but they are applied to the simulation world only when calling the `wb_robot_step` function, that is when the controller process communicates with Webots process.
 When the simulation stops, the new simulation status has already been computed, the simulation time has been updated and the new sensors values are ready.
 Note that the first step includes the initialization too.
-So all the statements before the second `wb_robot_step()` statement are executed.
+So all the statements before the second `wb_robot_step` function call are executed.
 
 ### Using Sensors and Actuators Together
 
 Webots and each robot controller are executed in separate processes. For
 example, if a simulation involves two robots, there will be three processes in
 total: one for Webots and two for the two robots. Each controller process
-exchanges sensors and actuators data with the Webots process during the calls to
-`wb_robot_step()`. So for example, `wb_motor_set_position()` does not
+exchanges sensors and actuators data with the Webots process during the `wb_robot_step` function calls.
+So for example, the `wb_motor_set_position` function does not
 immediately send the data to Webots. Instead it stores the data locally and the
-data is effectively sent when `wb_robot_step()` is called.
+data is effectively sent when the `wb_robot_step` function is called.
 
 For that reason the following code snippet is a bad example. Clearly, the value
-specified with the first call to `wb_motor_set_position()` will be overwritten
+specified with the first call to the `wb_motor_set_position` function will be overwritten
 by the second call:
 
 ```c
@@ -308,7 +308,7 @@ while (wb_robot_step(40) != -1) {
 }
 ```
 
-since there was no call to `wb_robot_step()` between the two sensor readings,
+since there was no call to the `wb_robot_step` function between the two sensor readings,
 the values returned by the sensor cannot have changed in the meantime. A working
 version would look like this:
 
@@ -323,7 +323,7 @@ while (wb_robot_step(40) != -1) {
 }
 ```
 
-However, the generally recommended approach is to have a single `wb_robot_step()`
+However, the generally recommended approach is to have a single `wb_robot_step` function
 call in the main control loop, and to use it to update all the sensors and
 actuators simultaneously, like this:
 
@@ -334,7 +334,7 @@ while (wb_robot_step(TIME_STEP) != -1) {
 }
 ```
 
-Note that it is important to call `wb_robot_step()` at the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors()` function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence, the following is not a good example:
+Note that it is important to call the `wb_robot_step` function at the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors` function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence, the following is not a good example:
 
 ```c
 do {
@@ -395,7 +395,7 @@ int main() {
 In the ".wbt" file, it is possible to specify arguments that are passed to a
 controller when it starts. They are specified in the `controllerArgs` field of
 the `Robot, Supervisor` or `DifferentialWheels` node, and they are passed as
-parameters of the `main()` function. For example, this can be used to specify
+parameters of the `main` function. For example, this can be used to specify
 parameters that vary for each robot's controller.
 
 For example if we have:
@@ -438,7 +438,7 @@ argv[3]=three
 
 ### Controller Termination
 
-Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reverted, a new simulation is loaded, or the controller name is changed in the Webots scene tree. The controller cannot prevent its own termination but it can be notified shortly before this happens. The `wb_robot_step()` function returns -1 when the controller process is going to be terminated by Webots. Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots. Here is an example that shows how to save data before the upcoming termination:
+Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reverted, a new simulation is loaded, or the controller name is changed in the Webots scene tree. The controller cannot prevent its own termination but it can be notified shortly before this happens. The `wb_robot_step` function returns -1 when the controller process is going to be terminated by Webots. Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots. Here is an example that shows how to save data before the upcoming termination:
 
 ```c
 #include <webots/robot.h>
@@ -474,7 +474,7 @@ the search may terminate when a solution is found or after a fixed number of
 iterations (or generations).
 
 In this case the controller should just save the experiment results and quit by
-returning from the `main()` function or by calling the `exit()` function. This
+returning from the `main` function or by calling the `exit` function. This
 will terminate the controller process and freeze the simulation at the current
 simulation step. The physics simulation and every robot involved in the
 simulation will stop.
@@ -489,7 +489,7 @@ if (finished) {
 
 If only one robot controller needs to terminate but the simulation should
 continue with the other robots, then the terminating robot should call
-`wb_robot_cleanup()` right before quitting:
+the `wb_robot_cleanup` function right before quitting:
 
 ```c
 // terminate only this robot controller
@@ -500,7 +500,7 @@ if (finished) {
 }
 ```
 
-Note that the exit status as well as the value returned by the `main()` function
+Note that the exit status as well as the value returned by the `main` function
 are ignored by Webots.
 
 ### Shared libraries

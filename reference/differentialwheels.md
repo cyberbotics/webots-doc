@@ -32,7 +32,7 @@ A [DifferentialWheels](#differentialwheels) robot will automatically take
 control of its wheels if they are placed in the `children` field. The wheels
 must be [Solid](solid.md) nodes, and they must be named "right wheel" and "left
 wheel". If the wheel objects are found, Webots will automatically make them
-rotate at the speed specified by the `wb_differential_wheels_set_speed()`
+rotate at the speed specified by the `wb_differential_wheels_set_speed`
 function.
 
 The origin of the robot coordinate system is the projection on the ground plane
@@ -57,7 +57,7 @@ will be ignored by "physics" based models.
 - `maxAcceleration`: maximum acceleration of the wheels, expressed in *rad/s^2*.
 It is used only in "kinematics" mode.
 
-- `speedUnit`: defines the unit used in the `wb_differential_wheels_set_speed()`
+- `speedUnit`: defines the unit used in the `wb_differential_wheels_set_speed`
 function, expressed in *rad/s*.
 
 - `slipNoise`: slip noise added to each move expressed in percent. If the value is
@@ -219,8 +219,8 @@ friction parameters and the force of the motors (`maxForce` field of the
 encoder values are modified according to its actual rotation, even though the
 robot doesn't move.
 
-The `wb_differential_wheels_get_encoders_sampling_period()` function returns the
-period given into the `wb_differential_wheels_enable_encoders()` function, or 0
+The `wb_differential_wheels_get_encoders_sampling_period` function returns the
+period given into the `wb_differential_wheels_enable_encoders` function, or 0
 if the device is disabled.
 Note that the first encoders values will be available only after the first sampling period elapsed.
 
@@ -244,7 +244,7 @@ void wb_differential_wheels_set_encoders(double left, double right);
 
 These functions are used to read or set the values of the left and right
 encoders. The encoders must be enabled with
-`wb_differential_wheels_enable_encoders()`, so that the functions can read valid
+the `wb_differential_wheels_enable_encoders` function, so that the functions can read valid
 data. Additionally, the `encoderNoise` of the corresponding
 [DifferentialWheels](#differentialwheels) node should be positive. Setting the
 encoders' values will not make the wheels rotate to reach the specified value;

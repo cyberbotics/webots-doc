@@ -7,7 +7,7 @@ therefore not a device and the functions do not require any `WbDeviceTag`.
 > **Note** [Python]:
 In C++, Python and Java the keyboard functions are in a dedicated class called
 `Keyboard`. In order to get the `Keyboard` instance, you should call the
-`getKeyboard()` function of the `Robot` class.
+`getKeyboard` function of the `Robot` class.
 
 ### Keyboard Functions
 
@@ -31,10 +31,10 @@ int wb_keyboard_get_key();
 These functions allow you to read a key pressed on the computer keyboard from a
 controller program while the 3D window of Webots is selected and the simulation
 is running. First, it is necessary to enable keyboard input by calling the
-`wb_keyboard_enable()` function. The `sampling_period` parameter is expressed in
+`wb_keyboard_enable` function. The `sampling_period` parameter is expressed in
 milliseconds, and defines how frequently readings are updated.
 Note that the first key will be available only after the first sampling period elapsed.
-After that, values can be read by calling the `wb_keyboard_get_key()`
+After that, values can be read by calling the `wb_keyboard_get_key`
 function repeatedly until this function returns -1. The returned value, if
 non-negative, is a key code corresponding to a key currently pressed. If no
 modifier (shift, control or alt) key is pressed, the key code is the ASCII code
@@ -45,10 +45,10 @@ value. In this case, the returned value is the result of a binary OR between one
 of `WB_KEYBOARD_SHIFT`, `WB_KEYBOARD_CONTROL` or `WB_KEYBOARD_ALT` and the ASCII
 code (or the special value) of the pressed key according to which modifier key
 was pressed simultaneously.  If no key is currently pressed, the function will
-return -1. Calling the `wb_keyboard_get_key()` function a second time will
+return -1. Calling the `wb_keyboard_get_key` function a second time will
 return either -1 or the key code of another key which is currently
 simultaneously pressed. The function can be called up to 7 times to detect up to
-7 simultaneous keys pressed. The `wb_keyboard_disable()` function should be used
+7 simultaneous keys pressed. The `wb_keyboard_disable` function should be used
 to stop the keyboard readings.
 
 > **Note** [C++]:

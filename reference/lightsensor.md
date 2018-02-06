@@ -201,15 +201,15 @@ double wb_light_sensor_get_value(WbDeviceTag tag);
 
 **Description**
 
-`wb_light_sensor_enable()` enables light sensor measurements.
+The `wb_light_sensor_enable` function enables light sensor measurements.
 The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_light_sensor_disable()` turns off the light sensor to save CPU time.
+The `wb_light_sensor_disable` function turns off the light sensor to save CPU time.
 
-The `wb_light_sensor_get_sampling_period()` function returns the period given
-into the `wb_light_sensor_enable()` function, or 0 if the device is disabled.
+The `wb_light_sensor_get_sampling_period` function returns the period given
+into the `wb_light_sensor_enable` function, or 0 if the device is disabled.
 
-`wb_light_sensor_get_value()` returns the most recent value measured by the
+The `wb_light_sensor_get_value` function returns the most recent value measured by the
 specified light sensor. The returned value is the result of interpolating the
 irradiance *E* as described above with the sensor's `lookupTable`.

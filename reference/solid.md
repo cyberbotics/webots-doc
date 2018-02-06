@@ -49,7 +49,7 @@ value. If a scale coordinate is assigned a non-positive value, it is
 automatically changed to 1.
 
 - `name`: name of the solid. In derived device classes this corresponds to the
-device name argument used by `wb_robot_get_device()`. Note that the name cannot
+device name argument used by the `wb_robot_get_device` function. Note that the name cannot
 contain the colon character '`:`' and
 should preferably identify the solid uniquely, please refer to the
 [Unique Solid name](#unique-solid-name) section for further details.

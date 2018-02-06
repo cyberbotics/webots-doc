@@ -31,7 +31,7 @@ simulation becomes faster but less accurate. With a lower
 `WorldInfo.basicTimeStep`, the simulation becomes slower but more accurate.
 There is an additional restriction: `WorldInfo.basicTimeStep` must be chosen
 such as to be an integer divisor of the *control step* which is the value passed
-as parameter to the `wb_robot_step()` (or equivalent) function.
+as parameter to the `wb_robot_step` (or equivalent) function.
 4. Decrease the value of `WorldInfo.FPS`. This field represents the maximum rate at
 which the 3D display of the main windows is refreshed. With a lower value, the
 simulation becomes faster but more flickering. With a higher value, the

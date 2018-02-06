@@ -65,7 +65,7 @@ In order to reset the simulation, the following steps are performed:
   - All the nodes added during the simulation are removed.
   - All the sound sources are stopped.
   - The random seeds used by Webots internally are reset.
-  - All the nodes are reset. This has the following implication depending on the node type :
+  - All the nodes are reset. This has the following implication depending on the node type:
     - **Brake**: The brake is released.
     - **Charger**: The `battery` field and the `emissiveColor` field of the Material node of the first Shape child node are restored.
     - **Connector**: If attached, the connector is detached and the value of the `isLocked` field is restored.

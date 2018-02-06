@@ -31,8 +31,8 @@ the raw acceleration values are returned (no mapping).
 - `xAxis, yAxis, zAxis`: Each of these boolean fields enables or disables
 computation for the specified axis. If one of these fields is set to FALSE, then
 the corresponding vector element will not be computed and will return *NaN* (Not
-a Number). For example, if  `zAxis ` is FALSE, then
-`wb_accelerometer_get_values()[2]` will always return *NaN*. The default is that
+a Number). For example, if  `zAxis ` is FALSE, then second element of the array
+returned by the `wb_accelerometer_get_values` function will always be *NaN*. The default is that
 all three axes are enabled (TRUE). Modifying these fields makes it possible to
 choose between a single, dual or three-axis accelerometer and to specify which
 axes will be used.
@@ -63,16 +63,16 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 
 **Description**
 
-The `wb_accelerometer_enable()` function allows the user to enable the acceleration measurements.
+The `wb_accelerometer_enable` function allows the user to enable the acceleration measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_accelerometer_disable()` function turns the accelerometer off, saving
+The `wb_accelerometer_disable` function turns the accelerometer off, saving
 computation time.
 
-The `wb_accelerometer_get_sampling_period()` function returns the sampling period given to the `wb_accelerometer_enable()` function, or 0 if the device is disabled.
+The `wb_accelerometer_get_sampling_period` function returns the sampling period given to the `wb_accelerometer_enable` function, or 0 if the device is disabled.
 
-The `wb_accelerometer_get_values()` function returns the current values measured
+The `wb_accelerometer_get_values` function returns the current values measured
 by the [Accelerometer](#accelerometer). These values are returned as a
 3D-vector, therefore only the indices 0, 1, and 2 are valid for accessing the
 vector. Each element of the vector represents the acceleration along the
@@ -89,10 +89,10 @@ fall when no offset is substracted.
 The returned vector is a pointer to the internal values managed by the
 [Accelerometer](#accelerometer) node, therefore it is illegal to free this
 pointer. Furthermore, note that the pointed values are only valid until the next
-call to `wb_robot_step()` or `Robot::step()`. If these values are needed for a
+call to the `wb_robot_step` or `Robot::step` functions. If these values are needed for a
 longer period they must be copied.
 
 <!-- -->
 
 > **Note** [Python]:
-`getValues()` returns the 3D-vector as a list containing three floats.
+The `getValues` function returns the 3D-vector as a list containing three floats.

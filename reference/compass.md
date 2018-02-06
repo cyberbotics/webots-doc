@@ -30,8 +30,9 @@ therefore no mapping is applied.
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation
 should be enabled or disabled for the specified axis. If one of these fields is
 set to FALSE, then the corresponding vector element will not be computed and it
-will return *NaN* (Not a Number). For example if zAxis is FALSE, then calling
-wb\_compass\_get\_values()[2] will always return *NaN*. The default is that all
+will return *NaN* (Not a Number). For example if zAxis is FALSE, then the
+second element of the array returned by the `wb_compass_get_values` function
+will always return *NaN*. The default is that all
 three axes are enabled (TRUE). Modifying these fields makes it possible to
 choose between a single, dual or a three-axis digital compass and to specify
 which axes will be used.
@@ -61,19 +62,19 @@ int wb_compass_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-The `wb_compass_enable()` function turns on the [Compass](#compass) measurements.
+The `wb_compass_enable` function turns on the [Compass](#compass) measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_compass_disable()` function turns off the [Compass](#compass) device.
+The `wb_compass_disable` function turns off the [Compass](#compass) device.
 
-The `wb_compass_get_sampling_period()` function returns the period given into
-the `wb_compass_enable()` function, or 0 if the device is disabled.
+The `wb_compass_get_sampling_period` function returns the period given into
+the `wb_compass_enable` function, or 0 if the device is disabled.
 
-The `wb_compass_get_values()` function returns the current [Compass](#compass)
+The `wb_compass_get_values` function returns the current [Compass](#compass)
 measurement. The returned vector indicates the direction of the *virtual north*
 in the coordinate system of the [Compass](#compass) device. Here is the internal
-algorithm of `wb_compass_get_values()` in pseudo-code:
+algorithm of the `wb_compass_get_values` function in pseudo-code:
 
 ```c
 float[3] wb_compass_get_values() {
@@ -116,11 +117,11 @@ return bearing;
 > **Note** [C, C++]:
 The returned vector is a pointer to the internal values managed by the
 [Compass](#compass) node, therefore it is illegal to free this pointer.
-Furthermore, note that the pointed values are only valid until the next call to
-`wb_robot_step()` or `Robot::step()`. If these values are needed for a longer
+Furthermore, note that the pointed values are only valid until the next call to the
+`wb_robot_step` or `Robot::step` functions. If these values are needed for a longer
 period they must be copied.
 
 <!-- -->
 
 > **Note** [Python]:
-`getValues()` returns the vector as a list containing three floats.
+Ths `getValues` function returns the vector as a list containing three floats.

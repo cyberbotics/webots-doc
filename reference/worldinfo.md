@@ -97,7 +97,7 @@ than 1 thread can result in non replicable simulations.
 - The `physicsDisableTime` determines the amount of simulation time (in seconds)
 before the idle solids are automatically disabled from the physics computation.
 Set this to zero to disable solids as soon as they become idle. This field
-matchs directly with the `dBodySetAutoDisableTime` ODE function. This feature
+matchs directly with the ODE's `dBodySetAutoDisableTime` function. This feature
 can improve significantly the speed of the simulation if the solids are static
 most of the time. The solids are enabled again after any interaction (collision,
 movement, ...).
@@ -106,7 +106,7 @@ movement, ...).
 threshold (in meter/seconds) for automatic disabling. The body's linear velocity
 magnitude must be less than this threshold for it to be considered idle. This
 field is only useful if `physicsDisableTime` is bigger or equal to zero. This
-field matchs directly with the `dBodySetAutoDisableLinearThreshold` ODE
+field matchs directly with the ODE's `dBodySetAutoDisableLinearThreshold`
 function.
 
 - The `physicsDisableAngularThreshold` determines the solid's angular velocity

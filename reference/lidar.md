@@ -175,14 +175,14 @@ int wb_lidar_get_sampling_period(WbDeviceTag tag);
 
 **Description**
 
-`wb_lidar_enable()` allows the user to enable lidar updates.
+The `wb_lidar_enable` function allows the user to enable lidar updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-`wb_lidar_disable()` turns the lidar off, saving computation time.
+The `wb_lidar_disable` function turns the lidar off, saving computation time.
 
-The `wb_lidar_get_sampling_period()` function returns the period given into the
-`wb_lidar_enable()` function, or 0 if the device is disabled.
+The `wb_lidar_get_sampling_period` function returns the period given into the
+`wb_lidar_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -202,16 +202,16 @@ bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag);
 
 **Description**
 
-`wb_lidar_enable_point_cloud()` allows the user to enable the lidar point cloud update, the point cloud array is then updated with the same sampling period as the range image.
+The `wb_lidar_enable_point_cloud` function allows the user to enable the lidar point cloud update, the point cloud array is then updated with the same sampling period as the range image.
 
-`wb_lidar_disable_point_cloud()` allows the user to disable the lidar point
+The `wb_lidar_disable_point_cloud` function allows the user to disable the lidar point
 cloud update.
 
-The `wb_lidar_is_point_cloud_enabled()` function returns true if the point cloud
+The `wb_lidar_is_point_cloud_enabled` function returns true if the point cloud
 update is enabled or false otherwise.
 
 > **Note**:
-To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable()` function.
+To get the point cloud array, enabling the point cloud is not sufficient. First the lidar should be enabled using the `wb_lidar_enable` function.
 
 ---
 
@@ -230,7 +230,7 @@ const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 
 **Description**
 
-The `wb_lidar_get_range_image()` function allows the user to read the contents
+The `wb_lidar_get_range_image` function allows the user to read the contents
 of the last range image grabbed by a lidar. The range image is computed using
 the depth buffer produced by the OpenGL rendering. The range image is coded as
 an array of single precision floating point values corresponding to the range
@@ -246,13 +246,13 @@ sizeof(float)
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 
-The `wb_lidar_get_layer_range_image()` function is a convenient way of getting
+The `wb_lidar_get_layer_range_image` function is a convenient way of getting
 directly the sub range image associated with one layer.
 
 > **Note** [Python]:
 The Lidar class has two methods for getting the lidar image. The
-`getRangeImage()` returns a one-dimensional list of floats, while the
-`getRangeImageArray()` returns a two-dimensional list of floats. Their content
+`getRangeImage` function returns a one-dimensional list of floats, while the
+`getRangeImageArray` function returns a two-dimensional list of floats. Their content
 are identical but their handling is of course different.
 
 ---
@@ -273,7 +273,7 @@ int wb_lidar_get_number_of_points(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_point_cloud()` returns the pointer to the point cloud array,
+The `wb_lidar_get_point_cloud` function returns the pointer to the point cloud array,
 each point consists of a [`WbLidarPoint`](#wblidarpoint). The memory chunk
 returned by this function shall not be freed, as it is managed by the lidar
 internally. The size in bytes of the point cloud can be computed as follows:
@@ -282,10 +282,10 @@ internally. The size in bytes of the point cloud can be computed as follows:
 
 Attempting to read outside the bounds of this memory chunk will cause an error.
 
-The `wb_lidar_get_layer_point_cloud()` function is a convenient way of getting
+The `wb_lidar_get_layer_point_cloud` function is a convenient way of getting
 directly the sub point cloud associated with one layer.
 
-The `wb_lidar_get_number_of_points()` function returns the total number of
+The `wb_lidar_get_number_of_points` function returns the total number of
 points contained in the point cloud (each layer is assumed to have the same
 number of points associated to).
 
@@ -306,10 +306,10 @@ void wb_lidar_set_frequency(WbDeviceTag tag, double frequency);
 
 **Description**
 
-The `wb_lidar_get_frequency()` returns the current rotating frequency of the
+The `wb_lidar_get_frequency` function returns the current rotating frequency of the
 lidar head (in case of rotating lidar).
 
-The `wb_lidar_set_frequency()` sets the current rotating frequency of the lidar
+The `wb_lidar_set_frequency` function sets the current rotating frequency of the lidar
 head (in case of rotating lidar). The `frequency` argument should be in the
 range [minFrequency; maxFrequency].
 
@@ -330,10 +330,10 @@ int wb_lidar_get_number_of_layers(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_horizontal_resolution()` returns the horizontal resolution of
+The `wb_lidar_get_horizontal_resolution` function returns the horizontal resolution of
 the lidar.
 
-The `wb_lidar_get_number_of_layers()` returns the number of layers of the lidar.
+The `wb_lidar_get_number_of_layers` function returns the number of layers of the lidar.
 
 ---
 
@@ -352,7 +352,7 @@ double wb_lidar_get_max_frequency(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_min_frequency()` and `wb_lidar_get_max_frequency()` functions
+The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions
 return respectively the minimum and maximum allowed rotating frequency of the
 head of the lidar (in case of rotating lidar).
 
@@ -373,9 +373,9 @@ int wb_lidar_get_vertical_fov(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_fov()` returns the horizontal field of view of the lidar.
+The `wb_lidar_get_fov` function returns the horizontal field of view of the lidar.
 
-The `wb_lidar_get_vertical_fov()` returns the vertical field of view of the
+The `wb_lidar_get_vertical_fov` function returns the vertical field of view of the
 lidar.
 
 ---
@@ -395,5 +395,5 @@ double wb_lidar_get_max_range(WbDeviceTag tag);
 
 **Description**
 
-The `wb_lidar_get_min_range()` and `wb_lidar_get_max_range()` functions return
+The `wb_lidar_get_min_range` and `wb_lidar_get_max_range` functions return
 respectively the minimum and maximum range of the lidar.

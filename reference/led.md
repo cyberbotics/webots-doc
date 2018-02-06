@@ -61,7 +61,7 @@ int wb_led_get(WbDeviceTag tag);
 
 **Description**
 
-`wb_led_set()` switches an LED on or off, possibly changing its color. If the
+The `wb_led_set` function switches an LED on or off, possibly changing its color. If the
 `value` parameter is 0, the LED is turned off. Otherwise, it is turned on.
 
 In the case of a non-gradual LED (`gradual` field set to FALSE), if the `value`

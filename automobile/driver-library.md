@@ -76,7 +76,7 @@ geometric differential constraint) in order for the car to move at the speed
 given in argument of the function (in kilometers per hour). When the control in
 cruising speed is activated, the speed is directly applied to the wheel without
 any engine model simulation, therefore any call to functions like
-`wbu_driver_get_rpm()` will raise an error. The acceleration of the car is
+`wbu_driver_get_rpm` will raise an error. The acceleration of the car is
 computed using the `time0To100` field of the [Car](car.md) PROTO.
 
 The `wbu_driver_get_target_cruising_speed` function simply returns the target

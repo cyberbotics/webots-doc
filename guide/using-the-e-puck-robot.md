@@ -75,7 +75,7 @@ robot with additional devices. In particular, the ground sensors module
 extension of the real e-puck robot is modeled in Webots to provide 3 optional
 infra-red sensors pointing to the ground in front of the robot. The
 [table](#devices-names) displays the names of the simulated devices which are to
-be used as an argument of the function `wb_robot_get_device()` (see the Robot
+be used as an argument of the `wb_robot_get_device` function (see the Robot
 section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 
 %figure "Devices names"
@@ -106,7 +106,7 @@ section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 %end
 
 The e-puck dimensions and speed specifications are shown in [this table](#e-puck-specifications).
-The `wb_motor_set_velocity()` and `wb_position_sensor_get_value()` functions allow you to set the speed of
+The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow you to set the speed of
 the robot and to use its encoders.
 
 %figure "Devices orientations"

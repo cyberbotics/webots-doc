@@ -74,8 +74,8 @@ A Supervisor gets information on the contact points and displays the reaction fo
 **Keywords**: Force control, linear motor, spring and damper
 
 ![force_control.png](images/force_control.png) This world shows two boxes connected by a `LinearMotor`.
-Here, the purpose is to demonstrate the usage of the `wb_motor_set_force()` function to control a `LinearMotor` with a user specified force.
-In this example, `wb_motor_set_force()` is used to simulate the effect of a spring and a damper between the two boxes. When the simulation starts, the motor force is used to move the boxes apart.
+Here, the purpose is to demonstrate the usage of the `wb_motor_set_force` function to control a `LinearMotor` with a user specified force.
+In this example, the `wb_motor_set_force` function is used to simulate the effect of a spring and a damper between the two boxes. When the simulation starts, the motor force is used to move the boxes apart.
 Then, the motor force is turned off and the boxes oscillate for a while, according to the spring and damping equations programmed in the controller.
 
 
@@ -176,7 +176,7 @@ A Supervisor applies the scan depth output by removing pixels on a black texture
 
 ### texture\_change.wbt
 
-**Keywords**: Supervisor, texture, `wb_supervisor_field_set_*()`, Camera
+**Keywords**: Supervisor, texture, `wb_supervisor_field_set_*` functions, Camera
 
 ![texture_change.png](images/texture_change.png) In this example, a robot moves forward and backward in front of a large textured panel.
 The robot watches the panel with its `Camera`. Meanwhile a `Supervisor` switches the image displayed on the panel.

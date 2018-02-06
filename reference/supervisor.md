@@ -715,28 +715,28 @@ clicking on the corresponding buttons in the user interface.
 
 **Name**
 
-**wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world**, **wb\_supervisor\_reload\_world** - *Load, save or reload the current world.*
+**wb\_supervisor\_world\_load**, **wb\_supervisor\_world\_save**, **wb\_supervisor\_world\_reload** - *Load, save or reload the current world.*
 
 {[C++](cpp-api.md#cpp_supervisor)}, {[Java](java-api.md#java_supervisor)}, {[Python](python-api.md#python_supervisor)}, {[Matlab](matlab-api.md#matlab_supervisor)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_load_world(const char *filename);
-bool wb_supervisor_save_world(const char *filename);
-void wb_supervisor_reload_world();
+void wb_supervisor_world_load(const char *filename);
+bool wb_supervisor_world_save(const char *filename);
+void wb_supervisor_world_reload();
 ```
 
 **Description**
 
-The `wb_supervisor_load_world()` function sends a request to the simulator
+The `wb_supervisor_world_load()` function sends a request to the simulator
 process, asking it to stop the current simulation and load the world given in
 argument immediately. As a result of changing the current world, the supervisor
 process and all the robot processes are terminated and the new one are restarted
 with the new world. You may wish to save some data in a file from your
 supervisor program in order to reload it from the new world.
 
-The `wb_supervisor_save_world()` function saves the current world. The
+The `wb_supervisor_world_save()` function saves the current world. The
 `filename` parameter defines the path to the target world file. It should end
 with the `.wbt` extension. It can be defined either as an absolute path, or as a
 path relative to the current supervisor controller. If NULL, the current world
@@ -745,10 +745,10 @@ indicates the success of the save operation. Be aware that this function can
 overwrite silently existing files, so that the corresponding data may be lost.
 
 > **Note** [C++, Java, Python, Matlab]:
-In the other APIs, the `Robot.saveWorld()` function can be called without
+In the other APIs, the `Robot.worldSave()` function can be called without
 argument. In this case, a simple save operation is performed.
 
-The `wb_supervisor_reload_world()` function sends a request to the simulator
+The `wb_supervisor_world_reload()` function sends a request to the simulator
 process, asking it to reload the current world immediately. As a result of
 reloading the current world, the supervisor process and all the robot processes
 are terminated and restarted. You may wish to save some data in a file from your
@@ -772,7 +772,7 @@ void wb_supervisor_simulation_reset();
 **Description**
 
 The `wb_supervisor_simulation_reset()` function sends a request to the simulator process, asking it to reset the simulation immediately.
-The simulation is not entirely destructed and reconstructed like when calling `wb_supervisor_reload_world`, but the initial state of all the nodes is restored, which is way faster.
+The simulation is not entirely destructed and reconstructed like when calling `wb_supervisor_world_reload`, but the initial state of all the nodes is restored, which is way faster.
 This function resets also the seed of the random number generator used in Webots, so that noise-based simulations can be be reproduced identically after calling this function.
 There are currently some limitations to the reset, The nodes removed from the simulation (either manually or from a Supervisor) are not re-imported during the reset.
 Furthermore, changes to node fields done manually or using a Supervisor are not reverted.

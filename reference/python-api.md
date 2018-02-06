@@ -753,10 +753,10 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)(self)                                                       |
 | &nbsp;&nbsp; def [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)(self)                                                                 |
 | &nbsp;&nbsp; def [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(self, mode)                                                           |
-| &nbsp;&nbsp; def [loadWorld](supervisor.md#wb_supervisor_load_world)(self, file)                                                                            |
-| &nbsp;&nbsp; def [saveWorld](supervisor.md#wb_supervisor_load_world)(self)                                                                                  |
-| &nbsp;&nbsp; def [saveWorld](supervisor.md#wb_supervisor_load_world)(self, file)                                                                            |
-| &nbsp;&nbsp; def [reloadWorld](supervisor.md#wb_supervisor_load_world)(self)                                                                                |
+| &nbsp;&nbsp; def [worldLoad](supervisor.md#wb_supervisor_world_load)(self, file)                                                                            |
+| &nbsp;&nbsp; def [worldSave](supervisor.md#wb_supervisor_world_load)(self)                                                                                  |
+| &nbsp;&nbsp; def [worldSave](supervisor.md#wb_supervisor_world_load)(self, file)                                                                            |
+| &nbsp;&nbsp; def [worldReload](supervisor.md#wb_supervisor_world_load)(self)                                                                                |
 | &nbsp;&nbsp; def [movieStartRecording](supervisor.md#wb_supervisor_movie_start_recording)(self, file, width, height, codec, quality, acceleration, caption) |
 | &nbsp;&nbsp; def [movieStopRecording](supervisor.md#wb_supervisor_movie_start_recording)(self)                                                              |
 | &nbsp;&nbsp; def [movieIsReady](supervisor.md#wb_supervisor_movie_start_recording)(self)                                                                    |

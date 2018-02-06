@@ -788,10 +788,10 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)();                                                    |
 | &nbsp;&nbsp; public int [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)();                                                               |
 | &nbsp;&nbsp; public void [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(int mode);                                                      |
-| &nbsp;&nbsp; public void [loadWorld](supervisor.md#wb_supervisor_load_world)(String file);                                                                    |
-| &nbsp;&nbsp; public void [saveWorld](supervisor.md#wb_supervisor_load_world)();                                                                               |
-| &nbsp;&nbsp; public void [saveWorld](supervisor.md#wb_supervisor_load_world)(String file);                                                                    |
-| &nbsp;&nbsp; public void [reloadWorld](supervisor.md#wb_supervisor_load_world)();                                                                             |
+| &nbsp;&nbsp; public void [worldLoad](supervisor.md#wb_supervisor_world_load)(String file);                                                                    |
+| &nbsp;&nbsp; public void [worldSave](supervisor.md#wb_supervisor_world_load)();                                                                               |
+| &nbsp;&nbsp; public void [worldSave](supervisor.md#wb_supervisor_world_load)(String file);                                                                    |
+| &nbsp;&nbsp; public void [worldReload](supervisor.md#wb_supervisor_world_load)();                                                                             |
 | &nbsp;&nbsp; public void [movieStartRecording](supervisor.md#wb_supervisor_movie_start_recording)(String file, int width, int height, int codec, int quality, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int acceleration, boolean caption);                                                                                                  |
 | &nbsp;&nbsp; public void [movieStopRecording](supervisor.md#wb_supervisor_movie_start_recording)();                                                           |

@@ -127,17 +127,17 @@ the robot controller process (using Webots `Emitter` / `Receiver` communication
 system). The robot controller program should be able to handle such a message
 and reset its state accordingly.
 
-#### Using the wb\_supervisor\_reload\_world() function
+#### Using the wb\_supervisor\_world\_reload() function
 
 This function restarts the physics simulation and all controllers from the very
 beginning. With this method, everything is reset, including the physics and the
 motor positions and the controllers. But this function does also restart the
-controller that called `wb_supervisor_reload_world()`, this is usually the
+controller that called `wb_supervisor_world_reload()`, this is usually the
 controller that runs the optimization algorithm, and as a consequence the
 optimization state is lost. Hence for using this technique, it is necessary to
 develop functions that can save and restore the complete state of the
 optimization algorithm. The optimization state should be saved before calling
-`wb_supervisor_reload_world()` and reloaded when the `Supervisor`
+`wb_supervisor_world_reload()` and reloaded when the `Supervisor`
 controller restarts. Here is a pseudo-code example:
 
 ```c
@@ -169,7 +169,7 @@ void evaluate_next_robot() {
   optimizer_save_state("my_state_file.txt");
   ...
   // start next evaluation
-  wb_supervisor_reload_world();
+  wb_supervisor_world_reload();
   wb_robot_step(TIME_STEP);
   exit(0);
 }

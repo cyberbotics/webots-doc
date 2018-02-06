@@ -529,10 +529,10 @@ The following tables describe the Matlab functions.
 | [wb\_supervisor\_simulation\_reset\_physics](supervisor.md#wb_supervisor_simulation_reset_physics)()                                                                 |
 | mode = [wb\_supervisor\_simulation\_get\_mode](supervisor.md#wb_supervisor_simulation_set_mode)()                                                                    |
 | [wb\_supervisor\_simulation\_set\_mode](supervisor.md#wb_supervisor_simulation_set_mode)(mode)                                                                       |
-| [wb\_supervisor\_load\_world](supervisor.md#wb_supervisor_load_world)('filename')                                                                                    |
-| [wb\_supervisor\_save\_world](supervisor.md#wb_supervisor_load_world)()                                                                                              |
-| [wb\_supervisor\_save\_world](supervisor.md#wb_supervisor_load_world)('filename')                                                                                    |
-| [wb\_supervisor\_reload\_world](supervisor.md#wb_supervisor_load_world)()                                                                                            |
+| [wb\_supervisor\_world\_load](supervisor.md#wb_supervisor_world_load)('filename')                                                                                    |
+| [wb\_supervisor\_world\_save](supervisor.md#wb_supervisor_world_load)()                                                                                              |
+| [wb\_supervisor\_world\_save](supervisor.md#wb_supervisor_world_load)('filename')                                                                                    |
+| [wb\_supervisor\_world\_reload](supervisor.md#wb_supervisor_world_load)()                                                                                            |
 | [wb\_supervisor\_movie\_start\_recording](supervisor.md#wb_supervisor_movie_start_recording)('filename', width, height, codec, quality,                              |
 | acceleration, caption)                                                                                                                                               |
 | [wb\_supervisor\_movie\_stop\_recording](supervisor.md#wb_supervisor_movie_start_recording)()                                                                        |

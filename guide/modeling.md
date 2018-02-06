@@ -35,7 +35,7 @@ In order for Webots simulation results to be reproducible, the following conditi
 be fulfilled:
 
 1. Each simulation must be restarted either by pushing the `Reload` button, or by
-using the `wb_supervisor_reload_world()` function, or by restarting Webots.
+using the `wb_supervisor_world_reload()` function, or by restarting Webots.
 The random seeds used by Webots internally are reset for each simulation restarted with one of the above methods.
 2. The `synchronization` flag of every robot and supervisor must be TRUE. Otherwise
 the number of physics steps per control step may vary with the current CPU load

@@ -86,7 +86,10 @@ Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`
 
 ### textured\_shapes.wbt
 
-TODO.
+**Keywords**: Texture mapping
+
+![textured_shapes.png](images/textured_shapes.png) This examples shows how textures are applied on the basic primitives.
+The same `Appearance` is applied on all the basic primitives following the VRML rules about texture mapping.
 
 ### webots\_box.wbt
 

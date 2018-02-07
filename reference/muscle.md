@@ -6,8 +6,8 @@ Muscle {
   SFVec3f  startOffset 0 0 0
   SFVec3f  endOffset   0 0 0
   MFColor  colors      [ ]   # idle (0), contracting (1), and relaxing(2) state colors
-  SFBool   castShadows TRUE
-  SFBool   visible     TRUE
+  SFBool   castShadows TRUE   # [TRUE, FALSE]
+  SFBool   visible     TRUE   # [TRUE, FALSE]
 }
 ```
 

@@ -7,11 +7,11 @@ Robot {
   SFString controller      "void"
   SFString controllerArgs  ""
   SFString customData      ""
-  SFBool   synchronization TRUE
+  SFBool   synchronization TRUE   # [TRUE, FALSE]
   MFFloat  battery         [ ]
   SFFloat  cpuConsumption  10  # [0,inf)
-  SFBool   selfCollision   FALSE
-  SFBool   showWindow      FALSE
+  SFBool   selfCollision   FALSE   # [TRUE, FALSE]
+  SFBool   showWindow      FALSE   # [TRUE, FALSE]
   SFString window          ""
   SFString remoteControl   ""
 }

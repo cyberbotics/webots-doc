@@ -6,7 +6,7 @@ Derived from [Group](group.md).
 TrackWheel {
   SFVec2f position 0 0
   SFFloat radius   0.1
-  SFBool  inner    TRUE
+  SFBool  inner    TRUE   # [TRUE, FALSE]
 }
 ```
 

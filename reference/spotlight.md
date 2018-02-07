@@ -12,9 +12,9 @@ SpotLight {
   SFVec3f direction        0 0 -1   # (-inf,inf)
   SFFloat intensity        1        # [0,1]
   SFVec3f location         0 0 10   # (-inf,inf)
-  SFBool  on               TRUE
+  SFBool  on               TRUE   # [TRUE, FALSE]
   SFFloat radius           100      # [0,inf)
-  SFBool  castShadows      FALSE
+  SFBool  castShadows      FALSE   # [TRUE, FALSE]
 }
 ```
 

@@ -20,7 +20,7 @@ Radar {
   SFFloat frequency              24.0
   SFFloat transmittedPower       1.0
   SFFloat minDetectableSignal    -100
-  SFBool  occlusion              FALSE
+  SFBool  occlusion              FALSE   # [TRUE, FALSE]
 }
 ```
 

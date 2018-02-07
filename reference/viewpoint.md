@@ -9,7 +9,7 @@ Viewpoint {
   SFFloat    near              0.05     # [0,inf)
   SFFloat    far               0.0      # [0,inf)
   SFString   follow            ""
-  SFBool     followOrientation FALSE
+  SFBool     followOrientation FALSE   # [TRUE, FALSE]
   SFFloat    followSmoothness  0.5      # [0, 1]
   SFNode     lensFlare         NULL
 }

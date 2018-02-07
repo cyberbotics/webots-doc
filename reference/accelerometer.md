@@ -5,9 +5,9 @@ Derived from [Device](device.md).
 ```
 Accelerometer {
   MFVec3f lookupTable [ ]  # interpolation
-  SFBool  xAxis       TRUE # compute x-axis
-  SFBool  yAxis       TRUE # compute y-axis
-  SFBool  zAxis       TRUE # compute z-axis
+  SFBool  xAxis       TRUE   # [TRUE, FALSE]
+  SFBool  yAxis       TRUE   # [TRUE, FALSE]
+  SFBool  zAxis       TRUE   # [TRUE, FALSE]
   SFFloat resolution  -1
 }
 ```

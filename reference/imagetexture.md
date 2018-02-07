@@ -3,8 +3,8 @@
 ```
 ImageTexture {
   MFString url       [ ]
-  SFBool   repeatS   TRUE
-  SFBool   repeatT   TRUE
+  SFBool   repeatS   TRUE   # [TRUE, FALSE]
+  SFBool   repeatT   TRUE   # [TRUE, FALSE]
   SFInt32  filtering 4
 }
 ```

@@ -13,7 +13,7 @@ Lidar {
   SFFloat  minRange             0.01
   SFFloat  maxRange             1.0
   SFString type                 "fixed"
-  SFBool   spherical            TRUE
+  SFBool   spherical            TRUE   # [TRUE, FALSE]
   SFFloat  noise                0.0
   SFFloat  resolution           -1.0
   SFFloat  defaultFrequency     10

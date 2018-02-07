@@ -2,7 +2,7 @@
 
 ```
 LensFlare {
-  SFBool  occlusion              FALSE
+  SFBool  occlusion              FALSE   # [TRUE, FALSE]
   SFFloat transparency           0.5
   MFVec2f haloSizesAndPositions  [0.17 0.5, 0.08 0.25, 0.33 0.12]
   MFVec2f burstSizesAndPositions [0.33 0.5, 0.16 0.33, 0.5 0.1]

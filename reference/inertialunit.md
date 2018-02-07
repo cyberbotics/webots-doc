@@ -5,9 +5,9 @@ Derived from [Device](device.md).
 ```
 InertialUnit {
   MFVec3f lookupTable [ ]  # interpolation
-  SFBool  xAxis       TRUE # compute roll
-  SFBool  zAxis       TRUE # compute pitch
-  SFBool  yAxis       TRUE # compute yaw
+  SFBool  xAxis       TRUE   # [TRUE, FALSE]
+  SFBool  zAxis       TRUE   # [TRUE, FALSE]
+  SFBool  yAxis       TRUE   # [TRUE, FALSE]
   SFFloat resolution  -1
 }
 ```

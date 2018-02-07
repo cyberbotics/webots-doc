@@ -4,8 +4,8 @@
 Shape {
   SFNode appearance  NULL
   SFNode geometry    NULL
-  SFBool castShadows TRUE
-  SFBool isPickable  TRUE
+  SFBool castShadows TRUE   # [TRUE, FALSE]
+  SFBool isPickable  TRUE   # [TRUE, FALSE]
 }
 ```
 

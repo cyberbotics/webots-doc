@@ -11,7 +11,7 @@ Solid {
   MFNode   immersionProperties [ ]
   SFNode   boundingObject      NULL
   SFNode   physics             NULL
-  SFBool   locked              FALSE
+  SFBool   locked              FALSE   # [TRUE, FALSE]
   SFFloat  radarCrossSection   0.0
   MFColor  recognitionColors   []
   SFFloat  translationStep     0.01        # m

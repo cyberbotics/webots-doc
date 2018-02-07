@@ -8,7 +8,7 @@ Pen {
   SFFloat inkDensity  0.5   # [0,1]
   SFFloat leadSize    0.002
   SFFloat maxDistance 0.0   # >= 0.0
-  SFBool  write       TRUE
+  SFBool  write       TRUE   # [TRUE, FALSE]
 }
 ```
 

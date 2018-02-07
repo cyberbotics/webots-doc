@@ -7,7 +7,7 @@ RangeFinder {
   SFFloat  fieldOfView 0.7854
   SFInt32  width       64
   SFInt32  height      64
-  SFBool   spherical   FALSE
+  SFBool   spherical   FALSE   # [TRUE, FALSE]
   SFFloat  near        0.01
   SFFloat  minRange    0.01
   SFFloat  maxRange    1.0

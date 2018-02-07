@@ -12,7 +12,7 @@ Fluid {
   SFFloat  viscosity      0.001   # (kg/(ms)) fluid's dynamic viscosity
   SFVec3f  streamVelocity 0 0 0   # (m/s) linear fluid velocity
   SFNode   boundingObject NULL
-  SFBool   locked         FALSE
+  SFBool   locked         FALSE   # [TRUE, FALSE]
 }
 ```
 

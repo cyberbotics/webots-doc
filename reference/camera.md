@@ -7,10 +7,10 @@ Camera {
   SFFloat  fieldOfView  0.7854
   SFInt32  width        64
   SFInt32  height       64
-  SFBool   spherical    FALSE
+  SFBool   spherical    FALSE   # [TRUE, FALSE]
   SFFloat  near         0.01
   SFFloat  far          0.0
-  SFBool   antiAliasing FALSE
+  SFBool   antiAliasing FALSE   # [TRUE, FALSE]
   SFFloat  motionBlur   0.0
   SFFloat  noise        0.0
   SFString noiseMaskUrl ""

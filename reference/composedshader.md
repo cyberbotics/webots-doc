@@ -6,7 +6,7 @@
 ComposedShader {
   MFNode uniforms    [ ]
   MFNode parts       [ ]
-  SFBool transparent FALSE
+  SFBool transparent FALSE   # [TRUE, FALSE]
 }
 ```
 

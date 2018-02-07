@@ -57,11 +57,20 @@ This mesh is a textured high resolution version of the [monkey head of Blender](
 **Keywords**: Muscle
 
 ![muscle.png](images/muscle.png) This example demonstrates how to use the `Muscle` node.
+The `Muscle` nodes helps
 
+Two scenarios are shown:
+
+1. Two muscles are applied on a `HingeJoint`.
+Depending on the HingeJoint position, one muscle makes contract, and the other is released.
+2. A muscle is applied on a `SliderJoint`.
 
 ### physics\_primitives.wbt
 
-TODO.
+**Keywords**: Collisions, physics primitives
+
+![physics_primitives.png](images/physics_primitives.png) This example demonstrates the possible collisions between the basic physics primitives.
+Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` falls over three grounds, respectively, a `Box`, a `Plane` and an `ElevationGrid`.
 
 ### textured\_boxes.wbt
 

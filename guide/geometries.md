@@ -5,7 +5,7 @@ The world files for these examples are located in the "sample/geometries/worlds"
 
 In this directory, you will find the following world files :
 
-### box.wbt, capsule.wbt, cone.wbt, convex\_polygon.wbt, cylinder.wbt, polyhedra.wbt, sphere.wbt
+### box.wbt, capsule.wbt, cone.wbt, convex\_polygon.wbt, cylinder.wbt, non\_convex\_polygon.wbt, polyhedra.wbt, sphere.wbt
 
 **Keywords**: Box, Capsule, Cone, Cylinder, Sphere, IndexedFaceSet, basic 3D primitives
 
@@ -54,11 +54,10 @@ This mesh is a textured high resolution version of the [monkey head of Blender](
 
 ### muscle.wbt
 
-TODO.
+**Keywords**: Muscle
 
-### non\_convex\_polygon.wbt
+![muscle.png](images/muscle.png) This example demonstrates how to use the `Muscle` node.
 
-TODO.
 
 ### physics\_primitives.wbt
 

@@ -41,13 +41,16 @@ In this example, the section is a triangle extruded along a spiral path.
 
 **Keywords**: Fluid simulation
 
-![floating_geometries.png](images/floating_geometries.png) This examples demonstrates the interactions between basic physics primitives and fluids.
+![floating_geometries.png](images/floating_geometries.png) This example demonstrates the interactions between basic physics primitives and fluids.
 Three geometries are `Fluid` (two flowing fluids and a static pool).
 Therefore the other small objects are affected by the fluids viscosity and forces based on the Archimedes' principle.
 
 ### high\_resolution\_indexedfaceset.wbt
 
-TODO.
+**Keywords**: IndexedFaceSet, High resolution mesh
+
+![high_resolution_indexedfaceset.png](images/high_resolution_indexedfaceset.png) This example demonstrates the display of a high resolution mesh.
+This mesh is a textured high resolution version of the [monkey head of Blender](https://en.wikipedia.org/wiki/Blender_(software)#Suzanne).
 
 ### muscle.wbt
 

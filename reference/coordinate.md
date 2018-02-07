@@ -2,7 +2,7 @@
 
 ```
 Coordinate {
-  MFVec3f point  [ ] # (-inf,inf)
+  MFVec3f point  [ ] # [-inf, inf]
 }
 ```
 

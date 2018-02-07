@@ -4,8 +4,8 @@
 
 ```
 ComposedShader {
-  MFNode uniforms    [ ]
-  MFNode parts       [ ]
+  MFNode uniforms    [ ]     # [node, PROTO]
+  MFNode parts       [ ]     # [node, PROTO]
   SFBool transparent FALSE   # [TRUE, FALSE]
 }
 ```

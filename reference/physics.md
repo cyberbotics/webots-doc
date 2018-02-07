@@ -2,11 +2,11 @@
 
 ```
 Physics {
-  SFFloat density       1000  # (kg/m^3) -1 or > 0
-  SFFloat mass          -1    # (kg) -1 or > 0
-  MFVec3f centerOfMass  [ ]   # position of the center of mass
-  MFVec3f inertiaMatrix [ ]   # empty or 2 values
-  SFNode  damping       NULL   # [node, PROTO]
+  SFFloat density       1000   # [-1, [0, inf]]
+  SFFloat mass          -1     # [-1, [0, inf]]
+  MFVec3f centerOfMass  [ ]    # [-1, [0, inf]]
+  MFVec3f inertiaMatrix [ ]    # [-1, [0, 1]]
+  SFNode  damping       NULL   # [Damping]
 }
 ```
 

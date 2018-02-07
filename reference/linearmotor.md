@@ -4,8 +4,8 @@ Derived from [Motor](motor.md).
 
 ```
 LinearMotor {
-  SFString name     "linear motor"   # [any string]
-  SFFloat  maxForce 10                        # max force (N) : [0, inf)
+  SFString name     "linear motor"              # [any string]
+  SFFloat  maxForce 10                          # [0, inf]
   SFString sound    "sounds/linear_motor.wav"   # [any string]
 }
 ```

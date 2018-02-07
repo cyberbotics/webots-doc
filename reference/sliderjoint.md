@@ -4,8 +4,8 @@ Derived from [Joint](joint.md).
 
 ```
 SliderJoint {
-  MFNode  device   [ ] # linear motor or linear position sensor
-  SFFloat position 0   # initial position (m)
+  MFNode  device   [ ]   # [Linear Motor, Linear PositionSensor, PROTO]
+  SFFloat position 0     # [0, inf]
 }
 ```
 

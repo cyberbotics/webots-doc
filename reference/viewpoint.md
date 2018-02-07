@@ -2,16 +2,16 @@
 
 ```
 Viewpoint {
-  SFFloat    fieldOfView       0.785398 # (0,pi)
-  SFRotation orientation       0 0 1 0  # 3D unit vector, angle (rad)
-  SFVec3f    position          0 0 0    # 3D vector
-  SFString   description       ""   # [any string]
-  SFFloat    near              0.05     # [0,inf)
-  SFFloat    far               0.0      # [0,inf)
-  SFString   follow            ""   # [any string]
-  SFBool     followOrientation FALSE    # [TRUE, FALSE]
-  SFFloat    followSmoothness  0.5      # [0, 1]
-  SFNode     lensFlare         NULL   # [node, PROTO]
+  SFFloat    fieldOfView       0.785398   # [0, pi]
+  SFRotation orientation       0 0 1 0    # [[-1, 1], [-inf, inf]]
+  SFVec3f    position          0 0 0      # [-inf, inf]
+  SFString   description       ""         # [any string]
+  SFFloat    near              0.05       # [0, far]
+  SFFloat    far               0.0        # [near, inf]
+  SFString   follow            ""         # [any string]
+  SFBool     followOrientation FALSE      # [TRUE, FALSE]
+  SFFloat    followSmoothness  0.5        # [0, 1]
+  SFNode     lensFlare         NULL       # [LensFlare, PROTO]
 }
 ```
 

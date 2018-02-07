@@ -2,12 +2,12 @@
 
 ```
 Muscle {
-  SFDouble maxRadius   0.2
-  SFVec3f  startOffset 0 0 0
-  SFVec3f  endOffset   0 0 0
-  MFColor  colors      [ ]   # idle (0), contracting (1), and relaxing(2) state colors
-  SFBool   castShadows TRUE   # [TRUE, FALSE]
-  SFBool   visible     TRUE   # [TRUE, FALSE]
+  SFDouble maxRadius   0.2     # [0+, inf]
+  SFVec3f  startOffset 0 0 0   # [0, inf]
+  SFVec3f  endOffset   0 0 0   # [0, inf]
+  MFColor  colors      [ ]     # [SFColor]
+  SFBool   castShadows TRUE    # [TRUE, FALSE]
+  SFBool   visible     TRUE    # [TRUE, FALSE]
 }
 ```
 

@@ -4,7 +4,7 @@
 Recognition {
   SFFloat  maxRange       100     # maximum distance at which objects are recognized (m)
   SFInt32  maxObjects     -1      # maximum number of objects detected simultaneously
-  SFBool   occlusion      TRUE   # [TRUE, FALSE]
+  SFBool   occlusion      TRUE    # [TRUE, FALSE]
   SFColor  frameColor     1 0 0   # color of the object's frame in the overlay
   SFInt32  frameThickness 1       # thickness of the object's frame in the overlay (pixels)
 }

@@ -7,7 +7,6 @@ Appearance {
   SFNode   textureTransform NULL   # [node, PROTO]
   MFNode   shaders          NULL   # [node, PROTO]
   SFString name             "appearance"   # [any string]
-  SFString name             "appearance"   # [any string]
 }
 ```
 

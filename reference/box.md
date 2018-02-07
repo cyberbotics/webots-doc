@@ -2,7 +2,7 @@
 
 ```
 Box {
-  SFVec3f size 2 2 2 # (0,inf)
+  SFVec3f size 2 2 2   # [0, inf]
 }
 ```
 

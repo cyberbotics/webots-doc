@@ -4,11 +4,11 @@ Derived from [Device](device.md).
 
 ```
 InertialUnit {
-  MFVec3f lookupTable [ ]  # interpolation
+  MFVec3f lookupTable [ ]    # interpolation
   SFBool  xAxis       TRUE   # [TRUE, FALSE]
   SFBool  zAxis       TRUE   # [TRUE, FALSE]
   SFBool  yAxis       TRUE   # [TRUE, FALSE]
-  SFFloat resolution  -1
+  SFFloat resolution  -1     # [-1, [0, inf]]
 }
 ```
 

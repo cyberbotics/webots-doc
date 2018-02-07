@@ -5,7 +5,7 @@ ImageTexture {
   MFString url       [ ]
   SFBool   repeatS   TRUE   # [TRUE, FALSE]
   SFBool   repeatT   TRUE   # [TRUE, FALSE]
-  SFInt32  filtering 4
+  SFInt32  filtering 4      # [0, 5]
 }
 ```
 

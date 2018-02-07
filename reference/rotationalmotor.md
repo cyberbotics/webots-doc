@@ -4,8 +4,8 @@ Derived from [Motor](motor.md).
 
 ```
 RotationalMotor {
-  SFString name      "rotational motor"   # [any string]
-  SFFloat  maxTorque 10                            # max torque (Nm) : [0, inf)
+  SFString name      "rotational motor"              # [any string]
+  SFFloat  maxTorque 10                              # [0, inf]
   SFString sound     "sounds/rotational_motor.wav"   # [any string]
 }
 ```

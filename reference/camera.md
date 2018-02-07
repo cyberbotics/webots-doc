@@ -4,22 +4,22 @@ Derived from [Device](device.md).
 
 ```
 Camera {
-  SFFloat  fieldOfView  0.7854
-  SFInt32  width        64
-  SFInt32  height       64
+  SFFloat  fieldOfView  0.7854  # [0, pi]
+  SFInt32  width        64      # [1, inf]
+  SFInt32  height       64      # [1, inf]
   SFBool   spherical    FALSE   # [TRUE, FALSE]
-  SFFloat  near         0.01
-  SFFloat  far          0.0
+  SFFloat  near         0.01    # [0, inf]
+  SFFloat  far          0.0     # [0, inf]
   SFBool   antiAliasing FALSE   # [TRUE, FALSE]
-  SFFloat  motionBlur   0.0
-  SFFloat  noise        0.0
-  SFString noiseMaskUrl ""   # [any string]
-  SFNode   lens         NULL   # [node, PROTO]
-  SFNode   focus        NULL   # [node, PROTO]
-  SFNode   zoom         NULL   # [node, PROTO]
-  SFNode   recognition  NULL   # [node, PROTO]
-  SFNode   lensFlare    NULL   # [node, PROTO]
-  SFString compositor   ""   # [any string]
+  SFFloat  motionBlur   0.0     # [0, inf]
+  SFFloat  noise        0.0     # [0, 1]
+  SFString noiseMaskUrl ""      # [any string]
+  SFNode   lens         NULL    # [node, PROTO]
+  SFNode   focus        NULL    # [node, PROTO]
+  SFNode   zoom         NULL    # [node, PROTO]
+  SFNode   recognition  NULL    # [node, PROTO]
+  SFNode   lensFlare    NULL    # [node, PROTO]
+  SFString compositor   ""      # [any string]
 }
 ```
 

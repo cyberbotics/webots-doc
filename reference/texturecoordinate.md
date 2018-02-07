@@ -2,7 +2,7 @@
 
 ```
 TextureCoordinate {
-  MFVec2f point [ ] # (-inf,inf)
+  MFVec2f point [ ]   # [-inf, inf]
 }
 ```
 

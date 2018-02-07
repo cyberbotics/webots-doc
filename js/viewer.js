@@ -191,7 +191,6 @@ function applyAnchor() {
         anchors[0].scrollIntoView(true);
         if (isCyberboticsUrl)
           window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
-        updateBrowserUrl();
     } else
       window.scrollTo(0, 0);
 }

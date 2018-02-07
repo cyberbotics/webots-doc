@@ -77,3 +77,7 @@ class TestParagraphs(unittest.TestCase):
                     line.endswith('.') or line.endswith(':') or line.endswith('!'),
                     msg='%s: The following line does not end correctly: "%s"' % (p['md'], line)
                 )
+                self.assertFalse(
+                    re.match(r'^[a-z]', line),
+                    msg='%s: The following line is starting with a lower case: "%s"' % (p['md'], line)
+                )

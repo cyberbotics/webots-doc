@@ -460,7 +460,7 @@ There are several ways to do so, but we recommend to place them into a subdirect
 Indeed the environment variables of the controllers are modified to include these paths into your [[DY]LD\_LIBRARY\_]PATH environment variable (depending on the OS).
 Moreover the main Makefile (`WEBOTS_HOME/resources/Makefile.include`) used to compile Webots controllers is able to create shared libraries and to link easily with the Controller libraries, ODE or the Qt framework.
 
-A good example of this is the Qt utility library located there: `WEBOTS_HOME/resources/projects/libraries/qt_utils`
+A good example of this is the Qt utility library located there: `WEBOTS_HOME/resources/projects/libraries/qt_utils`.
 
 If for some reason shared libraries cannot be in the `libraries` directory, the `WEBOTS_LIBRARY_PATH` environment variable will be very helpful.
 The paths it contains will be added at the beginning of the library search path([[DY]LD\_LIBRARY\_]PATH) when starting the controller.

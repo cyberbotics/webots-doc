@@ -59,8 +59,7 @@
         'anchor':     window.location.hash.substring(1),
         'branch':     '$branch',
         'repository': '$repository',
-        'url':        'https://raw.githubusercontent.com/$repository/webots-doc/',
-        'rawgiturl':  '$rawgiturl'
+        'url':        'https://raw.githubusercontent.com/$repository/webots-doc/'
       }
       console.log('Setup: ' + JSON.stringify(setup));
     </script>

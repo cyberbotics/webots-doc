@@ -25,46 +25,50 @@ Basically:
 
 **Keywords**: Extended solids, torus, rounded box, pipe
 
-![extended_solid.png](images/extended_solid.png) This example shows in action several extended primitives.
+![extended_solids.png](images/extended_solids.png) This example demonstrates the use of several extended primitives.
 These primitives are based on the basic Geometry nodes, and are defined as PROTO.
 Physics is running in this example.
 
 ### extrusion.wbt
 
-TODO
+**Keywords**: Extrusion
+
+![extrusion.png](images/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
+The `Extrusion` PROTO allows to define a 2D section shape, and to extrude it along a path.
+In this example, the section is a triangle extruded along a spiral path.
 
 ### floating\_geometries.wbt
 
-TODO
+TODO.
 
 ### high\_resolution\_indexedfaceset.wbt
 
-TODO
+TODO.
 
 ### muscle.wbt
 
-TODO
+TODO.
 
 ### non\_convex\_polygon.wbt
 
-TODO
+TODO.
 
 ### physics\_primitives.wbt
 
-TODO
+TODO.
 
 ### textured\_boxes.wbt
 
-TODO
+TODO.
 
 ### textured\_proto\_shapes.wbt
 
-TODO
+TODO.
 
 ### textured\_shapes.wbt
 
-TODO
+TODO.
 
 ### webots\_box.wbt
 
-TODO
+TODO.

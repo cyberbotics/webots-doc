@@ -79,13 +79,13 @@ Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`
 
 **Keywords**: TexturedBox, texture mapping
 
-![textured_box.png](images/textured_box.png) This example shows the possible UV mappings for the `TexturedBox` PROTO.
+![textured_boxes.png](images/textured_boxes.png) This example shows the possible UV mappings for the `TexturedBox` PROTO.
 
 ### textured\_proto\_shapes.wbt
 
 **Keywords**: TexturedBoxShape, texture mapping
 
-![textured_box_shapes.png](images/textured_box_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTOs.
+![textured_proto_shapes.png](images/textured_proto_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTOs.
 
 ### textured\_shapes.wbt
 

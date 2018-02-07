@@ -17,11 +17,10 @@ SliderJoint {
 
 %end
 
-The [SliderJoint](#sliderjoint) node can be used to model a slider, i.e. a joint
-allowing only a translation motion along a given axis (1 degree of freedom). It
-inherits [Joint](joint.md)'s `jointParameters` field. This field can be filled
-with a [JointParameters](jointparameters.md) only. If empty,
-[JointParameters](jointparameters.md) default values apply.
+The [SliderJoint](#sliderjoint) node can be used to model a slider, i.e. a joint allowing only a translation motion along a given axis (1 degree of freedom).
+It inherits [Joint](joint.md)'s `jointParameters` field.
+This field can be filled with a [JointParameters](jointparameters.md) only.
+If empty, [JointParameters](jointparameters.md) default values apply.
 
 ### Field Summary
 

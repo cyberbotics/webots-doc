@@ -1,6 +1,7 @@
 # Physics Plugin
 
 ## Sections
+
 - [Introduction of the physics plugins](introduction-of-the-physics-plugins.md)
 - [Plugin Setup](plugin-setup.md)
 - [Callback Functions](callback-functions.md)

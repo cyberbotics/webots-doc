@@ -1,14 +1,13 @@
 ## Nature
 
-In addition to the usual PROTO of `RoundTree`, `Rocks`, etc. Two PROTO models have
-been developed to efficiently represent trees.
+In addition to the usual PROTO of `RoundTree`, `Rocks`, etc.
+Two PROTO models have been developed to efficiently represent trees.
 
 ### SimpleTree
 
-The `SimpleTree` PROTO uses an efficient representation of tree made of only a
-minimum of eight triangles. The size of the tree is customizable and various
-types of trees are supported. Here is the list of available tree types (a few
-of them are visible in the following pictures):
+The `SimpleTree` PROTO uses an efficient representation of tree made of only a minimum of eight triangles.
+The size of the tree is customizable and various types of trees are supported.
+Here is the list of available tree types (a few of them are visible in the following pictures):
 
 - crab apple tree
 - hackberry tree
@@ -52,7 +51,8 @@ bounding object is made of a simple cylinder).
 
 ### Tree
 
-The `Tree` PROTO is similar to the `SimpleTree` PROTO. It is less configurable but way faster to load.
+The `Tree` PROTO is similar to the `SimpleTree` PROTO.
+It is less configurable but way faster to load.
 
 #### Tree Field Summary
 
@@ -62,8 +62,7 @@ The `Tree` PROTO is similar to the `SimpleTree` PROTO. It is less configurable b
 
 ### Forest
 
-The `Forest` PROTO use only one `IndexedFaceSet` to represent efficiently a
-large amount of trees.
+The `Forest` PROTO use only one `IndexedFaceSet` to represent efficiently a large amount of trees.
 
 %figure "An example of forest"
 

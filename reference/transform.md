@@ -14,9 +14,7 @@ Direct derived nodes: [Solid](solid.md).
 
 ### Description
 
-The [Transform](#transform) node is a grouping node that defines a coordinate
-system for its children that is relative to the coordinate systems of its
-parent.
+The [Transform](#transform) node is a grouping node that defines a coordinate system for its children that is relative to the coordinate systems of its parent.
 
 ### Field Summary
 
@@ -66,8 +64,4 @@ automatically reset to *x x x*. The same holds for a `Transform` placed inside a
 of the previous constrained scale fields, the two others are actuated using the
 new value and the corresponding constraint rule.
 
-> **Note**:
-If a `Transform` is named using the [DEF](def-and-use.md) keyword and later
-referenced inside a `boundingObject` with a USE statement, the constraint
-corresponding to its first `Geometry` descendant applies to the `scale` fields
-of the defining `Transform` and of all its further references.
+> **Note**: If a `Transform` is named using the [DEF](def-and-use.md) keyword and later referenced inside a `boundingObject` with a USE statement, the constraint corresponding to its first `Geometry` descendant applies to the `scale` fields of the defining `Transform` and of all its further references.

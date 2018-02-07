@@ -1,10 +1,8 @@
 ## Webots Built-in Editor
 
-Webots source code editor is a multi-tab text editor specially adapted for
-developing Webots controllers. It is usually recommended to use this editor as
-it makes the compilation straightforward. The editor features syntax
-highlighting for Webots supported language (C/C++, Java, Python and
-*MATLAB*<sup>TM</sup>) and auto-completion for Webots C API.
+Webots source code editor is a multi-tab text editor specially adapted for developing Webots controllers.
+It is usually recommended to use this editor as it makes the compilation straightforward.
+The editor features syntax highlighting for Webots supported language (C/C++, Java, Python and *MATLAB*<sup>TM</sup>) and auto-completion for Webots C API.
 
 %figure "Webots Text Editor"
 
@@ -14,19 +12,15 @@ highlighting for Webots supported language (C/C++, Java, Python and
 
 ### Compiling with the Source Code Editor
 
-The Source Code Editor can be used to compile C/C++ or Java source files into
-binary executable or bytecode (Java) files that can be executed in a simulation.
-The compilation output is printed to the Webots console; errors and warnings appear
-in red. If you double-click an error message, Webots will highlight the
-corresponding source line in the editor.
+The Source Code Editor can be used to compile C/C++ or Java source files into binary executable or bytecode (Java) files that can be executed in a simulation.
+The compilation output is printed to the Webots console; errors and warnings appear in red.
+If you double-click an error message, Webots will highlight the corresponding source line in the editor.
 
-Note that, for compiling source code it is necessary to have the appropriate
-development tools installed. You will find information on the development tools
-[here](language-setup.md).
+Note that, for compiling source code it is necessary to have the appropriate development tools installed.
+You will find information on the development tools [here](language-setup.md).
 
-The possible compilation actions are listed below. Some of them are
-only accessible in the **Build** menu, whereas `Build` and `Clean` actions have a
-shortcut in the Text Editor toolbar.
+The possible compilation actions are listed below.
+Some of them are only accessible in the **Build** menu, whereas `Build` and `Clean` actions have a shortcut in the Text Editor toolbar.
 
 - ![](images/build-button.png =26x26) The **Build** button builds the whole project by invoking `make` in the selected file's directory.
 With C/C++, the `Build` button compiles and links the whole project into an executable file.

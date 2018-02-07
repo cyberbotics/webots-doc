@@ -2,12 +2,12 @@
 You may interface various computer peripherals with Webots in order to interact with the simulation.
 
 ### Joystick
-You can use the [Joystick API](http://www.cyberbotics.com/reference/joystick) to get the state of the buttons and value of the axes in your controller. You may also (if your joystick supports it) use force feedback.
+You can use the [Joystick API](http://www.cyberbotics.com/reference/joystick) to get the state of the buttons and value of the axes in your controller.
+You may also (if your joystick supports it) use force feedback.
 You simply need to plug your peripherals and if needed install its driver.
 A wide range of gamepad and steering wheel joysticks are supported.
 
-> **Note**:
-On Mac OS X, only the first 12 buttons and first 2 axes of the joystick are taken into account.
+> **Note**: On Mac OS X, only the first 12 buttons and first 2 axes of the joystick are taken into account.
 
 ### Virtual reality headset
 On Windows you can use a virtual reality headset to view the simulation.
@@ -21,5 +21,4 @@ You don't need to install anything else than SteamVR to use the HTC Vive, simply
 #### Oculus Rift
 In addition to SteamVR you will need to install the [Oculus SDK](https://developer.oculus.com/downloads/package/oculus-sdk-for-windows) too.
 
-> **Note**:
-If you are using a development version of the Oculus Rift you will need to install the [Oculus Legacy runtime](https://developer.oculus.com/downloads/package/oculus-runtime-for-windows) instead.
+> **Note**: If you are using a development version of the Oculus Rift you will need to install the [Oculus Legacy runtime](https://developer.oculus.com/downloads/package/oculus-runtime-for-windows) instead.

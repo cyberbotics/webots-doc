@@ -18,23 +18,16 @@ Hinge2Joint {
 
 %end
 
-The [Hinge2Joint](#hinge2joint) node can be used to model a hinge2 joint, i.e. a
-joint allowing only rotational motions around two intersecting axes (2 degrees
-of freedom). These axes cross at the `anchor` point and need not to be
-perpendicular. The suspension fields defined in a
-[HingeJointParameters](hingejointparameters.md) node allow for spring and
-damping effects along the suspension axis.
+The [Hinge2Joint](#hinge2joint) node can be used to model a hinge2 joint, i.e. a joint allowing only rotational motions around two intersecting axes (2 degrees of freedom).
+These axes cross at the `anchor` point and need not to be perpendicular.
+The suspension fields defined in a [HingeJointParameters](hingejointparameters.md) node allow for spring and damping effects along the suspension axis.
 
-Note that a universal joint boils down to a hinge2 joint with orthogonal axes
-and (default) zero suspension.
+Note that a universal joint boils down to a hinge2 joint with orthogonal axes and (default) zero suspension.
 
-Typically, [Hinge2Joint](#hinge2joint) can be used to model a steering wheel
-with suspension for a car, a shoulder or a hip for a humanoid robot.
+Typically, [Hinge2Joint](#hinge2joint) can be used to model a steering wheel with suspension for a car, a shoulder or a hip for a humanoid robot.
 
-> **Note**:
-A [Hinge2Joint](#hinge2joint) will connect only [Solid](solid.md)s having a
-[Physics](physics.md) node. In other words, this joint cannot be statically
-based.
+> **Note**: A [Hinge2Joint](#hinge2joint) will connect only [Solid](solid.md)s having a [Physics](physics.md) node.
+In other words, this joint cannot be statically based.
 
 ### Field Summary
 

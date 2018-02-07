@@ -2,8 +2,8 @@
 
 ```
 Shape {
-  SFNode appearance  NULL
-  SFNode geometry    NULL
+  SFNode appearance  NULL   # [node, PROTO]
+  SFNode geometry    NULL   # [node, PROTO]
   SFBool castShadows TRUE   # [TRUE, FALSE]
   SFBool isPickable  TRUE   # [TRUE, FALSE]
 }

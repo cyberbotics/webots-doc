@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 Emitter {
-  SFString type       "radio" # or "serial" or "infra-red"
+  SFString type       "radio" # or "serial" or "infra-red"   # [any string]
   SFFloat  range      -1      # -1 or positive
   SFFloat  maxRange   -1      # -1 or positive
   SFFloat  aperture   -1      # -1 or between 0 and 2*pi

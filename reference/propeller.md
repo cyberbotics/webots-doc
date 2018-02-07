@@ -6,9 +6,9 @@ Propeller {
   SFVec3f centerOfThrust  0 0 0 # (m)
   SFVec2f thrustConstants 1 0   # Ns^2/rad : (-inf, inf), Ns^2/(m*rad) : (-inf, inf)
   SFVec2f torqueConstants 1 0   # Nms^2/rad : (-inf, inf), Ns^2/rad : (-inf, inf)
-  SFNode device           NULL  # RotationalMotor
-  SFNode fastHelix        NULL  # Solid node containing a graphical representation for rotation speed > 24 π rad/s (720 rpm)
-  SFNode slowHelix        NULL  # Solid node containing a graphical representation for rotation speed <= 24 π rad/s
+  SFNode device           NULL   # [node, PROTO]
+  SFNode fastHelix        NULL   # [node, PROTO]
+  SFNode slowHelix        NULL   # [node, PROTO]
 }
 ```
 

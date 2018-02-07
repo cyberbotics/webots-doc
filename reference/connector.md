@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 Connector {
-  SFString type              "symmetric"
+  SFString type              "symmetric"   # [any string]
   SFBool   isLocked          FALSE   # [TRUE, FALSE]
   SFBool   autoLock          FALSE   # [TRUE, FALSE]
   SFBool   unilateralLock    TRUE   # [TRUE, FALSE]

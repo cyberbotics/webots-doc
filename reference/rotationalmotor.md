@@ -4,9 +4,9 @@ Derived from [Motor](motor.md).
 
 ```
 RotationalMotor {
-  SFString name      "rotational motor"            # for wb_robot_get_device()
+  SFString name      "rotational motor"   # [any string]
   SFFloat  maxTorque 10                            # max torque (Nm) : [0, inf)
-  SFString sound     "sounds/rotational_motor.wav" # see Motor description
+  SFString sound     "sounds/rotational_motor.wav"   # [any string]
 }
 ```
 

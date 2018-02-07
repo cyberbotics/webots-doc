@@ -6,7 +6,7 @@ Physics {
   SFFloat mass          -1    # (kg) -1 or > 0
   MFVec3f centerOfMass  [ ]   # position of the center of mass
   MFVec3f inertiaMatrix [ ]   # empty or 2 values
-  SFNode  damping       NULL  # optional damping node
+  SFNode  damping       NULL   # [node, PROTO]
 }
 ```
 

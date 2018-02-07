@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 GPS {
-  SFString type             "satellite"
+  SFString type             "satellite"   # [any string]
   SFFloat  accuracy         0
   SFFloat  noiseCorrelation 0
   SFFloat  resolution       -1

@@ -6,7 +6,7 @@ Derived from [Solid](solid.md).
 Track {
   MFNode  device           [ ]
   SFVec3f textureAnimation 0 0
-  SFNode  animatedGeometry NULL
+  SFNode  animatedGeometry NULL   # [node, PROTO]
   SFInt32 geometriesCount  10
 }
 ```

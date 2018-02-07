@@ -10,7 +10,7 @@ Motor {
   SFFloat  minPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
   SFFloat  maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
   SFFloat  maxVelocity       10     # (m/s or rad/s): (0, inf)
-  SFString sound             ""     # wave file of the motor sound
+  SFString sound             ""   # [any string]
   MFNode   muscles           []
 }
 ```

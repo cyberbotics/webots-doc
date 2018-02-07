@@ -4,9 +4,9 @@
 
 ```
 Uniform {
-  SFString name  ""
-  SFString type  ""
-  SFString value ""
+  SFString name  ""   # [any string]
+  SFString type  ""   # [any string]
+  SFString value ""   # [any string]
 }
 ```
 

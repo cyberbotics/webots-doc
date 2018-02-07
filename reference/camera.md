@@ -13,13 +13,13 @@ Camera {
   SFBool   antiAliasing FALSE   # [TRUE, FALSE]
   SFFloat  motionBlur   0.0
   SFFloat  noise        0.0
-  SFString noiseMaskUrl ""
-  SFNode   lens         NULL
-  SFNode   focus        NULL
-  SFNode   zoom         NULL
-  SFNode   recognition  NULL
-  SFNode   lensFlare    NULL
-  SFString compositor   ""
+  SFString noiseMaskUrl ""   # [any string]
+  SFNode   lens         NULL   # [node, PROTO]
+  SFNode   focus        NULL   # [node, PROTO]
+  SFNode   zoom         NULL   # [node, PROTO]
+  SFNode   recognition  NULL   # [node, PROTO]
+  SFNode   lensFlare    NULL   # [node, PROTO]
+  SFString compositor   ""   # [any string]
 }
 ```
 

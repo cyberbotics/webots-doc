@@ -2,12 +2,12 @@
 
 ```
 ComposedCubeMapTexture {
-  SFNode right  NULL
-  SFNode left   NULL
-  SFNode top    NULL
-  SFNode bottom NULL
-  SFNode front  NULL
-  SFNode back   NULL
+  SFNode right  NULL   # [node, PROTO]
+  SFNode left   NULL   # [node, PROTO]
+  SFNode top    NULL   # [node, PROTO]
+  SFNode bottom NULL   # [node, PROTO]
+  SFNode front  NULL   # [node, PROTO]
+  SFNode back   NULL   # [node, PROTO]
 }
 ```
 

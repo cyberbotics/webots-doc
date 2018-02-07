@@ -2,8 +2,8 @@
 
 ```
 Joint {
-  SFNode jointParameters NULL # a joint parameters node
-  SFNode endPoint        NULL # Solid or SolidReference
+  SFNode jointParameters NULL   # [node, PROTO]
+  SFNode endPoint        NULL   # [node, PROTO]
 }
 ```
 

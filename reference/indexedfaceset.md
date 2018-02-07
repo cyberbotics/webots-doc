@@ -2,8 +2,8 @@
 
 ```
 IndexedFaceSet {
-  SFNode  coord         NULL
-  SFNode  texCoord      NULL
+  SFNode  coord         NULL   # [node, PROTO]
+  SFNode  texCoord      NULL   # [node, PROTO]
   SFBool  solid         TRUE # ignored and regarded as TRUE   # [TRUE, FALSE]
   SFBool  ccw           TRUE   # [TRUE, FALSE]
   SFBool  convex        TRUE   # [TRUE, FALSE]

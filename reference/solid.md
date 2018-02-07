@@ -4,13 +4,13 @@ Derived from [Transform](transform.md).
 
 ```
 Solid {
-  SFString name                "solid"
-  SFString model               ""
-  SFString description         ""
-  SFString contactMaterial     "default"
+  SFString name                "solid"   # [any string]
+  SFString model               ""   # [any string]
+  SFString description         ""   # [any string]
+  SFString contactMaterial     "default"   # [any string]
   MFNode   immersionProperties [ ]
-  SFNode   boundingObject      NULL
-  SFNode   physics             NULL
+  SFNode   boundingObject      NULL   # [node, PROTO]
+  SFNode   physics             NULL   # [node, PROTO]
   SFBool   locked              FALSE   # [TRUE, FALSE]
   SFFloat  radarCrossSection   0.0
   MFColor  recognitionColors   []

@@ -12,15 +12,15 @@ Lidar {
   SFFloat  near                 0.01
   SFFloat  minRange             0.01
   SFFloat  maxRange             1.0
-  SFString type                 "fixed"
+  SFString type                 "fixed"   # [any string]
   SFBool   spherical            TRUE   # [TRUE, FALSE]
   SFFloat  noise                0.0
   SFFloat  resolution           -1.0
   SFFloat  defaultFrequency     10
   SFFloat  minFrequency         1
   SFFloat  maxFrequency         25
-  SFNode   rotatingHead         NULL
-  SFString compositor           ""
+  SFNode   rotatingHead         NULL   # [node, PROTO]
+  SFString compositor           ""   # [any string]
 }
 ```
 

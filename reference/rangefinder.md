@@ -14,8 +14,8 @@ RangeFinder {
   SFFloat  motionBlur  0.0
   SFFloat  noise       0.0
   SFFloat  resolution  -1.0
-  SFNode   lens        NULL
-  SFString compositor  ""
+  SFNode   lens        NULL   # [node, PROTO]
+  SFString compositor  ""   # [any string]
 }
 ```
 

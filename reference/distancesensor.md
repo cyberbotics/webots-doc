@@ -5,7 +5,7 @@ Derived from [Device](device.md).
 ```
 DistanceSensor {
   MFVec3f  lookupTable   [ 0 0 0, 0.1 1000 0 ]
-  SFString type          "generic"
+  SFString type          "generic"   # [any string]
   SFInt32  numberOfRays  1                     # [1,inf)
   SFFloat  aperture      1.5708                # [0,2pi]
   SFFloat  gaussianWidth 1

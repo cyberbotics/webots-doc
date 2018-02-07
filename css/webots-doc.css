@@ -346,7 +346,7 @@
 }
 
 .blog #view {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 70px;
   padding: 10px;
@@ -355,35 +355,17 @@
 
 .blog #view p {
   font-family: "Roboto";
-  width: 85%;
-  font-size: 1.1em;
+  width: 90%;
   margin: 15px auto;
 }
 
-.blog #view h1, .blog #view h2 {
+.blog #view h1, .blog #view h2, .blog #view h3 {
   text-align: center;
-  color: #555;
-}
-
-.blog #view h1 {
-  font-size: 85px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
-.blog #view h2 {
-  font-size: 60px;
-}
-
-.blog #view h3 {
-  font-family: "Roboto";
-  text-align: center;
-  color: #444;
+  /*color: #222;*/
 }
 
 .blog #view hr {
   border: 0;
-  padding-top: 1px;
   height: 1px;
   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -392,8 +374,8 @@
 }
 
 .blog #view img {
-  max-width: 75%;
-  min-width: 75%;
+  max-width: 90%;
+  min-width: 90%;
   border-radius: 2px;
   cursor: pointer;
   transition: 0.05s;
@@ -414,8 +396,6 @@
   padding-bottom: 2px;
   margin-bottom: 2px;
 }
-
-
 .blog .modal {
   display: none;
   position: fixed;
@@ -429,56 +409,47 @@
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
 }
-
 .blog #view .modal-content {
   margin: 0 auto;
   display: block;
-  max-width: 75%;
+  max-width: 600px;
   min-width: 50%;
   border-radius: 2px;
   cursor: pointer;
   transition: 0.05s;
 }
-
 .blog #view .modal-content img {
   max-width: 75%;
   min-width: 0%;
 }
-
 .blog #caption {
   margin: auto;
   display: block;
-  width: 80%;
   max-width: 700px;
   text-align: center;
   color: #ccc;
   padding: 10px 0;
   height: 150px;
 }
-
 .blog .modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.4s;
 }
-
 .blog .webm {
   display: block;
-  max-width: 70%;
+  max-width: 90%;
   margin: 0 auto;
 }
-
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
-
 @keyframes zoom {
   from {transform:scale(0)}
   to {transform:scale(1)}
 }
-
 .blog .close {
   position: absolute;
   top: 40px;
@@ -497,7 +468,7 @@
 }
 
 .blog iframe {
-  width: 50%;
+  width: 70%;
   margin: 30px auto;
   display: block;
 }

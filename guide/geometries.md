@@ -26,7 +26,7 @@ Basically :
 **Keywords**: Extended solids, torus, rounded box, pipe
 
 ![extended_solids.png](images/extended_solids.png) This example demonstrates the use of several extended primitives.
-These compound primitives are created using procedural PROTOs generating a set basic Geometry nodes.
+These compound primitives are created using procedural PROTO nodes generating a set basic Geometry nodes.
 In this example, physics laws are applied on these primitives.
 
 ### extrusion.wbt
@@ -34,7 +34,7 @@ In this example, physics laws are applied on these primitives.
 **Keywords**: Extrusion
 
 ![extrusion.png](images/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
-The `Extrusion` PROTO in a procedural PROTOs generating an `IndexedFaceSet` node.
+The `Extrusion` PROTO in a procedural PROTO nodes generating an `IndexedFaceSet` node.
 The `Extrusion` PROTO fields allow to define a 2D section, and to extrude it along a path.
 In this example, the section is a triangle extruded along a spiral path.
 
@@ -85,7 +85,7 @@ Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`
 
 **Keywords**: TexturedBoxShape, texture mapping
 
-![textured_proto_shapes.png](images/textured_proto_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTOs.
+![textured_proto_shapes.png](images/textured_proto_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTO nodes.
 
 ### textured\_shapes.wbt
 

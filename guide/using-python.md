@@ -18,7 +18,8 @@ As a consequence, it executes the first `python` binary found in the current `PA
 If you want to use a different version of Python, please install it if needed and configure your environment so that it becomes the default `python` version when called from the command line in a terminal.
 Alternatively, you can change the default Python command from the Webots Preferences in the General tab.
 If you set it for example to `python3.6` instead of `python`, this version of python will be used (if available from the command line).
-Finally, it is also possible to set a different version of Python for each robot controller by editing the `[python]` section of the `runtime.ini` file in each robot controller directory and setting the `COMMAND` value to `python3`, `python3.6` or `python2.7`, etc. If specified in the `runtime.ini` file of a controller, this Python command will be executed instead of the default one to launch this controller.
+Finally, it is also possible to set a different version of Python for each robot controller by editing the `[python]` section of the `runtime.ini` file in each robot controller directory and setting the `COMMAND` value to `python3`, `python3.6` or `python2.7`, etc.
+If specified in the `runtime.ini` file of a controller, this Python command will be executed instead of the default one to launch this controller.
 
 #### macOS and Linux installation
 

@@ -205,8 +205,7 @@ Webots uses two different time steps:
 
 The simulation step is the value specified in `WorldInfo.basicTimeStep` (in milliseconds).
 It indicates the duration of one step of simulation, i.e. the time interval between two computations of the position, speed, collisions, etc. of every simulated object.
-If the simulation uses physics (vs.
-kinematics), then the simulation step also specifies the interval between two computations of the forces and torques that need to be applied to the simulated rigid bodies.
+If the simulation uses physics (vs. kinematics), then the simulation step also specifies the interval between two computations of the forces and torques that need to be applied to the simulated rigid bodies.
 
 The control step is the duration of an iteration of the control loop.
 It corresponds to the parameter passed to the `wb_robot_step` function.
@@ -265,7 +264,7 @@ while (wb_robot_step(40) != -1) {
 }
 ```
 
-since there was no call to the `wb_robot_step` function between the two sensor readings, the values returned by the sensor cannot have changed in the meantime.
+Since there was no call to the `wb_robot_step` function between the two sensor readings, the values returned by the sensor cannot have changed in the meantime.
 A working version would look like this:
 
 ```c
@@ -361,7 +360,7 @@ Robot {
 }
 ```
 
-and if the controller's name is *"demo"*, then this sample controller code:
+And if the controller's name is *"demo"*, then this sample controller code:
 
 ```c
 #include <webots/robot.h>
@@ -380,7 +379,7 @@ int main(int argc, const char *argv[]) {
 }
 ```
 
-will print:
+This will print:
 
 ```
 argv[0]=demo

@@ -85,7 +85,7 @@ Note that the default `lookupTable` of the [TouchSensor](#touchsensor) node is:
 5000 50000 0 ]
 ```
 
-and hence it maps forces between 0 and 5000 Newtons to output values between 0 and 50000, the output unit being 0.1 Newton.
+Hence it maps forces between 0 and 5000 Newtons to output values between 0 and 50000, the output unit being 0.1 Newton.
 You should empty the `lookupTable` to have Newtons as output units.
 
 ### Collision detection

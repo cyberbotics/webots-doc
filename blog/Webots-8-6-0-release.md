@@ -81,13 +81,12 @@ Here is a comparison between previously imported road structures and revamped im
 ![8.6](images/osm_develop.png)
 %end
 
-We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover:
+We have expanded our library of calibrated vehicles to include models from Lincoln and Range Rover as well as improving and optimizing our existing car models:
 
 %figure "Left: Lincoln MKZ 2017. Right: RangeRover Sport SVR 2015."
 ![8.6](images/new_car_models.png)
 %end
 
-as well as improving and optimizing our existing car models.
 Traffic simulation workflow using our SUMO interface is now easier to use, thanks to our new SUMO exporter, letting you create a traffic network based on worlds brought in through the OSM importer.
 
 ---

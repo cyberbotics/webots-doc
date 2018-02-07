@@ -26,9 +26,11 @@ Once compiled with LaTeX, it should display as follows:
 
 *References*
 
+```
 [1] Webots.
 http://www.cyberbotics.com.
 Commercial Mobile Robot Simulation Software.
+```
 
 ### Citing a reference journal paper about Webots
 

@@ -7,7 +7,7 @@ The first line of a ".wbt" file uses this header:
 #VRML_SIM V8.5 utf8
 ```
 
-where the version *8.5* specifies that the file can be open with *Webots 8*.
+The version *8.5* specifies that the file can be open with *Webots 8*.
 Although the header specifies *utf8*, at the moment only ascii is supported.
 
 The comments placed just below the header store the window configuration associated with this world.

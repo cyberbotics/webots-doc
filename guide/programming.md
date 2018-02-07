@@ -75,7 +75,7 @@ Robot {
 }
 ```
 
-then the executable/interpretable file will be searched at the following paths:
+Then the executable/interpretable file will be searched at the following paths:
 
 ```
 my_project/controllers/my_controller/my_controller.exe (Windows only)

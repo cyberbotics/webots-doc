@@ -14,14 +14,14 @@ On Linux, type this:
 $ export WEBOTS_HOME=/usr/local/webots
 ```
 
-or add this line to your "~/.bash\_profile" file.
+Or add this line to your "~/.bash\_profile" file.
 On macOS, type this:
 
 ```sh
 $ export WEBOTS_HOME=/Applications/Webots
 ```
 
-or add this line to your "~/.profile" file.
+Or add this line to your "~/.profile" file.
 
 Once `WEBOTS_HOME` is defined, you should be able to compile in a terminal, with the `make` command.
 Like with the editor buttons, it is possible to build the whole project, or only a single binary file, e.g.:

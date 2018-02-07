@@ -89,7 +89,7 @@ java.lang.UnsatisfiedLinkError: libJavaController.jnilib: no suitable
 image found.
 ```
 
-this is due to a 32-bit/64-bit incompatibility between Java Virtual Machine (JVM) and Webots.
+This is due to a 32-bit/64-bit incompatibility between Java Virtual Machine (JVM) and Webots.
 On macOS this problem should disappear after you upgrade to a recent version of Webots (6.3.0 or newer).
 On Windows, Webots is only compatible with 64-bit versions of Java.
 On Linux (and macOS) you should be able to solve this problem by replacing the default "java" command string by "java -d32" or "java -d64" in the dialog `Tools / Preferences / General / Java command`.
@@ -105,7 +105,7 @@ Under windows, the CLASSPATH looks like this:
 $ set CLASSPATH=C:\Program Files\java\jdk\bin;relative\mylib.jar
 ```
 
-while under Linux and macOS, it looks like this:
+While under Linux and macOS, it looks like this:
 
 ```sh
 $ export CLASSPATH=/usr/lib/jvm/java/bin:relative/mylib.jar

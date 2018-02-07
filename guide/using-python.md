@@ -23,7 +23,7 @@ Finally, it is also possible to set a different version of Python for each robot
 #### macOS and Linux installation
 
 Most of the Linux distributions have Python 2.7 and 3.x already installed.
-macOS has Python 2.7 installed by default.
+`macOS` has Python 2.7 installed by default.
 It is possible to install Python 3.6 from the [Python web site](https://www.python.org) or from various Linux repositories.
 To check the versions of Python installed on your system, you can type in a terminal: `python --version`, `python3.6 --version`, `python2.7 --version`, `python3 --version`, etc.
 

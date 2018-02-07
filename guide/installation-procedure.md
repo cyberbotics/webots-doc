@@ -85,7 +85,7 @@ Once uncompressed, it is recommended to set the WEBOTS\_HOME environment variabl
 tar xjf webots-{{ webots.version.package }}-x86-64.tar.bz2
 ```
 
-and:
+And:
 
 ```sh
 export WEBOTS_HOME=/home/username/webots
@@ -115,7 +115,7 @@ Alternatively, the DEB package can also be installed using `apt` or `gdebi` with
 apt install ./webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
-or:
+Or:
 
 ```sh
 gdebi webots_{{ webots.version.debian_package }}_amd64.deb
@@ -144,7 +144,7 @@ It is possible to install Webots silently from an administrator DOS console, by 
 webots-{{ webots.version.package }}_setup.exe /SILENT
 ```
 
-or:
+Or:
 
 ```bash
 webots-{{ webots.version.package }}\_setup.exe /VERYSILENT
@@ -180,7 +180,7 @@ During the first Webots launch, macOS may complain about opening Webots because 
 %end
 
 In this case, `Ctrl + click` (or right-click) on the Webots icon, and select the `Open` menu item.
-macOS should propose to open the application anyway (see [this figure](#unidentified-developer-dialog)).
+`macOS` should propose to open the application anyway (see [this figure](#unidentified-developer-dialog)).
 
 %figure "Open Webots anyway"
 

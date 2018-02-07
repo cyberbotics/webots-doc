@@ -39,6 +39,6 @@ In matrix notation, the corresponding `TextureTransform` reads as:
 
 %end
 
-where *C<sup>-1</sup>* denotes the matrix inverse of *C*.
+*C<sup>-1</sup>* denotes the matrix inverse of *C*.
 
 Note that [TextureTransform](#texturetransform) nodes cannot combine or accumulate.

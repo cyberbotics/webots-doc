@@ -4,8 +4,7 @@
 
 ---
 
-Cyberbotics Ltd.
-is launching [robotbenchmark.net](https://robotbenchmark.net) to allow everyone to program simulated robots online.
+Cyberbotics Ltd. is launching [robotbenchmark.net](https://robotbenchmark.net) to allow everyone to program simulated robots online.
 
 ### Video Presentation
 

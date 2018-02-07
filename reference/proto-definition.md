@@ -16,7 +16,7 @@ A field declaration has the following syntax:
 field fieldType fieldName defaultValue
 ```
 
-where `field` is a reserved keyword, `fieldType` is one of: `SFNode, SFColor, SFFloat, SFInt32, SFString, SFVec2f, SFVec3f, SFRotation, SFBool, MFNode, MFColor, MFFloat, MFInt32, MFString, MFVec2f` and `MFVec3f`.
+`field` is a reserved keyword, `fieldType` is one of: `SFNode, SFColor, SFFloat, SFInt32, SFString, SFVec2f, SFVec3f, SFRotation, SFBool, MFNode, MFColor, MFFloat, MFInt32, MFString, MFVec2f` and `MFVec3f`.
 `fieldName` is a freely chosen name for this field and `defaultValue` is a literal default value that depends on `fieldType`.
 
 Here is an example of PROTO definition:

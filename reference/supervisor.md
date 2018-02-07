@@ -90,7 +90,7 @@ For example:
 WbNodeRef node = wb_supervisor_node_get_from_def("ROBOT.JOINT.SOLID");
 ```
 
-means that we are searching for a node named "SOLID" inside a node named "JOINT", inside a node named "ROBOT".
+This means that we are searching for a node named "SOLID" inside a node named "JOINT", inside a node named "ROBOT".
 
 The `wb_supervisor_node_get_def` function retrieves the DEF name of the node passed as a parameter.
 If no DEF name is specified, this function returns the empty string.
@@ -231,7 +231,7 @@ For example:
 p' = R * p + T
 ```
 
-where *p* is a point whose coordinates are given with respect to the local coordinate system of a node, *R* the rotation matrix returned by the `wb_supervisor_node_get_orientation` function, *T* is the position returned by the `wb_supervisor_node_get_position` function and *p'* represents the same point but this time with coordinates expressed in the global (world) coordinate system.
+Where *p* is a point whose coordinates are given with respect to the local coordinate system of a node, *R* the rotation matrix returned by the `wb_supervisor_node_get_orientation` function, *T* is the position returned by the `wb_supervisor_node_get_position` function and *p'* represents the same point but this time with coordinates expressed in the global (world) coordinate system.
 
 The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to use these functions to do this.
 
@@ -281,9 +281,7 @@ const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index);
 The `wb_supervisor_node_get_contact_point` function returns the contact point with given index in the contact point list of the given `Solid`.
 The `wb_supervisor_node_get_number_of_contact_points` function allows you to retrieve the length of this list.
 Contact points are expressed in the global (world) coordinate system.
-If the index is less than the number of contact points, then the x (resp.
-y, z) coordinate of the *index*th contact point is the element number *0* (resp.
-*1, 2*) in the returned array.
+If the index is less than the number of contact points, then the x (resp. y, z) coordinate of the *index*th contact point is the element number *0* (resp. *1, 2*) in the returned array.
 Otherwise the function returns a `NaN` (Not a Number) value for each of these numbers.
 The `node` argument must be a [Solid](solid.md) node (or a derived node), which moreover has no `Solid` parent, otherwise the function will print a warning message and return `NaN` values on the first 3 array components.
 
@@ -469,18 +467,19 @@ Finally, the `font` parameter defines the font used to draw the text, the follow
 wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0,"Arial");
 ```
 
-will display the label "hello world" in red at the upper left corner of the 3D window.
+This will display the label "hello world" in red at the upper left corner of the 3D window.
 
 ```c
 wb_supervisor_set_label(1,"hello Webots",0,0.1,0.1,0x00ff00,0.5,"Impact");
 ```
-will display the label "hello Webots" in semi-transparent green, just below.
+
+This will display the label "hello Webots" in semi-transparent green, just below.
 
 ```c
 supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0,"Times New Roman");
 ```
 
-will change the label "hello world" defined earlier into "hello universe", using a yellow color for the new text.
+This will change the label "hello world" defined earlier into "hello universe", using a yellow color for the new text.
 
 > **Note** [Matlab]: In the Matlab version of the `wb_supervisor_set_label` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.

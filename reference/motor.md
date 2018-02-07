@@ -19,9 +19,7 @@ Motor {
 
 A [Motor](#motor) node is an abstract node (not instantiated) whose derived classes can be used in a mechanical simulation to power a joint hence producing a motion along, or around, one of its axes.
 
-A [RotationalMotor](rotationalmotor.md) can power a [HingeJoint](hingejoint.md) (resp.
-a [Hinge2Joint](hinge2joint.md)) when set inside the `device` (resp.
-`device` or `device2`) field of these nodes.
+A [RotationalMotor](rotationalmotor.md) can power a [HingeJoint](hingejoint.md) (resp. a [Hinge2Joint](hinge2joint.md)) when set inside the `device` (resp. `device` or `device2`) field of these nodes.
 It produces then a rotational motion around the choosen axis.
 Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.md), producing a sliding motion along its axis.
 
@@ -164,21 +162,13 @@ Finally, in Matlab you should use the `inf` constant.
 
 ### Force and Torque Control
 
-The position (resp.
-velocity) control described above are performed by the Webots PID-controller and ODE's joint motor implementation (see ODE documentation).
-As an alternative, Webots does also allow the user to directly specify the amount of force (resp.
-torque) that must be applied by a [Motor](#motor).
-This is achieved with the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function which specifies the desired amount of forces (resp.
-torques) and switches off the PID-controller and motor force (resp.
-motor torque).
+The position (resp. velocity) control described above are performed by the Webots PID-controller and ODE's joint motor implementation (see ODE documentation).
+As an alternative, Webots does also allow the user to directly specify the amount of force (resp. torque) that must be applied by a [Motor](#motor).
+This is achieved with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function which specifies the desired amount of forces (resp. torques) and switches off the PID-controller and motor force (resp. motor torque).
 A subsequent call to the `wb_motor_set_position` function restores the original *position control*.
 Some care must be taken when using *force control*.
-Indeed the force (resp.
-torque) specified with the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function is applied to the [Motor](#motor) continuously.
-Hence the [Motor](#motor) will infinitely accelerate its rotational or linear motion and eventually *explode* unless a functional force control (resp.
-torque control) algorithm is used.
+Indeed the force (resp. torque) specified with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function is applied to the [Motor](#motor) continuously.
+Hence the [Motor](#motor) will infinitely accelerate its rotational or linear motion and eventually *explode* unless a functional force control (resp. torque control) algorithm is used.
 
 %figure "Motor Control Summary"
 
@@ -315,16 +305,10 @@ The `wb_motor_set_acceleration` function specifies the acceleration that the PID
 Note that an infinite acceleration is obtained by passing -1 as the `acc` argument to this function.
 The specified acceleration overwrites the `acceleration` field value and can be retrieved using the `wb_motor_get_acceleration` function.
 
-The `wb_motor_set_available_force` (resp.
-`wb_motor_set_available_torque`) function specifies the maximum force (resp.
-torque) that will be available to the motor to carry out the requested motion.
+The `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function specifies the maximum force (resp. torque) that will be available to the motor to carry out the requested motion.
 The motor force/torque specified with this function cannot exceed the value specified in the `maxForce`/`maxTorque` field.
-The specified force (resp.
-torque) can be retrieved using the `wb_motor_get_available_force` (resp.
-`wb_motor_get_available_torque`) function.
-The `wb_motor_get_max_force` (reps.
-`wb_motor_get_max_torque`) function returns the limit specified in the `maxForce` (resp.
-`maxTorque`) field.
+The specified force (resp. torque) can be retrieved using the `wb_motor_get_available_force` (resp. `wb_motor_get_available_torque`) function.
+The `wb_motor_get_max_force` (reps. `wb_motor_get_max_torque`) function returns the limit specified in the `maxForce` (resp. `maxTorque`) field.
 Note that if the force/torque is not explicitly set using the `wb_motor_set_available_[force|torque]` function, then the `wb_motor_get_available_[force|torque]` and `wb_motor_get_max_[force|torque]` functions return the same value.
 
 The `wb_motor_set_control_pid` function changes the values of the gains *P, I* and *D* in the PID-controller.
@@ -357,31 +341,19 @@ double wb_motor_get_torque_feedback(WbDeviceTag tag);
 
 **Description**
 
-The `wb_motor_enable_force_feedback` (resp.
-`wb_motor_enable_torque_feedback`) function activates force (resp.
-torque) feedback measurements for the specified motor.
-The result must be retrieved with the `wb_motor_get_force_feedback` (resp.
-`wb_motor_get_torque_feedback`) function.
+The `wb_motor_enable_force_feedback` (resp. `wb_motor_enable_torque_feedback`) function activates force (resp. torque) feedback measurements for the specified motor.
+The result must be retrieved with the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function.
 The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_motor_get_force_feedback` (resp.
-`wb_motor_get_torque_feedback`) function returns the most recent motor force (resp.
-torque) measurement.
-This function measures the amount of motor force (resp.
-torque) that is currently being used by the motor in order to achieve the desired motion or hold the current position.
+The `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function returns the most recent motor force (resp. torque) measurement.
+This function measures the amount of motor force (resp. torque) that is currently being used by the motor in order to achieve the desired motion or hold the current position.
 For a "rotational" motor, the returned value is a torque [N\*m]; for a "linear" motor, the value is a force [N].
 The returned value is an approximation computed by the physics engine, and therefore it may be inaccurate.
-The returned value normally does not exceed the available motor force (resp.
-torque) specified with the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function.
-The default value is provided by the `maxForce` (resp.
-`maxTorque` field.
-Note that this function measures the *current motor force* (resp.
-*torque*) exclusively, all other external or internal forces (resp.
-torques) that may apply to the motor are ignored.
-In particular, the `wb_motor_get_force_feedback` (resp.
-`wb_motor_get_torque_feedback`) function does not measure:
+The returned value normally does not exceed the available motor force (resp. torque) specified with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function.
+The default value is provided by the `maxForce` (resp. `maxTorque` field).
+Note that this function measures the *current motor force* (resp. *torque*) exclusively, all other external or internal forces (resp. torques) that may apply to the motor are ignored.
+In particular, the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function does not measure:
 
 - The spring and damping forces that apply when the `springConstant` or
 `dampingConstant` fields are non-zero.
@@ -398,12 +370,9 @@ Note that these functions applies only to *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of related [Solid](solid.md) nodes must be defined for these functions to work properly.
 Moreover they don't work for [Motor](#motor) nodes used to power a [Track](track.md) node.
 
-If the `wb_motor_get_force_feedback` (resp.
-`wb_motor_get_torque_feedback`) function was not previously enabled, the return value is undefined.
+If the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function was not previously enabled, the return value is undefined.
 
-The `wb_motor_get_force_feedback_sampling_period` (resp.
-`wb_motor_get_torque_feedback_sampling_period`) function returns the period given in the `wb_motor_enable_force_feedback` (resp.
-`wb_motor_enable_force_feedback`) function, or 0 if the device is disabled.
+The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_feedback_sampling_period`) function returns the period given in the `wb_motor_enable_force_feedback` (resp. `wb_motor_enable_force_feedback`) function, or 0 if the device is disabled.
 
 ---
 
@@ -422,26 +391,16 @@ void wb_motor_set_torque(WbDeviceTag tag, double torque);
 
 **Description**
 
-As an alternative to the PID-controller, the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function allows the user to directly specify the amount of force (resp.
-torque) that must be applied by a motor.
+As an alternative to the PID-controller, the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function allows the user to directly specify the amount of force (resp. torque) that must be applied by a motor.
 This function bypasses the PID-controller and ODE joint motors; it adds the force to the physics simulation directly.
 This allows the user to design a custom controller, for example a PID controller.
-Note that when the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function is invoked, this automatically resets the force previously added by the PID-controller.
+Note that when the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function is invoked, this automatically resets the force previously added by the PID-controller.
 
 In a "rotational" motor, the *torque* parameter specifies the amount of torque [N\*m] that will be applied around the motor rotation axis.
 In a "linear" motor, the *force* parameter specifies the amount of force [N] that will be applied along the sliding axis.
-A positive *force* (resp.
-*torque*) will move the bodies in the positive direction, which corresponds to the direction of the motor when its position value increases.
-When invoking the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function, the specified *force* (resp.
-*torque*) parameter cannot exceed the currently available force (resp.
-torque) of the motor.
-The currently available force (resp.
-torque) is specified in the `maxForce` (resp.
-`maxTorque`) field or by calling the `wb_motor_set_available_force` (resp.
-`wb_motor_set_available_torque`) function.
+A positive *force* (resp. *torque*) will move the bodies in the positive direction, which corresponds to the direction of the motor when its position value increases.
+When invoking the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function, the specified *force* (resp. *torque*) parameter cannot exceed the currently available force (resp. torque) of the motor.
+The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling the `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function.
 
 Note that this function applies only to *physics-based* simulation.
 Therefore, the `physics` and `boundingObject` fields of the [Motor](#motor) node must be defined for this function to work properly.

@@ -13,9 +13,7 @@ ImmersionProperties {
 
 ### Description
 
-An [ImmersionProperties](#immersionproperties) node is used inside the
-`immersionProperties` field of a [Solid](solid.md) node to specify its dynamical
-interactions with one or more [Fluid](fluid.md) nodes.
+An [ImmersionProperties](#immersionproperties) node is used inside the `immersionProperties` field of a [Solid](solid.md) node to specify its dynamical interactions with one or more [Fluid](fluid.md) nodes.
 
 ### ImmersionProperties Fields
 
@@ -76,9 +74,5 @@ exerted by the fluid on the solid according the following formulas
     linear nature it may offer a better numerical stability than the above quadratic
     drags when the immersed solids are subject to large external forces or torques.
 
-> **Note**:
-The "xyz-projected area" computation mode is implemented only for
-boundingObjects that contain fully or partially immersed [Box](box.md) nodes,
-fully immersed [Cylinder](cylinder.md), [Capsule](capsule.md) and
-[Sphere](sphere.md) nodes. The "immersed area" computation mode is implemented
-for every Geometry node.
+> **Note**: The "xyz-projected area" computation mode is implemented only for boundingObjects that contain fully or partially immersed [Box](box.md) nodes, fully immersed [Cylinder](cylinder.md), [Capsule](capsule.md) and [Sphere](sphere.md) nodes.
+The "immersed area" computation mode is implemented for every Geometry node.

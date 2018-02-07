@@ -15,20 +15,16 @@ ElevationGrid {
 
 ### Description
 
-The [ElevationGrid](#elevationgrid) node specifies a uniform rectangular grid of
-varying height in the *y=0* plane of the local coordinate system. The geometry
-is described by a scalar array of height values that specify the height of the
-surface above each point of the grid. The [ElevationGrid](#elevationgrid) node
-is the most appropriate to model an uneven terrain.
+The [ElevationGrid](#elevationgrid) node specifies a uniform rectangular grid of varying height in the *y=0* plane of the local coordinate system.
+The geometry is described by a scalar array of height values that specify the height of the surface above each point of the grid.
+The [ElevationGrid](#elevationgrid) node is the most appropriate to model an uneven terrain.
 
 ### Field Summary
 
-The `xDimension` and `zDimension` fields indicate the number of points in the
-grid height array in the *x* and *z* directions. Both `xDimension` and
-`zDimension` shall be greater than or equal to zero. If either the `xDimension`
-or the `zDimension` is less than two, the [ElevationGrid](#elevationgrid)
-contains no quadrilaterals. The vertex locations for the quadrilaterals are
-defined by the `height` field and the `xSpacing` and `zSpacing` fields:
+The `xDimension` and `zDimension` fields indicate the number of points in the grid height array in the *x* and *z* directions.
+Both `xDimension` and `zDimension` shall be greater than or equal to zero.
+If either the `xDimension` or the `zDimension` is less than two, the [ElevationGrid](#elevationgrid) contains no quadrilaterals.
+The vertex locations for the quadrilaterals are defined by the `height` field and the `xSpacing` and `zSpacing` fields:
 
 - The `height` field is an `xDimension` by `zDimension` array of scalar values
 representing the height above the grid for each vertex.
@@ -54,32 +50,21 @@ and P[0,0] is height[0] units above/below the origin of the local
 coordinate system
 ```
 
-The `color` field specifies per-vertex or per-quadrilateral colors for the
-[ElevationGrid](#elevationgrid) node depending on the value of `colorPerVertex`.
-If the `color` field is NULL, the [ElevationGrid](#elevationgrid) node is
-rendered with the overall attributes of the [Shape](shape.md) node enclosing the
-[ElevationGrid](#elevationgrid) node. If only two colors are supplied, these two
-colors are used alternatively to display a checkerboard structure.
+The `color` field specifies per-vertex or per-quadrilateral colors for the [ElevationGrid](#elevationgrid) node depending on the value of `colorPerVertex`.
+If the `color` field is NULL, the [ElevationGrid](#elevationgrid) node is rendered with the overall attributes of the [Shape](shape.md) node enclosing the [ElevationGrid](#elevationgrid) node.
+If only two colors are supplied, these two colors are used alternatively to display a checkerboard structure.
 
-The `colorPerVertex` field determines whether colors specified in the color
-field are applied to each vertex or each quadrilateral of the
-[ElevationGrid](#elevationgrid) node. If `colorPerVertex` is `FALSE` and the
-`color` field is not NULL, the `color` field shall specify a [Color](color.md)
-node containing at least (`xDimension`-1) x (`zDimension`-1) colors.
+The `colorPerVertex` field determines whether colors specified in the color field are applied to each vertex or each quadrilateral of the [ElevationGrid](#elevationgrid) node.
+If `colorPerVertex` is `FALSE` and the `color` field is not NULL, the `color` field shall specify a [Color](color.md) node containing at least (`xDimension`-1) x (`zDimension`-1) colors.
 
-If `colorPerVertex` is `TRUE` and the `color` field is not NULL, the `color`
-field shall specify a [Color](color.md) node containing at least `xDimension` x
-`zDimension` colors, one for each vertex.
+If `colorPerVertex` is `TRUE` and the `color` field is not NULL, the `color` field shall specify a [Color](color.md) node containing at least `xDimension` x `zDimension` colors, one for each vertex.
 
-The `thickness` field specifies the thickness of the bounding box which is added
-below the lowest point of the `height` field, to prevent objects from falling
-through very thin [ElevationGrid](#elevationgrid)s.
+The `thickness` field specifies the thickness of the bounding box which is added below the lowest point of the `height` field, to prevent objects from falling through very thin [ElevationGrid](#elevationgrid)s.
 
 ### Texture Mapping
 
-The default texture mapping produces a texture that is upside down when viewed
-from the positive *y*-axis. To orient the texture with a more intuitive mapping,
-use a `TextureTransform` node to reverse the texture coordinate, like this:
+The default texture mapping produces a texture that is upside down when viewed from the positive *y*-axis.
+To orient the texture with a more intuitive mapping, use a `TextureTransform` node to reverse the texture coordinate, like this:
 
 ```
 Shape {
@@ -94,5 +79,4 @@ Shape {
 }
 ```
 
-This will produce a compact [ElevationGrid](#elevationgrid) with texture mapping
-that aligns with the natural orientation of the image.
+This will produce a compact [ElevationGrid](#elevationgrid) with texture mapping that aligns with the natural orientation of the image.

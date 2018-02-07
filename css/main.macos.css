@@ -12,13 +12,13 @@ body {
   font-family: Tahoma, Arial, sans-serif;
   font-size: 14px;
 }
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 100;
-  src: local("Helvetica");
-  /*
-    Issue: QtWebKit or Qt font management have issues with the Raleway texture on macOS.
-    Dirty workaround: Force an Helvetica font in this case.
-  */
+/*
+  Issue: QtWebKit or Qt font management has issues loading ttf glyphs on macOS.
+  Dirty workaround: Force standard fonts in this case.
+*/
+.webots-doc pre, .webots-doc code, .webots-doc code > a, .webots-doc .api table, .webots-doc .api td > a  {
+  font-family: monospace;
+}
+.webots-doc li, .webots-doc a, .webots-doc h1, .webots-doc h2, .webots-doc h3, .webots-doc p {
+  font-family: "Helvetica";
 }

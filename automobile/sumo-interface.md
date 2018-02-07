@@ -1,39 +1,28 @@
 ## SUMO interface
 
-An interface with a microscopic traffic simulator called `SUMO` (Simulation of
-Urban MObility) has been developed using a `Supervisor` node. The advantage of
-interfacing SUMO with Webots is that it allows to easily generate traffic using
-a large number of vehicles in real-time. This interface is written in Python in
-a supervisor controller and uses [TraCI](http://sumo.dlr.de/wiki/TraCI) to
-communicate with SUMO.
+An interface with a microscopic traffic simulator called `SUMO` (Simulation of Urban MObility) has been developed using a `Supervisor` node.
+The advantage of interfacing SUMO with Webots is that it allows to easily generate traffic using a large number of vehicles in real-time.
+This interface is written in Python in a supervisor controller and uses [TraCI](http://sumo.dlr.de/wiki/TraCI) to communicate with SUMO.
 
-> **Note**:
-Currently version 0.30 of SUMO is distributed with Webots.
+> **Note**: Currently version 0.30 of SUMO is distributed with Webots.
 
 In order to use this interface, a `SumoInterface` PROTO node should to be added to the world.
 And a folder called `worldName_net` should be present at the same level as the world file.
-This folder should contain the usual files defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the
-configuration files (.netccfg and .sumocfg), for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
-The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded by default. If those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you don't know which one is going to be used).
+This folder should contain the usual files defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the configuration files (.netccfg and .sumocfg), for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
+The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded by default.
+If those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you don't know which one is going to be used).
 
-The interface will automatically start SUMO and run it in synchronization
-with Webots time. Each time a new vehicle enters the SUMO simulation, it will be
-created in Webots too and its position and orientation will be continually
-updated. The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle
-number (starting from 0).
+The interface will automatically start SUMO and run it in synchronization with Webots time.
+Each time a new vehicle enters the SUMO simulation, it will be created in Webots too and its position and orientation will be continually updated.
+The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle number (starting from 0).
 
-> **Note** [macOS]:
-On macOS, SUMO relies on X11. You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
+> **Note** [macOS]: On macOS, SUMO relies on X11.
+You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
 ### Use vehicles already present in the world
 
-If some vehicles whose DEF name is `SUMO_VEHICLEX` are
-already present in the world at the simulation start, then the interface will
-automatically use them before creating new vehicles, this can be useful to avoid
-real-time addition of vehicles (which can make the simulation speed drop for a very
-short time). Furthermore, when a vehicle enters the SUMO network, if a vehicle
-whose DEF name is identical to the ID of the vehicle in SUMO is present in the
-simulation, this vehicle is then associated to the one in SUMO.
+If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time).
+Furthermore, when a vehicle enters the SUMO network, if a vehicle whose DEF name is identical to the ID of the vehicle in SUMO is present in the simulation, this vehicle is then associated to the one in SUMO.
 
 ### Automatic injection of Webots vehicles in SUMO
 
@@ -41,16 +30,15 @@ If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle
 
 ### Vehicle type
 
-If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots. If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO. Similarly, the class `motorbike` will randomly select between the `Motorbike` and the `Scooter` PROTO. Finally, the classes `trailer` and `truck` will select the `Truck` PROTO, respectively with and without a trailer.
+If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots.
+If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
+Similarly, the class `motorbike` will randomly select between the `Motorbike` and the `Scooter` PROTO.
+Finally, the classes `trailer` and `truck` will select the `Truck` PROTO, respectively with and without a trailer.
 
 ### Traffic lights synchronization
 
-If the simulation contains traffic lights, the name of the
-corresponding `LEDs` node of these traffic lights in Webots should respect the
-following syntax: `trafficLightID_trafficLightIndex_r/y/g`. If the `LEDs` names
-are respected, the state of the traffic light will be automatically updated in
-Webots from SUMO by the interface.
-
+If the simulation contains traffic lights, the name of the corresponding `LEDs` node of these traffic lights in Webots should respect the following syntax: `trafficLightID_trafficLightIndex_r/y/g`.
+If the `LEDs` names are respected, the state of the traffic light will be automatically updated in Webots from SUMO by the interface.
 
 ### The SumoInterface PROTO
 
@@ -103,7 +91,6 @@ PROTO SumoInterface [
 - `synchronization`: Defines if the interface controller is synchronized with Webots or not.
 - `children`: Can be used to insert other nodes, in particular the traffic lights should be added in this field.
 
-
 ### The SumoDisplay PROTO
 
 It is sometimes useful to see the GUI view of SUMO inside Webots (e.g. to emulate a GPS view).
@@ -129,7 +116,8 @@ PROTO SumoDisplay [
 
 ## Plugin mechanism
 
-In addition to the PROTO parameters, the plugin mechanism can be used to extend the interface. The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
+In addition to the PROTO parameters, the plugin mechanism can be used to extend the interface.
+The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
 
 ```python
 class SumoSupervisorPlugin:
@@ -140,10 +128,8 @@ class SumoSupervisorPlugin:
     # TODO
 ```
 
-The first function is called at initialization of the interface, the arguments
-are: the `Supervisor` itself, the traci class in order to get information regarding
-the traci context and the net class to get information regarding the network. The
-second one is called at each SUMO step and the argument is the time step.
+The first function is called at initialization of the interface, the arguments are: the `Supervisor` itself, the traci class in order to get information regarding the traci context and the net class to get information regarding the network.
+The second one is called at each SUMO step and the argument is the time step.
 
 Such a plugin can be used for example to change traffic light state in SUMO.
 

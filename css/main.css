@@ -12,9 +12,3 @@ body {
   font-family: Tahoma, Arial, sans-serif;
   font-size: 14px;
 }
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 100;
-  src: local("fonts/Raleway Thin"), local("fonts/Raleway-Thin"), url("fonts/Raleway-Thin.ttf") format("truetype");
-}

@@ -1,9 +1,7 @@
 ## ros\_automobile controller
 
-The `ros_automobile` controller provides an interface between ROS, the
-`libdriver` and `libcar` libraries. In addition to the servies and topics
-available in the default ROS controller, additional services and topics are
-available with the `ros_automobile` controller.
+The `ros_automobile` controller provides an interface between ROS, the `libdriver` and `libcar` libraries.
+In addition to the servies and topics available in the default ROS controller, additional services and topics are available with the `ros_automobile` controller.
 
 | name                                                                                                                                                                                                                                                                                                                                                             | service/topic | data type                                                    | data type definition                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |  |
@@ -45,8 +43,5 @@ available with the `ros_automobile` controller.
 | [/automobile/set\_throttle](driver-library.md#wbu_driver_set_throttle)                                                                                                                                                                                                                                                                                           | service       | webots\_ros::set\_float                                      |                                                                                                                                               |
 | [/automobile/set\_wipers\_mode](driver-library.md#wbu_driver_set_wipers_mode)                                                                                                                                                                                                                                                                                     | service       | webots\_ros::set\_int                                       |                                                                                                                                               |
 
-> **Note**:
-To enable synchronous simulation you will have to call the `/robot/time_step`
-service with a positive `step` argument. Then each time this service is called a
-car step will be executed (set the `step` argument to 0 to disable
-synchronization).
+> **Note**: To enable synchronous simulation you will have to call the `/robot/time_step` service with a positive `step` argument.
+Then each time this service is called a car step will be executed (set the `step` argument to 0 to disable synchronization).

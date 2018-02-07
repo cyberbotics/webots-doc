@@ -1,5 +1,4 @@
-> **Note**:
-This node is experimental, i.e. its long-term support is not guaranteed.
+> **Note**: This node is experimental, i.e. its long-term support is not guaranteed.
 
 ## Uniform
 
@@ -14,15 +13,13 @@ Uniform {
 ### Description
 
 The [Uniform](#uniform) node specifies a uniform named variable.
-Uniform variables are used to pass variables to the vertex or fragment shaders
-defined in the same [ComposedShader](composedshader.md) node.
+Uniform variables are used to pass variables to the vertex or fragment shaders defined in the same [ComposedShader](composedshader.md) node.
 
 The `name` field indicates the uniform variable name.
 
 The `type` field indicates the uniform variable data type.
 
 The `value` field indicates the uniform variable value.
-
 
 ### Supported data types
 

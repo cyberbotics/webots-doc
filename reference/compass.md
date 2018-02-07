@@ -14,10 +14,9 @@ Compass {
 
 ### Description
 
-A [Compass](#compass) node can be used to model a 1, 2 or 3-axis digital compass
-(magnetic sensor). The [Compass](#compass) node returns a vector that indicates
-the direction of the *virtual north*. The *virtual north* is specified by the
-`northDirection` field in the [WorldInfo](worldinfo.md) node.
+A [Compass](#compass) node can be used to model a 1, 2 or 3-axis digital compass (magnetic sensor).
+The [Compass](#compass) node returns a vector that indicates the direction of the *virtual north*.
+The *virtual north* is specified by the `northDirection` field in the [WorldInfo](worldinfo.md) node.
 
 ### Field Summary
 
@@ -68,13 +67,11 @@ Note that the first measurement will be available only after the first sampling 
 
 The `wb_compass_disable` function turns off the [Compass](#compass) device.
 
-The `wb_compass_get_sampling_period` function returns the period given into
-the `wb_compass_enable` function, or 0 if the device is disabled.
+The `wb_compass_get_sampling_period` function returns the period given into the `wb_compass_enable` function, or 0 if the device is disabled.
 
-The `wb_compass_get_values` function returns the current [Compass](#compass)
-measurement. The returned vector indicates the direction of the *virtual north*
-in the coordinate system of the [Compass](#compass) device. Here is the internal
-algorithm of the `wb_compass_get_values` function in pseudo-code:
+The `wb_compass_get_values` function returns the current [Compass](#compass) measurement.
+The returned vector indicates the direction of the *virtual north* in the coordinate system of the [Compass](#compass) device.
+Here is the internal algorithm of the `wb_compass_get_values` function in pseudo-code:
 
 ```c
 float[3] wb_compass_get_values() {
@@ -91,17 +88,13 @@ float[3] wb_compass_get_values() {
 }
 ```
 
-If the lookupTable is empty and all three xAxis, yAxis and zAxis fields are TRUE
-then the length of the returned vector is 1.0.
+If the lookupTable is empty and all three xAxis, yAxis and zAxis fields are TRUE then the length of the returned vector is 1.0.
 
-The values are returned as a 3D-vector, therefore only the indices 0, 1, and 2
-are valid for accessing the vector. Let's look at one example. In Webots global
-coordinates system, the *xz*-plane represents the horizontal floor and the
-*y*-axis indicates the elevation. The default value of the `northDirection`
-field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned
-with the x-axis. Now if the [Compass](#compass) node is in *upright* position,
-meaning that its y-axis is aligned with the global y-axis, then the bearing
-angle in degrees can be computed as follows:
+The values are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are valid for accessing the vector.
+Let's look at one example.
+In Webots global coordinates system, the *xz*-plane represents the horizontal floor and the *y*-axis indicates the elevation.
+The default value of the `northDirection` field is [ 1 0 0 ] and therefore the north direction is horizontal and aligned with the x-axis.
+Now if the [Compass](#compass) node is in *upright* position, meaning that its y-axis is aligned with the global y-axis, then the bearing angle in degrees can be computed as follows:
 
 ```c
 double get_bearing_in_degrees() {
@@ -114,14 +107,10 @@ return bearing;
 }
 ```
 
-> **Note** [C, C++]:
-The returned vector is a pointer to the internal values managed by the
-[Compass](#compass) node, therefore it is illegal to free this pointer.
-Furthermore, note that the pointed values are only valid until the next call to the
-`wb_robot_step` or `Robot::step` functions. If these values are needed for a longer
-period they must be copied.
+> **Note** [C, C++]: The returned vector is a pointer to the internal values managed by the [Compass](#compass) node, therefore it is illegal to free this pointer.
+Furthermore, note that the pointed values are only valid until the next call to the `wb_robot_step` or `Robot::step` functions.
+If these values are needed for a longer period they must be copied.
 
 <!-- -->
 
-> **Note** [Python]:
-Ths `getValues` function returns the vector as a list containing three floats.
+> **Note** [Python]: Ths `getValues` function returns the vector as a list containing three floats.

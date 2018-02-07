@@ -1,12 +1,11 @@
 ## Road segments
 
-The first part of this section will present the various PROTO models of road segments
-and intersections, that can be used to build the road network.
+The first part of this section will present the various PROTO models of road segments and intersections, that can be used to build the road network.
 
 ### Road
 
-The `Road` PROTO is the most generic one. It can be used for a large variety of
-purposes.
+The `Road` PROTO is the most generic one.
+It can be used for a large variety of purposes.
 
 %figure "Generic segment of road"
 
@@ -126,11 +125,10 @@ object.
 - `castShadows`: defines whether the road should cast shadows.
 - `contactMaterial`: defines the road contact material (used by the ContactProperties node).
 
-
 ### StraightRoadSegment
 
-The `StraightRoadSegment` PROTO is the simplest one. It can only be used to
-create a straight road.
+The `StraightRoadSegment` PROTO is the simplest one.
+It can only be used to create a straight road.
 
 %figure "Straight segment of road"
 
@@ -152,8 +150,8 @@ StraightRoadSegment {
 
 #### StraightRoadSegment Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the one of the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `startingRoadBorderWidth and endingRoadBorderWidth`: Instead of defining the
 width of the border for each way-points, you can only specify it for the
@@ -165,8 +163,8 @@ of the road.
 
 ### CurvedRoadSegment
 
-The `CurvedRoadSegment` PROTO is very simple too. It can only be used to create
-a regularly curved road.
+The `CurvedRoadSegment` PROTO is very simple too.
+It can only be used to create a regularly curved road.
 
 %figure "Curved segment of road"
 
@@ -187,8 +185,8 @@ CurvedRoadSegment {
 
 #### CurvedRoadSegment Field Summary
 
-Most of the fields are similar to the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `curvatureRadius`: Defines the curvature radius of the center of the road.
 - `totalAngle`: Defines the angle covered by the road.
@@ -197,10 +195,9 @@ only the specific ones will be explained.
 
 ### HelicoidalRoadSegment
 
-The `HelicoidalRoadSegment` PROTO represents an helicoidal road. It is mainly
-meant to showcase how the [Road](#road) PROTO can be inherited to create complex
-road structure in the third dimension. It can, for example, be used to model a
-garage input ramp.
+The `HelicoidalRoadSegment` PROTO represents an helicoidal road.
+It is mainly meant to showcase how the [Road](#road) PROTO can be inherited to create complex road structure in the third dimension.
+It can, for example, be used to model a garage input ramp.
 
 %figure "Helicoidal segment of road"
 
@@ -221,8 +218,8 @@ HelicoidalRoadSegment {
 
 #### Helicoidal Field Summary
 
-Most of the fields are similar to the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `height`: Defines the total height covered by the road.
 - `radius`: Defines the radius of the center of the road.
@@ -260,8 +257,8 @@ Crossroad {
 
 #### Crossroad Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the one of the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `name`: Could contain the crossroad name.
 - `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
@@ -311,8 +308,8 @@ Roundabout {
 
 #### Roundabout Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the one of the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `subdivision`: Defines the subdivision of the circle.
 - `innerRadius`: Defines the inner radius of the roundabout.
@@ -388,8 +385,8 @@ LaneSeparation {
 
 #### LaneSeparation Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the one of the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `numberOfleavingLanes`: Defines the number of lanes leaving the main road.
 - `newLaneLeft`: Defines if the lanes leaving the main road goes to the left or
@@ -400,8 +397,7 @@ bounding object.
 
 ### AddLaneRoadSegment
 
-The `AddLaneRoadSegment` PROTO can be used to add (or remove) one lane to the
-road.
+The `AddLaneRoadSegment` PROTO can be used to add (or remove) one lane to the road.
 
 %figure "Addition of one lane"
 
@@ -421,8 +417,8 @@ AddLaneRoadSegment {
 
 #### AddLaneRoadSegment Field Summary
 
-Most of the fields are similar to the one of the [Road](#road) PROTO. Therefore,
-only the specific ones will be explained.
+Most of the fields are similar to the one of the [Road](#road) PROTO.
+Therefore, only the specific ones will be explained.
 
 - `length`: Defines in how many meter the new lane is created.
 - `newLaneLeft`: Defines whether the new lane should be created on the right or left
@@ -431,9 +427,7 @@ side of the road.
 
 ### AddLanesRoadSegment
 
-The `AddLanesRoadSegment` PROTO is very similar to the
-[AddLaneRoadSegment](#addlaneroadsegment) PROTO except that it allows to add
-several lanes to the road.
+The `AddLanesRoadSegment` PROTO is very similar to the [AddLaneRoadSegment](#addlaneroadsegment) PROTO except that it allows to add several lanes to the road.
 
 %figure "Addition of several lanes"
 
@@ -451,7 +445,7 @@ AddLanesRoadSegment {
 
 #### AddLanesRoadSegment Field Summary
 
-Most of the fields are similar to the one of the `Road` PROTO. Therefore, only
-the specific one will be explained.
+Most of the fields are similar to the one of the `Road` PROTO.
+Therefore, only the specific one will be explained.
 
 - `numberOfNewLanes`: Defines the number of new lanes to be added to the road.

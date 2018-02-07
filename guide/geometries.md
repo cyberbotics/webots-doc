@@ -5,25 +5,19 @@ The world files for these examples are located in the "sample/geometries/worlds"
 
 In this directory, you will find the following world files :
 
-### box.wbt
+### box.wbt, capsule.wbt, cone.wbt, convex\_polygon.wbt, cylinder.wbt, polyhedra.wbt, sphere.wbt
 
-TODO
+These examples shows how to use the basic geometric primitives of Webots in order to display untextured 3D shapes in the 3D window.
+Basically:
 
-### capsule.wbt
+- `box.wbt` demonstrates how to use the `Box` primitive to display a red box.
+- `capsule.wbt`: demonstrates how to use the `Capsule` primitive to display a red capsule.
+- `cone.wbt`: demonstrates how to use the `Cone` primitive to display a red cone.
+- `convex_polygon.wbt`: demonstrates how to use the `IndexedFaceSet` primitive to display a convex polygon.
+- `cylinder.wbt`: demonstrates how to use the `Cylinder` primitive to display a red cylinder.
+- `polyhedra.wbt`: demonstrates how to use the `IndexedFaceSet` primitive to display a red polyhedra.
+- `sphere.wbt`: demonstrates how to use the `Sphere` primitive to display a red sphere.
 
-TODO
-
-### cone.wbt
-
-TODO
-
-### convex\_polygon.wbt
-
-TODO
-
-### cylinder.wbt
-
-TODO
 
 ### extended\_solids.wbt
 
@@ -50,14 +44,6 @@ TODO
 TODO
 
 ### physics\_primitives.wbt
-
-TODO
-
-### polyhedra.wbt
-
-TODO
-
-### sphere.wbt
 
 TODO
 

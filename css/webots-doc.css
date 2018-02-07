@@ -335,11 +335,6 @@
   margin: 0px;
 }
 
-.blog {
-  background-color: #ede9e8;
-  background-image: url(//cyberbotics.com/files/repository/www/blog_resources/images/crossword.png);
-}
-
 .blog #title {
   text-align: center;
   background: transparent;
@@ -347,9 +342,6 @@
 
 .blog #view {
   width: 90%;
-  margin: 0 auto;
-  margin-bottom: 70px;
-  padding: 10px;
   background: transparent;
 }
 
@@ -361,7 +353,6 @@
 
 .blog #view h1, .blog #view h2, .blog #view h3 {
   text-align: center;
-  /*color: #222;*/
 }
 
 .blog #view hr {
@@ -429,7 +420,7 @@
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 150px;
+  margin-bottom: 150px;
 }
 .blog .modal-content, #caption {
   -webkit-animation-name: zoom;

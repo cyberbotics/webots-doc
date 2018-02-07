@@ -3,6 +3,20 @@
  * All the CSS rules are applied to the 'webots-doc' container and its descendants.
  */
 
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 300;
+  src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
+}
+
 .webots-doc #left {
   top: 0;
   width: 20%;
@@ -40,7 +54,7 @@
   padding-bottom: 0;
   margin-bottom: 0;
   overflow: auto;
-  background: lightgray;
+  background: lightblue;
 }
 .webots-doc .default#center {
   top: 0px !important;
@@ -50,6 +64,10 @@
   margin: 0 auto;
   background: white;
   min-height: 100vh;
+  padding: 0px 60px 0px 30px;
+  -webkit-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 68px 0px rgba(0, 0, 0, 0.2);
 }
 .webots-doc #title-content {
   margin: 0;
@@ -116,19 +134,28 @@
 .webots-doc blockquote {
   margin: 20px 10px;
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */
-  border-left: 6px solid #ffe070;
-  background-color: #fff4cc;
+  background: #f1f1f1;
   background-image: url(images/note.png);
   background-repeat: no-repeat;
   background-position: 10px 24px;
+  border-left: 2px solid #ccc;
+  padding: 3px;
+}
+.webots-doc blockquote > p > code {
+  background: #ddd;
+}
+.webots-doc blockquote > pre {
+  border-left: 2px solid #ccc;
+  background: #eaeaea;
 }
 .webots-doc .cyberbotics blockquote {
   padding: 20px;
 }
 .webots-doc .default blockquote {
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
 .webots-doc li {
+  font-family: "Roboto";
   font-weight: normal;
 }
 .webots-doc li.selected {
@@ -143,7 +170,8 @@
   color: #ddd;
 }
 .webots-doc a {
-  color: #888;
+  font-family: "Roboto";
+  color: #317589;
   text-decoration: none;
   outline: 0;
 }
@@ -159,34 +187,38 @@
   color: black;
 }
 .webots-doc pre {
-  padding: 30px 10px 30px 40px;
+  padding: 20px 10px 20px 40px;
   margin: 20px 10px;
-  border-radius: 20px;
-  background-color: #e8f4ff;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 2px;
   overflow-x: auto;
   font-size: 16px;
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc code {
   padding: 0;
   background: transparent;
-  color: #444;
-  font-size: 16px;
-  overflow-y: hidden;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
 }
-.webots-doc p > code {
-  line-height:18px;
+.webots-doc p > code, .webots-doc li > code {
+  color: #222;
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
-.webots-doc a code {
-  color: #888;
+.webots-doc code > a {
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3 {
-  font-family: 'Raleway';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 100;
-  color: #888;
+  color: #0e6f8c;
   clear: both;
+  margin: 20px auto;
 }
 .webots-doc h1 {
   font-size: 46px;
@@ -220,6 +252,7 @@
 .webots-doc .anchor-header {
   position: relative;
   left: -20px;
+  padding: 9px 0px;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,
@@ -231,10 +264,13 @@
   opacity: 1;
 }
 .webots-doc p {
-  color: #444;
+  font-family: "Roboto";
+  color: black;
   margin-left: 10px;
   margin-right: 10px;
+  font-size: 16px;
   text-align: justify;
+  line-height: 140%;
 }
 .webots-doc img {
   max-width: 100%;
@@ -275,8 +311,11 @@
   word-wrap: break-word;
 }
 .webots-doc .api table {
-  font-family: monospace;
+  font-family: "Roboto Mono";
   width: 80%;
+}
+.webots-doc .api td > a {
+  font-family: "Roboto Mono";
 }
 .webots-doc ul {
   clear: both;
@@ -294,13 +333,6 @@
 }
 .webots-doc .illustrated-section p {
   margin: 0px;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 100;
-  src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
 }
 
 .blog {

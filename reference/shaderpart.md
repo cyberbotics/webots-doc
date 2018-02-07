@@ -1,5 +1,4 @@
-> **Note**:
-This node is experimental, i.e. its long-term support is not guaranteed.
+> **Note**: This node is experimental, i.e. its long-term support is not guaranteed.
 
 ## ShaderPart
 
@@ -19,12 +18,9 @@ It can be respectively either "VERTEX" or "FRAGMENT".
 
 The `content` field contains the source code of the GPU program.
 
-
 ### GPU program supported type and version
 
-For a maximal compatibility range, `GLSL version 120` has been chosen
-as the only supported shading language for now.
-
+For a maximal compatibility range, `GLSL version 120` has been chosen as the only supported shading language for now.
 
 ### GLSL 120 documentation
 
@@ -37,7 +33,6 @@ The GLSL documentation is available from following sources:
     - [Lighthouse3d.com](http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/)
 3. Books
     - [GLSL Essentials by Jacobo Rodríguez](https://www.amazon.com/GLSL-Essentials-Jacobo-Rodr%C3%ADguez/dp/1849698007)
-
 
 ### Variables
 
@@ -63,7 +58,6 @@ Some of them are described in the following table:
 | `[Point/Spot]Light.radius`                           | *Not available*                                                 |
 | `DirectionalLight.direction`                         | `gl_LightSource[X].position`                                    |
 
-
 ### Special preprocessor variables
 
 - `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
@@ -74,12 +68,10 @@ This constant is particularly useful to loop over the lights.
     - `2` stands for an exponential2 fog
     - `3` stands for a linear fog
 
-
 ### X3DOM export
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
 Generally this automatic conversion is working fine, however if you suspect a wrong behavior, please write a bug report to help us improving the conversion function.
-
 
 #### Known differences
 

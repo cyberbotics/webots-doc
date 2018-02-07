@@ -2,11 +2,9 @@
 
 ### CarSimple
 
-For each model of [Car](#car), a 'simple' PROTO is present too. These simplified
-kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is
-therefore not possible to add sensors or control them. They are made to represent
-non-moving parked vehicles or to be moved using a Supervisor because they are much
-faster to simulate than the normal PROTO models.
+For each model of [Car](#car), a 'simple' PROTO is present too.
+These simplified kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is therefore not possible to add sensors or control them.
+They are made to represent non-moving parked vehicles or to be moved using a Supervisor because they are much faster to simulate than the normal PROTO models.
 
 ```
  PROTO CarSimple {
@@ -26,9 +24,8 @@ faster to simulate than the normal PROTO models.
 device with recognition capability (i.e. with a Recognition node).
 - `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 
-CarSimple is not an actual PROTO but defines the common structure of all the
-'simple' versions of the cars. The different simple versions of the car PROTO nodes
-represent the different models of [Car](#car):
+CarSimple is not an actual PROTO but defines the common structure of all the 'simple' versions of the cars.
+The different simple versions of the car PROTO nodes represent the different models of [Car](#car):
 
 - the Sport SVR from Range Rover
 - the X5 from BMW
@@ -44,9 +41,8 @@ represent the different models of [Car](#car):
 
 ### TwoWheelerSimple
 
-Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different
-organisation. Similar to CarSimple, the TwoWheelerSimple PROTO displayed bellow
-is just a common structure for the different versions of the two wheelers.
+Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different organisation.
+Similar to CarSimple, the TwoWheelerSimple PROTO displayed bellow is just a common structure for the different versions of the two wheelers.
 
 ```
 PROTO TwoWheelerSimple {

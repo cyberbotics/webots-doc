@@ -17,15 +17,12 @@ Emitter {
 
 ### Description
 
-The [Emitter](#emitter) node is used to model radio, serial or infra-red
-emitters. An [Emitter](#emitter) node must be added to the children of a robot
-or a supervisor. Please note that an emitter can send data but it cannot receive
-data. In order to simulate a unidirectional communication between two robots,
-one robot must have an [Emitter](#emitter) while the other robot must have a
-[Receiver](receiver.md). To simulate a bidirectional communication between two
-robots, each robot needs to have both an [Emitter](#emitter) and a
-[Receiver](receiver.md). Note that messages are never transmitted from one robot
-to itself.
+The [Emitter](#emitter) node is used to model radio, serial or infra-red emitters.
+An [Emitter](#emitter) node must be added to the children of a robot or a supervisor.
+Please note that an emitter can send data but it cannot receive data.
+In order to simulate a unidirectional communication between two robots, one robot must have an [Emitter](#emitter) while the other robot must have a [Receiver](receiver.md).
+To simulate a bidirectional communication between two robots, each robot needs to have both an [Emitter](#emitter) and a [Receiver](receiver.md).
+Note that messages are never transmitted from one robot to itself.
 
 ### Field Summary
 
@@ -83,12 +80,9 @@ are used.
 total number of bytes in the packets enqueued in the emitter cannot exceed this
 number. A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
 
-> **Note**:
-[Emitter](#emitter) nodes can also be used to communicate with the physics
-plugin (see [this chapter](physics-plugin.md)). In this case the channel must be
-set to 0 (the default). In addition it is highly recommended to choose -1 for
-the baudRate, in order to enable the fastest possible communication; the `type,
-range` and `aperture` will be ignored.
+> **Note**: [Emitter](#emitter) nodes can also be used to communicate with the physics plugin (see [this chapter](physics-plugin.md)).
+In this case the channel must be set to 0 (the default).
+In addition it is highly recommended to choose -1 for the baudRate, in order to enable the fastest possible communication; the `type, range` and `aperture` will be ignored.
 
 ### Emitter Functions
 
@@ -111,14 +105,12 @@ The enqueued data packets will then be sent to potential receivers (and removed 
 Note that independently from the `baudRate`, the [Emitter](#emitter) node will need at least one basic time step to send the packet but the [Receiver](#receiver) node will receive it immediately.
 Moreover a packet will not be sent to its emitter robot.
 This function returns 1 if the message was placed in the sending queue, 0 if the sending queue was full.
-The queue is considered to be *full* when the sum of bytes of all the currently
-enqueued packets exceeds the buffer size specified by the `bufferSize` field.
+The queue is considered to be *full* when the sum of bytes of all the currently enqueued packets exceeds the buffer size specified by the `bufferSize` field.
 Note that a packet must have at least 1 byte.
 
-The Emitter/Receiver API does not impose any particular format on the data being
-transmitted. Any user chosen format is suitable, as long as the emitter and
-receiver codes agree. The following example shows how to send a null-terminated
-ascii string using the C API:
+The Emitter/Receiver API does not impose any particular format on the data being transmitted.
+Any user chosen format is suitable, as long as the emitter and receiver codes agree.
+The following example shows how to send a null-terminated ascii string using the C API:
 
 ```c
 char message[128];
@@ -133,11 +125,10 @@ double array[5] = { 3.0, x, y, -1/z, -5.5 };
 wb_emitter_send(tag, array, 5 * sizeof(double));
 ```
 
-> **Note** [Python]:
-The `send` function sends a string. For sending primitive data types into this
-string, the *struct* module can be used. This module performs conversions
-between Python values and C structs represented as Python strings. Here is an
-example:
+> **Note** [Python]: The `send` function sends a string.
+For sending primitive data types into this string, the *struct* module can be used.
+This module performs conversions between Python values and C structs represented as Python strings.
+Here is an example:
 
 > ```python
 > import struct
@@ -148,11 +139,8 @@ example:
 
 <!-- -->
 
-> **Note** [Java]:
-The Java `send` method does not have a `size` argument because the size is
-implicitly passed with the `data` argument. Here is an example of sending a Java
-string in a way that is compatible with a C string, so that it can be received
-in a C/C++ controller.
+> **Note** [Java]: The Java `send` method does not have a `size` argument because the size is implicitly passed with the `data` argument.
+Here is an example of sending a Java string in a way that is compatible with a C string, so that it can be received in a C/C++ controller.
 
 > ```java
 > String request = "You are number " + num + "\0";
@@ -181,18 +169,14 @@ int wb_emitter_get_channel(WbDeviceTag tag);
 
 **Description**
 
-The `wb_emitter_set_channel` function allows the controller to change the
-transmission channel. This modifies the `channel` field of the corresponding
-[Emitter](#emitter) node. Normally, an emitter can send data only to receivers
-that use the same channel. However, the special WB\_CHANNEL\_BROADCAST value can
-be used for broadcasting to all channels. By switching the channel number an
-emitter can selectively send data to different receivers. The
-`wb_emitter_get_channel` function returns the current channel number of the
-emitter.
+The `wb_emitter_set_channel` function allows the controller to change the transmission channel.
+This modifies the `channel` field of the corresponding [Emitter](#emitter) node.
+Normally, an emitter can send data only to receivers that use the same channel.
+However, the special WB\_CHANNEL\_BROADCAST value can be used for broadcasting to all channels.
+By switching the channel number an emitter can selectively send data to different receivers.
+The `wb_emitter_get_channel` function returns the current channel number of the emitter.
 
-> **Note** [C++, Java, Python]:
-In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as
-static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
+> **Note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as static integer of the [Emitter](#emitter) class (Emitter::CHANNEL\_BROADCAST).
 
 ---
 
@@ -211,14 +195,12 @@ double wb_emitter_get_range(WbDeviceTag tag);
 
 **Description**
 
-The `wb_emitter_set_range` function allows the controller to change the
-transmission range at run-time. Data packets can only reach receivers located
-within the emitter's range. This function modifies the `range` field of the
-corresponding [Emitter](#emitter) node. If the specified `range` argument is
-larger than the `maxRange` field of the [Emitter](#emitter) node then the
-current range will be set to `maxRange`. The `wb_emitter_get_range` function
-returns the current emitter's range. For both the `wb_emitter_set_range` and
-`emitter_get_range` functions, a value of -1 indicates an infinite range.
+The `wb_emitter_set_range` function allows the controller to change the transmission range at run-time.
+Data packets can only reach receivers located within the emitter's range.
+This function modifies the `range` field of the corresponding [Emitter](#emitter) node.
+If the specified `range` argument is larger than the `maxRange` field of the [Emitter](#emitter) node then the current range will be set to `maxRange`.
+The `wb_emitter_get_range` function returns the current emitter's range.
+For both the `wb_emitter_set_range` and `emitter_get_range` functions, a value of -1 indicates an infinite range.
 
 ---
 
@@ -236,9 +218,7 @@ int wb_emitter_get_buffer_size(WbDeviceTag tag);
 
 **Description**
 
-The `wb_emitter_get_buffer_size` function returns the size (in bytes) of the
-transmission buffer. This corresponds to the value specified by the `bufferSize`
-field of the [Emitter](#emitter) node. The buffer size indicates the maximum
-number of data bytes that the emitter's queue can hold in total, if the size is
--1, the number of data bytes is not limited. When the buffer is full, calls to
-the `wb_emitter_send` function will fail and return 0.
+The `wb_emitter_get_buffer_size` function returns the size (in bytes) of the transmission buffer.
+This corresponds to the value specified by the `bufferSize` field of the [Emitter](#emitter) node.
+The buffer size indicates the maximum number of data bytes that the emitter's queue can hold in total, if the size is -1, the number of data bytes is not limited.
+When the buffer is full, calls to the `wb_emitter_send` function will fail and return 0.

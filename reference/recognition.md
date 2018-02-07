@@ -13,7 +13,8 @@ Recognition {
 ### Description
 
 The [Recognition](#recognition) node provides a [Camera](camera.md) device with object recognition capability.
-When a [Camera](camera.md) device has a [Recognition](#recognition) node in its `recognition` field, it is able to recognize which objects are present in the camera image. Only [Solids](solid.md) whose `recognitionColors` field is not empty can be recognized by the camera.
+When a [Camera](camera.md) device has a [Recognition](#recognition) node in its `recognition` field, it is able to recognize which objects are present in the camera image.
+Only [Solids](solid.md) whose `recognitionColors` field is not empty can be recognized by the camera.
 
 ### Field Summary
 

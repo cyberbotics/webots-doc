@@ -3,6 +3,7 @@
 This chapter gives an overview of Webots' windows and menus.
 
 ## Sections
+
 - [Introduction to Webots](introduction-to-webots.md)
 - [Starting Webots](starting-webots.md)
 - [The User Interface](the-user-interface.md)

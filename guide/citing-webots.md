@@ -1,23 +1,16 @@
 ## Citing Webots
 
-If you write a scientific paper or describe your project involving Webots on a
-web page, we would greatly appreciate it if you could add a reference to Webots. For
-example by explicitly mentioning Cyberbotics' website or by referencing a
-journal paper that describes Webots. To make this simpler, we provide here some
-citation examples, including BibTex entries that you can use in your own
-documents.
+If you write a scientific paper or describe your project involving Webots on a web page, we would greatly appreciate it if you could add a reference to Webots.
+For example by explicitly mentioning Cyberbotics' website or by referencing a journal paper that describes Webots.
+To make this simpler, we provide here some citation examples, including BibTex entries that you can use in your own documents.
 
 ### Citing Cyberbotics' website
 
-*This project uses [Webots](http://www.cyberbotics.com), a commercial mobile
-robot simulation software developed by Cyberbotics Ltd.*
+*This project uses [Webots](http://www.cyberbotics.com), a commercial mobile robot simulation software developed by Cyberbotics Ltd.*
 
-*This project uses Webots (http://www.cyberbotics.com), a commercial mobile
-robot simulation software developed by Cyberbotics Ltd.*
+*This project uses Webots (http://www.cyberbotics.com), a commercial mobile robot simulation software developed by Cyberbotics Ltd.*
 
-The BibTex reference entry may look odd, as it is very different from a standard
-paper citation and we want the specified fields to appear in the normal plain
-citation mode of LaTeX.
+The BibTex reference entry may look odd, as it is very different from a standard paper citation and we want the specified fields to appear in the normal plain citation mode of LaTeX.
 
 ```tex
 @MISC{Webots,
@@ -33,13 +26,16 @@ Once compiled with LaTeX, it should display as follows:
 
 *References*
 
-[1] Webots. http://www.cyberbotics.com. Commercial Mobile Robot Simulation
-Software.
+```
+[1] Webots.
+http://www.cyberbotics.com.
+Commercial Mobile Robot Simulation Software.
+```
 
 ### Citing a reference journal paper about Webots
 
-A reference paper was published in the International Journal of Advanced
-Robotics Systems. Here is the BibTex entry:
+A reference paper was published in the International Journal of Advanced Robotics Systems.
+Here is the BibTex entry:
 
 ```tex
 @ARTICLE{Webots04,

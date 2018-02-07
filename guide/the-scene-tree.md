@@ -1,15 +1,12 @@
 ## The Scene Tree
 
-As seen in the previous section, to access to the Scene Tree Window you can
-either choose `Scene Tree` in the `Tools` menu, or press the `Show Scene Tree`
-button in the main toolbar. The scene tree contains the information that
-describes a simulated world, including robots and environment, and its graphical
-representation. The scene tree of Webots is structured like a VRML97 file. It is
-composed of a list of nodes, each containing fields. Fields can contain values
-(text strings, numerical values) or other nodes.
+As seen in the previous section, to access to the Scene Tree Window you can either choose `Scene Tree` in the `Tools` menu, or press the `Show Scene Tree` button in the main toolbar.
+The scene tree contains the information that describes a simulated world, including robots and environment, and its graphical representation.
+The scene tree of Webots is structured like a VRML97 file.
+It is composed of a list of nodes, each containing fields.
+Fields can contain values (text strings, numerical values) or other nodes.
 
-This section describes the user interface of the Scene Tree, and gives an overview
-of the VRML97 nodes and Webots nodes.
+This section describes the user interface of the Scene Tree, and gives an overview of the VRML97 nodes and Webots nodes.
 
 %figure "Scene Tree Window"
 
@@ -19,16 +16,15 @@ of the VRML97 nodes and Webots nodes.
 
 ### Field Editor
 
-Nodes can be expanded with a double-click. When a field is selected, its value
-can be edited at the bottom of the Scene Tree. Double-clicking or pressing the
-`Enter` key on a field selects the first editable item of the field editor panel.
-Keyboard focus can be returned to the Scene Tree by tabbing through all of the
-items in the field editor panel. For text fields, changes are applied by
-pressing the `Enter` key. This is the same for numeric fields, but the up and
-down arrow keys can also be used to adjust values up and down, with changes
-immediately applied. For checkboxes, values are changed using the `Space` bar.
-Applied changes are immediately reflected in the 3D window. The following
-buttons are available in the field editor section:
+Nodes can be expanded with a double-click.
+When a field is selected, its value can be edited at the bottom of the Scene Tree.
+Double-clicking or pressing the `Enter` key on a field selects the first editable item of the field editor panel.
+Keyboard focus can be returned to the Scene Tree by tabbing through all of the items in the field editor panel.
+For text fields, changes are applied by pressing the `Enter` key.
+This is the same for numeric fields, but the up and down arrow keys can also be used to adjust values up and down, with changes immediately applied.
+For checkboxes, values are changed using the `Space` bar.
+Applied changes are immediately reflected in the 3D window.
+The following buttons are available in the field editor section:
 
 - ![](images/reset-button.png =26x26) **Reset**: Resets a field to its default
 value.

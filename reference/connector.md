@@ -21,41 +21,29 @@ Connector {
 
 ### Description
 
-[Connector](#connector) nodes are used to simulate mechanical docking systems,
-or any other type of device, that can dynamically create a physical link (or
-*connection*) with another device of the same type.
+[Connector](#connector) nodes are used to simulate mechanical docking systems, or any other type of device, that can dynamically create a physical link (or *connection*) with another device of the same type.
 
-[Connector](#connector) nodes can only connect to other [Connector](#connector)
-nodes. At any time, each connection involves exactly two [Connector](#connector)
-nodes (peer to peer). The physical connection between two
-[Connector](#connector) nodes can be created and destroyed at run time by the
-robot's controller. The primary idea of [Connector](#connector) nodes is to
-enable the dynamic reconfiguration of modular robots, but more generally,
-[Connector](#connector) nodes can be used in any situation where robots need to
-be attached to other robots.
+[Connector](#connector) nodes can only connect to other [Connector](#connector) nodes.
+At any time, each connection involves exactly two [Connector](#connector) nodes (peer to peer).
+The physical connection between two [Connector](#connector) nodes can be created and destroyed at run time by the robot's controller.
+The primary idea of [Connector](#connector) nodes is to enable the dynamic reconfiguration of modular robots, but more generally, [Connector](#connector) nodes can be used in any situation where robots need to be attached to other robots.
 
-[Connector](#connector) nodes were designed to simulate various types of docking
-hardware:
+[Connector](#connector) nodes were designed to simulate various types of docking hardware:
 
 - Mechanical links held in place by a latch
 - Gripping mechanisms
 - Magnetic links between permanent magnets (or electromagnets)
 - Pneumatic suction systems, etc.
 
-Connectors can be classified into two types, independent of the actual hardware
-system:
+Connectors can be classified into two types, independent of the actual hardware system:
 
-*Symmetric connectors*, where the two connecting faces are mechanically (and
-electrically) equivalent. In such cases both connectors are active.
+*Symmetric connectors*, where the two connecting faces are mechanically (and electrically) equivalent.
+In such cases both connectors are active.
 
-*Asymmetric connectors*, where the two connecting interfaces are mechanically
-different. In asymmetric systems there is usually one active and one passive
-connector.
+*Asymmetric connectors*, where the two connecting interfaces are mechanically different.
+In asymmetric systems there is usually one active and one passive connector.
 
-The detection of the presence of a peer [Connector](#connector) is based on
-simple distance and angle measurements, and therefore the
-[Connector](#connector) nodes are a computationally inexpensive way of
-simulating docking mechanisms.
+The detection of the presence of a peer [Connector](#connector) is based on simple distance and angle measurements, and therefore the [Connector](#connector) nodes are a computationally inexpensive way of simulating docking mechanisms.
 
 ### Field Summary
 
@@ -169,19 +157,12 @@ is applied.
 
 ### Connector Axis System
 
-A [Connector](#connector)'s axis system is displayed by Webots when the
-corresponding robot is selected or when *Display Axes* is checked in Webots
-*Preferences*. The *z*-axis is drawn as a 5 cm blue line, the y-axis (a
-potential docking rotation) is drawn as a 5 cm green line, and each additional
-potential docking rotation is displayed as a 4 cm black line. The bounding
-objects and graphical objects of a [Connector](#connector) should normally be
-designed such that the docking surface corresponds exactly to *xy*-plane of the
-local coordinate system. Furthermore, the [Connector](#connector)'s z-axis
-should be perpendicular to the docking surface and point outward from the robot
-body. Finally, the bounding objects should allow the superposition of the origin
-of the coordinate systems. If these design criteria are not met, the
-[Connector](#connector) nodes will not work properly and may be unable to
-connect.
+A [Connector](#connector)'s axis system is displayed by Webots when the corresponding robot is selected or when *Display Axes* is checked in Webots *Preferences*.
+The *z*-axis is drawn as a 5 cm blue line, the y-axis (a potential docking rotation) is drawn as a 5 cm green line, and each additional potential docking rotation is displayed as a 4 cm black line.
+The bounding objects and graphical objects of a [Connector](#connector) should normally be designed such that the docking surface corresponds exactly to *xy*-plane of the local coordinate system.
+Furthermore, the [Connector](#connector)'s z-axis should be perpendicular to the docking surface and point outward from the robot body.
+Finally, the bounding objects should allow the superposition of the origin of the coordinate systems.
+If these design criteria are not met, the [Connector](#connector) nodes will not work properly and may be unable to connect.
 
 %figure "Connector axis"
 
@@ -189,10 +170,8 @@ connect.
 
 %end
 
-> **Note**:
-To be functional, a [Connector](#connector) node requires the presence of a
-[Physics](physics.md) node in its parent node. But it is not necessary to add a
-[Physics](physics.md) node to the [Connector](#connector) itself.
+> **Note**: To be functional, a [Connector](#connector) node requires the presence of a [Physics](physics.md) node in its parent node.
+But it is not necessary to add a [Physics](physics.md) node to the [Connector](#connector) itself.
 
 ### Connector Functions
 
@@ -213,11 +192,15 @@ int wb_connector_get_presence(WbDeviceTag tag);
 
 **Description**
 
-The `wb_connector_enable_presence` function starts querying the presence sensor of the [Connector](#connector). The `sampling_period` argument specifies the sampling period of the presence sensor. It is expressed in milliseconds. Note that it will be active only after the first sampling period elapsed.
+The `wb_connector_enable_presence` function starts querying the presence sensor of the [Connector](#connector).
+The `sampling_period` argument specifies the sampling period of the presence sensor.
+It is expressed in milliseconds.
+Note that it will be active only after the first sampling period elapsed.
 
 The `wb_connector_disable_presence` function stops querying the presence sensor of the [Connector](#connector).
 
-The `wb_connector_get_presence_sampling_period` function returns the period at which the presence sensor of the [Connector](#connector) is queried. The `wb_connector_get_presence` function returns the current *presence* state of this connector, it returns:
+The `wb_connector_get_presence_sampling_period` function returns the period at which the presence sensor of the [Connector](#connector) is queried.
+The `wb_connector_get_presence` function returns the current *presence* state of this connector, it returns:
 
 - 1: in case of the presence of a peer connector
 - 0: in case of the absence of a peer connector
@@ -225,19 +208,14 @@ The `wb_connector_get_presence_sampling_period` function returns the period at w
 
 The *presence* state is defined as the correct positioning of a compatible peer [Connector](#connector).
 
-Two connectors are in position if they are axis-aligned, rotation-aligned and
-near enough. To be axis-aligned, the angle between the *z*-axes of the two
-connectors must be smaller than the `axisTolerance` field. To be
-rotation-aligned, the angle between the *y*-axis of both `Connectors` must be
-within `distanceTolerance` of one of the possible `numberOfRotations`
-subdivisions of 360 degrees. Two `Connectors` are near enough if the distance
-between them (measured between the origins of the coordinate systems) is smaller
-than `distanceTolerance`.
+Two connectors are in position if they are axis-aligned, rotation-aligned and near enough.
+To be axis-aligned, the angle between the *z*-axes of the two connectors must be smaller than the `axisTolerance` field.
+To be rotation-aligned, the angle between the *y*-axis of both `Connectors` must be within `distanceTolerance` of one of the possible `numberOfRotations` subdivisions of 360 degrees.
+Two `Connectors` are near enough if the distance between them (measured between the origins of the coordinate systems) is smaller than `distanceTolerance`.
 
-Two `Connectors` are compatible if both types are "symmetric" or if one is
-"active" and the other is "passive". A further requirement for the compatibility
-is that the `model` fields of the connectors must be identical. The conditions
-for detecting presence can be summarized this way:
+Two `Connectors` are compatible if both types are "symmetric" or if one is "active" and the other is "passive".
+A further requirement for the compatibility is that the `model` fields of the connectors must be identical.
+The conditions for detecting presence can be summarized this way:
 
 ```
 presence         := in_position AND compatible
@@ -268,19 +246,10 @@ void wb_connector_unlock(WbDeviceTag tag);
 
 **Description**
 
-The `wb_connector_lock` and `wb_connector_unlock` functions can be used to
-set or unset the [Connector](#connector)'s locking state (`isLocked` field) and
-eventually create or destroy the physical connection between two
-[Connector](#connector) nodes.
+The `wb_connector_lock` and `wb_connector_unlock` functions can be used to set or unset the [Connector](#connector)'s locking state (`isLocked` field) and eventually create or destroy the physical connection between two [Connector](#connector) nodes.
 
-If the `wb_connector_lock` function is invoked while a peer connector is *present* (see the
-definition of *presence* above), a physical link will be created between the two
-connectors. If both the `isLocked` and `autoLock` fields are TRUE, then the
-physical link will be created automatically as soon as the peer's *presence* is
-detected. If the `wb_connector_lock` function succeeds in creating the link, the two
-connected bodies will keep a constant distance and orientation with respect to
-each other from this moment on.
+If the `wb_connector_lock` function is invoked while a peer connector is *present* (see the definition of *presence* above), a physical link will be created between the two connectors.
+If both the `isLocked` and `autoLock` fields are TRUE, then the physical link will be created automatically as soon as the peer's *presence* is detected.
+If the `wb_connector_lock` function succeeds in creating the link, the two connected bodies will keep a constant distance and orientation with respect to each other from this moment on.
 
-If the `wb_connector_unlock` function is invoked while there is a physical link between two
-`Connectors`, the link will be destroyed, unless `unilateralUnlock` is FALSE and
-the peer connector is still in the `isLocked` state.
+If the `wb_connector_unlock` function is invoked while there is a physical link between two `Connectors`, the link will be destroyed, unless `unilateralUnlock` is FALSE and the peer connector is still in the `isLocked` state.

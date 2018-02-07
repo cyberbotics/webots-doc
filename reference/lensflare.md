@@ -17,7 +17,9 @@ LensFlare {
 
 %end
 
-The [LensFlare](#lensflare) node can be added in the `lensFlare` field of any [Camera](camera.md) or [Viewpoint](viewpoint.md) to simulate lens flare. The lens flare effect is due to the light being scattered in lens systems through generally unwanted image formation mechanisms, such as internal reflections and scattering from material inhomogeneities in the lens. To simulate a lens flare, a variable number of images called *halos* and *bursts* are added along a line from the light position to a point in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md).
+The [LensFlare](#lensflare) node can be added in the `lensFlare` field of any [Camera](camera.md) or [Viewpoint](viewpoint.md) to simulate lens flare.
+The lens flare effect is due to the light being scattered in lens systems through generally unwanted image formation mechanisms, such as internal reflections and scattering from material inhomogeneities in the lens.
+To simulate a lens flare, a variable number of images called *halos* and *bursts* are added along a line from the light position to a point in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md).
 
 ### Field Summary
 

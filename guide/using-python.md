@@ -2,15 +2,11 @@
 
 ### Introduction
 
-The Python API has been generated from the C++ API by using SWIG. This implies
-that their class hierarchy, their class names and their function names are
-almost identical. The Python API is currently composed of a set of about 25
-classes having about 200 public functions located in the module called
-*controller*. The classes are either representations of a node of the scene tree
-(such as Robot, LED, etc.) or utility classes (such as Motion, ImageRef,
-etc.). A complete description of these functions can be found in the reference
-guide while the instructions about the common way to program a Python controller
-can be found in [this chapter](programming-fundamentals.md).
+The Python API has been generated from the C++ API by using SWIG.
+This implies that their class hierarchy, their class names and their function names are almost identical.
+The Python API is currently composed of a set of about 25 classes having about 200 public functions located in the module called *controller*.
+The classes are either representations of a node of the scene tree (such as Robot, LED, etc.) or utility classes (such as Motion, ImageRef, etc.).
+A complete description of these functions can be found in the reference guide while the instructions about the common way to program a Python controller can be found in [this chapter](programming-fundamentals.md).
 
 The Python API of Webots supports both Python 3.6 and Python 2.7.
 On Ubuntu 16.04, it also supports Python 3.5 and on Ubuntu 14.04, it also support Python 3.4.
@@ -21,15 +17,16 @@ Webots starts Python using the standard `python` command line.
 As a consequence, it executes the first `python` binary found in the current `PATH`.
 If you want to use a different version of Python, please install it if needed and configure your environment so that it becomes the default `python` version when called from the command line in a terminal.
 Alternatively, you can change the default Python command from the Webots Preferences in the General tab.
-If you set it for example to `python3.6` instead of `python`, this version of python will be used (if available from the command line). Finally, it is also possible to set a different version of Python for each robot controller by editing the `[python]` section of the `runtime.ini` file in each robot controller directory and setting the `COMMAND` value to `python3`, `python3.6` or `python2.7`, etc.
+If you set it for example to `python3.6` instead of `python`, this version of python will be used (if available from the command line).
+Finally, it is also possible to set a different version of Python for each robot controller by editing the `[python]` section of the `runtime.ini` file in each robot controller directory and setting the `COMMAND` value to `python3`, `python3.6` or `python2.7`, etc.
 If specified in the `runtime.ini` file of a controller, this Python command will be executed instead of the default one to launch this controller.
 
 #### macOS and Linux installation
 
-Most of the Linux distributions have Python 2.7 and 3.x already installed. macOS has Python 2.7 installed by default.
+Most of the Linux distributions have Python 2.7 and 3.x already installed.
+`macOS` has Python 2.7 installed by default.
 It is possible to install Python 3.6 from the [Python web site](https://www.python.org) or from various Linux repositories.
-To check the versions of Python installed on your system, you can type in a terminal:
-`python --version`, `python3.6 --version`, `python2.7 --version`, `python3 --version`, etc.
+To check the versions of Python installed on your system, you can type in a terminal: `python --version`, `python3.6 --version`, `python2.7 --version`, `python3 --version`, etc.
 
 #### Windows installation
 
@@ -68,14 +65,18 @@ pip install opencv-python --user
 #### Windows libraries
 
 Open the DOS console (CMD.EXE) and type:
+
 ```sh
 PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
-where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
+
+Where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
 
 ### Use an alternative Python version
 
-As explained above, the Python libraries for Webots are precompiled for Python 3.6, Python 2.7 and on Ubuntu for the default Python 3 version provided with the system. It is possible however to use another Python version by recompiling the Webots Python libraries. Such a task requires some knowledge in software installation, compilation from sources and Makefile.
+As explained above, the Python libraries for Webots are precompiled for Python 3.6, Python 2.7 and on Ubuntu for the default Python 3 version provided with the system.
+It is possible however to use another Python version by recompiling the Webots Python libraries.
+Such a task requires some knowledge in software installation, compilation from sources and Makefile.
 
 The general idea is to walk through the following steps:
 

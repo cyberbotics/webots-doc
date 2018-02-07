@@ -18,27 +18,17 @@ Fluid {
 
 ### Description
 
-A [Fluid](#fluid) node represents a possibly unbounded fluid volume with
-physical properties such as density and stream velocity. A [Solid](solid.md)
-node which is partially or fully immersed in some [Fluid](#fluid)'s
-`boundingObject` will be subject to the static force (Archimedes'thrust) and the
-dynamic force (drag force) exerted by the [Fluid](#fluid) provided it has a
-[Physics](physics.md) node, a `boundingObject` and that its field
-`immersionProperties` contains an [ImmersionProperties](immersionproperties.md)
-node referring to the given [Fluid](#fluid).
+A [Fluid](#fluid) node represents a possibly unbounded fluid volume with physical properties such as density and stream velocity.
+A [Solid](solid.md) node which is partially or fully immersed in some [Fluid](#fluid)'s `boundingObject` will be subject to the static force (Archimedes'thrust) and the dynamic force (drag force) exerted by the [Fluid](#fluid) provided it has a [Physics](physics.md) node, a `boundingObject` and that its field `immersionProperties` contains an [ImmersionProperties](immersionproperties.md) node referring to the given [Fluid](#fluid).
 
-In the 3D window, [Fluid](#fluid) nodes can be manipulated (dragged, lifted,
-rotated, etc) using the mouse.
+In the 3D window, [Fluid](#fluid) nodes can be manipulated (dragged, lifted, rotated, etc) using the mouse.
 
 ### Fluid Fields
 
-Note that in the [Fluid](#fluid) node, the `scale` field inherited from the
-[Transform](transform.md) must always remain uniform, i.e., of the form `x x x`
-where `x` is any positive real number. This ensures that all primitive
-geometries will remain suitable for ODE immersion detection. Whenever a scale
-coordinate is changed, the two other ones are automatically changed to this new
-value. If a non-positive value is assigned to a scale coordinate, the value is
-automatically changed to 1.
+Note that in the [Fluid](#fluid) node, the `scale` field inherited from the [Transform](transform.md) must always remain uniform, i.e., of the form `x x x` where `x` is any positive real number.
+This ensures that all primitive geometries will remain suitable for ODE immersion detection.
+Whenever a scale coordinate is changed, the two other ones are automatically changed to this new value.
+If a non-positive value is assigned to a scale coordinate, the value is automatically changed to 1.
 
 - `name`: name of the fluid. This is the name used in a
 [ImmersionProperties](immersionproperties.md) to refer to a given

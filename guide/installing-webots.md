@@ -3,6 +3,7 @@
 This chapter explains how to install Webots and configure your license rights.
 
 ## Sections
+
 - [Webots licenses](webots-licenses.md)
 - [System requirements](system-requirements.md)
 - [Verifying your graphics driver installation](verifying-your-graphics-driver-installation.md)

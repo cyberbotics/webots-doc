@@ -1,15 +1,12 @@
 ## AckermannVehicle
 
-The `AckermannVehicle` PROTO allows the user to easily create any vehicle that
-complies with the ackermann model. Position and orientation of the wheels are
-automatically computed using the fields of the PROTO. These wheels are
-automatically connected to the appropriate joints in order to rotate along the
-correct axis. Actuators (`Motor` nodes called `right_steer` and `left_steer`)
-are connected to the front joints to be able to steer the vehicle.
+The `AckermannVehicle` PROTO allows the user to easily create any vehicle that complies with the ackermann model.
+Position and orientation of the wheels are automatically computed using the fields of the PROTO.
+These wheels are automatically connected to the appropriate joints in order to rotate along the correct axis.
+Actuators (`Motor` nodes called `right_steer` and `left_steer`) are connected to the front joints to be able to steer the vehicle.
 
-The base node of the `AckermannVehicle` PROTO is a `Robot` from which it
-inherits its first seven fields. The rest of the vehicle (Shape, Sensors, other
-actuators) can be added using the `extensionSlot` field.
+The base node of the `AckermannVehicle` PROTO is a `Robot` from which it inherits its first seven fields.
+The rest of the vehicle (Shape, Sensors, other actuators) can be added using the `extensionSlot` field.
 
 ```
 AckermannVehicle {
@@ -73,14 +70,11 @@ descendant PROTO nodes).
 `PositionSensor` and `Motor`).
 - `data`: Defines a user `data` string of the `Robot` node.
 
-The center of the vehicle (position 0 0 0) is at the center of the rear wheels
-axis. Any node added in the `extensionSlot` is added relatively to this
-position. A `Transform` node should be used to move an extension node away from
-this center.
+The center of the vehicle (position 0 0 0) is at the center of the rear wheels axis.
+Any node added in the `extensionSlot` is added relatively to this position.
+A `Transform` node should be used to move an extension node away from this center.
 
-You can easily create your own PROTO that inherits from the `AckermannVehicle`
-PROTO, see for example the `SimpleVehicle` PROTO which automatically computes
-the shapes of the wheel axes.
+You can easily create your own PROTO that inherits from the `AckermannVehicle` PROTO, see for example the `SimpleVehicle` PROTO which automatically computes the shapes of the wheel axes.
 
 %figure "Result of the SimpleVehicle PROTO which inherits from the AckermannVehicle PROTO"
 

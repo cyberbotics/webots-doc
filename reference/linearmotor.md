@@ -12,8 +12,7 @@ LinearMotor {
 
 ### Description
 
-A [LinearMotor](#linearmotor) node can be used to power a
-[SliderJoint](sliderjoint.md) and a [Track](track.md).
+A [LinearMotor](#linearmotor) node can be used to power a [SliderJoint](sliderjoint.md) and a [Track](track.md).
 
 ### Field Summary
 

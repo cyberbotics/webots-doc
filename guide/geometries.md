@@ -80,7 +80,9 @@ Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`
 
 ### textured\_proto\_shapes.wbt
 
-TODO.
+**Keywords**: TexturedBoxShape, texture mapping
+
+![textured_box_shapes.png](images/textured_box_shapes.png) This examples shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTOs.
 
 ### textured\_shapes.wbt
 

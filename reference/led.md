@@ -11,21 +11,15 @@ LED {
 
 ### Description
 
-The [LED](#led) node is used to model a light emitting diode (LED). The light
-produced by an LED can be used for debugging or informational purposes. The
-resulting color is applied only on the first child of the [LED](#led) node. If
-the first child is a [Shape](shape.md) node, the `emissiveColor` field of its
-[Material](material.md) node is altered. If the first child is a
-[Light](light.md) node, its `color` field is altered. Otherwise, if the first
-child is a [Group](group.md) node, a recursive search is applied on this node in
-order to find which color field must be modified, so every [Light](light.md),
-[Shape](shape.md) and [Group](group.md) node is altered according to the
-previous rules. In terms of [Light](light.md) nodes, [LED](#led) nodes can only accept
-[PointLight](pointlight.md) and [SpotLight](spotlight.md) nodes as children.
+The [LED](#led) node is used to model a light emitting diode (LED).
+The light produced by an LED can be used for debugging or informational purposes.
+The resulting color is applied only on the first child of the [LED](#led) node.
+If the first child is a [Shape](shape.md) node, the `emissiveColor` field of its [Material](material.md) node is altered.
+If the first child is a [Light](light.md) node, its `color` field is altered.
+Otherwise, if the first child is a [Group](group.md) node, a recursive search is applied on this node in order to find which color field must be modified, so every [Light](light.md), [Shape](shape.md) and [Group](group.md) node is altered according to the previous rules.
+In terms of [Light](light.md) nodes, [LED](#led) nodes can only accept [PointLight](pointlight.md) and [SpotLight](spotlight.md) nodes as children.
 
-Note that [Material](material.md) and [Light](light.md) nodes that are going to be
-automatically altered by the [LED](#led) functionality cannot be
-[USE](def-and-use.md) nodes.
+Note that [Material](material.md) and [Light](light.md) nodes that are going to be automatically altered by the [LED](#led) functionality cannot be [USE](def-and-use.md) nodes.
 
 ### Field Summary
 
@@ -61,27 +55,19 @@ int wb_led_get(WbDeviceTag tag);
 
 **Description**
 
-The `wb_led_set` function switches an LED on or off, possibly changing its color. If the
-`value` parameter is 0, the LED is turned off. Otherwise, it is turned on.
+The `wb_led_set` function switches an LED on or off, possibly changing its color.
+If the `value` parameter is 0, the LED is turned off.
+Otherwise, it is turned on.
 
-In the case of a non-gradual LED (`gradual` field set to FALSE), if the `value`
-parameter is 1, the LED is turned on using the first color specified in the
-`color` field of the corresponding [LED](#led) node. If the `value` parameter is
-2, the LED is turned on using the second color specified in the `color` field of
-the [LED](#led) node, and so on. The `value` parameter should not be greater
-than the size of the `color` field of the corresponding [LED](#led) node.
+In the case of a non-gradual LED (`gradual` field set to FALSE), if the `value` parameter is 1, the LED is turned on using the first color specified in the `color` field of the corresponding [LED](#led) node.
+If the `value` parameter is 2, the LED is turned on using the second color specified in the `color` field of the [LED](#led) node, and so on.
+The `value` parameter should not be greater than the size of the `color` field of the corresponding [LED](#led) node.
 
-In the case of a monochromatic LED (`gradual` field set to TRUE and `color`
-field containing exactly one color), the `value` parameter indicates the
-intensity of the LED in the range 0 (off) to 255 (maximum intensity).
+In the case of a monochromatic LED (`gradual` field set to TRUE and `color` field containing exactly one color), the `value` parameter indicates the intensity of the LED in the range 0 (off) to 255 (maximum intensity).
 
-In the case of an RGB LED (`gradual` field set to TRUE and `color` field
-containing an empty list), the `value` parameter indicates the RGB color of the
-LED in the range 0 (off or black) to 0xffffff (white). The format is R8G8B8: The
-most significant 8 bits (left hand side) indicate the red level (between 0x00
-and 0xff). Bits 8 to 15 indicate the green level and the least significant 8
-bits (right hand side) indicate the blue level. For example, 0xff0000 is red,
-0x00ff00 is green, 0x0000ff is blue, 0xffff00 is yellow, etc.
+In the case of an RGB LED (`gradual` field set to TRUE and `color` field containing an empty list), the `value` parameter indicates the RGB color of the LED in the range 0 (off or black) to 0xffffff (white).
+The format is R8G8B8: The most significant 8 bits (left hand side) indicate the red level (between 0x00 and 0xff).
+Bits 8 to 15 indicate the green level and the least significant 8 bits (right hand side) indicate the blue level.
+For example, 0xff0000 is red, 0x00ff00 is green, 0x0000ff is blue, 0xffff00 is yellow, etc.
 
-The `wb_led_get` function returns the value given as an argument of the last
-`wb_led_set` function call.
+The `wb_led_get` function returns the value given as an argument of the last `wb_led_set` function call.

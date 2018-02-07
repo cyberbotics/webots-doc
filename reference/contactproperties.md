@@ -19,33 +19,23 @@ ContactProperties {
 
 ### Description
 
-[ContactProperties](#contactproperties) nodes define the contact properties to
-use in case of contact between [Solid](solid.md) nodes (or any node derived from
-[Solid](solid.md)). [ContactProperties](#contactproperties) nodes are placed in
-the `contactProperties` field of the [WorldInfo](worldinfo.md) node. Each
-[ContactProperties](#contactproperties) node specifies the name of two
-*materials* for which these [ContactProperties](#contactproperties) are valid.
+[ContactProperties](#contactproperties) nodes define the contact properties to use in case of contact between [Solid](solid.md) nodes (or any node derived from [Solid](solid.md)).
+[ContactProperties](#contactproperties) nodes are placed in the `contactProperties` field of the [WorldInfo](worldinfo.md) node.
+Each [ContactProperties](#contactproperties) node specifies the name of two *materials* for which these [ContactProperties](#contactproperties) are valid.
 
-When two [Solid](solid.md) nodes collide, a matching
-[ContactProperties](#contactproperties) node is searched in the
-[WorldInfo](worldinfo.md).`contactProperties` field. A
-[ContactProperties](#contactproperties) node will match if its `material1` and
-`material2` fields correspond (in any order) to the `contactMaterial` fields
-of the two colliding [Solid](solid.md)s. The values of the first matching
-[ContactProperties](#contactproperties) are applied to the contact. If no
-matching node is found, default values are used. The default values are the same
-as those indicated above.
+When two [Solid](solid.md) nodes collide, a matching [ContactProperties](#contactproperties) node is searched in the [WorldInfo](worldinfo.md).`contactProperties` field.
+A [ContactProperties](#contactproperties) node will match if its `material1` and `material2` fields correspond (in any order) to the `contactMaterial` fields of the two colliding [Solid](solid.md)s.
+The values of the first matching [ContactProperties](#contactproperties) are applied to the contact.
+If no matching node is found, default values are used.
+The default values are the same as those indicated above.
 
-> **Note**:
-In older Webots versions, contact properties used to be specified in
-[Physics](physics.md) nodes. For compatibility reasons, contact properties
-specified like this are still functional in Webots, but they trigger deprecation
-warnings. To remove these warning you need to switch to the new scheme described
-in this page. This can be done in three steps: 1. Add
-[ContactProperties](#contactproperties) nodes in [WorldInfo](worldinfo.md), 2.
-Define the `contactMaterial` fields of [Solid](solid.md) nodes, 3. Reset the
-values of `coulombFriction, bounce, bounceVelocity` and `forceDependentSlip` in
-the [Physics](physics.md) nodes.
+> **Note**: In older Webots versions, contact properties used to be specified in [Physics](physics.md) nodes.
+For compatibility reasons, contact properties specified like this are still functional in Webots, but they trigger deprecation warnings.
+To remove these warning you need to switch to the new scheme described in this page.
+This can be done in three steps: 1.
+Add [ContactProperties](#contactproperties) nodes in [WorldInfo](worldinfo.md), 2.
+Define the `contactMaterial` fields of [Solid](solid.md) nodes, 3.
+Reset the values of `coulombFriction, bounce, bounceVelocity` and `forceDependentSlip` in the [Physics](physics.md) nodes.
 
 ### Field Summary
 
@@ -137,7 +127,4 @@ the linear velocity of the contact surface. The formulas affecting the gain and
 pitch of these sounds were determinated empirically to produce fairly realistic
 sounds. They are subject to improvements.
 
-> **Note**:
-The youBot robot is a good example of asymmetric coulombFriction and
-forceDependentSlip, it is located in
-WEBOTS\_HOME/projects/robot/youbot/worlds/youbot.wbt.
+> **Note**: The youBot robot is a good example of asymmetric coulombFriction and forceDependentSlip, it is located in WEBOTS\_HOME/projects/robot/youbot/worlds/youbot.wbt.

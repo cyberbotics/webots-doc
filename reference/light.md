@@ -11,17 +11,13 @@ Light {
 }
 ```
 
-Direct derived nodes: [PointLight](pointlight.md), [SpotLight](spotlight.md),
-[DirectionalLight](directionallight.md).
+Direct derived nodes: [PointLight](pointlight.md), [SpotLight](spotlight.md), [DirectionalLight](directionallight.md).
 
 ### Description
 
 The [Light](#light) node is abstract: only derived nodes can be instantiated.
-Lights have two purposes in Webots: (1) the are used to graphically illuminate
-objects and (2) they determine the quantity of light perceived by
-[LightSensor](lightsensor.md) nodes. Except for `castShadows`, every field of a
-[Light](#light) node affects the light measurements made by
-[LightSensor](lightsensor.md) nodes.
+Lights have two purposes in Webots: (1) the are used to graphically illuminate objects and (2) they determine the quantity of light perceived by [LightSensor](lightsensor.md) nodes.
+Except for `castShadows`, every field of a [Light](#light) node affects the light measurements made by [LightSensor](lightsensor.md) nodes.
 
 ### Field Summary
 

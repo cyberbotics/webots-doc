@@ -12,8 +12,7 @@ TrackWheel {
 
 ### Description
 
-The [TrackWheel](#trackwheel) node is a utility node helping the setup of a wheel of a track system
-defined by a [Track](track.md) node.
+The [TrackWheel](#trackwheel) node is a utility node helping the setup of a wheel of a track system defined by a [Track](track.md) node.
 
 By default this node doesn't have any graphical shape and the shape of the wheel has to be defined inside the `children` field of the [TrackWheel](#trackwheel) node.
 All the children nodes will be automatically translated at the relative location specified in the `position` field and automatically rotated along the z-axis based on the speed of the parent [Track](track.md) node.
@@ -23,12 +22,11 @@ Note that in order to automatically generate the track belt, the geometries anim
 The [TrackWheel](#trackwheel) node is a pure graphical object and doesn't have any physical behavior.
 All the physical properties are defined in the [Track](track.md) node.
 
-A [TrackWheel](#trackwheel) node can only be inserted in the `children` field of a
-[Track](track.md) node.
+A [TrackWheel](#trackwheel) node can only be inserted in the `children` field of a [Track](track.md) node.
 
 ### Field Summary
 
-The fields of the [TrackWheel](#trackwheel) are mainly used to automatically generate the track belt path in case the geometries animation is defined in the [Track](track.md) node
+The fields of the [TrackWheel](#trackwheel) are mainly used to automatically generate the track belt path in case the geometries animation is defined in the [Track](track.md) node:
 
 - `position`: defines the position of the wheel on the x-y plane of the [Track](track.md) node coordinate system.
 The `position`field is also used to compute the relative translation of the `children` nodes.

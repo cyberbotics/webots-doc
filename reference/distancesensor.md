@@ -15,18 +15,12 @@ DistanceSensor {
 
 ### Description
 
-The [DistanceSensor](#distancesensor) node can be used to model a generic
-sensor, an infra-red sensor, a sonar sensor, or a laser range-finder. This
-device simulation is performed by detecting the collisions between one or
-several sensor rays and objects in the environment. In case of generic, sonar
-and laser type the collision occurs with the bounding objects of
-[Solid](solid.md) nodes, whereas infra-red rays collision detection uses the
-[Solid](solid.md) nodes themselves.
+The [DistanceSensor](#distancesensor) node can be used to model a generic sensor, an infra-red sensor, a sonar sensor, or a laser range-finder.
+This device simulation is performed by detecting the collisions between one or several sensor rays and objects in the environment.
+In case of generic, sonar and laser type the collision occurs with the bounding objects of [Solid](solid.md) nodes, whereas infra-red rays collision detection uses the [Solid](solid.md) nodes themselves.
 
-The rays of the [DistanceSensor](#distancesensor) nodes can be displayed by
-checking the menu `View / Optional Rendering / Show Distance Sensor Rays`. The
-red/green transition on the rays indicates the points of intersection with the
-bounding objects.
+The rays of the [DistanceSensor](#distancesensor) nodes can be displayed by checking the menu `View / Optional Rendering / Show Distance Sensor Rays`.
+The red/green transition on the rays indicates the points of intersection with the bounding objects.
 
 ### Field Summary
 
@@ -162,8 +156,7 @@ measure any infinitesimal change). This field accepts any value in the interval
 This table summarizes the difference between the three types of DistanceSensor.
 
 Two different methods are used for calculating the distance from an object.
-*Average* method computes the average of the distances measured by all the rays,
-whereas *Nearest* method uses the shortest distance measured by any of the rays.
+*Average* method computes the average of the distances measured by all the rays, whereas *Nearest* method uses the shortest distance measured by any of the rays.
 
 %figure "Summary of DistanceSensor types"
 
@@ -179,29 +172,18 @@ whereas *Nearest* method uses the shortest distance measured by any of the rays.
 
 ### Infra-Red Sensors
 
-In the case of an "infra-red" sensor, the value returned by the lookup table is
-modified by a reflection factor depending on the color properties of the object
-hit by the sensor ray. The reflection factor is computed as follows: *f = 0.2 +
-0.8 * red\_level* where *red\_level* is the level of red color of the object hit
-by the sensor ray. This level is evaluated combining the `diffuseColor` and
-`transparency` values of the object, the pixel value of the image texture and
-the paint color applied on the object with the [Pen](pen.md) device. Then, the
-distance value computed by the simulator is divided by the reflection factor
-before the lookup table is used to compute the output value.
+In the case of an "infra-red" sensor, the value returned by the lookup table is modified by a reflection factor depending on the color properties of the object hit by the sensor ray.
+The reflection factor is computed as follows: *f = 0.2 + 0.8 * red\_level* where *red\_level* is the level of red color of the object hit by the sensor ray.
+This level is evaluated combining the `diffuseColor` and `transparency` values of the object, the pixel value of the image texture and the paint color applied on the object with the [Pen](pen.md) device.
+Then, the distance value computed by the simulator is divided by the reflection factor before the lookup table is used to compute the output value.
 
-> **Note**:
-Unlike other distance sensor rays, "infra-red" rays can detect solid parts of
-the robot itself. It is thus important to ensure that no solid geometries
-interpose between the sensor and the area to inspect.
+> **Note**: Unlike other distance sensor rays, "infra-red" rays can detect solid parts of the robot itself.
+It is thus important to ensure that no solid geometries interpose between the sensor and the area to inspect.
 
 ### Sonar Sensors
 
-In the case of a "sonar" sensor, the return value will be the last value entered
-in the lookup table, i.e. the value corresponding to sonar sensor's range, if
-the angle of incidence is greater than 22.5 degrees (π/8 radians). In other
-words, sonar rays which lie outside the reflexion cone of aperture 45 degrees
-never return and thus are lost for distance computation (see [this
-figure](#sonar-sensor)).
+In the case of a "sonar" sensor, the return value will be the last value entered in the lookup table, i.e. the value corresponding to sonar sensor's range, if the angle of incidence is greater than 22.5 degrees (π/8 radians).
+In other words, sonar rays which lie outside the reflexion cone of aperture 45 degrees never return and thus are lost for distance computation (see [this figure](#sonar-sensor)).
 
 %figure "Sonar sensor"
 
@@ -211,10 +193,9 @@ figure](#sonar-sensor)).
 
 ### Line Following Behavior
 
-Some support for [DistanceSensor](#distancesensor) nodes used for reading the
-red color level of a textured floor is implemented. This is useful to simulate
-line following behaviors. This feature is demonstrated in the "rover.wbt"
-example (see in the "projects/robots/mindstorms/worlds" directory of Webots).
+Some support for [DistanceSensor](#distancesensor) nodes used for reading the red color level of a textured floor is implemented.
+This is useful to simulate line following behaviors.
+This feature is demonstrated in the "rover.wbt" example (see in the "projects/robots/mindstorms/worlds" directory of Webots).
 The ground texture must be placed in a [Plane](plane.md).
 
 ### DistanceSensor Functions
@@ -240,16 +221,13 @@ The `wb_distance_sensor_enable` function allows the user to enable distance sens
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
 Note that the first measurement will be available only after the first sampling period elapsed.
 
-The `wb_distance_sensor_disable` function turns the distance sensor off, saving computation
-time.
+The `wb_distance_sensor_disable` function turns the distance sensor off, saving computation time.
 
-The `wb_distance_sensor_get_sampling_period` function returns the period given
-into the `wb_distance_sensor_enable` function, or 0 if the device is disabled.
+The `wb_distance_sensor_get_sampling_period` function returns the period given into the `wb_distance_sensor_enable` function, or 0 if the device is disabled.
 
-The `wb_distance_sensor_get_value` function returns the last value measured by the
-specified distance sensor. This value is computed by the simulator according to
-the lookup table of the [DistanceSensor](#distancesensor) node. Hence, the range
-of the return value is defined by this lookup table.
+The `wb_distance_sensor_get_value` function returns the last value measured by the specified distance sensor.
+This value is computed by the simulator according to the lookup table of the [DistanceSensor](#distancesensor) node.
+Hence, the range of the return value is defined by this lookup table.
 
 ---
 
@@ -275,8 +253,7 @@ This value is the maximum of the second column of the `DistanceSensor.lookupTabl
 The `wb_distance_sensor_get_min_value` function returns the minimum value which can be returned by the distance sensor.
 This value is the minimum of the second column of the `DistanceSensor.lookupTable` field.
 
-The `wb_distance_sensor_get_aperture` function returns the aperture of the distance
-sensor in radians.
+The `wb_distance_sensor_get_aperture` function returns the aperture of the distance sensor in radians.
 
 ---
 
@@ -294,12 +271,8 @@ int wb_distance_sensor_get_type(WbDeviceTag tag);
 
 **Description**
 
-This function allows the user to retrieve the distance sensor type defined by
-the `type` field. If the value of the `type` field is "laser" then this function
-returns WB\_DISTANCE\_SENSOR\_LASER, if it is "infra-red" then it returns
-WB\_DISTANCE\_SENSOR\_INFRA\_RED, if it is "sonar" then it returns
-WB\_DISTANCE\_SENSOR\_SONAR and otherwise it returns
-WB\_DISTANCE\_SENSOR\_GENERIC.
+This function allows the user to retrieve the distance sensor type defined by the `type` field.
+If the value of the `type` field is "laser" then this function returns WB\_DISTANCE\_SENSOR\_LASER, if it is "infra-red" then it returns WB\_DISTANCE\_SENSOR\_INFRA\_RED, if it is "sonar" then it returns WB\_DISTANCE\_SENSOR\_SONAR and otherwise it returns WB\_DISTANCE\_SENSOR\_GENERIC.
 
 %figure "Return values for the `wb_distance_sensor_get_type_*` functions"
 

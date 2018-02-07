@@ -11,10 +11,9 @@ Focus {
 
 ### Description
 
-The [Focus](#focus) node allows the user to define a controllable focus for a
-[Camera](camera.md) device. The [Focus](#focus) node should be set in the
-`focus` field of a [Camera](camera.md) node. The focal distance can be adjusted
-from the controller program using the `wb_camera_set_focal_distance` function.
+The [Focus](#focus) node allows the user to define a controllable focus for a [Camera](camera.md) device.
+The [Focus](#focus) node should be set in the `focus` field of a [Camera](camera.md) node.
+The focal distance can be adjusted from the controller program using the `wb_camera_set_focal_distance` function.
 
 ### Field Summary
 

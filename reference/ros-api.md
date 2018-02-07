@@ -1,13 +1,8 @@
 ## ROS API
 
-The following tables describe the available ros messages and services for each
-device.
+The following tables describe the available ros messages and services for each device.
 
-The `<device_name>` should be replaced by the actual name of the device and each
-services/topics names should be prepended with ``<robot_unique_name>`` (have a
-look at the [User
-Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller)
-for more information about the value of `robot_unique_name`).
+The `<device_name>` should be replaced by the actual name of the device and each services/topics names should be prepended with ``<robot_unique_name>`` (have a look at the [User Guide](http://www.cyberbotics.com/guide/using-ros#standard_ros_controller) for more information about the value of `robot_unique_name`).
 
 ### Common services
 
@@ -22,8 +17,6 @@ for more information about the value of `robot_unique_name`).
 | set_float_array | float64[] values<br/>---<br/>bool success |
 | set_int         | int32 value<br/>---<br/>bool success      |
 | set_string      | string value<br/>---<br/>bool success     |
-
-
 
 ### Accelerometer
 
@@ -344,7 +337,6 @@ for more information about the value of `robot_unique_name`).
 | /robot/get\_device\_list                                                   | service       | webots\_ros::robot\_get\_device\_list          | uint8 ask<br/>---<br/>string[] list                                                     |
 | [/robot/wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)            | service       | [webots\_ros::get\_string](#common_services)   |                                                                                         |
 | [/robot/wwi\_send\_text](robot.md#wb_robot_wwi_send_text)                  | service       | [webots\_ros::set\_string](#common_services)   |                                                                                         |
-
 
 ### Speaker
 

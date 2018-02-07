@@ -11,8 +11,7 @@ The `X3D` file contains the graphical information of the world.
 `X3D` is a modern `XML`-based file format for representing 3D computer graphics.
 It can be imported in many 3D modeling or visualizing applications.
 
-The `HTML5` page contains a Webots player which displays the `X3D` file
-as shown in the [figure below](#screenshot-of-a-web-scene-page-generated-by-webots).
+The `HTML5` page contains a Webots player which displays the `X3D` file as shown in the [figure below](#screenshot-of-a-web-scene-page-generated-by-webots).
 It can be open in any recent Web browser as documented in the [section below](#remarks-on-the-used-technologies-and-their-limitations).
 The 3D navigation in the player is possible using the mouse or the touch screen, similarly to the Webots navigation.
 
@@ -21,7 +20,6 @@ The 3D navigation in the player is possible using the mouse or the touch screen,
 ![screenshot-web-scene.png](images/screenshot-web-scene.png)
 
 %end
-
 
 ### How to export a Web Scene
 
@@ -34,23 +32,17 @@ When the export is completed, Webots will ask to playback the resulting file in 
 
 The chosen `X3D` parameters are stored in the [project file](the-standard-file-hierarchy-of-a-project.md#the-project-files) and automatically proposed during the next HTML export.
 
-**Note**:
-The `X3D` file and the required textures are exported in the same directory as the target `HTML` file.
+**Note**: The `X3D` file and the required textures are exported in the same directory as the target `HTML` file.
 
-**Note**:
-The playback option may not work correctly depending on your default Web browser.
+**Note**: The playback option may not work correctly depending on your default Web browser.
 In this case, please refer to the [section below](#remarks-on-the-used-technologies-and-their-limitations).
-
 
 ### How to embed a Web Scene in your Website
 
-The exported `HTML` page is designed to be as simple as possible, and is the reference for
-an integration in an external Website.
+The exported `HTML` page is designed to be as simple as possible, and is the reference for an integration in an external Website.
 Alternatively, an `<iframe>` tag pointing to the generated Webots page is a less elegant but simpler solution.
 
-The resources (`CSS`, `JavaScript`, etc.) on the [Cyberbotics Website](https://www.cyberbotics.com)
-will be stored for long term, and can be used from an external Website.
-
+The resources (`CSS`, `JavaScript`, etc.) on the [Cyberbotics Website](https://www.cyberbotics.com) will be stored for long term, and can be used from an external Website.
 
 ### Limitations
 
@@ -64,19 +56,12 @@ Particularly:
 - Webots uses additive stencil shadows, while `X3DOM` uses experimental shader-based shadows.
 The `X3DOM` shadows may have aliasing artifacts or can appear brighter than the Webots ones.
 
-
 ### Remarks on the used Technologies and their Limitations
 
 The Webots player is using internally the `X3DOM` library (based on `WebGL`).
 
-`X3DOM` is supported in recent versions of Firefox, Chrome, Edge, Internet Explorer and Safari on
-macOS (see details on the [X3DOM website](http://www.x3dom.org)).
+`X3DOM` is supported in recent versions of Firefox, Chrome, Edge, Internet Explorer and Safari on macOS (see details on the [X3DOM website](http://www.x3dom.org)).
 In case of related issues, make sure that `WebGL` is enabled in your Web browser settings.
 
-**Note**:
-The Chrome browser cannot open local files using the file protocol by default,
-while this is required by the Webots player to open the `X3D` file and the textures.
-To work around this, you can either run a local HTTP server in the directory
-containing the exported files (e.g. `python -m SimpleHTTPServer`) or
-either run the related Chrome security flag (i.e., by launching Chrome with the
-`--allow-file-access-from-files` option).
+**Note**: The Chrome browser cannot open local files using the file protocol by default, while this is required by the Webots player to open the `X3D` file and the textures.
+To work around this, you can either run a local HTTP server in the directory containing the exported files (e.g. `python -m SimpleHTTPServer`) or either run the related Chrome security flag (i.e., by launching Chrome with the `--allow-file-access-from-files` option).

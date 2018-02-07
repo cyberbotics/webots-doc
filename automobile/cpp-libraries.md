@@ -1,7 +1,6 @@
 ## C++ libraries
 
-The two libraries (`libCppDriver` and `libCppCar`) provide a C++ wrapper of the
-C libraries `libdriver` and `libcar`.
+The two libraries (`libCppDriver` and `libCppCar`) provide a C++ wrapper of the C libraries `libdriver` and `libcar`.
 
 ### CppDriver
 
@@ -47,8 +46,7 @@ The `Driver` class provides the following methods:
 
 ### CppCar
 
-The `Car` class inherits from the `Driver` class and provides the following
-methods:
+The `Car` class inherits from the `Driver` class and provides the following methods:
 
 %api "cpp_car"
 

@@ -17,11 +17,10 @@ HingeJoint {
 
 %end
 
-The [HingeJoint](#hingejoint) node can be used to model a hinge, i.e. a joint
-allowing only a rotational motion around a given axis (1 degree of freedom). It
-inherits [Joint](joint.md)'s `jointParameters` field. This field can be filled
-with a [HingeJointParameters](hingejointparameters.md) only. If empty,
-[HingeJointParameters](hingejointparameters.md) default values apply.
+The [HingeJoint](#hingejoint) node can be used to model a hinge, i.e. a joint allowing only a rotational motion around a given axis (1 degree of freedom).
+It inherits [Joint](joint.md)'s `jointParameters` field.
+This field can be filled with a [HingeJointParameters](hingejointparameters.md) only.
+If empty, [HingeJointParameters](hingejointparameters.md) default values apply.
 
 ### Field Summary
 

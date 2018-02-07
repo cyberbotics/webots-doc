@@ -8,11 +8,9 @@ SolidReference {
 
 ### Description
 
-A [SolidReference](#solidreference) can be used inside the `endPoint` field of a
-[Joint](joint.md) node to refer either to an existing [Solid](solid.md) or to
-the static environment. Mechanical loops can be closed this way. The only
-constraint when referring to a [Solid](solid.md) is that both [Solid](solid.md)
-and [Joint](joint.md) must be descendants of a common upper [Solid](solid.md).
+A [SolidReference](#solidreference) can be used inside the `endPoint` field of a [Joint](joint.md) node to refer either to an existing [Solid](solid.md) or to the static environment.
+Mechanical loops can be closed this way.
+The only constraint when referring to a [Solid](solid.md) is that both [Solid](solid.md) and [Joint](joint.md) must be descendants of a common upper [Solid](solid.md).
 
 ### Field Summary
 

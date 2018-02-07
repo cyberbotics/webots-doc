@@ -13,31 +13,23 @@ Charger {
 
 ### Description
 
-The [Charger](#charger) node is used to model a special kind of battery charger
-for the robots. A robot has to get close to a charger in order to recharge
-itself. A charger is not like a standard battery charger connected to a constant
-power supply. Instead, it is a battery itself: it accumulates energy with time.
-It could be compared to a solar power panel charging a battery. When the robot
-comes to get energy, it can't get more than the charger has presently
-accumulated.
+The [Charger](#charger) node is used to model a special kind of battery charger for the robots.
+A robot has to get close to a charger in order to recharge itself.
+A charger is not like a standard battery charger connected to a constant power supply.
+Instead, it is a battery itself: it accumulates energy with time.
+It could be compared to a solar power panel charging a battery.
+When the robot comes to get energy, it can't get more than the charger has presently accumulated.
 Note that only one robot can be charged at a time.
 
-The appearance of the [Charger](#charger) node can be altered by its current
-energy. When the [Charger](#charger) node is full, the resulting color
-corresponds to its `emissiveColor` field, while when the [Charger](#charger)
-node is empty, its resulting color corresponds to its original one. Intermediate
-colors depend on the `gradual` field. Only the first child of the
-[Charger](#charger) node is affected by this alteration. The resulting color is
-applied only on the first child of the [Charger](#charger) node. If the first
-child is a [Shape](shape.md) node, the `emissiveColor` field of its
-[Material](material.md) node is altered. If the first child is a
-[Light](light.md) node, its `color` field is altered. Otherwise, if the first
-child is a [Group](group.md) node, a recursive search is applied on this node
-and every [Light](light.md), [Shape](shape.md) and [Group](group.md) nodes are
-altered according to the two previous rules.
-Note that [Material](material.md) and [Light](light.md) nodes that are going to be
-automatically altered by the [Charger](#charger) functionality cannot be
-[USE](def-and-use.md) nodes.
+The appearance of the [Charger](#charger) node can be altered by its current energy.
+When the [Charger](#charger) node is full, the resulting color corresponds to its `emissiveColor` field, while when the [Charger](#charger) node is empty, its resulting color corresponds to its original one.
+Intermediate colors depend on the `gradual` field.
+Only the first child of the [Charger](#charger) node is affected by this alteration.
+The resulting color is applied only on the first child of the [Charger](#charger) node.
+If the first child is a [Shape](shape.md) node, the `emissiveColor` field of its [Material](material.md) node is altered.
+If the first child is a [Light](light.md) node, its `color` field is altered.
+Otherwise, if the first child is a [Group](group.md) node, a recursive search is applied on this node and every [Light](light.md), [Shape](shape.md) and [Group](group.md) nodes are altered according to the two previous rules.
+Note that [Material](material.md) and [Light](light.md) nodes that are going to be automatically altered by the [Charger](#charger) functionality cannot be [USE](def-and-use.md) nodes.
 
 ### Field Summary
 

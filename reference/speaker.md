@@ -36,23 +36,15 @@ The function takes as arguments two speaker `WbDeviceTag` respectively for the l
 If both channels should be played on the same speaker or the file has only one channel, it is possible to pass the same device tag for both left and right arguments.
 Alternatively, if one channel should be ignored, it is possible to pass `0` instead of one of the two tags.
 
-<<<<<<< HEAD
 The `sound` argument specifies the path to the sound file that should be played.
-=======
-The `sound` argument specifies the path to the wave file that should be played.
->>>>>>> origin/webots-r2018a-revision-1
 The `volume` argument allows the user to specify the volume of this sound (between 0.0 and 1.0).
 The `pitch` argument allows the user to modify the pitch of the sound, the default sound pitch is multiplied by the pitch argument.
 The `pitch` argument should be positive.
 A value of 1.0 means no pitch change.
 The `balance` argument allows the user to specify the balance between the left and the right speaker (between -1.0 and 1.0).
 A value of 0 means no balance: both channels have the same volume.
-<<<<<<< HEAD
-A value of -1.0 means that the right channel is muted. A value of 1.0 means that the left channel is muted.
-=======
 A value of -1.0 means that the right channel is muted.
 A value of 1.0 means that the left channel is muted.
->>>>>>> origin/webots-r2018a-revision-1
 Intermediate values define a difference of volume between the left and right channels.
 Finally, the boolean `loop` argument defines if the sound will be played only once or repeatedly.
 
@@ -138,11 +130,7 @@ The specified text could be plain text including punctuation signs such as "Hell
 Such effects are specified with XML tags compliant with the SSML (Speech Synthesis Markup Language) standard.
 Here is a list of SSML tags that are supported by both the `pico` and the `microsoft` engines.
 Additional tags and parameters may be supported by the `microsoft` engine.
-<<<<<<< HEAD
-Please refer to the [Microsoft Speech API  (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx) documentation about it.
-=======
 Please refer to the [Microsoft Speech API (SAPI)](https://msdn.microsoft.com/en-us/library/ee125663.aspx) documentation about it.
->>>>>>> origin/webots-r2018a-revision-1
 
 **SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 

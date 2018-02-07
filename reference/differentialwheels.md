@@ -107,7 +107,8 @@ Friction is not simulated, so a [DifferentialWheels](#differentialwheels) does n
 Instead, its motion is controlled by a 2D kinematics algorithm using the `axleLength, wheelRadius` and `maxAcceleration` fields.
 Because friction is not simulated the [DifferentialWheels](#differentialwheels) will not slide on a wall or on another robot.
 The simulation will rather look as if obstacles (walls, robots, etc.) are very rough or harsh.
-However the robots can normally avoid to become blocked by changing direction, rotating the wheels backwards, etc. Unlike the "physics" mode, in the "kinematics" mode the gravity and other forces are not simulated therefore a [DifferentialWheels](#differentialwheels) robot will keep its initial elevation throughout the simulation.
+However the robots can normally avoid to become blocked by changing direction, rotating the wheels backwards, etc.
+Unlike the "physics" mode, in the "kinematics" mode the gravity and other forces are not simulated therefore a [DifferentialWheels](#differentialwheels) robot will keep its initial elevation throughout the simulation.
 
 %figure "DifferentialWheels simulation modes"
 

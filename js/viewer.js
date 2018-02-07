@@ -187,11 +187,9 @@ function redirectImages(node) {
 
 function applyAnchor() {
     var anchors = document.getElementsByName(setup.anchor);
-    if (anchors.length > 0) {
+    if (anchors.length > 0)
         anchors[0].scrollIntoView(true);
-        if (isCyberboticsUrl)
-          window.scrollBy(0, -46); // 46 is the height of the header of Cyberbotics web page
-    } else
+    else
       window.scrollTo(0, 0);
 }
 

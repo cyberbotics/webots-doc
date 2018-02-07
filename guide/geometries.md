@@ -93,4 +93,6 @@ The same `Appearance` is applied on all the basic primitives following the VRML 
 
 ### webots\_box.wbt
 
-TODO.
+**Keywords**: IndexedFaceSet, UV mapping
+
+![webots_box.png](images/webots_box.png) This examples shows how the Webots box can be modeled using an `IndexedFaceSet` and texture mapping.

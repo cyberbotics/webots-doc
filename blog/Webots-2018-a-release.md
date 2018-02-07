@@ -4,9 +4,14 @@
 
 ---
 
-Today we're happy to announce the release of the all-new Webots 2018a, packed with some great new features. We're going to talk about some of them here, but for a comprehensive list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html).
+Today we're happy to announce the release of the all-new Webots 2018a, packed with some great new features.
+We're going to talk about some of them here, but for a comprehensive list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html).
 
-This release brings a change to the way Webots is released. We have been looking for a means of improving our release schedule to provide reliability for our users, and a more strict release schedule that ensures updates are shipped predictably and reliably. Thus, we are migrating to from Major-Minor-Maintenance to a Year-Release-Mainteance versioning system. We will now be aiming to release new editions of Webots annualy, with major intermediate releases every six months, starting with Webots R2018a, then Webots R2018b, then Webots R2019a etc. Maintenance revisions will still be shipped to fix critical bugs between these release milestones.
+This release brings a change to the way Webots is released.
+We have been looking for a means of improving our release schedule to provide reliability for our users, and a more strict release schedule that ensures updates are shipped predictably and reliably.
+Thus, we are migrating to from Major-Minor-Maintenance to a Year-Release-Mainteance versioning system.
+We will now be aiming to release new editions of Webots annualy, with major intermediate releases every six months, starting with Webots R2018a, then Webots R2018b, then Webots R2019a etc.
+Maintenance revisions will still be shipped to fix critical bugs between these release milestones.
 
 ## Enhanced Viewpoint Movement
 
@@ -36,7 +41,9 @@ Now, all automated Viewpoint movement is animated, when resetting the viewpoint,
 ![html5 windows](images/html_robot_window.png)
 %end
 
-Over the last couple of years we have been slowly phasing out our native Qt-based robot window system, in order to use Web technologies for more powerful layout & design tools. The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window. This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create:
+Over the last couple of years we have been slowly phasing out our native Qt-based robot window system, in order to use Web technologies for more powerful layout & design tools.
+The biggest and most comprehensive step in this task is implementing the default generic robot window in HTML5/JavaScript/CSS, as most of our distributed robot models use the generic window.
+This update brings a new, shiny, faster generic HTML5-based dockable robot window for use with any robot you create:
 
 %figure "Viewing Different Robot Devices In New Window"
 <video class="webm" autoplay loop>
@@ -54,7 +61,8 @@ We will continue to port features in from the legacy windows (such as the Motion
 ![python 3](images/python.png)
 %end
 
-One of our most requested features in recent months has been to support Python 3. With a divided community and people migrating their codebases from 2.7 to 3.4 and up, we have decided to provide support for both, so users can take advantage of the many Python 3 libraries, and users who aren't quite ready to make the leap can still continue working on their controllers without a hitch.
+One of our most requested features in recent months has been to support Python 3.
+With a divided community and people migrating their codebases from 2.7 to 3.4 and up, we have decided to provide support for both, so users can take advantage of the many Python 3 libraries, and users who aren't quite ready to make the leap can still continue working on their controllers without a hitch.
 
 ---
 
@@ -80,7 +88,8 @@ All these new models are now used in the SUMO interface.
 
 ## Web Interface
 
-As you may know, this year we opened [Robotbenchmark](https://robotbenchmark.net) to allow anyone to program simulated robots online. As a part of building and updating this site we have made numerous improvements to our web interface, including widening the support for object animation (materials, texture animation in the Track node, etc), performance optimization in animation playback and loading times, and an all new X3D export parameter dialog: 
+As you may know, this year we opened [Robotbenchmark](https://robotbenchmark.net) to allow anyone to program simulated robots online.
+As a part of building and updating this site we have made numerous improvements to our web interface, including widening the support for object animation (materials, texture animation in the Track node, etc), performance optimization in animation playback and loading times, and an all new X3D export parameter dialog:
 
 %figure "X3D Export Dialog"
 ![x3d export](images/screenshot-html-export-dialog.png)
@@ -99,5 +108,3 @@ To ensure reproducible simulations, floating-point precision when saving files h
 Large MF fields are no longer saved vertically, to reduce file sizes and improve loading times.
 
 The `street_furniture` folder has been filled with more models!
-
-

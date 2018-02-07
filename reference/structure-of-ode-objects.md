@@ -1,7 +1,7 @@
 ## Structure of ODE objects
 
-This table shows how common ".wbt" constructs are mapped to ODE objects. This
-information shall be useful for implementing physics plugins.
+This table shows how common ".wbt" constructs are mapped to ODE objects.
+This information shall be useful for implementing physics plugins.
 
 %figure "Mapping between common Webots constructs and ODE objects."
 
@@ -25,9 +25,5 @@ information shall be useful for implementing physics plugins.
 
 %end
 
-> **Note**:
-Although a physics plugin grants you access to the `dGeomIDs` created and managed
-by Webots, you should never attempt to set a user-defined data pointer by means
-of the `dGeomSetData` function for these `dGeomIDs` as Webots stores its own data pointer in
-them. Using the `dGeomSetData` function on a `dGeomID` defined by Webots will almost surely
-result into a Webots crash.
+> **Note**: Although a physics plugin grants you access to the `dGeomIDs` created and managed by Webots, you should never attempt to set a user-defined data pointer by means of the `dGeomSetData` function for these `dGeomIDs` as Webots stores its own data pointer in them.
+Using the `dGeomSetData` function on a `dGeomID` defined by Webots will almost surely result into a Webots crash.

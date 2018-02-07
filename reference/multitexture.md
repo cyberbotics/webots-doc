@@ -8,7 +8,8 @@ MultiTexture {
 
 ### Description
 
-The [MultiTexture](#multitexture) node specifies the application of several individual textures to a 3D object to achieve a more complex visual effect. [MultiTexture](#multitexture) can be used as a value for the texture field in an [Appearance](appearance.md) node.
+The [MultiTexture](#multitexture) node specifies the application of several individual textures to a 3D object to achieve a more complex visual effect.
+[MultiTexture](#multitexture) can be used as a value for the texture field in an [Appearance](appearance.md) node.
 
 It's particularly useful to pass several textures to a [ComposedShader](composedshader.md) node.
 

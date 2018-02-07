@@ -1,8 +1,7 @@
 ## Driver library
 
-The [driver](#driver-library) library provides all the usual functionalities
-available to a human driving his own car. All the functions included in this
-library are explained below.
+The [driver](#driver-library) library provides all the usual functionalities available to a human driving his own car.
+All the functions included in this library are explained below.
 
 **Name**
 
@@ -18,13 +17,9 @@ int wbu_driver_step();
 
 **Description**
 
-These functions are the equivalent of the init, cleanup and step function of any
-regular robot controller. As a reminder, the `init` function should be called at
-the very beginning of any controller program, the `cleanup` function at the end
-of the controller program just before exiting and the `step` function should be
-called in the main loop to run one simulation step. Unlike the robot step, the
-driver step does not have any argument, the default time step of the world being
-used.
+These functions are the equivalent of the init, cleanup and step function of any regular robot controller.
+As a reminder, the `init` function should be called at the very beginning of any controller program, the `cleanup` function at the end of the controller program just before exiting and the `step` function should be called in the main loop to run one simulation step.
+Unlike the robot step, the driver step does not have any argument, the default time step of the world being used.
 
 ---
 
@@ -41,12 +36,9 @@ double wbu_driver_get_steering_angle();
 
 **Description**
 
-The `wbu_driver_set_steering_angle` function is used to steer the car, it steers
-the front wheels  according to the Ackermann geometry (left and right wheels are
-not steered  with the exact same angle). The angle is set in radians, a positive
-angle steers right and a negative angle steers left. The formulas used in order
-to compute the right and left angles are the following (`trackFront` and
-`wheelbase` are the parameters of the [Car](car.md) PROTO):
+The `wbu_driver_set_steering_angle` function is used to steer the car, it steers the front wheels according to the Ackermann geometry (left and right wheels are not steered with the exact same angle).
+The angle is set in radians, a positive angle steers right and a negative angle steers left.
+The formulas used in order to compute the right and left angles are the following (`trackFront` and `wheelbase` are the parameters of the [Car](car.md) PROTO):
 
 ```c
 angle_right = atan(1 / cot(steering_angle) - trackFront / (2 * wheelbase));
@@ -70,18 +62,11 @@ double wbu_driver_get_target_cruising_speed();
 
 **Description**
 
-The `wbu_driver_set_cruising_speed` function activates the control in cruising
-speed of the car, the rotational speed of the wheels is forced (respecting the
-geometric differential constraint) in order for the car to move at the speed
-given in argument of the function (in kilometers per hour). When the control in
-cruising speed is activated, the speed is directly applied to the wheel without
-any engine model simulation, therefore any call to functions like
-`wbu_driver_get_rpm` will raise an error. The acceleration of the car is
-computed using the `time0To100` field of the [Car](car.md) PROTO.
+The `wbu_driver_set_cruising_speed` function activates the control in cruising speed of the car, the rotational speed of the wheels is forced (respecting the geometric differential constraint) in order for the car to move at the speed given in argument of the function (in kilometers per hour).
+When the control in cruising speed is activated, the speed is directly applied to the wheel without any engine model simulation, therefore any call to functions like `wbu_driver_get_rpm` will raise an error.
+The acceleration of the car is computed using the `time0To100` field of the [Car](car.md) PROTO.
 
-The `wbu_driver_get_target_cruising_speed` function simply returns the target
-cruising speed (argument of the last call to the `wbu_driver_set_cruising_speed`
-function).
+The `wbu_driver_get_target_cruising_speed` function simply returns the target cruising speed (argument of the last call to the `wbu_driver_set_cruising_speed` function).
 
 ---
 
@@ -97,9 +82,8 @@ double wbu_driver_get_current_speed();
 
 **Description**
 
-This function returns the current speed of the car (in kilometers per hour). The
-estimated speed is computed using the rotational speed of the actuated wheels
-and their respective radius.
+This function returns the current speed of the car (in kilometers per hour).
+The estimated speed is computed using the rotational speed of the actuated wheels and their respective radius.
 
 ---
 
@@ -116,15 +100,11 @@ double wbu_driver_get_throttle();
 
 **Description**
 
-The `wbu_driver_set_throttle` function is used in order to control the car in
-torque, it sets the state of the throttle. The argument should be between 0.0
-and 1.0, 0 means that 0% of the output torque of the engine is sent to the
-wheels and 1.0 means that 100% of the output torque of the engine is sent to the
-wheels. For more information about how the output torque of the engine is
-computed see section [Engine models](#engine-models).
+The `wbu_driver_set_throttle` function is used in order to control the car in torque, it sets the state of the throttle.
+The argument should be between 0.0 and 1.0, 0 means that 0% of the output torque of the engine is sent to the wheels and 1.0 means that 100% of the output torque of the engine is sent to the wheels.
+For more information about how the output torque of the engine is computed see section [Engine models](#engine-models).
 
-The `wbu_driver_get_throttle` function simply returns the state of the throttle
-(argument of the last call to the `wbu_driver_set_throttle` function).
+The `wbu_driver_get_throttle` function simply returns the state of the throttle (argument of the last call to the `wbu_driver_set_throttle` function).
 
 ---
 
@@ -141,16 +121,10 @@ double wbu_driver_get_brake_intensity();
 
 **Description**
 
-The `wbu_driver_set_brake_intensity` function brakes the car by increasing the
-`dampingConstant` coefficient of the rotational joints of each of the four
-wheels. The argument should be between 0.0 and 1.0, 0 means that no damping
-constant is added on the joints (no breaking), 1 means that the parameter
-`brakeCoefficient` of the [Car](car.md) PROTO is applied on the
-`dampingConstant` of each joint (the value will be linearly interpolated between
-0 and `brakeCoefficient` for any arguments between 0 and 1).
+The `wbu_driver_set_brake_intensity` function brakes the car by increasing the `dampingConstant` coefficient of the rotational joints of each of the four wheels.
+The argument should be between 0.0 and 1.0, 0 means that no damping constant is added on the joints (no breaking), 1 means that the parameter `brakeCoefficient` of the [Car](car.md) PROTO is applied on the `dampingConstant` of each joint (the value will be linearly interpolated between 0 and `brakeCoefficient` for any arguments between 0 and 1).
 
-The `wbu_driver_get_brake_intensity` function simply returns the current brake intensity
-(argument of the last call to the `wbu_driver_set_brake_intensity` function).
+The `wbu_driver_get_brake_intensity` function simply returns the current brake intensity (argument of the last call to the `wbu_driver_set_brake_intensity` function).
 
 ---
 
@@ -169,10 +143,8 @@ bool wbu_driver_get_hazard_flashers();
 
 **Description**
 
-The `wbu_driver_set_indicator` function allows the user to set (using the
-`wbu_indicator_state` enum) if the indicator should be on only for the right
-side of the car, the left side of the car or should be off. The
-`wbu_driver_get_indicator` function allows the user to get the indicator state.
+The `wbu_driver_set_indicator` function allows the user to set (using the `wbu_indicator_state` enum) if the indicator should be on only for the right side of the car, the left side of the car or should be off.
+The `wbu_driver_get_indicator` function allows the user to get the indicator state.
 
 %figure "wbu_indicator_state enumeration"
 
@@ -184,10 +156,8 @@ side of the car, the left side of the car or should be off. The
 
 %end
 
-The `wbu_driver_set_hazard_flashers` function allows the user to switch the
-hazard flashers on (indicator on both side of the car) or off. The
-`wbu_driver_get_hazard_flashers` function allows the user to get the state of
-the hazard flashers.
+The `wbu_driver_set_hazard_flashers` function allows the user to switch the hazard flashers on (indicator on both side of the car) or off.
+The `wbu_driver_get_hazard_flashers` function allows the user to get the state of the hazard flashers.
 
 ---
 
@@ -206,11 +176,9 @@ bool wbu_driver_get_antifog_lights();
 
 **Description**
 
-The `wbu_driver_set_dipped_beams` and `wbu_driver_set_antifog_lights` functions
-are used to enable or disable the dipped beams and the anti-fog lights.
+The `wbu_driver_set_dipped_beams` and `wbu_driver_set_antifog_lights` functions are used to enable or disable the dipped beams and the anti-fog lights.
 
-The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions
-return the state of the dipped beams or the anti-fog lights.
+The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions return the state of the dipped beams or the anti-fog lights.
 
 ---
 
@@ -228,9 +196,7 @@ double wbu_driver_get_rpm();
 
 This function returns the estimation of the engine rotation speed.
 
-> **Note**:
-If the control in cruising speed is enabled, this function returns an error
-because there is no engine model when control in cruising speed is enabled.
+> **Note**: If the control in cruising speed is enabled, this function returns an error because there is no engine model when control in cruising speed is enabled.
 
 ---
 
@@ -248,16 +214,13 @@ int wbu_driver_get_gear_number();
 
 **Description**
 
-The `wbu_driver_set_gear` function sets the engaged gear. An argument of `-1` is
-used in order to engage the reverse gear, an argument of `0` is used in order to
-disengaged the gearbox. Any other arguments than `0` and `-1` should be between
-1 and the number of coefficients set in the `gearRatio` parameter of the
-[Car](car.md) PROTO.
+The `wbu_driver_set_gear` function sets the engaged gear.
+An argument of `-1` is used in order to engage the reverse gear, an argument of `0` is used in order to disengaged the gearbox.
+Any other arguments than `0` and `-1` should be between 1 and the number of coefficients set in the `gearRatio` parameter of the [Car](car.md) PROTO.
 
 The `wbu_driver_get_gear` function returns the currently engaged gear.
 
-The `wbu_driver_get_gear_number` function simply returns the number of available
-gears (including the reverse gear).
+The `wbu_driver_get_gear_number` function simply returns the number of available gears (including the reverse gear).
 
 ---
 
@@ -299,11 +262,9 @@ wbu_wipers_mode wbu_driver_get_wipers_mode();
 
 **Description**
 
-The `wbu_driver_set_wipers_mode` function allows the user to set (using the
-`wbu_wipers_mode` enum) various speeds for the wipers from slow to fast. Whilst
-the slow and normal mode share the same speed, the slow mode activates the
-wipers once every few seconds. The `wbu_driver_get_wipers_mode` function allows
-the user to get the wipers' mode.
+The `wbu_driver_set_wipers_mode` function allows the user to set (using the `wbu_wipers_mode` enum) various speeds for the wipers from slow to fast.
+Whilst the slow and normal mode share the same speed, the slow mode activates the wipers once every few seconds.
+The `wbu_driver_get_wipers_mode` function allows the user to get the wipers' mode.
 
 %figure "wbu_wipers_mode enumeration"
 
@@ -318,33 +279,22 @@ the user to get the wipers' mode.
 
 ### Engine models
 
-When the control in torque of the car is enabled, at each step the output torque
-of the engine is recomputed. First the rotational speed of the engine is
-estimated from the rotational speed of the wheels, then the output torque of the
-engine is computed (the formula depends on the engine type) using the rotational
-speed of the engine, then this output torque is multiplied by the state of the
-throttle and the gearbox coefficient, finally the torque is distributed
-(respecting the differential constraint) on the actuated wheels (depending on
-the car type).
+When the control in torque of the car is enabled, at each step the output torque of the engine is recomputed.
+First the rotational speed of the engine is estimated from the rotational speed of the wheels, then the output torque of the engine is computed (the formula depends on the engine type) using the rotational speed of the engine, then this output torque is multiplied by the state of the throttle and the gearbox coefficient, finally the torque is distributed (respecting the differential constraint) on the actuated wheels (depending on the car type).
 
 #### Combustion engine
 
-If `a`, `b` and `c` are the values of the `engineFunctionCoefficients` parameter
-of the `Car` PROTO, the output torque is:
+If `a`, `b` and `c` are the values of the `engineFunctionCoefficients` parameter of the `Car` PROTO, the output torque is:
 
 ```
 output_torque = c * rpm^2 + b * rpm + a
 ```
 
-> **Note**:
-if the rpm is below the `engineMinRPM` parameter of the [Car](car.md) PROTO,
-`engineMinRPM` is used instead of the real rpm, but if the rpm is above the
-`engineMaxRPM` parameter, then the output torque is 0.
+> **Note**: if the rpm is below the `engineMinRPM` parameter of the [Car](car.md) PROTO, `engineMinRPM` is used instead of the real rpm, but if the rpm is above the `engineMaxRPM` parameter, then the output torque is 0.
 
 #### Electric engine
 
-If `maxP` and `maxT` are respectively the `engineMaxPower` and `engineMaxTorque`
-parameters of the `Car` PROTO, the ouput torque is:
+If `maxP` and `maxT` are respectively the `engineMaxPower` and `engineMaxTorque` parameters of the `Car` PROTO, the ouput torque is:
 
 ```
 output_torque = min(maxT; maxP * 60 / 2 * pi * rpm)
@@ -353,19 +303,15 @@ output_torque = min(maxT; maxP * 60 / 2 * pi * rpm)
 #### Parallel hybrid engine
 
 In that case, the output torque is simply the sum of the two previous models.
-But if the real rpm is below the `engineMinRPM` parameter of the `Car` PROTO,
-the combustion engine is switched off.
+But if the real rpm is below the `engineMinRPM` parameter of the `Car` PROTO, the combustion engine is switched off.
 
 #### Serial hybrid engine
 
-Since this case is very similar to the electric engine model (from a simulation
-point of view), you should use the electric model instead.
+Since this case is very similar to the electric engine model (from a simulation point of view), you should use the electric model instead.
 
 #### Power-split hybrid engine
 
-If `ratio` and `splitRpm` are respectively the `hybridPowerSplitRatio` and
-`hybridPowerSplitRPM` parameters of the `Car` PROTO, the output torque is
-computed as follow:
+If `ratio` and `splitRpm` are respectively the `hybridPowerSplitRatio` and `hybridPowerSplitRPM` parameters of the `Car` PROTO, the output torque is computed as follow:
 
 ```
 output_torque_c = c * splitRpm^2 + b * splitRpm + a
@@ -373,5 +319,4 @@ output_torque_c = c * splitRpm^2 + b * splitRpm + a
         output_torque_total = output_torque_e + (1 - ratio) * output_torque_c
 ```
 
-Here again, if the real rpm is below the `engineMinRPM` parameter of the `Car`
-PROTO the combustion engine is switched off.\\
+Here again, if the real rpm is below the `engineMinRPM` parameter of the `Car` PROTO the combustion engine is switched off.

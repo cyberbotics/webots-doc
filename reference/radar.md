@@ -28,9 +28,8 @@ Radar {
 
 The [Radar](#radar) node is used to model a radar sensor.
 
-The [Radar](#radar) node can be used to measure other solids distance, angle,
-and relative speed. Any [Solid](solid.md) node is a potential radar target if
-its `radarCrossSection` field is bigger than 0.
+The [Radar](#radar) node can be used to measure other solids distance, angle, and relative speed.
+Any [Solid](solid.md) node is a potential radar target if its `radarCrossSection` field is bigger than 0.
 
 #### WbRadarTarget
 
@@ -45,17 +44,14 @@ typedef struct {
 } WbRadarTarget;
 ```
 
-The `distance` is the radial distance between the radar and the target. The
-`received_power` is the power received back by the radar from this target in dBm
-(see the [returned power](#received-power) formulas). The `speed` is the speed
-of the target relative to the radar sensor. The `azimuth` is the horizontal
-angle of the target relative to the radar.
+The `distance` is the radial distance between the radar and the target.
+The `received_power` is the power received back by the radar from this target in dBm (see the [returned power](#received-power) formulas).
+The `speed` is the speed of the target relative to the radar sensor.
+The `azimuth` is the horizontal angle of the target relative to the radar.
 
-> **Note** [C++]:
-In C++ the name of the structure is `RadarTarget`.
+> **Note** [C++]: In C++ the name of the structure is `RadarTarget`.
 
-> **Note** [Java/Python]:
-In Java and Python, the structure is replaced by a class called `RadarTarget`.
+> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `RadarTarget`.
 
 ### Field Summary
 
@@ -108,8 +104,7 @@ expensive as the number of targets increase.
 
 ### Target detection
 
-For each [Solid](solid.md) node having a `radarCrossSection` greater than 0, the
-following pseudo code is used to compute if a new target should be generated:
+For each [Solid](solid.md) node having a `radarCrossSection` greater than 0, the following pseudo code is used to compute if a new target should be generated:
 
 ```
 if (a part of the solid is closer to the radar than maxRange) {
@@ -166,8 +161,7 @@ Note that the first measurement will be available only after the first sampling 
 
 The `wb_radar_disable` function turns the radar off, saving computation time.
 
-The `wb_radar_get_sampling_period` function returns the period given into the
-`wb_radar_enable` function, or 0 if the device is disabled.
+The `wb_radar_get_sampling_period` function returns the period given into the `wb_radar_enable` function, or 0 if the device is disabled.
 
 ---
 
@@ -186,8 +180,7 @@ double wb_radar_get_max_range(WbDeviceTag tag);
 
 **Description**
 
-These functions allow the controller to get the value of the minimum and maximum
-range of the radar.
+These functions allow the controller to get the value of the minimum and maximum range of the radar.
 
 ---
 
@@ -206,8 +199,7 @@ double wb_radar_get_vertical_fov(WbDeviceTag tag);
 
 **Description**
 
-These functions allow the controller to get the value of the horizontal and
-vertical field of view of the radar.
+These functions allow the controller to get the value of the horizontal and vertical field of view of the radar.
 
 ---
 
@@ -225,8 +217,7 @@ int wb_radar_get_number_of_targets(WbDeviceTag tag);
 
 **Description**
 
-This function allows the controller to get the number of targets currently seen
-by the radar.
+This function allows the controller to get the number of targets currently seen by the radar.
 
 ---
 
@@ -244,5 +235,5 @@ const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag);
 
 **Description**
 
-This function returns the targets array. The size of the array can be get using
-the function `wb_radar_get_number_of_targets`.
+This function returns the targets array.
+The size of the array can be get using the function `wb_radar_get_number_of_targets`.

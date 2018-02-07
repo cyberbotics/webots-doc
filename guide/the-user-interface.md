@@ -502,7 +502,7 @@ To the left of the speedometer, the *virtual time* is displayed using following 
 H:MM:SS:MMM
 ```
 
-where *H* is the number of hours (may be several digits), *MM* is the number of minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds (see [this figure](#speedometer)).
+Where *H* is the number of hours (may be several digits), *MM* is the number of minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds (see [this figure](#speedometer)).
 If the speedometer value is greater than one, the virtual time is progressing faster than real time.
 
 The basic time step for simulation can be set in the `basicTimeStep` field of the `WorldInfo` node in the scene tree window.

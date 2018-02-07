@@ -64,10 +64,12 @@ pip install opencv-python --user
 #### Windows libraries
 
 Open the DOS console (CMD.EXE) and type:
+
 ```sh
 PYTHON_PATH\Scripts\pip.exe install opencv-python
 ```
-where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
+
+Where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
 
 ### Use an alternative Python version
 

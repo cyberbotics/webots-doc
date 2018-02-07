@@ -10,7 +10,7 @@ In this directory, you will find the following world files :
 **Keywords**: Box, Capsule, Cone, Cylinder, Sphere, IndexedFaceSet, basic 3D primitives
 
 These examples show how to use the basic geometric primitives of Webots in order to display untextured and colored 3D shapes in the 3D window.
-The primitives are static in this example, i.e. physics is not applied on them.
+For the most part, primitives are static in these examples, i.e. physics is not applied on them.
 Basically :
 
 - `box.wbt` demonstrates how to use the `Box` node to display a red box.
@@ -26,7 +26,8 @@ Basically :
 **Keywords**: Extended solids, torus, rounded box, pipe
 
 ![extended_solids.png](images/extended_solids.png) This example demonstrates the use of several extended primitives.
-These compound primitives are created using procedural PROTO nodes generating a set basic Geometry nodes.
+These compound primitives are created using procedural PROTO nodes that generate a set of basic Geometry nodes.
+
 In this example, physics laws are applied on these primitives.
 
 ### extrusion.wbt
@@ -34,9 +35,9 @@ In this example, physics laws are applied on these primitives.
 **Keywords**: Extrusion
 
 ![extrusion.png](images/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
-The `Extrusion` PROTO in a procedural PROTO nodes generating an `IndexedFaceSet` node.
-The `Extrusion` PROTO fields allow to define a 2D section, and to extrude it along a path.
-In this example, the section is a triangle extruded along a spiral path.
+The `Extrusion` PROTO is a procedural PROTO which generates an `IndexedFaceSet` node.
+The `Extrusion` PROTO fields allow to define a 2D cross-section, and to extrude it along a path.
+In this example, the cross-section is a triangle extruded along a spiral path.
 
 ### floating\_geometries.wbt
 
@@ -44,14 +45,14 @@ In this example, the section is a triangle extruded along a spiral path.
 
 ![floating_geometries.png](images/floating_geometries.png) This example demonstrates the interactions between basic physics primitives and fluids.
 Three `Fluids` nodes are present; two flowing fluids to simulate a river, and a static fluid to simulate a cylindric pool.
-The small `Solids` are affected by the fluids viscosity and by forces generated on the [Archimedes' principle](https://en.wikipedia.org/wiki/Archimedes%27_principle).
+The small `Solids` are affected by the fluids' viscosity and by forces generated on the [Archimedes' principle](https://en.wikipedia.org/wiki/Archimedes%27_principle).
 
 ### high\_resolution\_indexedfaceset.wbt
 
 **Keywords**: IndexedFaceSet, High resolution mesh
 
 ![high_resolution_indexedfaceset.png](images/high_resolution_indexedfaceset.png) This example simply displays a high resolution mesh.
-This mesh is a textured high resolution version of the [monkey head of Blender](https://en.wikipedia.org/wiki/Blender_(software)#Suzanne).
+This mesh is a textured high resolution version of the [Blender's mascot, Suzanne](https://en.wikipedia.org/wiki/Blender_(software)#Suzanne).
 It is composed of 8000 triangles with UV mapping.
 It has been imported from [Blender](https://www.blender.org/).
 
@@ -65,7 +66,7 @@ The `Muscle` nodes complete the joints by visualizing colored capsule-like shape
 Two scenarios are shown:
 
 1. Two muscles are applied on a `HingeJoint` node.
-Depending on the joint move, one muscle is contracted, and the other one is released.
+Depending on the joint motion, one muscle is contracted, and the other one is released.
 2. A muscle is applied on a `SliderJoint` node.
 
 ### physics\_primitives.wbt
@@ -73,7 +74,7 @@ Depending on the joint move, one muscle is contracted, and the other one is rele
 **Keywords**: Collisions, physics primitives
 
 ![physics_primitives.png](images/physics_primitives.png) This example demonstrates a large set of the possible collisions between the basic physics primitives.
-Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` nodes fall over three grounds, respectively, a `Box`, a `Plane` and an `ElevationGrid` node.
+Three identical sets of primitives composed of `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` nodes fall onto three surfaces respectively; a `Box`, a `Plane` and an `ElevationGrid` node.
 
 ### textured\_boxes.wbt
 
@@ -91,8 +92,8 @@ Three identical set of primitives composed of a `Box`, a `Capsule`, a `Cylinder`
 
 **Keywords**: Texture mapping
 
-![textured_shapes.png](images/textured_shapes.png) This example shows how textures are applied on the basic primitives.
-The same `Appearance` node is applied on all the basic primitives following the VRML rules about texture mapping.
+![textured_shapes.png](images/textured_shapes.png) This example shows how textures are applied on basic primitives.
+The same `Appearance` node is applied on all the basic primitives following VRML rules about texture mapping.
 
 ### webots\_box.wbt
 

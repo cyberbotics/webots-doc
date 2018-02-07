@@ -72,8 +72,6 @@ class TestParagraphs(unittest.TestCase):
                 line = line.strip()
                 if len(line) == 0:
                     continue
-                if '**Keywords**' in line:
-                    continue
                 self.assertTrue(
                     line.endswith('.') or line.endswith(':') or line.endswith('!'),
                     msg='"%s": The following line does not end correctly: "%s"' % (p['md'], line)

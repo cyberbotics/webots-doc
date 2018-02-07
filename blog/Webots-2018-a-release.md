@@ -10,7 +10,8 @@ We're going to talk about some of them here, but for a comprehensive list of cha
 This release brings a change to the way Webots is released.
 We have been looking for a means of improving our release schedule to provide reliability for our users, and a more strict release schedule that ensures updates are shipped predictably and reliably.
 Thus, we are migrating to from Major-Minor-Maintenance to a Year-Release-Mainteance versioning system.
-We will now be aiming to release new editions of Webots annualy, with major intermediate releases every six months, starting with Webots R2018a, then Webots R2018b, then Webots R2019a etc. Maintenance revisions will still be shipped to fix critical bugs between these release milestones.
+We will now be aiming to release new editions of Webots annualy, with major intermediate releases every six months, starting with Webots R2018a, then Webots R2018b, then Webots R2019a etc.
+Maintenance revisions will still be shipped to fix critical bugs between these release milestones.
 
 ## Enhanced Viewpoint Movement
 
@@ -107,4 +108,3 @@ To ensure reproducible simulations, floating-point precision when saving files h
 Large MF fields are no longer saved vertically, to reduce file sizes and improve loading times.
 
 The `street_furniture` folder has been filled with more models!
-

@@ -14,7 +14,8 @@ The [chapter](language-setup.md) covers the set up of these tools.
 ### Installation on linux
 
 Webots will run on most recent Linux distributions running glibc2.11.1 or earlier.
-This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc. Webots comes in two different package types: `.deb` and `.tar.bz2` (tarball).
+This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc.
+Webots comes in two different package types: `.deb` and `.tar.bz2` (tarball).
 The `.deb` package is aimed at the latest LTS Ubuntu Linux distribution whereas the tarball package includes many dependency libraries and it is therefore best suited for installation on other Linux distributions.
 These packages can be downloaded from our [website](http://www.cyberbotics.com/linux).
 

@@ -138,9 +138,12 @@ A list of all node types is provided in the "webots/nodes.h" include file.
 Node types include WB\_NODE\_DIFFERENTIAL\_WHEELS, WB\_NODE\_APPEARANCE, WB\_NODE\_LIGHT\_SENSOR, etc.
 
 The `wb_supervisor_node_get_type_name` function returns a text string corresponding to the name of the node.
-If the argument node is a PROTO node, this function returns the PROTO name, like "E-puck", "RectangleArena", "Door", etc. Otherwise if the argument node is not a PROTO node the returned value is the same as the output of `wb_supervisor_node_get_base_type_name` function, i.e. "Robot", "Appearance", "LightSensor", etc. If the argument is NULL, the function returns the empty string.
+If the argument node is a PROTO node, this function returns the PROTO name, like "E-puck", "RectangleArena", "Door", etc.
+Otherwise if the argument node is not a PROTO node the returned value is the same as the output of `wb_supervisor_node_get_base_type_name` function, i.e. "Robot", "Appearance", "LightSensor", etc.
+If the argument is NULL, the function returns the empty string.
 
-The `wb_supervisor_node_get_base_type_name` function returns a text string corresponding to the base type name of the node, like "Robot", "Appearance", "LightSensor", etc. If the argument is NULL, the function returns the empty string.
+The `wb_supervisor_node_get_base_type_name` function returns a text string corresponding to the base type name of the node, like "Robot", "Appearance", "LightSensor", etc.
+If the argument is NULL, the function returns the empty string.
 
 > **Note** [C++, Java, Python]: In the oriented-object APIs, the WB\_NODE\_* constants are available as static integers of the `Node` class (for example, Node::DIFFERENTIAL\_WHEELS).
 These integers can be directly compared with the output of the `Node::getType` function.
@@ -767,7 +770,8 @@ If the argument is NULL, the function returns 0.
 Field types are defined in "webots/supervisor.h" and include for example: `WB_SF_FLOAT`, `WB_MF_NODE`, `WB_SF_STRING`, etc.
 
 The `wb_supervisor_field_get_type_name` function returns a text string corresponding to the data type of a field found previously from the `wb_supervisor_node_get_field` function.
-Field type names are defined in the VRML97 specifications and include for example: `"SFFloat"`, `"MFNode"`, `"SFString"`, etc. If the argument is NULL, the function returns the empty string.
+Field type names are defined in the VRML97 specifications and include for example: `"SFFloat"`, `"MFNode"`, `"SFString"`, etc.
+If the argument is NULL, the function returns the empty string.
 
 The `wb_supervisor_field_get_count` function returns the number of items of a multiple field (MF) passed as an argument to this function.
 If a single field (SF) or NULL is passed as an argument to this function, it returns -1.

@@ -108,7 +108,8 @@ It is called once, when the world is destroyed, and can be used to perform clean
 ### void webots\_physics\_draw(int pass, const char *view)
 
 This function is used to add user-specified OpenGL graphics to the 3D view and/or to the cameras.
-For example, this can be used to draw robots trajectories, force vectors, etc. The function should normally contain OpenGL function calls.
+For example, this can be used to draw robots trajectories, force vectors, etc.
+The function should normally contain OpenGL function calls.
 This function is called 2 times (2 passes): one right before and one right after the regular OpenGL rendering.
 The first pass may be useful for drawing solid objects visible through transparent or semi-transparent objects in the world, but generally only the second is used.
 The `pass` argument allows to distinguish these 2 passes (`pass` = 0 for the pass before the OpenGL rendering, `pass` = 1 for the pass after the OpenGL rendering) The `view` argument allows to determine if the function is called when rendering the 3D view (`view` == NULL) or when rendering a robot camera (`view` == Robot::name).

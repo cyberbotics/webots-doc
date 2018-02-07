@@ -71,7 +71,8 @@ Then the `cont` command will instruct the debugger to resume the execution of th
 On Windows you will need to install the "gdb.exe" file separately and use an MSYS console to achieve this.
 
 Then hit the `Run` button to start the simulation and let it run until the controller crashes again.
-The controller's execution can be interrupted at any time (Ctrl-C), in order to query variables, set up break points, etc. When the crash occurs, `gdb` prints a diagnostic message similar to this:
+The controller's execution can be interrupted at any time (Ctrl-C), in order to query variables, set up break points, etc.
+When the crash occurs, `gdb` prints a diagnostic message similar to this:
 
 ```
 Program received signal SIGSEGV, Segmentation fault.

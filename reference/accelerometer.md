@@ -72,7 +72,8 @@ The `wb_accelerometer_get_sampling_period` function returns the sampling period 
 The `wb_accelerometer_get_values` function returns the current values measured by the [Accelerometer](#accelerometer).
 These values are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are valid for accessing the vector.
 Each element of the vector represents the acceleration along the corresponding axis of the [Accelerometer](#accelerometer) node, expressed in meters per second squared [m/s^2].
-The first element corresponds to the x-axis, the second element to the y-axis, etc. An [Accelerometer](#accelerometer) at rest with earth's gravity will indicate 1 g (9.81 m/s^2) along the vertical axis.
+The first element corresponds to the x-axis, the second element to the y-axis, etc.
+An [Accelerometer](#accelerometer) at rest with earth's gravity will indicate 1 g (9.81 m/s^2) along the vertical axis.
 Note that the gravity can be specified in the `gravity` field in the [WorldInfo](worldinfo.md) node.
 To obtain the acceleration due to motion alone, this offset must be subtracted.
 The device's output will be zero during free fall when no offset is substracted.

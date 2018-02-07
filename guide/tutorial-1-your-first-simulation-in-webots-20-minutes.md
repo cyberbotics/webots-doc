@@ -170,7 +170,8 @@ As there is no obstacle, the robot will move forwards for ever.
 Firstly we will create and edit the C controller, then we will link it to the robot.
 
 > **Theory**: A **controller** is a program that defines the behavior of a robot.
-Webots controllers can be written in the following programming languages: C, C++, Java, Python, Matlab, etc. Note that C, C++ and Java controllers need to be compiled before they can be run as robot controllers.
+Webots controllers can be written in the following programming languages: C, C++, Java, Python, Matlab, etc.
+Note that C, C++ and Java controllers need to be compiled before they can be run as robot controllers.
 Python and Matlab controllers are interpreted languages so they will run without being compiled.
 The `controller` field of a robot specifies which controller is currently linked with to it.
 Please take notice that a controller can be used by several robots, but a robot can only use one controller at a time.

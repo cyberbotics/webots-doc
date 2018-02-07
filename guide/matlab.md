@@ -50,7 +50,8 @@ keyboard;
 The `desktop` command brings up the MATLAB desktop.
 The `keyboard` stops the execution of the controller and gives control to the keyboard (`K>>` prompt).
 Then MATLAB opens your controller m-file in its editor and indicates that the execution is stopped at the `keyboard` command.
-After that, the controller m-file can be debugged interactively, i.e., it is possible to continue the execution step-by-step, set break points, watch variable, etc. While debugging, the current values of the controller variables are shown in the MATLAB workspace.
+After that, the controller m-file can be debugged interactively, i.e., it is possible to continue the execution step-by-step, set break points, watch variable, etc.
+While debugging, the current values of the controller variables are shown in the MATLAB workspace.
 It is possible to *continue* the execution of the controller by typing `return` at the `K>>` prompt.
 Finally the execution of the controller can be terminated with `Ctrl-C` key combination.
 

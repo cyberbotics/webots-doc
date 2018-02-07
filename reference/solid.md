@@ -105,11 +105,13 @@ to define initial velocities for every physical objects in the scene.
 ### How to use the boundingObject field?
 
 The `boundingObject` field is used to define the bounds of a [Solid](#solid) as geometrical primitives.
-Each `boundingObject` can hold one or several geometrical primitives, such as [Box](box.md), [Capsule](capsule.md), [Cylinder](cylinder.md), etc. These primitives should normally be chosen such as to represent the approximate bounds of the [Solid](#solid).
+Each `boundingObject` can hold one or several geometrical primitives, such as [Box](box.md), [Capsule](capsule.md), [Cylinder](cylinder.md), etc.
+These primitives should normally be chosen such as to represent the approximate bounds of the [Solid](#solid).
 In the usual case, the graphical representation of a robot is composed of many complex shapes, e.g., [IndexedFaceSet](indexedfaceset.md)s, placed in the `children` field of the [Solid](#solid) nodes.
 However this graphical representation is usually too complex to be used directly for detecting collisions.
 If there are too many faces the simulation becomes slow and error-prone.
-For that reason, it is useful to be able to approximate the graphical representation by simpler primitives, e.g., one or more [Box](box.md) or [Capsule](capsule.md)s, etc. This is the purpose of the `boundingObject` field.
+For that reason, it is useful to be able to approximate the graphical representation by simpler primitives, e.g., one or more [Box](box.md) or [Capsule](capsule.md)s, etc.
+This is the purpose of the `boundingObject` field.
 
 Various combinations of primitives can be used in a `boundingObject`: it can contain either:
 

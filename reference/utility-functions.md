@@ -6,8 +6,10 @@ They are not callback functions, but functions that you can call from your callb
 ### dWebotsGetBodyFromDEF()
 
 This function looks for a [Solid](solid.md) node with the specified name and returns the corresponding dBodyID.
-The returned dBodyID is an ODE object that represent a rigid body with properties such as mass, velocity, inertia, etc. The dBodyID object can then be used with all the available ODE's `dBody*` functions (see ODE documentation).
-For example it is possible to add a force to the body with the `dBodyAddForce` function, etc. The prototype of this function is:
+The returned dBodyID is an ODE object that represent a rigid body with properties such as mass, velocity, inertia, etc.
+The dBodyID object can then be used with all the available ODE's `dBody*` functions (see ODE documentation).
+For example it is possible to add a force to the body with the `dBodyAddForce` function, etc.
+The prototype of this function is:
 
 ```c
 dBodyID dWebotsGetBodyFromDEF(const char *DEF);

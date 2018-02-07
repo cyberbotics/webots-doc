@@ -249,7 +249,8 @@ double wb_motor_get_max_torque(WbDeviceTag tag);
 
 The `wb_motor_set_position` function specifies a new target position that the PID-controller will attempt to reach using the current velocity, acceleration and motor torque/force parameters.
 This function returns immediately (asynchronous) while the actual motion is carried out in the background by Webots.
-The target position will be reached only if the physics simulation allows it, that means, if the specified motor force is sufficient and the motion is not blocked by obstacles, external forces or the motor's own spring force, etc. It is also possible to wait until the [Motor](#motor) reaches the target position (synchronous) like this:
+The target position will be reached only if the physics simulation allows it, that means, if the specified motor force is sufficient and the motion is not blocked by obstacles, external forces or the motor's own spring force, etc.
+It is also possible to wait until the [Motor](#motor) reaches the target position (synchronous) like this:
 
 ```c
 void motor_set_position_sync(WbDeviceTag tag_motor, WbDeviceTag tag_sensor, double target, int delay) {

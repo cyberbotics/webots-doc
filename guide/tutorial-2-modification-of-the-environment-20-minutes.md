@@ -2,7 +2,8 @@
 
 In this tutorial, we will teach you how to create simple objects in the environment.
 The first step will be to create a ball which will interact with the environment.
-We will tackle several concepts related to the nodes: what is their meaning, how to create them, how they have to be affiliated, etc. Moreover we will see how to set up physics.
+We will tackle several concepts related to the nodes: what is their meaning, how to create them, how they have to be affiliated, etc.
+Moreover we will see how to set up physics.
 
 Several kinds of nodes will be introduced.
 We won't define each of them precisely.

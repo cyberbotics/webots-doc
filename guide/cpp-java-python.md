@@ -46,7 +46,8 @@ Note that the controller should never create more than one instance of a derived
 Note that unlike the C API, the C++/Java/Python APIs don't have (and don't need) functions like the `wb_robot_init` and `wb_robot_cleanup` functions.
 The necessary initialization and cleanup routines are automatically invoked from the constructor and destructor of the base class.
 
-In C++/Java/Python, each Webots device is implemented as a separate class, there is a `DistanceSensor` class, a `TouchSensor` class, a `RotationalMotor` class, etc. The various devices instances can be obtained with dedicated methods of the `Robot` class, like the `getDistanceSensor` or the `getTouchSensor` functions.
+In C++/Java/Python, each Webots device is implemented as a separate class, there is a `DistanceSensor` class, a `TouchSensor` class, a `RotationalMotor` class, etc.
+The various devices instances can be obtained with dedicated methods of the `Robot` class, like the `getDistanceSensor` or the `getTouchSensor` functions.
 There is no `WbDeviceTag` in C++/Java/Python.
 
 ### C++ Example

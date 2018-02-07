@@ -169,7 +169,8 @@ The `duration` parameter specifies the amount of time, expressed in milliseconds
 Note that this is not real time but virtual (simulation) time, so this is not like calling the system's `sleep` function.
 Depending on the complexity of the simulation and execution mode, the function may return quickly.
 When it returns, the requested duration of simulation time is elapsed.
-In other words the physics runs for the specified duration: objects may move, the motors may run, the sensor values may change, etc. Note that the `duration` parameter must be a multiple of the `WorldInfo.basicTimeStep`.
+In other words the physics runs for the specified duration: objects may move, the motors may run, the sensor values may change, etc.
+Note that the `duration` parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
 If this function returns -1, this indicates that Webots wishes to terminate the controller.
 This happens when the user hits the `Revert` button or quits Webots.

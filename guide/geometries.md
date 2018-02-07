@@ -39,7 +39,11 @@ In this example, the section is a triangle extruded along a spiral path.
 
 ### floating\_geometries.wbt
 
-TODO.
+**Keywords**: Fluid simulation
+
+![floating_geometries.png](images/floating_geometries.png) This examples demonstrates the interactions between basic physics primitives and fluids.
+Three geometries are `Fluid` (two flowing fluids and a static pool).
+Therefore the other small objects are affected by the fluids viscosity and forces based on the Archimedes' principle.
 
 ### high\_resolution\_indexedfaceset.wbt
 

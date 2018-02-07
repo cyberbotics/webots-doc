@@ -27,8 +27,7 @@ At this point, Webots will start only if a X-server with proper authorizations i
 To ensure that this is the case, the simplest solution is to have an open login session on computer B, i.e., to have logged in using the login screen of computer B, and not having logged out.
 Unless configured differently, the `ssh` login and the screen login session must belong to the same user, otherwise the X-server will reject the connection.
 Note that the `xhost +` command can be used to grant access to the X-server to another user.
-For security reasons, the screen of the open session on computer B can be locked (e.g.
-with a screen-saver): this won't affect the running X-server.
+For security reasons, the screen of the open session on computer B can be locked (e.g. with a screen-saver): this won't affect the running X-server.
 
 ### Terminating the ssh session
 

@@ -95,8 +95,7 @@ Using procedural PROTO files can greatly increase the loading time of your world
 
 To reduce the number of evaluations you can add the `static` tag as a comment in the PROTO header (i.e. `# tags: static`).
 Then, if the same procedural PROTO is used several times in a world and all the field values are the same, the PROTO is evaluated only once.
-> **Note**: This tag should not be used if the result of the PROTO depends on something else than the field values (e.g.
-use a random value).
+> **Note**: This tag should not be used if the result of the PROTO depends on something else than the field values (e.g. use a random value).
 
 ### Example
 

@@ -46,8 +46,7 @@ The first step is about modifying the background color.
 
 > **Hands on**: Create a `Background` node by clicking on the plus icon above the Scene Tree view, and select "Background" from the "New Node" option.
 Modify the background color, by setting up the `skyColor` field of the `Background` node.
-Choose a blue color (e.g.
-red = 0.4, green = 0.7 and blue = 1.0) using the color picker at the bottom of the Scene Tree view.
+Choose a blue color (e.g. red = 0.4, green = 0.7 and blue = 1.0) using the color picker at the bottom of the Scene Tree view.
 The background of the 3D view should be modified accordingly.
 
 Now, we would like to add some environment object (a floor and some walls).

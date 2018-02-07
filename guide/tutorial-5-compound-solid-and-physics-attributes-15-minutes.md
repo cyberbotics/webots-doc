@@ -100,8 +100,7 @@ The Plane node is much more efficient than the ElevationGrid node, but it can on
 ### Contacts
 
 > **Theory**: When two solids collide, **contacts** are created at the collision points.
-ContactProperties nodes can be used to specify the desired behavior of the contacts (e.g.
-the friction between the two solids).
+ContactProperties nodes can be used to specify the desired behavior of the contacts (e.g. the friction between the two solids).
 
 > Each solid belongs to a material category referenced by their `contactMaterial` field (*"default"* by default).
 The WorldInfo node has a `contactProperties` field that stores a list of ContactProperties nodes.

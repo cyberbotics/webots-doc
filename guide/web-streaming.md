@@ -49,8 +49,7 @@ These parameters are set when [exporting a HTML5 model](web-scene.md#how-to-expo
 
 The Webots streaming server is simply running on the local computer on a given port (`1234` by default, but it can be modified from the [command line arguments](starting-webots.md#command-line-arguments)).
 This port should not be used by another application.
-In order to be visible from the outside network, the port should be open (e.g.
-on simple networks, this can be done by modifying the NAT settings of the router).
+In order to be visible from the outside network, the port should be open (e.g. on simple networks, this can be done by modifying the NAT settings of the router).
 The firewall of the local computer may complain about this operation, in this case, please modify its settings.
 
 ### How to embed a Web Scene in your Website

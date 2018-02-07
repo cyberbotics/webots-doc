@@ -28,8 +28,7 @@ The standard output and error streams are automatically redirected to Webots con
 
 Webots C API (Application Programming Interface) is provided by regular C header files.
 These header files must be included using statements like `#include <webots/xyz.h>` where `xyz` represents the name of a Webots node in lowercase.
-Like with any regular C code it is also possible to include the standard C headers, e.g.
-`#include <stdio.h>`.
+Like with any regular C code it is also possible to include the standard C headers, e.g. `#include <stdio.h>`.
 A call to the initialization `wb_robot_init` function is required before any other C API function call.
 This function initializes the communication between the controller and Webots.
 The `wb_robot_cleanup` function does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly.

@@ -262,8 +262,7 @@ If it doesn't appear there, it means that your computer was not properly configu
 Please refer to the instructions given in the previous section.
 
 When selecting a specific Bluetooth connection from the popup menu of the control window, Webots will try to establish a connection with your e-puck robot.
-Once connected, it will display the version of the e-puck serial communication software on the Webots console (e.g.
-`[e-puck] Running real e-puck (Version 1.5.2 April 2015 (Webots))`), and will switch the control to the real robot.
+Once connected, it will display the version of the e-puck serial communication software on the Webots console (e.g. `[e-puck] Running real e-puck (Version 1.5.2 April 2015 (Webots))`), and will switch the control to the real robot.
 That is, it will send motor commands to the real robot and display sensor information (proximity, light, camera image, etc.) coming from the real robot.
 This makes the transfer from the simulation to the real robot trivially simple.
 Note that in the same popup menu, the `Refresh` menu item can be used to update the list of COM ports.

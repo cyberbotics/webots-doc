@@ -44,8 +44,7 @@ But let's start with a definition.
 
 > **Theory**: A **rigid body** is a body in which deformation can be neglected.
 The distance between any two given points of a rigid body remains constant in time regardless of external forces exerted on it.
-Soft bodies and articulated objects are not rigid bodies, e.g.
-the following are not rigid bodies: a rope, a tyre, a sponge and an articulated robot arm.
+Soft bodies and articulated objects are not rigid bodies, e.g. the following are not rigid bodies: a rope, a tyre, a sponge and an articulated robot arm.
 However, an articulated entity can be broken into of several indivisible rigid bodies.
 For example a table, a robot finger phalanx or a wheel are indivisible rigid bodies.
 

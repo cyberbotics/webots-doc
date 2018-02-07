@@ -29,8 +29,7 @@ Absolute paths work as well, but they are not recommended because they are not p
 Ideally, the texture file should lie next to the world file, possibly inside a "textures" subfolder.
 Supported image formats include both JPEG and PNG.
 The rendering of the PNG alpha transparency is supported.
-It is strongly recommended to use texture images with power of two resolution (e.g.
-8x8, 2048x64, etc.) to optimize memory usage on the GPU and maximize texture quality.
+It is strongly recommended to use texture images with power of two resolution (e.g. 8x8, 2048x64, etc.) to optimize memory usage on the GPU and maximize texture quality.
 If the width or the height of a texture image is not a power of two, then an internal upscaling is performed and a warning is displayed in the Webots console.
 
 A PNG image may contain an alpha channel.

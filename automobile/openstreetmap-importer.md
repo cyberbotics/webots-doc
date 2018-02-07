@@ -2,8 +2,7 @@
 
 In order to ease the creation of new environments for automobile simulations, Webots worlds can be generated from OpenStreetMap maps using the importer script described here.
 
-You can download an OpenStreetMap map of any part of the world from [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use more than a few square kilometers if you want to be able to run your simulation in real-time) and then save it as a Webots world file (e.g.
-`myMap.wbt`) using the importer script.
+You can download an OpenStreetMap map of any part of the world from [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use more than a few square kilometers if you want to be able to run your simulation in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using the importer script.
 
 ## Dependencies
 

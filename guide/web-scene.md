@@ -64,5 +64,4 @@ The Webots player is using internally the `X3DOM` library (based on `WebGL`).
 In case of related issues, make sure that `WebGL` is enabled in your Web browser settings.
 
 **Note**: The Chrome browser cannot open local files using the file protocol by default, while this is required by the Webots player to open the `X3D` file and the textures.
-To work around this, you can either run a local HTTP server in the directory containing the exported files (e.g.
-`python -m SimpleHTTPServer`) or either run the related Chrome security flag (i.e., by launching Chrome with the `--allow-file-access-from-files` option).
+To work around this, you can either run a local HTTP server in the directory containing the exported files (e.g. `python -m SimpleHTTPServer`) or either run the related Chrome security flag (i.e., by launching Chrome with the `--allow-file-access-from-files` option).

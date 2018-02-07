@@ -44,8 +44,7 @@ If a project has several ".cpp" source files, then this can be specified like su
 CXX_SOURCES = my_controller.cpp my_second_file.cpp my_third_file.cc
 ```
 
-Important: the build rules require that one of the source files in the list must correspond to the controller name (i.e. controller directory name), e.g.
-if the controller directory is "my\_controller" then the list must contain either "my\_controller.c, my\_controller.cpp" or "my\_controller.cc" accordingly.
+Important: the build rules require that one of the source files in the list must correspond to the controller name (i.e. controller directory name), e.g. if the controller directory is "my\_controller" then the list must contain either "my\_controller.c, my\_controller.cpp" or "my\_controller.cc" accordingly.
 
 ### Using the Compiler and Linker Flags (C/C++)
 
@@ -98,11 +97,9 @@ You can find a list of compiler and linker options on the [gcc website](https://
 #### Using Webots C API in a C++ Controller
 
 Normally, C++ controllers use Webots C++ API.
-The C++ API is a set of C++ classes provided by C++ header files, e.g.
-`#include <webots/Robot.hpp>`.
+The C++ API is a set of C++ classes provided by C++ header files, e.g. `#include <webots/Robot.hpp>`.
 If you prefer, C++ controllers can use Webots C API instead.
-The C API is a set of C functions starting with the `wb` prefix and provided by C header files, e.g.
-`#include <webots/robot.h>`.
+The C API is a set of C functions starting with the `wb` prefix and provided by C header files, e.g. `#include <webots/robot.h>`.
 To use the C API in a C++ controller you need to add this line in your controller Makefile:
 
 ```makefile

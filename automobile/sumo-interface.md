@@ -93,8 +93,7 @@ PROTO SumoInterface [
 
 ### The SumoDisplay PROTO
 
-It is sometimes useful to see the GUI view of SUMO inside Webots (e.g.
-to emulate a GPS view).
+It is sometimes useful to see the GUI view of SUMO inside Webots (e.g. to emulate a GPS view).
 This can easily be achieved by adding a `SumoInterface` node in the `display` field of the `SumoInterface` PROTO and using SUMO in GUI mode.
 
 ```

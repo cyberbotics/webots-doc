@@ -17,8 +17,7 @@ Let's discuss both approaches:
 
 #### Using a single controller
 
-If your simulation needs to evaluate only one robot at a time, e.g.
-you are optimizing the locomotion gait of a humanoid or the behavior of a single robot, then it is possible to have both tasks implemented in the same controller; this results in a somewhat simpler code.
+If your simulation needs to evaluate only one robot at a time, e.g. you are optimizing the locomotion gait of a humanoid or the behavior of a single robot, then it is possible to have both tasks implemented in the same controller; this results in a somewhat simpler code.
 Here is a pseudo-code example for the systematical optimization of two parameters *a* and *b* using only one controller:
 
 ```c
@@ -59,8 +58,7 @@ So when using this approach, the robot must be based on a `Supervisor` node in t
 
 #### Using two distinct types of controllers
 
-If, on the contrary, your simulation requires the simultaneous execution of several robots, e.g.
-swarm robotics, it is advised to use two distinct types of controller: one for the optimization algorithm and one for the robot's behavior.
+If, on the contrary, your simulation requires the simultaneous execution of several robots, e.g. swarm robotics, it is advised to use two distinct types of controller: one for the optimization algorithm and one for the robot's behavior.
 The optimization algorithm should go in a `Supervisor` controller while the robots' behavior can go in a regular (non-Supervisor) controller.
 
 Because these controllers will run in separate system processes, they will not be able to access each other's variables.
@@ -173,9 +171,7 @@ This may sound like an overhead, but in fact Webots startup time is usually very
 For example, Webots can be called from a shell script or from any type of program suitable for running the optimization algorithm.
 Starting Webots each time does clearly revert the simulation completely, so each robot will start from the same initial state.
 The drawback of this method is that the optimization algorithm has to be programmed outside of Webots.
-This external program can be written in any programming language, e.g.
-shell script, C, PHP, perl, etc., provided that there is a way to call Webots and wait for its termination, e.g.
-like the C standard `system` function does.
+This external program can be written in any programming language, e.g. shell script, C, PHP, perl, etc., provided that there is a way to call Webots and wait for its termination, e.g. like the C standard `system` function does.
 On the contrary, the parameter evaluation must be implemented in a Webots controller.
 
 With this approach, the optimization algorithm and the robot controller(s) run in separate system processes, but they must communicate with each other in order to exchange parameter sets and fitness results.

@@ -85,8 +85,7 @@ The simulated camera image can be viewed in Choregraphe: `View / Video monitor`.
 The resolution of the image capture can be changed in Webots using the `cameraWidth` and `cameraHeight` fields of the robot.
 Note that the simulation speed decreases as the resolution increases.
 It is possible to hide the camera viewports (purple frame) in Webots, by setting the `cameraPixelSize` field to 0.
-It is also possible to completely switch off the simulation of the cameras by adding the "-nocam" option before the NAOqi port number in the `controllerArgs` field, e.g.
-"-nocam 9559".
+It is also possible to completely switch off the simulation of the cameras by adding the "-nocam" option before the NAOqi port number in the `controllerArgs` field, e.g. "-nocam 9559".
 
 ### Using Several Nao robots
 

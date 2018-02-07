@@ -8,7 +8,6 @@ In addition to the usual tabs for each sensors/actuators, the car robot-window's
 
 %end
 
-The following tabs give more detailed information about one specific state of the car (e.g.
-speed, steering angles, wheels encoders, etc.).
+The following tabs give more detailed information about one specific state of the car (e.g. speed, steering angles, wheels encoders, etc.).
 After those specific tabs about car, you can find the usual tabs regarding sensors/actuators added in the sensors slots of the car.
 Finally, the last tab allows the launch of a small graphical interface for the [OpenStreetMap importer](openstreetmap-importer.md) tools.

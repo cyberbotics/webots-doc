@@ -12,8 +12,7 @@ Note that Webots PRO is required to create `Supervisor` nodes or use the `wb_sup
 
 In the Scene Tree, a `Supervisor` node can be used in the same context where a `Robot` node is used, hence it can be used as a base node to model a robot.
 But in addition, the `wb_supervisor_*` functions can also be used to control the simulation process and modify the Scene Tree.
-For example the `Supervisor` can replace human actions such as measuring the distance travelled by a robot or moving it back to its initial position, etc. The `Supervisor` can also take a screen shot or a video of the simulation, restart or terminate the simulation, etc. It can read or modify the value of every fields in the Scene Tree, e.g.
-read or change the position of robots, the color of objects, or switch on or off the light sources, and do many other useful things.
+For example the `Supervisor` can replace human actions such as measuring the distance travelled by a robot or moving it back to its initial position, etc. The `Supervisor` can also take a screen shot or a video of the simulation, restart or terminate the simulation, etc. It can read or modify the value of every fields in the Scene Tree, e.g. read or change the position of robots, the color of objects, or switch on or off the light sources, and do many other useful things.
 
 One important thing to keep in mind is that the `Supervisor` functions correspond to functionalities that are usually not available on real robots; they rather correspond to a human intervention on the experimental setup.
 Hence, the `Robot` vs.

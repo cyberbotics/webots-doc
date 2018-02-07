@@ -76,7 +76,7 @@ and the value of `encoderNoise` must be reset to -1
 ### How can I create a passive joint?
 
 First of all, any joint, passive or active, must be created by adding a `Joint`-derived node (depending on the constraint type requested) in the Scene Tree.
-A `Joint` is passive if its device is null (or at least not a `Motor`-derived node.
+A `Joint` is passive if its device is null (or at least not a `Motor`-derived node).
 Alternatively, it is also possible to make a `Motor` become passive during the simulation; this can be done like this:
 
 ```c

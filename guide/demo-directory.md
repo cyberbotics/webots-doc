@@ -72,7 +72,7 @@ In addition, the buoyancy of the robot's body is also simulated using Archimedes
 
 **Keywords**: Soccer, Supervisor, differential wheels, label
 
-![soccer_world.png](images/soccer_world.png) In this example, two teams of simple robots play soccer.
+![soccer.png](images/soccer.png) In this example, two teams of simple robots play soccer.
 A `Supervisor` is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.
 This example shows how a `Supervisor` can be used to read and change the position of objects.
 

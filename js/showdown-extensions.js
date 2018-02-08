@@ -23,23 +23,23 @@ function wbSlugify(obj) {
 // to replace variables by a static content.
 // For example, the markdown string '{{ date.year }}' is replaced by '2016'
 showdown.extension('wbVariables', function() {
-    // static variables to maintain
-    // TODO: could be computed
-    var vars = {
-      webots : {
-        version : {
-          major : 'R2018a',
-          // full is equal to major for the first major version
-          // and contains the revision number for subsequent versions
-          full : 'R2018a revision 1',
-          package : 'R2018a-rev1'
-        }
-      },
-      date : {
-        year : 2018
+  // static variables to maintain
+  // TODO: could be computed
+  var vars = {
+    webots : {
+      version : {
+        major : 'R2018a',
+        // full is equal to major for the first major version
+        // and contains the revision number for subsequent versions
+        full : 'R2018a revision 1',
+        package : 'R2018a-rev1'
       }
+    },
+    date : {
+      year : 2018
     }
   };
+
   // compute debian package version format by removing initial 'R'
   vars.webots.version.debian_package = vars.webots.version.package.substring(1);
 

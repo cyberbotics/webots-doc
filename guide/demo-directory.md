@@ -1,4 +1,4 @@
-## Samples
+## Demo directory
 
 This section provides a list of interesting worlds that broadly illustrate Webots capabilities.
 Several of these examples have stemmed from research or teaching projects.

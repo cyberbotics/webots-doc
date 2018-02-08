@@ -7,7 +7,12 @@ For each demo, the world file and its corresponding controller have the same nam
 
 ### anaglyph.wbt
 
-TODO.
+**Keywords**: Stereoscopic camera, anachrome red/cyan filters
+
+![anaglyph.png](images/anaglyph.png) This example demonstrates the merge of two `Camera` images into one, in order create an [anaglyph image](https://en.wikipedia.org/wiki/Anaglyph_3D).
+A stereoscopic camera is mounted on a `iRobot Create` robot.
+At each step, both `Camera` images are merged into a `Display` device, one is filtered in red, and the other one is filtered in cyan.
+This produces an image which can be shown with low cost plastic red/cyan 3D glassed.
 
 ### blimp\_lis.wbt
 
@@ -94,9 +99,13 @@ It has six degrees of freedom (*x*, *y*, *z*, pitch, roll, and yaw).
 In this example, the Stewart platform is loaded with a few stacked boxes, then the platform moves and the boxes stumble apart.
 This simulation attaches both ends of the linear actuators (hydraulic pistons) to the lower and the upper parts of the Stewart platform.
 
-### unever\_terrain.wbt
+### uneven\_terrain.wbt
 
-TODO.
+**Keywords**: ElevationGrid, uneven terrain
+
+![uneven_terrain.png](images/uneven_terrain.png) This example demonstrates the creation of an uneven terrain based on the `ElevationGrid` primitive.
+In this world, a six-wheeled robots with rotational suspensions is moving along a predefined path (composed of a list of `GPS` coordinates).
+To do so, it uses its `GPS` and `Compass` sensors.
 
 ### yamor.wbt
 

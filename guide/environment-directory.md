@@ -2,35 +2,43 @@
 
 TODO.
 
-### factory.wbt
-
-**Keywords**: ...
-
-![factory_a.png](images/factory_a.png) This example ...
-
-![factory_b.png](images/factory_b.png) This example ...
-
 ### apartment.wbt
 
-**Keywords**: ...
+**Keywords**: Apartment, domestic environment, furniture
 
-![apartment_a.png](images/apartment_a.png) This example ...
+%figure "Screenshots of the apartment environment."
 
-![apartment_b.png](images/apartment_b.png) This example ...
+|                                            |                                            |
+|--------------------------------------------|--------------------------------------------|
+| ![apartment_a.png](images/apartment_a.png) | ![apartment_b.png](images/apartment_b.png) |
+| ![apartment_c.png](images/apartment_c.png) | ![apartment_d.png](images/apartment_d.png) |
 
-![apartment_c.png](images/apartment_c.png) This example ...
+%end
 
-![apartment_d.png](images/apartment_d.png) This example ...
+This example ...
 
+### factory.wbt
+
+**Keywords**: Factory, workbench, tools, industrial pipes, industrial stairs
+
+%figure "Screenshots of the factory environment."
+
+|                                        |                                        |
+|----------------------------------------|----------------------------------------|
+| ![factory_a.png](images/factory_a.png) | ![factory_b.png](images/factory_b.png) |
+
+%end
+
+This example ...
 
 ### kitchen.wbt
 
-**Keywords**: ...
+**Keywords**: kitchen, ustensil
 
 ![kitchen.png](images/kitchen.png) This example ...
 
 ### spinning\_top.wbt
 
-**Keywords**: ...
+**Keywords**: Spinner, chessboard, chess pieces
 
 ![spinning_top.png](images/spinning_top.png) This example ...

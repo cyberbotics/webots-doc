@@ -1,17 +1,24 @@
-if (typeof String.prototype.startsWith != 'function')
-  String.prototype.startsWith = function (prefix) {
-    return this.slice(0, prefix.length) == prefix;
-  };
+/* eslint no-extend-native: ["error", { "exceptions": ["String"] }] */
+/* global getGETQueryValue */
+/* global setup */
+/* global showdown */
+/* global hljs */
 
-if (typeof String.prototype.endsWith !== 'function')
-  String.prototype.endsWith = function (suffix) {
+var handle;
+
+if (typeof String.prototype.startsWith !== 'function') {
+  String.prototype.startsWith = function(prefix) {
+    return this.slice(0, prefix.length) === prefix;
+  };
+}
+
+if (typeof String.prototype.endsWith !== 'function') {
+  String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
   };
+}
 
-if (!setup)
-  var setup = {};
-
-var isCyberboticsUrl = location.href.indexOf('cyberbotics.com/doc') != -1;
+var isCyberboticsUrl = location.href.indexOf('cyberbotics.com/doc') !== -1;
 
 function setupCyberboticsUrl(url) {
   setup.book = 'guide';
@@ -22,19 +29,19 @@ function setupCyberboticsUrl(url) {
   if (m) {
     setup.book = m[1];
     setup.page = m[2];
-    var arguments = m[3];
+    var args = m[3];
 
     m = url.match(/version=([^&#]*)/);
     if (m) {
       var version = m[1];
       var n = version.indexOf(':');
-      if (n == -1)
+      if (n === -1)
         setup.branch = version;
       else
         setup.branch = version.substr(n + 1);
     }
 
-    m = arguments.match(/#([^&#]*)/);
+    m = args.match(/#([^&#]*)/);
     if (m)
       setup.anchor = m[1];
     else
@@ -69,15 +76,14 @@ function setupUrl(url) {
     setupCyberboticsUrl(url);
   else
     setupDefaultUrl(url);
-  console.log('book='+setup.book+' page='+setup.page+' branch='+setup.branch+' anchor='+setup.anchor);
+  console.log('book=' + setup.book + ' page=' + setup.page + ' branch=' + setup.branch + ' anchor=' + setup.anchor);
 }
 
 function computeTargetPath() {
+  var branch = 'master';
   var targetPath = '';
   if (setup.branch)
     branch = setup.branch;
-  else
-    branch = 'master';
   if (setup.url.startsWith('http'))
     targetPath = setup.url + branch + '/';
   targetPath += setup.book + '/';
@@ -87,7 +93,6 @@ function computeTargetPath() {
 function redirectUrls(node) {
   // redirect a's href
   var as = node.getElementsByTagName('a');
-  var targetPath = computeTargetPath();
   for (var i = 0; i < as.length; i++) {
     var a = as[i];
     var href = a.getAttribute('href');
@@ -118,9 +123,9 @@ function forgeUrl(page, anchor) {
   if (isCyberboticsUrl) {
     var i = location.href.indexOf('cyberbotics.com/doc');
     newUrl = location.href.substr(0, i) + 'cyberbotics.com/doc/' + setup.book + '/' + page;
-    if (setup.branch != '' && setup.repository && setup.repository != 'omichel')
+    if (setup.branch !== '' && setup.repository && setup.repository !== 'omichel')
       newUrl += '?version=' + setup.repository + ':' + setup.branch;
-    else if (setup.branch != '')
+    else if (setup.branch !== '')
       newUrl += '?version=' + setup.branch;
     newUrl += anchorString;
   } else {
@@ -138,7 +143,7 @@ function addDynamicAnchorEvent(el) {
   if (el.classList.contains('dynamicAnchor'))
     return;
   el.addEventListener('click',
-    function (event) {
+    function(event) {
       var node = event.target;
       while (node && !node.hasAttribute('href'))
         node = node.getParent();
@@ -157,7 +162,7 @@ function addDynamicLoadEvent(el) {
   if (el.classList.contains('dynamicLoad'))
     return;
   el.addEventListener('click',
-    function (event) {
+    function(event) {
       aClick(event.target);
       event.preventDefault();
     },
@@ -179,8 +184,8 @@ function redirectImages(node) {
   for (var i = 0; i < imgs.length; i++) {
     var img = imgs[i];
     var src = img.getAttribute('src');
-    var match = /^(\w*)\/([\w-\.]*)$/.exec(src);
-    if (match && match.length == 3)
+    var match = /^(\w*)\/([\w-.]*)$/.exec(src);
+    if (match && match.length === 3)
       img.setAttribute('src', targetPath + match[1] + '/' + match[2]);
   }
 }
@@ -197,15 +202,15 @@ function applyToTitleDiv() {
   var titleContentElement = document.getElementById('title-content');
   if (titleContentElement) {
     var newTitle;
-    if (setup.book == 'guide')
+    if (setup.book === 'guide')
       newTitle = 'Webots User Guide';
-    else if (setup.book == 'reference')
+    else if (setup.book === 'reference')
       newTitle = 'Webots Reference Manual';
-    else if (setup.book == 'blog')
+    else if (setup.book === 'blog')
       newTitle = 'Webots Blog';
-    else if (setup.book == 'automobile')
+    else if (setup.book === 'automobile')
       newTitle = 'Webots for automobiles';
-    else if (setup.book == 'robotis-op2')
+    else if (setup.book === 'robotis-op2')
       newTitle = 'Webots for ROBOTIS OP2';
     else
       newTitle = '';
@@ -217,7 +222,7 @@ function applyToTitleDiv() {
 }
 
 function setUpBlogStyleIfNeeded() {
-  if (setup.book == 'blog') {
+  if (setup.book === 'blog') {
     var center = document.getElementById('center');
     center.setAttribute('class', 'blog');
 
@@ -227,7 +232,6 @@ function setUpBlogStyleIfNeeded() {
 
     var figures = document.getElementsByTagName('figure');
     if (figures.length > 0) {
-
       var modal = document.createElement('div');
       var caption = document.createElement('div');
       var close = document.createElement('span');
@@ -241,7 +245,7 @@ function setUpBlogStyleIfNeeded() {
       close.innerHTML = '&times;';
       close.onclick = function() {
         modal.style.display = 'none';
-      }
+      };
 
       modal.appendChild(close);
       modal.appendChild(modalContent);
@@ -250,19 +254,19 @@ function setUpBlogStyleIfNeeded() {
       figures[0].parentNode.appendChild(modal);
 
       window.onclick = function(event) {
-        if (event.target == modal)
+        if (event.target === modal)
           modal.style.display = 'none';
-      }
+      };
 
       var images = [];
       for (var i = figures.length - 1; i >= 0; i--) {
         figures[i].onclick = null;
         images[i] = figures[i].firstChild;
-        images[i].onclick = function () {
+        images[i].onclick = function() {
           modal.style.display = 'block';
           modalContent.src = this.src;
           caption.innerHTML = this.parentNode.childNodes[1].innerHTML;
-        }
+        };
       }
     }
   }
@@ -283,9 +287,8 @@ function getWebotsVersion() {
 function applyToPageTitle(mdContent) {
   var hashtagIndex = mdContent.indexOf('#');
   if (hashtagIndex >= 0) {
-    while (hashtagIndex + 1 < mdContent.length && mdContent[hashtagIndex + 1] == '#') {
+    while (hashtagIndex + 1 < mdContent.length && mdContent[hashtagIndex + 1] === '#')
       hashtagIndex += 1;
-    }
     var hashtagCarriageReturn = mdContent.indexOf('\n', hashtagIndex);
     if (hashtagCarriageReturn >= 0) {
       var title = mdContent.substring(hashtagIndex + 1, hashtagCarriageReturn).trim();
@@ -336,11 +339,12 @@ function populateViewDiv(mdContent) {
 
 // replace the browser URL after a dynamic load
 function updateBrowserUrl() {
-  var url = forgeUrl(setup.page, setup.anchor)
-  if (history.pushState)
+  var url = forgeUrl(setup.page, setup.anchor);
+  if (history.pushState) {
     try {
-      history.pushState({state:'new'}, null, url);
+      history.pushState({state: 'new'}, null, url);
     } catch (err) {
+    }
   }
 }
 
@@ -367,15 +371,15 @@ function highlightCode(view) {
 function applyAnchorIcons(view) {
   var elements = [];
   var tags = ['figcaption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-  for (var i = 0; i < tags.length; i++) {
+  var i;
+  for (i = 0; i < tags.length; i++) {
     var array = Array.prototype.slice.call(view.getElementsByTagName(tags[i]));
     elements = elements.concat(array);
   }
-  for (var i = 0; i < elements.length; i++) {
+  for (i = 0; i < elements.length; i++) {
     var el = elements[i];
-    var icon, id;
     var name = null;
-    if (el.parentNode && el.tagName.toLowerCase() == 'figcaption' && el.parentNode.tagName.toLowerCase() == 'figure')
+    if (el.parentNode && el.tagName.toLowerCase() === 'figcaption' && el.parentNode.tagName.toLowerCase() === 'figure')
       name = el.parentNode.getAttribute('name');
     else
       name = el.getAttribute('name');
@@ -405,7 +409,7 @@ function receiveMenuContent(menuContent) {
 
   for (var i = 0; i < div.childNodes.length; i++) {
     var child = div.childNodes[i];
-    if (child && child.tagName && child.tagName.length > 0 && child.tagName.toLowerCase() == 'ul') {
+    if (child && child.tagName && child.tagName.length > 0 && child.tagName.toLowerCase() === 'ul') {
       menu = child;
       break;
     }
@@ -438,23 +442,17 @@ function updateSelection() {
     updateMenuScrollbar();
 }
 
-function getSelected() {
-  var menu = document.getElementById('menu');
-  var selecteds = menu.getElementsByClassName('selected');
-  if (selecteds.length > 0)
-    return selecteds[selecteds.length - 1];
-  return null;
-}
-
 function changeMenuSelection() {
   var menu = document.getElementById('menu');
   var selecteds = [].slice.call(menu.getElementsByClassName('selected'));
-  for (var i = 0; i < selecteds.length; i++) {
-    var selected = selecteds[i];
+  var i;
+  var selected;
+  for (i = 0; i < selecteds.length; i++) {
+    selected = selecteds[i];
     selected.classList.remove('selected');
   }
   var as = menu.getElementsByTagName('a');
-  for (var i = 0; i < as.length; i++) {
+  for (i = 0; i < as.length; i++) {
     var a = as[i];
     var href = a.getAttribute('href');
     var selection;
@@ -464,29 +462,29 @@ function changeMenuSelection() {
       // - the string length test is done to avoid wrong positive cases
       //   where a page is a prefix of another.
       // - 5 matches with the 'page=' string length.
-      if (pageIndex > -1 && (5 + pageIndex + setup.page.length) == href.length)
+      if (pageIndex > -1 && (5 + pageIndex + setup.page.length) === href.length)
         selection = true;
       else
         selection = false;
     } else {
       var n = href.indexOf('?');
       if (n > -1)
-        href = href.substring(0, n)
+        href = href.substring(0, n);
       n = href.indexOf('#');
       if (n > -1)
-        href = href.substring(0, n)
+        href = href.substring(0, n);
       if (href.endsWith('/doc/' + setup.book + '/' + setup.page))
         selection = true;
       else
         selection = false;
     }
     if (selection) {
-      var selected = a.parentNode;
+      selected = a.parentNode;
       selected.classList.add('selected');
-      if (selected.parentNode.parentNode.tagName.toLowerCase() == 'li') {
+      if (selected.parentNode.parentNode.tagName.toLowerCase() === 'li') {
         selected.parentNode.parentNode.classList.add('selected');
         var firstChild = selected.parentNode.parentNode.firstChild;
-        if (firstChild.tagName.toLowerCase() == 'a')
+        if (firstChild.tagName.toLowerCase() === 'a')
           showAccodionItem(firstChild);
       } else
         showAccodionItem(a);
@@ -500,6 +498,7 @@ function populateNavigation(selected) {
   var previous = document.getElementById('previous');
   var up = document.getElementById('up');
   var toc = document.getElementById('toc');
+  var as;
 
   toc.setAttribute('href', forgeUrl('menu'));
   addDynamicLoadEvent(toc);
@@ -516,22 +515,22 @@ function populateNavigation(selected) {
 
     var nextLiSibling = selected.nextSibling;
     while (nextLiSibling) {
-      if (nextLiSibling.tagName && nextLiSibling.tagName.toLowerCase() == 'li')
+      if (nextLiSibling.tagName && nextLiSibling.tagName.toLowerCase() === 'li')
         break;
       nextLiSibling = nextLiSibling.nextSibling;
     }
     if (nextLiSibling) {
-      var as = nextLiSibling.getElementsByTagName('a');
+      as = nextLiSibling.getElementsByTagName('a');
       if (as.length > 0)
         nextElement = as[0];
     }
 
     if (nextElement) {
-        next.classList.remove('disabled');
-        next.setAttribute('href', nextElement.getAttribute('href'));
-        addDynamicLoadEvent(next);
+      next.classList.remove('disabled');
+      next.setAttribute('href', nextElement.getAttribute('href'));
+      addDynamicLoadEvent(next);
     } else
-        next.classList.add('disabled');
+      next.classList.add('disabled');
   }
 
   if (previous) {
@@ -539,12 +538,12 @@ function populateNavigation(selected) {
 
     var previousLiSibling = selected.previousSibling;
     while (previousLiSibling) {
-      if (previousLiSibling.tagName && previousLiSibling.tagName.toLowerCase() == 'li')
+      if (previousLiSibling.tagName && previousLiSibling.tagName.toLowerCase() === 'li')
         break;
       previousLiSibling = previousLiSibling.previousSibling;
     }
     if (previousLiSibling) {
-      var as = previousLiSibling.getElementsByTagName('a');
+      as = previousLiSibling.getElementsByTagName('a');
       if (as.length > 0)
         previousElement = as[0];
     }
@@ -560,10 +559,10 @@ function populateNavigation(selected) {
   if (up) {
     var upElement = null;
     var parentLi = null;
-    if (selected.parentNode.parentNode.tagName.toLowerCase() == 'li')
+    if (selected.parentNode.parentNode.tagName.toLowerCase() === 'li')
       parentLi = selected.parentNode.parentNode;
     if (parentLi) {
-      var as = parentLi.getElementsByTagName('a');
+      as = parentLi.getElementsByTagName('a');
       if (as.length > 0)
         upElement = as[0];
     }
@@ -586,7 +585,7 @@ function populateMenu(menu) {
   for (var i = 0; i < lis.length; i++) {
     var li = lis[i];
     li.addEventListener('click',
-      function (event) {
+      function(event) {
         var as = event.target.getElementsByTagName('a');
         if (as.length > 0)
           aClick(as[0]);
@@ -604,7 +603,7 @@ function populateMenu(menu) {
 }
 
 function showAccodionItem(item) {
-  if (! $(item).hasClass('active')) {
+  if (!$(item).hasClass('active')) {
     $('#accordion li ul').slideUp();
     $(item).next().slideToggle();
     $('#accordion li a').removeClass('active');
@@ -625,7 +624,7 @@ function getMDFile() {
       console.log('Error: ' + errorThrown);
       var mainPage = 'index';
       // get the main page instead
-      if (setup.page != mainPage) {
+      if (setup.page !== mainPage) {
         setup.page = mainPage;
         getMDFile();
       }
@@ -650,7 +649,7 @@ function getMenuFile() {
 
 function extractAnchor(url) {
   var match = /#([\w-]+)/.exec(url);
-  if (match && match.length == 2)
+  if (match && match.length === 2)
     return match[1];
   return '';
 }
@@ -667,15 +666,15 @@ function initializeHandle() {
   // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
   handle = {}; // structure where all the handle info is stored
 
-  handle.left = $('#left'),
-  handle.center = $('#center'),
+  handle.left = $('#left');
+  handle.center = $('#center');
   handle.handle = $('#handle');
-  handle.container = $('#webots-doc')
+  handle.container = $('#webots-doc');
 
   // dimension bounds of the handle in pixels
   handle.min = 0;
   handle.minThreshold = 75; // under this threshold, the handle is totally hidden
-  if (setup.menuWidth && setup.menuWidth != '')
+  if (setup.menuWidth && setup.menuWidth !== '')
     handle.initialWidth = setup.menuWidth;
   else
     handle.initialWidth = handle.left.width();
@@ -699,28 +698,28 @@ function initializeHandle() {
 
   setHandleWidth(handle.initialWidth);
 
-  handle.handle.on('mousedown', function (e) {
+  handle.handle.on('mousedown', function(e) {
     handle.isResizing = true;
     handle.lastDownX = e.clientX;
     handle.container.css('user-select', 'none');
     handle.handleColor = handle.handle.css('background-color');
     handle.handle.css('background-color', handle.enableColor);
-  }).on('dblclick', function (e) {
+  }).on('dblclick', function(e) {
     if (handle.left.css('width').startsWith('0'))
       setHandleWidth(handle.initialWidth);
     else
       setHandleWidth(0);
-  }).on('mouseover', function () {
+  }).on('mouseover', function() {
     handle.handle.css('background-color', handle.enableColor);
-  }).on('mouseout', function () {
+  }).on('mouseout', function() {
     if (!handle.isResizing)
       handle.handle.css('background-color', handle.disableColor);
   });
 
-  $(document).on('mousemove', function (e) {
+  $(document).on('mousemove', function(e) {
     if (!handle.isResizing)
       return;
-    var mousePosition = e.clientX  - handle.container.offset().left; // in pixels
+    var mousePosition = e.clientX - handle.container.offset().left; // in pixels
     if (mousePosition < handle.minThreshold / 2) {
       setHandleWidth(0);
       return;
@@ -729,14 +728,14 @@ function initializeHandle() {
     if (mousePosition < handle.min || mousePosition > handle.max)
       return;
     setHandleWidth(mousePosition);
-  }).on('mouseup', function (e) {
+  }).on('mouseup', function(e) {
     handle.isResizing = false;
     handle.container.css('user-select', 'auto');
     handle.handle.css('background-color', handle.disableColor);
   });
 }
 
-window.onscroll=function(){
+window.onscroll = function() {
   if (!isCyberboticsUrl)
     return;
   updateMenuScrollbar();

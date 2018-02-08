@@ -1,4 +1,4 @@
-## Environment Directory
+## Environments Directory
 
 This section shows some of the possible environments and objects available in Webots inside composed scenes.
 Webots objects are modular and parametrizable, so other environments can be achieved simply starting from these examples.

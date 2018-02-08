@@ -45,8 +45,7 @@ The `Driver` class provides the following methods:
 
 ### Car
 
-The `Car` class inherits from the `Driver` class and provides the following
-methods:
+The `Car` class inherits from the `Driver` class and provides the following methods:
 
 %api "python_car"
 

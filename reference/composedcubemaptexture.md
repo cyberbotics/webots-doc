@@ -13,11 +13,16 @@ ComposedCubeMapTexture {
 
 ### Description
 
-The [ComposedCubeMapTexture](#composedcubemaptexture) node defines a cubic texture used for environment mapping. It is composed of exactly six [ImageTexture](imagetexture.md) nodes, matching the six faces of a virtual cube. If one of the [ImageTexture](imagetexture.md)s is not set, the corresponding side of the cubic texture will be black.
+The [ComposedCubeMapTexture](#composedcubemaptexture) node defines a cubic texture used for environment mapping.
+It is composed of exactly six [ImageTexture](imagetexture.md) nodes, matching the six faces of a virtual cube.
+If one of the [ImageTexture](imagetexture.md)s is not set, the corresponding side of the cubic texture will be black.
 
-Each of the six fields takes a texture corresponding to the side of the surrounding environment. For instance `right` takes the texture displayed on the side of the cube along the +X direction. Accordingly we have the following order: right: +X, left: -X, top: +Y, bottom: -Y, front: +Z, back: -Z.
+Each of the six fields takes a texture corresponding to the side of the surrounding environment.
+For instance `right` takes the texture displayed on the side of the cube along the +X direction.
+Accordingly we have the following order: right: +X, left: -X, top: +Y, bottom: -Y, front: +Z, back: -Z.
 
-The [ComposedCubeMapTexture](#composedcubemaptexture) is typically used together with a [ComposedShader](composedshader.md), as the following example demonstrates. In the fragment shader the cubic texture can be queried through a `uniform samplerCube` using the OpenGL function `vec4 textureCube (samplerCube sampler, vec3 coord [, float bias] )`.
+The [ComposedCubeMapTexture](#composedcubemaptexture) is typically used together with a [ComposedShader](composedshader.md), as the following example demonstrates.
+In the fragment shader the cubic texture can be queried through a `uniform samplerCube` using the OpenGL function `vec4 textureCube (samplerCube sampler, vec3 coord [, float bias] )`.
 
 ### Example
 

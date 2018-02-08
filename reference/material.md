@@ -13,10 +13,8 @@ Material {
 
 ### Description
 
-The [Material](#material) node specifies surface material properties for
-associated geometry nodes and is used by the VRML97 lighting equations during
-rendering. The fields in the [Material](#material) node determine how light
-reflects off an object to create color.
+The [Material](#material) node specifies surface material properties for associated geometry nodes and is used by the VRML97 lighting equations during rendering.
+The fields in the [Material](#material) node determine how light reflects off an object to create color.
 
 ### Field Summary
 

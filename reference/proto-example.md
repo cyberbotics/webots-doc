@@ -1,16 +1,13 @@
 ## PROTO Example
 
-A complete example of PROTO definition and instantiation is provided here. The
-PROTO is called `TwoColorChair`; it defines a simple chair with four legs and a
-seating part. For simplicity, this PROTO does not have bounding objects nor
-[Physics](physics.md) nodes. A more complete example of this PROTO named
-`SimpleChair` is provided in Webots distribution.
+A complete example of PROTO definition and instantiation is provided here.
+The PROTO is called `TwoColorChair`; it defines a simple chair with four legs and a seating part.
+For simplicity, this PROTO does not have bounding objects nor [Physics](physics.md) nodes.
+A more complete example of this PROTO named `SimpleChair` is provided in Webots distribution.
 
-The `TwoColorChair` PROTO allows to specify two colors: one for the legs and one
-for the seating surface of the chair. The interface also defines a `translation`
-field and a `rotation` field that are associated with the equally named fields
-of the PROTO's [Solid](solid.md) base node. This allows to store the position
-and orientation of the PROTO instances.
+The `TwoColorChair` PROTO allows to specify two colors: one for the legs and one for the seating surface of the chair.
+The interface also defines a `translation` field and a `rotation` field that are associated with the equally named fields of the PROTO's [Solid](solid.md) base node.
+This allows to store the position and orientation of the PROTO instances.
 
 "TwoColorChair.proto":
 
@@ -76,17 +73,14 @@ PROTO TwoColorChair [
 }
 ```
 
-As you can observe in this example, it is perfectly valid to have several IS
-statement for one interface field (`seatColor`), as long as the types match. It
-is also possible to use IS statements inside a defined (DEF) node and then to
-reuse (USE) that node. This is done here with the `diffuseColor IS legColor`
-statement placed inside the `DEF LEG_SHAPE Shape` node which is then reused
-(USE) several times below.
+As you can observe in this example, it is perfectly valid to have several IS statement for one interface field (`seatColor`), as long as the types match.
+It is also possible to use IS statements inside a defined (DEF) node and then to reuse (USE) that node.
+This is done here with the `diffuseColor IS legColor` statement placed inside the `DEF LEG_SHAPE Shape` node which is then reused (USE) several times below.
 
-The "ProtoInstantiationExample.wbt" file below exemplifies the instantiation of
-this PROTO. PROTO nodes are instantiated using the regular node syntax. Fields
-with the default value can be omitted. Field values which differ from the
-default must be specified.
+The "ProtoInstantiationExample.wbt" file below exemplifies the instantiation of this PROTO.
+PROTO nodes are instantiated using the regular node syntax.
+Fields with the default value can be omitted.
+Field values which differ from the default must be specified.
 
 "TwoChairs.wbt":
 
@@ -129,14 +123,10 @@ TwoColorChair {
 }
 ```
 
-The "TwoChairs.wbt" file once loaded by Webots appears as shown in [this
-figure](#two-instances-of-the-twocolorchair-proto-in-webots).
+The "TwoChairs.wbt" file once loaded by Webots appears as shown in [this figure](#two-instances-of-the-twocolorchair-proto-in-webots).
 
-As you can observe in this example, defining MFNode fields in the PROTO
-interface allows to reuse the same model for slightly different objects or
-robots. Extenstion slots like `seatExtensionSlot` field could, for example, be
-used to add additional devices to a base robot without needing to copy the robot
-definition or creating a new PROTO.
+As you can observe in this example, defining MFNode fields in the PROTO interface allows to reuse the same model for slightly different objects or robots.
+Extenstion slots like `seatExtensionSlot` field could, for example, be used to add additional devices to a base robot without needing to copy the robot definition or creating a new PROTO.
 
 %figure "Two instances of the TwoColorChair PROTO in Webots"
 

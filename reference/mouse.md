@@ -3,8 +3,7 @@
 The [Mouse](#mouse) API provides a set of functions available by default for each [Robot](robot.md) node and it is used to read the computer mouse input.
 It doesn't have any corresponding Node.
 
-> **Note** [C++, Python, Java]:
-In C++, Python and Java, the mouse functions are in a dedicated class called `Mouse`.
+> **Note** [C++, Python, Java]: In C++, Python and Java, the mouse functions are in a dedicated class called `Mouse`.
 In order to get the `Mouse` instance, you should call the `Robot.getMouse` function.
 
 #### WbMouseState
@@ -30,11 +29,9 @@ A `true` state means the button is pressed while a `false` state means the butto
 The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.
 These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
 
-> **Note** [C++]:
-In C++ the name of the structure is `MouseState`.
+> **Note** [C++]: In C++ the name of the structure is `MouseState`.
 
-> **Note** [Java/Python]:
-In Java and Python, the structure is replaced by a class called `MouseState`.
+> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `MouseState`.
 
 ### Mouse Functions
 

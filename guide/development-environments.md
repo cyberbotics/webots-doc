@@ -1,9 +1,9 @@
 # Development Environments
 
-This chapter indicates how to use the built-in development environment or
-third-party environments for developing Webots controllers.
+This chapter indicates how to use the built-in development environment or third-party environments for developing Webots controllers.
 
 ## Sections
+
 - [Webots Built-in Editor](webots-built-in-editor.md)
 - [The standard File Hierarchy of a Project](the-standard-file-hierarchy-of-a-project.md)
 - [Compiling Controllers in a Terminal](compiling-controllers-in-a-terminal.md)

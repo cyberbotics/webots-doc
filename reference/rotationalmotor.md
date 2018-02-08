@@ -12,9 +12,7 @@ RotationalMotor {
 
 ### Description
 
-A [RotationalMotor](#rotationalmotor) node can be used to power either a
-[HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) to produce a
-rotational motion around the choosen axis.
+A [RotationalMotor](#rotationalmotor) node can be used to power either a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) to produce a rotational motion around the choosen axis.
 
 ### Field Summary
 

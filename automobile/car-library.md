@@ -1,10 +1,8 @@
 ## Car library
 
-The [car](#car-library) library is supposed to be used together with the
-[driver](driver-library.md) library. It provides additional information and
-functions to which a normal human driver of a car does not have access (e.g.,
-changing the blinking period of the indicator or getting the value of the wheels
-encoders). All the functions included in this library are explained below.
+The [car](#car-library) library is supposed to be used together with the [driver](driver-library.md) library.
+It provides additional information and functions to which a normal human driver of a car does not have access (e.g., changing the blinking period of the indicator or getting the value of the wheels encoders).
+All the functions included in this library are explained below.
 
 **Name**
 
@@ -19,12 +17,8 @@ void wbu_car_cleanup();
 
 **Description**
 
-These two functions are respectively used to initialize and properly close the
-[car](#car-library) library (the first one should be called at the very
-beginning of the controller program and the second one at the very end). If you
-use the [driver](driver-library.md) library it is not needed to call these
-functions since they are already called from the corresponding functions of the
-[driver](driver-library.md) library.
+These two functions are respectively used to initialize and properly close the [car](#car-library) library (the first one should be called at the very beginning of the controller program and the second one at the very end).
+If you use the [driver](driver-library.md) library it is not needed to call these functions since they are already called from the corresponding functions of the [driver](driver-library.md) library.
 
 ---
 
@@ -41,8 +35,7 @@ wbu_car_engine_type wbu_car_get_type();
 
 **Description**
 
-These two functions return respectively the type of transmission and of engine
-of the car.
+These two functions return respectively the type of transmission and of engine of the car.
 
 %figure "wbu_car_type enumeration"
 
@@ -80,11 +73,10 @@ double wbu_car_get_indicator_period();
 
 **Description**
 
-The `wbu_car_set_indicator_period` function is used to change the blinking
-period of the indicators. The argument should be specified in seconds.
+The `wbu_car_set_indicator_period` function is used to change the blinking period of the indicators.
+The argument should be specified in seconds.
 
-The `wbu_car_get_indicator_period` function returns the current blinking period
-of the indicators.
+The `wbu_car_get_indicator_period` function returns the current blinking period of the indicators.
 
 ---
 
@@ -101,9 +93,7 @@ bool wbu_car_get_brake_lights();
 
 **Description**
 
-These two functions return respectively the state of the backwards and brake
-lights (these two lights are switched on automatically by the library when
-appropriated).
+These two functions return respectively the state of the backwards and brake lights (these two lights are switched on automatically by the library when appropriated).
 
 ---
 
@@ -140,10 +130,8 @@ double wbu_car_get_wheel_speed(int wheel_index);
 
 **Description**
 
-These two functions return respectively the state of the wheel encoder (in
-radians) and the instantaneous wheel rotational speed (in radians per second).
-The `wheel_index` argument should match a value of the `wbu_car_wheel_index`
-enum.
+These two functions return respectively the state of the wheel encoder (in radians) and the instantaneous wheel rotational speed (in radians per second).
+The `wheel_index` argument should match a value of the `wbu_car_wheel_index` enum.
 
 %figure "wbu_car_wheel_index enumeration"
 
@@ -172,9 +160,7 @@ double wbu_car_get_left_steering_angle();
 
 **Description**
 
-These two functions return respectively the right and left steering angles
-(because of the Ackermann steering geometry, the two angles are slightly
-different).
+These two functions return respectively the right and left steering angles (because of the Ackermann steering geometry, the two angles are slightly different).
 
 ---
 
@@ -190,13 +176,9 @@ void wbu_car_enable_limited_slip_differential(bool enable);
 
 **Description**
 
-This function allows the user to enable or disable the limited differential slip
-(it is enabled by default). When the limited differential slip is enabled, at
-each time step, the torque (when control in torque is enabled) is redistributed
-amongst all the actuated wheels so that they rotate at the same speed (except the
-difference due to the geometric differential constraint). If the limited
-differential slip is disabled, when a wheel starts to slip, it will rotate
-faster than the others.
+This function allows the user to enable or disable the limited differential slip (it is enabled by default).
+When the limited differential slip is enabled, at each time step, the torque (when control in torque is enabled) is redistributed amongst all the actuated wheels so that they rotate at the same speed (except the difference due to the geometric differential constraint).
+If the limited differential slip is disabled, when a wheel starts to slip, it will rotate faster than the others.
 
 ---
 
@@ -212,7 +194,5 @@ void wbu_car_enable_indicator_auto_disabling(bool enable);
 
 **Description**
 
-This function allows the user to enable or disable the indicator auto-disabling
-mechanism (it is enabled by default). When indicator auto-disabling mechanism is
-enabled, the indicator is automatically switched off when the car starts
-steering in the inverse direction of the one indicated by the indicator.
+This function allows the user to enable or disable the indicator auto-disabling mechanism (it is enabled by default).
+When indicator auto-disabling mechanism is enabled, the indicator is automatically switched off when the car starts steering in the inverse direction of the one indicated by the indicator.

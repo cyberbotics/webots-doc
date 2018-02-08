@@ -1,10 +1,6 @@
 ## The User Interface
 
-Webots GUI is composed of four principal windows: the *3D window* that displays
-and allows you to interact with the 3D simulation, the *Scene tree* which is a
-hierarchical representation of the current world, the *Text editor* that allows
-you to edit source code, and finally, the *Console* that displays both
-compilation and controller outputs.
+Webots GUI is composed of four principal windows: the *3D window* that displays and allows you to interact with the 3D simulation, the *Scene tree* which is a hierarchical representation of the current world, the *Text editor* that allows you to edit source code, and finally, the *Console* that displays both compilation and controller outputs.
 
 %figure "Webots GUI"
 
@@ -12,13 +8,11 @@ compilation and controller outputs.
 
 %end
 
-The GUI has nine menus: `File, Edit, View, Simulation, Build, Robot, Tools,
-Wizards` and `Help`.
+The GUI has nine menus: `File, Edit, View, Simulation, Build, Robot, Tools, Wizards` and `Help`.
 
 ### File Menu
 
-The **File** menu allows you to perform usual file operations: loading, saving,
-etc.
+The **File** menu allows you to perform usual file operations: loading, saving, etc.
 
 - The **New World** menu item (and button) opens a new world in the simulation
 window containing only an `ElevationGrid`, displayed as a chessboard of 10 x 10
@@ -159,8 +153,7 @@ so that at the next Webots startup the login dialog pops up requesting the user'
 
 ### Edit Menu
 
-The **Edit** menu provides usual text edition functions to manipulate files opened
-in the *Text editor*, such as Copy, Paste, Cut, etc.
+The **Edit** menu provides usual text edition functions to manipulate files opened in the *Text editor*, such as Copy, Paste, Cut, etc.
 
 ### View Menu
 
@@ -351,15 +344,13 @@ simulation and therefore is well suited for cpu-intensive simulations
 
 ### Build Menu
 
-The **Build** menu provides the functionality to compile (or cross-compile)
-controller code. The build menu is described in more details
-[here](webots-built-in-editor.md).
+The **Build** menu provides the functionality to compile (or cross-compile) controller code.
+The build menu is described in more details [here](webots-built-in-editor.md).
 
 ### Robot Menu
 
-The **Robot** menu provides actions specific to `Robot` nodes. Some actions of
-this menu are active only when a robot is selected in the 3D window or when
-there is only one robot in the simulation:
+The **Robot** menu provides actions specific to `Robot` nodes.
+Some actions of this menu are active only when a robot is selected in the 3D window or when there is only one robot in the simulation:
 
 - The **Edit Controller** menu item opens the source file of the controller of the
 selected robot.
@@ -395,8 +386,7 @@ visible in the 3D view independently from the status of `Display Devices` menu
 items. A `Display Devices` menu item is disabled if the overlay's texture is
 shown in an external window by double-clicking on it.
 
-On the other hand the following items are always active and apply to all the
-robot in the world:
+On the other hand the following items are always active and apply to all the robot in the world:
 
 - The **Hide All Camera Overlays** option hides all the camera devices overlays in
 the 3D view independently from the specific robot's device option set in `Camera
@@ -485,15 +475,12 @@ Webots capabilies through a series of examples.
 - The **OpenGL Information...** menu item gives you information about your current
 OpenGL hardware and driver. It can be used to diagnose rendering problems.
 
-The remaining menu items bring up various information as indicated, in the form
-of HTML pages, PDF documents, etc.
+The remaining menu items bring up various information as indicated, in the form of HTML pages, PDF documents, etc.
 
 ### Main toolbar
 
-The main toolbar contains items for editing the world and the speedometer (see this [subsection](#speedometer-and-virtual-time)), other than shortcuts
-to items of the `File`, `Simulation` and `View` menus. Edit actions always apply
-on the selected object, that is highlighted both in the 3D window and in the
-Scene Tree.
+The main toolbar contains items for editing the world and the speedometer (see this [subsection](#speedometer-and-virtual-time)), other than shortcuts to items of the `File`, `Simulation` and `View` menus.
+Edit actions always apply on the selected object, that is highlighted both in the 3D window and in the Scene Tree.
 
 - ![](images/show_scene_tree-button.png =26x26) **Hide/Show Scene Tree**: shows or
 hides the Scene Tree and resizes the 3D window consequently.
@@ -504,7 +491,8 @@ hides the Scene Tree and resizes the 3D window consequently.
 
 - ![](images/paste-button.png =26x26) **Paste**: Pastes the copied or cut object.
 
-    Note that the first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
+    > **Note**:
+The first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
 `Background`) cannot be cut, copied or pasted. One single instance of each of
 these nodes must be present in every Webots world, and in that precise order.
 
@@ -520,14 +508,12 @@ the possibility to load a previously exported node by clicking on the
 
 ### Speedometer and Virtual Time
 
-A speedometer (see [this figure](#speedometer)) indicates the speed of the
-simulation on your computer. It is displayed on the main toolbar, and indicates
-how fast the simulation runs compared to real time. In other words, it
-represents the speed of the virtual time. If the value of the speedometer is 2,
-it means that your computer simulation is running twice as fast as the
-corresponding real robots would. This information is valid both in `Run` mode
-and `Fast` mode. Note: Simulation speed is not displayed when running a simulation
-in step-by-step mode (`N/A` is displayed instead).
+A speedometer (see [this figure](#speedometer)) indicates the speed of the simulation on your computer.
+It is displayed on the main toolbar, and indicates how fast the simulation runs compared to real time.
+In other words, it represents the speed of the virtual time.
+If the value of the speedometer is 2, it means that your computer simulation is running twice as fast as the corresponding real robots would.
+This information is valid both in `Run` mode and `Fast` mode.
+Note: Simulation speed is not displayed when running a simulation in step-by-step mode (`N/A` is displayed instead).
 
 %figure "Speedometer"
 
@@ -535,21 +521,16 @@ in step-by-step mode (`N/A` is displayed instead).
 
 %end
 
-To the left of the speedometer, the *virtual time* is displayed using following
-format:
+To the left of the speedometer, the *virtual time* is displayed using following format:
 
 ```
 H:MM:SS:MMM
 ```
 
-where *H* is the number of hours (may be several digits), *MM* is the number of
-minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds
-(see [this figure](#speedometer)). If the speedometer value is greater than one,
-the virtual time is progressing faster than real time.
+Where *H* is the number of hours (may be several digits), *MM* is the number of minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds (see [this figure](#speedometer)).
+If the speedometer value is greater than one, the virtual time is progressing faster than real time.
 
-The basic time step for simulation can be set in the `basicTimeStep` field of
-the `WorldInfo` node in the scene tree window. It is expressed in virtual time
-milliseconds. The value of this time step defines the length of the time step
-executed during the `Step` mode. This step is multiplied by the `displayRefresh`
-field of the same `WorldInfo` node to define how frequently the display is
-refreshed.
+The basic time step for simulation can be set in the `basicTimeStep` field of the `WorldInfo` node in the scene tree window.
+It is expressed in virtual time milliseconds.
+The value of this time step defines the length of the time step executed during the `Step` mode.
+This step is multiplied by the `displayRefresh` field of the same `WorldInfo` node to define how frequently the display is refreshed.

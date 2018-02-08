@@ -6,10 +6,10 @@ Special effects like motion blur, various models of noise, lens distortion and t
 
 In addition to adding generic Camera nodes, some predefined camera models are also present in Webots.
 
-
 ### Smart camera
 
-If a `Recognition` node is added to the camera, the camera can return not only the image but also all objects detected in the camera image and their size and position. It is therefore very easy to simulate smart cameras such as the Mobileye.
+If a `Recognition` node is added to the camera, the camera can return not only the image but also all objects detected in the camera image and their size and position.
+It is therefore very easy to simulate smart cameras such as the Mobileye.
 
 %figure "Smart camera output"
 

@@ -1,12 +1,11 @@
 ## Controller Programming
 
-The programming examples provided here are in C, but same concepts apply to C++,
-Java, Python and MATLAB.
+The programming examples provided here are in C, but same concepts apply to C++, Java, Python and MATLAB.
 
 ### Hello World Example
 
-The tradition in computer science is to start with a "Hello World!" example. So
-here is a "Hello World!" example for a Webots controller:
+The tradition in computer science is to start with a "Hello World!" example.
+So here is a "Hello World!" example for a Webots controller:
 
 ```c
 #include <webots/robot.h>
@@ -24,37 +23,33 @@ int main() {
 }
 ```
 
-This code repeatedly prints `"Hello World!"` to the standard output stream which
-is redirected to Webots console. The standard output and error streams are
-automatically redirected to Webots console for all Webots supported languages.
+This code repeatedly prints `"Hello World!"` to the standard output stream which is redirected to Webots console.
+The standard output and error streams are automatically redirected to Webots console for all Webots supported languages.
 
-Webots C API (Application Programming Interface) is provided by regular C header
-files. These header files must be included using statements like `#include
-<webots/xyz.h>` where `xyz` represents the name of a Webots node in lowercase.
-Like with any regular C code it is also possible to include the standard C
-headers, e.g. `#include <stdio.h>`. A call to the initialization
-`wb_robot_init` function is required before any other C API function call. This
-function initializes the communication between the controller and Webots.
-The `wb_robot_cleanup` function does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly. Note that the `wb_robot_init` and `wb_robot_cleanup` functions exist only in the C API, they do not have any equivalent in the other supported programming languages.
+Webots C API (Application Programming Interface) is provided by regular C header files.
+These header files must be included using statements like `#include <webots/xyz.h>` where `xyz` represents the name of a Webots node in lowercase.
+Like with any regular C code it is also possible to include the standard C headers, e.g. `#include <stdio.h>`.
+A call to the initialization `wb_robot_init` function is required before any other C API function call.
+This function initializes the communication between the controller and Webots.
+The `wb_robot_cleanup` function does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly.
+Note that the `wb_robot_init` and `wb_robot_cleanup` functions exist only in the C API, they do not have any equivalent in the other supported programming languages.
 
-Usually the highest level control code is placed inside a `for` or a `while`
-loop. Within that loop there is a call to the `wb_robot_step` function. This
-function synchronizes the controller's data with the simulator. The `wb_robot_step` function
-needs to be present in every controller and it must be called
-at regular intervals, therefore it is usually placed in the main loop as in the
-above example. The value 32 specifies the duration of the control steps, i.e.,
-the `wb_robot_step` function shall compute 32 milliseconds of simulation and
-then return. This duration specifies an amount of simulated time, not real (wall
-clock) time, so it may actually take 1 millisecond or one minute of real time,
-depending on the complexity of the simulated world.
+Usually the highest level control code is placed inside a `for` or a `while` loop.
+Within that loop there is a call to the `wb_robot_step` function.
+This function synchronizes the controller's data with the simulator.
+The `wb_robot_step` function needs to be present in every controller and it must be called at regular intervals, therefore it is usually placed in the main loop as in the above example.
+The value 32 specifies the duration of the control steps, i.e., the `wb_robot_step` function shall compute 32 milliseconds of simulation and then return.
+This duration specifies an amount of simulated time, not real (wall clock) time, so it may actually take 1 millisecond or one minute of real time, depending on the complexity of the simulated world.
 
-Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step` function. This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling the `wb_robot_cleanup` function.
+Note that in this "Hello World!" example, the exit condition of the `while` loop is the return value of the `wb_robot_step` function.
+This function will indeed return `-1` when Webots terminates the controller (see [Controller Termination](#controller-termination)).
+Therefore, in this example, the control loop will run as long as the simulation runs.
+When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling the `wb_robot_cleanup` function.
 
 ### Reading Sensors
 
-Now that we have seen how to print a message to the console, we shall see how to
-read the sensors of a robot. The next example does continuously update and print
-the value returned by a `DistanceSensor`:
+Now that we have seen how to print a message to the console, we shall see how to read the sensors of a robot.
+The next example does continuously update and print the value returned by a `DistanceSensor`:
 
 ```c
 #include <webots/robot.h>
@@ -80,38 +75,28 @@ int main() {
 }
 ```
 
-As you can notice, prior to using a device, it is necessary to get the
-corresponding device tag (`WbDeviceTag`); this is done using the
-`wb_robot_get_device` function. The `WbDeviceTag` is an opaque type that is
-used to identify a device in the controller code. Note that the string passed to
-this function, *"my\_distance\_sensor"* in this example, refers to a device name
-specified in the robot description (".wbt" or ".proto" file). If the robot has
-no device with the specified name, this function returns 0.
+As you can notice, prior to using a device, it is necessary to get the corresponding device tag (`WbDeviceTag`); this is done using the `wb_robot_get_device` function.
+The `WbDeviceTag` is an opaque type that is used to identify a device in the controller code.
+Note that the string passed to this function, *"my\_distance\_sensor"* in this example, refers to a device name specified in the robot description (".wbt" or ".proto" file).
+If the robot has no device with the specified name, this function returns 0.
 
-Each sensor must be enabled before it can be used. If a sensor is not enabled it
-returns undefined values. Enabling a sensor is achieved by using the corresponding
-`wb_*_enable` function, where the star (`*`) stands for the sensor type. Every
-`wb_*_enable` function allows to specify an update delay in milliseconds. The
-update delay specifies the desired interval between two updates of the sensor's
-data.
+Each sensor must be enabled before it can be used.
+If a sensor is not enabled it returns undefined values.
+Enabling a sensor is achieved by using the corresponding `wb_*_enable` function, where the star (`*`) stands for the sensor type.
+Every `wb_*_enable` function allows to specify an update delay in milliseconds.
+The update delay specifies the desired interval between two updates of the sensor's data.
 
-In the usual case, the update delay is chosen to be similar to the control step
-(`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step` function call.
-If, for example, the update delay is chosen to be twice the control step then
-the sensor data will be updated every two `wb_robot_step` function calls: this can be used to
-simulate a slow device. Note that a larger update delay can also speed up the
-simulation, especially for CPU intensive devices like the `Camera`. On the
-contrary, it would be pointless to choose an update delay smaller than the
-control step, because it will not be possible for the controller to process the
-device's data at a higher frequency than that imposed by the control step. It is
-possible to disable a device at any time using the corresponding
-`wb_*_disable` function. This may increase the simulation speed.
+In the usual case, the update delay is chosen to be similar to the control step (`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step` function call.
+If, for example, the update delay is chosen to be twice the control step then the sensor data will be updated every two `wb_robot_step` function calls: this can be used to simulate a slow device.
+Note that a larger update delay can also speed up the simulation, especially for CPU intensive devices like the `Camera`.
+On the contrary, it would be pointless to choose an update delay smaller than the control step, because it will not be possible for the controller to process the device's data at a higher frequency than that imposed by the control step.
+It is possible to disable a device at any time using the corresponding `wb_*_disable` function.
+This may increase the simulation speed.
 
-The sensor value is updated during the call to the `wb_robot_step` function. The call to
-the `wb_distance_sensor_get_value` function retrieves the latest value.
+The sensor value is updated during the call to the `wb_robot_step` function.
+The call to the `wb_distance_sensor_get_value` function retrieves the latest value.
 
-Note that some device return vector values instead of scalar values, for example
-these functions:
+Note that some device return vector values instead of scalar values, for example these functions:
 
 ```c
 const double *wb_gps_get_values(WbDeviceTag tag);
@@ -119,14 +104,14 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag);
 const double *wb_gyro_get_values(WbDeviceTag tag);
 ```
 
-Each function returns a pointer to three double values. The pointer is the
-address of an array allocated by the function internally. These arrays should
-never be explicitly deleted by the controller code. They will be automatically
-deleted when necessary. The array contains exactly three double values. Hence
-accessing the array beyond index 2 is illegal and may crash the controller.
-Finally, note that the array elements should not be modified, for this reason
-the pointer is declared as *const*. Here are correct examples of code using
-these functions:
+Each function returns a pointer to three double values.
+The pointer is the address of an array allocated by the function internally.
+These arrays should never be explicitly deleted by the controller code.
+They will be automatically deleted when necessary.
+The array contains exactly three double values.
+Hence accessing the array beyond index 2 is illegal and may crash the controller.
+Finally, note that the array elements should not be modified, for this reason the pointer is declared as *const*.
+Here are correct examples of code using these functions:
 
 ```c
 const double *pos = wb_gps_get_values(gps);
@@ -161,25 +146,17 @@ free(pos);         // ERROR: illegal free
 
 ### Using Actuators
 
-The example below shows how to make a rotational motor oscillate with a 2 Hz
-sine signal.
+The example below shows how to make a rotational motor oscillate with a 2 Hz sine signal.
 
-Just like sensors, each Webots actuator must be identified by a `WbDeviceTag`
-returned by the `wb_robot_get_device` function. However, unlike sensors,
-actuators don't need to be expressly enabled; they actually don't have
-`wb_*_enable` functions.
+Just like sensors, each Webots actuator must be identified by a `WbDeviceTag` returned by the `wb_robot_get_device` function.
+However, unlike sensors, actuators don't need to be expressly enabled; they actually don't have `wb_*_enable` functions.
 
-To control a motion, it is generally useful to decompose that motion in discrete
-steps that correspond to the control step. As before, an infinite loop is used
-here: at each iteration a new target position is computed according to a sine
-equation. The `wb_motor_set_position` function stores a new position request
-for the corresponding rotational motor. Note that the `wb_motor_set_position` function
-stores the new position, but it does not immediately actuate the motor. The
-effective actuation starts on the next line, in the call to the `wb_robot_step` function.
-The `wb_robot_step` function sends the actuation command to the
-`RotationalMotor` but it does not wait for the `RotationalMotor` to complete the
-motion (i.e. reach the specified target position); it just simulates the motor's
-motion for the specified number of milliseconds.
+To control a motion, it is generally useful to decompose that motion in discrete steps that correspond to the control step.
+As before, an infinite loop is used here: at each iteration a new target position is computed according to a sine equation.
+The `wb_motor_set_position` function stores a new position request for the corresponding rotational motor.
+Note that the `wb_motor_set_position` function stores the new position, but it does not immediately actuate the motor.
+The effective actuation starts on the next line, in the call to the `wb_robot_step` function.
+The `wb_robot_step` function sends the actuation command to the `RotationalMotor` but it does not wait for the `RotationalMotor` to complete the motion (i.e. reach the specified target position); it just simulates the motor's motion for the specified number of milliseconds.
 
 ```c
 #include <webots/robot.h>
@@ -208,26 +185,16 @@ int main() {
 }
 ```
 
-When the `wb_robot_step` function returns, the motor has moved by a certain (linear or
-rotational) amount which depends on the target position, the duration of the
-control step (specified with the `wb_robot_step` function argument), the velocity, acceleration,
-force, and other parameters specified in the ".wbt" description of the `Motor`.
-For example, if a very small control step or a low motor velocity is specified,
-the motor will not have moved much when the `wb_robot_step` function returns. In this case
-several control steps are required for the `RotationalMotor` to reach the target
-position. If a longer duration or a higher velocity is specified, then the motor
-may have fully completed the motion when the `wb_robot_step` function returns.
+When the `wb_robot_step` function returns, the motor has moved by a certain (linear or rotational) amount which depends on the target position, the duration of the control step (specified with the `wb_robot_step` function argument), the velocity, acceleration, force, and other parameters specified in the ".wbt" description of the `Motor`.
+For example, if a very small control step or a low motor velocity is specified, the motor will not have moved much when the `wb_robot_step` function returns.
+In this case several control steps are required for the `RotationalMotor` to reach the target position.
+If a longer duration or a higher velocity is specified, then the motor may have fully completed the motion when the `wb_robot_step` function returns.
 
-Note that the `wb_motor_set_position` function only specifies the *desired* target
-position. Just like with real robots, it is possible (in physics-based
-simulations only), that the `RotationalMotor` is not able to reach this
-position, because it is blocked by obstacles or because the motor's torque
-(`maxForce`) is insufficient to oppose gravity, etc.
+Note that the `wb_motor_set_position` function only specifies the *desired* target position.
+Just like with real robots, it is possible (in physics-based simulations only), that the `RotationalMotor` is not able to reach this position, because it is blocked by obstacles or because the motor's torque (`maxForce`) is insufficient to oppose gravity, etc.
 
-If you want to control the motion of several `RotationalMotor`s simultaneously,
-then you need to specify the desired position for each `RotationalMotor`
-separately, using the `wb_motor_set_position` function. Then you need to call
-the `wb_robot_step` function once to actuate all the `RotationalMotor`s simultaneously.
+If you want to control the motion of several `RotationalMotor`s simultaneously, then you need to specify the desired position for each `RotationalMotor` separately, using the `wb_motor_set_position` function.
+Then you need to call the `wb_robot_step` function once to actuate all the `RotationalMotor`s simultaneously.
 
 ### Simulation step and wb\_robot\_step()
 
@@ -236,31 +203,23 @@ Webots uses two different time steps:
 - The simulation step (specified in the Scene Tree: `WorldInfo.basicTimeStep`)
 - The control step (specified as an argument of the `wb_robot_step` function for each robot)
 
-The simulation step is the value specified in `WorldInfo.basicTimeStep` (in
-milliseconds). It indicates the duration of one step of simulation, i.e. the
-time interval between two computations of the position, speed, collisions, etc.
-of every simulated object. If the simulation uses physics (vs. kinematics), then
-the simulation step also specifies the interval between two computations of the
-forces and torques that need to be applied to the simulated rigid bodies.
+The simulation step is the value specified in `WorldInfo.basicTimeStep` (in milliseconds).
+It indicates the duration of one step of simulation, i.e. the time interval between two computations of the position, speed, collisions, etc. of every simulated object.
+If the simulation uses physics (vs. kinematics), then the simulation step also specifies the interval between two computations of the forces and torques that need to be applied to the simulated rigid bodies.
 
-The control step is the duration of an iteration of the control loop. It
-corresponds to the parameter passed to the `wb_robot_step` function. The
-`wb_robot_step` function advances the controller time of the specified
-duration. It also synchronizes the sensors and actuators data with the simulator
-according to the controller time.
+The control step is the duration of an iteration of the control loop.
+It corresponds to the parameter passed to the `wb_robot_step` function.
+The `wb_robot_step` function advances the controller time of the specified duration.
+It also synchronizes the sensors and actuators data with the simulator according to the controller time.
 
-Every controller needs to call the `wb_robot_step` function at regular intervals. If a
-controller does not call the `wb_robot_step` function, then the sensors and actuators won't be
-updated and the simulator will block (in synchronous mode only). Because it
-needs to be called regularly, the `wb_robot_step` function call is usually placed in the main
-loop of the controller.
+Every controller needs to call the `wb_robot_step` function at regular intervals.
+If a controller does not call the `wb_robot_step` function, then the sensors and actuators won't be updated and the simulator will block (in synchronous mode only).
+Because it needs to be called regularly, the `wb_robot_step` function call is usually placed in the main loop of the controller.
 
-The execution of a simulation step is an atomic operation: it cannot be
-interrupted. Hence a sensor measurement or a motor actuation can only take place
-between two simulation steps. For that reason the control step specified with
-each `wb_robot_step` function calls must be a multiple of the simulation step. So, for
-example, if the simulation step is 16 ms, then the control step argument passed
-to the `wb_robot_step` function can be 16, 32, 64, 128, etc.
+The execution of a simulation step is an atomic operation: it cannot be interrupted.
+Hence a sensor measurement or a motor actuation can only take place between two simulation steps.
+For that reason the control step specified with each `wb_robot_step` function calls must be a multiple of the simulation step.
+So, for example, if the simulation step is 16 ms, then the control step argument passed to the `wb_robot_step` function can be 16, 32, 64, 128, etc.
 
 If the simulation is run in step-by-step mode, i.e., by clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
 The following [figure](#controller_synchronization) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
@@ -279,17 +238,14 @@ So all the statements before the second `wb_robot_step` function call are execut
 
 ### Using Sensors and Actuators Together
 
-Webots and each robot controller are executed in separate processes. For
-example, if a simulation involves two robots, there will be three processes in
-total: one for Webots and two for the two robots. Each controller process
-exchanges sensors and actuators data with the Webots process during the `wb_robot_step` function calls.
-So for example, the `wb_motor_set_position` function does not
-immediately send the data to Webots. Instead it stores the data locally and the
-data is effectively sent when the `wb_robot_step` function is called.
+Webots and each robot controller are executed in separate processes.
+For example, if a simulation involves two robots, there will be three processes in total: one for Webots and two for the two robots.
+Each controller process exchanges sensors and actuators data with the Webots process during the `wb_robot_step` function calls.
+So for example, the `wb_motor_set_position` function does not immediately send the data to Webots.
+Instead it stores the data locally and the data is effectively sent when the `wb_robot_step` function is called.
 
-For that reason the following code snippet is a bad example. Clearly, the value
-specified with the first call to the `wb_motor_set_position` function will be overwritten
-by the second call:
+For that reason the following code snippet is a bad example.
+Clearly, the value specified with the first call to the `wb_motor_set_position` function will be overwritten by the second call:
 
 ```c
 wb_motor_set_position(my_leg, 0.34);  // BAD: ignored
@@ -308,9 +264,8 @@ while (wb_robot_step(40) != -1) {
 }
 ```
 
-since there was no call to the `wb_robot_step` function between the two sensor readings,
-the values returned by the sensor cannot have changed in the meantime. A working
-version would look like this:
+Since there was no call to the `wb_robot_step` function between the two sensor readings, the values returned by the sensor cannot have changed in the meantime.
+A working version would look like this:
 
 ```c
 while (wb_robot_step(40) != -1) {
@@ -323,9 +278,7 @@ while (wb_robot_step(40) != -1) {
 }
 ```
 
-However, the generally recommended approach is to have a single `wb_robot_step` function
-call in the main control loop, and to use it to update all the sensors and
-actuators simultaneously, like this:
+However, the generally recommended approach is to have a single `wb_robot_step` function call in the main control loop, and to use it to update all the sensors and actuators simultaneously, like this:
 
 ```c
 while (wb_robot_step(TIME_STEP) != -1) {
@@ -334,7 +287,8 @@ while (wb_robot_step(TIME_STEP) != -1) {
 }
 ```
 
-Note that it is important to call the `wb_robot_step` function at the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors` function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence, the following is not a good example:
+Note that it is important to call the `wb_robot_step` function at the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the `readSensors` function.
+Otherwise the sensors will have undefined values during the first iteration of the loop, hence, the following is not a good example:
 
 ```c
 do {
@@ -392,11 +346,9 @@ int main() {
 
 ### Using Controller Arguments
 
-In the ".wbt" file, it is possible to specify arguments that are passed to a
-controller when it starts. They are specified in the `controllerArgs` field of
-the `Robot, Supervisor` or `DifferentialWheels` node, and they are passed as
-parameters of the `main` function. For example, this can be used to specify
-parameters that vary for each robot's controller.
+In the ".wbt" file, it is possible to specify arguments that are passed to a controller when it starts.
+They are specified in the `controllerArgs` field of the `Robot, Supervisor` or `DifferentialWheels` node, and they are passed as parameters of the `main` function.
+For example, this can be used to specify parameters that vary for each robot's controller.
 
 For example if we have:
 
@@ -408,7 +360,7 @@ Robot {
 }
 ```
 
-and if the controller's name is *"demo"*, then this sample controller code:
+And if the controller's name is *"demo"*, then this sample controller code:
 
 ```c
 #include <webots/robot.h>
@@ -427,7 +379,7 @@ int main(int argc, const char *argv[]) {
 }
 ```
 
-will print:
+This will print:
 
 ```
 argv[0]=demo
@@ -439,10 +391,10 @@ argv[3]=three
 ### Controller Termination
 
 Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reset, the world is reloaded, a new simulation is loaded, or the controller name is changed in the Webots scene tree.
-The controller cannot prevent its own termination but can be notified shortly before this happens.
+The controller cannot prevent its own termination but it can be notified shortly before this happens.
 The `wb_robot_step` function returns -1 when the controller process is going to be terminated by Webots.
 Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots.
-Here is an example that shows how to save data before an upcoming termination:
+Here is an example that shows how to save data before the upcoming termination:
 
 ```c
 #include <webots/robot.h>
@@ -472,16 +424,12 @@ int main() {
 }
 ```
 
-In some cases, it is up to the controller to make the decision of terminating
-the simulation. For example in the case of search and optimization algorithms:
-the search may terminate when a solution is found or after a fixed number of
-iterations (or generations).
+In some cases, it is up to the controller to make the decision of terminating the simulation.
+For example in the case of search and optimization algorithms: the search may terminate when a solution is found or after a fixed number of iterations (or generations).
 
-In this case the controller should just save the experiment results and quit by
-returning from the `main` function or by calling the `exit` function. This
-will terminate the controller process and freeze the simulation at the current
-simulation step. The physics simulation and every robot involved in the
-simulation will stop.
+In this case the controller should just save the experiment results and quit by returning from the `main` function or by calling the `exit` function.
+This will terminate the controller process and freeze the simulation at the current simulation step.
+The physics simulation and every robot involved in the simulation will stop.
 
 ```c
 // freeze the whole simulation
@@ -491,9 +439,7 @@ if (finished) {
 }
 ```
 
-If only one robot controller needs to terminate but the simulation should
-continue with the other robots, then the terminating robot should call
-the `wb_robot_cleanup` function right before quitting:
+If only one robot controller needs to terminate but the simulation should continue with the other robots, then the terminating robot should call the `wb_robot_cleanup` function right before quitting:
 
 ```c
 // terminate only this robot controller
@@ -504,47 +450,35 @@ if (finished) {
 }
 ```
 
-Note that the exit status as well as the value returned by the `main` function
-are ignored by Webots.
+Note that the exit status as well as the value returned by the `main` function are ignored by Webots.
 
 ### Shared libraries
 
-Creating shared libraries can be very useful to share code between controllers
-and/or plugins. There are several ways to do so, but we recommend to place them
-into a subdirectory of the `libraries` directory of your project. Indeed the
-environment variables of the controllers are modified to include these paths
-into your [[DY]LD\_LIBRARY\_]PATH environment variable (depending on the OS).
-Moreover the main Makefile (`WEBOTS_HOME/resources/Makefile.include`) used to
-compile Webots controllers is able to create shared libraries and to link easily
-with the Controller libraries, ODE or the Qt framework.
+Creating shared libraries can be very useful to share code between controllers and/or plugins.
+There are several ways to do so, but we recommend to place them into a subdirectory of the `libraries` directory of your project.
+Indeed the environment variables of the controllers are modified to include these paths into your [[DY]LD\_LIBRARY\_]PATH environment variable (depending on the OS).
+Moreover the main Makefile (`WEBOTS_HOME/resources/Makefile.include`) used to compile Webots controllers is able to create shared libraries and to link easily with the Controller libraries, ODE or the Qt framework.
 
-A good example of this is the Qt utility library located there:
-`WEBOTS_HOME/resources/projects/libraries/qt_utils`
+A good example of this is the Qt utility library located there: `WEBOTS_HOME/resources/projects/libraries/qt_utils`.
 
-If for some reason shared libraries cannot be in the `libraries` directory, the
-`WEBOTS_LIBRARY_PATH` environment variable will be very helpful. The paths it
-contains will be added at the beginning of the library search
-path([[DY]LD\_LIBRARY\_]PATH) when starting the controller.
+If for some reason shared libraries cannot be in the `libraries` directory, the `WEBOTS_LIBRARY_PATH` environment variable will be very helpful.
+The paths it contains will be added at the beginning of the library search path([[DY]LD\_LIBRARY\_]PATH) when starting the controller.
 
 ### Environment variables
 
-For some projects it will be necessary to define or change variables defined in
-your environment. They can be changed in the settings of the computer but it may
-last only for the current session or create conflict with other applications or
-projects. Webots offers an elegant solution to this. A configuration file named
-"runtime.ini" can be added to the controller directory. Any environment variable
-defined in this file will be loaded to the environment each time the controller
-starts.
+For some projects it will be necessary to define or change variables defined in your environment.
+They can be changed in the settings of the computer but it may last only for the current session or create conflict with other applications or projects.
+Webots offers an elegant solution to this.
+A configuration file named "runtime.ini" can be added to the controller directory.
+Any environment variable defined in this file will be loaded to the environment each time the controller starts.
 
-This configuration file uses the standard INI template that is really simple and
-easy to write and read. It contains pairs of key and value that can be inside
-[sections]. Comments can be written on a line after using a semicolon ';'
-character.
+This configuration file uses the standard INI template that is really simple and easy to write and read.
+It contains pairs of key and value that can be inside [sections].
+Comments can be written on a line after using a semicolon ';' character.
 
-Environment variables in this file can contain references to other environment
-variables using this syntax : `$(MY_VARIABLE_NAME)`. They will be automatically
-replaced by the actual value already existing in the environment. The Webots
-"runtime.ini" supports 7 sections:
+Environment variables in this file can contain references to other environment variables using this syntax : `$(MY_VARIABLE_NAME)`.
+They will be automatically replaced by the actual value already existing in the environment.
+The Webots "runtime.ini" supports 7 sections:
 
 - `[environment variables with relative paths]`
 
@@ -607,12 +541,10 @@ NAOQI_LIBRARY_FOLDER = lib
 
 ### Languages settings
 
-The "runtime.ini" file may also contain language specific sections, named
-`[java]`, `[python]` and `[matlab]`. Each of this section may include two keys,
-namely `COMMAND` and `OPTIONS`. The `COMMAND` key allows you to define a
-specific version of the language interpreter whereas the `OPTIONS` key allows
-you to access specific options that will be passed immediately to the language
-interpreter. For example:
+The "runtime.ini" file may also contain language specific sections, named `[java]`, `[python]` and `[matlab]`.
+Each of this section may include two keys, namely `COMMAND` and `OPTIONS`.
+The `COMMAND` key allows you to define a specific version of the language interpreter whereas the `OPTIONS` key allows you to access specific options that will be passed immediately to the language interpreter.
+For example:
 
 ```ini
 ; runtime.ini for a Python controller on macOS
@@ -622,10 +554,7 @@ COMMAND = /opt/local/bin/python2.7
 OPTIONS = -m package.name.given
 ```
 
-In the example above, the resulting command issued by Webots will be:
-`/opt/local/bin/python2.7 -m package.name.given my_controller.py` possibly
-followed by the value of the `controllerArgs` field of the corresponding `Robot`
-node.
+In the example above, the resulting command issued by Webots will be: `/opt/local/bin/python2.7 -m package.name.given my_controller.py` possibly followed by the value of the `controllerArgs` field of the corresponding `Robot` node.
 
 ```ini
 ; runtime.ini for a Java controller on Windows
@@ -639,11 +568,6 @@ COMMAND = javaw.exe
 OPTIONS = -Xms6144k
 ```
 
-> **Note**:
-The Java `-classpath` (or -`cp`) option is automatically generated from the
-`CLASSPATH` environment variable. Therefore you should not add it to the
-`OPTIONS` key, but rather to a standard environment variable in your
-"runtime.ini" file. In the example above, the final `-classpath` option passed
-to the Java virtual machine includes "$(WEBOTS\_HOME)/lib/Controller.jar",
-either the current directory (".") or, if present, the controller jar file
-("MyController.jar") and finally "../lib/MyLibrary.jar".
+> **Note**: The Java `-classpath` (or -`cp`) option is automatically generated from the `CLASSPATH` environment variable.
+Therefore you should not add it to the `OPTIONS` key, but rather to a standard environment variable in your "runtime.ini" file.
+In the example above, the final `-classpath` option passed to the Java virtual machine includes "$(WEBOTS\_HOME)/lib/Controller.jar", either the current directory (".") or, if present, the controller jar file ("MyController.jar") and finally "../lib/MyLibrary.jar".

@@ -1,6 +1,7 @@
 # Nodes and API Functions
 
 ## Sections
+
 - [Accelerometer](accelerometer.md)
 - [Appearance](appearance.md)
 - [Background](background.md)

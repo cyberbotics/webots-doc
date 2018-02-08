@@ -15,8 +15,7 @@ GPS {
 
 ### Description
 
-The [GPS](#gps) node is used to model a Global Positioning Sensor (GPS) which
-can obtain information about its absolute position from the controller program.
+The [GPS](#gps) node is used to model a Global Positioning Sensor (GPS) which can obtain information about its absolute position from the controller program.
 
 ### Field Summary
 
@@ -84,33 +83,23 @@ Note that the first measurement will be available only after the first sampling 
 
 The `wb_gps_disable` function turns the GPS off, saving computation time.
 
-The `wb_gps_get_sampling_period` function returns the period given into the
-`wb_gps_enable` function, or 0 if the device is disabled.
+The `wb_gps_get_sampling_period` function returns the period given into the `wb_gps_enable` function, or 0 if the device is disabled.
 
 The `wb_gps_get_values` function returns the current [GPS](#gps) measurement.
-The values are returned as a 3D-vector, therefore only the indices 0, 1, and 2
-are valid for accessing the vector. The returned vector indicates the absolute
-position of the [GPS](#gps) device. This position can either be expressed in the
-cartesian coordinate system of Webots or using latitude-longitude-altitude,
-depending on the value of the `gpsCoordinateSystem` field of the
-[WorldInfo](worldinfo.md) node. The `gpsReference` field of the
-[WorldInfo](worldinfo.md) node can be used to define the reference point of the
-GPS.
+The values are returned as a 3D-vector, therefore only the indices 0, 1, and 2 are valid for accessing the vector.
+The returned vector indicates the absolute position of the [GPS](#gps) device.
+This position can either be expressed in the cartesian coordinate system of Webots or using latitude-longitude-altitude, depending on the value of the `gpsCoordinateSystem` field of the [WorldInfo](worldinfo.md) node.
+The `gpsReference` field of the [WorldInfo](worldinfo.md) node can be used to define the reference point of the GPS.
 
-The `wb_gps_get_speed` function returns the current [GPS](#gps) speed in
-meters per second.
+The `wb_gps_get_speed` function returns the current [GPS](#gps) speed in meters per second.
 
-> **Note** [C, C++]:
-The returned vector is a pointer to the internal values managed by the
-[GPS](#gps) node, therefore it is illegal to free this pointer. Furthermore,
-note that the pointed values are only valid until the next call to
-the `wb_robot_step` or `Robot::step` functions. If these values are needed for a longer
-period they must be copied.
+> **Note** [C, C++]: The returned vector is a pointer to the internal values managed by the [GPS](#gps) node, therefore it is illegal to free this pointer.
+Furthermore, note that the pointed values are only valid until the next call to the `wb_robot_step` or `Robot::step` functions.
+If these values are needed for a longer period they must be copied.
 
 <!-- -->
 
-> **Note** [Python]:
-The `getValues` function returns the 3D-vector as a list containing three floats.
+> **Note** [Python]: The `getValues` function returns the 3D-vector as a list containing three floats.
 
 ---
 
@@ -128,10 +117,8 @@ int wb_gps_get_coordinate_system(WbDeviceTag tag);
 
 **Description**
 
-This function allows the user to retrieve the coordinate system type defined by
-the `gpsCoordinateSystem` field of the [WorldInfo](worldinfo.md) node. If the
-value of the `gpsCoordinateSystem` field is "local" then this function returns
-WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
+This function allows the user to retrieve the coordinate system type defined by the `gpsCoordinateSystem` field of the [WorldInfo](worldinfo.md) node.
+If the value of the `gpsCoordinateSystem` field is "local" then this function returns WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 
 ---
 
@@ -149,14 +136,10 @@ const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees);
 
 **Description**
 
-This function converts a decimal degrees coordinate into a string representing
-the coordinate in the degrees minutes seconds format.
+This function converts a decimal degrees coordinate into a string representing the coordinate in the degrees minutes seconds format.
 
-> **Note**:
-Your system should support UTF-8 otherwise you may get strange characters
-instead of the degree, minute and second symbols.
+> **Note**: Your system should support UTF-8 otherwise you may get strange characters instead of the degree, minute and second symbols.
 
 <!-- -->
 
-> **Note** [C]:
-The returned string should be deallocated by the user.
+> **Note** [C]: The returned string should be deallocated by the user.

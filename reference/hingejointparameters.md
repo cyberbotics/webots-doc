@@ -15,9 +15,7 @@ HingeJointParameters {
 
 ### Description
 
-The [HingeJointParameters](#hingejointparameters) node can be used to specify
-the hinge rotation axis and various joint parameters (e.g., angular position,
-stop angles, spring and damping constants etc.) related to this rotation axis.
+The [HingeJointParameters](#hingejointparameters) node can be used to specify the hinge rotation axis and various joint parameters (e.g., angular position, stop angles, spring and damping constants etc.) related to this rotation axis.
 
 ### Field Summary
 
@@ -35,7 +33,5 @@ constant along the suspension axis.
 
 - `suspensionAxis`: This field specifies the direction of the suspension axis.
 
-The `suspensionSpringConstant` and `suspensionDampingConstant` fields can be
-used to add a linear spring and/or damping behavior *along* the axis defined in
-`suspensionAxis`. These fields are described in more detail in
-[JointParameters](jointparameters.md)'s ["Springs and Dampers"](jointparameters.md#springs-and-dampers) section.
+The `suspensionSpringConstant` and `suspensionDampingConstant` fields can be used to add a linear spring and/or damping behavior *along* the axis defined in `suspensionAxis`.
+These fields are described in more detail in [JointParameters](jointparameters.md)'s ["Springs and Dampers"](jointparameters.md#springs-and-dampers) section.

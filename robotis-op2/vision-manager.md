@@ -21,7 +21,8 @@ RobotisOp2VisionManager(int width,
 
 **Description**
 
-The Vision Manager constructor. The arguments are the following:
+The Vision Manager constructor.
+The arguments are the following:
 
 - The width of the image.
 - The height of the image.
@@ -32,10 +33,7 @@ The Vision Manager constructor. The arguments are the following:
 - The minimum percentage of color value in the image to validate the result.
 - The maximum percentage of color value in the image to validate the result.
 
-To find the color hue of the target object and to understand the impact of the
-saturation and value you can refer to figure [HSV](#sv-colorspace), for more
-information you can also find a lot of great documentation on the Internet about
-HSV colorspace.
+To find the color hue of the target object and to understand the impact of the saturation and value you can refer to figure [HSV](#sv-colorspace), for more information you can also find a lot of great documentation on the Internet about HSV colorspace.
 
 %figure "SV colorspace"
 
@@ -58,10 +56,12 @@ void getBallCenter(double &x, double &y, const unsigned char *image);
 
 **Description**
 
-Get the center of the target object. This method returns true if the target was
-found, and false otherwise. If found, the x and y variables are set. The image
-pointer indicates the original image buffer. In order to find the position of
-the target object. This method proceeds with the following steps:
+Get the center of the target object.
+This method returns true if the target was found, and false otherwise.
+If found, the x and y variables are set.
+The image pointer indicates the original image buffer.
+In order to find the position of the target object.
+This method proceeds with the following steps:
 
 - Stores the BGRA version of the image in a buffer.
 - Uses this buffer to convert the image to HSV format.
@@ -82,7 +82,5 @@ void isDetected(int x, int y);
 
 **Description**
 
-Once the method `getBallCenter` was called it is possible to know which pixels
-of the image are part of the target object by using the method `isDetected`.
-This method returns true if the pixel (x,y) is part of the target object and
-false otherwise.
+Once the method `getBallCenter` was called it is possible to know which pixels of the image are part of the target object by using the method `isDetected`.
+This method returns true if the pixel (x,y) is part of the target object and false otherwise.

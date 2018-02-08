@@ -24,6 +24,9 @@ Use the up, down, right, left, page up, page down and space (reset) keys.
 Various `Transform` and `IndexedFaceSet` nodes are used to model the room using textures and transparency.
 A *physics plugin* is used to add thrust and other forces to the simulation.
 
+> **Notes**:
+`Fluid` and `Propeller` nodes are now recommended to create flying robots.
+
 ### gantry.wbt
 
 **Keywords**: Gantry robot, gripper, Hanoi towers, linear motors, recursive algorithm
@@ -57,7 +60,7 @@ The robot moves using an alternating tripod gait.
 
 ### moon.wbt
 
-**Keywords**: differential wheels, Koala, keyboard, texture
+**Keywords**: DifferentialWheels, Koala, keyboard, texture
 
 ![moon.png](images/moon.png) In this example, two Koala robots (K-Team) circle on a moon-like surface.
 You can modify their trajectories with the arrow keys on your keyboard.
@@ -75,7 +78,7 @@ In addition, the buoyancy of the robot's body is also simulated using Archimedes
 
 ### soccer.wbt
 
-**Keywords**: Soccer, Supervisor, differential wheels, label
+**Keywords**: Soccer, Supervisor, DifferentialWheels, label
 
 ![soccer.png](images/soccer.png) In this example, two teams of simple robots play soccer.
 A `Supervisor` is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.

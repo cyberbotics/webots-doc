@@ -22,7 +22,7 @@ Usually the C++/Java/Python methods have the same parameters as their C API coun
 
 ### Controller Class
 
-The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots class: `Robot, DifferentialWheels` or `Supervisor`.
+The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots classes: `Robot, DifferentialWheels` or `Supervisor`.
 It is important that the controller class is derived from the same class as that used in Scene Tree, otherwise some methods may not be available or may not work.
 For example, if in the Scene Tree a robot is of type `DifferentialWheels`, then the corresponding C++/Java/Python controller class must extend the `DifferentialWheels` class.
 If in the Scene Tree a robot is of type `Supervisor`, then the C++/Java/Python controller class must be derived from the `Supervisor` class, etc.

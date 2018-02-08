@@ -18,17 +18,19 @@ if (typeof String.prototype.endsWith !== 'function') {
   };
 }
 
+var localSetup = (typeof setup === 'undefined') ? {} : setup;
+
 var isCyberboticsUrl = location.href.indexOf('cyberbotics.com/doc') !== -1;
 
 function setupCyberboticsUrl(url) {
-  setup.book = 'guide';
-  setup.page = 'index';
-  setup.anchor = '';
+  localSetup.book = 'guide';
+  localSetup.page = 'index';
+  localSetup.anchor = '';
 
   var m = url.match(new RegExp('/([^/]+)/([^/\\?#]+)([^/]*)$'));
   if (m) {
-    setup.book = m[1];
-    setup.page = m[2];
+    localSetup.book = m[1];
+    localSetup.page = m[2];
     var args = m[3];
 
     m = url.match(/version=([^&#]*)/);
@@ -36,16 +38,16 @@ function setupCyberboticsUrl(url) {
       var version = m[1];
       var n = version.indexOf(':');
       if (n === -1)
-        setup.branch = version;
+        localSetup.branch = version;
       else
-        setup.branch = version.substr(n + 1);
+        localSetup.branch = version.substr(n + 1);
     }
 
     m = args.match(/#([^&#]*)/);
     if (m)
-      setup.anchor = m[1];
+      localSetup.anchor = m[1];
     else
-      setup.anchor = '';
+      localSetup.anchor = '';
   }
 }
 
@@ -54,21 +56,21 @@ function setupDefaultUrl(url) {
 
   m = url.match(/page=([^&#]*)/);
   if (m)
-    setup.page = m[1].replace(/.md$/, '');
+    localSetup.page = m[1].replace(/.md$/, '');
   else
-    setup.page = 'index';
+    localSetup.page = 'index';
 
   m = url.match(/book=([^&#]*)/);
   if (m)
-    setup.book = m[1];
-  else if (!setup.book)
-    setup.book = 'guide';
+    localSetup.book = m[1];
+  else if (!localSetup.book)
+    localSetup.book = 'guide';
 
   m = url.match(/#([^&#]*)/);
   if (m)
-    setup.anchor = m[1];
+    localSetup.anchor = m[1];
   else
-    setup.anchor = '';
+    localSetup.anchor = '';
 }
 
 function setupUrl(url) {
@@ -76,17 +78,17 @@ function setupUrl(url) {
     setupCyberboticsUrl(url);
   else
     setupDefaultUrl(url);
-  console.log('book=' + setup.book + ' page=' + setup.page + ' branch=' + setup.branch + ' anchor=' + setup.anchor);
+  console.log('book=' + localSetup.book + ' page=' + localSetup.page + ' branch=' + localSetup.branch + ' anchor=' + localSetup.anchor);
 }
 
 function computeTargetPath() {
   var branch = 'master';
   var targetPath = '';
-  if (setup.branch)
-    branch = setup.branch;
-  if (setup.url.startsWith('http'))
-    targetPath = setup.url + branch + '/';
-  targetPath += setup.book + '/';
+  if (localSetup.branch)
+    branch = localSetup.branch;
+  if (localSetup.url.startsWith('http'))
+    targetPath = localSetup.url + branch + '/';
+  targetPath += localSetup.book + '/';
   return targetPath;
 }
 
@@ -122,11 +124,11 @@ function forgeUrl(page, anchor) {
   var newUrl = currentUrl;
   if (isCyberboticsUrl) {
     var i = location.href.indexOf('cyberbotics.com/doc');
-    newUrl = location.href.substr(0, i) + 'cyberbotics.com/doc/' + setup.book + '/' + page;
-    if (setup.branch !== '' && setup.repository && setup.repository !== 'omichel')
-      newUrl += '?version=' + setup.repository + ':' + setup.branch;
-    else if (setup.branch !== '')
-      newUrl += '?version=' + setup.branch;
+    newUrl = location.href.substr(0, i) + 'cyberbotics.com/doc/' + localSetup.book + '/' + page;
+    if (localSetup.branch !== '' && localSetup.repository && localSetup.repository !== 'omichel')
+      newUrl += '?version=' + localSetup.repository + ':' + localSetup.branch;
+    else if (localSetup.branch !== '')
+      newUrl += '?version=' + localSetup.branch;
     newUrl += anchorString;
   } else {
     if (currentUrl.indexOf('page=') > -1)
@@ -148,7 +150,7 @@ function addDynamicAnchorEvent(el) {
       while (node && !node.hasAttribute('href'))
         node = node.getParent();
       if (node) {
-        setup.anchor = extractAnchor(node.getAttribute('href'));
+        localSetup.anchor = extractAnchor(node.getAttribute('href'));
         applyAnchor();
         event.preventDefault();
       }
@@ -191,7 +193,7 @@ function redirectImages(node) {
 }
 
 function applyAnchor() {
-  var anchors = document.getElementsByName(setup.anchor);
+  var anchors = document.getElementsByName(localSetup.anchor);
   if (anchors.length > 0)
     anchors[0].scrollIntoView(true);
   else
@@ -202,15 +204,15 @@ function applyToTitleDiv() {
   var titleContentElement = document.getElementById('title-content');
   if (titleContentElement) {
     var newTitle;
-    if (setup.book === 'guide')
+    if (localSetup.book === 'guide')
       newTitle = 'Webots User Guide';
-    else if (setup.book === 'reference')
+    else if (localSetup.book === 'reference')
       newTitle = 'Webots Reference Manual';
-    else if (setup.book === 'blog')
+    else if (localSetup.book === 'blog')
       newTitle = 'Webots Blog';
-    else if (setup.book === 'automobile')
+    else if (localSetup.book === 'automobile')
       newTitle = 'Webots for automobiles';
-    else if (setup.book === 'robotis-op2')
+    else if (localSetup.book === 'robotis-op2')
       newTitle = 'Webots for ROBOTIS OP2';
     else
       newTitle = '';
@@ -222,7 +224,7 @@ function applyToTitleDiv() {
 }
 
 function setUpBlogStyleIfNeeded() {
-  if (setup.book === 'blog') {
+  if (localSetup.book === 'blog') {
     var center = document.getElementById('center');
     center.setAttribute('class', 'blog');
 
@@ -273,8 +275,8 @@ function setUpBlogStyleIfNeeded() {
 }
 
 function getWebotsVersion() {
-  if (setup.branch)
-    return setup.branch;
+  if (localSetup.branch)
+    return localSetup.branch;
   // Get the Webots version from the showdown wbVariables extension
   var version = '{{ webots.version.full }}';
   var converter = new showdown.Converter({extensions: ['wbVariables']});
@@ -339,7 +341,7 @@ function populateViewDiv(mdContent) {
 
 // replace the browser URL after a dynamic load
 function updateBrowserUrl() {
-  var url = forgeUrl(setup.page, setup.anchor);
+  var url = forgeUrl(localSetup.page, localSetup.anchor);
   if (history.pushState) {
     try {
       history.pushState({state: 'new'}, null, url);
@@ -457,12 +459,12 @@ function changeMenuSelection() {
     var href = a.getAttribute('href');
     var selection;
     if (!isCyberboticsUrl) {
-      var pageIndex = href.indexOf('page=' + setup.page);
+      var pageIndex = href.indexOf('page=' + localSetup.page);
       // Notes:
       // - the string length test is done to avoid wrong positive cases
       //   where a page is a prefix of another.
       // - 5 matches with the 'page=' string length.
-      if (pageIndex > -1 && (5 + pageIndex + setup.page.length) === href.length)
+      if (pageIndex > -1 && (5 + pageIndex + localSetup.page.length) === href.length)
         selection = true;
       else
         selection = false;
@@ -473,7 +475,7 @@ function changeMenuSelection() {
       n = href.indexOf('#');
       if (n > -1)
         href = href.substring(0, n);
-      if (href.endsWith('/doc/' + setup.book + '/' + setup.page))
+      if (href.endsWith('/doc/' + localSetup.book + '/' + localSetup.page))
         selection = true;
       else
         selection = false;
@@ -612,7 +614,7 @@ function showAccodionItem(item) {
 }
 
 function getMDFile() {
-  var target = computeTargetPath() + setup.page + '.md';
+  var target = computeTargetPath() + localSetup.page + '.md';
   console.log('Get MD file: ' + target);
   $.ajax({
     type: 'GET',
@@ -624,8 +626,8 @@ function getMDFile() {
       console.log('Error: ' + errorThrown);
       var mainPage = 'index';
       // get the main page instead
-      if (setup.page !== mainPage) {
-        setup.page = mainPage;
+      if (localSetup.page !== mainPage) {
+        localSetup.page = mainPage;
         getMDFile();
       }
     }
@@ -674,8 +676,8 @@ function initializeHandle() {
   // dimension bounds of the handle in pixels
   handle.min = 0;
   handle.minThreshold = 75; // under this threshold, the handle is totally hidden
-  if (setup.menuWidth && setup.menuWidth !== '')
-    handle.initialWidth = setup.menuWidth;
+  if (localSetup.menuWidth && localSetup.menuWidth !== '')
+    handle.initialWidth = localSetup.menuWidth;
   else
     handle.initialWidth = handle.left.width();
   handle.max = Math.max(250, handle.initialWidth);
@@ -745,16 +747,16 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeHandle();
 
   if (!isCyberboticsUrl) {
-    if (!setup.url)
-      setup.url = getGETQueryValue('url', 'https://raw.githubusercontent.com/omichel/webots-doc/');
-    if (!setup.book)
-      setup.book = getGETQueryValue('book', 'guide');
-    if (!setup.page)
-      setup.page = getGETQueryValue('page', 'index');
-    if (!setup.anchor)
-      setup.anchor = window.location.hash.substring(1);
-    if (!setup.branch)
-      setup.branch = getGETQueryValue('branch', 'master');
+    if (!localSetup.url)
+      localSetup.url = getGETQueryValue('url', 'https://raw.githubusercontent.com/omichel/webots-doc/');
+    if (!localSetup.book)
+      localSetup.book = getGETQueryValue('book', 'guide');
+    if (!localSetup.page)
+      localSetup.page = getGETQueryValue('page', 'index');
+    if (!localSetup.anchor)
+      localSetup.anchor = window.location.hash.substring(1);
+    if (!localSetup.branch)
+      localSetup.branch = getGETQueryValue('branch', 'master');
   }
 
   applyToTitleDiv();

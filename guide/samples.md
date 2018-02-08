@@ -7,7 +7,7 @@ For each demo, the world file and its corresponding controller have the same nam
 
 ### anaglyph.wbt
 
-TODO
+TODO.
 
 ### blimp\_lis.wbt
 
@@ -154,9 +154,9 @@ It has six degrees of freedom (*x*, *y*, *z*, pitch, roll, and yaw).
 In this example, the Stewart platform is loaded with a few stacked boxes, then the platform moves and the boxes stumble apart.
 This simulation attaches both ends of the linear actuators (hydraulic pistons) to the lower and the upper parts of the Stewart platform.
 
-### unever_terrain.wbt
+### unever\_terrain.wbt
 
-TODO
+TODO.
 
 ### yamor.wbt
 

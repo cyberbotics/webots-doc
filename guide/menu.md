@@ -25,6 +25,7 @@
     - [How To](how-to.md)
     - [Geometries](geometries.md)
     - [Real Robots](real-robots.md)
+    - [Environment Directory](environment-directory.md)
 - [Language Setup](language-setup.md)
     - [Introduction](introduction.md)
     - [Controller Start-up](controller-start-up.md)

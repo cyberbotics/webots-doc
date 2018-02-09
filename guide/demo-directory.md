@@ -60,7 +60,7 @@ The robot moves using an alternating tripod gait.
 
 ### moon.wbt
 
-**Keywords**: DifferentialWheels, Koala, keyboard, texture
+**Keywords**: differential wheels, Koala, keyboard, texture
 
 ![moon.png](images/moon.png) In this example, two Koala robots (K-Team) circle on a moon-like surface.
 You can modify their trajectories with the arrow keys on your keyboard.
@@ -78,7 +78,7 @@ In addition, the buoyancy of the robot's body is also simulated using Archimedes
 
 ### soccer.wbt
 
-**Keywords**: Soccer, Supervisor, DifferentialWheels, label
+**Keywords**: Soccer, Supervisor, differential wheels, label
 
 ![soccer.png](images/soccer.png) In this example, two teams of simple robots play soccer.
 A `Supervisor` is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.

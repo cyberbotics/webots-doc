@@ -12,7 +12,7 @@ For each demo, the world file and its corresponding controller have the same nam
 ![anaglyph.png](images/anaglyph.png) This example demonstrates the merge of two `Camera` images into one, in order to create an [anaglyph image](https://en.wikipedia.org/wiki/Anaglyph_3D).
 A stereoscopic camera is mounted on a `iRobot Create` robot.
 At each step, both `Camera` images are merged into a `Display` device, one is filtered in red, and the other one is filtered in cyan.
-This produces a anaglyph 3D image that can be seen with low cost red/cyan 3D glassed.
+This produces an anaglyph 3D image that can be seen with low cost red/cyan 3D glassed.
 
 ### blimp\_lis.wbt
 

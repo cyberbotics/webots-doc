@@ -24,7 +24,7 @@ Use the up, down, right, left, page up, page down and space (reset) keys.
 Various `Transform` and `IndexedFaceSet` nodes are used to model the room using textures and transparency.
 A *physics plugin* is used to add thrust and other forces to the simulation.
 
-> **Notes**:
+> **Note**:
 `Fluid` and `Propeller` nodes are now recommended to create flying robots.
 
 ### gantry.wbt

@@ -9,7 +9,7 @@ The developer must choose one of these two APIs as they cannot be used together 
 The C API is composed of ".h" files that contains flat C functions that can be used in C or C++ controllers.
 The C++ API is composed of ".hpp" files that contain C++ classes and methods that can be used in C++ controllers only.
 
-Two Microsoft Visual C++ 2010 Express projects examples are included in the Webots distribution: "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\robocup_striker\\robocup_striker.sln" and "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\naoqisim\\naoqisim.sln".
+Two Microsoft Visual C++ 2010 Express projects examples are included in the Webots distribution: "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\robocup\_striker\\robocup\_striker.sln" and "WEBOTS\_HOME\\projects\\robots\\aldebaran\\controllers\\naoqisim\\naoqisim.sln".
 However, in principle any C or C++ controller from the Webots distribution can be turned into a Visual C++ project.
 
 ### Configuration

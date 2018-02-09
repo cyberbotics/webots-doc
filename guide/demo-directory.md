@@ -9,7 +9,7 @@ For each demo, the world file and its corresponding controller have the same nam
 
 **Keywords**: Stereoscopic camera, anachrome red/cyan filters
 
-![anaglyph.png](images/anaglyph.png) This example demonstrates the merge of two `Camera` images into one, in order create an [anaglyph image](https://en.wikipedia.org/wiki/Anaglyph_3D).
+![anaglyph.png](images/anaglyph.png) This example demonstrates the merge of two `Camera` images into one, in order to create an [anaglyph image](https://en.wikipedia.org/wiki/Anaglyph_3D).
 A stereoscopic camera is mounted on a `iRobot Create` robot.
 At each step, both `Camera` images are merged into a `Display` device, one is filtered in red, and the other one is filtered in cyan.
 This produces an image which can be shown with low cost plastic red/cyan 3D glassed.

@@ -9,7 +9,7 @@
 Thymio II is an affordable educational robot.
 It provides three main features: a large number of sensors and actuators, an educative interactivity based on light and touch, a programming environment featuring graphical and text programming.
 
-More information about the Thymio II is available from [its official website](https://aseba.wikidot.com/en:thymio).
+More information about the Thymio II is available from its official [website](https://aseba.wikidot.com/en:thymio).
 
 Webots contains an accurate model of the Thymio II robot (see the [figure](#thymio-ii-model-in-webots)).
 Almost all the Thymio II devices have been modeled and calibrated.
@@ -18,6 +18,18 @@ Many Aseba examples are working directly with the simulated robot.
 Finally several objects related to the Thymio II are available, including a pen which can draw on any 3D object.
 
 ### Thymio II model
+
+The main characteristics of the Thymio II model in Webots is summed up in [this table](#thymio-ii-characteristics).
+
+%figure "Thymio II characteristics"
+
+| Characteristics     | Description                                                                     |
+| ------------------- | ------------------------------------------------------------------------------- |
+| Dimensions          | 112 mm long, 117 mm large, 53 mm high                                           |
+| Weight              | 0.250 kg                                                                        |
+| Speed               | Max. forward/backward speed: 0.2 m/s; Rotation speed: 9.53 rad/s                |
+
+%end
 
 The following [table](#thymio-ii-devices) shows which devices are supported by the model, and their names (using the Webots terminology).
 

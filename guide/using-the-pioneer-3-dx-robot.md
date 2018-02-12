@@ -25,7 +25,7 @@ More information on the specifications and optional devices is available on Adep
 | Speed               | Max. forward/backward speed: 0.5 m/s; Rotation speed: 5.24 rad/s                |
 
 %end
-projects/robots/adept/pioneer3
+
 This model includes support for two motors, the caster wheel, 7 LEDs on the control panel and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity measurements.
 The standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory of the Webots distribution.
 

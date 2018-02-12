@@ -1,22 +1,24 @@
+/* global showdown */
+
 // function allowing to convert some text to its slug
 function wbSlugify(obj) {
   var text = '';
-  if (typeof obj === 'string') {
+  if (typeof obj === 'string')
     text = obj;
-  } else if (obj instanceof HTMLElement) {
+  else if (obj instanceof HTMLElement)
     text = obj.textContent;
-  } else {
+  else
     console.error('wbSlugify: Unsupported input');
-  }
-  return text.
-    trim().
-    toLowerCase().
-    replace(/[\s\.]/g, '-').
-    replace(/[-]+/g, '-').
-    replace(/^-*/, '').
-    replace(/-*$/, '').
-    replace('+', 'p').
-    replace(/[^\w-]+/g, '');
+
+  return text
+    .trim()
+    .toLowerCase()
+    .replace(/[\s.]/g, '-')
+    .replace(/[-]+/g, '-')
+    .replace(/^-*/, '')
+    .replace(/-*$/, '')
+    .replace('+', 'p')
+    .replace(/[^\w-]+/g, '');
 }
 
 // This extension is a template-like mechanism, allowing
@@ -26,17 +28,17 @@ showdown.extension('wbVariables', function() {
   // static variables to maintain
   // TODO: could be computed
   var vars = {
-    webots : {
-      version : {
-        major : 'R2018a',
+    webots: {
+      version: {
+        major: 'R2018a',
         // full is equal to major for the first major version
         // and contains the revision number for subsequent versions
-        full : 'R2018a revision 1',
-        package : 'R2018a-rev1'
+        full: 'R2018a revision 1',
+        package: 'R2018a-rev1'
       }
     },
-    date : {
-      year : 2018
+    date: {
+      year: 2018
     }
   };
 
@@ -46,14 +48,12 @@ showdown.extension('wbVariables', function() {
   return [
     { // replace '{{ var }}' by the vars dictionary above
       type: 'html',
-      //regex: /\^\s*\(([^]+?)\)/gi,
       regex: /\{\{([^]+?)\}\}/gi,
-      replace: function (match, content) {
+      replace: function(match, content) {
         var key = content.replace(/\s/g, ''); // remove spaces
         try {
           // cf: http://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference
-          function index(obj, i) { return obj[i]; }
-          var value = key.split('.').reduce(index, vars);
+          var value = key.split('.').reduce(function(obj, i) { return obj[i]; }, vars);
           if (value === undefined) {
             console.error('wbVariables: Undefined value');
             return '';
@@ -97,13 +97,12 @@ showdown.extension('wbFigure', function() {
     { // remove <p> tags inside the <figure> tag
       type: 'html',
       regex: /<figure([^>]*)><p><img([^]+?)<\/p>/gi,
-      replace: function (match, arguments, content) {
-        return '<figure' + arguments + '><img' + content;
+      replace: function(match, args, content) {
+        return '<figure' + args + '><img' + content;
       }
     }
   ];
 });
-
 
 // This extension is dealing with some API content
 showdown.extension('wbAPI', function() {
@@ -121,7 +120,7 @@ showdown.extension('wbAPI', function() {
     { // '\*\*wb.*\*\*' to anchor
       type: 'lang',
       filter: function(text, converter, options) {
-        text = text.replace(/\*\*(wb\\_[^\*]+?)\*\*/gi, function(match, content) {
+        text = text.replace(/\*\*(wb\\_[^*]+?)\*\*/gi, function(match, content) {
           var protectedContent = content.replace(/\\_/g, '_');
           return '<strong name="' + protectedContent + '">' + content + '</strong>';
         });
@@ -131,7 +130,6 @@ showdown.extension('wbAPI', function() {
   ];
 });
 
-
 // This extension is defining an id with a custom slug on the headers and on the figures
 // Note: showdown is already generating the ids with a slug function, but only for
 // headers, and without hyphens.
@@ -139,8 +137,8 @@ showdown.extension('wbAnchors', function() {
   return [
     {
       type: 'html',
-      regex: /<h(\d) id=\"([^]+?)\">([^]+?)<\/h(\d)>/gi,
-      replace: function (match, level1, showdownId, content, level2) {
+      regex: /<h(\d) id="([^]+?)">([^]+?)<\/h(\d)>/gi,
+      replace: function(match, level1, showdownId, content, level2) {
         if (level1 !== level2) {
           console.error('wbAnchors: level mismatch');
           return '';
@@ -156,17 +154,17 @@ showdown.extension('wbAnchors', function() {
   ];
 });
 
- // This extension allows to define an illustrated section, simply if a paragraph is starting with an image:
- // e.g:
- //     `![battery.png](images/battery.png) In this example, etc.`
+// This extension allows to define an illustrated section, simply if a paragraph is starting with an image:
+// e.g:
+//     `![battery.png](images/battery.png) In this example, etc.`
 showdown.extension('wbIllustratedSection', function() {
   return [
     {
       type: 'lang',
       filter: function(text, converter, options) {
-        text = text.replace(/\n(!\[[^\]]*\]\s*\([^\)]*\)) +([^]+?)(?=\n\n)/gi, function(match, image, content) {
+        text = text.replace(/\n(!\[[^\]]*\]\s*\([^)]*\)) +([^]+?)(?=\n\n)/gi, function(match, image, content) {
           var htmlImage = converter.makeHtml(image);
-          if (htmlImage.startsWith('<p>') && htmlImage.endsWith('</p>'))  // Remove useless 'p' encapsulation.
+          if (htmlImage.startsWith('<p>') && htmlImage.endsWith('</p>')) // Remove useless 'p' encapsulation.
             htmlImage = htmlImage.substr(3, htmlImage.length - 7);
           var htmlContent = converter.makeHtml(content);
           return '<section class="illustrated-section">' + htmlImage + htmlContent + '</section>';

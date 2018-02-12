@@ -25,11 +25,11 @@ More information on the specifications and optional devices is available on Adep
 | Speed               | Max. forward/backward speed: 0.5 m/s; Rotation speed: 5.24 rad/s                |
 
 %end
-
+projects/robots/adept/pioneer3
 This model includes support for two motors, the caster wheel, 7 LEDs on the control panel and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity measurements.
-The standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/pioneer/pioneer3dx/worlds" directory of the Webots distribution.
+The standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory of the Webots distribution.
 
-The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "braitenberg.c" controller file in the "WEBOTS\_HOME/projects/robots/pioneer/pioneer3dx/controller" directory).
+The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "braitenberg.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
 The "pioneer3dx\_with\_kinect.wbt" world file in the same directory is a simple simulation example of an obstacle avoidance behavior based on a Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
 
 The Pioneer 3-DX motors are `RotationalMotor` nodes named according to [this figure](#pioneer-3-dx-motor-names).

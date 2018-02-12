@@ -16,9 +16,9 @@ More information on the specifications and optional devices is available on Adep
 
 #### Pioneer 3-AT model
 
-%figure "Pioneer 3-AT features"
+%figure "Pioneer 3-AT characteristics"
 
-| Feature             | Description                                                                     |
+| Characteristics     | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
 | Dimensions          | 508 mm long, 497 mm large, 277 mm high                                          |
 | Weight              | 12 kg, operating playload of 12 kg on floor                                     |

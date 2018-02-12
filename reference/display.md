@@ -4,8 +4,8 @@ Derived from [Device](device.md).
 
 ```
 Display {
-  SFInt32 width  64 [1, inf]
-  SFInt32 height 64 [1, inf]
+  SFInt32 width  64   # [1, inf]
+  SFInt32 height 64   # [1, inf]
 }
 ```
 

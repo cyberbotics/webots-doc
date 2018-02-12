@@ -14,12 +14,12 @@ Camera {
   SFFloat  motionBlur   0.0     # [0, inf]
   SFFloat  noise        0.0     # [0, 1]
   SFString noiseMaskUrl ""      # [any string]
-  SFNode   lens         NULL    # [node, PROTO]
-  SFNode   focus        NULL    # [node, PROTO]
-  SFNode   zoom         NULL    # [node, PROTO]
-  SFNode   recognition  NULL    # [node, PROTO]
-  SFNode   lensFlare    NULL    # [node, PROTO]
-  SFString compositor   ""      # [any string]
+  SFNode   lens         NULL    # [Lens, PROTO]
+  SFNode   focus        NULL    # [Focus, PROTO]
+  SFNode   zoom         NULL    # [Zoom, PROTO]
+  SFNode   recognition  NULL    # [Recognition, PROTO]
+  SFNode   lensFlare    NULL    # [LensFlare, PROTO]
+  SFString compositor   ""      # [compositor name]
 }
 ```
 

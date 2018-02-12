@@ -10,7 +10,7 @@ Solid {
   SFString contactMaterial     "default"     # [any string]
   MFNode   immersionProperties [ ]           # [ImmersionProperties, PROTO]
   SFNode   boundingObject      NULL          # [node, PROTO]
-  SFNode   physics             NULL          # [node, PROTO]
+  SFNode   physics             NULL          # [Physics, PROTO]
   SFBool   locked              FALSE         # [TRUE, FALSE]
   SFFloat  radarCrossSection   0.0           # [0, 1]
   MFColor  recognitionColors   []            # [SFColor, PROTO]

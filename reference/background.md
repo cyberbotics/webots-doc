@@ -2,12 +2,12 @@
 
 ```
 Background {
-  MFString backUrl   [ ]   # [list of strings]
-  MFString bottomUrl [ ]   # [list of strings]
-  MFString frontUrl  [ ]   # [list of strings]
-  MFString leftUrl   [ ]   # [list of strings]
-  MFString rightUrl  [ ]   # [list of strings]
-  MFString topUrl    [ ]   # [list of strings]
+  MFString backUrl   [ ]   # [list of Image URLs]
+  MFString bottomUrl [ ]   # [list of Image URLs]
+  MFString frontUrl  [ ]   # [list of Image URLs]
+  MFString leftUrl   [ ]   # [list of Image URLs]
+  MFString rightUrl  [ ]   # [list of Image URLs]
+  MFString topUrl    [ ]   # [list of Image URLs]
   MFColor  skyColor  [ 0 0 0 ]    # [0,1]
 }
 ```

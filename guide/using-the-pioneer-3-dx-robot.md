@@ -20,9 +20,9 @@ More information on the specifications and optional devices is available on Adep
 
 | Characteristics     | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
-| Dimensions          | 455 mm long, 381 mm large, 237 mm high                                          |
-| Weight              | 9 kg, operating playload of 17 kg                                               |
-| Speed               | Max. forward/backward speed: 1.2 m/s; Rotation speed: 300 deg/s                 |
+| Dimensions          | 485 mm long, 381 mm large, 217 mm high                                          |
+| Weight              | 10 kg, operating playload of 17 kg                                              |
+| Speed               | Max. forward/backward speed: 0.5 m/s; Rotation speed: 5.24 rad/s                |
 
 %end
 

@@ -2,14 +2,9 @@
 
 ### Pioneer 3-AT
 
-In this section, you will learn how to use Webots simulation model of the Pioneer 3-AT robot.
-([this figure](#pioneer-3-at-a-ready-to-use-all-terrain-base)).
-
-#### Pioneer 3-AT overview
-
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 
-![pioneer3at_real.png](images/pioneer3at_real.png)
+![pioneer3at_real.png](images/pioneer3at.png)
 
 %end
 

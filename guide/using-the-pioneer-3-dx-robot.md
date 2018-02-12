@@ -1,4 +1,4 @@
-### Pioneer 3-DX
+## Using the Pioneer 3-DX robot
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 
@@ -14,7 +14,7 @@ The base Pioneer 3-DX platform can reach speeds of 1.6 meters per second and car
 
 More information on the specifications and optional devices is available on Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/PioneerP3DX.aspx).
 
-#### Pioneer 3-DX model
+### Pioneer 3-DX model
 
 %figure "Pioneer 3-DX characteristics"
 
@@ -32,8 +32,9 @@ The standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file 
 The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "braitenberg.c" controller file in the "WEBOTS\_HOME/projects/robots/pioneer/pioneer3dx/controller" directory).
 The "pioneer3dx\_with\_kinect.wbt" world file in the same directory is a simple simulation example of an obstacle avoidance behavior based on a Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
 
-The Pioneer 3-DX motors are RotationalMotor nodes named according to [this figure](#pioneer-3-dx-motor-names).
+The Pioneer 3-DX motors are `RotationalMotor` nodes named according to [this figure](#pioneer-3-dx-motor-names).
 The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to manage the rotation of the wheels.
+
 %figure "Pioneer 3-DX motor names"
 
 ![pioneer3dx_servos.png](images/pioneer3dx_servos.png)

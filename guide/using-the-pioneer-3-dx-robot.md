@@ -7,7 +7,7 @@ In this section, you will learn how to use Webots simulation model of the Pionee
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 
-![pioneer3dx_real.png](images/pioneer3dx_real.png)
+![pioneer3dx.png](images/pioneer3dx.png)
 
 %end
 
@@ -33,12 +33,6 @@ Pioneer 3-DX is provided with a ready-to-use set of devices listed in [this tabl
 More information on the specifications and optional devices is available on Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/PioneerP3DX.aspx).
 
 #### Pioneer 3-DX model
-
-%figure "The Pioneer 3-DX model in Webots"
-
-![pioneer3dx.png](images/pioneer3dx.png)
-
-%end
 
 The Pioneer 3-DX model in Webots is depicted in [this figure](#the-pioneer-3-dx-model-in-webots).
 This model includes support for two motors, the caster wheel, 7 LEDs on the control panel and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity measurements.

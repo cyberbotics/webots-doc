@@ -60,7 +60,8 @@
   top: 0px !important;
 }
 .webots-doc #content {
-  max-width: 944px;
+  box-sizing: border-box;
+  max-width: 1034px;
   margin: 0 auto;
   background: white;
   min-height: 100vh;

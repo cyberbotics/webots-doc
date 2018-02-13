@@ -69,6 +69,7 @@ A simple example of an HTML robot window is provided in the `robots/thymio/thymi
 - How to change the title of the robot window from the controller program.
 
 The HTML robot windows can communicate with controller programs written using any of the supported programming languages, i.e. C, C++, Python, Java, MATLAB and ROS.
+If a Robot's controller is changed or restarted during the simulation run, the robot window associated to the same Robot node will be reset as well.
 
 The vehicle, Darwin-OP robot windows and BotStudio still use the native robot window (see below).
 However, they will soon be ported to the HTML robot window.

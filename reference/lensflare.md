@@ -2,14 +2,14 @@
 
 ```
 LensFlare {
-  SFFloat transparency      0.4   # [0, 1]
-  SFFloat scale             1.5   # (-inf, inf)
-  SFFloat biais             -0.9  # (-inf, inf)
-  SFFloat dispersal         0.6   # (-inf, inf)
-  SFInt32 samples           4     # [0, inf)
-  SFFloat haloWidth         0.4   # [0, inf)
-  SFFloat chromaDistortion  2.0   # (-inf, inf)
-  SFInt32 blurIterations    2     # [0, inf)
+  SFFloat transparency      0.4    # [0, 1]
+  SFFloat scale             1.5    # (-inf, inf)
+  SFFloat biais             -0.9   # (-inf, inf)
+  SFFloat dispersal         0.6    # (-inf, inf)
+  SFInt32 samples           4      # [0, inf)
+  SFFloat haloWidth         0.4    # [0, inf)
+  SFFloat chromaDistortion  2.0    # (-inf, inf)
+  SFInt32 blurIterations    2      # [0, inf)
 }
 ```
 

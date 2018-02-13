@@ -13,7 +13,7 @@ Solid {
   SFNode   physics             NULL          # {Physics, PROTO}
   SFBool   locked              FALSE         # {TRUE, FALSE}
   SFFloat  radarCrossSection   0.0           # [0, 1]
-  MFColor  recognitionColors   []            # {SFColor, PROTO}
+  MFColor  recognitionColors   []            # any color
   SFFloat  translationStep     0.01          # [0, inf)
   SFFloat  rotationStep        0.261799387   # [0, inf)
   SFVec3f  linearVelocity      0 0 0         # any vector

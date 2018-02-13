@@ -7,7 +7,7 @@ SpotLight {
   SFFloat ambientIntensity 0          # [0, 1]
   SFVec3f attenuation      1 0 0      # any positive vector
   SFFloat beamWidth        1.570796   # [0, pi/2)
-  SFColor color            1 1 1      # [0, 1]
+  SFColor color            1 1 1      # any color
   SFFloat cutOffAngle      0.785398   # [0, pi/2)
   SFVec3f direction        0 0 -1     # any vector
   SFFloat intensity        1          # [0, 1]

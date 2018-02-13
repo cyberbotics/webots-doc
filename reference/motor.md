@@ -11,7 +11,7 @@ Motor {
   SFFloat  maxPosition       0        # (-inf, inf) or [-pi, pi]
   SFFloat  maxVelocity       10       # [0, inf)
   SFString sound             ""       # any string
-  MFNode   muscles           []       # {Muscle (or derived PROTO)}
+  MFNode   muscles           []       # {Muscle, PROTO}
 }
 ```
 

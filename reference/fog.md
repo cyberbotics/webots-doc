@@ -2,7 +2,7 @@
 
 ```
 Fog {
-  SFColor  color           1 1 1      # [0, 1]
+  SFColor  color           1 1 1      # any color
   SFString fogType         "LINEAR"   # {"LINEAR", "EXPONENTIAL", "EXPONENTIAL2"}
   SFFloat  visibilityRange 0          # [0, inf)
 }

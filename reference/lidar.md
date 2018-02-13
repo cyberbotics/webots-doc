@@ -19,7 +19,7 @@ Lidar {
   SFFloat  defaultFrequency     10        # [minFrequency, maxFrequency]
   SFFloat  minFrequency         1         # [0, maxFrequency)
   SFFloat  maxFrequency         25        # [minFrequency, inf)
-  SFNode   rotatingHead         NULL      # {Solid (or derived)}
+  SFNode   rotatingHead         NULL      # {Solid (or derived), PROTO}
   SFString compositor           ""        # any string
 }
 ```

@@ -6,9 +6,9 @@ Propeller {
   SFVec3f centerOfThrust  0 0 0   # any vector
   SFVec2f thrustConstants 1 0     # any vector
   SFVec2f torqueConstants 1 0     # any vector
-  SFNode device           NULL    # {Solid (or derived)}
-  SFNode fastHelix        NULL    # {Solid (or derived)}
-  SFNode slowHelix        NULL    # {Solid (or derived)}
+  SFNode device           NULL    # {Solid (or derived), PROTO}
+  SFNode fastHelix        NULL    # {Solid (or derived), PROTO}
+  SFNode slowHelix        NULL    # {Solid (or derived), PROTO}
 }
 ```
 

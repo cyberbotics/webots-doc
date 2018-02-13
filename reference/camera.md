@@ -37,9 +37,9 @@ Since camera pixels are squares, the vertical field of view can be computed from
 
     *vertical FOV = fieldOfView * height / width*
 
-- `width`: width of the image in pixels
+- `width`: width of the image in pixels.
 
-- `height`: height of the image in pixels
+- `height`: height of the image in pixels.
 
 - `spherical`: switch between a planar or a spherical projection.
 A spherical projection can be used for example to simulate a fisheye lens.

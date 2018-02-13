@@ -4,11 +4,11 @@ Derived from [Device](device.md).
 
 ```
 Gyro {
-  MFVec3f lookupTable [ ]    # [lookup table]
-  SFBool  xAxis       TRUE   # [TRUE, FALSE]
-  SFBool  yAxis       TRUE   # [TRUE, FALSE]
-  SFBool  zAxis       TRUE   # [TRUE, FALSE]
-  SFFloat resolution  -1     # [-1, [0, inf]]
+  MFVec3f lookupTable [ ]    # lookup table
+  SFBool  xAxis       TRUE   # {TRUE, FALSE}
+  SFBool  yAxis       TRUE   # {TRUE, FALSE}
+  SFBool  zAxis       TRUE   # {TRUE, FALSE}
+  SFFloat resolution  -1     # {-1, [0, inf)}
 }
 ```
 

@@ -4,14 +4,14 @@ Derived from [Device](device.md).
 
 ```
 Emitter {
-  SFString type       "radio"   # ["radio", "serial", "infra-red"]
-  SFFloat  range      -1        # [-1, [0, inf]]
-  SFFloat  maxRange   -1        # [-1, [0, inf]]
+  SFString type       "radio"   # {"radio", "serial", "infra-red"}
+  SFFloat  range      -1        # {-1, [0, inf)}
+  SFFloat  maxRange   -1        # {-1, [0, inf)}
   SFFloat  aperture   -1        # [-1 ,[0, 2*pi]]
-  SFInt32  channel    0         # [0, inf]
-  SFInt32  baudRate   -1        # [-1, [0, inf]]
-  SFInt32  byteSize   8         # [8, inf]
-  SFInt32  bufferSize -1        # [-1, [0, inf]]
+  SFInt32  channel    0         # [0, inf)
+  SFInt32  baudRate   -1        # {-1, [0, inf)}
+  SFInt32  byteSize   8         # [8, inf)
+  SFInt32  bufferSize -1        # {-1, [0, inf)}
 }
 ```
 

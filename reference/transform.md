@@ -4,9 +4,9 @@ Derived from [Group](group.md).
 
 ```
 Transform {
-  SFVec3f    translation 0 0 0     # [-inf, inf]
+  SFVec3f    translation 0 0 0     # (-inf, inf)
   SFRotation rotation    0 1 0 0   # [[-1, 1], [-inf, inf]]
-  SFVec3f    scale       1 1 1     # [-inf, inf]
+  SFVec3f    scale       1 1 1     # (-inf, inf)
 }
 ```
 

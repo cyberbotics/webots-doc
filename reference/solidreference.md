@@ -2,7 +2,7 @@
 
 ```
 SolidReference {
-  SFString solidName ""   # [any string]
+  SFString solidName ""   # any string
 }
 ```
 

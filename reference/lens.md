@@ -2,9 +2,9 @@
 
 ```
 Lens {
-  SFVec2f center                 0.5 0.5   # [0, 1]
-  SFVec2f radialCoefficients     0 0       # [-inf, inf]
-  SFVec2f tangentialCoefficients 0 0       # [-inf, inf]
+  SFVec2f center                 0.5 0.5   # (0, 1)
+  SFVec2f radialCoefficients     0 0       # (-inf, inf)
+  SFVec2f tangentialCoefficients 0 0       # (-inf, inf)
 }
 ```
 

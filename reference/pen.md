@@ -4,11 +4,11 @@ Derived from [Device](device.md).
 
 ```
 Pen {
-  SFColor inkColor    0 0 0   # [0,1]
-  SFFloat inkDensity  0.5     # [0,1]
-  SFFloat leadSize    0.002   # [0, inf]
-  SFFloat maxDistance 0.0     # [0+, inf]
-  SFBool  write       TRUE    # [TRUE, FALSE]
+  SFColor inkColor    0 0 0   # (0, 1)
+  SFFloat inkDensity  0.5     # (0, 1)
+  SFFloat leadSize    0.002   # [0, inf)
+  SFFloat maxDistance 0.0     # [0, inf)
+  SFBool  write       TRUE    # {TRUE, FALSE}
 }
 ```
 

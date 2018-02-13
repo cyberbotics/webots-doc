@@ -2,10 +2,10 @@
 
 ```
 Focus {
-  SFFloat focalDistance    0   # [0, inf]
-  SFFloat focalLength      0   # [0, inf]
-  SFFloat maxFocalDistance 0   # [0, inf]
-  SFFloat minFocalDistance 0   # [0, inf]
+  SFFloat focalDistance    0   # [0, inf)
+  SFFloat focalLength      0   # [0, inf)
+  SFFloat maxFocalDistance 0   # [0, inf)
+  SFFloat minFocalDistance 0   # [0, inf)
 }
 ```
 

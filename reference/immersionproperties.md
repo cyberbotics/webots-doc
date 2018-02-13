@@ -2,12 +2,12 @@
 
 ```
 ImmersionProperties {
-  SFString fluidName                          ""              # [any string]
-  SFString referenceArea                      "immersed area" # ["immersed area", "xyz-projected area"]
-  SFVec3f  dragForceCoefficients              0 0 0           # [0, inf]
-  SFVec3f  dragTorqueCoefficients             0 0 0           # [0, inf]
-  SFFloat  viscousResistanceForceCoefficient  0               # [0, inf]
-  SFFloat  viscousResistanceTorqueCoefficient 0               # [0, inf]
+  SFString fluidName                          ""              # any string
+  SFString referenceArea                      "immersed area" # {"immersed area", "xyz-projected area"}
+  SFVec3f  dragForceCoefficients              0 0 0           # [0, inf)
+  SFVec3f  dragTorqueCoefficients             0 0 0           # [0, inf)
+  SFFloat  viscousResistanceForceCoefficient  0               # [0, inf)
+  SFFloat  viscousResistanceTorqueCoefficient 0               # [0, inf)
 }
 ```
 

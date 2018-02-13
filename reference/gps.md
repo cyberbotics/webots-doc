@@ -4,12 +4,12 @@ Derived from [Device](device.md).
 
 ```
 GPS {
-  SFString type             "satellite"   # ["sattelite", "laser"]
-  SFFloat  accuracy         0             # [0, inf]
-  SFFloat  noiseCorrelation 0             # [0, 1]
-  SFFloat  resolution       -1            # [-1, [0, inf]]
-  SFFloat  speedNoise       0             # [0, inf]
-  SFFloat  speedResolution  1             # [-1, [0, inf]]
+  SFString type             "satellite"   # {"sattelite", "laser"}
+  SFFloat  accuracy         0             # [0, inf)
+  SFFloat  noiseCorrelation 0             # (0, 1)
+  SFFloat  resolution       -1            # {-1, [0, inf)}
+  SFFloat  speedNoise       0             # [0, inf)
+  SFFloat  speedResolution  1             # {-1, [0, inf)}
 }
 ```
 

@@ -2,9 +2,9 @@
 
 ```
 BallJointParameters {
-  SFVec3f anchor          0 0 0 # [-inf, inf]
-  SFFloat springConstant  0     # [0, inf]
-  SFFloat dampingConstant 0     # [0, inf]
+  SFVec3f anchor          0 0 0   # (-inf, inf)
+  SFFloat springConstant  0       # [0, inf)
+  SFFloat dampingConstant 0       # [0, inf)
 }
 ```
 

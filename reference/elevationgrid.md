@@ -2,14 +2,14 @@
 
 ```
 ElevationGrid {
-  SFNode  color          NULL   # [Color, PROTO]
-  MFFloat height         [ ]    # [-inf, inf]
-  SFBool  colorPerVertex TRUE   # [TRUE, FALSE]
-  SFInt32 xDimension     0      # [0, inf]
-  SFFloat xSpacing       1      # [0, inf]
-  SFInt32 zDimension     0      # [0, inf]
-  SFFloat zSpacing       1      # [0, inf]
-  SFFloat thickness      1      # [0, inf]
+  SFNode  color          NULL   # {Color, PROTO}
+  MFFloat height         [ ]    # (-inf, inf)
+  SFBool  colorPerVertex TRUE   # {TRUE, FALSE}
+  SFInt32 xDimension     0      # [0, inf)
+  SFFloat xSpacing       1      # [0, inf)
+  SFInt32 zDimension     0      # [0, inf)
+  SFFloat zSpacing       1      # [0, inf)
+  SFFloat thickness      1      # [0, inf)
 }
 ```
 

@@ -4,10 +4,10 @@ Derived from [Device](device.md).
 
 ```
 LightSensor {
-  MFVec3f lookupTable [ 0 0 0, 1 1000 0 ]   # [lookup table]
-  SFColor colorFilter 1 1 1                 # [0, 1]
-  SFBool  occlusion   FALSE                 # [TRUE, FALSE]
-  SFFloat resolution  -1                    # [-1, [0, inf]]
+  MFVec3f lookupTable [ 0 0 0, 1 1000 0 ]   # lookup table
+  SFColor colorFilter 1 1 1                 # (0, 1)
+  SFBool  occlusion   FALSE                 # {TRUE, FALSE}
+  SFFloat resolution  -1                    # {-1, [0, inf)}
 }
 ```
 

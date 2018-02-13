@@ -2,10 +2,10 @@
 
 ```
 Shape {
-  SFNode appearance  NULL   # [Appearance, PROTO]
-  SFNode geometry    NULL   # [Geometry Primitive, PROTO]
-  SFBool castShadows TRUE   # [TRUE, FALSE]
-  SFBool isPickable  TRUE   # [TRUE, FALSE]
+  SFNode appearance  NULL   # {Appearance, PROTO}
+  SFNode geometry    NULL   # {Geometry Primitive, PROTO}
+  SFBool castShadows TRUE   # {TRUE, FALSE}
+  SFBool isPickable  TRUE   # {TRUE, FALSE}
 }
 ```
 

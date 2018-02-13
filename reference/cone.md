@@ -2,11 +2,11 @@
 
 ```
 Cone {
-  SFFloat bottomRadius 1      # [0, inf]
-  SFFloat height       2      # [0, inf]
-  SFBool  side         TRUE   # [TRUE, FALSE]
-  SFBool  bottom       TRUE   # [TRUE, FALSE]
-  SFInt32 subdivision  12     # [3, inf]
+  SFFloat bottomRadius 1      # [0, inf)
+  SFFloat height       2      # [0, inf)
+  SFBool  side         TRUE   # {TRUE, FALSE}
+  SFBool  bottom       TRUE   # {TRUE, FALSE}
+  SFInt32 subdivision  12     # [3, inf)
 }
 ```
 

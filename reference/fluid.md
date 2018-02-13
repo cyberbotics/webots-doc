@@ -4,15 +4,15 @@ Derived from [Transform](transform.md).
 
 ```
 Fluid {
-  SFString description    ""        # [any string]
-  SFString name           "fluid"   # [any string]
-  SFString model          ""        # [any string]
-  SFString description    ""        # [any string]
-  SFFloat  density        1000      # [-1, [0, inf]] 
-  SFFloat  viscosity      0.001     # [0, inf]
-  SFVec3f  streamVelocity 0 0 0     # [0, inf]
-  SFNode   boundingObject NULL      # [node, PROTO]
-  SFBool   locked         FALSE     # [TRUE, FALSE]
+  SFString description    ""        # any string
+  SFString name           "fluid"   # any string
+  SFString model          ""        # any string
+  SFString description    ""        # any string
+  SFFloat  density        1000      # {-1, [0, inf)} 
+  SFFloat  viscosity      0.001     # [0, inf)
+  SFVec3f  streamVelocity 0 0 0     # [0, inf)
+  SFNode   boundingObject NULL      # {node, PROTO}
+  SFBool   locked         FALSE     # {TRUE, FALSE}
 }
 ```
 

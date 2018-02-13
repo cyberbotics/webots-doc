@@ -4,22 +4,22 @@ Derived from [Device](device.md).
 
 ```
 Camera {
-  SFFloat  fieldOfView  0.7854  # [0, pi]
-  SFInt32  width        64      # [1, inf]
-  SFInt32  height       64      # [1, inf]
-  SFBool   spherical    FALSE   # [TRUE, FALSE]
-  SFFloat  near         0.01    # [0, inf]
-  SFFloat  far          0.0     # [0, inf]
-  SFBool   antiAliasing FALSE   # [TRUE, FALSE]
-  SFFloat  motionBlur   0.0     # [0, inf]
-  SFFloat  noise        0.0     # [0, 1]
-  SFString noiseMaskUrl ""      # [any string]
-  SFNode   lens         NULL    # [Lens, PROTO]
-  SFNode   focus        NULL    # [Focus, PROTO]
-  SFNode   zoom         NULL    # [Zoom, PROTO]
-  SFNode   recognition  NULL    # [Recognition, PROTO]
-  SFNode   lensFlare    NULL    # [LensFlare, PROTO]
-  SFString compositor   ""      # [compositor name]
+  SFFloat  fieldOfView  0.7854  # (0, pi)
+  SFInt32  width        64      # [0, inf)
+  SFInt32  height       64      # [0, inf)
+  SFBool   spherical    FALSE   # {TRUE, FALSE}
+  SFFloat  near         0.01    # [0, inf)
+  SFFloat  far          0.0     # [0, inf)
+  SFBool   antiAliasing FALSE   # {TRUE, FALSE}
+  SFFloat  motionBlur   0.0     # [0, inf)
+  SFFloat  noise        0.0     # (0, 1)
+  SFString noiseMaskUrl ""      # any string
+  SFNode   lens         NULL    # {Lens, PROTO}
+  SFNode   focus        NULL    # {Focus, PROTO}
+  SFNode   zoom         NULL    # {Zoom, PROTO}
+  SFNode   recognition  NULL    # {Recognition, PROTO}
+  SFNode   lensFlare    NULL    # {LensFlare, PROTO}
+  SFString compositor   ""      # compositor name
 }
 ```
 

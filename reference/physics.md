@@ -2,11 +2,11 @@
 
 ```
 Physics {
-  SFFloat density       1000   # [-1, [0, inf]]
-  SFFloat mass          -1     # [-1, [0, inf]]
-  MFVec3f centerOfMass  [ ]    # [-1, [0, inf]]
-  MFVec3f inertiaMatrix [ ]    # [-1, [0, 1]]
-  SFNode  damping       NULL   # [Damping, PROTO]
+  SFFloat density       1000   # {-1, [0, inf)}
+  SFFloat mass          -1     # {-1, [0, inf)}
+  MFVec3f centerOfMass  [ ]    # {-1, [0, inf)}
+  MFVec3f inertiaMatrix [ ]    # {-1, (0, 1)}
+  SFNode  damping       NULL   # {Damping, PROTO}
 }
 ```
 

@@ -133,11 +133,24 @@ Please refer to the [Microsoft Speech API (SAPI)](https://msdn.microsoft.com/en-
 **SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 
 - `prosody` has three supported parameters: `pitch`, `rate` and `volume`.
-  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch. For example `-2st`. The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
-  - `rate` indicates the speaking rate (speed) of the contained text. This is a relative value, expressed as a number that acts as a multiplier of the default. For example, a value of `1` results in no change in the rate. A value of `.5` results in a halving of the rate. A value of `3` results in a tripling of the rate.
-  - `volume` indicates the volume level of the speaking voice. This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest. For example, `75`. The default is `100`.
 
-- `audio` has one supported parameter which is `src`, specifying a WAV file. This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
+- `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch.
+For example `-2st`.
+The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
+
+- `rate` indicates the speaking rate (speed) of the contained text.
+This is a relative value, expressed as a number that acts as a multiplier of the default.
+For example, a value of `1` results in no change in the rate.
+A value of `.5` results in a halving of the rate.
+A value of `3` results in a tripling of the rate.
+
+- `volume` indicates the volume level of the speaking voice.
+This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest.
+For example, `75`.
+The default is `100`.
+
+- `audio` has one supported parameter which is `src`, specifying a WAV file.
+This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
 
 Example:
 

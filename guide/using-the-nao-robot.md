@@ -51,20 +51,18 @@ If you open the Video monitor in Choregraphe you should see the picture of the N
 
 You can switch between the Nao model thanks to the following Nao PROTO fields:
 
-- *version* corresponds to the real Nao version. The supported versions are "3.3",
-"4.0" and "5.0". The main difference between these models is the different
-calibration of the physics. The field of view of the cameras is slightly
-different, too. Please refer directly to the Nao.proto file to see the complete
-difference. Note that each version having a different weight repartition in
-their body, the best contact properties in the simulated world aren't always the
-same. They are currently optimized for the version 5.0 of Nao in the default Nao
-worlds and may not perform as well with previous versions of Nao.
-- *degreeOfFreedom* corresponds to the degree of freedom of the real Nao. For
-versions 3.3 and 4.0 of Nao, the supported degreeOfFreedom values are 25 and 21.
+- *version* corresponds to the real Nao version.
+The supported versions are "3.3", "4.0" and "5.0".
+The main difference between these models is the different calibration of the physics.
+The field of view of the cameras is slightly different, too.
+Please refer directly to the Nao.proto file to see the complete difference.
+Note that each version having a different weight repartition in their body, the best contact properties in the simulated world aren't always the same.
+They are currently optimized for the version 5.0 of Nao in the default Nao worlds and may not perform as well with previous versions of Nao.
+- *degreeOfFreedom* corresponds to the degree of freedom of the real Nao.
+For versions 3.3 and 4.0 of Nao, the supported degreeOfFreedom values are 25 and 21.
 This corresponds to a model respectively with and without articulated fingers.
-We recommend to use articulated fingers only if necessary because of their big
-resource consumption. Version 5.0 does not exist without articulated fingers, so
-the only possible value is 25 in this case.
+We recommend to use articulated fingers only if necessary because of their big resource consumption.
+Version 5.0 does not exist without articulated fingers, so the only possible value is 25 in this case.
 
 ### Using motion boxes
 
@@ -92,20 +90,16 @@ It is also possible to completely switch off the simulation of the cameras by ad
 It is possible to have several Nao robots in your simulation, however each Nao robot must use a different NAOqi port.
 Here's how to copy a Nao and assign the NAOqi port number:
 
-1. Pause the simulation: push the `Pause` button in Webots 3D View
-2. Revert the simulation: push the `Revert` button in Webots 3D View
-3. In Webots Scene Tree, select a top level nodes, e.g. the Nao robot
-4. Then push the `Add` button, a dialog appears
-5. In the dialog, select `PROTO (Webots) / robots`
-6. Then select one of the Nao models from the list, the Nao is added to the current
-world
-7. Select the Nao in the 3D view and move it away from the other one: SHIFT + left
-mouse button
-8. Select the `controllerArgs` field in the newly created robot and increase the
-port number, e.g. 9560
-9. Save the .wbt file: push the `Save` button
-10. Now you can push the `Real-time` button to run the simulation with several
-robots
+1. Pause the simulation: push the `Pause` button in Webots 3D View.
+2. Revert the simulation: push the `Revert` button in Webots 3D View.
+3. In Webots Scene Tree, select a top level nodes, e.g. the Nao robot.
+4. Then push the `Add` button, a dialog appears.
+5. In the dialog, select `PROTO (Webots) / robots`.
+6. Then select one of the Nao models from the list, the Nao is added to the current world.
+7. Select the Nao in the 3D view and move it away from the other one: SHIFT + left mouse button.
+8. Select the `controllerArgs` field in the newly created robot and increase the port number, e.g. 9560.
+9. Save the .wbt file: push the `Save` button.
+10. Now you can push the `Real-time` button to run the simulation with several robots.
 
 Repeat the above procedure for each additional robot that you need.
 Remember that every robot must have a different port number specified in `controllerArgs`.
@@ -130,15 +124,11 @@ There are currently no means of synchronizing Webots and Choregraphe, but this p
 It is often possible to prevent the simulation speed from going below 1.0x, by keeping the CPU and GPU load as low as possible.
 There are several ways to do that, here are the most effective ones:
 
-- Switch off the simulation of the Nao cameras with the "-nocam" option, as
-mentioned above
-- Increase the value of `WorldInfo.displayRefesh` in the Scene Tree
-- Switch off the rendering of the shadows: change to FALSE the `castShadows` field
-of each light source in the Scene Tree
-- Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI
-components
-- Remove unnecessary objects from the simulation, in particular objects with
-physics
+- Switch off the simulation of the Nao cameras with the "-nocam" option, as mentioned above.
+- Increase the value of `WorldInfo.displayRefesh` in the Scene Tree.
+- Switch off the rendering of the shadows: change to FALSE the `castShadows` field of each light source in the Scene Tree.
+- Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI components.
+- Remove unnecessary objects from the simulation, in particular objects with physics.
 
 #### Unexpected Webots crashes
 

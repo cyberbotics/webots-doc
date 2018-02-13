@@ -27,20 +27,16 @@ With C/C++, the `Build` button compiles and links the whole project into an exec
 C/C++ source file dependencies are automatically generated and updated when necessary.
 With Java, the `Build` button compiles the whole project into bytecode (.class files).
 
-- ![](images/clean-button.png =26x26) The **Clean** button invokes `make clean` to
-delete the intermediate compilation files in the current file's directory. The
-source files remain untouched.
+- ![](images/clean-button.png =26x26) The **Clean** button invokes `make clean` to delete the intermediate compilation files in the current file's directory.
+The source files remain untouched.
 
-- The **Make JAR file** menu item rebuilds the whole project and packs all the
-.class in a ".jar". This is a convenience function that can be used to pack a
-complete controller prior to uploading it to one of our online contest website.
+- The **Make JAR file** menu item rebuilds the whole project and packs all the .class in a ".jar".
+This is a convenience function that can be used to pack a complete controller prior to uploading it to one of our online contest website.
 
-- The **Cross-compile** menu item allows to cross-compile the current text editor's
-file. Note that a specific Makefile is required in the controller's directory
-for performing this operation. For an e-puck robot, this Makefile must be named
-"Makefile.e-puck".
+- The **Cross-compile** menu item allows to cross-compile the current text editor's file.
+Note that a specific Makefile is required in the controller's directory for performing this operation.
+For an e-puck robot, this Makefile must be named "Makefile.e-puck".
 
-- The **Cross-compilation clean** menu item allows you to clean the
-cross-compilation files. Note that a specific Makefile is required in the
-controller's directory for performing this operation. For an e-puck robot, this
-Makefile must be named "Makefile.e-puck".
+- The **Cross-compilation clean** menu item allows you to clean the cross-compilation files.
+Note that a specific Makefile is required in the controller's directory for performing this operation.
+For an e-puck robot, this Makefile must be named "Makefile.e-puck".

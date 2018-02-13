@@ -24,8 +24,7 @@ If empty, [JointParameters](jointparameters.md) default values apply.
 
 ### Field Summary
 
-- `device`: This field optionally specifies a [LinearMotor](linearmotor.md), a
-linear [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device. If
-no motor is specified, the joint is passive joint.
+- `device`: This field optionally specifies a [LinearMotor](linearmotor.md), a linear [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device.
+If no motor is specified, the joint is passive joint.
 
 - `position`: This field is not visible from the Scene Tree, see [joint's hidden position field](joint.md#joint-s-hidden-position-fields).

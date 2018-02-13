@@ -38,26 +38,20 @@ VehicleWheel {
 - `name`: Identifies the wheel.
 - `thickness`: Defines the thickness of the wheel.
 - `tireRadius`: Defines the outer radius of the wheel.
-- `subdivision`: Defines the number of subdivisions for the cylinder
-approximation.
-- `curvatureFactor`: Defines the curvature of the wheel, should be between 0 and
-1.
-- `edgeSubdivision`: Defines the number of subdivisions for the edge
-approximation.
+- `subdivision`: Defines the number of subdivisions for the cylinder approximation.
+- `curvatureFactor`: Defines the curvature of the wheel, should be between 0 and 1.
+- `edgeSubdivision`: Defines the number of subdivisions for the edge approximation.
 - `rimRadius`: Defines the radius of the separation between the rim and the tire.
 - `rimBeamNumber`: Defines the number of beams of the wheel.
 - `rimBeamWidth`: Defines the width of the beams.
-- `centralInnerRadius and centralOuterRadius`: Defines the geometry of the central
-part of the wheel.
+- `centralInnerRadius and centralOuterRadius`: Defines the geometry of the central part of the wheel.
 - `rimBeamThickness`: Defines the lateral thickness of the beams.
 - `rimBeamOffset`: Defines the lateral offset of the beams.
 - `contactMaterial`: Defines the `contactMaterial` used for the wheel.
 - `tireAppearance`: Specifies the appearance of the tire.
 - `rimAppearance`: Specifies the appearance of the rim.
-- `physics`: `Physics` node of the wheel defining all the physical
-characteristics.
-- `logoSlot`: extension slot allowing the user to add a `Shape` node for a brand
-logo.
+- `physics`: `Physics` node of the wheel defining all the physical characteristics.
+- `logoSlot`: extension slot allowing the user to add a `Shape` node for a brand logo.
 
 Some sample instances of wheels are provided (see for example `BmwX5Wheel.proto`) which inherit from `VehicleWheel`.
 

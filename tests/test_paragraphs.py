@@ -1,4 +1,4 @@
-"""Test module for the paragraphs."""
+"""Test module for the Markdown paragraphs."""
 
 import unittest
 import re
@@ -7,9 +7,7 @@ from books import Books
 
 
 class TestParagraphs(unittest.TestCase):
-    """Unit test of the paragraphs."""
-
-    hyperlinkRE = re.compile(r'[^\!]\[([^\]]*)\]\s*\(([^\)]*)\)')
+    """Unit test of the Markdown lists."""
 
     def setUp(self):
         """Setup: get all the paragraphs."""

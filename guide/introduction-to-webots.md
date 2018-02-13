@@ -18,42 +18,30 @@ Adding new interfaces is possible through the related sytem.
 Webots is well suited for research and educational projects related to mobile robotics.
 Many mobile robotics projects have relied on Webots for years in the following areas:
 
-- Mobile robot prototyping (academic research, the automotive industry,
-aeronautics, the vacuum cleaner industry, the toy industry, hobbyists, etc.)
+- Mobile robot prototyping (academic research, the automotive industry, aeronautics, the vacuum cleaner industry, the toy industry, hobbyists, etc.)
 - Robot locomotion research (legged, humanoids, quadrupeds robots, etc.)
-- Multi-agent research (swarm intelligence, collaborative mobile robots groups,
-etc.)
+- Multi-agent research (swarm intelligence, collaborative mobile robots groups, etc.)
 - Adaptive behavior research (genetic algorithm, neural networks, AI, etc.).
-- Teaching robotics (robotics lectures, C/C++/Java/Python programming lectures,
-etc.)
-- Robot contests (e.g. [www.robotstadium.org](http://www.robotstadium.org) or
-[www.ratslife.org](http://www.ratslife.org))
+- Teaching robotics (robotics lectures, C/C++/Java/Python programming lectures, etc.)
+- Robot contests (e.g. [www.robotstadium.org](http://www.robotstadium.org) or [www.ratslife.org](http://www.ratslife.org))
 
 ### What do I need to know to use Webots?
 
 You will need a minimal amount of technical knowledge to develop your own simulations:
 
-- A basic knowledge of the C, C++, Java, Python or MATLAB programming language is
-necessary to program your own robot controllers. However, even if you don't know
-these languages, you can still program the e-puck and Hemisson robots using a
-simple graphical programming language called BotStudio.
-- If you don't want to use existing robot models provided within Webots and would
-like to create your own robot models, or add special objects in the simulated
-environments, you will need a basic knowledge of 3D computer graphics and VRML97
-description language. That will allow you to create 3D models in Webots or
-import them from 3D modelling software.
+- A basic knowledge of the C, C++, Java, Python or MATLAB programming language is necessary to program your own robot controllers.
+However, even if you don't know these languages, you can still program the e-puck and Hemisson robots using a simple graphical programming language called BotStudio.
+- If you don't want to use existing robot models provided within Webots and would like to create your own robot models, or add special objects in the simulated environments, you will need a basic knowledge of 3D computer graphics and VRML97 description language.
+That will allow you to create 3D models in Webots or import them from 3D modelling software.
 
 ### Webots simulation
 
 A Webots simulation is composed of following items:
 
-1. A Webots *world* file (.wbt) that defines one or several robots and their
-environment. The .wbt file does sometimes depend on external PROTO files
-(.proto) and textures.
-2. One or several controller programs for the above robots (in
-C/C++/Java/Python/MATLAB).
-3. An optional physics plugin that can be used to modify Webots regular physics
-behavior (in C/C++).
+1. A Webots *world* file (.wbt) that defines one or several robots and their environment.
+The .wbt file does sometimes depend on external PROTO files (.proto) and textures.
+2. One or several controller programs for the above robots (in C/C++/Java/Python/MATLAB).
+3. An optional physics plugin that can be used to modify Webots regular physics behavior (in C/C++).
 
 ### What is a world?
 

@@ -257,8 +257,7 @@ Here they are:
 As mentioned above, all the Webots API functionalities that should work with the real robot have to be wrapped into the remote-control library.
 To achieve this:
 
-- The internal state of the libController has to be setup to match with the
-current state of the robot.
+- The internal state of the libController has to be setup to match with the current state of the robot.
 
     Typically, when the value of a sensor is known the corresponding
     `wbr_sensor_set_value` function has to be called.

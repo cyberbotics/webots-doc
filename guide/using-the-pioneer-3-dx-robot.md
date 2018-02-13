@@ -30,7 +30,7 @@ This model includes support for two motors, the caster wheel, 7 LEDs on the cont
 The standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory of the Webots distribution.
 
 The Pioneer 3-DX motors are `RotationalMotor` nodes named according to [this figure](#pioneer-3-dx-motor-names).
-The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to manage the rotation of the wheels.
+The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of the wheels.
 
 %figure "Pioneer 3-DX motor names"
 
@@ -58,11 +58,11 @@ The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg av
 
 %end
 
-### Pioneer 3-DX kinect
+### Pioneer 3-DX Kinect
 
-The "pioneer3dx\_with\_kinect.wbt" world file in the same directory as previously is a simple simulation example of an obstacle avoidance behavior based on a Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-kinect).
+The "pioneer3dx\_with\_kinect.wbt" world file in the same directory as previously is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-kinect)..
 
-%figure "Pioneer 3-DX world example using a kinect"
+%figure "Pioneer 3-DX world example using a Kinect"
 
 ![pioneer3dx_kinect.png](images/pioneer3dx_kinect.png)
 

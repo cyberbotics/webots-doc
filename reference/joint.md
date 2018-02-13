@@ -17,15 +17,9 @@ Using a [SolidReference](solidreference.md) inside `endPoint` enables you to clo
 
 ### Field Summary
 
-- `jointParameters`: this field optionally specifies a
-[JointParameters](jointparameters.md) node or one of its derived classes. These
-nodes contain common joint parameters such as position, stops, anchor or axis if
-existing. This field must be filled with an
-[HingeJointParameters](hingejointparameters.md) node for an
-[HingeJoint](hingejoint.md) or an [Hinge2Joint](hinge2joint.md), with a
-[JointParameters](jointparameters.md) node for a [SliderJoint](sliderjoint.md)
-(anchor-less) and with a [BallJointParameters](balljointparameters.md) node for
-a [BallJoint](balljoint.md).
+- `jointParameters`: this field optionally specifies a [JointParameters](jointparameters.md) node or one of its derived classes.
+These nodes contain common joint parameters such as position, stops, anchor or axis if existing.
+This field must be filled with an [HingeJointParameters](hingejointparameters.md) node for an [HingeJoint](hingejoint.md) or an [Hinge2Joint](hinge2joint.md), with a [JointParameters](jointparameters.md) node for a [SliderJoint](sliderjoint.md) (anchor-less) and with a [BallJointParameters](balljointparameters.md) node for a [BallJoint](balljoint.md).
 
     For an [Hinge2Joint](hinge2joint.md), the `jointParameters` field is related to
     the first rotation axis while an additional field called `jointParameters2`
@@ -36,13 +30,9 @@ a [BallJoint](balljoint.md).
     the meter as unit. If the `jointParameters` field is not specified, parameters
     are set with the default values defined in the corresponding parameter node.
 
-- `endPoint`: this field specifies which [Solid](solid.md) will be subjected to
-the joint constraints. It must be either a [Solid](solid.md) child, or a
-reference to an existing [Solid](solid.md), i.e. a
-[SolidReference](solidreference.md). Alternatively, a [Slot](slot.md) node can
-be inserted in the `endPoint` field, but this [Slot](slot.md) should be
-connected to another [Slot](slot.md) whose `endPoint` is either a
-[Solid](solid.md) or a [SolidReference](solidreference.md).
+- `endPoint`: this field specifies which [Solid](solid.md) will be subjected to the joint constraints.
+It must be either a [Solid](solid.md) child, or a reference to an existing [Solid](solid.md), i.e. a [SolidReference](solidreference.md).
+Alternatively, a [Slot](slot.md) node can be inserted in the `endPoint` field, but this [Slot](slot.md) should be connected to another [Slot](slot.md) whose `endPoint` is either a [Solid](solid.md) or a [SolidReference](solidreference.md).
 
 ### Joint's hidden position fields
 

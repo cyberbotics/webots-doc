@@ -36,7 +36,8 @@ The simulation is paused if the virtual time counter on the main toolbar is stab
 A new world is now open.
 For now, the 3D window displays nothing.
 The Scene Tree view (on the left hand side) currently lists the fundamental nodes:
-- `WorldInfo`: containing misc global parameters ;
+
+- `WorldInfo`: containing misc global parameters.
 - `Viewpoint`: defining the main camera parameters.
 
 As no light and no 3D object are defined, the entire scene is empty, and thus nothing is displayed.
@@ -69,9 +70,10 @@ The new node has been added and we can admire our rectangle arena's colors.
 It's a good time to improve the scene light.
 
 > **Hands on**: Modify the following fields of the `DirectionalLight` node:
-- `ambientIntensity` to 1 ;
-- `direction` to [-0.33 -1 -0.5] ;
-- and `castShadows` to TRUE.
+
+    - `ambientIntensity` to 1.
+    - `direction` to [-0.33 -1 -0.5].
+    - `castShadows` to TRUE.
 
 <!-- -->
 

@@ -23,18 +23,19 @@ Unlike the other joint parameters node, it has no anchor.
 
 ### Field Summary
 
-- The `position` field represents the current *position* of the joint, in radians or meters. For an hinge, it is the current rotation angle in radians. For a slider, it is the magnitude of the current translation in meters. When changing the `position` field from the Webots scene tree, Webots also changes the corresponding `rotation` (for a hinge) or `translation` (for a slider) field in the `endPoint` solid of the parent joint node to keep the consistency of the model. Similarly, when changing the `position` field of a [JointParameters](#jointparameters) node in a text editor, you should take care of also changing the corresponding `rotation` or `translation` field accordingly.
+- The `position` field represents the current *position* of the joint, in radians or meters.
+For an hinge, it is the current rotation angle in radians.
+For a slider, it is the magnitude of the current translation in meters.
+When changing the `position` field from the Webots scene tree, Webots also changes the corresponding `rotation` (for a hinge) or `translation` (for a slider) field in the `endPoint` solid of the parent joint node to keep the consistency of the model.
+Similarly, when changing the `position` field of a [JointParameters](#jointparameters) node in a text editor, you should take care of also changing the corresponding `rotation` or `translation` field accordingly.
 
-- The `minStop` and `maxStop` fields specify the position of physical (or
-mechanical) stops. These fields are described in more detail in the "Joint
-Limits" section, see below.
+- The `minStop` and `maxStop` fields specify the position of physical (or mechanical) stops.
+These fields are described in more detail in the "Joint Limits" section, see below.
 
-- The `springConstant` and `dampingConstant` fields allow the addition of spring
-and/or damping behavior to the joint. These fields are described in more detail
-in the "Springs and Dampers" section, see below.
+- The `springConstant` and `dampingConstant` fields allow the addition of spring and/or damping behavior to the joint.
+These fields are described in more detail in the "Springs and Dampers" section, see below.
 
-- The `staticFriction` field defines add a simple static friction force opposed to
-the joint motion.
+- The `staticFriction` field defines add a simple static friction force opposed to the joint motion.
 
 ### Units
 

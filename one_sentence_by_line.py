@@ -23,6 +23,8 @@ def flushBuffer(f):
     txt = txt.replace('etc@', 'etc.')
     txt = txt.replace('e@g@', 'e.g.')
     txt = txt.replace(' - ', '\n- ')
+    txt = re.sub(r'^(\d)\.\n', r'\1. ', txt)
+    txt = re.sub(r'\n(\d)\.\n', r'\n\1. ', txt)
     txt = txt.rstrip()
     f.write(txt)
     f.write('\n')

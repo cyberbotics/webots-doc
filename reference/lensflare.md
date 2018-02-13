@@ -2,10 +2,14 @@
 
 ```
 LensFlare {
-  SFBool  occlusion              FALSE
-  SFFloat transparency           0.5
-  MFVec2f haloSizesAndPositions  [0.17 0.5, 0.08 0.25, 0.33 0.12]
-  MFVec2f burstSizesAndPositions [0.33 0.5, 0.16 0.33, 0.5 0.1]
+  SFFloat transparency      0.4
+  SFFloat scale             1.5
+  SFFloat biais             -0.9
+  SFFloat dispersal         0.6
+  SFInt32 samples           4
+  SFFloat haloWidth         0.4
+  SFFloat chromaDistortion  2.0
+  SFInt32 blurIterations    2
 }
 ```
 
@@ -19,14 +23,22 @@ LensFlare {
 
 The [LensFlare](#lensflare) node can be added in the `lensFlare` field of any [Camera](camera.md) or [Viewpoint](viewpoint.md) to simulate lens flare.
 The lens flare effect is due to the light being scattered in lens systems through generally unwanted image formation mechanisms, such as internal reflections and scattering from material inhomogeneities in the lens.
-To simulate a lens flare, a variable number of images called *halos* and *bursts* are added along a line from the light position to a point in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md).
+To simulate a lens flare, a post-processing shader that generates ghosts & halos is applied to the render, which can be tweaked with the parameters to achieve the desired effect.
 
 ### Field Summary
 
-- The `occlusion` field specifies whether or not obstacles between the [Camera](camera.md) or [Viewpoint](viewpoint.md) and the light should disable the lens flare effect. By default, the `occlusion` field is set to FALSE because the occlusion detection is computationally expensive and should be avoided when not needed.
+- The `transparency` field specifies the blending between the lens flare and the corresponding render (viewpoint or camera).
 
-- The `transparency` field specifies the transparency level of the flare images, with 0.0 (the default) the images will appear completely opaque, and with 1.0 they will appear completely transparent. Semi-transparent images will make the flare effect lighter.
+- The `scale` field is used to modify the strength of the length flare.
 
-- The `haloSizesAndPositions` field specifies the size and position along the line mentioned previously for each halo image. The first component defines the reference size of the halo image in meters (the reference size is the size of the halo image considering the light is at a distance of 1 meter, if the light is closer or farther, the image is scaled accordingly). The second component defines the position along the line, 0.0 means at light position and 1.0 means in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md). You are allowed to set position values outside the [0;1] range, but it is recommended to remain in this range to have realistic effects. Furthermore the number of elements defines the number of halo images.
+- The `biais` field specifies the intensity threshold for lens flare features generation.
 
-- The `burstSizesAndPositions` field specifies the size and position along the line mentioned previously for each burst image. The first component defines the reference size of the burst image in meters (the reference size is the size of the burst image considering the light is at a distance of 1 meter, if the light is closer or farther, the image is scaled accordingly). The second component defines the position along the line, 0.0 means at light position and 1.0 means in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md). You are allowed to set position values outside the [0;1] range, but it is recommended to remain in this range to have realistic effects. Furthermore the number of elements defines the number of burst images.
+- The `dispersal` field specifies the disperal of the ghost samples.
+
+- The `samples` field specifies how many samples to make to generate the ghosts.
+
+- The `haloWidth` field specifies the lens flare halo width.
+
+- The `chromaDistortion` field specifies the amount of chromatic distortion induced by the lens.
+
+- The `blurIterations` field specifies the amount of blur that is applied to the lens flare.

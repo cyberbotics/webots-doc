@@ -26,14 +26,6 @@ More information on the specifications and optional devices is available on Adep
 
 The standard model of the Pioneer 3-AT is provided in the "pioneer3AT.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory of the Webots distribution.
 
-%figure "Pioneer 3-AT world example"
-
-![pioneer3at_example.png](images/pioneer3at_example.png)
-
-%end
-
-The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LIDAR (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
-
 The Pioneer 3-AT motors are `RotationalMotor` nodes named according to [this figure](#pioneer-3-at-motor-names).
 The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to manage the rotation of the wheels.
 
@@ -52,3 +44,13 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 %end
 
 The angle between two consecutive sensor directions is 20 degrees except for the four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
+
+### Pioneer 3-AT obstacle avoidance
+
+The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behaviour based on the use of a SICK LIDAR (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
+
+%figure "Pioneer 3-AT world example"
+
+![pioneer3at_example.png](images/pioneer3at_example.png)
+
+%end

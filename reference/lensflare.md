@@ -33,7 +33,7 @@ To simulate a lens flare, a post-processing shader that generates ghosts & halos
 
 - The `biais` field specifies the intensity threshold for lens flare features generation.
 
-- The `dispersal` field specifies the disperal of the ghost samples.
+- The `dispersal` field specifies the dispersal of the ghost samples.
 
 - The `samples` field specifies how many samples to make to generate the ghosts.
 

@@ -45,7 +45,9 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 
 The angle between two consecutive sensor directions is 20 degrees except for the four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
 
-### Pioneer 3-AT obstacle avoidance
+## Samples
+
+### pioneer3at.wbt
 
 The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LIDAR (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory) as seen in [this figure](#pioneer-3-at-world-example).
 

@@ -7,8 +7,8 @@ Most approaches need a `Supervisor` and hence Webots PRO is usually required.
 
 A numerical optimization can usually be decomposed in two separate tasks:
 
-1. Running the optimization algorithm: Systematical Search, Random Search, Genetic Algorithms (GA), Particle Swarm Optimization (PSO), Simulated Annealing, etc. 2.
-Running the robot behavior with a set of parameters specified by the optimization algorithm.
+1. Running the optimization algorithm: Systematical Search, Random Search, Genetic Algorithms (GA), Particle Swarm Optimization (PSO), Simulated Annealing, etc.
+2. Running the robot behavior with a set of parameters specified by the optimization algorithm.
 
 One of the important things that needs to be decided is whether the implementation of these two distinct tasks should go into the same controller or in two separate controllers.
 Let's discuss both approaches:

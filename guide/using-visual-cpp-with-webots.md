@@ -23,7 +23,8 @@ Note that the resulting ".exe" file must be launched by Webots; it cannot be run
 
 1. Copy a Webots project from Webots distribution to your "Documents" folder, or create an empty project directory using Webots menu: `Wizard / New Project Directory...` Either way, the project directory must contain the "controllers" and "worlds" subdirectories.
 
-2. Start Visual C++ and select: `File / New / Project...` Then choose these settings:
+2. Start Visual C++ and select: `File / New / Project...`.
+Then choose these settings:
 
         Project type: General
         Template: Empty Project

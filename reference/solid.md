@@ -95,16 +95,16 @@ This is the purpose of the `boundingObject` field.
 
 Various combinations of primitives can be used in a `boundingObject`: it can contain either:
 
-1. A [Box](box.md) node, 2.
-A [Capsule](capsule.md) node, 3.
-A [Cylinder](cylinder.md) node, 4.
-An [ElevationGrid](elevationgrid.md) node, 5.
-An [IndexedFaceSet](indexedfaceset.md) node, 6.
-A [Plane](plane.md) node, 7.
-A [Sphere](sphere.md) node, 8.
-A [Shape](shape.md) node with one of the above nodes in its `geometry` field, 9.
-A [Transform](transform.md) node with one of the above nodes in its `children` field, or 10.
-A [Group](group.md) node with several `children`, each being one of the above.
+1. A [Box](box.md) node.
+2. A [Capsule](capsule.md) node.
+3. A [Cylinder](cylinder.md) node.
+4. An [ElevationGrid](elevationgrid.md) node.
+5. An [IndexedFaceSet](indexedfaceset.md) node.
+6. A [Plane](plane.md) node.
+7. A [Sphere](sphere.md) node.
+8. A [Shape](shape.md) node with one of the above nodes in its `geometry` field.
+9. A [Transform](transform.md) node with one of the above nodes in its `children` field.
+10. A [Group](group.md) node with several `children`, each being one of the above.
 
 The `boundingObject`, together with the [Physics](physics.md) node, are used to compute the inertia matrix of the [Solid](#solid).
 Such a computation assumes a uniform mass distribution in the primitives composing the `boundingObject`.

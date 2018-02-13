@@ -53,10 +53,10 @@ The amount of sensor/actuator noise can be changed (or removed) by the user (see
 The physics engine's noise cannot be changed because it is necessary for the realism of the simulation.
 To completely remove the sensor/actuator noise the following field values must be reset:
 
-1. In the `lookupTable`s: the third column of each `lookupTable` in the .wbt and .proto files must be reset to 0 2.
-In the `GPS` nodes: the `resolution` field must be reset to 0 3.
-In the `Camera` nodes: the `colorNoise` and the `rangeNoise` fields must be reset to 0 4.
-In the `DifferentialWheels` nodes: the value of `slipNoise` must be reset to 0 and the value of `encoderNoise` must be reset to -1
+1. In the `lookupTable`s: the third column of each `lookupTable` in the .wbt and .proto files must be reset to 0.
+2. In the `GPS` nodes: the `resolution` field must be reset to 0.
+3. In the `Camera` nodes: the `colorNoise` and the `rangeNoise` fields must be reset to 0.
+4. In the `DifferentialWheels` nodes: the value of `slipNoise` must be reset to 0 and the value of `encoderNoise` must be reset to -1.
 
 ### How can I create a passive joint?
 

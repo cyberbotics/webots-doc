@@ -90,16 +90,16 @@ It is also possible to completely switch off the simulation of the cameras by ad
 It is possible to have several Nao robots in your simulation, however each Nao robot must use a different NAOqi port.
 Here's how to copy a Nao and assign the NAOqi port number:
 
-1. Pause the simulation: push the `Pause` button in Webots 3D View 2.
-Revert the simulation: push the `Revert` button in Webots 3D View 3.
-In Webots Scene Tree, select a top level nodes, e.g. the Nao robot 4.
-Then push the `Add` button, a dialog appears 5.
-In the dialog, select `PROTO (Webots) / robots` 6.
-Then select one of the Nao models from the list, the Nao is added to the current world 7.
-Select the Nao in the 3D view and move it away from the other one: SHIFT + left mouse button 8.
-Select the `controllerArgs` field in the newly created robot and increase the port number, e.g. 9560 9.
-Save the .wbt file: push the `Save` button 10.
-Now you can push the `Real-time` button to run the simulation with several robots
+1. Pause the simulation: push the `Pause` button in Webots 3D View.
+2. Revert the simulation: push the `Revert` button in Webots 3D View.
+3. In Webots Scene Tree, select a top level nodes, e.g. the Nao robot.
+4. Then push the `Add` button, a dialog appears.
+5. In the dialog, select `PROTO (Webots) / robots`.
+6. Then select one of the Nao models from the list, the Nao is added to the current world.
+7. Select the Nao in the 3D view and move it away from the other one: SHIFT + left mouse button.
+8. Select the `controllerArgs` field in the newly created robot and increase the port number, e.g. 9560.
+9. Save the .wbt file: push the `Save` button.
+10. Now you can push the `Real-time` button to run the simulation with several robots.
 
 Repeat the above procedure for each additional robot that you need.
 Remember that every robot must have a different port number specified in `controllerArgs`.

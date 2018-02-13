@@ -18,11 +18,14 @@ More information on the specifications and optional devices is available on Adep
 
 %figure "Pioneer 3-DX characteristics"
 
-| Characteristics     | Description                                                      |
-| ------------------- | -----------------------------------------------------------------|
-| Dimensions          | 485 mm long, 381 mm large, 217 mm high                           |
-| Weight              | 10 kg                                                            |
-| Speed               | Max. forward/backward speed: 0.5 m/s; Rotation speed: 5.24 rad/s |
+| Characteristics             | Description  |
+| --------------------------- | -------------|
+| Length                      | 485 mm       |
+| Width                       | 381 mm       |
+| Height                      | 217 mm       |
+| Weight                      | 10 kg        |
+| Max. forward/backward speed | 0.5 m/s      |
+| Max. rotation speed         | 5.24 rad/s   |
 
 %end
 

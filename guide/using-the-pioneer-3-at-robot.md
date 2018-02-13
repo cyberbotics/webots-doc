@@ -16,11 +16,14 @@ More information on the specifications and optional devices is available on Adep
 
 %figure "Pioneer 3-AT characteristics"
 
-| Characteristics     | Description                                                    |
-| ------------------- | -------------------------------------------------------------- |
-| Dimensions          | 508 mm long, 497 mm large, 277 mm high                         |
-| Weight              | 12 kg                                                          |
-| Speed               | Max. forward/backward speed: 2.2 m/s; Rotation speed: 20 rad/s |
+| Characteristics             | Description  |
+| --------------------------- | -------------|
+| Length                      | 508 mm       |
+| Width                       | 497 mm       |
+| Height                      | 277 mm       |
+| Weight                      | 12 kg        |
+| Max. forward/backward speed | 2.2 m/s      |
+| Max. rotation speed         | 20 rad/s     |
 
 %end
 

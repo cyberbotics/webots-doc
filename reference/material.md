@@ -2,12 +2,12 @@
 
 ```
 Material {
-  SFFloat ambientIntensity 0.2         # (0, 1)
-  SFColor diffuseColor     0.8 0.8 0.8 # (0, 1)
-  SFColor emissiveColor    0 0 0       # (0, 1)
-  SFFloat shininess        0.2         # (0, 1)
-  SFColor specularColor    0 0 0       # (0, 1)
-  SFFloat transparency     0           # (0, 1)
+  SFFloat ambientIntensity 0.2          # [0, 1]
+  SFColor diffuseColor     0.8 0.8 0.8  # [0, 1]
+  SFColor emissiveColor    0 0 0        # [0, 1]
+  SFFloat shininess        0.2          # [0, 1]
+  SFColor specularColor    0 0 0        # [0, 1]
+  SFFloat transparency     0            # [0, 1]
 }
 ```
 

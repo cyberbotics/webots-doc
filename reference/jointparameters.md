@@ -3,9 +3,9 @@
 ```
 JointParameters {
   SFFloat position        0       # [0, inf)
-  SFVec3f axis            0 0 1   # (0, 1)
-  SFFloat minStop         0       # (-pi, pi)
-  SFFloat maxStop         0       # (-pi, pi)
+  SFVec3f axis            0 0 1   # [0, 1]
+  SFFloat minStop         0       # [-pi, pi]
+  SFFloat maxStop         0       # [-pi, pi]
   SFFloat springConstant  0       # [0, inf)
   SFFloat dampingConstant 0       # [0, inf)
   SFFloat staticFriction  0       # [0, inf)

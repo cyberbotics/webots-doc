@@ -6,8 +6,8 @@ Derived from [Device](device.md).
 Lidar {
   SFFloat  tiltAngle            0.0       # [-pi/2, pi/2]
   SFInt32  horizontalResolution 512       # [0, inf)
-  SFFloat  fieldOfView          1.5708    # (0, 2*pi)
-  SFFloat  verticalFieldOfView  0.2       # (0, pi)
+  SFFloat  fieldOfView          1.5708    # [0, 2*pi]
+  SFFloat  verticalFieldOfView  0.2       # [0, pi]
   SFInt32  numberOfLayers       4         # [0, inf)
   SFFloat  near                 0.01      # [0, inf)
   SFFloat  minRange             0.01      # [near, inf)

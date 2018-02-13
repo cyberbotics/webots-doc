@@ -2,7 +2,7 @@
 
 ```
 Propeller {
-  SFVec3f shaftAxis       1 0 0   # (0, 1)
+  SFVec3f shaftAxis       1 0 0   # [0, 1]
   SFVec3f centerOfThrust  0 0 0   # (-inf, inf)
   SFVec2f thrustConstants 1 0     # (-inf, inf)
   SFVec2f torqueConstants 1 0     # (-inf, inf)

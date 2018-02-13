@@ -5,12 +5,12 @@ Derived from [Device](device.md).
 ```
 Radar {
   SFFloat minRange               1       # [0, maxRange)
-  SFFloat maxRange               50.0    # [minRange, inf)
-  SFFloat horizontalFieldOfView  0.78    # (0, 2*pi)
-  SFFloat verticalFieldOfView    0.1     # (0, pi)
+  SFFloat maxRange               50.0    # (minRange, inf)
+  SFFloat horizontalFieldOfView  0.78    # [0, 2*pi]
+  SFFloat verticalFieldOfView    0.1     # [0, pi]
   SFFloat minAbsoluteRadialSpeed 0.0     # [0, inf)
   SFFloat minRadialSpeed         1       # [0, maxRadialSpeed]
-  SFFloat maxRadialSpeed         -1      # {-1, [minRadialSpeed, inf]}
+  SFFloat maxRadialSpeed         -1      # {-1, [minRadialSpeed, inf)}
   SFFloat cellDistance           0.0     # [0, inf)
   SFFloat cellSpeed              0.0     # [0, inf)
   SFFloat rangeNoise             0.0     # [0, inf)

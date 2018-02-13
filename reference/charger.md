@@ -6,7 +6,7 @@ Derived from [Solid](solid.md).
 Charger {
   MFFloat battery       [ ]     # [0, inf)
   SFFloat radius        0.04    # [0, inf)
-  SFColor emissiveColor 0 1 0   # (0, 1)
+  SFColor emissiveColor 0 1 0   # [0, 1]
   SFBool  gradual       TRUE    # {TRUE, FALSE}
 }
 ```

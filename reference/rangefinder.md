@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 RangeFinder {
-  SFFloat  fieldOfView 0.7854   # (0, 2*pi)
+  SFFloat  fieldOfView 0.7854   # [0, 2*pi]
   SFInt32  width       64       # [0, inf)
   SFInt32  height      64       # [0, inf)
   SFBool   spherical   FALSE    # {TRUE, FALSE}

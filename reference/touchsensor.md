@@ -6,7 +6,7 @@ Derived from [Device](device.md).
 TouchSensor {
   SFString type        "bumper"                  # ["bumper", "force", "force-3d"]
   MFVec3f  lookupTable [ 0 0 0, 5000 50000 0 ]   # [see below]
-  SFFloat  resolution  -1                        # [-1, [0+, inf]]
+  SFFloat  resolution  -1                        # [-1, (0, inf)]
 }
 ```
 

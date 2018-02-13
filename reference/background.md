@@ -8,7 +8,7 @@ Background {
   MFString leftUrl   [ ]          # list of Image URLs
   MFString rightUrl  [ ]          # list of Image URLs
   MFString topUrl    [ ]          # list of Image URLs
-  MFColor  skyColor  [ 0 0 0 ]    # (0, 1)
+  MFColor  skyColor  [ 0 0 0 ]    # [0, 1]
 }
 ```
 

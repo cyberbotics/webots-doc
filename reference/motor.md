@@ -7,8 +7,8 @@ Motor {
   SFFloat  acceleration      -1       # {-1, [0, inf)}
   SFFloat  consumptionFactor 10       # [0, inf)
   SFVec3f  controlPID        10 0 0   # [0, inf)
-  SFFloat  minPosition       0        # [(-inf, inf), (-pi, pi)]
-  SFFloat  maxPosition       0        # [(-inf, inf), (-pi, pi)]
+  SFFloat  minPosition       0        # [(-inf, inf), [-pi, pi]]
+  SFFloat  maxPosition       0        # [(-inf, inf), [-pi, pi]]
   SFFloat  maxVelocity       10       # [0, inf)
   SFString sound             ""       # any string
   MFNode   muscles           []       # {Muscle (or derived PROTO)}

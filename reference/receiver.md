@@ -5,7 +5,7 @@ Derived from [Device](device.md).
 ```
 Receiver {
   SFString type                "radio"   # {"radio", "serial", "infra-red"}  
-  SFFloat  aperture            -1        # [-1, (0, 2*pi)]
+  SFFloat  aperture            -1        # [-1, [0, 2*pi]]
   SFInt32  channel             0         # [-1, inf)
   SFInt32  baudRate            -1        # {-1, [0, inf)}
   SFInt32  byteSize            8         # [8, inf)

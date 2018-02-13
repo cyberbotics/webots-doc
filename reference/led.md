@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 LED {
-  MFColor color   [ 1 0 0 ]   # (0, 1)
+  MFColor color   [ 1 0 0 ]   # [0, 1]
   SFBool  gradual FALSE       # {TRUE, FALSE}
 }
 ```

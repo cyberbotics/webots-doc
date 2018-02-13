@@ -21,13 +21,9 @@ The "Controller.lib" files is needed to link with the "Controller.dll" file that
 The following procedure (Visual C++ 2008 Express) explains how to create a Visual C++ controller for Webots.
 Note that the resulting ".exe" file must be launched by Webots; it cannot be run from Visual C++.
 
-1. Copy a Webots project from Webots distribution to your "Documents" folder, or
-create an empty project directory using Webots menu: `Wizard / New Project
-Directory...` Either way, the project directory must contain the "controllers"
-and "worlds" subdirectories.
+1. Copy a Webots project from Webots distribution to your "Documents" folder, or create an empty project directory using Webots menu: `Wizard / New Project Directory...` Either way, the project directory must contain the "controllers" and "worlds" subdirectories.
 
-2. Start Visual C++ and select: `File / New / Project...` Then choose these
-settings:
+2. Start Visual C++ and select: `File / New / Project...` Then choose these settings:
 
         Project type: General
         Template: Empty Project
@@ -38,10 +34,8 @@ settings:
     directory, and where "Location" must indicate the "controllers" subdirectory of
     your Webots project directory.
 
-3. Then you can add a C or C++ source file to your project: Choose either: `Project
-/ Add Existing Item` or `Project / Add New Item / C++ File (.cpp)`. In the
-second case you can copy the content of one of the C/C++ examples of Webots
-distribution.
+3. Then you can add a C or C++ source file to your project: Choose either: `Project / Add Existing Item` or `Project / Add New Item / C++ File (.cpp)`.
+In the second case you can copy the content of one of the C/C++ examples of Webots distribution.
 
     Note that if you copied C code from Webots examples to Visual C++, it is highly
     recommended to change the source file extension from .c to .cpp. The reason is
@@ -57,9 +51,9 @@ distribution.
           identifier 'ir0'
         ...
 
-4. Now we can set up the project configuration for Webots. Select the `Project /
-Properties` menu. In the `Property Pages`, in the `Configuration Properties`,
-enter following configuration:
+4. Now we can set up the project configuration for Webots.
+Select the `Project / Properties` menu.
+In the `Property Pages`, in the `Configuration Properties`, enter following configuration:
 
         C/C++ > General > Additional Include Directories:
           C:\Program Files\Webots\include\controller\c
@@ -112,25 +106,24 @@ If you want to use the C++ API follow these instructions:
     `Add` button. This should add the "Accelerometer.cpp, Camera.cpp, Compass.cpp",
     etc. source files to your project.
 
-6. Now you should be able to build your controller with the `Build / Build
-MyController` menu item (or the F7 key). This should generate the
-"MyProject\controllers\MyController\MyController.exe" file.
+6. Now you should be able to build your controller with the `Build / Build MyController` menu item (or the F7 key).
+This should generate the "MyProject\controllers\MyController\MyController.exe" file.
 
-7. Now we can switch to Webots in order to test the .exe controller. Start Webots
-and verify that your robot is associated with the correct controller: In the
-`Scene tree`, expand the robot node and check the `controller` field. It should
-be: `controller "MyController"`. Otherwise you should change it: hit the `...`
-(ellipsis) button, this opens a selection dialog. In the selection dialog choose
-"MyController". Then hit the `Save` button in Webots' main window. Finally you
-can hit the `Run` button to start the simulation. At this point the simulation
-should be using your Visual C++ controller.
+7. Now we can switch to Webots in order to test the .exe controller.
+Start Webots and verify that your robot is associated with the correct controller: In the `Scene tree`, expand the robot node and check the `controller` field.
+It should be: `controller "MyController"`.
+Otherwise you should change it: hit the `...` (ellipsis) button, this opens a selection dialog.
+In the selection dialog choose "MyController".
+Then hit the `Save` button in Webots' main window.
+Finally you can hit the `Run` button to start the simulation.
+At this point the simulation should be using your Visual C++ controller.
 
-8. If you want to debug your controller with Visual C++ you can *attach* the
-debugger to the running controller process. Proceed like this: In Webots, hit
-the `Pause` button then the `Revert` button. Then, in Visual C++, use the `Debug
-/ Attach to Process...` menu. In the dialog choose the `MyController.exe_webots`
-process. Still in Visual C++, you can now add breakpoints and watches in the
-controller code. Then, in Webots, hit the `Run` button to resume the simulation.
+8. If you want to debug your controller with Visual C++ you can *attach* the debugger to the running controller process.
+Proceed like this: In Webots, hit the `Pause` button then the `Revert` button.
+Then, in Visual C++, use the `Debug / Attach to Process...` menu.
+In the dialog choose the `MyController.exe_webots` process.
+Still in Visual C++, you can now add breakpoints and watches in the controller code.
+Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
 
 ### Link with the Webots libraries

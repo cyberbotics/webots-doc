@@ -47,27 +47,20 @@ AckermannVehicle {
 
 ### AckermannVehicle Field Summary
 
-- `trackFront and trackRear`: Defines the front/rear distances between right and
-left wheels.
+- `trackFront and trackRear`: Defines the front/rear distances between right and left wheels.
 - `wheelbase`: Defines the distance between the front and the rear wheels axes.
-- `minSteeringAngle and maxSteeringAngle`: Defines the minimum and maximum
-steering angle of the front wheels.
+- `minSteeringAngle and maxSteeringAngle`: Defines the minimum and maximum steering angle of the front wheels.
 - `suspension...`: Defines the characteristics of the suspension.
-- `wheelsDampingConstant`: Defines the `dampingConstant` of each wheel joint used
-to simulate the frictions of the vehicle.
-- `maxSteeringTorque`: Defines the maximum torque applied on the y-axis
-of the front wheels.
-- `extensionSlot`: Extension slot allowing the user to add other nodes (e.g.,
-sensors, shape of the vehicle, etc.).
+- `wheelsDampingConstant`: Defines the `dampingConstant` of each wheel joint used to simulate the frictions of the vehicle.
+- `maxSteeringTorque`: Defines the maximum torque applied on the y-axis of the front wheels.
+- `extensionSlot`: Extension slot allowing the user to add other nodes (e.g., sensors, shape of the vehicle, etc.).
 - `boundingObject`: Physical geometry of the vehicle.
-- `physics`: `Physics` node of the vehicle defining the physical parameters of the
-vehicle.
-- `radarCrossSection`: If greater than 0, this vehicle is a potential target for any Radar device. It measures the vehicle's ability to reflect radar signals in the direction of the radar receiver.
+- `physics`: `Physics` node of the vehicle defining the physical parameters of the vehicle.
+- `radarCrossSection`: If greater than 0, this vehicle is a potential target for any Radar device.
+It measures the vehicle's ability to reflect radar signals in the direction of the radar receiver.
 - `recognitionColors`: If not empty, this vehicle may be recognized by any Camera device with recognition capability (i.e. with a Recognition node).
-- `wheelX`: Slot to insert a `VehicleWheel` (or any `VehicleWheel`
-descendant PROTO nodes).
-- `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`,
-`PositionSensor` and `Motor`).
+- `wheelX`: Slot to insert a `VehicleWheel` (or any `VehicleWheel` descendant PROTO nodes).
+- `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`, `PositionSensor` and `Motor`).
 - `data`: Defines a user `data` string of the `Robot` node.
 
 The center of the vehicle (position 0 0 0) is at the center of the rear wheels axis.

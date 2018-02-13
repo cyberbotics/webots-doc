@@ -37,70 +37,50 @@ This ensures that all primitive geometries will remain suitable for ODE collisio
 Whenever a scale coordinate is changed, the two other ones are automatically changed to this new value.
 If a scale coordinate is assigned a non-positive value, it is automatically changed to 1.
 
-- `name`: name of the solid. In derived device classes this corresponds to the
-device name argument used by the `wb_robot_get_device` function. Note that the name cannot
-contain the colon character '`:`' and
-should preferably identify the solid uniquely, please refer to the
-[Unique Solid name](#unique-solid-name) section for further details.
+- `name`: name of the solid.
+In derived device classes this corresponds to the device name argument used by the `wb_robot_get_device` function.
+Note that the name cannot contain the colon character '`:`' and should preferably identify the solid uniquely, please refer to the [Unique Solid name](#unique-solid-name) section for further details.
 
 - `model`: generic name of the solid (e.g., "chair").
 
 - `description`: short description (1 line) of the solid.
 
-- `contactMaterial`: name of the contact material. When the `boundingObject`s of
-[Solid](#solid) nodes intersect, the `contactMaterial` is used to define which
-[ContactProperties](contactproperties.md) must be applied at the contact points.
+- `contactMaterial`: name of the contact material.
+When the `boundingObject`s of [Solid](#solid) nodes intersect, the `contactMaterial` is used to define which [ContactProperties](contactproperties.md) must be applied at the contact points.
 
-- `immersionProperties`: list of [ immersionProperties](immersionproperties.md)
-nodes. It is used to specify dynamic interactions of the [Solid](#solid) node
-with one or more [Fluid](fluid.md) nodes.
+- `immersionProperties`: list of [ immersionProperties](immersionproperties.md) nodes.
+It is used to specify dynamic interactions of the [Solid](#solid) node with one or more [Fluid](fluid.md) nodes.
 
-- `boundingObject`: the bounding object specifies the geometrical primitives used
-for collision detection. If the `boundingObject` field is NULL, then no
-collision detection is performed and that object can pass through any other
-object, e.g., the floor, obstacles and other robots. Note that if the
-`boundingObject` field is NULL then the `physics` field (see below) must also be
-NULL. You will find more explanations about the `boundingObject` field below.
+- `boundingObject`: the bounding object specifies the geometrical primitives used for collision detection.
+If the `boundingObject` field is NULL, then no collision detection is performed and that object can pass through any other object, e.g., the floor, obstacles and other robots.
+Note that if the `boundingObject` field is NULL then the `physics` field (see below) must also be NULL.
+You will find more explanations about the `boundingObject` field below.
 
-- `physics`: this field can optionally contain a [Physics](physics.md) node that
-is used to model the physical properties of this [Solid](#solid). A
-[Physics](physics.md) node should be added when effects such as gravity,
-inertia, frictional and contact forces need to be simulated. If the `physics`
-field is NULL then Webots simulates this object in *kinematics* mode. Note that
-if this field is not NULL then the `boundingObject` field must be specified.
+- `physics`: this field can optionally contain a [Physics](physics.md) node that is used to model the physical properties of this [Solid](#solid).
+A [Physics](physics.md) node should be added when effects such as gravity, inertia, frictional and contact forces need to be simulated.
+If the `physics` field is NULL then Webots simulates this object in *kinematics* mode.
+Note that if this field is not NULL then the `boundingObject` field must be specified.
 Please find more info in the description of the [Physics](physics.md) node.
 For consecutive solids, e.g., two solids attached to each other with a joint or a solid attached to the static environment with a joint, no collision detection is performed even if the `physics` field is set.
 The reason is that this type of collision detection is usually not wanted by the user, because a very accurate design of the bounding objects of the solids would be required.
 To prevent two consecutive solid nodes from penetrating each other, the `minStop` and `maxStop` fields of the corresponding joint node should be adjusted accordingly.
 
-- `locked`: if `TRUE`, the solid object cannot be moved using the mouse. This is
-useful to prevent moving an object by mistake.
+- `locked`: if `TRUE`, the solid object cannot be moved using the mouse.
+This is useful to prevent moving an object by mistake.
 
-- `radarCrossSection`: if greater than 0 this [Solid](#solid) node is a potential
-target for any [Radar](radar.md) device. Radar cross section (RCS) is the
-measure of a target's ability to reflect radar signals in the direction of the
-radar receiver, i.e. it is a measure of the ratio of backscatter density in the
-direction of the radar to the power density that is intercepted by the target.
-Typical values are 0.01 for a bird, 1 for a human, 100 for a car and 200 for a
-truck.
+- `radarCrossSection`: if greater than 0 this [Solid](#solid) node is a potential target for any [Radar](radar.md) device.
+Radar cross section (RCS) is the measure of a target's ability to reflect radar signals in the direction of the radar receiver, i.e. it is a measure of the ratio of backscatter density in the direction of the radar to the power density that is intercepted by the target.
+Typical values are 0.01 for a bird, 1 for a human, 100 for a car and 200 for a truck.
 
 - `recognitionColors`: if not empty, this [Solid](#solid) node may be recognized by any [Camera](camera.md) device with a [Recognition](recognition.md) node.
 The colors defined in this field are returned for this object if recognized by a camera, but they have no impact on the visual appearance of the [Solid](#solid) node.
 
-- `translationStep` and `rotationStep`: these fields specify the minimum step size
-that will be used by the translate and rotate handles appearing in the 3D window
-when selecting a top solid. Continuous increment is obtained by setting the step
-value to -1.
+- `translationStep` and `rotationStep`: these fields specify the minimum step size that will be used by the translate and rotate handles appearing in the 3D window when selecting a top solid.
+Continuous increment is obtained by setting the step value to -1.
 
-- `linearVelocity` and `angularVelocity`: these fields, which aren't visible from
-the Scene Tree, are used by Webots when saving a world file to store the initial
-linear and angular velocities of a [Solid](#solid) with a non-NULL
-[Physics](physics.md) node. If the [Solid](#solid) node is merged into a solid
-assembly (see [implicit solid
-merging](physics.md#implicit-solid-merging-and-joints)), then these fields will
-be effective only for the [Solid](#solid) at the top of the assembly. Hidden
-velocity fields allow you to save and restore the dynamics of your simulation or
-to define initial velocities for every physical objects in the scene.
+- `linearVelocity` and `angularVelocity`: these fields, which aren't visible from the Scene Tree, are used by Webots when saving a world file to store the initial linear and angular velocities of a [Solid](#solid) with a non-NULL [Physics](physics.md) node.
+If the [Solid](#solid) node is merged into a solid assembly (see [implicit solid merging](physics.md#implicit-solid-merging-and-joints)), then these fields will be effective only for the [Solid](#solid) at the top of the assembly.
+Hidden velocity fields allow you to save and restore the dynamics of your simulation or to define initial velocities for every physical objects in the scene.
 
 ### How to use the boundingObject field?
 
@@ -115,17 +95,16 @@ This is the purpose of the `boundingObject` field.
 
 Various combinations of primitives can be used in a `boundingObject`: it can contain either:
 
-1. A [Box](box.md) node,
-2. A [Capsule](capsule.md) node,
-3. A [Cylinder](cylinder.md) node,
-4. An [ElevationGrid](elevationgrid.md) node,
-5. An [IndexedFaceSet](indexedfaceset.md) node,
-6. A [Plane](plane.md) node,
-7. A [Sphere](sphere.md) node,
-8. A [Shape](shape.md) node with one of the above nodes in its `geometry` field,
-9. A [Transform](transform.md) node with one of the above nodes in its `children`
-field, or
-10. A [Group](group.md) node with several `children`, each being one of the above.
+1. A [Box](box.md) node, 2.
+A [Capsule](capsule.md) node, 3.
+A [Cylinder](cylinder.md) node, 4.
+An [ElevationGrid](elevationgrid.md) node, 5.
+An [IndexedFaceSet](indexedfaceset.md) node, 6.
+A [Plane](plane.md) node, 7.
+A [Sphere](sphere.md) node, 8.
+A [Shape](shape.md) node with one of the above nodes in its `geometry` field, 9.
+A [Transform](transform.md) node with one of the above nodes in its `children` field, or 10.
+A [Group](group.md) node with several `children`, each being one of the above.
 
 The `boundingObject`, together with the [Physics](physics.md) node, are used to compute the inertia matrix of the [Solid](#solid).
 Such a computation assumes a uniform mass distribution in the primitives composing the `boundingObject`.

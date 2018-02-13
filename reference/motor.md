@@ -25,19 +25,17 @@ Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.m
 
 ### Field Summary
 
-- The `acceleration` field defines the default acceleration of the P-controller. A
-value of -1 (infinite) means that the acceleration is not limited by the
-P-controller. The acceleration can be changed at run-time with the
-`wb_motor_set_acceleration` function.
+- The `acceleration` field defines the default acceleration of the P-controller.
+A value of -1 (infinite) means that the acceleration is not limited by the P-controller.
+The acceleration can be changed at run-time with the `wb_motor_set_acceleration` function.
 
-- The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
+- The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node.
+The details on motor energy consumption are provided [below](#energy-consumption).
 
-- The first coordinate of `controlPID` field specifies the initial value of the
-*P* parameter, which is the *proportional gain* of the motor PID-controller. A
-high *P* results in a large response to a small error, and therefore a more
-sensitive system. Note that by setting *P* too high, the system can become
-unstable. With a small *P*, more simulation steps are needed to reach the target
-position, but the system is more stable.
+- The first coordinate of `controlPID` field specifies the initial value of the *P* parameter, which is the *proportional gain* of the motor PID-controller.
+A high *P* results in a large response to a small error, and therefore a more sensitive system.
+Note that by setting *P* too high, the system can become unstable.
+With a small *P*, more simulation steps are needed to reach the target position, but the system is more stable.
 
     The second coordinate of `controlPID` field specifies the initial value of the
     *I* parameter, which is the *integral gain* of the motor PID-controller. The
@@ -57,20 +55,19 @@ position, but the system is more stable.
     The value of *P, I* and *D* can be changed at run-time with the
     `wb_motor_set_control_pid` function.
 
-- The `minPosition` and `maxPosition` fields specify *soft limits* for the target
-position. These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
+- The `minPosition` and `maxPosition` fields specify *soft limits* for the target position.
+These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
-- The `maxVelocity` field specifies both the upper limit and the default value for
-the motor *velocity*. The *velocity* can be changed at run-time with the
-`wb_motor_set_velocity` function. The value should always be positive (the
-default is 10).
+- The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*.
+The *velocity* can be changed at run-time with the `wb_motor_set_velocity` function.
+The value should always be positive (the default is 10).
 
-- The `sound` field specifies the URL of a WAVE sound file, relatively to the
-location of the world file or PROTO file which contains the `Motor` node. This
-sound is used to play the sound of the motor. It is modulated in volume and
-pitch according to the velocity of the motor to produce a realistic motor sound.
+- The `sound` field specifies the URL of a WAVE sound file, relatively to the location of the world file or PROTO file which contains the `Motor` node.
+This sound is used to play the sound of the motor.
+It is modulated in volume and pitch according to the velocity of the motor to produce a realistic motor sound.
 
-- The `muscles` field optionally specifies one or more [Muscle](muscle.md) nodes that graphically display the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md). This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
+- The `muscles` field optionally specifies one or more [Muscle](muscle.md) nodes that graphically display the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md).
+This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
 
 ### Units
 
@@ -356,16 +353,14 @@ The default value is provided by the `maxForce` (resp. `maxTorque` field).
 Note that this function measures the *current motor force* (resp. *torque*) exclusively, all other external or internal forces (resp. torques) that may apply to the motor are ignored.
 In particular, the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function does not measure:
 
-- The spring and damping forces that apply when the `springConstant` or
-`dampingConstant` fields are non-zero.
+- The spring and damping forces that apply when the `springConstant` or `dampingConstant` fields are non-zero.
 - The force specified with the `wb_motor_set_force` (resp.
 `wb_motor_set_torque`) function.
-- The *constraint forces or torques* that restrict the motor motion to one degree
-of freedom (DOF). In other words, the forces or torques applied outside of the
-motor DOF are ignored. Only the forces or torques applied in the DOF are
-considered. For example, in a "linear" motor, a force applied at a right angle
-to the sliding axis is completely ignored. In a "rotational" motor, only the
-torque applied around the rotation axis is considered.
+- The *constraint forces or torques* that restrict the motor motion to one degree of freedom (DOF).
+In other words, the forces or torques applied outside of the motor DOF are ignored.
+Only the forces or torques applied in the DOF are considered.
+For example, in a "linear" motor, a force applied at a right angle to the sliding axis is completely ignored.
+In a "rotational" motor, only the torque applied around the rotation axis is considered.
 
 Note that these functions applies only to *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of related [Solid](solid.md) nodes must be defined for these functions to work properly.

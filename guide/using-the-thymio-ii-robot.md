@@ -23,11 +23,14 @@ The main characteristics of the Thymio II model in Webots is summed up in [this 
 
 %figure "Thymio II characteristics"
 
-| Characteristics     | Description                                                                     |
-| ------------------- | ------------------------------------------------------------------------------- |
-| Dimensions          | 112 mm long, 117 mm large, 53 mm high                                           |
-| Weight              | 0.250 kg                                                                        |
-| Speed               | Max. forward/backward speed: 0.2 m/s; Rotation speed: 9.53 rad/s                |
+| Characteristics             | Description  |
+| --------------------------- | -------------|
+| Length                      | 112 mm       |
+| Width                       | 117 mm       |
+| Height                      | 53 mm        |
+| Weight                      | 0.25 kg      |
+| Max. forward/backward speed | 0.2 m/s      |
+| Max. rotation speed         | 9.53 rad/s   |
 
 %end
 

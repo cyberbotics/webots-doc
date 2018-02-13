@@ -1,6 +1,11 @@
 ## Using the e-puck robot
 
-In this section, you will learn how to use Webots with the ([e-puck robot](#the-e-puck-robot-at-work)).
+%figure "The e-puck robot"
+
+![e-puck.png](images/e-puck.png)
+
+%end
+
 E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
 The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.
 The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.
@@ -14,7 +19,7 @@ E-puck is also available for purchase from Cyberbotics Ltd.
 
 %end
 
-E-puck was designed to fulfill the following requirements:
+E-puck was designed to fulfil the following requirements:
 
 - *Elegant design*: the simple mechanical structure, electronics design and
 software of e-puck is an example of a clean and modern system.
@@ -23,7 +28,8 @@ many possibilities with its sensors, processing power and extensions.
 - *Simulation software*: e-puck is integrated with Webots simulation software for
 easy programming, simulation and remote control of the (physical) robot.
 - *User friendly*: e-puck is small and easy to setup on a tabletop next to a
-computer. It doesn't need any cables, providing optimal working comfort.
+computer.
+It doesn't need any cables, providing optimal working comfort.
 - *Robustness and maintenance*: e-puck is resilient under student use and is
 simple to repair.
 - *Affordable*: the price tag of e-puck is friendly to university budgets.
@@ -54,13 +60,7 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 
 %end
 
-### Simulation model
-
-%figure "The e-puck model in Webots"
-
-![e-puck.png](images/e-puck.png)
-
-%end
+### E-puck model
 
 The e-puck model in Webots is depicted in [this figure](#the-e-puck-model-in-webots).
 This model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.

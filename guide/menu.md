@@ -20,7 +20,7 @@
     - [Citing Webots](citing-webots.md)
     - [Computer peripherals](computer-peripherals.md)
 - [Sample Webots Applications](sample-webots-applications.md)
-    - [Samples](samples.md)
+    - [Demo Directory](demo-directory.md)
     - [Webots Devices](webots-devices.md)
     - [How To](how-to.md)
     - [Geometries](geometries.md)

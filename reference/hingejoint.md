@@ -4,8 +4,8 @@ Derived from [Joint](joint.md).
 
 ```
 HingeJoint {
-         MFNode  device   [ ] # {RotationalMotor, PositionSensor, Brake, PROTO}
-  hidden SFFloat position 0   # [0, inf)
+  MFNode  device   [ ] # {RotationalMotor, PositionSensor, Brake, PROTO}
+  SFFloat position 0   # [0, inf)
 }
 ```
 

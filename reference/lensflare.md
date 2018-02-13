@@ -29,7 +29,7 @@ To simulate a lens flare, a post-processing shader that generates ghosts & halos
 
 - The `transparency` field specifies the blending between the lens flare and the corresponding render (viewpoint or camera).
 
-- The `scale` field is used to modify the strength of the length flare.
+- The `scale` field specifies the strength of the length flare.
 
 - The `biais` field specifies the intensity threshold for lens flare features generation.
 

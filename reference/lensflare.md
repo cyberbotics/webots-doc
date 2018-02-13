@@ -21,7 +21,7 @@ LensFlare {
 
 %end
 
-The [LensFlare](#lensflare) node can be added in the `lensFlare` field of any [Camera](camera.md) or [Viewpoint](viewpoint.md) to simulate lens flare.
+The [LensFlare](#lensflare) node can be added in the `lensFlare` field of any [Camera](camera.md) or [Viewpoint](viewpoint.md) to simulate lens flares.
 The lens flare effect is due to the light being scattered in lens systems through generally unwanted image formation mechanisms, such as internal reflections and scattering from material inhomogeneities in the lens.
 To simulate a lens flare, a post-processing shader that generates ghosts & halos is applied to the render, which can be tweaked with the parameters to achieve the desired effect.
 
@@ -31,11 +31,11 @@ To simulate a lens flare, a post-processing shader that generates ghosts & halos
 
 - The `scale` field specifies the strength of the length flare.
 
-- The `biais` field specifies the intensity threshold for lens flare features generation.
+- The `bias` field specifies the intensity threshold for lens flare features generation.
 
 - The `dispersal` field specifies the dispersal of the ghost samples.
 
-- The `samples` field specifies how many samples to make to generate the ghosts.
+- The `samples` field specifies how many samples are taken to generate the ghosts.
 
 - The `haloWidth` field specifies the lens flare halo width.
 

@@ -70,57 +70,27 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 
 %end
 
-## Samples
+### Samples
 
 Here are listed the different example worlds based on the Pionner 3-DX.
 The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/adept/pioneer3" directory.
 
-### pioneeer3dx.wbt
+#### pioneeer3dx.wbt
 
-The "pioneer3dx.wbt" world file shows a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors (see the "collision\_avoidance.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example).
+![pioneer3dx_example.png](images/pioneer3dx_example.png) The "pioneer3dx.wbt" world file shows a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors (see the "collision\_avoidance.c" controller file).
 
-%figure "Pioneer 3-DX world example"
+#### pioneeer3dx\_collision\_avoidance.wbt
 
-![pioneer3dx_example.png](images/pioneer3dx_example.png)
+![pioneer3dx_collision_avoidance.png](images/pioneer3dx_collision_avoidance.png) The "pioneer3dx\_collision\_avoidance.wbt" world file is a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "obstacle\_avoidance.c" controller file).
 
-%end
+#### pioneeer3dx\_gripper.wbt
 
-### pioneeer3dx\_collision\_avoidance.wbt
+![pioneer3dx_gripper.png](images/pioneer3dx_gripper.png) The "pioneer3dx_gripper.wbt" world file is a simulation example where a gripper is used to move a ball (see the "gripper.c" controller file).
 
-The "pioneer3dx\_collision\_avoidance.wbt" world file is a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "obstacle\_avoidance.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-of-collision-avoidance).
+#### pioneeer3dx\_matlab.wbt
 
-%figure "Pioneer 3-DX world example of collision avoidance"
+![pioneer3dx_matlab.png](images/pioneer3dx_matlab.png) The "pioneer3dx_matlab.wbt" world file is a simulation example an obstacle avoidance behavior using a MATLAB controller (see the "matlab.c" controller file).
 
-![pioneer3dx_collision_avoidance.png](images/pioneer3dx_collision_avoidance.png)
+#### pioneeer3dx\_with\_kinect.wbt
 
-%end
-
-### pioneeer3dx\_gripper.wbt
-
-The "pioneer3dx_gripper.wbt" world file is a simulation example where a gripper is used to move a ball (see the "gripper.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-gripper).
-
-%figure "Pioneer 3-DX world example using a gripper"
-
-![pioneer3dx_gripper.png](images/pioneer3dx_gripper.png)
-
-%end
-
-### pioneeer3dx\_matlab.wbt
-
-The "pioneer3dx_matlab.wbt" world file is a simulation example an obstacle avoidance behavior using a MATLAB controller (see the "matlab.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-of-a-matlab-controller).
-
-%figure "Pioneer 3-DX world example of a MATLAB controller"
-
-![pioneer3dx_matlab.png](images/pioneer3dx_matlab.png)
-
-%end
-
-### pioneeer3dx\_with\_kinect.wbt
-
-The "pioneer3dx\_with\_kinect.wbt" world file is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-kinect).
-
-%figure "Pioneer 3-DX world example using a Kinect"
-
-![pioneer3dx_with_kinect.png](images/pioneer3dx_with_kinect.png)
-
-%end
+![pioneer3dx_with_kinect.png](images/pioneer3dx_with_kinect.png) The "pioneer3dx\_with\_kinect.wbt" world file is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).

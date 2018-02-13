@@ -62,7 +62,7 @@ The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg av
 
 The "pioneer3dx\_with\_kinect.wbt" world file in the same directory is a simple simulation example of an obstacle avoidance behavior based on a Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
 
-%figure "Pioneer 3-DX world example"
+%figure "Pioneer 3-DX world example using a kinect"
 
 ![pioneer3dx_kinect.png](images/pioneer3dx_kinect.png)
 

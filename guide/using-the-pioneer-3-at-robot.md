@@ -51,6 +51,6 @@ The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avo
 
 %figure "Pioneer 3-AT world example"
 
-![pioneer3at_example.png](images/pioneer3at_example.png)
+![pioneer3at_avoidance.png](images/pioneer3at_avoidance.png)
 
 %end

@@ -5,7 +5,7 @@ Derived from [Solid](solid.md).
 ```
 Track {
   MFNode  device           [ ]    # {LinearMotor, PositionSensor, Brake, PROTO}
-  SFVec2f textureAnimation 0 0    # any positive vector
+  SFVec2f textureAnimation 0 0    # any vector
   SFNode  animatedGeometry NULL   # {Shape, Group, PROTO}
   SFInt32 geometriesCount  10     # [0, inf)
 }

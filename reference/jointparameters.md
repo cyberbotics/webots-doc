@@ -3,7 +3,7 @@
 ```
 JointParameters {
   SFFloat position        0       # [0, inf)
-  SFVec3f axis            0 0 1   # [0, 1]
+  SFVec3f axis            0 0 1   # unit axis
   SFFloat minStop         0       # [-pi, pi]
   SFFloat maxStop         0       # [-pi, pi]
   SFFloat springConstant  0       # [0, inf)

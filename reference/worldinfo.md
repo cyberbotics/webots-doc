@@ -16,7 +16,7 @@ WorldInfo {
   SFFloat  physicsDisableAngularThreshold 0.01      # [0, inf)
   SFNode   defaultDamping                 NULL      # {Damping, PROTO}
   SFFloat  inkEvaporation                 0         # [0, inf)
-  SFVec3f  northDirection                 1 0 0     # [-1, 1]
+  SFVec3f  northDirection                 1 0 0     # unit axis
   SFString gpsCoordinateSystem            "local"   # {"WGS84", "local"}
   SFVec3f  gpsReference                   0 0 0     # any vector
   SFFloat  lineScale                      0.1       # [0, inf)

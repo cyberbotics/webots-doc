@@ -48,22 +48,54 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 
 The angle between two consecutive sensor directions is 20 degrees except for the four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
 
-### Pioneer 3-DX obstacle avoidance
+## Samples
 
-The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "braitenberg.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory) as seen in [this figure](#pioneer-3-dx-world-example).
+### pioneeer3dx.wbt
+
+The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "collision\_avoidance.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory) as seen in [this figure](#pioneer-3-dx-world-example).
 
 %figure "Pioneer 3-DX world example"
 
-![pioneer3dx_avoidance.png](images/pioneer3dx_avoidance.png)
+![pioneer3dx_example.png](images/pioneer3dx_example.png)
 
 %end
 
-### Pioneer 3-DX Kinect
+### pioneeer3dx\_collision\_avoidance.wbt
 
-The "pioneer3dx\_with\_kinect.wbt" world file in the same directory as previously is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-kinect)..
+The "pioneer3dx\_collision\_avoidance.wbt" world file in the same directory as previously, is a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-of-collision-avoidance).
+
+%figure "Pioneer 3-DX world example of collision avoidance"
+
+![pioneer3dx_collision_avoidance.png](images/pioneer3dx_collision_avoidance.png)
+
+%end
+
+### pioneeer3dx_gripper.wbt
+
+The "pioneer3dx_gripper.wbt" world file in the same directory as previously, is a simulation example where a gripper is used to move a ball (see the "gripper.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-gripper).
+
+%figure "Pioneer 3-DX world example using a gripper"
+
+![pioneer3dx_gripper.png](images/pioneer3dx_gripper.png)
+
+%end
+
+### pioneeer3dx_matlab.wbt
+
+The "pioneer3dx_matlab.wbt" world file in the same directory as previously, is a simulation example of a MATLAB controller (see the "matlab.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-of-a-matlab-controller).
+
+%figure "Pioneer 3-DX world example of a MATLAB controller"
+
+![pioneer3dx_matlab.png](images/pioneer3dx_matlab.png)
+
+%end
+
+### pioneeer3dx\_with_kinect.wbt
+
+The "pioneer3dx\_with\_kinect.wbt" world file in the same directory as previously, is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-kinect).
 
 %figure "Pioneer 3-DX world example using a Kinect"
 
-![pioneer3dx_kinect.png](images/pioneer3dx_kinect.png)
+![pioneer3dx_with_kinect.png](images/pioneer3dx_with_kinect.png)
 
 %end

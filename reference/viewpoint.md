@@ -3,7 +3,7 @@
 ```
 Viewpoint {
   SFFloat    fieldOfView       0.785398   # [0, pi]
-  SFRotation orientation       0 0 1 0    # {[-1, 1], (-inf, inf)}
+  SFRotation orientation       0 0 1 0    # unit axis, (-inf, inf) angle
   SFVec3f    position          0 0 0      # any vector
   SFString   description       ""         # any string
   SFFloat    near              0.05       # [0, far]

@@ -50,7 +50,7 @@ The angle between two consecutive sensor directions is 20 degrees except for the
 
 ### Pioneer 3-DX obstacle avoidance
 
-The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "braitenberg.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
+The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "braitenberg.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory) as seen in [this figure](#pioneer-3-dx-world-example).
 
 %figure "Pioneer 3-DX world example"
 
@@ -60,7 +60,7 @@ The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg av
 
 ### Pioneer 3-DX kinect
 
-The "pioneer3dx\_with\_kinect.wbt" world file in the same directory is a simple simulation example of an obstacle avoidance behavior based on a Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file).
+The "pioneer3dx\_with\_kinect.wbt" world file in the same directory as previously is a simple simulation example of an obstacle avoidance behavior based on a Microsoft kinect sensor (see the "obstacle\_avoidance\_kinect.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-using-a-kinect).
 
 %figure "Pioneer 3-DX world example using a kinect"
 

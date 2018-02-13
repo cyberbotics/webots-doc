@@ -5,7 +5,7 @@ ContactProperties {
   SFString material1          "default"            # any string
   SFString material2          "default"            # any string
   MFFloat  coulombFriction    1                    # [0, inf)
-  SFVec2f  frictionRotation   0 0                  # [0, inf) 
+  SFVec2f  frictionRotation   0 0                  # any positive vector
   SFFloat  bounce             0.5                  # [0, 1]
   SFFloat  bounceVelocity     0.01                 # [0, inf)
   MFFloat  forceDependentSlip 0                    # [0, inf)

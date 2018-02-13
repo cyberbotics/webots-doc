@@ -2,7 +2,7 @@
 
 ```
 Plane {
-  SFVec2f size 1 1   # (-inf, inf)
+  SFVec2f size 1 1   # any vector
 }
 ```
 

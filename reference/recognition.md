@@ -2,11 +2,11 @@
 
 ```
 Recognition {
-  SFFloat  maxRange       100     # [0, inf]
+  SFFloat  maxRange       100     # [0, inf)
   SFInt32  maxObjects     -1      # {-1, [0, inf)}
   SFBool   occlusion      TRUE    # {TRUE, FALSE}
   SFColor  frameColor     1 0 0   # [0, 1]
-  SFInt32  frameThickness 1       # [0, inf]
+  SFInt32  frameThickness 1       # [0, inf)
 }
 ```
 

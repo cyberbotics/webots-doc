@@ -4,7 +4,7 @@
 WorldInfo {
   SFString title                          ""        # any string
   MFString info                           [ ]       # any string
-  SFVec3f  gravity                        0 -9.81 0 # (-inf, inf)
+  SFVec3f  gravity                        0 -9.81 0 # any vector
   SFFloat  CFM                            0.00001   # [0, inf)
   SFFloat  ERP                            0.2       # [0, 1]
   SFString physics                        ""        # any string
@@ -18,7 +18,7 @@ WorldInfo {
   SFFloat  inkEvaporation                 0         # [0, inf)
   SFVec3f  northDirection                 1 0 0     # [-1, 1]
   SFString gpsCoordinateSystem            "local"   # {"WGS84", "local"}
-  SFVec3f  gpsReference                   0 0 0     # (-inf, inf)
+  SFVec3f  gpsReference                   0 0 0     # any vector
   SFFloat  lineScale                      0.1       # [0, inf)
   MFNode   contactProperties              []        # {ContactProperties, PROTO}
 }

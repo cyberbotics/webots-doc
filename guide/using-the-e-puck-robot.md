@@ -8,6 +8,9 @@
 
 E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
 The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.
+
+The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.
+
 The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.
 E-puck is also available for purchase from Cyberbotics Ltd.
 
@@ -64,16 +67,16 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 
 %figure "E-puck characteristics"
 
-| Characteristics     | Description                                                       |
-| ------------------- | ------------------------------------------------------------------|
-| Dimensions          | 71 mm long, 71 mm large, 50 mm high                          		  |
-| Weight              | 0.16 kg                                                           |
-| Speed               | Max. forward/backward speed: 0.25 m/s; Rotation speed: 6.28 rad/s |
+| Characteristics     | Description                                                       	|
+| ------------------- | ------------------------------------------------------------------- |
+| Dimensions          | 71 mm diameter, 50 mm high, 20.5 mm wheel radius, 52 mm axle length |
+| Encoder resolution  | 0.00625 rad                                                        	|
+| Weight              | 0.16 kg                                                           	|
+| Speed               | Max. forward/backward speed: 0.25 m/s; Rotation speed: 6.28 rad/s 	|
 
 %end
-
-The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.
-Besides standard e-puck devices, the model also provides two slots that can be used to extend the functionality and to equip the robot with additional devices.
+The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
+The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 In particular, the ground sensors module extension of the real e-puck robot is modelled in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
 The [table](#devices-names) displays the names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 
@@ -92,19 +95,6 @@ The [table](#devices-names) displays the names of the simulated devices which ar
 
 %end
 
-%figure "e-puck specifications"
-
-| Main specifications   | Values        |
-| --------------------- | ------------- |
-| Robot radius          | 37 mm         |
-| Wheel radius          | 20.5 mm       |
-| Axle length           | 52 mm         |
-| Encoder resolution    | 0.00628 rad   |
-| Maximum angular speed | 6.28 rad/s    |
-
-%end
-
-The e-puck dimensions and speed specifications are shown in [this table](#e-puck-specifications).
 The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow you to set the speed of the robot and to use its encoders.
 
 %figure "Devices orientations"
@@ -138,9 +128,6 @@ Proximity sensors responses are simulated in accordance with the lookup table in
 %end
 
 The resolution of the camera was limited to 52x39 pixels, as this is the maximum rectangular image with a 4:3 ratio which can be obtained from the remote control interface with the real robot.
-
-The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
-The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 
 %figure "Sensors, LEDs and camera"
 

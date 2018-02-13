@@ -62,10 +62,19 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 
 ### E-puck model
 
-The e-puck model in Webots is depicted in [this figure](#the-e-puck-model-in-webots).
-This model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.
+%figure "E-puck characteristics"
+
+| Characteristics     | Description                                                       |
+| ------------------- | ------------------------------------------------------------------|
+| Dimensions          | 71 mm long, 71 mm large, 50 mm high                          		  |
+| Weight              | 0.16 kg                                                           |
+| Speed               | Max. forward/backward speed: 0.25 m/s; Rotation speed: 6.28 rad/s |
+
+%end
+
+The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.
 Besides standard e-puck devices, the model also provides two slots that can be used to extend the functionality and to equip the robot with additional devices.
-In particular, the ground sensors module extension of the real e-puck robot is modeled in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
+In particular, the ground sensors module extension of the real e-puck robot is modelled in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
 The [table](#devices-names) displays the names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
 
 %figure "Devices names"

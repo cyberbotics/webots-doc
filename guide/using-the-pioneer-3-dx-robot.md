@@ -48,6 +48,28 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 
 The angle between two consecutive sensor directions is 20 degrees except for the four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
 
+The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where the numbers are shown on [this figure](#leds-positions).
+
+%figure "Pioneer 3-DX LED names"
+
+| Number | Name             |
+| ------ | ---------------- |
+| 1      | N/A              |
+| 2      | lower yellow led |
+| 3      | red led 3        |
+| 4      | red led 2        |
+| 5      | white led        |
+| 6      | green led        |
+| 7      | red led 1        |
+
+%end
+
+%figure "LEDs positions"
+
+![pioneer3dx_led.png](images/pioneer3dx_led.png)
+
+%end
+
 ## Samples
 
 Here are listed the different example worlds based on the Pionner 3-DX.

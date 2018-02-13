@@ -47,7 +47,7 @@ The angle between two consecutive sensor directions is 20 degrees except for the
 
 ### Pioneer 3-AT obstacle avoidance
 
-The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behaviour based on the use of a SICK LIDAR (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
+The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LIDAR (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
 
 %figure "Pioneer 3-AT world example"
 

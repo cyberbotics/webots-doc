@@ -73,11 +73,11 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 ## Samples
 
 Here are listed the different example worlds based on the Pionner 3-DX.
-The worlds can be accessed in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory and the controllers in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory.
+The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/adept/pioneer3" directory.
 
 ### pioneeer3dx.wbt
 
-The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors (see the "collision\_avoidance.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example).
+The "pioneer3dx.wbt" world file shows a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors (see the "collision\_avoidance.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example).
 
 %figure "Pioneer 3-DX world example"
 
@@ -87,7 +87,7 @@ The "pioneer3dx.wbt" world file shows a simulation example of the Braitenberg av
 
 ### pioneeer3dx\_collision\_avoidance.wbt
 
-The "pioneer3dx\_collision\_avoidance.wbt" world file is a simulation example of the Braitenberg avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "obstacle\_avoidance.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-of-collision-avoidance).
+The "pioneer3dx\_collision\_avoidance.wbt" world file is a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "obstacle\_avoidance.c" controller file) as seen in [this figure](#pioneer-3-dx-world-example-of-collision-avoidance).
 
 %figure "Pioneer 3-DX world example of collision avoidance"
 

@@ -17,7 +17,7 @@ More information on the specifications and optional devices is available on Adep
 %figure "Pioneer 3-AT characteristics"
 
 | Characteristics             | Description  |
-| --------------------------- | -------------|
+| --------------------------- | ------------ |
 | Length                      | 508 mm       |
 | Width                       | 497 mm       |
 | Height                      | 277 mm       |

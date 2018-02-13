@@ -19,7 +19,7 @@ More information on the specifications and optional devices is available on Adep
 %figure "Pioneer 3-DX characteristics"
 
 | Characteristics             | Description  |
-| --------------------------- | -------------|
+| --------------------------- | ------------ |
 | Length                      | 485 mm       |
 | Width                       | 381 mm       |
 | Height                      | 217 mm       |

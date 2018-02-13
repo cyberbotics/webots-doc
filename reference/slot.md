@@ -3,7 +3,7 @@
 ```
 Slot {
   SFString type     ""     # any string
-  SFNode   endPoint NULL   # {Slot, Group (or derived), PROTO}
+  SFNode   endPoint NULL   # {node, PROTO}
 }
 ```
 

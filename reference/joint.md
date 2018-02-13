@@ -2,7 +2,7 @@
 
 ```
 Joint {
-  SFNode jointParameters NULL   # {JointParameters, PROTO}
+  SFNode jointParameters NULL   # {JointParameters, HingeJointParameters, PROTO}
   SFNode endPoint        NULL   # {Solid, Slot, PROTO}
 }
 ```

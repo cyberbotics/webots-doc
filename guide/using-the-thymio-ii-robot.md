@@ -59,6 +59,8 @@ The calibration was performed using a regular A4 white paper.
 
 %end
 
+## Samples
+
 ### Connect Aseba to the Thymio II model
 
 The default controller of the Thymio II PROTO is the `thymio2_demo` controller.
@@ -92,11 +94,21 @@ To open the Thymio II window, just double click on the 3D model of the robot.
 
 %end
 
-### Thymio II Pen
+### thymio2.wbt
+
+An example of the possible behaviors of the Thymio II is located there (see the [figure](#simulation-of-a-thymio-ii)): "WEBOTS\_HOME/projects/robots/thymio/worlds/thymio2.wbt".
+
+%figure "Simulation of a Thymio II."
+
+![thymio2_example.png](images/thymio2_example.png)
+
+%end
+
+### thymio2\_pen.wbt
 
 You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to the `Thymio2::bodySlot` field.
 This pen can draw on every 3D object.
-This is particularily useful to perform [these exercises](https://aseba.wikidot.com/en:thymiodrawing).
+This is particularly useful to perform [these exercises](https://aseba.wikidot.com/en:thymiodrawing).
 An example of this is located there (see the [figure](#simulation-of-a-thymio-ii-having-a-pen)): "WEBOTS\_HOME/projects/robots/thymio/worlds/thymio2\_pen.wbt".
 
 %figure "Simulation of a Thymio II having a pen."
@@ -105,7 +117,7 @@ An example of this is located there (see the [figure](#simulation-of-a-thymio-ii
 
 %end
 
-### Thymio II Ball
+### thymio2\_ball.wbt
 
 [These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be reproduced by adding a `Thymio2Ball` node in your world.
 The ball can be slightly moved by applying a force on it (`ALT + mouse left click`).

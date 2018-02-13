@@ -16,8 +16,7 @@ The template engine used is [liluat](https://github.com/FSMaxB/liluat) (under th
 
 ### Programming Facts
 
-- Using the template statements is exclusively allowed inside the content scope of the PROTO (cf.
-example).
+- Using the template statements is exclusively allowed inside the content scope of the PROTO (cf. example).
 - A template statement is encapsulated inside the "%{" and the "}%" tokens and can be written on several lines.
 - Adding an "=" just after the opening token ("%{=") allows to evaluate a statement.
 - The fields are accessible into a global Lua dictionary named "fields".
@@ -74,7 +73,19 @@ This module is very useful to manipulate images, it can be used, for example, to
 Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO.
 The following standard fonts are available to write on the texture:
 
- - Arial  - Arial Black  - Comic Sans MS  - Courier New  - Georgia  - Impact  - Lucida Console  - Lucida Sans Unicode  - Palatino Linotype  - Tahoma  - Times New Roman  - Trebuchet MS  - Verdana
+ - Arial
+ - Arial Black
+ - Comic Sans MS
+ - Courier New
+ - Georgia
+ - Impact
+ - Lucida Console
+ - Lucida Sans Unicode
+ - Palatino Linotype
+ - Tahoma
+ - Times New Roman
+ - Trebuchet MS
+ - Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 

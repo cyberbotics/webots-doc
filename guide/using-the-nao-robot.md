@@ -124,11 +124,11 @@ There are currently no means of synchronizing Webots and Choregraphe, but this p
 It is often possible to prevent the simulation speed from going below 1.0x, by keeping the CPU and GPU load as low as possible.
 There are several ways to do that, here are the most effective ones:
 
-- Switch off the simulation of the Nao cameras with the "-nocam" option, as mentioned above
-- Increase the value of `WorldInfo.displayRefesh` in the Scene Tree
-- Switch off the rendering of the shadows: change to FALSE the `castShadows` field of each light source in the Scene Tree
-- Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI components
-- Remove unnecessary objects from the simulation, in particular objects with physics
+- Switch off the simulation of the Nao cameras with the "-nocam" option, as mentioned above.
+- Increase the value of `WorldInfo.displayRefesh` in the Scene Tree.
+- Switch off the rendering of the shadows: change to FALSE the `castShadows` field of each light source in the Scene Tree.
+- Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI components.
+- Remove unnecessary objects from the simulation, in particular objects with physics.
 
 #### Unexpected Webots crashes
 

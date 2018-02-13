@@ -141,19 +141,19 @@ To use the `C++` libraries with your project, their source files should be compi
 
 For example, to add the `C++ automobile libraries`:
 
-- add the following include files to your project (`C/C++ > General > Additional Include Directories`)
+- Add the following include files to your project (`C/C++ > General > Additional Include Directories`):
 
     - `$(WEBOTS_HOME)/projects/automobile/libraries/car/include`
     - `$(WEBOTS_HOME)/projects/automobile/libraries/driver/include`
     - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/include`
     - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/include`
 
-- add the `C` `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
+- Add the `C`, `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
 
     - `car.lib`
     - `driver.lib`
 
-- add the following `C++` source files to your project (`Add / New Filter` and `Add / Existing Item...`)
+- Add the following `C++` source files to your project (`Add / New Filter` and `Add / Existing Item...`):
 
     - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/src/*.cpp`
     - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/src/*.cpp`

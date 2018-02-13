@@ -53,19 +53,17 @@ class TestLists(unittest.TestCase):
         """Test that each sentence is written on one line."""
         for p in self.items:
             lines = p['item'].split('\n')
-            for line in lines:
-                line = re.sub(r'^\s*- ', '', line)
-                line = re.sub(r'^\s*\d+\. ', '', line)
-                line = re.sub(TestLists.hyperlinkRE, '', line)
-                line = re.sub(r'`[^`]*`', '', line)
-                line = line.strip()
-                if len(line) == 0:
-                    continue
-                if not (line.endswith('.') or line.endswith(':') or line.endswith('!')):
-                    print ('"%s": The following line does not end correctly: "%s"' % (p['md'], line))
-                if re.match(r'^[a-z]', line):
-                    print ('"%s": The following line is starting with a lower case: "%s"' % (p['md'], line))
+            if len(lines) <= 2:
+                # Test only the items having 2 lines or more, because they are for sure sentences.
                 continue
+            for line in lines:
+                line = re.sub(r'^\s*- ', '', line)  # Remove item prefix.
+                line = re.sub(r'^\s*\d+\. ', '', line)  # Remove number prefix.
+                line = re.sub(TestLists.hyperlinkRE, '', line)  # Remove hyperlinks.
+                line = re.sub(r'`[^`]*`', '', line)  # Remove code.
+                line = line.strip()
+                if len(line) == 0:  # If it remains something, then test it.
+                    continue
                 self.assertTrue(
                     line.endswith('.') or line.endswith(':') or line.endswith('!'),
                     msg='"%s": The following line does not end correctly: "%s"' % (p['md'], line)

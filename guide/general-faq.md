@@ -19,10 +19,8 @@ Before reporting a bug, please make sure that the problem is actually caused by 
 For example, a crash of the controller process usually indicates a bug in the controller code, not in Webots.
 This situation can be identified by these couple of symptoms:
 
-1. Webots GUI is visible and responsive, but the simulation is blocked (simulation
-time stopped).
-2. The controller process has vanished from the *Task Manager* (Windows) or is
-shows as *<defunct>* when using `ps -e` (Linux/Mac).
+1. Webots GUI is visible and responsive, but the simulation is blocked (simulation time stopped).
+2. The controller process has vanished from the *Task Manager* (Windows) or is shows as *<defunct>* when using `ps -e` (Linux/Mac).
 
 ### Is it possible to use Visual C++ to compile my controllers?
 

@@ -13,3 +13,4 @@ More detailed explanations can be found in the source code.
 - [How To](how-to.md)
 - [Geometries](geometries.md)
 - [Real Robots](real-robots.md)
+- [Environments Directory](environments-directory.md)

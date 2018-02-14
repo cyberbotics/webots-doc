@@ -53,13 +53,13 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 | Microphones    | 3 omni-directional microphones for sound localization                                                                            |
 | Accelerometer  | 3D accelerometer along the X, Y and Z axis                                                                                       |
 | LEDs           | 8 red LEDs on the ring and one green LED on the body                                                                             |
-| Speaker        | on-board speaker capable of playing WAV or tone sounds.                                                                          |
+| Speaker        | on-board speaker capable of playing WAV or tone sounds                                                                           |
 | Switch         | 16 position rotating switch                                                                                                      |
 | Bluetooth      | Bluetooth for robot-computer and robot-robot wireless communication                                                              |
 | Remote Control | infra-red LED for receiving standard remote control commands                                                                     |
 | Expansion bus  | expansion bus to add new possibilities to your robot                                                                             |
 | Programming    | C programming with the GNU GCC compiler system                                                                                   |
-| Simulation     | Webots EDU or PRO facilitates the programming of e-puck with a powerful simulation, remote control and cross-compilation system. |
+| Simulation     | Webots EDU or PRO facilitates the programming of e-puck with a powerful simulation, remote control and cross-compilation system  |
 
 %end
 
@@ -82,7 +82,7 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
 The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 In particular, the ground sensors module extension of the real e-puck robot is modelled in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
-The [table](#devices-names) displays the names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)).
+The names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)) are presented in the [table](#devices-names) below.
 
 %figure "Devices names"
 
@@ -118,12 +118,12 @@ The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow y
 %end
 
 The forward direction of the e-puck is given by the negative *z*-axis of the world coordinates.
-This is also the direction the eye of the camera is looking to; in keeping with the VRML97 standard, the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
+This is also the direction in which the camera eye is looking; to comply to the VRML97 standard, the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
 The axle's direction is given by the positive *x*-axis.
-Proximity sensors, light sensors and LEDs are numbered clockwise; their location and orientation are shown in [this table](#e-puck-specifications) and [this table](#devices-orientations).
+Proximity sensors, light sensors and LEDs are numbered clockwise; their location and orientation are shown in [this table](#e-puck-characterization) and [this table](#devices-orientations).
 The last column of the latter lists the angles between the negative *x*-axis and the direction of the devices, the plane *zOx* being oriented counter-clockwise.
 Note that the proximity sensors and the light sensors are actually the same devices of the real robot used in a different mode, so their direction coincides.
-Proximity sensors responses are simulated in accordance with the lookup table in [this figure](#proximity-sensor-response-against-distance); this table is the outcome of calibrations performed on the real robot.
+Proximity sensor responses are simulated in accordance to the lookup table in [this figure](#proximity-sensor-response-against-distance); this table is the outcome of calibrations performed on the real robot.
 
 %figure "Proximity sensor response against distance"
 
@@ -138,28 +138,6 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 ![e-puck_sensors_and_leds.png](images/e-puck_sensors_and_leds.png)
 
 %end
-
-Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/e-puck/worlds" directory of the Webots distribution.
-The "e-puck\_line.wbt" world (see [this figure](#an-e-puck-extension-for-line-following)) especially examplifies the use of ground sensors.
-Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
-These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
-The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
-This is particularly useful for implementing line following behaviors.
-The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
-This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.
-
-%figure "An e-puck extension for line following"
-
-![e-puck_line.png](images/e-puck_line.png)
-
-%end
-
-The directory "WEBOTS\_HOME/projects/samples/curriculum" contains a rich collection of simulations involving the e-puck robot.
-You will find inside it all the worlds and controllers corresponding to the exercices of Cyberbotics robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
-Written in collaboration with professors and master students of EPFL, Cyberbotics curriculum is an educational document intended for all level of learnings in robotics.
-It addresses a dozen of topics ranging from finite state automata to particle swarm optimization, all illustated through the real or the simulated e-puck robot; you can browse it [here](http://www.cyberbotics.com/curriculum).
-The e-puck models of Webots distribution are open source and you are welcome to modify them.
-If you develop a useful modification and would like to share it, please let us know so that we can improve these models using your contribution.
 
 ### Control interface
 
@@ -304,3 +282,30 @@ This error can be fixed simply by installing the following packets from a termin
 ```sh
 sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386
 ```
+
+### Samples
+
+Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/e-puck/worlds" directory of the Webots distribution.
+
+#### examples
+
+The "e-puck\_line.wbt" world (see [this figure](#an-e-puck-extension-for-line-following)) especially examplifies the use of ground sensors.
+Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
+These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
+The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
+This is particularly useful for implementing line following behaviors.
+The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
+This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.
+
+%figure "An e-puck extension for line following"
+
+![e-puck_line.png](images/e-puck_line.png)
+
+%end
+
+The directory "WEBOTS\_HOME/projects/samples/curriculum" contains a rich collection of simulations involving the e-puck robot.
+You will find inside it all the worlds and controllers corresponding to the exercices of Cyberbotics robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
+Written in collaboration with professors and master students of EPFL, Cyberbotics curriculum is an educational document intended for all level of learnings in robotics.
+It addresses a dozen of topics ranging from finite state automata to particle swarm optimization, all illustrated through the real or the simulated e-puck robot; you can browse it [here](http://www.cyberbotics.com/curriculum).
+The e-puck models of Webots distribution are open source and you are welcome to modify them.
+If you develop a useful modification and would like to share it, please let us know so that we can improve these models using your contribution.

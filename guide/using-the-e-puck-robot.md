@@ -194,8 +194,7 @@ Finally, the camera is used to give a clue on the front environment of the e-puc
 An algorithm is applied on the last line of the camera and returns a integer between -10 and 10 indicating if a black line is perceived respectively at the left and at the right of the e-puck's field of view.
 A condition can be set on this value to get a line follower behavior.
 
-
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file.
+An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file (see below).
 The BotStudio windows appears when the e-puck's controller points on a *.bsg* file.
 
 #### Bluetooth setup

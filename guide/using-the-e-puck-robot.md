@@ -286,25 +286,42 @@ sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386
 
 Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/e-puck/worlds" directory of the Webots distribution.
 
-#### e-puck\_line.wbt
-
-The "e-puck\_line.wbt" world (see [this figure](#an-e-puck-extension-for-line-following)) especially examplifies the use of ground sensors.
-Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
-These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
-The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
-This is particularly useful for implementing line following behaviors.
-The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
-This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.
-
-%figure "An e-puck extension for line following"
-
-![e-puck_line.png](images/e-puck_line.png)
-
-%end
-
 The directory "WEBOTS\_HOME/projects/samples/curriculum" contains a rich collection of simulations involving the e-puck robot.
 You will find inside it all the worlds and controllers corresponding to the exercices of Cyberbotics robotics [curriculum](http://www.cyberbotics.com/publications/RiE2011.pdf).
 Written in collaboration with professors and master students of EPFL, Cyberbotics curriculum is an educational document intended for all level of learnings in robotics.
 It addresses a dozen of topics ranging from finite state automata to particle swarm optimization, all illustrated through the real or the simulated e-puck robot; you can browse it [here](http://www.cyberbotics.com/curriculum).
 The e-puck models of Webots distribution are open source and you are welcome to modify them.
 If you develop a useful modification and would like to share it, please let us know so that we can improve these models using your contribution.
+
+#### e-puck.wbt
+
+![e-puck_example.png](images/e-puck_example.png) The "e-puck.wbt" is a simple example of collision avoidance behavior using a Braitenberg based controller. This is done using the distance sensors of the e-puck.
+
+#### e-puck\_botstudio.wbt
+
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png)
+
+#### e-puck\_botstudio\_with\_floor\_sensors.wbt
+
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png)
+
+#### e-puck\_cross-compilation.wbt
+
+![e-puck_cross-compilation.png](images/e-puck_cross-compilation.png)
+
+#### e-puck\_kinematic.wbt
+
+![e-puck_kinematic.png](images/e-puck_kinematic.png)
+
+#### e-puck\_line.wbt
+
+![e-puck_line.png](images/e-puck_line.png) The "e-puck\_line.wbt" world especially examplifies the use of ground sensors.
+Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
+These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
+The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
+This is particularly useful for implementing line following behaviors.
+
+#### e-puck\_line_demo.wbt
+
+![e-puck_line_demo.png](images/e-puck_line_demo.png) The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
+This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.

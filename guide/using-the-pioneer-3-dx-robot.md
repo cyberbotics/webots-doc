@@ -18,7 +18,7 @@ More information on the specifications and optional devices is available on Adep
 
 %figure "Pioneer 3-DX characteristics"
 
-| Characteristics             | Description  |
+| Characteristics             | Values       |
 | --------------------------- | ------------ |
 | Length                      | 485 mm       |
 | Width                       | 381 mm       |
@@ -95,7 +95,6 @@ The `Pioneer3Gripper` PROTO is mounted on the `extensionSlot` of the `Pioneer3dx
 #### pioneer3dx\_matlab.wbt
 
 ![pioneer3dx_matlab.png](images/pioneer3dx_matlab.png) The "pioneer3dx_matlab.wbt" world file is a simulation example an obstacle avoidance behavior using a MATLAB controller (see the "pioneer3dx\_matlab.m" controller file).
-
 
 #### pioneer3dx\_with\_kinect.wbt
 

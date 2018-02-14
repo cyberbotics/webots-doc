@@ -132,12 +132,12 @@ You can apply a force to the pedals using `Alt + mouse left click.`.
 ![physics.png](images/physics.png) In this example, a robot flies using a physics plugin.
 This plugins is an example of:
 
-- how to access Webots objects in the physics plugin
-- how to exchange information with the controller
-- how to add custom forces
-- how to move objects
-- how to handle collisions
-- how to draw objects using OpenGL
+- How to access Webots objects in the physics plugin.
+- How to exchange information with the controller.
+- How to add custom forces.
+- How to move objects.
+- How to handle collisions.
+- How to draw objects using OpenGL.
 
 ### rope.wbt
 

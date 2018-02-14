@@ -4,8 +4,7 @@ Usually, you will need to have system administrator rights to install Webots.
 Once installed, Webots can be used by a regular, unprivileged user.
 To install Webots, please follow this procedure:
 
-1. Uninstall completely any old version of Webots that may have been installed on
-your computer previously.
+1. Uninstall completely any old version of Webots that may have been installed on your computer previously.
 2. Install Webots for your operating system as explained below.
 
 > **Note**: After installation, the most important Webots features will be available, but some third party tools (such as Java, Python or MATLAB) may be necessary to run or compile specific projects.
@@ -156,19 +155,26 @@ If you observe 3D rendering anomalies or if Webots crashes, it is strongly recom
 ### Installation on macOS
 
 1. Download the "webots-{{ webots.version.package }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
-2. Double click on this file. This will mount on the desktop a volume named
-"Webots" containing the "Webots" folder.
-3. Move this folder to your "/Applications" folder or wherever you would like to
-install Webots.
-4. It is recommended to increase the size of the system shared memory in order to run simulations with more than 8 camera or display devices (such as the PR2 robot). In order to proceed, edit the following file from the Terminal application as administrator: `sudo pico /etc/sysctl.conf`. It is likely this file doesn't exist on your system, in which case an empty file will be created. Edit this file so that it contains the lines:
-```
+2. Double click on this file.
+This will mount on the desktop a volume named "Webots" containing the "Webots" folder.
+3. Move this folder to your "/Applications" folder or wherever you would like to install Webots.
+4. It is recommended to increase the size of the system shared memory in order to run simulations with more than 8 camera or display devices (such as the PR2 robot).
+In order to proceed, edit the following file from the Terminal application as administrator: `sudo pico /etc/sysctl.conf`.
+It is likely this file doesn't exist on your system, in which case an empty file will be created.
+Edit this file so that it contains the lines:
+
+    ```
 kern.sysv.shmmax=16777216
 kern.sysv.shmmin=1
 kern.sysv.shmmni=128
 kern.sysv.shmseg=32
 kern.sysv.shmall=4096
-```
-These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the macOS documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
+    ```
+
+    These settings increase the amount of shared memory to four times the usual default.
+The current values are provided by the following command line: `sysctl -A | grep sysv.shm`.
+Please refer to the macOS documentation to understand the exact meaning of each value.
+You will have to reboot your computer so that these changes are taken into account.
 
 ### macOS security
 

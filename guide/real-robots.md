@@ -433,9 +433,9 @@ To find out which keys will allow you to perform these operations, please read t
 
 Because of its particular structure, this model is also an example of custom ODE plugins for:
 
-- how to create and manage ODE joints
-- how to add custom force
-- how to create spongy tires
+- How to create and manage ODE joints.
+- How to add custom force.
+- How to create spongy tires.
 
 The source code for this controller is in the "WEBOTS\_HOME/projects/robots/shrimp/controllers/shrimp" directory, and the ODE plugin is in the "WEBOTS\_HOME/projects/robots/shrimp/plugins/physics/shrimp" directory.
 
@@ -463,10 +463,10 @@ The source code for the controller of the robot, as well as the model of the rob
 Using the keyboard, the user can control the quadruped robot by setting the walking direction (forward or backwards) and also the heading direction (right or left).
 Keyboard actions include:
 
-- Right Arrow: Turn right
-- Left Arrow: Turn left
-- B: Walk backwards
-- F: Walk forward
+- Right Arrow: Turn right.
+- Left Arrow: Turn left.
+- B: Walk backwards.
+- F: Walk forward.
 
 The walking gait used in the controller relies on an inverse kinematics model.
 Further details are available from [BIRG website](http://birg.epfl.ch/page66584.html).
@@ -477,7 +477,7 @@ During the walk, the extremity of each leg is describing an ellipsoid, the diame
 
 Other keyboard actions are also provided to fine-tune the frequency and the stride length factor:
 
-- Q: Increase frequency
-- W: Decrease frequency
-- S: Increase stride length factor
-- A: Decrease stride length factor
+- Q: Increase frequency.
+- W: Decrease frequency.
+- S: Increase stride length factor.
+- A: Decrease stride length factor.

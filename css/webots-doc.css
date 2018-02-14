@@ -17,9 +17,6 @@
   src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
 }
 
-b, strong {
-  font-weight: bold;
-}
 .webots-doc #left {
   top: 0;
   width: 20%;

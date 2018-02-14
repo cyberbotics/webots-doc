@@ -23,8 +23,8 @@ The main characteristics of the Thymio II model in Webots is summed up in [this 
 
 %figure "Thymio II characteristics"
 
-| Characteristics             | Description  |
-| --------------------------- | -------------|
+| Characteristics             | Values       |
+| --------------------------- | ------------ |
 | Length                      | 112 mm       |
 | Width                       | 117 mm       |
 | Height                      | 53 mm        |

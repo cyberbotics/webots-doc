@@ -316,7 +316,7 @@ These sensors are actually simple infra-red sensors which allow the e-puck robot
 The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
 This is particularly useful for implementing line following behaviors.
 
-#### e-puck\_line_demo.wbt
+#### e-puck\_line\_demo.wbt
 
 ![e-puck_line_demo.png](images/e-puck_line_demo.png) The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
 This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.

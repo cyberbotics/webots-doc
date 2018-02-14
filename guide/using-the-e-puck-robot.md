@@ -199,14 +199,8 @@ Finally, the camera is used to give a clue on the front environment of the e-puc
 An algorithm is applied on the last line of the camera and returns a integer between -10 and 10 indicating if a black line is perceived respectively at the left and at the right of the e-puck's field of view.
 A condition can be set on this value to get a line follower behavior.
 
-An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file.
 
-%figure "BotStudio example"
-
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png)
-
-%end
-
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file.
 The BotStudio windows appears when the e-puck's controller points on a *.bsg* file.
 
 #### Bluetooth setup
@@ -272,12 +266,6 @@ Note that the `Upload HEX...` button of the e-puck control window allows you to 
 
 An example of cross-compilation is given in the "WEBOTS\_HOME/projects/robots/e-puck/controllers/e-puck\_cross-compilation " subdirectory of your Webots directory.
 
-%figure "Cross-compilation example"
-
-![e-puck_cross-compilation_example.png](images/e-puck_cross-compilation_example.png)
-
-%end
-
 #### Cross-compilation issues on Linux 64 bit
 
 When cross-compiling on Linux 64 bit, an error as such may occur:
@@ -298,7 +286,7 @@ sudo apt-get install gcc-4.6-base:i386 libgcc1:i386 libc6:i386
 
 Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/e-puck/worlds" directory of the Webots distribution.
 
-#### examples
+#### e-puck\_line.wbt
 
 The "e-puck\_line.wbt" world (see [this figure](#an-e-puck-extension-for-line-following)) especially examplifies the use of ground sensors.
 Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.

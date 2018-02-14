@@ -132,16 +132,33 @@ Please refer to the [Microsoft Speech API (SAPI)](https://msdn.microsoft.com/en-
 
 **SSML Text-to-speech XML tags supported by the `pico` and `microsoft` engines**
 
-- `prosody` has three supported parameters: `pitch`, `rate` and `volume`.
-  - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch. For example `-2st`. The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
-  - `rate` indicates the speaking rate (speed) of the contained text. This is a relative value, expressed as a number that acts as a multiplier of the default. For example, a value of `1` results in no change in the rate. A value of `.5` results in a halving of the rate. A value of `3` results in a tripling of the rate.
-  - `volume` indicates the volume level of the speaking voice. This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest. For example, `75`. The default is `100`.
+- `prosody` has three supported parameters: `pitch`, `rate` and `volume`:
 
-- `audio` has one supported parameter which is `src`, specifying a WAV file. This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
+    - `pitch` is a relative value expressed as a number preceded by `+` or `-` and followed by `st`, that specifies an amount to change the pitch.
+    For example `-2st`.
+    The `st` suffix indicates the change unit is semitone, which is half of a tone (a half step) on the standard diatonic scale.
+
+    - `rate` indicates the speaking rate (speed) of the contained text.
+    This is a relative value, expressed as a number that acts as a multiplier of the default.
+    For example, a value of `1` results in no change in the rate.
+    A value of `.5` results in a halving of the rate.
+    A value of `3` results in a tripling of the rate.
+
+    - `volume` indicates the volume level of the speaking voice.
+    This value should be expressed as a number in the range of `0` to `100`, from quietest to loudest.
+    For example, `75`.
+    The default is `100`.
+
+- `audio` has one supported parameter which is `src`, specifying a WAV file.
+This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
 
 Example:
 
-```
-Hello! Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian.
-Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>. <prosody rate="0.5">And I can change the speed</prosody><prosody rate="1.5">at which I speak</prosody>. I can also <prosody volume="20">adjust the volume of my voice</prosody>. Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</audio>
+```xml
+Hello!
+Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian.
+Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>.
+<prosody rate="0.5">And I can change the speed</prosody><prosody rate="1.5">at which I speak</prosody>.
+I can also <prosody volume="20">adjust the volume of my voice</prosody>.
+Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</audio>
 ```

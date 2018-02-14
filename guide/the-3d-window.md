@@ -15,16 +15,12 @@ Linux users should also hold down the Control key (Ctrl) together with the Alt k
 
 Dragging the mouse while pressing a mouse button moves the camera of the 3D window.
 
-- **Camera rotation**: In the 3D window, click on an object with the left mouse
-button and drag the mouse to rotate the viewpoint around it. If you click on
-the background, the camera will rotate around its own position.
-- **Camera translation**: In the 3D window, press the right button and drag the
-mouse to translate the camera.
-- **Zooming / Camera rotation**: In the 3D window, press both left and right mouse
-buttons simultaneously (or just the middle button) and drag the mouse
-vertically, to zoom in and out. Dragging the mouse horizontally will rotate the
-camera around the viewing axis. Alternatively, the mouse wheel alone can also be
-used for zooming.
+- **Camera rotation**: In the 3D window, click on an object with the left mouse button and drag the mouse to rotate the viewpoint around it.
+If you click on the background, the camera will rotate around its own position.
+- **Camera translation**: In the 3D window, press the right button and drag the mouse to translate the camera.
+- **Zooming / Camera rotation**: In the 3D window, press both left and right mouse buttons simultaneously (or just the middle button) and drag the mouse vertically, to zoom in and out.
+Dragging the mouse horizontally will rotate the camera around the viewing axis.
+Alternatively, the mouse wheel alone can also be used for zooming.
 
 > **Note**: If you are a Mac user with a single button mouse, hold the Alt key and press the mouse button to translate the camera according to the mouse motion.
 Hold the control key (Ctrl) down and press the mouse button to zoom / rotate the camera.
@@ -57,11 +53,9 @@ These resize handles can also be enabled from the Field Editor.
 
 #### Translation using keyboard shurtcuts
 
-- **Translation**: To move an object parallel to the ground: hold down the shift
-key, press the left mouse button and drag.
-- **Lift**: To raise or lower and object: hold down the Shift key, press both left
-and right mouse buttons (or the middle button) and drag. Alternatively, the
-mouse wheel combined with the Shift key can also be used.
+- **Translation**: To move an object parallel to the ground: hold down the shift key, press the left mouse button and drag.
+- **Lift**: To raise or lower and object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag.
+Alternatively, the mouse wheel combined with the Shift key can also be used.
 
 > **Note**: If you are a Mac user with a single button mouse, hold the Shift key and the Control key (Ctrl) down and press the mouse button to rotate the selected object according to mouse motion.
 Hold the Shift key and the Command key (key with Apple symbol) down and press the mouse button to lift the selected object according to mouse motion.

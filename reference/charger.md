@@ -35,13 +35,11 @@ Note that [Material](material.md) and [Light](light.md) nodes that are going to 
 
 The fields specific to the [Charger](#charger) node are:
 
-- `battery`: this field should contain three values, namely the present energy of
-the charger (*J*), its maximum energy (*J*) and its charging speed (*W=J/s*).
+- `battery`: this field should contain three values, namely the present energy of the charger (*J*), its maximum energy (*J*) and its charging speed (*W=J/s*).
 
-- `radius`: radius of the charging area in meters. The charging area is a sphere
-centered on the origin of the charger coordinate system. The robot can recharge
-itself if its origin is in the charging area (see [this
-figure](#the-sensitive-area-of-a-charger)).
+- `radius`: radius of the charging area in meters.
+The charging area is a sphere centered on the origin of the charger coordinate system.
+The robot can recharge itself if its origin is in the charging area (see [this figure](#the-sensitive-area-of-a-charger)).
 
 %figure "The sensitive area of a charger"
 
@@ -49,12 +47,9 @@ figure](#the-sensitive-area-of-a-charger)).
 
 %end
 
-- `emissiveColor`: color of the first child node (see above) when the charger is
-full.
+- `emissiveColor`: color of the first child node (see above) when the charger is full.
 
-- `gradual`: defines the behavior of the indicator. If set to TRUE, the indicator
-displays a progressive transition between its original color and the
-`emissiveColor` specified in the [Charger](#charger) node, corresponding to the
-present level of charge. If set to FALSE, the indicator remains its original
-color until the charger is fully charged (i.e., the present energy level equals
-the maximum energy level). Then, it switches to the specified `emissiveColor`.
+- `gradual`: defines the behavior of the indicator.
+If set to TRUE, the indicator displays a progressive transition between its original color and the `emissiveColor` specified in the [Charger](#charger) node, corresponding to the present level of charge.
+If set to FALSE, the indicator remains its original color until the charger is fully charged (i.e., the present energy level equals the maximum energy level).
+Then, it switches to the specified `emissiveColor`.

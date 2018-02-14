@@ -44,17 +44,11 @@ void setBalanceEnable(bool q);
 
 These are the open parameters, they have the following impact on the gait:
 
-- X influences the length of the foot step forward, it can take any value between
--1 and 1.
-- Y influences the length of the foot step in the side direction, it can take any
-value between -1 and 1.
-- A influences the angle of the gait and allows also the robot to rotate during
-the walk, it can take any value between 0 and 1.
-- If MoveAimOn is set, it allows the robot to rotate around something by inversing
-the sense of rotation, it can be very useful to turn around a ball in order to
-kick it in the right direction for example.
-- If BalanceEnable is set, the gyroscope is used in the control loop to make the
-walking gait more robust.
+- X influences the length of the foot step forward, it can take any value between -1 and 1.
+- Y influences the length of the foot step in the side direction, it can take any value between -1 and 1.
+- A influences the angle of the gait and allows also the robot to rotate during the walk, it can take any value between 0 and 1.
+- If MoveAimOn is set, it allows the robot to rotate around something by inversing the sense of rotation, it can be very useful to turn around a ball in order to kick it in the right direction for example.
+- If BalanceEnable is set, the gyroscope is used in the control loop to make the walking gait more robust.
 
 Finally the following methods can be used in order to run the algorithm:
 

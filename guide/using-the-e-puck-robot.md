@@ -22,7 +22,7 @@ E-puck is also available for [purchase](https://www.cyberbotics.com/buy) from Cy
 
 %end
 
-E-puck was designed to fulfil the following requirements:
+E-puck was designed to fulfill the following requirements:
 
 - *Elegant design*: the simple mechanical structure, electronics design and software of e-puck is an example of a clean and modern system.
 - *Flexibility*: e-puck covers a wide range of educational activities, offering many possibilities with its sensors, processing power and extensions.

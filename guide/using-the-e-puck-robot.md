@@ -293,19 +293,19 @@ If you develop a useful modification and would like to share it, please let us k
 
 #### e-puck\_botstudio.wbt
 
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png)
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_example.wbt" is an example
 
 #### e-puck\_botstudio\_with\_floor\_sensors.wbt
 
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png)
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_with\_floor\_sensors.wbt" is an example
 
 #### e-puck\_cross-compilation.wbt
 
-![e-puck_cross-compilation.png](images/e-puck_cross-compilation.png)
+![e-puck_cross-compilation.png](images/e-puck_cross-compilation.png) The "e-puck\_cross-compilation.wbt" is an example
 
 #### e-puck\_kinematic.wbt
 
-![e-puck_kinematic.png](images/e-puck_kinematic.png)
+![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example
 
 #### e-puck\_line.wbt
 

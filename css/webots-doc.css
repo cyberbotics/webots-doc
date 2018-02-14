@@ -29,22 +29,23 @@
 }
 .webots-doc #handle {
   left: 20%;
-  width: 6px;
+  width: 3px;
   height: 100%;
   box-sizing: content-box; /* in the online doc, bootstrap is overriding box-sizing */
   position: fixed;
   z-index: 1;
-  background-color: #ededed;
+  background-color: #777;
   cursor: ew-resize;
-  border-left: 1px solid #b6b6b6;
-  border-right: 1px solid #b6b6b6;
+  transition: width 0.05s ease-in-out;
 }
-.webots-doc #handle.default:after {
-  content: '≡';
-  font-size: 9px;
-  color: #aaa;
-  position: absolute;
-  top: 50%;
+.webots-doc #handle:hover {
+  background-color: #aaa;
+  width: 7px;
+}
+.webots-doc #handle:active {
+  width: 7px;
+  background-color: #bbb;
+  cursor: ew-resize;
 }
 .webots-doc #center {
   top: 0px;
@@ -117,19 +118,31 @@
 }
 .webots-doc #accordion li a {
   display: block;
-  background: #ccc;
-  border-top: 1px solid #eee;
-  color: #000;
+  background: transparent;
+  color: #1e3333;
+  padding: 10px;
+}
+.webots-doc #accordion li a.active {
+  background: #333;
+  color: white;
 }
 .webots-doc #accordion li a:hover {
-  background: #999;
-  color: #fff;
+  background: #bbb;
+}
+.webots-doc #accordion li a.active:hover {
+  background: #333;
 }
 .webots-doc #accordion li ul {
   display: none;
 }
 .webots-doc #accordion li ul li a {
   background: #ececec;
+  border-color: #ddd;
+  padding: 10px 10px 10px 30px;
+}
+.webots-doc #accordion li ul li.selected a {
+  background: #777;
+  color: white;
   border-color: #ccc;
 }
 .webots-doc blockquote {
@@ -158,9 +171,6 @@
 .webots-doc li {
   font-family: "Roboto";
   font-weight: normal;
-}
-.webots-doc li.selected {
-  font-weight: bold;
 }
 .webots-doc td {
   padding-left:4px;

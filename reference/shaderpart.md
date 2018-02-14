@@ -27,12 +27,13 @@ For a maximal compatibility range, `GLSL version 120` has been chosen as the onl
 The GLSL documentation is available from following sources:
 
 1. Official sources
-    - [The OpenGL® Shading Language](https://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf)
-    - [OpenGL® Shading Language (GLSL) - Quick Reference Guide](http://mew.cx/glsl_quickref.pdf)
-2. Tutorials
-    - [Lighthouse3d.com](http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/)
-3. Books
-    - [GLSL Essentials by Jacobo Rodríguez](https://www.amazon.com/GLSL-Essentials-Jacobo-Rodr%C3%ADguez/dp/1849698007)
+- [The OpenGL® Shading Language](https://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf)
+- [OpenGL® Shading Language (GLSL)
+- Quick Reference Guide](http://mew.cx/glsl_quickref.pdf) 2.
+Tutorials
+- [Lighthouse3d.com](http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/) 3.
+Books
+- [GLSL Essentials by Jacobo Rodríguez](https://www.amazon.com/GLSL-Essentials-Jacobo-Rodr%C3%ADguez/dp/1849698007)
 
 ### Variables
 
@@ -63,10 +64,10 @@ Some of them are described in the following table:
 - `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
 This constant is particularly useful to loop over the lights.
 - `FOG_TYPE` is an integer matching with the current fog type:
-    - `0` stands for no fog
-    - `1` stands for an exponential fog
-    - `2` stands for an exponential2 fog
-    - `3` stands for a linear fog
+- `0` stands for no fog
+- `1` stands for an exponential fog
+- `2` stands for an exponential2 fog
+- `3` stands for a linear fog
 
 ### X3DOM export
 
@@ -75,6 +76,5 @@ Generally this automatic conversion is working fine, however if you suspect a wr
 
 #### Known differences
 
-- **Lights order**: In Webots the lights list is sorted by the distance between the lights and the target object,
-while in `X3DOM` the list is simply sorted by the Light node definition order.
+- **Lights order**: In Webots the lights list is sorted by the distance between the lights and the target object, while in `X3DOM` the list is simply sorted by the Light node definition order.
 So it's recommended to deal the lights in a generic way.

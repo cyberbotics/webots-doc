@@ -31,15 +31,11 @@ In other words, this joint cannot be statically based.
 
 ### Field Summary
 
-- `jointParameters2`: This field optionally specifies a
-[HingeJointParameters](hingejointparameters.md) node It contains, among others,
-the joint position, the axis position expressed in relative coordinates, the
-stop positions and suspension parameters. If the `jointParameters` field is left
-empty, default values of the HingeJointParameters node apply.
+- `jointParameters2`: This field optionally specifies a [HingeJointParameters](hingejointparameters.md) node.
+It contains, among others, the joint position, the axis position expressed in relative coordinates, the stop positions and suspension parameters.
+If the `jointParameters` field is left empty, default values of the HingeJointParameters node apply.
 
-- `device2`: This field optionally specifies a
-[RotationalMotor](rotationalmotor.md), an angular
-[PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device attached
-to the second axis. If no motor is specified, this part of the joint is passive.
+- `device2`: This field optionally specifies a [RotationalMotor](rotationalmotor.md), an angular [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device attached to the second axis.
+If no motor is specified, this part of the joint is passive.
 
 - `position2`: This field is not visible from the Scene Tree, see [joint's hidden position field](joint.md#joint-s-hidden-position-fields).

@@ -13,7 +13,7 @@ These examples show how to use the basic geometric primitives of Webots in order
 For the most part, primitives are static in these examples, i.e. physics is not applied on them.
 Basically :
 
-- `box.wbt` demonstrates how to use the `Box` node to display a red box.
+- `box.wbt`: demonstrates how to use the `Box` node to display a red box.
 - `capsule.wbt`: demonstrates how to use the `Capsule` node to display a red capsule.
 - `cone.wbt`: demonstrates how to use the `Cone` node to display a red cone.
 - `convex_polygon.wbt`: demonstrates how to use the `IndexedFaceSet` node to display a convex polygon.

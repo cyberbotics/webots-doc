@@ -21,20 +21,14 @@ This is illustrated in the [example](#example) section.
 
 ### Field Summary
 
-- `type`: defines the type of the [Slot](#slot). Two [Slot](#slot) nodes can be
-connected only if their types match. It is possible to specify a gender by
-ending the string with a '`+`' or a '`-`'. In this case, two [Slot](#slot) nodes
-can be connected only if they are of opposite gender (e.g. a [Slot](#slot) with
-a type ending with '`+`' can only be connected to a [Slot](#slot) with the same
-type, except that it ends with '`-`' instead of '`+`'). The default empty type
-matches any type.
+- `type`: defines the type of the [Slot](#slot).
+Two [Slot](#slot) nodes can be connected only if their types match.
+It is possible to specify a gender by ending the string with a '`+`' or a '`-`'.
+In this case, two [Slot](#slot) nodes can be connected only if they are of opposite gender (e.g. a [Slot](#slot) with a type ending with '`+`' can only be connected to a [Slot](#slot) with the same type, except that it ends with '`-`' instead of '`+`').
+The default empty type matches any type.
 
-- `endPoint`: The node inserted in the endPoint of a [Slot](#slot) should be
-another [Slot](#slot) if this [Slot](#slot) is not already connected to another
-[Slot](#slot) (i.e., its parent is a [Slot](#slot)). If the pair of
-[Slot](#slot) nodes is already connected, any node that can usually be inserted
-in a `children` field can be inserted in the `endPoint` field of the second
-[Slot](#slot).
+- `endPoint`: The node inserted in the endPoint of a [Slot](#slot) should be another [Slot](#slot) if this [Slot](#slot) is not already connected to another [Slot](#slot) (i.e., its parent is a [Slot](#slot)).
+If the pair of [Slot](#slot) nodes is already connected, any node that can usually be inserted in a `children` field can be inserted in the `endPoint` field of the second [Slot](#slot).
 
 ### Example
 

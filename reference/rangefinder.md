@@ -34,9 +34,9 @@ An object can be semi-transparent either if its texture has an alpha channel, or
 
 ### Field Summary
 
-- `fieldOfView`: horizontal field of view angle of the range-finder. The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit. Since range-finder pixels are squares, the
-vertical field of view can be computed from the `width`, `height` and horizontal
-`fieldOfView`:
+- `fieldOfView`: horizontal field of view angle of the range-finder.
+The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
+Since range-finder pixels are squares, the vertical field of view can be computed from the `width`, `height` and horizontal `fieldOfView`:
 
     *vertical FOV = fieldOfView * height / width*
 
@@ -44,43 +44,38 @@ vertical field of view can be computed from the `width`, `height` and horizontal
 
 - `height`: height of the image in pixels
 
-- `spherical`: switch between a planar or a spherical projection. A spherical
-projection can be used for example to simulate a lidar device. More information
-on spherical projections is provided in the [spherical
-projection](camera.md#spherical-projection) section of the [Camera](camera.md)
-node.
+- `spherical`: switch between a planar or a spherical projection.
+A spherical projection can be used for example to simulate a lidar device.
+More information on spherical projections is provided in the [spherical projection](camera.md#spherical-projection) section of the [Camera](camera.md) node.
 
-- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane. Objects closer to the range-finder than the near value are not detected by the range-finder. This plane is parallel to the camera retina (i.e., projection plane). The near field determines the precision of the OpenGL depth buffer. A too big value produces underestimated distance values. A typically good value for this field is to set it just big enough so that the shape of the range-finder object is not visible. More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
+- The `near` field defines the distance from the depth camera (used internally by the lidar) to the near clipping plane.
+Objects closer to the range-finder than the near value are not detected by the range-finder.
+This plane is parallel to the camera retina (i.e., projection plane).
+The near field determines the precision of the OpenGL depth buffer.
+A too big value produces underestimated distance values.
+A typically good value for this field is to set it just big enough so that the shape of the range-finder object is not visible.
+More information about the frustum is provided in the [frustum](camera.md#frustum) section of the [Camera](camera.md) node.
 
 - The `minRange` field defines the minimum range of the range-finder (objects closer to the range-finder than the minimum range are not detected (but still occlude other objects).
 
-- The `maxRange` defines the distance between the range-finder and the far
-clipping plane of the OpenGL view frustum. This field defines the maximum range
-that a range-finder can achieve and so the maximum possible value of the range
-image (in meter).
+- The `maxRange` defines the distance between the range-finder and the far clipping plane of the OpenGL view frustum.
+This field defines the maximum range that a range-finder can achieve and so the maximum possible value of the range image (in meter).
 
-- If the `motionBlur` field is greater than 0.0, the image is blurred by the
-motion of the range-finder or objects in the field of view. More information on
-motion blur is provided in the [motionBlur](camera.md) field description of the
-[Camera](camera.md) node.
+- If the `motionBlur` field is greater than 0.0, the image is blurred by the motion of the range-finder or objects in the field of view.
+More information on motion blur is provided in the [motionBlur](camera.md) field description of the [Camera](camera.md) node.
 
-- If the `noise` field is greater than 0.0, a gaussian noise is added to each
-depth value of a range-finder image. A value of 0.0 corresponds to no noise and
-thus saves computation time. A value of 1.0 corresponds to a gaussian noise
-having a standard derivation of `maxRange` meters.
+- If the `noise` field is greater than 0.0, a gaussian noise is added to each depth value of a range-finder image.
+A value of 0.0 corresponds to no noise and thus saves computation time.
+A value of 1.0 corresponds to a gaussian noise having a standard derivation of `maxRange` meters.
 
-- `resolution`: This field defines the depth resolution of the range-finder, that
-is the smallest depth difference that it is able to measure. Setting this field
-to -1 (default) corresponds to an 'infinite' resolution (it can measure any
-infinitesimal change). This field is accepts any value in the interval (0.0,
-inf).
+- `resolution`: This field defines the depth resolution of the range-finder, that is the smallest depth difference that it is able to measure.
+Setting this field to -1 (default) corresponds to an 'infinite' resolution (it can measure any infinitesimal change).
+This field is accepts any value in the interval (0.0, inf).
 
-- The `lens` field may contain a [Lens](lens.md) node to specify the image
-distortion due to the lens geometry.
+- The `lens` field may contain a [Lens](lens.md) node to specify the image distortion due to the lens geometry.
 
-- The `compositor` field specifies the name of a compositor to apply on the depth
-image. More information on compositors is provided in the
-[compositor](camera.md) field description of the [Camera](camera.md) node.
+- The `compositor` field specifies the name of a compositor to apply on the depth image.
+More information on compositors is provided in the [compositor](camera.md) field description of the [Camera](camera.md) node.
 
 ### Overlay Image
 

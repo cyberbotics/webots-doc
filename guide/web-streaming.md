@@ -14,7 +14,8 @@ The mechanism is similar to the [web animation export](web-animation.md) except 
 
 The web interface displays a toolbar with the following items:
 
-- **Simulation time**: this item indicates the current simulation time on the first line. The second line is not used with this streaming solution.
+- **Simulation time**: this item indicates the current simulation time on the first line.
+The second line is not used with this streaming solution.
 - ![](images/web_interface_console.png =26x26) **Console**: open the console window where the simulation messages are printed.
 - ![](images/web_interface_help.png =26x26) **Help**: open the help window containing the documentation of the web interface.
 - ![](images/web_interface_fullscreen.png =26x26) **Fullscreen**: enter full screen mode.

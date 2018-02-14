@@ -16,16 +16,12 @@ E-puck is also available for purchase from Cyberbotics Ltd.
 
 E-puck was designed to fulfill the following requirements:
 
-- *Elegant design*: the simple mechanical structure, electronics design and
-software of e-puck is an example of a clean and modern system.
-- *Flexibility*: e-puck covers a wide range of educational activities, offering
-many possibilities with its sensors, processing power and extensions.
-- *Simulation software*: e-puck is integrated with Webots simulation software for
-easy programming, simulation and remote control of the (physical) robot.
-- *User friendly*: e-puck is small and easy to setup on a tabletop next to a
-computer. It doesn't need any cables, providing optimal working comfort.
-- *Robustness and maintenance*: e-puck is resilient under student use and is
-simple to repair.
+- *Elegant design*: the simple mechanical structure, electronics design and software of e-puck is an example of a clean and modern system.
+- *Flexibility*: e-puck covers a wide range of educational activities, offering many possibilities with its sensors, processing power and extensions.
+- *Simulation software*: e-puck is integrated with Webots simulation software for easy programming, simulation and remote control of the (physical) robot.
+- *User friendly*: e-puck is small and easy to setup on a tabletop next to a computer.
+It doesn't need any cables, providing optimal working comfort.
+- *Robustness and maintenance*: e-puck is resilient under student use and is simple to repair.
 - *Affordable*: the price tag of e-puck is friendly to university budgets.
 
 E-puck is equipped with a large number of devices, as summarized in [this table](#e-puck-features).

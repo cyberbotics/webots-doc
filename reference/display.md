@@ -122,7 +122,19 @@ Only the color channel is affected by the `opacity` according to the [blending](
 The `wb_display_set_font` function defines the font and its `size` (i.e. the character height in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters.
 The following standard fonts are available:
 
- - Arial  - Arial Black  - Comic Sans MS  - Courier New  - Georgia  - Impact  - Lucida Console  - Lucida Sans Unicode  - Palatino Linotype  - Tahoma  - Times New Roman  - Trebuchet MS  - Verdana
+- Arial
+-  Arial Black
+-  Comic Sans MS
+-  Courier New
+-  Georgia
+-  Impact
+-  Lucida Console
+-  Lucida Sans Unicode
+-  Palatino Linotype
+-  Tahoma
+-  Times New Roman
+-  Trebuchet MS
+-  Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 The default font is `Lucida Console, 8 pixels, with anti-aliasing`.

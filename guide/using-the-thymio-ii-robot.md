@@ -62,12 +62,7 @@ The calibration was performed using a regular A4 white paper.
 
 %end
 
-### Samples
-
-Various examples of the possible behaviors of the Thymio II are located here: "WEBOTS\_HOME/projects/robots/mobsya/thymio/worlds".
-The various accessible worlds are described below.
-
-#### Connect Aseba to the Thymio II model
+### Connect Aseba to the Thymio II model
 
 The default controller of the Thymio II PROTO is the `thymio2_demo` controller.
 It should be changed to `thymio2_aseba` to allow the connection to Aseba programming environment.
@@ -99,6 +94,11 @@ To open the Thymio II window, just double click on the 3D model of the robot.
 ![thymio2_window.png](images/thymio2_window.png)
 
 %end
+
+### Samples
+
+Various examples of the possible behaviors of the Thymio II are located here: "WEBOTS\_HOME/projects/robots/mobsya/thymio/worlds".
+The various accessible worlds are described below.
 
 #### thymio2.wbt
 

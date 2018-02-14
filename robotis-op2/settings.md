@@ -28,16 +28,11 @@ If you have added new files to the project, do not forget to add them to the `CX
 Before to send the controller you will also need to complete the `Robot Config` section of the `config.ini` file.
 You have two parameters to fill in:
 
-- `Time step` The time step in milliseconds must be specified in the field
-`time_step`, a minimal time step of 16ms is requested, if no time step (or a
-time step smaller than 16ms) is set, the default time step of 16ms is used.
-Warning: Depending on the complexity of you controller, a time step of 16ms can
-not always be respected. For example using the camera or the manager can slow
-done the speed, so enable them only if you really need them.
-- `Camera resolution` The horizontal and vertical resolution of the camera must be
-set in the fields `camera_width` and `camera_height`. Only the resolutions
-specified in the following table are supported, if another
-resolution is set, the default resolution of 320x240 will be used.
+- `Time step` The time step in milliseconds must be specified in the field `time_step`, a minimal time step of 16ms is requested, if no time step (or a time step smaller than 16ms) is set, the default time step of 16ms is used.
+Warning: Depending on the complexity of you controller, a time step of 16ms can not always be respected.
+For example using the camera or the manager can slow done the speed, so enable them only if you really need them.
+- `Camera resolution` The horizontal and vertical resolution of the camera must be set in the fields `camera_width` and `camera_height`.
+Only the resolutions specified in the following table are supported, if another resolution is set, the default resolution of 320x240 will be used.
 
 %figure "Camera resolutions supported by the camera of the ROBOTIS OP2"
 

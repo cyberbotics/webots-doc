@@ -40,14 +40,13 @@ SimpleTree {
 
 #### SimpleTree Field Summary
 
-- `type`: Defines the texture to be used. If set to `random`, a type will be
-randomly selected in the list.
+- `type`: Defines the texture to be used.
+If set to `random`, a type will be randomly selected in the list.
 - `withSnow`: Defines if the texture used should have snow on top.
 - `height`: Defines the height of the tree.
 - `radius`: Defines the radius of the tree.
 - `subdivision`: Defines the number of faces used to represent the tree.
-- `enableBoundingObject`: Defines if the tree should have a bounding object (the
-bounding object is made of a simple cylinder).
+- `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 
 ### Tree
 
@@ -87,19 +86,15 @@ Forest {
 
 #### Forest Field Summary
 
-- `treesFiles`: Can be used to define the paths to several files in which are
-defined the positions of the trees (one tree per line, using the format 'X Y
-Z').
-- `shape`: Alternatively, the position of each trees can be defined using the
-`shape` field. This field defines the shape of the forest, in that case the
-position of the trees is randomly generated from this shape.
-- `density`: If the forest is defined using the `shape` field, this field defines
-the density of three to be generated (in trees per meter square).
-- `type`: Defines the type of threes, in case of `random` type, the forest will be
-mixed.
-- `groundTexture`: Defines the texture of the forest ground. If this field is empty the forest ground is not displayed.
+- `treesFiles`: Can be used to define the paths to several files in which are defined the positions of the trees (one tree per line, using the format 'X Y Z').
+- `shape`: Alternatively, the position of each trees can be defined using the `shape` field.
+This field defines the shape of the forest, in that case the position of the trees is randomly generated from this shape.
+- `density`: If the forest is defined using the `shape` field, this field defines the density of three to be generated (in trees per meter square).
+- `type`: Defines the type of threes, in case of `random` type, the forest will be mixed.
+- `groundTexture`: Defines the texture of the forest ground.
+If this field is empty the forest ground is not displayed.
 - `withSnow`: Defines whether the texture used should have snow on top.
-- `minHeight and maxHeight`: Defines the height interval. The height of each tree
-is independently and randomly selected between `minHeight` and `maxHeight`.
-- `minRadius and maxRadius`: Defines the radius interval. The radius of each tree
-is independently and randomly selected between `minRadius` and `maxRadius`.
+- `minHeight and maxHeight`: Defines the height interval.
+The height of each tree is independently and randomly selected between `minHeight` and `maxHeight`.
+- `minRadius and maxRadius`: Defines the radius interval.
+The radius of each tree is independently and randomly selected between `minRadius` and `maxRadius`.

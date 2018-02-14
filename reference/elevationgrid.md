@@ -26,11 +26,9 @@ Both `xDimension` and `zDimension` shall be greater than or equal to zero.
 If either the `xDimension` or the `zDimension` is less than two, the [ElevationGrid](#elevationgrid) contains no quadrilaterals.
 The vertex locations for the quadrilaterals are defined by the `height` field and the `xSpacing` and `zSpacing` fields:
 
-- The `height` field is an `xDimension` by `zDimension` array of scalar values
-representing the height above the grid for each vertex.
+- The `height` field is an `xDimension` by `zDimension` array of scalar values representing the height above the grid for each vertex.
 
-- The `xSpacing` and `zSpacing` fields indicate the distance between vertices in
-the *x* and *z* directions respectively, and shall be greater than zero.
+- The `xSpacing` and `zSpacing` fields indicate the distance between vertices in the *x* and *z* directions respectively, and shall be greater than zero.
 
 %figure "ElevationGrid node"
 

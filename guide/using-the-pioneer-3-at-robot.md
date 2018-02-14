@@ -10,7 +10,7 @@ The Pioneer 3-AT robot is an all-purpose outdoor base, used for research and pro
 It is caracterized by a set of features listed in [this table](#pioneer-3-at-characteristics).
 This model includes support for 4 motors and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity measurements.
 
-More information on the specifications and optional devices is available on Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/ResearchRobots/P3AT.aspx).
+More information on the specifications and optional devices is available on the Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/ResearchRobots/P3AT.aspx).
 
 ### Pioneer 3-AT model
 

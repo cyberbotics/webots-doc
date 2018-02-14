@@ -65,7 +65,7 @@ The calibration was performed using a regular A4 white paper.
 ### Samples
 
 Various examples of the possible behaviors of the Thymio II are located here: "WEBOTS\_HOME/projects/robots/mobsya/thymio/worlds".
-The various accessible worlds are described bellow.
+The various accessible worlds are described below.
 
 #### Connect Aseba to the Thymio II model
 

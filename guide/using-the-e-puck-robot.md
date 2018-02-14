@@ -12,7 +12,7 @@ The hardware and software of e-puck is fully open source, providing low level ac
 The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding LEDs, the body and front LEDs; the other e-puck devices are not yet simulated in the current model.
 
 The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.
-E-puck is also available for purchase from Cyberbotics Ltd.
+E-puck is also available for [purchase](https://www.cyberbotics.com/buy) from Cyberbotics Ltd.
 
 ### Overview of the robot
 
@@ -39,7 +39,7 @@ simple to repair.
 
 E-puck is equipped with a large number of devices, as summarized in [this table](#e-puck-features).
 
-%figure "e-puck features"
+%figure "E-puck features"
 
 | Feature        | Description                                                                                                                      |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,14 +67,18 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 
 %figure "E-puck characteristics"
 
-| Characteristics     | Description                                                       	|
-| ------------------- | ------------------------------------------------------------------- |
-| Dimensions          | 71 mm diameter, 50 mm high, 20.5 mm wheel radius, 52 mm axle length |
-| Encoder resolution  | 0.00625 rad                                                        	|
-| Weight              | 0.16 kg                                                           	|
-| Speed               | Max. forward/backward speed: 0.25 m/s; Rotation speed: 6.28 rad/s 	|
+| Characteristics             | Values       |
+| --------------------------- | ------------ |
+| Diameter                    | 71 mm        |
+| Height                      | 50 mm        |
+| Wheel radius                | 20.5 mm      |
+| Axle Length                 | 52 mm        |
+| Weight                      | 0.16 kg      |
+| Max. forward/backward speed | 0.25 m/s     |
+| Max. rotation speed         | 6.28 rad/s   |
 
 %end
+
 The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
 The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 In particular, the ground sensors module extension of the real e-puck robot is modelled in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
@@ -161,7 +165,7 @@ If you develop a useful modification and would like to share it, please let us k
 
 #### Robot window
 
-%figure "The e-puck robot window"
+%figure "E-puck robot window"
 
 ![e-puck_control.png](images/e-puck_robot_window.png)
 

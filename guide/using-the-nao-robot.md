@@ -6,20 +6,6 @@ The Nao robot is a humanoid robot developed by [Aldebaran Robotics](http://www.a
 This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [Aldebaran Robotics](http://www.aldebaran-robotics.com).
 Currently, Webots supports the Nao v3.3, v4.0 and v5.0 versions, with and without their articulated fingers (respectively with 25 and 21 degrees of freedom) for the first two.
 
-The Webots installation includes several world files with Nao robots.
-You will find some in this folder: "WEBOTS\_HOME/projects/robots/aldebaran/worlds".
-The "nao.wbt" and "nao\_indoors.wbt" are meant to be used with Choregraphe (see below).
-The "nao\_demo.wbt" is a demonstration of a very simple controller that uses Webots C API instead of Choregraphe.
-The "nao\_matlab.wbt" world is an example of programming Webots using the Matlab API.
-The "nao\_robocup.wbt" world is an example of how to use the NAOqi API inside Webots.
-It is the same API that is used in Choregraphe, meaning that you can program Nao inside Webots without using Choregraphe if you want to.
-In this world, Nao tries to shoot the ball in the goal.
-You can find another NAOqi example in the "WEBOTS\_HOME/projects/contests/nao\_challenge/2013-2014/worlds" folder.
-The "challenge.wbt" file in this folder is a solution to the NAO Challenge contest (edition 2013-2014).
-
-In addition to that, Nao robots are also used in the world files of the [Robotstadium](http://www.robotstadium.org) contest.
-These files are located in this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".
-
 ### Using Webots with Choregraphe
 
 These instructions have been tested with Webots 8.0.0 and Choregraphe 2.1.1.10.
@@ -142,3 +128,19 @@ On Linux, you can use the `killall` or the `pkill` commands, e.g.:
 ```sh
 $ killall hal naoqi-bin
 ```
+
+### Samples
+
+The Webots installation includes several world files with Nao robots.
+You will find some in this folder: "WEBOTS\_HOME/projects/robots/aldebaran/worlds".
+The "nao.wbt" and "nao\_indoors.wbt" are meant to be used with Choregraphe (see above).
+The "nao\_demo.wbt" is a demonstration of a very simple controller that uses Webots C API instead of Choregraphe.
+The "nao\_matlab.wbt" world is an example of programming Webots using the Matlab API.
+The "nao\_robocup.wbt" world is an example of how to use the NAOqi API inside Webots.
+It is the same API that is used in Choregraphe, meaning that you can program Nao inside Webots without using Choregraphe if you want to.
+In this world, Nao tries to shoot the ball in the goal.
+You can find another NAOqi example in the "WEBOTS\_HOME/projects/contests/nao\_challenge/2013-2014/worlds" folder.
+The "challenge.wbt" file in this folder is a solution to the NAO Challenge contest (edition 2013-2014).
+
+In addition to that, Nao robots are also used in the world files of the [Robotstadium](http://www.robotstadium.org) contest.
+These files are located in this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".

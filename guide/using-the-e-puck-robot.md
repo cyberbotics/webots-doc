@@ -114,7 +114,7 @@ The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow y
 %end
 
 The forward direction of the e-puck is given by the negative *z*-axis of the world coordinates.
-This is also the direction in which the camera eye is looking; to comply to the VRML97 standard, the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
+This is also the direction in which the camera eye is looking; the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
 The axle's direction is given by the positive *x*-axis.
 Proximity sensors, light sensors and LEDs are numbered clockwise; their location and orientation are shown in [this table](#e-puck-characterization) and [this table](#devices-orientations).
 The last column of the latter lists the angles between the negative *x*-axis and the direction of the devices, the plane *zOx* being oriented counter-clockwise.

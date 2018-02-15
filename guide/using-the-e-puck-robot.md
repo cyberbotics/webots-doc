@@ -291,6 +291,19 @@ If you develop a useful modification and would like to share it, please let us k
 
 ![e-puck_example.png](images/e-puck_example.png) The "e-puck.wbt" is a simple example of collision avoidance behavior using a Braitenberg based controller. This is done using the distance sensors of the e-puck.
 
+#### e-puck\_line.wbt
+
+![e-puck_line.png](images/e-puck_line.png) The "e-puck\_line.wbt" world especially examplifies the use of ground sensors.
+Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
+These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
+The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
+This is particularly useful for implementing line following behaviors.
+
+#### e-puck\_line\_demo.wbt
+
+![e-puck_line_demo.png](images/e-puck_line_demo.png) The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
+This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.
+
 #### e-puck\_botstudio.wbt
 
 ![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_example.wbt" is an example of a controller using the BotStudio visual programming language. The BotStudio windows appears upon double clicking on the e-puck allowing the user to see which command is executed.
@@ -306,16 +319,3 @@ If you develop a useful modification and would like to share it, please let us k
 #### e-puck\_kinematic.wbt
 
 ![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example world similar to "e-puck.wbt" but where the kinematic field of the E-puck PROTO node is true. This allows the robot's motion to be calculated according to 2D kinematics algorithms and the collision detection to be calculated with 3D algorithms. More information on the kinematic mode can be found [here](https://www.cyberbotics.com/doc/reference/differentialwheels).
-
-#### e-puck\_line.wbt
-
-![e-puck_line.png](images/e-puck_line.png) The "e-puck\_line.wbt" world especially examplifies the use of ground sensors.
-Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
-These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
-The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
-This is particularly useful for implementing line following behaviors.
-
-#### e-puck\_line\_demo.wbt
-
-![e-puck_line_demo.png](images/e-puck_line_demo.png) The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
-This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.

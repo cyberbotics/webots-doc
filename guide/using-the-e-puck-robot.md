@@ -195,7 +195,7 @@ An algorithm is applied on the last line of the camera and returns a integer bet
 A condition can be set on this value to get a line follower behavior.
 
 An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/e-puck/world/e-puck\_botstudio.wbt" world file (see below).
-The BotStudio windows appears when the e-puck's controller points on a *.bsg* file.
+The BotStudio windows appears upon double clicking on the e-puck when the controller points on a *.bsg* file.
 
 #### Bluetooth setup
 
@@ -293,19 +293,19 @@ If you develop a useful modification and would like to share it, please let us k
 
 #### e-puck\_botstudio.wbt
 
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_example.wbt" is an example
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_example.wbt" is an example of a controller using the BotStudio visual programming language. The BotStudio windows appears upon double clicking on the e-puck allowing the user to see which command is executed.
 
 #### e-puck\_botstudio\_with\_floor\_sensors.wbt
 
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_with\_floor\_sensors.wbt" is an example
+![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_with\_floor\_sensors.wbt" is an example world similar to that of "e-puck\_botstudio\_example.wbt" but where the e-puck has a line following behavior based on its floor sensors.
 
 #### e-puck\_cross-compilation.wbt
 
-![e-puck_cross-compilation.png](images/e-puck_cross-compilation.png) The "e-puck\_cross-compilation.wbt" is an example
+![e-puck_cross-compilation.png](images/e-puck_cross-compilation.png) The "e-puck\_cross-compilation.wbt" is an example using a cross-compilation controller.
 
 #### e-puck\_kinematic.wbt
 
-![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example
+![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example world similar to "e-puck.wbt" but where the kinematic field of the E-puck PROTO node is true. This allows the robot's motion to be calculated according to 2D kinematics algorithms and the collision detection to be calculated with 3D algorithms. More information on the kinematic mode can be found [here](https://www.cyberbotics.com/doc/reference/differentialwheels).
 
 #### e-puck\_line.wbt
 

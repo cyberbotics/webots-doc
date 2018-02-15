@@ -37,7 +37,7 @@ The small `Solids` are affected by the fluids' viscosity and by forces generated
 
 ![geometric_primitives.png](images/geometric_primitives.png) This example demonstrates the geometric primitives natively supported in Webots.
 The primitives are inserted into `Transform` and `Shape` nodes.
-Therefore there are static, i.e. physics is not applied on them.
+Therefore they are static, i.e. physics is not applied on them.
 
 ### high\_resolution\_indexedfaceset.wbt
 

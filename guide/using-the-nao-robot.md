@@ -151,23 +151,23 @@ In this world, Nao tries to shoot the ball in the goal.
 
 #### challenge.wbt
 
-![nao_challenge.png](images/nao_challenge.png) The "challenge.wbt" world in located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds"; and is a solution to the NAO Challenge contest (edition 2013-2014).
-
-#### get\_the\_candies.wbt
-
-![nao_get_the_candies.png](images/nao_get_the_candies.png) The "get\_the\_candies.wbt" world is located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao\_challenge/2014-2015/worlds"; where the task is to carry the candies from the shelf to the cart.
-
-#### get\_the\_candies\_with\_2\_robots.wbt
-
-![nao_get_the_candies_with_2_robots.png](images/nao_get_the_candies_with_2_robots.png) The "get\_the\_candies.wbt" world is located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao\_challenge/2014-2015/worlds"; where the task is to carry the candies from the shelf to the cart using two Nao robots.
-
-#### play\_a\_movie.wbt
-
-![nao_play_a_movie.png](images/nao_play_a_movie.png) The "get\_the\_candies.wbt" world is located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao\_challenge/2014-2015/worlds"; where the task is to turn the TV on.
+![nao_challenge.png](images/nao_challenge.png) The "challenge.wbt" world in located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds"; and is a solution to the NAO Challenge contest (2013-2014 edition).
 
 #### play\_with\_me.wbt
 
-![nao_play_with_me.png](images/nao_play_with_me.png) The.
+![nao_play_with_me.png](images/nao_play_with_me.png) The "play\_with\_me.wbt" world is a simple Nao robot that can be controlled using Choregraphe. Along with "get\_the\_candies.wbt", "get\_the\_candies\_with\_2\_robots.wbt" and "play\_a\_movie.wbt", this world can be found in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao\_challenge/2014-2015/worlds"; as it was part of a NAO Challenge contest (2014-2015 edition).
+
+#### get\_the\_candies.wbt
+
+![nao_get_the_candies.png](images/nao_get_the_candies.png) The "get\_the\_candies.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to carry the candies from the shelf to the cart.
+
+#### get\_the\_candies\_with\_2\_robots.wbt
+
+![nao_get_the_candies_with_2_robots.png](images/nao_get_the_candies_with_2_robots.png) The "get\_the\_candies\_with\_2\_robots.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to carry the candies from the shelf to the cart using two Nao robots.
+
+#### play\_a\_movie.wbt
+
+![nao_play_a_movie.png](images/nao_play_a_movie.png) The "play\_a\_movie.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to turn the TV on.
 
 #### robotstadium\_nao\_vs\_robotis-op2.wbt
 

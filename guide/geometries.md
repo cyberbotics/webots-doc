@@ -35,7 +35,7 @@ The small `Solids` are affected by the fluids' viscosity and by forces generated
 
 **Keywords**: Box, Capsule, Cone, Cylinder, ElevationGrid, IndexedLineSet, IndexedFaceSet, Plane, Sphere
 
-![geometric_primitives.png](images/geometric_primitives.png) This example shows the use of base geometric primitives of Webots to display untextured and colored 3D shapes in the 3D window.
+![geometric_primitives.png](images/geometric_primitives.png) This example demonstrates the geometric primitives natively supported in Webots.
 The primitives are inserted into `Transform` and `Shape` nodes.
 Therefore there are static, i.e. physics is not applied on them.
 

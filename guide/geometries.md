@@ -5,21 +5,13 @@ The world files for these examples are located in the "sample/geometries/worlds"
 
 In this directory, you will find the following world files :
 
-### box.wbt, capsule.wbt, cone.wbt, convex\_polygon.wbt, cylinder.wbt, non\_convex\_polygon.wbt, polyhedra.wbt, sphere.wbt
+### base\_graphical\_geometries.wbt
 
-**Keywords**: Box, Capsule, Cone, Cylinder, Sphere, IndexedFaceSet, basic 3D primitives
+**Keywords**: Box, Capsule, Cone, Cylinder, ElevationGrid, IndexedLineSet, IndexedFaceSet, Plane, Sphere
 
-These examples show how to use the basic geometric primitives of Webots in order to display untextured and colored 3D shapes in the 3D window.
-For the most part, primitives are static in these examples, i.e. physics is not applied on them.
-Basically :
-
-- `box.wbt`: demonstrates how to use the `Box` node to display a red box.
-- `capsule.wbt`: demonstrates how to use the `Capsule` node to display a red capsule.
-- `cone.wbt`: demonstrates how to use the `Cone` node to display a red cone.
-- `convex_polygon.wbt`: demonstrates how to use the `IndexedFaceSet` node to display a convex polygon.
-- `cylinder.wbt`: demonstrates how to use the `Cylinder` node to display a red cylinder.
-- `polyhedra.wbt`: demonstrates how to use the `IndexedFaceSet` node to display a red polyhedra.
-- `sphere.wbt`: demonstrates how to use the `Sphere` node to display a red sphere.
+![base_graphical_geometries.png](images/base_graphical_geometries.png) These examples show the use of base geometric primitives of Webots to display untextured and colored 3D shapes in the 3D window.
+The primitives are inserted into `Transform` and `Shape` nodes.
+Therefore there are static, i.e. physics is not applied on them.
 
 ### extended\_solids.wbt
 

@@ -151,7 +151,7 @@ In this world, Nao tries to shoot the ball in the goal.
 
 #### challenge.wbt
 
-You can find another NAOqi example in the "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds" folder.
+![nao_challenge.png](images/nao_challenge.png) You can find another NAOqi example in the "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds" folder.
 The "challenge.wbt" file in this folder is a solution to the NAO Challenge contest (edition 2013-2014).
 
 #### get\_the\_candies.wbt

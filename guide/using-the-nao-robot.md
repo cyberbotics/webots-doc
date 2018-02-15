@@ -1,6 +1,10 @@
 ## Using the Nao robot
 
-### Introduction
+%figure "Nao, a humanoid robot"
+
+![nao.png](images/nao.png)
+
+%end
 
 The Nao robot is a humanoid robot developed by [Aldebaran Robotics](http://www.aldebaran-robotics.com).
 This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [Aldebaran Robotics](http://www.aldebaran-robotics.com).
@@ -50,6 +54,10 @@ Then, double-click on any of the Nao parts in Choregraphe: a small window with c
 Now, move any of the sliders: the motor movement in Choregraphe should be reflected in the Webots simulation.
 If you open the Video monitor in Choregraphe you should see the picture of the Nao camera simulated by Webots.
 
+It is possible to have several Nao robots in your simulation.
+However, each Nao robot must use a different NAOqi port.
+This can be done in the `controllerArgs` field in the newly created robot, e.g. 9560.
+
 #### Using motion boxes
 
 Now we can test some of the motion boxes of Choregraphe.
@@ -70,26 +78,6 @@ The resolution of the image capture can be changed in Webots using the `cameraWi
 Note that the simulation speed decreases as the resolution increases.
 It is possible to hide the camera viewports (purple frame) in Webots, by setting the `cameraPixelSize` field to 0.
 It is also possible to completely switch off the camera simulation by adding the "-nocam" option before the NAOqi port number in the `controllerArgs` field, e.g. "-nocam 9559".
-
-### Using Several Nao robots
-
-It is possible to have several Nao robots in your simulation.
-However, each Nao robot must use a different NAOqi port.
-Here's how to copy a Nao and assign the NAOqi port number:
-
-1. Pause the simulation: push the `Pause` button in Webots 3D View.
-2. Revert the simulation: push the `Revert` button in Webots 3D View.
-3. In Webots Scene Tree, select a top level nodes, e.g. the Nao robot.
-4. Then push the `Add` button, a dialog appears.
-5. In the dialog, select `PROTO (Webots) / robots`.
-6. Then select one of the Nao models from the list, the Nao is added to the current world.
-7. Select the Nao in the 3D view and move it away from the other one: SHIFT + left mouse button.
-8. Select the `controllerArgs` field in the newly created robot and increase the port number, e.g. 9560.
-9. Save the .wbt file: push the `Save` button.
-10. Now you can push the `Real-time` button to run the simulation with several robots.
-
-Repeat the above procedure for each additional robot that you need.
-Remember that every robot must have a different port number specified in `controllerArgs`.
 
 ### Known Problems
 

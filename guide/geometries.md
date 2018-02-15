@@ -5,11 +5,11 @@ The world files for these examples are located in the "sample/geometries/worlds"
 
 In this directory, you will find the following world files :
 
-### base\_graphical\_geometries.wbt
+### geometric\_primitives.wbt
 
 **Keywords**: Box, Capsule, Cone, Cylinder, ElevationGrid, IndexedLineSet, IndexedFaceSet, Plane, Sphere
 
-![base_graphical_geometries.png](images/base_graphical_geometries.png) These examples show the use of base geometric primitives of Webots to display untextured and colored 3D shapes in the 3D window.
+![geometric_primitives.png](images/geometric_primitives.png) These examples show the use of base geometric primitives of Webots to display untextured and colored 3D shapes in the 3D window.
 The primitives are inserted into `Transform` and `Shape` nodes.
 Therefore there are static, i.e. physics is not applied on them.
 

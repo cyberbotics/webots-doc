@@ -123,12 +123,6 @@ $ killall hal naoqi-bin
 The Webots installation includes several world files with Nao robots.
 You will find some in this folder: "WEBOTS\_HOME/projects/robots/aldebaran/worlds".
 
-You can find other NAOqi examples in the "WEBOTS\_HOME/projects/contests/nao\_challenge/2013-2014/worlds" folder.
-The "challenge.wbt" file in this folder is a solution to the NAO Challenge contest (edition 2013-2014).
-
-In addition to that, Nao robots are also used in the world files of the [Robotstadium](http://www.robotstadium.org) contest.
-These files are located in this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".
-
 #### nao.wbt
 
 ![nao_example.png](images/nao_example.png) The "nao.wbt" and "nao\_indoors.wbt" are meant to be used with Choregraphe (see above).
@@ -154,3 +148,31 @@ These files are located in this folder: "WEBOTS\_HOME/projects/contests/robotsta
 ![nao_robocup.png](images/nao_robocup.png) The "nao\_robocup.wbt" world is an example of how to use the NAOqi API inside Webots.
 It is the same API that is used in Choregraphe, meaning that you can program Nao inside Webots without using Choregraphe if you want to.
 In this world, Nao tries to shoot the ball in the goal.
+
+#### challenge.wbt
+
+You can find another NAOqi example in the "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds" folder.
+The "challenge.wbt" file in this folder is a solution to the NAO Challenge contest (edition 2013-2014).
+
+#### get\_the\_candies.wbt
+
+![nao_get_the_candies.png](images/nao_get_the_candies.png) The.
+
+#### get\_the\_candies\_with\_2\_robots.wbt
+
+![nao_get_the_candies_with_2_robots.png](images/nao_get_the_candies_with_2_robots.png) The.
+
+#### play\_a\_movie.wbt
+
+![nao_play_a_movie.png](images/nao_play_a_movie.png) The.
+
+#### play\_with\_me.wbt
+
+![nao_play_with_me.png](images/nao_play_with_me.png) The.
+
+#### robotstadium\_nao\_vs\_robotis-op2.wbt
+
+![nao_vs_robotis-op2.png](images/nao_vs_robotis-op2.png) The.
+
+In addition to that, Nao robots are also used in the world files of the [Robotstadium](http://www.robotstadium.org) contest.
+These files are located in this folder: "WEBOTS\_HOME/projects/contests/robotstadium/worlds".

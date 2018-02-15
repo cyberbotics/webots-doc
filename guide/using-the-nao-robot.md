@@ -135,7 +135,7 @@ You will find some in this folder: "WEBOTS\_HOME/projects/robots/aldebaran/world
 
 ![nao_example.png](images/nao_example.png) The "nao\_matlab.wbt" world is an example of programming Webots using the Matlab API.
 
-#### nao\_without_camera.wbt
+#### nao\_without\_camera.wbt
 
 ![nao_without_camera.png](images/nao_without_camera.png) The.
 

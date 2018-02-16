@@ -10,19 +10,6 @@ XXX
 
 ### Aibo ERS7 model
 
-%figure "Aibo ERS7 characteristics"
-
-| Characteristics             | Values       |
-| --------------------------- | ------------ |
-| Length                      | 508 mm       |
-| Width                       | 497 mm       |
-| Height                      | 277 mm       |
-| Weight                      | 12 kg        |
-| Max. forward/backward speed | 2.2 m/s      |
-| Max. rotation speed         | 20 rad/s     |
-
-%end
-
 
 ### Samples
 

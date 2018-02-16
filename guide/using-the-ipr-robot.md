@@ -13,6 +13,10 @@ More information is available on the Neuronics official [webpage](http://www.neu
 
 ### IPR models
 
+#### IPR HD6M 180 and IPR HDMms 180
+
+#### IPR HD6M 90 and IPR HD6Ms 90
+
 XXX.
 
 ### Samples

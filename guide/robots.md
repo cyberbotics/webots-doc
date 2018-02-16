@@ -4,7 +4,7 @@
 
 ![e-puck.png](images/e-puck.png) [Using the e-puck robot](using-the-e-puck-robot.md)
 
-![ipr.png](images/ipr.png) [Using the IPR robot](using-the-ipr-robot.md)
+![ipr.png](images/ipr_short.png) [Using the IPR robot](using-the-ipr-robot.md)
 
 ![nao_short.png](images/nao_short.png) [Using the Nao robot](using-the-nao-robot.md)
 

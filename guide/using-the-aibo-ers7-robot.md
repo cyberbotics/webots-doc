@@ -44,8 +44,6 @@ The following [table](#aibo-ers7-motor-names) shows the different names of the m
 
 The following [figure](#motor-positions) shows the position of the joints previously mentioned.
 
-%end
-
 %figure "Motor positions"
 
 ![aibo_ers7_motors.png](images/aibo_ers7_motors.png)
@@ -91,11 +89,11 @@ The following [table](#aibo-ers7-motor-names) shows the different names of the d
 
 %figure "Aibo ERS7 distance sensor names"
 
-| Distance Sensor  | Name                             |
-| --------------- | -------------------------------- |
-| Head Near       | 'PRM:/r1/c1/c2/c3/p1-Sensor:p1'  |
-| Head Far        | 'PRM:/r1/c1/c2/c3/p2-Sensor:p2'  |
-| Chest           | 'PRM:/p1-Sensor:p1'              |
+| Distance Sensors | Name                             |
+| ---------------- | -------------------------------- |
+| Head Near        | 'PRM:/r1/c1/c2/c3/p1-Sensor:p1'  |
+| Head Far         | 'PRM:/r1/c1/c2/c3/p2-Sensor:p2'  |
+| Chest            | 'PRM:/p1-Sensor:p1'              |
 
 %end
 

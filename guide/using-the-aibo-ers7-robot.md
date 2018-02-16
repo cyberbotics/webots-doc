@@ -13,34 +13,36 @@ More information on the Aibo robots can be found [here](https://en.wikipedia.org
 
 ### Aibo ERS7 model
 
-The following [table](#aibo-ers7-motor-names) shows the different names of the motors supported on the Aibo ERS7.
+The following [table](#aibo-ers7-motor-names) shows the different names of the motors and position sensors supported on the Aibo ERS7.
 
-%figure "Aibo ERS7 motor names"
+%figure "Aibo ERS7 motor and position sensor names"
 
-| Motor            | Name                            |
-| ---------------- | ------------------------------- |
-| Neck tilt        | 'PRM:/r1/c1-Joint2:11'          |
-| Head pan         | 'PRM:/r1/c1/c2-Joint2:12'       |
-| Head tilt        | 'PRM:/r1/c1/c2/c3-Joint2:13'    |
-| Left ear         | 'PRM:/r1/c1/c2/c3/e5-Joint4:15' |
-| Right ear        | 'PRM:/r1/c1/c2/c3/e6-Joint4:16' |
-| Jaw              | 'PRM:/r1/c1/c2/c3/c4-Joint2:14' |
-| Tail tilt        | 'PRM:/r6/c1-Joint2:61'          |
-| Tail pan         | 'PRM:/r6/c2-Joint2:62'          |
-| Right foreleg J1 | 'PRM:/r4/c1-Joint2:41'          |
-| Right foreleg J2 | 'PRM:/r4/c1/c2-Joint2:42'       |
-| Right foreleg J3 | 'PRM:/r4/c1/c2/c3-Joint2:43'    |
-| Right hindleg J1 | 'PRM:/r5/c1-Joint2:51'          |
-| Right hindleg J2 | 'PRM:/r5/c1/c2-Joint2:52'       |
-| Right hindleg J3 | 'PRM:/r5/c1/c2/c3-Joint2:53'    |
-| Left foreleg J1  | 'PRM:/r2/c1-Joint2:21'          |
-| Left foreleg J2  | 'PRM:/r2/c1/c2-Joint2:22'       |
-| Left foreleg J3  | 'PRM:/r2/c1/c2/c3-Joint2:23'    |
-| Left hindleg J1  | 'PRM:/r3/c1-Joint2:31'          |
-| Left hindleg J2  | 'PRM:/r3/c1/c2-Joint2:32'       |
-| Left hindleg J3  | 'PRM:/r3/c1/c2/c3-Joint2:33'    |
+| Joints           | Motor names                     | Position sensor names              |
+| ---------------- | ------------------------------- | ---------------------------------- |
+| Neck tilt        | 'PRM:/r1/c1-Joint2:11'          | N/A                                |
+| Head pan         | 'PRM:/r1/c1/c2-Joint2:12'       | N/A                                |
+| Head tilt        | 'PRM:/r1/c1/c2/c3-Joint2:13'    | N/A                                |
+| Left ear         | 'PRM:/r1/c1/c2/c3/e5-Joint4:15' | N/A                                |
+| Right ear        | 'PRM:/r1/c1/c2/c3/e6-Joint4:16' | N/A                                |
+| Jaw              | 'PRM:/r1/c1/c2/c3/c4-Joint2:14' | N/A                                |
+| Tail tilt        | 'PRM:/r6/c1-Joint2:61'          | N/A                                |
+| Tail pan         | 'PRM:/r6/c2-Joint2:62'          | N/A                                |
+| Right foreleg J1 | 'PRM:/r4/c1-Joint2:41'          | 'PRM:/r4/c1-JointSensor2:41'       |
+| Right foreleg J2 | 'PRM:/r4/c1/c2-Joint2:42'       | 'PRM:/r4/c1/c2-JointSensor2:42'    |
+| Right foreleg J3 | 'PRM:/r4/c1/c2/c3-Joint2:43'    | 'PRM:/r4/c1/c2/c3-JointSensor2:43' |
+| Right hindleg J1 | 'PRM:/r5/c1-Joint2:51'          | 'PRM:/r5/c1-JointSensor2:51'       |
+| Right hindleg J2 | 'PRM:/r5/c1/c2-Joint2:52'       | 'PRM:/r5/c1/c2-JointSensor2:52'    |
+| Right hindleg J3 | 'PRM:/r5/c1/c2/c3-Joint2:53'    | 'PRM:/r5/c1/c2/c3-JointSensor2:53' |
+| Left foreleg J2  | 'PRM:/r2/c1/c2-Joint2:22'       | 'PRM:/r2/c1/c2-JointSensor2:22'    |
+| Left foreleg J1  | 'PRM:/r2/c1-Joint2:21'          | 'PRM:/r2/c1-JointSensor2:21'       |
+| Left foreleg J3  | 'PRM:/r2/c1/c2/c3-Joint2:23'    | 'PRM:/r2/c1/c2/c3-JointSensor2:23' |
+| Left hindleg J1  | 'PRM:/r3/c1-Joint2:31'          | 'PRM:/r3/c1-JointSensor2:31'       |
+| Left hindleg J2  | 'PRM:/r3/c1/c2-Joint2:32'       | 'PRM:/r3/c1/c2-JointSensor2:32'    |
+| Left hindleg J3  | 'PRM:/r3/c1/c2/c3-Joint2:33'    | 'PRM:/r3/c1/c2/c3-JointSensor2:33' |
 
 %end
+
+The following [figure](#motor-positions) shows the position of the joints previously mentioned.
 
 %end
 
@@ -95,8 +97,9 @@ The following [table](#aibo-ers7-motor-names) shows the different names of the d
 | Head Far        | 'PRM:/r1/c1/c2/c3/p2-Sensor:p2'  |
 | Chest           | 'PRM:/p1-Sensor:p1'              |
 
-
 %end
+
+The following [figure](#distance-sensor-positions) shows the position and direction of the distance sensors previously mentioned.
 
 %figure "Distance sensor positions"
 

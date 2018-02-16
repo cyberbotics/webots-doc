@@ -50,41 +50,6 @@ The following [figure](#motor-positions) shows the position of the joints previo
 
 %end
 
-The following [table](#aibo-ers7-motor-names) shows the different names of the LEDs present on the Aibo ERS7.
-
-%figure "Aibo ERS7 LED names"
-
-| LED                     | Name                          |
-| ----------------------- | ----------------------------- |
-| Back Front Light Color  | 'PRM:/lu-LED3:lu'             |
-| Back Front Light White  | 'PRM:/lv-LED3:lv'             |
-| Back Middle Light Color | 'PRM:/lw-LED3:lw'             |
-| Back Middle Light White | 'PRM:/lx-LED3:lx'             |
-| Back Rear Light Color   | 'PRM:/ly-LED3:ly'             |
-| Back Rear Light White   | 'PRM:/lz-LED3:lz'             |
-| Head Light Color        | 'PRM:/r1/c1/c2/c3/l1-LED2:l1' |
-| Head Light White        | 'PRM:/r1/c1/c2/c3/l2-LED2:l2' |
-| Mode Indicator Red      | 'PRM:/r1/c1/c2/c3/l3-LED2:l3' |
-| Mode Indicator Green    | 'PRM:/r1/c1/c2/c3/l4-LED2:l4' |
-| Mode Indicator Blue     | 'PRM:/r1/c1/c2/c3/l5-LED2:l5' |
-| Wireless Light          | 'PRM:/r1/c1/c2/c3/l6-LED2:l6' |
-| FaceLight 1             | 'PRM:/r1/c1/c2/c3/la-LED3:la' |
-| FaceLight 2             | 'PRM:/r1/c1/c2/c3/lb-LED3:lb' |
-| FaceLight 3             | 'PRM:/r1/c1/c2/c3/lc-LED3:lc' |
-| FaceLight 4             | 'PRM:/r1/c1/c2/c3/ld-LED3:ld' |
-| FaceLight 5             | 'PRM:/r1/c1/c2/c3/le-LED3:le' |
-| FaceLight 6             | 'PRM:/r1/c1/c2/c3/lf-LED3:lf' |
-| FaceLight 7             | 'PRM:/r1/c1/c2/c3/lg-LED3:lg' |
-| FaceLight 8             | 'PRM:/r1/c1/c2/c3/lh-LED3:lh' |
-| FaceLight 9             | 'PRM:/r1/c1/c2/c3/li-LED3:li' |
-| FaceLight 10            | 'PRM:/r1/c1/c2/c3/lj-LED3:lj' |
-| FaceLight 11            | 'PRM:/r1/c1/c2/c3/lk-LED3:lk' |
-| FaceLight 12            | 'PRM:/r1/c1/c2/c3/ll-LED3:ll' |
-| FaceLight 13            | 'PRM:/r1/c1/c2/c3/lm-LED3:lm' |
-| FaceLight 14            | 'PRM:/r1/c1/c2/c3/ln-LED3:ln' |
-
-%end
-
 The following [table](#aibo-ers7-motor-names) shows the different names of the distance sensors present on the Aibo ERS7.
 
 %figure "Aibo ERS7 distance sensor names"

@@ -13,7 +13,8 @@ More information on the Aibo robots can be found [here](https://en.wikipedia.org
 
 ### Aibo ERS7 model
 
-The following [table](#aibo-ers7-motor-names) shows the different names of the motors and position sensors supported on the Aibo ERS7.
+The following [table](#aibo-ers7-motor-names) shows the different names of the `RotationalMotor` and `PositionSensor` supported on the Aibo ERS7. The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of joint.
+
 
 %figure "Aibo ERS7 motor and position sensor names"
 
@@ -71,6 +72,9 @@ The following [figure](#distance-sensor-positions) shows the position and direct
 %end
 
 ### Samples
+
+Here are listed the different example worlds based on the Aibo ERS7.
+The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/sony/aibo" directory.
 
 #### aibo\_ers7.wbt
 

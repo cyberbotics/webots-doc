@@ -90,6 +90,12 @@ The following [table](#aibo-ers7-motor-names) shows the different names of the d
 
 %end
 
+%figure "Distance sensor positions"
+
+![aibo_ers7_distance_sensors.png](images/aibo_ers7_distance_sensors.png)
+
+%end
+
 ### Samples
 
 #### aibo\_ers7.wbt

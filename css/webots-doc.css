@@ -61,7 +61,8 @@
   top: 0px !important;
 }
 .webots-doc #content {
-  max-width: calc(1000px - 4em);
+  box-sizing: border-box;
+  max-width: 1034px;
   margin: 0 auto;
   background: white;
   min-height: 100vh;
@@ -211,6 +212,7 @@
   background: transparent;
   font-size: 15px;
   font-family: "Roboto Mono", monospace;
+  white-space: pre;
 }
 .webots-doc p > code, .webots-doc li > code {
   color: #222;

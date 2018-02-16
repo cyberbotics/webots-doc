@@ -2,10 +2,10 @@
 
 ```
 Focus {
-  SFFloat focalDistance    0 # Distance to the object we are focusing on (m)
-  SFFloat focalLength      0 # Focal length of the lens (m)
-  SFFloat maxFocalDistance 0 # (m)
-  SFFloat minFocalDistance 0 # (m)
+  SFFloat focalDistance    0   # [0, inf)
+  SFFloat focalLength      0   # [0, inf)
+  SFFloat maxFocalDistance 0   # [0, inf)
+  SFFloat minFocalDistance 0   # [0, inf)
 }
 ```
 

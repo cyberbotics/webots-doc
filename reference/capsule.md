@@ -2,12 +2,12 @@
 
 ```
 Capsule {
-  SFBool  bottom      TRUE
-  SFFloat height      2    # (0,inf)
-  SFFloat radius      1    # (0,inf)
-  SFBool  side        TRUE
-  SFBool  top         TRUE
-  SFInt32 subdivision 12   # (2,inf)
+  SFBool  bottom      TRUE   # {TRUE, FALSE}
+  SFFloat height      2      # [0, inf)
+  SFFloat radius      1      # [0, inf)
+  SFBool  side        TRUE   # {TRUE, FALSE}
+  SFBool  top         TRUE   # {TRUE, FALSE}
+  SFInt32 subdivision 12     # [3, inf)
 }
 ```
 

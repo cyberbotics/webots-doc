@@ -18,7 +18,7 @@ XXX.
 ### Samples
 
 Here are listed the different example worlds based on the IPR.
-The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/sony/aibo" directory.
+The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/neuronics/ipr" directory.
 
 #### ipr\_collaboration.wbt
 

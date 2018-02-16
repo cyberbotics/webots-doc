@@ -433,8 +433,8 @@ function updateMenuScrollbar() {
   var p = e.scrollHeight - t - e.clientHeight;
   if (p < 244) // 244 is the height in pixels of the footer of Cyberbotics web page
     document.getElementById('left').style.height = (e.clientHeight - 290 + p) + 'px';
-  else // 46 is the height in pixels of the header of Cyberbotics web page (46 + 244 = 290)
-    document.getElementById('left').style.height = 'calc(100% - 46px)';
+  else // 44 is the height in pixels of the header of Cyberbotics web page (44 + 244 = 290)
+    document.getElementById('left').style.height = 'calc(100% - 44px)';
 }
 
 function updateSelection() {

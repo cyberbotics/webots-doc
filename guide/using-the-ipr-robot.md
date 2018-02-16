@@ -13,7 +13,7 @@ More information is available on the Neuronics official [webpage](http://www.neu
 
 ### IPR models
 
-XXX
+XXX.
 
 ### Samples
 

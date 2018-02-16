@@ -6,7 +6,10 @@
 
 %end
 
-XXX
+The IPR robot is a robotic arm developed by [Neuronics](http://www.neuronics.be/).
+Four models are currently supported in Webots: HD6M180, HD6Ms180, HD6M90 and HD6Ms90 which include 7 motors and 9 sensors.
+
+More information is available on the Neuronics official [webpage](http://www.neuronics.be/).
 
 ### IPR models
 

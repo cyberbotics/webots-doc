@@ -82,16 +82,16 @@ The names of the simulated devices which are to be used as an argument of the `w
 
 %figure "Devices names"
 
-| Device                     | Name                                                     |
-| -------------------------- | -------------------------------------------------------- |
-| Motors                     | 'left wheel motor' and 'right wheel motor'               |
-| Position sensors           | 'left wheel sensor' and 'right wheel sensor'             |
-| Proximity sensors          | ps0 to ps7                                               |
-| Light sensors              | ls0 to ls7                                               |
-| LEDs                       | led0 to led7 (e-puck ring), led8 (body) and led9 (front) |
-| Camera                     | camera                                                   |
-| Accelerometer              | accelerometer                                            |
-| Ground sensors (extension) | gs0, gs1 and gs2                                         |
+| Device                     | Name                                                     				|
+| -------------------------- | ---------------------------------------------------------------- |
+| Motors                     | 'left wheel motor' and 'right wheel motor'               				|
+| Position sensors           | 'left wheel sensor' and 'right wheel sensor'             				|
+| Proximity sensors          | 'ps0' to 'ps7'                                              			|
+| Light sensors              | 'ls0' to 'ls7'                                               		|
+| LEDs                       | 'led0' to 'led7' (e-puck ring), 'led8' (body) and 'led9' (front) |
+| Camera                     | 'camera'                                                   			|
+| Accelerometer              | 'accelerometer'                                            			|
+| Ground sensors (extension) | 'gs0', 'gs1' and 'gs2'                                         	|
 
 %end
 

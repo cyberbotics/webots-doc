@@ -43,54 +43,6 @@ Like many others, this example uses the `braitenberg` controller.
 In this example, BoeBot moves inside an arena while avoiding the walls.
 When the robot detects an obstacle with one of its `DistanceSensor`s, it turns the corresponding `LED` on.
 
-### e-puck.wbt
-
-**Keywords**: differential wheels, texture, Braitenberg, Accelerometer, Odometry, E-puck
-
-%figure "e-puck"
-
-![e-puck.png](images/e-puck.png)
-
-%end
-
-In this example, you can see the e-puck robot avoiding obstacles inside an arena by using the Braitenberg technique.
-The odometry of the e-puck is computed at each simulation steps.
-The accelerometer values and an estimation the coverage distance and the orientation of the e-puck are displayed.
-The source code for this controller is in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
-
-### e-puck\_line.wbt
-
-**Keywords**: differential wheels, line following, texture, behavior-based
-    robotics, E-puck
-
-%figure "e-puck_line"
-
-![e-puck_line.png](images/e-puck_line.png)
-
-%end
-
-In this example, you can see the E-puck robot following a black line drawn on the ground.
-In the middle of this line there is an obstacle which the robot is unable to avoid.
-This example has been developed as a practical assignment on behavior-based robotics.
-When completed, the controller should allow the E-puck robot to avoid this obstacle and recover its path afterwards.
-A solution for this assignment is shown in the world e-puck\_line\_demo.wbt (see [this section](#e-puck_line_demo-wbt)).
-The source code for this controller is in the "e-puck\_line" directory.
-
-### e-puck\_line\_demo.wbt
-
-**Keywords**: differential wheels, line following, texture, behavior-based
-    robotics, E-puck
-
-%figure "e-puck_line_demo"
-
-![e-puck_line_demo.png](images/e-puck_line_demo.png)
-
-%end
-
-This example is the solution for the assignment given in the `e-puck_line_demo.wbt` example (see [this section](#e-puck_line-wbt)).
-In this case, you can see that the robot avoids the obstacle, then recovers its path along the line.
-As the controller used in this world is the solution to the assignment, the source code is not distributed.
-
 ### hemisson\_cross\_compilation.wbt
 
 **Keywords**: differential wheels, Pen, cross-compilation, texture, Hemisson

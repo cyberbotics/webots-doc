@@ -4,8 +4,8 @@ Derived from [Device](device.md).
 
 ```
 LED {
-  MFColor color   [ 1 0 0 ] # [0,1]
-  SFBool  gradual FALSE     # for gradual color display and RBG LEDs
+  MFColor color   [ 1 0 0 ]   # any color
+  SFBool  gradual FALSE       # {TRUE, FALSE}
 }
 ```
 

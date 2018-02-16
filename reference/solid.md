@@ -4,20 +4,20 @@ Derived from [Transform](transform.md).
 
 ```
 Solid {
-  SFString name                "solid"
-  SFString model               ""
-  SFString description         ""
-  SFString contactMaterial     "default"
-  MFNode   immersionProperties [ ]
-  SFNode   boundingObject      NULL
-  SFNode   physics             NULL
-  SFBool   locked              FALSE
-  SFFloat  radarCrossSection   0.0
-  MFColor  recognitionColors   []
-  SFFloat  translationStep     0.01        # m
-  SFFloat  rotationStep        0.261799387 # pi/12 rad
-  SFVec3f  linearVelocity      0 0 0       # initial linear velocity
-  SFVec3f  angularVelocity     0 0 0       # initial angular velocity
+  SFString name                "solid"       # any string
+  SFString model               ""            # any string
+  SFString description         ""            # any string
+  SFString contactMaterial     "default"     # any string
+  MFNode   immersionProperties [ ]           # {ImmersionProperties, PROTO}
+  SFNode   boundingObject      NULL          # {node, PROTO}
+  SFNode   physics             NULL          # {Physics, PROTO}
+  SFBool   locked              FALSE         # {TRUE, FALSE}
+  SFFloat  radarCrossSection   0.0           # [0, 1]
+  MFColor  recognitionColors   []            # any color
+  SFFloat  translationStep     0.01          # [0, inf)
+  SFFloat  rotationStep        0.261799387   # [0, inf)
+  SFVec3f  linearVelocity      0 0 0         # any vector
+  SFVec3f  angularVelocity     0 0 0         # any vector
 }
 ```
 

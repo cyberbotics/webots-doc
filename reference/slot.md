@@ -2,8 +2,8 @@
 
 ```
 Slot {
-  SFString type     ""
-  SFNode   endPoint NULL
+  SFString type     ""     # any string
+  SFNode   endPoint NULL   # {node, PROTO}
 }
 ```
 

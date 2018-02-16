@@ -2,11 +2,11 @@
 
 ```
 Appearance {
-  SFNode   material         NULL
-  SFNode   texture          NULL
-  SFNode   textureTransform NULL
-  MFNode   shaders          NULL
-  SFString name             "appearance"
+  SFNode   material         NULL           # {Material, PROTO}
+  SFNode   texture          NULL           # {ImageTexture, MultiTexture, ComposedCubeMapTexture, PROTO}
+  SFNode   textureTransform NULL           # {TextureTransform, PROTO}
+  MFNode   shaders          NULL           # {ComposedShader, PROTO}
+  SFString name             "appearance"   # any string
 }
 ```
 

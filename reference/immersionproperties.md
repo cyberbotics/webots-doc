@@ -2,12 +2,12 @@
 
 ```
 ImmersionProperties {
-  SFString fluidName                          ""
-  SFString referenceArea                      "immersed area"
-  SFVec3f  dragForceCoefficients              0 0 0           # dimensionless coefficient ranging in [0, infinity)
-  SFVec3f  dragTorqueCoefficients             0 0 0           # dimensionless coefficients ranging in [0, infinity)
-  SFFloat  viscousResistanceForceCoefficient  0               # (Ns/m) ranges in [0, infinity)
-  SFFloat  viscousResistanceTorqueCoefficient 0               # (Nm/s ) ranges in [0, infinity)
+  SFString fluidName                          ""              # any string
+  SFString referenceArea                      "immersed area" # {"immersed area", "xyz-projected area"}
+  SFVec3f  dragForceCoefficients              0 0 0           # any positive vector
+  SFVec3f  dragTorqueCoefficients             0 0 0           # any positive vector
+  SFFloat  viscousResistanceForceCoefficient  0               # [0, inf)
+  SFFloat  viscousResistanceTorqueCoefficient 0               # [0, inf)
 }
 ```
 

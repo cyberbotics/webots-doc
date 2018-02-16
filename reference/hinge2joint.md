@@ -4,9 +4,9 @@ Derived from [HingeJoint](hingejoint.md).
 
 ```
 Hinge2Joint {
-  SFNode  jointParameters2 NULL # JointParameters for second axis
-  MFNode  device2          [ ]  # RotationalMotor, PositionSensor and Brake
-  SFFloat position2        0    # initial position with respect to the second hinge (rad)
+  SFNode  jointParameters2 NULL   # {JointParameters, PROTO}
+  MFNode  device2          [ ]    # {RotationalMotor, PositionSensor, Brake, PROTO}
+  SFFloat position2        0      # [0, inf)
 }
 ```
 

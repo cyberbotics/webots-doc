@@ -10,7 +10,7 @@ If a texture field is null, the frame is extended and the side flattened.
 
 %figure "A few examples of different advertising boards"
 
-![advertising_board.png](images/advertising_board.png)
+![billboard.png](images/billboard.png)
 
 %end
 

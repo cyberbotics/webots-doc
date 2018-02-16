@@ -116,7 +116,7 @@
   padding: 0.5em;
   overflow-x: hidden;
 }
-.webots-doc #accordion::after {
+.webots-doc #accordion li a.active::after {
   content: '';
 }
 .webots-doc #accordion li a {

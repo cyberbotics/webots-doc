@@ -42,6 +42,14 @@ The following [table](#aibo-ers7-motor-names) shows the different names of the m
 
 %end
 
+%end
+
+%figure "Motor positions"
+
+![aibo_ers7_motors.png](images/aibo_ers7_motors.png)
+
+%end
+
 The following [table](#aibo-ers7-motor-names) shows the different names of the LEDs present on the Aibo ERS7.
 
 %figure "Aibo ERS7 LED names"

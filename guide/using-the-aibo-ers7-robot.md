@@ -13,6 +13,82 @@ More information on the Aibo robots can be found [here](https://en.wikipedia.org
 
 ### Aibo ERS7 model
 
+The following [table](#aibo-ers7-motor-names) shows the different names of the motors supported on the Aibo ERS7.
+
+%figure "Aibo ERS7 motor names"
+
+| Motor            | Name                            |
+| ---------------- | ------------------------------- |
+| Neck tilt        | 'PRM:/r1/c1-Joint2:11'          |
+| Head pan         | 'PRM:/r1/c1/c2-Joint2:12'       |
+| Head tilt        | 'PRM:/r1/c1/c2/c3-Joint2:13'    |
+| Left ear         | 'PRM:/r1/c1/c2/c3/e5-Joint4:15' |
+| Right ear        | 'PRM:/r1/c1/c2/c3/e6-Joint4:16' |
+| Jaw              | 'PRM:/r1/c1/c2/c3/c4-Joint2:14' |
+| Tail tilt        | 'PRM:/r6/c1-Joint2:61'          |
+| Tail pan         | 'PRM:/r6/c2-Joint2:62'          |
+| Right foreleg J1 | 'PRM:/r4/c1-Joint2:41'          |
+| Right foreleg J2 | 'PRM:/r4/c1/c2-Joint2:42'       |
+| Right foreleg J3 | 'PRM:/r4/c1/c2/c3-Joint2:43'    |
+| Right hindleg J1 | 'PRM:/r5/c1-Joint2:51'          |
+| Right hindleg J2 | 'PRM:/r5/c1/c2-Joint2:52'       |
+| Right hindleg J3 | 'PRM:/r5/c1/c2/c3-Joint2:53'    |
+| Left foreleg J1  | 'PRM:/r2/c1-Joint2:21'          |
+| Left foreleg J2  | 'PRM:/r2/c1/c2-Joint2:22'       |
+| Left foreleg J3  | 'PRM:/r2/c1/c2/c3-Joint2:23'    |
+| Left hindleg J1  | 'PRM:/r3/c1-Joint2:31'          |
+| Left hindleg J2  | 'PRM:/r3/c1/c2-Joint2:32'       |
+| Left hindleg J3  | 'PRM:/r3/c1/c2/c3-Joint2:33'    |
+
+%end
+
+The following [table](#aibo-ers7-motor-names) shows the different names of the LEDs present on the Aibo ERS7.
+
+%figure "Aibo ERS7 LED names"
+
+| LED                     | Name                          |
+| ----------------------- | ----------------------------- |
+| Back Front Light Color  | 'PRM:/lu-LED3:lu'             |
+| Back Front Light White  | 'PRM:/lv-LED3:lv'             |
+| Back Middle Light Color | 'PRM:/lw-LED3:lw'             |
+| Back Middle Light White | 'PRM:/lx-LED3:lx'             |
+| Back Rear Light Color   | 'PRM:/ly-LED3:ly'             |
+| Back Rear Light White   | 'PRM:/lz-LED3:lz'             |
+| Head Light Color        | 'PRM:/r1/c1/c2/c3/l1-LED2:l1' |
+| Head Light White        | 'PRM:/r1/c1/c2/c3/l2-LED2:l2' |
+| Mode Indicator Red      | 'PRM:/r1/c1/c2/c3/l3-LED2:l3' |
+| Mode Indicator Green    | 'PRM:/r1/c1/c2/c3/l4-LED2:l4' |
+| Mode Indicator Blue     | 'PRM:/r1/c1/c2/c3/l5-LED2:l5' |
+| Wireless Light          | 'PRM:/r1/c1/c2/c3/l6-LED2:l6' |
+| FaceLight 1             | 'PRM:/r1/c1/c2/c3/la-LED3:la' |
+| FaceLight 2             | 'PRM:/r1/c1/c2/c3/lb-LED3:lb' |
+| FaceLight 3             | 'PRM:/r1/c1/c2/c3/lc-LED3:lc' |
+| FaceLight 4             | 'PRM:/r1/c1/c2/c3/ld-LED3:ld' |
+| FaceLight 5             | 'PRM:/r1/c1/c2/c3/le-LED3:le' |
+| FaceLight 6             | 'PRM:/r1/c1/c2/c3/lf-LED3:lf' |
+| FaceLight 7             | 'PRM:/r1/c1/c2/c3/lg-LED3:lg' |
+| FaceLight 8             | 'PRM:/r1/c1/c2/c3/lh-LED3:lh' |
+| FaceLight 9             | 'PRM:/r1/c1/c2/c3/li-LED3:li' |
+| FaceLight 10            | 'PRM:/r1/c1/c2/c3/lj-LED3:lj' |
+| FaceLight 11            | 'PRM:/r1/c1/c2/c3/lk-LED3:lk' |
+| FaceLight 12            | 'PRM:/r1/c1/c2/c3/ll-LED3:ll' |
+| FaceLight 13            | 'PRM:/r1/c1/c2/c3/lm-LED3:lm' |
+| FaceLight 14            | 'PRM:/r1/c1/c2/c3/ln-LED3:ln' |
+
+%end
+
+The following [table](#aibo-ers7-motor-names) shows the different names of the distance sensors present on the Aibo ERS7.
+
+%figure "Aibo ERS7 distance sensor names"
+
+| Distance Sensor  | Name                             |
+| --------------- | -------------------------------- |
+| Head Near       | 'PRM:/r1/c1/c2/c3/p1-Sensor:p1'  |
+| Head Far        | 'PRM:/r1/c1/c2/c3/p2-Sensor:p2'  |
+| Chest           | 'PRM:/p1-Sensor:p1'              |
+
+
+%end
 
 ### Samples
 

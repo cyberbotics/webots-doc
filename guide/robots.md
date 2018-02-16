@@ -11,3 +11,5 @@
 ![pioneer3at.png](images/pioneer3at.png) [Using the Pioneer 3-AT robot](using-the-pioneer-3-at-robot.md)
 
 ![pioneer3dx.png](images/pioneer3dx.png) [Using the Pioneer 3-DX robot](using-the-pioneer-3-dx-robot.md)
+
+![aibo_ers7.png](images/aibo_ers7.png) [Using the Aibo ERS7 robot](using-the-aibo-ers7-robot.md)

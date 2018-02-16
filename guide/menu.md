@@ -73,6 +73,7 @@
     - [Using the Thymio II robot](using-the-thymio-ii-robot.md)
     - [Using the Pioneer 3-AT robot](using-the-pioneer-3-at-robot.md)
     - [Using the Pioneer 3-DX robot](using-the-pioneer-3-dx-robot.md)
+    - [Using the Aibo ERS7 robot](using-the-aibo-ers7-robot.md)
 - [Webots FAQ](webots-faq.md)
     - [General FAQ](general-faq.md)
     - [Programming](programming.md)

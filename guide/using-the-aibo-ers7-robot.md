@@ -14,7 +14,7 @@ More information on the Aibo robot can be found [here](https://en.wikipedia.org/
 ### Aibo ERS7 model
 
 The following [table](#aibo-ers7-motor-and-position-sensor-names) shows the different names of the `RotationalMotor` and `PositionSensor` supported on the Aibo ERS7.
-The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of joint.
+The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of each joint.
 
 
 %figure "Aibo ERS7 motor and position sensor names"

@@ -4,10 +4,10 @@ Derived from [Solid](solid.md).
 
 ```
 Track {
-  MFNode  device           [ ]
-  SFVec3f textureAnimation 0 0
-  SFNode  animatedGeometry NULL
-  SFInt32 geometriesCount  10
+  MFNode  device           [ ]    # {LinearMotor, PositionSensor, Brake, PROTO}
+  SFVec2f textureAnimation 0 0    # any vector
+  SFNode  animatedGeometry NULL   # {Shape, Group, Slot, Transform, PROTO}
+  SFInt32 geometriesCount  10     # [0, inf)
 }
 ```
 

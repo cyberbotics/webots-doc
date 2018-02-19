@@ -4,23 +4,23 @@ Derived from [Device](device.md).
 
 ```
 Lidar {
-  SFFloat  tiltAngle            0.0
-  SFInt32  horizontalResolution 512
-  SFFloat  fieldOfView          1.5708
-  SFFloat  verticalFieldOfView  0.2
-  SFInt32  numberOfLayers       4
-  SFFloat  near                 0.01
-  SFFloat  minRange             0.01
-  SFFloat  maxRange             1.0
-  SFString type                 "fixed"
-  SFBool   spherical            TRUE
-  SFFloat  noise                0.0
-  SFFloat  resolution           -1.0
-  SFFloat  defaultFrequency     10
-  SFFloat  minFrequency         1
-  SFFloat  maxFrequency         25
-  SFNode   rotatingHead         NULL
-  SFString compositor           ""
+  SFFloat  tiltAngle            0.0       # [-pi/2, pi/2]
+  SFInt32  horizontalResolution 512       # [0, inf)
+  SFFloat  fieldOfView          1.5708    # [0, 2*pi]
+  SFFloat  verticalFieldOfView  0.2       # [0, pi]
+  SFInt32  numberOfLayers       4         # [0, inf)
+  SFFloat  near                 0.01      # [0, inf)
+  SFFloat  minRange             0.01      # [near, inf)
+  SFFloat  maxRange             1.0       # [minRange, inf)
+  SFString type                 "fixed"   # {"fixed", "rotating"}
+  SFBool   spherical            TRUE      # {TRUE, FALSE}
+  SFFloat  noise                0.0       # [0, inf)
+  SFFloat  resolution           -1.0      # {-1, [0, inf)}
+  SFFloat  defaultFrequency     10        # [minFrequency, maxFrequency]
+  SFFloat  minFrequency         1         # [0, maxFrequency)
+  SFFloat  maxFrequency         25        # [minFrequency, inf)
+  SFNode   rotatingHead         NULL      # {Solid (or derived), PROTO}
+  SFString compositor           ""        # any string
 }
 ```
 

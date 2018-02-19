@@ -4,9 +4,9 @@ Derived from [Group](group.md).
 
 ```
 TrackWheel {
-  SFVec2f position 0 0
-  SFFloat radius   0.1
-  SFBool  inner    TRUE
+  SFVec2f position 0 0    # any vector
+  SFFloat radius   0.1    # [0, inf)
+  SFBool  inner    TRUE   # {TRUE, FALSE}
 }
 ```
 

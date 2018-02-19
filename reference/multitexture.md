@@ -2,7 +2,7 @@
 
 ```
 MultiTexture {
-  MFNode texture []
+  MFNode texture []   # {ImageTexture, ComposedCubeMapTexture, PROTO}
 }
 ```
 

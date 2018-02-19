@@ -4,11 +4,11 @@ Derived from [Device](device.md).
 
 ```
 Compass {
-  MFVec3f lookupTable [ ]  # interpolation
-  SFBool  xAxis       TRUE # compute x-axis
-  SFBool  yAxis       TRUE # compute y-axis
-  SFBool  zAxis       TRUE # compute z-axis
-  SFFloat resolution  -1
+  MFVec3f lookupTable [ ]    # lookup table
+  SFBool  xAxis       TRUE   # {TRUE, FALSE}
+  SFBool  yAxis       TRUE   # {TRUE, FALSE}
+  SFBool  zAxis       TRUE   # {TRUE, FALSE}
+  SFFloat resolution  -1     # {-1, [0, inf)}
 }
 ```
 

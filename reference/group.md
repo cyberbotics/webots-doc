@@ -2,7 +2,7 @@
 
 ```
 Group {
-  MFNode children [ ]
+  MFNode children [ ]    # {node, PROTO}
 }
 ```
 

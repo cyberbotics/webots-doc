@@ -4,8 +4,8 @@
 
 ```
 ShaderPart {
-  SFString type    "" # either "VERTEX" or "FRAGMENT"
-  MFString content ""
+  SFString type    ""   # {"VERTEX, FRAGMENT"}
+  MFString content ""   # shader code
 }
 ```
 

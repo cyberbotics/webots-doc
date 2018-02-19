@@ -9,16 +9,16 @@ Derived from [Robot](robot.md).
 
 ```
 DifferentialWheels {
-  SFFloat motorConsumption  0    # [0,inf)
-  SFFloat axleLength        0.1  # (0,inf)
-  SFFloat wheelRadius       0.01 # (0,inf)
-  SFFloat maxSpeed          10   # (0,inf)
-  SFFloat maxAcceleration   10
-  SFFloat speedUnit         1
-  SFFloat slipNoise         0.1  # [0,inf)
-  SFFloat encoderNoise      -1
-  SFFloat encoderResolution -1
-  SFFloat maxForce          0.3  # (0,inf)
+  SFFloat motorConsumption  0      # [0, inf)
+  SFFloat axleLength        0.1    # [0, inf)
+  SFFloat wheelRadius       0.01   # [0, inf)
+  SFFloat maxSpeed          10     # [0, inf)
+  SFFloat maxAcceleration   10     # [0, inf)
+  SFFloat speedUnit         1      # [0, inf)
+  SFFloat slipNoise         0.1    # [0, inf)
+  SFFloat encoderNoise      -1     # {-1, [0, inf)}
+  SFFloat encoderResolution -1     # {-1, [0, inf)}
+  SFFloat maxForce          0.3    # [0, inf)
 }
 ```
 

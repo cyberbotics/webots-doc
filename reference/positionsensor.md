@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 PositionSensor {
-  SFFloat resolution -1
+  SFFloat resolution -1   # {-1, [0, inf)}
 }
 ```
 

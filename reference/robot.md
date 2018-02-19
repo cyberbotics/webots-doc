@@ -4,16 +4,16 @@ Derived from [Solid](solid.md).
 
 ```
 Robot {
-  SFString controller      "void"
-  SFString controllerArgs  ""
-  SFString customData      ""
-  SFBool   synchronization TRUE
-  MFFloat  battery         [ ]
-  SFFloat  cpuConsumption  10  # [0,inf)
-  SFBool   selfCollision   FALSE
-  SFBool   showWindow      FALSE
-  SFString window          ""
-  SFString remoteControl   ""
+  SFString controller      "void"   # any string
+  SFString controllerArgs  ""       # any string
+  SFString customData      ""       # any string
+  SFBool   synchronization TRUE     # {TRUE, FALSE}
+  MFFloat  battery         [ ]      # see below
+  SFFloat  cpuConsumption  10       # [0, inf)
+  SFBool   selfCollision   FALSE    # {TRUE, FALSE}
+  SFBool   showWindow      FALSE    # {TRUE, FALSE}
+  SFString window          ""       # any string
+  SFString remoteControl   ""       # any string
 }
 ```
 

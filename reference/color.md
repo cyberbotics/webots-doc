@@ -2,7 +2,7 @@
 
 ```
 Color {
-  MFColor color [ ] # [0,1]
+  MFColor color [ ]   # any color
 }
 ```
 

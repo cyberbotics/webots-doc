@@ -3,19 +3,6 @@
 This section discusses worlds containing models of real robots.
 The world files for these examples are located in the "robots/(robot\_name)/worlds" directory, and the corresponding controllers are located in the "robots/(robot\_name)/controllers" directory.
 
-### aibo\_ers7.wbt
-
-**Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone
-
-%figure "aibo_ers7"
-
-![aibo_ers7.png](images/aibo_ers7.png)
-
-%end
-
-In this example, you can see a silver Aibo ERS-7 robot walking on a textured soccer field.
-On this field you can also see its toys : a ball, a charger and a bone.
-
 ### alice.wbt
 
 **Keywords**: Alice, Braitenberg, DistanceSensor

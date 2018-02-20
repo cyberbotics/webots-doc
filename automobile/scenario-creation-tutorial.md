@@ -113,5 +113,5 @@ Since the network files are already generated, you need to set the `useNetconver
 
 Currently the [OpenStreetMap importer](openstreetmap-importer.md) and the [SUMO exporter](sumo-exporter.md) are ignoring the traffic lights.
 However, it is simple to add them manually afterward.
-First, you need to open the network file with [Netedit](http://sumo.dlr.de/wiki/NETEDIT#Traffic_Lights_2) and use the traffic light mode to add traffic light on junctions.
-Then for each traffic light junction you need to add a `TrafficLight` node in Webots in the children field of the `SumoInterface` node and respect the [naming convention](sumo-interface.md#traffic-lights-synchronization) for the LED.
+First, you need to open the network file with [Netedit](http://sumo.dlr.de/wiki/NETEDIT#Traffic_Lights_2) and use the traffic light mode to add traffic lights on junctions.
+Then, for each traffic light junction you need to add a `TrafficLight` node in Webots in the children field of the `SumoInterface` node and respect the [naming convention](sumo-interface.md#traffic-lights-synchronization) for the LEDs.

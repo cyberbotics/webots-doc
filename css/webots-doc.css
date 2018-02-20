@@ -217,6 +217,9 @@
   font-family: "Roboto Mono", monospace;
   white-space: pre;
 }
+.webots-doc tr > td >  code {
+  white-space: normal;
+}
 .webots-doc p > code, .webots-doc li > code {
   color: #222;
   background: #eee;
@@ -308,6 +311,9 @@
   border-width: 1px;
   border-color: #aaa;
   border-collapse: collapse;
+}
+.webots-doc #view figure > table {
+  width: 100%;
 }
 .webots-doc #view table th {
   border-width: 1px;

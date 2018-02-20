@@ -254,9 +254,6 @@
   font-size: 14px;
   color: black;
 }
-.webots-doc h4 {
-  font-size: 14px;
-}
 .webots-doc .anchor-link-image {
   padding-left: 20px;
   background: url(images/anchor.png) left center no-repeat;

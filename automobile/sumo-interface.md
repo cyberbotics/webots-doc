@@ -40,6 +40,13 @@ Finally, the classes `trailer` and `truck` will select the `Truck` PROTO, respec
 If the simulation contains traffic lights, the name of the corresponding `LEDs` node of these traffic lights in Webots should respect the following syntax: `trafficLightID_trafficLightIndex_r/y/g`.
 If the `LEDs` names are respected, the state of the traffic light will be automatically updated in Webots from SUMO by the interface.
 
+A simple way to get the traffic lights Ids and indexes is to open the network file in [Netedit](http://sumo.dlr.de/wiki/NETEDIT#Traffic_Lights).
+In the traffic lights mode you can simply select a traffic light and right click on one of the connections to get all the required information.
+
+%figure "Netedit in traffic lights mode, here the 'trafficLightID' is equal to '-1320' and the trafficLightIndex is equal to '2'"
+![sumo_traffic_light.png](images/sumo_traffic_light.png)
+%end
+
 ### The SumoInterface PROTO
 
 Here are the parameters of the `SumoInterface` PROTO (which inherits from the `Supervisor` node):

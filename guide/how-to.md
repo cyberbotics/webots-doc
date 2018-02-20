@@ -162,6 +162,13 @@ A Supervisor applies the scan depth output by removing pixels on a black texture
 The robot watches the panel with its `Camera`.
 Meanwhile a `Supervisor` switches the image displayed on the panel.
 
+### spinning\_top.wbt
+
+**Keywords**: Spinner, chessboard, chess pieces, apply a torque
+
+![spinning_top.png](images/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
+To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
+
 ### vision.wbt
 
 **Keywords**: OpenCV, color filter

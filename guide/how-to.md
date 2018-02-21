@@ -154,6 +154,15 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 Each lidar scan is displayed in a `Display` device.
 A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
 
+### supervisor\_draw\_trail.wbt
+
+**Keywords**: Supervisor, IndexedLineSet, draw trail
+
+![supervisor_draw_trail.png](images/supervisor_draw_trail.png) In this example, a Supervisor draws a green path behind a target node.
+The target node is a `Transform` node mounted in the `turretSlot` of a moving e-puck robot.
+At the beginning of the simulation, the `Supervisor` creates programmatically an `IndexedLineSet` node.
+Then at each simulation step, it uses the target node position to update the `IndexedLineSet` node fields.
+
 ### texture\_change.wbt
 
 **Keywords**: Supervisor, texture, `wb_supervisor_field_set_*` functions, Camera

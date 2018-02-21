@@ -227,8 +227,9 @@ export WEBOTS_COM1=/dev/rfcomm1
 webots
 ```
 
-> **Note**: On recent Ubuntu releases, Bluetooth slowdown may be experimented. In this case, please refer to [this link](http://www.gctronic.com/doc/index.php/E-Puck#Bluetooth_slowdown_in_Ubuntu).
-
+> **Note**: On recent Ubuntu releases, the Bluetooth connection may work slowly.
+During a remote-control session, the real e-puck may have difficulties to run in real-time.
+In this case, remove the `modemmanager` package (`sudo apt-get remove modemmanager`) as documented [here](http://www.gctronic.com/doc/index.php/E-Puck#Bluetooth_slowdown_in_Ubuntu).
 
 #### Bluetooth remote control
 

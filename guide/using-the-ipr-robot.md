@@ -39,7 +39,7 @@ The number matches with the orientation angle in degrees of the gripper.
 The difference between the "regular" models and the `s` ones (`s` for "strong") are small.
 It's mainly about dimensions and maximum torques.
 
-The table is added as a `tableSlot` of the robot, and is "fixed" in the dynamic environment.
+The table is added as a `tableSlot` field of the robot, and is "fixed" in the dynamic environment.
 
 ### Samples
 

@@ -27,9 +27,9 @@ The different IPR models shares the same device names.
 
 %end
 
-%figure "IPR device positions"
+%figure "IPR motors"
 
-![ipr_devices.png](images/ipr_devices.png)
+![ipr_motors.png](images/ipr_motors.png)
 
 %end
 

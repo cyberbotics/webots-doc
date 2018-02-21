@@ -20,8 +20,8 @@ The different IPR models shares the same device names.
 
 | Device | Support | Webots name |
 | --- | --- | --- |
-| Motors | Full support | base, upperarm, forearm, wrist, rotational_wrist, left_gripper and right_gripper |
-| Position sensors | Full support | base_sensor, upperarm_sensor, forearm_sensor, wrist_sensor, rotational_wrist_sensor, left_gripper_sensor and right_gripper_sensor |
+| Motors | Full support | base, upperarm, forearm, wrist, rotational\_wrist, left\_gripper and right\_gripper |
+| Position sensors | Full support | base\_sensor, upperarm\_sensor, forearm\_sensor, wrist\_sensor, rotational\_wrist\_sensor, left\_gripper\_sensor and right\_gripper\_sensor |
 | Touch sensors | Full support | ds[0-8] |
 | Distance sensors | Full support | ts[0-3] |
 

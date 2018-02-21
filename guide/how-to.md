@@ -154,6 +154,13 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 Each lidar scan is displayed in a `Display` device.
 A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
 
+### spinning\_top.wbt
+
+**Keywords**: Spinner, chessboard, chess pieces, apply a torque
+
+![spinning_top.png](images/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
+To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
+
 ### texture\_change.wbt
 
 **Keywords**: Supervisor, texture, `wb_supervisor_field_set_*` functions, Camera
@@ -161,13 +168,6 @@ A Supervisor applies the scan depth output by removing pixels on a black texture
 ![texture_change.png](images/texture_change.png) In this example, a robot moves forward and backward in front of a large textured panel.
 The robot watches the panel with its `Camera`.
 Meanwhile a `Supervisor` switches the image displayed on the panel.
-
-### spinning\_top.wbt
-
-**Keywords**: Spinner, chessboard, chess pieces, apply a torque
-
-![spinning_top.png](images/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
-To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
 
 ### vision.wbt
 

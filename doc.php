@@ -75,7 +75,7 @@
   include 'header.php';
 ?>
     <div class="webots-doc" id="webots-doc" style="padding:0;">
-      <div id="left" style="top:46px;height:calc(100% - 46px)">
+      <div id="left" style="top:44px;height:calc(100% - 44px)">
         <div id="navigation">
           <table>
             <tr>
@@ -91,7 +91,7 @@
         <div id="menu"></div>
       </div>
       <div id="handle"></div>
-      <div id="center" style="top:46px">
+      <div id="center" style="top:44px">
         <div id="content">
           <div id="title">
             <h2 id="title-content">Documentation</h2>

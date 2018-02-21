@@ -116,6 +116,9 @@
   padding: 0.5em;
   overflow-x: hidden;
 }
+.webots-doc #accordion li a.active::after {
+  content: '';
+}
 .webots-doc #accordion li a {
   display: block;
   background: transparent;
@@ -214,6 +217,9 @@
   font-family: "Roboto Mono", monospace;
   white-space: pre;
 }
+.webots-doc tr > td >  code {
+  white-space: normal;
+}
 .webots-doc p > code, .webots-doc li > code {
   color: #222;
   background: #eee;
@@ -225,7 +231,8 @@
 }
 .webots-doc h1,
 .webots-doc h2,
-.webots-doc h3 {
+.webots-doc h3,
+.webots-doc h4 {
   font-family: 'Roboto';
   font-style: normal;
   color: #0e6f8c;
@@ -242,13 +249,13 @@
 .webots-doc h3 {
   font-size: 26px;
 }
+.webots-doc h4 {
+  font-size: 18px;
+}
 .webots-doc .release-tag {
   display: inline;
   font-size: 14px;
   color: black;
-}
-.webots-doc h4 {
-  font-size: 14px;
 }
 .webots-doc .anchor-link-image {
   padding-left: 20px;
@@ -304,6 +311,9 @@
   border-width: 1px;
   border-color: #aaa;
   border-collapse: collapse;
+}
+.webots-doc #view figure > table {
+  width: 100%;
 }
 .webots-doc #view table th {
   border-width: 1px;

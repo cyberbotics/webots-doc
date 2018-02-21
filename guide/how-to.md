@@ -158,8 +158,8 @@ A Supervisor applies the scan depth output by removing pixels on a black texture
 
 **Keywords**: Supervisor, IndexedLineSet, draw trail
 
-![supervisor_draw_trail.png](images/supervisor_draw_trail.png) In this example, a Supervisor tracks the position of a target node, and draws a green path along these positions.
-The target node is a `Transform` node mounted in the `turretSlot` of an e-puck robot.
+![supervisor_draw_trail.png](images/supervisor_draw_trail.png) In this example, a Supervisor draws a green path behind a target node.
+The target node is a `Transform` node mounted in the `turretSlot` of a moving e-puck robot.
 At the beginning of the simulation, the `Supervisor` creates programmatically an `IndexedLineSet` node.
 Then at each simulation step, it uses the target node position to update the `IndexedLineSet` node fields.
 

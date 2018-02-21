@@ -6,7 +6,7 @@
 
 %end
 
-The IPR robot is a 6-DOF robotic arm mounted by a gripper composed of 2 rotational fingers.
+The IPR robot is a 6-DOF robotic arm equipped with a gripper composed of 2 rotational fingers.
 It is developed by [Neuronics](http://www.neuronics.be/).
 Four models are supported in Webots: HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
 
@@ -14,7 +14,7 @@ More information is available on the Neuronics official [webpage](http://www.neu
 
 ### IPR models
 
-The different IPR models shares the same device names.
+The different IPR models share the same device names.
 
 %figure "IPR devices"
 
@@ -55,7 +55,7 @@ The source code for this client is in the "ipr/controllers/ipr\_collaboration.c"
 
 #### ipr\_cube.wbt
 
-![ipr_cube.png](images/ipr_cube.png) In this example, an IPR robots moves a small red cube onto a bigger one.
+![ipr_cube.png](images/ipr_cube.png) In this example, an IPR robot moves a small red cube onto a bigger one.
 This example also uses a client program which drives the movements of the robot.
 The source code for this client is in the "ipr/controllers/ipr\_cube.c" file.
 

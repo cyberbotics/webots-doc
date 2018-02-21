@@ -403,7 +403,8 @@ void wb_supervisor_node_restart_controller(WbNodeRef node);
 **Description**
 
 The `wb_supervisor_node_restart_controller` function restarts the controller of the Robot passed to it.
-If a node other than a Robot is passed to this function, no change is effected, and a warning message is printed to the console.
+If a node other than a [Robot](robot.md) is passed to this function, no change is effected, and a warning message is printed to the console.
+Note that if a robot window is specified for the [Robot](robot.md) node, the robot window will be restarted as well.
 
 ---
 
@@ -462,7 +463,19 @@ A transparency level of 0 means no transparency, while a transparency level of 1
 Intermediate values correspond to semi-transparent levels.
 Finally, the `font` parameter defines the font used to draw the text, the following standard fonts are available:
 
- - Arial  - Arial Black  - Comic Sans MS  - Courier New  - Georgia  - Impact  - Lucida Console  - Lucida Sans Unicode  - Palatino Linotype  - Tahoma  - Times New Roman  - Trebuchet MS  - Verdana
+- Arial
+-  Arial Black
+-  Comic Sans MS
+-  Courier New
+-  Georgia
+-  Impact
+-  Lucida Console
+-  Lucida Sans Unicode
+-  Palatino Linotype
+-  Tahoma
+-  Times New Roman
+-  Trebuchet MS
+-  Verdana
 
 **Examples**
 

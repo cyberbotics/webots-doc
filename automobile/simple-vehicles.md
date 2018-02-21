@@ -20,8 +20,7 @@ They are made to represent non-moving parked vehicles or to be moved using a Sup
 
 #### CarSimple Field Summary
 
-- `recognitionColors`: If not empty, this vehicle may be recognized by any Camera
-device with recognition capability (i.e. with a Recognition node).
+- `recognitionColors`: If not empty, this vehicle may be recognized by any Camera device with recognition capability (i.e. with a Recognition node).
 - `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 
 CarSimple is not an actual PROTO but defines the common structure of all the 'simple' versions of the cars.

@@ -115,9 +115,9 @@ int  wb_joystick_get_pov_value(int pov);
 
 **Description**
 
-The `wb_joystick_get_number_of_povs()` function returns the number of point of views (POV) of the joystick.
+The `wb_joystick_get_number_of_povs` function returns the number of point of views (POV) of the joystick.
 
-The `wb_joystick_get_pov_value()` function returns the current value of the point of views (POV) passed as an argument.
+The `wb_joystick_get_pov_value` function returns the current value of the point of views (POV) passed as an argument.
 
 ---
 
@@ -179,7 +179,7 @@ The `wb_joystick_set_resistance_gain` function sets the resistance gain of the f
 Resistance is an effect that tend to prevent the axis from moving.
 The joystick must support force feedback and the unit of `gain` is hardware specific.
 
-The `wb_joystick_set_force_axis()` function defines which axis is associated to the force feedback. This is useful for the auto centering (where the force is proportional to the difference between the axis position and it's center) and for the resistance (where the force is proportional to the axis velocity).
+The `wb_joystick_set_force_axis` function defines which axis is associated to the force feedback. This is useful for the auto centering (where the force is proportional to the difference between the axis position and it's center) and for the resistance (where the force is proportional to the axis velocity).
 
 > **Note**:
 The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.

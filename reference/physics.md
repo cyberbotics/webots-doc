@@ -2,11 +2,11 @@
 
 ```
 Physics {
-  SFFloat density       1000  # (kg/m^3) -1 or > 0
-  SFFloat mass          -1    # (kg) -1 or > 0
-  MFVec3f centerOfMass  [ ]   # position of the center of mass
-  MFVec3f inertiaMatrix [ ]   # empty or 2 values
-  SFNode  damping       NULL  # optional damping node
+  SFFloat density       1000   # {-1, [0, inf)}
+  SFFloat mass          -1     # {-1, [0, inf)}
+  MFVec3f centerOfMass  [ ]    # any vector
+  MFVec3f inertiaMatrix [ ]    # any two vectors
+  SFNode  damping       NULL   # {Damping, PROTO}
 }
 ```
 
@@ -25,40 +25,26 @@ For compatibility reasons, these fields are still present in the [Physics](#phys
 
 ### Field Summary
 
-- The `density` field can be used to define the density of the containing
-[Solid](solid.md). The value of the `density` field should be a positive number
-number or -1. A -1 value indicates that the dentity is not known, in this case
-the `mass` field (see below) must be specified. If the `density` is specified
-(different from -1) then the total mass of the [Solid](solid.md) is calculated
-by multiplying the specified density with the total volume of the geometrical
-primitives composing the `boundingObject`. Note that Webots ignores if the
-geometrical primitives intersect or not, the volume of each primitive is simply
-added to the total volume and finally multiplied by the density.
+- The `density` field can be used to define the density of the containing [Solid](solid.md).
+The value of the `density` field should be a positive number number or -1.
+A -1 value indicates that the dentity is not known, in this case the `mass` field (see below) must be specified.
+If the `density` is specified (different from -1) then the total mass of the [Solid](solid.md) is calculated by multiplying the specified density with the total volume of the geometrical primitives composing the `boundingObject`.
+Note that Webots ignores if the geometrical primitives intersect or not, the volume of each primitive is simply added to the total volume and finally multiplied by the density.
 
-- The `mass` field can be used to specify the total mass of the containing
-[Solid](solid.md). The value of the `mass` field should be a positive number or
--1. A -1 value indicates that the total mass is not known, in this case the
-`density` field (see above) must be specified. If the mass is known, e.g.,
-indicated in the specifications of the robot, then it is more accurate to
-specify the mass rather than the density.
+- The `mass` field can be used to specify the total mass of the containing [Solid](solid.md).
+The value of the `mass` field should be a positive number or -1.
+A -1 value indicates that the total mass is not known, in this case the `density` field (see above) must be specified.
+If the mass is known, e.g., indicated in the specifications of the robot, then it is more accurate to specify the mass rather than the density.
 
-- The `centerOfMass` field defines the position of the center of mass of the
-solid.
-If there is no vector in the `centerOfMass` field, then the center of mass of
-the solid is automatically computed based on the [Solid](solid.md)
-`boundingObject`.
-If there is one vector in the `centerOfMass` field, it determines the
-[Solid](solid.md) center of mass, and so the automatic computation is overriden.
-This vector is expressed in meters in the relative coordinate system of the
-[Solid](solid.md) node. If this vector is different from [0 0 0], then
-the center of mass is depicted as a dark red/green/blue cross in Webots
-3D-window.
+- The `centerOfMass` field defines the position of the center of mass of the solid.
+If there is no vector in the `centerOfMass` field, then the center of mass of the solid is automatically computed based on the [Solid](solid.md) `boundingObject`.
+If there is one vector in the `centerOfMass` field, it determines the [Solid](solid.md) center of mass, and so the automatic computation is overriden.
+This vector is expressed in meters in the relative coordinate system of the [Solid](solid.md) node.
+If this vector is different from [0 0 0], then the center of mass is depicted as a dark red/green/blue cross in Webots 3D-window.
 
-- The `inertiaMatrix` field can be used to manually specify the inertia matrix of
-the [Solid](solid.md). This field can either be empty (the default) or contain
-exactly 2 vectors. If this field is empty, Webots will compute the inertia
-matrix automatically according to the position and orientation of the
-geometrical primitives in `boundingObject`.
+- The `inertiaMatrix` field can be used to manually specify the inertia matrix of the [Solid](solid.md).
+This field can either be empty (the default) or contain exactly 2 vectors.
+If this field is empty, Webots will compute the inertia matrix automatically according to the position and orientation of the geometrical primitives in `boundingObject`.
 
     If this field contains 2 vectors, these values specify the inertia matrix of the
     [Solid](solid.md). If the inertia matrix is specified then the `mass` field must
@@ -75,8 +61,7 @@ geometrical primitives in `boundingObject`.
     the [Solid](solid.md). Internally, these 6 values are passed unchanged to the
     ODE's `dMassSetParameters` function.
 
-- The `damping` field allows to specify a [Damping](damping.md) node that defines
-the velocity damping parameters to be applied to the [Solid](solid.md).
+- The `damping` field allows to specify a [Damping](damping.md) node that defines the velocity damping parameters to be applied to the [Solid](solid.md).
 
 ### How to use Physics nodes?
 

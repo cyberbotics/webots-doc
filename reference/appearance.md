@@ -2,11 +2,11 @@
 
 ```
 Appearance {
-  SFNode   material         NULL
-  SFNode   texture          NULL
-  SFNode   textureTransform NULL
-  MFNode   shaders          NULL
-  SFString name             "appearance"
+  SFNode   material         NULL           # {Material, PROTO}
+  SFNode   texture          NULL           # {ImageTexture, MultiTexture, ComposedCubeMapTexture, PROTO}
+  SFNode   textureTransform NULL           # {TextureTransform, PROTO}
+  MFNode   shaders          NULL           # {ComposedShader, PROTO}
+  SFString name             "appearance"   # any string
 }
 ```
 
@@ -22,12 +22,9 @@ The generated [Appearance](#appearance) nodes are saved in `.wbo` format.
 ### Field Summary
 
 - The `material` field, if specified, shall contain a [Material](material.md) node.
-If the `material` field is NULL, lighting is off
-(all lights are ignored during the rendering of the object that references this [Appearance](#appearance))
-and the unlit object color is (1,1,1).
+If the `material` field is NULL, lighting is off (all lights are ignored during the rendering of the object that references this [Appearance](#appearance)) and the unlit object color is (1,1,1).
 
-- The `texture` field, if specified, shall contain an
-[ImageTexture](imagetexture.md) node, a [MultiTexture](multitexture.md) node or a [ComposedCubeMapTexture](composedcubemaptexture.md).
+- The `texture` field, if specified, shall contain an [ImageTexture](imagetexture.md) node, a [MultiTexture](multitexture.md) node or a [ComposedCubeMapTexture](composedcubemaptexture.md).
 If the `texture` node is NULL, the object that references this [Appearance](#appearance) is not textured.
 
 - The `textureTransform` field, if specified, shall contain a [TextureTransform](texturetransform.md) node.
@@ -40,4 +37,3 @@ Only the first item of the `shaders` field is affecting the appearance.
 - The `name` field specifies the appearance name.
 This is especially needed to uniquely identify the appearance definition in MFNode fields supporting multiple [Appearance](#appearance) nodes.
 In case of SFNode fields containing a single [Appearance](#appearance) node it is not necessary to define a unique name.
-

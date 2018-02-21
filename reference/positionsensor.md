@@ -4,7 +4,7 @@ Derived from [Device](device.md).
 
 ```
 PositionSensor {
-  SFFloat resolution -1
+  SFFloat resolution -1   # {-1, [0, inf)}
 }
 ```
 
@@ -16,11 +16,9 @@ Depending on the [Joint](joint.md) type, it will measure the angular position in
 
 ### Field Summary
 
-- `resolution`: This field allows to define the resolution of the sensor, the
-resolution is the smallest change that it is able to measure. Setting this field
-to -1 (default) means that the sensor has an 'infinite' resolution (it can
-measure any infinitesimal change). This field accepts any value in the interval
-(0.0, inf).
+- `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
+Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).
+This field accepts any value in the interval (0.0, inf).
 
 ### PositionSensor Functions
 
@@ -73,5 +71,5 @@ WbDeviceTag wb_position_sensor_get_motor(WbDeviceTag tag);
 
 **Description**
 
-The `wb_position_sensor_get_brake()` and `wb_position_sensor_get_motor` functions return the [Brake](brake.md) and [Motor](motor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field.
+The `wb_position_sensor_get_brake` and `wb_position_sensor_get_motor` functions return the [Brake](brake.md) and [Motor](motor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field.
 If none is defined they return 0.

@@ -108,3 +108,10 @@ $WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --flows $WBT_PROJECT_
 
 Now that you have all the required files, you can open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it).
 Since the network files are already generated, you need to set the `useNetconvert` field to FALSE (or use the `--noNetconvert` parameter) and set in the `networkfiles` field (or use the `--d or --directory` parameter) the path to the directory where the SUMO network files are located.
+
+#### Add Traffic Lights
+
+Currently the [OpenStreetMap importer](openstreetmap-importer.md) and the [SUMO exporter](sumo-exporter.md) ignore traffic lights.
+However, it is simple to add them manually afterwards.
+First, you need to open the network file with [Netedit](http://sumo.dlr.de/wiki/NETEDIT#Traffic_Lights_2) and use the traffic light mode to add traffic lights on junctions.
+Then, for each traffic light junction you need to add a `TrafficLight` node in Webots in the children field of the `SumoInterface` node and respect the [naming convention](sumo-interface.md#traffic-lights-synchronization) for the LEDs.

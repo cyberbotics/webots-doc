@@ -2,10 +2,10 @@
 
 ```
 LensFlare {
-  SFBool  occlusion              FALSE
-  SFFloat transparency           0.5
-  MFVec2f haloSizesAndPositions  [0.17 0.5, 0.08 0.25, 0.33 0.12]
-  MFVec2f burstSizesAndPositions [0.33 0.5, 0.16 0.33, 0.5 0.1]
+  SFBool  occlusion              FALSE                              # {TRUE, FALSE}
+  SFFloat transparency           0.5                                # [0, 1]
+  MFVec2f haloSizesAndPositions  [0.17 0.5, 0.08 0.25, 0.33 0.12]   # [0, inf)
+  MFVec2f burstSizesAndPositions [0.33 0.5, 0.16 0.33, 0.5 0.1]     # [0, inf)
 }
 ```
 
@@ -23,10 +23,20 @@ To simulate a lens flare, a variable number of images called *halos* and *bursts
 
 ### Field Summary
 
-- The `occlusion` field specifies whether or not obstacles between the [Camera](camera.md) or [Viewpoint](viewpoint.md) and the light should disable the lens flare effect. By default, the `occlusion` field is set to FALSE because the occlusion detection is computationally expensive and should be avoided when not needed.
+- The `occlusion` field specifies whether or not obstacles between the [Camera](camera.md) or [Viewpoint](viewpoint.md) and the light should disable the lens flare effect.
+By default, the `occlusion` field is set to FALSE because the occlusion detection is computationally expensive and should be avoided when not needed.
 
-- The `transparency` field specifies the transparency level of the flare images, with 0.0 (the default) the images will appear completely opaque, and with 1.0 they will appear completely transparent. Semi-transparent images will make the flare effect lighter.
+- The `transparency` field specifies the transparency level of the flare images, with 0.0 (the default) the images will appear completely opaque, and with 1.0 they will appear completely transparent.
+Semi-transparent images will make the flare effect lighter.
 
-- The `haloSizesAndPositions` field specifies the size and position along the line mentioned previously for each halo image. The first component defines the reference size of the halo image in meters (the reference size is the size of the halo image considering the light is at a distance of 1 meter, if the light is closer or farther, the image is scaled accordingly). The second component defines the position along the line, 0.0 means at light position and 1.0 means in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md). You are allowed to set position values outside the [0;1] range, but it is recommended to remain in this range to have realistic effects. Furthermore the number of elements defines the number of halo images.
+- The `haloSizesAndPositions` field specifies the size and position along the line mentioned previously for each halo image.
+The first component defines the reference size of the halo image in meters (the reference size is the size of the halo image considering the light is at a distance of 1 meter, if the light is closer or farther, the image is scaled accordingly).
+The second component defines the position along the line, 0.0 means at light position and 1.0 means in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md).
+You are allowed to set position values outside the [0;1] range, but it is recommended to remain in this range to have realistic effects.
+Furthermore the number of elements defines the number of halo images.
 
-- The `burstSizesAndPositions` field specifies the size and position along the line mentioned previously for each burst image. The first component defines the reference size of the burst image in meters (the reference size is the size of the burst image considering the light is at a distance of 1 meter, if the light is closer or farther, the image is scaled accordingly). The second component defines the position along the line, 0.0 means at light position and 1.0 means in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md). You are allowed to set position values outside the [0;1] range, but it is recommended to remain in this range to have realistic effects. Furthermore the number of elements defines the number of burst images.
+- The `burstSizesAndPositions` field specifies the size and position along the line mentioned previously for each burst image.
+The first component defines the reference size of the burst image in meters (the reference size is the size of the burst image considering the light is at a distance of 1 meter, if the light is closer or farther, the image is scaled accordingly).
+The second component defines the position along the line, 0.0 means at light position and 1.0 means in front of the [Camera](camera.md) or [Viewpoint](viewpoint.md).
+You are allowed to set position values outside the [0;1] range, but it is recommended to remain in this range to have realistic effects.
+Furthermore the number of elements defines the number of burst images.

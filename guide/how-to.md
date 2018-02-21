@@ -132,12 +132,12 @@ You can apply a force to the pedals using `Alt + mouse left click.`.
 ![physics.png](images/physics.png) In this example, a robot flies using a physics plugin.
 This plugins is an example of:
 
-- how to access Webots objects in the physics plugin
-- how to exchange information with the controller
-- how to add custom forces
-- how to move objects
-- how to handle collisions
-- how to draw objects using OpenGL
+- How to access Webots objects in the physics plugin.
+- How to exchange information with the controller.
+- How to add custom forces.
+- How to move objects.
+- How to handle collisions.
+- How to draw objects using OpenGL.
 
 ### rope.wbt
 
@@ -153,6 +153,22 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 ![sick_terrain_scanning.png](images/sick_terrain_scanning.png) In this example, a Pioneer 3AT mounted with a Sick LMS 291 is scanning its environment.
 Each lidar scan is displayed in a `Display` device.
 A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
+
+### spinning\_top.wbt
+
+**Keywords**: Spinner, chessboard, chess pieces, apply a torque
+
+![spinning_top.png](images/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
+To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
+
+### supervisor\_draw\_trail.wbt
+
+**Keywords**: Supervisor, IndexedLineSet, draw trail
+
+![supervisor_draw_trail.png](images/supervisor_draw_trail.png) In this example, a Supervisor draws a green path behind a target node.
+The target node is a `Transform` node mounted in the `turretSlot` of a moving e-puck robot.
+At the beginning of the simulation, the `Supervisor` creates programmatically an `IndexedLineSet` node.
+Then at each simulation step, it uses the target node position to update the `IndexedLineSet` node fields.
 
 ### texture\_change.wbt
 

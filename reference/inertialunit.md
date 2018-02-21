@@ -4,11 +4,11 @@ Derived from [Device](device.md).
 
 ```
 InertialUnit {
-  MFVec3f lookupTable [ ]  # interpolation
-  SFBool  xAxis       TRUE # compute roll
-  SFBool  zAxis       TRUE # compute pitch
-  SFBool  yAxis       TRUE # compute yaw
-  SFFloat resolution  -1
+  MFVec3f lookupTable [ ]    # lookup table
+  SFBool  xAxis       TRUE   # {TRUE, FALSE}
+  SFBool  zAxis       TRUE   # {TRUE, FALSE}
+  SFBool  yAxis       TRUE   # {TRUE, FALSE}
+  SFFloat resolution  -1     # {-1, [0, inf)}
 }
 ```
 
@@ -29,21 +29,16 @@ The reference frame is made of the unit vector giving the north direction, the o
 
 ### Field Summary
 
-- `lookupTable`: This field optionally specifies a lookup table that can be used
-for changing the angle values [rad] into device specific output values, or for
-changing the units to degrees for example. With the lookup table it is also
-possible to define the min and max output values and to add noise to the output
-values. By default the lookup table is empty and therefore the returned angle
-values are expressed in radians and no noise is added.
+- `lookupTable`: This field optionally specifies a lookup table that can be used for changing the angle values [rad] into device specific output values, or for changing the units to degrees for example.
+With the lookup table it is also possible to define the min and max output values and to add noise to the output values.
+By default the lookup table is empty and therefore the returned angle values are expressed in radians and no noise is added.
 
-- `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation
-should be enabled or disabled for the specified axis. The `xAxis` field defines
-whether the *roll* angle should be computed. The `yAxis` field defines whether
-the *yaw* angle should be computed. The `zAxis` field defines whether the
-*pitch* angle should be computed. If one of these fields is set to FALSE, then
-the corresponding angle element will not be computed and it will return *NaN*
-(Not a Number). For example if `zAxis` is FALSE, then
-the second element of the array returned by the `wb_inertial_unit_get_values` function returns *NaN*.
+- `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation should be enabled or disabled for the specified axis.
+The `xAxis` field defines whether the *roll* angle should be computed.
+The `yAxis` field defines whether the *yaw* angle should be computed.
+The `zAxis` field defines whether the *pitch* angle should be computed.
+If one of these fields is set to FALSE, then the corresponding angle element will not be computed and it will return *NaN* (Not a Number).
+For example if `zAxis` is FALSE, then the second element of the array returned by the `wb_inertial_unit_get_values` function returns *NaN*.
 The default is that all three axes are enabled (TRUE).
 
 %figure "Roll, pitch and yaw angles in Webots' Inertial Unit"
@@ -52,11 +47,9 @@ The default is that all three axes are enabled (TRUE).
 
 %end
 
-- `resolution`: This field allows to define the resolution of the sensor, the
-resolution is the smallest change that it is able to measure. Setting this field
-to -1 (default) means that the sensor has an 'infinite' resolution (it can
-measure any infinitesimal change). This field accepts any value in the interval
-(0.0, inf).
+- `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
+Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).
+This field accepts any value in the interval (0.0, inf).
 
 ### InertialUnit Functions
 

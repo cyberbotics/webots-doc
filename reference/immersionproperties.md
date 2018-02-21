@@ -2,12 +2,12 @@
 
 ```
 ImmersionProperties {
-  SFString fluidName                          ""
-  SFString referenceArea                      "immersed area"
-  SFVec3f  dragForceCoefficients              0 0 0           # dimensionless coefficient ranging in [0, infinity)
-  SFVec3f  dragTorqueCoefficients             0 0 0           # dimensionless coefficients ranging in [0, infinity)
-  SFFloat  viscousResistanceForceCoefficient  0               # (Ns/m) ranges in [0, infinity)
-  SFFloat  viscousResistanceTorqueCoefficient 0               # (Nm/s ) ranges in [0, infinity)
+  SFString fluidName                          ""              # any string
+  SFString referenceArea                      "immersed area" # {"immersed area", "xyz-projected area"}
+  SFVec3f  dragForceCoefficients              0 0 0           # any positive vector
+  SFVec3f  dragTorqueCoefficients             0 0 0           # any positive vector
+  SFFloat  viscousResistanceForceCoefficient  0               # [0, inf)
+  SFFloat  viscousResistanceTorqueCoefficient 0               # [0, inf)
 }
 ```
 
@@ -18,11 +18,9 @@ An [ImmersionProperties](#immersionproperties) node is used inside the `immersio
 ### ImmersionProperties Fields
 
 - `fluidName`: name of the fluid with which the dynamical interaction is enabled.
-The string value must coincide with the `name` field value of an existing
-[Fluid](fluid.md) node.
+The string value must coincide with the `name` field value of an existing [Fluid](fluid.md) node.
 
-- `referenceArea`: this field defines the reference area(s) used to compute the
-drag force and drag torque of the submerging [Fluid](fluid.md).
+- `referenceArea`: this field defines the reference area(s) used to compute the drag force and drag torque of the submerging [Fluid](fluid.md).
 
     If the `referenceArea` is set to "xyz-projected area", the *x*-coordinate of the
     drag force vector with respect to the solid frame is given by:
@@ -53,14 +51,10 @@ drag force and drag torque of the submerging [Fluid](fluid.md).
     all vectors being expressed in world coordinates. Note that in this case the
     drag coefficients along the *y* and *z* axes are ignored.
 
-- `dragForceCoefficients` and `dragTorqueCoefficients`: dimensionless non-negative
-coefficients used to compute the drag force and the drag torque exerted by the
-fluid on the solid. See above formulas.
+- `dragForceCoefficients` and `dragTorqueCoefficients`: dimensionless non-negative coefficients used to compute the drag force and the drag torque exerted by the fluid on the solid.
+See above formulas.
 
-- `viscousResistanceForceCoefficient` and `viscousResistanceTorqueCoefficient`:
-this non-negative coefficients, expressed respectively in Ns/m and Nm/s, are
-used to compute the viscous resistance force and the viscous resistance torque
-exerted by the fluid on the solid according the following formulas
+- `viscousResistanceForceCoefficient` and `viscousResistanceTorqueCoefficient`: this non-negative coefficients, expressed respectively in Ns/m and Nm/s, are used to compute the viscous resistance force and the viscous resistance torque exerted by the fluid on the solid according the following formulas
 
         viscous_resistance_force = - immersion_ratio * fluid_viscosity * v_force * rel_linear_velocity
         viscous_resistance_torque = - immersion_ratio * fluid_viscosity * v_torque * angular_velocity

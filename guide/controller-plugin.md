@@ -69,6 +69,7 @@ A simple example of an HTML robot window is provided in the `robots/thymio/thymi
 - How to change the title of the robot window from the controller program.
 
 The HTML robot windows can communicate with controller programs written using any of the supported programming languages, i.e. C, C++, Python, Java, MATLAB and ROS.
+If a Robot's controller is changed or restarted during the simulation run, the robot window associated to the same Robot node will be restarted as well.
 
 The vehicle, Darwin-OP robot windows and BotStudio still use the native robot window (see below).
 However, they will soon be ported to the HTML robot window.
@@ -257,8 +258,7 @@ Here they are:
 As mentioned above, all the Webots API functionalities that should work with the real robot have to be wrapped into the remote-control library.
 To achieve this:
 
-- The internal state of the libController has to be setup to match with the
-current state of the robot.
+- The internal state of the libController has to be setup to match with the current state of the robot.
 
     Typically, when the value of a sensor is known the corresponding
     `wbr_sensor_set_value` function has to be called.

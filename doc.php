@@ -35,10 +35,22 @@
   }
   if (!isset($repository))
     $repository = 'omichel';
-  if ($branch === '')
-    $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/master/";  // RawGit production URL.
-  else
-    $rawgiturl = "https://rawgit.com/$repository/webots-doc/"; // RawGit development URL.
+
+  if ($branch === '') {
+    # get HEAD commit SHA, to ensure that when master is updated the latest version is cached by the CDN
+    ini_set('user_agent', 'omichel'); # every GitHub request needs a valid user agent header
+    $githubHead = file_get_contents("https://api.github.com/repos/omichel/webots-doc/git/refs/heads/master");
+    // failed request / github is down
+    if ($githubHead === FALSE)
+      $rawgiturl = "https://rawgit.com/$repository/webots-doc/master"; //fall back to dev URL at worst
+    else {
+      $githubPhp = json_decode($githubHead);
+      $sha = $githubPhp->object->sha;
+      $rawgiturl = "https://cdn.rawgit.com/$repository/webots-doc/$sha";  // Load the current master snapshot from RawGit CDN.
+    }
+  } else
+    $rawgiturl = "https://rawgit.com/$repository/webots-doc/"; // Load master snapshot from dev URL.
+
   $scripts="
     <script>
       setup = {
@@ -63,7 +75,7 @@
   include 'header.php';
 ?>
     <div class="webots-doc" id="webots-doc" style="padding:0;">
-      <div id="left" style="top:46px;height:calc(100% - 46px)">
+      <div id="left" style="top:44px;height:calc(100% - 44px)">
         <div id="navigation">
           <table>
             <tr>
@@ -79,7 +91,7 @@
         <div id="menu"></div>
       </div>
       <div id="handle"></div>
-      <div id="center" style="top:46px">
+      <div id="center" style="top:44px">
         <div id="content">
           <div id="title">
             <h2 id="title-content">Documentation</h2>

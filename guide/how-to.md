@@ -154,6 +154,13 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 Each lidar scan is displayed in a `Display` device.
 A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
 
+### spinning\_top.wbt
+
+**Keywords**: Spinner, chessboard, chess pieces, apply a torque
+
+![spinning_top.png](images/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
+To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
+
 ### supervisor\_draw\_trail.wbt
 
 **Keywords**: Supervisor, IndexedLineSet, draw trail

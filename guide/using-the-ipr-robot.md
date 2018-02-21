@@ -27,6 +27,12 @@ The different IPR models shares the same device names.
 
 %end
 
+%figure "IPR device positions"
+
+![ipr_devices.png](images/ipr_devices.png)
+
+%end
+
 The difference between the `90` and `180` models is the orientation of the gripper.
 The number matches with the orientation angle in degrees of the gripper.
 
@@ -64,4 +70,4 @@ The source code for this client is in the "ipr/controllers/ipr\_factory.c" file.
 
 ![ipr_models.png](images/ipr_models.png) This example shows the different types of IPR model provided by Webots : HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
 The robots are not moving.
-It is a good starting point to create your own IPR controller.
+Open the generic robot window to actuate the motors.

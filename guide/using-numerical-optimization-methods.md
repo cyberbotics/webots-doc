@@ -101,13 +101,13 @@ Neither motor positions, nor the robot controller(s) are reset this way.
 The motor positions should be reset using the `wb_motor_set_position` function and the robot controller should be reset by sending a message from the supervisor process to the robot controller process (using Webots `Emitter` / `Receiver` communication system).
 The robot controller program should be able to handle such a message and reset its state accordingly.
 
-#### Using the wb\_supervisor\_simulation\_revert() function
+#### Using the wb\_supervisor\_world\_reload() function
 
 This function restarts the physics simulation and all controllers from the very beginning.
 With this method, everything is reset, including the physics and the motor positions and the controllers.
-But this function does also restart the controller that called the `wb_supervisor_simulation_revert` function, this is usually the controller that runs the optimization algorithm, and as a consequence the optimization state is lost.
+But this function does also restart the controller that called the `wb_supervisor_world_reload` function, this is usually the controller that runs the optimization algorithm, and as a consequence the optimization state is lost.
 Hence for using this technique, it is necessary to develop functions that can save and restore the complete state of the optimization algorithm.
-The optimization state should be saved before calling the `wb_supervisor_simulation_revert` function and reloaded when the `Supervisor` controller restarts.
+The optimization state should be saved before calling the `wb_supervisor_world_reload` function and reloaded when the `Supervisor` controller restarts.
 Here is a pseudo-code example:
 
 ```c
@@ -139,7 +139,7 @@ void evaluate_next_robot() {
   optimizer_save_state("my_state_file.txt");
   ...
   // start next evaluation
-  wb_supervisor_simulation_revert();
+  wb_supervisor_world_reload();
   wb_robot_step(TIME_STEP);
   exit(0);
 }
@@ -167,7 +167,7 @@ Finally, the last method is to start and quit the Webots program for each parame
 This may sound like an overhead, but in fact Webots startup time is usually very short compared to the time necessary to evaluate a controller, so this approach makes perfectly sense.
 
 For example, Webots can be called from a shell script or from any type of program suitable for running the optimization algorithm.
-Starting Webots each time does clearly revert the simulation completely, so each robot will start from the same initial state.
+Starting Webots each time does clearly reload the world completely, so each robot will start from the same initial state.
 The drawback of this method is that the optimization algorithm has to be programmed outside of Webots.
 This external program can be written in any programming language, e.g. shell script, C, PHP, perl, etc., provided that there is a way to call Webots and wait for its termination, e.g. like the C standard `system` function does.
 On the contrary, the parameter evaluation must be implemented in a Webots controller.

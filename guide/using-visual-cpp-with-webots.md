@@ -120,7 +120,7 @@ Finally you can hit the `Run` button to start the simulation.
 At this point the simulation should be using your Visual C++ controller.
 
 8. If you want to debug your controller with Visual C++ you can *attach* the debugger to the running controller process.
-Proceed like this: In Webots, hit the `Pause` button then the `Revert` button.
+Proceed like this: In Webots, hit the `Pause` button then the `Reload` button.
 Then, in Visual C++, use the `Debug / Attach to Process...` menu.
 In the dialog choose the `MyController.exe_webots` process.
 Still in Visual C++, you can now add breakpoints and watches in the controller code.

@@ -28,13 +28,38 @@ On each `Save` the content of the ".wbt" file is overwritten and no backup copie
 - The **Save World As...** menu item (and button) saves the current world with a new filename entered by the user.
 Note that a ".wbt" file should always be saved in a Webots project directory, and in the "worlds" subdirectory, otherwise it will not be possible to reopen the file.
 
-- ![](images/revert-button.png =26x26) The **Revert World** menu item (and button) reloads the current world from the saved version and restarts the simulation from the beginning.
+- ![](images/revert-button.png =26x26) The **Reload World** menu item (and button) reloads the current world from the saved version and restarts the simulation from the beginning.
 
     > **Note**:
-When opening (or reverting) a world, if the world takes more than 2 seconds to
+When opening (or reloading) a world, if the world takes more than 2 seconds to
 load a window will pop up and show the progression. Using this window it is
 possible to cancel the loading of the world, in that case, the empty world will
 be opened instead.
+
+- ![](images/reset-simulation-button.png =26x26) The **Reset Simulation** menu item (and button) restores the initial state of the simulation.
+The simulation is not entirely destroyed and reconstructed as with a reload, but the initial state of all nodes is restored, which is much faster.
+
+    > **Note**:
+In order to reset the simulation, the following steps are performed:
+  - The simulation time is set to 00:00:00
+  - All nodes added during the simulation are removed.
+  - All sound sources are stopped.
+  - The random seeds used by Webots internally are reset.
+  - All the nodes are reset. This has the following implication depending on the node type:
+    - **Brake**: The brake is released.
+    - **Charger**: The `battery` field and the `emissiveColor` field of the Material node of the first Shape child node are restored.
+    - **Connector**: If attached, the connector is detached and the value of the `isLocked` field is restored.
+    - **Emitter-Receiver**: The message queue is cleared.
+    - **Joint/Motor**: The position, velocity, acceleration, available torque and available force are restored.
+    - **LED**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a Shape node, the `emissiveColor` field of its Material node is restored.
+    - **Lidar**: The position of the rotating head is restored.
+    - **Pen**: All the painted textures are cleaned.
+    - **Propeller**: The slow helix and it's initial position are restored.
+    - **Robot**: The `battery` field is restored and the controller is restarted.
+    - **Solid**: The `translation` and `rotation` fields are restored and the physic is reset.
+    - **Supervisor**: All the labels are removed and the nodes visibility is restored.
+    - **Track**: The motor position is restored and the `translation` field of the textureTransform node of the Appearance node of the first Shape children node is restored.
+    - **Viewpoint**: The `orientation` and `position` fields are restored.
 
 - ![](images/new-button.png =26x26) The **New Text File** menu item (and button) opens an empty text file in the text editor.
 

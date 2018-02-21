@@ -227,6 +227,9 @@ export WEBOTS_COM1=/dev/rfcomm1
 webots
 ```
 
+> **Note**: On recent Ubuntu releases, Bluetooth slowdown may be experimented. In this case, please refer to [this link](http://www.gctronic.com/doc/index.php/E-Puck#Bluetooth_slowdown_in_Ubuntu).
+
+
 #### Bluetooth remote control
 
 Once properly set up, the Bluetooth connection to your e-puck should appear in the dropdown menus of the e-puck robot window.

@@ -235,7 +235,7 @@ int main(int argc, char **argv)
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
 
-  WbDeviceTagleft_motor = wb_robot_get_device("left wheel motor");
+  WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
   WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
   wb_motor_set_position(left_motor, INFINITY);
   wb_motor_set_position(right_motor, INFINITY);

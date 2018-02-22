@@ -24,7 +24,7 @@ class TestTitles(unittest.TestCase):
                 content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
 
                 # Extract titles.
-                for match in re.finditer(r'(#+ .*)', content):
+                for match in re.finditer(r'#+ .*', content):
                     title = content[match.start():match.end()]
                     self.titles.append(title)
         # Debug: Uncomment to display all the acquired titles.
@@ -35,3 +35,12 @@ class TestTitles(unittest.TestCase):
         """Test that titles doesn't contain any unprotected underscore."""
         for t in self.titles:
             self.assertTrue(re.search(r'[^\\]_', t) is None, msg='Title "%s" contains unprotected underscore(s).' % t)
+
+    def test_words_are_capitalized(self):
+        """Test that title words are capitalized."""
+        # Rules reference: http://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html
+        for t in self.titles:
+            title = re.sub(r'^#+\s*', '', t)  # Remove the '#'+ suffix.
+            title = re.sub(r'".+?(?=")"', '', title)  # Remove double-quoted statements.
+            words = title.split()
+            print words

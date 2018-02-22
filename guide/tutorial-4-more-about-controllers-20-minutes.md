@@ -137,7 +137,7 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: After initialization of the devices, initialize the motors:
 
 > ```c
-> WbDeviceTagleft_motor = wb_robot_get_device("left wheel motor");
+> WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
 > WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
 > wb_motor_set_position(left_motor, INFINITY);
 > wb_motor_set_position(right_motor, INFINITY);

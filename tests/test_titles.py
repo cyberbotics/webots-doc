@@ -6,7 +6,7 @@ import re
 from books import Books
 
 exceptions = [  # Words which can start with a lowercase.
-    'macOS', 'e-puck'
+    'etc.', 'macOS', 'e-puck'
 ]
 prepositions = [
     'aboard', 'about', 'above', 'across', 'after', 'against', 'along', 'amid',
@@ -70,7 +70,7 @@ class TestTitles(unittest.TestCase):
         for t in self.titles:
             title = re.sub(r'^#+\s*', '', t['title'])  # Remove the '#'+ suffix.
             title = re.sub(r'".+?(?=")"', '', title)  # Remove double-quoted statements.
-            words = re.split(r'[ \(\),/\?:]', title)
+            words = re.split(r'[ :\(\),/\?]', title)
             for w in range(len(words)):
                 word = words[w]
                 if not word or word.startswith('wb') or word.endswith('.wbt') or word in exceptions or numberPattern.match(word):

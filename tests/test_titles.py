@@ -76,18 +76,10 @@ class TestTitles(unittest.TestCase):
                 if not word or word.startswith('wb') or word.endswith('.wbt') or word in exceptions or numberPattern.match(word):
                     continue  # Exceptions.
                 if w == 0:
-                    # self.assertTrue(uppercasePattern.match(word), msg='%s: First word of title "%s" is not in uppercase.' % (t['md'], t['title']))
-                    if uppercasePattern.match(word) is None:
-                        print '%s: First word of title "%s" is not an uppercase.' % (t['md'], t['title'])
+                    self.assertTrue(uppercasePattern.match(word), msg='%s: First word of title "%s" is not in uppercase.' % (t['md'], t['title']))
                 elif w == len(words) - 1:
-                    # self.assertTrue(uppercasePattern.match(word), msg='%s: Last word of title "%s" is not in uppercase.' % (t['md'], t['title']))
-                    if uppercasePattern.match(word) is None:
-                        print ('%s: Last word of title "%s" is not an uppercase.' % (t['md'], t['title']))
+                    self.assertTrue(uppercasePattern.match(word), msg='%s: Last word of title "%s" is not in uppercase.' % (t['md'], t['title']))
                 elif word.lower() in articles or word.lower() in conjunctions or word.lower() in prepositions:
-                    # self.assertTrue(lowercasePattern.match(word), msg='%s: word "%s" of title "%s" is not in lowercase.' % (t['md'], word, t['title']))
-                    if lowercasePattern.match(word) is None:
-                        print '%s: word "%s" of title "%s" is not in lowercase.' % (t['md'], word, t['title'])
+                    self.assertTrue(lowercasePattern.match(word), msg='%s: word "%s" of title "%s" is not in lowercase.' % (t['md'], word, t['title']))
                 else:
-                    # self.assertTrue(uppercasePattern.match(word), msg='%s: word "%s" of title "%s" is not in uppercase.' % (t['md'], word, t['title']))
-                    if uppercasePattern.match(word) is None:
-                        print '%s: word "%s" of title "%s" is not in uppercase.' % (t['md'], word, t['title'])
+                    self.assertTrue(uppercasePattern.match(word), msg='%s: word "%s" of title "%s" is not in uppercase.' % (t['md'], word, t['title']))

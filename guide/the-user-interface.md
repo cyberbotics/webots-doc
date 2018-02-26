@@ -56,7 +56,7 @@ In order to reset the simulation, the following steps are performed:
     - **Pen**: All the painted textures are cleaned.
     - **Propeller**: The slow helix and it's initial position are restored.
     - **Robot**: The `battery` field is restored and the controller is restarted.
-    - **Solid**: The `translation` and `rotation` fields are restored and the physic is reset.
+    - **Solid**: The `translation` and `rotation` fields are restored and the physics is reset.
     - **Supervisor**: All the labels are removed and the nodes visibility is restored.
     - **Track**: The motor position is restored and the `translation` field of the textureTransform node of the Appearance node of the first Shape children node is restored.
     - **Viewpoint**: The `orientation` and `position` fields are restored.

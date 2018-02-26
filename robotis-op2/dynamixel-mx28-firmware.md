@@ -1,4 +1,4 @@
-## Dynamixel MX28 firmware
+## Dynamixel MX28 Firmware
 
 The remote compilation has been optimized for the latest firmware versions of the motors.
 You need to have at least version 27 of the firmware installed on all the motors, if this is not the case (on old robot for example) you will be informed when you will try to send a controller to the real robot.

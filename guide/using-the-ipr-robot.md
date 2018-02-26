@@ -1,4 +1,4 @@
-## Using the IPR robot
+## Using the IPR Robot
 
 %figure "IPR"
 
@@ -12,7 +12,7 @@ Four models are supported in Webots: HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
 
 More information is available on the Neuronics official [webpage](http://www.neuronics.be/).
 
-### IPR models
+### IPR Models
 
 The different IPR models share the same device names.
 

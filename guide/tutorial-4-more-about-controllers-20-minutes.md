@@ -1,4 +1,4 @@
-## Tutorial 4: More about Controllers (20 minutes)
+## Tutorial 4: More about Controllers (20 Minutes)
 
 Now we start to tackle the topics related to programming robot controllers.
 We will design a simple controller that avoids the obstacles created in the previous tutorials.
@@ -11,7 +11,7 @@ The study of robotics algorithms is beyond the goals of this tutorial and so it 
 Some rudimentary programming knowledge is required to tackle this chapter (any C tutorial should be a sufficient introduction).
 At the end of the chapter, links to further robotics algorithmics are given.
 
-### New World and new Controller
+### New World and New Controller
 
 > **Hands on**: Save the previous world as "collision\_avoidance.wbt".
 

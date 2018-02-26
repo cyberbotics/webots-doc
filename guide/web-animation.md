@@ -15,7 +15,7 @@ The [figure below](#screenshot-of-a-web-animation-page-generated-by-webots) show
 
 %end
 
-### How to export a Web Animation
+### How to Export a Web Animation
 
 Select the `File / Make HTML5 Animation...` menu item, select the desired `X3D` parameters and choose the target `HTML` file.
 Webots will ask to playback the resulting file in the default Web browser (from the OS settings).
@@ -29,7 +29,7 @@ In this case, please refer to the [section below](#remarks-on-the-used-technolog
 
 **Note**: A [Supervisor](supervisor-programming.md) can start or stop an animation recording as well.
 
-### How to embed a Web Animation in your Website
+### How to Embed a Web Animation in Your Website
 
 Please refer to [this section](web-scene.md#how-to-embed-a-web-scene-in-your-website).
 
@@ -40,7 +40,7 @@ Node insertion or deletion are also not recorded in the animation file.
 
 Additional limitations are described in [this section](web-scene.md#limitations).
 
-### Scene refresh rate
+### Scene Refresh Rate
 
 The scene refresh rate is defined by the `WorldInfo.FPS` field.
 However, the `WorldInfo.basicTimeStep` field have an impact on the refresh rate too, because the updates are only sent during the simulation step.
@@ -52,6 +52,6 @@ The actual refresh rate can be computed with the following formula:
 
 > **Note**: It is not recommended to change the `WorldInfo.FPS` or `WorldInfo.basicTimeStep` fields while recording an animation.
 
-### Remarks on the used Technologies and their Limitations
+### Remarks on the Used Technologies and Their Limitations
 
 Please refer to [this section](web-scene.md#remarks-on-the-used-technologies-and-their-limitations).

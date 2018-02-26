@@ -9,7 +9,7 @@ The expected result is depicted in [this figure](#expected-result-at-the-end-of-
 
 %end
 
-### New simulation
+### New Simulation
 
 > **Hands on**: Start from the results of the previous tutorial and create a new simulation called "compound\_solid.wbt" by using the menu `File / Save World As...`.
 
@@ -80,7 +80,7 @@ The fourth component defines the rotation angle about the axis (in [rad]).
 > **Hands on**: Modify the rotation of the Solid node of the dumbbell in order to move the handle's axis (*y*-axis) parallel to the ground.
 A unit axis of *(1, 0, 0)* and an angle of *π/2* is a possible solution.
 
-### How to choose bounding Objects?
+### How to Choose Bounding Objects?
 
 As said before, minimizing the number of bounding objects increases the simulation speed.
 However, choosing the bounding objects primitives carefully is also crucial to increase the simulation speed.
@@ -112,7 +112,7 @@ We want now to modify the friction model between the dumbbell and the other soli
 In the WorldInfo node, add a ContactProperties node between the *"default"* and *"dumbbell"* categories.
 Try to set the `coulombFriction` field to *0* and remark that the dumbbell slides (instead of rotating) on the floor because no more friction is applied.
 
-### basicTimeStep, ERP and CFM
+### "basicTimeStep", "ERP" and "CFM"
 
 The most critical parameters for a physics simulation are stored in the `basicTimeStep`, `ERP` and `CFM` fields of the WorldInfo node.
 
@@ -125,7 +125,7 @@ These values are directly used by the physics engine to determine how the constr
 The default values are well defined for regular use of Webots.
 We recommend to read the `Reference Manual` and the documentation of [ODE](http://ode-wiki.org/wiki/index.php?title=Manual) (physics engine used in Webots) to understand completely their purpose.
 
-### Minor physics Parameters
+### Minor Physics Parameters
 
 There are also other physics parameters which are less useful in a regular use of Webots.
 A complete description of these parameters can be found in the `Reference Manual`.

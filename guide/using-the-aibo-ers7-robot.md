@@ -1,4 +1,4 @@
-## Using the Aibo ERS7 robot
+## Using the Aibo ERS7 Robot
 
 %figure "Aibo ERS7"
 
@@ -11,7 +11,7 @@ The model includes 26 LEDs, 3 infra-red distance sensors and a total of 20 motor
 
 More information on the Aibo robot can be found [here](https://en.wikipedia.org/wiki/AIBO).
 
-### Aibo ERS7 model
+### Aibo ERS7 Model
 
 The following [table](#aibo-ers7-motor-and-position-sensor-names) shows the different names of the `RotationalMotor` and `PositionSensor` supported on the Aibo ERS7.
 The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of each joint.

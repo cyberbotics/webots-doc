@@ -9,7 +9,7 @@ Webots has to be installed on your computer.
 
 > **Hands on**: Install Webots by following the instructions given in [this chapter](installing-webots.md).
 
-### Create a directory for all your Webots files
+### Create a Directory for All Your Webots Files
 
 The first step is to create a directory which will contain all your files related to Webots.
 
@@ -30,7 +30,7 @@ Choose any of them, but it's a good opportunity to take a look at our guided tou
 
 Now a simulation is running.
 
-### Create a new Project
+### Create a New Project
 
 The freshly created "my\_webots\_projects" directory will contain all your Webots projects.
 Your first Webots project will be the tutorials from this chapter.

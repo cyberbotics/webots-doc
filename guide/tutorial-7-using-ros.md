@@ -26,7 +26,7 @@ Unless you need older version for some other application, you should choose the 
 > **Note**: If you never used the ROS framework before, it is strongly recommended to follow some tutorials from: [http://wiki.ros.org/ROS/Tutorials](http://wiki.ros.org/ROS/Tutorials).
 These tutorials will also help you set up your ROS environment and initialize your catkin workspace.
 
-### webots\_ros package installation
+### "webots\_ros" Package Installation
 
 If you haven't created any catkin workspace yet, you can create one with the following commands:
 
@@ -56,7 +56,7 @@ cd catkin_ws
 catkin_make
 ```
 
-### Running the nodes
+### Running the Nodes
 
 Now that you have built the package, you can run the example you want.
 You will first have to launch the master node with the following commands from the catkin workspace:
@@ -98,7 +98,7 @@ This is useful to make ROS-based simulation reproducible.
 > **Note**: If you want to use different computers for the ROS master, the Webots simulation and/or the nodes, you must be able to connect to each of them with SSH in both ways.
 The hostname and IP addresses of these computers should be listed in the known hosts list of each computer and the `ROS_MASTER_URI` variable should be adjusted accordingly.
 
-### Creating new nodes
+### Creating New Nodes
 
 These examples only show a few possibilities for interfacing ROS and Webots, but you can build your own nodes to connect with Webots.
 

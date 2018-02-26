@@ -67,10 +67,10 @@ class TestTitles(unittest.TestCase):
         for t in self.titles:
             title = re.sub(r'^#+\s*', '', t['title'])  # Remove the '#'+ suffix.
             title = re.sub(r'".+?(?=")"', '', title)  # Remove double-quoted statements.
-            words = title.split()
+            words = re.split(r'[ \(\)]', title)
             for w in range(len(words)):
                 word = words[w]
-                if word.startswith('wb_') or word.endswith('.wbt') or word in exceptions or numberPattern.match(word):
+                if not word or word.startswith('wb_') or word.endswith('.wbt') or word in exceptions or numberPattern.match(word):
                     continue  # Exceptions.
                 if w == 0:
                     # self.assertTrue(uppercasePattern.match(word), msg='%s: First word of title "%s" is not an uppercase.' % (t['md'], t['title']))

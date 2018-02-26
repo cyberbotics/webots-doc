@@ -5,16 +5,19 @@ import re
 
 from books import Books
 
+exceptions = [
+    'macOS'
+]
 prepositions = [
-    "aboard", "about", "above", "across", "after", "against", "along", "amid",
-    "among", "anti", "around", "as", "at", "before", "behind", "below", "beneath",
-    "beside", "besides", "between", "beyond", "but", "by", "concerning", "considering",
-    "despite", "down", "during", "except", "excepting", "excluding", "following",
-    "for", "from", "in", "inside", "into", "like", "minus", "near", "of", "off",
-    "on", "onto", "opposite", "outside", "over", "past", "per", "plus", "regarding",
-    "round", "save", "since", "than", "through", "to", "toward", "towards", "under",
-    "underneath", "unlike", "until", "up", "upon", "versus", "via", "with", "within",
-    "without"
+    'aboard', 'about', 'above', 'across', 'after', 'against', 'along', 'amid',
+    'among', 'anti', 'around', 'as', 'at', 'before', 'behind', 'below', 'beneath',
+    'beside', 'besides', 'between', 'beyond', 'but', 'by', 'concerning', 'considering',
+    'despite', 'down', 'during', 'except', 'excepting', 'excluding', 'following',
+    'for', 'from', 'in', 'inside', 'into', 'like', 'minus', 'near', 'of', 'off',
+    'on', 'onto', 'opposite', 'outside', 'over', 'past', 'per', 'plus', 'regarding',
+    'round', 'save', 'since', 'than', 'through', 'to', 'toward', 'towards', 'under',
+    'underneath', 'unlike', 'until', 'up', 'upon', 'versus', 'via', 'with', 'within',
+    'without'
 ]
 articles = [
     'a', 'an', 'the', 'some'
@@ -58,29 +61,30 @@ class TestTitles(unittest.TestCase):
         """Test that title words are capitalized."""
         # English rules reference: http://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html
         # Chosen style: "Chicago Manual of Style"
-        uppercasePattern = re.compile("^[A-Z]$")
-        lowercasePattern = re.compile("^[a-z][^A-Z]*$")
+        uppercasePattern = re.compile('^[A-Z]')
+        lowercasePattern = re.compile('^[a-z][^A-Z]*$')
+        numberPattern = re.compile('^\d')
         for t in self.titles:
             title = re.sub(r'^#+\s*', '', t['title'])  # Remove the '#'+ suffix.
             title = re.sub(r'".+?(?=")"', '', title)  # Remove double-quoted statements.
             words = title.split()
             for w in range(len(words)):
                 word = words[w]
-                if word.startswith('wb_') or word.endswith('.wbt'):
-                    continue
+                if word.startswith('wb_') or word.endswith('.wbt') or word in exceptions or numberPattern.match(word):
+                    continue  # Exceptions.
                 if w == 0:
+                    # self.assertTrue(uppercasePattern.match(word), msg='%s: First word of title "%s" is not an uppercase.' % (t['md'], t['title']))
                     if uppercasePattern.match(word) is None:
                         print '%s: First word of title "%s" is not an uppercase.' % (t['md'], t['title'])
-                    # self.assertTrue(uppercasePattern.match(word), msg='%s: First word of title "%s" is not an uppercase.' % (t['md'], t['title']))
                 elif w == len(words) - 1:
+                    # self.assertTrue(uppercasePattern.match(word), msg='%s: Last word of title "%s" is not an uppercase.' % (t['md'], t['title']))
                     if uppercasePattern.match(word) is None:
                         print ('%s: Last word of title "%s" is not an uppercase.' % (t['md'], t['title']))
-                    # self.assertTrue(uppercasePattern.match(word), msg='%s: Last word of title "%s" is not an uppercase.' % (t['md'], t['title']))
-                elif word.lower() in articles or word.lower() in articles or word.lower() in prepositions:
+                elif word.lower() in articles or word.lower() in conjunctions or word.lower() in prepositions:
+                    # self.assertTrue(lowercasePattern.match(word), msg='%s: word "%s" of title "%s" is not an uppercase.' % (t['md'], word, t['title']))
                     if lowercasePattern.match(word) is None:
                         print '%s: word "%s" of title "%s" is not an uppercase.' % (t['md'], word, t['title'])
-                    # self.assertTrue(lowercasePattern.match(word), msg='%s: word "%s" of title "%s" is not an uppercase.' % (t['md'], word, t['title']))
                 else:
+                    # self.assertTrue(uppercasePattern.match(word), msg='%s: word "%s" of title "%s" is not an lowercase.' % (t['md'], word, t['title']))
                     if uppercasePattern.match(word) is None:
                         print '%s: word "%s" of title "%s" is not an lowercase.' % (t['md'], word, t['title'])
-                    # self.assertTrue(uppercasePattern.match(word), msg='%s: word "%s" of title "%s" is not an lowercase.' % (t['md'], word, t['title']))

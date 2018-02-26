@@ -1,4 +1,4 @@
-# Webots for automobiles
+# Webots for Automobiles
 
 Release {{ webots.version.full }}
 

@@ -1,4 +1,4 @@
-## Java library
+## Java Library
 
 The `automobile` library provides a Java wrapper of the C libraries `libdriver` and `libcar`.
 

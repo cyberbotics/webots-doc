@@ -1,4 +1,4 @@
-## Village winter
+## Village Winter
 
 %figure "The Village winter world"
 

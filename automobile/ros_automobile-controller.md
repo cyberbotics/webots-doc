@@ -1,4 +1,4 @@
-## ros\_automobile controller
+## "ros\_automobile" Controller
 
 The `ros_automobile` controller provides an interface between ROS, the `libdriver` and `libcar` libraries.
 In addition to the servies and topics available in the default ROS controller, additional services and topics are available with the `ros_automobile` controller.

@@ -1,4 +1,4 @@
-## Road segments
+## Road Segments
 
 The first part of this section will present the various PROTO models of road segments and intersections, that can be used to build the road network.
 
@@ -62,7 +62,7 @@ Road {
 }
 ```
 
-#### Road field Summary
+#### Road Field Summary
 
 - `name`: Could contain the street name.
 - `id`: Could contain a unique ID.

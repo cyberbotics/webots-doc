@@ -18,11 +18,11 @@ It can be respectively either "VERTEX" or "FRAGMENT".
 
 The `content` field contains the source code of the GPU program.
 
-### GPU program supported type and version
+### GPU Program Supported Type and Version
 
 For a maximal compatibility range, `GLSL version 120` has been chosen as the only supported shading language for now.
 
-### GLSL 120 documentation
+### GLSL 120 Documentation
 
 The GLSL documentation is available from following sources:
 
@@ -59,7 +59,7 @@ Some of them are described in the following table:
 | `[Point/Spot]Light.radius`                           | *Not available*                                                 |
 | `DirectionalLight.direction`                         | `gl_LightSource[X].position`                                    |
 
-### Special preprocessor variables
+### Special Preprocessor Variables
 
 - `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
 This constant is particularly useful to loop over the lights.
@@ -69,12 +69,12 @@ This constant is particularly useful to loop over the lights.
 - `2` stands for an exponential2 fog
 - `3` stands for a linear fog
 
-### X3DOM export
+### X3DOM Export
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
 Generally this automatic conversion is working fine, however if you suspect a wrong behavior, please write a bug report to help us improving the conversion function.
 
-#### Known differences
+#### Known Differences
 
 - **Lights order**: In Webots the lights list is sorted by the distance between the lights and the target object, while in `X3DOM` the list is simply sorted by the Light node definition order.
 So it's recommended to deal the lights in a generic way.

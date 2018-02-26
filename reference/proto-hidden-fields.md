@@ -1,4 +1,4 @@
-## PROTO hidden fields
+## PROTO Hidden Fields
 
 Regular PROTO fields let you change, save and restore, chosen characteristics of your model.
 In constrast, PROTO encapsulation prevents field values which are not accessible through PROTO fields, but which may change during simulation, from being saved and subsequently restored.

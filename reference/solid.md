@@ -82,7 +82,7 @@ Continuous increment is obtained by setting the step value to -1.
 If the [Solid](#solid) node is merged into a solid assembly (see [implicit solid merging](physics.md#implicit-solid-merging-and-joints)), then these fields will be effective only for the [Solid](#solid) at the top of the assembly.
 Hidden velocity fields allow you to save and restore the dynamics of your simulation or to define initial velocities for every physical objects in the scene.
 
-### How to use the boundingObject field?
+### How to Use the "boundingObject" Field?
 
 The `boundingObject` field is used to define the bounds of a [Solid](#solid) as geometrical primitives.
 Each `boundingObject` can hold one or several geometrical primitives, such as [Box](box.md), [Capsule](capsule.md), [Cylinder](cylinder.md), etc.
@@ -111,7 +111,7 @@ Such a computation assumes a uniform mass distribution in the primitives composi
 Note that the center of mass of the [Solid](#solid) does not depend on its `boundingObject`.
 The center of mass is specified by the `centerOfMass` field of the [Physics](physics.md) node (in coordinates relative to the center of the [Solid](#solid)).
 
-### Unique Solid name
+### Unique Solid Name
 
 The capability of identifying uniquely each [Solid](#solid) node is a base requirement for other advanced features, for example to let the viewpoint follow a solid object or to store the preferences for the rendering devices overlays.
 For this reason since Webots R2018a, the user is encouraged to set unique names for sibling [Solid](#solid) nodes and a warning is printed in the console if this rule is not respected.

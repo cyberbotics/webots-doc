@@ -109,7 +109,7 @@ void webots_physics_cleanup() {
 }
 ```
 
-You will find the description of Webots physics plugin API in your `Reference Manual` or on [this page](http://www.cyberbotics.com/reference/physics-plugin.php).
+You will find the description of Webots physics plugin API [here](../reference/physics-plugin.md).
 You will find the description about the ODE functions on [this page](http://ode-wiki.org/wiki/index.php?title=Manual).
 
 ### Should I Specify the "mass" or the "density" in the Physics Nodes?

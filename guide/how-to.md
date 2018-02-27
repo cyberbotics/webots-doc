@@ -78,7 +78,7 @@ Then, the motor force is turned off and the boxes oscillate for a while, accordi
 In the first layout, the four motorized wheels are positioned circularly, as could be done for omnidirectional-wheeled robots.
 In the second layout, the four motorized wheels are oriented in the same direction, as could be done for a robot with tracks.
 In the third layout, a simple [Ackermann steering geometry](https://en.wikipedia.org/wiki/Ackermann_steering_geometry) is shown.
-Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf. the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
+Note that more completed Ackermann steering geometry can be achieved using the [`AckermannVehicle` PROTO](../automobile/ackermannvehicle.md), and the [`car` library](../automobile/car-library.md).
 
 ### gui\_tracker.wbt
 

@@ -4,7 +4,7 @@ You may interface various computer peripherals with Webots in order to interact 
 
 ### Joystick
 
-You can use the [Joystick API](http://www.cyberbotics.com/reference/joystick) to get the state of the buttons and value of the axes in your controller.
+You can use the [Joystick API](../reference/joystick.md) to get the state of the buttons and value of the axes in your controller.
 You may also (if your joystick supports it) use force feedback.
 You simply need to plug your peripherals and if needed install its driver.
 A wide range of gamepad and steering wheel joysticks are supported.

@@ -6,7 +6,7 @@ You can download an OpenStreetMap map of any part of the world from [www.openstr
 
 ## Dependencies
 
-Follow [these instructions](https://www.cyberbotics.com/doc/guide/using-python) to install Python.
+Follow [these instructions](../guide/using-python.md) to install Python.
 
 Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as described below.
 

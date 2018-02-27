@@ -209,9 +209,9 @@ function redirectImages(node) {
   for (var i = 0; i < imgs.length; i++) {
     var img = imgs[i];
     var src = img.getAttribute('src');
-    var match = /^(\w*)\/([\w-.]*)$/.exec(src);
-    if (match && match.length === 3)
-      img.setAttribute('src', targetPath + match[1] + '/' + match[2]);
+    var match = /^images\/(.*)$/.exec(src);
+    if (match && match.length === 2)
+      img.setAttribute('src', targetPath + 'images/' + match[1]);
   }
 }
 

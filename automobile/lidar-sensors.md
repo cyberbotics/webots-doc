@@ -1,4 +1,4 @@
-## Lidar sensors
+## Lidar Sensors
 
 A wide range of lidar sensors have been modelled.
 
@@ -8,7 +8,7 @@ A wide range of lidar sensors have been modelled.
 
 %end
 
-### Ibeo lux
+### Ibeo Lux
 
 The `IbeoLux` is a 4 layers lidar with a range of up to 200 meters and a field of view of up to 110 degrees, it returns 680 points per layer per scan.
 

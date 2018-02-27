@@ -1,4 +1,4 @@
-## Webots license system
+## Webots License System
 
 Starting with Webots 8, a new license system was introduced to facilitate the use of Webots, which replaces the previous system.
 Webots licenses can now be set-up on an unlimited number of computers, allowing you to use Webots seamlessly on any computer (office, home, travel, etc.).
@@ -9,7 +9,7 @@ After the expiration of this duration, your license will be automatically transf
 > **Note**: Cyberbotics license servers are located in Switzerland on a highly reliable network featuring a 99.9% up-time.
 However, if for some reason our servers would fail, a security system will allow you to run Webots, by connecting automatically to an alternate server located in the Cloud (hosted on Google App Engine).
 
-### Firewall configuration (optional)
+### Firewall Configuration (Optional)
 
 If you plan to use Webots behind an Internet firewall, you should create two new rules in your firewall configuration to allow connections to the following servers:
 
@@ -18,13 +18,13 @@ If you plan to use Webots behind an Internet firewall, you should create two new
 
 > **Note**: If you are using a proxy to access the Internet, Webots will retrieve your system proxy configuration automatically.
 
-### License agreement
+### License Agreement
 
 Please read your license agreement carefully before using Webots.
 This license is provided within the software package.
 By using the software and documentation, you agree to abide by all the provisions of this license.
 
-### License setup
+### License Setup
 
 A Webots license is originally associated with an e-mail address which corresponds to a user account on Cyberbotics' website.
 
@@ -35,12 +35,12 @@ Setting this field to a small value will cause more networking activity, but wil
 This will allow you in turn to restart Webots quicker on another machine.
 For example, if you select 5 minutes, you may have to wait for up to 5 minutes if you crashed Webots on a machine and want to restart it on another.
 
-### License administration
+### License Administration
 
 If you are the administrator of the license, you can log into your Webots account on Cyberbotics' website and go to the `Administration` page under the `My Account` tab.
 From there, you will be able to monitor your licenses, to purchase more licenses, to create groups of users and to grant customized user access to your licenses.
 
-### Using Webots without Internet connection
+### Using Webots without Internet Connection
 
 It is possible to use Webots without any Internet connection for a limited amount of time.
 Users who anticipate they will be away from the Internet can download a license locally on their machine for a specified lease duration.
@@ -61,7 +61,7 @@ Once downloaded, each license is stored into a file located in the following fol
 - macOS: `~/Library/Application Support/Cyberbotics/Webots/licenses`
 - Windows: `%HOMEPATH%\AppData\Roaming\Cyberbotics\Webots\licenses\`
 
-### Getting help about the Webots license system
+### Getting Help about the Webots License System
 
 If you need further information about the Webots license system, please send an e-mail to:
 

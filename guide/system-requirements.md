@@ -1,4 +1,4 @@
-## System requirements
+## System Requirements
 
 The following hardware is required to run Webots:
 

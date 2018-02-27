@@ -1,4 +1,4 @@
-## City night
+## City Night
 
 %figure "The City night world"
 

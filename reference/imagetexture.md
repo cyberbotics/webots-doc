@@ -59,7 +59,7 @@ Increasing the `filtering` value beyond 1 restores sharpness to distant textures
 An [ImageTexture](#imagetexture) can also be used together with a [ComposedShader](composedshader.md).
 In the fragment shader the texture can be queried through a `uniform sampler2D` using the OpenGL function `vec4 texture2D(sampler2D s, vec2 coord [, float bias])`.
 
-### Search rule of the texture path
+### Search Rule of the Texture Path
 
 The texture path is searched from the corresponding `url` element according to the following rule:
 

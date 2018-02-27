@@ -1020,7 +1020,7 @@ const double *wb_supervisor_virtual_reality_headset_get_orientation();
 **Description**
 
 The `wb_supervisor_virtual_reality_headset_is_used` function returns true if a virtual reality headset is currently used to view the simulation.
-For more information about how to use a virtual reality headset refer to the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#view-menu).
+For more information about how to use a virtual reality headset refer to the [User Guide](../guide/computer-peripherals.md#virtual-reality-headset).
 
 The `wb_supervisor_virtual_reality_headset_get_position` and `wb_supervisor_virtual_reality_headset_get_orientation` functions return respectively the current position and orientation of the virtual reality headset as a vector of 3 doubles and a matrix containing 9 doubles that should be interpreted as a 3 x 3 orthogonal rotation matrix:
 ```

@@ -15,7 +15,7 @@ Maintenance revisions will still be shipped to fix critical bugs between these r
 
 ## Enhanced Viewpoint Movement
 
-### Line It Up Just Right
+### Line It up Just Right
 
 Take better screenshots and record better videos of your robot by aligning the viewpoint on one of the six world axes, using the new Change View tool:
 
@@ -66,9 +66,9 @@ With a divided community and people migrating their codebases from 2.7 to 3.4 an
 
 ---
 
-## On The Road
+## On the Road
 
-### New Truck & Two-Wheeled Models
+### New Truck and Two-Wheeled Models
 
 In addition to the `Bus` PROTO two new models of trucks have been added:
 

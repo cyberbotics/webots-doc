@@ -84,7 +84,7 @@ Note that the default `lookupTable` of the [TouchSensor](#touchsensor) node is:
 Hence it maps forces between 0 and 5000 Newtons to output values between 0 and 50000, the output unit being 0.1 Newton.
 You should empty the `lookupTable` to have Newtons as output units.
 
-### Collision detection
+### Collision Detection
 
 [TouchSensor](#touchsensor)s detect collisions based on the 3D geometry of its `boundingObject`.
 So the `boundingObject` must be specified for every type of [TouchSensor](#touchsensor).

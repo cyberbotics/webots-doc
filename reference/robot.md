@@ -91,7 +91,7 @@ The search algorithm works as following: Let $(VALUE) be the value of the `windo
 - `remoteControl`: defines the path of the remote-control controller plugin used to remote control the real robot.
 The search algorithm is identical to the one used for the `window` field, except that the subdirectory of `plugins` is `remote_controls` rather than `robot_windows`.
 
-### Synchronous versus Asynchronous controllers
+### Synchronous versus Asynchronous Controllers
 
 The `synchronization` field specifies if a robot controller must be synchronized with the simulator or not.
 

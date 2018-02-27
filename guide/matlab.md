@@ -36,7 +36,7 @@ while wb_robot_step(TIME_STEP) ~= -1
 end
 ```
 
-### Using the MATLAB desktop
+### Using the MATLAB Desktop
 
 In order to avoid cluttering the desktop with too many windows, Webots starts MATLAB with the *-nodesktop* option.
 The *-nodesktop* option starts MATLAB without user interface and therefore it keeps the memory usage low which is useful in particular for multi-robot experiments.

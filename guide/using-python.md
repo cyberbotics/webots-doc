@@ -21,14 +21,14 @@ If you set it for example to `python3.6` instead of `python`, this version of py
 Finally, it is also possible to set a different version of Python for each robot controller by editing the `[python]` section of the `runtime.ini` file in each robot controller directory and setting the `COMMAND` value to `python3`, `python3.6` or `python2.7`, etc.
 If specified in the `runtime.ini` file of a controller, this Python command will be executed instead of the default one to launch this controller.
 
-#### macOS and Linux installation
+#### macOS and Linux Installation
 
 Most of the Linux distributions have Python 2.7 and 3.x already installed.
 `macOS` has Python 2.7 installed by default.
 It is possible to install Python 3.6 from the [Python web site](https://www.python.org) or from various Linux repositories.
 To check the versions of Python installed on your system, you can type in a terminal: `python --version`, `python3.6 --version`, `python2.7 --version`, `python3 --version`, etc.
 
-#### Windows installation
+#### Windows Installation
 
 You should install the latest version of Python 3.6 (64 bit) or Python 2.7 (64 bit) from the official [Python website](https://www.python.org).
 Then, you have to modify your `PATH` environment variable to add the path to the `python.exe` binary which is located in the main `Python36` or `Python27` installation folder.
@@ -41,7 +41,7 @@ The `WEBOTS_HOME/projects/web/visual_tracking` sample simulation uses the Python
 These packages have to be installed on the system in order to correctly run this simulation.
 Using Python *pip*, the *NumPy* package is automatically installed with *opencv-python* package.
 
-#### Linux libraries
+#### Linux Libraries
 
 On Ubuntu 16.04, use the `pip` command to install OpenCV:
 ```sh
@@ -55,14 +55,14 @@ On Ubuntu 14.04 OpenCV doesn't need to be installed because the Python OpenCV li
 sudo apt-get install python-numpy
 ```
 
-#### macOS libraries
+#### macOS Libraries
 
 Open a Terminal and type:
 ```sh
 pip install opencv-python --user
 ```
 
-#### Windows libraries
+#### Windows Libraries
 
 Open the DOS console (CMD.EXE) and type:
 
@@ -72,7 +72,7 @@ PYTHON_PATH\Scripts\pip.exe install opencv-python
 
 Where `PYTHON_PATH` is the path to the Python installation directory, for example `C:\Python36`.
 
-### Use an alternative Python version
+### Use an Alternative Python Version
 
 As explained above, the Python libraries for Webots are precompiled for Python 3.6, Python 2.7 and on Ubuntu for the default Python 3 version provided with the system.
 It is possible however to use another Python version by recompiling the Webots Python libraries.

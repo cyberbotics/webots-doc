@@ -1,8 +1,8 @@
-## Radar sensors
+## Radar Sensors
 
 Several radar models are available.
 
-### Delphi ESR
+### "Delphi ESR"
 
 The `Delphi ESR` is a radar which can see cars up to 174 meters ahead, has a vertical field of view of 4.5 degrees and an horizontal field of view of up to 90 degrees.
 The sensor can operate in two modes: the long range mode uses an horizontal field of view of 20 degrees and a maximum range of 174 meters, the medium range mode uses a field of view of 90 degrees and a maximum range of 60 meters.
@@ -27,7 +27,7 @@ The `occlusion` field can be used to set whether occlusions between the targets 
 
 The `longRangeMode` field can be used to set the radar mode.
 
-### Smartmicro UMRR-0a
+### "Smartmicro UMRR-0a"
 
 Various types of Smartmicro UMRR-0a are available.
 They all have the same fields.
@@ -55,14 +55,14 @@ The `cellSpeed` field can be used to set the minimum radial distance between two
 
 The `angularNoise` field can be used to set the angular noise.
 
-#### Smartmicro UMRR-0a type 29
+#### "Smartmicro UMRR-0a type 29"
 
 The `Smartmicro UMRR-0a type 29` radar has an horizontal field of view of 36 degrees, a vertical field of view of 8 degrees and a maximum range of 160 meters.
 
-#### Smartmicro UMRR-0a type 30
+#### "Smartmicro UMRR-0a type 30"
 
 The `Smartmicro UMRR-0a type 30` radar has an horizontal field of view of 70 degrees, a vertical field of view of 10 degrees and a maximum range of 90 meters.
 
-#### Smartmicro UMRR-0a type 31
+#### "Smartmicro UMRR-0a type 31"
 
 The `Smartmicro UMRR-0a type 31` radar has an horizontal field of view of 100 degrees, a vertical field of view of 10 degrees and a maximum range of 45 meters.

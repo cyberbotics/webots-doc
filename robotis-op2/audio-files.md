@@ -1,4 +1,4 @@
-## Audio files
+## Audio Files
 
 %figure "Audio files available on the robot"
 

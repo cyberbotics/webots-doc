@@ -1,4 +1,4 @@
-## Interfacing Webots to third party software with TCP/IP
+## Interfacing Webots to Third Party Software with TCP/IP
 
 ### Overview
 
@@ -13,7 +13,7 @@ A client example is provided in "client.c".
 This client may be used as a model to write a similar client using the programming language of your third party software.
 This has already been implemented in *Lisp*<sup>TM</sup> and MATLAB by some Webots users.
 
-### Main advantages
+### Main Advantages
 
 There are several advantages of using such an interface.
 First, you can have several simulated robots in the same world using several instances of the same "tcpip" controller, each using a different TCP/IP port, thus allowing your third party software to control several robots through several TCP/IP connections.

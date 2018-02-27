@@ -1,4 +1,4 @@
-## SUMO exporter
+## SUMO Exporter
 
 In order to be able to simulate traffic in your simulation, it is required to have a SUMO network file (`sumo.net.xml`).
 The SUMO exporter can create SUMO network files from a Webots simulation.
@@ -8,14 +8,14 @@ The SUMO exporter can create SUMO network files from a Webots simulation.
 The SUMO exporter is using the `shapely` Python module.
 Please refer to [these instructions](openstreetmap-importer.md#dependencies) to install it.
 
-## Expectations on the Webots simulation
+## Expectations on the Webots Simulation
 
 If the Webots simulation has been created from the OpenStreetMap importer, then the export should be straight forward.
 
 If it's not the case, you should pay attention on the use of the `Road` and the `Crossroad` PROTO nodes.
 Indeed, their IDs should be unique, and the `Road.startJunction`, the `Road.endJunction` and the `Crossroad.connectedRoadIDs` fields should be filled correctly.
 
-## How to use the exporter
+## How to Use the Exporter
 
 On Linux, the path to the SUMO binaries directory should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
 

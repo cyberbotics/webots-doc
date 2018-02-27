@@ -1,4 +1,4 @@
-# Remote compilation
+# Remote Compilation
 
 Remote compilation can be used to transfer the controller to the real robot and to compile the controller on the robot.
 

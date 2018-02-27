@@ -45,7 +45,7 @@ See the [Engine sound](#engine-sound) paragraph for more information about the e
 For more information about the last eight fields and how they are used internally please refer to the [Engine models](driver-library.md#engine-models) section.
 The `extensionSlot` field is filled in by default with the `VehicleLights` PROTO.
 
-#### Engine sound
+#### Engine Sound
 
 If the `engineSound` field of the `Car` PROTO is not empty, the sound file defined in this field is used to simulate the engine sound.
 The amplitude and frequency of the sound is modulated in function of the rpm and throttle values:
@@ -112,7 +112,7 @@ For the three other sensor slots, the positions are different for each model (be
 
 In order to simplify some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.
 
-### Heavy-weights
+### Heavy-Weights
 
 Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck.
 In the case of the truck, a trailer can be present or not.

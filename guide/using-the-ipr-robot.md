@@ -1,4 +1,4 @@
-## Using the IPR Robot
+## Using Neuronics' IPR Robot
 
 %figure "IPR"
 

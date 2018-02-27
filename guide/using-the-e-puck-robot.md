@@ -1,4 +1,4 @@
-## Using the e-puck Robot
+## Using GCTronics' e-puck Robot
 
 %figure "The e-puck robot"
 

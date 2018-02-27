@@ -1,4 +1,4 @@
-## Using the Pioneer 3-DX Robot
+## Using adept's Pioneer 3-DX Robot
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 

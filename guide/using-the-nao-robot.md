@@ -1,4 +1,4 @@
-## Using the Nao Robot
+## Using SoftBank Robotics' Nao Robot
 
 %figure "Nao, a humanoid robot"
 

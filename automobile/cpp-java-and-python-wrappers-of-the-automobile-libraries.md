@@ -1,4 +1,4 @@
-## C++, Java and Python wrappers of the automobile libraries
+## C++, Java and Python Wrappers of the Automobile Libraries
 
 The [driver](driver-library.md) and [car](car-library.md) libraries are also available as oriented-object wrappers for the C++, the Java and the Python languages.
 

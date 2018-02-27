@@ -1,4 +1,4 @@
-## Using PROTO nodes with the Scene Tree
+## Using PROTO Nodes with the Scene Tree
 
 Several PROTO examples are packaged with Webots.
 Instances of these PROTO nodes can be added to the simulation with the Scene Tree buttons.

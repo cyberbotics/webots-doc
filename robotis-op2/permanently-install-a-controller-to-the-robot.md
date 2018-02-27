@@ -1,4 +1,4 @@
-## Permanently install a controller to the robot
+## Permanently Install a Controller to the Robot
 
 If you want to install the controller on the real robot, check the checkbox `Make default controller`.
 Then when you press the button to send the controller to the real robot, instead of running after the compilation, the controller is set to start automatically at the startup of the robot without any need of Webots or any computer.

@@ -117,7 +117,7 @@ The available wall types are:
 - office building (supports color)
 - concrete building (supports color)
 
-### Other city objects
+### Other City Objects
 
 In addition to buildings, other PROTO nodes are available representing objects usually found in a city environment:
 

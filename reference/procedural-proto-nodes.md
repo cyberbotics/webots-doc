@@ -1,9 +1,9 @@
-## Procedural PROTO nodes
+## Procedural PROTO Nodes
 
 The expressive power of PROTO nodes can be significantly improved by extending them using a scripting language.
 In this way, the PROTO node may contain constants, mathematic expressions, loops, conditional expressions, randomness, and so on.
 
-### Scripting language
+### Scripting Language
 
 The used scripting language is [Lua](http://www.lua.org).
 Introducing and learning Lua is outside the scope of this document.
@@ -68,7 +68,7 @@ This module is very useful to manipulate images, it can be used, for example, to
 
 %end
 
-### Texture generation
+### Texture Generation
 
 Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO.
 The following standard fonts are available to write on the texture:

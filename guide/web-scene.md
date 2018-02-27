@@ -21,7 +21,7 @@ The 3D navigation in the player is possible using the mouse or the touch screen,
 
 %end
 
-### How to export a Web Scene
+### How to Export a Web Scene
 
 Select the `File / Export HTML5 Model...` menu item, select the desired `X3D` parameters and choose the target `HTML` file in the pop-up dialog.
 When the export is completed, Webots will ask to playback the resulting file in the default Web browser.
@@ -37,7 +37,7 @@ The chosen `X3D` parameters are stored in the [project file](the-standard-file-h
 **Note**: The playback option may not work correctly depending on your default Web browser.
 In this case, please refer to the [section below](#remarks-on-the-used-technologies-and-their-limitations).
 
-### How to embed a Web Scene in your Website
+### How to Embed a Web Scene in Your Website
 
 The exported `HTML` page is designed to be as simple as possible, and is the reference for an integration in an external Website.
 Alternatively, an `<iframe>` tag pointing to the generated Webots page is a less elegant but simpler solution.
@@ -56,7 +56,7 @@ Particularly:
 - Webots uses additive stencil shadows, while `X3DOM` uses experimental shader-based shadows.
 The `X3DOM` shadows may have aliasing artifacts or can appear brighter than the Webots ones.
 
-### Remarks on the used Technologies and their Limitations
+### Remarks on the Used Technologies and Their Limitations
 
 The Webots player is using internally the `X3DOM` library (based on `WebGL`).
 

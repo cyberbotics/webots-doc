@@ -49,7 +49,7 @@ Each distributed shared library is built thanks to the main Makefile (the same a
 
 %end
 
-### Robot window
+### Robot Window
 
 A robot window allows the programmer to efficiently create custom user interfaces for his robots.
 Robot windows can be opened by double-clicking on the virtual robot, or by selecting the `Robot | Show Robot Window` menu item.
@@ -74,7 +74,7 @@ The vehicle, Darwin-OP robot windows and BotStudio still use the native robot wi
 However, they will soon be ported to the HTML robot window.
 After that, the native robot window system will be progressively phased out.
 
-### Native robot window (deprecated)
+### Native Robot Window (Deprecated)
 
 Native robot windows still exist in Webots.
 However, they are deprecated and it is not recommended to use them when developing new robot windows.
@@ -165,7 +165,7 @@ Other samples can be found in the following directories:
 - `WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/botstudio`
 - `WEBOTS_HOME/projects/robots/e-puck/plugins/robot_windows/e-puck_window`
 
-#### Qt utility library
+#### Qt Utility Library
 
 In order to facilitate the creation of native robot window using the Qt framework, Webots has a utility library allowing to hide the complexity of the management of the robot windows.
 
@@ -174,7 +174,7 @@ The source code of the generic robot window is a good example illustrating how t
 
 The location of the qt utility library is `WEBOTS_HOME/resources/projects/libraries/qt_utils`.
 
-#### Motion editor
+#### Motion Editor
 
 A motion is a chronological sequence of robot poses.
 A pose is defined by a set of commands (in position) of the robot motors.
@@ -195,7 +195,7 @@ In the motion editor different fonts and colors are used to identify the status 
 
 %end
 
-### Remote-control Plugin
+### Remote-Control Plugin
 
 A remote-control plugin allows to simply and efficiently create an interface using the Webots API to communicate with a real robot.
 The main purpose of a remote-control library is to wrap all the Webots API functions used by the robot with a protocol communicating to the real robot.

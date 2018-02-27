@@ -1,4 +1,4 @@
-## Installation procedure
+## Installation Procedure
 
 Usually, you will need to have system administrator rights to install Webots.
 Once installed, Webots can be used by a regular, unprivileged user.
@@ -10,7 +10,7 @@ To install Webots, please follow this procedure:
 > **Note**: After installation, the most important Webots features will be available, but some third party tools (such as Java, Python or MATLAB) may be necessary to run or compile specific projects.
 The [chapter](language-setup.md) covers the set up of these tools.
 
-### Installation on linux
+### Installation on Linux
 
 Webots will run on most recent Linux distributions running glibc2.11.1 or earlier.
 This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc.
@@ -74,7 +74,7 @@ apt-get install webots
 > **Note**: This procedure can also be done using any APT front-end tools such as the Synaptic Package Manager.
 But only a command line procedure is documented here.
 
-#### From the tarball package
+#### From the "tarball" Package
 
 This section explains how to install Webots from the tarball package (having the `.tar.bz2` extension).
 This package can be installed without the `root` privileges.
@@ -101,7 +101,7 @@ In this case an error message will be printed in the Webots console mentioning t
 
 > **Note**: On old versions of Ubuntu or other linux distributions the library names and versions could be slightly different.
 
-#### From the DEB package
+#### From the DEB Package
 
 This procedure explains how to install Webots from the DEB package (having the `.deb` extension).
 
@@ -121,7 +121,7 @@ Or:
 gdebi webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
-#### Server edition
+#### Server Edition
 
 Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
 
@@ -176,7 +176,7 @@ The current values are provided by the following command line: `sysctl -A | grep
 Please refer to the macOS documentation to understand the exact meaning of each value.
 You will have to reboot your computer so that these changes are taken into account.
 
-### macOS security
+### macOS Security
 
 During the first Webots launch, macOS may complain about opening Webots because it is from an unidentified developer (see [this figure](#unidentified-developer-dialog)).
 

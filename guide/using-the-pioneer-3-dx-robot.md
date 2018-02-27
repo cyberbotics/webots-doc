@@ -1,4 +1,4 @@
-## Using the Pioneer 3-DX robot
+## Using the Pioneer 3-DX Robot
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 
@@ -14,7 +14,7 @@ The base Pioneer 3-DX platform can reach speeds of 1.6 meters per second and car
 
 More information on the specifications and optional devices is available on the Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/PioneerP3DX.aspx).
 
-### Pioneer 3-DX model
+### Pioneer 3-DX Model
 
 %figure "Pioneer 3-DX characteristics"
 

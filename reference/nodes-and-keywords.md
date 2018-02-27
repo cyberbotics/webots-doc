@@ -1,6 +1,6 @@
 ## Nodes and Keywords
 
-### VRML97 nodes
+### VRML97 Nodes
 
 Webots implements only a subset of the nodes and fields specified by the VRML97 standard.
 In the other hand, Webots also adds many nodes, which are not part of the VRML97 standard, but are specialized to model robotic experiments.
@@ -16,7 +16,7 @@ For a comprehensive description of the VRML97 nodes, you can also refer to the V
 The exact features of VRML97 are subject to a standard managed by the International Standards Organization (ISO/IEC 14772-1:1997).
 You can find the complete specification of VRML97 on the [Web3D Web site](http://www.web3d.org).
 
-### Webots specific nodes
+### Webots Specific Nodes
 
 In order to describe more precisely robotic simulations, Webots supports additional nodes that are not specified by the VRML97 standard.
 These nodes are principally used to model commonly used robot devices.
@@ -26,7 +26,7 @@ Here are Webots additional nodes:
 
 Please refer to [this chapter](nodes-and-api-functions.md) for a detailed description of Webots nodes and fields.
 
-### Reserved keywords
+### Reserved Keywords
 
 These reserved keywords cannot be used in DEF or PROTO names:
 

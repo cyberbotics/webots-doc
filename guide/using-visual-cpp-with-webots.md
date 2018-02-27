@@ -127,7 +127,7 @@ Still in Visual C++, you can now add breakpoints and watches in the controller c
 Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
 
-### Link with the Webots libraries
+### Link with the Webots Libraries
 
 Webots contains several `C` or `C++` libraries based on the `libController` or `libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`, `youBot library`, etc.).
 

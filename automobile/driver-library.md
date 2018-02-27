@@ -1,4 +1,4 @@
-## Driver library
+## Driver Library
 
 The [driver](#driver-library) library provides all the usual functionalities available to a human driving his own car.
 All the functions included in this library are explained below.
@@ -277,12 +277,12 @@ The `wbu_driver_get_wipers_mode` function allows the user to get the wipers' mod
 
 %end
 
-### Engine models
+### Engine Models
 
 When the control in torque of the car is enabled, at each step the output torque of the engine is recomputed.
 First the rotational speed of the engine is estimated from the rotational speed of the wheels, then the output torque of the engine is computed (the formula depends on the engine type) using the rotational speed of the engine, then this output torque is multiplied by the state of the throttle and the gearbox coefficient, finally the torque is distributed (respecting the differential constraint) on the actuated wheels (depending on the car type).
 
-#### Combustion engine
+#### Combustion Engine
 
 If `a`, `b` and `c` are the values of the `engineFunctionCoefficients` parameter of the `Car` PROTO, the output torque is:
 
@@ -292,7 +292,7 @@ output_torque = c * rpm^2 + b * rpm + a
 
 > **Note**: if the rpm is below the `engineMinRPM` parameter of the [Car](car.md) PROTO, `engineMinRPM` is used instead of the real rpm, but if the rpm is above the `engineMaxRPM` parameter, then the output torque is 0.
 
-#### Electric engine
+#### Electric Engine
 
 If `maxP` and `maxT` are respectively the `engineMaxPower` and `engineMaxTorque` parameters of the `Car` PROTO, the ouput torque is:
 
@@ -300,16 +300,16 @@ If `maxP` and `maxT` are respectively the `engineMaxPower` and `engineMaxTorque`
 output_torque = min(maxT; maxP * 60 / 2 * pi * rpm)
 ```
 
-#### Parallel hybrid engine
+#### Parallel Hybrid Engine
 
 In that case, the output torque is simply the sum of the two previous models.
 But if the real rpm is below the `engineMinRPM` parameter of the `Car` PROTO, the combustion engine is switched off.
 
-#### Serial hybrid engine
+#### Serial Hybrid Engine
 
 Since this case is very similar to the electric engine model (from a simulation point of view), you should use the electric model instead.
 
-#### Power-split hybrid engine
+#### Power-Split Hybrid Engine
 
 If `ratio` and `splitRpm` are respectively the `hybridPowerSplitRatio` and `hybridPowerSplitRPM` parameters of the `Car` PROTO, the output torque is computed as follow:
 

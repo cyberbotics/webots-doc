@@ -1,4 +1,4 @@
-## Position sensors
+## Position Sensors
 
 This tab can be used to see the state of each position sensor.
 The use of each sensor in the robot window can separately be set by checking/unchecking the corresponding checkbox.

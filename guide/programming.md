@@ -1,6 +1,6 @@
 ## Programming
 
-### How can I get the 3D position of a robot/object?
+### How Can I Get the 3D Position of a Robot/Object?
 
 There are different functions depending whether this information must be accessed in the controller, in the Supervisor or in the physics plugin.
 Note that Webots PRO is required to use `Supervisor` and the physics plugin functions.
@@ -10,14 +10,14 @@ Clearly, the position of a robot can also be approximated by using *odometry* or
 This is usually more realistic because most robots don't have a GPS and therefore have no mean of precisely determining their position.
 You will find more info about *odometry* and *SLAM* techniques in `Cyberbotics' Robot Curriculum`.
 
-#### Get position in controller code:
+#### Get Position in Controller Code:
 
 To get the position of a robot in the robot's controller code: add a `GPS` node to the robot, then use the `wb_robot_get_device`, `wb_gps_enable` and `wb_gps_get_values` functions.
 Note that the `GPS`'s resolution field must be 0 (the default), otherwise the results will be noisy.
-You will find more info about the `GPS` node and functions in [Reference Manual](http://www.cyberbotics.com/reference/).
+You will find more info about the `GPS` node and functions in the [Reference Manual](../reference/index.md).
 Note that the `GPS` can also be placed on a robot's part (arm, foot, etc.) to get the world/global coordinates of that particular part.
 
-#### Get position in Supervisor code:
+#### Get Position in Supervisor Code:
 
 1. To get the 3D position of any `Transform` (or derived) node in the `Supervisor` code: you can use the `wb_supervisor_node_get_position` function.
 Please check this function's description in the `Reference Manual`.
@@ -26,38 +26,38 @@ Here is an [example](supervisor-programming.md#tracking-the-position-of-robots).
 
 A simulation example that shows both the `GPS` and the `Supervisor` techniques is included in the Webots installation, you just need to open this world: "WEBOTS\_HOME/projects/samples/devices/worlds/gps.wbt".
 
-#### Get position in physics plugin code:
+#### Get Position in Physics Plugin Code:
 
 In the physics plugin you can use ODE's `dBodyGetPosition` function.
 Note that this function returns the position of the center of mass of the body: this may be different from the center of the `Solid`.
 Please find a description of ODE functions [here](http://ode-wiki.org/wiki/index.php?title=Manual).
 
-### How can I get the linear/angular speed/velocity of a robot/object?
+### How Can I Get the Linear/Angular Speed/Velocity of a Robot/Object?
 
 Webots provides several functions to get the 3D position of a robot or an object (see above): by taking the first derivative of the position you can determine the velocity.
 There are also some functions (see below) that can be used to get the velocity directly:
 
-#### Get velocity in controller code:
+#### Get Velocity in Controller Code:
 
 To get the angular velocity of a robot (or robot part) in the robot's controller code: add a `Gyro` node to the robot (or robot part), then use the `wb_robot_get_device`, `wb_gyro_enable` and `wb_gyro_get_values` functions.
 You will find more information about the `Gyro` node and functions in the `Reference Manual`.
 
-#### Get velocity in Supervisor:
+#### Get Velocity in Supervisor:
 
 Using the `wb_supervisor_node_get_velocity` function it is possible to retrieve both the linear and angular velocity of any `Solid` node.
 You will find more information about this function in the `Reference Manual`.
 
-#### Get velocity in physics plugin code:
+#### Get Velocity in Physics Plugin Code:
 
 In the physics plugin you can use the ODE's `dBodyGetLinearVel` and `dBodyAngularVel` functions.
 These functions return the linear velocity in meters per second, respectively the angular velocity in radians per second.
 Please find a description of ODE functions here: [here](http://ode-wiki.org/wiki/index.php?title=Manual).
 
-### How can I reset my robot?
+### How Can I Reset My Robot?
 
 Please see [this section](using-numerical-optimization-methods.md#resetting-the-robot).
 
-### What does this mean: "Could not find controller {...} Loading void controller instead." ?
+### What Does This Mean: "Could not find controller {...} Loading void controller instead." ?
 
 This message means that Webots could neither find an executable file (e.g. `.exe`), nor an interpreted language file (e.g. `.class`, `.py`, `.m`) to run as controller program for a robot.
 In fact, Webots needs each controller file to be stored at specific location in order to be able to executed it.
@@ -90,7 +90,7 @@ So this problem often happens when you:
 - Have changed the Robot's controller field to a location where no executable/interpretable file can be found.
 - Have "reverted" the world after "cleaning" of the controller project.
 
-### What does this mean: "Warning: invalid WbDeviceTag in API function call" ?
+### What Does This Mean: "Warning: invalid WbDeviceTag in API function call" ?
 
 A `WbDeviceTag` is an abstract reference (or handle) used to identify a simulated device in Webots.
 Any `WbDeviceTag` must be obtained from the `wb_robot_get_device` function.
@@ -140,7 +140,7 @@ Here is such an example:
 > }
 > ```
 
-### Is it possible to apply a (user specified) force to a robot?
+### Is It Possible to Apply a (User Specified) Force to a Robot?
 
 Yes.
 You need to use a *physics plugin* to apply user specified forces (or torques).
@@ -187,7 +187,7 @@ WEBOTS_HOME/projects/samples/demos/worlds/salamander.wbt
 
 In this example, the physics plugin adds user computed forces to the robot body in order to simulate Archimedes and hydrodynamic drag forces.
 
-### How can I draw in the 3D window?
+### How Can I Draw in the 3D Window?
 
 There are different techniques depending on what you want to draw:
 
@@ -204,7 +204,7 @@ After you have added the physics plugin you will have to implement the `webots_p
 The implementation must be based on the OpenGL API, hence some OpenGL knowledge will be useful.
 You will find a sample implementation in the `Reference Manual` in the chapter about the Physics Plugin.
 
-### What does this mean: "The time step used by controller {...} is not a multiple of WorldInfo.basicTimeStep!"?
+### What Does This Mean: "The time step used by controller {...} is not a multiple of WorldInfo.basicTimeStep!"?
 
 Webots allows to specify the *control step* and the *simulation step* independently.
 The control step is the argument passed to the `wb_robot_step` function, it specifies the duration of a step of control of the robot.
@@ -215,7 +215,7 @@ For that reason the control step specified with each `wb_robot_step` function ca
 If it is not the case you get this error message.
 So, for example if the `WorldInfo.basicTimeStep` is 16 (ms), then the control step argument passed to the `wb_robot_step` function can be 16, 32, 48, 64, 80, 128, 1024, etc.
 
-### How can I detect collisions?
+### How Can I Detect Collisions?
 
 Webots does automatically detect collisions and apply the contact forces whenever necessary.
 The collision detection mechanism is based on the shapes specified in the `boundingObject`s.
@@ -256,7 +256,7 @@ This is an advanced technique that requires knowledge of the [ODE (Open Dynamics
 Your collision detection mechanism must be implemented in the `webots_physics_collide` function.
 This function is described in the Physics Plugin chapter of the `Reference Manual`.
 
-### Why does my camera window stay black?
+### Why Does My Camera Window Stay Black?
 
 The content of the camera window will appear only after all the following steps have been completed:
 

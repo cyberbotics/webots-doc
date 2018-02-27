@@ -1,4 +1,4 @@
-## Non-simulated devices
+## Non-Simulated Devices
 
 The following sensors/actuators are not present on the simulation model:
 

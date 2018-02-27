@@ -1,4 +1,4 @@
-## The standard File Hierarchy of a Project
+## The Standard File Hierarchy of a Project
 
 Some rules have to be followed in order to create a project which can be used by Webots.
 This section describes the file hierarchy of a simple project.

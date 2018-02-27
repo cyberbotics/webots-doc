@@ -17,7 +17,7 @@ The [next figure](#top-view-of-the-4-wheels-robot-the-grid-behind-the-robot-has-
 
 %end
 
-### New simulation
+### New Simulation
 
 > **Hands on**: Save the world of the previous tutorial as "4\_wheels\_robot.wbt".
 

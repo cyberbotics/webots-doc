@@ -73,7 +73,7 @@ Detailed information can be found on the [OpenJDK website](http://openjdk.java.n
 
 On macOS, the JDK installer should setup the *PATH* variable automatically, so you shouldn't have to do anything.
 
-#### Troubleshooting the Java installation
+#### Troubleshooting the Java Installation
 
 If a Java controller fails to execute or compile, check that the `java`, respectively the `javac` commands are reachable.
 You can verify this easily by opening a Terminal (Linux and macOS) or a Command Prompt (Windows) and typing `java` or `javac`.
@@ -94,7 +94,7 @@ On macOS this problem should disappear after you upgrade to a recent version of 
 On Windows, Webots is only compatible with 64-bit versions of Java.
 On Linux (and macOS) you should be able to solve this problem by replacing the default "java" command string by "java -d32" or "java -d64" in the dialog `Tools / Preferences / General / Java command`.
 
-### Link with external jar files
+### Link with External JAR Files
 
 When a Java controller is either compiled or executed, respectively the `java` and the `javac` commands are executed with the `-classpath` option.
 This option is filled internally with the location of the controller library, the location of the current controller directory, and the content of the *CLASSPATH* environment variable.

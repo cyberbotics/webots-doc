@@ -1,16 +1,16 @@
-## Scenario creation tutorial
+## Scenario Creation Tutorial
 
 This small tutorial explains step-by-step how to create a scenario inspired from a real world map and then add traffic using SUMO.
 This tutorial was written for `linux` and `macOS`, but the same can be achieved on `Windows` converting the following commands to `DOS`.
 
-### Creation of the Webots project directory
+### Creation of the Webots Project Directory
 
 ```sh
 export WBT_PROJECT_PATH=/your/webots/project/path  # define here your project path
 mkdir -p $WBT_PROJECT_PATH/worlds/myMap_net
 ```
 
-### Download the OpenStreetMap map
+### Download the OpenStreetMap Map
 
 We will use a part of the OpenStreetMap map to generate the Webots world file.
 To download the map go to the [OpenStreetMap website](https://www.openstreetmap.org/export).
@@ -20,7 +20,7 @@ From there you can select the part of the map you want and download it:
 ![osm_export.png](images/osm_export.png)
 %end
 
-### Generate the Webots world
+### Generate the Webots World
 
 As explained in the [OpenStreetMap importer](openstreetmap-importer.md) section, you should use the previously downloaded map to generate the Webots world.
 
@@ -47,7 +47,7 @@ A good workflow is to fix the OSM data using the `JOSM` editor by adding/removin
 We recommend to push the modifications on the OSM data server.
 You can also enable the spline subdivision on some of the roads in Webots in order to smooth them if needed.
 
-### Generate the SUMO network files
+### Generate the SUMO Network Files
 
 On Linux, the path to the SUMO binaries directory should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
 
@@ -71,7 +71,7 @@ To do this, open the `sumo.net.xml` file in SUMO `netedit`:
 $WEBOTS_HOME/projects/default/resources/sumo/bin/netedit $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml
 ```
 
-### Generate the SUMO route file
+### Generate the SUMO Route File
 
 At this stage, a SUMO route file should be created to describe the traffic, i.e., the number of vehicles, which road they should take, the vehicle properties, etc.
 
@@ -80,7 +80,7 @@ This [SUMO document](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Typ
 The following subsections describe two ways to create a SUMO route file.
 The use of the SUMO [duarouter](http://sumo.dlr.de/wiki/DUAROUTER) program is required in both cases.
 
-#### Create a SUMO route file randomly
+#### Create a SUMO Route File Randomly
 
 The purpose of the SUMO `randomTrips.py` script is to generate a random SUMO trip file.
 This file can be used as an input argument of `SUMO duarouter` to create the expected SUMO route file.
@@ -91,7 +91,7 @@ python $WEBOTS_HOME/projects/default/resources/sumo/tools/randomTrips.py -n $WBT
 $WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --trip-files $WBT_PROJECT_PATH/worlds/myMap_net/sumo.trip.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml --ignore-errors true
 ```
 
-#### Create a SUMO route file manually
+#### Create a SUMO Route File Manually
 
 Alternatively a SUMO flow file can be created to define the traffic by vehicle flows.
 Please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes) to learn how to create this file, and put it there:
@@ -104,12 +104,12 @@ Then use `SUMO duarouter` to create the target SUMO route file, like this:
 $WEBOTS_HOME/projects/default/resources/sumo/bin/duarouter --flows $WBT_PROJECT_PATH/worlds/myMap_net/sumo.flow.xml --net-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.net.xml --output-file $WBT_PROJECT_PATH/worlds/myMap_net/sumo.rou.xml
 ```
 
-### Add the SUMO interface
+### Add the SUMO Interface
 
 Now that you have all the required files, you can open the generated world in Webots and add the `SumoInterface` PROTO (or a `Supervisor` node and associate the `sumo_supervisor` controller to it).
 Since the network files are already generated, you need to set the `useNetconvert` field to FALSE (or use the `--noNetconvert` parameter) and set in the `networkfiles` field (or use the `--d or --directory` parameter) the path to the directory where the SUMO network files are located.
 
-#### Add Traffic Lights
+#### Add Traffic Lighßts
 
 Currently the [OpenStreetMap importer](openstreetmap-importer.md) and the [SUMO exporter](sumo-exporter.md) ignore traffic lights.
 However, it is simple to add them manually afterwards.

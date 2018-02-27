@@ -40,7 +40,7 @@ Similarly, on macOS, if Webots is unable to find the "matlab" startup script the
 $ sudo ln -s /Applications/MATLAB_R2016a.app/bin/matlab /usr/bin/matlab
 ```
 
-### How to run the Examples?
+### How to Run the Examples?
 
 To test MATLAB in Webots, start Webots and open the "WEBOTS\_HOME/projects/languages/matlab/worlds/e-puck\_matlab.wbt" or "WEBOTS\_HOME/projects/robots/aldebaran/worlds/nao2\_matlab.wbt" world file.
 Webots automatically starts MATLAB when it detects an m-file in a controller directory.
@@ -53,7 +53,7 @@ In particular the "launcher.m" file loads the library for communicating with Web
 The MATLAB API m-files are located in the "lib/matlab" directory of Webots distribution.
 These are readable source files; please report any problem, or possible improvement about these files.
 
-### Display information to Webots console
+### Display Information to Webots Console
 
 On Linux and macOS, the MATLAB output is redirected as is to the Webots console.
 This means you can use all the MATLAB display features including the `disp` and `display` (omitting the semicolon character at the end of a statement.).

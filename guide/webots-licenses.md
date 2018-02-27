@@ -1,4 +1,4 @@
-## Webots licenses
+## Webots Licenses
 
 The Webots licenses comes in three different flavors, including Webots PRO, Webots EDU and Webots MOD.
 They differ by their features and prices.
@@ -26,7 +26,7 @@ Various modules are available for purchase at different price tags.
 They include special robot models (e.g., NAO, DARwIn-OP, e-puck, Thymio 2, etc.) which can be programmed using different programming languages (e.g., C/C++, Matlab, Python) or interfaces to third party software or hardware, etc.
 They are all described on the Cyberbotics website.
 
-### Webots licences overview
+### Webots Licences Overview
 
 The following table summarizes the main differences between Webots PRO, Webots EDU and Webots MOD.
 

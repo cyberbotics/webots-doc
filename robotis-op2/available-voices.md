@@ -1,4 +1,4 @@
-## Available voices
+## Available Voices
 
 %figure "Available audio voices"
 

@@ -1,4 +1,4 @@
-## Announcing robotbenchmark
+## Announcing Robotbenchmark
 
 <p id="publish-data">By Tom Norton - 21st August 2017</p>
 

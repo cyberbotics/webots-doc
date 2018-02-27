@@ -1,4 +1,4 @@
-## Using the Pioneer 3-AT robot
+## Using the Pioneer 3-AT Robot
 
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 
@@ -12,7 +12,7 @@ This model includes support for 4 motors and 16 sonar sensors (8 forward-facing,
 
 More information on the specifications and optional devices is available on the Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/ResearchRobots/P3AT.aspx).
 
-### Pioneer 3-AT model
+### Pioneer 3-AT Model
 
 %figure "Pioneer 3-AT characteristics"
 

@@ -1,4 +1,4 @@
-## Using the Nao robot
+## Using the Nao Robot
 
 %figure "Nao, a humanoid robot"
 
@@ -10,7 +10,7 @@ The Nao robot is a humanoid robot developed by [Aldebaran Robotics](http://www.a
 This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [Aldebaran Robotics](http://www.aldebaran-robotics.com).
 Currently, Webots supports the Nao v3.3, v4.0 and v5.0 versions, with and without their articulated fingers (respectively with 25 and 21 degrees of freedom) for the first two.
 
-### Nao models
+### Nao Models
 
 You can switch between the Nao model thanks to the following Nao PROTO fields:
 
@@ -58,7 +58,7 @@ It is possible to have several Nao robots in your simulation.
 However, each Nao robot must use a different NAOqi port.
 This can be done in the `controllerArgs` field in the newly created robot, e.g. 9560.
 
-#### Using motion boxes
+#### Using Motion Boxes
 
 Now we can test some of the motion boxes of Choregraphe.
 A simple example is a sit down -> stand up motion.
@@ -68,7 +68,7 @@ Then connect the global "onStart" input to the "Sit Down" box's "onStart" input,
 Now, make sure the simulation is running, and push the `Play` button in Choregraphe.
 This will make the robot sit down, and then stand up once he is done sitting down.
 
-#### Using the cameras
+#### Using the Cameras
 
 Webots simulates Nao's top and bottom cameras.
 Using Aldebaran's Choregraphe or the Monitor programs, it is possible to switch between these cameras.
@@ -81,12 +81,12 @@ It is also possible to completely switch off the camera simulation by adding the
 
 ### Known Problems
 
-#### macOS support
+#### macOS Support
 
 Aldebaran dropped the `simulator SDK` support for macOS since the `2.1.2.17` version.
 Webots includes this latest version for macOS, however it doesn't work on recent macOS versions.
 
-#### Timing issues: Getting the right speed for realistic simulation
+#### Timing Issues: Getting the Right Speed for Realistic Simulation
 
 Choregraphe uses exclusively real-time and so the robot's motions are meant to be carried out in real-time.
 The Webots simulator uses a virtual time base that can be faster or slower than real-time, depending on the CPU and GPU power of the host computer.
@@ -105,7 +105,7 @@ There are several ways to do that, here are the most effective ones:
 - Reduce the dimensions of the 3D view in Webots, by manually resizing the GUI components.
 - Remove unnecessary objects from the simulation, in particular objects with physics.
 
-#### Unexpected Webots crashes
+#### Unexpected Webots Crashes
 
 If for some unexpected reason Webots crashes, it is possible that the `hal` or `naoqi-bin` processes remain active in memory.
 In this case we recommend you to terminate these processes manually before restarting Webots.

@@ -1,6 +1,6 @@
 ## Debugging C/C++ Controllers
 
-### Controller processes
+### Controller Processes
 
 In the Webots environment, the Webots application and each robot C/C++ controller are executed in distinct operating system processes.
 For example, when the "soccer.wbt" world is executed, there is a total of eight processes in memory; one for Webots, six for the six player robots, and one for the supervisor.
@@ -32,7 +32,7 @@ Note that the crash of a controller is almost certainly caused by an error in th
 Fortunately, the GNU debugger (`gdb`) can usually help finding the reason of the crash.
 The following example assumes that there is a problem with the "soccer\_supervisor" controller and indicates how to proceed with the debugging.
 
-### Using the GNU debugger with a controller
+### Using the GNU Debugger with a Controller
 
 The first step is to recompile the controller code with the *-g* flag, in order to add debugging information to the executable file.
 This can be achieved by adding this line to the controller's Makefile:

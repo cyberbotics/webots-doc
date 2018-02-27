@@ -21,7 +21,7 @@ The `type` field indicates the uniform variable data type.
 
 The `value` field indicates the uniform variable value.
 
-### Supported data types
+### Supported Data Types
 
 The uniform variables support the following data types:
 

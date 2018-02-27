@@ -1,6 +1,6 @@
 ## Using Webots Makefiles
 
-### What are Makefiles
+### What Are Makefiles
 
 The compilation of Webots C/C++ and Java controllers can be configured in the provided Makefiles.
 A controller's Makefile is a configuration file used by the `make` utility and that optionally specifies a list of source files and how they will be compiled and linked to create the executable program.
@@ -106,7 +106,7 @@ To use the C API in a C++ controller you need to add this line in your controlle
 USE_C_API = true
 ```
 
-#### Using Qt libraries in a C++ Controller
+#### Using Qt Libraries in a C++ Controller
 
 Some Qt libraries are embedded with Webots and can be easily linked from your controller Makefile by listing the required modules in the QT variable.
 For example, if your controller uses QtCore, QtGui, QtWidgets, and QtNetwork, you can add the following line in your Makefile to link to the Webots embedded Qt libraries:
@@ -118,7 +118,7 @@ QT = core gui widgets network
 Note that not all the Qt modules are embedded with Webots.
 You can find the available modules in the `WEBOTS_HOME/include/qt` directory.
 
-#### Verbose compilation
+#### Verbose Compilation
 
 It is possible to display detailed information about the executed sequence of commands by setting the VERBOSE variable to a non-empty value in your controller Makefile:
 

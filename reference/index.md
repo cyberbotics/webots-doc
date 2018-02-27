@@ -18,7 +18,7 @@ The Webots software was initially developed at the Laboratoire de Micro-Informat
 The EPFL makes no warranties of any kind on this software.
 In no event shall the EPFL be liable for incidental or consequential damages of any kind in connection with the use of this software.
 
-## Trademark information
+## Trademark Information
 
 *Aibo*<sup>TM</sup> is a registered trademark of SONY Corp.
 

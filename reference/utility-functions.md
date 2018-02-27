@@ -3,7 +3,7 @@
 This section describes utility functions that are available to the physics plugin.
 They are not callback functions, but functions that you can call from your callback functions.
 
-### dWebotsGetBodyFromDEF()
+### "dWebotsGetBodyFromDEF()"
 
 This function looks for a [Solid](solid.md) node with the specified name and returns the corresponding dBodyID.
 The returned dBodyID is an ODE object that represent a rigid body with properties such as mass, velocity, inertia, etc.
@@ -35,7 +35,7 @@ This function returns NULL if there is no [Solid](solid.md) (or derived) node wi
 If the [Solid](solid.md) has been *merged* with a descendant or ancestor [Solid](solid.md) node, then the returned body won't match exactly the physics properties of the requested [Solid](solid.md) but the body will have the physics properties resulting from all the merged nodes.
 Solid merging happens between rigidly linked solids with non NULL `physics` fields, see Physics [ Implicit solid merging and joints](physics.md#implicit-solid-merging-and-joints) section for more details.
 
-### dWebotsGetGeomFromDEF()
+### "dWebotsGetGeomFromDEF()"
 
 This function looks for a [Solid](solid.md) node with the specified name and returns the corresponding dGeomID.
 A dGeomID is an ODE object that represents a geometrical shape such as a sphere, a cylinder, a box, etc., or a coordinate system transformation.
@@ -63,13 +63,13 @@ Therefore it is risky to make assumptions about the type of the returned dGeomID
 It is safer to use ODE functions to query the actual type.
 For example this function may return a "transform geom" (dGeomTransformClass) or a "space geom" (dSimpleSpaceClass) if this is required to represent the structure of the boundingObject.
 
-### dWebotsGetContactJointGroup()
+### "dWebotsGetContactJointGroup()"
 
 This function allows you to retrieve the contact joint group where to create the contacts.
 It is typically called inside the `webots_physics_collide` function.
 Remark that this group may change during the time and should be retrieved at each `webots_physics_collide` call.
 
-### dGeomSetDynamicFlag(dGeomID geom)
+### "dGeomSetDynamicFlag(dGeomID geom)"
 
 This function switches on the dynamic flag of a given ODE geometry (given by the `geom` argument).
 
@@ -80,7 +80,7 @@ There are some cases where one wants to have a dynamic ODE geometry even if it i
 This is the puropose of this function.
 Typically the ODE rays (which don't have bodies) are more efficient if defined as dynamic geometries.
 
-### dWebotsSend() and dWebotsReceive()
+### "dWebotsSend()" and "dWebotsReceive()"
 
 It is often useful to communicate information between your physics plugin and your robot (or Supervisor) controllers.
 This is especially useful if your physics plugin implements some sensors (like accelerometers, force feedback sensors, etc.) and needs to send the sensor measurement to the robot controller.
@@ -133,7 +133,7 @@ The following example shows how to split concatenated string messages:
 > }
 > ```
 
-### dWebotsGetTime()
+### "dWebotsGetTime()"
 
 This function returns the current simulation time in milliseconds [ms] as a double precision floating point value.
 This corresponds to the time displayed in the bottom right corner of the main Webots window.
@@ -142,7 +142,7 @@ This corresponds to the time displayed in the bottom right corner of the main We
 double dWebotsGetTime(void);
 ```
 
-### dWebotsConsolePrintf()
+### "dWebotsConsolePrintf()"
 
 This function prints a line of formatted text to the Webots console.
 The format argument is the same as the standard C `printf` function, i.e., the format string may contain format characters defining conversion specifiers, and optional extra arguments should match these conversion specifiers.

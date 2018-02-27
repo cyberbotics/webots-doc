@@ -1,4 +1,4 @@
-## Tutorial 2: Modification of the Environment (20 minutes)
+## Tutorial 2: Modification of the Environment (20 Minutes)
 
 In this tutorial, we will teach you how to create simple objects in the environment.
 The first step will be to create a ball which will interact with the environment.
@@ -10,7 +10,7 @@ We won't define each of them precisely.
 Their detailed definition can be found in chapter 3 of the `Reference Manual`.
 Having the nodes chart diagram (chapter 2 of the `Reference Manual`) in front of you, will also help understanding the nodes inheritance relationship.
 
-### A new Simulation
+### A New Simulation
 
 First we create a new simulation based on the one created in Tutorial 1.
 
@@ -113,7 +113,7 @@ We now want to reduce the size of the Sphere and to increase its graphical quali
 > **Hands on**: For each Sphere node defining the ball, set its `radius` field to *0.05* and its `subdivision` field to *2*.
 Refer to the `Reference Manual` to understand what the `subdivision` field stands for.
 
-### DEF-USE mechanism
+### DEF-USE Mechanism
 
 We will see in this subsection a mechanism which can be useful to avoid redundancy in the world files.
 

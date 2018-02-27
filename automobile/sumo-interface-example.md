@@ -1,4 +1,4 @@
-## SUMO interface example
+## SUMO Interface Example
 
 %figure "The SUMO interface example world"
 

@@ -41,7 +41,7 @@ Add a LensFlare node to the Viewpoint or any robot camera to simulate glare from
 ![LensFlare](images/lens_flare.png)
 %end
 
-### Robots Within Robots
+### Robots within Robots
 
 After many requests from users, it is now possible to insert a Robot node as a descendant of another Robot in the scene tree.
 This change adds a new concept to what the Robot node really represents; one can now think of a robot as being a closed system of devices, managed by a controller program.
@@ -103,7 +103,7 @@ This means you can easily move around any world, big or small, with ease, from e
 ![Zoom](images/zoom.gif)
 %end
 
-### Needle In A Haystack
+### Needle in a Haystack
 
 We have also added a new feature that makes scene navigation even easier; with one click of button you can center the view on any object you have selected, near or far:
 

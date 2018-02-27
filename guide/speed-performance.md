@@ -1,6 +1,6 @@
 ## Speed/Performance
 
-### Why is Webots slow on my computer?
+### Why Is Webots Slow on My Computer?
 
 You should verify your graphics driver installation.
 Please find instructions in [this section](verifying-your-graphics-driver-installation.md).
@@ -11,7 +11,7 @@ On Ubuntu (or other Linux) we also recommend to disable all visual effects.
 Depending on the graphics hardware, there may be a huge performance drop of the rendering system (up to 10x) when the visual effects are on.
 You can easily disable the operating system's visual effects using some tools like *Compiz Config Settings Manager* or *Unity Tweak Tool*.
 
-### How can I change the speed of the simulation?
+### How Can I Change the Speed of the Simulation?
 
 There are several ways to increase the simulation speed:
 

@@ -53,6 +53,15 @@ This can be visualized with the `View / Optional Rendering / Show Center of Mass
 ![contact_points.png](images/contact_points.png) In this example, a box falls until it reaches the ground.
 A physics plugin (cf. `WorldInfo.physics`) gets information on the contact points and displays the reaction forces on the `Console` and as red lines.
 
+### custom\_html\_robot\_window.wbt
+
+**Keywords**: custom robot window, controller plugin, HTML, Javascript, CSS
+
+![custom_html_robot_window.png](images/custom_html_robot_window.png) This example shows a simple custom robot window.
+The HTML file contains the page content.
+The CSS file contains the page style.
+The Javascript and C files deal with the interactions between the page and the robot, using the WWI API to exchange string messages.
+
 ### cylinder\_stack.wbt
 
 **Keywords**: Supervisor, contact points, cylinder collisions
@@ -78,7 +87,7 @@ Then, the motor force is turned off and the boxes oscillate for a while, accordi
 In the first layout, the four motorized wheels are positioned circularly, as could be done for omnidirectional-wheeled robots.
 In the second layout, the four motorized wheels are oriented in the same direction, as could be done for a robot with tracks.
 In the third layout, a simple [Ackermann steering geometry](https://en.wikipedia.org/wiki/Ackermann_steering_geometry) is shown.
-Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf. the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
+Note that more completed Ackermann steering geometry can be achieved using the [`AckermannVehicle` PROTO](../automobile/ackermannvehicle.md), and the [`car` library](../automobile/car-library.md).
 
 ### gui\_tracker.wbt
 
@@ -87,6 +96,9 @@ Note that more completed Ackermann steering geometry can be achieved using the `
 ![gui_tracker.png](images/gui_tracker.png) This example shows the use of the deprecated Qt-based system to create custom windows.
 A Supervisor is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
 This window is based on Qt (embedded in Webots) and the `Qt utils` helper library.
+
+> **Note**:
+Please refer to [the HTML robot window example](#custom_html_robot_window-wbt) instead.
 
 ### inverted\_pendulum.wbt
 

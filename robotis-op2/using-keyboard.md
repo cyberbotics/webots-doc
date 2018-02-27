@@ -1,4 +1,4 @@
-## Using keyboard
+## Using Keyboard
 
 The use of the keyboard is also available in remote compilation.
 To use a keyboard you just have to connect an USB keyboard to the robot to one of the two USB ports available on the back of the robot (any wireless keyboard will also works).

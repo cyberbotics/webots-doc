@@ -111,7 +111,7 @@ Compositors can be added/removed at any time, even while the simulation is runni
 However, the compositor resource files are loaded at the same time as the world file.
 Therefore any modification to the compositor files will need a reload of the world to be taken into account.
 
-### Camera image
+### Camera Image
 
 The camera device computes OpenGL rendered images.
 The pixel information can be obtained from the `wb_camera_get_image` function.
@@ -151,7 +151,7 @@ For each channel of the image and at each camera refresh, a gaussian noise is co
 This gaussian noise has a standard deviation corresponding to the noise field times the channel range.
 The channel range is 256 for a color camera.
 
-### Spherical projection
+### Spherical Projection
 
 OpenGL is designed to have only planar projections.
 However spherical projections are very useful for simulating a camera pointing on a curved mirror or a fisheye effect as found in many biological eyes.

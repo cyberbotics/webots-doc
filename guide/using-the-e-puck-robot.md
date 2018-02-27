@@ -78,7 +78,7 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/gctronic/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
 The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 In particular, the ground sensors module extension of the real e-puck robot is modelled using the "E-puckGroundSensors.proto" PROTO in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
-The names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)) are presented in the [table](#devices-names) below.
+The names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the [Robot section](../reference/robot.md)) are presented in the [table](#devices-names) below.
 
 %figure "Devices names"
 
@@ -329,4 +329,4 @@ The BotStudio windows appears upon double clicking on the e-puck allowing the us
 
 ![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example world similar to "e-puck.wbt" but where the kinematic field of the E-puck PROTO node is true.
 This allows the robot's motion to be calculated according to 2D kinematics algorithms and the collision detection to be calculated with 3D algorithms.
-More information on the kinematic mode in Webots can be found [here](https://www.cyberbotics.com/doc/reference/differentialwheels).
+More information on the kinematic mode in Webots can be found [here](../reference/differentialwheels.md).

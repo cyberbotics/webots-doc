@@ -13,7 +13,7 @@ It can be used for a large variety of purposes.
 
 %end
 
-Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
+Derived from [Solid](../reference/solid.md).
 
 ```
 Road {

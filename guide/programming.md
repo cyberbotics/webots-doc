@@ -14,7 +14,7 @@ You will find more info about *odometry* and *SLAM* techniques in `Cyberbotics' 
 
 To get the position of a robot in the robot's controller code: add a `GPS` node to the robot, then use the `wb_robot_get_device`, `wb_gps_enable` and `wb_gps_get_values` functions.
 Note that the `GPS`'s resolution field must be 0 (the default), otherwise the results will be noisy.
-You will find more info about the `GPS` node and functions in [Reference Manual](../reference/index.md).
+You will find more info about the `GPS` node and functions in the [Reference Manual](../reference/index.md).
 Note that the `GPS` can also be placed on a robot's part (arm, foot, etc.) to get the world/global coordinates of that particular part.
 
 #### Get position in Supervisor code:

@@ -1,4 +1,4 @@
-## Overview tab
+## Overview Tab
 
 In addition to the usual tabs for each sensors/actuators, the car robot-window's first tab gives a quick overview of the car state.
 

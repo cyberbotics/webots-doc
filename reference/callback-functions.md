@@ -38,7 +38,7 @@ void webots_physics_cleanup() {
 }
 ```
 
-### void webots\_physics\_init(dWorldID, dSpaceID, dJointGroupID)
+### "void webots\_physics\_init(dWorldID, dSpaceID, dJointGroupID)"
 
 This function is called upon initialization of the world.
 Its arguments are obsolete and should not be used.
@@ -70,7 +70,7 @@ In order to have reproducible simulations, it is also required that all controll
 That means that the `synchronization` field of every [Robot](robot.md), [DifferentialWheels](differentialwheels.md) or [Supervisor](supervisor.md) must be set to TRUE.
 Finally, note that ODE uses its own random number generator that you might also want to reinitialize separately via the `dRandSetSeed` function.
 
-### int webots\_physics\_collide(dGeomID, dGeomID)
+### "int webots\_physics\_collide(dGeomID, dGeomID)"
 
 This function is called whenever a collision occurs between two geoms.
 It may be called several times (or not at all) during a single simulation step, depending on the number of collisions.
@@ -88,24 +88,24 @@ Since Webots 7.2.0, a multi-threaded version of ODE is used.
 Therefore, this function may be called from different threads.
 You should ensure it is re-entrant and that every ODE function call modifying the ODE world is protected by mutexes as explained earlier.
 
-### void webots\_physics\_step()
+### "void webots\_physics\_step()"
 
 This function is called before every physics simulation step (call to the ODE `dWorldStep` function).
 For example it can contain code to read the position and orientation of bodies or add forces and torques to bodies.
 
-### void webots\_physics\_step\_end()
+### "void webots\_physics\_step\_end()"
 
 This function is called right after every physics simulation step (call to the ODE's `dWorldStep` function).
 It can be used to read values out of `dJointFeedback` structures.
 ODE's `dJointFeedback` structures are used to know how much torque and force is added by a specific joint to the joined bodies (see ODE User Guide for more information).
 For example, if the plugin has registered `dJointFeedback` structures (using the ODE's `dJointSetFeedback` function), then the structures will be filled during the `dWorldStep` function call and the result can be read straight afterwards in the `webots_physics_step_end` function call.
 
-### void webots\_physics\_cleanup()
+### "void webots\_physics\_cleanup()"
 
 This function is the counterpart to the `webots_physics_init` function.
 It is called once, when the world is destroyed, and can be used to perform cleanup operations, such as closing files and freeing the objects that have been created in the plugin.
 
-### void webots\_physics\_draw(int pass, const char *view)
+### "void webots\_physics\_draw(int pass, const char *view)"
 
 This function is used to add user-specified OpenGL graphics to the 3D view and/or to the cameras.
 For example, this can be used to draw robots trajectories, force vectors, etc.

@@ -1,4 +1,4 @@
-## Tutorial 1: Your first Simulation in Webots (20 minutes)
+## Tutorial 1: Your First Simulation in Webots (20 Minutes)
 
 In this first tutorial, you will create your first simulation.
 This simulation will contain a simple environment (a light and an arena with floor and walls), a predefined robot (e-puck) and a controller program that will make the robot move (see [this figure](#what-you-should-see-at-the-end-of-the-tutorial)).
@@ -10,7 +10,7 @@ The objective of this tutorial is to familiarize yourself with the user interfac
 
 %end
 
-### Create a new World
+### Create a New World
 
 A World contains information like where the objects are, what they look like, how they interact with each other, what is the sky color, where is the gravity vector, etc.
 
@@ -165,7 +165,7 @@ The camera can be resized by dragging the marked corner or hidden by clicking th
 So we can hide the window by clicking the "x" on the camera window.
 Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
 
-### Create a new Controller
+### Create a New Controller
 
 We will now program a simple controller that will just make the robot move forwards.
 As there is no obstacle, the robot will move forwards for ever.
@@ -246,7 +246,7 @@ The robot will move using it's maximum speed for a while and then stop once the 
 The "e-puck\_go\_forward" directory contains an "e-puck\_go\_forward" binary file generated after the compilation of the controller.
 Note that the controller directory name should match with the binary name.
 
-### Extend the controller to speed control
+### Extend the Controller to Speed Control
 
 The wheels of differential wheels robots are often controlled in velocity and not in position like we did in the previous example.
 In order to control the motors of the wheels in speed you need to set the target position to the infinity and the set the desired speed:

@@ -1,6 +1,6 @@
 ## Modeling
 
-### My robot/simulation explodes, what should I do?
+### My Robot/Simulation Explodes, What Should I Do?
 
 The explosion is usually caused by inappropriate values passed to the physics engine (ODE).
 There are many things you can be try to improve the stability of the simulation (adapted from ODE's User Guide):
@@ -21,7 +21,7 @@ Since contact forces are computed and applied only at every time step, too fast 
 The mechanical loops may cause constraints to fight each other and generate strange forces in the system that can swamp the normal forces.
 For example, an affected body might fly around as though it has life on its own, with complete disregard for gravity.
 
-### How to make replicable/deterministic simulations?
+### How to Make Replicable/Deterministic Simulations?
 
 In order for Webots simulation results to be reproducible, the following conditions must be fulfilled:
 
@@ -46,7 +46,7 @@ Hence if both simulation are saved using the `Save as...` button, the resulting 
 This is true independently of the simulation mode used to execute the simulation: `Step`, `Real-Time`, `Run` or `Fast`.
 This is also true whether or not sensor noise is used (see below).
 
-### How to remove the noise from the simulation?
+### How to Remove the Noise from the Simulation?
 
 There are two sources of noise in Webots: the *sensor/actuator noise* and the *physics engine noise*.
 The amount of sensor/actuator noise can be changed (or removed) by the user (see below).
@@ -58,7 +58,7 @@ To completely remove the sensor/actuator noise the following field values must b
 3. In the `Camera` nodes: the `colorNoise` and the `rangeNoise` fields must be reset to 0.
 4. In the `DifferentialWheels` nodes: the value of `slipNoise` must be reset to 0 and the value of `encoderNoise` must be reset to -1.
 
-### How can I create a passive joint?
+### How Can I Create a Passive Joint?
 
 First of all, any joint, passive or active, must be created by adding a `Joint`-derived node (depending on the constraint type requested) in the Scene Tree.
 A `Joint` is passive if its device is null (or at least not a `Motor`-derived node).
@@ -70,7 +70,7 @@ wb_motor_set_motor_force(motor, 0.0);
 
 The effect is similar to turning off the power of a real motor.
 
-### Is it possible fix/immobilize one part of a robot?
+### Is It Possible to Fix/Immobilize One Part of a Robot?
 
 To immobilize one part of the robot, you need to fix the part to the static environment.
 This must be done with a *physics plugin* (Webots PRO required).
@@ -112,14 +112,14 @@ void webots_physics_cleanup() {
 You will find the description of Webots physics plugin API [here](../reference/physics-plugin.md).
 You will find the description about the ODE functions on [this page](http://ode-wiki.org/wiki/index.php?title=Manual).
 
-### Should I specify the "mass" or the "density" in the Physics nodes?
+### Should I Specify the "mass" or the "density" in the Physics Nodes?
 
 It is more accurate to specify the mass if it is known.
 If you are modeling a real robot it is sometimes possible to find the mass values in the robot's specifications.
 If you specify the densities, Webots will use the volume of each `boundingObject` multiplied by the density of the corresponding `Physics` node to compute each mass.
 This may be less accurate because `boundingObject`s are often rough approximations.
 
-### How to get a realisitc and efficient rendering?
+### How to Get a Realisitc and Efficient Rendering?
 
 The quality of the rendering depends on the `Shapes` resolution, on the setup of the `Materials` and on the setup of the `Lights`.
 

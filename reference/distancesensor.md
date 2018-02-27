@@ -129,7 +129,7 @@ This field is ignored for the "sonar" and "laser" DistanceSensor types.
 Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).
 This field accepts any value in the interval (0.0, inf).
 
-### DistanceSensor types
+### DistanceSensor Types
 
 This table summarizes the difference between the three types of DistanceSensor.
 

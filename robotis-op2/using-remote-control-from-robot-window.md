@@ -1,4 +1,4 @@
-## Using remote control from robot window
+## Using Remote Control from Robot Window
 
 To use remote control, open the robot window, go to the `Transfer` tab, as for remote compilation you have to set the connection settings (see [previous chapter](settings.md) for more information).
 To start the remote control, stop and revert your simulation, put your robot in the [stable position](send-a-controller-to-the-robot.md#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation).

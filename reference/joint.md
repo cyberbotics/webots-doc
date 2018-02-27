@@ -34,7 +34,7 @@ This field must be filled with an [HingeJointParameters](hingejointparameters.md
 It must be either a [Solid](solid.md) child, or a reference to an existing [Solid](solid.md), i.e. a [SolidReference](solidreference.md).
 Alternatively, a [Slot](slot.md) node can be inserted in the `endPoint` field, but this [Slot](slot.md) should be connected to another [Slot](slot.md) whose `endPoint` is either a [Solid](solid.md) or a [SolidReference](solidreference.md).
 
-### Joint's hidden position fields
+### Joint's Hidden Position Fields
 
 If the `jointParameters` is set to NULL, joint positions are then not visible from the Scene Tree.
 In this case Webots keeps track of the initial positions of [Joint](#joint) nodes (except for the [BallJoint](balljoint.md)) by means of hidden position fields.

@@ -1,4 +1,4 @@
-## Highway overtake
+## Highway Overtake
 
 %figure "The Highway overtake world"
 

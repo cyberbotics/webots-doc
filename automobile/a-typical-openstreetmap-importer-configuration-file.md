@@ -1,4 +1,4 @@
-## A typical OpenstreetMap importer configuration file
+## A Typical OpenstreetMap Importer Configuration File
 
 ```ini
 # BUILDINGS DEFAULTS SETTINGS #

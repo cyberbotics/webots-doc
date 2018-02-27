@@ -1,4 +1,4 @@
-## Text-to-speech warning message
+## Text-To-Speech Warning Message
 
 When using one of the two functions of text to speech from the `Speaker` module in cross-compilation, you might see the following message:
 

@@ -1,6 +1,6 @@
 ## The 3D Window
 
-### Selecting an object
+### Selecting an Object
 
 A single mouse click allows you to select a solid object.
 The bounding object of a selected solid is represented by white lines.
@@ -11,7 +11,7 @@ Double-clicking on a solid object opens the Robot Window and if it was closed, t
 If an object has a solid subpart, then it is also possible to select only this subpart by clicking on it once the whole object is already selected, or by clicking on it while holding down the Alt key.
 Linux users should also hold down the Control key (Ctrl) together with the Alt key.
 
-### Navigation in the scene
+### Navigation in the Scene
 
 Dragging the mouse while pressing a mouse button moves the camera of the 3D window.
 
@@ -25,11 +25,11 @@ Alternatively, the mouse wheel alone can also be used for zooming.
 > **Note**: If you are a Mac user with a single button mouse, hold the Alt key and press the mouse button to translate the camera according to the mouse motion.
 Hold the control key (Ctrl) down and press the mouse button to zoom / rotate the camera.
 
-### Moving a solid object
+### Moving a Solid Object
 
 Currently Webots provides two different ways to move solid objects: axis-aligned handles and keyboard shortcuts.
 
-#### Axis-aligned handles
+#### Axis-aligned Handles
 
 When a solid object is selected, some arrow-shaped handles appear in the 3D window (see [this figure](#axis-aligned-handles-to-move-solid-objects)).
 These handles can be used to translate and rotate the object along the corresponding axis.
@@ -51,7 +51,7 @@ These resize handles can also be enabled from the Field Editor.
 
 %end
 
-#### Translation using keyboard shurtcuts
+#### Translation Using Keyboard Shortcuts
 
 - **Translation**: To move an object parallel to the ground: hold down the shift key, press the left mouse button and drag.
 - **Lift**: To raise or lower and object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag.
@@ -60,14 +60,14 @@ Alternatively, the mouse wheel combined with the Shift key can also be used.
 > **Note**: If you are a Mac user with a single button mouse, hold the Shift key and the Control key (Ctrl) down and press the mouse button to rotate the selected object according to mouse motion.
 Hold the Shift key and the Command key (key with Apple symbol) down and press the mouse button to lift the selected object according to mouse motion.
 
-### Applying a force to a solid object with physics
+### Applying a Force to a Solid Object with Physics
 
 To apply a force to an object, place the mouse pointer where the force will apply, hold down the Alt key and left mouse button together while dragging the mouse.
 Linux users should also hold down the Control key (Ctrl) together with the Alt key.
 This way your are drawing a 3D-vector whose end is located on the plane parallel to the view which passes through the point of application.
 The intensity of the applied force is directly proportional to the cube of the length of this vector.
 
-### Applying a torque to a solid object with physics
+### Applying a Torque to a Solid Object with Physics
 
 To apply a torque to an object, place the mouse pointer on it, hold down the Alt key and right mouse button together while dragging the mouse.
 Linux users should also hold down the Control key (Ctrl) together with the Alt key.
@@ -78,7 +78,7 @@ The object is prompted to turn around the vector direction, the intensity of the
 > **Note**: In pause mode, you can simultaneously add a force and a torque to the same selected solid.
 Camera rotation can be useful when checking wether your force / torque vector has the desired direction.
 
-### Moving and resizing Overlays
+### Moving and Resizing Overlays
 
 By default for each Camera, Display and RangeFinder device, an overlay showing the recorded or displayed image is visible in the 3D view.
 The device type is indicated by the border color: magenta for Camera devices, cyan for Display devices and yellow for RangeFinder devices, see [this figure](#camera-display-and-rangefinder-overlays).
@@ -98,7 +98,7 @@ Once the robot is selected, it is also possible to show or hide the overlay imag
 
 %end
 
-### Show Camera and Display images in a separate window
+### Show Camera and Display Images in a Separate Window
 
 Overlay images can also be displayed outside the 3D window, see [this figure](#camera-and-display-image-window).
 When double-clicking with the left mouse button on the overlay, a new external window displaying the device image is created and the overlay in the 3D window is disabled.

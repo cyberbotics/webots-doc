@@ -1,4 +1,4 @@
-## Keyboard inputs are not working in remote compilation and/or result in a segmentation fault
+## Keyboard Inputs Are Not Working in Remote Compilation and/or Result in a Segmentation Fault
 
 Check that the keyboard window is open on the robot when enabling the keyboard and be sure this window do not lost keyboard focus on the robot.
 

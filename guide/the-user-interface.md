@@ -323,7 +323,7 @@ Then, Webots will ask you to enter the name of your controller and finally it wi
 Webots asks you to choose a programming language (C or C++) and a name for the new physics plugin.
 Then it creates a directory, a template source code file and a Makefile in your current project.
 
-### Help menu
+### Help Menu
 
 The **Help** menu makes it easier to access the documentation, support and general information.
 
@@ -336,7 +336,7 @@ It can be used to diagnose rendering problems.
 
 The remaining menu items bring up various information as indicated, in the form of HTML pages, PDF documents, etc.
 
-### Main toolbar
+### Main Toolbar
 
 The main toolbar contains items for editing the world and the speedometer (see this [subsection](#speedometer-and-virtual-time)), other than shortcuts to items of the `File`, `Simulation` and `View` menus.
 Edit actions always apply on the selected object, that is highlighted both in the 3D window and in the Scene Tree.

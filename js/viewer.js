@@ -133,25 +133,35 @@ function redirectUrls(node) {
 
 function forgeUrl(book, page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ('#' + anchor) : '';
-  var currentUrl = location.href;
-  var newUrl = currentUrl;
+  var url = location.href;
   if (isCyberboticsUrl) {
     var i = location.href.indexOf('cyberbotics.com/doc');
-    newUrl = location.href.substr(0, i) + 'cyberbotics.com/doc/' + book + '/' + page;
+    url = location.href.substr(0, i) + 'cyberbotics.com/doc/' + book + '/' + page;
     if (localSetup.branch !== '' && localSetup.repository && localSetup.repository !== 'omichel')
-      newUrl += '?version=' + localSetup.repository + ':' + localSetup.branch;
+      url += '?version=' + localSetup.repository + ':' + localSetup.branch;
     else if (localSetup.branch !== '')
-      newUrl += '?version=' + localSetup.branch;
-    newUrl += anchorString;
+      url += '?version=' + localSetup.branch;
+    url += anchorString;
   } else {
-    if (currentUrl.indexOf('page=') > -1)
-      newUrl = currentUrl.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page + anchorString);
+    var isFirstArgument;
+
+    // Add or replace the book argument.
+    if (url.indexOf('book=') > -1)
+      url = url.replace(/book=([^&]+)?/, 'book=' + book);
     else {
-      var isFirstArgument = (currentUrl.indexOf('?') < 0);
-      newUrl = currentUrl + (isFirstArgument ? '?' : '&') + 'page=' + page + anchorString;
+      isFirstArgument = (url.indexOf('?') < 0);
+      url = url + (isFirstArgument ? '?' : '&') + 'book=' + book;
+    }
+
+    // Add or replace the page argument.
+    if (url.indexOf('page=') > -1)
+      url = url.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page + anchorString);
+    else {
+      isFirstArgument = (url.indexOf('?') < 0);
+      url = url + (isFirstArgument ? '?' : '&') + 'page=' + page + anchorString;
     }
   }
-  return newUrl;
+  return url;
 }
 
 function addDynamicAnchorEvent(el) {

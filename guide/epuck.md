@@ -2,7 +2,7 @@
 
 %figure "The e-puck robot"
 
-![e-puck.png](images/e-puck.png)
+![e-puck.png](images/robots/epuck/model.png)
 
 %end
 
@@ -19,7 +19,7 @@ E-puck is also available for [purchase](https://www.cyberbotics.com/buy) from Cy
 
 %figure "The e-puck robot at work"
 
-![e-puck_real.png](images/e-puck_real.png)
+![e-puck_real.png](images/robots/epuck/real_robot.png)
 
 %end
 
@@ -123,7 +123,7 @@ Proximity sensor responses are simulated in accordance to the lookup table in [t
 
 %figure "Proximity sensor response against distance"
 
-![e-puck_distance_sensor_lookup_table.png](images/e-puck_distance_sensor_lookup_table.png)
+![e-puck_distance_sensor_lookup_table.png](images/robots/epuck/distance_sensor_lookup_table.png)
 
 %end
 
@@ -131,7 +131,7 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 %figure "Sensors, LEDs and camera"
 
-![e-puck_sensors_and_leds.png](images/e-puck_sensors_and_leds.png)
+![e-puck_sensors_and_leds.png](images/robots/epuck/sensors_and_leds.png)
 
 %end
 
@@ -141,7 +141,7 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 %figure "E-puck robot window"
 
-![e-puck_control.png](images/e-puck_robot_window.png)
+![e-puck_control.png](images/robots/epuck/robot_window.png)
 
 %end
 
@@ -169,7 +169,7 @@ Changing this `window` to an empty string will disable this control window.
 
 %figure "BotStudio window"
 
-![e-puck_botstudio.png](images/e-puck_botstudio.png)
+![e-puck_botstudio.png](images/robots/epuck/botstudio.png)
 
 %end
 
@@ -296,12 +296,12 @@ Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/gct
 
 #### e-puck.wbt
 
-![e-puck_example.png](images/e-puck_example.png) The "e-puck.wbt" is a simple example of collision avoidance behavior using a Braitenberg based controller.
+![e-puck_example.png](images/robots/epuck/e-puck.wbt.png) The "e-puck.wbt" is a simple example of collision avoidance behavior using a Braitenberg based controller.
 This is done using the distance sensors of the e-puck.
 
 #### e-puck\_line.wbt
 
-![e-puck_line.png](images/e-puck_line.png) The "e-puck\_line.wbt" world especially examplifies the use of ground sensors.
+![e-puck_line.png](images/robots/epuck/e-puck_line.wbt.png) The "e-puck\_line.wbt" world especially examplifies the use of ground sensors.
 Ground sensors can be added to a real e-puck robot by inserting a special extension card with three sensors just below the camera of the robot.
 These sensors are actually simple infra-red sensors which allow the e-puck robot to see the color level of the ground at three locations in a line across its front.
 The `groundSensorSlot` field of the standard E-puck PROTO is expressly provided to equip the simulated e-puck robot with the ground sensors extension modeled in the `E-puckGroundSensors` PROTO.
@@ -309,24 +309,24 @@ This is particularly useful for implementing line following behaviors.
 
 #### e-puck\_line\_demo.wbt
 
-![e-puck_line_demo.png](images/e-puck_line_demo.png) The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
+![e-puck_line_demo.png](images/robots/epuck/e-puck_line_demo.wbt.png) The "e-puck\_line" controller program contains the source code for a simple line following system which, as an exercise, can be improved to obtain the behavior demonstrated in the "e-puck\_line\_demo.wbt" demo, in which the e-puck robot is able to follow the line drawn on the floor, but also to avoid obstacles and return to the line following behavior afterwards.
 This model was contributed by Jean-Christophe Zufferey from the EPFL, who sets up a series of exercises with Webots and extended e-puck robots.
 
 #### e-puck\_botstudio.wbt
 
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_example.wbt" is an example of a controller using the BotStudio visual programming language.
+![e-puck_botstudio_example.png](images/robots/epuck/e-puck_botstudio.wbt.png) The "e-puck\_botstudio\_example.wbt" is an example of a controller using the BotStudio visual programming language.
 The BotStudio windows appears upon double clicking on the e-puck allowing the user to see which command is executed.
 
 #### e-puck\_botstudio\_with\_floor\_sensors.wbt
 
-![e-puck_botstudio_example.png](images/e-puck_botstudio_example.png) The "e-puck\_botstudio\_with\_floor\_sensors.wbt" is an example world similar to that of "e-puck\_botstudio\_example.wbt" but where the e-puck has a line following behavior based on its floor sensors.
+![e-puck_botstudio_example.png](images/robots/epuck/e-puck_botstudio.wbt.png) The "e-puck\_botstudio\_with\_floor\_sensors.wbt" is an example world similar to that of "e-puck\_botstudio\_example.wbt" but where the e-puck has a line following behavior based on its floor sensors.
 
 #### e-puck\_cross-compilation.wbt
 
-![e-puck_cross-compilation.png](images/e-puck_cross-compilation.png) The "e-puck\_cross-compilation.wbt" is an example using a cross-compilation controller.
+![e-puck_cross-compilation.png](images/robots/epuck/e-puck_cross-compilation.wbt.png) The "e-puck\_cross-compilation.wbt" is an example using a cross-compilation controller.
 
 #### e-puck\_kinematic.wbt
 
-![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example world similar to "e-puck.wbt" but where the kinematic field of the E-puck PROTO node is true.
+![e-puck_kinematic.png](images/robots/epuck/e-puck_kinematic.wbt.png) The "e-puck\_kinematic.wbt" is an example world similar to "e-puck.wbt" but where the kinematic field of the E-puck PROTO node is true.
 This allows the robot's motion to be calculated according to 2D kinematics algorithms and the collision detection to be calculated with 3D algorithms.
 More information on the kinematic mode in Webots can be found [here](../reference/differentialwheels.md).

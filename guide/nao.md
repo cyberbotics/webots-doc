@@ -2,7 +2,7 @@
 
 %figure "Nao, a humanoid robot"
 
-![nao.png](images/nao.png)
+![model.png](images/robots/nao/model.png)
 
 %end
 
@@ -125,51 +125,51 @@ You will find some in this folder: "WEBOTS\_HOME/projects/robots/aldebaran/world
 
 #### nao.wbt
 
-![nao_example.png](images/nao_example.png) The "nao.wbt" world is meant to be used with Choregraphe (see above).
+![nao.wbt.png](images/robots/nao/nao.wbt.png) The "nao.wbt" world is meant to be used with Choregraphe (see above).
 
 #### nao\_demo.wbt
 
-![nao_demo.png](images/nao_demo.png) The "nao\_demo.wbt" world is a demonstration of a very simple controller that uses Webots C API instead of Choregraphe.
+![nao_demo.wbt.png](images/robots/nao/nao_demo.wbt.png) The "nao\_demo.wbt" world is a demonstration of a very simple controller that uses Webots C API instead of Choregraphe.
 
 #### nao\_matlab.wbt
 
-![nao_example.png](images/nao_example.png) The "nao\_matlab.wbt" world is an example of programming Webots using the Matlab API.
+![nao.wbt.png](images/robots/nao/nao.wbt.png) The "nao\_matlab.wbt" world is an example of programming Webots using the Matlab API.
 
 #### nao\_without\_camera.wbt
 
-![nao_without_camera.png](images/nao_without_camera.png) The "nao\_without\_camera.wbt" world is similar to the "nao.wbt" world but the robot is not equipped with the cameras.
+![nao_without_camera.wbt.png](images/robots/nao/nao_without_camera.wbt.png) The "nao\_without\_camera.wbt" world is similar to the "nao.wbt" world but the robot is not equipped with the cameras.
 
 #### nao\_indoors.wbt
 
-![nao_indoors.png](images/nao_indoors.png) The "nao\_indoors.wbt" world is meant to be used with Choregraph (see above).
+![nao_indoors.wbt.png](images/robots/nao/nao_indoors.wbt.png) The "nao\_indoors.wbt" world is meant to be used with Choregraph (see above).
 
 #### nao\_robocup.wbt
 
-![nao_robocup.png](images/nao_robocup.png) The "nao\_robocup.wbt" world is an example of how to use the NAOqi API inside Webots.
+![nao_robocup.wbt.png](images/robots/nao/nao_robocup.wbt.png) The "nao\_robocup.wbt" world is an example of how to use the NAOqi API inside Webots.
 It is the same API that is used in Choregraphe, meaning that you can program Nao inside Webots without using Choregraphe if you want to.
 In this world, Nao tries to shoot the ball in the goal.
 
 #### challenge.wbt
 
-![nao_challenge.png](images/nao_challenge.png) The "challenge.wbt" world in located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds"; and is a solution to the NAO Challenge contest (2013-2014 edition).
+![nao_challenge.wbt.png](images/robots/nao/nao_challenge.wbt.png) The "challenge.wbt" world in located in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao_challenge/2013-2014/worlds"; and is a solution to the NAO Challenge contest (2013-2014 edition).
 
 #### play\_with\_me.wbt
 
-![nao_play_with_me.png](images/nao_play_with_me.png) The "play\_with\_me.wbt" world is a simple Nao robot that can be controlled using Choregraphe. Along with "get\_the\_candies.wbt", "get\_the\_candies\_with\_2\_robots.wbt" and "play\_a\_movie.wbt", this world can be found in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao\_challenge/2014-2015/worlds"; as it was part of a NAO Challenge contest (2014-2015 edition).
+![nao_play_with_me.wbt.png](images/robots/nao/nao_play_with_me.wbt.png) The "play\_with\_me.wbt" world is a simple Nao robot that can be controlled using Choregraphe. Along with "get\_the\_candies.wbt", "get\_the\_candies\_with\_2\_robots.wbt" and "play\_a\_movie.wbt", this world can be found in the following folder: "WEBOTS\_HOME/projects/samples/contests/nao\_challenge/2014-2015/worlds"; as it was part of a NAO Challenge contest (2014-2015 edition).
 
 #### get\_the\_candies.wbt
 
-![nao_get_the_candies.png](images/nao_get_the_candies.png) The "get\_the\_candies.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to carry the candies from the shelf to the cart.
+![nao_get_the_candies.wbt.png](images/robots/nao/nao_get_the_candies.wbt.png) The "get\_the\_candies.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to carry the candies from the shelf to the cart.
 
 #### get\_the\_candies\_with\_2\_robots.wbt
 
-![nao_get_the_candies_with_2_robots.png](images/nao_get_the_candies_with_2_robots.png) The "get\_the\_candies\_with\_2\_robots.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to carry the candies from the shelf to the cart using two Nao robots.
+![nao_get_the_candies_with_2_robots.wbt.png](images/robots/nao/nao_get_the_candies_with_2_robots.wbt.png) The "get\_the\_candies\_with\_2\_robots.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to carry the candies from the shelf to the cart using two Nao robots.
 
 #### play\_a\_movie.wbt
 
-![nao_play_a_movie.png](images/nao_play_a_movie.png) The "play\_a\_movie.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to turn the TV on.
+![nao_play_a_movie.wbt.png](images/robots/nao/nao_play_a_movie.wbt.png) The "play\_a\_movie.wbt" is a world from the NAO Challenge contest (2014-2015 edition) where the task is to turn the TV on.
 
 #### robotstadium\_nao\_vs\_robotis-op2.wbt
 
-![nao_vs_robotis-op2.png](images/nao_vs_robotis-op2.png) The "robotstadium\_nao\_vs\_robotis-op2.wbt" world in located in the following folder:"WEBOTS\_HOME/projects/contests/robotstadium/worlds"; here, Nao robots are used in a soccer game opposing Robotis 2OP robots.
+![nao_vs_robotis-op2.wbt.png](images/robots/nao/nao_vs_robotis-op2.wbt.png) The "robotstadium\_nao\_vs\_robotis-op2.wbt" world in located in the following folder:"WEBOTS\_HOME/projects/contests/robotstadium/worlds"; here, Nao robots are used in a soccer game opposing Robotis 2OP robots.
 In addition to that, Nao robots are also used in the world files of the [Robotstadium](http://www.robotstadium.org) contest.

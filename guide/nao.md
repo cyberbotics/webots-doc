@@ -6,8 +6,8 @@
 
 %end
 
-The Nao robot is a humanoid robot developed by [Aldebaran Robotics](http://www.aldebaran-robotics.com).
-This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [Aldebaran Robotics](http://www.aldebaran-robotics.com).
+The Nao robot is a humanoid robot developed by [SoftBank Robotics](https://www.ald.softbankrobotics.com/en).
+This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [SoftBank Robotics](https://www.ald.softbankrobotics.com/en).
 Currently, Webots supports the Nao v3.3, v4.0 and v5.0 versions, with and without their articulated fingers (respectively with 25 and 21 degrees of freedom) for the first two.
 
 ### Nao Models
@@ -71,7 +71,7 @@ This will make the robot sit down, and then stand up once he is done sitting dow
 #### Using the Cameras
 
 Webots simulates Nao's top and bottom cameras.
-Using Aldebaran's Choregraphe or the Monitor programs, it is possible to switch between these cameras.
+Using SoftBank Robotics's Choregraphe or the Monitor programs, it is possible to switch between these cameras.
 In Choregraphe, use the "Select Camera" box in `Box Library / Vision`.
 The simulated camera image can be viewed in Choregraphe: `View / Video monitor`.
 The resolution of the image capture can be changed in Webots using the `cameraWidth` and `cameraHeight` fields of the robot.
@@ -83,7 +83,7 @@ It is also possible to completely switch off the camera simulation by adding the
 
 #### macOS Support
 
-Aldebaran dropped the `simulator SDK` support for macOS since the `2.1.2.17` version.
+SoftBank Robotics dropped the `simulator SDK` support for macOS since the `2.1.2.17` version.
 Webots includes this latest version for macOS, however it doesn't work on recent macOS versions.
 
 #### Timing Issues: Getting the Right Speed for Realistic Simulation

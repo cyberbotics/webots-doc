@@ -1,1 +1,1 @@
-## Using Boston Dynamics' Atlas Robot
+## Boston Dynamics' Atlas

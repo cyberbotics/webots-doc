@@ -1,1 +1,1 @@
-## Using Sphero's BB-8 Robot
+## Sphero's BB-8

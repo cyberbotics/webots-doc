@@ -1,1 +1,1 @@
-## Using KONDO's KHR-2HV Robot
+## KONDO's KHR-2HV

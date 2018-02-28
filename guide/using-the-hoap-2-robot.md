@@ -1,1 +1,1 @@
-## Using Fujitsu's HOAP-2 Robot
+## Fujitsu's HOAP-2

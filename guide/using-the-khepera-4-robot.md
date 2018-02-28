@@ -1,1 +1,1 @@
-## Using K-Team's Khepera IV Robot
+## K-Team's Khepera IV

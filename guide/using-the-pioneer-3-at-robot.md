@@ -1,4 +1,4 @@
-## Using adept's Pioneer 3-AT Robot
+## adept's Pioneer 3-AT
 
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 

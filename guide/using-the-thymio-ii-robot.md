@@ -1,4 +1,4 @@
-## Using the Thymio II Robot
+## Mosyba's Thymio II
 
 %figure "Thymio II model in Webots"
 

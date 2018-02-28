@@ -1,4 +1,4 @@
-## Using Sony's Aibo ERS7 Robot
+## Sony's Aibo ERS7
 
 %figure "Aibo ERS7"
 

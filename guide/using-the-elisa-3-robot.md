@@ -1,1 +1,1 @@
-## Using GCTronics' Elisa 3 Robot
+## GCTronics' Elisa 3

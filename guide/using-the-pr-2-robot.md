@@ -1,1 +1,1 @@
-## Using Willow Garage's PR2 Robot
+## Willow Garage's PR2

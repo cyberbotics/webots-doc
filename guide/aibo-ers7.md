@@ -2,7 +2,7 @@
 
 %figure "Aibo ERS7"
 
-![aibo_ers7.png](images/aibo_ers7.png)
+![model.png](images/robots/aibo-ers7/model.png)
 
 %end
 
@@ -48,7 +48,7 @@ The following [figure](#motor-positions) shows the position of the joints previo
 
 %figure "Motor positions"
 
-![aibo_ers7_motors.png](images/aibo_ers7_motors.png)
+![motors.png](images/robots/aibo-ers7/motors.png)
 
 %end
 
@@ -68,7 +68,7 @@ The following [figure](#distance-sensor-positions) shows the position and direct
 
 %figure "Distance sensor positions"
 
-![aibo_ers7_distance_sensors.png](images/aibo_ers7_distance_sensors.png)
+![distance_sensors.png](images/robots/aibo-ers7/distance_sensors.png)
 
 %end
 
@@ -79,5 +79,5 @@ The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/
 
 #### aibo\_ers7.wbt
 
-![aibo_ers7_example.png](images/aibo_ers7_example.png) In this example, you can see a silver Aibo ERS-7 robot walking on a textured soccer field.
+![aibo_ers7.wbt.png](images/robots/aibo-ers7/aibo_ers7.wbt.png) In this example, you can see a silver Aibo ERS-7 robot walking on a textured soccer field.
 On this field you can also see its toys : a ball, a charger and a bone.

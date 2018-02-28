@@ -16,14 +16,14 @@
 | ![icon.png](images/robots/khepera4/icon.png) | [K-Team's Khepera IV](using-the-khepera-4-robot.md) |
 | ![icon.png](images/robots/khr-2hv/icon.png) | [KONDO's KHR-2HV](using-the-khr-2hv-robot.md) |
 | ![icon.png](images/robots/youbot/icon.png) | [KUKA's youBot](using-the-youbot-robot.md) |
+| ![icon.png](images/robots/thymio2/icon.png) | [Mobsya's Thymio II](using-the-thymio-ii-robot.md) |
 | ![icon.png](images/robots/ipr/icon.png) | [Neuronics' IPR](using-the-ipr-robot.md) |
 | ![icon.png](images/robots/firebird6/icon.png) | [NEXics' FireBird 6](using-the-firebird-6-robot.md) |
 | ![icon.png](images/robots/microbot/icon.png) | [Picaxe's Microbot](using-the-microbot-robot.md) |
-| ![icon.png](images/robots/robotis-op2/icon.png) | [Robotis' DARwIn-OP](using-the-robotis-robots.md) |
-| ![icon.png](images/robots/robotis-op2/icon.png) | [Robotis'is-OP2](using-the-robotis-robots.md) |
+| ![icon.png](images/robots/darwin-op/icon.png) | [Robotis' DARwIn-OP](using-the-darwin-op-robot.md) |
+| ![icon.png](images/robots/robotis-op2/icon.png) | [Robotis' Robotis-OP2](using-the-robotis-op2-robot.md) |
 | ![icon.png](images/robots/altino/icon.png) | [Saeon's Altino](using-the-alitino-robot.md) |
 | ![icon.png](images/robots/nao/icon.png) | [SoftBankics' Nao](using-the-nao-robot.md) |
 | ![icon.png](images/robots/aibo-ers7/icon.png) | [Sony's Aibo ERS7](using-the-aibo-ers7-robot.md) |
 | ![icon.png](images/robots/bb8/icon.png) | [Sphero's BB-8](using-the-bb-8-robot.md) |
 | ![icon.png](images/robots/pr2/icon.png) | [Willow Garage's PR2](using-the-pr-2-robot.md) |
-| ![icon.png](images/robots/thymio2/icon.png) | [Mobsya's Thymio II](using-the-thymio-ii-robot.md) |

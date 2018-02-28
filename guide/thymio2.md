@@ -2,7 +2,7 @@
 
 %figure "Thymio II model in Webots"
 
-![thymio2.png](images/thymio2.png)
+![model.png](images/robots/thymio2/model.png)
 
 %end
 
@@ -58,7 +58,7 @@ The calibration was performed using a regular A4 white paper.
 
 %figure "Proximity sensor response versus distance"
 
-![thymio2_horizontal_prox_feedback.png](images/thymio2_horizontal_prox_feedback.png)
+![horizontal_prox_feedback.png](images/robots/thymio2/horizontal_prox_feedback.png)
 
 %end
 
@@ -81,7 +81,7 @@ This value can be modified by editing the `Thymio2::controllerArgs` field.
 
 %figure "Aseba Studio and VPL target selection dialog"
 
-![thymio2_aseba_target_selection.png](images/thymio2_aseba_target_selection.png)
+![aseba_target_selection.png](images/robots/thymio2/aseba_target_selection.png)
 
 %end
 
@@ -91,7 +91,7 @@ To open the Thymio II window, just double click on the 3D model of the robot.
 
 %figure "Thymio II robot window"
 
-![thymio2_window.png](images/thymio2_window.png)
+![window.png](images/robots/thymio2/window.png)
 
 %end
 
@@ -102,16 +102,16 @@ The various accessible worlds are described below.
 
 #### thymio2.wbt
 
-![thymio2_example.png](images/thymio2_example.png) An example of the possible behaviors of the Thymio II.
+![thymio2.wbt.png](images/robots/thymio2/thymio2.wbt.png) An example of the possible behaviors of the Thymio II.
 
 #### thymio2\_pen.wbt
 
-![thymio2_pen.png](images/thymio2_pen.png) You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to the `Thymio2::bodySlot` field.
+![thymio2_pen.wbt.png](images/robots/thymio2/thymio2_pen.wbt.png) You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to the `Thymio2::bodySlot` field.
 This pen can draw on every 3D object.
 This is particularly useful to perform [these exercises](https://aseba.wikidot.com/en:thymiodrawing).
 
 
 #### thymio2\_ball.wbt
 
-![thymio2_ball.png](images/thymio2_ball.png) [These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be reproduced by adding a `Thymio2Ball` node in your world.
+![thymio2_ball.wbt.png](images/robots/thymio2/thymio2_ball.wbt.png) [These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be reproduced by adding a `Thymio2Ball` node in your world.
 The ball can be slightly moved by applying a force on it (`ALT + mouse left click`).

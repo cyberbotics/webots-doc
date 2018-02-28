@@ -2,7 +2,7 @@
 
 %figure "Pioneer 3-DX, an all-purpose base, used for research and applications"
 
-![pioneer3dx.png](images/pioneer3dx.png)
+![pioneer3dx.png](images/robots/pioneer-3dx/model.png)
 
 %end
 
@@ -37,7 +37,7 @@ The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user
 
 %figure "Pioneer 3-DX motor names"
 
-![pioneer3dx_servos.png](images/pioneer3dx_servos.png)
+![pioneer3dx_servos.png](images/robots/pioneer-3dx/servos.png)
 
 %end
 
@@ -45,7 +45,7 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 
 %figure "Sonar sensors positions"
 
-![pioneer3at_sonars.png](images/pioneer3at_sonars.png)
+![pioneer3at_sonars.png](images/robots/pioneer-3dx/sonars.png)
 
 %end
 
@@ -69,7 +69,7 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 
 %figure "LEDs positions"
 
-![pioneer3dx_led.png](images/pioneer3dx_led.png)
+![pioneer3dx_led.png](images/robots/pioneer-3dx/leds.png)
 
 %end
 
@@ -80,23 +80,23 @@ The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/
 
 #### pioneer3dx.wbt
 
-![pioneer3dx_example.png](images/pioneer3dx_example.png) The "pioneer3dx.wbt" world file shows a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors (see the "pioneer3dx\_collision\_avoidance.c" controller file).
+![pioneer3dx_example.png](images/robots/pioneer-3dx/pioneer3dx.wbt.png) The "pioneer3dx.wbt" world file shows a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors (see the "pioneer3dx\_collision\_avoidance.c" controller file).
 The three LEDs are switched on and off periodically.
 
 #### pioneer3dx\_collision\_avoidance.wbt
 
-![pioneer3dx_collision_avoidance.png](images/pioneer3dx_collision_avoidance.png) The "pioneer3dx\_collision\_avoidance.wbt" world file is a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "pioneer3dx\_obstacle\_avoidance.c" controller file).
+![pioneer3dx_collision_avoidance.png](images/robots/pioneer-3dx/pioneer3dx_collision_avoidance.wbt.png) The "pioneer3dx\_collision\_avoidance.wbt" world file is a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors in a dark environment (see the "pioneer3dx\_obstacle\_avoidance.c" controller file).
 
 #### pioneer3dx\_gripper.wbt
 
-![pioneer3dx_gripper.png](images/pioneer3dx_gripper.png) The "pioneer3dx_gripper.wbt" world file is a simulation example where a gripper is used to move a ball (see the "pioneer3dx\_gripper.c" controller file).
+![pioneer3dx_gripper.png](images/robots/pioneer-3dx/pioneer3dx_gripper.wbt.png) The "pioneer3dx_gripper.wbt" world file is a simulation example where a gripper is used to move a ball (see the "pioneer3dx\_gripper.c" controller file).
 The `Pioneer3Gripper` PROTO is mounted on the `extensionSlot` of the `Pioneer3dx` PROTO node.
 
 #### pioneer3dx\_matlab.wbt
 
-![pioneer3dx_matlab.png](images/pioneer3dx_matlab.png) The "pioneer3dx_matlab.wbt" world file is a simulation example an obstacle avoidance behavior using a MATLAB controller (see the "pioneer3dx\_matlab.m" controller file).
+![pioneer3dx_matlab.png](images/robots/pioneer-3dx/pioneer3dx_matlab.wbt.png) The "pioneer3dx_matlab.wbt" world file is a simulation example an obstacle avoidance behavior using a MATLAB controller (see the "pioneer3dx\_matlab.m" controller file).
 
 #### pioneer3dx\_with\_kinect.wbt
 
-![pioneer3dx_with_kinect.png](images/pioneer3dx_with_kinect.png) The "pioneer3dx\_with\_kinect.wbt" world file is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "pioneer3dx\_obstacle\_avoidance\_kinect.c" controller file).
+![pioneer3dx_with_kinect.png](images/robots/pioneer-3dx/pioneer3dx_with_kinect.wbt.png) The "pioneer3dx\_with\_kinect.wbt" world file is a simple simulation example of an obstacle avoidance behavior based on a Microsoft Kinect sensor (see the "pioneer3dx\_obstacle\_avoidance\_kinect.c" controller file).
 The `Kinect` PROTO is mounted in the `extensionSlot` field of the `Pioneer3dx` PROTO node.

@@ -2,7 +2,7 @@
 
 %figure "Pioneer 3-AT, a ready-to-use all terrain base"
 
-![pioneer3at_real.png](images/pioneer3at.png)
+![pioneer3at_real.png](images/robots/pioneer-3at/model.png)
 
 %end
 
@@ -34,7 +34,7 @@ The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user
 
 %figure "Pioneer 3-AT motor names"
 
-![pioneer3at_wheels.png](images/pioneer3at_wheels.png)
+![pioneer3at_wheels.png](images/robots/pioneer-3at/wheels.png)
 
 %end
 
@@ -42,7 +42,7 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 
 %figure "Sonar sensors positions"
 
-![pioneer3at_sonars.png](images/pioneer3at_sonars.png)
+![pioneer3at_sonars.png](images/robots/pioneer-3at/sonars.png)
 
 %end
 
@@ -52,6 +52,6 @@ The angle between two consecutive sensor directions is 20 degrees except for the
 
 #### pioneer3at.wbt
 
-![pioneer3at_avoidance.png](images/pioneer3at_avoidance.png) The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LMS 291 Lidar (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
+![pioneer3at_avoidance.png](images/robots/pioneer-3at/pioneer3at_avoidance.wbt.png) The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LMS 291 Lidar (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
 The Lidar depth output is used to compute two stimuli in front of the robot.
 These two stimuli are computed by a [Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function) applied slightly on the front left, and respectively on the front right of the robot.

@@ -2,6 +2,6 @@
 
 %figure "HOAP-2 model in Webots"
 
-![model.png](images/robots/hopa2/model.png)
+![model.png](images/robots/hoap2/model.png)
 
 %end

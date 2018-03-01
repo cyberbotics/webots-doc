@@ -1,6 +1,6 @@
 ## Sony's Aibo ERS7
 
-%figure "Aibo ERS7"
+%figure "Aibo ERS7 model in Webots"
 
 ![model.png](images/robots/aibo-ers7/model.png)
 

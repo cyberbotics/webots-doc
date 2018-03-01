@@ -1,6 +1,6 @@
 ## SoftBank Robotics' Nao
 
-%figure "Nao, a humanoid robot"
+%figure "Nao model in Webots"
 
 ![model.png](images/robots/nao/model.png)
 

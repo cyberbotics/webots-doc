@@ -1,6 +1,6 @@
 ## Neuronics' IPR
 
-%figure "IPR"
+%figure "IPR model in Webots"
 
 ![model.png](images/robots/ipr/model.png)
 

@@ -1,6 +1,6 @@
 ## adept's Pioneer 3-AT
 
-%figure "Pioneer 3-AT, a ready-to-use all terrain base"
+%figure "Pioneer 3-AT model in Webots"
 
 ![pioneer3at_real.png](images/robots/pioneer-3at/model.png)
 

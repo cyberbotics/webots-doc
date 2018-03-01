@@ -1,6 +1,6 @@
 ## GCTronics' e-puck
 
-%figure "The e-puck robot"
+%figure "e-puck model in Webots"
 
 ![model.png](images/robots/epuck/model.png)
 

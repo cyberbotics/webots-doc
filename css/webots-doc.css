@@ -293,6 +293,7 @@
 }
 .webots-doc img {
   max-width: 100%;
+  max-height: 500px;
 }
 .webots-doc figure {
   max-width: 80%;

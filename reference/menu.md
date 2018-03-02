@@ -68,6 +68,7 @@
     - [Physics](physics.md)
     - [Plane](plane.md)
     - [PointLight](pointlight.md)
+    - [PointSet](pointset.md)
     - [PositionSensor](positionsensor.md)
     - [Propeller](propeller.md)
     - [Radar](radar.md)

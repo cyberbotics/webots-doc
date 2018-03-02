@@ -28,7 +28,7 @@ The `color` field specifies the spectral color properties of both the direct and
 - The `on` boolean value allows the user to turn the light on (TRUE) or off (FALSE).
 
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) the casting of shadows for this [Light](#light).
-When activated, sharp shadows are casted from and received by any renderable object except for the semi-transparent objects, and the [IndexedLineSet](indexedlineset.md) primitive.
+When activated, sharp shadows are casted from and received by any renderable object except for the semi-transparent objects, and the [IndexedLineSet](indexedlineset.md) and [PoinSet](pointset.md) primitive.
 An object can be semi-transparent either if its texture has an alpha channel, or if its [Material](material.md).`transparency` field is not equal to 1.
 Shadows are additive (Several lights can cast shadows).
 The darkness of a shadow depends on how the occluded part is lighted (either by an ambient light component or by another light).

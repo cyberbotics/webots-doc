@@ -17,6 +17,6 @@ The [PointSet](#pointset) node represents a 3D geometry formed by a set of 3D po
 
 The `color` field optionally contains a [Color](color.md) node which defines the color of each point.
 If the `color` field is not NULL, the [Color](color.md) node should have the same number of items than the [Coordinate](coordinate.md) node in the `coord` field.
-If the `color` field is NULL, the `emissiveColor` of the [Material](matieral.md) will be used to define the color of the points. 
+If the `color` field is NULL, the `emissiveColor` of the [Material](material.md) will be used to define the color of the points. 
 
 The `coord` field specifies the list of 3D points and contains a [Coordinate](coordinate.md) node.

@@ -1,4 +1,4 @@
-## Motions files
+## Motions Files
 
 %figure "Motions stored in the motions files"
 

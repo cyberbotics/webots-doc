@@ -4,12 +4,11 @@ Derived from [JointParameters](jointparameters.md).
 
 ```
 HingeJointParameters {
-  SFVec3f anchor                    0 0 0 # for the rotation axis (m)
-  # the following field have different default values than the parent class
-  SFVec3f axis                      1 0 0 # rotation axis
-  SFFloat suspensionSpringConstant  0     # linear spring constant along the suspension axis (Ns/m)
-  SFFloat suspensionDampingConstant 0     # linear damping constant along the suspension axis (Ns/m)
-  SFVec3f suspensionAxis            1 0 0 # direction of the suspension axis
+  SFVec3f anchor                    0 0 0   # any vector
+  SFVec3f axis                      1 0 0   # unit axis
+  SFFloat suspensionSpringConstant  0       # [0, inf)
+  SFFloat suspensionDampingConstant 0       # [0, inf)
+  SFVec3f suspensionAxis            1 0 0   # unit axis
 }
 ```
 
@@ -19,17 +18,13 @@ The [HingeJointParameters](#hingejointparameters) node can be used to specify th
 
 ### Field Summary
 
-- `anchor`: This field specifies the anchor position, i.e. a point through which
-the hinge axis passes. Together with the `axis` field inherited from the
-[JointParameters](jointparameters.md) node, the `anchor` field determines the
-hinge rotation axis in a unique way. It is expressed in relative coordinates
-with respect to the closest upper [Transform](transform.md) node's frame.
+- `anchor`: This field specifies the anchor position, i.e. a point through which the hinge axis passes.
+Together with the `axis` field inherited from the [JointParameters](jointparameters.md) node, the `anchor` field determines the hinge rotation axis in a unique way.
+It is expressed in relative coordinates with respect to the closest upper [Transform](transform.md) node's frame.
 
-- `suspensionSpringConstant`: This field specifies the suspension spring constant
-along the suspension axis.
+- `suspensionSpringConstant`: This field specifies the suspension spring constant along the suspension axis.
 
-- `suspensionDampingConstant`: This field specifies the suspension damping
-constant along the suspension axis.
+- `suspensionDampingConstant`: This field specifies the suspension damping constant along the suspension axis.
 
 - `suspensionAxis`: This field specifies the direction of the suspension axis.
 

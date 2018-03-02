@@ -1,4 +1,4 @@
-## Car library
+## Car Library
 
 The [car](#car-library) library is supposed to be used together with the [driver](driver-library.md) library.
 It provides additional information and functions to which a normal human driver of a car does not have access (e.g., changing the blinking period of the indicator or getting the value of the wheels encoders).

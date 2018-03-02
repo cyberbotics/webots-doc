@@ -4,7 +4,7 @@ If you write a scientific paper or describe your project involving Webots on a w
 For example by explicitly mentioning Cyberbotics' website or by referencing a journal paper that describes Webots.
 To make this simpler, we provide here some citation examples, including BibTex entries that you can use in your own documents.
 
-### Citing Cyberbotics' website
+### Citing Cyberbotics' Website
 
 *This project uses [Webots](http://www.cyberbotics.com), a commercial mobile robot simulation software developed by Cyberbotics Ltd.*
 
@@ -32,7 +32,7 @@ http://www.cyberbotics.com.
 Commercial Mobile Robot Simulation Software.
 ```
 
-### Citing a reference journal paper about Webots
+### Citing a Reference Journal Paper about Webots
 
 A reference paper was published in the International Journal of Advanced Robotics Systems.
 Here is the BibTex entry:

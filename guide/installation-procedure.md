@@ -1,17 +1,16 @@
-## Installation procedure
+## Installation Procedure
 
 Usually, you will need to have system administrator rights to install Webots.
 Once installed, Webots can be used by a regular, unprivileged user.
 To install Webots, please follow this procedure:
 
-1. Uninstall completely any old version of Webots that may have been installed on
-your computer previously.
+1. Uninstall completely any old version of Webots that may have been installed on your computer previously.
 2. Install Webots for your operating system as explained below.
 
 > **Note**: After installation, the most important Webots features will be available, but some third party tools (such as Java, Python or MATLAB) may be necessary to run or compile specific projects.
 The [chapter](language-setup.md) covers the set up of these tools.
 
-### Installation on linux
+### Installation on Linux
 
 Webots will run on most recent Linux distributions running glibc2.11.1 or earlier.
 This includes fairly recent Ubuntu, Debian, Fedora, SuSE, RedHat, etc.
@@ -75,7 +74,7 @@ apt-get install webots
 > **Note**: This procedure can also be done using any APT front-end tools such as the Synaptic Package Manager.
 But only a command line procedure is documented here.
 
-#### From the tarball package
+#### From the "tarball" Package
 
 This section explains how to install Webots from the tarball package (having the `.tar.bz2` extension).
 This package can be installed without the `root` privileges.
@@ -102,7 +101,7 @@ In this case an error message will be printed in the Webots console mentioning t
 
 > **Note**: On old versions of Ubuntu or other linux distributions the library names and versions could be slightly different.
 
-#### From the DEB package
+#### From the DEB Package
 
 This procedure explains how to install Webots from the DEB package (having the `.deb` extension).
 
@@ -122,7 +121,7 @@ Or:
 gdebi webots_{{ webots.version.debian_package }}_amd64.deb
 ```
 
-#### Server edition
+#### Server Edition
 
 Webots requires some graphical features that are usually not available by default on a linux server edition and additional packages needs to be available to make it work:
 
@@ -156,21 +155,28 @@ If you observe 3D rendering anomalies or if Webots crashes, it is strongly recom
 ### Installation on macOS
 
 1. Download the "webots-{{ webots.version.package }}.dmg" installation file from our [website](http://www.cyberbotics.com/macosx).
-2. Double click on this file. This will mount on the desktop a volume named
-"Webots" containing the "Webots" folder.
-3. Move this folder to your "/Applications" folder or wherever you would like to
-install Webots.
-4. It is recommended to increase the size of the system shared memory in order to run simulations with more than 8 camera or display devices (such as the PR2 robot). In order to proceed, edit the following file from the Terminal application as administrator: `sudo pico /etc/sysctl.conf`. It is likely this file doesn't exist on your system, in which case an empty file will be created. Edit this file so that it contains the lines:
-```
+2. Double click on this file.
+This will mount on the desktop a volume named "Webots" containing the "Webots" folder.
+3. Move this folder to your "/Applications" folder or wherever you would like to install Webots.
+4. It is recommended to increase the size of the system shared memory in order to run simulations with more than 8 camera or display devices (such as the PR2 robot).
+In order to proceed, edit the following file from the Terminal application as administrator: `sudo pico /etc/sysctl.conf`.
+It is likely this file doesn't exist on your system, in which case an empty file will be created.
+Edit this file so that it contains the lines:
+
+    ```
 kern.sysv.shmmax=16777216
 kern.sysv.shmmin=1
 kern.sysv.shmmni=128
 kern.sysv.shmseg=32
 kern.sysv.shmall=4096
-```
-These settings increase the amount of shared memory to four times the usual default. The current values are provided by the following command line: `sysctl -A | grep sysv.shm`. Please refer to the macOS documentation to understand the exact meaning of each value. You will have to reboot your computer so that these changes are taken into account.
+    ```
 
-### macOS security
+    These settings increase the amount of shared memory to four times the usual default.
+The current values are provided by the following command line: `sysctl -A | grep sysv.shm`.
+Please refer to the macOS documentation to understand the exact meaning of each value.
+You will have to reboot your computer so that these changes are taken into account.
+
+### macOS Security
 
 During the first Webots launch, macOS may complain about opening Webots because it is from an unidentified developer (see [this figure](#unidentified-developer-dialog)).
 

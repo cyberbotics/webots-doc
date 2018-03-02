@@ -4,14 +4,14 @@ Derived from [Device](device.md).
 
 ```
 Motor {
-  SFFloat  acceleration      -1     # (m/s^2 or rad/s^2): -1 or (0, inf)
-  SFFloat  consumptionFactor 10     # energy consumption (W/N or W/(N*m))
-  SFVec3f  controlPID        10 0 0 # PID gains: (0,inf), [0, inf), [0, inf)
-  SFFloat  minPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
-  SFFloat  maxPosition       0      # (m or rad): (-inf, inf) or [-pi, pi]
-  SFFloat  maxVelocity       10     # (m/s or rad/s): (0, inf)
-  SFString sound             ""     # wave file of the motor sound
-  MFNode   muscles           []
+  SFFloat  acceleration      -1       # {-1, [0, inf)}
+  SFFloat  consumptionFactor 10       # [0, inf)
+  SFVec3f  controlPID        10 0 0   # any positive vector
+  SFFloat  minPosition       0        # (-inf, inf) or [-pi, pi]
+  SFFloat  maxPosition       0        # (-inf, inf) or [-pi, pi]
+  SFFloat  maxVelocity       10       # [0, inf)
+  SFString sound             ""       # any string
+  MFNode   muscles           []       # {Muscle, PROTO}
 }
 ```
 
@@ -25,19 +25,17 @@ Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.m
 
 ### Field Summary
 
-- The `acceleration` field defines the default acceleration of the P-controller. A
-value of -1 (infinite) means that the acceleration is not limited by the
-P-controller. The acceleration can be changed at run-time with the
-`wb_motor_set_acceleration` function.
+- The `acceleration` field defines the default acceleration of the P-controller.
+A value of -1 (infinite) means that the acceleration is not limited by the P-controller.
+The acceleration can be changed at run-time with the `wb_motor_set_acceleration` function.
 
-- The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node. The details on motor energy consumption are provided [below](#energy-consumption).
+- The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node.
+The details on motor energy consumption are provided [below](#energy-consumption).
 
-- The first coordinate of `controlPID` field specifies the initial value of the
-*P* parameter, which is the *proportional gain* of the motor PID-controller. A
-high *P* results in a large response to a small error, and therefore a more
-sensitive system. Note that by setting *P* too high, the system can become
-unstable. With a small *P*, more simulation steps are needed to reach the target
-position, but the system is more stable.
+- The first coordinate of `controlPID` field specifies the initial value of the *P* parameter, which is the *proportional gain* of the motor PID-controller.
+A high *P* results in a large response to a small error, and therefore a more sensitive system.
+Note that by setting *P* too high, the system can become unstable.
+With a small *P*, more simulation steps are needed to reach the target position, but the system is more stable.
 
     The second coordinate of `controlPID` field specifies the initial value of the
     *I* parameter, which is the *integral gain* of the motor PID-controller. The
@@ -57,20 +55,19 @@ position, but the system is more stable.
     The value of *P, I* and *D* can be changed at run-time with the
     `wb_motor_set_control_pid` function.
 
-- The `minPosition` and `maxPosition` fields specify *soft limits* for the target
-position. These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
+- The `minPosition` and `maxPosition` fields specify *soft limits* for the target position.
+These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
-- The `maxVelocity` field specifies both the upper limit and the default value for
-the motor *velocity*. The *velocity* can be changed at run-time with the
-`wb_motor_set_velocity` function. The value should always be positive (the
-default is 10).
+- The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*.
+The *velocity* can be changed at run-time with the `wb_motor_set_velocity` function.
+The value should always be positive (the default is 10).
 
-- The `sound` field specifies the URL of a WAVE sound file, relatively to the
-location of the world file or PROTO file which contains the `Motor` node. This
-sound is used to play the sound of the motor. It is modulated in volume and
-pitch according to the velocity of the motor to produce a realistic motor sound.
+- The `sound` field specifies the URL of a WAVE sound file, relatively to the location of the world file or PROTO file which contains the `Motor` node.
+This sound is used to play the sound of the motor.
+It is modulated in volume and pitch according to the velocity of the motor to produce a realistic motor sound.
 
-- The `muscles` field optionally specifies one or more [Muscle](muscle.md) nodes that graphically display the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md). This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
+- The `muscles` field optionally specifies one or more [Muscle](muscle.md) nodes that graphically display the contraction of an artificial muscle connecting the parent [Solid](solid.md) node and the `endPoint` node of the [Joint](joint.md).
+This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track](track.md) nodes.
 
 ### Units
 
@@ -138,7 +135,7 @@ if (A != -1) {
 }
 ```
 
-where *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and *D* are the PID-control gains specified in the `controlPID` field, or set with the `wb_motor_set_control_pid` function, *P<sub>t</sub>* is the *target position* of the motor set by the `wb_motor_set_position` function, *P<sub>c</sub>* is the current motor position, *V<sub>d</sub>* is the desired velocity as specified by the `maxVelocity` field (default) or set with the `wb_motor_set_velocity` function, *a* is the acceleration required to reach *Vc* in one time step, *V<sub>p</sub>* is the motor velocity of the previous time step, *t<sub>s</sub>* is the duration of the simulation time step as specified by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in seconds), and *A* is the acceleration of the motor as specified by the `acceleration` field (default) or set with the `wb_motor_set_acceleration` function.
+Where *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and *D* are the PID-control gains specified in the `controlPID` field, or set with the `wb_motor_set_control_pid` function, *P<sub>t</sub>* is the *target position* of the motor set by the `wb_motor_set_position` function, *P<sub>c</sub>* is the current motor position, *V<sub>d</sub>* is the desired velocity as specified by the `maxVelocity` field (default) or set with the `wb_motor_set_velocity` function, *a* is the acceleration required to reach *Vc* in one time step, *V<sub>p</sub>* is the motor velocity of the previous time step, *t<sub>s</sub>* is the duration of the simulation time step as specified by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in seconds), and *A* is the acceleration of the motor as specified by the `acceleration` field (default) or set with the `wb_motor_set_acceleration` function.
 
 > **Note**: *error_integral* and *previous_error* are both reset to *0* after every call of the `wb_motor_set_control_pid` function.
 
@@ -356,16 +353,14 @@ The default value is provided by the `maxForce` (resp. `maxTorque` field).
 Note that this function measures the *current motor force* (resp. *torque*) exclusively, all other external or internal forces (resp. torques) that may apply to the motor are ignored.
 In particular, the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function does not measure:
 
-- The spring and damping forces that apply when the `springConstant` or
-`dampingConstant` fields are non-zero.
+- The spring and damping forces that apply when the `springConstant` or `dampingConstant` fields are non-zero.
 - The force specified with the `wb_motor_set_force` (resp.
 `wb_motor_set_torque`) function.
-- The *constraint forces or torques* that restrict the motor motion to one degree
-of freedom (DOF). In other words, the forces or torques applied outside of the
-motor DOF are ignored. Only the forces or torques applied in the DOF are
-considered. For example, in a "linear" motor, a force applied at a right angle
-to the sliding axis is completely ignored. In a "rotational" motor, only the
-torque applied around the rotation axis is considered.
+- The *constraint forces or torques* that restrict the motor motion to one degree of freedom (DOF).
+In other words, the forces or torques applied outside of the motor DOF are ignored.
+Only the forces or torques applied in the DOF are considered.
+For example, in a "linear" motor, a force applied at a right angle to the sliding axis is completely ignored.
+In a "rotational" motor, only the torque applied around the rotation axis is considered.
 
 Note that these functions applies only to *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of related [Solid](solid.md) nodes must be defined for these functions to work properly.

@@ -9,16 +9,16 @@ Derived from [Robot](robot.md).
 
 ```
 DifferentialWheels {
-  SFFloat motorConsumption  0    # [0,inf)
-  SFFloat axleLength        0.1  # (0,inf)
-  SFFloat wheelRadius       0.01 # (0,inf)
-  SFFloat maxSpeed          10   # (0,inf)
-  SFFloat maxAcceleration   10
-  SFFloat speedUnit         1
-  SFFloat slipNoise         0.1  # [0,inf)
-  SFFloat encoderNoise      -1
-  SFFloat encoderResolution -1
-  SFFloat maxForce          0.3  # (0,inf)
+  SFFloat motorConsumption  0      # [0, inf)
+  SFFloat axleLength        0.1    # [0, inf)
+  SFFloat wheelRadius       0.01   # [0, inf)
+  SFFloat maxSpeed          10     # [0, inf)
+  SFFloat maxAcceleration   10     # [0, inf)
+  SFFloat speedUnit         1      # [0, inf)
+  SFFloat slipNoise         0.1    # [0, inf)
+  SFFloat encoderNoise      -1     # {-1, [0, inf)}
+  SFFloat encoderResolution -1     # {-1, [0, inf)}
+  SFFloat maxForce          0.3    # [0, inf)
 }
 ```
 
@@ -38,59 +38,56 @@ The *x* axis is the axis of the wheel axle, *y* is the vertical axis and *z* is 
 
 - `motorConsumption`: power consumption of the motor in Watts.
 
-- `axleLength`: distance between the two wheels (in meters). This field must be
-specified for "kinematics" based robot models. It will be ignored by "physics"
-based models.
+- `axleLength`: distance between the two wheels (in meters).
+This field must be specified for "kinematics" based robot models.
+It will be ignored by "physics" based models.
 
-- `wheelRadius`: radius of the wheels (in meters). Both wheels must have the same
-radius. This field must be specified for "kinematics" based robot models. It
-will be ignored by "physics" based models.
+- `wheelRadius`: radius of the wheels (in meters).
+Both wheels must have the same radius.
+This field must be specified for "kinematics" based robot models.
+It will be ignored by "physics" based models.
 
 - `maxSpeed`: maximum speed of the wheels, expressed in *rad/s*.
 
 - `maxAcceleration`: maximum acceleration of the wheels, expressed in *rad/s^2*.
 It is used only in "kinematics" mode.
 
-- `speedUnit`: defines the unit used in the `wb_differential_wheels_set_speed`
-function, expressed in *rad/s*.
+- `speedUnit`: defines the unit used in the `wb_differential_wheels_set_speed` function, expressed in *rad/s*.
 
-- `slipNoise`: slip noise added to each move expressed in percent. If the value is
-0.1, a noise component of +/- 10 percent is added to the command for each
-simulation step. The noise is, of course, different for each wheel. The noise
-has a uniform distribution, also known as as "white noise."
+- `slipNoise`: slip noise added to each move expressed in percent.
+If the value is 0.1, a noise component of +/- 10 percent is added to the command for each simulation step.
+The noise is, of course, different for each wheel.
+The noise has a uniform distribution, also known as as "white noise."
 
-- `encoderNoise`: white noise added to the incremental encoders. If the value is
--1, the encoders are not simulated. If the value is 0, encoders are simulated
-without noise. Otherwise a cumulative uniform noise is added to encoder values.
-At every simulation step, an increase value is computed for each encoder. Then,
-a random uniform noise is applied to this increase value before it is added to
-the encoder value. This random noise is computed in the same way as the slip
-noise (see above). When the robot encounters an obstacle, and if no physics
-simulation is used, the robot wheels do not slip, hence the encoder values are
-not incremented. This is very useful to detect that a robot has hit an obstacle.
-For each wheel, the angular velocity is affected by the `slipNoise` field. The
-angular speed is used to compute the rotation of the wheel for a basic time step
-(by default 32 ms). The wheel is actually rotated by this amount. This amount is
-then affected by the  `encoderNoise` (if any). This means that a noise is added
-to the amount of rotation in a similar way as with the `slipNoise`. Finally,
-this amount is multiplied by the `encoderResolution` (see below) and used to
-increment the encoder value, which can be read by the controller program.
+- `encoderNoise`: white noise added to the incremental encoders.
+If the value is -1, the encoders are not simulated.
+If the value is 0, encoders are simulated without noise.
+Otherwise a cumulative uniform noise is added to encoder values.
+At every simulation step, an increase value is computed for each encoder.
+Then, a random uniform noise is applied to this increase value before it is added to the encoder value.
+This random noise is computed in the same way as the slip noise (see above).
+When the robot encounters an obstacle, and if no physics simulation is used, the robot wheels do not slip, hence the encoder values are not incremented.
+This is very useful to detect that a robot has hit an obstacle.
+For each wheel, the angular velocity is affected by the `slipNoise` field.
+The angular speed is used to compute the rotation of the wheel for a basic time step (by default 32 ms).
+The wheel is actually rotated by this amount.
+This amount is then affected by the `encoderNoise` (if any).
+This means that a noise is added to the amount of rotation in a similar way as with the `slipNoise`.
+Finally, this amount is multiplied by the `encoderResolution` (see below) and used to increment the encoder value, which can be read by the controller program.
 
-- `encoderResolution`: defines the number of encoder increments per radian of the
-wheel. An `encoderResolution` of *100* will make the encoders increment their
-value by (approximately) 628 each time the wheel makes a complete revolution.
-The -1 default value means that the encoder functionality is disabled as with
-`encoderNoise`.
+- `encoderResolution`: defines the number of encoder increments per radian of the wheel.
+An `encoderResolution` of *100* will make the encoders increment their value by (approximately) 628 each time the wheel makes a complete revolution.
+The -1 default value means that the encoder functionality is disabled as with `encoderNoise`.
 
-- `maxForce`: defines the maximum torque used by the robot to rotate each wheel in
-a "physics" based simulation. It corresponds to the `dParamFMax` parameter of an
-ODE hinge joint. It is ignored in "kinematics" based simulations.
+- `maxForce`: defines the maximum torque used by the robot to rotate each wheel in a "physics" based simulation.
+It corresponds to the `dParamFMax` parameter of an ODE hinge joint.
+It is ignored in "kinematics" based simulations.
 
 ### Simulation Modes
 
 The [DifferentialWheels](#differentialwheels)'s motion can be computed by different algorithms: "physics" or "kinematics" depending on the structure of the world.
 
-#### Physics mode
+#### Physics Mode
 
 A [DifferentialWheels](#differentialwheels) is simulated in "physics" mode if it contains [Physics](physics.md) nodes in its body and wheels.
 In this mode, the simulation is carried out by the ODE physics engine, and the robot's motion is caused by the friction forces generated by the contact of the wheels with the floor.
@@ -99,7 +96,7 @@ In "physics" mode the inertia, weight, etc. of the robot and wheels is simulated
 The friction is simulated with the Coulomb friction model, so a [DifferentialWheels](#differentialwheels) robot would slip on a wall with some friction coefficient that you can tune in the [Physics](physics.md) nodes.
 The "physics" mode is the most realistic but also the slowest simulation mode.
 
-#### Kinematics mode
+#### Kinematics Mode
 
 When a [DifferentialWheels](#differentialwheels) does not have [Physics](physics.md) nodes then it is simulated in "kinematics" mode.
 In the "kinematics" mode the robot's motion is calculated according to 2D kinematics algorithms and the collision detection is calculated with 3D algorithms.

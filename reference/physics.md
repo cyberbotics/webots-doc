@@ -2,11 +2,11 @@
 
 ```
 Physics {
-  SFFloat density       1000  # (kg/m^3) -1 or > 0
-  SFFloat mass          -1    # (kg) -1 or > 0
-  MFVec3f centerOfMass  [ ]   # position of the center of mass
-  MFVec3f inertiaMatrix [ ]   # empty or 2 values
-  SFNode  damping       NULL  # optional damping node
+  SFFloat density       1000   # {-1, [0, inf)}
+  SFFloat mass          -1     # {-1, [0, inf)}
+  MFVec3f centerOfMass  [ ]    # any vector
+  MFVec3f inertiaMatrix [ ]    # any two vectors
+  SFNode  damping       NULL   # {Damping, PROTO}
 }
 ```
 
@@ -25,40 +25,26 @@ For compatibility reasons, these fields are still present in the [Physics](#phys
 
 ### Field Summary
 
-- The `density` field can be used to define the density of the containing
-[Solid](solid.md). The value of the `density` field should be a positive number
-number or -1. A -1 value indicates that the dentity is not known, in this case
-the `mass` field (see below) must be specified. If the `density` is specified
-(different from -1) then the total mass of the [Solid](solid.md) is calculated
-by multiplying the specified density with the total volume of the geometrical
-primitives composing the `boundingObject`. Note that Webots ignores if the
-geometrical primitives intersect or not, the volume of each primitive is simply
-added to the total volume and finally multiplied by the density.
+- The `density` field can be used to define the density of the containing [Solid](solid.md).
+The value of the `density` field should be a positive number number or -1.
+A -1 value indicates that the dentity is not known, in this case the `mass` field (see below) must be specified.
+If the `density` is specified (different from -1) then the total mass of the [Solid](solid.md) is calculated by multiplying the specified density with the total volume of the geometrical primitives composing the `boundingObject`.
+Note that Webots ignores if the geometrical primitives intersect or not, the volume of each primitive is simply added to the total volume and finally multiplied by the density.
 
-- The `mass` field can be used to specify the total mass of the containing
-[Solid](solid.md). The value of the `mass` field should be a positive number or
--1. A -1 value indicates that the total mass is not known, in this case the
-`density` field (see above) must be specified. If the mass is known, e.g.,
-indicated in the specifications of the robot, then it is more accurate to
-specify the mass rather than the density.
+- The `mass` field can be used to specify the total mass of the containing [Solid](solid.md).
+The value of the `mass` field should be a positive number or -1.
+A -1 value indicates that the total mass is not known, in this case the `density` field (see above) must be specified.
+If the mass is known, e.g., indicated in the specifications of the robot, then it is more accurate to specify the mass rather than the density.
 
-- The `centerOfMass` field defines the position of the center of mass of the
-solid.
-If there is no vector in the `centerOfMass` field, then the center of mass of
-the solid is automatically computed based on the [Solid](solid.md)
-`boundingObject`.
-If there is one vector in the `centerOfMass` field, it determines the
-[Solid](solid.md) center of mass, and so the automatic computation is overriden.
-This vector is expressed in meters in the relative coordinate system of the
-[Solid](solid.md) node. If this vector is different from [0 0 0], then
-the center of mass is depicted as a dark red/green/blue cross in Webots
-3D-window.
+- The `centerOfMass` field defines the position of the center of mass of the solid.
+If there is no vector in the `centerOfMass` field, then the center of mass of the solid is automatically computed based on the [Solid](solid.md) `boundingObject`.
+If there is one vector in the `centerOfMass` field, it determines the [Solid](solid.md) center of mass, and so the automatic computation is overriden.
+This vector is expressed in meters in the relative coordinate system of the [Solid](solid.md) node.
+If this vector is different from [0 0 0], then the center of mass is depicted as a dark red/green/blue cross in Webots 3D-window.
 
-- The `inertiaMatrix` field can be used to manually specify the inertia matrix of
-the [Solid](solid.md). This field can either be empty (the default) or contain
-exactly 2 vectors. If this field is empty, Webots will compute the inertia
-matrix automatically according to the position and orientation of the
-geometrical primitives in `boundingObject`.
+- The `inertiaMatrix` field can be used to manually specify the inertia matrix of the [Solid](solid.md).
+This field can either be empty (the default) or contain exactly 2 vectors.
+If this field is empty, Webots will compute the inertia matrix automatically according to the position and orientation of the geometrical primitives in `boundingObject`.
 
     If this field contains 2 vectors, these values specify the inertia matrix of the
     [Solid](solid.md). If the inertia matrix is specified then the `mass` field must
@@ -75,10 +61,9 @@ geometrical primitives in `boundingObject`.
     the [Solid](solid.md). Internally, these 6 values are passed unchanged to the
     ODE's `dMassSetParameters` function.
 
-- The `damping` field allows to specify a [Damping](damping.md) node that defines
-the velocity damping parameters to be applied to the [Solid](solid.md).
+- The `damping` field allows to specify a [Damping](damping.md) node that defines the velocity damping parameters to be applied to the [Solid](solid.md).
 
-### How to use Physics nodes?
+### How to Use Physics Nodes?
 
 If it contains a [Physics](#physics) node, a [Solid](solid.md) object will be simulated in *physics* mode.
 The *physics* simulation mode takes into account the simulation of the forces that act on the bodies and the properties of these bodies, e.g., mass and moment of inertia.
@@ -90,7 +75,7 @@ Whether to use or not a [Physics](#physics) node in a particular case depends on
 
 Note that if a [Solid](#solid) node has at least one [Solid](#solid) ancestor node and contains a [Physics](#physics) node but none of its [Solid](#solid) ancestor nodes contain a [Physics](#physics) node, then this node will be attached to the static environment with an ODE fixed joint and thus it won't move from its initial position.
 
-#### In passive objects
+#### In Passive Objects
 
 If a passive object should never move during a simulation then you should leave its `physics` field empty.
 In this case no contact force will be simulated on this object and hence it will never move.
@@ -101,7 +86,7 @@ On the contrary, if a passive object needs to be pushed, kicked, dropped, etc. t
 So for example, if you want to design a soccer game where the ball needs to be kicked and roll, then you will need to add a [Physics](#physics) node to the ball.
 Similarly, in a box pushing or stacking simulation, you will need to specify the [Physics](#physics) nodes for the boxes so that the friction and gravity forces are applied to these objects.
 
-#### In robots
+#### In Robots
 
 Articulated robot, humanoids, vehicles and so on, are built as hierarchies of [Solid](solid.md) nodes (or subclasses of [Solid](solid.md)).
 The contact and friction forces generated by legs or wheels are usually a central aspect of the simulation of robot locomotion.
@@ -120,7 +105,7 @@ That's because Webots uses a special *kinematics* algorithm for this kind of rob
 However, if the [Physics](#physics) nodes are present then Webots uses the regular *physics* simulation algorithms.
 For a [Robot](#robot) node to be detected as a differential wheels, the following constraints must be satisfied: the robot must have 2 [HingeJoint](#hingejoint) nodes whose axes are aligned and the [Solid](#solid) nodes in the `endPoint` field of the joints must each have a [Cylinder](#cylinder) node as bounding object with the same radius.
 
-#### Implicit solid merging and joints
+#### Implicit Solid Merging and Joints
 
 By [Solid](solid.md) *child* of a given [Solid](solid.md) node, we mean either a node directly placed into the children list or a [Solid](solid.md) node located into the `endPoint` field of a [Joint](joint.md) placed in the children list.
 We extend this definition to nested [Group](group.md)s starting from the [Solid](solid.md) children list and containing [Joint](joint.md)s or [Solid](solid.md)s.

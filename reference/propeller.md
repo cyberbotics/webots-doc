@@ -2,13 +2,13 @@
 
 ```
 Propeller {
-  SFVec3f shaftAxis       1 0 0 # (m)
-  SFVec3f centerOfThrust  0 0 0 # (m)
-  SFVec2f thrustConstants 1 0   # Ns^2/rad : (-inf, inf), Ns^2/(m*rad) : (-inf, inf)
-  SFVec2f torqueConstants 1 0   # Nms^2/rad : (-inf, inf), Ns^2/rad : (-inf, inf)
-  SFNode device           NULL  # RotationalMotor
-  SFNode fastHelix        NULL  # Solid node containing a graphical representation for rotation speed > 24 π rad/s (720 rpm)
-  SFNode slowHelix        NULL  # Solid node containing a graphical representation for rotation speed <= 24 π rad/s
+  SFVec3f shaftAxis       1 0 0   # unit axis
+  SFVec3f centerOfThrust  0 0 0   # any vector
+  SFVec2f thrustConstants 1 0     # any vector
+  SFVec2f torqueConstants 1 0     # any vector
+  SFNode device           NULL    # {RotationalMotor, PROTO}
+  SFNode fastHelix        NULL    # {Solid (or derived), PROTO}
+  SFNode slowHelix        NULL    # {Solid (or derived), PROTO}
 }
 ```
 
@@ -46,22 +46,13 @@ The example "propeller.wbt" located in the "projects/samples/devices/worlds" dir
 
 ### Field Summary
 
-- `shaftAxis`: defines the axis along which the resultant thrust and torque will
-be exerted, see [this figure](#propeller-axis).
+- `shaftAxis`: defines the axis along which the resultant thrust and torque will be exerted, see [this figure](#propeller-axis).
 
-- `centerOfThrust`: defines the point where the generated thrust applies, see
-[this figure](#propeller-axis).
+- `centerOfThrust`: defines the point where the generated thrust applies, see [this figure](#propeller-axis).
 
-- `thrustConstants` and `torqueConstants`: coefficients used to define the
-resultant thrust and torque as functions of the motor angular velocity and the
-linear speed of adavance, see above formulae.
+- `thrustConstants` and `torqueConstants`: coefficients used to define the resultant thrust and torque as functions of the motor angular velocity and the linear speed of adavance, see above formulae.
 
-- `device`: this field has to be set with a [RotationalMotor](rotationalmotor.md)
-in order to control the propeller.
+- `device`: this field has to be set with a [RotationalMotor](rotationalmotor.md) in order to control the propeller.
 
-- `fastHelix` and `slowHelix`: if not NULL, these fields must be set with
-[Solid](solid.md) nodes. The corresponding [Solid](solid.md) nodes define the
-graphical representation of the propeller according to its motor's angular
-velocity omega: if |omega| > 24 π rad /s, only the [Solid](solid.md) defined in
-`fastHelix` is visible, otherwise only the [Solid](solid.md) defined in
-`slowHelix` is visible.
+- `fastHelix` and `slowHelix`: if not NULL, these fields must be set with [Solid](solid.md) nodes.
+The corresponding [Solid](solid.md) nodes define the graphical representation of the propeller according to its motor's angular velocity omega: if |omega| > 24 π rad /s, only the [Solid](solid.md) defined in `fastHelix` is visible, otherwise only the [Solid](solid.md) defined in `slowHelix` is visible.

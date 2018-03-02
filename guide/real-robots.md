@@ -3,19 +3,6 @@
 This section discusses worlds containing models of real robots.
 The world files for these examples are located in the "robots/(robot\_name)/worlds" directory, and the corresponding controllers are located in the "robots/(robot\_name)/controllers" directory.
 
-### aibo\_ers7.wbt
-
-**Keywords**: Aibo, ERS-7, legged robot, soccer field, Charger, toys, beacon, bone
-
-%figure "aibo_ers7"
-
-![aibo_ers7.png](images/aibo_ers7.png)
-
-%end
-
-In this example, you can see a silver Aibo ERS-7 robot walking on a textured soccer field.
-On this field you can also see its toys : a ball, a charger and a bone.
-
 ### alice.wbt
 
 **Keywords**: Alice, Braitenberg, DistanceSensor
@@ -42,54 +29,6 @@ Like many others, this example uses the `braitenberg` controller.
 
 In this example, BoeBot moves inside an arena while avoiding the walls.
 When the robot detects an obstacle with one of its `DistanceSensor`s, it turns the corresponding `LED` on.
-
-### e-puck.wbt
-
-**Keywords**: differential wheels, texture, Braitenberg, Accelerometer, Odometry, E-puck
-
-%figure "e-puck"
-
-![e-puck.png](images/e-puck.png)
-
-%end
-
-In this example, you can see the e-puck robot avoiding obstacles inside an arena by using the Braitenberg technique.
-The odometry of the e-puck is computed at each simulation steps.
-The accelerometer values and an estimation the coverage distance and the orientation of the e-puck are displayed.
-The source code for this controller is in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
-
-### e-puck\_line.wbt
-
-**Keywords**: differential wheels, line following, texture, behavior-based
-    robotics, E-puck
-
-%figure "e-puck_line"
-
-![e-puck_line.png](images/e-puck_line.png)
-
-%end
-
-In this example, you can see the E-puck robot following a black line drawn on the ground.
-In the middle of this line there is an obstacle which the robot is unable to avoid.
-This example has been developed as a practical assignment on behavior-based robotics.
-When completed, the controller should allow the E-puck robot to avoid this obstacle and recover its path afterwards.
-A solution for this assignment is shown in the world e-puck\_line\_demo.wbt (see [this section](#e-puck_line_demo-wbt)).
-The source code for this controller is in the "e-puck\_line" directory.
-
-### e-puck\_line\_demo.wbt
-
-**Keywords**: differential wheels, line following, texture, behavior-based
-    robotics, E-puck
-
-%figure "e-puck_line_demo"
-
-![e-puck_line_demo.png](images/e-puck_line_demo.png)
-
-%end
-
-This example is the solution for the assignment given in the `e-puck_line_demo.wbt` example (see [this section](#e-puck_line-wbt)).
-In this case, you can see that the robot avoids the obstacle, then recovers its path along the line.
-As the controller used in this world is the solution to the assignment, the source code is not distributed.
 
 ### hemisson\_cross\_compilation.wbt
 
@@ -135,69 +74,6 @@ The source code for this controller is in the "hoap2" directory.
 In this example, a Hoap2 robot from Fujitsu walks straight forward on a tatami.
 This robot is equipped with `TouchSensors` on the soles of its feet; it measures and logs the pressure exerted by its body on the ground.
 The source code for this controller is in the "hoap2" directory.
-
-### ipr\_collaboration.wbt
-
-**Keywords**: Robot node, robotic arm, collaboration, TCP/IP, client program, IPR,
-    IndexedFaceSet, RotationalMotor, active joint
-
-%figure "ipr_collaboration"
-
-![ipr_collaboration.png](images/ipr_collaboration.png)
-
-%end
-
-In this example, two IPR robots from Neuronics work together to put three red cubes into a basket which is on the opposite side of the world.
-All the IPR robots use the same controller, whose source code is in the "ipr\_serial" directory.
-This particular example uses, in addition to this controller, a client program which coordinates the movements of the robots.
-The source code for this client is in the "ipr\_serial/client/ipr\_collaboration.c" file.
-
-### ipr\_cube.wbt
-
-**Keywords**: Robot node, robotic arm, TCP/IP, client program, IPR,
-    IndexedFaceSet, RotationalMotor, active joint
-
-%figure "ipr_cube"
-
-![ipr_cube.png](images/ipr_cube.png)
-
-%end
-
-In this example, an IPR robots from Neuronics moves a small red cube onto a bigger one.
-All the IPR robots use the same controller, whose source code is in the "ipr\_serial" directory.
-This example also uses a client program which drives the movements of the robot.
-The source code of this client is in the "ipr\_serial/client/ipr\_cube.c" file.
-
-### ipr\_factory.wbt
-
-**Keywords**: Robot node, Supervisor, conveyor belt, robotic arm, TCP/IP,
-    client program, IPR, IndexedFaceSet, RotationalMotor, active joint
-
-%figure "ipr\_factory"
-
-![ipr_factory.png](images/ipr_factory.png)
-
-%end
-
-In this example, two IPR robots from Neuronics take industrial parts from a conveyor belt and place them into slots.
-One of the robots detects the objects using an infrared sensor on the conveyor belt, while the other one waits.
-All the IPR robots use the same controller, whose source code is in the "ipr\_serial" directory.
-This example also uses a client program which coordinates the movements of the robots.
-The source code for this client is in the "ipr\_serial/client/ipr\_factory.c" file.
-
-### ipr\_models.wbt
-
-**Keywords**: Robot node, robotic arm, TCP/IP, IPR, IndexedFaceSet, RotationalMotor, active joint
-
-%figure "ipr_models"
-
-![ipr_models.png](images/ipr_models.png)
-
-%end
-
-In this example, you can see all the different types of IPR model provided by Webots : HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
-This world is intended to be the example from which you can copy the models of IPR robots into your own worlds.
-All the IPR robots use the same controller, whose source code is in the "ipr\_serial" directory.
 
 ### khepera.wbt
 
@@ -433,9 +309,9 @@ To find out which keys will allow you to perform these operations, please read t
 
 Because of its particular structure, this model is also an example of custom ODE plugins for:
 
-- how to create and manage ODE joints
-- how to add custom force
-- how to create spongy tires
+- How to create and manage ODE joints.
+- How to add custom force.
+- How to create spongy tires.
 
 The source code for this controller is in the "WEBOTS\_HOME/projects/robots/shrimp/controllers/shrimp" directory, and the ODE plugin is in the "WEBOTS\_HOME/projects/robots/shrimp/plugins/physics/shrimp" directory.
 
@@ -463,10 +339,10 @@ The source code for the controller of the robot, as well as the model of the rob
 Using the keyboard, the user can control the quadruped robot by setting the walking direction (forward or backwards) and also the heading direction (right or left).
 Keyboard actions include:
 
-- Right Arrow: Turn right
-- Left Arrow: Turn left
-- B: Walk backwards
-- F: Walk forward
+- Right Arrow: Turn right.
+- Left Arrow: Turn left.
+- B: Walk backwards.
+- F: Walk forward.
 
 The walking gait used in the controller relies on an inverse kinematics model.
 Further details are available from [BIRG website](http://birg.epfl.ch/page66584.html).
@@ -477,7 +353,7 @@ During the walk, the extremity of each leg is describing an ellipsoid, the diame
 
 Other keyboard actions are also provided to fine-tune the frequency and the stride length factor:
 
-- Q: Increase frequency
-- W: Decrease frequency
-- S: Increase stride length factor
-- A: Decrease stride length factor
+- Q: Increase frequency.
+- W: Decrease frequency.
+- S: Increase stride length factor.
+- A: Decrease stride length factor.

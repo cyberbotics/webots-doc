@@ -36,7 +36,7 @@ while wb_robot_step(TIME_STEP) ~= -1
 end
 ```
 
-### Using the MATLAB desktop
+### Using the MATLAB Desktop
 
 In order to avoid cluttering the desktop with too many windows, Webots starts MATLAB with the *-nodesktop* option.
 The *-nodesktop* option starts MATLAB without user interface and therefore it keeps the memory usage low which is useful in particular for multi-robot experiments.
@@ -73,4 +73,4 @@ So each time MATLAB will run into a `keyboard` statement, it will return control
 
 At this point, it is also possible to restart the controller by calling its m-file from MATLAB prompt.
 Note that this will restart the controller only, not the whole simulation, so the current robot and motor positions will be preserved.
-If you want to restart the whole simulation you need to use the `Revert` button as usual.
+If you want to restart the whole simulation you need to use the `Reload` button as usual.

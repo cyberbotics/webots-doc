@@ -1,4 +1,4 @@
-## Traffic signs and lights
+## Traffic Signs and Lights
 
 In addition to the `PedestrianCrossing` and `TrafficCone` PROTO nodes, a set of traffic signs and lights is provided.
 
@@ -6,7 +6,7 @@ All of those traffic signs and lights can either be mounted on the `Pole` or `Tr
 The first one is a simple cylindrical pole on which one element can be mounted.
 On the second bigger one, a maximum of three elements can be mounted.
 
-### Traffic lights
+### Traffic Lights
 
 %figure "a traffic light"
 
@@ -18,8 +18,7 @@ Two kinds of traffic lights are available, they both have 3 `LEDs` and can there
 For both of them, the shape of the light can either be a full circle or an arrow (defined in the `lamp_geometry` field).
 
 - `TrafficLight`: Normal traffic light with 3 colors.
-- `TrafficLightHorizontal`: Normal traffic light with 3 colors but with horizontal
-sun-protector.
+- `TrafficLightHorizontal`: Normal traffic light with 3 colors but with horizontal sun-protector.
 
 In addition to the traffic lights, the `StreetLight` PROTO can be used to light some part of the road in nightly environments.
 
@@ -29,7 +28,7 @@ In addition to the traffic lights, the `StreetLight` PROTO can be used to light 
 
 %end
 
-### Traffic signs
+### Traffic Signs
 
 %figure "Various traffic signs"
 
@@ -50,12 +49,13 @@ They represent the various sizes and shapes usually used for traffic signs:
 - `SpeedLimitSign`: Rectangular sign usually used for speed limits.
 - `StopSign`: Octagonal sign usually used for stop.
 - `YieldSign`: Triangular sign usually used for yield.
-- `SignPole`: Arrow shaped sign usually used to indicate a direction. The text and its properties are implemented as fields.
+- `SignPole`: Arrow shaped sign usually used to indicate a direction.
+The text and its properties are implemented as fields.
 
 A complete set of textures is available with those traffic signs and can easily be applied using the `signBoards` field.
 The signs are fully customizable as their size, color and number of `signBoards` are implemented as independent fields.
 
-### Highway signs
+### Highway Signs
 
 %figure "Highway poles with one or two stands"
 

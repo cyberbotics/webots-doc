@@ -1,6 +1,6 @@
 ## Debugging C/C++ Controllers
 
-### Controller processes
+### Controller Processes
 
 In the Webots environment, the Webots application and each robot C/C++ controller are executed in distinct operating system processes.
 For example, when the "soccer.wbt" world is executed, there is a total of eight processes in memory; one for Webots, six for the six player robots, and one for the supervisor.
@@ -32,7 +32,7 @@ Note that the crash of a controller is almost certainly caused by an error in th
 Fortunately, the GNU debugger (`gdb`) can usually help finding the reason of the crash.
 The following example assumes that there is a problem with the "soccer\_supervisor" controller and indicates how to proceed with the debugging.
 
-### Using the GNU debugger with a controller
+### Using the GNU Debugger with a Controller
 
 The first step is to recompile the controller code with the *-g* flag, in order to add debugging information to the executable file.
 This can be achieved by adding this line to the controller's Makefile:
@@ -50,7 +50,7 @@ $ make
 ```
 
 Note that, the *-g* flag should now appear in the compilation line.
-Once you have recompiled the controller, hit the `Pause` and `Revert` buttons.
+Once you have recompiled the controller, hit the `Pause` and `Reload` buttons.
 This pauses the simulation and reloads the freshly compiled versions of the controller.
 Now find the process ID (PID) of the "soccer\_supervisor" process, using `ps -e` (Linux) or `ps -x` (macOS), or using the *Task Manager* (Windows).
 The PID is in the left-most column of output of `ps` as shown above.
@@ -114,5 +114,5 @@ $1 = 0x0
 
 The `frame` command instructs the debugger to select the specified stack frame, and the `print` command prints the current value of an expression.
 In this simple example we clearly see that the problem is caused by a NULL (0x0) *time\_string* argument passed to the `sprintf` function.
-The next steps are to: fix the problem, recompile the controller and revert the simulation to give it another try.
+The next steps are to: fix the problem, recompile the controller and reload the world to give it another try.
 Once it works correctly you can remove the *-g* flag from the Makefile.

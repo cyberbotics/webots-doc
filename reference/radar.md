@@ -4,23 +4,23 @@ Derived from [Device](device.md).
 
 ```
 Radar {
-  SFFloat minRange               1
-  SFFloat maxRange               50.0
-  SFFloat horizontalFieldOfView  0.78
-  SFFloat verticalFieldOfView    0.1
-  SFFloat minAbsoluteRadialSpeed 0.0
-  SFFloat minRadialSpeed         1
-  SFFloat maxRadialSpeed         -1
-  SFFloat cellDistance           0.0
-  SFFloat cellSpeed              0.0
-  SFFloat rangeNoise             0.0
-  SFFloat speedNoise             0.0
-  SFFloat angularNoise           0.0
-  SFFloat antennaGain            20.0
-  SFFloat frequency              24.0
-  SFFloat transmittedPower       1.0
-  SFFloat minDetectableSignal    -100
-  SFBool  occlusion              FALSE
+  SFFloat minRange               1       # [0, maxRange)
+  SFFloat maxRange               50.0    # (minRange, inf)
+  SFFloat horizontalFieldOfView  0.78    # [0, 2*pi]
+  SFFloat verticalFieldOfView    0.1     # [0, pi]
+  SFFloat minAbsoluteRadialSpeed 0.0     # [0, inf)
+  SFFloat minRadialSpeed         1       # [0, maxRadialSpeed]
+  SFFloat maxRadialSpeed         -1      # {-1, [minRadialSpeed, inf)}
+  SFFloat cellDistance           0.0     # [0, inf)
+  SFFloat cellSpeed              0.0     # [0, inf)
+  SFFloat rangeNoise             0.0     # [0, inf)
+  SFFloat speedNoise             0.0     # [0, inf)
+  SFFloat angularNoise           0.0     # [0, inf)
+  SFFloat antennaGain            20.0    # (-inf, inf)
+  SFFloat frequency              24.0    # [0, inf)
+  SFFloat transmittedPower       1.0     # (-inf, inf)
+  SFFloat minDetectableSignal    -100    # (-inf, inf)
+  SFBool  occlusion              FALSE   # {TRUE, FALSE}
 }
 ```
 
@@ -55,33 +55,25 @@ The `azimuth` is the horizontal angle of the target relative to the radar.
 
 ### Field Summary
 
-- `minRange`: Defines the minimum range of the radar. Any object closer to the
-radar than this value will not be seen.
+- `minRange`: Defines the minimum range of the radar.
+Any object closer to the radar than this value will not be seen.
 
-- `maxRange`: Defines the maximum range of the radar. Any object farther to the
-radar than this value will not be seen (even if the returned power is
-sufficient).
+- `maxRange`: Defines the maximum range of the radar.
+Any object farther to the radar than this value will not be seen (even if the returned power is sufficient).
 
-- `horizontalFieldOfView`: Defines the horizontal field of view of the radar
-detection frustum.
+- `horizontalFieldOfView`: Defines the horizontal field of view of the radar detection frustum.
 
-- `verticalFieldOfView`: Defines the vertical field of view of the radar detection
-frustum.
+- `verticalFieldOfView`: Defines the vertical field of view of the radar detection frustum.
 
-- `minAbsoluteRadialSpeed`: Defines the minimum absolute radial speed (relative to
-the radar) of the object to be considered as a target.
+- `minAbsoluteRadialSpeed`: Defines the minimum absolute radial speed (relative to the radar) of the object to be considered as a target.
 
-- `minRadialSpeed` and `maxRadialSpeed`: Defines the minimum and maximum radial
-speed (relative to the radar) of the object to be visible. If both
-`minRadialSpeed` and `maxRadialSpeed` are zero (the default), the radial speed
-limits are deactivated.
+- `minRadialSpeed` and `maxRadialSpeed`: Defines the minimum and maximum radial speed (relative to the radar) of the object to be visible.
+If both `minRadialSpeed` and `maxRadialSpeed` are zero (the default), the radial speed limits are deactivated.
 
-- `cellDistance`: Defines the minimum radial distance between two targets for the
-radar to be able to distinguish between them.
+- `cellDistance`: Defines the minimum radial distance between two targets for the radar to be able to distinguish between them.
 
-- `cellSpeed`: Defines the minimum radial speed difference between two targets for
-the radar to be able to distinguish between them. A value of 0 means the speed
-is not used to distinguish objects but only the distance.
+- `cellSpeed`: Defines the minimum radial speed difference between two targets for the radar to be able to distinguish between them.
+A value of 0 means the speed is not used to distinguish objects but only the distance.
 
 - `rangeNoise`: Defines the gaussian noise of the distance measurements.
 
@@ -95,14 +87,13 @@ is not used to distinguish objects but only the distance.
 
 - `transmittedPower`: Defines the power transmitted by the radar in dBm.
 
-- `minDetectableSignal`: Defines the minimum detectable power in dBm. A returned
-power lower than this threshold will not produce any target.
+- `minDetectableSignal`: Defines the minimum detectable power in dBm.
+A returned power lower than this threshold will not produce any target.
 
-- `occlusion`: Defines if occlusions between the object and the radar should be
-checked before generating a target. This feature can become computationally
-expensive as the number of targets increase.
+- `occlusion`: Defines if occlusions between the object and the radar should be checked before generating a target.
+This feature can become computationally expensive as the number of targets increase.
 
-### Target detection
+### Target Detection
 
 For each [Solid](solid.md) node having a `radarCrossSection` greater than 0, the following pseudo code is used to compute if a new target should be generated:
 

@@ -1,4 +1,4 @@
-## City traffic
+## City Traffic
 
 %figure "The City traffic world"
 

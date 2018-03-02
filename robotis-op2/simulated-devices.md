@@ -1,4 +1,4 @@
-## Simulated devices
+## Simulated Devices
 
 The simulation model is equiped with the following sensors and actuators:
 
@@ -10,7 +10,7 @@ The simulation model is equiped with the following sensors and actuators:
 - A camera
 - A speaker
 
-### Motors and position sensors
+### Motors and Position Sensors
 
 Motor positions and identifiers can be found in the following [figure](#position-of-the-servos).
 
@@ -89,7 +89,7 @@ The horizontal field of view is 1.0123 [rad].
 The Webots device simulating a speaker is named `Speaker`.
 It can be used to play sound files or perform text-to-speech.
 
-### More information
+### More Information
 
 For more information on the use of all of these sensors/actuators refer to the [Reference Manual](http://www.cyberbotics.com/reference) of Webots.
 

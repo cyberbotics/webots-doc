@@ -1,4 +1,4 @@
-## SUMO interface
+## SUMO Interface
 
 An interface with a microscopic traffic simulator called `SUMO` (Simulation of Urban MObility) has been developed using a `Supervisor` node.
 The advantage of interfacing SUMO with Webots is that it allows to easily generate traffic using a large number of vehicles in real-time.
@@ -19,26 +19,33 @@ The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle numbe
 > **Note** [macOS]: On macOS, SUMO relies on X11.
 You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
-### Use vehicles already present in the world
+### Use Vehicles Already Present in the World
 
 If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time).
 Furthermore, when a vehicle enters the SUMO network, if a vehicle whose DEF name is identical to the ID of the vehicle in SUMO is present in the simulation, this vehicle is then associated to the one in SUMO.
 
-### Automatic injection of Webots vehicles in SUMO
+### Automatic Injection of Webots Vehicles in SUMO
 
 If some vehicles whose DEF name is `WEBOTS_VEHICLEX` (with `X` being the vehicle number starting from 0) are present in the simulation, the interface will automatically add them and update their position and orientation in SUMO in order to close the loop.
 
-### Vehicle type
+### Vehicle Type
 
 If the SUMO abstract vehicle class (vClass vehicle attribute, refer to SUMO documentation for more information about this attribute) of the vehicle is `passenger` (default), one of the available car PROTO models will be randomly selected and created in Webots.
 If the abstract vehicle class of the vehicle is `bus` Webots will use the `Bus` PROTO.
 Similarly, the class `motorbike` will randomly select between the `Motorbike` and the `Scooter` PROTO.
 Finally, the classes `trailer` and `truck` will select the `Truck` PROTO, respectively with and without a trailer.
 
-### Traffic lights synchronization
+### Traffic Lights Synchronization
 
 If the simulation contains traffic lights, the name of the corresponding `LEDs` node of these traffic lights in Webots should respect the following syntax: `trafficLightID_trafficLightIndex_r/y/g`.
 If the `LEDs` names are respected, the state of the traffic light will be automatically updated in Webots from SUMO by the interface.
+
+A simple way to get the traffic light Ids and indexes is to open the network file in [Netedit](http://sumo.dlr.de/wiki/NETEDIT#Traffic_Lights_2).
+In the traffic lights mode you can simply select a traffic light and right click on one of the connections to get all the required information.
+
+%figure "Netedit in traffic lights mode. Here the 'trafficLightID' is equal to '-1320' and the trafficLightIndex is equal to '2'"
+![sumo_traffic_light.png](images/sumo_traffic_light.png)
+%end
 
 ### The SumoInterface PROTO
 
@@ -69,22 +76,25 @@ PROTO SumoInterface [
 ]
 ```
 
-#### SumoInterface fields summary
+#### SumoInterface Fields Summary
 
 - `gui`: Defines if the command-line or GUI version of SUMO should be used.
 - `useNetconvert`: Defines if NETCONVERT should be called before launching SUMO, this should be disabled if a `*.net` is already provided.
 - `enableTrafficLights`: Defines if the traffic lights synchronization should be used or not.
 - `enableWheelsRotation`: Defines if the wheels of the vehicles should rotate or not (wheels rotation has an impact on the simulation speed but makes the simulation look more realistic).
 - `maxVehicles`: Defines the maximum number of vehicles added in Webots from SUMO.
-- `radius`: Defines the visibility radius of the vehicles in meters (if the distance between the viewpoint and a vehicle is greater than this radius, the vehicle will not be added in Webots). A negative value means that all the vehicles are added.
+- `radius`: Defines the visibility radius of the vehicles in meters (if the distance between the viewpoint and a vehicle is greater than this radius, the vehicle will not be added in Webots).
+A negative value means that all the vehicles are added.
 - `maximumLateralSpeed`: Defines the maximal lateral speed of any vehicle in meter per second.
 - `maximumAngularSpeed`: Defines the maximal angular speed of any vehicle in radian per second.
 - `laneChangeDelay`: Defines the time spent to change lane (during this period, the position of the vehicle in Webots and SUMO may not be synchronized anymore).
 - `enableHeight`: Defines whether height information should be extracted from the edge name (experimental).
 - `step`: Defines the time step of SUMO in milliseconds (should be bigger or equal to the world time step).
 - `port`: Defines which port SUMO and Webots should use to communicate.
-- `seed`: Defines the seed of the SUMO random number generator. Use `0` for a random time-based seed (equivalent to the `--random` option of SUMO, for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Simulation/Randomness)).
-- `networkFiles`: Defines the directory where the SUMO network files are stored. If this field is empty, the files should be stored in a directory called `worldName_net` located in the same directory as the world file.
+- `seed`: Defines the seed of the SUMO random number generator.
+Use `0` for a random time-based seed (equivalent to the `--random` option of SUMO, for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Simulation/Randomness)).
+- `networkFiles`: Defines the directory where the SUMO network files are stored.
+If this field is empty, the files should be stored in a directory called `worldName_net` located in the same directory as the world file.
 - `sumoArguments`: Defines additional arguments passed to SUMO when started.
 - `display`: Can optionally contain a `SumoDisplay` node.
 - `verbose`: Defines if SUMO output should be printed in the Webots console.
@@ -106,15 +116,17 @@ PROTO SumoDisplay [
 ]
 ```
 
-#### SumoDisplay fields summary
+#### SumoDisplay Fields Summary
 
 - `width`: Defines the width of the `Display`.
 - `height`: Defines the height of the `Display`.
 - `zoom`: Defines the zooming factor that will make SUMO automatically zoom in/out at startup.
 - `refreshRate`: Defines the refresh rate of the display in milliseconds.
-- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`. On the contrary, if the SUMO window is smaller than the resolution, the image will not entirely fill it. If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
+- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`.
+On the contrary, if the SUMO window is smaller than the resolution, the image will not entirely fill it.
+If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
-## Plugin mechanism
+## Plugin Mechanism
 
 In addition to the PROTO parameters, the plugin mechanism can be used to extend the interface.
 The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
@@ -133,7 +145,7 @@ The second one is called at each SUMO step and the argument is the time step.
 
 Such a plugin can be used for example to change traffic light state in SUMO.
 
-## Using the SUMO executables distributed with Webots
+## Using the SUMO Executables Distributed with Webots
 
 SUMO is distributed with Webots, it is located in `WEBOTS_HOME/projects/default/resources/sumo`, you can find all the executables in the `bin` folder.
 To be able to use these executables you need first to add `WEBOTS_HOME/projects/default/resources/sumo/bin` to your PATH.

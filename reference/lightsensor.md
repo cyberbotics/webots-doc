@@ -4,10 +4,10 @@ Derived from [Device](device.md).
 
 ```
 LightSensor {
-  MFVec3f lookupTable [ 0 0 0, 1 1000 0 ]
-  SFColor colorFilter 1 1 1               # [0,1]
-  SFBool  occlusion   FALSE
-  SFFloat resolution  -1
+  MFVec3f lookupTable [ 0 0 0, 1 1000 0 ]   # lookup table
+  SFColor colorFilter 1 1 1                 # any color
+  SFBool  occlusion   FALSE                 # {TRUE, FALSE}
+  SFFloat resolution  -1                    # {-1, [0, inf)}
 }
 ```
 
@@ -29,39 +29,26 @@ Note that the Webots lighting model does not take reflected light nor object col
 
 ### Field Summary
 
-- `lookupTable`: this table allows Webots to map simulated irradiance values to
-user-defined sensor output values and to specify a noise level. The first column
-contains the input irradiance values in W/m^2. The second column represents the
-corresponding sensor output values in user-defined units. The third column
-specifies the level of noise in percent of the corresponding output value. See
-the section on the [DistanceSensor](distancesensor.md) node for more explanation
-on how a `lookupTable` works.
+- `lookupTable`: this table allows Webots to map simulated irradiance values to user-defined sensor output values and to specify a noise level.
+The first column contains the input irradiance values in W/m^2.
+The second column represents the corresponding sensor output values in user-defined units.
+The third column specifies the level of noise in percent of the corresponding output value.
+See the section on the [DistanceSensor](distancesensor.md) node for more explanation on how a `lookupTable` works.
 
-- `colorFilter`: specifies an RGB filter that can be used to approximate a
-physical color filter or spectral response. The total RGB irradiance is
-multiplied by this filter (see formula below) in order to obtain a scalar
-irradiance value *E* that is then used as the input to the lookup table. The
-`colorFilter` field can, for example, be used to selectively detect light
-sources according to color.
+- `colorFilter`: specifies an RGB filter that can be used to approximate a physical color filter or spectral response.
+The total RGB irradiance is multiplied by this filter (see formula below) in order to obtain a scalar irradiance value *E* that is then used as the input to the lookup table.
+The `colorFilter` field can, for example, be used to selectively detect light sources according to color.
 
-- `occlusion`: specifies whether or not obstacles between the sensor and light
-sources should be taken into account in the calculation of irradiance. If the
-`occlusion` field is FALSE (the default), all potential obstacles (Walls, other
-Robots, etc.) are ignored and Webots behaves as if they were transparent. If the
-`occlusion` field is TRUE, Webots will detect which light sources are occluded
-(from the sensor's viewpoint) and it will ignore their direct contributions.
-Note that the `occlusion` flag affects only the *direct* light measurement, not
-the *ambient* light which is always added in. By default, the `occlusion` field
-is disabled because the occlusion detection is computationally expensive and
-should be avoided whenever possible. For example, in a setup where it is obvious
-that there will never be an obstacle between a particular sensor and the various
-light sources, the `occlusion` flag can be set to FALSE.
+- `occlusion`: specifies whether or not obstacles between the sensor and light sources should be taken into account in the calculation of irradiance.
+If the `occlusion` field is FALSE (the default), all potential obstacles (Walls, other Robots, etc.) are ignored and Webots behaves as if they were transparent.
+If the `occlusion` field is TRUE, Webots will detect which light sources are occluded (from the sensor's viewpoint) and it will ignore their direct contributions.
+Note that the `occlusion` flag affects only the *direct* light measurement, not the *ambient* light which is always added in.
+By default, the `occlusion` field is disabled because the occlusion detection is computationally expensive and should be avoided whenever possible.
+For example, in a setup where it is obvious that there will never be an obstacle between a particular sensor and the various light sources, the `occlusion` flag can be set to FALSE.
 
-- `resolution`: This field allows to define the resolution of the sensor, the
-resolution is the smallest change that it is able to measure. Setting this field
-to -1 (default) means that the sensor has an 'infinite' resolution (it can
-measure any infinitesimal change). This field accepts any value in the interval
-(0.0, inf).
+- `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
+Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).
+This field accepts any value in the interval (0.0, inf).
 
 Before being interpolated by the `lookupTable`, the total irradiance *E* [W/m^2] seen by a sensor is computed according to the equation shown in [this figure](#light-sensor-irradiance-formula):
 

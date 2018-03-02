@@ -1,4 +1,4 @@
-## Tutorial 1: Your first Simulation in Webots (20 minutes)
+## Tutorial 1: Your First Simulation in Webots (20 Minutes)
 
 In this first tutorial, you will create your first simulation.
 This simulation will contain a simple environment (a light and an arena with floor and walls), a predefined robot (e-puck) and a controller program that will make the robot move (see [this figure](#what-you-should-see-at-the-end-of-the-tutorial)).
@@ -10,7 +10,7 @@ The objective of this tutorial is to familiarize yourself with the user interfac
 
 %end
 
-### Create a new World
+### Create a New World
 
 A World contains information like where the objects are, what they look like, how they interact with each other, what is the sky color, where is the gravity vector, etc.
 
@@ -36,7 +36,8 @@ The simulation is paused if the virtual time counter on the main toolbar is stab
 A new world is now open.
 For now, the 3D window displays nothing.
 The Scene Tree view (on the left hand side) currently lists the fundamental nodes:
-- `WorldInfo`: containing misc global parameters ;
+
+- `WorldInfo`: containing misc global parameters.
 - `Viewpoint`: defining the main camera parameters.
 
 As no light and no 3D object are defined, the entire scene is empty, and thus nothing is displayed.
@@ -69,9 +70,10 @@ The new node has been added and we can admire our rectangle arena's colors.
 It's a good time to improve the scene light.
 
 > **Hands on**: Modify the following fields of the `DirectionalLight` node:
-- `ambientIntensity` to 1 ;
-- `direction` to [-0.33 -1 -0.5] ;
-- and `castShadows` to TRUE.
+
+    - `ambientIntensity` to 1.
+    - `direction` to [-0.33 -1 -0.5].
+    - `castShadows` to TRUE.
 
 <!-- -->
 
@@ -84,7 +86,7 @@ Using the dialog box save the world into the "my\_webots\_projects/tutorials/wor
 
 <!-- -->
 
-> **Hands on**: Revert the simulation by selecting the `File / Revert World` menu item.
+> **Hands on**: Reload the simulation by selecting the `File / Reload World` menu item.
 
 <!-- -->
 
@@ -111,9 +113,9 @@ We will learn how to use some other e-puck features in the other tutorials.
 Now, we are going to add an e-puck model to the world.
 Make sure that the simulation is paused and that the virtual time elapsed is 0.
 
-> **Theory**: When a Webots world is modified with the intention of being saved, it is fundamental that the simulation is first paused and reverted to its initial state, i.e. the virtual time counter on the main toolbar should show 0:00:00:000.
+> **Theory**: When a Webots world is modified with the intention of being saved, it is fundamental that the simulation is first paused and reloaded to its initial state, i.e. the virtual time counter on the main toolbar should show 0:00:00:000.
 Otherwise at each save, the position of each 3D objects can accumulate errors.
-Therefore, any modification of the world should be performed in that order: **pause, revert, modify and save the simulation**.
+Therefore, any modification of the world should be performed in that order: **pause, reload, modify and save the simulation**.
 
 As we don't need to create the e-puck robot from scratch, we will just have to import a special E-puck node (in fact: a PROTO node as the `RectangleArena` we introduced before).
 A PROTO is an abstract assemblage of several nodes.
@@ -128,7 +130,7 @@ Then save the simulation.
 <!-- -->
 
 > **Note**: Now if you run the simulation, the robot moves: that's because the robot uses a default controller with that behavior.
-Please pause and revert the simulation before going on.
+Please pause and reload the world before going on.
 
 <!-- -->
 
@@ -161,9 +163,9 @@ The camera can be resized by dragging the marked corner or hidden by clicking th
 
 > **Hands on**: In this tutorial we will not use the Camera devices of the E-puck.
 So we can hide the window by clicking the "x" on the camera window.
-Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
+Don't forget to reload the world before hiding the camera and to save it after the modifications.
 
-### Create a new Controller
+### Create a New Controller
 
 We will now program a simple controller that will just make the robot move forwards.
 As there is no obstacle, the robot will move forwards for ever.
@@ -235,7 +237,7 @@ Once the controller is linked, save the world.
 
 > **Hands on**: Save the modified source code (`File / Save Text File`), and compile it (`Build / Build`).
 Fix any compilation errors if necessary.
-When Webots proposes to revert the simulation, choose `Yes`.
+When Webots proposes to reload the world, choose `Yes`.
 
 If everything is ok, your robot should move forwards.
 The robot will move using it's maximum speed for a while and then stop once the wheels have rotated of 10 radians.
@@ -244,7 +246,7 @@ The robot will move using it's maximum speed for a while and then stop once the 
 The "e-puck\_go\_forward" directory contains an "e-puck\_go\_forward" binary file generated after the compilation of the controller.
 Note that the controller directory name should match with the binary name.
 
-### Extend the controller to speed control
+### Extend the Controller to Speed Control
 
 The wheels of differential wheels robots are often controlled in velocity and not in position like we did in the previous example.
 In order to control the motors of the wheels in speed you need to set the target position to the infinity and the set the desired speed:
@@ -279,7 +281,7 @@ In order to control the motors of the wheels in speed you need to set the target
 > }
 > ```
 
-Try to change your previous controller by this one, and then recompile and revert the simulation.
+Try to change your previous controller by this one, and then recompile and reload the world.
 The robot will now move (the wheels will rotate at a speed of 1 radian per second) and never stop.
 
 ### Conclusion

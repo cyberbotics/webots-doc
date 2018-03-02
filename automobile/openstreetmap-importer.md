@@ -1,4 +1,4 @@
-## OpenStreetMap importer
+## OpenStreetMap Importer
 
 In order to ease the creation of new environments for automobile simulations, Webots worlds can be generated from OpenStreetMap maps using the importer script described here.
 
@@ -6,7 +6,7 @@ You can download an OpenStreetMap map of any part of the world from [www.openstr
 
 ## Dependencies
 
-Follow [these instructions](https://www.cyberbotics.com/doc/guide/using-python) to install Python.
+Follow [these instructions](../guide/using-python.md) to install Python.
 
 Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as described below.
 
@@ -47,7 +47,7 @@ Download the shapely wheel called [`Shapely‑<<version>>‑cp<<python_version>>
 %PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl
 ```
 
-## How to use the importer
+## How to Use the Importer
 
 You should use the `importer.py` Python script to generate the `myMap.wbt` webots simulation world from the `myMap.osm` file:
 
@@ -85,13 +85,13 @@ You can use several arguments with this script:
 | --disable-multipolygon-buildings | Does not generate buildings from multipolygon                                                                              | By default, buildings are generated from multipolygon                     |
 | --projection           | Defines the projection parameters, the projection parameters should be defined following the [PROJ.4 rules](http://proj4.org/parameters.html), it should look like: `"+proj=robin +lon_0=2.3945 +lat_0=48.8365 +x_0=0.0725 +y_0=-5206258.932 +ellps=WGS84 +units=m +no_defs"`. Note that if you are not using the default projection, the GPS model of Webots may not match with the generated world. | By default, an empty string is used to define an UTM projection |
 | --extract-projection   | Extracts the projection from the OSM file, displays it and exits.                                                                    | By default, this parameter is disabled.                                   |
-| --removal-radius       | Specifies the radius (in meters) around each road waypoint beyond which any object is removed.                                       | By default this feature is disabled (radius = 0.0).                       |
+| --removal-radius       | Specifies the radius (in meters) around each road waypoint beyond which any object is removed. It is possible to use the road.filter field of the [configuration file](a-typical-openstreetmap-importer-configuration-file.md) to specify which roads should be taken into account. | By default this feature is disabled (radius = 0.0).                       |
 %end
 
 In addition to these arguments, a configuration file can be used to define how to handle most of the OpenStreetMap entities.
 A typical configuration file can be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
 
-### Map edition and creation
+### Map Edition and Creation
 
 If you want to edit a map exported from OpenStreetMap before converting it into a Webots world, we recommend using JOSM.
 [JOSM](https://josm.openstreetmap.de) is an open source software written in Java.
@@ -108,7 +108,7 @@ Using JOSM you can easily edit a map in order to add some elements, correct some
 In addition to editing map from OpenStreetmap, JOSM is also very convenient to create new environment from scratch.
 You can see in the [previous picture](#left-the-osm-file-created-in-josm-right-the-resulting-world-open-in-webots-after-conversion) a map fully created in JOSM and then exported and opened in Webots.
 
-### Graphical user interface
+### Graphical User Interface
 
 To ease the use of this tool, a graphical interace has been created.
 This grapical interface can easily be started from the last tab of the [robot window](robot-window.md).

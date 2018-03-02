@@ -1,4 +1,4 @@
-## Road segments
+## Road Segments
 
 The first part of this section will present the various PROTO models of road segments and intersections, that can be used to build the road network.
 
@@ -13,7 +13,7 @@ It can be used for a large variety of purposes.
 
 %end
 
-Derived from [Solid](https://www.cyberbotics.com/doc/reference/solid).
+Derived from [Solid](../reference/solid.md).
 
 ```
 Road {
@@ -62,10 +62,11 @@ Road {
 }
 ```
 
-#### Road field Summary
+#### Road Field Summary
 
 - `name`: Could contain the street name.
-- `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
+- `id`: Could contain a unique ID.
+A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
 - `startJunction`: Could contain a reference to the [Crossroad](#crossroad) connected at the first Road waypoint.
 Setting correctly this field is required to use the [SUMO exporter](sumo-exporter.md).
 - `endJunction`: Could contain a reference to the [Crossroad](#crossroad) connected at the last Road waypoint.
@@ -74,52 +75,39 @@ Setting correctly this field is required to use the [SUMO exporter](sumo-exporte
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 - `numberOfForwardLanes`: Defines number of forward lanes.
 - `speedLimit`: Could contain the speed limit in meter per seconds.
-- `dashedLine`: Defines for each line separating two lanes whether it should be
-continuous or dashed.
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 - `roadBorderHeight`: Defines the height of the sidewalk.
-- `roadBorderWidth`: Defines the width of the sidewalk associated to each
-way-point (if there are less values than way-points, the last value is used for
-the last remaining way-points).
-- `road`: Defines whether the road should be present or not (useful in case you only
-need the sidewalk).
+- `roadBorderWidth`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
+- `road`: Defines whether the road should be present or not (useful in case you only need the sidewalk).
 - `rightBorder`: Defines whether the road should have a right sidewalk.
 - `leftBorder`: Defines whether the road should have a left sidewalk.
 - `rightBarrier`: Defines whether a crash barrier should be added along the right border of the road.
 - `leftBarrier`: Defines whether a crash barrier should be added along the left border of the road.
-- `bottom`: Defines whether the road bottom should be displayed (useful in case of
-bridge).
-- `rightSide`: This field is used for the texture mapping. It defines whether the side
-of the texture should be used for the right side of the road (useful to disable
-in case road assembly).
-- `leftSide`: This field is used for the texture mapping. It defines whether the side
-of the texture should be used for the left side of the road (useful to disable
-in case road assembly).
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
+- `rightSide`: This field is used for the texture mapping.
+It defines whether the side of the texture should be used for the right side of the road (useful to disable in case road assembly).
+- `leftSide`: This field is used for the texture mapping.
+It defines whether the side of the texture should be used for the left side of the road (useful to disable in case road assembly).
 - `wayPoints`: Defines the path of the road.
-- `roadTilt`: Defines the tilting angle corresponding to each way-point (if there
-are less values than way-points, 0 is used for the last remaining way-points).
+- `roadTilt`: Defines the tilting angle corresponding to each way-point (if there are less values than way-points, 0 is used for the last remaining way-points).
 - `startingAngle`: Defines the angle of the road at the first way-point.
 - `endingAngle`: Defines the angle of the road at the last way-point.
-- `startLine`: Defines the texture used for the road line at the first way-point
-for each lane. If the string is empty, no road line will be added for the corresponding
-lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png`
-may be used in this field.
-- `endLine`: Defines the texture used for the road line at the last way-point for
-each lane. If the string is empty, no road line will be added for the corresponding lane.
-- `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the
-value is lower than 0, the interpolation is disabled).
+- `startLine`: Defines the texture used for the road line at the first way-point for each lane.
+If the string is empty, no road line will be added for the corresponding lane.
+The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
+- `endLine`: Defines the texture used for the road line at the last way-point for each lane.
+If the string is empty, no road line will be added for the corresponding lane.
+- `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
 - `texture`: Defines the texture to be used for the road.
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `pavementTexture`: Defines the texture to be used for the sidewalk.
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
-- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same
-format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none").
+- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none").
 Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Key:turn.
 - `turnLanesBackward`: Idem for the OSM "turn:lanes:backward" key.
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
-- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a
-bounding object.
-- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding
-object.
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 - `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: defines whether the road should cast shadows.
@@ -153,12 +141,8 @@ StraightRoadSegment {
 Most of the fields are similar to the one of the [Road](#road) PROTO.
 Therefore, only the specific ones will be explained.
 
-- `startingRoadBorderWidth and endingRoadBorderWidth`: Instead of defining the
-width of the border for each way-points, you can only specify it for the
-beginning and end of the road.
-- `startingRoadTilt and endingRoadTilt`: Instead of defining the tilting angle of
-the road for each way-points, you can only specify it for the beginning and end
-of the road.
+- `startingRoadBorderWidth and endingRoadBorderWidth`: Instead of defining the width of the border for each way-points, you can only specify it for the beginning and end of the road.
+- `startingRoadTilt and endingRoadTilt`: Instead of defining the tilting angle of the road for each way-points, you can only specify it for the beginning and end of the road.
 - `length`: Defines the length of the road.
 
 ### CurvedRoadSegment
@@ -261,13 +245,14 @@ Most of the fields are similar to the one of the [Road](#road) PROTO.
 Therefore, only the specific ones will be explained.
 
 - `name`: Could contain the crossroad name.
-- `id`: Could contain a unique ID. A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
+- `id`: Could contain a unique ID.
+A unique ID is required to use the [SUMO exporter](sumo-exporter.md).
 - `shape`: Could contain a list of 3D coordinates which will be linked clockwise to display the graphical shape.
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the [SUMO exporter](sumo-exporter.md).
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road.
+This is required to use the [SUMO exporter](sumo-exporter.md).
 - `boundingObject`: Defines if this crossroad should enable collisions based on the graphical shape.
 - `texture`: Defines the texture of the crossroad.
-- `bottom`: Defines whether the crossroad bottom should be displayed (useful in case of
-bridge).
+- `bottom`: Defines whether the crossroad bottom should be displayed (useful in case of bridge).
 - `castShadows`: Defines whether the crossroad should cast shadows.
 - `contactMaterial`: Defines the crossroad contact material (used by the ContactProperties node).
 
@@ -317,11 +302,9 @@ Therefore, only the specific ones will be explained.
 - `center`: Defines whether the roundabout should have a central part.
 - `centerTexture`: Defines the texture to be used for the central part.
 - `centerTextureScale`: Defines the scale of the previous texture.
-- `centerBoundingObject`: Defines whether the central part should have a bounding
-object.
+- `centerBoundingObject`: Defines whether the central part should have a bounding object.
 - `roadNumber`: Defines the number of roads entering/leaving the roundabout.
-- `startRoads...`: Defines the properties of the roads entering/leaving the
-roundabout.
+- `startRoads...`: Defines the properties of the roads entering/leaving the roundabout.
 
 ### RoadIntersection
 
@@ -389,11 +372,9 @@ Most of the fields are similar to the one of the [Road](#road) PROTO.
 Therefore, only the specific ones will be explained.
 
 - `numberOfleavingLanes`: Defines the number of lanes leaving the main road.
-- `newLaneLeft`: Defines if the lanes leaving the main road goes to the left or
-right.
+- `newLaneLeft`: Defines if the lanes leaving the main road goes to the left or right.
 - `centralBorder`: Defines if the central sidewalk should be present.
-- `centralBorderBoundingObject`: Defines if the central sidewalk should have a
-bounding object.
+- `centralBorderBoundingObject`: Defines if the central sidewalk should have a bounding object.
 
 ### AddLaneRoadSegment
 
@@ -421,8 +402,7 @@ Most of the fields are similar to the one of the [Road](#road) PROTO.
 Therefore, only the specific ones will be explained.
 
 - `length`: Defines in how many meter the new lane is created.
-- `newLaneLeft`: Defines whether the new lane should be created on the right or left
-side of the road.
+- `newLaneLeft`: Defines whether the new lane should be created on the right or left side of the road.
 - `newLaneTexture`: Defines the texture to be used for the new lane.
 
 ### AddLanesRoadSegment

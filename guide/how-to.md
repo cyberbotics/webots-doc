@@ -53,6 +53,15 @@ This can be visualized with the `View / Optional Rendering / Show Center of Mass
 ![contact_points.png](images/contact_points.png) In this example, a box falls until it reaches the ground.
 A physics plugin (cf. `WorldInfo.physics`) gets information on the contact points and displays the reaction forces on the `Console` and as red lines.
 
+### custom\_html\_robot\_window.wbt
+
+**Keywords**: custom robot window, controller plugin, HTML, Javascript, CSS
+
+![custom_html_robot_window.png](images/custom_html_robot_window.png) This example shows a simple custom robot window.
+The HTML file contains the page content.
+The CSS file contains the page style.
+The Javascript and C files deal with the interactions between the page and the robot, using the WWI API to exchange string messages.
+
 ### cylinder\_stack.wbt
 
 **Keywords**: Supervisor, contact points, cylinder collisions
@@ -78,7 +87,7 @@ Then, the motor force is turned off and the boxes oscillate for a while, accordi
 In the first layout, the four motorized wheels are positioned circularly, as could be done for omnidirectional-wheeled robots.
 In the second layout, the four motorized wheels are oriented in the same direction, as could be done for a robot with tracks.
 In the third layout, a simple [Ackermann steering geometry](https://en.wikipedia.org/wiki/Ackermann_steering_geometry) is shown.
-Note that more completed Ackermann steering geometry can be achieved using the `AckermannVehicle.proto` model, and the `vehicle` library (cf. the [automobile book](https://www.cyberbotics.com/doc/automobile/index)).
+Note that more completed Ackermann steering geometry can be achieved using the [`AckermannVehicle` PROTO](../automobile/ackermannvehicle.md), and the [`car` library](../automobile/car-library.md).
 
 ### gui\_tracker.wbt
 
@@ -87,6 +96,9 @@ Note that more completed Ackermann steering geometry can be achieved using the `
 ![gui_tracker.png](images/gui_tracker.png) This example shows the use of the deprecated Qt-based system to create custom windows.
 A Supervisor is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
 This window is based on Qt (embedded in Webots) and the `Qt utils` helper library.
+
+> **Note**:
+Please refer to [the HTML robot window example](#custom_html_robot_window-wbt) instead.
 
 ### inverted\_pendulum.wbt
 
@@ -132,12 +144,12 @@ You can apply a force to the pedals using `Alt + mouse left click.`.
 ![physics.png](images/physics.png) In this example, a robot flies using a physics plugin.
 This plugins is an example of:
 
-- how to access Webots objects in the physics plugin
-- how to exchange information with the controller
-- how to add custom forces
-- how to move objects
-- how to handle collisions
-- how to draw objects using OpenGL
+- How to access Webots objects in the physics plugin.
+- How to exchange information with the controller.
+- How to add custom forces.
+- How to move objects.
+- How to handle collisions.
+- How to draw objects using OpenGL.
 
 ### rope.wbt
 
@@ -153,6 +165,22 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 ![sick_terrain_scanning.png](images/sick_terrain_scanning.png) In this example, a Pioneer 3AT mounted with a Sick LMS 291 is scanning its environment.
 Each lidar scan is displayed in a `Display` device.
 A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
+
+### spinning\_top.wbt
+
+**Keywords**: Spinner, chessboard, chess pieces, apply a torque
+
+![spinning_top.png](images/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
+To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
+
+### supervisor\_draw\_trail.wbt
+
+**Keywords**: Supervisor, IndexedLineSet, draw trail
+
+![supervisor_draw_trail.png](images/supervisor_draw_trail.png) In this example, a Supervisor draws a green path behind a target node.
+The target node is a `Transform` node mounted in the `turretSlot` of a moving e-puck robot.
+At the beginning of the simulation, the `Supervisor` creates programmatically an `IndexedLineSet` node.
+Then at each simulation step, it uses the target node position to update the `IndexedLineSet` node fields.
 
 ### texture\_change.wbt
 

@@ -1,4 +1,4 @@
-## Using the Thymio II robot
+## Using the Thymio II Robot
 
 %figure "Thymio II model in Webots"
 
@@ -9,7 +9,7 @@
 Thymio II is an affordable educational robot.
 It provides three main features: a large number of sensors and actuators, an educative interactivity based on light and touch, a programming environment featuring graphical and text programming.
 
-More information about the Thymio II is available from [its official website](https://aseba.wikidot.com/en:thymio).
+More information about the Thymio II is available from its official [website](https://aseba.wikidot.com/en:thymio).
 
 Webots contains an accurate model of the Thymio II robot (see the [figure](#thymio-ii-model-in-webots)).
 Almost all the Thymio II devices have been modeled and calibrated.
@@ -17,7 +17,22 @@ Moreover Aseba studio and VPL for Thymio II can be connected on the simulated mo
 Many Aseba examples are working directly with the simulated robot.
 Finally several objects related to the Thymio II are available, including a pen which can draw on any 3D object.
 
-### Thymio II model
+### Thymio II Model
+
+The main characteristics of the Thymio II model in Webots is summed up in [this table](#thymio-ii-characteristics).
+
+%figure "Thymio II characteristics"
+
+| Characteristics             | Values       |
+| --------------------------- | ------------ |
+| Length                      | 112 mm       |
+| Width                       | 117 mm       |
+| Height                      | 53 mm        |
+| Weight                      | 0.25 kg      |
+| Max. forward/backward speed | 0.2 m/s      |
+| Max. rotation speed         | 9.53 rad/s   |
+
+%end
 
 The following [table](#thymio-ii-devices) shows which devices are supported by the model, and their names (using the Webots terminology).
 
@@ -47,7 +62,7 @@ The calibration was performed using a regular A4 white paper.
 
 %end
 
-### Connect Aseba to the Thymio II model
+### Connect Aseba to the Thymio II Model
 
 The default controller of the Thymio II PROTO is the `thymio2_demo` controller.
 It should be changed to `thymio2_aseba` to allow the connection to Aseba programming environment.
@@ -80,27 +95,23 @@ To open the Thymio II window, just double click on the 3D model of the robot.
 
 %end
 
-### Thymio II Pen
+### Samples
 
-You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to the `Thymio2::bodySlot` field.
+Various examples of the possible behaviors of the Thymio II are located here: "WEBOTS\_HOME/projects/robots/mobsya/thymio/worlds".
+The various accessible worlds are described below.
+
+#### thymio2.wbt
+
+![thymio2_example.png](images/thymio2_example.png) An example of the possible behaviors of the Thymio II.
+
+#### thymio2\_pen.wbt
+
+![thymio2_pen.png](images/thymio2_pen.png) You can easily add a pen in the simulated model by adding a `Thymio2Pen` node to the `Thymio2::bodySlot` field.
 This pen can draw on every 3D object.
-This is particularily useful to perform [these exercises](https://aseba.wikidot.com/en:thymiodrawing).
-An example of this is located there (see the [figure](#simulation-of-a-thymio-ii-having-a-pen)): "WEBOTS\_HOME/projects/robots/thymio/worlds/thymio2\_pen.wbt".
+This is particularly useful to perform [these exercises](https://aseba.wikidot.com/en:thymiodrawing).
 
-%figure "Simulation of a Thymio II having a pen."
 
-![thymio2_pen.png](images/thymio2_pen.png)
+#### thymio2\_ball.wbt
 
-%end
-
-### Thymio II Ball
-
-[These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be reproduced by adding a `Thymio2Ball` node in your world.
+![thymio2_ball.png](images/thymio2_ball.png) [These exercises](https://aseba.wikidot.com/en:thymioballeinverse) can be reproduced by adding a `Thymio2Ball` node in your world.
 The ball can be slightly moved by applying a force on it (`ALT + mouse left click`).
-An example of this is located here (see the [figure](#simulation-of-a-thymio-ii-above-a-ball)): "WEBOTS\_HOME/projects/robots/thymio/worlds/thymio2\_ball.wbt".
-
-%figure "Simulation of a Thymio II above a ball."
-
-![thymio2_ball.png](images/thymio2_ball.png)
-
-%end

@@ -1,9 +1,9 @@
-## Procedural PROTO nodes
+## Procedural PROTO Nodes
 
 The expressive power of PROTO nodes can be significantly improved by extending them using a scripting language.
 In this way, the PROTO node may contain constants, mathematic expressions, loops, conditional expressions, randomness, and so on.
 
-### Scripting language
+### Scripting Language
 
 The used scripting language is [Lua](http://www.lua.org).
 Introducing and learning Lua is outside the scope of this document.
@@ -16,38 +16,26 @@ The template engine used is [liluat](https://github.com/FSMaxB/liluat) (under th
 
 ### Programming Facts
 
-- Using the template statements is exclusively allowed inside the content scope of
-the PROTO (cf. example).
-- A template statement is encapsulated inside the "%{" and the "}%" tokens and can
-be written on several lines.
-- Adding an "=" just after the opening token ("%{=") allows to evaluate a
-statement.
-- The fields are accessible into a global Lua dictionary named "fields". The
-dictionary keys matches the PROTO's fields names. Each entry of this dictionary
-is a sub-dictionary with two keys named "value" and "defaultValue", the first
-one contains the current state of the field and the second one contains its the
-default state. The conversion between the VRML97 types and the Lua types is
-detailed in [this table](#vrml-type-to-lua-type-conversion).
-- As shown in [this table](#vrml-type-to-lua-type-conversion), the conversion of a
-VRML97 node is a Lua dictionary. This dictionary contains the following keys:
-"node\_name" containing the VRML97 node name, "fields" which is a dictionary
-containing the Lua representation of the VRML97 node fields, and "super" which can
-contains the super PROTO node (the node above in the hierarchy) if existing.
-This dictionary is equal to `nil` if the VRML97 node is not defined (`NULL`). For
-example, in the SimpleStairs example below, the `fields.appearance.node_name`
-key contains the `'Appearance'` string.
-- The `context` dictionary provides contextual information about the PROTO. Table
-[this table](#content-of-the-context-dictionary) shows the available information
-and its corresponding keys.
+- Using the template statements is exclusively allowed inside the content scope of the PROTO (cf. example).
+- A template statement is encapsulated inside the "%{" and the "}%" tokens and can be written on several lines.
+- Adding an "=" just after the opening token ("%{=") allows to evaluate a statement.
+- The fields are accessible into a global Lua dictionary named "fields".
+The dictionary keys matches the PROTO's fields names.
+Each entry of this dictionary is a sub-dictionary with two keys named "value" and "defaultValue", the first one contains the current state of the field and the second one contains its the default state.
+The conversion between the VRML97 types and the Lua types is detailed in [this table](#vrml-type-to-lua-type-conversion).
+- As shown in [this table](#vrml-type-to-lua-type-conversion), the conversion of a VRML97 node is a Lua dictionary.
+This dictionary contains the following keys: "node\_name" containing the VRML97 node name, "fields" which is a dictionary containing the Lua representation of the VRML97 node fields, and "super" which can contains the super PROTO node (the node above in the hierarchy) if existing.
+This dictionary is equal to `nil` if the VRML97 node is not defined (`NULL`).
+For example, in the SimpleStairs example below, the `fields.appearance.node_name` key contains the `'Appearance'` string.
+- The `context` dictionary provides contextual information about the PROTO.
+Table [this table](#content-of-the-context-dictionary) shows the available information and its corresponding keys.
 - The VRML97 comment ("#") prevails over the Lua statements.
-- The following Lua modules are available directly: base, table, io, os, string,
-math, debug, package.
-- The LUA\_PATH environment variable can be modified (before running Webots) to
-include external Lua modules.
-- Lua standard output and error streams are redirected on the Webots console
-(written respectively in regular and in red colors). This allows developers to
-use the Lua regular functions to write on these streams.
-- The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`. This module is very useful to manipulate images, it can be used, for example, to generate textures.
+- The following Lua modules are available directly: base, table, io, os, string, math, debug, package.
+- The LUA\_PATH environment variable can be modified (before running Webots) to include external Lua modules.
+- Lua standard output and error streams are redirected on the Webots console (written respectively in regular and in red colors).
+This allows developers to use the Lua regular functions to write on these streams.
+- The [lua-gd](http://ittner.github.io/lua-gd) module is contained in Webots and can simply be imported using `local gd = require("gd")`.
+This module is very useful to manipulate images, it can be used, for example, to generate textures.
 
 %figure "VRML97 type to Lua type conversion"
 
@@ -80,12 +68,24 @@ use the Lua regular functions to write on these streams.
 
 %end
 
-### Texture generation
+### Texture Generation
 
 Using the [lua-gd](http://ittner.github.io/lua-gd) module it is possible to generate a texture image to be used by the PROTO.
 The following standard fonts are available to write on the texture:
 
- - Arial  - Arial Black  - Comic Sans MS  - Courier New  - Georgia  - Impact  - Lucida Console  - Lucida Sans Unicode  - Palatino Linotype  - Tahoma  - Times New Roman  - Trebuchet MS  - Verdana
+ - Arial
+ - Arial Black
+ - Comic Sans MS
+ - Courier New
+ - Georgia
+ - Impact
+ - Lucida Console
+ - Lucida Sans Unicode
+ - Palatino Linotype
+ - Tahoma
+ - Times New Roman
+ - Trebuchet MS
+ - Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 

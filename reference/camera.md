@@ -4,22 +4,22 @@ Derived from [Device](device.md).
 
 ```
 Camera {
-  SFFloat  fieldOfView  0.7854
-  SFInt32  width        64
-  SFInt32  height       64
-  SFBool   spherical    FALSE
-  SFFloat  near         0.01
-  SFFloat  far          0.0
-  SFBool   antiAliasing FALSE
-  SFFloat  motionBlur   0.0
-  SFFloat  noise        0.0
-  SFString noiseMaskUrl ""
-  SFNode   lens         NULL
-  SFNode   focus        NULL
-  SFNode   zoom         NULL
-  SFNode   recognition  NULL
-  SFNode   lensFlare    NULL
-  SFString compositor   ""
+  SFFloat  fieldOfView  0.7854  # [0, pi]
+  SFInt32  width        64      # [0, inf)
+  SFInt32  height       64      # [0, inf)
+  SFBool   spherical    FALSE   # {TRUE, FALSE}
+  SFFloat  near         0.01    # [0, inf)
+  SFFloat  far          0.0     # [0, inf)
+  SFBool   antiAliasing FALSE   # {TRUE, FALSE}
+  SFFloat  motionBlur   0.0     # [0, inf)
+  SFFloat  noise        0.0     # [0, 1]
+  SFString noiseMaskUrl ""      # any string
+  SFNode   lens         NULL    # {Lens, PROTO}
+  SFNode   focus        NULL    # {Focus, PROTO}
+  SFNode   zoom         NULL    # {Zoom, PROTO}
+  SFNode   recognition  NULL    # {Recognition, PROTO}
+  SFNode   lensFlare    NULL    # {LensFlare, PROTO}
+  SFString compositor   ""      # compositor name
 }
 ```
 
@@ -31,80 +31,64 @@ Depending on its setup, the Camera node can model a linear camera, a typical RGB
 
 ### Field Summary
 
-- `fieldOfView`: horizontal field of view angle of the camera. The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit. Since camera pixels are squares, the vertical field of
-view can be computed from the `width`, `height` and horizontal `fieldOfView`:
+- `fieldOfView`: horizontal field of view angle of the camera.
+The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
+Since camera pixels are squares, the vertical field of view can be computed from the `width`, `height` and horizontal `fieldOfView`:
 
     *vertical FOV = fieldOfView * height / width*
 
-- `width`: width of the image in pixels
+- `width`: width of the image in pixels.
 
-- `height`: height of the image in pixels
+- `height`: height of the image in pixels.
 
-- `spherical`: switch between a planar or a spherical projection. A spherical
-projection can be used for example to simulate a fisheye lens. More
-information on spherical projection in the corresponding subsection below.
+- `spherical`: switch between a planar or a spherical projection.
+A spherical projection can be used for example to simulate a fisheye lens.
+More information on spherical projection in the corresponding subsection below.
 
-- The `near` field defines the distance from the camera to the near clipping
-plane. This plane is parallel to the camera retina (i.e. projection plane). The
-near field determines the precision of the OpenGL depth buffer. A too small
-value produces depth fighting between overlaid polygons, resulting in random
-polygon overlaps. More information on frustums in the corresponding subsection
-below.
+- The `near` field defines the distance from the camera to the near clipping plane.
+This plane is parallel to the camera retina (i.e. projection plane).
+The near field determines the precision of the OpenGL depth buffer.
+A too small value produces depth fighting between overlaid polygons, resulting in random polygon overlaps.
+More information on frustums in the corresponding subsection below.
 
 - The `far` field defines the distance from the camera to the far clipping plane.
 
-- The `antiAliasing` field switches on or off (the default) anti-aliasing effect
-on the camera images. Anti-aliasing is a technique that assigns pixel colors
-based on the fraction of the pixel's area that's covered by the primitives being
-rendered. Anti-aliasing makes graphics more smooth and pleasing to the eye by
-reducing aliasing artifacts. Aliasing artifacts can appear as jagged edges (or
-moiré patterns, strobing, etc.). Anti-aliasing will not be applied if it is not
-supported by the hardware.
+- The `antiAliasing` field switches on or off (the default) anti-aliasing effect on the camera images.
+Anti-aliasing is a technique that assigns pixel colors based on the fraction of the pixel's area that's covered by the primitives being rendered.
+Anti-aliasing makes graphics more smooth and pleasing to the eye by reducing aliasing artifacts.
+Aliasing artifacts can appear as jagged edges (or moiré patterns, strobing, etc.).
+Anti-aliasing will not be applied if it is not supported by the hardware.
 
-- If the `motionBlur` field is greater than 0.0, the image is blurred by the
-motion of the camera or objects in the field of view. It means the image
-returned is a mix between the current view and the previous images returned by
-the camera. The value of this field represents the response time of the camera
-pixels in milliseconds, which is the amount of time a pixel takes to reach 99.5%
-of a new color value (the value of 99.5% was chosen since above this threshold
-it is not possible any more to detect color changes with a color component
-resolution of 8 bits). Of course smaller the time step is, better the effect is.
-Note that this feature is computationally expensive and can considerably reduce
-the simulation speed. Furthermore, it is useless to set a value smaller than the
-camera time step as it would not have any visible effect.
+- If the `motionBlur` field is greater than 0.0, the image is blurred by the motion of the camera or objects in the field of view.
+It means the image returned is a mix between the current view and the previous images returned by the camera.
+The value of this field represents the response time of the camera pixels in milliseconds, which is the amount of time a pixel takes to reach 99.5% of a new color value (the value of 99.5% was chosen since above this threshold it is not possible any more to detect color changes with a color component resolution of 8 bits).
+Of course smaller the time step is, better the effect is.
+Note that this feature is computationally expensive and can considerably reduce the simulation speed.
+Furthermore, it is useless to set a value smaller than the camera time step as it would not have any visible effect.
 
-- If the `noise` field is greater than 0.0, this adds a gaussian noise to each RGB
-channel of a color image. A value of 0.0 corresponds to remove the noise and
-thus saving computation time. A value of 1.0 corresponds to a gaussian noise
-having a standard derivation of 255 in the channel representation. More
-information on noise in the corresponding subsection below.
+- If the `noise` field is greater than 0.0, this adds a gaussian noise to each RGB channel of a color image.
+A value of 0.0 corresponds to remove the noise and thus saving computation time.
+A value of 1.0 corresponds to a gaussian noise having a standard derivation of 255 in the channel representation.
+More information on noise in the corresponding subsection below.
 
-- The `noiseMaskUrl` field specifies the file path of a user-defined noise mask,
-usually a transparent PNG image The file should be specified with a relative
-path (cf. [this section](imagetexture.md#search-rule-of-the-texture-path)).
-Absolute paths work as well, but they are not recommended because they are not
-portable across different systems. Ideally, the texture file should lie next to
-the world file, possibly inside a "textures" subfolder. It is suggested to use
-textures with power of 2 resolution (e.g. 8x8, 2048x64, etc.) and bigger than
-the camera resolution to avoid internal scaling that could cause the loss of
-pixel precision. The mask is randomly translated during the simulation in order
-to produce a flickering noise effect. Thus the bigger the noise texture the
-better the randomness quality, because the probabily to see the same patterns
-will decrease. Using a noise mask instead of the default gaussian noise reduces
-the computation overhead and thus improves the simulation speed. If both types
-of noise are enabled, the noise mask is applied before the gaussian noise. This
-feature is not available for spherical cameras.
+- The `noiseMaskUrl` field specifies the file path of a user-defined noise mask, usually a transparent PNG image The file should be specified with a relative path (cf.
+[this section](imagetexture.md#search-rule-of-the-texture-path)).
+Absolute paths work as well, but they are not recommended because they are not portable across different systems.
+Ideally, the texture file should lie next to the world file, possibly inside a "textures" subfolder.
+It is suggested to use textures with power of 2 resolution (e.g. 8x8, 2048x64, etc.) and bigger than the camera resolution to avoid internal scaling that could cause the loss of pixel precision.
+The mask is randomly translated during the simulation in order to produce a flickering noise effect.
+Thus the bigger the noise texture the better the randomness quality, because the probabily to see the same patterns will decrease.
+Using a noise mask instead of the default gaussian noise reduces the computation overhead and thus improves the simulation speed.
+If both types of noise are enabled, the noise mask is applied before the gaussian noise.
+This feature is not available for spherical cameras.
 
-- The `lens` field may contain a [Lens](lens.md) node to specify the image
-distortion due to the camera lens.
+- The `lens` field may contain a [Lens](lens.md) node to specify the image distortion due to the camera lens.
 
-- The `focus` field may contain a [Focus](focus.md) node to provide the camera
-device with a controllable focusing system. If this field is set to NULL, then
-no focus is available on the camera device.
+- The `focus` field may contain a [Focus](focus.md) node to provide the camera device with a controllable focusing system.
+If this field is set to NULL, then no focus is available on the camera device.
 
-- The `zoom` field may contain a [Zoom](zoom.md) node to provide the camera device
-with a controllable zoom system. If this field is set to NULL, then no zoom is
-available on the camera device.
+- The `zoom` field may contain a [Zoom](zoom.md) node to provide the camera device with a controllable zoom system.
+If this field is set to NULL, then no zoom is available on the camera device.
 
 - The `recognition` field may contain a [Recognition](recognition.md) node to provide the camera device with object recognition capabilities.
 The camera can only recognize [Solid](solid.md) nodes whose `recognitionColors` is not empty.
@@ -112,30 +96,22 @@ The object size is estimated using the `boundingObject` of the [Solid](solid.md)
 Note that the returned size is an estimation and can be in some cases overestimated.
 In case the [Solid](solid.md) and its children don't have any bounding object, the dimension is estimated using the shape, this estimation is usually widely overestimated.
 
-- The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens
-flare effect to the camera image (if any light casts flares).
+- The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens flare effect to the camera image (if any light casts flares).
 
-- The `compositor` field specifies the name of a compositor to apply on the camera
-image. A compositor can be used to apply a shader in order to alter the original
-image returned by the camera, it runs on the graphic card and can therefore be
-very fast. Compositor is a technique provided by Ogre3d, you should respect the
-syntax defined by Ogre3d. Have a look at the [Ogre3d
-documentation](http://www.ogre3d.org/docs/manual/manual_29.html) for more
-information about compositors. Such a compositor can for example be used to
-simulate camera imperfections (e.g., lens distorion) or to run image processing
-directly on the graphic card (e.g., edge detection). Note that the compositor is
-applied at the end (i.e., after the addition of noise, etc.). The compositor
-resource files (compositor, material, shader, texture, etc.) should be located
-in a directory called `compositors` close to the world file. If the camera is
-contained in a PROTO file then the compositor files should be located in a
-directory called `compositors` close to the PROTO file. The internal compositor
-resource files of Webots can be used in any compositor, they are located in
-"WEBOTS\_HOME/resources/ogre". Compositors can be added/removed at any time,
-even while the simulation is running. However, the compositor resource files are
-loaded at the same time as the world file. Therefore any modification to the
-compositor files will need a revert of the simulation to be taken into account.
+- The `compositor` field specifies the name of a compositor to apply on the camera image.
+A compositor can be used to apply a shader in order to alter the original image returned by the camera, it runs on the graphic card and can therefore be very fast.
+Compositor is a technique provided by Ogre3d, you should respect the syntax defined by Ogre3d.
+Have a look at the [Ogre3d documentation](http://www.ogre3d.org/docs/manual/manual_29.html) for more information about compositors.
+Such a compositor can for example be used to simulate camera imperfections (e.g., lens distorion) or to run image processing directly on the graphic card (e.g., edge detection).
+Note that the compositor is applied at the end (i.e., after the addition of noise, etc.).
+The compositor resource files (compositor, material, shader, texture, etc.) should be located in a directory called `compositors` close to the world file.
+If the camera is contained in a PROTO file then the compositor files should be located in a directory called `compositors` close to the PROTO file.
+The internal compositor resource files of Webots can be used in any compositor, they are located in "WEBOTS\_HOME/resources/ogre".
+Compositors can be added/removed at any time, even while the simulation is running.
+However, the compositor resource files are loaded at the same time as the world file.
+Therefore any modification to the compositor files will need a reload of the world to be taken into account.
 
-### Camera image
+### Camera Image
 
 The camera device computes OpenGL rendered images.
 The pixel information can be obtained from the `wb_camera_get_image` function.
@@ -175,7 +151,7 @@ For each channel of the image and at each camera refresh, a gaussian noise is co
 This gaussian noise has a standard deviation corresponding to the noise field times the channel range.
 The channel range is 256 for a color camera.
 
-### Spherical projection
+### Spherical Projection
 
 OpenGL is designed to have only planar projections.
 However spherical projections are very useful for simulating a camera pointing on a curved mirror or a fisheye effect as found in many biological eyes.

@@ -4,16 +4,16 @@ Derived from [Solid](solid.md).
 
 ```
 Robot {
-  SFString controller      "void"
-  SFString controllerArgs  ""
-  SFString customData      ""
-  SFBool   synchronization TRUE
-  MFFloat  battery         [ ]
-  SFFloat  cpuConsumption  10  # [0,inf)
-  SFBool   selfCollision   FALSE
-  SFBool   showWindow      FALSE
-  SFString window          ""
-  SFString remoteControl   ""
+  SFString controller      "void"   # any string
+  SFString controllerArgs  ""       # any string
+  SFString customData      ""       # any string
+  SFBool   synchronization TRUE     # {TRUE, FALSE}
+  MFFloat  battery         [ ]      # see below
+  SFFloat  cpuConsumption  10       # [0, inf)
+  SFBool   selfCollision   FALSE    # {TRUE, FALSE}
+  SFBool   showWindow      FALSE    # {TRUE, FALSE}
+  SFString window          ""       # any string
+  SFString remoteControl   ""       # any string
 }
 ```
 
@@ -26,60 +26,37 @@ If you would like to build a robot with supervisor capabilities use the [Supervi
 
 ### Field Summary
 
-- `controller`: name of the controller program that the simulator must use to
-control the robot. This program is located in a directory whose name is equal to
-the field's value. This directory is in turn located in the "controllers"
-subdirectory of the current project directory. For example, if the field value
-is "my\_controller" then the controller program should be located in
-"my\_project/controllers/my\_controller/my\_controller[.exe]". The ".exe"
-extension is added on the Windows platforms only.
+- `controller`: name of the controller program that the simulator must use to control the robot.
+This program is located in a directory whose name is equal to the field's value.
+This directory is in turn located in the "controllers" subdirectory of the current project directory.
+For example, if the field value is "my\_controller" then the controller program should be located in "my\_project/controllers/my\_controller/my\_controller[.exe]".
+The ".exe" extension is added on the Windows platforms only.
 
-- `controllerArgs`: string containing the arguments (separated by space
-characters) to be passed to the `main` function of the C/C++ controller
-program or the `main` method of the Java controller program.
+- `controllerArgs`: string containing the arguments (separated by space characters) to be passed to the `main` function of the C/C++ controller program or the `main` method of the Java controller program.
 
-- `customData`: this field may contain any user data, for example parameters
-corresponding to the configuration of the robot. It can be read from the robot
-controller using the  `wb_robot_get_custom_data` function and can be written using
-the `wb_robot_set_custom_data` function. It may also be used as a convenience for
-communicating between a robot and a supervisor without implementing a Receiver /
-Emitter system: The supervisor can read and write in this field using the
-generic supervisor functions for accessing fields.
+- `customData`: this field may contain any user data, for example parameters corresponding to the configuration of the robot.
+It can be read from the robot controller using the `wb_robot_get_custom_data` function and can be written using the `wb_robot_set_custom_data` function.
+It may also be used as a convenience for communicating between a robot and a supervisor without implementing a Receiver / Emitter system: The supervisor can read and write in this field using the generic supervisor functions for accessing fields.
 
-- `synchronization`: if the value is `TRUE` (default value), the simulator is
-synchronized with the controller; if the value is `FALSE`, the simulator runs as
-fast as possible, without waiting for the controller. The
-`wb_robot_get_synchronization` function can be used to read the value of this
-field from a controller program.
+- `synchronization`: if the value is `TRUE` (default value), the simulator is synchronized with the controller; if the value is `FALSE`, the simulator runs as fast as possible, without waiting for the controller.
+The `wb_robot_get_synchronization` function can be used to read the value of this field from a controller program.
 
-- `battery`: this field should contain three values: the first one corresponds to
-the present energy level of the robot in Joules (*J*), the second is the maximum
-energy the robot can hold in Joules, and the third is the energy recharge speed
-in Watts (*[W]=[J]/[s]*). The simulator updates the first value, while the other
-two remain constant. *Important:* when the current energy value reaches zero,
-the corresponding controller process terminates and the simulated robot stops
-all motion.
+- `battery`: this field should contain three values: the first one corresponds to the present energy level of the robot in Joules (*J*), the second is the maximum energy the robot can hold in Joules, and the third is the energy recharge speed in Watts (*[W]=[J]/[s]*).
+The simulator updates the first value, while the other two remain constant.
+*Important:* when the current energy value reaches zero, the corresponding controller process terminates and the simulated robot stops all motion.
 
 > **Note**: *[J]=[V].[A].[s] and [J]=[V].[A.h]/3600*
 
-- `cpuConsumption`: power consumption of the CPU (central processing unit) of the
-robot in Watts.
+- `cpuConsumption`: power consumption of the CPU (central processing unit) of the robot in Watts.
 
-- `selfCollision`: setting this field to TRUE will enable the detection of
-collisions within the robot and apply the corresponding contact forces, so that
-the robot limbs cannot cross each other (provided that they have a
-[Physics](physics.md) node). This is useful for complex articulated robots for
-which the controller doesn't prevent inner collisions. Enabling self collision
-is, however, likely to decrease the simulation speed, as more collisions will be
-generated during the simulation. Note that only collisions between
-non-consecutive solids will be detected. For consecutive solids, e.g., two
-solids attached to each other with a joint, no collision detection is performed,
-even if the self collision is enabled. The reason is that this type of collision
-detection is usually not wanted by the user, because a very accurate design of
-the bounding objects of the solids would be required. To prevent two consecutive
-solid nodes from penetrating each other, the `minStop` and `maxStop` fields of
-the corresponding joint node should be adjusted accordingly. Here is an example
-of a robot leg with self collision enabled:
+- `selfCollision`: setting this field to TRUE will enable the detection of collisions within the robot and apply the corresponding contact forces, so that the robot limbs cannot cross each other (provided that they have a [Physics](physics.md) node).
+This is useful for complex articulated robots for which the controller doesn't prevent inner collisions.
+Enabling self collision is, however, likely to decrease the simulation speed, as more collisions will be generated during the simulation.
+Note that only collisions between non-consecutive solids will be detected.
+For consecutive solids, e.g., two solids attached to each other with a joint, no collision detection is performed, even if the self collision is enabled.
+The reason is that this type of collision detection is usually not wanted by the user, because a very accurate design of the bounding objects of the solids would be required.
+To prevent two consecutive solid nodes from penetrating each other, the `minStop` and `maxStop` fields of the corresponding joint node should be adjusted accordingly.
+Here is an example of a robot leg with self collision enabled:
 
         Thigh (solid)
           |
@@ -100,31 +77,21 @@ of a robot leg with self collision enabled:
     an intermediate solid ("Leg"). In such an example, it is probably a good idea to
     set `minStop` and `maxStop` values for the "Knee" and "Ankle" joints.
 
-- `showWindow`: defines whether the robot window should be shown at the
-startup of the controller. If yes, the related entry point function of the robot
-window controller plugin (i.e. the `wbw_show` function) is called as soon as the controller is
-initialized.
+- `showWindow`: defines whether the robot window should be shown at the startup of the controller.
+If yes, the related entry point function of the robot window controller plugin (i.e. the `wbw_show` function) is called as soon as the controller is initialized.
 
-- `window`: defines the path of the robot window controller plugin used to
-display the robot window. If the `window` field is empty, the default
-generic robot window is loaded. The search algorithm works as following: Let
-$(VALUE) be the value of the `window` field, let $(EXT) be the shared
-library file extension of the OS (".so", ".dll" or ".dylib"), let $(PREFIX) be
-the shared library file prefix of the OS ("" on windows and "lib" on other OS),
-let $(PROJECT) be the current project path, let $(WEBOTS) be the webots
-installation path, and let $(...) be a recursive search, then the first existing
-file will be used as absolute path:
+- `window`: defines the path of the robot window controller plugin used to display the robot window.
+If the `window` field is empty, the default generic robot window is loaded.
+The search algorithm works as following: Let $(VALUE) be the value of the `window` field, let $(EXT) be the shared library file extension of the OS (".so", ".dll" or ".dylib"), let $(PREFIX) be the shared library file prefix of the OS ("" on windows and "lib" on other OS), let $(PROJECT) be the current project path, let $(WEBOTS) be the webots installation path, and let $(...) be a recursive search, then the first existing file will be used as absolute path:
 
     $(PROJECT)/plugins/robot\_windows/$(VALUE)/$(PREFIX)$(VALUE)$(EXT)
 
     $(WEBOTS)/resources/$(...)/plugins/robot\_windows/$(VALUE)/$(PREFIX)$(VALUE)$(EXT)
 
-- `remoteControl`: defines the path of the remote-control controller plugin used
-to remote control the real robot. The search algorithm is identical to the one
-used for the `window` field, except that the subdirectory of `plugins` is
-`remote_controls` rather than `robot_windows`.
+- `remoteControl`: defines the path of the remote-control controller plugin used to remote control the real robot.
+The search algorithm is identical to the one used for the `window` field, except that the subdirectory of `plugins` is `remote_controls` rather than `robot_windows`.
 
-### Synchronous versus Asynchronous controllers
+### Synchronous versus Asynchronous Controllers
 
 The `synchronization` field specifies if a robot controller must be synchronized with the simulator or not.
 
@@ -173,7 +140,7 @@ In other words the physics runs for the specified duration: objects may move, th
 Note that the `duration` parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
 If this function returns -1, this indicates that Webots wishes to terminate the controller.
-This happens when the user hits the `Revert` button or quits Webots.
+This happens when the user hits the `Reload` button or quits Webots.
 So if your code needs to do some cleanup, e.g., flushing or closing data files, etc., it is necessary to test this return value and take proper action.
 The controller termination cannot be vetoed: one second later the controller is killed by Webots.
 So only one second is available to do the cleanup.
@@ -182,15 +149,11 @@ If the `synchronization` field is TRUE, this function always returns 0 (or -1 to
 If the `synchronization` field is FALSE, the return value can be different from 0: Let `controller_time` be the current time of the controller and let `dt` be the return value.
 Then `dt` may be interpreted as follows:
 
-- if `dt` = 0, then the asynchronous behavior was equivalent to the synchronous
-behavior.
-- if 0 <= `dt` <= `duration`, then the actuator values were set at `controller_time` +
-`dt`, and the sensor values were measured at `controller_time` + `duration`, as
-requested. It means that the step actually lasted the requested number of
-milliseconds, but the actuator commands could not be executed on time.
-- if `dt` > `duration`, then the actuators values were set at `controller_time` + `dt`,
-and the sensor values were also measured at `controller_time` + `dt`. It means
-that the requested step duration could not be respected.
+- if `dt` = 0, then the asynchronous behavior was equivalent to the synchronous behavior.
+- if 0 <= `dt` <= `duration`, then the actuator values were set at `controller_time` + `dt`, and the sensor values were measured at `controller_time` + `duration`, as requested.
+It means that the step actually lasted the requested number of milliseconds, but the actuator commands could not be executed on time.
+- if `dt` > `duration`, then the actuators values were set at `controller_time` + `dt`, and the sensor values were also measured at `controller_time` + `dt`.
+It means that the requested step duration could not be respected.
 
 The C API has two additional functions: `wb_robot_init` and `wb_robot_cleanup`.
 There is no equivalent of the `wb_robot_init` and `wb_robot_cleanup` functions in the Java, Python, C++ and MATLAB APIs.

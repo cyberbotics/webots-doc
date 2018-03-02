@@ -1,4 +1,4 @@
-## Tutorial 4: More about Controllers (20 minutes)
+## Tutorial 4: More about Controllers (20 Minutes)
 
 Now we start to tackle the topics related to programming robot controllers.
 We will design a simple controller that avoids the obstacles created in the previous tutorials.
@@ -11,7 +11,7 @@ The study of robotics algorithms is beyond the goals of this tutorial and so it 
 Some rudimentary programming knowledge is required to tackle this chapter (any C tutorial should be a sufficient introduction).
 At the end of the chapter, links to further robotics algorithmics are given.
 
-### New World and new Controller
+### New World and New Controller
 
 > **Hands on**: Save the previous world as "collision\_avoidance.wbt".
 
@@ -137,7 +137,7 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: After initialization of the devices, initialize the motors:
 
 > ```c
-> WbDeviceTagleft_motor = wb_robot_get_device("left wheel motor");
+> WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
 > WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
 > wb_motor_set_position(left_motor, INFINITY);
 > wb_motor_set_position(right_motor, INFINITY);
@@ -201,7 +201,7 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: Compile your code by selecting the `Build / Build` menu item.
 Compilation errors are displayed in red in the console.
 If there are any, fix them and retry to compile.
-Revert the simulation.
+Reload the world.
 
 ### The Controller Code
 
@@ -235,7 +235,7 @@ int main(int argc, char **argv)
     wb_distance_sensor_enable(ps[i], TIME_STEP);
   }
 
-  WbDeviceTagleft_motor = wb_robot_get_device("left wheel motor");
+  WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
   WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
   wb_motor_set_position(left_motor, INFINITY);
   wb_motor_set_position(right_motor, INFINITY);
@@ -291,17 +291,14 @@ int main(int argc, char **argv)
 Here is a quick summary of the key points you need to understand before continuing on:
 
 - The controller entry point is the `main` function like any standard C program.
-- No Webots function should be called before the call of the `wb_robot_init`
-function.
-- The last function to call before leaving the main function is the
-`wb_robot_cleanup` function.
-- A device is referenced by the `name` field of its device node. The reference of
-the node can be retrieved thanks to the `wb_robot_get_device` function.
-- Each controller program is executed as a child process of the Webots process. A
-controller process does not share any memory with Webots (except the cameras'
-images) and it can run on another CPU (or CPU core) than Webots.
-- The controller code is linked with the "libController" dynamic library. This
-library handles the communication between your controller and Webots.
+- No Webots function should be called before the call of the `wb_robot_init` function.
+- The last function to call before leaving the main function is the `wb_robot_cleanup` function.
+- A device is referenced by the `name` field of its device node.
+The reference of the node can be retrieved thanks to the `wb_robot_get_device` function.
+- Each controller program is executed as a child process of the Webots process.
+A controller process does not share any memory with Webots (except the cameras' images) and it can run on another CPU (or CPU core) than Webots.
+- The controller code is linked with the "libController" dynamic library.
+This library handles the communication between your controller and Webots.
 
 This [section](controller-programming.md) explains in more details controller programming.
 We invite you to read carefully this section before going on.

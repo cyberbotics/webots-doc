@@ -62,14 +62,12 @@ Building {
 - `floorHeight`: Defines the height of one floor.
 - `floorNumber`: Defines the number of floors (excluding roof).
 - `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
-- `corners`: Defines the geometry of the building (2D ground footprint of the
-building).
+- `corners`: Defines the geometry of the building (2D ground footprint of the building).
 - `wallAppearance`: Defines the appearance used for the walls of the building.
-- `roofShape`: Defines the geometry of the roof. Supported geometry are `flat
-roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
+- `roofShape`: Defines the geometry of the roof.
+Supported geometry are `flat roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
 - `roofAppearance`: Defines the appearance used for the roof of the building.
-- `roofHeight`: Defines the height of the roof (used only in the case of pyramidal
-roof).
+- `roofHeight`: Defines the height of the roof (used only in the case of pyramidal roof).
 - `enableBoundingObject`: Defines whether the building should have a bounding object.
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
@@ -119,7 +117,7 @@ The available wall types are:
 - office building (supports color)
 - concrete building (supports color)
 
-### Other city objects
+### Other City Objects
 
 In addition to buildings, other PROTO nodes are available representing objects usually found in a city environment:
 

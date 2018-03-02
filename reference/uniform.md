@@ -4,9 +4,9 @@
 
 ```
 Uniform {
-  SFString name  ""
-  SFString type  ""
-  SFString value ""
+  SFString name  ""   # any string
+  SFString type  ""   # any string
+  SFString value ""   # any string
 }
 ```
 
@@ -21,7 +21,7 @@ The `type` field indicates the uniform variable data type.
 
 The `value` field indicates the uniform variable value.
 
-### Supported data types
+### Supported Data Types
 
 The uniform variables support the following data types:
 

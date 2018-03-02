@@ -1,4 +1,4 @@
-# Simulation model
+# Simulation Model
 
 The simulation model of ROBOTIS OP2 was design to be as close as possible to the real one.
 

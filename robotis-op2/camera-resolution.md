@@ -1,4 +1,4 @@
-## Camera resolution
+## Camera Resolution
 
 In remote control, supported camera resolutions are not the same as in remote compilation.
 Indeed they are smaller in order to not slow down too much the communication speed between Webots and the robot.

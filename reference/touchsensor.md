@@ -4,9 +4,9 @@ Derived from [Device](device.md).
 
 ```
 TouchSensor {
-  SFString type        "bumper"
-  MFVec3f  lookupTable [ 0 0 0, 5000 50000 0 ]
-  SFFloat  resolution  -1
+  SFString type        "bumper"                  # {"bumper", "force", "force-3d"}
+  MFVec3f  lookupTable [ 0 0 0, 5000 50000 0 ]   # lookup table
+  SFFloat  resolution  -1                        # {-1, [0, inf)}
 }
 ```
 
@@ -22,17 +22,13 @@ Examples of using the [TouchSensor](#touchsensor) are provided by the "hoap2\_su
 
 ### Field Summary
 
-- `type`: allows the user to select the type of sensor: "bumper", "force", or
-"force-3d", described below.
+- `type`: allows the user to select the type of sensor: "bumper", "force", or "force-3d", described below.
 
-- `lookupTable`: similar to the one used by the
-[DistanceSensor](distancesensor.md) node.
+- `lookupTable`: similar to the one used by the [DistanceSensor](distancesensor.md) node.
 
-- `resolution`: This field allows to define the resolution of the sensor, the
-resolution is the smallest change that it is able to measure. Setting this field
-to -1 (default) means that the sensor has an 'infinite' resolution (it can
-measure any infinitesimal change). This field is used only if the type is
-"force" or "force-3d" and accepts any value in the interval (0.0, inf).
+- `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
+Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).
+This field is used only if the type is "force" or "force-3d" and accepts any value in the interval (0.0, inf).
 
 ### Types
 
@@ -88,7 +84,7 @@ Note that the default `lookupTable` of the [TouchSensor](#touchsensor) node is:
 Hence it maps forces between 0 and 5000 Newtons to output values between 0 and 50000, the output unit being 0.1 Newton.
 You should empty the `lookupTable` to have Newtons as output units.
 
-### Collision detection
+### Collision Detection
 
 [TouchSensor](#touchsensor)s detect collisions based on the 3D geometry of its `boundingObject`.
 So the `boundingObject` must be specified for every type of [TouchSensor](#touchsensor).

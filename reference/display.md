@@ -4,8 +4,8 @@ Derived from [Device](device.md).
 
 ```
 Display {
-  SFInt32 width  64
-  SFInt32 height 64
+  SFInt32 width  64   # [1, inf)
+  SFInt32 height 64   # [1, inf)
 }
 ```
 
@@ -22,14 +22,14 @@ If the first child of the [Display](#display) node is or contains (recursive sea
 
 - `height`: height of the display in pixels
 
-### Coordinates system
+### Coordinates System
 
 Internally, the [Display](#display) image is stored in a 2D pixel array.
 The RGBA value (4x8 bits) of a pixel is dislayed in the status bar (the bar at the bottom of the console window) when the mouse hovers over the pixel in the [Display](#display).
 The 2D array has a fixed size defined by the `width` and `height` fields.
 The (0,0) coordinate corresponds to the top left pixel, while the (`width`-1,`height`-1) coordinate corresponds to the bottom right pixel.
 
-### Command stack
+### Command Stack
 
 Each function call of the [Display](#display) device API (except for the `wb_display_get_width` and `wb_display_get_height` functions) is storing a specific command into an internal stack.
 This command stack is sent to Webots during the next call of the `wb_robot_step` function, using a FIFO scheme (First In, First Out), so that commands are executed in the same order as the corresponding function calls.
@@ -122,7 +122,19 @@ Only the color channel is affected by the `opacity` according to the [blending](
 The `wb_display_set_font` function defines the font and its `size` (i.e. the character height in pixel) used for the characters drawn with the `wb_display_draw_text` function, the `anti_aliasing` argument defines whether anti-aliasing filtering should be used to render the characters.
 The following standard fonts are available:
 
- - Arial  - Arial Black  - Comic Sans MS  - Courier New  - Georgia  - Impact  - Lucida Console  - Lucida Sans Unicode  - Palatino Linotype  - Tahoma  - Times New Roman  - Trebuchet MS  - Verdana
+- Arial
+-  Arial Black
+-  Comic Sans MS
+-  Courier New
+-  Georgia
+-  Impact
+-  Lucida Console
+-  Lucida Sans Unicode
+-  Palatino Linotype
+-  Tahoma
+-  Times New Roman
+-  Trebuchet MS
+-  Verdana
 
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 The default font is `Lucida Console, 8 pixels, with anti-aliasing`.

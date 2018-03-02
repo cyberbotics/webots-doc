@@ -1,4 +1,4 @@
-## Introduction of the physics plugins
+## Introduction of the Physics Plugins
 
 This chapter describes Webots capability to add a physics plugin to a simulation.
 A physics plugin is a user-implemented shared library which is loaded by Webots at run-time, and which gives access to the low-level API of the [ODE](http://www.ode.org) physics engine.

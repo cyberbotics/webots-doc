@@ -127,6 +127,7 @@ class TestReferences(unittest.TestCase):
                             file_path = os.path.join(book.path, md_path)
                         else:
                             file_path = os.path.join(book.path, link)
+                        file_path = os.path.abspath(file_path)  # Remove '..'-like patterns from file_path.
                         found = anchor in self.anchors[file_path]
                         self.assertTrue(
                             found, msg='%s: %s#%s not found' %

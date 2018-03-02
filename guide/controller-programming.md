@@ -196,7 +196,7 @@ Just like with real robots, it is possible (in physics-based simulations only), 
 If you want to control the motion of several `RotationalMotor`s simultaneously, then you need to specify the desired position for each `RotationalMotor` separately, using the `wb_motor_set_position` function.
 Then you need to call the `wb_robot_step` function once to actuate all the `RotationalMotor`s simultaneously.
 
-### Simulation step and wb\_robot\_step()
+### The "step" and "wb\_robot\_step" Functions
 
 Webots uses two different time steps:
 
@@ -390,7 +390,7 @@ argv[3]=three
 
 ### Controller Termination
 
-Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reverted, a new simulation is loaded, or the controller name is changed in the Webots scene tree.
+Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reset, the world is reloaded, a new simulation is loaded, or the controller name is changed in the Webots scene tree.
 The controller cannot prevent its own termination but it can be notified shortly before this happens.
 The `wb_robot_step` function returns -1 when the controller process is going to be terminated by Webots.
 Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots.
@@ -452,7 +452,7 @@ if (finished) {
 
 Note that the exit status as well as the value returned by the `main` function are ignored by Webots.
 
-### Shared libraries
+### Shared Libraries
 
 Creating shared libraries can be very useful to share code between controllers and/or plugins.
 There are several ways to do so, but we recommend to place them into a subdirectory of the `libraries` directory of your project.
@@ -464,7 +464,7 @@ A good example of this is the Qt utility library located there: `WEBOTS_HOME/res
 If for some reason shared libraries cannot be in the `libraries` directory, the `WEBOTS_LIBRARY_PATH` environment variable will be very helpful.
 The paths it contains will be added at the beginning of the library search path([[DY]LD\_LIBRARY\_]PATH) when starting the controller.
 
-### Environment variables
+### Environment Variables
 
 For some projects it will be necessary to define or change variables defined in your environment.
 They can be changed in the settings of the computer but it may last only for the current session or create conflict with other applications or projects.
@@ -539,7 +539,7 @@ NAOQI_LIBRARY_FOLDER = lib
 NAOQI_LIBRARY_FOLDER = lib
 ```
 
-### Languages settings
+### Languages Settings
 
 The "runtime.ini" file may also contain language specific sections, named `[java]`, `[python]` and `[matlab]`.
 Each of this section may include two keys, namely `COMMAND` and `OPTIONS`.

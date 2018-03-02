@@ -4,8 +4,8 @@
 
 ```
 ShaderPart {
-  SFString type    "" # either "VERTEX" or "FRAGMENT"
-  MFString content ""
+  SFString type    ""   # {"VERTEX, FRAGMENT"}
+  MFString content ""   # shader code
 }
 ```
 
@@ -18,21 +18,22 @@ It can be respectively either "VERTEX" or "FRAGMENT".
 
 The `content` field contains the source code of the GPU program.
 
-### GPU program supported type and version
+### GPU Program Supported Type and Version
 
 For a maximal compatibility range, `GLSL version 120` has been chosen as the only supported shading language for now.
 
-### GLSL 120 documentation
+### GLSL 120 Documentation
 
 The GLSL documentation is available from following sources:
 
 1. Official sources
-    - [The OpenGL® Shading Language](https://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf)
-    - [OpenGL® Shading Language (GLSL) - Quick Reference Guide](http://mew.cx/glsl_quickref.pdf)
-2. Tutorials
-    - [Lighthouse3d.com](http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/)
-3. Books
-    - [GLSL Essentials by Jacobo Rodríguez](https://www.amazon.com/GLSL-Essentials-Jacobo-Rodr%C3%ADguez/dp/1849698007)
+- [The OpenGL® Shading Language](https://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf)
+- [OpenGL® Shading Language (GLSL)
+- Quick Reference Guide](http://mew.cx/glsl_quickref.pdf) 2.
+Tutorials
+- [Lighthouse3d.com](http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/) 3.
+Books
+- [GLSL Essentials by Jacobo Rodríguez](https://www.amazon.com/GLSL-Essentials-Jacobo-Rodr%C3%ADguez/dp/1849698007)
 
 ### Variables
 
@@ -58,23 +59,22 @@ Some of them are described in the following table:
 | `[Point/Spot]Light.radius`                           | *Not available*                                                 |
 | `DirectionalLight.direction`                         | `gl_LightSource[X].position`                                    |
 
-### Special preprocessor variables
+### Special Preprocessor Variables
 
 - `NUMBER_OF_LIGHTS` is an integer containing the number of lights affecting the material.
 This constant is particularly useful to loop over the lights.
 - `FOG_TYPE` is an integer matching with the current fog type:
-    - `0` stands for no fog
-    - `1` stands for an exponential fog
-    - `2` stands for an exponential2 fog
-    - `3` stands for a linear fog
+- `0` stands for no fog
+- `1` stands for an exponential fog
+- `2` stands for an exponential2 fog
+- `3` stands for a linear fog
 
-### X3DOM export
+### X3DOM Export
 
 When exporting the GLSL shader to X3DOM, the shader is converted from `GLSL v120` to the `X3DOM` shaders (`WebGL` shaders with custom variables).
 Generally this automatic conversion is working fine, however if you suspect a wrong behavior, please write a bug report to help us improving the conversion function.
 
-#### Known differences
+#### Known Differences
 
-- **Lights order**: In Webots the lights list is sorted by the distance between the lights and the target object,
-while in `X3DOM` the list is simply sorted by the Light node definition order.
+- **Lights order**: In Webots the lights list is sorted by the distance between the lights and the target object, while in `X3DOM` the list is simply sorted by the Light node definition order.
 So it's recommended to deal the lights in a generic way.

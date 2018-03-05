@@ -256,7 +256,7 @@ function addContributionBanner() {
                        "Found an error?" +
                        "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
                        "Contribute on GitHub!" +
-                       "<img class=github-logo src='https://raw.githubusercontent.com/omichel/webots-doc/enhancement-contrib-banner/css/images/github.png'</img>" +
+                       "<span class=github-logo />" +
                        "</a>" +
                        "<p id='contribution-close'>X</p>" +
                        "</div>" +

@@ -389,8 +389,10 @@
 }
 
 .webots-doc .contribution-banner .github-logo {
-  width: 16px;
   margin-left: 5px;
+  background: url(images/github.png) left center no-repeat;
+  padding-left: 16px;
+  background-size: 16px;
 }
 
 .blog #title {

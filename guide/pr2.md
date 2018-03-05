@@ -1,4 +1,4 @@
-## Willow Garage's PR2
+## Clearpath Robotics's PR2
 
 %figure "PR2 model in Webots"
 

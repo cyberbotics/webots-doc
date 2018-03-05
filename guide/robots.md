@@ -23,7 +23,7 @@
 | ![icon.png](images/robots/pioneer-3at/icon.png) | [Pioneer 3-AT](pioneer-3at.md) | adept |
 | ![icon.png](images/robots/pioneer-3dx/icon.png) | [Pioneer 3-DX](pioneer-3dx.md) | adept |
 | ![icon.png](images/robots/portal/icon.png) | [Portal](portal.md) | A4 |
-| ![icon.png](images/robots/pr2/icon.png) | [PR2](pr2.md) | Willow Garage |
+| ![icon.png](images/robots/pr2/icon.png) | [PR2](pr2.md) | Clearpath Robotics |
 | ![icon.png](images/robots/robotis-op2/icon.png) | [Robotis-OP2](robotis-op2.md) | Robotis |
 | ![icon.png](images/robots/thymio2/icon.png) | [Thymio II](thymio2.md) | Mobsya |
 | ![icon.png](images/robots/youbot/icon.png) | [youBot](youbot.md) | KUKA |

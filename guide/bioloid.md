@@ -9,7 +9,7 @@
 The "Bioloid Comprehensive Kit" allows to create articulated robots.
 This kit is developed by [Robotis](http://www.robotis.com) and is commercially available from [Tribotix](http://www.tribotix.com).
 
-This page shows a dog-like robot built with the Bioloid kit, and its model in Webots (cf. [this figure](comparison-of-a-real-bioloid-dog-like-robot-and-its-webots-model)).
+This page shows a dog-like robot built with the Bioloid kit, and its model in Webots (cf. [this figure](#comparison-of-a-real-bioloid-dog-like-robot-and-its-webots-model)).
 Both the visual aspect and the physical properties of the real robot have been modeled.
 The physical dimensions, friction coefficients and mass distribution have been estimated after various measurements on the components of the real robot.
 

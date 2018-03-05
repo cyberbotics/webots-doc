@@ -318,6 +318,7 @@ function populateViewDiv(mdContent) {
   // console.log('HTML content: \n\n')
   // console.log(html);
 
+  view.innerHTML = html;
   view.prepend(
     "<div class='contribution-banner'>" +
     "Found an error?" +
@@ -326,8 +327,6 @@ function populateViewDiv(mdContent) {
     "</a>" +
     "</div>"
   );
-
-  view.innerHTML = html;
 
   redirectImages(view);
   redirectUrls(view);

@@ -3,20 +3,6 @@
 This section discusses worlds containing models of real robots.
 The world files for these examples are located in the "robots/(robot\_name)/worlds" directory, and the corresponding controllers are located in the "robots/(robot\_name)/controllers" directory.
 
-### alice.wbt
-
-**Keywords**: Alice, Braitenberg, DistanceSensor
-
-%figure "alice"
-
-![alice.png](images/alice.png)
-
-%end
-
-In this example, you can see an Alice robot moving inside an arena while avoiding the walls.
-Its world file is in the "others/worlds" directory.
-Like many others, this example uses the `braitenberg` controller.
-
 ### boebot.wbt
 
 **Keywords**: BoeBot, DistanceSensor, LED
@@ -229,21 +215,6 @@ In this example, you can see a Koala robot from K-Team moving inside an arena wh
 Like many other examples, this one uses the `braitenberg` controller.
 The source code for this controller is located in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
 
-### magellan.wbt
-
-**Keywords**: differential wheels, DistanceSensor, Braitenberg, Magellan
-
-%figure "magellan"
-
-![magellan.png](images/magellan.png)
-
-%end
-
-In this example, you can see a Magellan robot moving inside an arena while avoiding the walls.
-As this robot is no longer produced, its world file is in the "others/worlds" directory.
-Like many other examples, this one uses the `braitenberg` controller.
-The source code for this controller is located in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
-
 ### pioneer2.wbt
 
 **Keywords**: differential wheels, DistanceSensor, Braitenberg, Pioneer 2
@@ -274,18 +245,3 @@ The robot will then recover its path.
 As this robot is a *Mindstorms* robot, its world file and its controller are in the "mindstorms" directory.
 This example is written both in Java and C, as a reference for translating Webots code from one language to another.
 The source code for this controller is in the "Rover" directory.
-
-### scout2.wbt
-
-**Keywords**: differential wheels, DistanceSensor, Braitenberg, Scout 2
-
-%figure "scout2"
-
-![scout2.png](images/scout2.png)
-
-%end
-
-In this example, a Scout 2 robot moves inside an arena while avoiding the walls.
-Its world file is in the "others/worlds" directory.
-Like many other examples, this one uses the braitenberg controller.
-The source code for this controller is in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.

@@ -1,4 +1,4 @@
-## Using the Thymio II robot
+## Using the Thymio II Robot
 
 %figure "Thymio II model in Webots"
 
@@ -17,7 +17,7 @@ Moreover Aseba studio and VPL for Thymio II can be connected on the simulated mo
 Many Aseba examples are working directly with the simulated robot.
 Finally several objects related to the Thymio II are available, including a pen which can draw on any 3D object.
 
-### Thymio II model
+### Thymio II Model
 
 The main characteristics of the Thymio II model in Webots is summed up in [this table](#thymio-ii-characteristics).
 
@@ -62,7 +62,7 @@ The calibration was performed using a regular A4 white paper.
 
 %end
 
-### Connect Aseba to the Thymio II model
+### Connect Aseba to the Thymio II Model
 
 The default controller of the Thymio II PROTO is the `thymio2_demo` controller.
 It should be changed to `thymio2_aseba` to allow the connection to Aseba programming environment.

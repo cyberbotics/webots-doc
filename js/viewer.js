@@ -105,40 +105,63 @@ function redirectUrls(node) {
     else if (href.startsWith('http')) // open external links in a new window
       a.setAttribute('target', '_blank');
     else if (href.endsWith('.md') || href.indexOf('.md#') > -1) {
-      addDynamicLoadEvent(a);
-      var match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
-      if (match && match.length >= 2) {
-        var newPage = match[1];
-        var anchor = match[2];
-        if (anchor)
-          anchor = anchor.substring(1); // remove the '#' character
-        a.setAttribute('href', forgeUrl(newPage, anchor));
+      var match, newPage, anchor;
+      if (href.startsWith('../')) { // Cross-book hyperlink case.
+        match = /^..\/([\w-]+)\/([\w-]+).md(#[\w-]+)?$/.exec(href);
+        if (match && match.length >= 3) {
+          var book = match[1];
+          newPage = match[2];
+          anchor = match[3];
+          if (anchor)
+            anchor = anchor.substring(1); // remove the '#' character
+          a.setAttribute('href', forgeUrl(book, newPage, anchor));
+        }
+      } else { // Cross-page hyperlink case.
+        addDynamicLoadEvent(a);
+        match = /^([\w-]+).md(#[\w-]+)?$/.exec(href);
+        if (match && match.length >= 2) {
+          newPage = match[1];
+          anchor = match[2];
+          if (anchor)
+            anchor = anchor.substring(1); // remove the '#' character
+          a.setAttribute('href', forgeUrl(localSetup.book, newPage, anchor));
+        }
       }
     }
   }
 }
 
-function forgeUrl(page, anchor) {
+function forgeUrl(book, page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ('#' + anchor) : '';
-  var currentUrl = location.href;
-  var newUrl = currentUrl;
+  var url = location.href;
   if (isCyberboticsUrl) {
     var i = location.href.indexOf('cyberbotics.com/doc');
-    newUrl = location.href.substr(0, i) + 'cyberbotics.com/doc/' + localSetup.book + '/' + page;
+    url = location.href.substr(0, i) + 'cyberbotics.com/doc/' + book + '/' + page;
     if (localSetup.branch !== '' && localSetup.repository && localSetup.repository !== 'omichel')
-      newUrl += '?version=' + localSetup.repository + ':' + localSetup.branch;
+      url += '?version=' + localSetup.repository + ':' + localSetup.branch;
     else if (localSetup.branch !== '')
-      newUrl += '?version=' + localSetup.branch;
-    newUrl += anchorString;
+      url += '?version=' + localSetup.branch;
+    url += anchorString;
   } else {
-    if (currentUrl.indexOf('page=') > -1)
-      newUrl = currentUrl.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page + anchorString);
+    var isFirstArgument;
+
+    // Add or replace the book argument.
+    if (url.indexOf('book=') > -1)
+      url = url.replace(/book=([^&]+)?/, 'book=' + book);
     else {
-      var isFirstArgument = (currentUrl.indexOf('?') < 0);
-      newUrl = currentUrl + (isFirstArgument ? '?' : '&') + 'page=' + page + anchorString;
+      isFirstArgument = (url.indexOf('?') < 0);
+      url = url + (isFirstArgument ? '?' : '&') + 'book=' + book;
+    }
+
+    // Add or replace the page argument.
+    if (url.indexOf('page=') > -1)
+      url = url.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page + anchorString);
+    else {
+      isFirstArgument = (url.indexOf('?') < 0);
+      url = url + (isFirstArgument ? '?' : '&') + 'page=' + page + anchorString;
     }
   }
-  return newUrl;
+  return url;
 }
 
 function addDynamicAnchorEvent(el) {
@@ -366,7 +389,7 @@ function populateViewDiv(mdContent) {
 
 // replace the browser URL after a dynamic load
 function updateBrowserUrl() {
-  var url = forgeUrl(localSetup.page, localSetup.anchor);
+  var url = forgeUrl(localSetup.book, localSetup.page, localSetup.anchor);
   if (history.pushState) {
     try {
       history.pushState({state: 'new'}, null, url);
@@ -527,7 +550,7 @@ function populateNavigation(selected) {
   var toc = document.getElementById('toc');
   var as;
 
-  toc.setAttribute('href', forgeUrl('menu'));
+  toc.setAttribute('href', forgeUrl(localSetup.book, 'menu'));
   addDynamicLoadEvent(toc);
 
   if (!selected) {
@@ -599,7 +622,7 @@ function populateNavigation(selected) {
       up.setAttribute('href', upElement.getAttribute('href'));
       addDynamicLoadEvent(up);
     } else {
-      up.setAttribute('href', forgeUrl('index'));
+      up.setAttribute('href', forgeUrl(localSetup.book, 'index'));
       addDynamicLoadEvent(up);
       up.classList.remove('disabled');
     }

@@ -121,7 +121,7 @@ More information on compositors is provided in the [compositor](camera.md) field
     In case of 'rotating' lidar, the `fieldOfView` term in the constraint is
     replaced by `2 * π`.
 
-#### Rotating lidar
+#### Rotating Lidar
 
 A lidar is said rotating if its `type` field is set to 'rotating'.
 In that case, the node inserted in the `rotatingHead` rotates along the Y axis at the frequency defined in the `defaultFrequency` field.

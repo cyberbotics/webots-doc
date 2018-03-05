@@ -1,4 +1,4 @@
-## Send a controller to the robot
+## Send a Controller to the Robot
 
 To test your controller on the real robot press the following button:
 

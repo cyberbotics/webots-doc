@@ -22,14 +22,14 @@ If the first child of the [Display](#display) node is or contains (recursive sea
 
 - `height`: height of the display in pixels
 
-### Coordinates system
+### Coordinates System
 
 Internally, the [Display](#display) image is stored in a 2D pixel array.
 The RGBA value (4x8 bits) of a pixel is dislayed in the status bar (the bar at the bottom of the console window) when the mouse hovers over the pixel in the [Display](#display).
 The 2D array has a fixed size defined by the `width` and `height` fields.
 The (0,0) coordinate corresponds to the top left pixel, while the (`width`-1,`height`-1) coordinate corresponds to the bottom right pixel.
 
-### Command stack
+### Command Stack
 
 Each function call of the [Display](#display) device API (except for the `wb_display_get_width` and `wb_display_get_height` functions) is storing a specific command into an internal stack.
 This command stack is sent to Webots during the next call of the `wb_robot_step` function, using a FIFO scheme (First In, First Out), so that commands are executed in the same order as the corresponding function calls.

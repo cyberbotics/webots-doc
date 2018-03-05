@@ -1,4 +1,4 @@
-## An error occurs when compiling the plugins
+## An Error Occurs When Compiling the Plugins
 
 If you are working on Linux and you installed Webots from the tarball package, it could be that some libraries are missing on your system.
 Usually you should get error messages in the Webots console mentioning the missing dependencies.

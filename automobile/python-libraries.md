@@ -1,4 +1,4 @@
-## Python library
+## Python Library
 
 The `automobile` library provides a Python wrapper of the C libraries `libdriver` and `libcar`.
 

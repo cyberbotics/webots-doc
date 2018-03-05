@@ -1,4 +1,4 @@
-# Robot window
+# Robot Window
 
 When you double click on the robot, a new window appears.
 This window is called `robot window`, it has several tabs allowing you to perform different things.

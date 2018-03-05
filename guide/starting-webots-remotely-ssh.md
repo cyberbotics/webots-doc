@@ -1,10 +1,10 @@
-## Starting Webots Remotely (ssh)
+## Starting Webots Remotely ("ssh")
 
 Webots can be started on a remote computer, by using `ssh` (or a similar) command.
 However, Webots will work only if it can get a X11 connection to a X-server running locally (on the same computer).
 It is currently not possible to redirect Webots graphical output to another computer.
 
-### Using the ssh command
+### Using the "ssh" Command
 
 Here is the usual way to start from computer A, a Webots instance that will run on computer B:
 
@@ -29,7 +29,7 @@ Unless configured differently, the `ssh` login and the screen login session must
 Note that the `xhost +` command can be used to grant access to the X-server to another user.
 For security reasons, the screen of the open session on computer B can be locked (e.g. with a screen-saver): this won't affect the running X-server.
 
-### Terminating the ssh session
+### Terminating the "ssh" Session
 
 A little problem with the above approach is that closing the `ssh` session will kill the remote jobs, including Webots.
 Fortunately it is easy to overcome this problem by starting the Webots as a background job and redirecting its output to a file:

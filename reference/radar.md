@@ -93,7 +93,7 @@ A returned power lower than this threshold will not produce any target.
 - `occlusion`: Defines if occlusions between the object and the radar should be checked before generating a target.
 This feature can become computationally expensive as the number of targets increase.
 
-### Target detection
+### Target Detection
 
 For each [Solid](solid.md) node having a `radarCrossSection` greater than 0, the following pseudo code is used to compute if a new target should be generated:
 

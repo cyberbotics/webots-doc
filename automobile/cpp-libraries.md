@@ -1,4 +1,4 @@
-## C++ libraries
+## C++ Libraries
 
 The two libraries (`libCppDriver` and `libCppCar`) provide a C++ wrapper of the C libraries `libdriver` and `libcar`.
 

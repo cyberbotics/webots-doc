@@ -1,4 +1,4 @@
-## Using the e-puck robot
+## Using the e-puck Robot
 
 %figure "The e-puck robot"
 
@@ -15,7 +15,7 @@ The other e-puck devices are not yet simulated in the current model.
 The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.
 E-puck is also available for [purchase](https://www.cyberbotics.com/buy) from Cyberbotics Ltd.
 
-### Overview of the robot
+### Overview of the Robot
 
 %figure "The e-puck robot at work"
 
@@ -59,7 +59,7 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 
 %end
 
-### E-puck model
+### E-puck Model
 
 %figure "E-puck characteristics"
 
@@ -78,7 +78,7 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 The standard model of the e-puck is provided in the "E-puck.proto" PROTO file which is located in the "WEBOTS\_HOME/projects/robots/gctronic/e-puck/protos" directory of the Webots distribution (see also "E-puckDistanceSensor.proto" PROTO file and "E-puckGroundSensors.proto" PROTO file); you will find complete specifications in it.
 The two PROTO fields `groundSensorSlot` and `turretSlot` have been included in the simulation model in order to support extension modules.
 In particular, the ground sensors module extension of the real e-puck robot is modelled using the "E-puckGroundSensors.proto" PROTO in Webots to provide 3 optional infra-red sensors pointing to the ground in front of the robot.
-The names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the Robot section of the [Reference Manual](http://www.cyberbotics.com/reference/)) are presented in the [table](#devices-names) below.
+The names of the simulated devices which are to be used as an argument of the `wb_robot_get_device` function (see the [Robot section](../reference/robot.md)) are presented in the [table](#devices-names) below.
 
 %figure "Devices names"
 
@@ -135,9 +135,9 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 %end
 
-### Control interface
+### Control Interface
 
-#### Robot window
+#### Robot Window
 
 %figure "E-puck robot window"
 
@@ -165,7 +165,7 @@ The Webots firmware can be uploaded this way on the e-puck robot.
 This e-puck control window appears because the `window` field of the `E-puck` node in the world file was set to "e-puck".
 Changing this `window` to an empty string will disable this control window.
 
-#### BotStudio overview
+#### BotStudio Overview
 
 %figure "BotStudio window"
 
@@ -198,7 +198,7 @@ A condition can be set on this value to get a line follower behavior.
 An example of BotStudio can be found by opening the "WEBOTS\_HOME/projects/robots/gctronic/e-puck/world/e-puck\_botstudio.wbt" world file (see below).
 The BotStudio windows appears upon double clicking on the e-puck when the controller points on a *.bsg* file.
 
-#### Bluetooth setup
+#### Bluetooth Setup
 
 The e-puck has a Bluetooth interface allowing it to communicate with Webots.
 This feature is available under Windows, Linux and macOS.
@@ -227,7 +227,11 @@ export WEBOTS_COM1=/dev/rfcomm1
 webots
 ```
 
-#### Bluetooth remote control
+> **Note**: On recent Ubuntu releases, the Bluetooth connection may work slowly.
+During a remote-control session, the real e-puck may have difficulties to run in real-time.
+In this case, remove the `modemmanager` package (`sudo apt-get remove modemmanager`) as documented [here](http://www.gctronic.com/doc/index.php/E-Puck#Bluetooth_slowdown_in_Ubuntu).
+
+#### Bluetooth Remote Control
 
 Once properly set up, the Bluetooth connection to your e-puck should appear in the dropdown menus of the e-puck robot window.
 If it doesn't appear there, it means that your computer was not properly configured to interface with your e-puck robot through Bluetooth.
@@ -244,7 +248,7 @@ To set up Bluetooth, please refer to the official e-puck website.
 To upload the last firmware on your robot, switch on your robot, press the `Upload HEX...` button on the e-puck robot window and select the COM port which corresponds to your robot.
 Then choose the "WEBOTS\_HOME/projects/robots/gctronic/e-puck/transfer/firmware/firmware-x.x.x.hex" file located in your Webots directory (*x.x.x* has to be replaced by the current firmware's version).
 
-#### Cross-compilation
+#### Cross-Compilation
 
 An alternative to the remote-control session for running the real e-puck is to cross-compile your code and to upload it on the e-puck.
 
@@ -261,7 +265,7 @@ Note that the `Upload HEX...` button of the e-puck control window allows you to 
 
 An example of cross-compilation is given in the "WEBOTS\_HOME/projects/robots/gctronic/e-puck/controllers/e-puck\_cross-compilation " subdirectory of your Webots directory.
 
-#### Cross-compilation issues on Linux 64 bit
+#### Cross-Compilation Issues on Linux 64 Bit
 
 When cross-compiling on Linux 64 bit, an error as such may occur:
 
@@ -325,4 +329,4 @@ The BotStudio windows appears upon double clicking on the e-puck allowing the us
 
 ![e-puck_kinematic.png](images/e-puck_kinematic.png) The "e-puck\_kinematic.wbt" is an example world similar to "e-puck.wbt" but where the kinematic field of the E-puck PROTO node is true.
 This allows the robot's motion to be calculated according to 2D kinematics algorithms and the collision detection to be calculated with 3D algorithms.
-More information on the kinematic mode in Webots can be found [here](https://www.cyberbotics.com/doc/reference/differentialwheels).
+More information on the kinematic mode in Webots can be found [here](../reference/differentialwheels.md).

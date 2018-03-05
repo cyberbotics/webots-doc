@@ -1,4 +1,4 @@
-## Walking parameters
+## Walking Parameters
 
 This appendix explains all the parameters that can be set in the configuration file (.ini) to tune the gait.
 

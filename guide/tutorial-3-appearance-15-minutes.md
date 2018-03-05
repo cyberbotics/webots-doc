@@ -1,4 +1,4 @@
-## Tutorial 3: Appearance (15 minutes)
+## Tutorial 3: Appearance (15 Minutes)
 
 The aim of this tutorial is to familiarize yourself with some nodes related to the graphical rendering.
 Good looking simulations can be created very quickly when these nodes are used adequately.
@@ -6,7 +6,7 @@ A good graphics quality does not only enhance the user's experience, it is also 
 
 The result at the end of this tutorial is shown in [this figure](#simulation-after-having-setup-the-light-and-the-appearance-nodes).
 
-### New simulation
+### New Simulation
 
 > **Hands on**: From the results of the previous tutorial, create a new simulation called "appearance.wbt" by using the `File / Save World As...` menu.
 

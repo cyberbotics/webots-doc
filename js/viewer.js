@@ -227,14 +227,23 @@ function addContributionBanner() {
   var content = document.querySelector("#content");
 
   // prepend contribution sticker to doc element
-  content.innerHTML = "<div class='contribution-banner'>" +
+  content.parentNode.innerHTML = "<div class='contribution-banner'>" +
                        "Found an error?" +
                        "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
                        "Contribute on GitHub!" +
                        "<img class=github-logo src='https://raw.githubusercontent.com/omichel/webots-doc/enhancement-contrib-banner/css/images/github.png'</img>" +
                        "</a>" +
+                       "<p id='contribution-close'>X</p>" +
                        "</div>" +
-                       content.innerHTML;
+                       content.parentNode.innerHTML;
+
+  var contributionBanner = document.querySelector(".contribution-banner");
+
+  document.querySelector("#contribution-close").onclick = function () {
+    contributionBanner.setAttribute("class", "contribution-banner");
+  };
+
+  setTimeout(function() { contributionBanner.setAttribute("class", "contribution-banner visible"); }, 100);
 }
 
 function setUpBlogStyleIfNeeded() {

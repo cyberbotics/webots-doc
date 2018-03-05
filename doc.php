@@ -102,7 +102,7 @@
           Found an error?
           <a target="_blank" href="https://github.com/omichel/webots-doc">
             Contribute on GitHub!
-          </a><
+          </a>
         </div>
       </div>
     </div>

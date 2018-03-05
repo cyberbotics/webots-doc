@@ -289,28 +289,3 @@ In this example, a Scout 2 robot moves inside an arena while avoiding the walls.
 Its world file is in the "others/worlds" directory.
 Like many other examples, this one uses the braitenberg controller.
 The source code for this controller is in the "WEBOTS\_HOME/projects/default/controllers/braitenberg" directory.
-
-### shrimp.wbt
-
-**Keywords**: Robot node, custom ODE plugin, keyboard, passive joint, uneven ground
-    sponginess, Shrimp, LinearMotor
-
-%figure "shrimp"
-
-![shrimp.png](images/shrimp.png)
-
-%end
-
-This example contains a model of the *Shrimp* robot, which is a mobile platform for rough terrain from [Bluebotics](http://www.bluebotics.ch).
-It has 6 wheels and a passive structure that adapts to the terrain profile and climbs obstacles.
-It can also turn on the spot.
-In this example the robot will first move on its own to the center of the world; then you may drive it yourself using the keyboard.
-To find out which keys will allow you to perform these operations, please read the explanation message printed at the beginning of the simulation in the Console window.
-
-Because of its particular structure, this model is also an example of custom ODE plugins for:
-
-- How to create and manage ODE joints.
-- How to add custom force.
-- How to create spongy tires.
-
-The source code for this controller is in the "WEBOTS\_HOME/projects/robots/shrimp/controllers/shrimp" directory, and the ODE plugin is in the "WEBOTS\_HOME/projects/robots/shrimp/plugins/physics/shrimp" directory.

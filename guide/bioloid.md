@@ -23,7 +23,7 @@ The physical dimensions, friction coefficients and mass distribution have been e
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/robotics/bioloid/worlds".
 
-### bioloid.wbt
+#### bioloid.wbt
 
 ![bioloid.wbt.png](images/robots/bioloid/bioloid.wbt.png) In this example, the dog-like robot model walks on a flat floor.
 

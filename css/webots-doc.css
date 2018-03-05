@@ -367,8 +367,7 @@
   padding: 10px;
   background: white;
   font-family: "Roboto";
-  border: 1px solid #e2e2e2;
-  border-top: none;
+  border-bottom: 1px solid #e2e2e2;
   z-index: 1;
   transform: translateY(-250%);
   transition-property: transform;

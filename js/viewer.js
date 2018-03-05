@@ -318,6 +318,15 @@ function populateViewDiv(mdContent) {
   // console.log('HTML content: \n\n')
   // console.log(html);
 
+  view.prepend(
+    "<div class='contribution-banner'>" +
+    "Found an error?" +
+    "<a target='_blank' href='https://github.com/omichel/webots-doc'>" +
+    "Contribute on GitHub!" +
+    "</a>" +
+    "</div>"
+  );
+
   view.innerHTML = html;
 
   redirectImages(view);

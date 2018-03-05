@@ -98,12 +98,6 @@
           </div>
           <div id="view"></div>
         </div>
-        <div class="contribution-banner">
-          Found an error?
-          <a target="_blank" href="https://github.com/omichel/webots-doc">
-            Contribute on GitHub!
-          </a>
-        </div>
       </div>
     </div>
 <?php

@@ -6,12 +6,13 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The "Atlas" is a humanoid robot developed by [Boston Dynamics](https://www.bostondynamics/atlas) with funding and oversight from DARPA.
+The robot is 1.8 meters tall and is designed for a variety of search and rescue tasks.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in the folder: "WEBOTS\_HOME/projects/robots/boston_dynamics/atlas/worlds".
 
-#### XXX.wbt
+#### atlas.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![atlas.wbt.png](images/robots/atlas/atlas.wbt.png) This simulation shows an Atlas robot in a simple environment. The robot is moving its right arm.

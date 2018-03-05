@@ -5,7 +5,7 @@
 | | |
 | --- | --- |
 | ![icon.png](images/robots/aibo-ers7/icon.png) | [Aibo ERS7](aibo-ers7.md) | Sony |
-| ![icon.png](images/robots/altino/icon.png) | [Altino](altino.md) | Saeon |
+| ![icon.png](images/robots/altino/icon.png) | [ALTINO](altino.md) | Saeon |
 | ![icon.png](images/robots/atlas/icon.png) | [Atlas](atlas.md) | Boston Dynamics |
 | ![icon.png](images/robots/bb8/icon.png) | [BB-8](bb8.md) | Sphero |
 | ![icon.png](images/robots/bioloid/icon.png) | [Bioloid](bioloid.md) | Robotis |

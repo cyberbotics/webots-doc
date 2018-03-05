@@ -69,7 +69,7 @@
     - [Going Further](going-further.md)
 - [Robots](robots.md)
     - [Aibo ERS7](aibo-ers7.md)
-    - [Altino](altino.md)
+    - [ALTINO](altino.md)
     - [Atlas](atlas.md)
     - [BB-8](bb8.md)
     - [Bioloid](bioloid.md)

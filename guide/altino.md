@@ -1,17 +1,23 @@
-## Saeon's Altino
+## Saeon's ALTINO
 
-%figure "Altino model in Webots"
+%figure "ALTINO model in Webots"
 
 ![model.png](images/robots/altino/model.png)
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The "ALTINO System" is a robot platform designed for education.
+It is a four-wheeled robot based on an Ackermann vehicle frame.
+It contains many sensors including infrared sensors, a compass and an accelerometer.
+More information on the [constructor website](https://www.saeon-altino.com).
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following example in this folder: "WEBOTS\_HOME/projects/robots/saeon/altino/worlds".
 
-#### XXX.wbt
+#### altino.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![altino.wbt.png](images/robots/altino/altino.wbt.png) This simulation shows the ALTINO model in a simple environment.
+The ALTINO controller, written in Python, shows a collision avoidance behavior based on a Braitenberg vehicle.
+Alternatively, the vehicle can be controlled manually using the computer keyboard.
+Please refer to the Webots console to learn the control keys.

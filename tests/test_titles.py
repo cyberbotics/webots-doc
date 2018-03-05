@@ -6,7 +6,7 @@ import re
 from books import Books
 
 exceptions = [  # Words which can start with a lowercase.
-    'adept', 'e-puck', 'etc.', 'iRobot', 'macOS', 'youBot'
+    'adept', 'e-puck', 'etc.', 'iCub', 'iRobot', 'macOS', 'micromagic', 'youBot'
 ]
 prepositions = [
     'aboard', 'about', 'above', 'across', 'after', 'against', 'along', 'amid',

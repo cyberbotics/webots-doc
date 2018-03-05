@@ -223,6 +223,19 @@ function applyToTitleDiv() {
   }
 }
 
+function addContributionBanner() {
+  var contributionBanner = document.querySelector("#content");
+
+  // prepend contribution sticker to doc element
+  contributionBanner.innerHTML = "<div class='contribution-banner'>" +
+                                             "Found an error?" +
+                                             "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
+                                             "Contribute on GitHub!" +
+                                             "</a>" +
+                                             "</div>" +
+                                             contributionBanner.innerHTML;
+}
+
 function setUpBlogStyleIfNeeded() {
   if (localSetup.book === 'blog') {
     var center = document.getElementById('center');
@@ -319,14 +332,6 @@ function populateViewDiv(mdContent) {
   // console.log(html);
 
   view.innerHTML = html;
-  view.prepend(
-    "<div class='contribution-banner'>" +
-    "Found an error?" +
-    "<a target='_blank' href='https://github.com/omichel/webots-doc'>" +
-    "Contribute on GitHub!" +
-    "</a>" +
-    "</div>"
-  );
 
   redirectImages(view);
   redirectUrls(view);
@@ -759,4 +764,5 @@ document.addEventListener('DOMContentLoaded', function() {
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
+  addContributionBanner();
 });

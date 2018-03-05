@@ -353,9 +353,16 @@
 .webots-doc .contribution-banner {
   margin: 0 auto;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   background: white;
   font-family: "Roboto";
+  border-top: 1px solid #ddd;
+  padding-bottom: 40px;
+}
+
+.webots-doc .contribution-banner .github-logo {
+  width: 16px;
+  margin-left: 4px;
 }
 
 .blog #title {

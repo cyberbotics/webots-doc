@@ -224,16 +224,16 @@ function applyToTitleDiv() {
 }
 
 function addContributionBanner() {
-  var contributionBanner = document.querySelector("#content");
+  var content = document.querySelector("#content");
 
   // prepend contribution sticker to doc element
-  contributionBanner.innerHTML = "<div class='contribution-banner'>" +
-                                             "Found an error?" +
-                                             "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
-                                             "Contribute on GitHub!" +
-                                             "</a>" +
-                                             "</div>" +
-                                             contributionBanner.innerHTML;
+  content.innerHTML += "<div class='contribution-banner'>" +
+                       "Found an error?" +
+                       "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
+                       "Contribute on GitHub!" +
+                       "<img class=github-logo src='./css/images/github.png'</img>" +
+                       "</a>" +
+                       "</div>";
 }
 
 function setUpBlogStyleIfNeeded() {

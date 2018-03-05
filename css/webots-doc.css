@@ -352,8 +352,8 @@
 .webots-doc .contribution-banner {
   box-sizing: border-box;
   position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  width: inherit;
   margin: 0 auto;
   text-align: center;
   padding: 10px;

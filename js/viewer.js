@@ -226,8 +226,10 @@ function applyToTitleDiv() {
 function addContributionBanner() {
   var content = document.querySelector("#content");
 
+  var displacement = document.querySelector("#footer") ? "44px" : "0px";
+
   // prepend contribution sticker to doc element
-  content.parentNode.innerHTML = "<div class='contribution-banner'>" +
+  content.parentNode.innerHTML = "<div style='top:" + displacement + "' class='contribution-banner'>" +
                        "Found an error?" +
                        "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
                        "Contribute on GitHub!" +

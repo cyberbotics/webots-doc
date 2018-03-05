@@ -353,7 +353,7 @@
   box-sizing: border-box;
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: 0;
+  top: 0px;
   margin: 0 auto;
   text-align: center;
   padding: 10px;
@@ -362,10 +362,11 @@
   border: 1px solid #e2e2e2;
   border-top: none;
   z-index: 2;
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   transition-property: transform;
   transition-duration: 1s;
   transition-timing-function: ease;
+  z-index: 11;
 }
 
 .webots-doc .visible {

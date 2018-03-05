@@ -292,6 +292,7 @@
 }
 .webots-doc img {
   max-width: 100%;
+  vertical-align: middle;
 }
 .webots-doc figure {
   max-width: 80%;
@@ -391,7 +392,6 @@
 .webots-doc .contribution-banner .github-logo {
   width: 16px;
   margin-left: 5px;
-  transform: translateY(3px);
 }
 
 .blog #title {

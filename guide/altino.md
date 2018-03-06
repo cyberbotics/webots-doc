@@ -13,7 +13,7 @@ More information on the [constructor website](https://www.saeon-altino.com).
 
 ### Samples
 
-You will find the following example in this folder: "WEBOTS\_HOME/projects/robots/saeon/altino/worlds".
+You will find the following example in this folder: "WEBOTS\_HOME/projects/robots/saeon/worlds".
 
 #### altino.wbt
 

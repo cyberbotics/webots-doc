@@ -266,7 +266,7 @@ function addContributionBanner() {
     contributionBanner.setAttribute("class", "contribution-banner");
   };
 
-  setTimeout(function() { contributionBanner.setAttribute("class", "contribution-banner visible"); }, 1500);
+  setTimeout(function() { contributionBanner.setAttribute("class", "contribution-banner visible-banner"); }, 1500);
 }
 
 function setUpBlogStyleIfNeeded() {

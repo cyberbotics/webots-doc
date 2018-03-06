@@ -216,9 +216,9 @@ function redirectImages(node) {
 }
 
 function applyAnchor() {
-  var anchors = document.getElementsByName(localSetup.anchor);
-  if (anchors.length > 0)
-    anchors[0].scrollIntoView(true);
+  var firstAnchor = document.querySelector("[name='" +localSetup.anchor +"']");
+  if (firstAnchor)
+    firstAnchor.scrollIntoView(true);
   else
     window.scrollTo(0, 0);
 }

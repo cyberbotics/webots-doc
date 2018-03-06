@@ -343,6 +343,8 @@ function populateViewDiv(mdContent) {
 
   view.innerHTML = html;
 
+  renderGraphs();
+
   redirectImages(view);
   redirectUrls(view);
 
@@ -357,7 +359,6 @@ function populateViewDiv(mdContent) {
 
   applyAnchorIcons(view);
   highlightCode(view);
-  renderGraphs();
 
   updateSelection();
   setUpBlogStyleIfNeeded();
@@ -397,7 +398,9 @@ function highlightCode(view) {
 function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
+      console.log(bindFunctions);
       document.getElementById(id).innerHTML = svgCode;
+      bindFunctions();
     });
   }
 }

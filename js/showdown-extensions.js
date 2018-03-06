@@ -185,7 +185,7 @@ showdown.extension('wbChart', function() {
           var id = 'mermaidGraph' + window.mermaidGraphCounter;
           window.mermaidGraphCounter++;
           window.mermaidGraphs[id] = content;
-          return '<div id="' + id + '" class="mermaid"></div>';
+          return '<div id="' + id + 'Div' + '" class="mermaid"></div>';
         });
         return text;
       }

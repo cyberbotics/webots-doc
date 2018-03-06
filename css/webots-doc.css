@@ -509,3 +509,8 @@
   font-style: italic;
   padding: 10px;
 }
+
+g .path {
+  stroke: #333;
+  stroke-width:2px;
+}

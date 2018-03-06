@@ -6,12 +6,13 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The "Koala" robot is a six-wheeled indoor robot produced by [K-Team](https://www.k-team.com/mobile-robotics-products/koala).
+It is mounted by multiple sensors including 16 distance sensors.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/k-team/koala/worlds":
 
-#### XXX.wbt
+#### koala.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![koala.wbt.png](images/robots/koala/koala.wbt.png) This simulation shows a Koala avoiding obstacles in a square arena.

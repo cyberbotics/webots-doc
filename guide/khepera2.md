@@ -6,12 +6,13 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The "Khepera II" robot is a two-wheeled robot produced by [K-Team](https://www.k-team.com/mobile-robotics-products/old-products/khepera-ii).
+It is mounted by multiple sensors including 8 distance sensors.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/k-team/khepera2/worlds":
 
-#### XXX.wbt
+#### khepera2.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![khepera2.wbt.png](images/robots/khepera2/khepera2.wbt.png) In this example, you can see a Khepera II robot moving inside an arena while avoiding the walls.

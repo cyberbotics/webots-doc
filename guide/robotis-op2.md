@@ -6,12 +6,4 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
-
-### Samples
-
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
-
-#### XXX.wbt
-
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+Please refer to the dedicated book about the [Robotis' Robotis-OP2](../robotis-op2/index.md).

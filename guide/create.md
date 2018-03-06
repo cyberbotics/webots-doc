@@ -6,12 +6,16 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The [iRobot Create](http://www.irobot.com/About-iRobot/STEM/Create-2.aspx) robot is a customizable frame based on the famous the Roomba vacuum cleaning platform, and is created by iRobot.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/irobot/create/worlds".
 
-#### XXX.wbt
+#### create.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![create.wbt.png](images/robots/create/create.wbt.png) This simulation shows the Create robot which cleans a small appartement.
+The robot moves straight.
+When hitting an obstacle or detecting a virtual wall, the robot turns randomly.
+The dust on the ground is a texture of a Display device managed by a Supervisor controller.
+The Supervisor removes draws transparent circles in this texture at the robot location.

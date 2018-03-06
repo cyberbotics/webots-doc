@@ -1,17 +1,17 @@
-## Unimation's PUMA
+## Unimation's PUMA 560
 
-%figure "PUMA model in Webots"
+%figure "PUMA 560 model in Webots"
 
 ![model.png](images/robots/puma/model.png)
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The [PUMA robotic arm](https://en.wikipedia.org/wiki/Programmable_Universal_Machine_for_Assembly#Model_560_C) (for "Programmable Universal Machine for Assembly") is a six-axis arm with 3 axis making up a spherical wrist.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/unimation/puma/worlds".
 
-#### XXX.wbt
+#### puma560.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![puma560.wbt.png](images/robots/puma/puma560.wbt.png) This simulation shows the PUMA robot which moves to different targets.

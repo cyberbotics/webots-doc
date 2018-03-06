@@ -3,36 +3,6 @@
 This section discusses worlds containing models of real robots.
 The world files for these examples are located in the "robots/(robot\_name)/worlds" directory, and the corresponding controllers are located in the "robots/(robot\_name)/controllers" directory.
 
-### hoap2\_sumo.wbt
-
-**Keywords**: Robot node, humanoid, texture, dancing, Hoap 2, IndexedFaceSet, RotationalMotor,
-    active joint, force, TouchSensor
-
-%figure "hoap2_sumo"
-
-![hoap2_sumo.png](images/hoap2_sumo.png)
-
-%end
-
-In this example, a Hoap2 robot from Fujitsu performs the Shiko dance (the dance sumos perform before a combat).
-This robot is equipped with `TouchSensors` on the soles of its feet; it measures and logs the pressure exerted by its body on the ground.
-The source code for this controller is in the "hoap2" directory.
-
-### hoap2\_walk.wbt
-
-**Keywords**: Robot node, humanoid, texture, walking, Hoap 2, IndexedFaceSet, RotationalMotor,
-    active joint, force, TouchSensor
-
-%figure "hoap2_walk"
-
-![hoap2_walk.png](images/hoap2_walk.png)
-
-%end
-
-In this example, a Hoap2 robot from Fujitsu walks straight forward on a tatami.
-This robot is equipped with `TouchSensors` on the soles of its feet; it measures and logs the pressure exerted by its body on the ground.
-The source code for this controller is in the "hoap2" directory.
-
 ### khepera.wbt
 
 **Keywords**: differential wheels, DistanceSensor, Braitenberg, texture, Khepera

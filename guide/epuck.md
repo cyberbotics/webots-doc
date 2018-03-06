@@ -1,4 +1,4 @@
-## GCTronics' e-puck
+## GCTronic' e-puck
 
 %figure "e-puck model in Webots"
 

@@ -1,4 +1,4 @@
-## GCTronics' Elisa 3
+## GCTronic' Elisa 3
 
 %figure "Elisa 3 model in Webots"
 
@@ -6,12 +6,13 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The [GCTronic Elisa3](http://www.gctronic.com/doc/index.php/Elisa-3) is a small size two-wheeled robot able of moving horizontally or vertically thanks to its magnetic wheels.
+It has multiple sensors including IR distance sensors, accelerometer and an RF radio.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/gctronic/elisa/worlds".
 
-#### XXX.wbt
+#### elisa3.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![elisa3.wbt.png](images/robots/elisa/elisa3.wbt.png) This simulation shows 10 Elisa robots moving randomly in a square arena with obstacles.

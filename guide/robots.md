@@ -12,8 +12,8 @@
 | ![icon.png](images/robots/boebot/icon.png) | [Boe-Bot](boebot.md) | Parallax |
 | ![icon.png](images/robots/create/icon.png) | [Create](create.md) | iRobot |
 | ![icon.png](images/robots/darwin-op/icon.png) | [DARwIn-OP](darwin-op.md) | Robotis |
-| ![icon.png](images/robots/elisa3/icon.png) | [Elisa 3](elisa3.md) | GCTronics |
-| ![icon.png](images/robots/epuck/icon.png) | [e-puck](epuck.md) | GCTronics |
+| ![icon.png](images/robots/elisa3/icon.png) | [Elisa 3](elisa3.md) | GCTronic |
+| ![icon.png](images/robots/epuck/icon.png) | [e-puck](epuck.md) | GCTronic |
 | ![icon.png](images/robots/firebird6/icon.png) | [FireBird 6](firebird6.md) | NEXics |
 | ![icon.png](images/robots/hemisson/icon.png) | [Hemisson](hemisson.md) | K-Team |
 | ![icon.png](images/robots/hoap2/icon.png) | [HOAP-2](hoap2.md) | Fujitsu |

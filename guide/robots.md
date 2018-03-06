@@ -26,7 +26,7 @@
 | ![icon.png](images/robots/khr-2hv/icon.png) | [KHR-2HV](khr-2hv.md) | KONDO |
 | ![icon.png](images/robots/koala/icon.png) | [Koala](koala.md) | K-Team |
 | ![icon.png](images/robots/mantis/icon.png) | [Mantis](mantis.md) | micromagic |
-| ![icon.png](images/robots/microbot/icon.png) | [Microbot](microbot.md) | Picaxe |
+| ![icon.png](images/robots/microbot/icon.png) | [Microbot](microbot.md) | PICAXE |
 | ![icon.png](images/robots/mindstorms/icon.png) | [Mindstorms](mindstorms.md) | Lego |
 | ![icon.png](images/robots/nao/icon.png) | [Nao](nao.md) | SoftBankics |
 | ![icon.png](images/robots/pioneer2/icon.png) | [Pioneer 2](pioneer2.md) | adept |

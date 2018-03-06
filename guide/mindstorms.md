@@ -6,12 +6,17 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+Robot models based on [Lego's Mindstorms](https://www.lego.com/en-us/mindstorms) can be created in Webots.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/lego/mindstorms/worlds".
 
-#### XXX.wbt
+#### rover.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![rover.wbt.png](images/robots/mindstorms/rover.wbt.png) In this example you can see the Mindstorms Rover robot following a black line drawn on the ground.
+In the middle of this line there is an obstacle which the robot navigates around after detecting a collision with it.
+The robot will then recover its path.
+As this robot is a *Mindstorms* robot, its world file and its controller are in the "mindstorms" directory.
+This example is written both in Java and C, as a reference for translating Webots code from one language to another.
+The source code for this controller is in the "Rover" directory.

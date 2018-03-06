@@ -398,7 +398,6 @@ function highlightCode(view) {
 function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
-      console.log(bindFunctions);
       document.getElementById(id).innerHTML = svgCode;
       bindFunctions();
     });
@@ -768,7 +767,13 @@ window.onscroll = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  window.mermaidAPI.initialize({startOnLoad:false});
+  window.mermaidAPI.initialize({
+    startOnLoad: false,
+    flowChart: {
+      width:'1000px',
+      useMaxWidth: true
+    }
+  });
   window.mermaidGraphs = {};
   window.mermaidGraphCounter = 0;
 

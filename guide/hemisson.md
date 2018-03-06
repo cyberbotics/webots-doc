@@ -6,12 +6,16 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The "Hemisson" is a two-wheeled robot designed for education and teaching developped by [K-TEAM](https://www.k-team.com/mobile-robotics-products/old-products/hemisson).
+Equipped with several sensors and a programmable 8bit MCU, the robot is able to avoid obstacles, detect ambient light intensity and follow a line on the floor.
+Other equipments include programmable LED, buzzer and switches.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/k-team/hemisson/worlds".
 
-#### XXX.wbt
+#### hemisson.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![hemisson.wbt.png](images/robots/hemisson/hemisson.wbt.png) This simulation shows an Hemisson robot which draws on the floor.
+The robot is moving randomly while avoiding obstacles.
+The ink evaporates continuously.

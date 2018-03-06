@@ -3,21 +3,6 @@
 This section discusses worlds containing models of real robots.
 The world files for these examples are located in the "robots/(robot\_name)/worlds" directory, and the corresponding controllers are located in the "robots/(robot\_name)/controllers" directory.
 
-### hemisson\_cross\_compilation.wbt
-
-**Keywords**: differential wheels, Pen, cross-compilation, texture, Hemisson
-
-%figure "hemisson_cross_compilation"
-
-![hemisson_cross_compilation.png](images/hemisson_cross_compilation.png)
-
-%end
-
-In this example, a Hemisson robot moves on a white floor while avoiding the obstacles.
-Its `Pen` device draws a black line which slowly fades.
-This example is a cross-compilation example for the real Hemisson robot.
-The source code for this controller is in the "hemisson" directory.
-
 ### hoap2\_sumo.wbt
 
 **Keywords**: Robot node, humanoid, texture, dancing, Hoap 2, IndexedFaceSet, RotationalMotor,

@@ -11,7 +11,7 @@ It is a two-wheeled robot including 8 ultrasonic sensors and more.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/nex/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/nex/worlds".
 
 #### fire\_bird\_6.wbt
 

@@ -11,7 +11,7 @@ It has multiple sensors including IR distance sensors, accelerometer and an RF r
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/gctronic/elisa/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/gctronic/elisa/worlds".
 
 #### elisa3.wbt
 

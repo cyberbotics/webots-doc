@@ -6,12 +6,13 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+"Fire Bird VI" is a Robotic Research Platform designed by [NEX Robotics](http://www.nex-robotics.com/products/fire-bird-vi-robot/fire-bird-vi-robotic-research-platform.html).
+It is a two-wheeled robot including 8 ultrasonic sensors and more.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/nex/worlds".
 
-#### XXX.wbt
+#### fire_bird_6.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![fire_bird_6.wbt.png](guide/images/robots/firebird6/fire_bird_6.wbt.png) The FireBird 6 moves inside a squared arena and avoid obstacles.

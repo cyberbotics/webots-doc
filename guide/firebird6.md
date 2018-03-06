@@ -13,6 +13,6 @@ It is a two-wheeled robot including 8 ultrasonic sensors and more.
 
 You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/nex/worlds".
 
-#### fire_bird_6.wbt
+#### fire\_bird\_6.wbt
 
 ![fire_bird_6.wbt.png](guide/images/robots/firebird6/fire_bird_6.wbt.png) The FireBird 6 moves inside a squared arena and avoid obstacles.

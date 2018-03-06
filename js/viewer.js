@@ -357,6 +357,7 @@ function populateViewDiv(mdContent) {
 
   applyAnchorIcons(view);
   highlightCode(view);
+  renderGraphs();
 
   updateSelection();
   setUpBlogStyleIfNeeded();
@@ -390,6 +391,14 @@ function highlightCode(view) {
       var code = codes[j];
       hljs.highlightBlock(code);
     }
+  }
+}
+
+function renderGraphs() {
+  for (var id in window.mermaidGraphs) {
+    window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
+      document.getElementById(id).innerHTML = svgCode;
+    });
   }
 }
 
@@ -756,6 +765,10 @@ window.onscroll = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+  window.mermaidAPI.initialize({startOnLoad:false});
+  window.mermaidGraphs = {};
+  window.mermaidGraphCounter = 0;
+
   initializeHandle();
 
   if (!isCyberboticsUrl) {

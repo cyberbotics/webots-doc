@@ -398,7 +398,7 @@ function highlightCode(view) {
 function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
-      document.getElementById(id + 'Div').innerHTML = svgCode;
+      document.querySelector('#' + id + 'Div').innerHTML = svgCode;
       bindFunctions();
     });
   }

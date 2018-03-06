@@ -181,13 +181,14 @@ showdown.extension('wbChart', function() {
     { // chart with legend to HTML
       type: 'lang',
       filter: function(text, converter, options) {
-        mermaidAPI.initialize({startOnLoad:false});
+        global.mermaidAPI.initialize({startOnLoad:false});
         text = text.replace(/%chart\s+([^"][^]+?)%end/gi, function(match, content) {
           var cb = function(svgGraph) {
             console.log(svgGraph)
           }
-          mermaidAPI.render('id1', content, cb);
-          return '<div class="mermaid">' + cb + '<div class="mermaidRender"></div></div>';
+          global.mermaidAPI.render('id1', content, cb);
+          //return '<div class="mermaid">' + cb + '<div class="mermaidRender"></div></div>';
+          return cb;
         });
         return text;
       }

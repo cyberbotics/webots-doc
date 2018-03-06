@@ -94,7 +94,7 @@ function computeTargetPath() {
 
 function redirectUrls(node) {
   // redirect a's href
-  var as = node.getElementsByTagName('a');
+  var as = node.querySelectorAll('a');
   for (var i = 0; i < as.length; i++) {
     var a = as[i];
     var href = a.getAttribute('href');
@@ -204,7 +204,7 @@ function aClick(el) {
 
 function redirectImages(node) {
   // redirect img's src
-  var imgs = node.getElementsByTagName('img');
+  var imgs = node.querySelectorAll('img');
   var targetPath = computeTargetPath();
   for (var i = 0; i < imgs.length; i++) {
     var img = imgs[i];
@@ -224,7 +224,7 @@ function applyAnchor() {
 }
 
 function applyToTitleDiv() {
-  var titleContentElement = document.getElementById('title-content');
+  var titleContentElement = document.querySelector('#title-content');
   if (titleContentElement) {
     var newTitle;
     if (localSetup.book === 'guide')
@@ -271,14 +271,14 @@ function addContributionBanner() {
 
 function setUpBlogStyleIfNeeded() {
   if (localSetup.book === 'blog') {
-    var center = document.getElementById('center');
+    var center = document.querySelector('#center');
     center.setAttribute('class', 'blog');
 
     setHandleWidth(0);
 
     document.title = 'Webots Blog';
 
-    var figures = document.getElementsByTagName('figure');
+    var figures = document.querySelectorAll('figure');
     if (figures.length > 0) {
       var modal = document.createElement('div');
       var caption = document.createElement('div');
@@ -348,7 +348,7 @@ function applyToPageTitle(mdContent) {
 function populateViewDiv(mdContent) {
   setupUrl(document.location.href);
 
-  var view = document.getElementById('view');
+  var view = document.querySelector('#view');
   while (view.firstChild)
     view.removeChild(view.firstChild);
 
@@ -369,7 +369,7 @@ function populateViewDiv(mdContent) {
   redirectImages(view);
   redirectUrls(view);
 
-  var images = view.getElementsByTagName('img');
+  var images = view.querySelectorAll('img');
   if (images.length > 0) {
     // apply the anchor only when the images are loaded,
     // otherwise, the anchor can be overestimated.
@@ -408,7 +408,7 @@ function highlightCode(view) {
   for (var i = 0; i < supportedLanguages.length; i++) {
     var language = supportedLanguages[i];
     hljs.configure({languages: [ language ]});
-    var codes = document.getElementsByClassName('language-' + language);
+    var codes = document.querySelectorAll('.language-' + language);
     for (var j = 0; j < codes.length; j++) {
       var code = codes[j];
       hljs.highlightBlock(code);
@@ -421,7 +421,7 @@ function applyAnchorIcons(view) {
   var tags = ['figcaption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
   var i;
   for (i = 0; i < tags.length; i++) {
-    var array = Array.prototype.slice.call(view.getElementsByTagName(tags[i]));
+    var array = Array.prototype.slice.call(view.querySelectorAll(tags[i]));
     elements = elements.concat(array);
   }
   for (i = 0; i < elements.length; i++) {
@@ -478,9 +478,9 @@ function updateMenuScrollbar() {
   var t = document.documentElement.scrollTop || document.body.scrollTop;
   var p = e.scrollHeight - t - e.clientHeight;
   if (p < 244) // 244 is the height in pixels of the footer of Cyberbotics web page
-    document.getElementById('left').style.height = (e.clientHeight - 290 + p) + 'px';
+    document.querySelector('#left').style.height = (e.clientHeight - 290 + p) + 'px';
   else // 44 is the height in pixels of the header of Cyberbotics web page (44 + 244 = 290)
-    document.getElementById('left').style.height = 'calc(100% - 44px)';
+    document.querySelector('#left').style.height = 'calc(100% - 44px)';
 }
 
 function updateSelection() {
@@ -491,15 +491,15 @@ function updateSelection() {
 }
 
 function changeMenuSelection() {
-  var menu = document.getElementById('menu');
-  var selecteds = [].slice.call(menu.getElementsByClassName('selected'));
+  var menu = document.querySelector('#menu');
+  var selecteds = [].slice.call(menu.querySelectorAll('.selected'));
   var i;
   var selected;
   for (i = 0; i < selecteds.length; i++) {
     selected = selecteds[i];
     selected.classList.remove('selected');
   }
-  var as = menu.getElementsByTagName('a');
+  var as = menu.querySelectorAll('a');
   for (i = 0; i < as.length; i++) {
     var a = as[i];
     var href = a.getAttribute('href');
@@ -542,10 +542,10 @@ function changeMenuSelection() {
 }
 
 function populateNavigation(selected) {
-  var next = document.getElementById('next');
-  var previous = document.getElementById('previous');
-  var up = document.getElementById('up');
-  var toc = document.getElementById('toc');
+  var next = document.querySelector('#next');
+  var previous = document.querySelector('#previous');
+  var up = document.querySelector('#up');
+  var toc = document.querySelector('#toc');
   var as;
 
   toc.setAttribute('href', forgeUrl(localSetup.book, 'menu'));
@@ -568,7 +568,7 @@ function populateNavigation(selected) {
       nextLiSibling = nextLiSibling.nextSibling;
     }
     if (nextLiSibling) {
-      as = nextLiSibling.getElementsByTagName('a');
+      as = nextLiSibling.querySelectorAll('a');
       if (as.length > 0)
         nextElement = as[0];
     }
@@ -591,7 +591,7 @@ function populateNavigation(selected) {
       previousLiSibling = previousLiSibling.previousSibling;
     }
     if (previousLiSibling) {
-      as = previousLiSibling.getElementsByTagName('a');
+      as = previousLiSibling.querySelectorAll('a');
       if (as.length > 0)
         previousElement = as[0];
     }
@@ -610,7 +610,7 @@ function populateNavigation(selected) {
     if (selected.parentNode.parentNode.tagName.toLowerCase() === 'li')
       parentLi = selected.parentNode.parentNode;
     if (parentLi) {
-      as = parentLi.getElementsByTagName('a');
+      as = parentLi.querySelectorAll('a');
       if (as.length > 0)
         upElement = as[0];
     }
@@ -629,19 +629,19 @@ function populateNavigation(selected) {
 
 function populateMenu(menu) {
   // make in order that the <li> tags above the <a> are also clickable
-  var lis = menu.getElementsByTagName('li');
+  var lis = menu.querySelectorAll('li');
   for (var i = 0; i < lis.length; i++) {
     var li = lis[i];
     li.addEventListener('click',
       function(event) {
-        var as = event.target.getElementsByTagName('a');
+        var as = event.target.querySelectorAll('a');
         if (as.length > 0)
           aClick(as[0]);
       }
     );
   }
 
-  var menuDiv = document.getElementById('menu');
+  var menuDiv = document.querySelector('#menu');
   menuDiv.appendChild(menu);
 
   menu.setAttribute('id', 'accordion');

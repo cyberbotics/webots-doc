@@ -3,19 +3,6 @@
 This section discusses worlds containing models of real robots.
 The world files for these examples are located in the "robots/(robot\_name)/worlds" directory, and the corresponding controllers are located in the "robots/(robot\_name)/controllers" directory.
 
-### boebot.wbt
-
-**Keywords**: BoeBot, DistanceSensor, LED
-
-%figure "boebot"
-
-![boebot.png](images/boebot.png)
-
-%end
-
-In this example, BoeBot moves inside an arena while avoiding the walls.
-When the robot detects an obstacle with one of its `DistanceSensor`s, it turns the corresponding `LED` on.
-
 ### hemisson\_cross\_compilation.wbt
 
 **Keywords**: differential wheels, Pen, cross-compilation, texture, Hemisson

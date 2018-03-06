@@ -6,7 +6,7 @@
 
 %end
 
-The "Atlas" is a humanoid robot developed by [Boston Dynamics](https://www.bostondynamics/atlas) with funding and oversight from DARPA.
+The "Atlas" is a humanoid robot developed by [Boston Dynamics](https://www.bostondynamics.com/atlas) with funding and oversight from DARPA.
 The robot is 1.8 meters tall and is designed for a variety of search and rescue tasks.
 
 ### Samples

@@ -10,8 +10,12 @@ TODO: description of the robot including a link to the constructor.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/kuka/youbot/worlds".
 
-#### XXX.wbt
+#### youbot.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![youbot.wbt.png](images/robots/youbot/youbot.wbt.png) This simulation shows ...
+
+#### youbot\_matlab.wbt
+
+![youbot.wbt.png](images/robots/youbot/youbot.wbt.png) This simulation shows ...

@@ -10,8 +10,8 @@ TODO: description of the robot including a link to the constructor.
 
 ### Samples
 
-You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/XXX/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/kondo/khr-2hv/worlds".
 
-#### XXX.wbt
+#### khr-2hv.wbt
 
-![XXX.wbt.png](images/robots/XXX/XXX.wbt.png) This simulation shows ...
+![khr-2hv.wbt.png](images/robots/khr-2hv/khr-2hv.wbt.png) This simulation shows ...

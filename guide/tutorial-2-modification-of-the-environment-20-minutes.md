@@ -64,10 +64,14 @@ The graphical representation and the collision shape are often but not necessari
 Finally, the `physics` field defines if the object belongs to the dynamical or to the statical environment.
 All these subnodes are optional, but the `physics` field needs the `boundingObject` to be defined.
 
-%figure "The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics)."
+%chart
+graph TD
+  Solid[Solid] -->|physics| Physics[Physics]
+  Solid -->|boundingObject| Geometry1[Geometry]
+  Solid -->|children| Shape[Shape]
+    Shape -->|geometry| Geometry2[Geometry]
 
-![tutorial_solid.png](images/tutorial_solid.png)
-
+  class Solid highlightedNode;
 %end
 
 The Geometry box (in [this figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics)) stands for any kind of geometrical primitive.

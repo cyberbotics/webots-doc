@@ -122,18 +122,16 @@ graph LR
     Zoom[Zoom]
   end
 
-  classDef AbstractClassStyle fill:#f9f;
-  classDef BoundingObjectStyle fill:#63639c
-  classDef VRMLBoundingObjectStyle fill:#63639c,stroke:#f66,stroke-width:5px
-  classDef VRMLNodeStyle fill:#70a6ff,stroke:#f66,stroke-width:5px
-  classDef NodeStyle fill:#70a6ff
-  classDef DefinitionStyle fill:#ffffde,stroke-width:0px
-  style VRML fill:#ffffcc,stroke:#f66,stroke-width:5px,align:right
+  classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
+  classDef BoundingObjectStyle fill:#d3ffc9;
+  classDef VRMLBoundingObjectStyle fill:#d3ffc9,stroke:#444444,stroke-width:5px;
+  classDef VRMLNodeStyle stroke:#444444,stroke-width:5px;
+  classDef DefinitionStyle fill:#f1f1f1,stroke-width:0px;
+  style VRML fill:#f1f1f1,stroke:#444444,stroke-width:5px;
 
-  class AbstractClass,Geometry,Device,SolidDevice,JointDevice,Motor,Light,Joint AbstractClassStyle;
+  class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane BoundingObjectStyle;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere VRMLBoundingObjectStyle;
-  class Cone,IndexedLineSet,PointSet,DirectionalLight,PointLight,SpotLight,Group,Transform,Appearance,BackGround,Color,Fog,ImageTexture,Material,TextureCoordinate,TextureTransform,WorldInfo VRMLNodeStyle;
-  class BallJoint,HingeJoint,Hinge2Joint,SliderJoint,BallJointParameters,JointParameters,HingeJointParameters,TrackWheel,Fluid,Solid,Charger,Robot,Supervisor,Brake,LinearMotor,RotationalMotor,PositionSensor,Accelerometer,Camera,Compass,Connector,Display,DistanceSensor,Emitter,GPS,Gyro,InertialUnit,LED,Lidar,Pen,Propeller,Radar,RangeFinder,Receiver,Speaker,TouchSensor,Track,ContactProperties,Coordinate,Damping,Focus,ImmersionProperties,Lens,LensFlare,Muscle,Physics,Recognition,Shape,Slot,SolidReference,Viewpoint,Zoom NodeStyle;
+  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo VRMLNodeStyle;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
 %end

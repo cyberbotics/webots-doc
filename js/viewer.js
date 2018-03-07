@@ -358,6 +358,8 @@ function populateViewDiv(mdContent) {
   applyToPageTitle(mdContent);
 
   // markdown to html
+  window.mermaidGraphCounter = 0;
+  window.mermaidGraphs = {};
   var converter = new showdown.Converter({tables: 'True', extensions: ['wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
@@ -789,9 +791,6 @@ window.onscroll = function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   window.mermaidAPI.initialize({startOnLoad: false});
-  window.mermaidGraphs = {};
-  window.mermaidGraphCounter = 0;
-
   initializeHandle();
 
   if (!isCyberboticsUrl) {

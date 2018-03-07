@@ -29,10 +29,23 @@ The handle should have a length of 0.1 m and a radius of 0.01 m.
 The weights should have a radius of 0.03 m and a subdivision of 2.
 The weights can be moved at the handle extremities thanks to the `translation` field of their Transform nodes.
 
-%figure "Representation of the subnodes of a compound solid made of several transformed geometries."
+%chart
+graph TD
+  Solid[Solid] -->|physics| Physics[Physics]
+  Solid -->|boundingObject| USEG0[USE G0]
+  Solid -->|children| Group[DEF G0 Group]
+    Group -->|children| Shape1[Shape]
+      Shape1 -->|geometry| Cylinder[Cylinder]
+    Group -->|children| Transform1[Transform]
+      Transform1 -->|children| Shape2[Shape]
+        Shape2 -->|geometry| Sphere1[Sphere]
+    Group -->|children| Transform2[Transform]
+      Transform2 -->|children| Shape3[Shape]
+        Shape3 -->|geometry| Sphere2[Sphere]
+    USEG0 -.- Group
 
-![tutorial_compound_solid.png](images/tutorial_compound_solid.png)
-
+  class Robot Solid;
+  class USEG0,Group secondaryNode;
 %end
 
 ### Physics Attributes

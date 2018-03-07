@@ -174,29 +174,3 @@ showdown.extension('wbIllustratedSection', function() {
     }
   ];
 });
-
-// https://gist.github.com/justathoughtor2/7dbbecc912dfe4d3580b
-showdown.extension('wbChart', function() {
-  return [
-    { // chart with legend to HTML
-      type: 'lang',
-      filter: function(text, converter, options) {
-        text = text.replace(/%chart\s+([^"][^]+?)%end/gi, function(match, content) {
-          // handle links
-          content = content.replace(/\[\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
-            return '[<a href='+ link + '>' + name + '</>';
-          });
-          content = content.replace(/\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
-            return '<a href='+ link + '>' + name + '</>';
-          });
-          // save content
-          var id = 'mermaidGraph' + window.mermaidGraphCounter;
-          window.mermaidGraphCounter++;
-          window.mermaidGraphs[id] = content;
-          return '<div id="' + id + 'Div' + '" class="mermaid"></div>';
-        });
-        return text;
-      }
-    }
-  ];
-});

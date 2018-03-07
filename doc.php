@@ -64,13 +64,11 @@
       console.log('Setup: ' + JSON.stringify(setup));
     </script>
     <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc.css'/>
-    <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc-chart.css'/>
     <link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/highlight/9.5.0/highlight_style.min.css'/>
     <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
-    <script src='https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaidAPI.min.js'></script>
     <script src='$rawgiturl$branch/js/showdown-extensions.js'></script>
     <script src='$rawgiturl$branch/js/viewer.js'></script>
   ";

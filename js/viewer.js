@@ -421,7 +421,6 @@ function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
       document.querySelector('#' + id + 'Div').innerHTML = svgCode;
-      bindFunctions();
     });
   }
 }

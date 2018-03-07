@@ -33,7 +33,7 @@
   height: 100%;
   box-sizing: content-box; /* in the online doc, bootstrap is overriding box-sizing */
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background-color: #777;
   cursor: ew-resize;
   transition: width 0.05s ease-in-out;
@@ -54,7 +54,6 @@
   position: relative;
   padding-bottom: 0;
   margin-bottom: 0;
-  overflow: auto;
   background: lightblue;
 }
 .webots-doc .default#center {
@@ -294,6 +293,7 @@
 .webots-doc img {
   max-width: 100%;
   max-height: 500px;
+  vertical-align: middle;
 }
 .webots-doc figure {
   max-width: 80%;
@@ -356,6 +356,44 @@
 }
 .webots-doc .illustrated-section p {
   margin: 0px;
+}
+
+.webots-doc .contribution-banner {
+  box-sizing: border-box;
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  width: inherit;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background: white;
+  font-family: "Roboto";
+  border-bottom: 1px solid #e2e2e2;
+  z-index: 1;
+  transform: translateY(-250%);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+}
+
+.webots-doc .visible-banner {
+  transform: translateY(0%);
+}
+
+.webots-doc .contribution-banner #contribution-close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  top: 8px;
+}
+
+.webots-doc .contribution-banner .github-logo {
+  margin-left: 5px;
+  background: url(images/github.png) left center no-repeat;
+  padding-left: 16px;
+  background-size: 16px;
 }
 
 .blog #title {
@@ -509,4 +547,8 @@
 .blog figcaption {
   font-style: italic;
   padding: 10px;
+}
+
+.blog .contribution-banner {
+  display: none;
 }

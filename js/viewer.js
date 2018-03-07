@@ -246,6 +246,29 @@ function applyToTitleDiv() {
   }
 }
 
+function addContributionBanner() {
+  // if we're on the website we need to move the banner down by the height of the navbar
+  var displacement = document.querySelector("#footer") ? "44px" : "0px";
+
+  // append contribution sticker to primary doc element
+  document.querySelector("#center").innerHTML += "<div style='top:" + displacement + "' class='contribution-banner'>" +
+                                                 "Found an error?" +
+                                                 "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
+                                                 "Contribute on GitHub!" +
+                                                 "<span class=github-logo />" +
+                                                 "</a>" +
+                                                 "<p id='contribution-close'>X</p>" +
+                                                 "</div>";
+
+  var contributionBanner = document.querySelector(".contribution-banner");
+
+  document.querySelector("#contribution-close").onclick = function () {
+    contributionBanner.setAttribute("class", "contribution-banner");
+  };
+
+  setTimeout(function() { contributionBanner.setAttribute("class", "contribution-banner visible-banner"); }, 1500);
+}
+
 function setUpBlogStyleIfNeeded() {
   if (localSetup.book === 'blog') {
     var center = document.getElementById('center');
@@ -774,4 +797,5 @@ document.addEventListener('DOMContentLoaded', function() {
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
+  addContributionBanner();
 });

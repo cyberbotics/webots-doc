@@ -222,7 +222,7 @@ function applyAnchor() {
               || document.documentElement.clientHeight
               || document.body.clientHeight;
 
-    window.scroll(0, findPos(firstAnchor).top - height / 8);
+    window.scroll(0, findPos(firstAnchor).top - height / 10);
   } else
     window.scrollTo(0, 0);
 }

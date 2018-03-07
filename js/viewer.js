@@ -217,9 +217,13 @@ function redirectImages(node) {
 
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" +localSetup.anchor +"']");
-  if (firstAnchor)
-    window.scroll(0, findPos(firstAnchor).top);
-  else
+  if (firstAnchor) {
+    var height = window.innerHeight
+              || document.documentElement.clientHeight
+              || document.body.clientHeight;
+
+    window.scroll(0, findPos(firstAnchor).top - height / 8);
+  } else
     window.scrollTo(0, 0);
 }
 

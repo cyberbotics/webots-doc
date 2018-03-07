@@ -19,7 +19,6 @@ Note that not all geometry nodes can be used as boundingObjects, and that althou
 graph LR
   subgraph ""
     AbstractClass(Abstract Class) --- AbstractClassDefinition[cannot be instantiated]
-    click AbstractClass "https://www.google.ch" "test tooltip"
     BoundingObject[Bounding Object] --- BoundingObjectDefinition[can be used as BoundingObject<br>in a Solid node]
     VRML[VRML] --- VRMLDefinition[valid VRML node]
   end

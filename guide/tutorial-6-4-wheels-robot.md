@@ -82,16 +82,36 @@ Add a Physics node to the Robot.
 The [figure](#low-level-representation-of-the-4-wheels-robot) represents all the nodes defining the robot.
 So far only the direct children nodes of the root Robot node are implemented.
 
-%figure "High level representation of the 4 wheels robot"
-
-![tutorial_4_wheels_highlevel.png](images/tutorial_4_wheels_highlevel.png)
-
+%chart
+graph TD
+  Robot[Robot] -->|children| HingeJoint[HingeJoint]
+    HingeJoint --> Solid["Solid (WHEEL1)"]
+  Robot -.->|children| OtherWheels[Other wheels]
+  style HingeJoint fill:#ffe4bf;
 %end
 
-%figure "Low level representation of the 4 wheels robot"
+%chart
+graph TD
+  Robot[Robot] -->|physics| Physics1[Physics]
+  Robot -->|boundingObject| USEBODY[USE BODY]
+  Robot -->|children| Shape1["Shape (BODY)"]
+    Shape1 -->|geometry| Box[Box]
+    Shape1 -.- USEBODY
+  Robot -->|children| HingeJoint[HingeJoint]
+    HingeJoint -->|devices| RotationalMotor[RotationalMotor]
+    HingeJoint -->|jointParameters| HingeJointParameters[HingeJointParameters]
+    HingeJoint -->|endPoint| Solid["Solid (WHEEL1)"]
+      Solid -->|physics| Physics2["Physics (WHEEL_PH)"]
+      Solid -->|boundingObject| USEWHEEL[USE WHEEL]
+      Solid -->|children| Transform["Transform (WHEEL)"]
+        Transform -->|children| Shape2[Shape]
+          Transform -.- USEWHEEL
+          Shape2 -->|geometry| Cylinder[Cylinder]
+  Robot -.->|children| OtherWheels["Other wheels (using WHEEL and WHEEL_PH)"]
 
-![tutorial_4_wheels_lowlevel.png](images/tutorial_4_wheels_lowlevel.png)
-
+  style HingeJoint fill:#ffe4bf;
+  classDef USEDEF fill:#d3ffc9;
+  class Shape1,USEBODY,Transform,USEWHEEL USEDEF;
 %end
 
 ### HingeJoints

@@ -10,10 +10,13 @@ The class hierarchy is built on top of the C API and currently contains about 25
 The Java and Python APIs are automatically generated from the C++ API using SWIG.
 Therefore the class and method names, as well as the number of parameters and their types, are very similar in these three languages.
 
-%figure "Webots APIs Overview"
-
-![api_overview.png](images/api_overview.png)
-
+%chart
+graph BT
+  Java["Java API (SWIG generated)"] --> CPP[C++ API]
+  Python["Python API (SWIG generated)"] --> CPP
+    CPP --> C["C API (implemented in libcontroller)"]
+    Matlab[Matlab API] --> C
+      C --> Webots["Webots (binary interface)"]
 %end
 
 The naming convention of the C++/Java/Python classes and methods directly matches the C API function names.

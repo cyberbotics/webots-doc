@@ -42,7 +42,7 @@ The search algorithm to convert the *window* and the *remoteControl* to an exist
 Each distributed shared library is built thanks to the main Makefile (the same as the one used to build the controllers):
 
 `WEBOTS_HOME/resources/Makefile.include`
-
+%figure "Controller plugin overview"
 %chart
 graph LR
   Webots[Webots] -.-> libController[libController]
@@ -52,6 +52,7 @@ graph LR
     libController -->|0..1| libRemoteControl[libRemoteControl]
   end
       libRemoteControl -.-> RealRobot[Real Robot]
+%end
 %end
 
 ### Robot Window

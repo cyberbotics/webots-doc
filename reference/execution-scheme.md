@@ -3,6 +3,7 @@
 The following diagram illustrates the sequence of execution of the plugin callback functions.
 In addition, the principal interactions of Webots with the ODE functions are indicated.
 
+%figure "Physics Plugin Execution Scheme"
 %chart
 graph TD
   S0["dWorldCreate()</br>dSimpleSpaceCreate(NULL)</br>contactJointGroup = dJointGroupCreate(0)"] --> S1["Webots joints creation:</br>dJointCreateHinge() for HingeJoint</br>dJointCreateSlider() for SliderJoint</br>etc.</br>dJointAttach"]
@@ -17,4 +18,5 @@ graph TD
   S8 --> S9["webots_physics_cleanup()</br>(should be used to cleanup memory, close files, etc.)</br>Unloading the plugin"]
   S9 --> S10["dJointGroupDestroy(contactJointGroup)</br>dSpaceDestroy()</br>dWorldDestroy()"]
     S10 -.->|simulation revert| S0
+%end
 %end

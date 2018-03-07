@@ -29,6 +29,7 @@ The handle should have a length of 0.1 m and a radius of 0.01 m.
 The weights should have a radius of 0.03 m and a subdivision of 2.
 The weights can be moved at the handle extremities thanks to the `translation` field of their Transform nodes.
 
+%figure "Representation of the subnodes of a compound solid made of several transformed geometries."
 %chart
 graph TD
   Solid[Solid] -->|physics| Physics[Physics]
@@ -46,6 +47,7 @@ graph TD
 
   class Solid highlightedNode;
   class USEG0,Group secondaryNode;
+%end
 %end
 
 ### Physics Attributes

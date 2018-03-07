@@ -64,6 +64,7 @@ The graphical representation and the collision shape are often but not necessari
 Finally, the `physics` field defines if the object belongs to the dynamical or to the statical environment.
 All these subnodes are optional, but the `physics` field needs the `boundingObject` to be defined.
 
+%figure "DEF-USE mechanism applied on the Shape node of a Solid."
 %chart
 graph TD
   Solid[Solid] -->|physics| Physics[Physics]
@@ -72,6 +73,7 @@ graph TD
     Shape -->|geometry| Geometry2[Geometry]
 
   class Solid highlightedNode;
+%end
 %end
 
 The Geometry box (in [this figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics)) stands for any kind of geometrical primitive.
@@ -147,6 +149,7 @@ The result is shown in [this figure](#def-use-mechanism-on-the-sphere-node-calle
 
 %end
 
+%figure "The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics)."
 %chart
 graph TD
   Solid[Solid] -->|physics| Physics[Physics]
@@ -157,6 +160,7 @@ graph TD
 
   class Solid highlightedNode;
   class USEBALLGEOMETRY,Shape secondaryNode;
+%end
 %end
 
 ### Add Walls

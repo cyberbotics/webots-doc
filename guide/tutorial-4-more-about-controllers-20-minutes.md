@@ -43,16 +43,18 @@ The documentation on the API functions can be found in Chapter 3 of the `Referen
 
 %end
 
+%figure "UML state machine of a simple feedback loop"
 %chart
 graph LR
   init[initialize robot] --> step[simulation step]
     subgraph feedback loop
-      step --> read[read sensors ouputs]
+      step --> read[read sensors]
       read --> process[process behavior]
       process --> write[write actuators]
         write --> step
     end
-    step --> cleanup[robot cleanup]
+    step --> cleanup[cleanup robot]
+%end
 %end
 
 ### Program a Controller

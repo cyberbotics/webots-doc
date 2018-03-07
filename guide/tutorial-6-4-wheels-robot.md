@@ -82,6 +82,7 @@ Add a Physics node to the Robot.
 The [figure](#low-level-representation-of-the-4-wheels-robot) represents all the nodes defining the robot.
 So far only the direct children nodes of the root Robot node are implemented.
 
+%figure "High level representation of the 4 wheels robot"
 %chart
 graph TD
   Robot[Robot] -->|children| HingeJoint[HingeJoint]
@@ -90,7 +91,9 @@ graph TD
   style HingeJoint fill:#ffe4bf;
   class Robot highlightedNode;
 %end
+%end
 
+%figure "Low level representation of the 4 wheels robot"
 %chart
 graph TD
   Robot[Robot] -->|physics| Physics1[Physics]
@@ -113,6 +116,7 @@ graph TD
   style HingeJoint fill:#ffe4bf;
   class Robot highlightedNode;
   class Shape1,USEBODY,Transform,USEWHEEL secondaryNode;
+%end
 %end
 
 ### HingeJoints

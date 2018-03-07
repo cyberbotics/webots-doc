@@ -14,6 +14,7 @@ A box with round corners represents a `Geometry` node; that is, a node that will
 A box with a gray background indicates a node that can be used directly (or composed using [Group](group.md) and [Transform](transform.md) nodes) to build a *boundingObject* used to detect collisions between [Solid](solid.md) objects.
 Note that not all geometry nodes can be used as boundingObjects, and that although [Group](group.md) and [Transform](transform.md) can be used, not every combination of these will work correctly.
 
+%figure "Webots Nodes Chart"
 %chart
 graph LR
   subgraph ""
@@ -131,4 +132,5 @@ graph LR
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
   class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
+%end
 %end

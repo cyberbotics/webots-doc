@@ -24,3 +24,8 @@ A small C library called "youbot_control" (and located there: "WEBOTS\_HOME/proj
 #### youbot\_matlab.wbt
 
 ![youbot.wbt.png](images/robots/youbot/youbot.wbt.png) The same simulation as above, but with a controller written in Matlab.
+
+#### tower\_of\_hanoi.wbt
+
+![tower_of_hanoi.wbt.png](images/robots/youbot/tower_of_hanoi.wbt.png) In this simulation, the youBot is moving a pyramid of colored blocks from one position to another, using a temporary slot.
+This example is based on the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) mathematical game.

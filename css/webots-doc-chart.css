@@ -8,8 +8,8 @@ g .nodes .node circle,
 g .nodes .node ellipse,
 g .nodes .node polygon {
   fill: #add8e6;
-  stroke:#afafaf;
-  stroke-width:1px;
+  stroke: #afafaf;
+  stroke-width: 1px;
 }
 
 g .clusters .cluster rect,
@@ -18,4 +18,8 @@ g .clusters .cluster ellipse,
 g .clusters .cluster polygon {
   fill: #f1f1f1 !important;  /* recommended way of mermaidjs to change these elements ... */
   stroke: #afafaf !important;
+}
+
+g foreignObject div .edgeLabel {
+  background-color: #f1f1f1;
 }

@@ -48,8 +48,8 @@ graph LR
   Webots[Webots] -.-> libController[libController]
   subgraph Controller thread
   controller[controller] --> libController
-    libController --> libRobotWindow[libRobotWindow]
-    libController --> libRemoteControl[libRemoteControl]
+    libController -->|1| libRobotWindow[libRobotWindow]
+    libController -->|0..1| libRemoteControl[libRemoteControl]
   end
       libRemoteControl -.-> RealRobot[Real Robot]
 %end

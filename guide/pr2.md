@@ -16,4 +16,4 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 
 #### pr2.wbt
 
-![pr2.wbt.png](images/robots/pr2/pr2.wbt.png) This simulation shows a PR2 robot grabbing food from one table, and leaving them on another table.
+![pr2.wbt.png](images/robots/pr2/pr2.wbt.png) This simulation shows a PR2 robot grabbing biscuit boxes from one table, and putting them on another table.

@@ -6,7 +6,7 @@
 
 %end
 
-The [PUMA robotic arm](https://en.wikipedia.org/wiki/Programmable_Universal_Machine_for_Assembly#Model_560_C) (for "Programmable Universal Machine for Assembly") is a six-axis arm with three axes making up a spherical wrist.
+The [PUMA robotic arm](https://en.wikipedia.org/wiki/Programmable_Universal_Machine_for_Assembly#Model_560_C) (for "Programmable Universal Machine for Assembly") is a six axes arm with three axes making up a spherical wrist.
 
 ### Samples
 

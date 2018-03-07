@@ -6,8 +6,9 @@
 
 %end
 
-Designed for research, education, and exploration, Surveyor's SRV-1 internet-controlled robot integrates a 1000MIPS 500MHz Analog Devices Blackfin BF537 processor, a digital video camera with resolution from 160x28 to 1280x1024 pixels, laser pointer ranging, and WLAN 802.11b/g networking on a quad-motor tracked mobile robotic base.
-The new 4 motor design, uses 4 specially made 100:1 gear motors to provide high torque, more speed, and a lower overall profile. 
+The Surveyor's SRV-1 is a robot with two caterpillar tracks.
+It is designed for research, education, and exploration.
+Among others, it has a Blackfin processor, a digital video camera, and WIFI networking abilities.
 
 ### Samples
 

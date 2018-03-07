@@ -218,20 +218,10 @@ function redirectImages(node) {
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" +localSetup.anchor +"']");
   if (firstAnchor) {
-    var height = window.innerHeight
-              || document.documentElement.clientHeight
-              || document.body.clientHeight;
-
-    window.scroll(0, findPos(firstAnchor).top - height / 10);
+    firstAnchor.scrollIntoView(true);
+    window.scrollBy(0, -40);
   } else
     window.scrollTo(0, 0);
-}
-
-function findPos(obj) {
-  return {
-    left: obj.offsetLeft,
-    top: obj.offsetTop
-  };
 }
 
 function applyToTitleDiv() {

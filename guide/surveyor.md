@@ -6,9 +6,8 @@
 
 %end
 
-The Surveyor's SRV-1 is a robot with two caterpillar tracks.
-It is designed for research, education, and exploration.
-Among others, it has a Blackfin processor, a digital video camera, and WIFI networking abilities.
+The Surveyor's SRV-1 is a robot with two caterpillar tracks designed for research, education, and exploration.
+It features a Blackfin processor, a digital video camera and WiFi networking.
 
 ### Samples
 

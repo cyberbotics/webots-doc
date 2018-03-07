@@ -38,7 +38,6 @@ graph LR
   Geometry -.-> IndexedFaceSet[[IndexedFaceSet](indexedfaceset.md)]
   Geometry -.-> IndexedLineSet[[IndexedLineSet](indexedlineset.md)]
   Geometry -.-> Plane[[Plane](plane.md)]
-  Geometry -.-> PointSet[[PointSet](pointset.md)]
   Geometry -.-> Sphere[[Sphere](sphere.md)]
 
   Device([Device](device.md)) -.-> JointDevice(Joint Device)
@@ -95,6 +94,8 @@ graph LR
     Appearance[[Appearance](appearance.md)]
     BackGround[[Background](background.md)]
     Color[[Color](color.md)]
+    ComposedCubeMapTexture[[ComposedCubeMapTexture](composedcubemaptexture.md)]
+    ComposedShader[[ComposedShader](composedshader.md)]
     ContactProperties[[ContactProperties](contactproperties.md)]
     Coordinate[[Coordinate](coordinate.md)]
     Damping[[Damping](damping.md)]
@@ -105,14 +106,17 @@ graph LR
     Lens[[Lens](lens.md)]
     LensFlare[[LensFlare](lensflare.md)]
     Material[[Material](material.md)]
+    MultiTexture[[MultiTexture](multitexture.md)]
     Muscle[[Muscle](muscle.md)]
     Physics[[Physics](physics.md)]
     Recognition[[Recognition](recognition.md)]
+    ShaderPart[[ShaderPart](shaderpart.md)]
     Shape[[Shape](shape.md)]
     Slot[[Slot](slot.md)]
     SolidReference[[SolidReference](solidreference.md)]
     TextureCoordinate[[TextureCoordinate](texturecoordinate.md)]
     TextureTransform[[TextureTransform](texturetransform.md)]
+    Uniform[[Uniform](uniform.md)]
     Viewpoint[[Viewpoint](viewpoint.md)]
     WorldInfo[[WorldInfo](worldinfo.md)]
     Zoom[[Zoom](zoom.md)]
@@ -128,6 +132,6 @@ graph LR
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane BoundingObjectStyle;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere VRMLBoundingObjectStyle;
-  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo VRMLNodeStyle;
+  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo VRMLNodeStyle;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
 %end

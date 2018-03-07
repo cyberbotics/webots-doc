@@ -12,10 +12,11 @@ Therefore the class and method names, as well as the number of parameters and th
 
 %chart
 graph BT
-  Java["Java API (SWIG generated)"] --> CPP[C++ API]
-  Python["Python API (SWIG generated)"] --> CPP
+  Java[[SWIG generated Java API](../reference/java-api.md)] --> CPP[[C++ API](../reference/cpp-api.md)]
+  Python[[SWIG generated Python API](../reference/python-api.md)] --> CPP
+  Ros[[ROS API](../reference/ros-api.md)] --> CPP
     CPP --> C["C API (implemented in libcontroller)"]
-    Matlab[Matlab API] --> C
+    Matlab[[Matlab API](../reference/matlab-api.md)] --> C
       C --> Webots["Webots (binary interface)"]
 %end
 

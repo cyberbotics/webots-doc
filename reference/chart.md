@@ -95,7 +95,7 @@ graph LR
     Appearance[[Appearance](appearance.md)]
     BackGround[[Background](background.md)]
     Color[[Color](color.md)]
-    ContactProperties[[ContactProperties](contactProperties.md)]
+    ContactProperties[[ContactProperties](contactproperties.md)]
     Coordinate[[Coordinate](coordinate.md)]
     Damping[[Damping](damping.md)]
     Focus[[Focus](focus.md)]

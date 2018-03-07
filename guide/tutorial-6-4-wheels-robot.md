@@ -88,6 +88,7 @@ graph TD
     HingeJoint --> Solid["Solid (WHEEL1)"]
   Robot -.->|children| OtherWheels[Other wheels]
   style HingeJoint fill:#ffe4bf;
+  class Robot highlightedNode;
 %end
 
 %chart
@@ -110,8 +111,8 @@ graph TD
   Robot -.->|children| OtherWheels["Other wheels (using WHEEL and WHEEL_PH)"]
 
   style HingeJoint fill:#ffe4bf;
-  classDef USEDEF fill:#d3ffc9;
-  class Shape1,USEBODY,Transform,USEWHEEL USEDEF;
+  class Robot highlightedNode;
+  class Shape1,USEBODY,Transform,USEWHEEL secondaryNode;
 %end
 
 ### HingeJoints

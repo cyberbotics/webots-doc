@@ -123,15 +123,12 @@ graph LR
   end
 
   classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
-  classDef BoundingObjectStyle fill:#d3ffc9;
-  classDef VRMLBoundingObjectStyle fill:#d3ffc9,stroke:#444444,stroke-width:3px;
-  classDef VRMLNodeStyle stroke:#444444,stroke-width:3px;
   classDef DefinitionStyle fill:#f1f1f1,stroke-width:0px;
   style VRML fill:#f1f1f1,stroke:#444444,stroke-width:3px;
 
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
-  class BoundingObject,Capsule,Plane BoundingObjectStyle;
-  class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere VRMLBoundingObjectStyle;
-  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo VRMLNodeStyle;
+  class BoundingObject,Capsule,Plane secondaryNode;
+  class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
+  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
 %end

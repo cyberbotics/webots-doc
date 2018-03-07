@@ -12,6 +12,30 @@ g .nodes .node polygon {
   stroke-width: 1px;
 }
 
+g .nodes .secondaryNode rect,
+g .nodes .secondaryNode circle,
+g .nodes .secondaryNode ellipse,
+g .nodes .secondaryNode polygon {
+  fill: #d3ffc9;
+}
+
+g .nodes .highlightedNode rect,
+g .nodes .highlightedNode circle,
+g .nodes .highlightedNode ellipse,
+g .nodes .highlightedNode polygon {
+  stroke: #444444;
+  stroke-width:3px;
+}
+
+g .nodes .highlightedSecondaryNode rect,
+g .nodes .highlightedSecondaryNode circle,
+g .nodes .highlightedSecondaryNode ellipse,
+g .nodes .highlightedSecondaryNode polygon {
+  fill: #d3ffc9;
+  stroke: #444444;
+  stroke-width:3px;
+}
+
 g .clusters .cluster rect,
 g .clusters .cluster circle,
 g .clusters .cluster ellipse,

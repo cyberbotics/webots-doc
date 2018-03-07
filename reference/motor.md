@@ -112,10 +112,12 @@ The first stage is performed by the user-specified controller (1) that decides w
 The second stage is performed by the motor P-controller (2) that computes the current velocity of the motor *V<sub>c</sub>*.
 Finally, the third stage (3) is carried out by the physics simulator (ODE joint motors).
 
-%figure "Motor control"
-
-![motor_control.png](images/motor_control.png)
-
+%chart
+graph LR
+  node["Motor node (VRML)"] -->|wb_motor_set_position<br/>wb_motor_set_velocity<br/>wb_motor_set_acceleration<br/>wb_motor_set_available_force<br/>wb_motor_set_control_pid| PID["2.motor PID-controller (Webots)"]
+  robot["1. robot controller (user-code)"] -->|controlPID<br/>maxVelocity<br/>acceleration<br/>maxForce| PID
+    PID -->|motor force/torque</br>motor velocity| ODE["3. physics simulator (ODE)"]
+  robot -->|wb_motor_set_force<br/>wb_motor_set_torque| ODE
 %end
 
 At each simulation step, the PID-controller (2) recomputes the current velocity *Vc* according to following algorithm:

@@ -143,10 +143,16 @@ The result is shown in [this figure](#def-use-mechanism-on-the-sphere-node-calle
 
 %end
 
-%figure "DEF-USE mechanism applied on the Shape node of a Solid."
+%chart
+graph TD
+  Solid[Solid] -->|physics| Physics[Physics]
+  Solid -->|boundingObject| USEBALLGEOMETRY[USE BALL_GEOMETRY]
+  Solid -->|children| Shape[Shape]
+    Shape -->|geometry| Sphere[DEF BALL_GEOMETRY Sphere]
+    USEBALLGEOMETRY -.- Sphere
 
-![tutorial_def_use_shape.png](images/tutorial_def_use_shape.png)
-
+  class Solid highlightedNode;
+  class USEBALLGEOMETRY,Shape secondaryNode;
 %end
 
 ### Add Walls

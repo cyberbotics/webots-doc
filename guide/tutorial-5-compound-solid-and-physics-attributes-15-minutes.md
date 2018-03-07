@@ -44,7 +44,7 @@ graph TD
         Shape3 -->|geometry| Sphere2[Sphere]
     USEG0 -.- Group
 
-  class Robot Solid;
+  class Solid highlightedNode;
   class USEG0,Group secondaryNode;
 %end
 

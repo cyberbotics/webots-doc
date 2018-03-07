@@ -6,11 +6,11 @@
 
 %end
 
-[adpet's Pioneer 2](https://www.adept.com/) is a three-wheeled robot (2 motorized wheels and one passive caster wheel) mounted with several sensors including 16 ultrasonic sensors.
+[adept's Pioneer 2](https://www.adept.com/) is a three-wheeled robot (2 motorized wheels and one passive caster wheel) mounted with several sensors including 16 ultrasonic sensors.
 
 ### Samples
 
-You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/adpet/pioneer2/worlds".
+You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/adept/pioneer2/worlds".
 
 #### pioneer2.wbt
 

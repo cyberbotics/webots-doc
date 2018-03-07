@@ -9,7 +9,7 @@
 The [Sphero's BB-8](https://www.sphero.com/starwars/bb8) is an articulated robot composed of a spherical body and an hemispherical head.
 A wheeled robot is embedded inside the spherical body.
 
-The Webots model is implemented at a high-level of abstraction; the wheeled robot inside the spherical body is not modeled, but the body and head are linked by two rotational joints (pitch and yaw), and one joint allow to rotate the head.
+The Webots model is implemented at a high-level of abstraction; the wheeled robot inside the spherical body is not modeled, but the body and head are linked by two rotational joints (pitch and yaw), and one joint allows head rotation.
 The robot size are customizable using the BB-8 PROTO fields.
 
 ### Samples

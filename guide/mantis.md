@@ -6,7 +6,7 @@
 
 %end
 
-The [Mantis robot](http://www.mantisrobot.com/) is an hydraulic powered hexapod walking machine developed from 2009 by Matt Denton.
+The [Mantis robot](http://www.mantisrobot.com/) is an hydraulic powered hexapod walking machine developed in 2009 by Matt Denton.
 A human can drive this robot.
 
 ### Samples

@@ -24,6 +24,7 @@
 | ![icon.png](images/robots/khepera3/icon.png) | [Khepera III](khepera3.md) | K-Team |
 | ![icon.png](images/robots/khepera4/icon.png) | [Khepera IV](khepera4.md) | K-Team |
 | ![icon.png](images/robots/khr-2hv/icon.png) | [KHR-2HV](khr-2hv.md) | KONDO |
+| ![icon.png](images/robots/khr-3hv/icon.png) | [KHR-3HV](khr-3hv.md) | KONDO |
 | ![icon.png](images/robots/koala/icon.png) | [Koala](koala.md) | K-Team |
 | ![icon.png](images/robots/mantis/icon.png) | [Mantis](mantis.md) | micromagic |
 | ![icon.png](images/robots/microbot/icon.png) | [Microbot](microbot.md) | PICAXE |

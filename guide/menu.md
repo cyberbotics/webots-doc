@@ -83,6 +83,7 @@
     - [iCub](icub.md)
     - [IPR](ipr.md)
     - [KHR-2HV](khr-2hv.md)
+    - [KHR-3HV](khr-3hv.md)
     - [Khepera I](khepera1.md)
     - [Khepera II](khepera2.md)
     - [Khepera III](khepera3.md)

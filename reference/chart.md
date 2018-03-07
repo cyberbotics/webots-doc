@@ -30,7 +30,7 @@ graph LR
   linkStyle 3 stroke-width:0px;
   linkStyle 4 stroke-width:0px;
 
-  Geometry([Geometry](geometry.md)) -.-> Box[[Box](box.md)]
+  Geometry(Geometry) -.-> Box[[Box](box.md)]
   Geometry -.-> Capsule[[Capsule](capsule.md)]
   Geometry -.-> Cone[[Cone](cone.md)]
   Geometry -.-> Cylinder[[Cylinder](cylinder.md)]
@@ -93,7 +93,7 @@ graph LR
 
   subgraph other Nodes
     Appearance[[Appearance](appearance.md)]
-    BackGround[[BackGround](backGround.md)]
+    BackGround[[Background](background.md)]
     Color[[Color](color.md)]
     ContactProperties[[ContactProperties](contactProperties.md)]
     Coordinate[[Coordinate](coordinate.md)]
@@ -120,10 +120,10 @@ graph LR
 
   classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
   classDef BoundingObjectStyle fill:#d3ffc9;
-  classDef VRMLBoundingObjectStyle fill:#d3ffc9,stroke:#444444,stroke-width:5px;
-  classDef VRMLNodeStyle stroke:#444444,stroke-width:5px;
+  classDef VRMLBoundingObjectStyle fill:#d3ffc9,stroke:#444444,stroke-width:3px;
+  classDef VRMLNodeStyle stroke:#444444,stroke-width:3px;
   classDef DefinitionStyle fill:#f1f1f1,stroke-width:0px;
-  style VRML fill:#f1f1f1,stroke:#444444,stroke-width:5px;
+  style VRML fill:#f1f1f1,stroke:#444444,stroke-width:3px;
 
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane BoundingObjectStyle;

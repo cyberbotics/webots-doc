@@ -43,10 +43,15 @@ Each distributed shared library is built thanks to the main Makefile (the same a
 
 `WEBOTS_HOME/resources/Makefile.include`
 
-%figure "Controller plugin overview"
-
-![controller_plugin.png](images/controller_plugin.png)
-
+%chart
+graph LR
+  Webots[Webots] -.-> libController[libController]
+  subgraph Controller thread
+  controller[controller] --> libController
+    libController --> libRobotWindow[libRobotWindow]
+    libController --> libRemoteControl[libRemoteControl]
+  end
+      libRemoteControl -.-> RealRobot[Real Robot]
 %end
 
 ### Robot Window

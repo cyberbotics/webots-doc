@@ -67,9 +67,9 @@ All these subnodes are optional, but the `physics` field needs the `boundingObje
 %figure "DEF-USE mechanism applied on the Shape node of a Solid."
 %chart
 graph TD
-  Solid[Solid] -->|physics| Physics[Physics]
+  Solid[[Solid](../reference/solid.md)] -->|physics| Physics[[Physics](../reference/physics.md)]
   Solid -->|boundingObject| Geometry1[Geometry]
-  Solid -->|children| Shape[Shape]
+  Solid -->|children| Shape[[Shape](../reference/shape.md)]
     Shape -->|geometry| Geometry2[Geometry]
 
   class Solid highlightedNode;
@@ -152,10 +152,10 @@ The result is shown in [this figure](#def-use-mechanism-on-the-sphere-node-calle
 %figure "The simplest model of a rigid body in Webots having a graphical representation (Shape), a physical bound (boundingObject) and being in the dynamical environment (Physics)."
 %chart
 graph TD
-  Solid[Solid] -->|physics| Physics[Physics]
+  Solid[[Solid](../reference/solid.md)] -->|physics| Physics[[Physics](../reference/physics.md)]
   Solid -->|boundingObject| USEBALLGEOMETRY[USE BALL_GEOMETRY]
-  Solid -->|children| Shape[Shape]
-    Shape -->|geometry| Sphere[DEF BALL_GEOMETRY Sphere]
+  Solid -->|children| Shape[[Shape](../reference/shape.md)]
+    Shape -->|geometry| Sphere[[DEF BALL_GEOMETRY Sphere](../reference/sphere.md)]
     USEBALLGEOMETRY -.- Sphere
 
   class Solid highlightedNode;

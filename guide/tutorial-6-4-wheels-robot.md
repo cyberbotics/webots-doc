@@ -85,8 +85,8 @@ So far only the direct children nodes of the root Robot node are implemented.
 %figure "High level representation of the 4 wheels robot"
 %chart
 graph TD
-  Robot[Robot] -->|children| HingeJoint[HingeJoint]
-    HingeJoint --> Solid["Solid (WHEEL1)"]
+  Robot[[Robot](../reference/robot.md)] -->|children| HingeJoint[[HingeJoint](../reference/hingejoint.md)]
+    HingeJoint --> Solid[[DEF WHEEL1 Solid](../reference/solid.md)]
   Robot -.->|children| OtherWheels[Other wheels]
   style HingeJoint fill:#ffe4bf;
   class Robot highlightedNode;
@@ -96,21 +96,21 @@ graph TD
 %figure "Low level representation of the 4 wheels robot"
 %chart
 graph TD
-  Robot[Robot] -->|physics| Physics1[Physics]
+  Robot[[Robot](../reference/robot.md)] -->|physics| Physics1[[Physics](../reference/physics.md)]
   Robot -->|boundingObject| USEBODY[USE BODY]
-  Robot -->|children| Shape1["Shape (BODY)"]
-    Shape1 -->|geometry| Box[Box]
+  Robot -->|children| Shape1[[DEF BODY Shape](../reference/shape.md)]
+    Shape1 -->|geometry| Box[[Box](../reference/box.md)]
     Shape1 -.- USEBODY
-  Robot -->|children| HingeJoint[HingeJoint]
-    HingeJoint -->|devices| RotationalMotor[RotationalMotor]
-    HingeJoint -->|jointParameters| HingeJointParameters[HingeJointParameters]
-    HingeJoint -->|endPoint| Solid["Solid (WHEEL1)"]
-      Solid -->|physics| Physics2["Physics (WHEEL_PH)"]
+  Robot -->|children| HingeJoint[[HingeJoint](../reference/hingejoint.md)]
+    HingeJoint -->|devices| RotationalMotor[[RotationalMotor](../reference/rotationalmotor.md)]
+    HingeJoint -->|jointParameters| HingeJointParameters[[HingeJointParameters](../reference/hingejointparameters.md)]
+    HingeJoint -->|endPoint| Solid[[DEF WHEEL1 Solid](../reference/solid.md)]
+      Solid -->|physics| Physics2[[DEF WHEEL_PH Physics](../reference/physics.md)]
       Solid -->|boundingObject| USEWHEEL[USE WHEEL]
-      Solid -->|children| Transform["Transform (WHEEL)"]
-        Transform -->|children| Shape2[Shape]
+      Solid -->|children| Transform[[DEF WHEEL Transform](../reference/transform.md)]
+        Transform -->|children| Shape2[[Shape](../reference/shape.md)]
           Transform -.- USEWHEEL
-          Shape2 -->|geometry| Cylinder[Cylinder]
+          Shape2 -->|geometry| Cylinder[[Cylinder](../reference/cylinder.md)]
   Robot -.->|children| OtherWheels["Other wheels (using WHEEL and WHEEL_PH)"]
 
   style HingeJoint fill:#ffe4bf;

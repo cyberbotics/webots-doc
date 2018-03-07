@@ -32,17 +32,17 @@ The weights can be moved at the handle extremities thanks to the `translation` f
 %figure "Representation of the subnodes of a compound solid made of several transformed geometries."
 %chart
 graph TD
-  Solid[Solid] -->|physics| Physics[Physics]
+  Solid[[Solid](../reference/solid.md)] -->|physics| Physics[[Physics](../reference/physics.md)]
   Solid -->|boundingObject| USEG0[USE G0]
-  Solid -->|children| Group[DEF G0 Group]
-    Group -->|children| Shape1[Shape]
-      Shape1 -->|geometry| Cylinder[Cylinder]
-    Group -->|children| Transform1[Transform]
-      Transform1 -->|children| Shape2[Shape]
-        Shape2 -->|geometry| Sphere1[Sphere]
-    Group -->|children| Transform2[Transform]
-      Transform2 -->|children| Shape3[Shape]
-        Shape3 -->|geometry| Sphere2[Sphere]
+  Solid -->|children| Group[[DEF G0 Group](../reference/group.md)]
+    Group -->|children| Shape1[[Shape](../reference/shape.md)]
+      Shape1 -->|geometry| Cylinder[[Cylinder](../reference/cylinder.md)]
+    Group -->|children| Transform1[[Transform](../reference/transform.md)]
+      Transform1 -->|children| Shape2[[Shape](../reference/shape.md)]
+        Shape2 -->|geometry| Sphere1[[Sphere](../reference/sphere.md)]
+    Group -->|children| Transform2[[Transform](../reference/transform.md)]
+      Transform2 -->|children| Shape3[[Shape](../reference/shape.md)]
+        Shape3 -->|geometry| Sphere2[[Sphere](../reference/sphere.md)]
     USEG0 -.- Group
 
   class Solid highlightedNode;

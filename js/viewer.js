@@ -218,9 +218,16 @@ function redirectImages(node) {
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" +localSetup.anchor +"']");
   if (firstAnchor)
-    firstAnchor.scrollIntoView(true);
+    window.scroll(0, findPos(firstAnchor).top);
   else
     window.scrollTo(0, 0);
+}
+
+function findPos(obj) {
+  return {
+    left: obj.offsetLeft,
+    top: obj.offsetTop
+  };
 }
 
 function applyToTitleDiv() {

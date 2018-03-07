@@ -219,7 +219,7 @@ function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" +localSetup.anchor +"']");
   if (firstAnchor) {
     firstAnchor.scrollIntoView(true);
-    window.scrollBy(0, -40);
+    // window.scrollBy(0, -40);
   } else
     window.scrollTo(0, 0);
 }

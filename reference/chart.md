@@ -36,7 +36,7 @@ graph LR
   Geometry -.-> Cylinder[[Cylinder](cylinder.md)]
   Geometry -.-> EleveationGrid[[EleveationGrid](elevationgrid.md)]
   Geometry -.-> IndexedFaceSet[[IndexedFaceSet](indexedfaceset.md)]
-  Geometry -.-> IndexedLineSet[[IndexedLineSet](indexedlinset.md)]
+  Geometry -.-> IndexedLineSet[[IndexedLineSet](indexedlineset.md)]
   Geometry -.-> Plane[[Plane](plane.md)]
   Geometry -.-> PointSet[[PointSet](pointset.md)]
   Geometry -.-> Sphere[[Sphere](sphere.md)]

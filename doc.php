@@ -64,6 +64,7 @@
       console.log('Setup: ' + JSON.stringify(setup));
     </script>
     <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc.css'/>
+    <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc-chart.css'/>
     <link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/highlight/9.5.0/highlight_style.min.css'/>
     <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>

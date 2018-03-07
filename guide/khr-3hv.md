@@ -6,7 +6,7 @@
 
 %end
 
-TODO: description of the robot including a link to the constructor.
+The "Kondo KHR-3HV" is an humanoid robot with 17 DOF.
 
 ### Samples
 
@@ -14,4 +14,5 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 
 #### khr-3hv.wbt
 
-![khr-3hv.wbt.png](images/robots/khr-3hv/khr-3hv.wbt.png) This simulation shows ...
+![khr-3hv.wbt.png](images/robots/khr-3hv/khr-3hv.wbt.png) This simulation shows a KHR-3HV robot.
+You can play with its motors using the generic robot window.

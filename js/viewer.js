@@ -358,7 +358,7 @@ function populateViewDiv(mdContent) {
   applyToPageTitle(mdContent);
 
   // markdown to html
-  var converter = new showdown.Converter({tables: 'True', extensions: ['wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
+  var converter = new showdown.Converter({tables: 'True', extensions: ['wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'wbChart', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
   // console.log('HTML content: \n\n')
@@ -366,6 +366,7 @@ function populateViewDiv(mdContent) {
 
   view.innerHTML = html;
 
+  renderGraphs();
   redirectImages(view);
   redirectUrls(view);
 
@@ -413,6 +414,15 @@ function highlightCode(view) {
       var code = codes[j];
       hljs.highlightBlock(code);
     }
+  }
+}
+
+function renderGraphs() {
+  for (var id in window.mermaidGraphs) {
+    window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
+      document.querySelector('#' + id + 'Div').innerHTML = svgCode;
+      bindFunctions();
+    });
   }
 }
 
@@ -779,6 +789,10 @@ window.onscroll = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+  window.mermaidAPI.initialize({startOnLoad: false});
+  window.mermaidGraphs = {};
+  window.mermaidGraphCounter = 0;
+
   initializeHandle();
 
   if (!isCyberboticsUrl) {

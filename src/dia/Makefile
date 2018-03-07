@@ -45,8 +45,6 @@ GUIDE_TARGETS= \
  tutorial_4_wheels_highlevel.pdf.png \
  tutorial_4_wheels_lowlevel.pdf  \
  tutorial_4_wheels_lowlevel.pdf.png  \
- tutorial_ackermann_vehicle.pdf \
- tutorial_ackermann_vehicle.pdf.png \
  controller_plugin.pdf \
  controller_plugin.pdf.png
 

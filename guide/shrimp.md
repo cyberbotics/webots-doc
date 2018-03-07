@@ -18,4 +18,4 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 
 ![shrimp.wbt.png](images/robots/shrimp/shrimp.wbt.png) In this example the robot will first move on its own to the center of the world; then you may drive it yourself using the keyboard.
 Several obstacles are present in this world.
-To find out which keys will allow you to perform these operations, please read the explanation message printed at the beginning of the simulation in the Console window.
+To find out which keys will allow you to perform these operations, please read the explanation message printed at the beginning of the simulation in the Webots console.

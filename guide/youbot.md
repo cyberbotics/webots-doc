@@ -7,8 +7,8 @@
 %end
 
 The youBot is a mobile robotic arm developed by [KUKA](http://www.youbot-store.com/).
-Its arm has five DOF and a linear gripper.
-Its base has four omnidirectional wheels allowing for omnidirectional movement.
+Its arm has five degrees of freedom and a linear gripper.
+Its base has four [Mecanum wheels](https://en.wikipedia.org/wiki/Mecanum_wheel) allowing for omnidirectional movement.
 These wheels are efficiently modeled using asymmetric friction.
 
 ### Samples

@@ -6,7 +6,7 @@
 
 %end
 
-The IPR robot is a 6-DOF robotic arm equipped with a gripper composed of 2 rotational fingers.
+The IPR robot is a six degrees of freedom robotic arm equipped with a gripper composed of 2 rotational fingers.
 It was developed by `Neuronics`.
 Four models are supported in Webots: HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
 

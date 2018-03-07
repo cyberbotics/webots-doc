@@ -45,9 +45,9 @@ The source code for this controller is in the "khepera\_gripper" directory.
 
 ![khepera_k213.wbt.png](images/robots/khepera1/khepera_k213.wbt.png) In this example, you can see a Khepera robot equipped with a K213 `Camera` device.
 This camera is a linear vision turret with grayscale images.
-Using this device, the robot is able to translate the information contained in the image into text and print this result in the Console window.
+Using this device, the robot is able to translate the information contained in the image into text and print this result in the Webots console.
 When you load this world, the robot will not begin to move immediately.
-It will give you enough time to read the explanations printed in the Console window concerning this world.
+It will give you enough time to read the explanations printed in the Webots console concerning this world.
 The source code for this controller is in the "khepera\_k213" directory.
 
 ### khepera\_pipe.wbt

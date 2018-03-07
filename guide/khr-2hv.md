@@ -6,7 +6,7 @@
 
 %end
 
-The "Kondo KHR-2HV" is an humanoid robot with 17 DOF.
+The "Kondo KHR-2HV" is an humanoid robot with 17 degrees of freedom.
 
 ### Samples
 

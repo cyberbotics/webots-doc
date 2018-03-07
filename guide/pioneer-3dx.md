@@ -1,4 +1,4 @@
-## adept's Pioneer 3-DX
+## Adept's Pioneer 3-DX
 
 %figure "Pioneer 3-DX model in Webots"
 

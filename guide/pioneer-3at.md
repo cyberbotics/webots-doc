@@ -1,4 +1,4 @@
-## adept's Pioneer 3-AT
+## Adept's Pioneer 3-AT
 
 %figure "Pioneer 3-AT model in Webots"
 

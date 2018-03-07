@@ -7,8 +7,8 @@
 %end
 
 The [PICAXE microbot system](http://www.picaxe.com/Hardware/Robot-Kits/PICAXE-20X2-Microbot/) allows to create a robot from hardware pieces.
-The system can be fully customised by the end user, with the capacity to customize via different input sensors and output devices (in addition to the on-board motor/gearbox, LED and piezo outputs).
-This default pack contains the motherboard, 2 motor/gearboxes, bumper module, line follower module, pen holder and servo connector.
+The system can be fully customized by the end user using different input sensors and output devices (in addition to the on-board motor/gearbox, LED and piezo outputs).
+This default pack contains the motherboard, two motor/gearboxes, a bumper module, a line follower module, a pen holder and a servo connector.
 It can be extended.
 
 ### Samples

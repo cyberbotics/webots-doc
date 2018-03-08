@@ -135,6 +135,28 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 %end
 
+### e-puck 2
+
+%figure "e-puck 2 model"
+
+![epuck2.png](images/robots/epuck/epuck2.png)
+
+%end
+
+The [e-puck 2](http://www.gctronic.com/e-puck2.php) has been released in 2018.
+Among others the e-puck 2 embeds linux and a WiFi chipset.
+You will find more information on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2) and on the
+
+Remote-controlling the e-puck 2 robot through Bluetooth is working the same way as on the first version of the e-puck.
+However the controller cross-compilation is currently not working for the e-puck 2.
+
+The `version` field of the `E-puck` PROTO node allows to switch the target version of the e-puck model.
+When set to "2", the e-puck model switches to second version of the e-puck, implying the following differences:
+
+- The graphical shape is changing: in particular, the turret is removed and an other chipset texture is set for the plate.
+- The e-puck overall mass differs: 130 [grams] instead of 150 [grams].
+- The e-puck max speed differs: 1200 [steps / seconds] instead of 1000 [steps / seconds].
+
 ### Control Interface
 
 #### Robot Window
@@ -298,6 +320,10 @@ Several simulation examples are located in the "WEBOTS\_HOME/projects/robots/gct
 
 ![e-puck.wbt.png](images/robots/epuck/e-puck.wbt.png) The "e-puck.wbt" is a simple example of collision avoidance behavior using a Braitenberg based controller.
 This is done using the distance sensors of the e-puck.
+
+#### e-puck2.wbt
+
+![e-puck2.wbt.png](images/robots/epuck/e-puck2.wbt.png) This is the same simulation as the above one, except it uses an "e-puck 2" model.
 
 #### e-puck\_line.wbt
 

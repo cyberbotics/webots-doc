@@ -123,8 +123,8 @@ graph LR
   end
 
   classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
-  classDef DefinitionStyle fill:#f1f1f1,stroke-width:0px;
-  style VRML fill:#f1f1f1,stroke:#444444,stroke-width:3px;
+  classDef DefinitionStyle fill:#ddd,stroke-width:0px;
+  style VRML fill:#ddd,stroke:#444444,stroke-width:3px;
 
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane secondaryNode;

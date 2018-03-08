@@ -144,18 +144,18 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 %end
 
 The [e-puck 2](http://www.gctronic.com/e-puck2.php) has been released in 2018.
-Among others the e-puck 2 embeds linux and a WiFi chipset.
+The e-puck 2 runs linux and is equipped with a WiFi chipset, among other components.
 You will find more information on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2).
 
-Remote-controlling the e-puck 2 robot through Bluetooth is working the same way as on the first version of the e-puck.
-However the controller cross-compilation is currently not working for the e-puck 2.
+Remote-controlling the e-puck 2 robot through Bluetooth works the same way as on the first version of the e-puck.
+However controller cross-compilation is currently not available for the e-puck 2.
 
-The `version` field of the `E-puck` PROTO node allows to switch the target version of the e-puck model.
-When set to "2", the e-puck model switches to second version of the e-puck, implying the following differences:
+The `version` field of the `E-puck` PROTO node switches the target version of the e-puck model.
+When set to "2", the e-puck model switches to second version of the e-puck, with the following differences:
 
-- The graphical shape is changing: in particular, the turret is removed and an other chipset texture is set for the plate.
-- The e-puck overall mass differs: 130 [grams] instead of 150 [grams].
-- The e-puck max speed differs: 1200 [steps / seconds] instead of 1000 [steps / seconds].
+- The graphical shape is changing: in particular, the turret is removed and different chipset texture is set for the plate.
+- The e-puck's overall mass differs: 130 [grams] instead of 150 [grams].
+- The e-puck's max speed differs: 1200 [steps / second] instead of 1000 [steps / second].
 
 ### Control Interface
 

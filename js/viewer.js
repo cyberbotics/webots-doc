@@ -424,6 +424,10 @@ function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
       document.querySelector('#' + id + 'Div').innerHTML = svgCode;
+      // set min-width to be 2/3 of the max-width otherwise the text might become too small
+      var element = document.querySelector('#' + id);
+      var style = element.getAttribute('style');
+      element.setAttribute('style', style + ' min-width:' + Math.floor(0.66 * parseInt(style.split('max-width:')[1].split('px'))) + 'px;');
     });
   }
 }

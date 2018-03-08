@@ -145,7 +145,7 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 The [e-puck 2](http://www.gctronic.com/e-puck2.php) has been released in 2018.
 Among others the e-puck 2 embeds linux and a WiFi chipset.
-You will find more information on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2) and on the
+You will find more information on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2).
 
 Remote-controlling the e-puck 2 robot through Bluetooth is working the same way as on the first version of the e-puck.
 However the controller cross-compilation is currently not working for the e-puck 2.

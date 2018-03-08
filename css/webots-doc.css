@@ -291,6 +291,7 @@
   line-height: 140%;
 }
 .webots-doc img {
+  max-height: 500px;
   vertical-align: middle;
 }
 .webots-doc figure {

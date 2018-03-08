@@ -409,7 +409,7 @@ function highlightCode(view) {
   for (var i = 0; i < supportedLanguages.length; i++) {
     var language = supportedLanguages[i];
     hljs.configure({languages: [ language ]});
-    var codes = document.querySelectorAll("[class='language-" + language + "']");
+    var codes = document.querySelectorAll("." + language);
     for (var j = 0; j < codes.length; j++) {
       var code = codes[j];
       hljs.highlightBlock(code);

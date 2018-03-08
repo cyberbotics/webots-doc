@@ -52,7 +52,7 @@ There is no `WbDeviceTag` in C++/Java/Python.
 
 ### C++ Example
 
-```c++
+```cpp
 #include <webots/Robot.hpp>
 #include <webots/LED.hpp>
 #include <webots/DistanceSensor.hpp>

@@ -5,6 +5,7 @@
 
 .webots-doc g .nodes .node .label {
   color: black;
+  font-weight: initial;
 }
 
 .webots-doc g .nodes .node rect,
@@ -53,6 +54,7 @@
 .webots-doc g foreignObject div .edgeLabel {
   background-color: #f1f1f1;
   color: black;
+  font-weight: initial;
 }
 
 .webots-doc g foreignObject div a {

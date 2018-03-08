@@ -467,11 +467,11 @@
    font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used */
  }
 
- .webots-doc .mermaid {
+ .webots-doc .mermaid svg {
    min-width: 800px;
    background-color: #f1f1f1;
-   border: 1px solid #afafaf;
-   border-radius: 20px;
+   border: 1px solid #d4d4d4;
+   border-radius: 4px;
  }
 
 /*--------------------*

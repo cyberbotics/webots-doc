@@ -12,5 +12,4 @@ More detailed explanations can be found in the source code.
 - [Webots Devices](webots-devices.md)
 - [How To](how-to.md)
 - [Geometries](geometries.md)
-- [Real Robots](real-robots.md)
 - [Environments Directory](environments-directory.md)

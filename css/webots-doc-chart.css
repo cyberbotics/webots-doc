@@ -1,6 +1,6 @@
 .webots-doc g .edgePaths .edgePath .path {
   stroke: #333;
-  stroke-width:2px;
+  stroke-width: 2px;
 }
 
 .webots-doc g .nodes .node rect,
@@ -28,7 +28,7 @@
 .webots-doc g .nodes .highlightedSecondaryNode ellipse,
 .webots-doc g .nodes .highlightedSecondaryNode polygon {
   stroke: #444444;
-  stroke-width:3px;
+  stroke-width: 3px;
 }
 
 .webots-doc g .nodes .highlightedSecondaryNode rect,

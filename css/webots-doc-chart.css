@@ -3,6 +3,10 @@
   stroke-width: 2px;
 }
 
+.webots-doc g .nodes .node .label {
+  color: black;
+}
+
 .webots-doc g .nodes .node rect,
 .webots-doc g .nodes .node circle,
 .webots-doc g .nodes .node ellipse,

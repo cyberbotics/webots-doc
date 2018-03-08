@@ -53,21 +53,6 @@ White noise is applied on the `Camera`.
 The robot uses a `DistanceSensor` to get the distance to the front object and adjusts the `Camera` focal length accordingly.
 The objects displayed before or after this distance are blurred.
 
-### camera\_compositor.wbt
-
-**Keywords**: Camera, compositor, special effects, shaders
-
-![camera_compositor.png](images/camera_compositor.png) In this example, `MyBot` demonstrates camera special effects.
-Four `Camera`s are mounted on the `MyBot`, each of them pointing in a different direction.
-Special effects are applied on them:
-
-- **GrayScale**: The RGB components are merged producing a gray scaled image.
-- **OldMovie**: A sepia filter and a noise texture are applied to the image producing an old movie effect.
-- **Laplace**: A Laplacian filter is applied to the image showing image edges sharply.
-- **Invert**: The RGB components are inverted.
-
-> **Notes**: The related compositors and shaders are located in the `worlds/compositors` directory.
-
 ### camera\_motion\_blur.wbt
 
 **Keywords**: Camera, motion blur

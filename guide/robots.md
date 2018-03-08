@@ -1,6 +1,9 @@
 # Robots
 
-## Sections
+## Robot list
+
+The following list presents a set of the robots released in Webots.
+Please [contact us](https://www.cyberbotics.com/contact) if you would like to see your favorite robot here.
 
 | Preview                                         | Name                           |  Manufacturer        | Description                     |
 | :---------------------------------------------: | ------------------------------ | -------------------- | ------------------------------- |

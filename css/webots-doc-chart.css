@@ -63,7 +63,6 @@
 }
 
 .mermaid {
-  overflow-x: auto;
   min-width: 800px;
   background-color: #f1f1f1;
   border: 1px solid #afafaf;

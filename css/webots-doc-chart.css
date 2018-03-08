@@ -55,6 +55,7 @@
   background-color: #f1f1f1;
   color: black;
   font-weight: initial;
+  line-height: initial;
 }
 
 .webots-doc g foreignObject div a {

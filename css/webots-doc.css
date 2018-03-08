@@ -295,10 +295,12 @@
   vertical-align: middle;
 }
 .webots-doc figure {
+  overflow-x: auto;
   text-align: center;
   margin: 20px auto 20px auto;
 }
 .webots-doc figure > img {
+  overflow-x: initial;
   max-width: 80%;
 }
 .webots-doc figcaption {

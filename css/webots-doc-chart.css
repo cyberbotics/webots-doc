@@ -53,3 +53,8 @@
 .webots-doc g foreignObject div a {
   font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used */
 }
+
+.mermaid {
+  overflow-x: auto;
+  min-width: 800px;
+}

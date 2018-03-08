@@ -42,7 +42,7 @@
 .webots-doc g .clusters .cluster circle,
 .webots-doc g .clusters .cluster ellipse,
 .webots-doc g .clusters .cluster polygon {
-  fill: #f1f1f1 !important;  /* recommended way of mermaidjs to change these elements */
+  fill: #ddd !important;  /* recommended way of mermaidjs to change these elements */
   stroke: #afafaf !important;
 }
 
@@ -57,4 +57,7 @@
 .mermaid {
   overflow-x: auto;
   min-width: 800px;
+  background-color: #f1f1f1;
+  border: 1px solid #afafaf;
+  border-radius: 20px;
 }

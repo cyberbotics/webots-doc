@@ -143,19 +143,19 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 %end
 
-The [e-puck2](http://www.gctronic.com/e-puck2.php) has been released in 2018.
-The e-puck2 is equipped with a WiFi chipset, among other components.
-You will find more information on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2).
+The [e-puck2](http://www.gctronic.com/e-puck2.php) robot has been released in 2018.
+Comparing to the original e-puck robot, the e-puck2 robot has a more powerful micro-controller, a WiFi chipset, a few more sensors and a USB charging capability.
+More information is available on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2).
 
-Remote-controlling the e-puck2 robot through Bluetooth works the same way as on the first version of the e-puck.
+Remote-controlling the e-puck2 robot through Bluetooth works the same way as on the original e-puck.
 However controller cross-compilation is currently not available for the e-puck2.
 
-The `version` field of the `E-puck` PROTO node switches the target version of the e-puck model.
-When set to "2", the e-puck model switches to second version of the e-puck, with the following differences:
+The `version` field of the `E-puck` PROTO node selects the version of the e-puck model.
+When set to "2", the e-puck model switches to the e-puck2, with the following differences:
 
-- The graphical shape is changing: in particular, the turret is removed and different chipset texture is set for the plate.
-- The e-puck's overall mass differs: 130 [grams] instead of 150 [grams].
-- The e-puck's max speed differs: 1200 [steps / second] instead of 1000 [steps / second].
+- The graphical shape is changing: in particular, the top turret is removed and different chipset texture is set for the plate.
+- The overall mass differs: 130 [grams] instead of 150 [grams].
+- The max speed differs: 1200 [steps / second] instead of 1000 [steps / second].
 
 ### Control Interface
 
@@ -323,7 +323,7 @@ This is done using the distance sensors of the e-puck.
 
 #### e-puck2.wbt
 
-![e-puck2.wbt.png](images/robots/epuck/e-puck2.wbt.png) This is the same simulation as the above one, except it uses an "e-puck2" model.
+![e-puck2.wbt.png](images/robots/epuck/e-puck2.wbt.png) This is the same simulation as the above one, except that it uses an "e-puck2" model.
 
 #### e-puck\_line.wbt
 

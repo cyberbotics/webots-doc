@@ -29,7 +29,7 @@ In these languages, an error condition can be detected by calling the `isValid` 
 If the `isValid` function yields `false` then the `Motion` object should be explicitly deleted.
 See example below.
 
-```c++
+```cpp
 Motion *walk = new Motion(filename);
 if (! walk->isValid()) {
   cerr << "could not load file: " << filename << endl;

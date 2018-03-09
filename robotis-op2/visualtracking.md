@@ -15,7 +15,7 @@ To move the ball in simulation, press Ctrl+Shift and move the ball with the left
 
 Try to change the color of the LED by changing this line:
 
-```c++
+```cpp
 mHeadLED->set(0xFF0000);
 ```
 

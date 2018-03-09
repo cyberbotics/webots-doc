@@ -69,6 +69,7 @@
     <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
     <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
+    <script src='https://www.cyberbotics.com/mermaid/7.0.0/mermaidAPI.min.js'></script>
     <script src='$rawgiturl$branch/js/showdown-extensions.js'></script>
     <script src='$rawgiturl$branch/js/viewer.js'></script>
   ";

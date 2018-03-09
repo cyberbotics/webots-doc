@@ -359,7 +359,9 @@ function populateViewDiv(mdContent) {
   applyToPageTitle(mdContent);
 
   // markdown to html
-  var converter = new showdown.Converter({tables: 'True', extensions: ['wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
+  window.mermaidGraphCounter = 0;
+  window.mermaidGraphs = {};
+  var converter = new showdown.Converter({tables: 'True', extensions: ['wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
   // console.log('HTML content: \n\n')
@@ -367,6 +369,7 @@ function populateViewDiv(mdContent) {
 
   view.innerHTML = html;
 
+  renderGraphs();
   redirectImages(view);
   redirectUrls(view);
 
@@ -414,6 +417,18 @@ function highlightCode(view) {
       var code = codes[j];
       hljs.highlightBlock(code);
     }
+  }
+}
+
+function renderGraphs() {
+  for (var id in window.mermaidGraphs) {
+    window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
+      document.querySelector('#' + id + 'Div').innerHTML = svgCode;
+      // set min-width to be 2/3 of the max-width otherwise the text might become too small
+      var element = document.querySelector('#' + id);
+      var style = element.getAttribute('style');
+      element.setAttribute('style', style + ' min-width:' + Math.floor(0.66 * parseInt(style.split('max-width:')[1].split('px'))) + 'px;');
+    });
   }
 }
 
@@ -780,6 +795,7 @@ window.onscroll = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+  window.mermaidAPI.initialize({startOnLoad: false});
   initializeHandle();
 
   if (!isCyberboticsUrl) {

@@ -29,7 +29,6 @@ class TestParagraphs(unittest.TestCase):
                 # - Showdown extensions.
                 content = re.sub(r'%chart.+?(?=%end)%end', '\n', content, flags=re.S)
                 content = re.sub(r'%figure.+?(?=%end)%end', '\n', content, flags=re.S)
-                content = re.sub(r'%chart.+?(?=%end)%end', '\n', content, flags=re.S)
                 content = re.sub(r'%api.+?(?=%end)%end', '\n', content, flags=re.S)
                 # - Headers.
                 content = re.sub(r'^#.*', '\n', content)

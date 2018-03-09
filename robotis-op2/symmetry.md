@@ -19,9 +19,9 @@ In this example, this is done in the constructor.
 
 You can also try to add an oscillation of the head, by adding this in your main loop:
 
-```c++
+```cpp
 mMotors[18]->setPosition(sin(getTime()));
 ```
 
-Then save the file, press the build button and finally reload the world to start the new controller.
+Then save the file, press the build button and finally revert the simulation to start the new controller.
 This example is well suited for the remote compilation and we recommended that you start by testing the remote compilation tool by using this example.

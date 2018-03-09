@@ -24,8 +24,6 @@ The following tables describe the Java classes and their methods.
 | public class [Brake](brake.md) extends [Device](#java_device) {                                                |
 | &nbsp;&nbsp; public void [setDampingConstant](brake.md#wb_brake_set_damping_constant)(double dampingConstant); |
 | &nbsp;&nbsp; public int [getType](brake.md#wb_brake_set_damping_constant)();                                   |
-| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](brake.md#wb_brake_get_motor)();                            |
-| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](brake.md#wb_brake_get_position_sensor)(); |
 | }                                                                                                              |
 
 %end
@@ -357,14 +355,11 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public String [getModel](joystick.md#wb_joystick_get_model)();                                        |
 | &nbsp;&nbsp; public int [getNumberOfAxes](joystick.md#wb_joystick_get_number_of_axes)();                           |
 | &nbsp;&nbsp; public int [getAxisValue](joystick.md#wb_joystick_get_number_of_axes)(int axis);                      |
-| &nbsp;&nbsp; public int [getNumberOfPovs](joystick.md#wb_joystick_get_number_of_povs)();                           |
-| &nbsp;&nbsp; public int [getPovValue](joystick.md#wb_joystick_get_number_of_povs)(int pov);                        |
 | &nbsp;&nbsp; public int [getPressedButton](joystick.md#wb_joystick_get_pressed_button)();                          |
 | &nbsp;&nbsp; public void [setConstantForce](joystick.md#wb_joystick_set_constant_force)(int level);                |
 | &nbsp;&nbsp; public void [setConstantForceDuration](joystick.md#wb_joystick_set_constant_force)(double duration);  |
 | &nbsp;&nbsp; public void [setAutoCenteringGain](joystick.md#wb_joystick_set_constant_force)(double gain);          |
 | &nbsp;&nbsp; public void [setResistanceGain](joystick.md#wb_joystick_set_constant_force)(double gain);             |
-| &nbsp;&nbsp; public void [setForceAxis](joystick.md#wb_joystick_set_constant_force)(int axis);                     |
 | };                                                                                                                 |
 
 %end
@@ -514,8 +509,6 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getTorqueFeedback](motor.md#wb_motor_enable_force_feedback)();                     |
 | &nbsp;&nbsp; public void [setTorque](motor.md#wb_motor_set_force)(double torque);                              |
 | &nbsp;&nbsp; public int [getType](motor.md#wb_motor_get_type)();                                               |
-| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](motor.md#wb_motor_get_brake)();                            |
-| &nbsp;&nbsp; public [PositionSensor](#java_position_sensor) [getPositionSensor](motor.md#wb_motor_get_position_sensor)(); |
 | }                                                                                                              |
 
 %end
@@ -604,8 +597,6 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public int [getSamplingPeriod](positionsensor.md#wb_position_sensor_get_value)();          |
 | &nbsp;&nbsp; public double [getValue](positionsensor.md#wb_position_sensor_get_value)();                |
 | &nbsp;&nbsp; public int [getType](positionsensor.md#wb_position_sensor_get_value)();                    |
-| &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](positionsensor.md#wb_position_sensor_get_brake)();  |
-| &nbsp;&nbsp; public [Motor](#java_motor) [getMotor](positionsensor.md#wb_position_sensor_get_motor)();  |
 | }                                                                                                       |
 
 %end
@@ -784,14 +775,13 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public void [setLabel](supervisor.md#wb_supervisor_set_label)(int id, String label, double xpos, double ypos,                                    |
 | &nbsp;&nbsp;&nbsp;&nbsp; double size, int color, double transparency);                                                                                        |
 | &nbsp;&nbsp; public void [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(int status);                                                           |
-| &nbsp;&nbsp; public void [simulationReset](supervisor.md#wb_supervisor_simulation_reset)();                                                                   |
+| &nbsp;&nbsp; public void [simulationRevert](supervisor.md#wb_supervisor_simulation_revert)();                                                                 |
 | &nbsp;&nbsp; public void [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)();                                                    |
 | &nbsp;&nbsp; public int [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)();                                                               |
 | &nbsp;&nbsp; public void [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(int mode);                                                      |
-| &nbsp;&nbsp; public void [worldLoad](supervisor.md#wb_supervisor_world_load)(String file);                                                                    |
-| &nbsp;&nbsp; public void [worldSave](supervisor.md#wb_supervisor_world_load)();                                                                               |
-| &nbsp;&nbsp; public void [worldSave](supervisor.md#wb_supervisor_world_load)(String file);                                                                    |
-| &nbsp;&nbsp; public void [worldReload](supervisor.md#wb_supervisor_world_load)();                                                                             |
+| &nbsp;&nbsp; public void [loadWorld](supervisor.md#wb_supervisor_load_world)(String file);                                                                    |
+| &nbsp;&nbsp; public void [saveWorld](supervisor.md#wb_supervisor_load_world)();                                                                               |
+| &nbsp;&nbsp; public void [saveWorld](supervisor.md#wb_supervisor_load_world)(String file);                                                                    |
 | &nbsp;&nbsp; public void [movieStartRecording](supervisor.md#wb_supervisor_movie_start_recording)(String file, int width, int height, int codec, int quality, |
 | &nbsp;&nbsp;&nbsp;&nbsp; int acceleration, boolean caption);                                                                                                  |
 | &nbsp;&nbsp; public void [movieStopRecording](supervisor.md#wb_supervisor_movie_start_recording)();                                                           |

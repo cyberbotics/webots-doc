@@ -11,9 +11,15 @@ The Java and Python APIs are automatically generated from the C++ API using SWIG
 Therefore the class and method names, as well as the number of parameters and their types, are very similar in these three languages.
 
 %figure "Webots APIs Overview"
-
-![api_overview.png](images/api_overview.png)
-
+%chart
+graph BT
+  Java[[SWIG generated Java API](../reference/java-api.md)] --> CPP[[C++ API](../reference/cpp-api.md)]
+  Python[[SWIG generated Python API](../reference/python-api.md)] --> CPP
+  Ros[[ROS API](../reference/ros-api.md)] --> CPP
+    CPP --> C["C API (implemented in libcontroller)"]
+    Matlab[[Matlab API](../reference/matlab-api.md)] --> C
+      C --> Webots["Webots (binary interface)"]
+%end
 %end
 
 The naming convention of the C++/Java/Python classes and methods directly matches the C API function names.
@@ -22,7 +28,7 @@ Usually the C++/Java/Python methods have the same parameters as their C API coun
 
 ### Controller Class
 
-The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots classes: `Robot, DifferentialWheels` or `Supervisor`.
+The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots class: `Robot, DifferentialWheels` or `Supervisor`.
 It is important that the controller class is derived from the same class as that used in Scene Tree, otherwise some methods may not be available or may not work.
 For example, if in the Scene Tree a robot is of type `DifferentialWheels`, then the corresponding C++/Java/Python controller class must extend the `DifferentialWheels` class.
 If in the Scene Tree a robot is of type `Supervisor`, then the C++/Java/Python controller class must be derived from the `Supervisor` class, etc.
@@ -30,7 +36,7 @@ If in the Scene Tree a robot is of type `Supervisor`, then the C++/Java/Python c
 As you can see in [this figure](#a-small-subset-of-webots-oriented-object-apis), both `DifferentialWheels` and `Supervisor` are subclasses of the `Robot` class.
 Hence it is possible to call the `Robot`'s methods, such as, e.g., the `step` or `getLED` functions, from the `DifferentialWheels` and `Supervisor` controllers.
 But it is not possible to call the `Supervisor` methods from a `DifferentialWheels` controller, and vice versa.
-For example it won't be possible to call the `worldReload` function from a `DifferentialWheels` controller.
+For example it won't be possible to call the `simulationRevert` function from a `DifferentialWheels` controller.
 
 %figure "A small subset of Webots oriented-object APIs"
 
@@ -52,7 +58,7 @@ There is no `WbDeviceTag` in C++/Java/Python.
 
 ### C++ Example
 
-```c++
+```cpp
 #include <webots/Robot.hpp>
 #include <webots/LED.hpp>
 #include <webots/DistanceSensor.hpp>

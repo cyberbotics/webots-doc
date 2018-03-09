@@ -86,7 +86,7 @@ Using the dialog box save the world into the "my\_webots\_projects/tutorials/wor
 
 <!-- -->
 
-> **Hands on**: Reload the simulation by selecting the `File / Reload World` menu item.
+> **Hands on**: Revert the simulation by selecting the `File / Revert World` menu item.
 
 <!-- -->
 
@@ -113,9 +113,9 @@ We will learn how to use some other e-puck features in the other tutorials.
 Now, we are going to add an e-puck model to the world.
 Make sure that the simulation is paused and that the virtual time elapsed is 0.
 
-> **Theory**: When a Webots world is modified with the intention of being saved, it is fundamental that the simulation is first paused and reloaded to its initial state, i.e. the virtual time counter on the main toolbar should show 0:00:00:000.
+> **Theory**: When a Webots world is modified with the intention of being saved, it is fundamental that the simulation is first paused and reverted to its initial state, i.e. the virtual time counter on the main toolbar should show 0:00:00:000.
 Otherwise at each save, the position of each 3D objects can accumulate errors.
-Therefore, any modification of the world should be performed in that order: **pause, reload, modify and save the simulation**.
+Therefore, any modification of the world should be performed in that order: **pause, revert, modify and save the simulation**.
 
 As we don't need to create the e-puck robot from scratch, we will just have to import a special E-puck node (in fact: a PROTO node as the `RectangleArena` we introduced before).
 A PROTO is an abstract assemblage of several nodes.
@@ -130,7 +130,7 @@ Then save the simulation.
 <!-- -->
 
 > **Note**: Now if you run the simulation, the robot moves: that's because the robot uses a default controller with that behavior.
-Please pause and reload the world before going on.
+Please pause and revert the simulation before going on.
 
 <!-- -->
 
@@ -163,7 +163,7 @@ The camera can be resized by dragging the marked corner or hidden by clicking th
 
 > **Hands on**: In this tutorial we will not use the Camera devices of the E-puck.
 So we can hide the window by clicking the "x" on the camera window.
-Don't forget to reload the world before hiding the camera and to save it after the modifications.
+Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
 
 ### Create a New Controller
 
@@ -237,7 +237,7 @@ Once the controller is linked, save the world.
 
 > **Hands on**: Save the modified source code (`File / Save Text File`), and compile it (`Build / Build`).
 Fix any compilation errors if necessary.
-When Webots proposes to reload the world, choose `Yes`.
+When Webots proposes to revert the simulation, choose `Yes`.
 
 If everything is ok, your robot should move forwards.
 The robot will move using it's maximum speed for a while and then stop once the wheels have rotated of 10 radians.
@@ -281,7 +281,7 @@ In order to control the motors of the wheels in speed you need to set the target
 > }
 > ```
 
-Try to change your previous controller by this one, and then recompile and reload the world.
+Try to change your previous controller by this one, and then recompile and revert the simulation.
 The robot will now move (the wheels will rotate at a speed of 1 radian per second) and never stop.
 
 ### Conclusion

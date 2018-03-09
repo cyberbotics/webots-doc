@@ -113,9 +113,13 @@ The second stage is performed by the motor P-controller (2) that computes the cu
 Finally, the third stage (3) is carried out by the physics simulator (ODE joint motors).
 
 %figure "Motor control"
-
-![motor_control.png](images/motor_control.png)
-
+%chart
+graph LR
+  node["Motor node (VRML)"] -->|"wb_motor_set_position(Pt)<br/>wb_motor_set_velocity(Vd)<br/>wb_motor_set_acceleration(A)<br/>wb_motor_set_available_force(F)<br/>wb_motor_set_control_pid(P,I,D)"| PID["2.motor PID-controller (Webots)"]
+  robot["1. robot controller (user-code)"] -->|"controlPID(P,I,D)<br/>maxVelocity(Vmax)<br/>acceleration(A)<br/>maxForce(Fmax)"| PID
+    PID -->|"motor force/torque(F)</br>motor velocity(Vc)"| ODE["3. physics simulator (ODE)"]
+  robot -->|wb_motor_set_force<br/>wb_motor_set_torque| ODE
+%end
 %end
 
 At each simulation step, the PID-controller (2) recomputes the current velocity *Vc* according to following algorithm:
@@ -431,22 +435,3 @@ If the value of the `type` field is "linear", this function returns WB\_LINEAR, 
 | "linear"     | WB\_LINEAR   |
 
 %end
-
----
-
-**Name**
-
-**wb\_motor\_get\_brake**, **wb\_motor\_get\_position\_sensor** - *get associated devices*
-
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
-
-```c
-#include <webots/brake.h>
-
-WbDeviceTag wb_motor_get_brake(WbDeviceTag tag);
-WbDeviceTag wb_motor_get_position_sensor(WbDeviceTag tag);
-```
-
-**Description**
-
-The `wb_motor_get_brake` and `wb_motor_get_position_sensor` functions return the [Brake](brake.md) and [PositionSensor](positionsensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.

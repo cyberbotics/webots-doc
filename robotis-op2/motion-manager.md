@@ -12,7 +12,7 @@ More information about are available on the [website](http://support.robotis.com
 
 **RobotisOp2MotionManager(webots::Robot \*robot)** - *Motion Manager constructor*
 
-```c++
+```cpp
 #include <RobotisOp2MotionManager.hpp>
 
 RobotisOp2MotionManager(webots::Robot *robot);
@@ -28,7 +28,7 @@ The first parameter is the robot on which the algorithm applies.
 
 **void playPage(int id)** - *Plays a motion*
 
-```c++
+```cpp
 #include <RobotisOp2MotionManager.hpp>
 
 void playPage(int id);
@@ -49,7 +49,7 @@ This can be done by calling the method `playPage` with the second parameter set 
 
 **void playPage(int id, bool sync = true)**, **void step(int duration)**, **bool isMotionPlaying()** - *Starts the motion in Step-by-Step mode.*
 
-```c++
+```cpp
 #include <RobotisOp2MotionManager.hpp>
 
 void playPage(int id, bool sync);
@@ -66,7 +66,7 @@ The *isMotionPlaying* method determines if the motion is currently running.
 
 Here is a typical use of the motion manager in step-by-step mode:
 
-```c++
+```cpp
 mMotionManager->playPage(1, false);
 while (mMotionManager->isMotionPlaying()) {
   mMotionManager->step(mTimeStep);

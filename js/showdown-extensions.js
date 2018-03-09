@@ -30,11 +30,11 @@ showdown.extension('wbVariables', function() {
   var vars = {
     webots: {
       version: {
-        major: 'R2018b',
+        major: 'R2018a',
         // full is equal to major for the first major version
         // and contains the revision number for subsequent versions
-        full: 'R2018b',
-        package: 'R2018b'
+        full: 'R2018a revision 1',
+        package: 'R2018a-rev1'
       }
     },
     date: {
@@ -168,6 +168,32 @@ showdown.extension('wbIllustratedSection', function() {
             htmlImage = htmlImage.substr(3, htmlImage.length - 7);
           var htmlContent = converter.makeHtml(content);
           return '<section class="illustrated-section">' + htmlImage + htmlContent + '</section>';
+        });
+        return text;
+      }
+    }
+  ];
+});
+
+// This extension allows to define graph using mermaidJS
+showdown.extension('wbChart', function() {
+  return [
+    { // chart with legend to HTML
+      type: 'lang',
+      filter: function(text, converter, options) {
+        text = text.replace(/%chart\s+([^"][^]+?)%end/gi, function(match, content) {
+          // handle links
+          content = content.replace(/\[\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
+            return '[<a href='+ link + '>' + name + '</>';
+          });
+          content = content.replace(/\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
+            return '<a href='+ link + '>' + name + '</>';
+          });
+          // save content
+          var id = 'mermaidGraph' + window.mermaidGraphCounter;
+          window.mermaidGraphCounter++;
+          window.mermaidGraphs[id] = content;
+          return '<div id="' + id + 'Div' + '" class="mermaid"></div>';
         });
         return text;
       }

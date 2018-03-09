@@ -209,7 +209,7 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: Compile your code by selecting the `Build / Build` menu item.
 Compilation errors are displayed in red in the console.
 If there are any, fix them and retry to compile.
-Reload the world.
+Revert the simulation.
 
 ### The Controller Code
 

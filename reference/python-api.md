@@ -749,14 +749,13 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; def [getSelected](supervisor.md#wb_supervisor_node_get_from_def)(self)                                                                         |
 | &nbsp;&nbsp; def [setLabel](supervisor.md#wb_supervisor_set_label)(self, id, label, xpos, ypos, size, color, transparency, font="Arial")                    |
 | &nbsp;&nbsp; def [simulationQuit](supervisor.md#wb_supervisor_simulation_quit)(self, status)                                                                |
-| &nbsp;&nbsp; def [simulationReset](supervisor.md#wb_supervisor_simulation_reset)(self)                                                                      |
+| &nbsp;&nbsp; def [simulationRevert](supervisor.md#wb_supervisor_simulation_revert)(self)                                                                    |
 | &nbsp;&nbsp; def [simulationResetPhysics](supervisor.md#wb_supervisor_simulation_reset_physics)(self)                                                       |
 | &nbsp;&nbsp; def [simulationGetMode](supervisor.md#wb_supervisor_simulation_set_mode)(self)                                                                 |
 | &nbsp;&nbsp; def [simulationSetMode](supervisor.md#wb_supervisor_simulation_set_mode)(self, mode)                                                           |
-| &nbsp;&nbsp; def [worldLoad](supervisor.md#wb_supervisor_world_load)(self, file)                                                                            |
-| &nbsp;&nbsp; def [worldSave](supervisor.md#wb_supervisor_world_load)(self)                                                                                  |
-| &nbsp;&nbsp; def [worldSave](supervisor.md#wb_supervisor_world_load)(self, file)                                                                            |
-| &nbsp;&nbsp; def [worldReload](supervisor.md#wb_supervisor_world_load)(self)                                                                                |
+| &nbsp;&nbsp; def [loadWorld](supervisor.md#wb_supervisor_load_world)(self, file)                                                                            |
+| &nbsp;&nbsp; def [saveWorld](supervisor.md#wb_supervisor_load_world)(self)                                                                                  |
+| &nbsp;&nbsp; def [saveWorld](supervisor.md#wb_supervisor_load_world)(self, file)                                                                            |
 | &nbsp;&nbsp; def [movieStartRecording](supervisor.md#wb_supervisor_movie_start_recording)(self, file, width, height, codec, quality, acceleration, caption) |
 | &nbsp;&nbsp; def [movieStopRecording](supervisor.md#wb_supervisor_movie_start_recording)(self)                                                              |
 | &nbsp;&nbsp; def [movieIsReady](supervisor.md#wb_supervisor_movie_start_recording)(self)                                                                    |

@@ -14,11 +14,11 @@ A box with round corners represents a `Geometry` node; that is, a node that will
 A box with a gray background indicates a node that can be used directly (or composed using [Group](group.md) and [Transform](transform.md) nodes) to build a *boundingObject* used to detect collisions between [Solid](solid.md) objects.
 Note that not all geometry nodes can be used as boundingObjects, and that although [Group](group.md) and [Transform](transform.md) can be used, not every combination of these will work correctly.
 
+%figure "Webots Nodes Chart"
 %chart
 graph LR
   subgraph ""
     AbstractClass(Abstract Class) --- AbstractClassDefinition[cannot be instantiated]
-    click AbstractClass "https://www.google.ch" "test tooltip"
     BoundingObject[Bounding Object] --- BoundingObjectDefinition[can be used as BoundingObject<br>in a Solid node]
     VRML[VRML] --- VRMLDefinition[valid VRML node]
   end
@@ -119,15 +119,13 @@ graph LR
   end
 
   classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
-  classDef BoundingObjectStyle fill:#d3ffc9;
-  classDef VRMLBoundingObjectStyle fill:#d3ffc9,stroke:#444444,stroke-width:3px;
-  classDef VRMLNodeStyle stroke:#444444,stroke-width:3px;
-  classDef DefinitionStyle fill:#f1f1f1,stroke-width:0px;
-  style VRML fill:#f1f1f1,stroke:#444444,stroke-width:3px;
+  classDef DefinitionStyle fill:#ddd,stroke-width:0px;
+  style VRML fill:#ddd,stroke:#444444,stroke-width:3px;
 
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
-  class BoundingObject,Capsule,Plane BoundingObjectStyle;
-  class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere VRMLBoundingObjectStyle;
-  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo VRMLNodeStyle;
+  class BoundingObject,Capsule,Plane secondaryNode;
+  class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
+  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
+%end
 %end

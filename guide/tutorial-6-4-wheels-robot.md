@@ -83,15 +83,40 @@ The [figure](#low-level-representation-of-the-4-wheels-robot) represents all the
 So far only the direct children nodes of the root Robot node are implemented.
 
 %figure "High level representation of the 4 wheels robot"
-
-![tutorial_4_wheels_highlevel.png](images/tutorial_4_wheels_highlevel.png)
-
+%chart
+graph TD
+  Robot[[Robot](../reference/robot.md)] -->|children| HingeJoint[[HingeJoint](../reference/hingejoint.md)]
+    HingeJoint --> Solid[[DEF WHEEL1 Solid](../reference/solid.md)]
+  Robot -.->|children| OtherWheels[Other wheels]
+  style HingeJoint fill:#ffe4bf;
+  class Robot highlightedNode;
+%end
 %end
 
 %figure "Low level representation of the 4 wheels robot"
+%chart
+graph TD
+  Robot[[Robot](../reference/robot.md)] -->|physics| Physics1[[Physics](../reference/physics.md)]
+  Robot -->|boundingObject| USEBODY[USE BODY]
+  Robot -->|children| Shape1[[DEF BODY Shape](../reference/shape.md)]
+    Shape1 -->|geometry| Box[[Box](../reference/box.md)]
+    Shape1 -.- USEBODY
+  Robot -->|children| HingeJoint[[HingeJoint](../reference/hingejoint.md)]
+    HingeJoint -->|devices| RotationalMotor[[RotationalMotor](../reference/rotationalmotor.md)]
+    HingeJoint -->|jointParameters| HingeJointParameters[[HingeJointParameters](../reference/hingejointparameters.md)]
+    HingeJoint -->|endPoint| Solid[[DEF WHEEL1 Solid](../reference/solid.md)]
+      Solid -->|physics| Physics2[[DEF WHEEL_PH Physics](../reference/physics.md)]
+      Solid -->|boundingObject| USEWHEEL[USE WHEEL]
+      Solid -->|children| Transform[[DEF WHEEL Transform](../reference/transform.md)]
+        Transform -->|children| Shape2[[Shape](../reference/shape.md)]
+          Transform -.- USEWHEEL
+          Shape2 -->|geometry| Cylinder[[Cylinder](../reference/cylinder.md)]
+  Robot -.->|children| OtherWheels["Other wheels (using WHEEL and WHEEL_PH)"]
 
-![tutorial_4_wheels_lowlevel.png](images/tutorial_4_wheels_lowlevel.png)
-
+  style HingeJoint fill:#ffe4bf;
+  class Robot highlightedNode;
+  class Shape1,USEBODY,Transform,USEWHEEL secondaryNode;
+%end
 %end
 
 ### HingeJoints

@@ -135,20 +135,20 @@ The resolution of the camera was limited to 52x39 pixels, as this is the maximum
 
 %end
 
-### e-puck 2
+### e-puck2
 
-%figure "e-puck 2 model"
+%figure "e-puck2 model"
 
 ![epuck2.png](images/robots/epuck/epuck2.png)
 
 %end
 
-The [e-puck 2](http://www.gctronic.com/e-puck2.php) has been released in 2018.
-The e-puck 2 runs linux and is equipped with a WiFi chipset, among other components.
+The [e-puck2](http://www.gctronic.com/e-puck2.php) has been released in 2018.
+The e-puck2 is equipped with a WiFi chipset, among other components.
 You will find more information on [this wiki page](http://www.gctronic.com/doc/index.php/e-puck2).
 
-Remote-controlling the e-puck 2 robot through Bluetooth works the same way as on the first version of the e-puck.
-However controller cross-compilation is currently not available for the e-puck 2.
+Remote-controlling the e-puck2 robot through Bluetooth works the same way as on the first version of the e-puck.
+However controller cross-compilation is currently not available for the e-puck2.
 
 The `version` field of the `E-puck` PROTO node switches the target version of the e-puck model.
 When set to "2", the e-puck model switches to second version of the e-puck, with the following differences:
@@ -323,7 +323,7 @@ This is done using the distance sensors of the e-puck.
 
 #### e-puck2.wbt
 
-![e-puck2.wbt.png](images/robots/epuck/e-puck2.wbt.png) This is the same simulation as the above one, except it uses an "e-puck 2" model.
+![e-puck2.wbt.png](images/robots/epuck/e-puck2.wbt.png) This is the same simulation as the above one, except it uses an "e-puck2" model.
 
 #### e-puck\_line.wbt
 

@@ -1,7 +1,7 @@
 ## Using Remote Control from Robot Window
 
 To use remote control, open the robot window, go to the `Transfer` tab, as for remote compilation you have to set the connection settings (see [previous chapter](settings.md) for more information).
-To start the remote control, stop and revert your simulation, put your robot in the [stable position](send-a-controller-to-the-robot.md#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation).
+To start the remote control, stop and reload the world, put your robot in the [stable position](send-a-controller-to-the-robot.md#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation).
 Then press the following button:
 
 %figure "Remote control button"
@@ -18,8 +18,8 @@ When this window disappears and the eyes of the robot switch from red to green, 
 %end
 
 You can now easily start and pause your controller in remote control mode by using the run and pause buttons of Webots simulation (see chapter about [examples](examples.md) for more details).
-Warning: if you revert the simulation it will stop the remote control mode.
-In order to stop the remote control (without reverting) simply press the following button:
+Warning: if you reload the world it will stop the remote control mode.
+In order to stop the remote control (without reloading) simply press the following button:
 
 %figure "Stop button"
 ![stop.png](images/stop.png)

@@ -11,6 +11,10 @@ Its arm has five degrees of freedom and a linear gripper.
 Its base has four [Mecanum wheels](https://en.wikipedia.org/wiki/Mecanum_wheel) allowing for omnidirectional movement.
 These wheels are efficiently modeled using asymmetric friction.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=vFwNwT8dZTU =800x600)
+
 ### Samples
 
 You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/kuka/youbot/worlds".

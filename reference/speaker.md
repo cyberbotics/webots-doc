@@ -29,14 +29,12 @@ void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *soun
 **Description**
 
 This function allows the user to play a sound file.
-All major audio formats are supported, such as MP3, AIFF, AAC, WAV, FLAC and OGG Vorbis.
-For an exhaustive list, see [here](https://en.wikipedia.org/wiki/FFmpeg#Supported_formats).
-
+Currently only wave files are supported.
 The function takes as arguments two speaker `WbDeviceTag` respectively for the left and right channels.
 If both channels should be played on the same speaker or the file has only one channel, it is possible to pass the same device tag for both left and right arguments.
 Alternatively, if one channel should be ignored, it is possible to pass `0` instead of one of the two tags.
 
-The `sound` argument specifies the path to the sound file that should be played.
+The `sound` argument specifies the path to the wave file that should be played.
 The `volume` argument allows the user to specify the volume of this sound (between 0.0 and 1.0).
 The `pitch` argument allows the user to modify the pitch of the sound, the default sound pitch is multiplied by the pitch argument.
 The `pitch` argument should be positive.
@@ -152,14 +150,14 @@ Please refer to the [Microsoft Speech API (SAPI)](https://msdn.microsoft.com/en-
     The default is `100`.
 
 - `audio` has one supported parameter which is `src`, specifying a WAV file.
-  This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
+This results in the insertion of the specified sound file in the synthesized signal at the place specified in the input text.
 
 Example:
 
 ```xml
 Hello!
 Using the text-to-speech of the Speaker device, I can speak 6 different languages: English with US or UK accent, German, Spanish, French and Italian.
-Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>. 
+Using tags I can modulate my speech, like for example change <prosody pitch="+16.8st">the pitch of my voice</prosody>, <prosody pitch="-15st">and speak with a very low pitch</prosody>.
 <prosody rate="0.5">And I can change the speed</prosody><prosody rate="1.5">at which I speak</prosody>.
 I can also <prosody volume="20">adjust the volume of my voice</prosody>.
 Last but not least, I can imitate animals: <audio src="sounds/cow.wav">Meuh</audio>

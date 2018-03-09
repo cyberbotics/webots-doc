@@ -12,7 +12,7 @@ This allows to store the position and orientation of the PROTO instances.
 "TwoColorChair.proto":
 
 ```
-#VRML_SIM R2018b utf8
+#VRML_SIM R2018a utf8
 # A two-color chair
 
 PROTO TwoColorChair [
@@ -85,7 +85,7 @@ Field values which differ from the default must be specified.
 "TwoChairs.wbt":
 
 ```
-#VRML_SIM R2018b utf8
+#VRML_SIM R2018a utf8
 
 WorldInfo {
 }

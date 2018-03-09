@@ -1,6 +1,9 @@
 # Robots
 
-## Sections
+## Robot List
+
+All the robot models included in Webots are listed here. Users may also add their own custom models.
+Please [contact us](https://www.cyberbotics.com/contact) if you would like to see your favorite robot here.
 
 | Preview                                         | Name                           |  Manufacturer        | Description                     |
 | :---------------------------------------------: | ------------------------------ | -------------------- | ------------------------------- |

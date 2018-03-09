@@ -22,6 +22,8 @@ class TestHyperlinks(unittest.TestCase):
                 # Remove code statements
                 content = re.sub(r'```.+?(?=```)```', '', content, flags=re.S)
                 content = re.sub(r'`.+?(?=`)`', '', content, flags=re.S)
+                # Remove charts
+                content = re.sub(r'%chart.+?(?=%end)%end', '\n', content, flags=re.S)
                 # Extract hyperlinks.
                 for m in re.finditer(r'[^\!](\[([^\]]*)\]\s*\(([^\)]*)\))', content):
                     hyperlinkMD = m.group(1)

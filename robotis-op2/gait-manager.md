@@ -12,7 +12,7 @@ In the [appendix](walking-parameters.md), all the parameters of the gait are exp
 
 **RobotisOp2GaitManager(webots::Robot \*robot, const std::string &iniFilename)** - *Gait Manager constructor*
 
-```c++
+```cpp
 #include <RobotisOp2GaitManager.hpp>
 
 RobotisOp2GaitManager(webots::Robot *robot, const std::string &iniFilename);
@@ -30,7 +30,7 @@ The following methods are available in order to modify the main parameters in yo
 
 **void setXAmplitude(double x)**, **void setYAmplitude(double y)**, **void setAAmplitude(double a)**, **void setMoveAimOn(bool q)**, **void setBalanceEnable(bool q)** - *Change the gait parameters*
 
-```c++
+```cpp
 #include <RobotisOp2GaitManager.hpp>
 
 void setXAmplitude(double x);
@@ -58,7 +58,7 @@ Finally the following methods can be used in order to run the algorithm:
 
 **void start()**, **void step(int duration)**, **void stop()** - *Start, stop and run the gait.*
 
-```c++
+```cpp
 #include <RobotisOp2GaitManager.hpp>
 
 void start();

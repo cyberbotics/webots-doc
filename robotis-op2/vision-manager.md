@@ -6,7 +6,7 @@ The `RobotisOp2VisionManager` class allows you to use some image processing tool
 
 **RobotisOp2VisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
 
-```c++
+```cpp
 #include <RobotisOp2VisionManager.hpp>
 
 RobotisOp2VisionManager(int width,
@@ -48,7 +48,7 @@ To find the color hue of the target object and to understand the impact of the s
 
 **bool getBallCenter(double &x, double &y, const unsigned char \*image)** - *Get the position of the target object*
 
-```c++
+```cpp
 #include <RobotisOp2VisionManager.hpp>
 
 void getBallCenter(double &x, double &y, const unsigned char *image);
@@ -74,7 +74,7 @@ This method proceeds with the following steps:
 
 **bool isDetected(int x, int y);** - *Determine if a pixel of the image is part of the target*
 
-```c++
+```cpp
 #include <RobotisOp2VisionManager.hpp>
 
 void isDetected(int x, int y);

@@ -30,9 +30,24 @@ The weights should have a radius of 0.03 m and a subdivision of 2.
 The weights can be moved at the handle extremities thanks to the `translation` field of their Transform nodes.
 
 %figure "Representation of the subnodes of a compound solid made of several transformed geometries."
+%chart
+graph TD
+  Solid[[Solid](../reference/solid.md)] -->|physics| Physics[[Physics](../reference/physics.md)]
+  Solid -->|boundingObject| USEG0[USE G0]
+  Solid -->|children| Group[[DEF G0 Group](../reference/group.md)]
+    Group -->|children| Shape1[[Shape](../reference/shape.md)]
+      Shape1 -->|geometry| Cylinder[[Cylinder](../reference/cylinder.md)]
+    Group -->|children| Transform1[[Transform](../reference/transform.md)]
+      Transform1 -->|children| Shape2[[Shape](../reference/shape.md)]
+        Shape2 -->|geometry| Sphere1[[Sphere](../reference/sphere.md)]
+    Group -->|children| Transform2[[Transform](../reference/transform.md)]
+      Transform2 -->|children| Shape3[[Shape](../reference/shape.md)]
+        Shape3 -->|geometry| Sphere2[[Sphere](../reference/sphere.md)]
+    USEG0 -.- Group
 
-![tutorial_compound_solid.png](images/tutorial_compound_solid.png)
-
+  class Solid highlightedNode;
+  class USEG0,Group secondaryNode;
+%end
 %end
 
 ### Physics Attributes

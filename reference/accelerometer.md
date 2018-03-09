@@ -1,6 +1,6 @@
 ## Accelerometer
 
-Derived from [Device](device.md) and [Solid](solid.md). and [Solid](solid.md).
+Derived from [Device](device.md) and [Solid](solid.md).
 
 ```
 Accelerometer {

@@ -291,6 +291,7 @@
   line-height: 140%;
 }
 .webots-doc img {
+  max-width: 100%;
   max-height: 500px;
   vertical-align: middle;
 }
@@ -324,6 +325,7 @@
   border-style: solid;
   border-color: #ddd;
   background-color: #ddd;
+  word-wrap: break-word;
 }
 .webots-doc #view table tr:hover td {
   background-color: #def;

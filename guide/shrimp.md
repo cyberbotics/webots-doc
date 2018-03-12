@@ -10,6 +10,10 @@ The "Shrimp" robot is a mobile platform for rough terrain from [Bluebotics](http
 It has 6 wheels and a passive structure that adapts to the terrain profile and climbs obstacles.
 It can also turn on the spot.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=n4rttp8CysU)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/bluebotics/shrimp/worlds".

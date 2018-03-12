@@ -8,6 +8,10 @@
 
 The [iRobot Create](http://www.irobot.com/About-iRobot/STEM/Create-2.aspx) robot is a customizable frame based on the famous Roomba vacuum cleaning platform, and is produced by iRobot.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=dEgLYioQycA)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/irobot/create/worlds".

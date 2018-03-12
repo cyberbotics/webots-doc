@@ -15,6 +15,8 @@ These wheels are efficiently modeled using asymmetric friction.
 
 ![youtube video](https://www.youtube.com/watch?v=vFwNwT8dZTU)
 
+![youtube video](https://www.youtube.com/watch?v=9Fjyu_wzIgc)
+
 ### Samples
 
 You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/kuka/youbot/worlds".

@@ -11,9 +11,15 @@ The Java and Python APIs are automatically generated from the C++ API using SWIG
 Therefore the class and method names, as well as the number of parameters and their types, are very similar in these three languages.
 
 %figure "Webots APIs Overview"
-
-![api_overview.png](images/api_overview.png)
-
+%chart
+graph BT
+  Java[[SWIG generated Java API](../reference/java-api.md)] --> CPP[[C++ API](../reference/cpp-api.md)]
+  Python[[SWIG generated Python API](../reference/python-api.md)] --> CPP
+  Ros[[ROS API](../reference/ros-api.md)] --> CPP
+    CPP --> C["C API (implemented in libcontroller)"]
+    Matlab[[Matlab API](../reference/matlab-api.md)] --> C
+      C --> Webots["Webots (binary interface)"]
+%end
 %end
 
 The naming convention of the C++/Java/Python classes and methods directly matches the C API function names.

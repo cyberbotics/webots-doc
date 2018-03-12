@@ -13,7 +13,7 @@ These wheels are efficiently modeled using asymmetric friction.
 
 ### Movie Presentation
 
-![youtube video](https://www.youtube.com/watch?v=vFwNwT8dZTU =100%x*)
+![youtube video](https://www.youtube.com/watch?v=vFwNwT8dZTU)
 
 ### Samples
 

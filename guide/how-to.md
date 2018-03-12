@@ -46,13 +46,6 @@ The inertia of the heavy mass lets the robot base turn round.
 The overall center of mass of the robot is changing.
 This can be visualized with the `View / Optional Rendering / Show Center of Mass...` or `mass` tab of in the node editor when the robot is selected.
 
-### contact\_points.wbt
-
-**Keywords**: Physics plugin, contact points
-
-![contact_points.png](images/contact_points.png) In this example, a box falls until it reaches the ground.
-A physics plugin (cf. `WorldInfo.physics`) gets information on the contact points and displays the reaction forces on the `Console` and as red lines.
-
 ### custom\_html\_robot\_window.wbt
 
 **Keywords**: custom robot window, controller plugin, HTML, Javascript, CSS
@@ -149,7 +142,6 @@ This plugins is an example of:
 - How to add custom forces.
 - How to move objects.
 - How to handle collisions.
-- How to draw objects using OpenGL.
 
 ### rope.wbt
 

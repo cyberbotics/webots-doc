@@ -141,7 +141,7 @@ function collapseMovies(node) {
         // then, replace the iframe by a text and an hyperlink to the youtube page.
         src = src.replace(/embed\/(.*)\?rel=0/, 'watch?v=$1'); // e.g. https://www.youtube.com/embed/vFwNwT8dZTU?rel=0 to https://www.youtube.com/watch?v=vFwNwT8dZTU
         var p = document.createElement('p');
-        p.innerHTML = '<a href="' + src + '">Clic here to see the youtube movie.</a>';
+        p.innerHTML = '<a href="' + src + '">Click here to see the youtube movie.</a>';
         iframe.parentNode.replaceChild(p, iframe);
       }
     }

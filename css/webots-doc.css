@@ -475,6 +475,12 @@
    border-radius: 4px;
  }
 
+.webots-doc iframe {
+  width: 70%;
+  margin: 30px auto;
+  display: block;
+}
+
 /*--------------------*
  * Blog specific CSS
  *--------------------*/
@@ -600,12 +606,6 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
-
-.blog iframe {
-  width: 70%;
-  margin: 30px auto;
-  display: block;
 }
 
 .blog pre {

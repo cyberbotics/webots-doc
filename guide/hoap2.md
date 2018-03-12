@@ -8,6 +8,10 @@
 
 The [Fujitsu HOAP-2](https://en.wikipedia.org/wiki/HOAP) (HOAP for "Humanoid for Open Architecture Platform") is an humanoid robot of 48 cm with 25 degrees of freedom.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=xuVxFqmRl2g)
+
 ### Samples
 
 You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/fujitsu/hoap2/worlds".

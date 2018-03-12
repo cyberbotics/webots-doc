@@ -10,6 +10,10 @@ The Nao robot is a humanoid robot developed by [SoftBank Robotics](https://www.a
 This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [SoftBank Robotics](https://www.ald.softbankrobotics.com/en).
 Currently, Webots supports the Nao v3.3, v4.0 and v5.0 versions, with and without their articulated fingers (respectively with 25 and 21 degrees of freedom) for the first two.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=NQmEjpr6wOA)
+
 ### Nao Models
 
 You can switch between the Nao model thanks to the following Nao PROTO fields:

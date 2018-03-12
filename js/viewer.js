@@ -131,6 +131,23 @@ function redirectUrls(node) {
   }
 }
 
+function collapseMovies(node) {
+  if (location.href.indexOf('local_index.html') !== -1) { // if it's the offline documentation embedded in Webots (possibly without network):
+    var iframes = node.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) { // foreach iframe:
+      var iframe = iframes[i];
+      var src = iframe.getAttribute('src');
+      if (src && src.indexOf('youtube')) { // if the iframe is a youtube frame:
+        // then, replace the iframe by a text and an hyperlink to the youtube page.
+        src = src.replace(/embed\/(.*)\?rel=0/, 'watch?v=$1'); // e.g. https://www.youtube.com/embed/vFwNwT8dZTU?rel=0 to https://www.youtube.com/watch?v=vFwNwT8dZTU
+        var p = document.createElement('p');
+        p.innerHTML = '<a href="' + src + '">Click here to see the youtube movie.</a>';
+        iframe.parentNode.replaceChild(p, iframe);
+      }
+    }
+  }
+}
+
 function forgeUrl(book, page, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ('#' + anchor) : '';
   var url = location.href;
@@ -372,6 +389,7 @@ function populateViewDiv(mdContent) {
   renderGraphs();
   redirectImages(view);
   redirectUrls(view);
+  collapseMovies(view);
 
   var images = view.querySelectorAll('img');
   if (images.length > 0) {

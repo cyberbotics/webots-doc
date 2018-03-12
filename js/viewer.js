@@ -132,14 +132,14 @@ function redirectUrls(node) {
 }
 
 function collapseMovies(node) {
-  if (location.href.indexOf('local_index.html') !== -1) {
+  if (location.href.indexOf('local_index.html') !== -1) { // if it's the offline documentation embedded in Webots (possibly without network):
     var iframes = node.querySelectorAll('iframe');
-    for (var i = 0; i < iframes.length; i++) {
+    for (var i = 0; i < iframes.length; i++) { // foreach iframe:
       var iframe = iframes[i];
       var src = iframe.getAttribute('src');
-      if (src && src.indexOf('youtube')) {
-        // https://www.youtube.com/embed/vFwNwT8dZTU?rel=0 to https://www.youtube.com/watch?v=vFwNwT8dZTU
-        src = src.replace(/embed\/(.*)\?rel=0/, 'watch?v=$1');
+      if (src && src.indexOf('youtube')) { // if the iframe is a youtube frame:
+        // then, replace the iframe by a text and an hyperlink to the youtube page.
+        src = src.replace(/embed\/(.*)\?rel=0/, 'watch?v=$1'); // e.g. https://www.youtube.com/embed/vFwNwT8dZTU?rel=0 to https://www.youtube.com/watch?v=vFwNwT8dZTU
         var p = document.createElement('p');
         p.innerHTML = '<a href="' + src + '">Clic here to see the youtube movie.</a>';
         iframe.parentNode.replaceChild(p, iframe);

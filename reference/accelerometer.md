@@ -1,6 +1,6 @@
 ## Accelerometer
 
-Derived from [Device](device.md).
+Derived from [Device](device.md) and [Solid](solid.md).
 
 ```
 Accelerometer {
@@ -8,7 +8,7 @@ Accelerometer {
   SFBool  xAxis       TRUE   # {TRUE, FALSE}
   SFBool  yAxis       TRUE   # {TRUE, FALSE}
   SFBool  zAxis       TRUE   # {TRUE, FALSE}
-  SFFloat resolution  -1     # [0, inf) 
+  SFFloat resolution  -1     # [0, inf)
 }
 ```
 

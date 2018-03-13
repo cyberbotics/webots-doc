@@ -14,10 +14,10 @@ In this directory, you will find the following world files :
 
 %figure "Screenshots of the apartment environment."
 
-|                                            |                                            |
-|--------------------------------------------|--------------------------------------------|
-| ![apartment_a.png](images/apartment_a.png) | ![apartment_b.png](images/apartment_b.png) |
-| ![apartment_c.png](images/apartment_c.png) | ![apartment_d.png](images/apartment_d.png) |
+|                                                    |                                                    |
+|----------------------------------------------------|----------------------------------------------------|
+| ![apartment_a.png](images/samples/apartment_a.png) | ![apartment_b.png](images/samples/apartment_b.png) |
+| ![apartment_c.png](images/samples/apartment_c.png) | ![apartment_d.png](images/samples/apartment_d.png) |
 
 %end
 
@@ -34,9 +34,9 @@ An e-puck robot patrols on the table and an iRobot Create robot cleans the groun
 
 %figure "Screenshots of the factory environment."
 
-|                                        |                                        |
-|----------------------------------------|----------------------------------------|
-| ![factory_a.png](images/factory_a.png) | ![factory_b.png](images/factory_b.png) |
+|                                                |                                                |
+|------------------------------------------------|------------------------------------------------|
+| ![factory_a.png](images/samples/factory_a.png) | ![factory_b.png](images/samples/factory_b.png) |
 
 %end
 
@@ -49,7 +49,7 @@ This means that a robot could grab a hammer, or turn a valve handle.
 
 **Keywords**: kitchen, utensil
 
-![kitchen.png](images/kitchen.png) This example shows a kitchen created by using some of the domestic objects included in Webots.
+![kitchen.png](images/samples/kitchen.png) This example shows a kitchen created by using some of the domestic objects included in Webots.
 These objects are Webots PROTO nodes, and can be easily moved and resized to create other kitchen layouts.
 A robot can interact with the kitchen utensils, the glasses, the bottles, the plates, the pans or the food.
 The shelves doors and drawers are also interactive.

@@ -12,6 +12,10 @@ A wheeled robot is embedded inside the spherical body.
 The Webots model is implemented at a high-level of abstraction; the wheeled robot inside the spherical body is not modeled, but the body and head are linked by two rotational joints (pitch and yaw), and one joint allows head rotation.
 The robot size are customizable using the BB-8 PROTO fields.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=d6NJLFg1x9M)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/sphero/worlds".

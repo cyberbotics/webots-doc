@@ -70,10 +70,6 @@ Options:
     specifies how many steps are logged. If the --sysinfo option is used, the
     system information is prepended into the log file.
 
-  --enable-ogre-warnings
-    Redirect the uncritical Ogre log messages to the Webots console or to the
-    standard output stream if the --stdout option is used.
-
 Please report any bug to http://www.cyberbotics.com/bug
 ```
 

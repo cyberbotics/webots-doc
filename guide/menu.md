@@ -79,7 +79,7 @@
     - [Elisa 3](elisa3.md)
     - [e-puck](epuck.md)
     - [FireBird 6](firebird6.md)
-    - [Ghostdog](ghostdog.md)
+    - [GhostDog](ghostdog.md)
     - [Hemisson](hemisson.md)
     - [HOAP-2](hoap2.md)
     - [iCub](icub.md)

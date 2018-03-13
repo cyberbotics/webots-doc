@@ -6,7 +6,7 @@
 
 %end
 
-TODO: description.
+The "Blimp" robot is a Zeppelin-like aerial robot developed by the [EPFL LIS laboratory](https://lis.epfl.ch/).
 
 ### Samples
 

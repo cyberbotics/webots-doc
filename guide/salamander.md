@@ -1,4 +1,4 @@
-## Biorob Salamander
+## BioRob Salamander
 
 %figure "Salamander model in Webots"
 
@@ -6,7 +6,7 @@
 
 %end
 
-TODO: description.
+The "Salamander" robot is a salamander-like robot developed by the [EPFL BioRob laboratory](https://biorob.epfl.ch/).
 
 ### Samples
 

@@ -8,6 +8,10 @@
 
 The "Salamander" robot is a salamander-like robot developed by the [EPFL BioRob laboratory](https://biorob.epfl.ch/).
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=TrdNtrGOkWg)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/epfl/biorob/worlds".

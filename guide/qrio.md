@@ -14,4 +14,4 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 
 #### qrio.wbt
 
-![qrio.wbt.png](images/robots/qrio/qrio.wbt.png) This simulation shows ...
+![qrio.wbt.png](images/robots/qrio/qrio.wbt.png) In this example, a humanoid robot performs endless gymnastic movements.

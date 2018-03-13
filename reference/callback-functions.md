@@ -104,37 +104,3 @@ For example, if the plugin has registered `dJointFeedback` structures (using the
 
 This function is the counterpart to the `webots_physics_init` function.
 It is called once, when the world is destroyed, and can be used to perform cleanup operations, such as closing files and freeing the objects that have been created in the plugin.
-
-### "void webots\_physics\_draw(int pass, const char *view)"
-
-This function is used to add user-specified OpenGL graphics to the 3D view and/or to the cameras.
-For example, this can be used to draw robots trajectories, force vectors, etc.
-The function should normally contain OpenGL function calls.
-This function is called 2 times (2 passes): one right before and one right after the regular OpenGL rendering.
-The first pass may be useful for drawing solid objects visible through transparent or semi-transparent objects in the world, but generally only the second is used.
-The `pass` argument allows to distinguish these 2 passes (`pass` = 0 for the pass before the OpenGL rendering, `pass` = 1 for the pass after the OpenGL rendering) The `view` argument allows to determine if the function is called when rendering the 3D view (`view` == NULL) or when rendering a robot camera (`view` == Robot::name).
-Here is an implementation example:
-
-```c
-void webots_physics_draw(int pass, const char *view) {
-  if (pass == 1 && view == NULL) {
-    /* This code is reached only during the second pass of the 3D view */
-
-    /* modify OpenGL context */
-    glDisable(GL_DEPTH_TEST);
-    glDisable(GL_LIGHTING);
-    glLineWidth(2.0);
-
-    /* draw 1 meter yellow line */
-    glBegin(GL_LINES);
-    glColor3f(1, 1, 0);
-    glVertex3f(0, 0, 0);
-    glVertex3f(0, 1, 0);
-    glEnd();
-  }
-```
-
-The above example will draw a meter high yellow line in the center of the world.
-Note that Webots loads the *world* (global) coordinates matrix right before calling this function.
-Therefore the arguments passed to the `glVertex` function are expected to be specified in *world* coordinates.
-Note that the default OpenGL states should be restored before leaving this function otherwise the rendering in Webots 3D view may be altered.

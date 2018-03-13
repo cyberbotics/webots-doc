@@ -409,7 +409,7 @@ This window is called `robot window`, it has several tabs allowing you to perfor
 First tabs concern the simulation and will be described here.
 Last tab is used to interact with the real robot and will therefore be described in next sections.
 
-#### Accelerometers
+#### Accelerometers Tab
 
 This tab can be used to investigate the values of the accelerometer while the controller is running.
 If the checkbox is checked, the values of the accelerometer are shown and plotted on the graph in real time.
@@ -427,7 +427,7 @@ The corresponding colors are the following:
 
 %end
 
-#### Gyro
+#### Gyro Tab
 
 This tab is very similar to the accelerometer tab but addresses the gyroscope.
 If the checkbox is checked, the values of the gyro are shown and plotted on the graph in real time.
@@ -439,7 +439,7 @@ Here again four different types of graph can be plotted.
 
 %end
 
-#### Motors
+#### Motors Tab
 
 This tab can be used to see and influence the state of each motor.
 The use of each motor in the robot window can separately be set by checking/unchecking the corresponding checkbox of the motor.
@@ -453,7 +453,7 @@ It is also possible to manually change the value of the motor by using the slide
 
 %end
 
-#### Position Sensors
+#### Position Sensors Tab
 
 This tab can be used to see the state of each position sensor.
 The use of each sensor in the robot window can separately be set by checking/unchecking the corresponding checkbox.
@@ -465,7 +465,7 @@ If the checkbox is checked, the value of the sensor is shown and plotted in func
 
 %end
 
-#### Camera
+#### Camera Tab
 
 This tab is very simple, if the checkbox is checked, the picture of the camera is shown and updated in real time.
 
@@ -492,7 +492,7 @@ A pose is composed of multiple states (right pane).
 A state represents a position of one motor.
 If the state is enabled, it means that the motor should have the set position at the pose instant time.
 
-### Remote Control
+### Remote Control Tab
 
 Remote control is much more simpler to use than remote compilation, you do not have to set the time step in any files, or to edit any specific Makefile, the exact same controller that in simulation can be used for remote control (without even having to recompile it).
 Moreover, the remote control mode allows you to visualize the state of the sensors and actuators of the real robot in real time.
@@ -575,13 +575,7 @@ If the compilation succeeds and the robot is close to the [start position](#star
 
 It is recommended when testing a new controller whose behavior is not very certain to hold the robot by its handle.
 
-To stop the controller press the following button:
-
-%figure "Stop button"
-
-![stop.png](images/robots/robotis-op2/stop.png)
-
-%end
+To stop the controller press the [stop button](#stop-button).
 
 This will stop the controller and clean all files previously sent to the robot.
 You can also stop the controller by pressing the right button at the back of the robot.

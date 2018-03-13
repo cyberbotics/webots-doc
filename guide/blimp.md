@@ -15,7 +15,7 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 ### blimp\_lis.wbt
 
 ![blimp.png](images/robots/blimp/blimp.wbt.png) This is an example of the flying blimp robot developed at the Laboratory of Intelligent Systems (LIS) at EPFL.
-You can use your keyboard, or a joystick to control the blimp's motion across the room.
+You can use your keyboard, or a joystick to control the Blimp's motion across the room.
 Use the up, down, right, left, page up, page down and space (reset) keys.
 Various `Transform` and `IndexedFaceSet` nodes are used to model the room using textures and transparency.
 A *physics plugin* is used to add thrust and other forces to the simulation.

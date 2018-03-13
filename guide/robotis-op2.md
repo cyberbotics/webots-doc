@@ -732,16 +732,22 @@ sudo apt-get purge bluez-alsa
 
 ### Samples
 
-#### Symmetry
+#### soccer.wbt
 
-This example is very basic and explains the use of the motors.
+![soccer.wbt.png](images/robots/robotis-op2/soccer.wbt.png) This is a very complete example which used the three managers and almost all of the sensors.
+The controller is a very simple soccer player.
+It relies on most of the tools used in previous examples.
+We recommend you to study it by yourself and of course to improve it.
 
-%figure "Symmetry example"
+To extend this controller you can add new files to the project, but do not forget to also add them to the makefile (add the cpp files to the `CXX_SOURCES` section).
+This example is also a good starting point for developing a more complicated controller.
 
-![example_symmetry.png](images/robots/robotis-op2/example_symmetry.png)
+This example works in remote compilation.
+But we recommend you to test it on a soft ground and away from any source of danger (stairs, hot surface, etc.), because the robot will move a lot and it is not excluded that it will fall down from time to time.
 
-%end
+#### symmetry.wbt
 
+![symmetry.wbt.png](images/robots/robotis-op2/symmetry.wbt.png) This example is very basic and explains the use of the motors.
 It starts by setting the motor force of the three motors of the right arm to zero in order to completely release this arm.
 Then, in an infinite loop, the position of the previous three motors is read and displayed.
 Finally, still in the loop, the opposite position of each motor of the right arm is applied to the corresponding motor of the left arm in order to mimic the motion of the right arm.
@@ -760,43 +766,36 @@ mMotors[18]->setPosition(sin(getTime()));
 Then save the file, press the build button and finally revert the simulation to start the new controller.
 This example is well suited for the remote compilation and we recommended that you start by testing the remote compilation tool by using this example.
 
-#### Symmetry
+#### visual\_tracking.wbt
 
-This example is very basic and explains the use of the motors.
+![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](vision-manager.md)) and the use of the RGB LEDs.
 
-%figure "Symmetry example"
+In the infinite loop the [Vision Manager](vision-manager.md) is used to find the red ball.
+Then, if the ball has been found the head led is set to green and otherwise to red.
+Then, again, if the ball has been found the position of the two motors of the head is corrected to watch in the direction of the ball.
+To move the ball in simulation, press Ctrl+Shift and move the ball with the left button of the mouse pressed on it.
 
-![example_symmetry.png](images/robots/robotis-op2/example_symmetry.png)
-
-%end
-
-It starts by setting the motor force of the three motors of the right arm to zero in order to completely release this arm.
-Then, in an infinite loop, the position of the previous three motors is read and displayed.
-Finally, still in the loop, the opposite position of each motor of the right arm is applied to the corresponding motor of the left arm in order to mimic the motion of the right arm.
-
-You are now able to move the right arm which is free in simulation: select the robot, then press Ctrl+Alt and left click on the arm, then without releasing the left button move the mouse.
-This will apply a force (symbolized by an arrow) which will make the arm move.
-Note that it is very important to enable the position sensors in order to read motor positions.
-In this example, this is done in the constructor.
-
-You can also try to add an oscillation of the head, by adding this in your main loop:
+Try to change the color of the LED by changing this line:
 
 ```cpp
-mMotors[18]->setPosition(sin(getTime()));
+mHeadLED->set(0xFF0000);
 ```
 
-Then save the file, press the build button and finally revert the simulation to start the new controller.
-This example is well suited for the remote compilation and we recommended that you start by testing the remote compilation tool by using this example.
+>**Note**: Here the color is set in hexadecimal.
+The format is R8G8B8: The most significant 8 bits (left hand side) indicate the red level (between 0x00 and 0xFF).
+Bits 8 to 15 indicate the green level and the least significant 8 bits (right hand side) indicate the blue level.
+For example, 0xFF0000 is red, 0x00FF00 is green, 0x0000FF is blue, 0xFFFF00 is yellow, etc.
 
-#### Walk
+Try also to use the other RGB LED, this is done simply be exchanging `mHeadLED` by `mEyeLED`.
 
-This example illustrates the use of the [Gait Manager](gait-manager.md) and [Motion manager](motion-manager.md), the use of the keyboard, and also the use of the accelerometer.
+Here again this example is well suited for remote compilation.
+You can adjust the color of the ball by changing the value in the constructor of `RobotisOp2VisionManager` if your ball has a different color.
 
-%figure "Walk example"
+This example can also be used as a tool to tune the parameters of the [Vision Manager](vision-manager.md) in order to fit your application.
 
-![example_walk.png](images/robots/robotis-op2/example_walk.png)
+#### walk.wbt
 
-%end
+![walk.wbt.png](images/robots/robotis-op2/walk.wbt.png) This example illustrates the use of the [Gait Manager](gait-manager.md) and [Motion manager](motion-manager.md), the use of the keyboard, and also the use of the accelerometer.
 
 At the beginning of the controller, the [Motion manager](motion-manager.md) is used to make the robot stand up, then the controller enters an infinite loop:
 - The first thing done in the loop is to check if the robot has not fallen down, this is achieved by using the accelerometer.
@@ -815,26 +814,6 @@ This example works in remote compilation but you will need to connect a USB keyb
 Otherwise, it is recommended to test this example with the remote control in order to use the computer's keyboard instead.
 
 This example can also be used to explore and test all the parameters of the gait.
-
-#### Soccer
-
-This is a very complete example which used the three managers and almost all of the sensors.
-
-%figure "Soccer example"
-
-![example_soccer.png](images/robots/robotis-op2/example_soccer.png)
-
-%end
-
-The controller is a very simple soccer player.
-It relies on most of the tools used in previous examples.
-We recommend you to study it by yourself and of course to improve it.
-
-To extend this controller you can add new files to the project, but do not forget to also add them to the makefile (add the cpp files to the `CXX_SOURCES` section).
-This example is also a good starting point for developing a more complicated controller.
-
-This example works in remote compilation.
-But we recommend you to test it on a soft ground and away from any source of danger (stairs, hot surface, etc.), because the robot will move a lot and it is not excluded that it will fall down from time to time.
 
 ### FAQ
 

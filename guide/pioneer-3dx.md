@@ -14,6 +14,10 @@ The base Pioneer 3-DX platform can reach speeds of 1.6 meters per second and car
 
 More information on the specifications and optional devices is available on the Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/PioneerP3DX.aspx).
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=x52vlsr8Ic0)
+
 ### Pioneer 3-DX Model
 
 %figure "Pioneer 3-DX characteristics"

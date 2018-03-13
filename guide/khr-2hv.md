@@ -8,6 +8,10 @@
 
 The "Kondo KHR-2HV" is an humanoid robot with 17 degrees of freedom.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=AtaGm9nR-EM)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/kondo/khr-2hv/worlds".

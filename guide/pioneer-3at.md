@@ -12,6 +12,10 @@ This model includes support for 4 motors and 16 sonar sensors (8 forward-facing,
 
 More information on the specifications and optional devices is available on the Adept Mobile Robots official [webpage](http://www.mobilerobots.com/ResearchRobots/ResearchRobots/P3AT.aspx).
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=x52vlsr8Ic0)
+
 ### Pioneer 3-AT Model
 
 %figure "Pioneer 3-AT characteristics"

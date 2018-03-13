@@ -291,6 +291,7 @@
   line-height: 140%;
 }
 .webots-doc img {
+  max-width: 100%;
   max-height: 500px;
   vertical-align: middle;
 }
@@ -324,6 +325,7 @@
   border-style: solid;
   border-color: #ddd;
   background-color: #ddd;
+  word-wrap: break-word;
 }
 .webots-doc #view table tr:hover td {
   background-color: #def;
@@ -473,6 +475,12 @@
    border-radius: 4px;
  }
 
+.webots-doc iframe {
+  width: 70%;
+  margin: 30px auto;
+  display: block;
+}
+
 /*--------------------*
  * Blog specific CSS
  *--------------------*/
@@ -598,12 +606,6 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
-
-.blog iframe {
-  width: 70%;
-  margin: 30px auto;
-  display: block;
 }
 
 .blog pre {

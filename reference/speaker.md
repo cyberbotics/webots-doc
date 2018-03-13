@@ -1,6 +1,6 @@
 ## Speaker
 
-Derived from [Device](device.md).
+Derived from [Device](device.md) and [Solid](solid.md).
 
 ```
 Speaker {

@@ -9,7 +9,7 @@ In this directory, you will find the following world files :
 
 **Keywords**: Extended solids, torus, rounded box, pipe
 
-![extended_solids.png](images/extended_solids.png) This example demonstrates the use of several extended primitives.
+![extended_solids.png](images/samples/extended_solids.png) This example demonstrates the use of several extended primitives.
 These compound primitives are created using procedural PROTO nodes that generate a set of basic Geometry nodes.
 
 In this example, physics laws are applied on these primitives.
@@ -18,7 +18,7 @@ In this example, physics laws are applied on these primitives.
 
 **Keywords**: Extrusion
 
-![extrusion.png](images/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
+![extrusion.png](images/samples/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
 The `Extrusion` PROTO is a procedural PROTO which generates an `IndexedFaceSet` node.
 The `Extrusion` PROTO fields allow to define a 2D cross-section, and to extrude it along a path.
 In this example, the cross-section is a triangle extruded along a spiral path.
@@ -27,7 +27,7 @@ In this example, the cross-section is a triangle extruded along a spiral path.
 
 **Keywords**: Fluid simulation
 
-![floating_geometries.png](images/floating_geometries.png) This example demonstrates the interactions between basic physics primitives and fluids.
+![floating_geometries.png](images/samples/floating_geometries.png) This example demonstrates the interactions between basic physics primitives and fluids.
 Three `Fluids` nodes are present; two flowing fluids to simulate a river, and a static fluid to simulate a cylindric pool.
 The small `Solids` are affected by the fluids' viscosity and by forces generated on the [Archimedes' principle](https://en.wikipedia.org/wiki/Archimedes%27_principle).
 
@@ -43,7 +43,7 @@ Therefore they are static, i.e. physics is not applied on them.
 
 **Keywords**: IndexedFaceSet, High resolution mesh
 
-![high_resolution_indexedfaceset.png](images/high_resolution_indexedfaceset.png) This example simply displays a high resolution mesh.
+![high_resolution_indexedfaceset.png](images/samples/high_resolution_indexedfaceset.png) This example simply displays a high resolution mesh.
 This mesh is a textured high resolution version of the [Blender's mascot, Suzanne](https://en.wikipedia.org/wiki/Blender_(software)#Suzanne).
 It is composed of 8000 triangles with UV mapping.
 It has been imported from [Blender](https://www.blender.org/).
@@ -52,7 +52,7 @@ It has been imported from [Blender](https://www.blender.org/).
 
 **Keywords**: Muscle
 
-![muscle.png](images/muscle.png) This example demonstrates how to use the `Muscle` node.
+![muscle.png](images/samples/muscle.png) This example demonstrates how to use the `Muscle` node.
 The `Muscle` nodes complete the joints by visualizing colored capsule-like shapes.
 
 Two scenarios are shown:
@@ -65,7 +65,7 @@ Depending on the joint motion, one muscle is contracted, and the other one is re
 
 **Keywords**: Collisions, physics primitives
 
-![physics_primitives.png](images/physics_primitives.png) This example demonstrates a large set of the possible collisions between the basic physics primitives.
+![physics_primitives.png](images/samples/physics_primitives.png) This example demonstrates a large set of the possible collisions between the basic physics primitives.
 Three identical sets of primitives composed of `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` nodes fall onto three surfaces respectively; a `Box`, a `Plane` and an `ElevationGrid` node.
 
 ### polygons.wbt
@@ -82,23 +82,23 @@ The triangles can be shown using the `View / Wireframe Rendering` menu item.
 
 **Keywords**: TexturedBox, texture mapping
 
-![textured_boxes.png](images/textured_boxes.png) This example shows the possible UV mappings for the `TexturedBox` PROTO.
+![textured_boxes.png](images/samples/textured_boxes.png) This example shows the possible UV mappings for the `TexturedBox` PROTO.
 
 ### textured\_proto\_shapes.wbt
 
 **Keywords**: TexturedBoxShape, texture mapping
 
-![textured_proto_shapes.png](images/textured_proto_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTO nodes.
+![textured_proto_shapes.png](images/samples/textured_proto_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTO nodes.
 
 ### textured\_shapes.wbt
 
 **Keywords**: Texture mapping
 
-![textured_shapes.png](images/textured_shapes.png) This example shows how textures are applied on basic primitives.
+![textured_shapes.png](images/samples/textured_shapes.png) This example shows how textures are applied on basic primitives.
 The same `Appearance` node is applied on all the basic primitives following VRML rules about texture mapping.
 
 ### webots\_box.wbt
 
 **Keywords**: IndexedFaceSet, UV mapping
 
-![webots_box.png](images/webots_box.png) This example shows how the Webots box can be modeled using an `IndexedFaceSet` node and texture mapping.
+![webots_box.png](images/samples/webots_box.png) This example shows how the Webots box can be modeled using an `IndexedFaceSet` node and texture mapping.

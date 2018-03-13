@@ -99,7 +99,7 @@
     - [Pioneer 3-DX](pioneer-3dx.md)
     - [Portal](portal.md)
     - [PUMA](puma.md)
-    - [Robotis-OP2](robotis-op2.md)
+    - [Robotis OP2](robotis-op2.md)
     - [Shrimp](shrimp.md)
     - [Surveyor SRV-1](surveyor.md)
     - [Thymio II](thymio2.md)

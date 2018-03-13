@@ -19,6 +19,10 @@ The physical dimensions, friction coefficients and mass distribution have been e
 
 %end
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=hMRYdd0Jlis)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/robotics/bioloid/worlds".

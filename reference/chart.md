@@ -38,6 +38,7 @@ graph LR
   Geometry -.-> IndexedFaceSet[[IndexedFaceSet](indexedfaceset.md)]
   Geometry -.-> IndexedLineSet[[IndexedLineSet](indexedlineset.md)]
   Geometry -.-> Plane[[Plane](plane.md)]
+  Geometry -.-> PointSet[[PointSet](pointset.md)]
   Geometry -.-> Sphere[[Sphere](sphere.md)]
 
   Device([Device](device.md)) -.-> JointDevice(Joint Device)
@@ -124,7 +125,7 @@ graph LR
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane secondaryNode;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
-  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
+  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
 %end
 %end

@@ -1,4 +1,4 @@
-## NASA sojourner
+## NASA Sojourner
 
 %figure "Sojourner model in Webots"
 
@@ -6,7 +6,7 @@
 
 %end
 
-TODO: description
+TODO: description.
 
 ### Samples
 

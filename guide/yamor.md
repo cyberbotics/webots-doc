@@ -6,7 +6,7 @@
 
 %end
 
-TODO: description
+TODO: description.
 
 ### Samples
 

@@ -1,6 +1,6 @@
 ## Device
 
-Abstract node, derived from [Solid](solid.md).
+Abstract node.
 
 ```
 Device {

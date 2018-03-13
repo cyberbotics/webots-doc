@@ -168,7 +168,7 @@ A lot of parameters are available in the Framework algorithm to tune the gait.
 But in order to make this manager easy to use, only a subset of the parameters can be set.
 The other parameters are set to default values that are known to works fine.
 It is however possible to change them if needed, by changing the default values that are stored in a ".ini" configuration file.
-In the [appendix](walking-parameters.md), all the parameters of the gait are explained.
+In the [appendix](#walking-parameters), all the parameters of the gait are explained.
 
 **Name**
 
@@ -240,7 +240,7 @@ If it is not the case, a warning will appear and they will automatically be enab
 ### Motion Manager
 
 The `RobotisOp2MotionManager` class allows you to play a predefined motion stored in the "motion\_4096.bin" file.
-The main motions and their corresponding ids are listed in [appendix](motions-files.md).
+The main motions and their corresponding ids are listed in [appendix](#motions-files).
 
 It is also possible to add custom motions to this file by using the `Action Editor` tool.
 
@@ -640,8 +640,8 @@ Moreover, the remote control mode allows you to visualize the state of the senso
 
 #### Using Remote Control from Robot Window
 
-To use remote control, open the robot window, go to the `Transfer` tab, as for remote compilation you have to set the connection settings (see [previous chapter](settings.md) for more information).
-To start the remote control, stop and revert your simulation, put your robot in the [stable position](send-a-controller-to-the-robot.md#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation).
+To use remote control, open the robot window, go to the `Transfer` tab, as for remote compilation you have to set the connection settings (see [previous chapter](#settings) for more information).
+To start the remote control, stop and revert your simulation, put your robot in the [stable position](#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation).
 Then press the following button:
 
 %figure "Remote control button"
@@ -657,7 +657,7 @@ When this window disappears and the eyes of the robot switch from red to green, 
 ![waitWindow.png](images/robots/robotis-op2/waitWindow.png)
 %end
 
-You can now easily start and pause your controller in remote control mode by using the run and pause buttons of Webots simulation (see chapter about [examples](examples.md) for more details).
+You can now easily start and pause your controller in remote control mode by using the run and pause buttons of Webots simulation (see chapter about [examples](#samples) for more details).
 Warning: if you revert the simulation it will stop the remote control mode.
 In order to stop the remote control (without reverting) simply press the following button:
 
@@ -768,9 +768,9 @@ This example is well suited for the remote compilation and we recommended that y
 
 #### visual\_tracking.wbt
 
-![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](vision-manager.md)) and the use of the RGB LEDs.
+![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](#vision-manager)) and the use of the RGB LEDs.
 
-In the infinite loop the [Vision Manager](vision-manager.md) is used to find the red ball.
+In the infinite loop the [Vision Manager](#vision-manager) is used to find the red ball.
 Then, if the ball has been found the head led is set to green and otherwise to red.
 Then, again, if the ball has been found the position of the two motors of the head is corrected to watch in the direction of the ball.
 To move the ball in simulation, press Ctrl+Shift and move the ball with the left button of the mouse pressed on it.
@@ -791,24 +791,24 @@ Try also to use the other RGB LED, this is done simply be exchanging `mHeadLED` 
 Here again this example is well suited for remote compilation.
 You can adjust the color of the ball by changing the value in the constructor of `RobotisOp2VisionManager` if your ball has a different color.
 
-This example can also be used as a tool to tune the parameters of the [Vision Manager](vision-manager.md) in order to fit your application.
+This example can also be used as a tool to tune the parameters of the [Vision Manager](#vision-manager) in order to fit your application.
 
 #### walk.wbt
 
-![walk.wbt.png](images/robots/robotis-op2/walk.wbt.png) This example illustrates the use of the [Gait Manager](gait-manager.md) and [Motion manager](motion-manager.md), the use of the keyboard, and also the use of the accelerometer.
+![walk.wbt.png](images/robots/robotis-op2/walk.wbt.png) This example illustrates the use of the [Gait Manager](#gait-manager) and [Motion manager](#motion-manager), the use of the keyboard, and also the use of the accelerometer.
 
-At the beginning of the controller, the [Motion manager](motion-manager.md) is used to make the robot stand up, then the controller enters an infinite loop:
+At the beginning of the controller, the [Motion manager](#motion-manager) is used to make the robot stand up, then the controller enters an infinite loop:
 - The first thing done in the loop is to check if the robot has not fallen down, this is achieved by using the accelerometer.
-- Then if the robot has fallen down, the [Motion manager](motion-manager.md) is used to make the robot to stand up.
+- Then if the robot has fallen down, the [Motion manager](#motion-manager) is used to make the robot to stand up.
 - Then, the keyboard is read, if the space bar is pressed the robot start/stop to walk.
 - Then, the keys up/down/right/left are pressed to make the robot turn and move forward/backward, several keys can be pressed at the same time.
 
 Try to add some more actions by using more keys.
-You can for example use the `NUMPAD_RIGHT` and `NUMPAD_LEFT` keys to make a right/left shoot (page ids 12 and 13 in [Motion manager](motion-manager.md)).
+You can for example use the `NUMPAD_RIGHT` and `NUMPAD_LEFT` keys to make a right/left shoot (page ids 12 and 13 in [Motion manager](#motion-manager)).
 You can also use normal keys like 'A' instead if you prefer.
 
 You can also use another key to make the robot walk quicker or slower.
-Change the XAmplitude sent to the [Gait Manager](gait-manager.md), values must be between -1 and 1.
+Change the XAmplitude sent to the [Gait Manager](#gait-manager), values must be between -1 and 1.
 
 This example works in remote compilation but you will need to connect a USB keyboard to the robot.
 Otherwise, it is recommended to test this example with the remote control in order to use the computer's keyboard instead.

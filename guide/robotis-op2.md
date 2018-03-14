@@ -56,9 +56,7 @@ Motor positions and identifiers can be found in the following [figure](#position
 ![robotis_op2_servo_map.png](images/robots/robotis-op2/robotis_op2_servo_map.png)
 %end
 
-Mapping between identifiers and names can be found in following table.
-
-%figure "Identifiers to name mapping for ROBOTIS OP2 motors"
+Mapping between identifiers and names can be found in following table:
 
 | ID | Name      | ID | Name      | ID | Name      | ID | Name      |
 | -- | --------- | -- | --------- | -- | --------- | -- | --------- |
@@ -68,11 +66,8 @@ Mapping between identifiers and names can be found in following table.
 | 13 | LegLowerR | 14 | LegLowerL | 15 | AnkleR    | 16 | AnkleL    |
 | 17 | FootR     | 18 | FootL     | 19 | Neck      | 20 | Head      |
 
-%end
+Each of the 20 motors has the following configuration:
 
-Each of the 20 motors has the following configuration.
-
-%figure "Standard motor configuration"
 |                 |       |         |
 | --------------- | ----- | ------- |
 | maxForce        | 2.5   | N*m     |
@@ -80,11 +75,8 @@ Each of the 20 motors has the following configuration.
 | maxVelocity     | 12.26 | rad/s   |
 | dampingConstant | 0.002 |         |
 | staticFriction  | 0.025 | N*m     |
-%end
 
 For the position sensors, the name is the same than the one of the motors, with a 'S' postfix:
-
-%figure "Identifiers to name mapping for ROBOTIS OP2 position sensors"
 
 | ID | Name       | ID | Name       | ID | Name       | ID | Name       |
 | -- | ---------- | -- | ---------- | -- | ---------- | -- | ---------- |
@@ -93,8 +85,6 @@ For the position sensors, the name is the same than the one of the motors, with 
 | 9  | PelvRS     | 10 | PelvLS     | 11 | LegUpperRS | 12 | LegUpperLS |
 | 13 | LegLowerRS | 14 | LegLowerLS | 15 | AnkleRS    | 16 | AnkleLS    |
 | 17 | FootRS     | 18 | FootLS     | 19 | NeckS      | 20 | HeadS      |
-
-%end
 
 #### LEDs
 

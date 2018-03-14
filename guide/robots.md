@@ -15,7 +15,7 @@ Please [contact us](https://www.cyberbotics.com/contact) if you would like to se
 | ![icon.png](images/robots/boebot/icon.png)      | [Boe-Bot](boebot.md)           | Parallax             | *Three-wheeled robot*           |
 | ![icon.png](images/robots/blimp/icon.png)       | [Blimp](blimp.md)              | EPFL / LIS           | *Zeppelin robot*                |
 | ![icon.png](images/robots/create/icon.png)      | [Create](create.md)            | iRobot               | *Vacuum-cleaner like robot*     |
-| ![icon.png](images/robots/darwin-op/icon.png)   | [DARwIn-OP](darwin-op.md)      | Robotis              | *Small size humanoid*           |
+| ![icon.png](images/robots/darwin-op/icon.png)   | [DARwIn-OP](robotis-op2.md)    | Robotis              | *Small size humanoid*           |
 | ![icon.png](images/robots/elisa3/icon.png)      | [Elisa 3](elisa3.md)           | GCTronic             | *Two-wheeled robot*             |
 | ![icon.png](images/robots/epuck/icon.png)       | [e-puck](epuck.md)             | GCTronic             | *Two-wheeled robot*             |
 | ![icon.png](images/robots/firebird6/icon.png)   | [FireBird 6](firebird6.md)     | NEX Robotics         | *Two-wheeled robot*             |

@@ -850,27 +850,27 @@ export DISPLAY=:0 ./my-controller
 
 This appendix explains all the parameters that can be set in the configuration file (.ini) to tune the gait:
 
-| Name | Description | Figure |
-| --- | --- | ---  |
-| `X offset` | Offset of the feet in the X direction in millimeter. | ![x_offset.png](images/robots/robotis-op2/x_offset.png) |
-| `Y offset` | Offset of the feet in the Y direction in millimeter. | ![y_offset.png](images/robots/robotis-op2/y_offset.png) |
-| `Z offset` | Offset of the feet in the Z direction in millimeter. | ![z_offset.png](images/robots/robotis-op2/z_offset.png) |
-| `Roll offset` | Angle offset at the feet along X axis in degree. | ![roll_offset.png](images/robots/robotis-op2/roll_offset.png) |
-| `Pitch offset` | Angle offset at the feet along Y axis in degree. | ![pitch_offset.png](images/robots/robotis-op2/pitch_offset.png) |
-| `Yaw offset` | Angle offset of the leg along Z axis in degree. | ![yaw_offset.png](images/robots/robotis-op2/yaw_offset.png) |
-| `Hip pitch offset` | Tilt of the robot's body. It uses a special unit of the motor corresponding to 2.85 degree. | ![hip_pitch_offset.png](images/robots/robotis-op2/hip_pitch_offset.png) |
-| `Period time` | Time required for the robot to complete two full steps (left and right foot) in millisecond. | ![period_time.png](images/robots/robotis-op2/period_time.png) |
-| `DSP ratio` | Ratio between the time when both feet are on the ground to only one foot (either left or right) is on the ground. | ![dsp_ratio.png](images/robots/robotis-op2/dsp_ratio.png) |
-|`Step forward back ratio` | Differential distance according to X direction, between the left and right foot during walk in millimeter. | ![step_forward_back_ratio.png](images/robots/robotis-op2/step_forward_back_ratio.png) |
-| `Foot height` | Maximum height of the foot during the step in millimeter. | ![foot_height.png](images/robots/robotis-op2/foot_height.png) |
-| `Swing right left`| Left and right swaying of the body during walking in millimeter. | ![swing_right_left.png](images/robots/robotis-op2/swing_right_left.png) |
-| `Swing top down` | Up and down swaying of the body during walking. | ![swing_top_down.png](images/robots/robotis-op2/swing_top_down.png) |
-| `Pelvis offset` | Angle offset at the pelvis along X axis. It uses a special unit of the motor correspondig to 2.85 degree. | ![pelvis_offset.png](images/robots/robotis-op2/pelvis_offset.png) |
-| `Arm swing gain` | Gain that influences the movement of the arm during walking. | N/A |
-| `Balance knee gain` | Gain at the knee level for the front/back balance. | N/A |
-| `Balance ankle pitch gain` | Gain at the ankle level for the front/back balance. | N/A |
-| `Balance hip roll gain` | Gain at the hip level for the lateral balance. Since the lateral balance does not work very well in simulation, we recommend you to set this parameter to 0. | N/A |
-| `Balance ankle roll gain` | Gain at the ankle level for the lateral balance. Since the lateral balance does not work very well in simulation, we recommend you to set this parameter to 0. | N/A |
+| Name                       | Description                                                                                                                                                    | Figure                                                                                |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------:|
+| `X offset`                 | Offset of the feet in the X direction in millimeter.                                                                                                           | ![x_offset.png](images/robots/robotis-op2/x_offset.png)                               |
+| `Y offset`                 | Offset of the feet in the Y direction in millimeter.                                                                                                           | ![y_offset.png](images/robots/robotis-op2/y_offset.png)                               |
+| `Z offset`                 | Offset of the feet in the Z direction in millimeter.                                                                                                           | ![z_offset.png](images/robots/robotis-op2/z_offset.png)                               |
+| `Roll offset`              | Angle offset at the feet along X axis in degree.                                                                                                               | ![roll_offset.png](images/robots/robotis-op2/roll_offset.png)                         |
+| `Pitch offset`             | Angle offset at the feet along Y axis in degree.                                                                                                               | ![pitch_offset.png](images/robots/robotis-op2/pitch_offset.png)                       |
+| `Yaw offset`               | Angle offset of the leg along Z axis in degree.                                                                                                                | ![yaw_offset.png](images/robots/robotis-op2/yaw_offset.png)                           |
+| `Hip pitch offset`         | Tilt of the robot's body. It uses a special unit of the motor corresponding to 2.85 degree.                                                                    | ![hip_pitch_offset.png](images/robots/robotis-op2/hip_pitch_offset.png)               |
+| `Period time`              | Time required for the robot to complete two full steps (left and right foot) in millisecond.                                                                   | ![period_time.png](images/robots/robotis-op2/period_time.png)                         |
+| `DSP ratio`                | Ratio between the time when both feet are on the ground to only one foot (either left or right) is on the ground.                                              | ![dsp_ratio.png](images/robots/robotis-op2/dsp_ratio.png)                             |
+| `Step forward back ratio`  | Differential distance according to X direction, between the left and right foot during walk in millimeter.                                                     | ![step_forward_back_ratio.png](images/robots/robotis-op2/step_forward_back_ratio.png) |
+| `Foot height`              | Maximum height of the foot during the step in millimeter.                                                                                                      | ![foot_height.png](images/robots/robotis-op2/foot_height.png)                         |
+| `Swing right left`         | Left and right swaying of the body during walking in millimeter.                                                                                               | ![swing_right_left.png](images/robots/robotis-op2/swing_right_left.png)               |
+| `Swing top down`           | Up and down swaying of the body during walking.                                                                                                                | ![swing_top_down.png](images/robots/robotis-op2/swing_top_down.png)                   |
+| `Pelvis offset`            | Angle offset at the pelvis along X axis. It uses a special unit of the motor correspondig to 2.85 degree.                                                      | ![pelvis_offset.png](images/robots/robotis-op2/pelvis_offset.png)                     |
+| `Arm swing gain`           | Gain that influences the movement of the arm during walking.                                                                                                   | N/A                                                                                   |
+| `Balance knee gain`        | Gain at the knee level for the front/back balance.                                                                                                             | N/A                                                                                   |
+| `Balance ankle pitch gain` | Gain at the ankle level for the front/back balance.                                                                                                            | N/A                                                                                   |
+| `Balance hip roll gain`    | Gain at the hip level for the lateral balance. Since the lateral balance does not work very well in simulation, we recommend you to set this parameter to 0.   | N/A                                                                                   |
+| `Balance ankle roll gain`  | Gain at the ankle level for the lateral balance. Since the lateral balance does not work very well in simulation, we recommend you to set this parameter to 0. | N/A                                                                                   |
 
 #### Motions Files
 

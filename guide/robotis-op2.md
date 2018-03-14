@@ -1,4 +1,4 @@
-## ROBOTIS' DARwIn-OP and Robotis OP2
+## ROBOTIS' Robotis OP2
 
 %figure "Robotis OP2 model in Webots"
 
@@ -10,7 +10,7 @@ The ROBOTIS OP2 is an open source miniature humanoid robot platform with advance
 It is developed and manufactured by ROBOTIS (a Korean robot manufacturer) in collaboration with the University of Pennsylvania.
 
 The previous model was named DARwIn-OP (for _**D**ynamic **A**nthropomorphic **R**obot **w**ith **In**telligence**-O**pen **P**latform_).
-This documentation is widely applicable for these two robots.
+**This documentation is widely applicable for these two robots.**
 For this reason and in order to remain concise, the "DARwIn-OP" term can be substituted to the "ROBOTIS OP2" term in this page.
 
 The ROBOTIS OP2 is mainly used by universities and research centers for educational and research purposes.

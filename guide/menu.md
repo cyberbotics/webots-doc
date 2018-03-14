@@ -75,7 +75,7 @@
     - [Boe-Bot](boebot.md)
     - [Blimp](blimp.md)
     - [Create](create.md)
-    - [DARwIn-OP](robotis-op2.md)
+    - [DARwIn-OP](darwin-op.md)
     - [Elisa 3](elisa3.md)
     - [e-puck](epuck.md)
     - [FireBird 6](firebird6.md)

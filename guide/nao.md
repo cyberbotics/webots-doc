@@ -175,5 +175,5 @@ In this world, Nao tries to shoot the ball in the goal.
 
 #### robotstadium\_nao\_vs\_robotis-op2.wbt
 
-![nao_vs_robotis-op2.wbt.png](images/robots/nao/nao_vs_robotis-op2.wbt.png) The "robotstadium\_nao\_vs\_robotis-op2.wbt" world in located in the following folder:"WEBOTS\_HOME/projects/contests/robotstadium/worlds"; here, Nao robots are used in a soccer game opposing Robotis 2OP robots.
+![nao_vs_robotis-op2.wbt.png](images/robots/nao/nao_vs_robotis-op2.wbt.png) The "robotstadium\_nao\_vs\_robotis-op2.wbt" world in located in the following folder:"WEBOTS\_HOME/projects/contests/robotstadium/worlds"; here, Nao robots are used in a soccer game opposing ROBOTIS OP2 robots.
 In addition to that, Nao robots are also used in the world files of the [Robotstadium](http://www.robotstadium.org) contest.

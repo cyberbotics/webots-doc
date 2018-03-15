@@ -445,7 +445,7 @@ function renderGraphs() {
       // set min-width to be 2/3 of the max-width otherwise the text might become too small
       var element = document.querySelector('#' + id);
       var style = element.getAttribute('style');
-      element.setAttribute('style', style + ' min-width:' + Math.min(Math.floor(0.66 * parseInt(style.split('max-width:')[1].split('px'))), 870) + 'px;');
+      element.setAttribute('style', style + ' min-width:' + Math.floor(0.66 * parseInt(style.split('max-width:')[1].split('px'))) + 'px;');
     });
   }
 }

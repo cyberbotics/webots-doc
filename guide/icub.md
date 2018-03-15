@@ -1,4 +1,4 @@
-## RobotCup's iCub
+## RobotCub's iCub
 
 %figure "iCub model in Webots"
 

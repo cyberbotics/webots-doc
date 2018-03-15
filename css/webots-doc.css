@@ -478,9 +478,9 @@
  }
 
  .webots-doc .mermaid svg {
-   width: calc(100% - 2px);
+   width: calc(100% - 4px);
    background-color: #f1f1f1;
-   border: 1px solid #d4d4d4;
+   border: 2px solid #d4d4d4;
    border-radius: 4px;
  }
 

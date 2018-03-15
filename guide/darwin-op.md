@@ -1,4 +1,4 @@
-## Robotis' DARwIn-OP
+## ROBOTIS' DARwIn-OP
 
 %figure "DARwIn-OP model in Webots"
 
@@ -6,8 +6,4 @@
 
 %end
 
-Please refer to the dedicated book about the [Robotis' DARwIn-OP](../robotis-op2/index.md).
-
-### Movie Presentation
-
-![youtube video](https://www.youtube.com/watch?v=cFIvnh_9rgE)
+Please refer to the [ROBOTIS OP2](robotis-op2.md) documentation.

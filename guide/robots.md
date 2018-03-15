@@ -13,11 +13,13 @@ Please [contact us](https://www.cyberbotics.com/contact) if you would like to se
 | ![icon.png](images/robots/bb8/icon.png)         | [BB-8](bb8.md)                 | Sphero               | *Spherical robot*               |
 | ![icon.png](images/robots/bioloid/icon.png)     | [Bioloid](bioloid.md)          | Robotis              | *Robotics kit*                  |
 | ![icon.png](images/robots/boebot/icon.png)      | [Boe-Bot](boebot.md)           | Parallax             | *Three-wheeled robot*           |
+| ![icon.png](images/robots/blimp/icon.png)       | [Blimp](blimp.md)              | EPFL / LIS           | *Zeppelin robot*                |
 | ![icon.png](images/robots/create/icon.png)      | [Create](create.md)            | iRobot               | *Vacuum-cleaner like robot*     |
 | ![icon.png](images/robots/darwin-op/icon.png)   | [DARwIn-OP](darwin-op.md)      | Robotis              | *Small size humanoid*           |
 | ![icon.png](images/robots/elisa3/icon.png)      | [Elisa 3](elisa3.md)           | GCTronic             | *Two-wheeled robot*             |
 | ![icon.png](images/robots/epuck/icon.png)       | [e-puck](epuck.md)             | GCTronic             | *Two-wheeled robot*             |
 | ![icon.png](images/robots/firebird6/icon.png)   | [FireBird 6](firebird6.md)     | NEX Robotics         | *Two-wheeled robot*             |
+| ![icon.png](images/robots/ghostdog/icon.png)    | [GhostDog](ghostdog.md)        | EPFL / BioRob        | *Dog-like robot*                |
 | ![icon.png](images/robots/hemisson/icon.png)    | [Hemisson](hemisson.md)        | K-Team               | *Two-wheeled robot*             |
 | ![icon.png](images/robots/hoap2/icon.png)       | [HOAP-2](hoap2.md)             | Fujitsu              | *Small size humanoid*           |
 | ![icon.png](images/robots/icub/icon.png)        | [iCub](icub.md)                | RobotCup             | *Human-size humanoid*           |
@@ -39,8 +41,12 @@ Please [contact us](https://www.cyberbotics.com/contact) if you would like to se
 | ![icon.png](images/robots/portal/icon.png)      | [Portal](portal.md)            | A4                   | *Sliding portal*                |
 | ![icon.png](images/robots/pr2/icon.png)         | [PR2](pr2.md)                  | Clearpath Robotics   | *Two arms on mobile a platform* |
 | ![icon.png](images/robots/puma/icon.png)        | [PUMA](puma.md)                | Unimation            | *Robotics arm*                  |
+| ![icon.png](images/robots/qrio/icon.png)        | [QRIO](qrio.md)                | Sony                 | *Small size humanoid*           |
 | ![icon.png](images/robots/robotis-op2/icon.png) | [Robotis OP2](robotis-op2.md)  | Robotis              | *Small size humanoid*           |
+| ![icon.png](images/robots/salamander/icon.png)  | [Salamander](salamander.md)    | EPFL / BioRob        | *Bio-inspired robot*            |
 | ![icon.png](images/robots/shrimp/icon.png)      | [Shrimp](shrimp.md)            | BlueBotics           | *Six-wheeled robot*             |
+| ![icon.png](images/robots/sojourner/icon.png)   | [Sojourner](sojourner.md)      | Nasa                 | *Six-wheeled robot*             |
 | ![icon.png](images/robots/surveyor/icon.png)    | [Surveyor SRV-1](surveyor.md)  | Surveyor Corporation | *Robot with two tracks*         |
 | ![icon.png](images/robots/thymio2/icon.png)     | [Thymio II](thymio2.md)        | Mobsya               | *Two-wheeled robot*             |
+| ![icon.png](images/robots/yamor/icon.png)       | [Yamor](yamor.md)              | EPFL / BioRob        | *Modular robot*                 |
 | ![icon.png](images/robots/youbot/icon.png)      | [youBot](youbot.md)            | KUKA                 | *Mobile arm*                    |

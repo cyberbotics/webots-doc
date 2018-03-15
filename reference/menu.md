@@ -5,7 +5,6 @@
     - [Nodes and Functions](nodes-and-functions.md)
     - [ODE: Open Dynamics Engine](ode-open-dynamics-engine.md)
 - [Node Chart](node-chart.md)
-    - [Chart](chart.md)
 - [Nodes and API Functions](nodes-and-api-functions.md)
     - [Accelerometer](accelerometer.md)
     - [Appearance](appearance.md)

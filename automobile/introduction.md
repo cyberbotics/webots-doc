@@ -10,8 +10,6 @@ The fourth one describes various objects that can be used for automobile simulat
 The fifth one presents various available tools.
 Finally the sixth one reviews all the worlds provided to run automobile simulations.
 
-### Movie Presentation
-
 ![youtube video](https://www.youtube.com/watch?v=RhzZ6Ao6Shc&t)
 
 

@@ -10,4 +10,6 @@ The fourth one describes various objects that can be used for automobile simulat
 The fifth one presents various available tools.
 Finally the sixth one reviews all the worlds provided to run automobile simulations.
 
+![youtube video](https://www.youtube.com/watch?v=RhzZ6Ao6Shc&t)
+
 This work was sponsored by the project RO2IVSim of the Swiss Commission for Technology and Innovation CTI.

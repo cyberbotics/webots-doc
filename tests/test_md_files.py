@@ -38,3 +38,7 @@ class TestMDFiles(unittest.TestCase):
                 'advertising' in book.md_paths,
                 msg='MD file "%s" contains "advertising"' % (book.md_paths)
             )
+            self.assertFalse(
+                'π' in book.md_paths,
+                msg='MD file "%s" contains "π"' % (book.md_paths)
+            )

@@ -69,7 +69,7 @@ With lidar devices, all the points are not acquired at the exact same time but r
 - The `horizontalResolution` field defines the number of points returned by layers.
 
 - The `fieldOfView` field defines the horizontal field of view angle of the lidar.
-The value is limited to the range 0 to π radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
+The value is limited to the range 0 to &pi; radians if the `spherical` field is set to FALSE, otherwise there is no upper limit.
 
 - The `verticalFieldOfView` field defines the vertical repartition of the layers (angle between first and last layer).
 
@@ -119,7 +119,7 @@ More information on compositors is provided in the [compositor](camera.md) field
         numberOfLayers < verticalFieldOfView * horizontalResolution / fieldOfView
 
     In case of 'rotating' lidar, the `fieldOfView` term in the constraint is
-    replaced by `2 * π`.
+    replaced by `2 * &pi;`.
 
 #### Rotating Lidar
 
@@ -128,7 +128,7 @@ In that case, the node inserted in the `rotatingHead` rotates along the Y axis a
 This rotation starts as soon as the lidar is enabled.
 The internal depth camera is attached to this node and is therefore also rotating along the Y axis.
 
-> **Note**: The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * π.
+> **Note**: The internal depth camera is using a horizontal field of view defined in the `fieldOfView` field, but since it is rotating, the actual field of view is 2 * &pi;.
 The same comment applies to the horizontal resolution, the internal depth camera is using a horizontal resolution defined in the `horizontalResolution` field, but the actual returned resolution of the lidar is equal to: horizontalResolution * 2 * pi / fieldOfView.
 
 > **Note**: If the resulting point cloud of a rotating lidar looks distorted, it probably means that you have to reduce the simulation time step.

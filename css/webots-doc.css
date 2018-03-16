@@ -365,10 +365,9 @@
 
 .webots-doc .contribution-banner {
   box-sizing: border-box;
-  position: -webkit-sticky; /* Safari */
   position: fixed;
+  left: inherit;
   width: inherit;
-  margin: 0 auto;
   text-align: center;
   padding: 10px;
   background: white;
@@ -376,13 +375,22 @@
   border-bottom: 1px solid #e2e2e2;
   z-index: 1;
   transform: translateY(-250%);
+  -webkit-transform: translateY(-250%);
+  -moz-transform: translateY(-250%);
+  -o-transform: translateY(-250%);
   transition-property: transform;
+  -webkit-transition-property: transform;
+  -moz-transition-property: transform;
+  -o-transition-property: transform;
   transition-duration: 0.8s;
   transition-timing-function: ease-out;
 }
 
 .webots-doc .visible-banner {
   transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -o-transform: translateY(0%);
 }
 
 .webots-doc .contribution-banner #contribution-close {

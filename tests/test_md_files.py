@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Test module of the MD files."""
 import unittest
 from books import Books

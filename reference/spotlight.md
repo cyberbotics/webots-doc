@@ -47,7 +47,7 @@ where intensity is the SpotLight's field value,
 ```
 
 If `beamWidth` > `cutOffAngle`, then `beamWidth` is assumed to be equal to `cutOffAngle` and the light source emits full intensity within the entire solid angle defined by `cutOffAngle`.
-Both `beamWidth` and `cutOffAngle` must be greater than 0.0 and less than or equal to π/2.
+Both `beamWidth` and `cutOffAngle` must be greater than 0.0 and less than or equal to &pi;/2.
 See figure below for an illustration of the SpotLight's field semantics (note: this example uses the default attenuation).
 
 The light's illumination falls off with distance as specified by three `attenuation` coefficients.

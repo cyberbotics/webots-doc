@@ -21,7 +21,7 @@ These parameters support changes in the size, orientation, and position of textu
 Note that these operations appear reversed when viewed on the surface of a geometric node.
 For example, a `scale` value of (2 2) will scale the texture coordinates, with the net effect of shrinking the texture size by a factor of 2 (texture coordinates are twice as large and thus cause the texture to repeat).
 A `translation` of (0.5 0.0) translates the texture coordinates +0.5 units along the *s* axis, with the net effect of translating the texture -0.5 along the *s* axis on the geometry's surface.
-A `rotation` of π/2 of the texture coordinates results in a -π/2 rotation of the texture on the geometric node.
+A `rotation` of &pi;/2 of the texture coordinates results in a -&pi;/2 rotation of the texture on the geometric node.
 
 The `center` field specifies a translation offset in texture coordinate space about which the `rotation` and `scale` fields are applied.
 The `scale` field specifies a scaling factor in *s* and *t* of the texture coordinates about the center point.

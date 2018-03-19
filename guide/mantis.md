@@ -19,5 +19,6 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 
 #### mantis.wbt
 
-![mantis.wbt.png](images/robots/mantis/mantis.wbt.png) The Mantis robot moves forwards on a grass field.
-The controller generates a sinusoidal function foreach motor with custom parameters.
+![mantis.wbt.png](images/robots/mantis/mantis.wbt.png) The Mantis robot moves forwards on an uneven field.
+Foreach Mantis motor, the controller generates a simple sinusoidal function.
+The parameters of these sinusoidal functions have been found empirically.

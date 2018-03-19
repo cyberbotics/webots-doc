@@ -20,5 +20,5 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 #### mantis.wbt
 
 ![mantis.wbt.png](images/robots/mantis/mantis.wbt.png) The Mantis robot moves forwards on an uneven field.
-Foreach Mantis motor, the controller generates a simple sinusoidal function.
-The parameters of these sinusoidal functions have been found empirically.
+Each Mantis motor is actuated by a simple sinusoidal function.
+The parameters of these sinusoidal functions (amplitude, phase and offset) are unique for each motor and have been found empirically.

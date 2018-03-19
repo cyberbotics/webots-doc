@@ -13,6 +13,8 @@ A human can drive this robot.
 
 ![youtube video](https://www.youtube.com/watch?v=ciSyJ4TUwmw)
 
+![youtube video](https://www.youtube.com/watch?v=bgQuY2mFCvo)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/micromagic/mantis/worlds".

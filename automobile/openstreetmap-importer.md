@@ -16,7 +16,7 @@ Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as 
 
 ```
 sudo apt-get install python-pip
-sudo pip install lxml pyproj shapely webcolors
+sudo pip install lxml pyproj shapely webcolors configparser
 ```
 
 #### Ubuntu 14.04

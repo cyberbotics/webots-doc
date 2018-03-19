@@ -19,5 +19,5 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 
 #### mantis.wbt
 
-![mantis.wbt.png](images/robots/koala/mantis.wbt.png) This simulation shows the Mantis robot. 
-You can move its motors using the generic robot window.
+![mantis.wbt.png](images/robots/mantis/mantis.wbt.png) The Mantis robot moves forwards on a grass field.
+The controller generates a sinusoidal function foreach motor with custom parameters.

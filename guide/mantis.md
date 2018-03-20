@@ -13,11 +13,14 @@ A human can drive this robot.
 
 ![youtube video](https://www.youtube.com/watch?v=ciSyJ4TUwmw)
 
+![youtube video](https://www.youtube.com/watch?v=bgQuY2mFCvo)
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/micromagic/mantis/worlds".
 
 #### mantis.wbt
 
-![mantis.wbt.png](images/robots/koala/mantis.wbt.png) This simulation shows the Mantis robot. 
-You can move its motors using the generic robot window.
+![mantis.wbt.png](images/robots/mantis/mantis.wbt.png) The Mantis robot moves forwards on an uneven field.
+Each Mantis motor is actuated by a simple sinusoidal function.
+The parameters of these sinusoidal functions (amplitude, phase and offset) are unique for each motor and have been found empirically.

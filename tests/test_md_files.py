@@ -48,7 +48,7 @@ class TestMDFiles(unittest.TestCase):
                 with open(md_path) as f:
                     content = f.readlines()
                 for line in content:
-                    # Pi let crash QtWebEngine on Windows.
+                    # π crashes QtWebEngine on Windows.
                     self.assertFalse(
                         'π' in line,
                         msg='MD file "%s" contains "π"' % (md_path)

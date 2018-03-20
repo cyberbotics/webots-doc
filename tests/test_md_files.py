@@ -30,8 +30,8 @@ class TestMDFiles(unittest.TestCase):
                     msg='MD file "%s" is empty' % (md_filename)
                 )
 
-    def test_md_files_dont_contain_prohibited_keywords(self):
-        """Test that the MD files don't contain prohibited keywords."""
+    def test_md_filenames_dont_contain_prohibited_keywords(self):
+        """Test that the MD filenames don't contain prohibited keywords."""
         books = Books()
         for book in books.books:
             # 'advertising' causes issues with ad blocking software.
@@ -39,7 +39,17 @@ class TestMDFiles(unittest.TestCase):
                 'advertising' in book.md_paths,
                 msg='MD file "%s" contains "advertising"' % (book.md_paths)
             )
-            self.assertFalse(
-                'π' in book.md_paths,
-                msg='MD file "%s" contains "π"' % (book.md_paths)
-            )
+
+    def test_md_contents_dont_contain_prohibited_keywords(self):
+        """Test that the MD file content don't contain prohibited keywords."""
+        books = Books()
+        for book in books.books:
+            for md_path in book.md_paths:
+                with open(md_path) as f:
+                    content = f.readlines()
+                for line in content:
+                    # Pi let crash QtWebEngine on Windows.
+                    self.assertFalse(
+                        'π' in line,
+                        msg='MD file "%s" contains "π"' % (md_path)
+                    )

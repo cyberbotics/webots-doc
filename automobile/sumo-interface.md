@@ -19,6 +19,10 @@ The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle numbe
 > **Note** [macOS]: On macOS, SUMO relies on X11.
 You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=Mnwmo5ivGL0)
+
 ### Use Vehicles Already Present in the World
 
 If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time).

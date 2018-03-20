@@ -29,7 +29,7 @@ sudo pip install lxml pyproj shapely webcolors configparser
 ### macOS
 
 ```
-pip install lxml pyproj shapely webcolors --user
+pip install lxml pyproj shapely webcolors configparser --user
 ```
 
 ### Windows
@@ -44,6 +44,7 @@ Download the shapely wheel called [`Shapely‑<<version>>‑cp<<python_version>>
 %PYTHON_PATH%\Scripts\pip.exe install lxml
 %PYTHON_PATH%\Scripts\pip.exe install pyproj
 %PYTHON_PATH%\Scripts\pip.exe install webcolors
+%PYTHON_PATH%\Scripts\pip.exe install configparser
 %PYTHON_PATH%\Scripts\pip.exe install %HOME%\Downloads\Shapely‑<<version>>‑cp<<python_version>>‑cp<<python_version>>m‑win_amd64.whl
 ```
 

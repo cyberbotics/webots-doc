@@ -255,17 +255,17 @@ Some actions of this menu are active only when a robot is selected in the 3D win
 - The **Show Robot Window** menu item opens the robot window of the selected robot.
 The robot window can also be opened by double-clicking on the robot in the 3D window.
 
-- The **Camera Devices** submenu contains the list of all the camera devices of the selected robot and lets the user show or hide single camera overlay images by checking or unchecking the corresponding item.
+- The **Camera Devices** submenu contains the list of all the camera devices of the selected robot and its descendant robots and lets the user show or hide single camera overlay images by checking or unchecking the corresponding item.
 Camera overlays differ from the display overlays because of their magenta border.
 Note that if the `Hide All Camera Overlays` item is checked, then the camera device overlays will not be visible in the 3D view independently from the status of `Camera Devices` menu items.
 A `Camera Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.
 
-- The **RangeFinder Devices** submenu contains the list of all the range-finder devices of the selected robot and lets the user show or hide single range-finder overlay images by checking or unchecking the corresponding item.
+- The **RangeFinder Devices** submenu contains the list of all the range-finder devices of the selected robot and its descendant robots and lets the user show or hide single range-finder overlay images by checking or unchecking the corresponding item.
 Range-finder overlays differ from the camera overlays because of their yellow border.
 Note that if the `Hide All RangeFinder Overlays` item is checked, then the range-finder device overlays will not be visible in the 3D view independently from the status of `RangeFinder Devices` menu items.
 A `RangeFinder Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.
 
-- The **Display Devices** submenu contains the list of all the display devices of the selected robot and lets the user show or hide single display overlay images by checking or unchecking the corresponding item.
+- The **Display Devices** submenu contains the list of all the display devices of the selected robot and its descendant robots and lets the user show or hide single display overlay images by checking or unchecking the corresponding item.
 Display overlays differ from the camera overlays because of their cyan border.
 Note that if the `Hide All Display Overlays` item is checked, then the display device overlays will not be visible in the 3D view independently from the status of `Display Devices` menu items.
 A `Display Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.

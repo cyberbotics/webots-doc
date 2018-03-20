@@ -40,8 +40,8 @@ class TestMDFiles(unittest.TestCase):
                 msg='MD file "%s" contains "advertising"' % (book.md_paths)
             )
 
-    def test_md_contents_dont_contain_prohibited_keywords(self):
-        """Test that the MD file content don't contain prohibited keywords."""
+    def test_md_file_contents_dont_contain_prohibited_keywords(self):
+        """Test that the MD file contents don't contain prohibited keywords."""
         books = Books()
         for book in books.books:
             for md_path in book.md_paths:

@@ -4,6 +4,10 @@ In order to ease the creation of new environments for automobile simulations, We
 
 You can download an OpenStreetMap map of any part of the world from [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use more than a few square kilometers if you want to be able to run your simulation in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using the importer script.
 
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=tPXHnp4bHrY&t)
+
 ## Dependencies
 
 Follow [these instructions](../guide/using-python.md) to install Python.

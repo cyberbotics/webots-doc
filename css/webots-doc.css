@@ -224,6 +224,7 @@
   background: #eee;
   padding: 2px 6px;
   border-radius: 4px;
+  white-space: normal;
 }
 .webots-doc code > a {
   font-family: "Roboto Mono", monospace;

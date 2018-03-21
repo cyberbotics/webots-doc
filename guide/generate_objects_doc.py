@@ -73,11 +73,13 @@ with open('objects_list.txt') as objectListFile:
             file.write('}\n')
             file.write('```\n\n')
 
+            if license:
+                file.write('> **Note** [License]: %s\n\n' % license)
+
             file.write('### Description\n\n')
             file.write(description + '\n')
 
-            if license:
-                file.write('> **Note** [License]: %s\n\n' % license)
+            file.write('> **Note**: The PROTO file of this object is located at \'%s\'.\n\n' % proto)
 
             if describedField:
                 file.write('### Field Summary\n\n')

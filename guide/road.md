@@ -45,13 +45,15 @@ AddLaneRoadSegment {
 }
 ```
 
+> **Note** [License]: This is a test of license display.
+
 ### Description
 
 A simple segment of road allowing to add (or remove) one lane to the road.
 The side where the new lane is added is configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
-> **Note** [License]: This is a test of license display.
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/AddLaneRoadSegment.proto'.
 
 ### Field Summary
 
@@ -165,6 +167,8 @@ A simple segment of road allowing to add (or remove) several lanes to the road.
 The side where the new lanes are added is configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/AddLanesRoadSegment.proto'.
+
 ### Field Summary
 
 - `name`: could contain the junction name
@@ -253,6 +257,8 @@ CrashBarrier {
 
 A customizable crash barrier.
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/CrashBarrier.proto'.
+
 ## Crossroad
 
 ```
@@ -275,6 +281,8 @@ Crossroad {
 ### Description
 
 A customizable crossroad which can contain optionally references to its connected roads and a shape.
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/Crossroad.proto'.
 
 ### Field Summary
 
@@ -347,6 +355,8 @@ CurvedRoadSegment {
 A simple curved road, the number of lanes, the curvature and the dimensions are configurable,
 an optional border can be enable.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/CurvedRoadSegment.proto'.
 
 ### Field Summary
 
@@ -465,6 +475,8 @@ HelicoidalRoadSegment {
 A simple and configurable helicoidal road showing how to use the Road PROTO in order to create 3D roads.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/HelicoidalRoadSegment.proto'.
+
 ### Field Summary
 
 - `name`: could contain the street name
@@ -579,6 +591,8 @@ LaneSeparation {
 A simple segment of road allowing to divide a road into two smaller ones (or to assemble two roads into a bigger one).
 The number of lanes of each of the two smaller roads is independently configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/LaneSeparation.proto'.
 
 ### Field Summary
 
@@ -707,6 +721,8 @@ B-Spline can be used in order to interpolate the path of the road and an optiona
 The boundingObject of each border and the road itself can be independently enable or disable.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/Road.proto'.
+
 ### Field Summary
 
 - `name`: could contain the street name
@@ -830,6 +846,8 @@ RoadIntersection {
 A simple and customizable roads intersection, all the road are crossing at the same point
 and equally separated in orientation.
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/RoadIntersection.proto'.
+
 ### Field Summary
 
 - `name`: could contain the road intersection name
@@ -903,6 +921,8 @@ Generic and customizable road pillars which can be used for easily creating brid
 The boundingObject can be optionally enable or not.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/RoadPillars.proto'.
+
 ### Field Summary
 
 - `height`: Total height of the structure
@@ -971,6 +991,8 @@ Roundabout {
 ### Description
 
 A simple and customizable roundabout, all the roads are equally separated in orientation.
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/Roundabout.proto'.
 
 ### Field Summary
 
@@ -1085,6 +1107,8 @@ StraightRoadSegment {
 A simple straight road, the number of lanes and the dimensions are configurable,
 an optional border can be enable.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/StraightRoadSegment.proto'.
 
 ### Field Summary
 

@@ -23,6 +23,8 @@ Bench {
 
 A bench.
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/Bench.proto'.
+
 ## BusStop
 
 %figure "BusStop"
@@ -50,6 +52,8 @@ Simple bus stop with customizable appearance and an optional bench
 based on the blender model of Ringbarkis (http://www.blendswap.com/blends/view/66783)
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/BusStop.proto'.
+
 ## EmergencyPhone
 
 %figure "EmergencyPhone"
@@ -72,6 +76,8 @@ EmergencyPhone {
 
 An emergency phone.
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/EmergencyPhone.proto'.
+
 ## FireHydrant
 
 %figure "FireHydrant"
@@ -92,6 +98,8 @@ FireHydrant {
 ### Description
 
 A fire hydrant.
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/FireHydrant.proto'.
 
 ## Fountain
 
@@ -116,6 +124,8 @@ Fountain {
 
 Simple fountain
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/Fountain.proto'.
+
 ## PublicBin
 
 %figure "PublicBin"
@@ -137,6 +147,8 @@ PublicBin {
 ### Description
 
 A public bin.
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/PublicBin.proto'.
 
 ## PublicToilet
 
@@ -178,6 +190,8 @@ PublicToilet {
 
 Resizable public toilet with two different displays.
 
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/PublicToilet.proto'.
+
 ## TrashBin
 
 %figure "TrashBin"
@@ -200,4 +214,6 @@ TrashBin {
 ### Description
 
 A trash bin.
+
+> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/TrashBin.proto'.
 

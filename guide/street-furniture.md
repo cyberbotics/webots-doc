@@ -6,7 +6,7 @@
 
 ![Bench](images/street_furniture/Bench/model.png)
 
-%%end
+%end
 
 ```
 Bench {
@@ -23,15 +23,13 @@ Bench {
 
 A bench.
 
-### Field Summary
-
 ## BusStop
 
 %figure "BusStop"
 
 ![BusStop](images/street_furniture/BusStop/model.png)
 
-%%end
+%end
 
 ```
 BusStop {
@@ -52,15 +50,13 @@ Simple bus stop with customizable appearance and an optional bench
 based on the blender model of Ringbarkis (http://www.blendswap.com/blends/view/66783)
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
-### Field Summary
-
 ## EmergencyPhone
 
 %figure "EmergencyPhone"
 
 ![EmergencyPhone](images/street_furniture/EmergencyPhone/model.png)
 
-%%end
+%end
 
 ```
 EmergencyPhone {
@@ -76,15 +72,13 @@ EmergencyPhone {
 
 An emergency phone.
 
-### Field Summary
-
 ## FireHydrant
 
 %figure "FireHydrant"
 
 ![FireHydrant](images/street_furniture/FireHydrant/model.png)
 
-%%end
+%end
 
 ```
 FireHydrant {
@@ -99,15 +93,13 @@ FireHydrant {
 
 A fire hydrant.
 
-### Field Summary
-
 ## Fountain
 
 %figure "Fountain"
 
 ![Fountain](images/street_furniture/Fountain/model.png)
 
-%%end
+%end
 
 ```
 Fountain {
@@ -124,15 +116,13 @@ Fountain {
 
 Simple fountain
 
-### Field Summary
-
 ## PublicBin
 
 %figure "PublicBin"
 
 ![PublicBin](images/street_furniture/PublicBin/model.png)
 
-%%end
+%end
 
 ```
 PublicBin {
@@ -148,15 +138,13 @@ PublicBin {
 
 A public bin.
 
-### Field Summary
-
 ## PublicToilet
 
 %figure "PublicToilet"
 
 ![PublicToilet](images/street_furniture/PublicToilet/model.png)
 
-%%end
+%end
 
 ```
 PublicToilet {
@@ -190,15 +178,13 @@ PublicToilet {
 
 Resizable public toilet with two different displays.
 
-### Field Summary
-
 ## TrashBin
 
 %figure "TrashBin"
 
 ![TrashBin](images/street_furniture/TrashBin/model.png)
 
-%%end
+%end
 
 ```
 TrashBin {
@@ -214,6 +200,4 @@ TrashBin {
 ### Description
 
 A trash bin.
-
-### Field Summary
 

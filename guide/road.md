@@ -6,7 +6,7 @@
 
 ![AddLaneRoadSegment](images/road/AddLaneRoadSegment/model.png)
 
-%%end
+%end
 
 ```
 AddLaneRoadSegment {
@@ -111,13 +111,16 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 - `contactMaterial`: contact material of the road
 
+> **Note** [License]: This is a test of license display.
+
+
 ## AddLanesRoadSegment
 
 %figure "AddLanesRoadSegment"
 
 ![AddLanesRoadSegment](images/road/AddLanesRoadSegment/model.png)
 
-%%end
+%end
 
 ```
 AddLanesRoadSegment {
@@ -231,7 +234,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 ![CrashBarrier](images/road/CrashBarrier/model.png)
 
-%%end
+%end
 
 ```
 CrashBarrier {
@@ -250,8 +253,6 @@ CrashBarrier {
 ### Description
 
 A customizable crash barrier.
-
-### Field Summary
 
 ## Crossroad
 
@@ -300,7 +301,7 @@ A customizable crossroad which can contain optionally references to its connecte
 
 ![CurvedRoadSegment](images/road/CurvedRoadSegment/model.png)
 
-%%end
+%end
 
 ```
 CurvedRoadSegment {
@@ -420,7 +421,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 ![HelicoidalRoadSegment](images/road/HelicoidalRoadSegment/model.png)
 
-%%end
+%end
 
 ```
 HelicoidalRoadSegment {
@@ -533,7 +534,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 ![LaneSeparation](images/road/LaneSeparation/model.png)
 
-%%end
+%end
 
 ```
 LaneSeparation {
@@ -650,7 +651,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 ![Road](images/road/Road/model.png)
 
-%%end
+%end
 
 ```
 Road {
@@ -793,7 +794,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 ![RoadIntersection](images/road/RoadIntersection/model.png)
 
-%%end
+%end
 
 ```
 RoadIntersection {
@@ -878,7 +879,7 @@ and equally separated in orientation.
 
 ![RoadPillars](images/road/RoadPillars/model.png)
 
-%%end
+%end
 
 ```
 RoadPillars {
@@ -927,7 +928,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 ![Roundabout](images/road/Roundabout/model.png)
 
-%%end
+%end
 
 ```
 Roundabout {
@@ -1036,7 +1037,7 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 ![StraightRoadSegment](images/road/StraightRoadSegment/model.png)
 
-%%end
+%end
 
 ```
 StraightRoadSegment {

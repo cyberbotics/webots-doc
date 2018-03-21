@@ -63,9 +63,9 @@ with open('objects_list.txt') as objectListFile:
             if os.path.isfile('images' + os.sep + category + os.sep + protoName + '/model.png'):
                 file.write('%%figure "%s"\n\n' % protoName)
                 file.write('![%s](images/%s/%s/model.png)\n\n' % (protoName, category, protoName))
-                file.write('%%end\n\n')
+                file.write('%end\n\n')
             else:
-                print('Please add a "%s" file.' % 'images' + os.sep + category + os.sep + protoName + '/model.png')
+                print('Please add a "%s" file.' % ('images' + os.sep + category + os.sep + protoName + '/model.png'))
 
             file.write('```\n')
             file.write('%s {\n' % protoName)
@@ -76,9 +76,10 @@ with open('objects_list.txt') as objectListFile:
             file.write('### Description\n\n')
             file.write(description + '\n')
 
-            file.write('### Field Summary\n\n')
-            for fieldName, fieldDescription in describedField:
-                file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
+            if describedField:
+                file.write('### Field Summary\n\n')
+                for fieldName, fieldDescription in describedField:
+                    file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
             if license:
                 file.write('> **Note** [License]: %s\n\n\n' % license)

@@ -19,11 +19,11 @@ Bench {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Bench.proto"
+
 ### Description
 
 A bench.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/Bench.proto'.
 
 ## BusStop
 
@@ -46,13 +46,13 @@ BusStop {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStop.proto"
+
 ### Description
 
 Simple bus stop with customizable appearance and an optional bench
 based on the blender model of Ringbarkis (http://www.blendswap.com/blends/view/66783)
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/BusStop.proto'.
 
 ## EmergencyPhone
 
@@ -72,11 +72,11 @@ EmergencyPhone {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/EmergencyPhone.proto"
+
 ### Description
 
 An emergency phone.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/EmergencyPhone.proto'.
 
 ## FireHydrant
 
@@ -95,11 +95,11 @@ FireHydrant {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/FireHydrant.proto"
+
 ### Description
 
 A fire hydrant.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/FireHydrant.proto'.
 
 ## Fountain
 
@@ -120,11 +120,11 @@ Fountain {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fountain.proto"
+
 ### Description
 
 Simple fountain
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/Fountain.proto'.
 
 ## PublicBin
 
@@ -144,11 +144,11 @@ PublicBin {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicBin.proto"
+
 ### Description
 
 A public bin.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/PublicBin.proto'.
 
 ## PublicToilet
 
@@ -186,11 +186,11 @@ PublicToilet {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicToilet.proto"
+
 ### Description
 
 Resizable public toilet with two different displays.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/PublicToilet.proto'.
 
 ## TrashBin
 
@@ -211,9 +211,9 @@ TrashBin {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/TrashBin.proto"
+
 ### Description
 
 A trash bin.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/street_furniture/protos/TrashBin.proto'.
 

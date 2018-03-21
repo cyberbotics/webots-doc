@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 
 DESCRIPTION_STATE = 0
 FIELDS_STATE = 1
@@ -65,7 +66,7 @@ with open('objects_list.txt') as objectListFile:
                 file.write('![%s](images/%s/%s/model.png)\n\n' % (protoName, category, protoName))
                 file.write('%end\n\n')
             else:
-                print('Please add a "%s" file.' % ('images' + os.sep + category + os.sep + protoName + '/model.png'))
+                sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + category + os.sep + protoName + '/model.png'))
 
             file.write('```\n')
             file.write('%s {\n' % protoName)
@@ -73,13 +74,15 @@ with open('objects_list.txt') as objectListFile:
             file.write('}\n')
             file.write('```\n\n')
 
+
+            file.write('> **File location**: "WEBOTS\_HOME/%s"\n\n' % proto)
             if license:
-                file.write('> **Note** [License]: %s\n\n' % license)
+                file.write('> **License**: %s\n\n' % license)
+            else:
+                sys.stderr.write('Please add a license to "%s"\n' % proto)
 
             file.write('### Description\n\n')
             file.write(description + '\n')
-
-            file.write('> **Note**: The PROTO file of this object is located at \'%s\'.\n\n' % proto)
 
             if describedField:
                 file.write('### Field Summary\n\n')

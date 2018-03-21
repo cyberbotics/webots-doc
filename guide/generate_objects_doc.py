@@ -19,7 +19,8 @@ with open('objects_list.txt') as objectListFile:
 
     for proto in protoList:
         protoName = os.path.basename(proto).split('.')[0]
-        category = os.path.basename(os.path.dirname(os.path.dirname(proto))).replace('_', '-')
+        category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
+        categoryName = category.replace('_', '-')
         description = ''
         license = ''
         fields = ''
@@ -50,13 +51,13 @@ with open('objects_list.txt') as objectListFile:
                             describedField.append((fieldName, fieldComment))
                         fields += '  ' + line.replace('vrmlField', '').replace('field', '').split('#')[0].strip() + '\n'
 
-        exist = os.path.isfile(category + '.md')
+        exist = os.path.isfile(categoryName + '.md')
         mode = 'a'
         if category not in addedCategory:
             mode = 'w'
-        with open(category + '.md', mode) as file:
+        with open(categoryName + '.md', mode) as file:
             if mode == 'w':
-                file.write('# %s\n\n' % category.replace('-', ' ').title())
+                file.write('# %s\n\n' % categoryName.replace('-', ' ').title())
             file.write('## %s\n\n' % protoName)
 
             if os.path.isfile('images' + os.sep + category + os.sep + protoName + '/model.png'):
@@ -85,6 +86,6 @@ with open('objects_list.txt') as objectListFile:
         if category not in addedCategory:
             addedCategory.append(category)
             with open('objects.md', 'a') as file:
-                file.write('- [%s](%s.md)\n' % (category.replace('-', ' ').title(), category))
+                file.write('- [%s](%s.md)\n' % (categoryName.replace('-', ' ').title(), categoryName))
     with open('objects.md', 'a') as file:
         file.write('\n')

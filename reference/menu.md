@@ -105,7 +105,6 @@
     - [Using PROTO Nodes with the Scene Tree](using-proto-nodes-with-the-scene-tree.md)
     - [PROTO Scoping Rules](proto-scoping-rules.md)
     - [PROTO Hidden Fields](proto-hidden-fields.md)
-    - [PROTO Design Guidelines](proto-design-guidelines.md)
 - [Physics Plugin](physics-plugin.md)
     - [Introduction of the Physics Plugins](introduction-of-the-physics-plugins.md)
     - [Plugin Setup](plugin-setup.md)

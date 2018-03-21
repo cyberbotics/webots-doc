@@ -6,6 +6,10 @@ When creating your own PROTO nodes, we recommend that you follow these guideline
 
 The naming of a PROTO node is important and should be precise and explicit. Therefore, you should avoid abbreviations, numbers and vague terminology when naming a PROTO node. For example `SmallWoodenChair` is better than `SmallChair`, which is better than `Chair`, which is better than `Chair7`. PROTO names should use upper camel case, e.g., each word should begin with a capital letter with no intervening spaces.
 
+### Description
+
+If a PROTO is meant to be distributed, it is important to specify the license under which it can be used. For that purpose, the name of the license should be referred to in the `license:` comment. A license file may be added in the same folder as the PROTO file if needed. Also, the `tags:` comment should be properly specified, see details in the [Procedural PROTO nodes](procedural-proto-nodes.md) section. Finally, it is important to provide a short description about what the PROTO node is about. This may be very simple as in the example provided below.
+
 ### Recommended Fields for Object PROTO Nodes
 
 #### "translation" and "rotation"
@@ -35,6 +39,11 @@ Generally, the number of exposed fields should be minimal in order to guarantee 
 Here is a simple example of a good PROTO declaration:
 
 ```
+#VRML_SIM R2018b utf8
+# license: Creative Commons Attribution 4.0 International License
+# tags: static
+# A color pencil
+
 ColorPencil {
   SFFloat    translation          0 0 0
   SFRotation rotation             0 1 0 0
@@ -43,4 +52,5 @@ ColorPencil {
   SFColor    color                1 0 0     # defaults to red
   SFFloat    size                 0.2       # range in [0.02, 0.2]
 }
+...
 ```

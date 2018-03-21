@@ -51,6 +51,8 @@ A simple segment of road allowing to add (or remove) one lane to the road.
 The side where the new lane is added is configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+> **Note** [License]: This is a test of license display.
+
 ### Field Summary
 
 - `name`: could contain the junction name
@@ -110,9 +112,6 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 - `castShadows`: defines if the road should cast shadows
 
 - `contactMaterial`: contact material of the road
-
-> **Note** [License]: This is a test of license display.
-
 
 ## AddLanesRoadSegment
 

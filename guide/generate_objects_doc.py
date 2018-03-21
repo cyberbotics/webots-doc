@@ -76,13 +76,13 @@ with open('objects_list.txt') as objectListFile:
             file.write('### Description\n\n')
             file.write(description + '\n')
 
+            if license:
+                file.write('> **Note** [License]: %s\n\n' % license)
+
             if describedField:
                 file.write('### Field Summary\n\n')
                 for fieldName, fieldDescription in describedField:
                     file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
-
-            if license:
-                file.write('> **Note** [License]: %s\n\n\n' % license)
 
         if category not in addedCategory:
             addedCategory.append(category)

@@ -13,3 +13,4 @@ Once defined, PROTO nodes may be instantiated in the scene tree exactly like bui
 - [Using PROTO nodes with the Scene Tree](using-proto-nodes-with-the-scene-tree.md)
 - [PROTO Scoping Rules](proto-scoping-rules.md)
 - [PROTO hidden fields](proto-hidden-fields.md)
+- [PROTO Design Guidelines](proto-design-guidelines.md)

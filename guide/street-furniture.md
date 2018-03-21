@@ -4,7 +4,7 @@
 
 %figure "Bench"
 
-![Bench](images/street_furniture/Bench/model.png)
+![Bench-image](images/street_furniture/Bench/model.png)
 
 %end
 
@@ -29,7 +29,7 @@ A bench.
 
 %figure "BusStop"
 
-![BusStop](images/street_furniture/BusStop/model.png)
+![BusStop-image](images/street_furniture/BusStop/model.png)
 
 %end
 
@@ -58,7 +58,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "EmergencyPhone"
 
-![EmergencyPhone](images/street_furniture/EmergencyPhone/model.png)
+![EmergencyPhone-image](images/street_furniture/EmergencyPhone/model.png)
 
 %end
 
@@ -82,7 +82,7 @@ An emergency phone.
 
 %figure "FireHydrant"
 
-![FireHydrant](images/street_furniture/FireHydrant/model.png)
+![FireHydrant-image](images/street_furniture/FireHydrant/model.png)
 
 %end
 
@@ -105,7 +105,7 @@ A fire hydrant.
 
 %figure "Fountain"
 
-![Fountain](images/street_furniture/Fountain/model.png)
+![Fountain-image](images/street_furniture/Fountain/model.png)
 
 %end
 
@@ -130,7 +130,7 @@ Simple fountain
 
 %figure "PublicBin"
 
-![PublicBin](images/street_furniture/PublicBin/model.png)
+![PublicBin-image](images/street_furniture/PublicBin/model.png)
 
 %end
 
@@ -154,7 +154,7 @@ A public bin.
 
 %figure "PublicToilet"
 
-![PublicToilet](images/street_furniture/PublicToilet/model.png)
+![PublicToilet-image](images/street_furniture/PublicToilet/model.png)
 
 %end
 
@@ -196,7 +196,7 @@ Resizable public toilet with two different displays.
 
 %figure "TrashBin"
 
-![TrashBin](images/street_furniture/TrashBin/model.png)
+![TrashBin-image](images/street_furniture/TrashBin/model.png)
 
 %end
 

@@ -4,7 +4,7 @@
 
 %figure "AddLaneRoadSegment"
 
-![AddLaneRoadSegment](images/road/AddLaneRoadSegment/model.png)
+![AddLaneRoadSegment-image](images/road/AddLaneRoadSegment/model.png)
 
 %end
 
@@ -45,16 +45,15 @@ AddLaneRoadSegment {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
+
+> **License**: This is a test of license display.
+
 ### Description
 
 A simple segment of road allowing to add (or remove) one lane to the road.
 The side where the new lane is added is configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **File location**: "WEBOTS_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
-
-
-> **License**: This is a test of license display.
 
 ### Field Summary
 
@@ -120,7 +119,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "AddLanesRoadSegment"
 
-![AddLanesRoadSegment](images/road/AddLanesRoadSegment/model.png)
+![AddLanesRoadSegment-image](images/road/AddLanesRoadSegment/model.png)
 
 %end
 
@@ -162,13 +161,13 @@ AddLanesRoadSegment {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLanesRoadSegment.proto"
+
 ### Description
 
 A simple segment of road allowing to add (or remove) several lanes to the road.
 The side where the new lanes are added is configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/AddLanesRoadSegment.proto'.
 
 ### Field Summary
 
@@ -236,7 +235,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "CrashBarrier"
 
-![CrashBarrier](images/road/CrashBarrier/model.png)
+![CrashBarrier-image](images/road/CrashBarrier/model.png)
 
 %end
 
@@ -254,11 +253,11 @@ CrashBarrier {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/CrashBarrier.proto"
+
 ### Description
 
 A customizable crash barrier.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/CrashBarrier.proto'.
 
 ## Crossroad
 
@@ -279,11 +278,11 @@ Crossroad {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Crossroad.proto"
+
 ### Description
 
 A customizable crossroad which can contain optionally references to its connected roads and a shape.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/Crossroad.proto'.
 
 ### Field Summary
 
@@ -307,7 +306,7 @@ A customizable crossroad which can contain optionally references to its connecte
 
 %figure "CurvedRoadSegment"
 
-![CurvedRoadSegment](images/road/CurvedRoadSegment/model.png)
+![CurvedRoadSegment-image](images/road/CurvedRoadSegment/model.png)
 
 %end
 
@@ -351,13 +350,13 @@ CurvedRoadSegment {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/CurvedRoadSegment.proto"
+
 ### Description
 
 A simple curved road, the number of lanes, the curvature and the dimensions are configurable,
 an optional border can be enable.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/CurvedRoadSegment.proto'.
 
 ### Field Summary
 
@@ -429,7 +428,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "HelicoidalRoadSegment"
 
-![HelicoidalRoadSegment](images/road/HelicoidalRoadSegment/model.png)
+![HelicoidalRoadSegment-image](images/road/HelicoidalRoadSegment/model.png)
 
 %end
 
@@ -471,12 +470,12 @@ HelicoidalRoadSegment {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/HelicoidalRoadSegment.proto"
+
 ### Description
 
 A simple and configurable helicoidal road showing how to use the Road PROTO in order to create 3D roads.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/HelicoidalRoadSegment.proto'.
 
 ### Field Summary
 
@@ -544,7 +543,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "LaneSeparation"
 
-![LaneSeparation](images/road/LaneSeparation/model.png)
+![LaneSeparation-image](images/road/LaneSeparation/model.png)
 
 %end
 
@@ -587,13 +586,13 @@ LaneSeparation {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/LaneSeparation.proto"
+
 ### Description
 
 A simple segment of road allowing to divide a road into two smaller ones (or to assemble two roads into a bigger one).
 The number of lanes of each of the two smaller roads is independently configurable as well as a lot of others parameters of a regular road.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/LaneSeparation.proto'.
 
 ### Field Summary
 
@@ -663,7 +662,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "Road"
 
-![Road](images/road/Road/model.png)
+![Road-image](images/road/Road/model.png)
 
 %end
 
@@ -714,6 +713,8 @@ Road {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Road.proto"
+
 ### Description
 
 A fully customizable road, the number of lanes, the dimensions and the path of the road is configurable.
@@ -721,8 +722,6 @@ For each line separating two lanes it is possible to configure if this one is co
 B-Spline can be used in order to interpolate the path of the road and an optional border can be enable.
 The boundingObject of each border and the road itself can be independently enable or disable.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/Road.proto'.
 
 ### Field Summary
 
@@ -808,7 +807,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "RoadIntersection"
 
-![RoadIntersection](images/road/RoadIntersection/model.png)
+![RoadIntersection-image](images/road/RoadIntersection/model.png)
 
 %end
 
@@ -842,12 +841,12 @@ RoadIntersection {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/RoadIntersection.proto"
+
 ### Description
 
 A simple and customizable roads intersection, all the road are crossing at the same point
 and equally separated in orientation.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/RoadIntersection.proto'.
 
 ### Field Summary
 
@@ -895,7 +894,7 @@ and equally separated in orientation.
 
 %figure "RoadPillars"
 
-![RoadPillars](images/road/RoadPillars/model.png)
+![RoadPillars-image](images/road/RoadPillars/model.png)
 
 %end
 
@@ -916,13 +915,13 @@ RoadPillars {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/RoadPillars.proto"
+
 ### Description
 
 Generic and customizable road pillars which can be used for easily creating bridges or elevated roads.
 The boundingObject can be optionally enable or not.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/RoadPillars.proto'.
 
 ### Field Summary
 
@@ -946,7 +945,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "Roundabout"
 
-![Roundabout](images/road/Roundabout/model.png)
+![Roundabout-image](images/road/Roundabout/model.png)
 
 %end
 
@@ -989,11 +988,11 @@ Roundabout {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Roundabout.proto"
+
 ### Description
 
 A simple and customizable roundabout, all the roads are equally separated in orientation.
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/Roundabout.proto'.
 
 ### Field Summary
 
@@ -1057,7 +1056,7 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 %figure "StraightRoadSegment"
 
-![StraightRoadSegment](images/road/StraightRoadSegment/model.png)
+![StraightRoadSegment-image](images/road/StraightRoadSegment/model.png)
 
 %end
 
@@ -1103,13 +1102,13 @@ StraightRoadSegment {
 }
 ```
 
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/StraightRoadSegment.proto"
+
 ### Description
 
 A simple straight road, the number of lanes and the dimensions are configurable,
 an optional border can be enable.
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
-
-> **Note**: The PROTO file of this object is located at 'projects/objects/road/protos/StraightRoadSegment.proto'.
 
 ### Field Summary
 
@@ -1180,3 +1179,4 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 - `castShadows`: defines if the road should cast shadows
 
 - `contactMaterial`: contact material of the road
+

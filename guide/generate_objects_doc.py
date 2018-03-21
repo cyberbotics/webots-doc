@@ -63,7 +63,7 @@ with open('objects_list.txt') as objectListFile:
 
             if os.path.isfile('images' + os.sep + category + os.sep + protoName + '/model.png'):
                 file.write('%%figure "%s"\n\n' % protoName)
-                file.write('![%s](images/%s/%s/model.png)\n\n' % (protoName, category, protoName))
+                file.write('![%s-image](images/%s/%s/model.png)\n\n' % (protoName, category, protoName))
                 file.write('%end\n\n')
             else:
                 sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + category + os.sep + protoName + '/model.png'))
@@ -73,7 +73,6 @@ with open('objects_list.txt') as objectListFile:
             file.write(fields)
             file.write('}\n')
             file.write('```\n\n')
-
 
             file.write('> **File location**: "WEBOTS\_HOME/%s"\n\n' % proto)
             if license:

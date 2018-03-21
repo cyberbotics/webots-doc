@@ -8,15 +8,15 @@ The naming of a PROTO node is important and should be precise and explicit. Ther
 
 ### Recommended Fields for Object PROTO Nodes
 
-#### `translation` and `rotation`
+#### "translation" and "rotation"
 
 PROTO nodes are usually meant to represent real world objects, that can be placed at different locations and orientations in the world. Therefore a PROTO node should expose at least a `translation` and a `rotation` field to allow the users to move and rotate the object easily. The default value for the translation should be preferably the origin (0, 0, 0) and should correspond to the object in a normal position, e.g., laying on the floor rather than sinking into the floor. That means the origin of an object should not be at its 3D geometrical center, but rather in the middle of the surface in contact with the floor. The rotation axis should be already well positioned, e.g., usually vertical, so that when you rotate a building for example, you should simply change the angle value to have it rotate along its vertical axis.
 
-#### `enableBoundingObject`
+#### "enableBoundingObject"
 
 Bounding objects are used for collision detection. If you believe that an object won't collide with anything, it is convenient to be able to turn off collision detection to save computation time. Providing a PROTO node with a `enableBoundingObject` boolean field deserves this purpose. For example, in a scenario where a small robot is running on a table top in a living room, all the objects outside of the range of the robot, like the sofa, chairs, chandelier, TV set, etc. will never collide with the robot and hence could have their collision detection disabled. However, in some other scenarios, we want that the robot can collide with a chair, because the robot is running on the floor. Therefore such objects should have a `enableBoundingObject` field exposed to allow the users to decide whether they want to enable collision detection, depending on the specific simulation scenario.
 
-#### `enablePhysics`
+#### "enablePhysics"
 
 Because sometimes, we want to simulate the physical motion of an object and sometimes we want to save computation time by not simulating the physics of the object, it is good also to add a `enablePhysics` boolean field that allows the user to enable or disable physics simulation for an object. For example, a box may be meant to be moveable by a robot or may be glued to the floor or so heavy that it won't move. In that case, it is nice to be able to specify if we want to simulate the physical motion of that object or not. Not simulating the physics saves computation time and increase the stability of the simulation. However, some objects are not meant to move during a simulation. This includes buildings, traffic signs, trees, mailboxes, etc. Therefore such objects should not contain a `Physics` node and obviously should not expose a `enablePhysics` field.
 

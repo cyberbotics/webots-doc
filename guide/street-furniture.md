@@ -4,7 +4,7 @@
 
 %figure "Bench"
 
-![Bench-image](images/street_furniture/Bench/model.png)
+![Bench-image](images/objects/street_furniture/Bench/model.png)
 
 %end
 
@@ -29,7 +29,7 @@ A bench.
 
 %figure "BusStop"
 
-![BusStop-image](images/street_furniture/BusStop/model.png)
+![BusStop-image](images/objects/street_furniture/BusStop/model.png)
 
 %end
 
@@ -54,11 +54,38 @@ Simple bus stop with customizable appearance and an optional bench
 based on the blender model of Ringbarkis (http://www.blendswap.com/blends/view/66783)
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
+## BusStopBench
+
+```
+BusStopBench {
+  SFString name "bus stop bench"
+  SFNode appearance Appearance { material Material { diffuseColor 0.3 0.45 0.33 } }
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStopBench.proto"
+
+### Description
+
+
+## BusStopMesh
+
+```
+BusStopMesh {
+  SFNode appearance Appearance { material Material { diffuseColor 0.3 0.45 0.33 } }
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStopMesh.proto"
+
+### Description
+
+
 ## EmergencyPhone
 
 %figure "EmergencyPhone"
 
-![EmergencyPhone-image](images/street_furniture/EmergencyPhone/model.png)
+![EmergencyPhone-image](images/objects/street_furniture/EmergencyPhone/model.png)
 
 %end
 
@@ -78,11 +105,46 @@ EmergencyPhone {
 
 An emergency phone.
 
+## Fence
+
+```
+Fence {
+  SFVec3f      translation             0 0 0
+  SFRotation   rotation                0 1 0 0
+  SFString     name                    "fence"
+  SFFloat      height                  1.5
+  SFFloat      poleGap                 0.5
+  SFFloat      poleRadius              0.04
+  SFString     poleShape               "cylinder"
+  SFNode       poleAppearance          Appearance { material Material {} }
+  MFVec3f      path                    [0 0 0, 5 0 0]
+  SFInt32      subdivision             -1
+  SFInt32      horizontalBarsNumber    2
+  MFVec2f      horizontalBarShape      [0.06 0.02, 0.06 -0.02, -0.06 -0.02, -0.06 0.02, 0.06 0.02]
+  SFNode       horizontalBarAppearance Appearance { material Material {} }
+  SFNode       boundingObject          NULL
+  hiddenField SFNode appearance              NULL
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fence.proto"
+
+### Description
+
+A customizable fence.
+Dimensions, path and appearance of the fence can be set.
+If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence
+Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+
+### Field Summary
+
+- `appearance`: for backward compatibility warning
+
 ## FireHydrant
 
 %figure "FireHydrant"
 
-![FireHydrant-image](images/street_furniture/FireHydrant/model.png)
+![FireHydrant-image](images/objects/street_furniture/FireHydrant/model.png)
 
 %end
 
@@ -105,7 +167,7 @@ A fire hydrant.
 
 %figure "Fountain"
 
-![Fountain-image](images/street_furniture/Fountain/model.png)
+![Fountain-image](images/objects/street_furniture/Fountain/model.png)
 
 %end
 
@@ -130,7 +192,7 @@ Simple fountain
 
 %figure "PublicBin"
 
-![PublicBin-image](images/street_furniture/PublicBin/model.png)
+![PublicBin-image](images/objects/street_furniture/PublicBin/model.png)
 
 %end
 
@@ -154,7 +216,7 @@ A public bin.
 
 %figure "PublicToilet"
 
-![PublicToilet-image](images/street_furniture/PublicToilet/model.png)
+![PublicToilet-image](images/objects/street_furniture/PublicToilet/model.png)
 
 %end
 
@@ -192,11 +254,23 @@ PublicToilet {
 
 Resizable public toilet with two different displays.
 
+## PublicToiletMesh
+
+```
+PublicToiletMesh {
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicToiletMesh.proto"
+
+### Description
+
+
 ## TrashBin
 
 %figure "TrashBin"
 
-![TrashBin-image](images/street_furniture/TrashBin/model.png)
+![TrashBin-image](images/objects/street_furniture/TrashBin/model.png)
 
 %end
 

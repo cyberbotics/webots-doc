@@ -49,11 +49,11 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                             fieldComment = match.group(4).strip()
                             describedField.append((fieldName, fieldComment))
                         fields += '  ' + line.replace('vrmlField', '').replace('field', '').split('#')[0].strip() + '\n'
-        exist = os.path.isfile('objects' + os.sep + categoryName + '.md')
+        exist = os.path.isfile(categoryName + '.md')
         mode = 'a'
         if category not in addedCategory:
             mode = 'w'
-        with open('objects' + os.sep + categoryName + '.md', mode) as file:
+        with open(categoryName + '.md', mode) as file:
             if mode == 'w':
                 file.write('# %s\n\n' % categoryName.replace('-', ' ').title())
             file.write('## %s\n\n' % protoName)
@@ -88,6 +88,6 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
         if category not in addedCategory:
             addedCategory.append(category)
             with open('objects.md', 'a') as file:
-                file.write('- [%s](objects/%s.md)\n' % (categoryName.replace('-', ' ').title(), categoryName))
+                file.write('- [%s](%s.md)\n' % (categoryName.replace('-', ' ').title(), categoryName))
 with open('objects.md', 'a') as file:
     file.write('\n')

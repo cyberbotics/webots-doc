@@ -4,7 +4,7 @@
 
 %figure "AddLaneRoadSegment"
 
-![AddLaneRoadSegment-image](images/road/AddLaneRoadSegment/model.png)
+![AddLaneRoadSegment-image](images/objects/road/AddLaneRoadSegment/model.png)
 
 %end
 
@@ -119,7 +119,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "AddLanesRoadSegment"
 
-![AddLanesRoadSegment-image](images/road/AddLanesRoadSegment/model.png)
+![AddLanesRoadSegment-image](images/objects/road/AddLanesRoadSegment/model.png)
 
 %end
 
@@ -235,7 +235,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "CrashBarrier"
 
-![CrashBarrier-image](images/road/CrashBarrier/model.png)
+![CrashBarrier-image](images/objects/road/CrashBarrier/model.png)
 
 %end
 
@@ -306,7 +306,7 @@ A customizable crossroad which can contain optionally references to its connecte
 
 %figure "CurvedRoadSegment"
 
-![CurvedRoadSegment-image](images/road/CurvedRoadSegment/model.png)
+![CurvedRoadSegment-image](images/objects/road/CurvedRoadSegment/model.png)
 
 %end
 
@@ -428,7 +428,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "HelicoidalRoadSegment"
 
-![HelicoidalRoadSegment-image](images/road/HelicoidalRoadSegment/model.png)
+![HelicoidalRoadSegment-image](images/objects/road/HelicoidalRoadSegment/model.png)
 
 %end
 
@@ -543,7 +543,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "LaneSeparation"
 
-![LaneSeparation-image](images/road/LaneSeparation/model.png)
+![LaneSeparation-image](images/objects/road/LaneSeparation/model.png)
 
 %end
 
@@ -662,7 +662,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "Road"
 
-![Road-image](images/road/Road/model.png)
+![Road-image](images/objects/road/Road/model.png)
 
 %end
 
@@ -807,7 +807,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "RoadIntersection"
 
-![RoadIntersection-image](images/road/RoadIntersection/model.png)
+![RoadIntersection-image](images/objects/road/RoadIntersection/model.png)
 
 %end
 
@@ -894,7 +894,7 @@ and equally separated in orientation.
 
 %figure "RoadPillars"
 
-![RoadPillars-image](images/road/RoadPillars/model.png)
+![RoadPillars-image](images/objects/road/RoadPillars/model.png)
 
 %end
 
@@ -945,7 +945,7 @@ Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mo
 
 %figure "Roundabout"
 
-![Roundabout-image](images/road/Roundabout/model.png)
+![Roundabout-image](images/objects/road/Roundabout/model.png)
 
 %end
 
@@ -1056,7 +1056,7 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 %figure "StraightRoadSegment"
 
-![StraightRoadSegment-image](images/road/StraightRoadSegment/model.png)
+![StraightRoadSegment-image](images/objects/road/StraightRoadSegment/model.png)
 
 %end
 

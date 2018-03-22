@@ -9,7 +9,7 @@ DESCRIPTION_STATE = 0
 FIELDS_STATE = 1
 BODY_STATE = 2
 
-addedCategory = []
+categories = []
 with open('objects.md', 'w') as file:
     file.write('# Objects\n\n')
     file.write('## Sections\n\n')
@@ -51,7 +51,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                         fields += '  ' + line.replace('vrmlField', '').replace('field', '').split('#')[0].strip() + '\n'
         exist = os.path.isfile(categoryName + '.md')
         mode = 'a'
-        if category not in addedCategory:
+        if category not in categories:
             mode = 'w'
         with open(categoryName + '.md', mode) as file:
             if mode == 'w':
@@ -85,9 +85,11 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                 for fieldName, fieldDescription in describedField:
                     file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
-        if category not in addedCategory:
-            addedCategory.append(category)
-            with open('objects.md', 'a') as file:
-                file.write('- [%s](%s.md)\n' % (categoryName.replace('-', ' ').title(), categoryName))
+        if category not in categories:
+            categories.append(category)
+
+categories = sorted(categories)
 with open('objects.md', 'a') as file:
+    for category in categories:
+        file.write('- [%s](%s.md)\n' % (category.replace('-', ' ').title(), category))
     file.write('\n')

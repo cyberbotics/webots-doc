@@ -60,7 +60,6 @@ class TestLists(unittest.TestCase):
                 line = re.sub(r'^\s*- ', '', line)  # Remove item prefix.
                 line = re.sub(r'^\s*\d+\. ', '', line)  # Remove number prefix.
                 line = re.sub(TestLists.hyperlinkRE, '', line)  # Remove hyperlinks.
-                line = re.sub(r'`[^`]*`', '', line)  # Remove code.
                 line = line.strip()
                 if len(line) == 0:  # If it remains something, then test it.
                     continue

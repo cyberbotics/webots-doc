@@ -10,13 +10,13 @@
 
 ```
 LargeValve {
-  SFVec3f    translation 0 0.106 0
-  SFRotation rotation 0 1 0 0
-  SFString name "large valve"
-  SFFloat jointFriction 0.5
-  SFString controller "valve_turner"
-  SFString absoluteStop "15.7079632679"
-  SFString contactMaterial "default"
+      SFVec3f    translation 0 0.106 0
+      SFRotation rotation 0 1 0 0
+      SFString name "large valve"
+      SFFloat jointFriction 0.5
+      SFString controller "valve_turner"
+      SFString absoluteStop "15.7079632679"
+      SFString contactMaterial "default"
 }
 ```
 
@@ -36,11 +36,11 @@ Large Wheel-based valve. Handle can be moved in either direction by the angle (r
 
 ```
 LeverValve {
-  SFVec3f    translation 0 0.142 0
-  SFRotation rotation 0 1 0 0
-  SFString name "lever valve"
-  SFFloat jointFriction 1
-  SFVec3f scale 0.7 0.7 0.7
+      SFVec3f    translation 0 0.142 0
+      SFRotation rotation 0 1 0 0
+      SFString name "lever valve"
+      SFFloat jointFriction 1
+      SFVec3f scale 0.7 0.7 0.7
 }
 ```
 
@@ -60,12 +60,12 @@ Lever-based valve. Handle can be moved in either direction (from up) of 45 degre
 
 ```
 SmallValve {
-  SFVec3f    translation 0 0.077 0
-  SFRotation rotation 0 1 0 0
-  SFString name "small valve"
-  SFFloat jointFriction 0.1
-  SFString controller "valve_turner"
-  SFString absoluteStop "15.7079632679"
+      SFVec3f    translation 0 0.077 0
+      SFRotation rotation 0 1 0 0
+      SFString name "small valve"
+      SFFloat jointFriction 0.1
+      SFString controller "valve_turner"
+      SFString absoluteStop "15.7079632679"
 }
 ```
 

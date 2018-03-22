@@ -10,14 +10,14 @@
 
 ```
 SolidBox {
-  SFVec3f    translation     0 0 0
-  SFRotation rotation        0 1 0 0
-  SFString   name            "box"
-  SFVec3f    size            2 2 2
-  SFInt32    subdivision     8
-  SFString   contactMaterial "default"
-  SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
-  SFNode     physics         NULL
+      SFVec3f    translation     0 0 0
+      SFRotation rotation        0 1 0 0
+      SFString   name            "box"
+      SFVec3f    size            2 2 2
+      SFInt32    subdivision     8
+      SFString   contactMaterial "default"
+      SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
+      SFNode     physics         NULL
 }
 ```
 
@@ -40,17 +40,17 @@ The subdivision field allows to divide the faces into multiple quads (useful mai
 
 ```
 SolidPipe {
-  SFVec3f    translation     0 0 0
-  SFRotation rotation        0 1 0 0
-  SFString   name            "pipe"
-  SFFloat    height          2
-  SFFloat    radius          1
-  SFFloat    thickness       0.1
-  SFInt32    subdivision     24
-  SFFloat    accuracy        0.0001
-  SFString   contactMaterial "default"
-  SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
-  SFNode     physics         NULL
+      SFVec3f    translation     0 0 0
+      SFRotation rotation        0 1 0 0
+      SFString   name            "pipe"
+      SFFloat    height          2
+      SFFloat    radius          1
+      SFFloat    thickness       0.1
+      SFInt32    subdivision     24
+      SFFloat    accuracy        0.0001
+      SFString   contactMaterial "default"
+      SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
+      SFNode     physics         NULL
 }
 ```
 
@@ -74,15 +74,15 @@ a 0 value represents an error-free model but it will slow down the simulation.
 
 ```
 SolidRoundedBox {
-  SFVec3f    translation     0 0 0
-  SFRotation rotation        0 1 0 0
-  SFString   name            "rounded box"
-  SFVec3f    size            2 2 2
-  SFFloat    borderRadius    0.5
-  SFInt32    subdivision     24
-  SFString   contactMaterial "default"
-  SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
-  SFNode     physics         NULL
+      SFVec3f    translation     0 0 0
+      SFRotation rotation        0 1 0 0
+      SFString   name            "rounded box"
+      SFVec3f    size            2 2 2
+      SFFloat    borderRadius    0.5
+      SFInt32    subdivision     24
+      SFString   contactMaterial "default"
+      SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
+      SFNode     physics         NULL
 }
 ```
 
@@ -103,15 +103,15 @@ The box has similar properties as the VRML Box node in term of axis and fields.
 
 ```
 SolidTorus {
-  SFVec3f    translation     0 0 0
-  SFRotation rotation        0 1 0 0
-  SFString   name            "torus"
-  SFFloat    majorRadius     2
-  SFFloat    minorRadius     1
-  SFInt32    subdivision     24
-  SFString   contactMaterial "default"
-  SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
-  SFNode     physics         NULL
+      SFVec3f    translation     0 0 0
+      SFRotation rotation        0 1 0 0
+      SFString   name            "torus"
+      SFFloat    majorRadius     2
+      SFFloat    minorRadius     1
+      SFInt32    subdivision     24
+      SFString   contactMaterial "default"
+      SFNode     appearance      Appearance { material Material { } texture ImageTexture { url [ "textures/tagged_wall.jpg" ] } }
+      SFNode     physics         NULL
 }
 ```
 

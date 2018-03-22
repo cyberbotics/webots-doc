@@ -10,41 +10,41 @@
 
 ```
 Cabinet {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "cabinet"
-  SFFloat depth 0.5
-  SFFloat innerThickness 0.02
-  SFFloat outerThickness 0.03
-  MFFloat rowsHeights [
-  0.24
-  0.2
-  0.2
-  0.4
-  0.4
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "cabinet"
+      SFFloat depth 0.5
+      SFFloat innerThickness 0.02
+      SFFloat outerThickness 0.03
+      MFFloat rowsHeights [
+    0.24
+    0.2
+    0.2
+    0.4
+    0.4
   ]
-  MFFloat columnsWidths [
-  0.4
-  0.17
-  0.17
+      MFFloat columnsWidths [
+    0.4
+    0.17
+    0.17
   ]
-  MFString layout [
-  "RightSidedDoor (1, 4, 1, 2, 1.5)"
-  "LeftSidedDoor (2, 4, 2, 2, 1.5)"
-  "Drawer (3, 3, 1, 1, 1.5)"
-  "Drawer (2, 2, 1, 1, 1.5)"
-  "Drawer (3, 2, 1, 1, 1.5)"
-  "Drawer (1, 1, 3, 1, 3.5)"
-  "Shelf (1, 5, 3, 0)"
-  "Shelf (1, 4, 3, 0)"
-  "Shelf (1, 3, 3, 0)"
-  "Shelf (1, 2, 3, 0)"
-  "Shelf (1, 3, 0, 1)"
-  "Shelf (2, 3, 0, 1)"
+      MFString layout [
+    "RightSidedDoor (1, 4, 1, 2, 1.5)"
+    "LeftSidedDoor (2, 4, 2, 2, 1.5)"
+    "Drawer (3, 3, 1, 1, 1.5)"
+    "Drawer (2, 2, 1, 1, 1.5)"
+    "Drawer (3, 2, 1, 1, 1.5)"
+    "Drawer (1, 1, 3, 1, 3.5)"
+    "Shelf (1, 5, 3, 0)"
+    "Shelf (1, 4, 3, 0)"
+    "Shelf (1, 3, 3, 0)"
+    "Shelf (1, 2, 3, 0)"
+    "Shelf (1, 3, 0, 1)"
+    "Shelf (2, 3, 0, 1)"
   ]
-  SFNode handle CabinetHandle {}
-  MFString mainTextureUrl "textures/wood.jpg"
-  MFString objectTextureUrl "textures/plastic.jpg"
+      SFNode handle CabinetHandle {}
+      MFString mainTextureUrl "textures/wood.jpg"
+      MFString objectTextureUrl "textures/plastic.jpg"
 }
 ```
 
@@ -69,15 +69,15 @@ The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
 ```
 CabinetDoor {
-  SFVec3f translation 0 0 0
-  SFString name "cabinet door"
-  SFVec3f size 0.3 0.2 0.2
-  SFBool rightSided TRUE
-  SFFloat thickness 0.03
-  SFFloat mass 1.5
-  SFNode handle CabinetHandle {}
-  MFString mainTextureUrl "textures/wood.jpg"
-  MFString objectTextureUrl "textures/plastic.jpg"
+      SFVec3f translation 0 0 0
+      SFString name "cabinet door"
+      SFVec3f size 0.3 0.2 0.2
+      SFBool rightSided TRUE
+      SFFloat thickness 0.03
+      SFFloat mass 1.5
+      SFNode handle CabinetHandle {}
+      MFString mainTextureUrl "textures/wood.jpg"
+      MFString objectTextureUrl "textures/plastic.jpg"
 }
 ```
 
@@ -97,14 +97,14 @@ A door for the Cabinet PROTO
 
 ```
 CabinetDrawer {
-  SFVec3f translation 0 0 0
-  SFString name "cabinet drawer"
-  SFVec3f size 0.3 0.2 0.2
-  SFFloat thickness 0.03
-  SFFloat mass 1.5
-  SFNode handle CabinetHandle {}
-  MFString mainTextureUrl "textures/wood.jpg"
-  MFString objectTextureUrl "textures/plastic.jpg"
+      SFVec3f translation 0 0 0
+      SFString name "cabinet drawer"
+      SFVec3f size 0.3 0.2 0.2
+      SFFloat thickness 0.03
+      SFFloat mass 1.5
+      SFNode handle CabinetHandle {}
+      MFString mainTextureUrl "textures/wood.jpg"
+      MFString objectTextureUrl "textures/plastic.jpg"
 }
 ```
 
@@ -124,13 +124,13 @@ A drawer for the Cabinet PROTO.
 
 ```
 CabinetHandle {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "cabinet handle"
-  SFFloat handleLength 0.065
-  SFFloat handleRadius 0.0055
-  SFColor handleColor 0.74 0.74 0.74
-  SFFloat mass 0.3
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "cabinet handle"
+      SFFloat handleLength 0.065
+      SFFloat handleRadius 0.0055
+      SFColor handleColor 0.74 0.74 0.74
+      SFFloat mass 0.3
 }
 ```
 

@@ -48,7 +48,9 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                             fieldDefaultValue = match.group(3)
                             fieldComment = match.group(4).strip()
                             describedField.append((fieldName, fieldComment))
-                        fields += '  ' + line.replace('vrmlField', '').replace('field', '').split('#')[0].strip() + '\n'
+                        fields += line.replace('vrmlField ', '').replace('field', '   ').split('#')[0]
+                        if '#' in line:
+                            fields += '\n'
         exist = os.path.isfile(categoryName + '.md')
         mode = 'a'
         if category not in categories:

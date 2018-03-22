@@ -10,12 +10,12 @@
 
 ```
 Armchair {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "armchair"
-  SFColor color 1 1 1
-  MFString textureUrl "textures/sofa.jpg"
-  SFNode physics NULL
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "armchair"
+      SFColor color 1 1 1
+      MFString textureUrl "textures/sofa.jpg"
+      SFNode physics NULL
 }
 ```
 
@@ -35,11 +35,11 @@ An armchair (1 x 0.8 x 1.1 m)
 
 ```
 Carpet {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "carpet"
-  SFColor color 1 1 1
-  MFString textureUrl "textures/carpet.jpg"
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "carpet"
+      SFColor color 1 1 1
+      MFString textureUrl "textures/carpet.jpg"
 }
 ```
 
@@ -59,12 +59,12 @@ A carpet (2.4 x 0.02 x 1.6 m)
 
 ```
 Sofa {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "sofa"
-  SFColor color 1 1 1
-  MFString textureUrl "textures/sofa.jpg"
-  SFNode physics NULL
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "sofa"
+      SFColor color 1 1 1
+      MFString textureUrl "textures/sofa.jpg"
+      SFNode physics NULL
 }
 ```
 

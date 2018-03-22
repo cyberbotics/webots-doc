@@ -10,9 +10,9 @@
 
 ```
 Blackboard {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "blackboard"
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "blackboard"
 }
 ```
 
@@ -32,12 +32,12 @@ A blackboard (about 1.3 x 2.5 m)
 
 ```
 Book {
-  SFVec3f translation 0 0.1 0
-  SFRotation rotation 0 1 0 0
-  SFString name "book"
-  SFColor color 1 1 1
-  MFString textureUrl "textures/book.jpg"
-  SFFloat mass 0.3
+      SFVec3f translation 0 0.1 0
+      SFRotation rotation 0 1 0 0
+      SFString name "book"
+      SFColor color 1 1 1
+      MFString textureUrl "textures/book.jpg"
+      SFFloat mass 0.3
 }
 ```
 
@@ -57,9 +57,9 @@ A book (0.2 x 0.15 x 0.02 m)
 
 ```
 Clock {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "clock"
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "clock"
 }
 ```
 

@@ -10,16 +10,16 @@
 
 ```
 Fridge {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "fridge"
-  SFColor mainColor 1 1 1
-  MFString mainTextureUrl [
-  "textures/fridge_main.jpg"
+      SFVec3f translation 0 0 0
+      SFRotation rotation 0 1 0 0
+      SFString name "fridge"
+      SFColor mainColor 1 1 1
+      MFString mainTextureUrl [
+    "textures/fridge_main.jpg"
   ]
-  SFColor doorColor 1 1 1
-  MFString doorTextureUrl [
-  "textures/fridge_door.jpg"
+      SFColor doorColor 1 1 1
+      MFString doorTextureUrl [
+    "textures/fridge_door.jpg"
   ]
 }
 ```

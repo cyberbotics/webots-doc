@@ -10,10 +10,10 @@
 
 ```
 LJoint {
-  SFVec3f    translation 0 0.104 0
-  SFRotation rotation 0 1 0 0
-  SFString   name "L joint pipe"
-  SFVec3f    scale 1 1 1
+      SFVec3f    translation 0 0.104 0
+      SFRotation rotation 0 1 0 0
+      SFString   name "L joint pipe"
+      SFVec3f    scale 1 1 1
 }
 ```
 
@@ -33,12 +33,12 @@ LJoint {
 
 ```
 PipeSection {
-  SFVec3f    translation 0 0.03 0
-  SFRotation rotation 0 0 1 1.5708
-  SFString   name "pipe section"
-  SFFloat    height 0.5
-  SFFloat    radius 0.03
-  SFInt32    subdivision 24
+      SFVec3f    translation 0 0.03 0
+      SFRotation rotation 0 0 1 1.5708
+      SFString   name "pipe section"
+      SFFloat    height 0.5
+      SFFloat    radius 0.03
+      SFInt32    subdivision 24
 }
 ```
 
@@ -58,10 +58,10 @@ A section of pipe.
 
 ```
 TJoint {
-  SFVec3f    translation 0 0.95 0
-  SFRotation rotation 0 1 0 0
-  SFString   name "T joint pipe"
-  SFVec3f    scale 1 1 1
+      SFVec3f    translation 0 0.95 0
+      SFRotation rotation 0 1 0 0
+      SFString   name "T joint pipe"
+      SFVec3f    scale 1 1 1
 }
 ```
 

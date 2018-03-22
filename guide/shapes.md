@@ -10,18 +10,18 @@
 
 ```
 TexturedBoxShape {
-  SFVec3f  size             0.1 0.1 0.1
-  MFString textureUrl       "textures/old_brick_wall.jpg"
-  SFInt32  textureFiltering 4
-  SFNode   textureTransform NULL
-  SFString textureMapping   "flat"
-  SFColor  faceColor        0.8 0.8 0.8
-  SFBool   frontFace        TRUE
-  SFBool   backFace         TRUE
-  SFBool   leftFace         TRUE
-  SFBool   rightFace        TRUE
-  SFBool   topFace          TRUE
-  SFBool   bottomFace       TRUE
+      SFVec3f  size             0.1 0.1 0.1
+      MFString textureUrl       "textures/old_brick_wall.jpg"
+      SFInt32  textureFiltering 4
+      SFNode   textureTransform NULL
+      SFString textureMapping   "flat"
+      SFColor  faceColor        0.8 0.8 0.8
+      SFBool   frontFace        TRUE
+      SFBool   backFace         TRUE
+      SFBool   leftFace         TRUE
+      SFBool   rightFace        TRUE
+      SFBool   topFace          TRUE
+      SFBool   bottomFace       TRUE
 }
 ```
 

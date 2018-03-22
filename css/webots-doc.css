@@ -173,6 +173,7 @@
 .webots-doc li {
   font-family: "Roboto";
   font-weight: normal;
+  word-wrap: break-word;
 }
 .webots-doc td {
   padding-left:4px;
@@ -215,6 +216,7 @@
   font-size: 15px;
   font-family: "Roboto Mono", monospace;
   white-space: pre;
+  word-wrap: break-word;
 }
 .webots-doc tr > td >  code {
   white-space: normal;
@@ -238,6 +240,7 @@
   color: #0e6f8c;
   clear: both;
   margin: 20px auto;
+  word-wrap: break-word;
 }
 .webots-doc h1 {
   font-size: 46px;
@@ -290,6 +293,7 @@
   font-size: 16px;
   text-align: justify;
   line-height: 140%;
+  word-wrap: break-word;
 }
 .webots-doc img {
   max-width: 100%;
@@ -511,10 +515,12 @@
   font-family: "Roboto";
   width: 90%;
   margin: 15px auto;
+  word-wrap: break-word;
 }
 
 .blog #view h1, .blog #view h2, .blog #view h3 {
   text-align: center;
+  word-wrap: break-word;
 }
 
 .blog #view hr {
@@ -637,6 +643,7 @@
   background-color: #444;
   font-size: 16px;
   overflow-y: hidden;
+  word-wrap: break-word;
 }
 
 .blog figcaption {

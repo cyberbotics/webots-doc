@@ -7,7 +7,7 @@
 | ![Accelerometer.png](images/sensors/Accelerometer.png) | [Accelerometer](../reference/accelerometer.md) | *TODO* |
 | ![Camera.png](images/sensors/Camera.png) | [Camera](../reference/camera.md) | *TODO* |
 | ![Compass.png](images/sensors/Compass.png) | [Compass](../reference/compass.md) | *TODO* |
-| ![DistanceSensor.png](images/sensors/DistanceSensor.png) | [DistanceSensor](../reference/distanceSensor.md) | *TODO* |
+| ![DistanceSensor.png](images/sensors/DistanceSensor.png) | [DistanceSensor](../reference/distancesensor.md) | *TODO* |
 | ![GPS.png](images/sensors/GPS.png) | [GPS](../reference/gps.md) | *TODO* |
 | ![Gyro.png](images/sensors/Gyro.png) | [Gyro](../reference/gyro.md) | *TODO* |
 | ![InertialUnit.png](images/sensors/InertialUnit.png) | [InertialUnit](../reference/inertialunit.md) | *TODO* |

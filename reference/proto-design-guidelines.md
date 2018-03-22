@@ -5,8 +5,8 @@ This ensures that your new PROTO nodes will be well designed, easy-to-use and co
 
 ### Naming
 
-The naming of a PROTO node is important and should be precise and explicit.
-Therefore, you should avoid abbreviations, numbers and vague terminology when naming a PROTO node.
+The naming of a PROTO is important and should be precise and explicit.
+Therefore, you should avoid abbreviations, numbers and vague terminology when naming a PROTO.
 For example `SmallWoodenChair` is better than `SmallChair`, which is better than `Chair`, which is better than `Chair7`.
 PROTO names should use upper camel case, e.g., each word should begin with a capital letter with no intervening spaces.
 
@@ -30,22 +30,23 @@ A license file may be added in the same folder as the PROTO file if needed.
 #### Tags
 
 If needed, the `tags:` comment should be properly specified.
-It currently supports two possible tags: `static` and `hidden` which may be used simultaneously separated with a coma.
+It currently supports two possible options: `static` and `hidden` which may be used simultaneously separated with a coma.
 The `static` tag is described in the [Procedural PROTO nodes](procedural-proto-nodes.md) section.
-The `hidden` tag tells Webots not to display this PROTO node in the Add Node dialog when the user wants to insert a new PROTO node.
-Hidden PROTO nodes are typically used as sub-PROTO nodes, that is they are used from another PROTO node, but not directly from a world file.
+The `hidden` tag tells Webots not to display this PROTO in the Add Node dialog when the user wants to insert a new PROTO.
+Hidden PROTO nodes are typically used as sub-PROTO nodes, that is they are used from another PROTO file, but not directly from a world file.
 
 #### Description
 
-Finally, it is important to provide a short description about what the PROTO node is about.
+Finally, it is important to provide a short description about what the PROTO is about.
 This may be very simple as in the example provided below.
+This information is displayed in the Add Node dialog to describe the PROTO.
 
-### Recommended Fields for Object PROTO Nodes
+### Recommended Fields for Simple PROTO Nodes
 
 #### "translation" and "rotation"
 
 PROTO nodes are usually meant to represent real world objects, that can be placed at different locations and orientations in the world.
-Therefore a PROTO node should expose at least a `translation` and a `rotation` field to allow the users to move and rotate the object easily.
+Therefore a PROTO should expose at least a `translation` and a `rotation` field to allow the users to move and rotate the object easily.
 The default value for the translation should be preferably the origin (0, 0, 0) and should correspond to the object in a normal position, e.g., laying on the floor rather than sinking into the floor.
 That means the origin of an object should not be at its 3D geometrical center, but rather in the middle of the surface in contact with the floor.
 The rotation axis should be already well positioned, e.g., usually vertical, so that when you rotate a building for example, you should simply change the angle value to have it rotate along its vertical axis.
@@ -54,7 +55,7 @@ The rotation axis should be already well positioned, e.g., usually vertical, so 
 
 Bounding objects are used for collision detection.
 If you believe that an object won't collide with anything, it is convenient to be able to turn off collision detection to save computation time.
-Providing a PROTO node with a `enableBoundingObject` boolean field deserves this purpose.
+Providing a PROTO with a `enableBoundingObject` boolean field deserves this purpose.
 For example, in a scenario where a small robot is running on a table top in a living room, all the objects outside of the range of the robot, like the sofa, chairs, chandelier, TV set, etc. will never collide with the robot and hence could have their collision detection disabled.
 However, in some other scenarios, we want that the robot can collide with a chair, because the robot is running on the floor.
 Therefore such objects should have a `enableBoundingObject` field exposed to allow the users to decide whether they want to enable collision detection, depending on the specific simulation scenario.
@@ -80,15 +81,15 @@ Nevertheless, such a `size` field should be limited to a minimal and a maximal s
 Therefore it could be either a floating point or an integer value.
 
 For some PROTO nodes, it could be useful to expose a `color` field.
-For example, a car or a color pencil PROTO node could have a `color` field exposed.
+For example, a car or a color pencil PROTO could have a `color` field exposed.
 However, that should be limited to objects that are available in different colors.
 For example, it should not be used for a fire hydrant (usually always red) or a fork (usually always metallic grey).
 The `color` field may be specified as a `Color` node if any color is available or as a string (if only a limited number of colors is available for that object).
 
 Depending on the object, a number of texture fields may be useful.
-For example a painting PROTO node could have the painting specified in a `picture` field and the frame texture specified in a `frame` field.
+For example a painting PROTO could have the painting specified in a `picture` field and the frame texture specified in a `frame` field.
 
-Generally, the number of exposed fields should be minimal in order to guarantee that the resulting object will be realistic and correspond to the original idea of the PROTO node.
+Generally, the number of exposed fields should be minimal in order to guarantee that the resulting object will be realistic and correspond to the original idea of the PROTO.
 Also, floating point and integer values should be generally constrained between a minimum and a maximum value to ensure a realistic and stable result.
 
 ### Example

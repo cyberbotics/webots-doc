@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import fnmatch
 import os
 import re
 import sys
@@ -8,17 +9,14 @@ DESCRIPTION_STATE = 0
 FIELDS_STATE = 1
 BODY_STATE = 2
 
-with open('objects_list.txt') as objectListFile:
-    protoList = []
-    for line in objectListFile.readlines():
-        protoList.append(line.strip('\n'))
-    protoList = sorted(protoList)
-    addedCategory = []
-    with open('objects.md', 'w') as file:
-        file.write('# Objects\n\n')
-        file.write('## Sections\n\n')
+addedCategory = []
+with open('objects.md', 'w') as file:
+    file.write('# Objects\n\n')
+    file.write('## Sections\n\n')
 
-    for proto in protoList:
+for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep + 'projects' + os.sep + 'objects'):
+    for fileName in fnmatch.filter(fileNames, '*.proto'):
+        proto = os.path.join(rootPath, fileName)
         protoName = os.path.basename(proto).split('.')[0]
         category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
         categoryName = category.replace('_', '-')
@@ -27,7 +25,7 @@ with open('objects_list.txt') as objectListFile:
         fields = ''
         state = 0
         describedField = []
-        with open(os.environ['WEBOTS_HOME'] + os.sep + proto, 'r') as file:
+        with open(proto, 'r') as file:
             for line in file.readlines():
                 if state == DESCRIPTION_STATE:
                     if line.startswith('#'):
@@ -51,22 +49,21 @@ with open('objects_list.txt') as objectListFile:
                             fieldComment = match.group(4).strip()
                             describedField.append((fieldName, fieldComment))
                         fields += '  ' + line.replace('vrmlField', '').replace('field', '').split('#')[0].strip() + '\n'
-
-        exist = os.path.isfile(categoryName + '.md')
+        exist = os.path.isfile('objects' + os.sep + categoryName + '.md')
         mode = 'a'
         if category not in addedCategory:
             mode = 'w'
-        with open(categoryName + '.md', mode) as file:
+        with open('objects' + os.sep + categoryName + '.md', mode) as file:
             if mode == 'w':
                 file.write('# %s\n\n' % categoryName.replace('-', ' ').title())
             file.write('## %s\n\n' % protoName)
 
-            if os.path.isfile('images' + os.sep + category + os.sep + protoName + '/model.png'):
+            if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
                 file.write('%%figure "%s"\n\n' % protoName)
-                file.write('![%s-image](images/%s/%s/model.png)\n\n' % (protoName, category, protoName))
+                file.write('![%s-image](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
                 file.write('%end\n\n')
             else:
-                sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + category + os.sep + protoName + '/model.png'))
+                sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'))
 
             file.write('```\n')
             file.write('%s {\n' % protoName)
@@ -74,7 +71,7 @@ with open('objects_list.txt') as objectListFile:
             file.write('}\n')
             file.write('```\n\n')
 
-            file.write('> **File location**: "WEBOTS\_HOME/%s"\n\n' % proto)
+            file.write('> **File location**: "WEBOTS\_HOME%s"\n\n' % proto.replace(os.environ['WEBOTS_HOME'], '').replace(os.sep, '/'))
             if license:
                 file.write('> **License**: %s\n\n' % license)
             else:
@@ -91,6 +88,6 @@ with open('objects_list.txt') as objectListFile:
         if category not in addedCategory:
             addedCategory.append(category)
             with open('objects.md', 'a') as file:
-                file.write('- [%s](%s.md)\n' % (categoryName.replace('-', ' ').title(), categoryName))
-    with open('objects.md', 'a') as file:
-        file.write('\n')
+                file.write('- [%s](objects/%s.md)\n' % (categoryName.replace('-', ' ').title(), categoryName))
+with open('objects.md', 'a') as file:
+    file.write('\n')

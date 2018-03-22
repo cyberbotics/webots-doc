@@ -89,7 +89,7 @@ You can get more information about this topic in [this section](web-scene.md).
 Once the animation recording is started, this item is changed to `Stop HTML5 Animation...` and can be used to stop the animation recording.
 You can get more information about this topic in [this section](web-animation.md).
 
-- **Logout and Quit** terminates the current simulation, closes Webots and resets the user credentials so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password. This menu item is available only when being logged-in with a user account.
+- **Logout and Quit** terminates the current simulation, closes Webots and resets the user credentials so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password. This menu item is available only when logged-in with a user account.
 
 - **Leave Webots Benchmark mode and Quit** terminates Webots and display the welcome dialog at next start. This menu item is available only when running the Webots Benchmark mode.
 

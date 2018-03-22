@@ -19,35 +19,38 @@ The first line of a PROTO file is called the header.
 It should be the following: `#VRML_SIM {{ webots.version.major }} utf8`.
 `{{ webots.version.major }}` corresponds to the version of Webots needed to run this PROTO.
 It should be followed by a number of comments describing the PROTO.
-These comments should be formatted as described below to be displayed properly by Webots.
+These comments should be formatted as described in the [example](#example) below to be displayed properly by Webots.
 
 #### License
 
 If a PROTO is meant to be distributed, it is important to specify the license under which it can be used.
-For that purpose, the name of the license should be referred to in the `license:` comment (see example below).
+For that purpose, the name of the license should be referred to in the `license:` comment (see [example](#example) below).
 A license file may be added in the same folder as the PROTO file if needed.
 
 #### Tags
 
 If needed, the `tags:` comment should be properly specified.
-It currently supports three possible options: `deprecated`, `hidden` and `static` which may be used simultaneously separated with a coma.
-The `deprecated` tag means this PROTO should not be used any more in new simulations, but is kept for backwards compatibility. When using a deprecated PROTO, Webots will display a warning message about it.
-The `hidden` tag tells Webots not to display this PROTO in the Add Node dialog when the user wants to insert a new PROTO.
+It currently supports three possible options: `deprecated`, `hidden` and `static` which may be used simultaneously separated with a coma:
+- `deprecated` means this PROTO should not be used any more in new simulations, but is kept for backwards compatibility. When using a deprecated PROTO, Webots will display a warning message about it.
+- `hidden` tells Webots not to display this PROTO in the Add Node dialog when the user wants to insert a new PROTO.
 Hidden PROTO nodes are typically used as sub-PROTO nodes, that is they are used from another PROTO file, but not directly from a world file.
-The `static` tag is described in the [Procedural PROTO nodes](procedural-proto-nodes.md) section.
+- `static` is described in the [Procedural PROTO nodes](procedural-proto-nodes.md) section.
 
 #### Description
 
 Finally, it is important to provide a short description about what the PROTO is about.
-This may be very simple as in the example provided below.
+This may be very simple as in the [example](#example) below.
 This information is displayed in the Add Node dialog to describe the PROTO.
 
 ### Recommended Fields for Simple PROTO Nodes
 
+This section describes simple PROTO nodes representing real world objects, which are derived from the `Solid` node.
+It doesn't cover PROTO nodes derived from other primitives (such as geometries) and complex PROTO nodes such as sensors, actuators or robots.
+
 #### "translation" and "rotation"
 
-PROTO nodes are usually meant to represent real world objects, that can be placed at different locations and orientations in the world.
-Therefore a PROTO should expose at least a `translation` and a `rotation` field to allow the users to move and rotate the object easily.
+Real objects can be placed at different locations and orientations in the world.
+Therefore the corresponding PROTO should expose at least a `translation` and a `rotation` field to allow the users to move and rotate the object easily.
 The default value for the translation should be preferably the origin (0, 0, 0) and should correspond to the object in a normal position, e.g., laying on the floor rather than sinking into the floor.
 That means the origin of an object should not be at its 3D geometrical center, but rather in the middle of the surface in contact with the floor.
 The rotation axis should be already well positioned, e.g., usually vertical, so that when you rotate a building for example, you should simply change the angle value to have it rotate along its vertical axis.

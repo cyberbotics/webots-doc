@@ -4,7 +4,7 @@ A wide range of lidar sensors have been modelled.
 
 %figure "Lidar simulation"
 
-![ibeo.png](images/lidar.png)
+![ibeo.png](images/sensors/lidar_simulation.png)
 
 %end
 
@@ -16,7 +16,7 @@ The model of the `IbeoLux` contains a spherical projection, a fixed resolution o
 
 %figure "Ibeo Lux lidar"
 
-![ibeo.png](images/ibeo.png)
+![ibeo.png](images/sensors/ibeo.png)
 
 %end
 
@@ -42,7 +42,7 @@ The model of the `Sick Lms 291` contains a spherical projection, a configurable 
 
 %figure "Sick Lms 291 lidar"
 
-![sick.png](images/sick.png)
+![sick.png](images/sensors/sick.png)
 
 %end
 
@@ -72,7 +72,7 @@ The model of the `Velodyne VLP 16` contains a spherical projection and a gaussia
 
 %figure "Velodyne VLP 16 model"
 
-![velodyne_vpl_16.png](images/velodyne_vpl_16.png)
+![velodyne_vpl_16.png](images/sensors/velodyne_vpl_16.png)
 
 %end
 
@@ -95,7 +95,7 @@ The model of the `Velodyne HDL 32` contains a gaussian noise with a standard dev
 
 %figure "Velodyne HDL 32E lidar"
 
-![velodyne_hdl_32e.png](images/velodyne_hdl_32e.png)
+![velodyne_hdl_32e.png](images/sensors/velodyne_hdl_32e.png)
 
 %end
 
@@ -118,7 +118,7 @@ The model of the `Velodyne HDL 64` contains a gaussian noise with a standard dev
 
 %figure "Velodyne HDL 64E lidar"
 
-![velodyne_hdl_64e.png](images/velodyne_hdl_64e.png)
+![velodyne_hdl_64e.png](images/sensors/velodyne_hdl_64e.png)
 
 %end
 

@@ -10,6 +10,6 @@ It is therefore very easy to simulate smart cameras such as the Mobileye.
 
 %figure "Smart camera output"
 
-![smart_camera.png](images/smart_camera.png)
+![smart_camera.png](images/sensors/smart_camera.png)
 
 %end

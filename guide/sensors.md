@@ -26,4 +26,6 @@ These sensors are listed by category [in the section below](#branded-sensors).
 
 ### Branded Sensors
 
-*Add the automobile sensors here.*
+- [Camera Sensors](camera-sensors.md)
+- [Lidar Sensors](lidar-sensors.md)
+- [Radar Sensors](radar-sensors.md)

@@ -30,10 +30,11 @@ A license file may be added in the same folder as the PROTO file if needed.
 #### Tags
 
 If needed, the `tags:` comment should be properly specified.
-It currently supports two possible options: `static` and `hidden` which may be used simultaneously separated with a coma.
-The `static` tag is described in the [Procedural PROTO nodes](procedural-proto-nodes.md) section.
+It currently supports three possible options: `deprecated`, `hidden` and `static` which may be used simultaneously separated with a coma.
+The `deprecated` tag means this PROTO should not be used any more in new simulations, but is kept for backwards compatibility. When using a deprecated PROTO, Webots will display a warning message about it.
 The `hidden` tag tells Webots not to display this PROTO in the Add Node dialog when the user wants to insert a new PROTO.
 Hidden PROTO nodes are typically used as sub-PROTO nodes, that is they are used from another PROTO file, but not directly from a world file.
+The `static` tag is described in the [Procedural PROTO nodes](procedural-proto-nodes.md) section.
 
 #### Description
 

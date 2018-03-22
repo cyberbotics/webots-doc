@@ -104,6 +104,8 @@
     - [Surveyor SRV-1](surveyor.md)
     - [Thymio II](thymio2.md)
     - [youBot](youbot.md)
+- [Actuators](actuators.md)
+- [Sensors](sensors.md)
 - [Webots FAQ](webots-faq.md)
     - [General FAQ](general-faq.md)
     - [Programming](programming.md)

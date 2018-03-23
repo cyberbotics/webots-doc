@@ -10,10 +10,10 @@
 
 ```
 Bolt {
-   SFVec3f translation 0 0.0131 0
-   SFRotation rotation 0 0 1 0
-   SFString name "bolt"
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0.0131 0
+  SFRotation rotation 0 0 1 0
+  SFString name "bolt"
+  SFString contactMaterial "default"
 }
 ```
 
@@ -33,10 +33,10 @@ A threaded bolt.
 
 ```
 Hammer {
-   SFVec3f translation 0 0.014 0
-   SFRotation rotation 0 1 0 0
-   SFString name "hammer"
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0.014 0
+  SFRotation rotation 0 1 0 0
+  SFString name "hammer"
+  SFString contactMaterial "default"
 }
 ```
 
@@ -56,10 +56,10 @@ A 25cm asymmetric club hammer.
 
 ```
 Nut {
-   SFVec3f translation 0 0.004 0
-   SFRotation rotation 0 1 0 0
-   SFString name "nut"
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0.004 0
+  SFRotation rotation 0 1 0 0
+  SFString name "nut"
+  SFString contactMaterial "default"
 }
 ```
 
@@ -79,10 +79,10 @@ A hexagonal nut.
 
 ```
 PaintBucket {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "paint bucket"
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "paint bucket"
+  SFString contactMaterial "default"
 }
 ```
 
@@ -102,11 +102,11 @@ A 4kg bucket of paint, with HingeJoint-based handle.
 
 ```
 PlatformCart {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "platform cart"
-   MFNode slot []
-   SFNode physics Physics {}
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "platform cart"
+  MFNode slot []
+  SFNode physics Physics {}
 }
 ```
 
@@ -126,10 +126,10 @@ A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 ```
 Screwdriver {
-   SFVec3f translation 0 0.012 0
-   SFRotation rotation 0 1 0 0
-   SFString name "screwdriver"
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0.012 0
+  SFRotation rotation 0 1 0 0
+  SFString name "screwdriver"
+  SFString contactMaterial "default"
 }
 ```
 
@@ -149,10 +149,10 @@ A Philips screwdriver. The blade and handle are balanced.
 
 ```
 Wrench {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "wrench"
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "wrench"
+  SFString contactMaterial "default"
 }
 ```
 

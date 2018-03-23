@@ -10,16 +10,16 @@
 
 ```
 Ball {
-   SFVec3f translation 0 0.0325 0
-   SFRotation rotation 0 1 0 0
-   SFString name "ball"
-   SFColor color 1.0 0.54 0.08
-   SFFloat radius 0.0325
-   SFFloat mass 0.055
-   MFVec3f centerOfMass [0 -0.0001 0]
-   SFFloat linearDamping 0.17
-   SFFloat angularDamping 0.33
-   SFString contactMaterial "default"
+  SFVec3f translation 0 0.0325 0
+  SFRotation rotation 0 1 0 0
+  SFString name "ball"
+  SFColor color 1.0 0.54 0.08
+  SFFloat radius 0.0325
+  SFFloat mass 0.055
+  MFVec3f centerOfMass [0 -0.0001 0]
+  SFFloat linearDamping 0.17
+  SFFloat angularDamping 0.33
+  SFString contactMaterial "default"
 }
 ```
 
@@ -40,11 +40,11 @@ You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 ```
 PingPongBall {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "ping pong ball"
-   MFNode immersionProperties []
-   MFString textureUrl "textures/pingpong_logo.jpg"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "ping pong ball"
+  MFNode immersionProperties []
+  MFString textureUrl "textures/pingpong_logo.jpg"
 }
 ```
 
@@ -64,11 +64,11 @@ A ping pong ball.
 
 ```
 SoccerBall {
-   SFVec3f translation 0 0.1 0
-   SFRotation rotation 0 1 0 0
-   SFString name "soccer ball"
-   SFFloat radius 0.113
-   SFFloat mass 0.6
+  SFVec3f translation 0 0.1 0
+  SFRotation rotation 0 1 0 0
+  SFString name "soccer ball"
+  SFFloat radius 0.113
+  SFFloat mass 0.6
 }
 ```
 

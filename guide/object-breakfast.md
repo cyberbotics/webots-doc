@@ -10,12 +10,12 @@
 
 ```
 BiscuitBox {
-   SFVec3f    translation 0 0 0
-   SFRotation rotation    0 1 0 0
-   SFString   name        "biscuit box"
-   SFVec3f    size        0.24 0.04 0.08
-   MFString   textureUrl  "textures/biscuit_box.jpg"
-   SFFloat    mass        0.4
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "biscuit box"
+  SFVec3f    size        0.24 0.04 0.08
+  MFString   textureUrl  "textures/biscuit_box.jpg"
+  SFFloat    mass        0.4
 }
 ```
 
@@ -35,12 +35,12 @@ A customizable (size, texture, etc.) biscuit box.
 
 ```
 CerealBox {
-   SFVec3f    translation 0 0 0
-   SFRotation rotation    0 1 0 0
-   SFString   name        "cereal box"
-   SFVec3f    size        0.08 0.3 0.2
-   MFString   textureUrl  "textures/cereal_box_2.jpg"
-   SFFloat    mass        1
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "cereal box"
+  SFVec3f    size        0.08 0.3 0.2
+  MFString   textureUrl  "textures/cereal_box_2.jpg"
+  SFFloat    mass        1
 }
 ```
 
@@ -60,12 +60,12 @@ A customizable (size, texture, etc.) cereal box.
 
 ```
 HoneyJar {
-   SFVec3f    translation    0 0 0
-   SFRotation rotation       0 1 0 0
-   SFString   name           "honey jar"
-   MFString   textureLidUrl  "textures/bee_lid.jpg"
-   SFFloat    mass           0.5
-   SFColor    color          0.839216 0.572549 0.105882
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "honey jar"
+  MFString   textureLidUrl  "textures/bee_lid.jpg"
+  SFFloat    mass           0.5
+  SFColor    color          0.839216 0.572549 0.105882
 }
 ```
 
@@ -85,11 +85,11 @@ A honey jar.
 
 ```
 JamJar {
-   SFVec3f    translation   0 0 0
-   SFRotation rotation      0 1 0 0
-   SFString   name          "jam jar"
-   MFString   textureLidUrl "textures/blue_jar_lid.jpg"
-   SFFloat    mass          0.5
+  SFVec3f    translation   0 0 0
+  SFRotation rotation      0 1 0 0
+  SFString   name          "jam jar"
+  MFString   textureLidUrl "textures/blue_jar_lid.jpg"
+  SFFloat    mass          0.5
 }
 ```
 

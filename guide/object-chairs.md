@@ -10,12 +10,12 @@
 
 ```
 Chair {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "chair"
-   SFColor color 1 1 1
-   MFString textureUrl "textures/chair.jpg"
-   SFNode physics NULL
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "chair"
+  SFColor color 1 1 1
+  MFString textureUrl "textures/chair.jpg"
+  SFNode physics NULL
 }
 ```
 
@@ -35,12 +35,12 @@ A chair (0.5 x 1 x 0.5 m).
 
 ```
 SimpleChair {
-   SFVec3f translation 0 0.91 0
-   SFRotation rotation 0 1 0 0
-   SFString name "simple chair"
-   SFColor legColor 1 1 0
-   SFColor seatColor 1 0.65 0
-   SFFloat mass 5
+  SFVec3f translation 0 0.91 0
+  SFRotation rotation 0 1 0 0
+  SFString name "simple chair"
+  SFColor legColor 1 1 0
+  SFColor seatColor 1 0.65 0
+  SFFloat mass 5
 }
 ```
 
@@ -61,12 +61,12 @@ This object is physics-enabled so it can be pushed.
 
 ```
 WoodenChair {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "wooden chair"
-   SFColor color 1 1 1
-   MFString textureUrl "textures/wood.jpg"
-   SFNode physics NULL
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "wooden chair"
+  SFColor color 1 1 1
+  MFString textureUrl "textures/wood.jpg"
+  SFNode physics NULL
 }
 ```
 

@@ -10,12 +10,12 @@
 
 ```
 ComputerMouse {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "computer mouse"
-   SFColor topColor 0.71 0.71 0.71
-   SFColor bottomColor 0.056 0.056 0.056
-   SFFloat mass 0.1
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "computer mouse"
+  SFColor topColor 0.71 0.71 0.71
+  SFColor bottomColor 0.056 0.056 0.056
+  SFFloat mass 0.1
 }
 ```
 
@@ -35,11 +35,11 @@ A computer mouse.
 
 ```
 DesktopComputer {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "desktop computer"
-   SFColor powerbuttonColor 0.252903 0.263813 0.266361
-   SFFloat mass 0
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "desktop computer"
+  SFColor powerbuttonColor 0.252903 0.263813 0.266361
+  SFFloat mass 0
 }
 ```
 
@@ -59,11 +59,11 @@ A computer tower.
 
 ```
 Keyboard {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "keyboard"
-   SFColor color 0.1 0.1 0.1
-   SFFloat mass 0
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "keyboard"
+  SFColor color 0.1 0.1 0.1
+  SFFloat mass 0
 }
 ```
 
@@ -83,10 +83,10 @@ A computer keyboard.
 
 ```
 Laptop {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "laptop"
-   SFString controller "laptop_switch_on"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "laptop"
+  SFString controller "laptop_switch_on"
 }
 ```
 
@@ -106,11 +106,11 @@ A simple laptop.
 
 ```
 Monitor {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "monitor"
-   SFColor color 0.15 0.15 0.15
-   SFFloat mass 0
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "monitor"
+  SFColor color 0.15 0.15 0.15
+  SFFloat mass 0
 }
 ```
 

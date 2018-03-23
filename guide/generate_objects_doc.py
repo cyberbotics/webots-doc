@@ -70,7 +70,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                             fieldDefaultValue = match.group(3)
                             fieldComment = match.group(4).strip()
                             describedField.append((fieldName, fieldComment))
-                        fieldLine = line.replace('vrmlField ', '').replace('field', '').split('#')[0]
+                        fieldLine = line.replace('field ', '').split('#')[0]
                         if 'hiddenField' not in fieldLine:
                             fields += fieldLine
                             if '#' in line:

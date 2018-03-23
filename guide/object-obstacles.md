@@ -10,13 +10,13 @@
 
 ```
 OilBarrel {
-   SFVec3f translation 0 0.44 0
-   SFRotation rotation 0 1 0 0
-   SFString name "oil barrel"
-   SFFloat height 0.88
-   SFFloat radius 0.305
-   SFNode physics NULL
-   MFNode immersionProperties []
+  SFVec3f translation 0 0.44 0
+  SFRotation rotation 0 1 0 0
+  SFString name "oil barrel"
+  SFFloat height 0.88
+  SFFloat radius 0.305
+  SFNode physics NULL
+  MFNode immersionProperties []
 }
 ```
 
@@ -36,10 +36,10 @@ Resizable oil barrel.
 
 ```
 Ramp30deg {
-   SFVec3f translation  0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "ramp 30 degrees"
-   SFColor color 0.5 0.5 0.5
+  SFVec3f translation  0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "ramp 30 degrees"
+  SFColor color 0.5 0.5 0.5
 }
 ```
 
@@ -60,11 +60,11 @@ The ramp is a static object (not physics-enabled) so it will not move when hit.
 
 ```
 ThreeSteps {
-   SFVec3f translation  0 -0.5 0
-   SFRotation rotation 0 1 0 0
-   SFString name "three steps"
-   SFVec3f increment 0 0.1 0
-   SFColor color 0.5 0.5 0.5
+  SFVec3f translation  0 -0.5 0
+  SFRotation rotation 0 1 0 0
+  SFString name "three steps"
+  SFVec3f increment 0 0.1 0
+  SFColor color 0.5 0.5 0.5
 }
 ```
 

@@ -10,9 +10,9 @@
 
 ```
 Auditorium {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "auditorium"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "auditorium"
 }
 ```
 
@@ -32,9 +32,9 @@ A classic auditoruim.
 
 ```
 BigGlassTower {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "big glass tower"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "big glass tower"
 }
 ```
 
@@ -54,24 +54,24 @@ A big glass tower.
 
 ```
 Building {
-   SFVec3f     translation            0 0 0
-   SFRotation  rotation               0 1 0 0
-   SFString    name                   "building"                           
-   SFFloat     floorHeight            3                                    
-   SFInt32     floorNumber            3                                    
-   SFInt32     startingFloor          0                                    
-       MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]    
-   SFNode      wallAppearance         Appearance { material Material {} }  
-   MFString    groundFloor            [ ]                                  
-   MFFloat     groundFloorScale       [ ]                                  
-   MFFloat     groundFloorTranslation [ ]                                  
-   SFNode      roofAppearance         Appearance { material Material {} }  
-   SFString    roofShape              "pyramidal roof"                     
-   SFFloat     roofHeight             3                                    
-   SFBool      enableBoundingObject   TRUE                                 
-   SFBool      bottom                 FALSE                                
-   SFString    model                  "building"
-   MFColor     recognitionColors      []
+  SFVec3f     translation            0 0 0
+  SFRotation  rotation               0 1 0 0
+  SFString    name                   "building"                           
+  SFFloat     floorHeight            3                                    
+  SFInt32     floorNumber            3                                    
+  SFInt32     startingFloor          0                                    
+      MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]    
+  SFNode      wallAppearance         Appearance { material Material {} }  
+  MFString    groundFloor            [ ]                                  
+  MFFloat     groundFloorScale       [ ]                                  
+  MFFloat     groundFloorTranslation [ ]                                  
+  SFNode      roofAppearance         Appearance { material Material {} }  
+  SFString    roofShape              "pyramidal roof"                     
+  SFFloat     roofHeight             3                                    
+  SFBool      enableBoundingObject   TRUE                                 
+  SFBool      bottom                 FALSE                                
+  SFString    model                  "building"
+  MFColor     recognitionColors      []
 }
 ```
 
@@ -122,9 +122,9 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ```
 BuildingUnderConstruction {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "building under construction"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "building under construction"
 }
 ```
 
@@ -144,16 +144,16 @@ Building under construction with scaffolding.
 
 ```
 BungalowStyleHouse {
-   SFVec3f translation         0 0 0
-   SFRotation rotation         0 1 0 0
-   SFString name               "bungalow style house"
-   SFBool fence                TRUE
-   SFBool floor                TRUE
-   SFBool chimney              TRUE
-   SFBool enableBoundingObject TRUE
-   SFNode appearance           Appearance { material Material { diffuseColor 0.52 0.73 0.76 } }
-   SFNode floorAppearance      Appearance { material Material { diffuseColor 0.27 0.14 0.03 } }
-   SFNode fenceAppearance      Appearance { material Material { } texture ImageTexture { url ["textures/wood.jpg"] } textureTransform TextureTransform { scale 10 10 } }
+  SFVec3f translation         0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString name               "bungalow style house"
+  SFBool fence                TRUE
+  SFBool floor                TRUE
+  SFBool chimney              TRUE
+  SFBool enableBoundingObject TRUE
+  SFNode appearance           Appearance { material Material { diffuseColor 0.52 0.73 0.76 } }
+  SFNode floorAppearance      Appearance { material Material { diffuseColor 0.27 0.14 0.03 } }
+  SFNode fenceAppearance      Appearance { material Material { } texture ImageTexture { url ["textures/wood.jpg"] } textureTransform TextureTransform { scale 10 10 } }
 }
 ```
 
@@ -175,9 +175,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 CommercialBuilding {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "commercial building"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "commercial building"
 }
 ```
 
@@ -197,9 +197,9 @@ A commercial building.
 
 ```
 CyberboticsTower {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "Cyberbotics tower"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "Cyberbotics tower"
 }
 ```
 
@@ -219,14 +219,14 @@ The Cyberbotics tower.
 
 ```
 FastFoodRestaurant {
-   SFVec3f     translation   0 0 0
-   SFRotation  rotation      0 1 0 0
-   SFString    name          "fast food restaurant"
-   SFFloat     height        4
-   SFFloat     length        10
-   SFFloat     width         10
-   SFString    brand         "KFC"
-   SFInt32     numberOfSides 1
+  SFVec3f     translation   0 0 0
+  SFRotation  rotation      0 1 0 0
+  SFString    name          "fast food restaurant"
+  SFFloat     height        4
+  SFFloat     length        10
+  SFFloat     width         10
+  SFString    brand         "KFC"
+  SFInt32     numberOfSides 1
 }
 ```
 
@@ -247,9 +247,9 @@ The building can be changed to a two sided restaurant using the 'numberOfSides' 
 
 ```
 HollowBuilding {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "hollow building"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "hollow building"
 }
 ```
 
@@ -269,9 +269,9 @@ A hollow building.
 
 ```
 Hotel {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "hotel"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "hotel"
 }
 ```
 
@@ -285,12 +285,12 @@ A big hotel.
 
 ```
 ModernHouse {
-   SFVec3f translation         0 0 0
-   SFRotation rotation         0 1 0 0
-   SFString name               "modern house"
-   SFBool enableBoundingObject TRUE
-   SFNode appearance           Appearance { material Material { diffuseColor 0.56 0.18 0.12 } }
-   SFNode windowAppearance     Appearance { material Material { diffuseColor 0.38 0.55 0.69 } }
+  SFVec3f translation         0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString name               "modern house"
+  SFBool enableBoundingObject TRUE
+  SFNode appearance           Appearance { material Material { diffuseColor 0.56 0.18 0.12 } }
+  SFNode windowAppearance     Appearance { material Material { diffuseColor 0.38 0.55 0.69 } }
 }
 ```
 
@@ -312,9 +312,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 Museum {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "museum"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "museum"
 }
 ```
 
@@ -328,9 +328,9 @@ An old museum.
 
 ```
 ResidentialBuilding {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "residential building"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "residential building"
 }
 ```
 
@@ -350,25 +350,25 @@ A residential building.
 
 ```
 SimpleBuilding {
-   SFVec3f     translation            0 0 0
-   SFRotation  rotation               0 1 0 0
-   SFString    name                   "building"                         
-   SFFloat     floorHeight            3                                  
-   SFInt32     floorNumber            3                                  
-   SFInt32     startingFloor          0                                  
-       MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
-   SFString    wallType               "windowed building"                
-   MFColor     wallColor              [ ]                                
-   MFString    groundFloor            [ ]                                
-   MFFloat     groundFloorScale       [ ]                                
-   MFFloat     groundFloorTranslation [ ]                                
-   SFString    roofType               "tiled"                            
-   MFColor     roofColor              [ ]                                
-   SFString    roofShape              "pyramidal roof"                   
-   SFBool      snowOnRoof             FALSE                              
-   SFFloat     roofHeight             3                                  
-   SFBool      enableBoundingObject   TRUE                               
-   SFBool      bottom                 FALSE                              
+  SFVec3f     translation            0 0 0
+  SFRotation  rotation               0 1 0 0
+  SFString    name                   "building"                         
+  SFFloat     floorHeight            3                                  
+  SFInt32     floorNumber            3                                  
+  SFInt32     startingFloor          0                                  
+      MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
+  SFString    wallType               "windowed building"                
+  MFColor     wallColor              [ ]                                
+  MFString    groundFloor            [ ]                                
+  MFFloat     groundFloorScale       [ ]                                
+  MFFloat     groundFloorTranslation [ ]                                
+  SFString    roofType               "tiled"                            
+  MFColor     roofColor              [ ]                                
+  SFString    roofShape              "pyramidal roof"                   
+  SFBool      snowOnRoof             FALSE                              
+  SFFloat     roofHeight             3                                  
+  SFBool      enableBoundingObject   TRUE                               
+  SFBool      bottom                 FALSE                              
 }
 ```
 
@@ -426,11 +426,11 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ```
 SimpleTwoFloorsHouse {
-   SFVec3f translation         0 0 0
-   SFRotation rotation         0 1 0 0
-   SFString name               "simple two floors house"
-   SFBool enableBoundingObject TRUE
-   SFNode appearance           Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }
+  SFVec3f translation         0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString name               "simple two floors house"
+  SFBool enableBoundingObject TRUE
+  SFNode appearance           Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }
 }
 ```
 
@@ -452,9 +452,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 TheThreeTowers {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "three towers"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "three towers"
 }
 ```
 
@@ -474,9 +474,9 @@ A group of three towers.
 
 ```
 UBuilding {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "U building"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "U building"
 }
 ```
 

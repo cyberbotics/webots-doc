@@ -10,13 +10,13 @@
 
 ```
 PaperBoat {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "paper boat"
-   SFFloat scale 1
-   MFString textureUrl "textures/newspaper.jpg"
-   SFFloat mass 0.25
-   MFNode immersionProperties [
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "paper boat"
+  SFFloat scale 1
+  MFString textureUrl "textures/newspaper.jpg"
+  SFFloat mass 0.25
+  MFNode immersionProperties [
       ImmersionProperties {
         fluidName "water"
         dragForceCoefficients 0.05 0 0
@@ -42,13 +42,13 @@ A paper boat (42.8 x 14.2 x 10.6 cm).
 
 ```
 RubberDuck {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "rubber duck"
-   SFFloat scale 1
-   SFColor bodyColor 0.87451 0.756863 0.113725
-   SFFloat density 400
-   MFNode immersionProperties [
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "rubber duck"
+  SFFloat scale 1
+  SFColor bodyColor 0.87451 0.756863 0.113725
+  SFFloat density 400
+  MFNode immersionProperties [
       ImmersionProperties {
         fluidName "water"
         viscousResistanceForceCoefficient 400

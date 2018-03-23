@@ -10,11 +10,11 @@
 
 ```
 BeerBottle {
-   SFVec3f    translation 0 0 0
-   SFRotation rotation    0 1 0 0
-   SFString   name        "beer bottle"
-   MFString   textureUrl  "textures/heineken.jpg"
-   SFFloat    mass        0.4
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "beer bottle"
+  MFString   textureUrl  "textures/heineken.jpg"
+  SFFloat    mass        0.4
 }
 ```
 
@@ -34,12 +34,12 @@ A beer bottle.
 
 ```
 Can {
-   SFVec3f translation 0 0.06 0
-   SFRotation rotation 0 1 0 0
-   SFString name "can"
-   SFColor color 1 1 1
-   MFString textureUrl "textures/can.jpg"
-   SFFloat mass 0.35
+  SFVec3f translation 0 0.06 0
+  SFRotation rotation 0 1 0 0
+  SFString name "can"
+  SFColor color 1 1 1
+  MFString textureUrl "textures/can.jpg"
+  SFFloat mass 0.35
 }
 ```
 
@@ -59,11 +59,11 @@ A can (0.03175 x 0.1222 x 0.03175 m).
 
 ```
 WaterBottle {
-   SFVec3f    translation 0 0 0
-   SFRotation rotation    0 1 0 0
-   SFString   name        "water bottle"
-   MFString   textureUrl  "textures/evian.jpg"
-   SFFloat    mass        1
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "water bottle"
+  MFString   textureUrl  "textures/evian.jpg"
+  SFFloat    mass        1
 }
 ```
 

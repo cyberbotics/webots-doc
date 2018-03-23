@@ -10,9 +10,9 @@
 
 ```
 LegoLargeMotor {
-   SFVec3f translation 0 0 0
-   SFRotation rotation 0 1 0 0
-   SFString name "LEGO large motor"
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "LEGO large motor"
 }
 ```
 
@@ -32,9 +32,9 @@ LEGO Mindstorm EV3 large motor. Part id: 6009430.
 
 ```
 LegoWheel {
-   SFVec3f translation 0 0.0219974 0
-   SFRotation rotation 0 1 0 0
-   SFString name "LEGO wheel"
+  SFVec3f translation 0 0.0219974 0
+  SFRotation rotation 0 1 0 0
+  SFString name "LEGO wheel"
 }
 ```
 

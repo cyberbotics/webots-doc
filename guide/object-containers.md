@@ -10,12 +10,12 @@
 
 ```
 CardboardBox {
-   SFVec3f translation 0 0.3 0
-   SFRotation rotation 0 1 0 0
-   SFString name "cardboard box"
-   SFVec3f size 0.6 0.6 0.6
-   SFFloat mass 0
-   SFBool locked FALSE
+  SFVec3f translation 0 0.3 0
+  SFRotation rotation 0 1 0 0
+  SFString name "cardboard box"
+  SFVec3f size 0.6 0.6 0.6
+  SFFloat mass 0
+  SFBool locked FALSE
 }
 ```
 
@@ -35,13 +35,13 @@ A cardboard box.
 
 ```
 WoodenBox {
-   SFVec3f translation 0 0.3 0
-   SFRotation rotation 0 1 0 0
-   SFString name "wooden box"
-   SFVec3f size 0.6 0.6 0.6
-   SFFloat mass 0
-   MFNode immersionProperties []
-   SFBool locked FALSE
+  SFVec3f translation 0 0.3 0
+  SFRotation rotation 0 1 0 0
+  SFString name "wooden box"
+  SFVec3f size 0.6 0.6 0.6
+  SFFloat mass 0
+  MFNode immersionProperties []
+  SFBool locked FALSE
 }
 ```
 

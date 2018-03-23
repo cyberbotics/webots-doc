@@ -46,6 +46,12 @@ Building : A big glass tower.
 
 ## Building
 
+%figure "Building"
+
+![Building-image](images/objects/buildings/Building/model.png)
+
+%end
+
 ```
 Building {
    SFVec3f     translation            0 0 0
@@ -157,7 +163,7 @@ BungalowStyleHouse {
 
 A configurable bungalow style house
 based on the blender model of noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305))
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ## CommercialBuilding
 
@@ -294,7 +300,7 @@ ModernHouse {
 
 A simple modern house
 based on the blender model of andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734))
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ## Museum
 
@@ -434,7 +440,7 @@ SimpleTwoFloorsHouse {
 
 A simple house with two floors
 based on the blender model of andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482))
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ## TheThreeTowers
 

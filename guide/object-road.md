@@ -51,7 +51,7 @@ AddLaneRoadSegment {
 
 A simple segment of road allowing to add (or remove) one lane to the road.
 The side where the new lane is added is configurable as well as a lot of others parameters of a regular road.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -165,7 +165,7 @@ AddLanesRoadSegment {
 
 A simple segment of road allowing to add (or remove) several lanes to the road.
 The side where the new lanes are added is configurable as well as a lot of others parameters of a regular road.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -258,6 +258,12 @@ CrashBarrier {
 A customizable crash barrier.
 
 ## Crossroad
+
+%figure "Crossroad"
+
+![Crossroad-image](images/objects/road/Crossroad/model.png)
+
+%end
 
 ```
 Crossroad {
@@ -354,7 +360,7 @@ CurvedRoadSegment {
 
 A simple curved road, the number of lanes, the curvature and the dimensions are configurable,
 an optional border can be enable.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -473,7 +479,7 @@ HelicoidalRoadSegment {
 ### Description
 
 A simple and configurable helicoidal road showing how to use the Road PROTO in order to create 3D roads.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -590,7 +596,7 @@ LaneSeparation {
 
 A simple segment of road allowing to divide a road into two smaller ones (or to assemble two roads into a bigger one).
 The number of lanes of each of the two smaller roads is independently configurable as well as a lot of others parameters of a regular road.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -719,7 +725,7 @@ A fully customizable road, the number of lanes, the dimensions and the path of t
 For each line separating two lanes it is possible to configure if this one is continuous or dashed.
 B-Spline can be used in order to interpolate the path of the road and an optional border can be enable.
 The boundingObject of each border and the road itself can be independently enable or disable.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -919,7 +925,7 @@ RoadPillars {
 
 Generic and customizable road pillars which can be used for easily creating bridges or elevated roads.
 The boundingObject can be optionally enable or not.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 
@@ -1106,7 +1112,7 @@ StraightRoadSegment {
 
 A simple straight road, the number of lanes and the dimensions are configurable,
 an optional border can be enable.
-Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 

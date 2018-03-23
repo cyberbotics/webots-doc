@@ -111,9 +111,8 @@
     - [Yamor](yamor.md)
     - [youBot](youbot.md)
 - [Objects](objects.md)
-    - Test
-      - [Advertising Board](object-advertising-board.md)
-      - [Apartment Structure](object-apartment-structure.md)
+    - [Advertising Board](object-advertising-board.md)
+    - [Apartment Structure](object-apartment-structure.md)
     - [Backgrounds](object-backgrounds.md)
     - [Balls](object-balls.md)
     - [Bedroom](object-bedroom.md)

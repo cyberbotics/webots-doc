@@ -14,6 +14,7 @@ FIELDS_STATE = 1
 BODY_STATE = 2
 
 categories = []
+upperCategories = {}
 with open('objects.md', 'w') as file:
     file.write('# Objects\n\n')
     file.write('## Sections\n\n')
@@ -24,6 +25,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
         protoName = os.path.basename(proto).split('.')[0]
         category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
         categoryName = category.replace('_', '-')
+        upperCategory = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
         description = ''
         license = ''
         fields = ''
@@ -108,9 +110,27 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
 
         if category not in categories:
             categories.append(category)
+        if upperCategory not in upperCategories:
+            upperCategories[upperCategory] = []
+            upperCategories[upperCategory].append(category)
+        elif category not in upperCategories[upperCategory]:
+            upperCategories[upperCategory].append(category)
 
-categories = sorted(categories)
+upperCategoriesList = sorted(upperCategories)
+categoriesList = []
 with open('objects.md', 'a') as file:
-    for category in categories:
-        file.write('- [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
+    for upperCategory in upperCategoriesList:
+        categories = sorted(upperCategories[upperCategory])
+        if not upperCategory == 'objects':
+            file.write('- %s\n' % (upperCategory.replace('_', ' ').title()))
+        for category in categories:
+            categoriesList.append(category)
+            if not upperCategory == 'objects':
+                file.write('  - [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
+            else:
+                file.write('- [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
     file.write('\n')
+categoriesList = sorted(categoriesList)
+print("Please update the 'Objects' part in 'menu.md' with:")
+for category in categoriesList:
+    print('    - [%s](object-%s.md)' % (category.replace('_', ' ').title(), category.replace('_', '-')))

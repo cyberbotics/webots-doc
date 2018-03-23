@@ -2,6 +2,12 @@
 
 ## LegoLargeMotor
 
+%figure "LegoLargeMotor"
+
+![LegoLargeMotor-image](images/objects/lego/LegoLargeMotor/model.png)
+
+%end
+
 ```
 LegoLargeMotor {
    SFVec3f translation 0 0 0
@@ -17,6 +23,12 @@ LegoLargeMotor {
 LEGO Mindstorm EV3 large motor. Part id: 6009430.
 
 ## LegoWheel
+
+%figure "LegoWheel"
+
+![LegoWheel-image](images/objects/lego/LegoWheel/model.png)
+
+%end
 
 ```
 LegoWheel {

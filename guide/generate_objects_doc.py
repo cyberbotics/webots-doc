@@ -45,7 +45,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                                 skipProto = True
                                 break
                         else:
-                            newLine = line.replace('#', '').strip()
+                            newLine = line.replace('#', '').replace('_', '\_').strip()
                             urls = re.findall(WEB_URL_REGEX, newLine)
                             for url in urls:
                                 newLine = newLine.replace(url, '[%s](%s)' % (url, url))
@@ -110,5 +110,5 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
 categories = sorted(categories)
 with open('objects.md', 'a') as file:
     for category in categories:
-        file.write('- [%s](%s.md)\n' % (category.replace('-', ' ').title(), category))
+        file.write('- [%s](%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
     file.write('\n')

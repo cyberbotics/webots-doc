@@ -75,15 +75,15 @@ TexturedBox {
 
 Box with customizable texture mapping.
 Available texture mappings:
-- 'cube' mapping: see texture at projects/samples/geometries/worlds/textures/cube_mapping.jpg
-- 'compact' cube mapping: see texture at projects/samples/geometries/worlds/textures/compact_mapping.jpg
+- 'cube' mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
+- 'compact' cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
 - 'flat' mapping: projecting the texture on the front face
 - 'metric' mapping: similar to default mapping but the texture is not deformed to match each face size
 - 'default' mapping: same texture on all the faces
 - 'none': no texture mapping
 If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not
 drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured_boxes.wbt
+A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
 
 ## TexturedParallelepiped
 
@@ -117,13 +117,13 @@ The 'size' and 'angles' fields specify the edges and angles of the parallelepipe
 - angles.y: angle in y direction between front and back faces of the prism
 - angles.z: angle in x direction between front and back faces of the prism
 Available texture mappings:
-- 'cube' mapping: see texture at projects/samples/geometries/worlds/textures/cube_mapping.jpg
-- 'compact' cube mapping: see texture at projects/samples/geometries/worlds/textures/compact_mapping.jpg
+- 'cube' mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
+- 'compact' cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
 - 'flat' mapping: projecting the texture on the front face
 - 'metric' mapping: similar to default mapping but the texture is not deformed to match each face size
 - 'default' mapping: same texture on all the faces
 - 'none' no texture mapping
 If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not
 drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured_boxes.wbt
+A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
 

@@ -16,14 +16,14 @@ Background textured with a skybox
 
 Supported values for the "texture" field:
 
-- dawn_cloudy_empty
-- morning_cloudy_empty
-- noon_cloudy_empty
-- noon_cloudy_mountains
-- noon_stormy_empty
-- noon_sunny_empty
-- noon_sunny_garden
-- twilight_cloudy_empty
+- dawn\_cloudy\_empty
+- morning\_cloudy\_empty
+- noon\_cloudy\_empty
+- noon\_cloudy\_mountains
+- noon\_stormy\_empty
+- noon\_sunny\_empty
+- noon\_sunny\_garden
+- twilight\_cloudy\_empty
 
 ## TexturedBackgroundLight
 
@@ -43,12 +43,12 @@ Light matching with the TexturedBackground
 
 Supported values for the "texture" field:
 
-- dawn_cloudy_empty
-- morning_cloudy_empty
-- noon_cloudy_empty
-- noon_cloudy_mountains
-- noon_stormy_empty
-- noon_sunny_empty
-- noon_sunny_garden
-- twilight_cloudy_empty
+- dawn\_cloudy\_empty
+- morning\_cloudy\_empty
+- noon\_cloudy\_empty
+- noon\_cloudy\_mountains
+- noon\_stormy\_empty
+- noon\_sunny\_empty
+- noon\_sunny\_garden
+- twilight\_cloudy\_empty
 

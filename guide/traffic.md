@@ -79,7 +79,7 @@ ControlledStreetLight {
 ### Description
 
 Simple model of a controlled street light including a customizable SpotLight
-Initial 3D model created by Andrew Kator & Jennifer Legaz ([www.katorlegaz.com/3d_models](www.katorlegaz.com/3d_models)) under the Creative Commons Attribution 3.0 United States License
+Initial 3D model created by Andrew Kator & Jennifer Legaz ([www.katorlegaz.com/3d\_models](www.katorlegaz.com/3d\_models)) under the Creative Commons Attribution 3.0 United States License
 
 ## CrossRoadsTrafficLight
 
@@ -141,7 +141,7 @@ The 'textSize' fields defines the height (in meter) of one line of text
 List of supported fonts:'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Georgia',
 'Impact', 'Lucida Console', 'Lucida Sans Unicode', 'Palatino Linotype',
 'Tahoma', 'Times New Roman', 'Trebuchet MS', 'Verdana'
-Alternatively it is possible to add other *.ttf files in the PROJECT_HOME/fonts directory
+Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory
 
 ## DivergentIndicator
 
@@ -614,7 +614,7 @@ StreetLight {
 ### Description
 
 Simple model of a street light including a customizable SpotLight
-Initial 3D model created by Andrew Kator & Jennifer Legaz ([www.katorlegaz.com/3d_models](www.katorlegaz.com/3d_models)) under the Creative Commons Attribution 3.0 United States License
+Initial 3D model created by Andrew Kator & Jennifer Legaz ([www.katorlegaz.com/3d\_models](www.katorlegaz.com/3d\_models)) under the Creative Commons Attribution 3.0 United States License
 Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ## TrafficCone

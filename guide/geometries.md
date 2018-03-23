@@ -101,4 +101,4 @@ The same `Appearance` node is applied on all the basic primitives following VRML
 
 **Keywords**: IndexedFaceSet, UV mapping
 
-![webots_box.png](images/samples/webots_box.png) This example shows how the Webots
+![webots_box.png](images/samples/webots_box.png) This example shows how the Webots box can be modeled using an `IndexedFaceSet` node and texture mapping.

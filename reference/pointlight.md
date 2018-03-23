@@ -19,7 +19,7 @@ It is possible to put a [PointLight](#pointlight) on board a mobile robot to hav
 A [PointLight](#pointlight) node's illumination drops off with distance as specified by three `attenuation` coefficients.
 The final attenuation factor is calculated as follows: `att = 1/(attenuation[0] + attenuation[1] * r + attenuation[2] * r^2)`, where *r* is the distance from the light to the surface being illuminated.
 The default is no attenuation.
-When [PointLight](#pointlight) nodes are used together with [LightSensor](lightsensor.md), it is recommended to change the default attenuation to a more realistic `[0 0 4*π]` in order to more accurately model physical reality.
+When [PointLight](#pointlight) nodes are used together with [LightSensor](lightsensor.md), it is recommended to change the default attenuation to a more realistic `[0 0 4*&pi;]` in order to more accurately model physical reality.
 Indeed, if a point source radiates light uniformly in all directions and there is no absorption, then the irradiance drops off in proportion to the square of the distance from the surface.
 
 Contrary to the VRML97 specifications, the `attenuation` and the `ambientIntensity` fields cannot be set simultaneously.

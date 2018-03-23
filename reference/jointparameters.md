@@ -78,7 +78,7 @@ The values of the `minStop` and `maxStop` fields are also defined with respect t
 The `minStop` and `maxStop` fields define the *hard limits* of the joint.
 Hard limits represent physical (or mechanical) bounds that cannot be overrun by any force; they are defined with respect to the joint `position`.
 Hard limits can be used, for example, to simulate both end caps of a hydraulic or pneumatic piston or to restrict the range of rotation of a hinge.
-When used for a rotational motion the value of `minStop` must be in the range [-π, 0] and `maxStop` must be in the range [0, π].
+When used for a rotational motion the value of `minStop` must be in the range [-&pi;, 0] and `maxStop` must be in the range [0, &pi;].
 When both `minStop` and `maxStop` are zero (the default), the hard limits are deactivated.
 The joint hard limits use ODE joint stops (for more information see the ODE documentation on `dParamLoStop` and `dParamHiStop`).
 

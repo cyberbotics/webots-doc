@@ -114,9 +114,13 @@ You can get more information about this topic in [this section](web-scene.md).
 Once the animation recording is started, this item is changed to `Stop HTML5 Animation...` and can be used to stop the animation recording.
 You can get more information about this topic in [this section](web-animation.md).
 
-- **Logout and quit Webots** terminates the current simulation, closes Webots and resets the user credentials so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password.
+- **Logout and Quit** terminates the current simulation, closes Webots and resets the user credentials so that at the next Webots startup the login dialog pops up requesting the user's e-mail and password. This menu item is available only when logged-in with a user account.
 
-- **Quit Webots** terminates the current simulation and closes Webots.
+- **Leave Webots Benchmark mode and Quit** terminates Webots and display the welcome dialog at next start. This menu item is available only when running the Webots Benchmark mode.
+
+- **Quit** terminates the current simulation and closes Webots.
+
+> **Note:** on Windows, "Exit" is used instead of "Quit".
 
 ### Edit Menu
 
@@ -280,17 +284,17 @@ Some actions of this menu are active only when a robot is selected in the 3D win
 - The **Show Robot Window** menu item opens the robot window of the selected robot.
 The robot window can also be opened by double-clicking on the robot in the 3D window.
 
-- The **Camera Devices** submenu contains the list of all the camera devices of the selected robot and lets the user show or hide single camera overlay images by checking or unchecking the corresponding item.
+- The **Camera Devices** submenu contains the list of all the camera devices of the selected robot and its descendant robots and lets the user show or hide single camera overlay images by checking or unchecking the corresponding item.
 Camera overlays differ from the display overlays because of their magenta border.
 Note that if the `Hide All Camera Overlays` item is checked, then the camera device overlays will not be visible in the 3D view independently from the status of `Camera Devices` menu items.
 A `Camera Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.
 
-- The **RangeFinder Devices** submenu contains the list of all the range-finder devices of the selected robot and lets the user show or hide single range-finder overlay images by checking or unchecking the corresponding item.
+- The **RangeFinder Devices** submenu contains the list of all the range-finder devices of the selected robot and its descendant robots and lets the user show or hide single range-finder overlay images by checking or unchecking the corresponding item.
 Range-finder overlays differ from the camera overlays because of their yellow border.
 Note that if the `Hide All RangeFinder Overlays` item is checked, then the range-finder device overlays will not be visible in the 3D view independently from the status of `RangeFinder Devices` menu items.
 A `RangeFinder Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.
 
-- The **Display Devices** submenu contains the list of all the display devices of the selected robot and lets the user show or hide single display overlay images by checking or unchecking the corresponding item.
+- The **Display Devices** submenu contains the list of all the display devices of the selected robot and its descendant robots and lets the user show or hide single display overlay images by checking or unchecking the corresponding item.
 Display overlays differ from the camera overlays because of their cyan border.
 Note that if the `Hide All Display Overlays` item is checked, then the display device overlays will not be visible in the 3D view independently from the status of `Display Devices` menu items.
 A `Display Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.

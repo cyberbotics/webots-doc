@@ -79,17 +79,5 @@ In this case, you can build your own custom controller and ROS node.
 
 It is possible to implement such a ROS node in C++ using the "roscpp" library.
 However, in this case, you need to setup a build configuration to handle both the "catkin\_make" from ROS and the "Makefile" from Webots to have the resulting binary linked both against the Webots "libController" and the "roscpp" library.
-An example of such an implementation is included in the Webots distribution (see below).
 
 This controller can also be implemented in Python by importing both ROS libraries (roslib, rospy) and Webots libraries (controller) in a Webots robot or supervisor controller.
-
-#### Using the Custom Controller
-
-A sample C++ ROS node running as a Webots controller is provided in the Webots distribution for Linux.
-It is located in the Webots "WEBOTS\_HOME/projects/languages/ros/custom" folder and contains a world file named "joystick.wbt" and a controller named "joystick" which allows the user to drive a simulated robot using a joystick through the ROS joy node.
-This controller is a very simple example of a ROS node running as a Webots controller.
-It could be used as a starting point to develop more complex interfaces between Webots and ROS.
-The controller directory includes all the "Makefile" machinery to call the build tools used by ROS and Webots to produce the controller binary.
-The "ros" folder also includes a "README.txt" file with detailed installation and usage instructions.
-
-> **Note**: Following the instructions "README.md" is necessary to make the joystick example work on your Linux system.

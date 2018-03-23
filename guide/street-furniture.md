@@ -54,33 +54,6 @@ Simple bus stop with customizable appearance and an optional bench
 based on the blender model of Ringbarkis (http://www.blendswap.com/blends/view/66783)
 Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
 
-## BusStopBench
-
-```
-BusStopBench {
-   SFString name "bus stop bench"
-   SFNode appearance Appearance { material Material { diffuseColor 0.3 0.45 0.33 } }
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStopBench.proto"
-
-### Description
-
-
-## BusStopMesh
-
-```
-BusStopMesh {
-   SFNode appearance Appearance { material Material { diffuseColor 0.3 0.45 0.33 } }
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStopMesh.proto"
-
-### Description
-
-
 ## EmergencyPhone
 
 %figure "EmergencyPhone"
@@ -253,18 +226,6 @@ PublicToilet {
 ### Description
 
 Resizable public toilet with two different displays.
-
-## PublicToiletMesh
-
-```
-PublicToiletMesh {
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicToiletMesh.proto"
-
-### Description
-
 
 ## TrashBin
 

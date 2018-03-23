@@ -26,15 +26,20 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
         state = 0
         describedField = []
         with open(proto, 'r') as file:
+            skipProto = False
             closingAccolades = 0
             for line in file.readlines():
                 closingAccolades += line.count(']') - line.count('[')
                 if state == DESCRIPTION_STATE:
                     if line.startswith('#'):
-                        if line.startswith('#VRML_SIM') or line.startswith('# tags'):
+                        if line.startswith('#VRML_SIM'):
                             continue
                         elif line.startswith('# license:'):
                             license = line.replace('# license:', '').strip()
+                        elif line.startswith('# tags:'):
+                            if 'deprecated' in line or 'hidden' in line:
+                                skipProto = True
+                                break
                         else:
                             description += line.replace('#', '').strip() + '\n'
                     elif line.startswith('PROTO '):
@@ -53,6 +58,8 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                         fields += line.replace('vrmlField ', '').replace('field', '').split('#')[0]
                         if '#' in line:
                             fields += '\n'
+        if skipProto:
+            continue
         exist = os.path.isfile(categoryName + '.md')
         mode = 'a'
         if category not in categories:
@@ -78,8 +85,8 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
             file.write('> **File location**: "WEBOTS\_HOME%s"\n\n' % proto.replace(os.environ['WEBOTS_HOME'], '').replace(os.sep, '/'))
             if license:
                 file.write('> **License**: %s\n\n' % license)
-            else:
-                sys.stderr.write('Please add a license to "%s"\n' % proto)
+            # else:
+            #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
             file.write('### Description\n\n')
             file.write(description + '\n')

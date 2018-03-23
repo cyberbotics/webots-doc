@@ -51,8 +51,8 @@ BusStop {
 ### Description
 
 Simple bus stop with customizable appearance and an optional bench
-based on the blender model of Ringbarkis (http://www.blendswap.com/blends/view/66783)
-Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+based on the blender model of Ringbarkis ([http://www.blendswap.com/blends/view/66783](http://www.blendswap.com/blends/view/66783))
+Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ## EmergencyPhone
 
@@ -107,7 +107,7 @@ Fence {
 A customizable fence.
 Dimensions, path and appearance of the fence can be set.
 If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence
-Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 

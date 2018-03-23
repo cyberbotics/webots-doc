@@ -35,7 +35,7 @@ The 'random' type choose randomly a tree type each time the node is regenerated
 The shape of the forest can either be defined using the 'shape' and 'density' fields
 or the coordinate of each tree can be defined in external files ( X,Y,Z per tree, one tree per line), the path to those file
 can either be absolute, relative to the proto, relative to the world or relative to the project.
-Sponsored by the CTI project RO2IVSim (http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)
+Sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
 
 ### Field Summary
 

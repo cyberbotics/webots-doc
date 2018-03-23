@@ -253,8 +253,6 @@ function applyToTitleDiv() {
       newTitle = 'Webots Blog';
     else if (localSetup.book === 'automobile')
       newTitle = 'Webots for automobiles';
-    else if (localSetup.book === 'robotis-op2')
-      newTitle = 'Webots for ROBOTIS OP2';
     else
       newTitle = '';
     if (newTitle.length > 0) {

@@ -76,7 +76,7 @@ Sensors of type "infra-red" are sensitive to the objects' colors; light and red 
     Sensors of type "sonar" and "laser" return the distance to the nearest object
     while "generic" and "infa-red" computes the average distance of all rays. Note
     however that sensors of type "sonar" will return the sonar range for each ray
-    whose angle of incidence is greater than π/8 radians (see below for more
+    whose angle of incidence is greater than &pi;/8 radians (see below for more
     details).
 
     Sensors of type "laser" can have only one ray and they have the particularity to
@@ -160,7 +160,7 @@ It is thus important to ensure that no solid geometries interpose between the se
 
 ### Sonar Sensors
 
-In the case of a "sonar" sensor, the return value will be the last value entered in the lookup table, i.e. the value corresponding to sonar sensor's range, if the angle of incidence is greater than 22.5 degrees (π/8 radians).
+In the case of a "sonar" sensor, the return value will be the last value entered in the lookup table, i.e. the value corresponding to sonar sensor's range, if the angle of incidence is greater than 22.5 degrees (&pi;/8 radians).
 In other words, sonar rays which lie outside the reflexion cone of aperture 45 degrees never return and thus are lost for distance computation (see [this figure](#sonar-sensor)).
 
 %figure "Sonar sensor"

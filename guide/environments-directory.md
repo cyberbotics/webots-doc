@@ -53,10 +53,3 @@ This means that a robot could grab a hammer, or turn a valve handle.
 These objects are Webots PROTO nodes, and can be easily moved and resized to create other kitchen layouts.
 A robot can interact with the kitchen utensils, the glasses, the bottles, the plates, the pans or the food.
 The shelves doors and drawers are also interactive.
-
-### spinning\_top.wbt
-
-**Keywords**: Spinner, chessboard, chess pieces, torque application
-
-![spinning_top.png](images/samples/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
-To apply a torque on the spinner, use the `Alt + mouse right click` sequence.

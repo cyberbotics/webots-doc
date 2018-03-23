@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Test module of the MD files."""
 import unittest
 from books import Books
@@ -29,8 +30,8 @@ class TestMDFiles(unittest.TestCase):
                     msg='MD file "%s" is empty' % (md_filename)
                 )
 
-    def test_md_files_dont_contain_prohibited_keywords(self):
-        """Test that the MD files don't contain prohibited keywords."""
+    def test_md_filenames_dont_contain_prohibited_keywords(self):
+        """Test that the MD filenames don't contain prohibited keywords."""
         books = Books()
         for book in books.books:
             # 'advertising' causes issues with ad blocking software.
@@ -38,3 +39,17 @@ class TestMDFiles(unittest.TestCase):
                 'advertising' in book.md_paths,
                 msg='MD file "%s" contains "advertising"' % (book.md_paths)
             )
+
+    def test_md_file_contents_dont_contain_prohibited_keywords(self):
+        """Test that the MD file contents don't contain prohibited keywords."""
+        books = Books()
+        for book in books.books:
+            for md_path in book.md_paths:
+                with open(md_path) as f:
+                    content = f.readlines()
+                for line in content:
+                    # π crashes QtWebEngine on Windows.
+                    self.assertFalse(
+                        'π' in line,
+                        msg='MD file "%s" contains "π"' % (md_path)
+                    )

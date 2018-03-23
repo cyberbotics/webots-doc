@@ -93,7 +93,7 @@ The fourth component defines the rotation angle about the axis (in [rad]).
 <!-- -->
 
 > **Hands on**: Modify the rotation of the Solid node of the dumbbell in order to move the handle's axis (*y*-axis) parallel to the ground.
-A unit axis of *(1, 0, 0)* and an angle of *π/2* is a possible solution.
+A unit axis of *(1, 0, 0)* and an angle of *&pi;/2* is a possible solution.
 
 ### How to Choose Bounding Objects?
 

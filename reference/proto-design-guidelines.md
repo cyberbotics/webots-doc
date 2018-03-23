@@ -101,7 +101,7 @@ Here is a simple example of a good PROTO declaration (the implementation is not 
 
 ```
 #VRML_SIM R2018b utf8
-# license: Creative Commons Attribution 4.0 International License
+# license: Creative Commons Attribution 4.0 International License.
 # license url: https://creativecommons.org/licenses/by/4.0/legalcode
 # tags: static
 # A color pencil

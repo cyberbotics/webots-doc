@@ -57,15 +57,17 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                         state = BODY_STATE
                     else:
                         match = re.match(r'.*ield\s+([^ ]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', line)
-                        if match:
+                        if match and match.group(1) != 'hiddenField':
                             fieldType = match.group(1)
                             fieldName = match.group(2)
                             fieldDefaultValue = match.group(3)
                             fieldComment = match.group(4).strip()
                             describedField.append((fieldName, fieldComment))
-                        fields += line.replace('vrmlField ', '').replace('field', '').split('#')[0]
-                        if '#' in line:
-                            fields += '\n'
+                        fieldLine = line.replace('vrmlField ', '').replace('field', '').split('#')[0]
+                        if 'hiddenField' not in fieldLine:
+                            fields += fieldLine
+                            if '#' in line:
+                                fields += '\n'
         if skipProto:
             continue
         exist = os.path.isfile('object-' + categoryName + '.md')

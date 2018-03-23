@@ -96,7 +96,6 @@ Fence {
    MFVec2f      horizontalBarShape      [0.06 0.02, 0.06 -0.02, -0.06 -0.02, -0.06 0.02, 0.06 0.02]
    SFNode       horizontalBarAppearance Appearance { material Material {} }
    SFNode       boundingObject          NULL
-  hiddenField SFNode appearance              NULL     
 }
 ```
 

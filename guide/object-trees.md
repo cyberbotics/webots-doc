@@ -40,6 +40,7 @@ Tree types are:
 - 'white pine'
 - 'hackberry tree'
 - 'hazel tree'
+
 The 'random' type choose randomly a tree type each time the node is regenerated.
 The shape of the forest can either be defined using the 'shape' and 'density' fields or the coordinate of each tree can be defined in external files ( X,Y,Z per tree, one tree per line).
 The path to those files can either be absolute, relative to the proto, relative to the world or relative to the project.
@@ -127,6 +128,7 @@ Tree types are:
 - 'white pine'
 - 'hackberry tree'
 - 'hazel tree'
+
 The 'random' type choose randomly a tree type each time the node is regenerated
 
 ### SimpleTree Field Summary

@@ -47,6 +47,9 @@ AddLaneRoadSegment {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
 
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
 ### Description
 
 A simple segment of road allowing to add (or remove) one lane to the road.

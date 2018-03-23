@@ -30,6 +30,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
             upperCategory = category
         description = ''
         license = ''
+        licenseUrl = ''
         fields = ''
         state = 0
         describedField = []
@@ -44,6 +45,8 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                             continue
                         elif line.startswith('# license:'):
                             license = line.replace('# license:', '').strip()
+                        elif line.startswith('# license url:'):
+                            licenseUrl = line.replace('# license url:', '').strip()
                         elif line.startswith('# tags:'):
                             if 'deprecated' in line or 'hidden' in line:
                                 skipProto = True
@@ -98,7 +101,10 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
 
             file.write('> **File location**: "WEBOTS\_HOME%s"\n\n' % proto.replace(os.environ['WEBOTS_HOME'], '').replace(os.sep, '/'))
             if license:
-                file.write('> **License**: %s\n\n' % license)
+                file.write('> **License**: %s\n' % license)
+                if licenseUrl:
+                    file.write('[More information.](%s)\n' % licenseUrl)
+                file.write('\n')
             # else:
             #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 

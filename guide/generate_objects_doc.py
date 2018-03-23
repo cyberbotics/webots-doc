@@ -68,11 +68,11 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                             fields += '\n'
         if skipProto:
             continue
-        exist = os.path.isfile(categoryName + '.md')
+        exist = os.path.isfile('object-' + categoryName + '.md')
         mode = 'a'
         if category not in categories:
             mode = 'w'
-        with open(categoryName + '.md', mode) as file:
+        with open('object-' + categoryName + '.md', mode) as file:
             if mode == 'w':
                 file.write('# %s\n\n' % categoryName.replace('-', ' ').title())
             file.write('## %s\n\n' % protoName)
@@ -110,5 +110,5 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
 categories = sorted(categories)
 with open('objects.md', 'a') as file:
     for category in categories:
-        file.write('- [%s](%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
+        file.write('- [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
     file.write('\n')

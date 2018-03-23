@@ -1,129 +1,104 @@
-# Geometries
+## Geometries
 
-## Extrusion
+This section shows the geometric primitives available in Webots.
+The world files for these examples are located in the "sample/geometries/worlds" directory.
 
-%figure "Extrusion"
+In this directory, you will find the following world files :
 
-![Extrusion-image](images/objects/geometries/Extrusion/model.png)
+### extended\_solids.wbt
 
-%end
+**Keywords**: Extended solids, torus, rounded box, pipe
 
-```
-Extrusion {
-       MFVec2f    crossSection              [1 1, 1 -1, -1 -1, -1 1, 1 1]   
-       MFVec3f    spine                     [0 0 0, 0 1 0]                  
-       MFVec2f    scale                     1.0 1.0                         
-       MFRotation orientation               [0 0 1 0]                       
-       SFBool     beginCap                  TRUE                            
-       SFBool     endCap                    TRUE                            
-       SFBool     ccw                       TRUE
-       SFBool     solid                     TRUE
-       SFBool     convex                    TRUE
-       SFFloat    creaseAngle               0.0
-       SFInt32    splineSubdivision         4                               
-}
-```
+![extended_solids.png](images/samples/extended_solids.png) This example demonstrates the use of several extended primitives.
+These compound primitives are created using procedural PROTO nodes that generate a set of basic Geometry nodes.
 
-> **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/Extrusion.proto"
+In this example, physics laws are applied on these primitives.
 
-### Description
+### extrusion.wbt
 
-Generic extrusion geometry
-The shape (defined by the 'crossSection' field) is extruded along
-the path defined by the field 'spine'
+**Keywords**: Extrusion
 
-### Field Summary
+![extrusion.png](images/samples/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
+The `Extrusion` PROTO is a procedural PROTO which generates an `IndexedFaceSet` node.
+The `Extrusion` PROTO fields allow to define a 2D cross-section, and to extrude it along a path.
+In this example, the cross-section is a triangle extruded along a spiral path.
 
-- `crossSection`: defines the crossSection of the extrusion
+### floating\_geometries.wbt
 
-- `spine`: defines the extrusion path
+**Keywords**: Fluid simulation
 
-- `scale`: defines the scale of each point of the spine
+![floating_geometries.png](images/samples/floating_geometries.png) This example demonstrates the interactions between basic physics primitives and fluids.
+Three `Fluids` nodes are present; two flowing fluids to simulate a river, and a static fluid to simulate a cylindric pool.
+The small `Solids` are affected by the fluids' viscosity and by forces generated on the [Archimedes' principle](https://en.wikipedia.org/wiki/Archimedes%27_principle).
 
-- `orientation`: defines the orientation of the cross-section at each point of the spine
+### geometric\_primitives.wbt
 
-- `beginCap`: defines if the beginCap face is present or not
+**Keywords**: Box, Capsule, Cone, Cylinder, ElevationGrid, IndexedLineSet, IndexedFaceSet, Plane, Sphere
 
-- `endCap`: defines if the endCap face is present or not
+![geometric_primitives.png](images/geometric_primitives.png) This example demonstrates the geometric primitives natively supported in Webots.
+The primitives are inserted into `Transform` and `Shape` nodes.
+Therefore they are static, i.e. physics is not applied on them.
 
-- `splineSubdivision`: if greater than 0 the path is computed using B-Spline, furthermore, if biger than 1, the segments are subdivided
+### high\_resolution\_indexedfaceset.wbt
 
-## TexturedBox
+**Keywords**: IndexedFaceSet, High resolution mesh
 
-%figure "TexturedBox"
+![high_resolution_indexedfaceset.png](images/samples/high_resolution_indexedfaceset.png) This example simply displays a high resolution mesh.
+This mesh is a textured high resolution version of the [Blender's mascot, Suzanne](https://en.wikipedia.org/wiki/Blender_(software)#Suzanne).
+It is composed of 8000 triangles with UV mapping.
+It has been imported from [Blender](https://www.blender.org/).
 
-![TexturedBox-image](images/objects/geometries/TexturedBox/model.png)
+### muscle.wbt
 
-%end
+**Keywords**: Muscle
 
-```
-TexturedBox {
-   SFVec3f  size    0.1 0.1 0.1
-   SFString mapping "flat"
-   SFBool   front   TRUE
-   SFBool   back    TRUE
-   SFBool   left    TRUE
-   SFBool   right   TRUE
-   SFBool   top     TRUE
-   SFBool   bottom  TRUE
-}
-```
+![muscle.png](images/samples/muscle.png) This example demonstrates how to use the `Muscle` node.
+The `Muscle` nodes complete the joints by visualizing colored capsule-like shapes.
 
-> **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedBox.proto"
+Two scenarios are shown:
 
-### Description
+1. Two muscles are applied on a `HingeJoint` node.
+Depending on the joint motion, one muscle is contracted, and the other one is released.
+2. A muscle is applied on a `SliderJoint` node.
 
-Box with customizable texture mapping.
-Available texture mappings:
-- 'cube' mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
-- 'compact' cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
-- 'flat' mapping: projecting the texture on the front face
-- 'metric' mapping: similar to default mapping but the texture is not deformed to match each face size
-- 'default' mapping: same texture on all the faces
-- 'none': no texture mapping
-If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not
-drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
+### physics\_primitives.wbt
 
-## TexturedParallelepiped
+**Keywords**: Collisions, physics primitives
 
-%figure "TexturedParallelepiped"
+![physics_primitives.png](images/samples/physics_primitives.png) This example demonstrates a large set of the possible collisions between the basic physics primitives.
+Three identical sets of primitives composed of `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` nodes fall onto three surfaces respectively; a `Box`, a `Plane` and an `ElevationGrid` node.
 
-![TexturedParallelepiped-image](images/objects/geometries/TexturedParallelepiped/model.png)
+### polygons.wbt
 
-%end
+**Keywords**: IndexedFaceSet, polygon tesselation
 
-```
-TexturedParallelepiped {
-   SFVec3f  size    0.1 0.1 0.1
-   SFVec3f  angles  0.7854 0.0 0.0
-   SFString mapping "flat"
-   SFBool   front   TRUE
-   SFBool   back    TRUE
-   SFBool   left    TRUE
-   SFBool   right   TRUE
-   SFBool   top     TRUE
-   SFBool   bottom  TRUE
-}
-```
+![polygons.png](images/polygons.png) This example shows the polygon tesselation feature.
+Four polygons are displayed: a simple triangle, a quad, a convex polygon (hexagon), and a non-convex polygon.
+Each polygon is modeled as a list of vertices.
+Webots applies a tesselation algorithm on this list, and creates the minimum number of OpenGL triangles.
+The triangles can be shown using the `View / Wireframe Rendering` menu item.
 
-> **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedParallelepiped.proto"
+### textured\_boxes.wbt
 
-### Description
+**Keywords**: TexturedBox, texture mapping
 
-Customizable parallelepiped.
-The 'size' and 'angles' fields specify the edges and angles of the parallelepiped:
-- angles.x: angle between base and side edges of the parallelogram face
-- angles.y: angle in y direction between front and back faces of the prism
-- angles.z: angle in x direction between front and back faces of the prism
-Available texture mappings:
-- 'cube' mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
-- 'compact' cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
-- 'flat' mapping: projecting the texture on the front face
-- 'metric' mapping: similar to default mapping but the texture is not deformed to match each face size
-- 'default' mapping: same texture on all the faces
-- 'none' no texture mapping
-If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not
-drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
+![textured_boxes.png](images/samples/textured_boxes.png) This example shows the possible UV mappings for the `TexturedBox` PROTO.
 
+### textured\_proto\_shapes.wbt
+
+**Keywords**: TexturedBoxShape, texture mapping
+
+![textured_proto_shapes.png](images/samples/textured_proto_shapes.png) This example shows the differences between the `TexturedBoxShape` and `TexturedBoxShape` PROTO nodes.
+
+### textured\_shapes.wbt
+
+**Keywords**: Texture mapping
+
+![textured_shapes.png](images/samples/textured_shapes.png) This example shows how textures are applied on basic primitives.
+The same `Appearance` node is applied on all the basic primitives following VRML rules about texture mapping.
+
+### webots\_box.wbt
+
+**Keywords**: IndexedFaceSet, UV mapping
+
+![webots_box.png](images/samples/webots_box.png) This example shows how the Webots 

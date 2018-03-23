@@ -53,6 +53,15 @@ This can be visualized with the `View / Optional Rendering / Show Center of Mass
 ![contact_points.png](images/samples/contact_points.png) In this example, a box falls until it reaches the ground.
 A physics plugin (cf. `WorldInfo.physics`) gets information on the contact points and displays the reaction forces on the `Console` and as red lines.
 
+### custom\_html\_robot\_window.wbt
+
+**Keywords**: custom robot window, controller plugin, HTML, Javascript, CSS
+
+![custom_html_robot_window.png](images/samples/custom_html_robot_window.png) This example shows a simple custom robot window.
+The HTML file contains the page content.
+The CSS file contains the page style.
+The Javascript and C files deal with the interactions between the page and the robot, using the WWI API to exchange string messages.
+
 ### cylinder\_stack.wbt
 
 **Keywords**: Supervisor, contact points, cylinder collisions
@@ -87,6 +96,9 @@ Note that more completed Ackermann steering geometry can be achieved using the [
 ![gui_tracker.png](images/samples/gui_tracker.png) This example shows the use of the deprecated Qt-based system to create custom windows.
 A Supervisor is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
 This window is based on Qt (embedded in Webots) and the `Qt utils` helper library.
+
+> **Note**:
+Please refer to [the HTML robot window example](#custom_html_robot_window-wbt) instead.
 
 ### inverted\_pendulum.wbt
 
@@ -153,6 +165,22 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 ![sick_terrain_scanning.png](images/samples/sick_terrain_scanning.png) In this example, a Pioneer 3AT mounted with a Sick LMS 291 is scanning its environment.
 Each lidar scan is displayed in a `Display` device.
 A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
+
+### spinning\_top.wbt
+
+**Keywords**: Spinner, chessboard, chess pieces, apply a torque
+
+![spinning_top.png](images/samples/spinning_top.png) This example shows rotating objects, in order to play with the torque application feature.
+To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
+
+### supervisor\_draw\_trail.wbt
+
+**Keywords**: Supervisor, IndexedLineSet, draw trail
+
+![supervisor_draw_trail.png](images/samples/supervisor_draw_trail.png) In this example, a Supervisor draws a green path behind a target node.
+The target node is a `Transform` node mounted in the `turretSlot` of a moving e-puck robot.
+At the beginning of the simulation, the `Supervisor` creates programmatically an `IndexedLineSet` node.
+Then at each simulation step, it uses the target node position to update the `IndexedLineSet` node fields.
 
 ### texture\_change.wbt
 

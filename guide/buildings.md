@@ -54,7 +54,7 @@ Building {
    SFFloat     floorHeight            3                                    
    SFInt32     floorNumber            3                                    
    SFInt32     startingFloor          0                                    
-  MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]    
+       MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]    
    SFNode      wallAppearance         Appearance { material Material {} }  
    MFString    groundFloor            [ ]                                  
    MFFloat     groundFloorScale       [ ]                                  
@@ -246,7 +246,7 @@ GenericBuilding {
    SFString    name                   "building"                         
    SFFloat     floorHeight            3                                  
    SFInt32     floorNumber            3                                  
-  MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
+       MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
    SFString    wallType               "windowed building"                
    MFString    groundFloor            [ ]                                
    MFFloat     groundFloorScale       [ ]                                
@@ -415,7 +415,7 @@ SimpleBuilding {
    SFFloat     floorHeight            3                                  
    SFInt32     floorNumber            3                                  
    SFInt32     startingFloor          0                                  
-  MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
+       MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
    SFString    wallType               "windowed building"                
    MFColor     wallColor              [ ]                                
    MFString    groundFloor            [ ]                                

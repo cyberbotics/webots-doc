@@ -47,8 +47,6 @@ AddLaneRoadSegment {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
 
-> **License**: This is a test of license display.
-
 ### Description
 
 A simple segment of road allowing to add (or remove) one lane to the road.
@@ -689,7 +687,7 @@ Road {
        SFBool     bottom                    FALSE                   
        SFBool     rightSide                 TRUE                    
        SFBool     leftSide                  TRUE                    
-  MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]        
+       MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]        
        MFFloat    roadTilt                  [ 0, 0]                 
        MFFloat    startingAngle             [ ]                     
        MFFloat    endingAngle               [ ]                     

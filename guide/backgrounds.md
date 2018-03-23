@@ -4,7 +4,7 @@
 
 ```
 TexturedBackground {
-      SFString texture "noon_sunny_empty"
+   SFString texture "noon_sunny_empty"
 }
 ```
 
@@ -29,9 +29,9 @@ Supported values for the "texture" field:
 
 ```
 TexturedBackgroundLight {
-      SFString texture "noon_sunny_empty"
-      SFBool castShadows TRUE
-      SFBool castLensFlares FALSE
+   SFString texture "noon_sunny_empty"
+   SFBool castShadows TRUE
+   SFBool castLensFlares FALSE
 }
 ```
 

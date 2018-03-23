@@ -10,10 +10,10 @@
 
 ```
 Carafe {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "carafe"
-      SFFloat    mass        1
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "carafe"
+   SFFloat    mass        1
 }
 ```
 
@@ -33,11 +33,11 @@ A carafe
 
 ```
 Cookware {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name       "cookware"
-      SFColor    color      0.7 0.7 0.7
-      SFFloat    mass       0.7
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name       "cookware"
+   SFColor    color      0.7 0.7 0.7
+   SFFloat    mass       0.7
 }
 ```
 
@@ -57,10 +57,10 @@ A cookware
 
 ```
 Fork {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "fork"
-      SFColor    color       0.55 0.55 0.55
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "fork"
+   SFColor    color       0.55 0.55 0.55
 }
 ```
 
@@ -80,10 +80,10 @@ A fork
 
 ```
 Glass {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "glass"
-      SFFloat    mass        0.17
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "glass"
+   SFFloat    mass        0.17
 }
 ```
 
@@ -103,10 +103,10 @@ A glass
 
 ```
 Knife {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "knife"
-      SFColor    color       0.55 0.55 0.55
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "knife"
+   SFColor    color       0.55 0.55 0.55
 }
 ```
 
@@ -126,11 +126,11 @@ A knife
 
 ```
 Lid {
-      SFVec3f    translation 0 0.068 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "lid"
-      SFColor    color       0.7 0.7 0.7
-      SFFloat    mass        0.19
+   SFVec3f    translation 0 0.068 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "lid"
+   SFColor    color       0.7 0.7 0.7
+   SFFloat    mass        0.19
 }
 ```
 
@@ -150,13 +150,13 @@ A lid
 
 ```
 Plate {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "plate"
-      MFString   textureUrl  "textures/floral_plate.jpg"
-      SFFloat    height      0.01
-      SFFloat    radius      0.11
-      SFFloat    mass        0.3
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "plate"
+   MFString   textureUrl  "textures/floral_plate.jpg"
+   SFFloat    height      0.01
+   SFFloat    radius      0.11
+   SFFloat    mass        0.3
 }
 ```
 
@@ -176,11 +176,11 @@ A customizable (dimensions, texture, etc. ) plate
 
 ```
 Spoon {
-      SFVec3f     translation 0 0 0
-      SFRotation  rotation    0 1 0 0
-      SFString    name        "spoon"
-      SFColor     color       0.55 0.55 0.55
-      SFString    type        "table"
+   SFVec3f     translation 0 0 0
+   SFRotation  rotation    0 1 0 0
+   SFString    name        "spoon"
+   SFColor     color       0.55 0.55 0.55
+   SFString    type        "table"
 }
 ```
 
@@ -200,10 +200,10 @@ A spoon
 
 ```
 Wineglass {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "wine glass"
-      SFFloat    mass        0.2
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "wine glass"
+   SFFloat    mass        0.2
 }
 ```
 
@@ -223,10 +223,10 @@ A wine glass
 
 ```
 WoodenSpoon {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "wooden spoon"
-      MFString   textureUrl  "textures/wooden_spoon.jpg"
+   SFVec3f    translation 0 0 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "wooden spoon"
+   MFString   textureUrl  "textures/wooden_spoon.jpg"
 }
 ```
 

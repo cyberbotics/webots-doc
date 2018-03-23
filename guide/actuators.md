@@ -10,9 +10,9 @@
 
 ```
 LegoLargeMotor {
-      SFVec3f translation 0 0 0
-      SFRotation rotation 0 1 0 0
-      SFString name "LEGO large motor"
+   SFVec3f translation 0 0 0
+   SFRotation rotation 0 1 0 0
+   SFString name "LEGO large motor"
 }
 ```
 

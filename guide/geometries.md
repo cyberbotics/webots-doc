@@ -14,13 +14,13 @@ Extrusion {
   MFVec3f    spine                     [0 0 0, 0 1 0]                  
   MFVec2f    scale                     1.0 1.0                         
   MFRotation orientation               [0 0 1 0]                       
-          SFBool     beginCap                  TRUE                            
-          SFBool     endCap                    TRUE                            
-          SFBool     ccw                       TRUE
-          SFBool     solid                     TRUE
-          SFBool     convex                    TRUE
-          SFFloat    creaseAngle               0.0
-          SFInt32    splineSubdivision         4                               
+       SFBool     beginCap                  TRUE                            
+       SFBool     endCap                    TRUE                            
+       SFBool     ccw                       TRUE
+       SFBool     solid                     TRUE
+       SFBool     convex                    TRUE
+       SFFloat    creaseAngle               0.0
+       SFInt32    splineSubdivision         4                               
 }
 ```
 
@@ -58,14 +58,14 @@ the path defined by the field 'spine'
 
 ```
 TexturedBox {
-      SFVec3f  size    0.1 0.1 0.1
-      SFString mapping "flat"
-      SFBool   front   TRUE
-      SFBool   back    TRUE
-      SFBool   left    TRUE
-      SFBool   right   TRUE
-      SFBool   top     TRUE
-      SFBool   bottom  TRUE
+   SFVec3f  size    0.1 0.1 0.1
+   SFString mapping "flat"
+   SFBool   front   TRUE
+   SFBool   back    TRUE
+   SFBool   left    TRUE
+   SFBool   right   TRUE
+   SFBool   top     TRUE
+   SFBool   bottom  TRUE
 }
 ```
 
@@ -95,15 +95,15 @@ A demo of these mappings is available in projects/samples/geometries/worlds/text
 
 ```
 TexturedParallelepiped {
-      SFVec3f  size    0.1 0.1 0.1
-      SFVec3f  angles  0.7854 0.0 0.0
-      SFString mapping "flat"
-      SFBool   front   TRUE
-      SFBool   back    TRUE
-      SFBool   left    TRUE
-      SFBool   right   TRUE
-      SFBool   top     TRUE
-      SFBool   bottom  TRUE
+   SFVec3f  size    0.1 0.1 0.1
+   SFVec3f  angles  0.7854 0.0 0.0
+   SFString mapping "flat"
+   SFBool   front   TRUE
+   SFBool   back    TRUE
+   SFBool   left    TRUE
+   SFBool   right   TRUE
+   SFBool   top     TRUE
+   SFBool   bottom  TRUE
 }
 ```
 

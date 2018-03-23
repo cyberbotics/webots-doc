@@ -26,7 +26,9 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
         state = 0
         describedField = []
         with open(proto, 'r') as file:
+            closingAccolades = 0
             for line in file.readlines():
+                closingAccolades += line.count(']') - line.count('[')
                 if state == DESCRIPTION_STATE:
                     if line.startswith('#'):
                         if line.startswith('#VRML_SIM') or line.startswith('# tags'):
@@ -38,7 +40,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                     elif line.startswith('PROTO '):
                         state = FIELDS_STATE
                 elif state == FIELDS_STATE:
-                    if line.startswith(']'):
+                    if closingAccolades >= 0:
                         state = BODY_STATE
                     else:
                         match = re.match(r'.*ield\s+([^ ]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', line)
@@ -48,7 +50,7 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
                             fieldDefaultValue = match.group(3)
                             fieldComment = match.group(4).strip()
                             describedField.append((fieldName, fieldComment))
-                        fields += line.replace('vrmlField ', '').replace('field', '   ').split('#')[0]
+                        fields += line.replace('vrmlField ', '').replace('field', '').split('#')[0]
                         if '#' in line:
                             fields += '\n'
         exist = os.path.isfile(categoryName + '.md')

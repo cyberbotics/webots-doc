@@ -10,13 +10,13 @@
 
 ```
 CreateWall {
-      SFVec3f    translation 0 0 0
-      SFRotation rotation  0 1 0 0
-      SFFloat    range 2.4384
-      SFFloat    aperture 0.157
-      SFString   controller "create_wall_emit_signal"
-      SFString   controllerArgs ""
-      SFString   name "iRobot wall"
+   SFVec3f    translation 0 0 0
+   SFRotation rotation  0 1 0 0
+   SFFloat    range 2.4384
+   SFFloat    aperture 0.157
+   SFString   controller "create_wall_emit_signal"
+   SFString   controllerArgs ""
+   SFString   name "iRobot wall"
 }
 ```
 

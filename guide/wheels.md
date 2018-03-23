@@ -10,9 +10,9 @@
 
 ```
 LegoWheel {
-      SFVec3f translation 0 0.0219974 0
-      SFRotation rotation 0 1 0 0
-      SFString name "LEGO wheel"
+   SFVec3f translation 0 0.0219974 0
+   SFRotation rotation 0 1 0 0
+   SFString name "LEGO wheel"
 }
 ```
 

@@ -10,10 +10,10 @@
 
 ```
 HotPlate {
-      SFVec3f    translation 0 0.71 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "hot plate"
-      MFString   textureUrl  "textures/components.jpg"
+   SFVec3f    translation 0 0.71 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "hot plate"
+   MFString   textureUrl  "textures/components.jpg"
 }
 ```
 
@@ -33,10 +33,10 @@ An hot plate
 
 ```
 Sink {
-      SFVec3f    translation 0 0.72 0
-      SFRotation rotation    0 1 0 0
-      SFString   name        "sink"
-      MFString   textureUrl  "textures/components.jpg"
+   SFVec3f    translation 0 0.72 0
+   SFRotation rotation    0 1 0 0
+   SFString   name        "sink"
+   MFString   textureUrl  "textures/components.jpg"
 }
 ```
 
@@ -56,12 +56,12 @@ A sink
 
 ```
 Worktop {
-      SFVec3f    translation   0 0.71 0
-      SFRotation rotation      0 1 0 0
-      SFString   name          "worktop"
-      SFVec3f    size          0.44 0.06 0.7
-      MFString   textureUrl    "textures/worktop.jpg"
-      SFVec2f    tileSize      0.7 0.7
+   SFVec3f    translation   0 0.71 0
+   SFRotation rotation      0 1 0 0
+   SFString   name          "worktop"
+   SFVec3f    size          0.44 0.06 0.7
+   MFString   textureUrl    "textures/worktop.jpg"
+   SFVec2f    tileSize      0.7 0.7
 }
 ```
 

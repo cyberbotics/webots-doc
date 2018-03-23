@@ -24,8 +24,7 @@ These comments should be formatted as described in the [example](#example) below
 #### License
 
 If a PROTO is meant to be distributed, it is important to specify the license under which it can be used.
-For that purpose, the name of the license should be referred to in the `license:` comment (see [example](#example) below).
-A license file may be added in the same folder as the PROTO file if needed or an hyperlink to the license can be added in the `license url` comment.
+For that purpose, the name of the license should be specified in the `license:` comment and the URL to the license file should be given in the `license url:` comment (see [example](#example) below).
 
 #### Tags
 

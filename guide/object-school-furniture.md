@@ -1,10 +1,10 @@
-# Misc
+# School Furniture
 
 ## Blackboard
 
 %figure "Blackboard model in Webots."
 
-![Blackboard](images/objects/misc/Blackboard/model.png)
+![Blackboard](images/objects/school_furniture/Blackboard/model.png)
 
 %end
 
@@ -16,7 +16,7 @@ Blackboard {
 }
 ```
 
-> **File location**: "WEBOTS\_HOME/projects/objects/misc/protos/Blackboard.proto"
+> **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Blackboard.proto"
 
 ### Blackboard Description
 
@@ -26,7 +26,7 @@ A blackboard (about 1.3 x 2.5 m).
 
 %figure "Book model in Webots."
 
-![Book](images/objects/misc/Book/model.png)
+![Book](images/objects/school_furniture/Book/model.png)
 
 %end
 
@@ -41,7 +41,7 @@ Book {
 }
 ```
 
-> **File location**: "WEBOTS\_HOME/projects/objects/misc/protos/Book.proto"
+> **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Book.proto"
 
 ### Book Description
 
@@ -51,7 +51,7 @@ A book (0.2 x 0.15 x 0.02 m).
 
 %figure "Clock model in Webots."
 
-![Clock](images/objects/misc/Clock/model.png)
+![Clock](images/objects/school_furniture/Clock/model.png)
 
 %end
 
@@ -63,7 +63,7 @@ Clock {
 }
 ```
 
-> **File location**: "WEBOTS\_HOME/projects/objects/misc/protos/Clock.proto"
+> **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Clock.proto"
 
 ### Clock Description
 

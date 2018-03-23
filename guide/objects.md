@@ -2,18 +2,6 @@
 
 ## Sections
 
-- Factory
-  - [Containers](object-containers.md)
-  - [Pallet](object-pallet.md)
-  - [Pipes](object-pipes.md)
-  - [Tools](object-tools.md)
-  - [Valves](object-valves.md)
-- Kitchen
-  - [Breakfast](object-breakfast.md)
-  - [Components](object-components.md)
-  - [Fridge](object-fridge.md)
-  - [Oven](object-oven.md)
-  - [Utensils](object-utensils.md)
 - [Advertising Board](object-advertising-board.md)
 - [Apartment Structure](object-apartment-structure.md)
 - [Backgrounds](object-backgrounds.md)
@@ -25,9 +13,21 @@
 - [Computers](object-computers.md)
 - [Create Wall](object-create-wall.md)
 - [Drinks](object-drinks.md)
+- Factory
+  - [Containers](object-containers.md)
+  - [Pallet](object-pallet.md)
+  - [Pipes](object-pipes.md)
+  - [Tools](object-tools.md)
+  - [Valves](object-valves.md)
 - [Floors](object-floors.md)
 - [Fruits](object-fruits.md)
 - [Geometries](object-geometries.md)
+- Kitchen
+  - [Breakfast](object-breakfast.md)
+  - [Components](object-components.md)
+  - [Fridge](object-fridge.md)
+  - [Oven](object-oven.md)
+  - [Utensils](object-utensils.md)
 - [Lego](object-lego.md)
 - [Lights](object-lights.md)
 - [Living Room Furniture](object-living-room-furniture.md)

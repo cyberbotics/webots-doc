@@ -26,6 +26,8 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
         category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
         categoryName = category.replace('_', '-')
         upperCategory = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
+        if upperCategory == 'objects':
+            upperCategory = category
         description = ''
         license = ''
         fields = ''
@@ -116,19 +118,19 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
         elif category not in upperCategories[upperCategory]:
             upperCategories[upperCategory].append(category)
 
-upperCategoriesList = sorted(upperCategories)
+upperCategoriesList = sorted(upperCategories.keys())
 categoriesList = []
 with open('objects.md', 'a') as file:
     for upperCategory in upperCategoriesList:
         categories = sorted(upperCategories[upperCategory])
-        if not upperCategory == 'objects':
+        if not upperCategory == categories[0]:
             file.write('- %s\n' % (upperCategory.replace('_', ' ').title()))
         for category in categories:
             categoriesList.append(category)
-            if not upperCategory == 'objects':
-                file.write('  - [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
-            else:
+            if upperCategory == category:
                 file.write('- [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
+            else:
+                file.write('  - [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
     file.write('\n')
 categoriesList = sorted(categoriesList)
 print("Please update the 'Objects' part in 'menu.md' with:")

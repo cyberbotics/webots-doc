@@ -2,9 +2,9 @@
 
 ## Chair
 
-%figure "Chair"
+%figure "Chair model in Webots."
 
-![Chair-image](images/objects/chairs/Chair/model.png)
+![Chair](images/objects/chairs/Chair/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ Chair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/Chair.proto"
 
-### Description
+### Chair Description
 
-A chair (0.5 x 1 x 0.5 m)
+A chair (0.5 x 1 x 0.5 m).
 
 ## SimpleChair
 
-%figure "SimpleChair"
+%figure "SimpleChair model in Webots."
 
-![SimpleChair-image](images/objects/chairs/SimpleChair/model.png)
+![SimpleChair](images/objects/chairs/SimpleChair/model.png)
 
 %end
 
@@ -46,16 +46,16 @@ SimpleChair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/SimpleChair.proto"
 
-### Description
+### SimpleChair Description
 
 A simple two-colors chair with a customizable mass, but a fixed height of 1.25 meter.
 This object is physics-enabled so it can be pushed.
 
 ## WoodenChair
 
-%figure "WoodenChair"
+%figure "WoodenChair model in Webots."
 
-![WoodenChair-image](images/objects/chairs/WoodenChair/model.png)
+![WoodenChair](images/objects/chairs/WoodenChair/model.png)
 
 %end
 
@@ -72,7 +72,7 @@ WoodenChair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/WoodenChair.proto"
 
-### Description
+### WoodenChair Description
 
-A wooden chair (0.42 x 0.944 x 0.44 m)
+A wooden chair (0.42 x 0.944 x 0.44 m).
 

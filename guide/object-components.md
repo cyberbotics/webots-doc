@@ -2,9 +2,9 @@
 
 ## HotPlate
 
-%figure "HotPlate"
+%figure "HotPlate model in Webots."
 
-![HotPlate-image](images/objects/components/HotPlate/model.png)
+![HotPlate](images/objects/components/HotPlate/model.png)
 
 %end
 
@@ -19,15 +19,15 @@ HotPlate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/HotPlate.proto"
 
-### Description
+### HotPlate Description
 
-An hot plate
+An hot plate.
 
 ## Sink
 
-%figure "Sink"
+%figure "Sink model in Webots."
 
-![Sink-image](images/objects/components/Sink/model.png)
+![Sink](images/objects/components/Sink/model.png)
 
 %end
 
@@ -42,15 +42,15 @@ Sink {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Sink.proto"
 
-### Description
+### Sink Description
 
-A sink
+A sink.
 
 ## Worktop
 
-%figure "Worktop"
+%figure "Worktop model in Webots."
 
-![Worktop-image](images/objects/components/Worktop/model.png)
+![Worktop](images/objects/components/Worktop/model.png)
 
 %end
 
@@ -67,7 +67,7 @@ Worktop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Worktop.proto"
 
-### Description
+### Worktop Description
 
-A customizable (size, texture, etc.) worktop
+A customizable (size, texture, etc.) worktop.
 

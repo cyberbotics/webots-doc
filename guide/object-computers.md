@@ -2,9 +2,9 @@
 
 ## ComputerMouse
 
-%figure "ComputerMouse"
+%figure "ComputerMouse model in Webots."
 
-![ComputerMouse-image](images/objects/computers/ComputerMouse/model.png)
+![ComputerMouse](images/objects/computers/ComputerMouse/model.png)
 
 %end
 
@@ -21,16 +21,15 @@ ComputerMouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/ComputerMouse.proto"
 
-### Description
+### ComputerMouse Description
 
-A computer mouse
-Author: myriam.mosimann@epfl.ch
+A computer mouse.
 
 ## DesktopComputer
 
-%figure "DesktopComputer"
+%figure "DesktopComputer model in Webots."
 
-![DesktopComputer-image](images/objects/computers/DesktopComputer/model.png)
+![DesktopComputer](images/objects/computers/DesktopComputer/model.png)
 
 %end
 
@@ -46,16 +45,15 @@ DesktopComputer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/DesktopComputer.proto"
 
-### Description
+### DesktopComputer Description
 
-A computer tower
-Author: myriam.mosimann@epfl.ch
+A computer tower.
 
 ## Keyboard
 
-%figure "Keyboard"
+%figure "Keyboard model in Webots."
 
-![Keyboard-image](images/objects/computers/Keyboard/model.png)
+![Keyboard](images/objects/computers/Keyboard/model.png)
 
 %end
 
@@ -71,16 +69,15 @@ Keyboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Keyboard.proto"
 
-### Description
+### Keyboard Description
 
-A computer keyboard
-Author: myriam.mosimann@epfl.ch
+A computer keyboard.
 
 ## Laptop
 
-%figure "Laptop"
+%figure "Laptop model in Webots."
 
-![Laptop-image](images/objects/computers/Laptop/model.png)
+![Laptop](images/objects/computers/Laptop/model.png)
 
 %end
 
@@ -95,15 +92,15 @@ Laptop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Laptop.proto"
 
-### Description
+### Laptop Description
 
 A simple laptop.
 
 ## Monitor
 
-%figure "Monitor"
+%figure "Monitor model in Webots."
 
-![Monitor-image](images/objects/computers/Monitor/model.png)
+![Monitor](images/objects/computers/Monitor/model.png)
 
 %end
 
@@ -119,7 +116,7 @@ Monitor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Monitor.proto"
 
-### Description
+### Monitor Description
 
 A computer monitor.
 

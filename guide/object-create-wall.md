@@ -2,9 +2,9 @@
 
 ## CreateWall
 
-%figure "CreateWall"
+%figure "CreateWall model in Webots."
 
-![CreateWall-image](images/objects/create_wall/CreateWall/model.png)
+![CreateWall](images/objects/create_wall/CreateWall/model.png)
 
 %end
 
@@ -22,7 +22,7 @@ CreateWall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/create_wall/protos/CreateWall.proto"
 
-### Description
+### CreateWall Description
 
-Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room
+Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room.
 

@@ -2,9 +2,9 @@
 
 ## LJoint
 
-%figure "LJoint"
+%figure "LJoint model in Webots."
 
-![LJoint-image](images/objects/pipes/LJoint/model.png)
+![LJoint](images/objects/pipes/LJoint/model.png)
 
 %end
 
@@ -19,15 +19,15 @@ LJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/LJoint.proto"
 
-### Description
+### LJoint Description
 
 90-degree L-joint for connecting pipes.
 
 ## PipeSection
 
-%figure "PipeSection"
+%figure "PipeSection model in Webots."
 
-![PipeSection-image](images/objects/pipes/PipeSection/model.png)
+![PipeSection](images/objects/pipes/PipeSection/model.png)
 
 %end
 
@@ -44,15 +44,15 @@ PipeSection {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/PipeSection.proto"
 
-### Description
+### PipeSection Description
 
 A section of pipe.
 
 ## TJoint
 
-%figure "TJoint"
+%figure "TJoint model in Webots."
 
-![TJoint-image](images/objects/pipes/TJoint/model.png)
+![TJoint](images/objects/pipes/TJoint/model.png)
 
 %end
 
@@ -67,7 +67,7 @@ TJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/TJoint.proto"
 
-### Description
+### TJoint Description
 
 3-slot T-joint for connecting pipes.
 

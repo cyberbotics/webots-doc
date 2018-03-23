@@ -2,9 +2,9 @@
 
 ## Bench
 
-%figure "Bench"
+%figure "Bench model in Webots."
 
-![Bench-image](images/objects/street_furniture/Bench/model.png)
+![Bench](images/objects/street_furniture/Bench/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ Bench {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Bench.proto"
 
-### Description
+### Bench Description
 
 A bench.
 
 ## BusStop
 
-%figure "BusStop"
+%figure "BusStop model in Webots."
 
-![BusStop-image](images/objects/street_furniture/BusStop/model.png)
+![BusStop](images/objects/street_furniture/BusStop/model.png)
 
 %end
 
@@ -48,17 +48,17 @@ BusStop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStop.proto"
 
-### Description
+### BusStop Description
 
-Simple bus stop with customizable appearance and an optional bench
-based on the blender model of Ringbarkis ([http://www.blendswap.com/blends/view/66783](http://www.blendswap.com/blends/view/66783))
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+Simple bus stop with customizable appearance and an optional bench.
+The original blender model was made by Ringbarkis ([http://www.blendswap.com/blends/view/66783](http://www.blendswap.com/blends/view/66783)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ## EmergencyPhone
 
-%figure "EmergencyPhone"
+%figure "EmergencyPhone model in Webots."
 
-![EmergencyPhone-image](images/objects/street_furniture/EmergencyPhone/model.png)
+![EmergencyPhone](images/objects/street_furniture/EmergencyPhone/model.png)
 
 %end
 
@@ -74,7 +74,7 @@ EmergencyPhone {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/EmergencyPhone.proto"
 
-### Description
+### EmergencyPhone Description
 
 An emergency phone.
 
@@ -101,22 +101,22 @@ Fence {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fence.proto"
 
-### Description
+### Fence Description
 
 A customizable fence.
 Dimensions, path and appearance of the fence can be set.
-If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-### Field Summary
+### Fence Field Summary
 
 - `appearance`: for backward compatibility warning
 
 ## FireHydrant
 
-%figure "FireHydrant"
+%figure "FireHydrant model in Webots."
 
-![FireHydrant-image](images/objects/street_furniture/FireHydrant/model.png)
+![FireHydrant](images/objects/street_furniture/FireHydrant/model.png)
 
 %end
 
@@ -131,15 +131,15 @@ FireHydrant {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/FireHydrant.proto"
 
-### Description
+### FireHydrant Description
 
 A fire hydrant.
 
 ## Fountain
 
-%figure "Fountain"
+%figure "Fountain model in Webots."
 
-![Fountain-image](images/objects/street_furniture/Fountain/model.png)
+![Fountain](images/objects/street_furniture/Fountain/model.png)
 
 %end
 
@@ -156,15 +156,15 @@ Fountain {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fountain.proto"
 
-### Description
+### Fountain Description
 
-Simple fountain
+A configurable fountain.
 
 ## PublicBin
 
-%figure "PublicBin"
+%figure "PublicBin model in Webots."
 
-![PublicBin-image](images/objects/street_furniture/PublicBin/model.png)
+![PublicBin](images/objects/street_furniture/PublicBin/model.png)
 
 %end
 
@@ -180,15 +180,15 @@ PublicBin {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicBin.proto"
 
-### Description
+### PublicBin Description
 
 A public bin.
 
 ## PublicToilet
 
-%figure "PublicToilet"
+%figure "PublicToilet model in Webots."
 
-![PublicToilet-image](images/objects/street_furniture/PublicToilet/model.png)
+![PublicToilet](images/objects/street_furniture/PublicToilet/model.png)
 
 %end
 
@@ -222,15 +222,15 @@ PublicToilet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicToilet.proto"
 
-### Description
+### PublicToilet Description
 
 Resizable public toilet with two different displays.
 
 ## TrashBin
 
-%figure "TrashBin"
+%figure "TrashBin model in Webots."
 
-![TrashBin-image](images/objects/street_furniture/TrashBin/model.png)
+![TrashBin](images/objects/street_furniture/TrashBin/model.png)
 
 %end
 
@@ -247,7 +247,7 @@ TrashBin {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/TrashBin.proto"
 
-### Description
+### TrashBin Description
 
 A trash bin.
 

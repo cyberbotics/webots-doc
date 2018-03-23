@@ -2,9 +2,9 @@
 
 ## LandscapePainting
 
-%figure "LandscapePainting"
+%figure "LandscapePainting model in Webots."
 
-![LandscapePainting-image](images/objects/paintings/LandscapePainting/model.png)
+![LandscapePainting](images/objects/paintings/LandscapePainting/model.png)
 
 %end
 
@@ -20,15 +20,15 @@ LandscapePainting {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/paintings/protos/LandscapePainting.proto"
 
-### Description
+### LandscapePainting Description
 
-A painting (1.5 x 1 x 0.05 m)
+A painting (1.5 x 1 x 0.05 m).
 
 ## PortraitPainting
 
-%figure "PortraitPainting"
+%figure "PortraitPainting model in Webots."
 
-![PortraitPainting-image](images/objects/paintings/PortraitPainting/model.png)
+![PortraitPainting](images/objects/paintings/PortraitPainting/model.png)
 
 %end
 
@@ -44,7 +44,7 @@ PortraitPainting {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/paintings/protos/PortraitPainting.proto"
 
-### Description
+### PortraitPainting Description
 
-A painting (0.82 x 1.01 x 0.05 m)
+A painting (0.82 x 1.01 x 0.05 m).
 

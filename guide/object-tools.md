@@ -2,9 +2,9 @@
 
 ## Bolt
 
-%figure "Bolt"
+%figure "Bolt model in Webots."
 
-![Bolt-image](images/objects/tools/Bolt/model.png)
+![Bolt](images/objects/tools/Bolt/model.png)
 
 %end
 
@@ -19,15 +19,15 @@ Bolt {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Bolt.proto"
 
-### Description
+### Bolt Description
 
 A threaded bolt.
 
 ## Hammer
 
-%figure "Hammer"
+%figure "Hammer model in Webots."
 
-![Hammer-image](images/objects/tools/Hammer/model.png)
+![Hammer](images/objects/tools/Hammer/model.png)
 
 %end
 
@@ -42,15 +42,15 @@ Hammer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
 
-### Description
+### Hammer Description
 
 A 25cm asymmetric club hammer.
 
 ## Nut
 
-%figure "Nut"
+%figure "Nut model in Webots."
 
-![Nut-image](images/objects/tools/Nut/model.png)
+![Nut](images/objects/tools/Nut/model.png)
 
 %end
 
@@ -65,15 +65,15 @@ Nut {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Nut.proto"
 
-### Description
+### Nut Description
 
 A hexagonal nut.
 
 ## PaintBucket
 
-%figure "PaintBucket"
+%figure "PaintBucket model in Webots."
 
-![PaintBucket-image](images/objects/tools/PaintBucket/model.png)
+![PaintBucket](images/objects/tools/PaintBucket/model.png)
 
 %end
 
@@ -88,15 +88,15 @@ PaintBucket {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
 
-### Description
+### PaintBucket Description
 
 A 4kg bucket of paint, with HingeJoint-based handle.
 
 ## PlatformCart
 
-%figure "PlatformCart"
+%figure "PlatformCart model in Webots."
 
-![PlatformCart-image](images/objects/tools/PlatformCart/model.png)
+![PlatformCart](images/objects/tools/PlatformCart/model.png)
 
 %end
 
@@ -112,15 +112,15 @@ PlatformCart {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PlatformCart.proto"
 
-### Description
+### PlatformCart Description
 
 A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 ## Screwdriver
 
-%figure "Screwdriver"
+%figure "Screwdriver model in Webots."
 
-![Screwdriver-image](images/objects/tools/Screwdriver/model.png)
+![Screwdriver](images/objects/tools/Screwdriver/model.png)
 
 %end
 
@@ -135,15 +135,15 @@ Screwdriver {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Screwdriver.proto"
 
-### Description
+### Screwdriver Description
 
 A Philips screwdriver. The blade and handle are balanced.
 
 ## Wrench
 
-%figure "Wrench"
+%figure "Wrench model in Webots."
 
-![Wrench-image](images/objects/tools/Wrench/model.png)
+![Wrench](images/objects/tools/Wrench/model.png)
 
 %end
 
@@ -158,7 +158,7 @@ Wrench {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
 
-### Description
+### Wrench Description
 
 A 15cm Open-End wrench.
 

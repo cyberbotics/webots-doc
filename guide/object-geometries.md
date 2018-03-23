@@ -2,9 +2,9 @@
 
 ## Extrusion
 
-%figure "Extrusion"
+%figure "Extrusion model in Webots."
 
-![Extrusion-image](images/objects/geometries/Extrusion/model.png)
+![Extrusion](images/objects/geometries/Extrusion/model.png)
 
 %end
 
@@ -26,13 +26,12 @@ Extrusion {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/Extrusion.proto"
 
-### Description
+### Extrusion Description
 
-Generic extrusion geometry
-The shape (defined by the 'crossSection' field) is extruded along
-the path defined by the field 'spine'
+Generic extrusion geometry.
+The shape (defined by the 'crossSection' field) is extruded along the path defined by the field 'spine'.
 
-### Field Summary
+### Extrusion Field Summary
 
 - `crossSection`: defines the crossSection of the extrusion
 
@@ -50,9 +49,9 @@ the path defined by the field 'spine'
 
 ## TexturedBox
 
-%figure "TexturedBox"
+%figure "TexturedBox model in Webots."
 
-![TexturedBox-image](images/objects/geometries/TexturedBox/model.png)
+![TexturedBox](images/objects/geometries/TexturedBox/model.png)
 
 %end
 
@@ -71,7 +70,7 @@ TexturedBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedBox.proto"
 
-### Description
+### TexturedBox Description
 
 Box with customizable texture mapping.
 Available texture mappings:
@@ -81,15 +80,14 @@ Available texture mappings:
 - 'metric' mapping: similar to default mapping but the texture is not deformed to match each face size
 - 'default' mapping: same texture on all the faces
 - 'none': no texture mapping
-If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not
-drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
+If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
+A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 
 ## TexturedParallelepiped
 
-%figure "TexturedParallelepiped"
+%figure "TexturedParallelepiped model in Webots."
 
-![TexturedParallelepiped-image](images/objects/geometries/TexturedParallelepiped/model.png)
+![TexturedParallelepiped](images/objects/geometries/TexturedParallelepiped/model.png)
 
 %end
 
@@ -109,7 +107,7 @@ TexturedParallelepiped {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedParallelepiped.proto"
 
-### Description
+### TexturedParallelepiped Description
 
 Customizable parallelepiped.
 The 'size' and 'angles' fields specify the edges and angles of the parallelepiped:
@@ -123,7 +121,6 @@ Available texture mappings:
 - 'metric' mapping: similar to default mapping but the texture is not deformed to match each face size
 - 'default' mapping: same texture on all the faces
 - 'none' no texture mapping
-If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not
-drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
+If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
+A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 

@@ -2,9 +2,9 @@
 
 ## Cabinet
 
-%figure "Cabinet"
+%figure "Cabinet model in Webots."
 
-![Cabinet-image](images/objects/cabinet/Cabinet/model.png)
+![Cabinet](images/objects/cabinet/Cabinet/model.png)
 
 %end
 
@@ -50,7 +50,7 @@ Cabinet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/cabinet/protos/Cabinet.proto"
 
-### Description
+### Cabinet Description
 
 A customizable cabinet containing elements (shelves, dynamic doors, and drawers).
 The internal cabinet layout is a grid in which the elements can be inserted.
@@ -61,9 +61,9 @@ The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
 ## CabinetHandle
 
-%figure "CabinetHandle"
+%figure "CabinetHandle model in Webots."
 
-![CabinetHandle-image](images/objects/cabinet/CabinetHandle/model.png)
+![CabinetHandle](images/objects/cabinet/CabinetHandle/model.png)
 
 %end
 
@@ -81,7 +81,7 @@ CabinetHandle {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/cabinet/protos/CabinetHandle.proto"
 
-### Description
+### CabinetHandle Description
 
-A handle for the Cabinet PROTO
+A handle for the Cabinet PROTO.
 

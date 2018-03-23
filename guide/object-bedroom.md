@@ -2,9 +2,9 @@
 
 ## Bed
 
-%figure "Bed"
+%figure "Bed model in Webots."
 
-![Bed-image](images/objects/bedroom/Bed/model.png)
+![Bed](images/objects/bedroom/Bed/model.png)
 
 %end
 
@@ -27,7 +27,7 @@ Bed {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/bedroom/protos/Bed.proto"
 
-### Description
+### Bed Description
 
-Customizable bed with feet and one or 2 pillows
+Customizable bed with feet and one or 2 pillows.
 

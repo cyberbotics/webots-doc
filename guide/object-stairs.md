@@ -2,9 +2,9 @@
 
 ## StraightStairs
 
-%figure "StraightStairs"
+%figure "StraightStairs model in Webots."
 
-![StraightStairs-image](images/objects/stairs/StraightStairs/model.png)
+![StraightStairs](images/objects/stairs/StraightStairs/model.png)
 
 %end
 
@@ -27,15 +27,15 @@ StraightStairs {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairs.proto"
 
-### Description
+### StraightStairs Description
 
-Generic and customizable stairs model
+Generic and customizable stairs model.
 
 ## StraightStairsLanding
 
-%figure "StraightStairsLanding"
+%figure "StraightStairsLanding model in Webots."
 
-![StraightStairsLanding-image](images/objects/stairs/StraightStairsLanding/model.png)
+![StraightStairsLanding](images/objects/stairs/StraightStairsLanding/model.png)
 
 %end
 
@@ -60,19 +60,19 @@ StraightStairsLanding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairsLanding.proto"
 
-### Description
+### StraightStairsLanding Description
 
 Generic and customizable landing model for straight stairs.
 
-### Field Summary
+### StraightStairsLanding Field Summary
 
 - `stringerSize`: height and width
 
 ## StraightStairsRail
 
-%figure "StraightStairsRail"
+%figure "StraightStairsRail model in Webots."
 
-![StraightStairsRail-image](images/objects/stairs/StraightStairsRail/model.png)
+![StraightStairsRail](images/objects/stairs/StraightStairsRail/model.png)
 
 %end
 
@@ -95,7 +95,7 @@ StraightStairsRail {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairsRail.proto"
 
-### Description
+### StraightStairsRail Description
 
 Default stairs handrail.
 

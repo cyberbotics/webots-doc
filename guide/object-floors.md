@@ -2,9 +2,9 @@
 
 ## CircleArena
 
-%figure "CircleArena"
+%figure "CircleArena model in Webots."
 
-![CircleArena-image](images/objects/floors/CircleArena/model.png)
+![CircleArena](images/objects/floors/CircleArena/model.png)
 
 %end
 
@@ -27,15 +27,15 @@ CircleArena {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/CircleArena.proto"
 
-### Description
+### CircleArena Description
 
 A configurable circle arena composed of floor surrounded by wall.
 
 ## Floor
 
-%figure "Floor"
+%figure "Floor model in Webots."
 
-![Floor-image](images/objects/floors/Floor/model.png)
+![Floor](images/objects/floors/Floor/model.png)
 
 %end
 
@@ -55,15 +55,15 @@ Floor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/Floor.proto"
 
-### Description
+### Floor Description
 
 Configurable standard flat floor.
 
 ## RectangleArena
 
-%figure "RectangleArena"
+%figure "RectangleArena model in Webots."
 
-![RectangleArena-image](images/objects/floors/RectangleArena/model.png)
+![RectangleArena](images/objects/floors/RectangleArena/model.png)
 
 %end
 
@@ -87,15 +87,15 @@ RectangleArena {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/RectangleArena.proto"
 
-### Description
+### RectangleArena Description
 
 A configurable rectangle arena composed of a floor surrounded by walls.
 
 ## UnevenTerrain
 
-%figure "UnevenTerrain"
+%figure "UnevenTerrain model in Webots."
 
-![UnevenTerrain-image](images/objects/floors/UnevenTerrain/model.png)
+![UnevenTerrain](images/objects/floors/UnevenTerrain/model.png)
 
 %end
 
@@ -118,11 +118,11 @@ UnevenTerrain {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/UnevenTerrain.proto"
 
-### Description
+### UnevenTerrain Description
 
 Randomly generated uneven terrain based on Perlin noise.
 
-### Field Summary
+### UnevenTerrain Field Summary
 
 - `randomSeed`: if seed <= 0 then set a random seed
 

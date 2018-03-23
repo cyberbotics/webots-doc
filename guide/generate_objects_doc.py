@@ -87,8 +87,8 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
             file.write('## %s\n\n' % protoName)
 
             if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
-                file.write('%%figure "%s"\n\n' % protoName)
-                file.write('![%s-image](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
+                file.write('%%figure "%s model in Webots."\n\n' % protoName)
+                file.write('![%s](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
                 file.write('%end\n\n')
             else:
                 sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'))
@@ -108,11 +108,11 @@ for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep 
             # else:
             #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
-            file.write('### Description\n\n')
+            file.write('### %s Description\n\n' % protoName)
             file.write(description + '\n')
 
             if describedField:
-                file.write('### Field Summary\n\n')
+                file.write('### %s Field Summary\n\n' % protoName)
                 for fieldName, fieldDescription in describedField:
                     file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 

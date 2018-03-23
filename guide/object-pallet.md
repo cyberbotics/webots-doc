@@ -2,9 +2,9 @@
 
 ## WoodenPallet
 
-%figure "WoodenPallet"
+%figure "WoodenPallet model in Webots."
 
-![WoodenPallet-image](images/objects/pallet/WoodenPallet/model.png)
+![WoodenPallet](images/objects/pallet/WoodenPallet/model.png)
 
 %end
 
@@ -24,15 +24,15 @@ WoodenPallet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPallet.proto"
 
-### Description
+### WoodenPallet Description
 
 Simple and configurable wooden pallet.
 
 ## WoodenPalletStack
 
-%figure "WoodenPalletStack"
+%figure "WoodenPalletStack model in Webots."
 
-![WoodenPalletStack-image](images/objects/pallet/WoodenPalletStack/model.png)
+![WoodenPalletStack](images/objects/pallet/WoodenPalletStack/model.png)
 
 %end
 
@@ -55,7 +55,7 @@ WoodenPalletStack {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPalletStack.proto"
 
-### Description
+### WoodenPalletStack Description
 
-Simple and configurable wooden pallet stack
+Simple and configurable wooden pallet stack.
 

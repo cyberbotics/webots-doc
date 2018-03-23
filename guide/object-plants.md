@@ -2,9 +2,9 @@
 
 ## BunchOfSunFlowers
 
-%figure "BunchOfSunFlowers"
+%figure "BunchOfSunFlowers model in Webots."
 
-![BunchOfSunFlowers-image](images/objects/plants/BunchOfSunFlowers/model.png)
+![BunchOfSunFlowers](images/objects/plants/BunchOfSunFlowers/model.png)
 
 %end
 
@@ -25,15 +25,15 @@ BunchOfSunFlowers {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/plants/protos/BunchOfSunFlowers.proto"
 
-### Description
+### BunchOfSunFlowers Description
 
-Five sun flowers into a pot (0.17 x 0.95 x 0.17 m)
+Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 
 ## PottedTree
 
-%figure "PottedTree"
+%figure "PottedTree model in Webots."
 
-![PottedTree-image](images/objects/plants/PottedTree/model.png)
+![PottedTree](images/objects/plants/PottedTree/model.png)
 
 %end
 
@@ -52,7 +52,7 @@ PottedTree {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/plants/protos/PottedTree.proto"
 
-### Description
+### PottedTree Description
 
-A potted tree (0.3 x 1.3 x 0.3 m)
+A potted tree (0.3 x 1.3 x 0.3 m).
 

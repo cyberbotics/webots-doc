@@ -2,9 +2,9 @@
 
 ## TexturedBoxShape
 
-%figure "TexturedBoxShape"
+%figure "TexturedBoxShape model in Webots."
 
-![TexturedBoxShape-image](images/objects/shapes/TexturedBoxShape/model.png)
+![TexturedBoxShape](images/objects/shapes/TexturedBoxShape/model.png)
 
 %end
 
@@ -27,7 +27,7 @@ TexturedBoxShape {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/shapes/protos/TexturedBoxShape.proto"
 
-### Description
+### TexturedBoxShape Description
 
 Box with customizable texture mapping on selected faces.
 If the boolean value associated with a face ('frontFace', 'leftFace', etc.) is FALSE, then the uniform color specified in 'faceColor' field will be applied instead of the texture.

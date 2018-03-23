@@ -2,9 +2,9 @@
 
 ## Ball
 
-%figure "Ball"
+%figure "Ball model in Webots."
 
-![Ball-image](images/objects/balls/Ball/model.png)
+![Ball](images/objects/balls/Ball/model.png)
 
 %end
 
@@ -25,16 +25,16 @@ Ball {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/Ball.proto"
 
-### Description
+### Ball Description
 
-The Ball's size, mass and color correspond to the soccer ball used in the Robocup SPL
-You can change the centerOfMass to [0 0 0] to avoid the random rolling effect
+The Ball's size, mass and color correspond to the soccer ball used in the Robocup SPL.
+You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 ## PingPongBall
 
-%figure "PingPongBall"
+%figure "PingPongBall model in Webots."
 
-![PingPongBall-image](images/objects/balls/PingPongBall/model.png)
+![PingPongBall](images/objects/balls/PingPongBall/model.png)
 
 %end
 
@@ -50,15 +50,15 @@ PingPongBall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/PingPongBall.proto"
 
-### Description
+### PingPongBall Description
 
 A ping pong ball.
 
 ## SoccerBall
 
-%figure "SoccerBall"
+%figure "SoccerBall model in Webots."
 
-![SoccerBall-image](images/objects/balls/SoccerBall/model.png)
+![SoccerBall](images/objects/balls/SoccerBall/model.png)
 
 %end
 
@@ -74,7 +74,7 @@ SoccerBall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/SoccerBall.proto"
 
-### Description
+### SoccerBall Description
 
 A black and white soccer ball with customizable radius and mass.
 This object is physics-enabled so it will roll or bounce when hit.

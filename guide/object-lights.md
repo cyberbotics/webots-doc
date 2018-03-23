@@ -2,9 +2,9 @@
 
 ## CeilingLight
 
-%figure "CeilingLight"
+%figure "CeilingLight model in Webots."
 
-![CeilingLight-image](images/objects/lights/CeilingLight/model.png)
+![CeilingLight](images/objects/lights/CeilingLight/model.png)
 
 %end
 
@@ -27,15 +27,15 @@ CeilingLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/CeilingLight.proto"
 
-### Description
+### CeilingLight Description
 
-A ceiling light (0.19 x 0.8 x 0.19 m)
+A ceiling light (0.19 x 0.8 x 0.19 m).
 
 ## FloorLight
 
-%figure "FloorLight"
+%figure "FloorLight model in Webots."
 
-![FloorLight-image](images/objects/lights/FloorLight/model.png)
+![FloorLight](images/objects/lights/FloorLight/model.png)
 
 %end
 
@@ -59,7 +59,7 @@ FloorLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/FloorLight.proto"
 
-### Description
+### FloorLight Description
 
-A floor light (0.19 x 1.6 x 0.19 m)
+A floor light (0.19 x 1.6 x 0.19 m).
 

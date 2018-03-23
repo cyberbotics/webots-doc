@@ -2,9 +2,9 @@
 
 ## Desk
 
-%figure "Desk"
+%figure "Desk model in Webots."
 
-![Desk-image](images/objects/tables/Desk/model.png)
+![Desk](images/objects/tables/Desk/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ Desk {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/Desk.proto"
 
-### Description
+### Desk Description
 
-A desk (1.2 x 0.72 x 0.7 m)
+A desk (1.2 x 0.72 x 0.7 m).
 
 ## RoundTable
 
-%figure "RoundTable"
+%figure "RoundTable model in Webots."
 
-![RoundTable-image](images/objects/tables/RoundTable/model.png)
+![RoundTable](images/objects/tables/RoundTable/model.png)
 
 %end
 
@@ -46,15 +46,15 @@ RoundTable {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/RoundTable.proto"
 
-### Description
+### RoundTable Description
 
-A round table (2 x 0.76 x 2 m)
+A round table (2 x 0.76 x 2 m).
 
 ## Table
 
-%figure "Table"
+%figure "Table model in Webots."
 
-![Table-image](images/objects/tables/Table/model.png)
+![Table](images/objects/tables/Table/model.png)
 
 %end
 
@@ -77,7 +77,7 @@ Table {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/Table.proto"
 
-### Description
+### Table Description
 
-Customizable table
+Customizable table.
 

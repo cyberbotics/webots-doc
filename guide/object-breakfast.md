@@ -2,9 +2,9 @@
 
 ## BiscuitBox
 
-%figure "BiscuitBox"
+%figure "BiscuitBox model in Webots."
 
-![BiscuitBox-image](images/objects/breakfast/BiscuitBox/model.png)
+![BiscuitBox](images/objects/breakfast/BiscuitBox/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ BiscuitBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/BiscuitBox.proto"
 
-### Description
+### BiscuitBox Description
 
-A customizable (size, texture, etc.) biscuit box
+A customizable (size, texture, etc.) biscuit box.
 
 ## CerealBox
 
-%figure "CerealBox"
+%figure "CerealBox model in Webots."
 
-![CerealBox-image](images/objects/breakfast/CerealBox/model.png)
+![CerealBox](images/objects/breakfast/CerealBox/model.png)
 
 %end
 
@@ -46,15 +46,15 @@ CerealBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
 
-### Description
+### CerealBox Description
 
-A customizable (size, texture, etc.) cereal box
+A customizable (size, texture, etc.) cereal box.
 
 ## HoneyJar
 
-%figure "HoneyJar"
+%figure "HoneyJar model in Webots."
 
-![HoneyJar-image](images/objects/breakfast/HoneyJar/model.png)
+![HoneyJar](images/objects/breakfast/HoneyJar/model.png)
 
 %end
 
@@ -71,15 +71,15 @@ HoneyJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/HoneyJar.proto"
 
-### Description
+### HoneyJar Description
 
-A honey jar
+A honey jar.
 
 ## JamJar
 
-%figure "JamJar"
+%figure "JamJar model in Webots."
 
-![JamJar-image](images/objects/breakfast/JamJar/model.png)
+![JamJar](images/objects/breakfast/JamJar/model.png)
 
 %end
 
@@ -95,7 +95,7 @@ JamJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/JamJar.proto"
 
-### Description
+### JamJar Description
 
-A jam jar
+A jam jar.
 

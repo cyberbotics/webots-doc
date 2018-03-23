@@ -2,9 +2,9 @@
 
 ## Armchair
 
-%figure "Armchair"
+%figure "Armchair model in Webots."
 
-![Armchair-image](images/objects/living_room_furniture/Armchair/model.png)
+![Armchair](images/objects/living_room_furniture/Armchair/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ Armchair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Armchair.proto"
 
-### Description
+### Armchair Description
 
-An armchair (1 x 0.8 x 1.1 m)
+An armchair (1 x 0.8 x 1.1 m).
 
 ## Carpet
 
-%figure "Carpet"
+%figure "Carpet model in Webots."
 
-![Carpet-image](images/objects/living_room_furniture/Carpet/model.png)
+![Carpet](images/objects/living_room_furniture/Carpet/model.png)
 
 %end
 
@@ -45,15 +45,15 @@ Carpet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Carpet.proto"
 
-### Description
+### Carpet Description
 
-A carpet (2.4 x 0.02 x 1.6 m)
+A carpet (2.4 x 0.02 x 1.6 m).
 
 ## Sofa
 
-%figure "Sofa"
+%figure "Sofa model in Webots."
 
-![Sofa-image](images/objects/living_room_furniture/Sofa/model.png)
+![Sofa](images/objects/living_room_furniture/Sofa/model.png)
 
 %end
 
@@ -70,7 +70,7 @@ Sofa {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Sofa.proto"
 
-### Description
+### Sofa Description
 
-A sofa for two people (1 x 0.8 x 1.8 m)
+A sofa for two people (1 x 0.8 x 1.8 m).
 

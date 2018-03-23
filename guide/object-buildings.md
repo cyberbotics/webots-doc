@@ -2,9 +2,9 @@
 
 ## Auditorium
 
-%figure "Auditorium"
+%figure "Auditorium model in Webots."
 
-![Auditorium-image](images/objects/buildings/Auditorium/model.png)
+![Auditorium](images/objects/buildings/Auditorium/model.png)
 
 %end
 
@@ -18,15 +18,15 @@ Auditorium {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Auditorium.proto"
 
-### Description
+### Auditorium Description
 
-Building : A classic auditoruim.
+A classic auditoruim.
 
 ## BigGlassTower
 
-%figure "BigGlassTower"
+%figure "BigGlassTower model in Webots."
 
-![BigGlassTower-image](images/objects/buildings/BigGlassTower/model.png)
+![BigGlassTower](images/objects/buildings/BigGlassTower/model.png)
 
 %end
 
@@ -40,15 +40,15 @@ BigGlassTower {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/BigGlassTower.proto"
 
-### Description
+### BigGlassTower Description
 
-Building : A big glass tower.
+A big glass tower.
 
 ## Building
 
-%figure "Building"
+%figure "Building model in Webots."
 
-![Building-image](images/objects/buildings/Building/model.png)
+![Building](images/objects/buildings/Building/model.png)
 
 %end
 
@@ -77,12 +77,12 @@ Building {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Building.proto"
 
-### Description
+### Building Description
 
 A customizable building, the size, appearance and geometry can fully be defined.
 The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
-### Field Summary
+### Building Field Summary
 
 - `name`: could contain the name of the building
 
@@ -114,9 +114,9 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ## BuildingUnderConstruction
 
-%figure "BuildingUnderConstruction"
+%figure "BuildingUnderConstruction model in Webots."
 
-![BuildingUnderConstruction-image](images/objects/buildings/BuildingUnderConstruction/model.png)
+![BuildingUnderConstruction](images/objects/buildings/BuildingUnderConstruction/model.png)
 
 %end
 
@@ -130,15 +130,15 @@ BuildingUnderConstruction {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/BuildingUnderConstruction.proto"
 
-### Description
+### BuildingUnderConstruction Description
 
-Building : Building under construction with scaffolding.
+Building under construction with scaffolding.
 
 ## BungalowStyleHouse
 
-%figure "BungalowStyleHouse"
+%figure "BungalowStyleHouse model in Webots."
 
-![BungalowStyleHouse-image](images/objects/buildings/BungalowStyleHouse/model.png)
+![BungalowStyleHouse](images/objects/buildings/BungalowStyleHouse/model.png)
 
 %end
 
@@ -159,17 +159,17 @@ BungalowStyleHouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/BungalowStyleHouse.proto"
 
-### Description
+### BungalowStyleHouse Description
 
-A configurable bungalow style house
-based on the blender model of noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305))
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+A configurable bungalow style house.
+The original blender model was made by noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ## CommercialBuilding
 
-%figure "CommercialBuilding"
+%figure "CommercialBuilding model in Webots."
 
-![CommercialBuilding-image](images/objects/buildings/CommercialBuilding/model.png)
+![CommercialBuilding](images/objects/buildings/CommercialBuilding/model.png)
 
 %end
 
@@ -183,15 +183,15 @@ CommercialBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/CommercialBuilding.proto"
 
-### Description
+### CommercialBuilding Description
 
-Building : A commercial building.
+A commercial building.
 
 ## CyberboticsTower
 
-%figure "CyberboticsTower"
+%figure "CyberboticsTower model in Webots."
 
-![CyberboticsTower-image](images/objects/buildings/CyberboticsTower/model.png)
+![CyberboticsTower](images/objects/buildings/CyberboticsTower/model.png)
 
 %end
 
@@ -205,15 +205,15 @@ CyberboticsTower {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/CyberboticsTower.proto"
 
-### Description
+### CyberboticsTower Description
 
-Building : The Cyberbotics tower.
+The Cyberbotics tower.
 
 ## FastFoodRestaurant
 
-%figure "FastFoodRestaurant"
+%figure "FastFoodRestaurant model in Webots."
 
-![FastFoodRestaurant-image](images/objects/buildings/FastFoodRestaurant/model.png)
+![FastFoodRestaurant](images/objects/buildings/FastFoodRestaurant/model.png)
 
 %end
 
@@ -232,16 +232,16 @@ FastFoodRestaurant {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/FastFoodRestaurant.proto"
 
-### Description
+### FastFoodRestaurant Description
 
 Fast food restaurant that comes in 4 versions: 'KFC', 'FFC', 'subway' or 'momo'.
 The building can be changed to a two sided restaurant using the 'numberOfSides' parameter.
 
 ## HollowBuilding
 
-%figure "HollowBuilding"
+%figure "HollowBuilding model in Webots."
 
-![HollowBuilding-image](images/objects/buildings/HollowBuilding/model.png)
+![HollowBuilding](images/objects/buildings/HollowBuilding/model.png)
 
 %end
 
@@ -255,15 +255,15 @@ HollowBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/HollowBuilding.proto"
 
-### Description
+### HollowBuilding Description
 
-Building : A hollow building.
+A hollow building.
 
 ## Hotel
 
-%figure "Hotel"
+%figure "Hotel model in Webots."
 
-![Hotel-image](images/objects/buildings/Hotel/model.png)
+![Hotel](images/objects/buildings/Hotel/model.png)
 
 %end
 
@@ -277,9 +277,9 @@ Hotel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Hotel.proto"
 
-### Description
+### Hotel Description
 
-Building : A big hotel.
+A big hotel.
 
 ## ModernHouse
 
@@ -296,17 +296,17 @@ ModernHouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/ModernHouse.proto"
 
-### Description
+### ModernHouse Description
 
-A simple modern house
-based on the blender model of andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734))
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+A simple modern house.
+The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ## Museum
 
-%figure "Museum"
+%figure "Museum model in Webots."
 
-![Museum-image](images/objects/buildings/Museum/model.png)
+![Museum](images/objects/buildings/Museum/model.png)
 
 %end
 
@@ -320,9 +320,9 @@ Museum {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Museum.proto"
 
-### Description
+### Museum Description
 
-Building : An old museum.
+An old museum.
 
 ## ResidentialBuilding
 
@@ -336,15 +336,15 @@ ResidentialBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/ResidentialBuilding.proto"
 
-### Description
+### ResidentialBuilding Description
 
-Building : A residential building.
+A residential building.
 
 ## SimpleBuilding
 
-%figure "SimpleBuilding"
+%figure "SimpleBuilding model in Webots."
 
-![SimpleBuilding-image](images/objects/buildings/SimpleBuilding/model.png)
+![SimpleBuilding](images/objects/buildings/SimpleBuilding/model.png)
 
 %end
 
@@ -374,13 +374,13 @@ SimpleBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/SimpleBuilding.proto"
 
-### Description
+### SimpleBuilding Description
 
 A customizable building, the size and geometry can fully be defined.
 The texture of the wall and roof can be selected using the fields 'wallType' and 'roofType'.
 The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
-### Field Summary
+### SimpleBuilding Field Summary
 
 - `name`: could contain the name of the building
 
@@ -418,9 +418,9 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ## SimpleTwoFloorsHouse
 
-%figure "SimpleTwoFloorsHouse"
+%figure "SimpleTwoFloorsHouse model in Webots."
 
-![SimpleTwoFloorsHouse-image](images/objects/buildings/SimpleTwoFloorsHouse/model.png)
+![SimpleTwoFloorsHouse](images/objects/buildings/SimpleTwoFloorsHouse/model.png)
 
 %end
 
@@ -436,17 +436,17 @@ SimpleTwoFloorsHouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/SimpleTwoFloorsHouse.proto"
 
-### Description
+### SimpleTwoFloorsHouse Description
 
-A simple house with two floors
-based on the blender model of andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482))
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+A simple house with two floors.
+The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ## TheThreeTowers
 
-%figure "TheThreeTowers"
+%figure "TheThreeTowers model in Webots."
 
-![TheThreeTowers-image](images/objects/buildings/TheThreeTowers/model.png)
+![TheThreeTowers](images/objects/buildings/TheThreeTowers/model.png)
 
 %end
 
@@ -460,15 +460,15 @@ TheThreeTowers {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/TheThreeTowers.proto"
 
-### Description
+### TheThreeTowers Description
 
-Building : A group of three towers.
+A group of three towers.
 
 ## UBuilding
 
-%figure "UBuilding"
+%figure "UBuilding model in Webots."
 
-![UBuilding-image](images/objects/buildings/UBuilding/model.png)
+![UBuilding](images/objects/buildings/UBuilding/model.png)
 
 %end
 
@@ -482,7 +482,7 @@ UBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/UBuilding.proto"
 
-### Description
+### UBuilding Description
 
-Building : A building with a "U" form.
+A building with a "U" form.
 

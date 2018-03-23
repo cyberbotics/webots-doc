@@ -2,9 +2,9 @@
 
 ## Fridge
 
-%figure "Fridge"
+%figure "Fridge model in Webots."
 
-![Fridge-image](images/objects/fridge/Fridge/model.png)
+![Fridge](images/objects/fridge/Fridge/model.png)
 
 %end
 
@@ -26,7 +26,7 @@ Fridge {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/fridge/protos/Fridge.proto"
 
-### Description
+### Fridge Description
 
-A fridge with 2 doors (0.7 x 1.8 x 0.7 m)
+A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 

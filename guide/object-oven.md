@@ -2,9 +2,9 @@
 
 ## Oven
 
-%figure "Oven"
+%figure "Oven model in Webots."
 
-![Oven-image](images/objects/oven/Oven/model.png)
+![Oven](images/objects/oven/Oven/model.png)
 
 %end
 
@@ -26,7 +26,7 @@ Oven {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/oven/protos/Oven.proto"
 
-### Description
+### Oven Description
 
-An oven (0.5 x 0.68 x 0.44 m)
+An oven (0.5 x 0.68 x 0.44 m).
 

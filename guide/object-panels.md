@@ -2,9 +2,9 @@
 
 ## Panel
 
-%figure "Panel"
+%figure "Panel model in Webots."
 
-![Panel-image](images/objects/panels/Panel/model.png)
+![Panel](images/objects/panels/Panel/model.png)
 
 %end
 
@@ -24,15 +24,15 @@ Panel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/panels/protos/Panel.proto"
 
-### Description
+### Panel Description
 
 Customizable simple panel.
 
 ## PannelWithTubes
 
-%figure "PannelWithTubes"
+%figure "PannelWithTubes model in Webots."
 
-![PannelWithTubes-image](images/objects/panels/PannelWithTubes/model.png)
+![PannelWithTubes](images/objects/panels/PannelWithTubes/model.png)
 
 %end
 
@@ -47,7 +47,7 @@ PannelWithTubes {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/panels/protos/PannelWithTubes.proto"
 
-### Description
+### PannelWithTubes Description
 
-A gray panel with tubes
+A gray panel with tubes.
 

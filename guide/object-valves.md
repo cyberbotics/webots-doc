@@ -2,9 +2,9 @@
 
 ## LargeValve
 
-%figure "LargeValve"
+%figure "LargeValve model in Webots."
 
-![LargeValve-image](images/objects/valves/LargeValve/model.png)
+![LargeValve](images/objects/valves/LargeValve/model.png)
 
 %end
 
@@ -22,15 +22,15 @@ LargeValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LargeValve.proto"
 
-### Description
+### LargeValve Description
 
 Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 
 ## LeverValve
 
-%figure "LeverValve"
+%figure "LeverValve model in Webots."
 
-![LeverValve-image](images/objects/valves/LeverValve/model.png)
+![LeverValve](images/objects/valves/LeverValve/model.png)
 
 %end
 
@@ -46,15 +46,15 @@ LeverValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LeverValve.proto"
 
-### Description
+### LeverValve Description
 
 Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
 
 ## SmallValve
 
-%figure "SmallValve"
+%figure "SmallValve model in Webots."
 
-![SmallValve-image](images/objects/valves/SmallValve/model.png)
+![SmallValve](images/objects/valves/SmallValve/model.png)
 
 %end
 
@@ -71,7 +71,7 @@ SmallValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/SmallValve.proto"
 
-### Description
+### SmallValve Description
 
 Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 

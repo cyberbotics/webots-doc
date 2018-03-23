@@ -2,9 +2,9 @@
 
 ## AdvertisingBoard
 
-%figure "AdvertisingBoard"
+%figure "AdvertisingBoard model in Webots."
 
-![AdvertisingBoard-image](images/objects/advertising_board/AdvertisingBoard/model.png)
+![AdvertisingBoard](images/objects/advertising_board/AdvertisingBoard/model.png)
 
 %end
 
@@ -32,7 +32,7 @@ AdvertisingBoard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/advertising_board/protos/AdvertisingBoard.proto"
 
-### Description
+### AdvertisingBoard Description
 
 Double sided and adjustable advertising board with the possibility of adding up to four poles.
 Those poles can either be a "cylinder", "box", or a "H-shape".

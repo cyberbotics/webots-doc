@@ -2,9 +2,9 @@
 
 ## LegoLargeMotor
 
-%figure "LegoLargeMotor"
+%figure "LegoLargeMotor model in Webots."
 
-![LegoLargeMotor-image](images/objects/lego/LegoLargeMotor/model.png)
+![LegoLargeMotor](images/objects/lego/LegoLargeMotor/model.png)
 
 %end
 
@@ -18,15 +18,15 @@ LegoLargeMotor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lego/protos/LegoLargeMotor.proto"
 
-### Description
+### LegoLargeMotor Description
 
 LEGO Mindstorm EV3 large motor. Part id: 6009430.
 
 ## LegoWheel
 
-%figure "LegoWheel"
+%figure "LegoWheel model in Webots."
 
-![LegoWheel-image](images/objects/lego/LegoWheel/model.png)
+![LegoWheel](images/objects/lego/LegoWheel/model.png)
 
 %end
 
@@ -40,7 +40,7 @@ LegoWheel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lego/protos/LegoWheel.proto"
 
-### Description
+### LegoWheel Description
 
 LEGO Mindstrom EV 3 wheel. Parts id: 4634091 & 6035364.
 

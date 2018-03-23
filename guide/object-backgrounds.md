@@ -10,9 +10,9 @@ TexturedBackground {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/backgrounds/protos/TexturedBackground.proto"
 
-### Description
+### TexturedBackground Description
 
-Background textured with a skybox
+Background textured with a skybox.
 
 Supported values for the "texture" field:
 
@@ -37,9 +37,9 @@ TexturedBackgroundLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 
-### Description
+### TexturedBackgroundLight Description
 
-Light matching with the TexturedBackground
+Light matching with the TexturedBackground.
 
 Supported values for the "texture" field:
 

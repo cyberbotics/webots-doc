@@ -2,9 +2,9 @@
 
 ## CautionPanel
 
-%figure "CautionPanel"
+%figure "CautionPanel model in Webots."
 
-![CautionPanel-image](images/objects/traffic/CautionPanel/model.png)
+![CautionPanel](images/objects/traffic/CautionPanel/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ CautionPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CautionPanel.proto"
 
-### Description
+### CautionPanel Description
 
 Traffic panel: Caution panel.
 
 ## CautionSign
 
-%figure "CautionSign"
+%figure "CautionSign model in Webots."
 
-![CautionSign-image](images/objects/traffic/CautionSign/model.png)
+![CautionSign](images/objects/traffic/CautionSign/model.png)
 
 %end
 
@@ -47,15 +47,15 @@ CautionSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CautionSign.proto"
 
-### Description
+### CautionSign Description
 
 Traffic sign: Caution sign.
 
 ## ControlledStreetLight
 
-%figure "ControlledStreetLight"
+%figure "ControlledStreetLight model in Webots."
 
-![ControlledStreetLight-image](images/objects/traffic/ControlledStreetLight/model.png)
+![ControlledStreetLight](images/objects/traffic/ControlledStreetLight/model.png)
 
 %end
 
@@ -78,15 +78,15 @@ ControlledStreetLight {
 
 > **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz)
 
-### Description
+### ControlledStreetLight Description
 
-Simple model of a controlled street light including a customizable SpotLight
+Simple model of a controlled street light including a customizable SpotLight.
 
 ## CrossRoadsTrafficLight
 
-%figure "CrossRoadsTrafficLight"
+%figure "CrossRoadsTrafficLight model in Webots."
 
-![CrossRoadsTrafficLight-image](images/objects/traffic/CrossRoadsTrafficLight/model.png)
+![CrossRoadsTrafficLight](images/objects/traffic/CrossRoadsTrafficLight/model.png)
 
 %end
 
@@ -102,15 +102,15 @@ CrossRoadsTrafficLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CrossRoadsTrafficLight.proto"
 
-### Description
+### CrossRoadsTrafficLight Description
 
 Four roads crossing traffic light.
 
 ## DirectionPanel
 
-%figure "DirectionPanel"
+%figure "DirectionPanel model in Webots."
 
-![DirectionPanel-image](images/objects/traffic/DirectionPanel/model.png)
+![DirectionPanel](images/objects/traffic/DirectionPanel/model.png)
 
 %end
 
@@ -135,20 +135,31 @@ DirectionPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/DirectionPanel.proto"
 
-### Description
+### DirectionPanel Description
 
 Resizable direction panel with two customizable sides.
-The 'textSize' fields defines the height (in meter) of one line of text
-List of supported fonts:'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Georgia',
-'Impact', 'Lucida Console', 'Lucida Sans Unicode', 'Palatino Linotype',
-'Tahoma', 'Times New Roman', 'Trebuchet MS', 'Verdana'
-Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory
+The 'textSize' fields defines the height (in meter) of one line of text.
+List of supported fonts:
+- 'Arial'
+- 'Arial Black'
+- 'Comic Sans MS'
+- 'Courier New'
+- 'Georgia',
+- 'Impact'
+- 'Lucida Console'
+- 'Lucida Sans Unicode'
+- 'Palatino Linotype'
+- 'Tahoma'
+- 'Times New Roman'
+- 'Trebuchet MS'
+- 'Verdana'
+Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory.
 
 ## DivergentIndicator
 
-%figure "DivergentIndicator"
+%figure "DivergentIndicator model in Webots."
 
-![DivergentIndicator-image](images/objects/traffic/DivergentIndicator/model.png)
+![DivergentIndicator](images/objects/traffic/DivergentIndicator/model.png)
 
 %end
 
@@ -166,15 +177,15 @@ DivergentIndicator {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/DivergentIndicator.proto"
 
-### Description
+### DivergentIndicator Description
 
 A divergent indicator block.
 
 ## ExitPanel
 
-%figure "ExitPanel"
+%figure "ExitPanel model in Webots."
 
-![ExitPanel-image](images/objects/traffic/ExitPanel/model.png)
+![ExitPanel](images/objects/traffic/ExitPanel/model.png)
 
 %end
 
@@ -191,15 +202,15 @@ ExitPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ExitPanel.proto"
 
-### Description
+### ExitPanel Description
 
 Traffic panel: Exit panel.
 
 ## ExitSign
 
-%figure "ExitSign"
+%figure "ExitSign model in Webots."
 
-![ExitSign-image](images/objects/traffic/ExitSign/model.png)
+![ExitSign](images/objects/traffic/ExitSign/model.png)
 
 %end
 
@@ -217,15 +228,15 @@ ExitSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ExitSign.proto"
 
-### Description
+### ExitSign Description
 
 Traffic sign: Exit sign.
 
 ## GenericTrafficLight
 
-%figure "GenericTrafficLight"
+%figure "GenericTrafficLight model in Webots."
 
-![GenericTrafficLight-image](images/objects/traffic/GenericTrafficLight/model.png)
+![GenericTrafficLight](images/objects/traffic/GenericTrafficLight/model.png)
 
 %end
 
@@ -243,15 +254,15 @@ GenericTrafficLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/GenericTrafficLight.proto"
 
-### Description
+### GenericTrafficLight Description
 
-Generic traffic light
+A generic traffic light with configurable timming.
 
 ## HighwayPole
 
-%figure "HighwayPole"
+%figure "HighwayPole model in Webots."
 
-![HighwayPole-image](images/objects/traffic/HighwayPole/model.png)
+![HighwayPole](images/objects/traffic/HighwayPole/model.png)
 
 %end
 
@@ -276,16 +287,16 @@ HighwayPole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/HighwayPole.proto"
 
-### Description
+### HighwayPole Description
 
 Customizable highway pole with the possibility of adding another stand and more signs along the vertical or horizontal parts of the pole.
 Different types of poles are available: "cylinder", "box", or "H-shape".
 
 ## HighwaySign
 
-%figure "HighwaySign"
+%figure "HighwaySign model in Webots."
 
-![HighwaySign-image](images/objects/traffic/HighwaySign/model.png)
+![HighwaySign](images/objects/traffic/HighwaySign/model.png)
 
 %end
 
@@ -305,15 +316,15 @@ HighwaySign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/HighwaySign.proto"
 
-### Description
+### HighwaySign Description
 
 Resizable sign with front texture option.
 
 ## OrderPanel
 
-%figure "OrderPanel"
+%figure "OrderPanel model in Webots."
 
-![OrderPanel-image](images/objects/traffic/OrderPanel/model.png)
+![OrderPanel](images/objects/traffic/OrderPanel/model.png)
 
 %end
 
@@ -330,15 +341,15 @@ OrderPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/OrderPanel.proto"
 
-### Description
+### OrderPanel Description
 
 Traffic panel: Order panel.
 
 ## OrderSign
 
-%figure "OrderSign"
+%figure "OrderSign model in Webots."
 
-![OrderSign-image](images/objects/traffic/OrderSign/model.png)
+![OrderSign](images/objects/traffic/OrderSign/model.png)
 
 %end
 
@@ -356,15 +367,15 @@ OrderSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/OrderSign.proto"
 
-### Description
+### OrderSign Description
 
 Traffic sign: Order sign.
 
 ## ParkingLines
 
-%figure "ParkingLines"
+%figure "ParkingLines model in Webots."
 
-![ParkingLines-image](images/objects/traffic/ParkingLines/model.png)
+![ParkingLines](images/objects/traffic/ParkingLines/model.png)
 
 %end
 
@@ -380,15 +391,15 @@ ParkingLines {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ParkingLines.proto"
 
-### Description
+### ParkingLines Description
 
 Parking lines for several consecutive cars.
 
 ## PedestrianCrossing
 
-%figure "PedestrianCrossing"
+%figure "PedestrianCrossing model in Webots."
 
-![PedestrianCrossing-image](images/objects/traffic/PedestrianCrossing/model.png)
+![PedestrianCrossing](images/objects/traffic/PedestrianCrossing/model.png)
 
 %end
 
@@ -404,16 +415,15 @@ PedestrianCrossing {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/PedestrianCrossing.proto"
 
-### Description
+### PedestrianCrossing Description
 
-Pedestrian crossing 20 x 8 meters
-Elevation 10 cm
+A pedestrian crossing 20 x 8 meters (0.1m thick).
 
 ## Pole
 
-%figure "Pole"
+%figure "Pole model in Webots."
 
-![Pole-image](images/objects/traffic/Pole/model.png)
+![Pole](images/objects/traffic/Pole/model.png)
 
 %end
 
@@ -428,15 +438,15 @@ Pole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/Pole.proto"
 
-### Description
+### Pole Description
 
 A metallic pole for the traffic lights.
 
 ## RectangularPanel
 
-%figure "RectangularPanel"
+%figure "RectangularPanel model in Webots."
 
-![RectangularPanel-image](images/objects/traffic/RectangularPanel/model.png)
+![RectangularPanel](images/objects/traffic/RectangularPanel/model.png)
 
 %end
 
@@ -454,15 +464,15 @@ RectangularPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/RectangularPanel.proto"
 
-### Description
+### RectangularPanel Description
 
-simple rectangular traffic pannel
+A simple rectangular traffic pannel.
 
 ## SignPole
 
-%figure "SignPole"
+%figure "SignPole model in Webots."
 
-![SignPole-image](images/objects/traffic/SignPole/model.png)
+![SignPole](images/objects/traffic/SignPole/model.png)
 
 %end
 
@@ -480,15 +490,15 @@ SignPole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SignPole.proto"
 
-### Description
+### SignPole Description
 
 Customizable direction panel on pole with the possibility of adding more panels.
 
 ## SpeedLimitPanel
 
-%figure "SpeedLimitPanel"
+%figure "SpeedLimitPanel model in Webots."
 
-![SpeedLimitPanel-image](images/objects/traffic/SpeedLimitPanel/model.png)
+![SpeedLimitPanel](images/objects/traffic/SpeedLimitPanel/model.png)
 
 %end
 
@@ -505,15 +515,15 @@ SpeedLimitPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SpeedLimitPanel.proto"
 
-### Description
+### SpeedLimitPanel Description
 
 Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
 
 ## SpeedLimitSign
 
-%figure "SpeedLimitSign"
+%figure "SpeedLimitSign model in Webots."
 
-![SpeedLimitSign-image](images/objects/traffic/SpeedLimitSign/model.png)
+![SpeedLimitSign](images/objects/traffic/SpeedLimitSign/model.png)
 
 %end
 
@@ -531,15 +541,15 @@ SpeedLimitSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SpeedLimitSign.proto"
 
-### Description
+### SpeedLimitSign Description
 
 Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
 
 ## StopPanel
 
-%figure "StopPanel"
+%figure "StopPanel model in Webots."
 
-![StopPanel-image](images/objects/traffic/StopPanel/model.png)
+![StopPanel](images/objects/traffic/StopPanel/model.png)
 
 %end
 
@@ -556,15 +566,15 @@ StopPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StopPanel.proto"
 
-### Description
+### StopPanel Description
 
 Traffic panel: Stop panel.
 
 ## StopSign
 
-%figure "StopSign"
+%figure "StopSign model in Webots."
 
-![StopSign-image](images/objects/traffic/StopSign/model.png)
+![StopSign](images/objects/traffic/StopSign/model.png)
 
 %end
 
@@ -582,15 +592,15 @@ StopSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StopSign.proto"
 
-### Description
+### StopSign Description
 
 Traffic sign: Stop sign.
 
 ## StreetLight
 
-%figure "StreetLight"
+%figure "StreetLight model in Webots."
 
-![StreetLight-image](images/objects/traffic/StreetLight/model.png)
+![StreetLight](images/objects/traffic/StreetLight/model.png)
 
 %end
 
@@ -614,16 +624,16 @@ StreetLight {
 
 > **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz)
 
-### Description
+### StreetLight Description
 
-Simple model of a street light including a customizable SpotLight
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+Simple model of a street light including a customizable SpotLight.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ## TrafficCone
 
-%figure "TrafficCone"
+%figure "TrafficCone model in Webots."
 
-![TrafficCone-image](images/objects/traffic/TrafficCone/model.png)
+![TrafficCone](images/objects/traffic/TrafficCone/model.png)
 
 %end
 
@@ -638,15 +648,15 @@ TrafficCone {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficCone.proto"
 
-### Description
+### TrafficCone Description
 
 Traffic cone.
 
 ## TrafficLight
 
-%figure "TrafficLight"
+%figure "TrafficLight model in Webots."
 
-![TrafficLight-image](images/objects/traffic/TrafficLight/model.png)
+![TrafficLight](images/objects/traffic/TrafficLight/model.png)
 
 %end
 
@@ -666,15 +676,15 @@ TrafficLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLight.proto"
 
-### Description
+### TrafficLight Description
 
 Basic traffic light without lamp.
 
 ## TrafficLightArrowLampGeometry
 
-%figure "TrafficLightArrowLampGeometry"
+%figure "TrafficLightArrowLampGeometry model in Webots."
 
-![TrafficLightArrowLampGeometry-image](images/objects/traffic/TrafficLightArrowLampGeometry/model.png)
+![TrafficLightArrowLampGeometry](images/objects/traffic/TrafficLightArrowLampGeometry/model.png)
 
 %end
 
@@ -685,15 +695,15 @@ TrafficLightArrowLampGeometry {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightArrowLampGeometry.proto"
 
-### Description
+### TrafficLightArrowLampGeometry Description
 
 A traffic light lamp with an adjustable arrow.
 
 ## TrafficLightBigPole
 
-%figure "TrafficLightBigPole"
+%figure "TrafficLightBigPole model in Webots."
 
-![TrafficLightBigPole-image](images/objects/traffic/TrafficLightBigPole/model.png)
+![TrafficLightBigPole](images/objects/traffic/TrafficLightBigPole/model.png)
 
 %end
 
@@ -710,15 +720,15 @@ TrafficLightBigPole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightBigPole.proto"
 
-### Description
+### TrafficLightBigPole Description
 
 A big metallic pole above the road for traffic lights.
 
 ## TrafficLightHorizontal
 
-%figure "TrafficLightHorizontal"
+%figure "TrafficLightHorizontal model in Webots."
 
-![TrafficLightHorizontal-image](images/objects/traffic/TrafficLightHorizontal/model.png)
+![TrafficLightHorizontal](images/objects/traffic/TrafficLightHorizontal/model.png)
 
 %end
 
@@ -738,15 +748,15 @@ TrafficLightHorizontal {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightHorizontal.proto"
 
-### Description
+### TrafficLightHorizontal Description
 
 Horizontal traffic light without lamp to put on the big pole above the road.
 
 ## TrafficLightStandardLampGeometry
 
-%figure "TrafficLightStandardLampGeometry"
+%figure "TrafficLightStandardLampGeometry model in Webots."
 
-![TrafficLightStandardLampGeometry-image](images/objects/traffic/TrafficLightStandardLampGeometry/model.png)
+![TrafficLightStandardLampGeometry](images/objects/traffic/TrafficLightStandardLampGeometry/model.png)
 
 %end
 
@@ -757,15 +767,15 @@ TrafficLightStandardLampGeometry {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightStandardLampGeometry.proto"
 
-### Description
+### TrafficLightStandardLampGeometry Description
 
 A traffic light lamp with a standard geometry.
 
 ## YieldPanel
 
-%figure "YieldPanel"
+%figure "YieldPanel model in Webots."
 
-![YieldPanel-image](images/objects/traffic/YieldPanel/model.png)
+![YieldPanel](images/objects/traffic/YieldPanel/model.png)
 
 %end
 
@@ -783,15 +793,15 @@ YieldPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/YieldPanel.proto"
 
-### Description
+### YieldPanel Description
 
 Traffic panel: Yield panel.
 
 ## YieldSign
 
-%figure "YieldSign"
+%figure "YieldSign model in Webots."
 
-![YieldSign-image](images/objects/traffic/YieldSign/model.png)
+![YieldSign](images/objects/traffic/YieldSign/model.png)
 
 %end
 
@@ -809,7 +819,7 @@ YieldSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/YieldSign.proto"
 
-### Description
+### YieldSign Description
 
 Traffic sign: Yield sign.
 

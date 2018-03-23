@@ -2,9 +2,9 @@
 
 ## BeerBottle
 
-%figure "BeerBottle"
+%figure "BeerBottle model in Webots."
 
-![BeerBottle-image](images/objects/drinks/BeerBottle/model.png)
+![BeerBottle](images/objects/drinks/BeerBottle/model.png)
 
 %end
 
@@ -20,15 +20,15 @@ BeerBottle {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/BeerBottle.proto"
 
-### Description
+### BeerBottle Description
 
 A beer bottle.
 
 ## Can
 
-%figure "Can"
+%figure "Can model in Webots."
 
-![Can-image](images/objects/drinks/Can/model.png)
+![Can](images/objects/drinks/Can/model.png)
 
 %end
 
@@ -45,15 +45,15 @@ Can {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/Can.proto"
 
-### Description
+### Can Description
 
 A can (0.03175 x 0.1222 x 0.03175 m).
 
 ## WaterBottle
 
-%figure "WaterBottle"
+%figure "WaterBottle model in Webots."
 
-![WaterBottle-image](images/objects/drinks/WaterBottle/model.png)
+![WaterBottle](images/objects/drinks/WaterBottle/model.png)
 
 %end
 
@@ -69,7 +69,7 @@ WaterBottle {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/WaterBottle.proto"
 
-### Description
+### WaterBottle Description
 
 A water bottle.
 

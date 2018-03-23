@@ -2,9 +2,9 @@
 
 ## CardboardBox
 
-%figure "CardboardBox"
+%figure "CardboardBox model in Webots."
 
-![CardboardBox-image](images/objects/containers/CardboardBox/model.png)
+![CardboardBox](images/objects/containers/CardboardBox/model.png)
 
 %end
 
@@ -21,15 +21,15 @@ CardboardBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/CardboardBox.proto"
 
-### Description
+### CardboardBox Description
 
 A cardboard box.
 
 ## WoodenBox
 
-%figure "WoodenBox"
+%figure "WoodenBox model in Webots."
 
-![WoodenBox-image](images/objects/containers/WoodenBox/model.png)
+![WoodenBox](images/objects/containers/WoodenBox/model.png)
 
 %end
 
@@ -47,7 +47,7 @@ WoodenBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/WoodenBox.proto"
 
-### Description
+### WoodenBox Description
 
 A wooden box.
 

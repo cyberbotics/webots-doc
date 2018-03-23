@@ -2,9 +2,9 @@
 
 ## PaperBoat
 
-%figure "PaperBoat"
+%figure "PaperBoat model in Webots."
 
-![PaperBoat-image](images/objects/toys/PaperBoat/model.png)
+![PaperBoat](images/objects/toys/PaperBoat/model.png)
 
 %end
 
@@ -28,15 +28,15 @@ PaperBoat {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/toys/protos/PaperBoat.proto"
 
-### Description
+### PaperBoat Description
 
 A paper boat (42.8 x 14.2 x 10.6 cm).
 
 ## RubberDuck
 
-%figure "RubberDuck"
+%figure "RubberDuck model in Webots."
 
-![RubberDuck-image](images/objects/toys/RubberDuck/model.png)
+![RubberDuck](images/objects/toys/RubberDuck/model.png)
 
 %end
 
@@ -60,7 +60,7 @@ RubberDuck {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/toys/protos/RubberDuck.proto"
 
-### Description
+### RubberDuck Description
 
 A rubber yellow duck (7.42 x 10.66 x 10.13 cm).
 

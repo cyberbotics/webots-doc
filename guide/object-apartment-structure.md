@@ -2,9 +2,9 @@
 
 ## Ceiling
 
-%figure "Ceiling"
+%figure "Ceiling model in Webots."
 
-![Ceiling-image](images/objects/apartment_structure/Ceiling/model.png)
+![Ceiling](images/objects/apartment_structure/Ceiling/model.png)
 
 %end
 
@@ -24,15 +24,15 @@ Ceiling {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Ceiling.proto"
 
-### Description
+### Ceiling Description
 
-A configurable standard ceiling
+A configurable standard ceiling.
 
 ## Door
 
-%figure "Door"
+%figure "Door model in Webots."
 
-![Door-image](images/objects/apartment_structure/Door/model.png)
+![Door](images/objects/apartment_structure/Door/model.png)
 
 %end
 
@@ -61,7 +61,7 @@ Door {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Door.proto"
 
-### Description
+### Door Description
 
 A cutomizable openable door.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
@@ -69,9 +69,9 @@ A cutomizable openable door.
 
 ## DoorKnob
 
-%figure "DoorKnob"
+%figure "DoorKnob model in Webots."
 
-![DoorKnob-image](images/objects/apartment_structure/DoorKnob/model.png)
+![DoorKnob](images/objects/apartment_structure/DoorKnob/model.png)
 
 %end
 
@@ -90,16 +90,16 @@ DoorKnob {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorKnob.proto"
 
-### Description
+### DoorKnob Description
 
 A door knob.
 This object can be used in the 'doorHandle' field of the Door object.
 
 ## DoorLever
 
-%figure "DoorLever"
+%figure "DoorLever model in Webots."
 
-![DoorLever-image](images/objects/apartment_structure/DoorLever/model.png)
+![DoorLever](images/objects/apartment_structure/DoorLever/model.png)
 
 %end
 
@@ -122,16 +122,16 @@ DoorLever {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorLever.proto"
 
-### Description
+### DoorLever Description
 
 A door lever.
 This object can be used in the 'doorHandle' field of the Door object.
 
 ## Wall
 
-%figure "Wall"
+%figure "Wall model in Webots."
 
-![Wall-image](images/objects/apartment_structure/Wall/model.png)
+![Wall](images/objects/apartment_structure/Wall/model.png)
 
 %end
 
@@ -150,7 +150,7 @@ Wall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Wall.proto"
 
-### Description
+### Wall Description
 
 A customizable wall.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
@@ -158,9 +158,9 @@ A customizable wall.
 
 ## Window
 
-%figure "Window"
+%figure "Window model in Webots."
 
-![Window-image](images/objects/apartment_structure/Window/model.png)
+![Window](images/objects/apartment_structure/Window/model.png)
 
 %end
 
@@ -185,7 +185,7 @@ Window {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Window.proto"
 
-### Description
+### Window Description
 
 A customizable window including walls above and below.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.

@@ -2,9 +2,9 @@
 
 ## RobotstadiumGoal
 
-%figure "RobotstadiumGoal"
+%figure "RobotstadiumGoal model in Webots."
 
-![RobotstadiumGoal-image](images/objects/robotstadium/RobotstadiumGoal/model.png)
+![RobotstadiumGoal](images/objects/robotstadium/RobotstadiumGoal/model.png)
 
 %end
 
@@ -20,16 +20,16 @@ RobotstadiumGoal {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/robotstadium/protos/RobotstadiumGoal.proto"
 
-### Description
+### RobotstadiumGoal Description
 
-Robot soccer goal inspired from the RoboCup 2013-2014 Standard Platform League
+Robot soccer goal inspired from the RoboCup 2013-2014 Standard Platform League.
 The color of the goal and the support polygons can be modified.
 
 ## RobotstadiumSoccerField
 
-%figure "RobotstadiumSoccerField"
+%figure "RobotstadiumSoccerField model in Webots."
 
-![RobotstadiumSoccerField-image](images/objects/robotstadium/RobotstadiumSoccerField/model.png)
+![RobotstadiumSoccerField](images/objects/robotstadium/RobotstadiumSoccerField/model.png)
 
 %end
 
@@ -47,9 +47,9 @@ RobotstadiumSoccerField {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
 
-### Description
+### RobotstadiumSoccerField Description
 
-Robot soccer field inspired from the RoboCup 2014 Standard Platform League
-The soccer field is built on a total carpet area of length 10.4 m and width 7.4 m
-The field dimensions (within the white lines) are 9 x 6 m
+Robot soccer field inspired from the RoboCup 2014 Standard Platform League.
+The soccer field is built on a total carpet area of length 10.4 m and width 7.4 m.
+The field dimensions (within the white lines) are 9 x 6 m.
 

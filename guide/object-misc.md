@@ -2,9 +2,9 @@
 
 ## Blackboard
 
-%figure "Blackboard"
+%figure "Blackboard model in Webots."
 
-![Blackboard-image](images/objects/misc/Blackboard/model.png)
+![Blackboard](images/objects/misc/Blackboard/model.png)
 
 %end
 
@@ -18,15 +18,15 @@ Blackboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/misc/protos/Blackboard.proto"
 
-### Description
+### Blackboard Description
 
-A blackboard (about 1.3 x 2.5 m)
+A blackboard (about 1.3 x 2.5 m).
 
 ## Book
 
-%figure "Book"
+%figure "Book model in Webots."
 
-![Book-image](images/objects/misc/Book/model.png)
+![Book](images/objects/misc/Book/model.png)
 
 %end
 
@@ -43,15 +43,15 @@ Book {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/misc/protos/Book.proto"
 
-### Description
+### Book Description
 
-A book (0.2 x 0.15 x 0.02 m)
+A book (0.2 x 0.15 x 0.02 m).
 
 ## Clock
 
-%figure "Clock"
+%figure "Clock model in Webots."
 
-![Clock-image](images/objects/misc/Clock/model.png)
+![Clock](images/objects/misc/Clock/model.png)
 
 %end
 
@@ -65,7 +65,7 @@ Clock {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/misc/protos/Clock.proto"
 
-### Description
+### Clock Description
 
-A clock (radius 16.5 cm)
+A clock (radius 16.5 cm).
 

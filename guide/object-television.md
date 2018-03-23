@@ -2,9 +2,9 @@
 
 ## Television
 
-%figure "Television"
+%figure "Television model in Webots."
 
-![Television-image](images/objects/television/Television/model.png)
+![Television](images/objects/television/Television/model.png)
 
 %end
 
@@ -23,7 +23,7 @@ Television {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/television/protos/Television.proto"
 
-### Description
+### Television Description
 
-A television (1 x 0.6 x 0.1 m)
+A television (1 x 0.6 x 0.1 m).
 

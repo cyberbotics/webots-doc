@@ -2,9 +2,9 @@
 
 ## Apple
 
-%figure "Apple"
+%figure "Apple model in Webots."
 
-![Apple-image](images/objects/fruits/Apple/model.png)
+![Apple](images/objects/fruits/Apple/model.png)
 
 %end
 
@@ -22,15 +22,15 @@ Apple {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/Apple.proto"
 
-### Description
+### Apple Description
 
-An apple (0.05 x 0.05 x 0.05 m)
+An apple (0.05 x 0.05 x 0.05 m).
 
 ## FruitBowl
 
-%figure "FruitBowl"
+%figure "FruitBowl model in Webots."
 
-![FruitBowl-image](images/objects/fruits/FruitBowl/model.png)
+![FruitBowl](images/objects/fruits/FruitBowl/model.png)
 
 %end
 
@@ -47,15 +47,15 @@ FruitBowl {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/FruitBowl.proto"
 
-### Description
+### FruitBowl Description
 
-A fruit bowl (0.146 x 0.146 x 0.146 m)
+A fruit bowl (0.146 x 0.146 x 0.146 m).
 
 ## Orange
 
-%figure "Orange"
+%figure "Orange model in Webots."
 
-![Orange-image](images/objects/fruits/Orange/model.png)
+![Orange](images/objects/fruits/Orange/model.png)
 
 %end
 
@@ -72,7 +72,7 @@ Orange {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/Orange.proto"
 
-### Description
+### Orange Description
 
-An orange (0.05 x 0.05 x 0.05 m)
+An orange (0.05 x 0.05 x 0.05 m).
 

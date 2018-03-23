@@ -2,9 +2,9 @@
 
 ## Mirror
 
-%figure "Mirror"
+%figure "Mirror model in Webots."
 
-![Mirror-image](images/objects/mirror/Mirror/model.png)
+![Mirror](images/objects/mirror/Mirror/model.png)
 
 %end
 
@@ -25,8 +25,8 @@ Mirror {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/mirror/protos/Mirror.proto"
 
-### Description
+### Mirror Description
 
-A simple mirror made of a display attached to a camera
-The reflected image does not depend on the viewpoint position
+A simple mirror made of a display attached to a camera.
+The reflected image does not depend on the viewpoint position.
 

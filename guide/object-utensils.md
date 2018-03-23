@@ -2,9 +2,9 @@
 
 ## Carafe
 
-%figure "Carafe"
+%figure "Carafe model in Webots."
 
-![Carafe-image](images/objects/utensils/Carafe/model.png)
+![Carafe](images/objects/utensils/Carafe/model.png)
 
 %end
 
@@ -19,15 +19,15 @@ Carafe {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Carafe.proto"
 
-### Description
+### Carafe Description
 
-A carafe
+A carafe.
 
 ## Cookware
 
-%figure "Cookware"
+%figure "Cookware model in Webots."
 
-![Cookware-image](images/objects/utensils/Cookware/model.png)
+![Cookware](images/objects/utensils/Cookware/model.png)
 
 %end
 
@@ -43,15 +43,15 @@ Cookware {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Cookware.proto"
 
-### Description
+### Cookware Description
 
-A cookware
+A cookware.
 
 ## Fork
 
-%figure "Fork"
+%figure "Fork model in Webots."
 
-![Fork-image](images/objects/utensils/Fork/model.png)
+![Fork](images/objects/utensils/Fork/model.png)
 
 %end
 
@@ -66,15 +66,15 @@ Fork {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Fork.proto"
 
-### Description
+### Fork Description
 
-A fork
+A fork.
 
 ## Glass
 
-%figure "Glass"
+%figure "Glass model in Webots."
 
-![Glass-image](images/objects/utensils/Glass/model.png)
+![Glass](images/objects/utensils/Glass/model.png)
 
 %end
 
@@ -89,15 +89,15 @@ Glass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Glass.proto"
 
-### Description
+### Glass Description
 
-A glass
+A glass.
 
 ## Knife
 
-%figure "Knife"
+%figure "Knife model in Webots."
 
-![Knife-image](images/objects/utensils/Knife/model.png)
+![Knife](images/objects/utensils/Knife/model.png)
 
 %end
 
@@ -112,15 +112,15 @@ Knife {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Knife.proto"
 
-### Description
+### Knife Description
 
-A knife
+A knife.
 
 ## Lid
 
-%figure "Lid"
+%figure "Lid model in Webots."
 
-![Lid-image](images/objects/utensils/Lid/model.png)
+![Lid](images/objects/utensils/Lid/model.png)
 
 %end
 
@@ -136,15 +136,15 @@ Lid {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Lid.proto"
 
-### Description
+### Lid Description
 
-A lid
+A lid.
 
 ## Plate
 
-%figure "Plate"
+%figure "Plate model in Webots."
 
-![Plate-image](images/objects/utensils/Plate/model.png)
+![Plate](images/objects/utensils/Plate/model.png)
 
 %end
 
@@ -162,15 +162,15 @@ Plate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Plate.proto"
 
-### Description
+### Plate Description
 
-A customizable (dimensions, texture, etc. ) plate
+A customizable (dimensions, texture, etc. ) plate.
 
 ## Spoon
 
-%figure "Spoon"
+%figure "Spoon model in Webots."
 
-![Spoon-image](images/objects/utensils/Spoon/model.png)
+![Spoon](images/objects/utensils/Spoon/model.png)
 
 %end
 
@@ -186,15 +186,15 @@ Spoon {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Spoon.proto"
 
-### Description
+### Spoon Description
 
-A spoon
+A spoon.
 
 ## Wineglass
 
-%figure "Wineglass"
+%figure "Wineglass model in Webots."
 
-![Wineglass-image](images/objects/utensils/Wineglass/model.png)
+![Wineglass](images/objects/utensils/Wineglass/model.png)
 
 %end
 
@@ -209,15 +209,15 @@ Wineglass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Wineglass.proto"
 
-### Description
+### Wineglass Description
 
-A wine glass
+A wine glass.
 
 ## WoodenSpoon
 
-%figure "WoodenSpoon"
+%figure "WoodenSpoon model in Webots."
 
-![WoodenSpoon-image](images/objects/utensils/WoodenSpoon/model.png)
+![WoodenSpoon](images/objects/utensils/WoodenSpoon/model.png)
 
 %end
 
@@ -232,7 +232,7 @@ WoodenSpoon {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/WoodenSpoon.proto"
 
-### Description
+### WoodenSpoon Description
 
-A wooden spoon
+A wooden spoon.
 

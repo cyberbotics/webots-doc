@@ -2,9 +2,9 @@
 
 ## OilBarrel
 
-%figure "OilBarrel"
+%figure "OilBarrel model in Webots."
 
-![OilBarrel-image](images/objects/obstacles/OilBarrel/model.png)
+![OilBarrel](images/objects/obstacles/OilBarrel/model.png)
 
 %end
 
@@ -22,15 +22,15 @@ OilBarrel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/OilBarrel.proto"
 
-### Description
+### OilBarrel Description
 
-Resizable oil barrel
+Resizable oil barrel.
 
 ## Ramp30deg
 
-%figure "Ramp30deg"
+%figure "Ramp30deg model in Webots."
 
-![Ramp30deg-image](images/objects/obstacles/Ramp30deg/model.png)
+![Ramp30deg](images/objects/obstacles/Ramp30deg/model.png)
 
 %end
 
@@ -45,16 +45,16 @@ Ramp30deg {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/Ramp30deg.proto"
 
-### Description
+### Ramp30deg Description
 
 A simple ramp made of two 30° slopes and a flat top.
 The ramp is a static object (not physics-enabled) so it will not move when hit.
 
 ## ThreeSteps
 
-%figure "ThreeSteps"
+%figure "ThreeSteps model in Webots."
 
-![ThreeSteps-image](images/objects/obstacles/ThreeSteps/model.png)
+![ThreeSteps](images/objects/obstacles/ThreeSteps/model.png)
 
 %end
 
@@ -70,7 +70,7 @@ ThreeSteps {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/ThreeSteps.proto"
 
-### Description
+### ThreeSteps Description
 
 Three steps with customizable height and color.
 This is not a physics-enabled object so it will not move when hit.

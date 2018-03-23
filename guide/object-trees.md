@@ -2,9 +2,9 @@
 
 ## Forest
 
-%figure "Forest"
+%figure "Forest model in Webots."
 
-![Forest-image](images/objects/trees/Forest/model.png)
+![Forest](images/objects/trees/Forest/model.png)
 
 %end
 
@@ -27,17 +27,25 @@ Forest {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Forest.proto"
 
-### Description
+### Forest Description
 
-Efficient and customizable forest
-Tree types are: 'oak tree', 'crab apple tree', 'cherry tree', 'birch tree', 'palm tree', 'spruce', 'white pine', 'hackberry tree' and 'hazel tree'
-The 'random' type choose randomly a tree type each time the node is regenerated
-The shape of the forest can either be defined using the 'shape' and 'density' fields
-or the coordinate of each tree can be defined in external files ( X,Y,Z per tree, one tree per line), the path to those file
-can either be absolute, relative to the proto, relative to the world or relative to the project.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles))
+Efficient and customizable forest.
+Tree types are:
+- 'oak tree'
+- 'crab apple tree'
+- 'cherry tree'
+- 'birch tree'
+- 'palm tree'
+- 'spruce'
+- 'white pine'
+- 'hackberry tree'
+- 'hazel tree'
+The 'random' type choose randomly a tree type each time the node is regenerated.
+The shape of the forest can either be defined using the 'shape' and 'density' fields or the coordinate of each tree can be defined in external files ( X,Y,Z per tree, one tree per line).
+The path to those files can either be absolute, relative to the proto, relative to the world or relative to the project.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-### Field Summary
+### Forest Field Summary
 
 - `treesFiles`: forest file(s)
 
@@ -61,9 +69,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## RoundTree
 
-%figure "RoundTree"
+%figure "RoundTree model in Webots."
 
-![RoundTree-image](images/objects/trees/RoundTree/model.png)
+![RoundTree](images/objects/trees/RoundTree/model.png)
 
 %end
 
@@ -76,15 +84,15 @@ RoundTree {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/RoundTree.proto"
 
-### Description
+### RoundTree Description
 
 A tree.
 
 ## SimpleTree
 
-%figure "SimpleTree"
+%figure "SimpleTree model in Webots."
 
-![SimpleTree-image](images/objects/trees/SimpleTree/model.png)
+![SimpleTree](images/objects/trees/SimpleTree/model.png)
 
 %end
 
@@ -106,13 +114,22 @@ SimpleTree {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/SimpleTree.proto"
 
-### Description
+### SimpleTree Description
 
-Efficient (with only 8 polygones) and customizable outdoor tree
-Tree types are: 'oak tree', 'crab apple tree', 'cherry tree', 'birch tree', 'palm tree', 'spruce', 'white pine', 'hackberry tree' and 'hazel tree'
+Efficient (with only 8 polygones) and customizable outdoor tree.
+Tree types are:
+- 'oak tree'
+- 'crab apple tree'
+- 'cherry tree'
+- 'birch tree'
+- 'palm tree'
+- 'spruce'
+- 'white pine'
+- 'hackberry tree'
+- 'hazel tree'
 The 'random' type choose randomly a tree type each time the node is regenerated
 
-### Field Summary
+### SimpleTree Field Summary
 
 - `type`: defines the type of three
 
@@ -128,9 +145,9 @@ The 'random' type choose randomly a tree type each time the node is regenerated
 
 ## Tree
 
-%figure "Tree"
+%figure "Tree model in Webots."
 
-![Tree-image](images/objects/trees/Tree/model.png)
+![Tree](images/objects/trees/Tree/model.png)
 
 %end
 
@@ -149,8 +166,8 @@ Tree {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Tree.proto"
 
-### Description
+### Tree Description
 
-Efficient (with only 8 polygones) and fast to load tree
+Efficient (with only 8 polygones) and fast to load tree.
 This PROTO is less configurable than 'SimpleTree' but way faster to load.
 

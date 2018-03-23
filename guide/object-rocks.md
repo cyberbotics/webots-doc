@@ -2,9 +2,9 @@
 
 ## Rock10cm
 
-%figure "Rock10cm"
+%figure "Rock10cm model in Webots."
 
-![Rock10cm-image](images/objects/rocks/Rock10cm/model.png)
+![Rock10cm](images/objects/rocks/Rock10cm/model.png)
 
 %end
 
@@ -23,15 +23,15 @@ Rock10cm {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/rocks/protos/Rock10cm.proto"
 
-### Description
+### Rock10cm Description
 
-A rock (10 cm)
+A rock (10 cm).
 
 ## Rock17cm
 
-%figure "Rock17cm"
+%figure "Rock17cm model in Webots."
 
-![Rock17cm-image](images/objects/rocks/Rock17cm/model.png)
+![Rock17cm](images/objects/rocks/Rock17cm/model.png)
 
 %end
 
@@ -50,7 +50,7 @@ Rock17cm {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/rocks/protos/Rock17cm.proto"
 
-### Description
+### Rock17cm Description
 
-A rock (17 cm)
+A rock (17 cm).
 

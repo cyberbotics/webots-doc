@@ -14,6 +14,7 @@ This allows to store the position and orientation of the PROTO instances.
 ```
 #VRML_SIM R2018b utf8
 # license: Creative Commons Attribution 4.0 International License
+# license url: https://creativecommons.org/licenses/by/4.0/legalcode
 # A two-color chair
 
 PROTO TwoColorChair [

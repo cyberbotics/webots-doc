@@ -73,7 +73,8 @@ PROTO Bicycle [
 
 IS statements may appear inside the PROTO definition wherever fields may appear.
 IS statements shall refer to fields defined in the PROTO declaration.
-Multiple IS statements for the same field in the PROTO interface declaration is valid.
+Multiple IS statements for the same field in the PROTO interface declaration is valid but it is discouraged to use multiple times fields containing [Solid](solid.md) or [Joint](joint.md) nodes.
+This is because the system assumes that all the instances of a PROTO field are identical to work correctly but this cannot be guaranteed for these nodes given that due to internal changes or controller program instructions the instances' state could diverge.
 
 An interface field that is not linked to an internal PROTO field with an IS may produce a warning when parsed.
 This warning can be suppressed when declaring an interface field by using the `unconnectedField` keyword instead of `field` in the declaration.

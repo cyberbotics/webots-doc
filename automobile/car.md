@@ -110,8 +110,6 @@ For the three other sensor slots, the positions are different for each model (be
 
 %end
 
-In order to simplify some simulations, `Solid` based cars can be used from the [CarSimple](simple-vehicles.md#carsimple) PROTO.
-
 ### Heavy-Weights
 
 Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck.
@@ -140,7 +138,7 @@ The rest of the positions can be seen in the [following table](#positions-of-the
 
 ### Simple Vehicles
 
-In adition to those controlable models of vehicle, several non-controlable vehicle (called 'simple') are available as static objects.
+In adition to those controlable models of vehicle, several non-controlable vehicles (called 'simple') based on the `Solid` node are available.
 
 > **Note**: These vehicles can be moved kinematically using a Supervisor. These are for example the vehicles used by the SUMO interface.
 

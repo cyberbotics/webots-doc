@@ -24,7 +24,7 @@ These sensors are listed by category [in the section below](#branded-sensors).
 | ![Receiver.png](images/sensors/Receiver.png) | [Receiver](../reference/receiver.md) | *Simulates radio, serial or infra-red receiver in order to receive data from other robots.* |
 | ![TouchSensor.png](images/sensors/TouchSensor.png) | [TouchSensor](../reference/touchsensor.md) | *Simulates a bumper or a force sensor.* |
 
-### Branded Sensors
+### Commercially Available Sensors
 
 - [Camera Sensors](camera-sensors.md)
 - [Lidar Sensors](lidar-sensors.md)

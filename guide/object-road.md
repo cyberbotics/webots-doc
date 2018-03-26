@@ -31,10 +31,10 @@ Road {
       SFBool     leftSide                  TRUE                    
       MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]        
       MFFloat    roadTilt                  [ 0, 0]                 
-      MFFloat    startingAngle             [ ]                     
-      MFFloat    endingAngle               [ ]                     
-      MFString   startLine                 [ ]                     
-      MFString   endLine                   [ ]                     
+      MFFloat    startingAngle             []                      
+      MFFloat    endingAngle               []                      
+      MFString   startLine                 []                      
+      MFString   endLine                   []                      
       SFInt32    splineSubdivision         4                       
       MFString   texture                   "textures/road.jpg"     
       SFFloat    textureScale              2                       
@@ -171,8 +171,8 @@ AddLaneRoadSegment {
       SFBool     rightBarrier              FALSE                              
       SFBool     leftBarrier               FALSE                              
       SFBool     bottom                    FALSE                              
-      MFString   startLine                 [ ]                                
-      MFString   endLine                   [ ]                                
+      MFString   startLine                 []                                 
+      MFString   endLine                   []                                 
       MFString   texture                   "textures/road.jpg"                
       SFFloat    textureScale              2                                  
       MFString   newLaneTexture            "textures/road_no_border_line.jpg" 
@@ -288,8 +288,8 @@ AddLanesRoadSegment {
       SFBool     rightBarrier              FALSE                              
       SFBool     leftBarrier               FALSE                              
       SFBool     bottom                    FALSE                              
-      MFString   startLine                 [ ]                                
-      MFString   endLine                   [ ]                                
+      MFString   startLine                 []                                 
+      MFString   endLine                   []                                 
       MFString   texture                   "textures/road.jpg"                
       SFFloat    textureScale              2                                  
       MFString   newLaneTexture            "textures/road_no_border_line.jpg" 
@@ -506,8 +506,8 @@ CurvedRoadSegment {
    SFBool     bottom                    FALSE                   
    SFFloat    curvatureRadius           10                      
    SFFloat    totalAngle                1.5708                  
-   MFString   startLine                 [ ]                     
-   MFString   endLine                   [ ]                     
+   MFString   startLine                 []                      
+   MFString   endLine                   []                      
    SFInt32    subdivision               8                       
    SFFloat    tilt                      0                       
    MFString   texture                   "textures/road.jpg"     
@@ -631,8 +631,8 @@ HelicoidalRoadSegment {
    SFFloat    height                    20                      
    SFFloat    radius                    15                      
    SFFloat    heigthStep                5                       
-   MFString   startLine                 [ ]                     
-   MFString   endLine                   [ ]                     
+   MFString   startLine                 []                      
+   MFString   endLine                   []                      
    SFFloat    subdivision               64                      
    MFString   texture                   "textures/road.jpg"     
    SFFloat    textureScale              2                       
@@ -748,8 +748,8 @@ LaneSeparation {
       SFBool     rightBarrier                FALSE                      
       SFBool     leftBarrier                 FALSE                      
       SFBool     bottom                      FALSE                      
-      MFString   startLine                   [ ]                        
-      MFString   endLine                     [ ]                        
+      MFString   startLine                   []                         
+      MFString   endLine                     []                         
       MFString   texture                     "textures/road.jpg"        
       SFFloat    textureScale                2                          
       MFString   pavementTexture             "textures/pavement.jpg"    
@@ -863,7 +863,7 @@ RoadIntersection {
     SFInt32    startRoadsNumberOfLanes        2                                   
     MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
                                                       "textures/road_line_triangle.png" ]   
-    MFString   startRoadsEndLine              [ ]                                 
+    MFString   startRoadsEndLine              []                                  
     MFBool     startRoadsDashedLine           FALSE                               
     SFBool     startRoadBorder                TRUE                                
     SFFloat    startRoadBorderHeight          0.15                                
@@ -1016,7 +1016,7 @@ Roundabout {
     SFInt32    startRoadsNumberOfLanes  2                                   
     MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
                                                 "textures/road_line_triangle.png" ] 
-    MFString   startRoadsEndLine        [ ]                                 
+    MFString   startRoadsEndLine        []                                  
     MFBool     startRoadsDashedLine     FALSE                               
     SFBool     roadBoundingObject       FALSE                               
     SFBool     borderBoundingObject     FALSE                               
@@ -1130,8 +1130,8 @@ StraightRoadSegment {
    SFBool     rightSide                 TRUE                    
    SFBool     leftSide                  TRUE                    
    SFFloat    length                    10                      
-   MFString   startLine                 [ ]                     
-   MFString   endLine                   [ ]                     
+   MFString   startLine                 []                      
+   MFString   endLine                   []                      
    SFFloat    startingRoadTilt          0                       
    SFFloat    endingRoadTilt            0                       
    MFString   texture                   "textures/road.jpg"     

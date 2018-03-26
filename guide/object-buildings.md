@@ -62,9 +62,9 @@ Building {
   SFInt32     startingFloor          0                                    
   MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]    
   SFNode      wallAppearance         Appearance { material Material {} }  
-  MFString    groundFloor            [ ]                                  
-  MFFloat     groundFloorScale       [ ]                                  
-  MFFloat     groundFloorTranslation [ ]                                  
+  MFString    groundFloor            []                                   
+  MFFloat     groundFloorScale       []                                   
+  MFFloat     groundFloorTranslation []                                   
   SFNode      roofAppearance         Appearance { material Material {} }  
   SFString    roofShape              "pyramidal roof"                     
   SFFloat     roofHeight             3                                    
@@ -369,12 +369,12 @@ SimpleBuilding {
   SFInt32     startingFloor          0                                  
   MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]  
   SFString    wallType               "windowed building"                
-  MFColor     wallColor              [ ]                                
-  MFString    groundFloor            [ ]                                
-  MFFloat     groundFloorScale       [ ]                                
-  MFFloat     groundFloorTranslation [ ]                                
+  MFColor     wallColor              []                                 
+  MFString    groundFloor            []                                 
+  MFFloat     groundFloorScale       []                                 
+  MFFloat     groundFloorTranslation []                                 
   SFString    roofType               "tiled"                            
-  MFColor     roofColor              [ ]                                
+  MFColor     roofColor              []                                 
   SFString    roofShape              "pyramidal roof"                   
   SFBool      snowOnRoof             FALSE                              
   SFFloat     roofHeight             3                                  

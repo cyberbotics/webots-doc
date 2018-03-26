@@ -10,7 +10,7 @@ Using the nodes described [below](#generic-actuator-list) and their correspondin
 | ![Brake.png](images/actuators/Brake.png) | [Brake](../reference/brake.md) | *Simulates a mechanical braking system.* |
 | ![Connector.png](images/actuators/Connector.png) | [Connector](../reference/connector.md) | *Simulates a mechanical and breakable docking system.* |
 | ![Display.png](images/actuators/Display.png) | [Display](../reference/display.md) | *Can be used to paint to a 2D image using low-level API functions which can be rendered into a 2D overlay and/or into a texture displayed in the 3D world.* |
-| ![Emitter.png](images/actuators/Emitter.png) | [Emitter](../reference/emitter.md) | *Simulates radio, serial or infra-red emitters in order to send data to other robots.* |
+| ![Emitter.png](images/actuators/Emitter.png) | [Emitter](../reference/emitter.md) | *Simulates radio, serial or infra-red emitters sending data to other robots.* |
 | ![LinearMotor.png](images/actuators/LinearMotor.png) | [LinearMotor](../reference/linearmotor.md) | *Simulates a motor constrained on an axis.* |
 | ![LED.png](images/actuators/LED.png) | [LED](../reference/led.md) | *Simulates a light emitting diode (LED).* |
 | ![Muscle.png](images/actuators/Muscle.png) | [Muscle](../reference/muscle.md) | *Can be added to a motor to display an artificial muscle.* |

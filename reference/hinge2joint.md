@@ -38,4 +38,4 @@ If the `jointParameters` field is left empty, default values of the HingeJointPa
 - `device2`: This field optionally specifies a [RotationalMotor](rotationalmotor.md), an angular [PositionSensor](positionsensor.md) and/or a [Brake](brake.md) device attached to the second axis.
 If no motor is specified, this part of the joint is passive.
 
-- `position2`: This field is not visible from the Scene Tree, see [joint's hidden position field](joint.md#joint-s-hidden-position-fields).
+- `position2`: This field is not visible from the Scene Tree, see [joint's hidden position field](joint.md#joints-hidden-position-fields).

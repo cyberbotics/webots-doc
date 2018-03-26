@@ -80,6 +80,12 @@ An emergency phone.
 
 ## Fence
 
+%figure "Fence model in Webots."
+
+![Fence](images/objects/street_furniture/Fence/model.png)
+
+%end
+
 ```
 Fence {
   SFVec3f      translation             0 0 0

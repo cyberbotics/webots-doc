@@ -282,6 +282,12 @@ A big hotel.
 
 ## ModernHouse
 
+%figure "ModernHouse model in Webots."
+
+![ModernHouse](images/objects/buildings/ModernHouse/model.png)
+
+%end
+
 ```
 ModernHouse {
   SFVec3f translation         0 0 0
@@ -324,6 +330,12 @@ Museum {
 An old museum.
 
 ## ResidentialBuilding
+
+%figure "ResidentialBuilding model in Webots."
+
+![ResidentialBuilding](images/objects/buildings/ResidentialBuilding/model.png)
+
+%end
 
 ```
 ResidentialBuilding {

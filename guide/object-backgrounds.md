@@ -2,6 +2,12 @@
 
 ## TexturedBackground
 
+%figure "TexturedBackground model in Webots."
+
+![TexturedBackground](images/objects/backgrounds/TexturedBackground/model.png)
+
+%end
+
 ```
 TexturedBackground {
   SFString texture "noon_sunny_empty"
@@ -26,6 +32,12 @@ Supported values for the "texture" field:
 - twilight\_cloudy\_empty
 
 ## TexturedBackgroundLight
+
+%figure "TexturedBackgroundLight model in Webots."
+
+![TexturedBackgroundLight](images/objects/backgrounds/TexturedBackgroundLight/model.png)
+
+%end
 
 ```
 TexturedBackgroundLight {

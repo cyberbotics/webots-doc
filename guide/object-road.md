@@ -48,9 +48,6 @@ AddLaneRoadSegment {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
 
-> **License**: Creative Commons Attribution 4.0 International License.
-[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
-
 ### AddLaneRoadSegment Description
 
 A simple segment of road allowing to add (or remove) one lane to the road.
@@ -73,7 +70,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `newLaneLeft`: side where to add the new lane.
+- `newLaneLeft`: Defines on which side is added the new lane.
 
 - `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
@@ -426,7 +423,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `curvatureRadius`: Deinfes the radius of the curve.
+- `curvatureRadius`: Defines the radius of the curve.
 
 - `totalAngle`: Defines the angle covered by the road (length = totalAngle * curvatureRadius).
 
@@ -442,7 +439,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `textureScale`: Defines the length (in meter) of the road texture.
 
-- `pavementTexture`: Define the texture to be used for the sidewalk.
+- `pavementTexture`: Defines the texture to be used for the sidewalk.
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 

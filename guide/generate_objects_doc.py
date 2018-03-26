@@ -13,7 +13,7 @@ DESCRIPTION_STATE = 0
 FIELDS_STATE = 1
 BODY_STATE = 2
 
-categories = []
+fileList = []
 upperCategories = {}
 with open('objects.md', 'w') as file:
     file.write('# Objects\n\n')
@@ -21,108 +21,109 @@ with open('objects.md', 'w') as file:
 
 for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep + 'projects' + os.sep + 'objects'):
     for fileName in fnmatch.filter(fileNames, '*.proto'):
-        proto = os.path.join(rootPath, fileName)
-        protoName = os.path.basename(proto).split('.')[0]
-        category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
-        categoryName = category.replace('_', '-')
-        upperCategory = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
-        if upperCategory == 'objects':
-            upperCategory = category
-        description = ''
-        license = ''
-        licenseUrl = ''
-        fields = ''
-        state = 0
-        describedField = []
-        with open(proto, 'r') as file:
-            skipProto = False
-            closingAccolades = 0
-            for line in file.readlines():
-                closingAccolades += line.count(']') - line.count('[')
-                if state == DESCRIPTION_STATE:
-                    if line.startswith('#'):
-                        if line.startswith('#VRML_SIM'):
-                            continue
-                        elif line.startswith('# license:'):
-                            license = line.replace('# license:', '').strip()
-                        elif line.startswith('# license url:'):
-                            licenseUrl = line.replace('# license url:', '').strip()
-                        elif line.startswith('# tags:'):
-                            if 'deprecated' in line or 'hidden' in line:
-                                skipProto = True
-                                break
-                        else:
-                            newLine = line.replace('#', '').replace('_', '\_').strip()
-                            urls = re.findall(WEB_URL_REGEX, newLine)
-                            for url in urls:
-                                newLine = newLine.replace(url, '[%s](%s)' % (url, url))
-                            description += newLine + '\n'
-                    elif line.startswith('PROTO '):
-                        state = FIELDS_STATE
-                elif state == FIELDS_STATE:
-                    if closingAccolades >= 0:
-                        state = BODY_STATE
+        fileList.append(os.path.join(rootPath, fileName))
+
+fileList = sorted(fileList)
+for proto in fileList:
+    protoName = os.path.basename(proto).split('.')[0]
+    category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
+    upperCategory = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
+    if upperCategory == 'objects':
+        upperCategory = category
+    upperCategoryName = upperCategory.replace('_', '-')
+    description = ''
+    license = ''
+    licenseUrl = ''
+    fields = ''
+    state = 0
+    describedField = []
+    with open(proto, 'r') as file:
+        skipProto = False
+        closingAccolades = 0
+        for line in file.readlines():
+            closingAccolades += line.count(']') - line.count('[')
+            if state == DESCRIPTION_STATE:
+                if line.startswith('#'):
+                    if line.startswith('#VRML_SIM'):
+                        continue
+                    elif line.startswith('# license:'):
+                        license = line.replace('# license:', '').strip()
+                    elif line.startswith('# license url:'):
+                        licenseUrl = line.replace('# license url:', '').strip()
+                    elif line.startswith('# tags:'):
+                        if 'deprecated' in line or 'hidden' in line:
+                            skipProto = True
+                            break
                     else:
-                        match = re.match(r'.*ield\s+([^ ]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', line)
-                        if match and match.group(1) != 'hiddenField':
-                            fieldType = match.group(1)
-                            fieldName = match.group(2)
-                            fieldDefaultValue = match.group(3)
-                            fieldComment = match.group(4).strip()
-                            describedField.append((fieldName, fieldComment))
-                        fieldLine = line.replace('field ', '').split('#')[0]
-                        if 'hiddenField' not in fieldLine:
-                            fields += fieldLine
-                            if '#' in line:
-                                fields += '\n'
-        if skipProto:
-            continue
-        exist = os.path.isfile('object-' + categoryName + '.md')
-        mode = 'a'
-        if category not in categories:
-            mode = 'w'
-        with open('object-' + categoryName + '.md', mode) as file:
-            if mode == 'w':
-                file.write('# %s\n\n' % categoryName.replace('-', ' ').title())
-            file.write('## %s\n\n' % protoName)
+                        newLine = line.replace('#', '').replace('_', '\_').strip()
+                        urls = re.findall(WEB_URL_REGEX, newLine)
+                        for url in urls:
+                            newLine = newLine.replace(url, '[%s](%s)' % (url, url))
+                        description += newLine + '\n'
+                elif line.startswith('PROTO '):
+                    state = FIELDS_STATE
+            elif state == FIELDS_STATE:
+                if closingAccolades >= 0:
+                    state = BODY_STATE
+                else:
+                    match = re.match(r'.*ield\s+([^ ]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', line)
+                    if match and match.group(1) != 'hiddenField':
+                        fieldType = match.group(1)
+                        fieldName = match.group(2)
+                        fieldDefaultValue = match.group(3)
+                        fieldComment = match.group(4).strip()
+                        describedField.append((fieldName, fieldComment))
+                    fieldLine = line.replace('field ', '').split('#')[0]
+                    if 'hiddenField' not in fieldLine:
+                        fields += fieldLine
+                        if '#' in line:
+                            fields += '\n'
+    if skipProto:
+        continue
+    exist = os.path.isfile('object-' + upperCategoryName + '.md')
+    mode = 'a'
+    if upperCategory not in upperCategories:
+        mode = 'w'
+    with open('object-' + upperCategoryName + '.md', mode) as file:
+        if upperCategory not in upperCategories or category not in upperCategories[upperCategory]:
+            file.write('# %s\n\n' % category.replace('_', ' ').title())
+        file.write('## %s\n\n' % protoName)
 
-            if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
-                file.write('%%figure "%s model in Webots."\n\n' % protoName)
-                file.write('![%s](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
-                file.write('%end\n\n')
-            else:
-                sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'))
+        if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
+            file.write('%%figure "%s model in Webots."\n\n' % protoName)
+            file.write('![%s](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
+            file.write('%end\n\n')
+        else:
+            sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'))
 
-            file.write('```\n')
-            file.write('%s {\n' % protoName)
-            file.write(fields)
-            file.write('}\n')
-            file.write('```\n\n')
+        file.write('```\n')
+        file.write('%s {\n' % protoName)
+        file.write(fields)
+        file.write('}\n')
+        file.write('```\n\n')
 
-            file.write('> **File location**: "WEBOTS\_HOME%s"\n\n' % proto.replace(os.environ['WEBOTS_HOME'], '').replace(os.sep, '/'))
-            if license:
-                file.write('> **License**: %s\n' % license)
-                if licenseUrl:
-                    file.write('[More information.](%s)\n' % licenseUrl)
-                file.write('\n')
-            # else:
-            #     sys.stderr.write('Please add a license to "%s"\n' % proto)
+        file.write('> **File location**: "WEBOTS\_HOME%s"\n\n' % proto.replace(os.environ['WEBOTS_HOME'], '').replace(os.sep, '/'))
+        if license:
+            file.write('> **License**: %s\n' % license)
+            if licenseUrl:
+                file.write('[More information.](%s)\n' % licenseUrl)
+            file.write('\n')
+        # else:
+        #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
-            file.write('### %s Description\n\n' % protoName)
-            file.write(description + '\n')
+        file.write('### %s Description\n\n' % protoName)
+        file.write(description + '\n')
 
-            if describedField:
-                file.write('### %s Field Summary\n\n' % protoName)
-                for fieldName, fieldDescription in describedField:
-                    file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
+        if describedField:
+            file.write('### %s Field Summary\n\n' % protoName)
+            for fieldName, fieldDescription in describedField:
+                file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
-        if category not in categories:
-            categories.append(category)
-        if upperCategory not in upperCategories:
-            upperCategories[upperCategory] = []
-            upperCategories[upperCategory].append(category)
-        elif category not in upperCategories[upperCategory]:
-            upperCategories[upperCategory].append(category)
+    if upperCategory not in upperCategories:
+        upperCategories[upperCategory] = []
+        upperCategories[upperCategory].append(category)
+    elif category not in upperCategories[upperCategory]:
+        upperCategories[upperCategory].append(category)
 
 upperCategoriesList = sorted(upperCategories.keys())
 categoriesList = []
@@ -130,15 +131,15 @@ with open('objects.md', 'a') as file:
     for upperCategory in upperCategoriesList:
         categories = sorted(upperCategories[upperCategory])
         if not upperCategory == categories[0]:
-            file.write('- %s\n' % (upperCategory.replace('_', ' ').title()))
+            file.write('- [%s](object-%s.md)\n' % (upperCategory.replace('_', ' ').title(), upperCategory.replace('_', '-')))
         for category in categories:
             categoriesList.append(category)
             if upperCategory == category:
                 file.write('- [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
             else:
-                file.write('  - [%s](object-%s.md)\n' % (category.replace('_', ' ').title(), category.replace('_', '-')))
+                file.write('  - [%s](object-%s.md#%s)\n' % (category.replace('_', ' ').title(), upperCategory.replace('_', '-'), category.replace('_', '-')))
     file.write('\n')
 categoriesList = sorted(categoriesList)
 print("Please update the 'Objects' part in 'menu.md' with:")
-for category in categoriesList:
+for category in upperCategoriesList:
     print('    - [%s](object-%s.md)' % (category.replace('_', ' ').title(), category.replace('_', '-')))

@@ -1,0 +1,428 @@
+# Containers
+
+## CardboardBox
+
+%figure "CardboardBox model in Webots."
+
+![CardboardBox](images/objects/containers/CardboardBox/model.png)
+
+%end
+
+```
+CardboardBox {
+  SFVec3f translation 0 0.3 0
+  SFRotation rotation 0 1 0 0
+  SFString name "cardboard box"
+  SFVec3f size 0.6 0.6 0.6
+  SFFloat mass 0
+  SFBool locked FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/CardboardBox.proto"
+
+### CardboardBox Description
+
+A cardboard box.
+
+## WoodenBox
+
+%figure "WoodenBox model in Webots."
+
+![WoodenBox](images/objects/containers/WoodenBox/model.png)
+
+%end
+
+```
+WoodenBox {
+  SFVec3f translation 0 0.3 0
+  SFRotation rotation 0 1 0 0
+  SFString name "wooden box"
+  SFVec3f size 0.6 0.6 0.6
+  SFFloat mass 0
+  MFNode immersionProperties []
+  SFBool locked FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+### WoodenBox Description
+
+A wooden box.
+
+# Pallet
+
+## WoodenPallet
+
+%figure "WoodenPallet model in Webots."
+
+![WoodenPallet](images/objects/pallet/WoodenPallet/model.png)
+
+%end
+
+```
+WoodenPallet {
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "wooden pallet"
+  SFVec3f    size           0.8 0.14 1.2
+  SFInt32    lathNumber     6
+  SFFloat    lathWidth      0.08
+  SFFloat    mass           0
+  SFBool     boundingObject TRUE
+  SFBool     locked         FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPallet.proto"
+
+### WoodenPallet Description
+
+Simple and configurable wooden pallet.
+
+## WoodenPalletStack
+
+%figure "WoodenPalletStack model in Webots."
+
+![WoodenPalletStack](images/objects/pallet/WoodenPalletStack/model.png)
+
+%end
+
+```
+WoodenPalletStack {
+  SFVec3f    translation              0 0 0
+  SFRotation rotation                 0 1 0 0
+  SFString   name                     "wooden pallet stack"
+  SFInt32    palletNumber             8
+  SFVec3f    palletSize               0.8 0.14 1.2
+  SFInt32    palletLathNumber         6
+  SFFloat    palletLathWidth          0.08
+  SFFloat    lateralMisalignment      0.1
+  SFFloat    longitudinalMisalignment 0.05
+  SFFloat    palletMass               0
+  SFBool     boundingObject           TRUE
+  SFBool     locked                   FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPalletStack.proto"
+
+### WoodenPalletStack Description
+
+Simple and configurable wooden pallet stack.
+
+# Pipes
+
+## LJoint
+
+%figure "LJoint model in Webots."
+
+![LJoint](images/objects/pipes/LJoint/model.png)
+
+%end
+
+```
+LJoint {
+  SFVec3f    translation 0 0.104 0
+  SFRotation rotation 0 1 0 0
+  SFString   name "L joint pipe"
+  SFVec3f    scale 1 1 1
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/LJoint.proto"
+
+### LJoint Description
+
+90-degree L-joint for connecting pipes.
+
+## PipeSection
+
+%figure "PipeSection model in Webots."
+
+![PipeSection](images/objects/pipes/PipeSection/model.png)
+
+%end
+
+```
+PipeSection {
+  SFVec3f    translation 0 0.03 0
+  SFRotation rotation 0 0 1 1.5708
+  SFString   name "pipe section"
+  SFFloat    height 0.5
+  SFFloat    radius 0.03
+  SFInt32    subdivision 24
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/PipeSection.proto"
+
+### PipeSection Description
+
+A section of pipe.
+
+## TJoint
+
+%figure "TJoint model in Webots."
+
+![TJoint](images/objects/pipes/TJoint/model.png)
+
+%end
+
+```
+TJoint {
+  SFVec3f    translation 0 0.95 0
+  SFRotation rotation 0 1 0 0
+  SFString   name "T joint pipe"
+  SFVec3f    scale 1 1 1
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/TJoint.proto"
+
+### TJoint Description
+
+3-slot T-joint for connecting pipes.
+
+# Tools
+
+## Bolt
+
+%figure "Bolt model in Webots."
+
+![Bolt](images/objects/tools/Bolt/model.png)
+
+%end
+
+```
+Bolt {
+  SFVec3f translation 0 0.0131 0
+  SFRotation rotation 0 0 1 0
+  SFString name "bolt"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Bolt.proto"
+
+### Bolt Description
+
+A threaded bolt.
+
+## Hammer
+
+%figure "Hammer model in Webots."
+
+![Hammer](images/objects/tools/Hammer/model.png)
+
+%end
+
+```
+Hammer {
+  SFVec3f translation 0 0.014 0
+  SFRotation rotation 0 1 0 0
+  SFString name "hammer"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
+
+### Hammer Description
+
+A 25cm asymmetric club hammer.
+
+## Nut
+
+%figure "Nut model in Webots."
+
+![Nut](images/objects/tools/Nut/model.png)
+
+%end
+
+```
+Nut {
+  SFVec3f translation 0 0.004 0
+  SFRotation rotation 0 1 0 0
+  SFString name "nut"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Nut.proto"
+
+### Nut Description
+
+A hexagonal nut.
+
+## PaintBucket
+
+%figure "PaintBucket model in Webots."
+
+![PaintBucket](images/objects/tools/PaintBucket/model.png)
+
+%end
+
+```
+PaintBucket {
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "paint bucket"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
+
+### PaintBucket Description
+
+A 4kg bucket of paint, with HingeJoint-based handle.
+
+## PlatformCart
+
+%figure "PlatformCart model in Webots."
+
+![PlatformCart](images/objects/tools/PlatformCart/model.png)
+
+%end
+
+```
+PlatformCart {
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "platform cart"
+  MFNode slot []
+  SFNode physics Physics {}
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PlatformCart.proto"
+
+### PlatformCart Description
+
+A platform cart with overall dimensions 90Lx50Wx85H cm.
+
+## Screwdriver
+
+%figure "Screwdriver model in Webots."
+
+![Screwdriver](images/objects/tools/Screwdriver/model.png)
+
+%end
+
+```
+Screwdriver {
+  SFVec3f translation 0 0.012 0
+  SFRotation rotation 0 1 0 0
+  SFString name "screwdriver"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Screwdriver.proto"
+
+### Screwdriver Description
+
+A Philips screwdriver. The blade and handle are balanced.
+
+## Wrench
+
+%figure "Wrench model in Webots."
+
+![Wrench](images/objects/tools/Wrench/model.png)
+
+%end
+
+```
+Wrench {
+  SFVec3f translation 0 0 0
+  SFRotation rotation 0 1 0 0
+  SFString name "wrench"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
+
+### Wrench Description
+
+A 15cm Open-End wrench.
+
+# Valves
+
+## LargeValve
+
+%figure "LargeValve model in Webots."
+
+![LargeValve](images/objects/valves/LargeValve/model.png)
+
+%end
+
+```
+LargeValve {
+  SFVec3f    translation 0 0.106 0
+  SFRotation rotation 0 1 0 0
+  SFString name "large valve"
+  SFFloat jointFriction 0.5
+  SFString controller "valve_turner"
+  SFString absoluteStop "15.7079632679"
+  SFString contactMaterial "default"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LargeValve.proto"
+
+### LargeValve Description
+
+Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
+
+## LeverValve
+
+%figure "LeverValve model in Webots."
+
+![LeverValve](images/objects/valves/LeverValve/model.png)
+
+%end
+
+```
+LeverValve {
+  SFVec3f    translation 0 0.142 0
+  SFRotation rotation 0 1 0 0
+  SFString name "lever valve"
+  SFFloat jointFriction 1
+  SFVec3f scale 0.7 0.7 0.7
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LeverValve.proto"
+
+### LeverValve Description
+
+Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
+
+## SmallValve
+
+%figure "SmallValve model in Webots."
+
+![SmallValve](images/objects/valves/SmallValve/model.png)
+
+%end
+
+```
+SmallValve {
+  SFVec3f    translation 0 0.077 0
+  SFRotation rotation 0 1 0 0
+  SFString name "small valve"
+  SFFloat jointFriction 0.1
+  SFString controller "valve_turner"
+  SFString absoluteStop "15.7079632679"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/SmallValve.proto"
+
+### SmallValve Description
+
+Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
+

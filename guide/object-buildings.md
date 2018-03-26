@@ -60,7 +60,7 @@ Building {
   SFFloat     floorHeight            3                                    
   SFInt32     floorNumber            3                                    
   SFInt32     startingFloor          0                                    
-      MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]    
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]    
   SFNode      wallAppearance         Appearance { material Material {} }  
   MFString    groundFloor            [ ]                                  
   MFFloat     groundFloorScale       [ ]                                  
@@ -80,37 +80,36 @@ Building {
 ### Building Description
 
 A customizable building, the size, appearance and geometry can fully be defined.
-The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
 ### Building Field Summary
 
-- `name`: could contain the name of the building
+- `name`: Defines the name of the building
 
-- `floorHeight`: defines the height of one floor
+- `floorHeight`: Defines the height of one floor.
 
-- `floorNumber`: defines the number of floors (excluding roof)
+- `floorNumber`: Defines the number of floors (excluding roof).
 
-- `startingFloor`: defines the number of floors between the ground and the first floor
+- `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
 
-- `corners`: defines the geometry of the building
+- `corners`: Defines the 2D geometry of the building (2D ground footprint of the building).
 
-- `wallAppearance`: defines the wall appearance
+- `wallAppearance`: Defines the appearance used for the walls of the building.
 
-- `groundFloor`: defines the texture to be used for the first floor (optional)
+- `groundFloor`: Defines the texture to be used for the first floor (optional).
 
-- `groundFloorScale`: defines the horizontal scale of the ground texture
+- `groundFloorScale`: Defines the horizontal scale of the ground texture.
 
-- `groundFloorTranslation`: defines the translation of the ground floor textures
+- `groundFloorTranslation`: Defines the translation of the ground floor textures.
 
-- `roofAppearance`: defines the roof appearance
+- `roofAppearance`: Defines the appearance used for the roof of the building.
 
-- `roofShape`: defines the geometry of the roof (flat or pyramidal)
+- `roofShape`: Defines the geometry of the roof. Supported geometry are `flat roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
 
-- `roofHeight`: defines the height of the roof (used only in the case of pyramidal roof)
+- `roofHeight`: Defines the height of the roof (used only in the case of pyramidal roof).
 
-- `enableBoundingObject`: defines if the building should have a bounding object or not
+- `enableBoundingObject`: Defines whether the building should have a bounding object.
 
-- `bottom`: defines if the building should have a floor (visible from below) or not
+- `bottom`: Defines whether the bottom face of the building should be displayed.
 
 ## BuildingUnderConstruction
 
@@ -356,7 +355,7 @@ SimpleBuilding {
   SFFloat     floorHeight            3                                  
   SFInt32     floorNumber            3                                  
   SFInt32     startingFloor          0                                  
-      MFVec2f corners                [10 10, 10 -10, -10 -10, -10 10 ]  
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]  
   SFString    wallType               "windowed building"                
   MFColor     wallColor              [ ]                                
   MFString    groundFloor            [ ]                                
@@ -378,43 +377,79 @@ SimpleBuilding {
 
 A customizable building, the size and geometry can fully be defined.
 The texture of the wall and roof can be selected using the fields 'wallType' and 'roofType'.
+Available wall types are:
+- `glass building`
+- `classic building`
+- `orange building`
+- `gray glass building`
+- `blue glass building`
+- `arcade-style building`
+- `transparent highrise`
+- `windowed building`
+- `old brick building`
+- `red and white building`
+- `construction building`
+- `red brick wall`
+- `old brick wall`
+- `stone brick`
+- `stone wall`
+- `glass highrise`
+- `old house`
+- `old building`
+- `highrise`
+- `brick building`
+- `residential building`
+- `old office building`
+- `factory building`
+- `tall house`
+- `office building`
+- `concrete building`
+
+Available roof types are:
+- `tiled`
+- `gravel`
+- `slate`
+- `old tiles`
+- `sheet metal`
+- `metal tiles`
+- `bitumen`
 The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
 ### SimpleBuilding Field Summary
 
-- `name`: could contain the name of the building
+- `name`: Defines the name of the building.
 
-- `floorHeight`: defines the height of one floor
+- `floorHeight`: Defines the height of one floor.
 
-- `floorNumber`: defines the number of floors (excluding roof)
+- `floorNumber`: Defines the number of floors (excluding roof).
 
-- `startingFloor`: defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
+- `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
 
-- `corners`: defines the geometry of the building
+- `corners`: Defines the 2D geometry of the building (2D ground footprint of the building).
 
-- `wallType`: defines the texture to be used for the wall
+- `wallType`: Defines the wall type.
 
-- `wallColor`: defines the color to be used for the wall
+- `wallColor`: Defines the wall color.
 
-- `groundFloor`: defines the texture to be used for the first floor (optional)
+- `groundFloor`: Defines the texture to be used for the first floor (optional).
 
-- `groundFloorScale`: defines the horizontal scale of the ground texture
+- `groundFloorScale`: Defines the horizontal scale of the ground texture.
 
-- `groundFloorTranslation`: defines the translation of the ground floor textures
+- `groundFloorTranslation`: Defines the translation of the ground floor textures.
 
-- `roofType`: defines the texture to be used for the roof
+- `roofType`: Defines roof type.
 
-- `roofColor`: defines the color to be used for the roof
+- `roofColor`: Defines the roof color.
 
-- `roofShape`: defines the geometry of the roof (flat or pyramidal)
+- `roofShape`: Defines the geometry of the roof. Supported geometry are `flat roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
 
-- `snowOnRoof`: defines if the texture with or without snow should be used
+- `snowOnRoof`: Defines if the texture with or without snow should be used.
 
-- `roofHeight`: defines the height of the roof (used only in the case of pyramidal roof)
+- `roofHeight`: Defines the height of the roof.
 
-- `enableBoundingObject`: defines if the building should have a bounding object or not
+- `enableBoundingObject`: Defines if the building should have a bounding object or not.
 
-- `bottom`: defines if the building should have a floor (visible from below) or not
+- `bottom`: Defines whether the bottom face of the building should be displayed.
 
 ## SimpleTwoFloorsHouse
 

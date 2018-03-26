@@ -5,7 +5,3 @@ This section will present a brief overview of all of the objects (PROTO nodes) w
 ## Sections
 
 - [Simple Vehicles](simple-vehicles.md)
-- [Traffic signs and lights](traffic-signs-and-lights.md)
-- [Buildings](buildings.md)
-- [Billboard](billboard.md)
-- [Nature](nature.md)

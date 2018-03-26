@@ -222,7 +222,7 @@ For that reason the control step specified with each `wb_robot_step` function ca
 So, for example, if the simulation step is 16 ms, then the control step argument passed to the `wb_robot_step` function can be 16, 32, 64, 128, etc.
 
 If the simulation is run in step-by-step mode, i.e., by clicking on the **Step** button (see [The User Interface](the-user-interface.md) section), then a single step having the simulation step duration is executed.
-The following [figure](#controller_synchronization) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
+The following [figure](#synchronization-of-simulation-and-controller-steps) depicts in details the synchronization between the simulation status, the controller status and the step clicks.
 
 %figure "Synchronization of simulation and controller steps"
 

@@ -47,25 +47,25 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### Forest Field Summary
 
-- `treesFiles`: forest file(s)
+- `treesFiles`: Can be used to define the paths to several files in which are defined the positions of the trees (one tree per line, using the format 'X Y Z').
 
-- `shape`: defines the shape of the forest
+- `shape`: Alternatively, the position of each trees can be defined using the shape field. This field defines the shape of the forest, in that case the position of the trees is randomly generated from this shape.
 
-- `density`: tree per meter square
+- `density`: If the forest is defined using the `shape` field, this field defines the density of three to be generated (in trees per meter square).
 
-- `type`: defines the type of the trees
+- `type`: Defines the type of threes, in case of `random` type, the forest will be mixed.
 
-- `groundTexture`: define the texture of the ground
+- `groundTexture`: Defines the texture of the forest ground. If this field is empty the forest ground is not displayed.
 
-- `withSnow`: defines if the texture with snow should be used or not
+- `withSnow`: Defines whether the texture used should have snow on top.
 
-- `maxHeight`: maximum height of the trees
+- `maxHeight`: Defines the maximum height of the trees.
 
-- `minHeight`: minimum height of the trees
+- `minHeight`: Defines the minimum height of the trees.
 
-- `maxRadius`: maximum radius of the trees
+- `maxRadius`: Defines the maximum radius of the trees.
 
-- `minRadius`: minimum radius of the trees
+- `minRadius`: Defines the minimum radius of the trees.
 
 ## RoundTree
 
@@ -100,7 +100,7 @@ A tree.
 SimpleTree {
   SFVec3f    translation          0 0 0
   SFRotation rotation             0 1 0 0
-  SFString   name                 "tree"
+  SFString   name                 "tree"          
   SFString   type                 "cherry tree"   
   SFBool     withSnow             FALSE           
   SFFloat    height               4               
@@ -131,17 +131,19 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 
 ### SimpleTree Field Summary
 
-- `type`: defines the type of three
+- `name`: Defines the name of the tree.
 
-- `withSnow`: defines if the texture with snow should be used or not
+- `type`: Defines the texture to be used. If set to random, a type will be randomly selected in the list.
 
-- `height`: defines the height of three
+- `withSnow`: Defines if the texture used should have snow on top.
 
-- `radius`: defines the maximum radius of three
+- `height`: Defines the height of the tree.
 
-- `subdivision`: defines the number of faces
+- `radius`: Defines the radius of the tree.
 
-- `enableBoundingObject`: enables/disables the boundingObject
+- `subdivision`: Defines the number of faces used to represent the tree.
+
+- `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 
 ## Tree
 
@@ -155,10 +157,10 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 Tree {
   SFVec3f    translation          0 0 0
   SFRotation rotation             0 1 0 0
-  SFString   name                 "tree"
-  SFVec3f    scale                1 4 1
-  MFString   texture              "textures/cherry_tree.png"
-  SFNode     boundingObject       NULL
+  SFString   name                 "tree"                       
+  SFVec3f    scale                1 4 1                        
+  MFString   texture              "textures/cherry_tree.png"   
+  SFNode     boundingObject       NULL                         
   SFBool     locked               TRUE
   SFBool     isPickable           TRUE
 }
@@ -169,5 +171,15 @@ Tree {
 ### Tree Description
 
 Efficient (with only 8 polygones) and fast to load tree.
-This PROTO is less configurable than 'SimpleTree' but way faster to load.
+This PROTO is less configurable than `SimpleTree` but way faster to load.
+
+### Tree Field Summary
+
+- `name`: Defines the name of the tree.
+
+- `scale`: The first and last components of the scale define the radius of the tree and the middle one defines it's height.
+
+- `texture`: Defines the texture used for the tree.
+
+- `boundingObject`: Defines the bounding object of the tree.
 

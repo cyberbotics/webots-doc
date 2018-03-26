@@ -16,8 +16,6 @@
     - [Lidar Sensors](lidar-sensors.md)
     - [Radar Sensors](radar-sensors.md)
     - [Camera Sensors](camera-sensors.md)
-- [Objects](objects.md)
-    - [Simple Vehicles](simple-vehicles.md)
 - [Tools](tools.md)
     - [OpenStreetMap Importer](openstreetmap-importer.md)
     - [SUMO Exporter](sumo-exporter.md)

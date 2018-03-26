@@ -4,7 +4,7 @@ Webots can simulate a lot of standard robotic sensors.
 Using the nodes described [below](#generic-sensor-list) and their corresponding API is sufficient in most of the cases.
 
 More specific sensors are built on the top of these generic nodes, thanks to the [PROTO system](../reference/proto.md).
-These sensors are listed by category [in the section below](#branded-sensors).
+These sensors are listed by category [in the section below](#commercially-available-sensors).
 
 ### Generic Sensor List
 

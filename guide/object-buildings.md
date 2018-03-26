@@ -413,6 +413,7 @@ Available roof types are:
 - `sheet metal`
 - `metal tiles`
 - `bitumen`
+
 The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
 ### SimpleBuilding Field Summary

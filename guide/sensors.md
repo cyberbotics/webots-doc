@@ -26,6 +26,28 @@ These sensors are listed by category [in the section below](#branded-sensors).
 
 ### Commercially Available Sensors
 
-- [Camera Sensors](camera-sensors.md)
-- [Lidar Sensors](lidar-sensors.md)
-- [Radar Sensors](radar-sensors.md)
+Please [contact us](https://www.cyberbotics.com/contact) if you would like to see your favorite sensor here.
+
+#### Camera Sensors
+
+| Preview | Name |  Manufacturer |
+| :---: | --- | --- | --- |
+| ![multisense_s21_icon.png](images/sensors/multisense_s21_icon.png) | [S21](camera-sensors.md#multisense-s21) | MultiSense |
+
+#### Lidar Sensors
+
+| Preview | Name |  Manufacturer |
+| :---: | --- | --- | --- |
+| ![ibeo_icon.png](images/sensors/ibeo_icon.png) | [Lux](lidar-sensors.md#ibeo-lux) | Ibeo |
+| ![sick_lms291_icon.png](images/sensors/sick_lms291_icon.png) | [Lms 291](lidar-sensors.md#sick-lms-291) | Sick |
+| ![sick_ld_mrs_icon.png](images/sensors/sick_ld_mrs_icon.png) | [LD-MRS](lidar-sensors.md#sick-ld-mrs) | Sick |
+| ![velodyne_vpl_16_icon.png](images/sensors/velodyne_vpl_16_icon.png) | [VLP 16](lidar-sensors.md#velodyne-vlp-16) | Velodyne |
+| ![velodyne_hdl_32e_icon.png](images/sensors/velodyne_hdl_32e_icon.png) | [HDL 32E](lidar-sensors.md#velodyne-hdl-32e) | Velodyne |
+| ![velodyne_hdl_64e_icon.png](images/sensors/velodyne_hdl_64e_icon.png) | [HDL 64E](lidar-sensors.md#velodyne-hdl-64e) | Velodyne |
+
+#### Radar Sensors
+
+| Preview | Name |  Manufacturer |
+| :---: | --- | --- | --- |
+| ![delphi_icon.png](images/sensors/delphi_icon.png) | [ESR](radar-sensors.md#delphi-esr) | Delphi |
+| ![smartmicro_icon.png](images/sensors/smartmicro_icon.png) | [UMRR-0a](radar-sensors.md#smartmicro-umrr-0a) | Smartmicro |

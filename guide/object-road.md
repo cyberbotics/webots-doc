@@ -18,6 +18,7 @@ AddLaneRoadSegment {
       SFFloat    width                     7                                  
       SFFloat    length                    20                                 
       SFInt32    numberOfLanes             2                                  
+      SFFloat    speedLimit                -1.0                               
       SFBool     newLaneLeft               TRUE                               
       MFBool     dashedLine                TRUE                               
       SFFloat    roadBorderHeight          0.15                               
@@ -58,63 +59,65 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### AddLaneRoadSegment Field Summary
 
-- `name`: could contain the junction name
+- `name`: Defines the junction name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: list the connected road IDs
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `length`: total length of the segment
+- `length`: Defines the total length of the segment.
 
-- `numberOfLanes`: number of lanes before addition of the new one
+- `numberOfLanes`: Defines the number of lanes before addition of the new one (used for the texture mapping).
 
-- `newLaneLeft`: side where to add the new lane
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `newLaneLeft`: side where to add the new lane.
 
-- `roadBorderHeight`: defines the height of the borders
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `roadBorderWidth`: defines the width of the borders
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `rightBorder`: enable/disable right border
+- `roadBorderWidth`: Defines the width of the sidewalk.
 
-- `leftBorder`: enable/disable left border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `rightBarrier`: enable/disable right barrier
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `leftBarrier`: enable/disable left barrier
+- `rightBarrier`: Defines whether the road should have a right barrier.
 
-- `bottom`: enable/disable the bottom of the road
+- `leftBarrier`: Defines whether the road should have a left barrier.
 
-- `startLine`: optionally defines the road line at the first way-point
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `endLine`: optionally defines the road line at the last way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `texture`: texture used for the road
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `newLaneTexture`: texture used for the new lane (we need to have no border line)
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `pavementTexture`: texture used for the border
+- `newLaneTexture`: Defines the texture to be used for the the new lane (this texture should not have any border line).
 
-- `bottomTexture`: texture used for the bottom
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `rightBarrierBoundingObject`: enable/disable the right barrier boundingObject
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `leftBarrierBoundingObject`: enable/disable the left barrier boundingObject
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## AddLanesRoadSegment
 
@@ -135,6 +138,7 @@ AddLanesRoadSegment {
       SFFloat    length                    20                                 
       SFInt32    numberOfLanes             2                                  
       SFInt32    numberOfNewLanes          2                                  
+      SFFloat    speedLimit                -1.0                               
       SFBool     newLaneLeft               TRUE                               
       MFBool     dashedLine                TRUE                               
       SFFloat    roadBorderHeight          0.15                               
@@ -172,65 +176,67 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### AddLanesRoadSegment Field Summary
 
-- `name`: could contain the junction name
+- `name`: Defines the junction name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: list the connected road IDs
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `length`: total length of the segment
+- `length`: Defines the total length of the segment.
 
-- `numberOfLanes`: number of lanes before addition of the new one(s)
+- `numberOfLanes`: Defines the number of lanes before addition of the new one(s) (used for the texture mapping).
 
-- `numberOfNewLanes`: number of lane to add
+- `numberOfNewLanes`: Defines the number of lanes to add.
 
-- `newLaneLeft`: side where to add the new lane
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `newLaneLeft`: Defines on which side are added the new lanes.
 
-- `roadBorderHeight`: defines the height of the borders
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `roadBorderWidth`: defines the width of the borders
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `rightBorder`: enable/disable right border
+- `roadBorderWidth`: Defines the width of the sidewalk.
 
-- `leftBorder`: enable/disable left border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `rightBarrier`: enable/disable right barrier
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `leftBarrier`: enable/disable left barrier
+- `rightBarrier`: Defines whether the road should have a right barrier.
 
-- `bottom`: enable/disable the bottom of the road
+- `leftBarrier`: Defines whether the road should have a left barrier.
 
-- `startLine`: optionally defines the road line at the first way-point
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `endLine`: optionally defines the road line at the last way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `texture`: texture used for the road
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `newLaneTexture`: texture used for the new lane (we need to have no border line)
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `pavementTexture`: texture used for the border
+- `newLaneTexture`: Defines the texture to be used for the the new lane (this texture should not have any border line).
 
-- `bottomTexture`: texture used for the bottom
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `rightBarrierBoundingObject`: enable/disable the right barrier boundingObject
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `leftBarrierBoundingObject`: enable/disable the left barrier boundingObject
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## CrashBarrier
 
@@ -274,7 +280,8 @@ Crossroad {
   SFRotation rotation         0 1 0 0
   SFString   name             "crossroad"             
   SFString   id               ""                      
-  MFVec3f    shape            [ 0 0 0, 0 0 1, 1 0 0]
+  SFFloat    speedLimit       -1.0                    
+  MFVec3f    shape            [ 0 0 0, 0 0 1, 1 0 0]  
   MFString   connectedRoadIDs []                      
   SFBool     boundingObject   FALSE                   
   SFBool     bottom           FALSE                   
@@ -293,21 +300,25 @@ A customizable crossroad which can contain optionally references to its connecte
 
 ### Crossroad Field Summary
 
-- `name`: could contain the crossroad name
+- `name`: Defines the the crossroad name
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: list the connected road IDs
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `boundingObject`: enable/disable the road boundingObject
+- `shape`: Defines the shape of the crossroad
 
-- `bottom`: enable/disable the bottom of the road
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
-- `texture`: texture
+- `boundingObject`: Defines whether the road should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `contactMaterial`: contact material of the road
+- `texture`: Defines the texture of the crossroad.
+
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## CurvedRoadSegment
 
@@ -328,6 +339,7 @@ CurvedRoadSegment {
    SFFloat    width                     7                       
    SFInt32    numberOfLanes             2                       
    SFInt32    numberOfForwardLanes      1                       
+   SFFloat    speedLimit                -1.0                    
    MFBool     dashedLine                TRUE                    
    SFFloat    roadBorderHeight          0.15                    
    MFFloat    roadBorderWidth           [ 0.8 ]                 
@@ -366,69 +378,71 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### CurvedRoadSegment Field Summary
 
-- `name`: could contain the street name
+- `name`: Defines the road name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: could contain a reference to the junction connected at the first Road waypoint
+- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: could contain a reference to the junction connected at the last Road waypoint
+- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `numberOfLanes`: number of lanes
+- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 
-- `numberOfForwardLanes`: number of forward lanes. Note this is an information with no impact on the graphical shape.
+- `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `roadBorderHeight`: defines the height of the borders
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `roadBorderWidth`: defines the width of the borders
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `rightBorder`: enable/disable right border
+- `roadBorderWidth`: Defines the width of the sidewalk.
 
-- `leftBorder`: enable/disable left border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `rightBarrier`: enable/disable right barrier
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `leftBarrier`: enable/disable left barrier
+- `rightBarrier`: Defines whether the road should have a right barrier.
 
-- `bottom`: enable/disable the bottom of the road
+- `leftBarrier`: Defines whether the road should have a left barrier.
 
-- `curvatureRadius`: radius of the curve
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `totalAngle`: angle traveled by the road (length = totalAngle*curvatureRadius)
+- `curvatureRadius`: Deinfes the radius of the curve.
 
-- `startLine`: optionally defines the road line at the first way-point
+- `totalAngle`: Defines the angle covered by the road (length = totalAngle * curvatureRadius).
 
-- `endLine`: optionally defines the road line at the last way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `subdivision`: subdivision approximation of the road
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `tilt`: defines the maximum tilt of the road
+- `subdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
 
-- `texture`: texture used for the road
+- `tilt`: Defines the maximum tilt of the road.
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `pavementTexture`: texture used for the border
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `bottomTexture`: texture used for the bottom
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `rightBarrierBoundingObject`: enable/disable the right barrier boundingObject
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `leftBarrierBoundingObject`: enable/disable the left barrier boundingObject
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## HelicoidalRoadSegment
 
@@ -449,6 +463,7 @@ HelicoidalRoadSegment {
    SFFloat    width                     7                       
    SFInt32    numberOfLanes             2                       
    SFInt32    numberOfForwardLanes      1                       
+   SFFloat    speedLimit                -1.0                    
    MFBool     dashedLine                TRUE                    
    SFFloat    roadBorderHeight          0.15                    
    SFFloat    roadBorderWidth           0.8                     
@@ -485,65 +500,67 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### HelicoidalRoadSegment Field Summary
 
-- `name`: could contain the street name
+- `name`: Defines the road name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: could contain a reference to the junction connected at the first Road waypoint
+- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: could contain a reference to the junction connected at the last Road waypoint
+- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `numberOfLanes`: number of lanes
+- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 
-- `numberOfForwardLanes`: number of forward lanes. Note this is an information with no impact on the graphical shape.
+- `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `roadBorderHeight`: defines the height of the borders
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `roadBorderWidth`: defines the width of the borders
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `rightBorder`: enable/disable right border
+- `roadBorderWidth`: Defines the width of the sidewalk
 
-- `leftBorder`: enable/disable left border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `bottom`: enable/disable the bottom of the road
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `rightSide`: define if side is the end of the road (useful to create a larger road composed of several smaller ones)
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `leftSide`: define if side is the end of the road (useful to create a larger road composed of several smaller ones)
+- `rightSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the right side of the road (useful to disable in case road assembly).
 
-- `height`: height of the helicoid
+- `leftSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the left side of the road (useful to disable in case road assembly).
 
-- `radius`: radius of the helicoid
+- `height`: Defines the height of the helicoid.
 
-- `heigthStep`: vertical step of the helicoid
+- `radius`: Defines the radius of the helicoid.
 
-- `startLine`: optionally defines the road line at the first way-point
+- `heigthStep`: Defines the vertical step of the helicoid.
 
-- `endLine`: optionally defines the road line at the last way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `subdivision`: subdivision of the helicoid
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `texture`: texture used for the road
+- `subdivision`: Defines the subdivision of the helicoid
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `pavementTexture`: texture used for the border
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `bottomTexture`: texture used for the bottom
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## LaneSeparation
 
@@ -564,6 +581,7 @@ LaneSeparation {
       SFFloat    length                      5                          
       SFInt32    numberOfLanes               4                          
       SFInt32    numberOfleavingLanes        2                          
+      SFFloat    speedLimit                -1.0                         
       SFBool     newLaneLeft                 TRUE                       
       MFBool     dashedLine                  TRUE                       
       SFFloat    roadBorderHeight            0.15                       
@@ -602,67 +620,69 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### LaneSeparation Field Summary
 
-- `name`: could contain the junction name
+- `name`: Defines the junction name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: list the connected road IDs
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `length`: length of the segment
+- `length`: Defines the length of the segment.
 
-- `numberOfLanes`: total number of lanes
+- `numberOfLanes`: Defines the total number of lanes (used for the texture mapping).
 
-- `numberOfleavingLanes`: number of lanes leaving the road
+- `numberOfleavingLanes`: Defines the number of lanes leaving the road.
 
-- `newLaneLeft`: direction where goes the leaving lanes
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `newLaneLeft`: Defines on which sied the lanes are leaving the road.
 
-- `roadBorderHeight`: defines the height of the borders
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `roadBorderWidth`: defines the width of the borders
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `rightBorder`: enable/disable right border
+- `roadBorderWidth`: Defines the width of the sidewalk
 
-- `leftBorder`: enable/disable left border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `centralBorder`: enable/disable central border
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `rightBarrier`: enable/disable right barrier
+- `centralBorder`: Defines whether the road should have a central sidewalk.
 
-- `leftBarrier`: enable/disable left barrier
+- `rightBarrier`: Defines whether the road should have a right barrier.
 
-- `bottom`: enable/disable the bottom of the road
+- `leftBarrier`: Defines whether the road should have a left barrier.
 
-- `startLine`: optionally defines the road line at the first way-point
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `endLine`: optionally defines the road line at the last way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `texture`: texture used for the road
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `pavementTexture`: texture used for the border
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `bottomTexture`: texture used for the bottom
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `centralBorderBoundingObject`: enable/disable the central border boundingObject
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `rightBarrierBoundingObject`: enable/disable the right barrier boundingObject
+- `centralBorderBoundingObject`: Defines whether the central sidewalk should have a bounding object.
 
-- `leftBarrierBoundingObject`: enable/disable the left barrier boundingObject
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## Road
 
@@ -712,7 +732,7 @@ Road {
       SFBool     roadBoundingObject        FALSE                   
       SFBool     rightBorderBoundingObject FALSE                   
       SFBool     leftBorderBoundingObject  FALSE                   
-      SFBool     rightBarrierBoundingObject TRUE                    
+      SFBool     rightBarrierBoundingObject TRUE                   
       SFBool     leftBarrierBoundingObject TRUE                    
       SFBool     castShadows               FALSE                   
       SFString   contactMaterial           "default"               
@@ -731,83 +751,83 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### Road Field Summary
 
-- `name`: could contain the street name
+- `name`: Could contain the street name
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: could contain a reference to the junction connected at the first Road waypoint
+- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: could contain a reference to the junction connected at the last Road waypoint
+- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `numberOfLanes`: number of lanes
+- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 
-- `numberOfForwardLanes`: number of forward lanes. Note this is an information with no impact on the graphical shape.
+- `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `speedLimit`: could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `roadBorderHeight`: defines the height of the borders
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `roadBorderWidth`: defines the width of the borders for each wayPoints
+- `roadBorderWidth`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
 
-- `road`: enable/disable road
+- `road`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
 
-- `rightBorder`: enable/disable right border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `leftBorder`: enable/disable left border
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `rightBarrier`: enable/disable right barrier
+- `rightBarrier`: Defines whether the road should have a right barrier.
 
-- `leftBarrier`: enable/disable left barrier
+- `leftBarrier`: Defines whether the road should have a left barrier.
 
-- `bottom`: enable/disable the bottom of the road
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `rightSide`: define if side is the end of the road (useful to create a larger road composed of several smaller ones)
+- `rightSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the right side of the road (useful to disable in case road assembly).
 
-- `leftSide`: define if side is the end of the road (useful to create a larger road composed of several smaller ones)
+- `leftSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the left side of the road (useful to disable in case road assembly).
 
-- `wayPoints`: defines the way-points of the road
+- `wayPoints`: Defines the path of the road.
 
-- `roadTilt`: defines the tilt of the road for each wayPoints (0 if not set)
+- `roadTilt`: Defines the tilting angle corresponding to each way-point (if there are less values than way-points, 0 is used for the last remaining way-points).
 
-- `startingAngle`: optionally defines the orientation of the road at the first way-point
+- `startingAngle`: Optionally defines the angle of the road at the first way-point
 
-- `endingAngle`: optionally defines the orientation of the road at the last way-point
+- `endingAngle`: Optionally defines the angle of the road at the lasst way-point
 
-- `startLine`: optionally defines the road line at the first way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `endLine`: optionally defines the road line at the last way-point
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `splineSubdivision`: if greater than 0 the path of the road is computed using B-Spline, furthermore, if bigger than 1, the segments are subdivided
+- `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
 
-- `texture`: texture used for the road
+- `texture`: Defines the texture to be used for the road.
 
-- `textureScale`: length of the texture in meter
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `pavementTexture`: texture used for the border
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `bottomTexture`: texture used for the bottom
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `turnLanesForward`: defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none")
+- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none"). Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Key:turn.
 
-- `turnLanesBackward`: idem for the OSM "turn:lanes:backward" key
+- `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `rightBarrierBoundingObject`: enable/disable the right barrier boundingObject
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 
-- `leftBarrierBoundingObject`: enable/disable the left barrier boundingObject
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: contact material of the road
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
 ## RoadIntersection
 
@@ -826,6 +846,7 @@ RoadIntersection {
     MFString   connectedRoadIDs               []                                  
     SFInt32    roadNumber                     4                                   
     SFFloat    roadsWith                      7                                   
+    SFFloat    speedLimit                     -1.0                                
     SFBool     startRoads                     TRUE                                
     SFFloat    startRoadsLength               5                                   
     SFInt32    startRoadsNumberOfLanes        2                                   
@@ -855,45 +876,47 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 ### RoadIntersection Field Summary
 
-- `name`: could contain the road intersection name
+- `name`: Defines the intersection name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: list the connected road IDs
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
-- `roadNumber`: number of intersecting roads
+- `roadNumber`: Defines the number of intersecting roads.
 
-- `roadsWith`: width of the intersecting roads
+- `roadsWith`: Defines the width of the intersecting roads.
 
-- `startRoads`: include beginning of each roads or not
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `startRoadsLength`: length of the roads
+- `startRoads`: Defines if the beginning of each roads should be included or not.
 
-- `startRoadsNumberOfLanes`: number of lanes of the roads
+- `startRoadsLength`: Defines the length of the intersectiong roads.
 
-- `startRoadsEndLine`: optionally defines the road line at the last way-point
+- `startRoadsNumberOfLanes`: Defines the number of lanes of the roads(used for the texture mapping).
 
-- `startRoadsDashedLine`: defines for each line if it is continuous or dashed
+- `startRoadsEndLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `startRoadBorder`: enable/disable the border of the roads
+- `startRoadsDashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `startRoadBorderHeight`: height of the border of the roads
+- `startRoadBorder`: Defines whether the intersecting road should have a sidewalks.
 
-- `startRoadBorderWidth`: width of the border of the roads
+- `startRoadBorderHeight`: Defines the width of the intersecting road sidewalks.
 
-- `startRoadBorderboundingObject`: enable/disable the bounding object for the border of the roads
+- `startRoadBorderWidth`: Defines the height of the intersecting road sidewalks.
 
-- `boundingObject`: enable/disable the bounding object of the road
+- `startRoadBorderboundingObject`: Defines whether the sidewalks should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `boundingObject`: Defines whether the intersecting roads should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the intersection should cast shadows.
 
-- `bottom`: enable/disable the bottom
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
-- `texture`: texture
+- `bottom`: Defines whether the intersection bottom should be displayed (useful in case of bridge).
 
-- `startRoadsTexture`: texture for the intersecting roads
+- `texture`: Defines the texture to be used for the intersection.
+
+- `startRoadsTexture`: Defines the texture to be used for the intersecting roads.
 
 ## RoadPillars
 
@@ -963,6 +986,7 @@ Roundabout {
     MFString   connectedRoadIDs         []                                  
     SFInt32    subdivision              16
     SFInt32    numberOfLanes            2                                   
+    SFFloat    speedLimit               -1.0                                
     SFBool     bottom                   FALSE                               
     SFBool     border                   TRUE                                
     SFFloat    borderWidth              0.8                                 
@@ -1001,61 +1025,63 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 ### Roundabout Field Summary
 
-- `name`: could contain the roundabout name
+- `name`: Defines the roundabout name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: list the connected road IDs
+- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
-- `numberOfLanes`: number of lanes
+- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 
-- `bottom`: enable/disable the bottom of the road
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `border`: enable/disable the border
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `borderWidth`: width of the central border
+- `border`: Defines whether the roundabout should have sidewalks.
 
-- `borderHeight`: height of the central border
+- `borderWidth`: Defines the width of the sidewalks.
 
-- `innerRadius`: inner radius of the roundabout
+- `borderHeight`: Defines the height of the sidewalks.
 
-- `outerRadius`: outer radius of the roundabout
+- `innerRadius`: Defines the inner radius of the roundabout.
 
-- `center`: enable/disable the central part
+- `outerRadius`: Defines the outer radius of the roundabout.
 
-- `centerTextureScale`: scale of the central texture
+- `center`: Defines whether the roundabout should have a central sidewalk.
 
-- `roadNumber`: number of intersecting roads
+- `centerTextureScale`: Defines the scale of the texture used for the central part of the roundabout.
 
-- `startRoadsLength`: length of the intersecting roads
+- `roadNumber`: Defines the number of roads connected to the roundabout.
 
-- `startRoadsWith`: width of the intersecting roads
+- `startRoadsLength`: Defines the length of the roads connected to the roundabout.
 
-- `startRoadsNumberOfLanes`: number of lanes of the roads
+- `startRoadsWith`: Defines the width of the roads connected to the roundabout.
 
-- `startRoadsEndLine`: optionally defines the road line at the last way-point
+- `startRoadsNumberOfLanes`: Defines the number of lanes of the roads (used for the texture mapping).
 
-- `startRoadsDashedLine`: defines for each line if it is continuous or dashed
+- `startRoadsEndLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `startRoadsDashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `borderBoundingObject`: enable/disable the border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `centerBoundingObject`: enable/disable the central part boundingObject
+- `borderBoundingObject`: Defines whether the outer sidewalks should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `centerBoundingObject`: Defines whether the central sidewalk should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
 
-- `centerTexture`: texture used for the central part
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 
-- `texture`: texture used for the road
+- `centerTexture`: Defines the texture to be used for the central part of the roundabout.
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `junctionTexture`: texture of the small junction part
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `startRoadsTexture`: texture for the intersecting roads
+- `junctionTexture`: Defines the texture to be used for the roundabout.
+
+- `startRoadsTexture`: Defines the texture to be used for the roads connected to the roundabout.
 
 ## StraightRoadSegment
 
@@ -1076,6 +1102,7 @@ StraightRoadSegment {
    SFFloat    width                     7                       
    SFInt32    numberOfLanes             2                       
    SFInt32    numberOfForwardLanes      1                       
+   SFFloat    speedLimit                -1.0                    
    MFBool     dashedLine                TRUE                    
    SFFloat    roadBorderHeight          0.15                    
    SFFloat    startingRoadBorderWidth   0.8                     
@@ -1117,71 +1144,73 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### StraightRoadSegment Field Summary
 
-- `name`: could contain the street name
+- `name`: Defines the road name.
 
-- `id`: could contain a unique ID
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: could contain a reference to the junction connected at the first Road waypoint
+- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: could contain a reference to the junction connected at the last Road waypoint
+- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `width`: total width of the road
+- `width`: Defines the total width of the road (excluding sidewalk).
 
-- `numberOfLanes`: number of lanes
+- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 
-- `numberOfForwardLanes`: number of forward lanes. Note this is an information with no impact on the graphical shape.
+- `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `dashedLine`: defines for each line if it is continuous or dashed
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
 
-- `roadBorderHeight`: defines the height of the borders
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
-- `startingRoadBorderWidth`: defines the width of the borders at the beginning
+- `roadBorderHeight`: Defines the height of the sidewalk.
 
-- `endingRoadBorderWidth`: defines the width of the borders at the end
+- `startingRoadBorderWidth`: Defines the width of the sidewalk at the start.
 
-- `rightBorder`: enable/disable right border
+- `endingRoadBorderWidth`: Defines the width of the sidewalk at the end.
 
-- `leftBorder`: enable/disable left border
+- `rightBorder`: Defines whether the road should have a right sidewalk.
 
-- `rightBarrier`: enable/disable right barrier
+- `leftBorder`: Defines whether the road should have a left sidewalk.
 
-- `leftBarrier`: enable/disable left barrier
+- `rightBarrier`: Defines whether the road should have a right barrier.
 
-- `bottom`: enable/disable the bottom of the road
+- `leftBarrier`: Defines whether the road should have a left barrier.
 
-- `rightSide`: define if side is the end of the road (useful to create a larger road composed of several smaller ones)
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
-- `leftSide`: define if side is the end of the road (useful to create a larger road composed of several smaller ones)
+- `rightSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the right side of the road (useful to disable in case road assembly).
 
-- `length`: length of the road
+- `leftSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the left side of the road (useful to disable in case road assembly).
 
-- `startLine`: optionally defines the road line at the first way-point
+- `length`: Defines the length of the road.
 
-- `endLine`: optionally defines the road line at the last way-point
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
 
-- `startingRoadTilt`: defines the tilt of the road at the beginning
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
 
-- `endingRoadTilt`: defines the tilt of the road at the end
+- `startingRoadTilt`: Defines the tilt of the road at the beginning
 
-- `texture`: texture used for the road
+- `endingRoadTilt`: Defines the tilt of the road at the end.
 
-- `textureScale`: length of the texture in meter
+- `texture`: Defines the texture to be used for the road.
 
-- `pavementTexture`: texture used for the border
+- `textureScale`: Defines the length (in meter) of the road texture.
 
-- `bottomTexture`: texture used for the bottom
+- `pavementTexture`: Define the texture to be used for the sidewalk.
 
-- `roadBoundingObject`: enable/disable the road boundingObject
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `rightBorderBoundingObject`: enable/disable the right border boundingObject
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
 
-- `leftBorderBoundingObject`: enable/disable the left border boundingObject
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
 
-- `rightBarrierBoundingObject`: enable/disable the right barrier boundingObject
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
-- `leftBarrierBoundingObject`: enable/disable the left barrier boundingObject
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 
-- `castShadows`: defines if the road should cast shadows
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
-- `contactMaterial`: contact material of the road
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
 

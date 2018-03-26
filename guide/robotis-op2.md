@@ -52,9 +52,9 @@ The simulation model is mounted with the following sensors and actuators:
 
 #### Motors and Position Sensors
 
-Motor positions and identifiers can be found in the following [figure](#position-of-the-servos).
+Motor positions and identifiers can be found in the following [figure](#position-of-the-motors).
 
-%figure "Position of the Motor"
+%figure "Position of the Motors"
 ![robotis_op2_servo_map.png](images/robots/robotis-op2/robotis_op2_servo_map.png)
 %end
 
@@ -655,7 +655,7 @@ You can also see the camera picture.
 
 In remote control, supported camera resolutions are not the same as in remote compilation.
 Indeed they are smaller in order to not slow down too much the communication speed between Webots and the robot.
-All available resolutions are specified in the [following table](#cameraremoteresolution).
+All available resolutions are specified in the [following table](#camera-resolutions-supported-in-remote-control).
 Unlike from remote compilation you do not have to specify the desired resolution in any file, the resolution is automatically sent to the robot from Webots.
 So in order to adjust the resolution, just do the same way you would do it in the simulation (by editing `cameraWidth` and `cameraHeight` fields of the ROBOTIS OP2 in the scene tree window).
 

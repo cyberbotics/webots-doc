@@ -5,7 +5,8 @@ The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots worlds tha
 The world files are located in the "WEBOTS\_HOME/projects/samples/devices/worlds" directory, and their controllers in the "WEBOTS\_HOME/projects/samples/devices/controllers" directory.
 The world files and the corresponding controllers are named according to the device they demonstrate.
 
-Most of the devices below use a simple two-wheeled blue robot called MyBot moving in a closed square arena containing obstacles (see [figure below](#mybot-in-closed-squared-arena)).
+Most of the devices below use a simple two-wheeled blue robot called MyBot moving in a closed square arena containing obstacles (see [figure below](#mybot-in-a-squared-arena)).
+
 The studied devices are attached on this robot.
 `MyBot` moves and avoid obstacles using two `DistanceSensor`s and a technique based on Braitenberg vehicles.
 

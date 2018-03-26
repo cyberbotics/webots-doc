@@ -1,7 +1,5 @@
 # Television
 
-## Television
-
 %figure "Television model in Webots."
 
 ![Television](images/objects/television/Television/model.png)

@@ -1,7 +1,5 @@
 # Mirror
 
-## Mirror
-
 %figure "Mirror model in Webots."
 
 ![Mirror](images/objects/mirror/Mirror/model.png)

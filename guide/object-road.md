@@ -1,5 +1,148 @@
 # Road
 
+%figure "Road model in Webots."
+
+![Road](images/objects/road/Road/model.png)
+
+%end
+
+```
+Road {
+      SFVec3f    translation               0 0 0
+      SFRotation rotation                  0 1 0 0
+      SFString   name                      "road"                  
+      SFString   id                        ""                      
+      SFString   startJunction             ""                      
+      SFString   endJunction               ""                      
+      SFFloat    width                     7                       
+      SFInt32    numberOfLanes             2                       
+      SFInt32    numberOfForwardLanes      1                       
+      SFFloat    speedLimit                -1.0                    
+      MFBool     dashedLine                TRUE                    
+      SFFloat    roadBorderHeight          0.15                    
+      MFFloat    roadBorderWidth           [ 0.8 ]                 
+      SFBool     road                      TRUE                    
+      SFBool     rightBorder               TRUE                    
+      SFBool     leftBorder                TRUE                    
+      SFBool     rightBarrier              FALSE                   
+      SFBool     leftBarrier               FALSE                   
+      SFBool     bottom                    FALSE                   
+      SFBool     rightSide                 TRUE                    
+      SFBool     leftSide                  TRUE                    
+      MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]        
+      MFFloat    roadTilt                  [ 0, 0]                 
+      MFFloat    startingAngle             [ ]                     
+      MFFloat    endingAngle               [ ]                     
+      MFString   startLine                 [ ]                     
+      MFString   endLine                   [ ]                     
+      SFInt32    splineSubdivision         4                       
+      MFString   texture                   "textures/road.jpg"     
+      SFFloat    textureScale              2                       
+      MFString   pavementTexture           "textures/pavement.jpg" 
+      MFString   bottomTexture             []                      
+      SFString   turnLanesForward          ""                      
+      SFString   turnLanesBackward         ""                      
+      SFBool     locked                    TRUE
+      SFBool     roadBoundingObject        FALSE                   
+      SFBool     rightBorderBoundingObject FALSE                   
+      SFBool     leftBorderBoundingObject  FALSE                   
+      SFBool     rightBarrierBoundingObject TRUE                   
+      SFBool     leftBarrierBoundingObject TRUE                    
+      SFBool     castShadows               FALSE                   
+      SFString   contactMaterial           "default"               
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Road.proto"
+
+### Road Description
+
+A fully customizable road, the number of lanes, the dimensions and the path of the road is configurable.
+For each line separating two lanes it is possible to configure if this one is continuous or dashed.
+B-Spline can be used in order to interpolate the path of the road and an optional border can be enable.
+The boundingObject of each border and the road itself can be independently enable or disable.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+### Road Field Summary
+
+- `name`: Could contain the street name
+
+- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+
+- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+
+- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+
+- `width`: Defines the total width of the road (excluding sidewalk).
+
+- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
+
+- `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
+
+- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+
+- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
+
+- `roadBorderHeight`: Defines the height of the sidewalk.
+
+- `roadBorderWidth`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
+
+- `road`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
+
+- `rightBorder`: Defines whether the road should have a right sidewalk.
+
+- `leftBorder`: Defines whether the road should have a left sidewalk.
+
+- `rightBarrier`: Defines whether the road should have a right barrier.
+
+- `leftBarrier`: Defines whether the road should have a left barrier.
+
+- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
+
+- `rightSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the right side of the road (useful to disable in case road assembly).
+
+- `leftSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the left side of the road (useful to disable in case road assembly).
+
+- `wayPoints`: Defines the path of the road.
+
+- `roadTilt`: Defines the tilting angle corresponding to each way-point (if there are less values than way-points, 0 is used for the last remaining way-points).
+
+- `startingAngle`: Optionally defines the angle of the road at the first way-point
+
+- `endingAngle`: Optionally defines the angle of the road at the lasst way-point
+
+- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
+
+- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
+
+- `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
+
+- `texture`: Defines the texture to be used for the road.
+
+- `textureScale`: Defines the length (in meter) of the road texture.
+
+- `pavementTexture`: Define the texture to be used for the sidewalk.
+
+- `bottomTexture`: Defines the texture to be used for the bottom of the road.
+
+- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none"). Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Key:turn.
+
+- `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
+
+- `roadBoundingObject`: Defines whether the road should have a bounding object.
+
+- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
+
+- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
+
+- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
+
+- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
+
+- `castShadows`: Defines whether the road should cast shadows.
+
+- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+
 ## AddLaneRoadSegment
 
 %figure "AddLaneRoadSegment model in Webots."
@@ -688,151 +831,6 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
 - `centralBorderBoundingObject`: Defines whether the central sidewalk should have a bounding object.
-
-- `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
-
-- `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
-
-- `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
-
-## Road
-
-%figure "Road model in Webots."
-
-![Road](images/objects/road/Road/model.png)
-
-%end
-
-```
-Road {
-      SFVec3f    translation               0 0 0
-      SFRotation rotation                  0 1 0 0
-      SFString   name                      "road"                  
-      SFString   id                        ""                      
-      SFString   startJunction             ""                      
-      SFString   endJunction               ""                      
-      SFFloat    width                     7                       
-      SFInt32    numberOfLanes             2                       
-      SFInt32    numberOfForwardLanes      1                       
-      SFFloat    speedLimit                -1.0                    
-      MFBool     dashedLine                TRUE                    
-      SFFloat    roadBorderHeight          0.15                    
-      MFFloat    roadBorderWidth           [ 0.8 ]                 
-      SFBool     road                      TRUE                    
-      SFBool     rightBorder               TRUE                    
-      SFBool     leftBorder                TRUE                    
-      SFBool     rightBarrier              FALSE                   
-      SFBool     leftBarrier               FALSE                   
-      SFBool     bottom                    FALSE                   
-      SFBool     rightSide                 TRUE                    
-      SFBool     leftSide                  TRUE                    
-      MFVec3f    wayPoints                 [ 0 0 0, 0 0 1 ]        
-      MFFloat    roadTilt                  [ 0, 0]                 
-      MFFloat    startingAngle             [ ]                     
-      MFFloat    endingAngle               [ ]                     
-      MFString   startLine                 [ ]                     
-      MFString   endLine                   [ ]                     
-      SFInt32    splineSubdivision         4                       
-      MFString   texture                   "textures/road.jpg"     
-      SFFloat    textureScale              2                       
-      MFString   pavementTexture           "textures/pavement.jpg" 
-      MFString   bottomTexture             []                      
-      SFString   turnLanesForward          ""                      
-      SFString   turnLanesBackward         ""                      
-      SFBool     locked                    TRUE
-      SFBool     roadBoundingObject        FALSE                   
-      SFBool     rightBorderBoundingObject FALSE                   
-      SFBool     leftBorderBoundingObject  FALSE                   
-      SFBool     rightBarrierBoundingObject TRUE                   
-      SFBool     leftBarrierBoundingObject TRUE                    
-      SFBool     castShadows               FALSE                   
-      SFString   contactMaterial           "default"               
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Road.proto"
-
-### Road Description
-
-A fully customizable road, the number of lanes, the dimensions and the path of the road is configurable.
-For each line separating two lanes it is possible to configure if this one is continuous or dashed.
-B-Spline can be used in order to interpolate the path of the road and an optional border can be enable.
-The boundingObject of each border and the road itself can be independently enable or disable.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-
-### Road Field Summary
-
-- `name`: Could contain the street name
-
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
-
-- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
-
-- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
-
-- `width`: Defines the total width of the road (excluding sidewalk).
-
-- `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
-
-- `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
-
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
-
-- `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
-
-- `roadBorderHeight`: Defines the height of the sidewalk.
-
-- `roadBorderWidth`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
-
-- `road`: Defines the width of the sidewalk associated to each way-point (if there are less values than way-points, the last value is used for the last remaining way-points).
-
-- `rightBorder`: Defines whether the road should have a right sidewalk.
-
-- `leftBorder`: Defines whether the road should have a left sidewalk.
-
-- `rightBarrier`: Defines whether the road should have a right barrier.
-
-- `leftBarrier`: Defines whether the road should have a left barrier.
-
-- `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
-
-- `rightSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the right side of the road (useful to disable in case road assembly).
-
-- `leftSide`: This field is used for the texture mapping. It defines whether the side of the texture should be used for the left side of the road (useful to disable in case road assembly).
-
-- `wayPoints`: Defines the path of the road.
-
-- `roadTilt`: Defines the tilting angle corresponding to each way-point (if there are less values than way-points, 0 is used for the last remaining way-points).
-
-- `startingAngle`: Optionally defines the angle of the road at the first way-point
-
-- `endingAngle`: Optionally defines the angle of the road at the lasst way-point
-
-- `startLine`: Optionally defines the texture used for the road line at the first way-point for each lane. If the string is empty, no road line will be added for the corresponding lane. The two textures `textures/road_line_dashed.png` and `textures/road_line_triangle.png` may be used in this field.
-
-- `endLine`: Optionally defines the texture used for the road line at the last way-point for each lane. If the string is empty, no road line will be added for the corresponding lane.
-
-- `splineSubdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
-
-- `texture`: Defines the texture to be used for the road.
-
-- `textureScale`: Defines the length (in meter) of the road texture.
-
-- `pavementTexture`: Define the texture to be used for the sidewalk.
-
-- `bottomTexture`: Defines the texture to be used for the bottom of the road.
-
-- `turnLanesForward`: Defines painted arrows before the end of the lanes using the same format as the OSM "turn:lanes:forward" key (e.g. "through|left;through|none"). Please refer to the corresponding OSM tag: http://wiki.openstreetmap.org/wiki/Key:turn.
-
-- `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
-
-- `roadBoundingObject`: Defines whether the road should have a bounding object.
-
-- `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
-
-- `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
 - `rightBarrierBoundingObject`: Defines whether the right crash barrier (if any) should have a bounding object.
 

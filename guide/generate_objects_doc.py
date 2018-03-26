@@ -19,12 +19,21 @@ with open('objects.md', 'w') as file:
     file.write('# Objects\n\n')
     file.write('## Sections\n\n')
 
+# look for all the PROTO files in the 'projects/objects' directory
 for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep + 'projects' + os.sep + 'objects'):
     for fileName in fnmatch.filter(fileNames, '*.proto'):
         fileList.append(os.path.join(rootPath, fileName))
-
 fileList = sorted(fileList)
+
+# make sure that if a PROTO has the same name than the title it appears first
+prioritaryProtoList = []
 for proto in fileList:
+    if os.path.basename(proto).split('.')[0].lower() == os.path.basename(os.path.dirname(os.path.dirname(proto))):
+        prioritaryProtoList.append(proto)
+        fileList.remove(proto)
+
+# loop through all PROTO files
+for proto in prioritaryProtoList + fileList:
     protoName = os.path.basename(proto).split('.')[0]
     category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
     upperCategory = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
@@ -37,6 +46,7 @@ for proto in fileList:
     fields = ''
     state = 0
     describedField = []
+    # parse the PROTO file
     with open(proto, 'r') as file:
         skipProto = False
         closingAccolades = 0
@@ -80,6 +90,8 @@ for proto in fileList:
                             fields += '\n'
     if skipProto:
         continue
+
+    # add documentation for this PROTO file
     exist = os.path.isfile('object-' + upperCategoryName + '.md')
     mode = 'a'
     if upperCategory not in upperCategories:
@@ -87,7 +99,8 @@ for proto in fileList:
     with open('object-' + upperCategoryName + '.md', mode) as file:
         if upperCategory not in upperCategories or category not in upperCategories[upperCategory]:
             file.write('# %s\n\n' % category.replace('_', ' ').title())
-        file.write('## %s\n\n' % protoName)
+        if protoName not in [upperCategory.replace('_', ' ').title(), category.replace('_', ' ').title()]:
+            file.write('## %s\n\n' % protoName)
 
         if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
             file.write('%%figure "%s model in Webots."\n\n' % protoName)
@@ -108,7 +121,7 @@ for proto in fileList:
             if licenseUrl:
                 file.write('[More information.](%s)\n' % licenseUrl)
             file.write('\n')
-        # else:
+        # else:  TODO: uncomment on develop
         #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
         file.write('### %s Description\n\n' % protoName)
@@ -125,6 +138,7 @@ for proto in fileList:
     elif category not in upperCategories[upperCategory]:
         upperCategories[upperCategory].append(category)
 
+# write the menu in 'object.md'
 upperCategoriesList = sorted(upperCategories.keys())
 categoriesList = []
 with open('objects.md', 'a') as file:
@@ -139,6 +153,8 @@ with open('objects.md', 'a') as file:
             else:
                 file.write('  - [%s](object-%s.md#%s)\n' % (category.replace('_', ' ').title(), upperCategory.replace('_', '-'), category.replace('_', '-')))
     file.write('\n')
+
+# print the updated part of 'menu.md'
 categoriesList = sorted(categoriesList)
 print("Please update the 'Objects' part in 'menu.md' with:")
 for category in upperCategoriesList:

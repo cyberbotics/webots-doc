@@ -1,7 +1,5 @@
 # Cabinet
 
-## Cabinet
-
 %figure "Cabinet model in Webots."
 
 ![Cabinet](images/objects/cabinet/Cabinet/model.png)

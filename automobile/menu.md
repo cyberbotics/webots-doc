@@ -18,7 +18,6 @@
     - [Camera Sensors](camera-sensors.md)
 - [Objects](objects.md)
     - [Simple Vehicles](simple-vehicles.md)
-    - [Road Segments](road-segments.md)
     - [Traffic Signs and Lights](traffic-signs-and-lights.md)
     - [Buildings](buildings.md)
     - [Billboard](billboard.md)

@@ -250,13 +250,13 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 CrashBarrier {
   SFVec3f      translation             0 0 0
   SFRotation   rotation                0 1 0 0
-  SFString     name                    "crash barrier"
-  SFFloat      poleGap                 2
-  SFNode       poleAppearance          Appearance { material Material {} }
-  MFVec3f      path                    [0 0 0, 5 0 0]
-  SFBool       barrierOnRightSide      TRUE
-  SFInt32      subdivision             -1
-  SFBool       enableBoundingObject    FALSE
+  SFString     name                    "crash barrier"                       
+  SFFloat      poleGap                 2                                     
+  SFNode       poleAppearance          Appearance { material Material {} }   
+  MFVec3f      path                    [0 0 0, 5 0 0]                        
+  SFBool       barrierOnRightSide      TRUE                                  
+  SFInt32      subdivision             -1                                    
+  SFBool       enableBoundingObject    FALSE                                 
 }
 ```
 
@@ -265,6 +265,22 @@ CrashBarrier {
 ### CrashBarrier Description
 
 A customizable crash barrier.
+
+### CrashBarrier Field Summary
+
+- `name`: Defines the name of the crash barrier.
+
+- `poleGap`: Defines the gap between two consecutive poles.
+
+- `poleAppearance`: Defines the appearance of the poles.
+
+- `path`: Defines the 3D path of the crash barrier.
+
+- `barrierOnRightSide`: Defines the side of the barrier.
+
+- `subdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
+
+- `enableBoundingObject`: Defines whether the crash barrier should have a bounding object.
 
 ## Crossroad
 
@@ -930,7 +946,7 @@ A simple and customizable roads intersection, all the road are crossing at the s
 RoadPillars {
    SFVec3f    translation        0 0 0
    SFRotation rotation           0 1 0 0
-   SFString   name               "road pillar"
+   SFString   name               "road pillar"             
    SFFloat    height             5                         
    SFFloat    width              8                         
    SFFloat    depth              2                         
@@ -938,7 +954,7 @@ RoadPillars {
    SFFloat    pylonsDistance     6                         
    SFFloat    pylonsInclination  0.1                       
    SFFloat    upperTilt          0                         
-   MFString   texture            "textures/concrete.jpg"
+   MFString   texture            "textures/concrete.jpg"   
    SFBool     boundingObject     TRUE                      
 }
 ```
@@ -953,21 +969,25 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### RoadPillars Field Summary
 
-- `height`: Total height of the structure
+- `name`: Defines the name of the road pillar
 
-- `width`: Lateral with of the structure
+- `height`: Defines the height of the pillar.
 
-- `depth`: Depth of the structure
+- `width`: Defines the width of the pillar.
 
-- `pylonsRadius`: Radius of the two pylons
+- `depth`: Defines the depth of the pillar.
 
-- `pylonsDistance`: Distance between the two pylons (should be smaller than the width)
+- `pylonsRadius`: Defines the radius of the two pylons.
 
-- `pylonsInclination`: Optional angle of inclination of the pylons
+- `pylonsDistance`: Defines the distance between the two pylons (should be smaller than the width).
 
-- `upperTilt`: Tilt of the upper support
+- `pylonsInclination`: Defines the inclination angle of the pylons.
 
-- `boundingObject`: Enable/disable the box boundingObject
+- `upperTilt`: Defines the tilt of the upper support.
+
+- `texture`: Defines the texture used for the pillar.
+
+- `boundingObject`: Defines whether the pillar should have a bounding object.
 
 ## Roundabout
 

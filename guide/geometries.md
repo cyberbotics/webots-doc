@@ -5,22 +5,6 @@ The world files for these examples are located in the "sample/geometries/worlds"
 
 In this directory, you will find the following world files :
 
-### box.wbt, capsule.wbt, cone.wbt, convex\_polygon.wbt, cylinder.wbt, non\_convex\_polygon.wbt, polyhedra.wbt, sphere.wbt
-
-**Keywords**: Box, Capsule, Cone, Cylinder, Sphere, IndexedFaceSet, basic 3D primitives
-
-These examples show how to use the basic geometric primitives of Webots in order to display untextured and colored 3D shapes in the 3D window.
-For the most part, primitives are static in these examples, i.e. physics is not applied on them.
-Basically :
-
-- `box.wbt`: demonstrates how to use the `Box` node to display a red box.
-- `capsule.wbt`: demonstrates how to use the `Capsule` node to display a red capsule.
-- `cone.wbt`: demonstrates how to use the `Cone` node to display a red cone.
-- `convex_polygon.wbt`: demonstrates how to use the `IndexedFaceSet` node to display a convex polygon.
-- `cylinder.wbt`: demonstrates how to use the `Cylinder` node to display a red cylinder.
-- `polyhedra.wbt`: demonstrates how to use the `IndexedFaceSet` node to display a red polyhedra.
-- `sphere.wbt`: demonstrates how to use the `Sphere` node to display a red sphere.
-
 ### extended\_solids.wbt
 
 **Keywords**: Extended solids, torus, rounded box, pipe
@@ -46,6 +30,14 @@ In this example, the cross-section is a triangle extruded along a spiral path.
 ![floating_geometries.png](images/samples/floating_geometries.png) This example demonstrates the interactions between basic physics primitives and fluids.
 Three `Fluids` nodes are present; two flowing fluids to simulate a river, and a static fluid to simulate a cylindric pool.
 The small `Solids` are affected by the fluids' viscosity and by forces generated on the [Archimedes' principle](https://en.wikipedia.org/wiki/Archimedes%27_principle).
+
+### geometric\_primitives.wbt
+
+**Keywords**: Box, Capsule, Cone, Cylinder, ElevationGrid, IndexedLineSet, IndexedFaceSet, Plane, Sphere
+
+![geometric_primitives.png](images/geometric_primitives.png) This example demonstrates the geometric primitives natively supported in Webots.
+The primitives are inserted into `Transform` and `Shape` nodes.
+Therefore they are static, i.e. physics is not applied on them.
 
 ### high\_resolution\_indexedfaceset.wbt
 
@@ -75,6 +67,16 @@ Depending on the joint motion, one muscle is contracted, and the other one is re
 
 ![physics_primitives.png](images/samples/physics_primitives.png) This example demonstrates a large set of the possible collisions between the basic physics primitives.
 Three identical sets of primitives composed of `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` nodes fall onto three surfaces respectively; a `Box`, a `Plane` and an `ElevationGrid` node.
+
+### polygons.wbt
+
+**Keywords**: IndexedFaceSet, polygon tesselation
+
+![polygons.png](images/polygons.png) This example shows the polygon tesselation feature.
+Four polygons are displayed: a simple triangle, a quad, a convex polygon (hexagon), and a non-convex polygon.
+Each polygon is modeled as a list of vertices.
+Webots applies a tesselation algorithm on this list, and creates the minimum number of OpenGL triangles.
+The triangles can be shown using the `View / Wireframe Rendering` menu item.
 
 ### textured\_boxes.wbt
 

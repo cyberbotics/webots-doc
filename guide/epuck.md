@@ -116,7 +116,7 @@ The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow y
 The forward direction of the e-puck is given by the negative *z*-axis of the world coordinates.
 This is also the direction in which the camera eye is looking; the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
 The axle's direction is given by the positive *x*-axis.
-Proximity sensors, light sensors and LEDs are numbered clockwise; their location and orientation are shown in [this table](#e-puck-characterization) and [this table](#devices-orientations).
+Proximity sensors, light sensors and LEDs are numbered clockwise; their location and orientation are shown in [this figure](#sensors-leds-and-camera).
 The last column of the latter lists the angles between the negative *x*-axis and the direction of the devices, the plane *zOx* being oriented counter-clockwise.
 Note that the proximity sensors and the light sensors are actually the same devices of the real robot used in a different mode, so their direction coincides.
 Proximity sensor responses are simulated in accordance to the lookup table in [this figure](#proximity-sensor-response-against-distance); this table is the outcome of calibrations performed on the real robot.
@@ -173,7 +173,7 @@ When set to "2", the e-puck model switches to the e-puck2, with the following di
 
 When opening a world containing an e-puck robot, Webots may display the e-puck robot window.
 If it is not displayed, you can open it by double-clicking on the e-puck robot.
-This window is depicted in [this figure](#the-e-puck-robot-window).
+This window is depicted in [this figure](#e-puck-robot-window).
 It includes the visualization of the sensors of the robot.
 The proximity measurements are displayed in black, outside the body of the robot.
 The light measurements are displayed in blue, below the proximity measurements.

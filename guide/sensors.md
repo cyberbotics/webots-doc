@@ -38,9 +38,9 @@ Please [contact us](https://www.cyberbotics.com/contact) if you would like to se
 
 | Preview | Name |  Manufacturer |
 | :---: | --- | --- | --- |
-| ![ibeo_icon.png](images/sensors/ibeo_icon.png) | [Lux](lidar-sensors.md#ibeo-lux) | Ibeo |
-| ![sick_lms291_icon.png](images/sensors/sick_lms291_icon.png) | [Lms 291](lidar-sensors.md#sick-lms-291) | Sick |
-| ![sick_ld_mrs_icon.png](images/sensors/sick_ld_mrs_icon.png) | [LD-MRS](lidar-sensors.md#sick-ld-mrs) | Sick |
+| ![ibeo_icon.png](images/sensors/ibeo_icon.png) | [LUX](lidar-sensors.md#ibeo-lux) | Ibeo |
+| ![sick_lms291_icon.png](images/sensors/sick_lms291_icon.png) | [LMS 291](lidar-sensors.md#sick-lms-291) | SICK |
+| ![sick_ld_mrs_icon.png](images/sensors/sick_ld_mrs_icon.png) | [LD-MRS](lidar-sensors.md#sick-ld-mrs) | SICK |
 | ![velodyne_vpl_16_icon.png](images/sensors/velodyne_vpl_16_icon.png) | [VLP 16](lidar-sensors.md#velodyne-vlp-16) | Velodyne |
 | ![velodyne_hdl_32e_icon.png](images/sensors/velodyne_hdl_32e_icon.png) | [HDL 32E](lidar-sensors.md#velodyne-hdl-32e) | Velodyne |
 | ![velodyne_hdl_64e_icon.png](images/sensors/velodyne_hdl_64e_icon.png) | [HDL 64E](lidar-sensors.md#velodyne-hdl-64e) | Velodyne |

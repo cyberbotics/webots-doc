@@ -13,7 +13,7 @@ These sensors are listed by category [in the section below](#branded-sensors).
 | ![Accelerometer.png](images/sensors/Accelerometer.png) | [Accelerometer](../reference/accelerometer.md) | *Simulates an accelerometer sensor which measures the relative accelerations.* |
 | ![Camera.png](images/sensors/Camera.png) | [Camera](../reference/camera.md) | *Simulates an RGB camera, a linear camera, a gray-scale camera, a fish-eye camera or a smart camera with multiple special effects including noise, depth of field, motion blur or lense flares.* |
 | ![Compass.png](images/sensors/Compass.png) | [Compass](../reference/compass.md) | *Simulates a magnetic sensor which measures the relative direction to the north.* |
-| ![DistanceSensor.png](images/sensors/DistanceSensor.png) | [DistanceSensor](../reference/distancesensor.md) | *Simulates any sensor capable of measuring distance including an infra-red sensor, sonar sensor, or laser range-finder.* |
+| ![DistanceSensor.png](images/sensors/DistanceSensor.png) | [DistanceSensor](../reference/distancesensor.md) | *Simulates a distance measuring sensor based on infra-red light, sonar echo, or laser beam.* |
 | ![GPS.png](images/sensors/GPS.png) | [GPS](../reference/gps.md) | *Simulates a positioning sensor which measures the absolute position in Webots coordinate system or in the WGS84 coordinate system.* |
 | ![Gyro.png](images/sensors/Gyro.png) | [Gyro](../reference/gyro.md) | *Simulates a gyroscope sensor which measures the relative angular velocities.* |
 | ![InertialUnit.png](images/sensors/InertialUnit.png) | [InertialUnit](../reference/inertialunit.md) | *Simulates a sensor which measures the relative roll, pitch and yaw angles.* |

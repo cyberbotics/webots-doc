@@ -2,7 +2,7 @@
 
 ## Ceiling
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E68>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Ceiling model in Webots."
 
@@ -44,7 +44,7 @@ A configurable standard ceiling.
 
 ## Door
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Door model in Webots."
 
@@ -117,7 +117,7 @@ A cutomizable openable door.
 
 ## DoorKnob
 
-Derived from [Slot](../reference/<built-in method lower of str object at 0x00000000057F7CD8>.md)
+Derived from [Slot](../reference/slot.md)
 
 %figure "DoorKnob model in Webots."
 
@@ -159,7 +159,7 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 ## DoorLever
 
-Derived from [Slot](../reference/<built-in method lower of str object at 0x00000000057F7D00>.md)
+Derived from [Slot](../reference/slot.md)
 
 %figure "DoorLever model in Webots."
 
@@ -213,7 +213,7 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 ## Wall
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E68>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Wall model in Webots."
 
@@ -244,7 +244,7 @@ A customizable wall.
 
 ## Window
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Window model in Webots."
 

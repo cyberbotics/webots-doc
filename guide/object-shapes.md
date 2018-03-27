@@ -2,7 +2,7 @@
 
 ## TexturedBoxShape
 
-Derived from [Group](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Group](../reference/group.md)
 
 %figure "TexturedBoxShape model in Webots."
 

@@ -2,7 +2,7 @@
 
 ## Panel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Panel model in Webots."
 
@@ -46,7 +46,7 @@ Customizable simple panel.
 
 ## PannelWithTubes
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PannelWithTubes model in Webots."
 

@@ -2,7 +2,7 @@
 
 ## Auditorium
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Auditorium model in Webots."
 
@@ -26,7 +26,7 @@ A classic auditoruim.
 
 ## BigGlassTower
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D00>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "BigGlassTower model in Webots."
 
@@ -50,7 +50,7 @@ A big glass tower.
 
 ## Building
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Building model in Webots."
 
@@ -123,7 +123,7 @@ A customizable building, the size, appearance and geometry can fully be defined.
 
 ## BuildingUnderConstruction
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "BuildingUnderConstruction model in Webots."
 
@@ -147,7 +147,7 @@ Building under construction with scaffolding.
 
 ## BungalowStyleHouse
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "BungalowStyleHouse model in Webots."
 
@@ -196,7 +196,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## CommercialBuilding
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CommercialBuilding model in Webots."
 
@@ -220,7 +220,7 @@ A commercial building.
 
 ## CyberboticsTower
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CyberboticsTower model in Webots."
 
@@ -244,7 +244,7 @@ The Cyberbotics tower.
 
 ## FastFoodRestaurant
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "FastFoodRestaurant model in Webots."
 
@@ -290,7 +290,7 @@ The building can be changed to a two sided restaurant using the 'numberOfSides' 
 
 ## HollowBuilding
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "HollowBuilding model in Webots."
 
@@ -314,7 +314,7 @@ A hollow building.
 
 ## Hotel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Hotel model in Webots."
 
@@ -338,7 +338,7 @@ A big hotel.
 
 ## ModernHouse
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "ModernHouse model in Webots."
 
@@ -375,7 +375,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## Museum
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C88>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Museum model in Webots."
 
@@ -399,7 +399,7 @@ An old museum.
 
 ## ResidentialBuilding
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EE0>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "ResidentialBuilding model in Webots."
 
@@ -423,7 +423,7 @@ A residential building.
 
 ## SimpleBuilding
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SimpleBuilding model in Webots."
 
@@ -536,7 +536,7 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ## SimpleTwoFloorsHouse
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SimpleTwoFloorsHouse model in Webots."
 
@@ -570,7 +570,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## TheThreeTowers
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TheThreeTowers model in Webots."
 
@@ -594,7 +594,7 @@ A group of three towers.
 
 ## UBuilding
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "UBuilding model in Webots."
 

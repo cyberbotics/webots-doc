@@ -2,7 +2,7 @@
 
 ## Extrusion
 
-Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x00000000058029C0>.md)
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
 %figure "Extrusion model in Webots."
 
@@ -59,7 +59,7 @@ The shape (defined by the 'crossSection' field) is extruded along the path defin
 
 ## TexturedBox
 
-Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x00000000058026C0>.md)
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
 %figure "TexturedBox model in Webots."
 
@@ -115,7 +115,7 @@ A demo of these mappings is available in projects/samples/geometries/worlds/text
 
 ## TexturedParallelepiped
 
-Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x00000000058029C0>.md)
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
 %figure "TexturedParallelepiped model in Webots."
 

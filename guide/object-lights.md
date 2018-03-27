@@ -2,7 +2,7 @@
 
 ## CeilingLight
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CeilingLight model in Webots."
 
@@ -55,7 +55,7 @@ A ceiling light (0.19 x 0.8 x 0.19 m).
 
 ## FloorLight
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "FloorLight model in Webots."
 

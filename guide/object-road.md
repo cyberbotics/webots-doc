@@ -1,6 +1,6 @@
 # Road
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Road model in Webots."
 
@@ -149,7 +149,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## AddLaneRoadSegment
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "AddLaneRoadSegment model in Webots."
 
@@ -269,7 +269,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## AddLanesRoadSegment
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "AddLanesRoadSegment model in Webots."
 
@@ -392,7 +392,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## CrashBarrier
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CrashBarrier model in Webots."
 
@@ -436,7 +436,7 @@ A customizable crash barrier.
 
 ## Crossroad
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Crossroad model in Webots."
 
@@ -494,7 +494,7 @@ A customizable crossroad which can contain optionally references to its connecte
 
 ## CurvedRoadSegment
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CurvedRoadSegment model in Webots."
 
@@ -622,7 +622,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## HelicoidalRoadSegment
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "HelicoidalRoadSegment model in Webots."
 
@@ -744,7 +744,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## LaneSeparation
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "LaneSeparation model in Webots."
 
@@ -870,7 +870,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## RoadIntersection
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RoadIntersection model in Webots."
 
@@ -963,7 +963,7 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 ## RoadPillars
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RoadPillars model in Webots."
 
@@ -1018,7 +1018,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## Roundabout
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Roundabout model in Webots."
 
@@ -1136,7 +1136,7 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 ## StraightRoadSegment
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StraightRoadSegment model in Webots."
 

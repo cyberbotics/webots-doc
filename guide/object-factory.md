@@ -2,7 +2,7 @@
 
 ## CardboardBox
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CardboardBox model in Webots."
 
@@ -29,7 +29,7 @@ A cardboard box.
 
 ## WoodenBox
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "WoodenBox model in Webots."
 
@@ -59,7 +59,7 @@ A wooden box.
 
 ## WoodenPallet
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "WoodenPallet model in Webots."
 
@@ -103,7 +103,7 @@ Simple and configurable wooden pallet.
 
 ## WoodenPalletStack
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "WoodenPalletStack model in Webots."
 
@@ -158,7 +158,7 @@ Simple and configurable wooden pallet stack.
 
 ## LJoint
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "LJoint model in Webots."
 
@@ -183,7 +183,7 @@ LJoint {
 
 ## PipeSection
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PipeSection model in Webots."
 
@@ -218,7 +218,7 @@ A section of pipe.
 
 ## TJoint
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TJoint model in Webots."
 
@@ -245,7 +245,7 @@ TJoint {
 
 ## Bolt
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Bolt model in Webots."
 
@@ -274,7 +274,7 @@ A threaded bolt.
 
 ## Hammer
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Hammer model in Webots."
 
@@ -303,7 +303,7 @@ A 25cm asymmetric club hammer.
 
 ## Nut
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Nut model in Webots."
 
@@ -332,7 +332,7 @@ A hexagonal nut.
 
 ## PaintBucket
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PaintBucket model in Webots."
 
@@ -361,7 +361,7 @@ A 4kg bucket of paint, with HingeJoint-based handle.
 
 ## PlatformCart
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PlatformCart model in Webots."
 
@@ -393,7 +393,7 @@ A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 ## Screwdriver
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Screwdriver model in Webots."
 
@@ -422,7 +422,7 @@ A Philips screwdriver. The blade and handle are balanced.
 
 ## Wrench
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Wrench model in Webots."
 
@@ -453,7 +453,7 @@ A 15cm Open-End wrench.
 
 ## LargeValve
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "LargeValve model in Webots."
 
@@ -491,7 +491,7 @@ Large Wheel-based valve. Handle can be moved in either direction by the angle (r
 
 ## LeverValve
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "LeverValve model in Webots."
 
@@ -521,7 +521,7 @@ Lever-based valve. Handle can be moved in either direction (from up) of 45 degre
 
 ## SmallValve
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "SmallValve model in Webots."
 

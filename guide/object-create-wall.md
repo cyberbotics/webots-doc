@@ -2,7 +2,7 @@
 
 ## CreateWall
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F80>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "CreateWall model in Webots."
 

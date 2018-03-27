@@ -2,7 +2,7 @@
 
 ## BunchOfSunFlowers
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "BunchOfSunFlowers model in Webots."
 
@@ -49,7 +49,7 @@ Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 
 ## PottedTree
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PottedTree model in Webots."
 

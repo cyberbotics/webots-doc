@@ -2,7 +2,7 @@
 
 ## StraightStairs
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StraightStairs model in Webots."
 
@@ -55,7 +55,7 @@ Generic and customizable stairs model.
 
 ## StraightStairsLanding
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StraightStairsLanding model in Webots."
 
@@ -114,7 +114,7 @@ Generic and customizable landing model for straight stairs.
 
 ## StraightStairsRail
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StraightStairsRail model in Webots."
 

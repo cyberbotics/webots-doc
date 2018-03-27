@@ -1,6 +1,6 @@
 # Mirror
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "Mirror model in Webots."
 

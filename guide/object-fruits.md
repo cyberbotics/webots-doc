@@ -2,7 +2,7 @@
 
 ## Apple
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Apple model in Webots."
 
@@ -40,7 +40,7 @@ An apple (0.05 x 0.05 x 0.05 m).
 
 ## FruitBowl
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "FruitBowl model in Webots."
 
@@ -75,7 +75,7 @@ A fruit bowl (0.146 x 0.146 x 0.146 m).
 
 ## Orange
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Orange model in Webots."
 

@@ -2,7 +2,7 @@
 
 ## TexturedBackground
 
-Derived from [Background](../reference/<built-in method lower of str object at 0x00000000057F0D20>.md)
+Derived from [Background](../reference/background.md)
 
 %figure "TexturedBackground model in Webots."
 
@@ -35,7 +35,7 @@ Supported values for the "texture" field:
 
 ## TexturedBackgroundLight
 
-Derived from [DirectionalLight](../reference/<built-in method lower of str object at 0x0000000005890F80>.md)
+Derived from [DirectionalLight](../reference/directionallight.md)
 
 %figure "TexturedBackgroundLight model in Webots."
 

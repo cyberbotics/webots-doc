@@ -2,7 +2,7 @@
 
 ## Bed
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EE0>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Bed model in Webots."
 

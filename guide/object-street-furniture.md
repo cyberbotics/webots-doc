@@ -2,7 +2,7 @@
 
 ## Bench
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Bench model in Webots."
 
@@ -37,7 +37,7 @@ A bench.
 
 ## BusStop
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "BusStop model in Webots."
 
@@ -80,7 +80,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## EmergencyPhone
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "EmergencyPhone model in Webots."
 
@@ -112,7 +112,7 @@ An emergency phone.
 
 ## Fence
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Fence model in Webots."
 
@@ -176,7 +176,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## FireHydrant
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "FireHydrant model in Webots."
 
@@ -205,7 +205,7 @@ A fire hydrant.
 
 ## Fountain
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Fountain model in Webots."
 
@@ -240,7 +240,7 @@ A configurable fountain.
 
 ## PublicBin
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PublicBin model in Webots."
 
@@ -272,7 +272,7 @@ A public bin.
 
 ## PublicToilet
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PublicToilet model in Webots."
 
@@ -346,7 +346,7 @@ Resizable public toilet with two different displays.
 
 ## TrashBin
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TrashBin model in Webots."
 

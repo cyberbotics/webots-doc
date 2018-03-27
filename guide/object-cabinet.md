@@ -1,6 +1,6 @@
 # Cabinet
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7FA8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Cabinet model in Webots."
 
@@ -81,7 +81,7 @@ The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
 ## CabinetHandle
 
-Derived from [Slot](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Slot](../reference/slot.md)
 
 %figure "CabinetHandle model in Webots."
 

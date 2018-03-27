@@ -2,7 +2,7 @@
 
 ## CautionPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CautionPanel model in Webots."
 
@@ -37,7 +37,7 @@ Traffic panel: Caution panel.
 
 ## CautionSign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CautionSign model in Webots."
 
@@ -75,7 +75,7 @@ Traffic sign: Caution sign.
 
 ## ControlledStreetLight
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "ControlledStreetLight model in Webots."
 
@@ -124,7 +124,7 @@ Simple model of a controlled street light including a customizable SpotLight.
 
 ## CrossRoadsTrafficLight
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "CrossRoadsTrafficLight model in Webots."
 
@@ -156,7 +156,7 @@ Four roads crossing traffic light.
 
 ## DirectionPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "DirectionPanel model in Webots."
 
@@ -231,7 +231,7 @@ Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts
 
 ## DivergentIndicator
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "DivergentIndicator model in Webots."
 
@@ -269,7 +269,7 @@ A divergent indicator block.
 
 ## ExitPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "ExitPanel model in Webots."
 
@@ -304,7 +304,7 @@ Traffic panel: Exit panel.
 
 ## ExitSign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "ExitSign model in Webots."
 
@@ -342,7 +342,7 @@ Traffic sign: Exit sign.
 
 ## GenericTrafficLight
 
-Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Robot](../reference/robot.md)
 
 %figure "GenericTrafficLight model in Webots."
 
@@ -380,7 +380,7 @@ A generic traffic light with configurable timming.
 
 ## HighwayPole
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "HighwayPole model in Webots."
 
@@ -438,7 +438,7 @@ Different types of poles are available: "cylinder", "box", or "H-shape".
 
 ## HighwaySign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "HighwaySign model in Webots."
 
@@ -482,7 +482,7 @@ Resizable sign with front texture option.
 
 ## OrderPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "OrderPanel model in Webots."
 
@@ -517,7 +517,7 @@ Traffic panel: Order panel.
 
 ## OrderSign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "OrderSign model in Webots."
 
@@ -555,7 +555,7 @@ Traffic sign: Order sign.
 
 ## ParkingLines
 
-Derived from [Transform](../reference/<built-in method lower of str object at 0x0000000005802DB0>.md)
+Derived from [Transform](../reference/transform.md)
 
 %figure "ParkingLines model in Webots."
 
@@ -589,7 +589,7 @@ Parking lines for several consecutive cars.
 
 ## PedestrianCrossing
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PedestrianCrossing model in Webots."
 
@@ -621,7 +621,7 @@ A pedestrian crossing 20 x 8 meters (0.1m thick).
 
 ## Pole
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Pole model in Webots."
 
@@ -650,7 +650,7 @@ A metallic pole for the traffic lights.
 
 ## RectangularPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RectangularPanel model in Webots."
 
@@ -688,7 +688,7 @@ A simple rectangular traffic pannel.
 
 ## SignPole
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SignPole model in Webots."
 
@@ -726,7 +726,7 @@ Customizable direction panel on pole with the possibility of adding more panels.
 
 ## SpeedLimitPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SpeedLimitPanel model in Webots."
 
@@ -761,7 +761,7 @@ Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
 
 ## SpeedLimitSign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SpeedLimitSign model in Webots."
 
@@ -799,7 +799,7 @@ Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
 
 ## StopPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StopPanel model in Webots."
 
@@ -834,7 +834,7 @@ Traffic panel: Stop panel.
 
 ## StopSign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StopSign model in Webots."
 
@@ -872,7 +872,7 @@ Traffic sign: Stop sign.
 
 ## StreetLight
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "StreetLight model in Webots."
 
@@ -923,7 +923,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## TrafficCone
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TrafficCone model in Webots."
 
@@ -952,7 +952,7 @@ Traffic cone.
 
 ## TrafficLight
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E828>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TrafficLight model in Webots."
 
@@ -996,7 +996,7 @@ Basic traffic light without lamp.
 
 ## TrafficLightArrowLampGeometry
 
-Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x0000000005802570>.md)
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
 %figure "TrafficLightArrowLampGeometry model in Webots."
 
@@ -1017,7 +1017,7 @@ A traffic light lamp with an adjustable arrow.
 
 ## TrafficLightBigPole
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TrafficLightBigPole model in Webots."
 
@@ -1052,7 +1052,7 @@ A big metallic pole above the road for traffic lights.
 
 ## TrafficLightHorizontal
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "TrafficLightHorizontal model in Webots."
 
@@ -1096,7 +1096,7 @@ Horizontal traffic light without lamp to put on the big pole above the road.
 
 ## TrafficLightStandardLampGeometry
 
-Derived from [Sphere](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Sphere](../reference/sphere.md)
 
 %figure "TrafficLightStandardLampGeometry model in Webots."
 
@@ -1117,7 +1117,7 @@ A traffic light lamp with a standard geometry.
 
 ## YieldPanel
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "YieldPanel model in Webots."
 
@@ -1155,7 +1155,7 @@ Traffic panel: Yield panel.
 
 ## YieldSign
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "YieldSign model in Webots."
 

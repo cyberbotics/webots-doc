@@ -2,7 +2,7 @@
 
 ## Rock10cm
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Rock10cm model in Webots."
 
@@ -43,7 +43,7 @@ A rock (10 cm).
 
 ## Rock17cm
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Rock17cm model in Webots."
 

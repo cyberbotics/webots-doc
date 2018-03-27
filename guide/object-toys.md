@@ -2,7 +2,7 @@
 
 ## PaperBoat
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E5A8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PaperBoat model in Webots."
 
@@ -46,7 +46,7 @@ A paper boat (42.8 x 14.2 x 10.6 cm).
 
 ## RubberDuck
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RubberDuck model in Webots."
 

@@ -116,7 +116,7 @@ for proto in prioritaryProtoList + fileList:
             file.write('## %s\n\n' % protoName)
 
         if baseType:
-            file.write('Derived from [%s](../reference/%s.md)\n\n' % (baseType, baseType.lower))
+            file.write('Derived from [%s](../reference/%s.md)\n\n' % (baseType, baseType.lower()))
 
         if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
             file.write('%%figure "%s model in Webots."\n\n' % protoName)

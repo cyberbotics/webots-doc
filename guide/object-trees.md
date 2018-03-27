@@ -2,7 +2,7 @@
 
 ## Forest
 
-Derived from [Transform](../reference/<built-in method lower of str object at 0x0000000005802510>.md)
+Derived from [Transform](../reference/transform.md)
 
 %figure "Forest model in Webots."
 
@@ -71,7 +71,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## RoundTree
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E030>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RoundTree model in Webots."
 
@@ -94,7 +94,7 @@ A tree.
 
 ## SimpleTree
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SimpleTree model in Webots."
 
@@ -155,7 +155,7 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 
 ## Tree
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E698>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Tree model in Webots."
 

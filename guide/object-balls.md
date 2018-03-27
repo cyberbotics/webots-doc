@@ -2,7 +2,7 @@
 
 ## Ball
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D00>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Ball model in Webots."
 
@@ -50,7 +50,7 @@ You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 ## PingPongBall
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PingPongBall model in Webots."
 
@@ -82,7 +82,7 @@ A ping pong ball.
 
 ## SoccerBall
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SoccerBall model in Webots."
 

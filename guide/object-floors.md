@@ -2,7 +2,7 @@
 
 ## CircleArena
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CircleArena model in Webots."
 
@@ -55,7 +55,7 @@ A configurable circle arena composed of floor surrounded by wall.
 
 ## Floor
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Floor model in Webots."
 
@@ -99,7 +99,7 @@ Configurable standard flat floor.
 
 ## RectangleArena
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RectangleArena model in Webots."
 
@@ -155,7 +155,7 @@ A configurable rectangle arena composed of a floor surrounded by walls.
 
 ## UnevenTerrain
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "UnevenTerrain model in Webots."
 

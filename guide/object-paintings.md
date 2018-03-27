@@ -2,7 +2,7 @@
 
 ## LandscapePainting
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "LandscapePainting model in Webots."
 
@@ -34,7 +34,7 @@ A painting (1.5 x 1 x 0.05 m).
 
 ## PortraitPainting
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "PortraitPainting model in Webots."
 

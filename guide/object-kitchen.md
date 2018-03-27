@@ -1,6 +1,6 @@
 # Fridge
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7CD8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Fridge model in Webots."
 
@@ -40,7 +40,7 @@ A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 
 ## BiscuitBox
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "BiscuitBox model in Webots."
 
@@ -75,7 +75,7 @@ A customizable (size, texture, etc.) biscuit box.
 
 ## CerealBox
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "CerealBox model in Webots."
 
@@ -110,7 +110,7 @@ A customizable (size, texture, etc.) cereal box.
 
 ## HoneyJar
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "HoneyJar model in Webots."
 
@@ -145,7 +145,7 @@ A honey jar.
 
 ## JamJar
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "JamJar model in Webots."
 
@@ -179,7 +179,7 @@ A jam jar.
 
 ## HotPlate
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "HotPlate model in Webots."
 
@@ -208,7 +208,7 @@ An hot plate.
 
 ## Sink
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Sink model in Webots."
 
@@ -237,7 +237,7 @@ A sink.
 
 ## Worktop
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Worktop model in Webots."
 
@@ -272,7 +272,7 @@ A customizable (size, texture, etc.) worktop.
 
 # Oven
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Oven model in Webots."
 
@@ -312,7 +312,7 @@ An oven (0.5 x 0.68 x 0.44 m).
 
 ## Carafe
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Carafe model in Webots."
 
@@ -341,7 +341,7 @@ A carafe.
 
 ## Cookware
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Cookware model in Webots."
 
@@ -373,7 +373,7 @@ A cookware.
 
 ## Fork
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Fork model in Webots."
 
@@ -402,7 +402,7 @@ A fork.
 
 ## Glass
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Glass model in Webots."
 
@@ -431,7 +431,7 @@ A glass.
 
 ## Knife
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Knife model in Webots."
 
@@ -460,7 +460,7 @@ A knife.
 
 ## Lid
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Lid model in Webots."
 
@@ -492,7 +492,7 @@ A lid.
 
 ## Plate
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Plate model in Webots."
 
@@ -530,7 +530,7 @@ A customizable (dimensions, texture, etc. ) plate.
 
 ## Spoon
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Spoon model in Webots."
 
@@ -562,7 +562,7 @@ A spoon.
 
 ## Wineglass
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Wineglass model in Webots."
 
@@ -591,7 +591,7 @@ A wine glass.
 
 ## WoodenSpoon
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "WoodenSpoon model in Webots."
 

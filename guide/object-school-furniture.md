@@ -2,7 +2,7 @@
 
 ## Blackboard
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E738>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Blackboard model in Webots."
 
@@ -26,7 +26,7 @@ A blackboard (about 1.3 x 2.5 m).
 
 ## Book
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E5A8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Book model in Webots."
 
@@ -61,7 +61,7 @@ A book (0.2 x 0.15 x 0.02 m).
 
 ## Clock
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E558>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Clock model in Webots."
 

@@ -2,7 +2,7 @@
 
 ## Armchair
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Armchair model in Webots."
 
@@ -37,7 +37,7 @@ An armchair (1 x 0.8 x 1.1 m).
 
 ## Carpet
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E698>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Carpet model in Webots."
 
@@ -69,7 +69,7 @@ A carpet (2.4 x 0.02 x 1.6 m).
 
 ## Sofa
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E6E8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Sofa model in Webots."
 

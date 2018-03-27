@@ -2,7 +2,7 @@
 
 ## Chair
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Chair model in Webots."
 
@@ -37,7 +37,7 @@ A chair (0.5 x 1 x 0.5 m).
 
 ## SimpleChair
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "SimpleChair model in Webots."
 
@@ -73,7 +73,7 @@ This object is physics-enabled so it can be pushed.
 
 ## WoodenChair
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EE0>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "WoodenChair model in Webots."
 

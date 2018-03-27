@@ -2,7 +2,7 @@
 
 ## ComputerMouse
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "ComputerMouse model in Webots."
 
@@ -37,7 +37,7 @@ A computer mouse.
 
 ## DesktopComputer
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "DesktopComputer model in Webots."
 
@@ -69,7 +69,7 @@ A computer tower.
 
 ## Keyboard
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Keyboard model in Webots."
 
@@ -101,7 +101,7 @@ A computer keyboard.
 
 ## Laptop
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Laptop model in Webots."
 
@@ -130,7 +130,7 @@ A simple laptop.
 
 ## Monitor
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Monitor model in Webots."
 

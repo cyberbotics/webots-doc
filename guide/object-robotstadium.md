@@ -2,7 +2,7 @@
 
 ## RobotstadiumGoal
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RobotstadiumGoal model in Webots."
 
@@ -35,7 +35,7 @@ The color of the goal and the support polygons can be modified.
 
 ## RobotstadiumSoccerField
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RobotstadiumSoccerField model in Webots."
 

@@ -2,7 +2,7 @@
 
 ## Desk
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E580>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Desk model in Webots."
 
@@ -37,7 +37,7 @@ A desk (1.2 x 0.72 x 0.7 m).
 
 ## RoundTable
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E6E8>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "RoundTable model in Webots."
 
@@ -72,7 +72,7 @@ A round table (2 x 0.76 x 2 m).
 
 ## Table
 
-Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E788>.md)
+Derived from [Solid](../reference/solid.md)
 
 %figure "Table model in Webots."
 

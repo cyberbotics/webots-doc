@@ -8,9 +8,10 @@ This is an extension of the TexturedBox geometry PROTO.
 Available texture mappings:
 - `cube` mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
 - `compact` cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
-- `flat` mapping: projecting the texture on the front face
-- `metric` mapping: similar to default mapping but the texture is not deformed to match each face size
-- `default` mapping: same texture on all the faces
+- `flat` mapping: projecting the texture on the front face.
+- `metric` mapping: similar to default mapping but the texture is not deformed to match each face size.
+- `default` mapping: same texture on all the faces.
+
 A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt
 
 Derived from [Group](../reference/group.md).

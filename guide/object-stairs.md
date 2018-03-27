@@ -2,7 +2,9 @@
 
 ## StraightStairs
 
-Derived from [Solid](../reference/solid.md)
+Generic and customizable stairs model.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -29,10 +31,6 @@ StraightStairs {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairs.proto"
 
-### StraightStairs Description
-
-Generic and customizable stairs model.
-
 ### StraightStairs Field Summary
 
 - `stepSize`: Defines the size of one step.
@@ -55,7 +53,9 @@ Generic and customizable stairs model.
 
 ## StraightStairsLanding
 
-Derived from [Solid](../reference/solid.md)
+Generic and customizable landing model for straight stairs.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -84,10 +84,6 @@ StraightStairsLanding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairsLanding.proto"
 
-### StraightStairsLanding Description
-
-Generic and customizable landing model for straight stairs.
-
 ### StraightStairsLanding Field Summary
 
 - `landingSize`: Defines the size of the landing.
@@ -114,7 +110,9 @@ Generic and customizable landing model for straight stairs.
 
 ## StraightStairsRail
 
-Derived from [Solid](../reference/solid.md)
+Default stairs handrail.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -140,10 +138,6 @@ StraightStairsRail {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairsRail.proto"
-
-### StraightStairsRail Description
-
-Default stairs handrail.
 
 ### StraightStairsRail Field Summary
 

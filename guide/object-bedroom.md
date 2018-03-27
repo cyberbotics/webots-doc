@@ -2,7 +2,9 @@
 
 ## Bed
 
-Derived from [Solid](../reference/solid.md)
+Customizable bed with feet and one or 2 pillows.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -28,10 +30,6 @@ Bed {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/bedroom/protos/Bed.proto"
-
-### Bed Description
-
-Customizable bed with feet and one or 2 pillows.
 
 ### Bed Field Summary
 

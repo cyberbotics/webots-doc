@@ -2,7 +2,10 @@
 
 ## Ball
 
-Derived from [Solid](../reference/solid.md)
+The Ball's size, mass and color correspond to the soccer ball used in the Robocup SPL.
+You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -27,11 +30,6 @@ Ball {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/Ball.proto"
 
-### Ball Description
-
-The Ball's size, mass and color correspond to the soccer ball used in the Robocup SPL.
-You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
-
 ### Ball Field Summary
 
 - `color`: Defines the color of the ball.
@@ -50,7 +48,9 @@ You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 ## PingPongBall
 
-Derived from [Solid](../reference/solid.md)
+A ping pong ball.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -70,10 +70,6 @@ PingPongBall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/PingPongBall.proto"
 
-### PingPongBall Description
-
-A ping pong ball.
-
 ### PingPongBall Field Summary
 
 - `immersionProperties`: Defines the immersion properties of the ball.
@@ -82,7 +78,10 @@ A ping pong ball.
 
 ## SoccerBall
 
-Derived from [Solid](../reference/solid.md)
+A black and white soccer ball with customizable radius and mass.
+This object is physics-enabled so it will roll or bounce when hit.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -101,11 +100,6 @@ SoccerBall {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/SoccerBall.proto"
-
-### SoccerBall Description
-
-A black and white soccer ball with customizable radius and mass.
-This object is physics-enabled so it will roll or bounce when hit.
 
 ### SoccerBall Field Summary
 

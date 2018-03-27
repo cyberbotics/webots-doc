@@ -2,7 +2,9 @@
 
 ## Ceiling
 
-Derived from [Solid](../reference/solid.md)
+A configurable standard ceiling.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -26,10 +28,6 @@ Ceiling {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Ceiling.proto"
 
-### Ceiling Description
-
-A configurable standard ceiling.
-
 ### Ceiling Field Summary
 
 - `size`: Defines the size of the ceiling.
@@ -44,7 +42,11 @@ A configurable standard ceiling.
 
 ## Door
 
-Derived from [Solid](../reference/solid.md)
+A cutomizable openable door.
+'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
+'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -76,12 +78,6 @@ Door {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Door.proto"
-
-### Door Description
-
-A cutomizable openable door.
-'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
-'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
 ### Door Field Summary
 
@@ -117,7 +113,10 @@ A cutomizable openable door.
 
 ## DoorKnob
 
-Derived from [Slot](../reference/slot.md)
+A door knob.
+This object can be used in the 'doorHandle' field of the Door object.
+
+Derived from [Slot](../reference/slot.md).
 
 %figure
 
@@ -140,11 +139,6 @@ DoorKnob {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorKnob.proto"
 
-### DoorKnob Description
-
-A door knob.
-This object can be used in the 'doorHandle' field of the Door object.
-
 ### DoorKnob Field Summary
 
 - `doorThickness`: Defines the thickness of the door.
@@ -159,7 +153,10 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 ## DoorLever
 
-Derived from [Slot](../reference/slot.md)
+A door lever.
+This object can be used in the 'doorHandle' field of the Door object.
+
+Derived from [Slot](../reference/slot.md).
 
 %figure
 
@@ -186,11 +183,6 @@ DoorLever {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorLever.proto"
 
-### DoorLever Description
-
-A door lever.
-This object can be used in the 'doorHandle' field of the Door object.
-
 ### DoorLever Field Summary
 
 - `canTurn`: Defines whether the lever is connected to the door using a hinge-joint.
@@ -213,7 +205,11 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 ## Wall
 
-Derived from [Solid](../reference/solid.md)
+A customizable wall.
+'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
+'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -236,15 +232,13 @@ Wall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Wall.proto"
 
-### Wall Description
+## Window
 
-A customizable wall.
+A customizable window including walls above and below.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
 'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
-## Window
-
-Derived from [Solid](../reference/solid.md)
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -272,12 +266,6 @@ Window {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Window.proto"
-
-### Window Description
-
-A customizable window including walls above and below.
-'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
-'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
 ### Window Field Summary
 

@@ -2,7 +2,20 @@
 
 ## TexturedBackground
 
-Derived from [Background](../reference/background.md)
+Background textured with a skybox.
+
+Supported values for the "texture" field:
+
+- dawn\_cloudy\_empty
+- morning\_cloudy\_empty
+- noon\_cloudy\_empty
+- noon\_cloudy\_mountains
+- noon\_stormy\_empty
+- noon\_sunny\_empty
+- noon\_sunny\_garden
+- twilight\_cloudy\_empty
+
+Derived from [Background](../reference/background.md).
 
 %figure
 
@@ -18,9 +31,9 @@ TexturedBackground {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/backgrounds/protos/TexturedBackground.proto"
 
-### TexturedBackground Description
+## TexturedBackgroundLight
 
-Background textured with a skybox.
+Light matching with the TexturedBackground.
 
 Supported values for the "texture" field:
 
@@ -33,9 +46,7 @@ Supported values for the "texture" field:
 - noon\_sunny\_garden
 - twilight\_cloudy\_empty
 
-## TexturedBackgroundLight
-
-Derived from [DirectionalLight](../reference/directionallight.md)
+Derived from [DirectionalLight](../reference/directionallight.md).
 
 %figure
 
@@ -52,21 +63,6 @@ TexturedBackgroundLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
-
-### TexturedBackgroundLight Description
-
-Light matching with the TexturedBackground.
-
-Supported values for the "texture" field:
-
-- dawn\_cloudy\_empty
-- morning\_cloudy\_empty
-- noon\_cloudy\_empty
-- noon\_cloudy\_mountains
-- noon\_stormy\_empty
-- noon\_sunny\_empty
-- noon\_sunny\_garden
-- twilight\_cloudy\_empty
 
 ### TexturedBackgroundLight Field Summary
 

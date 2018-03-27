@@ -2,7 +2,9 @@
 
 ## Desk
 
-Derived from [Solid](../reference/solid.md)
+A desk (1.2 x 0.72 x 0.7 m).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -23,10 +25,6 @@ Desk {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/Desk.proto"
 
-### Desk Description
-
-A desk (1.2 x 0.72 x 0.7 m).
-
 ### Desk Field Summary
 
 - `color`: Defines the color of the desk.
@@ -37,7 +35,9 @@ A desk (1.2 x 0.72 x 0.7 m).
 
 ## RoundTable
 
-Derived from [Solid](../reference/solid.md)
+A round table (2 x 0.76 x 2 m).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -58,10 +58,6 @@ RoundTable {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/RoundTable.proto"
 
-### RoundTable Description
-
-A round table (2 x 0.76 x 2 m).
-
 ### RoundTable Field Summary
 
 - `color`: Defines the color of the table.
@@ -72,7 +68,9 @@ A round table (2 x 0.76 x 2 m).
 
 ## Table
 
-Derived from [Solid](../reference/solid.md)
+Customizable table.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -98,10 +96,6 @@ Table {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/Table.proto"
-
-### Table Description
-
-Customizable table.
 
 ### Table Field Summary
 

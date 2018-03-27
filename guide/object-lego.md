@@ -2,7 +2,9 @@
 
 ## LegoLargeMotor
 
-Derived from [Solid](../reference/solid.md)
+LEGO Mindstorm EV3 large motor. Part id: 6009430.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -20,13 +22,11 @@ LegoLargeMotor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lego/protos/LegoLargeMotor.proto"
 
-### LegoLargeMotor Description
-
-LEGO Mindstorm EV3 large motor. Part id: 6009430.
-
 ## LegoWheel
 
-Derived from [Solid](../reference/solid.md)
+LEGO Mindstrom EV 3 wheel. Parts id: 4634091 & 6035364.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -43,8 +43,4 @@ LegoWheel {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lego/protos/LegoWheel.proto"
-
-### LegoWheel Description
-
-LEGO Mindstrom EV 3 wheel. Parts id: 4634091 & 6035364.
 

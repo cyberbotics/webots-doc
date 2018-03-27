@@ -2,7 +2,9 @@
 
 ## ComputerMouse
 
-Derived from [Solid](../reference/solid.md)
+A computer mouse.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -23,10 +25,6 @@ ComputerMouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/ComputerMouse.proto"
 
-### ComputerMouse Description
-
-A computer mouse.
-
 ### ComputerMouse Field Summary
 
 - `topColor`: Defines the color of the top part of the mouse.
@@ -37,7 +35,9 @@ A computer mouse.
 
 ## DesktopComputer
 
-Derived from [Solid](../reference/solid.md)
+A computer tower.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -57,10 +57,6 @@ DesktopComputer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/DesktopComputer.proto"
 
-### DesktopComputer Description
-
-A computer tower.
-
 ### DesktopComputer Field Summary
 
 - `powerbuttonColor`: Defines the color of the computer power button.
@@ -69,7 +65,9 @@ A computer tower.
 
 ## Keyboard
 
-Derived from [Solid](../reference/solid.md)
+A computer keyboard.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -89,10 +87,6 @@ Keyboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Keyboard.proto"
 
-### Keyboard Description
-
-A computer keyboard.
-
 ### Keyboard Field Summary
 
 - `color`: Defines the color of the keyboard.
@@ -101,7 +95,9 @@ A computer keyboard.
 
 ## Laptop
 
-Derived from [Solid](../reference/solid.md)
+A simple laptop.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -120,17 +116,15 @@ Laptop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Laptop.proto"
 
-### Laptop Description
-
-A simple laptop.
-
 ### Laptop Field Summary
 
 - `controller`: Defines the controller of the laptop which can use the Display device to show images.
 
 ## Monitor
 
-Derived from [Solid](../reference/solid.md)
+A computer monitor.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -149,10 +143,6 @@ Monitor {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Monitor.proto"
-
-### Monitor Description
-
-A computer monitor.
 
 ### Monitor Field Summary
 

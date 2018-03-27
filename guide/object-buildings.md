@@ -2,7 +2,9 @@
 
 ## Auditorium
 
-Derived from [Solid](../reference/solid.md)
+A classic auditoruim.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -20,13 +22,11 @@ Auditorium {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Auditorium.proto"
 
-### Auditorium Description
-
-A classic auditoruim.
-
 ## BigGlassTower
 
-Derived from [Solid](../reference/solid.md)
+A big glass tower.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -44,13 +44,11 @@ BigGlassTower {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/BigGlassTower.proto"
 
-### BigGlassTower Description
-
-A big glass tower.
-
 ## Building
 
-Derived from [Solid](../reference/solid.md)
+A customizable building, the size, appearance and geometry can fully be defined.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -82,10 +80,6 @@ Building {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Building.proto"
-
-### Building Description
-
-A customizable building, the size, appearance and geometry can fully be defined.
 
 ### Building Field Summary
 
@@ -123,7 +117,9 @@ A customizable building, the size, appearance and geometry can fully be defined.
 
 ## BuildingUnderConstruction
 
-Derived from [Solid](../reference/solid.md)
+Building under construction with scaffolding.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -141,13 +137,13 @@ BuildingUnderConstruction {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/BuildingUnderConstruction.proto"
 
-### BuildingUnderConstruction Description
-
-Building under construction with scaffolding.
-
 ## BungalowStyleHouse
 
-Derived from [Solid](../reference/solid.md)
+A configurable bungalow style house.
+The original blender model was made by noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -172,12 +168,6 @@ BungalowStyleHouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/BungalowStyleHouse.proto"
 
-### BungalowStyleHouse Description
-
-A configurable bungalow style house.
-The original blender model was made by noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305)).
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-
 ### BungalowStyleHouse Field Summary
 
 - `fence`: Defines whether the house has a fence or not.
@@ -196,7 +186,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## CommercialBuilding
 
-Derived from [Solid](../reference/solid.md)
+A commercial building.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -214,13 +206,11 @@ CommercialBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/CommercialBuilding.proto"
 
-### CommercialBuilding Description
-
-A commercial building.
-
 ## CyberboticsTower
 
-Derived from [Solid](../reference/solid.md)
+The Cyberbotics tower.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -238,13 +228,16 @@ CyberboticsTower {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/CyberboticsTower.proto"
 
-### CyberboticsTower Description
-
-The Cyberbotics tower.
-
 ## FastFoodRestaurant
 
-Derived from [Solid](../reference/solid.md)
+Fast food restaurant that comes in 4 versions:
+- `KFC`
+- `FFC`
+- `subway`
+- `momo`
+The building can be changed to a two sided restaurant using the 'numberOfSides' parameter.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -267,15 +260,6 @@ FastFoodRestaurant {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/FastFoodRestaurant.proto"
 
-### FastFoodRestaurant Description
-
-Fast food restaurant that comes in 4 versions:
-- `KFC`
-- `FFC`
-- `subway`
-- `momo`
-The building can be changed to a two sided restaurant using the 'numberOfSides' parameter.
-
 ### FastFoodRestaurant Field Summary
 
 - `height`: Defines the height of the building.
@@ -290,7 +274,9 @@ The building can be changed to a two sided restaurant using the 'numberOfSides' 
 
 ## HollowBuilding
 
-Derived from [Solid](../reference/solid.md)
+A hollow building.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -308,13 +294,11 @@ HollowBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/HollowBuilding.proto"
 
-### HollowBuilding Description
-
-A hollow building.
-
 ## Hotel
 
-Derived from [Solid](../reference/solid.md)
+A big hotel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -332,13 +316,13 @@ Hotel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Hotel.proto"
 
-### Hotel Description
-
-A big hotel.
-
 ## ModernHouse
 
-Derived from [Solid](../reference/solid.md)
+A simple modern house.
+The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -359,12 +343,6 @@ ModernHouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/ModernHouse.proto"
 
-### ModernHouse Description
-
-A simple modern house.
-The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734)).
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-
 ### ModernHouse Field Summary
 
 - `enableBoundingObject`: Defines whether to enable the bounding object or not.
@@ -375,7 +353,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## Museum
 
-Derived from [Solid](../reference/solid.md)
+An old museum.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -393,13 +373,11 @@ Museum {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/Museum.proto"
 
-### Museum Description
-
-An old museum.
-
 ## ResidentialBuilding
 
-Derived from [Solid](../reference/solid.md)
+A residential building.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -417,47 +395,7 @@ ResidentialBuilding {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/ResidentialBuilding.proto"
 
-### ResidentialBuilding Description
-
-A residential building.
-
 ## SimpleBuilding
-
-Derived from [Solid](../reference/solid.md)
-
-%figure
-
-![SimpleBuilding](images/objects/buildings/SimpleBuilding/model.png)
-
-%end
-
-```
-SimpleBuilding {
-  SFVec3f     translation            0 0 0
-  SFRotation  rotation               0 1 0 0
-  SFString    name                   "building"
-  SFFloat     floorHeight            3                                  
-  SFInt32     floorNumber            3                                  
-  SFInt32     startingFloor          0                                  
-  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]  
-  SFString    wallType               "windowed building"                
-  MFColor     wallColor              []                                 
-  MFString    groundFloor            []                                 
-  MFFloat     groundFloorScale       []                                 
-  MFFloat     groundFloorTranslation []                                 
-  SFString    roofType               "tiled"                            
-  MFColor     roofColor              []                                 
-  SFString    roofShape              "pyramidal roof"                   
-  SFBool      snowOnRoof             FALSE                              
-  SFFloat     roofHeight             3                                  
-  SFBool      enableBoundingObject   TRUE                               
-  SFBool      bottom                 FALSE                              
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/SimpleBuilding.proto"
-
-### SimpleBuilding Description
 
 A customizable building, the size and geometry can fully be defined.
 The texture of the wall and roof can be selected using the fields 'wallType' and 'roofType'.
@@ -500,6 +438,40 @@ Available roof types are:
 
 The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
+Derived from [Solid](../reference/solid.md).
+
+%figure
+
+![SimpleBuilding](images/objects/buildings/SimpleBuilding/model.png)
+
+%end
+
+```
+SimpleBuilding {
+  SFVec3f     translation            0 0 0
+  SFRotation  rotation               0 1 0 0
+  SFString    name                   "building"
+  SFFloat     floorHeight            3                                  
+  SFInt32     floorNumber            3                                  
+  SFInt32     startingFloor          0                                  
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]  
+  SFString    wallType               "windowed building"                
+  MFColor     wallColor              []                                 
+  MFString    groundFloor            []                                 
+  MFFloat     groundFloorScale       []                                 
+  MFFloat     groundFloorTranslation []                                 
+  SFString    roofType               "tiled"                            
+  MFColor     roofColor              []                                 
+  SFString    roofShape              "pyramidal roof"                   
+  SFBool      snowOnRoof             FALSE                              
+  SFFloat     roofHeight             3                                  
+  SFBool      enableBoundingObject   TRUE                               
+  SFBool      bottom                 FALSE                              
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/SimpleBuilding.proto"
+
 ### SimpleBuilding Field Summary
 
 - `floorHeight`: Defines the height of one floor.
@@ -536,7 +508,11 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ## SimpleTwoFloorsHouse
 
-Derived from [Solid](../reference/solid.md)
+A simple house with two floors.
+The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -556,12 +532,6 @@ SimpleTwoFloorsHouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/SimpleTwoFloorsHouse.proto"
 
-### SimpleTwoFloorsHouse Description
-
-A simple house with two floors.
-The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482)).
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-
 ### SimpleTwoFloorsHouse Field Summary
 
 - `enableBoundingObject`: Defines whether to enable the bounding object.
@@ -570,7 +540,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## TheThreeTowers
 
-Derived from [Solid](../reference/solid.md)
+A group of three towers.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -588,13 +560,11 @@ TheThreeTowers {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/TheThreeTowers.proto"
 
-### TheThreeTowers Description
-
-A group of three towers.
-
 ## UBuilding
 
-Derived from [Solid](../reference/solid.md)
+A building with a "U" form.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -611,8 +581,4 @@ UBuilding {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/buildings/protos/UBuilding.proto"
-
-### UBuilding Description
-
-A building with a "U" form.
 

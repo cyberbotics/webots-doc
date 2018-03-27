@@ -2,7 +2,10 @@
 
 ## RobotstadiumGoal
 
-Derived from [Solid](../reference/solid.md)
+Robot soccer goal inspired from the RoboCup 2013-2014 Standard Platform League.
+The color of the goal and the support polygons can be modified.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -22,11 +25,6 @@ RobotstadiumGoal {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/robotstadium/protos/RobotstadiumGoal.proto"
 
-### RobotstadiumGoal Description
-
-Robot soccer goal inspired from the RoboCup 2013-2014 Standard Platform League.
-The color of the goal and the support polygons can be modified.
-
 ### RobotstadiumGoal Field Summary
 
 - `postRadius`: Defines the radius of the goal posts.
@@ -35,7 +33,11 @@ The color of the goal and the support polygons can be modified.
 
 ## RobotstadiumSoccerField
 
-Derived from [Solid](../reference/solid.md)
+Robot soccer field inspired from the RoboCup 2014 Standard Platform League.
+The soccer field is built on a total carpet area of length 10.4 m and width 7.4 m.
+The field dimensions (within the white lines) are 9 x 6 m.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -56,12 +58,6 @@ RobotstadiumSoccerField {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
-
-### RobotstadiumSoccerField Description
-
-Robot soccer field inspired from the RoboCup 2014 Standard Platform League.
-The soccer field is built on a total carpet area of length 10.4 m and width 7.4 m.
-The field dimensions (within the white lines) are 9 x 6 m.
 
 ### RobotstadiumSoccerField Field Summary
 

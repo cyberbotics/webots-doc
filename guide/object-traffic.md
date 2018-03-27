@@ -2,7 +2,9 @@
 
 ## CautionPanel
 
-Derived from [Solid](../reference/solid.md)
+Traffic panel: Caution panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -23,10 +25,6 @@ CautionPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CautionPanel.proto"
 
-### CautionPanel Description
-
-Traffic panel: Caution panel.
-
 ### CautionPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -37,7 +35,9 @@ Traffic panel: Caution panel.
 
 ## CautionSign
 
-Derived from [Solid](../reference/solid.md)
+Traffic sign: Caution sign.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -59,10 +59,6 @@ CautionSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CautionSign.proto"
 
-### CautionSign Description
-
-Traffic sign: Caution sign.
-
 ### CautionSign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -75,7 +71,9 @@ Traffic sign: Caution sign.
 
 ## ControlledStreetLight
 
-Derived from [Robot](../reference/robot.md)
+Simple model of a controlled street light including a customizable SpotLight.
+
+Derived from [Robot](../reference/robot.md).
 
 %figure
 
@@ -102,10 +100,6 @@ ControlledStreetLight {
 
 > **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz)
 
-### ControlledStreetLight Description
-
-Simple model of a controlled street light including a customizable SpotLight.
-
 ### ControlledStreetLight Field Summary
 
 - `controller`: Defines the controller used to make the LED blink.
@@ -124,7 +118,9 @@ Simple model of a controlled street light including a customizable SpotLight.
 
 ## CrossRoadsTrafficLight
 
-Derived from [Robot](../reference/robot.md)
+Four roads crossing traffic light.
+
+Derived from [Robot](../reference/robot.md).
 
 %figure
 
@@ -144,10 +140,6 @@ CrossRoadsTrafficLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CrossRoadsTrafficLight.proto"
 
-### CrossRoadsTrafficLight Description
-
-Four roads crossing traffic light.
-
 ### CrossRoadsTrafficLight Field Summary
 
 - `controller`: Is equivalent to the `contactMaterial` field of the [Robot](../reference/robot.md) node.
@@ -156,7 +148,25 @@ Four roads crossing traffic light.
 
 ## DirectionPanel
 
-Derived from [Solid](../reference/solid.md)
+Resizable direction panel with two customizable sides.
+The 'textSize' fields defines the height (in meter) of one line of text.
+List of supported fonts:
+- 'Arial'
+- 'Arial Black'
+- 'Comic Sans MS'
+- 'Courier New'
+- 'Georgia',
+- 'Impact'
+- 'Lucida Console'
+- 'Lucida Sans Unicode'
+- 'Palatino Linotype'
+- 'Tahoma'
+- 'Times New Roman'
+- 'Trebuchet MS'
+- 'Verdana'
+Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -185,26 +195,6 @@ DirectionPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/DirectionPanel.proto"
 
-### DirectionPanel Description
-
-Resizable direction panel with two customizable sides.
-The 'textSize' fields defines the height (in meter) of one line of text.
-List of supported fonts:
-- 'Arial'
-- 'Arial Black'
-- 'Comic Sans MS'
-- 'Courier New'
-- 'Georgia',
-- 'Impact'
-- 'Lucida Console'
-- 'Lucida Sans Unicode'
-- 'Palatino Linotype'
-- 'Tahoma'
-- 'Times New Roman'
-- 'Trebuchet MS'
-- 'Verdana'
-Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory.
-
 ### DirectionPanel Field Summary
 
 - `width`: Defines the width of the panel.
@@ -231,7 +221,9 @@ Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts
 
 ## DivergentIndicator
 
-Derived from [Solid](../reference/solid.md)
+A divergent indicator block.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -253,10 +245,6 @@ DivergentIndicator {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/DivergentIndicator.proto"
 
-### DivergentIndicator Description
-
-A divergent indicator block.
-
 ### DivergentIndicator Field Summary
 
 - `texture`: Defines the texture used by the divergent indicator.
@@ -269,7 +257,9 @@ A divergent indicator block.
 
 ## ExitPanel
 
-Derived from [Solid](../reference/solid.md)
+Traffic panel: Exit panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -290,10 +280,6 @@ ExitPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ExitPanel.proto"
 
-### ExitPanel Description
-
-Traffic panel: Exit panel.
-
 ### ExitPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -304,7 +290,9 @@ Traffic panel: Exit panel.
 
 ## ExitSign
 
-Derived from [Solid](../reference/solid.md)
+Traffic sign: Exit sign.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -326,10 +314,6 @@ ExitSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ExitSign.proto"
 
-### ExitSign Description
-
-Traffic sign: Exit sign.
-
 ### ExitSign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -342,7 +326,9 @@ Traffic sign: Exit sign.
 
 ## GenericTrafficLight
 
-Derived from [Robot](../reference/robot.md)
+A generic traffic light with configurable timming.
+
+Derived from [Robot](../reference/robot.md).
 
 %figure
 
@@ -364,10 +350,6 @@ GenericTrafficLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/GenericTrafficLight.proto"
 
-### GenericTrafficLight Description
-
-A generic traffic light with configurable timming.
-
 ### GenericTrafficLight Field Summary
 
 - `startGreen`: Defines whether the traffic light should start in a 'green' state or 'red' state.
@@ -380,7 +362,10 @@ A generic traffic light with configurable timming.
 
 ## HighwayPole
 
-Derived from [Solid](../reference/solid.md)
+Customizable highway pole with the possibility of adding another stand and more signs along the vertical or horizontal parts of the pole.
+Different types of poles are available: "cylinder", "box", or "H-shape".
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -409,11 +394,6 @@ HighwayPole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/HighwayPole.proto"
 
-### HighwayPole Description
-
-Customizable highway pole with the possibility of adding another stand and more signs along the vertical or horizontal parts of the pole.
-Different types of poles are available: "cylinder", "box", or "H-shape".
-
 ### HighwayPole Field Summary
 
 - `stand`: Defines the number of stands.
@@ -438,7 +418,9 @@ Different types of poles are available: "cylinder", "box", or "H-shape".
 
 ## HighwaySign
 
-Derived from [Solid](../reference/solid.md)
+Resizable sign with front texture option.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -462,10 +444,6 @@ HighwaySign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/HighwaySign.proto"
 
-### HighwaySign Description
-
-Resizable sign with front texture option.
-
 ### HighwaySign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -482,7 +460,9 @@ Resizable sign with front texture option.
 
 ## OrderPanel
 
-Derived from [Solid](../reference/solid.md)
+Traffic panel: Order panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -503,10 +483,6 @@ OrderPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/OrderPanel.proto"
 
-### OrderPanel Description
-
-Traffic panel: Order panel.
-
 ### OrderPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -517,7 +493,9 @@ Traffic panel: Order panel.
 
 ## OrderSign
 
-Derived from [Solid](../reference/solid.md)
+Traffic sign: Order sign.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -539,10 +517,6 @@ OrderSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/OrderSign.proto"
 
-### OrderSign Description
-
-Traffic sign: Order sign.
-
 ### OrderSign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -555,7 +529,9 @@ Traffic sign: Order sign.
 
 ## ParkingLines
 
-Derived from [Transform](../reference/transform.md)
+Parking lines for several consecutive cars.
+
+Derived from [Transform](../reference/transform.md).
 
 %figure
 
@@ -575,10 +551,6 @@ ParkingLines {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ParkingLines.proto"
 
-### ParkingLines Description
-
-Parking lines for several consecutive cars.
-
 ### ParkingLines Field Summary
 
 - `numberOfCarParks`: Defines the number of parks.
@@ -589,7 +561,9 @@ Parking lines for several consecutive cars.
 
 ## PedestrianCrossing
 
-Derived from [Solid](../reference/solid.md)
+A pedestrian crossing 20 x 8 meters (0.1m thick).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -609,10 +583,6 @@ PedestrianCrossing {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/PedestrianCrossing.proto"
 
-### PedestrianCrossing Description
-
-A pedestrian crossing 20 x 8 meters (0.1m thick).
-
 ### PedestrianCrossing Field Summary
 
 - `size`: Defines the size of the pedestrian crossing.
@@ -621,7 +591,9 @@ A pedestrian crossing 20 x 8 meters (0.1m thick).
 
 ## Pole
 
-Derived from [Solid](../reference/solid.md)
+A metallic pole for the traffic lights.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -640,17 +612,15 @@ Pole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/Pole.proto"
 
-### Pole Description
-
-A metallic pole for the traffic lights.
-
 ### Pole Field Summary
 
 - `slot`: Extends the pole with panels or traffic lights.
 
 ## RectangularPanel
 
-Derived from [Solid](../reference/solid.md)
+A simple rectangular traffic pannel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -672,10 +642,6 @@ RectangularPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/RectangularPanel.proto"
 
-### RectangularPanel Description
-
-A simple rectangular traffic pannel.
-
 ### RectangularPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -688,7 +654,9 @@ A simple rectangular traffic pannel.
 
 ## SignPole
 
-Derived from [Solid](../reference/solid.md)
+Customizable direction panel on pole with the possibility of adding more panels.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -710,10 +678,6 @@ SignPole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SignPole.proto"
 
-### SignPole Description
-
-Customizable direction panel on pole with the possibility of adding more panels.
-
 ### SignPole Field Summary
 
 - `height`: Defines the height of the sign.
@@ -726,7 +690,9 @@ Customizable direction panel on pole with the possibility of adding more panels.
 
 ## SpeedLimitPanel
 
-Derived from [Solid](../reference/solid.md)
+Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -747,10 +713,6 @@ SpeedLimitPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SpeedLimitPanel.proto"
 
-### SpeedLimitPanel Description
-
-Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
-
 ### SpeedLimitPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -761,7 +723,9 @@ Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
 
 ## SpeedLimitSign
 
-Derived from [Solid](../reference/solid.md)
+Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -783,10 +747,6 @@ SpeedLimitSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SpeedLimitSign.proto"
 
-### SpeedLimitSign Description
-
-Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
-
 ### SpeedLimitSign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -799,7 +759,9 @@ Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
 
 ## StopPanel
 
-Derived from [Solid](../reference/solid.md)
+Traffic panel: Stop panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -820,10 +782,6 @@ StopPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StopPanel.proto"
 
-### StopPanel Description
-
-Traffic panel: Stop panel.
-
 ### StopPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -834,7 +792,9 @@ Traffic panel: Stop panel.
 
 ## StopSign
 
-Derived from [Solid](../reference/solid.md)
+Traffic sign: Stop sign.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -856,10 +816,6 @@ StopSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StopSign.proto"
 
-### StopSign Description
-
-Traffic sign: Stop sign.
-
 ### StopSign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -872,7 +828,10 @@ Traffic sign: Stop sign.
 
 ## StreetLight
 
-Derived from [Solid](../reference/solid.md)
+Simple model of a street light including a customizable SpotLight.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -900,11 +859,6 @@ StreetLight {
 
 > **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz)
 
-### StreetLight Description
-
-Simple model of a street light including a customizable SpotLight.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-
 ### StreetLight Field Summary
 
 - `beamWidth`: Defines the beam width of the spot light.
@@ -923,7 +877,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## TrafficCone
 
-Derived from [Solid](../reference/solid.md)
+Traffic cone.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -942,17 +898,15 @@ TrafficCone {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficCone.proto"
 
-### TrafficCone Description
-
-Traffic cone.
-
 ### TrafficCone Field Summary
 
 - `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## TrafficLight
 
-Derived from [Solid](../reference/solid.md)
+Basic traffic light without lamp.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -976,10 +930,6 @@ TrafficLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLight.proto"
 
-### TrafficLight Description
-
-Basic traffic light without lamp.
-
 ### TrafficLight Field Summary
 
 - `red_light`: Defines the name of the red LED device.
@@ -996,7 +946,9 @@ Basic traffic light without lamp.
 
 ## TrafficLightArrowLampGeometry
 
-Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
+A traffic light lamp with an adjustable arrow.
+
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
 
 %figure
 
@@ -1011,13 +963,11 @@ TrafficLightArrowLampGeometry {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightArrowLampGeometry.proto"
 
-### TrafficLightArrowLampGeometry Description
-
-A traffic light lamp with an adjustable arrow.
-
 ## TrafficLightBigPole
 
-Derived from [Solid](../reference/solid.md)
+A big metallic pole above the road for traffic lights.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -1038,10 +988,6 @@ TrafficLightBigPole {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightBigPole.proto"
 
-### TrafficLightBigPole Description
-
-A big metallic pole above the road for traffic lights.
-
 ### TrafficLightBigPole Field Summary
 
 - `slot1`: Extends the pole with a traffic light located in the middle of the vertical part of the pole.
@@ -1052,7 +998,9 @@ A big metallic pole above the road for traffic lights.
 
 ## TrafficLightHorizontal
 
-Derived from [Solid](../reference/solid.md)
+Horizontal traffic light without lamp to put on the big pole above the road.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -1076,10 +1024,6 @@ TrafficLightHorizontal {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightHorizontal.proto"
 
-### TrafficLightHorizontal Description
-
-Horizontal traffic light without lamp to put on the big pole above the road.
-
 ### TrafficLightHorizontal Field Summary
 
 - `red_light`: Defines the name of the red LED device.
@@ -1096,7 +1040,9 @@ Horizontal traffic light without lamp to put on the big pole above the road.
 
 ## TrafficLightStandardLampGeometry
 
-Derived from [Sphere](../reference/sphere.md)
+A traffic light lamp with a standard geometry.
+
+Derived from [Sphere](../reference/sphere.md).
 
 %figure
 
@@ -1111,13 +1057,11 @@ TrafficLightStandardLampGeometry {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightStandardLampGeometry.proto"
 
-### TrafficLightStandardLampGeometry Description
-
-A traffic light lamp with a standard geometry.
-
 ## YieldPanel
 
-Derived from [Solid](../reference/solid.md)
+Traffic panel: Yield panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -1139,10 +1083,6 @@ YieldPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/YieldPanel.proto"
 
-### YieldPanel Description
-
-Traffic panel: Yield panel.
-
 ### YieldPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -1155,7 +1095,9 @@ Traffic panel: Yield panel.
 
 ## YieldSign
 
-Derived from [Solid](../reference/solid.md)
+Traffic sign: Yield sign.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -1176,10 +1118,6 @@ YieldSign {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/YieldSign.proto"
-
-### YieldSign Description
-
-Traffic sign: Yield sign.
 
 ### YieldSign Field Summary
 

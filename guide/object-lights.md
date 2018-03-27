@@ -2,7 +2,9 @@
 
 ## CeilingLight
 
-Derived from [Solid](../reference/solid.md)
+A ceiling light (0.19 x 0.8 x 0.19 m).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -29,10 +31,6 @@ CeilingLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/CeilingLight.proto"
 
-### CeilingLight Description
-
-A ceiling light (0.19 x 0.8 x 0.19 m).
-
 ### CeilingLight Field Summary
 
 - `bulbColor`: Defines the color of the light bulb.
@@ -55,7 +53,9 @@ A ceiling light (0.19 x 0.8 x 0.19 m).
 
 ## FloorLight
 
-Derived from [Solid](../reference/solid.md)
+A floor light (0.19 x 1.6 x 0.19 m).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -82,10 +82,6 @@ FloorLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/FloorLight.proto"
-
-### FloorLight Description
-
-A floor light (0.19 x 1.6 x 0.19 m).
 
 ### FloorLight Field Summary
 

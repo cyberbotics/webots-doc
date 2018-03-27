@@ -2,7 +2,9 @@
 
 ## Panel
 
-Derived from [Solid](../reference/solid.md)
+Customizable simple panel.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -26,10 +28,6 @@ Panel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/panels/protos/Panel.proto"
 
-### Panel Description
-
-Customizable simple panel.
-
 ### Panel Field Summary
 
 - `size`: Defines the size of the panel
@@ -46,7 +44,9 @@ Customizable simple panel.
 
 ## PannelWithTubes
 
-Derived from [Solid](../reference/solid.md)
+A gray panel with tubes.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -64,10 +64,6 @@ PannelWithTubes {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/panels/protos/PannelWithTubes.proto"
-
-### PannelWithTubes Description
-
-A gray panel with tubes.
 
 ### PannelWithTubes Field Summary
 

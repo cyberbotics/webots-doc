@@ -2,7 +2,9 @@
 
 ## CreateWall
 
-Derived from [Robot](../reference/robot.md)
+Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room.
+
+Derived from [Robot](../reference/robot.md).
 
 %figure
 
@@ -23,10 +25,6 @@ CreateWall {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/create_wall/protos/CreateWall.proto"
-
-### CreateWall Description
-
-Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room.
 
 ### CreateWall Field Summary
 

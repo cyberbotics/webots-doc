@@ -2,7 +2,9 @@
 
 ## Bench
 
-Derived from [Solid](../reference/solid.md)
+A bench.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -23,10 +25,6 @@ Bench {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Bench.proto"
 
-### Bench Description
-
-A bench.
-
 ### Bench Field Summary
 
 - `metalColor`: Defines the color of the metalic part.
@@ -37,7 +35,11 @@ A bench.
 
 ## BusStop
 
-Derived from [Solid](../reference/solid.md)
+Simple bus stop with customizable appearance and an optional bench.
+The original blender model was made by Ringbarkis ([http://www.blendswap.com/blends/view/66783](http://www.blendswap.com/blends/view/66783)).
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -60,12 +62,6 @@ BusStop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStop.proto"
 
-### BusStop Description
-
-Simple bus stop with customizable appearance and an optional bench.
-The original blender model was made by Ringbarkis ([http://www.blendswap.com/blends/view/66783](http://www.blendswap.com/blends/view/66783)).
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-
 ### BusStop Field Summary
 
 - `bench`: Defines whether the bust stop should include a bench.
@@ -80,7 +76,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## EmergencyPhone
 
-Derived from [Solid](../reference/solid.md)
+An emergency phone.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -100,10 +98,6 @@ EmergencyPhone {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/EmergencyPhone.proto"
 
-### EmergencyPhone Description
-
-An emergency phone.
-
 ### EmergencyPhone Field Summary
 
 - `poleColor`: Defines the color of the pole.
@@ -112,7 +106,12 @@ An emergency phone.
 
 ## Fence
 
-Derived from [Solid](../reference/solid.md)
+A customizable fence.
+Dimensions, path and appearance of the fence can be set.
+If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -140,13 +139,6 @@ Fence {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fence.proto"
-
-### Fence Description
-
-A customizable fence.
-Dimensions, path and appearance of the fence can be set.
-If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### Fence Field Summary
 
@@ -176,7 +168,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## FireHydrant
 
-Derived from [Solid](../reference/solid.md)
+A fire hydrant.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -195,17 +189,15 @@ FireHydrant {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/FireHydrant.proto"
 
-### FireHydrant Description
-
-A fire hydrant.
-
 ### FireHydrant Field Summary
 
 - `appearance`: Defines the appearance of the fire hydrant.
 
 ## Fountain
 
-Derived from [Solid](../reference/solid.md)
+A configurable fountain.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -226,10 +218,6 @@ Fountain {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fountain.proto"
 
-### Fountain Description
-
-A configurable fountain.
-
 ### Fountain Field Summary
 
 - `height`: Defines the height of the fountain.
@@ -240,7 +228,9 @@ A configurable fountain.
 
 ## PublicBin
 
-Derived from [Solid](../reference/solid.md)
+A public bin.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -260,10 +250,6 @@ PublicBin {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicBin.proto"
 
-### PublicBin Description
-
-A public bin.
-
 ### PublicBin Field Summary
 
 - `color`: Defines the color of the bin.
@@ -272,7 +258,9 @@ A public bin.
 
 ## PublicToilet
 
-Derived from [Solid](../reference/solid.md)
+Resizable public toilet with two different displays.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -312,10 +300,6 @@ PublicToilet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicToilet.proto"
 
-### PublicToilet Description
-
-Resizable public toilet with two different displays.
-
 ### PublicToilet Field Summary
 
 - `height`: Defines the height of the toilet.
@@ -346,7 +330,9 @@ Resizable public toilet with two different displays.
 
 ## TrashBin
 
-Derived from [Solid](../reference/solid.md)
+A trash bin.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -366,10 +352,6 @@ TrashBin {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/TrashBin.proto"
-
-### TrashBin Description
-
-A trash bin.
 
 ### TrashBin Field Summary
 

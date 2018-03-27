@@ -2,7 +2,9 @@
 
 ## BeerBottle
 
-Derived from [Solid](../reference/solid.md)
+A beer bottle.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -22,13 +24,11 @@ BeerBottle {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/BeerBottle.proto"
 
-### BeerBottle Description
-
-A beer bottle.
-
 ## Can
 
-Derived from [Solid](../reference/solid.md)
+A can (0.03175 x 0.1222 x 0.03175 m).
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -49,13 +49,11 @@ Can {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/Can.proto"
 
-### Can Description
-
-A can (0.03175 x 0.1222 x 0.03175 m).
-
 ## WaterBottle
 
-Derived from [Solid](../reference/solid.md)
+A water bottle.
+
+Derived from [Solid](../reference/solid.md).
 
 %figure
 
@@ -74,8 +72,4 @@ WaterBottle {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/WaterBottle.proto"
-
-### WaterBottle Description
-
-A water bottle.
 

@@ -342,13 +342,15 @@ function createIndex(view) {
   // Get all the view headings.
   var headings = [].slice.call(view.querySelectorAll('h1, h2, h3, h4'));
 
-  if (headings.length < 8) // Do not create too small indexes.
+  // Do not create too small indexes.
+  var content = document.querySelector('#content');
+  console.log(content.offsetHeight);
+  if (content.offsetHeight < 2 * window.innerHeight)
     return;
 
   // Create an empty index, and insert it after the first heading.
   var index = document.createElement('ul');
   index.setAttribute('id', 'index');
-  var content = document.querySelector('#content');
   headings[0].parentNode.insertBefore(index, headings[0].nextSibling);
 
   var ul = index; // current <ul>.

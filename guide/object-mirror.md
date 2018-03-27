@@ -16,13 +16,13 @@ Mirror {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
   SFString   name           "mirror"
-  SFString   controller     "mirror"               
-  SFFloat    fieldOfView    0.785398               
-  SFFloat    width          0.5                    
-  SFFloat    height         0.8                    
-  SFFloat    frameThickness 0.02                   
-  MFString   frameTexture   ["textures/wood.jpg"]  
-  SFNode     physics        NULL                   
+  SFString   controller     "mirror"
+  SFFloat    fieldOfView    0.785398
+  SFFloat    width          0.5
+  SFFloat    height         0.8
+  SFFloat    frameThickness 0.02
+  MFString   frameTexture   ["textures/wood.jpg"]
+  SFNode     physics        NULL
 }
 ```
 

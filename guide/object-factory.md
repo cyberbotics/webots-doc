@@ -70,12 +70,12 @@ WoodenPallet {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
   SFString   name           "wooden pallet"
-  SFVec3f    size           0.8 0.14 1.2     
-  SFInt32    lathNumber     6                
-  SFFloat    lathWidth      0.08             
-  SFFloat    mass           0                
-  SFBool     boundingObject TRUE             
-  SFBool     locked         FALSE            
+  SFVec3f    size           0.8 0.14 1.2
+  SFInt32    lathNumber     6
+  SFFloat    lathWidth      0.08
+  SFFloat    mass           0
+  SFBool     boundingObject TRUE
+  SFBool     locked         FALSE
 }
 ```
 
@@ -112,15 +112,15 @@ WoodenPalletStack {
   SFVec3f    translation              0 0 0
   SFRotation rotation                 0 1 0 0
   SFString   name                     "wooden pallet stack"
-  SFInt32    palletNumber             8                      
-  SFVec3f    palletSize               0.8 0.14 1.2           
-  SFInt32    palletLathNumber         6                      
-  SFFloat    palletLathWidth          0.08                   
-  SFFloat    lateralMisalignment      0.1                    
-  SFFloat    longitudinalMisalignment 0.05                   
-  SFFloat    palletMass               0                      
-  SFBool     boundingObject           TRUE                   
-  SFBool     locked                   FALSE                  
+  SFInt32    palletNumber             8
+  SFVec3f    palletSize               0.8 0.14 1.2
+  SFInt32    palletLathNumber         6
+  SFFloat    palletLathWidth          0.08
+  SFFloat    lateralMisalignment      0.1
+  SFFloat    longitudinalMisalignment 0.05
+  SFFloat    palletMass               0
+  SFBool     boundingObject           TRUE
+  SFBool     locked                   FALSE
 }
 ```
 
@@ -188,9 +188,9 @@ PipeSection {
   SFVec3f    translation 0 0.03 0
   SFRotation rotation    0 0 1 1.5708
   SFString   name        "pipe section"
-  SFFloat    height      0.5             
-  SFFloat    radius      0.03            
-  SFInt32    subdivision 24              
+  SFFloat    height      0.5
+  SFFloat    radius      0.03
+  SFInt32    subdivision 24
 }
 ```
 
@@ -246,7 +246,7 @@ Bolt {
   SFVec3f    translation     0 0.0131 0
   SFRotation rotation        0 0 1 0
   SFString   name            "bolt"
-  SFString   contactMaterial "default"   
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -273,7 +273,7 @@ Hammer {
   SFVec3f    translation     0 0.014 0
   SFRotation rotation        0 1 0 0
   SFString   name            "hammer"
-  SFString   contactMaterial "default"  
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -300,7 +300,7 @@ Nut {
   SFVec3f    translation     0 0.004 0
   SFRotation rotation        0 1 0 0
   SFString   name            "nut"
-  SFString   contactMaterial "default"  
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -327,7 +327,7 @@ PaintBucket {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "paint bucket"
-  SFString   contactMaterial "default"       
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -354,8 +354,8 @@ PlatformCart {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "platform cart"
-  MFNode     slot        []               
-  SFNode     physics     Physics {}       
+  MFNode     slot        []
+  SFNode     physics     Physics {}
 }
 ```
 
@@ -384,7 +384,7 @@ Screwdriver {
   SFVec3f    translation     0 0.012 0
   SFRotation rotation        0 1 0 0
   SFString   name            "screwdriver"
-  SFString   contactMaterial "default"      
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -411,7 +411,7 @@ Wrench {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "wrench"
-  SFString   contactMaterial "default"  
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -440,10 +440,10 @@ LargeValve {
   SFVec3f    translation     0 0.106 0
   SFRotation rotation        0 1 0 0
   SFString   name            "large valve"
-  SFFloat    jointFriction   0.5              
-  SFString   controller      "valve_turner"   
-  SFString   absoluteStop    "15.7079632679"  
-  SFString   contactMaterial "default"        
+  SFFloat    jointFriction   0.5
+  SFString   controller      "valve_turner"
+  SFString   absoluteStop    "15.7079632679"
+  SFString   contactMaterial "default"
 }
 ```
 
@@ -476,7 +476,7 @@ LeverValve {
   SFVec3f    translation   0 0.142 0
   SFRotation rotation      0 1 0 0
   SFString   name          "lever valve"
-  SFFloat    jointFriction 1              
+  SFFloat    jointFriction 1
   SFVec3f    scale         0.7 0.7 0.7
 }
 ```
@@ -504,9 +504,9 @@ SmallValve {
   SFVec3f    translation   0 0.077 0
   SFRotation rotation      0 1 0 0
   SFString   name          "small valve"
-  SFFloat    jointFriction 0.1              
-  SFString   controller    "valve_turner"   
-  SFString   absoluteStop  "15.7079632679"  
+  SFFloat    jointFriction 0.1
+  SFString   controller    "valve_turner"
+  SFString   absoluteStop  "15.7079632679"
 }
 ```
 

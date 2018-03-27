@@ -17,10 +17,10 @@ Apple {
   SFVec3f    translation         0 0.05 0
   SFRotation rotation            0 1 0 0
   SFString   name                "apple"
-  SFColor    color               1 1 1                 
-  MFString   textureUrl          "textures/apple.jpg"  
-  SFFloat    mass                0.15                  
-  MFNode     immersionProperties []                    
+  SFColor    color               1 1 1
+  MFString   textureUrl          "textures/apple.jpg"
+  SFFloat    mass                0.15
+  MFNode     immersionProperties []
 }
 ```
 
@@ -53,9 +53,9 @@ FruitBowl {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "fruit bowl"
-  SFColor    color       1 1 1                  
-  MFString   textureUrl "textures/plastic.jpg"  
-  SFFloat    mass        0.5                    
+  SFColor    color       1 1 1
+  MFString   textureUrl "textures/plastic.jpg"
+  SFFloat    mass        0.5
 }
 ```
 
@@ -86,9 +86,9 @@ Orange {
   SFVec3f    translation 0 0.05 0
   SFRotation rotation    0 1 0 0
   SFString   name        "orange"
-  SFColor    color       1 1 1                  
-  MFString   textureUrl  "textures/orange.jpg"  
-  SFFloat    mass        0.15                   
+  SFColor    color       1 1 1
+  MFString   textureUrl  "textures/orange.jpg"
+  SFFloat    mass        0.15
 }
 ```
 

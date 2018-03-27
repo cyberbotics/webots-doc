@@ -18,8 +18,8 @@ RobotstadiumGoal {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "robotstadium goal"
-  SFFloat    postRadius  0.05                 
-  SFColor    frameColor  1 1 1                
+  SFFloat    postRadius  0.05
+  SFColor    frameColor  1 1 1
 }
 ```
 
@@ -50,10 +50,10 @@ RobotstadiumSoccerField {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "robotstadium soccer field"
-  SFString   contactMaterial "default"                    
-  SFColor    frame1Color     1 1 1                        
-  SFColor    frame2Color     1 1 1                        
-  SFFloat    postRadius      0.05                         
+  SFString   contactMaterial "default"
+  SFColor    frame1Color     1 1 1
+  SFColor    frame2Color     1 1 1
+  SFFloat    postRadius      0.05
 }
 ```
 

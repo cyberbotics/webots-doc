@@ -17,9 +17,9 @@ Chair {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "chair"
-  SFColor    color       1 1 1                
-  MFString   textureUrl "textures/chair.jpg"  
-  SFNode     physics     NULL                 
+  SFColor    color       1 1 1
+  MFString   textureUrl "textures/chair.jpg"
+  SFNode     physics     NULL
 }
 ```
 
@@ -51,9 +51,9 @@ SimpleChair {
   SFVec3f    translation 0 0.91 0
   SFRotation rotation    0 1 0 0
   SFString   name        "simple chair"
-  SFColor    legColor    1 1 0           
-  SFColor    seatColor   1 0.65 0        
-  SFFloat    mass        5               
+  SFColor    legColor    1 1 0
+  SFColor    seatColor   1 0.65 0
+  SFFloat    mass        5
 }
 ```
 
@@ -84,9 +84,9 @@ WoodenChair {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "wooden chair"
-  SFColor    color       1 1 1                
-  MFString   textureUrl  "textures/wood.jpg"  
-  SFNode     physics     NULL                 
+  SFColor    color       1 1 1
+  MFString   textureUrl  "textures/wood.jpg"
+  SFNode     physics     NULL
 }
 ```
 

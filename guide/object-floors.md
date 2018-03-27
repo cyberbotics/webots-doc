@@ -17,15 +17,15 @@ CircleArena {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "circle arena"
-  SFFloat    radius          1.0                                 
-  SFString   contactMaterial "default"                           
-  MFString   floorTextureUrl "textures/checkered_parquetry.jpg"  
-  SFVec2f    floorTileSize   0.5 0.5                             
-  SFFloat    wallThickness   0.01                                
-  SFFloat    wallHeight      0.1                                 
-  MFString   wallTextureUrl  "textures/metal.jpg"                
-  SFVec2f    wallTileSize    0.5 0.5                             
-  SFInt32    subdivision     48                                  
+  SFFloat    radius          1.0
+  SFString   contactMaterial "default"
+  MFString   floorTextureUrl "textures/checkered_parquetry.jpg"
+  SFVec2f    floorTileSize   0.5 0.5
+  SFFloat    wallThickness   0.01
+  SFFloat    wallHeight      0.1
+  MFString   wallTextureUrl  "textures/metal.jpg"
+  SFVec2f    wallTileSize    0.5 0.5
+  SFInt32    subdivision     48
 }
 ```
 
@@ -68,12 +68,12 @@ Floor {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "floor"
-  SFString   contactMaterial "default"                           
-  SFVec2f    size            10 10                               
-  SFVec2f    tileSize        0.5 0.5                             
-  MFString   texture         "textures/checkered_parquetry.jpg"  
-  SFInt32    subdivision     8                                   
-  SFInt32    filtering       5                                   
+  SFString   contactMaterial "default"
+  SFVec2f    size            10 10
+  SFVec2f    tileSize        0.5 0.5
+  MFString   texture         "textures/checkered_parquetry.jpg"
+  SFInt32    subdivision     8
+  SFInt32    filtering       5
 }
 ```
 
@@ -110,16 +110,16 @@ RectangleArena {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "rectangle arena"
-  SFString   contactMaterial "default"                           
-  SFVec2f    floorSize       1 1                                 
-  MFString   floorTextureUrl "textures/checkered_parquetry.jpg"  
-  SFVec2f    floorTileSize   0.5 0.5                             
-  SFFloat    wallThickness   0.01                                
-  SFFloat    wallHeight      0.1                                 
-  MFString   wallTextureUrl  "textures/metal.jpg"                
-  SFColor    wallColor       0.8 0.8 0.8                         
-  SFVec2f    wallTileSize    0.5 0.5                             
-  SFInt32    subdivision     8                                   
+  SFString   contactMaterial "default"
+  SFVec2f    floorSize       1 1
+  MFString   floorTextureUrl "textures/checkered_parquetry.jpg"
+  SFVec2f    floorTileSize   0.5 0.5
+  SFFloat    wallThickness   0.01
+  SFFloat    wallHeight      0.1
+  MFString   wallTextureUrl  "textures/metal.jpg"
+  SFColor    wallColor       0.8 0.8 0.8
+  SFVec2f    wallTileSize    0.5 0.5
+  SFInt32    subdivision     8
 }
 ```
 
@@ -164,15 +164,15 @@ UnevenTerrain {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
   SFString   name           "uneven terrain"
-  SFVec3f    size           50 5 50              
-  SFInt32    xDimension     50                   
-  SFInt32    zDimension     50                   
-  MFString   texture        "textures/sand.jpg"  
-  SFVec2f    textureScale   1.0 1.0              
-  SFInt32    randomSeed     1                    
-  SFBool     flatCenter     FALSE                
-  SFBool     flatBounds     FALSE                
-  SFInt32    perlinNOctaves 3                    
+  SFVec3f    size           50 5 50
+  SFInt32    xDimension     50
+  SFInt32    zDimension     50
+  MFString   texture        "textures/sand.jpg"
+  SFVec2f    textureScale   1.0 1.0
+  SFInt32    randomSeed     1
+  SFBool     flatCenter     FALSE
+  SFBool     flatBounds     FALSE
+  SFInt32    perlinNOctaves 3
 }
 ```
 

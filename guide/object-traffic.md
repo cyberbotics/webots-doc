@@ -17,9 +17,9 @@ CautionPanel {
   SFVec3f    translation        0 0 0
   SFRotation rotation           0 1 0 0
   SFString   name               "caution panel"
-  MFString   signImage          "textures/signs/us/traffic_signals_ahead.jpg"  
-  SFColor    color              0.576471 0.576471 0.576471                     
-  MFColor    recognitionColors  [ 1 0.82 0.2, 0.58 0.58 0.58 ]                 
+  MFString   signImage          "textures/signs/us/traffic_signals_ahead.jpg"
+  SFColor    color              0.576471 0.576471 0.576471
+  MFColor    recognitionColors  [ 1 0.82 0.2, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -50,10 +50,10 @@ CautionSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "caution sign"
-  SFFloat    height       2                                           
-  SFFloat    radius       0.03                                        
-  SFColor    color        0.576471 0.576471 0.576471                  
-  MFNode     signBoards   [ CautionPanel { translation 0 -0.17 0 } ]  
+  SFFloat    height       2
+  SFFloat    radius       0.03
+  SFColor    color        0.576471 0.576471 0.576471
+  MFNode     signBoards   [ CautionPanel { translation 0 -0.17 0 } ]
 }
 ```
 
@@ -86,13 +86,13 @@ ControlledStreetLight {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "street light"
-  SFString   controller   "defective_street_light"  
-  SFFloat    beamWidth    1.1                       
-  MFColor    color        [ 1 0.9 0.8 ]             
-  SFFloat    cutOffAngle  1.57                      
-  SFVec3f    direction    0 -1 -0.1                 
-  SFFloat    radius       50                        
-  SFBool     castShadows  FALSE                     
+  SFString   controller   "defective_street_light"
+  SFFloat    beamWidth    1.1
+  MFColor    color        [ 1 0.9 0.8 ]
+  SFFloat    cutOffAngle  1.57
+  SFVec3f    direction    0 -1 -0.1
+  SFFloat    radius       50
+  SFBool     castShadows  FALSE
 }
 ```
 
@@ -133,8 +133,8 @@ CrossRoadsTrafficLight {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "cross road traffic light"
-  SFString   controller  "crossroads_traffic_lights"  
-  SFVec2f    size        20.8 20.8                    
+  SFString   controller  "crossroads_traffic_lights"
+  SFVec2f    size        20.8 20.8
 }
 ```
 
@@ -179,17 +179,17 @@ DirectionPanel {
   SFVec3f     translation      0 0 0
   SFRotation  rotation         0 1 0 0
   SFString    name             "direction panel"
-  SFFloat     width            1.3                      
-  SFFloat     height           0.4                      
-  SFFloat     thickness        0.04                     
-  SFColor     backgroundColor  0.8 0.8 0.8              
-  SFColor     textColor        0 0 0                    
-  SFFloat     textSize         0.1                      
-  SFString    font             "Arial"                  
-  SFString    text             "INPUT YOUR\nTEXT HERE"  
-  SFBool      arrow            TRUE                     
-  SFBool      right            TRUE                     
-  SFBool      left             FALSE                    
+  SFFloat     width            1.3
+  SFFloat     height           0.4
+  SFFloat     thickness        0.04
+  SFColor     backgroundColor  0.8 0.8 0.8
+  SFColor     textColor        0 0 0
+  SFFloat     textSize         0.1
+  SFString    font             "Arial"
+  SFString    text             "INPUT YOUR\nTEXT HERE"
+  SFBool      arrow            TRUE
+  SFBool      right            TRUE
+  SFBool      left             FALSE
 }
 ```
 
@@ -236,10 +236,10 @@ DivergentIndicator {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "divergent indicator"
-  MFString   texture         "textures/divergent_indicator.jpg"  
-  SFFloat    height          1                                   
-  SFFloat    radius          0.5                                 
-  SFInt32    subdivision     24                                  
+  MFString   texture         "textures/divergent_indicator.jpg"
+  SFFloat    height          1
+  SFFloat    radius          0.5
+  SFInt32    subdivision     24
 }
 ```
 
@@ -272,9 +272,9 @@ ExitPanel {
   SFVec3f    translation        0 0 0
   SFRotation rotation           0 1 0 0
   SFString   name               "exit panel"
-  MFString   signImage          "textures/signs/exit.jpg"      
-  SFColor    color              0.576471 0.576471 0.576471     
-  MFColor    recognitionColors  [ 0 0.4 0.3, 0.58 0.58 0.58 ]  
+  MFString   signImage          "textures/signs/exit.jpg"
+  SFColor    color              0.576471 0.576471 0.576471
+  MFColor    recognitionColors  [ 0 0.4 0.3, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -305,10 +305,10 @@ ExitSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "exit sign"
-  SFFloat    height       2                                         
-  SFFloat    radius       0.03                                      
-  SFColor    color        0.576471 0.576471 0.576471                
-  MFNode     signBoards   [ ExitPanel { translation 0 -0.051 0 } ]  
+  SFFloat    height       2
+  SFFloat    radius       0.03
+  SFColor    color        0.576471 0.576471 0.576471
+  MFNode     signBoards   [ ExitPanel { translation 0 -0.051 0 } ]
 }
 ```
 
@@ -341,10 +341,10 @@ GenericTrafficLight {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "generic traffic light"
-  SFBool     startGreen  TRUE                     
-  SFFloat    greenTime   60                       
-  SFFloat    redTime     15                       
-  SFString   state       "off"                    
+  SFBool     startGreen  TRUE
+  SFFloat    greenTime   60
+  SFFloat    redTime     15
+  SFString   state       "off"
 }
 ```
 
@@ -379,16 +379,16 @@ HighwayPole {
   SFRotation  rotation              0 1 0 0
   SFString    name                  "highway pole"
   SFString    type                  "cylinder"
-  SFInt32     stand                 1                                                                                                               
-  SFFloat     height                6                                                                                                               
-  SFFloat     length                8                                                                                                               
-  SFFloat     thickness             0.2                                                                                                             
-  SFColor     color                 0.258824 0.258824 0.258824                                                                                      
-  SFFloat     curveRadius           0.4                                                                                                             
-  MFNode      rightHorizontalSigns  [ HighwaySign { name "vertical sign" } ]                                                                        
-  MFNode      rightVerticalSigns    [ HighwaySign { name "horizontal sign" height 2.1 length 3.2 texture "textures/highway_sign_la_ciotat.jpg" } ]  
-  MFNode      leftHorizontalSigns   [ ]                                                                                                             
-  MFNode      leftVerticalSigns     [ ]                                                                                                             
+  SFInt32     stand                 1
+  SFFloat     height                6
+  SFFloat     length                8
+  SFFloat     thickness             0.2
+  SFColor     color                 0.258824 0.258824 0.258824
+  SFFloat     curveRadius           0.4
+  MFNode      rightHorizontalSigns  [ HighwaySign { name "vertical sign" } ]
+  MFNode      rightVerticalSigns    [ HighwaySign { name "horizontal sign" height 2.1 length 3.2 texture "textures/highway_sign_la_ciotat.jpg" } ]
+  MFNode      leftHorizontalSigns   [ ]
+  MFNode      leftVerticalSigns     [ ]
 }
 ```
 
@@ -433,12 +433,12 @@ HighwaySign {
   SFVec3f     translation        0 0 0
   SFRotation  rotation           0 1 0 0
   SFString    name               "highway sign"
-  SFFloat     height             3                                     
-  SFFloat     length             4.5                                   
-  SFFloat     thickness          0.2                                   
-  SFColor     color              0.258824 0.258824 0.258824            
-  MFString    texture            "textures/highway_sign_bordeaux.jpg"  
-  MFColor     recognitionColors  [ 0.08 0.22 0.75, 0.26 0.26 0.26 ]    
+  SFFloat     height             3
+  SFFloat     length             4.5
+  SFFloat     thickness          0.2
+  SFColor     color              0.258824 0.258824 0.258824
+  MFString    texture            "textures/highway_sign_bordeaux.jpg"
+  MFColor     recognitionColors  [ 0.08 0.22 0.75, 0.26 0.26 0.26 ]
 }
 ```
 
@@ -475,9 +475,9 @@ OrderPanel {
   SFVec3f    translation        0 0 0
   SFRotation rotation           0 1 0 0
   SFString   name               "order panel"
-  MFString   signImage          "textures/signs/do_not_enter.jpg"   
-  SFColor    color              0.576471 0.576471 0.576471          
-  MFColor    recognitionColors  [ 0.75 0.17 0.22, 0.58 0.58 0.58 ]  
+  MFString   signImage          "textures/signs/do_not_enter.jpg"
+  SFColor    color              0.576471 0.576471 0.576471
+  MFColor    recognitionColors  [ 0.75 0.17 0.22, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -508,10 +508,10 @@ OrderSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "order sign"
-  SFFloat    height       2                                               
-  SFFloat    radius       0.03                                            
-  SFColor    color        0.576471 0.576471 0.576471                      
-  MFNode     signBoards   [ OrderPanel { translation 0 -0.175 -0.026 } ]  
+  SFFloat    height       2
+  SFFloat    radius       0.03
+  SFColor    color        0.576471 0.576471 0.576471
+  MFNode     signBoards   [ OrderPanel { translation 0 -0.175 -0.026 } ]
 }
 ```
 
@@ -543,9 +543,9 @@ Derived from [Transform](../reference/transform.md).
 ParkingLines {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
-  SFInt32    numberOfCarParks 5        
-  SFFloat    carParkLength    4.8      
-  SFFloat    carParkWidth     2.4      
+  SFInt32    numberOfCarParks 5
+  SFFloat    carParkLength    4.8
+  SFFloat    carParkWidth     2.4
 }
 ```
 
@@ -576,8 +576,8 @@ PedestrianCrossing {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
   SFString   name             "pedestrian crossing"
-  SFVec2f    size             20 8                   
-  SFInt32    textureFiltering 4                      
+  SFVec2f    size             20 8
+  SFInt32    textureFiltering 4
 }
 ```
 
@@ -606,7 +606,7 @@ Pole {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "pole"
-  MFNode     slot        []       
+  MFNode     slot        []
 }
 ```
 
@@ -633,10 +633,10 @@ RectangularPanel {
   SFVec3f     translation        0 0 0
   SFRotation  rotation           0 1 0 0
   SFString    name               "rectangular panel"
-  MFString    signImage          "textures/signs/eu/dead_end.jpg"  
-  SFColor     color              0.576471 0.576471 0.576471        
-  SFVec2f     size               0.5 0.5                           
-  MFColor     recognitionColors  [ 0 0.5 0.76, 0.58 0.58 0.58 ]    
+  MFString    signImage          "textures/signs/eu/dead_end.jpg"
+  SFColor     color              0.576471 0.576471 0.576471
+  SFVec2f     size               0.5 0.5
+  MFColor     recognitionColors  [ 0 0.5 0.76, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -669,10 +669,10 @@ SignPole {
   SFVec3f     translation   0 0 0
   SFRotation  rotation      0 1 0 0
   SFString    name          "sign pole"
-  SFFloat     height        2.2                         
-  SFFloat     radius        0.02                        
-  SFColor     color         0.258824 0.258824 0.258824  
-  MFNode      signBoards    [ DirectionPanel {} ]       
+  SFFloat     height        2.2
+  SFFloat     radius        0.02
+  SFColor     color         0.258824 0.258824 0.258824
+  MFNode      signBoards    [ DirectionPanel {} ]
 }
 ```
 
@@ -705,9 +705,9 @@ SpeedLimitPanel {
   SFVec3f     translation        0 0 0
   SFRotation  rotation           0 1 0 0
   SFString    name               "speed limit panel"
-  MFString    signImage          "textures/signs/us/speed_limit_45.jpg"  
-  SFColor     color              0.576471 0.576471 0.576471              
-  MFColor     recognitionColors  [ 1 1 1, 0.58 0.58 0.58 ]               
+  MFString    signImage          "textures/signs/us/speed_limit_45.jpg"
+  SFColor     color              0.576471 0.576471 0.576471
+  MFColor     recognitionColors  [ 1 1 1, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -738,10 +738,10 @@ SpeedLimitSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "speed limit"
-  SFFloat    height       2                                               
-  SFFloat    radius       0.03                                            
-  SFColor    color        0.576471 0.576471 0.576471                      
-  MFNode     signBoards   [ SpeedLimitPanel { translation 0 0 -0.023 } ]  
+  SFFloat    height       2
+  SFFloat    radius       0.03
+  SFColor    color        0.576471 0.576471 0.576471
+  MFNode     signBoards   [ SpeedLimitPanel { translation 0 0 -0.023 } ]
 }
 ```
 
@@ -774,9 +774,9 @@ StopPanel {
   SFVec3f    translation        0 0 0
   SFRotation rotation           0 1 0 0
   SFString   name               "stop panel"
-  MFString   signImage          "textures/signs/stop.jpg"           
-  SFColor    color              0.576471 0.576471 0.576471          
-  MFColor    recognitionColors  [ 0.75 0.25 0.12, 0.58 0.58 0.58 ]  
+  MFString   signImage          "textures/signs/stop.jpg"
+  SFColor    color              0.576471 0.576471 0.576471
+  MFColor    recognitionColors  [ 0.75 0.25 0.12, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -807,10 +807,10 @@ StopSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "stop sign"
-  SFFloat    height       2                                         
-  SFFloat    radius       0.03                                      
-  SFColor    color        0.576471 0.576471 0.576471                
-  MFNode     signBoards   [ StopPanel { translation 0 -0.097 0 } ]  
+  SFFloat    height       2
+  SFFloat    radius       0.03
+  SFColor    color        0.576471 0.576471 0.576471
+  MFNode     signBoards   [ StopPanel { translation 0 -0.097 0 } ]
 }
 ```
 
@@ -845,13 +845,13 @@ StreetLight {
   SFRotation rotation      0 1 0 0
   SFString   name          "street light"
   SFVec3f    attenuation   1 0 0
-  SFFloat    beamWidth     1.1             
-  SFColor    color         1 0.9 0.8       
-  SFFloat    cutOffAngle   1.57            
-  SFVec3f    direction     0 -1 -0.1       
-  SFBool     on            TRUE            
-  SFFloat    radius        50              
-  SFBool     castShadows   FALSE           
+  SFFloat    beamWidth     1.1
+  SFColor    color         1 0.9 0.8
+  SFFloat    cutOffAngle   1.57
+  SFVec3f    direction     0 -1 -0.1
+  SFBool     on            TRUE
+  SFFloat    radius        50
+  SFBool     castShadows   FALSE
 }
 ```
 
@@ -892,7 +892,7 @@ TrafficCone {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "traffic cone"
-  SFNode     physics     NULL            
+  SFNode     physics     NULL
 }
 ```
 
@@ -919,12 +919,12 @@ TrafficLight {
   SFVec3f    translation        0 0 0
   SFRotation rotation           0 1 0 0
   SFString   name               "traffic light"
-  SFString   red_light          "red light"                
-  SFString   orange_light       "orange light"             
-  SFString   green_light        "green light"              
-  SFNode     lamp_geometry      NULL                       
-  SFRotation lamp_rotation      0 0 1 0                    
-  MFColor    recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]  
+  SFString   red_light          "red light"
+  SFString   orange_light       "orange light"
+  SFString   green_light        "green light"
+  SFNode     lamp_geometry      NULL
+  SFRotation lamp_rotation      0 0 1 0
+  MFColor    recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]
 }
 ```
 
@@ -980,9 +980,9 @@ TrafficLightBigPole {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "traffic light big pole"
-  MFNode     slot1       []                        
-  MFNode     slot2       []                        
-  MFNode     slot3       []                        
+  MFNode     slot1       []
+  MFNode     slot2       []
+  MFNode     slot3       []
 }
 ```
 
@@ -1013,12 +1013,12 @@ TrafficLightHorizontal {
   SFVec3f    translation        0 0 0
   SFRotation rotation           0 1 0 0
   SFString   name               "horizontal traffic light"
-  SFString   red_light          "red light"                 
-  SFString   orange_light       "orange light"              
-  SFString   green_light        "green light"               
-  SFNode     lamp_geometry      NULL                        
-  SFRotation lamp_rotation      0 0 1 0                     
-  MFColor    recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]   
+  SFString   red_light          "red light"
+  SFString   orange_light       "orange light"
+  SFString   green_light        "green light"
+  SFNode     lamp_geometry      NULL
+  SFRotation lamp_rotation      0 0 1 0
+  MFColor    recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]
 }
 ```
 
@@ -1074,10 +1074,10 @@ YieldPanel {
   SFVec3f     translation        0 0 0
   SFRotation  rotation           0 1 0 0
   SFString    name               "yield panel"
-  MFString    signImage          "textures/signs/us/yield.jpg"      
-  SFColor     color              0.576471 0.576471 0.576471         
-  SFFloat     textureRotation    0                                  
-  MFColor     recognitionColors  [ 0.7 0.12 0.18, 0.58 0.58 0.58 ]  
+  MFString    signImage          "textures/signs/us/yield.jpg"
+  SFColor     color              0.576471 0.576471 0.576471
+  SFFloat     textureRotation    0
+  MFColor     recognitionColors  [ 0.7 0.12 0.18, 0.58 0.58 0.58 ]
 }
 ```
 
@@ -1110,10 +1110,10 @@ YieldSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "yield sign"
-  SFFloat    height       2                           
-  SFFloat    radius       0.03                        
-  SFColor    color        0.576471 0.576471 0.576471  
-  MFNode     signBoards   [ YieldPanel { } ]          
+  SFFloat    height       2
+  SFFloat    radius       0.03
+  SFColor    color        0.576471 0.576471 0.576471
+  MFNode     signBoards   [ YieldPanel { } ]
 }
 ```
 

@@ -15,10 +15,10 @@ Fridge {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
   SFString   name           "fridge"
-  SFColor    mainColor      1 1 1                         
-  MFString   mainTextureUrl ["textures/fridge_main.jpg"]  
-  SFColor    doorColor      1 1 1                         
-  MFString   doorTextureUrl ["textures/fridge_door.jpg"]  
+  SFColor    mainColor      1 1 1
+  MFString   mainTextureUrl ["textures/fridge_main.jpg"]
+  SFColor    doorColor      1 1 1
+  MFString   doorTextureUrl ["textures/fridge_door.jpg"]
 }
 ```
 
@@ -53,9 +53,9 @@ BiscuitBox {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "biscuit box"
-  SFVec3f    size        0.24 0.04 0.08              
-  MFString   textureUrl  "textures/biscuit_box.jpg"  
-  SFFloat    mass        0.4                         
+  SFVec3f    size        0.24 0.04 0.08
+  MFString   textureUrl  "textures/biscuit_box.jpg"
+  SFFloat    mass        0.4
 }
 ```
 
@@ -86,9 +86,9 @@ CerealBox {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "cereal box"
-  SFVec3f    size        0.08 0.3 0.2                 
-  MFString   textureUrl  "textures/cereal_box_2.jpg"  
-  SFFloat    mass        1                            
+  SFVec3f    size        0.08 0.3 0.2
+  MFString   textureUrl  "textures/cereal_box_2.jpg"
+  SFFloat    mass        1
 }
 ```
 
@@ -119,9 +119,9 @@ HoneyJar {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
   SFString   name           "honey jar"
-  MFString   textureLidUrl  "textures/bee_lid.jpg"      
-  SFFloat    mass           0.5                         
-  SFColor    color          0.839216 0.572549 0.105882  
+  MFString   textureLidUrl  "textures/bee_lid.jpg"
+  SFFloat    mass           0.5
+  SFColor    color          0.839216 0.572549 0.105882
 }
 ```
 
@@ -152,8 +152,8 @@ JamJar {
   SFVec3f    translation   0 0 0
   SFRotation rotation      0 1 0 0
   SFString   name          "jam jar"
-  MFString   textureLidUrl "textures/blue_jar_lid.jpg"  
-  SFFloat    mass          0.5                          
+  MFString   textureLidUrl "textures/blue_jar_lid.jpg"
+  SFFloat    mass          0.5
 }
 ```
 
@@ -184,7 +184,7 @@ HotPlate {
   SFVec3f    translation 0 0.71 0
   SFRotation rotation    0 1 0 0
   SFString   name        "hot plate"
-  MFString   textureUrl  "textures/components.jpg"  
+  MFString   textureUrl  "textures/components.jpg"
 }
 ```
 
@@ -211,7 +211,7 @@ Sink {
   SFVec3f    translation 0 0.72 0
   SFRotation rotation    0 1 0 0
   SFString   name        "sink"
-  MFString   textureUrl  "textures/components.jpg"  
+  MFString   textureUrl  "textures/components.jpg"
 }
 ```
 
@@ -238,9 +238,9 @@ Worktop {
   SFVec3f    translation   0 0.71 0
   SFRotation rotation      0 1 0 0
   SFString   name          "worktop"
-  SFVec3f    size          0.44 0.06 0.7           
-  MFString   textureUrl    "textures/worktop.jpg"  
-  SFVec2f    tileSize      0.7 0.7                 
+  SFVec3f    size          0.44 0.06 0.7
+  MFString   textureUrl    "textures/worktop.jpg"
+  SFVec2f    tileSize      0.7 0.7
 }
 ```
 
@@ -271,10 +271,10 @@ Oven {
   SFVec3f    translation    0 0.34 0
   SFRotation rotation       0 1 0 0
   SFString   name           "oven"
-  SFColor    mainColor      1 1 1                  
-  MFString   mainTextureUrl ["textures/oven.jpg"]  
-  SFColor    doorColor      1 1 1                  
-  MFString   doorTextureUrl ["textures/oven.jpg"]  
+  SFColor    mainColor      1 1 1
+  MFString   mainTextureUrl ["textures/oven.jpg"]
+  SFColor    doorColor      1 1 1
+  MFString   doorTextureUrl ["textures/oven.jpg"]
 }
 ```
 
@@ -309,7 +309,7 @@ Carafe {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "carafe"
-  SFFloat    mass        1         
+  SFFloat    mass        1
 }
 ```
 
@@ -336,8 +336,8 @@ Cookware {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name       "cookware"
-  SFColor    color      0.7 0.7 0.7  
-  SFFloat    mass       0.7          
+  SFColor    color      0.7 0.7 0.7
+  SFFloat    mass       0.7
 }
 ```
 
@@ -366,7 +366,7 @@ Fork {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "fork"
-  SFColor    color       0.55 0.55 0.55  
+  SFColor    color       0.55 0.55 0.55
 }
 ```
 
@@ -393,7 +393,7 @@ Glass {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "glass"
-  SFFloat    mass        0.17     
+  SFFloat    mass        0.17
 }
 ```
 
@@ -420,7 +420,7 @@ Knife {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "knife"
-  SFColor    color       0.55 0.55 0.55  
+  SFColor    color       0.55 0.55 0.55
 }
 ```
 
@@ -447,8 +447,8 @@ Lid {
   SFVec3f    translation 0 0.068 0
   SFRotation rotation    0 1 0 0
   SFString   name        "lid"
-  SFColor    color       0.7 0.7 0.7  
-  SFFloat    mass        0.19         
+  SFColor    color       0.7 0.7 0.7
+  SFFloat    mass        0.19
 }
 ```
 
@@ -477,10 +477,10 @@ Plate {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "plate"
-  MFString   textureUrl  "textures/floral_plate.jpg"  
-  SFFloat    height      0.01                         
-  SFFloat    radius      0.11                         
-  SFFloat    mass        0.3                          
+  MFString   textureUrl  "textures/floral_plate.jpg"
+  SFFloat    height      0.01
+  SFFloat    radius      0.11
+  SFFloat    mass        0.3
 }
 ```
 
@@ -513,8 +513,8 @@ Spoon {
   SFVec3f     translation 0 0 0
   SFRotation  rotation    0 1 0 0
   SFString    name        "spoon"
-  SFColor     color       0.55 0.55 0.55  
-  SFString    type        "table"         
+  SFColor     color       0.55 0.55 0.55
+  SFString    type        "table"
 }
 ```
 
@@ -543,7 +543,7 @@ Wineglass {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "wine glass"
-  SFFloat    mass        0.2           
+  SFFloat    mass        0.2
 }
 ```
 
@@ -570,7 +570,7 @@ WoodenSpoon {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "wooden spoon"
-  MFString   textureUrl  "textures/wooden_spoon.jpg"  
+  MFString   textureUrl  "textures/wooden_spoon.jpg"
 }
 ```
 

@@ -15,9 +15,6 @@ BODY_STATE = 2
 
 fileList = []
 upperCategories = {}
-with open('objects.md', 'w') as file:
-    file.write('# Objects\n\n')
-    file.write('## Sections\n\n')
 
 # look for all the PROTO files in the 'projects/objects' directory
 for rootPath, dirNames, fileNames in os.walk(os.environ['WEBOTS_HOME'] + os.sep + 'projects' + os.sep + 'objects'):
@@ -83,11 +80,10 @@ for proto in prioritaryProtoList + fileList:
                         fieldDefaultValue = match.group(3)
                         fieldComment = match.group(4).strip()
                         describedField.append((fieldName, fieldComment))
-                    fieldLine = line.replace('field ', '').split('#')[0]
+                    fieldLine = line.replace('field ', '').split('#')[0].rstrip()
                     if 'hiddenField' not in fieldLine:
-                        fields += fieldLine
-                        if '#' in line:
-                            fields += '\n'
+                        fields += fieldLine + '\n'
+
     if skipProto:
         continue
 
@@ -142,9 +138,6 @@ for proto in prioritaryProtoList + fileList:
         # else:  TODO: uncomment on develop
         #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
-        #file.write('### %s Description\n\n' % protoName)
-        #file.write(description + '\n')
-
         if describedField:
             file.write('### %s Field Summary\n\n' % protoName)
             for fieldName, fieldDescription in describedField:
@@ -166,7 +159,9 @@ for proto in prioritaryProtoList + fileList:
 # write the menu in 'object.md'
 upperCategoriesList = sorted(upperCategories.keys())
 categoriesList = []
-with open('objects.md', 'a') as file:
+with open('objects.md', 'w') as file:
+    file.write('# Objects\n\n')
+    file.write('## Sections\n\n')
     for upperCategory in upperCategoriesList:
         categories = sorted(upperCategories[upperCategory])
         if not upperCategory == categories[0]:

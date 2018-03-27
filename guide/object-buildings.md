@@ -60,22 +60,22 @@ Derived from [Solid](../reference/solid.md).
 Building {
   SFVec3f     translation            0 0 0
   SFRotation  rotation               0 1 0 0
-  SFString    name                   "building"                           
-  SFFloat     floorHeight            3                                    
-  SFInt32     floorNumber            3                                    
-  SFInt32     startingFloor          0                                    
-  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]    
-  SFNode      wallAppearance         Appearance { material Material {} }  
-  MFString    groundFloor            []                                   
-  MFFloat     groundFloorScale       []                                   
-  MFFloat     groundFloorTranslation []                                   
-  SFNode      roofAppearance         Appearance { material Material {} }  
-  SFString    roofShape              "pyramidal roof"                     
-  SFFloat     roofHeight             3                                    
-  SFBool      enableBoundingObject   TRUE                                 
-  SFBool      bottom                 FALSE                                
-  SFString    model                  "building"                           
-  MFColor     recognitionColors      []                                   
+  SFString    name                   "building"
+  SFFloat     floorHeight            3
+  SFInt32     floorNumber            3
+  SFInt32     startingFloor          0
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
+  SFNode      wallAppearance         Appearance { material Material {} }
+  MFString    groundFloor            []
+  MFFloat     groundFloorScale       []
+  MFFloat     groundFloorTranslation []
+  SFNode      roofAppearance         Appearance { material Material {} }
+  SFString    roofShape              "pyramidal roof"
+  SFFloat     roofHeight             3
+  SFBool      enableBoundingObject   TRUE
+  SFBool      bottom                 FALSE
+  SFString    model                  "building"
+  MFColor     recognitionColors      []
 }
 ```
 
@@ -156,13 +156,13 @@ BungalowStyleHouse {
   SFVec3f translation         0 0 0
   SFRotation rotation         0 1 0 0
   SFString name               "bungalow style house"
-  SFBool fence                TRUE                                                                                                                                       
-  SFBool floor                TRUE                                                                                                                                       
-  SFBool chimney              TRUE                                                                                                                                       
-  SFBool enableBoundingObject TRUE                                                                                                                                       
-  SFNode appearance           Appearance { material Material { diffuseColor 0.52 0.73 0.76 } }                                                                           
-  SFNode floorAppearance      Appearance { material Material { diffuseColor 0.27 0.14 0.03 } }                                                                           
-  SFNode fenceAppearance      Appearance { material Material { } texture ImageTexture { url ["textures/wood.jpg"] } textureTransform TextureTransform { scale 10 10 } }  
+  SFBool fence                TRUE
+  SFBool floor                TRUE
+  SFBool chimney              TRUE
+  SFBool enableBoundingObject TRUE
+  SFNode appearance           Appearance { material Material { diffuseColor 0.52 0.73 0.76 } }
+  SFNode floorAppearance      Appearance { material Material { diffuseColor 0.27 0.14 0.03 } }
+  SFNode fenceAppearance      Appearance { material Material { } texture ImageTexture { url ["textures/wood.jpg"] } textureTransform TextureTransform { scale 10 10 } }
 }
 ```
 
@@ -250,11 +250,11 @@ FastFoodRestaurant {
   SFVec3f     translation   0 0 0
   SFRotation  rotation      0 1 0 0
   SFString    name          "fast food restaurant"
-  SFFloat     height        4                       
-  SFFloat     length        10                      
-  SFFloat     width         10                      
-  SFString    brand         "KFC"                   
-  SFInt32     numberOfSides 1                       
+  SFFloat     height        4
+  SFFloat     length        10
+  SFFloat     width         10
+  SFString    brand         "KFC"
+  SFInt32     numberOfSides 1
 }
 ```
 
@@ -335,9 +335,9 @@ ModernHouse {
   SFVec3f    translation          0 0 0
   SFRotation rotation             0 1 0 0
   SFString   name                 "modern house"
-  SFBool     enableBoundingObject TRUE                                                              
-  SFNode     appearance           Appearance { material Material { diffuseColor 0.56 0.18 0.12 } }  
-  SFNode     windowAppearance     Appearance { material Material { diffuseColor 0.38 0.55 0.69 } }  
+  SFBool     enableBoundingObject TRUE
+  SFNode     appearance           Appearance { material Material { diffuseColor 0.56 0.18 0.12 } }
+  SFNode     windowAppearance     Appearance { material Material { diffuseColor 0.38 0.55 0.69 } }
 }
 ```
 
@@ -451,22 +451,22 @@ SimpleBuilding {
   SFVec3f     translation            0 0 0
   SFRotation  rotation               0 1 0 0
   SFString    name                   "building"
-  SFFloat     floorHeight            3                                  
-  SFInt32     floorNumber            3                                  
-  SFInt32     startingFloor          0                                  
-  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]  
-  SFString    wallType               "windowed building"                
-  MFColor     wallColor              []                                 
-  MFString    groundFloor            []                                 
-  MFFloat     groundFloorScale       []                                 
-  MFFloat     groundFloorTranslation []                                 
-  SFString    roofType               "tiled"                            
-  MFColor     roofColor              []                                 
-  SFString    roofShape              "pyramidal roof"                   
-  SFBool      snowOnRoof             FALSE                              
-  SFFloat     roofHeight             3                                  
-  SFBool      enableBoundingObject   TRUE                               
-  SFBool      bottom                 FALSE                              
+  SFFloat     floorHeight            3
+  SFInt32     floorNumber            3
+  SFInt32     startingFloor          0
+  MFVec2f     corners                [10 10, 10 -10, -10 -10, -10 10 ]
+  SFString    wallType               "windowed building"
+  MFColor     wallColor              []
+  MFString    groundFloor            []
+  MFFloat     groundFloorScale       []
+  MFFloat     groundFloorTranslation []
+  SFString    roofType               "tiled"
+  MFColor     roofColor              []
+  SFString    roofShape              "pyramidal roof"
+  SFBool      snowOnRoof             FALSE
+  SFFloat     roofHeight             3
+  SFBool      enableBoundingObject   TRUE
+  SFBool      bottom                 FALSE
 }
 ```
 
@@ -525,8 +525,8 @@ SimpleTwoFloorsHouse {
   SFVec3f    translation           0 0 0
   SFRotation rotation              0 1 0 0
   SFString   name                  "simple two floors house"
-  SFBool     enableBoundingObject  TRUE                                                              
-  SFNode     appearance            Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }  
+  SFBool     enableBoundingObject  TRUE
+  SFNode     appearance            Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }
 }
 ```
 

@@ -57,8 +57,8 @@ Derived from [DirectionalLight](../reference/directionallight.md).
 ```
 TexturedBackgroundLight {
   SFString texture        "noon_sunny_empty"
-  SFBool   castShadows    TRUE                
-  SFBool   castLensFlares FALSE               
+  SFBool   castShadows    TRUE
+  SFBool   castLensFlares FALSE
 }
 ```
 

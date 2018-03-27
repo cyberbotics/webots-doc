@@ -17,11 +17,11 @@ Rock10cm {
   SFVec3f    translation      0 0.05 0
   SFRotation rotation         0 1 0 0
   SFString   name             "rock 10 cm"
-  MFString   texture          "textures/rock.jpg"  
-  SFColor    color            1 1 1                
-  SFFloat    ambientIntensity 0.2                  
-  SFNode     physics          NULL                 
-  SFBool     locked           FALSE                
+  MFString   texture          "textures/rock.jpg"
+  SFColor    color            1 1 1
+  SFFloat    ambientIntensity 0.2
+  SFNode     physics          NULL
+  SFBool     locked           FALSE
 }
 ```
 
@@ -56,11 +56,11 @@ Rock17cm {
   SFVec3f    translation       0 0 0
   SFRotation rotation          0 1 0 0
   SFString   name             "rock 17 cm"
-  MFString   texture          "textures/rock.jpg"  
-  SFColor    color            1 1 1                
-  SFFloat    ambientIntensity 0.2                  
-  SFNode     physics          NULL                 
-  SFBool     locked           FALSE                
+  MFString   texture          "textures/rock.jpg"
+  SFColor    color            1 1 1
+  SFFloat    ambientIntensity 0.2
+  SFNode     physics          NULL
+  SFBool     locked           FALSE
 }
 ```
 

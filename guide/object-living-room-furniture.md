@@ -17,9 +17,9 @@ Armchair {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "armchair"
-  SFColor    color       1 1 1                
-  MFString   textureUrl  "textures/sofa.jpg"  
-  SFNode     physics     NULL                 
+  SFColor    color       1 1 1
+  MFString   textureUrl  "textures/sofa.jpg"
+  SFNode     physics     NULL
 }
 ```
 
@@ -50,8 +50,8 @@ Carpet {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "carpet"
-  SFColor    color       1 1 1                  
-  MFString   textureUrl  "textures/carpet.jpg"  
+  SFColor    color       1 1 1
+  MFString   textureUrl  "textures/carpet.jpg"
 }
 ```
 
@@ -80,9 +80,9 @@ Sofa {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "sofa"
-  SFColor    color       1 1 1                
-  MFString   textureUrl  "textures/sofa.jpg"  
-  SFNode     physics     NULL                 
+  SFColor    color       1 1 1
+  MFString   textureUrl  "textures/sofa.jpg"
+  SFNode     physics     NULL
 }
 ```
 

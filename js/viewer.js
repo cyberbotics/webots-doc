@@ -363,13 +363,14 @@ function createIndex(view) {
 
     // Update current level and ul.
     var newLevel = parseInt(heading.tagName[1]);
-    if (newLevel > level) {
+    while (newLevel > level){
       var newUl = document.createElement('ul');
       ul.appendChild(newUl);
       ul = newUl;
-    } else if (newLevel < level)
+      level += 1;
+    }
+    while (newLevel < level)
       ul = ul.parentNode;
-    level = newLevel;
 
     // Add the <li> tag.
     var anchor = heading.getAttribute('name');

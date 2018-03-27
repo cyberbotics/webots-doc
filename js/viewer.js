@@ -338,17 +338,21 @@ function setUpBlogStyleIfNeeded() {
 
 function createIndex(view) {
   var index = document.querySelector('#index');
-  if (!index) {
-    index = document.createElement('ul');
-    index.setAttribute('id', 'index');
-    var content = document.querySelector('#content');
-    index = content.insertBefore(index, view);
-  }
+  if (index)
+    index.parentNode.removeChild(index);
+
   var headings = [].slice.call(view.querySelectorAll('h1, h2, h3, h4'));
+  if (headings.length < 10)
+    return;
+
+  index = document.createElement('ul');
+  index.setAttribute('id', 'index');
+  var content = document.querySelector('#content');
+  index = content.insertBefore(index, view);
+
   var ul = index;
   var level = parseInt(headings[0].tagName[1]);
   headings.forEach(function (heading) {
-    var anchor = heading.getAttribute('name');
     var newLevel = parseInt(heading.tagName[1]);
     if (newLevel > level) {
       var newUl = document.createElement('ul');
@@ -358,6 +362,7 @@ function createIndex(view) {
       ul = ul.parentNode;
     level = newLevel;
 
+    var anchor = heading.getAttribute('name');
     var a = document.createElement('a');
     a.setAttribute('class', heading.tagName.toLowerCase());
     a.setAttribute('href', '#' + anchor);

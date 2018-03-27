@@ -44,7 +44,8 @@ class TestReferences(unittest.TestCase):
                                 anchors.append(slugify(title))
                         elif line.startswith('%figure'):
                             title = line.replace('%figure', '')
-                            anchors.append(slugify(title))
+                            if title:
+                                anchors.append(slugify(title))
                         elif line.startswith('%api'):
                             title = line.replace('%api', '')
                             anchors.append(slugify(title))

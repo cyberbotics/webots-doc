@@ -38,7 +38,7 @@ Ceiling {
 
 - `filtering`: Defines the filtering level for the texture used for the ceiling.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Door
 

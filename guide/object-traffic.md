@@ -31,7 +31,7 @@ CautionPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## CautionSign
 
@@ -142,7 +142,7 @@ CrossRoadsTrafficLight {
 
 ### CrossRoadsTrafficLight Field Summary
 
-- `controller`: Is equivalent to the `contactMaterial` field of the [Robot](../reference/robot.md) node.
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
 
 - `size`: Defines the size of the traffic lights.
 
@@ -286,7 +286,7 @@ ExitPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## ExitSign
 
@@ -456,7 +456,7 @@ HighwaySign {
 
 - `texture`: Defines the texture used for the sign.
 
-- `recognitionColors`: Is equivalent to the `recognitionColorsrecognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## OrderPanel
 
@@ -489,7 +489,7 @@ OrderPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## OrderSign
 
@@ -650,7 +650,7 @@ RectangularPanel {
 
 - `size`: Defines the size of the panel
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SignPole
 
@@ -719,7 +719,7 @@ SpeedLimitPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SpeedLimitSign
 
@@ -788,7 +788,7 @@ StopPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## StopSign
 
@@ -900,7 +900,7 @@ TrafficCone {
 
 ### TrafficCone Field Summary
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## TrafficLight
 
@@ -942,7 +942,7 @@ TrafficLight {
 
 - `lamp_rotation`: Defines the rotation of the lamps.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## TrafficLightArrowLampGeometry
 
@@ -1036,7 +1036,7 @@ TrafficLightHorizontal {
 
 - `lamp_rotation`: Defines the rotation of the lamps.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## TrafficLightStandardLampGeometry
 
@@ -1091,7 +1091,7 @@ YieldPanel {
 
 - `textureRotation`: Defines the rotation of the texture used for the sign.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## YieldSign
 

@@ -111,9 +111,9 @@ Building {
 
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
-- `model`: Is equivalent to the `model` field of the [Solid](../reference/solid.md) node.
+- `model`: Inherited from [Solid](../reference/solid.md) node.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## BuildingUnderConstruction
 

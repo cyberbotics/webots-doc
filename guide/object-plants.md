@@ -43,7 +43,7 @@ BunchOfSunFlowers {
 
 - `leavesTextureUrl`: Defines the textures used for the leaves.
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## PottedTree
 
@@ -82,5 +82,5 @@ PottedTree {
 
 - `leavesTextureUrl`: Defines the textures used for of the leaves.
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 

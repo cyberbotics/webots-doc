@@ -40,7 +40,7 @@ PaperBoat {
 
 - `mass`: Defines the mass of the paper boat in kg.
 
-- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
+- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 
 ## RubberDuck
 
@@ -82,5 +82,5 @@ RubberDuck {
 
 - `density`: Defines density of the rubber duck in kg / m^3.
 
-- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
+- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 

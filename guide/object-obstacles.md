@@ -32,9 +32,9 @@ OilBarrel {
 
 - `radius`: Defines the radius of the barrel.
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
-- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
+- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Ramp30deg
 

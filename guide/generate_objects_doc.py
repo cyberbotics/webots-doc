@@ -152,8 +152,7 @@ for proto in prioritaryProtoList + fileList:
                 match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldDescription)
                 if match:
                     parentNodeType = match.group(1)
-                    parentFieldName = match.group(2)
-                    file.write('- `%s`: Is equivalent to the `%s` field of the [%s](../reference/%s.md) node.\n\n' % (fieldName, parentFieldName, parentNodeType, parentNodeType.lower()))
+                    file.write('- `%s`: Inherited from [%s](../reference/%s.md) node.\n\n' % (fieldName, parentNodeType, parentNodeType.lower()))
                 else:
                     file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 

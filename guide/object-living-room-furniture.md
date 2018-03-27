@@ -31,7 +31,7 @@ Armchair {
 
 - `textureUrl`: Defines the texture used for the armchair.
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Carpet
 
@@ -94,5 +94,5 @@ Sofa {
 
 - `textureUrl`: Defines the texture used for eh sofa.
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 

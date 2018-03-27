@@ -95,7 +95,7 @@ WoodenPallet {
 
 - `boundingObject`: Defines whether the bounding object should be enabled.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ### WoodenPalletStack
 
@@ -146,7 +146,7 @@ WoodenPalletStack {
 
 - `boundingObject`: Defines whether the bounding object should be enabled.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Pipes
 
@@ -256,7 +256,7 @@ Bolt {
 
 #### Bolt Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### Hammer
 
@@ -283,7 +283,7 @@ Hammer {
 
 #### Hammer Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### Nut
 
@@ -310,7 +310,7 @@ Nut {
 
 #### Nut Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### PaintBucket
 
@@ -337,7 +337,7 @@ PaintBucket {
 
 #### PaintBucket Field Summary
 
-- `contactMaterial`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### PlatformCart
 
@@ -367,7 +367,7 @@ PlatformCart {
 
 - `slot`: Extends the cart with new nodes in the slot.
 
-- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
+- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ### Screwdriver
 
@@ -394,7 +394,7 @@ Screwdriver {
 
 #### Screwdriver Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### Wrench
 
@@ -421,7 +421,7 @@ Wrench {
 
 #### Wrench Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Valves
 
@@ -459,7 +459,7 @@ LargeValve {
 
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### LeverValve
 

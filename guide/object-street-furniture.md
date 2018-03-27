@@ -31,7 +31,7 @@ Bench {
 
 - `woodColor`: Defines the color of the wooden part.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## BusStop
 
@@ -102,7 +102,7 @@ EmergencyPhone {
 
 - `poleColor`: Defines the color of the pole.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Fence
 
@@ -162,7 +162,7 @@ Fence {
 
 - `horizontalBarAppearance`: Defines the appearance of the horizontal bars.
 
-- `boundingObject`: Is equivalent to the `boundingObject` field of the [Solid](../reference/solid.md) node.
+- `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
 
 - `appearance`: For backward compatibility warning.
 
@@ -254,7 +254,7 @@ PublicBin {
 
 - `color`: Defines the color of the bin.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## PublicToilet
 
@@ -359,5 +359,5 @@ TrashBin {
 
 - `binColor`: Defines the main color of the bin.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 

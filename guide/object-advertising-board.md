@@ -45,7 +45,7 @@ AdvertisingBoard {
 
 - `backTexture`: Defines the back display texture.
 
-- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
+- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 - `displayBackLight`: Defines wether the displays are backlit or not.
 

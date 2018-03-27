@@ -147,7 +147,7 @@ SimpleTree {
 
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Tree
 
@@ -185,7 +185,7 @@ Tree {
 
 - `texture`: Defines the texture used for the tree.
 
-- `boundingObject`: Is equivalent to the `boundingObject` field of the [Solid](../reference/solid.md) node.
+- `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 

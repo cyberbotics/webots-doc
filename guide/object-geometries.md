@@ -45,13 +45,13 @@ Extrusion {
 
 - `endCap`: Defines whether the extrusion should have a cap at the end.
 
-- `ccw`: Is equivalent to the `ccw` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
+- `ccw`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
-- `solid`: Is equivalent to the `solid` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
+- `solid`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
-- `convex`: Is equivalent to the `convex` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
+- `convex`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
-- `creaseAngle`: Is equivalent to the `creaseAngle` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
+- `creaseAngle`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
 - `splineSubdivision`: If bigger than 1, defines the B-Spline subdivion of the extrusion along it's path.
 

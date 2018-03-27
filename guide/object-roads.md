@@ -131,7 +131,7 @@ Road {
 
 - `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -145,7 +145,7 @@ Road {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## AddLaneRoadSegment
 
@@ -249,7 +249,7 @@ AddLaneRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -263,7 +263,7 @@ AddLaneRoadSegment {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## AddLanesRoadSegment
 
@@ -370,7 +370,7 @@ AddLanesRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -384,7 +384,7 @@ AddLanesRoadSegment {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## CrashBarrier
 
@@ -478,11 +478,11 @@ Crossroad {
 
 - `texture`: Defines the texture of the crossroad.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## CurvedRoadSegment
 
@@ -594,7 +594,7 @@ CurvedRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -608,7 +608,7 @@ CurvedRoadSegment {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## HelicoidalRoadSegment
 
@@ -718,7 +718,7 @@ HelicoidalRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -728,7 +728,7 @@ HelicoidalRoadSegment {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## LaneSeparation
 
@@ -836,7 +836,7 @@ LaneSeparation {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -852,7 +852,7 @@ LaneSeparation {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## RoadIntersection
 
@@ -935,11 +935,11 @@ RoadIntersection {
 
 - `castShadows`: Defines whether the intersection should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 - `bottom`: Defines whether the intersection bottom should be displayed (useful in case of bridge).
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `texture`: Defines the texture to be used for the intersection.
 
@@ -1100,9 +1100,9 @@ Roundabout {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `centerTexture`: Defines the texture to be used for the central part of the roundabout.
 
@@ -1231,7 +1231,7 @@ StraightRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -1245,5 +1245,5 @@ StraightRoadSegment {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 

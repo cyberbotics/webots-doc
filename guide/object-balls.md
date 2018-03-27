@@ -44,7 +44,7 @@ Ball {
 
 - `angularDamping`: Defines the angular damping of the ball.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## PingPongBall
 
@@ -72,7 +72,7 @@ PingPongBall {
 
 ### PingPongBall Field Summary
 
-- `immersionProperties`: Defines the immersion properties of the ball.
+- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 
 - `textureUrl`: Defines the texture used for the ball.
 

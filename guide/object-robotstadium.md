@@ -61,7 +61,7 @@ RobotstadiumSoccerField {
 
 ### RobotstadiumSoccerField Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 - `frame1Color`: Defines the color of the first goal frame.
 

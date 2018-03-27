@@ -35,7 +35,7 @@ CircleArena {
 
 - `radius`: Defines the radius of the arena.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 - `floorTextureUrl`: Defines the texture used for the floor.
 
@@ -81,7 +81,7 @@ Floor {
 
 ### Floor Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 - `size`: Defines the size of the floor.
 
@@ -127,7 +127,7 @@ RectangleArena {
 
 ### RectangleArena Field Summary
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 - `floorSize`: Defines the size of the floor.
 

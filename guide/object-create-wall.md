@@ -34,5 +34,5 @@ CreateWall {
 
 - `controller`: Defines the controller which is used to emit infra-red messages.
 
-- `controllerArgs`: Is equivalent to the `controllerArgs` field of the [Robot](../reference/robot.md) node.
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
 

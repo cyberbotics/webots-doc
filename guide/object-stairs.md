@@ -49,7 +49,7 @@ StraightStairs {
 
 - `startingStairs`: Defines whether the bottom part of the stairs should be flat.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## StraightStairsLanding
 
@@ -106,7 +106,7 @@ StraightStairsLanding {
 
 - `rail`: Defines the rail.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## StraightStairsRail
 
@@ -157,5 +157,5 @@ StraightStairsRail {
 
 - `appearance`: Defines the appearance of the rail.
 
-- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
+- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 

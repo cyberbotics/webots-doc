@@ -3,8 +3,9 @@
 A customizable cabinet containing elements (shelves, dynamic doors, and drawers).
 The internal cabinet layout is a grid in which the elements can be inserted.
 The grid dimension (and so the cabinet size) is defined by the 'rowsHeights' and the 'columnsWidths' fields.
-The 'layout' field is defining the location and the dimension of the elements into the grid layout, according to the following syntax:
-- 'layout': list("[RightSidedDoor|LeftSiderDoor|Drawer|Shelf] (x, y, column span, row span[, mass])"
+The `layout` field is defining the location and the dimension of the elements into the grid layout, according to the following syntax:
+- `layout`: list("[RightSidedDoor|LeftSiderDoor|Drawer|Shelf] (x, y, column span, row span[, mass])"
+
 The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
 Derived from [Solid](../reference/solid.md).

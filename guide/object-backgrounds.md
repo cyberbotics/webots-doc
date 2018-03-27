@@ -4,7 +4,7 @@
 
 Background textured with a skybox.
 
-Supported values for the "texture" field:
+Supported values for the `texture` field:
 
 - dawn\_cloudy\_empty
 - morning\_cloudy\_empty

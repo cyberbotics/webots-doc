@@ -336,6 +336,40 @@ function setUpBlogStyleIfNeeded() {
   }
 }
 
+function createIndex(view) {
+  var index = document.querySelector('#index');
+  if (!index) {
+    index = document.createElement('ul');
+    index.setAttribute('id', 'index');
+    var content = document.querySelector('#content');
+    index = content.insertBefore(index, view);
+  }
+  var headings = [].slice.call(view.querySelectorAll('h1, h2, h3, h4'));
+  var ul = index;
+  var level = parseInt(headings[0].tagName[1]);
+  headings.forEach(function (heading) {
+    var anchor = heading.getAttribute('name');
+    var newLevel = parseInt(heading.tagName[1]);
+    if (newLevel > level) {
+      var newUl = document.createElement('ul');
+      ul.appendChild(newUl);
+      ul = newUl;
+    } else if (newLevel < level)
+      ul = ul.parentNode;
+    level = newLevel;
+
+    var a = document.createElement('a');
+    a.setAttribute('class', heading.tagName.toLowerCase());
+    a.setAttribute('href', '#' + anchor);
+    a.textContent = heading.textContent;
+
+    var li = document.createElement('li');
+    li.appendChild(a);
+
+    ul.appendChild(li);
+  });
+}
+
 function getWebotsVersion() {
   if (localSetup.branch)
     return localSetup.branch;
@@ -403,6 +437,8 @@ function populateViewDiv(mdContent) {
 
   updateSelection();
   setUpBlogStyleIfNeeded();
+
+  createIndex(view);
 }
 
 // replace the browser URL after a dynamic load

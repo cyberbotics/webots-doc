@@ -33,6 +33,8 @@ for proto in fileList:
 for proto in prioritaryProtoList + fileList:
     protoName = os.path.basename(proto).split('.')[0]
     category = os.path.basename(os.path.dirname(os.path.dirname(proto)))
+    if category == 'road':  # Special 'road' case we have a 'Road' proto inside the 'road' category
+        category = 'roads'
     upperCategory = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
     if upperCategory == 'objects':
         upperCategory = category

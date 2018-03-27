@@ -1,4 +1,6 @@
-# Road
+# Roads
+
+## Road
 
 A fully customizable road, the number of lanes, the dimensions and the path of the road is configurable.
 For each line separating two lanes it is possible to configure if this one is continuous or dashed.
@@ -10,7 +12,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![Road](images/objects/road/Road/model.png)
+![Road](images/objects/roads/Road/model.png)
 
 %end
 
@@ -155,7 +157,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![AddLaneRoadSegment](images/objects/road/AddLaneRoadSegment/model.png)
+![AddLaneRoadSegment](images/objects/roads/AddLaneRoadSegment/model.png)
 
 %end
 
@@ -273,7 +275,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![AddLanesRoadSegment](images/objects/road/AddLanesRoadSegment/model.png)
+![AddLanesRoadSegment](images/objects/roads/AddLanesRoadSegment/model.png)
 
 %end
 
@@ -392,7 +394,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![CrashBarrier](images/objects/road/CrashBarrier/model.png)
+![CrashBarrier](images/objects/roads/CrashBarrier/model.png)
 
 %end
 
@@ -434,7 +436,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![Crossroad](images/objects/road/Crossroad/model.png)
+![Crossroad](images/objects/roads/Crossroad/model.png)
 
 %end
 
@@ -491,7 +493,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![CurvedRoadSegment](images/objects/road/CurvedRoadSegment/model.png)
+![CurvedRoadSegment](images/objects/roads/CurvedRoadSegment/model.png)
 
 %end
 
@@ -617,7 +619,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![HelicoidalRoadSegment](images/objects/road/HelicoidalRoadSegment/model.png)
+![HelicoidalRoadSegment](images/objects/roads/HelicoidalRoadSegment/model.png)
 
 %end
 
@@ -738,7 +740,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![LaneSeparation](images/objects/road/LaneSeparation/model.png)
+![LaneSeparation](images/objects/roads/LaneSeparation/model.png)
 
 %end
 
@@ -860,7 +862,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![RoadIntersection](images/objects/road/RoadIntersection/model.png)
+![RoadIntersection](images/objects/roads/RoadIntersection/model.png)
 
 %end
 
@@ -953,7 +955,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![RoadPillars](images/objects/road/RoadPillars/model.png)
+![RoadPillars](images/objects/roads/RoadPillars/model.png)
 
 %end
 
@@ -1004,7 +1006,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![Roundabout](images/objects/road/Roundabout/model.png)
+![Roundabout](images/objects/roads/Roundabout/model.png)
 
 %end
 
@@ -1122,7 +1124,7 @@ Derived from [Solid](../reference/solid.md).
 
 %figure
 
-![StraightRoadSegment](images/objects/road/StraightRoadSegment/model.png)
+![StraightRoadSegment](images/objects/roads/StraightRoadSegment/model.png)
 
 %end
 

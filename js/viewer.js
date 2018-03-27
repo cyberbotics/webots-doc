@@ -348,11 +348,14 @@ function createIndex(view) {
   index = document.createElement('ul');
   index.setAttribute('id', 'index');
   var content = document.querySelector('#content');
-  index = content.insertBefore(index, view);
+  headings[0].parentNode.insertBefore(index, headings[0].nextSibling);
 
   var ul = index;
-  var level = parseInt(headings[0].tagName[1]);
-  headings.forEach(function (heading) {
+  var level = parseInt(headings[0].tagName[1]) + 1;
+  headings.forEach(function (heading, i) {
+    if (i == 0)
+      return;
+
     var newLevel = parseInt(heading.tagName[1]);
     if (newLevel > level) {
       var newUl = document.createElement('ul');

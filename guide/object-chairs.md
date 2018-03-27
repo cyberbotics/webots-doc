@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A chair (0.5 x 1 x 0.5 m).
-"
+%%figure
 
 ![Chair](images/objects/chairs/Chair/model.png)
 
@@ -24,6 +23,10 @@ Chair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/Chair.proto"
 
+### Chair Description
+
+A chair (0.5 x 1 x 0.5 m).
+
 ### Chair Field Summary
 
 - `color`: Define the color of the chair.
@@ -36,9 +39,7 @@ Chair {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A simple two-colors chair with a customizable mass, but a fixed height of 1.25 meter.
-This object is physics-enabled so it can be pushed.
-"
+%%figure
 
 ![SimpleChair](images/objects/chairs/SimpleChair/model.png)
 
@@ -57,6 +58,11 @@ SimpleChair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/SimpleChair.proto"
 
+### SimpleChair Description
+
+A simple two-colors chair with a customizable mass, but a fixed height of 1.25 meter.
+This object is physics-enabled so it can be pushed.
+
 ### SimpleChair Field Summary
 
 - `legColor`: Defines the color of the legs of the chair.
@@ -69,8 +75,7 @@ SimpleChair {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A wooden chair (0.42 x 0.944 x 0.44 m).
-"
+%%figure
 
 ![WoodenChair](images/objects/chairs/WoodenChair/model.png)
 
@@ -88,6 +93,10 @@ WoodenChair {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/WoodenChair.proto"
+
+### WoodenChair Description
+
+A wooden chair (0.42 x 0.944 x 0.44 m).
 
 ### WoodenChair Field Summary
 

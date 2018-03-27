@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Resizable oil barrel.
-"
+%%figure
 
 ![OilBarrel](images/objects/obstacles/OilBarrel/model.png)
 
@@ -25,6 +24,10 @@ OilBarrel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/OilBarrel.proto"
 
+### OilBarrel Description
+
+Resizable oil barrel.
+
 ### OilBarrel Field Summary
 
 - `height`: Defines the height of the barrel.
@@ -39,9 +42,7 @@ OilBarrel {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A simple ramp made of two 30° slopes and a flat top.
-The ramp is a static object (not physics-enabled) so it will not move when hit.
-"
+%%figure
 
 ![Ramp30deg](images/objects/obstacles/Ramp30deg/model.png)
 
@@ -58,6 +59,11 @@ Ramp30deg {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/Ramp30deg.proto"
 
+### Ramp30deg Description
+
+A simple ramp made of two 30° slopes and a flat top.
+The ramp is a static object (not physics-enabled) so it will not move when hit.
+
 ### Ramp30deg Field Summary
 
 - `color`: Defines the color of the ramp.
@@ -66,9 +72,7 @@ Ramp30deg {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Three steps with customizable height and color.
-This is not a physics-enabled object so it will not move when hit.
-"
+%%figure
 
 ![ThreeSteps](images/objects/obstacles/ThreeSteps/model.png)
 
@@ -85,6 +89,11 @@ ThreeSteps {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/ThreeSteps.proto"
+
+### ThreeSteps Description
+
+Three steps with customizable height and color.
+This is not a physics-enabled object so it will not move when hit.
 
 ### ThreeSteps Field Summary
 

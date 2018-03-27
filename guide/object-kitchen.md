@@ -2,8 +2,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
-"
+%%figure
 
 ![Fridge](images/objects/fridge/Fridge/model.png)
 
@@ -23,6 +22,10 @@ Fridge {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/fridge/protos/Fridge.proto"
 
+### Fridge Description
+
+A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
+
 ### Fridge Field Summary
 
 - `mainColor`: Defines the color of the fridge.
@@ -39,8 +42,7 @@ Fridge {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable (size, texture, etc.) biscuit box.
-"
+%%figure
 
 ![BiscuitBox](images/objects/breakfast/BiscuitBox/model.png)
 
@@ -59,6 +61,10 @@ BiscuitBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/BiscuitBox.proto"
 
+### BiscuitBox Description
+
+A customizable (size, texture, etc.) biscuit box.
+
 ### BiscuitBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -71,8 +77,7 @@ BiscuitBox {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable (size, texture, etc.) cereal box.
-"
+%%figure
 
 ![CerealBox](images/objects/breakfast/CerealBox/model.png)
 
@@ -91,6 +96,10 @@ CerealBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
 
+### CerealBox Description
+
+A customizable (size, texture, etc.) cereal box.
+
 ### CerealBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -103,8 +112,7 @@ CerealBox {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A honey jar.
-"
+%%figure
 
 ![HoneyJar](images/objects/breakfast/HoneyJar/model.png)
 
@@ -123,6 +131,10 @@ HoneyJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/HoneyJar.proto"
 
+### HoneyJar Description
+
+A honey jar.
+
 ### HoneyJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
@@ -135,8 +147,7 @@ HoneyJar {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A jam jar.
-"
+%%figure
 
 ![JamJar](images/objects/breakfast/JamJar/model.png)
 
@@ -154,6 +165,10 @@ JamJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/JamJar.proto"
 
+### JamJar Description
+
+A jam jar.
+
 ### JamJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
@@ -166,8 +181,7 @@ JamJar {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "An hot plate.
-"
+%%figure
 
 ![HotPlate](images/objects/components/HotPlate/model.png)
 
@@ -184,6 +198,10 @@ HotPlate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/HotPlate.proto"
 
+### HotPlate Description
+
+An hot plate.
+
 ### HotPlate Field Summary
 
 - `textureUrl`: Defines the texture used for the hot plate.
@@ -192,8 +210,7 @@ HotPlate {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A sink.
-"
+%%figure
 
 ![Sink](images/objects/components/Sink/model.png)
 
@@ -210,6 +227,10 @@ Sink {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Sink.proto"
 
+### Sink Description
+
+A sink.
+
 ### Sink Field Summary
 
 - `textureUrl`: Defines the texture used for the sink.
@@ -218,8 +239,7 @@ Sink {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable (size, texture, etc.) worktop.
-"
+%%figure
 
 ![Worktop](images/objects/components/Worktop/model.png)
 
@@ -238,6 +258,10 @@ Worktop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Worktop.proto"
 
+### Worktop Description
+
+A customizable (size, texture, etc.) worktop.
+
 ### Worktop Field Summary
 
 - `size`: Defines the size of the worktop.
@@ -250,8 +274,7 @@ Worktop {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "An oven (0.5 x 0.68 x 0.44 m).
-"
+%%figure
 
 ![Oven](images/objects/oven/Oven/model.png)
 
@@ -271,6 +294,10 @@ Oven {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/oven/protos/Oven.proto"
 
+### Oven Description
+
+An oven (0.5 x 0.68 x 0.44 m).
+
 ### Oven Field Summary
 
 - `mainColor`: Defines the color of the oven.
@@ -287,8 +314,7 @@ Oven {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A carafe.
-"
+%%figure
 
 ![Carafe](images/objects/utensils/Carafe/model.png)
 
@@ -305,6 +331,10 @@ Carafe {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Carafe.proto"
 
+### Carafe Description
+
+A carafe.
+
 ### Carafe Field Summary
 
 - `mass`: Defines the mass of the carafe in kg.
@@ -313,8 +343,7 @@ Carafe {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A cookware.
-"
+%%figure
 
 ![Cookware](images/objects/utensils/Cookware/model.png)
 
@@ -332,6 +361,10 @@ Cookware {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Cookware.proto"
 
+### Cookware Description
+
+A cookware.
+
 ### Cookware Field Summary
 
 - `color`: Defines the color of the cookware.
@@ -342,8 +375,7 @@ Cookware {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A fork.
-"
+%%figure
 
 ![Fork](images/objects/utensils/Fork/model.png)
 
@@ -360,6 +392,10 @@ Fork {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Fork.proto"
 
+### Fork Description
+
+A fork.
+
 ### Fork Field Summary
 
 - `color`: Defines the color of the fork.
@@ -368,8 +404,7 @@ Fork {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A glass.
-"
+%%figure
 
 ![Glass](images/objects/utensils/Glass/model.png)
 
@@ -386,6 +421,10 @@ Glass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Glass.proto"
 
+### Glass Description
+
+A glass.
+
 ### Glass Field Summary
 
 - `mass`: Defines the mass of the glass in kg.
@@ -394,8 +433,7 @@ Glass {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A knife.
-"
+%%figure
 
 ![Knife](images/objects/utensils/Knife/model.png)
 
@@ -412,6 +450,10 @@ Knife {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Knife.proto"
 
+### Knife Description
+
+A knife.
+
 ### Knife Field Summary
 
 - `color`: Defines the color of the knife.
@@ -420,8 +462,7 @@ Knife {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A lid.
-"
+%%figure
 
 ![Lid](images/objects/utensils/Lid/model.png)
 
@@ -439,6 +480,10 @@ Lid {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Lid.proto"
 
+### Lid Description
+
+A lid.
+
 ### Lid Field Summary
 
 - `color`: Defines the color of the lid.
@@ -449,8 +494,7 @@ Lid {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable (dimensions, texture, etc. ) plate.
-"
+%%figure
 
 ![Plate](images/objects/utensils/Plate/model.png)
 
@@ -470,6 +514,10 @@ Plate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Plate.proto"
 
+### Plate Description
+
+A customizable (dimensions, texture, etc. ) plate.
+
 ### Plate Field Summary
 
 - `textureUrl`: Defines the textures used for of the plate.
@@ -484,8 +532,7 @@ Plate {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A spoon.
-"
+%%figure
 
 ![Spoon](images/objects/utensils/Spoon/model.png)
 
@@ -503,6 +550,10 @@ Spoon {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Spoon.proto"
 
+### Spoon Description
+
+A spoon.
+
 ### Spoon Field Summary
 
 - `color`: Defines the color of the spoon.
@@ -513,8 +564,7 @@ Spoon {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A wine glass.
-"
+%%figure
 
 ![Wineglass](images/objects/utensils/Wineglass/model.png)
 
@@ -531,6 +581,10 @@ Wineglass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Wineglass.proto"
 
+### Wineglass Description
+
+A wine glass.
+
 ### Wineglass Field Summary
 
 - `mass`: Defines the mass of the wine glass in kg.
@@ -539,8 +593,7 @@ Wineglass {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A wooden spoon.
-"
+%%figure
 
 ![WoodenSpoon](images/objects/utensils/WoodenSpoon/model.png)
 
@@ -556,6 +609,10 @@ WoodenSpoon {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/WoodenSpoon.proto"
+
+### WoodenSpoon Description
+
+A wooden spoon.
 
 ### WoodenSpoon Field Summary
 

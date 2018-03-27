@@ -4,9 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Double sided and adjustable advertising board with the possibility of adding up to four poles.
-Those poles can either be a `cylinder`, `box`, or a `H-shape`.
-"
+%%figure
 
 ![AdvertisingBoard](images/objects/advertising_board/AdvertisingBoard/model.png)
 
@@ -35,6 +33,11 @@ AdvertisingBoard {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/advertising_board/protos/AdvertisingBoard.proto"
+
+### AdvertisingBoard Description
+
+Double sided and adjustable advertising board with the possibility of adding up to four poles.
+Those poles can either be a `cylinder`, `box`, or a `H-shape`.
 
 ### AdvertisingBoard Field Summary
 

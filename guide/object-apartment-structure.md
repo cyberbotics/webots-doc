@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A configurable standard ceiling.
-"
+%%figure
 
 ![Ceiling](images/objects/apartment_structure/Ceiling/model.png)
 
@@ -27,6 +26,10 @@ Ceiling {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Ceiling.proto"
 
+### Ceiling Description
+
+A configurable standard ceiling.
+
 ### Ceiling Field Summary
 
 - `size`: Defines the size of the ceiling.
@@ -43,10 +46,7 @@ Ceiling {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A cutomizable openable door.
-'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
-'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
-"
+%%figure
 
 ![Door](images/objects/apartment_structure/Door/model.png)
 
@@ -76,6 +76,12 @@ Door {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Door.proto"
+
+### Door Description
+
+A cutomizable openable door.
+'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
+'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
 ### Door Field Summary
 
@@ -113,9 +119,7 @@ Door {
 
 Derived from [Slot](../reference/slot.md)
 
-%figure "A door knob.
-This object can be used in the 'doorHandle' field of the Door object.
-"
+%%figure
 
 ![DoorKnob](images/objects/apartment_structure/DoorKnob/model.png)
 
@@ -136,6 +140,11 @@ DoorKnob {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorKnob.proto"
 
+### DoorKnob Description
+
+A door knob.
+This object can be used in the 'doorHandle' field of the Door object.
+
 ### DoorKnob Field Summary
 
 - `doorThickness`: Defines the thickness of the door.
@@ -152,9 +161,7 @@ DoorKnob {
 
 Derived from [Slot](../reference/slot.md)
 
-%figure "A door lever.
-This object can be used in the 'doorHandle' field of the Door object.
-"
+%%figure
 
 ![DoorLever](images/objects/apartment_structure/DoorLever/model.png)
 
@@ -178,6 +185,11 @@ DoorLever {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorLever.proto"
+
+### DoorLever Description
+
+A door lever.
+This object can be used in the 'doorHandle' field of the Door object.
 
 ### DoorLever Field Summary
 
@@ -203,10 +215,7 @@ DoorLever {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable wall.
-'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
-'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
-"
+%%figure
 
 ![Wall](images/objects/apartment_structure/Wall/model.png)
 
@@ -227,14 +236,17 @@ Wall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Wall.proto"
 
+### Wall Description
+
+A customizable wall.
+'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
+'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
+
 ## Window
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable window including walls above and below.
-'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
-'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
-"
+%%figure
 
 ![Window](images/objects/apartment_structure/Window/model.png)
 
@@ -260,6 +272,12 @@ Window {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Window.proto"
+
+### Window Description
+
+A customizable window including walls above and below.
+'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
+'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
 ### Window Field Summary
 

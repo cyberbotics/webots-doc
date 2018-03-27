@@ -4,22 +4,7 @@
 
 Derived from [Transform](../reference/transform.md)
 
-%figure "Efficient and customizable forest.
-Tree types are:
-- 'oak tree'
-- 'crab apple tree'
-- 'cherry tree'
-- 'birch tree'
-- 'palm tree'
-- 'spruce'
-- 'white pine'
-- 'hackberry tree'
-- 'hazel tree'
-The 'random' type choose randomly a tree type each time the node is regenerated.
-The shape of the forest can either be defined using the 'shape' and 'density' fields or the coordinate of each tree can be defined in external files ( X,Y,Z per tree, one tree per line).
-The path to those files can either be absolute, relative to the proto, relative to the world or relative to the project.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
-"
+%%figure
 
 ![Forest](images/objects/trees/Forest/model.png)
 
@@ -43,6 +28,24 @@ Forest {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Forest.proto"
+
+### Forest Description
+
+Efficient and customizable forest.
+Tree types are:
+- 'oak tree'
+- 'crab apple tree'
+- 'cherry tree'
+- 'birch tree'
+- 'palm tree'
+- 'spruce'
+- 'white pine'
+- 'hackberry tree'
+- 'hazel tree'
+The 'random' type choose randomly a tree type each time the node is regenerated.
+The shape of the forest can either be defined using the 'shape' and 'density' fields or the coordinate of each tree can be defined in external files ( X,Y,Z per tree, one tree per line).
+The path to those files can either be absolute, relative to the proto, relative to the world or relative to the project.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### Forest Field Summary
 
@@ -70,8 +73,7 @@ Forest {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A tree.
-"
+%%figure
 
 ![RoundTree](images/objects/trees/RoundTree/model.png)
 
@@ -86,23 +88,15 @@ RoundTree {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/RoundTree.proto"
 
+### RoundTree Description
+
+A tree.
+
 ## SimpleTree
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Efficient (with only 8 polygones) and customizable outdoor tree.
-Tree types are:
-- 'oak tree'
-- 'crab apple tree'
-- 'cherry tree'
-- 'birch tree'
-- 'palm tree'
-- 'spruce'
-- 'white pine'
-- 'hackberry tree'
-- 'hazel tree'
-The 'random' type choose randomly a tree type each time the node is regenerated.
-"
+%%figure
 
 ![SimpleTree](images/objects/trees/SimpleTree/model.png)
 
@@ -126,6 +120,21 @@ SimpleTree {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/SimpleTree.proto"
 
+### SimpleTree Description
+
+Efficient (with only 8 polygones) and customizable outdoor tree.
+Tree types are:
+- 'oak tree'
+- 'crab apple tree'
+- 'cherry tree'
+- 'birch tree'
+- 'palm tree'
+- 'spruce'
+- 'white pine'
+- 'hackberry tree'
+- 'hazel tree'
+The 'random' type choose randomly a tree type each time the node is regenerated.
+
 ### SimpleTree Field Summary
 
 - `name`: Defines the name of the tree.
@@ -148,9 +157,7 @@ SimpleTree {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Efficient (with only 8 polygones) and fast to load tree.
-This PROTO is less configurable than `SimpleTree` but way faster to load.
-"
+%%figure
 
 ![Tree](images/objects/trees/Tree/model.png)
 
@@ -170,6 +177,11 @@ Tree {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Tree.proto"
+
+### Tree Description
+
+Efficient (with only 8 polygones) and fast to load tree.
+This PROTO is less configurable than `SimpleTree` but way faster to load.
 
 ### Tree Field Summary
 

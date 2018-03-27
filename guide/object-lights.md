@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A ceiling light (0.19 x 0.8 x 0.19 m).
-"
+%%figure
 
 ![CeilingLight](images/objects/lights/CeilingLight/model.png)
 
@@ -29,6 +28,10 @@ CeilingLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/CeilingLight.proto"
+
+### CeilingLight Description
+
+A ceiling light (0.19 x 0.8 x 0.19 m).
 
 ### CeilingLight Field Summary
 
@@ -54,8 +57,7 @@ CeilingLight {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A floor light (0.19 x 1.6 x 0.19 m).
-"
+%%figure
 
 ![FloorLight](images/objects/lights/FloorLight/model.png)
 
@@ -80,6 +82,10 @@ FloorLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/FloorLight.proto"
+
+### FloorLight Description
+
+A floor light (0.19 x 1.6 x 0.19 m).
 
 ### FloorLight Field Summary
 

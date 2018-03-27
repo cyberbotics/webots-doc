@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A computer mouse.
-"
+%%figure
 
 ![ComputerMouse](images/objects/computers/ComputerMouse/model.png)
 
@@ -24,6 +23,10 @@ ComputerMouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/ComputerMouse.proto"
 
+### ComputerMouse Description
+
+A computer mouse.
+
 ### ComputerMouse Field Summary
 
 - `topColor`: Defines the color of the top part of the mouse.
@@ -36,8 +39,7 @@ ComputerMouse {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A computer tower.
-"
+%%figure
 
 ![DesktopComputer](images/objects/computers/DesktopComputer/model.png)
 
@@ -55,6 +57,10 @@ DesktopComputer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/DesktopComputer.proto"
 
+### DesktopComputer Description
+
+A computer tower.
+
 ### DesktopComputer Field Summary
 
 - `powerbuttonColor`: Defines the color of the computer power button.
@@ -65,8 +71,7 @@ DesktopComputer {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A computer keyboard.
-"
+%%figure
 
 ![Keyboard](images/objects/computers/Keyboard/model.png)
 
@@ -84,6 +89,10 @@ Keyboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Keyboard.proto"
 
+### Keyboard Description
+
+A computer keyboard.
+
 ### Keyboard Field Summary
 
 - `color`: Defines the color of the keyboard.
@@ -94,8 +103,7 @@ Keyboard {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A simple laptop.
-"
+%%figure
 
 ![Laptop](images/objects/computers/Laptop/model.png)
 
@@ -112,6 +120,10 @@ Laptop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Laptop.proto"
 
+### Laptop Description
+
+A simple laptop.
+
 ### Laptop Field Summary
 
 - `controller`: Defines the controller of the laptop which can use the Display device to show images.
@@ -120,8 +132,7 @@ Laptop {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A computer monitor.
-"
+%%figure
 
 ![Monitor](images/objects/computers/Monitor/model.png)
 
@@ -138,6 +149,10 @@ Monitor {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Monitor.proto"
+
+### Monitor Description
+
+A computer monitor.
 
 ### Monitor Field Summary
 

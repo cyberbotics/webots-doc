@@ -4,11 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A box object implemented at the Solid-node level.
-The box has similar properties as the VRML Box node in term of axis and fields.
-The UV-mapping is defined in a metric way (the textures are not deformed - the reference is the longest edge).
-The subdivision field allows to divide the faces into multiple quads (useful mainly for simple renderings).
-"
+%%figure
 
 ![SolidBox](images/objects/solids/SolidBox/model.png)
 
@@ -29,6 +25,13 @@ SolidBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidBox.proto"
 
+### SolidBox Description
+
+A box object implemented at the Solid-node level.
+The box has similar properties as the VRML Box node in term of axis and fields.
+The UV-mapping is defined in a metric way (the textures are not deformed - the reference is the longest edge).
+The subdivision field allows to divide the faces into multiple quads (useful mainly for simple renderings).
+
 ### SolidBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -45,11 +48,7 @@ SolidBox {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A pipe object implemented at the Solid-node level.
-Graphically, the SolidPipe is an IndexedFaceSet.
-Physically, the SolidPipe is a set of N boxes, where N is the subdivision field.
-The 'accuracy' field defines how much boxes position can differ on y axis: a 0 value represents an error-free model but it will slow down the simulation.
-"
+%%figure
 
 ![SolidPipe](images/objects/solids/SolidPipe/model.png)
 
@@ -73,6 +72,13 @@ SolidPipe {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidPipe.proto"
 
+### SolidPipe Description
+
+A pipe object implemented at the Solid-node level.
+Graphically, the SolidPipe is an IndexedFaceSet.
+Physically, the SolidPipe is a set of N boxes, where N is the subdivision field.
+The 'accuracy' field defines how much boxes position can differ on y axis: a 0 value represents an error-free model but it will slow down the simulation.
+
 ### SolidPipe Field Summary
 
 - `height`: Defines the height of the pipe.
@@ -95,9 +101,7 @@ SolidPipe {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A box object with rounded corners and edges implemented at the Solid-node level.
-The box has similar properties as the VRML Box node in term of axis and fields.
-"
+%%figure
 
 ![SolidRoundedBox](images/objects/solids/SolidRoundedBox/model.png)
 
@@ -119,6 +123,11 @@ SolidRoundedBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidRoundedBox.proto"
 
+### SolidRoundedBox Description
+
+A box object with rounded corners and edges implemented at the Solid-node level.
+The box has similar properties as the VRML Box node in term of axis and fields.
+
 ### SolidRoundedBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -137,10 +146,7 @@ SolidRoundedBox {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A torus object implemented at the Solid-node level.
-Graphically, the SolidTorus is defined as an IndexedFaceSet.
-Physically, the SolidTorus is defined as a set of N spheres, where N is the subdivision field.
-"
+%%figure
 
 ![SolidTorus](images/objects/solids/SolidTorus/model.png)
 
@@ -161,6 +167,12 @@ SolidTorus {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidTorus.proto"
+
+### SolidTorus Description
+
+A torus object implemented at the Solid-node level.
+Graphically, the SolidTorus is defined as an IndexedFaceSet.
+Physically, the SolidTorus is defined as a set of N spheres, where N is the subdivision field.
 
 ### SolidTorus Field Summary
 

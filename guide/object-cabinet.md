@@ -2,13 +2,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A customizable cabinet containing elements (shelves, dynamic doors, and drawers).
-The internal cabinet layout is a grid in which the elements can be inserted.
-The grid dimension (and so the cabinet size) is defined by the 'rowsHeights' and the 'columnsWidths' fields.
-The 'layout' field is defining the location and the dimension of the elements into the grid layout, according to the following syntax:
-- 'layout': list("[RightSidedDoor|LeftSiderDoor|Drawer|Shelf] (x, y, column span, row span[, mass])"
-The coordinate origin (1,1) of the grid layout is at the bottom left corner.
-"
+%%figure
 
 ![Cabinet](images/objects/cabinet/Cabinet/model.png)
 
@@ -56,6 +50,15 @@ Cabinet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/cabinet/protos/Cabinet.proto"
 
+### Cabinet Description
+
+A customizable cabinet containing elements (shelves, dynamic doors, and drawers).
+The internal cabinet layout is a grid in which the elements can be inserted.
+The grid dimension (and so the cabinet size) is defined by the 'rowsHeights' and the 'columnsWidths' fields.
+The 'layout' field is defining the location and the dimension of the elements into the grid layout, according to the following syntax:
+- 'layout': list("[RightSidedDoor|LeftSiderDoor|Drawer|Shelf] (x, y, column span, row span[, mass])"
+The coordinate origin (1,1) of the grid layout is at the bottom left corner.
+
 ### Cabinet Field Summary
 
 - `depth`: Defines the depth of the cabinet.
@@ -80,8 +83,7 @@ Cabinet {
 
 Derived from [Slot](../reference/slot.md)
 
-%figure "A handle for the Cabinet PROTO.
-"
+%%figure
 
 ![CabinetHandle](images/objects/cabinet/CabinetHandle/model.png)
 
@@ -100,6 +102,10 @@ CabinetHandle {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/cabinet/protos/CabinetHandle.proto"
+
+### CabinetHandle Description
+
+A handle for the Cabinet PROTO.
 
 ### CabinetHandle Field Summary
 

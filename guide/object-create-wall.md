@@ -4,8 +4,7 @@
 
 Derived from [Robot](../reference/robot.md)
 
-%figure "Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room.
-"
+%%figure
 
 ![CreateWall](images/objects/create_wall/CreateWall/model.png)
 
@@ -24,6 +23,10 @@ CreateWall {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/create_wall/protos/CreateWall.proto"
+
+### CreateWall Description
+
+Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room.
 
 ### CreateWall Field Summary
 

@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A paper boat (42.8 x 14.2 x 10.6 cm).
-"
+%%figure
 
 ![PaperBoat](images/objects/toys/PaperBoat/model.png)
 
@@ -31,6 +30,10 @@ PaperBoat {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/toys/protos/PaperBoat.proto"
 
+### PaperBoat Description
+
+A paper boat (42.8 x 14.2 x 10.6 cm).
+
 ### PaperBoat Field Summary
 
 - `scale`: Defines the global scaling factor.
@@ -45,8 +48,7 @@ PaperBoat {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A rubber yellow duck (7.42 x 10.66 x 10.13 cm).
-"
+%%figure
 
 ![RubberDuck](images/objects/toys/RubberDuck/model.png)
 
@@ -71,6 +73,10 @@ RubberDuck {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/toys/protos/RubberDuck.proto"
+
+### RubberDuck Description
+
+A rubber yellow duck (7.42 x 10.66 x 10.13 cm).
 
 ### RubberDuck Field Summary
 

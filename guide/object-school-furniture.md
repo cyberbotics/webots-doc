@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A blackboard (about 1.3 x 2.5 m).
-"
+%%figure
 
 ![Blackboard](images/objects/school_furniture/Blackboard/model.png)
 
@@ -21,12 +20,15 @@ Blackboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Blackboard.proto"
 
+### Blackboard Description
+
+A blackboard (about 1.3 x 2.5 m).
+
 ## Book
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A book (0.2 x 0.15 x 0.02 m).
-"
+%%figure
 
 ![Book](images/objects/school_furniture/Book/model.png)
 
@@ -45,6 +47,10 @@ Book {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Book.proto"
 
+### Book Description
+
+A book (0.2 x 0.15 x 0.02 m).
+
 ### Book Field Summary
 
 - `color`: Defines the color of the book.
@@ -57,8 +63,7 @@ Book {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A clock (radius 16.5 cm).
-"
+%%figure
 
 ![Clock](images/objects/school_furniture/Clock/model.png)
 
@@ -73,4 +78,8 @@ Clock {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Clock.proto"
+
+### Clock Description
+
+A clock (radius 16.5 cm).
 

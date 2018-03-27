@@ -4,9 +4,7 @@
 
 Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
-%figure "Generic extrusion geometry.
-The shape (defined by the 'crossSection' field) is extruded along the path defined by the field 'spine'.
-"
+%%figure
 
 ![Extrusion](images/objects/geometries/Extrusion/model.png)
 
@@ -29,6 +27,11 @@ Extrusion {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/Extrusion.proto"
+
+### Extrusion Description
+
+Generic extrusion geometry.
+The shape (defined by the 'crossSection' field) is extruded along the path defined by the field 'spine'.
 
 ### Extrusion Field Summary
 
@@ -58,17 +61,7 @@ Extrusion {
 
 Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
-%figure "Box with customizable texture mapping.
-Available texture mappings:
-- `cube` mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
-- `compact` cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
-- `flat` mapping: projecting the texture on the front face
-- `metric` mapping: similar to default mapping but the texture is not deformed to match each face size
-- `default` mapping: same texture on all the faces
-- `none`: no texture mapping
-If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
-"
+%%figure
 
 ![TexturedBox](images/objects/geometries/TexturedBox/model.png)
 
@@ -88,6 +81,19 @@ TexturedBox {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedBox.proto"
+
+### TexturedBox Description
+
+Box with customizable texture mapping.
+Available texture mappings:
+- `cube` mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
+- `compact` cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
+- `flat` mapping: projecting the texture on the front face
+- `metric` mapping: similar to default mapping but the texture is not deformed to match each face size
+- `default` mapping: same texture on all the faces
+- `none`: no texture mapping
+If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
+A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 
 ### TexturedBox Field Summary
 
@@ -111,21 +117,7 @@ TexturedBox {
 
 Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
-%figure "Customizable parallelepiped.
-The `size` and `angles` fields specify the edges and angles of the parallelepiped:
-- `angles.x`: angle between base and side edges of the parallelogram face
-- `angles.y`: angle in y direction between front and back faces of the prism
-- `angles.z`: angle in x direction between front and back faces of the prism
-Available texture mappings:
-- `cube` mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
-- `compact` cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
-- `flat` mapping: projecting the texture on the front face
-- `metric` mapping: similar to default mapping but the texture is not deformed to match each face size
-- `default` mapping: same texture on all the faces
-- `none` no texture mapping
-If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
-A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
-"
+%%figure
 
 ![TexturedParallelepiped](images/objects/geometries/TexturedParallelepiped/model.png)
 
@@ -146,6 +138,23 @@ TexturedParallelepiped {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedParallelepiped.proto"
+
+### TexturedParallelepiped Description
+
+Customizable parallelepiped.
+The `size` and `angles` fields specify the edges and angles of the parallelepiped:
+- `angles.x`: angle between base and side edges of the parallelogram face
+- `angles.y`: angle in y direction between front and back faces of the prism
+- `angles.z`: angle in x direction between front and back faces of the prism
+Available texture mappings:
+- `cube` mapping: see texture at projects/samples/geometries/worlds/textures/cube\_mapping.jpg
+- `compact` cube mapping: see texture at projects/samples/geometries/worlds/textures/compact\_mapping.jpg
+- `flat` mapping: projecting the texture on the front face
+- `metric` mapping: similar to default mapping but the texture is not deformed to match each face size
+- `default` mapping: same texture on all the faces
+- `none` no texture mapping
+If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
+A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 
 ### TexturedParallelepiped Field Summary
 

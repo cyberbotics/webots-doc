@@ -2,8 +2,7 @@
 
 Derived from [Robot](../reference/robot.md)
 
-%figure "A television (1 x 0.6 x 0.1 m).
-"
+%%figure
 
 ![Television](images/objects/television/Television/model.png)
 
@@ -23,6 +22,10 @@ Television {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/television/protos/Television.proto"
+
+### Television Description
+
+A television (1 x 0.6 x 0.1 m).
 
 ### Television Field Summary
 

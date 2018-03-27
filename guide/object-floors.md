@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A configurable circle arena composed of floor surrounded by wall.
-"
+%%figure
 
 ![CircleArena](images/objects/floors/CircleArena/model.png)
 
@@ -29,6 +28,10 @@ CircleArena {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/CircleArena.proto"
+
+### CircleArena Description
+
+A configurable circle arena composed of floor surrounded by wall.
 
 ### CircleArena Field Summary
 
@@ -54,8 +57,7 @@ CircleArena {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Configurable standard flat floor.
-"
+%%figure
 
 ![Floor](images/objects/floors/Floor/model.png)
 
@@ -77,6 +79,10 @@ Floor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/Floor.proto"
 
+### Floor Description
+
+Configurable standard flat floor.
+
 ### Floor Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
@@ -95,8 +101,7 @@ Floor {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A configurable rectangle arena composed of a floor surrounded by walls.
-"
+%%figure
 
 ![RectangleArena](images/objects/floors/RectangleArena/model.png)
 
@@ -121,6 +126,10 @@ RectangleArena {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/RectangleArena.proto"
+
+### RectangleArena Description
+
+A configurable rectangle arena composed of a floor surrounded by walls.
 
 ### RectangleArena Field Summary
 
@@ -148,8 +157,7 @@ RectangleArena {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Randomly generated uneven terrain based on Perlin noise.
-"
+%%figure
 
 ![UnevenTerrain](images/objects/floors/UnevenTerrain/model.png)
 
@@ -173,6 +181,10 @@ UnevenTerrain {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/UnevenTerrain.proto"
+
+### UnevenTerrain Description
+
+Randomly generated uneven terrain based on Perlin noise.
 
 ### UnevenTerrain Field Summary
 

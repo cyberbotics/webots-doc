@@ -119,7 +119,7 @@ for proto in prioritaryProtoList + fileList:
             file.write('Derived from [%s](../reference/%s.md)\n\n' % (baseType, baseType.lower()))
 
         if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
-            file.write('%%figure "%s"\n\n' % description)
+            file.write('%%figure\n\n')
             file.write('![%s](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
             file.write('%end\n\n')
         else:
@@ -140,8 +140,8 @@ for proto in prioritaryProtoList + fileList:
         # else:  TODO: uncomment on develop
         #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
-        #file.write('### %s Description\n\n' % protoName)
-        #file.write(description + '\n')
+        file.write('### %s Description\n\n' % protoName)
+        file.write(description + '\n')
 
         if describedField:
             file.write('### %s Field Summary\n\n' % protoName)

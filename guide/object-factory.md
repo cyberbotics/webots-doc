@@ -4,8 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A cardboard box.
-"
+%%figure
 
 ![CardboardBox](images/objects/containers/CardboardBox/model.png)
 
@@ -24,12 +23,15 @@ CardboardBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/CardboardBox.proto"
 
+### CardboardBox Description
+
+A cardboard box.
+
 ## WoodenBox
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A wooden box.
-"
+%%figure
 
 ![WoodenBox](images/objects/containers/WoodenBox/model.png)
 
@@ -49,14 +51,17 @@ WoodenBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/WoodenBox.proto"
 
+### WoodenBox Description
+
+A wooden box.
+
 # Pallet
 
 ## WoodenPallet
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Simple and configurable wooden pallet.
-"
+%%figure
 
 ![WoodenPallet](images/objects/pallet/WoodenPallet/model.png)
 
@@ -78,6 +83,10 @@ WoodenPallet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPallet.proto"
 
+### WoodenPallet Description
+
+Simple and configurable wooden pallet.
+
 ### WoodenPallet Field Summary
 
 - `size`: Defines the size of the pallet.
@@ -96,8 +105,7 @@ WoodenPallet {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Simple and configurable wooden pallet stack.
-"
+%%figure
 
 ![WoodenPalletStack](images/objects/pallet/WoodenPalletStack/model.png)
 
@@ -121,6 +129,10 @@ WoodenPalletStack {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPalletStack.proto"
+
+### WoodenPalletStack Description
+
+Simple and configurable wooden pallet stack.
 
 ### WoodenPalletStack Field Summary
 
@@ -148,8 +160,7 @@ WoodenPalletStack {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "90-degree L-joint for connecting pipes.
-"
+%%figure
 
 ![LJoint](images/objects/pipes/LJoint/model.png)
 
@@ -166,12 +177,15 @@ LJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/LJoint.proto"
 
+### LJoint Description
+
+90-degree L-joint for connecting pipes.
+
 ## PipeSection
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A section of pipe.
-"
+%%figure
 
 ![PipeSection](images/objects/pipes/PipeSection/model.png)
 
@@ -190,6 +204,10 @@ PipeSection {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/PipeSection.proto"
 
+### PipeSection Description
+
+A section of pipe.
+
 ### PipeSection Field Summary
 
 - `height`: Defines the height of the pipe.
@@ -202,8 +220,7 @@ PipeSection {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "3-slot T-joint for connecting pipes.
-"
+%%figure
 
 ![TJoint](images/objects/pipes/TJoint/model.png)
 
@@ -220,14 +237,17 @@ TJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/TJoint.proto"
 
+### TJoint Description
+
+3-slot T-joint for connecting pipes.
+
 # Tools
 
 ## Bolt
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A threaded bolt.
-"
+%%figure
 
 ![Bolt](images/objects/tools/Bolt/model.png)
 
@@ -244,6 +264,10 @@ Bolt {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Bolt.proto"
 
+### Bolt Description
+
+A threaded bolt.
+
 ### Bolt Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
@@ -252,8 +276,7 @@ Bolt {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A 25cm asymmetric club hammer.
-"
+%%figure
 
 ![Hammer](images/objects/tools/Hammer/model.png)
 
@@ -270,6 +293,10 @@ Hammer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
 
+### Hammer Description
+
+A 25cm asymmetric club hammer.
+
 ### Hammer Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
@@ -278,8 +305,7 @@ Hammer {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A hexagonal nut.
-"
+%%figure
 
 ![Nut](images/objects/tools/Nut/model.png)
 
@@ -296,6 +322,10 @@ Nut {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Nut.proto"
 
+### Nut Description
+
+A hexagonal nut.
+
 ### Nut Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
@@ -304,8 +334,7 @@ Nut {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A 4kg bucket of paint, with HingeJoint-based handle.
-"
+%%figure
 
 ![PaintBucket](images/objects/tools/PaintBucket/model.png)
 
@@ -322,6 +351,10 @@ PaintBucket {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
 
+### PaintBucket Description
+
+A 4kg bucket of paint, with HingeJoint-based handle.
+
 ### PaintBucket Field Summary
 
 - `contactMaterial`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
@@ -330,8 +363,7 @@ PaintBucket {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A platform cart with overall dimensions 90Lx50Wx85H cm.
-"
+%%figure
 
 ![PlatformCart](images/objects/tools/PlatformCart/model.png)
 
@@ -349,6 +381,10 @@ PlatformCart {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PlatformCart.proto"
 
+### PlatformCart Description
+
+A platform cart with overall dimensions 90Lx50Wx85H cm.
+
 ### PlatformCart Field Summary
 
 - `slot`: Extends the cart with new nodes in the slot.
@@ -359,8 +395,7 @@ PlatformCart {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A Philips screwdriver. The blade and handle are balanced.
-"
+%%figure
 
 ![Screwdriver](images/objects/tools/Screwdriver/model.png)
 
@@ -377,6 +412,10 @@ Screwdriver {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Screwdriver.proto"
 
+### Screwdriver Description
+
+A Philips screwdriver. The blade and handle are balanced.
+
 ### Screwdriver Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
@@ -385,8 +424,7 @@ Screwdriver {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "A 15cm Open-End wrench.
-"
+%%figure
 
 ![Wrench](images/objects/tools/Wrench/model.png)
 
@@ -403,6 +441,10 @@ Wrench {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
 
+### Wrench Description
+
+A 15cm Open-End wrench.
+
 ### Wrench Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
@@ -413,8 +455,7 @@ Wrench {
 
 Derived from [Robot](../reference/robot.md)
 
-%figure "Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
-"
+%%figure
 
 ![LargeValve](images/objects/valves/LargeValve/model.png)
 
@@ -434,6 +475,10 @@ LargeValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LargeValve.proto"
 
+### LargeValve Description
+
+Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
+
 ### LargeValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
@@ -448,8 +493,7 @@ LargeValve {
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
-"
+%%figure
 
 ![LeverValve](images/objects/valves/LeverValve/model.png)
 
@@ -467,6 +511,10 @@ LeverValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LeverValve.proto"
 
+### LeverValve Description
+
+Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
+
 ### LeverValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
@@ -475,8 +523,7 @@ LeverValve {
 
 Derived from [Robot](../reference/robot.md)
 
-%figure "Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
-"
+%%figure
 
 ![SmallValve](images/objects/valves/SmallValve/model.png)
 
@@ -494,6 +541,10 @@ SmallValve {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/SmallValve.proto"
+
+### SmallValve Description
+
+Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 
 ### SmallValve Field Summary
 

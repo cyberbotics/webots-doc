@@ -369,8 +369,10 @@ function createIndex(view) {
       ul = newUl;
       level += 1;
     }
-    while (newLevel < level)
+    while (newLevel < level) {
       ul = ul.parentNode;
+      level -= 1;
+    }
 
     // Add the <li> tag.
     var anchor = heading.getAttribute('name');

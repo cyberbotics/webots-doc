@@ -4,7 +4,8 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Bed model in Webots."
+%figure "Customizable bed with feet and one or 2 pillows.
+"
 
 ![Bed](images/objects/bedroom/Bed/model.png)
 
@@ -28,10 +29,6 @@ Bed {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/bedroom/protos/Bed.proto"
-
-### Bed Description
-
-Customizable bed with feet and one or 2 pillows.
 
 ### Bed Field Summary
 

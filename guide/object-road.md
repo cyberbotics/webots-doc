@@ -2,7 +2,12 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Road model in Webots."
+%figure "A fully customizable road, the number of lanes, the dimensions and the path of the road is configurable.
+For each line separating two lanes it is possible to configure if this one is continuous or dashed.
+B-Spline can be used in order to interpolate the path of the road and an optional border can be enable.
+The boundingObject of each border and the road itself can be independently enable or disable.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![Road](images/objects/road/Road/model.png)
 
@@ -56,14 +61,6 @@ Road {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Road.proto"
-
-### Road Description
-
-A fully customizable road, the number of lanes, the dimensions and the path of the road is configurable.
-For each line separating two lanes it is possible to configure if this one is continuous or dashed.
-B-Spline can be used in order to interpolate the path of the road and an optional border can be enable.
-The boundingObject of each border and the road itself can be independently enable or disable.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### Road Field Summary
 
@@ -151,7 +148,10 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "AddLaneRoadSegment model in Webots."
+%figure "A simple segment of road allowing to add (or remove) one lane to the road.
+The side where the new lane is added is configurable as well as a lot of others parameters of a regular road.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![AddLaneRoadSegment](images/objects/road/AddLaneRoadSegment/model.png)
 
@@ -196,12 +196,6 @@ AddLaneRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
-
-### AddLaneRoadSegment Description
-
-A simple segment of road allowing to add (or remove) one lane to the road.
-The side where the new lane is added is configurable as well as a lot of others parameters of a regular road.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### AddLaneRoadSegment Field Summary
 
@@ -271,7 +265,10 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "AddLanesRoadSegment model in Webots."
+%figure "A simple segment of road allowing to add (or remove) several lanes to the road.
+The side where the new lanes are added is configurable as well as a lot of others parameters of a regular road.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![AddLanesRoadSegment](images/objects/road/AddLanesRoadSegment/model.png)
 
@@ -317,12 +314,6 @@ AddLanesRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLanesRoadSegment.proto"
-
-### AddLanesRoadSegment Description
-
-A simple segment of road allowing to add (or remove) several lanes to the road.
-The side where the new lanes are added is configurable as well as a lot of others parameters of a regular road.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### AddLanesRoadSegment Field Summary
 
@@ -394,7 +385,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "CrashBarrier model in Webots."
+%figure "A customizable crash barrier.
+"
 
 ![CrashBarrier](images/objects/road/CrashBarrier/model.png)
 
@@ -416,10 +408,6 @@ CrashBarrier {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/CrashBarrier.proto"
 
-### CrashBarrier Description
-
-A customizable crash barrier.
-
 ### CrashBarrier Field Summary
 
 - `poleGap`: Defines the gap between two consecutive poles.
@@ -438,7 +426,8 @@ A customizable crash barrier.
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Crossroad model in Webots."
+%figure "A customizable crossroad which can contain optionally references to its connected roads and a shape.
+"
 
 ![Crossroad](images/objects/road/Crossroad/model.png)
 
@@ -463,10 +452,6 @@ Crossroad {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Crossroad.proto"
-
-### Crossroad Description
-
-A customizable crossroad which can contain optionally references to its connected roads and a shape.
 
 ### Crossroad Field Summary
 
@@ -496,7 +481,9 @@ A customizable crossroad which can contain optionally references to its connecte
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "CurvedRoadSegment model in Webots."
+%figure "A simple curved road, the number of lanes, the curvature and the dimensions are configurable, an optional border can be enable.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![CurvedRoadSegment](images/objects/road/CurvedRoadSegment/model.png)
 
@@ -544,11 +531,6 @@ CurvedRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/CurvedRoadSegment.proto"
-
-### CurvedRoadSegment Description
-
-A simple curved road, the number of lanes, the curvature and the dimensions are configurable, an optional border can be enable.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### CurvedRoadSegment Field Summary
 
@@ -624,7 +606,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "HelicoidalRoadSegment model in Webots."
+%figure "A simple and configurable helicoidal road showing how to use the Road PROTO in order to create 3D roads.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![HelicoidalRoadSegment](images/objects/road/HelicoidalRoadSegment/model.png)
 
@@ -670,11 +654,6 @@ HelicoidalRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/HelicoidalRoadSegment.proto"
-
-### HelicoidalRoadSegment Description
-
-A simple and configurable helicoidal road showing how to use the Road PROTO in order to create 3D roads.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### HelicoidalRoadSegment Field Summary
 
@@ -746,7 +725,10 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "LaneSeparation model in Webots."
+%figure "A simple segment of road allowing to divide a road into two smaller ones (or to assemble two roads into a bigger one).
+The number of lanes of each of the two smaller roads is independently configurable as well as a lot of others parameters of a regular road.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![LaneSeparation](images/objects/road/LaneSeparation/model.png)
 
@@ -793,12 +775,6 @@ LaneSeparation {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/LaneSeparation.proto"
-
-### LaneSeparation Description
-
-A simple segment of road allowing to divide a road into two smaller ones (or to assemble two roads into a bigger one).
-The number of lanes of each of the two smaller roads is independently configurable as well as a lot of others parameters of a regular road.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### LaneSeparation Field Summary
 
@@ -872,7 +848,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "RoadIntersection model in Webots."
+%figure "A simple and customizable roads intersection, all the road are crossing at the same point and equally separated in orientation.
+"
 
 ![RoadIntersection](images/objects/road/RoadIntersection/model.png)
 
@@ -910,10 +887,6 @@ RoadIntersection {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/RoadIntersection.proto"
-
-### RoadIntersection Description
-
-A simple and customizable roads intersection, all the road are crossing at the same point and equally separated in orientation.
 
 ### RoadIntersection Field Summary
 
@@ -965,7 +938,10 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "RoadPillars model in Webots."
+%figure "Generic and customizable road pillars which can be used for easily creating bridges or elevated roads.
+The boundingObject can be optionally enable or not.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![RoadPillars](images/objects/road/RoadPillars/model.png)
 
@@ -989,12 +965,6 @@ RoadPillars {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/RoadPillars.proto"
-
-### RoadPillars Description
-
-Generic and customizable road pillars which can be used for easily creating bridges or elevated roads.
-The boundingObject can be optionally enable or not.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### RoadPillars Field Summary
 
@@ -1020,7 +990,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Roundabout model in Webots."
+%figure "A simple and customizable roundabout, all the roads are equally separated in orientation.
+"
 
 ![Roundabout](images/objects/road/Roundabout/model.png)
 
@@ -1067,10 +1038,6 @@ Roundabout {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Roundabout.proto"
-
-### Roundabout Description
-
-A simple and customizable roundabout, all the roads are equally separated in orientation.
 
 ### Roundabout Field Summary
 
@@ -1138,7 +1105,10 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "StraightRoadSegment model in Webots."
+%figure "A simple straight road, the number of lanes and the dimensions are configurable.
+Furthermore, an optional border can be enabled.
+This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
+"
 
 ![StraightRoadSegment](images/objects/road/StraightRoadSegment/model.png)
 
@@ -1188,12 +1158,6 @@ StraightRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/StraightRoadSegment.proto"
-
-### StraightRoadSegment Description
-
-A simple straight road, the number of lanes and the dimensions are configurable.
-Furthermore, an optional border can be enabled.
-This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### StraightRoadSegment Field Summary
 

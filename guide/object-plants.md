@@ -4,7 +4,8 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "BunchOfSunFlowers model in Webots."
+%figure "Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
+"
 
 ![BunchOfSunFlowers](images/objects/plants/BunchOfSunFlowers/model.png)
 
@@ -27,10 +28,6 @@ BunchOfSunFlowers {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/plants/protos/BunchOfSunFlowers.proto"
 
-### BunchOfSunFlowers Description
-
-Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
-
 ### BunchOfSunFlowers Field Summary
 
 - `potAndSteamsColor`: Defines the color of the pot and the steams.
@@ -51,7 +48,8 @@ Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "PottedTree model in Webots."
+%figure "A potted tree (0.3 x 1.3 x 0.3 m).
+"
 
 ![PottedTree](images/objects/plants/PottedTree/model.png)
 
@@ -71,10 +69,6 @@ PottedTree {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/plants/protos/PottedTree.proto"
-
-### PottedTree Description
-
-A potted tree (0.3 x 1.3 x 0.3 m).
 
 ### PottedTree Field Summary
 

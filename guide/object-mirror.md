@@ -2,7 +2,9 @@
 
 Derived from [Robot](../reference/robot.md)
 
-%figure "Mirror model in Webots."
+%figure "A simple mirror made of a display attached to a camera.
+The reflected image does not depend on the viewpoint position.
+"
 
 ![Mirror](images/objects/mirror/Mirror/model.png)
 
@@ -24,11 +26,6 @@ Mirror {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/mirror/protos/Mirror.proto"
-
-### Mirror Description
-
-A simple mirror made of a display attached to a camera.
-The reflected image does not depend on the viewpoint position.
 
 ### Mirror Field Summary
 

@@ -4,7 +4,8 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "LandscapePainting model in Webots."
+%figure "A painting (1.5 x 1 x 0.05 m).
+"
 
 ![LandscapePainting](images/objects/paintings/LandscapePainting/model.png)
 
@@ -22,10 +23,6 @@ LandscapePainting {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/paintings/protos/LandscapePainting.proto"
 
-### LandscapePainting Description
-
-A painting (1.5 x 1 x 0.05 m).
-
 ### LandscapePainting Field Summary
 
 - `color`: Defines the color of the painting.
@@ -36,7 +33,8 @@ A painting (1.5 x 1 x 0.05 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "PortraitPainting model in Webots."
+%figure "A painting (0.82 x 1.01 x 0.05 m).
+"
 
 ![PortraitPainting](images/objects/paintings/PortraitPainting/model.png)
 
@@ -53,10 +51,6 @@ PortraitPainting {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/paintings/protos/PortraitPainting.proto"
-
-### PortraitPainting Description
-
-A painting (0.82 x 1.01 x 0.05 m).
 
 ### PortraitPainting Field Summary
 

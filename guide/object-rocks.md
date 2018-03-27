@@ -4,7 +4,8 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Rock10cm model in Webots."
+%figure "A rock (10 cm).
+"
 
 ![Rock10cm](images/objects/rocks/Rock10cm/model.png)
 
@@ -25,10 +26,6 @@ Rock10cm {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/rocks/protos/Rock10cm.proto"
 
-### Rock10cm Description
-
-A rock (10 cm).
-
 ### Rock10cm Field Summary
 
 - `texture`: Defines the texture used for the rock.
@@ -45,7 +42,8 @@ A rock (10 cm).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Rock17cm model in Webots."
+%figure "A rock (17 cm).
+"
 
 ![Rock17cm](images/objects/rocks/Rock17cm/model.png)
 
@@ -65,10 +63,6 @@ Rock17cm {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/rocks/protos/Rock17cm.proto"
-
-### Rock17cm Description
-
-A rock (17 cm).
 
 ### Rock17cm Field Summary
 

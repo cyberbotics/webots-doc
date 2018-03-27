@@ -4,7 +4,8 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Armchair model in Webots."
+%figure "An armchair (1 x 0.8 x 1.1 m).
+"
 
 ![Armchair](images/objects/living_room_furniture/Armchair/model.png)
 
@@ -23,10 +24,6 @@ Armchair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Armchair.proto"
 
-### Armchair Description
-
-An armchair (1 x 0.8 x 1.1 m).
-
 ### Armchair Field Summary
 
 - `color`: Defines the color of the armchair.
@@ -39,7 +36,8 @@ An armchair (1 x 0.8 x 1.1 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Carpet model in Webots."
+%figure "A carpet (2.4 x 0.02 x 1.6 m).
+"
 
 ![Carpet](images/objects/living_room_furniture/Carpet/model.png)
 
@@ -57,10 +55,6 @@ Carpet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Carpet.proto"
 
-### Carpet Description
-
-A carpet (2.4 x 0.02 x 1.6 m).
-
 ### Carpet Field Summary
 
 - `color`: Defines the color of the carpet.
@@ -71,7 +65,8 @@ A carpet (2.4 x 0.02 x 1.6 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Sofa model in Webots."
+%figure "A sofa for two people (1 x 0.8 x 1.8 m).
+"
 
 ![Sofa](images/objects/living_room_furniture/Sofa/model.png)
 
@@ -89,10 +84,6 @@ Sofa {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Sofa.proto"
-
-### Sofa Description
-
-A sofa for two people (1 x 0.8 x 1.8 m).
 
 ### Sofa Field Summary
 

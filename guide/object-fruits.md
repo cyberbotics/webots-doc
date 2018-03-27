@@ -4,7 +4,8 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Apple model in Webots."
+%figure "An apple (0.05 x 0.05 x 0.05 m).
+"
 
 ![Apple](images/objects/fruits/Apple/model.png)
 
@@ -24,10 +25,6 @@ Apple {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/Apple.proto"
 
-### Apple Description
-
-An apple (0.05 x 0.05 x 0.05 m).
-
 ### Apple Field Summary
 
 - `color`: Define the color of the apple.
@@ -42,7 +39,8 @@ An apple (0.05 x 0.05 x 0.05 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "FruitBowl model in Webots."
+%figure "A fruit bowl (0.146 x 0.146 x 0.146 m).
+"
 
 ![FruitBowl](images/objects/fruits/FruitBowl/model.png)
 
@@ -61,10 +59,6 @@ FruitBowl {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/FruitBowl.proto"
 
-### FruitBowl Description
-
-A fruit bowl (0.146 x 0.146 x 0.146 m).
-
 ### FruitBowl Field Summary
 
 - `color`: Defines the color of the bowl.
@@ -77,7 +71,8 @@ A fruit bowl (0.146 x 0.146 x 0.146 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%figure "Orange model in Webots."
+%figure "An orange (0.05 x 0.05 x 0.05 m).
+"
 
 ![Orange](images/objects/fruits/Orange/model.png)
 
@@ -95,10 +90,6 @@ Orange {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/Orange.proto"
-
-### Orange Description
-
-An orange (0.05 x 0.05 x 0.05 m).
 
 ### Orange Field Summary
 

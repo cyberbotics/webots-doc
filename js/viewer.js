@@ -337,25 +337,27 @@ function setUpBlogStyleIfNeeded() {
 }
 
 function createIndex(view) {
-  var index = document.querySelector('#index');
-  if (index)
-    index.parentNode.removeChild(index);
+  // Note: the previous index is cleaned up when the parent title is destroyed.
 
+  // Get all the view headings.
   var headings = [].slice.call(view.querySelectorAll('h1, h2, h3, h4'));
-  if (headings.length < 10)
+
+  if (headings.length < 8) // Do not create too small indexes.
     return;
 
-  index = document.createElement('ul');
+  // Create an empty index, and insert it after the first heading.
+  var index = document.createElement('ul');
   index.setAttribute('id', 'index');
   var content = document.querySelector('#content');
   headings[0].parentNode.insertBefore(index, headings[0].nextSibling);
 
-  var ul = index;
-  var level = parseInt(headings[0].tagName[1]) + 1;
+  var ul = index; // current <ul>.
+  var level = parseInt(headings[0].tagName[1]) + 1; // current heading level.
   headings.forEach(function (heading, i) {
-    if (i == 0)
+    if (i == 0) // Skip the first heading.
       return;
 
+    // Update current level and ul.
     var newLevel = parseInt(heading.tagName[1]);
     if (newLevel > level) {
       var newUl = document.createElement('ul');
@@ -365,15 +367,14 @@ function createIndex(view) {
       ul = ul.parentNode;
     level = newLevel;
 
+    // Add the <li> tag.
     var anchor = heading.getAttribute('name');
     var a = document.createElement('a');
     a.setAttribute('class', heading.tagName.toLowerCase());
     a.setAttribute('href', '#' + anchor);
     a.textContent = heading.textContent;
-
     var li = document.createElement('li');
     li.appendChild(a);
-
     ul.appendChild(li);
   });
 }

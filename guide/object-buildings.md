@@ -111,9 +111,9 @@ A customizable building, the size, appearance and geometry can fully be defined.
 
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
-- `model`: Is `Solid.model`.
+- `model`: Is equivalent to the `model` field of the [Solid](../reference/solid.md) node.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## BuildingUnderConstruction
 

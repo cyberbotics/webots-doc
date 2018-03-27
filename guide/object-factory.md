@@ -93,7 +93,7 @@ Simple and configurable wooden pallet.
 
 - `boundingObject`: Defines whether the bounding object should be enabled.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## WoodenPalletStack
 
@@ -144,7 +144,7 @@ Simple and configurable wooden pallet stack.
 
 - `boundingObject`: Defines whether the bounding object should be enabled.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 # Pipes
 
@@ -254,7 +254,7 @@ A threaded bolt.
 
 ### Bolt Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## Hammer
 
@@ -281,7 +281,7 @@ A 25cm asymmetric club hammer.
 
 ### Hammer Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## Nut
 
@@ -308,7 +308,7 @@ A hexagonal nut.
 
 ### Nut Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## PaintBucket
 
@@ -335,7 +335,7 @@ A 4kg bucket of paint, with HingeJoint-based handle.
 
 ### PaintBucket Field Summary
 
-- `contactMaterial`: Is `Solid.recognitionColors`.
+- `contactMaterial`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## PlatformCart
 
@@ -365,7 +365,7 @@ A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 - `slot`: Extends the cart with new nodes in the slot.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## Screwdriver
 
@@ -392,7 +392,7 @@ A Philips screwdriver. The blade and handle are balanced.
 
 ### Screwdriver Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## Wrench
 
@@ -419,7 +419,7 @@ A 15cm Open-End wrench.
 
 ### Wrench Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 # Valves
 
@@ -457,7 +457,7 @@ Large Wheel-based valve. Handle can be moved in either direction by the angle (r
 
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## LeverValve
 

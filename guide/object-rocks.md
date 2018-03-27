@@ -35,9 +35,9 @@ A rock (10 cm).
 
 - `ambientIntensity`: Defines the ambiant intensity of the rock.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## Rock17cm
 
@@ -74,7 +74,7 @@ A rock (17 cm).
 
 - `ambientIntensity`: Defines the ambiant intensity of the rock.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 

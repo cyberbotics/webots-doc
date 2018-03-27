@@ -44,7 +44,7 @@ You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 - `angularDamping`: Defines the angular damping of the ball.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## PingPongBall
 

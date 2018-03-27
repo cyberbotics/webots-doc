@@ -34,5 +34,5 @@ Virtual walls are an accessory of the IRobot Create allowing to inform the robot
 
 - `controller`: Defines the controller which is used to emit infra-red messages.
 
-- `controllerArgs`: Is `Robot.controllerArgs`.
+- `controllerArgs`: Is equivalent to the `controllerArgs` field of the [Robot](../reference/robot.md) node.
 

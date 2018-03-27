@@ -40,7 +40,7 @@ A paper boat (42.8 x 14.2 x 10.6 cm).
 
 - `mass`: Defines the mass of the paper boat in kg.
 
-- `immersionProperties`: Is `Solid.immersionProperties`.
+- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
 
 ## RubberDuck
 
@@ -82,5 +82,5 @@ A rubber yellow duck (7.42 x 10.66 x 10.13 cm).
 
 - `density`: Defines density of the rubber duck in kg / m^3.
 
-- `immersionProperties`: Is `Solid.immersionProperties`.
+- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
 

@@ -31,7 +31,7 @@ Traffic panel: Caution panel.
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## CautionSign
 
@@ -142,7 +142,7 @@ Four roads crossing traffic light.
 
 ### CrossRoadsTrafficLight Field Summary
 
-- `controller`: Is `Robot.contactMaterial`.
+- `controller`: Is equivalent to the `contactMaterial` field of the [Robot](../reference/robot.md) node.
 
 - `size`: Defines the size of the traffic lights.
 
@@ -286,7 +286,7 @@ Traffic panel: Exit panel.
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## ExitSign
 
@@ -456,7 +456,7 @@ Resizable sign with front texture option.
 
 - `texture`: Defines the texture used for the sign.
 
-- `recognitionColors`: Is `Solid.recognitionColorsrecognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColorsrecognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## OrderPanel
 
@@ -489,7 +489,7 @@ Traffic panel: Order panel.
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## OrderSign
 
@@ -650,7 +650,7 @@ A simple rectangular traffic pannel.
 
 - `size`: Defines the size of the panel
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## SignPole
 
@@ -719,7 +719,7 @@ Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## SpeedLimitSign
 
@@ -788,7 +788,7 @@ Traffic panel: Stop panel.
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## StopSign
 
@@ -900,7 +900,7 @@ Traffic cone.
 
 ### TrafficCone Field Summary
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## TrafficLight
 
@@ -942,7 +942,7 @@ Basic traffic light without lamp.
 
 - `lamp_rotation`: Defines the rotation of the lamps.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## TrafficLightArrowLampGeometry
 
@@ -1036,7 +1036,7 @@ Horizontal traffic light without lamp to put on the big pole above the road.
 
 - `lamp_rotation`: Defines the rotation of the lamps.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## TrafficLightStandardLampGeometry
 
@@ -1091,7 +1091,7 @@ Traffic panel: Yield panel.
 
 - `textureRotation`: Defines the rotation of the texture used for the sign.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## YieldSign
 

@@ -35,7 +35,7 @@ A configurable circle arena composed of floor surrounded by wall.
 
 - `radius`: Defines the radius of the arena.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `floorTextureUrl`: Defines the texture used for the floor.
 
@@ -81,7 +81,7 @@ Configurable standard flat floor.
 
 ### Floor Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `size`: Defines the size of the floor.
 
@@ -127,7 +127,7 @@ A configurable rectangle arena composed of a floor surrounded by walls.
 
 ### RectangleArena Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `floorSize`: Defines the size of the floor.
 

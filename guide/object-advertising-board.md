@@ -45,7 +45,7 @@ Those poles can either be a `cylinder`, `box`, or a `H-shape`.
 
 - `backTexture`: Defines the back display texture.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 - `displayBackLight`: Defines wether the displays are backlit or not.
 

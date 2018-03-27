@@ -61,7 +61,7 @@ The field dimensions (within the white lines) are 9 x 6 m.
 
 ### RobotstadiumSoccerField Field Summary
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `frame1Color`: Defines the color of the first goal frame.
 

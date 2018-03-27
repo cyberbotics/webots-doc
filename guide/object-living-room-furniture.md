@@ -31,7 +31,7 @@ An armchair (1 x 0.8 x 1.1 m).
 
 - `textureUrl`: Defines the texture used for the armchair.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## Carpet
 
@@ -94,5 +94,5 @@ A sofa for two people (1 x 0.8 x 1.8 m).
 
 - `textureUrl`: Defines the texture used for eh sofa.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 

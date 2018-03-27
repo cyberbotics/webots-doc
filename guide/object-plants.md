@@ -43,7 +43,7 @@ Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 
 - `leavesTextureUrl`: Defines the textures used for the leaves.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## PottedTree
 
@@ -82,5 +82,5 @@ A potted tree (0.3 x 1.3 x 0.3 m).
 
 - `leavesTextureUrl`: Defines the textures used for of the leaves.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 

@@ -32,9 +32,9 @@ Resizable oil barrel.
 
 - `radius`: Defines the radius of the barrel.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
-- `immersionProperties`: Is `Solid.immersionProperties`.
+- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
 
 ## Ramp30deg
 

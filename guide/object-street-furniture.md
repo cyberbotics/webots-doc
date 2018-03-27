@@ -31,7 +31,7 @@ A bench.
 
 - `woodColor`: Defines the color of the wooden part.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## BusStop
 
@@ -102,7 +102,7 @@ An emergency phone.
 
 - `poleColor`: Defines the color of the pole.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## Fence
 
@@ -162,7 +162,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `horizontalBarAppearance`: Defines the appearance of the horizontal bars.
 
-- `boundingObject`: Is `Solid.boundingObject`.
+- `boundingObject`: Is equivalent to the `boundingObject` field of the [Solid](../reference/solid.md) node.
 
 - `appearance`: For backward compatibility warning.
 
@@ -254,7 +254,7 @@ A public bin.
 
 - `color`: Defines the color of the bin.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## PublicToilet
 
@@ -359,5 +359,5 @@ A trash bin.
 
 - `binColor`: Defines the main color of the bin.
 
-- `recognitionColors`: Is `Solid.recognitionColors`.
+- `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 

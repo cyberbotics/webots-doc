@@ -49,7 +49,7 @@ Generic and customizable stairs model.
 
 - `startingStairs`: Defines whether the bottom part of the stairs should be flat.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## StraightStairsLanding
 
@@ -106,7 +106,7 @@ Generic and customizable landing model for straight stairs.
 
 - `rail`: Defines the rail.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## StraightStairsRail
 
@@ -157,5 +157,5 @@ Default stairs handrail.
 
 - `appearance`: Defines the appearance of the rail.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 

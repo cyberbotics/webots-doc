@@ -42,5 +42,5 @@ The reflected image does not depend on the viewpoint position.
 
 - `frameTexture`: Defines the texture used for the mirror frame.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 

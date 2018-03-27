@@ -36,11 +36,11 @@ The subdivision field allows to divide the faces into multiple quads (useful mai
 
 - `subdivision`: Defines the number of polygons used to represent the box and so its resolution.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `appearance`: Defines the appearance of the box.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## SolidPipe
 
@@ -87,11 +87,11 @@ The 'accuracy' field defines how much boxes position can differ on y axis: a 0 v
 
 - `accuracy`: Defines how much boxes position can differ on y axis: a 0 value represents an error-free model but it will slow down the simulation.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `appearance`: Defines the appearance of the box.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## SolidRoundedBox
 
@@ -130,11 +130,11 @@ The box has similar properties as the VRML Box node in term of axis and fields.
 
 - `subdivision`: Defines the number of polygons used to represent the box and so its resolution.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `appearance`: Defines the appearance of the box.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## SolidTorus
 
@@ -174,9 +174,9 @@ Physically, the SolidTorus is defined as a set of N spheres, where N is the subd
 
 - `subdivision`: Defines the number of polygons used to represent the torus and so its resolution.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `appearance`: Defines the appearance of the torus.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 

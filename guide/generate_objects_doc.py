@@ -130,7 +130,14 @@ for proto in prioritaryProtoList + fileList:
         if describedField:
             file.write('### %s Field Summary\n\n' % protoName)
             for fieldName, fieldDescription in describedField:
-                file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
+                # look for 'Is `NodeType.fieldName`.'
+                match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldDescription)
+                if match:
+                    parentNodeType = match.group(1)
+                    parentFieldName = match.group(2)
+                    file.write('- `%s`: Is equivalent to the `%s` field of the [%s](../reference/%s.md) node.\n\n' % (fieldName, parentFieldName, parentNodeType, parentNodeType.lower()))
+                else:
+                    file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
     if upperCategory not in upperCategories:
         upperCategories[upperCategory] = []

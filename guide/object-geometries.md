@@ -45,13 +45,13 @@ The shape (defined by the 'crossSection' field) is extruded along the path defin
 
 - `endCap`: Defines whether the extrusion should have a cap at the end.
 
-- `ccw`: Is `IndexedFaceSet.ccw`.
+- `ccw`: Is equivalent to the `ccw` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
-- `solid`: Is `IndexedFaceSet.solid`.
+- `solid`: Is equivalent to the `solid` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
-- `convex`: Is `IndexedFaceSet.convex`.
+- `convex`: Is equivalent to the `convex` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
-- `creaseAngle`: Is `IndexedFaceSet.creaseAngle`.
+- `creaseAngle`: Is equivalent to the `creaseAngle` field of the [IndexedFaceSet](../reference/indexedfaceset.md) node.
 
 - `splineSubdivision`: If bigger than 1, defines the B-Spline subdivion of the extrusion along it's path.
 

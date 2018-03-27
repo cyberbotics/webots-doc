@@ -145,7 +145,7 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## Tree
 
@@ -183,7 +183,7 @@ This PROTO is less configurable than `SimpleTree` but way faster to load.
 
 - `texture`: Defines the texture used for the tree.
 
-- `boundingObject`: Is `Solid.boundingObject`.
+- `boundingObject`: Is equivalent to the `boundingObject` field of the [Solid](../reference/solid.md) node.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 

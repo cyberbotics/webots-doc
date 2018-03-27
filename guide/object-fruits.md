@@ -34,7 +34,7 @@ An apple (0.05 x 0.05 x 0.05 m).
 
 - `mass`: Defines the mass of the apple in kg.
 
-- `immersionProperties`: Is `Solid.immersionProperties`.
+- `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
 
 ## FruitBowl
 

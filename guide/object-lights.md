@@ -103,5 +103,5 @@ A floor light (0.19 x 1.6 x 0.19 m).
 
 - `pointLightCastShadows`: Defines whether the point light should cast shadows.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 

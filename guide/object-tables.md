@@ -31,7 +31,7 @@ A desk (1.2 x 0.72 x 0.7 m).
 
 - `textureUrl`: Defines the texture used for the desk.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## RoundTable
 
@@ -64,7 +64,7 @@ A round table (2 x 0.76 x 2 m).
 
 - `textureUrl`: Defines the texture used for the table.
 
-- `physics`: Is `Solid.physics`.
+- `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## Table
 

@@ -38,7 +38,7 @@ A configurable standard ceiling.
 
 - `filtering`: Defines the filtering level for the texture used for the ceiling.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## Door
 

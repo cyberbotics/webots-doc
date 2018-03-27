@@ -129,7 +129,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -143,7 +143,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## AddLaneRoadSegment
 
@@ -247,7 +247,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -261,7 +261,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## AddLanesRoadSegment
 
@@ -368,7 +368,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -382,7 +382,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## CrashBarrier
 
@@ -476,11 +476,11 @@ A customizable crossroad which can contain optionally references to its connecte
 
 - `texture`: Defines the texture of the crossroad.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## CurvedRoadSegment
 
@@ -592,7 +592,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -606,7 +606,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## HelicoidalRoadSegment
 
@@ -716,7 +716,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -726,7 +726,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## LaneSeparation
 
@@ -834,7 +834,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -850,7 +850,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## RoadIntersection
 
@@ -933,11 +933,11 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 - `castShadows`: Defines whether the intersection should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 - `bottom`: Defines whether the intersection bottom should be displayed (useful in case of bridge).
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `texture`: Defines the texture to be used for the intersection.
 
@@ -1098,9 +1098,9 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `centerTexture`: Defines the texture to be used for the central part of the roundabout.
 
@@ -1229,7 +1229,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Is `Solid.locked`.
+- `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
@@ -1243,5 +1243,5 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Is `Solid.contactMaterial`.
+- `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 

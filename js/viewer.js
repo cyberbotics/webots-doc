@@ -370,7 +370,6 @@ function createIndex(view) {
     // Add the <li> tag.
     var anchor = heading.getAttribute('name');
     var a = document.createElement('a');
-    a.setAttribute('class', heading.tagName.toLowerCase());
     a.setAttribute('href', '#' + anchor);
     a.textContent = heading.textContent;
     var li = document.createElement('li');

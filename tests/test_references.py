@@ -43,7 +43,7 @@ class TestReferences(unittest.TestCase):
                                 title = re.sub(r'^#*', '', line)
                                 anchors.append(slugify(title))
                         elif line.startswith('%figure'):
-                            title = line.replace('%figure', '')
+                            title = slugify(line.replace('%figure', ''))
                             if title:
                                 anchors.append(slugify(title))
                         elif line.startswith('%api'):

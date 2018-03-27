@@ -1,5 +1,7 @@
 # Road
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+
 %figure "Road model in Webots."
 
 ![Road](images/objects/road/Road/model.png)
@@ -147,6 +149,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## AddLaneRoadSegment
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "AddLaneRoadSegment model in Webots."
 
 ![AddLaneRoadSegment](images/objects/road/AddLaneRoadSegment/model.png)
@@ -264,6 +268,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## AddLanesRoadSegment
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "AddLanesRoadSegment model in Webots."
 
@@ -386,6 +392,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## CrashBarrier
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "CrashBarrier model in Webots."
 
 ![CrashBarrier](images/objects/road/CrashBarrier/model.png)
@@ -427,6 +435,8 @@ A customizable crash barrier.
 - `enableBoundingObject`: Defines whether the crash barrier should have a bounding object.
 
 ## Crossroad
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "Crossroad model in Webots."
 
@@ -483,6 +493,8 @@ A customizable crossroad which can contain optionally references to its connecte
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## CurvedRoadSegment
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "CurvedRoadSegment model in Webots."
 
@@ -610,6 +622,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## HelicoidalRoadSegment
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "HelicoidalRoadSegment model in Webots."
 
 ![HelicoidalRoadSegment](images/objects/road/HelicoidalRoadSegment/model.png)
@@ -729,6 +743,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## LaneSeparation
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "LaneSeparation model in Webots."
 
@@ -854,6 +870,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## RoadIntersection
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "RoadIntersection model in Webots."
 
 ![RoadIntersection](images/objects/road/RoadIntersection/model.png)
@@ -945,6 +963,8 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 ## RoadPillars
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "RoadPillars model in Webots."
 
 ![RoadPillars](images/objects/road/RoadPillars/model.png)
@@ -997,6 +1017,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 - `boundingObject`: Defines whether the pillar should have a bounding object.
 
 ## Roundabout
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "Roundabout model in Webots."
 
@@ -1113,6 +1135,8 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 - `startRoadsTexture`: Defines the texture to be used for the roads connected to the roundabout.
 
 ## StraightRoadSegment
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "StraightRoadSegment model in Webots."
 

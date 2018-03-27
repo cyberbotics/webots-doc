@@ -2,6 +2,8 @@
 
 ## CircleArena
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "CircleArena model in Webots."
 
 ![CircleArena](images/objects/floors/CircleArena/model.png)
@@ -53,6 +55,8 @@ A configurable circle arena composed of floor surrounded by wall.
 
 ## Floor
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "Floor model in Webots."
 
 ![Floor](images/objects/floors/Floor/model.png)
@@ -94,6 +98,8 @@ Configurable standard flat floor.
 - `filtering`: Defines the filtering value of the texture used for the floor.
 
 ## RectangleArena
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "RectangleArena model in Webots."
 
@@ -148,6 +154,8 @@ A configurable rectangle arena composed of a floor surrounded by walls.
 - `subdivision`: Defines the number of polygons used to represent the arena boxes and so their resolution.
 
 ## UnevenTerrain
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
 
 %figure "UnevenTerrain model in Webots."
 

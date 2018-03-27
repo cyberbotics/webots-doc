@@ -2,6 +2,8 @@
 
 ## Extrusion
 
+Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x00000000058029C0>.md)
+
 %figure "Extrusion model in Webots."
 
 ![Extrusion](images/objects/geometries/Extrusion/model.png)
@@ -57,6 +59,8 @@ The shape (defined by the 'crossSection' field) is extruded along the path defin
 
 ## TexturedBox
 
+Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x00000000058026C0>.md)
+
 %figure "TexturedBox model in Webots."
 
 ![TexturedBox](images/objects/geometries/TexturedBox/model.png)
@@ -110,6 +114,8 @@ A demo of these mappings is available in projects/samples/geometries/worlds/text
 - `bottom`: Defines whether the bottom face should be included.
 
 ## TexturedParallelepiped
+
+Derived from [IndexedFaceSet](../reference/<built-in method lower of str object at 0x00000000058029C0>.md)
 
 %figure "TexturedParallelepiped model in Webots."
 

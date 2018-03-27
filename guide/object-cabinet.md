@@ -1,5 +1,7 @@
 # Cabinet
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7FA8>.md)
+
 %figure "Cabinet model in Webots."
 
 ![Cabinet](images/objects/cabinet/Cabinet/model.png)
@@ -78,6 +80,8 @@ The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 - `objectTextureUrl`: Defines the secondary texture.
 
 ## CabinetHandle
+
+Derived from [Slot](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
 
 %figure "CabinetHandle model in Webots."
 

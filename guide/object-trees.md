@@ -2,6 +2,8 @@
 
 ## Forest
 
+Derived from [Transform](../reference/<built-in method lower of str object at 0x0000000005802510>.md)
+
 %figure "Forest model in Webots."
 
 ![Forest](images/objects/trees/Forest/model.png)
@@ -69,6 +71,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## RoundTree
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E030>.md)
+
 %figure "RoundTree model in Webots."
 
 ![RoundTree](images/objects/trees/RoundTree/model.png)
@@ -89,6 +93,8 @@ RoundTree {
 A tree.
 
 ## SimpleTree
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
 
 %figure "SimpleTree model in Webots."
 
@@ -148,6 +154,8 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 - `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## Tree
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E698>.md)
 
 %figure "Tree model in Webots."
 

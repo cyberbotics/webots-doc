@@ -2,6 +2,8 @@
 
 ## CardboardBox
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
+
 %figure "CardboardBox model in Webots."
 
 ![CardboardBox](images/objects/containers/CardboardBox/model.png)
@@ -26,6 +28,8 @@ CardboardBox {
 A cardboard box.
 
 ## WoodenBox
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
 
 %figure "WoodenBox model in Webots."
 
@@ -54,6 +58,8 @@ A wooden box.
 # Pallet
 
 ## WoodenPallet
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
 
 %figure "WoodenPallet model in Webots."
 
@@ -96,6 +102,8 @@ Simple and configurable wooden pallet.
 - `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## WoodenPalletStack
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "WoodenPalletStack model in Webots."
 
@@ -150,6 +158,8 @@ Simple and configurable wooden pallet stack.
 
 ## LJoint
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+
 %figure "LJoint model in Webots."
 
 ![LJoint](images/objects/pipes/LJoint/model.png)
@@ -172,6 +182,8 @@ LJoint {
 90-degree L-joint for connecting pipes.
 
 ## PipeSection
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
 
 %figure "PipeSection model in Webots."
 
@@ -206,6 +218,8 @@ A section of pipe.
 
 ## TJoint
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "TJoint model in Webots."
 
 ![TJoint](images/objects/pipes/TJoint/model.png)
@@ -230,6 +244,8 @@ TJoint {
 # Tools
 
 ## Bolt
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
 
 %figure "Bolt model in Webots."
 
@@ -258,6 +274,8 @@ A threaded bolt.
 
 ## Hammer
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "Hammer model in Webots."
 
 ![Hammer](images/objects/tools/Hammer/model.png)
@@ -284,6 +302,8 @@ A 25cm asymmetric club hammer.
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## Nut
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
 
 %figure "Nut model in Webots."
 
@@ -312,6 +332,8 @@ A hexagonal nut.
 
 ## PaintBucket
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
+
 %figure "PaintBucket model in Webots."
 
 ![PaintBucket](images/objects/tools/PaintBucket/model.png)
@@ -338,6 +360,8 @@ A 4kg bucket of paint, with HingeJoint-based handle.
 - `contactMaterial`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## PlatformCart
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "PlatformCart model in Webots."
 
@@ -369,6 +393,8 @@ A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 ## Screwdriver
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "Screwdriver model in Webots."
 
 ![Screwdriver](images/objects/tools/Screwdriver/model.png)
@@ -395,6 +421,8 @@ A Philips screwdriver. The blade and handle are balanced.
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## Wrench
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
 
 %figure "Wrench model in Webots."
 
@@ -424,6 +452,8 @@ A 15cm Open-End wrench.
 # Valves
 
 ## LargeValve
+
+Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
 
 %figure "LargeValve model in Webots."
 
@@ -461,6 +491,8 @@ Large Wheel-based valve. Handle can be moved in either direction by the angle (r
 
 ## LeverValve
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7C10>.md)
+
 %figure "LeverValve model in Webots."
 
 ![LeverValve](images/objects/valves/LeverValve/model.png)
@@ -488,6 +520,8 @@ Lever-based valve. Handle can be moved in either direction (from up) of 45 degre
 - `jointFriction`: Defines the static friction of the valve joint.
 
 ## SmallValve
+
+Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "SmallValve model in Webots."
 

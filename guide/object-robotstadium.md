@@ -2,6 +2,8 @@
 
 ## RobotstadiumGoal
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "RobotstadiumGoal model in Webots."
 
 ![RobotstadiumGoal](images/objects/robotstadium/RobotstadiumGoal/model.png)
@@ -32,6 +34,8 @@ The color of the goal and the support polygons can be modified.
 - `frameColor`: Defines the color of the goal frame.
 
 ## RobotstadiumSoccerField
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
 
 %figure "RobotstadiumSoccerField model in Webots."
 

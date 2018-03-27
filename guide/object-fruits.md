@@ -2,6 +2,8 @@
 
 ## Apple
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "Apple model in Webots."
 
 ![Apple](images/objects/fruits/Apple/model.png)
@@ -38,6 +40,8 @@ An apple (0.05 x 0.05 x 0.05 m).
 
 ## FruitBowl
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+
 %figure "FruitBowl model in Webots."
 
 ![FruitBowl](images/objects/fruits/FruitBowl/model.png)
@@ -70,6 +74,8 @@ A fruit bowl (0.146 x 0.146 x 0.146 m).
 - `mass`: Defines the mass of the bowl in kg.
 
 ## Orange
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
 
 %figure "Orange model in Webots."
 

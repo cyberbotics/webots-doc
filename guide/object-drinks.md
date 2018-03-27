@@ -2,6 +2,8 @@
 
 ## BeerBottle
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+
 %figure "BeerBottle model in Webots."
 
 ![BeerBottle](images/objects/drinks/BeerBottle/model.png)
@@ -25,6 +27,8 @@ BeerBottle {
 A beer bottle.
 
 ## Can
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "Can model in Webots."
 
@@ -50,6 +54,8 @@ Can {
 A can (0.03175 x 0.1222 x 0.03175 m).
 
 ## WaterBottle
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
 
 %figure "WaterBottle model in Webots."
 

@@ -2,6 +2,8 @@
 
 ## ComputerMouse
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "ComputerMouse model in Webots."
 
 ![ComputerMouse](images/objects/computers/ComputerMouse/model.png)
@@ -35,6 +37,8 @@ A computer mouse.
 
 ## DesktopComputer
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "DesktopComputer model in Webots."
 
 ![DesktopComputer](images/objects/computers/DesktopComputer/model.png)
@@ -64,6 +68,8 @@ A computer tower.
 - `mass`: Defines the mass of the computer in kg. A value smaller or equal to 0 remove the physics of the computer.
 
 ## Keyboard
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
 
 %figure "Keyboard model in Webots."
 
@@ -95,6 +101,8 @@ A computer keyboard.
 
 ## Laptop
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+
 %figure "Laptop model in Webots."
 
 ![Laptop](images/objects/computers/Laptop/model.png)
@@ -121,6 +129,8 @@ A simple laptop.
 - `controller`: Defines the controller of the laptop which can use the Display device to show images.
 
 ## Monitor
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "Monitor model in Webots."
 

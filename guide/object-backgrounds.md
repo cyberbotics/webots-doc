@@ -2,6 +2,8 @@
 
 ## TexturedBackground
 
+Derived from [Background](../reference/<built-in method lower of str object at 0x00000000057F0D20>.md)
+
 %figure "TexturedBackground model in Webots."
 
 ![TexturedBackground](images/objects/backgrounds/TexturedBackground/model.png)
@@ -32,6 +34,8 @@ Supported values for the "texture" field:
 - twilight\_cloudy\_empty
 
 ## TexturedBackgroundLight
+
+Derived from [DirectionalLight](../reference/<built-in method lower of str object at 0x0000000005890F80>.md)
 
 %figure "TexturedBackgroundLight model in Webots."
 

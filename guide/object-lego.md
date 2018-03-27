@@ -2,6 +2,8 @@
 
 ## LegoLargeMotor
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
+
 %figure "LegoLargeMotor model in Webots."
 
 ![LegoLargeMotor](images/objects/lego/LegoLargeMotor/model.png)
@@ -23,6 +25,8 @@ LegoLargeMotor {
 LEGO Mindstorm EV3 large motor. Part id: 6009430.
 
 ## LegoWheel
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "LegoWheel model in Webots."
 

@@ -1,5 +1,7 @@
 # Fridge
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7CD8>.md)
+
 %figure "Fridge model in Webots."
 
 ![Fridge](images/objects/fridge/Fridge/model.png)
@@ -38,6 +40,8 @@ A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 
 ## BiscuitBox
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+
 %figure "BiscuitBox model in Webots."
 
 ![BiscuitBox](images/objects/breakfast/BiscuitBox/model.png)
@@ -70,6 +74,8 @@ A customizable (size, texture, etc.) biscuit box.
 - `mass`: Defines the mass of the box in kg.
 
 ## CerealBox
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
 
 %figure "CerealBox model in Webots."
 
@@ -104,6 +110,8 @@ A customizable (size, texture, etc.) cereal box.
 
 ## HoneyJar
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "HoneyJar model in Webots."
 
 ![HoneyJar](images/objects/breakfast/HoneyJar/model.png)
@@ -137,6 +145,8 @@ A honey jar.
 
 ## JamJar
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "JamJar model in Webots."
 
 ![JamJar](images/objects/breakfast/JamJar/model.png)
@@ -169,6 +179,8 @@ A jam jar.
 
 ## HotPlate
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
+
 %figure "HotPlate model in Webots."
 
 ![HotPlate](images/objects/components/HotPlate/model.png)
@@ -196,6 +208,8 @@ An hot plate.
 
 ## Sink
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F58>.md)
+
 %figure "Sink model in Webots."
 
 ![Sink](images/objects/components/Sink/model.png)
@@ -222,6 +236,8 @@ A sink.
 - `textureUrl`: Defines the texture used for the sink.
 
 ## Worktop
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
 
 %figure "Worktop model in Webots."
 
@@ -255,6 +271,8 @@ A customizable (size, texture, etc.) worktop.
 - `tileSize`: Defines the size of texture used for the worktop.
 
 # Oven
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
 
 %figure "Oven model in Webots."
 
@@ -294,6 +312,8 @@ An oven (0.5 x 0.68 x 0.44 m).
 
 ## Carafe
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+
 %figure "Carafe model in Webots."
 
 ![Carafe](images/objects/utensils/Carafe/model.png)
@@ -320,6 +340,8 @@ A carafe.
 - `mass`: Defines the mass of the carafe in kg.
 
 ## Cookware
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
 
 %figure "Cookware model in Webots."
 
@@ -351,6 +373,8 @@ A cookware.
 
 ## Fork
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "Fork model in Webots."
 
 ![Fork](images/objects/utensils/Fork/model.png)
@@ -377,6 +401,8 @@ A fork.
 - `color`: Defines the color of the fork.
 
 ## Glass
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
 
 %figure "Glass model in Webots."
 
@@ -405,6 +431,8 @@ A glass.
 
 ## Knife
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "Knife model in Webots."
 
 ![Knife](images/objects/utensils/Knife/model.png)
@@ -431,6 +459,8 @@ A knife.
 - `color`: Defines the color of the knife.
 
 ## Lid
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7DC8>.md)
 
 %figure "Lid model in Webots."
 
@@ -461,6 +491,8 @@ A lid.
 - `mass`: Defines the mass of the lid in kg.
 
 ## Plate
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
 
 %figure "Plate model in Webots."
 
@@ -498,6 +530,8 @@ A customizable (dimensions, texture, etc. ) plate.
 
 ## Spoon
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "Spoon model in Webots."
 
 ![Spoon](images/objects/utensils/Spoon/model.png)
@@ -528,6 +562,8 @@ A spoon.
 
 ## Wineglass
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+
 %figure "Wineglass model in Webots."
 
 ![Wineglass](images/objects/utensils/Wineglass/model.png)
@@ -554,6 +590,8 @@ A wine glass.
 - `mass`: Defines the mass of the wine glass in kg.
 
 ## WoodenSpoon
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
 
 %figure "WoodenSpoon model in Webots."
 

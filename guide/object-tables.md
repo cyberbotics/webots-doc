@@ -2,6 +2,8 @@
 
 ## Desk
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E580>.md)
+
 %figure "Desk model in Webots."
 
 ![Desk](images/objects/tables/Desk/model.png)
@@ -35,6 +37,8 @@ A desk (1.2 x 0.72 x 0.7 m).
 
 ## RoundTable
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E6E8>.md)
+
 %figure "RoundTable model in Webots."
 
 ![RoundTable](images/objects/tables/RoundTable/model.png)
@@ -67,6 +71,8 @@ A round table (2 x 0.76 x 2 m).
 - `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## Table
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E788>.md)
 
 %figure "Table model in Webots."
 

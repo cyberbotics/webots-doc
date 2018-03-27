@@ -1,5 +1,7 @@
 # Television
 
+Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7E18>.md)
+
 %figure "Television model in Webots."
 
 ![Television](images/objects/television/Television/model.png)

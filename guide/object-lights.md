@@ -2,6 +2,8 @@
 
 ## CeilingLight
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "CeilingLight model in Webots."
 
 ![CeilingLight](images/objects/lights/CeilingLight/model.png)
@@ -52,6 +54,8 @@ A ceiling light (0.19 x 0.8 x 0.19 m).
 - `pointLightCastShadows`: Defines whether the point light should cast shadows.
 
 ## FloorLight
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D50>.md)
 
 %figure "FloorLight model in Webots."
 

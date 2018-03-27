@@ -2,6 +2,8 @@
 
 ## OilBarrel
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "OilBarrel model in Webots."
 
 ![OilBarrel](images/objects/obstacles/OilBarrel/model.png)
@@ -38,6 +40,8 @@ Resizable oil barrel.
 
 ## Ramp30deg
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "Ramp30deg model in Webots."
 
 ![Ramp30deg](images/objects/obstacles/Ramp30deg/model.png)
@@ -65,6 +69,8 @@ The ramp is a static object (not physics-enabled) so it will not move when hit.
 - `color`: Defines the color of the ramp.
 
 ## ThreeSteps
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "ThreeSteps model in Webots."
 

@@ -2,6 +2,8 @@
 
 ## Ceiling
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E68>.md)
+
 %figure "Ceiling model in Webots."
 
 ![Ceiling](images/objects/apartment_structure/Ceiling/model.png)
@@ -41,6 +43,8 @@ A configurable standard ceiling.
 - `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## Door
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D28>.md)
 
 %figure "Door model in Webots."
 
@@ -113,6 +117,8 @@ A cutomizable openable door.
 
 ## DoorKnob
 
+Derived from [Slot](../reference/<built-in method lower of str object at 0x00000000057F7CD8>.md)
+
 %figure "DoorKnob model in Webots."
 
 ![DoorKnob](images/objects/apartment_structure/DoorKnob/model.png)
@@ -152,6 +158,8 @@ This object can be used in the 'doorHandle' field of the Door object.
 - `mass`: Defines the mass of the handle.
 
 ## DoorLever
+
+Derived from [Slot](../reference/<built-in method lower of str object at 0x00000000057F7D00>.md)
 
 %figure "DoorLever model in Webots."
 
@@ -205,6 +213,8 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 ## Wall
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E68>.md)
+
 %figure "Wall model in Webots."
 
 ![Wall](images/objects/apartment_structure/Wall/model.png)
@@ -233,6 +243,8 @@ A customizable wall.
 'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
 ## Window
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
 
 %figure "Window model in Webots."
 

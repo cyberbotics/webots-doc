@@ -2,6 +2,8 @@
 
 ## PaperBoat
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E5A8>.md)
+
 %figure "PaperBoat model in Webots."
 
 ![PaperBoat](images/objects/toys/PaperBoat/model.png)
@@ -43,6 +45,8 @@ A paper boat (42.8 x 14.2 x 10.6 cm).
 - `immersionProperties`: Is equivalent to the `immersionProperties` field of the [Solid](../reference/solid.md) node.
 
 ## RubberDuck
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "RubberDuck model in Webots."
 

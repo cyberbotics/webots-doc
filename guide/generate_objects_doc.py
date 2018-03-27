@@ -91,6 +91,19 @@ for proto in prioritaryProtoList + fileList:
     if skipProto:
         continue
 
+    baseType = ''
+    # use the cache file to get the baseType
+    cacheFile = proto.replace(os.path.basename(proto), '.' + os.path.basename(proto)).replace('.proto', '.cache')
+    if os.path.isfile(cacheFile):
+        with open(cacheFile, 'r') as file:
+            for line in file.readlines():
+                match = re.match(r'baseType:\s*([a-zA-Z]*)', line)
+                if match:
+                    baseType = match.group(1)
+                    break
+    else:
+        sys.stderr.write('Could not find cache file: "%s"\n' % cacheFile)
+
     # add documentation for this PROTO file
     exist = os.path.isfile('object-' + upperCategoryName + '.md')
     mode = 'a'
@@ -101,6 +114,9 @@ for proto in prioritaryProtoList + fileList:
             file.write('# %s\n\n' % category.replace('_', ' ').title())
         if protoName not in [upperCategory.replace('_', ' ').title(), category.replace('_', ' ').title()]:
             file.write('## %s\n\n' % protoName)
+
+        if baseType:
+            file.write('Derived from [%s](../reference/%s.md)\n\n' % (baseType, baseType.lower))
 
         if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
             file.write('%%figure "%s model in Webots."\n\n' % protoName)

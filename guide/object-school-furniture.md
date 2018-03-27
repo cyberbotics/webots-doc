@@ -2,6 +2,8 @@
 
 ## Blackboard
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E738>.md)
+
 %figure "Blackboard model in Webots."
 
 ![Blackboard](images/objects/school_furniture/Blackboard/model.png)
@@ -23,6 +25,8 @@ Blackboard {
 A blackboard (about 1.3 x 2.5 m).
 
 ## Book
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E5A8>.md)
 
 %figure "Book model in Webots."
 
@@ -56,6 +60,8 @@ A book (0.2 x 0.15 x 0.02 m).
 - `mass`: Defines the mass of the book in kg.
 
 ## Clock
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E558>.md)
 
 %figure "Clock model in Webots."
 

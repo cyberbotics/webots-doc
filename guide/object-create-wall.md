@@ -2,6 +2,8 @@
 
 ## CreateWall
 
+Derived from [Robot](../reference/<built-in method lower of str object at 0x00000000057F7F80>.md)
+
 %figure "CreateWall model in Webots."
 
 ![CreateWall](images/objects/create_wall/CreateWall/model.png)

@@ -2,6 +2,8 @@
 
 ## SolidBox
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "SolidBox model in Webots."
 
 ![SolidBox](images/objects/solids/SolidBox/model.png)
@@ -43,6 +45,8 @@ The subdivision field allows to divide the faces into multiple quads (useful mai
 - `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## SolidPipe
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "SolidPipe model in Webots."
 
@@ -95,6 +99,8 @@ The 'accuracy' field defines how much boxes position can differ on y axis: a 0 v
 
 ## SolidRoundedBox
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "SolidRoundedBox model in Webots."
 
 ![SolidRoundedBox](images/objects/solids/SolidRoundedBox/model.png)
@@ -137,6 +143,8 @@ The box has similar properties as the VRML Box node in term of axis and fields.
 - `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## SolidTorus
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "SolidTorus model in Webots."
 

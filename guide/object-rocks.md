@@ -2,6 +2,8 @@
 
 ## Rock10cm
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "Rock10cm model in Webots."
 
 ![Rock10cm](images/objects/rocks/Rock10cm/model.png)
@@ -40,6 +42,8 @@ A rock (10 cm).
 - `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
 ## Rock17cm
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "Rock17cm model in Webots."
 

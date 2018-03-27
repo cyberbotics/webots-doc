@@ -2,6 +2,8 @@
 
 ## AdvertisingBoard
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "AdvertisingBoard model in Webots."
 
 ![AdvertisingBoard](images/objects/advertising_board/AdvertisingBoard/model.png)

@@ -2,6 +2,8 @@
 
 ## BunchOfSunFlowers
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "BunchOfSunFlowers model in Webots."
 
 ![BunchOfSunFlowers](images/objects/plants/BunchOfSunFlowers/model.png)
@@ -46,6 +48,8 @@ Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 - `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
 ## PottedTree
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "PottedTree model in Webots."
 

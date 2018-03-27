@@ -2,6 +2,8 @@
 
 ## TexturedBoxShape
 
+Derived from [Group](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "TexturedBoxShape model in Webots."
 
 ![TexturedBoxShape](images/objects/shapes/TexturedBoxShape/model.png)

@@ -2,6 +2,8 @@
 
 ## Ball
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D00>.md)
+
 %figure "Ball model in Webots."
 
 ![Ball](images/objects/balls/Ball/model.png)
@@ -48,6 +50,8 @@ You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 ## PingPongBall
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F30>.md)
+
 %figure "PingPongBall model in Webots."
 
 ![PingPongBall](images/objects/balls/PingPongBall/model.png)
@@ -77,6 +81,8 @@ A ping pong ball.
 - `textureUrl`: Defines the texture used for the ball.
 
 ## SoccerBall
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7D78>.md)
 
 %figure "SoccerBall model in Webots."
 

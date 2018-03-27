@@ -2,6 +2,8 @@
 
 ## LandscapePainting
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7E90>.md)
+
 %figure "LandscapePainting model in Webots."
 
 ![LandscapePainting](images/objects/paintings/LandscapePainting/model.png)
@@ -31,6 +33,8 @@ A painting (1.5 x 1 x 0.05 m).
 - `textureUrl`: Defines the texure used for the painting.
 
 ## PortraitPainting
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
 
 %figure "PortraitPainting model in Webots."
 

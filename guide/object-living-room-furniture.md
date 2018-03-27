@@ -2,6 +2,8 @@
 
 ## Armchair
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7EB8>.md)
+
 %figure "Armchair model in Webots."
 
 ![Armchair](images/objects/living_room_furniture/Armchair/model.png)
@@ -35,6 +37,8 @@ An armchair (1 x 0.8 x 1.1 m).
 
 ## Carpet
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E698>.md)
+
 %figure "Carpet model in Webots."
 
 ![Carpet](images/objects/living_room_furniture/Carpet/model.png)
@@ -64,6 +68,8 @@ A carpet (2.4 x 0.02 x 1.6 m).
 - `textureUrl`: Defines the texture used for the armchair.
 
 ## Sofa
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x000000000588E6E8>.md)
 
 %figure "Sofa model in Webots."
 

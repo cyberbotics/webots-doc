@@ -2,6 +2,8 @@
 
 ## Bench
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "Bench model in Webots."
 
 ![Bench](images/objects/street_furniture/Bench/model.png)
@@ -34,6 +36,8 @@ A bench.
 - `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## BusStop
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "BusStop model in Webots."
 
@@ -76,6 +80,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## EmergencyPhone
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "EmergencyPhone model in Webots."
 
 ![EmergencyPhone](images/objects/street_furniture/EmergencyPhone/model.png)
@@ -105,6 +111,8 @@ An emergency phone.
 - `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## Fence
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "Fence model in Webots."
 
@@ -168,6 +176,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ## FireHydrant
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "FireHydrant model in Webots."
 
 ![FireHydrant](images/objects/street_furniture/FireHydrant/model.png)
@@ -194,6 +204,8 @@ A fire hydrant.
 - `appearance`: Defines the appearance of the fire hydrant.
 
 ## Fountain
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "Fountain model in Webots."
 
@@ -228,6 +240,8 @@ A configurable fountain.
 
 ## PublicBin
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "PublicBin model in Webots."
 
 ![PublicBin](images/objects/street_furniture/PublicBin/model.png)
@@ -257,6 +271,8 @@ A public bin.
 - `recognitionColors`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
 ## PublicToilet
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "PublicToilet model in Webots."
 
@@ -329,6 +345,8 @@ Resizable public toilet with two different displays.
 - `frontDisplay`: Defines the content of the front display.
 
 ## TrashBin
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "TrashBin model in Webots."
 

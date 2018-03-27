@@ -2,6 +2,8 @@
 
 ## StraightStairs
 
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
+
 %figure "StraightStairs model in Webots."
 
 ![StraightStairs](images/objects/stairs/StraightStairs/model.png)
@@ -52,6 +54,8 @@ Generic and customizable stairs model.
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## StraightStairsLanding
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "StraightStairsLanding model in Webots."
 
@@ -109,6 +113,8 @@ Generic and customizable landing model for straight stairs.
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
 ## StraightStairsRail
+
+Derived from [Solid](../reference/<built-in method lower of str object at 0x00000000057F7F08>.md)
 
 %figure "StraightStairsRail model in Webots."
 

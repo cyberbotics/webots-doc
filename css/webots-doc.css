@@ -147,9 +147,6 @@
   color: white;
   border-color: #ccc;
 }
-.webots-doc #index {
-  margin-bottom: 40px;
-}
 .webots-doc blockquote {
   margin: 20px 10px;
   font-size: inherit; /* in the online doc, bootstrap is overriding font-size */

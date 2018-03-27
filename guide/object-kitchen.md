@@ -1,4 +1,6 @@
-# Fridge
+# Kitchen
+
+## Fridge
 
 A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 
@@ -24,7 +26,7 @@ Fridge {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/fridge/protos/Fridge.proto"
 
-### Fridge Field Summary
+#### Fridge Field Summary
 
 - `mainColor`: Defines the color of the fridge.
 
@@ -34,9 +36,9 @@ Fridge {
 
 - `doorTextureUrl`: Defines the texture used for the door of the fridge.
 
-# Breakfast
+## Breakfast
 
-## BiscuitBox
+### BiscuitBox
 
 A customizable (size, texture, etc.) biscuit box.
 
@@ -61,7 +63,7 @@ BiscuitBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/BiscuitBox.proto"
 
-### BiscuitBox Field Summary
+#### BiscuitBox Field Summary
 
 - `size`: Defines the size of the box.
 
@@ -69,7 +71,7 @@ BiscuitBox {
 
 - `mass`: Defines the mass of the box in kg.
 
-## CerealBox
+### CerealBox
 
 A customizable (size, texture, etc.) cereal box.
 
@@ -94,7 +96,7 @@ CerealBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
 
-### CerealBox Field Summary
+#### CerealBox Field Summary
 
 - `size`: Defines the size of the box.
 
@@ -102,7 +104,7 @@ CerealBox {
 
 - `mass`: Defines the mass of the box in kg.
 
-## HoneyJar
+### HoneyJar
 
 A honey jar.
 
@@ -127,7 +129,7 @@ HoneyJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/HoneyJar.proto"
 
-### HoneyJar Field Summary
+#### HoneyJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
 
@@ -135,7 +137,7 @@ HoneyJar {
 
 - `color`: Defines the color of the jar.
 
-## JamJar
+### JamJar
 
 A jam jar.
 
@@ -159,15 +161,15 @@ JamJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/JamJar.proto"
 
-### JamJar Field Summary
+#### JamJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
 
 - `mass`: Defines the mass of the jar in kg.
 
-# Components
+## Components
 
-## HotPlate
+### HotPlate
 
 An hot plate.
 
@@ -190,11 +192,11 @@ HotPlate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/HotPlate.proto"
 
-### HotPlate Field Summary
+#### HotPlate Field Summary
 
 - `textureUrl`: Defines the texture used for the hot plate.
 
-## Sink
+### Sink
 
 A sink.
 
@@ -217,11 +219,11 @@ Sink {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Sink.proto"
 
-### Sink Field Summary
+#### Sink Field Summary
 
 - `textureUrl`: Defines the texture used for the sink.
 
-## Worktop
+### Worktop
 
 A customizable (size, texture, etc.) worktop.
 
@@ -246,7 +248,7 @@ Worktop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Worktop.proto"
 
-### Worktop Field Summary
+#### Worktop Field Summary
 
 - `size`: Defines the size of the worktop.
 
@@ -254,7 +256,7 @@ Worktop {
 
 - `tileSize`: Defines the size of texture used for the worktop.
 
-# Oven
+## Oven
 
 An oven (0.5 x 0.68 x 0.44 m).
 
@@ -280,7 +282,7 @@ Oven {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/oven/protos/Oven.proto"
 
-### Oven Field Summary
+#### Oven Field Summary
 
 - `mainColor`: Defines the color of the oven.
 
@@ -290,9 +292,9 @@ Oven {
 
 - `doorTextureUrl`: Defines the texture used for the door of the oven.
 
-# Utensils
+## Utensils
 
-## Carafe
+### Carafe
 
 A carafe.
 
@@ -315,11 +317,11 @@ Carafe {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Carafe.proto"
 
-### Carafe Field Summary
+#### Carafe Field Summary
 
 - `mass`: Defines the mass of the carafe in kg.
 
-## Cookware
+### Cookware
 
 A cookware.
 
@@ -343,13 +345,13 @@ Cookware {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Cookware.proto"
 
-### Cookware Field Summary
+#### Cookware Field Summary
 
 - `color`: Defines the color of the cookware.
 
 - `mass`: Defines the mass of the cookware in kg.
 
-## Fork
+### Fork
 
 A fork.
 
@@ -372,11 +374,11 @@ Fork {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Fork.proto"
 
-### Fork Field Summary
+#### Fork Field Summary
 
 - `color`: Defines the color of the fork.
 
-## Glass
+### Glass
 
 A glass.
 
@@ -399,11 +401,11 @@ Glass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Glass.proto"
 
-### Glass Field Summary
+#### Glass Field Summary
 
 - `mass`: Defines the mass of the glass in kg.
 
-## Knife
+### Knife
 
 A knife.
 
@@ -426,11 +428,11 @@ Knife {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Knife.proto"
 
-### Knife Field Summary
+#### Knife Field Summary
 
 - `color`: Defines the color of the knife.
 
-## Lid
+### Lid
 
 A lid.
 
@@ -454,13 +456,13 @@ Lid {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Lid.proto"
 
-### Lid Field Summary
+#### Lid Field Summary
 
 - `color`: Defines the color of the lid.
 
 - `mass`: Defines the mass of the lid in kg.
 
-## Plate
+### Plate
 
 A customizable (dimensions, texture, etc. ) plate.
 
@@ -486,7 +488,7 @@ Plate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Plate.proto"
 
-### Plate Field Summary
+#### Plate Field Summary
 
 - `textureUrl`: Defines the textures used for of the plate.
 
@@ -496,7 +498,7 @@ Plate {
 
 - `mass`: Defines the mass of the plate in kg.
 
-## Spoon
+### Spoon
 
 A spoon.
 
@@ -520,13 +522,13 @@ Spoon {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Spoon.proto"
 
-### Spoon Field Summary
+#### Spoon Field Summary
 
 - `color`: Defines the color of the spoon.
 
 - `type`: Defines the type of spoon. The value should be either `table` or `tea`.
 
-## Wineglass
+### Wineglass
 
 A wine glass.
 
@@ -549,11 +551,11 @@ Wineglass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Wineglass.proto"
 
-### Wineglass Field Summary
+#### Wineglass Field Summary
 
 - `mass`: Defines the mass of the wine glass in kg.
 
-## WoodenSpoon
+### WoodenSpoon
 
 A wooden spoon.
 
@@ -576,7 +578,7 @@ WoodenSpoon {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/WoodenSpoon.proto"
 
-### WoodenSpoon Field Summary
+#### WoodenSpoon Field Summary
 
 - `textureUrl`: Defines the texture used for the spoon.
 

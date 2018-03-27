@@ -1,6 +1,8 @@
-# Containers
+# Factory
 
-## CardboardBox
+## Containers
+
+### CardboardBox
 
 A cardboard box.
 
@@ -25,7 +27,7 @@ CardboardBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/CardboardBox.proto"
 
-## WoodenBox
+### WoodenBox
 
 A wooden box.
 
@@ -51,9 +53,9 @@ WoodenBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/WoodenBox.proto"
 
-# Pallet
+## Pallet
 
-## WoodenPallet
+### WoodenPallet
 
 Simple and configurable wooden pallet.
 
@@ -81,7 +83,7 @@ WoodenPallet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPallet.proto"
 
-### WoodenPallet Field Summary
+#### WoodenPallet Field Summary
 
 - `size`: Defines the size of the pallet.
 
@@ -95,7 +97,7 @@ WoodenPallet {
 
 - `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
-## WoodenPalletStack
+### WoodenPalletStack
 
 Simple and configurable wooden pallet stack.
 
@@ -126,7 +128,7 @@ WoodenPalletStack {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPalletStack.proto"
 
-### WoodenPalletStack Field Summary
+#### WoodenPalletStack Field Summary
 
 - `palletNumber`: Defines the number of pallet in the stack (vertically).
 
@@ -146,9 +148,9 @@ WoodenPalletStack {
 
 - `locked`: Is equivalent to the `locked` field of the [Solid](../reference/solid.md) node.
 
-# Pipes
+## Pipes
 
-## LJoint
+### LJoint
 
 90-degree L-joint for connecting pipes.
 
@@ -171,7 +173,7 @@ LJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/LJoint.proto"
 
-## PipeSection
+### PipeSection
 
 A section of pipe.
 
@@ -196,7 +198,7 @@ PipeSection {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/PipeSection.proto"
 
-### PipeSection Field Summary
+#### PipeSection Field Summary
 
 - `height`: Defines the height of the pipe.
 
@@ -204,7 +206,7 @@ PipeSection {
 
 - `subdivision`: Defines the number of polygons used to represent the pipe cylinder and so its resolution.
 
-## TJoint
+### TJoint
 
 3-slot T-joint for connecting pipes.
 
@@ -227,9 +229,9 @@ TJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/TJoint.proto"
 
-# Tools
+## Tools
 
-## Bolt
+### Bolt
 
 A threaded bolt.
 
@@ -252,11 +254,11 @@ Bolt {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Bolt.proto"
 
-### Bolt Field Summary
+#### Bolt Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-## Hammer
+### Hammer
 
 A 25cm asymmetric club hammer.
 
@@ -279,11 +281,11 @@ Hammer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
 
-### Hammer Field Summary
+#### Hammer Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-## Nut
+### Nut
 
 A hexagonal nut.
 
@@ -306,11 +308,11 @@ Nut {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Nut.proto"
 
-### Nut Field Summary
+#### Nut Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-## PaintBucket
+### PaintBucket
 
 A 4kg bucket of paint, with HingeJoint-based handle.
 
@@ -333,11 +335,11 @@ PaintBucket {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
 
-### PaintBucket Field Summary
+#### PaintBucket Field Summary
 
 - `contactMaterial`: Is equivalent to the `recognitionColors` field of the [Solid](../reference/solid.md) node.
 
-## PlatformCart
+### PlatformCart
 
 A platform cart with overall dimensions 90Lx50Wx85H cm.
 
@@ -361,13 +363,13 @@ PlatformCart {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PlatformCart.proto"
 
-### PlatformCart Field Summary
+#### PlatformCart Field Summary
 
 - `slot`: Extends the cart with new nodes in the slot.
 
 - `physics`: Is equivalent to the `physics` field of the [Solid](../reference/solid.md) node.
 
-## Screwdriver
+### Screwdriver
 
 A Philips screwdriver. The blade and handle are balanced.
 
@@ -390,11 +392,11 @@ Screwdriver {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Screwdriver.proto"
 
-### Screwdriver Field Summary
+#### Screwdriver Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-## Wrench
+### Wrench
 
 A 15cm Open-End wrench.
 
@@ -417,13 +419,13 @@ Wrench {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
 
-### Wrench Field Summary
+#### Wrench Field Summary
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-# Valves
+## Valves
 
-## LargeValve
+### LargeValve
 
 Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 
@@ -449,7 +451,7 @@ LargeValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LargeValve.proto"
 
-### LargeValve Field Summary
+#### LargeValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
 
@@ -459,7 +461,7 @@ LargeValve {
 
 - `contactMaterial`: Is equivalent to the `contactMaterial` field of the [Solid](../reference/solid.md) node.
 
-## LeverValve
+### LeverValve
 
 Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
 
@@ -483,11 +485,11 @@ LeverValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LeverValve.proto"
 
-### LeverValve Field Summary
+#### LeverValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
 
-## SmallValve
+### SmallValve
 
 Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 
@@ -512,7 +514,7 @@ SmallValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/SmallValve.proto"
 
-### SmallValve Field Summary
+#### SmallValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
 

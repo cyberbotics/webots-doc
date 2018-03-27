@@ -106,10 +106,15 @@ for proto in prioritaryProtoList + fileList:
     if upperCategory not in upperCategories:
         mode = 'w'
     with open('object-' + upperCategoryName + '.md', mode) as file:
+        if upperCategory not in upperCategories and not upperCategory == category:
+            file.write('# %s\n\n' % upperCategory.replace('_', ' ').title())
+        headerPrefix = '#'
+        if not upperCategory == category:
+            headerPrefix = '##'
         if upperCategory not in upperCategories or category not in upperCategories[upperCategory]:
-            file.write('# %s\n\n' % category.replace('_', ' ').title())
+            file.write(headerPrefix + ' %s\n\n' % category.replace('_', ' ').title())
         if protoName not in [upperCategory.replace('_', ' ').title(), category.replace('_', ' ').title()]:
-            file.write('## %s\n\n' % protoName)
+            file.write(headerPrefix + '# %s\n\n' % protoName)
 
         file.write(description + '\n')
 
@@ -139,7 +144,7 @@ for proto in prioritaryProtoList + fileList:
         #     sys.stderr.write('Please add a license to "%s"\n' % proto)
 
         if describedField:
-            file.write('### %s Field Summary\n\n' % protoName)
+            file.write(headerPrefix + '## %s Field Summary\n\n' % protoName)
             for fieldName, fieldDescription in describedField:
                 # look for 'Is `NodeType.fieldName`.'
                 match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldDescription)

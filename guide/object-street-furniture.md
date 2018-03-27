@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Bench](images/objects/street_furniture/Bench/model.png)
 
@@ -39,7 +39,7 @@ A bench.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BusStop](images/objects/street_furniture/BusStop/model.png)
 
@@ -82,7 +82,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![EmergencyPhone](images/objects/street_furniture/EmergencyPhone/model.png)
 
@@ -114,7 +114,7 @@ An emergency phone.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Fence](images/objects/street_furniture/Fence/model.png)
 
@@ -178,7 +178,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![FireHydrant](images/objects/street_furniture/FireHydrant/model.png)
 
@@ -207,7 +207,7 @@ A fire hydrant.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Fountain](images/objects/street_furniture/Fountain/model.png)
 
@@ -242,7 +242,7 @@ A configurable fountain.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PublicBin](images/objects/street_furniture/PublicBin/model.png)
 
@@ -274,7 +274,7 @@ A public bin.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PublicToilet](images/objects/street_furniture/PublicToilet/model.png)
 
@@ -348,7 +348,7 @@ Resizable public toilet with two different displays.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![TrashBin](images/objects/street_furniture/TrashBin/model.png)
 

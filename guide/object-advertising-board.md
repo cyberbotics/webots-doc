@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![AdvertisingBoard](images/objects/advertising_board/AdvertisingBoard/model.png)
 

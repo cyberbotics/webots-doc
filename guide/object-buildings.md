@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Auditorium](images/objects/buildings/Auditorium/model.png)
 
@@ -28,7 +28,7 @@ A classic auditoruim.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BigGlassTower](images/objects/buildings/BigGlassTower/model.png)
 
@@ -52,7 +52,7 @@ A big glass tower.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Building](images/objects/buildings/Building/model.png)
 
@@ -125,7 +125,7 @@ A customizable building, the size, appearance and geometry can fully be defined.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BuildingUnderConstruction](images/objects/buildings/BuildingUnderConstruction/model.png)
 
@@ -149,7 +149,7 @@ Building under construction with scaffolding.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BungalowStyleHouse](images/objects/buildings/BungalowStyleHouse/model.png)
 
@@ -198,7 +198,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CommercialBuilding](images/objects/buildings/CommercialBuilding/model.png)
 
@@ -222,7 +222,7 @@ A commercial building.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CyberboticsTower](images/objects/buildings/CyberboticsTower/model.png)
 
@@ -246,7 +246,7 @@ The Cyberbotics tower.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![FastFoodRestaurant](images/objects/buildings/FastFoodRestaurant/model.png)
 
@@ -292,7 +292,7 @@ The building can be changed to a two sided restaurant using the 'numberOfSides' 
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![HollowBuilding](images/objects/buildings/HollowBuilding/model.png)
 
@@ -316,7 +316,7 @@ A hollow building.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Hotel](images/objects/buildings/Hotel/model.png)
 
@@ -340,7 +340,7 @@ A big hotel.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![ModernHouse](images/objects/buildings/ModernHouse/model.png)
 
@@ -377,7 +377,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Museum](images/objects/buildings/Museum/model.png)
 
@@ -401,7 +401,7 @@ An old museum.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![ResidentialBuilding](images/objects/buildings/ResidentialBuilding/model.png)
 
@@ -425,7 +425,7 @@ A residential building.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SimpleBuilding](images/objects/buildings/SimpleBuilding/model.png)
 
@@ -538,7 +538,7 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SimpleTwoFloorsHouse](images/objects/buildings/SimpleTwoFloorsHouse/model.png)
 
@@ -572,7 +572,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![TheThreeTowers](images/objects/buildings/TheThreeTowers/model.png)
 
@@ -596,7 +596,7 @@ A group of three towers.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![UBuilding](images/objects/buildings/UBuilding/model.png)
 

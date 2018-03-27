@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Bed](images/objects/bedroom/Bed/model.png)
 

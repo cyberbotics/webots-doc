@@ -4,7 +4,7 @@
 
 Derived from [Group](../reference/group.md)
 
-%%figure
+%figure
 
 ![TexturedBoxShape](images/objects/shapes/TexturedBoxShape/model.png)
 

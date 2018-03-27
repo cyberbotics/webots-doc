@@ -4,7 +4,7 @@
 
 Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
-%%figure
+%figure
 
 ![Extrusion](images/objects/geometries/Extrusion/model.png)
 
@@ -61,7 +61,7 @@ The shape (defined by the 'crossSection' field) is extruded along the path defin
 
 Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
-%%figure
+%figure
 
 ![TexturedBox](images/objects/geometries/TexturedBox/model.png)
 
@@ -117,7 +117,7 @@ A demo of these mappings is available in projects/samples/geometries/worlds/text
 
 Derived from [IndexedFaceSet](../reference/indexedfaceset.md)
 
-%%figure
+%figure
 
 ![TexturedParallelepiped](images/objects/geometries/TexturedParallelepiped/model.png)
 

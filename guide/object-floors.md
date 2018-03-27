@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CircleArena](images/objects/floors/CircleArena/model.png)
 
@@ -57,7 +57,7 @@ A configurable circle arena composed of floor surrounded by wall.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Floor](images/objects/floors/Floor/model.png)
 
@@ -101,7 +101,7 @@ Configurable standard flat floor.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RectangleArena](images/objects/floors/RectangleArena/model.png)
 
@@ -157,7 +157,7 @@ A configurable rectangle arena composed of a floor surrounded by walls.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![UnevenTerrain](images/objects/floors/UnevenTerrain/model.png)
 

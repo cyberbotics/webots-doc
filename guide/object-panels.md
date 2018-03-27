@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Panel](images/objects/panels/Panel/model.png)
 
@@ -48,7 +48,7 @@ Customizable simple panel.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PannelWithTubes](images/objects/panels/PannelWithTubes/model.png)
 

@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![LandscapePainting](images/objects/paintings/LandscapePainting/model.png)
 
@@ -36,7 +36,7 @@ A painting (1.5 x 1 x 0.05 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PortraitPainting](images/objects/paintings/PortraitPainting/model.png)
 

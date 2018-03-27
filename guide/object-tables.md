@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Desk](images/objects/tables/Desk/model.png)
 
@@ -39,7 +39,7 @@ A desk (1.2 x 0.72 x 0.7 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RoundTable](images/objects/tables/RoundTable/model.png)
 
@@ -74,7 +74,7 @@ A round table (2 x 0.76 x 2 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Table](images/objects/tables/Table/model.png)
 

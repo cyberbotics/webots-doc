@@ -4,7 +4,7 @@
 
 Derived from [Background](../reference/background.md)
 
-%%figure
+%figure
 
 ![TexturedBackground](images/objects/backgrounds/TexturedBackground/model.png)
 
@@ -37,7 +37,7 @@ Supported values for the "texture" field:
 
 Derived from [DirectionalLight](../reference/directionallight.md)
 
-%%figure
+%figure
 
 ![TexturedBackgroundLight](images/objects/backgrounds/TexturedBackgroundLight/model.png)
 

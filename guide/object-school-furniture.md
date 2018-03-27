@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Blackboard](images/objects/school_furniture/Blackboard/model.png)
 
@@ -28,7 +28,7 @@ A blackboard (about 1.3 x 2.5 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Book](images/objects/school_furniture/Book/model.png)
 
@@ -63,7 +63,7 @@ A book (0.2 x 0.15 x 0.02 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Clock](images/objects/school_furniture/Clock/model.png)
 

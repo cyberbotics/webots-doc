@@ -2,7 +2,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Fridge](images/objects/fridge/Fridge/model.png)
 
@@ -42,7 +42,7 @@ A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BiscuitBox](images/objects/breakfast/BiscuitBox/model.png)
 
@@ -77,7 +77,7 @@ A customizable (size, texture, etc.) biscuit box.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CerealBox](images/objects/breakfast/CerealBox/model.png)
 
@@ -112,7 +112,7 @@ A customizable (size, texture, etc.) cereal box.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![HoneyJar](images/objects/breakfast/HoneyJar/model.png)
 
@@ -147,7 +147,7 @@ A honey jar.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![JamJar](images/objects/breakfast/JamJar/model.png)
 
@@ -181,7 +181,7 @@ A jam jar.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![HotPlate](images/objects/components/HotPlate/model.png)
 
@@ -210,7 +210,7 @@ An hot plate.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Sink](images/objects/components/Sink/model.png)
 
@@ -239,7 +239,7 @@ A sink.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Worktop](images/objects/components/Worktop/model.png)
 
@@ -274,7 +274,7 @@ A customizable (size, texture, etc.) worktop.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Oven](images/objects/oven/Oven/model.png)
 
@@ -314,7 +314,7 @@ An oven (0.5 x 0.68 x 0.44 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Carafe](images/objects/utensils/Carafe/model.png)
 
@@ -343,7 +343,7 @@ A carafe.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Cookware](images/objects/utensils/Cookware/model.png)
 
@@ -375,7 +375,7 @@ A cookware.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Fork](images/objects/utensils/Fork/model.png)
 
@@ -404,7 +404,7 @@ A fork.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Glass](images/objects/utensils/Glass/model.png)
 
@@ -433,7 +433,7 @@ A glass.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Knife](images/objects/utensils/Knife/model.png)
 
@@ -462,7 +462,7 @@ A knife.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Lid](images/objects/utensils/Lid/model.png)
 
@@ -494,7 +494,7 @@ A lid.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Plate](images/objects/utensils/Plate/model.png)
 
@@ -532,7 +532,7 @@ A customizable (dimensions, texture, etc. ) plate.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Spoon](images/objects/utensils/Spoon/model.png)
 
@@ -564,7 +564,7 @@ A spoon.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Wineglass](images/objects/utensils/Wineglass/model.png)
 
@@ -593,7 +593,7 @@ A wine glass.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![WoodenSpoon](images/objects/utensils/WoodenSpoon/model.png)
 

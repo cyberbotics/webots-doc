@@ -2,7 +2,7 @@
 
 Derived from [Robot](../reference/robot.md)
 
-%%figure
+%figure
 
 ![Mirror](images/objects/mirror/Mirror/model.png)
 

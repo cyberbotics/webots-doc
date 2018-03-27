@@ -4,7 +4,7 @@
 
 Derived from [Robot](../reference/robot.md)
 
-%%figure
+%figure
 
 ![CreateWall](images/objects/create_wall/CreateWall/model.png)
 

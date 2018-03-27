@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![OilBarrel](images/objects/obstacles/OilBarrel/model.png)
 
@@ -42,7 +42,7 @@ Resizable oil barrel.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Ramp30deg](images/objects/obstacles/Ramp30deg/model.png)
 
@@ -72,7 +72,7 @@ The ramp is a static object (not physics-enabled) so it will not move when hit.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![ThreeSteps](images/objects/obstacles/ThreeSteps/model.png)
 

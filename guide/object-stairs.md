@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![StraightStairs](images/objects/stairs/StraightStairs/model.png)
 
@@ -57,7 +57,7 @@ Generic and customizable stairs model.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![StraightStairsLanding](images/objects/stairs/StraightStairsLanding/model.png)
 
@@ -116,7 +116,7 @@ Generic and customizable landing model for straight stairs.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![StraightStairsRail](images/objects/stairs/StraightStairsRail/model.png)
 

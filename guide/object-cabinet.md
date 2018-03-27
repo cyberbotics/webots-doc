@@ -2,7 +2,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Cabinet](images/objects/cabinet/Cabinet/model.png)
 
@@ -83,7 +83,7 @@ The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
 Derived from [Slot](../reference/slot.md)
 
-%%figure
+%figure
 
 ![CabinetHandle](images/objects/cabinet/CabinetHandle/model.png)
 

@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SolidBox](images/objects/solids/SolidBox/model.png)
 
@@ -48,7 +48,7 @@ The subdivision field allows to divide the faces into multiple quads (useful mai
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SolidPipe](images/objects/solids/SolidPipe/model.png)
 
@@ -101,7 +101,7 @@ The 'accuracy' field defines how much boxes position can differ on y axis: a 0 v
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SolidRoundedBox](images/objects/solids/SolidRoundedBox/model.png)
 
@@ -146,7 +146,7 @@ The box has similar properties as the VRML Box node in term of axis and fields.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SolidTorus](images/objects/solids/SolidTorus/model.png)
 

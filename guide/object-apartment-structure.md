@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Ceiling](images/objects/apartment_structure/Ceiling/model.png)
 
@@ -46,7 +46,7 @@ A configurable standard ceiling.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Door](images/objects/apartment_structure/Door/model.png)
 
@@ -119,7 +119,7 @@ A cutomizable openable door.
 
 Derived from [Slot](../reference/slot.md)
 
-%%figure
+%figure
 
 ![DoorKnob](images/objects/apartment_structure/DoorKnob/model.png)
 
@@ -161,7 +161,7 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 Derived from [Slot](../reference/slot.md)
 
-%%figure
+%figure
 
 ![DoorLever](images/objects/apartment_structure/DoorLever/model.png)
 
@@ -215,7 +215,7 @@ This object can be used in the 'doorHandle' field of the Door object.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Wall](images/objects/apartment_structure/Wall/model.png)
 
@@ -246,7 +246,7 @@ A customizable wall.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Window](images/objects/apartment_structure/Window/model.png)
 

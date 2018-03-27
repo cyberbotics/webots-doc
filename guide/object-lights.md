@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CeilingLight](images/objects/lights/CeilingLight/model.png)
 
@@ -57,7 +57,7 @@ A ceiling light (0.19 x 0.8 x 0.19 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![FloorLight](images/objects/lights/FloorLight/model.png)
 

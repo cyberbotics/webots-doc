@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BeerBottle](images/objects/drinks/BeerBottle/model.png)
 
@@ -30,7 +30,7 @@ A beer bottle.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Can](images/objects/drinks/Can/model.png)
 
@@ -57,7 +57,7 @@ A can (0.03175 x 0.1222 x 0.03175 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![WaterBottle](images/objects/drinks/WaterBottle/model.png)
 

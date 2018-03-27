@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PaperBoat](images/objects/toys/PaperBoat/model.png)
 
@@ -48,7 +48,7 @@ A paper boat (42.8 x 14.2 x 10.6 cm).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RubberDuck](images/objects/toys/RubberDuck/model.png)
 

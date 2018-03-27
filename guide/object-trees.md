@@ -4,7 +4,7 @@
 
 Derived from [Transform](../reference/transform.md)
 
-%%figure
+%figure
 
 ![Forest](images/objects/trees/Forest/model.png)
 
@@ -73,7 +73,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RoundTree](images/objects/trees/RoundTree/model.png)
 
@@ -96,7 +96,7 @@ A tree.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SimpleTree](images/objects/trees/SimpleTree/model.png)
 
@@ -157,7 +157,7 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Tree](images/objects/trees/Tree/model.png)
 

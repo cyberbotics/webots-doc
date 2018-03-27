@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Rock10cm](images/objects/rocks/Rock10cm/model.png)
 
@@ -45,7 +45,7 @@ A rock (10 cm).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Rock17cm](images/objects/rocks/Rock17cm/model.png)
 

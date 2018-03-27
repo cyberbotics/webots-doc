@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Ball](images/objects/balls/Ball/model.png)
 
@@ -52,7 +52,7 @@ You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PingPongBall](images/objects/balls/PingPongBall/model.png)
 
@@ -84,7 +84,7 @@ A ping pong ball.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SoccerBall](images/objects/balls/SoccerBall/model.png)
 

@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![BunchOfSunFlowers](images/objects/plants/BunchOfSunFlowers/model.png)
 
@@ -51,7 +51,7 @@ Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PottedTree](images/objects/plants/PottedTree/model.png)
 

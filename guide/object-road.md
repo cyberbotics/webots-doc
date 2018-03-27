@@ -2,7 +2,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Road](images/objects/road/Road/model.png)
 
@@ -151,7 +151,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![AddLaneRoadSegment](images/objects/road/AddLaneRoadSegment/model.png)
 
@@ -271,7 +271,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![AddLanesRoadSegment](images/objects/road/AddLanesRoadSegment/model.png)
 
@@ -394,7 +394,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CrashBarrier](images/objects/road/CrashBarrier/model.png)
 
@@ -438,7 +438,7 @@ A customizable crash barrier.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Crossroad](images/objects/road/Crossroad/model.png)
 
@@ -496,7 +496,7 @@ A customizable crossroad which can contain optionally references to its connecte
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CurvedRoadSegment](images/objects/road/CurvedRoadSegment/model.png)
 
@@ -624,7 +624,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![HelicoidalRoadSegment](images/objects/road/HelicoidalRoadSegment/model.png)
 
@@ -746,7 +746,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![LaneSeparation](images/objects/road/LaneSeparation/model.png)
 
@@ -872,7 +872,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RoadIntersection](images/objects/road/RoadIntersection/model.png)
 
@@ -965,7 +965,7 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RoadPillars](images/objects/road/RoadPillars/model.png)
 
@@ -1020,7 +1020,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Roundabout](images/objects/road/Roundabout/model.png)
 
@@ -1138,7 +1138,7 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![StraightRoadSegment](images/objects/road/StraightRoadSegment/model.png)
 

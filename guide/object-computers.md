@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![ComputerMouse](images/objects/computers/ComputerMouse/model.png)
 
@@ -39,7 +39,7 @@ A computer mouse.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![DesktopComputer](images/objects/computers/DesktopComputer/model.png)
 
@@ -71,7 +71,7 @@ A computer tower.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Keyboard](images/objects/computers/Keyboard/model.png)
 
@@ -103,7 +103,7 @@ A computer keyboard.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Laptop](images/objects/computers/Laptop/model.png)
 
@@ -132,7 +132,7 @@ A simple laptop.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Monitor](images/objects/computers/Monitor/model.png)
 

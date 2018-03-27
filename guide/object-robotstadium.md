@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RobotstadiumGoal](images/objects/robotstadium/RobotstadiumGoal/model.png)
 
@@ -37,7 +37,7 @@ The color of the goal and the support polygons can be modified.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![RobotstadiumSoccerField](images/objects/robotstadium/RobotstadiumSoccerField/model.png)
 

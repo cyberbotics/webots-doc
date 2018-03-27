@@ -2,7 +2,7 @@
 
 Derived from [Robot](../reference/robot.md)
 
-%%figure
+%figure
 
 ![Television](images/objects/television/Television/model.png)
 

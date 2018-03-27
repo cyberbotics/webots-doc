@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Chair](images/objects/chairs/Chair/model.png)
 
@@ -39,7 +39,7 @@ A chair (0.5 x 1 x 0.5 m).
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![SimpleChair](images/objects/chairs/SimpleChair/model.png)
 
@@ -75,7 +75,7 @@ This object is physics-enabled so it can be pushed.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![WoodenChair](images/objects/chairs/WoodenChair/model.png)
 

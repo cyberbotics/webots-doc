@@ -4,7 +4,7 @@
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![CardboardBox](images/objects/containers/CardboardBox/model.png)
 
@@ -31,7 +31,7 @@ A cardboard box.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![WoodenBox](images/objects/containers/WoodenBox/model.png)
 
@@ -61,7 +61,7 @@ A wooden box.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![WoodenPallet](images/objects/pallet/WoodenPallet/model.png)
 
@@ -105,7 +105,7 @@ Simple and configurable wooden pallet.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![WoodenPalletStack](images/objects/pallet/WoodenPalletStack/model.png)
 
@@ -160,7 +160,7 @@ Simple and configurable wooden pallet stack.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![LJoint](images/objects/pipes/LJoint/model.png)
 
@@ -185,7 +185,7 @@ LJoint {
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PipeSection](images/objects/pipes/PipeSection/model.png)
 
@@ -220,7 +220,7 @@ A section of pipe.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![TJoint](images/objects/pipes/TJoint/model.png)
 
@@ -247,7 +247,7 @@ TJoint {
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Bolt](images/objects/tools/Bolt/model.png)
 
@@ -276,7 +276,7 @@ A threaded bolt.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Hammer](images/objects/tools/Hammer/model.png)
 
@@ -305,7 +305,7 @@ A 25cm asymmetric club hammer.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Nut](images/objects/tools/Nut/model.png)
 
@@ -334,7 +334,7 @@ A hexagonal nut.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PaintBucket](images/objects/tools/PaintBucket/model.png)
 
@@ -363,7 +363,7 @@ A 4kg bucket of paint, with HingeJoint-based handle.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![PlatformCart](images/objects/tools/PlatformCart/model.png)
 
@@ -395,7 +395,7 @@ A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Screwdriver](images/objects/tools/Screwdriver/model.png)
 
@@ -424,7 +424,7 @@ A Philips screwdriver. The blade and handle are balanced.
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![Wrench](images/objects/tools/Wrench/model.png)
 
@@ -455,7 +455,7 @@ A 15cm Open-End wrench.
 
 Derived from [Robot](../reference/robot.md)
 
-%%figure
+%figure
 
 ![LargeValve](images/objects/valves/LargeValve/model.png)
 
@@ -493,7 +493,7 @@ Large Wheel-based valve. Handle can be moved in either direction by the angle (r
 
 Derived from [Solid](../reference/solid.md)
 
-%%figure
+%figure
 
 ![LeverValve](images/objects/valves/LeverValve/model.png)
 
@@ -523,7 +523,7 @@ Lever-based valve. Handle can be moved in either direction (from up) of 45 degre
 
 Derived from [Robot](../reference/robot.md)
 
-%%figure
+%figure
 
 ![SmallValve](images/objects/valves/SmallValve/model.png)
 

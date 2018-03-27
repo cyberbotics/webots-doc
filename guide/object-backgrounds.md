@@ -41,9 +41,9 @@ Supported values for the "texture" field:
 
 ```
 TexturedBackgroundLight {
-  SFString texture "noon_sunny_empty"
-  SFBool castShadows TRUE
-  SFBool castLensFlares FALSE
+  SFString texture        "noon_sunny_empty"
+  SFBool   castShadows    TRUE                
+  SFBool   castLensFlares FALSE               
 }
 ```
 
@@ -63,4 +63,10 @@ Supported values for the "texture" field:
 - noon\_sunny\_empty
 - noon\_sunny\_garden
 - twilight\_cloudy\_empty
+
+### TexturedBackgroundLight Field Summary
+
+- `castShadows`: Defines whether the light should cast shadows.
+
+- `castLensFlares`: Defines whether the light should cast lens-flares.
 

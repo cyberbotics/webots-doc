@@ -10,13 +10,13 @@
 
 ```
 OilBarrel {
-  SFVec3f translation 0 0.44 0
-  SFRotation rotation 0 1 0 0
-  SFString name "oil barrel"
-  SFFloat height 0.88
-  SFFloat radius 0.305
-  SFNode physics NULL
-  MFNode immersionProperties []
+  SFVec3f    translation         0 0.44 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "oil barrel"
+  SFFloat    height              0.88          
+  SFFloat    radius              0.305         
+  SFNode     physics             NULL          
+  MFNode     immersionProperties []            
 }
 ```
 
@@ -25,6 +25,16 @@ OilBarrel {
 ### OilBarrel Description
 
 Resizable oil barrel.
+
+### OilBarrel Field Summary
+
+- `height`: Defines the height of the barrel.
+
+- `radius`: Defines the radius of the barrel.
+
+- `physics`: Is `Solid.physics`.
+
+- `immersionProperties`: Is `Solid.immersionProperties`.
 
 ## Ramp30deg
 
@@ -36,10 +46,10 @@ Resizable oil barrel.
 
 ```
 Ramp30deg {
-  SFVec3f translation  0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "ramp 30 degrees"
-  SFColor color 0.5 0.5 0.5
+  SFVec3f    translation  0 0 0
+  SFRotation rotation     0 1 0 0
+  SFString   name         "ramp 30 degrees"
+  SFColor    color        0.5 0.5 0.5        
 }
 ```
 
@@ -49,6 +59,10 @@ Ramp30deg {
 
 A simple ramp made of two 30° slopes and a flat top.
 The ramp is a static object (not physics-enabled) so it will not move when hit.
+
+### Ramp30deg Field Summary
+
+- `color`: Defines the color of the ramp.
 
 ## ThreeSteps
 
@@ -60,11 +74,11 @@ The ramp is a static object (not physics-enabled) so it will not move when hit.
 
 ```
 ThreeSteps {
-  SFVec3f translation  0 -0.5 0
-  SFRotation rotation 0 1 0 0
-  SFString name "three steps"
-  SFVec3f increment 0 0.1 0
-  SFColor color 0.5 0.5 0.5
+  SFVec3f    translation  0 -0.5 0
+  SFRotation rotation     0 1 0 0
+  SFString   name         "three steps"
+  SFVec3f    increment    0 0.1 0        
+  SFColor    color        0.5 0.5 0.5    
 }
 ```
 
@@ -74,4 +88,10 @@ ThreeSteps {
 
 Three steps with customizable height and color.
 This is not a physics-enabled object so it will not move when hit.
+
+### ThreeSteps Field Summary
+
+- `increment`: Defines the translation between each step.
+
+- `color`: Deines the color of the steps.
 

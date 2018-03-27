@@ -10,12 +10,12 @@
 
 ```
 ComputerMouse {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "computer mouse"
-  SFColor topColor 0.71 0.71 0.71
-  SFColor bottomColor 0.056 0.056 0.056
-  SFFloat mass 0.1
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "computer mouse"
+  SFColor    topColor    0.71 0.71 0.71     
+  SFColor    bottomColor 0.056 0.056 0.056  
+  SFFloat    mass        0.1                
 }
 ```
 
@@ -24,6 +24,14 @@ ComputerMouse {
 ### ComputerMouse Description
 
 A computer mouse.
+
+### ComputerMouse Field Summary
+
+- `topColor`: Defines the color of the top part of the mouse.
+
+- `bottomColor`: Defines the color of the bottom part of the mouse.
+
+- `mass`: Defines the mass of the mouse in kg.
 
 ## DesktopComputer
 
@@ -35,11 +43,11 @@ A computer mouse.
 
 ```
 DesktopComputer {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "desktop computer"
-  SFColor powerbuttonColor 0.252903 0.263813 0.266361
-  SFFloat mass 0
+  SFVec3f    translation      0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString   name             "desktop computer"
+  SFColor    powerbuttonColor 0.252903 0.263813 0.266361  
+  SFFloat    mass             0                           
 }
 ```
 
@@ -48,6 +56,12 @@ DesktopComputer {
 ### DesktopComputer Description
 
 A computer tower.
+
+### DesktopComputer Field Summary
+
+- `powerbuttonColor`: Defines the color of the computer power button.
+
+- `mass`: Defines the mass of the computer in kg. A value smaller or equal to 0 remove the physics of the computer.
 
 ## Keyboard
 
@@ -59,11 +73,11 @@ A computer tower.
 
 ```
 Keyboard {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "keyboard"
-  SFColor color 0.1 0.1 0.1
-  SFFloat mass 0
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "keyboard"
+  SFColor    color       0.1 0.1 0.1  
+  SFFloat    mass        0            
 }
 ```
 
@@ -72,6 +86,12 @@ Keyboard {
 ### Keyboard Description
 
 A computer keyboard.
+
+### Keyboard Field Summary
+
+- `color`: Defines the color of the keyboard.
+
+- `mass`: Defines the mass of the keyboard in kg. A value smaller or equal to 0 remove the physics of the keyboard.
 
 ## Laptop
 
@@ -83,10 +103,10 @@ A computer keyboard.
 
 ```
 Laptop {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "laptop"
-  SFString controller "laptop_switch_on"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "laptop"
+  SFString   controller  "laptop_switch_on"  
 }
 ```
 
@@ -95,6 +115,10 @@ Laptop {
 ### Laptop Description
 
 A simple laptop.
+
+### Laptop Field Summary
+
+- `controller`: Defines the controller of the laptop which can use the Display device to show images.
 
 ## Monitor
 
@@ -106,11 +130,11 @@ A simple laptop.
 
 ```
 Monitor {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "monitor"
-  SFColor color 0.15 0.15 0.15
-  SFFloat mass 0
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "monitor"
+  SFColor    color       0.15 0.15 0.15  
+  SFFloat    mass        0               
 }
 ```
 
@@ -119,4 +143,10 @@ Monitor {
 ### Monitor Description
 
 A computer monitor.
+
+### Monitor Field Summary
+
+- `color`: Defines the color of the monitor.
+
+- `mass`: Defines the mass of the monitor in kg. A value smaller or equal to 0 remove the physics of the monitor.
 

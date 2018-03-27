@@ -15,7 +15,7 @@ AdvertisingBoard {
   SFString    name              "advertising board"                   
   MFString    frontTexture      "textures/webots_billboard.jpg"       
   MFString    backTexture       "textures/webots_billboard.jpg"       
-  MFColor     recognitionColors  [ 1 1 1, 0.75 0 0 ]
+  MFColor     recognitionColors  [ 1 1 1, 0.75 0 0 ]                  
   SFBool      displayBackLight  FALSE                                 
   SFFloat     displayWidth      4                                     
   SFFloat     displayHeight     3                                     
@@ -44,6 +44,8 @@ Those poles can either be a `cylinder`, `box`, or a `H-shape`.
 - `frontTexture`: Defines the front display texture.
 
 - `backTexture`: Defines the back display texture.
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 - `displayBackLight`: Defines wether the displays are backlit or not.
 

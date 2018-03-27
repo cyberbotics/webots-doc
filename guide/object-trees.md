@@ -77,8 +77,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 RoundTree {
-  SFVec3f translation 0 3 0
-  SFString name "round tree"
+  SFVec3f  translation 0 3 0
+  SFString name        "round tree"
 }
 ```
 
@@ -107,7 +107,7 @@ SimpleTree {
   SFFloat    radius               2               
   SFInt32    subdivision          2               
   SFBool     enableBoundingObject TRUE            
-  SFBool     locked               TRUE
+  SFBool     locked               TRUE            
   SFBool     isPickable           TRUE
 }
 ```
@@ -145,6 +145,8 @@ The 'random' type choose randomly a tree type each time the node is regenerated.
 
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 
+- `locked`: Is `Solid.locked`.
+
 ## Tree
 
 %figure "Tree model in Webots."
@@ -161,7 +163,7 @@ Tree {
   SFVec3f    scale                1 4 1                        
   MFString   texture              "textures/cherry_tree.png"   
   SFNode     boundingObject       NULL                         
-  SFBool     locked               TRUE
+  SFBool     locked               TRUE                         
   SFBool     isPickable           TRUE
 }
 ```
@@ -181,5 +183,7 @@ This PROTO is less configurable than `SimpleTree` but way faster to load.
 
 - `texture`: Defines the texture used for the tree.
 
-- `boundingObject`: Defines the bounding object of the tree.
+- `boundingObject`: Is `Solid.boundingObject`.
+
+- `locked`: Is `Solid.locked`.
 

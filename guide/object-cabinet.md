@@ -8,25 +8,25 @@
 
 ```
 Cabinet {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "cabinet"
-  SFFloat depth 0.5
-  SFFloat innerThickness 0.02
-  SFFloat outerThickness 0.03
-  MFFloat rowsHeights [
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "cabinet"
+  SFFloat    depth          0.5        
+  SFFloat    innerThickness 0.02       
+  SFFloat    outerThickness 0.03       
+  MFFloat    rowsHeights [             
     0.24
     0.2
     0.2
     0.4
     0.4
   ]
-  MFFloat columnsWidths [
+  MFFloat columnsWidths [              
     0.4
     0.17
     0.17
   ]
-  MFString layout [
+  MFString layout [                    
     "RightSidedDoor (1, 4, 1, 2, 1.5)"
     "LeftSidedDoor (2, 4, 2, 2, 1.5)"
     "Drawer (3, 3, 1, 1, 1.5)"
@@ -40,9 +40,9 @@ Cabinet {
     "Shelf (1, 3, 0, 1)"
     "Shelf (2, 3, 0, 1)"
   ]
-  SFNode handle CabinetHandle {}
-  MFString mainTextureUrl "textures/wood.jpg"
-  MFString objectTextureUrl "textures/plastic.jpg"
+  SFNode   handle           CabinetHandle {}        
+  MFString mainTextureUrl   "textures/wood.jpg"     
+  MFString objectTextureUrl "textures/plastic.jpg"  
 }
 ```
 
@@ -57,6 +57,26 @@ The 'layout' field is defining the location and the dimension of the elements in
 - 'layout': list("[RightSidedDoor|LeftSiderDoor|Drawer|Shelf] (x, y, column span, row span[, mass])"
 The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
+### Cabinet Field Summary
+
+- `depth`: Defines the depth of the cabinet.
+
+- `innerThickness`: Defines the inner thickness of the cabinet frame.
+
+- `outerThickness`: Defines the outer thickness of the cabinet frame.
+
+- `rowsHeights`: Defines the height of the cabinet rows.
+
+- `columnsWidths`: Defines the width of the cabinet columns.
+
+- `layout`: Defines the layout of the cabinet.
+
+- `handle`: Defines the handle of the cabinet.
+
+- `mainTextureUrl`: Defines the primary texture.
+
+- `objectTextureUrl`: Defines the secondary texture.
+
 ## CabinetHandle
 
 %figure "CabinetHandle model in Webots."
@@ -67,13 +87,13 @@ The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
 ```
 CabinetHandle {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "cabinet handle"
-  SFFloat handleLength 0.065
-  SFFloat handleRadius 0.0055
-  SFColor handleColor 0.74 0.74 0.74
-  SFFloat mass 0.3
+  SFVec3f    translation   0 0 0
+  SFRotation rotation     0 1 0 0
+  SFString   name         "cabinet handle"
+  SFFloat    handleLength 0.065             
+  SFFloat    handleRadius 0.0055            
+  SFColor    handleColor  0.74 0.74 0.74    
+  SFFloat    mass         0.3               
 }
 ```
 
@@ -82,4 +102,14 @@ CabinetHandle {
 ### CabinetHandle Description
 
 A handle for the Cabinet PROTO.
+
+### CabinetHandle Field Summary
+
+- `handleLength`: Defines the lenght of the handle.
+
+- `handleRadius`: Defines the radius of the handle.
+
+- `handleColor`: Defines the color of the handle.
+
+- `mass`: Defines the mass of the handle.
 

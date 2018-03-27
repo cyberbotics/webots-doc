@@ -66,12 +66,12 @@ WoodenPallet {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
   SFString   name           "wooden pallet"
-  SFVec3f    size           0.8 0.14 1.2
-  SFInt32    lathNumber     6
-  SFFloat    lathWidth      0.08
-  SFFloat    mass           0
-  SFBool     boundingObject TRUE
-  SFBool     locked         FALSE
+  SFVec3f    size           0.8 0.14 1.2     
+  SFInt32    lathNumber     6                
+  SFFloat    lathWidth      0.08             
+  SFFloat    mass           0                
+  SFBool     boundingObject TRUE             
+  SFBool     locked         FALSE            
 }
 ```
 
@@ -80,6 +80,20 @@ WoodenPallet {
 ### WoodenPallet Description
 
 Simple and configurable wooden pallet.
+
+### WoodenPallet Field Summary
+
+- `size`: Defines the size of the pallet.
+
+- `lathNumber`: Defines the number of lath of the pallet.
+
+- `lathWidth`: Defines the width of one lath.
+
+- `mass`: Defines the mass of the pallet in kg. A value smaller or equal to 0 remove the physics of the pallet.
+
+- `boundingObject`: Defines whether the bounding object should be enabled.
+
+- `locked`: Is `Solid.locked`.
 
 ## WoodenPalletStack
 
@@ -94,15 +108,15 @@ WoodenPalletStack {
   SFVec3f    translation              0 0 0
   SFRotation rotation                 0 1 0 0
   SFString   name                     "wooden pallet stack"
-  SFInt32    palletNumber             8
-  SFVec3f    palletSize               0.8 0.14 1.2
-  SFInt32    palletLathNumber         6
-  SFFloat    palletLathWidth          0.08
-  SFFloat    lateralMisalignment      0.1
-  SFFloat    longitudinalMisalignment 0.05
-  SFFloat    palletMass               0
-  SFBool     boundingObject           TRUE
-  SFBool     locked                   FALSE
+  SFInt32    palletNumber             8                      
+  SFVec3f    palletSize               0.8 0.14 1.2           
+  SFInt32    palletLathNumber         6                      
+  SFFloat    palletLathWidth          0.08                   
+  SFFloat    lateralMisalignment      0.1                    
+  SFFloat    longitudinalMisalignment 0.05                   
+  SFFloat    palletMass               0                      
+  SFBool     boundingObject           TRUE                   
+  SFBool     locked                   FALSE                  
 }
 ```
 
@@ -111,6 +125,26 @@ WoodenPalletStack {
 ### WoodenPalletStack Description
 
 Simple and configurable wooden pallet stack.
+
+### WoodenPalletStack Field Summary
+
+- `palletNumber`: Defines the number of pallet in the stack (vertically).
+
+- `palletSize`: Defines the size of one pallet.
+
+- `palletLathNumber`: Defines the number of lath of each pallet.s
+
+- `palletLathWidth`: Defines the width of the pallet laths.
+
+- `lateralMisalignment`: Defines the maximum lateral misalignment between two pallets.
+
+- `longitudinalMisalignment`: Defines the maximum longitudinal misalignment between two pallets.
+
+- `palletMass`: Defines the mass of one pallet in kg. A value smaller or equal to 0 remove the physics of the stack.
+
+- `boundingObject`: Defines whether the bounding object should be enabled.
+
+- `locked`: Is `Solid.locked`.
 
 # Pipes
 
@@ -125,9 +159,9 @@ Simple and configurable wooden pallet stack.
 ```
 LJoint {
   SFVec3f    translation 0 0.104 0
-  SFRotation rotation 0 1 0 0
-  SFString   name "L joint pipe"
-  SFVec3f    scale 1 1 1
+  SFRotation rotation    0 1 0 0
+  SFString   name        "L joint pipe"
+  SFVec3f    scale       1 1 1
 }
 ```
 
@@ -148,11 +182,11 @@ LJoint {
 ```
 PipeSection {
   SFVec3f    translation 0 0.03 0
-  SFRotation rotation 0 0 1 1.5708
-  SFString   name "pipe section"
-  SFFloat    height 0.5
-  SFFloat    radius 0.03
-  SFInt32    subdivision 24
+  SFRotation rotation    0 0 1 1.5708
+  SFString   name        "pipe section"
+  SFFloat    height      0.5             
+  SFFloat    radius      0.03            
+  SFInt32    subdivision 24              
 }
 ```
 
@@ -161,6 +195,14 @@ PipeSection {
 ### PipeSection Description
 
 A section of pipe.
+
+### PipeSection Field Summary
+
+- `height`: Defines the height of the pipe.
+
+- `radius`: Defines the radius of the pipe.
+
+- `subdivision`: Defines the number of polygons used to represent the pipe cylinder and so its resolution.
 
 ## TJoint
 
@@ -173,9 +215,9 @@ A section of pipe.
 ```
 TJoint {
   SFVec3f    translation 0 0.95 0
-  SFRotation rotation 0 1 0 0
-  SFString   name "T joint pipe"
-  SFVec3f    scale 1 1 1
+  SFRotation rotation    0 1 0 0
+  SFString   name        "T joint pipe"
+  SFVec3f    scale       1 1 1
 }
 ```
 
@@ -197,10 +239,10 @@ TJoint {
 
 ```
 Bolt {
-  SFVec3f translation 0 0.0131 0
-  SFRotation rotation 0 0 1 0
-  SFString name "bolt"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0.0131 0
+  SFRotation rotation        0 0 1 0
+  SFString   name            "bolt"
+  SFString   contactMaterial "default"   
 }
 ```
 
@@ -209,6 +251,10 @@ Bolt {
 ### Bolt Description
 
 A threaded bolt.
+
+### Bolt Field Summary
+
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## Hammer
 
@@ -220,10 +266,10 @@ A threaded bolt.
 
 ```
 Hammer {
-  SFVec3f translation 0 0.014 0
-  SFRotation rotation 0 1 0 0
-  SFString name "hammer"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0.014 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "hammer"
+  SFString   contactMaterial "default"  
 }
 ```
 
@@ -232,6 +278,10 @@ Hammer {
 ### Hammer Description
 
 A 25cm asymmetric club hammer.
+
+### Hammer Field Summary
+
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## Nut
 
@@ -243,10 +293,10 @@ A 25cm asymmetric club hammer.
 
 ```
 Nut {
-  SFVec3f translation 0 0.004 0
-  SFRotation rotation 0 1 0 0
-  SFString name "nut"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0.004 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "nut"
+  SFString   contactMaterial "default"  
 }
 ```
 
@@ -255,6 +305,10 @@ Nut {
 ### Nut Description
 
 A hexagonal nut.
+
+### Nut Field Summary
+
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## PaintBucket
 
@@ -266,10 +320,10 @@ A hexagonal nut.
 
 ```
 PaintBucket {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "paint bucket"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "paint bucket"
+  SFString   contactMaterial "default"       
 }
 ```
 
@@ -278,6 +332,10 @@ PaintBucket {
 ### PaintBucket Description
 
 A 4kg bucket of paint, with HingeJoint-based handle.
+
+### PaintBucket Field Summary
+
+- `contactMaterial`: Is `Solid.recognitionColors`.
 
 ## PlatformCart
 
@@ -289,11 +347,11 @@ A 4kg bucket of paint, with HingeJoint-based handle.
 
 ```
 PlatformCart {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "platform cart"
-  MFNode slot []
-  SFNode physics Physics {}
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "platform cart"
+  MFNode     slot        []               
+  SFNode     physics     Physics {}       
 }
 ```
 
@@ -302,6 +360,12 @@ PlatformCart {
 ### PlatformCart Description
 
 A platform cart with overall dimensions 90Lx50Wx85H cm.
+
+### PlatformCart Field Summary
+
+- `slot`: Extends the cart with new nodes in the slot.
+
+- `physics`: Is `Solid.physics`.
 
 ## Screwdriver
 
@@ -313,10 +377,10 @@ A platform cart with overall dimensions 90Lx50Wx85H cm.
 
 ```
 Screwdriver {
-  SFVec3f translation 0 0.012 0
-  SFRotation rotation 0 1 0 0
-  SFString name "screwdriver"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0.012 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "screwdriver"
+  SFString   contactMaterial "default"      
 }
 ```
 
@@ -325,6 +389,10 @@ Screwdriver {
 ### Screwdriver Description
 
 A Philips screwdriver. The blade and handle are balanced.
+
+### Screwdriver Field Summary
+
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## Wrench
 
@@ -336,10 +404,10 @@ A Philips screwdriver. The blade and handle are balanced.
 
 ```
 Wrench {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "wrench"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "wrench"
+  SFString   contactMaterial "default"  
 }
 ```
 
@@ -348,6 +416,10 @@ Wrench {
 ### Wrench Description
 
 A 15cm Open-End wrench.
+
+### Wrench Field Summary
+
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 # Valves
 
@@ -361,13 +433,13 @@ A 15cm Open-End wrench.
 
 ```
 LargeValve {
-  SFVec3f    translation 0 0.106 0
-  SFRotation rotation 0 1 0 0
-  SFString name "large valve"
-  SFFloat jointFriction 0.5
-  SFString controller "valve_turner"
-  SFString absoluteStop "15.7079632679"
-  SFString contactMaterial "default"
+  SFVec3f    translation     0 0.106 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "large valve"
+  SFFloat    jointFriction   0.5              
+  SFString   controller      "valve_turner"   
+  SFString   absoluteStop    "15.7079632679"  
+  SFString   contactMaterial "default"        
 }
 ```
 
@@ -376,6 +448,16 @@ LargeValve {
 ### LargeValve Description
 
 Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
+
+### LargeValve Field Summary
+
+- `jointFriction`: Defines the static friction of the valve joint.
+
+- `controller`: Defines the controller of the valve which is used to limit its rotation.
+
+- `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
+
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## LeverValve
 
@@ -387,11 +469,11 @@ Large Wheel-based valve. Handle can be moved in either direction by the angle (r
 
 ```
 LeverValve {
-  SFVec3f    translation 0 0.142 0
-  SFRotation rotation 0 1 0 0
-  SFString name "lever valve"
-  SFFloat jointFriction 1
-  SFVec3f scale 0.7 0.7 0.7
+  SFVec3f    translation   0 0.142 0
+  SFRotation rotation      0 1 0 0
+  SFString   name          "lever valve"
+  SFFloat    jointFriction 1              
+  SFVec3f    scale         0.7 0.7 0.7
 }
 ```
 
@@ -400,6 +482,10 @@ LeverValve {
 ### LeverValve Description
 
 Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
+
+### LeverValve Field Summary
+
+- `jointFriction`: Defines the static friction of the valve joint.
 
 ## SmallValve
 
@@ -411,12 +497,12 @@ Lever-based valve. Handle can be moved in either direction (from up) of 45 degre
 
 ```
 SmallValve {
-  SFVec3f    translation 0 0.077 0
-  SFRotation rotation 0 1 0 0
-  SFString name "small valve"
-  SFFloat jointFriction 0.1
-  SFString controller "valve_turner"
-  SFString absoluteStop "15.7079632679"
+  SFVec3f    translation   0 0.077 0
+  SFRotation rotation      0 1 0 0
+  SFString   name          "small valve"
+  SFFloat    jointFriction 0.1              
+  SFString   controller    "valve_turner"   
+  SFString   absoluteStop  "15.7079632679"  
 }
 ```
 
@@ -425,4 +511,12 @@ SmallValve {
 ### SmallValve Description
 
 Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
+
+### SmallValve Field Summary
+
+- `jointFriction`: Defines the static friction of the valve joint.
+
+- `controller`: Defines the controller of the valve which is used to limit its rotation.
+
+- `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
 

@@ -10,9 +10,9 @@
 
 ```
 Auditorium {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "auditorium"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "auditorium"
 }
 ```
 
@@ -32,9 +32,9 @@ A classic auditoruim.
 
 ```
 BigGlassTower {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "big glass tower"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "big glass tower"
 }
 ```
 
@@ -70,8 +70,8 @@ Building {
   SFFloat     roofHeight             3                                    
   SFBool      enableBoundingObject   TRUE                                 
   SFBool      bottom                 FALSE                                
-  SFString    model                  "building"
-  MFColor     recognitionColors      []
+  SFString    model                  "building"                           
+  MFColor     recognitionColors      []                                   
 }
 ```
 
@@ -111,6 +111,10 @@ A customizable building, the size, appearance and geometry can fully be defined.
 
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
+- `model`: Is `Solid.model`.
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
+
 ## BuildingUnderConstruction
 
 %figure "BuildingUnderConstruction model in Webots."
@@ -121,9 +125,9 @@ A customizable building, the size, appearance and geometry can fully be defined.
 
 ```
 BuildingUnderConstruction {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "building under construction"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "building under construction"
 }
 ```
 
@@ -146,13 +150,13 @@ BungalowStyleHouse {
   SFVec3f translation         0 0 0
   SFRotation rotation         0 1 0 0
   SFString name               "bungalow style house"
-  SFBool fence                TRUE
-  SFBool floor                TRUE
-  SFBool chimney              TRUE
-  SFBool enableBoundingObject TRUE
-  SFNode appearance           Appearance { material Material { diffuseColor 0.52 0.73 0.76 } }
-  SFNode floorAppearance      Appearance { material Material { diffuseColor 0.27 0.14 0.03 } }
-  SFNode fenceAppearance      Appearance { material Material { } texture ImageTexture { url ["textures/wood.jpg"] } textureTransform TextureTransform { scale 10 10 } }
+  SFBool fence                TRUE                                                                                                                                       
+  SFBool floor                TRUE                                                                                                                                       
+  SFBool chimney              TRUE                                                                                                                                       
+  SFBool enableBoundingObject TRUE                                                                                                                                       
+  SFNode appearance           Appearance { material Material { diffuseColor 0.52 0.73 0.76 } }                                                                           
+  SFNode floorAppearance      Appearance { material Material { diffuseColor 0.27 0.14 0.03 } }                                                                           
+  SFNode fenceAppearance      Appearance { material Material { } texture ImageTexture { url ["textures/wood.jpg"] } textureTransform TextureTransform { scale 10 10 } }  
 }
 ```
 
@@ -164,6 +168,22 @@ A configurable bungalow style house.
 The original blender model was made by noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
+### BungalowStyleHouse Field Summary
+
+- `fence`: Defines whether the house has a fence or not.
+
+- `floor`: Defines whether the house is surelevated or not.
+
+- `chimney`: Defines whether the house has a chimney or not.
+
+- `enableBoundingObject`: Defines whether to enable the bounding object or not.
+
+- `appearance`: Defines the appearance of the wall.
+
+- `floorAppearance`: Defines the appearance of the floor.
+
+- `fenceAppearance`: Defines the appearance of the fence.
+
 ## CommercialBuilding
 
 %figure "CommercialBuilding model in Webots."
@@ -174,9 +194,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 CommercialBuilding {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "commercial building"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "commercial building"
 }
 ```
 
@@ -196,9 +216,9 @@ A commercial building.
 
 ```
 CyberboticsTower {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "Cyberbotics tower"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "Cyberbotics tower"
 }
 ```
 
@@ -221,11 +241,11 @@ FastFoodRestaurant {
   SFVec3f     translation   0 0 0
   SFRotation  rotation      0 1 0 0
   SFString    name          "fast food restaurant"
-  SFFloat     height        4
-  SFFloat     length        10
-  SFFloat     width         10
-  SFString    brand         "KFC"
-  SFInt32     numberOfSides 1
+  SFFloat     height        4                       
+  SFFloat     length        10                      
+  SFFloat     width         10                      
+  SFString    brand         "KFC"                   
+  SFInt32     numberOfSides 1                       
 }
 ```
 
@@ -233,8 +253,24 @@ FastFoodRestaurant {
 
 ### FastFoodRestaurant Description
 
-Fast food restaurant that comes in 4 versions: 'KFC', 'FFC', 'subway' or 'momo'.
+Fast food restaurant that comes in 4 versions:
+- `KFC`
+- `FFC`
+- `subway`
+- `momo`
 The building can be changed to a two sided restaurant using the 'numberOfSides' parameter.
+
+### FastFoodRestaurant Field Summary
+
+- `height`: Defines the height of the building.
+
+- `length`: Defines the length of the building.
+
+- `width`: Defines the width of the building.
+
+- `brand`: Defines the brand of the restaurant.
+
+- `numberOfSides`: Defines whether it is a two sided restaurant.
 
 ## HollowBuilding
 
@@ -246,9 +282,9 @@ The building can be changed to a two sided restaurant using the 'numberOfSides' 
 
 ```
 HollowBuilding {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "hollow building"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "hollow building"
 }
 ```
 
@@ -268,9 +304,9 @@ A hollow building.
 
 ```
 Hotel {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "hotel"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "hotel"
 }
 ```
 
@@ -290,12 +326,12 @@ A big hotel.
 
 ```
 ModernHouse {
-  SFVec3f translation         0 0 0
-  SFRotation rotation         0 1 0 0
-  SFString name               "modern house"
-  SFBool enableBoundingObject TRUE
-  SFNode appearance           Appearance { material Material { diffuseColor 0.56 0.18 0.12 } }
-  SFNode windowAppearance     Appearance { material Material { diffuseColor 0.38 0.55 0.69 } }
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "modern house"
+  SFBool     enableBoundingObject TRUE                                                              
+  SFNode     appearance           Appearance { material Material { diffuseColor 0.56 0.18 0.12 } }  
+  SFNode     windowAppearance     Appearance { material Material { diffuseColor 0.38 0.55 0.69 } }  
 }
 ```
 
@@ -307,6 +343,14 @@ A simple modern house.
 The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
+### ModernHouse Field Summary
+
+- `enableBoundingObject`: Defines whether to enable the bounding object or not.
+
+- `appearance`: Defines the wall appearance.
+
+- `windowAppearance`: Defines the windows appearance.
+
 ## Museum
 
 %figure "Museum model in Webots."
@@ -317,9 +361,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 Museum {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "museum"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "museum"
 }
 ```
 
@@ -339,9 +383,9 @@ An old museum.
 
 ```
 ResidentialBuilding {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "residential building"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "residential building"
 }
 ```
 
@@ -363,7 +407,7 @@ A residential building.
 SimpleBuilding {
   SFVec3f     translation            0 0 0
   SFRotation  rotation               0 1 0 0
-  SFString    name                   "building"                         
+  SFString    name                   "building"
   SFFloat     floorHeight            3                                  
   SFInt32     floorNumber            3                                  
   SFInt32     startingFloor          0                                  
@@ -430,8 +474,6 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ### SimpleBuilding Field Summary
 
-- `name`: Defines the name of the building.
-
 - `floorHeight`: Defines the height of one floor.
 
 - `floorNumber`: Defines the number of floors (excluding roof).
@@ -456,11 +498,11 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 - `roofShape`: Defines the geometry of the roof. Supported geometry are `flat roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
 
-- `snowOnRoof`: Defines if the texture with or without snow should be used.
+- `snowOnRoof`: Defines whether the texture with or without snow should be used.
 
 - `roofHeight`: Defines the height of the roof.
 
-- `enableBoundingObject`: Defines if the building should have a bounding object or not.
+- `enableBoundingObject`: Defines whether the building should have a bounding object or not.
 
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
@@ -474,11 +516,11 @@ The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it
 
 ```
 SimpleTwoFloorsHouse {
-  SFVec3f translation         0 0 0
-  SFRotation rotation         0 1 0 0
-  SFString name               "simple two floors house"
-  SFBool enableBoundingObject TRUE
-  SFNode appearance           Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "simple two floors house"
+  SFBool     enableBoundingObject  TRUE                                                              
+  SFNode     appearance            Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }  
 }
 ```
 
@@ -490,6 +532,12 @@ A simple house with two floors.
 The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
+### SimpleTwoFloorsHouse Field Summary
+
+- `enableBoundingObject`: Defines whether to enable the bounding object.
+
+- `appearance`: Defines the house appearance.
+
 ## TheThreeTowers
 
 %figure "TheThreeTowers model in Webots."
@@ -500,9 +548,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 TheThreeTowers {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "three towers"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "three towers"
 }
 ```
 
@@ -522,9 +570,9 @@ A group of three towers.
 
 ```
 UBuilding {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "U building"
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "U building"
 }
 ```
 

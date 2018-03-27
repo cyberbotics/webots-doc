@@ -42,7 +42,7 @@ Road {
       MFString   bottomTexture             []                      
       SFString   turnLanesForward          ""                      
       SFString   turnLanesBackward         ""                      
-      SFBool     locked                    TRUE
+      SFBool     locked                    TRUE                    
       SFBool     roadBoundingObject        FALSE                   
       SFBool     rightBorderBoundingObject FALSE                   
       SFBool     leftBorderBoundingObject  FALSE                   
@@ -65,13 +65,13 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ### Road Field Summary
 
-- `name`: Could contain the street name
+- `name`: Optionally defines the street name
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `startJunction`: Optionally defines a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `endJunction`: Optionally defines a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -79,7 +79,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
@@ -129,6 +129,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -141,7 +143,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## AddLaneRoadSegment
 
@@ -178,7 +180,7 @@ AddLaneRoadSegment {
       MFString   newLaneTexture            "textures/road_no_border_line.jpg" 
       MFString   pavementTexture           "textures/pavement.jpg"            
       MFString   bottomTexture             []                                 
-      SFBool     locked                    TRUE
+      SFBool     locked                    TRUE                               
       SFBool     roadBoundingObject        FALSE                              
       SFBool     rightBorderBoundingObject FALSE                              
       SFBool     leftBorderBoundingObject  FALSE                              
@@ -201,9 +203,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `name`: Defines the junction name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Optionally defines a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -211,7 +213,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfLanes`: Defines the number of lanes before addition of the new one (used for the texture mapping).
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `newLaneLeft`: Defines on which side is added the new lane.
 
@@ -245,6 +247,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -257,7 +261,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## AddLanesRoadSegment
 
@@ -295,7 +299,7 @@ AddLanesRoadSegment {
       MFString   newLaneTexture            "textures/road_no_border_line.jpg" 
       MFString   pavementTexture           "textures/pavement.jpg"            
       MFString   bottomTexture             []                                 
-      SFBool     locked                    TRUE
+      SFBool     locked                    TRUE                               
       SFBool     roadBoundingObject        FALSE                              
       SFBool     rightBorderBoundingObject FALSE                              
       SFBool     leftBorderBoundingObject  FALSE                              
@@ -318,9 +322,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `name`: Defines the junction name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Optionally defines a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -330,7 +334,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfNewLanes`: Defines the number of lanes to add.
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `newLaneLeft`: Defines on which side are added the new lanes.
 
@@ -364,6 +368,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -376,7 +382,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## CrashBarrier
 
@@ -390,7 +396,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 CrashBarrier {
   SFVec3f      translation             0 0 0
   SFRotation   rotation                0 1 0 0
-  SFString     name                    "crash barrier"                       
+  SFString     name                    "crash barrier"
   SFFloat      poleGap                 2                                     
   SFNode       poleAppearance          Appearance { material Material {} }   
   MFVec3f      path                    [0 0 0, 5 0 0]                        
@@ -407,8 +413,6 @@ CrashBarrier {
 A customizable crash barrier.
 
 ### CrashBarrier Field Summary
-
-- `name`: Defines the name of the crash barrier.
 
 - `poleGap`: Defines the gap between two consecutive poles.
 
@@ -442,7 +446,7 @@ Crossroad {
   SFBool     boundingObject   FALSE                   
   SFBool     bottom           FALSE                   
   MFString   texture          "textures/asphalt.jpg"  
-  SFBool     locked           TRUE
+  SFBool     locked           TRUE                    
   SFBool     castShadows      FALSE                   
   SFString   contactMaterial  "default"               
 }
@@ -458,13 +462,13 @@ A customizable crossroad which can contain optionally references to its connecte
 
 - `name`: Defines the the crossroad name
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `shape`: Defines the shape of the crossroad
 
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Optionally defines a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
 - `boundingObject`: Defines whether the road should have a bounding object.
 
@@ -472,9 +476,11 @@ A customizable crossroad which can contain optionally references to its connecte
 
 - `texture`: Defines the texture of the crossroad.
 
+- `locked`: Is `Solid.locked`.
+
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## CurvedRoadSegment
 
@@ -514,7 +520,7 @@ CurvedRoadSegment {
    SFFloat    textureScale              2                       
    MFString   pavementTexture           "textures/pavement.jpg" 
    MFString   bottomTexture             []                      
-   SFBool     locked                    TRUE
+   SFBool     locked                    TRUE                    
    SFBool     roadBoundingObject        FALSE                   
    SFBool     rightBorderBoundingObject FALSE                   
    SFBool     leftBorderBoundingObject  FALSE                   
@@ -536,11 +542,11 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `name`: Defines the road name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `startJunction`: Optionally defines a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `endJunction`: Optionally defines a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -548,7 +554,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
@@ -586,6 +592,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -598,7 +606,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## HelicoidalRoadSegment
 
@@ -638,7 +646,7 @@ HelicoidalRoadSegment {
    SFFloat    textureScale              2                       
    MFString   pavementTexture           "textures/pavement.jpg" 
    MFString   bottomTexture             []                      
-   SFBool     locked                    TRUE
+   SFBool     locked                    TRUE                    
    SFBool     roadBoundingObject        FALSE                   
    SFBool     rightBorderBoundingObject FALSE                   
    SFBool     leftBorderBoundingObject  FALSE                   
@@ -658,11 +666,11 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `name`: Defines the road name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `startJunction`: Optionally defines a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `endJunction`: Optionally defines a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -670,7 +678,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
@@ -708,6 +716,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -716,7 +726,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## LaneSeparation
 
@@ -754,7 +764,7 @@ LaneSeparation {
       SFFloat    textureScale                2                          
       MFString   pavementTexture             "textures/pavement.jpg"    
       MFString   bottomTexture               []                         
-      SFBool     locked                      TRUE
+      SFBool     locked                      TRUE                       
       SFBool     roadBoundingObject          FALSE                      
       SFBool     rightBorderBoundingObject   FALSE                      
       SFBool     leftBorderBoundingObject    FALSE                      
@@ -778,9 +788,9 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `name`: Defines the junction name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Optionally defines a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -790,7 +800,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfleavingLanes`: Defines the number of lanes leaving the road.
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `newLaneLeft`: Defines on which sied the lanes are leaving the road.
 
@@ -824,6 +834,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -838,7 +850,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 ## RoadIntersection
 
@@ -873,7 +885,7 @@ RoadIntersection {
     SFBool     castShadows                    FALSE                               
     SFString   contactMaterial                "default"                           
     SFBool     bottom                         FALSE                               
-    SFBool     locked                         TRUE
+    SFBool     locked                         TRUE                                
     MFString   texture                        "textures/asphalt.jpg"              
     MFString   startRoadsTexture              "textures/road.jpg"                 
 }
@@ -889,15 +901,15 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 - `name`: Defines the intersection name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Optionally defines a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
 - `roadNumber`: Defines the number of intersecting roads.
 
 - `roadsWith`: Defines the width of the intersecting roads.
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `startRoads`: Defines if the beginning of each roads should be included or not.
 
@@ -921,9 +933,11 @@ A simple and customizable roads intersection, all the road are crossing at the s
 
 - `castShadows`: Defines whether the intersection should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 
 - `bottom`: Defines whether the intersection bottom should be displayed (useful in case of bridge).
+
+- `locked`: Is `Solid.locked`.
 
 - `texture`: Defines the texture to be used for the intersection.
 
@@ -941,7 +955,7 @@ A simple and customizable roads intersection, all the road are crossing at the s
 RoadPillars {
    SFVec3f    translation        0 0 0
    SFRotation rotation           0 1 0 0
-   SFString   name               "road pillar"             
+   SFString   name               "road pillar"
    SFFloat    height             5                         
    SFFloat    width              8                         
    SFFloat    depth              2                         
@@ -963,8 +977,6 @@ The boundingObject can be optionally enable or not.
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
 ### RoadPillars Field Summary
-
-- `name`: Defines the name of the road pillar
 
 - `height`: Defines the height of the pillar.
 
@@ -1023,7 +1035,7 @@ Roundabout {
     SFBool     centerBoundingObject     FALSE                               
     SFBool     castShadows              FALSE                               
     SFString   contactMaterial          "default"                           
-    SFBool     locked                   TRUE
+    SFBool     locked                   TRUE                                
     MFString   centerTexture            "textures/grass.jpg"                
     MFString   texture                  "textures/road_no_border_line.jpg"  
     SFFloat    textureScale              2                                  
@@ -1042,13 +1054,13 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 - `name`: Defines the roundabout name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `connectedRoadIDs`: Could contain a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
+- `connectedRoadIDs`: Optionally defines a list of the identifiers of the connected Road. This is required to use the SUMO exporter.
 
 - `numberOfLanes`: Defines the number of lanes (used for the texture mapping).
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `bottom`: Defines whether the road bottom should be displayed (useful in case of bridge).
 
@@ -1086,7 +1098,9 @@ A simple and customizable roundabout, all the roads are equally separated in ori
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
+
+- `locked`: Is `Solid.locked`.
 
 - `centerTexture`: Defines the texture to be used for the central part of the roundabout.
 
@@ -1138,7 +1152,7 @@ StraightRoadSegment {
    SFFloat    textureScale              2                       
    MFString   pavementTexture           "textures/pavement.jpg" 
    MFString   bottomTexture             []                      
-   SFBool     locked                    TRUE
+   SFBool     locked                    TRUE                    
    SFBool     roadBoundingObject        FALSE                   
    SFBool     rightBorderBoundingObject FALSE                   
    SFBool     leftBorderBoundingObject  FALSE                   
@@ -1161,11 +1175,11 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `name`: Defines the road name.
 
-- `id`: Could contain a unique ID. A unique ID is required to use the SUMO exporter.
+- `id`: Optionally defines a unique ID. A unique ID is required to use the SUMO exporter.
 
-- `startJunction`: Could contain a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `startJunction`: Optionally defines a reference to the Crossroad connected at the first Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
-- `endJunction`: Could contain a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
+- `endJunction`: Optionally defines a reference to the Crossroad connected at the last Road waypoint. Setting correctly this field is required to use the SUMO exporter.
 
 - `width`: Defines the total width of the road (excluding sidewalk).
 
@@ -1173,7 +1187,7 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `numberOfForwardLanes`: Defines the number of forward lanes. (this is an information with no impact on the graphical shape).
 
-- `speedLimit`: Could contain the speed limit. The recommended unit is meter per seconds.
+- `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `dashedLine`: Defines for each line separating two lanes whether it should be continuous or dashed.
 
@@ -1215,6 +1229,8 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
+- `locked`: Is `Solid.locked`.
+
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -1227,5 +1243,5 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Defines the road contact material (used by the ContactProperties node).
+- `contactMaterial`: Is `Solid.contactMaterial`.
 

@@ -10,12 +10,12 @@
 
 ```
 CautionPanel {
-  SFVec3f    translation 0 0 0
-  SFRotation rotation    0 1 0 0
-  SFString   name        "caution panel"
-  MFString   signImage   "textures/signs/us/traffic_signals_ahead.jpg"
-  SFColor    color       0.576471 0.576471 0.576471
-  MFColor    recognitionColors  [ 1 0.82 0.2, 0.58 0.58 0.58 ]
+  SFVec3f    translation        0 0 0
+  SFRotation rotation           0 1 0 0
+  SFString   name               "caution panel"
+  MFString   signImage          "textures/signs/us/traffic_signals_ahead.jpg"  
+  SFColor    color              0.576471 0.576471 0.576471                     
+  MFColor    recognitionColors  [ 1 0.82 0.2, 0.58 0.58 0.58 ]                 
 }
 ```
 
@@ -24,6 +24,14 @@ CautionPanel {
 ### CautionPanel Description
 
 Traffic panel: Caution panel.
+
+### CautionPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## CautionSign
 
@@ -38,10 +46,10 @@ CautionSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "caution sign"
-  SFFloat    height       2
-  SFFloat    radius       0.03
-  SFColor    color        0.576471 0.576471 0.576471
-  MFNode     signBoards   [ CautionPanel { translation 0 -0.17 0 } ]
+  SFFloat    height       2                                           
+  SFFloat    radius       0.03                                        
+  SFColor    color        0.576471 0.576471 0.576471                  
+  MFNode     signBoards   [ CautionPanel { translation 0 -0.17 0 } ]  
 }
 ```
 
@@ -50,6 +58,16 @@ CautionSign {
 ### CautionSign Description
 
 Traffic sign: Caution sign.
+
+### CautionSign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign pole.
+
+- `color`: Defines the color of the sign.
+
+- `signBoards`: Defines the boards.
 
 ## ControlledStreetLight
 
@@ -64,13 +82,13 @@ ControlledStreetLight {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "street light"
-  SFString   controller   "defective_street_light"
-  SFFloat    beamWidth    1.1
-  MFColor    color        [ 1 0.9 0.8 ]
-  SFFloat    cutOffAngle  1.57
-  SFVec3f    direction    0 -1 -0.1
-  SFFloat    radius       50
-  SFBool     castShadows  FALSE
+  SFString   controller   "defective_street_light"  
+  SFFloat    beamWidth    1.1                       
+  MFColor    color        [ 1 0.9 0.8 ]             
+  SFFloat    cutOffAngle  1.57                      
+  SFVec3f    direction    0 -1 -0.1                 
+  SFFloat    radius       50                        
+  SFBool     castShadows  FALSE                     
 }
 ```
 
@@ -81,6 +99,22 @@ ControlledStreetLight {
 ### ControlledStreetLight Description
 
 Simple model of a controlled street light including a customizable SpotLight.
+
+### ControlledStreetLight Field Summary
+
+- `controller`: Defines the controller used to make the LED blink.
+
+- `beamWidth`: Defines the beam width of the spot light.
+
+- `color`: Defines the color of the spot light.
+
+- `cutOffAngle`: Defines the cut-off angle of the spot light.
+
+- `direction`: Defines the direction of the spot light.
+
+- `radius`: Defines the radius of the spot light.
+
+- `castShadows`: Defines whether the spot light casts shadows.
 
 ## CrossRoadsTrafficLight
 
@@ -95,8 +129,8 @@ CrossRoadsTrafficLight {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "cross road traffic light"
-  SFString   controller  "crossroads_traffic_lights"
-  SFVec2f    size        20.8 20.8
+  SFString   controller  "crossroads_traffic_lights"  
+  SFVec2f    size        20.8 20.8                    
 }
 ```
 
@@ -105,6 +139,12 @@ CrossRoadsTrafficLight {
 ### CrossRoadsTrafficLight Description
 
 Four roads crossing traffic light.
+
+### CrossRoadsTrafficLight Field Summary
+
+- `controller`: Is `Robot.contactMaterial`.
+
+- `size`: Defines the size of the traffic lights.
 
 ## DirectionPanel
 
@@ -119,17 +159,17 @@ DirectionPanel {
   SFVec3f     translation      0 0 0
   SFRotation  rotation         0 1 0 0
   SFString    name             "direction panel"
-  SFFloat     width            1.3
-  SFFloat     height           0.4
-  SFFloat     thickness        0.04
-  SFColor     backgroundColor  0.8 0.8 0.8
-  SFColor     textColor        0 0 0
-  SFFloat     textSize         0.1
-  SFString    font             "Arial"
-  SFString    text             "INPUT YOUR\nTEXT HERE"
-  SFBool      arrow            TRUE
-  SFBool      right            TRUE
-  SFBool      left             FALSE
+  SFFloat     width            1.3                      
+  SFFloat     height           0.4                      
+  SFFloat     thickness        0.04                     
+  SFColor     backgroundColor  0.8 0.8 0.8              
+  SFColor     textColor        0 0 0                    
+  SFFloat     textSize         0.1                      
+  SFString    font             "Arial"                  
+  SFString    text             "INPUT YOUR\nTEXT HERE"  
+  SFBool      arrow            TRUE                     
+  SFBool      right            TRUE                     
+  SFBool      left             FALSE                    
 }
 ```
 
@@ -155,6 +195,30 @@ List of supported fonts:
 - 'Verdana'
 Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory.
 
+### DirectionPanel Field Summary
+
+- `width`: Defines the width of the panel.
+
+- `height`: Defines the height of the panel.
+
+- `thickness`: Defines the thickness of the panel.
+
+- `backgroundColor`: Defines the background color of the panel.
+
+- `textColor`: Defines the color of the text displayed on the panel.
+
+- `textSize`: Defines the size of the text displayed on the panel.
+
+- `font`: Defines the font used by the text displayed on the panel.
+
+- `text`: Defines the text displayed on the panel.
+
+- `arrow`: Defines whether the panel should display an arraw.
+
+- `right`: Defines whether the pannel should draw text on the side pointing toward the right.
+
+- `left`: Defines whether the pannel should draw text on the side pointing toward the left.
+
 ## DivergentIndicator
 
 %figure "DivergentIndicator model in Webots."
@@ -168,10 +232,10 @@ DivergentIndicator {
   SFVec3f    translation     0 0 0
   SFRotation rotation        0 1 0 0
   SFString   name            "divergent indicator"
-  MFString   texture         "textures/divergent_indicator.jpg"
-  SFFloat    height          1
-  SFFloat    radius          0.5
-  SFInt32    subdivision     24
+  MFString   texture         "textures/divergent_indicator.jpg"  
+  SFFloat    height          1                                   
+  SFFloat    radius          0.5                                 
+  SFInt32    subdivision     24                                  
 }
 ```
 
@@ -180,6 +244,16 @@ DivergentIndicator {
 ### DivergentIndicator Description
 
 A divergent indicator block.
+
+### DivergentIndicator Field Summary
+
+- `texture`: Defines the texture used by the divergent indicator.
+
+- `height`: Defines the height of the divergent indicator.
+
+- `radius`: Defines the radius of the divergent indicator.
+
+- `subdivision`: Defines the number of polygons used to represent the divergent indicator cylindrical part and so its resolution .
 
 ## ExitPanel
 
@@ -191,12 +265,12 @@ A divergent indicator block.
 
 ```
 ExitPanel {
-  SFVec3f    translation 0 0 0
-  SFRotation rotation    0 1 0 0
-  SFString   name        "exit panel"
-  MFString   signImage   "textures/signs/exit.jpg"
-  SFColor    color       0.576471 0.576471 0.576471
-  MFColor    recognitionColors  [ 0 0.4 0.3, 0.58 0.58 0.58 ]
+  SFVec3f    translation        0 0 0
+  SFRotation rotation           0 1 0 0
+  SFString   name               "exit panel"
+  MFString   signImage          "textures/signs/exit.jpg"      
+  SFColor    color              0.576471 0.576471 0.576471     
+  MFColor    recognitionColors  [ 0 0.4 0.3, 0.58 0.58 0.58 ]  
 }
 ```
 
@@ -205,6 +279,14 @@ ExitPanel {
 ### ExitPanel Description
 
 Traffic panel: Exit panel.
+
+### ExitPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## ExitSign
 
@@ -219,10 +301,10 @@ ExitSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "exit sign"
-  SFFloat    height       2
-  SFFloat    radius       0.03
-  SFColor    color        0.576471 0.576471 0.576471
-  MFNode     signBoards   [ ExitPanel { translation 0 -0.051 0 } ]
+  SFFloat    height       2                                         
+  SFFloat    radius       0.03                                      
+  SFColor    color        0.576471 0.576471 0.576471                
+  MFNode     signBoards   [ ExitPanel { translation 0 -0.051 0 } ]  
 }
 ```
 
@@ -231,6 +313,16 @@ ExitSign {
 ### ExitSign Description
 
 Traffic sign: Exit sign.
+
+### ExitSign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign pole.
+
+- `color`: Defines the color of the panel
+
+- `signBoards`: Defines the boards.
 
 ## GenericTrafficLight
 
@@ -245,10 +337,10 @@ GenericTrafficLight {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
   SFString   name        "generic traffic light"
-  SFBool     startGreen  TRUE
-  SFFloat    greenTime   60
-  SFFloat    redTime     15
-  SFString   state       "off"
+  SFBool     startGreen  TRUE                     
+  SFFloat    greenTime   60                       
+  SFFloat    redTime     15                       
+  SFString   state       "off"                    
 }
 ```
 
@@ -257,6 +349,16 @@ GenericTrafficLight {
 ### GenericTrafficLight Description
 
 A generic traffic light with configurable timming.
+
+### GenericTrafficLight Field Summary
+
+- `startGreen`: Defines whether the traffic light should start in a 'green' state or 'red' state.
+
+- `greenTime`: Defines how long should be the green state in seconds.
+
+- `redTime`: Defines how long should be the red state in seconds.
+
+- `state`: Defines the current state of the traffic light, this field is automatically updated when the state change.
 
 ## HighwayPole
 
@@ -272,16 +374,16 @@ HighwayPole {
   SFRotation  rotation              0 1 0 0
   SFString    name                  "highway pole"
   SFString    type                  "cylinder"
-  SFInt32     stand                 1
-  SFFloat     height                6
-  SFFloat     length                8
-  SFFloat     thickness             0.2
-  SFColor     color                 0.258824 0.258824 0.258824
-  SFFloat     curveRadius           0.4
-  MFNode      rightHorizontalSigns  [ HighwaySign { name "vertical sign" } ]
-  MFNode      rightVerticalSigns    [ HighwaySign { name "horizontal sign" height 2.1 length 3.2 texture "textures/highway_sign_la_ciotat.jpg" } ]
-  MFNode      leftHorizontalSigns   [ ]
-  MFNode      leftVerticalSigns     [ ]
+  SFInt32     stand                 1                                                                                                               
+  SFFloat     height                6                                                                                                               
+  SFFloat     length                8                                                                                                               
+  SFFloat     thickness             0.2                                                                                                             
+  SFColor     color                 0.258824 0.258824 0.258824                                                                                      
+  SFFloat     curveRadius           0.4                                                                                                             
+  MFNode      rightHorizontalSigns  [ HighwaySign { name "vertical sign" } ]                                                                        
+  MFNode      rightVerticalSigns    [ HighwaySign { name "horizontal sign" height 2.1 length 3.2 texture "textures/highway_sign_la_ciotat.jpg" } ]  
+  MFNode      leftHorizontalSigns   [ ]                                                                                                             
+  MFNode      leftVerticalSigns     [ ]                                                                                                             
 }
 ```
 
@@ -291,6 +393,28 @@ HighwayPole {
 
 Customizable highway pole with the possibility of adding another stand and more signs along the vertical or horizontal parts of the pole.
 Different types of poles are available: "cylinder", "box", or "H-shape".
+
+### HighwayPole Field Summary
+
+- `stand`: Defines the number of stands.
+
+- `height`: Defines the height of the pole.
+
+- `length`: Defines the length of the pole.
+
+- `thickness`: Defines the thickness of the pole.
+
+- `color`: Defines the color of the pole.
+
+- `curveRadius`: Defines the curvature radius of the pole.
+
+- `rightHorizontalSigns`: Defines the horizontal signs on the right side of the pole.
+
+- `rightVerticalSigns`: Defines the vertical signs on the right side of the pole.
+
+- `leftHorizontalSigns`: Defines the horizontal signs on the left side of the pole.
+
+- `leftVerticalSigns`: Defines the vertical signs on the left side of the pole.
 
 ## HighwaySign
 
@@ -302,15 +426,15 @@ Different types of poles are available: "cylinder", "box", or "H-shape".
 
 ```
 HighwaySign {
-  SFVec3f     translation   0 0 0
-  SFRotation  rotation      0 1 0 0
-  SFString    name          "highway sign"
-  SFFloat     height        3
-  SFFloat     length        4.5
-  SFFloat     thickness     0.2
-  SFColor     color         0.258824 0.258824 0.258824
-  MFString    texture       "textures/highway_sign_bordeaux.jpg"
-  MFColor     recognitionColors  [ 0.08 0.22 0.75, 0.26 0.26 0.26 ]
+  SFVec3f     translation        0 0 0
+  SFRotation  rotation           0 1 0 0
+  SFString    name               "highway sign"
+  SFFloat     height             3                                     
+  SFFloat     length             4.5                                   
+  SFFloat     thickness          0.2                                   
+  SFColor     color              0.258824 0.258824 0.258824            
+  MFString    texture            "textures/highway_sign_bordeaux.jpg"  
+  MFColor     recognitionColors  [ 0.08 0.22 0.75, 0.26 0.26 0.26 ]    
 }
 ```
 
@@ -319,6 +443,20 @@ HighwaySign {
 ### HighwaySign Description
 
 Resizable sign with front texture option.
+
+### HighwaySign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `length`: Defines the lenght of the sign.
+
+- `thickness`: Defines the thickness of the sign.
+
+- `color`: Defines the color of the sign.
+
+- `texture`: Defines the texture used for the sign.
+
+- `recognitionColors`: Is `Solid.recognitionColorsrecognitionColors`.
 
 ## OrderPanel
 
@@ -330,12 +468,12 @@ Resizable sign with front texture option.
 
 ```
 OrderPanel {
-  SFVec3f    translation 0 0 0
-  SFRotation rotation    0 1 0 0
-  SFString   name        "order panel"
-  MFString   signImage   "textures/signs/do_not_enter.jpg"
-  SFColor    color       0.576471 0.576471 0.576471
-  MFColor    recognitionColors  [ 0.75 0.17 0.22, 0.58 0.58 0.58 ]
+  SFVec3f    translation        0 0 0
+  SFRotation rotation           0 1 0 0
+  SFString   name               "order panel"
+  MFString   signImage          "textures/signs/do_not_enter.jpg"   
+  SFColor    color              0.576471 0.576471 0.576471          
+  MFColor    recognitionColors  [ 0.75 0.17 0.22, 0.58 0.58 0.58 ]  
 }
 ```
 
@@ -344,6 +482,14 @@ OrderPanel {
 ### OrderPanel Description
 
 Traffic panel: Order panel.
+
+### OrderPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## OrderSign
 
@@ -358,10 +504,10 @@ OrderSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "order sign"
-  SFFloat    height       2
-  SFFloat    radius       0.03
-  SFColor    color        0.576471 0.576471 0.576471
-  MFNode     signBoards   [ OrderPanel { translation 0 -0.175 -0.026 } ]
+  SFFloat    height       2                                               
+  SFFloat    radius       0.03                                            
+  SFColor    color        0.576471 0.576471 0.576471                      
+  MFNode     signBoards   [ OrderPanel { translation 0 -0.175 -0.026 } ]  
 }
 ```
 
@@ -370,6 +516,16 @@ OrderSign {
 ### OrderSign Description
 
 Traffic sign: Order sign.
+
+### OrderSign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign pole.
+
+- `color`: Defines the color of the sign.
+
+- `signBoards`: Defines the boards.
 
 ## ParkingLines
 
@@ -383,9 +539,9 @@ Traffic sign: Order sign.
 ParkingLines {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
-  SFInt32    numberOfCarParks 5
-  SFFloat    carParkLength    4.8
-  SFFloat    carParkWidth     2.4
+  SFInt32    numberOfCarParks 5        
+  SFFloat    carParkLength    4.8      
+  SFFloat    carParkWidth     2.4      
 }
 ```
 
@@ -394,6 +550,14 @@ ParkingLines {
 ### ParkingLines Description
 
 Parking lines for several consecutive cars.
+
+### ParkingLines Field Summary
+
+- `numberOfCarParks`: Defines the number of parks.
+
+- `carParkLength`: Defines the length of one park.
+
+- `carParkWidth`: Defines the width of one park.
 
 ## PedestrianCrossing
 
@@ -408,8 +572,8 @@ PedestrianCrossing {
   SFVec3f    translation      0 0 0
   SFRotation rotation         0 1 0 0
   SFString   name             "pedestrian crossing"
-  SFVec2f    size             20 8
-  SFInt32    textureFiltering 4
+  SFVec2f    size             20 8                   
+  SFInt32    textureFiltering 4                      
 }
 ```
 
@@ -418,6 +582,12 @@ PedestrianCrossing {
 ### PedestrianCrossing Description
 
 A pedestrian crossing 20 x 8 meters (0.1m thick).
+
+### PedestrianCrossing Field Summary
+
+- `size`: Defines the size of the pedestrian crossing.
+
+- `textureFiltering`: Defines the filtering level for the texture used for the pedestrian crossing.
 
 ## Pole
 
@@ -429,10 +599,10 @@ A pedestrian crossing 20 x 8 meters (0.1m thick).
 
 ```
 Pole {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "pole"
-  MFNode slot [ ]
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "pole"
+  MFNode     slot        []       
 }
 ```
 
@@ -441,6 +611,10 @@ Pole {
 ### Pole Description
 
 A metallic pole for the traffic lights.
+
+### Pole Field Summary
+
+- `slot`: Extends the pole with panels or traffic lights.
 
 ## RectangularPanel
 
@@ -452,13 +626,13 @@ A metallic pole for the traffic lights.
 
 ```
 RectangularPanel {
-  SFVec3f     translation 0 0 0
-  SFRotation  rotation    0 1 0 0
-  SFString    name        "rectangular panel"
-  MFString    signImage   "textures/signs/eu/dead_end.jpg"
-  SFColor     color       0.576471 0.576471 0.576471
-  SFVec2f     size        0.5 0.5
-  MFColor     recognitionColors  [ 0 0.5 0.76, 0.58 0.58 0.58 ]
+  SFVec3f     translation        0 0 0
+  SFRotation  rotation           0 1 0 0
+  SFString    name               "rectangular panel"
+  MFString    signImage          "textures/signs/eu/dead_end.jpg"  
+  SFColor     color              0.576471 0.576471 0.576471        
+  SFVec2f     size               0.5 0.5                           
+  MFColor     recognitionColors  [ 0 0.5 0.76, 0.58 0.58 0.58 ]    
 }
 ```
 
@@ -467,6 +641,16 @@ RectangularPanel {
 ### RectangularPanel Description
 
 A simple rectangular traffic pannel.
+
+### RectangularPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `size`: Defines the size of the panel
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## SignPole
 
@@ -481,10 +665,10 @@ SignPole {
   SFVec3f     translation   0 0 0
   SFRotation  rotation      0 1 0 0
   SFString    name          "sign pole"
-  SFFloat     height        2.2
-  SFFloat     radius        0.02
-  SFColor     color         0.258824 0.258824 0.258824
-  MFNode      signBoards    [ DirectionPanel {} ]
+  SFFloat     height        2.2                         
+  SFFloat     radius        0.02                        
+  SFColor     color         0.258824 0.258824 0.258824  
+  MFNode      signBoards    [ DirectionPanel {} ]       
 }
 ```
 
@@ -493,6 +677,16 @@ SignPole {
 ### SignPole Description
 
 Customizable direction panel on pole with the possibility of adding more panels.
+
+### SignPole Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign.
+
+- `color`: Defines the color of the sign.
+
+- `signBoards`: Defines the boards.
 
 ## SpeedLimitPanel
 
@@ -504,12 +698,12 @@ Customizable direction panel on pole with the possibility of adding more panels.
 
 ```
 SpeedLimitPanel {
-  SFVec3f     translation 0 0 0
-  SFRotation  rotation    0 1 0 0
-  SFString    name        "speed limit panel"
-  MFString    signImage   "textures/signs/us/speed_limit_45.jpg"
-  SFColor     color       0.576471 0.576471 0.576471
-  MFColor     recognitionColors  [ 1 1 1, 0.58 0.58 0.58 ]
+  SFVec3f     translation        0 0 0
+  SFRotation  rotation           0 1 0 0
+  SFString    name               "speed limit panel"
+  MFString    signImage          "textures/signs/us/speed_limit_45.jpg"  
+  SFColor     color              0.576471 0.576471 0.576471              
+  MFColor     recognitionColors  [ 1 1 1, 0.58 0.58 0.58 ]               
 }
 ```
 
@@ -518,6 +712,14 @@ SpeedLimitPanel {
 ### SpeedLimitPanel Description
 
 Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
+
+### SpeedLimitPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## SpeedLimitSign
 
@@ -532,10 +734,10 @@ SpeedLimitSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "speed limit"
-  SFFloat    height       2
-  SFFloat    radius       0.03
-  SFColor    color        0.576471 0.576471 0.576471
-  MFNode     signBoards   [ SpeedLimitPanel { translation 0 0 -0.023 } ]
+  SFFloat    height       2                                               
+  SFFloat    radius       0.03                                            
+  SFColor    color        0.576471 0.576471 0.576471                      
+  MFNode     signBoards   [ SpeedLimitPanel { translation 0 0 -0.023 } ]  
 }
 ```
 
@@ -544,6 +746,16 @@ SpeedLimitSign {
 ### SpeedLimitSign Description
 
 Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
+
+### SpeedLimitSign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign pole.
+
+- `color`: Defines the color of the sign.
+
+- `signBoards`: Defines the boards.
 
 ## StopPanel
 
@@ -555,12 +767,12 @@ Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
 
 ```
 StopPanel {
-  SFVec3f    translation 0 0 0
-  SFRotation rotation    0 1 0 0
-  SFString   name        "stop panel"
-  MFString   signImage   "textures/signs/stop.jpg"
-  SFColor    color       0.576471 0.576471 0.576471
-  MFColor    recognitionColors  [ 0.75 0.25 0.12, 0.58 0.58 0.58 ]
+  SFVec3f    translation        0 0 0
+  SFRotation rotation           0 1 0 0
+  SFString   name               "stop panel"
+  MFString   signImage          "textures/signs/stop.jpg"           
+  SFColor    color              0.576471 0.576471 0.576471          
+  MFColor    recognitionColors  [ 0.75 0.25 0.12, 0.58 0.58 0.58 ]  
 }
 ```
 
@@ -569,6 +781,14 @@ StopPanel {
 ### StopPanel Description
 
 Traffic panel: Stop panel.
+
+### StopPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## StopSign
 
@@ -583,10 +803,10 @@ StopSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "stop sign"
-  SFFloat    height       2
-  SFFloat    radius       0.03
-  SFColor    color        0.576471 0.576471 0.576471
-  MFNode     signBoards   [ StopPanel { translation 0 -0.097 0 } ]
+  SFFloat    height       2                                         
+  SFFloat    radius       0.03                                      
+  SFColor    color        0.576471 0.576471 0.576471                
+  MFNode     signBoards   [ StopPanel { translation 0 -0.097 0 } ]  
 }
 ```
 
@@ -595,6 +815,16 @@ StopSign {
 ### StopSign Description
 
 Traffic sign: Stop sign.
+
+### StopSign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign pole.
+
+- `color`: Defines the color of the sign.
+
+- `signBoards`: Defines the boards.
 
 ## StreetLight
 
@@ -610,13 +840,13 @@ StreetLight {
   SFRotation rotation      0 1 0 0
   SFString   name          "street light"
   SFVec3f    attenuation   1 0 0
-  SFFloat    beamWidth     1.1
-  SFColor    color         1 0.9 0.8
-  SFFloat    cutOffAngle   1.57
-  SFVec3f    direction     0 -1 -0.1
-  SFBool     on            TRUE
-  SFFloat    radius        50
-  SFBool     castShadows   FALSE
+  SFFloat    beamWidth     1.1             
+  SFColor    color         1 0.9 0.8       
+  SFFloat    cutOffAngle   1.57            
+  SFVec3f    direction     0 -1 -0.1       
+  SFBool     on            TRUE            
+  SFFloat    radius        50              
+  SFBool     castShadows   FALSE           
 }
 ```
 
@@ -629,6 +859,22 @@ StreetLight {
 Simple model of a street light including a customizable SpotLight.
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
+### StreetLight Field Summary
+
+- `beamWidth`: Defines the beam width of the spot light.
+
+- `color`: Defines the color of the spot light.
+
+- `cutOffAngle`: Defines the cut-off angle of the spot light.
+
+- `direction`: Defines the direction of the spot light.
+
+- `on`: Defines whether the spot light is on or off.
+
+- `radius`: Defines the radius of the spot light.
+
+- `castShadows`: Defines whether the spot light casts shadows.
+
 ## TrafficCone
 
 %figure "TrafficCone model in Webots."
@@ -639,10 +885,10 @@ This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/
 
 ```
 TrafficCone {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "traffic cone"
-  SFNode physics NULL
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "traffic cone"
+  SFNode     physics     NULL            
 }
 ```
 
@@ -651,6 +897,10 @@ TrafficCone {
 ### TrafficCone Description
 
 Traffic cone.
+
+### TrafficCone Field Summary
+
+- `physics`: Is `Solid.physics`.
 
 ## TrafficLight
 
@@ -662,15 +912,15 @@ Traffic cone.
 
 ```
 TrafficLight {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "traffic light"
-  SFString red_light "red light"
-  SFString orange_light "orange light"
-  SFString green_light "green light"
-  SFNode lamp_geometry NULL
-  SFRotation lamp_rotation 0 0 1 0
-  MFColor recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]
+  SFVec3f    translation        0 0 0
+  SFRotation rotation           0 1 0 0
+  SFString   name               "traffic light"
+  SFString   red_light          "red light"                
+  SFString   orange_light       "orange light"             
+  SFString   green_light        "green light"              
+  SFNode     lamp_geometry      NULL                       
+  SFRotation lamp_rotation      0 0 1 0                    
+  MFColor    recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]  
 }
 ```
 
@@ -679,6 +929,20 @@ TrafficLight {
 ### TrafficLight Description
 
 Basic traffic light without lamp.
+
+### TrafficLight Field Summary
+
+- `red_light`: Defines the name of the red LED device.
+
+- `orange_light`: Defines the name of the orange LED device.
+
+- `green_light`: Defines the name of the green LED device.
+
+- `lamp_geometry`: Defines the geometry of the lamps.
+
+- `lamp_rotation`: Defines the rotation of the lamps.
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## TrafficLightArrowLampGeometry
 
@@ -709,12 +973,12 @@ A traffic light lamp with an adjustable arrow.
 
 ```
 TrafficLightBigPole {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "traffic light big pole"
-  MFNode slot1 [ ]
-  MFNode slot2 [ ]
-  MFNode slot3 [ ]
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "traffic light big pole"
+  MFNode     slot1       []                        
+  MFNode     slot2       []                        
+  MFNode     slot3       []                        
 }
 ```
 
@@ -723,6 +987,14 @@ TrafficLightBigPole {
 ### TrafficLightBigPole Description
 
 A big metallic pole above the road for traffic lights.
+
+### TrafficLightBigPole Field Summary
+
+- `slot1`: Extends the pole with a traffic light located in the middle of the vertical part of the pole.
+
+- `slot2`: Extends the pole with a traffic light located in the begining of the horizontal part of the pole.
+
+- `slot3`: Extends the pole with a traffic light located in the end of the horizontal part of the pole.
 
 ## TrafficLightHorizontal
 
@@ -734,15 +1006,15 @@ A big metallic pole above the road for traffic lights.
 
 ```
 TrafficLightHorizontal {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "horizontal traffic light"
-  SFString red_light "red light"
-  SFString orange_light "orange light"
-  SFString green_light "green light"
-  SFNode lamp_geometry NULL
-  SFRotation lamp_rotation 0 0 1 0
-  MFColor recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]
+  SFVec3f    translation        0 0 0
+  SFRotation rotation           0 1 0 0
+  SFString   name               "horizontal traffic light"
+  SFString   red_light          "red light"                 
+  SFString   orange_light       "orange light"              
+  SFString   green_light        "green light"               
+  SFNode     lamp_geometry      NULL                        
+  SFRotation lamp_rotation      0 0 1 0                     
+  MFColor    recognitionColors  [ 0.25 0.25 0.25, 0 0 0 ]   
 }
 ```
 
@@ -751,6 +1023,20 @@ TrafficLightHorizontal {
 ### TrafficLightHorizontal Description
 
 Horizontal traffic light without lamp to put on the big pole above the road.
+
+### TrafficLightHorizontal Field Summary
+
+- `red_light`: Defines the name of the red LED device.
+
+- `orange_light`: Defines the name of the orange LED device.
+
+- `green_light`: Defines the name of the green LED device.
+
+- `lamp_geometry`: Defines the geometry of the lamps.
+
+- `lamp_rotation`: Defines the rotation of the lamps.
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## TrafficLightStandardLampGeometry
 
@@ -781,13 +1067,13 @@ A traffic light lamp with a standard geometry.
 
 ```
 YieldPanel {
-  SFVec3f     translation      0 0 0
-  SFRotation  rotation         0 1 0 0
-  SFString    name             "yield panel"
-  MFString    signImage        "textures/signs/us/yield.jpg"
-  SFColor     color            0.576471 0.576471 0.576471
-  SFFloat     textureRotation  0
-  MFColor     recognitionColors  [ 0.7 0.12 0.18, 0.58 0.58 0.58 ]
+  SFVec3f     translation        0 0 0
+  SFRotation  rotation           0 1 0 0
+  SFString    name               "yield panel"
+  MFString    signImage          "textures/signs/us/yield.jpg"      
+  SFColor     color              0.576471 0.576471 0.576471         
+  SFFloat     textureRotation    0                                  
+  MFColor     recognitionColors  [ 0.7 0.12 0.18, 0.58 0.58 0.58 ]  
 }
 ```
 
@@ -796,6 +1082,16 @@ YieldPanel {
 ### YieldPanel Description
 
 Traffic panel: Yield panel.
+
+### YieldPanel Field Summary
+
+- `signImage`: Defines the texture used for the sign.
+
+- `color`: Defines the color of the panel
+
+- `textureRotation`: Defines the rotation of the texture used for the sign.
+
+- `recognitionColors`: Is `Solid.recognitionColors`.
 
 ## YieldSign
 
@@ -810,10 +1106,10 @@ YieldSign {
   SFVec3f    translation  0 0 0
   SFRotation rotation     0 1 0 0
   SFString   name         "yield sign"
-  SFFloat    height       2
-  SFFloat    radius       0.03
-  SFColor    color        0.576471 0.576471 0.576471
-  MFNode     signBoards   [ YieldPanel { } ]
+  SFFloat    height       2                           
+  SFFloat    radius       0.03                        
+  SFColor    color        0.576471 0.576471 0.576471  
+  MFNode     signBoards   [ YieldPanel { } ]          
 }
 ```
 
@@ -822,4 +1118,14 @@ YieldSign {
 ### YieldSign Description
 
 Traffic sign: Yield sign.
+
+### YieldSign Field Summary
+
+- `height`: Defines the height of the sign.
+
+- `radius`: Defines the radius of the sign pole.
+
+- `color`: Defines the color of the sign.
+
+- `signBoards`: Defines the boards.
 

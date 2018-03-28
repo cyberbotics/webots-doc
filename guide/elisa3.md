@@ -9,6 +9,50 @@
 The [GCTronic Elisa 3](http://www.gctronic.com/doc/index.php/Elisa-3) is a small size two-wheeled robot able to move horizontally or vertically thanks to its magnetic wheels.
 It has multiple sensors including IR distance sensors, accelerometer and an RF radio.
 
+### Elisa3 PROTO
+
+```
+Elisa3 {
+  SFVec3f    translation      0 0 0
+  SFRotation rotation         0 1 0 0
+  SFString   name             "Elisa-3"
+  SFString   controller       "elisa3"
+  SFString   controllerArgs   ""
+  SFString   customData       ""
+  SFBool     synchronization  TRUE
+  SFInt32    emitter_channel  1
+  SFInt32    receiver_channel 1
+  MFFloat    battery          []
+  MFNode     extensionSlot    []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/gctronic/elisa/protos/Elisa3.proto"
+
+#### Elisa3 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `emitter_channel`: Inherited from [Emitter](../reference/emitter.md) node.
+
+- `receiver_channel`: Inherited from [Receiver](../reference/receiver.md) node.
+
+- `battery`: Inherited from [Robot](../reference/robot.md) node.
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/gctronic/elisa/worlds".

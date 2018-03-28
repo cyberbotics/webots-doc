@@ -14,6 +14,60 @@ Four models are supported in Webots: HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
 
 ![youtube video](https://www.youtube.com/watch?v=ay3_1clWTfw)
 
+### IprHd6 PROTO nodes
+
+There a four PROTO nodes for this robot, one per model:
+
+- `IprHd6m90.proto`
+- `IprHd6ms90.proto`
+- `IprHd6m180.proto`
+- `IprHd6ms180.proto`
+
+```
+IprHd6* {
+  SFVec3f    translation      0 0.62 0
+  SFRotation rotation         0 1 0 0
+  SFString   name             "IPR"
+  SFString   controller       "void"
+  SFString   controllerArgs   ""
+  SFString   customData       ""
+  SFBool     synchronization  TRUE
+  MFNode     sensorsSlot      []
+  MFNode     tableSlot        []
+  MFNode     wristSlot        []
+  MFNode     leftGripperSlot  []
+  MFNode     rightGripperSlot []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/neuronics/ipr/protos/IprHd6*.proto"
+
+#### IprHd6 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `sensorsSlot`: Extends the robot with new nodes in the sensors slot.
+
+- `tableSlot`: Extends the robot with new nodes in the table slot.
+
+- `wristSlot`: Extends the robot with new nodes in the wrist slot.
+
+- `leftGripperSlot`: Extends the robot with new nodes in the left gripper slot.
+
+- `rightGripperSlot`: Extends the robot with new nodes in the right gripper slot.
+
 ### IPR Models
 
 The different IPR models share the same device names.

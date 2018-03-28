@@ -12,6 +12,56 @@ The [Fujitsu HOAP-2](https://en.wikipedia.org/wiki/HOAP) (HOAP for "Humanoid for
 
 ![youtube video](https://www.youtube.com/watch?v=xuVxFqmRl2g)
 
+### Hoap2 PROTO
+
+```
+Hoap2 {
+  SFVec3f    translation         0 0.29 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "HOAP-2"
+  SFString   controller          "hoap2"
+  SFString   controllerArgs      ""
+  SFString   customData          ""
+  SFBool     synchronization     TRUE
+  SFColor    diffuseColor        0.65 0.65 0.65
+  SFFloat    shininess           0.8
+  SFColor    specularColor       0.65 0.65 0.65
+  SFString   contactMaterial     "default"
+  SFString   footContactMaterial "default"
+  MFNode     extensionSlot       []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/fujitsu/hoap2/protos/Hoap2.proto"
+
+#### Hoap2 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `diffuseColor`: Inherited from [Material](../reference/material.md) node.
+
+- `shininess`: Inherited from [Material](../reference/material.md) node.
+
+- `specularColor`: Inherited from [Material](../reference/material.md) node.
+
+- `contactMaterial`: Defines the [Solid](../reference/solid.md) for all the robot parts, except the feet.
+
+- `footContactMaterial`: Defines the [Solid](../reference/solid.md) for the feet.
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/fujitsu/hoap2/worlds".

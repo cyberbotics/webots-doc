@@ -15,6 +15,41 @@ A human can drive this robot.
 
 ![youtube video](https://www.youtube.com/watch?v=bgQuY2mFCvo)
 
+### Mantis PROTO
+
+```
+Mantis {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Mantis"
+  SFString   controller      "mantis"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/micromagic/mantis/protos/Mantis.proto"
+
+#### Mantis Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/micromagic/mantis/worlds".

@@ -9,6 +9,44 @@
 The "Khepera" robot is a two-wheeled robot produced by [K-Team](https://www.k-team.com/).
 It is mounted by multiple sensors including 8 distance sensors.
 
+### Khepera1 PROTO
+
+```
+Khepera1 {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Khepera"
+  SFString   controller      "braitenberg"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+  SFBool     kinematic       FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/k-team/khepera1/protos/Khepera1.proto"
+
+#### Khepera1 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
+- `kinematic`: Defines whether the robot motion and its sensors are computed according to a 2D kinematics algorithm.
+
 ### Samples
 
 You will find the following samples in this folder: "WEBOTS\_HOME/projects/robots/k-team/khepera/worlds":

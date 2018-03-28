@@ -8,6 +8,41 @@
 
 [adept's Pioneer 2](https://www.adept.com/) is a three-wheeled robot (2 motorized wheels and one passive caster wheel) mounted with several sensors including 16 ultrasonic sensors.
 
+### Pioneer2 PROTO
+
+```
+Pioneer2 {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Pioneer 2"
+  SFString   controller      "braitenberg"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer2/protos/Pioneer2.proto"
+
+#### Pioneer2 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/adept/pioneer2/worlds".

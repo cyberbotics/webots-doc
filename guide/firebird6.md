@@ -9,6 +9,47 @@
 "Fire Bird VI" is a Robotic Research Platform designed by [NEX Robotics](http://www.nex-robotics.com/products/fire-bird-vi-robot/fire-bird-vi-robotic-research-platform.html).
 It is a two-wheeled robot including 8 ultrasonic sensors and more.
 
+### FireBird6 PROTO
+
+```
+FireBird6 {
+  SFVec3f    translation     0 0 0          
+  SFRotation rotation        0 1 0 0        
+  SFString   name            "Fire Bird 6"  
+  SFString   controller      "fire_bird_6_obstacle_avoidance"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  SFString   window          "fire_bird_6_window"
+  SFString   remoteControl   ""
+  MFNode     bodySlot        []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/nex/protos/FireBird6.proto"
+
+#### FireBird6 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `window`: Inherited from [Robot](../reference/robot.md) node.
+
+- `remoteControl`: Inherited from [Robot](../reference/robot.md) node.
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/nex/worlds".

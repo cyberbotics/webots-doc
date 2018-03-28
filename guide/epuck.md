@@ -59,6 +59,80 @@ E-puck is equipped with a large number of devices, as summarized in [this table]
 
 %end
 
+### E-puck PROTO
+
+```
+E-puck {
+  SFVec3f    translation         0 0 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "e-puck"
+  SFString   controller          "e-puck_avoid_obstacles"
+  SFString   controllerArgs      ""
+  SFString   customData          ""
+  SFBool     synchronization     TRUE
+  SFString   version             "1"
+  SFFloat    camera_fieldOfView  0.84
+  SFInt32    camera_width        52
+  SFInt32    camera_height       39
+  SFBool     camera_antiAliasing FALSE
+  SFRotation camera_rotation     1 0 0 0
+  SFFloat    camera_noise        0.0
+  SFInt32    emitter_channel     1
+  SFInt32    receiver_channel    1
+  MFFloat    battery             []
+  SFString   window              "e-puck"
+  MFNode     turretSlot          []
+  MFNode     groundSensorsSlot   []
+  SFBool     kinematic           FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+#### E-puck Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `version`: Defines the e-puck version; either "1" or "2".
+
+- `camera_fieldOfView`: Inherited from [Camera](../reference/camera.md) node.
+
+- `camera_width`: Inherited from [Camera](../reference/camera.md) node.
+
+- `camera_height`: Inherited from [Camera](../reference/camera.md) node.
+
+- `camera_antiAliasing`: Inherited from [Camera](../reference/camera.md) node.
+
+- `camera_rotation`: Inherited from [Camera](../reference/camera.md) node.
+
+- `camera_noise`: Inherited from [Camera](../reference/camera.md) node.
+
+- `emitter_channel`: Inherited from [Emitter](../reference/emitter.md) node.
+
+- `receiver_channel`: Inherited from [Receiver](../reference/receiver.md) node.
+
+- `battery`: Inherited from [Robot](../reference/robot.md) node.
+
+- `window`: Inherited from [Robot](../reference/robot.md) node.
+
+- `turretSlot`: Extends the robot with new nodes in the turret slot.
+
+- `groundSensorsSlot`: Extends the robot with new nodes in the ground slot. Typically: [E-puckGroundSensors](../reference/e-puckGroundSensors.md).
+
+- `kinematic`: Defines whether the robot motion and its sensors are computed according to a 2D kinematics algorithm.
+
 ### E-puck Model
 
 %figure "E-puck characteristics"

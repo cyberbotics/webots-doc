@@ -14,6 +14,98 @@ Currently, Webots supports the Nao v3.3, v4.0 and v5.0 versions, with and withou
 
 ![youtube video](https://www.youtube.com/watch?v=NQmEjpr6wOA)
 
+### Nao PROTO
+
+```
+Nao {
+  SFVec3f    translation           0 0.334 0
+  SFRotation rotation              1 0 0 -1.5708
+  SFString   name                  "NAO"
+  SFString   version               "5.0"
+  SFInt32    degreeOfFreedom       25
+  SFColor    color                 -1 -1 -1
+  SFString   controller            "nao_demo"
+  SFString   controllerArgs        ""
+  SFString   customData            ""
+  SFBool     synchronization       TRUE
+  SFBool     selfCollision         FALSE
+  SFFloat    gpsAccuracy           0.0
+  SFInt32    cameraWidth           160
+  SFInt32    cameraHeight          120
+  SFNode     jersey                NULL
+  SFInt32    channel               0
+  SFString   contactMaterial       "NAO material"
+  SFString   footContactMaterial   "NAO foot material"
+  SFString   fingerContactMaterial "NAO finger material"
+  SFFloat    fingerRadius          0.0055
+  SFFloat    fingerTorque          10.0
+  MFNode     bodySlot              []
+  MFNode     headSlot              []
+  MFNode     leftFootSlot          []
+  MFNode     rightFootSlot         []
+  MFNode     leftHandSlot          []
+  MFNode     rightHandSlot         []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/aldebaran/protos/Nao.proto"
+
+#### Nao Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `version`: Defines the Nao version; either "3.3","4.0" or "5.0".
+
+- `degreeOfFreedom`: Defines the number of degrees of freedom; either "21" (fixed fingers) or "25" (articulated fingers).
+
+- `color`: Defines the diffuseColor of the secondary [Material](../reference/material.md).
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `selfCollision`: Inherited from [Robot](../reference/robot.md) node.
+
+- `gpsAccuracy`: Inherited from [GPS](../reference/gPS.md) node.
+
+- `cameraWidth`: Inherited from [Camera](../reference/camera.md) node.
+
+- `cameraHeight`: Inherited from [Camera](../reference/camera.md) node.
+
+- `jersey`: Extends the robot with a jersey: typically NaoJersey.proto.
+
+- `channel`: Defines the channel for the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
+
+- `contactMaterial`: Defines the [Solid](../reference/solid.md) for all the robot parts, except the feet and the fingers.
+
+- `footContactMaterial`: Defines the [Solid](../reference/solid.md) for the feet.
+
+- `fingerContactMaterial`: Defines the [Solid](../reference/solid.md) for the fingers.
+
+- `fingerRadius`: Defines the radius of all the fingers.
+
+- `fingerTorque`: Defines the torque applied on the finger motors.
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
+- `headSlot`: Extends the robot with new nodes in the head slot.
+
+- `leftFootSlot`: Extends the robot with new nodes in the left foot slot.
+
+- `rightFootSlot`: Extends the robot with new nodes in the right foot slot.
+
+- `leftHandSlot`: Extends the robot with new nodes in the left hand slot.
+
+- `rightHandSlot`: Extends the robot with new nodes in the righthand slot.
+
 ### Nao Models
 
 You can switch between the Nao model thanks to the following Nao PROTO fields:

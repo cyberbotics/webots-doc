@@ -16,6 +16,68 @@ The robot size are customizable using the BB-8 PROTO fields.
 
 ![youtube video](https://www.youtube.com/watch?v=d6NJLFg1x9M)
 
+### BB-8 PROTO
+
+```
+BB-8 {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "BB-8"
+  SFString   controller      "bb-8"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  SFString   contactMaterial "bb-8"
+  MFNode     bodySlot        []
+  SFFloat    bodyRadius      0.25
+  SFFloat    bodyMass        5.0
+  MFNode     headSlot        []
+  SFFloat    headOffset      0.025
+  SFFloat    headRadius      0.15
+  SFFloat    headMass        1.0
+  SFFloat    weightMass      20.0
+  SFFloat    maxVelocity     8.72
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/sphero/protos/BB-8.proto"
+
+#### BB-8 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `contactMaterial`: Defines the [Solid](../reference/solid.md) for the robot parts.
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
+- `bodyRadius`: Defines the radius of the sphere which defines the robot body.
+
+- `bodyMass`: Defines the mass of the robot body.
+
+- `headSlot`: Extends the robot with new nodes in the head slot.
+
+- `headOffset`: Defines the distance between the body center and the head center.
+
+- `headRadius`: Defines the radius of the sphere which defines the robot head.
+
+- `headMass`: Defines the mass of the robot head.
+
+- `weightMass`: Defines the mass of the robot body.
+
+- `maxVelocity`: Defines the [RotationalMotor](../reference/rotationalMotor.md) fields. Note: the real robot moves at 4.9 [mph].
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/sphero/worlds".

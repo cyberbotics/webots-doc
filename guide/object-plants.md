@@ -38,6 +38,7 @@ BunchOfSunFlowers {
 - `leavesColor`: Defines the color of the leaves.
 - `leavesTextureUrl`: Defines the textures used for the leaves.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+
 ## PottedTree
 
 A potted tree (0.3 x 1.3 x 0.3 m).
@@ -72,3 +73,4 @@ PottedTree {
 - `leavesColor`: Defines the color of the leaves.
 - `leavesTextureUrl`: Defines the textures used for of the leaves.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+

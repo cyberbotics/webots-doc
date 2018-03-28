@@ -34,3 +34,4 @@ Television {
 - `displayWidth`: Defines the width of the internal Display device.
 - `displayHeight`: Defines the height of the internal Display device.
 - `controller`: Defines the controller used to display images using the internal Display device.
+

@@ -30,6 +30,7 @@ ComputerMouse {
 - `topColor`: Defines the color of the top part of the mouse.
 - `bottomColor`: Defines the color of the bottom part of the mouse.
 - `mass`: Defines the mass of the mouse in kg.
+
 ## DesktopComputer
 
 A computer tower.
@@ -58,6 +59,7 @@ DesktopComputer {
 
 - `powerbuttonColor`: Defines the color of the computer power button.
 - `mass`: Defines the mass of the computer in kg. A value smaller or equal to 0 remove the physics of the computer.
+
 ## Keyboard
 
 A computer keyboard.
@@ -86,6 +88,7 @@ Keyboard {
 
 - `color`: Defines the color of the keyboard.
 - `mass`: Defines the mass of the keyboard in kg. A value smaller or equal to 0 remove the physics of the keyboard.
+
 ## Laptop
 
 A simple laptop.
@@ -112,6 +115,7 @@ Laptop {
 ### Laptop Field Summary
 
 - `controller`: Defines the controller of the laptop which can use the Display device to show images.
+
 ## Monitor
 
 A computer monitor.
@@ -140,3 +144,4 @@ Monitor {
 
 - `color`: Defines the color of the monitor.
 - `mass`: Defines the mass of the monitor in kg. A value smaller or equal to 0 remove the physics of the monitor.
+

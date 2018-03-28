@@ -30,6 +30,7 @@ Bench {
 - `metalColor`: Defines the color of the metalic part.
 - `woodColor`: Defines the color of the wooden part.
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
+
 ## BusStop
 
 Simple bus stop with customizable appearance and an optional bench.
@@ -66,6 +67,7 @@ BusStop {
 - `internalAdvertisingTexture`: Defines the texture used for the internal advertising.
 - `externalAdvertisingTexture`: Defines the texture used for the external advertising.
 - `advertisingLightOn`: Defines whether the advertising should have an emissive color.
+
 ## EmergencyPhone
 
 An emergency phone.
@@ -94,6 +96,7 @@ EmergencyPhone {
 
 - `poleColor`: Defines the color of the pole.
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Fence
 
 A customizable fence.
@@ -144,6 +147,7 @@ Fence {
 - `horizontalBarAppearance`: Defines the appearance of the horizontal bars.
 - `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
 - `appearance`: For backward compatibility warning.
+
 ## FireHydrant
 
 A fire hydrant.
@@ -170,6 +174,7 @@ FireHydrant {
 ### FireHydrant Field Summary
 
 - `appearance`: Defines the appearance of the fire hydrant.
+
 ## Fountain
 
 A configurable fountain.
@@ -200,6 +205,7 @@ Fountain {
 - `height`: Defines the height of the fountain.
 - `radius`: Defines the radius of the fountain.
 - `sudivision`: Defines subdivision of the fountain cylinders.
+
 ## PublicBin
 
 A public bin.
@@ -228,6 +234,7 @@ PublicBin {
 
 - `color`: Defines the color of the bin.
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
+
 ## PublicToilet
 
 Resizable public toilet with two different displays.
@@ -287,6 +294,7 @@ PublicToilet {
 - `backDisplayTexture`: Defines the texture used on the back display.
 - `backDisplayLight`: Defines whether the back display should have emissive color.
 - `frontDisplay`: Defines the content of the front display.
+
 ## TrashBin
 
 A trash bin.
@@ -317,3 +325,4 @@ TrashBin {
 - `coverColor`: Defines the color of the top part of the bin.
 - `binColor`: Defines the main color of the bin.
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
+

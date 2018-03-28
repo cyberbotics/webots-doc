@@ -42,6 +42,7 @@ CeilingLight {
 - `pointLightColor`: Defines the color of the point light.
 - `pointLightIntensity`: Defines the intensity of the point light.
 - `pointLightCastShadows`: Defines whether the point light should cast shadows.
+
 ## FloorLight
 
 A floor light (0.19 x 1.6 x 0.19 m).
@@ -86,3 +87,4 @@ FloorLight {
 - `pointLightIntensity`: Defines the intensity of the point light.
 - `pointLightCastShadows`: Defines whether the point light should cast shadows.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+

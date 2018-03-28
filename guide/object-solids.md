@@ -37,6 +37,7 @@ SolidBox {
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 - `appearance`: Defines the appearance of the box.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+
 ## SolidPipe
 
 A pipe object implemented at the Solid-node level.
@@ -80,6 +81,7 @@ SolidPipe {
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 - `appearance`: Defines the appearance of the box.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+
 ## SolidRoundedBox
 
 A box object with rounded corners and edges implemented at the Solid-node level.
@@ -117,6 +119,7 @@ SolidRoundedBox {
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 - `appearance`: Defines the appearance of the box.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+
 ## SolidTorus
 
 A torus object implemented at the Solid-node level.
@@ -155,3 +158,4 @@ SolidTorus {
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 - `appearance`: Defines the appearance of the torus.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+

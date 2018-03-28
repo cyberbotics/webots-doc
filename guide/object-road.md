@@ -107,6 +107,7 @@ Road {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## AddLaneRoadSegment
 
 A simple segment of road allowing to add (or remove) one lane to the road.
@@ -194,6 +195,7 @@ AddLaneRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## AddLanesRoadSegment
 
 A simple segment of road allowing to add (or remove) several lanes to the road.
@@ -283,6 +285,7 @@ AddLanesRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## CrashBarrier
 
 A customizable crash barrier.
@@ -319,6 +322,7 @@ CrashBarrier {
 - `barrierOnRightSide`: Defines the side of the barrier.
 - `subdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
 - `enableBoundingObject`: Defines whether the crash barrier should have a bounding object.
+
 ## Crossroad
 
 A customizable crossroad which can contain optionally references to its connected roads and a shape.
@@ -364,6 +368,7 @@ Crossroad {
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## CurvedRoadSegment
 
 A simple curved road, the number of lanes, the curvature and the dimensions are configurable, an optional border can be enable.
@@ -456,6 +461,7 @@ CurvedRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## HelicoidalRoadSegment
 
 A simple and configurable helicoidal road showing how to use the Road PROTO in order to create 3D roads.
@@ -544,6 +550,7 @@ HelicoidalRoadSegment {
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## LaneSeparation
 
 A simple segment of road allowing to divide a road into two smaller ones (or to assemble two roads into a bigger one).
@@ -635,6 +642,7 @@ LaneSeparation {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## RoadIntersection
 
 A simple and customizable roads intersection, all the road are crossing at the same point and equally separated in orientation.
@@ -704,6 +712,7 @@ RoadIntersection {
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 - `texture`: Defines the texture to be used for the intersection.
 - `startRoadsTexture`: Defines the texture to be used for the intersecting roads.
+
 ## RoadPillars
 
 Generic and customizable road pillars which can be used for easily creating bridges or elevated roads.
@@ -748,6 +757,7 @@ RoadPillars {
 - `upperTilt`: Defines the tilt of the upper support.
 - `texture`: Defines the texture used for the pillar.
 - `boundingObject`: Defines whether the pillar should have a bounding object.
+
 ## Roundabout
 
 A simple and customizable roundabout, all the roads are equally separated in orientation.
@@ -834,6 +844,7 @@ Roundabout {
 - `textureScale`: Defines the length (in meter) of the road texture.
 - `junctionTexture`: Defines the texture to be used for the roundabout.
 - `startRoadsTexture`: Defines the texture to be used for the roads connected to the roundabout.
+
 ## StraightRoadSegment
 
 A simple straight road, the number of lanes and the dimensions are configurable.
@@ -931,3 +942,4 @@ StraightRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 - `castShadows`: Defines whether the road should cast shadows.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+

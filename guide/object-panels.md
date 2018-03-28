@@ -36,6 +36,7 @@ Panel {
 - `panelsCount`: Defines the number of panels.
 - `appearance`: Defines the appearance of the panel body.
 - `borderAppearance`: Defines the appearance of the panel norder.
+
 ## PannelWithTubes
 
 A gray panel with tubes.
@@ -62,3 +63,4 @@ PannelWithTubes {
 ### PannelWithTubes Field Summary
 
 - `appearance`: Defines the appearance of the panel.
+

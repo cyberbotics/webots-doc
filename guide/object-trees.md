@@ -58,6 +58,7 @@ Forest {
 - `minHeight`: Defines the minimum height of the trees.
 - `maxRadius`: Defines the maximum radius of the trees.
 - `minRadius`: Defines the minimum radius of the trees.
+
 ## RoundTree
 
 A tree.
@@ -131,6 +132,7 @@ SimpleTree {
 - `subdivision`: Defines the number of faces used to represent the tree.
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Tree
 
 Efficient (with only 8 polygones) and fast to load tree.
@@ -166,3 +168,4 @@ Tree {
 - `texture`: Defines the texture used for the tree.
 - `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+

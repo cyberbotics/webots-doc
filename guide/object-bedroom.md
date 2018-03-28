@@ -42,3 +42,4 @@ Bed {
 - `fabricTileSize`: Defines the size of the texture used for the fabric.
 - `frameTextureUrl`: Defines the texture used for the frame.
 - `frameTileSize`: Defines the size of texture used for the frame.
+

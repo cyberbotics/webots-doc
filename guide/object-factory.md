@@ -33,6 +33,7 @@ CardboardBox {
 - `size`: Defines the size of the cardboard box.
 - `mass`: Defines the mass of the cardboard box in kg. A value smaller or equal to 0 remove the physics of the cardboard box.
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+
 ### WoodenBox
 
 A wooden box.
@@ -65,6 +66,7 @@ WoodenBox {
 - `mass`: Defines the mass of the wooden box in kg. A value smaller or equal to 0 remove the physics of the wooden box.
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Pallet
 
 ### WoodenPallet
@@ -103,6 +105,7 @@ WoodenPallet {
 - `mass`: Defines the mass of the pallet in kg. A value smaller or equal to 0 remove the physics of the pallet.
 - `boundingObject`: Defines whether the bounding object should be enabled.
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+
 ### WoodenPalletStack
 
 Simple and configurable wooden pallet stack.
@@ -145,6 +148,7 @@ WoodenPalletStack {
 - `palletMass`: Defines the mass of one pallet in kg. A value smaller or equal to 0 remove the physics of the stack.
 - `boundingObject`: Defines whether the bounding object should be enabled.
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Pipes
 
 ### LJoint
@@ -200,6 +204,7 @@ PipeSection {
 - `height`: Defines the height of the pipe.
 - `radius`: Defines the radius of the pipe.
 - `subdivision`: Defines the number of polygons used to represent the pipe cylinder and so its resolution.
+
 ### TJoint
 
 3-slot T-joint for connecting pipes.
@@ -251,6 +256,7 @@ Bolt {
 #### Bolt Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ### Hammer
 
 A 25cm asymmetric club hammer.
@@ -277,6 +283,7 @@ Hammer {
 #### Hammer Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ### Nut
 
 A hexagonal nut.
@@ -303,6 +310,7 @@ Nut {
 #### Nut Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ### PaintBucket
 
 A 4kg bucket of paint, with HingeJoint-based handle.
@@ -329,6 +337,7 @@ PaintBucket {
 #### PaintBucket Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ### PlatformCart
 
 A platform cart with overall dimensions 90Lx50Wx85H cm.
@@ -357,6 +366,7 @@ PlatformCart {
 
 - `slot`: Extends the cart with new nodes in the slot.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+
 ### Screwdriver
 
 A Philips screwdriver. The blade and handle are balanced.
@@ -383,6 +393,7 @@ Screwdriver {
 #### Screwdriver Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ### Wrench
 
 A 15cm Open-End wrench.
@@ -409,6 +420,7 @@ Wrench {
 #### Wrench Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Valves
 
 ### LargeValve
@@ -443,6 +455,7 @@ LargeValve {
 - `controller`: Defines the controller of the valve which is used to limit its rotation.
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ### LeverValve
 
 Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
@@ -470,6 +483,7 @@ LeverValve {
 #### LeverValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
+
 ### SmallValve
 
 Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
@@ -500,3 +514,4 @@ SmallValve {
 - `jointFriction`: Defines the static friction of the valve joint.
 - `controller`: Defines the controller of the valve which is used to limit its rotation.
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
+

@@ -54,3 +54,4 @@ AdvertisingBoard {
 - `poleHeight`: Defines the height of the pole.
 - `poleThickness`: Defines the thickness of the pole (radius of the cylinder for `cylinder`).
 - `baseRatio`: Defines the size of the base for `box` and `cylinder` poles. This field is based on a ratio of `poleThickness`.
+

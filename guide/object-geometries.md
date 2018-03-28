@@ -44,6 +44,7 @@ Extrusion {
 - `convex`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
 - `creaseAngle`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
 - `splineSubdivision`: If bigger than 1, defines the B-Spline subdivion of the extrusion along it's path.
+
 ## TexturedBox
 
 Box with customizable texture mapping.
@@ -90,6 +91,7 @@ TexturedBox {
 - `right`: Defines whether the right face should be included.
 - `top`: Defines whether the top face should be included.
 - `bottom`: Defines whether the bottom face should be included.
+
 ## TexturedParallelepiped
 
 Customizable parallelepiped.
@@ -142,3 +144,4 @@ TexturedParallelepiped {
 - `right`: Defines whether the right face should be included.
 - `top`: Defines whether the top face should be included.
 - `bottom`: Defines whether the bottom face should be included.
+

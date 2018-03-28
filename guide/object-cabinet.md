@@ -71,6 +71,7 @@ Cabinet {
 - `handle`: Defines the handle of the cabinet.
 - `mainTextureUrl`: Defines the primary texture.
 - `objectTextureUrl`: Defines the secondary texture.
+
 ## CabinetHandle
 
 A handle for the Cabinet PROTO.
@@ -103,3 +104,4 @@ CabinetHandle {
 - `handleRadius`: Defines the radius of the handle.
 - `handleColor`: Defines the color of the handle.
 - `mass`: Defines the mass of the handle.
+

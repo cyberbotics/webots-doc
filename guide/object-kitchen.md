@@ -32,6 +32,7 @@ BiscuitBox {
 - `size`: Defines the size of the box.
 - `textureUrl`: Defines the texture used for the box.
 - `mass`: Defines the mass of the box in kg.
+
 ### CerealBox
 
 A customizable (size, texture, etc.) cereal box.
@@ -62,6 +63,7 @@ CerealBox {
 - `size`: Defines the size of the box.
 - `textureUrl`: Defines the texture used for the box.
 - `mass`: Defines the mass of the box in kg.
+
 ### HoneyJar
 
 A honey jar.
@@ -92,6 +94,7 @@ HoneyJar {
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
 - `mass`: Defines the mass of the jar in kg.
 - `color`: Defines the color of the jar.
+
 ### JamJar
 
 A jam jar.
@@ -120,6 +123,7 @@ JamJar {
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
 - `mass`: Defines the mass of the jar in kg.
+
 ## Components
 
 ### HotPlate
@@ -148,6 +152,7 @@ HotPlate {
 #### HotPlate Field Summary
 
 - `textureUrl`: Defines the texture used for the hot plate.
+
 ### Sink
 
 A sink.
@@ -174,6 +179,7 @@ Sink {
 #### Sink Field Summary
 
 - `textureUrl`: Defines the texture used for the sink.
+
 ### Worktop
 
 A customizable (size, texture, etc.) worktop.
@@ -204,6 +210,7 @@ Worktop {
 - `size`: Defines the size of the worktop.
 - `textureUrl`: Defines the texture used for the worktop.
 - `tileSize`: Defines the size of texture used for the worktop.
+
 ## Fridge
 
 ### Fridge PROTO
@@ -238,6 +245,7 @@ Fridge {
 - `mainTextureUrl`: Defines the texture used for the fridge.
 - `doorColor`: Defines the color of the door of the fridge.
 - `doorTextureUrl`: Defines the texture used for the door of the fridge.
+
 ## Oven
 
 ### Oven PROTO
@@ -272,6 +280,7 @@ Oven {
 - `mainTextureUrl`: Defines the texture used for the oven.
 - `doorColor`: Defines the color of the door of the oven.
 - `doorTextureUrl`: Defines the texture used for the door of the oven.
+
 ## Utensils
 
 ### Carafe
@@ -300,6 +309,7 @@ Carafe {
 #### Carafe Field Summary
 
 - `mass`: Defines the mass of the carafe in kg.
+
 ### Cookware
 
 A cookware.
@@ -328,6 +338,7 @@ Cookware {
 
 - `color`: Defines the color of the cookware.
 - `mass`: Defines the mass of the cookware in kg.
+
 ### Fork
 
 A fork.
@@ -354,6 +365,7 @@ Fork {
 #### Fork Field Summary
 
 - `color`: Defines the color of the fork.
+
 ### Glass
 
 A glass.
@@ -380,6 +392,7 @@ Glass {
 #### Glass Field Summary
 
 - `mass`: Defines the mass of the glass in kg.
+
 ### Knife
 
 A knife.
@@ -406,6 +419,7 @@ Knife {
 #### Knife Field Summary
 
 - `color`: Defines the color of the knife.
+
 ### Lid
 
 A lid.
@@ -434,6 +448,7 @@ Lid {
 
 - `color`: Defines the color of the lid.
 - `mass`: Defines the mass of the lid in kg.
+
 ### Plate
 
 A customizable (dimensions, texture, etc. ) plate.
@@ -466,6 +481,7 @@ Plate {
 - `height`: Defines the height of the plate.
 - `radius`: Defines the radius of the plate.
 - `mass`: Defines the mass of the plate in kg.
+
 ### Spoon
 
 A spoon.
@@ -494,6 +510,7 @@ Spoon {
 
 - `color`: Defines the color of the spoon.
 - `type`: Defines the type of spoon. The value should be either `table` or `tea`.
+
 ### Wineglass
 
 A wine glass.
@@ -520,6 +537,7 @@ Wineglass {
 #### Wineglass Field Summary
 
 - `mass`: Defines the mass of the wine glass in kg.
+
 ### WoodenSpoon
 
 A wooden spoon.
@@ -546,3 +564,4 @@ WoodenSpoon {
 #### WoodenSpoon Field Summary
 
 - `textureUrl`: Defines the texture used for the spoon.
+

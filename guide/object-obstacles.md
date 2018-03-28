@@ -32,6 +32,7 @@ OilBarrel {
 - `radius`: Defines the radius of the barrel.
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Ramp30deg
 
 A simple ramp made of two 30° slopes and a flat top.
@@ -59,6 +60,7 @@ Ramp30deg {
 ### Ramp30deg Field Summary
 
 - `color`: Defines the color of the ramp.
+
 ## ThreeSteps
 
 Three steps with customizable height and color.
@@ -88,3 +90,4 @@ ThreeSteps {
 
 - `increment`: Defines the translation between each step.
 - `color`: Deines the color of the steps.
+

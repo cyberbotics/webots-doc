@@ -32,6 +32,7 @@ Apple {
 - `textureUrl`: Defines the texture used for the apple.
 - `mass`: Defines the mass of the apple in kg.
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
+
 ## FruitBowl
 
 A fruit bowl (0.146 x 0.146 x 0.146 m).
@@ -62,6 +63,7 @@ FruitBowl {
 - `color`: Defines the color of the bowl.
 - `textureUrl`: Defines the texture used for the bowl.
 - `mass`: Defines the mass of the bowl in kg.
+
 ## Orange
 
 An orange (0.05 x 0.05 x 0.05 m).
@@ -92,3 +94,4 @@ Orange {
 - `color`: Defines the color of the orange.
 - `textureUrl`: Defines the texture used fo rteh orange.
 - `mass`: Defines the mass of the orange in kg.
+

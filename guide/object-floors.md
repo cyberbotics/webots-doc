@@ -42,6 +42,7 @@ CircleArena {
 - `wallTextureUrl`: Defines the the texture used for the wall.
 - `wallTileSize`: Defines the size of the texture used for the wall.
 - `subdivision`: Defines the subdivision of the wall cylinder.
+
 ## Floor
 
 Configurable standard flat floor.
@@ -78,6 +79,7 @@ Floor {
 - `texture`: Defines the texture used for the floor.
 - `subdivision`: Defines the number of polygons used to represent the floor and so its resolution.
 - `filtering`: Defines the filtering value of the texture used for the floor.
+
 ## RectangleArena
 
 A configurable rectangle arena composed of a floor surrounded by walls.
@@ -122,6 +124,7 @@ RectangleArena {
 - `wallColor`: Defines the color of the walls.
 - `wallTileSize`: Defines the size of the texture used for the walls.
 - `subdivision`: Defines the number of polygons used to represent the arena boxes and so their resolution.
+
 ## UnevenTerrain
 
 Randomly generated uneven terrain based on Perlin noise.
@@ -164,3 +167,4 @@ UnevenTerrain {
 - `flatCenter`: Defines whether the center of the terrain should be flat.
 - `flatBounds`: Defines whether the bounds of the terrain should be flat.
 - `perlinNOctaves`: Defines the number of octaves of the perlin noise.
+

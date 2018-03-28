@@ -160,6 +160,7 @@ for proto in prioritaryProtoList + fileList:
                     file.write('- `%s`: Inherited from [%s](../reference/%s.md) node.\n' % (fieldName, parentNodeType, parentNodeType.lower()))
                 else:
                     file.write('- `%s`: %s\n' % (fieldName, fieldDescription))
+            file.write('\n')
 
     if upperCategory not in upperCategories:
         upperCategories[upperCategory] = []

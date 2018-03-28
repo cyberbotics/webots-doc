@@ -39,6 +39,7 @@ Ball {
 - `linearDamping`: Defines the linear damping of the ball.
 - `angularDamping`: Defines the angular damping of the ball.
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 ## PingPongBall
 
 A ping pong ball.
@@ -67,6 +68,7 @@ PingPongBall {
 
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 - `textureUrl`: Defines the texture used for the ball.
+
 ## SoccerBall
 
 A black and white soccer ball with customizable radius and mass.
@@ -96,3 +98,4 @@ SoccerBall {
 
 - `radius`: Defines the radius of the ball.
 - `mass`: Defines the mass of the ball.
+

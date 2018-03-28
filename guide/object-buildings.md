@@ -99,6 +99,7 @@ Building {
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 - `model`: Inherited from [Solid](../reference/solid.md) node.
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
+
 ## BuildingUnderConstruction
 
 Building under construction with scaffolding.
@@ -161,6 +162,7 @@ BungalowStyleHouse {
 - `appearance`: Defines the appearance of the wall.
 - `floorAppearance`: Defines the appearance of the floor.
 - `fenceAppearance`: Defines the appearance of the fence.
+
 ## CommercialBuilding
 
 A commercial building.
@@ -244,6 +246,7 @@ FastFoodRestaurant {
 - `width`: Defines the width of the building.
 - `brand`: Defines the brand of the restaurant.
 - `numberOfSides`: Defines whether it is a two sided restaurant.
+
 ## HollowBuilding
 
 A hollow building.
@@ -320,6 +323,7 @@ ModernHouse {
 - `enableBoundingObject`: Defines whether to enable the bounding object or not.
 - `appearance`: Defines the wall appearance.
 - `windowAppearance`: Defines the windows appearance.
+
 ## Museum
 
 An old museum.
@@ -459,6 +463,7 @@ SimpleBuilding {
 - `roofHeight`: Defines the height of the roof.
 - `enableBoundingObject`: Defines whether the building should have a bounding object or not.
 - `bottom`: Defines whether the bottom face of the building should be displayed.
+
 ## SimpleTwoFloorsHouse
 
 A simple house with two floors.
@@ -489,6 +494,7 @@ SimpleTwoFloorsHouse {
 
 - `enableBoundingObject`: Defines whether to enable the bounding object.
 - `appearance`: Defines the house appearance.
+
 ## TheThreeTowers
 
 A group of three towers.

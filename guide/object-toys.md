@@ -38,6 +38,7 @@ PaperBoat {
 - `textureUrl`: Defines the texture used for the paper boat.
 - `mass`: Defines the mass of the paper boat in kg.
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
+
 ## RubberDuck
 
 A rubber yellow duck (7.42 x 10.66 x 10.13 cm).
@@ -76,3 +77,4 @@ RubberDuck {
 - `bodyColor`: Defines the color of the rubber duck.
 - `density`: Defines density of the rubber duck in kg / m^3.
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
+

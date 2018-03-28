@@ -35,6 +35,7 @@ Ceiling {
 - `texture`: Defines the texture used for the ceiling.
 - `filtering`: Defines the filtering level for the texture used for the ceiling.
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
+
 ## Door
 
 A cutomizable openable door.
@@ -91,6 +92,7 @@ Door {
 - `topWallColor`: Defines the color of the wall above the door.
 - `frameTextureUrl`: Defines the color of the door frame.
 - `doorHandle`: Defines an optional door handle.
+
 ## DoorKnob
 
 A door knob.
@@ -126,6 +128,7 @@ DoorKnob {
 - `distanceFromDoor`: Defines the distance between the handle and the door.
 - `appearance`: Defines the appearance of the handle.
 - `mass`: Defines the mass of the handle.
+
 ## DoorLever
 
 A door lever.
@@ -169,6 +172,7 @@ DoorLever {
 - `appearance`: Defines the appearance of the lever.
 - `mass`: Defines the mass of the lever.
 - `hasStaticParent`: Defines whether the parent door has physics or not.
+
 ## Wall
 
 A customizable wall.
@@ -205,6 +209,7 @@ Wall {
 - `wallTileSize`: Defines the size of the texture used for the wall.
 - `wallTextureTranslation`: Defines the translation of the texture used for the wall.
 - `topWallColor`: Defines the color of the top face of the wall.
+
 ## Window
 
 A customizable window including walls above and below.
@@ -253,3 +258,4 @@ Window {
 - `wallTextureTranslation`: Defines the translation of textures used for the wall.
 - `topWallColor`: Defines the color of the top wall.
 - `frameTextureUrl`: Defines the texture of the window frame.
+

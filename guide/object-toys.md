@@ -35,8 +35,11 @@ PaperBoat {
 ### PaperBoat Field Summary
 
 - `scale`: Defines the global scaling factor.
+
 - `textureUrl`: Defines the texture used for the paper boat.
+
 - `mass`: Defines the mass of the paper boat in kg.
+
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 
 ## RubberDuck
@@ -74,7 +77,10 @@ RubberDuck {
 ### RubberDuck Field Summary
 
 - `scale`: Defines the global scaling factor.
+
 - `bodyColor`: Defines the color of the rubber duck.
+
 - `density`: Defines density of the rubber duck in kg / m^3.
+
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 

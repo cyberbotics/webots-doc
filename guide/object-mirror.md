@@ -33,10 +33,16 @@ Mirror {
 ### Mirror Field Summary
 
 - `controller`: Defines the controller of the mirror. This controller should simply enable the camera and attach it to the display.
+
 - `fieldOfView`: Defines the field of view of the mirror camera.
+
 - `width`: Defines the width of the mirror.
+
 - `height`: Defines the height of the mirror.
+
 - `frameThickness`: Defines the thickness of the mirror frame.
+
 - `frameTexture`: Defines the texture used for the mirror frame.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 

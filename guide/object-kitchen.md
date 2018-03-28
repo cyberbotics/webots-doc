@@ -30,7 +30,9 @@ BiscuitBox {
 #### BiscuitBox Field Summary
 
 - `size`: Defines the size of the box.
+
 - `textureUrl`: Defines the texture used for the box.
+
 - `mass`: Defines the mass of the box in kg.
 
 ### CerealBox
@@ -61,7 +63,9 @@ CerealBox {
 #### CerealBox Field Summary
 
 - `size`: Defines the size of the box.
+
 - `textureUrl`: Defines the texture used for the box.
+
 - `mass`: Defines the mass of the box in kg.
 
 ### HoneyJar
@@ -92,7 +96,9 @@ HoneyJar {
 #### HoneyJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
+
 - `mass`: Defines the mass of the jar in kg.
+
 - `color`: Defines the color of the jar.
 
 ### JamJar
@@ -122,6 +128,7 @@ JamJar {
 #### JamJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
+
 - `mass`: Defines the mass of the jar in kg.
 
 ## Components
@@ -208,7 +215,9 @@ Worktop {
 #### Worktop Field Summary
 
 - `size`: Defines the size of the worktop.
+
 - `textureUrl`: Defines the texture used for the worktop.
+
 - `tileSize`: Defines the size of texture used for the worktop.
 
 ## Fridge
@@ -242,8 +251,11 @@ Fridge {
 #### Fridge Field Summary
 
 - `mainColor`: Defines the color of the fridge.
+
 - `mainTextureUrl`: Defines the texture used for the fridge.
+
 - `doorColor`: Defines the color of the door of the fridge.
+
 - `doorTextureUrl`: Defines the texture used for the door of the fridge.
 
 ## Oven
@@ -277,8 +289,11 @@ Oven {
 #### Oven Field Summary
 
 - `mainColor`: Defines the color of the oven.
+
 - `mainTextureUrl`: Defines the texture used for the oven.
+
 - `doorColor`: Defines the color of the door of the oven.
+
 - `doorTextureUrl`: Defines the texture used for the door of the oven.
 
 ## Utensils
@@ -337,6 +352,7 @@ Cookware {
 #### Cookware Field Summary
 
 - `color`: Defines the color of the cookware.
+
 - `mass`: Defines the mass of the cookware in kg.
 
 ### Fork
@@ -447,6 +463,7 @@ Lid {
 #### Lid Field Summary
 
 - `color`: Defines the color of the lid.
+
 - `mass`: Defines the mass of the lid in kg.
 
 ### Plate
@@ -478,8 +495,11 @@ Plate {
 #### Plate Field Summary
 
 - `textureUrl`: Defines the textures used for of the plate.
+
 - `height`: Defines the height of the plate.
+
 - `radius`: Defines the radius of the plate.
+
 - `mass`: Defines the mass of the plate in kg.
 
 ### Spoon
@@ -509,6 +529,7 @@ Spoon {
 #### Spoon Field Summary
 
 - `color`: Defines the color of the spoon.
+
 - `type`: Defines the type of spoon. The value should be either `table` or `tea`.
 
 ### Wineglass

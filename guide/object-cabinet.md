@@ -63,13 +63,21 @@ Cabinet {
 ### Cabinet Field Summary
 
 - `depth`: Defines the depth of the cabinet.
+
 - `innerThickness`: Defines the inner thickness of the cabinet frame.
+
 - `outerThickness`: Defines the outer thickness of the cabinet frame.
+
 - `rowsHeights`: Defines the height of the cabinet rows.
+
 - `columnsWidths`: Defines the width of the cabinet columns.
+
 - `layout`: Defines the layout of the cabinet.
+
 - `handle`: Defines the handle of the cabinet.
+
 - `mainTextureUrl`: Defines the primary texture.
+
 - `objectTextureUrl`: Defines the secondary texture.
 
 ## CabinetHandle
@@ -101,7 +109,10 @@ CabinetHandle {
 ### CabinetHandle Field Summary
 
 - `handleLength`: Defines the lenght of the handle.
+
 - `handleRadius`: Defines the radius of the handle.
+
 - `handleColor`: Defines the color of the handle.
+
 - `mass`: Defines the mass of the handle.
 

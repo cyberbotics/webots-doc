@@ -34,13 +34,21 @@ StraightStairs {
 ### StraightStairs Field Summary
 
 - `stepSize`: Defines the size of one step.
+
 - `stepRise`: Defines the height difference between tewo consecutives steps.
+
 - `nSteps`: Defines the number of steps.
+
 - `stepAppearance`: Defines the appearance of the steps.
+
 - `stringerAppearance`: Defines the appearance of the stringers.
+
 - `leftRail`: Defines the left rail.
+
 - `rightRail`: Defines the right rail.
+
 - `startingStairs`: Defines whether the bottom part of the stairs should be flat.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## StraightStairsLanding
@@ -79,15 +87,25 @@ StraightStairsLanding {
 ### StraightStairsLanding Field Summary
 
 - `landingSize`: Defines the size of the landing.
+
 - `height`: Defines the height of the landing.
+
 - `stringerSize`: Defines the height and width stringer.
+
 - `stringerLeft`: Defines whether the left part of the stringer should be included.
+
 - `stringerRight`: Defines whether the right part of the stringer should be included.
+
 - `stringerBack`: Defines whether the back part of the stringer should be included.
+
 - `supportPoleSize`: Defines the size of the support poles.
+
 - `appearance`: Defines the main appearance.
+
 - `floorAppearance`: Defines the floor appearance.
+
 - `rail`: Defines the rail.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## StraightStairsRail
@@ -124,12 +142,20 @@ StraightStairsRail {
 ### StraightStairsRail Field Summary
 
 - `run`: Defines the horizontal lenght of the rail.
+
 - `rise`: Defines the vertical lenght of the rail.
+
 - `width`: Defines the width of the rail.
+
 - `newelHeight`: Defines the height of the top bar.
+
 - `balusterHeight`: Defines the height of the balusters.
+
 - `balusterRadius`: Defines the radius of the balusters.
+
 - `nBalusters`: Defines the number of balusters.
+
 - `appearance`: Defines the appearance of the rail.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 

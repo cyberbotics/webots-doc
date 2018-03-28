@@ -32,11 +32,17 @@ BunchOfSunFlowers {
 ### BunchOfSunFlowers Field Summary
 
 - `potAndSteamsColor`: Defines the color of the pot and the steams.
+
 - `potAndSteamsTextureUrl`: Defines the textures used for the pot and the steams.
+
 - `flowerColor`: Defines the color of the flowers.
+
 - `flowerTextureUrl`: Defines the textures used for the flowers.
+
 - `leavesColor`: Defines the color of the leaves.
+
 - `leavesTextureUrl`: Defines the textures used for the leaves.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## PottedTree
@@ -69,8 +75,12 @@ PottedTree {
 ### PottedTree Field Summary
 
 - `potAndTreeColor`: Defines the color of the pot and the three.
+
 - `potAndTreeTextureUrl`: Defines the textures used for of the pot and the three.
+
 - `leavesColor`: Defines the color of the leaves.
+
 - `leavesTextureUrl`: Defines the textures used for of the leaves.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 

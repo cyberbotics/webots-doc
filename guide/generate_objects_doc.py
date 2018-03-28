@@ -157,10 +157,9 @@ for proto in prioritaryProtoList + fileList:
                 match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldDescription)
                 if match:
                     parentNodeType = match.group(1)
-                    file.write('- `%s`: Inherited from [%s](../reference/%s.md) node.\n' % (fieldName, parentNodeType, parentNodeType.lower()))
+                    file.write('- `%s`: Inherited from [%s](../reference/%s.md) node.\n\n' % (fieldName, parentNodeType, parentNodeType.lower()))
                 else:
-                    file.write('- `%s`: %s\n' % (fieldName, fieldDescription))
-            file.write('\n')
+                    file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
     if upperCategory not in upperCategories:
         upperCategories[upperCategory] = []

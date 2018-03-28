@@ -33,9 +33,13 @@ SolidBox {
 ### SolidBox Field Summary
 
 - `size`: Defines the size of the box.
+
 - `subdivision`: Defines the number of polygons used to represent the box and so its resolution.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 - `appearance`: Defines the appearance of the box.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SolidPipe
@@ -74,12 +78,19 @@ SolidPipe {
 ### SolidPipe Field Summary
 
 - `height`: Defines the height of the pipe.
+
 - `radius`: Defines the radius of the pipe.
+
 - `thickness`: Defines the thickness of the pipe.
+
 - `subdivision`: Defines the number of polygons used to represent the pipe and so its resolution.
+
 - `accuracy`: Defines how much boxes position can differ on y axis: a 0 value represents an error-free model but it will slow down the simulation.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 - `appearance`: Defines the appearance of the box.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SolidRoundedBox
@@ -114,10 +125,15 @@ SolidRoundedBox {
 ### SolidRoundedBox Field Summary
 
 - `size`: Defines the size of the box.
+
 - `borderRadius`: Defines the radius of the box borders.
+
 - `subdivision`: Defines the number of polygons used to represent the box and so its resolution.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 - `appearance`: Defines the appearance of the box.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SolidTorus
@@ -153,9 +169,14 @@ SolidTorus {
 ### SolidTorus Field Summary
 
 - `majorRadius`: Defines the major radius of the torus.
+
 - `minorRadius`: Defines the minor radius of the torus.
+
 - `subdivision`: Defines the number of polygons used to represent the torus and so its resolution.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
+
 - `appearance`: Defines the appearance of the torus.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 

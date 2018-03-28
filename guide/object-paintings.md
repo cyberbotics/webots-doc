@@ -27,6 +27,7 @@ LandscapePainting {
 ### LandscapePainting Field Summary
 
 - `color`: Defines the color of the painting.
+
 - `textureUrl`: Defines the texure used for the painting.
 
 ## PortraitPainting
@@ -56,5 +57,6 @@ PortraitPainting {
 ### PortraitPainting Field Summary
 
 - `color`: Defines the color of the painting.
+
 - `textureUrl`: Defines the texure used for the painting.
 

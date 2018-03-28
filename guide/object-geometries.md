@@ -34,15 +34,25 @@ Extrusion {
 ### Extrusion Field Summary
 
 - `crossSection`: Defines the 2D cross-section of the extrusion.
+
 - `spine`: Defines the 3D extrusion path.
+
 - `scale`: Defines the scale at each point of the spine.
+
 - `orientation`: Defines the orientation of the cross-section at each point of the spine.
+
 - `beginCap`: Defines whether the extrusion should have a cap at the begining.
+
 - `endCap`: Defines whether the extrusion should have a cap at the end.
+
 - `ccw`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
+
 - `solid`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
+
 - `convex`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
+
 - `creaseAngle`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
+
 - `splineSubdivision`: If bigger than 1, defines the B-Spline subdivion of the extrusion along it's path.
 
 ## TexturedBox
@@ -84,12 +94,19 @@ TexturedBox {
 ### TexturedBox Field Summary
 
 - `size`: Defines the size of the box.
+
 - `mapping`: Defines the texture mapping.
+
 - `front`: Defines whether the front face should be included.
+
 - `back`: Defines whether the back face should be included.
+
 - `left`: Defines whether the left face should be included.
+
 - `right`: Defines whether the right face should be included.
+
 - `top`: Defines whether the top face should be included.
+
 - `bottom`: Defines whether the bottom face should be included.
 
 ## TexturedParallelepiped
@@ -136,12 +153,20 @@ TexturedParallelepiped {
 ### TexturedParallelepiped Field Summary
 
 - `size`: Defines the size of the parallelepiped.
+
 - `angles`: Defines the angles of the parallelepiped.
+
 - `mapping`: Defines the texture mapping.
+
 - `front`: Defines whether the front face should be included.
+
 - `back`: Defines whether the back face should be included.
+
 - `left`: Defines whether the left face should be included.
+
 - `right`: Defines whether the right face should be included.
+
 - `top`: Defines whether the top face should be included.
+
 - `bottom`: Defines whether the bottom face should be included.
 

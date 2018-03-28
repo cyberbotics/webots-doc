@@ -28,7 +28,9 @@ Bench {
 ### Bench Field Summary
 
 - `metalColor`: Defines the color of the metalic part.
+
 - `woodColor`: Defines the color of the wooden part.
+
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## BusStop
@@ -63,9 +65,13 @@ BusStop {
 ### BusStop Field Summary
 
 - `bench`: Defines whether the bust stop should include a bench.
+
 - `appearance`: Defines the appearance of the bench.
+
 - `internalAdvertisingTexture`: Defines the texture used for the internal advertising.
+
 - `externalAdvertisingTexture`: Defines the texture used for the external advertising.
+
 - `advertisingLightOn`: Defines whether the advertising should have an emissive color.
 
 ## EmergencyPhone
@@ -95,6 +101,7 @@ EmergencyPhone {
 ### EmergencyPhone Field Summary
 
 - `poleColor`: Defines the color of the pole.
+
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Fence
@@ -136,16 +143,27 @@ Fence {
 ### Fence Field Summary
 
 - `height`: Defines the height of the fence.
+
 - `poleGap`: Defines the distance between two consecutives poles.
+
 - `poleRadius`: Defines the radius of the poles.
+
 - `poleShape`: Defines the shape of the poles. The value should be either `cylinder`, `square`, `diamond` or `H`.
+
 - `poleAppearance`: Defines the appearance of the poles.
+
 - `path`: Defines the 3D path of the fence.
+
 - `subdivision`: Defines the degree of interpolation using B-Splines (if the value is lower than 0, the interpolation is disabled).
+
 - `horizontalBarsNumber`: Defines the number of horizontal bars.
+
 - `horizontalBarShape`: Defines the shape 2D of the horizontal bars.
+
 - `horizontalBarAppearance`: Defines the appearance of the horizontal bars.
+
 - `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
+
 - `appearance`: For backward compatibility warning.
 
 ## FireHydrant
@@ -203,7 +221,9 @@ Fountain {
 ### Fountain Field Summary
 
 - `height`: Defines the height of the fountain.
+
 - `radius`: Defines the radius of the fountain.
+
 - `sudivision`: Defines subdivision of the fountain cylinders.
 
 ## PublicBin
@@ -233,6 +253,7 @@ PublicBin {
 ### PublicBin Field Summary
 
 - `color`: Defines the color of the bin.
+
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## PublicToilet
@@ -282,17 +303,29 @@ PublicToilet {
 ### PublicToilet Field Summary
 
 - `height`: Defines the height of the toilet.
+
 - `length`: Defines the lenght of the toilet.
+
 - `width`: Defines the wdith of the toilet.
+
 - `mainColor`: Defines the primary color of the toilet.
+
 - `secondaryColor`: Defines the secondary color of the toilet.
+
 - `mainTopColor`: Defines the primary color of the top part of the toilet.
+
 - `secondaryTopColor`: Defines the secondary color of the top part of the toilet.
+
 - `windowColor`: Defines the color of the windows of the toilet.
+
 - `text`: Defines the text displayed on the toilet.
+
 - `textScale`: Defines the scale of the text displayed on the toilet.
+
 - `backDisplayTexture`: Defines the texture used on the back display.
+
 - `backDisplayLight`: Defines whether the back display should have emissive color.
+
 - `frontDisplay`: Defines the content of the front display.
 
 ## TrashBin
@@ -323,6 +356,8 @@ TrashBin {
 ### TrashBin Field Summary
 
 - `coverColor`: Defines the color of the top part of the bin.
+
 - `binColor`: Defines the main color of the bin.
+
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 

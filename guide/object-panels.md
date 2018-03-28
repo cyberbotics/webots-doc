@@ -31,10 +31,15 @@ Panel {
 ### Panel Field Summary
 
 - `size`: Defines the size of the panel
+
 - `borderHeight`: Defines the height of the border.
+
 - `internalWidth`: Defines the width of the panel (without border).
+
 - `panelsCount`: Defines the number of panels.
+
 - `appearance`: Defines the appearance of the panel body.
+
 - `borderAppearance`: Defines the appearance of the panel norder.
 
 ## PannelWithTubes

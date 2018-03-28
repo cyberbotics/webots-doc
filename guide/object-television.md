@@ -30,8 +30,12 @@ Television {
 ### Television Field Summary
 
 - `color`: Defines the color of the television.
+
 - `textureUrl`: Defines the texture used for the television.
+
 - `displayWidth`: Defines the width of the internal Display device.
+
 - `displayHeight`: Defines the height of the internal Display device.
+
 - `controller`: Defines the controller used to display images using the internal Display device.
 

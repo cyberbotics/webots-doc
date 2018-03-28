@@ -28,7 +28,9 @@ Armchair {
 ### Armchair Field Summary
 
 - `color`: Defines the color of the armchair.
+
 - `textureUrl`: Defines the texture used for the armchair.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Carpet
@@ -58,6 +60,7 @@ Carpet {
 ### Carpet Field Summary
 
 - `color`: Defines the color of the carpet.
+
 - `textureUrl`: Defines the texture used for the armchair.
 
 ## Sofa
@@ -88,6 +91,8 @@ Sofa {
 ### Sofa Field Summary
 
 - `color`: Defines the color of the sofa.
+
 - `textureUrl`: Defines the texture used for eh sofa.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 

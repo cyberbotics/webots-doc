@@ -49,14 +49,23 @@ Forest {
 ### Forest Field Summary
 
 - `treesFiles`: Can be used to define the paths to several files in which are defined the positions of the trees (one tree per line, using the format 'X Y Z').
+
 - `shape`: Alternatively, the position of each trees can be defined using the shape field. This field defines the shape of the forest, in that case the position of the trees is randomly generated from this shape.
+
 - `density`: If the forest is defined using the `shape` field, this field defines the density of three to be generated (in trees per meter square).
+
 - `type`: Defines the type of threes, in case of `random` type, the forest will be mixed.
+
 - `groundTexture`: Defines the texture of the forest ground. If this field is empty the forest ground is not displayed.
+
 - `withSnow`: Defines whether the texture used should have snow on top.
+
 - `maxHeight`: Defines the maximum height of the trees.
+
 - `minHeight`: Defines the minimum height of the trees.
+
 - `maxRadius`: Defines the maximum radius of the trees.
+
 - `minRadius`: Defines the minimum radius of the trees.
 
 ## RoundTree
@@ -125,12 +134,19 @@ SimpleTree {
 ### SimpleTree Field Summary
 
 - `name`: Defines the name of the tree.
+
 - `type`: Defines the texture to be used. If set to random, a type will be randomly selected in the list.
+
 - `withSnow`: Defines if the texture used should have snow on top.
+
 - `height`: Defines the height of the tree.
+
 - `radius`: Defines the radius of the tree.
+
 - `subdivision`: Defines the number of faces used to represent the tree.
+
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Tree
@@ -164,8 +180,12 @@ Tree {
 ### Tree Field Summary
 
 - `name`: Defines the name of the tree.
+
 - `scale`: The first and last components of the scale define the radius of the tree and the middle one defines it's height.
+
 - `texture`: Defines the texture used for the tree.
+
 - `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 

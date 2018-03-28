@@ -29,8 +29,11 @@ OilBarrel {
 ### OilBarrel Field Summary
 
 - `height`: Defines the height of the barrel.
+
 - `radius`: Defines the radius of the barrel.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
+
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Ramp30deg
@@ -89,5 +92,6 @@ ThreeSteps {
 ### ThreeSteps Field Summary
 
 - `increment`: Defines the translation between each step.
+
 - `color`: Deines the color of the steps.
 

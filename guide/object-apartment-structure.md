@@ -31,9 +31,13 @@ Ceiling {
 ### Ceiling Field Summary
 
 - `size`: Defines the size of the ceiling.
+
 - `scale`: Defines the scale of the texture used for the ceiling.
+
 - `texture`: Defines the texture used for the ceiling.
+
 - `filtering`: Defines the filtering level for the texture used for the ceiling.
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Door
@@ -78,19 +82,33 @@ Door {
 ### Door Field Summary
 
 - `size`: Defines the width, height and thickness of the door wall frame.
+
 - `canBeOpen`: Defines whether the door is connected to the frame throught a hinge-joint.
+
 - `jointAtLeft`: Defines on which side the door is connected to the frame.
+
 - `selfClosing`: Defines whether the door as a spring effect that makes it closing on itself.
+
 - `doorThickness`: Defines the thickness of the door.
+
 - `frameHeight`: Defines the height of the door frame. It should be must be less than or equal to `size.y`.
+
 - `frameSize`: Defines the size of the door frame.
+
 - `mainMaterialDensity`: Defines the density of the door.
+
 - `doorTextureUrl`: Defines the door texture.
+
 - `wallTextureUrl`: Defines the wall texture.
+
 - `wallTileSize`: Defines the wall texture size.
+
 - `wallTextureTranslation`: Defines the wall texture translation.
+
 - `topWallColor`: Defines the color of the wall above the door.
+
 - `frameTextureUrl`: Defines the color of the door frame.
+
 - `doorHandle`: Defines an optional door handle.
 
 ## DoorKnob
@@ -124,9 +142,13 @@ DoorKnob {
 ### DoorKnob Field Summary
 
 - `doorThickness`: Defines the thickness of the door.
+
 - `handleRadius`: Defines the radius of the handle.
+
 - `distanceFromDoor`: Defines the distance between the handle and the door.
+
 - `appearance`: Defines the appearance of the handle.
+
 - `mass`: Defines the mass of the handle.
 
 ## DoorLever
@@ -164,13 +186,21 @@ DoorLever {
 ### DoorLever Field Summary
 
 - `canTurn`: Defines whether the lever is connected to the door using a hinge-joint.
+
 - `jointAtLeft`: Defines on which side is the lever.
+
 - `doorThickness`: Defines the thickness of the door.
+
 - `handleThickness`: Defines the thickness of the handle.
+
 - `handleLength`: Defines the length of the handle.
+
 - `distanceFromDoor`: Defines the distance between the handle and the door.
+
 - `appearance`: Defines the appearance of the lever.
+
 - `mass`: Defines the mass of the lever.
+
 - `hasStaticParent`: Defines whether the parent door has physics or not.
 
 ## Wall
@@ -205,9 +235,13 @@ Wall {
 ### Wall Field Summary
 
 - `size`: Defines the size of the wall.
+
 - `wallTextureUrl`: Defines the texture used for the wall.
+
 - `wallTileSize`: Defines the size of the texture used for the wall.
+
 - `wallTextureTranslation`: Defines the translation of the texture used for the wall.
+
 - `topWallColor`: Defines the color of the top face of the wall.
 
 ## Window
@@ -248,14 +282,24 @@ Window {
 ### Window Field Summary
 
 - `size`: Defines the size of the window.
+
 - `windowThickness`: Defines the thickness of the window.
+
 - `bottomWallHeight`: Defines the height of the top wall.
+
 - `windowHeight`: Defines the height of the window.
+
 - `frameSize`: Defines the size of the window frame.
+
 - `windowSillSize`: Defines the size of the sill below the window.
+
 - `wallTextureUrl`: Defines the textures used for the wall.
+
 - `wallTileSize`: Defines the size of textures used for the wall.
+
 - `wallTextureTranslation`: Defines the translation of textures used for the wall.
+
 - `topWallColor`: Defines the color of the top wall.
+
 - `frameTextureUrl`: Defines the texture of the window frame.
 

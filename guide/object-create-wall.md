@@ -29,7 +29,10 @@ CreateWall {
 ### CreateWall Field Summary
 
 - `range`: Defines the range of the infra-red emitter.
+
 - `aperture`: Defines the aperture of the infra-red emitter.
+
 - `controller`: Defines the controller which is used to emit infra-red messages.
+
 - `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
 

@@ -84,20 +84,35 @@ Building {
 ### Building Field Summary
 
 - `name`: Defines the name of the building
+
 - `floorHeight`: Defines the height of one floor.
+
 - `floorNumber`: Defines the number of floors (excluding roof).
+
 - `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
+
 - `corners`: Defines the 2D geometry of the building (2D ground footprint of the building).
+
 - `wallAppearance`: Defines the appearance used for the walls of the building.
+
 - `groundFloor`: Defines the texture to be used for the first floor (optional).
+
 - `groundFloorScale`: Defines the horizontal scale of the ground texture.
+
 - `groundFloorTranslation`: Defines the translation of the ground floor textures.
+
 - `roofAppearance`: Defines the appearance used for the roof of the building.
+
 - `roofShape`: Defines the geometry of the roof. Supported geometry are `flat roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
+
 - `roofHeight`: Defines the height of the roof (used only in the case of pyramidal roof).
+
 - `enableBoundingObject`: Defines whether the building should have a bounding object.
+
 - `bottom`: Defines whether the bottom face of the building should be displayed.
+
 - `model`: Inherited from [Solid](../reference/solid.md) node.
+
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## BuildingUnderConstruction
@@ -156,11 +171,17 @@ BungalowStyleHouse {
 ### BungalowStyleHouse Field Summary
 
 - `fence`: Defines whether the house has a fence or not.
+
 - `floor`: Defines whether the house is surelevated or not.
+
 - `chimney`: Defines whether the house has a chimney or not.
+
 - `enableBoundingObject`: Defines whether to enable the bounding object or not.
+
 - `appearance`: Defines the appearance of the wall.
+
 - `floorAppearance`: Defines the appearance of the floor.
+
 - `fenceAppearance`: Defines the appearance of the fence.
 
 ## CommercialBuilding
@@ -242,9 +263,13 @@ FastFoodRestaurant {
 ### FastFoodRestaurant Field Summary
 
 - `height`: Defines the height of the building.
+
 - `length`: Defines the length of the building.
+
 - `width`: Defines the width of the building.
+
 - `brand`: Defines the brand of the restaurant.
+
 - `numberOfSides`: Defines whether it is a two sided restaurant.
 
 ## HollowBuilding
@@ -321,7 +346,9 @@ ModernHouse {
 ### ModernHouse Field Summary
 
 - `enableBoundingObject`: Defines whether to enable the bounding object or not.
+
 - `appearance`: Defines the wall appearance.
+
 - `windowAppearance`: Defines the windows appearance.
 
 ## Museum
@@ -448,20 +475,35 @@ SimpleBuilding {
 ### SimpleBuilding Field Summary
 
 - `floorHeight`: Defines the height of one floor.
+
 - `floorNumber`: Defines the number of floors (excluding roof).
+
 - `startingFloor`: Defines the floor number for the "ground floor" of the building, as not all buildings start at the ground floor.
+
 - `corners`: Defines the 2D geometry of the building (2D ground footprint of the building).
+
 - `wallType`: Defines the wall type.
+
 - `wallColor`: Defines the wall color.
+
 - `groundFloor`: Defines the texture to be used for the first floor (optional).
+
 - `groundFloorScale`: Defines the horizontal scale of the ground texture.
+
 - `groundFloorTranslation`: Defines the translation of the ground floor textures.
+
 - `roofType`: Defines roof type.
+
 - `roofColor`: Defines the roof color.
+
 - `roofShape`: Defines the geometry of the roof. Supported geometry are `flat roof`, `pyramidal roof`, `gabled roof` and `hipped roof`.
+
 - `snowOnRoof`: Defines whether the texture with or without snow should be used.
+
 - `roofHeight`: Defines the height of the roof.
+
 - `enableBoundingObject`: Defines whether the building should have a bounding object or not.
+
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
 ## SimpleTwoFloorsHouse
@@ -493,6 +535,7 @@ SimpleTwoFloorsHouse {
 ### SimpleTwoFloorsHouse Field Summary
 
 - `enableBoundingObject`: Defines whether to enable the bounding object.
+
 - `appearance`: Defines the house appearance.
 
 ## TheThreeTowers

@@ -30,8 +30,11 @@ CardboardBox {
 #### CardboardBox Field Summary
 
 - `name`: Defines the texture used for the cardboard box.
+
 - `size`: Defines the size of the cardboard box.
+
 - `mass`: Defines the mass of the cardboard box in kg. A value smaller or equal to 0 remove the physics of the cardboard box.
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ### WoodenBox
@@ -63,8 +66,11 @@ WoodenBox {
 #### WoodenBox Field Summary
 
 - `size`: Defines the size of the wooden box.
+
 - `mass`: Defines the mass of the wooden box in kg. A value smaller or equal to 0 remove the physics of the wooden box.
+
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Pallet
@@ -100,10 +106,15 @@ WoodenPallet {
 #### WoodenPallet Field Summary
 
 - `size`: Defines the size of the pallet.
+
 - `lathNumber`: Defines the number of lath of the pallet.
+
 - `lathWidth`: Defines the width of one lath.
+
 - `mass`: Defines the mass of the pallet in kg. A value smaller or equal to 0 remove the physics of the pallet.
+
 - `boundingObject`: Defines whether the bounding object should be enabled.
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ### WoodenPalletStack
@@ -140,13 +151,21 @@ WoodenPalletStack {
 #### WoodenPalletStack Field Summary
 
 - `palletNumber`: Defines the number of pallet in the stack (vertically).
+
 - `palletSize`: Defines the size of one pallet.
+
 - `palletLathNumber`: Defines the number of lath of each pallet.s
+
 - `palletLathWidth`: Defines the width of the pallet laths.
+
 - `lateralMisalignment`: Defines the maximum lateral misalignment between two pallets.
+
 - `longitudinalMisalignment`: Defines the maximum longitudinal misalignment between two pallets.
+
 - `palletMass`: Defines the mass of one pallet in kg. A value smaller or equal to 0 remove the physics of the stack.
+
 - `boundingObject`: Defines whether the bounding object should be enabled.
+
 - `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Pipes
@@ -202,7 +221,9 @@ PipeSection {
 #### PipeSection Field Summary
 
 - `height`: Defines the height of the pipe.
+
 - `radius`: Defines the radius of the pipe.
+
 - `subdivision`: Defines the number of polygons used to represent the pipe cylinder and so its resolution.
 
 ### TJoint
@@ -365,6 +386,7 @@ PlatformCart {
 #### PlatformCart Field Summary
 
 - `slot`: Extends the cart with new nodes in the slot.
+
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ### Screwdriver
@@ -452,8 +474,11 @@ LargeValve {
 #### LargeValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
+
 - `controller`: Defines the controller of the valve which is used to limit its rotation.
+
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
+
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### LeverValve
@@ -512,6 +537,8 @@ SmallValve {
 #### SmallValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
+
 - `controller`: Defines the controller of the valve which is used to limit its rotation.
+
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
 

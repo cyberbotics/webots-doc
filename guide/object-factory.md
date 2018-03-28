@@ -264,8 +264,6 @@ Bolt {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Bolt.proto"
 
-#### Bolt Field Summary
-
 ### Hammer
 
 A 25cm asymmetric club hammer.
@@ -288,8 +286,6 @@ Hammer {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
-
-#### Hammer Field Summary
 
 ### Nut
 
@@ -314,8 +310,6 @@ Nut {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Nut.proto"
 
-#### Nut Field Summary
-
 ### PaintBucket
 
 A 4kg bucket of paint, with HingeJoint-based handle.
@@ -338,8 +332,6 @@ PaintBucket {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
-
-#### PaintBucket Field Summary
 
 ### PlatformCart
 
@@ -392,8 +384,6 @@ Screwdriver {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Screwdriver.proto"
 
-#### Screwdriver Field Summary
-
 ### Wrench
 
 A 15cm Open-End wrench.
@@ -416,8 +406,6 @@ Wrench {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
-
-#### Wrench Field Summary
 
 ## Valves
 

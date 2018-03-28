@@ -82,7 +82,10 @@ for proto in prioritaryProtoList + fileList:
                         fieldName = match.group(2)
                         fieldDefaultValue = match.group(3)
                         fieldComment = match.group(4).strip()
-                        describedField.append((fieldName, fieldComment))
+                        # skype 'Is `NodeType.fieldName`.' descriptions
+                        match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment)
+                        if not match:
+                            describedField.append((fieldName, fieldComment))
                     fieldLine = line.replace('field ', '').split('#')[0].rstrip()
                     if 'hiddenField' not in fieldLine:
                         fields += fieldLine + '\n'
@@ -153,10 +156,7 @@ for proto in prioritaryProtoList + fileList:
         if describedField:
             file.write(headerPrefix + '## %s Field Summary\n\n' % protoName)
             for fieldName, fieldDescription in describedField:
-                # skype 'Is `NodeType.fieldName`.' descriptions
-                match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldDescription)
-                if not match:
-                    file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
+                file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
     if upperCategory not in upperCategories:
         upperCategories[upperCategory] = []

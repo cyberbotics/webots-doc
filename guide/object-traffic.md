@@ -882,8 +882,6 @@ TrafficCone {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficCone.proto"
 
-### TrafficCone Field Summary
-
 ## TrafficLight
 
 Basic traffic light without lamp.

@@ -4,13 +4,13 @@
 
 A configurable standard ceiling.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Ceiling](images/objects/apartment_structure/Ceiling/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Ceiling {
@@ -46,13 +46,13 @@ A cutomizable openable door.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
 'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Door](images/objects/apartment_structure/Door/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Door {
@@ -116,13 +116,13 @@ Door {
 A door knob.
 This object can be used in the 'doorHandle' field of the Door object.
 
-Derived from [Slot](../reference/slot.md).
-
 %figure
 
 ![DoorKnob](images/objects/apartment_structure/DoorKnob/model.png)
 
 %end
+
+Derived from [Slot](../reference/slot.md).
 
 ```
 DoorKnob {
@@ -156,13 +156,13 @@ DoorKnob {
 A door lever.
 This object can be used in the 'doorHandle' field of the Door object.
 
-Derived from [Slot](../reference/slot.md).
-
 %figure
 
 ![DoorLever](images/objects/apartment_structure/DoorLever/model.png)
 
 %end
+
+Derived from [Slot](../reference/slot.md).
 
 ```
 DoorLever {
@@ -209,13 +209,13 @@ A customizable wall.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
 'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Wall](images/objects/apartment_structure/Wall/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Wall {
@@ -250,13 +250,13 @@ A customizable window including walls above and below.
 'wallTextureUrl', 'wallTileSize' and 'wallTextureTranslation' fields allows to specify the appearance of the wall.
 'topWallColor' field value specifies the uniform color that will be applied to the top and bottom faces of the wall.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Window](images/objects/apartment_structure/Window/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Window {

@@ -4,13 +4,13 @@
 
 A bench.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Bench](images/objects/street_furniture/Bench/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Bench {
@@ -39,13 +39,13 @@ Simple bus stop with customizable appearance and an optional bench.
 The original blender model was made by Ringbarkis ([http://www.blendswap.com/blends/view/66783](http://www.blendswap.com/blends/view/66783)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BusStop](images/objects/street_furniture/BusStop/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BusStop {
@@ -78,13 +78,13 @@ BusStop {
 
 An emergency phone.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![EmergencyPhone](images/objects/street_furniture/EmergencyPhone/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 EmergencyPhone {
@@ -111,13 +111,13 @@ Dimensions, path and appearance of the fence can be set.
 If subdivision is bigger than 1, B-Splines are used to interpolate path of the fence.
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Fence](images/objects/street_furniture/Fence/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Fence {
@@ -170,13 +170,13 @@ Fence {
 
 A fire hydrant.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![FireHydrant](images/objects/street_furniture/FireHydrant/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 FireHydrant {
@@ -197,13 +197,13 @@ FireHydrant {
 
 A configurable fountain.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Fountain](images/objects/street_furniture/Fountain/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Fountain {
@@ -230,13 +230,13 @@ Fountain {
 
 A public bin.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PublicBin](images/objects/street_furniture/PublicBin/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PublicBin {
@@ -260,13 +260,13 @@ PublicBin {
 
 Resizable public toilet with two different displays.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PublicToilet](images/objects/street_furniture/PublicToilet/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PublicToilet {
@@ -332,13 +332,13 @@ PublicToilet {
 
 A trash bin.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TrashBin](images/objects/street_furniture/TrashBin/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TrashBin {

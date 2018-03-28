@@ -4,13 +4,13 @@
 
 A classic auditoruim.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Auditorium](images/objects/buildings/Auditorium/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Auditorium {
@@ -26,13 +26,13 @@ Auditorium {
 
 A big glass tower.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BigGlassTower](images/objects/buildings/BigGlassTower/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BigGlassTower {
@@ -48,13 +48,13 @@ BigGlassTower {
 
 A customizable building, the size, appearance and geometry can fully be defined.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Building](images/objects/buildings/Building/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Building {
@@ -119,13 +119,13 @@ Building {
 
 Building under construction with scaffolding.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BuildingUnderConstruction](images/objects/buildings/BuildingUnderConstruction/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BuildingUnderConstruction {
@@ -143,13 +143,13 @@ A configurable bungalow style house.
 The original blender model was made by noenmaster ([http://www.blendswap.com/blends/view/66305](http://www.blendswap.com/blends/view/66305)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BungalowStyleHouse](images/objects/buildings/BungalowStyleHouse/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BungalowStyleHouse {
@@ -188,13 +188,13 @@ BungalowStyleHouse {
 
 A commercial building.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CommercialBuilding](images/objects/buildings/CommercialBuilding/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CommercialBuilding {
@@ -210,13 +210,13 @@ CommercialBuilding {
 
 The Cyberbotics tower.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CyberboticsTower](images/objects/buildings/CyberboticsTower/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CyberboticsTower {
@@ -237,13 +237,13 @@ Fast food restaurant that comes in 4 versions:
 - `momo`
 The building can be changed to a two sided restaurant using the 'numberOfSides' parameter.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![FastFoodRestaurant](images/objects/buildings/FastFoodRestaurant/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 FastFoodRestaurant {
@@ -276,13 +276,13 @@ FastFoodRestaurant {
 
 A hollow building.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![HollowBuilding](images/objects/buildings/HollowBuilding/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 HollowBuilding {
@@ -298,13 +298,13 @@ HollowBuilding {
 
 A big hotel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Hotel](images/objects/buildings/Hotel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Hotel {
@@ -322,13 +322,13 @@ A simple modern house.
 The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/65734](http://www.blendswap.com/blends/view/65734)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![ModernHouse](images/objects/buildings/ModernHouse/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 ModernHouse {
@@ -355,13 +355,13 @@ ModernHouse {
 
 An old museum.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Museum](images/objects/buildings/Museum/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Museum {
@@ -377,13 +377,13 @@ Museum {
 
 A residential building.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![ResidentialBuilding](images/objects/buildings/ResidentialBuilding/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 ResidentialBuilding {
@@ -438,13 +438,13 @@ Available roof types are:
 
 The roof shape can be either 'flat' or 'pyramidal' (in case of pyramidal roof it is possible to define the height).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SimpleBuilding](images/objects/buildings/SimpleBuilding/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SimpleBuilding {
@@ -512,13 +512,13 @@ A simple house with two floors.
 The original blender model was made by andreschneider ([http://www.blendswap.com/blends/view/59482](http://www.blendswap.com/blends/view/59482)).
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SimpleTwoFloorsHouse](images/objects/buildings/SimpleTwoFloorsHouse/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SimpleTwoFloorsHouse {
@@ -542,13 +542,13 @@ SimpleTwoFloorsHouse {
 
 A group of three towers.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TheThreeTowers](images/objects/buildings/TheThreeTowers/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TheThreeTowers {
@@ -564,13 +564,13 @@ TheThreeTowers {
 
 A building with a "U" form.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![UBuilding](images/objects/buildings/UBuilding/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 UBuilding {

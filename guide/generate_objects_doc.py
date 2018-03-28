@@ -125,15 +125,15 @@ for proto in prioritaryProtoList + fileList:
 
         file.write(description + '\n')
 
-        if baseType:
-            file.write('Derived from [%s](../reference/%s.md).\n\n' % (baseType, baseType.lower()))
-
         if os.path.isfile('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'):
             file.write('%figure\n\n')
             file.write('![%s](images/objects/%s/%s/model.png)\n\n' % (protoName, category, protoName))
             file.write('%end\n\n')
         else:
             sys.stderr.write('Please add a "%s" file.\n' % ('images' + os.sep + 'objects' + os.sep + category + os.sep + protoName + '/model.png'))
+
+        if baseType:
+            file.write('Derived from [%s](../reference/%s.md).\n\n' % (baseType, baseType.lower()))
 
         file.write('```\n')
         file.write('%s {\n' % protoName)

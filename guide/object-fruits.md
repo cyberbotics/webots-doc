@@ -4,13 +4,13 @@
 
 An apple (0.05 x 0.05 x 0.05 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Apple](images/objects/fruits/Apple/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Apple {
@@ -40,13 +40,13 @@ Apple {
 
 A fruit bowl (0.146 x 0.146 x 0.146 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![FruitBowl](images/objects/fruits/FruitBowl/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 FruitBowl {
@@ -73,13 +73,13 @@ FruitBowl {
 
 An orange (0.05 x 0.05 x 0.05 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Orange](images/objects/fruits/Orange/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Orange {

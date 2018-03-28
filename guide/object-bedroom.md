@@ -4,13 +4,13 @@
 
 Customizable bed with feet and one or 2 pillows.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Bed](images/objects/bedroom/Bed/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Bed {

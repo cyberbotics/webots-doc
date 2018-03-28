@@ -4,13 +4,13 @@
 
 A computer mouse.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![ComputerMouse](images/objects/computers/ComputerMouse/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 ComputerMouse {
@@ -37,13 +37,13 @@ ComputerMouse {
 
 A computer tower.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![DesktopComputer](images/objects/computers/DesktopComputer/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 DesktopComputer {
@@ -67,13 +67,13 @@ DesktopComputer {
 
 A computer keyboard.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Keyboard](images/objects/computers/Keyboard/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Keyboard {
@@ -97,13 +97,13 @@ Keyboard {
 
 A simple laptop.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Laptop](images/objects/computers/Laptop/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Laptop {
@@ -124,13 +124,13 @@ Laptop {
 
 A computer monitor.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Monitor](images/objects/computers/Monitor/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Monitor {

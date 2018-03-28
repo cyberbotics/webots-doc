@@ -4,13 +4,13 @@
 
 A chair (0.5 x 1 x 0.5 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Chair](images/objects/chairs/Chair/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Chair {
@@ -38,13 +38,13 @@ Chair {
 A simple two-colors chair with a customizable mass, but a fixed height of 1.25 meter.
 This object is physics-enabled so it can be pushed.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SimpleChair](images/objects/chairs/SimpleChair/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SimpleChair {
@@ -71,13 +71,13 @@ SimpleChair {
 
 A wooden chair (0.42 x 0.944 x 0.44 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![WoodenChair](images/objects/chairs/WoodenChair/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 WoodenChair {

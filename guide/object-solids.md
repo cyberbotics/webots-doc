@@ -7,13 +7,13 @@ The box has similar properties as the VRML Box node in term of axis and fields.
 The UV-mapping is defined in a metric way (the textures are not deformed - the reference is the longest edge).
 The subdivision field allows to divide the faces into multiple quads (useful mainly for simple renderings).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SolidBox](images/objects/solids/SolidBox/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SolidBox {
@@ -49,13 +49,13 @@ Graphically, the SolidPipe is an IndexedFaceSet.
 Physically, the SolidPipe is a set of N boxes, where N is the subdivision field.
 The 'accuracy' field defines how much boxes position can differ on y axis: a 0 value represents an error-free model but it will slow down the simulation.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SolidPipe](images/objects/solids/SolidPipe/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SolidPipe {
@@ -98,13 +98,13 @@ SolidPipe {
 A box object with rounded corners and edges implemented at the Solid-node level.
 The box has similar properties as the VRML Box node in term of axis and fields.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SolidRoundedBox](images/objects/solids/SolidRoundedBox/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SolidRoundedBox {
@@ -142,13 +142,13 @@ A torus object implemented at the Solid-node level.
 Graphically, the SolidTorus is defined as an IndexedFaceSet.
 Physically, the SolidTorus is defined as a set of N spheres, where N is the subdivision field.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SolidTorus](images/objects/solids/SolidTorus/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SolidTorus {

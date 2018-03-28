@@ -5,13 +5,13 @@
 Double sided and adjustable advertising board with the possibility of adding up to four poles.
 Those poles can either be a `cylinder`, `box`, or a `H-shape`.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![AdvertisingBoard](images/objects/advertising_board/AdvertisingBoard/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 AdvertisingBoard {

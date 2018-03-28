@@ -4,13 +4,13 @@
 
 Traffic panel: Caution panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CautionPanel](images/objects/traffic/CautionPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CautionPanel {
@@ -37,13 +37,13 @@ CautionPanel {
 
 Traffic sign: Caution sign.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CautionSign](images/objects/traffic/CautionSign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CautionSign {
@@ -73,13 +73,13 @@ CautionSign {
 
 Simple model of a controlled street light including a customizable SpotLight.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![ControlledStreetLight](images/objects/traffic/ControlledStreetLight/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 ControlledStreetLight {
@@ -120,13 +120,13 @@ ControlledStreetLight {
 
 Four roads crossing traffic light.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![CrossRoadsTrafficLight](images/objects/traffic/CrossRoadsTrafficLight/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 CrossRoadsTrafficLight {
@@ -166,13 +166,13 @@ List of supported fonts:
 - 'Verdana'
 Alternatively it is possible to add other *.ttf files in the PROJECT\_HOME/fonts directory.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![DirectionPanel](images/objects/traffic/DirectionPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 DirectionPanel {
@@ -223,13 +223,13 @@ DirectionPanel {
 
 A divergent indicator block.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![DivergentIndicator](images/objects/traffic/DivergentIndicator/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 DivergentIndicator {
@@ -259,13 +259,13 @@ DivergentIndicator {
 
 Traffic panel: Exit panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![ExitPanel](images/objects/traffic/ExitPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 ExitPanel {
@@ -292,13 +292,13 @@ ExitPanel {
 
 Traffic sign: Exit sign.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![ExitSign](images/objects/traffic/ExitSign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 ExitSign {
@@ -328,13 +328,13 @@ ExitSign {
 
 A generic traffic light with configurable timming.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![GenericTrafficLight](images/objects/traffic/GenericTrafficLight/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 GenericTrafficLight {
@@ -365,13 +365,13 @@ GenericTrafficLight {
 Customizable highway pole with the possibility of adding another stand and more signs along the vertical or horizontal parts of the pole.
 Different types of poles are available: "cylinder", "box", or "H-shape".
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![HighwayPole](images/objects/traffic/HighwayPole/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 HighwayPole {
@@ -420,13 +420,13 @@ HighwayPole {
 
 Resizable sign with front texture option.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![HighwaySign](images/objects/traffic/HighwaySign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 HighwaySign {
@@ -462,13 +462,13 @@ HighwaySign {
 
 Traffic panel: Order panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![OrderPanel](images/objects/traffic/OrderPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 OrderPanel {
@@ -495,13 +495,13 @@ OrderPanel {
 
 Traffic sign: Order sign.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![OrderSign](images/objects/traffic/OrderSign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 OrderSign {
@@ -531,13 +531,13 @@ OrderSign {
 
 Parking lines for several consecutive cars.
 
-Derived from [Transform](../reference/transform.md).
-
 %figure
 
 ![ParkingLines](images/objects/traffic/ParkingLines/model.png)
 
 %end
+
+Derived from [Transform](../reference/transform.md).
 
 ```
 ParkingLines {
@@ -563,13 +563,13 @@ ParkingLines {
 
 A pedestrian crossing 20 x 8 meters (0.1m thick).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PedestrianCrossing](images/objects/traffic/PedestrianCrossing/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PedestrianCrossing {
@@ -593,13 +593,13 @@ PedestrianCrossing {
 
 A metallic pole for the traffic lights.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Pole](images/objects/traffic/Pole/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Pole {
@@ -620,13 +620,13 @@ Pole {
 
 A simple rectangular traffic pannel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![RectangularPanel](images/objects/traffic/RectangularPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 RectangularPanel {
@@ -656,13 +656,13 @@ RectangularPanel {
 
 Customizable direction panel on pole with the possibility of adding more panels.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SignPole](images/objects/traffic/SignPole/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SignPole {
@@ -692,13 +692,13 @@ SignPole {
 
 Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SpeedLimitPanel](images/objects/traffic/SpeedLimitPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SpeedLimitPanel {
@@ -725,13 +725,13 @@ SpeedLimitPanel {
 
 Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SpeedLimitSign](images/objects/traffic/SpeedLimitSign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SpeedLimitSign {
@@ -761,13 +761,13 @@ SpeedLimitSign {
 
 Traffic panel: Stop panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![StopPanel](images/objects/traffic/StopPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 StopPanel {
@@ -794,13 +794,13 @@ StopPanel {
 
 Traffic sign: Stop sign.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![StopSign](images/objects/traffic/StopSign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 StopSign {
@@ -831,13 +831,13 @@ StopSign {
 Simple model of a street light including a customizable SpotLight.
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![StreetLight](images/objects/traffic/StreetLight/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 StreetLight {
@@ -879,13 +879,13 @@ StreetLight {
 
 Traffic cone.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TrafficCone](images/objects/traffic/TrafficCone/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TrafficCone {
@@ -906,13 +906,13 @@ TrafficCone {
 
 Basic traffic light without lamp.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TrafficLight](images/objects/traffic/TrafficLight/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TrafficLight {
@@ -948,13 +948,13 @@ TrafficLight {
 
 A traffic light lamp with an adjustable arrow.
 
-Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
-
 %figure
 
 ![TrafficLightArrowLampGeometry](images/objects/traffic/TrafficLightArrowLampGeometry/model.png)
 
 %end
+
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
 
 ```
 TrafficLightArrowLampGeometry {
@@ -967,13 +967,13 @@ TrafficLightArrowLampGeometry {
 
 A big metallic pole above the road for traffic lights.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TrafficLightBigPole](images/objects/traffic/TrafficLightBigPole/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TrafficLightBigPole {
@@ -1000,13 +1000,13 @@ TrafficLightBigPole {
 
 Horizontal traffic light without lamp to put on the big pole above the road.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TrafficLightHorizontal](images/objects/traffic/TrafficLightHorizontal/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TrafficLightHorizontal {
@@ -1042,13 +1042,13 @@ TrafficLightHorizontal {
 
 A traffic light lamp with a standard geometry.
 
-Derived from [Sphere](../reference/sphere.md).
-
 %figure
 
 ![TrafficLightStandardLampGeometry](images/objects/traffic/TrafficLightStandardLampGeometry/model.png)
 
 %end
+
+Derived from [Sphere](../reference/sphere.md).
 
 ```
 TrafficLightStandardLampGeometry {
@@ -1061,13 +1061,13 @@ TrafficLightStandardLampGeometry {
 
 Traffic panel: Yield panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![YieldPanel](images/objects/traffic/YieldPanel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 YieldPanel {
@@ -1097,13 +1097,13 @@ YieldPanel {
 
 Traffic sign: Yield sign.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![YieldSign](images/objects/traffic/YieldSign/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 YieldSign {

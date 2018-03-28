@@ -5,13 +5,13 @@
 The Ball's size, mass and color correspond to the soccer ball used in the Robocup SPL.
 You can change the centerOfMass to [0 0 0] to avoid the random rolling effect.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Ball](images/objects/balls/Ball/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Ball {
@@ -50,13 +50,13 @@ Ball {
 
 A ping pong ball.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PingPongBall](images/objects/balls/PingPongBall/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PingPongBall {
@@ -81,13 +81,13 @@ PingPongBall {
 A black and white soccer ball with customizable radius and mass.
 This object is physics-enabled so it will roll or bounce when hit.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SoccerBall](images/objects/balls/SoccerBall/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SoccerBall {

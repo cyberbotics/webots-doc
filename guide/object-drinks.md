@@ -4,13 +4,13 @@
 
 A beer bottle.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BeerBottle](images/objects/drinks/BeerBottle/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BeerBottle {
@@ -28,13 +28,13 @@ BeerBottle {
 
 A can (0.03175 x 0.1222 x 0.03175 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Can](images/objects/drinks/Can/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Can {
@@ -53,13 +53,13 @@ Can {
 
 A water bottle.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![WaterBottle](images/objects/drinks/WaterBottle/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 WaterBottle {

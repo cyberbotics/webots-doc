@@ -4,13 +4,13 @@
 
 An armchair (1 x 0.8 x 1.1 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Armchair](images/objects/living_room_furniture/Armchair/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Armchair {
@@ -37,13 +37,13 @@ Armchair {
 
 A carpet (2.4 x 0.02 x 1.6 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Carpet](images/objects/living_room_furniture/Carpet/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Carpet {
@@ -67,13 +67,13 @@ Carpet {
 
 A sofa for two people (1 x 0.8 x 1.8 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Sofa](images/objects/living_room_furniture/Sofa/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Sofa {

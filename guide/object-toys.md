@@ -4,13 +4,13 @@
 
 A paper boat (42.8 x 14.2 x 10.6 cm).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PaperBoat](images/objects/toys/PaperBoat/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PaperBoat {
@@ -46,13 +46,13 @@ PaperBoat {
 
 A rubber yellow duck (7.42 x 10.66 x 10.13 cm).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![RubberDuck](images/objects/toys/RubberDuck/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 RubberDuck {

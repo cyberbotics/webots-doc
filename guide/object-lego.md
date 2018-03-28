@@ -4,13 +4,13 @@
 
 LEGO Mindstorm EV3 large motor. Part id: 6009430.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![LegoLargeMotor](images/objects/lego/LegoLargeMotor/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 LegoLargeMotor {
@@ -26,13 +26,13 @@ LegoLargeMotor {
 
 LEGO Mindstrom EV 3 wheel. Parts id: 4634091 & 6035364.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![LegoWheel](images/objects/lego/LegoWheel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 LegoWheel {

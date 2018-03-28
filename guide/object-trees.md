@@ -19,13 +19,13 @@ The shape of the forest can either be defined using the 'shape' and 'density' fi
 The path to those files can either be absolute, relative to the proto, relative to the world or relative to the project.
 This model was sponsored by the CTI project RO2IVSim ([http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles](http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles)).
 
-Derived from [Transform](../reference/transform.md).
-
 %figure
 
 ![Forest](images/objects/trees/Forest/model.png)
 
 %end
+
+Derived from [Transform](../reference/transform.md).
 
 ```
 Forest {
@@ -72,13 +72,13 @@ Forest {
 
 A tree.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![RoundTree](images/objects/trees/RoundTree/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 RoundTree {
@@ -105,13 +105,13 @@ Tree types are:
 
 The 'random' type choose randomly a tree type each time the node is regenerated.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![SimpleTree](images/objects/trees/SimpleTree/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 SimpleTree {
@@ -154,13 +154,13 @@ SimpleTree {
 Efficient (with only 8 polygones) and fast to load tree.
 This PROTO is less configurable than `SimpleTree` but way faster to load.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Tree](images/objects/trees/Tree/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Tree {

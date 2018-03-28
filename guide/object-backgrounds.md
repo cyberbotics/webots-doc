@@ -15,13 +15,13 @@ Supported values for the `texture` field:
 - noon\_sunny\_garden
 - twilight\_cloudy\_empty
 
-Derived from [Background](../reference/background.md).
-
 %figure
 
 ![TexturedBackground](images/objects/backgrounds/TexturedBackground/model.png)
 
 %end
+
+Derived from [Background](../reference/background.md).
 
 ```
 TexturedBackground {
@@ -46,13 +46,13 @@ Supported values for the "texture" field:
 - noon\_sunny\_garden
 - twilight\_cloudy\_empty
 
-Derived from [DirectionalLight](../reference/directionallight.md).
-
 %figure
 
 ![TexturedBackgroundLight](images/objects/backgrounds/TexturedBackgroundLight/model.png)
 
 %end
+
+Derived from [DirectionalLight](../reference/directionallight.md).
 
 ```
 TexturedBackgroundLight {

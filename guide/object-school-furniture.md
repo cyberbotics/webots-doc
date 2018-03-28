@@ -4,13 +4,13 @@
 
 A blackboard (about 1.3 x 2.5 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Blackboard](images/objects/school_furniture/Blackboard/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Blackboard {
@@ -26,13 +26,13 @@ Blackboard {
 
 A book (0.2 x 0.15 x 0.02 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Book](images/objects/school_furniture/Book/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Book {
@@ -59,13 +59,13 @@ Book {
 
 A clock (radius 16.5 cm).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Clock](images/objects/school_furniture/Clock/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Clock {

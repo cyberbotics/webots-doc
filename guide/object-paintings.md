@@ -4,13 +4,13 @@
 
 A painting (1.5 x 1 x 0.05 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![LandscapePainting](images/objects/paintings/LandscapePainting/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 LandscapePainting {
@@ -34,13 +34,13 @@ LandscapePainting {
 
 A painting (0.82 x 1.01 x 0.05 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PortraitPainting](images/objects/paintings/PortraitPainting/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PortraitPainting {

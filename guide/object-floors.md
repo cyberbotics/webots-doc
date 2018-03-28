@@ -4,13 +4,13 @@
 
 A configurable circle arena composed of floor surrounded by wall.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CircleArena](images/objects/floors/CircleArena/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CircleArena {
@@ -55,13 +55,13 @@ CircleArena {
 
 Configurable standard flat floor.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Floor](images/objects/floors/Floor/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Floor {
@@ -97,13 +97,13 @@ Floor {
 
 A configurable rectangle arena composed of a floor surrounded by walls.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![RectangleArena](images/objects/floors/RectangleArena/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 RectangleArena {
@@ -151,13 +151,13 @@ RectangleArena {
 
 Randomly generated uneven terrain based on Perlin noise.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![UnevenTerrain](images/objects/floors/UnevenTerrain/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 UnevenTerrain {

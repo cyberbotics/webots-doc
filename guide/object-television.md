@@ -4,13 +4,13 @@
 
 A television (1 x 0.6 x 0.1 m).
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![Television](images/objects/television/Television/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 Television {

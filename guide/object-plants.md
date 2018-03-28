@@ -4,13 +4,13 @@
 
 Five sun flowers into a pot (0.17 x 0.95 x 0.17 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BunchOfSunFlowers](images/objects/plants/BunchOfSunFlowers/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BunchOfSunFlowers {
@@ -49,13 +49,13 @@ BunchOfSunFlowers {
 
 A potted tree (0.3 x 1.3 x 0.3 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PottedTree](images/objects/plants/PottedTree/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PottedTree {

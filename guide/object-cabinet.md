@@ -10,13 +10,13 @@ The `layout` field is defining the location and the dimension of the elements in
 
 The coordinate origin (1,1) of the grid layout is at the bottom left corner.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Cabinet](images/objects/cabinet/Cabinet/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Cabinet {
@@ -84,13 +84,13 @@ Cabinet {
 
 A handle for the Cabinet PROTO.
 
-Derived from [Slot](../reference/slot.md).
-
 %figure
 
 ![CabinetHandle](images/objects/cabinet/CabinetHandle/model.png)
 
 %end
+
+Derived from [Slot](../reference/slot.md).
 
 ```
 CabinetHandle {

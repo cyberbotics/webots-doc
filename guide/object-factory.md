@@ -6,13 +6,13 @@
 
 A cardboard box.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CardboardBox](images/objects/containers/CardboardBox/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CardboardBox {
@@ -41,13 +41,13 @@ CardboardBox {
 
 A wooden box.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![WoodenBox](images/objects/containers/WoodenBox/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 WoodenBox {
@@ -79,13 +79,13 @@ WoodenBox {
 
 Simple and configurable wooden pallet.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![WoodenPallet](images/objects/pallet/WoodenPallet/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 WoodenPallet {
@@ -121,13 +121,13 @@ WoodenPallet {
 
 Simple and configurable wooden pallet stack.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![WoodenPalletStack](images/objects/pallet/WoodenPalletStack/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 WoodenPalletStack {
@@ -174,13 +174,13 @@ WoodenPalletStack {
 
 90-degree L-joint for connecting pipes.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![LJoint](images/objects/pipes/LJoint/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 LJoint {
@@ -197,13 +197,13 @@ LJoint {
 
 A section of pipe.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PipeSection](images/objects/pipes/PipeSection/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PipeSection {
@@ -230,13 +230,13 @@ PipeSection {
 
 3-slot T-joint for connecting pipes.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![TJoint](images/objects/pipes/TJoint/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 TJoint {
@@ -255,13 +255,13 @@ TJoint {
 
 A threaded bolt.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Bolt](images/objects/tools/Bolt/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Bolt {
@@ -282,13 +282,13 @@ Bolt {
 
 A 25cm asymmetric club hammer.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Hammer](images/objects/tools/Hammer/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Hammer {
@@ -309,13 +309,13 @@ Hammer {
 
 A hexagonal nut.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Nut](images/objects/tools/Nut/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Nut {
@@ -336,13 +336,13 @@ Nut {
 
 A 4kg bucket of paint, with HingeJoint-based handle.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PaintBucket](images/objects/tools/PaintBucket/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PaintBucket {
@@ -363,13 +363,13 @@ PaintBucket {
 
 A platform cart with overall dimensions 90Lx50Wx85H cm.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PlatformCart](images/objects/tools/PlatformCart/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PlatformCart {
@@ -393,13 +393,13 @@ PlatformCart {
 
 A Philips screwdriver. The blade and handle are balanced.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Screwdriver](images/objects/tools/Screwdriver/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Screwdriver {
@@ -420,13 +420,13 @@ Screwdriver {
 
 A 15cm Open-End wrench.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Wrench](images/objects/tools/Wrench/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Wrench {
@@ -449,13 +449,13 @@ Wrench {
 
 Large Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![LargeValve](images/objects/valves/LargeValve/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 LargeValve {
@@ -485,13 +485,13 @@ LargeValve {
 
 Lever-based valve. Handle can be moved in either direction (from up) of 45 degrees.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![LeverValve](images/objects/valves/LeverValve/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 LeverValve {
@@ -513,13 +513,13 @@ LeverValve {
 
 Small Wheel-based valve. Handle can be moved in either direction by the angle (radians) in the "absolute stop" field.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![SmallValve](images/objects/valves/SmallValve/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 SmallValve {

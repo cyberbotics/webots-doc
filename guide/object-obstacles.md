@@ -4,13 +4,13 @@
 
 Resizable oil barrel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![OilBarrel](images/objects/obstacles/OilBarrel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 OilBarrel {
@@ -41,13 +41,13 @@ OilBarrel {
 A simple ramp made of two 30° slopes and a flat top.
 The ramp is a static object (not physics-enabled) so it will not move when hit.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Ramp30deg](images/objects/obstacles/Ramp30deg/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Ramp30deg {
@@ -69,13 +69,13 @@ Ramp30deg {
 Three steps with customizable height and color.
 This is not a physics-enabled object so it will not move when hit.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![ThreeSteps](images/objects/obstacles/ThreeSteps/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 ThreeSteps {

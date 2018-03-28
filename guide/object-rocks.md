@@ -4,13 +4,13 @@
 
 A rock (10 cm).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Rock10cm](images/objects/rocks/Rock10cm/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Rock10cm {
@@ -43,13 +43,13 @@ Rock10cm {
 
 A rock (17 cm).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Rock17cm](images/objects/rocks/Rock17cm/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Rock17cm {

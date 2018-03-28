@@ -6,13 +6,13 @@
 
 A customizable (size, texture, etc.) biscuit box.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![BiscuitBox](images/objects/breakfast/BiscuitBox/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 BiscuitBox {
@@ -39,13 +39,13 @@ BiscuitBox {
 
 A customizable (size, texture, etc.) cereal box.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![CerealBox](images/objects/breakfast/CerealBox/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 CerealBox {
@@ -72,13 +72,13 @@ CerealBox {
 
 A honey jar.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![HoneyJar](images/objects/breakfast/HoneyJar/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 HoneyJar {
@@ -105,13 +105,13 @@ HoneyJar {
 
 A jam jar.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![JamJar](images/objects/breakfast/JamJar/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 JamJar {
@@ -137,13 +137,13 @@ JamJar {
 
 An hot plate.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![HotPlate](images/objects/components/HotPlate/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 HotPlate {
@@ -164,13 +164,13 @@ HotPlate {
 
 A sink.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Sink](images/objects/components/Sink/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Sink {
@@ -191,13 +191,13 @@ Sink {
 
 A customizable (size, texture, etc.) worktop.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Worktop](images/objects/components/Worktop/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Worktop {
@@ -226,13 +226,13 @@ Worktop {
 
 A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Fridge](images/objects/fridge/Fridge/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Fridge {
@@ -264,13 +264,13 @@ Fridge {
 
 An oven (0.5 x 0.68 x 0.44 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Oven](images/objects/oven/Oven/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Oven {
@@ -302,13 +302,13 @@ Oven {
 
 A carafe.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Carafe](images/objects/utensils/Carafe/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Carafe {
@@ -329,13 +329,13 @@ Carafe {
 
 A cookware.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Cookware](images/objects/utensils/Cookware/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Cookware {
@@ -359,13 +359,13 @@ Cookware {
 
 A fork.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Fork](images/objects/utensils/Fork/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Fork {
@@ -386,13 +386,13 @@ Fork {
 
 A glass.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Glass](images/objects/utensils/Glass/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Glass {
@@ -413,13 +413,13 @@ Glass {
 
 A knife.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Knife](images/objects/utensils/Knife/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Knife {
@@ -440,13 +440,13 @@ Knife {
 
 A lid.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Lid](images/objects/utensils/Lid/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Lid {
@@ -470,13 +470,13 @@ Lid {
 
 A customizable (dimensions, texture, etc. ) plate.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Plate](images/objects/utensils/Plate/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Plate {
@@ -506,13 +506,13 @@ Plate {
 
 A spoon.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Spoon](images/objects/utensils/Spoon/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Spoon {
@@ -536,13 +536,13 @@ Spoon {
 
 A wine glass.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Wineglass](images/objects/utensils/Wineglass/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Wineglass {
@@ -563,13 +563,13 @@ Wineglass {
 
 A wooden spoon.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![WoodenSpoon](images/objects/utensils/WoodenSpoon/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 WoodenSpoon {

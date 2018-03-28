@@ -4,13 +4,13 @@
 
 Generic and customizable stairs model.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![StraightStairs](images/objects/stairs/StraightStairs/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 StraightStairs {
@@ -55,13 +55,13 @@ StraightStairs {
 
 Generic and customizable landing model for straight stairs.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![StraightStairsLanding](images/objects/stairs/StraightStairsLanding/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 StraightStairsLanding {
@@ -112,13 +112,13 @@ StraightStairsLanding {
 
 Default stairs handrail.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![StraightStairsRail](images/objects/stairs/StraightStairsRail/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 StraightStairsRail {

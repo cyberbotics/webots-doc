@@ -4,13 +4,13 @@
 
 Customizable simple panel.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Panel](images/objects/panels/Panel/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Panel {
@@ -46,13 +46,13 @@ Panel {
 
 A gray panel with tubes.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![PannelWithTubes](images/objects/panels/PannelWithTubes/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 PannelWithTubes {

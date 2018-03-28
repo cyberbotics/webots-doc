@@ -4,13 +4,13 @@
 
 A desk (1.2 x 0.72 x 0.7 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Desk](images/objects/tables/Desk/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Desk {
@@ -37,13 +37,13 @@ Desk {
 
 A round table (2 x 0.76 x 2 m).
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![RoundTable](images/objects/tables/RoundTable/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 RoundTable {
@@ -70,13 +70,13 @@ RoundTable {
 
 Customizable table.
 
-Derived from [Solid](../reference/solid.md).
-
 %figure
 
 ![Table](images/objects/tables/Table/model.png)
 
 %end
+
+Derived from [Solid](../reference/solid.md).
 
 ```
 Table {

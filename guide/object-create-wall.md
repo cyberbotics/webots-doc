@@ -4,13 +4,13 @@
 
 Virtual walls are an accessory of the IRobot Create allowing to inform the robot about areas typically for restricted access to a room.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![CreateWall](images/objects/create_wall/CreateWall/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 CreateWall {

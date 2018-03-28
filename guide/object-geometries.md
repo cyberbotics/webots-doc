@@ -5,13 +5,13 @@
 Generic extrusion geometry.
 The shape (defined by the 'crossSection' field) is extruded along the path defined by the field 'spine'.
 
-Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
-
 %figure
 
 ![Extrusion](images/objects/geometries/Extrusion/model.png)
 
 %end
+
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
 
 ```
 Extrusion {
@@ -68,13 +68,13 @@ Available texture mappings:
 If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
 A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 
-Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
-
 %figure
 
 ![TexturedBox](images/objects/geometries/TexturedBox/model.png)
 
 %end
+
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
 
 ```
 TexturedBox {
@@ -126,13 +126,13 @@ Available texture mappings:
 If a boolean field (front, back, left, right, top, bottom) is FALSE, then the corresponding face is not drawn.
 A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 
-Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
-
 %figure
 
 ![TexturedParallelepiped](images/objects/geometries/TexturedParallelepiped/model.png)
 
 %end
+
+Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
 
 ```
 TexturedParallelepiped {

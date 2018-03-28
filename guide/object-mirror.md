@@ -5,13 +5,13 @@
 A simple mirror made of a display attached to a camera.
 The reflected image does not depend on the viewpoint position.
 
-Derived from [Robot](../reference/robot.md).
-
 %figure
 
 ![Mirror](images/objects/mirror/Mirror/model.png)
 
 %end
+
+Derived from [Robot](../reference/robot.md).
 
 ```
 Mirror {

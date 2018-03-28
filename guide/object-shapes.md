@@ -14,13 +14,13 @@ Available texture mappings:
 
 A demo of these mappings is available in projects/samples/geometries/worlds/textured\_boxes.wbt.
 
-Derived from [Group](../reference/group.md).
-
 %figure
 
 ![TexturedBoxShape](images/objects/shapes/TexturedBoxShape/model.png)
 
 %end
+
+Derived from [Group](../reference/group.md).
 
 ```
 TexturedBoxShape {

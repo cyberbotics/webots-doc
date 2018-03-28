@@ -76,7 +76,7 @@ BB-8 {
 
 - `weightMass`: Defines the mass of the robot body.
 
-- `maxVelocity`: Defines the [RotationalMotor](../reference/rotationalMotor.md) fields. Note: the real robot moves at 4.9 [mph].
+- `maxVelocity`: Defines the [RotationalMotor](../reference/rotationalmotor.md) fields. Note: the real robot moves at 4.9 [mph].
 
 ### Samples
 

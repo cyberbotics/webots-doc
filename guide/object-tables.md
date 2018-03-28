@@ -28,11 +28,8 @@ Desk {
 ### Desk Field Summary
 
 - `color`: Defines the color of the desk.
-
 - `textureUrl`: Defines the texture used for the desk.
-
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ## RoundTable
 
 A round table (2 x 0.76 x 2 m).
@@ -61,11 +58,8 @@ RoundTable {
 ### RoundTable Field Summary
 
 - `color`: Defines the color of the table.
-
 - `textureUrl`: Defines the texture used for the table.
-
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Table
 
 Customizable table.
@@ -100,20 +94,11 @@ Table {
 ### Table Field Summary
 
 - `size`: Defines the size of the table.
-
 - `feetSize`: Defines the size of the feet.
-
 - `feetPadding`: Defines the padding of the feet.
-
 - `frameThickness`: Defines the thickness of the frame.
-
 - `trayTransparency`: Defines the transparency of the tray.
-
 - `trayTextureUrl`: Defines the texture used for the tray.
-
 - `trayTileSize`: Defines the size of the texture used for the tray.
-
 - `feetTextureUrl`: Defines the texture used for the feet.
-
 - `feetTileSize`: Defines the size of the texture used for the feet.
-

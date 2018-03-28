@@ -28,11 +28,8 @@ Chair {
 ### Chair Field Summary
 
 - `color`: Define the color of the chair.
-
 - `textureUrl`: Defines the texture used for the chair.
-
 - `physics`: Define the physcis of the chair.
-
 ## SimpleChair
 
 A simple two-colors chair with a customizable mass, but a fixed height of 1.25 meter.
@@ -62,11 +59,8 @@ SimpleChair {
 ### SimpleChair Field Summary
 
 - `legColor`: Defines the color of the legs of the chair.
-
 - `seatColor`: Defines the color of the body of the chair.
-
 - `mass`: Defines the mass of the chair in kg.
-
 ## WoodenChair
 
 A wooden chair (0.42 x 0.944 x 0.44 m).
@@ -95,8 +89,5 @@ WoodenChair {
 ### WoodenChair Field Summary
 
 - `color`: Defines the color of the chair.
-
 - `textureUrl`: Defines the texture used for the chair.
-
 - `physics`: Defines the physics of the chair.
-

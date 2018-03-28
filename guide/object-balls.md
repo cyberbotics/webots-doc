@@ -33,19 +33,12 @@ Ball {
 ### Ball Field Summary
 
 - `color`: Defines the color of the ball.
-
 - `radius`: Defines the radius of the ball.
-
 - `mass`: Defines the mass of the ball.
-
 - `centerOfMass`: Defines the center of mass of the ball.
-
 - `linearDamping`: Defines the linear damping of the ball.
-
 - `angularDamping`: Defines the angular damping of the ball.
-
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ## PingPongBall
 
 A ping pong ball.
@@ -73,9 +66,7 @@ PingPongBall {
 ### PingPongBall Field Summary
 
 - `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
-
 - `textureUrl`: Defines the texture used for the ball.
-
 ## SoccerBall
 
 A black and white soccer ball with customizable radius and mass.
@@ -104,6 +95,4 @@ SoccerBall {
 ### SoccerBall Field Summary
 
 - `radius`: Defines the radius of the ball.
-
 - `mass`: Defines the mass of the ball.
-

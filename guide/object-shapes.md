@@ -44,26 +44,14 @@ TexturedBoxShape {
 ### TexturedBoxShape Field Summary
 
 - `size`: Defines the size of the box.
-
 - `textureUrl`: Defines the texture used for the box.
-
 - `textureFiltering`: Defines the filtering level for the texture used for the box.
-
 - `textureTransform`: Defines the texture transform for the texture used for the box.
-
 - `textureMapping`: Defines the texture mapping.
-
 - `faceColor`: Defines the color of the faces of the box.
-
 - `frontFace`: Defines whether the front face is included.
-
 - `backFace`: Defines whether the back face is included.
-
 - `leftFace`: Defines whether the left face is included.
-
 - `rightFace`: Defines whether the right face is included.
-
 - `topFace`: Defines whether the top face is included.
-
 - `bottomFace`: Defines whether the bottom face is included.
-

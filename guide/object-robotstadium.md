@@ -28,9 +28,7 @@ RobotstadiumGoal {
 ### RobotstadiumGoal Field Summary
 
 - `postRadius`: Defines the radius of the goal posts.
-
 - `frameColor`: Defines the color of the goal frame.
-
 ## RobotstadiumSoccerField
 
 Robot soccer field inspired from the RoboCup 2014 Standard Platform League.
@@ -62,10 +60,6 @@ RobotstadiumSoccerField {
 ### RobotstadiumSoccerField Field Summary
 
 - `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `frame1Color`: Defines the color of the first goal frame.
-
 - `frame2Color`: Defines the color of the second goal frame.
-
 - `postRadius`: Defines the radius of the goal posts.
-

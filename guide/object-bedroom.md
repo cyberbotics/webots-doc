@@ -34,20 +34,11 @@ Bed {
 ### Bed Field Summary
 
 - `size`: Defines the size of the bed.
-
 - `doubleBed`: Defines whether it is a simple or double bed.
-
 - `feetSize`: Defines the size of the feet.
-
 - `feetPadding`: Defines the padding of the feet.
-
 - `frameThickness`: Defines the thickness of the frame.
-
 - `fabricTextureUrl`: Defines the texture used for the fabric.
-
 - `fabricTileSize`: Defines the size of the texture used for the fabric.
-
 - `frameTextureUrl`: Defines the texture used for the frame.
-
 - `frameTileSize`: Defines the size of texture used for the frame.
-

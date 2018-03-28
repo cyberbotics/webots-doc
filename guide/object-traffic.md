@@ -28,11 +28,8 @@ CautionPanel {
 ### CautionPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## CautionSign
 
 Traffic sign: Caution sign.
@@ -62,13 +59,9 @@ CautionSign {
 ### CautionSign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign pole.
-
 - `color`: Defines the color of the sign.
-
 - `signBoards`: Defines the boards.
-
 ## ControlledStreetLight
 
 Simple model of a controlled street light including a customizable SpotLight.
@@ -103,19 +96,12 @@ ControlledStreetLight {
 ### ControlledStreetLight Field Summary
 
 - `controller`: Defines the controller used to make the LED blink.
-
 - `beamWidth`: Defines the beam width of the spot light.
-
 - `color`: Defines the color of the spot light.
-
 - `cutOffAngle`: Defines the cut-off angle of the spot light.
-
 - `direction`: Defines the direction of the spot light.
-
 - `radius`: Defines the radius of the spot light.
-
 - `castShadows`: Defines whether the spot light casts shadows.
-
 ## CrossRoadsTrafficLight
 
 Four roads crossing traffic light.
@@ -143,9 +129,7 @@ CrossRoadsTrafficLight {
 ### CrossRoadsTrafficLight Field Summary
 
 - `controller`: Inherited from [Robot](../reference/robot.md) node.
-
 - `size`: Defines the size of the traffic lights.
-
 ## DirectionPanel
 
 Resizable direction panel with two customizable sides.
@@ -198,27 +182,16 @@ DirectionPanel {
 ### DirectionPanel Field Summary
 
 - `width`: Defines the width of the panel.
-
 - `height`: Defines the height of the panel.
-
 - `thickness`: Defines the thickness of the panel.
-
 - `backgroundColor`: Defines the background color of the panel.
-
 - `textColor`: Defines the color of the text displayed on the panel.
-
 - `textSize`: Defines the size of the text displayed on the panel.
-
 - `font`: Defines the font used by the text displayed on the panel.
-
 - `text`: Defines the text displayed on the panel.
-
 - `arrow`: Defines whether the panel should display an arraw.
-
 - `right`: Defines whether the pannel should draw text on the side pointing toward the right.
-
 - `left`: Defines whether the pannel should draw text on the side pointing toward the left.
-
 ## DivergentIndicator
 
 A divergent indicator block.
@@ -248,13 +221,9 @@ DivergentIndicator {
 ### DivergentIndicator Field Summary
 
 - `texture`: Defines the texture used by the divergent indicator.
-
 - `height`: Defines the height of the divergent indicator.
-
 - `radius`: Defines the radius of the divergent indicator.
-
 - `subdivision`: Defines the number of polygons used to represent the divergent indicator cylindrical part and so its resolution .
-
 ## ExitPanel
 
 Traffic panel: Exit panel.
@@ -283,11 +252,8 @@ ExitPanel {
 ### ExitPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## ExitSign
 
 Traffic sign: Exit sign.
@@ -317,13 +283,9 @@ ExitSign {
 ### ExitSign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign pole.
-
 - `color`: Defines the color of the panel
-
 - `signBoards`: Defines the boards.
-
 ## GenericTrafficLight
 
 A generic traffic light with configurable timming.
@@ -353,13 +315,9 @@ GenericTrafficLight {
 ### GenericTrafficLight Field Summary
 
 - `startGreen`: Defines whether the traffic light should start in a 'green' state or 'red' state.
-
 - `greenTime`: Defines how long should be the green state in seconds.
-
 - `redTime`: Defines how long should be the red state in seconds.
-
 - `state`: Defines the current state of the traffic light, this field is automatically updated when the state change.
-
 ## HighwayPole
 
 Customizable highway pole with the possibility of adding another stand and more signs along the vertical or horizontal parts of the pole.
@@ -397,25 +355,15 @@ HighwayPole {
 ### HighwayPole Field Summary
 
 - `stand`: Defines the number of stands.
-
 - `height`: Defines the height of the pole.
-
 - `length`: Defines the length of the pole.
-
 - `thickness`: Defines the thickness of the pole.
-
 - `color`: Defines the color of the pole.
-
 - `curveRadius`: Defines the curvature radius of the pole.
-
 - `rightHorizontalSigns`: Defines the horizontal signs on the right side of the pole.
-
 - `rightVerticalSigns`: Defines the vertical signs on the right side of the pole.
-
 - `leftHorizontalSigns`: Defines the horizontal signs on the left side of the pole.
-
 - `leftVerticalSigns`: Defines the vertical signs on the left side of the pole.
-
 ## HighwaySign
 
 Resizable sign with front texture option.
@@ -447,17 +395,11 @@ HighwaySign {
 ### HighwaySign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `length`: Defines the lenght of the sign.
-
 - `thickness`: Defines the thickness of the sign.
-
 - `color`: Defines the color of the sign.
-
 - `texture`: Defines the texture used for the sign.
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## OrderPanel
 
 Traffic panel: Order panel.
@@ -486,11 +428,8 @@ OrderPanel {
 ### OrderPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## OrderSign
 
 Traffic sign: Order sign.
@@ -520,13 +459,9 @@ OrderSign {
 ### OrderSign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign pole.
-
 - `color`: Defines the color of the sign.
-
 - `signBoards`: Defines the boards.
-
 ## ParkingLines
 
 Parking lines for several consecutive cars.
@@ -554,11 +489,8 @@ ParkingLines {
 ### ParkingLines Field Summary
 
 - `numberOfCarParks`: Defines the number of parks.
-
 - `carParkLength`: Defines the length of one park.
-
 - `carParkWidth`: Defines the width of one park.
-
 ## PedestrianCrossing
 
 A pedestrian crossing 20 x 8 meters (0.1m thick).
@@ -586,9 +518,7 @@ PedestrianCrossing {
 ### PedestrianCrossing Field Summary
 
 - `size`: Defines the size of the pedestrian crossing.
-
 - `textureFiltering`: Defines the filtering level for the texture used for the pedestrian crossing.
-
 ## Pole
 
 A metallic pole for the traffic lights.
@@ -615,7 +545,6 @@ Pole {
 ### Pole Field Summary
 
 - `slot`: Extends the pole with panels or traffic lights.
-
 ## RectangularPanel
 
 A simple rectangular traffic pannel.
@@ -645,13 +574,9 @@ RectangularPanel {
 ### RectangularPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `size`: Defines the size of the panel
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## SignPole
 
 Customizable direction panel on pole with the possibility of adding more panels.
@@ -681,13 +606,9 @@ SignPole {
 ### SignPole Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign.
-
 - `color`: Defines the color of the sign.
-
 - `signBoards`: Defines the boards.
-
 ## SpeedLimitPanel
 
 Traffic panel: Speed limit panel (5mph to 80mph) or one way panel.
@@ -716,11 +637,8 @@ SpeedLimitPanel {
 ### SpeedLimitPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## SpeedLimitSign
 
 Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
@@ -750,13 +668,9 @@ SpeedLimitSign {
 ### SpeedLimitSign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign pole.
-
 - `color`: Defines the color of the sign.
-
 - `signBoards`: Defines the boards.
-
 ## StopPanel
 
 Traffic panel: Stop panel.
@@ -785,11 +699,8 @@ StopPanel {
 ### StopPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## StopSign
 
 Traffic sign: Stop sign.
@@ -819,13 +730,9 @@ StopSign {
 ### StopSign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign pole.
-
 - `color`: Defines the color of the sign.
-
 - `signBoards`: Defines the boards.
-
 ## StreetLight
 
 Simple model of a street light including a customizable SpotLight.
@@ -862,19 +769,12 @@ StreetLight {
 ### StreetLight Field Summary
 
 - `beamWidth`: Defines the beam width of the spot light.
-
 - `color`: Defines the color of the spot light.
-
 - `cutOffAngle`: Defines the cut-off angle of the spot light.
-
 - `direction`: Defines the direction of the spot light.
-
 - `on`: Defines whether the spot light is on or off.
-
 - `radius`: Defines the radius of the spot light.
-
 - `castShadows`: Defines whether the spot light casts shadows.
-
 ## TrafficCone
 
 Traffic cone.
@@ -901,7 +801,6 @@ TrafficCone {
 ### TrafficCone Field Summary
 
 - `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ## TrafficLight
 
 Basic traffic light without lamp.
@@ -933,17 +832,11 @@ TrafficLight {
 ### TrafficLight Field Summary
 
 - `red_light`: Defines the name of the red LED device.
-
 - `orange_light`: Defines the name of the orange LED device.
-
 - `green_light`: Defines the name of the green LED device.
-
 - `lamp_geometry`: Defines the geometry of the lamps.
-
 - `lamp_rotation`: Defines the rotation of the lamps.
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## TrafficLightArrowLampGeometry
 
 A traffic light lamp with an adjustable arrow.
@@ -991,11 +884,8 @@ TrafficLightBigPole {
 ### TrafficLightBigPole Field Summary
 
 - `slot1`: Extends the pole with a traffic light located in the middle of the vertical part of the pole.
-
 - `slot2`: Extends the pole with a traffic light located in the begining of the horizontal part of the pole.
-
 - `slot3`: Extends the pole with a traffic light located in the end of the horizontal part of the pole.
-
 ## TrafficLightHorizontal
 
 Horizontal traffic light without lamp to put on the big pole above the road.
@@ -1027,17 +917,11 @@ TrafficLightHorizontal {
 ### TrafficLightHorizontal Field Summary
 
 - `red_light`: Defines the name of the red LED device.
-
 - `orange_light`: Defines the name of the orange LED device.
-
 - `green_light`: Defines the name of the green LED device.
-
 - `lamp_geometry`: Defines the geometry of the lamps.
-
 - `lamp_rotation`: Defines the rotation of the lamps.
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## TrafficLightStandardLampGeometry
 
 A traffic light lamp with a standard geometry.
@@ -1086,13 +970,9 @@ YieldPanel {
 ### YieldPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
-
 - `color`: Defines the color of the panel
-
 - `textureRotation`: Defines the rotation of the texture used for the sign.
-
 - `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## YieldSign
 
 Traffic sign: Yield sign.
@@ -1122,10 +1002,6 @@ YieldSign {
 ### YieldSign Field Summary
 
 - `height`: Defines the height of the sign.
-
 - `radius`: Defines the radius of the sign pole.
-
 - `color`: Defines the color of the sign.
-
 - `signBoards`: Defines the boards.
-

@@ -50,11 +50,8 @@ Book {
 ### Book Field Summary
 
 - `color`: Defines the color of the book.
-
 - `textureUrl`: Defines the texture used for the book.
-
 - `mass`: Defines the mass of the book in kg.
-
 ## Clock
 
 A clock (radius 16.5 cm).

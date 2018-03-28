@@ -27,9 +27,7 @@ LandscapePainting {
 ### LandscapePainting Field Summary
 
 - `color`: Defines the color of the painting.
-
 - `textureUrl`: Defines the texure used for the painting.
-
 ## PortraitPainting
 
 A painting (0.82 x 1.01 x 0.05 m).
@@ -57,6 +55,4 @@ PortraitPainting {
 ### PortraitPainting Field Summary
 
 - `color`: Defines the color of the painting.
-
 - `textureUrl`: Defines the texure used for the painting.
-

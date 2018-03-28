@@ -25,7 +25,10 @@ fileList = sorted(fileList)
 # make sure that if a PROTO has the same name than the title it appears first
 prioritaryProtoList = []
 for proto in fileList:
-    if os.path.basename(proto).split('.')[0].lower() == os.path.basename(os.path.dirname(os.path.dirname(proto))):
+    protoName = os.path.basename(proto).split('.')[0]
+    categoryName = os.path.basename(os.path.dirname(os.path.dirname(proto)))
+    upperCategoryName = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(proto))))
+    if protoName.lower() == categoryName and upperCategoryName == 'objects':
         prioritaryProtoList.append(proto)
         fileList.remove(proto)
 
@@ -113,6 +116,7 @@ for proto in prioritaryProtoList + fileList:
         headerPrefix = '#'
         if not upperCategory == category:
             headerPrefix = '##'
+
         if upperCategory not in upperCategories or category not in upperCategories[upperCategory]:
             file.write(headerPrefix + ' %s\n\n' % category.replace('_', ' ').title())
         if protoName not in [upperCategory.replace('_', ' ').title(), category.replace('_', ' ').title()]:

@@ -45,14 +45,6 @@ Extrusion {
 
 - `endCap`: Defines whether the extrusion should have a cap at the end.
 
-- `ccw`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
-
-- `solid`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
-
-- `convex`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
-
-- `creaseAngle`: Inherited from [IndexedFaceSet](../reference/indexedfaceset.md) node.
-
 - `splineSubdivision`: If bigger than 1, defines the B-Spline subdivion of the extrusion along it's path.
 
 ## TexturedBox

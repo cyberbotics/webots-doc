@@ -31,8 +31,6 @@ Armchair {
 
 - `textureUrl`: Defines the texture used for the armchair.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Carpet
 
 A carpet (2.4 x 0.02 x 1.6 m).
@@ -93,6 +91,4 @@ Sofa {
 - `color`: Defines the color of the sofa.
 
 - `textureUrl`: Defines the texture used for eh sofa.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
 

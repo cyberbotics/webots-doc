@@ -35,8 +35,6 @@ CardboardBox {
 
 - `mass`: Defines the mass of the cardboard box in kg. A value smaller or equal to 0 remove the physics of the cardboard box.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 ### WoodenBox
 
 A wooden box.
@@ -68,10 +66,6 @@ WoodenBox {
 - `size`: Defines the size of the wooden box.
 
 - `mass`: Defines the mass of the wooden box in kg. A value smaller or equal to 0 remove the physics of the wooden box.
-
-- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Pallet
 
@@ -114,8 +108,6 @@ WoodenPallet {
 - `mass`: Defines the mass of the pallet in kg. A value smaller or equal to 0 remove the physics of the pallet.
 
 - `boundingObject`: Defines whether the bounding object should be enabled.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ### WoodenPalletStack
 
@@ -165,8 +157,6 @@ WoodenPalletStack {
 - `palletMass`: Defines the mass of one pallet in kg. A value smaller or equal to 0 remove the physics of the stack.
 
 - `boundingObject`: Defines whether the bounding object should be enabled.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Pipes
 
@@ -276,8 +266,6 @@ Bolt {
 
 #### Bolt Field Summary
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ### Hammer
 
 A 25cm asymmetric club hammer.
@@ -302,8 +290,6 @@ Hammer {
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
 
 #### Hammer Field Summary
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### Nut
 
@@ -330,8 +316,6 @@ Nut {
 
 #### Nut Field Summary
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ### PaintBucket
 
 A 4kg bucket of paint, with HingeJoint-based handle.
@@ -356,8 +340,6 @@ PaintBucket {
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
 
 #### PaintBucket Field Summary
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### PlatformCart
 
@@ -387,8 +369,6 @@ PlatformCart {
 
 - `slot`: Extends the cart with new nodes in the slot.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ### Screwdriver
 
 A Philips screwdriver. The blade and handle are balanced.
@@ -414,8 +394,6 @@ Screwdriver {
 
 #### Screwdriver Field Summary
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ### Wrench
 
 A 15cm Open-End wrench.
@@ -440,8 +418,6 @@ Wrench {
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
 
 #### Wrench Field Summary
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Valves
 
@@ -478,8 +454,6 @@ LargeValve {
 - `controller`: Defines the controller of the valve which is used to limit its rotation.
 
 - `absoluteStop`: Defines the maximum rotational angle in radians. This value is sent to the controller using the controllerArgs field.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ### LeverValve
 

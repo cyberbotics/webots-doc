@@ -49,8 +49,6 @@ StraightStairs {
 
 - `startingStairs`: Defines whether the bottom part of the stairs should be flat.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ## StraightStairsLanding
 
 Generic and customizable landing model for straight stairs.
@@ -106,8 +104,6 @@ StraightStairsLanding {
 
 - `rail`: Defines the rail.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ## StraightStairsRail
 
 Default stairs handrail.
@@ -156,6 +152,4 @@ StraightStairsRail {
 - `nBalusters`: Defines the number of balusters.
 
 - `appearance`: Defines the appearance of the rail.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 

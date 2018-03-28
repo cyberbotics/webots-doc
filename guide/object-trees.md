@@ -147,8 +147,6 @@ SimpleTree {
 
 - `enableBoundingObject`: Defines if the tree should have a bounding object (the bounding object is made of a simple cylinder).
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Tree
 
 Efficient (with only 8 polygones) and fast to load tree.
@@ -184,8 +182,4 @@ Tree {
 - `scale`: The first and last components of the scale define the radius of the tree and the middle one defines it's height.
 
 - `texture`: Defines the texture used for the tree.
-
-- `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
 

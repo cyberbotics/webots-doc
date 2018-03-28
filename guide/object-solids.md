@@ -36,11 +36,7 @@ SolidBox {
 
 - `subdivision`: Defines the number of polygons used to represent the box and so its resolution.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `appearance`: Defines the appearance of the box.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SolidPipe
 
@@ -87,11 +83,7 @@ SolidPipe {
 
 - `accuracy`: Defines how much boxes position can differ on y axis: a 0 value represents an error-free model but it will slow down the simulation.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `appearance`: Defines the appearance of the box.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SolidRoundedBox
 
@@ -130,11 +122,7 @@ SolidRoundedBox {
 
 - `subdivision`: Defines the number of polygons used to represent the box and so its resolution.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `appearance`: Defines the appearance of the box.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## SolidTorus
 
@@ -174,9 +162,5 @@ SolidTorus {
 
 - `subdivision`: Defines the number of polygons used to represent the torus and so its resolution.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `appearance`: Defines the appearance of the torus.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
 

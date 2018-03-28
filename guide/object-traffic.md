@@ -31,8 +31,6 @@ CautionPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## CautionSign
 
 Traffic sign: Caution sign.
@@ -141,8 +139,6 @@ CrossRoadsTrafficLight {
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CrossRoadsTrafficLight.proto"
 
 ### CrossRoadsTrafficLight Field Summary
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
 
 - `size`: Defines the size of the traffic lights.
 
@@ -285,8 +281,6 @@ ExitPanel {
 - `signImage`: Defines the texture used for the sign.
 
 - `color`: Defines the color of the panel
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## ExitSign
 
@@ -456,8 +450,6 @@ HighwaySign {
 
 - `texture`: Defines the texture used for the sign.
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## OrderPanel
 
 Traffic panel: Order panel.
@@ -488,8 +480,6 @@ OrderPanel {
 - `signImage`: Defines the texture used for the sign.
 
 - `color`: Defines the color of the panel
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## OrderSign
 
@@ -650,8 +640,6 @@ RectangularPanel {
 
 - `size`: Defines the size of the panel
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## SignPole
 
 Customizable direction panel on pole with the possibility of adding more panels.
@@ -719,8 +707,6 @@ SpeedLimitPanel {
 
 - `color`: Defines the color of the panel
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## SpeedLimitSign
 
 Traffic sign: Speed limit sign (5mph to 80mph) or one way sign.
@@ -787,8 +773,6 @@ StopPanel {
 - `signImage`: Defines the texture used for the sign.
 
 - `color`: Defines the color of the panel
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## StopSign
 
@@ -900,8 +884,6 @@ TrafficCone {
 
 ### TrafficCone Field Summary
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ## TrafficLight
 
 Basic traffic light without lamp.
@@ -941,8 +923,6 @@ TrafficLight {
 - `lamp_geometry`: Defines the geometry of the lamps.
 
 - `lamp_rotation`: Defines the rotation of the lamps.
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## TrafficLightArrowLampGeometry
 
@@ -1036,8 +1016,6 @@ TrafficLightHorizontal {
 
 - `lamp_rotation`: Defines the rotation of the lamps.
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## TrafficLightStandardLampGeometry
 
 A traffic light lamp with a standard geometry.
@@ -1090,8 +1068,6 @@ YieldPanel {
 - `color`: Defines the color of the panel
 
 - `textureRotation`: Defines the rotation of the texture used for the sign.
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## YieldSign
 

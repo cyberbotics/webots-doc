@@ -153,12 +153,9 @@ for proto in prioritaryProtoList + fileList:
         if describedField:
             file.write(headerPrefix + '## %s Field Summary\n\n' % protoName)
             for fieldName, fieldDescription in describedField:
-                # look for 'Is `NodeType.fieldName`.'
+                # skype 'Is `NodeType.fieldName`.' descriptions
                 match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldDescription)
-                if match:
-                    parentNodeType = match.group(1)
-                    file.write('- `%s`: Inherited from [%s](../reference/%s.md) node.\n\n' % (fieldName, parentNodeType, parentNodeType.lower()))
-                else:
+                if not match:
                     file.write('- `%s`: %s\n\n' % (fieldName, fieldDescription))
 
     if upperCategory not in upperCategories:

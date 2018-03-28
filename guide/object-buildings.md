@@ -111,10 +111,6 @@ Building {
 
 - `bottom`: Defines whether the bottom face of the building should be displayed.
 
-- `model`: Inherited from [Solid](../reference/solid.md) node.
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## BuildingUnderConstruction
 
 Building under construction with scaffolding.

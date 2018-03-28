@@ -32,10 +32,6 @@ OilBarrel {
 
 - `radius`: Defines the radius of the barrel.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
-- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Ramp30deg
 
 A simple ramp made of two 30° slopes and a flat top.

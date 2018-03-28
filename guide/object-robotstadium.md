@@ -61,8 +61,6 @@ RobotstadiumSoccerField {
 
 ### RobotstadiumSoccerField Field Summary
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `frame1Color`: Defines the color of the first goal frame.
 
 - `frame2Color`: Defines the color of the second goal frame.

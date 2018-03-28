@@ -44,8 +44,6 @@ Ball {
 
 - `angularDamping`: Defines the angular damping of the ball.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 ## PingPongBall
 
 A ping pong ball.
@@ -71,8 +69,6 @@ PingPongBall {
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/PingPongBall.proto"
 
 ### PingPongBall Field Summary
-
-- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
 
 - `textureUrl`: Defines the texture used for the ball.
 

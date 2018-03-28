@@ -31,8 +31,6 @@ Desk {
 
 - `textureUrl`: Defines the texture used for the desk.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
 ## RoundTable
 
 A round table (2 x 0.76 x 2 m).
@@ -63,8 +61,6 @@ RoundTable {
 - `color`: Defines the color of the table.
 
 - `textureUrl`: Defines the texture used for the table.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Table
 

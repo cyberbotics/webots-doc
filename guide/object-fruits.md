@@ -34,8 +34,6 @@ Apple {
 
 - `mass`: Defines the mass of the apple in kg.
 
-- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
-
 ## FruitBowl
 
 A fruit bowl (0.146 x 0.146 x 0.146 m).

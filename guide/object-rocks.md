@@ -35,10 +35,6 @@ Rock10cm {
 
 - `ambientIntensity`: Defines the ambiant intensity of the rock.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Rock17cm
 
 A rock (17 cm).
@@ -73,8 +69,4 @@ Rock17cm {
 - `color`: Defines the color of the rock.
 
 - `ambientIntensity`: Defines the ambiant intensity of the rock.
-
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
 

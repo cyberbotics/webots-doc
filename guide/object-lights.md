@@ -103,5 +103,3 @@ FloorLight {
 
 - `pointLightCastShadows`: Defines whether the point light should cast shadows.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-

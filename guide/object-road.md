@@ -131,8 +131,6 @@ Road {
 
 - `turnLanesBackward`: Same as `turnLanesForward` but for the OSM "turn:lanes:backward" key
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -144,8 +142,6 @@ Road {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## AddLaneRoadSegment
 
@@ -249,8 +245,6 @@ AddLaneRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -262,8 +256,6 @@ AddLaneRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## AddLanesRoadSegment
 
@@ -370,8 +362,6 @@ AddLanesRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -383,8 +373,6 @@ AddLanesRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## CrashBarrier
 
@@ -478,11 +466,7 @@ Crossroad {
 
 - `texture`: Defines the texture of the crossroad.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## CurvedRoadSegment
 
@@ -594,8 +578,6 @@ CurvedRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -607,8 +589,6 @@ CurvedRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## HelicoidalRoadSegment
 
@@ -718,8 +698,6 @@ HelicoidalRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -727,8 +705,6 @@ HelicoidalRoadSegment {
 - `leftBorderBoundingObject`: Defines whether the left sidewalk should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## LaneSeparation
 
@@ -836,8 +812,6 @@ LaneSeparation {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -851,8 +825,6 @@ LaneSeparation {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 ## RoadIntersection
 
@@ -935,11 +907,7 @@ RoadIntersection {
 
 - `castShadows`: Defines whether the intersection should cast shadows.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `bottom`: Defines whether the intersection bottom should be displayed (useful in case of bridge).
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 - `texture`: Defines the texture to be used for the intersection.
 
@@ -1100,10 +1068,6 @@ Roundabout {
 
 - `castShadows`: Defines whether the road should cast shadows.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `centerTexture`: Defines the texture to be used for the central part of the roundabout.
 
 - `texture`: Defines the texture to be used for the road.
@@ -1231,8 +1195,6 @@ StraightRoadSegment {
 
 - `bottomTexture`: Defines the texture to be used for the bottom of the road.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 - `roadBoundingObject`: Defines whether the road should have a bounding object.
 
 - `rightBorderBoundingObject`: Defines whether the right sidewalk should have a bounding object.
@@ -1244,6 +1206,4 @@ StraightRoadSegment {
 - `leftBarrierBoundingObject`: Defines whether the left crash barrier (if any) should have a bounding object.
 
 - `castShadows`: Defines whether the road should cast shadows.
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 

@@ -44,5 +44,3 @@ Mirror {
 
 - `frameTexture`: Defines the texture used for the mirror frame.
 
-- `physics`: Inherited from [Solid](../reference/solid.md) node.
-

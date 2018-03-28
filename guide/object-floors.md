@@ -35,8 +35,6 @@ CircleArena {
 
 - `radius`: Defines the radius of the arena.
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `floorTextureUrl`: Defines the texture used for the floor.
 
 - `floorTileSize`: Defines the size of the texture used for the floor.
@@ -81,8 +79,6 @@ Floor {
 
 ### Floor Field Summary
 
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
-
 - `size`: Defines the size of the floor.
 
 - `tileSize`: Defines the size of texture used for the floor.
@@ -126,8 +122,6 @@ RectangleArena {
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/RectangleArena.proto"
 
 ### RectangleArena Field Summary
-
-- `contactMaterial`: Inherited from [Solid](../reference/solid.md) node.
 
 - `floorSize`: Defines the size of the floor.
 

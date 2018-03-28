@@ -31,8 +31,6 @@ Bench {
 
 - `woodColor`: Defines the color of the wooden part.
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## BusStop
 
 Simple bus stop with customizable appearance and an optional bench.
@@ -102,8 +100,6 @@ EmergencyPhone {
 
 - `poleColor`: Defines the color of the pole.
 
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Fence
 
 A customizable fence.
@@ -161,8 +157,6 @@ Fence {
 - `horizontalBarShape`: Defines the shape 2D of the horizontal bars.
 
 - `horizontalBarAppearance`: Defines the appearance of the horizontal bars.
-
-- `boundingObject`: Inherited from [Solid](../reference/solid.md) node.
 
 - `appearance`: For backward compatibility warning.
 
@@ -253,8 +247,6 @@ PublicBin {
 ### PublicBin Field Summary
 
 - `color`: Defines the color of the bin.
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 
 ## PublicToilet
 
@@ -358,6 +350,4 @@ TrashBin {
 - `coverColor`: Defines the color of the top part of the bin.
 
 - `binColor`: Defines the main color of the bin.
-
-- `recognitionColors`: Inherited from [Solid](../reference/solid.md) node.
 

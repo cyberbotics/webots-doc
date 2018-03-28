@@ -38,8 +38,6 @@ Ceiling {
 
 - `filtering`: Defines the filtering level for the texture used for the ceiling.
 
-- `locked`: Inherited from [Solid](../reference/solid.md) node.
-
 ## Door
 
 A cutomizable openable door.

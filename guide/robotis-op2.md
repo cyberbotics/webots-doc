@@ -41,6 +41,8 @@ Indeed, Webots API is simple to understand and to use thanks to examples and doc
 
 ### RobotisOp2 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 RobotisOp2 {
   SFVec3f    translation     0 0 0
@@ -71,35 +73,15 @@ RobotisOp2 {
 
 #### RobotisOp2 Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
+- `plasticColor`: Defines the diffuseColor of the main [Material](../reference/material.md) node.
 
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+- `cameraWidth`: Defines the width of the embedded [Camera](../reference/camera.md) node.
 
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `selfCollision`: Inherited from [Robot](../reference/robot.md) node.
-
-- `plasticColor`: Inherited from [Material](../reference/material.md) node.
-
-- `cameraWidth`: Inherited from [Camera](../reference/camera.md) node.
-
-- `cameraHeight`: Inherited from [Camera](../reference/camera.md) node.
-
-- `battery`: Inherited from [Robot](../reference/robot.md) node.
+- `cameraHeight`: Defines the height of the embedded [Camera](../reference/camera.md) node.
 
 - `jersey`: Extends the robot with a jersey: typically RobotisJersey.proto.
 
-- `channel`: Defines the channel for the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
-
-- `showWindow`: Inherited from [Robot](../reference/robot.md) node.
+- `channel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 

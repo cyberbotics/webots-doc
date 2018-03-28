@@ -11,6 +11,8 @@ Its sensors and actuators can be extended.
 
 ### BoeBot PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 BoeBot {
   SFVec3f    translation     0 0 0
@@ -27,20 +29,6 @@ BoeBot {
 > **File location**: "WEBOTS\_HOME/projects/robots/parallax/boebot/protos/BoeBot.proto"
 
 #### BoeBot Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

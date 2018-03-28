@@ -11,6 +11,8 @@ It is a two-wheeled robot including 8 ultrasonic sensors and more.
 
 ### FireBird6 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 FireBird6 {
   SFVec3f    translation     0 0 0          
@@ -29,24 +31,6 @@ FireBird6 {
 > **File location**: "WEBOTS\_HOME/projects/robots/nex/protos/FireBird6.proto"
 
 #### FireBird6 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `window`: Inherited from [Robot](../reference/robot.md) node.
-
-- `remoteControl`: Inherited from [Robot](../reference/robot.md) node.
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 

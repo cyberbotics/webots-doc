@@ -10,6 +10,8 @@ Robot models based on [Lego's Mindstorms](https://www.lego.com/en-us/mindstorms)
 
 ### MindstormsRover PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 MindstormsRover {
   SFVec3f    translation     0 0 0
@@ -26,20 +28,6 @@ MindstormsRover {
 > **File location**: "WEBOTS\_HOME/projects/robots/lego/mindstorms/protos/MindstormsRover.proto"
 
 #### MindstormsRover Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

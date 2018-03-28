@@ -14,6 +14,8 @@ The "Kondo KHR-2HV" is an humanoid robot with 17 degrees of freedom.
 
 ### Khr2hv PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Khr2hv {
   SFVec3f    translation     0 0.215 0
@@ -31,22 +33,6 @@ Khr2hv {
 > **File location**: "WEBOTS\_HOME/projects/robots/kondo/khr-2hv/protos/Khr2hv.proto"
 
 #### Khr2hv Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `contactMaterial`: Defines the [Solid](../reference/solid.md) for the robot parts.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 

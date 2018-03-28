@@ -14,6 +14,8 @@ The "Salamander" robot is a salamander-like robot developed by the [EPFL BioRob 
 
 ### Salamander PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Salamander {
   SFVec3f    translation     0 0 0
@@ -30,20 +32,6 @@ Salamander {
 > **File location**: "WEBOTS\_HOME/projects/robots/epfl/biorob/protos/Salamander.proto"
 
 #### Salamander Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

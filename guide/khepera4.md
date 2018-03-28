@@ -15,6 +15,8 @@ It is mounted by multiple sensors including 8 distance sensors.
 
 ### Khepera4 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Khepera4 {
   SFVec3f    translation         0 0 0
@@ -37,29 +39,15 @@ Khepera4 {
 
 #### Khepera4 Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
 - `bodyMaterial`: Defines the [Solid](../reference/solid.md) for the body.
 
 - `wheelMaterial`: Defines the [Solid](../reference/solid.md) for the wheels.
 
 - `casterWheelMaterial`: Defines the [Solid](../reference/solid.md) for the caster wheel.
 
-- `emitterChannel`: Inherited from [Emitter](../reference/emitter.md) node.
+- `emitterChannel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) node.
 
-- `receiverChannel`: Inherited from [Receiver](../reference/receiver.md) node.
+- `receiverChannel`: Defines the channel of the embedded [Receiver](../reference/receiver.md) node.
 
 - `turretSlot`: Extends the robot with new nodes in the turret slot.
 

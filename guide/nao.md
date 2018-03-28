@@ -85,6 +85,8 @@ It is also possible to completely switch off the camera simulation by adding the
 
 ### Nao PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Nao {
   SFVec3f    translation           0 0.334 0
@@ -121,37 +123,21 @@ Nao {
 
 #### Nao Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
 - `version`: Defines the Nao version; either "3.3","4.0" or "5.0".
 
 - `degreeOfFreedom`: Defines the number of degrees of freedom; either "21" (fixed fingers) or "25" (articulated fingers).
 
-- `color`: Defines the diffuseColor of the secondary [Material](../reference/material.md).
+- `color`: Defines the diffuseColor of the secondary [Material](../reference/material.md) node.
 
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
+- `gpsAccuracy`: Defines the accuracy for the embedded [GPS](../reference/gps.md) node.
 
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+- `cameraWidth`: Defines the width for the embedded [Camera](../reference/camera.md) node.
 
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `selfCollision`: Inherited from [Robot](../reference/robot.md) node.
-
-- `gpsAccuracy`: Inherited from [GPS](../reference/gps.md) node.
-
-- `cameraWidth`: Inherited from [Camera](../reference/camera.md) node.
-
-- `cameraHeight`: Inherited from [Camera](../reference/camera.md) node.
+- `cameraHeight`: Defines the height for the embedded [Camera](../reference/camera.md) node.
 
 - `jersey`: Extends the robot with a jersey: typically NaoJersey.proto.
 
-- `channel`: Defines the channel for the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
+- `channel`: Defines the channel for the embedded [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
 
 - `contactMaterial`: Defines the [Solid](../reference/solid.md) for all the robot parts, except the feet and the fingers.
 

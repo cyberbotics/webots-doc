@@ -14,6 +14,8 @@ The [iRobot Create](http://www.irobot.com/About-iRobot/STEM/Create-2.aspx) robot
 
 ### Create PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Create {
   SFVec3f    translation     0 0.044 0
@@ -30,20 +32,6 @@ Create {
 > **File location**: "WEBOTS\_HOME/projects/robots/irobot/create/protos/Create.proto"
 
 #### Create Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 

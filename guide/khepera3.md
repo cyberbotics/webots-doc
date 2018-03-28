@@ -11,6 +11,8 @@ It is mounted by multiple sensors including 8 distance sensors.
 
 ### Khepera3 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Khepera3 {
   SFVec3f    translation     0 0 0
@@ -29,20 +31,6 @@ Khepera3 {
 > **File location**: "WEBOTS\_HOME/projects/robots/k-team/khepera3/protos/Khepera3.proto"
 
 #### Khepera3 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `wheelMaterial`: Defines the [Solid](../reference/solid.md) for the wheels.
 

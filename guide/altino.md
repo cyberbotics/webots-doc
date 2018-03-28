@@ -13,6 +13,8 @@ More information on the [constructor website](https://www.saeon-altino.com).
 
 ### Altino PROTO
 
+Derived from [Car](../automobile/car.md).
+
 ```
 Altino {
   SFVec3f    translation     0 0.016 0
@@ -29,19 +31,7 @@ Altino {
 
 #### Altino Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `color`: Inherited from [Material](../reference/material.md) node.
+- `color`: Defines the diffuseColor of the main [[Material](../reference/material.md) node.
 
 ### Samples
 

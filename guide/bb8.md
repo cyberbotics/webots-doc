@@ -18,6 +18,8 @@ The robot size are customizable using the BB-8 PROTO fields.
 
 ### BB-8 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 BB-8 {
   SFVec3f    translation     0 0 0
@@ -43,20 +45,6 @@ BB-8 {
 > **File location**: "WEBOTS\_HOME/projects/robots/sphero/protos/BB-8.proto"
 
 #### BB-8 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `contactMaterial`: Defines the [Solid](../reference/solid.md) for the robot parts.
 

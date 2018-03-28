@@ -23,6 +23,8 @@ There a four PROTO nodes for this robot, one per model:
 - `IprHd6m180.proto`
 - `IprHd6ms180.proto`
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 IprHd6* {
   SFVec3f    translation      0 0.62 0
@@ -43,20 +45,6 @@ IprHd6* {
 > **File location**: "WEBOTS\_HOME/projects/robots/neuronics/ipr/protos/IprHd6*.proto"
 
 #### IprHd6 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `sensorsSlot`: Extends the robot with new nodes in the sensors slot.
 

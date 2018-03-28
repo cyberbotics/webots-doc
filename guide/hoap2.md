@@ -14,6 +14,8 @@ The [Fujitsu HOAP-2](https://en.wikipedia.org/wiki/HOAP) (HOAP for "Humanoid for
 
 ### Hoap2 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Hoap2 {
   SFVec3f    translation         0 0.29 0
@@ -36,25 +38,11 @@ Hoap2 {
 
 #### Hoap2 Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
+- `diffuseColor`: Defines the diffuseColor of the main [Material](../reference/material.md) node.
 
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+- `shininess`: Defines the shininess of the main [Material](../reference/material.md) node.
 
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `diffuseColor`: Inherited from [Material](../reference/material.md) node.
-
-- `shininess`: Inherited from [Material](../reference/material.md) node.
-
-- `specularColor`: Inherited from [Material](../reference/material.md) node.
+- `specularColor`: Defines the specularColor of the main [Material](../reference/material.md) node.
 
 - `contactMaterial`: Defines the [Solid](../reference/solid.md) for all the robot parts, except the feet.
 

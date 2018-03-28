@@ -163,6 +163,8 @@ When set to "2", the e-puck model switches to the e-puck2, with the following di
 
 ### E-puck PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 E-puck {
   SFVec3f    translation         0 0 0
@@ -193,41 +195,23 @@ E-puck {
 
 #### E-puck Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
 - `version`: Defines the e-puck version; either "1" or "2".
 
-- `camera_fieldOfView`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_fieldOfView`: Defines the fieldOfView of the embedded [Camera](../reference/camera.md) node.
 
-- `camera_width`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_width`: Defines the width of the embedded [Camera](../reference/camera.md) node.
 
-- `camera_height`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_height`: Defines the height of the embedded [Camera](../reference/camera.md) node.
 
-- `camera_antiAliasing`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_antiAliasing`: Defines the antiAliasing of the embedded [Camera](../reference/camera.md) node.
 
-- `camera_rotation`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_rotation`: Defines the rotation of the embedded [Camera](../reference/camera.md) node.
 
-- `camera_noise`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_noise`: Defines the noise of the embedded [Camera](../reference/camera.md) node.
 
-- `emitter_channel`: Inherited from [Emitter](../reference/emitter.md) node.
+- `emitter_channel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) node.
 
-- `receiver_channel`: Inherited from [Receiver](../reference/receiver.md) node.
-
-- `battery`: Inherited from [Robot](../reference/robot.md) node.
-
-- `window`: Inherited from [Robot](../reference/robot.md) node.
+- `receiver_channel`: Defines the channel of the embedded [Receiver](../reference/receiver.md) node.
 
 - `turretSlot`: Extends the robot with new nodes in the turret slot.
 

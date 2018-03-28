@@ -16,6 +16,8 @@ It is mounted by several sensors including cameras.
 
 ### Pr2 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Pr2 {
   SFVec3f    translation     0 0 0
@@ -33,22 +35,6 @@ Pr2 {
 > **File location**: "WEBOTS\_HOME/projects/robots/clearpath/pr2/protos/Pr2.proto"
 
 #### Pr2 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `selfCollision`: Inherited from [Robot](../reference/robot.md) node.
 
 - `baseSlot`: Extends the robot with new nodes in the base slot.
 

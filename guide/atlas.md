@@ -11,6 +11,8 @@ The robot is 1.8 meters tall and is designed for a variety of search and rescue 
 
 ### Atlas PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Atlas {
   SFVec3f    translation     0 1 0
@@ -27,20 +29,6 @@ Atlas {
 > **File location**: "WEBOTS\_HOME/projects/robots/boston_dynamics/atlas/protos/Atlas.proto"
 
 #### Atlas Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `pelvisSlot`: Extends the robot with new nodes in the pelvis slot.
 

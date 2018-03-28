@@ -68,6 +68,8 @@ The calibration was performed using a regular A4 white paper.
 
 ### Thymio2 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Thymio2 {
   SFVec3f    translation     0 0 0
@@ -87,22 +89,6 @@ Thymio2 {
 > **File location**: "WEBOTS\_HOME/projects/robots/mobsya/thymio/protos/Thymio2.proto"
 
 #### Thymio2 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `window`: Inherited from [Robot](../reference/robot.md) node.
 
 - `contactMaterial`: Defines the [Solid](../reference/solid.md) for the body.
 

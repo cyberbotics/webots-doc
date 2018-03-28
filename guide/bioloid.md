@@ -25,6 +25,8 @@ The physical dimensions, friction coefficients and mass distribution have been e
 
 ### BioloidDog PROTO
 
+Derived from [Supervisor](../reference/supervisor.md).
+
 ```
 BioloidDog {
   SFVec3f    translation     0 0 0
@@ -41,20 +43,6 @@ BioloidDog {
 > **File location**: "WEBOTS\_HOME/projects/robots/robotis/bioloid/protos/BioloidDog.proto"
 
 #### BioloidDog Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

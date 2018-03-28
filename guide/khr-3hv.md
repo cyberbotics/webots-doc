@@ -14,6 +14,8 @@ The "Kondo KHR-3HV" is an humanoid robot with 17 degrees of freedom.
 
 ### Khr3hv PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Khr3hv {
   SFVec3f    translation     0 0 0
@@ -31,22 +33,6 @@ Khr3hv {
 > **File location**: "WEBOTS\_HOME/projects/robots/kondo/khr-3hv/protos/Khr3hv.proto"
 
 #### Khr3hv Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `selfCollision`: Inherited from [Robot](../reference/robot.md) node.
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 

@@ -11,6 +11,8 @@ QRIO stood approximately 0.6 m (2 feet) tall and weighed 7.3 kg (16 pounds).
 
 ### QRIO PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 QRIO {
   SFVec3f    translation     0 0 0
@@ -27,20 +29,6 @@ QRIO {
 > **File location**: "WEBOTS\_HOME/projects/robots/sony/qrio/protos/QRIO.proto"
 
 #### QRIO Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

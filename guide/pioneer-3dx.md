@@ -79,6 +79,8 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 
 ### Pioneer3dx PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Pioneer3dx {
   SFVec3f    translation     0 0.0975 0
@@ -95,20 +97,6 @@ Pioneer3dx {
 > **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
 
 #### Pioneer3dx Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

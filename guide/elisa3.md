@@ -11,6 +11,8 @@ It has multiple sensors including IR distance sensors, accelerometer and an RF r
 
 ### Elisa3 PROTO
 
+Derived from [Robot](../reference/robot.md).
+
 ```
 Elisa3 {
   SFVec3f    translation      0 0 0
@@ -31,25 +33,9 @@ Elisa3 {
 
 #### Elisa3 Field Summary
 
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
+- `emitter_channel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) node.
 
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `emitter_channel`: Inherited from [Emitter](../reference/emitter.md) node.
-
-- `receiver_channel`: Inherited from [Receiver](../reference/receiver.md) node.
-
-- `battery`: Inherited from [Robot](../reference/robot.md) node.
+- `receiver_channel`: Defines the channel of the embedded [Receiver](../reference/receiver.md) node.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

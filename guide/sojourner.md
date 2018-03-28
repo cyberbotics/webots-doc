@@ -37,17 +37,29 @@ Sojourner {
 #### Sojourner PROTO Field Summary
 
 - `translation`: Inherited from [Transform](../reference/transform.md) node.
+
 - `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
 - `name`: Inherited from [Solid](../reference/solid.md) node.
+
 - `controller`: Inherited from [Robot](../reference/robot.md) node.
+
 - `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
 - `customData`: Inherited from [Robot](../reference/robot.md) node.
+
 - `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
 - `camera_fieldOfView`: Inherited from [Camera](../reference/camera.md) node.
+
 - `camera_width`: Inherited from [Camera](../reference/camera.md) node.
+
 - `camera_height`: Inherited from [Camera](../reference/camera.md) node.
+
 - `camera_antiAliasing`: Inherited from [Camera](../reference/camera.md) node.
+
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 - `window`: Inherited from [Robot](../reference/robot.md) node.
 
 ### Samples

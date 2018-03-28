@@ -46,6 +46,7 @@ for line in lines:
 
                 comment = re.sub(r'`([^\.`]*)(\.[^`]*)?`', replacement, comment)
                 print ('- `%s`: %s' % (fieldName, comment))
+                print ('')
         print ('')
         protoFields = []
     else:

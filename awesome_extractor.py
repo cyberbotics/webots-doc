@@ -34,8 +34,18 @@ for line in lines:
             if m:
                 fieldName = m.group(1)
                 comment = m.group(2).strip()
-                comment = comment[0].lower() + comment[1:]  # First comment letter to lower case
-                print ('- `%s` %s' % (fieldName, comment))
+
+                m = re.match(r'Is `([^`]*)`\.', comment)
+                if m:
+                    comment = 'Inherited from `%s` node.' % (m.group(1).split('.')[0])
+
+                def replacement(match):
+                    m = match.group(1)
+                    mL = m[0].lower() + m[1:]
+                    return '[%s](../reference/%s.md)' % (m, mL)
+
+                comment = re.sub(r'`([^\.`]*)(\.[^`]*)?`', replacement, comment)
+                print ('- `%s`: %s' % (fieldName, comment))
         print ('')
         protoFields = []
     else:

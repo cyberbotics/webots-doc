@@ -231,7 +231,7 @@ E-puck {
 
 - `turretSlot`: Extends the robot with new nodes in the turret slot.
 
-- `groundSensorsSlot`: Extends the robot with new nodes in the ground slot. Typically: [E-puckGroundSensors](../reference/e-puckGroundSensors.md).
+- `groundSensorsSlot`: Extends the robot with new nodes in the ground slot. Typically: `E-puckGroundSensors`.
 
 - `kinematic`: Defines whether the robot motion and its sensors are computed according to a 2D kinematics algorithm.
 

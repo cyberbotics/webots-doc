@@ -14,7 +14,7 @@ Four models are supported in Webots: HD6M180, HD6Ms180, HD6M90 and HD6Ms90.
 
 ![youtube video](https://www.youtube.com/watch?v=ay3_1clWTfw)
 
-### IprHd6 PROTO nodes
+### IprHd6 PROTO Nodes
 
 There a four PROTO nodes for this robot, one per model:
 

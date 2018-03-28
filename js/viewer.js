@@ -344,18 +344,18 @@ function createIndex(view) {
 
   // Do not create too small indexes.
   var content = document.querySelector('#content');
-  if (content.offsetHeight < 2 * window.innerHeight)
+  if (content.offsetHeight < 2 * window.innerHeight || headings.length < 4)
     return;
 
   var level = parseInt(headings[0].tagName[1]) + 1; // current heading level.
 
-  // Create an empty index, and insert it after the first heading.
+  // Create an empty index, and insert it before the second heading.
   var indexTitle = document.createElement('h' + level);
   indexTitle.textContent = 'Index';
-  headings[0].parentNode.insertBefore(indexTitle, headings[0]);
+  headings[0].parentNode.insertBefore(indexTitle, headings[1]);
   var ul = document.createElement('ul');
   ul.setAttribute('id', 'index');
-  headings[0].parentNode.insertBefore(ul, headings[0]);
+  headings[0].parentNode.insertBefore(ul, headings[1]);
 
   headings.forEach(function (heading, i) {
     if (i == 0) // Skip the first heading.

@@ -246,7 +246,7 @@ Fridge {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/fridge/protos/Fridge.proto"
 
-#### Fridge Field Summary
+### Fridge Field Summary
 
 - `mainColor`: Defines the color of the fridge.
 
@@ -282,7 +282,7 @@ Oven {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/oven/protos/Oven.proto"
 
-#### Oven Field Summary
+### Oven Field Summary
 
 - `mainColor`: Defines the color of the oven.
 

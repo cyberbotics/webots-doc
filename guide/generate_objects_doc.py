@@ -120,7 +120,10 @@ for proto in prioritaryProtoList + fileList:
         if upperCategory not in upperCategories or category not in upperCategories[upperCategory]:
             file.write(headerPrefix + ' %s\n\n' % category.replace('_', ' ').title())
         if protoName not in [upperCategory.replace('_', ' ').title(), category.replace('_', ' ').title()]:
+            # Avoid writing twice the same title at different level
             file.write(headerPrefix + '# %s\n\n' % protoName)
+        else:
+            headerPrefix = '#'
 
         file.write(description + '\n')
 

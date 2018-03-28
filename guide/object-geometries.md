@@ -15,17 +15,17 @@ Derived from [IndexedFaceSet](../reference/indexedfaceset.md).
 
 ```
 Extrusion {
-      MFVec2f    crossSection              [1 1, 1 -1, -1 -1, -1 1, 1 1]
-      MFVec3f    spine                     [0 0 0, 0 1 0]
-      MFVec2f    scale                     [1.0 1.0]
-      MFRotation orientation               [0 0 1 0]
-      SFBool     beginCap                  TRUE
-      SFBool     endCap                    TRUE
-      SFBool     ccw                       TRUE
-      SFBool     solid                     TRUE
-      SFBool     convex                    TRUE
-      SFFloat    creaseAngle               0.0
-      SFInt32    splineSubdivision         4
+  MFVec2f    crossSection              [1 1, 1 -1, -1 -1, -1 1, 1 1]
+  MFVec3f    spine                     [0 0 0, 0 1 0]
+  MFVec2f    scale                     [1.0 1.0]
+  MFRotation orientation               [0 0 1 0]
+  SFBool     beginCap                  TRUE
+  SFBool     endCap                    TRUE
+  SFBool     ccw                       TRUE
+  SFBool     solid                     TRUE
+  SFBool     convex                    TRUE
+  SFFloat    creaseAngle               0.0
+  SFInt32    splineSubdivision         4
 }
 ```
 

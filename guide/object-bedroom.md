@@ -35,7 +35,7 @@ Bed {
 
 - `size`: Defines the size of the bed.
 
-- `doubleBed`: Defines whether it is a simple or double bed.
+- `doubleBed`: Defines whether it is a single or double bed.
 
 - `feetSize`: Defines the size of the feet.
 

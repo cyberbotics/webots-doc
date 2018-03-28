@@ -3,7 +3,7 @@
 ## AdvertisingBoard
 
 Double sided and adjustable advertising board with the possibility of adding up to four poles.
-Those poles can either be a `cylinder`, `box`, or a `H-shape`.
+Those poles can either be a `cylinder`, `box`, or an `H-shape`.
 
 %figure
 

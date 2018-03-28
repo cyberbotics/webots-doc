@@ -168,7 +168,7 @@ BungalowStyleHouse {
 
 - `fence`: Defines whether the house has a fence or not.
 
-- `floor`: Defines whether the house is surelevated or not.
+- `floor`: Defines whether the house is built on a wooden base layer or not.
 
 - `chimney`: Defines whether the house has a chimney or not.
 

@@ -33,7 +33,7 @@ TexturedBackground {
 
 ## TexturedBackgroundLight
 
-Light matching with the TexturedBackground.
+Light designed to match the skyboxes in the TexturedBackground PROTO.
 
 Supported values for the "texture" field:
 

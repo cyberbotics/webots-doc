@@ -14,12 +14,12 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 Bench {
-        SFVec3f    translation          0 0 0
-        SFRotation rotation             0 1 0 0
-        SFString   name                 "bench"
-        SFColor    metalColor           0.17 0.17 0.17
-        SFColor    woodColor            0.25 0.17 0.12
-        MFColor    recognitionColors    [0.17 0.17 0.17, 0.25 0.17 0.12]
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "bench"
+  SFColor    metalColor           0.17 0.17 0.17
+  SFColor    woodColor            0.25 0.17 0.12
+  MFColor    recognitionColors    [0.17 0.17 0.17, 0.25 0.17 0.12]
 }
 ```
 
@@ -86,11 +86,11 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 EmergencyPhone {
-        SFVec3f    translation          0 0 0
-        SFRotation rotation             0 1 0 0
-        SFString   name                 "emergency phone"
-        SFColor    poleColor            1 0.44 0
-        MFColor    recognitionColors    [1 0.44 0]
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "emergency phone"
+  SFColor    poleColor            1 0.44 0
+  MFColor    recognitionColors    [1 0.44 0]
 }
 ```
 
@@ -234,11 +234,11 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 PublicBin {
-        SFVec3f    translation          0 0 0
-        SFRotation rotation             0 1 0 0
-        SFString   name                 "public bin"
-        SFColor    color                0.27 0.27 0.27
-        MFColor    recognitionColors    [0.27 0.27 0.27]
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "public bin"
+  SFColor    color                0.27 0.27 0.27
+  MFColor    recognitionColors    [0.27 0.27 0.27]
 }
 ```
 
@@ -334,12 +334,12 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 TrashBin {
-        SFVec3f    translation          0 0 0
-        SFRotation rotation             0 1 0 0
-        SFString   name                 "trash bin"
-        SFColor    coverColor           0.1 0.1 0.1
-        SFColor    binColor             0.08 0.46 0
-        MFColor    recognitionColors    [0.1 0.1 0.1, 0.08 0.46 0]
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "trash bin"
+  SFColor    coverColor           0.1 0.1 0.1
+  SFColor    binColor             0.08 0.46 0
+  MFColor    recognitionColors    [0.1 0.1 0.1, 0.08 0.46 0]
 }
 ```
 

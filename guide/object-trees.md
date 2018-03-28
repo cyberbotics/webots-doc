@@ -29,18 +29,18 @@ Derived from [Transform](../reference/transform.md).
 
 ```
 Forest {
-      SFVec3f    translation          0 0 0
-      SFRotation rotation             0 1 0 0
-      MFString   treesFiles           []
-      MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
-      SFFloat    density              0.2
-      SFString   type                 "random"
-      MFString   groundTexture        ["textures/dry_leaf.jpg"]
-      SFBool     withSnow             FALSE
-      SFFloat    maxHeight            6
-      SFFloat    minHeight            2
-      SFFloat    maxRadius            3
-      SFFloat    minRadius            1
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  MFString   treesFiles           []
+  MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
+  SFFloat    density              0.2
+  SFString   type                 "random"
+  MFString   groundTexture        ["textures/dry_leaf.jpg"]
+  SFBool     withSnow             FALSE
+  SFFloat    maxHeight            6
+  SFFloat    minHeight            2
+  SFFloat    maxRadius            3
+  SFFloat    minRadius            1
 }
 ```
 

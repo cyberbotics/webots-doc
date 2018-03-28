@@ -232,6 +232,18 @@ Wall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Wall.proto"
 
+### Wall Field Summary
+
+- `size`: Defines the size of the wall.
+
+- `wallTextureUrl`: Defines the texture used for the wall.
+
+- `wallTileSize`: Defines the size of the texture used for the wall.
+
+- `wallTextureTranslation`: Defines the translation of the texture used for the wall.
+
+- `topWallColor`: Defines the color of the top face of the wall.
+
 ## Window
 
 A customizable window including walls above and below.

@@ -16,16 +16,26 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 CardboardBox {
-  SFVec3f translation 0 0.3 0
-  SFRotation rotation 0 1 0 0
-  SFString name "cardboard box"
-  SFVec3f size 0.6 0.6 0.6
-  SFFloat mass 0
-  SFBool locked FALSE
+  SFVec3f    translation 0 0.3 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "cardboard box"
+  SFVec3f    size        0.6 0.6 0.6
+  SFFloat    mass        0
+  SFBool     locked      FALSE
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/CardboardBox.proto"
+
+#### CardboardBox Field Summary
+
+- `name`: Defines the texture used for the cardboard box.
+
+- `size`: Defines the size of the cardboard box.
+
+- `mass`: Defines the mass of the cardboard box in kg. A value smaller or equal to 0 remove the physics of the cardboard box.
+
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ### WoodenBox
 
@@ -41,17 +51,27 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 WoodenBox {
-  SFVec3f translation 0 0.3 0
-  SFRotation rotation 0 1 0 0
-  SFString name "wooden box"
-  SFVec3f size 0.6 0.6 0.6
-  SFFloat mass 0
-  MFNode immersionProperties []
-  SFBool locked FALSE
+  SFVec3f    translation         0 0.3 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "wooden box"
+  SFVec3f    size                0.6 0.6 0.6
+  SFFloat    mass                0
+  MFNode     immersionProperties []
+  SFBool     locked              FALSE
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+#### WoodenBox Field Summary
+
+- `size`: Defines the size of the wooden box.
+
+- `mass`: Defines the mass of the wooden box in kg. A value smaller or equal to 0 remove the physics of the wooden box.
+
+- `immersionProperties`: Inherited from [Solid](../reference/solid.md) node.
+
+- `locked`: Inherited from [Solid](../reference/solid.md) node.
 
 ## Pallet
 

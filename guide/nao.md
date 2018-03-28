@@ -143,7 +143,7 @@ Nao {
 
 - `selfCollision`: Inherited from [Robot](../reference/robot.md) node.
 
-- `gpsAccuracy`: Inherited from [GPS](../reference/gPS.md) node.
+- `gpsAccuracy`: Inherited from [GPS](../reference/gps.md) node.
 
 - `cameraWidth`: Inherited from [Camera](../reference/camera.md) node.
 

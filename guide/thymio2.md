@@ -21,50 +21,6 @@ Finally several objects related to the Thymio II are available, including a pen 
 
 ![youtube video](https://www.youtube.com/watch?v=q9VuJ8Kvt7U)
 
-### Thymio2 PROTO
-
-```
-Thymio2 {
-  SFVec3f    translation     0 0 0
-  SFRotation rotation        0 1 0 0
-  SFString   name            "Thymio II"
-  SFString   controller      "thymio2_aseba"
-  SFString   controllerArgs  "port=33333"
-  SFString   customData      ""
-  SFBool     synchronization TRUE
-  SFString   window          ""
-  SFString   contactMaterial "thymio body"
-  SFBool     castLight       TRUE
-  MFNode     bodySlot        []
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/robots/mobsya/thymio/protos/Thymio2.proto"
-
-#### Thymio2 Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `window`: Inherited from [Robot](../reference/robot.md) node.
-
-- `contactMaterial`: Defines the [Solid](../reference/solid.md) for the body.
-
-- `castLight`: Defines whether OpenGL lights are cerated for each LEDs.
-
-- `bodySlot`: Extends the robot with new nodes in the body slot.
-
 ### Thymio II Model
 
 The main characteristics of the Thymio II model in Webots is summed up in [this table](#thymio-ii-characteristics).
@@ -109,6 +65,50 @@ The calibration was performed using a regular A4 white paper.
 ![horizontal_prox_feedback.png](images/robots/thymio2/horizontal_prox_feedback.png)
 
 %end
+
+### Thymio2 PROTO
+
+```
+Thymio2 {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Thymio II"
+  SFString   controller      "thymio2_aseba"
+  SFString   controllerArgs  "port=33333"
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  SFString   window          ""
+  SFString   contactMaterial "thymio body"
+  SFBool     castLight       TRUE
+  MFNode     bodySlot        []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/mobsya/thymio/protos/Thymio2.proto"
+
+#### Thymio2 Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `window`: Inherited from [Robot](../reference/robot.md) node.
+
+- `contactMaterial`: Defines the [Solid](../reference/solid.md) for the body.
+
+- `castLight`: Defines whether OpenGL lights are cerated for each LEDs.
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
 
 ### Connect Aseba to the Thymio II Model
 

@@ -18,41 +18,6 @@ More information on the specifications and optional devices is available on the 
 
 ![youtube video](https://www.youtube.com/watch?v=x52vlsr8Ic0)
 
-### Pioneer3dx PROTO
-
-```
-Pioneer3dx {
-  SFVec3f    translation     0 0.0975 0
-  SFRotation rotation        0 1 0 0
-  SFString   name            "Pioneer 3-DX"
-  SFString   controller      "pioneer3dx_collision_avoidance"
-  SFString   controllerArgs  ""
-  SFString   customData      ""
-  SFBool     synchronization TRUE
-  MFNode     extensionSlot   []
-}
-```
-
-> **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
-
-#### Pioneer3dx Field Summary
-
-- `translation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `rotation`: Inherited from [Transform](../reference/transform.md) node.
-
-- `name`: Inherited from [Solid](../reference/solid.md) node.
-
-- `controller`: Inherited from [Robot](../reference/robot.md) node.
-
-- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
-
-- `customData`: Inherited from [Robot](../reference/robot.md) node.
-
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
-- `extensionSlot`: Extends the robot with new nodes in the extension slot.
-
 ### Pioneer 3-DX Model
 
 %figure "Pioneer 3-DX characteristics"
@@ -111,6 +76,41 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 ![pioneer3dx_led.png](images/robots/pioneer-3dx/leds.png)
 
 %end
+
+### Pioneer3dx PROTO
+
+```
+Pioneer3dx {
+  SFVec3f    translation     0 0.0975 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Pioneer 3-DX"
+  SFString   controller      "pioneer3dx_collision_avoidance"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+#### Pioneer3dx Field Summary
+
+- `translation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `rotation`: Inherited from [Transform](../reference/transform.md) node.
+
+- `name`: Inherited from [Solid](../reference/solid.md) node.
+
+- `controller`: Inherited from [Robot](../reference/robot.md) node.
+
+- `controllerArgs`: Inherited from [Robot](../reference/robot.md) node.
+
+- `customData`: Inherited from [Robot](../reference/robot.md) node.
+
+- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
 
 ### Samples
 

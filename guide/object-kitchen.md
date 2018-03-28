@@ -222,6 +222,8 @@ Worktop {
 
 ## Fridge
 
+### Fridge PROTO
+
 A fridge with 2 doors (0.7 x 1.8 x 0.7 m).
 
 Derived from [Solid](../reference/solid.md).
@@ -246,7 +248,7 @@ Fridge {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/fridge/protos/Fridge.proto"
 
-### Fridge Field Summary
+#### Fridge Field Summary
 
 - `mainColor`: Defines the color of the fridge.
 
@@ -257,6 +259,8 @@ Fridge {
 - `doorTextureUrl`: Defines the texture used for the door of the fridge.
 
 ## Oven
+
+### Oven PROTO
 
 An oven (0.5 x 0.68 x 0.44 m).
 
@@ -282,7 +286,7 @@ Oven {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/oven/protos/Oven.proto"
 
-### Oven Field Summary
+#### Oven Field Summary
 
 - `mainColor`: Defines the color of the oven.
 

@@ -1,5 +1,7 @@
 # Mirror
 
+## Mirror PROTO
+
 A simple mirror made of a display attached to a camera.
 The reflected image does not depend on the viewpoint position.
 

@@ -36,7 +36,7 @@
 - [Paintings](object-paintings.md)
 - [Panels](object-panels.md)
 - [Plants](object-plants.md)
-- [Roads](object-roads.md)
+- [Road](object-road.md)
 - [Robotstadium](object-robotstadium.md)
 - [Rocks](object-rocks.md)
 - [School Furniture](object-school-furniture.md)

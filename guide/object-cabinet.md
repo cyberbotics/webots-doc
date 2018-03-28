@@ -1,5 +1,7 @@
 # Cabinet
 
+## Cabinet PROTO
+
 A customizable cabinet containing elements (shelves, dynamic doors, and drawers).
 The internal cabinet layout is a grid in which the elements can be inserted.
 The grid dimension (and so the cabinet size) is defined by the 'rowsHeights' and the 'columnsWidths' fields.

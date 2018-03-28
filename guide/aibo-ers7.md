@@ -98,7 +98,7 @@ AiboErs7 {
 
 #### AiboErs7 Field Summary
 
-- `camera_fieldOfView`: Inherited from [Camera](../reference/camera.md) node.
+- `camera_fieldOfView`:  Defines the fieldOfView of the embedded [Camera](../reference/camera.md) node.
 
 - `camera_width`: Defines the width of the embedded [Camera](../reference/camera.md) node.
 

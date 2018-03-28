@@ -34,7 +34,7 @@ Sojourner {
 
 > **File location**: "WEBOTS\_HOME/projects/robots/nasa/protos/Sojourner.proto"
 
-#### Sojourner PROTO Field Summary
+#### Sojourner Field Summary
 
 - `translation`: Inherited from [Transform](../reference/transform.md) node.
 

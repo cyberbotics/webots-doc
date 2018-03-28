@@ -27,7 +27,7 @@ for line in lines:
         print ('')
         print ('> **File location**: "WEBOTS\_HOME/%s"' % protoPath)
         print ('')
-        print ('#### %s PROTO Field Summary' % protoName)
+        print ('#### %s Field Summary' % protoName)
         print ('')
         for field in protoFields:
             m = re.match(r'\s*field\s*[^ ]*\s*([^ ]*)\s*[^#]*#?(.*)', field)

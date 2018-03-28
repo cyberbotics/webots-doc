@@ -62,8 +62,6 @@ class TestReferences(unittest.TestCase):
                 anchors = self.anchors[md_path]
                 s = set()
                 for a in anchors:
-                    if 'html' in a:
-                        print a
                     if a in s:
                         self.assertTrue(
                             False,

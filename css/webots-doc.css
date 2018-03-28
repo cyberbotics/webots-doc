@@ -482,7 +482,7 @@
 
  .webots-doc g foreignObject div a {
    font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used and it's size */
-   font-size: 75%;
+   font-size: 100%;
  }
 
  .webots-doc .mermaid svg {

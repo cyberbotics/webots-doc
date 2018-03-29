@@ -3,6 +3,10 @@
 <div id="view3d"></div>
 
 <!--
+%x3d guide/scenes/nao/nao.x3d images/robots/nao/model.png
+-->
+
+<!--
 %figure "Nao model in Webots"
 
 ![model.png](images/robots/nao/model.png)

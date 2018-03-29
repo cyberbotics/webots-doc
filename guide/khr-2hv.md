@@ -12,6 +12,30 @@ The "Kondo KHR-2HV" is an humanoid robot with 17 degrees of freedom.
 
 ![youtube video](https://www.youtube.com/watch?v=AtaGm9nR-EM)
 
+### Khr2hv PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Khr2hv {
+  SFVec3f    translation     0 0.215 0
+  SFRotation rotation        1 0 0 -1.5708
+  SFString   name            "KHR-2HV"
+  SFString   controller      "khr-2hv_demo"
+  SFString   controllerArgs  ""
+  SFString   contactMaterial "default"
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     bodySlot        []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/kondo/khr-2hv/protos/Khr2hv.proto"
+
+#### Khr2hv Field Summary
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/kondo/khr-2hv/worlds".

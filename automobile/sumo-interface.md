@@ -130,7 +130,7 @@ PROTO SumoDisplay [
 On the contrary, if the SUMO window is smaller than the resolution, the image will not entirely fill it.
 If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
-## Plugin Mechanism
+### Plugin Mechanism
 
 In addition to the PROTO parameters, the plugin mechanism can be used to extend the interface.
 The plugin should be written in python, be in the same folder as the SUMO network files, and should implement the `SumoSupervisorPlugin` class with the two following entry-point functions:
@@ -149,7 +149,7 @@ The second one is called at each SUMO step and the argument is the time step.
 
 Such a plugin can be used for example to change traffic light state in SUMO.
 
-## Using the SUMO Executables Distributed with Webots
+### Using the SUMO Executables Distributed with Webots
 
 SUMO is distributed with Webots, it is located in `WEBOTS_HOME/projects/default/resources/sumo`, you can find all the executables in the `bin` folder.
 To be able to use these executables you need first to add `WEBOTS_HOME/projects/default/resources/sumo/bin` to your PATH.

@@ -9,6 +9,29 @@
 The "Boe-Bot" is a 3 wheeled robot (2 motorized wheels and a passive caster wheel) created by [Parallax Inc.](https://www.parallax.com/product/boe-bot-robot).
 Its sensors and actuators can be extended.
 
+### BoeBot PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+BoeBot {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "BoeBot"
+  SFString   controller      "boebot"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/parallax/boebot/protos/BoeBot.proto"
+
+#### BoeBot Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/parallax/boebot/worlds".

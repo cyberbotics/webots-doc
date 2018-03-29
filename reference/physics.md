@@ -73,7 +73,7 @@ For example in *kinematics* mode an object can reach the desired speed immediate
 It is usually not necessary to specify all the [Physics](#physics) nodes in a Webots world.
 Whether to use or not a [Physics](#physics) node in a particular case depends on what aspect of the real world your want to model in your simulation.
 
-Note that if a [Solid](#solid) node has at least one [Solid](#solid) ancestor node and contains a [Physics](#physics) node but none of its [Solid](#solid) ancestor nodes contain a [Physics](#physics) node, then this node will be attached to the static environment with an ODE fixed joint and thus it won't move from its initial position.
+Note that if a [Solid](solid.md) node has at least one [Solid](solid.md) ancestor node and contains a [Physics](#physics) node but none of its [Solid](solid.md) ancestor nodes contain a [Physics](#physics) node, then this node will be attached to the static environment with an ODE fixed joint and thus it won't move from its initial position.
 
 #### In Passive Objects
 
@@ -100,10 +100,10 @@ Indeed you can define a subtree starting from this top [Solid](solid.md) and who
 
 <!-- -->
 
-> **Note**: The [Robot](#robot) nodes with a differential wheels configuration are a special case: they can move even if they don't have [Physics](#physics) nodes.
+> **Note**: The [Robot](robot.md) nodes with a differential wheels configuration are a special case: they can move even if they don't have [Physics](#physics) nodes.
 That's because Webots uses a special *kinematics* algorithm for this kind of robots without [Physics](#physics).
 However, if the [Physics](#physics) nodes are present then Webots uses the regular *physics* simulation algorithms.
-For a [Robot](#robot) node to be detected as a differential wheels, the following constraints must be satisfied: the robot must have 2 [HingeJoint](#hingejoint) nodes whose axes are aligned and the [Solid](#solid) nodes in the `endPoint` field of the joints must each have a [Cylinder](#cylinder) node as bounding object with the same radius.
+For a [Robot](robot.md) node to be detected as a differential wheels, the following constraints must be satisfied: the robot must have 2 [HingeJoint](hingejoint.md) nodes whose axes are aligned and the [Solid](solid.md) nodes in the `endPoint` field of the joints must each have a [Cylinder](cylinder.md) node as bounding object with the same radius.
 
 #### Implicit Solid Merging and Joints
 

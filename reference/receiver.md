@@ -81,7 +81,7 @@ int wb_receiver_get_sampling_period(WbDeviceTag tag);
 
 The `wb_receiver_enable` function starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate of once every `sampling_period` (expressed in milliseconds).
-Incoming data packet are appended to the tail of the reception queue (see [this figure](#receiver-s-packet-queue)).
+Incoming data packet are appended to the tail of the reception queue (see [this figure](#receivers-packet-queue)).
 Incoming data packets will be discarded if the receiver's buffer size (specified in the [Receiver](#receiver) node) is exceeded.
 To avoid buffer overflow, the data packets should be read at a high enough rate by the controller program.
 The `sampling_period` argument specifies the sampling period of the [Receiver](#receiver) and is expressed in milliseconds.
@@ -108,10 +108,10 @@ void wb_receiver_next_packet(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_get_queue_length` function returns the number of data packets currently present in the receiver's queue (see [this figure](#receiver-s-packet-queue)).
+The `wb_receiver_get_queue_length` function returns the number of data packets currently present in the receiver's queue (see [this figure](#receivers-packet-queue)).
 
 The [Receiver](#receiver) node receives and queues the data packets immediately so that they will be available at the next sampling period.
-But the [Emitter](#emitter) node needs one basic time step to send the message.
+But the [Emitter](emitter.md) node needs one basic time step to send the message.
 
 The `wb_receiver_next_packet` function deletes the head packet.
 The next packet in the queue, if any, becomes the new head packet.
@@ -169,7 +169,7 @@ int wb_receiver_get_data_size(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_get_data` function returns the data of the packet at the head of the reception queue (see [this figure](#receiver-s-packet-queue)).
+The `wb_receiver_get_data` function returns the data of the packet at the head of the reception queue (see [this figure](#receivers-packet-queue)).
 The returned data pointer is only valid until the next call to the `wb_receiver_next_packet` function.
 It is illegal to call the `wb_receiver_get_data` function when the queue is empty (i.e. when `wb_receiver_get_queue_length() == 0`).
 The [Receiver](#receiver) node knows nothing about that structure of the data being sent but its byte size.
@@ -250,7 +250,7 @@ const double *wb_receiver_get_emitter_direction(WbDeviceTag tag);
 
 **Description**
 
-The `wb_receiver_get_signal_strength` function operates on the head packet in the receiver's queue (see [this figure](#receiver-s-packet-queue)).
+The `wb_receiver_get_signal_strength` function operates on the head packet in the receiver's queue (see [this figure](#receivers-packet-queue)).
 It returns the simulated signal strength at the time the packet was transmitted.
 This signal strength is equal to the inverse of the distance between the emitter and the receiver squared.
 In other words, *s = 1 / r^2*, where *s* is the signal strength and *r* is the distance between emitter and receiver.

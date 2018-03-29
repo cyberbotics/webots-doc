@@ -22,8 +22,8 @@ The template engine used is [liluat](https://github.com/FSMaxB/liluat) (under th
 - The fields are accessible into a global Lua dictionary named "fields".
 The dictionary keys matches the PROTO's fields names.
 Each entry of this dictionary is a sub-dictionary with two keys named "value" and "defaultValue", the first one contains the current state of the field and the second one contains its the default state.
-The conversion between the VRML97 types and the Lua types is detailed in [this table](#vrml-type-to-lua-type-conversion).
-- As shown in [this table](#vrml-type-to-lua-type-conversion), the conversion of a VRML97 node is a Lua dictionary.
+The conversion between the VRML97 types and the Lua types is detailed in [this table](#vrml97-type-to-lua-type-conversion).
+- As shown in [this table](#vrml97-type-to-lua-type-conversion), the conversion of a VRML97 node is a Lua dictionary.
 This dictionary contains the following keys: "node\_name" containing the VRML97 node name, "fields" which is a dictionary containing the Lua representation of the VRML97 node fields, and "super" which can contains the super PROTO node (the node above in the hierarchy) if existing.
 This dictionary is equal to `nil` if the VRML97 node is not defined (`NULL`).
 For example, in the SimpleStairs example below, the `fields.appearance.node_name` key contains the `'Appearance'` string.

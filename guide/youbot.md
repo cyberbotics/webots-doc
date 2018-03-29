@@ -17,6 +17,29 @@ These wheels are efficiently modeled using asymmetric friction.
 
 ![youtube video](https://www.youtube.com/watch?v=9Fjyu_wzIgc)
 
+### Youbot PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Youbot {
+  SFVec3f    translation     0 0.12 0
+  SFRotation rotation        1 0 0 -1.5708
+  SFString   name            "youBot"
+  SFString   controller      "youbot"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     bodySlot        []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/kuka/youbot/protos/Youbot.proto"
+
+#### Youbot Field Summary
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
 ### Samples
 
 You will find some samples in this folder: "WEBOTS\_HOME/projects/robots/kuka/youbot/worlds".

@@ -110,7 +110,7 @@ For the three other sensor slots, the positions are different for each model (be
 
 %end
 
-In order to simplify some simulations, `Solid` based cars can be used from the [VehicleSimple](#vehicle-simple) PROTO.
+In order to simplify some simulations, `Solid` based cars can be used from the [CarSimple](simple-vehicles.md#carsimple) PROTO.
 
 ### Heavy-Weights
 

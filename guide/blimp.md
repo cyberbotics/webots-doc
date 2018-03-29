@@ -8,6 +8,29 @@
 
 The "Blimp" robot is a Zeppelin-like aerial robot developed by the [EPFL LIS laboratory](https://lis.epfl.ch/).
 
+### Blimp PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Blimp {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Blimp"
+  SFString   controller      "blimp"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/epfl/lis/protos/Blimp.proto"
+
+#### Blimp Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/epfl/lis/worlds".

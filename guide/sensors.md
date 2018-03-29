@@ -40,6 +40,7 @@ Please [contact us](https://www.cyberbotics.com/contact) if you would like to se
 | :---: | --- | --- | --- |
 | ![ibeo_icon.png](images/sensors/ibeo_icon.png) | [LUX](lidar-sensors.md#ibeo-lux) | Ibeo |
 | ![hokuyo_urg_04lx_icon.png](images/sensors/hokuyo_urg_04lx_icon.png) | [Hokuyo URG-04LX](lidar-sensors.md#hokuyo-urg-04lx) | Hokuyo |
+| ![hokuyo_urg_04lx_ug01_icon.png](images/sensors/hokuyo_urg_04lx_ug01_icon.png) | [Hokuyo URG-04LX-UG01](lidar-sensors.md#hokuyo-urg-04lx-ug01) | Hokuyo |
 | ![hokuyo_utm_30lx_icon.png](images/sensors/hokuyo_utm_30lx_icon.png) | [Hokuyo UTM-30LX](lidar-sensors.md#hokuyo-utm-30lx) | Hokuyo |
 | ![sick_lms291_icon.png](images/sensors/sick_lms291_icon.png) | [LMS 291](lidar-sensors.md#sick-lms-291) | SICK |
 | ![sick_ld_mrs_icon.png](images/sensors/sick_ld_mrs_icon.png) | [LD-MRS](lidar-sensors.md#sick-ld-mrs) | SICK |

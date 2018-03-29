@@ -50,6 +50,20 @@ HokuyoUrg04lx [
 
 `resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
 
+#### Hokuyo URG-04LX-UG01
+
+```
+HokuyoUrg04lxug01 [
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "URG-04LX-UG01"
+  SFFloat    noise       0.0
+  SFInt32    resolution  667
+]
+```
+
+`resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
+
 #### Hokuyo UTM-30LX
 
 ```

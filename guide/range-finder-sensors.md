@@ -8,6 +8,12 @@
 
 %end
 
+The [Microsoft Kinect](https://en.wikipedia.org/wiki/Kinect) is a motion sensing input device.
+It is modeled by a regular RGB [Camera](../reference/camera.md) and a [RangeFinder](../reference/rangefinder.md) device to retrieve depth information in meters.
+
+Derived from `Solid`.
+Includes a [Camera](../reference/camera.md), a [RangeFinder](../reference/rangefinder.md) and optionally a [RotationalMotor](../reference/rotationalmotor.md).
+
 ```
 Kinect {
   SFVec3f    translation   0 0 0

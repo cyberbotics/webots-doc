@@ -38,6 +38,12 @@ The `fastModel` field can be used to simplify the model of the sensor by removin
 
 #### Hokuyo URG-04LX
 
+%figure "Hokuyo URG-04LX model"
+
+![hokuyo_urg_04lx.png](images/sensors/hokuyo_urg_04lx.png)
+
+%end
+
 ```
 HokuyoUrg04lx [
   SFVec3f    translation 0 0 0
@@ -52,6 +58,12 @@ HokuyoUrg04lx [
 
 #### Hokuyo URG-04LX-UG01
 
+%figure "Hokuyo URG-04LX-UG01 model"
+
+![hokuyo_urg_04lx_ug01.png](images/sensors/hokuyo_urg_04lx_ug01.png)
+
+%end
+
 ```
 HokuyoUrg04lxug01 [
   SFVec3f    translation 0 0 0
@@ -65,6 +77,12 @@ HokuyoUrg04lxug01 [
 `resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
 
 #### Hokuyo UTM-30LX
+
+%figure "Hokuyo UTM-30LX model"
+
+![hokuyo_utm_30lx.png](images/sensors/hokuyo_utm_30lx.png)
+
+%end
 
 ```
 HokuyoUtm30lx {

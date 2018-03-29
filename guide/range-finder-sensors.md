@@ -2,7 +2,7 @@
 
 ### Microsoft Kinect
 
-%figure "Microsoft Kinect"
+%figure "Microsoft Kinect model"
 
 ![kinect.png](images/sensors/kinect.png)
 

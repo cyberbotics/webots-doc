@@ -1,6 +1,12 @@
 ## RangeFinder Sensors
 
-### Kinect
+### Microsoft Kinect
+
+%figure "Microsoft Kinect"
+
+![kinect.png](images/sensors/kinect.png)
+
+%end
 
 ```
 Kinect {

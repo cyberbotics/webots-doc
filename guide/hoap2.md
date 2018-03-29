@@ -38,15 +38,15 @@ Hoap2 {
 
 #### Hoap2 Field Summary
 
-- `diffuseColor`: Defines the diffuseColor of the main [Material](../reference/material.md) node.
+- `diffuseColor`: Defines the `diffuseColor` field of the main [Material](../reference/material.md).
 
-- `shininess`: Defines the shininess of the main [Material](../reference/material.md) node.
+- `shininess`: Defines the `shininess` field of the main [Material](../reference/material.md).
 
-- `specularColor`: Defines the specularColor of the main [Material](../reference/material.md) node.
+- `specularColor`: Defines the `specularColor` field of the main [Material](../reference/material.md).
 
-- `contactMaterial`: Defines the [Solid](../reference/solid.md) for all the robot parts, except the feet.
+- `contactMaterial`: Defines the `contactMaterial` field of all the [Solid](../reference/solid.md) nodes except the feet.
 
-- `footContactMaterial`: Defines the [Solid](../reference/solid.md) for the feet.
+- `footContactMaterial`: Defines the `contactMaterial` field of the foot [Solid](../reference/solid.md) nodes.
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

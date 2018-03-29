@@ -46,7 +46,7 @@ BB-8 {
 
 #### BB-8 Field Summary
 
-- `contactMaterial`: Defines the [Solid](../reference/solid.md) for the robot parts.
+- `contactMaterial`: Defines the `contactMaterial` field of all the [Solid](../reference/solid.md) nodes.
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 
@@ -64,7 +64,7 @@ BB-8 {
 
 - `weightMass`: Defines the mass of the robot body.
 
-- `maxVelocity`: Defines the [RotationalMotor](../reference/rotationalmotor.md) fields. Note: the real robot moves at 4.9 [mph].
+- `maxVelocity`: Defines the `maxVelocity` field of the [RotationalMotor](../reference/rotationalmotor.md) nodes between the robot body and its head. Note: the real robot moves at 4.9 [mph].
 
 ### Samples
 

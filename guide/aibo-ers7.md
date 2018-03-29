@@ -98,13 +98,13 @@ AiboErs7 {
 
 #### AiboErs7 Field Summary
 
-- `camera_fieldOfView`:  Defines the fieldOfView of the embedded [Camera](../reference/camera.md) node.
+- `camera_fieldOfView`:  Defines the `fieldOfView` field of the [Camera](../reference/camera.md).
 
-- `camera_width`: Defines the width of the embedded [Camera](../reference/camera.md) node.
+- `camera_width`: Defines the `width` field of the [Camera](../reference/camera.md).
 
-- `camera_height`: Defines the height of the embedded [Camera](../reference/camera.md) node.
+- `camera_height`: Defines the `height` field of the [Camera](../reference/camera.md).
 
-- `camera_antiAliasing`: Defines the antiAliasing of the embedded [Camera](../reference/camera.md) node.
+- `camera_antiAliasing`: Defines the `antiAliasing` field of the [Camera](../reference/camera.md).
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

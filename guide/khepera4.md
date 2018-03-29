@@ -39,15 +39,15 @@ Khepera4 {
 
 #### Khepera4 Field Summary
 
-- `bodyMaterial`: Defines the [Solid](../reference/solid.md) for the body.
+- `bodyMaterial`: Defines the `contactMaterial` field of the body [Solid](../reference/solid.md).
 
-- `wheelMaterial`: Defines the [Solid](../reference/solid.md) for the wheels.
+- `wheelMaterial`: Defines the `contactMaterial` field of the wheel [Solid](../reference/solid.md) nodes.
 
-- `casterWheelMaterial`: Defines the [Solid](../reference/solid.md) for the caster wheel.
+- `casterWheelMaterial`: Defines the `contactMaterial` field of the caster wheel [Solid](../reference/solid.md).
 
-- `emitterChannel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) node.
+- `emitterChannel`: Defines the `channel` field of the [Emitter](../reference/emitter.md).
 
-- `receiverChannel`: Defines the channel of the embedded [Receiver](../reference/receiver.md) node.
+- `receiverChannel`: Defines the `channel` field of the [Receiver](../reference/receiver.md).
 
 - `turretSlot`: Extends the robot with new nodes in the turret slot.
 

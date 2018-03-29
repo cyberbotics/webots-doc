@@ -32,9 +32,9 @@ Khepera3 {
 
 #### Khepera3 Field Summary
 
-- `wheelMaterial`: Defines the [Solid](../reference/solid.md) for the wheels.
+- `wheelMaterial`: Defines the `contactMaterial` field of the wheels [Solid](../reference/solid.md) nodes.
 
-- `bodyMaterial`: Defines the [Solid](../reference/solid.md) for the body.
+- `bodyMaterial`: Defines the `contactMaterial` field of the body [Solid](../reference/solid.md).
 
 - `turretSlot`: Extends the robot with new nodes in the turret slot.
 

@@ -127,23 +127,23 @@ Nao {
 
 - `degreeOfFreedom`: Defines the number of degrees of freedom; either "21" (fixed fingers) or "25" (articulated fingers).
 
-- `color`: Defines the diffuseColor of the secondary [Material](../reference/material.md) node.
+- `color`: Defines the `diffuseColor` field of the secondary [Material](../reference/material.md).
 
-- `gpsAccuracy`: Defines the accuracy for the embedded [GPS](../reference/gps.md) node.
+- `gpsAccuracy`: Defines the `accuracy` field of the [GPS](../reference/gps.md).
 
-- `cameraWidth`: Defines the width for the embedded [Camera](../reference/camera.md) node.
+- `cameraWidth`: Defines the `width` field of the [Camera](../reference/camera.md).
 
-- `cameraHeight`: Defines the height for the embedded [Camera](../reference/camera.md) node.
+- `cameraHeight`: Defines the `height` field of the [Camera](../reference/camera.md).
 
 - `jersey`: Extends the robot with a jersey: typically NaoJersey.proto.
 
-- `channel`: Defines the channel for the embedded [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
+- `channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md).
 
-- `contactMaterial`: Defines the [Solid](../reference/solid.md) for all the robot parts, except the feet and the fingers.
+- `contactMaterial`: Defines the `contactMaterial` field of all the [Solid](../reference/solid.md) nodes except the feet and the fingers ones.
 
-- `footContactMaterial`: Defines the [Solid](../reference/solid.md) for the feet.
+- `footContactMaterial`: Defines the `contactMaterial` field of the foot [Solid](../reference/solid.md) nodes.
 
-- `fingerContactMaterial`: Defines the [Solid](../reference/solid.md) for the fingers.
+- `fingerContactMaterial`: Defines the `contactMaterial` field of the finger [Solid](../reference/solid.md) nodes.
 
 - `fingerRadius`: Defines the radius of all the fingers.
 

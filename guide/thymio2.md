@@ -90,7 +90,7 @@ Thymio2 {
 
 #### Thymio2 Field Summary
 
-- `contactMaterial`: Defines the [Solid](../reference/solid.md) for the body.
+- `contactMaterial`: Defines the `contactMaterial` of the all the [Solid](../reference/solid.md) nodes.
 
 - `castLight`: Defines whether OpenGL lights are cerated for each LEDs.
 

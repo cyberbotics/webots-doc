@@ -33,9 +33,9 @@ Elisa3 {
 
 #### Elisa3 Field Summary
 
-- `emitter_channel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) node.
+- `emitter_channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md).
 
-- `receiver_channel`: Defines the channel of the embedded [Receiver](../reference/receiver.md) node.
+- `receiver_channel`: Defines the `channel` field of the [Receiver](../reference/receiver.md).
 
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 

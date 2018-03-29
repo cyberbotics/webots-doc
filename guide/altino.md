@@ -31,7 +31,7 @@ Altino {
 
 #### Altino Field Summary
 
-- `color`: Defines the diffuseColor of the main [[Material](../reference/material.md) node.
+- `color`: Defines the `diffuseColor` field of the main [Material](../reference/material.md).
 
 ### Samples
 

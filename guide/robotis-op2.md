@@ -73,15 +73,15 @@ RobotisOp2 {
 
 #### RobotisOp2 Field Summary
 
-- `plasticColor`: Defines the diffuseColor of the main [Material](../reference/material.md) node.
+- `plasticColor`: Defines the `diffuseColor` field of the main [Material](../reference/material.md).
 
-- `cameraWidth`: Defines the width of the embedded [Camera](../reference/camera.md) node.
+- `cameraWidth`: Defines the `width` field of the [Camera](../reference/camera.md).
 
-- `cameraHeight`: Defines the height of the embedded [Camera](../reference/camera.md) node.
+- `cameraHeight`: Defines the `height` field of the [Camera](../reference/camera.md).
 
 - `jersey`: Extends the robot with a jersey: typically RobotisJersey.proto.
 
-- `channel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md) devices.
+- `channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md).
 
 - `bodySlot`: Extends the robot with new nodes in the body slot.
 

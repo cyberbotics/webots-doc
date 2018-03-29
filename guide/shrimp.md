@@ -35,8 +35,6 @@ Shrimp {
 
 #### Shrimp Field Summary
 
-- `synchronization`: Inherited from [Robot](../reference/robot.md) node.
-
 - `extensionSlot`: Extends the robot with new nodes in the extension slot.
 
 ### Samples

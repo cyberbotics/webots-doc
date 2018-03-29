@@ -197,21 +197,21 @@ E-puck {
 
 - `version`: Defines the e-puck version; either "1" or "2".
 
-- `camera_fieldOfView`: Defines the fieldOfView of the embedded [Camera](../reference/camera.md) node.
+- `camera_fieldOfView`: Defines the `fieldOfView` field of the [Camera](../reference/camera.md).
 
-- `camera_width`: Defines the width of the embedded [Camera](../reference/camera.md) node.
+- `camera_width`: Defines the `width` field of the [Camera](../reference/camera.md).
 
-- `camera_height`: Defines the height of the embedded [Camera](../reference/camera.md) node.
+- `camera_height`: Defines the `height` field of the [Camera](../reference/camera.md).
 
-- `camera_antiAliasing`: Defines the antiAliasing of the embedded [Camera](../reference/camera.md) node.
+- `camera_antiAliasing`: Defines the `antiAliasing` field of the [Camera](../reference/camera.md).
 
-- `camera_rotation`: Defines the rotation of the embedded [Camera](../reference/camera.md) node.
+- `camera_rotation`: Defines the `rotation` field of the [Camera](../reference/camera.md).
 
-- `camera_noise`: Defines the noise of the embedded [Camera](../reference/camera.md) node.
+- `camera_noise`: Defines the `noise` field of the [Camera](../reference/camera.md).
 
-- `emitter_channel`: Defines the channel of the embedded [Emitter](../reference/emitter.md) node.
+- `emitter_channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md).
 
-- `receiver_channel`: Defines the channel of the embedded [Receiver](../reference/receiver.md) node.
+- `receiver_channel`: Defines the `channel` field of the [Receiver](../reference/receiver.md).
 
 - `turretSlot`: Extends the robot with new nodes in the turret slot.
 

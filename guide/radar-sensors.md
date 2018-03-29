@@ -9,7 +9,7 @@ The sensor can operate in two modes: the long range mode uses an horizontal fiel
 
 %figure "Delphi ESR radar"
 
-![delphi.png](images/delphi.png)
+![delphi.png](images/sensors/delphi.png)
 
 %end
 
@@ -34,19 +34,19 @@ They all have the same fields.
 
 %figure "Smartmicro UMRR-0a radar"
 
-![smartmicro.png](images/smartmicro.png)
+![smartmicro.png](images/sensors/smartmicro.png)
 
 %end
 
 ```
 SmsUmrr-0a29/30/31 {
-    SFVec3f    translation    0 0 0
-    SFRotation rotation       0 1 0 0
-    SFString   name           "sms-umrr"
-    SFBool     occlusion      FALSE
-    SFFloat    cellSpeed      0.0
-    SFFloat    angularNoise   0.0
-  }
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "sms-umrr"
+  SFBool     occlusion      FALSE
+  SFFloat    cellSpeed      0.0
+  SFFloat    angularNoise   0.0
+}
 ```
 
 The `occlusion` field can be used to set whether occlusions between the targets and the radar should be checked.

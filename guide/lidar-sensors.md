@@ -34,6 +34,35 @@ The `IbeoLux` PROTO can either be used in normal field of view mode (80 degrees 
 
 The `fastModel` field can be used to simplify the model of the sensor by removing the spherical projection, the noise and the limited resolution in order to speed up the simulation.
 
+### Hokuyo
+
+#### Hokuyo URG-04LX
+
+```
+HokuyoUrg04lx [
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "URG-04LX"
+  SFFloat    noise       0.0
+  SFInt32    resolution  667
+]
+```
+
+`resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
+
+#### Hokuyo UTM-30LX
+
+```
+HokuyoUtm30lx {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "UTM-30LX"
+  SFFloat    noise       0.0
+  SFInt32    resolution  1080
+}
+```
+
+`resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
 
 ### SICK
 

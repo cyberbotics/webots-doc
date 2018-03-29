@@ -77,6 +77,29 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 
 %end
 
+### Pioneer3dx PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Pioneer3dx {
+  SFVec3f    translation     0 0.0975 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Pioneer 3-DX"
+  SFString   controller      "pioneer3dx_collision_avoidance"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+#### Pioneer3dx Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 Here are listed the different example worlds based on the Pionner 3-DX.

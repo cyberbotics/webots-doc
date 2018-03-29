@@ -433,6 +433,7 @@ function populateViewDiv(mdContent) {
 
   view.innerHTML = html;
 
+  createX3Dom(view);
   renderGraphs();
   redirectImages(view);
   redirectUrls(view);
@@ -485,6 +486,11 @@ function highlightCode(view) {
       hljs.highlightBlock(code);
     }
   }
+}
+
+function createX3Dom(view) {
+  var view = new webots.View(document.getElementById("view3d"));
+  view.open("guide/scenes/nao/nao.x3d");
 }
 
 function renderGraphs() {

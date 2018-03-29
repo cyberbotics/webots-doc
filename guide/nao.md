@@ -1,10 +1,14 @@
 ## SoftBank Robotics' Nao
 
+<div id="view3d"></div>
+
+<!--
 %figure "Nao model in Webots"
 
 ![model.png](images/robots/nao/model.png)
 
 %end
+-->
 
 The Nao robot is a humanoid robot developed by [SoftBank Robotics](https://www.ald.softbankrobotics.com/en).
 This section explains how to use Nao robot simulated in Webots together with the Choregraphe program of [SoftBank Robotics](https://www.ald.softbankrobotics.com/en).

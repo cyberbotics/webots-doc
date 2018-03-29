@@ -101,6 +101,28 @@ The `wb_joystick_get_axis_value` function returns the current value of the axis 
 
 **Name**
 
+**wb\_joystick\_get\_number\_of\_povs**,
+**wb\_joystick\_get\_pov\_value** - *get number of povs and pov value*
+
+{[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/joystick.h>
+
+int  wb_joystick_get_number_of_povs();
+int  wb_joystick_get_pov_value(int pov);
+```
+
+**Description**
+
+The `wb_joystick_get_number_of_povs` function returns the number of point of views (POV) of the joystick.
+
+The `wb_joystick_get_pov_value` function returns the current value of the point of views (POV) passed as an argument.
+
+---
+
+**Name**
+
 **wb\_joystick\_get\_pressed\_button** - *get the buttons pressed on the joystick*
 
 {[C++](cpp-api.md#cpp_joystick)}, {[Java](java-api.md#java_joystick)}, {[Python](python-api.md#python_joystick)}, {[Matlab](matlab-api.md#matlab_joystick)}, {[ROS](ros-api.md)}
@@ -136,6 +158,7 @@ void wb_joystick_set_constant_force(int level);
 void wb_joystick_set_constant_force_duration(double duration);
 void wb_joystick_set_auto_centering_gain(double gain);
 void wb_joystick_set_resistance_gain(double gain);
+void wb_joystick_set_force_axis(int axis);
 ```
 
 **Description**
@@ -156,4 +179,7 @@ The `wb_joystick_set_resistance_gain` function sets the resistance gain of the f
 Resistance is an effect that tend to prevent the axis from moving.
 The joystick must support force feedback and the unit of `gain` is hardware specific.
 
-> **Note**: The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.
+The `wb_joystick_set_force_axis` function defines which axis is associated to the force feedback. This is useful for the auto centering (where the force is proportional to the difference between the axis position and it's center) and for the resistance (where the force is proportional to the axis velocity).
+
+> **Note**:
+The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.

@@ -15,7 +15,6 @@ RangeFinder {
   SFFloat  noise       0.0      # [0, inf)
   SFFloat  resolution  -1.0     # {-1, [0, inf)}
   SFNode   lens        NULL     # {Lens, PROTO}
-  SFString compositor  ""       # any string
 }
 ```
 
@@ -73,9 +72,6 @@ Setting this field to -1 (default) corresponds to an 'infinite' resolution (it c
 This field is accepts any value in the interval (0.0, inf).
 
 - The `lens` field may contain a [Lens](lens.md) node to specify the image distortion due to the lens geometry.
-
-- The `compositor` field specifies the name of a compositor to apply on the depth image.
-More information on compositors is provided in the [compositor](camera.md) field description of the [Camera](camera.md) node.
 
 ### Overlay Image
 

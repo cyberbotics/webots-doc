@@ -20,7 +20,6 @@ Lidar {
   SFFloat  minFrequency         1         # [0, maxFrequency)
   SFFloat  maxFrequency         25        # [minFrequency, inf)
   SFNode   rotatingHead         NULL      # {Solid (or derived), PROTO}
-  SFString compositor           ""        # any string
 }
 ```
 
@@ -110,9 +109,6 @@ The value of this field should be smaller or equal to the value of the `maxFrequ
 - The `maxFrequency` field defines the maximum rotation frequency (defined in Hz) of the head if the `type` field is set to 'rotating'.
 
 - A node can be inserted in the `rotatingHead` field to define the rotating head of the lidar.
-
-- The `compositor` field specifies the name of a compositor to apply on the depth image.
-More information on compositors is provided in the [compositor](camera.md) field description of the [Camera](camera.md) node.
 
 > **Note**: The fields `numberOfLayers`, `verticalFieldOfView`, `horizontalResolution` and `fieldOfView` should respect the following constraint in order to be able to simulate the lidar:
 

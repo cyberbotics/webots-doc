@@ -43,7 +43,7 @@ dependencies = [
     'showdown/1.3.0/showdown.min.js.map',
     'showdown/1.3.0/showdown-youtube.min.js',
     'mermaid/7.0.0/mermaidAPI.min.js',
-    'wwi/R2018a/request_methods.js'
+    'wwi/R2018b/request_methods.js'
 ]
 
 

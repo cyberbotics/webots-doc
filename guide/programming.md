@@ -88,7 +88,7 @@ So this problem often happens when you:
 - Have moved the project or source files to a location that does not correspond to the above description.
 - Use an external build system, e.g. Visual Studio, that is not configured to generate the executable file at the right location.
 - Have changed the Robot's controller field to a location where no executable/interpretable file can be found.
-- Have "reverted" the world after "cleaning" of the controller project.
+- Have "reloaded" the world after "cleaning" of the controller project.
 
 ### What Does This Mean: "Warning: invalid WbDeviceTag in API function call" ?
 
@@ -198,11 +198,8 @@ Please lookup for the `Supervisor` node in the `Reference Manual`.
 This will allow you to do 2d vector graphics and text.
 This is also useful for example to display processed camera images.
 Please lookup for the `Display` node in the `Reference Manual`.
-3. If you want add 3d graphics to the main window, this can be done by using a *physics plugin* (Webots PRO required).
-See how to add a physics plugin in the previous FAQ question, just above.
-After you have added the physics plugin you will have to implement the `webots_physics_draw` function.
-The implementation must be based on the OpenGL API, hence some OpenGL knowledge will be useful.
-You will find a sample implementation in the `Reference Manual` in the chapter about the Physics Plugin.
+3. If you want add 3d graphics to the main window, this can be done by using the `Supervisor` API.
+The `Supervisor` API can be used to create new nodes - meaning that you can create an IndexedFaceSet or IndexedLineSet and adjust vertex positions or indexing accordingly to create and update the shape you wish to draw in the 3D scene.
 
 ### What Does This Mean: "The time step used by controller {...} is not a multiple of WorldInfo.basicTimeStep!"?
 

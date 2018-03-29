@@ -32,7 +32,7 @@ Khepera3 {
 
 #### Khepera3 Field Summary
 
-- `wheelMaterial`: Defines the `contactMaterial` field of the wheels [Solid](../reference/solid.md) nodes.
+- `wheelMaterial`: Defines the `contactMaterial` field of the wheel [Solid](../reference/solid.md) nodes.
 
 - `bodyMaterial`: Defines the `contactMaterial` field of the body [Solid](../reference/solid.md).
 

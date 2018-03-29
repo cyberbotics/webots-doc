@@ -489,9 +489,23 @@ function highlightCode(view) {
 }
 
 function createX3Dom(view) {
-  var view = new webots.View(document.getElementById("view3d"));
-  if (view)
-    view.open("guide/scenes/nao/nao.x3d");
+  var x3DomView = new webots.View(document.querySelector("#nao-view3d"));
+  if (x3DomView) {
+    var x3DomList = view.querySelector('#nao-list')
+    x3DomView.open("guide/scenes/nao/nao.x3d");
+    setTimeout(function () {
+      var elements = view.querySelectorAll('[nodeType]')
+      for (i = 0; i < elements.length; i++) {
+        var el = elements[i];
+        var deviceType = el.getAttribute('nodeType');
+        var deviceName = el.getAttribute('name');
+        
+        var li = document.createElement('span');
+        li.textContent = deviceType + ': "' + deviceName + '", ';
+        x3DomList.appendChild(li);
+      }
+    }, 5000);
+  }
 }
 
 function renderGraphs() {

@@ -59,4 +59,4 @@ Please [contact us](https://www.cyberbotics.com/contact) if you would like to se
 
 | Preview | Name |  Manufacturer |
 | :---: | --- | --- | --- |
-| ![kinect_icon.png](images/sensors/kinect_icon.png) | [Kinect](range-finder-sensors.md#Kinect) | Microsoft |
+| ![kinect_icon.png](images/sensors/kinect_icon.png) | [Kinect](range-finder-sensors.md#microsoft-kinect) | Microsoft |

@@ -11,6 +11,28 @@ It is a four-wheeled robot based on an Ackermann vehicle frame.
 It contains many sensors including infrared sensors, a compass and an accelerometer.
 More information on the [constructor website](https://www.saeon-altino.com).
 
+### Altino PROTO
+
+Derived from [Car](../automobile/car.md).
+
+```
+Altino {
+  SFVec3f    translation     0 0.016 0
+  SFRotation rotation        0 1 0 1.5708
+  SFString   name            "vehicle"
+  SFString   controller      "vehicle_driver_altino"
+  SFString   controllerArgs  ""
+  SFBool     synchronization TRUE
+  SFColor    color           0.3 0.3 0.7
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/saeon/protos/Altino.proto"
+
+#### Altino Field Summary
+
+- `color`: Defines the `diffuseColor` field of the main [Material](../reference/material.md).
+
 ### Samples
 
 You will find the following example in this folder: "WEBOTS\_HOME/projects/robots/saeon/worlds".

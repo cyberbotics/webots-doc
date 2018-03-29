@@ -16,7 +16,7 @@ The [Track](#track) node defines a track object that could be used to model trac
 Note that this works only in *physics-based* simulation.
 Therefore, the `physics` and `boundingObject` fields of the [Track](#track) node and related [Solid](solid.md) nodes must be defined to work properly.
 Usually it is not needed that the `boundingObject` matches exactly the track belt shape, but it is possible to use basic geometries like boxes and cylinders to specify the external shape of the belt especially the parts where it could touch the ground or some obstacles.
-A simple example is shown in the [following figure](#track_bounding_object-example):
+A simple example is shown in the [following figure](#tracks-bounding-object-example):
 
 %figure "Track's bounding object example"
 
@@ -60,7 +60,7 @@ Note that the geometries animation is enabled only if the `geometriesCount` valu
 The belt path along which the animated geometries will move is shaped to the [TrackWheel](trackwheel.md) nodes contained in the `children` field.
 Each wheel contains the information about its center position, its radius and if it is inside or outside the belt.
 By convention the wheels are all aligned along the z-axis of the [Track](#track) node and have to be defined in clockwise order starting from the one having the smallest x-axis value.
-The following code fragment shows the belt path definition for the convex track example shown in [this figure](#convex-track-s-belt-shape-example):
+The following code fragment shows the belt path definition for the convex track example shown in [this figure](#convex-tracks-belt-shape-example):
 
 ```
 children [
@@ -98,7 +98,7 @@ children [
 
 %end
 
-Then for a concave track belt shape like the one shown in [this figure](#concave-track-s-belt-shape-example) the following [TrackWheel](trackwheel.md) nodes have to be defined:
+Then for a concave track belt shape like the one shown in [this figure](#concave-tracks-belt-shape-example) the following [TrackWheel](trackwheel.md) nodes have to be defined:
 
 ```
 children [

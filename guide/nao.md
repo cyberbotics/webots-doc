@@ -83,6 +83,84 @@ Note that the simulation speed decreases as the resolution increases.
 It is possible to hide the camera viewports (purple frame) in Webots, by setting the `cameraPixelSize` field to 0.
 It is also possible to completely switch off the camera simulation by adding the "-nocam" option before the NAOqi port number in the `controllerArgs` field, e.g. "-nocam 9559".
 
+### Nao PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Nao {
+  SFVec3f    translation           0 0.334 0
+  SFRotation rotation              1 0 0 -1.5708
+  SFString   name                  "NAO"
+  SFString   version               "5.0"
+  SFInt32    degreeOfFreedom       25
+  SFColor    color                 -1 -1 -1
+  SFString   controller            "nao_demo"
+  SFString   controllerArgs        ""
+  SFString   customData            ""
+  SFBool     synchronization       TRUE
+  SFBool     selfCollision         FALSE
+  SFFloat    gpsAccuracy           0.0
+  SFInt32    cameraWidth           160
+  SFInt32    cameraHeight          120
+  SFNode     jersey                NULL
+  SFInt32    channel               0
+  SFString   contactMaterial       "NAO material"
+  SFString   footContactMaterial   "NAO foot material"
+  SFString   fingerContactMaterial "NAO finger material"
+  SFFloat    fingerRadius          0.0055
+  SFFloat    fingerTorque          10.0
+  MFNode     bodySlot              []
+  MFNode     headSlot              []
+  MFNode     leftFootSlot          []
+  MFNode     rightFootSlot         []
+  MFNode     leftHandSlot          []
+  MFNode     rightHandSlot         []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/aldebaran/protos/Nao.proto"
+
+#### Nao Field Summary
+
+- `version`: Defines the Nao version; either "3.3","4.0" or "5.0".
+
+- `degreeOfFreedom`: Defines the number of degrees of freedom; either "21" (fixed fingers) or "25" (articulated fingers).
+
+- `color`: Defines the `diffuseColor` field of the secondary [Material](../reference/material.md).
+
+- `gpsAccuracy`: Defines the `accuracy` field of the [GPS](../reference/gps.md).
+
+- `cameraWidth`: Defines the `width` field of the [Camera](../reference/camera.md).
+
+- `cameraHeight`: Defines the `height` field of the [Camera](../reference/camera.md).
+
+- `jersey`: Extends the robot with a jersey: typically NaoJersey.proto.
+
+- `channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md).
+
+- `contactMaterial`: Defines the `contactMaterial` field of all the [Solid](../reference/solid.md) nodes except the feet and the fingers ones.
+
+- `footContactMaterial`: Defines the `contactMaterial` field of the foot [Solid](../reference/solid.md) nodes.
+
+- `fingerContactMaterial`: Defines the `contactMaterial` field of the finger [Solid](../reference/solid.md) nodes.
+
+- `fingerRadius`: Defines the radius of all the fingers.
+
+- `fingerTorque`: Defines the torque applied on the finger motors.
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
+- `headSlot`: Extends the robot with new nodes in the head slot.
+
+- `leftFootSlot`: Extends the robot with new nodes in the left foot slot.
+
+- `rightFootSlot`: Extends the robot with new nodes in the right foot slot.
+
+- `leftHandSlot`: Extends the robot with new nodes in the left hand slot.
+
+- `rightHandSlot`: Extends the robot with new nodes in the righthand slot.
+
 ### Known Problems
 
 #### macOS Support

@@ -13,6 +13,44 @@ It is mounted by multiple sensors including 8 distance sensors.
 
 ![youtube video](https://www.youtube.com/watch?v=RVOwk3FkIWo)
 
+### Khepera4 PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Khepera4 {
+  SFVec3f    translation         0 0 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "Khepera IV"
+  SFString   controller          "khepera4"
+  SFString   controllerArgs      ""
+  SFString   customData          ""
+  SFBool     synchronization     TRUE
+  SFString   bodyMaterial        "default"
+  SFString   wheelMaterial       "default"
+  SFString   casterWheelMaterial "khepera4 caster wheel"
+  SFInt32    emitterChannel      1
+  SFInt32    receiverChannel     1
+  MFNode     turretSlot          []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/k-team/khepera4/protos/Khepera4.proto"
+
+#### Khepera4 Field Summary
+
+- `bodyMaterial`: Defines the `contactMaterial` field of the body [Solid](../reference/solid.md).
+
+- `wheelMaterial`: Defines the `contactMaterial` field of the wheel [Solid](../reference/solid.md) nodes.
+
+- `casterWheelMaterial`: Defines the `contactMaterial` field of the caster wheel [Solid](../reference/solid.md).
+
+- `emitterChannel`: Defines the `channel` field of the [Emitter](../reference/emitter.md).
+
+- `receiverChannel`: Defines the `channel` field of the [Receiver](../reference/receiver.md).
+
+- `turretSlot`: Extends the robot with new nodes in the turret slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/k-team/khepera4/worlds":

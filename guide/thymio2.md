@@ -66,6 +66,36 @@ The calibration was performed using a regular A4 white paper.
 
 %end
 
+### Thymio2 PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Thymio2 {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Thymio II"
+  SFString   controller      "thymio2_aseba"
+  SFString   controllerArgs  "port=33333"
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  SFString   window          ""
+  SFString   contactMaterial "thymio body"
+  SFBool     castLight       TRUE
+  MFNode     bodySlot        []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/mobsya/thymio/protos/Thymio2.proto"
+
+#### Thymio2 Field Summary
+
+- `contactMaterial`: Defines the `contactMaterial` of the all the [Solid](../reference/solid.md) nodes.
+
+- `castLight`: Defines whether OpenGL lights are cerated for each LEDs.
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
 ### Connect Aseba to the Thymio II Model
 
 The default controller of the Thymio II PROTO is the `thymio2_demo` controller.

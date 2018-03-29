@@ -13,7 +13,7 @@ It is therefore very easy to simulate smart cameras such as the Mobileye.
 
 %figure "Smart camera output"
 
-![smart_camera.png](images/smart_camera.png)
+![smart_camera.png](images/sensors/smart_camera.png)
 
 %end
 
@@ -45,7 +45,7 @@ The internal device names used to retrieve the devices from the controller can b
 
 %figure "MultiSenseS21 stereoscopic camera"
 
-![multisense_s21.png](images/multisense_s21.png)
+![multisense_s21.png](images/sensors/multisense_s21.png)
 
 %end
 

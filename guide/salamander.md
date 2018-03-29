@@ -12,6 +12,29 @@ The "Salamander" robot is a salamander-like robot developed by the [EPFL BioRob 
 
 ![youtube video](https://www.youtube.com/watch?v=TrdNtrGOkWg)
 
+### Salamander PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Salamander {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Salamander"
+  SFString   controller      "salamander"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/epfl/biorob/protos/Salamander.proto"
+
+#### Salamander Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/epfl/biorob/worlds".

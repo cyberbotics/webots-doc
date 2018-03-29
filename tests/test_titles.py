@@ -29,6 +29,14 @@ conjunctions = [
 ]
 
 
+def title_level(title):
+    """Returns the number of '#' to determine the title level."""
+    count = 0
+    while (title[count] == '#'):
+        count += 1
+    return count
+
+
 class TestTitles(unittest.TestCase):
     """Unit test of the titles."""
 
@@ -84,3 +92,14 @@ class TestTitles(unittest.TestCase):
                     self.assertTrue(lowercasePattern.match(word), msg='%s: word "%s" of title "%s" is not in lowercase.' % (t['md'], word, t['title']))
                 else:
                     self.assertTrue(uppercasePattern.match(word), msg='%s: word "%s" of title "%s" is not in uppercase.' % (t['md'], word, t['title']))
+
+    def test_first_heading_has_the_highest_level(self):
+        """Test that the first heading has the highest level."""
+        currentMD = ''
+        minLevel = 0
+        for t in self.titles:
+            if currentMD != t['md']:  # New MD file.
+                minLevel = title_level(t['title'])
+                currentMD = t['md']
+            else:
+                self.assertTrue(minLevel < title_level(t['title']), msg='%s: title "%s" has a level higher than or equals to the first heading level of this page.' % (t['md'], t['title']))

@@ -8,6 +8,29 @@
 
 The "Yamor" robot is a modular robot developed by the [EPFL BioRob laboratory](https://biorob.epfl.ch/).
 
+### Yamor PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Yamor {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Yamor"
+  SFString   controller      "yamor"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/epfl/biorob/protos/Yamor.proto"
+
+#### Yamor Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/epfl/biorob/worlds".

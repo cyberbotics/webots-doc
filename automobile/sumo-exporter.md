@@ -1,4 +1,4 @@
-## SUMO Exporter
+# SUMO Exporter
 
 In order to be able to simulate traffic in your simulation, it is required to have a SUMO network file (`sumo.net.xml`).
 The SUMO exporter can create SUMO network files from a Webots simulation.

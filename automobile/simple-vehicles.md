@@ -2,7 +2,7 @@
 
 ### CarSimple
 
-For each model of [Car](#car), a 'simple' PROTO is present too.
+For each model of [Car](car.md), a 'simple' PROTO is present too.
 These simplified kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is therefore not possible to add sensors or control them.
 They are made to represent non-moving parked vehicles or to be moved using a Supervisor because they are much faster to simulate than the normal PROTO models.
 
@@ -24,7 +24,7 @@ They are made to represent non-moving parked vehicles or to be moved using a Sup
 - `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 
 CarSimple is not an actual PROTO but defines the common structure of all the 'simple' versions of the cars.
-The different simple versions of the car PROTO nodes represent the different models of [Car](#car):
+The different simple versions of the car PROTO nodes represent the different models of [Car](car.md):
 
 - the Sport SVR from Range Rover
 - the X5 from BMW

@@ -12,7 +12,8 @@ def slugify(txt):
     output = txt.lower()
     output = re.sub(r'<[^>]+>', '', output)
     output = output.replace('+', 'p')
-    output = re.sub(r'[\(\):`]', '', output)
+    output = re.sub(r"[\(\):`']", '', output)
+    output = re.sub(r'\\_', '_', output)
     output = re.sub(r'[\W-]+', '-', output)
     output = re.sub(r'^-*', '', output)
     output = re.sub(r'-*$', '', output)
@@ -102,8 +103,7 @@ class TestReferences(unittest.TestCase):
                     link = ''
                     anchor = ''
                     if ref.startswith('#'):
-                        ref = ref.split('#')
-                        anchor = ref[0]
+                        anchor = ref[1:]  # Remove the '#' character.
                     else:
                         ref = ref.split('#')
                         link = ref[0]

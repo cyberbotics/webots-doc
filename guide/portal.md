@@ -13,6 +13,29 @@ It uses the PICAXE programming kit.
 
 ![youtube video](https://www.youtube.com/watch?v=vBS7t1eQINs)
 
+### Portal PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Portal {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Portal"
+  SFString   controller      "void"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/a4/portal/protos/Portal.proto"
+
+#### Portal Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/a4/portal/worlds".

@@ -16,7 +16,7 @@ The [Track](#track) node defines a track object that could be used to model trac
 Note that this works only in *physics-based* simulations.
 Therefore, the `physics` and `boundingObject` fields of the [Track](#track) node and related [Solid](solid.md) nodes must be non-NULL for the [Track](#track) node to behave correctly.
 It is not a requirement that the `boundingObject` exactly matches the track belt shape; it is possible to use basic geometries such as boxes and cylinders to specify the external shape of the belt, especially the parts where it may touch the ground or obstacles.
-A simple example is shown in the [following figure](#track_bounding_object-example).
+A simple example is shown in the [following figure](#tracks-bounding-object-example).
 
 Additionally, in order to work correctly, the [Track](#track) node has to fulfill these conditions:
 
@@ -66,7 +66,7 @@ The belt path along which the animated geometries move is shaped to the [TrackWh
 Each wheel contains the information about its center position, its radius and if it is inside or outside the belt.
 By convention the wheels are all aligned on a plane perpendicular to the [Track](#track) node's z-axis and have to be defined in clockwise order starting from the one with the smallest x-axis position component.
 
-The following code fragment shows the belt path definition for the convex track example shown in [this figure](#convex-track-s-belt-shape-example):
+The following code fragment shows the belt path definition for the convex track example shown in [this figure](#convex-tracks-belt-shape-example):
 
 ```
 children [
@@ -104,7 +104,7 @@ children [
 
 %end
 
-Then for a concave track belt shape like the one shown in [this figure](#concave-track-s-belt-shape-example) the following [TrackWheel](trackwheel.md) nodes have to be defined:
+Then for a concave track belt shape like the one shown in [this figure](#concave-tracks-belt-shape-example) the following [TrackWheel](trackwheel.md) nodes have to be defined:
 
 ```
 children [

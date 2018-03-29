@@ -44,6 +44,15 @@ The `fastModel` field can be used to simplify the model of the sensor by removin
 
 %end
 
+The [Hokuyo URG-04LX](https://www.hokuyo-aut.jp/search/single.php?serial=165) is a lidar designed for light-weighted indoor robots.
+The model respects the following specifications:
+
+- `field of view`: 240 [deg]
+- `range`: 0.06 to 4.095 [m]
+- `resolution`: 667 * 0.36 [deg]
+- `dimension`: 0.05 x 0.07 x 0.05 [m]
+- `weight`: 0.16 [kg]
+
 ```
 HokuyoUrg04lx [
   SFVec3f    translation 0 0 0
@@ -64,6 +73,15 @@ HokuyoUrg04lx [
 
 %end
 
+The [Hokuyo URG-04LX-UG01](https://www.hokuyo-aut.jp/search/single.php?serial=166) is a lidar designed for light-weighted indoor robots.
+The model respects the following specifications:
+
+- `field of view`: 240 [deg]
+- `range`: 0.2 to 5.6 [m]
+- `resolution`: 667 * 0.36 [deg]
+- `dimension`: 0.05 x 0.07 x 0.05 [m]
+- `weight`: 0.16 [kg]
+
 ```
 HokuyoUrg04lxug01 [
   SFVec3f    translation 0 0 0
@@ -83,6 +101,15 @@ HokuyoUrg04lxug01 [
 ![hokuyo_utm_30lx.png](images/sensors/hokuyo_utm_30lx.png)
 
 %end
+
+The [Hokuyo UTM-30LX](https://www.hokuyo-aut.jp/search/single.php?serial=169) is a lidar designed for outdoor robots with a high moving speed.
+The model respects the following specifications:
+
+- `field of view`: 270 [deg]
+- `range`: 0.1 to 30 [m]
+- `resolution`: 1080 * 0.25 [deg]
+- `dimension`: 0.06 x 0.087 x 0.06 [m]
+- `weight`: 0.37 [kg]
 
 ```
 HokuyoUtm30lx {

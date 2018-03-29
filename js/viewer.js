@@ -490,7 +490,8 @@ function highlightCode(view) {
 
 function createX3Dom(view) {
   var view = new webots.View(document.getElementById("view3d"));
-  view.open("guide/scenes/nao/nao.x3d");
+  if (view)
+    view.open("guide/scenes/nao/nao.x3d");
 }
 
 function renderGraphs() {

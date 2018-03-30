@@ -186,18 +186,19 @@ The second argument of the enable function defines at which rate the sensor will
 
 > ```c
 > // init speeds
-> double left_speed  = 500;
-> double right_speed = 500;
+> double speed = 3.14
+> double left_speed  = speed;
+> double right_speed = speed;
 > // modify speeds according to obstacles
 > if (left_obstacle) {
 >   // turn right
->   left_speed  += 500;
->   right_speed -= 500;
+>   left_speed  += speed;
+>   right_speed -= speed;
 > }
 > else if (right_obstacle) {
 >   // turn left
->   left_speed  -= 500;
->   right_speed += 500;
+>   left_speed  -= speed;
+>   right_speed += speed;
 > }
 > // write actuators inputs
 > wb_motor_set_velocity(left_motor, left_speed);
@@ -268,19 +269,20 @@ int main(int argc, char **argv)
       ps_values[7] > 70.0;
 
     // init speeds
-    double left_speed  = 500;
-    double right_speed = 500;
+    double speed = 3.14
+    double left_speed  = speed;
+    double right_speed = speed;
 
     // modify speeds according to obstacles
     if (left_obstacle) {
       // turn right
-      left_speed  += 500;
-      right_speed -= 500;
+      left_speed  += speed;
+      right_speed -= speed;
     }
     else if (right_obstacle) {
       // turn left
-      left_speed  -= 500;
-      right_speed += 500;
+      left_speed  -= speed;
+      right_speed += speed;
     }
 
     // write actuators inputs

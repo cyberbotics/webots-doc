@@ -185,19 +185,21 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: Finally, use the information about the obstacle to actuate the wheels as follows:
 
 > ```c
-> // init speeds
-> double left_speed  = 500;
-> double right_speed = 500;
+> #define MAX_SPEED 6.28
+> ...
+> // initialize motor speeds at 50% of MAX_SPEED.
+> double left_speed  = 0.5 * MAX_SPEED;
+> double right_speed = 0.5 * MAX_SPEED;
 > // modify speeds according to obstacles
 > if (left_obstacle) {
 >   // turn right
->   left_speed  += 500;
->   right_speed -= 500;
+>   left_speed  += 0.5 * MAX_SPEED;
+>   right_speed -= 0.5 * MAX_SPEED;
 > }
 > else if (right_obstacle) {
 >   // turn left
->   left_speed  -= 500;
->   right_speed += 500;
+>   left_speed  -= 0.5 * MAX_SPEED;
+>   right_speed += 0.5 * MAX_SPEED;
 > }
 > // write actuators inputs
 > wb_motor_set_velocity(left_motor, left_speed);
@@ -222,6 +224,8 @@ Here is the complete code of the controller detailed in the previous subsection.
 
 // time in [ms] of a simulation step
 #define TIME_STEP 64
+
+#define MAX_SPEED 6.28
 
 // entry point of the controller
 int main(int argc, char **argv)
@@ -267,20 +271,20 @@ int main(int argc, char **argv)
       ps_values[6] > 70.0 ||
       ps_values[7] > 70.0;
 
-    // init speeds
-    double left_speed  = 500;
-    double right_speed = 500;
+    // initialize motor speeds at 50% of MAX_SPEED.
+    double left_speed  = 0.5 * MAX_SPEED;
+    double right_speed = 0.5 * MAX_SPEED;
 
     // modify speeds according to obstacles
     if (left_obstacle) {
       // turn right
-      left_speed  += 500;
-      right_speed -= 500;
+      left_speed  += 0.5 * MAX_SPEED;
+      right_speed -= 0.5 * MAX_SPEED;
     }
     else if (right_obstacle) {
       // turn left
-      left_speed  -= 500;
-      right_speed += 500;
+      left_speed  -= 0.5 * MAX_SPEED;
+      right_speed += 0.5 * MAX_SPEED;
     }
 
     // write actuators inputs

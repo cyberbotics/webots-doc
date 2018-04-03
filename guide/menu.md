@@ -115,6 +115,7 @@
     - [Camera Sensors](camera-sensors.md)
     - [Lidar Sensors](lidar-sensors.md)
     - [Radar Sensors](radar-sensors.md)
+    - [Range Finder Sensors](range-finder-sensors.md)
 - [Webots FAQ](webots-faq.md)
     - [General FAQ](general-faq.md)
     - [Programming](programming.md)

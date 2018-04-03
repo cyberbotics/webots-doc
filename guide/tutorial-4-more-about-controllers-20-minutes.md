@@ -185,6 +185,8 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: Finally, use the information about the obstacle to actuate the wheels as follows:
 
 > ```c
+> #define SPEED_UNIT 0.00628
+> // ...
 > // init speeds
 > double left_speed  = 500;
 > double right_speed = 500;
@@ -200,8 +202,8 @@ The second argument of the enable function defines at which rate the sensor will
 >   right_speed += 500;
 > }
 > // write actuators inputs
-> wb_motor_set_velocity(left_motor, left_speed);
-> wb_motor_set_velocity(right_motor, right_speed);
+> wb_motor_set_velocity(left_motor, SPEED_UNIT * left_speed);
+> wb_motor_set_velocity(right_motor, SPEED_UNIT * right_speed);
 > ```
 
 <!-- -->
@@ -222,6 +224,8 @@ Here is the complete code of the controller detailed in the previous subsection.
 
 // time in [ms] of a simulation step
 #define TIME_STEP 64
+
+#define SPEED_UNIT 0.00628
 
 // entry point of the controller
 int main(int argc, char **argv)
@@ -284,8 +288,8 @@ int main(int argc, char **argv)
     }
 
     // write actuators inputs
-    wb_motor_set_velocity(left_motor, left_speed);
-    wb_motor_set_velocity(right_motor, right_speed);
+    wb_motor_set_velocity(left_motor, SPEED_UNIT * left_speed);
+    wb_motor_set_velocity(right_motor, SPEED_UNIT * right_speed);
   }
 
   // cleanup the Webots API

@@ -30,11 +30,11 @@ Kinect {
 }
 ```
 
-`width`: Defines the `width` field of the [RangeFinder](../reference/rangefinder.md) and [Camera](../reference/camera.md) nodes.
-`height`: Defines the `height` field of the [RangeFinder](../reference/rangefinder.md) and [Camera](../reference/camera.md) nodes.
-`maxRange`: Defines the `maxRange` field of the [RangeFinder](../reference/rangefinder.md).
-`colorNoise`: Defines the `noise` field of the [Camera](../reference/camera.md).
-`rangeNoise`: Defines the `noise` field of the [RangeFinder](../reference/rangefinder.md).
-`cameraName`: Defines the name of the [RangeFinder](../reference/rangefinder.md) and [Camera](../reference/camera.md) nodes. The [RangeFinder](../reference/rangefinder.md) is named "<cameraName> + ' range'" and the [Camera](../reference/camera.md) "<cameraName> + ' color'".
-`tiltMotorName`: Defines the name of the foot tilt [RotationalMotor](../reference/rotationalmotor.md) (when the `foot` field is enabled).
-`foot`: Defines whether the articulated foot is present.
+- `width`: Defines the `width` field of the [RangeFinder](../reference/rangefinder.md) and [Camera](../reference/camera.md) nodes.
+- `height`: Defines the `height` field of the [RangeFinder](../reference/rangefinder.md) and [Camera](../reference/camera.md) nodes.
+- `maxRange`: Defines the `maxRange` field of the [RangeFinder](../reference/rangefinder.md).
+- `colorNoise`: Defines the `noise` field of the [Camera](../reference/camera.md).
+- `rangeNoise`: Defines the `noise` field of the [RangeFinder](../reference/rangefinder.md).
+- `cameraName`: Defines the name of the [RangeFinder](../reference/rangefinder.md) and [Camera](../reference/camera.md) nodes. The [RangeFinder](../reference/rangefinder.md) is named "<cameraName> + ' range'" and the [Camera](../reference/camera.md) "<cameraName> + ' color'".
+- `tiltMotorName`: Defines the name of the foot tilt [RotationalMotor](../reference/rotationalmotor.md) (when the `foot` field is enabled).
+- `foot`: Defines whether the articulated foot is present.

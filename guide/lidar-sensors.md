@@ -92,7 +92,7 @@ HokuyoUrg04lxug01 [
 ]
 ```
 
-`resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
+- `resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
 
 #### Hokuyo UTM-30LX
 
@@ -121,7 +121,7 @@ HokuyoUtm30lx {
 }
 ```
 
-`resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
+- `resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
 
 ### SICK
 

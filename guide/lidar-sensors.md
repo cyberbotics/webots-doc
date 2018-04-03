@@ -44,8 +44,8 @@ The `fastModel` field can be used to simplify the model of the sensor by removin
 
 %end
 
-The [Hokuyo URG-04LX](https://www.hokuyo-aut.jp/search/single.php?serial=165) is a lidar designed for light-weighted indoor robots.
-The model respects the following specifications:
+The [Hokuyo URG-04LX](https://www.hokuyo-aut.jp/search/single.php?serial=165) is a lidar designed for lightweight indoor robots.
+The model has the following specifications:
 
 - `field of view`: 240 [deg]
 - `range`: 0.06 to 4.095 [m]
@@ -73,8 +73,8 @@ HokuyoUrg04lx [
 
 %end
 
-The [Hokuyo URG-04LX-UG01](https://www.hokuyo-aut.jp/search/single.php?serial=166) is a lidar designed for light-weighted indoor robots.
-The model respects the following specifications:
+The [Hokuyo URG-04LX-UG01](https://www.hokuyo-aut.jp/search/single.php?serial=166) is a lidar designed for lightweight indoor robots.
+The model has the following specifications:
 
 - `field of view`: 240 [deg]
 - `range`: 0.2 to 5.6 [m]
@@ -103,7 +103,7 @@ HokuyoUrg04lxug01 [
 %end
 
 The [Hokuyo UTM-30LX](https://www.hokuyo-aut.jp/search/single.php?serial=169) is a lidar designed for outdoor robots with a high moving speed.
-The model respects the following specifications:
+The model has the following specifications:
 
 - `field of view`: 270 [deg]
 - `range`: 0.1 to 30 [m]

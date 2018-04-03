@@ -27,9 +27,8 @@ More information on the specifications and optional devices is available on the 
 | Length                      | 485 mm       |
 | Width                       | 381 mm       |
 | Height                      | 217 mm       |
-| Weight                      | 10 kg        |
-| Max. forward/backward speed | 0.5 m/s      |
-| Max. rotation speed         | 5.24 rad/s   |
+| Weight                      | 9 kg         |
+| Max. forward/backward speed | 1.2 m/s      |
 
 %end
 

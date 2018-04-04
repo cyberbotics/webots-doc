@@ -6,14 +6,34 @@
 @font-face {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 300;
-  src: local("fonts/Roboto"), url("fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  src: local("fonts/Roboto-Regular"), url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: local("fonts/Roboto-Italic"), url("fonts/Roboto-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("fonts/Roboto-Bold"), url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: local("fonts/Roboto-BoldItalic"), url("fonts/Roboto-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
-  font-weight: 300;
   src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
 }
 
@@ -233,12 +253,16 @@
 .webots-doc code > a {
   font-family: "Roboto Mono", monospace;
 }
+.webots-doc b, .webots-doc strong {
+  color: #222;
+}
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3,
 .webots-doc h4 {
   font-family: 'Roboto';
   font-style: normal;
+  font-weight: normal;
   color: #0e6f8c;
   clear: both;
   margin: 20px auto;

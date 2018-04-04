@@ -161,6 +161,64 @@ When set to "2", the e-puck model switches to the e-puck2, with the following di
 - The overall mass differs: 130 [grams] instead of 150 [grams].
 - The max speed differs: 1200 [steps / second] instead of 1000 [steps / second].
 
+### E-puck PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+E-puck {
+  SFVec3f    translation         0 0 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "e-puck"
+  SFString   controller          "e-puck_avoid_obstacles"
+  SFString   controllerArgs      ""
+  SFString   customData          ""
+  SFBool     synchronization     TRUE
+  SFString   version             "1"
+  SFFloat    camera_fieldOfView  0.84
+  SFInt32    camera_width        52
+  SFInt32    camera_height       39
+  SFBool     camera_antiAliasing FALSE
+  SFRotation camera_rotation     1 0 0 0
+  SFFloat    camera_noise        0.0
+  SFInt32    emitter_channel     1
+  SFInt32    receiver_channel    1
+  MFFloat    battery             []
+  SFString   window              "e-puck"
+  MFNode     turretSlot          []
+  MFNode     groundSensorsSlot   []
+  SFBool     kinematic           FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+#### E-puck Field Summary
+
+- `version`: Defines the e-puck version; either "1" or "2".
+
+- `camera_fieldOfView`: Defines the `fieldOfView` field of the [Camera](../reference/camera.md).
+
+- `camera_width`: Defines the `width` field of the [Camera](../reference/camera.md).
+
+- `camera_height`: Defines the `height` field of the [Camera](../reference/camera.md).
+
+- `camera_antiAliasing`: Defines the `antiAliasing` field of the [Camera](../reference/camera.md).
+
+- `camera_rotation`: Defines the `rotation` field of the [Camera](../reference/camera.md).
+
+- `camera_noise`: Defines the `noise` field of the [Camera](../reference/camera.md).
+
+- `emitter_channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md).
+
+- `receiver_channel`: Defines the `channel` field of the [Receiver](../reference/receiver.md).
+
+- `turretSlot`: Extends the robot with new nodes in the turret slot.
+
+- `groundSensorsSlot`: Extends the robot with new nodes in the ground slot. Typically: `E-puckGroundSensors`.
+
+- `kinematic`: Defines whether the robot motion and its sensors are computed according to a 2D kinematics algorithm.
+
 ### Control Interface
 
 #### Robot Window

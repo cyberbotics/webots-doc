@@ -14,6 +14,29 @@ It can also turn on the spot.
 
 ![youtube video](https://www.youtube.com/watch?v=n4rttp8CysU)
 
+### Shrimp PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Shrimp {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Shrimp"
+  SFString   controller      "shrimp"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/bluebotics/shrimp/protos/Shrimp.proto"
+
+#### Shrimp Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/bluebotics/shrimp/worlds".

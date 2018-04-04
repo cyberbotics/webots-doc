@@ -8,6 +8,29 @@
 
 Robot models based on [Lego's Mindstorms](https://www.lego.com/en-us/mindstorms) can be created in Webots.
 
+### MindstormsRover PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+MindstormsRover {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "MindstormsRover"
+  SFString   controller      "Rover"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/lego/mindstorms/protos/MindstormsRover.proto"
+
+#### MindstormsRover Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/lego/mindstorms/worlds".

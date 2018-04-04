@@ -13,6 +13,29 @@ Each knee is made of two embedded HingeJoint nodes, one active and one passive, 
 The passive HingeJoint simulates the spring and damping.
 The active HingeJoint is not actuated in the following demo but it could be used for controlling the knee joints.
 
+### GhostDog PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+GhostDog {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "GhostDog"
+  SFString   controller      "ghostdog"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/epfl/biorob/protos/GhostDog.proto"
+
+#### GhostDog Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/epfl/biorob/worlds".

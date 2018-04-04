@@ -72,6 +72,42 @@ The following [figure](#distance-sensor-positions) shows the position and direct
 
 %end
 
+### AiboErs7 PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+AiboErs7 {
+  SFVec3f    translation         0 0.143 0
+  SFRotation rotation            1 0 0 -0.05
+  SFString   name                "ERS-7"
+  SFString   controller          "ers7"
+  SFString   controllerArgs      ""
+  SFString   customData          ""
+  SFBool     synchronization     TRUE
+  SFFloat    camera_fieldOfView  0.993092
+  SFInt32    camera_width        208
+  SFInt32    camera_height       160
+  SFBool     camera_antiAliasing FALSE
+  MFNode     extensionSlot       []
+  SFString   window              ""
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/sony/aibo/protos/AiboErs7.proto"
+
+#### AiboErs7 Field Summary
+
+- `camera_fieldOfView`:  Defines the `fieldOfView` field of the [Camera](../reference/camera.md).
+
+- `camera_width`: Defines the `width` field of the [Camera](../reference/camera.md).
+
+- `camera_height`: Defines the `height` field of the [Camera](../reference/camera.md).
+
+- `camera_antiAliasing`: Defines the `antiAliasing` field of the [Camera](../reference/camera.md).
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 Here are listed the different example worlds based on the Aibo ERS7.

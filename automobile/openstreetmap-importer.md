@@ -1,10 +1,10 @@
-## OpenStreetMap Importer
+# OpenStreetMap Importer
 
 In order to ease the creation of new environments for automobile simulations, Webots worlds can be generated from OpenStreetMap maps using the importer script described here.
 
 You can download an OpenStreetMap map of any part of the world from [www.openstreetmap.org/export](http://www.openstreetmap.org/export) (do not use more than a few square kilometers if you want to be able to run your simulation in real-time) and then save it as a Webots world file (e.g. `myMap.wbt`) using the importer script.
 
-### Movie Presentation
+## Movie Presentation
 
 ![youtube video](https://www.youtube.com/watch?v=tPXHnp4bHrY&t)
 
@@ -96,7 +96,7 @@ You can use several arguments with this script:
 In addition to these arguments, a configuration file can be used to define how to handle most of the OpenStreetMap entities.
 A typical configuration file can be seen in [appendix](a-typical-openstreetmap-importer-configuration-file.md).
 
-### Map Edition and Creation
+## Map Edition and Creation
 
 If you want to edit a map exported from OpenStreetMap before converting it into a Webots world, we recommend using JOSM.
 [JOSM](https://josm.openstreetmap.de) is an open source software written in Java.
@@ -113,7 +113,7 @@ Using JOSM you can easily edit a map in order to add some elements, correct some
 In addition to editing map from OpenStreetmap, JOSM is also very convenient to create new environment from scratch.
 You can see in the [previous picture](#left-the-osm-file-created-in-josm-right-the-resulting-world-open-in-webots-after-conversion) a map fully created in JOSM and then exported and opened in Webots.
 
-### Graphical User Interface
+## Graphical User Interface
 
 To ease the use of this tool, a graphical interace has been created.
 This grapical interface can easily be started from the last tab of the [robot window](robot-window.md).

@@ -27,9 +27,8 @@ More information on the specifications and optional devices is available on the 
 | Length                      | 485 mm       |
 | Width                       | 381 mm       |
 | Height                      | 217 mm       |
-| Weight                      | 10 kg        |
-| Max. forward/backward speed | 0.5 m/s      |
-| Max. rotation speed         | 5.24 rad/s   |
+| Weight                      | 9 kg         |
+| Max. forward/backward speed | 1.2 m/s      |
 
 %end
 
@@ -76,6 +75,29 @@ The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where t
 ![pioneer3dx_led.png](images/robots/pioneer-3dx/leds.png)
 
 %end
+
+### Pioneer3dx PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Pioneer3dx {
+  SFVec3f    translation     0 0.0975 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Pioneer 3-DX"
+  SFString   controller      "pioneer3dx_collision_avoidance"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+#### Pioneer3dx Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
 
 ### Samples
 

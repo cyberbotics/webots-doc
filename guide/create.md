@@ -12,6 +12,29 @@ The [iRobot Create](http://www.irobot.com/About-iRobot/STEM/Create-2.aspx) robot
 
 ![youtube video](https://www.youtube.com/watch?v=dEgLYioQycA)
 
+### Create PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Create {
+  SFVec3f    translation     0 0.044 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Create"
+  SFString   controller      "create_avoid_obstacles"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     bodySlot        []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/irobot/create/protos/Create.proto"
+
+#### Create Field Summary
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/irobot/create/worlds".

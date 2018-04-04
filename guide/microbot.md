@@ -11,6 +11,29 @@ The system can be fully customized by the end user using different input sensors
 This default pack contains the motherboard, two motor/gearboxes, a bumper module, a line follower module, a pen holder and a servo connector.
 It can be extended.
 
+### Microbot PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Microbot {
+  SFVec3f    translation      0 0.022 0
+  SFRotation rotation         0 1 0 0
+  SFString   name            "BOT120"
+  SFString   controller      "void"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/picaxe/microbot/protos/Microbot.proto"
+
+#### Microbot Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/picaxe/microbot/worlds".

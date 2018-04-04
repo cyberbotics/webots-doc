@@ -26,8 +26,7 @@ More information on the specifications and optional devices is available on the 
 | Width                       | 497 mm       |
 | Height                      | 277 mm       |
 | Weight                      | 12 kg        |
-| Max. forward/backward speed | 2.2 m/s      |
-| Max. rotation speed         | 20 rad/s     |
+| Max. forward/backward speed | 0.7 m/s      |
 
 %end
 
@@ -51,6 +50,29 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 %end
 
 The angle between two consecutive sensor directions is 20 degrees except for the four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
+
+### Pioneer3at PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Pioneer3at {
+  SFVec3f    translation     0 0.11 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Pioneer 3-AT"
+  SFString   controller      "void"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/adept/pioneer3/protos/Pioneer3at.proto"
+
+#### Pioneer3at Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
 
 ### Samples
 

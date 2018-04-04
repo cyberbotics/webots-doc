@@ -38,6 +38,63 @@ Indeed, Webots API is simple to understand and to use thanks to examples and doc
 
 ![youtube video](https://www.youtube.com/watch?v=cFIvnh_9rgE)
 
+
+### RobotisOp2 PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+RobotisOp2 {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "ROBOTIS OP2"
+  SFString   controller      "motion_player"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  SFBool     selfCollision   FALSE
+  SFColor    plasticColor    0.8 0.8 0.8
+  SFInt32    cameraWidth     160
+  SFInt32    cameraHeight    120
+  MFFloat    battery         []
+  SFNode     jersey          NULL
+  SFInt32    channel         0
+  SFBool     showWindow      FALSE
+  MFNode     bodySlot        []
+  MFNode     headSlot        []
+  MFNode     leftFootSlot    []
+  MFNode     rightFootSlot   []
+  MFNode     leftHandSlot    []
+  MFNode     rightHandSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/robotis/darwin-op/protos/RobotisOp2.proto"
+
+#### RobotisOp2 Field Summary
+
+- `plasticColor`: Defines the `diffuseColor` field of the main [Material](../reference/material.md).
+
+- `cameraWidth`: Defines the `width` field of the [Camera](../reference/camera.md).
+
+- `cameraHeight`: Defines the `height` field of the [Camera](../reference/camera.md).
+
+- `jersey`: Extends the robot with a jersey: typically RobotisJersey.proto.
+
+- `channel`: Defines the `channel` field of the [Emitter](../reference/emitter.md) and [Receiver](../reference/receiver.md).
+
+- `bodySlot`: Extends the robot with new nodes in the body slot.
+
+- `headSlot`: Extends the robot with new nodes in the head slot.
+
+- `leftFootSlot`: Extends the robot with new nodes in the left foot slot.
+
+- `rightFootSlot`: Extends the robot with new nodes in the right foot slot.
+
+- `leftHandSlot`: Extends the robot with new nodes in the left hand slot.
+
+- `rightHandSlot`: Extends the robot with new nodes in the right hand slot.
+
 ### Simulated Devices
 
 The simulation model is mounted with the following sensors and actuators:
@@ -52,9 +109,9 @@ The simulation model is mounted with the following sensors and actuators:
 
 #### Motors and Position Sensors
 
-Motor positions and identifiers can be found in the following [figure](#position-of-the-servos).
+Motor positions and identifiers can be found in the following [figure](#position-of-the-motors).
 
-%figure "Position of the Motor"
+%figure "Position of the Motors"
 ![robotis_op2_servo_map.png](images/robots/robotis-op2/robotis_op2_servo_map.png)
 %end
 
@@ -655,7 +712,7 @@ You can also see the camera picture.
 
 In remote control, supported camera resolutions are not the same as in remote compilation.
 Indeed they are smaller in order to not slow down too much the communication speed between Webots and the robot.
-All available resolutions are specified in the [following table](#cameraremoteresolution).
+All available resolutions are specified in the [following table](#camera-resolutions-supported-in-remote-control).
 Unlike from remote compilation you do not have to specify the desired resolution in any file, the resolution is automatically sent to the robot from Webots.
 So in order to adjust the resolution, just do the same way you would do it in the simulation (by editing `cameraWidth` and `cameraHeight` fields of the ROBOTIS OP2 in the scene tree window).
 

@@ -10,6 +10,29 @@ The "Hemisson" is a two-wheeled robot designed for education and teaching develo
 Equipped with several sensors and a programmable 8bit MCU, the robot is able to avoid obstacles, detect ambient light intensity and follow a line on the floor.
 Other equipments include programmable LED, buzzer and switches.
 
+### Hemisson PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+Hemisson {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "Hemisson"
+  SFString   controller      "hemisson"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/k-team/hemisson/protos/Hemisson.proto"
+
+#### Hemisson Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/k-team/hemisson/worlds".

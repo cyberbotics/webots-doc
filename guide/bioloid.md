@@ -23,6 +23,29 @@ The physical dimensions, friction coefficients and mass distribution have been e
 
 ![youtube video](https://www.youtube.com/watch?v=hMRYdd0Jlis)
 
+### BioloidDog PROTO
+
+Derived from [Robot](../reference/robot.md).
+
+```
+BioloidDog {
+  SFVec3f    translation     0 0 0
+  SFRotation rotation        0 1 0 0
+  SFString   name            "BioloidDog"
+  SFString   controller      "bioloid_dog"
+  SFString   controllerArgs  ""
+  SFString   customData      ""
+  SFBool     synchronization TRUE
+  MFNode     extensionSlot   []
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/robots/robotis/bioloid/protos/BioloidDog.proto"
+
+#### BioloidDog Field Summary
+
+- `extensionSlot`: Extends the robot with new nodes in the extension slot.
+
 ### Samples
 
 You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots/robotics/bioloid/worlds".

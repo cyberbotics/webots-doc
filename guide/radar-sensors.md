@@ -39,10 +39,10 @@ They all have the same fields.
 %end
 
 ```
-SmsUmrr-0a29/30/31 {
+SmsUmrr-0a29 / SmsUmrr-0a30 / SmsUmrr-0a31 {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "Sms UMRR 0a29/30/31"
+  SFString   name           "Sms UMRR 0a29" / "Sms UMRR 0a30" / "Sms UMRR 0a31"
   SFBool     occlusion      FALSE
   SFFloat    cellSpeed      0.0
   SFFloat    angularNoise   0.0

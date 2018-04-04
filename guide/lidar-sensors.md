@@ -24,7 +24,7 @@ The model of the `Ibeo LUX` contains a spherical projection, a fixed resolution 
 IbeoLux {
   SFVec3f    translation             0 0 0
   SFRotation rotation                0 1 0 0
-  SFString   name                    "ibeo"
+  SFString   name                    "Ibeo Lux"
   SFBool     useExtendedFieldOfView  FALSE
   SFBool     fastModel               FALSE
 }
@@ -51,11 +51,11 @@ The model of the `SICK LMS 291` contains a spherical projection, a configurable 
 
 ```
 SickLms291 {
-  SFVec3f translation 0 0 0
-  SFRotation rotation  0 1 0 0
-  SFString name "lms291"
-  SFFloat noise 0.0
-  SFInt32 resolution 180
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "Sick LMS 291"
+  SFFloat    noise       0.0
+  SFInt32    resolution  180
 }
 ```
 
@@ -80,13 +80,13 @@ The frustum cone is shifted to the right by an offset angle of 7.5 degrees when 
 
 ```
 SickLdMrs {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "LD-MRS"
-  SFFloat noise 0.3
-  SFInt32 numberOfLayers 4
-  SFFloat angularResolution 0.008726646259972
-  SFBool physics TRUE
+  SFVec3f    translation       0 0 0
+  SFRotation rotation          0 1 0 0
+  SFString   name              "Sick LD-MRS"
+  SFFloat    noise             0.3
+  SFInt32    numberOfLayers    4
+  SFFloat    angularResolution 0.008726646259972
+  SFBool     physics           TRUE
 }
 ```
 
@@ -119,12 +119,9 @@ The model of the `Velodyne VLP 16` contains a spherical projection and a gaussia
 VelodyneVLP-16 {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "velodyne"
-  SFBool     fastModel      FALSE
+  SFString   name           "Velodyne VLP-16"
 }
 ```
-
-The `fastModel` field can be used to simplify the model of the sensor by removing the noise in order to speed up the simulation.
 
 #### Velodyne HDL 32E
 
@@ -142,12 +139,9 @@ The model of the `Velodyne HDL 32` contains a gaussian noise with a standard dev
 VelodyneHDL-32E {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "velodyne"
-  SFBool     fastModel      FALSE
+  SFString   name           "Velodyne HDL-32E"
 }
 ```
-
-The `fastModel` field can be used to simplify the model of the sensor by removing the noise in order to speed up the simulation.
 
 #### Velodyne HDL 64E
 
@@ -162,12 +156,9 @@ The model of the `Velodyne HDL 64` contains a gaussian noise with a standard dev
 %end
 
 ```
-VelodyneHDL-32E {
+VelodyneHDL-64E {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "velodyne"
-  SFBool     fastModel      FALSE
+  SFString   name           "Velodyne HDL-32E"
 }
 ```
-
-The `fastModel` field can be used to simplify the model of the sensor by removing the noise in order to speed up the simulation.

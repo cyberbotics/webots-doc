@@ -9,7 +9,7 @@ Exceptionally, some *actuators* may also be *sensors* if they make sensory measu
 
 **Ancestor**: When referring to a *node*, the *ancestor* of a *descendant* is a *node* which hierarchically contains the *descendant* in the *scene tree*, at any relative depth.
 
-**Base node**: A *base node* is a node a Webots built-in node.
+**Base node**: A *base node* is a Webots built-in node.
 It is not defined in a [PROTO](proto.md) file.
 All the Webots *base nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
 

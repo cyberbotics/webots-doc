@@ -49,7 +49,7 @@ Note that a *parent* is always an *ancestor*, but an *ancestor* is not necessari
 It may be either a *kinematic* or a *dynamic solid*.
 
 **PROTO node**: A *PROTO node* is a node that is defined in a [PROTO](proto.md) file.
-Such nodes are used to extend the list of available (in adition to the base nodes).
+Such nodes are used to extend the list of available nodes (in addition to the base nodes).
 
 **Robot**: A *robot* is a [Robot](robot.md) *node* defining a robotic system.
 It usually contains *sensors* and *actuators* in its *descendants*.

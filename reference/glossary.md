@@ -9,6 +9,9 @@ Exceptionally, some *actuators* may also be *sensors* if they make sensory measu
 
 **Ancestor**: When referring to a *node*, the *ancestor* of a *descendant* is a *node* which hierarchically contains the *descendant* in the *scene tree*, at any relative depth.
 
+**Base node**: A *base node* is a node that is one of the built-in nodes of Webots, it is not defined in a (PROTO)[proto.md] file.
+The complete list of base nodes is available in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
+
 **Basic time step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation.
 It is specified as a *field* of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
 
@@ -44,6 +47,9 @@ Note that a *parent* is always an *ancestor*, but an *ancestor* is not necessari
 
 **Passive solid**: A *passive solid* is a *solid* which is not a *robot*, neither a *sensor* or an *actuator*.
 It may be either a *kinematic* or a *dynamic solid*.
+
+**PROTO node**: A *PROTO node* is a node that is defined in a (PROTO)[proto.md] file.
+Such nodes are used to extend the list of available (in adition to the base nodes).
 
 **Robot**: A *robot* is a [Robot](robot.md) *node* defining a robotic system.
 It usually contains *sensors* and *actuators* in its *descendants*.

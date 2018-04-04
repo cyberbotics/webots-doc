@@ -9,8 +9,9 @@ Exceptionally, some *actuators* may also be *sensors* if they make sensory measu
 
 **Ancestor**: When referring to a *node*, the *ancestor* of a *descendant* is a *node* which hierarchically contains the *descendant* in the *scene tree*, at any relative depth.
 
-**Base node**: A *base node* is a node that is one of the built-in nodes of Webots, it is not defined in a [PROTO](proto.md) file.
-The complete list of base nodes is available in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
+**Base node**: A *base node* is a node a Webots built-in node.
+It is not defined in a [PROTO](proto.md) file.
+All the Webots *base nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
 
 **Basic time step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation.
 It is specified as a *field* of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
@@ -40,7 +41,6 @@ The data type can be a single item or a list of items from *node*, boolean, inte
 
 **Node**: A *node* is a component of the *scene tree*.
 It defines a concept of the *world* and may refer to external resources, such as *controllers*, image textures, plugins, sounds, etc.
-All the Webots *nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
 
 **Parent**: When referring to a *node", the *parent* of a *child* is a *node* containing the *child* at a relative depth of one in the *scene tree*.
 Note that a *parent* is always an *ancestor*, but an *ancestor* is not necessarily a *parent*.

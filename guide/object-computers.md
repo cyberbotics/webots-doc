@@ -103,7 +103,7 @@ A simple laptop.
 
 %end
 
-Derived from [Solid](../reference/solid.md).
+Derived from [Robot](../reference/robot.md).
 
 ```
 Laptop {

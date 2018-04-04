@@ -33,7 +33,7 @@ Rock10cm {
 
 - `color`: Defines the color of the rock.
 
-- `ambientIntensity`: Defines the ambiant intensity of the rock.
+- `ambientIntensity`: Defines the ambient lighting intensity of the rock.
 
 ## Rock17cm
 

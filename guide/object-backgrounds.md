@@ -68,5 +68,5 @@ TexturedBackgroundLight {
 
 - `castShadows`: Defines whether the light should cast shadows.
 
-- `castLensFlares`: Defines whether the light should cast lens-flares.
+- `castLensFlares`: Defines whether the light should cast lens flares.
 

@@ -108,9 +108,9 @@ for proto in prioritaryProtoList + fileList:
 
     # add documentation for this PROTO file
     exist = os.path.isfile('object-' + upperCategoryName + '.md')
-    mode = 'a'
+    mode = 'ab'
     if upperCategory not in upperCategories:
-        mode = 'w'
+        mode = 'wb'
     with open('object-' + upperCategoryName + '.md', mode) as file:
         if upperCategory not in upperCategories and not upperCategory == category:
             file.write('# %s\n\n' % upperCategory.replace('_', ' ').title())
@@ -167,7 +167,7 @@ for proto in prioritaryProtoList + fileList:
 # write the menu in 'object.md'
 upperCategoriesList = sorted(upperCategories.keys())
 categoriesList = []
-with open('objects.md', 'w') as file:
+with open('objects.md', 'wb') as file:
     file.write('# Objects\n\n')
     file.write('## Sections\n\n')
     for upperCategory in upperCategoriesList:

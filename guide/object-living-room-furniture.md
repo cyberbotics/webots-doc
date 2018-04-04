@@ -90,5 +90,5 @@ Sofa {
 
 - `color`: Defines the color of the sofa.
 
-- `textureUrl`: Defines the texture used for eh sofa.
+- `textureUrl`: Defines the texture used for the sofa.
 

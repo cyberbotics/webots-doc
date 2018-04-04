@@ -29,8 +29,6 @@ CardboardBox {
 
 #### CardboardBox Field Summary
 
-- `name`: Defines the texture used for the cardboard box.
-
 - `size`: Defines the size of the cardboard box.
 
 - `mass`: Defines the mass of the cardboard box in kg. A value smaller or equal to 0 remove the physics of the cardboard box.

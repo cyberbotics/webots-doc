@@ -57,7 +57,7 @@ The model has the following specifications:
 HokuyoUrg04lx [
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
-  SFString   name        "URG-04LX"
+  SFString   name        "Hokuyo URG-04LX"
   SFFloat    noise       0.0
   SFInt32    resolution  667
 ]
@@ -86,7 +86,7 @@ The model has the following specifications:
 HokuyoUrg04lxug01 [
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
-  SFString   name        "URG-04LX-UG01"
+  SFString   name        "Hokuyo URG-04LX-UG01"
   SFFloat    noise       0.0
   SFInt32    resolution  667
 ]
@@ -115,7 +115,7 @@ The model has the following specifications:
 HokuyoUtm30lx {
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
-  SFString   name        "UTM-30LX"
+  SFString   name        "Hokuyo UTM-30LX"
   SFFloat    noise       0.0
   SFInt32    resolution  1080
 }

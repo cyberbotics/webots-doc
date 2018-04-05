@@ -21,8 +21,8 @@ The *virtual north* is specified by the `northDirection` field in the [WorldInfo
 ### Field Summary
 
 - `lookupTable`: This field optionally specifies a lookup table that can be used for mapping each vector component (between -1.0 and +1.0) to device specific output values.
-With the lookup table it is also possible to add noise and to define min and max output values.
 By default the lookup table is empty and therefore no mapping is applied.
+See the section on the [DistanceSensor](distancesensor.md#lookup-table) node for more explanation on how a `lookupTable` works.
 
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation should be enabled or disabled for the specified axis.
 If one of these fields is set to FALSE, then the corresponding vector element will not be computed and it will return *NaN* (Not a Number).

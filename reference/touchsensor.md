@@ -24,7 +24,7 @@ Examples of using the [TouchSensor](#touchsensor) are provided by the "hoap2\_su
 
 - `type`: allows the user to select the type of sensor: "bumper", "force", or "force-3d", described below.
 
-- `lookupTable`: similar to the one used by the [DistanceSensor](distancesensor.md) node.
+- `lookupTable`: similar to the one used by the [DistanceSensor](distancesensor.md#lookup-table) node.
 
 - `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
 Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).

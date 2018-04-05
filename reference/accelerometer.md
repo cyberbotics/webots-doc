@@ -21,8 +21,8 @@ It can be used for example to detect fall, the up/down direction, etc.
 ### Field Summary
 
 - `lookupTable`: This field optionally specifies a lookup table that can be used for mapping the raw acceleration values [m/s^2] to device specific output values.
-With the lookup table it is also possible to add noise and to define the min and max output values.
 By default the lookup table is empty and therefore the raw acceleration values are returned (no mapping).
+See the section on the [DistanceSensor](distancesensor.md#lookup-table) node for more explanation on how a `lookupTable` works.
 
 - `xAxis, yAxis, zAxis`: Each of these boolean fields enables or disables computation for the specified axis.
 If one of these fields is set to FALSE, then the corresponding vector element will not be computed and will return *NaN* (Not a Number).

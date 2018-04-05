@@ -57,7 +57,7 @@ The model has the following specifications:
 HokuyoUrg04lx [
   SFVec3f    translation 0 0 0
   SFRotation rotation    0 1 0 0
-  SFString   name        "Hokuyo URG-04L"
+  SFString   name        "Hokuyo URG-04LX"
   SFFloat    noise       0.0
   SFInt32    resolution  667
 ]

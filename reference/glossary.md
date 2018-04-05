@@ -9,6 +9,10 @@ Exceptionally, some *actuators* may also be *sensors* if they make sensory measu
 
 **Ancestor**: When referring to a *node*, the *ancestor* of a *descendant* is a *node* which hierarchically contains the *descendant* in the *scene tree*, at any relative depth.
 
+**Base node**: A *base node* is a Webots built-in node.
+It is not defined in a [PROTO](proto.md) file.
+All the Webots *base nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
+
 **Basic time step**: The *basic time step* is the time step increment used by Webots to advance the *virtual time* and perform physics simulation.
 It is specified as a *field* of the [WorldInfo](worldinfo.md) *node* and is expressed in milliseconds.
 
@@ -37,13 +41,15 @@ The data type can be a single item or a list of items from *node*, boolean, inte
 
 **Node**: A *node* is a component of the *scene tree*.
 It defines a concept of the *world* and may refer to external resources, such as *controllers*, image textures, plugins, sounds, etc.
-All the Webots *nodes* are depicted in the [Node Chart](node-chart.md) and described in details in the [Nodes and API functions](nodes-and-api-functions.md) section of this manual.
 
 **Parent**: When referring to a *node", the *parent* of a *child* is a *node* containing the *child* at a relative depth of one in the *scene tree*.
 Note that a *parent* is always an *ancestor*, but an *ancestor* is not necessarily a *parent*.
 
 **Passive solid**: A *passive solid* is a *solid* which is not a *robot*, neither a *sensor* or an *actuator*.
 It may be either a *kinematic* or a *dynamic solid*.
+
+**PROTO node**: A *PROTO node* is a node that is defined in a [PROTO](proto.md) file.
+*PROTO nodes* extend the list of available nodes (in addition to the base nodes) to facilitate the use of pre-defined [robots](../guide/robots.md), [actuators](../guide/actuators.md), [sensors](../guide/sensors.md), objects, etc. Webots provides several *PROTO nodes*, but users can create their own.
 
 **Robot**: A *robot* is a [Robot](robot.md) *node* defining a robotic system.
 It usually contains *sensors* and *actuators* in its *descendants*.

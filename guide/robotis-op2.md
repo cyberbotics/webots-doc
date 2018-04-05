@@ -806,6 +806,8 @@ mMotors[18]->setPosition(sin(getTime()));
 Then save the file, press the build button and finally revert the simulation to start the new controller.
 This example is well suited for the remote compilation and we recommended that you start by testing the remote compilation tool by using this example.
 
+>**Note**: This sample is also available using a Matlab controller in the `symmetry_matlab.wbt` world.
+
 #### visual\_tracking.wbt
 
 ![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](#vision-manager)) and the use of the RGB LEDs.

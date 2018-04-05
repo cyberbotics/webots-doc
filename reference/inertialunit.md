@@ -30,8 +30,8 @@ The reference frame is made of the unit vector giving the north direction, the o
 ### Field Summary
 
 - `lookupTable`: This field optionally specifies a lookup table that can be used for changing the angle values [rad] into device specific output values, or for changing the units to degrees for example.
-With the lookup table it is also possible to define the min and max output values and to add noise to the output values.
 By default the lookup table is empty and therefore the returned angle values are expressed in radians and no noise is added.
+See the section on the [DistanceSensor](distancesensor.md#lookup-table) node for more explanation on how a `lookupTable` works.
 
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation should be enabled or disabled for the specified axis.
 The `xAxis` field defines whether the *roll* angle should be computed.

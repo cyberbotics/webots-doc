@@ -20,8 +20,8 @@ The angular velocity is measured in radians per second [rad/s].
 ### Field Summary
 
 - `lookupTable`: This field optionally specifies a lookup table that can be used for mapping the raw angular velocity values [rad/s] to device specific output values.
-With the lookup table it is also possible to add noise and to define the min and max output values.
 By default the lookup table is empty and therefore the raw values are returned (no mapping).
+See the section on the [DistanceSensor](distancesensor.md#lookup-table) node for more explanation on how a `lookupTable` works.
 
 - `xAxis, yAxis, zAxis`: Each of these boolean fields specifies if the computation should be enabled or disabled for the specified axis.
 If one of these fields is set to FALSE, then the corresponding vector element will not be computed and it will return *NaN* (Not a Number).

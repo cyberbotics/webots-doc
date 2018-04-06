@@ -26,6 +26,9 @@ Apple {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/Apple.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Apple Field Summary
 
 - `color`: Define the color of the apple.
@@ -59,6 +62,9 @@ FruitBowl {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/FruitBowl.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### FruitBowl Field Summary
 
 - `color`: Defines the color of the bowl.
@@ -91,6 +97,9 @@ Orange {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/fruits/protos/Orange.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Orange Field Summary
 

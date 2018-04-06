@@ -24,6 +24,9 @@ BeerBottle {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/BeerBottle.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## Can
 
 A can (0.03175 x 0.1222 x 0.03175 m).
@@ -49,6 +52,9 @@ Can {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/Can.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## WaterBottle
 
 A water bottle.
@@ -72,4 +78,7 @@ WaterBottle {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/drinks/protos/WaterBottle.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 

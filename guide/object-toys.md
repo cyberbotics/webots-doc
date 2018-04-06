@@ -32,6 +32,9 @@ PaperBoat {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/toys/protos/PaperBoat.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### PaperBoat Field Summary
 
 - `scale`: Defines the global scaling factor.
@@ -71,6 +74,9 @@ RubberDuck {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/toys/protos/RubberDuck.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RubberDuck Field Summary
 

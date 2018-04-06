@@ -27,6 +27,9 @@ BiscuitBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/BiscuitBox.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### BiscuitBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -59,6 +62,9 @@ CerealBox {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### CerealBox Field Summary
 
@@ -93,6 +99,9 @@ HoneyJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/HoneyJar.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### HoneyJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
@@ -125,6 +134,9 @@ JamJar {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/breakfast/protos/JamJar.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### JamJar Field Summary
 
 - `textureLidUrl`: Defines the texture used for the lid of the jar.
@@ -156,6 +168,9 @@ HotPlate {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/HotPlate.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### HotPlate Field Summary
 
 - `textureUrl`: Defines the texture used for the hot plate.
@@ -182,6 +197,9 @@ Sink {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Sink.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Sink Field Summary
 
@@ -211,6 +229,9 @@ Worktop {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/components/protos/Worktop.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Worktop Field Summary
 
@@ -247,6 +268,9 @@ Fridge {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/fridge/protos/Fridge.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Fridge Field Summary
 
@@ -286,6 +310,9 @@ Oven {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/oven/protos/Oven.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### Oven Field Summary
 
 - `mainColor`: Defines the color of the oven.
@@ -321,6 +348,9 @@ Carafe {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Carafe.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### Carafe Field Summary
 
 - `mass`: Defines the mass of the carafe in kg.
@@ -348,6 +378,9 @@ Cookware {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Cookware.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Cookware Field Summary
 
@@ -378,6 +411,9 @@ Fork {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Fork.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### Fork Field Summary
 
 - `color`: Defines the color of the fork.
@@ -404,6 +440,9 @@ Glass {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Glass.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Glass Field Summary
 
@@ -432,6 +471,9 @@ Knife {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Knife.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### Knife Field Summary
 
 - `color`: Defines the color of the knife.
@@ -459,6 +501,9 @@ Lid {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Lid.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Lid Field Summary
 
@@ -491,6 +536,9 @@ Plate {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Plate.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### Plate Field Summary
 
@@ -526,6 +574,9 @@ Spoon {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Spoon.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### Spoon Field Summary
 
 - `color`: Defines the color of the spoon.
@@ -555,6 +606,9 @@ Wineglass {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/Wineglass.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### Wineglass Field Summary
 
 - `mass`: Defines the mass of the wine glass in kg.
@@ -581,6 +635,9 @@ WoodenSpoon {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/kitchen/utensils/protos/WoodenSpoon.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### WoodenSpoon Field Summary
 

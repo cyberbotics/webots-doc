@@ -22,6 +22,9 @@ LegoLargeMotor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lego/protos/LegoLargeMotor.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## LegoWheel
 
 LEGO Mindstrom EV 3 wheel. Parts id: 4634091 & 6035364.
@@ -43,4 +46,7 @@ LegoWheel {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lego/protos/LegoWheel.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 

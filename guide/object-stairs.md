@@ -31,6 +31,9 @@ StraightStairs {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairs.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### StraightStairs Field Summary
 
 - `stepSize`: Defines the size of one step.
@@ -81,6 +84,9 @@ StraightStairsLanding {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairsLanding.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### StraightStairsLanding Field Summary
 
@@ -134,6 +140,9 @@ StraightStairsRail {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/stairs/protos/StraightStairsRail.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### StraightStairsRail Field Summary
 

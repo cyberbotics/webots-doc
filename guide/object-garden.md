@@ -113,6 +113,7 @@ Pergolas {
 ## PicketFence
 
 A picket fence made of several segments with optional boundingObject.
+Each segment is made of 11 pickets.
 
 %figure
 
@@ -139,7 +140,7 @@ PicketFence {
 
 ### PicketFence Field Summary
 
-- `numberOfSegments`: Defines the number of consecutive segments, the length of one segment is 1.7 meters.
+- `numberOfSegments`: Defines the number of consecutive segments, the width of one segment is 1.7 meters.
 
 - `enableBoundingObject`: Defines whether the fence should have a bounding object.
 

@@ -56,15 +56,16 @@ This module is very useful to manipulate images, it can be used, for example, to
 
 %figure "Content of the context dictionary"
 
-| Key                     | Value                                                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| world                   | absolute path to the current world file (including file name and extension)                                                          |
-| proto                   | absolute path to the current PROTO file (including file name and extension)                                                          |
-| project\_path           | absolute path to the current project directory                                                                                       |
-| webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major and revision)           |
-| webots\_home            | absolute path to the Webots installation directory                                                                                   |
-| temporary\_files\_path  | absolute path to the temporary folder currently used by Webots (this is the location where the PROTO file is generated)              |
-| os                      | OS string ("windows", "linux" or "mac")                                                                                              |
+| Key                     | Value                                                                                                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| world                   | absolute path to the current world file (including file name and extension)                                                                                                                                                                |
+| proto                   | absolute path to the current PROTO file (including file name and extension)                                                                                                                                                                |
+| project\_path           | absolute path to the current project directory                                                                                                                                                                                             |
+| webots\_version         | dictionary representing the version of Webots with which the PROTO is currently used (dictionary keys: major and revision)                                                                                                                 |
+| webots\_home            | absolute path to the Webots installation directory                                                                                                                                                                                         |
+| temporary\_files\_path  | absolute path to the temporary folder currently used by Webots (this is the location where the PROTO file is generated)                                                                                                                    |
+| os                      | OS string ("windows", "linux" or "mac")                                                                                                                                                                                                    |
+| id                      | id of the node. This id is equivalent to the one returned by the [wb_supervisor_node_get_from_id](supervisor.md#wb_supervisor_node_get_from_def) function and may be used for example to initialize the seed of a random number generator. |
 
 %end
 
@@ -137,6 +138,9 @@ PROTO SimpleStairs [
    -- load lua-gd module and create a uniform texture
    local gd = require("gd")
    local debug = require("debug")
+   local os = require('os')
+   local wbrandom = require('wbrandom')
+   wbrandom.seed(os.clock() + os.time())
    local im = gd.createTrueColor(128, 128)
    color = im:colorAllocate(fields.color.value.r * 255, fields.color.value.g * 255, fields.color.value.b * 255)
    im:filledRectangle(0, 0, 127, 127, color)
@@ -146,7 +150,7 @@ PROTO SimpleStairs [
    im:stringFT(textColor, "Arial", 20, 0, 5, 60, fields.text.value)
    -- save the image in a png file
    local name = debug.getinfo(1,'S').source  -- get the name of the current file
-   name = name .. math.random(0, 100000)  -- add a random number to reduce name clashes
+   name = name .. wbrandom.integer(0, 100000)  -- add a random number to reduce name clashes
    local i = 0  -- make sure the file does not already exist
    local file = io.open(name .. i .. ".png", "r")
    while file do

@@ -30,6 +30,9 @@ Mirror {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/mirror/protos/Mirror.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Mirror Field Summary
 
 - `controller`: Defines the controller of the mirror. This controller should simply enable the camera and attach it to the display.

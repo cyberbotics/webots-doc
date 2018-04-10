@@ -25,6 +25,9 @@ Armchair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Armchair.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Armchair Field Summary
 
 - `color`: Defines the color of the armchair.
@@ -54,6 +57,9 @@ Carpet {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Carpet.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Carpet Field Summary
 
@@ -85,6 +91,9 @@ Sofa {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/living_room_furniture/protos/Sofa.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Sofa Field Summary
 

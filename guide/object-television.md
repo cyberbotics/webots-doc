@@ -27,6 +27,9 @@ Television {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/television/protos/Television.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Television Field Summary
 
 - `color`: Defines the color of the television.

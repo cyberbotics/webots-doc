@@ -60,6 +60,9 @@ Cabinet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/cabinet/protos/Cabinet.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Cabinet Field Summary
 
 - `depth`: Defines the depth of the cabinet.
@@ -105,6 +108,9 @@ CabinetHandle {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/cabinet/protos/CabinetHandle.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### CabinetHandle Field Summary
 

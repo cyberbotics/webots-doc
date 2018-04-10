@@ -34,7 +34,7 @@ The ".exe" extension is added on the Windows platforms only.
 An empty string can be set to speed up simulation, in that case no contoller is started.
 
 > **Note**: If the controller is not started the robot window will not work.
-If the robot window is required it is recommended to assign the `void` controller instead of no controller.
+If the robot window is required it is recommended to assign the `void` controller instead of an empty string.
 
 - `controllerArgs`: string containing the arguments (separated by space characters) to be passed to the `main` function of the C/C++ controller program or the `main` method of the Java controller program.
 

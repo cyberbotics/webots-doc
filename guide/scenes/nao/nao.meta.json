@@ -56,6 +56,7 @@
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
                 "name": "HeadYaw",
+                "targetSolidID": 76,
                 "type": "RotationalMotor"
             },
             {
@@ -68,6 +69,7 @@
                 "maxPosition": 0.514872,
                 "minPosition": -0.671952,
                 "name": "HeadPitch",
+                "targetSolidID": 76,
                 "type": "RotationalMotor"
             },
             {
@@ -110,6 +112,7 @@
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
                 "name": "RShoulderPitch",
+                "targetSolidID": 141,
                 "type": "RotationalMotor"
             },
             {
@@ -122,6 +125,7 @@
                 "maxPosition": 0.314159,
                 "minPosition": -1.32645,
                 "name": "RShoulderRoll",
+                "targetSolidID": 141,
                 "type": "RotationalMotor"
             },
             {
@@ -134,6 +138,7 @@
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
                 "name": "RElbowYaw",
+                "targetSolidID": 162,
                 "type": "RotationalMotor"
             },
             {
@@ -146,6 +151,7 @@
                 "maxPosition": 1.54462,
                 "minPosition": 0,
                 "name": "RElbowRoll",
+                "targetSolidID": 167,
                 "type": "RotationalMotor"
             },
             {
@@ -158,6 +164,7 @@
                 "maxPosition": 1.82387,
                 "minPosition": -1.82387,
                 "name": "RWristYaw",
+                "targetSolidID": 172,
                 "type": "RotationalMotor"
             },
             {
@@ -170,6 +177,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx1",
+                "targetSolidID": 177,
                 "type": "RotationalMotor"
             },
             {
@@ -182,6 +190,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx2",
+                "targetSolidID": 188,
                 "type": "RotationalMotor"
             },
             {
@@ -194,6 +203,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx3",
+                "targetSolidID": 198,
                 "type": "RotationalMotor"
             },
             {
@@ -206,6 +216,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx4",
+                "targetSolidID": 226,
                 "type": "RotationalMotor"
             },
             {
@@ -218,6 +229,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx5",
+                "targetSolidID": 236,
                 "type": "RotationalMotor"
             },
             {
@@ -230,6 +242,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx6",
+                "targetSolidID": 246,
                 "type": "RotationalMotor"
             },
             {
@@ -242,6 +255,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx7",
+                "targetSolidID": 274,
                 "type": "RotationalMotor"
             },
             {
@@ -254,6 +268,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "RPhalanx8",
+                "targetSolidID": 284,
                 "type": "RotationalMotor"
             },
             {
@@ -266,6 +281,7 @@
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
                 "name": "LShoulderPitch",
+                "targetSolidID": 343,
                 "type": "RotationalMotor"
             },
             {
@@ -278,6 +294,7 @@
                 "maxPosition": 1.32645,
                 "minPosition": -0.314159,
                 "name": "LShoulderRoll",
+                "targetSolidID": 343,
                 "type": "RotationalMotor"
             },
             {
@@ -290,6 +307,7 @@
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
                 "name": "LElbowYaw",
+                "targetSolidID": 364,
                 "type": "RotationalMotor"
             },
             {
@@ -302,6 +320,7 @@
                 "maxPosition": 0,
                 "minPosition": -1.54462,
                 "name": "LElbowRoll",
+                "targetSolidID": 369,
                 "type": "RotationalMotor"
             },
             {
@@ -314,6 +333,7 @@
                 "maxPosition": 1.82387,
                 "minPosition": -1.82387,
                 "name": "LWristYaw",
+                "targetSolidID": 374,
                 "type": "RotationalMotor"
             },
             {
@@ -326,6 +346,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx1",
+                "targetSolidID": 379,
                 "type": "RotationalMotor"
             },
             {
@@ -338,6 +359,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx2",
+                "targetSolidID": 390,
                 "type": "RotationalMotor"
             },
             {
@@ -350,6 +372,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx3",
+                "targetSolidID": 400,
                 "type": "RotationalMotor"
             },
             {
@@ -362,6 +385,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx4",
+                "targetSolidID": 428,
                 "type": "RotationalMotor"
             },
             {
@@ -374,6 +398,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx5",
+                "targetSolidID": 438,
                 "type": "RotationalMotor"
             },
             {
@@ -386,6 +411,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx6",
+                "targetSolidID": 448,
                 "type": "RotationalMotor"
             },
             {
@@ -398,6 +424,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx7",
+                "targetSolidID": 476,
                 "type": "RotationalMotor"
             },
             {
@@ -410,6 +437,7 @@
                 "maxPosition": 1,
                 "minPosition": 0,
                 "name": "LPhalanx8",
+                "targetSolidID": 486,
                 "type": "RotationalMotor"
             },
             {
@@ -422,6 +450,7 @@
                 "maxPosition": 0.740718,
                 "minPosition": -1.14529,
                 "name": "RHipYawPitch",
+                "targetSolidID": 542,
                 "type": "RotationalMotor"
             },
             {
@@ -434,6 +463,7 @@
                 "maxPosition": 0.449597,
                 "minPosition": -0.738274,
                 "name": "RHipRoll",
+                "targetSolidID": 557,
                 "type": "RotationalMotor"
             },
             {
@@ -446,6 +476,7 @@
                 "maxPosition": 0.48398,
                 "minPosition": -1.77378,
                 "name": "RHipPitch",
+                "targetSolidID": 572,
                 "type": "RotationalMotor"
             },
             {
@@ -458,6 +489,7 @@
                 "maxPosition": 2.11255,
                 "minPosition": -0.0923279,
                 "name": "RKneePitch",
+                "targetSolidID": 587,
                 "type": "RotationalMotor"
             },
             {
@@ -470,6 +502,7 @@
                 "maxPosition": 0.932006,
                 "minPosition": -1.1863,
                 "name": "RAnklePitch",
+                "targetSolidID": 607,
                 "type": "RotationalMotor"
             },
             {
@@ -482,6 +515,7 @@
                 "maxPosition": 0.785922,
                 "minPosition": -0.388685,
                 "name": "RAnkleRoll",
+                "targetSolidID": 617,
                 "type": "RotationalMotor"
             },
             {
@@ -514,6 +548,7 @@
                 "maxPosition": 0.740718,
                 "minPosition": -1.14529,
                 "name": "LHipYawPitch",
+                "targetSolidID": 674,
                 "type": "RotationalMotor"
             },
             {
@@ -526,6 +561,7 @@
                 "maxPosition": 0.79046,
                 "minPosition": -0.379435,
                 "name": "LHipRoll",
+                "targetSolidID": 689,
                 "type": "RotationalMotor"
             },
             {
@@ -538,6 +574,7 @@
                 "maxPosition": 0.48398,
                 "minPosition": -1.77378,
                 "name": "LHipPitch",
+                "targetSolidID": 704,
                 "type": "RotationalMotor"
             },
             {
@@ -550,6 +587,7 @@
                 "maxPosition": 2.11255,
                 "minPosition": -0.0923279,
                 "name": "LKneePitch",
+                "targetSolidID": 719,
                 "type": "RotationalMotor"
             },
             {
@@ -562,6 +600,7 @@
                 "maxPosition": 0.922581,
                 "minPosition": -1.18944,
                 "name": "LAnklePitch",
+                "targetSolidID": 739,
                 "type": "RotationalMotor"
             },
             {
@@ -574,6 +613,7 @@
                 "maxPosition": 0.397761,
                 "minPosition": -0.768992,
                 "name": "LAnkleRoll",
+                "targetSolidID": 749,
                 "type": "RotationalMotor"
             },
             {

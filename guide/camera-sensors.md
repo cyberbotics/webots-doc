@@ -51,20 +51,20 @@ The internal device names used to retrieve the devices from the controller can b
 
 ```
 PROTO MultiSenseS21 [
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "S21"
-  SFInt32 cameraWidth 1024
-  SFInt32 cameraHeight 544
-  SFFloat cameraFieldOfView 1.4
-  SFFloat cameraNoise 0
-  SFFloat rangeFinderNoise 0
-  SFFloat rangeFinderMaxRange 300
-  SFBool leftCamera TRUE
-  SFBool rightCamera TRUE
-  SFBool metaCamera FALSE
-  SFBool metaRangeFinder FALSE
-  SFBool physics TRUE
+  SFVec3f    translation         0 0 0
+  SFRotation rotation            0 1 0 0
+  SFString   name                "MultiSense S21"
+  SFInt32    cameraWidth         1024
+  SFInt32    cameraHeight        544
+  SFFloat    cameraFieldOfView   1.4
+  SFFloat    cameraNoise         0
+  SFFloat    rangeFinderNoise    0
+  SFFloat    rangeFinderMaxRange 300
+  SFBool     leftCamera          TRUE
+  SFBool     rightCamera         TRUE
+  SFBool     metaCamera          FALSE
+  SFBool     metaRangeFinder     FALSE
+  SFBool     physics             TRUE
 ]
 ```
 

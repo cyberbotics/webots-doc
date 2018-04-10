@@ -24,7 +24,7 @@ The model of the `Ibeo LUX` contains a spherical projection, a fixed resolution 
 IbeoLux {
   SFVec3f    translation             0 0 0
   SFRotation rotation                0 1 0 0
-  SFString   name                    "ibeo"
+  SFString   name                    "Ibeo Lux"
   SFBool     useExtendedFieldOfView  FALSE
   SFBool     fastModel               FALSE
 }
@@ -34,6 +34,94 @@ The `IbeoLux` PROTO can either be used in normal field of view mode (80 degrees 
 
 The `fastModel` field can be used to simplify the model of the sensor by removing the spherical projection, the noise and the limited resolution in order to speed up the simulation.
 
+### Hokuyo
+
+#### Hokuyo URG-04LX
+
+%figure "Hokuyo URG-04LX model"
+
+![hokuyo_urg_04lx.png](images/sensors/hokuyo_urg_04lx.png)
+
+%end
+
+The [Hokuyo URG-04LX](https://www.hokuyo-aut.jp/search/single.php?serial=165) is a lidar designed for lightweight indoor robots.
+The model has the following specifications:
+
+- `field of view`: 240 [deg]
+- `range`: 0.06 to 4.095 [m]
+- `resolution`: 667 * 0.36 [deg]
+- `dimension`: 0.05 x 0.07 x 0.05 [m]
+- `weight`: 0.16 [kg]
+
+```
+HokuyoUrg04lx [
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "Hokuyo URG-04LX"
+  SFFloat    noise       0.0
+  SFInt32    resolution  667
+]
+```
+
+`resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
+
+#### Hokuyo URG-04LX-UG01
+
+%figure "Hokuyo URG-04LX-UG01 model"
+
+![hokuyo_urg_04lx_ug01.png](images/sensors/hokuyo_urg_04lx_ug01.png)
+
+%end
+
+The [Hokuyo URG-04LX-UG01](https://www.hokuyo-aut.jp/search/single.php?serial=166) is a lidar designed for lightweight indoor robots.
+The model has the following specifications:
+
+- `field of view`: 240 [deg]
+- `range`: 0.2 to 5.6 [m]
+- `resolution`: 667 * 0.36 [deg]
+- `dimension`: 0.05 x 0.07 x 0.05 [m]
+- `weight`: 0.16 [kg]
+
+```
+HokuyoUrg04lxug01 [
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "Hokuyo URG-04LX-UG01"
+  SFFloat    noise       0.0
+  SFInt32    resolution  667
+]
+```
+
+- `resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
+
+#### Hokuyo UTM-30LX
+
+%figure "Hokuyo UTM-30LX model"
+
+![hokuyo_utm_30lx.png](images/sensors/hokuyo_utm_30lx.png)
+
+%end
+
+The [Hokuyo UTM-30LX](https://www.hokuyo-aut.jp/search/single.php?serial=169) is a lidar designed for outdoor robots with a high moving speed.
+The model has the following specifications:
+
+- `field of view`: 270 [deg]
+- `range`: 0.1 to 30 [m]
+- `resolution`: 1080 * 0.25 [deg]
+- `dimension`: 0.06 x 0.087 x 0.06 [m]
+- `weight`: 0.37 [kg]
+
+```
+HokuyoUtm30lx {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "Hokuyo UTM-30LX"
+  SFFloat    noise       0.0
+  SFInt32    resolution  1080
+}
+```
+
+- `resolution`: Defines the `horizontalResolution` field of the [Lidar](../reference/lidar.md).
 
 ### SICK
 
@@ -51,11 +139,11 @@ The model of the `SICK LMS 291` contains a spherical projection, a configurable 
 
 ```
 SickLms291 {
-  SFVec3f translation 0 0 0
-  SFRotation rotation  0 1 0 0
-  SFString name "lms291"
-  SFFloat noise 0.0
-  SFInt32 resolution 180
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "Sick LMS 291"
+  SFFloat    noise       0.0
+  SFInt32    resolution  180
 }
 ```
 
@@ -80,13 +168,13 @@ The frustum cone is shifted to the right by an offset angle of 7.5 degrees when 
 
 ```
 SickLdMrs {
-  SFVec3f translation 0 0 0
-  SFRotation rotation 0 1 0 0
-  SFString name "LD-MRS"
-  SFFloat noise 0.3
-  SFInt32 numberOfLayers 4
-  SFFloat angularResolution 0.008726646259972
-  SFBool physics TRUE
+  SFVec3f    translation       0 0 0
+  SFRotation rotation          0 1 0 0
+  SFString   name              "Sick LD-MRS"
+  SFFloat    noise             0.3
+  SFInt32    numberOfLayers    4
+  SFFloat    angularResolution 0.008726646259972
+  SFBool     physics           TRUE
 }
 ```
 
@@ -119,12 +207,9 @@ The model of the `Velodyne VLP 16` contains a spherical projection and a gaussia
 VelodyneVLP-16 {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "velodyne"
-  SFBool     fastModel      FALSE
+  SFString   name           "Velodyne VLP-16"
 }
 ```
-
-The `fastModel` field can be used to simplify the model of the sensor by removing the noise in order to speed up the simulation.
 
 #### Velodyne HDL 32E
 
@@ -142,12 +227,9 @@ The model of the `Velodyne HDL 32` contains a gaussian noise with a standard dev
 VelodyneHDL-32E {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "velodyne"
-  SFBool     fastModel      FALSE
+  SFString   name           "Velodyne HDL-32E"
 }
 ```
-
-The `fastModel` field can be used to simplify the model of the sensor by removing the noise in order to speed up the simulation.
 
 #### Velodyne HDL 64E
 
@@ -162,12 +244,9 @@ The model of the `Velodyne HDL 64` contains a gaussian noise with a standard dev
 %end
 
 ```
-VelodyneHDL-32E {
+VelodyneHDL-64E {
   SFVec3f    translation    0 0 0
   SFRotation rotation       0 1 0 0
-  SFString   name           "velodyne"
-  SFBool     fastModel      FALSE
+  SFString   name           "Velodyne HDL-32E"
 }
 ```
-
-The `fastModel` field can be used to simplify the model of the sensor by removing the noise in order to speed up the simulation.

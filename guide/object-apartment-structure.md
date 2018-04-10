@@ -28,6 +28,9 @@ Ceiling {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Ceiling.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Ceiling Field Summary
 
 - `size`: Defines the size of the ceiling.
@@ -76,6 +79,9 @@ Door {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Door.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Door Field Summary
 
@@ -137,6 +143,9 @@ DoorKnob {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorKnob.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### DoorKnob Field Summary
 
 - `doorThickness`: Defines the thickness of the door.
@@ -180,6 +189,9 @@ DoorLever {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/DoorLever.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### DoorLever Field Summary
 
@@ -230,6 +242,9 @@ Wall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Wall.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Wall Field Summary
 
 - `size`: Defines the size of the wall.
@@ -276,6 +291,9 @@ Window {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/apartment_structure/protos/Window.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Window Field Summary
 

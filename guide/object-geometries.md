@@ -31,6 +31,9 @@ Extrusion {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/Extrusion.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Extrusion Field Summary
 
 - `crossSection`: Defines the 2D cross-section of the extrusion.
@@ -82,6 +85,9 @@ TexturedBox {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedBox.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### TexturedBox Field Summary
 
@@ -141,6 +147,9 @@ TexturedParallelepiped {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/geometries/protos/TexturedParallelepiped.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### TexturedParallelepiped Field Summary
 

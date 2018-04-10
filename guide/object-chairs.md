@@ -25,6 +25,9 @@ Chair {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/Chair.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Chair Field Summary
 
 - `color`: Define the color of the chair.
@@ -58,6 +61,9 @@ SimpleChair {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/chairs/protos/SimpleChair.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### SimpleChair Field Summary
 

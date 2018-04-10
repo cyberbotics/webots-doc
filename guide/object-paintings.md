@@ -24,6 +24,9 @@ LandscapePainting {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/paintings/protos/LandscapePainting.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### LandscapePainting Field Summary
 
 - `color`: Defines the color of the painting.
@@ -53,6 +56,9 @@ PortraitPainting {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/paintings/protos/PortraitPainting.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### PortraitPainting Field Summary
 

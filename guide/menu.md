@@ -131,6 +131,7 @@
     - [Factory](object-factory.md)
     - [Floors](object-floors.md)
     - [Fruits](object-fruits.md)
+    - [Garden](object-garden.md)
     - [Geometries](object-geometries.md)
     - [Kitchen](object-kitchen.md)
     - [Lego](object-lego.md)

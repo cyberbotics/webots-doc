@@ -25,6 +25,9 @@ ComputerMouse {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/ComputerMouse.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### ComputerMouse Field Summary
 
 - `topColor`: Defines the color of the top part of the mouse.
@@ -57,6 +60,9 @@ DesktopComputer {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/DesktopComputer.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### DesktopComputer Field Summary
 
 - `powerbuttonColor`: Defines the color of the computer power button.
@@ -87,6 +93,9 @@ Keyboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Keyboard.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Keyboard Field Summary
 
 - `color`: Defines the color of the keyboard.
@@ -116,6 +125,9 @@ Laptop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Laptop.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Laptop Field Summary
 
 - `controller`: Defines the controller of the laptop which can use the Display device to show images.
@@ -143,6 +155,9 @@ Monitor {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/computers/protos/Monitor.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Monitor Field Summary
 

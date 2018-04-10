@@ -31,6 +31,9 @@ Bed {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/bedroom/protos/Bed.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Bed Field Summary
 
 - `size`: Defines the size of the bed.

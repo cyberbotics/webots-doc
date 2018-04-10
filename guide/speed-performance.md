@@ -44,3 +44,4 @@ Avoid using a `Solid` nodes when a `Transform` or a `Shape` would do the trick.
 8. Simplify the `boundingObject`s to increase the speed of the collision detection.
 Replace complex primitives, like `Cylinder, IndexedFaceSet` and `ElevationGrid` by simpler primitives, like `Sphere, Capsule, Box` and `Plane`.
 Avoid using a composition of primitives (in a `Group` or a `Transform`) when a single primitive would do the trick.
+9. Set an empty string for `Robot` node that you don't need to control instead of the `void` controller.

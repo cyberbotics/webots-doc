@@ -33,8 +33,8 @@ showdown.extension('wbVariables', function() {
         major: 'R2018a',
         // full is equal to major for the first major version
         // and contains the revision number for subsequent versions
-        full: 'R2018a revision 1',
-        package: 'R2018a-rev1'
+        full: 'R2018a revision 2',
+        package: 'R2018a-rev2'
       }
     },
     date: {

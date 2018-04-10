@@ -488,6 +488,13 @@ function highlightCode(view) {
   }
 }
 
+function sliderUpdated(slider) {
+  console.log('value = ' + slider.value);
+  console.log('id = ' + slider.getAttribute('webots-id'));
+  // var view3d = document.querySelector('#nao-view3d');
+  // view3d.querySelector();
+}
+
 function createX3Dom(view) {
   var x3DomView = new webots.View(document.querySelector('#nao-view3d'));
   if (x3DomView) {
@@ -506,6 +513,17 @@ function createX3Dom(view) {
           var deviceType = device['type'];
           var li = document.createElement('li');
           li.textContent = deviceType + ': "' + deviceName + '", ';
+          if (deviceType.endsWith('Motor')) {
+            var slider = document.createElement('input');
+            slider.setAttribute('type', 'range');
+            slider.setAttribute('step', 'any');
+            slider.setAttribute('min', device['minPosition']);
+            slider.setAttribute('max', device['maxPosition']);
+            slider.setAttribute('webots-id', device['id']);
+            slider.setAttribute('webots-name', device['name']);
+            slider.setAttribute('onchange', 'sliderUpdated(this)');
+            li.appendChild(slider);
+          }
           x3DomList.appendChild(li);
         }
       },

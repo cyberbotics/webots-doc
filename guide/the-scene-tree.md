@@ -14,6 +14,10 @@ This section describes the user interface of the Scene Tree, and gives an overvi
 
 %end
 
+The scene tree possesses a context menu which contains a number of useful actions, depending on the selection, including but not limited to: cut, copy and paste operations, resetting fields to their default values, moving the Viewpoint to an object, setting the Viewpoint to follow an object, or opening the Documentation viewer to view the documentation for the selected node.
+
+Aditionally, if the current selection is a `Robot` node (or descendant, or `PROTO` instance based on `Robot`) it is possible to open the corresponding robot window or open the robot's controller in the Text Editor.
+
 ### Field Editor
 
 Nodes can be expanded with a double-click.

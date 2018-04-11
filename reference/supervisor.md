@@ -620,7 +620,7 @@ The macros described in the [table](#simulation-modes) are matching with the ret
 The value returned by this function is updated during the previous function call of the `wb_robot_init` or `wb_robot_step` functions.
 
 The `wb_supervisor_simulation_set_mode` function allows to set the simulation mode.
-Note that if the `WB_SUPERVISOR_SIMULATION_MODE_PAUSE` is set by the current supervisor, then calling the `wb_robot_step(time_step)` function with a `time_step` argument different from 0 is prohibited.
+Note that if the `WB_SUPERVISOR_SIMULATION_MODE_PAUSE` is set by the current supervisor, then calling the `wb_robot_step(time_step)` function with a `time_step` argument different from 0 will make the controller wait until the simulation is resumed.
 Calling `wb_robot_step(0)` could be useful to send information to Webots when it is paused (such as modifying, moving, adding or deleting objects).
 The simulation can then go on by calling for example `wb_supervisor_simulation_set_mode(WB_SUPERVISOR_SIMULATION_MODE_RUN)`.
 

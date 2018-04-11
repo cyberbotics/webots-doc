@@ -145,7 +145,7 @@ In addition to the controllable models of vehicle, several kinematic vehicles (c
 #### CarSimple
 
 For each model of [Car](#car), a 'simple' PROTO is present too.
-They are made to represent non-moving parked vehicles or to be moved using a [Supervisor](../reference/supervisor.md) because they are much faster to simulate than the normal PROTO models.
+They should be used to model parked vehicles (non-moving) or vehicles moved by a [Supervisor](../reference/supervisor.md) changing their position and orientation. They are much faster to simulate than the normal PROTO models.
 
 ```
  PROTO CarSimple {

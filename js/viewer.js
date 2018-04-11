@@ -232,6 +232,17 @@ function redirectImages(node) {
   }
 }
 
+function redirectTextures(node, robotName) {
+  // redirect ImageTexture's url
+  var textures = node.querySelectorAll('ImageTexture');
+  var targetPath = computeTargetPath();
+  for (var i = 0; i < textures.length; i++) {
+    var texture = textures[i];
+    var url = texture.getAttribute('url').slice(1, -1);
+    texture.setAttribute('url', targetPath + 'scenes/' + robotName + '/' + url);
+  }
+}
+
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
@@ -529,7 +540,11 @@ function highlight(deviceElement) {
 }
 
 function createX3Dom(view) {
-  var x3DomView = new webots.View(document.querySelector('#nao-robot-view'));
+  var x3DomElement = document.querySelector('#nao-robot-view');
+  var x3DomView = new webots.View(x3DomElement);
+  x3DomView.onready = function() {
+    redirectTextures(x3DomElement, 'nao');
+  };
   if (x3DomView) {
     x3DomView.open('guide/scenes/nao/nao.x3d');
 

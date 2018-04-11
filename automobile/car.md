@@ -166,7 +166,8 @@ They should be used to model parked vehicles (non-moving) or vehicles moved by a
 
 - `controller`: Defines the controller of the vehicle.
 The controller can be used for example to collect sensors data while the vehicle is moved by the [SUMO interface](sumo-interface.md).
-For efficiency reasons, it is recommended to not use the `void` controller but instead leave an empty string.
+If no controller is needed, you should leave the `controller` field empty.
+It is not recommended to use the `void` controller for efficiency reasons.
 - `sensorsSlot...`: These slots can be used to add sensor capabilities to the vehicle.
 - `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 

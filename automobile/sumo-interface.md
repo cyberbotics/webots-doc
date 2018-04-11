@@ -35,7 +35,7 @@ Furthermore, when a vehicle enters the SUMO network, if a vehicle whose DEF name
 It is very convenient to use the vehicles controlled by SUMO to collect sensor data in realistic traffic condition.
 You simply need to add your vehicle in the simulation and set an appropriate DEF name as explained previously.
 Then you can add sensors in its sensor slots and assign a controller to the vehicle, the controller can then enable the sensors and record the sensor outputs in a file (or even send them to an external process).
-The [SUMO Interface](sumo-interface-example.md) example simulation showcase this possibility in a very simple manner.
+The [SUMO Interface](sumo-interface-example.md) example simulation showcases this possibility in a very simple manner.
 
 ### Automatic Injection of Webots Vehicles in SUMO
 

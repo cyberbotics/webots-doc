@@ -233,7 +233,7 @@ function redirectImages(node) {
 }
 
 function applyAnchor() {
-  var firstAnchor = document.querySelector("[name='" +localSetup.anchor +"']");
+  var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
     firstAnchor.scrollIntoView(true);
     window.scrollBy(0, -80);
@@ -264,25 +264,25 @@ function applyToTitleDiv() {
 
 function addContributionBanner() {
   // if we're on the website we need to move the banner down by the height of the navbar
-  var displacement = document.querySelector("#footer") ? "44px" : "0px";
+  var displacement = document.querySelector('#footer') ? '44px' : '0px';
 
   // append contribution sticker to primary doc element
-  document.querySelector("#center").innerHTML += "<div style='top:" + displacement + "' class='contribution-banner'>" +
-                                                 "Found an error?" +
-                                                 "<a target='_blank' href='https://github.com/omichel/webots-doc'> " +
-                                                 "Contribute on GitHub!" +
-                                                 "<span class=github-logo />" +
-                                                 "</a>" +
-                                                 "<p id='contribution-close'>X</p>" +
-                                                 "</div>";
+  document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
+                                                 'Found an error?' +
+                                                 '<a target="_blank" href="https://github.com/omichel/webots-doc"> ' +
+                                                 'Contribute on GitHub!' +
+                                                 '<span class=github-logo />' +
+                                                 '</a>' +
+                                                 '<p id="contribution-close">X</p>' +
+                                                 '</div>';
 
-  var contributionBanner = document.querySelector(".contribution-banner");
+  var contributionBanner = document.querySelector('.contribution-banner');
 
-  document.querySelector("#contribution-close").onclick = function () {
-    contributionBanner.setAttribute("class", "contribution-banner");
+  document.querySelector('#contribution-close').onclick = function() {
+    contributionBanner.setAttribute('class', 'contribution-banner');
   };
 
-  setTimeout(function() { contributionBanner.setAttribute("class", "contribution-banner visible-banner"); }, 1500);
+  setTimeout(function() { contributionBanner.setAttribute('class', 'contribution-banner visible-banner'); }, 1500);
 }
 
 function setUpBlogStyleIfNeeded() {
@@ -357,13 +357,13 @@ function createIndex(view) {
   ul.setAttribute('id', 'index');
   headings[0].parentNode.insertBefore(ul, headings[1]);
 
-  headings.forEach(function (heading, i) {
-    if (i == 0) // Skip the first heading.
+  headings.forEach(function(heading, i) {
+    if (i === 0) // Skip the first heading.
       return;
 
     // Update current level and ul.
     var newLevel = parseInt(heading.tagName[1]);
-    while (newLevel > level){
+    while (newLevel > level) {
       var newUl = document.createElement('ul');
       ul.appendChild(newUl);
       ul = newUl;
@@ -480,7 +480,7 @@ function highlightCode(view) {
   for (var i = 0; i < supportedLanguages.length; i++) {
     var language = supportedLanguages[i];
     hljs.configure({languages: [ language ]});
-    var codes = document.querySelectorAll("." + language);
+    var codes = document.querySelectorAll('.' + language);
     for (var j = 0; j < codes.length; j++) {
       var code = codes[j];
       hljs.highlightBlock(code);

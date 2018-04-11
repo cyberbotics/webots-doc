@@ -497,12 +497,10 @@ function sliderUpdated(slider) {
 
 function unhighlight() {
   var view3d = document.querySelector('#nao-robot-view');
-  var materials = view3d.querySelectorAll('Material[highlighted]');
-  for (var m = 0; m < materials.length; m++) {
-    var material = materials[m];
-    material.removeAttribute('highlighted');
-    material.setAttribute('diffuseColor', material.getAttribute('diffuseColorBack'));
-    material.setAttribute('emissiveColor', material.getAttribute('emissiveColorBack'));
+  var billboards = view3d.querySelectorAll('Billboard[highlighted]');
+  for (var b = 0; b < billboards.length; b++) {
+    var billboard = billboards[b];
+    billboard.parentNode.removeChild(billboard);
   }
 }
 
@@ -513,15 +511,20 @@ function highlight(deviceElement) {
   var id = deviceElement.getAttribute('webots-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
-    var materials = transform.querySelectorAll('Material');
-    for (var m = 0; m < materials.length; m++) {
-      var material = materials[m];
-      material.setAttribute('highlighted', 'true');
-      material.setAttribute('diffuseColorBack', material.getAttribute('diffuseColor'));
-      material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
-      material.setAttribute('diffuseColor', '0.6, 0.8, 0');
-      material.setAttribute('emissiveColor', '0.6, 0.8, 0');
-    }
+    var billboard = document.createElement('Billboard');
+    billboard.setAttribute('highlighted', 'true');
+    billboard.setAttribute('axisOfRotation', '0 0 0');
+    billboard.innerHTML = `
+      <Shape>
+        <Appearance sortType="transparent" sortKey="10000">
+          <Material transparency="0.2"></Material>
+          <DepthMode depthfunc="always"></DepthMode>
+          <ImageTexture url="css/images/center.png"></ImageTexture>
+        </Appearance>
+        <Plane size="0.03 0.03"></Plane>
+      </Shape>
+    `;
+    transform.appendChild(billboard);
   }
 }
 
@@ -557,7 +560,7 @@ function createX3Dom(view) {
           var deviceDiv = document.createElement('div');
           deviceDiv.classList.add('device');
           deviceDiv.setAttribute('onmouseover', 'highlight(this)');
-          deviceDiv.setAttribute('onmouseout', 'unhighlight()');
+          /* deviceDiv.setAttribute('onmouseout', 'unhighlight()'); */
           if ('targetSolidID' in device)
             deviceDiv.setAttribute('webots-id', device['targetSolidID']);
           else

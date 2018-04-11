@@ -454,7 +454,7 @@
   overflow: auto;
   background-color: lightblue;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .device-category {
   padding: 10px;
@@ -468,9 +468,12 @@
 .device {
   background-color: white;
   border-radius: 5px;
-  border: 1px solid #666;
+  border: 1px solid #888;
   padding: 10px;
   margin: 10px;
+}
+.device:hover {
+  background-color: #9c0;
 }
 .motor-slider {
   width: 100%;

@@ -495,6 +495,36 @@ function sliderUpdated(slider) {
   transform.setAttribute('rotation', axis + ',' + slider.value);
 }
 
+function unhighlight() {
+  var view3d = document.querySelector('#nao-robot-view');
+  var materials = view3d.querySelectorAll('Material[highlighted]');
+  for (var m = 0; m < materials.length; m++) {
+    var material = materials[m];
+    material.removeAttribute('highlighted');
+    material.setAttribute('diffuseColor', material.getAttribute('diffuseColorBack'));
+    material.setAttribute('emissiveColor', material.getAttribute('emissiveColorBack'));
+  }
+}
+
+function highlight(deviceElement) {
+  unhighlight();
+
+  var view3d = document.querySelector('#nao-robot-view');
+  var id = deviceElement.getAttribute('webots-id');
+  var transform = view3d.querySelector('[id=n' + id + ']');
+  if (transform) {
+    var materials = transform.querySelectorAll('Material');
+    for (var m = 0; m < materials.length; m++) {
+      var material = materials[m];
+      material.setAttribute('highlighted', 'true');
+      material.setAttribute('diffuseColorBack', material.getAttribute('diffuseColor'));
+      material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
+      material.setAttribute('diffuseColor', '0.6, 0.8, 0');
+      material.setAttribute('emissiveColor', '0.6, 0.8, 0');
+    }
+  }
+}
+
 function createX3Dom(view) {
   var x3DomView = new webots.View(document.querySelector('#nao-robot-view'));
   if (x3DomView) {
@@ -526,6 +556,13 @@ function createX3Dom(view) {
 
           var deviceDiv = document.createElement('div');
           deviceDiv.classList.add('device');
+          deviceDiv.setAttribute('onmouseover', 'highlight(this)');
+          deviceDiv.setAttribute('onmouseout', 'unhighlight()');
+          if ('targetSolidID' in device)
+            deviceDiv.setAttribute('webots-id', device['targetSolidID']);
+          else
+            deviceDiv.setAttribute('webots-id', device['id']);
+
           deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
           if (deviceType.endsWith('RotationalMotor')) {
             var slider = document.createElement('input');

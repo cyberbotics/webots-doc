@@ -489,14 +489,14 @@ function highlightCode(view) {
 }
 
 function sliderUpdated(slider) {
-  var view3d = document.querySelector('#nao-view3d');
+  var view3d = document.querySelector('#nao-robot-view');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
   var axis = slider.getAttribute('webots-axis').split(' ').join(',');
   transform.setAttribute('rotation', axis + ',' + slider.value);
 }
 
 function createX3Dom(view) {
-  var x3DomView = new webots.View(document.querySelector('#nao-view3d'));
+  var x3DomView = new webots.View(document.querySelector('#nao-robot-view'));
   if (x3DomView) {
     x3DomView.open('guide/scenes/nao/nao.x3d');
 
@@ -505,7 +505,7 @@ function createX3Dom(view) {
       url: 'guide/scenes/nao/nao.meta.json',
       dataType: 'text',
       success: function(content) {
-        var x3DomList = view.querySelector('#nao-list');
+        var x3DomList = view.querySelector('#nao-device-list');
         var data = JSON.parse(content);
         for (var d = 0; d < data[0]['devices'].length; d++) {
           var device = data[0]['devices'][d];

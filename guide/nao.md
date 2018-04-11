@@ -1,9 +1,10 @@
 ## SoftBank Robotics' Nao
 
-<div id="nao-test">
-  <div id="nao-view3d"></div>
-  <p>Nao device list:</p>
-  <ul id="nao-list"></ul>
+<div class="robot-component">
+  <div id="nao-robot-view" class="robot-view"></div>
+  <div class="device-component">
+    <ul id="nao-device-list"></ul>
+  </div>
 </div>
 
 <!--

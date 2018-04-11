@@ -440,6 +440,21 @@
   background-size: 16px;
 }
 
+.robot-component {
+  display: flex;
+}
+.robot-view {
+  float: left;
+  width: 70%;
+}
+.device-component {
+  float: right;
+  width: 30%;
+  max-height: 400px;
+  overflow: auto;
+  background-color: lightblue;
+}
+
 /*---------------------*
  * Chart specific CSS
  *--------------------*/

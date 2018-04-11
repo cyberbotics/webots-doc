@@ -513,6 +513,13 @@ function unhighlight() {
     var billboard = billboards[b];
     billboard.parentNode.removeChild(billboard);
   }
+
+  var materials = view3d.querySelectorAll('Material[highlighted]');
+  for (var m = 0; m < materials.length; m++) {
+    var material = materials[m];
+    material.removeAttribute('highlighted');
+    material.setAttribute('emissiveColor', material.getAttribute('emissiveColorBack'));
+  }
 }
 
 function highlight(deviceElement) {
@@ -522,6 +529,16 @@ function highlight(deviceElement) {
   var id = deviceElement.getAttribute('webots-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
+    if (deviceElement.getAttribute('webots-type') === 'LED') {
+      var materials = transform.querySelectorAll('Material');
+      for (var m = 0; m < materials.length; m++) {
+        var material = materials[m];
+        material.setAttribute('highlighted', 'true');
+        material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
+        material.setAttribute('emissiveColor', '0.0, 0.0, 1.0'); // TODO: To be replaced by the LED color.
+      }
+    }
+
     var billboard = document.createElement('Billboard');
     billboard.setAttribute('highlighted', 'true');
     billboard.setAttribute('axisOfRotation', '0 0 0');
@@ -576,6 +593,7 @@ function createX3Dom(view) {
           deviceDiv.classList.add('device');
           deviceDiv.setAttribute('onmouseover', 'highlight(this)');
           /* deviceDiv.setAttribute('onmouseout', 'unhighlight()'); */
+          deviceDiv.setAttribute('webots-type', deviceType);
           if ('targetSolidID' in device)
             deviceDiv.setAttribute('webots-id', device['targetSolidID']);
           else

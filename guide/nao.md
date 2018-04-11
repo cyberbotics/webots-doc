@@ -2,9 +2,7 @@
 
 <div class="robot-component">
   <div id="nao-robot-view" class="robot-view"></div>
-  <div class="device-component">
-    <ul id="nao-device-list"></ul>
-  </div>
+  <div id="nao-device-component" class="device-component"></div>
 </div>
 
 <!--

@@ -505,14 +505,28 @@ function createX3Dom(view) {
       url: 'guide/scenes/nao/nao.meta.json',
       dataType: 'text',
       success: function(content) {
-        var x3DomList = view.querySelector('#nao-device-list');
+        var deviceComponent = view.querySelector('#nao-device-component');
         var data = JSON.parse(content);
+        var categories = {};
         for (var d = 0; d < data[0]['devices'].length; d++) {
           var device = data[0]['devices'][d];
           var deviceName = device['name'];
           var deviceType = device['type'];
-          var li = document.createElement('li');
-          li.textContent = deviceType + ': "' + deviceName + '", ';
+
+          var category = null;
+          if (deviceType in categories)
+            category = categories[deviceType];
+          else {
+            category = document.createElement('div');
+            category.classList.add('device-category');
+            category.innerHTML = deviceType;
+            deviceComponent.appendChild(category);
+            categories[deviceType] = category;
+          }
+
+          var deviceDiv = document.createElement('div');
+          deviceDiv.classList.add('device');
+          deviceDiv.textContent = deviceName;
           if (deviceType.endsWith('RotationalMotor')) {
             var slider = document.createElement('input');
             slider.setAttribute('type', 'range');
@@ -523,9 +537,9 @@ function createX3Dom(view) {
             slider.setAttribute('webots-id', device['targetSolidID']);
             slider.setAttribute('webots-axis', device['axis']);
             slider.setAttribute('oninput', 'sliderUpdated(this)');
-            li.appendChild(slider);
+            deviceDiv.appendChild(slider);
           }
-          x3DomList.appendChild(li);
+          category.appendChild(deviceDiv);
         }
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {

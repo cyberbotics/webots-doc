@@ -519,16 +519,17 @@ function createX3Dom(view) {
           else {
             category = document.createElement('div');
             category.classList.add('device-category');
-            category.innerHTML = deviceType;
+            category.innerHTML = '<div class="device-title">' + deviceType + '</div>';
             deviceComponent.appendChild(category);
             categories[deviceType] = category;
           }
 
           var deviceDiv = document.createElement('div');
           deviceDiv.classList.add('device');
-          deviceDiv.textContent = deviceName;
+          deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
           if (deviceType.endsWith('RotationalMotor')) {
             var slider = document.createElement('input');
+            slider.classList.add('motor-slider');
             slider.setAttribute('type', 'range');
             slider.setAttribute('step', 'any');
             slider.setAttribute('min', device['minPosition']);

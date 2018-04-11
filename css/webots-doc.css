@@ -453,6 +453,27 @@
   max-height: 400px;
   overflow: auto;
   background-color: lightblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+.device-category {
+  padding: 10px;
+}
+.device-title {
+  font-weight: bold;
+}
+.device-name {
+  font-style: italic;
+}
+.device {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #666;
+  padding: 10px;
+  margin: 10px;
+}
+.motor-slider {
+  width: 100%;
 }
 
 /*---------------------*

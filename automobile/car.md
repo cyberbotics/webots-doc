@@ -138,7 +138,7 @@ The rest of the positions can be seen in the [following table](#positions-of-the
 
 ### Simple Vehicles
 
-In addition to those controlable models of vehicle, several kinematic vehicles (called 'simple') are available.
+In addition to the controllable models of vehicle, several kinematic vehicles (called 'simple') are available.
 
 > **Note**: These vehicles can be moved kinematically using a [Supervisor](../reference/supervisor.md). These are for example the vehicles used by the [SUMO interface](sumo-interface.md).
 

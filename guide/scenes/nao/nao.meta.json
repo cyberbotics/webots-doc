@@ -52,6 +52,7 @@
                 "type": "DistanceSensor"
             },
             {
+                "axis": "0 0 1",
                 "id": 72,
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
@@ -65,6 +66,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 74,
                 "maxPosition": 0.514872,
                 "minPosition": -0.671952,
@@ -108,6 +110,7 @@
                 "type": "LED"
             },
             {
+                "axis": "0 1 0",
                 "id": 137,
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
@@ -121,6 +124,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 0 1",
                 "id": 139,
                 "maxPosition": 0.314159,
                 "minPosition": -1.32645,
@@ -134,6 +138,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 160,
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
@@ -147,6 +152,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 0 1",
                 "id": 165,
                 "maxPosition": 1.54462,
                 "minPosition": 0,
@@ -160,6 +166,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 170,
                 "maxPosition": 1.82387,
                 "minPosition": -1.82387,
@@ -173,6 +180,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 175,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -186,6 +194,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 186,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -199,6 +208,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 196,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -212,6 +222,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 224,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -225,6 +236,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 234,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -238,6 +250,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 244,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -251,6 +264,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 272,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -264,6 +278,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 282,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -277,6 +292,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 339,
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
@@ -290,6 +306,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 0 1",
                 "id": 341,
                 "maxPosition": 1.32645,
                 "minPosition": -0.314159,
@@ -303,6 +320,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 362,
                 "maxPosition": 2.08567,
                 "minPosition": -2.08567,
@@ -316,6 +334,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 0 1",
                 "id": 367,
                 "maxPosition": 0,
                 "minPosition": -1.54462,
@@ -329,6 +348,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 372,
                 "maxPosition": 1.82387,
                 "minPosition": -1.82387,
@@ -342,6 +362,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 377,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -355,6 +376,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 388,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -368,6 +390,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 398,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -381,6 +404,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 426,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -394,6 +418,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 436,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -407,6 +432,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 -1 0",
                 "id": 446,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -420,6 +446,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 474,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -433,6 +460,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 484,
                 "maxPosition": 1,
                 "minPosition": 0,
@@ -446,6 +474,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 0.707107 0.707107",
                 "id": 540,
                 "maxPosition": 0.740718,
                 "minPosition": -1.14529,
@@ -459,6 +488,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 555,
                 "maxPosition": 0.449597,
                 "minPosition": -0.738274,
@@ -472,6 +502,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 570,
                 "maxPosition": 0.48398,
                 "minPosition": -1.77378,
@@ -485,6 +516,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 585,
                 "maxPosition": 2.11255,
                 "minPosition": -0.0923279,
@@ -498,6 +530,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 605,
                 "maxPosition": 0.932006,
                 "minPosition": -1.1863,
@@ -511,6 +544,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 615,
                 "maxPosition": 0.785922,
                 "minPosition": -0.388685,
@@ -544,6 +578,7 @@
                 "type": "TouchSensor"
             },
             {
+                "axis": "0 0.707107 -0.707107",
                 "id": 672,
                 "maxPosition": 0.740718,
                 "minPosition": -1.14529,
@@ -557,6 +592,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 687,
                 "maxPosition": 0.79046,
                 "minPosition": -0.379435,
@@ -570,6 +606,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 702,
                 "maxPosition": 0.48398,
                 "minPosition": -1.77378,
@@ -583,6 +620,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 717,
                 "maxPosition": 2.11255,
                 "minPosition": -0.0923279,
@@ -596,6 +634,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "0 1 0",
                 "id": 737,
                 "maxPosition": 0.922581,
                 "minPosition": -1.18944,
@@ -609,6 +648,7 @@
                 "type": "PositionSensor"
             },
             {
+                "axis": "1 0 0",
                 "id": 747,
                 "maxPosition": 0.397761,
                 "minPosition": -0.768992,

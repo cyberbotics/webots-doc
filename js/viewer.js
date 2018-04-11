@@ -491,7 +491,8 @@ function highlightCode(view) {
 function sliderUpdated(slider) {
   var view3d = document.querySelector('#nao-view3d');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
-  transform.setAttribute('rotation', '0,1,0,' + slider.value);
+  var axis = slider.getAttribute('webots-axis').split(' ').join(',');
+  transform.setAttribute('rotation', axis + ',' + slider.value);
 }
 
 function createX3Dom(view) {
@@ -512,14 +513,16 @@ function createX3Dom(view) {
           var deviceType = device['type'];
           var li = document.createElement('li');
           li.textContent = deviceType + ': "' + deviceName + '", ';
-          if (deviceType.endsWith('Motor')) {
+          if (deviceType.endsWith('RotationalMotor')) {
             var slider = document.createElement('input');
             slider.setAttribute('type', 'range');
             slider.setAttribute('step', 'any');
             slider.setAttribute('min', device['minPosition']);
             slider.setAttribute('max', device['maxPosition']);
+            slider.setAttribute('value', 0);
             slider.setAttribute('webots-id', device['targetSolidID']);
-            slider.setAttribute('onchange', 'sliderUpdated(this)');
+            slider.setAttribute('webots-axis', device['axis']);
+            slider.setAttribute('oninput', 'sliderUpdated(this)');
             li.appendChild(slider);
           }
           x3DomList.appendChild(li);

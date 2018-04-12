@@ -806,9 +806,9 @@ mMotors[18]->setPosition(sin(getTime()));
 Then save the file, press the build button and finally revert the simulation to start the new controller.
 This example is well suited for the remote compilation and we recommended that you start by testing the remote compilation tool by using this example.
 
->**Note**: This sample is also available using a Matlab controller in the `symmetry_matlab.wbt` world.
-On recent Windows versions of Matlab, the remote control and robot window of the ROBOTIS OP2 are not working because Matlab is coming with a version of `libstdc++-6.dll` that is incompatible with the one coming with Webots.
-A simple workaround to fix the issue is to replace the `MATLAB_HOME\MATLAB_VERSION\bin\win64\libstdc++-6.dll` file by the one from `WEBOTS_HOME\msys64\mingw64\bin\libstdc++-6.dll` (make sure to do a backup of the file before replacing it).
+>**Note**: This sample is also available using a MATLAB controller in the `symmetry_matlab.wbt` world.
+On recent Windows versions of MATLAB, the remote control and robot window of the ROBOTIS OP2 are not working because MATLAB is coming with a version of `libstdc++-6.dll` that is incompatible with the one coming with Webots.
+A simple workaround to fix the issue is to replace the `MATLAB_HOME\MATLAB_VERSION\bin\win64\libstdc++-6.dll` file by the one from `WEBOTS_HOME\msys64\mingw64\bin\libstdc++-6.dll` (make sure to backup the file before replacing it).
 
 #### visual\_tracking.wbt
 

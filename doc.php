@@ -76,17 +76,14 @@
     <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc.css'/>
   ";
 
-  if ($file = fopen("dependencies.txt", "r")) {
-    while (!feof($file)) {
-      $line = fgets($file);
-      if (!startsWith($line, "#")) {
-        if (endsWith($line, ".css"))
-          $scripts .= "<link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/" . $line . "'/>";
-        if (endsWith($line, ".js"))
-          $scripts .= "<script src='https://www.cyberbotics.com/" . $line . "'></script>";
-      }
+  $dependencies = file_get_contents("$rawgiturl$branch/dependencies.txt");
+  foreach (explode(PHP_EOL, $dependencies) as $dependency) {
+    if (!startsWith($dependency, "#")) {
+      if (endsWith($dependency, ".css"))
+        $scripts .= "<link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/" . $dependency . "'/>";
+      if (endsWith($dependency, ".js"))
+        $scripts .= "<script src='https://www.cyberbotics.com/" . $dependency . "'></script>";
     }
-    fclose($file);
   }
 
   $scripts .= "

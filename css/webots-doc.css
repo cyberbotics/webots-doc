@@ -452,15 +452,24 @@
   transform: translateX(-50%);
   position: absolute;
   left: 50%;
-  top: calc(100% - 40px);
-  z-index: 10;
+  bottom: 10px;
+  z-index: 1;
 }
 .robot-component .menu button {
   width: 30px;
   height: 30px;
-  background: url('https://cdn3.iconfinder.com/data/icons/seo-marketing-2-1/48/56-512.png') no-repeat;
   background-size: 100% 100%;
-  background-color: lightblue;
+  border-width: 0;
+  border-radius: 5px;
+}
+.robot-component .menu button:hover {
+  background-color: #9c0;
+}
+.robot-component .reset-button {
+  background: url(images/reset.png) no-repeat;
+}
+.robot-component .show-device-component-button {
+  background: url(images/menu.png) no-repeat;
 }
 .robot-component .device-component {
   float: right;

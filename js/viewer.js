@@ -499,6 +499,30 @@ function highlightCode(view) {
   }
 }
 
+function resetRobotComponent(robot) {
+  var robotComponent = document.querySelector('#' + robot + '-robot-component');
+  var viewpoint = robotComponent.querySelector('Viewpoint');
+  viewpoint.setAttribute('orientation', viewpoint.getAttribute('orientationBack'));
+  viewpoint.setAttribute('position', viewpoint.getAttribute('positionBack'));
+  var sliders = robotComponent.querySelectorAll('.motor-slider');
+  for (var s = 0; s < sliders.length; s++) {
+    sliders[s].value = 0.0;
+    sliderUpdated(sliders[s]);
+  }
+}
+
+function showDeviceMenu(robot) {
+  var deviceMenu = document.querySelector('#' + robot + '-device-component');
+  var robotView = document.querySelector('.robot-view');
+  if (deviceMenu.style.display === 'none') {
+    deviceMenu.style.display = '';
+    robotView.style.width = '70%';
+  } else {
+    deviceMenu.style.display = 'none';
+    robotView.style.width = '100%';
+  }
+}
+
 function sliderUpdated(slider) {
   var view3d = document.querySelector('#nao-robot-view');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
@@ -561,6 +585,9 @@ function createX3Dom(view) {
   var x3DomView = new webots.View(x3DomElement);
   x3DomView.onready = function() {
     redirectTextures(x3DomElement, 'nao');
+    var viewpoint = x3DomElement.querySelector('Viewpoint');
+    viewpoint.setAttribute('orientationBack', viewpoint.getAttribute('orientation'));
+    viewpoint.setAttribute('positionBack', viewpoint.getAttribute('position'));
   };
   if (x3DomView) {
     x3DomView.open('guide/scenes/nao/nao.x3d');

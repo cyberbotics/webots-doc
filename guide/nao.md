@@ -1,11 +1,10 @@
 ## SoftBank Robotics' Nao
 
-<div class="robot-component">
+<div id="nao-robot-component" class="robot-component">
   <div id="nao-robot-view" class="robot-view">
     <div class="menu">
-      <button></button>
-      <button></button>
-      <button></button>
+      <button id="nao-reset-button" class="reset-button" title="Reset the robot component." onclick="resetRobotComponent('nao')"/>
+      <button id="nao-show-device-component-button" class="show-device-component-button" title="Show/Hide the device component."  onclick="showDeviceMenu('nao')"/>
     </div>
   </div>
   <div id="nao-device-component" class="device-component"></div>

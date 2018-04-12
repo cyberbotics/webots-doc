@@ -443,11 +443,26 @@
 .robot-component {
   display: flex;
 }
-.robot-view {
+.robot-component .robot-view {
   float: left;
+  position: relative;
   width: 70%;
 }
-.device-component {
+.robot-component .menu {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 40px);
+  z-index: 10;
+}
+.robot-component .menu button {
+  width: 30px;
+  height: 30px;
+  background: url('https://cdn3.iconfinder.com/data/icons/seo-marketing-2-1/48/56-512.png') no-repeat;
+  background-size: 100% 100%;
+  background-color: lightblue;
+}
+.robot-component .device-component {
   float: right;
   width: 30%;
   max-height: 400px;
@@ -456,26 +471,26 @@
   padding: 10px;
   border-radius: 10px;
 }
-.device-category {
+.robot-component .device-category {
   padding: 10px;
 }
-.device-title {
+.robot-component .device-title {
   font-weight: bold;
 }
-.device-name {
+.robot-component .device-name {
   font-style: italic;
 }
-.device {
+.robot-component .device {
   background-color: white;
   border-radius: 5px;
   border: 1px solid #888;
   padding: 10px;
   margin: 10px;
 }
-.device:hover {
+.robot-component .device:hover {
   background-color: #9c0;
 }
-.motor-slider {
+.robot-component .motor-slider {
   width: 100%;
 }
 

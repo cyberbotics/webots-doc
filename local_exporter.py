@@ -90,9 +90,11 @@ if __name__ == "__main__":
         file.write(content)
         os.chmod(html_file_path, 0o644)
 
-    shutil.rmtree(script_directory + 'dependencies')
+    dependencyDirectory = script_directory + 'dependencies'
+    if os.path.exists(dependencyDirectory):
+        shutil.rmtree(dependencyDirectory)
     for dependency in dependencies:
         download(
             'https://www.cyberbotics.com/' + dependency,
-            script_directory + 'dependencies' + os.sep + dependency.replace("/", os.sep)
+            dependencyDirectory + os.sep + dependency.replace("/", os.sep)
         )

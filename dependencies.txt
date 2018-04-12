@@ -1,0 +1,10 @@
+https://www.cyberbotics.com/jquery-ui/1.11.4/jquery-ui.min.css
+https://www.cyberbotics.com/highlight/9.5.0/highlight_style.min.css
+
+https://www.cyberbotics.com/wwi/R2018b/request_methods.js
+https://www.cyberbotics.com/jquery/1.11.3/jquery.min.js
+https://www.cyberbotics.com/jquery-ui/1.11.4/jquery-ui.min.js
+https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js
+https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js
+https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js
+https://www.cyberbotics.com/mermaid/7.0.0/mermaidAPI.min.js

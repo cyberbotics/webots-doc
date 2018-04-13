@@ -29,5 +29,5 @@ If the `texture` node is NULL, the object that references this [Appearance](#app
 - The `textureTransform` field, if specified, shall contain a [TextureTransform](texturetransform.md) node.
 If the `textureTransform` is NULL, the `textureTransform` field has no effect.
 
-- The `name` field is used to give a unique identifier to a [PBRAppearance](#pbrappearance) node such that if it is included in an MFNode field it can be retrieved by this name.
+- The `name` field is used to give a unique identifier to an [Appearance](#Appearance) node such that if it is included in an MFNode field it can be retrieved by this name.
 This name is not required to be unique if the [Appearance](#Appearance) node is inserted into an SFNode field.

@@ -17,9 +17,9 @@ In the case of the [PBRAppearance](pbrappearance.md) node, they are used as part
 
 ### Field Summary
 
-The `textureBaseName` field specifies the base name for the texture, without any suffix to designate the face of the cube to which it belongs, nor the file extension.
+- The `textureBaseName` field specifies the base name for the texture, without any suffix to designate the face of the cube to which it belongs, nor the file extension.
 
-The `directory` field specifies the directory from which textures will be located and loaded.
+- The `directory` field specifies the directory from which textures will be located and loaded.
 
 In order to be easy and practical to use, URLs are forged using the two fields of the node.
 Consequently, there is a strict pattern to follow for naming textures for each face.

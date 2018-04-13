@@ -39,11 +39,13 @@ where `extension` will be either `.jpg` or `.png` and is automatically selected 
 
 For example, the `textureBaseName` "noon_sunny_empty" and `directory` "textures/cubic" will generate these URLs:
 
+```
 textures/cubic/noon_sunny_empty_right.jpg
 textures/cubic/noon_sunny_empty_left.jpg
 textures/cubic/noon_sunny_empty_top.jpg
 textures/cubic/noon_sunny_empty_bottom.jpg
 textures/cubic/noon_sunny_empty_front.jpg
 textures/cubic/noon_sunny_empty_back.jpg
+```
 
 then these textures are loaded according to the same image loading rules as the `url` field of the [ImageTexture](imagetexture.md) node.

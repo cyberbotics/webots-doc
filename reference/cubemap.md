@@ -7,7 +7,7 @@ Cubemap {
 }
 ```
 
-## Description
+### Description
 
 The [Cubemap](#cubemap) node is a multi-purpose utility node for loading cubic textures.
 In the case of the [Background](background.md) node,[Cubemap](#cubemap) nodes are used to create the world's skybox.
@@ -15,7 +15,7 @@ In the case of the [PBRAppearance](pbrappearance.md) node, they are used as part
 
 
 
-## Field Summary
+### Field Summary
 
 The `textureBaseName` field specifies the base name for the texture, without any suffix to designate the face of the cube to which it belongs, nor the file extension.
 
@@ -35,7 +35,7 @@ for (i = 0; i < 6; ++i) {
 }
 
 ```
-where `extension` will be either `.jpg` or `.png` and is automatically selected by the loading algorithm depending on what files it finds.
+Where `extension` will be either `.jpg` or `.png` and is automatically selected by the loading algorithm depending on what files it finds.
 
 For example, the `textureBaseName` "noon\_sunny\_empty" and `directory` "textures/cubic" will generate these URLs:
 

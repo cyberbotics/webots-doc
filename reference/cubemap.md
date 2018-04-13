@@ -37,7 +37,7 @@ for (i = 0; i < 6; ++i) {
 ```
 where `extension` will be either `.jpg` or `.png` and is automatically selected by the loading algorithm depending on what files it finds.
 
-For example, the `textureBaseName` "noon_sunny_empty" and `directory` "textures/cubic" will generate these URLs:
+For example, the `textureBaseName` "noon\_sunny\_empty" and `directory` "textures/cubic" will generate these URLs:
 
 ```
 textures/cubic/noon_sunny_empty_right.jpg

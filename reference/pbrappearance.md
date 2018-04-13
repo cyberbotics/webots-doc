@@ -22,6 +22,12 @@ PBRAppearance {
 
 ### Description
 
+%figure "An Oxidised Copper Sphere made with the PBRAppearance node"
+
+![pbrappearance.png](images/pbrappearance.png)
+
+%end
+
 The [PBRAppearance](#pbrappearance) node specifies a a physically-based visual appearance of a node.
 The acronym "PBR" refers to "Physically-Based Rendering", a term used to designate a class of shading models based on the physical properties of an object, as opposed to approximations.
 

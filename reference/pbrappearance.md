@@ -59,5 +59,6 @@ If this field is empty, the [Cubemap](cubemap.md) belonging to the world's [Back
 - The `occlusionMapStrength` field is used to scale the effect of the occlusion map on the object.
 - The `textureTransform` field contains a [TextureTransform](texturetransform.md) node.
 If `textureTransform` is NULL, the `textureTransform` field has no effect.
+Otherwise, the [TextureTransform](texturetransform.md) is applied to all textures in the [PBRAppearance](#pbrappearance) node when shading the object.
 - The `name` field is used to give a unique identifier to a [PBRAppearance](#pbrappearance) node such that if it is included in an MFNode field it can be retrieved by this name.
 This name is not required to be unique if the [PBRAppearance](#pbrappearance) node is inserted into an SFNode field.

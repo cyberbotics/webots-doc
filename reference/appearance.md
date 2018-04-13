@@ -28,6 +28,7 @@ If the `texture` node is NULL, the object that references this [Appearance](#app
 
 - The `textureTransform` field, if specified, shall contain a [TextureTransform](texturetransform.md) node.
 If the `textureTransform` is NULL, the `textureTransform` field has no effect.
+Otherwise, the [TextureTransform](texturetransform.md) is applied to the [ImageTexture](imagetexture.md) in the `texture` field when shading the object.
 
 - The `name` field is used to give a unique identifier to an [Appearance](#appearance) node such that if it is included in an MFNode field it can be retrieved by this name.
 This name is not required to be unique if the [Appearance](#appearance) node is inserted into an SFNode field.

@@ -10,7 +10,7 @@ Cubemap {
 ### Description
 
 The [Cubemap](#cubemap) node is a multi-purpose utility node for loading cubic textures.
-In the case of the [Background](background.md) node,[Cubemap](#cubemap) nodes are used to create the world's skybox.
+In the case of the [Background](background.md) node, [Cubemap](#cubemap) nodes are used to create the world's skybox.
 In the case of the [PBRAppearance](pbrappearance.md) node, they are used as part of the Image-Based Lighting stage of the Physically-Based Rendering pipeline, to generate realistic reflections and environmental ambient lighting.
 
 

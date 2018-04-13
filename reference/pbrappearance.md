@@ -22,22 +22,40 @@ PBRAppearance {
 
 ### Description
 
-The [PBRAppearance](#pbrappearance) node specifies the visual properties of a geometric node.
-The value for each of the fields in this node may be NULL.
-However, if the field is non-NULL, it shall contain one node of the appropriate type.
+The [PBRAppearance](#pbrappearance) node specifies a a physically-based visual appearance of a node.
+The acronym "PBR" refers to "Physically-Based Rendering", a term used to designate a class of shading models based on the physical properties of an object, as opposed to approximations.
 
+This modern technique enables highly realistic rendering for every kind of object, in any kind of lighting environment.
+
+For a detailed guide on PBR and how to use it for content creation and model design, an excellent description of the concepts on this subject can be found [on this blog post by Marmoset](https://www.marmoset.co/posts/physically-based-rendering-and-you-can-too/).
+
+Our PBR shading model makes use of Lambertian Diffuse, Cook-Torrence Specular and Fresnel-Schlick GGX for direct illumination, and an advanced Image-Based Lighting (IBL) BRDF for ambient diffuse lighting and reflections.
 
 ### Field Summary
 
-- The `material` field, if specified, shall contain a [Material](material.md) node.
-If the `material` field is NULL, lighting is off (all lights are ignored during the rendering of the object that references this [PBRAppearance](#pbrappearance)) and the unlit object color is (1,1,1).
+- The `baseColor` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Appearance](appearance.md) node.
+- The `baseColorMap` field specifies a field to use an [ImageTexture](imagetexture.md) for the material's albedo instead of a solid color.
 
-- The `texture` field, if specified, shall contain an [ImageTexture](imagetexture.md) node.
-If the `texture` node is NULL, the object that references this [PBRAppearance](#pbrappearance) is not textured.
+- The `transparency` field specifies the transparency of the object.
+If `transparency` is non-zero, the object no longer casts shadows.
 
-- The `textureTransform` field, if specified, shall contain a [TextureTransform](texturetransform.md) node.
-If the `textureTransform` is NULL, the `textureTransform` field has no effect.
+- The `roughness` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Appearance](appearance.md) node.
+- The `roughnessMap` field specifies a field to use an [ImageTexture](imagetexture.md) for the material's roughness instead of a uniform value.
 
-- The `name` field specifies the pbrappearance name.
-This is especially needed to uniquely identify the pbrappearance definition in MFNode fields supporting multiple [PBRAppearance](#pbrappearance) nodes.
-In case of SFNode fields containing a single [PBRAppearance](#pbrappearance) node it is not necessary to define a unique name.
+- The `metalness` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Appearance](appearance.md) node.
+- The `metalnessMap` field specifies a field to use an [ImageTexture](imagetexture.md) for the material's metalness instead of a uniform value.
+
+- The `environmentMap` field allows an object shaded with PBR to specify its source for ambient lighting and reflections (IBL), using a [Cubemap](cubemap.md) node.
+If this field is empty, the [Cubemap](cubemap.md) belonging to the world's [Background](background.md) node (if it exists) will be used as this source.
+- The `IBLStrength` field specifies a scale factor to be applied to the light contribution from the cubemap.
+
+- The `normalMap` field specifies an [ImageTexture](imagetexture.md) which is used to peturb the normal vectors of each vertex to create the appearance of relief on flat surfaces, or to add extra detail to low-polycount meshes.
+- The `normalMapFactor` field is used to scale the effect of the normal map on the object.
+
+- The `occlusionMap` field specifies an [ImageTexture](imagetexture.md) which contains pre-baked information about how parts of the model occlude each other (ambient occlusion). This can be used for more realistic-looking lighting.
+- The `occlusionMapStrength` field is used to scale the effect of the occlusion map on the object.
+
+- The `textureTransform` field contains a [TextureTransform](texturetransform.md) node.
+If `textureTransform` is NULL, the `textureTransform` field has no effect.
+
+- The `name` field is used to give a unique identifier to a [PBRAppearance](#pbrappearance) node such that if it is included in an MFNode field it can be retrieved by this name.

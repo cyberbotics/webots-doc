@@ -30,8 +30,8 @@ The algorithm for loading faces can be described with the following pseudocode:
 textureSuffixes = {"_right", "_left", "_top", "_bottom", "_front", "_back"};
 
 for (i = 0; i < 6; ++i) {
-	textureUrl = directory + "/" + textureBaseName + textureSuffixes[i] + ".jpg"
-	loadImage(textureUrl);
+  textureUrl = directory + "/" + textureBaseName + textureSuffixes[i] + ".jpg"
+  loadImage(textureUrl);
 }
 
 ```

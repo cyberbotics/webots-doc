@@ -56,6 +56,7 @@
 - [Material](material.md)
 - [Motor](motor.md)
 - [Mouse](mouse.md)
+- [PBRAppearance](pbrappearance.md)
 - [Pen](pen.md)
 - [Physics](physics.md)
 - [Plane](plane.md)

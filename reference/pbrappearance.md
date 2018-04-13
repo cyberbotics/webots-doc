@@ -29,7 +29,7 @@ PBRAppearance {
 %end
 
 The [PBRAppearance](#pbrappearance) node specifies a physically-based visual appearance of a node.
-The acronym "PBR" refers to "Physically-Based Rendering", a term used to designate a class of shading models based on the physical properties of an object, as opposed to .
+The acronym "PBR" refers to "Physically-Based Rendering", a term used to designate a class of shading models based on the physical properties of an object, as opposed to more archaic models such as the Blinn-Phong BRDF, used in the [Appearance](appearance.md) node.
 
 This modern technique enables highly realistic rendering for every kind of object, in any kind of lighting environment.
 

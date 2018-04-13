@@ -60,4 +60,4 @@ If this field is empty, the [Cubemap](cubemap.md) belonging to the world's [Back
 - The `textureTransform` field contains a [TextureTransform](texturetransform.md) node.
 If `textureTransform` is NULL, the `textureTransform` field has no effect.
 - The `name` field is used to give a unique identifier to a [PBRAppearance](#pbrappearance) node such that if it is included in an MFNode field it can be retrieved by this name.
-This name is not required to be unique if the [Appearance](#Appearance) node is inserted into an SFNode field.
+This name is not required to be unique if the [PBRAppearance](#pbrappearance) node is inserted into an SFNode field.

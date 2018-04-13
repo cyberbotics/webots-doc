@@ -93,10 +93,11 @@ graph LR
 
   subgraph other Nodes
     Appearance[[Appearance](appearance.md)]
-    BackGround[[Background](background.md)]
+    Background[[Background](background.md)]
     Color[[Color](color.md)]
     ContactProperties[[ContactProperties](contactproperties.md)]
     Coordinate[[Coordinate](coordinate.md)]
+    Cubemap[[Cubemap](cubemap.md)]
     Damping[[Damping](damping.md)]
     Focus[[Focus](focus.md)]
     Fog[[Fog](fog.md)]
@@ -106,6 +107,7 @@ graph LR
     LensFlare[[LensFlare](lensflare.md)]
     Material[[Material](material.md)]
     Muscle[[Muscle](muscle.md)]
+    PBRAppearance[[PBRAppearance](pbrappearance.md)]
     Physics[[Physics](physics.md)]
     Recognition[[Recognition](recognition.md)]
     Shape[[Shape](shape.md)]
@@ -125,7 +127,7 @@ graph LR
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane secondaryNode;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
-  class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
+  class Appearance,Background,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
   class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
 %end
 %end

@@ -39,16 +39,19 @@ Our PBR shading model makes use of Lambertian Diffuse, Cook-Torrence Specular an
 
 ### Field Summary
 
-- The `baseColor` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Appearance](appearance.md) node.
+- The `baseColor` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Material](material.md) node.
 - The `baseColorMap` field specifies a field to use an [ImageTexture](imagetexture.md) for the material's albedo instead of a solid color.
 
 - The `transparency` field specifies the transparency of the object.
 If `transparency` is non-zero, the object no longer casts shadows.
 
-- The `roughness` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Appearance](appearance.md) node.
+- The `roughness` field specifies the roughness of the material's surface, analogous to the inverse of the `shininess` field of the [Material](material.md) node.
+A roughness of 0 gives a perfectly smooth material, while a roughness of 1 gives a highly rough material.
 - The `roughnessMap` field specifies a field to use an [ImageTexture](imagetexture.md) for the material's roughness instead of a uniform value.
 
-- The `metalness` field specifies the base color or "albedo" of the material's surface, analogous to the `diffuseColor` field of the [Appearance](appearance.md) node.
+- The `metalness` field specifies how metallic the material's surface is.
+A metalness of 0 gives a completely dielectric material, while a metalness of 1 gives a completely metallic material.
+Note: it is encouraged to use either 1 or 0 for this value as no real-world materials are partly metallic.
 - The `metalnessMap` field specifies a field to use an [ImageTexture](imagetexture.md) for the material's metalness instead of a uniform value.
 
 - The `environmentMap` field allows an object shaded with PBR to specify its source for ambient lighting and reflections (IBL), using a [Cubemap](cubemap.md) node.

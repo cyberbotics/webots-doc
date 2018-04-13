@@ -30,8 +30,20 @@ The algorithm for loading faces can be described with the following pseudocode:
 textureSuffixes = {"_right", "_left", "_top", "_bottom", "_front", "_back"};
 
 for (i = 0; i < 6; ++i) {
-  textureUrl = directory + "/" + textureBaseName + textureSuffixes[i] + ".jpg"
+  textureUrl = directory + "/" + textureBaseName + textureSuffixes[i] + extension;
   loadImage(textureUrl);
 }
 
 ```
+where `extension` will be either `.jpg` or `.png` and is automatically selected by the loading algorithm depending on what files it finds.
+
+For example, the `textureBaseName` "noon_sunny_empty" and `directory` "textures/cubic" will generate these URLs:
+
+textures/cubic/noon_sunny_empty_right.jpg
+textures/cubic/noon_sunny_empty_left.jpg
+textures/cubic/noon_sunny_empty_top.jpg
+textures/cubic/noon_sunny_empty_bottom.jpg
+textures/cubic/noon_sunny_empty_front.jpg
+textures/cubic/noon_sunny_empty_back.jpg
+
+then these textures are loaded according to the same image loading rules as the `url` field of the [ImageTexture](imagetexture.md) node.

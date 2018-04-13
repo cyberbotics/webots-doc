@@ -2,8 +2,8 @@
 
 ```
 Background {
-  MFColor  skyColor  [ 0 0 0 ]    # any color
-  SFNode   cubemap   NULL         # {Cubemap, PROTO}
+  MFColor skyColor  [ 0 0 0 ]   # any color
+  SFNode  cubemap   NULL        # {Cubemap, PROTO}
 }
 ```
 

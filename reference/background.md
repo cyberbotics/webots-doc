@@ -7,11 +7,11 @@ Background {
 }
 ```
 
-## Description
+### Description
 
 The [Background](#background) node defines the background used for rendering the 3D world.
 
-## Field Summary
+### Field Summary
 
 The `skyColor` field defines the red, green and blue components of a solid color background, in the case where no valid [Cubemap](cubemap.md) node is present.
 Only the three first float values of the `skyColor` field are used.

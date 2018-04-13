@@ -48,4 +48,4 @@ textures/cubic/noon_sunny_empty_front.jpg
 textures/cubic/noon_sunny_empty_back.jpg
 ```
 
-then these textures are loaded according to the same image loading rules as the `url` field of the [ImageTexture](imagetexture.md#search-rule-of-the-texture-path) node.
+Then, these textures are loaded according to the same image loading rules as the `url` field of the [ImageTexture](imagetexture.md#search-rule-of-the-texture-path) node.

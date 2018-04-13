@@ -110,8 +110,6 @@ For the three other sensor slots, the positions are different for each model (be
 
 %end
 
-In order to simplify some simulations, `Solid` based cars can be used from the [CarSimple](simple-vehicles.md#carsimple) PROTO.
-
 ### Heavy-Weights
 
 Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck.
@@ -135,5 +133,86 @@ The rest of the positions can be seen in the [following table](#positions-of-the
 | ------- | ---------------------- | -------------------- | --------------------- |
 | Bus     | 0.0 0.2 11.5           | 0.0 5.3 2.5          | 0.0 1.0 -6.2          |
 | Truck   | 0.0 1.1 6.75           | 0.0 4.15 4.3         | 0.0 2.7 -7.3          |
+
+%end
+
+### Simple Vehicles
+
+In addition to the controllable models of vehicle, several kinematic vehicles (called 'simple') are available.
+
+> **Note**: These vehicles can be moved kinematically using a [Supervisor](../reference/supervisor.md). These are for example the vehicles used by the [SUMO interface](sumo-interface.md).
+
+#### CarSimple
+
+For each model of [Car](#car), a 'simple' PROTO is present too.
+They should be used to model parked vehicles (non-moving) or vehicles moved by a [Supervisor](../reference/supervisor.md) changing their position and orientation. They are much faster to simulate than the normal PROTO models.
+
+```
+ PROTO CarSimple {
+  SFVec3f    translation             0 0.4 0
+  SFRotation rotation                0 1 0 0
+  SFColor    color                   0.0 0.25 0.65
+  MFColor    recognitionColors       [ 0.0 0.25 0.65, 0.1 0.1 0.1 ]
+  MFString   plate                   "textures/plate.jpg"
+  SFString   name                    "vehicle"
+  SFString   controller              ""
+  SFString   controllerArgs          ""
+  MFNode     sensorsSlot...          [ ]
+  SFBool     wheelBoundingObject     FALSE
+ }
+```
+
+##### CarSimple Field Summary
+
+- `controller`: Defines the controller of the vehicle.
+The controller can be used for example to collect sensors data while the vehicle is moved by the [SUMO interface](sumo-interface.md).
+If no controller is needed, you should leave the `controller` field empty.
+It is not recommended to use the `void` controller for efficiency reasons.
+- `sensorsSlot...`: These slots can be used to add sensor capabilities to the vehicle.
+- `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
+
+CarSimple is not an actual PROTO but defines the common structure of all the 'simple' versions of the cars.
+The different simple versions of the car PROTO nodes represent the different models of [Car](#car):
+
+- the Sport SVR from Range Rover
+- the X5 from BMW
+- the Prius from Toyota
+- the MKZ from Lincoln
+- the C-Zero from Citroen
+
+%figure "Models of cars created using the CarSimple PROTO"
+
+![cars.png](images/cars.png)
+
+%end
+
+#### TwoWheelerSimple
+
+Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different organisation.
+Similar to CarSimple, the TwoWheelerSimple PROTO displayed bellow is just a common structure for the different versions of the two wheelers.
+
+```
+PROTO TwoWheelerSimple {
+  field       SFVec3f    translation             0 0.25 0
+  field       SFRotation rotation                0 1 0 0
+  vrmlField   SFColor    primaryColor            0.43 0.11 0.1
+  vrmlField   SFColor    secondaryColor          0.69 0.43 0.43
+  field       MFColor    recognitionColors       [ 0.43 0.11 0.1, 0.69 0.43 0.43 ]
+  field       SFNode     driver                  TwoWheelerDriver { }
+  field       SFString   name                    "vehicle"
+  field       SFBool     wheelBoundingObject     FALSE
+}
+```
+
+##### TwoWheelerSimple Field Summary
+
+- `secondaryColor`: Defines a secondary color to be chosen alongside the main one.
+- `driver`: Defines a `Slot` node for the two-wheeler driver.
+
+ScooterSimple and MotorbikeSimple are examples of actual TwoWheelerSimple PROTO that represent a scooter and a motorbike:
+
+%figure "Models of ScooterSimple and MotorbikeSimple currently available"
+
+![two_wheelers.png](images/two_wheelers.png)
 
 %end

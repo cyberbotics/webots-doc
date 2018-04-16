@@ -594,7 +594,7 @@ function createX3Dom(view) {
 
     $.ajax({
       type: 'GET',
-      url: 'guide/scenes/nao/nao.meta.json',
+      url: computeTargetPath() + 'scenes/nao/nao.meta.json',
       dataType: 'text',
       success: function(content) {
         var deviceComponent = view.querySelector('#nao-device-component');

@@ -590,7 +590,7 @@ function createX3Dom(view) {
     viewpoint.setAttribute('positionBack', viewpoint.getAttribute('position'));
   };
   if (x3DomView) {
-    x3DomView.open('guide/scenes/nao/nao.x3d');
+    x3DomView.open(computeTargetPath() + 'scenes/nao/nao.x3d');
 
     $.ajax({
       type: 'GET',

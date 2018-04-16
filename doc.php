@@ -1,4 +1,14 @@
 <?php
+  function startsWith($haystack, $needle) {
+    $length = strlen($needle);
+    return (substr($haystack, 0, $length) === $needle);
+  }
+
+  function endsWith($haystack, $needle) {
+    $length = strlen($needle);
+    return $length === 0 || (substr($haystack, -$length) === $needle);
+  }
+
   $request_uri = htmlspecialchars($_SERVER['REQUEST_URI']);
   if (substr($request_uri, 0, 5) != "/doc/") { # redirect aliases
     $request_uri = "/doc/".substr($request_uri, 1)."/index"; // we remove the "/" prefix
@@ -51,7 +61,7 @@
   } else
     $rawgiturl = "https://rawgit.com/$repository/webots-doc/"; // Load master snapshot from dev URL.
 
-  $scripts="
+  $scripts = "
     <script>
       setup = {
         'book':       '$book',
@@ -64,12 +74,19 @@
       console.log('Setup: ' + JSON.stringify(setup));
     </script>
     <link rel='stylesheet' type='text/css' href='$rawgiturl$branch/css/webots-doc.css'/>
-    <link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/highlight/9.5.0/highlight_style.min.css'/>
-    <script src='https://www.cyberbotics.com/wwi/R2018a/request_methods.js'></script>
-    <script src='https://www.cyberbotics.com/highlight/9.5.0/highlight.min.js'></script>
-    <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown.min.js'></script>
-    <script src='https://www.cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js'></script>
-    <script src='https://www.cyberbotics.com/mermaid/7.0.0/mermaidAPI.min.js'></script>
+  ";
+
+  $dependencies = file_get_contents("$rawgiturl$branch/dependencies.txt");
+  foreach (explode(PHP_EOL, $dependencies) as $dependency) {
+    if (!startsWith($dependency, "#")) {
+      if (endsWith($dependency, ".css"))
+        $scripts .= "<link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/" . $dependency . "'/>";
+      if (endsWith($dependency, ".js"))
+        $scripts .= "<script src='https://www.cyberbotics.com/" . $dependency . "'></script>";
+    }
+  }
+
+  $scripts .= "
     <script src='$rawgiturl$branch/js/showdown-extensions.js'></script>
     <script src='$rawgiturl$branch/js/viewer.js'></script>
   ";

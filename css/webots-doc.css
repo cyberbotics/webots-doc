@@ -465,6 +465,7 @@
 }
 .robot-component .menu button:hover {
   color: #5a90a2;
+  background-color: transparent;
 }
 .robot-component .device-component {
   float: right;

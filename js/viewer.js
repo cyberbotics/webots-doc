@@ -132,7 +132,7 @@ function redirectUrls(node) {
 }
 
 function collapseMovies(node) {
-  if (location.href.indexOf('local_index.html') !== -1) { // if it's the offline documentation embedded in Webots (possibly without network):
+  if (location.href.startsWith('file:')) { // if it's the offline documentation embedded in Webots (possibly without network):
     var iframes = node.querySelectorAll('iframe');
     for (var i = 0; i < iframes.length; i++) { // foreach iframe:
       var iframe = iframes[i];

@@ -571,7 +571,7 @@ function highlight(deviceElement) {
         <Appearance sortType="transparent" sortKey="10000">
           <Material transparency="0.2"></Material>
           <DepthMode depthfunc="always"></DepthMode>
-          <ImageTexture url='"images/center.png" "css/images/center.png"'></ImageTexture>
+          <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
         </Appearance>
         <Plane size="0.03 0.03"></Plane>
       </Shape>

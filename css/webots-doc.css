@@ -456,20 +456,15 @@
   z-index: 1;
 }
 .robot-component .menu button {
-  width: 30px;
-  height: 30px;
-  background-size: 100% 100%;
+  padding: 0;
+  font-size: 33px;
+  color: #333;
   border-width: 0;
-  border-radius: 5px;
+  background-color: transparent;
+  outline: 0;
 }
 .robot-component .menu button:hover {
-  background-color: #9c0;
-}
-.robot-component .reset-button {
-  background: url(images/reset.png) no-repeat;
-}
-.robot-component .show-device-component-button {
-  background: url(images/menu.png) no-repeat;
+  color: #5a90a2;
 }
 .robot-component .device-component {
   float: right;
@@ -499,7 +494,7 @@
   padding: 10px;
 }
 .robot-component .device:hover {
-  background-color: #94b1bd;
+  background-color: #5a90a2;
   box-shadow: 0px 5px 10px 5px rgba(0,0,0, 0.25);
   transform: scale(1.02, 1.02);
   -webkit-transform: scale(1.02, 1.02);
@@ -510,7 +505,7 @@
 .robot-component .motor-slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 12px;
+  height: 2px;
   margin: 10px 0px;
   background: #d3d3d3;
   outline: none;
@@ -523,13 +518,13 @@
   appearance: none;
   width: 12px;
   height: 12px;
-  background: #317589;
+  background: #333;
   cursor: pointer;
 }
 .robot-component .motor-slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #317589;
+  background: #333;
   cursor: pointer;
 }
 

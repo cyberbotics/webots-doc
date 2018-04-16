@@ -67,7 +67,7 @@ if __name__ == "__main__":
         content = file.read()
 
     dependencies = []
-    with open('dependencies.txt', 'r') as f:
+    with open(script_directory + 'dependencies.txt', 'r') as f:
         for line in f:
             line = line.replace('\n', '')
             if line and not line.startswith('#'):

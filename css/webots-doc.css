@@ -443,80 +443,80 @@
  * Chart specific CSS
  *--------------------*/
 
- .webots-doc g .edgePaths .edgePath .path {
-   stroke: #333;
-   stroke-width: 2px;
- }
+.webots-doc g .edgePaths .edgePath .path {
+  stroke: #333;
+  stroke-width: 2px;
+}
 
- .webots-doc g .nodes .node .label {
-   color: black;
-   font-weight: initial;
- }
+.webots-doc g .nodes .node .label {
+  color: black;
+  font-weight: initial;
+}
 
- .webots-doc g .nodes .node rect,
- .webots-doc g .nodes .node circle,
- .webots-doc g .nodes .node ellipse,
- .webots-doc g .nodes .node polygon {
-   fill: #add8e6;
-   stroke: #afafaf;
-   stroke-width: 1px;
- }
+.webots-doc g .nodes .node rect,
+.webots-doc g .nodes .node circle,
+.webots-doc g .nodes .node ellipse,
+.webots-doc g .nodes .node polygon {
+  fill: #add8e6;
+  stroke: #afafaf;
+  stroke-width: 1px;
+}
 
- .webots-doc g .nodes .secondaryNode rect,
- .webots-doc g .nodes .secondaryNode circle,
- .webots-doc g .nodes .secondaryNode ellipse,
- .webots-doc g .nodes .secondaryNode polygon {
-   fill: #d3ffc9;
- }
+.webots-doc g .nodes .secondaryNode rect,
+.webots-doc g .nodes .secondaryNode circle,
+.webots-doc g .nodes .secondaryNode ellipse,
+.webots-doc g .nodes .secondaryNode polygon {
+  fill: #d3ffc9;
+}
 
- .webots-doc g .nodes .highlightedNode rect,
- .webots-doc g .nodes .highlightedNode circle,
- .webots-doc g .nodes .highlightedNode ellipse,
- .webots-doc g .nodes .highlightedNode polygon,
- .webots-doc g .nodes .highlightedSecondaryNode rect,
- .webots-doc g .nodes .highlightedSecondaryNode circle,
- .webots-doc g .nodes .highlightedSecondaryNode ellipse,
- .webots-doc g .nodes .highlightedSecondaryNode polygon {
-   stroke: #444444;
-   stroke-width: 3px;
- }
+.webots-doc g .nodes .highlightedNode rect,
+.webots-doc g .nodes .highlightedNode circle,
+.webots-doc g .nodes .highlightedNode ellipse,
+.webots-doc g .nodes .highlightedNode polygon,
+.webots-doc g .nodes .highlightedSecondaryNode rect,
+.webots-doc g .nodes .highlightedSecondaryNode circle,
+.webots-doc g .nodes .highlightedSecondaryNode ellipse,
+.webots-doc g .nodes .highlightedSecondaryNode polygon {
+  stroke: #444444;
+  stroke-width: 3px;
+}
 
- .webots-doc g .nodes .highlightedSecondaryNode rect,
- .webots-doc g .nodes .highlightedSecondaryNode circle,
- .webots-doc g .nodes .highlightedSecondaryNode ellipse,
- .webots-doc g .nodes .highlightedSecondaryNode polygon {
-   fill: #d3ffc9;
- }
+.webots-doc g .nodes .highlightedSecondaryNode rect,
+.webots-doc g .nodes .highlightedSecondaryNode circle,
+.webots-doc g .nodes .highlightedSecondaryNode ellipse,
+.webots-doc g .nodes .highlightedSecondaryNode polygon {
+  fill: #d3ffc9;
+}
 
- .webots-doc g .clusters .cluster rect,
- .webots-doc g .clusters .cluster circle,
- .webots-doc g .clusters .cluster ellipse,
- .webots-doc g .clusters .cluster polygon {
-   fill: #ddd !important;  /* recommended way of mermaidjs to change these elements */
-   stroke: #afafaf !important;
- }
+.webots-doc g .clusters .cluster rect,
+.webots-doc g .clusters .cluster circle,
+.webots-doc g .clusters .cluster ellipse,
+.webots-doc g .clusters .cluster polygon {
+  fill: #ddd !important;  /* recommended way of mermaidjs to change these elements */
+  stroke: #afafaf !important;
+}
 
- .webots-doc g foreignObject div .edgeLabel {
-   background-color: #f1f1f1;
-   color: black;
-   font-weight: initial;
-   line-height: initial;
- }
+.webots-doc g foreignObject div .edgeLabel {
+  background-color: #f1f1f1;
+  color: black;
+  font-weight: initial;
+  line-height: initial;
+}
 
- .webots-doc g foreignObject div a {
-   font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used and it's size */
-   font-size: 100%;
- }
+.webots-doc g foreignObject div a {
+  font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used and it's size */
+  font-size: 100%;
+}
 
- .webots-doc .mermaid svg {
-   -webkit-box-sizing: content-box;
-   -moz-box-sizing: content-box;
-   box-sizing: content-box;
-   background-color: #f1f1f1;
-   border: 1px solid #d4d4d4;
-   border-radius: 4px;
-   max-height: 100%;
- }
+.webots-doc .mermaid svg {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-color: #f1f1f1;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  max-height: 100%;
+}
 
 .webots-doc iframe {
   width: 70%;

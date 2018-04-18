@@ -240,7 +240,7 @@
   white-space: pre;
   word-wrap: break-word;
 }
-.webots-doc tr > td >  code {
+.webots-doc tr > td >  code, .webots-doc pre > code {
   white-space: normal;
 }
 .webots-doc p > code, .webots-doc li > code {

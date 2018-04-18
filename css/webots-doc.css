@@ -508,6 +508,10 @@
   font-size: 100%;
 }
 
+.webots-doc .mermaid {
+  overflow-x: auto;
+}
+
 .webots-doc .mermaid svg {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;

@@ -442,17 +442,27 @@
 
 .robot-component {
   display: flex;
+  justify-content: space-between;
+  height: 400px;
 }
 .robot-component .robot-view {
-  float: left;
-  position: relative;
   width: 70%;
+  height: 100%;
+}
+.robot-component .webots3DView {
+  height: 100%;
+}
+.robot-component .robot {
+  height: 100%;
+  display: block;
 }
 .robot-component .menu {
-  transform: translateX(-50%);
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
+  transform: translateY(-100%);
+  width: 100%;
+}
+.robot-component .menu-items {
+  margin: 0 auto;
+  text-align: center;
   z-index: 1;
 }
 .robot-component .menu button {
@@ -468,9 +478,7 @@
   background-color: transparent;
 }
 .robot-component .device-component {
-  float: right;
   width: 30%;
-  max-height: 400px;
   overflow: auto;
   background-color: #333;
   padding: 10px;

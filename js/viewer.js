@@ -524,14 +524,14 @@ function showDeviceMenu(robot) {
 }
 
 function sliderUpdated(slider) {
-  var view3d = document.querySelector('#nao-robot-view');
+  var view3d = document.querySelector('#nao-robot');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
   var axis = slider.getAttribute('webots-axis').split(' ').join(',');
   transform.setAttribute('rotation', axis + ',' + slider.value);
 }
 
 function unhighlight() {
-  var view3d = document.querySelector('#nao-robot-view');
+  var view3d = document.querySelector('#nao-robot');
   var billboards = view3d.querySelectorAll('Billboard[highlighted]');
   for (var b = 0; b < billboards.length; b++) {
     var billboard = billboards[b];
@@ -549,7 +549,7 @@ function unhighlight() {
 function highlight(deviceElement) {
   unhighlight();
 
-  var view3d = document.querySelector('#nao-robot-view');
+  var view3d = document.querySelector('#nao-robot');
   var id = deviceElement.getAttribute('webots-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
@@ -581,7 +581,7 @@ function highlight(deviceElement) {
 }
 
 function createX3Dom(view) {
-  var x3DomElement = document.querySelector('#nao-robot-view');
+  var x3DomElement = document.querySelector('#nao-robot');
   var x3DomView = new webots.View(x3DomElement);
   x3DomView.onready = function() {
     redirectTextures(x3DomElement, 'nao');

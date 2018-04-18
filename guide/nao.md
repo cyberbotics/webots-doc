@@ -2,9 +2,13 @@
 
 <div id="nao-robot-component" class="robot-component">
   <div id="nao-robot-view" class="robot-view">
+    <div id="nao-robot" class="robot">
+    </div>
     <div class="menu">
-      <button id="nao-reset-button" title="Reset the robot component." onclick="resetRobotComponent('nao')">&#x2731;</button>
-      <button id="nao-show-device-component-button" title="Show/Hide the device component." onclick="showDeviceMenu('nao')">&#9776;</button>
+      <div class="menu-items">
+        <button id="nao-reset-button" title="Reset the robot component." onclick="resetRobotComponent('nao')">&#x2731;</button>
+        <button id="nao-show-device-component-button" title="Show/Hide the device component." onclick="showDeviceMenu('nao')">&#9776;</button>
+      </div>
     </div>
   </div>
   <div id="nao-device-component" class="device-component"></div>

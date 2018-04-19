@@ -3,6 +3,7 @@
 /* global setup */
 /* global showdown */
 /* global hljs */
+/* global webots */
 
 var handle;
 
@@ -507,7 +508,7 @@ function resetRobotComponent(robot) {
   var sliders = robotComponent.querySelectorAll('.motor-slider');
   for (var s = 0; s < sliders.length; s++) {
     sliders[s].value = 0.0;
-    sliderUpdated(sliders[s]);
+    sliderUpdated(robot, sliders[s]);
   }
 }
 
@@ -523,15 +524,15 @@ function showDeviceMenu(robot) {
   }
 }
 
-function sliderUpdated(slider) {
-  var view3d = document.querySelector('#nao-robot');
+function sliderUpdated(robot, slider) {
+  var view3d = document.querySelector('#' + robot + '-robot');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
   var axis = slider.getAttribute('webots-axis').split(' ').join(',');
   transform.setAttribute('rotation', axis + ',' + slider.value);
 }
 
-function unhighlight() {
-  var view3d = document.querySelector('#nao-robot');
+function unhighlight(robot) {
+  var view3d = document.querySelector('#' + robot + '-robot');
   var billboards = view3d.querySelectorAll('Billboard[highlighted]');
   for (var b = 0; b < billboards.length; b++) {
     var billboard = billboards[b];
@@ -546,10 +547,10 @@ function unhighlight() {
   }
 }
 
-function highlight(deviceElement) {
-  unhighlight();
+function highlight(robot, deviceElement) {
+  unhighlight(robot);
 
-  var view3d = document.querySelector('#nao-robot');
+  var view3d = document.querySelector('#' + robot + '-robot');
   var id = deviceElement.getAttribute('webots-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
@@ -581,73 +582,77 @@ function highlight(deviceElement) {
 }
 
 function createX3Dom(view) {
-  var x3DomElement = document.querySelector('#nao-robot');
-  var x3DomView = new webots.View(x3DomElement);
-  x3DomView.onready = function() {
-    redirectTextures(x3DomElement, 'nao');
-    var viewpoint = x3DomElement.querySelector('Viewpoint');
-    viewpoint.setAttribute('orientationBack', viewpoint.getAttribute('orientation'));
-    viewpoint.setAttribute('positionBack', viewpoint.getAttribute('position'));
-  };
-  if (x3DomView) {
-    x3DomView.open(computeTargetPath() + 'scenes/nao/nao.x3d');
+  var x3DomElements = document.querySelectorAll('.robot');
+  for (var e = 0; e < x3DomElements.length; e++) {
+    var x3DomElement = x3DomElements[e];
+    var robotName = x3DomElement.getAttribute('id').replace('-robot', '');
+    var x3DomView = new webots.View(x3DomElement);
+    x3DomView.onready = function() {
+      redirectTextures(x3DomElement, robotName);
+      var viewpoint = x3DomElement.querySelector('Viewpoint');
+      viewpoint.setAttribute('orientationBack', viewpoint.getAttribute('orientation'));
+      viewpoint.setAttribute('positionBack', viewpoint.getAttribute('position'));
+    };
+    if (x3DomView) {
+      x3DomView.open(computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.x3d');
 
-    $.ajax({
-      type: 'GET',
-      url: computeTargetPath() + 'scenes/nao/nao.meta.json',
-      dataType: 'text',
-      success: function(content) {
-        var deviceComponent = view.querySelector('#nao-device-component');
-        var data = JSON.parse(content);
-        var categories = {};
-        for (var d = 0; d < data[0]['devices'].length; d++) {
-          var device = data[0]['devices'][d];
-          var deviceName = device['name'];
-          var deviceType = device['type'];
+      $.ajax({
+        type: 'GET',
+        url: computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.meta.json',
+        dataType: 'text',
+        success: function(content) {
+          var deviceComponent = view.querySelector('#' + robotName + '-device-component');
+          var data = JSON.parse(content);
+          var categories = {};
+          for (var d = 0; d < data[1]['devices'].length; d++) {
+            var device = data[1]['devices'][d];
+            var deviceName = device['name'];
+            var deviceType = device['type'];
 
-          var category = null;
-          if (deviceType in categories)
-            category = categories[deviceType];
-          else {
-            category = document.createElement('div');
-            category.classList.add('device-category');
-            category.innerHTML = '<div class="device-title">' + deviceType + '</div>';
-            deviceComponent.appendChild(category);
-            categories[deviceType] = category;
+            var category = null;
+            if (deviceType in categories)
+              category = categories[deviceType];
+            else {
+              category = document.createElement('div');
+              category.classList.add('device-category');
+              category.innerHTML = '<div class="device-title">' + deviceType + '</div>';
+              deviceComponent.appendChild(category);
+              categories[deviceType] = category;
+            }
+
+            var deviceDiv = document.createElement('div');
+            deviceDiv.classList.add('device');
+            deviceDiv.setAttribute('onmouseover', 'highlight("' + robotName + '", this)');
+            /* deviceDiv.setAttribute('onmouseout', 'unhighlight("' + robotName + '")'); */
+            deviceDiv.setAttribute('webots-type', deviceType);
+            if ('targetSolidID' in device)
+              deviceDiv.setAttribute('webots-id', device['targetSolidID']);
+            else
+              deviceDiv.setAttribute('webots-id', device['id']);
+
+            deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
+            if (deviceType.endsWith('RotationalMotor')) {
+              var slider = document.createElement('input');
+              slider.classList.add('motor-slider');
+              slider.setAttribute('type', 'range');
+              slider.setAttribute('step', 'any');
+              slider.setAttribute('min', device['minPosition']);
+              slider.setAttribute('max', device['maxPosition']);
+              slider.setAttribute('value', 0);
+              slider.setAttribute('webots-id', device['targetSolidID']);
+              slider.setAttribute('webots-axis', device['axis']);
+              slider.setAttribute('oninput', 'sliderUpdated("' + robotName +'", this)');
+              deviceDiv.appendChild(slider);
+            }
+            category.appendChild(deviceDiv);
           }
-
-          var deviceDiv = document.createElement('div');
-          deviceDiv.classList.add('device');
-          deviceDiv.setAttribute('onmouseover', 'highlight(this)');
-          /* deviceDiv.setAttribute('onmouseout', 'unhighlight()'); */
-          deviceDiv.setAttribute('webots-type', deviceType);
-          if ('targetSolidID' in device)
-            deviceDiv.setAttribute('webots-id', device['targetSolidID']);
-          else
-            deviceDiv.setAttribute('webots-id', device['id']);
-
-          deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
-          if (deviceType.endsWith('RotationalMotor')) {
-            var slider = document.createElement('input');
-            slider.classList.add('motor-slider');
-            slider.setAttribute('type', 'range');
-            slider.setAttribute('step', 'any');
-            slider.setAttribute('min', device['minPosition']);
-            slider.setAttribute('max', device['maxPosition']);
-            slider.setAttribute('value', 0);
-            slider.setAttribute('webots-id', device['targetSolidID']);
-            slider.setAttribute('webots-axis', device['axis']);
-            slider.setAttribute('oninput', 'sliderUpdated(this)');
-            deviceDiv.appendChild(slider);
-          }
-          category.appendChild(deviceDiv);
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+          console.log('Status: ' + textStatus);
+          console.log('Error: ' + errorThrown);
         }
-      },
-      error: function(XMLHttpRequest, textStatus, errorThrown) {
-        console.log('Status: ' + textStatus);
-        console.log('Error: ' + errorThrown);
-      }
-    });
+      });
+    }
   }
 }
 

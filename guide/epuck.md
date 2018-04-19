@@ -1,10 +1,30 @@
 ## GCTronic' e-puck
 
+<div id="epuck-robot-component" class="robot-component">
+  <div id="epuck-robot-view" class="robot-view">
+    <div id="epuck-robot" class="robot">
+    </div>
+    <div class="menu">
+      <div class="menu-items">
+        <button id="epuck-reset-button" title="Reset the robot component." onclick="resetRobotComponent('epuck')">&#x2731;</button>
+        <button id="epuck-show-device-component-button" title="Show/Hide the device component." onclick="showDeviceMenu('epuck')">&#9776;</button>
+      </div>
+    </div>
+  </div>
+  <div id="epuck-device-component" class="device-component"></div>
+</div>
+
+<!--
+%x3d guide/scenes/epuck/epuck.x3d images/robots/epuck/model.png
+-->
+
+<!--
 %figure "e-puck model in Webots"
 
 ![model.png](images/robots/epuck/model.png)
 
 %end
+-->
 
 E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
 The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.

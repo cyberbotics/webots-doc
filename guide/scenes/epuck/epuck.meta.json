@@ -1,0 +1,192 @@
+[
+    {
+        "devices": [
+        ],
+        "id": 12,
+        "name": "supervisor"
+    },
+    {
+        "devices": [
+            {
+                "axis": "-1 0 0",
+                "id": 818,
+                "maxPosition": 0,
+                "minPosition": 0,
+                "name": "left wheel motor",
+                "targetSolidID": 820,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 819,
+                "name": "left wheel sensor",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "-1 0 0",
+                "id": 858,
+                "maxPosition": 0,
+                "minPosition": 0,
+                "name": "right wheel motor",
+                "targetSolidID": 860,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 859,
+                "name": "right wheel sensor",
+                "type": "PositionSensor"
+            },
+            {
+                "id": 959,
+                "name": "ps0",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 970,
+                "name": "ps1",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 981,
+                "name": "ps2",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 992,
+                "name": "ps3",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 1003,
+                "name": "ps4",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 1014,
+                "name": "ps5",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 1025,
+                "name": "ps6",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 1036,
+                "name": "ps7",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 1046,
+                "name": "ls0",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1047,
+                "name": "ls1",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1048,
+                "name": "ls2",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1049,
+                "name": "ls3",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1050,
+                "name": "ls4",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1051,
+                "name": "ls5",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1052,
+                "name": "ls6",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1053,
+                "name": "ls7",
+                "type": "LightSensor"
+            },
+            {
+                "id": 1054,
+                "name": "camera",
+                "type": "Camera"
+            },
+            {
+                "id": 1063,
+                "name": "led0",
+                "type": "LED"
+            },
+            {
+                "id": 1068,
+                "name": "led1",
+                "type": "LED"
+            },
+            {
+                "id": 1073,
+                "name": "led2",
+                "type": "LED"
+            },
+            {
+                "id": 1078,
+                "name": "led3",
+                "type": "LED"
+            },
+            {
+                "id": 1083,
+                "name": "led4",
+                "type": "LED"
+            },
+            {
+                "id": 1089,
+                "name": "led5",
+                "type": "LED"
+            },
+            {
+                "id": 1094,
+                "name": "led6",
+                "type": "LED"
+            },
+            {
+                "id": 1099,
+                "name": "led7",
+                "type": "LED"
+            },
+            {
+                "id": 1104,
+                "name": "led8",
+                "type": "LED"
+            },
+            {
+                "id": 1110,
+                "name": "led9",
+                "type": "LED"
+            },
+            {
+                "id": 1115,
+                "name": "accelerometer",
+                "type": "Accelerometer"
+            },
+            {
+                "id": 1130,
+                "name": "receiver",
+                "type": "Receiver"
+            },
+            {
+                "id": 1131,
+                "name": "emitter",
+                "type": "Emitter"
+            }
+        ],
+        "id": 814,
+        "name": "e-puck"
+    }
+]

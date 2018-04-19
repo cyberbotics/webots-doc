@@ -531,7 +531,7 @@ function sliderUpdated(robot, slider) {
   transform.setAttribute('rotation', axis + ',' + slider.value);
 }
 
-function unhighlight(robot) {
+function unhighlightX3DElement(robot) {
   var view3d = document.querySelector('#' + robot + '-robot');
   var billboards = view3d.querySelectorAll('Billboard[highlighted]');
   for (var b = 0; b < billboards.length; b++) {
@@ -547,8 +547,8 @@ function unhighlight(robot) {
   }
 }
 
-function highlight(robot, deviceElement) {
-  unhighlight(robot);
+function highlightX3DElement(robot, deviceElement) {
+  unhighlightX3DElement(robot);
 
   var view3d = document.querySelector('#' + robot + '-robot');
   var id = deviceElement.getAttribute('webots-id');
@@ -622,8 +622,8 @@ function createX3Dom(view) {
 
             var deviceDiv = document.createElement('div');
             deviceDiv.classList.add('device');
-            deviceDiv.setAttribute('onmouseover', 'highlight("' + robotName + '", this)');
-            /* deviceDiv.setAttribute('onmouseout', 'unhighlight("' + robotName + '")'); */
+            deviceDiv.setAttribute('onmouseover', 'highlightX3DElement("' + robotName + '", this)');
+            /* deviceDiv.setAttribute('onmouseout', 'unhighlightX3DElement("' + robotName + '")'); */
             deviceDiv.setAttribute('webots-type', deviceType);
             if ('targetSolidID' in device)
               deviceDiv.setAttribute('webots-id', device['targetSolidID']);
@@ -641,7 +641,7 @@ function createX3Dom(view) {
               slider.setAttribute('value', 0);
               slider.setAttribute('webots-id', device['targetSolidID']);
               slider.setAttribute('webots-axis', device['axis']);
-              slider.setAttribute('oninput', 'sliderUpdated("' + robotName +'", this)');
+              slider.setAttribute('oninput', 'sliderUpdated("' + robotName + '", this)');
               deviceDiv.appendChild(slider);
             }
             category.appendChild(deviceDiv);

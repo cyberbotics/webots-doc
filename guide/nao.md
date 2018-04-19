@@ -6,8 +6,8 @@
     </div>
     <div class="menu">
       <div class="menu-items">
-        <button id="nao-reset-button" title="Reset the robot component." onclick="resetRobotComponent('nao')">&#x2731;</button>
-        <button id="nao-show-device-component-button" title="Show/Hide the device component." onclick="showDeviceMenu('nao')">&#9776;</button>
+        <button title="Reset the robot component." onclick="resetRobotComponent('nao')">&#x2731;</button>
+        <button title="Show/Hide the device component." onclick="showDeviceMenu('nao')">&#9776;</button>
       </div>
     </div>
   </div>

@@ -1,22 +1,6 @@
 ## GCTronic' e-puck
 
-<div id="epuck-robot-component" class="robot-component">
-  <div id="epuck-robot-view" class="robot-view">
-    <div id="epuck-robot" class="robot">
-    </div>
-    <div class="menu">
-      <div class="menu-items">
-        <button title="Reset the robot component." onclick="resetRobotComponent('epuck')">&#x2731;</button>
-        <button title="Show/Hide the device component." onclick="showDeviceMenu('epuck')">&#9776;</button>
-      </div>
-    </div>
-  </div>
-  <div id="epuck-device-component" class="device-component"></div>
-</div>
-
-<!--
-%x3d guide/scenes/epuck/epuck.x3d images/robots/epuck/model.png
--->
+%robot epuck
 
 <!--
 %figure "e-puck model in Webots"

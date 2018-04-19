@@ -1,22 +1,6 @@
 ## SoftBank Robotics' Nao
 
-<div id="nao-robot-component" class="robot-component">
-  <div id="nao-robot-view" class="robot-view">
-    <div id="nao-robot" class="robot">
-    </div>
-    <div class="menu">
-      <div class="menu-items">
-        <button title="Reset the robot component." onclick="resetRobotComponent('nao')">&#x2731;</button>
-        <button title="Show/Hide the device component." onclick="showDeviceMenu('nao')">&#9776;</button>
-      </div>
-    </div>
-  </div>
-  <div id="nao-device-component" class="device-component"></div>
-</div>
-
-<!--
-%x3d guide/scenes/nao/nao.x3d images/robots/nao/model.png
--->
+%robot nao
 
 <!--
 %figure "Nao model in Webots"

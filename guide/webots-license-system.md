@@ -16,7 +16,19 @@ If you plan to use Webots behind an Internet firewall, you should create two new
 - `https://www.cyberbotics.com (port 443)`
 - `https://webots-license.appspot.com (port 443)`
 
-> **Note**: If you are using a proxy to access the Internet, Webots will retrieve your system proxy configuration automatically.
+### Proxy Configuration (Optional)
+
+If you are using a proxy to access the Internet, Webots will retrieve your system proxy configuration automatically.
+The proxy configuration is stored in the Webots Preferences.
+On Windows, it is stored under the following registry key: Computer\\HKEY_CURRENT_USER\\Software\\Cyberbotics\\Webots-{{ webots.version.major }}\\Network
+On macOS, the Webots preferences are stored in a file under the user home directory at "~/Library/Preferences/com.cyberbotics.Webots-{{ webots.version.major }}.plist".
+On Linux, the Webots preferences are stored in a file under the user home directory at "~/.config/Cyberbotics/Webots-{{ webots.version.major }}.conf".
+You will see the proxy configuration detected by Webots.
+You may change it in the registry if you believe it's wrong and Webots
+will use your changed version.
+Proxy types are based on Qt and are documented here: http://doc.qt.io/qt-5/qnetworkproxy.html#ProxyType-enum
+Other values (hostname, password, port, username) are documented here: http://doc.qt.io/qt-5/qnetworkproxy.html
+
 
 ### License Agreement
 

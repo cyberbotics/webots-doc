@@ -20,7 +20,7 @@ If you plan to use Webots behind an Internet firewall, you should create two new
 
 If you are using a proxy to access the Internet, Webots will retrieve your system proxy configuration automatically on the first launch after installation.
 This proxy configuration is stored in the Webots Preferences and reused on subsequent launches of Webots.
-On Windows, it is stored under the following registry key: `Computer\\HKEY\_CURRENT\_USER\\Software\\Cyberbotics\\Webots-{{webots.version.major}}\\Network`.
+On Windows, it is stored under the following registry key: `Computer\HKEY_CURRENT_USER\Software\Cyberbotics\Webots-{{webots.version.major}}\Network`.
 On macOS, the Webots preferences are stored in a file under the user home directory at `~/Library/Preferences/com.cyberbotics.Webots-{{webots.version.major}}.plist`.
 On Linux, the Webots preferences are stored in a file under the user home directory at `~/.config/Cyberbotics/Webots-{{webots.version.major}}.conf`.
 Proxy types are based on Qt and are documented here: http://doc.qt.io/qt-5/qnetworkproxy.html#ProxyType-enum

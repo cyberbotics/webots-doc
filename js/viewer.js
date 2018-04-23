@@ -579,6 +579,7 @@ function highlightX3DElement(robot, deviceElement) {
       }
     }
 
+    var scale = parseFloat(view3d.querySelector('Viewpoint').getAttribute('robotScale')) / 15.0;
     var billboard = document.createElement('Transform');
     billboard.setAttribute('highlighted', 'true');
     if (deviceElement.hasAttribute('webots-transform-offset'))
@@ -592,7 +593,7 @@ function highlightX3DElement(robot, deviceElement) {
             <DepthMode depthfunc="always"></DepthMode>
             <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
           </Appearance>
-          <Plane size="0.03 0.03"></Plane>
+          <Plane size="` + scale + ` ` + scale + `"></Plane>
         </Shape>
       </Billboard>
     `;
@@ -613,6 +614,17 @@ function createRobotComponent(view) {
       var viewpoint = webotsViewElement.querySelector('Viewpoint');
       viewpoint.setAttribute('initialOrientation', viewpoint.getAttribute('orientation'));
       viewpoint.setAttribute('initialPosition', viewpoint.getAttribute('position'));
+      // Rough estimation of the robot scale.
+      var robotScale = 0.05;
+      var transforms = webotsViewElement.querySelectorAll('transform');
+      for (var t = 0; t < transforms.length; t++) {
+        if (transforms[t].hasAttribute('translation')) {
+          var translation = transforms[t].getAttribute('translation').split(' ');
+          for (var v = 0; v < translation.length; v++)
+            robotScale = Math.max(robotScale, Math.abs(translation[v]));
+        }
+      }
+      viewpoint.setAttribute('robotScale', 2.0 * robotScale);
     };
 
     // Load the robot X3D file.

@@ -66,11 +66,11 @@ The **Network** tab allows you to manually configure a HTTP proxy that Webots wi
 
 - The **Proxy hostname** field allows you to set the hostname of the proxy server.
 
-- The **Proxy port** field allows you to set the port (in the range 1 - 65535) used by the proxy server.
+- The **Proxy port** field allows you to set the port used by the proxy server.
 
 - The **Proxy username** field is optional. It allows you to specify a username sent to the proxy server.
 
 - The **Proxy password** field is optional as well and allows you to specify the user password sent to the proxy server.
 
-After changing the proxy configuration, it is recommend to restart Webots to ensure the changes are properly taken into account.
+After changing the proxy configuration, it is recommended to restart Webots to ensure the changes are properly taken into account.
 If you clear the **Proxy hostname** field, Webots will try to retrieve the default system proxy on the next launch.

@@ -1,10 +1,14 @@
 ## GCTronic' e-puck
 
+%robot epuck
+
+<!--
 %figure "e-puck model in Webots"
 
 ![model.png](images/robots/epuck/model.png)
 
 %end
+-->
 
 E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
 The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.

@@ -1,0 +1,694 @@
+[
+    {
+        "devices": [
+        ],
+        "id": 12,
+        "name": "supervisor"
+    },
+    {
+        "devices": [
+            {
+                "id": 36,
+                "name": "ChestBoard/Led",
+                "type": "LED"
+            },
+            {
+                "id": 42,
+                "name": "gps",
+                "type": "GPS"
+            },
+            {
+                "id": 43,
+                "name": "receiver",
+                "type": "Receiver"
+            },
+            {
+                "id": 44,
+                "name": "emitter",
+                "type": "Emitter"
+            },
+            {
+                "id": 45,
+                "name": "super_emitter",
+                "type": "Emitter"
+            },
+            {
+                "id": 46,
+                "name": "accelerometer",
+                "type": "Accelerometer"
+            },
+            {
+                "id": 47,
+                "name": "gyro",
+                "type": "Gyro"
+            },
+            {
+                "id": 48,
+                "name": "inertial unit",
+                "type": "InertialUnit"
+            },
+            {
+                "id": 55,
+                "name": "Sonar/Right",
+                "type": "DistanceSensor"
+            },
+            {
+                "id": 67,
+                "name": "Sonar/Left",
+                "type": "DistanceSensor"
+            },
+            {
+                "axis": "0 0 1",
+                "id": 76,
+                "maxPosition": 2.08567,
+                "minPosition": -2.08567,
+                "name": "HeadYaw",
+                "targetSolidID": 80,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 77,
+                "name": "HeadYawS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 78,
+                "maxPosition": 0.514872,
+                "minPosition": -0.671952,
+                "name": "HeadPitch",
+                "targetSolidID": 80,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 79,
+                "name": "HeadPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "id": 87,
+                "name": "CameraTop",
+                "type": "Camera"
+            },
+            {
+                "id": 88,
+                "name": "CameraBottom",
+                "type": "Camera"
+            },
+            {
+                "id": 99,
+                "name": "Face/Led/Right",
+                "type": "LED"
+            },
+            {
+                "id": 105,
+                "name": "Face/Led/Left",
+                "type": "LED"
+            },
+            {
+                "id": 111,
+                "name": "Ears/Led/Right",
+                "type": "LED"
+            },
+            {
+                "id": 117,
+                "name": "Ears/Led/Left",
+                "type": "LED"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 141,
+                "maxPosition": 2.08567,
+                "minPosition": -2.08567,
+                "name": "RShoulderPitch",
+                "targetSolidID": 145,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 142,
+                "name": "RShoulderPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 0 1",
+                "id": 143,
+                "maxPosition": 0.314159,
+                "minPosition": -1.32645,
+                "name": "RShoulderRoll",
+                "targetSolidID": 145,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 144,
+                "name": "RShoulderRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 164,
+                "maxPosition": 2.08567,
+                "minPosition": -2.08567,
+                "name": "RElbowYaw",
+                "targetSolidID": 166,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 165,
+                "name": "RElbowYawS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 0 1",
+                "id": 169,
+                "maxPosition": 1.54462,
+                "minPosition": 0,
+                "name": "RElbowRoll",
+                "targetSolidID": 171,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 170,
+                "name": "RElbowRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 174,
+                "maxPosition": 1.82387,
+                "minPosition": -1.82387,
+                "name": "RWristYaw",
+                "targetSolidID": 176,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 175,
+                "name": "RWristYawS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 179,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx1",
+                "targetSolidID": 181,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 180,
+                "name": "RPhalanx1S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 190,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx2",
+                "targetSolidID": 192,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 191,
+                "name": "RPhalanx2S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 200,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx3",
+                "targetSolidID": 202,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 201,
+                "name": "RPhalanx3S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 228,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx4",
+                "targetSolidID": 230,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 229,
+                "name": "RPhalanx4S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 238,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx5",
+                "targetSolidID": 240,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 239,
+                "name": "RPhalanx5S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 248,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx6",
+                "targetSolidID": 250,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 249,
+                "name": "RPhalanx6S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 276,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx7",
+                "targetSolidID": 278,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 277,
+                "name": "RPhalanx7S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 286,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "RPhalanx8",
+                "targetSolidID": 288,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 287,
+                "name": "RPhalanx8S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 343,
+                "maxPosition": 2.08567,
+                "minPosition": -2.08567,
+                "name": "LShoulderPitch",
+                "targetSolidID": 347,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 344,
+                "name": "LShoulderPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 0 1",
+                "id": 345,
+                "maxPosition": 1.32645,
+                "minPosition": -0.314159,
+                "name": "LShoulderRoll",
+                "targetSolidID": 347,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 346,
+                "name": "LShoulderRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 366,
+                "maxPosition": 2.08567,
+                "minPosition": -2.08567,
+                "name": "LElbowYaw",
+                "targetSolidID": 368,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 367,
+                "name": "LElbowYawS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 0 1",
+                "id": 371,
+                "maxPosition": 0,
+                "minPosition": -1.54462,
+                "name": "LElbowRoll",
+                "targetSolidID": 373,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 372,
+                "name": "LElbowRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 376,
+                "maxPosition": 1.82387,
+                "minPosition": -1.82387,
+                "name": "LWristYaw",
+                "targetSolidID": 378,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 377,
+                "name": "LWristYawS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 381,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx1",
+                "targetSolidID": 383,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 382,
+                "name": "LPhalanx1S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 392,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx2",
+                "targetSolidID": 394,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 393,
+                "name": "LPhalanx2S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 402,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx3",
+                "targetSolidID": 404,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 403,
+                "name": "LPhalanx3S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 430,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx4",
+                "targetSolidID": 432,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 431,
+                "name": "LPhalanx4S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 440,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx5",
+                "targetSolidID": 442,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 441,
+                "name": "LPhalanx5S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 -1 0",
+                "id": 450,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx6",
+                "targetSolidID": 452,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 451,
+                "name": "LPhalanx6S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 478,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx7",
+                "targetSolidID": 480,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 479,
+                "name": "LPhalanx7S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 488,
+                "maxPosition": 1,
+                "minPosition": 0,
+                "name": "LPhalanx8",
+                "targetSolidID": 490,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 489,
+                "name": "LPhalanx8S",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 0.707107 0.707107",
+                "id": 544,
+                "maxPosition": 0.740718,
+                "minPosition": -1.14529,
+                "name": "RHipYawPitch",
+                "targetSolidID": 546,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 545,
+                "name": "RHipYawPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 559,
+                "maxPosition": 0.449597,
+                "minPosition": -0.738274,
+                "name": "RHipRoll",
+                "targetSolidID": 561,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 560,
+                "name": "RHipRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 574,
+                "maxPosition": 0.48398,
+                "minPosition": -1.77378,
+                "name": "RHipPitch",
+                "targetSolidID": 576,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 575,
+                "name": "RHipPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 589,
+                "maxPosition": 2.11255,
+                "minPosition": -0.0923279,
+                "name": "RKneePitch",
+                "targetSolidID": 591,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 590,
+                "name": "RKneePitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 609,
+                "maxPosition": 0.932006,
+                "minPosition": -1.1863,
+                "name": "RAnklePitch",
+                "targetSolidID": 611,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 610,
+                "name": "RAnklePitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 619,
+                "maxPosition": 0.785922,
+                "minPosition": -0.388685,
+                "name": "RAnkleRoll",
+                "targetSolidID": 621,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 620,
+                "name": "RAnkleRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "id": 623,
+                "name": "RFsr",
+                "type": "TouchSensor"
+            },
+            {
+                "id": 636,
+                "name": "RFoot/Led",
+                "type": "LED"
+            },
+            {
+                "id": 642,
+                "name": "RFoot/Bumper/Right",
+                "type": "TouchSensor"
+            },
+            {
+                "id": 650,
+                "name": "RFoot/Bumper/Left",
+                "type": "TouchSensor"
+            },
+            {
+                "axis": "0 0.707107 -0.707107",
+                "id": 676,
+                "maxPosition": 0.740718,
+                "minPosition": -1.14529,
+                "name": "LHipYawPitch",
+                "targetSolidID": 678,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 677,
+                "name": "LHipYawPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 691,
+                "maxPosition": 0.79046,
+                "minPosition": -0.379435,
+                "name": "LHipRoll",
+                "targetSolidID": 693,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 692,
+                "name": "LHipRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 706,
+                "maxPosition": 0.48398,
+                "minPosition": -1.77378,
+                "name": "LHipPitch",
+                "targetSolidID": 708,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 707,
+                "name": "LHipPitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 721,
+                "maxPosition": 2.11255,
+                "minPosition": -0.0923279,
+                "name": "LKneePitch",
+                "targetSolidID": 723,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 722,
+                "name": "LKneePitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "0 1 0",
+                "id": 741,
+                "maxPosition": 0.922581,
+                "minPosition": -1.18944,
+                "name": "LAnklePitch",
+                "targetSolidID": 743,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 742,
+                "name": "LAnklePitchS",
+                "type": "PositionSensor"
+            },
+            {
+                "axis": "1 0 0",
+                "id": 751,
+                "maxPosition": 0.397761,
+                "minPosition": -0.768992,
+                "name": "LAnkleRoll",
+                "targetSolidID": 753,
+                "type": "RotationalMotor"
+            },
+            {
+                "id": 752,
+                "name": "LAnkleRollS",
+                "type": "PositionSensor"
+            },
+            {
+                "id": 755,
+                "name": "LFsr",
+                "type": "TouchSensor"
+            },
+            {
+                "id": 768,
+                "name": "LFoot/Led",
+                "type": "LED"
+            },
+            {
+                "id": 774,
+                "name": "LFoot/Bumper/Left",
+                "type": "TouchSensor"
+            },
+            {
+                "id": 782,
+                "name": "LFoot/Bumper/Right",
+                "type": "TouchSensor"
+            }
+        ],
+        "id": 13,
+        "name": "NAO"
+    }
+]

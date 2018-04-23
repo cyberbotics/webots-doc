@@ -19,8 +19,8 @@ If you plan to use Webots behind an Internet firewall, you should create two new
 ### Proxy Configuration (Optional)
 
 If you are using a proxy to access the Internet, Webots will retrieve your system proxy configuration automatically on the first launch after installation.
-This proxy configuration is stored in the Webots Preferences and reused on subsequent launches of Webots.
-If you edit this configuration from the Webots Preferences, Webots will take them into account on the next launch.
+This proxy configuration is stored in the Webots [Preferences](preferences.md) and reused on subsequent launches of Webots.
+You can change this configuration by editing the Webots [Preferences](preferences.md) and Webots will take it into account on the next launch.
 
 ### License Agreement
 

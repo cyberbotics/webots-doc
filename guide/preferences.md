@@ -57,3 +57,20 @@ We observed that some hardware doesn't support the OpenGL feature about anti-ali
 - The **Width of rasterized lines** value specifies the width of all the lines drawn in the 3D scene.
 In particular this affects the visual representations of bounding objects, coordinate systems, optional renderings, axes of translation and rotation handles, apply force and torque arrows, and IndexedLineSet nodes.
 The default value is 1.0.
+
+### Network
+
+The **Network** tab allows you to manually configure a HTTP proxy that Webots will use to access its license server over the Internet.
+
+- The **Proxy type** check box allows you to enable or disable the SOCK v5 proxy protocol.
+
+- The **Proxy hostname** field allows you to set the hostname of the proxy server.
+
+- The **Proxy port** field allows you to set the port (in the range 1 - 65535) used by the proxy server.
+
+- The **Proxy username** field is optional. It allows you to specify a username sent to the proxy server.
+
+- The **Proxy password** field is optional as well and allows you to specify the user password sent to the proxy server.
+
+After changing the proxy configuration, it is recommend to restart Webots to ensure the changes are properly taken into account.
+If you clear the **Proxy hostname** field, Webots will try to retrieve the default system proxy on the next launch.

@@ -217,7 +217,7 @@ showdown.extension('wbRobotComponent', function() {
                 <div class="menu">
                   <div class="menu-items">
                     <button title="Reset the robot component." onclick="resetRobotComponent('%ROBOT%')">&#x2731;</button>
-                    <button title="Show/Hide the device component." onclick="showDeviceMenu('%ROBOT%')">&#9776;</button>
+                    <button title="Show/Hide the device component." onclick="toggleDeviceComponent('%ROBOT%')">&#9776;</button>
                   </div>
                 </div>
               </div>

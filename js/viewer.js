@@ -501,6 +501,7 @@ function highlightCode(view) {
 }
 
 function resetRobotComponent(robot) {
+  // Reset the Viewpoint and the motor sliders.
   var robotComponent = document.querySelector('#' + robot + '-robot-component');
   var viewpoint = robotComponent.querySelector('Viewpoint');
   viewpoint.setAttribute('orientation', viewpoint.getAttribute('orientationBack'));
@@ -508,11 +509,11 @@ function resetRobotComponent(robot) {
   var sliders = robotComponent.querySelectorAll('.motor-slider');
   for (var s = 0; s < sliders.length; s++) {
     sliders[s].value = 0.0;
-    sliderUpdated(robot, sliders[s]);
+    sliderMotorCallback(robot, sliders[s]);
   }
 }
 
-function showDeviceMenu(robot) {
+function toggleDeviceComponent(robot) {
   var deviceMenu = document.querySelector('#' + robot + '-device-component');
   var robotView = document.querySelector('.robot-view');
   if (deviceMenu.style.display === 'none') {
@@ -524,11 +525,22 @@ function showDeviceMenu(robot) {
   }
 }
 
-function sliderUpdated(robot, slider) {
+function sliderMotorCallback(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-solid-id') + ']');
+
+  var angle = 0.0;
+  if (transform.hasAttribute('initalAngle')) // Get initial angle.
+    angle = parseFloat(transform.getAttribute('initalAngle'));
+  else { // Store initial angle.
+    angle = parseFloat(transform.getAttribute('rotation').split(' ')[3]);
+    transform.setAttribute('initalAngle', angle);
+  }
+  angle += parseFloat(slider.value); // Add the slider value.
+
+  // Apply the new axis-angle.
   var axis = slider.getAttribute('webots-axis').split(' ').join(',');
-  transform.setAttribute('rotation', axis + ',' + slider.value);
+  transform.setAttribute('rotation', axis + ',' + angle);
 }
 
 function unhighlightX3DElement(robot) {
@@ -644,7 +656,8 @@ function createX3Dom(view) {
               slider.setAttribute('value', 0);
               slider.setAttribute('webots-solid-id', device['solidID']);
               slider.setAttribute('webots-axis', device['axis']);
-              slider.setAttribute('oninput', 'sliderUpdated("' + robotName + '", this)');
+              slider.setAttribute('oninput', 'sliderMotorCallback("' + robotName + '", this)');
+
               deviceDiv.appendChild(slider);
             }
             category.appendChild(deviceDiv);

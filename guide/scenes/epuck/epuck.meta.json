@@ -11,12 +11,12 @@
                 "maxPosition": 0,
                 "minPosition": 0,
                 "name": "left wheel motor",
-                "solidID": 820,
+                "transformID": 820,
                 "type": "RotationalMotor"
             },
             {
                 "name": "left wheel sensor",
-                "solidID": 820,
+                "transformID": 820,
                 "type": "PositionSensor"
             },
             {
@@ -24,170 +24,170 @@
                 "maxPosition": 0,
                 "minPosition": 0,
                 "name": "right wheel motor",
-                "solidID": 860,
+                "transformID": 860,
                 "type": "RotationalMotor"
             },
             {
                 "name": "right wheel sensor",
-                "solidID": 860,
+                "transformID": 860,
                 "type": "PositionSensor"
             },
             {
                 "name": "ps0",
-                "solidID": 959,
+                "transformID": 959,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps1",
-                "solidID": 970,
+                "transformID": 970,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps2",
-                "solidID": 981,
+                "transformID": 981,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps3",
-                "solidID": 992,
+                "transformID": 992,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps4",
-                "solidID": 1003,
+                "transformID": 1003,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps5",
-                "solidID": 1014,
+                "transformID": 1014,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps6",
-                "solidID": 1025,
+                "transformID": 1025,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ps7",
-                "solidID": 1036,
+                "transformID": 1036,
                 "type": "DistanceSensor"
             },
             {
                 "name": "ls0",
-                "offset": "0.01 0.0329 -0.03",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "0.01 0.0329 -0.03",
                 "type": "LightSensor"
             },
             {
                 "name": "ls1",
-                "offset": "0.025 0.0329 -0.022",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "0.025 0.0329 -0.022",
                 "type": "LightSensor"
             },
             {
                 "name": "ls2",
-                "offset": "0.031 0.0329 0",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "0.031 0.0329 0",
                 "type": "LightSensor"
             },
             {
                 "name": "ls3",
-                "offset": "0.015 0.0329 0.03",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "0.015 0.0329 0.03",
                 "type": "LightSensor"
             },
             {
                 "name": "ls4",
-                "offset": "-0.015 0.0329 0.03",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "-0.015 0.0329 0.03",
                 "type": "LightSensor"
             },
             {
                 "name": "ls5",
-                "offset": "-0.031 0.0329 0",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "-0.031 0.0329 0",
                 "type": "LightSensor"
             },
             {
                 "name": "ls6",
-                "offset": "-0.025 0.0329 -0.022",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "-0.025 0.0329 -0.022",
                 "type": "LightSensor"
             },
             {
                 "name": "ls7",
-                "offset": "-0.01 0.0329 -0.03",
-                "solidID": 814,
+                "transformID": 814,
+                "transformOffset": "-0.01 0.0329 -0.03",
                 "type": "LightSensor"
             },
             {
                 "name": "camera",
-                "solidID": 1054,
+                "transformID": 1054,
                 "type": "Camera"
             },
             {
                 "name": "led0",
-                "solidID": 1063,
+                "transformID": 1063,
                 "type": "LED"
             },
             {
                 "name": "led1",
-                "solidID": 1068,
+                "transformID": 1068,
                 "type": "LED"
             },
             {
                 "name": "led2",
-                "solidID": 1073,
+                "transformID": 1073,
                 "type": "LED"
             },
             {
                 "name": "led3",
-                "solidID": 1078,
+                "transformID": 1078,
                 "type": "LED"
             },
             {
                 "name": "led4",
-                "solidID": 1083,
+                "transformID": 1083,
                 "type": "LED"
             },
             {
                 "name": "led5",
-                "solidID": 1089,
+                "transformID": 1089,
                 "type": "LED"
             },
             {
                 "name": "led6",
-                "solidID": 1094,
+                "transformID": 1094,
                 "type": "LED"
             },
             {
                 "name": "led7",
-                "solidID": 1099,
+                "transformID": 1099,
                 "type": "LED"
             },
             {
                 "name": "led8",
-                "solidID": 1104,
+                "transformID": 1104,
                 "type": "LED"
             },
             {
                 "name": "led9",
-                "solidID": 1110,
+                "transformID": 1110,
                 "type": "LED"
             },
             {
                 "name": "accelerometer",
-                "solidID": 814,
+                "transformID": 814,
                 "type": "Accelerometer"
             },
             {
                 "name": "receiver",
-                "solidID": 814,
+                "transformID": 814,
                 "type": "Receiver"
             },
             {
                 "name": "emitter",
-                "solidID": 814,
+                "transformID": 814,
                 "type": "Emitter"
             }
         ],

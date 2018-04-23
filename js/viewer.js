@@ -4,6 +4,9 @@
 /* global showdown */
 /* global hljs */
 /* global webots */
+/* exported resetRobotComponent */
+/* exported toggleDeviceComponent */
+/* exported highlightX3DElement */
 
 var handle;
 
@@ -445,7 +448,7 @@ function populateViewDiv(mdContent) {
 
   view.innerHTML = html;
 
-  createX3Dom(view);
+  createRobotComponent(view);
   renderGraphs();
   redirectImages(view);
   redirectUrls(view);
@@ -504,8 +507,8 @@ function resetRobotComponent(robot) {
   // Reset the Viewpoint and the motor sliders.
   var robotComponent = document.querySelector('#' + robot + '-robot-component');
   var viewpoint = robotComponent.querySelector('Viewpoint');
-  viewpoint.setAttribute('orientation', viewpoint.getAttribute('orientationBack'));
-  viewpoint.setAttribute('position', viewpoint.getAttribute('positionBack'));
+  viewpoint.setAttribute('orientation', viewpoint.getAttribute('initialOrientation'));
+  viewpoint.setAttribute('position', viewpoint.getAttribute('initialPosition'));
   var sliders = robotComponent.querySelectorAll('.motor-slider');
   for (var s = 0; s < sliders.length; s++) {
     sliders[s].value = 0.0;
@@ -527,7 +530,7 @@ function toggleDeviceComponent(robot) {
 
 function sliderMotorCallback(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot');
-  var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-solid-id') + ']');
+  var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-transform-id') + ']');
 
   var angle = 0.0;
   if (transform.hasAttribute('initalAngle')) // Get initial angle.
@@ -563,7 +566,7 @@ function highlightX3DElement(robot, deviceElement) {
   unhighlightX3DElement(robot);
 
   var view3d = document.querySelector('#' + robot + '-robot');
-  var id = deviceElement.getAttribute('webots-solid-id');
+  var id = deviceElement.getAttribute('webots-transform-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
     if (deviceElement.getAttribute('webots-type') === 'LED') {
@@ -578,8 +581,8 @@ function highlightX3DElement(robot, deviceElement) {
 
     var billboard = document.createElement('Transform');
     billboard.setAttribute('highlighted', 'true');
-    if (deviceElement.hasAttribute('webots-offset'))
-      billboard.setAttribute('translation', deviceElement.getAttribute('webots-offset'));
+    if (deviceElement.hasAttribute('webots-transform-offset'))
+      billboard.setAttribute('translation', deviceElement.getAttribute('webots-transform-offset'));
 
     billboard.innerHTML = `
       <Billboard axisOfRotation="0 0 0">
@@ -597,78 +600,84 @@ function highlightX3DElement(robot, deviceElement) {
   }
 }
 
-function createX3Dom(view) {
-  var x3DomElements = document.querySelectorAll('.robot');
-  for (var e = 0; e < x3DomElements.length; e++) {
-    var x3DomElement = x3DomElements[e];
-    var robotName = x3DomElement.getAttribute('id').replace('-robot', '');
-    var x3DomView = new webots.View(x3DomElement);
-    x3DomView.onready = function() {
-      redirectTextures(x3DomElement, robotName);
-      var viewpoint = x3DomElement.querySelector('Viewpoint');
-      viewpoint.setAttribute('orientationBack', viewpoint.getAttribute('orientation'));
-      viewpoint.setAttribute('positionBack', viewpoint.getAttribute('position'));
+function createRobotComponent(view) {
+  var webotsViewElements = document.querySelectorAll('.robot');
+  for (var e = 0; e < webotsViewElements.length; e++) { // foreach robot components of this page.
+    var webotsViewElement = webotsViewElements[e];
+    var robotName = webotsViewElement.getAttribute('id').replace('-robot', '');
+    var webotsView = new webots.View(webotsViewElement);
+    webotsView.onready = function() { // When Webots View has been successfully loaded.
+      // correct the URL textures.
+      redirectTextures(webotsViewElement, robotName);
+      // Store viewpoint.
+      var viewpoint = webotsViewElement.querySelector('Viewpoint');
+      viewpoint.setAttribute('initialOrientation', viewpoint.getAttribute('orientation'));
+      viewpoint.setAttribute('initialPosition', viewpoint.getAttribute('position'));
     };
-    if (x3DomView) {
-      x3DomView.open(computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.x3d');
 
-      $.ajax({
-        type: 'GET',
-        url: computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.meta.json',
-        dataType: 'text',
-        success: function(content) {
-          var deviceComponent = view.querySelector('#' + robotName + '-device-component');
-          var data = JSON.parse(content);
-          var categories = {};
-          for (var d = 0; d < data[1]['devices'].length; d++) {
-            var device = data[1]['devices'][d];
-            var deviceName = device['name'];
-            var deviceType = device['type'];
+    // Load the robot X3D file.
+    webotsView.open(computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.x3d');
 
-            var category = null;
-            if (deviceType in categories)
-              category = categories[deviceType];
-            else {
-              category = document.createElement('div');
-              category.classList.add('device-category');
-              category.innerHTML = '<div class="device-title">' + deviceType + '</div>';
-              deviceComponent.appendChild(category);
-              categories[deviceType] = category;
-            }
+    // Load the robot meta JSON file.
+    $.ajax({
+      type: 'GET',
+      url: computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.meta.json',
+      dataType: 'text',
+      success: function(content) { // When successfully loaded.
+        // Populate the device component from the JSON file.
+        var deviceComponent = view.querySelector('#' + robotName + '-device-component');
+        var data = JSON.parse(content);
+        var categories = {};
+        for (var d = 0; d < data[1]['devices'].length; d++) {
+          var device = data[1]['devices'][d];
+          var deviceName = device['name'];
+          var deviceType = device['type'];
 
-            var deviceDiv = document.createElement('div');
-            deviceDiv.classList.add('device');
-            deviceDiv.setAttribute('onmouseover', 'highlightX3DElement("' + robotName + '", this)');
-            /* deviceDiv.setAttribute('onmouseout', 'unhighlightX3DElement("' + robotName + '")'); */
-            deviceDiv.setAttribute('webots-type', deviceType);
-            deviceDiv.setAttribute('webots-solid-id', device['solidID']);
-            if ('offset' in device)
-              deviceDiv.setAttribute('webots-offset', device['offset']);
-
-            deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
-            if (deviceType.endsWith('RotationalMotor')) {
-              var slider = document.createElement('input');
-              slider.classList.add('motor-slider');
-              slider.setAttribute('type', 'range');
-              slider.setAttribute('step', 'any');
-              slider.setAttribute('min', device['minPosition']);
-              slider.setAttribute('max', device['maxPosition']);
-              slider.setAttribute('value', 0);
-              slider.setAttribute('webots-solid-id', device['solidID']);
-              slider.setAttribute('webots-axis', device['axis']);
-              slider.setAttribute('oninput', 'sliderMotorCallback("' + robotName + '", this)');
-
-              deviceDiv.appendChild(slider);
-            }
-            category.appendChild(deviceDiv);
+          // Create or retrieve the device category container.
+          var category = null;
+          if (deviceType in categories)
+            category = categories[deviceType];
+          else {
+            category = document.createElement('div');
+            category.classList.add('device-category');
+            category.innerHTML = '<div class="device-title">' + deviceType + '</div>';
+            deviceComponent.appendChild(category);
+            categories[deviceType] = category;
           }
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-          console.log('Status: ' + textStatus);
-          console.log('Error: ' + errorThrown);
+
+          // Create the new device.
+          var deviceDiv = document.createElement('div');
+          deviceDiv.classList.add('device');
+          deviceDiv.setAttribute('onmouseover', 'highlightX3DElement("' + robotName + '", this)');
+          deviceDiv.setAttribute('webots-type', deviceType);
+          deviceDiv.setAttribute('webots-transform-id', device['transformID']);
+          if ('transformOffset' in device) // The Device Transform has not been exported. The device is defined relatively to it's Transform parent.
+            deviceDiv.setAttribute('webots-transform-offset', device['transformOffset']);
+          deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
+
+          // Create the new motor.
+          if (deviceType.endsWith('Motor')) {
+            var slider = document.createElement('input');
+            slider.classList.add('motor-slider');
+            slider.setAttribute('type', 'range');
+            slider.setAttribute('step', 'any');
+            slider.setAttribute('min', device['minPosition']);
+            slider.setAttribute('max', device['maxPosition']);
+            slider.setAttribute('value', 0);
+            slider.setAttribute('webots-transform-id', device['transformID']);
+            slider.setAttribute('webots-axis', device['axis']);
+            slider.setAttribute('oninput', 'sliderMotorCallback("' + robotName + '", this)');
+
+            deviceDiv.appendChild(slider);
+          }
+          category.appendChild(deviceDiv);
         }
-      });
-    }
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        console.log('Status: ' + textStatus);
+        console.log('Error: ' + errorThrown);
+      }
+    });
   }
 }
 

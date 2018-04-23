@@ -184,16 +184,47 @@ showdown.extension('wbChart', function() {
         text = text.replace(/%chart\s+([^"][^]+?)%end/gi, function(match, content) {
           // handle links
           content = content.replace(/\[\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
-            return '[<a href='+ link + '>' + name + '</>';
+            return '[<a href=' + link + '>' + name + '</>';
           });
           content = content.replace(/\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
-            return '<a href='+ link + '>' + name + '</>';
+            return '<a href=' + link + '>' + name + '</>';
           });
           // save content
           var id = 'mermaidGraph' + window.mermaidGraphCounter;
           window.mermaidGraphCounter++;
           window.mermaidGraphs[id] = content;
           return '<div id="' + id + 'Div' + '" class="mermaid"></div>';
+        });
+        return text;
+      }
+    }
+  ];
+});
+
+// This extension allows to add robot component.
+// Example: "%robot nao"
+showdown.extension('wbRobotComponent', function() {
+  return [
+    {
+      type: 'lang',
+      filter: function(text, converter, options) {
+        text = text.replace(/%robot\s+([^\n]+)/gi, function(match, robot) {
+          var replacement = `
+            <div id="%ROBOT%-robot-component" class="robot-component">
+              <div id="%ROBOT%-robot-view" class="robot-view">
+                <div id="%ROBOT%-robot" class="robot">
+                </div>
+                <div class="menu">
+                  <div class="menu-items">
+                    <button title="Reset the robot component." onclick="resetRobotComponent('%ROBOT%')">&#x2731;</button>
+                    <button title="Show/Hide the device component." onclick="showDeviceMenu('%ROBOT%')">&#9776;</button>
+                  </div>
+                </div>
+              </div>
+              <div id="%ROBOT%-device-component" class="device-component"></div>
+            </div>`;
+          replacement = replacement.replace(/%ROBOT%/g, robot).replace(/            /g, '');
+          return replacement;
         });
         return text;
       }

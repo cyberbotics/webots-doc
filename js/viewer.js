@@ -3,6 +3,7 @@
 /* global setup */
 /* global showdown */
 /* global hljs */
+/* global webots */
 
 var handle;
 
@@ -232,6 +233,17 @@ function redirectImages(node) {
   }
 }
 
+function redirectTextures(node, robotName) {
+  // redirect ImageTexture's url
+  var textures = node.querySelectorAll('ImageTexture');
+  var targetPath = computeTargetPath();
+  for (var i = 0; i < textures.length; i++) {
+    var texture = textures[i];
+    var url = texture.getAttribute('url').slice(1, -1);
+    texture.setAttribute('url', targetPath + 'scenes/' + robotName + '/' + url);
+  }
+}
+
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
@@ -425,7 +437,7 @@ function populateViewDiv(mdContent) {
   // markdown to html
   window.mermaidGraphCounter = 0;
   window.mermaidGraphs = {};
-  var converter = new showdown.Converter({tables: 'True', extensions: ['wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
+  var converter = new showdown.Converter({tables: 'True', extensions: ['wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'wbRobotComponent', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
   // console.log('HTML content: \n\n')
@@ -433,6 +445,7 @@ function populateViewDiv(mdContent) {
 
   view.innerHTML = html;
 
+  createX3Dom(view);
   renderGraphs();
   redirectImages(view);
   redirectUrls(view);
@@ -483,6 +496,162 @@ function highlightCode(view) {
     for (var j = 0; j < codes.length; j++) {
       var code = codes[j];
       hljs.highlightBlock(code);
+    }
+  }
+}
+
+function resetRobotComponent(robot) {
+  var robotComponent = document.querySelector('#' + robot + '-robot-component');
+  var viewpoint = robotComponent.querySelector('Viewpoint');
+  viewpoint.setAttribute('orientation', viewpoint.getAttribute('orientationBack'));
+  viewpoint.setAttribute('position', viewpoint.getAttribute('positionBack'));
+  var sliders = robotComponent.querySelectorAll('.motor-slider');
+  for (var s = 0; s < sliders.length; s++) {
+    sliders[s].value = 0.0;
+    sliderUpdated(robot, sliders[s]);
+  }
+}
+
+function showDeviceMenu(robot) {
+  var deviceMenu = document.querySelector('#' + robot + '-device-component');
+  var robotView = document.querySelector('.robot-view');
+  if (deviceMenu.style.display === 'none') {
+    deviceMenu.style.display = '';
+    robotView.style.width = '70%';
+  } else {
+    deviceMenu.style.display = 'none';
+    robotView.style.width = '100%';
+  }
+}
+
+function sliderUpdated(robot, slider) {
+  var view3d = document.querySelector('#' + robot + '-robot');
+  var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
+  var axis = slider.getAttribute('webots-axis').split(' ').join(',');
+  transform.setAttribute('rotation', axis + ',' + slider.value);
+}
+
+function unhighlightX3DElement(robot) {
+  var view3d = document.querySelector('#' + robot + '-robot');
+  var billboards = view3d.querySelectorAll('Billboard[highlighted]');
+  for (var b = 0; b < billboards.length; b++) {
+    var billboard = billboards[b];
+    billboard.parentNode.removeChild(billboard);
+  }
+
+  var materials = view3d.querySelectorAll('Material[highlighted]');
+  for (var m = 0; m < materials.length; m++) {
+    var material = materials[m];
+    material.removeAttribute('highlighted');
+    material.setAttribute('emissiveColor', material.getAttribute('emissiveColorBack'));
+  }
+}
+
+function highlightX3DElement(robot, deviceElement) {
+  unhighlightX3DElement(robot);
+
+  var view3d = document.querySelector('#' + robot + '-robot');
+  var id = deviceElement.getAttribute('webots-id');
+  var transform = view3d.querySelector('[id=n' + id + ']');
+  if (transform) {
+    if (deviceElement.getAttribute('webots-type') === 'LED') {
+      var materials = transform.querySelectorAll('Material');
+      for (var m = 0; m < materials.length; m++) {
+        var material = materials[m];
+        material.setAttribute('highlighted', 'true');
+        material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
+        material.setAttribute('emissiveColor', '0.0, 0.0, 1.0'); // TODO: To be replaced by the LED color.
+      }
+    }
+
+    var billboard = document.createElement('Billboard');
+    billboard.setAttribute('highlighted', 'true');
+    billboard.setAttribute('axisOfRotation', '0 0 0');
+    billboard.innerHTML = `
+      <Shape>
+        <Appearance sortType="transparent" sortKey="10000">
+          <Material transparency="0.2"></Material>
+          <DepthMode depthfunc="always"></DepthMode>
+          <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
+        </Appearance>
+        <Plane size="0.03 0.03"></Plane>
+      </Shape>
+    `;
+    transform.appendChild(billboard);
+  }
+}
+
+function createX3Dom(view) {
+  var x3DomElements = document.querySelectorAll('.robot');
+  for (var e = 0; e < x3DomElements.length; e++) {
+    var x3DomElement = x3DomElements[e];
+    var robotName = x3DomElement.getAttribute('id').replace('-robot', '');
+    var x3DomView = new webots.View(x3DomElement);
+    x3DomView.onready = function() {
+      redirectTextures(x3DomElement, robotName);
+      var viewpoint = x3DomElement.querySelector('Viewpoint');
+      viewpoint.setAttribute('orientationBack', viewpoint.getAttribute('orientation'));
+      viewpoint.setAttribute('positionBack', viewpoint.getAttribute('position'));
+    };
+    if (x3DomView) {
+      x3DomView.open(computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.x3d');
+
+      $.ajax({
+        type: 'GET',
+        url: computeTargetPath() + 'scenes/' + robotName + '/' + robotName + '.meta.json',
+        dataType: 'text',
+        success: function(content) {
+          var deviceComponent = view.querySelector('#' + robotName + '-device-component');
+          var data = JSON.parse(content);
+          var categories = {};
+          for (var d = 0; d < data[1]['devices'].length; d++) {
+            var device = data[1]['devices'][d];
+            var deviceName = device['name'];
+            var deviceType = device['type'];
+
+            var category = null;
+            if (deviceType in categories)
+              category = categories[deviceType];
+            else {
+              category = document.createElement('div');
+              category.classList.add('device-category');
+              category.innerHTML = '<div class="device-title">' + deviceType + '</div>';
+              deviceComponent.appendChild(category);
+              categories[deviceType] = category;
+            }
+
+            var deviceDiv = document.createElement('div');
+            deviceDiv.classList.add('device');
+            deviceDiv.setAttribute('onmouseover', 'highlightX3DElement("' + robotName + '", this)');
+            /* deviceDiv.setAttribute('onmouseout', 'unhighlightX3DElement("' + robotName + '")'); */
+            deviceDiv.setAttribute('webots-type', deviceType);
+            if ('targetSolidID' in device)
+              deviceDiv.setAttribute('webots-id', device['targetSolidID']);
+            else
+              deviceDiv.setAttribute('webots-id', device['id']);
+
+            deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
+            if (deviceType.endsWith('RotationalMotor')) {
+              var slider = document.createElement('input');
+              slider.classList.add('motor-slider');
+              slider.setAttribute('type', 'range');
+              slider.setAttribute('step', 'any');
+              slider.setAttribute('min', device['minPosition']);
+              slider.setAttribute('max', device['maxPosition']);
+              slider.setAttribute('value', 0);
+              slider.setAttribute('webots-id', device['targetSolidID']);
+              slider.setAttribute('webots-axis', device['axis']);
+              slider.setAttribute('oninput', 'sliderUpdated("' + robotName + '", this)');
+              deviceDiv.appendChild(slider);
+            }
+            category.appendChild(deviceDiv);
+          }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+          console.log('Status: ' + textStatus);
+          console.log('Error: ' + errorThrown);
+        }
+      });
     }
   }
 }

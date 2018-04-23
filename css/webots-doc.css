@@ -442,6 +442,103 @@
   background-size: 16px;
 }
 
+.robot-component {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+}
+.robot-component .robot-view {
+  width: 70%;
+  height: 100%;
+}
+.robot-component .webots3DView {
+  height: 100%;
+}
+.robot-component .robot {
+  height: 100%;
+  display: block;
+}
+.robot-component .menu {
+  transform: translateY(-100%);
+  width: 100%;
+}
+.robot-component .menu-items {
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+.robot-component .menu button {
+  padding: 0;
+  font-size: 33px;
+  color: #333;
+  border-width: 0;
+  background-color: transparent;
+  outline: 0;
+}
+.robot-component .menu button:hover {
+  color: #5a90a2;
+  background-color: transparent;
+}
+.robot-component .device-component {
+  width: 30%;
+  overflow: auto;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 3px;
+}
+.robot-component .device-category {
+  padding: 10px;
+}
+.robot-component .device-title {
+  color: #fff;
+  padding-bottom: 10px;
+  font-family: roboto;
+  font-size: 14px;
+  text-align: center;
+}
+.robot-component .device-name {
+  color: white;
+  font-family: roboto;
+}
+.robot-component .device {
+  background-color: #666;
+  padding: 10px;
+}
+.robot-component .device:hover {
+  background-color: #5a90a2;
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0, 0.25);
+  transform: scale(1.02, 1.02);
+  -webkit-transform: scale(1.02, 1.02);
+  -moz-transform: scale(1.02, 1.02);
+  -o-transform: scale(1.02, 1.02);
+}
+
+.robot-component .motor-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.robot-component .motor-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #333;
+  cursor: pointer;
+}
+.robot-component .motor-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #333;
+  cursor: pointer;
+}
+
 /*---------------------*
  * Chart specific CSS
  *--------------------*/

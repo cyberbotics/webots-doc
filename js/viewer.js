@@ -640,8 +640,8 @@ function createRobotComponent(view) {
         var deviceComponent = view.querySelector('#' + robotName + '-device-component');
         var data = JSON.parse(content);
         var categories = {};
-        for (var d = 0; d < data[1]['devices'].length; d++) {
-          var device = data[1]['devices'][d];
+        for (var d = 0; d < data['devices'].length; d++) {
+          var device = data['devices'][d];
           var deviceName = device['name'];
           var deviceType = device['type'];
 

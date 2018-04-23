@@ -526,7 +526,7 @@ function showDeviceMenu(robot) {
 
 function sliderUpdated(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot');
-  var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-id') + ']');
+  var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-solid-id') + ']');
   var axis = slider.getAttribute('webots-axis').split(' ').join(',');
   transform.setAttribute('rotation', axis + ',' + slider.value);
 }
@@ -551,7 +551,7 @@ function highlightX3DElement(robot, deviceElement) {
   unhighlightX3DElement(robot);
 
   var view3d = document.querySelector('#' + robot + '-robot');
-  var id = deviceElement.getAttribute('webots-id');
+  var id = deviceElement.getAttribute('webots-solid-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
     if (deviceElement.getAttribute('webots-type') === 'LED') {
@@ -625,10 +625,7 @@ function createX3Dom(view) {
             deviceDiv.setAttribute('onmouseover', 'highlightX3DElement("' + robotName + '", this)');
             /* deviceDiv.setAttribute('onmouseout', 'unhighlightX3DElement("' + robotName + '")'); */
             deviceDiv.setAttribute('webots-type', deviceType);
-            if ('targetSolidID' in device)
-              deviceDiv.setAttribute('webots-id', device['targetSolidID']);
-            else
-              deviceDiv.setAttribute('webots-id', device['id']);
+            deviceDiv.setAttribute('webots-solid-id', device['solidID']);
 
             deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
             if (deviceType.endsWith('RotationalMotor')) {
@@ -639,7 +636,7 @@ function createX3Dom(view) {
               slider.setAttribute('min', device['minPosition']);
               slider.setAttribute('max', device['maxPosition']);
               slider.setAttribute('value', 0);
-              slider.setAttribute('webots-id', device['targetSolidID']);
+              slider.setAttribute('webots-solid-id', device['solidID']);
               slider.setAttribute('webots-axis', device['axis']);
               slider.setAttribute('oninput', 'sliderUpdated("' + robotName + '", this)');
               deviceDiv.appendChild(slider);

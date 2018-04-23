@@ -2,191 +2,187 @@
     {
         "devices": [
         ],
-        "id": 12,
         "name": "supervisor"
     },
     {
         "devices": [
             {
                 "axis": "-1 0 0",
-                "id": 818,
                 "maxPosition": 0,
                 "minPosition": 0,
                 "name": "left wheel motor",
-                "targetSolidID": 820,
+                "solidID": 820,
                 "type": "RotationalMotor"
             },
             {
-                "id": 819,
                 "name": "left wheel sensor",
+                "solidID": 820,
                 "type": "PositionSensor"
             },
             {
                 "axis": "-1 0 0",
-                "id": 858,
                 "maxPosition": 0,
                 "minPosition": 0,
                 "name": "right wheel motor",
-                "targetSolidID": 860,
+                "solidID": 860,
                 "type": "RotationalMotor"
             },
             {
-                "id": 859,
                 "name": "right wheel sensor",
+                "solidID": 860,
                 "type": "PositionSensor"
             },
             {
-                "id": 959,
                 "name": "ps0",
+                "solidID": 959,
                 "type": "DistanceSensor"
             },
             {
-                "id": 970,
                 "name": "ps1",
+                "solidID": 970,
                 "type": "DistanceSensor"
             },
             {
-                "id": 981,
                 "name": "ps2",
+                "solidID": 981,
                 "type": "DistanceSensor"
             },
             {
-                "id": 992,
                 "name": "ps3",
+                "solidID": 992,
                 "type": "DistanceSensor"
             },
             {
-                "id": 1003,
                 "name": "ps4",
+                "solidID": 1003,
                 "type": "DistanceSensor"
             },
             {
-                "id": 1014,
                 "name": "ps5",
+                "solidID": 1014,
                 "type": "DistanceSensor"
             },
             {
-                "id": 1025,
                 "name": "ps6",
+                "solidID": 1025,
                 "type": "DistanceSensor"
             },
             {
-                "id": 1036,
                 "name": "ps7",
+                "solidID": 1036,
                 "type": "DistanceSensor"
             },
             {
-                "id": 1046,
                 "name": "ls0",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1047,
                 "name": "ls1",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1048,
                 "name": "ls2",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1049,
                 "name": "ls3",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1050,
                 "name": "ls4",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1051,
                 "name": "ls5",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1052,
                 "name": "ls6",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1053,
                 "name": "ls7",
+                "solidID": 814,
                 "type": "LightSensor"
             },
             {
-                "id": 1054,
                 "name": "camera",
+                "solidID": 1054,
                 "type": "Camera"
             },
             {
-                "id": 1063,
                 "name": "led0",
+                "solidID": 1063,
                 "type": "LED"
             },
             {
-                "id": 1068,
                 "name": "led1",
+                "solidID": 1068,
                 "type": "LED"
             },
             {
-                "id": 1073,
                 "name": "led2",
+                "solidID": 1073,
                 "type": "LED"
             },
             {
-                "id": 1078,
                 "name": "led3",
+                "solidID": 1078,
                 "type": "LED"
             },
             {
-                "id": 1083,
                 "name": "led4",
+                "solidID": 1083,
                 "type": "LED"
             },
             {
-                "id": 1089,
                 "name": "led5",
+                "solidID": 1089,
                 "type": "LED"
             },
             {
-                "id": 1094,
                 "name": "led6",
+                "solidID": 1094,
                 "type": "LED"
             },
             {
-                "id": 1099,
                 "name": "led7",
+                "solidID": 1099,
                 "type": "LED"
             },
             {
-                "id": 1104,
                 "name": "led8",
+                "solidID": 1104,
                 "type": "LED"
             },
             {
-                "id": 1110,
                 "name": "led9",
+                "solidID": 1110,
                 "type": "LED"
             },
             {
-                "id": 1115,
                 "name": "accelerometer",
+                "solidID": 814,
                 "type": "Accelerometer"
             },
             {
-                "id": 1130,
                 "name": "receiver",
+                "solidID": 814,
                 "type": "Receiver"
             },
             {
-                "id": 1131,
                 "name": "emitter",
+                "solidID": 814,
                 "type": "Emitter"
             }
         ],
-        "id": 814,
         "name": "e-puck"
     }
 ]

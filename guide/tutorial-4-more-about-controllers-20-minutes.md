@@ -288,8 +288,8 @@ int main(int argc, char **argv)
     }
 
     // write actuators inputs
-    wb_motor_set_velocity(left_motor, SPEED_UNIT * left_speed);
-    wb_motor_set_velocity(right_motor, SPEED_UNIT * right_speed);
+    wb_motor_set_velocity(left_motor, left_speed);
+    wb_motor_set_velocity(right_motor, right_speed);
   }
 
   // cleanup the Webots API

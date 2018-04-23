@@ -223,7 +223,7 @@ showdown.extension('wbRobotComponent', function() {
               </div>
               <div id="%ROBOT%-device-component" class="device-component"></div>
             </div>`;
-          replacement = replacement.replace(/%ROBOT%/g, robot).replace(/            /g, '');
+          replacement = replacement.replace(/%ROBOT%/g, robot).replace(/ {12}/g, '');
           return replacement;
         });
         return text;

@@ -661,8 +661,13 @@ function createRobotComponent(view) {
             slider.classList.add('motor-slider');
             slider.setAttribute('type', 'range');
             slider.setAttribute('step', 'any');
-            slider.setAttribute('min', device['minPosition']);
-            slider.setAttribute('max', device['maxPosition']);
+            if (device['minPosition'] === device['maxPosition']) { // infinite range.
+              slider.setAttribute('min', -Math.PI);
+              slider.setAttribute('max', Math.PI);
+            } else { // fixed range.
+              slider.setAttribute('min', device['minPosition']);
+              slider.setAttribute('max', device['maxPosition']);
+            }
             slider.setAttribute('value', 0);
             slider.setAttribute('webots-transform-id', device['transformID']);
             slider.setAttribute('webots-axis', device['axis']);

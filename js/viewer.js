@@ -533,7 +533,7 @@ function sliderUpdated(robot, slider) {
 
 function unhighlightX3DElement(robot) {
   var view3d = document.querySelector('#' + robot + '-robot');
-  var billboards = view3d.querySelectorAll('Billboard[highlighted]');
+  var billboards = view3d.querySelectorAll('Transform[highlighted]');
   for (var b = 0; b < billboards.length; b++) {
     var billboard = billboards[b];
     billboard.parentNode.removeChild(billboard);
@@ -564,18 +564,22 @@ function highlightX3DElement(robot, deviceElement) {
       }
     }
 
-    var billboard = document.createElement('Billboard');
+    var billboard = document.createElement('Transform');
     billboard.setAttribute('highlighted', 'true');
-    billboard.setAttribute('axisOfRotation', '0 0 0');
+    if (deviceElement.hasAttribute('webots-offset'))
+      billboard.setAttribute('translation', deviceElement.getAttribute('webots-offset'));
+
     billboard.innerHTML = `
-      <Shape>
-        <Appearance sortType="transparent" sortKey="10000">
-          <Material transparency="0.2"></Material>
-          <DepthMode depthfunc="always"></DepthMode>
-          <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
-        </Appearance>
-        <Plane size="0.03 0.03"></Plane>
-      </Shape>
+      <Billboard axisOfRotation="0 0 0">
+        <Shape>
+          <Appearance sortType="transparent" sortKey="10000">
+            <Material transparency="0.2"></Material>
+            <DepthMode depthfunc="always"></DepthMode>
+            <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
+          </Appearance>
+          <Plane size="0.03 0.03"></Plane>
+        </Shape>
+      </Billboard>
     `;
     transform.appendChild(billboard);
   }
@@ -626,6 +630,8 @@ function createX3Dom(view) {
             /* deviceDiv.setAttribute('onmouseout', 'unhighlightX3DElement("' + robotName + '")'); */
             deviceDiv.setAttribute('webots-type', deviceType);
             deviceDiv.setAttribute('webots-solid-id', device['solidID']);
+            if ('offset' in device)
+              deviceDiv.setAttribute('webots-offset', device['offset']);
 
             deviceDiv.innerHTML = '<div class="device-name">' + deviceName + '</div>';
             if (deviceType.endsWith('RotationalMotor')) {

@@ -74,41 +74,49 @@
             },
             {
                 "name": "ls0",
+                "offset": "0.01 0.0329 -0.03",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls1",
+                "offset": "0.025 0.0329 -0.022",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls2",
+                "offset": "0.031 0.0329 0",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls3",
+                "offset": "0.015 0.0329 0.03",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls4",
+                "offset": "-0.015 0.0329 0.03",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls5",
+                "offset": "-0.031 0.0329 0",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls6",
+                "offset": "-0.025 0.0329 -0.022",
                 "solidID": 814,
                 "type": "LightSensor"
             },
             {
                 "name": "ls7",
+                "offset": "-0.01 0.0329 -0.03",
                 "solidID": 814,
                 "type": "LightSensor"
             },

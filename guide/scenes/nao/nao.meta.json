@@ -33,16 +33,19 @@
             },
             {
                 "name": "accelerometer",
+                "offset": "-0.008 0.00606 0.027",
                 "solidID": 13,
                 "type": "Accelerometer"
             },
             {
                 "name": "gyro",
+                "offset": "-0.008 0.006 0.029",
                 "solidID": 13,
                 "type": "Gyro"
             },
             {
                 "name": "inertial unit",
+                "offset": "-0.008 0.006 0.029",
                 "solidID": 13,
                 "type": "InertialUnit"
             },
@@ -84,11 +87,13 @@
             },
             {
                 "name": "CameraTop",
+                "offset": "0.05871 0 0.06364",
                 "solidID": 80,
                 "type": "Camera"
             },
             {
                 "name": "CameraBottom",
+                "offset": "0.05071 0 0.01774",
                 "solidID": 80,
                 "type": "Camera"
             },
@@ -530,6 +535,7 @@
             },
             {
                 "name": "RFsr",
+                "offset": "0.02 -0.007 -0.041",
                 "solidID": 621,
                 "type": "TouchSensor"
             },
@@ -628,6 +634,7 @@
             },
             {
                 "name": "LFsr",
+                "offset": "0.02 0.007 -0.041",
                 "solidID": 753,
                 "type": "TouchSensor"
             },

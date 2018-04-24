@@ -30,7 +30,7 @@ The `left`, `middle` and `right` fields are matching respectively with the left,
 A `true` state means the button is pressed while a `false` state means the button is released.
 
 The `u` and `v` fields are indicating the 2D coordinate where the mouse is pointing in the 3D view.
-The `u` coordinate goes from 0 to the left border of the 3D view to 1 to the right border, and the `v` goes from 0 to the top border to 1 to the bottom border.
+The `u` coordinate goes from 0 on the left border of the 3D view to 1 on the right border, and the `v` coordinate goes from 0 on the top border to 1 on the bottom border.
 These values may be `NaN` if the mouse is outside of the 3D view.
 
 The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.

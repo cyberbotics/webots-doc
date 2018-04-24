@@ -668,6 +668,10 @@ function createRobotComponent(view) {
 
           // Create the new motor.
           if (deviceType.endsWith('Motor')) {
+            var minLabel = document.createElement('div');
+            minLabel.classList.add('motor-label');
+            var maxLabel = document.createElement('div');
+            maxLabel.classList.add('motor-label');
             var slider = document.createElement('input');
             slider.classList.add('motor-slider');
             slider.setAttribute('type', 'range');
@@ -675,16 +679,25 @@ function createRobotComponent(view) {
             if (device['minPosition'] === device['maxPosition']) { // infinite range.
               slider.setAttribute('min', -Math.PI);
               slider.setAttribute('max', Math.PI);
+              minLabel.innerHTML = -3.14; // 2 decimals.
+              maxLabel.innerHTML = 3.14;
             } else { // fixed range.
               slider.setAttribute('min', device['minPosition']);
               slider.setAttribute('max', device['maxPosition']);
+              minLabel.innerHTML = Math.round(device['minPosition'] * 100) / 100; // 2 decimals.
+              maxLabel.innerHTML = Math.round(device['maxPosition'] * 100) / 100;
             }
             slider.setAttribute('value', 0);
             slider.setAttribute('webots-transform-id', device['transformID']);
             slider.setAttribute('webots-axis', device['axis']);
             slider.setAttribute('oninput', 'sliderMotorCallback("' + robotName + '", this)');
 
-            deviceDiv.appendChild(slider);
+            var motorDiv = document.createElement('div');
+            motorDiv.classList.add('motor-component');
+            motorDiv.appendChild(minLabel);
+            motorDiv.appendChild(slider);
+            motorDiv.appendChild(maxLabel);
+            deviceDiv.appendChild(motorDiv);
           }
 
           // LED case: set the target color.

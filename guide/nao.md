@@ -42,8 +42,7 @@ If the simulation is paused, then please start it by pushing the `Real-time` but
 The camera images in Webots (small purple viewports) should reflect what the robot sees.
 
 Several lines of text information corresponding to the output of NAOqi should be printed to Webots console.
-
-> **Note**: A couple of harmless error messages may be also displayed, you can ignore them:
+Also, a couple of harmless error messages may be displayed, you can safely ignore them:
 ```
 [naoqisim] Qt: Untested Windows version 6.2 detected!
 [naoqisim] Error: %1 is not a valid Win32 application.

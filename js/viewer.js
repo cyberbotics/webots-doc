@@ -575,7 +575,7 @@ function highlightX3DElement(robot, deviceElement) {
         var material = materials[m];
         material.setAttribute('highlighted', 'true');
         material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
-        material.setAttribute('emissiveColor', '0.0, 0.0, 1.0'); // TODO: To be replaced by the LED color.
+        material.setAttribute('emissiveColor', deviceElement.getAttribute('targetColor'));
       }
     }
 
@@ -589,7 +589,7 @@ function highlightX3DElement(robot, deviceElement) {
       <Billboard axisOfRotation="0 0 0">
         <Shape>
           <Appearance sortType="transparent" sortKey="10000">
-            <Material transparency="0.2"></Material>
+            <Material transparency="0.4"></Material>
             <DepthMode depthfunc="always"></DepthMode>
             <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
           </Appearance>
@@ -687,6 +687,14 @@ function createRobotComponent(view) {
 
             deviceDiv.appendChild(slider);
           }
+
+          // LED case: set the target color.
+          if (deviceType === 'LED') {
+            // For now, simply take the first color. More complex mechanism could be implemented if required.
+            var targetColor = (device['colors'].length > 0) ? device['colors'][0] : '0 0 1';
+            deviceDiv.setAttribute('targetColor', targetColor);
+          }
+
           category.appendChild(deviceDiv);
         }
       },

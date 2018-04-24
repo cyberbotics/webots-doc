@@ -469,15 +469,24 @@
 }
 .robot-component .menu button {
   padding: 0;
-  font-size: 33px;
-  color: #333;
   border-width: 0;
-  background-color: transparent;
   outline: 0;
+  width: 40px;
+  height: 40px;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  background-color: #444;
 }
 .robot-component .menu button:hover {
-  color: #5a90a2;
-  background-color: transparent;
+  background-color: #5a90a2;
+}
+.robot-component .menu .reset-button {
+  mask: url(../css/images/reset.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../css/images/reset.svg) no-repeat 50% 50%;
+}
+.robot-component .menu .menu-button {
+  mask: url(../css/images/menu.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../css/images/menu.svg) no-repeat 50% 50%;
 }
 .robot-component .device-component {
   width: 30%;

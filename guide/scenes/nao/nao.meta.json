@@ -1,670 +1,670 @@
 {
+  "name": "nao", 
   "devices": [
     {
-      "colors": [],
-      "gradual": true,
-      "name": "ChestBoard/Led",
-      "transformID": 36,
-      "type": "LED"
-    },
+      "transformID": 80, 
+      "name": "HeadPitch", 
+      "maxPosition": 0.514872, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.671952, 
+      "axis": "0 1 0"
+    }, 
     {
-      "name": "gps",
-      "transformID": 13,
-      "type": "GPS"
-    },
+      "transformID": 80, 
+      "name": "HeadYaw", 
+      "maxPosition": 2.08567, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.08567, 
+      "axis": "0 0 1"
+    }, 
     {
-      "name": "receiver",
-      "transformID": 13,
-      "type": "Receiver"
-    },
+      "transformID": 743, 
+      "name": "LAnklePitch", 
+      "maxPosition": 0.922581, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.18944, 
+      "axis": "0 1 0"
+    }, 
     {
-      "name": "emitter",
-      "transformID": 13,
-      "type": "Emitter"
-    },
+      "transformID": 753, 
+      "name": "LAnkleRoll", 
+      "maxPosition": 0.397761, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.768992, 
+      "axis": "1 0 0"
+    }, 
     {
-      "name": "super_emitter",
-      "transformID": 13,
-      "type": "Emitter"
-    },
+      "transformID": 373, 
+      "name": "LElbowRoll", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.54462, 
+      "axis": "0 0 1"
+    }, 
     {
-      "name": "accelerometer",
-      "transformID": 13,
-      "transformOffset": "-0.008 0.00606 0.027",
-      "type": "Accelerometer"
-    },
+      "transformID": 368, 
+      "name": "LElbowYaw", 
+      "maxPosition": 2.08567, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.08567, 
+      "axis": "1 0 0"
+    }, 
     {
-      "name": "gyro",
-      "transformID": 13,
-      "transformOffset": "-0.008 0.006 0.029",
-      "type": "Gyro"
-    },
+      "transformID": 708, 
+      "name": "LHipPitch", 
+      "maxPosition": 0.48398, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.77378, 
+      "axis": "0 1 0"
+    }, 
     {
-      "name": "inertial unit",
-      "transformID": 13,
-      "transformOffset": "-0.008 0.006 0.029",
-      "type": "InertialUnit"
-    },
+      "transformID": 693, 
+      "name": "LHipRoll", 
+      "maxPosition": 0.79046, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.379435, 
+      "axis": "1 0 0"
+    }, 
     {
-      "name": "Sonar/Right",
-      "transformID": 55,
-      "type": "DistanceSensor"
-    },
+      "transformID": 678, 
+      "name": "LHipYawPitch", 
+      "maxPosition": 0.740718, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.14529, 
+      "axis": "0 0.707107 -0.707107"
+    }, 
     {
-      "name": "Sonar/Left",
-      "transformID": 67,
-      "type": "DistanceSensor"
-    },
+      "transformID": 723, 
+      "name": "LKneePitch", 
+      "maxPosition": 2.11255, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.0923279, 
+      "axis": "0 1 0"
+    }, 
     {
-      "axis": "0 0 1",
-      "maxPosition": 2.08567,
-      "minPosition": -2.08567,
-      "name": "HeadYaw",
-      "transformID": 80,
-      "type": "RotationalMotor"
-    },
+      "transformID": 383, 
+      "name": "LPhalanx1", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
     {
-      "name": "HeadYawS",
-      "transformID": 80,
-      "type": "PositionSensor"
-    },
+      "transformID": 394, 
+      "name": "LPhalanx2", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
     {
-      "axis": "0 1 0",
-      "maxPosition": 0.514872,
-      "minPosition": -0.671952,
-      "name": "HeadPitch",
-      "transformID": 80,
-      "type": "RotationalMotor"
-    },
+      "transformID": 404, 
+      "name": "LPhalanx3", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
     {
-      "name": "HeadPitchS",
-      "transformID": 80,
-      "type": "PositionSensor"
-    },
+      "transformID": 432, 
+      "name": "LPhalanx4", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
     {
-      "name": "CameraTop",
-      "transformID": 80,
-      "transformOffset": "0.05871 0 0.06364",
-      "type": "Camera"
-    },
+      "transformID": 442, 
+      "name": "LPhalanx5", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
     {
-      "name": "CameraBottom",
-      "transformID": 80,
-      "transformOffset": "0.05071 0 0.01774",
-      "type": "Camera"
-    },
+      "transformID": 452, 
+      "name": "LPhalanx6", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
     {
-      "colors": [],
-      "gradual": true,
-      "name": "Face/Led/Right",
-      "transformID": 99,
-      "type": "LED"
-    },
+      "transformID": 480, 
+      "name": "LPhalanx7", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
     {
-      "colors": [],
-      "gradual": true,
-      "name": "Face/Led/Left",
-      "transformID": 105,
-      "type": "LED"
-    },
+      "transformID": 490, 
+      "name": "LPhalanx8", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
     {
+      "transformID": 347, 
+      "name": "LShoulderPitch", 
+      "maxPosition": 2.08567, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.08567, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 347, 
+      "name": "LShoulderRoll", 
+      "maxPosition": 1.32645, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.314159, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": 378, 
+      "name": "LWristYaw", 
+      "maxPosition": 1.82387, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.82387, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 611, 
+      "name": "RAnklePitch", 
+      "maxPosition": 0.932006, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.1863, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 621, 
+      "name": "RAnkleRoll", 
+      "maxPosition": 0.785922, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.388685, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 171, 
+      "name": "RElbowRoll", 
+      "maxPosition": 1.54462, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": 166, 
+      "name": "RElbowYaw", 
+      "maxPosition": 2.08567, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.08567, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 576, 
+      "name": "RHipPitch", 
+      "maxPosition": 0.48398, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.77378, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 561, 
+      "name": "RHipRoll", 
+      "maxPosition": 0.449597, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.738274, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 546, 
+      "name": "RHipYawPitch", 
+      "maxPosition": 0.740718, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.14529, 
+      "axis": "0 0.707107 0.707107"
+    }, 
+    {
+      "transformID": 591, 
+      "name": "RKneePitch", 
+      "maxPosition": 2.11255, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.0923279, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 181, 
+      "name": "RPhalanx1", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": 192, 
+      "name": "RPhalanx2", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": 202, 
+      "name": "RPhalanx3", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": 230, 
+      "name": "RPhalanx4", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": 240, 
+      "name": "RPhalanx5", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": 250, 
+      "name": "RPhalanx6", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": 278, 
+      "name": "RPhalanx7", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 288, 
+      "name": "RPhalanx8", 
+      "maxPosition": 1, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 145, 
+      "name": "RShoulderPitch", 
+      "maxPosition": 2.08567, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.08567, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 145, 
+      "name": "RShoulderRoll", 
+      "maxPosition": 0.314159, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.32645, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": 176, 
+      "name": "RWristYaw", 
+      "maxPosition": 1.82387, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.82387, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 36, 
+      "gradual": true, 
+      "colors": [], 
+      "type": "LED", 
+      "name": "ChestBoard/Led"
+    }, 
+    {
+      "transformID": 117, 
+      "gradual": true, 
       "colors": [
         "0 0 1"
-      ],
-      "gradual": true,
-      "name": "Ears/Led/Right",
-      "transformID": 111,
-      "type": "LED"
-    },
+      ], 
+      "type": "LED", 
+      "name": "Ears/Led/Left"
+    }, 
     {
+      "transformID": 111, 
+      "gradual": true, 
       "colors": [
         "0 0 1"
-      ],
-      "gradual": true,
-      "name": "Ears/Led/Left",
-      "transformID": 117,
-      "type": "LED"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 2.08567,
-      "minPosition": -2.08567,
-      "name": "RShoulderPitch",
-      "transformID": 145,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RShoulderPitchS",
-      "transformID": 145,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 0 1",
-      "maxPosition": 0.314159,
-      "minPosition": -1.32645,
-      "name": "RShoulderRoll",
-      "transformID": 145,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RShoulderRollS",
-      "transformID": 145,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 2.08567,
-      "minPosition": -2.08567,
-      "name": "RElbowYaw",
-      "transformID": 166,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RElbowYawS",
-      "transformID": 166,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 0 1",
-      "maxPosition": 1.54462,
-      "minPosition": 0,
-      "name": "RElbowRoll",
-      "transformID": 171,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RElbowRollS",
-      "transformID": 171,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 1.82387,
-      "minPosition": -1.82387,
-      "name": "RWristYaw",
-      "transformID": 176,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RWristYawS",
-      "transformID": 176,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx1",
-      "transformID": 181,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx1S",
-      "transformID": 181,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx2",
-      "transformID": 192,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx2S",
-      "transformID": 192,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx3",
-      "transformID": 202,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx3S",
-      "transformID": 202,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx4",
-      "transformID": 230,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx4S",
-      "transformID": 230,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx5",
-      "transformID": 240,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx5S",
-      "transformID": 240,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx6",
-      "transformID": 250,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx6S",
-      "transformID": 250,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx7",
-      "transformID": 278,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx7S",
-      "transformID": 278,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "RPhalanx8",
-      "transformID": 288,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RPhalanx8S",
-      "transformID": 288,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 2.08567,
-      "minPosition": -2.08567,
-      "name": "LShoulderPitch",
-      "transformID": 347,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LShoulderPitchS",
-      "transformID": 347,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 0 1",
-      "maxPosition": 1.32645,
-      "minPosition": -0.314159,
-      "name": "LShoulderRoll",
-      "transformID": 347,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LShoulderRollS",
-      "transformID": 347,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 2.08567,
-      "minPosition": -2.08567,
-      "name": "LElbowYaw",
-      "transformID": 368,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LElbowYawS",
-      "transformID": 368,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 0 1",
-      "maxPosition": 0,
-      "minPosition": -1.54462,
-      "name": "LElbowRoll",
-      "transformID": 373,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LElbowRollS",
-      "transformID": 373,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 1.82387,
-      "minPosition": -1.82387,
-      "name": "LWristYaw",
-      "transformID": 378,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LWristYawS",
-      "transformID": 378,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx1",
-      "transformID": 383,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx1S",
-      "transformID": 383,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx2",
-      "transformID": 394,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx2S",
-      "transformID": 394,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx3",
-      "transformID": 404,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx3S",
-      "transformID": 404,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx4",
-      "transformID": 432,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx4S",
-      "transformID": 432,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx5",
-      "transformID": 442,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx5S",
-      "transformID": 442,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 -1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx6",
-      "transformID": 452,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx6S",
-      "transformID": 452,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx7",
-      "transformID": 480,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx7S",
-      "transformID": 480,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 1,
-      "minPosition": 0,
-      "name": "LPhalanx8",
-      "transformID": 490,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LPhalanx8S",
-      "transformID": 490,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 0.707107 0.707107",
-      "maxPosition": 0.740718,
-      "minPosition": -1.14529,
-      "name": "RHipYawPitch",
-      "transformID": 546,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RHipYawPitchS",
-      "transformID": 546,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 0.449597,
-      "minPosition": -0.738274,
-      "name": "RHipRoll",
-      "transformID": 561,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RHipRollS",
-      "transformID": 561,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 0.48398,
-      "minPosition": -1.77378,
-      "name": "RHipPitch",
-      "transformID": 576,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RHipPitchS",
-      "transformID": 576,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 2.11255,
-      "minPosition": -0.0923279,
-      "name": "RKneePitch",
-      "transformID": 591,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RKneePitchS",
-      "transformID": 591,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 0.932006,
-      "minPosition": -1.1863,
-      "name": "RAnklePitch",
-      "transformID": 611,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RAnklePitchS",
-      "transformID": 611,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 0.785922,
-      "minPosition": -0.388685,
-      "name": "RAnkleRoll",
-      "transformID": 621,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "RAnkleRollS",
-      "transformID": 621,
-      "type": "PositionSensor"
-    },
-    {
-      "name": "RFsr",
-      "transformID": 621,
-      "transformOffset": "0.02 -0.007 -0.041",
-      "type": "TouchSensor"
-    },
-    {
-      "colors": [],
-      "gradual": true,
-      "name": "RFoot/Led",
-      "transformID": 636,
-      "type": "LED"
-    },
-    {
-      "name": "RFoot/Bumper/Right",
-      "transformID": 642,
-      "type": "TouchSensor"
-    },
-    {
-      "name": "RFoot/Bumper/Left",
-      "transformID": 650,
-      "type": "TouchSensor"
-    },
-    {
-      "axis": "0 0.707107 -0.707107",
-      "maxPosition": 0.740718,
-      "minPosition": -1.14529,
-      "name": "LHipYawPitch",
-      "transformID": 678,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LHipYawPitchS",
-      "transformID": 678,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 0.79046,
-      "minPosition": -0.379435,
-      "name": "LHipRoll",
-      "transformID": 693,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LHipRollS",
-      "transformID": 693,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 0.48398,
-      "minPosition": -1.77378,
-      "name": "LHipPitch",
-      "transformID": 708,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LHipPitchS",
-      "transformID": 708,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 2.11255,
-      "minPosition": -0.0923279,
-      "name": "LKneePitch",
-      "transformID": 723,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LKneePitchS",
-      "transformID": 723,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "0 1 0",
-      "maxPosition": 0.922581,
-      "minPosition": -1.18944,
-      "name": "LAnklePitch",
-      "transformID": 743,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LAnklePitchS",
-      "transformID": 743,
-      "type": "PositionSensor"
-    },
-    {
-      "axis": "1 0 0",
-      "maxPosition": 0.397761,
-      "minPosition": -0.768992,
-      "name": "LAnkleRoll",
-      "transformID": 753,
-      "type": "RotationalMotor"
-    },
-    {
-      "name": "LAnkleRollS",
-      "transformID": 753,
-      "type": "PositionSensor"
-    },
-    {
-      "name": "LFsr",
-      "transformID": 753,
-      "transformOffset": "0.02 0.007 -0.041",
-      "type": "TouchSensor"
-    },
-    {
-      "colors": [],
-      "gradual": true,
-      "name": "LFoot/Led",
-      "transformID": 768,
-      "type": "LED"
-    },
-    {
-      "name": "LFoot/Bumper/Left",
-      "transformID": 774,
-      "type": "TouchSensor"
-    },
-    {
-      "name": "LFoot/Bumper/Right",
-      "transformID": 782,
-      "type": "TouchSensor"
+      ], 
+      "type": "LED", 
+      "name": "Ears/Led/Right"
+    }, 
+    {
+      "transformID": 105, 
+      "gradual": true, 
+      "colors": [], 
+      "type": "LED", 
+      "name": "Face/Led/Left"
+    }, 
+    {
+      "transformID": 99, 
+      "gradual": true, 
+      "colors": [], 
+      "type": "LED", 
+      "name": "Face/Led/Right"
+    }, 
+    {
+      "transformID": 768, 
+      "gradual": true, 
+      "colors": [], 
+      "type": "LED", 
+      "name": "LFoot/Led"
+    }, 
+    {
+      "transformID": 636, 
+      "gradual": true, 
+      "colors": [], 
+      "type": "LED", 
+      "name": "RFoot/Led"
+    }, 
+    {
+      "transformID": 13, 
+      "transformOffset": "-0.008 0.00606 0.027", 
+      "type": "Accelerometer", 
+      "name": "accelerometer"
+    }, 
+    {
+      "transformID": 80, 
+      "transformOffset": "0.05071 0 0.01774", 
+      "type": "Camera", 
+      "name": "CameraBottom"
+    }, 
+    {
+      "transformID": 80, 
+      "transformOffset": "0.05871 0 0.06364", 
+      "type": "Camera", 
+      "name": "CameraTop"
+    }, 
+    {
+      "transformID": 13, 
+      "type": "Emitter", 
+      "name": "emitter"
+    }, 
+    {
+      "transformID": 13, 
+      "type": "GPS", 
+      "name": "gps"
+    }, 
+    {
+      "transformID": 13, 
+      "transformOffset": "-0.008 0.006 0.029", 
+      "type": "Gyro", 
+      "name": "gyro"
+    }, 
+    {
+      "transformID": 80, 
+      "type": "PositionSensor", 
+      "name": "HeadPitchS"
+    }, 
+    {
+      "transformID": 80, 
+      "type": "PositionSensor", 
+      "name": "HeadYawS"
+    }, 
+    {
+      "transformID": 13, 
+      "transformOffset": "-0.008 0.006 0.029", 
+      "type": "InertialUnit", 
+      "name": "inertial unit"
+    }, 
+    {
+      "transformID": 743, 
+      "type": "PositionSensor", 
+      "name": "LAnklePitchS"
+    }, 
+    {
+      "transformID": 753, 
+      "type": "PositionSensor", 
+      "name": "LAnkleRollS"
+    }, 
+    {
+      "transformID": 373, 
+      "type": "PositionSensor", 
+      "name": "LElbowRollS"
+    }, 
+    {
+      "transformID": 368, 
+      "type": "PositionSensor", 
+      "name": "LElbowYawS"
+    }, 
+    {
+      "transformID": 774, 
+      "type": "TouchSensor", 
+      "name": "LFoot/Bumper/Left"
+    }, 
+    {
+      "transformID": 782, 
+      "type": "TouchSensor", 
+      "name": "LFoot/Bumper/Right"
+    }, 
+    {
+      "transformID": 753, 
+      "transformOffset": "0.02 0.007 -0.041", 
+      "type": "TouchSensor", 
+      "name": "LFsr"
+    }, 
+    {
+      "transformID": 708, 
+      "type": "PositionSensor", 
+      "name": "LHipPitchS"
+    }, 
+    {
+      "transformID": 693, 
+      "type": "PositionSensor", 
+      "name": "LHipRollS"
+    }, 
+    {
+      "transformID": 678, 
+      "type": "PositionSensor", 
+      "name": "LHipYawPitchS"
+    }, 
+    {
+      "transformID": 723, 
+      "type": "PositionSensor", 
+      "name": "LKneePitchS"
+    }, 
+    {
+      "transformID": 383, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx1S"
+    }, 
+    {
+      "transformID": 394, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx2S"
+    }, 
+    {
+      "transformID": 404, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx3S"
+    }, 
+    {
+      "transformID": 432, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx4S"
+    }, 
+    {
+      "transformID": 442, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx5S"
+    }, 
+    {
+      "transformID": 452, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx6S"
+    }, 
+    {
+      "transformID": 480, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx7S"
+    }, 
+    {
+      "transformID": 490, 
+      "type": "PositionSensor", 
+      "name": "LPhalanx8S"
+    }, 
+    {
+      "transformID": 347, 
+      "type": "PositionSensor", 
+      "name": "LShoulderPitchS"
+    }, 
+    {
+      "transformID": 347, 
+      "type": "PositionSensor", 
+      "name": "LShoulderRollS"
+    }, 
+    {
+      "transformID": 378, 
+      "type": "PositionSensor", 
+      "name": "LWristYawS"
+    }, 
+    {
+      "transformID": 611, 
+      "type": "PositionSensor", 
+      "name": "RAnklePitchS"
+    }, 
+    {
+      "transformID": 621, 
+      "type": "PositionSensor", 
+      "name": "RAnkleRollS"
+    }, 
+    {
+      "transformID": 13, 
+      "type": "Receiver", 
+      "name": "receiver"
+    }, 
+    {
+      "transformID": 171, 
+      "type": "PositionSensor", 
+      "name": "RElbowRollS"
+    }, 
+    {
+      "transformID": 166, 
+      "type": "PositionSensor", 
+      "name": "RElbowYawS"
+    }, 
+    {
+      "transformID": 650, 
+      "type": "TouchSensor", 
+      "name": "RFoot/Bumper/Left"
+    }, 
+    {
+      "transformID": 642, 
+      "type": "TouchSensor", 
+      "name": "RFoot/Bumper/Right"
+    }, 
+    {
+      "transformID": 621, 
+      "transformOffset": "0.02 -0.007 -0.041", 
+      "type": "TouchSensor", 
+      "name": "RFsr"
+    }, 
+    {
+      "transformID": 576, 
+      "type": "PositionSensor", 
+      "name": "RHipPitchS"
+    }, 
+    {
+      "transformID": 561, 
+      "type": "PositionSensor", 
+      "name": "RHipRollS"
+    }, 
+    {
+      "transformID": 546, 
+      "type": "PositionSensor", 
+      "name": "RHipYawPitchS"
+    }, 
+    {
+      "transformID": 591, 
+      "type": "PositionSensor", 
+      "name": "RKneePitchS"
+    }, 
+    {
+      "transformID": 181, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx1S"
+    }, 
+    {
+      "transformID": 192, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx2S"
+    }, 
+    {
+      "transformID": 202, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx3S"
+    }, 
+    {
+      "transformID": 230, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx4S"
+    }, 
+    {
+      "transformID": 240, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx5S"
+    }, 
+    {
+      "transformID": 250, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx6S"
+    }, 
+    {
+      "transformID": 278, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx7S"
+    }, 
+    {
+      "transformID": 288, 
+      "type": "PositionSensor", 
+      "name": "RPhalanx8S"
+    }, 
+    {
+      "transformID": 145, 
+      "type": "PositionSensor", 
+      "name": "RShoulderPitchS"
+    }, 
+    {
+      "transformID": 145, 
+      "type": "PositionSensor", 
+      "name": "RShoulderRollS"
+    }, 
+    {
+      "transformID": 176, 
+      "type": "PositionSensor", 
+      "name": "RWristYawS"
+    }, 
+    {
+      "transformID": 67, 
+      "type": "DistanceSensor", 
+      "name": "Sonar/Left"
+    }, 
+    {
+      "transformID": 55, 
+      "type": "DistanceSensor", 
+      "name": "Sonar/Right"
+    }, 
+    {
+      "transformID": 13, 
+      "type": "Emitter", 
+      "name": "super_emitter"
     }
-  ],
-  "name": "nao"
+  ]
 }

@@ -529,7 +529,7 @@ function toggleDeviceComponent(robot) {
 }
 
 function sliderMotorCallback(robot, slider) {
-  var view3d = document.querySelector('#' + robot + '-robot');
+  var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-transform-id') + ']');
 
   var angle = 0.0;
@@ -547,7 +547,7 @@ function sliderMotorCallback(robot, slider) {
 }
 
 function unhighlightX3DElement(robot) {
-  var view3d = document.querySelector('#' + robot + '-robot');
+  var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var billboards = view3d.querySelectorAll('Transform[highlighted]');
   for (var b = 0; b < billboards.length; b++) {
     var billboard = billboards[b];
@@ -565,7 +565,7 @@ function unhighlightX3DElement(robot) {
 function highlightX3DElement(robot, deviceElement) {
   unhighlightX3DElement(robot);
 
-  var view3d = document.querySelector('#' + robot + '-robot');
+  var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var id = deviceElement.getAttribute('webots-transform-id');
   var transform = view3d.querySelector('[id=n' + id + ']');
   if (transform) {
@@ -601,10 +601,10 @@ function highlightX3DElement(robot, deviceElement) {
 }
 
 function createRobotComponent(view) {
-  var webotsViewElements = document.querySelectorAll('.robot');
+  var webotsViewElements = document.querySelectorAll('.robot-webots-view');
   for (var e = 0; e < webotsViewElements.length; e++) { // foreach robot components of this page.
     var webotsViewElement = webotsViewElements[e];
-    var robotName = webotsViewElement.getAttribute('id').replace('-robot', '');
+    var robotName = webotsViewElement.getAttribute('id').replace('-robot-webots-view', '');
     var webotsView = new webots.View(webotsViewElement);
     webotsView.onready = function() { // When Webots View has been successfully loaded.
       // correct the URL textures.
@@ -613,7 +613,7 @@ function createRobotComponent(view) {
       var viewpoint = webotsViewElement.querySelector('Viewpoint');
       viewpoint.setAttribute('initialOrientation', viewpoint.getAttribute('orientation'));
       viewpoint.setAttribute('initialPosition', viewpoint.getAttribute('position'));
-      // Rough estimation of the robot scale.
+      // Rough estimation of the robot scale: 2 * max translation component.
       var robotScale = 0.05;
       var transforms = webotsViewElement.querySelectorAll('transform');
       for (var t = 0; t < transforms.length; t++) {

@@ -221,7 +221,7 @@ showdown.extension('wbRobotComponent', function() {
             replacement =
               '<div id="%ROBOT%-robot-component" class="robot-component">\n' +
               '  <div id="%ROBOT%-robot-view" class="robot-view">\n' +
-              '    <div id="%ROBOT%-robot" class="robot">\n' +
+              '    <div id="%ROBOT%-robot-webots-view" class="robot-webots-view">\n' +
               '    </div>\n' +
               '    <div class="menu">\n' +
               '      <div class="menu-items">\n' +

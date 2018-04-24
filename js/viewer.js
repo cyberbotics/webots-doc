@@ -579,7 +579,7 @@ function highlightX3DElement(robot, deviceElement) {
       }
     }
 
-    var scale = parseFloat(view3d.querySelector('Viewpoint').getAttribute('robotScale')) / 15.0;
+    var scale = parseFloat(view3d.querySelector('Viewpoint').getAttribute('robotScale')) / 20.0;
     var billboard = document.createElement('Transform');
     billboard.setAttribute('highlighted', 'true');
     if (deviceElement.hasAttribute('webots-transform-offset'))
@@ -589,7 +589,7 @@ function highlightX3DElement(robot, deviceElement) {
       '<Billboard axisOfRotation="0 0 0">\n' +
       '  <Shape>\n' +
       '    <Appearance sortType="transparent" sortKey="10000">\n' +
-      '      <Material transparency="0.4"></Material>\n' +
+      '      <Material transparency="0.7"></Material>\n' +
       '      <DepthMode depthfunc="always"></DepthMode>\n' +
       '      <ImageTexture url="' + computeTargetPath() + '../css/images/center.png"></ImageTexture>\n' +
       '    </Appearance>\n' +

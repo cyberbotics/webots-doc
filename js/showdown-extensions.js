@@ -209,20 +209,20 @@ showdown.extension('wbRobotComponent', function() {
       type: 'lang',
       filter: function(text, converter, options) {
         text = text.replace(/%robot\s+([^\n]+)/gi, function(match, robot) {
-          var replacement = `
-            <div id="%ROBOT%-robot-component" class="robot-component">
-              <div id="%ROBOT%-robot-view" class="robot-view">
-                <div id="%ROBOT%-robot" class="robot">
-                </div>
-                <div class="menu">
-                  <div class="menu-items">
-                    <button title="Reset the robot component." onclick="resetRobotComponent('%ROBOT%')">&#x2731;</button>
-                    <button title="Show/Hide the device component." onclick="toggleDeviceComponent('%ROBOT%')">&#9776;</button>
-                  </div>
-                </div>
-              </div>
-              <div id="%ROBOT%-device-component" class="device-component"></div>
-            </div>`;
+          var replacement =
+            '<div id="%ROBOT%-robot-component" class="robot-component">\n' +
+            '  <div id="%ROBOT%-robot-view" class="robot-view">\n' +
+            '    <div id="%ROBOT%-robot" class="robot">\n' +
+            '    </div>\n' +
+            '    <div class="menu">\n' +
+            '      <div class="menu-items">\n' +
+            '        <button title="Reset the robot component." onclick="resetRobotComponent(\'%ROBOT%\')">&#x2731;</button>\n' +
+            '        <button title="Show/Hide the device component." onclick="toggleDeviceComponent(\'%ROBOT%\')">&#9776;</button>\n' +
+            '      </div>\n' +
+            '    </div>\n' +
+            '  </div>\n' +
+            '  <div id="%ROBOT%-device-component" class="device-component"></div>\n' +
+            '</div>\n';
           replacement = replacement.replace(/%ROBOT%/g, robot).replace(/ {12}/g, '');
           return replacement;
         });

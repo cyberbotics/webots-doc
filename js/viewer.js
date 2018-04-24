@@ -585,18 +585,17 @@ function highlightX3DElement(robot, deviceElement) {
     if (deviceElement.hasAttribute('webots-transform-offset'))
       billboard.setAttribute('translation', deviceElement.getAttribute('webots-transform-offset'));
 
-    billboard.innerHTML = `
-      <Billboard axisOfRotation="0 0 0">
-        <Shape>
-          <Appearance sortType="transparent" sortKey="10000">
-            <Material transparency="0.4"></Material>
-            <DepthMode depthfunc="always"></DepthMode>
-            <ImageTexture url="` + computeTargetPath() + `../css/images/center.png"></ImageTexture>
-          </Appearance>
-          <Plane size="` + scale + ` ` + scale + `"></Plane>
-        </Shape>
-      </Billboard>
-    `;
+    billboard.innerHTML =
+      '<Billboard axisOfRotation="0 0 0">\n' +
+      '  <Shape>\n' +
+      '    <Appearance sortType="transparent" sortKey="10000">\n' +
+      '      <Material transparency="0.4"></Material>\n' +
+      '      <DepthMode depthfunc="always"></DepthMode>\n' +
+      '      <ImageTexture url="' + computeTargetPath() + '../css/images/center.png"></ImageTexture>\n' +
+      '    </Appearance>\n' +
+      '    <Plane size="' + scale + ' ' + scale + '"></Plane>\n' +
+      '  </Shape>\n' +
+      '</Billboard>\n';
     transform.appendChild(billboard);
   }
 }

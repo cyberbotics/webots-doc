@@ -642,6 +642,7 @@
 
 .webots-doc iframe {
   width: 70%;
+  height: 400px;
   margin: 30px auto;
   display: block;
 }

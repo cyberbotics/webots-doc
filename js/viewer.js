@@ -535,8 +535,8 @@ function sliderMotorCallback(robot, slider) {
   var angle = 0.0;
   if (transform.hasAttribute('initalAngle')) // Get initial angle.
     angle = parseFloat(transform.getAttribute('initalAngle'));
-  else { // Store initial angle.
-    angle = parseFloat(transform.getAttribute('rotation').split(' ')[3]);
+  else if (transform.hasAttribute('rotation')) { // Store initial angle.
+    angle = parseFloat(transform.getAttribute('rotation').split(/[\s,]+/)[3]);
     transform.setAttribute('initalAngle', angle);
   }
   angle += parseFloat(slider.value); // Add the slider value.

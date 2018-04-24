@@ -33,7 +33,7 @@ Version 5.0 does not exist without articulated fingers, so the only possible val
 
 ### Using Webots with Choregraphe
 
-These instructions have been tested with Webots R2018a and Choregraphe 2.4.1.
+These instructions have been tested with Webots R2018a and Choregraphe 2.1.4.
 Please note that Webots must not be launched as root when using any world containing naoqisim, otherwise Choregraphe won't be able to send instructions to the robot in Webots.
 
 Start Webots and open this world file: "WEBOTS\_HOME/projects/robots/aldebaran/worlds/nao.wbt" You should see a red Nao in an empty environment.

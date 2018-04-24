@@ -260,12 +260,12 @@ The `<device_name>` should be replaced by the actual name of the device and each
 
 ### Mouse
 
-| name                                                              | service/topic | data type                                  | data type definition                                                                   |
-| ----------------------------------------------------------------- | ------------- | ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [/mouse/key](mouse.md#wb_mouse_enable)                   | topic         | webots\_ros::Int32Stamped                   | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int32 data |
-| [/mouse/enable](mouse.md#wb_mouse_enable)                | service       | [webots\_ros::set\_int](#common-services)  |                                                                                        |
-| [/mouse/get\_sampling\_period](mouse.md#wb_mouse_enable) | service       | [webots\_ros::get\_int](#common-services)  |                                                                                        |
-| [/mouse/get\_state](mouse.md#wb_mouse_enable) | service       | webots\_ros::sensor\_get\_state | uint8 ask<br/>---<br/>uint8 x<br/>uint8 y<br/>uint8 z<br/>float64 x<br/>float64 y<br/>float64 z                                                    |
+| name                                                              | service/topic | data type                                  | data type definition                                                                                                                    |
+| ----------------------------------------------------------------- | ------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [/mouse/key](mouse.md#wb_mouse_enable)                            | topic         | webots\_ros::Int32Stamped                  | [Header](http://docs.ros.org/api/std_msgs/html/msg/Header.html) header<br/>int32 data                                                   |
+| [/mouse/enable](mouse.md#wb_mouse_enable)                         | service       | [webots\_ros::set\_int](#common-services)  |                                                                                                                                         |
+| [/mouse/get\_sampling\_period](mouse.md#wb_mouse_enable)          | service       | [webots\_ros::get\_int](#common-services)  |                                                                                                                                         |
+| [/mouse/get\_state](mouse.md#wb_mouse_enable)                     | service       | webots\_ros::sensor\_get\_state            | uint8 ask<br/>---<br/>uint8 left<br/>uint8 middle<br/>uint8 right<br/>float64 u<br/>float64 v<br/>float64 x<br/>float64 y<br/>float64 z |
 
 ### Pen
 

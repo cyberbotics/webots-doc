@@ -543,6 +543,8 @@ The following tables describe the Java classes and their methods.
 | &nbsp;&nbsp; public double [getLeft](mouse.md#wbmousestate)();   |
 | &nbsp;&nbsp; public double [getMiddle](mouse.md#wbmousestate)(); |
 | &nbsp;&nbsp; public double [getRight](mouse.md#wbmousestate)();  |
+| &nbsp;&nbsp; public double [getU](mouse.md#wbmousestate)();      |
+| &nbsp;&nbsp; public double [getV](mouse.md#wbmousestate)();      |
 | &nbsp;&nbsp; public double [getX](mouse.md#wbmousestate)();      |
 | &nbsp;&nbsp; public double [getY](mouse.md#wbmousestate)();      |
 | &nbsp;&nbsp; public double [getZ](mouse.md#wbmousestate)();      |

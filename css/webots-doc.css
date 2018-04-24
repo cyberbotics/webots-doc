@@ -454,7 +454,7 @@
 .robot-component .webots3DView {
   height: 100%;
 }
-.robot-component .robot {
+.robot-component .robot-webots-view {
   height: 100%;
   display: block;
 }

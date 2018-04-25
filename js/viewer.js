@@ -682,8 +682,9 @@ function createRobotComponent(view) {
               minLabel.innerHTML = -3.14; // 2 decimals.
               maxLabel.innerHTML = 3.14;
             } else { // fixed range.
-              slider.setAttribute('min', device['minPosition']);
-              slider.setAttribute('max', device['maxPosition']);
+              var epsilon = 0.000001; // To solve Windows browser bugs on slider when perfectly equals to 0.
+              slider.setAttribute('min', device['minPosition'] - epsilon);
+              slider.setAttribute('max', device['maxPosition'] + epsilon);
               minLabel.innerHTML = Math.round(device['minPosition'] * 100) / 100; // 2 decimals.
               maxLabel.innerHTML = Math.round(device['maxPosition'] * 100) / 100;
             }

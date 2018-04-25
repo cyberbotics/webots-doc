@@ -22,6 +22,11 @@ if (typeof String.prototype.endsWith !== 'function') {
   };
 }
 
+function isInternetExplorer() {
+  var userAgent = navigator.userAgent;
+  return userAgent.indexOf('MSIE') !== -1 || userAgent.indexOf('Trident') !== -1;
+};
+
 var localSetup = (typeof setup === 'undefined') ? {} : setup;
 
 var isCyberboticsUrl = location.href.indexOf('cyberbotics.com/doc') !== -1;
@@ -691,7 +696,12 @@ function createRobotComponent(view) {
             slider.setAttribute('value', 0);
             slider.setAttribute('webots-transform-id', device['transformID']);
             slider.setAttribute('webots-axis', device['axis']);
-            slider.setAttribute('oninput', 'sliderMotorCallback("' + robotName + '", this)');
+            if (isInternetExplorer()) {
+              slider.addEventListener('input', function(e) {
+                sliderMotorCallback(robotName, e.target);
+              });
+            } else
+              slider.setAttribute('oninput', 'sliderMotorCallback("' + robotName + '", this)');
 
             var motorDiv = document.createElement('div');
             motorDiv.classList.add('motor-component');

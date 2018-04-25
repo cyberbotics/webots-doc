@@ -534,27 +534,81 @@
 .robot-component .motor-slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 2px;
-  margin: 10px;
-  background: #d3d3d3;
+  background-color: transparent;
+}
+.robot-component .motor-slider:focus {
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+}
+.robot-component .motor-slider::-webkit-slider-runnable-track {
+  margin: 18px 0;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ddd;
+  border: none;
 }
 .robot-component .motor-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
+  border: none;
   height: 12px;
+  width: 12px;
+  background: #333;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+.robot-component .motor-slider:focus::-webkit-slider-runnable-track {
+  background: #ddd;
+}
+.robot-component .motor-slider::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-moz-range-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
+  background: #333;
+  cursor: pointer;
+  border-radius: 0;
+ }
+.robot-component .motor-slider::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.robot-component .motor-slider::-ms-fill-lower {
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-ms-fill-upper {
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-ms-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
   background: #333;
   cursor: pointer;
 }
-.robot-component .motor-slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #333;
-  cursor: pointer;
+.robot-component .motor-slider::-ms-tooltip {
+  display: none;
+}
+.robot-component .motor-slider:focus::-ms-fill-lower {
+  background: #ddd;
+}
+.robot-component .motor-slider:focus::-ms-fill-upper {
+  background: #ddd;
 }
 
 /*---------------------*

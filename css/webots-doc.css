@@ -473,20 +473,21 @@
   outline: 0;
   width: 30px;
   height: 30px;
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  background-color: #444;
-}
-.robot-component .menu button:hover {
-  background-color: #5a90a2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .robot-component .menu .reset-button {
-  mask: url(../css/images/reset.svg) no-repeat 50% 50%;
-  -webkit-mask: url(../css/images/reset.svg) no-repeat 50% 50%;
+  background-image: url(../css/images/reset.png);
 }
 .robot-component .menu .menu-button {
-  mask: url(../css/images/menu.svg) no-repeat 50% 50%;
-  -webkit-mask: url(../css/images/menu.svg) no-repeat 50% 50%;
+  background-image: url(../css/images/menu.png);
+}
+.robot-component .menu .reset-button:hover {
+  background-image: url(../css/images/reset_hover.png);
+}
+.robot-component .menu .menu-button:hover {
+  background-image: url(../css/images/menu_hover.png);
 }
 .robot-component .device-component {
   width: 30%;

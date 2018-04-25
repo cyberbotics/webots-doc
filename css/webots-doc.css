@@ -473,6 +473,7 @@
   outline: 0;
   width: 30px;
   height: 30px;
+  background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

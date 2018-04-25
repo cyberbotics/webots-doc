@@ -33,7 +33,7 @@ Version 5.0 does not exist without articulated fingers, so the only possible val
 
 ### Using Webots with Choregraphe
 
-These instructions have been tested with Webots 8.0.0 and Choregraphe 2.1.1.10.
+These instructions have been tested with Webots R2018a and Choregraphe 2.1.4.
 Please note that Webots must not be launched as root when using any world containing naoqisim, otherwise Choregraphe won't be able to send instructions to the robot in Webots.
 
 Start Webots and open this world file: "WEBOTS\_HOME/projects/robots/aldebaran/worlds/nao.wbt" You should see a red Nao in an empty environment.
@@ -42,6 +42,13 @@ If the simulation is paused, then please start it by pushing the `Real-time` but
 The camera images in Webots (small purple viewports) should reflect what the robot sees.
 
 Several lines of text information corresponding to the output of NAOqi should be printed to Webots console.
+Also, a couple of harmless error messages may be displayed, you can safely ignore them:
+```
+[naoqisim] Qt: Untested Windows version 6.2 detected!
+[naoqisim] Error: %1 is not a valid Win32 application.
+[naoqisim]  (dynamic library)
+[naoqisim] Error: failed to load > C:/Program Files/Webots/resources/projects/plugins/robot_windows/generic/generic.dll library
+```
 
 Now you can start Choregraphe with the --no-naoqi option.
 Please make sure the Choregraphe version matches the NAOqi version printed in Webots console.

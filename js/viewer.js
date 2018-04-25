@@ -697,7 +697,7 @@ function createRobotComponent(view) {
             slider.setAttribute('webots-transform-id', device['transformID']);
             slider.setAttribute('webots-axis', device['axis']);
             if (isInternetExplorer()) {
-              slider.addEventListener('input', function(e) {
+              slider.addEventListener('change', function(e) {
                 sliderMotorCallback(robotName, e.target);
               });
             } else

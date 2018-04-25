@@ -1,0 +1,521 @@
+{
+  "name": "aibo-ers7", 
+  "devices": [
+    {
+      "transformID": 55, 
+      "name": "PRM:/r1/c1-Joint2:11", 
+      "maxPosition": 0.0524, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.3963, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 64, 
+      "name": "PRM:/r1/c1/c2-Joint2:12", 
+      "maxPosition": 1.6232, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.6232, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": 68, 
+      "name": "PRM:/r1/c1/c2/c3-Joint2:13", 
+      "maxPosition": 0.8727, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.349, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 163, 
+      "name": "PRM:/r1/c1/c2/c3/c4-Joint2:14", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.0472, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 127, 
+      "name": "PRM:/r1/c1/c2/c3/e5-Joint4:15", 
+      "maxPosition": 0.2618, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": 145, 
+      "name": "PRM:/r1/c1/c2/c3/e6-Joint4:16", 
+      "maxPosition": 0.2618, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": 313, 
+      "name": "PRM:/r2/c1-Joint2:21", 
+      "maxPosition": 2.3562, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.0944, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 323, 
+      "name": "PRM:/r2/c1/c2-Joint2:22", 
+      "maxPosition": 1.6232, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": 333, 
+      "name": "PRM:/r2/c1/c2/c3-Joint2:23", 
+      "maxPosition": 2.2166, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 367, 
+      "name": "PRM:/r3/c1-Joint2:31", 
+      "maxPosition": 2.0944, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.3562, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": 377, 
+      "name": "PRM:/r3/c1/c2-Joint2:32", 
+      "maxPosition": 1.6232, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.2618, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": 387, 
+      "name": "PRM:/r3/c1/c2/c3-Joint2:33", 
+      "maxPosition": 2.2166, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": 209, 
+      "name": "PRM:/r4/c1-Joint2:41", 
+      "maxPosition": 2.3562, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.0944, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 219, 
+      "name": "PRM:/r4/c1/c2-Joint2:42", 
+      "maxPosition": 1.6232, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.2618, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": 229, 
+      "name": "PRM:/r4/c1/c2/c3-Joint2:43", 
+      "maxPosition": 2.2166, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": 263, 
+      "name": "PRM:/r5/c1-Joint2:51", 
+      "maxPosition": 2.0944, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.3562, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": 273, 
+      "name": "PRM:/r5/c1/c2-Joint2:52", 
+      "maxPosition": 1.6232, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.2618, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": 283, 
+      "name": "PRM:/r5/c1/c2/c3-Joint2:53", 
+      "maxPosition": 2.2166, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": 182, 
+      "name": "PRM:/r6/c1-Joint2:61", 
+      "maxPosition": 1.1345, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": 191, 
+      "name": "PRM:/r6/c2-Joint2:62", 
+      "maxPosition": 1.0472, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.0472, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": 13, 
+      "gradual": false, 
+      "colors": [
+        "0 0 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/lu-LED3:lu"
+    }, 
+    {
+      "transformID": 13, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/lv-LED3:lv"
+    }, 
+    {
+      "transformID": 13, 
+      "gradual": false, 
+      "colors": [
+        "1 1 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/lw-LED3:lw"
+    }, 
+    {
+      "transformID": 13, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/lx-LED3:lx"
+    }, 
+    {
+      "transformID": 13, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/ly-LED3:ly"
+    }, 
+    {
+      "transformID": 13, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/lz-LED3:lz"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0.588235 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/l1-LED2:l1"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/l2-LED2:l2"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/l3-LED2:l3"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/l4-LED2:l4"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/l5-LED2:l5"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/l6-LED2:l6"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/la-LED3:la"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lb-LED3:lb"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lc-LED3:lc"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/ld-LED3:ld"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/le-LED3:le"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lf-LED3:lf"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lg-LED3:lg"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lh-LED3:lh"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/li-LED3:li"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lj-LED3:lj"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lk-LED3:lk"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/ll-LED3:ll"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0", 
+        "0 0 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/lm-LED3:lm"
+    }, 
+    {
+      "transformID": 68, 
+      "gradual": false, 
+      "colors": [
+        "1 0 0", 
+        "0 0 1"
+      ], 
+      "type": "LED", 
+      "name": "PRM:/r1/c1/c2/c3/ln-LED3:ln"
+    }, 
+    {
+      "transformID": 13, 
+      "transformOffset": "0 -0.00425 -0.10864", 
+      "type": "DistanceSensor", 
+      "name": "PRM:/p1-Sensor:p1"
+    }, 
+    {
+      "transformID": 68, 
+      "transformOffset": "0 -0.0146 -0.08106", 
+      "type": "Camera", 
+      "name": "PRM:/r1/c1/c2/c3/i1-FbkImageSensor:F1"
+    }, 
+    {
+      "transformID": 68, 
+      "transformOffset": "0.00325 0 -0.0769", 
+      "type": "DistanceSensor", 
+      "name": "PRM:/r1/c1/c2/c3/p1-Sensor:p1"
+    }, 
+    {
+      "transformID": 68, 
+      "transformOffset": "-0.00695 0 -0.0769", 
+      "type": "DistanceSensor", 
+      "name": "PRM:/r1/c1/c2/c3/p2-Sensor:p2"
+    }, 
+    {
+      "transformID": 323, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r2/c1/c2-JointSensor2:22"
+    }, 
+    {
+      "transformID": 333, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r2/c1/c2/c3-JointSensor2:23"
+    }, 
+    {
+      "transformID": 333, 
+      "transformOffset": "0 -0.0658 0.0055", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r2/c1/c2/c3/c4-Sensor:24"
+    }, 
+    {
+      "transformID": 367, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r3/c1-JointSensor2:31"
+    }, 
+    {
+      "transformID": 377, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r3/c1/c2-JointSensor2:32"
+    }, 
+    {
+      "transformID": 387, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r3/c1/c2/c3-JointSensor2:33"
+    }, 
+    {
+      "transformID": 387, 
+      "transformOffset": "0 -0.0676 -0.01409", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r3/c1/c2/c3/c4-Sensor:34"
+    }, 
+    {
+      "transformID": 209, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r4/c1-JointSensor2:41"
+    }, 
+    {
+      "transformID": 219, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r4/c1/c2-JointSensor2:42"
+    }, 
+    {
+      "transformID": 229, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r4/c1/c2/c3-JointSensor2:43"
+    }, 
+    {
+      "transformID": 229, 
+      "transformOffset": "0 -0.0658 0.0055", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r4/c1/c2/c3/c4-Sensor:44"
+    }, 
+    {
+      "transformID": 263, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r5/c1-JointSensor2:51"
+    }, 
+    {
+      "transformID": 273, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r5/c1/c2-JointSensor2:52"
+    }, 
+    {
+      "transformID": 283, 
+      "type": "PositionSensor", 
+      "name": "PRM:/r5/c1/c2/c3-JointSensor2:53"
+    }, 
+    {
+      "transformID": 283, 
+      "transformOffset": "0 -0.0676 -0.014087", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r5/c1/c2/c3/c4-Sensor:54"
+    }, 
+    {
+      "transformID": 313, 
+      "type": "PositionSensor", 
+      "name": "RM:/r2/c1-JointSensor2:21"
+    }
+  ]
+}

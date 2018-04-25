@@ -16,7 +16,7 @@ Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as 
 
 ### Linux
 
-#### Ubuntu 16.04
+#### Ubuntu >= 16.04
 
 ```
 sudo apt-get install python-pip

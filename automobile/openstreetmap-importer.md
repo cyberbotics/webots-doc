@@ -18,14 +18,14 @@ Then install the Python `lxml`, `pyproj`, `shapely` and `webcolors` modules, as 
 
 On Ubuntu 16.04 or newer:
 
-``` shell
+ ```sh
 sudo apt-get install python-pip
 sudo pip install lxml pyproj shapely webcolors configparser
 ```
 
 On Ubuntu 14.04:
 
-``` shell
+ ```sh
 sudo apt-get install python-pip python-dev libgeos-c1 libspatialindex-c3
 sudo pip install lxml pyproj shapely webcolors configparser
 ```

@@ -509,6 +509,7 @@ function highlightCode(view) {
 }
 
 function resetRobotComponent(robot) {
+  unhighlightX3DElement(robot);
   // Reset the Viewpoint and the motor sliders.
   var robotComponent = document.querySelector('#' + robot + '-robot-component');
   var viewpoint = robotComponent.querySelector('Viewpoint');

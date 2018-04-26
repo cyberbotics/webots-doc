@@ -7,7 +7,7 @@
 <NavigationInfo headlight="false" type="NONE"/>
 <Environment shadowExcludeTransparentObjects="true"/>
 <WorldInfo id="n1"/>
-<Viewpoint id="n2" DEF="VIEWPOINT" orientation="-0.24022032 0.9532497 0.18332829 1.350208" position="3.3264532 2.2486968 0.83501077" zNear="0.05" followSmoothness="0.5"/>
+<Viewpoint id="n2" DEF="VIEWPOINT" orientation="-0.24022032 0.9532497 0.18332829 1.350208" position="3.6056755 2.3431053 1.0494056" zNear="0.05" followSmoothness="0.5"/>
 <Background id="n3" skyColor="0.94 0.94 0.94"/>
 <DirectionalLight id="n4" direction="-1 -1 -0.6" intensity="0.6" ambientIntensity="1" shadowIntensity="0.5" shadowMapSize="512" shadowFilterSize="2" shadowCascades="3"/>
 <DirectionalLight id="n5" direction="-0.2 -0.3 0.3" intensity="0.3"/>

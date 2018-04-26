@@ -535,7 +535,7 @@ function toggleDeviceComponent(robot) {
 
 function sliderMotorCallback(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot-webots-view');
-  var transform = view3d.querySelector('[id=n' + slider.getAttribute('webots-transform-id') + ']');
+  var transform = view3d.querySelector('[id=' + slider.getAttribute('webots-transform-id') + ']');
 
   var angle = 0.0;
   if (transform.hasAttribute('initalAngle')) // Get initial angle.
@@ -572,15 +572,20 @@ function highlightX3DElement(robot, deviceElement) {
 
   var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var id = deviceElement.getAttribute('webots-transform-id');
-  var transform = view3d.querySelector('[id=n' + id + ']');
+  var transform = view3d.querySelector('[id=' + id + ']');
   if (transform) {
     if (deviceElement.getAttribute('webots-type') === 'LED') {
-      var materials = transform.querySelectorAll('Material');
-      for (var m = 0; m < materials.length; m++) {
-        var material = materials[m];
-        material.setAttribute('highlighted', 'true');
-        material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
-        material.setAttribute('emissiveColor', deviceElement.getAttribute('targetColor'));
+      var materialsIDs = deviceElement.getAttribute('ledMaterialsIDs').split(' ');
+      for (var m = 0; m < materialsIDs.length; m++) {
+        var materialID = materialsIDs[m];
+        if (materialID) {
+          var material = view3d.querySelector('[id=' + materialID + ']');
+          if (material) {
+            material.setAttribute('highlighted', 'true');
+            material.setAttribute('emissiveColorBack', material.getAttribute('emissiveColor'));
+            material.setAttribute('emissiveColor', deviceElement.getAttribute('targetColor'));
+          }
+        }
       }
     }
 
@@ -712,10 +717,11 @@ function createRobotComponent(view) {
           }
 
           // LED case: set the target color.
-          if (deviceType === 'LED') {
+          if (deviceType === 'LED' && 'ledColors' in device && 'ledMaterialsIDs' in device) {
             // For now, simply take the first color. More complex mechanism could be implemented if required.
-            var targetColor = (device['colors'].length > 0) ? device['colors'][0] : '0 0 1';
+            var targetColor = (device['ledColors'].length > 0) ? device['ledColors'][0] : '0 0 1';
             deviceDiv.setAttribute('targetColor', targetColor);
+            deviceDiv.setAttribute('ledMaterialsIDs', device['ledMaterialsIDs'].join(' '));
           }
 
           category.appendChild(deviceDiv);

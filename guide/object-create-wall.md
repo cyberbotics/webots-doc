@@ -26,6 +26,9 @@ CreateWall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/create_wall/protos/CreateWall.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### CreateWall Field Summary
 
 - `range`: Defines the range of the infra-red emitter.

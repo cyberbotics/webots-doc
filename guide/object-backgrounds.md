@@ -31,6 +31,9 @@ TexturedBackground {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/backgrounds/protos/TexturedBackground.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## TexturedBackgroundLight
 
 Light designed to match the skyboxes in the TexturedBackground PROTO.
@@ -58,15 +61,15 @@ Derived from [DirectionalLight](../reference/directionallight.md).
 TexturedBackgroundLight {
   SFString texture        "noon_sunny_empty"
   SFBool   castShadows    TRUE
-  SFBool   castLensFlares FALSE
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### TexturedBackgroundLight Field Summary
 
 - `castShadows`: Defines whether the light should cast shadows.
-
-- `castLensFlares`: Defines whether the light should cast lens flares.
 

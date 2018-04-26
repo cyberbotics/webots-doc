@@ -1,6 +1,5 @@
-local_index.html
+index.html
 dependencies
 
 *.pyc
 .DS_Store
-

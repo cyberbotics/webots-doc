@@ -41,6 +41,9 @@ TexturedBoxShape {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/shapes/protos/TexturedBoxShape.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### TexturedBoxShape Field Summary
 
 - `size`: Defines the size of the box.

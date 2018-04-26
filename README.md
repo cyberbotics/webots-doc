@@ -26,9 +26,9 @@ Or to a github branch (e.g. `reference_proto`) of any public github repository (
 
 - https://www.cyberbotics.com/doc/guide/index?version=remidhum:reference_proto
 
-## Run the doc offline
+## Run the doc locally
 
-Create or update the local_index.html page:
+Create or update the `index.html` page:
 
 ```sh
 python local_exporter.py
@@ -42,9 +42,9 @@ python -m SimpleHTTPServer
 
 In a browser, open:
 
-- [http://localhost:8000/local_index.html?url=&book=guide](http://localhost:8000/local_index.html?url=&book=guide)
-- [http://localhost:8000/local_index.html?url=&book=reference](http://localhost:8000/local_index.html?url=&book=reference)
-- [http://localhost:8000/local_index.html?url=&book=automobile](http://localhost:8000/local_index.html?url=&book=automobile)
+- [http://localhost:8000/?url=&book=guide](http://localhost:8000/?url=&book=guide)
+- [http://localhost:8000/?url=&book=reference](http://localhost:8000/?url=&book=reference)
+- [http://localhost:8000/?url=&book=automobile](http://localhost:8000/?url=&book=automobile)
 
 
 ## Run the unit tests

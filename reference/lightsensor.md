@@ -33,7 +33,7 @@ Note that the Webots lighting model does not take reflected light nor object col
 The first column contains the input irradiance values in W/m^2.
 The second column represents the corresponding sensor output values in user-defined units.
 The third column specifies the level of noise in percent of the corresponding output value.
-See the section on the [DistanceSensor](distancesensor.md) node for more explanation on how a `lookupTable` works.
+See the section on the [DistanceSensor](distancesensor.md#lookup-table) node for more explanation on how a `lookupTable` works.
 
 - `colorFilter`: specifies an RGB filter that can be used to approximate a physical color filter or spectral response.
 The total RGB irradiance is multiplied by this filter (see formula below) in order to obtain a scalar irradiance value *E* that is then used as the input to the lookup table.

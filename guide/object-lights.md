@@ -31,6 +31,9 @@ CeilingLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/CeilingLight.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### CeilingLight Field Summary
 
 - `bulbColor`: Defines the color of the light bulb.
@@ -82,6 +85,9 @@ FloorLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/lights/protos/FloorLight.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### FloorLight Field Summary
 

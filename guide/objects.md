@@ -21,6 +21,7 @@
   - [Valves](object-factory.md#valves)
 - [Floors](object-floors.md)
 - [Fruits](object-fruits.md)
+- [Garden](object-garden.md)
 - [Geometries](object-geometries.md)
 - [Kitchen](object-kitchen.md)
   - [Breakfast](object-kitchen.md#breakfast)

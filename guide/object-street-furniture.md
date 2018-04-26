@@ -1,5 +1,30 @@
 # Street Furniture
 
+## Atm
+
+An ATM.
+
+%figure
+
+![Atm](images/objects/street_furniture/Atm/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+Atm {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "ATM"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Atm.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
 ## Bench
 
 A bench.
@@ -24,6 +49,9 @@ Bench {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Bench.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Bench Field Summary
 
@@ -60,6 +88,9 @@ BusStop {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/BusStop.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### BusStop Field Summary
 
 - `bench`: Defines whether the bust stop should include a bench.
@@ -71,6 +102,81 @@ BusStop {
 - `externalAdvertisingTexture`: Defines the texture used for the external advertising.
 
 - `advertisingLightOn`: Defines whether the advertising should have an emissive color.
+
+## ClothRecyclingContainer
+
+A cloth recycling container.
+
+%figure
+
+![ClothRecyclingContainer](images/objects/street_furniture/ClothRecyclingContainer/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+ClothRecyclingContainer {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "cloth recycling container"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/ClothRecyclingContainer.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## DrinkingFountain
+
+A drinking fountain.
+
+%figure
+
+![DrinkingFountain](images/objects/street_furniture/DrinkingFountain/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+DrinkingFountain {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "drinking fountain"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/DrinkingFountain.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## ElectricalCabinet
+
+An electrical cabinet.
+
+%figure
+
+![ElectricalCabinet](images/objects/street_furniture/ElectricalCabinet/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+ElectricalCabinet {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "electrical cabinet"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/ElectricalCabinet.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## EmergencyPhone
 
@@ -95,6 +201,9 @@ EmergencyPhone {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/EmergencyPhone.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### EmergencyPhone Field Summary
 
@@ -135,6 +244,9 @@ Fence {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fence.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Fence Field Summary
 
@@ -183,6 +295,9 @@ FireHydrant {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/FireHydrant.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### FireHydrant Field Summary
 
 - `appearance`: Defines the appearance of the fire hydrant.
@@ -212,6 +327,9 @@ Fountain {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Fountain.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Fountain Field Summary
 
 - `height`: Defines the height of the fountain.
@@ -219,6 +337,211 @@ Fountain {
 - `radius`: Defines the radius of the fountain.
 
 - `sudivision`: Defines subdivision of the fountain cylinders.
+
+## GlassRecyclingContainer
+
+A glass recycling container.
+
+%figure
+
+![GlassRecyclingContainer](images/objects/street_furniture/GlassRecyclingContainer/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+GlassRecyclingContainer {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "glass recycling container"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/GlassRecyclingContainer.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## GuardShelter
+
+A guard shelter.
+
+%figure
+
+![GuardShelter](images/objects/street_furniture/GuardShelter/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+GuardShelter {
+  SFVec3f    translation  0 0 0
+  SFRotation rotation     0 1 0 0
+  SFString   name         "guard shelter"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/GuardShelter.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## IceFreezerContainer
+
+An ice freezer container.
+
+%figure
+
+![IceFreezerContainer](images/objects/street_furniture/IceFreezerContainer/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+IceFreezerContainer {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "ice freezer container"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/IceFreezerContainer.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## Mailbox
+
+A mailbox.
+
+%figure
+
+![Mailbox](images/objects/street_furniture/Mailbox/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+Mailbox {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "mailbox"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/Mailbox.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## MetallicTrash
+
+A metallic trash with optional physics.
+
+%figure
+
+![MetallicTrash](images/objects/street_furniture/MetallicTrash/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+MetallicTrash {
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "metallic trash"
+  SFBool     enablePhysics  FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/MetallicTrash.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### MetallicTrash Field Summary
+
+- `enablePhysics`: Defines whether the trash should have physics.
+
+## NewsStand
+
+A news stand.
+
+%figure
+
+![NewsStand](images/objects/street_furniture/NewsStand/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+NewsStand {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "news stand"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/NewsStand.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## OldBench
+
+An old bench.
+
+%figure
+
+![OldBench](images/objects/street_furniture/OldBench/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+OldBench {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "old bench"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/OldBench.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## PhoneBooth
+
+A phone booth.
+
+%figure
+
+![PhoneBooth](images/objects/street_furniture/PhoneBooth/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+PhoneBooth {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "phone booth"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PhoneBooth.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## PublicBin
 
@@ -243,6 +566,9 @@ PublicBin {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicBin.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### PublicBin Field Summary
 
@@ -292,6 +618,9 @@ PublicToilet {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/PublicToilet.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### PublicToilet Field Summary
 
 - `height`: Defines the height of the toilet.
@@ -320,6 +649,136 @@ PublicToilet {
 
 - `frontDisplay`: Defines the content of the front display.
 
+## SimpleBench
+
+A simple bench.
+
+%figure
+
+![SimpleBench](images/objects/street_furniture/SimpleBench/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+SimpleBench {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "simple bench"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/SimpleBench.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## SmallKiosk
+
+A small kiosk.
+
+%figure
+
+![SmallKiosk](images/objects/street_furniture/SmallKiosk/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+SmallKiosk {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "small kiosk"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/SmallKiosk.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## SnackStand
+
+A snack stand.
+
+%figure
+
+![SnackStand](images/objects/street_furniture/SnackStand/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+SnackStand {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "snack stand"
+  SFString   color       "red"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/SnackStand.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### SnackStand Field Summary
+
+- `color`: Defines the color of the stand. The value should be either `red` or `green`.
+
+## StoneBench
+
+A simple bench made of stone.
+
+%figure
+
+![StoneBench](images/objects/street_furniture/StoneBench/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+StoneBench {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "stone bench"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/StoneBench.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## StoneFountain
+
+A fountain made of stones.
+
+%figure
+
+![StoneFountain](images/objects/street_furniture/StoneFountain/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+StoneFountain {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "stone fountain"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/StoneFountain.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
 ## TrashBin
 
 A trash bin.
@@ -345,9 +804,122 @@ TrashBin {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/TrashBin.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### TrashBin Field Summary
 
 - `coverColor`: Defines the color of the top part of the bin.
 
 - `binColor`: Defines the main color of the bin.
+
+## TrashContainer
+
+A trash container with optional physics.
+
+%figure
+
+![TrashContainer](images/objects/street_furniture/TrashContainer/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+TrashContainer {
+  SFVec3f    translation    0 0 0
+  SFRotation rotation       0 1 0 0
+  SFString   name           "trash container"
+  SFBool     enablePhysics  FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/TrashContainer.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### TrashContainer Field Summary
+
+- `enablePhysics`: Defines whether the trash container should have physics.
+
+## UndergroundContainer
+
+An underground container.
+
+%figure
+
+![UndergroundContainer](images/objects/street_furniture/UndergroundContainer/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+UndergroundContainer {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "underground container"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/UndergroundContainer.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## UrbanFence
+
+An urban fence with optional boundingObject.
+
+%figure
+
+![UrbanFence](images/objects/street_furniture/UrbanFence/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+UrbanFence {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "urban fence"
+  SFBool     enableBoundingObject  TRUE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/UrbanFence.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### UrbanFence Field Summary
+
+- `enableBoundingObject`: Defines whether the fence should have a bounding object.
+
+## WorkTrashContainer
+
+A work trash container.
+
+%figure
+
+![WorkTrashContainer](images/objects/street_furniture/WorkTrashContainer/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+WorkTrashContainer {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "work trash container"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/street_furniture/protos/WorkTrashContainer.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
 

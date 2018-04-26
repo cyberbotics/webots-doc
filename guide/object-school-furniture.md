@@ -22,6 +22,9 @@ Blackboard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Blackboard.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## Book
 
 A book (0.2 x 0.15 x 0.02 m).
@@ -46,6 +49,9 @@ Book {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Book.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Book Field Summary
 
@@ -76,4 +82,7 @@ Clock {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/school_furniture/protos/Clock.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 

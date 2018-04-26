@@ -138,31 +138,37 @@ The rest of the positions can be seen in the [following table](#positions-of-the
 
 ### Simple Vehicles
 
-In adition to those controlable models of vehicle, several non-controlable vehicles (called 'simple') based on the `Solid` node are available.
+In addition to the controllable models of vehicle, several kinematic vehicles (called 'simple') are available.
 
-> **Note**: These vehicles can be moved kinematically using a Supervisor. These are for example the vehicles used by the SUMO interface.
+> **Note**: These vehicles can be moved kinematically using a [Supervisor](../reference/supervisor.md). These are for example the vehicles used by the [SUMO interface](sumo-interface.md).
 
 #### CarSimple
 
 For each model of [Car](#car), a 'simple' PROTO is present too.
-These simplified kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is therefore not possible to add sensors or control them.
-They are made to represent non-moving parked vehicles or to be moved using a Supervisor because they are much faster to simulate than the normal PROTO models.
+They should be used to model parked vehicles (non-moving) or vehicles moved by a [Supervisor](../reference/supervisor.md) changing their position and orientation. They are much faster to simulate than the normal PROTO models.
 
 ```
  PROTO CarSimple {
-   field       SFVec3f    translation             0 0.4 0
-   field       SFRotation rotation                0 1 0 0
-   field       SFColor    color                   0.0 0.25 0.65
-   field       MFColor    recognitionColors       [ 0.0 0.25 0.65, 0.1 0.1 0.1 ]
-   field       MFString   plate                   "textures/plate.jpg"
-   field       SFString   name                    "vehicle"
-   field       SFBool     wheelBoundingObject     FALSE
+  SFVec3f    translation             0 0.4 0
+  SFRotation rotation                0 1 0 0
+  SFColor    color                   0.0 0.25 0.65
+  MFColor    recognitionColors       [ 0.0 0.25 0.65, 0.1 0.1 0.1 ]
+  MFString   plate                   "textures/plate.jpg"
+  SFString   name                    "vehicle"
+  SFString   controller              ""
+  SFString   controllerArgs          ""
+  MFNode     sensorsSlot...          [ ]
+  SFBool     wheelBoundingObject     FALSE
  }
 ```
 
 ##### CarSimple Field Summary
 
-- `recognitionColors`: If not empty, this vehicle may be recognized by any Camera device with recognition capability (i.e. with a Recognition node).
+- `controller`: Defines the controller of the vehicle.
+The controller can be used for example to collect sensors data while the vehicle is moved by the [SUMO interface](sumo-interface.md).
+If no controller is needed, you should leave the `controller` field empty.
+It is not recommended to use the `void` controller for efficiency reasons.
+- `sensorsSlot...`: These slots can be used to add sensor capabilities to the vehicle.
 - `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 
 CarSimple is not an actual PROTO but defines the common structure of all the 'simple' versions of the cars.

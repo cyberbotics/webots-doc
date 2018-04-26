@@ -623,7 +623,7 @@ function createRobotComponent(view) {
       var transforms = webotsViewElement.querySelectorAll('transform');
       for (var t = 0; t < transforms.length; t++) {
         if (transforms[t].hasAttribute('translation')) {
-          var translation = transforms[t].getAttribute('translation').split(' ');
+          var translation = transforms[t].getAttribute('translation').split(/[\s,]+/);
           for (var v = 0; v < translation.length; v++)
             robotScale = Math.max(robotScale, Math.abs(translation[v]));
         }

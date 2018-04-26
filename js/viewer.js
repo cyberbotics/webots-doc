@@ -554,11 +554,11 @@ function sliderMotorCallback(robot, slider) {
     transform.setAttribute('translation', translation.join(','));
   } else {
     var angle = 0.0;
-    if (transform.hasAttribute('initalAngle')) // Get initial angle.
-      angle = parseFloat(transform.getAttribute('initalAngle'));
+    if (transform.hasAttribute('initialAngle')) // Get initial angle.
+      angle = parseFloat(transform.getAttribute('initialAngle'));
     else if (transform.hasAttribute('rotation')) { // Store initial angle.
       angle = parseFloat(transform.getAttribute('rotation').split(/[\s,]+/)[3]);
-      transform.setAttribute('initalAngle', angle);
+      transform.setAttribute('initialAngle', angle);
     }
     angle += parseFloat(slider.value); // Add the slider value.
 

@@ -536,19 +536,36 @@ function toggleDeviceComponent(robot) {
 function sliderMotorCallback(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var transform = view3d.querySelector('[id=' + slider.getAttribute('webots-transform-id') + ']');
+  var axis = slider.getAttribute('webots-axis');
 
-  var angle = 0.0;
-  if (transform.hasAttribute('initalAngle')) // Get initial angle.
-    angle = parseFloat(transform.getAttribute('initalAngle'));
-  else if (transform.hasAttribute('rotation')) { // Store initial angle.
-    angle = parseFloat(transform.getAttribute('rotation').split(/[\s,]+/)[3]);
-    transform.setAttribute('initalAngle', angle);
+  if (slider.getAttribute('webots-type') === 'LinearMotor') {
+    var translation = null;
+    if (transform.hasAttribute('initalTranslation')) // Get initial translation.
+      translation = transform.getAttribute('initalTranslation');
+    else if (transform.hasAttribute('translation')) { // Store initial translation.
+      translation = transform.getAttribute('translation');
+      transform.setAttribute('initalTranslation', translation);
+    }
+    translation = translation.split(/[\s,]+/);
+    axis = axis.split(/[\s,]+/);
+    for (var a = 0; a < axis.length; a++)
+      translation[a] = parseFloat(translation[a]) + parseFloat(axis[a]) * slider.value;
+
+    transform.setAttribute('translation', translation.join(','));
+  } else {
+    var angle = 0.0;
+    if (transform.hasAttribute('initalAngle')) // Get initial angle.
+      angle = parseFloat(transform.getAttribute('initalAngle'));
+    else if (transform.hasAttribute('rotation')) { // Store initial angle.
+      angle = parseFloat(transform.getAttribute('rotation').split(/[\s,]+/)[3]);
+      transform.setAttribute('initalAngle', angle);
+    }
+    angle += parseFloat(slider.value); // Add the slider value.
+
+    // Apply the new axis-angle.
+    axis = axis.split(' ').join(',');
+    transform.setAttribute('rotation', axis + ',' + angle);
   }
-  angle += parseFloat(slider.value); // Add the slider value.
-
-  // Apply the new axis-angle.
-  var axis = slider.getAttribute('webots-axis').split(' ').join(',');
-  transform.setAttribute('rotation', axis + ',' + angle);
 }
 
 function unhighlightX3DElement(robot) {
@@ -701,6 +718,7 @@ function createRobotComponent(view) {
             slider.setAttribute('value', 0);
             slider.setAttribute('webots-transform-id', device['transformID']);
             slider.setAttribute('webots-axis', device['axis']);
+            slider.setAttribute('webots-type', deviceType);
             if (isInternetExplorer()) {
               slider.addEventListener('change', function(e) {
                 sliderMotorCallback(robotName, e.target);

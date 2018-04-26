@@ -447,6 +447,7 @@
   justify-content: space-between;
   height: 400px;
   background-color: #f0f0f0;
+  margin-bottom: 10px;
 }
 .robot-component .robot-view {
   width: 70%;
@@ -496,7 +497,7 @@
   overflow: auto;
   background-color: #333;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 0px 3px 3px 0px;
 }
 .robot-component .device-category {
   padding: 10px;

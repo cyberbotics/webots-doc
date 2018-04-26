@@ -1,10 +1,6 @@
 ## Mosyba's Thymio II
 
-%figure "Thymio II model in Webots"
-
-![model.png](images/robots/thymio2/model.png)
-
-%end
+%robot thymio2 images/robots/thymio2/model.png
 
 Thymio II is an affordable educational robot.
 It provides three main features: a large number of sensors and actuators, an educative interactivity based on light and touch, a programming environment featuring graphical and text programming.

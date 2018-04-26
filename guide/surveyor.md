@@ -1,10 +1,6 @@
 ## Surveyor SRV-1
 
-%figure "Surveyor model in Webots"
-
-![model.png](images/robots/surveyor/model.png)
-
-%end
+%robot surveyor images/robots/surveyor/model.png
 
 The Surveyor's SRV-1 is a robot with two caterpillar tracks designed for research, education, and exploration.
 It features a Blackfin processor, a digital video camera and WiFi networking.

@@ -1,0 +1,236 @@
+{
+  "name": "khr-2hv", 
+  "devices": [
+    {
+      "transformID": "n7229", 
+      "name": "Head", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": "n7340", 
+      "name": "Left_Ankle", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n7745", 
+      "name": "Left_Arm1", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n7371", 
+      "name": "Left_Foot", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n7773", 
+      "name": "Left_Hand", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n7254", 
+      "name": "Left_Hip", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n7285", 
+      "name": "Left_Leg1", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n7313", 
+      "name": "Left_Leg3", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n7724", 
+      "name": "Left_Shoulder", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n7575", 
+      "name": "Right_Ankle", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n7893", 
+      "name": "Right_Arm1", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n7606", 
+      "name": "Right_Foot", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n7926", 
+      "name": "Right_Hand", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n7489", 
+      "name": "Right_Hip", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n7520", 
+      "name": "Right_Leg1", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n7548", 
+      "name": "Right_leg3", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n7872", 
+      "name": "Right_Shoulder", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n7229", 
+      "type": "PositionSensor", 
+      "name": "Head_Sensor"
+    }, 
+    {
+      "transformID": "n7340", 
+      "type": "PositionSensor", 
+      "name": "Left_Ankle_Sensor"
+    }, 
+    {
+      "transformID": "n7745", 
+      "type": "PositionSensor", 
+      "name": "Left_Arm1_Sensor"
+    }, 
+    {
+      "transformID": "n7371", 
+      "type": "PositionSensor", 
+      "name": "Left_Foot_Sensor"
+    }, 
+    {
+      "transformID": "n7773", 
+      "type": "PositionSensor", 
+      "name": "Left_Hand_Sensor"
+    }, 
+    {
+      "transformID": "n7254", 
+      "type": "PositionSensor", 
+      "name": "Left_Hip_Sensor"
+    }, 
+    {
+      "transformID": "n7285", 
+      "type": "PositionSensor", 
+      "name": "Left_Leg1_Sensor"
+    }, 
+    {
+      "transformID": "n7313", 
+      "type": "PositionSensor", 
+      "name": "Left_Leg3_Sensor"
+    }, 
+    {
+      "transformID": "n7724", 
+      "type": "PositionSensor", 
+      "name": "Left_Shoulder_Sensor"
+    }, 
+    {
+      "transformID": "n7186", 
+      "type": "Accelerometer", 
+      "name": "RCB3_K_ACCELEROMETER"
+    }, 
+    {
+      "transformID": "n7186", 
+      "type": "Gyro", 
+      "name": "RCB3_K_GYRO"
+    }, 
+    {
+      "transformID": "n7575", 
+      "type": "PositionSensor", 
+      "name": "Right_Ankle_Sensor"
+    }, 
+    {
+      "transformID": "n7893", 
+      "type": "PositionSensor", 
+      "name": "Right_Arm1_Sensor"
+    }, 
+    {
+      "transformID": "n7606", 
+      "type": "PositionSensor", 
+      "name": "Right_Foot_Sensor"
+    }, 
+    {
+      "transformID": "n7926", 
+      "type": "PositionSensor", 
+      "name": "Right_Hand_Sensor"
+    }, 
+    {
+      "transformID": "n7489", 
+      "type": "PositionSensor", 
+      "name": "Right_Hip_Sensor"
+    }, 
+    {
+      "transformID": "n7520", 
+      "type": "PositionSensor", 
+      "name": "Right_Leg1_Sensor"
+    }, 
+    {
+      "transformID": "n7548", 
+      "type": "PositionSensor", 
+      "name": "Right_leg3_Sensor"
+    }, 
+    {
+      "transformID": "n7872", 
+      "type": "PositionSensor", 
+      "name": "Right_Shoulder_Sensor"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "name": "khr-3hv", 
+  "devices": [
+    {
+      "transformID": "n8069", 
+      "name": "Head", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n8274", 
+      "name": "LeftAnkle", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "1 -1e-7 0"
+    }, 
+    {
+      "transformID": "n8094", 
+      "name": "LeftArm", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n8263", 
+      "name": "LeftCrus", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n8105", 
+      "name": "LeftElbow", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n8252", 
+      "name": "LeftFemur", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n8230", 
+      "name": "LeftFemurHead1", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n8241", 
+      "name": "LeftFemurHead2", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n8285", 
+      "name": "LeftFoot", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n8116", 
+      "name": "LeftForearm", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n8083", 
+      "name": "LeftShoulder", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n8374", 
+      "name": "RightAnkle", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n8162", 
+      "name": "RightArm", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": "n8363", 
+      "name": "RightCrus", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n8173", 
+      "name": "RightElbow", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n8352", 
+      "name": "RightFemur", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n8330", 
+      "name": "RightFemurHead1", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n8341", 
+      "name": "RightFemurHead2", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": "n8385", 
+      "name": "RightFoot", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "2e-7 -1e-7 -1"
+    }, 
+    {
+      "transformID": "n8184", 
+      "name": "RightForearm", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n8151", 
+      "name": "RightShoulder", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n8219", 
+      "name": "Waist", 
+      "maxPosition": 2.356, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.356, 
+      "axis": "0 1 0"
+    }
+  ]
+}

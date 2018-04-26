@@ -1,0 +1,76 @@
+{
+  "name": "portal", 
+  "devices": [
+    {
+      "transformID": "n11675", 
+      "name": "gear", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n11661", 
+      "name": "gate", 
+      "maxPosition": 0.3, 
+      "type": "LinearMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n11656", 
+      "name": "rail", 
+      "maxPosition": 0, 
+      "type": "LinearMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11651"
+      ], 
+      "transformID": "n11646", 
+      "name": "lamp", 
+      "ledColors": [
+        "1 0.878431 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "transformID": "n11747", 
+      "type": "TouchSensor", 
+      "name": "closed"
+    }, 
+    {
+      "transformID": "n11661", 
+      "type": "PositionSensor", 
+      "name": "gate_sensor"
+    }, 
+    {
+      "transformID": "n11675", 
+      "type": "PositionSensor", 
+      "name": "gear_sensor"
+    }, 
+    {
+      "transformID": "n11864", 
+      "type": "TouchSensor", 
+      "name": "inside button"
+    }, 
+    {
+      "transformID": "n11714", 
+      "type": "TouchSensor", 
+      "name": "open"
+    }, 
+    {
+      "transformID": "n11896", 
+      "type": "DistanceSensor", 
+      "name": "optical barrier"
+    }, 
+    {
+      "transformID": "n11832", 
+      "type": "TouchSensor", 
+      "name": "outside button"
+    }
+  ]
+}

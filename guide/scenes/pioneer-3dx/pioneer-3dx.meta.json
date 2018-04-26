@@ -1,0 +1,195 @@
+{
+  "name": "pioneer-3dx", 
+  "devices": [
+    {
+      "transformID": "n10974", 
+      "name": "left wheel", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n11035", 
+      "name": "right wheel", 
+      "maxPosition": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n10967"
+      ], 
+      "transformID": "n10964", 
+      "name": "green led", 
+      "ledColors": [
+        "0.564706 0.933333 0.564706"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11355"
+      ], 
+      "transformID": "n11352", 
+      "name": "led", 
+      "ledColors": [
+        "0.929412 0.933333 0.615686"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11006"
+      ], 
+      "transformID": "n11003", 
+      "name": "lower yellow led", 
+      "ledColors": [
+        "0.976471 0.980392 0.603922"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11013"
+      ], 
+      "transformID": "n11009", 
+      "name": "red led 1", 
+      "ledColors": [
+        "0.913725 0.247059 0.247059"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11021"
+      ], 
+      "transformID": "n11017", 
+      "name": "red led 2", 
+      "ledColors": [
+        "0.913725 0.247059 0.247059"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11028"
+      ], 
+      "transformID": "n11024", 
+      "name": "red led 3", 
+      "ledColors": [
+        "0.913725 0.247059 0.247059"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [
+        "n11361"
+      ], 
+      "transformID": "n11358", 
+      "name": "white led", 
+      "ledColors": [
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "transformID": "n10974", 
+      "type": "PositionSensor", 
+      "name": "left wheel sensor"
+    }, 
+    {
+      "transformID": "n11035", 
+      "type": "PositionSensor", 
+      "name": "right wheel sensor"
+    }, 
+    {
+      "transformID": "n11064", 
+      "type": "DistanceSensor", 
+      "name": "so0"
+    }, 
+    {
+      "transformID": "n11082", 
+      "type": "DistanceSensor", 
+      "name": "so1"
+    }, 
+    {
+      "transformID": "n11100", 
+      "type": "DistanceSensor", 
+      "name": "so10"
+    }, 
+    {
+      "transformID": "n11118", 
+      "type": "DistanceSensor", 
+      "name": "so11"
+    }, 
+    {
+      "transformID": "n11136", 
+      "type": "DistanceSensor", 
+      "name": "so12"
+    }, 
+    {
+      "transformID": "n11154", 
+      "type": "DistanceSensor", 
+      "name": "so13"
+    }, 
+    {
+      "transformID": "n11172", 
+      "type": "DistanceSensor", 
+      "name": "so14"
+    }, 
+    {
+      "transformID": "n11190", 
+      "type": "DistanceSensor", 
+      "name": "so15"
+    }, 
+    {
+      "transformID": "n11208", 
+      "type": "DistanceSensor", 
+      "name": "so2"
+    }, 
+    {
+      "transformID": "n11226", 
+      "type": "DistanceSensor", 
+      "name": "so3"
+    }, 
+    {
+      "transformID": "n11244", 
+      "type": "DistanceSensor", 
+      "name": "so4"
+    }, 
+    {
+      "transformID": "n11262", 
+      "type": "DistanceSensor", 
+      "name": "so5"
+    }, 
+    {
+      "transformID": "n11280", 
+      "type": "DistanceSensor", 
+      "name": "so6"
+    }, 
+    {
+      "transformID": "n11298", 
+      "type": "DistanceSensor", 
+      "name": "so7"
+    }, 
+    {
+      "transformID": "n11316", 
+      "type": "DistanceSensor", 
+      "name": "so8"
+    }, 
+    {
+      "transformID": "n11334", 
+      "type": "DistanceSensor", 
+      "name": "so9"
+    }
+  ]
+}

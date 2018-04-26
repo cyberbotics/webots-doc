@@ -5,6 +5,7 @@
       "transformID": "n5775", 
       "name": "base", 
       "maxPosition": 6.0335, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -13,6 +14,7 @@
       "transformID": "n5840", 
       "name": "forearm", 
       "maxPosition": 4.2149, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -21,6 +23,7 @@
       "transformID": "n6007", 
       "name": "left_gripper", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.22171, 
       "axis": "0 1 0"
@@ -29,6 +32,7 @@
       "transformID": "n6051", 
       "name": "right_gripper", 
       "maxPosition": 1.22171, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -37,6 +41,7 @@
       "transformID": "n5964", 
       "name": "rotational_wrist", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -5.79789, 
       "axis": "0 1 0"
@@ -45,6 +50,7 @@
       "transformID": "n5824", 
       "name": "upperarm", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -2.44342, 
       "axis": "0 0 1"
@@ -53,6 +59,7 @@
       "transformID": "n5902", 
       "name": "wrist", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -4.0491, 
       "axis": "0 0 1"

@@ -5,6 +5,7 @@
       "transformID": "n15428", 
       "name": "wheel_motor00", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -13,6 +14,7 @@
       "transformID": "n15436", 
       "name": "wheel_motor01", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -21,6 +23,7 @@
       "transformID": "n15444", 
       "name": "wheel_motor02", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -29,6 +32,7 @@
       "transformID": "n15452", 
       "name": "wheel_motor03", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -37,6 +41,7 @@
       "transformID": "n15460", 
       "name": "wheel_motor04", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -45,6 +50,7 @@
       "transformID": "n15468", 
       "name": "wheel_motor05", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -53,6 +59,7 @@
       "transformID": "n15476", 
       "name": "wheel_motor06", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -61,6 +68,7 @@
       "transformID": "n15484", 
       "name": "wheel_motor07", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -69,6 +77,7 @@
       "transformID": "n15492", 
       "name": "wheel_motor08", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -77,6 +86,7 @@
       "transformID": "n15500", 
       "name": "wheel_motor09", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"

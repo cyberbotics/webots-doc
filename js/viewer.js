@@ -516,8 +516,9 @@ function resetRobotComponent(robot) {
   viewpoint.setAttribute('position', viewpoint.getAttribute('initialPosition'));
   var sliders = robotComponent.querySelectorAll('.motor-slider');
   for (var s = 0; s < sliders.length; s++) {
-    sliders[s].value = 0.0;
-    sliderMotorCallback(robot, sliders[s]);
+    var slider = sliders[s];
+    slider.value = slider.getAttribute('webots-position');
+    sliderMotorCallback(robot, slider);
   }
 }
 
@@ -537,6 +538,7 @@ function sliderMotorCallback(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var transform = view3d.querySelector('[id=' + slider.getAttribute('webots-transform-id') + ']');
   var axis = slider.getAttribute('webots-axis');
+  var position = parseFloat(slider.getAttribute('webots-position'));
 
   if (slider.getAttribute('webots-type') === 'LinearMotor') {
     var translation = null;
@@ -561,6 +563,7 @@ function sliderMotorCallback(robot, slider) {
       transform.setAttribute('initialAngle', angle);
     }
     angle += parseFloat(slider.value); // Add the slider value.
+    angle -= position;
 
     // Apply the new axis-angle.
     axis = axis.split(' ').join(',');
@@ -715,7 +718,8 @@ function createRobotComponent(view) {
               minLabel.innerHTML = Math.round(device['minPosition'] * 100) / 100; // 2 decimals.
               maxLabel.innerHTML = Math.round(device['maxPosition'] * 100) / 100;
             }
-            slider.setAttribute('value', 0);
+            slider.setAttribute('value', device['position']);
+            slider.setAttribute('webots-position', device['position']);
             slider.setAttribute('webots-transform-id', device['transformID']);
             slider.setAttribute('webots-axis', device['axis']);
             slider.setAttribute('webots-type', deviceType);

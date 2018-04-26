@@ -5,6 +5,7 @@
       "transformID": "n13473", 
       "name": "AnkleL", 
       "maxPosition": 1.22, 
+      "position": -1.23, 
       "type": "RotationalMotor", 
       "minPosition": -1.39, 
       "axis": "1 0 0"
@@ -13,6 +14,7 @@
       "transformID": "n13567", 
       "name": "AnkleR", 
       "maxPosition": 1.38, 
+      "position": 1.22, 
       "type": "RotationalMotor", 
       "minPosition": -1.24, 
       "axis": "-1 0 0"
@@ -21,6 +23,7 @@
       "transformID": "n13641", 
       "name": "ArmLowerL", 
       "maxPosition": 1.63, 
+      "position": -0.52, 
       "type": "RotationalMotor", 
       "minPosition": -1.18, 
       "axis": "1 0 0"
@@ -29,6 +32,7 @@
       "transformID": "n13696", 
       "name": "ArmLowerR", 
       "maxPosition": 1.16, 
+      "position": 0.51, 
       "type": "RotationalMotor", 
       "minPosition": -1.65, 
       "axis": "-1 0 0"
@@ -37,6 +41,7 @@
       "transformID": "n13625", 
       "name": "ArmUpperL", 
       "maxPosition": 0.77, 
+      "position": 0.36, 
       "type": "RotationalMotor", 
       "minPosition": -2.25, 
       "axis": "0 0 -1"
@@ -45,6 +50,7 @@
       "transformID": "n13680", 
       "name": "ArmUpperR", 
       "maxPosition": 2.3, 
+      "position": -0.33, 
       "type": "RotationalMotor", 
       "minPosition": -0.68, 
       "axis": "0 0 -1"
@@ -53,6 +59,7 @@
       "transformID": "n13483", 
       "name": "FootL", 
       "maxPosition": 0.6, 
+      "position": -0.02, 
       "type": "RotationalMotor", 
       "minPosition": -1.02, 
       "axis": "0 0 1"
@@ -61,6 +68,7 @@
       "transformID": "n13577", 
       "name": "FootR", 
       "maxPosition": 1.04, 
+      "position": 0.05, 
       "type": "RotationalMotor", 
       "minPosition": -0.68, 
       "axis": "0 0 1"
@@ -69,6 +77,7 @@
       "transformID": "n13385", 
       "name": "Head", 
       "maxPosition": 0.94, 
+      "position": 0.19, 
       "type": "RotationalMotor", 
       "minPosition": -0.36, 
       "axis": "-1 0 0"
@@ -77,6 +86,7 @@
       "transformID": "n13463", 
       "name": "LegLowerL", 
       "maxPosition": 0.03, 
+      "position": -2.25, 
       "type": "RotationalMotor", 
       "minPosition": -2.25, 
       "axis": "-1 0 0"
@@ -85,6 +95,7 @@
       "transformID": "n13557", 
       "name": "LegLowerR", 
       "maxPosition": 2.25, 
+      "position": 2.25, 
       "type": "RotationalMotor", 
       "minPosition": -0.02, 
       "axis": "1 0 0"
@@ -93,6 +104,7 @@
       "transformID": "n13447", 
       "name": "LegUpperL", 
       "maxPosition": 1.68, 
+      "position": 1.15, 
       "type": "RotationalMotor", 
       "minPosition": -0.5, 
       "axis": "-1 0 0"
@@ -101,6 +113,7 @@
       "transformID": "n13541", 
       "name": "LegUpperR", 
       "maxPosition": 0.45, 
+      "position": -1.15, 
       "type": "RotationalMotor", 
       "minPosition": -1.77, 
       "axis": "1 0 0"
@@ -109,6 +122,7 @@
       "transformID": "n13375", 
       "name": "Neck", 
       "maxPosition": 1.81, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.81, 
       "axis": "0 1 0"
@@ -117,6 +131,7 @@
       "transformID": "n13437", 
       "name": "PelvL", 
       "maxPosition": 0.93, 
+      "position": -0.01, 
       "type": "RotationalMotor", 
       "minPosition": -1, 
       "axis": "0 0 -1"
@@ -125,6 +140,7 @@
       "transformID": "n13531", 
       "name": "PelvR", 
       "maxPosition": 1.01, 
+      "position": 0.02, 
       "type": "RotationalMotor", 
       "minPosition": -1.01, 
       "axis": "0 0 -1"
@@ -133,6 +149,7 @@
       "transformID": "n13427", 
       "name": "PelvYL", 
       "maxPosition": 2.5, 
+      "position": -0.02, 
       "type": "RotationalMotor", 
       "minPosition": -0.69, 
       "axis": "0 -1 0"
@@ -141,6 +158,7 @@
       "transformID": "n13521", 
       "name": "PelvYR", 
       "maxPosition": 0.66, 
+      "position": -0.01, 
       "type": "RotationalMotor", 
       "minPosition": -2.42, 
       "axis": "0 -1 0"
@@ -149,6 +167,7 @@
       "transformID": "n13615", 
       "name": "ShoulderL", 
       "maxPosition": 2.85, 
+      "position": 0.72, 
       "type": "RotationalMotor", 
       "minPosition": -3.14, 
       "axis": "1 0 0"
@@ -157,6 +176,7 @@
       "transformID": "n13670", 
       "name": "ShoulderR", 
       "maxPosition": 3.14, 
+      "position": -0.84, 
       "type": "RotationalMotor", 
       "minPosition": -3.14, 
       "axis": "-1 0 0"

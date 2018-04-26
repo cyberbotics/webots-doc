@@ -5,6 +5,7 @@
       "transformID": "n16177", 
       "name": "motor", 
       "maxPosition": 1.5708, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.5708, 
       "axis": "0 1 0"

@@ -5,6 +5,7 @@
       "transformID": "n15703", 
       "name": "motor.left", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -13,6 +14,7 @@
       "transformID": "n15684", 
       "name": "motor.right", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"

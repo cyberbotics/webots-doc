@@ -5,6 +5,7 @@
       "transformID": "n1548", 
       "name": "BackLbz", 
       "maxPosition": 0.610865, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.610865, 
       "axis": "0 0 1"
@@ -13,6 +14,7 @@
       "transformID": "n1571", 
       "name": "BackMby", 
       "maxPosition": 1.28, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.2, 
       "axis": "0 1 0"
@@ -21,6 +23,7 @@
       "transformID": "n1592", 
       "name": "BackUbx", 
       "maxPosition": 0.790809, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.790809, 
       "axis": "1 0 0"
@@ -29,6 +32,7 @@
       "transformID": "n1756", 
       "name": "LArmElx", 
       "maxPosition": 2.35619, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -37,6 +41,7 @@
       "transformID": "n1737", 
       "name": "LArmEly", 
       "maxPosition": 3.14159, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -45,6 +50,7 @@
       "transformID": "n1831", 
       "name": "LArmMwx", 
       "maxPosition": 1.571, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.436, 
       "axis": "1 0 0"
@@ -53,6 +59,7 @@
       "transformID": "n1716", 
       "name": "LArmShx", 
       "maxPosition": 1.74533, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.39626, 
       "axis": "1 0 0"
@@ -61,6 +68,7 @@
       "transformID": "n1697", 
       "name": "LArmUsy", 
       "maxPosition": 1.9635, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.9635, 
       "axis": "0 0.5 0.866025"
@@ -69,6 +77,7 @@
       "transformID": "n1805", 
       "name": "LArmUwy", 
       "maxPosition": 1.571, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.571, 
       "axis": "0 1 0"
@@ -77,6 +86,7 @@
       "transformID": "n2229", 
       "name": "LLegKny", 
       "maxPosition": 2.45, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -85,6 +95,7 @@
       "transformID": "n2272", 
       "name": "LLegLax", 
       "maxPosition": 0.436, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.436, 
       "axis": "1 0 0"
@@ -93,6 +104,7 @@
       "transformID": "n2192", 
       "name": "LLegLhy", 
       "maxPosition": 0.524, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.75, 
       "axis": "0 1 0"
@@ -101,6 +113,7 @@
       "transformID": "n2152", 
       "name": "LLegMhx", 
       "maxPosition": 0.495, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.47, 
       "axis": "1 0 0"
@@ -109,6 +122,7 @@
       "transformID": "n2253", 
       "name": "LLegUay", 
       "maxPosition": 0.698, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.698, 
       "axis": "0 1 0"
@@ -117,6 +131,7 @@
       "transformID": "n2126", 
       "name": "LLegUhz", 
       "maxPosition": 1.14, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.32, 
       "axis": "0 0 1"
@@ -125,6 +140,7 @@
       "transformID": "n1872", 
       "name": "NeckAy", 
       "maxPosition": 1.13446401, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.610865238, 
       "axis": "0 1 0"
@@ -133,6 +149,7 @@
       "transformID": "n2035", 
       "name": "RArmElx", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -2.35619, 
       "axis": "1 0 0"
@@ -141,6 +158,7 @@
       "transformID": "n2016", 
       "name": "RArmEly", 
       "maxPosition": 3.14159, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -149,6 +167,7 @@
       "transformID": "n2082", 
       "name": "RArmMwx", 
       "maxPosition": 0.436, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.571, 
       "axis": "1 0 0"
@@ -157,6 +176,7 @@
       "transformID": "n1995", 
       "name": "RArmShx", 
       "maxPosition": 1.39626, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.74533, 
       "axis": "1 0 0"
@@ -165,6 +185,7 @@
       "transformID": "n1976", 
       "name": "RArmUsy", 
       "maxPosition": 1.9635, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.9635, 
       "axis": "0 0.5 -0.866025"
@@ -173,6 +194,7 @@
       "transformID": "n2056", 
       "name": "RArmUwy", 
       "maxPosition": 1.571, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.571, 
       "axis": "0 1 0"
@@ -181,6 +203,7 @@
       "transformID": "n2426", 
       "name": "RLegKny", 
       "maxPosition": 2.45, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -189,6 +212,7 @@
       "transformID": "n2476", 
       "name": "RLegLax", 
       "maxPosition": 0.436, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.436, 
       "axis": "1 0 0"
@@ -197,6 +221,7 @@
       "transformID": "n2389", 
       "name": "RLegLhy", 
       "maxPosition": 0.524, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.745, 
       "axis": "0 1 0"
@@ -205,6 +230,7 @@
       "transformID": "n2349", 
       "name": "RLegMhx", 
       "maxPosition": 0.47, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.495, 
       "axis": "1 0 0"
@@ -213,6 +239,7 @@
       "transformID": "n2450", 
       "name": "RLegUay", 
       "maxPosition": 0.698, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.698, 
       "axis": "0 1 0"
@@ -221,6 +248,7 @@
       "transformID": "n2323", 
       "name": "RLegUhz", 
       "maxPosition": 0.32, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.14, 
       "axis": "0 0 1"

@@ -5,6 +5,7 @@
       "transformID": "n55", 
       "name": "PRM:/r1/c1-Joint2:11", 
       "maxPosition": 0.0524, 
+      "position": -0.5236, 
       "type": "RotationalMotor", 
       "minPosition": -1.3963, 
       "axis": "1 0 0"
@@ -13,6 +14,7 @@
       "transformID": "n64", 
       "name": "PRM:/r1/c1/c2-Joint2:12", 
       "maxPosition": 1.6232, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.6232, 
       "axis": "0 1 0"
@@ -21,6 +23,7 @@
       "transformID": "n68", 
       "name": "PRM:/r1/c1/c2/c3-Joint2:13", 
       "maxPosition": 0.8727, 
+      "position": 0.5236, 
       "type": "RotationalMotor", 
       "minPosition": -0.349, 
       "axis": "1 0 0"
@@ -29,6 +32,7 @@
       "transformID": "n163", 
       "name": "PRM:/r1/c1/c2/c3/c4-Joint2:14", 
       "maxPosition": 0, 
+      "position": -0.0523599, 
       "type": "RotationalMotor", 
       "minPosition": -1.0472, 
       "axis": "1 0 0"
@@ -37,6 +41,7 @@
       "transformID": "n127", 
       "name": "PRM:/r1/c1/c2/c3/e5-Joint4:15", 
       "maxPosition": 0.2618, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -45,6 +50,7 @@
       "transformID": "n145", 
       "name": "PRM:/r1/c1/c2/c3/e6-Joint4:16", 
       "maxPosition": 0.2618, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -53,6 +59,7 @@
       "transformID": "n313", 
       "name": "PRM:/r2/c1-Joint2:21", 
       "maxPosition": 2.3562, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -2.0944, 
       "axis": "1 0 0"
@@ -61,6 +68,7 @@
       "transformID": "n323", 
       "name": "PRM:/r2/c1/c2-Joint2:22", 
       "maxPosition": 1.6232, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.5236, 
       "axis": "0 0 -1"
@@ -69,6 +77,7 @@
       "transformID": "n333", 
       "name": "PRM:/r2/c1/c2/c3-Joint2:23", 
       "maxPosition": 2.2166, 
+      "position": 0.523653, 
       "type": "RotationalMotor", 
       "minPosition": -0.5236, 
       "axis": "1 0 0"
@@ -77,6 +86,7 @@
       "transformID": "n367", 
       "name": "PRM:/r3/c1-Joint2:31", 
       "maxPosition": 2.0944, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -2.3562, 
       "axis": "-1 0 0"
@@ -85,6 +95,7 @@
       "transformID": "n377", 
       "name": "PRM:/r3/c1/c2-Joint2:32", 
       "maxPosition": 1.6232, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.2618, 
       "axis": "0 0 -1"
@@ -93,6 +104,7 @@
       "transformID": "n387", 
       "name": "PRM:/r3/c1/c2/c3-Joint2:33", 
       "maxPosition": 2.2166, 
+      "position": 0.523598, 
       "type": "RotationalMotor", 
       "minPosition": -0.5236, 
       "axis": "-1 0 0"
@@ -101,6 +113,7 @@
       "transformID": "n209", 
       "name": "PRM:/r4/c1-Joint2:41", 
       "maxPosition": 2.3562, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -2.0944, 
       "axis": "1 0 0"
@@ -109,6 +122,7 @@
       "transformID": "n219", 
       "name": "PRM:/r4/c1/c2-Joint2:42", 
       "maxPosition": 1.6232, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.2618, 
       "axis": "0 0 1"
@@ -117,6 +131,7 @@
       "transformID": "n229", 
       "name": "PRM:/r4/c1/c2/c3-Joint2:43", 
       "maxPosition": 2.2166, 
+      "position": 0.523619, 
       "type": "RotationalMotor", 
       "minPosition": -0.5236, 
       "axis": "1 0 0"
@@ -125,6 +140,7 @@
       "transformID": "n263", 
       "name": "PRM:/r5/c1-Joint2:51", 
       "maxPosition": 2.0944, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -2.3562, 
       "axis": "-1 0 0"
@@ -133,6 +149,7 @@
       "transformID": "n273", 
       "name": "PRM:/r5/c1/c2-Joint2:52", 
       "maxPosition": 1.6232, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -0.2618, 
       "axis": "0 0 1"
@@ -141,6 +158,7 @@
       "transformID": "n283", 
       "name": "PRM:/r5/c1/c2/c3-Joint2:53", 
       "maxPosition": 2.2166, 
+      "position": 0.523598, 
       "type": "RotationalMotor", 
       "minPosition": -0.5236, 
       "axis": "-1 0 0"
@@ -149,6 +167,7 @@
       "transformID": "n182", 
       "name": "PRM:/r6/c1-Joint2:61", 
       "maxPosition": 1.1345, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "-1 0 0"
@@ -157,6 +176,7 @@
       "transformID": "n191", 
       "name": "PRM:/r6/c2-Joint2:62", 
       "maxPosition": 1.0472, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.0472, 
       "axis": "0 0 -1"

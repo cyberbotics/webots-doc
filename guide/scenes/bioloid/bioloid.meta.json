@@ -5,6 +5,7 @@
       "transformID": "n3042", 
       "name": "back_left_1", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -13,6 +14,7 @@
       "transformID": "n3053", 
       "name": "back_left_2", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -21,6 +23,7 @@
       "transformID": "n3083", 
       "name": "back_left_3", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -29,6 +32,7 @@
       "transformID": "n3132", 
       "name": "back_right_1", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -37,6 +41,7 @@
       "transformID": "n3143", 
       "name": "back_right_2", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -45,6 +50,7 @@
       "transformID": "n3173", 
       "name": "back_right_3", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -53,6 +59,7 @@
       "transformID": "n2617", 
       "name": "front_left_1", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -61,6 +68,7 @@
       "transformID": "n2628", 
       "name": "front_left_2", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -69,6 +77,7 @@
       "transformID": "n2658", 
       "name": "front_left_3", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -77,6 +86,7 @@
       "transformID": "n2876", 
       "name": "front_right_1", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -85,6 +95,7 @@
       "transformID": "n2887", 
       "name": "front_right_2", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -93,6 +104,7 @@
       "transformID": "n2917", 
       "name": "front_right_3", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 1 0"
@@ -101,6 +113,7 @@
       "transformID": "n2789", 
       "name": "head", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 1"
@@ -109,6 +122,7 @@
       "transformID": "n2725", 
       "name": "neck_1", 
       "maxPosition": 1.5708, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.5708, 
       "axis": "0 0 1"
@@ -117,6 +131,7 @@
       "transformID": "n2736", 
       "name": "neck_2", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"
@@ -125,6 +140,7 @@
       "transformID": "n2989", 
       "name": "pelvis", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "1 0 0"

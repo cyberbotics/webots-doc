@@ -5,6 +5,7 @@
       "transformID": "n14897", 
       "name": "BackLeftArm", 
       "maxPosition": 1.5708, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.5708, 
       "axis": "0 1 0"
@@ -13,6 +14,7 @@
       "transformID": "n14884", 
       "name": "BackLeftBogie", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1, 
       "axis": "0 0 1"
@@ -21,6 +23,7 @@
       "transformID": "n14901", 
       "name": "BackLeftWheel", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -29,6 +32,7 @@
       "transformID": "n15025", 
       "name": "BackRightArm", 
       "maxPosition": 1.5708, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.5708, 
       "axis": "0 1 0"
@@ -37,6 +41,7 @@
       "transformID": "n15018", 
       "name": "BackRightBogie", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1, 
       "axis": "0 0 1"
@@ -45,6 +50,7 @@
       "transformID": "n15035", 
       "name": "BackRightWheel", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -53,6 +59,7 @@
       "transformID": "n14983", 
       "name": "FrontLeftArm", 
       "maxPosition": 1.5708, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.5708, 
       "axis": "0 1 0"
@@ -61,6 +68,7 @@
       "transformID": "n14967", 
       "name": "FrontLeftBogie", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -69,6 +77,7 @@
       "transformID": "n14993", 
       "name": "FrontLeftWheel", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -77,6 +86,7 @@
       "transformID": "n15117", 
       "name": "FrontRightArm", 
       "maxPosition": 1.5708, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": -1.5708, 
       "axis": "0 1 0"
@@ -85,6 +95,7 @@
       "transformID": "n15101", 
       "name": "FrontRightBogie", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -93,6 +104,7 @@
       "transformID": "n15121", 
       "name": "FrontRightWheel", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -101,6 +113,7 @@
       "transformID": "n14935", 
       "name": "MiddleLeftWheel", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"
@@ -109,6 +122,7 @@
       "transformID": "n15057", 
       "name": "MiddleRightWheel", 
       "maxPosition": 0, 
+      "position": 0, 
       "type": "RotationalMotor", 
       "minPosition": 0, 
       "axis": "0 0 -1"

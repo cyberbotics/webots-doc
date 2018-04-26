@@ -538,6 +538,8 @@ function toggleDeviceComponent(robot) {
 function sliderMotorCallback(robot, slider) {
   var view3d = document.querySelector('#' + robot + '-robot-webots-view');
   var transform = view3d.querySelector('[id=' + slider.getAttribute('webots-transform-id') + ']');
+  if (!transform)
+    return; // This may occur when the x3d is loading.
   var axis = slider.getAttribute('webots-axis');
   var position = parseFloat(slider.getAttribute('webots-position'));
 
@@ -610,7 +612,7 @@ function highlightX3DElement(robot, deviceElement) {
       }
     }
 
-    var scale = parseFloat(view3d.querySelector('Viewpoint').getAttribute('robotScale')) / 20.0;
+    var scale = parseFloat(view3d.querySelector('Viewpoint').getAttribute('robotScale')) / 50.0;
     var billboard = document.createElement('Transform');
     billboard.setAttribute('highlighted', 'true');
     if (deviceElement.hasAttribute('webots-transform-offset'))
@@ -631,6 +633,40 @@ function highlightX3DElement(robot, deviceElement) {
   }
 }
 
+function estimateRobotScale(robot) {
+  // Estimate roughly the robot scale based on the number of transform and their scaled translation.
+
+  function x3domAttributeToFloatArray(el, name) {
+    // Convert x3dom string attribute to an array of floats.
+    if (!el.hasAttribute(name))
+      return [];
+    var arr = el.getAttribute(name).split(/[\s,]+/);
+    for (var a = 0; a < arr.length; a++)
+      arr[a] = parseFloat(arr[a]);
+    return arr;
+  }
+  function estimateRobotScaleRec(el, s) {
+    if (!el.tagName)
+      return 0.0;
+    // Get the max scale component.
+    var scale = x3domAttributeToFloatArray(el, 'scale');
+    if (scale.length > 0)
+      s *= Math.max.apply(null, scale);
+    // Get the max translation component.
+    var max = 0.0;
+    var translation = x3domAttributeToFloatArray(el, 'translation');
+    if (translation.length > 0)
+      max = s * Math.max.apply(null, translation);
+    // Recursion
+    for (var c = 0; c < el.childNodes.length; c++)
+      max = Math.max(max, estimateRobotScaleRec(el.childNodes[c], s));
+    return max;
+  }
+
+  var nTransforms = robot.querySelectorAll('transform').length + 1;
+  return Math.log2(nTransforms) * estimateRobotScaleRec(robot, 1.0);
+}
+
 function createRobotComponent(view) {
   var webotsViewElements = document.querySelectorAll('.robot-webots-view');
   for (var e = 0; e < webotsViewElements.length; e++) { // foreach robot components of this page.
@@ -644,17 +680,9 @@ function createRobotComponent(view) {
       var viewpoint = webotsViewElement.querySelector('Viewpoint');
       viewpoint.setAttribute('initialOrientation', viewpoint.getAttribute('orientation'));
       viewpoint.setAttribute('initialPosition', viewpoint.getAttribute('position'));
-      // Rough estimation of the robot scale: 2 * max translation component.
-      var robotScale = 0.05;
-      var transforms = webotsViewElement.querySelectorAll('transform');
-      for (var t = 0; t < transforms.length; t++) {
-        if (transforms[t].hasAttribute('translation')) {
-          var translation = transforms[t].getAttribute('translation').split(/[\s,]+/);
-          for (var v = 0; v < translation.length; v++)
-            robotScale = Math.max(robotScale, Math.abs(translation[v]));
-        }
-      }
-      viewpoint.setAttribute('robotScale', 2.0 * robotScale);
+      // Rough estimation of the robot scale.
+      var robotScale = Math.max(0.05, estimateRobotScale(webotsViewElement));
+      viewpoint.setAttribute('robotScale', robotScale);
     };
 
     // Load the robot X3D file.

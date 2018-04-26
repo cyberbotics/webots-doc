@@ -367,25 +367,12 @@ Edit actions always apply on the selected object, that is highlighted both in th
 
 - ![](images/show_scene_tree-button.png =26x26) **Hide/Show Scene Tree**: shows or hides the Scene Tree and resizes the 3D window consequently.
 
-- ![](images/cut-button.png =26x26) **Cut**: Cuts the selected object.
-
-- ![](images/copy-button.png =26x26) **Copy**: Copies the selected object.
-
-- ![](images/paste-button.png =26x26) **Paste**: Pastes the copied or cut object.
-
-    > **Note**:
-The first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
-`Background`) cannot be cut, copied or pasted. One single instance of each of
-these nodes must be present in every Webots world, and in that precise order.
-
 - ![](images/add-button.png =26x26) **Add**: Adds a node or an object.
 For nodes, this triggers a dialog that will let you choose a node type from a list.
 The new node is created with default values that can be modified afterwards.
 You can only insert a node suitable for the corresponding field.
 The dialog also gives the possibility to load a previously exported node by clicking on the **Import...** button.
 Further information about how to export a node are available [here](the-scene-tree.md#field-editor).
-
-- ![](images/delete-button.png =26x26) **Delete**: Deletes the selected object.
 
 ### Speedometer and Virtual Time
 

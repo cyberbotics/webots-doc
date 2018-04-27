@@ -605,6 +605,8 @@ It does not matter whether the controller is synchronized or not.
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
 
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+
 ```c
 #include <webots/robot.h>
 
@@ -628,6 +630,8 @@ Hence you should use mutexes (see below) to ensure that such data is not accesse
 **Name**
 
 **wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
+
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/robot.h>
@@ -665,6 +669,8 @@ Users unfamiliar with the mutex concept may wish to consult a reference on multi
 
 **wb\_robot\_wwi\_receive**, **wb\_robot\_wwi\_receive\_text**, **wb\_robot\_wwi\_send**, **wb\_robot\_wwi\_send\_text** - *communication with a HTML robot window*
 
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+
 ```c
 #include <webots/utils/default_robot_window.h>
 
@@ -693,6 +699,8 @@ The message is received using the `webots.window("<robot window name>").receive`
 **Name**
 
 **wb\_robot\_window\_custom\_function** - *communication with the native C/C++ robot window [deprecated]*
+
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/robot_window.h>

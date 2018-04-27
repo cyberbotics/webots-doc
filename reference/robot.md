@@ -619,7 +619,6 @@ It will end only when the `task` function returns.
 The Webots controller API is thread safe, however, some API functions use or return pointers to data structures which are not protected outside the function against asynchronous access from a different thread.
 Hence you should use mutexes (see below) to ensure that such data is not accessed by a different thread.
 
-
 **See also**
 
 [`wb_robot_mutex_new`](#wb_robot_mutex_new).

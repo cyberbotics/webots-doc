@@ -605,8 +605,6 @@ It does not matter whether the controller is synchronized or not.
 
 **wb\_robot\_task\_new** - *start a new thread of execution*
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
-
 ```c
 #include <webots/robot.h>
 
@@ -621,6 +619,7 @@ It will end only when the `task` function returns.
 The Webots controller API is thread safe, however, some API functions use or return pointers to data structures which are not protected outside the function against asynchronous access from a different thread.
 Hence you should use mutexes (see below) to ensure that such data is not accessed by a different thread.
 
+
 **See also**
 
 [`wb_robot_mutex_new`](#wb_robot_mutex_new).
@@ -630,8 +629,6 @@ Hence you should use mutexes (see below) to ensure that such data is not accesse
 **Name**
 
 **wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
-
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/robot.h>

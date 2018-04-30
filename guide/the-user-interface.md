@@ -8,7 +8,7 @@ Webots GUI is composed of four principal windows: the *3D window* that displays 
 
 %end
 
-The GUI has nine menus: `File, Edit, View, Simulation, Build, Robot, Tools, Wizards` and `Help`.
+The GUI has nine menus: `File, Edit, View, Simulation, Build, Overlays, Tools, Wizards` and `Help`.
 
 ### File Menu
 
@@ -274,15 +274,10 @@ As the graphical rendering is disabled (black screen) this allows for a faster s
 The **Build** menu provides the functionality to compile (or cross-compile) controller code.
 The build menu is described in more details [here](webots-built-in-editor.md).
 
-### Robot Menu
+### Overlays Menu
 
-The **Robot** menu provides actions specific to `Robot` nodes.
+The **Overlays** menu provides actions specific to rendering device overlays (`Camera`, `Display`, `Rangefinder`).
 Some actions of this menu are active only when a robot is selected in the 3D window or when there is only one robot in the simulation:
-
-- The **Edit Controller** menu item opens the source file of the controller of the selected robot.
-
-- The **Show Robot Window** menu item opens the robot window of the selected robot.
-The robot window can also be opened by double-clicking on the robot in the 3D window.
 
 - The **Camera Devices** submenu contains the list of all the camera devices of the selected robot and its descendant robots and lets the user show or hide single camera overlay images by checking or unchecking the corresponding item.
 Camera overlays differ from the display overlays because of their magenta border.
@@ -299,7 +294,7 @@ Display overlays differ from the camera overlays because of their cyan border.
 Note that if the `Hide All Display Overlays` item is checked, then the display device overlays will not be visible in the 3D view independently from the status of `Display Devices` menu items.
 A `Display Devices` menu item is disabled if the overlay's texture is shown in an external window by double-clicking on it.
 
-On the other hand the following items are always active and apply to all the robot in the world:
+On the other hand the following items are always active and apply to all the robots in the world:
 
 - The **Hide All Camera Overlays** option hides all the camera devices overlays in the 3D view independently from the specific robot's device option set in `Camera Devices` submenu.
 
@@ -372,25 +367,12 @@ Edit actions always apply on the selected object, that is highlighted both in th
 
 - ![](images/show_scene_tree-button.png =26x26) **Hide/Show Scene Tree**: shows or hides the Scene Tree and resizes the 3D window consequently.
 
-- ![](images/cut-button.png =26x26) **Cut**: Cuts the selected object.
-
-- ![](images/copy-button.png =26x26) **Copy**: Copies the selected object.
-
-- ![](images/paste-button.png =26x26) **Paste**: Pastes the copied or cut object.
-
-    > **Note**:
-The first three nodes of the Scene Tree (`WorldInfo, Viewpoint,` and
-`Background`) cannot be cut, copied or pasted. One single instance of each of
-these nodes must be present in every Webots world, and in that precise order.
-
 - ![](images/add-button.png =26x26) **Add**: Adds a node or an object.
 For nodes, this triggers a dialog that will let you choose a node type from a list.
 The new node is created with default values that can be modified afterwards.
 You can only insert a node suitable for the corresponding field.
 The dialog also gives the possibility to load a previously exported node by clicking on the **Import...** button.
 Further information about how to export a node are available [here](the-scene-tree.md#field-editor).
-
-- ![](images/delete-button.png =26x26) **Delete**: Deletes the selected object.
 
 ### Speedometer and Virtual Time
 

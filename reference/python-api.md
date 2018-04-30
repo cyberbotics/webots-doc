@@ -519,6 +519,8 @@ The following tables describe the Python classes and their methods.
 | &nbsp;&nbsp; self.left                    |
 | &nbsp;&nbsp; self.middle                  |
 | &nbsp;&nbsp; self.right                   |
+| &nbsp;&nbsp; self.u                       |
+| &nbsp;&nbsp; self.v                       |
 | &nbsp;&nbsp; self.x                       |
 | &nbsp;&nbsp; self.y                       |
 | &nbsp;&nbsp; self.z                       |

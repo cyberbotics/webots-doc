@@ -1,10 +1,6 @@
 ## LIS Blimp
 
-%figure "Blimp model in Webots"
-
-![model.png](images/robots/blimp/model.png)
-
-%end
+%robot blimp images/robots/blimp/model.png
 
 The "Blimp" robot is a Zeppelin-like aerial robot developed by the [EPFL LIS laboratory](https://lis.epfl.ch/).
 

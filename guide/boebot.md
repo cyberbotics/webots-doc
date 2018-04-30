@@ -1,10 +1,6 @@
 ## Parallax's Boe-Bot
 
-%figure "Boe-Bot model in Webots"
-
-![model.png](images/robots/boebot/model.png)
-
-%end
+%robot boebot images/robots/boebot/model.png
 
 The "Boe-Bot" is a 3 wheeled robot (2 motorized wheels and a passive caster wheel) created by [Parallax Inc.](https://www.parallax.com/product/boe-bot-robot).
 Its sensors and actuators can be extended.

@@ -1,10 +1,6 @@
 ## BioRob GhostDog
 
-%figure "GhostDog model in Webots"
-
-![model.png](images/robots/ghostdog/model.png)
-
-%end
+%robot ghostdog images/robots/ghostdog/model.png
 
 The "GhostDog" robot is a dog-like robot developed by the [EPFL BioRob laboratory](https://biorob.epfl.ch/).
 

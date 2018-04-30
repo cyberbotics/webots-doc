@@ -1,10 +1,6 @@
 ## KONDO's KHR-2HV
 
-%figure "KHR-2HV model in Webots"
-
-![model.png](images/robots/khr-2hv/model.png)
-
-%end
+%robot khr-2hv images/robots/khr-2hv/model.png
 
 The "Kondo KHR-2HV" is an humanoid robot with 17 degrees of freedom.
 

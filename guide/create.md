@@ -1,10 +1,6 @@
 ## iRobot's Create
 
-%figure "Create model in Webots"
-
-![model.png](images/robots/create/model.png)
-
-%end
+%robot create images/robots/create/model.png
 
 The [iRobot Create](http://www.irobot.com/About-iRobot/STEM/Create-2.aspx) robot is a customizable frame based on the famous Roomba vacuum cleaning platform, and is produced by iRobot.
 

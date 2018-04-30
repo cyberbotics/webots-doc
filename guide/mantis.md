@@ -1,10 +1,6 @@
 ## micromagic's Mantis
 
-%figure "Mantis model in Webots"
-
-![model.png](images/robots/mantis/model.png)
-
-%end
+%robot mantis images/robots/mantis/model.png
 
 The [Mantis robot](http://www.mantisrobot.com/) is an hydraulic powered hexapod walking machine developed in 2009 by Matt Denton.
 A human can drive this robot.

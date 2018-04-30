@@ -1,10 +1,6 @@
 ## Boston Dynamics' Atlas
 
-%figure "Atlas model in Webots"
-
-![model.png](images/robots/atlas/model.png)
-
-%end
+%robot atlas images/robots/atlas/model.png
 
 The "Atlas" is a humanoid robot developed by [Boston Dynamics](https://www.bostondynamics.com/atlas) with funding and oversight from DARPA.
 The robot is 1.8 meters tall and is designed for a variety of search and rescue tasks.

@@ -1,10 +1,6 @@
 ## PICAXE Microbot
 
-%figure "Mircobot model in Webots"
-
-![model.png](images/robots/microbot/model.png)
-
-%end
+%robot microbot images/robots/microbot/model.png
 
 The [PICAXE microbot system](http://www.picaxe.com/Hardware/Robot-Kits/PICAXE-20X2-Microbot/) allows to create a robot from hardware pieces.
 The system can be fully customized by the end user using different input sensors and output devices (in addition to the on-board motor/gearbox, LED and piezo outputs).

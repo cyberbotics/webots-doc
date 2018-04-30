@@ -1,10 +1,6 @@
 ## K-Team's Khepera III
 
-%figure "Khepera III model in Webots"
-
-![model.png](images/robots/khepera3/model.png)
-
-%end
+%robot khepera3 images/robots/khepera3/model.png
 
 The "Khepera III" robot is a two-wheeled robot produced by [K-Team](https://www.k-team.com/mobile-robotics-products/old-products/khepera-iii).
 It is mounted by multiple sensors including 8 distance sensors.

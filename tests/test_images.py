@@ -35,6 +35,8 @@ class TestImages(unittest.TestCase):
             # search for all images
             images_paths = []  # ['image/sonar.png', 'image/sphere.png', ...]
             for root, dirnames, filenames in os.walk(book.path):
+                if 'scenes' in root.replace(books.project_path, ''):
+                    continue
                 for filename in fnmatch.filter(filenames, '*.png'):
                     image_path = os.path.join(root, filename)
                     image_path = image_path[(len(book.path) + 1):]

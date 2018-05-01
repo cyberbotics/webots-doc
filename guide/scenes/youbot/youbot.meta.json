@@ -1,0 +1,159 @@
+{
+  "name": "youbot", 
+  "devices": [
+    {
+      "transformID": "n16241", 
+      "name": "arm1", 
+      "maxPosition": 2.9496, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.9496, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n16264", 
+      "name": "arm2", 
+      "maxPosition": 1.5708, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n16285", 
+      "name": "arm3", 
+      "maxPosition": 2.54818, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.63545, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n16313", 
+      "name": "arm4", 
+      "maxPosition": 1.78024, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.78024, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n16331", 
+      "name": "arm5", 
+      "maxPosition": 2.92343, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.92343, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n16394", 
+      "name": "wheel1", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n16442", 
+      "name": "wheel2", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n16490", 
+      "name": "wheel3", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n16538", 
+      "name": "wheel4", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n16341", 
+      "name": "finger1", 
+      "maxPosition": 0.025, 
+      "position": 0, 
+      "type": "LinearMotor", 
+      "minPosition": 0, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n16357", 
+      "name": "finger2", 
+      "maxPosition": 0.025, 
+      "position": 0, 
+      "type": "LinearMotor", 
+      "minPosition": 0, 
+      "axis": "0 -1 0"
+    }, 
+    {
+      "transformID": "n16241", 
+      "type": "PositionSensor", 
+      "name": "arm1sensor"
+    }, 
+    {
+      "transformID": "n16264", 
+      "type": "PositionSensor", 
+      "name": "arm2sensor"
+    }, 
+    {
+      "transformID": "n16285", 
+      "type": "PositionSensor", 
+      "name": "arm3sensor"
+    }, 
+    {
+      "transformID": "n16313", 
+      "type": "PositionSensor", 
+      "name": "arm4sensor"
+    }, 
+    {
+      "transformID": "n16331", 
+      "type": "PositionSensor", 
+      "name": "arm5sensor"
+    }, 
+    {
+      "transformID": "n16341", 
+      "type": "PositionSensor", 
+      "name": "finger1sensor"
+    }, 
+    {
+      "transformID": "n16357", 
+      "type": "PositionSensor", 
+      "name": "finger2sensor"
+    }, 
+    {
+      "transformID": "n16394", 
+      "type": "PositionSensor", 
+      "name": "wheel1sensor"
+    }, 
+    {
+      "transformID": "n16442", 
+      "type": "PositionSensor", 
+      "name": "wheel2sensor"
+    }, 
+    {
+      "transformID": "n16490", 
+      "type": "PositionSensor", 
+      "name": "wheel3sensor"
+    }, 
+    {
+      "transformID": "n16538", 
+      "type": "PositionSensor", 
+      "name": "wheel4sensor"
+    }
+  ]
+}

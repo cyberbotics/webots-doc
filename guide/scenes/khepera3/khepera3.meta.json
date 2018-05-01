@@ -1,0 +1,123 @@
+{
+  "name": "khepera3", 
+  "devices": [
+    {
+      "transformID": "n6609", 
+      "name": "left wheel motor", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n6625", 
+      "name": "right wheel motor", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n6637", 
+      "type": "DistanceSensor", 
+      "name": "ds0"
+    }, 
+    {
+      "transformID": "n6654", 
+      "type": "DistanceSensor", 
+      "name": "ds1"
+    }, 
+    {
+      "transformID": "n6807", 
+      "type": "DistanceSensor", 
+      "name": "ds10"
+    }, 
+    {
+      "transformID": "n6671", 
+      "type": "DistanceSensor", 
+      "name": "ds2"
+    }, 
+    {
+      "transformID": "n6688", 
+      "type": "DistanceSensor", 
+      "name": "ds3"
+    }, 
+    {
+      "transformID": "n6705", 
+      "type": "DistanceSensor", 
+      "name": "ds4"
+    }, 
+    {
+      "transformID": "n6722", 
+      "type": "DistanceSensor", 
+      "name": "ds5"
+    }, 
+    {
+      "transformID": "n6739", 
+      "type": "DistanceSensor", 
+      "name": "ds6"
+    }, 
+    {
+      "transformID": "n6756", 
+      "type": "DistanceSensor", 
+      "name": "ds7"
+    }, 
+    {
+      "transformID": "n6773", 
+      "type": "DistanceSensor", 
+      "name": "ds8"
+    }, 
+    {
+      "transformID": "n6790", 
+      "type": "DistanceSensor", 
+      "name": "ds9"
+    }, 
+    {
+      "transformID": "n6609", 
+      "type": "PositionSensor", 
+      "name": "left wheel sensor"
+    }, 
+    {
+      "transformID": "n6625", 
+      "type": "PositionSensor", 
+      "name": "right wheel sensor"
+    }, 
+    {
+      "transformID": "n6534", 
+      "type": "Receiver", 
+      "name": "rs232_in"
+    }, 
+    {
+      "transformID": "n6534", 
+      "type": "Emitter", 
+      "name": "rs232_out"
+    }, 
+    {
+      "transformID": "n6824", 
+      "type": "DistanceSensor", 
+      "name": "us0"
+    }, 
+    {
+      "transformID": "n6851", 
+      "type": "DistanceSensor", 
+      "name": "us1"
+    }, 
+    {
+      "transformID": "n6878", 
+      "type": "DistanceSensor", 
+      "name": "us2"
+    }, 
+    {
+      "transformID": "n6905", 
+      "type": "DistanceSensor", 
+      "name": "us3"
+    }, 
+    {
+      "transformID": "n6932", 
+      "type": "DistanceSensor", 
+      "name": "us4"
+    }
+  ]
+}

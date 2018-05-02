@@ -78,6 +78,8 @@
   ";
 
   $dependencies = file_get_contents("$rawgiturl$branch/dependencies.txt");
+  if ($dependencies == FALSE)  // fallback for doc < R2018a.rev2
+    $dependencies = file_get_contents("https://www.cyberbotics.com/files/repository/www/wwi/R2018a/dependencies_fallback.txt");
   foreach (explode(PHP_EOL, $dependencies) as $dependency) {
     if (!startsWith($dependency, "#")) {
       if (endsWith($dependency, ".css"))

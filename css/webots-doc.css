@@ -410,10 +410,9 @@ body {
   font-family: "Roboto";
   border-bottom: 1px solid #e2e2e2;
   z-index: 1;
-  animation: fadein 1.5s;
-  -webkit-animation: fadein 1.5s;
+  animation: show 1.5s;
 }
-@keyframes fadein {
+@keyframes show {
   from {
     transform: translateY(-250%);
     -webkit-transform: translateY(-250%);

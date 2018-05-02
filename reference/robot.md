@@ -356,7 +356,7 @@ int wb_robot_wait_input_device_event(int event_type, int timeout);
 **Description**
 
 This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function.
-This function is blocking and will return as soon as an event which type is defined by the `event_type` argument happens (the list of available type is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_input_device_event-function)).
+This function is blocking and will return as soon as an event which type is defined by the `event_type` argument happens (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_input_device_event-function)).
 It is possible to combine event types in order to return as soon as one of the event happens:
 ```
 int returned_event = wb_robot_wait_input_device_event(WB_KEYBOARD_EVENT | WB_JOYSTICK_BUTTON_EVENT, 1000);
@@ -364,7 +364,7 @@ int returned_event = wb_robot_wait_input_device_event(WB_KEYBOARD_EVENT | WB_JOY
 The timeout argument specifies the maximum time in millisecond the function should block if no event happen.
 
 > **note**: The corresponding device should be enabled before calling the `wb_robot_wait_input_device_event` function.
-In case of mouse move and joystick axis event the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
+In case of mouse move and joystick axis event, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
 
 %figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_input_device_event` function"
 
@@ -376,7 +376,7 @@ In case of mouse move and joystick axis event the sampling period is used to avo
 | WB\_KEYBOARD\_EVENT         | used to detect a keyboard key press/release             |
 | WB\_JOYSTICK\_BUTTON\_EVENT | used to detect a joystick button press/release          |
 | WB\_JOYSTICK\_AXIS\_EVENT   | used to detect the motion of a joystick axis            |
-| WB\_JOYSTICK\_POV\_EVENT    | used to detect the state change of a joystick pov       |
+| WB\_JOYSTICK\_POV\_EVENT    | used to detect state change of a joystick pov           |
 
 %end
 

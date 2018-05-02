@@ -343,7 +343,7 @@ for(i=0; i<n_devices; i++) {
 
 **Name**
 
-**wb\_robot\_wait\_input\_device\_event** - *TODO*
+**wb\_robot\_wait\_input\_device\_event** - *wait for a Joystick, Keyboard or Mouse event*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
@@ -356,7 +356,7 @@ int wb_robot_wait_input_device_event(int event_type, int timeout);
 **Description**
 
 This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function.
-This function is blocking and will return as soon as an event which type is defined by the `event_type` argument happens.
+This function is blocking and will return as soon as an event which type is defined by the `event_type` argument happens (the list of available type is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_input_device_event-function)).
 It is possible to combine event types in order to return as soon as one of the event happens:
 ```
 int returned_event = wb_robot_wait_input_device_event(WB_KEYBOARD_EVENT | WB_JOYSTICK_BUTTON_EVENT, 1000);

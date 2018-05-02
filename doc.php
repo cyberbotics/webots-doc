@@ -69,7 +69,7 @@
         'anchor':     window.location.hash.substring(1),
         'branch':     '$branch',
         'repository': '$repository',
-        'tag':        '', <!-- For backward compatibility < R2018a. -->
+        'tag':        '',  // For backward compatibility < R2018a.
         'url':        'https://raw.githubusercontent.com/$repository/webots-doc/'
       }
       console.log('Setup: ' + JSON.stringify(setup));

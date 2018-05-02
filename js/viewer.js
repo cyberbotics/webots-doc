@@ -256,7 +256,9 @@ function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
     firstAnchor.scrollIntoView(true);
-    window.scrollBy(0, -38); // GitHub banner.
+    var contributionBanner = document.querySelector('.contribution-banner');
+    if (contributionBanner)
+      window.scrollBy(0, -38); // GitHub banner.
     if (isCyberboticsUrl)
       window.scrollBy(0, -44); // Cyberbotics header.
   } else
@@ -286,7 +288,7 @@ function applyToTitleDiv() {
 
 function addContributionBanner() {
   // if we're on the website we need to move the banner down by the height of the navbar
-  var displacement = document.querySelector('#footer') ? '44px' : '0px';
+  var displacement = isCyberboticsUrl ? '44px' : '0px';
 
   // append contribution sticker to primary doc element
   document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
@@ -301,10 +303,8 @@ function addContributionBanner() {
   var contributionBanner = document.querySelector('.contribution-banner');
 
   document.querySelector('#contribution-close').onclick = function() {
-    contributionBanner.setAttribute('class', 'contribution-banner');
+    contributionBanner.parentNode.removeChild(contributionBanner);
   };
-
-  setTimeout(function() { contributionBanner.setAttribute('class', 'contribution-banner visible-banner'); }, 1500);
 }
 
 function setUpBlogStyleIfNeeded() {
@@ -1179,8 +1179,8 @@ document.addEventListener('DOMContentLoaded', function() {
       localSetup.branch = getGETQueryValue('branch', 'master');
   }
 
+  addContributionBanner();
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
-  addContributionBanner();
 });

@@ -355,7 +355,16 @@ int wb_robot_wait_input_device_event(int event_type, int timeout);
 
 **Description**
 
-This functions...
+This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function.
+This function is blocking and will return as soon as an event which type is defined by the `event_type` argument happens.
+It is possible to combine event types in order to return as soon as one of the event happens:
+```
+int returned_event = wb_robot_wait_input_device_event(WB_KEYBOARD_EVENT | WB_JOYSTICK_BUTTON_EVENT, 1000);
+```
+The timeout argument specifies the maximum time in millisecond the function should block if no event happen.
+
+> **note**: The corresponding device should be enabled before calling the `wb_robot_wait_input_device_event` function.
+In case of mouse move and joystick axis event the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
 
 %figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_input_device_event` function"
 

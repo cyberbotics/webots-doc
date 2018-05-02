@@ -343,42 +343,46 @@ for(i=0; i<n_devices; i++) {
 
 **Name**
 
-**wb\_robot\_wait\_input\_device\_event** - *wait for a Joystick, Keyboard or Mouse event*
+**wb\_robot\_wait\_for\_user\_input\_event** - *wait for a Joystick, Keyboard or Mouse input event*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
 
 ```c
 #include <webots/robot.h>
 
-int wb_robot_wait_input_device_event(int event_type, int timeout);
+int wb_robot_wait_for_user_input_event(int event_type, int timeout);
 ```
 
 **Description**
 
-This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function.
-This function is blocking and will return as soon as an event which type is defined by the `event_type` argument happens (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_input_device_event-function)).
+This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is usefull to prevent the simulation from running until a specific user input event happens.
+This function is blocking the simulation and will return:
+  - as soon as an event which type is defined by the `event_type` argument happens (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
+  - when the amout of millisecond specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
 It is possible to combine event types in order to return as soon as one of the event happens:
 ```
-int returned_event = wb_robot_wait_input_device_event(WB_KEYBOARD_EVENT | WB_JOYSTICK_BUTTON_EVENT, 1000);
+int returned_event = wb_robot_wait_input_device_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
 ```
-The timeout argument specifies the maximum time in millisecond the function should block if no event happen.
 
 > **note**: The corresponding device should be enabled before calling the `wb_robot_wait_input_device_event` function.
 In case of mouse move and joystick axis event, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
+In that case, the sampling period is expressed in real time and not in simulation time.
 
-%figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_input_device_event` function"
+%figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_for_user_input_event` function"
 
 | Event                       | Purpose                                                 |
 | --------------------------- | ------------------------------------------------------- |
-| WB\_NO\_EVENT               | returned when no event has been triggered               |
-| WB\_MOUSE\_CLICK\_EVENT     | used to detect a mouse click in the 3D window           |
-| WB\_MOUSE\_MOVE\_EVENT      | used to detect the motion of the mouse in the 3D window |
-| WB\_KEYBOARD\_EVENT         | used to detect a keyboard key press/release             |
-| WB\_JOYSTICK\_BUTTON\_EVENT | used to detect a joystick button press/release          |
-| WB\_JOYSTICK\_AXIS\_EVENT   | used to detect the motion of a joystick axis            |
-| WB\_JOYSTICK\_POV\_EVENT    | used to detect state change of a joystick pov           |
+| WB\_EVENT\_NO\_EVENT        | no event happens or no event should cause a return      |
+| WB\_EVENT\_MOUSE\_CLICK     | used to detect a mouse click in the 3D window           |
+| WB\_EVENT\_MOUSE\_MOVE      | used to detect the motion of the mouse in the 3D window |
+| WB\_EVENT\_KEYBOARD         | used to detect a keyboard key press/release             |
+| WB\_EVENT\_JOYSTICK\_BUTTON | used to detect a joystick button press/release          |
+| WB\_EVENT\_JOYSTICK\_AXIS   | used to detect the motion of a joystick axis            |
+| WB\_EVENT\_JOYSTICK\_POV    | used to detect state change of a joystick pov           |
 
 %end
+
+> **note**: Calling the `wb_robot_wait_input_device_event` function with `WB_EVENT_NO_EVENT` as `event_type` argument results in a sleep of the simulation.
 
 ---
 

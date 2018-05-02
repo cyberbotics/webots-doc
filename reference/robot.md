@@ -359,6 +359,7 @@ This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md
 This function is blocking the simulation and will return:
   - as soon as an event which type is defined by the `event_type` argument happens (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
   - when the amout of millisecond specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
+
 It is possible to combine event types in order to return as soon as one of the event happens:
 ```
 int returned_event = wb_robot_wait_input_device_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);

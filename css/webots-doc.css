@@ -37,6 +37,9 @@
   src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
 }
 
+body {
+  scroll-behavior: auto !important; /* wwi.css.body.scroll-behavior should be encapsulated in class to fix this cleanly. */
+}
 .webots-doc #left {
   top: 0;
   width: 20%;
@@ -407,23 +410,21 @@
   font-family: "Roboto";
   border-bottom: 1px solid #e2e2e2;
   z-index: 1;
-  transform: translateY(-250%);
-  -webkit-transform: translateY(-250%);
-  -moz-transform: translateY(-250%);
-  -o-transform: translateY(-250%);
-  transition-property: transform;
-  -webkit-transition-property: transform;
-  -moz-transition-property: transform;
-  -o-transition-property: transform;
-  transition-duration: 0.8s;
-  transition-timing-function: ease-out;
+  animation: show 1.5s;
 }
-
-.webots-doc .visible-banner {
-  transform: translateY(0%);
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -o-transform: translateY(0%);
+@keyframes show {
+  from {
+    transform: translateY(-250%);
+    -webkit-transform: translateY(-250%);
+    -moz-transform: translateY(-250%);
+    -o-transform: translateY(-250%);
+  }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
 }
 
 .webots-doc .contribution-banner #contribution-close {

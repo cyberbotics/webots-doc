@@ -255,11 +255,16 @@ function redirectTextures(node, robotName) {
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
+    console.log(firstAnchor);
     firstAnchor.scrollIntoView(true);
-    if (document.querySelector('.contribution-banner'))
+    if (document.querySelector('.contribution-banner')) {
       window.scrollBy(0, -38); // GitHub banner.
-    if (isCyberboticsUrl)
+      console.log(-38);
+    }
+    if (isCyberboticsUrl) {
       window.scrollBy(0, -44); // Cyberbotics header.
+      console.log(-44);
+    }
   } else
     window.scrollTo(0, 0);
 }
@@ -460,6 +465,14 @@ function populateViewDiv(mdContent) {
   redirectUrls(view);
   collapseMovies(view);
 
+  applyAnchorIcons(view);
+  highlightCode(view);
+
+  updateSelection();
+  setUpBlogStyleIfNeeded();
+
+  createIndex(view);
+
   var images = view.querySelectorAll('img');
   if (images.length > 0) {
     // apply the anchor only when the images are loaded,
@@ -468,14 +481,6 @@ function populateViewDiv(mdContent) {
     $(lastImage).load(applyAnchor);
   } else
     applyAnchor();
-
-  applyAnchorIcons(view);
-  highlightCode(view);
-
-  updateSelection();
-  setUpBlogStyleIfNeeded();
-
-  createIndex(view);
 }
 
 // replace the browser URL after a dynamic load

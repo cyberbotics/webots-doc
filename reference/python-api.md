@@ -660,61 +660,63 @@ The following tables describe the Python classes and their methods.
 
 %api "python_robot"
 
-|                                                                                                        |
-| ------------------------------------------------------------------------------------------------------ |
-| from controller import Robot                                                                           |
-| class [Robot](robot.md) :                                                                              |
-| &nbsp;&nbsp; MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                               |
-| &nbsp;&nbsp; MODE\_REMOTE\_CONTROL                                                                     |
-| &nbsp;&nbsp; def [\_\_init\_\_](robot.md#wb_robot_step)(self)                                          |
-| &nbsp;&nbsp; def [\_\_del\_\_](robot.md#wb_robot_step)(self)                                           |
-| &nbsp;&nbsp; def [step](robot.md#wb_robot_step)(self, sampling_period)                                 |
-| &nbsp;&nbsp; def [getAccelerometer](robot.md#wb_robot_get_device)(self, name)                          |
-| &nbsp;&nbsp; def [getBrake](robot.md#wb_robot_get_device)(self, name)                                  |
-| &nbsp;&nbsp; def [getCamera](robot.md#wb_robot_get_device)(self, name)                                 |
-| &nbsp;&nbsp; def [getCompass](robot.md#wb_robot_get_device)(self, name)                                |
-| &nbsp;&nbsp; def [getConnector](robot.md#wb_robot_get_device)(self, name)                              |
-| &nbsp;&nbsp; def [getDisplay](robot.md#wb_robot_get_device)(self, name)                                |
-| &nbsp;&nbsp; def [getDistanceSensor](robot.md#wb_robot_get_device)(self, name)                         |
-| &nbsp;&nbsp; def [getEmitter](robot.md#wb_robot_get_device)(self, name)                                |
-| &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                                    |
-| &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                                   |
-| &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                           |
-| &nbsp;&nbsp; def getJoystick(self)                                                                     |
-| &nbsp;&nbsp; def getKeyboard(self)                                                                     |
-| &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                                    |
-| &nbsp;&nbsp; def [getLidar](robot.md#wb_robot_get_device)(self, name)                                  |
-| &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                            |
-| &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                                  |
-| &nbsp;&nbsp; def getMouse(self)                                                                        |
-| &nbsp;&nbsp; def [getPen](robot.md#wb_robot_get_device)(self, name)                                    |
-| &nbsp;&nbsp; def [getPositionSensor](robot.md#wb_robot_get_device)(self, name)                         |
-| &nbsp;&nbsp; def [getRadar](robot.md#wb_robot_get_device)(self, name)                                  |
-| &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                            |
-| &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                               |
-| &nbsp;&nbsp; def [getSpeaker](robot.md#wb_robot_get_device)(self, name)                                |
-| &nbsp;&nbsp; def [getTouchSensor](robot.md#wb_robot_get_device)(self, name)                            |
-| &nbsp;&nbsp; def [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)(self)                     |
-| &nbsp;&nbsp; def [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(self, index)                |
-| &nbsp;&nbsp; def [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(self, sampling_period) |
-| &nbsp;&nbsp; def [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)(self)                 |
-| &nbsp;&nbsp; def [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)(self)       |
-| &nbsp;&nbsp; def [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)(self)                |
-| &nbsp;&nbsp; def [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)(self)                       |
-| &nbsp;&nbsp; def [getMode](robot.md#wb_robot_get_mode)(self)                                           |
-| &nbsp;&nbsp; def [getModel](robot.md#wb_robot_get_model)(self)                                         |
-| &nbsp;&nbsp; def [getCustomData](robot.md#wb_robot_get_custom_data)(self)                              |
-| &nbsp;&nbsp; def [setCustomData](robot.md#wb_robot_get_custom_data)(self, data)                        |
-| &nbsp;&nbsp; def [getName](robot.md#wb_robot_get_name)(self)                                           |
-| &nbsp;&nbsp; def [getControllerName](robot.md#wb_robot_get_controller_name)(self)                      |
-| &nbsp;&nbsp; def [getControllerArguments](robot.md#wb_robot_get_controller_name)(self)                 |
-| &nbsp;&nbsp; def [getSynchronization](robot.md#wb_robot_get_synchronization)(self)                     |
-| &nbsp;&nbsp; def [getProjectPath](robot.md#wb_robot_get_project_path)(self)                            |
-| &nbsp;&nbsp; def [getTime](robot.md#wb_robot_get_time)(self)                                           |
-| &nbsp;&nbsp; def [getWorldPath](robot.md#wb_robot_get_world_path)(self)                                |
-| &nbsp;&nbsp; def [getType](robot.md#wb_robot_get_type)(self)                                           |
-| &nbsp;&nbsp; def [wwiSendText](robot.md#wb_robot_wwi_send_text)(self, text)                            |
-| &nbsp;&nbsp; def [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)(self)                            |
+|                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------- |
+| from controller import Robot                                                                                   |
+| class [Robot](robot.md) :                                                                                      |
+| &nbsp;&nbsp; MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL                                 |
+| &nbsp;&nbsp; NO\_EVENT, MOUSE\_CLICK\_EVENT, MOUSE\_MOVE\_EVENT, KEYBOARD\_EVENT,                              |
+| &nbsp;&nbsp; JOYSTICK\_BUTTON\_EVENT, JOYSTICK\_AXIS\_EVENT, JOYSTICK\_POV\_EVENT                              |
+| &nbsp;&nbsp; def [\_\_init\_\_](robot.md#wb_robot_step)(self)                                                  |
+| &nbsp;&nbsp; def [\_\_del\_\_](robot.md#wb_robot_step)(self)                                                   |
+| &nbsp;&nbsp; def [step](robot.md#wb_robot_step)(self, sampling_period)                                         |
+| &nbsp;&nbsp; def [waitInputDeviceEvent](robot.md#wb_robot_wait_input_device_event)(self, event_type, timeout)  |
+| &nbsp;&nbsp; def [getAccelerometer](robot.md#wb_robot_get_device)(self, name)                                  |
+| &nbsp;&nbsp; def [getBrake](robot.md#wb_robot_get_device)(self, name)                                          |
+| &nbsp;&nbsp; def [getCamera](robot.md#wb_robot_get_device)(self, name)                                         |
+| &nbsp;&nbsp; def [getCompass](robot.md#wb_robot_get_device)(self, name)                                        |
+| &nbsp;&nbsp; def [getConnector](robot.md#wb_robot_get_device)(self, name)                                      |
+| &nbsp;&nbsp; def [getDisplay](robot.md#wb_robot_get_device)(self, name)                                        |
+| &nbsp;&nbsp; def [getDistanceSensor](robot.md#wb_robot_get_device)(self, name)                                 |
+| &nbsp;&nbsp; def [getEmitter](robot.md#wb_robot_get_device)(self, name)                                        |
+| &nbsp;&nbsp; def [getGPS](robot.md#wb_robot_get_device)(self, name)                                            |
+| &nbsp;&nbsp; def [getGyro](robot.md#wb_robot_get_device)(self, name)                                           |
+| &nbsp;&nbsp; def [getInertialUnit](robot.md#wb_robot_get_device)(self, name)                                   |
+| &nbsp;&nbsp; def getJoystick(self)                                                                             |
+| &nbsp;&nbsp; def getKeyboard(self)                                                                             |
+| &nbsp;&nbsp; def [getLED](robot.md#wb_robot_get_device)(self, name)                                            |
+| &nbsp;&nbsp; def [getLidar](robot.md#wb_robot_get_device)(self, name)                                          |
+| &nbsp;&nbsp; def [getLightSensor](robot.md#wb_robot_get_device)(self, name)                                    |
+| &nbsp;&nbsp; def [getMotor](robot.md#wb_robot_get_device)(self, name)                                          |
+| &nbsp;&nbsp; def getMouse(self)                                                                                |
+| &nbsp;&nbsp; def [getPen](robot.md#wb_robot_get_device)(self, name)                                            |
+| &nbsp;&nbsp; def [getPositionSensor](robot.md#wb_robot_get_device)(self, name)                                 |
+| &nbsp;&nbsp; def [getRadar](robot.md#wb_robot_get_device)(self, name)                                          |
+| &nbsp;&nbsp; def [getRangeFinder](robot.md#wb_robot_get_device)(self, name)                                    |
+| &nbsp;&nbsp; def [getReceiver](robot.md#wb_robot_get_device)(self, name)                                       |
+| &nbsp;&nbsp; def [getSpeaker](robot.md#wb_robot_get_device)(self, name)                                        |
+| &nbsp;&nbsp; def [getTouchSensor](robot.md#wb_robot_get_device)(self, name)                                    |
+| &nbsp;&nbsp; def [getNumberOfDevices](robot.md#wb_robot_get_device_by_index)(self)                             |
+| &nbsp;&nbsp; def [getDeviceByIndex](robot.md#wb_robot_get_device_by_index)(self, index)                        |
+| &nbsp;&nbsp; def [batterySensorEnable](robot.md#wb_robot_battery_sensor_enable)(self, sampling_period)         |
+| &nbsp;&nbsp; def [batterySensorDisable](robot.md#wb_robot_battery_sensor_enable)(self)                         |
+| &nbsp;&nbsp; def [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)(self)               |
+| &nbsp;&nbsp; def [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)(self)                        |
+| &nbsp;&nbsp; def [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)(self)                               |
+| &nbsp;&nbsp; def [getMode](robot.md#wb_robot_get_mode)(self)                                                   |
+| &nbsp;&nbsp; def [getModel](robot.md#wb_robot_get_model)(self)                                                 |
+| &nbsp;&nbsp; def [getCustomData](robot.md#wb_robot_get_custom_data)(self)                                      |
+| &nbsp;&nbsp; def [setCustomData](robot.md#wb_robot_get_custom_data)(self, data)                                |
+| &nbsp;&nbsp; def [getName](robot.md#wb_robot_get_name)(self)                                                   |
+| &nbsp;&nbsp; def [getControllerName](robot.md#wb_robot_get_controller_name)(self)                              |
+| &nbsp;&nbsp; def [getControllerArguments](robot.md#wb_robot_get_controller_name)(self)                         |
+| &nbsp;&nbsp; def [getSynchronization](robot.md#wb_robot_get_synchronization)(self)                             |
+| &nbsp;&nbsp; def [getProjectPath](robot.md#wb_robot_get_project_path)(self)                                    |
+| &nbsp;&nbsp; def [getTime](robot.md#wb_robot_get_time)(self)                                                   |
+| &nbsp;&nbsp; def [getWorldPath](robot.md#wb_robot_get_world_path)(self)                                        |
+| &nbsp;&nbsp; def [getType](robot.md#wb_robot_get_type)(self)                                                   |
+| &nbsp;&nbsp; def [wwiSendText](robot.md#wb_robot_wwi_send_text)(self, text)                                    |
+| &nbsp;&nbsp; def [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)(self)                                    |
 
 %end
 

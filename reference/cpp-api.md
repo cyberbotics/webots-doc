@@ -627,11 +627,13 @@ The following tables describe the C++ classes and their methods.
 | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Robot.hpp`>`                                                                                                            |
 | class [Robot](robot.md) {                                                                                                                  |
-| &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                                                             |
-| &nbsp;&nbsp; MODE\_REMOTE\_CONTROL};                                                                                                       |
+| &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL};                                                     |
+| &nbsp;&nbsp; enum {NO\_EVENT, MOUSE\_CLICK\_EVENT, MOUSE\_MOVE\_EVENT, KEYBOARD\_EVENT,                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp; JOYSTICK\_BUTTON\_EVENT, JOYSTICK\_AXIS\_EVENT, JOYSTICK\_POV\_EVENT};                                            |
 | &nbsp;&nbsp; [Robot](robot.md#wb_robot_step)();                                                                                            |
 | &nbsp;&nbsp; virtual [~Robot](robot.md#wb_robot_step)();                                                                                   |
 | &nbsp;&nbsp; virtual int [step](robot.md#wb_robot_step)(int sampling_period);                                                              |
+| &nbsp;&nbsp; int [waitInputDeviceEvent](robot.md#wb_robot_wait_input_device_event)(int event_type, int timeout);                           |
 | &nbsp;&nbsp; [Accelerometer](#cpp_accelerometer) *[getAccelerometer](robot.md#wb_robot_get_device)(const std::string &name);               |
 | &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [Camera](#cpp_camera) *[getCamera](robot.md#wb_robot_get_device)(const std::string &name);                                    |

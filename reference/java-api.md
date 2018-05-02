@@ -693,11 +693,13 @@ The following tables describe the Java classes and their methods.
 | -------------------------------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Robot;                                                                                        |
 | public class [Robot](robot.md) {                                                                                                       |
-| &nbsp;&nbsp; public final static int MODE\_SIMULATION,                                                                                 |
-| &nbsp;&nbsp; MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL;                                                                          |
+| &nbsp;&nbsp; public final static int MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL;                                |
+| &nbsp;&nbsp; public final static int NO\_EVENT, MOUSE\_CLICK\_EVENT, MOUSE\_MOVE\_EVENT, KEYBOARD\_EVENT,                              |
+| &nbsp;&nbsp;&nbsp;&nbsp; JOYSTICK\_BUTTON\_EVENT, JOYSTICK\_AXIS\_EVENT, JOYSTICK\_POV\_EVENT;                                         |
 | &nbsp;&nbsp; public [Robot](robot.md#wb_robot_step)();                                                                                 |
 | &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                      |
 | &nbsp;&nbsp; public int [step](robot.md#wb_robot_step)(int sampling_period);                                                           |
+| &nbsp;&nbsp; public int [waitInputDeviceEvent](robot.md#wb_robot_wait_input_device_event)(int event_type, int timeout);                |
 | &nbsp;&nbsp; public [Accelerometer](#java_accelerometer) [getAccelerometer](robot.md#wb_robot_get_device)(String name);                |
 | &nbsp;&nbsp; public [Brake](#java_brake) [getBrake](robot.md#wb_robot_get_device)(String name);                                        |
 | &nbsp;&nbsp; public [Camera](#java_camera) [getCamera](robot.md#wb_robot_get_device)(String name);                                     |

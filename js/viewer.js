@@ -256,7 +256,9 @@ function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
     firstAnchor.scrollIntoView(true);
-    window.scrollBy(0, -80);
+    window.scrollBy(0, -38); // GitHub banner.
+    if (isCyberboticsUrl)
+      window.scrollBy(0, -44); // Cyberbotics header.
   } else
     window.scrollTo(0, 0);
 }

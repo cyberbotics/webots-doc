@@ -256,7 +256,8 @@ function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
     firstAnchor.scrollIntoView(true);
-    window.scrollBy(0, -38); // GitHub banner.
+    if (document.querySelector('.contribution-banner'))
+      window.scrollBy(0, -38); // GitHub banner.
     if (isCyberboticsUrl)
       window.scrollBy(0, -44); // Cyberbotics header.
   } else
@@ -286,7 +287,7 @@ function applyToTitleDiv() {
 
 function addContributionBanner() {
   // if we're on the website we need to move the banner down by the height of the navbar
-  var displacement = document.querySelector('#footer') ? '44px' : '0px';
+  var displacement = isCyberboticsUrl ? '44px' : '0px';
 
   // append contribution sticker to primary doc element
   document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
@@ -301,10 +302,8 @@ function addContributionBanner() {
   var contributionBanner = document.querySelector('.contribution-banner');
 
   document.querySelector('#contribution-close').onclick = function() {
-    contributionBanner.setAttribute('class', 'contribution-banner');
+    contributionBanner.parentNode.removeChild(contributionBanner);
   };
-
-  setTimeout(function() { contributionBanner.setAttribute('class', 'contribution-banner visible-banner'); }, 1500);
 }
 
 function setUpBlogStyleIfNeeded() {
@@ -461,6 +460,14 @@ function populateViewDiv(mdContent) {
   redirectUrls(view);
   collapseMovies(view);
 
+  applyAnchorIcons(view);
+  highlightCode(view);
+
+  updateSelection();
+  setUpBlogStyleIfNeeded();
+
+  createIndex(view);
+
   var images = view.querySelectorAll('img');
   if (images.length > 0) {
     // apply the anchor only when the images are loaded,
@@ -469,14 +476,6 @@ function populateViewDiv(mdContent) {
     $(lastImage).load(applyAnchor);
   } else
     applyAnchor();
-
-  applyAnchorIcons(view);
-  highlightCode(view);
-
-  updateSelection();
-  setUpBlogStyleIfNeeded();
-
-  createIndex(view);
 }
 
 // replace the browser URL after a dynamic load
@@ -1179,8 +1178,8 @@ document.addEventListener('DOMContentLoaded', function() {
       localSetup.branch = getGETQueryValue('branch', 'master');
   }
 
+  addContributionBanner();
   applyToTitleDiv();
   getMDFile();
   getMenuFile();
-  addContributionBanner();
 });

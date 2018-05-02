@@ -343,6 +343,38 @@ for(i=0; i<n_devices; i++) {
 
 **Name**
 
+**wb\_robot\_wait\_input\_device\_event** - *TODO*
+
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/robot.h>
+
+int wb_robot_wait_input_device_event(int event_type, int timeout);
+```
+
+**Description**
+
+This functions...
+
+%figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_input_device_event` function"
+
+| Event                       | Purpose                                                 |
+| --------------------------- | ------------------------------------------------------- |
+| WB\_NO\_EVENT               | returned when no event has been triggered               |
+| WB\_MOUSE\_CLICK\_EVENT     | used to detect a mouse click in the 3D window           |
+| WB\_MOUSE\_MOVE\_EVENT      | used to detect the motion of the mouse in the 3D window |
+| WB\_KEYBOARD\_EVENT         | used to detect a keyboard key press/release             |
+| WB\_JOYSTICK\_BUTTON\_EVENT | used to detect a joystick button press/release          |
+| WB\_JOYSTICK\_AXIS\_EVENT   | used to detect the motion of a joystick axis            |
+| WB\_JOYSTICK\_POV\_EVENT    | used to detect the state change of a joystick pov       |
+
+%end
+
+---
+
+**Name**
+
 **wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}

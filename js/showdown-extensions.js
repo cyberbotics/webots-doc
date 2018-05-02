@@ -184,16 +184,57 @@ showdown.extension('wbChart', function() {
         text = text.replace(/%chart\s+([^"][^]+?)%end/gi, function(match, content) {
           // handle links
           content = content.replace(/\[\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
-            return '[<a href='+ link + '>' + name + '</>';
+            return '[<a href=' + link + '>' + name + '</>';
           });
           content = content.replace(/\[(.+?)\]\((.+?)\)/gi, function(match, name, link) {
-            return '<a href='+ link + '>' + name + '</>';
+            return '<a href=' + link + '>' + name + '</>';
           });
           // save content
           var id = 'mermaidGraph' + window.mermaidGraphCounter;
           window.mermaidGraphCounter++;
           window.mermaidGraphs[id] = content;
           return '<div id="' + id + 'Div' + '" class="mermaid"></div>';
+        });
+        return text;
+      }
+    }
+  ];
+});
+
+// This extension allows to add robot component.
+// Example: "%robot nao"
+showdown.extension('wbRobotComponent', function() {
+  return [
+    {
+      type: 'lang',
+      filter: function(text, converter, options) {
+        text = text.replace(/%robot\s+([^ \n]+)\s+([^ \n]+)/gi, function(match, robot, imageFallback) {
+          var replacement = '';
+          if (location.href.startsWith('file:')) {
+            // offline documentation embedded in Webots.
+            // Ogre, webgl (QWebKit) are not working smoothly together: the image image fallback is used instead.
+            replacement =
+              '%figure\n\n' +
+              '![](' + imageFallback + ')\n\n' +
+              '%end\n';
+          } else {
+            replacement =
+              '<div id="%ROBOT%-robot-component" class="robot-component">\n' +
+              '  <div id="%ROBOT%-robot-view" class="robot-view">\n' +
+              '    <div id="%ROBOT%-robot-webots-view" class="robot-webots-view">\n' +
+              '    </div>\n' +
+              '    <div class="menu">\n' +
+              '      <div class="menu-items">\n' +
+              '        <button class="reset-button" title="Reset Viewpoint and sliders." onclick="resetRobotComponent(\'%ROBOT%\')"></button>\n' +
+              '        <button class="menu-button" title="Show/Hide the device list." onclick="toggleDeviceComponent(\'%ROBOT%\')"></button>\n' +
+              '      </div>\n' +
+              '    </div>\n' +
+              '  </div>\n' +
+              '  <div id="%ROBOT%-device-component" class="device-component"></div>\n' +
+              '</div>\n';
+            replacement = replacement.replace(/%ROBOT%/g, robot);
+          }
+          return replacement;
         });
         return text;
       }

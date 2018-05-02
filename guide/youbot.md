@@ -1,10 +1,6 @@
 ## KUKA's youBot
 
-%figure "youBot model in Webots"
-
-![model.png](images/robots/youbot/model.png)
-
-%end
+%robot youbot images/robots/youbot/model.png
 
 The youBot is a mobile robotic arm developed by [KUKA](http://www.youbot-store.com/).
 Its arm has five degrees of freedom and a linear gripper.

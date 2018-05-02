@@ -1,10 +1,6 @@
 ## K-Team's Khepera I
 
-%figure "Khepera I model in Webots"
-
-![model.png](images/robots/khepera1/model.png)
-
-%end
+%robot khepera1 images/robots/khepera1/model.png
 
 The "Khepera" robot is a two-wheeled robot produced by [K-Team](https://www.k-team.com/).
 It is mounted by multiple sensors including 8 distance sensors.

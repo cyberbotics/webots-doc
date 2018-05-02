@@ -1,10 +1,6 @@
 ## BlueBotics's Shrimp
 
-%figure "Shrimp model in Webots"
-
-![model.png](images/robots/shrimp/model.png)
-
-%end
+%robot shrimp images/robots/shrimp/model.png
 
 The "Shrimp" robot is a mobile platform for rough terrain from [Bluebotics](http://www.bluebotics.ch).
 It has 6 wheels and a passive structure that adapts to the terrain profile and climbs obstacles.

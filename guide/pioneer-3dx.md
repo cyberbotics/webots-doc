@@ -1,10 +1,6 @@
 ## Adept's Pioneer 3-DX
 
-%figure "Pioneer 3-DX model in Webots"
-
-![pioneer3dx.png](images/robots/pioneer-3dx/model.png)
-
-%end
+%robot pioneer-3dx images/robots/pioneer-3dx/model.png
 
 The Pioneer 3-DX robot is an all-purpose base, used for research and applications involving mapping, teleoperation, localization, monitoring, reconnaissance and other behaviors.
 Pioneer 3-DX is caracterized by a set of features listed in [this table](#pioneer-3-dx-characteristics).

@@ -1,0 +1,567 @@
+{
+  "name": "aibo-ers7", 
+  "devices": [
+    {
+      "transformID": "n55", 
+      "name": "PRM:/r1/c1-Joint2:11", 
+      "maxPosition": 0.0524, 
+      "position": -0.5236, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.3963, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n64", 
+      "name": "PRM:/r1/c1/c2-Joint2:12", 
+      "maxPosition": 1.6232, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.6232, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3-Joint2:13", 
+      "maxPosition": 0.8727, 
+      "position": 0.5236, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.349, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n163", 
+      "name": "PRM:/r1/c1/c2/c3/c4-Joint2:14", 
+      "maxPosition": 0, 
+      "position": -0.0523599, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.0472, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n127", 
+      "name": "PRM:/r1/c1/c2/c3/e5-Joint4:15", 
+      "maxPosition": 0.2618, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": "n145", 
+      "name": "PRM:/r1/c1/c2/c3/e6-Joint4:16", 
+      "maxPosition": 0.2618, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n313", 
+      "name": "PRM:/r2/c1-Joint2:21", 
+      "maxPosition": 2.3562, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.0944, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n323", 
+      "name": "PRM:/r2/c1/c2-Joint2:22", 
+      "maxPosition": 1.6232, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": "n333", 
+      "name": "PRM:/r2/c1/c2/c3-Joint2:23", 
+      "maxPosition": 2.2166, 
+      "position": 0.523653, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n367", 
+      "name": "PRM:/r3/c1-Joint2:31", 
+      "maxPosition": 2.0944, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.3562, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n377", 
+      "name": "PRM:/r3/c1/c2-Joint2:32", 
+      "maxPosition": 1.6232, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.2618, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "transformID": "n387", 
+      "name": "PRM:/r3/c1/c2/c3-Joint2:33", 
+      "maxPosition": 2.2166, 
+      "position": 0.523598, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n209", 
+      "name": "PRM:/r4/c1-Joint2:41", 
+      "maxPosition": 2.3562, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.0944, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n219", 
+      "name": "PRM:/r4/c1/c2-Joint2:42", 
+      "maxPosition": 1.6232, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.2618, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n229", 
+      "name": "PRM:/r4/c1/c2/c3-Joint2:43", 
+      "maxPosition": 2.2166, 
+      "position": 0.523619, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n263", 
+      "name": "PRM:/r5/c1-Joint2:51", 
+      "maxPosition": 2.0944, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -2.3562, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n273", 
+      "name": "PRM:/r5/c1/c2-Joint2:52", 
+      "maxPosition": 1.6232, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.2618, 
+      "axis": "0 0 1"
+    }, 
+    {
+      "transformID": "n283", 
+      "name": "PRM:/r5/c1/c2/c3-Joint2:53", 
+      "maxPosition": 2.2166, 
+      "position": 0.523598, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.5236, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n182", 
+      "name": "PRM:/r6/c1-Joint2:61", 
+      "maxPosition": 1.1345, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "-1 0 0"
+    }, 
+    {
+      "transformID": "n191", 
+      "name": "PRM:/r6/c2-Joint2:62", 
+      "maxPosition": 1.0472, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.0472, 
+      "axis": "0 0 -1"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n13", 
+      "name": "PRM:/lu-LED3:lu", 
+      "ledColors": [
+        "0 0 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n13", 
+      "name": "PRM:/lv-LED3:lv", 
+      "ledColors": [
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n13", 
+      "name": "PRM:/lw-LED3:lw", 
+      "ledColors": [
+        "1 1 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n13", 
+      "name": "PRM:/lx-LED3:lx", 
+      "ledColors": [
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n13", 
+      "name": "PRM:/ly-LED3:ly", 
+      "ledColors": [
+        "1 0 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n13", 
+      "name": "PRM:/lz-LED3:lz", 
+      "ledColors": [
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/l1-LED2:l1", 
+      "ledColors": [
+        "1 0.588235 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/l2-LED2:l2", 
+      "ledColors": [
+        "1 0 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/l3-LED2:l3", 
+      "ledColors": [
+        "1 0 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/l4-LED2:l4", 
+      "ledColors": [
+        "1 0 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/l5-LED2:l5", 
+      "ledColors": [
+        "1 0 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/l6-LED2:l6", 
+      "ledColors": [
+        "1 0 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/la-LED3:la", 
+      "ledColors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lb-LED3:lb", 
+      "ledColors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lc-LED3:lc", 
+      "ledColors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/ld-LED3:ld", 
+      "ledColors": [
+        "1 1 1", 
+        "0 0.588235 0"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/le-LED3:le", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lf-LED3:lf", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lg-LED3:lg", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lh-LED3:lh", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/li-LED3:li", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lj-LED3:lj", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lk-LED3:lk", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/ll-LED3:ll", 
+      "ledColors": [
+        "1 1 1", 
+        "1 1 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/lm-LED3:lm", 
+      "ledColors": [
+        "1 0 0", 
+        "0 0 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "ledMaterialsIDs": [], 
+      "transformID": "n68", 
+      "name": "PRM:/r1/c1/c2/c3/ln-LED3:ln", 
+      "ledColors": [
+        "1 0 0", 
+        "0 0 1"
+      ], 
+      "ledGradual": false, 
+      "type": "LED"
+    }, 
+    {
+      "transformID": "n13", 
+      "transformOffset": "0 -0.00425 -0.10864", 
+      "type": "DistanceSensor", 
+      "name": "PRM:/p1-Sensor:p1"
+    }, 
+    {
+      "transformID": "n68", 
+      "transformOffset": "0 -0.0146 -0.08106", 
+      "type": "Camera", 
+      "name": "PRM:/r1/c1/c2/c3/i1-FbkImageSensor:F1"
+    }, 
+    {
+      "transformID": "n68", 
+      "transformOffset": "0.00325 0 -0.0769", 
+      "type": "DistanceSensor", 
+      "name": "PRM:/r1/c1/c2/c3/p1-Sensor:p1"
+    }, 
+    {
+      "transformID": "n68", 
+      "transformOffset": "-0.00695 0 -0.0769", 
+      "type": "DistanceSensor", 
+      "name": "PRM:/r1/c1/c2/c3/p2-Sensor:p2"
+    }, 
+    {
+      "transformID": "n323", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r2/c1/c2-JointSensor2:22"
+    }, 
+    {
+      "transformID": "n333", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r2/c1/c2/c3-JointSensor2:23"
+    }, 
+    {
+      "transformID": "n333", 
+      "transformOffset": "0 -0.0658 0.0055", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r2/c1/c2/c3/c4-Sensor:24"
+    }, 
+    {
+      "transformID": "n367", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r3/c1-JointSensor2:31"
+    }, 
+    {
+      "transformID": "n377", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r3/c1/c2-JointSensor2:32"
+    }, 
+    {
+      "transformID": "n387", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r3/c1/c2/c3-JointSensor2:33"
+    }, 
+    {
+      "transformID": "n387", 
+      "transformOffset": "0 -0.0676 -0.01409", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r3/c1/c2/c3/c4-Sensor:34"
+    }, 
+    {
+      "transformID": "n209", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r4/c1-JointSensor2:41"
+    }, 
+    {
+      "transformID": "n219", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r4/c1/c2-JointSensor2:42"
+    }, 
+    {
+      "transformID": "n229", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r4/c1/c2/c3-JointSensor2:43"
+    }, 
+    {
+      "transformID": "n229", 
+      "transformOffset": "0 -0.0658 0.0055", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r4/c1/c2/c3/c4-Sensor:44"
+    }, 
+    {
+      "transformID": "n263", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r5/c1-JointSensor2:51"
+    }, 
+    {
+      "transformID": "n273", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r5/c1/c2-JointSensor2:52"
+    }, 
+    {
+      "transformID": "n283", 
+      "type": "PositionSensor", 
+      "name": "PRM:/r5/c1/c2/c3-JointSensor2:53"
+    }, 
+    {
+      "transformID": "n283", 
+      "transformOffset": "0 -0.0676 -0.014087", 
+      "type": "TouchSensor", 
+      "name": "PRM:/r5/c1/c2/c3/c4-Sensor:54"
+    }, 
+    {
+      "transformID": "n313", 
+      "type": "PositionSensor", 
+      "name": "RM:/r2/c1-JointSensor2:21"
+    }
+  ]
+}

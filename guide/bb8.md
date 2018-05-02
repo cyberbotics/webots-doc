@@ -1,10 +1,6 @@
 ## Sphero's BB-8
 
-%figure "BB-8 model in Webots"
-
-![model.png](images/robots/bb8/model.png)
-
-%end
+%robot bb8 images/robots/bb8/model.png
 
 The [Sphero's BB-8](https://www.sphero.com/starwars/bb8) is an articulated robot composed of a spherical body and an hemispherical head.
 A wheeled robot is embedded inside the spherical body.

@@ -1,10 +1,6 @@
 ## Adept's Pioneer 2
 
-%figure "Pioneer 2 model in Webots"
-
-![model.png](images/robots/pioneer2/model.png)
-
-%end
+%robot pioneer2 images/robots/pioneer2/model.png
 
 [adept's Pioneer 2](https://www.adept.com/) is a three-wheeled robot (2 motorized wheels and one passive caster wheel) mounted with several sensors including 16 ultrasonic sensors.
 

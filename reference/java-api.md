@@ -693,9 +693,11 @@ The following tables describe the Java classes and their methods.
 | -------------------------------------------------------------------------------------------------------------------------------------- |
 | import com.cyberbotics.webots.controller.Robot;                                                                                        |
 | public class [Robot](robot.md) {                                                                                                       |
-| &nbsp;&nbsp; public final static int MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL;                                |
-| &nbsp;&nbsp; public final static int NO\_EVENT, MOUSE\_CLICK\_EVENT, MOUSE\_MOVE\_EVENT, KEYBOARD\_EVENT,                              |
-| &nbsp;&nbsp;&nbsp;&nbsp; JOYSTICK\_BUTTON\_EVENT, JOYSTICK\_AXIS\_EVENT, JOYSTICK\_POV\_EVENT;                                         |
+| &nbsp;&nbsp; public final static int MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                                       |
+| &nbsp;&nbsp;&nbsp;&nbsp; MODE\_REMOTE\_CONTROL;                                                                                        |
+| &nbsp;&nbsp; public final static int NO\_EVENT, MOUSE\_CLICK\_EVENT,                                                                   |
+| &nbsp;&nbsp;&nbsp;&nbsp; MOUSE\_MOVE\_EVENT, KEYBOARD\_EVENT, JOYSTICK\_BUTTON\_EVENT,                                                 |
+| &nbsp;&nbsp;&nbsp;&nbsp; JOYSTICK\_AXIS\_EVENT, JOYSTICK\_POV\_EVENT;                                                                  |
 | &nbsp;&nbsp; public [Robot](robot.md#wb_robot_step)();                                                                                 |
 | &nbsp;&nbsp; protected void [finalize](robot.md#wb_robot_step)();                                                                      |
 | &nbsp;&nbsp; public int [step](robot.md#wb_robot_step)(int sampling_period);                                                           |

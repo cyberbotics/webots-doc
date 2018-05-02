@@ -255,16 +255,11 @@ function redirectTextures(node, robotName) {
 function applyAnchor() {
   var firstAnchor = document.querySelector("[name='" + localSetup.anchor + "']");
   if (firstAnchor) {
-    console.log(firstAnchor);
     firstAnchor.scrollIntoView(true);
-    if (document.querySelector('.contribution-banner')) {
+    if (document.querySelector('.contribution-banner'))
       window.scrollBy(0, -38); // GitHub banner.
-      console.log(-38);
-    }
-    if (isCyberboticsUrl) {
+    if (isCyberboticsUrl)
       window.scrollBy(0, -44); // Cyberbotics header.
-      console.log(-44);
-    }
   } else
     window.scrollTo(0, 0);
 }

@@ -362,10 +362,10 @@ This function is blocking the simulation and will return:
 
 It is possible to combine event types in order to return as soon as one of the event happens:
 ```
-int returned_event = wb_robot_wait_input_device_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
+int returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
 ```
 
-> **note**: The corresponding device should be enabled before calling the `wb_robot_wait_input_device_event` function.
+> **note**: The corresponding device should be enabled before calling the `wb_robot_wait_for_user_input_event` function.
 In case of mouse move and joystick axis event, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
 In that case, the sampling period is expressed in real time and not in simulation time.
 
@@ -383,7 +383,7 @@ In that case, the sampling period is expressed in real time and not in simulatio
 
 %end
 
-> **note**: Calling the `wb_robot_wait_input_device_event` function with `WB_EVENT_NO_EVENT` as `event_type` argument results in a sleep of the simulation.
+> **note**: Calling the `wb_robot_wait_for_user_input_event` function with `WB_EVENT_NO_EVENT` as `event_type` argument results in a sleep of the simulation.
 
 ---
 

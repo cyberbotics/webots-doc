@@ -29,8 +29,8 @@ Please find instructions in [this section](verifying-your-graphics-driver-instal
 
 <!-- -->
 
-> **Note**: Webots needs the *avconv* program to create MPEG-4 movies, that can be installed with *libav-tools*, *libavcodec-extra*, and *libfdk-aac0* packages.
-The package names are specific to Ubuntu 16.04 and they could slightly change on different releases and distributions.
+> **Note**: Webots needs the *ffmpeg* program to create MPEG-4 movies, that can be installed with *ffmpeg*, *libavcodec-extra*, and *libfdk-aac1* packages and *ubuntu-restricted-extras* for H.264 codec.
+The package names could slightly change on different releases and distributions.
 
 #### Using Advanced Packaging Tool (APT)
 
@@ -59,7 +59,7 @@ Otherwise you can manually execute the following command:
 apt-get update
 ```
 
-Optionally, Webots can be autentified thanks to the `Cyberbotics.asc` signature file which can be downloaded [here](http://www.cyberbotics.com/linux), using this command:
+Optionally, Webots can be authentified thanks to the `Cyberbotics.asc` signature file which can be downloaded [here](http://www.cyberbotics.com/linux), using this command:
 
 ```sh
 apt-key add /path/to/Cyberbotics.asc
@@ -79,7 +79,7 @@ But only a command line procedure is documented here.
 This section explains how to install Webots from the tarball package (having the `.tar.bz2` extension).
 This package can be installed without the `root` privileges.
 It can be uncompressed anywhere using the `tar` `xjf` command line.
-Once uncompressed, it is recommended to set the WEBOTS\_HOME environment variable to point to the webots directory obtained from the uncompression of the tarball:
+Once uncompressed, it is recommended to set the WEBOTS\_HOME environment variable to point to the `webots` directory obtained from the uncompression of the tarball:
 
 ```sh
 tar xjf webots-{{ webots.version.package }}-x86-64.tar.bz2
@@ -94,7 +94,7 @@ export WEBOTS_HOME=/home/username/webots
 The export line should however be included in a configuration script like "/etc/profile", so that it is set properly for every session.
 
 Some additional libraries are needed in order to properly run Webots.
-In particular *libjpeg8-dev*, *libav-tools*, *libpci3* and *libavcodec-extra* have to be installed on the system.
+In particular *libjpeg8-dev*, *ffpmeg*, *libpci3* and *libavcodec-extra* have to be installed on the system.
 If you need to compile [controller plugins](controller-plugin.md) or [physics plugins](webots-plugin.md#physics-plugin), then you also have to install *mesa-common-dev* and *libgl1-mesa-dev* packages.
 Other particular libraries could also be required to recompile some of the distributed binary files.
 In this case an error message will be printed in the Webots console mentioning the missing dependency.
@@ -105,7 +105,7 @@ In this case an error message will be printed in the Webots console mentioning t
 
 This procedure explains how to install Webots from the DEB package (having the `.deb` extension).
 
-On Ubuntu, double-click on the DEB package file to open it with the Ubuntu Software App on Ubuntu 16.04 or Software Center on earlier versions and click on the `Install` button.
+On Ubuntu, double-click on the DEB package file to open it with the Ubuntu Software App and click on the `Install` button.
 If a previous version of Webots is already installed, then the text on the button could be different, like `Upgrade` or `Reinstall`.
 Note that GNOME Software App distributed in the first release of Ubuntu 16.04 contains a bug preventing the installation of third-party packages.
 

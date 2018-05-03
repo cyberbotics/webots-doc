@@ -459,42 +459,42 @@ The following tables describe the Matlab functions.
 
 %api "matlab_robot"
 
-| % [Robot](robot.md) :                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------- |
-| WB\_MODE\_SIMULATION                                                                                                      |
-| WB\_MODE\_CROSS\_COMPILATION                                                                                              |
-| WB\_MODE\_REMOTE\_CONTROL                                                                                                 |
-| WB\_EVENT\_NO\_EVENT                                                                                                      |
-| WB\_EVENT\_MOUSE\_CLICK                                                                                                   |
-| WB\_EVENT\_MOUSE\_MOVE                                                                                                    |
-| WB\_EVENT\_KEYBOARD                                                                                                       |
-| WB\_EVENT\_JOYSTICK\_BUTTON                                                                                               |
-| WB\_EVENT\_JOYSTICK\_AXIS                                                                                                 |
-| WB\_EVENT\_JOYSTICK\_POV                                                                                                  |
-| [wb\_robot\_step](robot.md#wb_robot_step)(sampling_period)                                                                |
-| event_type = [wb\_robot\_wait\_for\_user\_input\_event](robot.md#wb_robot_wait_for_user_input_event)(event_type, timeout) |
-| tag = [wb\_robot\_get\_device](robot.md#wb_robot_get_device)('name')                                                      |
-| size = [wb\_robot\_get\_number\_of\_devices](robot.md#wb_robot_get_device_by_index)()                                     |
-| tag = [wb\_robot\_get\_device\_by\_index](robot.md#wb_robot_get_device_by_index)(index)                                   |
-| [wb\_robot\_battery\_sensor\_enable](robot.md#wb_robot_battery_sensor_enable)(sampling_period)                            |
-| [wb\_robot\_battery\_sensor\_disable](robot.md#wb_robot_battery_sensor_enable)()                                          |
-| period = [wb\_robot\_battery\_sensor\_get\_sampling\_period](robot.md#wb_robot_battery_sensor_enable)()                   |
-| value = [wb\_robot\_battery\_sensor\_get\_value](robot.md#wb_robot_battery_sensor_enable)()                               |
-| step = [wb\_robot\_get\_basic\_time\_step](robot.md#wb_robot_get_basic_time_step)()                                       |
-| mode = [wb\_robot\_get\_mode](robot.md#wb_robot_get_mode)()                                                               |
-| model = [wb\_robot\_get\_model](robot.md#wb_robot_get_model)()                                                            |
-| data = [getCustomData](robot.md#wb_robot_get_custom_data)()                                                               |
-| [setCustomData](robot.md#wb_robot_get_custom_data)('data')                                                                |
-| name = [wb\_robot\_get\_name](robot.md#wb_robot_get_name)()                                                               |
-| name = [wb\_robot\_get\_controller\_name](robot.md#wb_robot_get_controller_name)()                                        |
-| name = [wb\_robot\_get\_controller\_arguments](robot.md#wb_robot_get_controller_name)()                                   |
-| path = [wb\_robot\_get\_project\_path](robot.md#wb_robot_get_project_path)()                                              |
-| sync = [wb\_robot\_get\_synchronization](robot.md#wb_robot_get_synchronization)()                                         |
-| time = [wb\_robot\_get\_time](robot.md#wb_robot_get_time)()                                                               |
-| path = [wb\_robot\_get\_world\_path](robot.md#wb_robot_get_world_path)()                                                  |
-| type = [wb\_robot\_get\_type](robot.md#wb_robot_get_type)()                                                               |
-| [wb\_robot\_wwi\_send\_text](robot.md#wb_robot_wwi_send_text)(text)                                                       |
-| text = [wb\_robot\_wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)()                                              |
+| % [Robot](robot.md) :                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------- |
+| WB\_MODE\_SIMULATION                                                                                                        |
+| WB\_MODE\_CROSS\_COMPILATION                                                                                                |
+| WB\_MODE\_REMOTE\_CONTROL                                                                                                   |
+| WB\_EVENT\_NO\_EVENT                                                                                                        |
+| WB\_EVENT\_MOUSE\_CLICK                                                                                                     |
+| WB\_EVENT\_MOUSE\_MOVE                                                                                                      |
+| WB\_EVENT\_KEYBOARD                                                                                                         |
+| WB\_EVENT\_JOYSTICK\_BUTTON                                                                                                 |
+| WB\_EVENT\_JOYSTICK\_AXIS                                                                                                   |
+| WB\_EVENT\_JOYSTICK\_POV                                                                                                    |
+| [wb\_robot\_step](robot.md#wb_robot_step)(sampling_period)                                                                  |
+| event\_type = [wb\_robot\_wait\_for\_user\_input\_event](robot.md#wb_robot_wait_for_user_input_event)(event\_type, timeout) |
+| tag = [wb\_robot\_get\_device](robot.md#wb_robot_get_device)('name')                                                        |
+| size = [wb\_robot\_get\_number\_of\_devices](robot.md#wb_robot_get_device_by_index)()                                       |
+| tag = [wb\_robot\_get\_device\_by\_index](robot.md#wb_robot_get_device_by_index)(index)                                     |
+| [wb\_robot\_battery\_sensor\_enable](robot.md#wb_robot_battery_sensor_enable)(sampling_period)                              |
+| [wb\_robot\_battery\_sensor\_disable](robot.md#wb_robot_battery_sensor_enable)()                                            |
+| period = [wb\_robot\_battery\_sensor\_get\_sampling\_period](robot.md#wb_robot_battery_sensor_enable)()                     |
+| value = [wb\_robot\_battery\_sensor\_get\_value](robot.md#wb_robot_battery_sensor_enable)()                                 |
+| step = [wb\_robot\_get\_basic\_time\_step](robot.md#wb_robot_get_basic_time_step)()                                         |
+| mode = [wb\_robot\_get\_mode](robot.md#wb_robot_get_mode)()                                                                 |
+| model = [wb\_robot\_get\_model](robot.md#wb_robot_get_model)()                                                              |
+| data = [getCustomData](robot.md#wb_robot_get_custom_data)()                                                                 |
+| [setCustomData](robot.md#wb_robot_get_custom_data)('data')                                                                  |
+| name = [wb\_robot\_get\_name](robot.md#wb_robot_get_name)()                                                                 |
+| name = [wb\_robot\_get\_controller\_name](robot.md#wb_robot_get_controller_name)()                                          |
+| name = [wb\_robot\_get\_controller\_arguments](robot.md#wb_robot_get_controller_name)()                                     |
+| path = [wb\_robot\_get\_project\_path](robot.md#wb_robot_get_project_path)()                                                |
+| sync = [wb\_robot\_get\_synchronization](robot.md#wb_robot_get_synchronization)()                                           |
+| time = [wb\_robot\_get\_time](robot.md#wb_robot_get_time)()                                                                 |
+| path = [wb\_robot\_get\_world\_path](robot.md#wb_robot_get_world_path)()                                                    |
+| type = [wb\_robot\_get\_type](robot.md#wb_robot_get_type)()                                                                 |
+| [wb\_robot\_wwi\_send\_text](robot.md#wb_robot_wwi_send_text)(text)                                                         |
+| text = [wb\_robot\_wwi\_receive\_text](robot.md#wb_robot_wwi_receive_text)()                                                |
 
 %end
 

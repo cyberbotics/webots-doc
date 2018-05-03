@@ -1,0 +1,128 @@
+{
+  "name": "salamander", 
+  "devices": [
+    {
+      "transformID": "n13768", 
+      "name": "motor_1", 
+      "maxPosition": 0.0001, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.0001, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n13889", 
+      "name": "motor_2", 
+      "maxPosition": 1.13446, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n13904", 
+      "name": "motor_3", 
+      "maxPosition": 1.13446, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n13919", 
+      "name": "motor_4", 
+      "maxPosition": 1.13446, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n13934", 
+      "name": "motor_5", 
+      "maxPosition": 0.0001, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -0.0001, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n14055", 
+      "name": "motor_6", 
+      "maxPosition": 1.13446, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n14070", 
+      "name": "motor_7", 
+      "maxPosition": 1.13446, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n14085", 
+      "name": "motor_8", 
+      "maxPosition": 1.13446, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": -1.13446, 
+      "axis": "0 1 0"
+    }, 
+    {
+      "transformID": "n13783", 
+      "name": "motor_leg_1", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n13836", 
+      "name": "motor_leg_2", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n13949", 
+      "name": "motor_leg_3", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n14002", 
+      "name": "motor_leg_4", 
+      "maxPosition": 0, 
+      "position": 0, 
+      "type": "RotationalMotor", 
+      "minPosition": 0, 
+      "axis": "1 0 0"
+    }, 
+    {
+      "transformID": "n13755", 
+      "type": "DistanceSensor", 
+      "name": "ds_left"
+    }, 
+    {
+      "transformID": "n13760", 
+      "type": "DistanceSensor", 
+      "name": "ds_right"
+    }, 
+    {
+      "transformID": "n13741", 
+      "type": "GPS", 
+      "name": "gps"
+    }
+  ]
+}

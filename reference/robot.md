@@ -355,25 +355,25 @@ int wb_robot_wait_for_user_input_event(int event_type, int timeout);
 
 **Description**
 
-This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is usefull to prevent the simulation from running until a specific user input event happens.
-This function is blocking the simulation and will return:
-  - as soon as an event which type is defined by the `event_type` argument happens (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
-  - when the amout of millisecond specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
+This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is useful to prevent the simulation from running until a specific user input event occurs.
+This function blocks the simulation and will return:
+  - as soon as an event which type is defined by the `event_type` argument occurs (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
+  - when the amout of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
 
-It is possible to combine event types in order to return as soon as one of the event happens:
+It is possible to combine event types in order to return as soon as one of the event occurs:
 ```
 int returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
 ```
 
 > **note**: The corresponding input devices should be enabled before calling the `wb_robot_wait_for_user_input_event` function.
-In case of mouse move and joystick axis event, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
+In case of mouse move and joystick axis events, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
 In that case, the sampling period is expressed in real time and not in simulation time.
 
 %figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_for_user_input_event` function"
 
 | Event                       | Purpose                                                 |
 | --------------------------- | ------------------------------------------------------- |
-| WB\_EVENT\_NO\_EVENT        | no event happens or no event should cause a return      |
+| WB\_EVENT\_NO\_EVENT        | no event occurred or no event should cause a return     |
 | WB\_EVENT\_MOUSE\_CLICK     | used to detect a mouse click in the 3D window           |
 | WB\_EVENT\_MOUSE\_MOVE      | used to detect the motion of the mouse in the 3D window |
 | WB\_EVENT\_KEYBOARD         | used to detect a keyboard key press/release             |
@@ -383,7 +383,7 @@ In that case, the sampling period is expressed in real time and not in simulatio
 
 %end
 
-> **note**: Calling the `wb_robot_wait_for_user_input_event` function with `WB_EVENT_NO_EVENT` as `event_type` argument causes the controller process to sleep for the specified `timeout` duration. If the controller is synchronous, this will also pause the simulation for the same duration.
+> **note**: Calling the `wb_robot_wait_for_user_input_event` function with `WB_EVENT_NO_EVENT` as the `event_type` argument causes the controller process to sleep for the specified `timeout` duration. If the controller is synchronous, this will also pause the simulation for the same duration.
 
 ---
 

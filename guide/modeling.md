@@ -39,7 +39,7 @@ Different OS platforms and different Webots versions may result small numerical 
 The number of threads used by the physics engine (ODE) can be changed either globally in the [preferences](preferences.md) or using the `WorldInfo.basicTimeStep` field.
 It should be set to 1.
 6. The Webots random number generator should have a fixed seed.
-The seed is defined in the `WorldInfo.randomSeed` field, it should be greater than zero to avoid non-replicable time based seed.
+The seed is defined in the `WorldInfo.randomSeed` field, it should be non-negative to avoid non-replicable time based seed.
 
 If the six above conditions are met, Webots simulations become replicable.
 This means that after the same number of steps two simulations will have exactly the same internal state.

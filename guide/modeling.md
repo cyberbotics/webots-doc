@@ -52,13 +52,13 @@ This is also true whether or not sensor noise is used (see below).
 There are two sources of noise in Webots: the *sensor/actuator noise* and the *physics engine noise*.
 The amount of sensor/actuator noise can be changed (or removed) by the user (see below).
 The physics engine's noise cannot be changed because it is necessary for the realism of the simulation.
-To completely remove the sensor/actuator noise the following field values must be reset:
+To completely remove the sensor/actuator noise the following field values must be set to 0:
 
-1. In the `lookupTable`s: the third column of each `lookupTable` in the .wbt and .proto files must be reset to 0.
-2. In the [GPS](../reference/gps.md) nodes: the `accuracy` field must be reset to 0.
-3. In the [Camera](../reference/camera.md), [Lidar](../reference/lidar.md) and [RangeFinder](../reference/rangefinder.md) nodes: the `noise` field must be reset to 0.
-4. In the [Radar](../reference/radar.md) nodes: the `rangeNoise`, `speedNoise` and `angularNoise` fields must be reset to 0.
-4. In the [Receiver](../reference/receiver.md) nodes: the `signalStrengthNoise` and `directionNoise` fields must be reset to 0.
+1. `lookupTable` fields: the third column of each `lookupTable` field be set to 0.
+2. [GPS](../reference/gps.md) nodes: the `accuracy` field must be set to 0.
+3. [Camera](../reference/camera.md), [Lidar](../reference/lidar.md) and [RangeFinder](../reference/rangefinder.md) nodes: the `noise` field must be set to 0.
+4. [Radar](../reference/radar.md) nodes: the `rangeNoise`, `speedNoise` and `angularNoise` fields must be set to 0.
+5. [Receiver](../reference/receiver.md) nodes: the `signalStrengthNoise` and `directionNoise` fields must be set to 0.
 
 ### How Can I Create a Passive Joint?
 

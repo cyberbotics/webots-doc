@@ -627,11 +627,13 @@ The following tables describe the C++ classes and their methods.
 | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | #include `<`webots/Robot.hpp`>`                                                                                                            |
 | class [Robot](robot.md) {                                                                                                                  |
-| &nbsp;&nbsp; enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION,                                                                             |
-| &nbsp;&nbsp; MODE\_REMOTE\_CONTROL};                                                                                                       |
+| &nbsp;&nbsp; typedef enum {MODE\_SIMULATION, MODE\_CROSS\_COMPILATION, MODE\_REMOTE\_CONTROL} RobotMode;                                   |
+| &nbsp;&nbsp; typedef enum {EVENT\_NO\_EVENT, EVENT\_MOUSE\_CLICK, EVENT\_MOUSE\_MOVE, EVENT\_KEYBOARD,                                     |
+| &nbsp;&nbsp;&nbsp;&nbsp; EVENT\_JOYSTICK\_BUTTON, EVENT\_JOYSTICK\_AXIS, EVENT\_JOYSTICK\_POV} UserInputEvent;                             |
 | &nbsp;&nbsp; [Robot](robot.md#wb_robot_step)();                                                                                            |
 | &nbsp;&nbsp; virtual [~Robot](robot.md#wb_robot_step)();                                                                                   |
 | &nbsp;&nbsp; virtual int [step](robot.md#wb_robot_step)(int sampling_period);                                                              |
+| &nbsp;&nbsp; UserInputEvent [waitForUserInputEvent](robot.md#wb_robot_wait_for_user_input_event)(UserInputEvent event_type, int timeout);  |
 | &nbsp;&nbsp; [Accelerometer](#cpp_accelerometer) *[getAccelerometer](robot.md#wb_robot_get_device)(const std::string &name);               |
 | &nbsp;&nbsp; [Brake](#cpp_brake) *[getBrake](robot.md#wb_robot_get_device)(const std::string &name);                                       |
 | &nbsp;&nbsp; [Camera](#cpp_camera) *[getCamera](robot.md#wb_robot_get_device)(const std::string &name);                                    |
@@ -664,7 +666,8 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; int [batterySensorGetSamplingPeriod](robot.md#wb_robot_battery_sensor_enable)();                                              |
 | &nbsp;&nbsp; double [batterySensorGetValue](robot.md#wb_robot_battery_sensor_enable)() const;                                              |
 | &nbsp;&nbsp; double [getBasicTimeStep](robot.md#wb_robot_get_basic_time_step)() const;                                                     |
-| &nbsp;&nbsp; int [getMode](robot.md#wb_robot_get_mode)() const;                                                                            |
+| &nbsp;&nbsp; RobotMode [getMode](robot.md#wb_robot_get_mode)() const;                                                                      |
+| &nbsp;&nbsp; void [setMode](robot.md#wb_robot_get_mode)(RobotMode mode, void *arg) const;                                                  |
 | &nbsp;&nbsp; std::string [getModel](robot.md#wb_robot_get_model)() const;                                                                  |
 | &nbsp;&nbsp; std::string [getCustomData](robot.md#wb_robot_get_custom_data)() const;                                                       |
 | &nbsp;&nbsp; void [setCustomData](robot.md#wb_robot_get_custom_data)(const std::string &data);                                             |
@@ -679,7 +682,7 @@ The following tables describe the C++ classes and their methods.
 | &nbsp;&nbsp; const char *[wwiReceive](robot.md#wb_robot_wwi_receive_text)();                                                               |
 | &nbsp;&nbsp; std::string [wwiReceiveText](robot.md#wb_robot_wwi_receive_text)();                                                           |
 | &nbsp;&nbsp; void [wwiSend](robot.md#wb_robot_wwi_send_text)(const char *data, int size);                                                  |
-| &nbsp;&nbsp; void [wwiSendText](robot.md#wb_robot_wwi_send_text)(const std::string &text);                                                      |
+| &nbsp;&nbsp; void [wwiSendText](robot.md#wb_robot_wwi_send_text)(const std::string &text);                                                 |
 | &nbsp;&nbsp; void *[windowCustomFunction](robot.md#wb_robot_window_custom_function)(void *arg);                                            |
 | };                                                                                                                                         |
 

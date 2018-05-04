@@ -343,6 +343,52 @@ for(i=0; i<n_devices; i++) {
 
 **Name**
 
+**wb\_robot\_wait\_for\_user\_input\_event** - *wait for a Joystick, Keyboard or Mouse input event*
+
+{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+
+```c
+#include <webots/robot.h>
+
+WbUserInputEvent wb_robot_wait_for_user_input_event(WbUserInputEvent event_type, int timeout);
+```
+
+**Description**
+
+This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is useful to prevent the simulation from running until a specific user input event occurs.
+This function blocks the simulation and will return:
+  - as soon as an event which type is defined by the `event_type` argument occurs (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
+  - when the amout of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
+
+It is possible to combine event types in order to return as soon as one of the event occurs:
+```
+WbUserInputEvent returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
+```
+
+> **note**: The corresponding input devices should be enabled before calling the `wb_robot_wait_for_user_input_event` function.
+In case of mouse move and joystick axis events, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
+In that case, the sampling period is expressed in real time and not in simulation time.
+
+%figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_for_user_input_event` function"
+
+| Event                       | Purpose                                                 |
+| --------------------------- | ------------------------------------------------------- |
+| WB\_EVENT\_NO\_EVENT        | no event occurred or no event should cause a return     |
+| WB\_EVENT\_MOUSE\_CLICK     | used to detect a mouse click in the 3D window           |
+| WB\_EVENT\_MOUSE\_MOVE      | used to detect the motion of the mouse in the 3D window |
+| WB\_EVENT\_KEYBOARD         | used to detect a keyboard key press/release             |
+| WB\_EVENT\_JOYSTICK\_BUTTON | used to detect a joystick button press/release          |
+| WB\_EVENT\_JOYSTICK\_AXIS   | used to detect the motion of a joystick axis            |
+| WB\_EVENT\_JOYSTICK\_POV    | used to detect state change of a joystick pov           |
+
+%end
+
+> **note**: Calling the `wb_robot_wait_for_user_input_event` function with `WB_EVENT_NO_EVENT` as the `event_type` argument causes the controller process to sleep for the specified `timeout` duration. If the controller is synchronous, this will also pause the simulation for the same duration.
+
+---
+
+**Name**
+
 **wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
 
 {[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
@@ -397,8 +443,8 @@ This function returns the value of the `basicTimeStep` field of the [WorldInfo](
 ```c
 #include <webots/robot.h>
 
-int wb_robot_get_mode();
-void wb_robot_set_mode(int mode, void *arg);
+WbRobotMode wb_robot_get_mode();
+void wb_robot_set_mode(WbRobotMode mode, void *arg);
 ```
 
 **Description**
@@ -409,9 +455,9 @@ The `wb_robot_set_mode` function allows the user to switch between the simulatio
 When switching to the remote-control mode, the `wbr_start` function of the remote control plugin is called.
 The argument `arg` is passed directly to the `wbr_start` function (more information in the user guide).
 
-The integers can be compared to the following enumeration items:
+The WbRobotMode can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the `wb_robot_[gs]et_mode` functions"
+%figure "Helper enumeration to interpret the WbRobotMode argument and return value of the `wb_robot_[gs]et_mode` functions"
 
 | Mode                         | Purpose                |
 | ---------------------------- | ---------------------- |

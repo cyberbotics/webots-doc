@@ -350,7 +350,7 @@ for(i=0; i<n_devices; i++) {
 ```c
 #include <webots/robot.h>
 
-int wb_robot_wait_for_user_input_event(int event_type, int timeout);
+WbUserInputEvent wb_robot_wait_for_user_input_event(WbUserInputEvent event_type, int timeout);
 ```
 
 **Description**
@@ -362,7 +362,7 @@ This function blocks the simulation and will return:
 
 It is possible to combine event types in order to return as soon as one of the event occurs:
 ```
-int returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
+WbUserInputEvent returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
 ```
 
 > **note**: The corresponding input devices should be enabled before calling the `wb_robot_wait_for_user_input_event` function.
@@ -443,8 +443,8 @@ This function returns the value of the `basicTimeStep` field of the [WorldInfo](
 ```c
 #include <webots/robot.h>
 
-int wb_robot_get_mode();
-void wb_robot_set_mode(int mode, void *arg);
+WbRobotMode wb_robot_get_mode();
+void wb_robot_set_mode(WbRobotMode mode, void *arg);
 ```
 
 **Description**
@@ -455,9 +455,9 @@ The `wb_robot_set_mode` function allows the user to switch between the simulatio
 When switching to the remote-control mode, the `wbr_start` function of the remote control plugin is called.
 The argument `arg` is passed directly to the `wbr_start` function (more information in the user guide).
 
-The integers can be compared to the following enumeration items:
+The WbRobotMode can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the `wb_robot_[gs]et_mode` functions"
+%figure "Helper enumeration to interpret the WbRobotMode argument and return value of the `wb_robot_[gs]et_mode` functions"
 
 | Mode                         | Purpose                |
 | ---------------------------- | ---------------------- |

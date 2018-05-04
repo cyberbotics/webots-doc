@@ -38,8 +38,10 @@ Different OS platforms and different Webots versions may result small numerical 
 5. Webots physics must run in single thread mode.
 The number of threads used by the physics engine (ODE) can be changed either globally in the [preferences](preferences.md) or using the `WorldInfo.basicTimeStep` field.
 It should be set to 1.
+6. The Webots random number generator should have a fixed seed.
+The seed is defined in the `WorldInfo.randomSeed` field, it should be non-negative to avoid non-replicable time based seed.
 
-If the five above conditions are met, Webots simulations become replicable.
+If the six above conditions are met, Webots simulations become replicable.
 This means that after the same number of steps two simulations will have exactly the same internal state.
 Hence if both simulation are saved using the `Save as...` button, the resulting files will be identical.
 This is true independently of the simulation mode used to execute the simulation: `Step`, `Real-Time`, `Run` or `Fast`.
@@ -50,12 +52,13 @@ This is also true whether or not sensor noise is used (see below).
 There are two sources of noise in Webots: the *sensor/actuator noise* and the *physics engine noise*.
 The amount of sensor/actuator noise can be changed (or removed) by the user (see below).
 The physics engine's noise cannot be changed because it is necessary for the realism of the simulation.
-To completely remove the sensor/actuator noise the following field values must be reset:
+To completely remove the sensor/actuator noise the following field values must be set to 0:
 
-1. In the `lookupTable`s: the third column of each `lookupTable` in the .wbt and .proto files must be reset to 0.
-2. In the `GPS` nodes: the `resolution` field must be reset to 0.
-3. In the `Camera` nodes: the `colorNoise` and the `rangeNoise` fields must be reset to 0.
-4. In the `DifferentialWheels` nodes: the value of `slipNoise` must be reset to 0 and the value of `encoderNoise` must be reset to -1.
+1. `lookupTable` fields: the third column of each `lookupTable` field be set to 0.
+2. [GPS](../reference/gps.md) nodes: the `accuracy` field must be set to 0.
+3. [Camera](../reference/camera.md), [Lidar](../reference/lidar.md) and [RangeFinder](../reference/rangefinder.md) nodes: the `noise` field must be set to 0.
+4. [Radar](../reference/radar.md) nodes: the `rangeNoise`, `speedNoise` and `angularNoise` fields must be set to 0.
+5. [Receiver](../reference/receiver.md) nodes: the `signalStrengthNoise` and `directionNoise` fields must be set to 0.
 
 ### How Can I Create a Passive Joint?
 

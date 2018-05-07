@@ -5,7 +5,7 @@
 Webots PRO provides a fully featured version of Webots intended for robotics research.
 Webots EDU provides a special version of Webots well suited for education.
 Webots MOD provides components tailored for specific uses of Webots, they include different models of robots with different programming interfaces.
-The differences between Webots PRO, EDU and MOD are explained [here](http://www.cyberbotics.com/webots/).
+The differences between Webots PRO, EDU and MOD are explained [here](https://www.cyberbotics.com/buy).
 
 ### How Can I Report a Bug in Webots?
 

@@ -1,10 +1,6 @@
 ## Adept's Pioneer 3-AT
 
-%figure "Pioneer 3-AT model in Webots"
-
-![pioneer3at_real.png](images/robots/pioneer-3at/model.png)
-
-%end
+%robot pioneer-3at images/robots/pioneer-3at/model.png
 
 The Pioneer 3-AT robot is an all-purpose outdoor base, used for research and prototyping applications involving mapping, navigation, monitoring, reconnaissance and other behaviors.
 It is caracterized by a set of features listed in [this table](#pioneer-3-at-characteristics).

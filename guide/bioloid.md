@@ -1,10 +1,6 @@
 ## Robotis's Bioloid
 
-%figure "A Bioloid dog-like model in Webots"
-
-![model.png](images/robots/bioloid/model.png)
-
-%end
+%robot bioloid images/robots/bioloid/model.png)
 
 The [Bioloid Comprehensive Kit](https://en.wikipedia.org/wiki/Robotis_Bioloid) allows to create articulated robots.
 This kit is developed by [Robotis](http://www.robotis.com).

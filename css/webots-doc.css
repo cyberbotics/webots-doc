@@ -37,6 +37,9 @@
   src: local("fonts/Roboto-Mono"), url("fonts/Roboto-Mono.ttf") format("truetype");
 }
 
+body {
+  scroll-behavior: auto !important; /* wwi.css.body.scroll-behavior should be encapsulated in class to fix this cleanly. */
+}
 .webots-doc #left {
   top: 0;
   width: 20%;
@@ -240,6 +243,9 @@
   white-space: pre;
   word-wrap: break-word;
 }
+.webots-doc pre > code {
+  word-wrap: normal;
+}
 .webots-doc tr > td >  code {
   white-space: normal;
 }
@@ -327,12 +333,11 @@
   vertical-align: middle;
 }
 .webots-doc figure {
-  overflow-x: auto;
+  overflow: visible;
   text-align: center;
   margin: 20px auto 20px auto;
 }
 .webots-doc figure > img {
-  overflow-x: initial;
   max-width: 80%;
 }
 .webots-doc figcaption {
@@ -405,23 +410,21 @@
   font-family: "Roboto";
   border-bottom: 1px solid #e2e2e2;
   z-index: 1;
-  transform: translateY(-250%);
-  -webkit-transform: translateY(-250%);
-  -moz-transform: translateY(-250%);
-  -o-transform: translateY(-250%);
-  transition-property: transform;
-  -webkit-transition-property: transform;
-  -moz-transition-property: transform;
-  -o-transition-property: transform;
-  transition-duration: 0.8s;
-  transition-timing-function: ease-out;
+  animation: show 1.5s;
 }
-
-.webots-doc .visible-banner {
-  transform: translateY(0%);
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -o-transform: translateY(0%);
+@keyframes show {
+  from {
+    transform: translateY(-250%);
+    -webkit-transform: translateY(-250%);
+    -moz-transform: translateY(-250%);
+    -o-transform: translateY(-250%);
+  }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
 }
 
 .webots-doc .contribution-banner #contribution-close {
@@ -440,86 +443,264 @@
   background-size: 16px;
 }
 
+.robot-component {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+.robot-component .robot-view {
+  width: 70%;
+  height: 100%;
+}
+.robot-component .webots3DView {
+  height: 100%;
+}
+.robot-component .robot-webots-view {
+  height: 100%;
+  display: block;
+}
+.robot-component .menu {
+  transform: translateY(-100%);
+  width: 100%;
+}
+.robot-component .menu-items {
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+.robot-component .menu button {
+  padding: 0;
+  border-width: 0;
+  outline: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.robot-component .menu .reset-button {
+  background-image: url(../css/images/reset.png);
+}
+.robot-component .menu .menu-button {
+  background-image: url(../css/images/menu.png);
+}
+.robot-component .menu .reset-button:hover {
+  background-image: url(../css/images/reset_hover.png);
+}
+.robot-component .menu .menu-button:hover {
+  background-image: url(../css/images/menu_hover.png);
+}
+.robot-component .device-component {
+  width: 30%;
+  overflow: auto;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 0px 3px 3px 0px;
+}
+.robot-component .device-category {
+  padding: 10px;
+}
+.robot-component .device-title {
+  color: #fff;
+  padding-bottom: 10px;
+  font-family: roboto;
+  font-size: 14px;
+  text-align: center;
+}
+.robot-component .device-name {
+  color: white;
+  font-family: roboto;
+}
+.robot-component .device {
+  background-color: #666;
+  padding: 10px;
+}
+.robot-component .device:hover {
+  background-color: #5a90a2;
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0, 0.25);
+  transform: scale(1.02, 1.02);
+  -webkit-transform: scale(1.02, 1.02);
+  -moz-transform: scale(1.02, 1.02);
+  -o-transform: scale(1.02, 1.02);
+}
+.robot-component .motor-component {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.robot-component .motor-label {
+  color: #ddd;
+  font-family: roboto;
+  margin: 10px 0px;
+}
+.robot-component .motor-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0px 10px;
+}
+.robot-component .motor-slider:focus {
+  outline: none;
+}
+.robot-component .motor-slider::-webkit-slider-runnable-track {
+  margin: 18px 0;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-webkit-slider-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
+  background: #333;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+.robot-component .motor-slider:focus::-webkit-slider-runnable-track {
+  background: #ddd;
+}
+.robot-component .motor-slider::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-moz-range-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
+  background: #333;
+  cursor: pointer;
+  border-radius: 0;
+ }
+.robot-component .motor-slider::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.robot-component .motor-slider::-ms-fill-lower {
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-ms-fill-upper {
+  background: #ddd;
+  border: none;
+}
+.robot-component .motor-slider::-ms-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
+  background: #333;
+  cursor: pointer;
+}
+.robot-component .motor-slider::-ms-tooltip {
+  display: none;
+}
+.robot-component .motor-slider:focus::-ms-fill-lower {
+  background: #ddd;
+}
+.robot-component .motor-slider:focus::-ms-fill-upper {
+  background: #ddd;
+}
+
 /*---------------------*
  * Chart specific CSS
  *--------------------*/
 
- .webots-doc g .edgePaths .edgePath .path {
-   stroke: #333;
-   stroke-width: 2px;
- }
+.webots-doc g .edgePaths .edgePath .path {
+  stroke: #333;
+  stroke-width: 2px;
+}
 
- .webots-doc g .nodes .node .label {
-   color: black;
-   font-weight: initial;
- }
+.webots-doc g .nodes .node .label {
+  color: black;
+  font-weight: initial;
+}
 
- .webots-doc g .nodes .node rect,
- .webots-doc g .nodes .node circle,
- .webots-doc g .nodes .node ellipse,
- .webots-doc g .nodes .node polygon {
-   fill: #add8e6;
-   stroke: #afafaf;
-   stroke-width: 1px;
- }
+.webots-doc g .nodes .node rect,
+.webots-doc g .nodes .node circle,
+.webots-doc g .nodes .node ellipse,
+.webots-doc g .nodes .node polygon {
+  fill: #add8e6;
+  stroke: #afafaf;
+  stroke-width: 1px;
+}
 
- .webots-doc g .nodes .secondaryNode rect,
- .webots-doc g .nodes .secondaryNode circle,
- .webots-doc g .nodes .secondaryNode ellipse,
- .webots-doc g .nodes .secondaryNode polygon {
-   fill: #d3ffc9;
- }
+.webots-doc g .nodes .secondaryNode rect,
+.webots-doc g .nodes .secondaryNode circle,
+.webots-doc g .nodes .secondaryNode ellipse,
+.webots-doc g .nodes .secondaryNode polygon {
+  fill: #d3ffc9;
+}
 
- .webots-doc g .nodes .highlightedNode rect,
- .webots-doc g .nodes .highlightedNode circle,
- .webots-doc g .nodes .highlightedNode ellipse,
- .webots-doc g .nodes .highlightedNode polygon,
- .webots-doc g .nodes .highlightedSecondaryNode rect,
- .webots-doc g .nodes .highlightedSecondaryNode circle,
- .webots-doc g .nodes .highlightedSecondaryNode ellipse,
- .webots-doc g .nodes .highlightedSecondaryNode polygon {
-   stroke: #444444;
-   stroke-width: 3px;
- }
+.webots-doc g .nodes .highlightedNode rect,
+.webots-doc g .nodes .highlightedNode circle,
+.webots-doc g .nodes .highlightedNode ellipse,
+.webots-doc g .nodes .highlightedNode polygon,
+.webots-doc g .nodes .highlightedSecondaryNode rect,
+.webots-doc g .nodes .highlightedSecondaryNode circle,
+.webots-doc g .nodes .highlightedSecondaryNode ellipse,
+.webots-doc g .nodes .highlightedSecondaryNode polygon {
+  stroke: #444444;
+  stroke-width: 3px;
+}
 
- .webots-doc g .nodes .highlightedSecondaryNode rect,
- .webots-doc g .nodes .highlightedSecondaryNode circle,
- .webots-doc g .nodes .highlightedSecondaryNode ellipse,
- .webots-doc g .nodes .highlightedSecondaryNode polygon {
-   fill: #d3ffc9;
- }
+.webots-doc g .nodes .highlightedSecondaryNode rect,
+.webots-doc g .nodes .highlightedSecondaryNode circle,
+.webots-doc g .nodes .highlightedSecondaryNode ellipse,
+.webots-doc g .nodes .highlightedSecondaryNode polygon {
+  fill: #d3ffc9;
+}
 
- .webots-doc g .clusters .cluster rect,
- .webots-doc g .clusters .cluster circle,
- .webots-doc g .clusters .cluster ellipse,
- .webots-doc g .clusters .cluster polygon {
-   fill: #ddd !important;  /* recommended way of mermaidjs to change these elements */
-   stroke: #afafaf !important;
- }
+.webots-doc g .clusters .cluster rect,
+.webots-doc g .clusters .cluster circle,
+.webots-doc g .clusters .cluster ellipse,
+.webots-doc g .clusters .cluster polygon {
+  fill: #ddd !important;  /* recommended way of mermaidjs to change these elements */
+  stroke: #afafaf !important;
+}
 
- .webots-doc g foreignObject div .edgeLabel {
-   background-color: #f1f1f1;
-   color: black;
-   font-weight: initial;
-   line-height: initial;
- }
+.webots-doc g foreignObject div .edgeLabel {
+  background-color: #f1f1f1;
+  color: black;
+  font-weight: initial;
+  line-height: initial;
+}
 
- .webots-doc g foreignObject div a {
-   font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used and it's size */
-   font-size: 100%;
- }
+.webots-doc g foreignObject div a {
+  font-family: Tahoma, Arial, sans-serif;  /* mermaidjs is quite sensitive to the font used and it's size */
+  font-size: 100%;
+}
 
- .webots-doc .mermaid svg {
-   -webkit-box-sizing: content-box;
-   -moz-box-sizing: content-box;
-   box-sizing: content-box;
-   background-color: #f1f1f1;
-   border: 1px solid #d4d4d4;
-   border-radius: 4px;
- }
+.webots-doc .mermaid {
+  overflow-x: auto;
+}
+
+.webots-doc .mermaid svg {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-color: #f1f1f1;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  max-height: 100%;
+}
 
 .webots-doc iframe {
   width: 70%;
+  height: 400px;
   margin: 30px auto;
   display: block;
 }

@@ -82,8 +82,6 @@ if __name__ == "__main__":
 
     content = content.replace('%{ JS }%', jsString)
     content = content.replace('%{ CSS }%', cssString)
-    if platform.system() == 'Darwin':
-        content = content.replace('"css/main.css"', '"css/main.macos.css"')
 
     html_file_path = script_directory + 'index.html'
     with open(html_file_path, 'w') as file:

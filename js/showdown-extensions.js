@@ -117,12 +117,16 @@ showdown.extension('wbAPI', function() {
         return text;
       }
     },
-    { // '\*\*wb.*\*\*' to anchor
+    { // '#### wb.*' to anchor
       type: 'lang',
       filter: function(text, converter, options) {
-        text = text.replace(/\*\*(wb\\_[^*]+?)\*\*/gi, function(match, content) {
+        text = text.replace(/#### (wb\\_[^\n]+?)\n/gi, function(match, content) {
           var protectedContent = content.replace(/\\_/g, '_');
-          return '<strong name="' + protectedContent + '">' + content + '</strong>';
+          var anchor = protectedContent;
+          var index = anchor.indexOf(',');
+          if (index > 0)
+            anchor = anchor.substring(0, index);
+          return '<h4 name="' + anchor + '">' + protectedContent + '</h4>';
         });
         return text;
       }

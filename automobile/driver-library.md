@@ -93,7 +93,7 @@ The estimated speed is computed using the rotational speed of the actuated wheel
 
 ---
 
-#### `wbu_driver_set_throttle`
+#### `wbu_driver_set_throttle`
 #### `wbu_driver_get_throttle`
 
 
@@ -138,9 +138,9 @@ The `wbu_driver_get_brake_intensity` function simply returns the current brake i
 ---
 
 #### `wbu_driver_set_indicator`
-#### `wbu_driver_get_indicator`
-#### `wbu_driver_set_hazard_flashers`
-#### `wbu_driver_get_hazard_flashers`
+#### `wbu_driver_get_indicator`
+#### `wbu_driver_set_hazard_flashers`
+#### `wbu_driver_get_hazard_flashers`
 
 ```c
 #include <webots/driver.h>

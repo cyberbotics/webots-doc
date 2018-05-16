@@ -103,11 +103,11 @@ These two functions return respectively the state of the backwards and brake lig
 
 ---
 
-#### `wbu_car_get_track_front`
-#### `wbu_car_get_track_rear`
-#### `wbu_car_get_wheelbase`
-#### `wbu_car_get_front_wheel_radius`
-#### `wbu_car_get_rear_wheel_radius`
+#### `wbu_car_get_track_front`
+#### `wbu_car_get_track_rear`
+#### `wbu_car_get_wheelbase`
+#### `wbu_car_get_front_wheel_radius`
+#### `wbu_car_get_rear_wheel_radius`
 
 ```c
 #include <webots/car.h>

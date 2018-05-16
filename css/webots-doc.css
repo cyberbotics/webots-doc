@@ -294,11 +294,9 @@ body {
 }
 .webots-doc h5 {
   font-size: 16px;
-  margin: 0px 10px;
 }
 .webots-doc h6 {
   font-size: 14px;
-  margin: 0px 10px;
 }
 .webots-doc .release-tag {
   display: inline;
@@ -322,6 +320,7 @@ body {
   padding: 9px 0px;
 }
 .webots-doc .api-title {
+  margin: 0px 10px;
   padding: 0px;
   color: black;
   font-size: 15px;

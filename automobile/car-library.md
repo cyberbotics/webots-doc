@@ -176,7 +176,7 @@ These two functions return respectively the right and left steering angles (beca
 
 ---
 
-#### `wbu_car_enable_limited_slip_differential`
+#### `wbu_car_enable_limited_slip_differential`
 
 ```c
 #include <webots/car.h>

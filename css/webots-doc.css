@@ -318,13 +318,14 @@ body {
 }
 .webots-doc .api-title {
   padding: 0px;
-  margin: 0px 10px;
+  margin: 0px 0px 0px 10px;
   color: black;
   font-size: 15px;
   font-family: "Roboto Mono", monospace;
 }
 .webots-doc .tag-container {
   text-align: right;
+  margin-bottom: -3px
 }
 .webots-doc .tag {
   padding: 4px;

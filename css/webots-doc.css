@@ -268,7 +268,8 @@ body {
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3,
-.webots-doc h4 {
+.webots-doc h4,
+.webots-doc h5 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -289,6 +290,10 @@ body {
 }
 .webots-doc h4 {
   font-size: 18px;
+}
+.webots-doc h5 {
+  font-size: 18px;
+  margin-left: 10px;
 }
 .webots-doc .release-tag {
   display: inline;
@@ -313,9 +318,8 @@ body {
 }
 .webots-doc .api-title {
   padding: 0px;
-  margin: 10px 0px;
+  margin: 10px;
   font-family: "Roboto Mono", monospace;
-  font-size: 16px;
   color: black;
 }
 .webots-doc figcaption:hover .anchor-link,

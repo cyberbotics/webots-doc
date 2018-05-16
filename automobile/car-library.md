@@ -4,9 +4,10 @@ The [car](#car-library) library is supposed to be used together with the [driver
 It provides additional information and functions to which a normal human driver of a car does not have access (e.g., changing the blinking period of the indicator or getting the value of the wheels encoders).
 All the functions included in this library are explained below.
 
-**Name**
+### Car Library Functions
 
-**wbu\_car\_init**, **wbu\_car\_cleanup** - *Initialise and clean*
+#### `wbu_car_init`
+#### `wbu_car_cleanup`
 
 ```c
 #include <webots/car.h>
@@ -15,16 +16,17 @@ void wbu_car_init();
 void wbu_car_cleanup();
 ```
 
-**Description**
+##### Description
+
+*Initialise and clean*
 
 These two functions are respectively used to initialize and properly close the [car](#car-library) library (the first one should be called at the very beginning of the controller program and the second one at the very end).
 If you use the [driver](driver-library.md) library it is not needed to call these functions since they are already called from the corresponding functions of the [driver](driver-library.md) library.
 
 ---
 
-**Name**
-
-**wbu\_car\_get\_type**, **wbu\_car\_get\_engine\_type** - *Get the car and engine type*
+#### `wbu_car_get_type`
+#### `wbu_car_get_engine_type`
 
 ```c
 #include <webots/car.h>
@@ -33,7 +35,9 @@ wbu_car_type wbu_car_get_type();
 wbu_car_engine_type wbu_car_get_type();
 ```
 
-**Description**
+##### Description
+
+*Get the car and engine type*
 
 These two functions return respectively the type of transmission and of engine of the car.
 
@@ -60,9 +64,8 @@ These two functions return respectively the type of transmission and of engine o
 
 ---
 
-**Name**
-
-**wbu\_car\_set\_indicator\_period**, **wbu\_car\_get\_indicator\_period** - *Set and get the indicator period*
+#### `wbu_car_set_indicator_period`
+#### `wbu_car_get_indicator_period`
 
 ```c
 #include <webots/car.h>
@@ -71,7 +74,9 @@ void wbu_car_set_indicator_period(double period);
 double wbu_car_get_indicator_period();
 ```
 
-**Description**
+##### Description
+
+*Set and get the indicator period*
 
 The `wbu_car_set_indicator_period` function is used to change the blinking period of the indicators.
 The argument should be specified in seconds.
@@ -80,9 +85,8 @@ The `wbu_car_get_indicator_period` function returns the current blinking period 
 
 ---
 
-**Name**
-
-**wbu\_car\_get\_backwards\_lights**, **wbu\_car\_get\_brake\_lights** - *Get the state of the backwards/brake lights*
+#### `wbu_car_get_backwards_lights`
+#### `wbu_car_get_brake_lights`
 
 ```c
 #include <webots/car.h>
@@ -91,15 +95,19 @@ bool wbu_car_get_backwards_lights();
 bool wbu_car_get_brake_lights();
 ```
 
-**Description**
+##### Description
+
+*Get the state of the backwards/brake lights*
 
 These two functions return respectively the state of the backwards and brake lights (these two lights are switched on automatically by the library when appropriated).
 
 ---
 
-**Name**
-
-**wbu\_car\_get\_track\_front**, **wbu\_car\_get\_track\_rear**, **wbu\_car\_get\_wheelbase**, **wbu\_car\_get\_front\_wheel\_radius**, **wbu\_car\_get\_rear\_wheel\_radius** - *Get car caracteristics*
+#### `wbu_car_get_track_front`
+#### `wbu_car_get_track_rear`
+#### `wbu_car_get_wheelbase`
+#### `wbu_car_get_front_wheel_radius`
+#### `wbu_car_get_rear_wheel_radius`
 
 ```c
 #include <webots/car.h>
@@ -111,15 +119,16 @@ double wbu_car_get_front_wheel_radius();
 double wbu_car_get_rear_wheel_radius();
 ```
 
-**Description**
+##### Description
+
+*Get car caracteristics*
 
 All these functions provide important physical characteristics from the car.
 
 ---
 
-**Name**
-
-**wbu\_car\_get\_wheel\_encoder**, **wbu\_car\_get\_wheel\_speed** - *Get the wheels speed/encoder*
+#### `wbu_car_get_wheel_encoder`
+#### `wbu_car_get_wheel_speed`
 
 ```c
 #include <webots/car.h>
@@ -128,7 +137,9 @@ double wbu_car_get_wheel_encoder(int wheel_index);
 double wbu_car_get_wheel_speed(int wheel_index);
 ```
 
-**Description**
+##### Description
+
+*Get the wheels speed/encoder*
 
 These two functions return respectively the state of the wheel encoder (in radians) and the instantaneous wheel rotational speed (in radians per second).
 The `wheel_index` argument should match a value of the `wbu_car_wheel_index` enum.
@@ -147,9 +158,8 @@ The `wheel_index` argument should match a value of the `wbu_car_wheel_index` enu
 
 ---
 
-**Name**
-
-**wbu\_car\_get\_right\_steering\_angle**, **wbu\_car\_get\_left\_steering\_angle** - *Get the right/left steering angle*
+#### `wbu_car_get_right_steering_angle`
+#### `wbu_car_get_left_steering_angle`
 
 ```c
 #include <webots/car.h>
@@ -158,15 +168,15 @@ double wbu_car_get_right_steering_angle();
 double wbu_car_get_left_steering_angle();
 ```
 
-**Description**
+##### Description
+
+*Get the right/left steering angle*
 
 These two functions return respectively the right and left steering angles (because of the Ackermann steering geometry, the two angles are slightly different).
 
 ---
 
-**Name**
-
-**wbu\_car\_enable\_limited\_slip\_differential** - *Enable/disable the limited slip differential mechanism*
+#### `wbu_car_enable_limited_slip_differential`
 
 ```c
 #include <webots/car.h>
@@ -174,7 +184,9 @@ These two functions return respectively the right and left steering angles (beca
 void wbu_car_enable_limited_slip_differential(bool enable);
 ```
 
-**Description**
+##### Description
+
+*Enable/disable the limited slip differential mechanism*
 
 This function allows the user to enable or disable the limited differential slip (it is enabled by default).
 When the limited differential slip is enabled, at each time step, the torque (when control in torque is enabled) is redistributed amongst all the actuated wheels so that they rotate at the same speed (except the difference due to the geometric differential constraint).
@@ -182,9 +194,7 @@ If the limited differential slip is disabled, when a wheel starts to slip, it wi
 
 ---
 
-**Name**
-
-**wbu\_car\_enable\_indicator\_auto\_disabling** - *Enable/disable the auto-disabling mechanism of the indicator*
+#### `wbu_car_enable_indicator_auto_disabling`
 
 ```c
 #include <webots/car.h>
@@ -192,7 +202,9 @@ If the limited differential slip is disabled, when a wheel starts to slip, it wi
 void wbu_car_enable_indicator_auto_disabling(bool enable);
 ```
 
-**Description**
+##### Description
+
+*Enable/disable the auto-disabling mechanism of the indicator*
 
 This function allows the user to enable or disable the indicator auto-disabling mechanism (it is enabled by default).
 When indicator auto-disabling mechanism is enabled, the indicator is automatically switched off when the car starts steering in the inverse direction of the one indicated by the indicator.

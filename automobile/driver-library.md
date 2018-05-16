@@ -3,9 +3,11 @@
 The [driver](#driver-library) library provides all the usual functionalities available to a human driving his own car.
 All the functions included in this library are explained below.
 
-**Name**
+### Driver Library Functions
 
-**wbu\_driver\_init**, **wbu\_driver\_cleanup**, **wbu\_driver\_step** - *Initialise, clean and run a driver step*
+#### `wbu_driver_init`
+#### `wbu_driver_cleanup`
+#### `wbu_driver_step`
 
 ```c
 #include <webots/driver.h>
@@ -15,7 +17,9 @@ void wbu_driver_cleanup();
 int wbu_driver_step();
 ```
 
-**Description**
+##### Description
+
+*Initialise, clean and run a driver step*
 
 These functions are the equivalent of the init, cleanup and step function of any regular robot controller.
 As a reminder, the `init` function should be called at the very beginning of any controller program, the `cleanup` function at the end of the controller program just before exiting and the `step` function should be called in the main loop to run one simulation step.
@@ -23,9 +27,8 @@ Unlike the robot step, the driver step does not have any argument, the default t
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_steering\_angle**, **wbu\_driver\_get\_steering\_angle** - *Set and get the stearing angle*
+#### `wbu_driver_set_steering_angle`
+#### `wbu_driver_get_steering_angle`
 
 ```c
 #include <webots/driver.h>
@@ -34,7 +37,9 @@ void wbu_driver_set_steering_angle(double steering_angle);
 double wbu_driver_get_steering_angle();
 ```
 
-**Description**
+##### Description
+
+*Set and get the stearing angle*
 
 The `wbu_driver_set_steering_angle` function is used to steer the car, it steers the front wheels according to the Ackermann geometry (left and right wheels are not steered with the exact same angle).
 The angle is set in radians, a positive angle steers right and a negative angle steers left.
@@ -49,9 +54,8 @@ The `wbu_driver_get_steering_angle` function returns the current steering angle.
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_cruising\_speed**, **wbu\_driver\_get\_target\_cruising\_speed** - *Set and get the target cruising speed*
+#### `wbu_driver_set_cruising_speed`
+#### `wbu_driver_get_target_cruising_speed`
 
 ```c
 #include <webots/driver.h>
@@ -60,7 +64,9 @@ void wbu_driver_set_cruising_speed(double speed);
 double wbu_driver_get_target_cruising_speed();
 ```
 
-**Description**
+##### Description
+
+*Set and get the target cruising speed*
 
 The `wbu_driver_set_cruising_speed` function activates the control in cruising speed of the car, the rotational speed of the wheels is forced (respecting the geometric differential constraint) in order for the car to move at the speed given in argument of the function (in kilometers per hour).
 When the control in cruising speed is activated, the speed is directly applied to the wheel without any engine model simulation, therefore any call to functions like `wbu_driver_get_rpm` will raise an error.
@@ -70,9 +76,7 @@ The `wbu_driver_get_target_cruising_speed` function simply returns the target cr
 
 ---
 
-**Name**
-
-**wbu\_driver\_get\_current\_speed** - *Get the current speed*
+#### `wbu_driver_get_current_speed`
 
 ```c
 #include <webots/driver.h>
@@ -80,16 +84,18 @@ The `wbu_driver_get_target_cruising_speed` function simply returns the target cr
 double wbu_driver_get_current_speed();
 ```
 
-**Description**
+##### Description
+
+*Get the current speed*
 
 This function returns the current speed of the car (in kilometers per hour).
 The estimated speed is computed using the rotational speed of the actuated wheels and their respective radius.
 
 ---
 
-**Name**
+#### `wbu_driver_set_throttle`
+#### `wbu_driver_get_throttle`
 
-**wbu\_driver\_set\_throttle**, **wbu\_driver\_get\_throttle** - *Set and get the throttle*
 
 ```c
 #include <webots/driver.h>
@@ -98,7 +104,9 @@ void wbu_driver_set_throttle(double throttle);
 double wbu_driver_get_throttle();
 ```
 
-**Description**
+##### Description
+
+*Set and get the throttle*
 
 The `wbu_driver_set_throttle` function is used in order to control the car in torque, it sets the state of the throttle.
 The argument should be between 0.0 and 1.0, 0 means that 0% of the output torque of the engine is sent to the wheels and 1.0 means that 100% of the output torque of the engine is sent to the wheels.
@@ -108,9 +116,8 @@ The `wbu_driver_get_throttle` function simply returns the state of the throttle 
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_brake\_intensity**, **wbu\_driver\_get\_brake\_intensity** - *Set and get the brake intensity*
+#### `wbu_driver_set_brake_intensity`
+#### `wbu_driver_get_brake_intensity`
 
 ```c
 #include <webots/driver.h>
@@ -119,7 +126,9 @@ void wbu_driver_set_brake_intensity(double intensity);
 double wbu_driver_get_brake_intensity();
 ```
 
-**Description**
+##### Description
+
+*Set and get the brake intensity*
 
 The `wbu_driver_set_brake_intensity` function brakes the car by increasing the `dampingConstant` coefficient of the rotational joints of each of the four wheels.
 The argument should be between 0.0 and 1.0, 0 means that no damping constant is added on the joints (no breaking), 1 means that the parameter `brakeCoefficient` of the [Car](car.md) PROTO is applied on the `dampingConstant` of each joint (the value will be linearly interpolated between 0 and `brakeCoefficient` for any arguments between 0 and 1).
@@ -128,9 +137,10 @@ The `wbu_driver_get_brake_intensity` function simply returns the current brake i
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_indicator**, **wbu\_driver\_get\_indicator**, **wbu\_driver\_set\_hazard\_flashers**, **wbu\_driver\_get\_hazard\_flashers** - *Set and get the indicator state*
+#### `wbu_driver_set_indicator`
+#### `wbu_driver_get_indicator`
+#### `wbu_driver_set_hazard_flashers`
+#### `wbu_driver_get_hazard_flashers`
 
 ```c
 #include <webots/driver.h>
@@ -141,7 +151,9 @@ void wbu_driver_set_hazard_flashers(bool state);
 bool wbu_driver_get_hazard_flashers();
 ```
 
-**Description**
+##### Description
+
+*Set and get the indicator state*
 
 The `wbu_driver_set_indicator` function allows the user to set (using the `wbu_indicator_state` enum) if the indicator should be on only for the right side of the car, the left side of the car or should be off.
 The `wbu_driver_get_indicator` function allows the user to get the indicator state.
@@ -161,9 +173,10 @@ The `wbu_driver_get_hazard_flashers` function allows the user to get the state o
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_dipped\_beams**, **wbu\_driver\_set\_antifog\_lights**, **wbu\_driver\_get\_dipped\_beams**, **wbu\_driver\_get\_antifog\_lights** - *Set and get the lights*
+#### `wbu_driver_set_dipped_beams`
+#### `wbu_driver_set_antifog_lights`
+#### `wbu_driver_get_dipped_beams`
+#### `wbu_driver_get_antifog_lights`
 
 ```c
 #include <webots/driver.h>
@@ -174,7 +187,9 @@ bool wbu_driver_get_dipped_beams();
 bool wbu_driver_get_antifog_lights();
 ```
 
-**Description**
+##### Description
+
+*Set and get the lights*
 
 The `wbu_driver_set_dipped_beams` and `wbu_driver_set_antifog_lights` functions are used to enable or disable the dipped beams and the anti-fog lights.
 
@@ -182,9 +197,7 @@ The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions 
 
 ---
 
-**Name**
-
-**wbu\_driver\_get\_rpm** - *Get the motor rpm*
+#### `wbu_driver_get_rpm`
 
 ```c
 #include <webots/driver.h>
@@ -192,7 +205,9 @@ The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions 
 double wbu_driver_get_rpm();
 ```
 
-**Description**
+##### Description
+
+*Get the motor rpm*
 
 This function returns the estimation of the engine rotation speed.
 
@@ -200,9 +215,9 @@ This function returns the estimation of the engine rotation speed.
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_gear**, **wbu\_driver\_get\_gear**, **wbu\_driver\_get\_gear\_number** - *Get and set the gear*
+#### `wbu_driver_set_gear`
+#### `wbu_driver_get_gear`
+#### `wbu_driver_get_gear_number`
 
 ```c
 #include <webots/driver.h>
@@ -212,7 +227,9 @@ int wbu_driver_get_gear();
 int wbu_driver_get_gear_number();
 ```
 
-**Description**
+##### Description
+
+*Get and set the gear*
 
 The `wbu_driver_set_gear` function sets the engaged gear.
 An argument of `-1` is used in order to engage the reverse gear, an argument of `0` is used in order to disengaged the gearbox.
@@ -224,9 +241,7 @@ The `wbu_driver_get_gear_number` function simply returns the number of available
 
 ---
 
-**Name**
-
-**wbu\_driver\_get\_control\_mode** - *Get the control mode*
+#### `wbu_driver_get_control_mode`
 
 ```c
 #include <webots/driver.h>
@@ -234,7 +249,9 @@ The `wbu_driver_get_gear_number` function simply returns the number of available
 wbu_control_mode wbu_driver_get_control_mode();
 ```
 
-**Description**
+##### Description
+
+*Get the control mode*
 
 This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
@@ -249,9 +266,8 @@ This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
 ---
 
-**Name**
-
-**wbu\_driver\_set\_wipers\_mode**, **wbu\_driver\_get\_wipers\_mode** - *Set and get the wipers' mode*
+#### `wbu_driver_set_wipers_mode`
+#### `wbu_driver_get_wipers_mode`
 
 ```c
 #include <webots/driver.h>
@@ -260,7 +276,9 @@ void wbu_driver_set_wipers_mode(int mode);
 wbu_wipers_mode wbu_driver_get_wipers_mode();
 ```
 
-**Description**
+##### Description
+
+*Set and get the wipers' mode*
 
 The `wbu_driver_set_wipers_mode` function allows the user to set (using the `wbu_wipers_mode` enum) various speeds for the wipers from slow to fast.
 Whilst the slow and normal mode share the same speed, the slow mode activates the wipers once every few seconds.

@@ -120,7 +120,7 @@ showdown.extension('wbAPI', function() {
     { // '#### `wb.*`' to h4 + "api-title" class
       type: 'lang',
       filter: function(text, converter, options) {
-        text = text.replace(/#### `(wb_[^ `\n]+?)`\n/gi, function(match, content) {
+        text = text.replace(/#### `(wb[urw]?_[^ `\n]+?)`\n/gi, function(match, content) {
           return '<h4 name="' + content + '" class="api-title">' + content + '</h4>';
         });
         return text;

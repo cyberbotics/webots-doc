@@ -37,11 +37,12 @@ This field accepts any value in the interval (0.0, inf).
 
 ### Accelerometer Functions
 
-**Name**
+#### `wb_accelerometer_enable`
+#### `wb_accelerometer_disable`
+#### `wb_accelerometer_get_sampling_period`
+#### `wb_accelerometer_get_values`
 
-**wb\_accelerometer\_enable**, **wb\_accelerometer\_disable**, **wb\_accelerometer\_get\_sampling\_period**, **wb\_accelerometer\_get\_values** - *enable, disable and read the output of the accelerometer*
-
-{[C++](cpp-api.md#cpp_accelerometer)}, {[Java](java-api.md#java_accelerometer)}, {[Python](python-api.md#python_accelerometer)}, {[Matlab](matlab-api.md#matlab_accelerometer)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_accelerometer) [Java](java-api.md#java_accelerometer) [Python](python-api.md#python_accelerometer) [Matlab](matlab-api.md#matlab_accelerometer) [ROS](ros-api.md)
 
 ```c
 #include <webots/accelerometer.h>
@@ -52,7 +53,9 @@ int wb_accelerometer_get_sampling_period(WbDeviceTag tag)
 const double *wb_accelerometer_get_values(WbDeviceTag tag)
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read the output of the accelerometer*
 
 The `wb_accelerometer_enable` function allows the user to enable the acceleration measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

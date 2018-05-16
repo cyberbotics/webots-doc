@@ -172,7 +172,7 @@ The ground texture must be placed in a [Plane](plane.md).
 
 **wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -203,7 +203,7 @@ Hence, the range of the return value is defined by this lookup table.
 
 **wb\_distance\_sensor\_get\_max\_value**, **wb\_distance\_sensor\_get\_min\_value**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum value, minimum value and aperture*
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -229,7 +229,7 @@ The `wb_distance_sensor_get_aperture` function returns the aperture of the dista
 
 **wb\_distance\_sensor\_get\_type** - *Return the sensor type*
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>

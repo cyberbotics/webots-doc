@@ -40,7 +40,7 @@ This field accepts any value in the interval (0.0, inf).
 
 **wb\_compass\_enable**, **wb\_compass\_disable**, **wb\_compass\_get\_sampling\_period**, **wb\_compass\_get\_values** - *enable, disable and read the output values of the compass device*
 
-{[C++](cpp-api.md#cpp_compass)}, {[Java](java-api.md#java_compass)}, {[Python](python-api.md#python_compass)}, {[Matlab](matlab-api.md#matlab_compass)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_compass) [Java](java-api.md#java_compass) [Python](python-api.md#python_compass) [Matlab](matlab-api.md#matlab_compass) [ROS](ros-api.md)
 
 ```c
 #include <webots/compass.h>

@@ -12,7 +12,7 @@ In order to get the `Keyboard` instance, you should call the `getKeyboard` funct
 
 **wb\_keyboard\_enable**, **wb\_keyboard\_disable**, **wb\_keyboard\_get\_sampling\_period**, **wb\_keyboard\_get\_key** - *keyboard reading function*
 
-{[C++](cpp-api.md#cpp_keyboard)}, {[Java](java-api.md#java_keyboard)}, {[Python](python-api.md#python_keyboard)}, {[Matlab](matlab-api.md#matlab_keyboard)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_keyboard) [Java](java-api.md#java_keyboard) [Python](python-api.md#python_keyboard) [Matlab](matlab-api.md#matlab_keyboard) [ROS](ros-api.md)
 
 ```c
 #include <webots/keyboard.h>

@@ -143,7 +143,7 @@ But it is not necessary to add a [Physics](physics.md) node to the [Connector](#
 
 **wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence\_sampling\_period**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
 
-{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [Matlab](matlab-api.md#matlab_connector) [ROS](ros-api.md)
 
 ```c
 #include <webots/connector.h>
@@ -199,7 +199,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 **wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
 
-{[C++](cpp-api.md#cpp_connector)}, {[Java](java-api.md#java_connector)}, {[Python](python-api.md#python_connector)}, {[Matlab](matlab-api.md#matlab_connector)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [Matlab](matlab-api.md#matlab_connector) [ROS](ros-api.md)
 
 ```c
 #include <webots/connector.h>

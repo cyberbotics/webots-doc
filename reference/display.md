@@ -63,7 +63,7 @@ Then, after closing the window, the overlay will be automatically restored.
 
 **wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of a display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -82,7 +82,7 @@ These functions return respectively the values of the `width` and `height` field
 
 **wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity**, **wb\_display\_set\_font** - *set the drawing properties of a display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -149,7 +149,7 @@ For example the vector `[1 0 1]` represents the magenta color.
 
 **wb\_display\_attach\_camera**, **wb\_display\_detach\_camera** - *attach/detach a camera to a display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -172,7 +172,7 @@ After detaching a camera, the pixels that have not been manually drawn will be t
 
 **wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on a display*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -233,7 +233,7 @@ The `wb_display_fill_polygon` function draws a polygon having the same propertie
 
 **wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>

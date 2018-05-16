@@ -223,7 +223,7 @@ If a more specific or accurate model is needed, it can be implemented in the rob
 
 **wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -326,7 +326,7 @@ The `wb_motor_get_[min|max]_position` functions allow to get the values of respe
 
 **wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -380,7 +380,7 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 
 **wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -414,7 +414,7 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 
 **wb\_motor\_get\_type** - *get the motor type*
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>

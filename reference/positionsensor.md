@@ -26,7 +26,7 @@ This field accepts any value in the interval (0.0, inf).
 
 **wb\_position\_sensor\_enable**, **wb\_position\_sensor\_disable**, **wb\_position\_sensor\_get\_sampling\_period**, **wb\_position\_sensor\_get\_value**, **wb\_position\_sensor\_get\_type** - *enable, disable and read position sensor measurement*
 
-{[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_position_sensor) [Java](java-api.md#java_position_sensor) [Python](python-api.md#python_position_sensor) [Matlab](matlab-api.md#matlab_position_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/position_sensor.h>

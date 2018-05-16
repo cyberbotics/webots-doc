@@ -81,7 +81,7 @@ In addition it is highly recommended to choose -1 for the baudRate, in order to 
 
 **wb\_emitter\_send** - *send a data packet to potential receivers*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
 ```c
 #include <webots/emitter.h>
@@ -149,7 +149,7 @@ Here is an example of sending a Java string in a way that is compatible with a C
 
 **wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
 ```c
 #include <webots/emitter.h>
@@ -175,7 +175,7 @@ The `wb_emitter_get_channel` function returns the current channel number of the 
 
 **wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
 ```c
 #include <webots/emitter.h>
@@ -199,7 +199,7 @@ For both the `wb_emitter_set_range` and `emitter_get_range` functions, a value o
 
 **wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
 ```c
 #include <webots/emitter.h>

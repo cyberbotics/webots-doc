@@ -50,7 +50,7 @@ This field accepts any value in the interval (0.0, inf).
 
 **wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values**, **wb\_gps\_get\_speed** - *enable, disable and read the GPS measurements*
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_gps) [Java](java-api.md#java_gps) [Python](python-api.md#python_gps) [Matlab](matlab-api.md#matlab_gps) [ROS](ros-api.md)
 
 ```c
 #include <webots/gps.h>
@@ -94,7 +94,7 @@ If these values are needed for a longer period they must be copied.
 
 **wb\_gps\_get\_coordinate\_system** - *get the gps coordinate system*
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_gps) [Java](java-api.md#java_gps) [Python](python-api.md#python_gps) [Matlab](matlab-api.md#matlab_gps) [ROS](ros-api.md)
 
 ```c
 #include <webots/gps.h>
@@ -113,7 +113,7 @@ If the value of the `gpsCoordinateSystem` field is "local" then this function re
 
 **wb\_gps\_convert\_to\_degrees\_minutes\_seconds** - *convert decimal degrees to degrees minutes seconds*
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_gps) [Java](java-api.md#java_gps) [Python](python-api.md#python_gps) [Matlab](matlab-api.md#matlab_gps) [ROS](ros-api.md)
 
 ```c
 #include <webots/gps.h>

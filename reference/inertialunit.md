@@ -57,7 +57,7 @@ This field accepts any value in the interval (0.0, inf).
 
 **wb\_inertial\_unit\_enable**, **wb\_inertial\_unit\_disable**, **wb\_inertial\_unit\_get\_sampling\_period**, **wb\_inertial\_unit\_get\_roll\_pitch\_yaw** - *enable, disable and read the output values of the inertial unit*
 
-{[C++](cpp-api.md#cpp_inertial_unit)}, {[Java](java-api.md#java_inertial_unit)}, {[Python](python-api.md#python_inertial_unit)}, {[Matlab](matlab-api.md#matlab_inertial_unit)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_inertial_unit) [Java](java-api.md#java_inertial_unit) [Python](python-api.md#python_inertial_unit) [Matlab](matlab-api.md#matlab_inertial_unit) [ROS](ros-api.md)
 
 ```c
 #include <webots/inertial_unit.h>

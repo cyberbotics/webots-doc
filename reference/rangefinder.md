@@ -100,7 +100,7 @@ Then, after closing the window, the overlay will be automatically restored.
 
 **wb\_range\_finder\_enable**, **wb\_range\_finder\_disable**, **wb\_range\_finder\_get\_sampling\_period** - *enable and disable range-finder updates*
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
 ```c
 #include <webots/range_finder.h>
@@ -126,7 +126,7 @@ The `wb_range_finder_get_sampling_period` function returns the period given into
 
 **wb\_range\_finder\_get\_fov** - *get field of view for a range-finder*
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
 ```c
 #include <webots/range_finder.h>
@@ -144,7 +144,7 @@ These functions allow the controller to get the value of the field of view (fov)
 
 **wb\_range\_finder\_get\_width**, **wb\_range\_finder\_get\_height** - *get the size of the range-finder image*
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
 ```c
 #include <webots/range_finder.h>
@@ -163,7 +163,7 @@ These functions return the width and height of a range-finder image as defined i
 
 **wb\_range\_finder\_get\_min\_range**, **wb\_range\_finder\_get\_max\_range** - *get the minimum and maximum range of the range-finder device*
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
 ```c
 #include <webots/range_finder.h>
@@ -182,7 +182,7 @@ These functions return the minRange and maxRange parameters of a range-finder de
 
 **wb\_range\_finder\_get\_range\_image**, **wb\_range\_finder\_image\_get\_depth** - *get the range image and range data from a range-finder*
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
 ```c
 #include <webots/range_finder.h>
@@ -223,7 +223,7 @@ Their content are identical but their handling is of course different.
 
 **wb\_range\_finder\_save\_image** - *save a range-finder image in PNG, JPEG or TIFF format*
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
 ```c
 #include <webots/range_finder.h>

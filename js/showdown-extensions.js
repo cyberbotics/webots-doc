@@ -117,16 +117,11 @@ showdown.extension('wbAPI', function() {
         return text;
       }
     },
-    { // '#### wb.*' to anchor
+    { // '#### `wb.*`' to h4 + "api-title" class
       type: 'lang',
       filter: function(text, converter, options) {
-        text = text.replace(/#### (wb\\_[^\n]+?)\n/gi, function(match, content) {
-          var protectedContent = content.replace(/\\_/g, '_');
-          var anchor = protectedContent;
-          var index = anchor.indexOf(',');
-          if (index > 0)
-            anchor = anchor.substring(0, index);
-          return '<h4 name="' + anchor + '">' + protectedContent + '</h4>';
+        text = text.replace(/#### `(wb_[^ `\n]+?)`\n/gi, function(match, content) {
+          return '<h4 name="' + content + '" class="api-title">' + content + '</h4>';
         });
         return text;
       }

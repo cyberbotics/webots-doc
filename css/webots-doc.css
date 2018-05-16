@@ -262,6 +262,9 @@ body {
 .webots-doc b, .webots-doc strong {
   color: #333;
 }
+.webots-doc hr {
+  margin: 40px 0px;
+}
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3,
@@ -290,7 +293,7 @@ body {
 .webots-doc .release-tag {
   display: inline;
   font-size: 14px;
-  color: black;
+  color: #ccc;
 }
 .webots-doc .anchor-link-image {
   padding-left: 20px;
@@ -307,6 +310,13 @@ body {
   position: relative;
   left: -20px;
   padding: 9px 0px;
+}
+.webots-doc .api-title {
+  padding: 0px;
+  margin: 10px 0px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  color: black;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,

@@ -59,9 +59,8 @@ Then, after closing the window, the overlay will be automatically restored.
 
 ### Display Functions
 
-**Name**
-
-**wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of a display*
+#### `wb_display_get_width`
+#### `wb_display_get_height`
 
 [C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
@@ -72,15 +71,18 @@ int wb_display_get_width(WbDeviceTag tag);
 int wb_display_get_height(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the size of a display*
 
 These functions return respectively the values of the `width` and `height` fields.
 
 ---
 
-**Name**
-
-**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity**, **wb\_display\_set\_font** - *set the drawing properties of a display*
+#### `wb_display_set_color`
+#### `wb_display_set_alpha`
+#### `wb_display_set_opacity`
+#### `wb_display_set_font`
 
 [C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
@@ -93,7 +95,9 @@ void wb_display_set_opacity(WbDeviceTag tag, double opacity);
 void wb_display_set_font(WbDeviceTag tag, const char *font, int size, bool anti_aliasing);
 ```
 
-**Description**
+###### Description
+
+*set the drawing properties of a display*
 
 These four functions define the context in which the subsequent drawing commands (see [draw primitive functions](#wb_display_draw_pixel)) will be applied.
 
@@ -145,9 +149,8 @@ For example the vector `[1 0 1]` represents the magenta color.
 
 ---
 
-**Name**
-
-**wb\_display\_attach\_camera**, **wb\_display\_detach\_camera** - *attach/detach a camera to a display*
+#### `wb_display_attach_camera`
+#### `wb_display_detach_camera`
 
 [C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
@@ -158,7 +161,9 @@ void wb_display_attach_camera(WbDeviceTag tag, WbDeviceTag camera_tag);
 void wb_display_detach_camera(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*attach/detach a camera to a display*
 
 These functions are used to attach/detach a camera to a display.
 When a camera is attached to a display, the camera images are efficiently copied to the background of the display.
@@ -168,9 +173,15 @@ After detaching a camera, the pixels that have not been manually drawn will be t
 
 ---
 
-**Name**
-
-**wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on a display*
+#### `wb_display_draw_pixel`
+#### `wb_display_draw_line`
+#### `wb_display_draw_rectangle`
+#### `wb_display_draw_oval`
+#### `wb_display_draw_polygon`
+#### `wb_display_draw_text`
+#### `wb_display_fill_rectangle`
+#### `wb_display_fill_oval`
+#### `wb_display_fill_polygon`
 
 [C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
@@ -188,7 +199,9 @@ void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
 void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
 ```
 
-**Description**
+##### Description
+
+*draw a graphic primitive on a display*
 
 These functions order the execution of a drawing primitive on a display.
 They depend on the context of the display as defined by the contextual functions (see [set context functions](#wb_display_set_color)).
@@ -229,9 +242,12 @@ The `wb_display_fill_polygon` function draws a polygon having the same propertie
 
 ---
 
-**Name**
-
-**wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
+#### `wb_display_image_new`
+#### `wb_display_image_load`
+#### `wb_display_image_copy`
+#### `wb_display_image_paste`
+#### `wb_display_image_save`
+#### `wb_display_image_delete`
 
 [C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
@@ -246,7 +262,9 @@ void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename)
 void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir);
 ```
 
-**Description**
+##### Description
+
+*image manipulation functions*
 
 In addition to the main display image, each [Display](#display) node also contains a list of clipboard images used for various image manipulations.
 This list is initially empty.

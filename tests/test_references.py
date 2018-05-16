@@ -38,7 +38,7 @@ class TestReferences(unittest.TestCase):
                                     line.strip()):
                                 anchors.append(m.group(1))
                         if line.startswith('#'):
-                            m = re.match(r'^(#*) .*$', line)
+                            m = re.match(r'^(#{1,4}) .*$', line)
                             if m:
                                 title = re.sub(r'^#*', '', line)
                                 anchors.append(slugify(title))

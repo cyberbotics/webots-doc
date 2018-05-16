@@ -319,8 +319,9 @@ body {
 .webots-doc .api-title {
   padding: 0px;
   margin: 10px;
-  font-family: "Roboto Mono", monospace;
   color: black;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc .tag-container {
   text-align: right;

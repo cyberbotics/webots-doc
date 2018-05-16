@@ -834,7 +834,7 @@ function applyOOTags(view) {
     var a = as[i];
     if (['C++', 'Java', 'Python', 'ROS', 'Matlab'].includes(a.innerText)) {
       a.classList.add('tag');
-      if (a.parentNode.tagName === 'p' && a.parentNode.classList.length === 0)
+      if (a.parentNode.tagName.toLowerCase() === 'p' && a.parentNode.classList.length === 0)
         a.parentNode.classList.add('tag-container');
     }
   }

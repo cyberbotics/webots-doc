@@ -121,7 +121,7 @@ showdown.extension('wbAPI', function() {
       type: 'lang',
       filter: function(text, converter, options) {
         text = text.replace(/(#{4,5}) `([^`\n]+?)`\n/gi, function(match, hashes, content) {
-          return '<h' + hashes.length + ' name="' + content + '" class="api-title">' + content + '</h4>';
+          return '<h' + hashes.length + ' name="' + content + '" class="api-title">' + content + '</h' + hashes.length + '>';
         });
         return text;
       }

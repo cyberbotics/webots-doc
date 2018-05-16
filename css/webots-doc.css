@@ -322,11 +322,21 @@ body {
   font-family: "Roboto Mono", monospace;
   color: black;
 }
+.webots-doc .tag-container {
+  text-align: right;
+}
 .webots-doc .tag {
   padding: 4px;
-  color: #036161;
-  margin: 5px;
-  background-color: #cfe2e0;
+  color: #ffffff;
+  padding: 6px 18px;
+  background-color: #006796;
+  margin: 2px;
+}
+.webots-doc .tag:hover {
+  color: white;
+  text-decoration: none;
+  outline: 0;
+  background: #489fca;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,

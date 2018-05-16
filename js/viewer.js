@@ -832,8 +832,10 @@ function applyOOTags(view) {
   var as = view.querySelectorAll('a');
   for (var i = 0; i < as.length; i++) {
     var a = as[i];
-    if (['C++', 'Java', 'Python', 'ROS', 'Matlab'].includes(a.innerText))
+    if (['C++', 'Java', 'Python', 'ROS', 'Matlab'].includes(a.innerText)) {
       a.classList.add('tag');
+      a.parentNode.classList.add('tag-container');
+    }
   }
 }
 

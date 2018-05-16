@@ -28,10 +28,7 @@ For functions returning a string, an empty string is returned instead of a NULL 
 
 As for a regular [Robot](robot.md) controller, the `wb_robot_init`, `wb_robot_step`, etc. functions must be used in a [Supervisor](#supervisor) controller.
 
-**Name**
-
-**wb\_supervisor\_export\_image** - *save the current 3D image of the simulator into a JPEG file, suitable for
-    building a webcam system*
+#### `wb_supervisor_export_image`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -41,7 +38,9 @@ As for a regular [Robot](robot.md) controller, the `wb_robot_init`, `wb_robot_st
 void wb_supervisor_export_image(const char *filename, int quality);
 ```
 
-**Description**
+##### Description
+
+*save the current 3D image of the simulator into a JPEG file, suitable for building a webcam system*
 
 The `wb_supervisor_export_image` function saves the current image of Webots main window into a JPEG file as specified by the `filename` parameter.
 If the target file exists, it will be silently overwritten.
@@ -50,16 +49,21 @@ The `filename` parameter should specify a valid (absolute or relative) file name
 In fact, a temporary file is first saved, and then renamed to the requested `filename`.
 This avoids having a temporary unfinished (and hence corrupted) file for webcam applications.
 
-**Example**
+##### Example
 
 The "projects/samples/howto/worlds/supervisor.wbt" world provides an example on how to use the `wb_supervisor_export_image` function.
 In this example, the [Supervisor](#supervisor) controller takes a snapshot image each time a goal is scored.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_from\_def**, **wb\_supervisor\_node\_get\_def**, **wb\_supervisor\_node\_get\_from\_id**, **wb\_supervisor\_node\_get\_id**, **wb\_supervisor\_node\_get\_parent\_node**, **wb\_supervisor\_node\_get\_root**, **wb\_supervisor\_node\_get\_self**, **wb\_supervisor\_node\_get\_selected** - *get a handle to a node in the world*
+#### `wb_supervisor_node_get_from_def`
+#### `wb_supervisor_node_get_def`
+#### `wb_supervisor_node_get_from_id`
+#### `wb_supervisor_node_get_id`
+#### `wb_supervisor_node_get_parent_node`
+#### `wb_supervisor_node_get_root`
+#### `wb_supervisor_node_get_self`
+#### `wb_supervisor_node_get_selected`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -76,7 +80,9 @@ WbNodeRef wb_supervisor_node_get_self();
 WbNodeRef wb_supervisor_node_get_selected();
 ```
 
-**Description**
+##### Description
+
+*get a handle to a node in the world*
 
 The `wb_supervisor_node_get_from_def` function returns a handle to a node in the world from its DEF name.
 The return value can be used for subsequent calls to functions which require a `WbNodeRef` parameter.
@@ -116,9 +122,9 @@ If no node is currently selected, the function returns NULL.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_type**, **wb\_supervisor\_node\_get\_type\_name**, **wb\_supervisor\_node\_get\_base\_type\_name** - *get information on a specified node*
+#### `wb_supervisor_node_get_type`
+#### `wb_supervisor_node_get_type_name`
+#### `wb_supervisor_node_get_base_type_name`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -130,7 +136,9 @@ const char *wb_supervisor_node_get_type_name(WbNodeRef node);
 const char *wb_supervisor_node_get_base_type_name(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*get information on a specified node*
 
 The `wb_supervisor_node_get_type` function returns a symbolic value corresponding the type of the node specified as an argument.
 If the argument is NULL, it returns WB\_NODE\_NO\_NODE.
@@ -150,9 +158,7 @@ These integers can be directly compared with the output of the `Node::getType` f
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_remove** - *Remove a specified node*
+#### `wb_supervisor_node_remove`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -162,15 +168,15 @@ These integers can be directly compared with the output of the `Node::getType` f
 void wb_supervisor_node_remove(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*Remove a specified node*
 
 The `wb_supervisor_node_remove` function removes the node specified as an argument from the Webots scene tree.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_field** - *get a field reference from a node*
+#### `wb_supervisor_node_get_field`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -180,7 +186,9 @@ The `wb_supervisor_node_remove` function removes the node specified as an argume
 WbFieldRef wb_supervisor_node_get_field(WbNodeRef node, const char *field_name);
 ```
 
-**Description**
+##### Description
+
+*get a field reference from a node*
 
 The `wb_supervisor_node_get_field` function retrieves a handler to a node field.
 The field is specified by its name in `field_name` and the `node` it belongs to.
@@ -192,9 +200,8 @@ Otherwise, it returns a handler to a field.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_position**, **wb\_supervisor\_node\_get\_orientation** - *get the global (world) position/orientation of a node*
+#### `wb_supervisor_node_get_position`
+#### `wb_supervisor_node_get_orientation`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -205,7 +212,9 @@ const double *wb_supervisor_node_get_position(WbNodeRef node);
 const double *wb_supervisor_node_get_orientation(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*get the global (world) position/orientation of a node*
 
 The `wb_supervisor_node_get_position` function returns the position of a node expressed in the global (world) coordinate system.
 The `node` argument must be a [Transform](transform.md) node (or a derived node), otherwise the function will print a warning message and return 3 `NaN` (Not a Number) values.
@@ -242,9 +251,7 @@ The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_center\_of\_mass** - *get the global position of a solid's center of mass*
+#### `wb_supervisor_node_get_center_of_mass`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -254,7 +261,9 @@ The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
 const double *wb_supervisor_node_get_center_of_mass(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*get the global position of a solid's center of mass*
 
 The `wb_supervisor_node_get_center_of_mass` function returns the position of the center of mass of a Solid node expressed in the global (world) coordinate system.
 The `node` argument must be a [Solid](solid.md) node (or a derived node), otherwise the function will print a warning message and return 3 `NaN` (Not a Number) values.
@@ -267,9 +276,7 @@ The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_contact\_point** - *get the contact point with given index in the contact point list of the given solid.*
+#### `wb_supervisor_node_get_contact_point`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -279,7 +286,9 @@ The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 const double *wb_supervisor_node_get_contact_point(WbNodeRef node, int index);
 ```
 
-**Description**
+##### Description
+
+*get the contact point with given index in the contact point list of the given solid.*
 
 The `wb_supervisor_node_get_contact_point` function returns the contact point with given index in the contact point list of the given `Solid`.
 The `wb_supervisor_node_get_number_of_contact_points` function allows you to retrieve the length of this list.
@@ -294,9 +303,7 @@ The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project sho
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_number\_of\_contact\_points** - *get the number of contact points of the given solid*
+#### `wb_supervisor_node_get_number_of_contact_points`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -306,7 +313,9 @@ The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project sho
 int wb_supervisor_node_get_number_of_contact_points(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*get the number of contact points of the given solid*
 
 The `wb_supervisor_node_get_number_of_contact_points` function returns the number of contact points of the given `Solid`.
 The `node` argument must be a [Solid](solid.md) node (or a derived node), which moreover has no `Solid` parent, otherwise the function will print a warning message and return `-1`.
@@ -315,9 +324,7 @@ The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project sho
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_static\_balance** - *return the boolean value of the static balance test based on the support polygon of a solid*
+#### `wb_supervisor_node_get_static_balance`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -327,7 +334,9 @@ The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project sho
 bool wb_supervisor_node_get_static_balance(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*return the boolean value of the static balance test based on the support polygon of a solid*
 
 The `wb_supervisor_node_get_static_balance` function returns the boolean value of the static balance test based on the support polygon of a solid.
 The `node` argument must be a [Solid](solid.md) node (or a derived node), which moreover has no `Solid` parent.
@@ -337,9 +346,8 @@ The test consists in checking whether the projection of the center of mass onto 
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_get\_velocity**, **wb\_supervisor\_node\_set\_velocity** - *get/set the angular and linear velocities of a Solid node.*
+#### `wb_supervisor_node_get_velocity`
+#### `wb_supervisor_node_set_velocity`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -350,7 +358,9 @@ const double *wb_supervisor_node_get_velocity(WbNodeRef node);
 void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6]);
 ```
 
-**Description**
+##### Description
+
+*get/set the angular and linear velocities of a Solid node.*
 
 The `wb_supervisor_node_get_velocity` function returns the velocity (both linear and angular) of a node.
 The `node` argument must be a [Solid](solid.md) node (or a derived node), otherwise the function will print a warning message and return 6 `NaN` (Not a Number) values.
@@ -366,9 +376,7 @@ The last three are respectively the angular velocities around the x, y and z axe
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_reset\_physics** - *stops the inertia of the given solid*
+#### `wb_supervisor_node_reset_physics`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -378,7 +386,9 @@ The last three are respectively the angular velocities around the x, y and z axe
 void wb_supervisor_node_reset_physics(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*stops the inertia of the given solid*
 
 The `wb_supervisor_node_reset_physics` function stops the inertia of the given solid.
 If the specified node is physics-enables, i.e. it contains a [Physics](physics.md) node, then the linear and angular velocities of the corresonding body are reset to 0, hence the inertia is also zeroed.
@@ -388,9 +398,7 @@ To stop the inertia of all available solids please refer to [this section](#wb_s
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_restart\_controller** - *restarts the controller of the given robot*
+#### `wb_supervisor_node_restart_controller`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -400,7 +408,9 @@ To stop the inertia of all available solids please refer to [this section](#wb_s
 void wb_supervisor_node_restart_controller(WbNodeRef node);
 ```
 
-**Description**
+##### Description
+
+*restarts the controller of the given robot*
 
 The `wb_supervisor_node_restart_controller` function restarts the controller of the Robot passed to it.
 If a node other than a [Robot](robot.md) is passed to this function, no change is effected, and a warning message is printed to the console.
@@ -408,9 +418,7 @@ Note that if a robot window is specified for the [Robot](robot.md) node, the rob
 
 ---
 
-**Name**
-
-**wb\_supervisor\_node\_set\_visibility** - *set the visibility of a node*
+#### `wb_supervisor_node_set_visibility`
 
 [C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -420,7 +428,9 @@ Note that if a robot window is specified for the [Robot](robot.md) node, the rob
 void wb_supervisor_node_set_visibility(WbNodeRef node, WbNodeRef from, bool visible);
 ```
 
-**Description**
+##### Description
+
+*set the visibility of a node*
 
 The `wb_supervisor_node_set_visibility` function sets the visibility of a node from the specified [Camera](camera.md), [Lidar](lidar.md), [RangeFinder](rangefinder.md) or [Viewpoint](viewpoint.md) node.
 In particular it defines if the node is visible in the image recorded by the `from` device.
@@ -433,9 +443,7 @@ It is relevant to show a node only if it was previously hidden using this functi
 
 ---
 
-**Name**
-
-**wb\_supervisor\_set\_label** - *overlay a text label on the 3D scene*
+#### `wb_supervisor_set_label`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -445,7 +453,9 @@ It is relevant to show a node only if it was previously hidden using this functi
 void wb_supervisor_set_label(int id, const char *text, double x, double y, double size, int color, double transparency, const char *font);
 ```
 
-**Description**
+##### Description
+
+*overlay a text label on the 3D scene*
 
 The `wb_supervisor_set_label` function displays a text label overlaying the 3D scene in Webots' main window.
 The `id` parameter is an identifier for the label; you can choose any value in the range 0 to 65534.
@@ -477,7 +487,7 @@ Finally, the `font` parameter defines the font used to draw the text, the follow
 -  Trebuchet MS
 -  Verdana
 
-**Examples**
+##### Examples
 
 ```c
 wb_supervisor_set_label(0,"hello world",0,0,0.1,0xff0000,0,"Arial");
@@ -503,9 +513,7 @@ For example the vector `[1 0 1]` represents the magenta color.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_simulation\_quit** - *terminate the simulator and controller processes*
+##### `wb_supervisor_simulation_quit`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -515,7 +523,9 @@ For example the vector `[1 0 1]` represents the magenta color.
 void wb_supervisor_simulation_quit(int status);
 ```
 
-**Description**
+##### Description
+
+*terminate the simulator and controller processes*
 
 The `wb_supervisor_simulator_quit` function quits Webots, as if one was using the menu `File / Quit Webots`.
 This function makes it easier to invoke a Webots simulation from a script because it allows to terminate the simulation automatically, without human intervention.
@@ -580,9 +590,7 @@ int main(int argc, char *argv[]) {
 
 ---
 
-**Name**
-
-**wb\_supervisor\_simulation\_revert** - *reload the current world*
+#### `wb_supervisor_simulation_revert`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -592,7 +600,9 @@ int main(int argc, char *argv[]) {
 void wb_supervisor_simulation_revert();
 ```
 
-**Description**
+##### Description
+
+*reload the current world*
 
 The `wb_supervisor_simulator_revert` function sends a request to the simulator process, asking it to reload the current world immediately.
 As a result of reloading the current world, the supervisor process and all the robot processes are terminated and restarted.
@@ -600,9 +610,8 @@ You may wish to save some data in a file from your supervisor program in order t
 
 ---
 
-**Name**
-
-**wb\_supervisor\_simulation\_get\_mode**, **wb\_supervisor\_simulation\_set\_mode** - *get and set the simulation mode*
+##### `wb_supervisor_simulation_get_mode`
+##### `wb_supervisor_simulation_set_mode`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -613,7 +622,9 @@ int wb_supervisor_simulation_get_mode();
 void wb_supervisor_simulation_set_mode(int mode);
 ```
 
-**Description**
+##### Description
+
+*get and set the simulation mode*
 
 The `wb_supervisor_simulation_get_mode` function returns an integer matching with the current simulation mode, i.e., if the simulation is currently paused, is running in real-time, or in fast mode with or without the graphical renderings.
 The macros described in the [table](#simulation-modes) are matching with the return value of this function.
@@ -639,9 +650,8 @@ The current simulation mode can also be modified by the Webots user, when he's c
 
 ---
 
-**Name**
-
-**wb\_supervisor\_load\_world**, **wb\_supervisor\_save\_world** - *Load or save the current world.*
+#### `wb_supervisor_load_world`
+#### `wb_supervisor_save_world`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -652,7 +662,9 @@ void wb_supervisor_load_world(const char *filename);
 bool wb_supervisor_save_world(const char *filename);
 ```
 
-**Description**
+##### Description
+
+*Load or save the current world.*
 
 The `wb_supervisor_load_world` function sends a request to the simulator process, asking it to stop the current simulation and load the world given in argument immediately.
 As a result of changing the current world, the supervisor process and all the robot processes are terminated and the new one are restarted with the new world.
@@ -671,9 +683,7 @@ In this case, a simple save operation is performed.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_simulation\_reset\_physics** - *stop the inertia of all solids in the world and reset the random number generator*
+#### `wb_supervisor_simulation_reset_physics`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -683,7 +693,9 @@ In this case, a simple save operation is performed.
 void wb_supervisor_simulation_reset_physics();
 ```
 
-**Description**
+##### Description
+
+*stop the inertia of all solids in the world and reset the random number generator*
 
 The `wb_supervisor_simulation_reset_physics` function sends a request to the simulator process, asking it to stop the movement of all physics-enabled solids in the world.
 It means that for any [Solid](solid.md) node containing a [Physics](physics.md) node, the linear and angular velocities of the corresponding body are reset to 0, hence the inertia is also zeroed.
@@ -693,9 +705,10 @@ To stop the inertia of a single [Solid](solid.md) node please refer to [this sec
 
 ---
 
-**Name**
-
-**wb\_supervisor\_movie\_start\_recording**, **wb\_supervisor\_movie\_stop\_recording**, **wb\_supervisor\_movie\_is\_ready**, **wb\_supervisor\_movie\_failed** - *export the current simulation into a movie file*
+#### `wb_supervisor_movie_start_recording`
+#### `wb_supervisor_movie_stop_recording`
+#### `wb_supervisor_movie_is_ready`
+#### `wb_supervisor_movie_failed`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -708,7 +721,9 @@ bool wb_supervisor_movie_is_ready();
 bool wb_supervisor_movie_failed();
 ```
 
-**Description**
+##### Description
+
+*export the current simulation into a movie file*
 
 The `wb_supervisor_movie_start_recording` function starts saving the current simulation into a movie file.
 The movie creation process will complete after the `wb_supervisor_movie_stop_recording` function is called.
@@ -735,9 +750,8 @@ After starting a new recording process the returned value is reset to `FALSE`.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_animation\_start\_recording**, **wb\_supervisor\_animation\_stop\_recording** - *export the current simulation into an animation file*
+#### `wb_supervisor_animation_start_recording`
+#### `wb_supervisor_animation_stop_recording`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -748,7 +762,9 @@ bool wb_supervisor_animation_start_recording(const char *filename);
 bool wb_supervisor_animation_stop_recording();
 ```
 
-**Description**
+##### Description
+
+*export the current simulation into an animation file*
 
 The `wb_supervisor_animation_start_recording` function starts saving the current simulation into an animation file.
 The animation creation process will complete after the `wb_supervisor_animation_stop_recording` function is called.
@@ -762,9 +778,9 @@ Both `wb_supervisor_animation_start_recording` and `wb_supervisor_animation_stop
 
 ---
 
-**Name**
-
-**wb\_supervisor\_field\_get\_type**, **wb\_supervisor\_field\_get\_type\_name**, **wb\_supervisor\_field\_get\_count** - *get a handler and more information on a field in a node*
+#### `wb_supervisor_field_get_type`
+#### `wb_supervisor_field_get_type_name`
+#### `wb_supervisor_field_get_count`
 
 [C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -776,7 +792,9 @@ const char *wb_supervisor_field_get_type_name(WbFieldRef field);
 int wb_supervisor_field_get_count(WbFieldRef field);
 ```
 
-**Description**
+##### Description
+
+*get a handler and more information on a field in a node*
 
 The `wb_supervisor_field_get_type` function returns the data type of a field found previously from the `wb_supervisor_node_get_field` function, as a symbolic value.
 If the argument is NULL, the function returns 0.
@@ -795,9 +813,24 @@ These integers can be directly compared with the output of the `Field::getType` 
 
 ---
 
-**Name**
-
-**wb\_supervisor\_field\_get\_sf\_bool**, **wb\_supervisor\_field\_get\_sf\_int32**, **wb\_supervisor\_field\_get\_sf\_float**, **wb\_supervisor\_field\_get\_sf\_vec2f**, **wb\_supervisor\_field\_get\_sf\_vec3f**, **wb\_supervisor\_field\_get\_sf\_rotation**, **wb\_supervisor\_field\_get\_sf\_color**, **wb\_supervisor\_field\_get\_sf\_string**, **wb\_supervisor\_field\_get\_sf\_node**, **wb\_supervisor\_field\_get\_mf\_bool**, **wb\_supervisor\_field\_get\_mf\_int32**, **wb\_supervisor\_field\_get\_mf\_float**, **wb\_supervisor\_field\_get\_mf\_vec2f**, **wb\_supervisor\_field\_get\_mf\_vec3f**, **wb\_supervisor\_field\_get\_mf\_rotation**, **wb\_supervisor\_field\_get\_mf\_color**, **wb\_supervisor\_field\_get\_mf\_string**, **wb\_supervisor\_field\_get\_mf\_node** - *get the value of a field*
+#### `wb_supervisor_field_get_sf_bool`
+#### `wb_supervisor_field_get_sf_int32`
+#### `wb_supervisor_field_get_sf_float`
+#### `wb_supervisor_field_get_sf_vec2f`
+#### `wb_supervisor_field_get_sf_vec3f`
+#### `wb_supervisor_field_get_sf_rotation`
+#### `wb_supervisor_field_get_sf_color`
+#### `wb_supervisor_field_get_sf_string`
+#### `wb_supervisor_field_get_sf_node`
+#### `wb_supervisor_field_get_mf_bool`
+#### `wb_supervisor_field_get_mf_int32`
+#### `wb_supervisor_field_get_mf_float`
+#### `wb_supervisor_field_get_mf_vec2f`
+#### `wb_supervisor_field_get_mf_vec3f`
+#### `wb_supervisor_field_get_mf_rotation`
+#### `wb_supervisor_field_get_mf_color`
+#### `wb_supervisor_field_get_mf_string`
+#### `wb_supervisor_field_get_mf_node`
 
 [C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -824,7 +857,9 @@ const char *wb_supervisor_field_get_mf_string(WbFieldRef field, int index);
 WbNodeRef wb_supervisor_field_get_mf_node(WbFieldRef field, int index);
 ```
 
-**Description**
+##### Description
+
+*get the value of a field*
 
 The `wb_supervisor_field_get_sf_*` functions retrieve the value of a specified single `field` (SF).
 The type of the field has to match the name of the function used, otherwise the return value is undefined (and a warning message is displayed).
@@ -839,9 +874,22 @@ The type of the field has to match the name of the function used and the index s
 
 ---
 
-**Name**
-
-**wb\_supervisor\_field\_set\_sf\_bool**, **wb\_supervisor\_field\_set\_sf\_int32**, **wb\_supervisor\_field\_set\_sf\_float**, **wb\_supervisor\_field\_set\_sf\_vec2f**, **wb\_supervisor\_field\_set\_sf\_vec3f**, **wb\_supervisor\_field\_set\_sf\_rotation**, **wb\_supervisor\_field\_set\_sf\_color**, **wb\_supervisor\_field\_set\_sf\_string**, **wb\_supervisor\_field\_set\_mf\_bool**, **wb\_supervisor\_field\_set\_mf\_int32**, **wb\_supervisor\_field\_set\_mf\_float**, **wb\_supervisor\_field\_set\_mf\_vec2f**, **wb\_supervisor\_field\_set\_mf\_vec3f**, **wb\_supervisor\_field\_set\_mf\_rotation**, **wb\_supervisor\_field\_set\_mf\_color**, **wb\_supervisor\_field\_set\_mf\_string** - *set the value of a field*
+#### `wb_supervisor_field_set_sf_bool`
+#### `wb_supervisor_field_set_sf_int32`
+#### `wb_supervisor_field_set_sf_float`
+#### `wb_supervisor_field_set_sf_vec2f`
+#### `wb_supervisor_field_set_sf_vec3f`
+#### `wb_supervisor_field_set_sf_rotation`
+#### `wb_supervisor_field_set_sf_color`
+#### `wb_supervisor_field_set_sf_string`
+#### `wb_supervisor_field_set_mf_bool`
+#### `wb_supervisor_field_set_mf_int32`
+#### `wb_supervisor_field_set_mf_float`
+#### `wb_supervisor_field_set_mf_vec2f`
+#### `wb_supervisor_field_set_mf_vec3f`
+#### `wb_supervisor_field_set_mf_rotation`
+#### `wb_supervisor_field_set_mf_color`
+#### `wb_supervisor_field_set_mf_string`
 
 [C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -866,7 +914,9 @@ void wb_supervisor_field_set_mf_color(WbFieldRef field, int index, const double 
 void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *value);
 ```
 
-**Description**
+##### Description
+
+*set the value of a field*
 
 The `wb_supervisor_field_set_sf_*` functions assign a value to a specified single `field` (SF).
 The type of the field has to match with the name of the function used, otherwise the value of the field remains unchanged (and a warning message is displayed).
@@ -887,16 +937,22 @@ In order to retrieve the new position of the node, a `wb_robot_step` function ca
 > **Note**: Since Webots 7.4.4, the inertia of a solid is no longer automatically reset when changing its translation or rotation using `wb_supervisor_field_set_sf_vec2f` and `wb_supervisor_field_set_sf_rotation` functions.
 If needed, the user has to explicitly call [this section](#wb_supervisor_node_reset_physics) function.
 
-**Examples**
+##### Examples
 
 The "texture\_change.wbt" world, located in the "projects/samples/howto/worlds" directory, shows how to change a texture from the supervisor while the simulation is running.
 The "soccer.wbt" world, located in the "projects/samples/demos/worlds" directory, provides a simple example for getting and setting fields with the above described functions.
 
 ---
 
-**Name**
-
-**wb\_supervisor\_field\_insert\_mf\_bool**, **wb\_supervisor\_field\_insert\_mf\_int32**, **wb\_supervisor\_field\_insert\_mf\_float**, **wb\_supervisor\_field\_insert\_mf\_vec2f**, **wb\_supervisor\_field\_insert\_mf\_vec3f**, **wb\_supervisor\_field\_insert\_mf\_rotation**, **wb\_supervisor\_field\_insert\_mf\_color**, **wb\_supervisor\_field\_insert\_mf\_string**, **wb\_supervisor\_field\_remove\_mf** - *insert or remove a value in a field*
+#### `wb_supervisor_field_insert_mf_bool`
+#### `wb_supervisor_field_insert_mf_int32`
+#### `wb_supervisor_field_insert_mf_float`
+#### `wb_supervisor_field_insert_mf_vec2f`
+#### `wb_supervisor_field_insert_mf_vec3f`
+#### `wb_supervisor_field_insert_mf_rotation`
+#### `wb_supervisor_field_insert_mf_color`
+#### `wb_supervisor_field_insert_mf_string`
+#### `wb_supervisor_field_remove_mf`
 
 [C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -915,7 +971,9 @@ void wb_supervisor_field_insert_mf_string(WbFieldRef field, int index, const cha
 void wb_supervisor_field_remove_mf(WbFieldRef field, int index);
 ```
 
-**Description**
+##### Description
+
+*insert or remove a value in a field*
 
 The `wb_supervisor_field_insert_mf_*` functions insert an item to a specified multiple `field` (MF).
 The type of the field has to match with the name of the function used, otherwise the field remains unchanged (and a warning message is displayed).
@@ -934,9 +992,8 @@ The `wb_supervisor_field_remove_mf` function removes an item from a specified mu
 
 ---
 
-**Name**
-
-**wb\_supervisor\_field\_import\_mf\_node**, **wb\_supervisor\_field\_import\_mf\_node\_from\_string** - *import a node into an MF\_NODE field (typically a "children" field)*
+#### `wb_supervisor_field_import_mf_node`
+#### `wb_supervisor_field_import_mf_node_from_string`
 
 [C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -947,7 +1004,9 @@ void wb_supervisor_field_import_mf_node(WbFieldRef field, int position, const ch
 void wb_supervisor_field_import_mf_node_from_string(WbFieldRef field, int position, const char *node_string);
 ```
 
-**Description**
+##### Description
+
+*import a node into an MF\_NODE field (typically a "children" field)*
 
 The `wb_supervisor_field_import_mf_node` function imports a Webots node into an MF\_NODE.
 This node should be defined in a `.wbo` file referenced by the `filename` parameter.
@@ -997,9 +1056,9 @@ For example, a device imported into a Robot node doesn't reset the Robot, so the
 
 ---
 
-**Name**
-
-**wb\_supervisor\_virtual\_reality\_headset\_is\_used**, **wb\_supervisor\_virtual\_reality\_headset\_get\_position**, **wb\_supervisor\_virtual\_reality\_headset\_get\_orientation** - *check if a virtual reality headset is used and get its position and orientation*
+#### `wb_supervisor_virtual_reality_headset_is_used`
+#### `wb_supervisor_virtual_reality_headset_get_position`
+#### `wb_supervisor_virtual_reality_headset_get_orientation`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -1011,7 +1070,9 @@ const double *wb_supervisor_virtual_reality_headset_get_position();
 const double *wb_supervisor_virtual_reality_headset_get_orientation();
 ```
 
-**Description**
+##### Description
+
+*check if a virtual reality headset is used and get its position and orientation*
 
 The `wb_supervisor_virtual_reality_headset_is_used` function returns true if a virtual reality headset is currently used to view the simulation.
 For more information about how to use a virtual reality headset refer to the [User Guide](../guide/computer-peripherals.md#virtual-reality-headset).

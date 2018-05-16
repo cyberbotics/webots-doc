@@ -139,9 +139,10 @@ But it is not necessary to add a [Physics](physics.md) node to the [Connector](#
 
 ### Connector Functions
 
-**Name**
-
-**wb\_connector\_enable\_presence**, **wb\_connector\_disable\_presence**, **wb\_connector\_get\_presence\_sampling\_period**, **wb\_connector\_get\_presence** - *detect the presence of another connector*
+#### `wb_connector_enable_presence`
+#### `wb_connector_disable_presence`
+#### `wb_connector_get_presence_sampling_period`
+#### `wb_connector_get_presence`
 
 [C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [Matlab](matlab-api.md#matlab_connector) [ROS](ros-api.md)
 
@@ -154,7 +155,9 @@ int wb_connector_get_presence_sampling_period(WbDeviceTag tag);
 int wb_connector_get_presence(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*detect the presence of another connector*
 
 The `wb_connector_enable_presence` function starts querying the presence sensor of the [Connector](#connector).
 The `sampling_period` argument specifies the sampling period of the presence sensor.
@@ -195,9 +198,8 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 
 ---
 
-**Name**
-
-**wb\_connector\_lock**, **wb\_connector\_unlock** - *create / destroy the physical connection between two connector nodes*
+#### `wb_connector_lock`
+#### `wb_connector_unlock`
 
 [C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [Matlab](matlab-api.md#matlab_connector) [ROS](ros-api.md)
 
@@ -208,7 +210,9 @@ void wb_connector_lock(WbDeviceTag tag);
 void wb_connector_unlock(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*create / destroy the physical connection between two connector nodes*
 
 The `wb_connector_lock` and `wb_connector_unlock` functions can be used to set or unset the [Connector](#connector)'s locking state (`isLocked` field) and eventually create or destroy the physical connection between two [Connector](#connector) nodes.
 

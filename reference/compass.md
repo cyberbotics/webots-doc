@@ -36,9 +36,10 @@ This field accepts any value in the interval (0.0, inf).
 
 ### Compass Functions
 
-**Name**
-
-**wb\_compass\_enable**, **wb\_compass\_disable**, **wb\_compass\_get\_sampling\_period**, **wb\_compass\_get\_values** - *enable, disable and read the output values of the compass device*
+#### `wb_compass_enable`
+#### `wb_compass_disable`
+#### `wb_compass_get_sampling_period`
+#### `wb_compass_get_values`
 
 [C++](cpp-api.md#cpp_compass) [Java](java-api.md#java_compass) [Python](python-api.md#python_compass) [Matlab](matlab-api.md#matlab_compass) [ROS](ros-api.md)
 
@@ -51,7 +52,9 @@ const double *wb_compass_get_values(WbDeviceTag tag);
 int wb_compass_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read the output values of the compass device*
 
 The `wb_compass_enable` function turns on the [Compass](#compass) measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

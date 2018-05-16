@@ -192,6 +192,8 @@ Then, after closing the window, the overlay will be automatically restored.
 #### `wb_camera_disable`
 #### `wb_camera_get_sampling_period`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
@@ -199,8 +201,6 @@ void wb_camera_enable(WbDeviceTag tag, int sampling_period);
 void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -221,6 +221,8 @@ The `wb_camera_get_sampling_period` function returns the period given to the `wb
 #### `wb_camera_get_max_fov`
 #### `wb_camera_set_fov`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
@@ -229,8 +231,6 @@ double wb_camera_get_min_fov(WbDeviceTag tag);
 double wb_camera_get_max_fov(WbDeviceTag tag);
 void wb_camera_set_fov(WbDeviceTag tag, double fov);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -249,6 +249,8 @@ The minimum and maximum values for the field of view are defined in this [Zoom](
 #### `wb_camera_get_min_focal_distance`
 #### `wb_camera_set_focal_distance`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
@@ -258,8 +260,6 @@ double wb_camera_get_max_focal_distance(WbDeviceTag tag);
 double wb_camera_get_min_focal_distance(WbDeviceTag tag);
 void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -273,14 +273,14 @@ Note that if the camera device has no [Focus](focus.md) node defined in its `foc
 #### `wb_camera_get_width`
 #### `wb_camera_get_height`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
 int wb_camera_get_width(WbDeviceTag tag);
 int wb_camera_get_height(WbDeviceTag tag);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -292,13 +292,13 @@ These functions return the width and height of a camera image as defined in the 
 
 #### `wb_camera_get_near`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
 double wb_camera_get_near(WbDeviceTag tag);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -314,6 +314,8 @@ This function returns the near parameter of a camera device as defined in the co
 #### `wb_camera_image_get_blue`
 #### `wb_camera_image_get_gray`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
@@ -323,8 +325,6 @@ unsigned char wb_camera_image_get_green(const unsigned char *image, int width, i
 unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y);
 unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -438,13 +438,13 @@ The dimensions of the array are the width and the length of camera's image and t
 
 #### `wb_camera_save_image`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 
@@ -474,6 +474,8 @@ It is -1 in case of failure (unable to open the specified file or unrecognized i
 #### `wb_camera_recognition_get_number_of_objects`
 #### `wb_camera_recognition_get_objects`
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ```c
 #include <webots/camera.h>
 
@@ -484,8 +486,6 @@ int wb_camera_recognition_get_sampling_period(WbDeviceTag tag);
 int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
 const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
 ```
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ##### Description
 

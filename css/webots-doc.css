@@ -329,14 +329,14 @@ body {
   padding: 4px;
   color: #ffffff;
   padding: 6px 18px;
-  background-color: #006796;
+  background-color: #2f93c1;
   margin: 2px;
 }
 .webots-doc .tag:hover {
   color: white;
   text-decoration: none;
   outline: 0;
-  background: #489fca;
+  background: #70b6f5;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,

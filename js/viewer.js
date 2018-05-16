@@ -461,6 +461,7 @@ function populateViewDiv(mdContent) {
   collapseMovies(view);
 
   applyAnchorIcons(view);
+  applyOOTags(view);
   highlightCode(view);
 
   updateSelection();
@@ -824,6 +825,15 @@ function applyAnchorIcons(view) {
       a.appendChild(span);
       el.insertBefore(a, el.firstChild);
     }
+  }
+}
+
+function applyOOTags(view) {
+  var as = view.querySelectorAll('a');
+  for (var i = 0; i < as.length; i++) {
+    var a = as[i];
+    if (['C++', 'Java', 'Python', 'ROS', 'Matlab'].includes(a.innerText))
+      a.classList.add('tag');
   }
 }
 

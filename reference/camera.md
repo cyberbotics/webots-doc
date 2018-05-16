@@ -200,11 +200,11 @@ void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *enable and disable camera updates*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 The `wb_camera_enable` function allows the user to enable a camera.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -230,11 +230,11 @@ double wb_camera_get_max_fov(WbDeviceTag tag);
 void wb_camera_set_fov(WbDeviceTag tag, double fov);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *get and set field of view for a camera*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 These functions allow the controller to get and set the value for the field of view (fov) of a camera.
 The original value for this field of view is defined in the [Camera](#camera) node, as `fieldOfView`.
@@ -259,11 +259,11 @@ double wb_camera_get_min_focal_distance(WbDeviceTag tag);
 void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *get and set the focusing parmeters*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 These functions allow the controller to get and set the focusing parameters.
 Note that if the camera device has no [Focus](focus.md) node defined in its `focus` field, it is not possible to call the `wb_camera_set_focal_distance` function and the other functions will return 0.
@@ -280,11 +280,11 @@ int wb_camera_get_width(WbDeviceTag tag);
 int wb_camera_get_height(WbDeviceTag tag);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *get the size of the camera image*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 These functions return the width and height of a camera image as defined in the corresponding [Camera](#camera) node.
 
@@ -298,11 +298,11 @@ These functions return the width and height of a camera image as defined in the 
 double wb_camera_get_near(WbDeviceTag tag);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *get the near parameter of the camera device*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 This function returns the near parameter of a camera device as defined in the corresponding [Camera](#camera) node.
 
@@ -324,11 +324,11 @@ unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, in
 unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *get the image data from a camera*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 The `wb_camera_get_image` function reads the last image grabbed by the camera.
 The image is coded as a sequence of three bytes representing the red, green and blue levels of a pixel.
@@ -444,11 +444,11 @@ The dimensions of the array are the width and the length of camera's image and t
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *save a camera image in either PNG or JPEG format*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 The `wb_camera_save_image` function allows the user to save a `tag` image which was previously obtained with the `wb_camera_get_image` function.
 The image is saved in a file in either PNG or JPEG format.
@@ -485,11 +485,11 @@ int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
 const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
 ```
 
+[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+
 ##### Description
 
 *camera recognition functions*
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 If a [Recognition](recognition.md) node is present in the `recognition` field, the camera can recognize objects in its image.
 

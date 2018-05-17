@@ -12,9 +12,9 @@ In order to get the `Joystick` instance, you should call the `getJoystick` funct
 
 ### Joystick Functions
 
-**Name**
-
-**wb\_joystick\_enable**, **wb\_joystick\_disable**, **wb\_joystick\_get\_sampling\_period** - *enable/disable joystick*
+#### `wb_joystick_enable`
+#### `wb_joystick_disable`
+#### `wb_joystick_get_sampling_period`
 
 [C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
@@ -26,7 +26,9 @@ void wb_joystick_disable();
 int wb_joystick_get_sampling_period();
 ```
 
-**Description**
+##### Description
+
+*enable/disable joystick*
 
 The `wb_joystick_enable` function allows the user to enable joystick measurements.
 When this function is called the first free joystick is paired with the controller.
@@ -40,9 +42,7 @@ The `wb_joystick_get_sampling_period` function returns the value previously pass
 
 ---
 
-**Name**
-
-**wb\_joystick\_is\_connected** - *check if a joystick is paired with this controller*
+#### `wb_joystick_is_connected`
 
 [C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
@@ -52,15 +52,15 @@ The `wb_joystick_get_sampling_period` function returns the value previously pass
 bool wb_joystick_is_connected(int ms);
 ```
 
-**Description**
+##### Description
+
+*check if a joystick is paired with this controller*
 
 Once the joystick is enabled, this function can be used to check if a free joystick has been paired with the controller or if no available joystick was found.
 
 ---
 
-**Name**
-
-**wb\_joystick\_get\_model** - *get the model of the currently connected joystick*
+#### `wb_joystick_get_model`
 
 [C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
@@ -70,7 +70,9 @@ Once the joystick is enabled, this function can be used to check if a free joyst
 const char *wb_joystick_get_model();
 ```
 
-**Description**
+##### Description
+
+*get the model of the currently connected joystick*
 
 When a joystick is connected to the controller, this function returns the model of the joystick.
 If no joystick is connected to the controller, a NULL pointer is returned instead.
@@ -78,9 +80,8 @@ The returned model of the joystick may looks like: `Logitech G29 Driving Force R
 
 ---
 
-**Name**
-
-**wb\_joystick\_get\_number\_of\_axes**, **wb\_joystick\_get\_axis\_value** - *get number of axes and axis value*
+#### `wb_joystick_get_number_of_axes`
+#### `wb_joystick_get_axis_value`
 
 [C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
@@ -91,7 +92,9 @@ int  wb_joystick_get_number_of_axes();
 int  wb_joystick_get_axis_value(int axis);
 ```
 
-**Description**
+##### Description
+
+*get number of axes and axis value*
 
 The `wb_joystick_get_number_of_axes` function returns the number of axes of the joystick.
 
@@ -99,9 +102,7 @@ The `wb_joystick_get_axis_value` function returns the current value of the axis 
 
 ---
 
-**Name**
-
-**wb\_joystick\_get\_pressed\_button** - *get the buttons pressed on the joystick*
+#### `wb_joystick_get_pressed_button`
 
 [C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
@@ -111,7 +112,9 @@ The `wb_joystick_get_axis_value` function returns the current value of the axis 
 int wb_joystick_get_pressed_button();
 ```
 
-**Description**
+##### Description
+
+*get the buttons pressed on the joystick*
 
 This function allows you to read a button pressed on the joystick paired with this controller (if any).
 The Webots window must be selected and the simulation must be running.
@@ -123,9 +126,10 @@ On macOS, only the first 12 buttons and first 2 axes of the joystick are taken i
 
 ---
 
-**Name**
-
-**wb\_joystick\_set\_constant\_force**, **wb\_joystick\_set\_constant\_force\_duration**, **wb\_joystick\_set\_auto\_centering\_gain**, **wb\_joystick\_set\_resistance\_gain** - *set the force feedback parameters*
+#### `wb_joystick_set_constant_force`
+#### `wb_joystick_set_constant_force_duration`
+#### `wb_joystick_set_auto_centering_gain`
+#### `wb_joystick_set_resistance_gain`
 
 [C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
@@ -138,7 +142,9 @@ void wb_joystick_set_auto_centering_gain(double gain);
 void wb_joystick_set_resistance_gain(double gain);
 ```
 
-**Description**
+##### Description
+
+*set the force feedback parameters*
 
 The `wb_joystick_set_constant_force` function uses the joystick force feedback to add a constant force on an axis.
 The joystick must support force feedback and the unit of `level` is hardware specific.

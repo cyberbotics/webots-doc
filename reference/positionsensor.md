@@ -22,11 +22,13 @@ This field accepts any value in the interval (0.0, inf).
 
 ### PositionSensor Functions
 
-**Name**
+#### `wb_position_sensor_enable`
+#### `wb_position_sensor_disable`
+#### `wb_position_sensor_get_sampling_period`
+#### `wb_position_sensor_get_value`
+#### `wb_position_sensor_get_type`
 
-**wb\_position\_sensor\_enable**, **wb\_position\_sensor\_disable**, **wb\_position\_sensor\_get\_sampling\_period**, **wb\_position\_sensor\_get\_value**, **wb\_position\_sensor\_get\_type** - *enable, disable and read position sensor measurement*
-
-{[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_position_sensor) [Java](java-api.md#java_position_sensor) [Python](python-api.md#python_position_sensor) [Matlab](matlab-api.md#matlab_position_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/position_sensor.h>
@@ -38,7 +40,9 @@ double wb_position_sensor_get_value(WbDeviceTag tag);
 int wb_position_sensor_get_type(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read position sensor measurement*
 
 The `wb_position_sensor_enable` function enables measurements of the joint position.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

@@ -59,11 +59,9 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 
 ### Pen Functions
 
-**Name**
+#### `wb_pen_write`
 
-**wb\_pen\_write** - *enable or disable pen writing*
-
-{[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [Matlab](matlab-api.md#matlab_pen) [ROS](ros-api.md)
 
 ```c
 #include <webots/pen.h>
@@ -71,18 +69,18 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 void wb_pen_write(WbDeviceTag tag, bool write);
 ```
 
-**Description**
+##### Description
+
+*enable or disable pen writing*
 
 The `wb_pen_write` function allows the user to switch a pen device on or off to disable or enable writing.
 If the `write` parameter is *true*, the specified `tag` device will write; if `write` is *false*, it won't.
 
 ---
 
-**Name**
+#### `wb_pen_set_ink_color`
 
-**wb\_pen\_set\_ink\_color** - *change the color of a pen's ink*
-
-{[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [Matlab](matlab-api.md#matlab_pen) [ROS](ros-api.md)
 
 ```c
 #include <webots/pen.h>
@@ -90,13 +88,15 @@ If the `write` parameter is *true*, the specified `tag` device will write; if `w
 void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density);
 ```
 
-**Description**
+##### Description
+
+*change the color of a pen's ink*
 
 The `wb_pen_set_ink_color` function changes the current ink color of the specified `tag` device.
 The `color` is a 32 bit integer value which defines the new color of the ink in the 0xRRGGBB hexadecimal format (i.e., 0x000000 is black, 0xFF0000 is red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is gray 0xFFFFFF is white, etc.).
 The `density` parameter defines the ink density, with 0 meaning transparent ink and 1 meaning completely opaque ink.
 
-**Example**
+##### Example
 
 ```c
 wb_pen_set_ink_color(pen,0xF01010,0.9);

@@ -46,11 +46,13 @@ This field accepts any value in the interval (0.0, inf).
 
 ### GPS Functions
 
-**Name**
+#### `wb_gps_enable`
+#### `wb_gps_disable`
+#### `wb_gps_get_sampling_period`
+#### `wb_gps_get_values`
+#### `wb_gps_get_speed`
 
-**wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values**, **wb\_gps\_get\_speed** - *enable, disable and read the GPS measurements*
-
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_gps) [Java](java-api.md#java_gps) [Python](python-api.md#python_gps) [Matlab](matlab-api.md#matlab_gps) [ROS](ros-api.md)
 
 ```c
 #include <webots/gps.h>
@@ -62,7 +64,9 @@ const double *wb_gps_get_values(WbDeviceTag tag);
 const double wb_gps_get_speed(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read the GPS measurements*
 
 The `wb_gps_enable` function allows the user to enable GPS measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -90,11 +94,9 @@ If these values are needed for a longer period they must be copied.
 
 ---
 
-**Name**
+#### `wb_gps_get_coordinate_system`
 
-**wb\_gps\_get\_coordinate\_system** - *get the gps coordinate system*
-
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_gps) [Java](java-api.md#java_gps) [Python](python-api.md#python_gps) [Matlab](matlab-api.md#matlab_gps) [ROS](ros-api.md)
 
 ```c
 #include <webots/gps.h>
@@ -102,18 +104,18 @@ If these values are needed for a longer period they must be copied.
 int wb_gps_get_coordinate_system(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the gps coordinate system*
 
 This function allows the user to retrieve the coordinate system type defined by the `gpsCoordinateSystem` field of the [WorldInfo](worldinfo.md) node.
 If the value of the `gpsCoordinateSystem` field is "local" then this function returns WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 
 ---
 
-**Name**
+#### `wb_gps_convert_to_degrees_minutes_seconds`
 
-**wb\_gps\_convert\_to\_degrees\_minutes\_seconds** - *convert decimal degrees to degrees minutes seconds*
-
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_gps) [Java](java-api.md#java_gps) [Python](python-api.md#python_gps) [Matlab](matlab-api.md#matlab_gps) [ROS](ros-api.md)
 
 ```c
 #include <webots/gps.h>
@@ -121,7 +123,9 @@ If the value of the `gpsCoordinateSystem` field is "local" then this function re
 const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees);
 ```
 
-**Description**
+##### Description
+
+*convert decimal degrees to degrees minutes seconds*
 
 This function converts a decimal degrees coordinate into a string representing the coordinate in the degrees minutes seconds format.
 

@@ -219,11 +219,24 @@ If a more specific or accurate model is needed, it can be implemented in the rob
 
 ### Motor Functions
 
-**Name**
+#### `wb_motor_set_position`
+#### `wb_motor_set_velocity`
+#### `wb_motor_set_acceleration`
+#### `wb_motor_set_available_force`
+#### `wb_motor_set_available_torque`
+#### `wb_motor_set_control_pid`
+#### `wb_motor_get_target_position`
+#### `wb_motor_get_min_position`
+#### `wb_motor_get_max_position`
+#### `wb_motor_get_velocity`
+#### `wb_motor_get_max_velocty`
+#### `wb_motor_get_acceleration`
+#### `wb_motor_get_available_force`
+#### `wb_motor_get_max_force`
+#### `wb_motor_get_available_torque`
+#### `wb_motor_get_max_torque`
 
-**wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
-
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -246,7 +259,9 @@ double wb_motor_get_available_torque(WbDeviceTag tag);
 double wb_motor_get_max_torque(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*change the parameters of the PID-controller*
 
 The `wb_motor_set_position` function specifies a new target position that the PID-controller will attempt to reach using the current velocity, acceleration and motor torque/force parameters.
 This function returns immediately (asynchronous) while the actual motion is carried out in the background by Webots.
@@ -322,11 +337,16 @@ The `wb_motor_get_[min|max]_position` functions allow to get the values of respe
 
 ---
 
-**Name**
+#### `wb_motor_enable_force_feedback`
+#### `wb_motor_get_force_feedback`
+#### `wb_motor_get_force_feedback_sampling_period`
+#### `wb_motor_disable_force_feedback`
+#### `wb_motor_enable_torque_feedback`
+#### `wb_motor_get_torque_feedback`
+#### `wb_motor_get_torque_feedback_sampling_period`
+#### `wb_motor_disable_torque_feedback`
 
-**wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
-
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -341,7 +361,9 @@ int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
 double wb_motor_get_torque_feedback(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the motor force or torque currently used by a motor*
 
 The `wb_motor_enable_force_feedback` (resp. `wb_motor_enable_torque_feedback`) function activates force (resp. torque) feedback measurements for the specified motor.
 The result must be retrieved with the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function.
@@ -376,11 +398,10 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 
 ---
 
-**Name**
+#### `wb_motor_set_force`
+#### `wb_motor_set_torque`
 
-**wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
-
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -389,7 +410,9 @@ void wb_motor_set_force(WbDeviceTag tag, double force);
 void wb_motor_set_torque(WbDeviceTag tag, double torque);
 ```
 
-**Description**
+##### Description
+
+*direct force or torque control*
 
 As an alternative to the PID-controller, the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function allows the user to directly specify the amount of force (resp. torque) that must be applied by a motor.
 This function bypasses the PID-controller and ODE joint motors; it adds the force to the physics simulation directly.
@@ -410,11 +433,9 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 
 ---
 
-**Name**
+#### `wb_motor_get_type`
 
-**wb\_motor\_get\_type** - *get the motor type*
-
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -422,7 +443,9 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 int wb_motor_get_type(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the motor type*
 
 This function allows the user to retrieve the motor type defined by the `type` field.
 If the value of the `type` field is "linear", this function returns WB\_LINEAR, and otherwise it returns WB\_ANGULAR.

@@ -168,11 +168,12 @@ The ground texture must be placed in a [Plane](plane.md).
 
 ### DistanceSensor Functions
 
-**Name**
+#### `wb_distance_sensor_enable`
+#### `wb_distance_sensor_disable`
+#### `wb_distance_sensor_get_sampling_period`
+#### `wb_distance_sensor_get_value`
 
-**wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
-
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -183,7 +184,9 @@ int wb_distance_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_distance_sensor_get_value(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read distance sensor measurements*
 
 The `wb_distance_sensor_enable` function allows the user to enable distance sensor measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -199,11 +202,11 @@ Hence, the range of the return value is defined by this lookup table.
 
 ---
 
-**Name**
+#### `wb_distance_sensor_get_max_value`
+#### `wb_distance_sensor_get_min_value`
+#### `wb_distance_sensor_get_aperture`
 
-**wb\_distance\_sensor\_get\_max\_value**, **wb\_distance\_sensor\_get\_min\_value**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum value, minimum value and aperture*
-
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -213,7 +216,9 @@ double wb_distance_sensor_get_min_value(WbDeviceTag tag);
 double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*Get the maximum value, minimum value and aperture*
 
 The `wb_distance_sensor_get_max_value` function returns the maximum value which can be returned by the distance sensor.
 This value is the maximum of the second column of the `DistanceSensor.lookupTable` field.
@@ -225,11 +230,9 @@ The `wb_distance_sensor_get_aperture` function returns the aperture of the dista
 
 ---
 
-**Name**
+#### `wb_distance_sensor_get_type`
 
-**wb\_distance\_sensor\_get\_type** - *Return the sensor type*
-
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -237,7 +240,9 @@ The `wb_distance_sensor_get_aperture` function returns the aperture of the dista
 int wb_distance_sensor_get_type(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*Return the sensor type*
 
 This function allows the user to retrieve the distance sensor type defined by the `type` field.
 If the value of the `type` field is "laser" then this function returns WB\_DISTANCE\_SENSOR\_LASER, if it is "infra-red" then it returns WB\_DISTANCE\_SENSOR\_INFRA\_RED, if it is "sonar" then it returns WB\_DISTANCE\_SENSOR\_SONAR and otherwise it returns WB\_DISTANCE\_SENSOR\_GENERIC.

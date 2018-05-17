@@ -13,7 +13,7 @@ function wbSlugify(obj) {
   return text
     .trim()
     .toLowerCase()
-    .replace(/[\s.]/g, '-')
+    .replace(/[\s.:]/g, '-')
     .replace(/[-]+/g, '-')
     .replace(/^-*/, '')
     .replace(/-*$/, '')
@@ -117,12 +117,11 @@ showdown.extension('wbAPI', function() {
         return text;
       }
     },
-    { // '\*\*wb.*\*\*' to anchor
+    { // '#### `.*`' to h[4|5] + "api-title" class
       type: 'lang',
       filter: function(text, converter, options) {
-        text = text.replace(/\*\*(wb\\_[^*]+?)\*\*/gi, function(match, content) {
-          var protectedContent = content.replace(/\\_/g, '_');
-          return '<strong name="' + protectedContent + '">' + content + '</strong>';
+        text = text.replace(/(#{4,5}) `([^`\n]+?)`\n/gi, function(match, hashes, content) {
+          return '<h' + hashes.length + ' name="' + content + '" class="api-title">' + content + '</h' + hashes.length + '>';
         });
         return text;
       }
@@ -137,8 +136,8 @@ showdown.extension('wbAnchors', function() {
   return [
     {
       type: 'html',
-      regex: /<h(\d) id="([^]+?)">([^]+?)<\/h(\d)>/gi,
-      replace: function(match, level1, showdownId, content, level2) {
+      regex: /<h(\d)\s([^>]*)>([^]+?)<\/h(\d)>/gi,
+      replace: function(match, level1, args, content, level2) {
         if (level1 !== level2) {
           console.error('wbAnchors: level mismatch');
           return '';
@@ -148,7 +147,7 @@ showdown.extension('wbAnchors', function() {
         tmpDiv.innerHTML = content;
         var rawContent = tmpDiv.textContent || tmpDiv.innerText || '';
 
-        return '<h' + level1 + ' name="' + wbSlugify(rawContent) + '">' + content + '</h' + level1 + '>';
+        return '<h' + level1 + ' name="' + wbSlugify(rawContent) + '" ' + args + '>' + content + '</h' + level1 + '>';
       }
     }
   ];

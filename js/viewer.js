@@ -461,6 +461,7 @@ function populateViewDiv(mdContent) {
   collapseMovies(view);
 
   applyAnchorIcons(view);
+  applyOOTags(view);
   highlightCode(view);
 
   updateSelection();
@@ -801,7 +802,7 @@ function renderGraphs() {
 
 function applyAnchorIcons(view) {
   var elements = [];
-  var tags = ['figcaption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  var tags = ['figcaption', 'h1', 'h2', 'h3', 'h4'];
   var i;
   for (i = 0; i < tags.length; i++) {
     var array = Array.prototype.slice.call(view.querySelectorAll(tags[i]));
@@ -823,6 +824,18 @@ function applyAnchorIcons(view) {
       a.classList.add('anchor-link');
       a.appendChild(span);
       el.insertBefore(a, el.firstChild);
+    }
+  }
+}
+
+function applyOOTags(view) {
+  var as = view.querySelectorAll('a');
+  for (var i = 0; i < as.length; i++) {
+    var a = as[i];
+    if (['C++', 'Java', 'Python', 'ROS', 'Matlab'].includes(a.innerText)) {
+      a.classList.add('tag');
+      if (a.parentNode.tagName.toLowerCase() === 'p' && a.parentNode.classList.length === 0)
+        a.parentNode.classList.add('tag-container');
     }
   }
 }

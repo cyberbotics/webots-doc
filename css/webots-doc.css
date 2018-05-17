@@ -262,10 +262,15 @@ body {
 .webots-doc b, .webots-doc strong {
   color: #333;
 }
+.webots-doc hr {
+  margin: 40px 0px;
+}
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3,
-.webots-doc h4 {
+.webots-doc h4,
+.webots-doc h5,
+.webots-doc h6 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -287,10 +292,16 @@ body {
 .webots-doc h4 {
   font-size: 18px;
 }
+.webots-doc h5 {
+  font-size: 16px;
+}
+.webots-doc h6 {
+  font-size: 14px;
+}
 .webots-doc .release-tag {
   display: inline;
   font-size: 14px;
-  color: black;
+  color: #ccc;
 }
 .webots-doc .anchor-link-image {
   padding-left: 20px;
@@ -307,6 +318,30 @@ body {
   position: relative;
   left: -20px;
   padding: 9px 0px;
+}
+.webots-doc .api-title {
+  margin: 0px 10px;
+  padding: 0px;
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+}
+.webots-doc .tag-container {
+  text-align: right;
+  margin-bottom: -3px
+}
+.webots-doc .tag {
+  padding: 4px;
+  color: #ffffff;
+  padding: 6px 18px;
+  background-color: #2f93c1;
+  margin: 2px;
+}
+.webots-doc .tag:hover {
+  color: white;
+  text-decoration: none;
+  outline: 0;
+  background: #70b6f5;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,

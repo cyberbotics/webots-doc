@@ -1,10 +1,11 @@
 ## Motion
 
-**Name**
+### Motion Functions
 
-**wbu\_motion\_new**, **wbu\_motion\_delete** - *obtaining and releasing a motion file handle*
+#### `wbu_motion_new`
+#### `wbu_motion_delete`
 
-{[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
+[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [Matlab](matlab-api.md#matlab_motion)
 
 ```c
 #include <webots/utils/motion.h>
@@ -13,7 +14,9 @@ WbMotionRef wbu_motion_new(const char *filename);
 void wbu_motion_delete(WbMotionRef motion);
 ```
 
-**Description**
+##### Description
+
+*obtaining and releasing a motion file handle*
 
 The `wbu_motion_new` function allows to read a motion file specified by the `filename` parameter.
 The `filename` can be specified either with an absolute path or a path relative to the controller directory.
@@ -37,17 +40,18 @@ if (! walk->isValid()) {
 }
 ```
 
-**See also**
+##### See Also
 
 [wbu\_motion\_play](#wbu_motion_play)
 
 ---
 
-**Name**
+#### `wbu_motion_play`
+#### `wbu_motion_stop`
+#### `wbu_motion_set_loop`
+#### `wbu_motion_set_reverse`
 
-**wbu\_motion\_play**, **wbu\_motion\_stop**, **wbu\_motion\_set\_loop**, **wbu\_motion\_set\_reverse** - *Controlling motion files playback*
-
-{[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
+[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [Matlab](matlab-api.md#matlab_motion)
 
 ```c
 #include <webots/utils/motion.h>
@@ -58,7 +62,9 @@ void wbu_motion_set_loop(WbMotionRef motion, bool loop);
 void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse);
 ```
 
-**Description**
+##### Description
+
+*Controlling motion files playback*
 
 The `wbu_motion_play` function starts the playback of the specified motion.
 This function registers the motion to the playback system, but the effective playback happens in the background and is activated as a side effect of calling the `wb_robot_step` function.
@@ -95,17 +101,18 @@ The *reverse mode* can be changed while the motion is playing, in this case, the
 
 By default, the *loop mode* and *reverse mode* of motions are `false`.
 
-**See also**
+##### See Also
 
 [wbu\_motion\_new](#wbu_motion_new)
 
 ---
 
-**Name**
+#### `wbu_motion_is_over`
+#### `wbu_motion_get_duration`
+#### `wbu_motion_get_time`
+#### `wbu_motion_set_time`
 
-**wbu\_motion\_is\_over**, **wbu\_motion\_get\_duration**, **wbu\_motion\_get\_time**, **wbu\_motion\_set\_time** - *controlling the playback position*
-
-{[C++](cpp-api.md#cpp_motion)}, {[Java](java-api.md#java_motion)}, {[Python](python-api.md#python_motion)}, {[Matlab](matlab-api.md#matlab_motion)}
+[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [Matlab](matlab-api.md#matlab_motion)
 
 ```c
 #include <webots/utils/motion.h>
@@ -116,7 +123,9 @@ int wbu_motion_get_time(WbMotionRef motion, bool loop);
 void wbu_motion_set_time(WbMotionRefmotion, int t);
 ```
 
-**Description**
+##### Description
+
+*controlling the playback position*
 
 The `wbu_motion_is_over` function returns `true` when the playback position has reached the end of the motion file.
 That is when the last pose has been sent to the [Motor](motor.md) nodes using the `wb_motor_set_position` function.
@@ -135,6 +144,6 @@ Note that, the time position can be changed whether the motion is playing or sto
 The minimum value is 0 (beginning of the motion), and the maximum value is the value returned by the `wbu_motion_get_duration` function (end of the motion).
 The time position is expressed in milliseconds.
 
-**See also**
+##### See Also
 
 [wbu\_motion\_play](#wbu_motion_play)

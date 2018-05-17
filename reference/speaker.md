@@ -14,11 +14,9 @@ It can be used to play sounds and perform text-to-speech from the controller API
 
 ### Speaker Functions
 
-**Name**
+#### `wb_speaker_play_sound`
 
-**wb\_speaker\_play\_sound** - *plays a sound*
-
-{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [Matlab](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
 
 ```c
 #include <webots/speaker.h>
@@ -26,7 +24,9 @@ It can be used to play sounds and perform text-to-speech from the controller API
 void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double pitch, double balance, bool loop);
 ```
 
-**Description**
+##### Description
+
+*plays a sound*
 
 This function allows the user to play a sound file.
 Currently only wave files are supported.
@@ -54,11 +54,9 @@ If not found there and if the robot is a PROTO, it will be searched relatively t
 
 ---
 
-**Name**
+#### `wb_speaker_stop`
 
-**wb\_speaker\_stop** - *stops the speaker*
-
-{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [Matlab](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
 
 ```c
 #include <webots/speaker.h>
@@ -66,7 +64,9 @@ If not found there and if the robot is a PROTO, it will be searched relatively t
 void wb_speaker_stop(WbDeviceTag tag, const char *sound);
 ```
 
-**Description**
+##### Description
+
+*stops the speaker*
 
 This function stops a specific sound.
 The `sound` argument is the path to an audio file currently playing in the speaker.
@@ -76,11 +76,13 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 
 ---
 
-**Name**
+#### `wb_speaker_set_engine`
+#### `wb_speaker_set_language`
+#### `wb_speaker_get_engine`
+#### `wb_speaker_get_language`
+#### `wb_speaker_speak`
 
-**wb\_speaker\_set\_engine**, **wb\_speaker\_set\_language**, **wb\_speaker\_get\_engine**, **wb\_speaker\_get\_language**, **wb\_speaker\_speak** - *perform text-to-speech*
-
-{[C++](cpp-api.md#cpp_speaker)}, {[Java](java-api.md#java_speaker)}, {[Python](python-api.md#python_speaker)}, {[Matlab](matlab-api.md#matlab_speaker)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [Matlab](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
 
 ```c
 #include <webots/speaker.h>
@@ -92,7 +94,9 @@ const char *wb_speaker_get_language(WbDeviceTag tag);
 void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
 ```
 
-**Description**
+##### Description
+
+*perform text-to-speech*
 
 The `wb_speaker_set_engine` function allows the user to set the text-to-speech engine that is going to be used by a speaker.
 The `engine` parameter should be one of the following values:

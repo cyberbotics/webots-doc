@@ -130,11 +130,11 @@ The power returned by the target is computed using the following formulas:
 
 ### Radar Functions
 
-**Name**
+#### `wb_radar_enable`
+#### `wb_radar_disable`
+#### `wb_radar_get_sampling_period`
 
-**wb\_radar\_enable**, **wb\_radar\_disable**, **wb\_radar\_get\_sampling\_period** - *enable and disable radar updates*
-
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_radar) [Java](java-api.md#java_radar) [Python](python-api.md#python_radar) [Matlab](matlab-api.md#matlab_radar) [ROS](ros-api.md)
 
 ```c
 #include <webots/radar.h>
@@ -144,7 +144,9 @@ void wb_radar_disable(WbDeviceTag tag);
 int wb_radar_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable and disable radar updates*
 
 The `wb_radar_enable` function allows the user to enable radar updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -156,11 +158,10 @@ The `wb_radar_get_sampling_period` function returns the period given into the `w
 
 ---
 
-**Name**
+#### `wb_radar_get_min_range`
+#### `wb_radar_get_max_range`
 
-**wb\_radar\_get\_min\_range**, **wb\_radar\_get\_max\_range** - *get the minimum and maximum range of the radar*
-
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_radar) [Java](java-api.md#java_radar) [Python](python-api.md#python_radar) [Matlab](matlab-api.md#matlab_radar) [ROS](ros-api.md)
 
 ```c
 #include <webots/radar.h>
@@ -169,17 +170,18 @@ double wb_radar_get_min_range(WbDeviceTag tag);
 double wb_radar_get_max_range(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the minimum and maximum range of the radar*
 
 These functions allow the controller to get the value of the minimum and maximum range of the radar.
 
 ---
 
-**Name**
+#### `wb_radar_get_horizontal_fov`
+#### `wb_radar_get_vertical_fov`
 
-**wb\_radar\_get\_horizontal\_fov**, **wb\_radar\_get\_vertical\_fov** - *get the horizontal and vertical field of view of the radar*
-
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_radar) [Java](java-api.md#java_radar) [Python](python-api.md#python_radar) [Matlab](matlab-api.md#matlab_radar) [ROS](ros-api.md)
 
 ```c
 #include <webots/radar.h>
@@ -188,17 +190,17 @@ double wb_radar_get_horizontal_fov(WbDeviceTag tag);
 double wb_radar_get_vertical_fov(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the horizontal and vertical field of view of the radar*
 
 These functions allow the controller to get the value of the horizontal and vertical field of view of the radar.
 
 ---
 
-**Name**
+#### `wb_radar_get_number_of_targets`
 
-**wb\_radar\_get\_number\_of\_targets** - *get the current number of targets*
-
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_radar) [Java](java-api.md#java_radar) [Python](python-api.md#python_radar) [Matlab](matlab-api.md#matlab_radar) [ROS](ros-api.md)
 
 ```c
 #include <webots/radar.h>
@@ -206,17 +208,17 @@ These functions allow the controller to get the value of the horizontal and vert
 int wb_radar_get_number_of_targets(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the current number of targets*
 
 This function allows the controller to get the number of targets currently seen by the radar.
 
 ---
 
-**Name**
+#### `wb_radar_get_targets`
 
-**wb\_radar\_get\_targets** - *get the targets array*
-
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_radar) [Java](java-api.md#java_radar) [Python](python-api.md#python_radar) [Matlab](matlab-api.md#matlab_radar) [ROS](ros-api.md)
 
 ```c
 #include <webots/radar.h>
@@ -224,7 +226,9 @@ This function allows the controller to get the number of targets currently seen 
 const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the targets array*
 
 This function returns the targets array.
 The size of the array can be get using the function `wb_radar_get_number_of_targets`.

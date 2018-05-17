@@ -124,11 +124,9 @@ Unlike the "physics" mode, in the "kinematics" mode the gravity and other forces
 
 ### DifferentialWheels Functions
 
-**Name**
+#### `wb_differential_wheels_set_speed`
 
-**wb\_differential\_wheels\_set\_speed** - *control the speed of the robot*
-
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -138,7 +136,9 @@ double wb_differential_wheels_get_left_speed();
 double wb_differential_wheels_get_right_speed();
 ```
 
-**Description**
+##### Description
+
+*control the speed of the robot*
 
 The `wb_differential_wheels_set_speed` function allows the user to specify a speed for the [DifferentialWheels](#differentialwheels) robot.
 This speed will be sent to the motors of the robot at the beginning of the next simulation step.
@@ -152,11 +152,11 @@ The `wb_differential_wheels_get_left_speed` and `wb_differential_wheels_get_righ
 
 ---
 
-**Name**
+#### `wb_differential_wheels_enable_encoders`
+#### `wb_differential_wheels_disable_encoders`
+#### `wb_differential_wheels_get_encoders_sampling_period`
 
-**wb\_differential\_wheels\_enable\_encoders**, **wb\_differential\_wheels\_disable\_encoders**, **wb\_differential\_wheels\_get\_encoders\_sampling\_period** - *enable or disable the incremental encoders of the robot wheels*
-
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -166,7 +166,9 @@ void wb_differential_wheels_disable_encoders();
 int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable or disable the incremental encoders of the robot wheels*
 
 These functions allow the user to enable or disable the incremental wheel encoders for both wheels of the [DifferentialWheels](#differentialwheels) robot.
 The `sampling_period` argument defines the sampling period of the encoder and is expressed in milliseconds.
@@ -183,11 +185,11 @@ Note that the first encoders values will be available only after the first sampl
 
 ---
 
-**Name**
+#### `wb_differential_wheels_get_left_encoder`
+#### `wb_differential_wheels_get_right_encoder`
+#### `wb_differential_wheels_set_encoders`
 
-**wb\_differential\_wheels\_get\_left\_encoder**, **wb\_differential\_wheels\_get\_right\_encoder**, **wb\_differential\_wheels\_set\_encoders** - *read or set the encoders of the robot wheels*
-
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -197,7 +199,9 @@ double wb_differential_wheels_get_right_encoder();
 void wb_differential_wheels_set_encoders(double left, double right);
 ```
 
-**Description**
+##### Description
+
+*read or set the encoders of the robot wheels*
 
 These functions are used to read or set the values of the left and right encoders.
 The encoders must be enabled with the `wb_differential_wheels_enable_encoders` function, so that the functions can read valid data.
@@ -206,11 +210,9 @@ Setting the encoders' values will not make the wheels rotate to reach the specif
 
 ---
 
-**Name**
+#### `wb_differential_wheels_get_max_speed`
 
-**wb\_differential\_wheels\_get\_max\_speed** - *get the value of the maxSpeed field*
-
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -218,17 +220,17 @@ Setting the encoders' values will not make the wheels rotate to reach the specif
 double wb_differential_wheels_get_max_speed();
 ```
 
-**Description**
+##### Description
+
+*get the value of the maxSpeed field*
 
 The `wb_differential_wheels_get_max_speed` function allows the user to get the value of the `maxSpeed` field of the [DifferentialWheels](#differentialwheels) node.
 
 ---
 
-**Name**
+#### `wb_differential_wheels_get_speed_unit`
 
-**wb\_differential\_wheels\_get\_speed\_unit** - *get the value of the speedUnit field*
-
-{[C++](cpp-api.md#cpp_differential_wheels)}, {[Java](java-api.md#java_differential_wheels)}, {[Python](python-api.md#python_differential_wheels)}, {[Matlab](matlab-api.md#matlab_differential_wheels)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -236,6 +238,8 @@ The `wb_differential_wheels_get_max_speed` function allows the user to get the v
 double wb_differential_wheels_get_speed_unit();
 ```
 
-**Description**
+##### Description
+
+*get the value of the speedUnit field*
 
 The `wb_differential_wheels_get_speed_unit` function allows the user to get the value of the `speedUnit` field of the [DifferentialWheels](#differentialwheels) node.

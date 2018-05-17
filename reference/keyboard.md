@@ -8,11 +8,12 @@ In order to get the `Keyboard` instance, you should call the `getKeyboard` funct
 
 ### Keyboard Functions
 
-**Name**
+#### `wb_keyboard_enable`
+#### `wb_keyboard_disable`
+#### `wb_keyboard_get_sampling_period`
+#### `wb_keyboard_get_key`
 
-**wb\_keyboard\_enable**, **wb\_keyboard\_disable**, **wb\_keyboard\_get\_sampling\_period**, **wb\_keyboard\_get\_key** - *keyboard reading function*
-
-{[C++](cpp-api.md#cpp_keyboard)}, {[Java](java-api.md#java_keyboard)}, {[Python](python-api.md#python_keyboard)}, {[Matlab](matlab-api.md#matlab_keyboard)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_keyboard) [Java](java-api.md#java_keyboard) [Python](python-api.md#python_keyboard) [Matlab](matlab-api.md#matlab_keyboard) [ROS](ros-api.md)
 
 ```c
 #include <webots/keyboard.h>
@@ -23,7 +24,9 @@ int wb_keyboard_get_sampling_period();
 int wb_keyboard_get_key();
 ```
 
-**Description**
+##### Description
+
+*keyboard reading function*
 
 These functions allow you to read a key pressed on the computer keyboard from a controller program while the 3D window of Webots is selected and the simulation is running.
 First, it is necessary to enable keyboard input by calling the `wb_keyboard_enable` function.

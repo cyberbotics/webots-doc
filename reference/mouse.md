@@ -35,11 +35,12 @@ These values may be `NaN` if not applicable, for example when the mouse is point
 
 ### Mouse Functions
 
-**Name**
+#### `wb_mouse_enable`
+#### `wb_mouse_disable`
+#### `wb_mouse_get_sampling_period`
+#### `wb_mouse_get_key`
 
-**wb\_mouse\_enable**, **wb\_mouse\_disable**, **wb\_mouse\_get\_sampling\_period**, **wb\_mouse\_get\_key** - *mouse reading function*
-
-{[C++](cpp-api.md#cpp_mouse)}, {[Java](java-api.md#java_mouse)}, {[Python](python-api.md#python_mouse)}, {[Matlab](matlab-api.md#matlab_mouse)}, {[ROS](ros-api.md)}
+[C++](cpp-api.md#cpp_mouse) [Java](java-api.md#java_mouse) [Python](python-api.md#python_mouse) [Matlab](matlab-api.md#matlab_mouse) [ROS](ros-api.md)
 
 ```c
 #include <webots/mouse.h>
@@ -50,7 +51,9 @@ int wb_mouse_get_sampling_period();
 WbMouseState wb_mouse_get_state();
 ```
 
-**Description**
+##### Description
+
+*mouse reading function*
 
 The state of the computer mouse can be read from a controller program while the simulation is running by using the above functions.
 Firstly it is necessary to enable mouse input by calling the `wb_mouse_enable` function.

@@ -188,11 +188,11 @@ Then, after closing the window, the overlay will be automatically restored.
 
 ### Camera Functions
 
+{{#c}}
+
 #### `wb_camera_enable`
 #### `wb_camera_disable`
 #### `wb_camera_get_sampling_period`
-
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [Matlab](matlab-api.md#matlab_camera) [ROS](ros-api.md)
 
 ```c
 #include <webots/camera.h>
@@ -201,6 +201,26 @@ void wb_camera_enable(WbDeviceTag tag, int sampling_period);
 void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
+
+{{/c}}
+
+{{#cpp}}
+
+#### `Camera::enable`
+#### `Camera::disable`
+#### `Camera::getSamplingPeriod`
+
+```c
+#include <webots/Camera.hpp>
+
+class Camera : public Device {
+  void enable(WbDeviceTag tag, int sampling_period);
+  void disable(WbDeviceTag tag);
+  int getSamplingPeriod(WbDeviceTag tag);
+}
+```
+
+{{/cpp}}
 
 ##### Description
 

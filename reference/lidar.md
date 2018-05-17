@@ -135,9 +135,9 @@ The same comment applies to the horizontal resolution, the internal depth camera
 
 ### Lidar Functions
 
-**Name**
-
-**wb\_lidar\_enable**, **wb\_lidar\_disable**, **wb\_lidar\_get\_sampling\_period** - *enable and disable lidar updates*
+#### `wb_lidar_enable`
+#### `wb_lidar_disable`
+#### `wb_lidar_get_sampling_period`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -149,7 +149,9 @@ void wb_lidar_disable(WbDeviceTag tag);
 int wb_lidar_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable and disable lidar updates*
 
 The `wb_lidar_enable` function allows the user to enable lidar updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -161,9 +163,9 @@ The `wb_lidar_get_sampling_period` function returns the period given into the `w
 
 ---
 
-**Name**
-
-**wb\_lidar\_enable\_point\_cloud**, **wb\_lidar\_disable\_point\_cloud**, **wb\_lidar\_is\_point\_cloud\_enabled** - *enable and disable lidar point cloud mode*
+#### `wb_lidar_enable_point_cloud`
+#### `wb_lidar_disable_point_cloud`
+#### `wb_lidar_is_point_cloud_enabled`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -175,7 +177,9 @@ void wb_lidar_disable_point_cloud(WbDeviceTag tag);
 bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable and disable lidar point cloud mode*
 
 The `wb_lidar_enable_point_cloud` function allows the user to enable the lidar point cloud update, the point cloud array is then updated with the same sampling period as the range image.
 
@@ -188,9 +192,8 @@ First the lidar should be enabled using the `wb_lidar_enable` function.
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_range\_image**, **wb\_lidar\_get\_layer\_range\_image** - *get the range image and range image associate with a specific layer*
+#### `wb_lidar_get_range_image`
+#### `wb_lidar_get_layer_range_image`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -201,7 +204,9 @@ const float *wb_lidar_get_range_image(WbDeviceTag tag);
 const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 ```
 
-**Description**
+##### Description
+
+*get the range image and range image associate with a specific layer*
 
 The `wb_lidar_get_range_image` function allows the user to read the contents of the last range image grabbed by a lidar.
 The range image is computed using the depth buffer produced by the OpenGL rendering.
@@ -225,9 +230,9 @@ Their content are identical but their handling is of course different.
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_point\_cloud**, **wb\_lidar\_get\_layer\_point\_cloud**, **wb\_lidar\_get\_number\_of\_points** - *get the points array, points array associate with a specific layer and total number of point*
+#### `wb_lidar_get_point_cloud`
+#### `wb_lidar_get_layer_point_cloud`
+#### `wb_lidar_get_number_of_points`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -239,7 +244,9 @@ const WbLidarPoint *wb_lidar_get_layer_point_cloud(WbDeviceTag tag, int layer);
 int wb_lidar_get_number_of_points(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the points array, points array associate with a specific layer and total number of point*
 
 The `wb_lidar_get_point_cloud` function returns the pointer to the point cloud array, each point consists of a [`WbLidarPoint`](#wblidarpoint).
 The memory chunk returned by this function shall not be freed, as it is managed by the lidar internally.
@@ -257,9 +264,8 @@ The `wb_lidar_get_number_of_points` function returns the total number of points 
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_frequency**, **wb\_lidar\_set\_frequency** - *set and get the rotating frequency*
+#### `wb_lidar_get_frequency`
+#### `wb_lidar_set_frequency`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -270,7 +276,9 @@ double wb_lidar_get_frequency(WbDeviceTag tag);
 void wb_lidar_set_frequency(WbDeviceTag tag, double frequency);
 ```
 
-**Description**
+##### Description
+
+*set and get the rotating frequency*
 
 The `wb_lidar_get_frequency` function returns the current rotating frequency of the lidar head (in case of rotating lidar).
 
@@ -279,9 +287,8 @@ The `frequency` argument should be in the range [minFrequency; maxFrequency].
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_horizontal\_resolution**, **wb\_lidar\_get\_number\_of\_layers** - *get the horizontal resolution and layer number*
+#### `wb_lidar_get_horizontal_resolution`
+#### `wb_lidar_get_number_of_layers`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -292,7 +299,9 @@ int wb_lidar_get_horizontal_resolution(WbDeviceTag tag);
 int wb_lidar_get_number_of_layers(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the horizontal resolution and layer number*
 
 The `wb_lidar_get_horizontal_resolution` function returns the horizontal resolution of the lidar.
 
@@ -300,9 +309,8 @@ The `wb_lidar_get_number_of_layers` function returns the number of layers of the
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_min\_frequency**, **wb\_lidar\_get\_max\_frequency** - *get the minimum and maximum rotating frequency*
+#### `wb_lidar_get_min_frequency`
+#### `wb_lidar_get_max_frequency`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -313,15 +321,16 @@ double wb_lidar_get_min_frequency(WbDeviceTag tag);
 double wb_lidar_get_max_frequency(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the minimum and maximum rotating frequency*
 
 The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions return respectively the minimum and maximum allowed rotating frequency of the head of the lidar (in case of rotating lidar).
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_fov**, **wb\_lidar\_get\_vertical\_fov** - *get the horizontal and vertical field of view of the lidar*
+#### `wb_lidar_get_fov`
+#### `wb_lidar_get_vertical_fov`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -332,7 +341,9 @@ double wb_lidar_get_fov(WbDeviceTag tag);
 int wb_lidar_get_vertical_fov(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the horizontal and vertical field of view of the lidar*
 
 The `wb_lidar_get_fov` function returns the horizontal field of view of the lidar.
 
@@ -340,9 +351,8 @@ The `wb_lidar_get_vertical_fov` function returns the vertical field of view of t
 
 ---
 
-**Name**
-
-**wb\_lidar\_get\_min\_range**, **wb\_lidar\_get\_max\_range** - *get the minimum and maximum range*
+#### `wb_lidar_get_min_range`
+#### `wb_lidar_get_max_range`
 
 [C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
@@ -353,6 +363,8 @@ double wb_lidar_get_min_range(WbDeviceTag tag);
 double wb_lidar_get_max_range(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the minimum and maximum range*
 
 The `wb_lidar_get_min_range` and `wb_lidar_get_max_range` functions return respectively the minimum and maximum range of the lidar.

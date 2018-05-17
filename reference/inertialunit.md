@@ -69,7 +69,7 @@ int wb_inertial_unit_get_sampling_period(WbDeviceTag tag);
 const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 ```
 
-##### Description
+##### Description
 
 *enable, disable and read the output values of the inertial unit*
 

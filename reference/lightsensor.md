@@ -120,9 +120,10 @@ Finally, if the sensor's `lookupTable` is filled with correct calibration data, 
 
 ### LightSensor Functions
 
-**Name**
-
-**wb\_light\_sensor\_enable**, **wb\_light\_sensor\_disable**, **wb\_light\_sensor\_get\_sampling\_period**, **wb\_light\_sensor\_get\_value** - *enable, disable and read light sensor measurement*
+#### `wb_light_sensor_enable`
+#### `wb_light_sensor_disable`
+#### `wb_light_sensor_get_sampling_period`
+#### `wb_light_sensor_get_value`
 
 [C++](cpp-api.md#cpp_light_sensor) [Java](java-api.md#java_light_sensor) [Python](python-api.md#python_light_sensor) [Matlab](matlab-api.md#matlab_light_sensor) [ROS](ros-api.md)
 
@@ -135,7 +136,9 @@ int wb_light_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_light_sensor_get_value(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read light sensor measurement*
 
 The `wb_light_sensor_enable` function enables light sensor measurements.
 The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

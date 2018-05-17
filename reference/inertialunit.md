@@ -53,9 +53,10 @@ This field accepts any value in the interval (0.0, inf).
 
 ### InertialUnit Functions
 
-**Name**
-
-**wb\_inertial\_unit\_enable**, **wb\_inertial\_unit\_disable**, **wb\_inertial\_unit\_get\_sampling\_period**, **wb\_inertial\_unit\_get\_roll\_pitch\_yaw** - *enable, disable and read the output values of the inertial unit*
+#### `wb_inertial_unit_enable`
+#### `wb_inertial_unit_disable`
+#### `wb_inertial_unit_get_sampling_period`
+#### `wb_inertial_unit_get_roll_pitch_yaw`
 
 [C++](cpp-api.md#cpp_inertial_unit) [Java](java-api.md#java_inertial_unit) [Python](python-api.md#python_inertial_unit) [Matlab](matlab-api.md#matlab_inertial_unit) [ROS](ros-api.md)
 
@@ -68,7 +69,9 @@ int wb_inertial_unit_get_sampling_period(WbDeviceTag tag);
 const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read the output values of the inertial unit*
 
 The `wb_inertial_unit_enable` function turns on the angle measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

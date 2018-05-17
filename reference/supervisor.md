@@ -513,7 +513,7 @@ For example the vector `[1 0 1]` represents the magenta color.
 
 ---
 
-##### `wb_supervisor_simulation_quit`
+#### `wb_supervisor_simulation_quit`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
@@ -610,8 +610,8 @@ You may wish to save some data in a file from your supervisor program in order t
 
 ---
 
-##### `wb_supervisor_simulation_get_mode`
-##### `wb_supervisor_simulation_set_mode`
+#### `wb_supervisor_simulation_get_mode`
+#### `wb_supervisor_simulation_set_mode`
 
 [C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 

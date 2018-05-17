@@ -236,7 +236,7 @@ If the specified device is not found, the function returns 0.
 > **Note**: This function is not available in the C++, Java and Python APIs.
 Instead, C++, Java and Python users should use device specific typed methods (see below).
 
-##### See also
+##### See Also
 
 [`wb_robot_step`](#wb_robot_step).
 
@@ -310,7 +310,7 @@ If the specified device is not found, the function returns `NULL` in C++, `null`
 > **Note**: These functions are not available in the C and MATLAB APIs.
 Instead, C and Matlab users should use [`wb_robot_get_device`](#wb_robot_get_device) function.
 
-##### See also
+##### See Also
 
 [`wb_robot_get_device`](#wb_robot_get_device), [`wb_robot_step`](#wb_robot_step).
 
@@ -649,7 +649,7 @@ It will end only when the `task` function returns.
 The Webots controller API is thread safe, however, some API functions use or return pointers to data structures which are not protected outside the function against asynchronous access from a different thread.
 Hence you should use mutexes (see below) to ensure that such data is not accessed by a different thread.
 
-##### See also
+##### See Also
 
 [`wb_robot_mutex_new`](#wb_robot_mutex_new).
 
@@ -686,7 +686,7 @@ This function returns only after it has locked the specified `mutex`.
 
 The `wb_robot_mutex_unlock` function unlocks the specified `mutex`, allowing other threads to lock it.
 
-##### See also
+##### See Also
 
 [`wb_robot_task_new`](#wb_robot_task_new).
 

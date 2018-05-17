@@ -63,9 +63,9 @@ The noise is not dependent on the distance between emitter-receiver.
 
 ### Receiver Functions
 
-**Name**
-
-**wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
+#### `wb_receiver_enable`
+#### `wb_receiver_disable`
+#### `wb_receiver_get_sampling_period`
 
 [C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
@@ -77,7 +77,9 @@ void wb_receiver_disable(WbDeviceTag tag);
 int wb_receiver_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable and disable receiver*
 
 The `wb_receiver_enable` function starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate of once every `sampling_period` (expressed in milliseconds).
@@ -93,9 +95,8 @@ The `wb_receiver_get_sampling_period` function returns the period given into the
 
 ---
 
-**Name**
-
-**wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
+#### `wb_receiver_get_queue_length`
+#### `wb_receiver_next_packet`
 
 [C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
@@ -106,7 +107,9 @@ int wb_receiver_get_queue_length(WbDeviceTag tag);
 void wb_receiver_next_packet(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*check for the presence of data packets in the receivers queue*
 
 The `wb_receiver_get_queue_length` function returns the number of data packets currently present in the receiver's queue (see [this figure](#receivers-packet-queue)).
 
@@ -154,9 +157,8 @@ Making assumptions based on timing will result in code that is not robust.
 
 ---
 
-**Name**
-
-**wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
+#### `wb_receiver_get_data`
+#### `wb_receiver_get_data_size`
 
 [C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
@@ -167,7 +169,9 @@ const void *wb_receiver_get_data(WbDeviceTag tag);
 int wb_receiver_get_data_size(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get data and size of the current packet*
 
 The `wb_receiver_get_data` function returns the data of the packet at the head of the reception queue (see [this figure](#receivers-packet-queue)).
 The returned data pointer is only valid until the next call to the `wb_receiver_next_packet` function.
@@ -235,9 +239,8 @@ More sophisticated data typed must be accessed explicitly using `setdatatype` an
 
 ---
 
-**Name**
-
-**wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
+#### `wb_receiver_get_signal_strength`
+#### `wb_receiver_get_emitter_direction`
 
 [C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
@@ -248,7 +251,9 @@ double wb_receiver_get_signal_strength(WbDeviceTag tag);
 const double *wb_receiver_get_emitter_direction(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get signal strength and emitter direction*
 
 The `wb_receiver_get_signal_strength` function operates on the head packet in the receiver's queue (see [this figure](#receivers-packet-queue)).
 It returns the simulated signal strength at the time the packet was transmitted.
@@ -270,9 +275,8 @@ It is illegal to call this function if the receiver's queue is empty (i.e. when 
 
 ---
 
-**Name**
-
-**wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
+#### `wb_receiver_set_channel`
+#### `wb_receiver_get_channel`
 
 [C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
@@ -283,7 +287,9 @@ void wb_receiver_set_channel(WbDeviceTag tag, int channel);
 int wb_receiver_get_channel(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*set and get the receiver's channel.*
 
 The `wb_receiver_set_channel` function allows a receiver to change its reception channel.
 It modifies the `channel` field of the corresponding [Receiver](#receiver) node.

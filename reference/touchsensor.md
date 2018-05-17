@@ -108,9 +108,11 @@ This approximation usually improves as the `basicTimeStep` ([WorldInfo](worldinf
 
 ### TouchSensor Functions
 
-**Name**
-
-**wb\_touch\_sensor\_enable**, **wb\_touch\_sensor\_disable**, **wb\_touch\_sensor\_get\_sampling\_period**, **wb\_touch\_sensor\_get\_value**, **wb\_touch\_sensor\_get\_values** - *enable, disable and read last touch sensor measurements*
+#### `wb_touch_sensor_enable`
+#### `wb_touch_sensor_disable`
+#### `wb_touch_sensor_get_sampling_period`
+#### `wb_touch_sensor_get_value`
+#### `wb_touch_sensor_get_values`
 
 [C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [Matlab](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
 
@@ -124,7 +126,9 @@ double wb_touch_sensor_get_value(WbDeviceTag tag);
 const double *wb_touch_sensor_get_values(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable, disable and read last touch sensor measurements*
 
 The `wb_touch_sensor_enable` function allows the user to enable touch sensor measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -144,9 +148,7 @@ This function can be used with a sensor of type "force-3d" exclusively.
 
 ---
 
-**Name**
-
-**wb\_touch\_sensor\_get\_type** - *get the touch sensor type*
+#### `wb_touch_sensor_get_type`
 
 [C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [Matlab](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
 
@@ -156,7 +158,9 @@ This function can be used with a sensor of type "force-3d" exclusively.
 int wb_touch_sensor_get_type(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the touch sensor type*
 
 This function allows the user to retrieve the touch sensor type defined by the `type` field.
 If the value of the `type` field is "force" then this function returns WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.

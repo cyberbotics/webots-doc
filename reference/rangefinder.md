@@ -96,9 +96,9 @@ Then, after closing the window, the overlay will be automatically restored.
 
 ### RangeFinder Functions
 
-**Name**
-
-**wb\_range\_finder\_enable**, **wb\_range\_finder\_disable**, **wb\_range\_finder\_get\_sampling\_period** - *enable and disable range-finder updates*
+#### `wb_range_finder_enable`
+#### `wb_range_finder_disable`
+#### `wb_range_finder_get_sampling_period`
 
 [C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
@@ -110,7 +110,9 @@ void wb_range_finder_disable(WbDeviceTag tag);
 int wb_range_finder_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*enable and disable range-finder updates*
 
 The `wb_range_finder_enable` function allows the user to enable range-finder updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -122,9 +124,7 @@ The `wb_range_finder_get_sampling_period` function returns the period given into
 
 ---
 
-**Name**
-
-**wb\_range\_finder\_get\_fov** - *get field of view for a range-finder*
+#### `wb_range_finder_get_fov`
 
 [C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
@@ -134,15 +134,16 @@ The `wb_range_finder_get_sampling_period` function returns the period given into
 double wb_range_finder_get_fov(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get field of view for a range-finder*
 
 These functions allow the controller to get the value of the field of view (fov) of a range-finder.
 
 ---
 
-**Name**
-
-**wb\_range\_finder\_get\_width**, **wb\_range\_finder\_get\_height** - *get the size of the range-finder image*
+#### `wb_range_finder_get_width`
+#### `wb_range_finder_get_height`
 
 [C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
@@ -153,15 +154,16 @@ int wb_range_finder_get_width(WbDeviceTag tag);
 int wb_range_finder_get_height(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the size of the range-finder image*
 
 These functions return the width and height of a range-finder image as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
-**Name**
-
-**wb\_range\_finder\_get\_min\_range**, **wb\_range\_finder\_get\_max\_range** - *get the minimum and maximum range of the range-finder device*
+#### `wb_range_finder_get_min_range`
+#### `wb_range_finder_get_max_range`
 
 [C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
@@ -172,15 +174,16 @@ double wb_range_finder_get_min_range(WbDeviceTag tag);
 double wb_range_finder_get_max_range(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the minimum and maximum range of the range-finder device*
 
 These functions return the minRange and maxRange parameters of a range-finder device as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
-**Name**
-
-**wb\_range\_finder\_get\_range\_image**, **wb\_range\_finder\_image\_get\_depth** - *get the range image and range data from a range-finder*
+#### `wb_range_finder_get_range_image`
+#### `wb_range_finder_image_get_depth`
 
 [C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
@@ -191,7 +194,9 @@ const float *wb_range_finder_get_range_image(WbDeviceTag tag);
 float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y);
 ```
 
-**Description**
+##### Description
+
+*get the range image and range data from a range-finder*
 
 The `wb_range_finder_get_range_image` macro allows the user to read the contents of the last range image grabbed by a range-finder.
 The range image is computed using the depth buffer produced by the OpenGL rendering.
@@ -219,9 +224,7 @@ Their content are identical but their handling is of course different.
 
 ---
 
-**Name**
-
-**wb\_range\_finder\_save\_image** - *save a range-finder image in PNG, JPEG or TIFF format*
+#### `wb_range_finder_save_image`
 
 [C++](cpp-api.md#cpp_range_finder) [Java](java-api.md#java_range_finder) [Python](python-api.md#python_range_finder) [Matlab](matlab-api.md#matlab_range_finder) [ROS](ros-api.md)
 
@@ -231,7 +234,9 @@ Their content are identical but their handling is of course different.
 int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
-**Description**
+##### Description
+
+*save a range-finder image in PNG, JPEG or TIFF format*
 
 The `wb_range_finder_save_image` function allows the user to save a `tag` image which was previously obtained with the `wb_range_finder_get_image` function.
 The image can be saved in a file using the PNG, JPEG, or TIFF format.

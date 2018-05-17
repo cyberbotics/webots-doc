@@ -101,7 +101,7 @@ The *reverse mode* can be changed while the motion is playing, in this case, the
 
 By default, the *loop mode* and *reverse mode* of motions are `false`.
 
-##### See also
+##### See Also
 
 [wbu\_motion\_new](#wbu_motion_new)
 

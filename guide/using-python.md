@@ -90,4 +90,4 @@ From the MSYS2 console, you will need to install at least `gcc` `make` and `swig
 ```bash
 pacman -S gcc make swig
 ```
-before continuing with step 3.
+From here you can now continue with step 3.

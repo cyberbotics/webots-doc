@@ -13,7 +13,7 @@ function wbSlugify(obj) {
   return text
     .trim()
     .toLowerCase()
-    .replace(/[\s.]/g, '-')
+    .replace(/[\s.:]/g, '-')
     .replace(/[-]+/g, '-')
     .replace(/^-*/, '')
     .replace(/-*$/, '')
@@ -136,8 +136,8 @@ showdown.extension('wbAnchors', function() {
   return [
     {
       type: 'html',
-      regex: /<h(\d) id="([^]+?)">([^]+?)<\/h(\d)>/gi,
-      replace: function(match, level1, showdownId, content, level2) {
+      regex: /<h(\d)\s([^>]*)>([^]+?)<\/h(\d)>/gi,
+      replace: function(match, level1, args, content, level2) {
         if (level1 !== level2) {
           console.error('wbAnchors: level mismatch');
           return '';
@@ -147,7 +147,7 @@ showdown.extension('wbAnchors', function() {
         tmpDiv.innerHTML = content;
         var rawContent = tmpDiv.textContent || tmpDiv.innerText || '';
 
-        return '<h' + level1 + ' name="' + wbSlugify(rawContent) + '">' + content + '</h' + level1 + '>';
+        return '<h' + level1 + ' name="' + wbSlugify(rawContent) + '" ' + args + '>' + content + '</h' + level1 + '>';
       }
     }
   ];

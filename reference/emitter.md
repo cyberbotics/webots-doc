@@ -77,9 +77,7 @@ In addition it is highly recommended to choose -1 for the baudRate, in order to 
 
 ### Emitter Functions
 
-**Name**
-
-**wb\_emitter\_send** - *send a data packet to potential receivers*
+#### `wb_emitter_send`
 
 [C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
@@ -89,7 +87,9 @@ In addition it is highly recommended to choose -1 for the baudRate, in order to 
 int wb_emitter_send(WbDeviceTag tag, const void *data, int size);
 ```
 
-**Description**
+##### Description
+
+*send a data packet to potential receivers*
 
 The `wb_emitter_send` function adds to the emitter's queue a packet of `size` bytes located at the address indicated by `data`.
 The enqueued data packets will then be sent to potential receivers (and removed from the emitter's queue) at the rate specified by the `baudRate` field of the [Emitter](#emitter) node.
@@ -145,9 +145,8 @@ Here is an example of sending a Java string in a way that is compatible with a C
 
 ---
 
-**Name**
-
-**wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
+#### `wb_emitter_set_channel`
+#### `wb_emitter_get_channel`
 
 [C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
@@ -158,7 +157,9 @@ void wb_emitter_set_channel(WbDeviceTag tag, int channel);
 int wb_emitter_get_channel(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*set and get the emitter's channel.*
 
 The `wb_emitter_set_channel` function allows the controller to change the transmission channel.
 This modifies the `channel` field of the corresponding [Emitter](#emitter) node.
@@ -171,9 +172,8 @@ The `wb_emitter_get_channel` function returns the current channel number of the 
 
 ---
 
-**Name**
-
-**wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
+#### `wb_emitter_set_range`
+#### `wb_emitter_get_range`
 
 [C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
@@ -184,7 +184,9 @@ void wb_emitter_set_range(WbDeviceTag tag, double range);
 double wb_emitter_get_range(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*set and get the emitter's range.*
 
 The `wb_emitter_set_range` function allows the controller to change the transmission range at run-time.
 Data packets can only reach receivers located within the emitter's range.
@@ -195,9 +197,7 @@ For both the `wb_emitter_set_range` and `emitter_get_range` functions, a value o
 
 ---
 
-**Name**
-
-**wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
+#### `wb_emitter_get_buffer_size`
 
 [C++](cpp-api.md#cpp_emitter) [Java](java-api.md#java_emitter) [Python](python-api.md#python_emitter) [Matlab](matlab-api.md#matlab_emitter) [ROS](ros-api.md)
 
@@ -207,7 +207,9 @@ For both the `wb_emitter_set_range` and `emitter_get_range` functions, a value o
 int wb_emitter_get_buffer_size(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*get the transmission buffer size*
 
 The `wb_emitter_get_buffer_size` function returns the size (in bytes) of the transmission buffer.
 This corresponds to the value specified by the `bufferSize` field of the [Emitter](#emitter) node.

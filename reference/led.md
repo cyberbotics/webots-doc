@@ -37,9 +37,8 @@ If the `color` list contains a single color, then the LED is monochromatic, and 
 
 ### LED Functions
 
-**Name**
-
-**wb\_led\_set**, **wb\_led\_get** - *turn an LED on or off and read its status*
+#### `wb_led_set`
+#### `wb_led_get`
 
 [C++](cpp-api.md#cpp_led) [Java](java-api.md#java_led) [Python](python-api.md#python_led) [Matlab](matlab-api.md#matlab_led) [ROS](ros-api.md)
 
@@ -50,7 +49,9 @@ void wb_led_set(WbDeviceTag tag, int value);
 int wb_led_get(WbDeviceTag tag);
 ```
 
-**Description**
+##### Description
+
+*turn an LED on or off and read its status*
 
 The `wb_led_set` function switches an LED on or off, possibly changing its color.
 If the `value` parameter is 0, the LED is turned off.

@@ -43,6 +43,10 @@ showdown/1.3.0/showdown.min.js.map
 
 mermaid/7.0.0/mermaidAPI.min.js
 
+# mustache
+
+mustache/2.3.0/mustache.min.js
+
 # ace
 
 ace/1.2.0/ace.js

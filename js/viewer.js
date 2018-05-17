@@ -443,9 +443,14 @@ function populateViewDiv(mdContent) {
 
   applyToPageTitle(mdContent);
 
-  // markdown to html
+  // initialize Mermaid.
   window.mermaidGraphCounter = 0;
   window.mermaidGraphs = {};
+
+  // Add the mustache :-{
+  mdContent = Mustache.render(mdContent, document.mustacheView);
+
+  // markdown to html
   var converter = new showdown.Converter({tables: 'True', extensions: ['wbRobotComponent', 'wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
@@ -1106,6 +1111,29 @@ function setHandleWidth(width) {
   handle.center.css('width', 'calc(100% - ' + width + 'px)');
 }
 
+function clickOnTag(lang) {
+  document.mustacheView.c = false;
+  document.mustacheView.cpp = false;
+  document.mustacheView[lang] = true;
+  getMDFile();
+}
+
+function initializeMustache() {
+  document.mustacheView = {
+    c: true,
+    cpp: false
+  };
+
+  var menu = document.createElement('div');
+  menu.innerHTML =
+    '<span onclick="clickOnTag(\'c\');">C</span>' +
+    '<span onclick="clickOnTag(\'cpp\');">C++</span>'
+  ;
+
+  var title = document.querySelector('#title');
+  title.parentNode.insertBefore(menu, title);
+}
+
 function initializeHandle() {
   // inspired from: http://stackoverflow.com/questions/17855401/how-do-i-make-a-div-width-draggable
   handle = {}; // structure where all the handle info is stored
@@ -1175,7 +1203,10 @@ window.onscroll = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+  initializeMustache();
+
   window.mermaidAPI.initialize({startOnLoad: false});
+
   initializeHandle();
 
   if (!isCyberboticsUrl) {

@@ -37,12 +37,11 @@ The default parameters of these settings may vary from one computer to another d
 - The **Main 3D view anti-aliasing** option allows you to enable Anti-Aliasing, specifically [SMAA 1x](http://www.iryoku.com/smaa/) on the 3D scene in Webots.
 This option can lead to marginally reduced performance, but it improves graphical fidelity somewhat.
 
-> **Note** This option does not apply to any Camera rendering, this is managed by the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
+> **Note** This option does not apply to any [Camera](../reference/camera.md) rendering, this is managed by the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
 
 - The **Disable shadows** option allows you to disable completely the shadows in the 3D view and in the Camera rendering, whatever the values of the *Light.castShadows* fields.
 
-    Globally speaking, performance can be improved by disabling this feature, but on the
-    other hand the rendering is more difficult to understand, and less pretty.
+Globally speaking, performance can be improved by disabling this feature, but on the other hand the rendering is more difficult to understand, and less pretty.
 
 - The **Disable camera anti-aliasing** option allows you to bypass all the *Camera.antialiasing* fields and to disable this feature.
 We observed that some hardware doesn't support the OpenGL feature about anti-aliasing when rendering into a texture (RTT).

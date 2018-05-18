@@ -53,10 +53,8 @@ More information on frustums in the corresponding subsection below.
 - The `far` field defines the distance from the camera to the far clipping plane.
 
 - The `antiAliasing` field switches on or off (the default) anti-aliasing effect on the camera images.
-Anti-aliasing is a technique that assigns pixel colors based on the fraction of the pixel's area that's covered by the primitives being rendered.
-Anti-aliasing makes graphics more smooth and pleasing to the eye by reducing aliasing artifacts.
 Aliasing artifacts can appear as jagged edges (or moiré patterns, strobing, etc.).
-Anti-aliasing will not be applied if it is not supported by the hardware.
+Anti-aliasing is a technique that selectively blurs these jagged edges (and thus makes them look more smooth) in the rendered camera image for more visually pleasing results.
 
 - If the `motionBlur` field is greater than 0.0, the image is blurred by the motion of the camera or objects in the field of view.
 It means the image returned is a mix between the current view and the previous images returned by the camera.

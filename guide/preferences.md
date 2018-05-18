@@ -32,7 +32,7 @@ If available, a dialog window will inform you about it.
 ### OpenGL
 
 The **OpenGL** tab contains preferences about setting the 3D rendering abilities.
-The default parameters of these settings may vary from one computer to another depending on the system's hardware & OpenGL cabilities.
+The default parameters of these settings may vary from one computer to another depending on the system's hardware & OpenGL capabilities.
 
 - The **Main 3D view anti-aliasing** option allows you to enable Anti-Aliasing, specifically [SMAA 1x](http://www.iryoku.com/smaa/) on the 3D scene in Webots.
 This option can lead to marginally reduced performance, but it improves graphical fidelity somewhat.

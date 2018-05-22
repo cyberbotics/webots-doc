@@ -60,6 +60,6 @@ class TestHyperlinks(unittest.TestCase):
         for h in self.hyperlinks:
             if h['name'] in ['C++', 'Java', 'Python', 'ROS', 'Matlab']:
                 self.assertTrue(
-                    '.md#' in h['url'],
+                    '.md' in h['url'],
                     msg='Hyperlink "%s" is wrongly detected as a tag in "%s".' % (h['md'], h['file'])
                 )

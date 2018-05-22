@@ -54,3 +54,12 @@ class TestHyperlinks(unittest.TestCase):
                 re.search(r'[<>]', h['name']) is None,
                 msg='Hyperlink "%s" contains forbidden characters in "%s".' % (h['md'], h['file'])
             )
+
+    def test_tag_hyperlink_is_internal(self):
+        """Test that a tag-like hyperlink is internal."""
+        for h in self.hyperlinks:
+            if h['name'] in ['C++', 'Java', 'Python', 'ROS', 'Matlab']:
+                self.assertTrue(
+                    '.md#' in h['url'],
+                    msg='Hyperlink "%s" is wrongly detected as a tag in "%s".' % (h['md'], h['file'])
+                )

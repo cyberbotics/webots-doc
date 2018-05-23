@@ -192,7 +192,9 @@ Then, after closing the window, the overlay will be automatically restored.
 #### `wb_camera_disable`
 #### `wb_camera_get_sampling_period`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab C
 
 ```c
 #include <webots/camera.h>
@@ -201,6 +203,71 @@ void wb_camera_enable(WbDeviceTag tag, int sampling_period);
 void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
+
+%end-tab
+
+%tab C++
+
+```c++
+#include "<webots/Camera.hpp>`"
+
+class Camera : public Device {
+  virtual void enable(int sampling_period);
+  virtual void disable();
+  int getSamplingPeriod();
+}
+```
+
+%end-tab
+
+%tab Python
+
+```python
+from controller import Camera
+
+class Camera (Device) :
+    def enable(self, sampling_period)
+    def disable(self)
+    def getSamplingPeriod(self)
+```
+
+%end-tab
+
+%tab Java
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public void enable(int sampling_period);
+  public void disable();
+  public int getSamplingPeriod();
+}
+```
+
+%end-tab
+
+%tab MATLAB
+
+```matlab
+wb_camera_enable(tag, sampling_period)
+wb_camera_disable(tag)
+period = wb_camera_get_sampling_period(tag)
+```
+
+%end-tab
+
+%tab ROS
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/image` | `topic` | [`sensor_msgs::Image`](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%end-tab
+
+%end
 
 ##### Description
 

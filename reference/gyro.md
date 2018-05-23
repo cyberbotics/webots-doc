@@ -39,7 +39,7 @@ This field accepts any value in the interval (0.0, inf).
 #### `wb_gyro_get_sampling_period`
 #### `wb_gyro_get_values`
 
-[C++](cpp-api.md#cpp_gyro) [Java](java-api.md#java_gyro) [Python](python-api.md#python_gyro) [Matlab](matlab-api.md#matlab_gyro) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_gyro) [Java](java-api.md#java_gyro) [Python](python-api.md#python_gyro) [MATLAB](matlab-api.md#matlab_gyro) [ROS](ros-api.md)
 
 ```c
 #include <webots/gyro.h>

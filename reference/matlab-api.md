@@ -1,6 +1,6 @@
-## Matlab API
+## MATLAB API
 
-The following tables describe the Matlab functions.
+The following tables describe the MATLAB functions.
 
 %api "matlab_accelerometer"
 

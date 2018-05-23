@@ -40,7 +40,7 @@ These values may be `NaN` if not applicable, for example when the mouse is point
 #### `wb_mouse_get_sampling_period`
 #### `wb_mouse_get_key`
 
-[C++](cpp-api.md#cpp_mouse) [Java](java-api.md#java_mouse) [Python](python-api.md#python_mouse) [Matlab](matlab-api.md#matlab_mouse) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_mouse) [Java](java-api.md#java_mouse) [Python](python-api.md#python_mouse) [MATLAB](matlab-api.md#matlab_mouse) [ROS](ros-api.md)
 
 ```c
 #include <webots/mouse.h>

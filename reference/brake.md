@@ -17,7 +17,7 @@ The [Brake](#brake) node can be inserted in the `device` field of a [HingeJoint]
 #### `wb_brake_set_damping_constant`
 #### `wb_brake_get_type`
 
-[C++](cpp-api.md#cpp_brake) [Java](java-api.md#java_brake) [Python](python-api.md#python_brake) [Matlab](matlab-api.md#matlab_brake) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_brake) [Java](java-api.md#java_brake) [Python](python-api.md#python_brake) [MATLAB](matlab-api.md#matlab_brake) [ROS](ros-api.md)
 
 ```c
 #include <webots/brake.h>

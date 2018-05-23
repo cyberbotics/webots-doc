@@ -124,6 +124,6 @@
     - [C++ API](cpp-api.md)
     - [Java API](java-api.md)
     - [Python API](python-api.md)
-    - [Matlab API](matlab-api.md)
+    - [MATLAB API](matlab-api.md)
     - [ROS API](ros-api.md)
 - [Glossary](glossary.md)

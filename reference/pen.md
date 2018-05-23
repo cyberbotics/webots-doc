@@ -61,7 +61,7 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 
 #### `wb_pen_write`
 
-[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [Matlab](matlab-api.md#matlab_pen) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [MATLAB](matlab-api.md#matlab_pen) [ROS](ros-api.md)
 
 ```c
 #include <webots/pen.h>
@@ -80,7 +80,7 @@ If the `write` parameter is *true*, the specified `tag` device will write; if `w
 
 #### `wb_pen_set_ink_color`
 
-[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [Matlab](matlab-api.md#matlab_pen) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [MATLAB](matlab-api.md#matlab_pen) [ROS](ros-api.md)
 
 ```c
 #include <webots/pen.h>
@@ -104,6 +104,6 @@ wb_pen_set_ink_color(pen,0xF01010,0.9);
 
 The above statement will change the ink color of the indicated pen to some red color.
 
-> **Note** [Matlab]: In the Matlab version of the `wb_pen_set_ink_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
+> **Note** [MATLAB]: In the MATLAB version of the `wb_pen_set_ink_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.
 For example the vector `[1 0 1]` represents the magenta color.

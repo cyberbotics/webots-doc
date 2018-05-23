@@ -139,7 +139,7 @@ The same comment applies to the horizontal resolution, the internal depth camera
 #### `wb_lidar_disable`
 #### `wb_lidar_get_sampling_period`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -167,7 +167,7 @@ The `wb_lidar_get_sampling_period` function returns the period given into the `w
 #### `wb_lidar_disable_point_cloud`
 #### `wb_lidar_is_point_cloud_enabled`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -195,7 +195,7 @@ First the lidar should be enabled using the `wb_lidar_enable` function.
 #### `wb_lidar_get_range_image`
 #### `wb_lidar_get_layer_range_image`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -234,7 +234,7 @@ Their content are identical but their handling is of course different.
 #### `wb_lidar_get_layer_point_cloud`
 #### `wb_lidar_get_number_of_points`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -267,7 +267,7 @@ The `wb_lidar_get_number_of_points` function returns the total number of points 
 #### `wb_lidar_get_frequency`
 #### `wb_lidar_set_frequency`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -290,7 +290,7 @@ The `frequency` argument should be in the range [minFrequency; maxFrequency].
 #### `wb_lidar_get_horizontal_resolution`
 #### `wb_lidar_get_number_of_layers`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -312,7 +312,7 @@ The `wb_lidar_get_number_of_layers` function returns the number of layers of the
 #### `wb_lidar_get_min_frequency`
 #### `wb_lidar_get_max_frequency`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -332,7 +332,7 @@ The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions retu
 #### `wb_lidar_get_fov`
 #### `wb_lidar_get_vertical_fov`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>
@@ -354,7 +354,7 @@ The `wb_lidar_get_vertical_fov` function returns the vertical field of view of t
 #### `wb_lidar_get_min_range`
 #### `wb_lidar_get_max_range`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [Matlab](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
 
 ```c
 #include <webots/lidar.h>

@@ -67,7 +67,7 @@ The noise is not dependent on the distance between emitter-receiver.
 #### `wb_receiver_disable`
 #### `wb_receiver_get_sampling_period`
 
-[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [MATLAB](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
 ```c
 #include <webots/receiver.h>
@@ -98,7 +98,7 @@ The `wb_receiver_get_sampling_period` function returns the period given into the
 #### `wb_receiver_get_queue_length`
 #### `wb_receiver_next_packet`
 
-[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [MATLAB](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
 ```c
 #include <webots/receiver.h>
@@ -160,7 +160,7 @@ Making assumptions based on timing will result in code that is not robust.
 #### `wb_receiver_get_data`
 #### `wb_receiver_get_data_size`
 
-[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [MATLAB](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
 ```c
 #include <webots/receiver.h>
@@ -196,7 +196,7 @@ Here is an example for getting the data:
 
 <!-- -->
 
-> **Note** [Matlab]: The Matlab `wb_receiver_get_data` function returns a MATLAB *libpointer*.
+> **Note** [MATLAB]: The MATLAB `wb_receiver_get_data` function returns a MATLAB *libpointer*.
 The receiving code is responsible for extracting the data from the *libpointer* using MATLAB's `setdatatype` and `get` functions.
 Here is an example on how to send and receive a 2x3 MATLAB matrix.
 
@@ -242,7 +242,7 @@ More sophisticated data typed must be accessed explicitly using `setdatatype` an
 #### `wb_receiver_get_signal_strength`
 #### `wb_receiver_get_emitter_direction`
 
-[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [MATLAB](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
 ```c
 #include <webots/receiver.h>
@@ -278,7 +278,7 @@ It is illegal to call this function if the receiver's queue is empty (i.e. when 
 #### `wb_receiver_set_channel`
 #### `wb_receiver_get_channel`
 
-[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [Matlab](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_receiver) [Java](java-api.md#java_receiver) [Python](python-api.md#python_receiver) [MATLAB](matlab-api.md#matlab_receiver) [ROS](ros-api.md)
 
 ```c
 #include <webots/receiver.h>

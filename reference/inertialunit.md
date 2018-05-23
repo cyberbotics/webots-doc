@@ -58,7 +58,7 @@ This field accepts any value in the interval (0.0, inf).
 #### `wb_inertial_unit_get_sampling_period`
 #### `wb_inertial_unit_get_roll_pitch_yaw`
 
-[C++](cpp-api.md#cpp_inertial_unit) [Java](java-api.md#java_inertial_unit) [Python](python-api.md#python_inertial_unit) [Matlab](matlab-api.md#matlab_inertial_unit) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_inertial_unit) [Java](java-api.md#java_inertial_unit) [Python](python-api.md#python_inertial_unit) [MATLAB](matlab-api.md#matlab_inertial_unit) [ROS](ros-api.md)
 
 ```c
 #include <webots/inertial_unit.h>

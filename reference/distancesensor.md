@@ -173,7 +173,7 @@ The ground texture must be placed in a [Plane](plane.md).
 #### `wb_distance_sensor_get_sampling_period`
 #### `wb_distance_sensor_get_value`
 
-[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [MATLAB](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -206,7 +206,7 @@ Hence, the range of the return value is defined by this lookup table.
 #### `wb_distance_sensor_get_min_value`
 #### `wb_distance_sensor_get_aperture`
 
-[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [MATLAB](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>
@@ -232,7 +232,7 @@ The `wb_distance_sensor_get_aperture` function returns the aperture of the dista
 
 #### `wb_distance_sensor_get_type`
 
-[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [Matlab](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_distance_sensor) [Java](java-api.md#java_distance_sensor) [Python](python-api.md#python_distance_sensor) [MATLAB](matlab-api.md#matlab_distance_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/distance_sensor.h>

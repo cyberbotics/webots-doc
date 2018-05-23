@@ -62,7 +62,7 @@ Then, after closing the window, the overlay will be automatically restored.
 #### `wb_display_get_width`
 #### `wb_display_get_height`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -84,7 +84,7 @@ These functions return respectively the values of the `width` and `height` field
 #### `wb_display_set_opacity`
 #### `wb_display_set_font`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -143,7 +143,7 @@ The following standard fonts are available:
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 The default font is `Lucida Console, 8 pixels, with anti-aliasing`.
 
-> **Note** [Matlab]: In the Matlab version of the `wb_display_set_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
+> **Note** [MATLAB]: In the MATLAB version of the `wb_display_set_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.
 For example the vector `[1 0 1]` represents the magenta color.
 
@@ -152,7 +152,7 @@ For example the vector `[1 0 1]` represents the magenta color.
 #### `wb_display_attach_camera`
 #### `wb_display_detach_camera`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -183,7 +183,7 @@ After detaching a camera, the pixels that have not been manually drawn will be t
 #### `wb_display_fill_oval`
 #### `wb_display_fill_polygon`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -238,7 +238,7 @@ The `wb_display_fill_oval` function draws an oval having the same properties as 
 
 The `wb_display_fill_polygon` function draws a polygon having the same properties as the polygon drawn by the `wb_display_draw_polygon` function except that it is filled instead of outlined.
 
-> **Note** [Java, Python, Matlab]: The Java, Python and Matlab equivalent of the `wb_display_draw_polygon` and `wb_display_fill_polygon` functions don't have a `size` argument because in these languages the size is determined directly from the `x` and `y` arguments.
+> **Note** [Java, Python, MATLAB]: The Java, Python and MATLAB equivalent of the `wb_display_draw_polygon` and `wb_display_fill_polygon` functions don't have a `size` argument because in these languages the size is determined directly from the `x` and `y` arguments.
 
 ---
 
@@ -249,7 +249,7 @@ The `wb_display_fill_polygon` function draws a polygon having the same propertie
 #### `wb_display_image_save`
 #### `wb_display_image_delete`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>

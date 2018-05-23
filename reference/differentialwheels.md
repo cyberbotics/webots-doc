@@ -126,7 +126,7 @@ Unlike the "physics" mode, in the "kinematics" mode the gravity and other forces
 
 #### `wb_differential_wheels_set_speed`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -156,7 +156,7 @@ The `wb_differential_wheels_get_left_speed` and `wb_differential_wheels_get_righ
 #### `wb_differential_wheels_disable_encoders`
 #### `wb_differential_wheels_get_encoders_sampling_period`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -189,7 +189,7 @@ Note that the first encoders values will be available only after the first sampl
 #### `wb_differential_wheels_get_right_encoder`
 #### `wb_differential_wheels_set_encoders`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -212,7 +212,7 @@ Setting the encoders' values will not make the wheels rotate to reach the specif
 
 #### `wb_differential_wheels_get_max_speed`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>
@@ -230,7 +230,7 @@ The `wb_differential_wheels_get_max_speed` function allows the user to get the v
 
 #### `wb_differential_wheels_get_speed_unit`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [Matlab](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
 
 ```c
 #include <webots/differential_wheels.h>

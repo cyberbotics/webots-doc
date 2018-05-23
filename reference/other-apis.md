@@ -11,5 +11,5 @@ Generally speaking, each C function has one and only one counterpart for in a sp
 - [C++ API](cpp-api.md)
 - [Java API](java-api.md)
 - [Python API](python-api.md)
-- [Matlab API](matlab-api.md)
+- [MATLAB API](matlab-api.md)
 - [ROS API](ros-api.md)

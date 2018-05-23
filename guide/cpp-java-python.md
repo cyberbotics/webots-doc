@@ -17,7 +17,7 @@ graph BT
   Python[[SWIG generated Python API](../reference/python-api.md)] --> CPP
   Ros[[ROS API](../reference/ros-api.md)] --> CPP
     CPP --> C["C API (implemented in libcontroller)"]
-    Matlab[[Matlab API](../reference/matlab-api.md)] --> C
+    MATLAB[[MATLAB API](../reference/matlab-api.md)] --> C
       C --> Webots["Webots (binary interface)"]
 %end
 %end

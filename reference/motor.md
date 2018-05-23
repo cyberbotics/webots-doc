@@ -162,7 +162,7 @@ wb_motor_set_velocity(motor, 6.28);  // 1 rotation per second
 It is implemented in the C99 specifications as well as in C++.
 In Java, this value is defined as `Double.POSITIVE_INFINITY`.
 In Python, you should use `float('inf')`.
-Finally, in Matlab you should use the `inf` constant.
+Finally, in MATLAB you should use the `inf` constant.
 
 ### Force and Torque Control
 
@@ -239,7 +239,7 @@ If a more specific or accurate model is needed, it can be implemented in the rob
 #### `wb_motor_get_available_torque`
 #### `wb_motor_get_max_torque`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -310,7 +310,7 @@ wb_motor_set_velocity(tag, desired_speed);  // rad/s
 
 <!-- -->
 
-> **Note** [Matlab]: In MATLAB use `inf` instead of INFINITY.
+> **Note** [MATLAB]: In MATLAB use `inf` instead of INFINITY.
 
 The `wb_motor_get_target_position` function allows the user to get the target position.
 This value matches with the argument given to the last `wb_motor_set_position` function call.
@@ -354,7 +354,7 @@ Positions are expressed in *radian* (rad) for rotational motors and in *meter* (
 #### `wb_motor_get_torque_feedback_sampling_period`
 #### `wb_motor_disable_torque_feedback`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -410,7 +410,7 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 #### `wb_motor_set_force`
 #### `wb_motor_set_torque`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -444,7 +444,7 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 
 #### `wb_motor_get_type`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>

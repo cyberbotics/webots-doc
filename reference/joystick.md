@@ -16,7 +16,7 @@ In order to get the `Joystick` instance, you should call the `getJoystick` funct
 #### `wb_joystick_disable`
 #### `wb_joystick_get_sampling_period`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
 ```c
 #include <webots/joystick.h>
@@ -44,7 +44,7 @@ The `wb_joystick_get_sampling_period` function returns the value previously pass
 
 #### `wb_joystick_is_connected`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
 ```c
 #include <webots/joystick.h>
@@ -62,7 +62,7 @@ Once the joystick is enabled, this function can be used to check if a free joyst
 
 #### `wb_joystick_get_model`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
 ```c
 #include <webots/joystick.h>
@@ -83,7 +83,7 @@ The returned model of the joystick may looks like: `Logitech G29 Driving Force R
 #### `wb_joystick_get_number_of_axes`
 #### `wb_joystick_get_axis_value`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
 ```c
 #include <webots/joystick.h>
@@ -104,7 +104,7 @@ The `wb_joystick_get_axis_value` function returns the current value of the axis 
 
 #### `wb_joystick_get_pressed_button`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
 ```c
 #include <webots/joystick.h>
@@ -131,7 +131,7 @@ On macOS, only the first 12 buttons and first 2 axes of the joystick are taken i
 #### `wb_joystick_set_auto_centering_gain`
 #### `wb_joystick_set_resistance_gain`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [Matlab](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
 
 ```c
 #include <webots/joystick.h>

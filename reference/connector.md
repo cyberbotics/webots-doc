@@ -144,7 +144,7 @@ But it is not necessary to add a [Physics](physics.md) node to the [Connector](#
 #### `wb_connector_get_presence_sampling_period`
 #### `wb_connector_get_presence`
 
-[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [Matlab](matlab-api.md#matlab_connector) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [MATLAB](matlab-api.md#matlab_connector) [ROS](ros-api.md)
 
 ```c
 #include <webots/connector.h>
@@ -201,7 +201,7 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 #### `wb_connector_lock`
 #### `wb_connector_unlock`
 
-[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [Matlab](matlab-api.md#matlab_connector) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [MATLAB](matlab-api.md#matlab_connector) [ROS](ros-api.md)
 
 ```c
 #include <webots/connector.h>

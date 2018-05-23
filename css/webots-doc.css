@@ -548,6 +548,7 @@ body {
 .robot-component .device-name {
   color: white;
   font-family: roboto;
+  word-wrap: break-word;
 }
 .robot-component .device {
   background-color: #666;

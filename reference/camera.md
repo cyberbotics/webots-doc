@@ -226,9 +226,9 @@ class Camera : public Device {
 from controller import Camera
 
 class Camera (Device):
-    def enable(self, sampling_period)
-    def disable(self)
-    def getSamplingPeriod(self)
+    def enable(self, sampling_period):
+    def disable(self):
+    def getSamplingPeriod(self):
 ```
 
 %tab-end

@@ -5,12 +5,12 @@ Derived from [Light](light.md).
 ```
 SpotLight {
   SFFloat ambientIntensity 0          # [0, 1]
-  SFVec3f attenuation      1 0 0      # any positive vector
+  SFVec3f attenuation      0 0 1      # any positive vector
   SFFloat beamWidth        1.570796   # [0, pi/2)
   SFColor color            1 1 1      # any color
   SFFloat cutOffAngle      0.785398   # [0, pi/2)
   SFVec3f direction        0 0 -1     # any vector
-  SFFloat intensity        1          # [0, 1]
+  SFFloat intensity        1          # [0, inf)
   SFVec3f location         0 0 10     # any vector
   SFBool  on               TRUE       # {TRUE, FALSE}
   SFFloat radius           100        # [0, inf)

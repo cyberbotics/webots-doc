@@ -225,7 +225,7 @@ class Camera : public Device {
 ```python
 from controller import Camera
 
-class Camera (Device) :
+class Camera (Device):
     def enable(self, sampling_period)
     def disable(self)
     def getSamplingPeriod(self)

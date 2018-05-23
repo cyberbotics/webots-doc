@@ -308,7 +308,7 @@ For example, if a robot contains a [DistanceSensor](distancesensor.md) node whos
 If the specified device is not found, the function returns `NULL` in C++, `null` in Java or the `none` in Python.
 
 > **Note**: These functions are not available in the C and MATLAB APIs.
-Instead, C and Matlab users should use [`wb_robot_get_device`](#wb_robot_get_device) function.
+Instead, C and MATLAB users should use [`wb_robot_get_device`](#wb_robot_get_device) function.
 
 ##### See Also
 
@@ -724,7 +724,7 @@ The message is sent using the `webots.window("<robot window name>").send` method
 The `wb_robot_window_send` and `wb_robot_wwi_send_text` functions allow a robot controller to send a message to a Javascript function running in the HTML robot window.
 The message is received using the `webots.window("<robot window name>").receive` method of the Webots Javascript API.
 
-> **note** [Java, Python, Matlab, ROS]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python, Matlab, or ROS API.
+> **note** [Java, Python, MATLAB, ROS]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python, MATLAB, or ROS API.
 
 ---
 
@@ -776,4 +776,4 @@ void *wbw_robot_window_custom_function(void *arg) {
 }
 ```
 
-> **Note** [Java, Python, Matlab]: Given that the native robot window can only be implemented for C/C++ controllers, `wb_robot_window_custom_function` is not available in Java, Python or Matlab API.
+> **Note** [Java, Python, MATLAB]: Given that the native robot window can only be implemented for C/C++ controllers, `wb_robot_window_custom_function` is not available in Java, Python or MATLAB API.

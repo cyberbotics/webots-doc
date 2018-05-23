@@ -121,8 +121,8 @@ Each time a camera is refreshed, an OpenGL rendering is performed, and the color
 The format of this buffers is BGRA (32 bits).
 We recommend to use the `wb_camera_image_get_*`-like functions to access the buffer because the internal format could change.
 
-> **Note** [Matlab]: The Matlab API uses a language-specific representation of color images consisting of a 3D array of RGB triplets.
-Please look at the [Matlab example](#wb_camera_get_image) in the `wb_camera_get_image` function's description.
+> **Note** [MATLAB]: The MATLAB API uses a language-specific representation of color images consisting of a 3D array of RGB triplets.
+Please look at the [MATLAB example](#wb_camera_get_image) in the `wb_camera_get_image` function's description.
 
 ### Frustum
 
@@ -410,7 +410,7 @@ Here is an example:
 
 <!-- -->
 
-> **Note** [Matlab]: The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`.
+> **Note** [MATLAB]: The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`.
 The first two dimensions of the array are the width and the height of camera's image, the third being the RGB code: 1 for red, 2 for blue and 3 for green.
 The `wb_camera_get_range_image` function returns a 2-dimensional array of `float('single')`.
 The dimensions of the array are the width and the length of camera's image and the float values are the metric distance values deduced from the OpenGL z-buffer.

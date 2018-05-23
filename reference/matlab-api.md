@@ -1,4 +1,4 @@
-## Matlab API
+## MATLAB API
 
 The following tables describe the Matlab functions.
 

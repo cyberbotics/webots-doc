@@ -507,7 +507,7 @@ supervisor_set_label(0,"hello universe",0,0,0.1,0xffff00,0,"Times New Roman");
 
 This will change the label "hello world" defined earlier into "hello universe", using a yellow color for the new text.
 
-> **Note** [Matlab]: In the Matlab version of the `wb_supervisor_set_label` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
+> **Note** [MATLAB]: In the MATLAB version of the `wb_supervisor_set_label` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.
 For example the vector `[1 0 1]` represents the magenta color.
 
@@ -678,7 +678,7 @@ If NULL, the current world path is used instead (e.g., a simple save operation).
 The boolean return value indicates the success of the save operation.
 Be aware that this function can overwrite silently existing files, so that the corresponding data may be lost.
 
-> **Note** [C++, Java, Python, Matlab]: In the other APIs, the `Robot.saveWorld` function can be called without argument.
+> **Note** [C++, Java, Python, MATLAB]: In the other APIs, the `Robot.saveWorld` function can be called without argument.
 In this case, a simple save operation is performed.
 
 ---

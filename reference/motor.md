@@ -159,7 +159,7 @@ wb_motor_set_velocity(motor, 6.28);  // 1 rotation per second
 It is implemented in the C99 specifications as well as in C++.
 In Java, this value is defined as `Double.POSITIVE_INFINITY`.
 In Python, you should use `float('inf')`.
-Finally, in Matlab you should use the `inf` constant.
+Finally, in MATLAB you should use the `inf` constant.
 
 ### Force and Torque Control
 
@@ -306,7 +306,7 @@ wb_motor_set_velocity(tag, desired_speed);  // rad/s
 
 <!-- -->
 
-> **Note** [Matlab]: In MATLAB use `inf` instead of INFINITY.
+> **Note** [MATLAB]: In MATLAB use `inf` instead of INFINITY.
 
 The `wb_motor_get_target_position` function allows the user to get the target position.
 This value matches with the argument given to the last `wb_motor_set_position` function call.

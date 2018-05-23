@@ -143,7 +143,7 @@ The following standard fonts are available:
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 The default font is `Lucida Console, 8 pixels, with anti-aliasing`.
 
-> **Note** [Matlab]: In the Matlab version of the `wb_display_set_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
+> **Note** [MATLAB]: In the MATLAB version of the `wb_display_set_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.
 For example the vector `[1 0 1]` represents the magenta color.
 
@@ -238,7 +238,7 @@ The `wb_display_fill_oval` function draws an oval having the same properties as 
 
 The `wb_display_fill_polygon` function draws a polygon having the same properties as the polygon drawn by the `wb_display_draw_polygon` function except that it is filled instead of outlined.
 
-> **Note** [Java, Python, Matlab]: The Java, Python and Matlab equivalent of the `wb_display_draw_polygon` and `wb_display_fill_polygon` functions don't have a `size` argument because in these languages the size is determined directly from the `x` and `y` arguments.
+> **Note** [Java, Python, MATLAB]: The Java, Python and MATLAB equivalent of the `wb_display_draw_polygon` and `wb_display_fill_polygon` functions don't have a `size` argument because in these languages the size is determined directly from the `x` and `y` arguments.
 
 ---
 

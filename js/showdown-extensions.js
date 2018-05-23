@@ -241,6 +241,21 @@ showdown.extension('wbRobotComponent', function() {
   ];
 });
 
+// TODO: move me elsewhere
+function openTab(evt, name) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName('tab-content');
+  for (i = 0; i < tabcontent.length; i++)
+    tabcontent[i].style.display = 'none';
+
+  tablinks = document.getElementsByClassName('tab-links');
+  for (i = 0; i < tablinks.length; i++)
+    tablinks[i].className = tablinks[i].className.replace(' active', '');
+
+  document.getElementById(name).style.display = 'block';
+  evt.currentTarget.className += ' active';
+}
+
 // TODO: description
 showdown.extension('wbTabComponent', function() {
   return [
@@ -248,10 +263,15 @@ showdown.extension('wbTabComponent', function() {
       type: 'lang',
       filter: function(text, converter, options) {
         text = text.replace(/%tab-component([^]+?)%end/gi, function(match, content) {
+          var buttons = '';
+          var first = true;
           var subText = content.replace(/%tab\s+"([^]+?)"([^]+?)%tab-end/gi, function(subMatch, title, subContent) {
-            return '<div class="tab"><b>' + title + '</b><p>' + subContent + '</p></div>';
+            buttons += '<button class="tab-links" onclick="openTab(event, \'' + title + '\')">' + title + '</button>';
+            var result = '<div class="tab-content" ' + (first ? 'style="display:block"' : '') + ' id="' + title + '"><b>' + title + '</b><p>' + subContent + '</p></div>';
+            first = false;
+            return result;
           });
-          return '<div class="tab-component">' + subText + '</div>';
+          return '<div class="tab-component">' + buttons + '</div>' + subText;
         });
         return text;
       }

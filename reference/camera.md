@@ -208,7 +208,7 @@ int wb_camera_get_sampling_period(WbDeviceTag tag);
 
 %tab "C++"
 
-```c++
+```cpp
 #include "<webots/Camera.hpp>`"
 
 class Camera : public Device {

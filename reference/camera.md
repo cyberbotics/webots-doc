@@ -215,6 +215,7 @@ class Camera : public Device {
   virtual void enable(int sampling_period);
   virtual void disable();
   int getSamplingPeriod();
+  // ...
 }
 ```
 
@@ -229,6 +230,7 @@ class Camera (Device):
     def enable(self, sampling_period):
     def disable(self):
     def getSamplingPeriod(self):
+    # ...
 ```
 
 %tab-end
@@ -242,6 +244,7 @@ public class Camera extends Device {
   public void enable(int sampling_period);
   public void disable();
   public int getSamplingPeriod();
+  // ...
 }
 ```
 
@@ -253,6 +256,7 @@ public class Camera extends Device {
 wb_camera_enable(tag, sampling_period)
 wb_camera_disable(tag)
 period = wb_camera_get_sampling_period(tag)
+% ...
 ```
 
 %tab-end

@@ -204,7 +204,7 @@ void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
 
-%end-tab
+%tab-end
 
 %tab C++
 
@@ -218,7 +218,7 @@ class Camera : public Device {
 }
 ```
 
-%end-tab
+%tab-end
 
 %tab Python
 
@@ -231,7 +231,7 @@ class Camera (Device) :
     def getSamplingPeriod(self)
 ```
 
-%end-tab
+%tab-end
 
 %tab Java
 
@@ -245,7 +245,7 @@ public class Camera extends Device {
 }
 ```
 
-%end-tab
+%tab-end
 
 %tab MATLAB
 
@@ -255,7 +255,7 @@ wb_camera_disable(tag)
 period = wb_camera_get_sampling_period(tag)
 ```
 
-%end-tab
+%tab-end
 
 %tab ROS
 
@@ -265,7 +265,7 @@ period = wb_camera_get_sampling_period(tag)
 | `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 | `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 
-%end-tab
+%tab-end
 
 %end
 

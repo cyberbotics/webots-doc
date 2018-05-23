@@ -240,3 +240,19 @@ showdown.extension('wbRobotComponent', function() {
     }
   ];
 });
+
+// TODO: description
+showdown.extension('wbTabComponent', function() {
+  return [
+    {
+      type: 'lang',
+      filter: function(text, converter, options) {
+        text = text.replace(/%tab-component([^]+?)%end/gi, function(match, content) {
+          console.log(text);
+          return '<p>TODO</p>';
+        });
+        return text;
+      }
+    }
+  ];
+});

@@ -653,7 +653,8 @@ body {
 .tab-component {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  margin-top: 19px;
+  background-color: #444;
 }
 .tab-component button {
   background-color: inherit;
@@ -661,20 +662,42 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 6px 18px;
+  margin: 5px 5px;
+  transition: 0.2s;
+  color: white;
+  background: #222;
+  border-radius: 2px;
+  border-top: 2px solid lightblue;
   transition: 0.3s;
 }
 .tab-component button:hover {
-  background-color: #ddd;
+  background-color: #888;
 }
 .tab-component button.active {
-  background-color: #ccc;
+  background-color: lightblue;
+  border-color: transparent;
+  color: black;
 }
 .tab-content {
   display: none;
-  padding: 6px 12px;
+  padding: 0;
   border: 1px solid #ccc;
   border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.tab-content > * {
+  width: 100% !important;
+  margin: 0 !important;
+}
+@-webkit-keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /*---------------------*

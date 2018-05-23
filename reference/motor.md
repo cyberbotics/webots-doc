@@ -80,11 +80,11 @@ See [this table](#motor-units):
 
 %figure "Motor Units"
 
-| &nbsp;       | Rotational                 | Linear                  |
-| ------------ | ---------------------------| ----------------------- |
-| Position     | rad (radians)              | m (meters)              |
-| Velocity     | rad/s (radians / second)   | m/s (meters / second)   |
-| Acceleration | rad/s² (radians / second²) | m/s² (meters / second²) |
+| &nbsp;       | Rotational                          | Linear                           |
+| ------------ | ------------------------------------| ---------------------------------|
+| Position     | rad (radians)                       | m (meters)                       |
+| Velocity     | rad/s (radians per second)          | m/s (meters per second)          |
+| Acceleration | rad/s² (radians per second squared) | m/s² (meters per second squared) |
 
 %end
 

@@ -324,7 +324,7 @@ The `wb_motor_get_max_velocity` function returns the limit specified in the `max
 Note that if the velocity is not explicitly set using the `wb_motor_set_velocity` function, then the `wb_motor_get_velocity` and `wb_motor_get_max_velocity` functions return the same value.
 
 The `wb_motor_set_acceleration` function specifies the acceleration that the PID-controller should use when trying to reach the specified velocity.
-The acceleration is expressed in *radian per second squared* (rad/s²) for rotational motors and in *meter per second squared* /m/s²) for linear motors.
+The acceleration is expressed in *radian per second squared* (rad/s²) for rotational motors and in *meter per second squared* (m/s²) for linear motors.
 Note that an infinite acceleration is obtained by passing -1 as the `acc` argument to this function.
 The specified acceleration overwrites the `acceleration` field value and can be retrieved using the `wb_motor_get_acceleration` function.
 

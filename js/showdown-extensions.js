@@ -243,35 +243,42 @@ showdown.extension('wbRobotComponent', function() {
 
 // TODO: move me elsewhere
 function openTab(evt, name) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName('tab-content');
-  for (i = 0; i < tabcontent.length; i++)
-    tabcontent[i].style.display = 'none';
+  var tabcomponent = evt.target.parentNode;
+  var tabID = tabcomponent.getAttribute('tabid');
 
-  tablinks = document.getElementsByClassName('tab-links');
-  for (i = 0; i < tablinks.length; i++)
-    tablinks[i].className = tablinks[i].className.replace(' active', '');
+  var tabcontents = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"]');
+  for (var i = 0; i < tabcontents.length; i++)
+    tabcontents[i].style.display = 'none';
 
-  document.getElementById(name).style.display = 'block';
-  evt.currentTarget.className += ' active';
+  var tablinks = tabcomponent.querySelectorAll('.tab-links');
+  for (var j = 0; j < tablinks.length; j++)
+    tablinks[j].classList.remove('active');
+
+  var tabcontent = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"][name="' + name + '"]')[0];
+  tabcontent.style.display = 'block';
+
+  var tablink = tabcomponent.querySelectorAll('.tab-links[name="' + name + '"]')[0];
+  tablink.classList.add('active');
 }
 
 // TODO: description
 showdown.extension('wbTabComponent', function() {
+  var tabComponentCounter = 0;
   return [
     {
       type: 'lang',
       filter: function(text, converter, options) {
         text = text.replace(/%tab-component([^]+?)%end/gi, function(match, content) {
+          tabComponentCounter++;
           var buttons = '';
           var first = true;
           var subText = content.replace(/%tab\s+"([^]+?)"([^]+?)%tab-end/gi, function(subMatch, title, subContent) {
-            buttons += '<button class="tab-links" onclick="openTab(event, \'' + title + '\')">' + title + '</button>';
-            var result = '<div class="tab-content" ' + (first ? 'style="display:block"' : '') + ' id="' + title + '">' + converter.makeHtml(subContent) + '</div>';
+            buttons += '<button name="' + title + '" class="tab-links' + (first ? ' active' : '') + '" onclick="openTab(event, \'' + title + '\')">' + title + '</button>';
+            var result = '<div class="tab-content" name="' + title + '"' + (first ? ' style="display:block"' : '') + ' tabid="' + tabComponentCounter + '">' + converter.makeHtml(subContent) + '</div>';
             first = false;
             return result;
           });
-          return '<div class="tab-component">' + buttons + '</div>' + subText;
+          return '<div class="tab-component" tabid="' + tabComponentCounter + '">' + buttons + '</div>' + subText;
         });
         return text;
       }

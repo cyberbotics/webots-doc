@@ -267,7 +267,7 @@ showdown.extension('wbTabComponent', function() {
           var first = true;
           var subText = content.replace(/%tab\s+"([^]+?)"([^]+?)%tab-end/gi, function(subMatch, title, subContent) {
             buttons += '<button class="tab-links" onclick="openTab(event, \'' + title + '\')">' + title + '</button>';
-            var result = '<div class="tab-content" ' + (first ? 'style="display:block"' : '') + ' id="' + title + '"><b>' + title + '</b><p>' + subContent + '</p></div>';
+            var result = '<div class="tab-content" ' + (first ? 'style="display:block"' : '') + ' id="' + title + '">' + converter.makeHtml(subContent) + '</div>';
             first = false;
             return result;
           });

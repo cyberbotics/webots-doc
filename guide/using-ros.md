@@ -2,7 +2,7 @@
 
 ### What Is ROS?
 
-[ROS](http://www.ros.org/) (Robot Operating System) is a framework for robot software development, providing operating system-like functionality on top of a heterogeneous computer cluster.
+[ROS (Robot Operating System)](http://www.ros.org/) is a framework for robot software development, providing operating system-like functionality on top of a heterogeneous computer cluster.
 ROS was originally developed in 2007 by the Stanford Artificial Intelligence Laboratory.
 As of 2008, development continues primarily at [Willow Garage](http://www.willowgarage.com/).
 

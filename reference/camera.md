@@ -256,7 +256,6 @@ public class Camera extends Device {
 wb_camera_enable(tag, sampling_period)
 wb_camera_disable(tag)
 period = wb_camera_get_sampling_period(tag)
-% ...
 ```
 
 %tab-end

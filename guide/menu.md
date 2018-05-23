@@ -162,5 +162,4 @@
     - [Speed/Performance](speed-performance.md)
 - [Known Bugs](known-bugs.md)
     - [General Bugs](general-bugs.md)
-    - [macOS](mac-os.md)
     - [Linux](linux.md)

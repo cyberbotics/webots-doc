@@ -6,5 +6,4 @@ They are not planned to be resolved on the short term but possible workarounds a
 ## Sections
 
 - [General bugs](general-bugs.md)
-- [macOS](mac-os.md)
 - [Linux](linux.md)

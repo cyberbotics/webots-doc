@@ -194,7 +194,7 @@ Then, after closing the window, the overlay will be automatically restored.
 
 %tab-component
 
-%tab C
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -206,7 +206,7 @@ int wb_camera_get_sampling_period(WbDeviceTag tag);
 
 %tab-end
 
-%tab C++
+%tab "C++"
 
 ```c++
 #include "<webots/Camera.hpp>`"
@@ -220,7 +220,7 @@ class Camera : public Device {
 
 %tab-end
 
-%tab Python
+%tab "Python"
 
 ```python
 from controller import Camera
@@ -233,7 +233,7 @@ class Camera (Device) :
 
 %tab-end
 
-%tab Java
+%tab "Java"
 
 ```java
 import com.cyberbotics.webots.controller.Camera;
@@ -247,7 +247,7 @@ public class Camera extends Device {
 
 %tab-end
 
-%tab MATLAB
+%tab "MATLAB"
 
 ```matlab
 wb_camera_enable(tag, sampling_period)
@@ -257,7 +257,7 @@ period = wb_camera_get_sampling_period(tag)
 
 %tab-end
 
-%tab ROS
+%tab "ROS"
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |

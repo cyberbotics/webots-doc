@@ -248,8 +248,10 @@ showdown.extension('wbTabComponent', function() {
       type: 'lang',
       filter: function(text, converter, options) {
         text = text.replace(/%tab-component([^]+?)%end/gi, function(match, content) {
-          console.log(text);
-          return '<p>TODO</p>';
+          var subText = content.replace(/%tab\s+"([^]+?)"([^]+?)%tab-end/gi, function(subMatch, title, subContent) {
+            return '<div class="tab"><b>' + title + '</b><p>' + subContent + '</p></div>';
+          });
+          return '<div class="tab-component">' + subText + '</div>';
         });
         return text;
       }

@@ -27,7 +27,7 @@ Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.m
 ### Field Summary
 
 - The `acceleration` field defines the default acceleration of the P-controller.
-It is expressed in *meter per second squared* for linear motors and in *meter per radian squared* for rotational motors.
+It is expressed in *meter per second squared* (m/s²) for linear motors and in *meter per radian squared* (rad/s²) for rotational motors.
 A value of -1 (infinite) means that the acceleration is not limited by the P-controller.
 The acceleration can be changed at run-time with the `wb_motor_set_acceleration` function.
 
@@ -61,7 +61,7 @@ With a small *P*, more simulation steps are needed to reach the target position,
 These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
 - The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*.
-It is expressed in *meter per second* for linear motors and in *meter per radian* for rotational motors.
+It is expressed in *meter per second* (m/s) for linear motors and in *meter per radian* (rad/s) for rotational motors.
 The *velocity* can be changed at run-time with the `wb_motor_set_velocity` function.
 The value should always be positive (the default is 10).
 
@@ -75,16 +75,16 @@ This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track
 ### Units
 
 The position of a motor corresponds to joint position as defined in [JointParameters](jointparameters.md).
-The position of a rotational motor is expressed in *radians* while the position of a linear motor is expressed in *meters*.
+The position of a rotational motor is expressed in *radians* (rad) while the position of a linear motor is expressed in *meters* (m).
 See [this table](#motor-units):
 
 %figure "Motor Units"
 
-| &nbsp;       | Rotational                   | Linear                    |
-| ------------ | ---------------------------- | ------------------------- |
-| Position     | rad (radians)                | m (meters)                |
-| Velocity     | rad/s (radians / second)     | m/s (meters / second)     |
-| Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
+| &nbsp;       | Rotational                 | Linear                  |
+| ------------ | ---------------------------| ----------------------- |
+| Position     | rad (radians)              | m (meters)              |
+| Velocity     | rad/s (radians / second)   | m/s (meters / second)   |
+| Acceleration | rad/s² (radians / second²) | m/s² (meters / second²) |
 
 %end
 
@@ -267,7 +267,7 @@ double wb_motor_get_max_torque(WbDeviceTag tag);
 *change the parameters of the PID-controller*
 
 The `wb_motor_set_position` function specifies a new target position that the PID-controller will attempt to reach using the current velocity, acceleration and motor torque/force parameters.
-The specified position is expressed in *radian* for rotational motors and in *meter* for linear motors.
+The specified position is expressed in *radian* (rad) for rotational motors and in *meter* (m) for linear motors.
 This function returns immediately (asynchronous) while the actual motion is carried out in the background by Webots.
 The target position will be reached only if the physics simulation allows it, that means, if the specified motor force is sufficient and the motion is not blocked by obstacles, external forces or the motor's own spring force, etc.
 It is also possible to wait until the [Motor](#motor) reaches the target position (synchronous) like this:
@@ -316,7 +316,7 @@ The `wb_motor_get_target_position` function allows the user to get the target po
 This value matches with the argument given to the last `wb_motor_set_position` function call.
 
 The `wb_motor_set_velocity` function specifies the velocity that a motor should reach while moving to the target position.
-The velocity is expressed in *radian per second* for rotational motors and in *meter per second* for linear motors.
+The velocity is expressed in *radian per second* (rad/s) for rotational motors and in *meter per second* (m/s) for linear motors.
 In other words, this means that the motor will accelerate (using the specified acceleration, see below) until the target velocity is reached.
 The velocity argument passed to this function cannot exceed the limit specified in the `maxVelocity` field.
 The specified velocity can be retrieved using the `wb_motor_get_velocity` function.
@@ -324,7 +324,7 @@ The `wb_motor_get_max_velocity` function returns the limit specified in the `max
 Note that if the velocity is not explicitly set using the `wb_motor_set_velocity` function, then the `wb_motor_get_velocity` and `wb_motor_get_max_velocity` functions return the same value.
 
 The `wb_motor_set_acceleration` function specifies the acceleration that the PID-controller should use when trying to reach the specified velocity.
-The acceleration is expressed in *radian per second squared* for rotational motors and in *meter per second squared* for linear motors.
+The acceleration is expressed in *radian per second squared* (rad/s²) for rotational motors and in *meter per second squared* /m/s²) for linear motors.
 Note that an infinite acceleration is obtained by passing -1 as the `acc` argument to this function.
 The specified acceleration overwrites the `acceleration` field value and can be retrieved using the `wb_motor_get_acceleration` function.
 
@@ -342,7 +342,7 @@ With a small *P*, a long time is needed to reach the target position, while too 
 The default value of *P, I* and *D* are specified by the `controlPID` field of the corresponding [Motor](#motor) node.
 
 The `wb_motor_get_[min|max]_position` functions allow to get the values of respectively the `minPosition` and the `maxPosition` fields.
-Positions are expressed in *radian* for rotational motors and in *meter* for linear motors.
+Positions are expressed in *radian* (rad) for rotational motors and in *meter* (m) for linear motors.
 ---
 
 #### `wb_motor_enable_force_feedback`

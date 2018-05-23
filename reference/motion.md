@@ -5,7 +5,7 @@
 #### `wbu_motion_new`
 #### `wbu_motion_delete`
 
-[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [Matlab](matlab-api.md#matlab_motion)
+[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [MATLAB](matlab-api.md#matlab_motion)
 
 ```c
 #include <webots/utils/motion.h>
@@ -51,7 +51,7 @@ if (! walk->isValid()) {
 #### `wbu_motion_set_loop`
 #### `wbu_motion_set_reverse`
 
-[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [Matlab](matlab-api.md#matlab_motion)
+[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [MATLAB](matlab-api.md#matlab_motion)
 
 ```c
 #include <webots/utils/motion.h>
@@ -112,7 +112,7 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 #### `wbu_motion_get_time`
 #### `wbu_motion_set_time`
 
-[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [Matlab](matlab-api.md#matlab_motion)
+[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [MATLAB](matlab-api.md#matlab_motion)
 
 ```c
 #include <webots/utils/motion.h>

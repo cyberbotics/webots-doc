@@ -61,7 +61,7 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 
 #### `wb_pen_write`
 
-[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [Matlab](matlab-api.md#matlab_pen) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [MATLAB](matlab-api.md#matlab_pen) [ROS](ros-api.md)
 
 ```c
 #include <webots/pen.h>
@@ -80,7 +80,7 @@ If the `write` parameter is *true*, the specified `tag` device will write; if `w
 
 #### `wb_pen_set_ink_color`
 
-[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [Matlab](matlab-api.md#matlab_pen) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [MATLAB](matlab-api.md#matlab_pen) [ROS](ros-api.md)
 
 ```c
 #include <webots/pen.h>

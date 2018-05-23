@@ -28,7 +28,7 @@ This field accepts any value in the interval (0.0, inf).
 #### `wb_position_sensor_get_value`
 #### `wb_position_sensor_get_type`
 
-[C++](cpp-api.md#cpp_position_sensor) [Java](java-api.md#java_position_sensor) [Python](python-api.md#python_position_sensor) [Matlab](matlab-api.md#matlab_position_sensor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_position_sensor) [Java](java-api.md#java_position_sensor) [Python](python-api.md#python_position_sensor) [MATLAB](matlab-api.md#matlab_position_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/position_sensor.h>

@@ -116,7 +116,7 @@ Asynchronous controllers may also be recommended for networked simulations invol
 #### `wb_robot_init`
 #### `wb_robot_cleanup`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -216,7 +216,7 @@ int main() {
 
 #### `wb_robot_get_device`
 
-[Matlab](matlab-api.md#matlab_robot)
+[MATLAB](matlab-api.md#matlab_robot)
 
 ```c
 #include <webots/robot.h>
@@ -318,7 +318,7 @@ Instead, C and Matlab users should use [`wb_robot_get_device`](#wb_robot_get_dev
 
 #### `wb_robot_get_device_by_index`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -367,7 +367,7 @@ for(i=0; i<n_devices; i++) {
 #### `wb_robot_get_battery_sampling_period`
 #### `wb_robot_battery_sensor_get_value`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -396,7 +396,7 @@ The `wb_robot_get_battery_sampling_period` function returns the period given int
 
 #### `wb_robot_get_basic_time_step`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -414,7 +414,7 @@ This function returns the value of the `basicTimeStep` field of the [WorldInfo](
 
 #### `wb_robot_get_mode`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -449,7 +449,7 @@ The integers can be compared to the following enumeration items:
 
 #### `wb_robot_get_name`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -472,7 +472,7 @@ This sample world is located in the "projects/samples/demos/worlds" directory of
 
 #### `wb_robot_get_model`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -494,7 +494,7 @@ The string returned should not be deallocated, as it was allocated by the "libCo
 
  - *set the data defined in the robot node*
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -515,7 +515,7 @@ The `wb_robot_set_custom_data` function set the string contained in the `customD
 
 #### `wb_robot_get_type`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/nodes.h>
@@ -534,7 +534,7 @@ This function returns the type of the current mode (WB\_NODE\_ROBOT, WB\_NODE\_S
 
 #### `wb_robot_get_project_path`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -555,7 +555,7 @@ It should not be deallocated.
 
 #### `wb_robot_get_world_path`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -576,7 +576,7 @@ It should not be deallocated.
 #### `wb_robot_get_controller_name`
 #### `wb_robot_get_controller_arguments`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -595,7 +595,7 @@ These functions return the content of respectively the Robot::controller and the
 
 #### `wb_robot_get_synchronization`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -613,7 +613,7 @@ This function returns the boolean value corresponding to the synchronization fie
 
 #### `wb_robot_get_time`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot.h>
@@ -699,7 +699,7 @@ Users unfamiliar with the mutex concept may wish to consult a reference on multi
 #### `wb_robot_wwi_send`
 #### `wb_robot_wwi_send_text`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/utils/default_robot_window.h>
@@ -730,7 +730,7 @@ The message is received using the `webots.window("<robot window name>").receive`
 
 #### `wb_robot_window_custom_function`
 
-[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [Matlab](matlab-api.md#matlab_robot) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_robot) [Java](java-api.md#java_robot) [Python](python-api.md#python_robot) [MATLAB](matlab-api.md#matlab_robot) [ROS](ros-api.md)
 
 ```c
 #include <webots/robot_window.h>

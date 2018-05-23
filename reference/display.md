@@ -62,7 +62,7 @@ Then, after closing the window, the overlay will be automatically restored.
 #### `wb_display_get_width`
 #### `wb_display_get_height`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -84,7 +84,7 @@ These functions return respectively the values of the `width` and `height` field
 #### `wb_display_set_opacity`
 #### `wb_display_set_font`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -152,7 +152,7 @@ For example the vector `[1 0 1]` represents the magenta color.
 #### `wb_display_attach_camera`
 #### `wb_display_detach_camera`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -183,7 +183,7 @@ After detaching a camera, the pixels that have not been manually drawn will be t
 #### `wb_display_fill_oval`
 #### `wb_display_fill_polygon`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>
@@ -249,7 +249,7 @@ The `wb_display_fill_polygon` function draws a polygon having the same propertie
 #### `wb_display_image_save`
 #### `wb_display_image_delete`
 
-[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [Matlab](matlab-api.md#matlab_display) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_display) [Java](java-api.md#java_display) [Python](python-api.md#python_display) [MATLAB](matlab-api.md#matlab_display) [ROS](ros-api.md)
 
 ```c
 #include <webots/display.h>

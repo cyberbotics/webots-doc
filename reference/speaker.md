@@ -16,7 +16,7 @@ It can be used to play sounds and perform text-to-speech from the controller API
 
 #### `wb_speaker_play_sound`
 
-[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [Matlab](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [MATLAB](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
 
 ```c
 #include <webots/speaker.h>
@@ -56,7 +56,7 @@ If not found there and if the robot is a PROTO, it will be searched relatively t
 
 #### `wb_speaker_stop`
 
-[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [Matlab](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [MATLAB](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
 
 ```c
 #include <webots/speaker.h>
@@ -82,7 +82,7 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 #### `wb_speaker_get_language`
 #### `wb_speaker_speak`
 
-[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [Matlab](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [MATLAB](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
 
 ```c
 #include <webots/speaker.h>

@@ -114,7 +114,7 @@ This approximation usually improves as the `basicTimeStep` ([WorldInfo](worldinf
 #### `wb_touch_sensor_get_value`
 #### `wb_touch_sensor_get_values`
 
-[C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [Matlab](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [MATLAB](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/touch_sensor.h>
@@ -150,7 +150,7 @@ This function can be used with a sensor of type "force-3d" exclusively.
 
 #### `wb_touch_sensor_get_type`
 
-[C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [Matlab](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [MATLAB](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
 
 ```c
 #include <webots/touch_sensor.h>

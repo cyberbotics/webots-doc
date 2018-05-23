@@ -15,7 +15,7 @@ This abstract node (not instanciable) represents a robot device (actuator and/or
 
 #### `wb_device_get_model`
 
-[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [Matlab](matlab-api.md#matlab_device) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [MATLAB](matlab-api.md#matlab_device) [ROS](ros-api.md)
 
 ```c
 #include <webots/device.h>
@@ -35,7 +35,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device, or 
 
 #### `wb_device_get_name`
 
-[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [Matlab](matlab-api.md#matlab_device) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [MATLAB](matlab-api.md#matlab_device) [ROS](ros-api.md)
 
 ```c
 #include <webots/device.h>
@@ -55,7 +55,7 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 #### `wb_device_get_node_type`
 
-[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [Matlab](matlab-api.md#matlab_device) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [MATLAB](matlab-api.md#matlab_device) [ROS](ros-api.md)
 
 ```c
 #include <webots/device.h>

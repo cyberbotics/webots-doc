@@ -30,7 +30,7 @@ As for a regular [Robot](robot.md) controller, the `wb_robot_init`, `wb_robot_st
 
 #### `wb_supervisor_export_image`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -65,7 +65,7 @@ In this example, the [Supervisor](#supervisor) controller takes a snapshot image
 #### `wb_supervisor_node_get_self`
 #### `wb_supervisor_node_get_selected`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -126,7 +126,7 @@ If no node is currently selected, the function returns NULL.
 #### `wb_supervisor_node_get_type_name`
 #### `wb_supervisor_node_get_base_type_name`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -160,7 +160,7 @@ These integers can be directly compared with the output of the `Node::getType` f
 
 #### `wb_supervisor_node_remove`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -178,7 +178,7 @@ The `wb_supervisor_node_remove` function removes the node specified as an argume
 
 #### `wb_supervisor_node_get_field`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -203,7 +203,7 @@ Otherwise, it returns a handler to a field.
 #### `wb_supervisor_node_get_position`
 #### `wb_supervisor_node_get_orientation`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -253,7 +253,7 @@ The "WEBOTS\_HOME/projects/robots/ipr/worlds/ipr\_cube.wbt" project shows how to
 
 #### `wb_supervisor_node_get_center_of_mass`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -278,7 +278,7 @@ The "WEBOTS\_HOME/projects/samples/.wbt" project shows how to use this function.
 
 #### `wb_supervisor_node_get_contact_point`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -305,7 +305,7 @@ The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project sho
 
 #### `wb_supervisor_node_get_number_of_contact_points`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -326,7 +326,7 @@ The "WEBOTS\_HOME/projects/samples/howto/worlds/cylinder\_stack.wbt" project sho
 
 #### `wb_supervisor_node_get_static_balance`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -349,7 +349,7 @@ The test consists in checking whether the projection of the center of mass onto 
 #### `wb_supervisor_node_get_velocity`
 #### `wb_supervisor_node_set_velocity`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -378,7 +378,7 @@ The last three are respectively the angular velocities around the x, y and z axe
 
 #### `wb_supervisor_node_reset_physics`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -400,7 +400,7 @@ To stop the inertia of all available solids please refer to [this section](#wb_s
 
 #### `wb_supervisor_node_restart_controller`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -420,7 +420,7 @@ Note that if a robot window is specified for the [Robot](robot.md) node, the rob
 
 #### `wb_supervisor_node_set_visibility`
 
-[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_node) [Java](java-api.md#java_node) [Python](python-api.md#python_node) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -445,7 +445,7 @@ It is relevant to show a node only if it was previously hidden using this functi
 
 #### `wb_supervisor_set_label`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -515,7 +515,7 @@ For example the vector `[1 0 1]` represents the magenta color.
 
 #### `wb_supervisor_simulation_quit`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -592,7 +592,7 @@ int main(int argc, char *argv[]) {
 
 #### `wb_supervisor_simulation_revert`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -613,7 +613,7 @@ You may wish to save some data in a file from your supervisor program in order t
 #### `wb_supervisor_simulation_get_mode`
 #### `wb_supervisor_simulation_set_mode`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -653,7 +653,7 @@ The current simulation mode can also be modified by the Webots user, when he's c
 #### `wb_supervisor_load_world`
 #### `wb_supervisor_save_world`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -685,7 +685,7 @@ In this case, a simple save operation is performed.
 
 #### `wb_supervisor_simulation_reset_physics`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -710,7 +710,7 @@ To stop the inertia of a single [Solid](solid.md) node please refer to [this sec
 #### `wb_supervisor_movie_is_ready`
 #### `wb_supervisor_movie_failed`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -753,7 +753,7 @@ After starting a new recording process the returned value is reset to `FALSE`.
 #### `wb_supervisor_animation_start_recording`
 #### `wb_supervisor_animation_stop_recording`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -782,7 +782,7 @@ Both `wb_supervisor_animation_start_recording` and `wb_supervisor_animation_stop
 #### `wb_supervisor_field_get_type_name`
 #### `wb_supervisor_field_get_count`
 
-[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -832,7 +832,7 @@ These integers can be directly compared with the output of the `Field::getType` 
 #### `wb_supervisor_field_get_mf_string`
 #### `wb_supervisor_field_get_mf_node`
 
-[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -891,7 +891,7 @@ The type of the field has to match the name of the function used and the index s
 #### `wb_supervisor_field_set_mf_color`
 #### `wb_supervisor_field_set_mf_string`
 
-[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -954,7 +954,7 @@ The "soccer.wbt" world, located in the "projects/samples/demos/worlds" directory
 #### `wb_supervisor_field_insert_mf_string`
 #### `wb_supervisor_field_remove_mf`
 
-[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -995,7 +995,7 @@ The `wb_supervisor_field_remove_mf` function removes an item from a specified mu
 #### `wb_supervisor_field_import_mf_node`
 #### `wb_supervisor_field_import_mf_node_from_string`
 
-[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_field) [Java](java-api.md#java_field) [Python](python-api.md#python_field) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>
@@ -1060,7 +1060,7 @@ For example, a device imported into a Robot node doesn't reset the Robot, so the
 #### `wb_supervisor_virtual_reality_headset_get_position`
 #### `wb_supervisor_virtual_reality_headset_get_orientation`
 
-[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [Matlab](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_supervisor) [Java](java-api.md#java_supervisor) [Python](python-api.md#python_supervisor) [MATLAB](matlab-api.md#matlab_supervisor) [ROS](ros-api.md)
 
 ```c
 #include <webots/supervisor.h>

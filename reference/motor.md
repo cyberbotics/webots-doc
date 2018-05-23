@@ -236,7 +236,7 @@ If a more specific or accurate model is needed, it can be implemented in the rob
 #### `wb_motor_get_available_torque`
 #### `wb_motor_get_max_torque`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -346,7 +346,7 @@ The `wb_motor_get_[min|max]_position` functions allow to get the values of respe
 #### `wb_motor_get_torque_feedback_sampling_period`
 #### `wb_motor_disable_torque_feedback`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -401,7 +401,7 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 #### `wb_motor_set_force`
 #### `wb_motor_set_torque`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>
@@ -435,7 +435,7 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 
 #### `wb_motor_get_type`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [Matlab](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
 
 ```c
 #include <webots/motor.h>

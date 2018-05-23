@@ -42,7 +42,7 @@ This field accepts any value in the interval (0.0, inf).
 #### `wb_accelerometer_get_sampling_period`
 #### `wb_accelerometer_get_values`
 
-[C++](cpp-api.md#cpp_accelerometer) [Java](java-api.md#java_accelerometer) [Python](python-api.md#python_accelerometer) [Matlab](matlab-api.md#matlab_accelerometer) [ROS](ros-api.md)
+[C++](cpp-api.md#cpp_accelerometer) [Java](java-api.md#java_accelerometer) [Python](python-api.md#python_accelerometer) [MATLAB](matlab-api.md#matlab_accelerometer) [ROS](ros-api.md)
 
 ```c
 #include <webots/accelerometer.h>

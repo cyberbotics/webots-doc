@@ -689,6 +689,7 @@ body {
 .tab-content > table {
   width: 100% !important;
   margin: 0 !important;
+  background-color: #f1f1f1;
 }
 .tab-content > pre {
   margin: 0;

@@ -997,6 +997,12 @@ const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag t
 
 namespace webots {
   class Camera : public Device {
+    bool hasRecognition() const;
+    void recognitionEnable(int samplingPeriod);
+    void recognitionDisable();
+    int getRecognitionSamplingPeriod() const;
+    int getRecognitionNumberOfObjects() const;
+    const CameraRecognitionObject *getRecognitionObjects() const;
     // ...
   }
 }
@@ -1010,6 +1016,12 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def hasRecognition(self)
+    def recognitionEnable(self, samplingPeriod)
+    def recognitionDisable(self)
+    def getRecognitionSamplingPeriod(self)
+    def getRecognitionNumberOfObjects(self)
+    def getRecognitionObjects(self)
     # ...
 ```
 
@@ -1021,6 +1033,12 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public boolean hasRecognition();
+  public void recognitionEnable(int samplingPeriod);
+  public void recognitionDisable();
+  public int getRecognitionSamplingPeriod();
+  public int getRecognitionNumberOfObjects();
+  public CameraRecognitionObject getRecognitionObjects();
   // ...
 }
 ```
@@ -1030,7 +1048,12 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+wb_camera_has_recognition(tag)
+wb_camera_recognition_disable(tag)
+wb_camera_recognition_enable(tag, sampling_period)
+wb_camera_recognition_get_number_of_objects(tag)
+wb_camera_recognition_get_objects(tag)
+wb_camera_recognition_get_sampling_period(tag)
 ```
 
 %tab-end
@@ -1039,7 +1062,10 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/has_recognition` | `service`| `webots_ros::get_bool` | |	
+| `/<device_name>/recognition_enable` | `service`| `webots_ros::set_int` | |	
+| `/<device_name>/recognition_get_sampling_period` | `service`| `webots_ros::get_int` | |	
+| `/<device_name>/recognition_objects` | `topic`| `webots_ros::RecognitionObject` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `relative_position`<br/>[`geometry_msgs/Quaternion`](http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html) `relative_orientation`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `position_on_image`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `size_on_image`<br/>`int32 numberofcolors`<br/>`int32[] test`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html)`[]` `colors`<br/>`String model`<br/><br/>Note: the z value of `position_on_image` and `size_on_image` should be ignored |
 
 %tab-end
 

@@ -144,7 +144,9 @@ But it is not necessary to add a [Physics](physics.md) node to the [Connector](#
 #### `wb_connector_get_presence_sampling_period`
 #### `wb_connector_get_presence`
 
-[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [MATLAB](matlab-api.md#matlab_connector) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/connector.h>
@@ -154,6 +156,80 @@ void wb_connector_disable_presence(WbDeviceTag tag);
 int wb_connector_get_presence_sampling_period(WbDeviceTag tag);
 int wb_connector_get_presence(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Connector.hpp>"
+
+namespace webots {
+  class Connector : public Device {
+    virtual void enablePresence(int sampling_period);
+    virtual void disablePresence();
+    int getPresenceSamplingPeriod() const;
+    int getPresence() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Connector
+
+class Connector (Device):
+    def enablePresence(self, sampling_period):
+    def disablePresence(self):
+    def getPresenceSamplingPeriod(self):
+    def getPresence(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Connector;
+
+public class Connector extends Device {
+  public void enablePresence(int sampling_period);
+  public void disablePresence();
+  public int getPresenceSamplingPeriod();
+  public int getPresence();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_connector_enable_presence(tag, sampling_period)
+wb_connector_disable_presence(tag)
+period = wb_connector_get_presence_sampling_period(tag)
+presence = wb_connector_get_presence(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/presence` | `topic` | `webots_ros/Int8Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int8 data` |
+| `/<device_name>/presence_sensor/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/presence_sensor/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -201,7 +277,9 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 #### `wb_connector_lock`
 #### `wb_connector_unlock`
 
-[C++](cpp-api.md#cpp_connector) [Java](java-api.md#java_connector) [Python](python-api.md#python_connector) [MATLAB](matlab-api.md#matlab_connector) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/connector.h>
@@ -209,6 +287,70 @@ rotation_aligned := the n-ways rotational angle is within tolerance
 void wb_connector_lock(WbDeviceTag tag);
 void wb_connector_unlock(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Connector.hpp>"
+
+namespace webots {
+  class Connector : public Device {
+    virtual void lock();
+    virtual void unlock();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Connector
+
+class Connector (Device):
+    def lock(self)
+    def unlock(self)
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Connector;
+
+public class Connector extends Device {
+  public void lock();
+  public void unlock();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_connector_lock(tag)
+wb_connector_unlock(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/lock` | `service` | [`webots_ros::set_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

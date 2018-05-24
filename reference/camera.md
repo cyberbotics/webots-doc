@@ -291,16 +291,75 @@ The `wb_camera_get_sampling_period` function returns the period given to the `wb
 #### `wb_camera_get_max_fov`
 #### `wb_camera_set_fov`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 double wb_camera_get_fov(WbDeviceTag tag);
 double wb_camera_get_min_fov(WbDeviceTag tag);
 double wb_camera_get_max_fov(WbDeviceTag tag);
 void wb_camera_set_fov(WbDeviceTag tag, double fov);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -319,9 +378,12 @@ The minimum and maximum values for the field of view are defined in this [Zoom](
 #### `wb_camera_get_min_focal_distance`
 #### `wb_camera_set_focal_distance`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 double wb_camera_get_focal_length(WbDeviceTag tag);
@@ -329,7 +391,63 @@ double wb_camera_get_focal_distance(WbDeviceTag tag);
 double wb_camera_get_max_focal_distance(WbDeviceTag tag);
 double wb_camera_get_min_focal_distance(WbDeviceTag tag);
 void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -343,14 +461,73 @@ Note that if the camera device has no [Focus](focus.md) node defined in its `foc
 #### `wb_camera_get_width`
 #### `wb_camera_get_height`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 int wb_camera_get_width(WbDeviceTag tag);
 int wb_camera_get_height(WbDeviceTag tag);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -362,13 +539,72 @@ These functions return the width and height of a camera image as defined in the 
 
 #### `wb_camera_get_near`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 double wb_camera_get_near(WbDeviceTag tag);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -384,9 +620,12 @@ This function returns the near parameter of a camera device as defined in the co
 #### `wb_camera_image_get_blue`
 #### `wb_camera_image_get_gray`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 const unsigned char *wb_camera_get_image(WbDeviceTag tag);
@@ -394,7 +633,63 @@ unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int
 unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y);
 unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y);
 unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -508,13 +803,72 @@ The dimensions of the array are the width and the length of camera's image and t
 
 #### `wb_camera_save_image`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -544,9 +898,12 @@ It is -1 in case of failure (unable to open the specified file or unrecognized i
 #### `wb_camera_recognition_get_number_of_objects`
 #### `wb_camera_recognition_get_objects`
 
-[C++](cpp-api.md#cpp_camera) [Java](java-api.md#java_camera) [Python](python-api.md#python_camera) [MATLAB](matlab-api.md#matlab_camera) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
+
 #include <webots/camera.h>
 
 bool wb_camera_has_recognition(WbDeviceTag tag);
@@ -555,7 +912,63 @@ void wb_camera_recognition_disable(WbDeviceTag tag);
 int wb_camera_recognition_get_sampling_period(WbDeviceTag tag);
 int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
 const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
+
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/TODO.hpp>`"
+
+class TODO : public Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TODO
+
+class TODO (Device):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TODO;
+
+public class TODO extends Device {
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+% TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| TODO | TODO | TODO | TODO |
+
+%tab-end
+
+%end
 
 ##### Description
 

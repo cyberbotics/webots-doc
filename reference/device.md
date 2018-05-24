@@ -15,13 +15,75 @@ This abstract node (not instanciable) represents a robot device (actuator and/or
 
 #### `wb_device_get_model`
 
-[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [MATLAB](matlab-api.md#matlab_device) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/device.h>
 
 const char *wb_device_get_model(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Device.hpp>"
+
+namespace webots {
+  class Device {
+    const std::string &getModel() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Device
+
+class Device:
+    def getModel(self)
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Device;
+
+public class Device {
+  public String getModel();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+model = wb_device_get_model(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_model` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -35,13 +97,75 @@ This function returns NULL if the WbDeviceTag does not match a valid device, or 
 
 #### `wb_device_get_name`
 
-[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [MATLAB](matlab-api.md#matlab_device) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/device.h>
 
 const char *wb_device_get_name(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Device.hpp>"
+
+namespace webots {
+  class Device {
+    const std::string &getName() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Device
+
+class Device:
+    def getName(self)
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Device;
+
+public class Device {
+  public String getName();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+name = wb_device_get_name(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -55,13 +179,75 @@ This function returns NULL if the WbDeviceTag does not match a valid device.
 
 #### `wb_device_get_node_type`
 
-[C++](cpp-api.md#cpp_device) [Java](java-api.md#java_device) [Python](python-api.md#python_device) [MATLAB](matlab-api.md#matlab_device) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/device.h>
 
 WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Device.hpp>"
+
+namespace webots {
+  class Device {
+    int getNodeType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Device
+
+class Device:
+   def getNodeType(self)
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Device;
+
+public class Device {
+  public int getNodeType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+type = wb_device_get_node_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_node_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
 
 ##### Description
 

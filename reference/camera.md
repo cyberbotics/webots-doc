@@ -1007,6 +1007,10 @@ The `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get
 
 A camera recognition object is defined by the following structure:
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/camera_recognition_object.h>
 
@@ -1023,13 +1027,74 @@ typedef struct {
 } WbCameraRecognitionObject;
 ```
 
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Camera.hpp>"
+
+namespace webots {
+  typedef struct {
+    int      id;
+    double   position[3];
+    double   orientation[4];
+    double   size[2];
+    int      position_on_image[2];
+    int      size_on_image[2];
+    int      number_of_colors;
+    double  *colors;
+    char    *model;
+  } CameraRecognitionObject;
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import CameraRecognitionObject
+
+class CameraRecognitionObject:
+    def get_id(self):
+    def get_position(self):
+    def get_orientation(self):
+    def get_size(self):
+    def get_position_on_image(self):
+    def get_size_on_image(self):
+    def get_number_of_colors(self):
+    def get_colors(self):
+    def get_model(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.CameraRecognitionObject;
+
+public class CameraRecognitionObject {
+   public int getId();
+   public double[] getPosition();
+   public double[] getOrientation();
+   public double[] getSize();
+   public int[] getPositionOnImage();
+   public int[] getSizeOnImage();
+   public int getNumberOfColors();
+   public double[] getColors();
+   public String getModel();
+}
+```
+
+%tab-end
+
+%end
+
 The `id` represents the node id corresponding to the object, and it is possible to use this id directly in the [`wb_supervisor_node_get_from_id`](supervisor.md#wb_supervisor_node_get_from_def) supervisor function.
 The `position` and `orientation` are expressed relatively to the camera (the relative position is the one of the center of the object which can differ from its origin) and the units are meter and radian.
 The `size` represents the X and Y sizes in meters relatively to the camera (it is of course impossible to know the depth of the object).
 The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image, the units are pixels.
 The `number_of_colors` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each color is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `number_of_colors`.
 Finally `model` returns the `model` field of the [Solid](solid.md) node.
-
-> **Note** [C++]: In C++ the name of the structure is `CameraRecognitionObject`.
-
-> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `CameraRecognitionObject`.

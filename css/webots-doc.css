@@ -678,9 +678,6 @@ body {
   border-color: transparent;
   color: black;
 }
-.tab-component:nth-child(1) {
-  margin-left: 10px;
-}
 .tab-content {
   display: none;
   padding: 0;

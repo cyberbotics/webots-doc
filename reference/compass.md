@@ -41,7 +41,9 @@ This field accepts any value in the interval (0.0, inf).
 #### `wb_compass_get_sampling_period`
 #### `wb_compass_get_values`
 
-[C++](cpp-api.md#cpp_compass) [Java](java-api.md#java_compass) [Python](python-api.md#python_compass) [MATLAB](matlab-api.md#matlab_compass) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/compass.h>
@@ -51,6 +53,80 @@ void wb_compass_disable(WbDeviceTag tag);
 const double *wb_compass_get_values(WbDeviceTag tag);
 int wb_compass_get_sampling_period(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Compass.hpp>"
+
+namespace webots {
+  class Compass : public Device {
+    virtual void enable(int sampling_period);
+    virtual void disable();
+    int getSamplingPeriod();
+    const double *getValues() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Compass
+
+class Compass (Device):
+    def enable(self, sampling_period):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getValues(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Compass;
+
+public class Compass extends Device {
+  public void enable(int sampling_period);
+  public void disable();
+  public int getSamplingPeriod();
+  public double[] getValues();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_compass_enable(tag, sampling_period)
+wb_compass_disable(tag)
+period = wb_compass_get_sampling_period(tag)
+[x y z] = wb_compass_get_values(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/values` | `topic` | [`sensor_msgs::MagneticField`](http://docs.ros.org/api/sensor_msgs/html/msg/MagneticField.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `magnetic_field`<br/>`float64[9] magnetic_field_covariance`<br/> |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

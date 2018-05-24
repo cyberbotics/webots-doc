@@ -298,14 +298,12 @@ The `wb_camera_get_sampling_period` function returns the period given to the `wb
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 double wb_camera_get_fov(WbDeviceTag tag);
 double wb_camera_get_min_fov(WbDeviceTag tag);
 double wb_camera_get_max_fov(WbDeviceTag tag);
 void wb_camera_set_fov(WbDeviceTag tag, double fov);
-
 ```
 
 %tab-end
@@ -403,7 +401,6 @@ The minimum and maximum values for the field of view are defined in this [Zoom](
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 double wb_camera_get_focal_length(WbDeviceTag tag);
@@ -411,7 +408,6 @@ double wb_camera_get_focal_distance(WbDeviceTag tag);
 double wb_camera_get_max_focal_distance(WbDeviceTag tag);
 double wb_camera_get_min_focal_distance(WbDeviceTag tag);
 void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
-
 ```
 
 %tab-end
@@ -488,12 +484,10 @@ Note that if the camera device has no [Focus](focus.md) node defined in its `foc
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 int wb_camera_get_width(WbDeviceTag tag);
 int wb_camera_get_height(WbDeviceTag tag);
-
 ```
 
 %tab-end
@@ -568,11 +562,9 @@ These functions return the width and height of a camera image as defined in the 
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 double wb_camera_get_near(WbDeviceTag tag);
-
 ```
 
 %tab-end
@@ -651,7 +643,6 @@ This function returns the near parameter of a camera device as defined in the co
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 const unsigned char *wb_camera_get_image(WbDeviceTag tag);
@@ -659,7 +650,6 @@ unsigned char wb_camera_image_get_red(const unsigned char *image, int width, int
 unsigned char wb_camera_image_get_green(const unsigned char *image, int width, int x, int y);
 unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, int x, int y);
 unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
-
 ```
 
 %tab-end
@@ -836,11 +826,9 @@ The dimensions of the array are the width and the length of camera's image and t
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
-
 ```
 
 %tab-end
@@ -933,7 +921,6 @@ It is -1 in case of failure (unable to open the specified file or unrecognized i
 %tab "C"
 
 ```c
-
 #include <webots/camera.h>
 
 bool wb_camera_has_recognition(WbDeviceTag tag);
@@ -942,7 +929,6 @@ void wb_camera_recognition_disable(WbDeviceTag tag);
 int wb_camera_recognition_get_sampling_period(WbDeviceTag tag);
 int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
 const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
-
 ```
 
 %tab-end

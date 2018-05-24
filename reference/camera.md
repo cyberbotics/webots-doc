@@ -267,8 +267,8 @@ period = wb_camera_get_sampling_period(tag)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/<device_name>/image` | `topic` | [`sensor_msgs::Image`](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
-| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
-| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | `N/A` |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | `N/A` |
 
 %tab-end
 
@@ -317,6 +317,10 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov);
 
 namespace webots {
   class Camera : public Device {
+    double getFov() const;
+    double getMinFov() const;
+    double getMaxFov() const;
+    virtual void setFov(double fov);
     // ...
   }
 }
@@ -330,6 +334,10 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def getFov(self):
+    def getMinFov(self):
+    def getMaxFov(self):
+    def setFov(self, fov):
     # ...
 ```
 
@@ -341,6 +349,10 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public double getFov();
+  public double getMinFov();
+  public double getMaxFov();
+  public void setFov(double fov);
   // ...
 }
 ```
@@ -350,7 +362,10 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+fov = wb_camera_get_fov(tag)
+fov = wb_camera_get_min_fov(tag)
+fov = wb_camera_get_max_fov(tag)
+wb_camera_set_fov(tag, fov)
 ```
 
 %tab-end
@@ -359,7 +374,8 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | `N/A` |
+| `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
 
 %tab-end
 

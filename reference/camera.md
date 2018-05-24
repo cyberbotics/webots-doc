@@ -515,7 +515,7 @@ int wb_camera_get_height(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -599,7 +599,7 @@ double wb_camera_get_near(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -687,10 +687,15 @@ unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, in
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
+    const unsigned char *getImage() const;
+    static unsigned char imageGetRed(const unsigned char *image, int width, int x, int y);
+    static unsigned char imageGetGreen(const unsigned char *image, int width, int x, int y);
+    static unsigned char imageGetBlue(const unsigned char *image, int width, int x, int y);
+    static unsigned char imageGetGray(const unsigned char *image, int width, int x, int y);
     // ...
   }
 }
@@ -704,6 +709,16 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def getImage(self):
+    def getImageArray(self):
+    @staticmethod
+    def imageGetRed(image, width, x, y):
+    @staticmethod
+    def imageGetGreen(image, width, x, y):
+    @staticmethod
+    def imageGetBlue(image, width, x, y):
+    @staticmethod
+    def imageGetGray(image, width, x, y):
     # ...
 ```
 
@@ -715,6 +730,15 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public int[] getImage();
+  public static int imageGetRed(int[] image, int width, int x, int y);
+  public static int imageGetGreen(int[] image, int width, int x, int y);
+  public static int imageGetBlue(int[] image, int width, int x, int y);
+  public static int imageGetGray(int[] image, int width, int x, int y);
+  public static int pixelGetRed(int pixel);
+  public static int pixelGetGreen(int pixel);
+  public static int pixelGetBlue(int pixel);
+  public static int pixelGetGray(int pixel);
   // ...
 }
 ```
@@ -724,7 +748,7 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+image = wb_camera_get_image(tag)
 ```
 
 %tab-end
@@ -733,7 +757,7 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/image` | `topic` | `sensor_msgs::Image` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
 
 %tab-end
 
@@ -866,7 +890,7 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -966,7 +990,7 @@ const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag t
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {

@@ -603,6 +603,7 @@ double wb_camera_get_near(WbDeviceTag tag);
 
 namespace webots {
   class Camera : public Device {
+    double getNear() const;
     // ...
   }
 }
@@ -616,6 +617,7 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def getNear(self)
     # ...
 ```
 
@@ -627,6 +629,7 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public double getNear();
   // ...
 }
 ```
@@ -636,7 +639,7 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+near = wb_camera_get_near(tag)
 ```
 
 %tab-end
@@ -645,7 +648,7 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
 
 %tab-end
 

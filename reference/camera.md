@@ -211,11 +211,13 @@ int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```cpp
 #include "<webots/Camera.hpp>`"
 
-class Camera : public Device {
-  virtual void enable(int sampling_period);
-  virtual void disable();
-  int getSamplingPeriod();
-  // ...
+namespace webots {
+  class Camera : public Device {
+    virtual void enable(int sampling_period);
+    virtual void disable();
+    int getSamplingPeriod();
+    // ...
+  }
 }
 ```
 
@@ -313,8 +315,10 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov);
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 
@@ -401,8 +405,10 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 
@@ -481,8 +487,10 @@ int wb_camera_get_height(WbDeviceTag tag);
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 
@@ -558,8 +566,10 @@ double wb_camera_get_near(WbDeviceTag tag);
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 
@@ -643,8 +653,10 @@ unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, in
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 
@@ -822,8 +834,10 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 
@@ -922,8 +936,10 @@ const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag t
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 

@@ -21,8 +21,10 @@ $1
 ```cpp
 #include "<webots/TODO.hpp>`"
 
-class TODO : public Device {
-  // ...
+namespace webots {
+  class TODO : public Device {
+    // ...
+  }
 }
 ```
 

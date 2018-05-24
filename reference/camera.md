@@ -313,10 +313,10 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/Camera.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -327,9 +327,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -338,9 +338,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```
@@ -403,10 +403,10 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/Camera.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -417,9 +417,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -428,9 +428,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```
@@ -488,7 +488,7 @@ int wb_camera_get_height(WbDeviceTag tag);
 #include "<webots/TODO.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -499,9 +499,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -510,9 +510,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```
@@ -567,7 +567,7 @@ double wb_camera_get_near(WbDeviceTag tag);
 #include "<webots/TODO.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -578,9 +578,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -589,9 +589,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```
@@ -654,7 +654,7 @@ unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, in
 #include "<webots/TODO.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -665,9 +665,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -676,9 +676,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```
@@ -835,7 +835,7 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 #include "<webots/TODO.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -846,9 +846,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -857,9 +857,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```
@@ -937,7 +937,7 @@ const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag t
 #include "<webots/TODO.hpp>`"
 
 namespace webots {
-  class TODO : public Device {
+  class Camera : public Device {
     // ...
   }
 }
@@ -948,9 +948,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import Camera
 
-class TODO (Device):
+class Camera (Device):
     # ...
 ```
 
@@ -959,9 +959,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.Camera;
 
-public class TODO extends Device {
+public class Camera extends Device {
   // ...
 }
 ```

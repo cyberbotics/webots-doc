@@ -519,6 +519,8 @@ int wb_camera_get_height(WbDeviceTag tag);
 
 namespace webots {
   class Camera : public Device {
+    int getWidth() const;
+    int getHeight() const;
     // ...
   }
 }
@@ -532,6 +534,8 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def getWidth(self):
+    def getHeight(self):
     # ...
 ```
 
@@ -543,6 +547,8 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public int getWidth();
+  public int getHeight();
   // ...
 }
 ```
@@ -552,7 +558,8 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+width = wb_camera_get_width(tag)
+height = wb_camera_get_height(tag)
 ```
 
 %tab-end
@@ -561,7 +568,7 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
 
 %tab-end
 
